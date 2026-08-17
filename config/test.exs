@@ -44,5 +44,8 @@ config :phoenix_live_view,
 
 # Claude and exa test configuration
 config :ethos, :anthropic_api_key, "test-key"
+config :ethos, :exa_api_key, "test-key"
 config :ethos, :claude, Ethos.ClaudeMock
+config :ethos, :exa, Ethos.ExaMock
 config :ethos, :claude_req_options, plug: {Req.Test, Ethos.Claude.API}
+config :ethos, :exa_req_options, plug: {Req.Test, Ethos.Exa.API}
