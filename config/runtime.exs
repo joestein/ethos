@@ -21,6 +21,9 @@ if System.get_env("PHX_SERVER") do
 end
 
 if config_env() == :prod do
+  config :ethos, :anthropic_api_key, System.fetch_env!("ANTHROPIC_API_KEY")
+  config :ethos, :exa_api_key, System.fetch_env!("EXA_API_KEY")
+
   database_url =
     System.get_env("DATABASE_URL") ||
       raise """

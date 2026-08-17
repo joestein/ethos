@@ -41,3 +41,8 @@ config :phoenix, :plug_init_mode, :runtime
 # Enable helpful, but potentially expensive runtime checks
 config :phoenix_live_view,
   enable_expensive_runtime_checks: true
+
+# Claude and exa test configuration
+config :ethos, :anthropic_api_key, "test-key"
+config :ethos, :claude, Ethos.ClaudeMock
+config :ethos, :claude_req_options, plug: {Req.Test, Ethos.Claude.API}
