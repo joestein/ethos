@@ -62,6 +62,23 @@ defmodule EthosWeb.GuideConfirmEditTest do
     assert [%{name: "Ramiro (renamed)"}, %{name: "Alfama"}] = Guides.list_entries(guide)
   end
 
+  test "confirm screen flashes an error instead of crashing when a row is invalid", %{conn: conn, user: user} do
+    guide = guide_fixture(%{user: user})
+    {:ok, imp} = Guides.create_import(guide, "raw")
+
+    {:ok, _} =
+      Guides.mark_import(imp, "parsed", %{
+        proposal: [%{"day" => 1, "kind" => "food", "name" => "", "note" => nil, "verdict" => nil}]
+      })
+
+    {:ok, lv, _html} = live(conn, ~p"/guides/#{guide.id}/confirm")
+
+    html = lv |> element("#confirm-entries") |> render_click()
+
+    assert html =~ "One of the rows is invalid"
+    assert Guides.list_entries(guide) == []
+  end
+
   test "confirm screen can remove a proposed row before confirming", %{conn: conn, user: user} do
     guide = guide_with_proposal(user)
     {:ok, lv, _} = live(conn, ~p"/guides/#{guide.id}/confirm")

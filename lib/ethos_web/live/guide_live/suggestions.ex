@@ -12,13 +12,24 @@ defmodule EthosWeb.GuideLive.Suggestions do
   @impl true
   def handle_event("accept", %{"id" => id}, socket) do
     suggestion = Contributions.get_suggestion!(socket.assigns.guide, id)
-    {:ok, _} = Contributions.accept_suggestion(suggestion)
+
+    case Contributions.accept_suggestion(suggestion) do
+      {:ok, _} -> :ok
+      # Already accepted/declined by a concurrent click — just refresh the list.
+      {:error, :already_processed} -> :ok
+    end
+
     {:noreply, load(socket)}
   end
 
   def handle_event("decline", %{"id" => id}, socket) do
     suggestion = Contributions.get_suggestion!(socket.assigns.guide, id)
-    {:ok, _} = Contributions.decline_suggestion(suggestion)
+
+    case Contributions.decline_suggestion(suggestion) do
+      {:ok, _} -> :ok
+      {:error, :already_processed} -> :ok
+    end
+
     {:noreply, load(socket)}
   end
 
@@ -45,7 +56,8 @@ defmodule EthosWeb.GuideLive.Suggestions do
               <%= if s.origin == "gap_fill", do: "nearby idea (auto)", else: "suggested by #{s.author && s.author.email}" %>
             </p>
             <p :if={s.body} class="text-sm mt-1"><%= s.body %></p>
-            <a :if={s.url} href={s.url} class="text-xs underline" rel="nofollow"><%= s.url %></a>
+            <a :if={s.url && EthosWeb.Url.safe_http?(s.url)} href={s.url} class="text-xs underline" rel="nofollow"><%= s.url %></a>
+            <span :if={s.url && !EthosWeb.Url.safe_http?(s.url)} class="text-xs text-zinc-400"><%= s.url %></span>
           </div>
           <div class="flex gap-2 shrink-0">
             <.button phx-click="accept" phx-value-id={s.id}>Accept</.button>

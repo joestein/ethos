@@ -18,8 +18,11 @@ demo_email = "demo@ethos.example"
 if Repo.get_by(User, email: demo_email) do
   IO.puts("Demo guide already seeded — skipping.")
 else
+  # Random per-run password — nobody is meant to log in as the demo user.
+  demo_password = :crypto.strong_rand_bytes(24) |> Base.encode64()
+
   {:ok, demo} =
-    Accounts.register_user(%{email: demo_email, password: "demo-password-123!"})
+    Accounts.register_user(%{email: demo_email, password: demo_password})
 
   {:ok, guide} =
     Guides.create_guide(demo, %{title: "Lisbon in 5 days", destination: "Lisbon, Portugal"})

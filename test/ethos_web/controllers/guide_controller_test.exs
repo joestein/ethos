@@ -17,12 +17,16 @@ defmodule EthosWeb.GuideControllerTest do
     {:ok, _} = Guides.create_entry(guide, %{kind: "food", name: "Ramiro", verdict: "loved", note: "go early"})
 
     {:ok, _} =
-      Guides.create_entry(guide, %{
-        kind: "sight",
-        name: "LX Factory",
-        source: "suggestion",
-        credited_user_id: contributor.id
-      })
+      Guides.create_entry(
+        guide,
+        %{
+          kind: "sight",
+          name: "LX Factory",
+          source: "suggestion",
+          credited_user_id: contributor.id
+        },
+        :privileged
+      )
 
     conn = get(conn, ~p"/g/#{guide.slug}")
     html = html_response(conn, 200)
@@ -30,9 +34,29 @@ defmodule EthosWeb.GuideControllerTest do
     assert html =~ guide.title
     assert html =~ "Ramiro"
     assert html =~ "go early"
-    assert html =~ "added from a suggestion"
+    assert html =~ "added from a reader suggestion"
     assert html =~ ~s(property="og:title")
     assert Guides.get_guide!(guide.id).view_count == 1
+  end
+
+  test "lazily regenerates the OG image if og_image_path is set but the file is missing (ephemeral fs)",
+       %{conn: conn} do
+    guide = published_guide_fixture()
+    {:ok, guide} = Ethos.OGCard.generate(guide)
+
+    path = Path.join([:code.priv_dir(:ethos), "uploads", "og", "#{guide.slug}.png"])
+    assert File.exists?(path)
+
+    # Simulate an ephemeral Fly machine losing the generated file while the
+    # DB row still points at it.
+    File.rm!(path)
+    refute File.exists?(path)
+
+    conn = get(conn, ~p"/g/#{guide.slug}")
+    html_response(conn, 200)
+
+    assert File.exists?(path)
+    on_exit(fn -> File.rm(path) end)
   end
 
   test "404s for drafts", %{conn: conn} do

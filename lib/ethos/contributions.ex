@@ -43,13 +43,17 @@ defmodule Ethos.Contributions do
 
     Repo.transaction(fn ->
       {:ok, entry} =
-        Guides.create_entry(guide, %{
-          kind: suggestion.kind_hint || "tip",
-          name: suggestion.place_name,
-          note: suggestion.body,
-          source: source,
-          credited_user_id: suggestion.author_id
-        })
+        Guides.create_entry(
+          guide,
+          %{
+            kind: suggestion.kind_hint || "tip",
+            name: suggestion.place_name,
+            note: suggestion.body,
+            source: source,
+            credited_user_id: suggestion.author_id
+          },
+          :privileged
+        )
 
       {:ok, suggestion} =
         suggestion
@@ -60,7 +64,11 @@ defmodule Ethos.Contributions do
     end)
   end
 
-  def decline_suggestion(%Suggestion{} = suggestion) do
+  def accept_suggestion(%Suggestion{}), do: {:error, :already_processed}
+
+  def decline_suggestion(%Suggestion{status: "pending"} = suggestion) do
     suggestion |> Ecto.Changeset.change(status: "declined") |> Repo.update()
   end
+
+  def decline_suggestion(%Suggestion{}), do: {:error, :already_processed}
 end

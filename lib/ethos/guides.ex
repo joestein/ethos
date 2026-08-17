@@ -47,12 +47,28 @@ defmodule Ethos.Guides do
 
   def get_entry!(%Guide{id: guide_id}, id), do: Repo.get_by!(Entry, id: id, guide_id: guide_id)
 
-  def create_entry(%Guide{} = guide, attrs) do
-    position = next_position(guide)
+  @doc """
+  Creates an entry for a guide.
 
-    %Entry{guide_id: guide.id, position: position}
-    |> Entry.changeset(Map.drop(attrs, [:position, "position"]))
-    |> Repo.insert()
+  `mode` controls which changeset is used: `:public` (the default) is safe
+  for attrs coming straight from a web form — it can never set `:source` or
+  `:credited_user_id`. `:privileged` is for trusted, context-internal
+  callers (e.g. `Contributions.accept_suggestion/1`) that need to set those
+  fields explicitly. Never pass `:privileged` with attrs sourced from an
+  external request.
+  """
+  def create_entry(%Guide{} = guide, attrs, mode \\ :public) when mode in [:public, :privileged] do
+    position = next_position(guide)
+    attrs = Map.drop(attrs, [:position, "position"])
+    entry = %Entry{guide_id: guide.id, position: position}
+
+    changeset =
+      case mode do
+        :public -> Entry.changeset(entry, attrs)
+        :privileged -> Entry.privileged_changeset(entry, attrs)
+      end
+
+    Repo.insert(changeset)
   end
 
   def update_entry(%Entry{} = entry, attrs) do
@@ -68,9 +84,14 @@ defmodule Ethos.Guides do
       proposal
       |> Enum.with_index()
       |> Enum.map(fn {attrs, idx} ->
-        %Entry{guide_id: guide.id, position: idx, source: "import"}
-        |> Entry.changeset(Map.drop(attrs, ["source", :source]))
-        |> Repo.insert!()
+        changeset =
+          %Entry{guide_id: guide.id, position: idx, source: "import"}
+          |> Entry.changeset(Map.drop(attrs, ["source", :source]))
+
+        case Repo.insert(changeset) do
+          {:ok, entry} -> entry
+          {:error, changeset} -> Repo.rollback(changeset)
+        end
       end)
     end)
   end

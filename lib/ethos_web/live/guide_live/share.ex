@@ -1,6 +1,8 @@
 defmodule EthosWeb.GuideLive.Share do
   use EthosWeb, :live_view
 
+  require Logger
+
   alias Ethos.Agents.GuideAgent
   alias Ethos.Guides
 
@@ -12,7 +14,17 @@ defmodule EthosWeb.GuideLive.Share do
       if connected?(socket) and guide.status == "draft" do
         GuideAgent.subscribe_guide(guide.id)
         {:ok, guide} = Guides.publish_guide(guide)
-        {:ok, _} = Ethos.OGCard.generate(guide)
+
+        # OG card generation is best-effort: it must never block publishing,
+        # nor prevent the enrich/gap-fill pipeline from running.
+        case Ethos.OGCard.generate(guide) do
+          {:ok, _guide} ->
+            :ok
+
+          {:error, reason} ->
+            Logger.warning("OG card generation failed for guide #{guide.id}: #{inspect(reason)}")
+        end
+
         GuideAgent.publish_pipeline(guide.id)
         {guide, true}
       else

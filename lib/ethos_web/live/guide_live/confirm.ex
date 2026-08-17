@@ -41,10 +41,13 @@ defmodule EthosWeb.GuideLive.Confirm do
   end
 
   def handle_event("confirm", _params, socket) do
-    {:ok, _entries} =
-      Guides.replace_entries_from_proposal(socket.assigns.guide, socket.assigns.proposal)
+    case Guides.replace_entries_from_proposal(socket.assigns.guide, socket.assigns.proposal) do
+      {:ok, _entries} ->
+        {:noreply, push_navigate(socket, to: ~p"/guides/#{socket.assigns.guide.id}/edit")}
 
-    {:noreply, push_navigate(socket, to: ~p"/guides/#{socket.assigns.guide.id}/edit")}
+      {:error, _changeset} ->
+        {:noreply, put_flash(socket, :error, "One of the rows is invalid — check names")}
+    end
   end
 
   defp normalize(field, "") when field in ["day", "verdict"], do: nil

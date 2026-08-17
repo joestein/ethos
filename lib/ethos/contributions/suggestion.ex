@@ -18,7 +18,7 @@ defmodule Ethos.Contributions.Suggestion do
 
   def changeset(suggestion, attrs) do
     suggestion
-    |> cast(attrs, [:place_name, :body, :url, :kind_hint, :entry_id])
+    |> cast(attrs, [:place_name, :body, :url, :kind_hint])
     |> validate_required([:place_name])
     |> validate_length(:place_name, max: 120)
     |> validate_length(:body, max: 2000)

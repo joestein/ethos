@@ -23,9 +23,9 @@ defmodule Ethos.OGCard do
     <svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630">
       <rect width="1200" height="630" fill="#18181b"/>
       <rect x="0" y="560" width="1200" height="70" fill="#f59e0b"/>
-      <text x="80" y="280" font-family="Georgia, serif" font-size="64" fill="#fafafa" font-weight="bold">#{title}</text>
-      <text x="80" y="360" font-family="Georgia, serif" font-size="36" fill="#a1a1aa">#{destination}</text>
-      <text x="80" y="605" font-family="Georgia, serif" font-size="24" fill="#18181b">an Ethos guide — real places, real verdicts</text>
+      <text x="80" y="280" font-family="DejaVu Serif, Georgia, serif" font-size="64" fill="#fafafa" font-weight="bold">#{title}</text>
+      <text x="80" y="360" font-family="DejaVu Serif, Georgia, serif" font-size="36" fill="#a1a1aa">#{destination}</text>
+      <text x="80" y="605" font-family="DejaVu Serif, Georgia, serif" font-size="24" fill="#18181b">an Ethos guide — real places, real verdicts</text>
     </svg>
     """
   end

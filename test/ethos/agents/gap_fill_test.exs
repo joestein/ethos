@@ -31,9 +31,24 @@ defmodule Ethos.Agents.Actions.GapFillTest do
   test "degrades to zero suggestions on Claude error" do
     guide = guide_fixture()
 
-    expect(Ethos.ExaMock, :search, 3, fn _q, _o -> {:ok, []} end)
+    expect(Ethos.ExaMock, :search, 3, fn _q, _o ->
+      {:ok, [%{title: "Somewhere nearby", url: "https://example.com", snippet: "worth a look"}]}
+    end)
+
     expect(Ethos.ClaudeMock, :pick_nearby, 1, fn _, _, _ -> {:error, :refusal} end)
 
     assert {:ok, %{created: 0}} = GapFill.run(%{guide_id: guide.id}, %{})
+  end
+
+  test "does not call Claude when all exa queries yield no candidates" do
+    guide = guide_fixture()
+
+    expect(Ethos.ExaMock, :search, 3, fn _q, _o -> {:ok, []} end)
+    # Deliberately no expect/stub for Ethos.ClaudeMock.pick_nearby — Mox's
+    # strict mode fails this test if run/2 calls it anyway, proving the
+    # empty-candidates short-circuit skips the (budgeted) Claude call.
+
+    assert {:ok, %{guide_id: gid, created: 0}} = GapFill.run(%{guide_id: guide.id}, %{})
+    assert gid == guide.id
   end
 end

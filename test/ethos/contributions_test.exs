@@ -24,6 +24,34 @@ defmodule Ethos.ContributionsTest do
     assert entry.name == "Bar da Velha"
   end
 
+  test "accept_suggestion/1 on an already-processed suggestion returns an error instead of crashing" do
+    guide = guide_fixture()
+    reader = user_fixture()
+
+    {:ok, sugg} =
+      Contributions.create_suggestion(reader, guide, %{place_name: "Bar da Velha", body: "gem"})
+
+    assert {:ok, _} = Contributions.accept_suggestion(sugg)
+
+    # Re-fetch to get the updated (now "accepted") status, simulating a
+    # double-click where the second request loads the suggestion again.
+    reloaded = Contributions.get_suggestion!(guide, sugg.id)
+    assert reloaded.status == "accepted"
+    assert Contributions.accept_suggestion(reloaded) == {:error, :already_processed}
+
+    # Only one entry was created — the second accept did not insert another.
+    assert length(Guides.list_entries(guide)) == 1
+  end
+
+  test "decline_suggestion/1 on an already-processed suggestion returns an error instead of crashing" do
+    guide = guide_fixture()
+    reader = user_fixture()
+    {:ok, sugg} = Contributions.create_suggestion(reader, guide, %{place_name: "X", body: "y"})
+    {:ok, declined} = Contributions.decline_suggestion(sugg)
+
+    assert Contributions.decline_suggestion(declined) == {:error, :already_processed}
+  end
+
   test "decline_suggestion/1 sets declined without creating an entry" do
     guide = guide_fixture()
     reader = user_fixture()

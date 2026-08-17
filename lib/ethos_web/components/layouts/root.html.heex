@@ -4,7 +4,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="csrf-token" content={get_csrf_token()} />
-    <.live_title suffix=" · Phoenix Framework">
+    <.live_title suffix=" · Ethos">
       <%= assigns[:page_title] || "Ethos" %>
     </.live_title>
     <link phx-track-static rel="stylesheet" href={~p"/assets/app.css"} />
@@ -13,6 +13,10 @@
     <%= if assigns[:page_og] do %>
       <meta property="og:title" content={@page_og.title} />
       <meta property="og:description" content={@page_og.description} />
+      <meta property="og:type" content={Map.get(@page_og, :type, "website")} />
+      <%= if Map.get(@page_og, :url) do %>
+        <meta property="og:url" content={@page_og.url} />
+      <% end %>
       <%= if @page_og.image do %>
         <meta property="og:image" content={@page_og.image} />
       <% end %>
