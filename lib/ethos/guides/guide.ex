@@ -14,6 +14,7 @@ defmodule Ethos.Guides.Guide do
     field :view_count, :integer, default: 0
     field :og_image_path, :string
     belongs_to :user, Ethos.Accounts.User
+    has_many :entries, Ethos.Guides.Entry, preload_order: [asc: :position]
     timestamps(type: :utc_datetime)
   end
 

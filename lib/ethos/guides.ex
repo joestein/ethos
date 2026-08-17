@@ -2,6 +2,7 @@ defmodule Ethos.Guides do
   import Ecto.Query, warn: false
   alias Ethos.Repo
   alias Ethos.Guides.Guide
+  alias Ethos.Guides.Entry
 
   def create_guide(user, attrs) do
     %Guide{user_id: user.id}
@@ -33,5 +34,47 @@ defmodule Ethos.Guides do
     |> Repo.update_all(inc: [view_count: 1])
 
     :ok
+  end
+
+  def list_entries(%Guide{id: guide_id}) do
+    Repo.all(from e in Entry, where: e.guide_id == ^guide_id, order_by: [asc: e.position, asc: e.id])
+  end
+
+  def get_entry!(%Guide{id: guide_id}, id), do: Repo.get_by!(Entry, id: id, guide_id: guide_id)
+
+  def create_entry(%Guide{} = guide, attrs) do
+    position = next_position(guide)
+
+    %Entry{guide_id: guide.id, position: position}
+    |> Entry.changeset(Map.drop(attrs, [:position, "position"]))
+    |> Repo.insert()
+  end
+
+  def update_entry(%Entry{} = entry, attrs) do
+    entry |> Entry.changeset(attrs) |> Repo.update()
+  end
+
+  def delete_entry(%Entry{} = entry), do: Repo.delete(entry)
+
+  def replace_entries_from_proposal(%Guide{} = guide, proposal) when is_list(proposal) do
+    Repo.transaction(fn ->
+      Repo.delete_all(from e in Entry, where: e.guide_id == ^guide.id and e.source == "import")
+
+      proposal
+      |> Enum.with_index()
+      |> Enum.map(fn {attrs, idx} ->
+        %Entry{guide_id: guide.id, position: idx, source: "import"}
+        |> Entry.changeset(Map.drop(attrs, ["source", :source]))
+        |> Repo.insert!()
+      end)
+    end)
+  end
+
+  def set_entry_enrichment(%Entry{} = entry, payload) when is_map(payload) do
+    entry |> Ecto.Changeset.change(enrichment: payload) |> Repo.update()
+  end
+
+  defp next_position(%Guide{id: guide_id}) do
+    (Repo.one(from e in Entry, where: e.guide_id == ^guide_id, select: max(e.position)) || -1) + 1
   end
 end
