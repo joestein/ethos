@@ -10,6 +10,14 @@
     <link phx-track-static rel="stylesheet" href={~p"/assets/app.css"} />
     <script defer phx-track-static type="text/javascript" src={~p"/assets/app.js"}>
     </script>
+    <%= if assigns[:page_og] do %>
+      <meta property="og:title" content={@page_og.title} />
+      <meta property="og:description" content={@page_og.description} />
+      <%= if @page_og.image do %>
+        <meta property="og:image" content={@page_og.image} />
+      <% end %>
+      <meta name="twitter:card" content="summary_large_image" />
+    <% end %>
   </head>
   <body class="bg-white">
     <ul class="relative z-10 flex items-center gap-4 px-4 sm:px-6 lg:px-8 justify-end">

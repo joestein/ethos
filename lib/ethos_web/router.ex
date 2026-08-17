@@ -21,6 +21,7 @@ defmodule EthosWeb.Router do
     pipe_through :browser
 
     get "/", PageController, :home
+    get "/g/:slug", GuideController, :show
   end
 
   # Other scopes may use custom stacks.
@@ -76,7 +77,11 @@ defmodule EthosWeb.Router do
       live "/guides/:id/edit", GuideLive.Edit, :edit
       live "/guides/:id/share", GuideLive.Share, :share
       live "/guides/:id/suggestions", GuideLive.Suggestions, :suggestions
+
+      live "/g/:slug/suggest", SuggestLive, :new
     end
+
+    post "/g/:slug/entries/:entry_id/research", GuideController, :research
   end
 
   scope "/", EthosWeb do

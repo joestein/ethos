@@ -1,0 +1,59 @@
+<article class="mx-auto max-w-2xl px-4 py-10">
+  <header>
+    <h1 class="text-3xl font-bold"><%= @guide.title %></h1>
+    <p class="mt-1 text-zinc-500"><%= @guide.destination %></p>
+  </header>
+
+  <ol class="mt-8 space-y-4">
+    <li :for={entry <- @entries} id={"entry-#{entry.id}"} class="rounded-xl border p-5">
+      <div class="flex items-start justify-between gap-4">
+        <div>
+          <p class="font-semibold text-lg">
+            <%= if entry.enrichment && entry.enrichment["official_url"] do %>
+              <a href={entry.enrichment["official_url"]} class="hover:underline" rel="nofollow">
+                <%= entry.name %>
+              </a>
+            <% else %>
+              <%= entry.name %>
+            <% end %>
+          </p>
+          <p class="text-sm text-zinc-500">
+            <%= entry.kind %>
+            <span :if={entry.day}>· day <%= entry.day %></span>
+            <span :if={verdict_badge(entry.verdict)}>· <%= verdict_badge(entry.verdict) %></span>
+          </p>
+        </div>
+      </div>
+
+      <p :if={entry.note} class="mt-2"><%= entry.note %></p>
+
+      <p :if={entry.credited_user_id} class="mt-2 text-xs text-zinc-400">
+        added from a suggestion
+      </p>
+
+      <div :if={@research[entry.id]} class="mt-3 rounded-md bg-zinc-50 p-3 text-sm">
+        <p class="font-medium text-zinc-600">Fresh research</p>
+        <ul class="mt-1 space-y-1">
+          <li :for={r <- @research[entry.id]["results"]}>
+            <a href={r["url"]} class="underline" rel="nofollow"><%= r["title"] || r["url"] %></a>
+            <span :if={r["snippet"]} class="text-zinc-500">— <%= r["snippet"] %></span>
+          </li>
+        </ul>
+      </div>
+
+      <form :if={@current_user} action={~p"/g/#{@guide.slug}/entries/#{entry.id}/research"} method="post" class="mt-2">
+        <input type="hidden" name="_csrf_token" value={Plug.CSRFProtection.get_csrf_token()} />
+        <button class="text-xs underline text-zinc-500">Research this</button>
+      </form>
+    </li>
+  </ol>
+
+  <footer class="mt-10 flex flex-wrap gap-4 border-t pt-6">
+    <.link navigate={~p"/g/#{@guide.slug}/suggest"} class="rounded-md bg-zinc-900 px-4 py-2 text-white text-sm">
+      Suggest a place
+    </.link>
+    <.link navigate={~p"/guides/new"} class="rounded-md border px-4 py-2 text-sm">
+      Make your own guide
+    </.link>
+  </footer>
+</article>
