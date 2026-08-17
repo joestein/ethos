@@ -44,4 +44,26 @@ defmodule Ethos.ResearchTest do
     assert Enum.count(results, & &1) == 10
     assert List.last(results) == false
   end
+
+  test "cached_research_map/2 batches lookups for multiple entries" do
+    expect(Ethos.ExaMock, :search, 2, fn _query, _opts ->
+      {:ok, [%{title: "News", url: "https://example.com", snippet: "still open"}]}
+    end)
+
+    fresh = %{id: 1, name: "Ramiro"}
+    stale = %{id: 2, name: "Old Place"}
+    missing = %{id: 3, name: "Nowhere"}
+
+    assert {:ok, _} = Research.research(fresh.name, "Lisbon")
+    assert {:ok, _} = Research.research(stale.name, "Lisbon")
+
+    Ethos.Repo.update_all(
+      from(c in Ethos.Research.CacheEntry, where: c.key == ^"research:old place:lisbon"),
+      set: [fetched_at: DateTime.add(DateTime.utc_now(), -8, :day) |> DateTime.truncate(:second)]
+    )
+
+    result = Research.cached_research_map([fresh, stale, missing], "Lisbon")
+
+    assert %{1 => %{"results" => [%{"title" => "News"}]}, 2 => nil, 3 => nil} = result
+  end
 end

@@ -8,10 +8,7 @@ defmodule EthosWeb.GuideController do
     entries = Guides.list_entries(guide)
     Guides.increment_view_count(guide)
 
-    research =
-      Map.new(entries, fn entry ->
-        {entry.id, Research.cached_research(entry.name, guide.destination)}
-      end)
+    research = Research.cached_research_map(entries, guide.destination)
 
     og = %{
       title: "#{guide.title} — an Ethos guide",
@@ -29,6 +26,9 @@ defmodule EthosWeb.GuideController do
 
     conn =
       cond do
+        not is_nil(Research.cached_research(entry.name, guide.destination)) ->
+          conn
+
         not Research.RateLimiter.allow?(user.id) ->
           put_flash(conn, :error, "Research limit reached — try again in an hour.")
 

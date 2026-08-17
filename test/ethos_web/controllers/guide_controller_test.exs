@@ -70,4 +70,34 @@ defmodule EthosWeb.GuideControllerTest do
     conn = get(build_conn(), ~p"/g/#{guide.slug}")
     assert html_response(conn, 200) =~ "still open, book ahead"
   end
+
+  test "cache hits do not consume rate-limit slots", %{conn: conn} do
+    guide = published_guide_fixture()
+    {:ok, entry} = Guides.create_entry(guide, %{kind: "food", name: "Ramiro", verdict: "loved"})
+    user = user_fixture()
+    Ethos.Research.RateLimiter.reset(user.id)
+
+    # Exa is called exactly once — every later hit is served from the 7-day cache.
+    expect(Ethos.ExaMock, :search, fn _q, _o ->
+      {:ok, [%{title: "Update", url: "https://example.com", snippet: "still open, book ahead"}]}
+    end)
+
+    first =
+      conn
+      |> log_in_user(user)
+      |> post(~p"/g/#{guide.slug}/entries/#{entry.id}/research")
+
+    refute Phoenix.Flash.get(first.assigns.flash, :error)
+
+    # The rate limit is 10/hour. If cache hits consumed a slot, the 11th of these
+    # would trip "Research limit reached" — they must not, since the entry is cached.
+    for _ <- 1..11 do
+      resp =
+        build_conn()
+        |> log_in_user(user)
+        |> post(~p"/g/#{guide.slug}/entries/#{entry.id}/research")
+
+      refute Phoenix.Flash.get(resp.assigns.flash, :error)
+    end
+  end
 end

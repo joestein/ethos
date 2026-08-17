@@ -44,6 +44,28 @@ defmodule Ethos.Research do
     end
   end
 
+  @doc """
+  Batched version of `cached_research/2` for rendering a whole guide page without
+  running one cache query per entry. Returns `%{entry.id => payload_or_nil}`.
+  """
+  def cached_research_map(entries, destination) do
+    keys_by_id =
+      Map.new(entries, fn entry -> {entry.id, cache_key("research", entry.name, destination)} end)
+
+    keys = keys_by_id |> Map.values() |> Enum.uniq()
+    cutoff = DateTime.add(DateTime.utc_now(), -@research_ttl_days, :day)
+
+    payload_by_key =
+      from(c in CacheEntry,
+        where: c.kind == "research" and c.key in ^keys and c.fetched_at > ^cutoff,
+        select: {c.key, c.payload}
+      )
+      |> Repo.all()
+      |> Map.new()
+
+    Map.new(keys_by_id, fn {id, key} -> {id, Map.get(payload_by_key, key)} end)
+  end
+
   @doc "Up to 3 exa queries for gap-fill candidates. Returns a flat candidate list."
   def destination_candidates(destination, kinds) when is_list(kinds) do
     kinds
