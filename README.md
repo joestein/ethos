@@ -1,5 +1,39 @@
 # ethos
 
+## Run everything with Docker Compose
+
+```bash
+docker compose up -d --build
+```
+
+That builds the app image, starts Postgres (waits for it to be healthy), runs
+migrations, and serves the app at http://localhost:4000. Register at
+`/users/register`. AI features need keys — export `ANTHROPIC_API_KEY` and
+`EXA_API_KEY` (or put them in `.env` and `set -a; source .env; set +a`) before
+`docker compose up`, since compose passes them through to the app container.
+
+Logs: `docker compose logs -f app` · Stop: `docker compose down` (data
+persists in the `ethos-pg-data` volume). To seed the demo guide into a fresh
+database: `mix ecto.setup` from the host, or register and make your own.
+
+The app service runs the production release build, so code changes require
+`docker compose up -d --build` again. For live-reload development, run only
+the database in Docker and Phoenix on the host (next sections).
+
+## API keys (dev)
+
+Copy `.env.example` to `.env`, fill in `ANTHROPIC_API_KEY` and `EXA_API_KEY`,
+and load it into your shell before starting the server — Phoenix does not
+auto-load `.env` files:
+
+```bash
+set -a; source .env; set +a
+mix phx.server
+```
+
+(Or use [direnv](https://direnv.net). Without keys the app runs fine; only
+dump parsing, enrichment, gap-fill, and the research button need them.)
+
 ## Development database
 
 The dev/test database runs in Docker on port 54329 (host Postgres is broken

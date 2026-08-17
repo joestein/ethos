@@ -1,13 +1,44 @@
 services:
+  app:
+    build: .
+    container_name: ethos-app
+    ports:
+      - "4000:4000"
+    environment:
+      DATABASE_URL: ecto://postgres:postgres@ethos-pg/ethos_dev
+      # Local-compose-only secret; real deployments (Fly) set their own via secrets.
+      SECRET_KEY_BASE: 8R/DkXYSsFXOc5z+uBjSoSBcuKX+yFO2vYk0SNMc6I4x3fJAZZI3Uvylc1DYR6J+
+      PHX_HOST: localhost
+      PHX_URL_SCHEME: http
+      PHX_URL_PORT: "4000"
+      PORT: "4000"
+      # AI features (dump parsing, enrichment, gap-fill, research) need real keys —
+      # export them or put them in .env; the app boots fine with them empty.
+      ANTHROPIC_API_KEY: ${ANTHROPIC_API_KEY:-}
+      EXA_API_KEY: ${EXA_API_KEY:-}
+    command: sh -c "/app/bin/migrate && exec /app/bin/server"
+    depends_on:
+      ethos-pg:
+        condition: service_healthy
+
   ethos-pg:
     image: postgres:16
     container_name: ethos-pg
     environment:
       POSTGRES_PASSWORD: postgres
+      # Creates the DB on first init of a fresh volume; ignored on existing volumes.
+      POSTGRES_DB: ethos_dev
     ports:
       - "54329:5432"
     volumes:
       - ethos-pg-data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U postgres"]
+      interval: 2s
+      timeout: 3s
+      retries: 20
 
 volumes:
   ethos-pg-data:
+    # Pin the volume name so data doesn't depend on which directory compose runs from.
+    name: ethos-pg-data

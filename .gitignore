@@ -43,3 +43,6 @@ npm-debug.log
 
 /priv/uploads/
 
+
+# Local environment variables (copy .env.example)
+.env
