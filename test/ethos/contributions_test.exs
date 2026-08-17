@@ -66,9 +66,15 @@ defmodule Ethos.ContributionsTest do
 
     {:ok, suggs} =
       Contributions.create_gap_fill_suggestions(guide, [
-        %{"name" => "LX Factory", "kind" => "sight", "reason" => "creative hub", "url" => "https://lxfactory.com"}
+        %{
+          "name" => "LX Factory",
+          "kind" => "sight",
+          "reason" => "creative hub",
+          "url" => "https://lxfactory.com"
+        }
       ])
 
-    assert [%{origin: "gap_fill", author_id: nil, place_name: "LX Factory", status: "pending"}] = suggs
+    assert [%{origin: "gap_fill", author_id: nil, place_name: "LX Factory", status: "pending"}] =
+             suggs
   end
 end

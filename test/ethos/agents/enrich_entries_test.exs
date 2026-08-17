@@ -13,7 +13,9 @@ defmodule Ethos.Agents.Actions.EnrichEntriesTest do
     guide = guide_fixture()
     {:ok, e1} = Guides.create_entry(guide, %{kind: "food", name: "Ramiro", verdict: "loved"})
     {:ok, _tip} = Guides.create_entry(guide, %{kind: "tip", name: "Carry coins", verdict: nil})
-    {:ok, _e2} = Guides.create_entry(guide, %{kind: "sight", name: "Belem Tower", verdict: "good"})
+
+    {:ok, _e2} =
+      Guides.create_entry(guide, %{kind: "sight", name: "Belem Tower", verdict: "good"})
 
     expect(Ethos.ExaMock, :search, 2, fn query, _opts ->
       if query =~ "Ramiro" do
@@ -25,6 +27,7 @@ defmodule Ethos.Agents.Actions.EnrichEntriesTest do
 
     assert {:ok, %{enriched: 1, failed: 1}} = EnrichEntries.run(%{guide_id: guide.id}, %{})
 
-    assert Guides.get_entry!(guide, e1.id).enrichment["official_url"] == "https://cervejariaramiro.pt"
+    assert Guides.get_entry!(guide, e1.id).enrichment["official_url"] ==
+             "https://cervejariaramiro.pt"
   end
 end

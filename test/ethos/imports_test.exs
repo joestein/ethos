@@ -15,7 +15,9 @@ defmodule Ethos.ImportsTest do
     guide = guide_fixture()
     {:ok, imp} = Guides.create_import(guide, "notes")
 
-    {:ok, imp} = Guides.mark_import(imp, "parsed", %{proposal: [%{"name" => "Ramiro", "kind" => "food"}]})
+    {:ok, imp} =
+      Guides.mark_import(imp, "parsed", %{proposal: [%{"name" => "Ramiro", "kind" => "food"}]})
+
     assert imp.status == "parsed"
     assert [%{"name" => "Ramiro"}] = imp.proposal
 

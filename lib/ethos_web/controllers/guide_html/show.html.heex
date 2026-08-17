@@ -1,7 +1,7 @@
 <article class="mx-auto max-w-2xl px-4 py-10">
   <header>
-    <h1 class="text-3xl font-bold"><%= @guide.title %></h1>
-    <p class="mt-1 text-zinc-500"><%= @guide.destination %></p>
+    <h1 class="text-3xl font-bold">{@guide.title}</h1>
+    <p class="mt-1 text-zinc-500">{@guide.destination}</p>
   </header>
 
   <ol class="mt-8 space-y-4">
@@ -11,21 +11,21 @@
           <p class="font-semibold text-lg">
             <%= if entry.enrichment && entry.enrichment["official_url"] && EthosWeb.Url.safe_http?(entry.enrichment["official_url"]) do %>
               <a href={entry.enrichment["official_url"]} class="hover:underline" rel="nofollow">
-                <%= entry.name %>
+                {entry.name}
               </a>
             <% else %>
-              <%= entry.name %>
+              {entry.name}
             <% end %>
           </p>
           <p class="text-sm text-zinc-500">
-            <%= entry.kind %>
-            <span :if={entry.day}>· day <%= entry.day %></span>
-            <span :if={verdict_badge(entry.verdict)}>· <%= verdict_badge(entry.verdict) %></span>
+            {entry.kind}
+            <span :if={entry.day}>· day {entry.day}</span>
+            <span :if={verdict_badge(entry.verdict)}>· {verdict_badge(entry.verdict)}</span>
           </p>
         </div>
       </div>
 
-      <p :if={entry.note} class="mt-2"><%= entry.note %></p>
+      <p :if={entry.note} class="mt-2">{entry.note}</p>
 
       <p :if={entry.credited_user_id} class="mt-2 text-xs text-zinc-400">
         added from a reader suggestion
@@ -36,16 +36,21 @@
         <ul class="mt-1 space-y-1">
           <li :for={r <- @research[entry.id]["results"]}>
             <%= if EthosWeb.Url.safe_http?(r["url"]) do %>
-              <a href={r["url"]} class="underline" rel="nofollow"><%= r["title"] || r["url"] %></a>
+              <a href={r["url"]} class="underline" rel="nofollow">{r["title"] || r["url"]}</a>
             <% else %>
-              <span><%= r["title"] || r["url"] %></span>
+              <span>{r["title"] || r["url"]}</span>
             <% end %>
-            <span :if={r["snippet"]} class="text-zinc-500">— <%= r["snippet"] %></span>
+            <span :if={r["snippet"]} class="text-zinc-500">— {r["snippet"]}</span>
           </li>
         </ul>
       </div>
 
-      <form :if={@current_user} action={~p"/g/#{@guide.slug}/entries/#{entry.id}/research"} method="post" class="mt-2">
+      <form
+        :if={@current_user}
+        action={~p"/g/#{@guide.slug}/entries/#{entry.id}/research"}
+        method="post"
+        class="mt-2"
+      >
         <input type="hidden" name="_csrf_token" value={Plug.CSRFProtection.get_csrf_token()} />
         <button class="text-xs underline text-zinc-500">Research this</button>
       </form>
@@ -53,7 +58,10 @@
   </ol>
 
   <footer class="mt-10 flex flex-wrap gap-4 border-t pt-6">
-    <.link navigate={~p"/g/#{@guide.slug}/suggest"} class="rounded-md bg-zinc-900 px-4 py-2 text-white text-sm">
+    <.link
+      navigate={~p"/g/#{@guide.slug}/suggest"}
+      class="rounded-md bg-zinc-900 px-4 py-2 text-white text-sm"
+    >
       Suggest a place
     </.link>
     <.link navigate={~p"/guides/new"} class="rounded-md border px-4 py-2 text-sm">

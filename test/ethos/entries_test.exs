@@ -52,7 +52,13 @@ defmodule Ethos.EntriesTest do
     guide = guide_fixture()
 
     proposal = [
-      %{"day" => 1, "kind" => "food", "name" => "Ramiro", "note" => "garlic shrimp", "verdict" => "loved"},
+      %{
+        "day" => 1,
+        "kind" => "food",
+        "name" => "Ramiro",
+        "note" => "garlic shrimp",
+        "verdict" => "loved"
+      },
       %{"day" => 1, "kind" => "food", "name" => "", "note" => nil, "verdict" => nil}
     ]
 
@@ -64,13 +70,28 @@ defmodule Ethos.EntriesTest do
     guide = guide_fixture()
 
     proposal = [
-      %{"day" => 1, "kind" => "food", "name" => "Ramiro", "note" => "garlic shrimp", "verdict" => "loved"},
-      %{"day" => 1, "kind" => "walk", "name" => "Alfama wander", "note" => nil, "verdict" => "good"}
+      %{
+        "day" => 1,
+        "kind" => "food",
+        "name" => "Ramiro",
+        "note" => "garlic shrimp",
+        "verdict" => "loved"
+      },
+      %{
+        "day" => 1,
+        "kind" => "walk",
+        "name" => "Alfama wander",
+        "note" => nil,
+        "verdict" => "good"
+      }
     ]
 
     {:ok, entries} = Guides.replace_entries_from_proposal(guide, proposal)
 
-    assert [%{name: "Ramiro", position: 0, source: "import"}, %{name: "Alfama wander", position: 1}] =
+    assert [
+             %{name: "Ramiro", position: 0, source: "import"},
+             %{name: "Alfama wander", position: 1}
+           ] =
              entries
 
     assert length(Guides.list_entries(guide)) == 2
@@ -78,7 +99,10 @@ defmodule Ethos.EntriesTest do
 
   test "set_entry_enrichment/2 merges enrichment payload" do
     guide = guide_fixture()
-    {:ok, entry} = Guides.create_entry(guide, %{kind: "sight", name: "Belem Tower", verdict: "good"})
+
+    {:ok, entry} =
+      Guides.create_entry(guide, %{kind: "sight", name: "Belem Tower", verdict: "good"})
+
     {:ok, entry} = Guides.set_entry_enrichment(entry, %{"official_url" => "https://example.com"})
     assert entry.enrichment["official_url"] == "https://example.com"
   end

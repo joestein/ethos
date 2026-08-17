@@ -54,8 +54,13 @@ defmodule EthosWeb.GuideLive.Share do
     </.header>
 
     <div class="mt-6 flex gap-2">
-      <input type="text" readonly value={@public_url} id="share-url"
-             class="w-full rounded-md border-zinc-300 text-sm" />
+      <input
+        type="text"
+        readonly
+        value={@public_url}
+        id="share-url"
+        class="w-full rounded-md border-zinc-300 text-sm"
+      />
       <.button phx-click={JS.dispatch("phx:copy", to: "#share-url")}>Copy</.button>
     </div>
 
@@ -66,8 +71,7 @@ defmodule EthosWeb.GuideLive.Share do
     <div class="mt-6 rounded-md bg-zinc-50 p-4 text-sm">
       <p :if={@polishing}>✨ Polishing your guide — adding official links and nearby ideas…</p>
       <p :if={!@polishing}>
-        Done. Review
-        <.link navigate={~p"/guides/#{@guide.id}/suggestions"} class="underline">nearby ideas &amp; suggestions</.link>.
+        Done. Review <.link navigate={~p"/guides/#{@guide.id}/suggestions"} class="underline">nearby ideas &amp; suggestions</.link>.
       </p>
     </div>
     """

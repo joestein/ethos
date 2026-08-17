@@ -66,8 +66,11 @@ defmodule Ethos.Claude.API do
 
   @impl true
   def parse_dump(raw_text, destination) do
-    request(@parse_system, @entry_schema,
-      "Destination: #{destination}\n\nRaw trip notes:\n#{raw_text}")
+    request(
+      @parse_system,
+      @entry_schema,
+      "Destination: #{destination}\n\nRaw trip notes:\n#{raw_text}"
+    )
     |> decode_list("entries")
   end
 

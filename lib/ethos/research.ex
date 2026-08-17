@@ -30,7 +30,8 @@ defmodule Ethos.Research do
       with {:ok, results} <- Ethos.Exa.impl().search(query, num_results: 3) do
         {:ok,
          %{
-           "results" => Enum.map(results, &%{"title" => &1.title, "url" => &1.url, "snippet" => &1.snippet}),
+           "results" =>
+             Enum.map(results, &%{"title" => &1.title, "url" => &1.url, "snippet" => &1.snippet}),
            "fetched_at" => DateTime.to_iso8601(DateTime.utc_now())
          }}
       end
@@ -74,8 +75,16 @@ defmodule Ethos.Research do
       key = cache_key("gap_fill", kind, destination)
 
       case cache_first(key, "gap_fill", :infinity, fn ->
-             with {:ok, results} <- Ethos.Exa.impl().search("best #{kind} #{destination}", num_results: 5) do
-               {:ok, %{"results" => Enum.map(results, &%{"title" => &1.title, "url" => &1.url, "snippet" => &1.snippet})}}
+             with {:ok, results} <-
+                    Ethos.Exa.impl().search("best #{kind} #{destination}", num_results: 5) do
+               {:ok,
+                %{
+                  "results" =>
+                    Enum.map(
+                      results,
+                      &%{"title" => &1.title, "url" => &1.url, "snippet" => &1.snippet}
+                    )
+                }}
              end
            end) do
         {:ok, %{"results" => results}} -> Enum.map(results, &Map.put(&1, "kind_hint", kind))
@@ -85,7 +94,10 @@ defmodule Ethos.Research do
   end
 
   defp cache_key(kind, a, b) do
-    normalize = fn s -> s |> String.downcase() |> String.replace(~r/\s+/, " ") |> String.trim() end
+    normalize = fn s ->
+      s |> String.downcase() |> String.replace(~r/\s+/, " ") |> String.trim()
+    end
+
     "#{kind}:#{normalize.(a)}:#{normalize.(b)}"
   end
 
@@ -97,8 +109,12 @@ defmodule Ethos.Research do
       nil ->
         with {:ok, payload} <- fetch_fun.() do
           Repo.insert!(
-            %CacheEntry{key: key, kind: kind, payload: payload,
-                        fetched_at: DateTime.truncate(DateTime.utc_now(), :second)},
+            %CacheEntry{
+              key: key,
+              kind: kind,
+              payload: payload,
+              fetched_at: DateTime.truncate(DateTime.utc_now(), :second)
+            },
             on_conflict: {:replace, [:payload, :fetched_at]},
             conflict_target: :key
           )
@@ -119,9 +135,10 @@ defmodule Ethos.Research do
             entry
 
           days ->
-            if DateTime.compare(entry.fetched_at, DateTime.add(DateTime.utc_now(), -days, :day)) == :gt,
-              do: entry,
-              else: nil
+            if DateTime.compare(entry.fetched_at, DateTime.add(DateTime.utc_now(), -days, :day)) ==
+                 :gt,
+               do: entry,
+               else: nil
         end
     end
   end

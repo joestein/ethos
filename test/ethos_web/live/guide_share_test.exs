@@ -30,7 +30,10 @@ defmodule EthosWeb.GuideShareTest do
     assert Guides.get_guide!(guide.id).status == "published"
   end
 
-  test "share screen on an already-published guide does not re-run the pipeline", %{conn: conn, user: user} do
+  test "share screen on an already-published guide does not re-run the pipeline", %{
+    conn: conn,
+    user: user
+  } do
     guide = published_guide_fixture(%{user: user})
     {:ok, _lv, html} = live(conn, ~p"/guides/#{guide.id}/share")
     assert html =~ "/g/#{guide.slug}"

@@ -30,7 +30,8 @@ defmodule EthosWeb.GuideAuthoringTest do
     guide = guide_fixture(%{user: user})
 
     expect(Ethos.ClaudeMock, :parse_dump, fn _, _ ->
-      {:ok, [%{"day" => 1, "kind" => "food", "name" => "Ramiro", "note" => nil, "verdict" => "loved"}]}
+      {:ok,
+       [%{"day" => 1, "kind" => "food", "name" => "Ramiro", "note" => nil, "verdict" => "loved"}]}
     end)
 
     {:ok, lv, _html} = live(conn, ~p"/guides/#{guide.id}/import")

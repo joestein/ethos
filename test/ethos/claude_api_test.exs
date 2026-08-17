@@ -20,7 +20,12 @@ defmodule Ethos.Claude.APITest do
       assert decoded["output_config"]["format"]["type"] == "json_schema"
       assert [%{"cache_control" => %{"type" => "ephemeral"}} | _] = decoded["system"]
 
-      Req.Test.json(conn, claude_response(~s({"entries":[{"day":1,"kind":"food","name":"Ramiro","note":"go early","verdict":"loved"}]})))
+      Req.Test.json(
+        conn,
+        claude_response(
+          ~s({"entries":[{"day":1,"kind":"food","name":"Ramiro","note":"go early","verdict":"loved"}]})
+        )
+      )
     end)
 
     assert {:ok, [%{"name" => "Ramiro", "kind" => "food"}]} =
@@ -37,7 +42,9 @@ defmodule Ethos.Claude.APITest do
 
   test "parse_dump/2 surfaces HTTP errors" do
     Req.Test.stub(Ethos.Claude.API, fn conn ->
-      conn |> Plug.Conn.put_status(429) |> Req.Test.json(%{"error" => %{"type" => "rate_limit_error"}})
+      conn
+      |> Plug.Conn.put_status(429)
+      |> Req.Test.json(%{"error" => %{"type" => "rate_limit_error"}})
     end)
 
     assert {:error, {:http, 429, _}} = API.parse_dump("notes", "Lisbon")

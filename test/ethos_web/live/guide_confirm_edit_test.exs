@@ -19,7 +19,13 @@ defmodule EthosWeb.GuideConfirmEditTest do
     {:ok, _} =
       Guides.mark_import(imp, "parsed", %{
         proposal: [
-          %{"day" => 1, "kind" => "food", "name" => "Ramiro", "note" => "go early", "verdict" => "loved"},
+          %{
+            "day" => 1,
+            "kind" => "food",
+            "name" => "Ramiro",
+            "note" => "go early",
+            "verdict" => "loved"
+          },
           %{"day" => 2, "kind" => "walk", "name" => "Alfama", "note" => nil, "verdict" => "good"}
         ]
       })
@@ -40,7 +46,10 @@ defmodule EthosWeb.GuideConfirmEditTest do
     assert [%{name: "Ramiro"}, %{name: "Alfama"}] = Guides.list_entries(guide)
   end
 
-  test "confirm screen supports inline editing of a proposed row before confirming", %{conn: conn, user: user} do
+  test "confirm screen supports inline editing of a proposed row before confirming", %{
+    conn: conn,
+    user: user
+  } do
     guide = guide_with_proposal(user)
     {:ok, lv, _} = live(conn, ~p"/guides/#{guide.id}/confirm")
 
@@ -62,7 +71,10 @@ defmodule EthosWeb.GuideConfirmEditTest do
     assert [%{name: "Ramiro (renamed)"}, %{name: "Alfama"}] = Guides.list_entries(guide)
   end
 
-  test "confirm screen flashes an error instead of crashing when a row is invalid", %{conn: conn, user: user} do
+  test "confirm screen flashes an error instead of crashing when a row is invalid", %{
+    conn: conn,
+    user: user
+  } do
     guide = guide_fixture(%{user: user})
     {:ok, imp} = Guides.create_import(guide, "raw")
 

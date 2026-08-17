@@ -34,7 +34,8 @@ defmodule Ethos.Guides.Guide do
   defp maybe_put_slug(changeset) do
     case {get_field(changeset, :slug), get_change(changeset, :title)} do
       {nil, title} when is_binary(title) ->
-        suffix = for _ <- 1..6, into: "", do: <<Enum.random(~c"abcdefghijklmnopqrstuvwxyz0123456789")>>
+        suffix =
+          for _ <- 1..6, into: "", do: <<Enum.random(~c"abcdefghijklmnopqrstuvwxyz0123456789")>>
 
         slug =
           title

@@ -5,18 +5,25 @@
     a beautiful guide with real verdicts. Share one link instead of typing it all out again.
   </p>
   <div class="mt-8 flex justify-center gap-4">
-    <.link navigate={~p"/guides/new"} class="rounded-md bg-zinc-900 px-6 py-3 text-white font-medium">
+    <.link
+      navigate={~p"/guides/new"}
+      class="rounded-md bg-zinc-900 px-6 py-3 text-white font-medium"
+    >
       Make your guide
     </.link>
-    <.link :if={@featured} href={~p"/g/#{@featured.slug}"} class="rounded-md border px-6 py-3 font-medium">
+    <.link
+      :if={@featured}
+      href={~p"/g/#{@featured.slug}"}
+      class="rounded-md border px-6 py-3 font-medium"
+    >
       See an example
     </.link>
   </div>
 
   <div :if={@featured} class="mt-16 rounded-xl border p-6 text-left">
     <p class="text-sm uppercase tracking-wide text-zinc-400">Featured guide</p>
-    <p class="mt-1 text-xl font-semibold"><%= @featured.title %></p>
-    <p class="text-zinc-500"><%= @featured.destination %></p>
+    <p class="mt-1 text-xl font-semibold">{@featured.title}</p>
+    <p class="text-zinc-500">{@featured.destination}</p>
     <.link href={~p"/g/#{@featured.slug}"} class="mt-3 inline-block underline">Read it →</.link>
   </div>
 </div>

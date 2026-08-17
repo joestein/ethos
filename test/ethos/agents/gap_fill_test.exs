@@ -21,11 +21,22 @@ defmodule Ethos.Agents.Actions.GapFillTest do
       assert dest == guide.destination
       assert "Ramiro" in existing
       assert length(candidates) > 0
-      {:ok, [%{"name" => "LX Factory", "kind" => "sight", "reason" => "creative hub", "url" => "https://lxfactory.com"}]}
+
+      {:ok,
+       [
+         %{
+           "name" => "LX Factory",
+           "kind" => "sight",
+           "reason" => "creative hub",
+           "url" => "https://lxfactory.com"
+         }
+       ]}
     end)
 
     assert {:ok, %{created: 1}} = GapFill.run(%{guide_id: guide.id}, %{})
-    assert [%{place_name: "LX Factory", origin: "gap_fill"}] = Contributions.list_pending_suggestions(guide)
+
+    assert [%{place_name: "LX Factory", origin: "gap_fill"}] =
+             Contributions.list_pending_suggestions(guide)
   end
 
   test "degrades to zero suggestions on Claude error" do

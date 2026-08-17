@@ -15,18 +15,24 @@ defmodule EthosWeb.SuggestionsFlowTest do
     {:ok, lv, _html} = live(conn, ~p"/g/#{guide.slug}/suggest")
 
     lv
-    |> form("#suggest-form", suggestion: %{place_name: "Bar da Velha", kind_hint: "food", body: "hidden gem"})
+    |> form("#suggest-form",
+      suggestion: %{place_name: "Bar da Velha", kind_hint: "food", body: "hidden gem"}
+    )
     |> render_submit()
 
     assert_redirect(lv, ~p"/g/#{guide.slug}")
-    assert [%{place_name: "Bar da Velha", origin: "user"}] = Contributions.list_pending_suggestions(guide)
+
+    assert [%{place_name: "Bar da Velha", origin: "user"}] =
+             Contributions.list_pending_suggestions(guide)
   end
 
   test "owner accepts a suggestion which creates a credited entry", %{conn: conn} do
     owner = user_fixture()
     guide = published_guide_fixture(%{user: owner})
     reader = user_fixture()
-    {:ok, sugg} = Contributions.create_suggestion(reader, guide, %{place_name: "Bar da Velha", body: "gem"})
+
+    {:ok, sugg} =
+      Contributions.create_suggestion(reader, guide, %{place_name: "Bar da Velha", body: "gem"})
 
     conn = log_in_user(conn, owner)
     {:ok, lv, html} = live(conn, ~p"/guides/#{guide.id}/suggestions")
@@ -43,7 +49,9 @@ defmodule EthosWeb.SuggestionsFlowTest do
     owner = user_fixture()
     guide = published_guide_fixture(%{user: owner})
     reader = user_fixture()
-    {:ok, sugg} = Contributions.create_suggestion(reader, guide, %{place_name: "Meh place", body: "eh"})
+
+    {:ok, sugg} =
+      Contributions.create_suggestion(reader, guide, %{place_name: "Meh place", body: "eh"})
 
     conn = log_in_user(conn, owner)
     {:ok, lv, _} = live(conn, ~p"/guides/#{guide.id}/suggestions")

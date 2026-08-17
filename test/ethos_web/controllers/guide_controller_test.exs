@@ -14,7 +14,13 @@ defmodule EthosWeb.GuideControllerTest do
     guide = published_guide_fixture()
     contributor = user_fixture()
 
-    {:ok, _} = Guides.create_entry(guide, %{kind: "food", name: "Ramiro", verdict: "loved", note: "go early"})
+    {:ok, _} =
+      Guides.create_entry(guide, %{
+        kind: "food",
+        name: "Ramiro",
+        verdict: "loved",
+        note: "go early"
+      })
 
     {:ok, _} =
       Guides.create_entry(

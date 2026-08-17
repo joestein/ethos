@@ -50,15 +50,17 @@ defmodule EthosWeb.GuideLive.Import do
     </p>
 
     <div :if={@parse_failed} class="mt-4 rounded-md bg-red-50 p-4 text-red-800">
-      We couldn't structure this dump. Tweak your notes and try again, or
-      <.link navigate={~p"/guides/#{@guide.id}/edit"} class="underline">add entries manually</.link>.
+      We couldn't structure this dump. Tweak your notes and try again, or <.link
+        navigate={~p"/guides/#{@guide.id}/edit"}
+        class="underline"
+      >add entries manually</.link>.
     </div>
 
     <.simple_form for={@form} id="import-form" phx-submit="submit">
       <.input field={@form[:raw_text]} type="textarea" rows="14" label="Trip notes" />
       <:actions>
         <.button disabled={@parsing} phx-disable-with="Structuring...">
-          <%= if @parsing, do: "Structuring your trip…", else: "Structure my trip" %>
+          {if @parsing, do: "Structuring your trip…", else: "Structure my trip"}
         </.button>
       </:actions>
     </.simple_form>

@@ -8,8 +8,12 @@ defmodule EthosWeb.Url do
   @doc "True only for absolute http/https URLs."
   def safe_http?(url) when is_binary(url) do
     case URI.parse(url) do
-      %URI{scheme: scheme, host: host} when scheme in ["http", "https"] and is_binary(host) and host != "" -> true
-      _ -> false
+      %URI{scheme: scheme, host: host}
+      when scheme in ["http", "https"] and is_binary(host) and host != "" ->
+        true
+
+      _ ->
+        false
     end
   end
 

@@ -15,7 +15,16 @@ defmodule Ethos.Agents.GuideAgentTest do
     GuideAgent.subscribe_import(imp.id)
 
     expect(Ethos.ClaudeMock, :parse_dump, fn _, _ ->
-      {:ok, [%{"day" => nil, "kind" => "food", "name" => "Ramiro", "note" => nil, "verdict" => "loved"}]}
+      {:ok,
+       [
+         %{
+           "day" => nil,
+           "kind" => "food",
+           "name" => "Ramiro",
+           "note" => nil,
+           "verdict" => "loved"
+         }
+       ]}
     end)
 
     GuideAgent.parse_import(imp.id, sync: true)
@@ -63,7 +72,16 @@ defmodule Ethos.Agents.GuideAgentTest do
     GuideAgent.subscribe_import(imp.id)
 
     expect(Ethos.ClaudeMock, :parse_dump, fn _, _ ->
-      {:ok, [%{"day" => nil, "kind" => "food", "name" => "Ramiro", "note" => nil, "verdict" => "loved"}]}
+      {:ok,
+       [
+         %{
+           "day" => nil,
+           "kind" => "food",
+           "name" => "Ramiro",
+           "note" => nil,
+           "verdict" => "loved"
+         }
+       ]}
     end)
 
     assert :ok = GuideAgent.parse_import(imp.id, sync: false)

@@ -19,7 +19,13 @@ defmodule Ethos.Agents.Actions.ParseDumpTest do
 
       {:ok,
        [
-         %{"day" => 1, "kind" => "food", "name" => "Ramiro", "note" => "unreal", "verdict" => "loved"},
+         %{
+           "day" => 1,
+           "kind" => "food",
+           "name" => "Ramiro",
+           "note" => "unreal",
+           "verdict" => "loved"
+         },
          %{"day" => 1, "kind" => "banquet", "name" => "junk", "note" => nil, "verdict" => nil}
        ]}
     end)

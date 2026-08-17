@@ -10,12 +10,23 @@ defmodule Ethos.Exa.APITest do
 
       Req.Test.json(conn, %{
         "results" => [
-          %{"title" => "Ramiro", "url" => "https://cervejariaramiro.pt", "text" => "Seafood institution"}
+          %{
+            "title" => "Ramiro",
+            "url" => "https://cervejariaramiro.pt",
+            "text" => "Seafood institution"
+          }
         ]
       })
     end)
 
-    assert {:ok, [%{title: "Ramiro", url: "https://cervejariaramiro.pt", snippet: "Seafood institution"}]} =
+    assert {:ok,
+            [
+              %{
+                title: "Ramiro",
+                url: "https://cervejariaramiro.pt",
+                snippet: "Seafood institution"
+              }
+            ]} =
              API.search("Cervejaria Ramiro Lisbon")
   end
 

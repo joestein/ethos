@@ -62,7 +62,8 @@ defmodule EthosWeb.GuideLive.Confirm do
     </.header>
 
     <div :if={@proposal == []} class="mt-6 text-zinc-500">
-      No parsed entries. <.link navigate={~p"/guides/#{@guide.id}/import"} class="underline">Go back and import</.link>
+      No parsed entries.
+      <.link navigate={~p"/guides/#{@guide.id}/import"} class="underline">Go back and import</.link>
       or <.link navigate={~p"/guides/#{@guide.id}/edit"} class="underline">add manually</.link>.
     </div>
 
@@ -79,18 +80,39 @@ defmodule EthosWeb.GuideLive.Confirm do
               class="col-span-2 rounded-md border-zinc-300 text-sm font-semibold"
             />
             <select name="kind" class="rounded-md border-zinc-300 text-sm">
-              <option :for={kind <- Entry.kinds()} value={kind} selected={kind == entry["kind"]}><%= kind %></option>
+              <option :for={kind <- Entry.kinds()} value={kind} selected={kind == entry["kind"]}>
+                {kind}
+              </option>
             </select>
             <select name="verdict" class="rounded-md border-zinc-300 text-sm">
               <option value="" selected={entry["verdict"] in [nil, ""]}>—</option>
-              <option :for={verdict <- Entry.verdicts()} value={verdict} selected={verdict == entry["verdict"]}>
-                <%= verdict %>
+              <option
+                :for={verdict <- Entry.verdicts()}
+                value={verdict}
+                selected={verdict == entry["verdict"]}
+              >
+                {verdict}
               </option>
             </select>
-            <input type="number" name="day" value={entry["day"]} placeholder="Day" class="rounded-md border-zinc-300 text-sm" />
-            <textarea name="note" placeholder="Note" class="col-span-2 rounded-md border-zinc-300 text-sm"><%= entry["note"] %></textarea>
+            <input
+              type="number"
+              name="day"
+              value={entry["day"]}
+              placeholder="Day"
+              class="rounded-md border-zinc-300 text-sm"
+            />
+            <textarea
+              name="note"
+              placeholder="Note"
+              class="col-span-2 rounded-md border-zinc-300 text-sm"
+            ><%= entry["note"] %></textarea>
           </div>
-          <button type="button" phx-click="remove" phx-value-index={index} class="shrink-0 text-sm text-red-600 underline">
+          <button
+            type="button"
+            phx-click="remove"
+            phx-value-index={index}
+            class="shrink-0 text-sm text-red-600 underline"
+          >
             Remove
           </button>
         </form>

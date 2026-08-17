@@ -29,7 +29,9 @@ defmodule EthosWeb.GuideLive.New do
       <.input field={@form[:destination]} label="Destination" placeholder="Lisbon, Portugal" />
       <.input field={@form[:starts_on]} type="date" label="Started (optional)" />
       <.input field={@form[:ends_on]} type="date" label="Ended (optional)" />
-      <:actions><.button>Continue</.button></:actions>
+      <:actions>
+        <.button>Continue</.button>
+      </:actions>
     </.simple_form>
     """
   end

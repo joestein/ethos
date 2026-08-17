@@ -26,10 +26,12 @@ defmodule Ethos.Research.RateLimiter do
   def handle_call({:allow?, user_id}, _from, state) do
     now = System.monotonic_time(:millisecond)
     cutoff = now - @window_ms
-    stamps = case :ets.lookup(@table, user_id) do
-      [{^user_id, list}] -> Enum.filter(list, &(&1 > cutoff))
-      [] -> []
-    end
+
+    stamps =
+      case :ets.lookup(@table, user_id) do
+        [{^user_id, list}] -> Enum.filter(list, &(&1 > cutoff))
+        [] -> []
+      end
 
     allowed = length(stamps) < @limit
     :ets.insert(@table, {user_id, if(allowed, do: [now | stamps], else: stamps)})

@@ -22,8 +22,10 @@ defmodule Ethos.Agents.Actions.GapFill do
     if candidates == [] do
       {:ok, %{guide_id: guide_id, created: 0}}
     else
-      with {:ok, ideas} <- Ethos.Claude.impl().pick_nearby(guide.destination, existing, candidates),
-           {:ok, suggestions} <- Contributions.create_gap_fill_suggestions(guide, Enum.take(ideas, 5)) do
+      with {:ok, ideas} <-
+             Ethos.Claude.impl().pick_nearby(guide.destination, existing, candidates),
+           {:ok, suggestions} <-
+             Contributions.create_gap_fill_suggestions(guide, Enum.take(ideas, 5)) do
         {:ok, %{guide_id: guide_id, created: length(suggestions)}}
       else
         _ -> {:ok, %{guide_id: guide_id, created: 0}}

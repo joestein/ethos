@@ -18,7 +18,11 @@ defmodule EthosWeb.SuggestLive do
 
   @impl true
   def handle_event("save", %{"suggestion" => params}, socket) do
-    case Contributions.create_suggestion(socket.assigns.current_user, socket.assigns.guide, params) do
+    case Contributions.create_suggestion(
+           socket.assigns.current_user,
+           socket.assigns.guide,
+           params
+         ) do
       {:ok, _} ->
         {:noreply,
          socket
@@ -34,15 +38,23 @@ defmodule EthosWeb.SuggestLive do
   def render(assigns) do
     ~H"""
     <.header>
-      Suggest a place for “<%= @guide.title %>”
+      Suggest a place for “{@guide.title}”
       <:subtitle>If the owner accepts it, you'll be credited on the guide.</:subtitle>
     </.header>
 
     <.simple_form for={@form} id="suggest-form" phx-submit="save">
       <.input field={@form[:place_name]} label="Place / tip" />
-      <.input field={@form[:kind_hint]} type="select" label="Kind" prompt="—" options={Ethos.Guides.Entry.kinds()} />
+      <.input
+        field={@form[:kind_hint]}
+        type="select"
+        label="Kind"
+        prompt="—"
+        options={Ethos.Guides.Entry.kinds()}
+      />
       <.input field={@form[:body]} type="textarea" label="Why it belongs in this guide" />
-      <:actions><.button>Send suggestion</.button></:actions>
+      <:actions>
+        <.button>Send suggestion</.button>
+      </:actions>
     </.simple_form>
     """
   end

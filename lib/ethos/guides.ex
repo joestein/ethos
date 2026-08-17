@@ -42,7 +42,9 @@ defmodule Ethos.Guides do
   end
 
   def list_entries(%Guide{id: guide_id}) do
-    Repo.all(from e in Entry, where: e.guide_id == ^guide_id, order_by: [asc: e.position, asc: e.id])
+    Repo.all(
+      from e in Entry, where: e.guide_id == ^guide_id, order_by: [asc: e.position, asc: e.id]
+    )
   end
 
   def get_entry!(%Guide{id: guide_id}, id), do: Repo.get_by!(Entry, id: id, guide_id: guide_id)
@@ -57,7 +59,8 @@ defmodule Ethos.Guides do
   fields explicitly. Never pass `:privileged` with attrs sourced from an
   external request.
   """
-  def create_entry(%Guide{} = guide, attrs, mode \\ :public) when mode in [:public, :privileged] do
+  def create_entry(%Guide{} = guide, attrs, mode \\ :public)
+      when mode in [:public, :privileged] do
     position = next_position(guide)
     attrs = Map.drop(attrs, [:position, "position"])
     entry = %Entry{guide_id: guide.id, position: position}
