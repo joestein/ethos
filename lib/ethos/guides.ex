@@ -3,6 +3,7 @@ defmodule Ethos.Guides do
   alias Ethos.Repo
   alias Ethos.Guides.Guide
   alias Ethos.Guides.Entry
+  alias Ethos.Guides.Import
 
   def create_guide(user, attrs) do
     %Guide{user_id: user.id}
@@ -76,5 +77,21 @@ defmodule Ethos.Guides do
 
   defp next_position(%Guide{id: guide_id}) do
     (Repo.one(from e in Entry, where: e.guide_id == ^guide_id, select: max(e.position)) || -1) + 1
+  end
+
+  def create_import(%Guide{} = guide, raw_text) do
+    %Import{guide_id: guide.id}
+    |> Import.changeset(%{raw_text: raw_text})
+    |> Repo.insert()
+  end
+
+  def get_import!(id), do: Repo.get!(Import, id)
+
+  def latest_import(%Guide{id: guide_id}) do
+    Repo.one(from i in Import, where: i.guide_id == ^guide_id, order_by: [desc: i.id], limit: 1)
+  end
+
+  def mark_import(%Import{} = import, status, fields \\ %{}) do
+    import |> Import.mark_changeset(status, fields) |> Repo.update()
   end
 end
