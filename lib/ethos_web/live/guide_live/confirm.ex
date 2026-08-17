@@ -2,6 +2,9 @@ defmodule EthosWeb.GuideLive.Confirm do
   use EthosWeb, :live_view
 
   alias Ethos.Guides
+  alias Ethos.Guides.Entry
+
+  @editable_fields ~w(name kind verdict day note)
 
   @impl true
   def mount(%{"id" => id}, _session, socket) do
@@ -23,9 +26,17 @@ defmodule EthosWeb.GuideLive.Confirm do
     {:noreply, assign(socket, proposal: proposal)}
   end
 
-  def handle_event("update", %{"index" => index, "field" => field, "value" => value}, socket) do
-    index = String.to_integer(index)
-    proposal = List.update_at(socket.assigns.proposal, index, &Map.put(&1, field, value))
+  def handle_event("update_row", params, socket) do
+    index = String.to_integer(params["index"])
+    current = Enum.at(socket.assigns.proposal, index)
+
+    updated =
+      Enum.reduce(@editable_fields, current, fn field, acc ->
+        value = Map.get(params, field, Map.get(acc, field))
+        Map.put(acc, field, normalize(field, value))
+      end)
+
+    proposal = List.replace_at(socket.assigns.proposal, index, updated)
     {:noreply, assign(socket, proposal: proposal)}
   end
 
@@ -35,6 +46,9 @@ defmodule EthosWeb.GuideLive.Confirm do
 
     {:noreply, push_navigate(socket, to: ~p"/guides/#{socket.assigns.guide.id}/edit")}
   end
+
+  defp normalize(field, "") when field in ["day", "verdict"], do: nil
+  defp normalize(_field, value), do: value
 
   @impl true
   def render(assigns) do
@@ -50,19 +64,33 @@ defmodule EthosWeb.GuideLive.Confirm do
     </div>
 
     <ul class="mt-6 space-y-3">
-      <li :for={{entry, index} <- Enum.with_index(@proposal)} class="rounded-lg border p-4 flex items-start justify-between">
-        <div>
-          <p class="font-semibold"><%= entry["name"] %></p>
-          <p class="text-sm text-zinc-500">
-            <%= entry["kind"] %>
-            <span :if={entry["day"]}>· day <%= entry["day"] %></span>
-            <span :if={entry["verdict"]}>· <%= entry["verdict"] %></span>
-          </p>
-          <p :if={entry["note"]} class="text-sm mt-1"><%= entry["note"] %></p>
-        </div>
-        <button phx-click="remove" phx-value-index={index} class="text-sm text-red-600 underline">
-          Remove
-        </button>
+      <li :for={{entry, index} <- Enum.with_index(@proposal)} class="rounded-lg border p-4">
+        <form phx-change="update_row" id={"proposal-row-#{index}"} class="flex items-start gap-4">
+          <input type="hidden" name="index" value={index} />
+          <div class="flex-1 grid grid-cols-2 gap-2">
+            <input
+              type="text"
+              name="name"
+              value={entry["name"]}
+              placeholder="Name"
+              class="col-span-2 rounded-md border-zinc-300 text-sm font-semibold"
+            />
+            <select name="kind" class="rounded-md border-zinc-300 text-sm">
+              <option :for={kind <- Entry.kinds()} value={kind} selected={kind == entry["kind"]}><%= kind %></option>
+            </select>
+            <select name="verdict" class="rounded-md border-zinc-300 text-sm">
+              <option value="" selected={entry["verdict"] in [nil, ""]}>—</option>
+              <option :for={verdict <- Entry.verdicts()} value={verdict} selected={verdict == entry["verdict"]}>
+                <%= verdict %>
+              </option>
+            </select>
+            <input type="number" name="day" value={entry["day"]} placeholder="Day" class="rounded-md border-zinc-300 text-sm" />
+            <textarea name="note" placeholder="Note" class="col-span-2 rounded-md border-zinc-300 text-sm"><%= entry["note"] %></textarea>
+          </div>
+          <button type="button" phx-click="remove" phx-value-index={index} class="shrink-0 text-sm text-red-600 underline">
+            Remove
+          </button>
+        </form>
       </li>
     </ul>
 

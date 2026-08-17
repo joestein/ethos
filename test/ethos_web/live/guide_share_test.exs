@@ -35,4 +35,20 @@ defmodule EthosWeb.GuideShareTest do
     {:ok, _lv, html} = live(conn, ~p"/guides/#{guide.id}/share")
     assert html =~ "/g/#{guide.slug}"
   end
+
+  test "static (disconnected) render does not publish; connecting does", %{conn: conn, user: user} do
+    guide = guide_fixture(%{user: user})
+    {:ok, _} = Guides.create_entry(guide, %{kind: "food", name: "Ramiro", verdict: "loved"})
+
+    stub(Ethos.ExaMock, :search, fn _q, _o -> {:ok, []} end)
+    stub(Ethos.ClaudeMock, :pick_nearby, fn _, _, _ -> {:ok, []} end)
+
+    static_conn = get(conn, ~p"/guides/#{guide.id}/share")
+    assert html_response(static_conn, 200)
+    assert Guides.get_guide!(guide.id).status == "draft"
+
+    {:ok, _lv, html} = live(conn, ~p"/guides/#{guide.id}/share")
+    assert html =~ "/g/#{guide.slug}"
+    assert Guides.get_guide!(guide.id).status == "published"
+  end
 end

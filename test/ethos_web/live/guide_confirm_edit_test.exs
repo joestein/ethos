@@ -40,6 +40,28 @@ defmodule EthosWeb.GuideConfirmEditTest do
     assert [%{name: "Ramiro"}, %{name: "Alfama"}] = Guides.list_entries(guide)
   end
 
+  test "confirm screen supports inline editing of a proposed row before confirming", %{conn: conn, user: user} do
+    guide = guide_with_proposal(user)
+    {:ok, lv, _} = live(conn, ~p"/guides/#{guide.id}/confirm")
+
+    lv
+    |> render_change("update_row", %{
+      "index" => "0",
+      "name" => "Ramiro (renamed)",
+      "kind" => "food",
+      "verdict" => "loved",
+      "day" => "1",
+      "note" => "go early"
+    })
+
+    assert render(lv) =~ "Ramiro (renamed)"
+
+    lv |> element("#confirm-entries") |> render_click()
+    assert_redirect(lv, ~p"/guides/#{guide.id}/edit")
+
+    assert [%{name: "Ramiro (renamed)"}, %{name: "Alfama"}] = Guides.list_entries(guide)
+  end
+
   test "confirm screen can remove a proposed row before confirming", %{conn: conn, user: user} do
     guide = guide_with_proposal(user)
     {:ok, lv, _} = live(conn, ~p"/guides/#{guide.id}/confirm")

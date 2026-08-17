@@ -9,14 +9,14 @@ defmodule EthosWeb.GuideLive.Share do
     guide = Guides.get_user_guide!(socket.assigns.current_user, id)
 
     {guide, polishing} =
-      if guide.status == "draft" do
+      if connected?(socket) and guide.status == "draft" do
+        GuideAgent.subscribe_guide(guide.id)
         {:ok, guide} = Guides.publish_guide(guide)
         {:ok, _} = Ethos.OGCard.generate(guide)
-        if connected?(socket), do: GuideAgent.subscribe_guide(guide.id)
         GuideAgent.publish_pipeline(guide.id)
         {guide, true}
       else
-        {guide, false}
+        {guide, guide.status == "draft"}
       end
 
     {:ok,
