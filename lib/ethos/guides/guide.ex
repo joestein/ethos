@@ -24,6 +24,7 @@ defmodule Ethos.Guides.Guide do
     |> validate_required([:title, :destination])
     |> validate_length(:title, max: 120)
     |> maybe_put_slug()
+    |> unique_constraint(:slug)
   end
 
   def status_changeset(guide, status) when status in @statuses do
