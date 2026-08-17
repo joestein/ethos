@@ -16,6 +16,8 @@ defmodule Ethos.Application do
       {Finch, name: Ethos.Finch},
       # Start a worker by calling: Ethos.Worker.start_link(arg)
       # {Ethos.Worker, arg},
+      Ethos.Research.RateLimiter,
+      {Task.Supervisor, name: Ethos.AgentTaskSupervisor},
       # Start to serve requests, typically the last entry
       EthosWeb.Endpoint
     ]
