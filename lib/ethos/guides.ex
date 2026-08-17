@@ -13,6 +13,10 @@ defmodule Ethos.Guides do
 
   def get_guide!(id), do: Repo.get!(Guide, id)
 
+  def update_guide_og_path(%Guide{} = guide, path) do
+    guide |> Ecto.Changeset.change(og_image_path: path) |> Repo.update()
+  end
+
   def get_user_guide!(user, id), do: Repo.get_by!(Guide, id: id, user_id: user.id)
 
   def get_published_guide_by_slug!(slug),

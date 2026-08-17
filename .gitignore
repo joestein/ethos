@@ -41,3 +41,5 @@ npm-debug.log
 # Superpowers SDD workspace (not app source).
 /.superpowers/
 
+/priv/uploads/
+
