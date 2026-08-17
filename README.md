@@ -42,6 +42,11 @@ fly ssh console -C "/app/bin/ethos eval 'Ethos.Release.migrate()'"
 fly ssh console -C "/app/bin/ethos eval 'Code.eval_file(\"/app/lib/ethos-0.1.0/priv/repo/seeds.exs\")'"
 ```
 
+`fly deploy` already runs migrations automatically via `fly.toml`'s
+`release_command`, so the manual migrate command above is only needed if
+migrations must be run out of band (e.g. before the first deploy); running
+it again is harmless since migrations are idempotent.
+
 ### Manual smoke checks
 
 1. Landing page loads and shows the seeded Lisbon guide.
