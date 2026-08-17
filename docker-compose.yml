@@ -1,0 +1,13 @@
+services:
+  ethos-pg:
+    image: postgres:16
+    container_name: ethos-pg
+    environment:
+      POSTGRES_PASSWORD: postgres
+    ports:
+      - "54329:5432"
+    volumes:
+      - ethos-pg-data:/var/lib/postgresql/data
+
+volumes:
+  ethos-pg-data:
