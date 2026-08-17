@@ -38,7 +38,7 @@ defmodule Ethos.Agents.GuideAgent do
   end
 
   defp run(opts, fun) do
-    if Keyword.get(opts, :sync, false) do
+    if Keyword.get(opts, :sync, Application.get_env(:ethos, :agent_sync, false)) do
       fun.()
       :ok
     else

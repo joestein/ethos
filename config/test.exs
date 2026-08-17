@@ -48,4 +48,7 @@ config :ethos, :exa_api_key, "test-key"
 config :ethos, :claude, Ethos.ClaudeMock
 config :ethos, :exa, Ethos.ExaMock
 config :ethos, :claude_req_options, plug: {Req.Test, Ethos.Claude.API}
+
+# Run the GuideAgent pipeline inline (synchronously) in tests
+config :ethos, :agent_sync, true
 config :ethos, :exa_req_options, plug: {Req.Test, Ethos.Exa.API}

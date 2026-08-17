@@ -1,0 +1,38 @@
+defmodule EthosWeb.GuideShareTest do
+  use EthosWeb.ConnCase, async: false
+
+  import Phoenix.LiveViewTest
+  import Ethos.AccountsFixtures
+  import Ethos.GuidesFixtures
+  import Mox
+
+  alias Ethos.Guides
+
+  setup :verify_on_exit!
+  setup :set_mox_from_context
+
+  setup %{conn: conn} do
+    user = user_fixture()
+    %{conn: log_in_user(conn, user), user: user}
+  end
+
+  test "visiting share publishes the guide and shows the public link", %{conn: conn, user: user} do
+    guide = guide_fixture(%{user: user})
+    {:ok, _} = Guides.create_entry(guide, %{kind: "food", name: "Ramiro", verdict: "loved"})
+
+    # publish pipeline runs sync in tests via config below; stub its calls
+    stub(Ethos.ExaMock, :search, fn _q, _o -> {:ok, []} end)
+    stub(Ethos.ClaudeMock, :pick_nearby, fn _, _, _ -> {:ok, []} end)
+
+    {:ok, _lv, html} = live(conn, ~p"/guides/#{guide.id}/share")
+
+    assert html =~ "/g/#{guide.slug}"
+    assert Guides.get_guide!(guide.id).status == "published"
+  end
+
+  test "share screen on an already-published guide does not re-run the pipeline", %{conn: conn, user: user} do
+    guide = published_guide_fixture(%{user: user})
+    {:ok, _lv, html} = live(conn, ~p"/guides/#{guide.id}/share")
+    assert html =~ "/g/#{guide.slug}"
+  end
+end
