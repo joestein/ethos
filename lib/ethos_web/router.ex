@@ -68,6 +68,14 @@ defmodule EthosWeb.Router do
       on_mount: [{EthosWeb.UserAuth, :ensure_authenticated}] do
       live "/users/settings", UserSettingsLive, :edit
       live "/users/settings/confirm_email/:token", UserSettingsLive, :confirm_email
+
+      live "/guides", GuideLive.Index, :index
+      live "/guides/new", GuideLive.New, :new
+      live "/guides/:id/import", GuideLive.Import, :import
+      live "/guides/:id/confirm", GuideLive.Confirm, :confirm
+      live "/guides/:id/edit", GuideLive.Edit, :edit
+      live "/guides/:id/share", GuideLive.Share, :share
+      live "/guides/:id/suggestions", GuideLive.Suggestions, :suggestions
     end
   end
 
