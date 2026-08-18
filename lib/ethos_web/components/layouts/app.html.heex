@@ -1,27 +1,24 @@
 <header class="px-4 sm:px-6 lg:px-8">
   <div class="flex items-center justify-between border-b border-zinc-100 py-3 text-sm">
-    <div class="flex items-center gap-4">
-      <a href="/">
-        <img src={~p"/images/logo.svg"} width="36" />
-      </a>
-      <p class="bg-brand/5 text-brand rounded-full px-2 font-medium leading-6">
-        v{Application.spec(:phoenix, :vsn)}
-      </p>
-    </div>
-    <div class="flex items-center gap-4 font-semibold leading-6 text-zinc-900">
-      <a href="https://twitter.com/elixirphoenix" class="hover:text-zinc-700">
-        @elixirphoenix
-      </a>
-      <a href="https://github.com/phoenixframework/phoenix" class="hover:text-zinc-700">
-        GitHub
-      </a>
-      <a
-        href="https://hexdocs.pm/phoenix/overview.html"
-        class="rounded-lg bg-zinc-100 px-2 py-1 hover:bg-zinc-200/80"
+    <a href={~p"/"} class="text-lg font-bold tracking-tight text-zinc-900">
+      Ethos
+    </a>
+    <nav class="flex items-center gap-4 font-semibold leading-6 text-zinc-900">
+      <.link href={~p"/destinations"} class="hover:text-zinc-700">
+        Destinations
+      </.link>
+      <%= if @current_user do %>
+        <.link navigate={~p"/guides"} class="hover:text-zinc-700">
+          Your guides
+        </.link>
+      <% end %>
+      <.link
+        navigate={~p"/guides/new"}
+        class="rounded-lg bg-zinc-900 px-3 py-1 text-white hover:bg-zinc-700"
       >
-        Get Started <span aria-hidden="true">&rarr;</span>
-      </a>
-    </div>
+        Make a guide <span aria-hidden="true">&rarr;</span>
+      </.link>
+    </nav>
   </div>
 </header>
 <main class="px-4 py-20 sm:px-6 lg:px-8">
