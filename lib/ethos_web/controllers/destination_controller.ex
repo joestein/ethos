@@ -8,6 +8,7 @@ defmodule EthosWeb.DestinationController do
 
     render(conn, :index,
       destinations: destinations,
+      page_title: "Destinations",
       page_meta_description:
         "Real trip guides by destination — places, verdicts, and tips from travelers who went.",
       page_canonical: url(~p"/destinations"),
@@ -30,6 +31,7 @@ defmodule EthosWeb.DestinationController do
           name: name,
           slug: slug,
           guides: guides,
+          page_title: "#{name} travel guides",
           page_meta_description:
             "Real trip guides for #{name} — places, verdicts, and tips from travelers who went.",
           page_canonical: url(~p"/destinations/#{slug}"),

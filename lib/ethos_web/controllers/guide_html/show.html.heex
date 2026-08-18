@@ -78,8 +78,8 @@
     <h2 class="text-xl font-semibold">Frequently asked questions</h2>
     <dl class="mt-3 space-y-4">
       <div :for={item <- @guide.faq}>
-        <dt class="font-medium">{item["question"]}</dt>
-        <dd class="text-zinc-600 mt-1">{item["answer"]}</dd>
+        <dt class="font-medium">{Map.get(item, "question", "")}</dt>
+        <dd class="text-zinc-600 mt-1">{Map.get(item, "answer", "")}</dd>
       </div>
     </dl>
   </section>

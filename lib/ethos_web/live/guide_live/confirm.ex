@@ -22,22 +22,30 @@ defmodule EthosWeb.GuideLive.Confirm do
 
   @impl true
   def handle_event("remove", %{"index" => index}, socket) do
-    proposal = List.delete_at(socket.assigns.proposal, String.to_integer(index))
-    {:noreply, assign(socket, proposal: proposal)}
+    case Integer.parse(index) do
+      {i, ""} ->
+        proposal = List.delete_at(socket.assigns.proposal, i)
+        {:noreply, assign(socket, proposal: proposal)}
+
+      _ ->
+        {:noreply, socket}
+    end
   end
 
   def handle_event("update_row", params, socket) do
-    index = String.to_integer(params["index"])
-    current = Enum.at(socket.assigns.proposal, index)
+    with {i, ""} <- Integer.parse(params["index"] || ""),
+         current when not is_nil(current) <- Enum.at(socket.assigns.proposal, i) do
+      updated =
+        Enum.reduce(@editable_fields, current, fn field, acc ->
+          value = Map.get(params, field, Map.get(acc, field))
+          Map.put(acc, field, normalize(field, value))
+        end)
 
-    updated =
-      Enum.reduce(@editable_fields, current, fn field, acc ->
-        value = Map.get(params, field, Map.get(acc, field))
-        Map.put(acc, field, normalize(field, value))
-      end)
-
-    proposal = List.replace_at(socket.assigns.proposal, index, updated)
-    {:noreply, assign(socket, proposal: proposal)}
+      proposal = List.replace_at(socket.assigns.proposal, i, updated)
+      {:noreply, assign(socket, proposal: proposal)}
+    else
+      _ -> {:noreply, socket}
+    end
   end
 
   def handle_event("confirm", _params, socket) do

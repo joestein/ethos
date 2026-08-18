@@ -26,13 +26,16 @@ defmodule EthosWeb.GuideController do
     has_booking = Enum.any?(entries, &EthosWeb.Url.safe_http?(&1.booking_url))
 
     json_ld =
-      [article_ld(guide), breadcrumb_ld(guide)] ++
+      [article_ld(guide, meta_description), breadcrumb_ld(guide)] ++
         if(guide.faq not in [nil, []], do: [faq_ld(guide)], else: [])
+
+    destination_name = guide.destination |> String.split(",") |> List.first()
 
     render(conn, :show,
       guide: guide,
       entries: entries,
       research: research,
+      page_title: "#{guide.title} — #{destination_name} guide",
       page_og: og,
       page_meta_description: meta_description,
       page_canonical: url(~p"/g/#{guide.slug}"),
@@ -41,12 +44,12 @@ defmodule EthosWeb.GuideController do
     )
   end
 
-  defp article_ld(guide) do
+  defp article_ld(guide, fallback_description) do
     %{
       "@context" => "https://schema.org",
       "@type" => "Article",
       "headline" => guide.title,
-      "description" => EthosWeb.Markdown.excerpt(guide.intro, 160),
+      "description" => EthosWeb.Markdown.excerpt(guide.intro, 160) || fallback_description,
       "datePublished" => DateTime.to_iso8601(guide.inserted_at),
       "dateModified" => DateTime.to_iso8601(guide.updated_at),
       "author" => %{"@type" => "Person", "name" => "An Ethos traveler"},
@@ -59,11 +62,14 @@ defmodule EthosWeb.GuideController do
       "@context" => "https://schema.org",
       "@type" => "FAQPage",
       "mainEntity" =>
-        Enum.map(guide.faq, fn %{"question" => q, "answer" => a} ->
+        Enum.map(guide.faq, fn item ->
           %{
             "@type" => "Question",
-            "name" => q,
-            "acceptedAnswer" => %{"@type" => "Answer", "text" => a}
+            "name" => Map.get(item, "question", ""),
+            "acceptedAnswer" => %{
+              "@type" => "Answer",
+              "text" => Map.get(item, "answer", "")
+            }
           }
         end)
     }

@@ -38,10 +38,7 @@ defmodule EthosWeb.GuideLive.Edit do
   end
 
   def handle_event("remove-section", %{"index" => index}, socket) do
-    {:noreply,
-     update(socket, :seo, fn seo ->
-       Map.update!(seo, :sections, &List.delete_at(&1, String.to_integer(index)))
-     end)}
+    {:noreply, remove_seo_row(socket, :sections, index)}
   end
 
   def handle_event("add-faq", _params, socket) do
@@ -52,14 +49,23 @@ defmodule EthosWeb.GuideLive.Edit do
   end
 
   def handle_event("remove-faq", %{"index" => index}, socket) do
-    {:noreply,
-     update(socket, :seo, fn seo ->
-       Map.update!(seo, :faq, &List.delete_at(&1, String.to_integer(index)))
-     end)}
+    {:noreply, remove_seo_row(socket, :faq, index)}
+  end
+
+  def handle_event("update_booking", %{"entry" => %{"id" => id} = params}, socket) do
+    entry = Guides.get_entry!(socket.assigns.guide, id)
+
+    case Guides.update_entry(entry, Map.take(params, ["booking_url", "booking_label"])) do
+      {:ok, _entry} ->
+        {:noreply, load_entries(socket)}
+
+      {:error, _changeset} ->
+        {:noreply, put_flash(socket, :error, "Couldn't save the booking link — check the URL")}
+    end
   end
 
   def handle_event("seo_changed", %{"seo" => params}, socket) do
-    {:noreply, assign(socket, seo: normalize_seo(params))}
+    {:noreply, assign(socket, seo: normalize_seo(params, reject_blank?: false))}
   end
 
   def handle_event("save_seo", %{"seo" => params}, socket) do
@@ -73,6 +79,16 @@ defmodule EthosWeb.GuideLive.Edit do
 
       {:error, _changeset} ->
         {:noreply, put_flash(socket, :error, "Couldn't save — check the fields")}
+    end
+  end
+
+  defp remove_seo_row(socket, key, index) do
+    case Integer.parse(index) do
+      {i, ""} ->
+        update(socket, :seo, fn seo -> Map.update!(seo, key, &List.delete_at(&1, i)) end)
+
+      _ ->
+        socket
     end
   end
 
@@ -92,22 +108,36 @@ defmodule EthosWeb.GuideLive.Edit do
     )
   end
 
-  defp normalize_seo(params) do
+  defp normalize_seo(params, opts \\ []) do
+    reject_blank? = Keyword.get(opts, :reject_blank?, true)
+
     %{
       intro: Map.get(params, "intro", ""),
-      sections: params |> Map.get("sections", %{}) |> indexed_map_to_list(["heading", "body"]),
-      faq: params |> Map.get("faq", %{}) |> indexed_map_to_list(["question", "answer"])
+      sections:
+        params
+        |> Map.get("sections", %{})
+        |> indexed_map_to_list(["heading", "body"], reject_blank?),
+      faq:
+        params
+        |> Map.get("faq", %{})
+        |> indexed_map_to_list(["question", "answer"], reject_blank?)
     }
   end
 
-  defp indexed_map_to_list(map, fields) when is_map(map) do
-    map
-    |> Enum.sort_by(fn {index, _row} -> String.to_integer(index) end)
-    |> Enum.map(fn {_index, row} -> Map.take(row, fields) end)
-    |> Enum.reject(fn row -> Enum.all?(fields, &blank?(Map.get(row, &1))) end)
+  defp indexed_map_to_list(map, fields, reject_blank?) when is_map(map) do
+    rows =
+      map
+      |> Enum.sort_by(fn {index, _row} -> String.to_integer(index) end)
+      |> Enum.map(fn {_index, row} -> Map.take(row, fields) end)
+
+    if reject_blank? do
+      Enum.reject(rows, fn row -> Enum.all?(fields, &blank?(Map.get(row, &1))) end)
+    else
+      rows
+    end
   end
 
-  defp indexed_map_to_list(_map, _fields), do: []
+  defp indexed_map_to_list(_map, _fields, _reject_blank?), do: []
 
   defp blank?(value), do: value in [nil, ""]
 
@@ -126,7 +156,7 @@ defmodule EthosWeb.GuideLive.Edit do
 
     <ul class="mt-6 space-y-3">
       <li :for={entry <- @entries} class="rounded-lg border p-4 flex items-start justify-between">
-        <div>
+        <div class="flex-1">
           <p class="font-semibold">{entry.name}</p>
           <p class="text-sm text-zinc-500">
             {entry.kind}
@@ -134,6 +164,29 @@ defmodule EthosWeb.GuideLive.Edit do
             <span :if={entry.verdict}>· {entry.verdict}</span>
           </p>
           <p :if={entry.note} class="text-sm mt-1">{entry.note}</p>
+
+          <form phx-submit="update_booking" class="mt-2 flex flex-wrap items-end gap-2">
+            <input type="hidden" name="entry[id]" value={entry.id} />
+            <div>
+              <label class="block text-xs text-zinc-500">Booking URL</label>
+              <input
+                type="text"
+                name="entry[booking_url]"
+                value={entry.booking_url}
+                class="rounded border px-2 py-1 text-sm"
+              />
+            </div>
+            <div>
+              <label class="block text-xs text-zinc-500">Booking button label</label>
+              <input
+                type="text"
+                name="entry[booking_label]"
+                value={entry.booking_label}
+                class="rounded border px-2 py-1 text-sm"
+              />
+            </div>
+            <button class="text-sm underline">Save booking link</button>
+          </form>
         </div>
         <button phx-click="delete" phx-value-id={entry.id} class="text-sm text-red-600 underline">
           Delete

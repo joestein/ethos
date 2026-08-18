@@ -20,9 +20,31 @@ defmodule Ethos.Seeds.RomeGuideTest do
     assert Enum.any?(entries, &(&1.booking_url && &1.booking_url =~ "partner_id=ZA4AIMF"))
     assert Enum.any?(entries, &(&1.booking_url && &1.booking_url =~ "viator.com"))
 
+    arena_floor =
+      Enum.find(entries, &(&1.name == "Colosseum arena floor, Roman Forum & Palatine Hill"))
+
+    assert %{
+             "links" => [
+               %{
+                 "title" => "The Roman Guy — Colosseum arena floor tour",
+                 "url" => "https://theromanguy.com/tours/italy/rome/colosseum-tour-arena-floor"
+               }
+             ],
+             "source" => "seed"
+           } = arena_floor.enrichment
+
     # second run updates in place, no duplicates
     guide2 = RomeGuide.upsert!(user.email)
     assert guide2.id == guide.id
     assert length(Guides.list_entries(guide2)) == 8
+  end
+
+  test "raises instead of auto-creating the owner account outside dev/test" do
+    Application.put_env(:ethos, :env, :prod)
+    on_exit(fn -> Application.put_env(:ethos, :env, :test) end)
+
+    assert_raise RuntimeError, ~r/owner account .* not found/, fn ->
+      RomeGuide.upsert!("no-such-owner@example.com")
+    end
   end
 end

@@ -21,7 +21,7 @@ defmodule Ethos.Repo.Migrations.AddSeoFields do
       UPDATE guides SET destination_slug =
         trim(both '-' from regexp_replace(lower(split_part(destination, ',', 1)), '[^a-z0-9]+', '-', 'g'))
       """,
-      ""
+      "SELECT 1"
     )
   end
 end

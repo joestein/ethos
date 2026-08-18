@@ -101,6 +101,18 @@ defmodule EthosWeb.GuideConfirmEditTest do
     assert [%{name: "Alfama"}] = Guides.list_entries(guide)
   end
 
+  test "confirm screen ignores malformed index instead of crashing", %{conn: conn, user: user} do
+    guide = guide_with_proposal(user)
+    {:ok, lv, _} = live(conn, ~p"/guides/#{guide.id}/confirm")
+
+    html = render_change(lv, "update_row", %{"index" => "not-a-number", "name" => "x"})
+    assert html =~ "Ramiro"
+
+    html = render_click(lv, "remove", %{"index" => "not-a-number"})
+    assert html =~ "Ramiro"
+    assert html =~ "Alfama"
+  end
+
   test "edit screen adds a manual entry", %{conn: conn, user: user} do
     guide = guide_fixture(%{user: user})
     {:ok, lv, _} = live(conn, ~p"/guides/#{guide.id}/edit")

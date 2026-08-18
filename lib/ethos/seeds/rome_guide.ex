@@ -205,11 +205,12 @@ defmodule Ethos.Seeds.RomeGuide do
 
     {:ok, guide} =
       Repo.transaction(fn ->
-        guide
-        |> Guide.changeset(%{title: @title, destination: @destination})
-        |> Guide.seo_changeset(%{intro: @intro, sections: @sections, faq: @faq})
-        |> Ecto.Changeset.put_change(:slug, @slug)
-        |> Repo.update!()
+        guide =
+          guide
+          |> Guide.changeset(%{title: @title, destination: @destination})
+          |> Guide.seo_changeset(%{intro: @intro, sections: @sections, faq: @faq})
+          |> Ecto.Changeset.put_change(:slug, @slug)
+          |> Repo.update!()
 
         replace_entries!(guide)
 
@@ -226,9 +227,13 @@ defmodule Ethos.Seeds.RomeGuide do
         user
 
       nil ->
-        password = :crypto.strong_rand_bytes(24) |> Base.encode64()
-        {:ok, user} = Accounts.register_user(%{email: email, password: password})
-        user
+        if Application.get_env(:ethos, :env) in [:dev, :test] do
+          password = :crypto.strong_rand_bytes(24) |> Base.encode64()
+          {:ok, user} = Accounts.register_user(%{email: email, password: password})
+          user
+        else
+          raise "owner account #{email} not found — register it first"
+        end
     end
   end
 
@@ -245,12 +250,28 @@ defmodule Ethos.Seeds.RomeGuide do
     end
   end
 
+  @arena_floor_entry_name "Colosseum arena floor, Roman Forum & Palatine Hill"
+
+  @arena_floor_enrichment %{
+    "links" => [
+      %{
+        "title" => "The Roman Guy — Colosseum arena floor tour",
+        "url" => "https://theromanguy.com/tours/italy/rome/colosseum-tour-arena-floor"
+      }
+    ],
+    "source" => "seed"
+  }
+
   defp replace_entries!(guide) do
     Repo.delete_all(from e in Entry, where: e.guide_id == ^guide.id)
 
     Enum.each(@entries, fn attrs ->
-      {:ok, _entry} =
+      {:ok, entry} =
         Guides.create_entry(guide, Map.put(attrs, :source, "import"), :privileged)
+
+      if entry.name == @arena_floor_entry_name do
+        {:ok, _entry} = Guides.set_entry_enrichment(entry, @arena_floor_enrichment)
+      end
     end)
   end
 end

@@ -42,6 +42,8 @@ defmodule EthosWeb.GuideControllerTest do
     assert html =~ "go early"
     assert html =~ "added from a reader suggestion"
     assert html =~ ~s(property="og:title")
+    assert [title_tag] = Regex.run(~r{<title[^>]*>(.*?)</title>}s, html, capture: :all_but_first)
+    assert title_tag =~ guide.title
     assert Guides.get_guide!(guide.id).view_count == 1
   end
 
