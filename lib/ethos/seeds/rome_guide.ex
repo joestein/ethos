@@ -203,15 +203,20 @@ defmodule Ethos.Seeds.RomeGuide do
     user = find_or_create_user!(owner_email)
     guide = find_or_insert_guide!(user)
 
-    guide
-    |> Guide.changeset(%{title: @title, destination: @destination})
-    |> Guide.seo_changeset(%{intro: @intro, sections: @sections, faq: @faq})
-    |> Ecto.Changeset.put_change(:slug, @slug)
-    |> Repo.update!()
+    {:ok, guide} =
+      Repo.transaction(fn ->
+        guide
+        |> Guide.changeset(%{title: @title, destination: @destination})
+        |> Guide.seo_changeset(%{intro: @intro, sections: @sections, faq: @faq})
+        |> Ecto.Changeset.put_change(:slug, @slug)
+        |> Repo.update!()
 
-    replace_entries!(guide)
+        replace_entries!(guide)
 
-    {:ok, guide} = Guides.publish_guide(guide)
+        {:ok, published} = Guides.publish_guide(guide)
+        published
+      end)
+
     Guides.get_guide!(guide.id)
   end
 
