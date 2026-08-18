@@ -18,6 +18,14 @@ defmodule Ethos.Release do
     {:ok, _, _} = Ecto.Migrator.with_repo(repo, &Ecto.Migrator.run(&1, :down, to: version))
   end
 
+  def seed_rome(email) do
+    load_app()
+    Application.ensure_all_started(@app)
+
+    guide = Ethos.Seeds.RomeGuide.upsert!(email)
+    IO.puts("Seeded Rome guide: /g/#{guide.slug}")
+  end
+
   defp repos do
     Application.fetch_env!(@app, :ecto_repos)
   end
