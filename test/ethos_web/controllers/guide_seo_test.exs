@@ -66,4 +66,17 @@ defmodule EthosWeb.GuideSeoTest do
     html = conn |> get(~p"/g/#{guide.slug}") |> html_response(200)
     refute html =~ ~s("@type":"FAQPage")
   end
+
+  test "escapes </script> in JSON-LD so it cannot break out of the script tag", %{conn: conn} do
+    guide =
+      published_guide_fixture(%{
+        title: "Rome</script><script>window.xss=1</script>",
+        destination: "Rome, Italy"
+      })
+
+    html = conn |> get(~p"/g/#{guide.slug}") |> html_response(200)
+
+    refute html =~ "</script><script>window.xss=1</script>"
+    assert html =~ ~s("@type":"Article")
+  end
 end

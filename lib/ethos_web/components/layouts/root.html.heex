@@ -30,7 +30,7 @@
     <% end %>
     <%= for ld <- assigns[:json_ld] || [] do %>
       <script type="application/ld+json">
-        <%= Phoenix.HTML.raw(Jason.encode!(ld)) %>
+        <%= Phoenix.HTML.raw(Jason.encode!(ld, escape: :html_safe)) %>
       </script>
     <% end %>
   </head>

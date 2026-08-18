@@ -10,7 +10,8 @@ defmodule EthosWeb.DestinationController do
       destinations: destinations,
       page_meta_description:
         "Real trip guides by destination — places, verdicts, and tips from travelers who went.",
-      page_canonical: url(~p"/destinations")
+      page_canonical: url(~p"/destinations"),
+      json_ld: [destinations_breadcrumb()]
     )
   end
 
@@ -35,6 +36,22 @@ defmodule EthosWeb.DestinationController do
           json_ld: [destination_breadcrumb(name, slug)]
         )
     end
+  end
+
+  defp destinations_breadcrumb do
+    %{
+      "@context" => "https://schema.org",
+      "@type" => "BreadcrumbList",
+      "itemListElement" => [
+        %{"@type" => "ListItem", "position" => 1, "name" => "Ethos", "item" => url(~p"/")},
+        %{
+          "@type" => "ListItem",
+          "position" => 2,
+          "name" => "Destinations",
+          "item" => url(~p"/destinations")
+        }
+      ]
+    }
   end
 
   defp destination_breadcrumb(name, slug) do
