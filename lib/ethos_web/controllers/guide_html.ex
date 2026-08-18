@@ -7,4 +7,10 @@ defmodule EthosWeb.GuideHTML do
   def verdict_badge("good"), do: "👍 good"
   def verdict_badge("skip"), do: "⏭ skip it"
   def verdict_badge(_), do: nil
+
+  @default_gyg_partner_url "https://www.getyourguide.com/?partner_id=ZA4AIMF&cmp=share_to_earn"
+
+  def gyg_partner_url do
+    Application.get_env(:ethos, :gyg_partner_url, @default_gyg_partner_url)
+  end
 end

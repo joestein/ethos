@@ -41,11 +41,16 @@ defmodule EthosWeb.GuideSeoTest do
     assert html =~ "earn Ethos a commission"
   end
 
-  test "no disclosure without booking links", %{conn: conn} do
+  test "GetYourGuide house ad and disclosure render on every guide page", %{conn: conn} do
     guide = published_guide_fixture()
     {:ok, _} = Guides.create_entry(guide, %{kind: "food", name: "Ramiro", verdict: "loved"})
     html = conn |> get(~p"/g/#{guide.slug}") |> html_response(200)
-    refute html =~ "earn Ethos a commission"
+
+    assert html =~ "Planning your own trip?"
+    assert html =~ "https://www.getyourguide.com/?partner_id=ZA4AIMF&amp;cmp=share_to_earn"
+    assert html =~ "Explore tours"
+    # the house ad is an earning link, so the disclosure now always shows
+    assert html =~ "earn Ethos a commission"
   end
 
   test "emits Article, FAQPage, BreadcrumbList JSON-LD, canonical, meta description", %{
