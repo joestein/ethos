@@ -13,6 +13,10 @@ defmodule Ethos.Guides.Guide do
     field :status, :string, default: "draft"
     field :view_count, :integer, default: 0
     field :og_image_path, :string
+    field :intro, :string
+    field :sections, {:array, :map}
+    field :faq, {:array, :map}
+    field :destination_slug, :string
     belongs_to :user, Ethos.Accounts.User
     has_many :entries, Ethos.Guides.Entry, preload_order: [asc: :position]
     timestamps(type: :utc_datetime)
@@ -24,11 +28,34 @@ defmodule Ethos.Guides.Guide do
     |> validate_required([:title, :destination])
     |> validate_length(:title, max: 120)
     |> maybe_put_slug()
+    |> put_destination_slug()
     |> unique_constraint(:slug)
+  end
+
+  def seo_changeset(guide, attrs) do
+    guide
+    |> cast(attrs, [:intro, :sections, :faq])
+    |> validate_length(:intro, max: 10_000)
   end
 
   def status_changeset(guide, status) when status in @statuses do
     change(guide, status: status)
+  end
+
+  def derive_destination_slug(destination) when is_binary(destination) do
+    destination
+    |> String.split(",")
+    |> List.first()
+    |> String.downcase()
+    |> String.replace(~r/[^a-z0-9]+/, "-")
+    |> String.trim("-")
+  end
+
+  defp put_destination_slug(changeset) do
+    case get_field(changeset, :destination) do
+      nil -> changeset
+      destination -> put_change(changeset, :destination_slug, derive_destination_slug(destination))
+    end
   end
 
   defp maybe_put_slug(changeset) do

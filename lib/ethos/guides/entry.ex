@@ -20,6 +20,8 @@ defmodule Ethos.Guides.Entry do
     field :lat, :float
     field :lng, :float
     field :source, :string, default: "manual"
+    field :booking_url, :string
+    field :booking_label, :string
     belongs_to :guide, Ethos.Guides.Guide
     belongs_to :credited_user, Ethos.Accounts.User
     timestamps(type: :utc_datetime)
@@ -34,11 +36,30 @@ defmodule Ethos.Guides.Entry do
   """
   def changeset(entry, attrs) do
     entry
-    |> cast(attrs, [:day, :kind, :name, :note, :verdict, :position, :lat, :lng])
+    |> cast(attrs, [
+      :day,
+      :kind,
+      :name,
+      :note,
+      :verdict,
+      :position,
+      :lat,
+      :lng,
+      :booking_url,
+      :booking_label
+    ])
     |> validate_required([:kind, :name])
     |> validate_inclusion(:kind, @kinds)
     |> validate_inclusion(:verdict, @verdicts ++ [nil])
     |> validate_inclusion(:source, @sources)
+    |> validate_change(:booking_url, fn :booking_url, url ->
+      if is_nil(url) or Ethos.Url.safe_http?(url) do
+        []
+      else
+        [booking_url: "must be an http(s) URL"]
+      end
+    end)
+    |> validate_length(:booking_label, max: 80)
   end
 
   @doc """

@@ -34,6 +34,36 @@ defmodule Ethos.Guides do
     guide |> Guide.changeset(attrs) |> Repo.update()
   end
 
+  def update_guide_seo(%Guide{} = guide, attrs) do
+    guide |> Guide.seo_changeset(attrs) |> Repo.update()
+  end
+
+  def list_published_guides do
+    Repo.all(from g in Guide, where: g.status == "published", order_by: [desc: g.updated_at])
+  end
+
+  def list_published_guides_for_destination(slug) do
+    Repo.all(
+      from g in Guide,
+        where: g.status == "published" and g.destination_slug == ^slug,
+        order_by: [desc: g.view_count, desc: g.id]
+    )
+  end
+
+  def list_destinations do
+    Repo.all(
+      from g in Guide,
+        where: g.status == "published",
+        group_by: [g.destination_slug, fragment("split_part(?, ',', 1)", g.destination)],
+        select: %{
+          slug: g.destination_slug,
+          name: fragment("split_part(?, ',', 1)", g.destination),
+          count: count(g.id)
+        },
+        order_by: [desc: count(g.id)]
+    )
+  end
+
   def increment_view_count(%Guide{id: id}) do
     from(g in Guide, where: g.id == ^id)
     |> Repo.update_all(inc: [view_count: 1])

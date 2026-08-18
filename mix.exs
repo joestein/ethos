@@ -62,7 +62,8 @@ defmodule Ethos.MixProject do
       {:req, "~> 0.5"},
       {:jido, "~> 1.2"},
       {:vix, "~> 0.26"},
-      {:mox, "~> 1.1", only: :test}
+      {:mox, "~> 1.1", only: :test},
+      {:earmark, "~> 1.4"}
     ]
   end
 
