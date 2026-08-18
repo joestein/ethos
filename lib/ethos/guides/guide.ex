@@ -53,8 +53,11 @@ defmodule Ethos.Guides.Guide do
 
   defp put_destination_slug(changeset) do
     case get_field(changeset, :destination) do
-      nil -> changeset
-      destination -> put_change(changeset, :destination_slug, derive_destination_slug(destination))
+      nil ->
+        changeset
+
+      destination ->
+        put_change(changeset, :destination_slug, derive_destination_slug(destination))
     end
   end
 

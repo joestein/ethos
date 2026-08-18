@@ -32,8 +32,11 @@ defmodule Ethos.SeoFieldsTest do
 
     {:ok, entry} =
       Guides.create_entry(guide, %{
-        kind: "tour", name: "Arena floor", verdict: "loved",
-        booking_url: "https://example.com/t/1", booking_label: "Book it"
+        kind: "tour",
+        name: "Arena floor",
+        verdict: "loved",
+        booking_url: "https://example.com/t/1",
+        booking_label: "Book it"
       })
 
     assert entry.booking_url == "https://example.com/t/1"
