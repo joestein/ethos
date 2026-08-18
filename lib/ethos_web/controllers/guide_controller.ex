@@ -19,7 +19,82 @@ defmodule EthosWeb.GuideController do
       url: url(~p"/g/#{guide.slug}")
     }
 
-    render(conn, :show, guide: guide, entries: entries, research: research, page_og: og)
+    meta_description =
+      EthosWeb.Markdown.excerpt(guide.intro, 160) ||
+        "#{guide.destination} · #{length(entries)} places and tips from a real trip"
+
+    has_booking = Enum.any?(entries, &EthosWeb.Url.safe_http?(&1.booking_url))
+
+    json_ld =
+      [article_ld(guide), breadcrumb_ld(guide)] ++
+        if(guide.faq not in [nil, []], do: [faq_ld(guide)], else: [])
+
+    render(conn, :show,
+      guide: guide,
+      entries: entries,
+      research: research,
+      page_og: og,
+      page_meta_description: meta_description,
+      page_canonical: url(~p"/g/#{guide.slug}"),
+      json_ld: json_ld,
+      has_booking: has_booking
+    )
+  end
+
+  defp article_ld(guide) do
+    %{
+      "@context" => "https://schema.org",
+      "@type" => "Article",
+      "headline" => guide.title,
+      "description" => EthosWeb.Markdown.excerpt(guide.intro, 160),
+      "datePublished" => DateTime.to_iso8601(guide.inserted_at),
+      "dateModified" => DateTime.to_iso8601(guide.updated_at),
+      "author" => %{"@type" => "Person", "name" => "An Ethos traveler"},
+      "mainEntityOfPage" => url(~p"/g/#{guide.slug}")
+    }
+  end
+
+  defp faq_ld(guide) do
+    %{
+      "@context" => "https://schema.org",
+      "@type" => "FAQPage",
+      "mainEntity" =>
+        Enum.map(guide.faq, fn %{"question" => q, "answer" => a} ->
+          %{
+            "@type" => "Question",
+            "name" => q,
+            "acceptedAnswer" => %{"@type" => "Answer", "text" => a}
+          }
+        end)
+    }
+  end
+
+  defp breadcrumb_ld(guide) do
+    %{
+      "@context" => "https://schema.org",
+      "@type" => "BreadcrumbList",
+      "itemListElement" => [
+        %{"@type" => "ListItem", "position" => 1, "name" => "Ethos", "item" => url(~p"/")},
+        %{
+          "@type" => "ListItem",
+          "position" => 2,
+          "name" => "Destinations",
+          "item" => url(~p"/destinations")
+        },
+        %{
+          "@type" => "ListItem",
+          "position" => 3,
+          "name" => guide.destination |> String.split(",") |> List.first(),
+          "item" => url(~p"/destinations/#{guide.destination_slug}")
+        },
+        %{
+          "@type" => "ListItem",
+          "position" => 4,
+          "name" => guide.title,
+          "item" => url(~p"/g/#{guide.slug}")
+        }
+      ]
+    }
   end
 
   # Fly machines (and any other ephemeral filesystem) can lose the generated

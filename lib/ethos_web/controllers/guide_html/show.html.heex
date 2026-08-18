@@ -4,6 +4,8 @@
     <p class="mt-1 text-zinc-500">{@guide.destination}</p>
   </header>
 
+  <div :if={@guide.intro} class="prose mt-6">{EthosWeb.Markdown.render(@guide.intro)}</div>
+
   <ol class="mt-8 space-y-4">
     <li :for={entry <- @entries} id={"entry-#{entry.id}"} class="rounded-xl border p-5">
       <div class="flex items-start justify-between gap-4">
@@ -26,6 +28,16 @@
       </div>
 
       <p :if={entry.note} class="mt-2">{entry.note}</p>
+
+      <a
+        :if={EthosWeb.Url.safe_http?(entry.booking_url)}
+        href={entry.booking_url}
+        rel="sponsored nofollow noopener"
+        target="_blank"
+        class="mt-3 inline-flex items-center gap-2 rounded-lg bg-amber-500 px-4 py-2 text-sm font-medium text-white hover:bg-amber-600"
+      >
+        {entry.booking_label || "Book this"} →
+      </a>
 
       <p :if={entry.credited_user_id} class="mt-2 text-xs text-zinc-400">
         added from a reader suggestion
@@ -56,6 +68,25 @@
       </form>
     </li>
   </ol>
+
+  <section :for={section <- @guide.sections || []} class="mt-10">
+    <h2 class="text-xl font-semibold">{section["heading"]}</h2>
+    <div class="prose mt-2">{EthosWeb.Markdown.render(section["body"])}</div>
+  </section>
+
+  <section :if={(@guide.faq || []) != []} class="mt-10">
+    <h2 class="text-xl font-semibold">Frequently asked questions</h2>
+    <dl class="mt-3 space-y-4">
+      <div :for={item <- @guide.faq}>
+        <dt class="font-medium">{item["question"]}</dt>
+        <dd class="text-zinc-600 mt-1">{item["answer"]}</dd>
+      </div>
+    </dl>
+  </section>
+
+  <p :if={@has_booking} class="mt-8 text-xs text-zinc-400">
+    Some booking links on this page earn Ethos a commission at no extra cost to you.
+  </p>
 
   <footer class="mt-10 flex flex-wrap gap-4 border-t pt-6">
     <.link

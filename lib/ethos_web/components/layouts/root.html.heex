@@ -22,6 +22,17 @@
       <% end %>
       <meta name="twitter:card" content="summary_large_image" />
     <% end %>
+    <%= if assigns[:page_meta_description] do %>
+      <meta name="description" content={@page_meta_description} />
+    <% end %>
+    <%= if assigns[:page_canonical] do %>
+      <link rel="canonical" href={@page_canonical} />
+    <% end %>
+    <%= for ld <- assigns[:json_ld] || [] do %>
+      <script type="application/ld+json">
+        <%= Phoenix.HTML.raw(Jason.encode!(ld)) %>
+      </script>
+    <% end %>
   </head>
   <body class="bg-white">
     <ul class="relative z-10 flex items-center gap-4 px-4 sm:px-6 lg:px-8 justify-end">
