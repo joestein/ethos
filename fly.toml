@@ -9,6 +9,8 @@ primary_region = "iad"
 [env]
   PHX_HOST = "ethos.fly.dev"
   PORT = "8080"
+  # Fly's internal .flycast Postgres address is IPv6-only.
+  ECTO_IPV6 = "true"
 
 [http_service]
   internal_port = 8080
