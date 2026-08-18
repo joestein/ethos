@@ -9,7 +9,11 @@ defmodule EthosWeb.GuideLive.Edit do
     guide = Guides.get_user_guide!(socket.assigns.current_user, id)
 
     {:ok,
-     socket |> assign(guide: guide, page_title: "Edit guide") |> load_entries() |> reset_form()}
+     socket
+     |> assign(guide: guide, page_title: "Edit guide")
+     |> load_entries()
+     |> reset_form()
+     |> assign_seo(guide)}
   end
 
   @impl true
@@ -26,11 +30,86 @@ defmodule EthosWeb.GuideLive.Edit do
     {:noreply, load_entries(socket)}
   end
 
+  def handle_event("add-section", _params, socket) do
+    {:noreply,
+     update(socket, :seo, fn seo ->
+       Map.update!(seo, :sections, &(&1 ++ [%{"heading" => "", "body" => ""}]))
+     end)}
+  end
+
+  def handle_event("remove-section", %{"index" => index}, socket) do
+    {:noreply,
+     update(socket, :seo, fn seo ->
+       Map.update!(seo, :sections, &List.delete_at(&1, String.to_integer(index)))
+     end)}
+  end
+
+  def handle_event("add-faq", _params, socket) do
+    {:noreply,
+     update(socket, :seo, fn seo ->
+       Map.update!(seo, :faq, &(&1 ++ [%{"question" => "", "answer" => ""}]))
+     end)}
+  end
+
+  def handle_event("remove-faq", %{"index" => index}, socket) do
+    {:noreply,
+     update(socket, :seo, fn seo ->
+       Map.update!(seo, :faq, &List.delete_at(&1, String.to_integer(index)))
+     end)}
+  end
+
+  def handle_event("seo_changed", %{"seo" => params}, socket) do
+    {:noreply, assign(socket, seo: normalize_seo(params))}
+  end
+
+  def handle_event("save_seo", %{"seo" => params}, socket) do
+    case Guides.update_guide_seo(socket.assigns.guide, normalize_seo(params)) do
+      {:ok, guide} ->
+        {:noreply,
+         socket
+         |> assign(guide: guide)
+         |> assign_seo(guide)
+         |> put_flash(:info, "Saved")}
+
+      {:error, _changeset} ->
+        {:noreply, put_flash(socket, :error, "Couldn't save — check the fields")}
+    end
+  end
+
   defp load_entries(socket),
     do: assign(socket, entries: Guides.list_entries(socket.assigns.guide))
 
   defp reset_form(socket),
     do: assign(socket, form: to_form(Entry.changeset(%Entry{}, %{})))
+
+  defp assign_seo(socket, guide) do
+    assign(socket,
+      seo: %{
+        intro: guide.intro || "",
+        sections: guide.sections || [],
+        faq: guide.faq || []
+      }
+    )
+  end
+
+  defp normalize_seo(params) do
+    %{
+      intro: Map.get(params, "intro", ""),
+      sections: params |> Map.get("sections", %{}) |> indexed_map_to_list(["heading", "body"]),
+      faq: params |> Map.get("faq", %{}) |> indexed_map_to_list(["question", "answer"])
+    }
+  end
+
+  defp indexed_map_to_list(map, fields) when is_map(map) do
+    map
+    |> Enum.sort_by(fn {index, _row} -> String.to_integer(index) end)
+    |> Enum.map(fn {_index, row} -> Map.take(row, fields) end)
+    |> Enum.reject(fn row -> Enum.all?(fields, &blank?(Map.get(row, &1))) end)
+  end
+
+  defp indexed_map_to_list(_map, _fields), do: []
+
+  defp blank?(value), do: value in [nil, ""]
 
   @impl true
   def render(assigns) do
@@ -62,6 +141,63 @@ defmodule EthosWeb.GuideLive.Edit do
       </li>
     </ul>
 
+    <h3 class="mt-10 font-semibold">Story &amp; SEO</h3>
+    <.simple_form for={%{}} as={:seo} id="seo-form" phx-change="seo_changed" phx-submit="save_seo">
+      <.input type="textarea" name="seo[intro]" label="Intro (markdown)" value={@seo.intro} rows="6" />
+
+      <div :for={{section, i} <- Enum.with_index(@seo.sections)} class="rounded border p-3">
+        <.input
+          name={"seo[sections][#{i}][heading]"}
+          label="Section heading"
+          value={section["heading"]}
+        />
+        <.input
+          type="textarea"
+          name={"seo[sections][#{i}][body]"}
+          label="Body (markdown)"
+          value={section["body"]}
+          rows="4"
+        />
+        <button
+          type="button"
+          phx-click="remove-section"
+          phx-value-index={i}
+          class="text-sm text-red-600 underline"
+        >
+          Remove section
+        </button>
+      </div>
+      <button type="button" id="add-section" phx-click="add-section" class="text-sm underline">
+        + Add section
+      </button>
+
+      <div :for={{item, i} <- Enum.with_index(@seo.faq)} class="rounded border p-3">
+        <.input name={"seo[faq][#{i}][question]"} label="Question" value={item["question"]} />
+        <.input
+          type="textarea"
+          name={"seo[faq][#{i}][answer]"}
+          label="Answer"
+          value={item["answer"]}
+          rows="2"
+        />
+        <button
+          type="button"
+          phx-click="remove-faq"
+          phx-value-index={i}
+          class="text-sm text-red-600 underline"
+        >
+          Remove FAQ
+        </button>
+      </div>
+      <button type="button" id="add-faq" phx-click="add-faq" class="text-sm underline">
+        + Add FAQ
+      </button>
+
+      <:actions>
+        <.button>Save story &amp; SEO</.button>
+      </:actions>
+    </.simple_form>
+
     <h3 class="mt-10 font-semibold">Add an entry</h3>
     <.simple_form for={@form} id="entry-form" phx-submit="add">
       <.input field={@form[:name]} label="Place / activity" />
@@ -75,6 +211,8 @@ defmodule EthosWeb.GuideLive.Edit do
       />
       <.input field={@form[:day]} type="number" label="Day (optional)" />
       <.input field={@form[:note]} type="textarea" label="Note (optional)" />
+      <.input field={@form[:booking_url]} label="Booking URL (optional)" />
+      <.input field={@form[:booking_label]} label="Booking button label (optional)" />
       <:actions>
         <.button>Add</.button>
       </:actions>
