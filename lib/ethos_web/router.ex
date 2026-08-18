@@ -24,6 +24,7 @@ defmodule EthosWeb.Router do
     get "/g/:slug", GuideController, :show
     get "/destinations", DestinationController, :index
     get "/destinations/:slug", DestinationController, :show
+    get "/sitemap.xml", SitemapController, :index
   end
 
   # Other scopes may use custom stacks.
