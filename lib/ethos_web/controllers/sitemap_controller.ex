@@ -9,8 +9,15 @@ defmodule EthosWeb.SitemapController do
         Enum.map(Guides.list_destinations(), fn d ->
           %{loc: url(~p"/destinations/#{d.slug}"), lastmod: nil}
         end) ++
-        Enum.map(Guides.list_published_guides(), fn g ->
-          %{loc: url(~p"/g/#{g.slug}"), lastmod: DateTime.to_date(g.updated_at)}
+        Enum.flat_map(Guides.list_published_guides(), fn g ->
+          lastmod = DateTime.to_date(g.updated_at)
+
+          [%{loc: url(~p"/g/#{g.slug}"), lastmod: lastmod}] ++
+            if g.photos not in [nil, []] do
+              [%{loc: url(~p"/g/#{g.slug}/photos"), lastmod: lastmod}]
+            else
+              []
+            end
         end)
 
     xml =

@@ -50,4 +50,20 @@ defmodule EthosWeb.GuidePhotosPageTest do
     {:ok, _} = Ethos.Guides.update_guide_photos(draft, @photos)
     assert conn |> get(~p"/g/#{draft.slug}/photos") |> response(404)
   end
+
+  test "guide page shows a photo teaser when photos are present", %{conn: conn} do
+    guide = photo_guide()
+    html = conn |> get(~p"/g/#{guide.slug}") |> html_response(200)
+
+    assert html =~ "See all 2 photos"
+    assert html =~ "/photos/rome/trevi-fountain_thumb.jpg"
+    assert html =~ ~p"/g/#{guide.slug}/photos"
+  end
+
+  test "guide page has no photo teaser when there are no photos", %{conn: conn} do
+    guide = published_guide_fixture()
+    html = conn |> get(~p"/g/#{guide.slug}") |> html_response(200)
+
+    refute html =~ "photos"
+  end
 end
