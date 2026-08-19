@@ -35,6 +35,9 @@ defmodule Ethos.PhotoOptimizer do
   end
 
   defp save_bounded(src_path, out_path, max_edge) do
+    # Note: vips thumbnail auto-rotates by EXIF orientation. Sources must
+    # either carry a correct tag or none — a stale tag on already-upright
+    # pixels double-rotates the output (strip such tags from sources).
     with {:ok, image} <- Vix.Vips.Operation.thumbnail(src_path, max_edge, height: max_edge),
          :ok <- Vix.Vips.Image.write_to_file(image, out_path, Q: @quality) do
       {:ok, out_path}

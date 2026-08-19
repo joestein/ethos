@@ -249,9 +249,9 @@ defmodule Ethos.Seeds.RomeGuide do
     },
     %{
       label: "obelisk-and-church",
-      title: "Obelisk on the final-day walk",
+      title: "Piazza Navona — obelisk and Sant'Agnese",
       description:
-        "A hieroglyph-covered Egyptian obelisk on its Roman base, a Baroque dome under restoration behind."
+        "The hieroglyph-covered obelisk of Piazza Navona with the dome and bell tower of Sant'Agnese in Agone behind, mid-restoration scaffolding and all."
     },
     %{
       label: "santa-maria-in-trastevere",
