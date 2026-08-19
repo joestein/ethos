@@ -23,5 +23,8 @@ defmodule Ethos.GuidePhotosTest do
 
     {:error, _} =
       Guides.update_guide_photos(guide, [Map.put(@photo, "src", "https://evil.example/x.jpg")])
+
+    {:error, _} =
+      Guides.update_guide_photos(guide, [Map.put(@photo, "src", "/photos/../secrets.jpg")])
   end
 end

@@ -43,6 +43,8 @@ defmodule Ethos.Guides.Guide do
     change(guide, status: status)
   end
 
+  @photo_path_re ~r{^/photos/[a-z0-9/_-]+\.(jpg|jpeg|png|webp)$}
+
   def photos_changeset(guide, attrs) do
     guide
     |> cast(attrs, [:photos])
@@ -52,8 +54,8 @@ defmodule Ethos.Guides.Guide do
           Enum.all?(photos, fn p ->
             is_map(p) and
               Enum.all?(~w(src thumb title description), &is_binary(Map.get(p, &1))) and
-              String.starts_with?(p["src"], "/photos/") and
-              String.starts_with?(p["thumb"], "/photos/")
+              Regex.match?(@photo_path_re, p["src"]) and
+              Regex.match?(@photo_path_re, p["thumb"])
           end)
 
       if ok?,

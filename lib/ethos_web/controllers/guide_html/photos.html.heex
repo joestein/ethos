@@ -10,12 +10,14 @@
 
   <div class="mt-6 grid grid-cols-2 sm:grid-cols-3 gap-4">
     <figure :for={photo <- @photos}>
-      <img
-        src={photo["thumb"]}
-        alt={photo["title"]}
-        loading="lazy"
-        class="aspect-square w-full rounded-lg object-cover"
-      />
+      <a href={photo["src"]} target="_blank" rel="noopener">
+        <img
+          src={photo["thumb"]}
+          alt={photo["title"]}
+          loading="lazy"
+          class="aspect-square w-full rounded-lg object-cover"
+        />
+      </a>
       <figcaption class="mt-1">
         <p class="font-semibold text-sm">{photo["title"]}</p>
         <p :if={photo["description"]} class="text-sm text-zinc-500">{photo["description"]}</p>

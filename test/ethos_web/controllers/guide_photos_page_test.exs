@@ -38,6 +38,9 @@ defmodule EthosWeb.GuidePhotosPageTest do
     assert html =~ "Back to the guide"
     assert html =~ ~s("@type":"ImageGallery")
     assert html =~ ~s("@type":"ImageObject")
+    assert html =~ ~s(href="/photos/rome/trevi-fountain.jpg")
+    full_image_url = url(~p"/") <> "photos/rome/trevi-fountain.jpg"
+    assert html =~ ~s(property="og:image" content="#{full_image_url}")
     assert [title_tag] = Regex.run(~r{<title[^>]*>(.*?)</title>}s, html, capture: :all_but_first)
     assert title_tag =~ "Pictures from Rome"
   end
@@ -64,6 +67,6 @@ defmodule EthosWeb.GuidePhotosPageTest do
     guide = published_guide_fixture()
     html = conn |> get(~p"/g/#{guide.slug}") |> html_response(200)
 
-    refute html =~ "photos"
+    refute html =~ "See all"
   end
 end

@@ -127,13 +127,27 @@ defmodule EthosWeb.GuideController do
     case Guides.get_published_guide_by_slug(slug) do
       %Guide{photos: photos} = guide when photos not in [nil, []] ->
         destination_name = destination_name(guide)
+        page_title = "Pictures from #{destination_name} — #{guide.title}"
+
+        page_meta_description =
+          "Photos from #{destination_name} — #{guide.title}, a real Ethos trip guide."
+
+        first_photo = List.first(photos)
+
+        og = %{
+          title: page_title,
+          description: page_meta_description,
+          image: first_photo && url(~p"/") <> String.trim_leading(first_photo["src"], "/"),
+          type: "website",
+          url: url(~p"/g/#{guide.slug}/photos")
+        }
 
         render(conn, :photos,
           guide: guide,
           photos: photos,
-          page_title: "Pictures from #{destination_name} — #{guide.title}",
-          page_meta_description:
-            "Photos from #{destination_name} — #{guide.title}, a real Ethos trip guide.",
+          page_title: page_title,
+          page_og: og,
+          page_meta_description: page_meta_description,
           page_canonical: url(~p"/g/#{guide.slug}/photos"),
           json_ld: [photos_breadcrumb_ld(guide), gallery_ld(guide)]
         )
