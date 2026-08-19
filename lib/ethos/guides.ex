@@ -38,6 +38,10 @@ defmodule Ethos.Guides do
     guide |> Guide.seo_changeset(attrs) |> Repo.update()
   end
 
+  def update_guide_photos(%Guide{} = guide, photos) do
+    guide |> Guide.photos_changeset(%{photos: photos}) |> Repo.update()
+  end
+
   def list_published_guides do
     Repo.all(from g in Guide, where: g.status == "published", order_by: [desc: g.updated_at])
   end

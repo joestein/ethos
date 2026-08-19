@@ -16,6 +16,7 @@ defmodule Ethos.Guides.Guide do
     field :intro, :string
     field :sections, {:array, :map}
     field :faq, {:array, :map}
+    field :photos, {:array, :map}
     field :destination_slug, :string
     belongs_to :user, Ethos.Accounts.User
     has_many :entries, Ethos.Guides.Entry, preload_order: [asc: :position]
@@ -40,6 +41,25 @@ defmodule Ethos.Guides.Guide do
 
   def status_changeset(guide, status) when status in @statuses do
     change(guide, status: status)
+  end
+
+  def photos_changeset(guide, attrs) do
+    guide
+    |> cast(attrs, [:photos])
+    |> validate_change(:photos, fn :photos, photos ->
+      ok? =
+        is_list(photos) and
+          Enum.all?(photos, fn p ->
+            is_map(p) and
+              Enum.all?(~w(src thumb title description), &is_binary(Map.get(p, &1))) and
+              String.starts_with?(p["src"], "/photos/") and
+              String.starts_with?(p["thumb"], "/photos/")
+          end)
+
+      if ok?,
+        do: [],
+        else: [photos: "each photo needs src/thumb under /photos/ plus title and description"]
+    end)
   end
 
   def derive_destination_slug(destination) when is_binary(destination) do

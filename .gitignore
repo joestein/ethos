@@ -43,6 +43,9 @@ npm-debug.log
 
 /priv/uploads/
 
+# Raw source photos (not committed; optimized output goes to priv/static/photos/)
+/images/
+
 
 # Local environment variables (copy .env.example)
 .env
