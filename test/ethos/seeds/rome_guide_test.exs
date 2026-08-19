@@ -14,6 +14,11 @@ defmodule Ethos.Seeds.RomeGuideTest do
     assert guide.destination_slug == "rome"
     assert length(guide.sections) == 4
     assert length(guide.faq) == 6
+    assert length(guide.photos) == 13
+
+    assert Enum.all?(guide.photos, fn p ->
+             p["src"] =~ ~r{^/photos/rome/[a-z0-9-]+\.jpg$}
+           end)
 
     entries = Guides.list_entries(guide)
     assert length(entries) == 8
@@ -37,6 +42,7 @@ defmodule Ethos.Seeds.RomeGuideTest do
     guide2 = RomeGuide.upsert!(user.email)
     assert guide2.id == guide.id
     assert length(Guides.list_entries(guide2)) == 8
+    assert length(guide2.photos) == 13
   end
 
   test "raises instead of auto-creating the owner account outside dev/test" do

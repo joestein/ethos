@@ -194,6 +194,85 @@ defmodule Ethos.Seeds.RomeGuide do
     }
   ]
 
+  @photos [
+    %{
+      label: "arch-of-constantine",
+      title: "Arch of Constantine",
+      description:
+        "The triple Arch of Constantine beside the Colosseum, medallions and attic inscription in full sun."
+    },
+    %{
+      label: "arch-of-titus-menorah-relief",
+      title: "Arch of Titus — Spoils of Jerusalem",
+      description:
+        "The interior relief of the Arch of Titus showing the triumphal procession carrying the menorah from the Temple in Jerusalem."
+    },
+    %{
+      label: "colosseum-exterior-arches",
+      title: "Colosseum, looking up",
+      description: "The travertine arcades of the Colosseum stacked against a blue summer sky."
+    },
+    %{
+      label: "colosseum-hypogeum",
+      title: "The hypogeum",
+      description:
+        "The maze of corridors and lift shafts beneath where the arena floor once stood."
+    },
+    %{
+      label: "colosseum-interior-wide",
+      title: "Inside the Colosseum",
+      description:
+        "Wide view from near arena level — hypogeum, seating tiers, and the outer wall in the summer haze."
+    },
+    %{
+      label: "arch-across-the-forum",
+      title: "Across the Forum",
+      description: "A triumphal arch seen through the trees and tall grass of the Roman Forum."
+    },
+    %{
+      label: "palatine-forum-view",
+      title: "Over the Forum rooftops",
+      description:
+        "Looking out from the Palatine over ancient brick, pines, and the domes of the city."
+    },
+    %{
+      label: "vittoriano-and-domes",
+      title: "Domes and the Vittoriano",
+      description:
+        "Baroque domes in the foreground with the winged victories of the Altare della Patria behind."
+    },
+    %{
+      label: "trevi-fountain",
+      title: "Trevi Fountain",
+      description:
+        "Oceanus on his shell chariot, tritons and sea-horses over the travertine rockwork, in strong afternoon sun."
+    },
+    %{
+      label: "obelisk-and-church",
+      title: "Obelisk on the final-day walk",
+      description:
+        "A hieroglyph-covered Egyptian obelisk on its Roman base, a Baroque dome under restoration behind."
+    },
+    %{
+      label: "santa-maria-in-trastevere",
+      title: "Santa Maria in Trastevere",
+      description:
+        "The golden 12th-century mosaic and Romanesque bell tower of the basilica where we lit a candle."
+    },
+    %{
+      label: "food-flatbread-lunch",
+      title: "Side-street lunch",
+      description:
+        "Grilled stuffed flatbread with melted cheese and a pile of fresh arugula — the kind of lunch you find one street off the main drag."
+    },
+    %{
+      label: "street-art-michelangelo",
+      title: "MICHELANGELO",
+      description:
+        "Roman street art: Michelangelo in a Ninja Turtle mask. The Renaissance fights back."
+    }
+  ]
+
   @doc """
   Creates or updates the Rome flagship guide under the user with the given
   email (creating that user, with a random password, if they don't exist
@@ -212,6 +291,8 @@ defmodule Ethos.Seeds.RomeGuide do
           |> Ecto.Changeset.put_change(:slug, @slug)
           |> Repo.update!()
 
+        {:ok, guide} = Guides.update_guide_photos(guide, photo_attrs())
+
         replace_entries!(guide)
 
         {:ok, published} = Guides.publish_guide(guide)
@@ -219,6 +300,17 @@ defmodule Ethos.Seeds.RomeGuide do
       end)
 
     Guides.get_guide!(guide.id)
+  end
+
+  defp photo_attrs do
+    Enum.map(@photos, fn %{label: label, title: title, description: description} ->
+      %{
+        "src" => "/photos/rome/#{label}.jpg",
+        "thumb" => "/photos/rome/#{label}_thumb.jpg",
+        "title" => title,
+        "description" => description
+      }
+    end)
   end
 
   defp find_or_create_user!(email) do
