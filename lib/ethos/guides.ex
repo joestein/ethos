@@ -22,6 +22,9 @@ defmodule Ethos.Guides do
   def get_published_guide_by_slug!(slug),
     do: Repo.get_by!(Guide, slug: slug, status: "published")
 
+  def get_published_guide_by_slug(slug),
+    do: Repo.get_by(Guide, slug: slug, status: "published")
+
   def list_user_guides(user) do
     Repo.all(from g in Guide, where: g.user_id == ^user.id, order_by: [desc: g.inserted_at])
   end

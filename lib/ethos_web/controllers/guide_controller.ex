@@ -123,6 +123,67 @@ defmodule EthosWeb.GuideController do
     end
   end
 
+  def photos(conn, %{"slug" => slug}) do
+    case Guides.get_published_guide_by_slug(slug) do
+      %Guide{photos: photos} = guide when photos not in [nil, []] ->
+        destination_name = destination_name(guide)
+
+        render(conn, :photos,
+          guide: guide,
+          photos: photos,
+          page_title: "Pictures from #{destination_name} — #{guide.title}",
+          page_meta_description:
+            "Photos from #{destination_name} — #{guide.title}, a real Ethos trip guide.",
+          page_canonical: url(~p"/g/#{guide.slug}/photos"),
+          json_ld: [photos_breadcrumb_ld(guide), gallery_ld(guide)]
+        )
+
+      _ ->
+        conn
+        |> put_status(:not_found)
+        |> put_view(EthosWeb.ErrorHTML)
+        |> render(:"404")
+    end
+  end
+
+  defp destination_name(guide), do: guide.destination |> String.split(",") |> List.first()
+
+  defp photos_breadcrumb_ld(guide) do
+    breadcrumb = breadcrumb_ld(guide)
+
+    items =
+      breadcrumb["itemListElement"] ++
+        [
+          %{
+            "@type" => "ListItem",
+            "position" => 5,
+            "name" => "Photos",
+            "item" => url(~p"/g/#{guide.slug}/photos")
+          }
+        ]
+
+    %{breadcrumb | "itemListElement" => items}
+  end
+
+  defp gallery_ld(guide) do
+    %{
+      "@context" => "https://schema.org",
+      "@type" => "ImageGallery",
+      "name" => "Pictures from #{destination_name(guide)} — #{guide.title}",
+      "url" => url(~p"/g/#{guide.slug}/photos"),
+      "image" =>
+        Enum.map(guide.photos, fn p ->
+          %{
+            "@type" => "ImageObject",
+            "name" => p["title"],
+            "description" => p["description"],
+            "contentUrl" => url(~p"/") <> String.trim_leading(p["src"], "/"),
+            "thumbnailUrl" => url(~p"/") <> String.trim_leading(p["thumb"], "/")
+          }
+        end)
+    }
+  end
+
   def research(conn, %{"slug" => slug, "entry_id" => entry_id}) do
     guide = Guides.get_published_guide_by_slug!(slug)
     entry = Guides.get_entry!(guide, entry_id)

@@ -22,6 +22,7 @@ defmodule EthosWeb.Router do
 
     get "/", PageController, :home
     get "/g/:slug", GuideController, :show
+    get "/g/:slug/photos", GuideController, :photos
     get "/destinations", DestinationController, :index
     get "/destinations/:slug", DestinationController, :show
     get "/sitemap.xml", SitemapController, :index

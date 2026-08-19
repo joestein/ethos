@@ -1,0 +1,29 @@
+<div class="mx-auto max-w-4xl px-4 py-10">
+  <header>
+    <.link navigate={~p"/g/#{@guide.slug}"} class="text-sm underline">
+      ← Back to the guide
+    </.link>
+    <h1 class="mt-2 text-3xl font-bold">
+      Pictures from {@guide.destination |> String.split(",") |> List.first()} — {@guide.title}
+    </h1>
+  </header>
+
+  <div class="mt-6 grid grid-cols-2 sm:grid-cols-3 gap-4">
+    <figure :for={photo <- @photos}>
+      <img
+        src={photo["thumb"]}
+        alt={photo["title"]}
+        loading="lazy"
+        class="aspect-square w-full rounded-lg object-cover"
+      />
+      <figcaption class="mt-1">
+        <p class="font-semibold text-sm">{photo["title"]}</p>
+        <p :if={photo["description"]} class="text-sm text-zinc-500">{photo["description"]}</p>
+      </figcaption>
+    </figure>
+  </div>
+
+  <.link navigate={~p"/g/#{@guide.slug}"} class="mt-8 inline-block text-sm underline">
+    ← Back to the guide
+  </.link>
+</div>
