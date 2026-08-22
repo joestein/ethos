@@ -89,6 +89,7 @@ defmodule EthosWeb.Router do
 
     post "/g/:slug/entries/:entry_id/research", GuideController, :research
     post "/p/:slug/visit", PlaceController, :visit
+    get "/badges", BadgeController, :index
   end
 
   scope "/", EthosWeb do

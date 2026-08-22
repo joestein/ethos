@@ -45,9 +45,23 @@ defmodule EthosWeb.PlaceController do
 
     conn =
       case Ethos.Visits.toggle_visit(user, place) do
-        {:ok, :visited} -> put_flash(conn, :info, "Checked off #{place.name}!")
-        {:ok, :unvisited} -> put_flash(conn, :info, "Removed #{place.name} from your visits.")
-        {:error, :closed} -> put_flash(conn, :error, "#{place.name} is permanently closed.")
+        {:ok, :visited} ->
+          conn = put_flash(conn, :info, "Checked off #{place.name}!")
+
+          case Ethos.Badges.check_and_award(user, place) do
+            [] ->
+              conn
+
+            awarded ->
+              names = Enum.map_join(awarded, ", ", &"#{&1.emoji} #{&1.name}")
+              put_flash(conn, :info, "Checked off #{place.name}! Badge earned: #{names}")
+          end
+
+        {:ok, :unvisited} ->
+          put_flash(conn, :info, "Removed #{place.name} from your visits.")
+
+        {:error, :closed} ->
+          put_flash(conn, :error, "#{place.name} is permanently closed.")
       end
 
     redirect(conn, to: ~p"/p/#{place.slug}")
