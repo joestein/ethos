@@ -26,6 +26,24 @@ defmodule Ethos.Release do
     IO.puts("Seeded Rome guide: /g/#{guide.slug}")
   end
 
+  def seed_connecticut(email) do
+    load_app()
+    Application.ensure_all_started(@app)
+
+    Ethos.Seeds.ConnecticutPlaces.upsert_all!()
+
+    for mod <- [
+          Ethos.Seeds.WaterburyGuide,
+          Ethos.Seeds.MiddleburyGuide,
+          Ethos.Seeds.DanburyGuide,
+          Ethos.Seeds.SouthburyGuide,
+          Ethos.Seeds.WoodburyGuide
+        ] do
+      guide = mod.upsert!(email)
+      IO.puts("Seeded: /g/#{guide.slug}")
+    end
+  end
+
   defp repos do
     Application.fetch_env!(@app, :ecto_repos)
   end
