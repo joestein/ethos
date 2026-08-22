@@ -50,6 +50,17 @@ defmodule EthosWeb.HubPagesTest do
     assert html =~ "Connecticut"
   end
 
+  test "destinations index does not double-list towns that belong to a state", %{conn: conn} do
+    ct_guide("Waterbury", "New Haven County")
+    published_guide_fixture(%{"title" => "Rome trip", "destination" => "Rome, Italy"})
+
+    html = conn |> get(~p"/destinations") |> html_response(200)
+
+    assert html =~ ~s(href="/destinations/connecticut")
+    assert html =~ ~s(href="/destinations/rome")
+    refute html =~ ~s(href="/destinations/waterbury")
+  end
+
   test "sitemap includes state, county hubs", %{conn: conn} do
     ct_guide("Waterbury", "New Haven County")
     xml = conn |> get(~p"/sitemap.xml") |> response(200)

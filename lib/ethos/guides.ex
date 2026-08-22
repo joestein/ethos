@@ -71,6 +71,20 @@ defmodule Ethos.Guides do
     )
   end
 
+  def list_destinations_without_state do
+    Repo.all(
+      from g in Guide,
+        where: g.status == "published" and is_nil(g.state_slug),
+        group_by: [g.destination_slug, fragment("split_part(?, ',', 1)", g.destination)],
+        select: %{
+          slug: g.destination_slug,
+          name: fragment("split_part(?, ',', 1)", g.destination),
+          count: count(g.id)
+        },
+        order_by: [desc: count(g.id)]
+    )
+  end
+
   def list_states do
     Repo.all(
       from g in Guide,

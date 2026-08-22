@@ -4,7 +4,7 @@ defmodule EthosWeb.DestinationController do
   alias Ethos.Guides
 
   def index(conn, _params) do
-    destinations = Guides.list_destinations()
+    destinations = Guides.list_destinations_without_state()
     states = Guides.list_states()
 
     render(conn, :index,
