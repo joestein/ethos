@@ -14,6 +14,14 @@ defmodule EthosWeb.PageController do
           limit: 1
       )
 
-    render(conn, :home, featured: featured, layout: false)
+    latest =
+      Repo.all(
+        from g in Guide,
+          where: g.status == "published" and g.id != ^((featured && featured.id) || 0),
+          order_by: [desc: g.updated_at, desc: g.id],
+          limit: 6
+      )
+
+    render(conn, :home, featured: featured, latest: latest, layout: false)
   end
 end
