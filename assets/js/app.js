@@ -37,6 +37,23 @@ window.addEventListener("phx:copy", (event) => {
   navigator.clipboard.writeText(event.target.value)
 })
 
+// Copy-link buttons (server-rendered pages and LiveViews alike)
+document.addEventListener("click", (e) => {
+  const btn = e.target.closest("[data-copy-url]")
+  if (!btn) return
+  const url = btn.dataset.copyUrl
+  const done = () => {
+    const prev = btn.textContent
+    btn.textContent = "Copied!"
+    setTimeout(() => { btn.textContent = prev }, 1500)
+  }
+  if (navigator.clipboard && navigator.clipboard.writeText) {
+    navigator.clipboard.writeText(url).then(done, () => window.prompt("Copy this link:", url))
+  } else {
+    window.prompt("Copy this link:", url)
+  }
+})
+
 // connect if there are any LiveViews on the page
 liveSocket.connect()
 

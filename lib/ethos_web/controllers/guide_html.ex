@@ -13,4 +13,11 @@ defmodule EthosWeb.GuideHTML do
   def gyg_partner_url do
     Application.get_env(:ethos, :gyg_partner_url, @default_gyg_partner_url)
   end
+
+  def entry_share_url(guide, entry) do
+    case entry.place do
+      %{slug: slug} -> url(~p"/p/#{slug}")
+      _ -> url(~p"/g/#{guide.slug}") <> "#entry-#{entry.id}"
+    end
+  end
 end
