@@ -21,6 +21,12 @@
       <figcaption class="mt-1">
         <p class="font-semibold text-sm">{photo["title"]}</p>
         <p :if={photo["description"]} class="text-sm text-zinc-500">{photo["description"]}</p>
+        <span :if={photo["author"]} class="text-zinc-400">
+          — {photo["author"]}, {photo["license"]}, via
+          <a href={photo["source_url"]} class="underline" rel="nofollow noopener">
+            Wikimedia Commons
+          </a>
+        </span>
       </figcaption>
     </figure>
   </div>
