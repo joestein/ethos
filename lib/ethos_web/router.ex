@@ -26,6 +26,7 @@ defmodule EthosWeb.Router do
     get "/destinations", DestinationController, :index
     get "/destinations/:slug", DestinationController, :show
     get "/destinations/:state_slug/:county_slug", DestinationController, :county
+    get "/p/:slug", PlaceController, :show
     get "/sitemap.xml", SitemapController, :index
   end
 

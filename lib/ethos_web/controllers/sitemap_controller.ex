@@ -1,7 +1,7 @@
 defmodule EthosWeb.SitemapController do
   use EthosWeb, :controller
 
-  alias Ethos.Guides
+  alias Ethos.{Guides, Places}
 
   def index(conn, _params) do
     urls =
@@ -26,6 +26,9 @@ defmodule EthosWeb.SitemapController do
             else
               []
             end
+        end) ++
+        Enum.map(Places.list_places(), fn p ->
+          %{loc: url(~p"/p/#{p.slug}"), lastmod: DateTime.to_date(p.updated_at)}
         end)
 
     xml =
