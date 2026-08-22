@@ -1,0 +1,202 @@
+{
+  "guide": {
+    "slug": "little-italy-manhattan-guide",
+    "title": "Little Italy, Manhattan: Five Blocks and a Hundred Years",
+    "destination": "Little Italy, New York",
+    "state": "New York",
+    "county": "Manhattan",
+    "intro": "Little Italy originated at Mulberry Bend south of Canal Street, in what had been the notorious Five Points slum, as mass immigration from Italy in the 1880s concentrated Neapolitan and Sicilian newcomers into this Lower Manhattan enclave. The neighborhood peaked around 1910 with roughly 10,000 Italian residents, when over 90% of the Fourteenth Ward's population was of Italian birth or origin. At its largest the enclave stretched from Lafayette Street to the Bowery and from Kenmare to Worth Street, but Chinatown's northward expansion after the 1965 Immigration Act shrank it to about five blocks of Mulberry Street north of Canal; by the 2010 census no residents were Italian-born and only about 5% identified as Italian American. In 2010, Little Italy and Chinatown were jointly listed on the National Register of Historic Places as a single combined historic district.",
+    "sections": [
+      {
+        "heading": "An Officer and a Feast",
+        "body": "Lieutenant Joseph Petrosino joined the NYPD in 1883 as the first Italian speaker in the department's history and led the Italian Squad against Black Hand extortion rackets; he was assassinated in Palermo on March 12, 1909 while gathering evidence against Italian criminals. Over 200,000 people attended his funeral in New York on April 12, 1909, and in 1987 the square at Lafayette and Kenmare Streets was renamed in his honor. The neighborhood's Italian identity is renewed each fall at the Feast of San Gennaro, which began in 1926 as a one-day religious commemoration of the martyred patron saint and has grown into an 11-day street fair; the 100th annual Feast runs September 17-27, 2026, along Mulberry Street."
+      },
+      {
+        "heading": "Getting there by subway",
+        "body": "Take the 6 to Spring Street at the north end of the neighborhood, or the 6/J/Z/N/Q/R/W to the Canal Street complex at the south end, then walk a block or two east to Mulberry Street."
+      },
+      {
+        "heading": "Where to stay",
+        "body": "No hotel or bed-and-breakfast operates within Little Italy's five-block Mulberry Street core. The nearest verified option is The Nolitan Hotel, one block north in adjacent Nolita."
+      }
+    ],
+    "faq": [
+      {
+        "question": "How do I get to Little Italy by subway?",
+        "answer": "Take the 6 to Spring Street or the 6/J/Z/N/Q/R/W to Canal Street, then walk a block or two east to Mulberry Street, the neighborhood's spine."
+      },
+      {
+        "question": "Why is Little Italy so much smaller today than it used to be?",
+        "answer": "Chinatown's expansion after the 1965 Immigration Act pushed Little Italy's footprint down from a swath running Lafayette Street to the Bowery and Kenmare to Worth Street to about five blocks of Mulberry Street north of Canal. By the 2010 census, no residents were Italian-born and only about 5% identified as Italian American."
+      },
+      {
+        "question": "Who was Petrosino Square named for?",
+        "answer": "NYPD Lieutenant Joseph Petrosino, who joined the department in 1883 as its first Italian speaker and led the Italian Squad against Black Hand extortion rings before being assassinated in Palermo in 1909. The square was renamed for him in 1987."
+      },
+      {
+        "question": "When is the Feast of San Gennaro in 2026?",
+        "answer": "The 100th annual Feast runs September 17-27, 2026, along Mulberry Street between Canal and Houston Streets."
+      },
+      {
+        "question": "Where can I stay near Little Italy?",
+        "answer": "No hotel operates within the neighborhood's Mulberry Street core. The Nolitan Hotel, one block north in Nolita, is the nearest verified option."
+      }
+    ],
+    "photos": [
+      {
+        "src": "/photos/ny/manhattan/little-italy/street-scene.jpg",
+        "thumb": "/photos/ny/manhattan/little-italy/street-scene_thumb.jpg",
+        "title": "Little Italy street scene",
+        "description": "A street scene in Little Italy, Manhattan.",
+        "author": "Kidfly182",
+        "license": "CC BY 4.0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Little_Italy_Manhattan_March_2025_003.jpg"
+      },
+      {
+        "src": "/photos/ny/manhattan/little-italy/most-precious-blood-church.jpg",
+        "thumb": "/photos/ny/manhattan/little-italy/most-precious-blood-church_thumb.jpg",
+        "title": "Church of the Most Precious Blood",
+        "description": "The Church of the Most Precious Blood in Little Italy.",
+        "author": "Kidfly182",
+        "license": "CC BY 4.0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Church_of_the_Most_Precious_Blood_005.jpg"
+      },
+      {
+        "src": "/photos/ny/manhattan/little-italy/feast-of-san-gennaro.jpg",
+        "thumb": "/photos/ny/manhattan/little-italy/feast-of-san-gennaro_thumb.jpg",
+        "title": "Feast of San Gennaro",
+        "description": "A view west down Grand Street during the Feast of San Gennaro, with banners and crowds.",
+        "author": "MusikAnimal",
+        "license": "CC BY-SA 3.0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Feast_of_San_Gennaro_NYC_2014.jpeg"
+      }
+    ]
+  },
+  "places": [
+    {
+      "slug": "italian-american-museum",
+      "name": "Italian American Museum",
+      "kind": "museum",
+      "town": "Little Italy",
+      "state": "New York",
+      "county": "Manhattan",
+      "address": "151 Mulberry St, New York, NY 10013",
+      "official_url": "https://italianamericanmuseum.org/",
+      "summary": "A nonprofit museum preserving Italian American history, reopened in a new facility on October 1, 2024, with exhibitions including the Manteo marionettes and a Verrazzano tribute. A permanent 'Italian American Experience' exhibition is in development, anticipated to open in 2026.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "lt-petrosino-square",
+      "name": "Lt. Petrosino Square",
+      "kind": "park",
+      "town": "Little Italy",
+      "state": "New York",
+      "county": "Manhattan",
+      "address": "Bounded by Cleveland Pl, Lafayette St, and Kenmare St, New York, NY",
+      "summary": "A small public square at the junction of Little Italy, Nolita, and SoHo, renamed in 1987 (from Kenmare Square) for NYPD Lieutenant Joseph Petrosino, the pioneering officer who led the Italian Squad against Black Hand extortion rackets; renovated 2008-2011 in a $2 million project.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "feast-of-san-gennaro",
+      "name": "Feast of San Gennaro",
+      "kind": "attraction",
+      "town": "Little Italy",
+      "state": "New York",
+      "county": "Manhattan",
+      "address": "Mulberry St between Canal and Houston Sts (plus Hester and Grand Sts), New York, NY",
+      "official_url": "https://sangennaronyc.org/",
+      "summary": "An annual 11-day Italian American street festival founded in 1926 as a one-day religious commemoration; the 100th annual Feast runs September 17-27, 2026, along Mulberry Street.",
+      "status": "open",
+      "photos": [
+        {
+          "src": "/photos/ny/manhattan/little-italy/feast-of-san-gennaro.jpg",
+          "thumb": "/photos/ny/manhattan/little-italy/feast-of-san-gennaro_thumb.jpg",
+          "title": "Feast of San Gennaro",
+          "description": "A view west down Grand Street during the Feast of San Gennaro, with banners and crowds.",
+          "author": "MusikAnimal",
+          "license": "CC BY-SA 3.0",
+          "source_url": "https://commons.wikimedia.org/wiki/File:Feast_of_San_Gennaro_NYC_2014.jpeg"
+        }
+      ]
+    },
+    {
+      "slug": "il-cortile",
+      "name": "Il Cortile",
+      "kind": "restaurant",
+      "town": "Little Italy",
+      "state": "New York",
+      "county": "Manhattan",
+      "address": "125 Mulberry St, New York, NY 10013",
+      "official_url": "https://www.ilcortile.com/",
+      "summary": "A family-owned Italian fine-dining institution operating since 1975 — a Little Italy staple for decades, known for its garden-courtyard dining room.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "caffe-palermo",
+      "name": "Caffe Palermo",
+      "kind": "cafe",
+      "town": "Little Italy",
+      "state": "New York",
+      "county": "Manhattan",
+      "address": "148 Mulberry St, New York, NY 10013",
+      "official_url": "https://caffepalermo.com/",
+      "summary": "An Italian pastry shop billed as 'The Cannoli King of Mulberry Street since 1973,' specializing in cannoli and Italian desserts.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "umbertos-clam-house",
+      "name": "Umberto's Clam House",
+      "kind": "restaurant",
+      "town": "Little Italy",
+      "state": "New York",
+      "county": "Manhattan",
+      "address": "132 Mulberry St, New York, NY 10013",
+      "official_url": "https://umbertosclamhouse.com/",
+      "summary": "A storied Little Italy seafood restaurant famous for its clam dishes and its place in neighborhood lore.",
+      "status": "open",
+      "photos": []
+    }
+  ],
+  "entries": [
+    {
+      "kind": "sight",
+      "name": "Italian American Museum",
+      "place_slug": "italian-american-museum",
+      "note": "Reopened in a new facility in October 2024, with a permanent exhibition on Italian American history in development for 2026."
+    },
+    {
+      "kind": "sight",
+      "name": "Lt. Petrosino Square",
+      "place_slug": "lt-petrosino-square",
+      "note": "Named in 1987 for the NYPD's first Italian-speaking officer, assassinated in Palermo in 1909 while investigating Black Hand crime."
+    },
+    {
+      "kind": "sight",
+      "name": "Feast of San Gennaro",
+      "place_slug": "feast-of-san-gennaro",
+      "note": "The 100th annual Feast runs September 17-27, 2026 — an 11-day street fair that began as a one-day commemoration in 1926."
+    },
+    {
+      "kind": "food",
+      "name": "Il Cortile",
+      "place_slug": "il-cortile",
+      "note": "A garden-courtyard dining room that's been a Little Italy fixture since 1975."
+    },
+    {
+      "kind": "food",
+      "name": "Caffe Palermo",
+      "place_slug": "caffe-palermo",
+      "note": "Self-billed 'Cannoli King of Mulberry Street since 1973' — the neighborhood's classic cannoli stop."
+    },
+    {
+      "kind": "food",
+      "name": "Umberto's Clam House",
+      "place_slug": "umbertos-clam-house",
+      "note": "A storied seafood spot with clam dishes at the center of its Little Italy lore."
+    }
+  ]
+}

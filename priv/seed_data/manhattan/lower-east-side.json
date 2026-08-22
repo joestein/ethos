@@ -1,0 +1,318 @@
+{
+  "guide": {
+    "slug": "lower-east-side-manhattan-guide",
+    "title": "Lower East Side, Manhattan: Tenements, Reform, and Reinvention",
+    "destination": "Lower East Side, New York",
+    "state": "New York",
+    "county": "Manhattan",
+    "intro": "The Lower East Side was Lenape land before European settlement; its riverfront point, Corlears Hook, takes its name from Jacobus van Corlaer, a Dutch schoolmaster who settled there around 1638, and the wider area contained Dutch-era farms called 'bouwerij.' Some of the first tenements built in New York City went up at Corlears Hook in 1833, beginning the neighborhood's defining era of dense tenement housing. Waves of immigration followed: large German immigration in the 1840s created 'Kleindeutschland' (Little Germany), and by 1920 the neighborhood's Jewish quarter housed roughly 400,000 residents, with Yiddish theaters along Second Avenue. Tenement-reform movements, including Jacob Riis's work, culminated in First Houses (1935-1936) — the first public housing project in the United States. The Lower East Side Historic District was added to the National Register of Historic Places in 2000, and amid rapid gentrification the National Trust for Historic Preservation placed the neighborhood on its 'America's Most Endangered Places' list in 2008.",
+    "sections": [
+      {
+        "heading": "An Immigrant Landmark, Restored",
+        "body": "The Eldridge Street Synagogue, built in 1887, survives today as the meticulously restored Museum at Eldridge Street — described as a symbol of immigrant aspirations realized, and listed by Time Out among the most beautiful buildings in the world. The Lower East Side Tenement Museum, founded in 1988 by Ruth J. Abram and Anita Jacobson, preserves an 1863 tenement at 97 Orchard Street and an 1888 building at 103 Orchard Street; it was declared a National Historic Landmark in 1994 and a National Historic Site in 1998."
+      },
+      {
+        "heading": "Getting there by subway",
+        "body": "The heart of the Lower East Side is served by the Delancey St-Essex St station complex (F, J, M, Z), with the B/D at Grand St on the neighborhood's Chinatown border and the F at East Broadway covering the southern blocks — most visitors arrive via Delancey/Essex, one stop off the Williamsburg Bridge."
+      },
+      {
+        "heading": "A Market and a Park for the Neighborhood",
+        "body": "Essex Market, billed as 'New York City's Most Historic Market,' has served the Lower East Side for over 85 years and now houses more than 30 vendors. A short walk away, Sara D. Roosevelt Park — opened in September 1934 and stretching seven blocks from Chrystie to Forsyth Streets — mixes basketball courts and a playground with community gardens like the M'finda Kalunga and Hua Mei Bird Gardens."
+      }
+    ],
+    "faq": [
+      {
+        "question": "How do I get to the Lower East Side by subway?",
+        "answer": "Take the F, J, M, or Z to Delancey St-Essex St, the neighborhood's main hub one stop off the Williamsburg Bridge. The B/D at Grand St and the F at East Broadway cover the northern and southern edges."
+      },
+      {
+        "question": "What is the Tenement Museum?",
+        "answer": "Founded in 1988, it preserves an 1863 tenement at 97 Orchard Street and an 1888 building at 103 Orchard Street as a National Historic Landmark and National Historic Site, with restored period apartments open for public tours."
+      },
+      {
+        "question": "How old is Katz's Delicatessen?",
+        "answer": "Katz's has been operating since 1888, making it New York City's oldest deli."
+      },
+      {
+        "question": "Is the Museum at Eldridge Street open every day?",
+        "answer": "No — it's open Sunday through Friday, 10am to 5pm, and closed on Saturdays."
+      },
+      {
+        "question": "Where can I stay on the Lower East Side?",
+        "answer": "The Ludlow Hotel (180 Ludlow St) and Hotel on Rivington (107 Rivington St) are both verified boutique hotels in the core of the neighborhood."
+      }
+    ],
+    "photos": [
+      {
+        "src": "/photos/ny/manhattan/lower-east-side/tenement-museum.jpg",
+        "thumb": "/photos/ny/manhattan/lower-east-side/tenement-museum_thumb.jpg",
+        "title": "Lower East Side Tenement Museum",
+        "description": "The Tenement Museum's exterior on Orchard Street.",
+        "author": "ajay_suresh",
+        "license": "CC BY 2.0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:The_Tenement_Museum_(51624759160).jpg"
+      },
+      {
+        "src": "/photos/ny/manhattan/lower-east-side/katzs-delicatessen.jpg",
+        "thumb": "/photos/ny/manhattan/lower-east-side/katzs-delicatessen_thumb.jpg",
+        "title": "Katz's Delicatessen",
+        "description": "The exterior of Katz's Delicatessen at Houston and Ludlow Streets.",
+        "author": "Frank Schulenburg",
+        "license": "CC BY-SA 4.0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Katz%E2%80%99s_Delicatessen_(2024)-L1005652.jpg"
+      },
+      {
+        "src": "/photos/ny/manhattan/lower-east-side/essex-market.jpg",
+        "thumb": "/photos/ny/manhattan/lower-east-side/essex-market_thumb.jpg",
+        "title": "Essex Market",
+        "description": "A view of the Essex Market building across Delancey Street.",
+        "author": "Jim.henderson",
+        "license": "CC BY 4.0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Essex_Market_across_Delancey_St_2021_jeh.jpg"
+      },
+      {
+        "src": "/photos/ny/manhattan/lower-east-side/eldridge-street-synagogue.jpg",
+        "thumb": "/photos/ny/manhattan/lower-east-side/eldridge-street-synagogue_thumb.jpg",
+        "title": "Eldridge Street Synagogue",
+        "description": "The front facade of the Eldridge Street Synagogue, home to the Museum at Eldridge Street.",
+        "author": "Alexisrael",
+        "license": "CC BY-SA 3.0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Eldridge_Street_Synagogue_Front.JPG"
+      }
+    ]
+  },
+  "places": [
+    {
+      "slug": "lower-east-side-tenement-museum",
+      "name": "Lower East Side Tenement Museum",
+      "kind": "museum",
+      "town": "Lower East Side",
+      "state": "New York",
+      "county": "Manhattan",
+      "address": "97 and 103 Orchard Street, New York, NY 10002",
+      "official_url": "https://www.tenement.org/",
+      "summary": "Founded in 1988 by Ruth J. Abram and Anita Jacobson, the museum preserves an 1863 tenement (97 Orchard St) and an 1888 building (103 Orchard St); it was declared a National Historic Landmark in 1994 and a National Historic Site in 1998, affiliated with the National Park Service.",
+      "status": "open",
+      "photos": [
+        {
+          "src": "/photos/ny/manhattan/lower-east-side/tenement-museum.jpg",
+          "thumb": "/photos/ny/manhattan/lower-east-side/tenement-museum_thumb.jpg",
+          "title": "Lower East Side Tenement Museum",
+          "description": "The Tenement Museum's exterior on Orchard Street.",
+          "author": "ajay_suresh",
+          "license": "CC BY 2.0",
+          "source_url": "https://commons.wikimedia.org/wiki/File:The_Tenement_Museum_(51624759160).jpg"
+        }
+      ]
+    },
+    {
+      "slug": "museum-at-eldridge-street",
+      "name": "Museum at Eldridge Street (Eldridge Street Synagogue)",
+      "kind": "historic-site",
+      "town": "Lower East Side",
+      "state": "New York",
+      "county": "Manhattan",
+      "address": "12 Eldridge Street, New York, NY 10002",
+      "official_url": "https://www.eldridgestreet.org/",
+      "summary": "Housed in the 1887 Eldridge Street Synagogue, meticulously restored and described as 'a symbol of immigrant aspirations realized'; Time Out has listed it among the most beautiful buildings in the world. Open Sunday through Friday, 10am-5pm; closed Saturdays.",
+      "status": "open",
+      "photos": [
+        {
+          "src": "/photos/ny/manhattan/lower-east-side/eldridge-street-synagogue.jpg",
+          "thumb": "/photos/ny/manhattan/lower-east-side/eldridge-street-synagogue_thumb.jpg",
+          "title": "Eldridge Street Synagogue",
+          "description": "The front facade of the Eldridge Street Synagogue, home to the Museum at Eldridge Street.",
+          "author": "Alexisrael",
+          "license": "CC BY-SA 3.0",
+          "source_url": "https://commons.wikimedia.org/wiki/File:Eldridge_Street_Synagogue_Front.JPG"
+        }
+      ]
+    },
+    {
+      "slug": "essex-market",
+      "name": "Essex Market",
+      "kind": "attraction",
+      "town": "Lower East Side",
+      "state": "New York",
+      "county": "Manhattan",
+      "address": "88 Essex Street, New York, NY 10002",
+      "official_url": "https://www.essexmarket.nyc/",
+      "summary": "Billed as 'New York City's Most Historic Market,' Essex Market has served the Lower East Side for over 85 years and now houses more than 30 vendors, including Shopsin's General Store and L.E.S. Ice Cream Factory.",
+      "status": "open",
+      "photos": [
+        {
+          "src": "/photos/ny/manhattan/lower-east-side/essex-market.jpg",
+          "thumb": "/photos/ny/manhattan/lower-east-side/essex-market_thumb.jpg",
+          "title": "Essex Market",
+          "description": "A view of the Essex Market building across Delancey Street.",
+          "author": "Jim.henderson",
+          "license": "CC BY 4.0",
+          "source_url": "https://commons.wikimedia.org/wiki/File:Essex_Market_across_Delancey_St_2021_jeh.jpg"
+        }
+      ]
+    },
+    {
+      "slug": "sara-d-roosevelt-park",
+      "name": "Sara D. Roosevelt Park",
+      "kind": "park",
+      "town": "Lower East Side",
+      "state": "New York",
+      "county": "Manhattan",
+      "address": "Chrystie St to Forsyth St, between E Houston St and Canal St, Manhattan",
+      "official_url": "https://www.nycgovparks.org/parks/sara-d-roosevelt-park",
+      "summary": "Opened in September 1934 and named — over her own objection — for Sara Roosevelt, mother of President Franklin D. Roosevelt, the seven-block park includes basketball courts, soccer fields, a playground, and community gardens like the M'finda Kalunga and Hua Mei Bird Gardens.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "katzs-delicatessen",
+      "name": "Katz's Delicatessen",
+      "kind": "restaurant",
+      "town": "Lower East Side",
+      "state": "New York",
+      "county": "Manhattan",
+      "address": "205 East Houston Street (corner of Ludlow St), New York, NY 10002",
+      "official_url": "https://katzsdelicatessen.com/",
+      "summary": "Operating since 1888, Katz's is New York City's oldest deli and the neighborhood's signature pastrami destination.",
+      "status": "open",
+      "photos": [
+        {
+          "src": "/photos/ny/manhattan/lower-east-side/katzs-delicatessen.jpg",
+          "thumb": "/photos/ny/manhattan/lower-east-side/katzs-delicatessen_thumb.jpg",
+          "title": "Katz's Delicatessen",
+          "description": "The exterior of Katz's Delicatessen at Houston and Ludlow Streets.",
+          "author": "Frank Schulenburg",
+          "license": "CC BY-SA 4.0",
+          "source_url": "https://commons.wikimedia.org/wiki/File:Katz%E2%80%99s_Delicatessen_(2024)-L1005652.jpg"
+        }
+      ]
+    },
+    {
+      "slug": "russ-and-daughters",
+      "name": "Russ & Daughters",
+      "kind": "cafe",
+      "town": "Lower East Side",
+      "state": "New York",
+      "county": "Manhattan",
+      "address": "179 E. Houston St., New York, NY 10002",
+      "official_url": "https://www.russanddaughters.com/",
+      "summary": "An appetizing shop selling 'bagels & lox since 1914,' a fourth-generation family institution of the Jewish Lower East Side.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "yonah-schimmel-knish-bakery",
+      "name": "Yonah Schimmel Knish Bakery",
+      "kind": "cafe",
+      "town": "Lower East Side",
+      "state": "New York",
+      "county": "Manhattan",
+      "address": "137 E. Houston Street, New York, NY 10002",
+      "official_url": "https://www.knishery.com/",
+      "summary": "A knish bakery founded in 1910, one of the last old-world Jewish bakeries on Houston Street.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "clinton-st-baking-company",
+      "name": "Clinton St. Baking Company",
+      "kind": "restaurant",
+      "town": "Lower East Side",
+      "state": "New York",
+      "county": "Manhattan",
+      "address": "4 Clinton Street (btw. East Houston & Stanton), New York, NY 10002",
+      "official_url": "https://clintonstreetbaking.com/",
+      "summary": "A neighborhood restaurant famous for its pancakes (blueberry, banana walnut), celebrated annually with a 'Pancake Month.'",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "the-ludlow-hotel",
+      "name": "The Ludlow Hotel",
+      "kind": "hotel",
+      "town": "Lower East Side",
+      "state": "New York",
+      "county": "Manhattan",
+      "address": "180 Ludlow St (between Houston and Stanton), New York, NY 10002",
+      "official_url": "https://ludlowhotel.com/",
+      "summary": "A boutique hotel in the core of the Lower East Side, with on-site dining and drinking venues and event spaces.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "hotel-on-rivington",
+      "name": "Hotel on Rivington",
+      "kind": "hotel",
+      "town": "Lower East Side",
+      "state": "New York",
+      "county": "Manhattan",
+      "address": "107 Rivington Street, New York, NY 10002",
+      "official_url": "https://www.hotelonrivington.com/",
+      "summary": "A glass-tower luxury hotel known for floor-to-ceiling glass walls, skyline views, balconies, and soaking tubs, with concierge services and neighborhood walking tours.",
+      "status": "open",
+      "photos": []
+    }
+  ],
+  "entries": [
+    {
+      "kind": "sight",
+      "name": "Lower East Side Tenement Museum",
+      "place_slug": "lower-east-side-tenement-museum",
+      "note": "Restored period apartments in an 1863 and an 1888 tenement building, open for public tours."
+    },
+    {
+      "kind": "sight",
+      "name": "Museum at Eldridge Street",
+      "place_slug": "museum-at-eldridge-street",
+      "note": "An 1887 synagogue, meticulously restored — closed Saturdays, so plan around that."
+    },
+    {
+      "kind": "food",
+      "name": "Essex Market",
+      "place_slug": "essex-market",
+      "note": "More than 30 vendors under one historic roof, including Shopsin's General Store."
+    },
+    {
+      "kind": "walk",
+      "name": "Sara D. Roosevelt Park",
+      "place_slug": "sara-d-roosevelt-park",
+      "note": "A seven-block strip of courts, playgrounds, and community gardens running through the neighborhood."
+    },
+    {
+      "kind": "food",
+      "name": "Katz's Delicatessen",
+      "place_slug": "katzs-delicatessen",
+      "note": "NYC's oldest deli, operating since 1888 — the neighborhood's pastrami landmark."
+    },
+    {
+      "kind": "food",
+      "name": "Russ & Daughters",
+      "place_slug": "russ-and-daughters",
+      "note": "Bagels and lox since 1914, still a fourth-generation family business."
+    },
+    {
+      "kind": "food",
+      "name": "Yonah Schimmel Knish Bakery",
+      "place_slug": "yonah-schimmel-knish-bakery",
+      "note": "A knish bakery since 1910, one of the last old-world Jewish bakeries left on Houston Street."
+    },
+    {
+      "kind": "food",
+      "name": "Clinton St. Baking Company",
+      "place_slug": "clinton-st-baking-company",
+      "note": "The neighborhood's pancake destination, with its own annual Pancake Month."
+    },
+    {
+      "kind": "stay",
+      "name": "The Ludlow Hotel",
+      "place_slug": "the-ludlow-hotel",
+      "note": "A boutique hotel right in the core of the Lower East Side."
+    },
+    {
+      "kind": "stay",
+      "name": "Hotel on Rivington",
+      "place_slug": "hotel-on-rivington",
+      "note": "A glass-tower hotel with skyline views over the neighborhood's low-rise streets."
+    }
+  ]
+}

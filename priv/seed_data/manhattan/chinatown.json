@@ -1,0 +1,218 @@
+{
+  "guide": {
+    "slug": "chinatown-manhattan-guide",
+    "title": "Chinatown, Manhattan: From Park Row to Columbus Park",
+    "destination": "Chinatown, New York",
+    "state": "New York",
+    "county": "Manhattan",
+    "intro": "Manhattan's Chinatown began with Ah Ken, a Cantonese businessman who arrived around 1858 and opened a cigar store on Park Row — credited as the first Chinese person to permanently settle in what became the neighborhood. Early Chinatown clustered on Mott, Park (now Mosco), Pell, and Doyers Streets east of the notorious Five Points, its population growing from about 200 in 1870 to 2,000 by 1882. That year, the Chinese Exclusion Act severely restricted immigration and created a 'bachelor society': the 1900 census counted 7,028 Chinese men in the neighborhood but only 142 women. The act wasn't repealed until 1943, and it took the 1965 immigration reform to enable the neighborhood's later growth. Early Chinatown also had a violent chapter — the On Leong and Hip Sing tongs waged open warfare, with affiliated gangs controlling territory into the 1990s. Today it remains one of the largest Chinese enclaves outside Asia, with an estimated 90,000-100,000 residents.",
+    "sections": [
+      {
+        "heading": "From Mulberry Bend to Columbus Park",
+        "body": "Columbus Park was created in 1897 by demolishing Mulberry Bend — tenements once described as 'the worst tenement-houses in the world' at the core of the Five Points slum — after a campaign by photojournalist Jacob Riis. It was renamed Columbus Park in 1911 and is now Chinatown's communal front yard, hosting mahjong, tai chi, and traditional music every day."
+      },
+      {
+        "heading": "Getting there by subway",
+        "body": "Chinatown's hub is the Canal Street complex (6, J/Z, N/Q/R/W), with the B/D at Grand Street and the F at East Broadway covering the neighborhood's eastern side — nearly every corner of Chinatown is within a few blocks of a station."
+      }
+    ],
+    "faq": [
+      {
+        "question": "How do I get to Chinatown by subway?",
+        "answer": "Take the 6, J/Z, or N/Q/R/W to Canal Street, the B/D to Grand Street, or the F to East Broadway — nearly every corner of the neighborhood is a short walk from one of these."
+      },
+      {
+        "question": "What is Columbus Park's history?",
+        "answer": "It was created in 1897 on the site of Mulberry Bend, a notoriously overcrowded slum at the heart of Five Points, after photojournalist Jacob Riis campaigned for its demolition. Renamed Columbus Park in 1911, it's now a daily gathering spot for mahjong, tai chi, and traditional music."
+      },
+      {
+        "question": "Is the Museum of Chinese in America open every day?",
+        "answer": "No — it's open Wednesday through Saturday, 11am to 6pm, and Sunday, 11am to 4pm; it's closed Monday and Tuesday."
+      },
+      {
+        "question": "Where can I stay in Chinatown?",
+        "answer": "The Leon Hotel, a 46-room boutique property at 125 Canal Street between Chrystie Street and the Bowery, is a verified in-neighborhood option with Manhattan Bridge views."
+      },
+      {
+        "question": "Why was Chinese immigration to New York restricted for so long?",
+        "answer": "The 1882 Chinese Exclusion Act sharply limited immigration, producing a 'bachelor society' — the 1900 census counted 7,028 Chinese men in the neighborhood but only 142 women. The act was repealed in 1943, and the 1965 immigration reform is what enabled the neighborhood's later growth."
+      }
+    ],
+    "photos": [
+      {
+        "src": "/photos/ny/manhattan/chinatown/mott-street.jpg",
+        "thumb": "/photos/ny/manhattan/chinatown/mott-street_thumb.jpg",
+        "title": "Mott Street",
+        "description": "A street scene on Mott Street with shop signs.",
+        "author": "Frank Schulenburg",
+        "license": "CC BY-SA 4.0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Mott_Street,_Chinatown,_New_York-L1002097.jpg"
+      },
+      {
+        "src": "/photos/ny/manhattan/chinatown/kimlau-arch.jpg",
+        "thumb": "/photos/ny/manhattan/chinatown/kimlau-arch_thumb.jpg",
+        "title": "Kimlau Memorial Arch, Chatham Square",
+        "description": "An upright shot of the Kimlau Memorial Arch in Chatham Square.",
+        "author": "Beyond My Ken",
+        "license": "CC BY-SA 4.0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Kimlau_Memorial_Arch.jpg"
+      },
+      {
+        "src": "/photos/ny/manhattan/chinatown/columbus-park.jpg",
+        "thumb": "/photos/ny/manhattan/chinatown/columbus-park_thumb.jpg",
+        "title": "Columbus Park",
+        "description": "Locals playing xiangqi (Chinese chess) in Columbus Park.",
+        "author": "Daniel Schwen",
+        "license": "CC BY-SA 4.0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Xiangqi_in_Columbus_Park.jpg"
+      },
+      {
+        "src": "/photos/ny/manhattan/chinatown/doyers-street.jpg",
+        "thumb": "/photos/ny/manhattan/chinatown/doyers-street_thumb.jpg",
+        "title": "Doyers Street",
+        "description": "The famous curved block of Doyers Street.",
+        "author": "Beyond My Ken",
+        "license": "CC BY-SA 4.0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Doyers_Street_Chinatown.jpg"
+      }
+    ]
+  },
+  "places": [
+    {
+      "slug": "columbus-park",
+      "name": "Columbus Park",
+      "kind": "park",
+      "town": "Chinatown",
+      "state": "New York",
+      "county": "Manhattan",
+      "address": "Chinatown, Manhattan (site of former Mulberry Bend, adjacent to Mulberry Street)",
+      "official_url": "https://www.nycgovparks.org/parks/columbus-park",
+      "summary": "Built in 1897 on the site of the demolished Mulberry Bend slum — once at the core of the Five Points district — after a campaign by photojournalist Jacob Riis; renamed Columbus Park in 1911. Today it's a daily gathering place for the local Chinese community for mahjong, traditional music, tai chi, and cultural celebrations.",
+      "status": "open",
+      "photos": [
+        {
+          "src": "/photos/ny/manhattan/chinatown/columbus-park.jpg",
+          "thumb": "/photos/ny/manhattan/chinatown/columbus-park_thumb.jpg",
+          "title": "Columbus Park",
+          "description": "Locals playing xiangqi (Chinese chess) in Columbus Park.",
+          "author": "Daniel Schwen",
+          "license": "CC BY-SA 4.0",
+          "source_url": "https://commons.wikimedia.org/wiki/File:Xiangqi_in_Columbus_Park.jpg"
+        }
+      ]
+    },
+    {
+      "slug": "museum-of-chinese-in-america",
+      "name": "Museum of Chinese in America (MOCA)",
+      "kind": "museum",
+      "town": "Chinatown",
+      "state": "New York",
+      "county": "Manhattan",
+      "address": "215 Centre St, New York, NY 10013",
+      "official_url": "https://www.mocanyc.org/",
+      "summary": "A museum dedicated to preserving and celebrating the history and contributions of Chinese in America. Open Wednesday through Saturday, 11am-6pm, and Sunday, 11am-4pm.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "mahayana-temple",
+      "name": "Mahayana Temple (Mahayana Temple Buddhist Association)",
+      "kind": "attraction",
+      "town": "Chinatown",
+      "state": "New York",
+      "county": "Manhattan",
+      "address": "133 Canal St, New York, NY 10002 (City Campus); original temple at 64 Mott St",
+      "official_url": "https://mahayana.us/",
+      "summary": "A Buddhist temple organization with its landmark Canal Street temple at the foot of the Manhattan Bridge and its original temple on Mott Street, offering dharma services, meditation, and cultural programs.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "nom-wah-tea-parlor",
+      "name": "Nom Wah Tea Parlor",
+      "kind": "restaurant",
+      "town": "Chinatown",
+      "state": "New York",
+      "county": "Manhattan",
+      "address": "13 Doyers St, New York, NY 10013",
+      "official_url": "https://nomwah.com/",
+      "summary": "Serving dumplings and dim sum since 1920, Nom Wah is the oldest dim sum parlor in Chinatown, still in its nostalgic diner-style space on Doyers Street.",
+      "status": "open",
+      "photos": [
+        {
+          "src": "/photos/ny/manhattan/chinatown/doyers-street.jpg",
+          "thumb": "/photos/ny/manhattan/chinatown/doyers-street_thumb.jpg",
+          "title": "Doyers Street",
+          "description": "The famous curved block of Doyers Street.",
+          "author": "Beyond My Ken",
+          "license": "CC BY-SA 4.0",
+          "source_url": "https://commons.wikimedia.org/wiki/File:Doyers_Street_Chinatown.jpg"
+        }
+      ]
+    },
+    {
+      "slug": "jing-fong",
+      "name": "Jing Fong",
+      "kind": "restaurant",
+      "town": "Chinatown",
+      "state": "New York",
+      "county": "Manhattan",
+      "address": "202 Centre St, New York, NY 10013",
+      "official_url": "http://jingfongny.com/",
+      "summary": "A well-known Chinatown dim sum restaurant, now at its Centre Street location.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "leon-hotel",
+      "name": "Leon Hotel",
+      "kind": "hotel",
+      "town": "Chinatown",
+      "state": "New York",
+      "county": "Manhattan",
+      "address": "125 Canal St, New York, NY 10002",
+      "official_url": "https://www.leonhotelnyc.com/",
+      "summary": "A 46-room boutique hotel in historic Chinatown between Chrystie Street and the Bowery, known for Manhattan Bridge views and a 24-hour front desk.",
+      "status": "open",
+      "photos": []
+    }
+  ],
+  "entries": [
+    {
+      "kind": "walk",
+      "name": "Columbus Park",
+      "place_slug": "columbus-park",
+      "note": "Built over a demolished slum in 1897, it's now Chinatown's communal front yard for mahjong and tai chi."
+    },
+    {
+      "kind": "sight",
+      "name": "Museum of Chinese in America (MOCA)",
+      "place_slug": "museum-of-chinese-in-america",
+      "note": "A focused museum on Chinese American history and contributions, closed Mondays and Tuesdays."
+    },
+    {
+      "kind": "sight",
+      "name": "Mahayana Temple",
+      "place_slug": "mahayana-temple",
+      "note": "The landmark Canal Street temple at the foot of the Manhattan Bridge, plus the original on Mott Street."
+    },
+    {
+      "kind": "food",
+      "name": "Nom Wah Tea Parlor",
+      "place_slug": "nom-wah-tea-parlor",
+      "note": "Chinatown's oldest dim sum parlor, on Doyers Street since 1920."
+    },
+    {
+      "kind": "food",
+      "name": "Jing Fong",
+      "place_slug": "jing-fong",
+      "note": "A well-known dim sum destination, now settled at its Centre Street address."
+    },
+    {
+      "kind": "stay",
+      "name": "Leon Hotel",
+      "place_slug": "leon-hotel",
+      "note": "A 46-room boutique hotel with Manhattan Bridge views, right in the neighborhood."
+    }
+  ]
+}

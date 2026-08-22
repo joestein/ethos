@@ -1,0 +1,326 @@
+{
+  "guide": {
+    "slug": "tribeca-manhattan-guide",
+    "title": "Tribeca, Manhattan: Triangle Below Canal, Loft by Loft",
+    "destination": "Tribeca, New York",
+    "state": "New York",
+    "county": "Manhattan",
+    "intro": "Tribeca's name is a syllabic abbreviation of 'Triangle Below Canal' — coined in the early 1970s when residents formed the TriBeCa Artists' Co-op during a zoning dispute, then popularized (and stretched beyond its original boundaries) by an April 1976 New York Times article. Dutch settlers had farmed the area from 1636 under Roeleff Jansen's land patent, and Trinity Church, which received a royal land grant in 1705, later developed St. John's Park and its surrounding townhouses; the area stayed largely residential until the 1840s. From then on it became a commercial hub: the Washington Market — New York's most important wholesale produce market at its 1880-1910 peak — expanded through the district until the industry relocated to Hunts Point in the Bronx and the market buildings came down in the 1960s. Artists moved into the emptied warehouse lofts soon after, following the live/work model pioneered in neighboring SoHo.",
+    "sections": [
+      {
+        "heading": "Five Historic Districts and a Festival Born From Recovery",
+        "body": "The NYC Landmarks Preservation Commission has designated five Tribeca historic districts, protecting the loft blocks that gave the neighborhood its name: Tribeca West (May 1991); Tribeca East, North, and South (December 1992); and Tribeca South Extension (November 2002). The Tribeca Film Festival was founded in 2002 specifically to help contribute to the long-term recovery of lower Manhattan after the September 11 attacks, and it has anchored the neighborhood's calendar ever since."
+      },
+      {
+        "heading": "Getting there by subway",
+        "body": "The 1 train runs up the spine of Tribeca on Varick Street and West Broadway. Franklin Street station sits in the heart of the neighborhood (1 at all times, 2 during late nights), with Canal Street (1) at the north edge and the Chambers Street stations — 1/2/3, plus A/C/E at Chambers Street-World Trade Center — at the south edge. Almost anywhere in the triangle is a short walk from a stop."
+      },
+      {
+        "heading": "From Market to Green Space",
+        "body": "Washington Market Park opened in April 1983 on a former dump site after community activists defeated a proposed parking lot, and takes its name from the historic wholesale produce market that once stood nearby. Duane Park, a small triangular green the city acquired from Trinity Church in 1795 for five dollars, was originally laid out by Calvert Vaux and is ringed by ornate 19th-century loft buildings. Down at the water, Pier 25 in Hudson River Park has a mini golf course and the museum ship USCGC Lilac, the last steam-powered vessel in the Coast Guard fleet, moored alongside."
+      }
+    ],
+    "faq": [
+      {
+        "question": "How do I get to Tribeca by subway?",
+        "answer": "Take the 1 to Franklin Street for the heart of the neighborhood (2 trains also stop there late nights), Canal Street (1) for the north edge, or the Chambers Street stations — 1/2/3 and A/C/E at Chambers Street-World Trade Center — for the south edge."
+      },
+      {
+        "question": "Where does the name Tribeca come from?",
+        "answer": "It's a syllabic abbreviation of 'Triangle Below Canal (Street),' coined in the early 1970s when residents formed the TriBeCa Artists' Co-op during a zoning dispute; an April 1976 New York Times article popularized the name, though it applied the term to a larger area than originally intended."
+      },
+      {
+        "question": "Why was the Tribeca Film Festival created?",
+        "answer": "It was founded in 2002 specifically to help contribute to the long-term recovery of lower Manhattan after the September 11 attacks."
+      },
+      {
+        "question": "Is Duane Park worth a detour?",
+        "answer": "It's tiny, but it has a good story: the city bought the triangular lot from Trinity Church in 1795 for five dollars, laid it out with Calvert Vaux, and named it for Trinity parishioner James Duane. The surrounding 19th-century loft buildings make it a quiet pocket to pause in."
+      },
+      {
+        "question": "Where can I stay in Tribeca?",
+        "answer": "The Greenwich Hotel (377 Greenwich Street) is a Leading Hotels of the World property with the Shibui Spa and Locanda Verde on site; The Roxy Hotel (2 6th Avenue) has 201 rooms plus its own cinema and jazz club."
+      }
+    ],
+    "photos": [
+      {
+        "src": "/photos/ny/manhattan/tribeca/harrison-street-rowhouses.jpg",
+        "thumb": "/photos/ny/manhattan/tribeca/harrison-street-rowhouses_thumb.jpg",
+        "title": "Federal-era row houses, 25-29 Harrison Street",
+        "description": "The landmarked Federal-era townhouses on Harrison Street.",
+        "author": "Jim.henderson",
+        "license": "Public domain",
+        "source_url": "https://commons.wikimedia.org/wiki/File:25-29_Harrison_jeh.JPG"
+      },
+      {
+        "src": "/photos/ny/manhattan/tribeca/duane-park.jpg",
+        "thumb": "/photos/ny/manhattan/tribeca/duane-park_thumb.jpg",
+        "title": "Duane Park",
+        "description": "The triangular park with its iron fence, surrounded by red-brick loft buildings.",
+        "author": "F McGady",
+        "license": "CC BY 4.0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Duane_Park.jpg"
+      },
+      {
+        "src": "/photos/ny/manhattan/tribeca/washington-market-park.jpg",
+        "thumb": "/photos/ny/manhattan/tribeca/washington-market-park_thumb.jpg",
+        "title": "Washington Market Park",
+        "description": "A view of the park's greenery.",
+        "author": "Tdorante10",
+        "license": "CC BY-SA 4.0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Washington_Market_Park_td_(2018-06-09)_14.jpg"
+      },
+      {
+        "src": "/photos/ny/manhattan/tribeca/pier-25.jpg",
+        "thumb": "/photos/ny/manhattan/tribeca/pier-25_thumb.jpg",
+        "title": "Pier 25, Hudson River Park",
+        "description": "Pier 25 and the Tribeca waterfront, with residential towers behind.",
+        "author": "Tdorante10",
+        "license": "CC BY-SA 4.0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Hudson_River_Park_td_(2019-01-29)_036_-_Pier_25,_Tribeca_Park,_River_%26_Warren.jpg"
+      }
+    ]
+  },
+  "places": [
+    {
+      "slug": "washington-market-park",
+      "name": "Washington Market Park",
+      "kind": "park",
+      "town": "Tribeca",
+      "state": "New York",
+      "county": "Manhattan",
+      "address": "Greenwich Street between Chambers and Duane Streets, New York, NY",
+      "official_url": "https://www.nycgovparks.org/parks/washington-market-park",
+      "summary": "A 1.61-acre park opened in April 1983 on a former dump site after community activists defeated a proposed parking lot, named for the historic Washington Market, New York's most important wholesale produce market at its 1880-1910 peak. Features community gardens and a large playground.",
+      "status": "open",
+      "photos": [
+        {
+          "src": "/photos/ny/manhattan/tribeca/washington-market-park.jpg",
+          "thumb": "/photos/ny/manhattan/tribeca/washington-market-park_thumb.jpg",
+          "title": "Washington Market Park",
+          "description": "A view of the park's greenery.",
+          "author": "Tdorante10",
+          "license": "CC BY-SA 4.0",
+          "source_url": "https://commons.wikimedia.org/wiki/File:Washington_Market_Park_td_(2018-06-09)_14.jpg"
+        }
+      ]
+    },
+    {
+      "slug": "duane-park",
+      "name": "Duane Park",
+      "kind": "park",
+      "town": "Tribeca",
+      "state": "New York",
+      "county": "Manhattan",
+      "address": "Duane Street at Hudson Street, New York, NY",
+      "summary": "A small triangular park the city acquired from Trinity Church in 1795 for five dollars, originally laid out by Calvert Vaux and named for Trinity parishioner James Duane; surrounded by ornate 19th-century loft buildings.",
+      "status": "open",
+      "photos": [
+        {
+          "src": "/photos/ny/manhattan/tribeca/duane-park.jpg",
+          "thumb": "/photos/ny/manhattan/tribeca/duane-park_thumb.jpg",
+          "title": "Duane Park",
+          "description": "The triangular park with its iron fence, surrounded by red-brick loft buildings.",
+          "author": "F McGady",
+          "license": "CC BY 4.0",
+          "source_url": "https://commons.wikimedia.org/wiki/File:Duane_Park.jpg"
+        }
+      ]
+    },
+    {
+      "slug": "mmuseumm",
+      "name": "Mmuseumm",
+      "kind": "museum",
+      "town": "Tribeca",
+      "state": "New York",
+      "county": "Manhattan",
+      "address": "4 Cortlandt Alley, New York, NY",
+      "official_url": "https://www.mmuseumm.com/",
+      "summary": "A tiny nonprofit museum tucked in a Tribeca alley, dedicated to exploring the modern world and the human condition through everyday vernacular objects.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "roxy-cinema-new-york",
+      "name": "Roxy Cinema New York",
+      "kind": "theater",
+      "town": "Tribeca",
+      "state": "New York",
+      "county": "Manhattan",
+      "address": "2 6th Avenue (inside The Roxy Hotel), New York, NY 10013",
+      "official_url": "https://www.roxyhotelnyc.com/",
+      "summary": "An intimate below-ground cinema inside The Roxy Hotel showing independent, foreign, and classic films, including 35mm prints; the hotel also houses The Django jazz club.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "pier-25-hudson-river-park",
+      "name": "Pier 25, Hudson River Park",
+      "kind": "park",
+      "town": "Tribeca",
+      "state": "New York",
+      "county": "Manhattan",
+      "address": "Foot of North Moore Street at the Hudson River, New York, NY",
+      "official_url": "https://hudsonriverpark.org/",
+      "summary": "Tribeca's waterfront recreation pier in Hudson River Park, with the Mauro Memorial mini golf course and the museum ship USCGC Lilac — the last steam-powered vessel in the Coast Guard fleet — moored alongside.",
+      "status": "open",
+      "photos": [
+        {
+          "src": "/photos/ny/manhattan/tribeca/pier-25.jpg",
+          "thumb": "/photos/ny/manhattan/tribeca/pier-25_thumb.jpg",
+          "title": "Pier 25, Hudson River Park",
+          "description": "Pier 25 and the Tribeca waterfront, with residential towers behind.",
+          "author": "Tdorante10",
+          "license": "CC BY-SA 4.0",
+          "source_url": "https://commons.wikimedia.org/wiki/File:Hudson_River_Park_td_(2019-01-29)_036_-_Pier_25,_Tribeca_Park,_River_%26_Warren.jpg"
+        }
+      ]
+    },
+    {
+      "slug": "the-odeon",
+      "name": "The Odeon",
+      "kind": "restaurant",
+      "town": "Tribeca",
+      "state": "New York",
+      "county": "Manhattan",
+      "address": "145 West Broadway, New York, NY",
+      "official_url": "https://www.theodeonrestaurant.com/",
+      "summary": "'A New York icon since 1980' by its own description — the pioneering Tribeca brasserie famously associated with the neighborhood's 1980s downtown scene.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "bubbys",
+      "name": "Bubby's",
+      "kind": "restaurant",
+      "town": "Tribeca",
+      "state": "New York",
+      "county": "Manhattan",
+      "address": "120 Hudson Street, New York, NY 10013",
+      "official_url": "https://www.bubbys.com/",
+      "summary": "A Tribeca comfort-food institution at Hudson and North Moore Streets, known for pies, pancakes, and American home cooking.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "locanda-verde",
+      "name": "Locanda Verde",
+      "kind": "restaurant",
+      "town": "Tribeca",
+      "state": "New York",
+      "county": "Manhattan",
+      "address": "377 Greenwich Street (in The Greenwich Hotel), New York, NY 10013",
+      "official_url": "https://www.locandaverdenyc.com/",
+      "summary": "Chef Andrew Carmellini's urban Italian taverna inside The Greenwich Hotel, one of Tribeca's best-known dining rooms.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "frenchette",
+      "name": "Frenchette",
+      "kind": "restaurant",
+      "town": "Tribeca",
+      "state": "New York",
+      "county": "Manhattan",
+      "address": "241 West Broadway, New York, NY 10013",
+      "official_url": "https://frenchettenyc.com/",
+      "summary": "An acclaimed modern French bistro on West Broadway, from the team that also runs Frenchette Bakery and Le Rock.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "the-greenwich-hotel",
+      "name": "The Greenwich Hotel",
+      "kind": "hotel",
+      "town": "Tribeca",
+      "state": "New York",
+      "county": "Manhattan",
+      "address": "377 Greenwich Street, New York, NY 10013",
+      "official_url": "https://www.thegreenwichhotel.com/",
+      "summary": "A luxury Tribeca hotel with the Shibui Spa (pool and gym), a drawing room and courtyard, and Locanda Verde on site; a member of The Leading Hotels of the World.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "the-roxy-hotel",
+      "name": "The Roxy Hotel",
+      "kind": "hotel",
+      "town": "Tribeca",
+      "state": "New York",
+      "county": "Manhattan",
+      "address": "2 6th Avenue, New York, NY 10013",
+      "official_url": "https://www.roxyhotelnyc.com/",
+      "summary": "A 201-room Tribeca hotel with a mid-century modern aesthetic, housing the Roxy Cinema, The Django jazz club, Roxy Bar with live music, and The Oyster Bar.",
+      "status": "open",
+      "photos": []
+    }
+  ],
+  "entries": [
+    {
+      "kind": "walk",
+      "name": "Washington Market Park",
+      "place_slug": "washington-market-park",
+      "note": "A community-won green space named for the produce market that once dominated the district."
+    },
+    {
+      "kind": "sight",
+      "name": "Duane Park",
+      "place_slug": "duane-park",
+      "note": "Bought from Trinity Church for five dollars in 1795 — a tiny triangle with an outsized backstory."
+    },
+    {
+      "kind": "sight",
+      "name": "Mmuseumm",
+      "place_slug": "mmuseumm",
+      "note": "A pocket-sized alley museum built around everyday objects rather than masterpieces."
+    },
+    {
+      "kind": "sight",
+      "name": "Roxy Cinema New York",
+      "place_slug": "roxy-cinema-new-york",
+      "note": "A below-ground screening room inside The Roxy Hotel, with 35mm prints in the rotation."
+    },
+    {
+      "kind": "walk",
+      "name": "Pier 25, Hudson River Park",
+      "place_slug": "pier-25-hudson-river-park",
+      "note": "Mini golf and the retired steamship USCGC Lilac on Tribeca's stretch of the Hudson River waterfront."
+    },
+    {
+      "kind": "food",
+      "name": "The Odeon",
+      "place_slug": "the-odeon",
+      "note": "The brasserie that defined Tribeca's 1980s downtown scene, still going since 1980."
+    },
+    {
+      "kind": "food",
+      "name": "Bubby's",
+      "place_slug": "bubbys",
+      "note": "Pies, pancakes, and home cooking at the Hudson and North Moore corner."
+    },
+    {
+      "kind": "food",
+      "name": "Locanda Verde",
+      "place_slug": "locanda-verde",
+      "note": "Andrew Carmellini's urban Italian taverna inside The Greenwich Hotel."
+    },
+    {
+      "kind": "food",
+      "name": "Frenchette",
+      "place_slug": "frenchette",
+      "note": "Modern French bistro cooking on West Broadway, from the team behind Frenchette Bakery and Le Rock."
+    },
+    {
+      "kind": "stay",
+      "name": "The Greenwich Hotel",
+      "place_slug": "the-greenwich-hotel",
+      "note": "A Leading Hotels of the World property with a spa, courtyard, and Locanda Verde downstairs."
+    },
+    {
+      "kind": "stay",
+      "name": "The Roxy Hotel",
+      "place_slug": "the-roxy-hotel",
+      "note": "201 mid-century-styled rooms over a cinema, a jazz club, and an oyster bar."
+    }
+  ]
+}

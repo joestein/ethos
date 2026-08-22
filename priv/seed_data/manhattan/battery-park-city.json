@@ -1,0 +1,289 @@
+{
+  "guide": {
+    "slug": "battery-park-city-manhattan-guide",
+    "title": "Battery Park City, Manhattan: A Neighborhood Built From Landfill",
+    "destination": "Battery Park City, New York",
+    "state": "New York",
+    "county": "Manhattan",
+    "intro": "Battery Park City takes its name from The Battery, the historic waterfront park directly to its south — but the neighborhood itself is entirely man-made. Built in the 1970s on Hudson River landfill, it was formed from more than 3 million cubic yards of soil and rock excavated during construction of the original World Trade Center, plus sand dredged from New York Harbor and stone from Water Tunnel #3; the landfill was complete by 1976. New York State created the Battery Park City Authority in 1968 to redevelop the area's deteriorated piers, but the neighborhood didn't take its current shape until a 1979 master plan by Alexander Cooper and Stanton Eckstut set the street grid, esplanade, and mixed-use form still in place today — a plan widely studied as a model of waterfront urban design. The Authority, now named for Hugh L. Carey, still governs the neighborhood.",
+    "sections": [
+      {
+        "heading": "Memory on the Waterfront",
+        "body": "Two of the neighborhood's landmarks turn its planned streets into places of memory. The Irish Hunger Memorial, dedicated July 16, 2002, incorporates an authentic 19th-century stone cottage transported from County Mayo along with stones and soil from Ireland's western coast, commemorating the Great Hunger of 1845-1852 and the more than 900,000 Irish emigrants who arrived at the port of New York in the following decade. The Museum of Jewish Heritage — A Living Memorial to the Holocaust opened September 15, 1997 in a six-sided Kevin Roche-designed building whose pyramid roof symbolizes both the Star of David's six points and the six million Jews murdered in the Holocaust; its redesigned core exhibition, with interactive survivor interviews, reopened in June 2022."
+      },
+      {
+        "heading": "Getting there by subway",
+        "body": "There is no subway station inside Battery Park City itself. Riders cross West Street via pedestrian bridges, crosswalks, or the West Concourse tunnel from Brookfield Place to reach the World Trade Center-area stations: the Chambers Street-World Trade Center/Park Place complex (A/C/E, 1/2/3), Cortlandt Street (R/W), WTC Cortlandt (1), the Fulton Street complex, and the World Trade Center PATH station."
+      },
+      {
+        "heading": "Where to stay",
+        "body": "The Conrad New York Downtown, at 102 North End Avenue, is the neighborhood's flagship hotel — a contemporary all-suite property with a rooftop bar looking out over the Statue of Liberty and the harbor."
+      }
+    ],
+    "faq": [
+      {
+        "question": "How do I get to Battery Park City by subway?",
+        "answer": "Battery Park City has no subway station of its own. Walk across West Street (via pedestrian bridges, crosswalks, or the West Concourse tunnel from Brookfield Place) to the World Trade Center-area stations: A/C/E and 1/2/3 at Chambers Street-World Trade Center/Park Place, R/W at Cortlandt Street, 1 at WTC Cortlandt, or the Fulton Street complex."
+      },
+      {
+        "question": "Is there a subway station in Battery Park City itself?",
+        "answer": "No — the neighborhood has no subway access of its own. The nearest stations are all across West Street in the adjoining Financial District/World Trade Center area."
+      },
+      {
+        "question": "What is the Irish Hunger Memorial?",
+        "answer": "Dedicated July 16, 2002, it's a memorial landscape built around an authentic 19th-century stone cottage brought from County Mayo, with stones and soil from Ireland's west coast, commemorating the Great Hunger of 1845-1852 and the wave of Irish emigrants who arrived in New York in its aftermath."
+      },
+      {
+        "question": "Is the Skyscraper Museum free to visit?",
+        "answer": "Yes — the museum has offered free admission to all visitors, though that offer is tied to a sponsorship window, so it's worth confirming current pricing before you go. It's open Wednesday through Saturday, noon to 6pm."
+      },
+      {
+        "question": "Where can I stay in Battery Park City?",
+        "answer": "The Conrad New York Downtown at 102 North End Avenue is the neighborhood's verified flagship hotel, with an all-suite layout and a rooftop bar overlooking the harbor."
+      }
+    ],
+    "photos": [
+      {
+        "src": "/photos/ny/manhattan/battery-park-city/esplanade.jpg",
+        "thumb": "/photos/ny/manhattan/battery-park-city/esplanade_thumb.jpg",
+        "title": "Battery Park City Esplanade",
+        "description": "An upright view down the waterfront promenade with benches and lampposts.",
+        "author": "Kidfly182",
+        "license": "CC BY 4.0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Battery_Park_City_Esplanade_001.jpg"
+      },
+      {
+        "src": "/photos/ny/manhattan/battery-park-city/winter-garden.jpg",
+        "thumb": "/photos/ny/manhattan/battery-park-city/winter-garden_thumb.jpg",
+        "title": "Brookfield Place Winter Garden",
+        "description": "The interior of the Winter Garden atrium at Brookfield Place, with its palm trees.",
+        "author": "King of Hearts",
+        "license": "CC BY-SA 4.0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Brookfield_Place_New_York_August_2017_003.jpg"
+      },
+      {
+        "src": "/photos/ny/manhattan/battery-park-city/irish-hunger-memorial.jpg",
+        "thumb": "/photos/ny/manhattan/battery-park-city/irish-hunger-memorial_thumb.jpg",
+        "title": "Irish Hunger Memorial",
+        "description": "The memorial landscape looking west toward the Hudson River.",
+        "author": "Michael Luft-Weissberg",
+        "license": "CC BY-SA 3.0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Irish_Hunger_Memorial_looking_west_towards_the_Hudson_River.jpg"
+      },
+      {
+        "src": "/photos/ny/manhattan/battery-park-city/rockefeller-park.jpg",
+        "thumb": "/photos/ny/manhattan/battery-park-city/rockefeller-park_thumb.jpg",
+        "title": "Rockefeller Park",
+        "description": "The North Meadow lawn at Rockefeller Park, with park signage.",
+        "author": "Tdorante10",
+        "license": "CC BY-SA 4.0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Rockefeller_Park_td_(2023-09-11)_010_-_North_Meadow.jpg"
+      }
+    ]
+  },
+  "places": [
+    {
+      "slug": "skyscraper-museum",
+      "name": "The Skyscraper Museum",
+      "kind": "museum",
+      "town": "Battery Park City",
+      "state": "New York",
+      "county": "Manhattan",
+      "address": "39 Battery Pl, New York, NY 10280",
+      "official_url": "https://skyscraper.org/",
+      "summary": "A museum devoted to high-rise architecture and the vertical city. Admission has been offered free to all visitors, and it's open Wednesday through Saturday, noon to 6pm.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "museum-of-jewish-heritage",
+      "name": "Museum of Jewish Heritage – A Living Memorial to the Holocaust",
+      "kind": "museum",
+      "town": "Battery Park City",
+      "state": "New York",
+      "county": "Manhattan",
+      "address": "Edmond J. Safra Plaza, 36 Battery Place, New York, NY 10280",
+      "official_url": "https://mjhnyc.org/",
+      "summary": "Opened September 15, 1997 in a six-sided Kevin Roche-designed building whose pyramid roof symbolizes the Star of David's six points and the six million Jews murdered in the Holocaust. Its redesigned core exhibition, with interactive survivor interviews, reopened in June 2022.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "irish-hunger-memorial",
+      "name": "Irish Hunger Memorial",
+      "kind": "historic-site",
+      "town": "Battery Park City",
+      "state": "New York",
+      "county": "Manhattan",
+      "address": "Vesey Street at North End Avenue, New York, NY 10282",
+      "official_url": "https://bpcparks.org/whats-here/parks/",
+      "summary": "Dedicated July 16, 2002, the memorial incorporates an authentic 19th-century stone cottage transported from County Mayo along with stones and soil from Ireland's western coast, commemorating the Great Hunger of 1845-1852 and the more than 900,000 Irish emigrants who arrived at the port of New York in the following decade.",
+      "status": "open",
+      "photos": [
+        {
+          "src": "/photos/ny/manhattan/battery-park-city/irish-hunger-memorial.jpg",
+          "thumb": "/photos/ny/manhattan/battery-park-city/irish-hunger-memorial_thumb.jpg",
+          "title": "Irish Hunger Memorial",
+          "description": "The memorial landscape looking west toward the Hudson River.",
+          "author": "Michael Luft-Weissberg",
+          "license": "CC BY-SA 3.0",
+          "source_url": "https://commons.wikimedia.org/wiki/File:Irish_Hunger_Memorial_looking_west_towards_the_Hudson_River.jpg"
+        }
+      ]
+    },
+    {
+      "slug": "rockefeller-park",
+      "name": "Rockefeller Park",
+      "kind": "park",
+      "town": "Battery Park City",
+      "state": "New York",
+      "county": "Manhattan",
+      "address": "North end of Battery Park City, west of River Terrace, New York, NY",
+      "official_url": "https://bpcparks.org/whats-here/parks/",
+      "summary": "Opened in 1992, Rockefeller Park anchors Battery Park City's north end with Hudson River lawns, a large playground, gardens, public art, a pavilion, ping-pong and billiards tables, courts, and a Children's Garden.",
+      "status": "open",
+      "photos": [
+        {
+          "src": "/photos/ny/manhattan/battery-park-city/rockefeller-park.jpg",
+          "thumb": "/photos/ny/manhattan/battery-park-city/rockefeller-park_thumb.jpg",
+          "title": "Rockefeller Park",
+          "description": "The North Meadow lawn at Rockefeller Park, with park signage.",
+          "author": "Tdorante10",
+          "license": "CC BY-SA 4.0",
+          "source_url": "https://commons.wikimedia.org/wiki/File:Rockefeller_Park_td_(2023-09-11)_010_-_North_Meadow.jpg"
+        }
+      ]
+    },
+    {
+      "slug": "brookfield-place",
+      "name": "Brookfield Place",
+      "kind": "attraction",
+      "town": "Battery Park City",
+      "state": "New York",
+      "county": "Manhattan",
+      "address": "230 Vesey Street, New York, NY 10281",
+      "official_url": "https://bfplny.com/",
+      "summary": "A waterfront shopping, dining, and arts complex with dozens of shops, seven restaurants, a fast-casual food hall, free public art installations, and the North Cove yacht harbor on the Hudson.",
+      "status": "open",
+      "photos": [
+        {
+          "src": "/photos/ny/manhattan/battery-park-city/winter-garden.jpg",
+          "thumb": "/photos/ny/manhattan/battery-park-city/winter-garden_thumb.jpg",
+          "title": "Brookfield Place Winter Garden",
+          "description": "The interior of the Winter Garden atrium at Brookfield Place, with its palm trees.",
+          "author": "King of Hearts",
+          "license": "CC BY-SA 4.0",
+          "source_url": "https://commons.wikimedia.org/wiki/File:Brookfield_Place_New_York_August_2017_003.jpg"
+        }
+      ]
+    },
+    {
+      "slug": "le-district",
+      "name": "Le District",
+      "kind": "restaurant",
+      "town": "Battery Park City",
+      "state": "New York",
+      "county": "Manhattan",
+      "address": "225 Liberty Street, New York, NY 10281",
+      "official_url": "https://ledistrict.com/",
+      "summary": "A French marketplace-and-restaurant complex inside Brookfield Place, spanning a bar and bistro, a cafe, a creperie and patisserie, a boulangerie, and a salad bar.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "el-vez",
+      "name": "El Vez",
+      "kind": "restaurant",
+      "town": "Battery Park City",
+      "state": "New York",
+      "county": "Manhattan",
+      "address": "259 Vesey Street, New York, NY 10282",
+      "official_url": "https://elveznyc.com/",
+      "summary": "A regional Mexican restaurant known for birria tacos, house-made guacamole, and a list of more than 150 tequilas and mezcals.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "pj-clarkes-on-the-hudson",
+      "name": "P.J. Clarke's On the Hudson",
+      "kind": "restaurant",
+      "town": "Battery Park City",
+      "state": "New York",
+      "county": "Manhattan",
+      "address": "250 Vesey Street, New York, NY 10281",
+      "official_url": "https://pjclarkes.com/",
+      "summary": "Battery Park City's waterfront outpost of the storied New York saloon brand P.J. Clarke's — whose 1884 original opened on Third Avenue — serving classic burgers and raw-bar fare.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "conrad-new-york-downtown",
+      "name": "Conrad New York Downtown",
+      "kind": "hotel",
+      "town": "Battery Park City",
+      "state": "New York",
+      "county": "Manhattan",
+      "address": "102 North End Ave, New York, NY 10282",
+      "official_url": "https://www.hilton.com/en/hotels/nyccici-conrad-new-york-downtown/",
+      "summary": "A contemporary luxury all-suite hotel with 463 suites averaging over 430 square feet, a rooftop bar with Statue of Liberty and harbor views, and a 6,200-square-foot ballroom — the neighborhood's flagship hotel.",
+      "status": "open",
+      "photos": []
+    }
+  ],
+  "entries": [
+    {
+      "kind": "sight",
+      "name": "The Skyscraper Museum",
+      "place_slug": "skyscraper-museum",
+      "note": "A small museum devoted entirely to high-rise architecture, with admission that's been free to all visitors."
+    },
+    {
+      "kind": "sight",
+      "name": "Museum of Jewish Heritage",
+      "place_slug": "museum-of-jewish-heritage",
+      "note": "The six-sided Kevin Roche building's pyramid roof symbolizes the six million lost in the Holocaust; its core exhibition was redesigned with interactive survivor interviews in 2022."
+    },
+    {
+      "kind": "sight",
+      "name": "Irish Hunger Memorial",
+      "place_slug": "irish-hunger-memorial",
+      "note": "A genuine County Mayo cottage sits at the center of this memorial to the Great Hunger and the emigrants it sent to New York."
+    },
+    {
+      "kind": "walk",
+      "name": "Rockefeller Park",
+      "place_slug": "rockefeller-park",
+      "note": "Hudson River lawns, gardens, and public art at the neighborhood's north end — a good stroll to close out a waterfront walk."
+    },
+    {
+      "kind": "sight",
+      "name": "Brookfield Place",
+      "place_slug": "brookfield-place",
+      "note": "Shops, restaurants, and free public art around the Winter Garden atrium and the North Cove marina."
+    },
+    {
+      "kind": "food",
+      "name": "Le District",
+      "place_slug": "le-district",
+      "note": "A French marketplace inside Brookfield Place — bistro, creperie, boulangerie, and salad bar under one roof."
+    },
+    {
+      "kind": "food",
+      "name": "El Vez",
+      "place_slug": "el-vez",
+      "note": "Birria tacos and a serious tequila and mezcal list on the Battery Park City waterfront."
+    },
+    {
+      "kind": "food",
+      "name": "P.J. Clarke's On the Hudson",
+      "place_slug": "pj-clarkes-on-the-hudson",
+      "note": "The waterfront outpost of the 1884 Third Avenue saloon original, for a classic burger with a harbor view."
+    },
+    {
+      "kind": "stay",
+      "name": "Conrad New York Downtown",
+      "place_slug": "conrad-new-york-downtown",
+      "note": "The neighborhood's flagship hotel, with all-suite rooms and a rooftop bar looking toward the Statue of Liberty."
+    }
+  ]
+}

@@ -1,0 +1,260 @@
+{
+  "guide": {
+    "slug": "financial-district-manhattan-guide",
+    "title": "Financial District, Manhattan: From Dutch Wall to Wall Street",
+    "destination": "Financial District, New York",
+    "state": "New York",
+    "county": "Manhattan",
+    "intro": "The Financial District occupies the ground where New Amsterdam began: a Dutch outpost founded in 1624, named capital of New Netherland in 1625, and renamed New York when the English took control in 1664. The neighborhood's signature street takes its name from an actual wall — a 2,340-foot palisade of dirt and 15-foot planks that Director General Peter Stuyvesant ordered built in 1653 along what the Dutch called Het Cingel. Wall Street's modern identity dates to 1792, when traders signed the Buttonwood Agreement, founding what became the New York Stock Exchange and turning the street's name into shorthand for American finance. The history here isn't only triumphant: from 1711, city officials ran an official slave market at the foot of Wall Street for more than fifty years, taxing every sale, and in 1920 an unsolved bombing at Wall and Broad Streets killed 38 people.",
+    "sections": [
+      {
+        "heading": "American Firsts, Under One Roof",
+        "body": "At Federal Hall, 26 Wall Street, George Washington took the oath of office as the nation's first president in 1789; the site served as the first US capitol, housing the first Congress, the Supreme Court, and the earliest Executive Branch offices. A short walk away, Fraunces Tavern at 54 Pearl Street is the oldest remaining building in Manhattan — Washington bade farewell to his officers there in 1783, and John Jay negotiated treaties from the same premises during the Revolutionary period. The neighborhood's fuller history includes darker chapters: a city-run slave market operated at the foot of Wall Street from 1711 for more than fifty years, and the unsolved 1920 Wall Street bombing killed 38 people near Wall and Broad Streets."
+      },
+      {
+        "heading": "Getting there by subway",
+        "body": "The Financial District is one of the best-connected corners of the city. Fulton Center, which opened in 2014, unites the 2/3/4/5/A/C/J/Z lines at Fulton Street with an R/W connection via Cortlandt Street; nearby, Wall St (4/5), Broad St (J/Z), and South Ferry–Whitehall St (1/N/R/W) are separate stations a short walk apart, and the Chambers St–WTC/Park Place/Cortlandt St complex (2/3/A/C/E) anchors the district's northwest corner. Wherever you're headed downtown, a trunk line is rarely more than a few blocks away."
+      },
+      {
+        "heading": "Where to stay",
+        "body": "The Beekman, a Thompson Hotel, is the neighborhood's verified in-district option — a luxury property inside the landmark 1883 Temple Court building at the district's northern edge, with a restaurant from James Beard Award-winning chef Tom Colicchio."
+      }
+    ],
+    "faq": [
+      {
+        "question": "How do I get to the Financial District by subway?",
+        "answer": "Nearly every trunk line reaches the district: take the 4/5 to Wall St, the J/Z to Broad St, the 1/N/R/W to South Ferry–Whitehall St, or the 2/3/A/C/E to the Chambers St–WTC/Park Place/Cortlandt St complex. Fulton Center (opened 2014) ties the 2/3/4/5/A/C/J/Z together at Fulton Street, with an R/W connection via Cortlandt Street."
+      },
+      {
+        "question": "Why is Wall Street called Wall Street?",
+        "answer": "The name comes from a real wall: in 1653, Director General Peter Stuyvesant ordered a defensive palisade of dirt and 15-foot wooden planks — about 2,340 feet long and 9 feet tall — built along the line the Dutch called Het Cingel (the Belt). The English took the name over after seizing the city in 1664."
+      },
+      {
+        "question": "Is Federal Hall open every day?",
+        "answer": "No — Federal Hall National Memorial is open Monday through Friday and closed on weekends, so plan a weekday visit if you want to see the site of Washington's 1789 oath of office."
+      },
+      {
+        "question": "Can I go inside Castle Clinton at The Battery?",
+        "answer": "The Battery Conservancy currently lists its Castle Clinton renovation project as 'in design,' so interior access isn't guaranteed — check the latest status before counting on going inside."
+      },
+      {
+        "question": "Where can I stay in the Financial District?",
+        "answer": "The Beekman, a Thompson Hotel, at 123 Nassau Street is the district's verified in-neighborhood hotel, set inside the landmark 1883 Temple Court building."
+      }
+    ],
+    "photos": [
+      {
+        "src": "/photos/ny/manhattan/financial-district/federal-hall.jpg",
+        "thumb": "/photos/ny/manhattan/financial-district/federal-hall_thumb.jpg",
+        "title": "Federal Hall National Memorial",
+        "description": "The front facade of Federal Hall on Wall Street, with the George Washington statue on its steps.",
+        "author": "Arild Vågen",
+        "license": "CC BY-SA 4.0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Federal_Hall_August_2017_01.jpg"
+      },
+      {
+        "src": "/photos/ny/manhattan/financial-district/trinity-church.jpg",
+        "thumb": "/photos/ny/manhattan/financial-district/trinity-church_thumb.jpg",
+        "title": "Trinity Church Wall Street",
+        "description": "An upright view of Trinity Church's spire framed by the Wall Street canyon.",
+        "author": "Gryffindor",
+        "license": "Public domain",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Trinity_Church_NYC_004b.JPG"
+      },
+      {
+        "src": "/photos/ny/manhattan/financial-district/nyse-facade.jpg",
+        "thumb": "/photos/ny/manhattan/financial-district/nyse-facade_thumb.jpg",
+        "title": "New York Stock Exchange, Broad Street facade",
+        "description": "The colonnade facade of the New York Stock Exchange building on Broad Street.",
+        "author": "Jakub Hałun",
+        "license": "CC BY 4.0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:New_York_Stock_Exchange_Broad_Street_facade,_20231002_1720_1842.jpg"
+      },
+      {
+        "src": "/photos/ny/manhattan/financial-district/stone-street.jpg",
+        "thumb": "/photos/ny/manhattan/financial-district/stone-street_thumb.jpg",
+        "title": "Stone Street",
+        "description": "Cobblestoned Stone Street with outdoor dining tables in the Financial District.",
+        "author": "Jim.henderson",
+        "license": "CC0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Stone_Street_table_settings_jeh.jpg"
+      }
+    ]
+  },
+  "places": [
+    {
+      "slug": "federal-hall-national-memorial",
+      "name": "Federal Hall National Memorial",
+      "kind": "historic-site",
+      "town": "Financial District",
+      "state": "New York",
+      "county": "Manhattan",
+      "address": "26 Wall Street, New York, NY 10005",
+      "official_url": "https://www.nps.gov/feha/index.htm",
+      "summary": "The site where George Washington took the oath of office as the nation's first president in 1789; it also served as the first US capitol, housing the first Congress, the Supreme Court, and the earliest Executive Branch offices. Open Monday through Friday; closed weekends.",
+      "status": "open",
+      "photos": [
+        {
+          "src": "/photos/ny/manhattan/financial-district/federal-hall.jpg",
+          "thumb": "/photos/ny/manhattan/financial-district/federal-hall_thumb.jpg",
+          "title": "Federal Hall National Memorial",
+          "description": "The front facade of Federal Hall on Wall Street, with the George Washington statue on its steps.",
+          "author": "Arild Vågen",
+          "license": "CC BY-SA 4.0",
+          "source_url": "https://commons.wikimedia.org/wiki/File:Federal_Hall_August_2017_01.jpg"
+        }
+      ]
+    },
+    {
+      "slug": "fraunces-tavern-museum",
+      "name": "Fraunces Tavern Museum",
+      "kind": "museum",
+      "town": "Financial District",
+      "state": "New York",
+      "county": "Manhattan",
+      "address": "54 Pearl Street, 2nd Floor, New York, NY 10004",
+      "official_url": "https://www.frauncestavernmuseum.org/",
+      "summary": "Housed in the oldest remaining building in Manhattan, the museum occupies the tavern where George Washington bade farewell to his officers in 1783 and where John Jay negotiated treaties during the Revolutionary period. Operated by the Sons of the Revolution in the State of New York, open daily noon to 5pm.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "the-battery",
+      "name": "The Battery",
+      "kind": "park",
+      "town": "Financial District",
+      "state": "New York",
+      "county": "Manhattan",
+      "address": "State Street and Battery Place, New York, NY 10004",
+      "official_url": "https://www.thebattery.org/",
+      "summary": "Called the birthplace of New York City, The Battery holds the largest public perennial garden in the country (designed by Piet Oudolf), the SeaGlass Carousel, and the Battery Playscape. Castle Clinton anchors the park but is currently undergoing renovation, so confirm interior access before you visit.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "trinity-church-wall-street",
+      "name": "Trinity Church Wall Street",
+      "kind": "historic-site",
+      "town": "Financial District",
+      "state": "New York",
+      "county": "Manhattan",
+      "address": "89 Broadway, New York, NY 10006",
+      "official_url": "https://trinitychurchnyc.org/",
+      "summary": "Established in 1697 at the heart of the young city, Trinity Church counts Alexander Hamilton — its most famous parishioner — among those buried in its churchyard, which is open to visitors.",
+      "status": "open",
+      "photos": [
+        {
+          "src": "/photos/ny/manhattan/financial-district/trinity-church.jpg",
+          "thumb": "/photos/ny/manhattan/financial-district/trinity-church_thumb.jpg",
+          "title": "Trinity Church Wall Street",
+          "description": "An upright view of Trinity Church's spire framed by the Wall Street canyon.",
+          "author": "Gryffindor",
+          "license": "Public domain",
+          "source_url": "https://commons.wikimedia.org/wiki/File:Trinity_Church_NYC_004b.JPG"
+        }
+      ]
+    },
+    {
+      "slug": "delmonicos",
+      "name": "Delmonico's",
+      "kind": "restaurant",
+      "town": "Financial District",
+      "state": "New York",
+      "county": "Manhattan",
+      "address": "56 Beaver Street, New York, NY 10004",
+      "official_url": "https://www.theoriginaldelmonicos.com/",
+      "summary": "Delmonico's traces to a confectionery founded in 1827 and a restaurant the house dates to 1837, billed as America's first fine-dining establishment; house tradition credits the kitchen with creating the Delmonico ribeye in 1850. It closed during Prohibition in 1923, was revived by Oscar Tucci in 1926, and reopened again in September 2023 under new ownership.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "the-dead-rabbit",
+      "name": "The Dead Rabbit",
+      "kind": "restaurant",
+      "town": "Financial District",
+      "state": "New York",
+      "county": "Manhattan",
+      "address": "30 Water Street, New York, NY 10004",
+      "official_url": "https://www.thedeadrabbit.com/",
+      "summary": "An acclaimed Irish pub and cocktail bar near the harbor, with a ground-floor Taproom and an upstairs Parlor cocktail lounge.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "fraunces-tavern",
+      "name": "Fraunces Tavern (Restaurant & Bars)",
+      "kind": "restaurant",
+      "town": "Financial District",
+      "state": "New York",
+      "county": "Manhattan",
+      "address": "54 Pearl Street, New York, NY 10004",
+      "official_url": "https://frauncestavern.com/",
+      "summary": "Tracing its roots to 1762, the tavern where Washington held his farewell dinner today houses the Independence Bar, Dingle Whiskey Bar, Piano Bar, and Lafayette's Hideout alongside its dining rooms.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "the-beekman",
+      "name": "The Beekman, a Thompson Hotel",
+      "kind": "hotel",
+      "town": "Financial District",
+      "state": "New York",
+      "county": "Manhattan",
+      "address": "123 Nassau Street, New York, NY 10038",
+      "official_url": "https://www.thebeekman.com/",
+      "summary": "A luxury hotel inside the landmark 1883 Temple Court building at the district's northern edge, with a restaurant from James Beard Award-winning chef Tom Colicchio.",
+      "status": "open",
+      "photos": []
+    }
+  ],
+  "entries": [
+    {
+      "kind": "sight",
+      "name": "Federal Hall National Memorial",
+      "place_slug": "federal-hall-national-memorial",
+      "note": "Stand on the steps where Washington took his oath in 1789 — the building was the nation's first capitol. Weekdays only; it's closed on weekends."
+    },
+    {
+      "kind": "sight",
+      "name": "Fraunces Tavern Museum",
+      "place_slug": "fraunces-tavern-museum",
+      "note": "Manhattan's oldest surviving building, and the room where Washington said goodbye to his officers in 1783."
+    },
+    {
+      "kind": "sight",
+      "name": "The Battery",
+      "place_slug": "the-battery",
+      "note": "The city's birthplace park, with the Piet Oudolf perennial garden and the SeaGlass Carousel — just confirm Castle Clinton's renovation status before you go."
+    },
+    {
+      "kind": "sight",
+      "name": "Trinity Church Wall Street",
+      "place_slug": "trinity-church-wall-street",
+      "note": "A 1697 parish church with Alexander Hamilton's grave in the open churchyard, right at the head of Wall Street."
+    },
+    {
+      "kind": "food",
+      "name": "Delmonico's",
+      "place_slug": "delmonicos",
+      "note": "House tradition traces the Delmonico steak to 1850 in this self-described birthplace of American fine dining."
+    },
+    {
+      "kind": "food",
+      "name": "The Dead Rabbit",
+      "place_slug": "the-dead-rabbit",
+      "note": "A downstairs Taproom and an upstairs Parlor cocktail lounge, a few blocks from the harbor."
+    },
+    {
+      "kind": "food",
+      "name": "Fraunces Tavern (Restaurant & Bars)",
+      "place_slug": "fraunces-tavern",
+      "note": "Four bars and dining rooms inside the building where Washington held his 1783 farewell dinner."
+    },
+    {
+      "kind": "stay",
+      "name": "The Beekman, a Thompson Hotel",
+      "place_slug": "the-beekman",
+      "note": "The district's verified in-neighborhood hotel, set inside the landmarked 1883 Temple Court building."
+    }
+  ]
+}

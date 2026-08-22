@@ -1,0 +1,228 @@
+{
+  "guide": {
+    "slug": "nolita-manhattan-guide",
+    "title": "NoLIta, Manhattan: North of Little Italy Since 1996",
+    "destination": "NoLIta, New York",
+    "state": "New York",
+    "county": "Manhattan",
+    "intro": "The name 'Nolita' — a contraction of 'North of Little Italy' — was formally adopted by real-estate promoters in 1996, documented in a May 5, 1996 New York Times piece, following the naming pattern set by SoHo and TriBeCa. The neighborhood is bounded by Houston Street to the north, the Bowery to the east, Broome Street to the south, and Lafayette Street to the west — east of SoHo, south of NoHo, and north of Little Italy and Chinatown. It was historically part of Little Italy, settled by Italian immigrants, and still keeps Italian traditions including the annual Feast of San Gennaro on Mulberry Street after Labor Day, though rapidly rising rents since the 1990s gentrification wave have eroded much of its recognizable Italian character.",
+    "sections": [
+      {
+        "heading": "A Cathedral and a Garden, Saved",
+        "body": "St. Patrick's Old Cathedral, on Mulberry Street, was designed by Joseph-François Mangin — co-designer of New York City Hall — with its cornerstone laid June 8, 1809, and its dedication on May 14, 1815; it served as the seat of New York's Catholic diocese until the Midtown St. Patrick's Cathedral opened in 1879, and Pope Benedict XVI named it a minor basilica on March 17, 2010. Its underground catacombs, with 35 family crypts and 5 clerical vaults, are open for walking tours. A few blocks away, Elizabeth Street Garden — a sculpture-filled community green space — won a years-long preservation fight: in June 2025 the city canceled a proposed housing development on the site and moved the affordable housing to Suffolk Street, and in November 2025 Mayor Adams designated the garden official New York City parkland."
+      },
+      {
+        "heading": "Getting there by subway",
+        "body": "NoLIta has no subway station in its own core but is ringed by stops a short walk away: the 6 at Spring Street (Lafayette Street), the N/R/W at Prince Street (Broadway), the B/D/F/M plus the 6 at the Broadway-Lafayette Street/Bleecker Street complex on Houston Street, and the J/Z at Bowery (Delancey Street) on the eastern edge."
+      }
+    ],
+    "faq": [
+      {
+        "question": "How do I get to Nolita by subway?",
+        "answer": "There's no station inside the neighborhood, but you're never far from one: the 6 at Spring Street, the N/R/W at Prince Street, the B/D/F/M and 6 at Broadway-Lafayette Street/Bleecker Street, or the J/Z at Bowery."
+      },
+      {
+        "question": "Where does the name Nolita come from?",
+        "answer": "It's a contraction of 'North of Little Italy,' formally adopted by real-estate promoters in 1996 — documented in a May 5, 1996 New York Times piece — following the naming pattern set by SoHo and TriBeCa."
+      },
+      {
+        "question": "What happened to Elizabeth Street Garden?",
+        "answer": "After a years-long preservation fight, the city canceled a planned housing development on the site in June 2025 and relocated the affordable housing to Suffolk Street; in November 2025, Mayor Adams designated the garden official New York City parkland."
+      },
+      {
+        "question": "Is Lombardi's really America's first pizzeria?",
+        "answer": "That's the long-repeated claim — the business was licensed in 1905 and credited via the Pizza Hall of Fame — but it's contested: recent research attributes the founding to Filippo Milone around 1897 and points to other pizzerias that may predate it by more than a decade."
+      },
+      {
+        "question": "Where can I stay in Nolita?",
+        "answer": "The Nolitan Hotel, at 30 Kenmare Street, is a boutique property inside the neighborhood itself, with on-site dining at Piccolo Morini."
+      }
+    ],
+    "photos": [
+      {
+        "src": "/photos/ny/manhattan/nolita/st-patricks-old-cathedral.jpg",
+        "thumb": "/photos/ny/manhattan/nolita/st-patricks-old-cathedral_thumb.jpg",
+        "title": "Basilica of St. Patrick's Old Cathedral",
+        "description": "A sunny view of the Mulberry Street front of the Basilica of St. Patrick's Old Cathedral.",
+        "author": "Jim.henderson",
+        "license": "Public domain",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Saint_Pats_Old_Cathedral_Manh_jeh.JPG"
+      },
+      {
+        "src": "/photos/ny/manhattan/nolita/elizabeth-street-garden.jpg",
+        "thumb": "/photos/ny/manhattan/nolita/elizabeth-street-garden_thumb.jpg",
+        "title": "Elizabeth Street Garden",
+        "description": "The garden's signature lion statue, with ivy.",
+        "author": "Amaury Laporte",
+        "license": "CC BY 4.0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Elizabeth_Street_Garden_lion_statue_with_ivy.jpg"
+      },
+      {
+        "src": "/photos/ny/manhattan/nolita/mott-street.jpg",
+        "thumb": "/photos/ny/manhattan/nolita/mott-street_thumb.jpg",
+        "title": "Mott Street",
+        "description": "Outdoor dining on Mott Street in Nolita.",
+        "author": "Andre Carrotflower",
+        "license": "CC BY-SA 4.0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Outdoor_dining_on_Mott_Street,_Nolita,_Manhattan_-_20200905.jpg"
+      }
+    ]
+  },
+  "places": [
+    {
+      "slug": "st-patricks-old-cathedral",
+      "name": "Basilica of St. Patrick's Old Cathedral",
+      "kind": "historic-site",
+      "town": "NoLIta",
+      "state": "New York",
+      "county": "Manhattan",
+      "address": "260-264 Mulberry Street (main entrance on Mott Street), New York, NY",
+      "official_url": "https://oldcathedral.org/",
+      "summary": "Designed by Joseph-François Mangin — co-designer of New York City Hall — its cornerstone was laid June 8, 1809, and it was dedicated May 14, 1815; it served as the seat of New York's Catholic diocese until the Midtown St. Patrick's Cathedral opened in 1879, and Pope Benedict XVI named it a minor basilica in 2010. Its underground catacombs — 35 family crypts and 5 clerical vaults — are open for walking tours.",
+      "status": "open",
+      "photos": [
+        {
+          "src": "/photos/ny/manhattan/nolita/st-patricks-old-cathedral.jpg",
+          "thumb": "/photos/ny/manhattan/nolita/st-patricks-old-cathedral_thumb.jpg",
+          "title": "Basilica of St. Patrick's Old Cathedral",
+          "description": "A sunny view of the Mulberry Street front of the Basilica of St. Patrick's Old Cathedral.",
+          "author": "Jim.henderson",
+          "license": "Public domain",
+          "source_url": "https://commons.wikimedia.org/wiki/File:Saint_Pats_Old_Cathedral_Manh_jeh.JPG"
+        }
+      ]
+    },
+    {
+      "slug": "elizabeth-street-garden",
+      "name": "Elizabeth Street Garden",
+      "kind": "park",
+      "town": "NoLIta",
+      "state": "New York",
+      "county": "Manhattan",
+      "address": "Elizabeth Street between Prince and Spring Streets, New York, NY 10012",
+      "official_url": "https://www.elizabethstreetgarden.com/",
+      "summary": "A sculpture-filled community green space that won a years-long preservation fight: in June 2025 the city canceled a planned housing development on the site, and in November 2025 Mayor Adams designated the garden official New York City parkland.",
+      "status": "open",
+      "photos": [
+        {
+          "src": "/photos/ny/manhattan/nolita/elizabeth-street-garden.jpg",
+          "thumb": "/photos/ny/manhattan/nolita/elizabeth-street-garden_thumb.jpg",
+          "title": "Elizabeth Street Garden",
+          "description": "The garden's signature lion statue, with ivy.",
+          "author": "Amaury Laporte",
+          "license": "CC BY 4.0",
+          "source_url": "https://commons.wikimedia.org/wiki/File:Elizabeth_Street_Garden_lion_statue_with_ivy.jpg"
+        }
+      ]
+    },
+    {
+      "slug": "lombardis-pizza",
+      "name": "Lombardi's Pizza",
+      "kind": "restaurant",
+      "town": "NoLIta",
+      "state": "New York",
+      "county": "Manhattan",
+      "address": "32 Spring Street, New York, NY 10012",
+      "official_url": "https://www.firstpizza.com/",
+      "summary": "Licensed in 1905 and long credited — via the Pizza Hall of Fame — as America's first pizzeria, serving coal-oven pizza with fresh mozzarella and basil. Recent research attributes the founding to Filippo Milone around 1897 and identifies earlier pizzerias, so the 'first' claim is best treated as contested tradition rather than settled fact.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "cafe-habana",
+      "name": "Cafe Habana",
+      "kind": "cafe",
+      "town": "NoLIta",
+      "state": "New York",
+      "county": "Manhattan",
+      "address": "17 Prince Street, New York, NY 10012",
+      "official_url": "https://www.cafehabana.com/",
+      "summary": "A Cuban-Mexican corner cafe established in 1998, famed for its grilled corn, Cuban sandwiches, and cocktails.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "rubirosa-ristorante",
+      "name": "Rubirosa Ristorante",
+      "kind": "restaurant",
+      "town": "NoLIta",
+      "state": "New York",
+      "county": "Manhattan",
+      "address": "235 Mulberry Street, New York, NY",
+      "official_url": "https://www.rubirosanyc.com/",
+      "summary": "A Nolita Italian-American restaurant known for reinvented classics, thin-crust pizza, and hand-made fresh pasta.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "tacombi-nolita",
+      "name": "Tacombi (Nolita)",
+      "kind": "restaurant",
+      "town": "NoLIta",
+      "state": "New York",
+      "county": "Manhattan",
+      "address": "267 Elizabeth Street, New York, NY 10012",
+      "official_url": "https://www.tacombi.com/",
+      "summary": "Tacombi's first New York location, on Elizabeth Street, from which the group expanded across the city.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "the-nolitan-hotel",
+      "name": "The Nolitan Hotel",
+      "kind": "hotel",
+      "town": "NoLIta",
+      "state": "New York",
+      "county": "Manhattan",
+      "address": "30 Kenmare Street, New York, NY 10012",
+      "official_url": "https://www.nolitanhotel.com/",
+      "summary": "A boutique hotel within Nolita itself, with room types from Neighborhood rooms to the Nolitan Suite, a pet-friendly policy, and on-site dining at Piccolo Morini.",
+      "status": "open",
+      "photos": []
+    }
+  ],
+  "entries": [
+    {
+      "kind": "sight",
+      "name": "Basilica of St. Patrick's Old Cathedral",
+      "place_slug": "st-patricks-old-cathedral",
+      "note": "New York's original Catholic cathedral, dedicated in 1815, with catacomb walking tours available."
+    },
+    {
+      "kind": "walk",
+      "name": "Elizabeth Street Garden",
+      "place_slug": "elizabeth-street-garden",
+      "note": "A sculpture garden that was fought over for years and formally became city parkland in November 2025."
+    },
+    {
+      "kind": "food",
+      "name": "Lombardi's Pizza",
+      "place_slug": "lombardis-pizza",
+      "note": "Licensed in 1905 and popularly (if not uncontested-ly) called America's first pizzeria."
+    },
+    {
+      "kind": "food",
+      "name": "Cafe Habana",
+      "place_slug": "cafe-habana",
+      "note": "A corner cafe since 1998, best known for its grilled corn and Cuban sandwiches."
+    },
+    {
+      "kind": "food",
+      "name": "Rubirosa Ristorante",
+      "place_slug": "rubirosa-ristorante",
+      "note": "Thin-crust pizza and hand-made pasta from a Nolita Italian-American favorite."
+    },
+    {
+      "kind": "food",
+      "name": "Tacombi (Nolita)",
+      "place_slug": "tacombi-nolita",
+      "note": "The Elizabeth Street taqueria that launched Tacombi's expansion across the city."
+    },
+    {
+      "kind": "stay",
+      "name": "The Nolitan Hotel",
+      "place_slug": "the-nolitan-hotel",
+      "note": "A boutique hotel inside the neighborhood, with a pet-friendly policy and Piccolo Morini downstairs."
+    }
+  ]
+}
