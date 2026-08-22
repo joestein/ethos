@@ -17,6 +17,14 @@ defmodule Ethos.Badges do
   @food_kinds ~w(restaurant cafe brewery)
   @history_kinds ~w(museum historic-site theater)
 
+  @town_overrides %{
+    "waterbury" => %{name: "Brass City Explorer", emoji: "🏭", threshold: 5},
+    "danbury" => %{name: "Hat City Explorer", emoji: "🎩", threshold: 5},
+    "middlebury" => %{name: "Middlebury Explorer", emoji: "🎡", threshold: 3},
+    "southbury" => %{name: "Southbury Explorer", emoji: "🌳", threshold: 3},
+    "woodbury" => %{name: "Woodbury Explorer", emoji: "🪑", threshold: 3}
+  }
+
   @static_defs [
     %{
       key: "first-steps",
@@ -24,41 +32,6 @@ defmodule Ethos.Badges do
       emoji: "👣",
       description: "Check off your first place.",
       rule: {:total, 1}
-    },
-    %{
-      key: "explorer-waterbury",
-      name: "Brass City Explorer",
-      emoji: "🏭",
-      description: "Check off 5 places in Waterbury.",
-      rule: {:town, "waterbury", 5}
-    },
-    %{
-      key: "explorer-danbury",
-      name: "Hat City Explorer",
-      emoji: "🎩",
-      description: "Check off 5 places in Danbury.",
-      rule: {:town, "danbury", 5}
-    },
-    %{
-      key: "explorer-middlebury",
-      name: "Middlebury Explorer",
-      emoji: "🎡",
-      description: "Check off 3 places in Middlebury.",
-      rule: {:town, "middlebury", 3}
-    },
-    %{
-      key: "explorer-southbury",
-      name: "Southbury Explorer",
-      emoji: "🌳",
-      description: "Check off 3 places in Southbury.",
-      rule: {:town, "southbury", 3}
-    },
-    %{
-      key: "explorer-woodbury",
-      name: "Woodbury Explorer",
-      emoji: "🪑",
-      description: "Check off 3 places in Woodbury.",
-      rule: {:town, "woodbury", 3}
     },
     %{
       key: "foodie",
@@ -77,7 +50,29 @@ defmodule Ethos.Badges do
   ]
 
   def definitions do
-    @static_defs ++ county_defs()
+    @static_defs ++ town_defs() ++ county_defs()
+  end
+
+  defp town_defs do
+    Repo.all(
+      from p in Place,
+        where: p.status == "open",
+        group_by: [p.town, p.town_slug],
+        having: count(p.id) >= 3,
+        select: %{town: p.town, town_slug: p.town_slug, count: count(p.id)}
+    )
+    |> Enum.map(fn t ->
+      o = Map.get(@town_overrides, t.town_slug, %{})
+      threshold = Map.get(o, :threshold, min(5, t.count))
+
+      %{
+        key: "explorer-#{t.town_slug}",
+        name: Map.get(o, :name, "#{t.town} Explorer"),
+        emoji: Map.get(o, :emoji, "🧭"),
+        description: "Check off #{threshold} places in #{t.town}.",
+        rule: {:town, t.town_slug, threshold}
+      }
+    end)
   end
 
   defp county_defs do

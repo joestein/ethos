@@ -100,4 +100,44 @@ defmodule Ethos.BadgesTest do
     assert "county-complete-new-haven-county" in keys
     assert "first-steps" in keys
   end
+
+  describe "dynamic town explorer badges" do
+    test "CT towns keep their historical names and thresholds" do
+      # a town needs >=3 open places for its dynamic badge to exist at all
+      for i <- 1..3, do: place!("w-#{i}")
+      # Middlebury: give it 5+ open places, threshold must still be 3
+      for i <- 1..5, do: place!("mid-#{i}", %{town: "Middlebury"})
+
+      defs = Map.new(Badges.definitions(), &{&1.key, &1})
+
+      assert %{name: "Brass City Explorer", rule: {:town, "waterbury", 5}} =
+               defs["explorer-waterbury"]
+
+      assert %{name: "Middlebury Explorer", rule: {:town, "middlebury", 3}} =
+               defs["explorer-middlebury"]
+    end
+
+    test "new towns get default names and min(5, count) thresholds; <3 places emit none" do
+      for i <- 1..3,
+          do: place!("soho-#{i}", %{town: "SoHo", state: "New York", county: "Manhattan"})
+
+      for i <- 1..7,
+          do: place!("harlem-#{i}", %{town: "Harlem", state: "New York", county: "Manhattan"})
+
+      place!("tiny-1", %{town: "Two Bridges", state: "New York", county: "Manhattan"})
+
+      defs = Map.new(Badges.definitions(), &{&1.key, &1})
+
+      assert %{name: "SoHo Explorer", rule: {:town, "soho", 3}} = defs["explorer-soho"]
+      assert %{name: "Harlem Explorer", rule: {:town, "harlem", 5}} = defs["explorer-harlem"]
+      refute Map.has_key?(defs, "explorer-two-bridges")
+    end
+
+    test "closed places don't count toward the dynamic threshold basis" do
+      for i <- 1..2, do: place!("x-#{i}", %{town: "Xtown"})
+      place!("x-closed", %{town: "Xtown", status: "closed"})
+
+      refute Enum.any?(Badges.definitions(), &(&1.key == "explorer-xtown"))
+    end
+  end
 end
