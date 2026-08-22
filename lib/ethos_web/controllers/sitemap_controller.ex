@@ -9,6 +9,14 @@ defmodule EthosWeb.SitemapController do
         Enum.map(Guides.list_destinations(), fn d ->
           %{loc: url(~p"/destinations/#{d.slug}"), lastmod: nil}
         end) ++
+        Enum.map(Guides.list_states(), fn s ->
+          %{loc: url(~p"/destinations/#{s.slug}"), lastmod: nil}
+        end) ++
+        Enum.flat_map(Guides.list_states(), fn s ->
+          Enum.map(Guides.list_counties_for_state(s.slug), fn c ->
+            %{loc: url(~p"/destinations/#{s.slug}/#{c.slug}"), lastmod: nil}
+          end)
+        end) ++
         Enum.flat_map(Guides.list_published_guides(), fn g ->
           lastmod = DateTime.to_date(g.updated_at)
 

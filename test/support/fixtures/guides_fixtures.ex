@@ -7,10 +7,20 @@ defmodule Ethos.GuidesFixtures do
     {:ok, guide} =
       Ethos.Guides.create_guide(
         user,
-        Enum.into(Map.drop(attrs, [:user]), %{title: "Test Trip", destination: "Lisbon, Portugal"})
+        Map.merge(
+          %{title: "Test Trip", destination: "Lisbon, Portugal"},
+          normalize_keys(Map.drop(attrs, [:user, "user"]))
+        )
       )
 
     guide
+  end
+
+  defp normalize_keys(map) do
+    Map.new(map, fn
+      {k, v} when is_binary(k) -> {String.to_existing_atom(k), v}
+      {k, v} -> {k, v}
+    end)
   end
 
   def published_guide_fixture(attrs \\ %{}) do
