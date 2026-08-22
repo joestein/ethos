@@ -71,6 +71,46 @@ defmodule Ethos.Guides do
     )
   end
 
+  def list_states do
+    Repo.all(
+      from g in Guide,
+        where: g.status == "published" and not is_nil(g.state_slug),
+        group_by: [g.state, g.state_slug],
+        select: %{state: g.state, slug: g.state_slug, count: count(g.id)},
+        order_by: [desc: count(g.id)]
+    )
+  end
+
+  def list_counties_for_state(state_slug) do
+    Repo.all(
+      from g in Guide,
+        where:
+          g.status == "published" and g.state_slug == ^state_slug and
+            not is_nil(g.county_slug),
+        group_by: [g.county, g.county_slug],
+        select: %{county: g.county, slug: g.county_slug, count: count(g.id)},
+        order_by: [asc: g.county]
+    )
+  end
+
+  def list_published_guides_for_state(state_slug) do
+    Repo.all(
+      from g in Guide,
+        where: g.status == "published" and g.state_slug == ^state_slug,
+        order_by: [desc: g.view_count, desc: g.id]
+    )
+  end
+
+  def list_published_guides_for_county(state_slug, county_slug) do
+    Repo.all(
+      from g in Guide,
+        where:
+          g.status == "published" and g.state_slug == ^state_slug and
+            g.county_slug == ^county_slug,
+        order_by: [desc: g.view_count, desc: g.id]
+    )
+  end
+
   def increment_view_count(%Guide{id: id}) do
     from(g in Guide, where: g.id == ^id)
     |> Repo.update_all(inc: [view_count: 1])
