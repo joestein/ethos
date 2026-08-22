@@ -1,13 +1,14 @@
 defmodule Ethos.Seeds.MiddleburyGuide do
   @moduledoc "Seeds the Middlebury, Connecticut travel guide. Idempotent by slug."
 
-  def upsert!(email), do: Ethos.Seeds.CtGuideRunner.upsert!(data(), email)
+  def upsert!(email), do: Ethos.Seeds.GuideRunner.upsert!(data(), email)
 
   def data do
     %{
       slug: "middlebury-ct-travel-guide",
       title: "Middlebury, Connecticut: Quassy, the Greenway, and the Quiet Side of the Valley",
       destination: "Middlebury, Connecticut",
+      state: "Connecticut",
       county: "New Haven County",
       intro: """
       Middlebury was incorporated in 1807 from pieces of Southbury, Waterbury,

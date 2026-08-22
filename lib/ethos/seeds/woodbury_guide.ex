@@ -1,13 +1,14 @@
 defmodule Ethos.Seeds.WoodburyGuide do
   @moduledoc "Seeds the Woodbury, Connecticut travel guide. Idempotent by slug."
 
-  def upsert!(email), do: Ethos.Seeds.CtGuideRunner.upsert!(data(), email)
+  def upsert!(email), do: Ethos.Seeds.GuideRunner.upsert!(data(), email)
 
   def data do
     %{
       slug: "woodbury-ct-travel-guide",
       title: "Woodbury, Connecticut: Antiques Capital, the Glebe House, and Main Street",
       destination: "Woodbury, Connecticut",
+      state: "Connecticut",
       county: "Litchfield County",
       intro: """
       Woodbury is Connecticut's 23rd town, settled in 1673 by families who

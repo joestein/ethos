@@ -1,0 +1,17 @@
+{
+  "guide": {
+    "slug": "refville-manhattan-guide",
+    "title": "Refville, Manhattan: A Cross-Reference Fixture",
+    "destination": "Refville, New York",
+    "state": "New York",
+    "county": "Manhattan",
+    "intro": "A fixture neighborhood that references a shared place.",
+    "sections": [],
+    "faq": [],
+    "photos": []
+  },
+  "places": [],
+  "entries": [
+    {"kind": "walk", "name": "Test Square Park", "place_slug": "test-square-park", "note": "Shared park next door."}
+  ]
+}

@@ -1,13 +1,14 @@
 defmodule Ethos.Seeds.SouthburyGuide do
   @moduledoc "Seeds the Southbury, Connecticut travel guide. Idempotent by slug."
 
-  def upsert!(email), do: Ethos.Seeds.CtGuideRunner.upsert!(data(), email)
+  def upsert!(email), do: Ethos.Seeds.GuideRunner.upsert!(data(), email)
 
   def data do
     %{
       slug: "southbury-ct-travel-guide",
       title: "Southbury, Connecticut: State Parks, Colonial Roots, and the Pomperaug Valley",
       destination: "Southbury, Connecticut",
+      state: "Connecticut",
       county: "New Haven County",
       intro: """
       Southbury began in 1673, when religious dissidents from Stratford bought

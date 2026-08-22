@@ -1,13 +1,14 @@
 defmodule Ethos.Seeds.DanburyGuide do
   @moduledoc "Seeds the Danbury, Connecticut travel guide. Idempotent by slug."
 
-  def upsert!(email), do: Ethos.Seeds.CtGuideRunner.upsert!(data(), email)
+  def upsert!(email), do: Ethos.Seeds.GuideRunner.upsert!(data(), email)
 
   def data do
     %{
       slug: "danbury-ct-travel-guide",
       title: "Danbury, Connecticut: Hat City History, Rail Heritage, and Where to Eat",
       destination: "Danbury, Connecticut",
+      state: "Connecticut",
       county: "Fairfield County",
       intro: """
       Danbury made America's hats. From Zadoc Benedict's first felt hats in the

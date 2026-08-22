@@ -1,7 +1,9 @@
-defmodule Ethos.Seeds.CtGuideRunner do
+defmodule Ethos.Seeds.GuideRunner do
   @moduledoc """
-  Shared upsert logic for the Connecticut town guide seeds. Each town module
-  supplies a `data/0` map; this runner idempotently upserts the guide by
+  Shared upsert logic for guide seeds, whether the data comes from a
+  code module (the Connecticut town guides) or a JSON seed file (Manhattan
+  onward, via `Ethos.Seeds.DataGuide`). The caller supplies a `data` map
+  (with a required `:state`); this runner idempotently upserts the guide by
   slug, replaces its entries (linking each to a seeded place), sets SEO
   fields and photos, and publishes it.
   """
@@ -31,7 +33,7 @@ defmodule Ethos.Seeds.CtGuideRunner do
           |> Guide.changeset(%{
             "title" => data.title,
             "destination" => data.destination,
-            "state" => "Connecticut",
+            "state" => data.state,
             "county" => data.county
           })
           |> Ecto.Changeset.put_change(:slug, data.slug)
@@ -84,7 +86,7 @@ defmodule Ethos.Seeds.CtGuideRunner do
         |> Guide.changeset(%{
           "title" => data.title,
           "destination" => data.destination,
-          "state" => "Connecticut",
+          "state" => data.state,
           "county" => data.county
         })
         |> Ecto.Changeset.put_change(:slug, data.slug)

@@ -1,13 +1,14 @@
 defmodule Ethos.Seeds.WaterburyGuide do
   @moduledoc "Seeds the Waterbury, Connecticut travel guide. Idempotent by slug."
 
-  def upsert!(email), do: Ethos.Seeds.CtGuideRunner.upsert!(data(), email)
+  def upsert!(email), do: Ethos.Seeds.GuideRunner.upsert!(data(), email)
 
   def data do
     %{
       slug: "waterbury-ct-travel-guide",
       title: "Waterbury, Connecticut: A Brass City Travel Guide",
       destination: "Waterbury, Connecticut",
+      state: "Connecticut",
       county: "New Haven County",
       intro: """
       Waterbury earned its nickname the honest way: by 1840, America's entire

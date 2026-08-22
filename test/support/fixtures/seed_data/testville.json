@@ -1,0 +1,46 @@
+{
+  "guide": {
+    "slug": "testville-manhattan-guide",
+    "title": "Testville, Manhattan: A Fixture Guide",
+    "destination": "Testville, New York",
+    "state": "New York",
+    "county": "Manhattan",
+    "intro": "A fixture neighborhood used only in tests.",
+    "sections": [
+      {"heading": "Getting there by subway", "body": "The T train stops at Test Sq."}
+    ],
+    "faq": [
+      {"question": "How do I get to Testville by subway?", "answer": "Take the T to Test Sq."}
+    ],
+    "photos": []
+  },
+  "places": [
+    {
+      "slug": "test-square-park",
+      "name": "Test Square Park",
+      "kind": "park",
+      "town": "Testville",
+      "state": "New York",
+      "county": "Manhattan",
+      "address": "1 Test Sq, New York, NY",
+      "summary": "A small fixture park.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "fixture-diner-testville",
+      "name": "Fixture Diner",
+      "kind": "restaurant",
+      "town": "Testville",
+      "state": "New York",
+      "county": "Manhattan",
+      "summary": "A fixture diner.",
+      "status": "open",
+      "photos": []
+    }
+  ],
+  "entries": [
+    {"kind": "sight", "name": "Test Square Park", "place_slug": "test-square-park", "note": "The fixture park."},
+    {"kind": "food", "name": "Fixture Diner", "place_slug": "fixture-diner-testville", "note": "The fixture diner."}
+  ]
+}
