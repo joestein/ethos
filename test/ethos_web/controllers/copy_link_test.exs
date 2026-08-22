@@ -62,6 +62,14 @@ defmodule EthosWeb.CopyLinkTest do
         "official_url" => "https://example.com/theater"
       })
 
+    # Entry with enrichment but NO place
+    {:ok, enriched} = Guides.create_entry(guide, %{"kind" => "sight", "name" => "Enriched Spot"})
+
+    {:ok, _} =
+      Guides.set_entry_enrichment(enriched, %{
+        "official_url" => "https://example.com/enriched"
+      })
+
     # Entry with neither place nor enrichment
     {:ok, plain} = Guides.create_entry(guide, %{"kind" => "food", "name" => "Street Food"})
 
@@ -72,6 +80,10 @@ defmodule EthosWeb.CopyLinkTest do
     assert html =~ ~s(href="/p/palace-theater-waterbury")
     # Ensure the enrichment URL is not used for this entry (place wins)
     refute html =~ "https://example.com/theater"
+
+    # Enrichment-only entry: should have link to enrichment URL
+    # Verify that "Enriched Spot" is wrapped in an anchor to the enrichment URL
+    assert html =~ ~r{<a[^>]*href="https://example\.com/enriched"[^>]*>\s*Enriched Spot}s
 
     # Plain entry: should have plain text (name not wrapped in any link)
     # Verify the name appears but is not inside an anchor tag
