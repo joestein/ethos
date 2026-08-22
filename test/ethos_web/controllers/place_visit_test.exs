@@ -33,6 +33,14 @@ defmodule EthosWeb.PlaceVisitTest do
     assert Phoenix.Flash.get(conn.assigns.flash, :error) =~ "permanently closed"
   end
 
+  test "checking off a first place awards the First Steps badge", %{conn: conn} do
+    place = Places.upsert_place!(@attrs)
+
+    conn = post(conn, ~p"/p/#{place.slug}/visit")
+
+    assert Phoenix.Flash.get(conn.assigns.flash, :info) =~ "Badge earned:"
+  end
+
   test "requires auth" do
     conn = build_conn()
     place = Places.upsert_place!(@attrs)

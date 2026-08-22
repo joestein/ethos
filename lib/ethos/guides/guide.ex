@@ -60,7 +60,8 @@ defmodule Ethos.Guides.Guide do
             is_map(p) and
               Enum.all?(~w(src thumb title description), &is_binary(Map.get(p, &1))) and
               Regex.match?(@photo_path_re, p["src"]) and
-              Regex.match?(@photo_path_re, p["thumb"])
+              Regex.match?(@photo_path_re, p["thumb"]) and
+              (not Map.has_key?(p, "source_url") or Ethos.Url.safe_http?(p["source_url"]))
           end)
 
       if ok?,

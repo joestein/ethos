@@ -27,4 +27,30 @@ defmodule Ethos.GuidePhotosTest do
     {:error, _} =
       Guides.update_guide_photos(guide, [Map.put(@photo, "src", "/photos/../secrets.jpg")])
   end
+
+  test "rejects a photo whose source_url is an unsafe scheme" do
+    guide = guide_fixture()
+    photo = Map.put(@photo, "source_url", "javascript:alert(1)")
+
+    {:error, _} = Guides.update_guide_photos(guide, [photo])
+  end
+
+  test "accepts a photo with a safe https source_url" do
+    guide = guide_fixture()
+
+    photo =
+      @photo
+      |> Map.put("author", "Someone")
+      |> Map.put("license", "CC BY-SA 4.0")
+      |> Map.put("source_url", "https://commons.wikimedia.org/wiki/File:Trevi.jpg")
+
+    {:ok, guide} = Guides.update_guide_photos(guide, [photo])
+    assert [%{"source_url" => "https://commons.wikimedia.org/wiki/File:Trevi.jpg"}] = guide.photos
+  end
+
+  test "Rome-shaped photos without attribution keys still validate" do
+    guide = guide_fixture()
+    {:ok, guide} = Guides.update_guide_photos(guide, [@photo])
+    assert [%{"title" => "Trevi Fountain"}] = guide.photos
+  end
 end

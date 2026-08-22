@@ -23,9 +23,15 @@
         <p :if={photo["description"]} class="text-sm text-zinc-500">{photo["description"]}</p>
         <span :if={photo["author"]} class="text-zinc-400">
           — {photo["author"]}, {photo["license"]}, via
-          <a href={photo["source_url"]} class="underline" rel="nofollow noopener">
+          <a
+            :if={EthosWeb.Url.safe_http?(photo["source_url"])}
+            href={photo["source_url"]}
+            class="underline"
+            rel="nofollow noopener"
+          >
             Wikimedia Commons
           </a>
+          <span :if={!EthosWeb.Url.safe_http?(photo["source_url"])}>Wikimedia Commons</span>
         </span>
       </figcaption>
     </figure>
