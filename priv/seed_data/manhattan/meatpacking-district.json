@@ -1,0 +1,214 @@
+{
+  "guide": {
+    "slug": "meatpacking-district-manhattan-guide",
+    "title": "Meatpacking District, Manhattan: Slaughterhouses to the High Line",
+    "destination": "Meatpacking District, New York",
+    "state": "New York",
+    "county": "Manhattan",
+    "intro": "The Meatpacking District earned its name honestly: by 1900 roughly 250 slaughterhouses and packing plants crowded these blocks around Gansevoort Market, an open-air farmers' market that began in 1879 on former freight yards, joined in 1884 by the brick trading buildings of West Washington Market. Gansevoort Street itself predates both markets — it follows a Lenape footpath that once led inland from the Hudson-shore trading post of Sapohanikan, and takes its name from Revolutionary War general Peter Gansevoort. The meat trade held on through the 1970s before 1960s-era containerization, supermarkets, and refrigerated trucking eroded it; nightlife venues, including many serving the neighborhood's LGBTQ+ community, filled the vacuum until high-end boutiques and restaurants arrived in the late 1990s. The cobblestoned core became a National Register historic district in 2007, and its defining transformation came via the High Line, the elevated freight viaduct whose last train ran in 1980 before it reopened as a public park in 2009.",
+    "sections": [
+      {
+        "heading": "From Meat Market to Museum Mile",
+        "body": "The Gansevoort Market Historic District, designated by the city's Landmarks Preservation Commission in September 2003 and listed on the National Register on May 30, 2007, covers 140 buildings, two structures, and one site — preserving the Belgian-block streets where the meat trade once ran around the clock. The neighborhood's biggest cultural arrival came in 2015, when the Whitney Museum of American Art relocated to 99 Gansevoort Street, at the foot of the High Line, cementing the district's shift from meat market to arts and dining destination (the Whitney itself is covered under this guide series' West Village entry). The High Line's southern terminus, with the Tiffany & Co. Foundation Overlook, sits right beside it."
+      },
+      {
+        "heading": "Getting there by subway",
+        "body": "The A/C/E and L trains meet at the 14th Street/Eighth Avenue station complex, at the district's northeast corner and a short walk from Gansevoort Street and the High Line's southern entrance. A and E run at all times, L runs at all times, and C runs at all times except late nights."
+      }
+    ],
+    "faq": [
+      {
+        "question": "How do I get to the Meatpacking District by subway?",
+        "answer": "A/C/E and L trains stop at 14th Street/Eighth Avenue, a short walk from Gansevoort Street and the High Line's southern entrance. The A, E, and L run at all times; the C runs at all times except late nights."
+      },
+      {
+        "question": "Where does the neighborhood's name come from?",
+        "answer": "From the meatpacking industry that once dominated it: by 1900 roughly 250 slaughterhouses and packing plants operated here, a trade that held on into the 1970s."
+      },
+      {
+        "question": "Is Little Island free to visit?",
+        "answer": "Yes, the park grounds on Pier 55 are free to enter daily; only its seasonal performance program requires tickets."
+      },
+      {
+        "question": "Where can I stay in the Meatpacking District?",
+        "answer": "Gansevoort Meatpacking NYC, at 18 Ninth Avenue, is the neighborhood's verified in-district option, with a heated year-round rooftop pool and on-site dining."
+      }
+    ],
+    "photos": [
+      {
+        "src": "/photos/ny/manhattan/meatpacking-district/gansevoort-plaza.jpg",
+        "thumb": "/photos/ny/manhattan/meatpacking-district/gansevoort-plaza_thumb.jpg",
+        "title": "Gansevoort Plaza",
+        "description": "The Belgian-block cobblestones of Gansevoort Plaza, part of the historic market district.",
+        "author": "Tdorante10",
+        "license": "CC BY-SA 4.0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:14th_St_9th_Av_Hudson_St_td_(2019-01-03)_11_-_Gansevoort_Plaza.jpg"
+      },
+      {
+        "src": "/photos/ny/manhattan/meatpacking-district/high-line-whitney.jpg",
+        "thumb": "/photos/ny/manhattan/meatpacking-district/high-line-whitney_thumb.jpg",
+        "title": "High Line at Gansevoort Street",
+        "description": "The southern end of the High Line beside the Whitney Museum of American Art.",
+        "author": "Beyond My Ken",
+        "license": "CC BY-SA 4.0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Whitney_Museum_and_end_of_High_Line.jpg"
+      },
+      {
+        "src": "/photos/ny/manhattan/meatpacking-district/little-island.jpg",
+        "thumb": "/photos/ny/manhattan/meatpacking-district/little-island_thumb.jpg",
+        "title": "Little Island",
+        "description": "The tulip-shaped concrete pilings of Little Island, seen from the Hudson River waterfront.",
+        "author": "Jakub Hałun",
+        "license": "CC BY-SA 4.0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Little_Island_at_Pier_55,_New_York_City,_20231001_1017_0809.jpg"
+      }
+    ]
+  },
+  "places": [
+    {
+      "slug": "high-line",
+      "name": "The High Line",
+      "kind": "park",
+      "town": "Meatpacking District",
+      "state": "New York",
+      "county": "Manhattan",
+      "address": "Southern entrance at Gansevoort Street and Washington Street, New York, NY",
+      "official_url": "https://www.thehighline.org/",
+      "summary": "A 1.45-mile elevated park on a former New York Central freight viaduct that ran its first train in 1933 and its last in 1980; its southern terminus at Gansevoort Street, with the Tiffany & Co. Foundation Overlook, opened June 8, 2009. Drew about eight million visitors a year by 2019.",
+      "status": "open",
+      "photos": [
+        {
+          "src": "/photos/ny/manhattan/meatpacking-district/high-line-whitney.jpg",
+          "thumb": "/photos/ny/manhattan/meatpacking-district/high-line-whitney_thumb.jpg",
+          "title": "High Line at Gansevoort Street",
+          "description": "The southern end of the High Line beside the Whitney Museum of American Art.",
+          "author": "Beyond My Ken",
+          "license": "CC BY-SA 4.0",
+          "source_url": "https://commons.wikimedia.org/wiki/File:Whitney_Museum_and_end_of_High_Line.jpg"
+        }
+      ]
+    },
+    {
+      "slug": "little-island",
+      "name": "Little Island",
+      "kind": "park",
+      "town": "Meatpacking District",
+      "state": "New York",
+      "county": "Manhattan",
+      "address": "Pier 55 in Hudson River Park, at West 13th Street, New York, NY",
+      "official_url": "https://littleisland.org/",
+      "summary": "A public park built on Pier 55 in the Hudson River, supported by the Diller-von Furstenberg Family Foundation. Grounds are free and open daily 6 a.m. to midnight, with a ticketed seasonal performance program.",
+      "status": "open",
+      "photos": [
+        {
+          "src": "/photos/ny/manhattan/meatpacking-district/little-island.jpg",
+          "thumb": "/photos/ny/manhattan/meatpacking-district/little-island_thumb.jpg",
+          "title": "Little Island",
+          "description": "The tulip-shaped concrete pilings of Little Island, seen from the Hudson River waterfront.",
+          "author": "Jakub Hałun",
+          "license": "CC BY-SA 4.0",
+          "source_url": "https://commons.wikimedia.org/wiki/File:Little_Island_at_Pier_55,_New_York_City,_20231001_1017_0809.jpg"
+        }
+      ]
+    },
+    {
+      "slug": "gansevoort-market-historic-district",
+      "name": "Gansevoort Market Historic District",
+      "kind": "historic-site",
+      "town": "Meatpacking District",
+      "state": "New York",
+      "county": "Manhattan",
+      "address": "Roughly bounded by Gansevoort, West 14th, Hudson and West Streets, New York, NY",
+      "summary": "A city-designated (2003) and National Register-listed (2007) historic district of 140 buildings preserving the neighborhood's Belgian-block streets and market-era architecture; freely walkable.",
+      "status": "open",
+      "photos": [
+        {
+          "src": "/photos/ny/manhattan/meatpacking-district/gansevoort-plaza.jpg",
+          "thumb": "/photos/ny/manhattan/meatpacking-district/gansevoort-plaza_thumb.jpg",
+          "title": "Gansevoort Plaza",
+          "description": "The Belgian-block cobblestones of Gansevoort Plaza, part of the historic market district.",
+          "author": "Tdorante10",
+          "license": "CC BY-SA 4.0",
+          "source_url": "https://commons.wikimedia.org/wiki/File:14th_St_9th_Av_Hudson_St_td_(2019-01-03)_11_-_Gansevoort_Plaza.jpg"
+        }
+      ]
+    },
+    {
+      "slug": "old-homestead-steakhouse",
+      "name": "Old Homestead Steakhouse",
+      "kind": "restaurant",
+      "town": "Meatpacking District",
+      "state": "New York",
+      "county": "Manhattan",
+      "address": "56 Ninth Avenue, New York, NY",
+      "official_url": "https://www.theoldhomesteadsteakhouse.com/",
+      "summary": "Founded in 1868, one of the longest continually operating restaurants in America and a surviving link to the neighborhood's meat-market era.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "pastis",
+      "name": "Pastis",
+      "kind": "restaurant",
+      "town": "Meatpacking District",
+      "state": "New York",
+      "county": "Manhattan",
+      "address": "52 Gansevoort Street, New York, NY 10014",
+      "official_url": "https://pastisnyc.com/",
+      "summary": "Keith McNally's classic French bistro, opened in 1999 and closed in 2014, then reopened in 2019 in its current Gansevoort Street space with a curved zinc bar.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "gansevoort-meatpacking-nyc",
+      "name": "Gansevoort Meatpacking NYC",
+      "kind": "hotel",
+      "town": "Meatpacking District",
+      "state": "New York",
+      "county": "Manhattan",
+      "address": "18 Ninth Avenue (at West 13th Street), New York, NY 10014",
+      "official_url": "https://www.gansevoorthotelgroup.com/gansevoort-meatpacking-nyc",
+      "summary": "A luxury hotel in the heart of the district with a heated, year-round rooftop pool and on-site dining including Saishin omakase; the hotel says it was named a top New York City hotel in Travel + Leisure's 2025 World's Best Awards.",
+      "status": "open",
+      "photos": []
+    }
+  ],
+  "entries": [
+    {
+      "kind": "walk",
+      "name": "The High Line",
+      "place_slug": "high-line",
+      "note": "The elevated park's southern terminus, at Gansevoort Street beside the Whitney Museum."
+    },
+    {
+      "kind": "walk",
+      "name": "Little Island",
+      "place_slug": "little-island",
+      "note": "A free waterfront park on tulip-shaped piers, with a ticketed summer performance season."
+    },
+    {
+      "kind": "sight",
+      "name": "Gansevoort Market Historic District",
+      "place_slug": "gansevoort-market-historic-district",
+      "note": "The Belgian-block streets and market buildings of the old meatpacking trade, now landmarked."
+    },
+    {
+      "kind": "food",
+      "name": "Old Homestead Steakhouse",
+      "place_slug": "old-homestead-steakhouse",
+      "note": "A steakhouse operating since 1868, a rare survivor of the district's meat-market days."
+    },
+    {
+      "kind": "food",
+      "name": "Pastis",
+      "place_slug": "pastis",
+      "note": "Keith McNally's French bistro, a fixture of the district's 1999 revival."
+    },
+    {
+      "kind": "stay",
+      "name": "Gansevoort Meatpacking NYC",
+      "place_slug": "gansevoort-meatpacking-nyc",
+      "note": "A luxury hotel with a heated rooftop pool at the district's center."
+    }
+  ]
+}

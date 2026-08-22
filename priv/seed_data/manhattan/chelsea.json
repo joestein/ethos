@@ -1,0 +1,278 @@
+{
+  "guide": {
+    "slug": "chelsea-manhattan-guide",
+    "title": "Chelsea, Manhattan: Freight Rails Into Gallery Row",
+    "destination": "Chelsea, New York",
+    "state": "New York",
+    "county": "Manhattan",
+    "intro": "Chelsea takes its name from a 1750 country estate that retired British Major Thomas Clarke named after London's Royal Hospital Chelsea. Clement Clarke Moore, credited with writing 'A Visit From St. Nicholas,' inherited the estate, donated his apple orchard to the General Theological Seminary in 1827, and laid out the rest as residential lots under covenants barring commercial use. The 1847 Hudson River Railroad undid that plan: freight tracks along the waterfront brought distilleries, gas works, and piers worked largely by Irish immigrants, and West 23rd Street grew into a theater district after Pike's Opera House opened in 1868. The 1883 Hotel Chelsea rose amid that district and became one of New York's most storied artists' residences. Beginning in the late 1990s, galleries priced out of SoHo turned West Chelsea into the city's contemporary-art hub, joining a neighborhood with a substantial LGBTQ community since the mid-1980s.",
+    "sections": [
+      {
+        "heading": "From Freight Line to Gallery District",
+        "body": "The elevated freight viaduct now known as the High Line ran its first train in 1933, carrying coal, dairy, and beef directly into Chelsea's warehouses; its last train, hauling frozen turkeys, ran in 1980. After decades of disuse it reopened as a public park in phases starting June 8, 2009, drawing about eight million visitors a year by 2019 and helping pull West Chelsea's more than 200 art galleries into one of the city's densest concentrations of contemporary art. The Hotel Chelsea, built 1883–1885 on West 23rd Street, predates all of it — Dylan Thomas was staying there in 1953 when he was taken to St. Vincent's Hospital, where he died."
+      },
+      {
+        "heading": "Getting there by subway",
+        "body": "Chelsea is ringed by three north-south trunk lines: A/C/E on Eighth Avenue (14 St and 23 St–8 Av), 1/2/3 on Seventh Avenue (14 St, 18 St, and 23 St), and F/M on Sixth Avenue, plus the L train's Manhattan terminus at 14 St/8 Av and the 7 at 34 St–Hudson Yards on the neighborhood's northern edge. For the gallery district and the High Line, 23 St–8 Av (C/E) is the closest stop."
+      },
+      {
+        "heading": "Chelsea Market and the Piers",
+        "body": "Chelsea Market, in a former Nabisco factory at 75 Ninth Avenue, is an indoor food hall with vendors including Buddakan and Mokbar; the concourse is open daily 7 a.m. to 10 p.m. On the waterfront, Chelsea Piers occupies the historic Hudson River piers with a marina, ice rink, and driving range, roughly 30 years into its run since opening in 1995. Just south, the High Line's Gansevoort Street terminus and the Whitney Museum of American Art sit over the Meatpacking District line, and Little Island's tulip-shaped piers rise from the river a few blocks further down."
+      }
+    ],
+    "faq": [
+      {
+        "question": "How do I get to Chelsea by subway?",
+        "answer": "A/C/E on Eighth Avenue and 1/2/3 on Seventh Avenue both stop at 14th and 23rd Streets, with F/M on Sixth Avenue and the L terminating at 14 St/8 Av. For the galleries and the High Line, get off at 23 St–8 Av (C/E)."
+      },
+      {
+        "question": "Where did Chelsea get its name?",
+        "answer": "From a 1750 country estate that British Major Thomas Clarke named after London's Royal Hospital Chelsea; his descendant Clement Clarke Moore later developed the land into residential lots."
+      },
+      {
+        "question": "Is the Hotel Chelsea open to visit?",
+        "answer": "It operates as a hotel again, with three in-house restaurants — El Quijote, Café Chelsea, and Teruko — after reopening in 2022 following renovation. Non-guests can visit the restaurants and lobby."
+      },
+      {
+        "question": "Can I still see the Rubin Museum's collection in Chelsea?",
+        "answer": "No — the Rubin's West 17th Street building is no longer open to visitors; the museum now operates through traveling exhibitions and partner institutions rather than a Chelsea location."
+      },
+      {
+        "question": "Is the High Line free?",
+        "answer": "Yes. The 1.45-mile elevated park is free and open daily, with wheelchair-accessible entrances at Gansevoort, 14th, 16th, 23rd, and 30th Streets."
+      }
+    ],
+    "photos": [
+      {
+        "src": "/photos/ny/manhattan/chelsea/high-line-empire-state-view.jpg",
+        "thumb": "/photos/ny/manhattan/chelsea/high-line-empire-state-view_thumb.jpg",
+        "title": "High Line, Chelsea",
+        "description": "The High Line's elevated walkway through Chelsea, looking toward the Empire State Building.",
+        "author": "Mike Peel (www.mikepeel.net)",
+        "license": "CC BY-SA 4.0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:At_New_York_City_2023_031_-_Empire_State_Building_seen_from_the_High_Line.jpg"
+      },
+      {
+        "src": "/photos/ny/manhattan/chelsea/chelsea-market.jpg",
+        "thumb": "/photos/ny/manhattan/chelsea/chelsea-market_thumb.jpg",
+        "title": "Chelsea Market",
+        "description": "The Ninth Avenue entrance to Chelsea Market's indoor food hall.",
+        "author": "Kidfly182",
+        "license": "CC BY 4.0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Chelsea_Market_August_2024.jpg"
+      },
+      {
+        "src": "/photos/ny/manhattan/chelsea/hotel-chelsea.jpg",
+        "thumb": "/photos/ny/manhattan/chelsea/hotel-chelsea_thumb.jpg",
+        "title": "Hotel Chelsea",
+        "description": "The neon sign and facade of the Hotel Chelsea at night.",
+        "author": "Summermother",
+        "license": "CC BY-SA 4.0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Hotel_Chelsea_Night_April_2024.jpg"
+      },
+      {
+        "src": "/photos/ny/manhattan/chelsea/cushman-row.jpg",
+        "thumb": "/photos/ny/manhattan/chelsea/cushman-row_thumb.jpg",
+        "title": "Cushman Row",
+        "description": "The 1840s Greek Revival rowhouses of Cushman Row on West 20th Street, near the site of Clement Clarke Moore's donated seminary land.",
+        "author": "Beyond My Ken",
+        "license": "CC BY-SA 4.0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Cushman_Row_West_20th.jpg"
+      }
+    ]
+  },
+  "places": [
+    {
+      "slug": "chelsea-market",
+      "name": "Chelsea Market",
+      "kind": "attraction",
+      "town": "Chelsea",
+      "state": "New York",
+      "county": "Manhattan",
+      "address": "75 9th Avenue, New York, NY 10011",
+      "official_url": "https://www.chelseamarket.com/",
+      "summary": "An indoor food hall and shopping concourse with vendors including Lobster Place, Amy's Bread, and Mokbar; open daily 7 a.m. to 10 p.m.",
+      "status": "open",
+      "photos": [
+        {
+          "src": "/photos/ny/manhattan/chelsea/chelsea-market.jpg",
+          "thumb": "/photos/ny/manhattan/chelsea/chelsea-market_thumb.jpg",
+          "title": "Chelsea Market",
+          "description": "The Ninth Avenue entrance to Chelsea Market's indoor food hall.",
+          "author": "Kidfly182",
+          "license": "CC BY 4.0",
+          "source_url": "https://commons.wikimedia.org/wiki/File:Chelsea_Market_August_2024.jpg"
+        }
+      ]
+    },
+    {
+      "slug": "the-joyce-theater",
+      "name": "The Joyce Theater",
+      "kind": "theater",
+      "town": "Chelsea",
+      "state": "New York",
+      "county": "Manhattan",
+      "address": "175 Eighth Avenue, New York, NY 10011",
+      "official_url": "https://www.joyce.org/",
+      "summary": "A dance-dedicated theater — 'New York's Home for Dance' — whose auditorium is formally named the Tino & Rajika Puri Auditorium, running a 40-45 week annual season.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "chelsea-piers",
+      "name": "Chelsea Piers",
+      "kind": "attraction",
+      "town": "Chelsea",
+      "state": "New York",
+      "county": "Manhattan",
+      "address": "Piers 59-61, Hudson River between 17th and 23rd Streets (entrance at 23rd St/West Side Highway), New York, NY",
+      "official_url": "https://www.chelseapiers.com/",
+      "summary": "A sports and entertainment complex on the historic Hudson River piers, open since August 1995, with Sky Rink ice skating, a golf club and driving range, fitness clubs, and a marina.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "cookshop",
+      "name": "Cookshop",
+      "kind": "restaurant",
+      "town": "Chelsea",
+      "state": "New York",
+      "county": "Manhattan",
+      "address": "156 Tenth Ave, New York, NY 10011",
+      "official_url": "https://cookshopny.com/",
+      "summary": "A long-running Tenth Avenue restaurant across from the High Line's 23rd Street stretch, serving seasonal American fare.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "buddakan",
+      "name": "Buddakan",
+      "kind": "restaurant",
+      "town": "Chelsea",
+      "state": "New York",
+      "county": "Manhattan",
+      "address": "75 9th Avenue, New York, NY 10011",
+      "official_url": "https://www.buddakannyc.com/",
+      "summary": "A Pan-Asian restaurant inside Chelsea Market blending ornate decor with shareable dim sum, noodles, and whole Peking duck.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "billys-bakery-chelsea",
+      "name": "Billy's Bakery (Chelsea)",
+      "kind": "cafe",
+      "town": "Chelsea",
+      "state": "New York",
+      "county": "Manhattan",
+      "address": "184 Ninth Avenue (at 21st St), New York, NY",
+      "official_url": "https://www.billysbakerynyc.com/",
+      "summary": "An old-fashioned American bakery whose Chelsea storefront, open since 2003, is its original location, known for cupcakes and layer cakes.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "mokbar-chelsea-market",
+      "name": "Mokbar (Chelsea Market)",
+      "kind": "restaurant",
+      "town": "Chelsea",
+      "state": "New York",
+      "county": "Manhattan",
+      "address": "Inside Chelsea Market, 75 9th Avenue, New York, NY 10011",
+      "summary": "A Korean kitchen inside Chelsea Market known for Korean-style hand-cut ramen noodle dishes.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "hotel-chelsea",
+      "name": "Hotel Chelsea",
+      "kind": "hotel",
+      "town": "Chelsea",
+      "state": "New York",
+      "county": "Manhattan",
+      "address": "222 West 23rd Street, New York, NY 10011",
+      "official_url": "https://hotelchelsea.com/",
+      "summary": "The landmark 1883-1885 artists' hotel where Dylan Thomas spent his final days before his death at St. Vincent's Hospital; reopened as a hotel in 2022 with in-house restaurants El Quijote, Café Chelsea, and Teruko.",
+      "status": "open",
+      "photos": [
+        {
+          "src": "/photos/ny/manhattan/chelsea/hotel-chelsea.jpg",
+          "thumb": "/photos/ny/manhattan/chelsea/hotel-chelsea_thumb.jpg",
+          "title": "Hotel Chelsea",
+          "description": "The neon sign and facade of the Hotel Chelsea at night.",
+          "author": "Summermother",
+          "license": "CC BY-SA 4.0",
+          "source_url": "https://commons.wikimedia.org/wiki/File:Hotel_Chelsea_Night_April_2024.jpg"
+        }
+      ]
+    },
+    {
+      "slug": "the-maritime-hotel",
+      "name": "The Maritime Hotel",
+      "kind": "hotel",
+      "town": "Chelsea",
+      "state": "New York",
+      "county": "Manhattan",
+      "address": "363 West 16th Street, New York, NY 10011",
+      "official_url": "https://www.themaritimehotel.com/",
+      "summary": "A 121-room boutique hotel on West 16th Street, open since 2003, participating in the iPrefer loyalty program.",
+      "status": "open",
+      "photos": []
+    }
+  ],
+  "entries": [
+    {
+      "kind": "sight",
+      "name": "Chelsea Market",
+      "place_slug": "chelsea-market",
+      "note": "A former Nabisco factory turned indoor food hall, open daily 7 a.m. to 10 p.m."
+    },
+    {
+      "kind": "sight",
+      "name": "The Joyce Theater",
+      "place_slug": "the-joyce-theater",
+      "note": "New York's dance-dedicated theater, with a 40-45 week annual season."
+    },
+    {
+      "kind": "sight",
+      "name": "Chelsea Piers",
+      "place_slug": "chelsea-piers",
+      "note": "A Hudson River sports and entertainment complex on the historic piers, open since 1995."
+    },
+    {
+      "kind": "food",
+      "name": "Cookshop",
+      "place_slug": "cookshop",
+      "note": "Seasonal American cooking on Tenth Avenue, across from the High Line."
+    },
+    {
+      "kind": "food",
+      "name": "Buddakan",
+      "place_slug": "buddakan",
+      "note": "Ornate Pan-Asian dining inside Chelsea Market."
+    },
+    {
+      "kind": "food",
+      "name": "Billy's Bakery (Chelsea)",
+      "place_slug": "billys-bakery-chelsea",
+      "note": "The original 2003 location of this old-fashioned American bakery."
+    },
+    {
+      "kind": "food",
+      "name": "Mokbar (Chelsea Market)",
+      "place_slug": "mokbar-chelsea-market",
+      "note": "Korean-style ramen inside Chelsea Market's food hall."
+    },
+    {
+      "kind": "stay",
+      "name": "Hotel Chelsea",
+      "place_slug": "hotel-chelsea",
+      "note": "The storied 1883-1885 artists' hotel, reopened in 2022 with three in-house restaurants."
+    },
+    {
+      "kind": "stay",
+      "name": "The Maritime Hotel",
+      "place_slug": "the-maritime-hotel",
+      "note": "A 121-room boutique hotel on West 16th Street."
+    }
+  ]
+}

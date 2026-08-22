@@ -1,0 +1,251 @@
+{
+  "guide": {
+    "slug": "garment-district-manhattan-guide",
+    "title": "Garment District, Manhattan: Where Fashion Avenue Was Sewn",
+    "destination": "Garment District, New York",
+    "state": "New York",
+    "county": "Manhattan",
+    "intro": "The Garment District takes its name from the fashion manufacturing that once dominated it, packed into the roughly one square mile between Fifth and Ninth Avenues, 34th and 42nd Streets. By 1880 New York already produced more garments than its four closest urban rivals combined, and by 1910 the city made 70 percent of the nation's women's clothing and 40 percent of its men's — output that in 1900 ran three times ahead of the city's next-largest industry, sugar refining. Eastern European Jewish immigrants industrialized much of that production, memorialized today in Judith Weller's bronze statue 'The Garment Worker,' modeled on her own father, a sewing-machine operator, and installed on Seventh Avenue — itself nicknamed Fashion Avenue. The Garment District Alliance, a business-improvement district founded in 1993 as the Fashion Center BID, now oversees 24 blocks holding roughly 6,500 businesses and 75,000 employees, sustaining a manufacturing identity that has otherwise largely left Manhattan.",
+    "sections": [
+      {
+        "heading": "A Neighborhood Built on Needles and Thread",
+        "body": "The Garment Worker statue, roughly 6.5 feet of bronze depicting a worker in a yarmulke bent over a hand-operated sewing machine, has stood at Seventh Avenue and West 39th Street since its 1984 dedication by the ILGWU; it once shared its corner with a black kiosk shaped like a needle threading a button, removed in 2022 and replaced in February 2023 by a new bright-yellow sculpture of the same design. A few blocks north, the Drama Book Shop, founded in 1917, remains a mainstay of the New York theater scene, with an in-store cafe and author events. One block south of Herald Square Park, Greeley Square Park shares the same 34th Street Partnership upkeep — its own history, and Horace Greeley statue, are covered under this guide series' Koreatown entry."
+      },
+      {
+        "heading": "Getting there by subway",
+        "body": "The Garment District is ringed by some of the busiest stations in the system: A/C/E and 1/2/3 at 34th Street–Penn Station on its west side, and B/D/F/M plus N/Q/R/W at 34th Street–Herald Square (the system's third-busiest station as of 2019) on its east side, with Times Square–42nd Street at its northern edge. Note there is no free transfer between the two separate Penn Station subway stations."
+      }
+    ],
+    "faq": [
+      {
+        "question": "How do I get to the Garment District by subway?",
+        "answer": "A/C/E and 1/2/3 stop at 34th Street–Penn Station on the west side; B/D/F/M and N/Q/R/W stop at 34th Street–Herald Square on the east side. The two Penn Station stations don't have a free transfer between them."
+      },
+      {
+        "question": "Where does the Garment District's name come from?",
+        "answer": "From the fashion manufacturing trade that once dominated the neighborhood — by 1910, New York City produced 70 percent of the nation's women's clothing and 40 percent of its men's, much of it made here."
+      },
+      {
+        "question": "What is the Garment Worker statue?",
+        "answer": "A bronze sculpture by Judith Weller, dedicated in 1984 at Seventh Avenue and West 39th Street, depicting a garment worker at a hand-operated sewing machine in honor of the neighborhood's Jewish immigrant workforce."
+      },
+      {
+        "question": "Where can I stay in the Garment District?",
+        "answer": "Refinery Hotel, in a former hat factory at 63 West 38th Street, and Archer Hotel New York, at 45 West 38th Street with a rooftop bar overlooking the Empire State Building, are both verified options."
+      }
+    ],
+    "photos": [
+      {
+        "src": "/photos/ny/manhattan/garment-district/macys-herald-square.jpg",
+        "thumb": "/photos/ny/manhattan/garment-district/macys-herald-square_thumb.jpg",
+        "title": "Macy's Herald Square",
+        "description": "The Macy's flagship store exterior near Herald Square Park.",
+        "author": "CurlingMan13",
+        "license": "CC BY-SA 4.0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Macy's_Building.jpg"
+      },
+      {
+        "src": "/photos/ny/manhattan/garment-district/39th-and-ninth.jpg",
+        "thumb": "/photos/ny/manhattan/garment-district/39th-and-ninth_thumb.jpg",
+        "title": "39th Street and Ninth Avenue",
+        "description": "A street scene in the Garment District at 39th Street and Ninth Avenue.",
+        "author": "Dmadeo",
+        "license": "CC BY-SA 3.0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Garment-district-39th-and-ninth.JPG"
+      },
+      {
+        "src": "/photos/ny/manhattan/garment-district/fashion-avenue.jpg",
+        "thumb": "/photos/ny/manhattan/garment-district/fashion-avenue_thumb.jpg",
+        "title": "Fashion Avenue",
+        "description": "A street scene along Seventh Avenue, nicknamed Fashion Avenue.",
+        "author": "Billie Grace Ward",
+        "license": "CC BY 2.0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Fashion_Ave_(26756852389).jpg"
+      }
+    ]
+  },
+  "places": [
+    {
+      "slug": "herald-square-park",
+      "name": "Herald Square Park",
+      "kind": "park",
+      "town": "Garment District",
+      "state": "New York",
+      "county": "Manhattan",
+      "address": "Broadway at West 34th–35th Streets, New York, NY",
+      "official_url": "https://www.34thstreet.org/",
+      "summary": "A triangle park managed by the 34th Street Partnership, featuring the Bennett memorial clock, seasonal plantings, and a regular calendar of free classes, dance, and pop-up performances.",
+      "status": "open",
+      "photos": [
+        {
+          "src": "/photos/ny/manhattan/garment-district/macys-herald-square.jpg",
+          "thumb": "/photos/ny/manhattan/garment-district/macys-herald-square_thumb.jpg",
+          "title": "Macy's Herald Square",
+          "description": "The Macy's flagship store exterior near Herald Square Park.",
+          "author": "CurlingMan13",
+          "license": "CC BY-SA 4.0",
+          "source_url": "https://commons.wikimedia.org/wiki/File:Macy's_Building.jpg"
+        }
+      ]
+    },
+    {
+      "slug": "the-garment-worker-and-big-button",
+      "name": "The Garment Worker and the Big Button",
+      "kind": "attraction",
+      "town": "Garment District",
+      "state": "New York",
+      "county": "Manhattan",
+      "address": "Seventh Avenue at West 39th Street, New York, NY",
+      "summary": "Judith Weller's bronze 'The Garment Worker,' dedicated 1984, depicts a garment worker at a hand-operated sewing machine, honoring the neighborhood's Jewish immigrant workforce; beside it stands a bright-yellow pop-art sculpture of a needle threading a button, unveiled in February 2023 to replace the original 1996 kiosk.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "drama-book-shop",
+      "name": "Drama Book Shop",
+      "kind": "attraction",
+      "town": "Garment District",
+      "state": "New York",
+      "county": "Manhattan",
+      "address": "266 W 39th Street, New York, NY 10018",
+      "official_url": "https://www.dramabookshop.com/",
+      "summary": "A theater-book institution founded in 1917, a mainstay of the New York theatre scene, with an in-store cafe and author events. Open Monday–Saturday 10 a.m.–7 p.m., Sunday noon–7 p.m.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "keens-steakhouse",
+      "name": "Keens Steakhouse",
+      "kind": "restaurant",
+      "town": "Garment District",
+      "state": "New York",
+      "county": "Manhattan",
+      "address": "72 West 36th Street, New York, NY 10018",
+      "official_url": "https://www.keens.com/",
+      "summary": "Founded in 1885, famous for its 26-ounce mutton chop and a ceiling collection of roughly 90,000 churchwarden clay pipes; a James Beard Foundation America's Classics winner (2013) and the only surviving restaurant of the old Herald Square Theatre District.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "tonchin-new-york",
+      "name": "Tonchin New York",
+      "kind": "restaurant",
+      "town": "Garment District",
+      "state": "New York",
+      "county": "Manhattan",
+      "address": "13 W 36th Street, New York, NY",
+      "official_url": "https://www.tonchinus.com/",
+      "summary": "A Japanese ramen house known for tonkotsu ramen and tan tan men, with sibling locations in Brooklyn and Los Angeles.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "culture-espresso",
+      "name": "Culture Espresso",
+      "kind": "cafe",
+      "town": "Garment District",
+      "state": "New York",
+      "county": "Manhattan",
+      "address": "72 W 38th Street, New York, NY 10018 (plus 247 W 36th St and 307 W 38th St)",
+      "official_url": "https://www.cultureespresso.com/",
+      "summary": "A local coffee shop operating since 2009 across three Garment District locations, known for espresso drinks and its fresh-baked chocolate chip cookies.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "mercato-garment-district",
+      "name": "Mercato",
+      "kind": "restaurant",
+      "town": "Garment District",
+      "state": "New York",
+      "county": "Manhattan",
+      "address": "352 W 39th Street, New York, NY 10018",
+      "official_url": "https://www.mercatonyc.com/",
+      "summary": "A rustic Italian trattoria and bar on the district's west side, open daily 11:30 a.m. to midnight, part of a small family of restaurants that includes Ulivo NYC and Gelateria Gentile.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "refinery-hotel",
+      "name": "Refinery Hotel",
+      "kind": "hotel",
+      "town": "Garment District",
+      "state": "New York",
+      "county": "Manhattan",
+      "address": "63 W 38th Street, New York, NY 10018",
+      "official_url": "https://www.refineryhotelnewyork.com/",
+      "summary": "A 197-room boutique hotel in the former Colony Arcade, a onetime hat factory and Prohibition-era tea room, with 12-foot ceilings nodding to its millinery past and on-site venues Refinery Rooftop, Parker & Quinn, Winnie's Jazz Club, and The Hatbox.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "archer-hotel-new-york",
+      "name": "Archer Hotel New York",
+      "kind": "hotel",
+      "town": "Garment District",
+      "state": "New York",
+      "county": "Manhattan",
+      "address": "45 West 38th Street, New York, NY 10018",
+      "official_url": "https://archerhotel.com/new-york",
+      "summary": "An industrial-chic boutique hotel with the Spyglass Rooftop Bar offering Empire State Building views.",
+      "status": "open",
+      "photos": []
+    }
+  ],
+  "entries": [
+    {
+      "kind": "sight",
+      "name": "Herald Square Park",
+      "place_slug": "herald-square-park",
+      "note": "A triangle park by Macy's flagship, with the Bennett memorial clock and free public programming."
+    },
+    {
+      "kind": "sight",
+      "name": "The Garment Worker and the Big Button",
+      "place_slug": "the-garment-worker-and-big-button",
+      "note": "A 1984 bronze honoring the district's Jewish immigrant garment workers, beside a pop-art needle-and-button sculpture."
+    },
+    {
+      "kind": "sight",
+      "name": "Drama Book Shop",
+      "place_slug": "drama-book-shop",
+      "note": "A theater-book shop and cafe operating since 1917."
+    },
+    {
+      "kind": "food",
+      "name": "Keens Steakhouse",
+      "place_slug": "keens-steakhouse",
+      "note": "An 1885 steakhouse famous for its mutton chop and ceiling of clay pipes."
+    },
+    {
+      "kind": "food",
+      "name": "Tonchin New York",
+      "place_slug": "tonchin-new-york",
+      "note": "Tonkotsu ramen and tan tan men on West 36th Street."
+    },
+    {
+      "kind": "food",
+      "name": "Culture Espresso",
+      "place_slug": "culture-espresso",
+      "note": "Local espresso and chocolate chip cookies since 2009."
+    },
+    {
+      "kind": "food",
+      "name": "Mercato",
+      "place_slug": "mercato-garment-district",
+      "note": "A rustic Italian trattoria open daily until midnight."
+    },
+    {
+      "kind": "stay",
+      "name": "Refinery Hotel",
+      "place_slug": "refinery-hotel",
+      "note": "A boutique hotel in a former hat factory, with four operating venues on site."
+    },
+    {
+      "kind": "stay",
+      "name": "Archer Hotel New York",
+      "place_slug": "archer-hotel-new-york",
+      "note": "An industrial-chic hotel with rooftop Empire State Building views."
+    }
+  ]
+}

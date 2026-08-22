@@ -1,0 +1,212 @@
+{
+  "guide": {
+    "slug": "kips-bay-manhattan-guide",
+    "title": "Kips Bay, Manhattan: The Bay That Became Blocks",
+    "destination": "Kips Bay, New York",
+    "state": "New York",
+    "county": "Manhattan",
+    "intro": "Kips Bay is named for Jacobus Hendrickson Kip, a Dutch settler whose farm ran north from present-day 30th Street along the East River; in 1655 he built a brick-and-stone house near today's Second Avenue and East 35th Street. The bay itself was a real inlet stretching from 32nd to 37th Street, reaching nearly to First Avenue, before landfill erased it and left only the name. On September 15, 1776, about 4,000 British and Hessian troops landed after an hour-long, 80-gun bombardment from five warships; the 500 inexperienced Connecticut militia fled, prompting a furious George Washington to reportedly ask, 'Are these the men with which I am to defend America?' The landing pushed Washington's army north to Harlem Heights. Medicine has defined the neighborhood since — Bellevue, founded in 1736 as a six-bed infirmary, still lines First Avenue — and its architecture set precedents, from I.M. Pei's Kips Bay Towers (1960-65) to Carmel Place, the city's first micro-apartment tower, in 2016.",
+    "sections": [
+      {
+        "heading": "From Farmhouse to Micro-Apartments",
+        "body": "Kips Bay Towers, designed by I.M. Pei with James Ingo Freed and engineer August Komendant, opened in stages in 1960 and 1965 on a 7.5-acre urban-renewal site where more than 100 older buildings had been cleared; its cast-in-place, load-bearing concrete facades became a prototype for Pei's later towers. More than half a century later, in 2016, Carmel Place opened nearby as New York City's first micro-apartment tower, with 55 units of 260-360 square feet. The Asser Levy Recreation Center, built 1905-1908 as one of the city's monumental public bathhouses and named for one of New York's first Jewish citizens, still serves the neighborhood with indoor and outdoor pools — though the indoor pool closes each summer, mid-June through mid-September."
+      },
+      {
+        "heading": "Getting there by subway",
+        "body": "No subway line runs through Kips Bay itself. Riders walk a few blocks west to the 6 (and weekday <6> express) on the Lexington Avenue line at 23rd, 28th, or 33rd Street/Park Avenue, while the M15, M34/M34A Select Bus Service, M23, and M9 buses cover the neighborhood's interior."
+      },
+      {
+        "heading": "Where to Stay Near Kips Bay",
+        "body": "No hotel or bed-and-breakfast could be verified within Kips Bay proper. The nearest confirmed option is The Shelburne Sonesta New York at 303 Lexington Avenue, just west in Murray Hill, with a rooftop garden bar and Empire State Building views."
+      }
+    ],
+    "faq": [
+      {
+        "question": "How do I get to Kips Bay by subway?",
+        "answer": "No line runs through the neighborhood directly. Walk a few blocks west to the 6 (and weekday <6> express) at 23rd, 28th, or 33rd Street on the Lexington Avenue line, or take the M15, M23, or M34 Select Bus Service."
+      },
+      {
+        "question": "Where does the name Kips Bay come from?",
+        "answer": "From Jacobus Hendrickson Kip, a Dutch settler whose farm ran along the East River; the bay itself was a real inlet from roughly 32nd to 37th Street, later filled in as landfill."
+      },
+      {
+        "question": "What happened at Kips Bay in the Revolutionary War?",
+        "answer": "On September 15, 1776, about 4,000 British and Hessian troops landed here after a warship bombardment, scattering the American militia defending the shore and pushing Washington's army north to Harlem Heights."
+      },
+      {
+        "question": "Where can I stay near Kips Bay?",
+        "answer": "No hotel could be verified within Kips Bay itself. The Shelburne Sonesta New York, at 303 Lexington Avenue in adjacent Murray Hill, is the nearest confirmed option."
+      },
+      {
+        "question": "Is the Asser Levy pool open?",
+        "answer": "The outdoor pool runs Memorial Day through Labor Day, 11 a.m. to 7 p.m., free of charge. The indoor pool closes each year from mid-June through mid-September."
+      }
+    ],
+    "photos": [
+      {
+        "src": "/photos/ny/manhattan/kips-bay/kips-bay-towers.jpg",
+        "thumb": "/photos/ny/manhattan/kips-bay/kips-bay-towers_thumb.jpg",
+        "title": "Kips Bay Towers",
+        "description": "I.M. Pei's cast-in-place concrete Kips Bay Towers complex.",
+        "author": "Ajay Suresh",
+        "license": "CC BY 4.0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Kips_Bay_Towers_(55314217360).jpg"
+      },
+      {
+        "src": "/photos/ny/manhattan/kips-bay/east-river-waterfront.jpg",
+        "thumb": "/photos/ny/manhattan/kips-bay/east-river-waterfront_thumb.jpg",
+        "title": "East River Waterfront near Kips Bay",
+        "description": "Looking west along 34th Street toward Kips Bay from the East River, with NYU Langone's Kimmel Pavilion in the distance.",
+        "author": "Joe Mabel",
+        "license": "CC BY-SA 4.0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:NYC_-_looking_west_along_34th_Street_from_the_East_River.jpg"
+      }
+    ]
+  },
+  "places": [
+    {
+      "slug": "asser-levy-recreation-center",
+      "name": "Asser Levy Recreation Center",
+      "kind": "historic-site",
+      "town": "Kips Bay",
+      "state": "New York",
+      "county": "Manhattan",
+      "address": "Asser Levy Place & East 23rd Street, New York, NY",
+      "official_url": "https://www.nycgovparks.org/parks/asser-levy-playground",
+      "summary": "Built 1905-1908 as one of New York City's monumental public bathhouses and named for Asser Levy, one of the city's first Jewish citizens; a NYC landmark since 1974, now an NYC Parks recreation center with indoor and outdoor pools. The free outdoor pool runs Memorial Day-Labor Day, 11 a.m.-7 p.m.; the indoor pool closes each summer, mid-June through mid-September.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "new-york-public-library-kips-bay-branch",
+      "name": "New York Public Library, Kips Bay Branch",
+      "kind": "attraction",
+      "town": "Kips Bay",
+      "state": "New York",
+      "county": "Manhattan",
+      "address": "446 Third Avenue, New York, NY 10016",
+      "official_url": "https://www.nypl.org/locations/kips-bay",
+      "summary": "Opened in 1972, replacing two earlier libraries; named for 17th-century farmer Jacobus Kip, whose farm gave the neighborhood its name. Open Monday–Friday 10 a.m.–6 p.m., Saturday 10 a.m.–5 p.m., with active teen and storytime programs.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "bellevue-south-park",
+      "name": "Bellevue South Park",
+      "kind": "park",
+      "town": "Kips Bay",
+      "state": "New York",
+      "county": "Manhattan",
+      "address": "East 26th-28th Streets, mid-block between First and Second Avenues, New York, NY",
+      "official_url": "https://www.nycgovparks.org/parks/bellevue-south-park",
+      "summary": "One of Kips Bay's principal public green spaces, maintained by NYC Parks.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "kips-bay-towers",
+      "name": "Kips Bay Towers",
+      "kind": "attraction",
+      "town": "Kips Bay",
+      "state": "New York",
+      "county": "Manhattan",
+      "address": "Second Avenue between East 30th and 33rd Streets, New York, NY",
+      "summary": "A twin-tower complex designed by I.M. Pei with James Ingo Freed and engineer August Komendant, opened in stages in 1960 and 1965 on a 7.5-acre urban-renewal site. Its cast-in-place, load-bearing concrete facades pioneered a design later reused across Pei's career.",
+      "status": "open",
+      "photos": [
+        {
+          "src": "/photos/ny/manhattan/kips-bay/kips-bay-towers.jpg",
+          "thumb": "/photos/ny/manhattan/kips-bay/kips-bay-towers_thumb.jpg",
+          "title": "Kips Bay Towers",
+          "description": "I.M. Pei's cast-in-place concrete Kips Bay Towers complex.",
+          "author": "Ajay Suresh",
+          "license": "CC BY 4.0",
+          "source_url": "https://commons.wikimedia.org/wiki/File:Kips_Bay_Towers_(55314217360).jpg"
+        }
+      ]
+    },
+    {
+      "slug": "el-parador-cafe",
+      "name": "El Parador Cafe",
+      "kind": "restaurant",
+      "town": "Kips Bay",
+      "state": "New York",
+      "county": "Manhattan",
+      "address": "325 East 34th Street, New York, NY 10016",
+      "official_url": "https://elparadorcafe.com/",
+      "summary": "A long-standing neighborhood Mexican restaurant on Kips Bay's northern edge, with an active reservation system and menus.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "paddy-reillys-music-bar",
+      "name": "Paddy Reilly's Music Bar",
+      "kind": "restaurant",
+      "town": "Kips Bay",
+      "state": "New York",
+      "county": "Manhattan",
+      "address": "519 Second Avenue, New York, NY 10016",
+      "official_url": "https://www.paddyreillysmusicbar.com/",
+      "summary": "An Irish pub 'pulling pints since 1986' with live music seven nights a week, open daily until 4 a.m. Wednesday through Saturday.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "banc-cafe",
+      "name": "Banc Cafe",
+      "kind": "restaurant",
+      "town": "Kips Bay",
+      "state": "New York",
+      "county": "Manhattan",
+      "address": "431 Third Avenue, New York, NY 10016",
+      "official_url": "https://www.banccafe.com/",
+      "summary": "An American bar-restaurant and neighborhood fixture since 2004, known for classic American fare, live music, and a deep drinks list; sits on Third Avenue at the Kips Bay/Murray Hill boundary.",
+      "status": "open",
+      "photos": []
+    }
+  ],
+  "entries": [
+    {
+      "kind": "sight",
+      "name": "Asser Levy Recreation Center",
+      "place_slug": "asser-levy-recreation-center",
+      "note": "A 1905-1908 public bathhouse, now an NYC Parks rec center with a free summer outdoor pool."
+    },
+    {
+      "kind": "sight",
+      "name": "New York Public Library, Kips Bay Branch",
+      "place_slug": "new-york-public-library-kips-bay-branch",
+      "note": "A neighborhood branch library named for the Dutch farmer Jacobus Kip."
+    },
+    {
+      "kind": "walk",
+      "name": "Bellevue South Park",
+      "place_slug": "bellevue-south-park",
+      "note": "A neighborhood green space between First and Second Avenues."
+    },
+    {
+      "kind": "sight",
+      "name": "Kips Bay Towers",
+      "place_slug": "kips-bay-towers",
+      "note": "I.M. Pei's pioneering concrete-facade towers, built on a cleared urban-renewal site."
+    },
+    {
+      "kind": "food",
+      "name": "El Parador Cafe",
+      "place_slug": "el-parador-cafe",
+      "note": "A long-standing Mexican restaurant on Kips Bay's northern edge."
+    },
+    {
+      "kind": "food",
+      "name": "Paddy Reilly's Music Bar",
+      "place_slug": "paddy-reillys-music-bar",
+      "note": "An Irish pub with live music seven nights a week since 1986."
+    },
+    {
+      "kind": "food",
+      "name": "Banc Cafe",
+      "place_slug": "banc-cafe",
+      "note": "A neighborhood bar-restaurant fixture since 2004."
+    }
+  ]
+}

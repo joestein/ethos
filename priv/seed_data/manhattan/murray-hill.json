@@ -1,0 +1,274 @@
+{
+  "guide": {
+    "slug": "murray-hill-manhattan-guide",
+    "title": "Murray Hill, Manhattan: Tea, Timing, and a Private Library",
+    "destination": "Murray Hill, New York",
+    "state": "New York",
+    "county": "Manhattan",
+    "intro": "Murray Hill takes its name from Robert Murray, a Scottish-born Quaker merchant who arrived in New York from Philadelphia in 1753 and, by 1762, leased the hill then still known by its Dutch name, Inclenberg — 'fire beacon hill' — for his house and farm. The neighborhood's signature story dates to September 15, 1776: after the British landed at nearby Kip's Bay, Mary Lindley Murray reputedly invited British officers to tea at the Murray mansion, delaying them long enough for American troops to retreat, though later scholars have doubted the tale's military impact. In 1847, Murray's descendants registered the 'Murray Hill Restriction,' deed covenants barring commercial activity and requiring brick or stone residential dwellings that held the area's character for over a century. That calm drew Gilded Age elites — the Havemeyers, Rhinelanders, Belmonts, and above all J.P. Morgan, whose private library at Madison Avenue and 36th Street became a public institution in March 1924.",
+    "sections": [
+      {
+        "heading": "Grid, Grit, and Landmark Protections",
+        "body": "The hill itself was cut down 20 to 40 feet in the winter of 1808 by out-of-work dock laborers, then folded into the Commissioners' Plan grid of 1811; by the mid-19th century the upper middle class filled the brownstone rowhouses that lined its streets. A 1926 Daughters of the American Revolution plaque near the old Murray mansion site, on the Park Avenue mall, still commemorates Mary Lindley Murray's tea. Sniffen Court, an alley of ten 1863-64 brick stables off East 36th Street, was designated a city historic district on June 21, 1966 — its gate famously appears on the cover of The Doors' 1967 album 'Strange Days' — and the wider Murray Hill Historic District followed in 2002."
+      },
+      {
+        "heading": "Getting there by subway",
+        "body": "Murray Hill's own stop is the 6 (plus rush-hour <6> and late-night 4) at 33rd Street on Park Avenue, an original 1904 IRT station. Grand Central-42nd Street, with the 4/5/6/7/S plus Metro-North and LIRR, sits at the neighborhood's northern edge, putting most of Murray Hill a short walk from the Lexington Avenue line."
+      }
+    ],
+    "faq": [
+      {
+        "question": "How do I get to Murray Hill by subway?",
+        "answer": "The 6 (plus weekday peak <6> and late-night 4) stops at 33rd Street on Park Avenue. Grand Central-42nd Street, with the 4/5/6/7/S, sits at the neighborhood's northern edge."
+      },
+      {
+        "question": "Where does Murray Hill's name come from?",
+        "answer": "From Robert Murray, a Quaker merchant who leased the hill for his house and farm before 1762; it was known by its Dutch name, Inclenberg ('fire beacon hill'), before that."
+      },
+      {
+        "question": "Is the Mary Lindley Murray tea story true?",
+        "answer": "It's a long-standing tradition — that she delayed British officers with tea on September 15, 1776, buying time for American troops to retreat — but later scholars have doubted its actual military impact. A 1926 DAR plaque on the Park Avenue mall commemorates it regardless."
+      },
+      {
+        "question": "Can you visit Sniffen Court?",
+        "answer": "It's a private alley, but the ten 1863-64 brick stables are viewable through the gate from East 36th Street at any time."
+      },
+      {
+        "question": "Where can I stay in Murray Hill?",
+        "answer": "The Shelburne Sonesta New York, at 303 Lexington Avenue, offers rooms, suites, and a rooftop garden bar with Empire State Building views."
+      }
+    ],
+    "photos": [
+      {
+        "src": "/photos/ny/manhattan/murray-hill/morgan-library.jpg",
+        "thumb": "/photos/ny/manhattan/murray-hill/morgan-library_thumb.jpg",
+        "title": "The Morgan Library & Museum",
+        "description": "The exterior of the main McKim building of the Morgan Library & Museum.",
+        "author": "Epicgenius",
+        "license": "CC BY-SA 4.0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Morgan_Library_and_Museum_Apr_2026_113.jpg"
+      },
+      {
+        "src": "/photos/ny/manhattan/murray-hill/st-vartan-park.jpg",
+        "thumb": "/photos/ny/manhattan/murray-hill/st-vartan-park_thumb.jpg",
+        "title": "St. Vartan Park",
+        "description": "The entrance to St. Vartan Park at First Avenue and East 35th Street.",
+        "author": "Tdorante10",
+        "license": "CC BY-SA 4.0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:St._Vartan_Park_td_(2018-11-20)_38.jpg"
+      },
+      {
+        "src": "/photos/ny/manhattan/murray-hill/sniffen-court.jpg",
+        "thumb": "/photos/ny/manhattan/murray-hill/sniffen-court_thumb.jpg",
+        "title": "Sniffen Court",
+        "description": "The historic carriage-house mews of Sniffen Court off East 36th Street.",
+        "author": "ajay_suresh",
+        "license": "CC BY 2.0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Sniffen_Court_(51877262602).jpg"
+      }
+    ]
+  },
+  "places": [
+    {
+      "slug": "the-morgan-library-museum",
+      "name": "The Morgan Library & Museum",
+      "kind": "museum",
+      "town": "Murray Hill",
+      "state": "New York",
+      "county": "Manhattan",
+      "address": "225 Madison Avenue at E 36th Street, New York, NY 10016",
+      "official_url": "https://www.themorgan.org",
+      "summary": "J.P. Morgan's private library, built 1902-1906 by Charles Follen McKim of McKim, Mead & White and incorporated as a public institution in March 1924; celebrated its centennial as a public institution in 2024.",
+      "status": "open",
+      "photos": [
+        {
+          "src": "/photos/ny/manhattan/murray-hill/morgan-library.jpg",
+          "thumb": "/photos/ny/manhattan/murray-hill/morgan-library_thumb.jpg",
+          "title": "The Morgan Library & Museum",
+          "description": "The exterior of the main McKim building of the Morgan Library & Museum.",
+          "author": "Epicgenius",
+          "license": "CC BY-SA 4.0",
+          "source_url": "https://commons.wikimedia.org/wiki/File:Morgan_Library_and_Museum_Apr_2026_113.jpg"
+        }
+      ]
+    },
+    {
+      "slug": "sniffen-court-historic-district",
+      "name": "Sniffen Court Historic District",
+      "kind": "historic-site",
+      "town": "Murray Hill",
+      "state": "New York",
+      "county": "Manhattan",
+      "address": "Sniffen Court, off E 36th Street between Lexington and Third Avenues, New York, NY",
+      "summary": "Ten two-story brick stables built 1863-64 in early Romanesque Revival style, a NYC historic district since June 21, 1966 and NRHP-listed in 1973; its gate famously appears on the cover of The Doors' 1967 album 'Strange Days.'",
+      "status": "open",
+      "photos": [
+        {
+          "src": "/photos/ny/manhattan/murray-hill/sniffen-court.jpg",
+          "thumb": "/photos/ny/manhattan/murray-hill/sniffen-court_thumb.jpg",
+          "title": "Sniffen Court",
+          "description": "The historic carriage-house mews of Sniffen Court off East 36th Street.",
+          "author": "ajay_suresh",
+          "license": "CC BY 2.0",
+          "source_url": "https://commons.wikimedia.org/wiki/File:Sniffen_Court_(51877262602).jpg"
+        }
+      ]
+    },
+    {
+      "slug": "st-vartan-park",
+      "name": "St. Vartan Park",
+      "kind": "park",
+      "town": "Murray Hill",
+      "state": "New York",
+      "county": "Manhattan",
+      "address": "Block bounded by First Ave, Second Ave, E 35th and E 36th Streets, New York, NY",
+      "official_url": "https://www.nycgovparks.org/parks/st-vartan-park",
+      "summary": "Acquired by the city in 1903 and opened October 4, 1906 as St. Gabriel's Park; renamed in 1978 for St. Vartan Armenian Cathedral across the street. Has basketball and handball courts, a playground, and a synthetic turf field installed in 2021.",
+      "status": "open",
+      "photos": [
+        {
+          "src": "/photos/ny/manhattan/murray-hill/st-vartan-park.jpg",
+          "thumb": "/photos/ny/manhattan/murray-hill/st-vartan-park_thumb.jpg",
+          "title": "St. Vartan Park",
+          "description": "The entrance to St. Vartan Park at First Avenue and East 35th Street.",
+          "author": "Tdorante10",
+          "license": "CC BY-SA 4.0",
+          "source_url": "https://commons.wikimedia.org/wiki/File:St._Vartan_Park_td_(2018-11-20)_38.jpg"
+        }
+      ]
+    },
+    {
+      "slug": "scandinavia-house",
+      "name": "Scandinavia House",
+      "kind": "attraction",
+      "town": "Murray Hill",
+      "state": "New York",
+      "county": "Manhattan",
+      "address": "58 Park Avenue (at E 38th Street), New York, NY 10016",
+      "official_url": "https://www.scandinaviahouse.org",
+      "summary": "Headquarters of the American-Scandinavian Foundation, offering Nordic exhibitions, films, a cafe, and shop. Building open Monday–Saturday 11 a.m.–9 p.m., Sunday 11 a.m.–4 p.m.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "church-of-the-incarnation-episcopal",
+      "name": "Church of the Incarnation (Episcopal)",
+      "kind": "historic-site",
+      "town": "Murray Hill",
+      "state": "New York",
+      "county": "Manhattan",
+      "address": "205-209 Madison Avenue at E 35th Street, New York, NY",
+      "summary": "Built 1864-65 and rebuilt after an 1882 fire, with stained glass by Louis Comfort Tiffany and John La Farge; a NYC landmark since 1979 and an active Episcopal parish.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "sarges-delicatessen-diner",
+      "name": "Sarge's Delicatessen & Diner",
+      "kind": "restaurant",
+      "town": "Murray Hill",
+      "state": "New York",
+      "county": "Manhattan",
+      "address": "548 3rd Avenue, New York, NY 10016",
+      "official_url": "https://sargesdeli.com/",
+      "summary": "A classic Jewish deli and diner, a Murray Hill institution with indoor dining seven days a week, 10 a.m. to 10 p.m.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "2nd-ave-deli-midtown-east",
+      "name": "2nd Ave Deli (Midtown East)",
+      "kind": "restaurant",
+      "town": "Murray Hill",
+      "state": "New York",
+      "county": "Manhattan",
+      "address": "162 East 33rd Street (between Lexington & 3rd Ave), New York, NY 10016",
+      "official_url": "https://2ndavedeli.com/",
+      "summary": "A famed kosher deli 'serving NY since 1954,' relocated from its original East Village home; open daily 11 a.m. to 8 p.m. at this location.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "wolfgangs-steakhouse-park-avenue",
+      "name": "Wolfgang's Steakhouse (Park Avenue)",
+      "kind": "restaurant",
+      "town": "Murray Hill",
+      "state": "New York",
+      "county": "Manhattan",
+      "address": "4 Park Avenue (at E 33rd Street), New York, NY 10016",
+      "official_url": "https://wolfgangssteakhouse.net/",
+      "summary": "Occupies the landmarked Della Robbia Bar of the 1912 Vanderbilt Hotel since 2004, under a Guastavino-tile ceiling designated a NYC interior landmark in 1994; serves lunch and dinner seven days a week.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "the-shelburne-sonesta-new-york",
+      "name": "The Shelburne Sonesta New York",
+      "kind": "hotel",
+      "town": "Murray Hill",
+      "state": "New York",
+      "county": "Manhattan",
+      "address": "303 Lexington Avenue, New York, NY 10016",
+      "official_url": "https://www.sonesta.com/sonesta-hotels-resorts/ny/new-york/shelburne-sonesta-new-york",
+      "summary": "A boutique hotel with guest rooms and studio/one-two-bedroom apartments, terrace suites with Empire State Building views, the 'Vintage Green' rooftop garden bar, and on-site restaurant Take Care.",
+      "status": "open",
+      "photos": []
+    }
+  ],
+  "entries": [
+    {
+      "kind": "sight",
+      "name": "The Morgan Library & Museum",
+      "place_slug": "the-morgan-library-museum",
+      "note": "J.P. Morgan's private library, a public institution since 1924, marking its centennial in 2024."
+    },
+    {
+      "kind": "walk",
+      "name": "Sniffen Court Historic District",
+      "place_slug": "sniffen-court-historic-district",
+      "note": "Ten 1863-64 brick stables viewable through the gate, famous from The Doors' 'Strange Days' cover."
+    },
+    {
+      "kind": "walk",
+      "name": "St. Vartan Park",
+      "place_slug": "st-vartan-park",
+      "note": "A neighborhood park open since 1906, with courts, a playground, and a 2021 turf field."
+    },
+    {
+      "kind": "sight",
+      "name": "Scandinavia House",
+      "place_slug": "scandinavia-house",
+      "note": "Nordic exhibitions, films, and a cafe at the American-Scandinavian Foundation's headquarters."
+    },
+    {
+      "kind": "sight",
+      "name": "Church of the Incarnation (Episcopal)",
+      "place_slug": "church-of-the-incarnation-episcopal",
+      "note": "An 1860s landmark church with Tiffany and La Farge stained glass."
+    },
+    {
+      "kind": "food",
+      "name": "Sarge's Delicatessen & Diner",
+      "place_slug": "sarges-delicatessen-diner",
+      "note": "A classic Jewish deli open daily on Third Avenue."
+    },
+    {
+      "kind": "food",
+      "name": "2nd Ave Deli (Midtown East)",
+      "place_slug": "2nd-ave-deli-midtown-east",
+      "note": "A kosher deli institution serving New York since 1954."
+    },
+    {
+      "kind": "food",
+      "name": "Wolfgang's Steakhouse (Park Avenue)",
+      "place_slug": "wolfgangs-steakhouse-park-avenue",
+      "note": "Steaks under a landmarked Guastavino-tile ceiling in the former Vanderbilt Hotel."
+    },
+    {
+      "kind": "stay",
+      "name": "The Shelburne Sonesta New York",
+      "place_slug": "the-shelburne-sonesta-new-york",
+      "note": "A boutique hotel with a rooftop garden bar and Empire State Building views."
+    }
+  ]
+}

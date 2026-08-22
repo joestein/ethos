@@ -1,0 +1,283 @@
+{
+  "guide": {
+    "slug": "hudson-yards-manhattan-guide",
+    "title": "Hudson Yards, Manhattan: Rail Yards Rebuilt Sky-High",
+    "destination": "Hudson Yards, New York",
+    "state": "New York",
+    "county": "Manhattan",
+    "intro": "Hudson Yards takes its name from the MTA's West Side rail yard along the Hudson River, part of a Penn Central facility that once ran to 39th Street. In 1987 the MTA rebuilt the yard for commuter-train storage, leaving gaps between the tracks so a platform could later be built above on air rights. That idea had been proposed since the 1950s and blocked for decades by poor transit access and the city's 1970s fiscal crisis, until the City Council approved a 60-block rezoning in January 2005 following a 2003 master plan for 40 million square feet of development. Ground broke for 10 Hudson Yards in December 2012, and Related Companies' Phase 1 opened to the public on March 15, 2019. None of it would have worked without the 7 train's extension to 34th Street–Hudson Yards, which opened September 13, 2015 as the first entirely new subway station built in New York City since 1989, 125 feet underground.",
+    "sections": [
+      {
+        "heading": "Building a Neighborhood on Air Rights",
+        "body": "Vessel, Thomas Heatherwick's climbable lattice of interlocking staircases, opened March 15, 2019 in the development's Public Square and Gardens; it later closed in 2021 and reopened in October 2024 with full-height safety mesh. Nearby, The Shed — an arts center in the Bloomberg Building with an 8-million-pound retractable shell that rolls open in about five minutes — opened April 5, 2019 to a design by Diller Scofidio + Renfro with Rockwell Group. On the west edge, Edge, the 100th-floor sky deck at 30 Hudson Yards, bills itself as the highest outdoor observation deck in the Western Hemisphere. The High Line's northern section wraps the whole site along 30th to 34th Streets, with its Spur meeting 30th Street and 10th Avenue."
+      },
+      {
+        "heading": "Getting there by subway",
+        "body": "The 7 train terminates at 34 St–Hudson Yards, a block from the Shops, Vessel, and Edge. For more lines, it's about a 10-minute walk east to 34 St–Penn Station for the A/C/E and 1/2/3 — note these are two separate stations with no free transfer between them."
+      }
+    ],
+    "faq": [
+      {
+        "question": "How do I get to Hudson Yards by subway?",
+        "answer": "The 7 train terminates at 34 St–Hudson Yards, right by the Shops, Vessel, and Edge. The A/C/E and 1/2/3 stop about a 10-minute walk east at 34 St–Penn Station (two separate stations with no free transfer)."
+      },
+      {
+        "question": "Can you still climb Vessel?",
+        "answer": "Yes. It closed in 2021 after a series of incidents and reopened in October 2024 with full-height steel safety mesh; tickets start around $10 via vesselnyc.com."
+      },
+      {
+        "question": "What happened to the 7 train station here?",
+        "answer": "It opened September 13, 2015 as the 34th Street-Hudson Yards station — the first entirely new station built in the New York City subway since 1989, built 125 feet underground at a cost of roughly $2.4 billion."
+      },
+      {
+        "question": "Where can I stay in Hudson Yards?",
+        "answer": "The Equinox Hotel at 33 Hudson Yards is a wellness-focused luxury hotel with an Equinox club, spa, and rooftop pool, home to the Electric Lemon restaurant."
+      },
+      {
+        "question": "Is the High Line part of Hudson Yards?",
+        "answer": "The High Line's northern section, including its Spur at 30th Street and 10th Avenue, wraps the Hudson Yards site, though the park itself is covered under this guide series' Meatpacking District entry."
+      }
+    ],
+    "photos": [
+      {
+        "src": "/photos/ny/manhattan/hudson-yards/vessel.jpg",
+        "thumb": "/photos/ny/manhattan/hudson-yards/vessel_thumb.jpg",
+        "title": "Vessel",
+        "description": "Thomas Heatherwick's climbable lattice of interlocking staircases at Hudson Yards.",
+        "author": "Jdforrester",
+        "license": "CC BY 4.0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Vessel_in_Hudson_Yards,_2021-10-02.jpg"
+      },
+      {
+        "src": "/photos/ny/manhattan/hudson-yards/the-shed.jpg",
+        "thumb": "/photos/ny/manhattan/hudson-yards/the-shed_thumb.jpg",
+        "title": "The Shed",
+        "description": "The Shed's telescoping outer shell in the Bloomberg Building.",
+        "author": "Kidfly182",
+        "license": "CC BY 4.0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:The_Shed_Hudson_Yards_010.jpg"
+      },
+      {
+        "src": "/photos/ny/manhattan/hudson-yards/edge-observation-deck.jpg",
+        "thumb": "/photos/ny/manhattan/hudson-yards/edge-observation-deck_thumb.jpg",
+        "title": "Edge Observation Deck",
+        "description": "The cantilevered glass deck of Edge, seen from below at 30 Hudson Yards.",
+        "author": "Wikipettanko",
+        "license": "CC BY-SA 3.0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Edge_NYC_observation_deck_at_30_Hudson_Yards.jpg"
+      },
+      {
+        "src": "/photos/ny/manhattan/hudson-yards/public-square-plaza.jpg",
+        "thumb": "/photos/ny/manhattan/hudson-yards/public-square-plaza_thumb.jpg",
+        "title": "Hudson Yards Public Square",
+        "description": "The plaza at Hudson Yards' Public Square and Gardens, with Vessel at center.",
+        "author": "Epicgenius",
+        "license": "CC BY-SA 4.0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Hudson_Yards_Plaza_March_2019_18.jpg"
+      }
+    ]
+  },
+  "places": [
+    {
+      "slug": "edge-hudson-yards",
+      "name": "Edge",
+      "kind": "attraction",
+      "town": "Hudson Yards",
+      "state": "New York",
+      "county": "Manhattan",
+      "address": "30 Hudson Yards, Level 100 (entrance on Level 4 of The Shops), New York, NY",
+      "official_url": "https://www.edgenyc.com/",
+      "summary": "The highest outdoor sky deck in the Western Hemisphere, on the 100th floor of 30 Hudson Yards, paired with several immersive indoor installations. Open daily 9 a.m. to 10 p.m.",
+      "status": "open",
+      "photos": [
+        {
+          "src": "/photos/ny/manhattan/hudson-yards/edge-observation-deck.jpg",
+          "thumb": "/photos/ny/manhattan/hudson-yards/edge-observation-deck_thumb.jpg",
+          "title": "Edge Observation Deck",
+          "description": "The cantilevered glass deck of Edge, seen from below at 30 Hudson Yards.",
+          "author": "Wikipettanko",
+          "license": "CC BY-SA 3.0",
+          "source_url": "https://commons.wikimedia.org/wiki/File:Edge_NYC_observation_deck_at_30_Hudson_Yards.jpg"
+        }
+      ]
+    },
+    {
+      "slug": "vessel",
+      "name": "Vessel",
+      "kind": "attraction",
+      "town": "Hudson Yards",
+      "state": "New York",
+      "county": "Manhattan",
+      "address": "Public Square and Gardens at Hudson Yards, New York, NY",
+      "official_url": "https://www.hudsonyardsnewyork.com/discover/vessel",
+      "summary": "Thomas Heatherwick's climbable 2019 landmark of interlocking staircases, which opened March 15, 2019, closed in 2021, and reopened to climbers in October 2024 with full-height safety mesh.",
+      "status": "open",
+      "photos": [
+        {
+          "src": "/photos/ny/manhattan/hudson-yards/vessel.jpg",
+          "thumb": "/photos/ny/manhattan/hudson-yards/vessel_thumb.jpg",
+          "title": "Vessel",
+          "description": "Thomas Heatherwick's climbable lattice of interlocking staircases at Hudson Yards.",
+          "author": "Jdforrester",
+          "license": "CC BY 4.0",
+          "source_url": "https://commons.wikimedia.org/wiki/File:Vessel_in_Hudson_Yards,_2021-10-02.jpg"
+        }
+      ]
+    },
+    {
+      "slug": "the-shed",
+      "name": "The Shed",
+      "kind": "theater",
+      "town": "Hudson Yards",
+      "state": "New York",
+      "county": "Manhattan",
+      "address": "545 W 30th St (between 10th and 11th Aves), New York, NY",
+      "official_url": "https://www.theshed.org/",
+      "summary": "An arts center in the Bloomberg Building, opened April 5, 2019, with an 8-million-pound retractable shell that rolls open in about five minutes, designed by Diller Scofidio + Renfro with Rockwell Group.",
+      "status": "open",
+      "photos": [
+        {
+          "src": "/photos/ny/manhattan/hudson-yards/the-shed.jpg",
+          "thumb": "/photos/ny/manhattan/hudson-yards/the-shed_thumb.jpg",
+          "title": "The Shed",
+          "description": "The Shed's telescoping outer shell in the Bloomberg Building.",
+          "author": "Kidfly182",
+          "license": "CC BY 4.0",
+          "source_url": "https://commons.wikimedia.org/wiki/File:The_Shed_Hudson_Yards_010.jpg"
+        }
+      ]
+    },
+    {
+      "slug": "bella-abzug-park",
+      "name": "Bella Abzug Park",
+      "kind": "park",
+      "town": "Hudson Yards",
+      "state": "New York",
+      "county": "Manhattan",
+      "address": "Between 10th and 11th Avenues, from 33rd to 39th Streets, New York, NY",
+      "summary": "A four-acre park chain designed by Michael Van Valkenburgh Associates, renamed March 1, 2019 for feminist congresswoman Bella Abzug, with fountains, lawns, a cafe, and a playground, containing two entrances to the 34 St-Hudson Yards station.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "mercado-little-spain",
+      "name": "Mercado Little Spain",
+      "kind": "restaurant",
+      "town": "Hudson Yards",
+      "state": "New York",
+      "county": "Manhattan",
+      "address": "10 Hudson Yards, New York, NY",
+      "official_url": "https://www.littlespain.com/",
+      "summary": "José Andrés's Spanish food hall at the base of 10 Hudson Yards, with sit-down concepts including La Barra (tapas), Txula (steak), and Museo del Jamón, plus bars and kiosks.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "greywind",
+      "name": "Greywind",
+      "kind": "restaurant",
+      "town": "Hudson Yards",
+      "state": "New York",
+      "county": "Manhattan",
+      "address": "451 Tenth Avenue, New York, NY",
+      "official_url": "https://www.greywindnyc.com/",
+      "summary": "Chef Dan Kluger's seasonal restaurant with the Spygold cocktail bar and an all-day bakery under one roof, offering a $35 lunch prix fixe.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "estiatorio-milos-hudson-yards",
+      "name": "Estiatorio Milos",
+      "kind": "restaurant",
+      "town": "Hudson Yards",
+      "state": "New York",
+      "county": "Manhattan",
+      "address": "Level 5, The Shops & Restaurants at Hudson Yards (20 Hudson Yards), New York, NY",
+      "official_url": "https://estiatoriomilos.com/",
+      "summary": "The Hudson Yards outpost of Costas Spiliadis's Greek and Mediterranean seafood institution, on Level 5 overlooking the Vessel plaza.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "oyamel-hudson-yards",
+      "name": "Oyamel",
+      "kind": "restaurant",
+      "town": "Hudson Yards",
+      "state": "New York",
+      "county": "Manhattan",
+      "address": "10 Hudson Yards, New York, NY",
+      "summary": "José Andrés's contemporary Mexican restaurant, sister to the adjacent Mercado Little Spain.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "equinox-hotel-hudson-yards",
+      "name": "Equinox Hotel Hudson Yards",
+      "kind": "hotel",
+      "town": "Hudson Yards",
+      "state": "New York",
+      "county": "Manhattan",
+      "address": "33 Hudson Yards, New York, NY 10001",
+      "official_url": "https://www.equinox-hotels.com/",
+      "summary": "A wellness-focused luxury hotel with an Equinox club, spa, magnesium pool, and rooftop pool with Hudson River views; home to the Electric Lemon restaurant.",
+      "status": "open",
+      "photos": []
+    }
+  ],
+  "entries": [
+    {
+      "kind": "sight",
+      "name": "Edge",
+      "place_slug": "edge-hudson-yards",
+      "note": "The highest outdoor sky deck in the Western Hemisphere, on the 100th floor of 30 Hudson Yards."
+    },
+    {
+      "kind": "sight",
+      "name": "Vessel",
+      "place_slug": "vessel",
+      "note": "The climbable staircase landmark, reopened in 2024 with new safety mesh."
+    },
+    {
+      "kind": "sight",
+      "name": "The Shed",
+      "place_slug": "the-shed",
+      "note": "An arts center with a retractable shell that rolls open in about five minutes."
+    },
+    {
+      "kind": "walk",
+      "name": "Bella Abzug Park",
+      "place_slug": "bella-abzug-park",
+      "note": "A four-acre park chain named for the feminist congresswoman, with two subway entrances."
+    },
+    {
+      "kind": "food",
+      "name": "Mercado Little Spain",
+      "place_slug": "mercado-little-spain",
+      "note": "José Andrés's Spanish food hall at the base of 10 Hudson Yards."
+    },
+    {
+      "kind": "food",
+      "name": "Greywind",
+      "place_slug": "greywind",
+      "note": "Dan Kluger's seasonal restaurant with an all-day bakery and cocktail bar."
+    },
+    {
+      "kind": "food",
+      "name": "Estiatorio Milos",
+      "place_slug": "estiatorio-milos-hudson-yards",
+      "note": "Greek seafood on Level 5 of the Shops, overlooking the Vessel plaza."
+    },
+    {
+      "kind": "food",
+      "name": "Oyamel",
+      "place_slug": "oyamel-hudson-yards",
+      "note": "José Andrés's contemporary Mexican restaurant next to Mercado Little Spain."
+    },
+    {
+      "kind": "stay",
+      "name": "Equinox Hotel Hudson Yards",
+      "place_slug": "equinox-hotel-hudson-yards",
+      "note": "A wellness-focused luxury hotel with a rooftop pool and Hudson River views."
+    }
+  ]
+}
