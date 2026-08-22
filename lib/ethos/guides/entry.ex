@@ -24,6 +24,7 @@ defmodule Ethos.Guides.Entry do
     field :booking_label, :string
     belongs_to :guide, Ethos.Guides.Guide
     belongs_to :credited_user, Ethos.Accounts.User
+    belongs_to :place, Ethos.Places.Place
     timestamps(type: :utc_datetime)
   end
 
@@ -70,6 +71,6 @@ defmodule Ethos.Guides.Entry do
   def privileged_changeset(entry, attrs) do
     entry
     |> changeset(attrs)
-    |> cast(attrs, [:source, :credited_user_id])
+    |> cast(attrs, [:source, :credited_user_id, :place_id])
   end
 end

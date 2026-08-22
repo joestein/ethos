@@ -134,7 +134,10 @@ defmodule Ethos.Guides do
 
   def list_entries(%Guide{id: guide_id}) do
     Repo.all(
-      from e in Entry, where: e.guide_id == ^guide_id, order_by: [asc: e.position, asc: e.id]
+      from e in Entry,
+        where: e.guide_id == ^guide_id,
+        order_by: [asc: e.position, asc: e.id],
+        preload: [:place]
     )
   end
 

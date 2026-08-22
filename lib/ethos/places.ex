@@ -42,4 +42,15 @@ defmodule Ethos.Places do
         select: count(p.id)
     )
   end
+
+  def guides_featuring(%Place{id: place_id}) do
+    Repo.all(
+      from g in Ethos.Guides.Guide,
+        join: e in Ethos.Guides.Entry,
+        on: e.guide_id == g.id,
+        where: e.place_id == ^place_id and g.status == "published",
+        distinct: true,
+        order_by: [asc: g.title]
+    )
+  end
 end
