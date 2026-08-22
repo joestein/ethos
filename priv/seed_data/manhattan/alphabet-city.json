@@ -1,0 +1,216 @@
+{
+  "guide": {
+    "slug": "alphabet-city-manhattan-guide",
+    "title": "Alphabet City, Manhattan: Loisaida's Community Gardens",
+    "destination": "Alphabet City, New York",
+    "state": "New York",
+    "county": "Manhattan",
+    "intro": "Alphabet City is named for Avenues A, B, C, and D — the only single-letter avenues in Manhattan, laid out by the Commissioners' Plan of 1811 to cover the bulge of land east of First Avenue. The nickname itself only emerged around 1980, popularized by real-estate marketing, while Spanish-speaking residents had long called the area \"Loisaida.\" The neighborhood first developed in the 1820s and '30s as a shipbuilding district, then became the heart of Kleindeutschland, or Little Germany, from the 1850s until the community collapsed after the 1904 sinking of the steamship General Slocum. From the 1960s, Puerto Rican and Nuyorican residents made the eastern blocks the center of \"Loisaida\" — a name coined in Bimbo Rivas's 1974 poem — and the Nuyorican literary movement grew out of that community, alongside a fierce tradition of community gardens built on reclaimed vacant lots.",
+    "sections": [
+      {
+        "heading": "From Shipyards to Loisaida",
+        "body": "Alphabet City's East River blocks began as a shipbuilding and ship-repair district in the 1820s and '30s, with yards lining the waterfront by the early 1840s. German immigration from the 1850s made the area part of Kleindeutschland, the third-largest German-speaking urban community after Vienna and Berlin, until the community collapsed after the General Slocum steamship sank in June 1904, killing more than 1,000 German-American residents. From the 1960s onward, Puerto Rican and Nuyorican residents remade the eastern avenues into \"Loisaida\" — a name coined in Bimbo Rivas's 1974 poem, rendering \"Lower East Side\" in Nuyorican pronunciation — and the Nuyorican literary movement grew out of this community. That era also produced the neighborhood's community gardens: La Plaza Cultural de Armando Perez, founded in 1976, and the 6th & B Garden, established in 1983, both survive today as living pieces of the Loisaida garden movement."
+      },
+      {
+        "heading": "Getting there by subway",
+        "body": "No subway line runs inside Alphabet City itself. The closest stations are the L train at First Avenue on the north edge — whose Avenue A entrances were built specifically to serve Alphabet City — and the F train at Second Avenue and Houston Street on the south edge, which has a full-time entrance at First Avenue. Expect a walk of several blocks from either station to reach the avenues."
+      }
+    ],
+    "faq": [
+      {
+        "question": "How do I get to Alphabet City by subway?",
+        "answer": "No line runs inside the neighborhood. Use the L train at First Avenue on the north edge (its Avenue A entrances were built for Alphabet City) or the F train at Second Avenue-Houston Street on the south edge, then walk several blocks east."
+      },
+      {
+        "question": "Where does the name Alphabet City come from?",
+        "answer": "It's named for Avenues A, B, C, and D — the only single-letter avenues in Manhattan. The nickname emerged around 1980 as real-estate marketing; Spanish-speaking residents had long called the area \"Loisaida\" instead."
+      },
+      {
+        "question": "What does \"Loisaida\" mean?",
+        "answer": "It's a Nuyorican-accented rendering of \"Lower East Side,\" coined in Bimbo Rivas's 1974 poem \"Loisaida.\" From the 1960s, Puerto Rican and Nuyorican residents made the neighborhood's eastern blocks the center of that identity."
+      },
+      {
+        "question": "Are Alphabet City's community gardens open to visitors?",
+        "answer": "Yes — La Plaza Cultural de Armando Perez, founded in 1976, runs a public events calendar, and the 6th & B Garden, established in 1983, is open to visitors on weekend afternoons from April through October."
+      },
+      {
+        "question": "Where can I stay in Alphabet City?",
+        "answer": "No hotel or B&B could be verified within the neighborhood's boundaries (Avenue A to the East River, Houston Street to 14th Street); the nearest options sit just outside in the adjacent East Village and Lower East Side."
+      }
+    ],
+    "photos": [
+      {
+        "src": "/photos/ny/manhattan/alphabet-city/la-plaza-cultural.jpg",
+        "thumb": "/photos/ny/manhattan/alphabet-city/la-plaza-cultural_thumb.jpg",
+        "title": "La Plaza Cultural",
+        "description": "The community garden at East 9th Street and Avenue C.",
+        "author": "NYU FC 2 (Wikis Take Manhattan 2009 participant)",
+        "license": "CC BY-SA 3.0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:WTM3_NYU_FC_2_0025.jpg"
+      },
+      {
+        "src": "/photos/ny/manhattan/alphabet-city/avenue-b-garden.jpg",
+        "thumb": "/photos/ny/manhattan/alphabet-city/avenue-b-garden_thumb.jpg",
+        "title": "B Street Community Garden",
+        "description": "A community garden on Avenue B in Alphabet City.",
+        "author": "Jim.henderson",
+        "license": "CC BY-SA 4.0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:B_Street_Community_Garden_HDR_2022_jeh.jpg"
+      },
+      {
+        "src": "/photos/ny/manhattan/alphabet-city/avenue-c-loisaida-festival.jpg",
+        "thumb": "/photos/ny/manhattan/alphabet-city/avenue-c-loisaida-festival_thumb.jpg",
+        "title": "Avenue C, Loisaida Festival",
+        "description": "A street scene from the annual Loisaida Street Festival on Avenue C.",
+        "author": "David Shankbone",
+        "license": "CC BY-SA 3.0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Avenue_C_Loisaida_Street_Festival.JPG"
+      }
+    ]
+  },
+  "places": [
+    {
+      "slug": "museum-of-reclaimed-urban-space",
+      "name": "Museum of Reclaimed Urban Space (MoRUS)",
+      "kind": "museum",
+      "town": "Alphabet City",
+      "state": "New York",
+      "county": "Manhattan",
+      "address": "155 Avenue C (between E 9th and E 10th Sts), New York, NY 10009",
+      "official_url": "https://www.morusnyc.org/",
+      "summary": "A small museum documenting the neighborhood's squatting, community-garden, and anti-gentrification activist history; runs guided neighborhood tours every Saturday and Sunday at 3 p.m.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "charlie-parker-residence",
+      "name": "Charlie Parker Residence",
+      "kind": "historic-site",
+      "town": "Alphabet City",
+      "state": "New York",
+      "county": "Manhattan",
+      "address": "151 Avenue B, New York, NY 10009 (facing Tompkins Square Park)",
+      "summary": "A Gothic Revival townhouse from around 1849 where jazz saxophonist Charlie Parker lived from 1950 to 1954; listed on the National Register of Historic Places in 1994 and designated a New York City Landmark in 1999. Avenue B between E 9th and E 10th Streets is co-named \"Charlie Parker Place.\" It's a private residence, viewable from the street only.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "la-plaza-cultural-de-armando-perez",
+      "name": "La Plaza Cultural de Armando Perez",
+      "kind": "park",
+      "town": "Alphabet City",
+      "state": "New York",
+      "county": "Manhattan",
+      "address": "SW corner of E 9th St and Avenue C, New York, NY 10009",
+      "official_url": "https://www.laplazacultural.com/",
+      "summary": "A volunteer-run community garden and open-air events space founded in 1976, a landmark of the Loisaida community-garden movement.",
+      "status": "open",
+      "photos": [
+        {
+          "src": "/photos/ny/manhattan/alphabet-city/la-plaza-cultural.jpg",
+          "thumb": "/photos/ny/manhattan/alphabet-city/la-plaza-cultural_thumb.jpg",
+          "title": "La Plaza Cultural",
+          "description": "The community garden at East 9th Street and Avenue C.",
+          "author": "NYU FC 2 (Wikis Take Manhattan 2009 participant)",
+          "license": "CC BY-SA 3.0",
+          "source_url": "https://commons.wikimedia.org/wiki/File:WTM3_NYU_FC_2_0025.jpg"
+        }
+      ]
+    },
+    {
+      "slug": "sixth-and-b-garden",
+      "name": "6th & B Garden",
+      "kind": "park",
+      "town": "Alphabet City",
+      "state": "New York",
+      "county": "Manhattan",
+      "address": "Corner of E 6th St and Avenue B, New York, NY 10009",
+      "official_url": "https://www.6bgarden.org/",
+      "summary": "A nonprofit community garden established in 1983; open to visitors April through October, Saturdays and Sundays from 1 to 6 p.m., plus scheduled events.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "superiority-burger",
+      "name": "Superiority Burger",
+      "kind": "restaurant",
+      "town": "Alphabet City",
+      "state": "New York",
+      "county": "Manhattan",
+      "address": "119 Avenue A, New York, NY 10009",
+      "official_url": "https://superiorityburger.com/",
+      "summary": "A burger restaurant on Avenue A facing Tompkins Square Park, offering dine-in reservations, delivery, and an online shop.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "rays-candy-store",
+      "name": "Ray's Candy Store",
+      "kind": "cafe",
+      "town": "Alphabet City",
+      "state": "New York",
+      "county": "Manhattan",
+      "address": "113 Avenue A, New York, NY 10009",
+      "summary": "Open since 1974 and still run by Iranian-born owner Ray Alvarez; famous for egg creams, soft serve, and New Orleans-style beignets, and a fixture in films, TV, and books.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "kafana-alphabet-city",
+      "name": "Kafana",
+      "kind": "restaurant",
+      "town": "Alphabet City",
+      "state": "New York",
+      "county": "Manhattan",
+      "address": "116 Avenue C, New York, NY 10009",
+      "official_url": "http://kafananyc.com/",
+      "summary": "A long-running Avenue C restaurant and wine spot, Manhattan's first Serbian restaurant, with a prix fixe menu and special natural-wine events.",
+      "status": "open",
+      "photos": []
+    }
+  ],
+  "entries": [
+    {
+      "kind": "sight",
+      "name": "Museum of Reclaimed Urban Space (MoRUS)",
+      "place_slug": "museum-of-reclaimed-urban-space",
+      "note": "A museum of the neighborhood's squatting and community-garden history, with weekend walking tours."
+    },
+    {
+      "kind": "sight",
+      "name": "Charlie Parker Residence",
+      "place_slug": "charlie-parker-residence",
+      "note": "The Gothic Revival townhouse where Charlie Parker lived from 1950 to 1954, viewable from the street."
+    },
+    {
+      "kind": "walk",
+      "name": "La Plaza Cultural de Armando Perez",
+      "place_slug": "la-plaza-cultural-de-armando-perez",
+      "note": "A volunteer-run community garden and events space founded in 1976."
+    },
+    {
+      "kind": "walk",
+      "name": "6th & B Garden",
+      "place_slug": "sixth-and-b-garden",
+      "note": "A nonprofit community garden open weekend afternoons from April through October."
+    },
+    {
+      "kind": "food",
+      "name": "Superiority Burger",
+      "place_slug": "superiority-burger",
+      "note": "An acclaimed Avenue A burger spot facing Tompkins Square Park."
+    },
+    {
+      "kind": "food",
+      "name": "Ray's Candy Store",
+      "place_slug": "rays-candy-store",
+      "note": "A neighborhood institution since 1974, known for egg creams and soft serve."
+    },
+    {
+      "kind": "food",
+      "name": "Kafana",
+      "place_slug": "kafana-alphabet-city",
+      "note": "Manhattan's first Serbian restaurant, with a prix fixe menu and natural-wine events."
+    }
+  ]
+}

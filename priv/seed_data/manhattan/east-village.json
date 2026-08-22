@@ -1,0 +1,275 @@
+{
+  "guide": {
+    "slug": "east-village-manhattan-guide",
+    "title": "East Village, Manhattan: From Kleindeutschland to CBGB",
+    "destination": "East Village, New York",
+    "state": "New York",
+    "county": "Manhattan",
+    "intro": "\"East Village\" is a 1950s-60s rebranding: the area was simply part of the Lower East Side until real-estate brokers and Greenwich Village transplants adopted the new name to shed the slum image, and the term stuck by the mid-1960s, with The East Village Other newspaper launching in 1966. Long before that, 17th-century Dutch settlers divided the area into farms called \"boweries,\" and Director-General Peter Stuyvesant built a family chapel around 1660 on the site of today's St. Mark's Church in-the-Bowery, where he was interred after his death in 1672. Mid-1800s German immigration made the neighborhood \"Kleindeutschland\" — Little Germany — until the 1904 General Slocum steamboat disaster killed over 1,000 German-American residents and reshaped its demographics. From the 1950s on it became a counterculture capital: CBGB launched punk acts like Patti Smith and Talking Heads, and by the mid-1980s more than 100 art galleries operated in the neighborhood.",
+    "sections": [
+      {
+        "heading": "Kleindeutschland to Counterculture",
+        "body": "German immigration made the East Village the heart of Kleindeutschland by the mid-1800s, giving it the third-largest urban population of Germans outside Vienna and Berlin. That community was devastated on June 15, 1904, when the steamboat General Slocum caught fire and sank, killing more than a thousand German-American residents and hastening the neighborhood's demographic turnover toward Irish, Italian, Eastern European Jewish, Polish, and Ukrainian communities. From the 1950s onward, displaced Greenwich Village artists moved in and the neighborhood became a counterculture capital: CBGB launched punk acts like Patti Smith and Talking Heads, the Pyramid Club hosted drag performers from 1979, and over 100 art galleries operated here by the mid-1980s. Tompkins Square Park became a flashpoint of that era's tensions in August 1988, when a police attempt to clear the park of homeless people erupted into a riot that injured 38 people. And in November 1971, a Poetry Project reading at St. Mark's Church in-the-Bowery — completed in 1799 on the site of Stuyvesant's own chapel, and the city's oldest site of continuous religious practice — launched the rock and roll careers of Patti Smith and Lenny Kaye."
+      },
+      {
+        "heading": "Getting there by subway",
+        "body": "The 6 train serves Astor Place on the neighborhood's western edge, with peak-hour <6> express service and the 4 running late nights. The L train stops at First Avenue and Third Avenue along 14th Street — First Avenue's Avenue A entrances, rebuilt in 2019-2020, are the best way into the Alphabet City side of the neighborhood. Much of the deeper East Village is a 10-to-15-minute walk from any station."
+      }
+    ],
+    "faq": [
+      {
+        "question": "How do I get to the East Village by subway?",
+        "answer": "The 6 train stops at Astor Place on the western edge (with <6> peak express and 4 late nights), and the L train stops at First Avenue and Third Avenue along 14th Street — the First Avenue entrances on Avenue A are the best route into the neighborhood's eastern blocks."
+      },
+      {
+        "question": "Why is the East Village called that if it was part of the Lower East Side?",
+        "answer": "\"East Village\" is a 1950s-60s rebranding: the area was considered part of the Lower East Side until real-estate brokers and Greenwich Village transplants promoted the new name to shed the slum image. It had stuck by the mid-1960s, when The East Village Other newspaper launched in 1966."
+      },
+      {
+        "question": "What happened at Tompkins Square Park in 1988?",
+        "answer": "In August 1988, a police attempt to clear homeless encampments from the park erupted into a riot that injured 38 people, becoming a defining flashpoint in the neighborhood's gentrification battles."
+      },
+      {
+        "question": "Is CBGB still open?",
+        "answer": "No — the storied punk club at 315 Bowery, which launched acts like Patti Smith and Talking Heads, closed in 2006 and is discussed only in past tense in neighborhood histories."
+      },
+      {
+        "question": "Where can I stay in the East Village?",
+        "answer": "The Bowery Hotel, at 335 Bowery, is the one verified in-neighborhood hotel — it opened in February 2007 with the Italian restaurant Gemma providing room service."
+      }
+    ],
+    "photos": [
+      {
+        "src": "/photos/ny/manhattan/east-village/st-marks-place.jpg",
+        "thumb": "/photos/ny/manhattan/east-village/st-marks-place_thumb.jpg",
+        "title": "St. Mark's Place",
+        "description": "A daytime street scene of St. Mark's Place storefronts at 8th Street.",
+        "author": "MusikAnimal",
+        "license": "CC BY-SA 4.0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:St._Mark%27s_Place_8th_Street_Manhattan_in_2015.JPG"
+      },
+      {
+        "src": "/photos/ny/manhattan/east-village/tompkins-square-park.jpg",
+        "thumb": "/photos/ny/manhattan/east-village/tompkins-square-park_thumb.jpg",
+        "title": "Tompkins Square Park",
+        "description": "The park's central knoll on a summer day.",
+        "author": "David Shankbone",
+        "license": "CC BY-SA 3.0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Tompkins_Square_Park_Central_Knoll.jpg"
+      },
+      {
+        "src": "/photos/ny/manhattan/east-village/st-marks-church.jpg",
+        "thumb": "/photos/ny/manhattan/east-village/st-marks-church_thumb.jpg",
+        "title": "St. Mark's Church in-the-Bowery",
+        "description": "The church's exterior at Second Avenue and East 10th Street.",
+        "author": "CaptJayRuffins",
+        "license": "CC BY 4.0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:St_Mark%27s_Church_in-the-Bowery20230412_174245.jpg"
+      },
+      {
+        "src": "/photos/ny/manhattan/east-village/village-east-cinema.jpg",
+        "thumb": "/photos/ny/manhattan/east-village/village-east-cinema_thumb.jpg",
+        "title": "Village East Cinema",
+        "description": "The theater's exterior at Second Avenue and 12th Street.",
+        "author": "Jim.henderson",
+        "license": "CC BY-SA 4.0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Village_East_Cinema_2024_jeh.jpg"
+      }
+    ]
+  },
+  "places": [
+    {
+      "slug": "tompkins-square-park",
+      "name": "Tompkins Square Park",
+      "kind": "park",
+      "town": "East Village",
+      "state": "New York",
+      "county": "Manhattan",
+      "address": "Bounded by E 7th St, E 10th St, Avenue A, and Avenue B, New York, NY",
+      "official_url": "https://www.nycgovparks.org/parks/tompkins-square-park",
+      "summary": "A 10.5-acre park named for U.S. Vice President Daniel D. Tompkins, opened in 1834. It's home to the \"Hare Krishna Tree,\" an elm associated with the 1966 founding of the Krishna movement in the U.S., and was the site of the August 1988 riot that became a flashpoint in the neighborhood's gentrification battles.",
+      "status": "open",
+      "photos": [
+        {
+          "src": "/photos/ny/manhattan/east-village/tompkins-square-park.jpg",
+          "thumb": "/photos/ny/manhattan/east-village/tompkins-square-park_thumb.jpg",
+          "title": "Tompkins Square Park",
+          "description": "The park's central knoll on a summer day.",
+          "author": "David Shankbone",
+          "license": "CC BY-SA 3.0",
+          "source_url": "https://commons.wikimedia.org/wiki/File:Tompkins_Square_Park_Central_Knoll.jpg"
+        }
+      ]
+    },
+    {
+      "slug": "st-marks-church-in-the-bowery",
+      "name": "St. Mark's Church in-the-Bowery",
+      "kind": "historic-site",
+      "town": "East Village",
+      "state": "New York",
+      "county": "Manhattan",
+      "address": "131 East 10th Street (at Second Avenue), New York, NY 10003",
+      "official_url": "https://stmarksbowery.org/",
+      "summary": "Completed in 1799 on the site of Peter Stuyvesant's family chapel, built around 1660; Stuyvesant is buried in a vault beneath it. A New York City Landmark and National Register-listed site, it's the city's oldest site of continuous religious practice and home to the Poetry Project and Danspace.",
+      "status": "open",
+      "photos": [
+        {
+          "src": "/photos/ny/manhattan/east-village/st-marks-church.jpg",
+          "thumb": "/photos/ny/manhattan/east-village/st-marks-church_thumb.jpg",
+          "title": "St. Mark's Church in-the-Bowery",
+          "description": "The church's exterior at Second Avenue and East 10th Street.",
+          "author": "CaptJayRuffins",
+          "license": "CC BY 4.0",
+          "source_url": "https://commons.wikimedia.org/wiki/File:St_Mark%27s_Church_in-the-Bowery20230412_174245.jpg"
+        }
+      ]
+    },
+    {
+      "slug": "la-mama-experimental-theatre-club",
+      "name": "La MaMa Experimental Theatre Club",
+      "kind": "theater",
+      "town": "East Village",
+      "state": "New York",
+      "county": "Manhattan",
+      "address": "66 & 74 East 4th Street, New York, NY 10003",
+      "official_url": "https://www.lamama.org/",
+      "summary": "A world-renowned experimental theater founded by Ellen Stewart, a cornerstone of Off-Off-Broadway for over six decades, operating the Ellen Stewart Theatre, Downstairs Theatre, and The Club.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "the-ukrainian-museum",
+      "name": "The Ukrainian Museum",
+      "kind": "museum",
+      "town": "East Village",
+      "state": "New York",
+      "county": "Manhattan",
+      "address": "222 East 6th Street, New York, NY 10003",
+      "official_url": "https://www.theukrainianmuseum.org/",
+      "summary": "A museum in the heart of the East Village's \"Little Ukraine\" preserving the artistic and cultural heritage of Ukraine and its diaspora, marking its 50th anniversary with the exhibition \"A Living Canvas: The Ukrainian Museum at 50.\"",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "veselka",
+      "name": "Veselka",
+      "kind": "restaurant",
+      "town": "East Village",
+      "state": "New York",
+      "county": "Manhattan",
+      "address": "144 Second Avenue, New York, NY 10003",
+      "official_url": "https://veselka.com/",
+      "summary": "A Ukrainian diner founded in 1954 by immigrants Volodymyr and Olha Darmochwal — \"veselka\" means rainbow in Ukrainian — a three-generation family business famous for pierogi and borscht.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "venieros-pasticceria-caffe",
+      "name": "Veniero's Pasticceria & Caffe",
+      "kind": "cafe",
+      "town": "East Village",
+      "state": "New York",
+      "county": "Manhattan",
+      "address": "342 East 11th Street, New York, NY 10003",
+      "official_url": "https://venieros.com/",
+      "summary": "An Italian pastry shop founded in 1894, serving classic Italian pastries, custom cakes, gelato, and espresso for over 130 years.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "mcsorleys-old-ale-house",
+      "name": "McSorley's Old Ale House",
+      "kind": "brewery",
+      "town": "East Village",
+      "state": "New York",
+      "county": "Manhattan",
+      "address": "15 East 7th Street, New York, NY 10003",
+      "official_url": "https://mcsorleysoldalehouse.nyc/",
+      "summary": "One of New York City's longest-operating saloons, serving only its own light and dark ale; first-come, first-served and cash only. Women were not admitted until August 10, 1970, after a federal civil rights case (Seidenberg v. McSorley's) decided that June.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "johns-of-12th-street",
+      "name": "John's of 12th Street",
+      "kind": "restaurant",
+      "town": "East Village",
+      "state": "New York",
+      "county": "Manhattan",
+      "address": "302 East 12th Street, New York, NY 10003",
+      "official_url": "https://www.johnsof12thstreet.com/",
+      "summary": "An old-school Italian restaurant founded in 1908, now in its 117th year and one of the neighborhood's longest-running red-sauce institutions.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "the-bowery-hotel",
+      "name": "The Bowery Hotel",
+      "kind": "hotel",
+      "town": "East Village",
+      "state": "New York",
+      "county": "Manhattan",
+      "address": "335 Bowery (at East 3rd Street), New York, NY 10003",
+      "official_url": "https://theboweryhotel.com/",
+      "summary": "Opened in February 2007, co-founded by hoteliers Eric Goode and Sean MacPherson, with the Italian restaurant Gemma on-site providing room service.",
+      "status": "open",
+      "photos": []
+    }
+  ],
+  "entries": [
+    {
+      "kind": "walk",
+      "name": "Tompkins Square Park",
+      "place_slug": "tompkins-square-park",
+      "note": "A 10.5-acre park at the neighborhood's heart, site of the 1988 riot and the Hare Krishna Tree."
+    },
+    {
+      "kind": "sight",
+      "name": "St. Mark's Church in-the-Bowery",
+      "place_slug": "st-marks-church-in-the-bowery",
+      "note": "The city's oldest site of continuous religious practice, built on the site of Stuyvesant's own chapel."
+    },
+    {
+      "kind": "sight",
+      "name": "La MaMa Experimental Theatre Club",
+      "place_slug": "la-mama-experimental-theatre-club",
+      "note": "Ellen Stewart's Off-Off-Broadway cornerstone, still producing experimental theater after six decades."
+    },
+    {
+      "kind": "sight",
+      "name": "The Ukrainian Museum",
+      "place_slug": "the-ukrainian-museum",
+      "note": "A museum of Ukrainian art and culture in the heart of Little Ukraine."
+    },
+    {
+      "kind": "food",
+      "name": "Veselka",
+      "place_slug": "veselka",
+      "note": "A three-generation Ukrainian diner since 1954, famous for pierogi and borscht."
+    },
+    {
+      "kind": "food",
+      "name": "Veniero's Pasticceria & Caffe",
+      "place_slug": "venieros-pasticceria-caffe",
+      "note": "Italian pastries and espresso from an 1894 East 11th Street institution."
+    },
+    {
+      "kind": "food",
+      "name": "McSorley's Old Ale House",
+      "place_slug": "mcsorleys-old-ale-house",
+      "note": "A cash-only, first-come saloon serving only its own light and dark ale."
+    },
+    {
+      "kind": "food",
+      "name": "John's of 12th Street",
+      "place_slug": "johns-of-12th-street",
+      "note": "A red-sauce Italian institution on East 12th Street since 1908."
+    },
+    {
+      "kind": "stay",
+      "name": "The Bowery Hotel",
+      "place_slug": "the-bowery-hotel",
+      "note": "The verified in-neighborhood hotel, open since 2007 with Gemma restaurant on site."
+    }
+  ]
+}

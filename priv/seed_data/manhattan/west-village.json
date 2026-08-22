@@ -1,0 +1,294 @@
+{
+  "guide": {
+    "slug": "west-village-manhattan-guide",
+    "title": "West Village, Manhattan: Crooked Streets, Stonewall's Legacy",
+    "destination": "West Village, New York",
+    "state": "New York",
+    "county": "Manhattan",
+    "intro": "The West Village's off-grid, angled streets predate Manhattan's 1811 Commissioners' Plan, a legacy of the Dutch hamlet of Noortwyck, where Governor Wouter van Twiller farmed 200 acres starting in the 1630s. The name \"West Village\" itself only emerged during preservation efforts of the 1950s and '60s, coined to distinguish the area west of Seventh Avenue from the part of Greenwich Village around Washington Square. By 1916 it was known as \"Little Bohemia,\" home to small presses, galleries, and experimental theater, and the White Horse Tavern — open since 1880 — drew writers like Dylan Thomas, James Baldwin, and Jack Kerouac through the 1950s and '60s. Its defining moment came on June 28, 1969, when the Stonewall Uprising began at the Stonewall Inn on Christopher Street, a milestone described as the single most important event leading to the modern gay liberation movement.",
+    "sections": [
+      {
+        "heading": "Little Bohemia to Stonewall",
+        "body": "The West Village's bohemian identity dates to 1916, when the area earned the nickname \"Little Bohemia\" for its concentration of small presses, art galleries, and experimental theater. That creative undercurrent carried through the mid-20th century at spots like the White Horse Tavern, open since 1880, where Dylan Thomas, James Baldwin, and Jack Kerouac drank in the 1950s and '60s. The neighborhood's most consequential moment came on June 28, 1969, when police raided the Stonewall Inn at 53 Christopher Street and the resulting spontaneous protests sparked the modern LGBTQ+ rights movement. The site was designated a National Monument in 2016 — the first in the U.S. dedicated to LGBTQ+ rights — and the Stonewall National Monument Visitor Center opened in Christopher Park on June 28, 2024, the uprising's 55th anniversary. Much of the West Village also falls within the Greenwich Village Historic District, designated by the city on April 29, 1969 and, at over 50 blocks, its largest historic district for four decades until extensions in 2006 and 2010."
+      },
+      {
+        "heading": "Getting there by subway",
+        "body": "The West Village is well covered on its edges: the A/C/E and L trains stop at 14th Street-Eighth Avenue, the 1/2/3 at 14th Street (Seventh Avenue), the 1 (with the 2 late nights) at Christopher Street-Stonewall and at Houston Street, and the A/B/C/D/E/F/M hub at West Fourth Street-Washington Square. PATH trains to New Jersey also stop at Christopher Street and Ninth Street. Interior blocks are a five-to-ten-minute walk from any of these stations."
+      }
+    ],
+    "faq": [
+      {
+        "question": "How do I get to the West Village by subway?",
+        "answer": "The A/C/E/L converge at 14th Street-Eighth Avenue, the 1/2/3 stop at 14th Street (Seventh Ave), the 1 (with the 2 late nights) serves Christopher Street-Stonewall and Houston Street, and the A/B/C/D/E/F/M meet at West Fourth Street-Washington Square. Interior blocks are a five-to-ten-minute walk from any of these."
+      },
+      {
+        "question": "Where does the name West Village come from?",
+        "answer": "It emerged during preservation efforts of the 1950s and '60s to distinguish the area west of Seventh Avenue — with its off-grid streets predating the 1811 Commissioners' Plan — from the part of Greenwich Village around Washington Square."
+      },
+      {
+        "question": "Can I visit the Stonewall National Monument?",
+        "answer": "Yes — Christopher Park, across from the Stonewall Inn at 53 Christopher Street, is open to the public with tours, events, and a photo exhibit on the park fence, and the Stonewall National Monument Visitor Center opened there on June 28, 2024."
+      },
+      {
+        "question": "What is \"Little Bohemia\"?",
+        "answer": "It's the nickname the West Village earned starting in 1916 for its concentration of small presses, galleries, and experimental theater, a bohemian identity that carried through the White Horse Tavern's literary regulars in the 1950s and '60s."
+      },
+      {
+        "question": "Where can I stay in the West Village?",
+        "answer": "Incentra Village House, a 12-room guest house in two 1841 landmark townhouses, and the West Village Eurohostel — the former Jane Hotel, in a 1908 building that once housed Titanic survivors — are the two verified in-neighborhood options."
+      }
+    ],
+    "photos": [
+      {
+        "src": "/photos/ny/manhattan/west-village/stonewall-inn.jpg",
+        "thumb": "/photos/ny/manhattan/west-village/stonewall-inn_thumb.jpg",
+        "title": "Stonewall Inn",
+        "description": "The Christopher Street facade of the Stonewall Inn.",
+        "author": "Antigng",
+        "license": "CC BY-SA 4.0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Stonewall_Inn,_April_2019.jpg"
+      },
+      {
+        "src": "/photos/ny/manhattan/west-village/grove-and-bedford.jpg",
+        "thumb": "/photos/ny/manhattan/west-village/grove-and-bedford_thumb.jpg",
+        "title": "Grove and Bedford Streets",
+        "description": "The bent-street corner at 90 Bedford Street.",
+        "author": "Rob Young from United Kingdom",
+        "license": "CC BY 2.0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Friends_Apartment,_New_York_(869395563).jpg"
+      },
+      {
+        "src": "/photos/ny/manhattan/west-village/cherry-lane-theatre.jpg",
+        "thumb": "/photos/ny/manhattan/west-village/cherry-lane-theatre_thumb.jpg",
+        "title": "Cherry Lane Theatre",
+        "description": "The Commerce Street entrance of New York's oldest Off-Broadway theater.",
+        "author": "PortableNYCTours",
+        "license": "CC BY-SA 4.0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Cherry_Lane_Theatre_07.jpg"
+      },
+      {
+        "src": "/photos/ny/manhattan/west-village/hudson-river-park-pier-45.jpg",
+        "thumb": "/photos/ny/manhattan/west-village/hudson-river-park-pier-45_thumb.jpg",
+        "title": "Hudson River Park at Pier 45",
+        "description": "Looking north along the Hudson from Pier 45 at West and Christopher Streets.",
+        "author": "Tdorante10",
+        "license": "CC BY-SA 4.0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Hudson_River_Park_td_(2019-04-24)_087_-_Pier_45.jpg"
+      }
+    ]
+  },
+  "places": [
+    {
+      "slug": "stonewall-national-monument",
+      "name": "Stonewall National Monument",
+      "kind": "historic-site",
+      "town": "West Village",
+      "state": "New York",
+      "county": "Manhattan",
+      "address": "Christopher Park, Christopher Street at Seventh Avenue South (opposite the Stonewall Inn, 53 Christopher St), New York, NY",
+      "official_url": "https://www.nps.gov/ston/index.htm",
+      "summary": "Designated in 2016 as the first U.S. National Monument dedicated to LGBTQ+ rights, commemorating the June 28, 1969 Stonewall Uprising. The Stonewall National Monument Visitor Center opened in Christopher Park on June 28, 2024, and the site offers tours, events, and a photo exhibit on the park fence.",
+      "status": "open",
+      "photos": [
+        {
+          "src": "/photos/ny/manhattan/west-village/stonewall-inn.jpg",
+          "thumb": "/photos/ny/manhattan/west-village/stonewall-inn_thumb.jpg",
+          "title": "Stonewall Inn",
+          "description": "The Christopher Street facade of the Stonewall Inn.",
+          "author": "Antigng",
+          "license": "CC BY-SA 4.0",
+          "source_url": "https://commons.wikimedia.org/wiki/File:Stonewall_Inn,_April_2019.jpg"
+        }
+      ]
+    },
+    {
+      "slug": "whitney-museum-of-american-art",
+      "name": "Whitney Museum of American Art",
+      "kind": "museum",
+      "town": "West Village",
+      "state": "New York",
+      "county": "Manhattan",
+      "address": "99 Gansevoort Street, New York, NY 10014",
+      "official_url": "https://whitney.org/visit",
+      "summary": "An American art museum at the Hudson River edge of the West Village/Meatpacking border; adult admission is $30, free for ages 25 and under.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "cherry-lane-theatre",
+      "name": "Cherry Lane Theatre",
+      "kind": "theater",
+      "town": "West Village",
+      "state": "New York",
+      "county": "Manhattan",
+      "address": "38 Commerce Street, New York, NY 10014",
+      "official_url": "https://www.cherrylanetheatre.org",
+      "summary": "Established in 1923 and billed as New York's oldest Off-Broadway theater — \"The Birthplace of Off-Broadway.\"",
+      "status": "open",
+      "photos": [
+        {
+          "src": "/photos/ny/manhattan/west-village/cherry-lane-theatre.jpg",
+          "thumb": "/photos/ny/manhattan/west-village/cherry-lane-theatre_thumb.jpg",
+          "title": "Cherry Lane Theatre",
+          "description": "The Commerce Street entrance of New York's oldest Off-Broadway theater.",
+          "author": "PortableNYCTours",
+          "license": "CC BY-SA 4.0",
+          "source_url": "https://commons.wikimedia.org/wiki/File:Cherry_Lane_Theatre_07.jpg"
+        }
+      ]
+    },
+    {
+      "slug": "village-vanguard",
+      "name": "Village Vanguard",
+      "kind": "attraction",
+      "town": "West Village",
+      "state": "New York",
+      "county": "Manhattan",
+      "address": "178 Seventh Avenue South, New York, NY 10014",
+      "official_url": "https://villagevanguard.com",
+      "summary": "Operating since 1935 and recognized as New York City's oldest jazz club, still bringing in a rotating lineup of touring and resident acts.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "via-carota",
+      "name": "Via Carota",
+      "kind": "restaurant",
+      "town": "West Village",
+      "state": "New York",
+      "county": "Manhattan",
+      "address": "51 Grove Street, New York, NY",
+      "official_url": "https://viacarota.com",
+      "summary": "An Italian osteria of seasonal home-style cooking by Rita Sodi and Jody Williams, James Beard Award winners (Best Chefs, New York City, 2019), serving continuously without a break between services.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "buvette",
+      "name": "Buvette",
+      "kind": "cafe",
+      "town": "West Village",
+      "state": "New York",
+      "county": "Manhattan",
+      "address": "42 Grove Street, New York, NY",
+      "official_url": "https://ilovebuvette.com",
+      "summary": "An old-world all-day cafe opened in early 2011 by chef Jody Williams, serving from morning croissants to late-night coq au vin and digestifs.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "lartusi",
+      "name": "L'Artusi",
+      "kind": "restaurant",
+      "town": "West Village",
+      "state": "New York",
+      "county": "Manhattan",
+      "address": "228 West 10th Street, New York, NY 10014",
+      "official_url": "https://www.lartusi.com",
+      "summary": "A modern Italian restaurant focused on handmade pasta and seasonal ingredients, which opened the L'Artusi Supper Club at 105 Christopher Street in early 2024.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "corner-bistro",
+      "name": "Corner Bistro",
+      "kind": "restaurant",
+      "town": "West Village",
+      "state": "New York",
+      "county": "Manhattan",
+      "address": "331 West 4th Street, New York, NY 10014",
+      "official_url": "https://cornerbistrony.com",
+      "summary": "A cash-only, walk-ins-only neighborhood bar famous for its Bistro Burger, describing itself as \"the last of the bohemian bars in West Greenwich Village.\"",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "incentra-village-house",
+      "name": "Incentra Village House",
+      "kind": "bnb",
+      "town": "West Village",
+      "state": "New York",
+      "county": "Manhattan",
+      "address": "32 8th Avenue, New York, NY 10014",
+      "official_url": "https://incentravillage.com",
+      "summary": "A guest house of 12 studios and suites in two landmark 1841 brick townhouses, inside the Greenwich Village Historic District, in what its site calls \"the traditional center of gay life in New York City.\"",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "west-village-eurohostel",
+      "name": "West Village Eurohostel",
+      "kind": "hotel",
+      "town": "West Village",
+      "state": "New York",
+      "county": "Manhattan",
+      "address": "113 Jane Street, New York, NY 10014",
+      "official_url": "https://www.westvillageeurohostel.com/",
+      "summary": "European-style budget lodging in the historic Jane Street building, originally an early-1900s boarding house for sailors that housed Titanic crew survivors in 1912; formerly operated as The Jane Hotel, it now offers bunk rooms and single rooms with shared bathrooms.",
+      "status": "open",
+      "photos": []
+    }
+  ],
+  "entries": [
+    {
+      "kind": "sight",
+      "name": "Stonewall National Monument",
+      "place_slug": "stonewall-national-monument",
+      "note": "The first U.S. National Monument for LGBTQ+ rights, centered on Christopher Park across from the Stonewall Inn."
+    },
+    {
+      "kind": "sight",
+      "name": "Whitney Museum of American Art",
+      "place_slug": "whitney-museum-of-american-art",
+      "note": "American art on the Hudson River edge of the West Village, with rotating major exhibitions."
+    },
+    {
+      "kind": "sight",
+      "name": "Cherry Lane Theatre",
+      "place_slug": "cherry-lane-theatre",
+      "note": "New York's oldest Off-Broadway theater, still staging new work since 1923."
+    },
+    {
+      "kind": "sight",
+      "name": "Village Vanguard",
+      "place_slug": "village-vanguard",
+      "note": "New York City's oldest jazz club, operating on Seventh Avenue South since 1935."
+    },
+    {
+      "kind": "food",
+      "name": "Via Carota",
+      "place_slug": "via-carota",
+      "note": "Rita Sodi and Jody Williams's seasonal Italian osteria on Grove Street."
+    },
+    {
+      "kind": "food",
+      "name": "Buvette",
+      "place_slug": "buvette",
+      "note": "An all-day Grove Street cafe running from morning pastries to late-night digestifs."
+    },
+    {
+      "kind": "food",
+      "name": "L'Artusi",
+      "place_slug": "lartusi",
+      "note": "Handmade pasta and seasonal Italian cooking on West 10th Street."
+    },
+    {
+      "kind": "food",
+      "name": "Corner Bistro",
+      "place_slug": "corner-bistro",
+      "note": "A cash-only neighborhood bar famous for its Bistro Burger."
+    },
+    {
+      "kind": "stay",
+      "name": "Incentra Village House",
+      "place_slug": "incentra-village-house",
+      "note": "A 12-room guest house in two 1841 landmark townhouses."
+    },
+    {
+      "kind": "stay",
+      "name": "West Village Eurohostel",
+      "place_slug": "west-village-eurohostel",
+      "note": "Budget bunk and single rooms in the historic Jane Street building."
+    }
+  ]
+}

@@ -1,0 +1,293 @@
+{
+  "guide": {
+    "slug": "flatiron-district-manhattan-guide",
+    "title": "Flatiron District, Manhattan: A Skyscraper Named the Area",
+    "destination": "Flatiron District, New York",
+    "state": "New York",
+    "county": "Manhattan",
+    "intro": "The Flatiron District takes its name from the triangular Flatiron Building at 23rd Street and Fifth Avenue, though the neighborhood name itself only dates from around 1985, coined by real estate agents as the area took on a more residential, restaurant-filled character. Before that it was known successively as the Toy District — the American International Toy Fair began there in 1903 — then the \"Photo District\" once cheap rents drew photographers' studios, and by the 2000s a core of tech-heavy \"Silicon Alley.\" Much of the neighborhood also sits within the Ladies' Mile Historic District, the remains of Manhattan's premier late-19th-century luxury shopping district that thrived between the Civil War and World War I. At its center, Madison Square Park has been open to the public since May 10, 1847, and from 1876 to 1882 it displayed the torch and arm of the Statue of Liberty to raise funds for the statue's pedestal.",
+    "sections": [
+      {
+        "heading": "The Building That Named a District",
+        "body": "The Flatiron Building — originally the Fuller Building — was completed in October 1902 to a design by Daniel Burnham; its narrow triangular footprint, wedged where Fifth Avenue crosses Broadway at 23rd Street, made it an instant landmark and eventually gave the whole district its name. It was designated a New York City landmark in 1966 and a National Historic Landmark in 1989, and as of 2026 its upper floors are being converted into 38 condominiums. Just north, Madison Square saw its own record-setting tower: the Metropolitan Life Insurance Company Tower, completed in 1909 at 700 feet, was the world's tallest building until the Woolworth Building surpassed it in 1913 — it now operates as the New York EDITION hotel. And in Madison Square Park itself, Shake Shack began as a hot dog cart in 2001 before the city's parks department added a permanent kiosk in July 2004, launching what's now a global chain from a single spot on the lawn."
+      },
+      {
+        "heading": "Getting there by subway",
+        "body": "The R/W trains at 23rd Street on the Broadway line are the district's front door — one exit comes up at the southeast corner of 23rd Street and Fifth Avenue, directly outside the Flatiron Building. Parallel 23rd Street stations serve the F/M (Sixth Avenue), the 6 at 23rd Street-Baruch College (Park Avenue South), the 1 (Seventh Avenue), and PATH trains, all a short crosstown walk from the Flatiron Building."
+      }
+    ],
+    "faq": [
+      {
+        "question": "How do I get to the Flatiron District by subway?",
+        "answer": "Take the R/W to 23rd Street, with an exit at the southeast corner of 23rd Street and Fifth Avenue right by the Flatiron Building. The F/M, 6 (23rd Street-Baruch College), 1, and PATH all have parallel 23rd Street stops a short crosstown walk away."
+      },
+      {
+        "question": "When was the Flatiron Building completed, and can you go inside?",
+        "answer": "It was completed in October 1902 to Daniel Burnham's design. As of 2026 its upper floors are being converted into 38 condominiums, so the building is best appreciated from its exterior and surrounding plazas."
+      },
+      {
+        "question": "What was in Madison Square Park before it was a park?",
+        "answer": "The park has been open to the public since May 10, 1847. From 1876 to 1882 it displayed the torch and arm of the Statue of Liberty to raise funds for the statue's pedestal, and the first Madison Square Garden stood just northeast of the park until 1925."
+      },
+      {
+        "question": "Where did Shake Shack come from?",
+        "answer": "It began as a hot dog cart in Madison Square Park in 2001; the city added a permanent kiosk in the park in July 2004, and it grew from there into a global chain."
+      },
+      {
+        "question": "Where can I stay in the Flatiron District?",
+        "answer": "The New York EDITION, a 271-room hotel inside the 1909 Metropolitan Life clock tower on Madison Square Park, is the verified in-neighborhood option, with The Clocktower restaurant on site."
+      }
+    ],
+    "photos": [
+      {
+        "src": "/photos/ny/manhattan/flatiron-district/flatiron-building.jpg",
+        "thumb": "/photos/ny/manhattan/flatiron-district/flatiron-building_thumb.jpg",
+        "title": "Flatiron Building",
+        "description": "The triangular Flatiron Building seen from Fifth Avenue.",
+        "author": "Christian David",
+        "license": "CC BY-SA 4.0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Flatiron_Building,_Fifth_Avenue,_Manhattan,_New_York.jpg"
+      },
+      {
+        "src": "/photos/ny/manhattan/flatiron-district/madison-square-park.jpg",
+        "thumb": "/photos/ny/manhattan/flatiron-district/madison-square-park_thumb.jpg",
+        "title": "Madison Square Park",
+        "description": "The William Seward statue at the park's southwest corner.",
+        "author": "Rhododendrites",
+        "license": "CC BY-SA 4.0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Seward_statue_in_Madison_Square_Park_(00284).jpg"
+      },
+      {
+        "src": "/photos/ny/manhattan/flatiron-district/met-life-clocktower.jpg",
+        "thumb": "/photos/ny/manhattan/flatiron-district/met-life-clocktower_thumb.jpg",
+        "title": "Met Life Tower Clock",
+        "description": "A close view of the Metropolitan Life Insurance Company Tower's clock face.",
+        "author": "Ryan Schwark",
+        "license": "CC0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Clock_of_the_Metropolitan_Life_Insurance_Company_Tower.jpg"
+      }
+    ]
+  },
+  "places": [
+    {
+      "slug": "madison-square-park",
+      "name": "Madison Square Park",
+      "kind": "park",
+      "town": "Flatiron District",
+      "state": "New York",
+      "county": "Manhattan",
+      "address": "Bordered by Fifth Ave & Madison Ave and 23rd St & 26th St, New York, NY",
+      "official_url": "https://madisonsquarepark.org/",
+      "summary": "A 6.2-acre park opened May 10, 1847, that hosted the Statue of Liberty's torch and arm from 1876 to 1882 for pedestal fundraising. Managed today by the Madison Square Park Conservancy with rotating public art installations.",
+      "status": "open",
+      "photos": [
+        {
+          "src": "/photos/ny/manhattan/flatiron-district/madison-square-park.jpg",
+          "thumb": "/photos/ny/manhattan/flatiron-district/madison-square-park_thumb.jpg",
+          "title": "Madison Square Park",
+          "description": "The William Seward statue at the park's southwest corner.",
+          "author": "Rhododendrites",
+          "license": "CC BY-SA 4.0",
+          "source_url": "https://commons.wikimedia.org/wiki/File:Seward_statue_in_Madison_Square_Park_(00284).jpg"
+        }
+      ]
+    },
+    {
+      "slug": "flatiron-building",
+      "name": "Flatiron Building",
+      "kind": "historic-site",
+      "town": "Flatiron District",
+      "state": "New York",
+      "county": "Manhattan",
+      "address": "175 Fifth Avenue, New York, NY",
+      "summary": "A 22-story, 307-foot steel-framed triangular skyscraper completed in October 1902 by Daniel Burnham, a New York City landmark since 1966 and a National Historic Landmark since 1989. As of 2026 its upper floors are being converted into 38 condominiums.",
+      "status": "open",
+      "photos": [
+        {
+          "src": "/photos/ny/manhattan/flatiron-district/flatiron-building.jpg",
+          "thumb": "/photos/ny/manhattan/flatiron-district/flatiron-building_thumb.jpg",
+          "title": "Flatiron Building",
+          "description": "The triangular Flatiron Building seen from Fifth Avenue.",
+          "author": "Christian David",
+          "license": "CC BY-SA 4.0",
+          "source_url": "https://commons.wikimedia.org/wiki/File:Flatiron_Building,_Fifth_Avenue,_Manhattan,_New_York.jpg"
+        }
+      ]
+    },
+    {
+      "slug": "theodore-roosevelt-birthplace-national-historic-site",
+      "name": "Theodore Roosevelt Birthplace National Historic Site",
+      "kind": "historic-site",
+      "town": "Flatiron District",
+      "state": "New York",
+      "county": "Manhattan",
+      "address": "28 East 20th Street, New York, NY 10003",
+      "official_url": "https://www.nps.gov/thrb/index.htm",
+      "summary": "The reconstructed boyhood home of the 26th U.S. President, run by the National Park Service; open Wednesday through Sunday, 10 a.m. to 5 p.m., with period rooms seen by guided tour.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "metropolitan-life-insurance-company-tower",
+      "name": "Metropolitan Life Insurance Company Tower",
+      "kind": "historic-site",
+      "town": "Flatiron District",
+      "state": "New York",
+      "county": "Manhattan",
+      "address": "1 Madison Avenue (tower entrance at 5 Madison Avenue), New York, NY",
+      "summary": "A 700-foot campanile completed in 1909 that was the world's tallest building until 1913; a National Historic Landmark since 1978 and a New York City landmark since 1989. It now operates as the New York EDITION hotel, with The Clocktower restaurant on site.",
+      "status": "open",
+      "photos": [
+        {
+          "src": "/photos/ny/manhattan/flatiron-district/met-life-clocktower.jpg",
+          "thumb": "/photos/ny/manhattan/flatiron-district/met-life-clocktower_thumb.jpg",
+          "title": "Met Life Tower Clock",
+          "description": "A close view of the Metropolitan Life Insurance Company Tower's clock face.",
+          "author": "Ryan Schwark",
+          "license": "CC0",
+          "source_url": "https://commons.wikimedia.org/wiki/File:Clock_of_the_Metropolitan_Life_Insurance_Company_Tower.jpg"
+        }
+      ]
+    },
+    {
+      "slug": "museum-of-sex",
+      "name": "Museum of Sex",
+      "kind": "museum",
+      "town": "Flatiron District",
+      "state": "New York",
+      "county": "Manhattan",
+      "address": "233 Fifth Avenue at 27th Street, New York, NY 10016",
+      "official_url": "https://www.museumofsex.com/",
+      "summary": "A museum of the history and culture of human sexuality, open daily (Monday-Thursday 1-10 p.m., Friday-Saturday to midnight, Sunday to 10 p.m.), which opened a second location in Miami in October 2024.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "eleven-madison-park",
+      "name": "Eleven Madison Park",
+      "kind": "restaurant",
+      "town": "Flatiron District",
+      "state": "New York",
+      "county": "Manhattan",
+      "address": "11 Madison Avenue, New York, NY 10010",
+      "official_url": "https://www.elevenmadisonpark.com/",
+      "summary": "Daniel Humm's three-Michelin-star fine-dining flagship overlooking Madison Square Park; since an August 2025 change, its tasting menu offers meat and fish alongside its vegan-based courses.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "gramercy-tavern",
+      "name": "Gramercy Tavern",
+      "kind": "restaurant",
+      "town": "Flatiron District",
+      "state": "New York",
+      "county": "Manhattan",
+      "address": "42 East 20th Street, New York, NY",
+      "official_url": "https://www.gramercytavern.com/",
+      "summary": "Opened in July 1994 by Danny Meyer and co-founder Tom Colicchio; a James Beard Outstanding Restaurant (2008) with executive chef Michael Anthony, offering both The Dining Room and the more casual Tavern.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "rezdora",
+      "name": "Rezdôra",
+      "kind": "restaurant",
+      "town": "Flatiron District",
+      "state": "New York",
+      "county": "Manhattan",
+      "address": "27 East 20th Street, New York, NY 10003",
+      "official_url": "https://www.rezdora.nyc/",
+      "summary": "An acclaimed Emilia-Romagna-style handmade-pasta restaurant on the same Flatiron block as the Roosevelt Birthplace.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "cosme",
+      "name": "Cosme",
+      "kind": "restaurant",
+      "town": "Flatiron District",
+      "state": "New York",
+      "county": "Manhattan",
+      "address": "35 East 21st Street, New York, NY 10010",
+      "official_url": "https://www.cosmenyc.com/",
+      "summary": "A contemporary Mexican restaurant from chef Enrique Olvera, known for its artisanal-spirits beverage program.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "the-new-york-edition",
+      "name": "The New York EDITION",
+      "kind": "hotel",
+      "town": "Flatiron District",
+      "state": "New York",
+      "county": "Manhattan",
+      "address": "5 Madison Avenue, New York, NY 10010",
+      "official_url": "https://www.editionhotels.com/new-york/",
+      "summary": "A 271-room Ian Schrager-designed luxury hotel inside the 1909 Metropolitan Life clock tower on Madison Square Park, home to The Clocktower restaurant.",
+      "status": "open",
+      "photos": []
+    }
+  ],
+  "entries": [
+    {
+      "kind": "walk",
+      "name": "Madison Square Park",
+      "place_slug": "madison-square-park",
+      "note": "A 6.2-acre park open since 1847, once home to the Statue of Liberty's torch and arm."
+    },
+    {
+      "kind": "sight",
+      "name": "Flatiron Building",
+      "place_slug": "flatiron-building",
+      "note": "The 1902 triangular skyscraper that gave the whole district its name."
+    },
+    {
+      "kind": "sight",
+      "name": "Theodore Roosevelt Birthplace National Historic Site",
+      "place_slug": "theodore-roosevelt-birthplace-national-historic-site",
+      "note": "The reconstructed boyhood home of the 26th president, run by the National Park Service."
+    },
+    {
+      "kind": "sight",
+      "name": "Metropolitan Life Insurance Company Tower",
+      "place_slug": "metropolitan-life-insurance-company-tower",
+      "note": "The 1909 campanile that was briefly the world's tallest building, now the New York EDITION hotel."
+    },
+    {
+      "kind": "sight",
+      "name": "Museum of Sex",
+      "place_slug": "museum-of-sex",
+      "note": "A museum of human sexuality's history and culture, open daily on Fifth Avenue."
+    },
+    {
+      "kind": "food",
+      "name": "Eleven Madison Park",
+      "place_slug": "eleven-madison-park",
+      "note": "Daniel Humm's three-Michelin-star tasting-menu flagship overlooking the park."
+    },
+    {
+      "kind": "food",
+      "name": "Gramercy Tavern",
+      "place_slug": "gramercy-tavern",
+      "note": "Danny Meyer and Tom Colicchio's 1994 restaurant, still a James Beard Outstanding Restaurant honoree."
+    },
+    {
+      "kind": "food",
+      "name": "Rezdôra",
+      "place_slug": "rezdora",
+      "note": "Handmade Emilia-Romagna pasta on the same block as the Roosevelt Birthplace."
+    },
+    {
+      "kind": "food",
+      "name": "Cosme",
+      "place_slug": "cosme",
+      "note": "Enrique Olvera's contemporary Mexican restaurant, known for its spirits program."
+    },
+    {
+      "kind": "stay",
+      "name": "The New York EDITION",
+      "place_slug": "the-new-york-edition",
+      "note": "A 271-room hotel inside the 1909 Met Life clock tower on Madison Square Park."
+    }
+  ]
+}

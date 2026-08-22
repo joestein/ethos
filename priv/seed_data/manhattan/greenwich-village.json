@@ -1,0 +1,294 @@
+{
+  "guide": {
+    "slug": "greenwich-village-manhattan-guide",
+    "title": "Greenwich Village, Manhattan: Bohemia Since the 1910s",
+    "destination": "Greenwich Village, New York",
+    "state": "New York",
+    "county": "Manhattan",
+    "intro": "Greenwich Village's name comes from the Dutch Groenwijck, or \"Green District\" — the earliest written reference to \"Greenwich\" appears in a 1696 will, and the village shows up in city records by 1713. It began as a rural hamlet the Dutch called Noortwyck, and in 1644 eleven Dutch African settlers were granted \"half freedoms\" here after what's described as the first Black legal protest in America, receiving land in what became known as the \"Land of the Blacks.\" An 1822 yellow fever epidemic sent Manhattan residents fleeing to the Village's healthier air; many stayed, and by 1850 the growing city had fully absorbed it. What followed was a century as America's bohemian capital — painters at the Tenth Street Studio Building from 1857, the Beat Generation, the 1960s folk revival, and, on June 28, 1969, the Stonewall uprising a few blocks from Washington Square, which sparked the modern LGBTQ+ rights movement.",
+    "sections": [
+      {
+        "heading": "A Century of Bohemia",
+        "body": "Greenwich Village's reputation as an artistic haven took root at the Tenth Street Studio Building starting in 1857, drawing painters like Winslow Homer. It deepened through the 20th century: the Beat Generation gathered here in the 1950s, the 1960s folk revival centered on venues like Gerde's Folk City, The Bitter End, and The Gaslight Cafe — where Bob Dylan and Joni Mitchell performed — and the Off-Off-Broadway movement was born in coffeehouses like Caffe Cino starting in 1958. The defining moment came on June 28, 1969, when the Stonewall uprising erupted at the Stonewall Inn on Christopher Street after a police raid, sparking the modern LGBTQ+ rights movement; the site became the first U.S. National Monument dedicated to LGBTQ+ rights in 2016, and its visitor center opened on the uprising's 55th anniversary in 2024. Just north, Washington Square Park has its own buried history — the square was a potter's field from 1797 to 1825, with more than 20,000 bodies still believed to lie beneath it, before Greek Revival rowhouses built around 1832 made it fashionable."
+      },
+      {
+        "heading": "Getting there by subway",
+        "body": "The A, C, E, B, D, F, and M trains converge at West Fourth Street-Washington Square, a major transfer point between the IND Sixth and Eighth Avenue lines (B and M run weekdays only; C runs all times except late nights). The 1 train, with the 2 late nights, stops at Christopher Street-Stonewall on Seventh Avenue South. Between the two stations, nearly every corner of the Village is a short walk from a subway entrance."
+      }
+    ],
+    "faq": [
+      {
+        "question": "How do I get to Greenwich Village by subway?",
+        "answer": "The A/C/E/B/D/F/M trains converge at West Fourth Street-Washington Square, and the 1 (with the 2 late nights) stops at Christopher Street-Stonewall on Seventh Avenue South — between the two, most of the Village is a short walk from a station."
+      },
+      {
+        "question": "Where does the name Greenwich Village come from?",
+        "answer": "It comes from the Dutch Groenwijck, meaning \"Green District.\" The earliest written reference to \"Greenwich\" is a 1696 will, and the village appears in city records by 1713."
+      },
+      {
+        "question": "What happened at Washington Square Park before it was a park?",
+        "answer": "From 1797 to 1825 the site was a potter's field — an estimated 10,000 to 22,000 bodies were buried there, and more than 20,000 are believed to remain beneath the park today. Greek Revival rowhouses built around 1832 made the square fashionable afterward."
+      },
+      {
+        "question": "Why is Stonewall significant to Greenwich Village's history?",
+        "answer": "On June 28, 1969, spontaneous protests against a police raid at the Stonewall Inn on Christopher Street sparked the modern LGBTQ+ rights movement. The site became the first U.S. National Monument dedicated to LGBTQ+ rights in 2016, with a visitor center opening in 2024."
+      },
+      {
+        "question": "Where can I stay near Washington Square?",
+        "answer": "The Washington Square Hotel, open since 1902 on Waverly Place, sits right on the square; the Marlton Hotel, a few blocks away on West 8th Street, is another boutique option."
+      }
+    ],
+    "photos": [
+      {
+        "src": "/photos/ny/manhattan/greenwich-village/washington-square-arch.jpg",
+        "thumb": "/photos/ny/manhattan/greenwich-village/washington-square-arch_thumb.jpg",
+        "title": "Washington Square Arch",
+        "description": "A frontal view of Stanford White's 1892 marble arch at the foot of Fifth Avenue.",
+        "author": "Kidfly182",
+        "license": "CC BY-SA 4.0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Washington_Square_Arch_September_2022.jpg"
+      },
+      {
+        "src": "/photos/ny/manhattan/greenwich-village/washington-square-park.jpg",
+        "thumb": "/photos/ny/manhattan/greenwich-village/washington-square-park_thumb.jpg",
+        "title": "Washington Square Park",
+        "description": "The fountain plaza and surrounding park on a busy day.",
+        "author": "ajay_suresh",
+        "license": "CC BY 2.0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Washington_Square_Park_(51659533217).jpg"
+      },
+      {
+        "src": "/photos/ny/manhattan/greenwich-village/jefferson-market-library.jpg",
+        "thumb": "/photos/ny/manhattan/greenwich-village/jefferson-market-library_thumb.jpg",
+        "title": "Jefferson Market Library",
+        "description": "The Victorian Gothic clock tower of the former courthouse, now a working NYPL branch.",
+        "author": "wctaiwan",
+        "license": "CC BY-SA 4.0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Jefferson_Market_Library_Nov_2022.jpg"
+      },
+      {
+        "src": "/photos/ny/manhattan/greenwich-village/comedy-cellar.jpg",
+        "thumb": "/photos/ny/manhattan/greenwich-village/comedy-cellar_thumb.jpg",
+        "title": "Comedy Cellar",
+        "description": "The MacDougal Street entrance to the Comedy Cellar.",
+        "author": "Jim.henderson",
+        "license": "CC BY-SA 4.0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Comedy_Cellar_cp_2023_jeh.jpg"
+      }
+    ]
+  },
+  "places": [
+    {
+      "slug": "washington-square-park",
+      "name": "Washington Square Park",
+      "kind": "park",
+      "town": "Greenwich Village",
+      "state": "New York",
+      "county": "Manhattan",
+      "address": "Washington Square (foot of Fifth Avenue), bounded by Washington Square North/East/South/West, New York, NY",
+      "official_url": "https://www.nycgovparks.org/parks/washington-square-park",
+      "summary": "A 9.75-acre park whose 77-foot marble arch — erected 1892, designed by Stanford White, modeled on Paris's Arc de Triomphe — commemorates the centennial of George Washington's inauguration. The site was a potter's field from 1797 to 1825, and more than 20,000 burials are believed to remain beneath it.",
+      "status": "open",
+      "photos": [
+        {
+          "src": "/photos/ny/manhattan/greenwich-village/washington-square-arch.jpg",
+          "thumb": "/photos/ny/manhattan/greenwich-village/washington-square-arch_thumb.jpg",
+          "title": "Washington Square Arch",
+          "description": "A frontal view of Stanford White's 1892 marble arch at the foot of Fifth Avenue.",
+          "author": "Kidfly182",
+          "license": "CC BY-SA 4.0",
+          "source_url": "https://commons.wikimedia.org/wiki/File:Washington_Square_Arch_September_2022.jpg"
+        },
+        {
+          "src": "/photos/ny/manhattan/greenwich-village/washington-square-park.jpg",
+          "thumb": "/photos/ny/manhattan/greenwich-village/washington-square-park_thumb.jpg",
+          "title": "Washington Square Park",
+          "description": "The fountain plaza and surrounding park on a busy day.",
+          "author": "ajay_suresh",
+          "license": "CC BY 2.0",
+          "source_url": "https://commons.wikimedia.org/wiki/File:Washington_Square_Park_(51659533217).jpg"
+        }
+      ]
+    },
+    {
+      "slug": "jefferson-market-library",
+      "name": "Jefferson Market Library",
+      "kind": "historic-site",
+      "town": "Greenwich Village",
+      "state": "New York",
+      "county": "Manhattan",
+      "address": "425 Avenue of the Americas (Sixth Ave), New York, NY 10011",
+      "official_url": "https://www.nypl.org/locations/jefferson-market",
+      "summary": "A working NYPL branch inside the Victorian Gothic former courthouse designed by Frederick Clark Withers, completed 1874-1877; an 1880s architects' poll ranked it among the ten most beautiful buildings in America, and it's topped by a roughly 100-foot firewatcher's clock tower overlooking the Village.",
+      "status": "open",
+      "photos": [
+        {
+          "src": "/photos/ny/manhattan/greenwich-village/jefferson-market-library.jpg",
+          "thumb": "/photos/ny/manhattan/greenwich-village/jefferson-market-library_thumb.jpg",
+          "title": "Jefferson Market Library",
+          "description": "The Victorian Gothic clock tower of the former courthouse, now a working NYPL branch.",
+          "author": "wctaiwan",
+          "license": "CC BY-SA 4.0",
+          "source_url": "https://commons.wikimedia.org/wiki/File:Jefferson_Market_Library_Nov_2022.jpg"
+        }
+      ]
+    },
+    {
+      "slug": "comedy-cellar",
+      "name": "Comedy Cellar",
+      "kind": "theater",
+      "town": "Greenwich Village",
+      "state": "New York",
+      "county": "Manhattan",
+      "address": "MacDougal Street (with Village Underground and Fat Black Pussycat satellite rooms), New York, NY",
+      "official_url": "https://www.comedycellar.com/",
+      "summary": "A stand-up club founded in the early 1980s, known for rotating lineups of top professional comedians and surprise drop-ins; tickets run roughly $10-25 with a two-item minimum.",
+      "status": "open",
+      "photos": [
+        {
+          "src": "/photos/ny/manhattan/greenwich-village/comedy-cellar.jpg",
+          "thumb": "/photos/ny/manhattan/greenwich-village/comedy-cellar_thumb.jpg",
+          "title": "Comedy Cellar",
+          "description": "The MacDougal Street entrance to the Comedy Cellar.",
+          "author": "Jim.henderson",
+          "license": "CC BY-SA 4.0",
+          "source_url": "https://commons.wikimedia.org/wiki/File:Comedy_Cellar_cp_2023_jeh.jpg"
+        }
+      ]
+    },
+    {
+      "slug": "caffe-reggio",
+      "name": "Caffe Reggio",
+      "kind": "cafe",
+      "town": "Greenwich Village",
+      "state": "New York",
+      "county": "Manhattan",
+      "address": "119 MacDougal Street, New York, NY 10012",
+      "official_url": "https://www.caffereggio.com/",
+      "summary": "A Village institution since 1927 that claims to be the first cafe in the United States to serve cappuccino.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "minetta-tavern",
+      "name": "Minetta Tavern",
+      "kind": "restaurant",
+      "town": "Greenwich Village",
+      "state": "New York",
+      "county": "Manhattan",
+      "address": "113 MacDougal Street, New York, NY",
+      "official_url": "https://www.minettatavernny.com/",
+      "summary": "A storied MacDougal Street tavern, today a Keith McNally steakhouse-bistro known for the Black Label Burger.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "johns-of-bleecker-street",
+      "name": "John's of Bleecker Street",
+      "kind": "restaurant",
+      "town": "Greenwich Village",
+      "state": "New York",
+      "county": "Manhattan",
+      "address": "278 Bleecker Street, New York, NY 10014",
+      "official_url": "https://www.johnsofbleecker.com/",
+      "summary": "A coal-fired brick-oven pizzeria at this location since 1929, founded by Italian immigrant Giovanni (John) Sasso; whole pies only, a benchmark for classic New York pizza.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "joes-pizza-greenwich-village",
+      "name": "Joe's Pizza",
+      "kind": "restaurant",
+      "town": "Greenwich Village",
+      "state": "New York",
+      "county": "Manhattan",
+      "address": "7 Carmine Street, New York, NY",
+      "official_url": "https://www.joespizzanyc.com/",
+      "summary": "A Greenwich Village slice-shop institution founded in 1975 by Joe Pozzuoli of Naples, whose family still runs it, renowned for the classic New York slice.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "washington-square-hotel",
+      "name": "Washington Square Hotel",
+      "kind": "hotel",
+      "town": "Greenwich Village",
+      "state": "New York",
+      "county": "Manhattan",
+      "address": "103 Waverly Place, New York, NY 10011",
+      "official_url": "https://www.washingtonsquarehotel.com/",
+      "summary": "A landmark hotel on Washington Square open since 1902, with Art Deco interiors and original artwork; part of the Library Hotel Collection. Its North Square restaurant is temporarily closed for renovation while the hotel operates fully.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "the-marlton-hotel",
+      "name": "The Marlton Hotel",
+      "kind": "hotel",
+      "town": "Greenwich Village",
+      "state": "New York",
+      "county": "Manhattan",
+      "address": "5 West 8th Street (between 5th & 6th Aves), New York, NY 10011",
+      "official_url": "https://www.marltonhotel.com/",
+      "summary": "A boutique hotel steps from Washington Square with complimentary breakfast and a 2025 Cecily Brown mural, \"Ballad of the Dish and the Spoon,\" in its public spaces; the on-site restaurant Chez Nous serves 7 a.m. to 11 p.m. daily.",
+      "status": "open",
+      "photos": []
+    }
+  ],
+  "entries": [
+    {
+      "kind": "walk",
+      "name": "Washington Square Park",
+      "place_slug": "washington-square-park",
+      "note": "A former potter's field turned Village landmark, anchored by Stanford White's 1892 arch."
+    },
+    {
+      "kind": "sight",
+      "name": "Jefferson Market Library",
+      "place_slug": "jefferson-market-library",
+      "note": "A working library inside a Victorian Gothic former courthouse, its clock tower visible across the Village."
+    },
+    {
+      "kind": "sight",
+      "name": "Comedy Cellar",
+      "place_slug": "comedy-cellar",
+      "note": "A MacDougal Street stand-up institution known for surprise drop-in sets."
+    },
+    {
+      "kind": "food",
+      "name": "Caffe Reggio",
+      "place_slug": "caffe-reggio",
+      "note": "A MacDougal Street cafe since 1927 that claims America's first cappuccino."
+    },
+    {
+      "kind": "food",
+      "name": "Minetta Tavern",
+      "place_slug": "minetta-tavern",
+      "note": "Keith McNally's steakhouse-bistro in a storied MacDougal Street tavern space."
+    },
+    {
+      "kind": "food",
+      "name": "John's of Bleecker Street",
+      "place_slug": "johns-of-bleecker-street",
+      "note": "Coal-fired, whole-pies-only pizza at this Bleecker Street address since 1929."
+    },
+    {
+      "kind": "food",
+      "name": "Joe's Pizza",
+      "place_slug": "joes-pizza-greenwich-village",
+      "note": "A Carmine Street slice shop that's been family-run since 1975."
+    },
+    {
+      "kind": "stay",
+      "name": "Washington Square Hotel",
+      "place_slug": "washington-square-hotel",
+      "note": "A landmark hotel right on the square, operating since 1902."
+    },
+    {
+      "kind": "stay",
+      "name": "The Marlton Hotel",
+      "place_slug": "the-marlton-hotel",
+      "note": "A boutique hotel on West 8th Street with a 2025 Cecily Brown mural in its lobby."
+    }
+  ]
+}

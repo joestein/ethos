@@ -1,0 +1,315 @@
+{
+  "guide": {
+    "slug": "soho-manhattan-guide",
+    "title": "SoHo, Manhattan: Cast-Iron Blocks the Artists Saved",
+    "destination": "SoHo, New York",
+    "state": "New York",
+    "county": "Manhattan",
+    "intro": "SoHo takes its name from a 1962 planning study — urban planner Chester Rapkin's 'The South Houston Industrial Area,' known as the Rapkin Report — but the ground beneath it has cycled through identities for three centuries. Colonial-era farmland here was part of a grant to freed Black settlers of the Dutch West India Company, and by the mid-1800s the same streets had become New York's dry-goods and textile hub, filled with masonry and cast-iron loft buildings. When wholesale trade moved out after World War II, the empty factories left an area so desolate New Yorkers nicknamed it Hell's Hundred Acres. Robert Moses wanted to run an elevated expressway straight through it in the 1960s; preservationists and the artists who had quietly moved into the vacant lofts stopped him. A 1971 zoning change legalized their live-work lofts, the 1982 Loft Law secured their tenancy, and in 1973 the city landmarked the SoHo-Cast Iron Historic District — about 500 buildings now called the world's greatest concentration of cast-iron architecture.",
+    "sections": [
+      {
+        "heading": "Hell's Hundred Acres to Historic District",
+        "body": "SoHo's cast-iron blocks were built for commerce, not looks: mid-19th-century dry-goods and textile firms favored the material because cast-iron facades could be prefabricated cheaply and cast to mimic carved stone. After the wholesale trade left following World War II, the abandoned factories sat empty at night and earned the neighborhood its \"Hell's Hundred Acres\" nickname through the 1950s. Robert Moses's proposed Lower Manhattan Expressway would have demolished much of it in the 1960s, but preservationists and the artists already colonizing the lofts defeated the plan. The roughly 26-block, 500-building SoHo-Cast Iron Historic District was designated by the city in 1973, extended in 2010, and named a National Historic Landmark in 1978 — sparing the very buildings Moses meant to level."
+      },
+      {
+        "heading": "Getting there by subway",
+        "body": "SoHo has no station at its core but is ringed by local stops on four different lines: the N/R/W at Prince Street, the 6 at Spring Street (Lexington Avenue line), the C/E at Spring Street (Eighth Avenue line), and the 1 at Houston Street (with the 2 stopping there late nights only). Because these are all local stations, express trains like the A and the daytime Q roll past without stopping — plan around the local lines above."
+      },
+      {
+        "heading": "Loft Law Legacy",
+        "body": "The artists who moved into SoHo's empty manufacturing lofts in the 1960s worked outside the law until a 1971 zoning amendment created \"Joint Live-Work Quarters for Artists,\" formally legalizing artist residency in commercial buildings. The 1982 Loft Law then gave those tenants rent protection and stability. One of the best-preserved examples is 101 Spring Street, the five-story 1870 cast-iron building Donald Judd bought in 1968 as his home and studio — restored and opened for public visits in 2013, it still holds his artwork and furniture exactly as he placed them."
+      }
+    ],
+    "faq": [
+      {
+        "question": "How do I get to SoHo by subway?",
+        "answer": "Take the N/R/W to Prince Street, the 6 to Spring Street (Lexington Ave line), the C/E to Spring Street (Eighth Ave line), or the 1 to Houston Street (2 late nights only) — all local stops ringing the neighborhood's edges."
+      },
+      {
+        "question": "Where does the name SoHo come from?",
+        "answer": "It stands for \"South of Houston Street,\" coined in 1962 by urban planner Chester Rapkin in his study \"The South Houston Industrial Area,\" known as the Rapkin Report."
+      },
+      {
+        "question": "Why does SoHo have so many cast-iron buildings?",
+        "answer": "Mid-19th-century dry-goods and textile merchants built with cast-iron facades because the material could be prefabricated and cast to mimic carved stone cheaply. About 500 of those buildings survive within the SoHo-Cast Iron Historic District, landmarked in 1973 and named a National Historic Landmark in 1978."
+      },
+      {
+        "question": "Can you visit Donald Judd's SoHo house?",
+        "answer": "Yes — 101 Spring Street, the cast-iron building Judd bought in 1968, was restored and opened for guided public visits in June 2013 through the Judd Foundation, with his artwork and furniture in place."
+      },
+      {
+        "question": "Is SoHo still an artists' neighborhood?",
+        "answer": "The 1982 Loft Law gave the artists who colonized SoHo's lofts in the 1960s rent protection and stability, and that live-work legacy is still visible in buildings like 101 Spring Street, even as the neighborhood has become a retail and gallery district."
+      }
+    ],
+    "photos": [
+      {
+        "src": "/photos/ny/manhattan/soho/haughwout-building.jpg",
+        "thumb": "/photos/ny/manhattan/soho/haughwout-building_thumb.jpg",
+        "title": "E.V. Haughwout Building",
+        "description": "The 1857 cast-iron landmark at Broadway and Broome Street, seen from the corner.",
+        "author": "ajay_suresh",
+        "license": "CC BY 2.0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:E.V._Haughwout_Building_(52142427309).jpg"
+      },
+      {
+        "src": "/photos/ny/manhattan/soho/72-greene-street.jpg",
+        "thumb": "/photos/ny/manhattan/soho/72-greene-street_thumb.jpg",
+        "title": "72 Greene Street",
+        "description": "The 1872-73 cast-iron facade of the \"King of Greene Street,\" between Broome and Spring Streets.",
+        "author": "Beyond My Ken",
+        "license": "CC BY-SA 4.0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:72_Greene_Street_from_south.jpg"
+      },
+      {
+        "src": "/photos/ny/manhattan/soho/prince-street-cast-iron.jpg",
+        "thumb": "/photos/ny/manhattan/soho/prince-street-cast-iron_thumb.jpg",
+        "title": "96-104 Prince Street",
+        "description": "A row of cast-iron buildings on Prince Street between Mercer and Greene Streets.",
+        "author": "Beyond My Ken",
+        "license": "CC BY-SA 4.0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:96-104_Prince_Street.jpg"
+      },
+      {
+        "src": "/photos/ny/manhattan/soho/judd-foundation.jpg",
+        "thumb": "/photos/ny/manhattan/soho/judd-foundation_thumb.jpg",
+        "title": "101 Spring Street",
+        "description": "The Judd Foundation's home and museum at 101 Spring Street.",
+        "author": "Elisa.rolle",
+        "license": "CC BY-SA 4.0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:101_Spring_Street_01.JPG"
+      }
+    ]
+  },
+  "places": [
+    {
+      "slug": "judd-foundation-101-spring-street",
+      "name": "Judd Foundation - 101 Spring Street",
+      "kind": "historic-site",
+      "town": "SoHo",
+      "state": "New York",
+      "county": "Manhattan",
+      "address": "101 Spring Street, New York, NY 10012",
+      "official_url": "https://juddfoundation.org/visit/101-spring-street/",
+      "summary": "A five-story 1870 cast-iron building that Donald Judd bought in 1968 as his home and studio, where he first developed his concept of permanent installation. Restored and opened for public visits in June 2013, with his artwork and furniture in place.",
+      "status": "open",
+      "photos": [
+        {
+          "src": "/photos/ny/manhattan/soho/judd-foundation.jpg",
+          "thumb": "/photos/ny/manhattan/soho/judd-foundation_thumb.jpg",
+          "title": "101 Spring Street",
+          "description": "The Judd Foundation's home and museum at 101 Spring Street.",
+          "author": "Elisa.rolle",
+          "license": "CC BY-SA 4.0",
+          "source_url": "https://commons.wikimedia.org/wiki/File:101_Spring_Street_01.JPG"
+        }
+      ]
+    },
+    {
+      "slug": "the-drawing-center",
+      "name": "The Drawing Center",
+      "kind": "museum",
+      "town": "SoHo",
+      "state": "New York",
+      "county": "Manhattan",
+      "address": "35 Wooster Street, New York, NY 10013",
+      "official_url": "https://drawingcenter.org/",
+      "summary": "A museum devoted exclusively to drawing and works on paper, with rotating exhibitions plus artist talks and life-drawing sessions.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "leslie-lohman-museum-of-art",
+      "name": "Leslie-Lohman Museum of Art",
+      "kind": "museum",
+      "town": "SoHo",
+      "state": "New York",
+      "county": "Manhattan",
+      "address": "26 Wooster Street, New York, NY 10013",
+      "official_url": "https://www.leslielohman.org/",
+      "summary": "A museum dedicated to LGBTQIA+ artists and the discourse on art and queerness, with a suggested $10 donation for entry.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "soho-cast-iron-historic-district",
+      "name": "SoHo-Cast Iron Historic District",
+      "kind": "historic-site",
+      "town": "SoHo",
+      "state": "New York",
+      "county": "Manhattan",
+      "address": "Roughly bounded by Houston, Crosby, Canal and West Broadway (26 blocks along Broadway, Greene, Mercer, and Wooster Streets)",
+      "summary": "Approximately 500 buildings comprising what's been called the world's greatest concentration of cast-iron architecture. A New York City landmark district since 1973, extended in 2010, and a National Historic Landmark since 1978.",
+      "status": "open",
+      "photos": [
+        {
+          "src": "/photos/ny/manhattan/soho/haughwout-building.jpg",
+          "thumb": "/photos/ny/manhattan/soho/haughwout-building_thumb.jpg",
+          "title": "E.V. Haughwout Building",
+          "description": "The 1857 cast-iron landmark at Broadway and Broome Street, seen from the corner.",
+          "author": "ajay_suresh",
+          "license": "CC BY 2.0",
+          "source_url": "https://commons.wikimedia.org/wiki/File:E.V._Haughwout_Building_(52142427309).jpg"
+        },
+        {
+          "src": "/photos/ny/manhattan/soho/72-greene-street.jpg",
+          "thumb": "/photos/ny/manhattan/soho/72-greene-street_thumb.jpg",
+          "title": "72 Greene Street",
+          "description": "The 1872-73 cast-iron facade of the \"King of Greene Street,\" between Broome and Spring Streets.",
+          "author": "Beyond My Ken",
+          "license": "CC BY-SA 4.0",
+          "source_url": "https://commons.wikimedia.org/wiki/File:72_Greene_Street_from_south.jpg"
+        },
+        {
+          "src": "/photos/ny/manhattan/soho/prince-street-cast-iron.jpg",
+          "thumb": "/photos/ny/manhattan/soho/prince-street-cast-iron_thumb.jpg",
+          "title": "96-104 Prince Street",
+          "description": "A row of cast-iron buildings on Prince Street between Mercer and Greene Streets.",
+          "author": "Beyond My Ken",
+          "license": "CC BY-SA 4.0",
+          "source_url": "https://commons.wikimedia.org/wiki/File:96-104_Prince_Street.jpg"
+        }
+      ]
+    },
+    {
+      "slug": "balthazar",
+      "name": "Balthazar",
+      "kind": "restaurant",
+      "town": "SoHo",
+      "state": "New York",
+      "county": "Manhattan",
+      "address": "80 Spring Street, New York, NY 10012",
+      "official_url": "https://balthazarny.com/",
+      "summary": "A bustling French brasserie that opened in SoHo in spring 1997, serving traditional French fare from breakfast through supper daily with weekend brunch.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "dominique-ansel-bakery",
+      "name": "Dominique Ansel Bakery",
+      "kind": "cafe",
+      "town": "SoHo",
+      "state": "New York",
+      "county": "Manhattan",
+      "address": "189 Spring Street (between Sullivan & Thompson), New York, NY 10012",
+      "official_url": "https://www.dominiqueanselny.com/",
+      "summary": "Home of the original Cronut (a croissant-donut hybrid), plus signatures like the DKA (Dominique's Kouign Amann) and canneles.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "lure-fishbar",
+      "name": "Lure Fishbar",
+      "kind": "restaurant",
+      "town": "SoHo",
+      "state": "New York",
+      "county": "Manhattan",
+      "address": "142 Mercer Street (at Prince Street), New York, NY",
+      "official_url": "https://www.lurefishbar.com/",
+      "summary": "A long-running seafood and sushi restaurant with a raw bar, serving lunch, dinner, and brunch.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "the-mercer",
+      "name": "The Mercer",
+      "kind": "hotel",
+      "town": "SoHo",
+      "state": "New York",
+      "county": "Manhattan",
+      "address": "147 Mercer Street (at Prince Street), New York, NY 10012",
+      "official_url": "https://www.mercerhotel.com/",
+      "summary": "SoHo's original five-star luxury hotel: seventy-three rooms and suites in a landmark Romanesque Revival building, with Sartiano's restaurant on site.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "soho-grand-hotel",
+      "name": "Soho Grand Hotel",
+      "kind": "hotel",
+      "town": "SoHo",
+      "state": "New York",
+      "county": "Manhattan",
+      "address": "310 West Broadway, New York, NY 10013",
+      "official_url": "https://www.sohogrand.com/",
+      "summary": "A large SoHo hotel with renovated guest rooms and live programming, including DJs at the Grand Bar & Salon Wednesday through Saturday nights.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "crosby-street-hotel",
+      "name": "Crosby Street Hotel",
+      "kind": "hotel",
+      "town": "SoHo",
+      "state": "New York",
+      "county": "Manhattan",
+      "address": "79 Crosby Street, New York, NY",
+      "official_url": "https://www.firmdalehotels.com/hotels/new-york/crosby-street-hotel/",
+      "summary": "A Firmdale luxury hotel with 86 rooms and suites over 11 floors, awarded Three Michelin Keys in 2025.",
+      "status": "open",
+      "photos": []
+    }
+  ],
+  "entries": [
+    {
+      "kind": "sight",
+      "name": "Judd Foundation - 101 Spring Street",
+      "place_slug": "judd-foundation-101-spring-street",
+      "note": "Donald Judd's home and studio since 1968, restored and open for guided visits since 2013."
+    },
+    {
+      "kind": "sight",
+      "name": "The Drawing Center",
+      "place_slug": "the-drawing-center",
+      "note": "A museum devoted solely to drawing, with rotating exhibitions and artist talks."
+    },
+    {
+      "kind": "sight",
+      "name": "Leslie-Lohman Museum of Art",
+      "place_slug": "leslie-lohman-museum-of-art",
+      "note": "The city's museum for LGBTQIA+ art and queer discourse, open Wednesday through Sunday."
+    },
+    {
+      "kind": "walk",
+      "name": "SoHo-Cast Iron Historic District",
+      "place_slug": "soho-cast-iron-historic-district",
+      "note": "A stroll along Greene, Mercer, and Wooster Streets covers most of the roughly 500 landmarked cast-iron buildings."
+    },
+    {
+      "kind": "food",
+      "name": "Balthazar",
+      "place_slug": "balthazar",
+      "note": "The bustling French brasserie that's anchored Spring Street since 1997."
+    },
+    {
+      "kind": "food",
+      "name": "Dominique Ansel Bakery",
+      "place_slug": "dominique-ansel-bakery",
+      "note": "Birthplace of the Cronut, still turning out DKAs and canneles daily."
+    },
+    {
+      "kind": "food",
+      "name": "Lure Fishbar",
+      "place_slug": "lure-fishbar",
+      "note": "A Mercer Street seafood and raw bar institution for lunch, dinner, and brunch."
+    },
+    {
+      "kind": "stay",
+      "name": "The Mercer",
+      "place_slug": "the-mercer",
+      "note": "SoHo's original five-star hotel, in a landmark Romanesque Revival building on Mercer Street."
+    },
+    {
+      "kind": "stay",
+      "name": "Soho Grand Hotel",
+      "place_slug": "soho-grand-hotel",
+      "note": "A West Broadway hotel with live weekend DJ sets at its Grand Bar & Salon."
+    },
+    {
+      "kind": "stay",
+      "name": "Crosby Street Hotel",
+      "place_slug": "crosby-street-hotel",
+      "note": "A Firmdale property on Crosby Street awarded Three Michelin Keys in 2025."
+    }
+  ]
+}

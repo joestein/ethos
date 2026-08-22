@@ -1,0 +1,263 @@
+{
+  "guide": {
+    "slug": "noho-manhattan-guide",
+    "title": "NoHo, Manhattan: Astor's Row, Reborn in Lofts",
+    "destination": "NoHo, New York",
+    "state": "New York",
+    "county": "Manhattan",
+    "intro": "NoHo — \"North of Houston Street\" — is a name that only came into use in the 1970s, coined to set the pocket bounded by Mercer Street, the Bowery, 9th Street, and Houston Street apart from SoHo to its south. Its grander history starts earlier: in the 1820s and '30s John Jacob Astor developed the area into an elite residential district centered on Lafayette Street, building the marble-fronted Colonnade Row, whose residents over the years included Washington Irving and Cornelius Vanderbilt. By the 1880s the wealthy had moved uptown, and warehouses and manufacturing lofts replaced the grand homes — the commercial loft architecture NoHo is known for today. After World War II, artists moved into those abandoned lofts, and by the 1970s and '80s NoHo was a thriving artistic hub; the city designated the NoHo Historic District in 1999, added NoHo East in 2003, and extended the original district in 2008.",
+    "sections": [
+      {
+        "heading": "Great Jones Street's Three Lives",
+        "body": "Few NoHo addresses carry as much layered history as 57 Great Jones Street. In 1905 it was the headquarters of Paul Kelly's Five Points Gang; Andy Warhol's company bought the building in 1970; and Jean-Michel Basquiat leased it as his home and studio starting in August 1983, working and living there until his death in 1988 at age 27. In October 2025, the block was officially co-named \"Jean-Michel Basquiat Way,\" and the building now operates as Atelier Jolie, Angelina Jolie's creative space, with a gallery and cafe open to the public. A few blocks away, John Jacob Astor's own real-estate legacy survives at Colonnade Row on Lafayette Street: four of the original nine 1832-33 Greek Revival marble townhouses still stand, linked by Corinthian columns, though their facades are now considerably weathered."
+      },
+      {
+        "heading": "Getting there by subway",
+        "body": "NoHo is compact and exceptionally well connected. The B/D/F/M trains stop at Broadway-Lafayette Street, which connects in-system to the 6 train's Bleecker Street stop (with peak-hour <6> express and 4 trains late nights) at the same Houston-and-Lafayette complex, and the 6 also stops at Astor Place on the neighborhood's northeast edge. Nearly every point in NoHo is within a five-minute walk of a subway entrance."
+      }
+    ],
+    "faq": [
+      {
+        "question": "How do I get to NoHo by subway?",
+        "answer": "The B/D/F/M and 6 trains meet at the Broadway-Lafayette Street/Bleecker Street complex on Houston Street, and the 6 also stops at Astor Place on NoHo's northeast edge — both put you within a five-minute walk of anywhere in the neighborhood."
+      },
+      {
+        "question": "Where does the name NoHo come from?",
+        "answer": "It stands for \"North of Houston Street\" and came into use in the 1970s to distinguish the area — bounded by Mercer Street, the Bowery, 9th Street, and Houston Street — from SoHo to the south."
+      },
+      {
+        "question": "Is Jean-Michel Basquiat's old studio open to the public?",
+        "answer": "The building at 57 Great Jones Street where Basquiat lived and worked from 1983 to 1988 now operates as Atelier Jolie, Angelina Jolie's creative space, with a gallery and cafe open to visitors. The block was co-named Jean-Michel Basquiat Way in October 2025."
+      },
+      {
+        "question": "Can you go inside Colonnade Row?",
+        "answer": "No — the four surviving 1832-33 marble townhouses on Lafayette Street are subdivided into apartments and commercial space, so they're viewable only from the street. Past residents included Washington Irving and Cornelius Vanderbilt."
+      },
+      {
+        "question": "Where can I stay in NoHo?",
+        "answer": "No hotel or B&B could be verified inside NoHo's boundaries. The nearest verified option is The Bowery Hotel at 335 Bowery, just across NoHo's eastern edge in the East Village."
+      }
+    ],
+    "photos": [
+      {
+        "src": "/photos/ny/manhattan/noho/colonnade-row.jpg",
+        "thumb": "/photos/ny/manhattan/noho/colonnade-row_thumb.jpg",
+        "title": "Colonnade Row",
+        "description": "The surviving Greek Revival colonnade of La Grange Terrace on Lafayette Street.",
+        "author": "ajay_suresh",
+        "license": "CC BY 2.0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Colonnade_Row_(51661214380).jpg"
+      },
+      {
+        "src": "/photos/ny/manhattan/noho/astor-place-cube.jpg",
+        "thumb": "/photos/ny/manhattan/noho/astor-place-cube_thumb.jpg",
+        "title": "Astor Place Cube (Alamo)",
+        "description": "Tony Rosenthal's rotating steel cube sculpture at Astor Place.",
+        "author": "NicoARicoA",
+        "license": "CC BY-SA 4.0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Astor_Place_Cube_(Alamo).jpg"
+      },
+      {
+        "src": "/photos/ny/manhattan/noho/merchants-house.jpg",
+        "thumb": "/photos/ny/manhattan/noho/merchants-house_thumb.jpg",
+        "title": "Merchant's House Museum",
+        "description": "The exterior of the 1832 rowhouse at 29 East 4th Street.",
+        "author": "Ajay Suresh from New York, NY, USA",
+        "license": "CC BY 2.0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Merchant%27s_House_Museum_(48072654706).jpg"
+      },
+      {
+        "src": "/photos/ny/manhattan/noho/57-great-jones-street.jpg",
+        "thumb": "/photos/ny/manhattan/noho/57-great-jones-street_thumb.jpg",
+        "title": "57 Great Jones Street",
+        "description": "The former Romanesque Revival stable where Jean-Michel Basquiat lived and worked.",
+        "author": "Beyond My Ken",
+        "license": "CC BY-SA 4.0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:57_Great_Jones_Street.jpg"
+      }
+    ]
+  },
+  "places": [
+    {
+      "slug": "merchants-house-museum",
+      "name": "Merchant's House Museum",
+      "kind": "museum",
+      "town": "NoHo",
+      "state": "New York",
+      "county": "Manhattan",
+      "address": "29 East 4th Street, New York, NY 10003 (enter via 35 East 4th Street during restoration)",
+      "official_url": "https://merchantshouse.org/",
+      "summary": "An intact 1832 row house — a National Historic Landmark — preserving the home, furnishings, and servants' quarters of the Tredwell family, along with a site the museum identifies as an Underground Railroad location within the building. Open during restoration, with guided tours Wednesday through Sunday at noon and self-guided visits from 1 to 5 p.m.",
+      "status": "open",
+      "photos": [
+        {
+          "src": "/photos/ny/manhattan/noho/merchants-house.jpg",
+          "thumb": "/photos/ny/manhattan/noho/merchants-house_thumb.jpg",
+          "title": "Merchant's House Museum",
+          "description": "The exterior of the 1832 rowhouse at 29 East 4th Street.",
+          "author": "Ajay Suresh from New York, NY, USA",
+          "license": "CC BY 2.0",
+          "source_url": "https://commons.wikimedia.org/wiki/File:Merchant%27s_House_Museum_(48072654706).jpg"
+        }
+      ]
+    },
+    {
+      "slug": "the-public-theater",
+      "name": "The Public Theater",
+      "kind": "theater",
+      "town": "NoHo",
+      "state": "New York",
+      "county": "Manhattan",
+      "address": "425 Lafayette Street, New York, NY",
+      "official_url": "https://publictheater.org/",
+      "summary": "Founded by Joseph Papp as the Shakespeare Workshop in 1954 and housed in the landmark 1853-1881 Astor Library building, it premiered Hair (1967), A Chorus Line (1975), and Hamilton (2015); 55 of its productions have moved to Broadway. Now led by Artistic Director Oskar Eustis, with five theater spaces plus Joe's Pub and ongoing Shakespeare in the Park.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "colonnade-row",
+      "name": "Colonnade Row (LaGrange Terrace)",
+      "kind": "historic-site",
+      "town": "NoHo",
+      "state": "New York",
+      "county": "Manhattan",
+      "address": "428-434 Lafayette Street, New York, NY",
+      "summary": "Four surviving Greek Revival marble-fronted townhouses of nine built in 1832-33, linked by Corinthian columns; past residents included Washington Irving, Cornelius Vanderbilt, and John Jacob Astor III. A New York City landmark since 1965 and on the National Register since 1976. The buildings are subdivided into apartments and commercial space today, so they're viewable only from the street.",
+      "status": "open",
+      "photos": [
+        {
+          "src": "/photos/ny/manhattan/noho/colonnade-row.jpg",
+          "thumb": "/photos/ny/manhattan/noho/colonnade-row_thumb.jpg",
+          "title": "Colonnade Row",
+          "description": "The surviving Greek Revival colonnade of La Grange Terrace on Lafayette Street.",
+          "author": "ajay_suresh",
+          "license": "CC BY 2.0",
+          "source_url": "https://commons.wikimedia.org/wiki/File:Colonnade_Row_(51661214380).jpg"
+        }
+      ]
+    },
+    {
+      "slug": "astor-place-theatre",
+      "name": "Astor Place Theatre",
+      "kind": "theater",
+      "town": "NoHo",
+      "state": "New York",
+      "county": "Manhattan",
+      "address": "434 Lafayette Street, New York, NY",
+      "summary": "An off-Broadway house inside Colonnade Row that opened in 1968 with a production starring newcomer Al Pacino, and was home to Blue Man Group from 1991 until its final performance on February 2, 2025. Since May 2025 it has been leased and operated by No Guarantees Productions.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "57-great-jones-street",
+      "name": "57 Great Jones Street",
+      "kind": "historic-site",
+      "town": "NoHo",
+      "state": "New York",
+      "county": "Manhattan",
+      "address": "57 Great Jones Street, New York, NY",
+      "summary": "A former Romanesque Revival stable that was Paul Kelly's Five Points Gang headquarters in 1905, was bought by Andy Warhol's company in 1970, and became Jean-Michel Basquiat's home and studio from August 1983 until his death there in 1988. The block was co-named Jean-Michel Basquiat Way in October 2025, and the building now operates as Atelier Jolie, a creative space with a gallery and cafe open to the public.",
+      "status": "open",
+      "photos": [
+        {
+          "src": "/photos/ny/manhattan/noho/57-great-jones-street.jpg",
+          "thumb": "/photos/ny/manhattan/noho/57-great-jones-street_thumb.jpg",
+          "title": "57 Great Jones Street",
+          "description": "The former Romanesque Revival stable where Jean-Michel Basquiat lived and worked.",
+          "author": "Beyond My Ken",
+          "license": "CC BY-SA 4.0",
+          "source_url": "https://commons.wikimedia.org/wiki/File:57_Great_Jones_Street.jpg"
+        }
+      ]
+    },
+    {
+      "slug": "il-buco",
+      "name": "Il Buco",
+      "kind": "restaurant",
+      "town": "NoHo",
+      "state": "New York",
+      "county": "Manhattan",
+      "address": "47 Bond Street, New York, NY",
+      "official_url": "https://ilbuco.com/",
+      "summary": "NoHo's flagship rustic Italian restaurant and the first restaurant of the il Buco family of establishments.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "fish-cheeks",
+      "name": "Fish Cheeks",
+      "kind": "restaurant",
+      "town": "NoHo",
+      "state": "New York",
+      "county": "Manhattan",
+      "address": "55 Bond Street, New York, NY 10012",
+      "official_url": "https://www.fishcheeksnyc.com/",
+      "summary": "A family-style Thai seafood restaurant with dishes inspired by Thailand's regional cuisines; a second location operates in Williamsburg.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "lafayette-grand-cafe-bakery",
+      "name": "Lafayette Grand Café & Bakery",
+      "kind": "cafe",
+      "town": "NoHo",
+      "state": "New York",
+      "county": "Manhattan",
+      "address": "380 Lafayette Street, New York, NY 10003",
+      "official_url": "https://lafayetteny.com/",
+      "summary": "A French grand cafe and street-level bakery from chef Andrew Carmellini's NoHo Hospitality Group, serving bistro classics like steak frites and bouillabaisse.",
+      "status": "open",
+      "photos": []
+    }
+  ],
+  "entries": [
+    {
+      "kind": "sight",
+      "name": "Merchant's House Museum",
+      "place_slug": "merchants-house-museum",
+      "note": "An intact 1832 Tredwell family rowhouse, open during restoration for guided and self-guided tours."
+    },
+    {
+      "kind": "sight",
+      "name": "The Public Theater",
+      "place_slug": "the-public-theater",
+      "note": "Joseph Papp's theater, born as the Shakespeare Workshop in 1954, which premiered Hair, A Chorus Line, and Hamilton."
+    },
+    {
+      "kind": "walk",
+      "name": "Colonnade Row",
+      "place_slug": "colonnade-row",
+      "note": "Four surviving 1832-33 marble townhouses from John Jacob Astor's elite Lafayette Street development, viewable from the street."
+    },
+    {
+      "kind": "sight",
+      "name": "Astor Place Theatre",
+      "place_slug": "astor-place-theatre",
+      "note": "An off-Broadway house that opened with Al Pacino in 1968 and hosted Blue Man Group for over 30 years."
+    },
+    {
+      "kind": "sight",
+      "name": "57 Great Jones Street",
+      "place_slug": "57-great-jones-street",
+      "note": "Jean-Michel Basquiat's home and studio from 1983 to 1988, now Atelier Jolie's gallery and cafe."
+    },
+    {
+      "kind": "food",
+      "name": "Il Buco",
+      "place_slug": "il-buco",
+      "note": "Rustic Italian cooking at the original il Buco restaurant on Bond Street."
+    },
+    {
+      "kind": "food",
+      "name": "Fish Cheeks",
+      "place_slug": "fish-cheeks",
+      "note": "Family-style Thai seafood drawing on Thailand's regional cuisines."
+    },
+    {
+      "kind": "food",
+      "name": "Lafayette Grand Café & Bakery",
+      "place_slug": "lafayette-grand-cafe-bakery",
+      "note": "Andrew Carmellini's French grand cafe and bakery on Lafayette Street."
+    }
+  ]
+}
