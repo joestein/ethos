@@ -62,6 +62,9 @@ if config_env() == :prod do
 
   config :ethos, EthosWeb.Endpoint,
     url: [host: host, port: url_port, scheme: url_scheme],
+    # Allow websocket/LiveView connections from the canonical host, its www
+    # alias, and the fly.dev fallback hostname.
+    check_origin: ["//#{host}", "//www.#{host}", "//ethos.fly.dev"],
     http: [
       # Enable IPv6 and bind on all interfaces.
       # Set it to  {0, 0, 0, 0, 0, 0, 0, 1} for local network only access.
