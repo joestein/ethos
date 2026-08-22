@@ -1,0 +1,251 @@
+{
+  "guide": {
+    "slug": "nomad-manhattan-guide",
+    "title": "NoMad, Manhattan: North of Madison Square",
+    "destination": "NoMad, New York",
+    "state": "New York",
+    "county": "Manhattan",
+    "intro": "NoMad — North of Madison Square, a name in use since 1999 — occupies land that has served as public space since 1686, first as a military parade ground and later a potter's field, before mid-19th-century brownstones drew prominent families like Leonard and Clara Jerome, grandparents of Winston Churchill. The district's Gilded Age glamour centered on the Fifth Avenue Hotel, opened in 1859 as the first American hotel with an elevator and private bathrooms, and on Delmonico's, whose guests included Mark Twain, Oscar Wilde, and Charles Dickens. From about 1885, West 28th Street became Tin Pan Alley, the country's music-publishing capital, its surviving buildings landmarked in 2019. The 69th Regiment Armory hosted the pivotal 1913 Armory Show, a landmark event in American modern art. After decline, the 2001 restoration of Madison Square Park sparked the wave of hotels and restaurants that define NoMad today.",
+    "sections": [
+      {
+        "heading": "Gilded Age Glamour Around Madison Square",
+        "body": "NoMad takes its name from its position just north of Madison Square Park, though the abbreviation itself only came into use in 1999. The land had been public space since 1686, used first as a military parade ground and later a potter's field, before mid-1800s brownstones brought in prominent families — including Leonard and Clara Jerome, grandparents of Winston Churchill. By the Gilded Age the district was a meeting ground for New York's elite: the Fifth Avenue Hotel, opened in 1859, was the first American hotel with an elevator and private bathrooms, while Delmonico's restaurant hosted guests such as Mark Twain, Oscar Wilde, and Charles Dickens. The 69th Regiment Armory, built in 1906 on Lexington Avenue, hosted the seminal 1913 Armory Show that introduced American audiences to modern art, and Stanford White's Madison Square Garden stood in the district from 1890 to 1925."
+      },
+      {
+        "heading": "Tin Pan Alley's Music Row",
+        "body": "From about 1885, the block of West 28th Street between Fifth and Sixth Avenues became known as Tin Pan Alley, the center of American commercial sheet-music publishing — a name popularly credited to writer Monroe H. Rosenfeld, said to evoke the tinny clatter of cheap upright pianos, and firmly attached to the block by the fall of 1905. Five surviving buildings at 47-55 West 28th Street were designated New York City landmarks on December 10, 2019, and in 2022 the city co-named the block \"Tin Pan Alley.\" After a mid-20th-century decline, the neighborhood's modern revival followed the 2001 restoration of Madison Square Park, which spurred the hotels and restaurants that define NoMad today."
+      },
+      {
+        "heading": "Getting there by subway",
+        "body": "The N/R/W stations on Broadway serve NoMad at 28th Street and 23rd Street, though only the R runs there at all times except late nights and the W on weekdays — the N stops only on weekends and late nights. The 6 train serves parallel stations at 28th Street and 23rd Street on Park Avenue South at all times, making the east side of the neighborhood equally well covered."
+      }
+    ],
+    "faq": [
+      {
+        "question": "How do I get to NoMad by subway?",
+        "answer": "The R (all times except late nights) and W (weekdays) stop at 28th Street and 23rd Street on Broadway; the N serves the same stations only on weekends and late nights. The 6 train stops at 28th Street and 23rd Street on Park Avenue South at all times."
+      },
+      {
+        "question": "Where does the name \"NoMad\" come from?",
+        "answer": "It stands for \"North of Madison Square\" — a reference to Madison Square Park just south of the neighborhood — and has been in use since 1999."
+      },
+      {
+        "question": "What is Tin Pan Alley, and can I still see it?",
+        "answer": "Tin Pan Alley was the center of American sheet-music publishing from about 1885, centered on West 28th Street between Fifth and Sixth Avenues. Five of its buildings, at 47-55 West 28th Street, were designated New York City landmarks in December 2019, and the block was co-named \"Tin Pan Alley\" in 2022."
+      },
+      {
+        "question": "What happened to the original NoMad Hotel?",
+        "answer": "The NoMad Hotel at 1170 Broadway closed permanently in March 2021 during the COVID-19 pandemic, along with its Michelin-starred restaurant. The Beaux-Arts Johnston Building now houses The Ned NoMad, a hotel and members' club."
+      },
+      {
+        "question": "Where can I stay in NoMad?",
+        "answer": "The Ned NoMad occupies the landmarked 1902-03 Johnston Building at 1170 Broadway, while The Evelyn Hotel, a 160-room boutique property on East 27th Street, nods to the neighborhood's Tin Pan Alley music heritage with live jazz at its Brass brasserie."
+      }
+    ],
+    "photos": [
+      {
+        "src": "/photos/ny/manhattan/nomad/madison-square-fountain.jpg",
+        "thumb": "/photos/ny/manhattan/nomad/madison-square-fountain_thumb.jpg",
+        "title": "Madison Square Fountain and Flatiron Building",
+        "description": "The park fountain at the edge of NoMad, with the Flatiron Building beyond.",
+        "author": "Ethan Long",
+        "license": "CC BY-SA 4.0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Madison_Square_Fountain_and_Flatiron_Building_(55005537626).jpg"
+      },
+      {
+        "src": "/photos/ny/manhattan/nomad/tin-pan-alley.jpg",
+        "thumb": "/photos/ny/manhattan/nomad/tin-pan-alley_thumb.jpg",
+        "title": "Tin Pan Alley Buildings",
+        "description": "47-55 West 28th Street, the landmarked row where American sheet-music publishing was born.",
+        "author": "Beyond My Ken",
+        "license": "CC BY-SA 4.0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:47-55_West_28th_Street.jpg"
+      },
+      {
+        "src": "/photos/ny/manhattan/nomad/marble-collegiate-church.jpg",
+        "thumb": "/photos/ny/manhattan/nomad/marble-collegiate-church_thumb.jpg",
+        "title": "Marble Collegiate Church",
+        "description": "The marble-clad facade and spire of Marble Collegiate Church.",
+        "author": "Kidfly182",
+        "license": "CC BY-SA 4.0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Marble_Collegiate_Church_October_2022.jpg"
+      }
+    ]
+  },
+  "places": [
+    {
+      "slug": "tin-pan-alley-landmark-buildings",
+      "name": "Tin Pan Alley Landmark Buildings",
+      "kind": "historic-site",
+      "town": "NoMad",
+      "state": "New York",
+      "county": "Manhattan",
+      "address": "47-55 West 28th Street, New York, NY",
+      "summary": "Five surviving buildings on the block that from about 1885 was the center of American sheet-music publishing, popularly nicknamed Tin Pan Alley; designated New York City landmarks on December 10, 2019, with the block itself co-named \"Tin Pan Alley\" in 2022.",
+      "history": "The nickname is popularly credited to writer Monroe H. Rosenfeld and was firmly attached to the block by the fall of 1905.",
+      "status": "open",
+      "photos": [
+        {
+          "src": "/photos/ny/manhattan/nomad/tin-pan-alley.jpg",
+          "thumb": "/photos/ny/manhattan/nomad/tin-pan-alley_thumb.jpg",
+          "title": "Tin Pan Alley Buildings",
+          "description": "47-55 West 28th Street, the landmarked row where American sheet-music publishing was born.",
+          "author": "Beyond My Ken",
+          "license": "CC BY-SA 4.0",
+          "source_url": "https://commons.wikimedia.org/wiki/File:47-55_West_28th_Street.jpg"
+        }
+      ]
+    },
+    {
+      "slug": "marble-collegiate-church",
+      "name": "Marble Collegiate Church",
+      "kind": "historic-site",
+      "town": "NoMad",
+      "state": "New York",
+      "county": "Manhattan",
+      "address": "1 West 29th Street, New York, NY 10001",
+      "official_url": "https://www.marblechurch.org/",
+      "summary": "A marble-clad church built 1851-1854, one of NoMad's signature landmarks and part of the historic Collegiate church tradition; active with a full 2025-2026 worship calendar.",
+      "status": "open",
+      "photos": [
+        {
+          "src": "/photos/ny/manhattan/nomad/marble-collegiate-church.jpg",
+          "thumb": "/photos/ny/manhattan/nomad/marble-collegiate-church_thumb.jpg",
+          "title": "Marble Collegiate Church",
+          "description": "The marble-clad facade and spire of Marble Collegiate Church.",
+          "author": "Kidfly182",
+          "license": "CC BY-SA 4.0",
+          "source_url": "https://commons.wikimedia.org/wiki/File:Marble_Collegiate_Church_October_2022.jpg"
+        }
+      ]
+    },
+    {
+      "slug": "church-of-the-transfiguration",
+      "name": "Church of the Transfiguration (\"The Little Church Around the Corner\")",
+      "kind": "historic-site",
+      "town": "NoMad",
+      "state": "New York",
+      "county": "Manhattan",
+      "address": "1 East 29th Street, New York, NY 10016",
+      "official_url": "https://littlechurch.org/",
+      "summary": "An Episcopal parish founded in 1848 with longstanding ties to the theater world as home of the Episcopal Actors' Guild of America; garden open to the public most days, 9 a.m. to 7 p.m.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "atomix",
+      "name": "Atomix",
+      "kind": "restaurant",
+      "town": "NoMad",
+      "state": "New York",
+      "county": "Manhattan",
+      "address": "104 East 30th Street, New York, NY 10016",
+      "official_url": "https://www.atomixnyc.com/",
+      "summary": "Korean fine-dining tasting counter by chef Junghyun \"JP\" Park and Ellia Park, opened May 2018; holds two Michelin stars and was ranked #1 on North America's 50 Best Restaurants in 2025.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "la-pecora-bianca",
+      "name": "La Pecora Bianca (NoMad)",
+      "kind": "restaurant",
+      "town": "NoMad",
+      "state": "New York",
+      "county": "Manhattan",
+      "address": "1133 Broadway, New York, NY 10010",
+      "official_url": "https://www.lapecorabianca.com/location/nomad/",
+      "summary": "The original NoMad location of this Italian restaurant known for house-made pastas, open seven days for lunch, dinner, and weekend brunch.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "the-smith",
+      "name": "The Smith (NoMad)",
+      "kind": "restaurant",
+      "town": "NoMad",
+      "state": "New York",
+      "county": "Manhattan",
+      "address": "1150 Broadway (at 27th Street), New York, NY 10010",
+      "official_url": "https://thesmithrestaurant.com/location/nomad/",
+      "summary": "An all-day American brasserie with an expansive curved bar, serving breakfast through late night daily and a weekday \"Martini Hour\" from 3 to 6 p.m.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "the-ned-nomad",
+      "name": "The Ned NoMad",
+      "kind": "hotel",
+      "town": "NoMad",
+      "state": "New York",
+      "county": "Manhattan",
+      "address": "1170 Broadway (at 28th Street), New York, NY",
+      "official_url": "https://www.thened.com/nomad",
+      "summary": "A hotel and members' club inside the Beaux-Arts Johnston Building (1902-03, Schickel & Ditmars), a contributing property of the Madison Square North Historic District and former home of the NoMad Hotel.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "the-evelyn-hotel",
+      "name": "The Evelyn Hotel",
+      "kind": "hotel",
+      "town": "NoMad",
+      "state": "New York",
+      "county": "Manhattan",
+      "address": "7 East 27th Street, New York, NY 10016",
+      "official_url": "https://www.theevelyn.com/",
+      "summary": "A 160-room boutique hotel in an early-1900s Art Nouveau building that nods to NoMad's music heritage, with Caffe Tusk, the jazz-forward Brass brasserie, and The Tusk Bar.",
+      "status": "open",
+      "photos": []
+    }
+  ],
+  "entries": [
+    {
+      "kind": "sight",
+      "name": "Tin Pan Alley Landmark Buildings",
+      "place_slug": "tin-pan-alley-landmark-buildings",
+      "note": "The landmarked block where American sheet-music publishing took root around 1885."
+    },
+    {
+      "kind": "sight",
+      "name": "Marble Collegiate Church",
+      "place_slug": "marble-collegiate-church",
+      "note": "An 1851-1854 marble-clad landmark and one of NoMad's signature buildings."
+    },
+    {
+      "kind": "sight",
+      "name": "Church of the Transfiguration",
+      "place_slug": "church-of-the-transfiguration",
+      "note": "\"The Little Church Around the Corner,\" an 1848 parish tied to the theater world."
+    },
+    {
+      "kind": "food",
+      "name": "Atomix",
+      "place_slug": "atomix",
+      "note": "A two-Michelin-star Korean tasting counter ranked #1 on North America's 50 Best in 2025."
+    },
+    {
+      "kind": "food",
+      "name": "La Pecora Bianca (NoMad)",
+      "place_slug": "la-pecora-bianca",
+      "note": "The original NoMad location of this house-made-pasta Italian restaurant."
+    },
+    {
+      "kind": "food",
+      "name": "The Smith (NoMad)",
+      "place_slug": "the-smith",
+      "note": "An all-day American brasserie with a weekday Martini Hour."
+    },
+    {
+      "kind": "stay",
+      "name": "The Ned NoMad",
+      "place_slug": "the-ned-nomad",
+      "note": "A hotel and members' club inside the landmarked 1902-03 Johnston Building."
+    },
+    {
+      "kind": "stay",
+      "name": "The Evelyn Hotel",
+      "place_slug": "the-evelyn-hotel",
+      "note": "A 160-room boutique hotel nodding to NoMad's Tin Pan Alley music heritage."
+    }
+  ]
+}

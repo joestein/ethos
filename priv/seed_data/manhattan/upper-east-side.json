@@ -1,0 +1,274 @@
+{
+  "guide": {
+    "slug": "upper-east-side-manhattan-guide",
+    "title": "Upper East Side, Manhattan: Farmland to Museum Mile",
+    "destination": "Upper East Side, New York",
+    "state": "New York",
+    "county": "Manhattan",
+    "intro": "Before Fifth Avenue's mansions, the Upper East Side was farmland crossed by the Boston Post Road and, from 1837, the New York and Harlem Railroad, with Lenape fishing camps once dotting the East River shore. The neighborhood's transformation began after the Park Avenue railroad tunnel was covered in 1910, when industrialists including Andrew Carnegie and Henry Clay Frick built mansions along Fifth Avenue; the first apartment house to replace one of them was 907 Fifth Avenue, completed in 1916 at 72nd Street. That corridor became \"Museum Mile,\" the stretch of Fifth Avenue between 82nd and 105th Streets now lined with the Metropolitan Museum of Art, the Guggenheim, and the Jewish Museum. To the east, Yorkville became a predominantly German enclave from 1880 onward, swelled further after the 1904 General Slocum disaster killed over a thousand Lower East Side Germans, sending survivors uptown.",
+    "sections": [
+      {
+        "heading": "Mansions to Museum Mile",
+        "body": "Before the Gilded Age, the Upper East Side was farmland traversed by the Boston Post Road and, from 1837, the New York and Harlem Railroad; Lenape fishing camps are thought to have once dotted the East River shore. The mansion era took off after the Park Avenue railroad tunnel was covered in 1910, drawing industrialists such as Andrew Carnegie and Henry Clay Frick to build along Fifth Avenue. As the private-mansion era waned, 907 Fifth Avenue, completed in 1916 at 72nd Street, became the first apartment house to replace one of them. The stretch of Fifth Avenue between 82nd and 105th Streets — Museum Mile — grew around institutions including the Metropolitan Museum of Art (founded 1870) and the Guggenheim (dedicated 1959), Frank Lloyd Wright's only museum design."
+      },
+      {
+        "heading": "A German Enclave to the East",
+        "body": "Yorkville, the neighborhood's eastern section, became predominantly German from 1880 onward. The General Slocum steamship disaster of June 15, 1904, in which an estimated 1,021 of the 1,342 people aboard died — most of them German immigrants from the Lower East Side — accelerated the community's move uptown, and Yorkville went on to draw Czech, Slovak, Irish, Polish, and Hungarian immigrants as well."
+      },
+      {
+        "heading": "Getting there by subway",
+        "body": "The Upper East Side is served by two trunk lines: the Lexington Avenue Line (4/5/6) running the length of the neighborhood, and the Second Avenue Subway, whose first phase opened January 1, 2017, with stations at 72nd, 86th, and 96th Streets served by the Q at all times plus limited rush-hour N and R trains. Rule of thumb: use the 4/5/6 for the west side of the neighborhood and Museum Mile, and the Q on Second Avenue for the eastern blocks toward Yorkville."
+      }
+    ],
+    "faq": [
+      {
+        "question": "How do I get to the Upper East Side by subway?",
+        "answer": "Use the 4/5/6 Lexington Avenue Line for the west side of the neighborhood and Museum Mile, or the Second Avenue Subway's Q train (plus limited rush-hour N and R) at 72nd, 86th, and 96th Streets for the eastern blocks toward Yorkville."
+      },
+      {
+        "question": "What is Museum Mile?",
+        "answer": "It's the stretch of Fifth Avenue between 82nd and 105th Streets, lined with major institutions including the Metropolitan Museum of Art, the Solomon R. Guggenheim Museum, and the Jewish Museum."
+      },
+      {
+        "question": "When did the Second Avenue Subway open?",
+        "answer": "Phase 1 opened January 1, 2017, with three Upper East Side stations at 72nd, 86th, and 96th Streets built for $4.45 billion. A Phase 2 extension toward Harlem-125th Street is under construction, with cost estimates ranging from about $6 billion to $7.7 billion."
+      },
+      {
+        "question": "Is Central Park part of the Upper East Side?",
+        "answer": "Central Park borders the Upper East Side to the west; it is documented as a place within the neighboring Upper West Side guide."
+      },
+      {
+        "question": "Where can I stay on the Upper East Side?",
+        "answer": "The Mark, the only New York City hotel named among The World's 50 Best Hotels, and The Carlyle, home to Bemelmans Bar and Cafe Carlyle, are both verified in-neighborhood options."
+      }
+    ],
+    "photos": [
+      {
+        "src": "/photos/ny/manhattan/upper-east-side/met-facade.jpg",
+        "thumb": "/photos/ny/manhattan/upper-east-side/met-facade_thumb.jpg",
+        "title": "The Metropolitan Museum of Art",
+        "description": "The Fifth Avenue facade of the Metropolitan Museum of Art.",
+        "author": "Epicgenius",
+        "license": "CC BY-SA 4.0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:5_Av_Apr_2023_42.jpg"
+      },
+      {
+        "src": "/photos/ny/manhattan/upper-east-side/guggenheim.jpg",
+        "thumb": "/photos/ny/manhattan/upper-east-side/guggenheim_thumb.jpg",
+        "title": "Solomon R. Guggenheim Museum",
+        "description": "Frank Lloyd Wright's rotunda exterior seen from Fifth Avenue.",
+        "author": "Ajay Suresh",
+        "license": "CC BY 2.0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Solomon_R._Guggenheim_Museum_(48059131351).jpg"
+      },
+      {
+        "src": "/photos/ny/manhattan/upper-east-side/park-avenue.jpg",
+        "thumb": "/photos/ny/manhattan/upper-east-side/park-avenue_thumb.jpg",
+        "title": "Park Avenue Architecture",
+        "description": "A prewar apartment building at Park Avenue and 84th Street.",
+        "author": "Deansfa",
+        "license": "CC BY-SA 4.0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:1000_Park_Avenue,_corner_of_84th_Street,_Carnegie_Hill,_Upper_East_Side,_Manhattan,_New_York.jpg"
+      }
+    ]
+  },
+  "places": [
+    {
+      "slug": "the-metropolitan-museum-of-art",
+      "name": "The Metropolitan Museum of Art",
+      "kind": "museum",
+      "town": "Upper East Side",
+      "state": "New York",
+      "county": "Manhattan",
+      "address": "1000 Fifth Avenue, New York, NY",
+      "official_url": "https://www.metmuseum.org",
+      "summary": "Founded April 13, 1870, the largest art museum in the Americas, spanning roughly 2 million square feet with about 1.5 million works across 17 curatorial departments; recorded 5,727,258 visitors in fiscal year 2025, anchoring \"Museum Mile\" on Fifth Avenue.",
+      "status": "open",
+      "photos": [
+        {
+          "src": "/photos/ny/manhattan/upper-east-side/met-facade.jpg",
+          "thumb": "/photos/ny/manhattan/upper-east-side/met-facade_thumb.jpg",
+          "title": "The Metropolitan Museum of Art",
+          "description": "The Fifth Avenue facade of the Metropolitan Museum of Art.",
+          "author": "Epicgenius",
+          "license": "CC BY-SA 4.0",
+          "source_url": "https://commons.wikimedia.org/wiki/File:5_Av_Apr_2023_42.jpg"
+        }
+      ]
+    },
+    {
+      "slug": "the-frick-collection",
+      "name": "The Frick Collection",
+      "kind": "museum",
+      "town": "Upper East Side",
+      "state": "New York",
+      "county": "Manhattan",
+      "address": "1 East 70th Street, New York, NY 10021",
+      "official_url": "https://www.frick.org",
+      "summary": "Housed in industrialist Henry Clay Frick's Fifth Avenue mansion, with galleries that use minimal wall labels to preserve the domestic atmosphere; open Wednesday through Monday, 10:30 a.m. to 5:30 p.m. (closed Tuesdays), with pay-what-you-wish Wednesday afternoons.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "solomon-r-guggenheim-museum",
+      "name": "Solomon R. Guggenheim Museum",
+      "kind": "museum",
+      "town": "Upper East Side",
+      "state": "New York",
+      "county": "Manhattan",
+      "address": "1071 Fifth Avenue (between 88th and 89th Streets), New York, NY",
+      "official_url": "https://www.guggenheim.org",
+      "summary": "Frank Lloyd Wright's only museum design, dedicated October 21, 1959, famous for its six-story helical ramp gallery under a central skylight; drew nearly 861,000 visitors in 2023.",
+      "status": "open",
+      "photos": [
+        {
+          "src": "/photos/ny/manhattan/upper-east-side/guggenheim.jpg",
+          "thumb": "/photos/ny/manhattan/upper-east-side/guggenheim_thumb.jpg",
+          "title": "Solomon R. Guggenheim Museum",
+          "description": "Frank Lloyd Wright's rotunda exterior seen from Fifth Avenue.",
+          "author": "Ajay Suresh",
+          "license": "CC BY 2.0",
+          "source_url": "https://commons.wikimedia.org/wiki/File:Solomon_R._Guggenheim_Museum_(48059131351).jpg"
+        }
+      ]
+    },
+    {
+      "slug": "lexington-candy-shop",
+      "name": "Lexington Candy Shop",
+      "kind": "cafe",
+      "town": "Upper East Side",
+      "state": "New York",
+      "county": "Manhattan",
+      "address": "1226 Lexington Avenue at 83rd Street, New York, NY 10028",
+      "official_url": "https://www.lexingtoncandyshop.com/",
+      "summary": "A classic luncheonette and soda fountain founded in 1925, celebrating its 100th anniversary in 2025 as, by its own description, NYC's last reminder of the neighborhood soda-fountain era.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "daniel",
+      "name": "Daniel",
+      "kind": "restaurant",
+      "town": "Upper East Side",
+      "state": "New York",
+      "county": "Manhattan",
+      "address": "60 East 65th Street, New York, NY 10065",
+      "official_url": "https://www.danielnyc.com/",
+      "summary": "Daniel Boulud's flagship French restaurant, Michelin Guide-recognized and a member of Les Grandes Tables du Monde and Relais & Chateaux.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "orwashers-bakery",
+      "name": "Orwashers Bakery",
+      "kind": "cafe",
+      "town": "Upper East Side",
+      "state": "New York",
+      "county": "Manhattan",
+      "official_url": "https://orwashers.com/",
+      "summary": "Founded in 1916 by Hungarian immigrants to bake traditional rye, black, and grain breads, one of New York's oldest bakeries; its original Upper East Side storefront remains open.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "papaya-king",
+      "name": "Papaya King",
+      "kind": "restaurant",
+      "town": "Upper East Side",
+      "state": "New York",
+      "county": "Manhattan",
+      "address": "206 East 86th Street, New York, NY",
+      "summary": "The iconic hot-dog-and-papaya-drink stand that originated on East 86th Street; after its original building was sold for redevelopment, it reopened half a block away on July 6, 2024.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "the-mark",
+      "name": "The Mark",
+      "kind": "hotel",
+      "town": "Upper East Side",
+      "state": "New York",
+      "county": "Manhattan",
+      "address": "Madison Avenue at 77th Street, New York, NY 10075",
+      "official_url": "https://www.themarkhotel.com/",
+      "summary": "A luxury hotel with interiors by Jacques Grange and The Mark Restaurant by Jean-Georges; the only New York City hotel named among The World's 50 Best Hotels.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "the-carlyle",
+      "name": "The Carlyle, A Rosewood Hotel",
+      "kind": "hotel",
+      "town": "Upper East Side",
+      "state": "New York",
+      "county": "Manhattan",
+      "address": "35 East 76th Street, New York, NY 10021",
+      "official_url": "https://www.rosewoodhotels.com/en/the-carlyle-new-york",
+      "summary": "A storied Upper East Side hotel home to Bemelmans Bar, with murals by Madeline author Ludwig Bemelmans, and Cafe Carlyle, a supper club currently in its 70th-anniversary season.",
+      "status": "open",
+      "photos": []
+    }
+  ],
+  "entries": [
+    {
+      "kind": "sight",
+      "name": "The Metropolitan Museum of Art",
+      "place_slug": "the-metropolitan-museum-of-art",
+      "note": "The largest art museum in the Americas, founded 1870 and anchoring Museum Mile."
+    },
+    {
+      "kind": "sight",
+      "name": "The Frick Collection",
+      "place_slug": "the-frick-collection",
+      "note": "Henry Clay Frick's Fifth Avenue mansion, with galleries that keep a domestic feel."
+    },
+    {
+      "kind": "sight",
+      "name": "Solomon R. Guggenheim Museum",
+      "place_slug": "solomon-r-guggenheim-museum",
+      "note": "Frank Lloyd Wright's only museum design, dedicated in 1959."
+    },
+    {
+      "kind": "walk",
+      "name": "Central Park",
+      "place_slug": "central-park",
+      "note": "The park bordering the Upper East Side to the west, defined in the Upper West Side guide."
+    },
+    {
+      "kind": "food",
+      "name": "Lexington Candy Shop",
+      "place_slug": "lexington-candy-shop",
+      "note": "A 1925 luncheonette and soda fountain, marking its 100th anniversary in 2025."
+    },
+    {
+      "kind": "food",
+      "name": "Daniel",
+      "place_slug": "daniel",
+      "note": "Daniel Boulud's three-Michelin-recognized flagship French restaurant."
+    },
+    {
+      "kind": "food",
+      "name": "Orwashers Bakery",
+      "place_slug": "orwashers-bakery",
+      "note": "A 1916 Hungarian-founded bakery still baking traditional rye and grain breads."
+    },
+    {
+      "kind": "food",
+      "name": "Papaya King",
+      "place_slug": "papaya-king",
+      "note": "The original hot-dog-and-papaya-drink stand, reopened on East 86th Street in 2024."
+    },
+    {
+      "kind": "stay",
+      "name": "The Mark",
+      "place_slug": "the-mark",
+      "note": "A luxury hotel named among The World's 50 Best Hotels."
+    },
+    {
+      "kind": "stay",
+      "name": "The Carlyle, A Rosewood Hotel",
+      "place_slug": "the-carlyle",
+      "note": "Home to Bemelmans Bar and Cafe Carlyle's 70th-anniversary season."
+    }
+  ]
+}

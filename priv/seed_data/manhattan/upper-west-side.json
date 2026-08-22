@@ -1,0 +1,344 @@
+{
+  "guide": {
+    "slug": "upper-west-side-manhattan-guide",
+    "title": "Upper West Side, Manhattan: Bloomingdale to Lincoln Center",
+    "destination": "Upper West Side, New York",
+    "state": "New York",
+    "county": "Manhattan",
+    "intro": "The Upper West Side began as the Bloomingdale District, its name an anglicization of the Dutch \"Bloemendaal\"; Bloomingdale Road, regularized in 1703, became today's Broadway and has served as the district's main artery since colonial times. Development followed when the Ninth Avenue Elevated reached the area in the late 1870s, sparking a defining building boom between 1885 and 1910 that accelerated further once the city's first subway opened beneath Broadway in 1904. The Dakota, at 72nd Street and Central Park West, is New York's oldest surviving luxury apartment building and anchored the neighborhood's rise as a fashionable address. In the 1960s, Lincoln Center rose on the site of the tenement neighborhood of San Juan Hill — its demolition deliberately delayed so the 1961 film \"West Side Story\" could shoot exterior scenes there first. A second subway spine, the IND Eighth Avenue line, opened beneath Central Park West in 1932.",
+    "sections": [
+      {
+        "heading": "From Bloomingdale to a Building Boom",
+        "body": "The Upper West Side was originally the Bloomingdale District, a name derived from the Dutch \"Bloemendaal\" and anglicized by early settlers. Bloomingdale Road, regularized in 1703, later became Broadway and has been the district's main artery since the colonial era. Growth followed the Ninth Avenue Elevated's arrival in the neighborhood in the late 1870s, and the district's defining building boom ran from 1885 to 1910, accelerated by the 1904 opening of the city's first subway line beneath Broadway; a second rapid-transit spine, the IND Eighth Avenue line, opened under Central Park West in 1932. The Dakota, at 72nd Street and Central Park West, is New York City's oldest surviving luxury apartment building and anchored the neighborhood's emergence as a fashionable residential district."
+      },
+      {
+        "heading": "Lincoln Center and San Juan Hill",
+        "body": "Lincoln Center for the Performing Arts was built in the 1960s on the site of San Juan Hill, a tenement neighborhood cleared during that era's urban renewal; demolition was deliberately delayed so exterior scenes for the 1961 film \"West Side Story\" could be shot there first, linking the district's renewal-era history to its enduring cultural identity. Today Lincoln Center is home to ten resident organizations, including the Metropolitan Opera, the New York Philharmonic, New York City Ballet, Juilliard, and Jazz at Lincoln Center."
+      },
+      {
+        "heading": "Getting there by subway",
+        "body": "Two north-south subway spines serve the Upper West Side: the 1/2/3 under Broadway, with express stops at 72nd and 96th Streets, and the A/B/C/D under Central Park West, including 81st Street-Museum of Natural History. At 59th Street-Columbus Circle, trains run 1/A/B/C/D (the 2 stops there only late nights). Practically, staying near Broadway or Central Park West puts you a few blocks from a train."
+      }
+    ],
+    "faq": [
+      {
+        "question": "How do I get to the Upper West Side by subway?",
+        "answer": "Take the 1/2/3 under Broadway (express stops at 72nd and 96th Streets) or the A/B/C/D under Central Park West (including 81st Street-Museum of Natural History). At 59th Street-Columbus Circle, service runs 1/A/B/C/D, with the 2 stopping there only late nights."
+      },
+      {
+        "question": "Where does the name \"Upper West Side\" come from historically?",
+        "answer": "The area was originally called the Bloomingdale District, from the Dutch \"Bloemendaal,\" anglicized by early settlers; its main street, Bloomingdale Road, was regularized in 1703 and later became Broadway."
+      },
+      {
+        "question": "What was on the site of Lincoln Center before it was built?",
+        "answer": "Lincoln Center was built in the 1960s on the site of San Juan Hill, a tenement neighborhood demolished during urban renewal; the demolition was deliberately delayed so exterior scenes for the 1961 film \"West Side Story\" could be shot there first."
+      },
+      {
+        "question": "Is Central Park part of the Upper West Side?",
+        "answer": "Central Park West forms the Upper West Side's eastern edge; the American Museum of Natural History, the New York Historical, and The Dakota all face the park along this stretch."
+      },
+      {
+        "question": "Where can I stay on the Upper West Side?",
+        "answer": "The Lucerne Hotel, in a landmark 1904 building on West 79th Street, and Hotel Beacon, adjacent to the Beacon Theatre with kitchenette-equipped rooms, are both verified in-neighborhood options."
+      }
+    ],
+    "photos": [
+      {
+        "src": "/photos/ny/manhattan/upper-west-side/amnh-facade.jpg",
+        "thumb": "/photos/ny/manhattan/upper-west-side/amnh-facade_thumb.jpg",
+        "title": "American Museum of Natural History",
+        "description": "The Central Park West facade of the American Museum of Natural History.",
+        "author": "Ferfive",
+        "license": "CC BY 4.0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Facade_of_the_American_museum_of_natural_history_NYC_(4).jpg"
+      },
+      {
+        "src": "/photos/ny/manhattan/upper-west-side/bethesda-fountain.jpg",
+        "thumb": "/photos/ny/manhattan/upper-west-side/bethesda-fountain_thumb.jpg",
+        "title": "Bethesda Fountain, Central Park",
+        "description": "Bethesda Fountain and the Angel of the Waters beside the Lake in Central Park.",
+        "author": "Christian David",
+        "license": "CC BY-SA 4.0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Bethesda_Fountain_and_the_Lake,_Central_Park,_Manhattan,_New_York.jpg"
+      },
+      {
+        "src": "/photos/ny/manhattan/upper-west-side/the-dakota.jpg",
+        "thumb": "/photos/ny/manhattan/upper-west-side/the-dakota_thumb.jpg",
+        "title": "The Dakota",
+        "description": "The entrance and carriageway of The Dakota at West 72nd Street.",
+        "author": "Christian David",
+        "license": "CC BY-SA 4.0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:The_Dakota,_West_72nd_Street,_Upper_West_Side,_Manhattan,_New_York.jpg"
+      },
+      {
+        "src": "/photos/ny/manhattan/upper-west-side/lincoln-center-plaza.jpg",
+        "thumb": "/photos/ny/manhattan/upper-west-side/lincoln-center-plaza_thumb.jpg",
+        "title": "Lincoln Center Plaza",
+        "description": "Josie Robertson Plaza and the Revson Fountain at dusk.",
+        "author": "Rhododendrites",
+        "license": "CC BY-SA 4.0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Lincoln_Center_during_pride_at_dusk_(93296p).jpg"
+      }
+    ]
+  },
+  "places": [
+    {
+      "slug": "american-museum-of-natural-history",
+      "name": "American Museum of Natural History",
+      "kind": "museum",
+      "town": "Upper West Side",
+      "state": "New York",
+      "county": "Manhattan",
+      "address": "200 Central Park West, New York, NY 10024",
+      "official_url": "https://www.amnh.org",
+      "summary": "Established in 1869, the museum spans 21 interconnected buildings with 45 permanent exhibition halls plus a planetarium; the $325 million Richard Gilder Center for Science, Education, and Innovation opened May 4, 2023, and it began offering free memberships to SNAP recipients in 2025.",
+      "status": "open",
+      "photos": [
+        {
+          "src": "/photos/ny/manhattan/upper-west-side/amnh-facade.jpg",
+          "thumb": "/photos/ny/manhattan/upper-west-side/amnh-facade_thumb.jpg",
+          "title": "American Museum of Natural History",
+          "description": "The Central Park West facade of the American Museum of Natural History.",
+          "author": "Ferfive",
+          "license": "CC BY 4.0",
+          "source_url": "https://commons.wikimedia.org/wiki/File:Facade_of_the_American_museum_of_natural_history_NYC_(4).jpg"
+        }
+      ]
+    },
+    {
+      "slug": "riverside-park",
+      "name": "Riverside Park",
+      "kind": "park",
+      "town": "Upper West Side",
+      "state": "New York",
+      "county": "Manhattan",
+      "address": "Along the Hudson River, West 59th Street to 181st Street, Manhattan",
+      "official_url": "https://riversideparknyc.org/",
+      "summary": "A designated scenic landmark spanning six miles of Hudson River waterfront, with 36 recreation areas, 16 playgrounds, and 22 monuments, managed by the Riverside Park Conservancy in partnership with NYC Parks.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "new-york-historical",
+      "name": "New York Historical",
+      "kind": "museum",
+      "town": "Upper West Side",
+      "state": "New York",
+      "county": "Manhattan",
+      "address": "Central Park West between 76th and 77th Streets, New York, NY",
+      "official_url": "https://www.nyhistory.org",
+      "summary": "Founded November 20, 1804, it is New York's oldest museum, holding over 1.6 million artworks; it rebranded from the New-York Historical Society in October 2024, and its new 80,000-square-foot Tang Wing opened June 18, 2026.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "beacon-theatre",
+      "name": "Beacon Theatre",
+      "kind": "theater",
+      "town": "Upper West Side",
+      "state": "New York",
+      "county": "Manhattan",
+      "address": "2124 Broadway (at 74th Street), New York, NY",
+      "official_url": "https://www.msg.com/beacon-theatre",
+      "summary": "Opened December 24, 1929, as a movie palace by architect Walter W. Ahlschlager; a 2,894-seat New York City interior landmark since 1979, where the Allman Brothers Band played 238 concerts between 1989 and 2014.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "lincoln-center-for-the-performing-arts",
+      "name": "Lincoln Center for the Performing Arts",
+      "kind": "attraction",
+      "town": "Upper West Side",
+      "state": "New York",
+      "county": "Manhattan",
+      "official_url": "https://www.lincolncenter.org",
+      "summary": "Built in the 1960s on the site of the former San Juan Hill neighborhood, Lincoln Center is home to ten resident organizations, including the Metropolitan Opera, New York Philharmonic, New York City Ballet, Juilliard, and Jazz at Lincoln Center.",
+      "status": "open",
+      "photos": [
+        {
+          "src": "/photos/ny/manhattan/upper-west-side/lincoln-center-plaza.jpg",
+          "thumb": "/photos/ny/manhattan/upper-west-side/lincoln-center-plaza_thumb.jpg",
+          "title": "Lincoln Center Plaza",
+          "description": "Josie Robertson Plaza and the Revson Fountain at dusk.",
+          "author": "Rhododendrites",
+          "license": "CC BY-SA 4.0",
+          "source_url": "https://commons.wikimedia.org/wiki/File:Lincoln_Center_during_pride_at_dusk_(93296p).jpg"
+        }
+      ]
+    },
+    {
+      "slug": "barney-greengrass",
+      "name": "Barney Greengrass",
+      "kind": "restaurant",
+      "town": "Upper West Side",
+      "state": "New York",
+      "county": "Manhattan",
+      "address": "541 Amsterdam Avenue (between 86th and 87th Streets), New York, NY 10024",
+      "official_url": "https://www.barneygreengrass.com/",
+      "summary": "A century-old Jewish appetizing institution known as \"The Sturgeon King,\" celebrated for smoked fish, bagels, caviar, and pastrami.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "zabars",
+      "name": "Zabar's",
+      "kind": "cafe",
+      "town": "Upper West Side",
+      "state": "New York",
+      "county": "Manhattan",
+      "address": "2245 Broadway, New York, NY 10024",
+      "official_url": "https://www.zabars.com/",
+      "summary": "Family-owned gourmet landmark operating over 90 years, famous for hand-sliced smoked fish, rugelach, babka, and house-roasted coffee.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "levain-bakery",
+      "name": "Levain Bakery",
+      "kind": "cafe",
+      "town": "Upper West Side",
+      "state": "New York",
+      "county": "Manhattan",
+      "address": "West 74th Street, Upper West Side, New York, NY",
+      "official_url": "https://levainbakery.com/",
+      "summary": "Founded in 1995 as a neighborhood bakery, famed for what The New York Times called possibly \"the largest, most divine chocolate chip cookies in Manhattan\"; cookies have been baked daily at this original location since founding.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "cafe-luxembourg",
+      "name": "Cafe Luxembourg",
+      "kind": "restaurant",
+      "town": "Upper West Side",
+      "state": "New York",
+      "county": "Manhattan",
+      "address": "200 West 70th Street, New York, NY",
+      "official_url": "https://cafeluxembourg.com/",
+      "summary": "A classic French-American brasserie established in 1983, known for red-leather banquettes and bistro fare.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "the-lucerne-hotel",
+      "name": "The Lucerne Hotel",
+      "kind": "hotel",
+      "town": "Upper West Side",
+      "state": "New York",
+      "county": "Manhattan",
+      "address": "201 West 79th Street, New York, NY 10024",
+      "official_url": "https://www.thelucernehotel.com/",
+      "summary": "Occupies a landmark building erected in 1904; adjoined by the French-Mediterranean restaurant Nice Matin, named one of the city's best Upper West Side restaurants by New York Magazine.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "hotel-beacon",
+      "name": "Hotel Beacon",
+      "kind": "hotel",
+      "town": "Upper West Side",
+      "state": "New York",
+      "county": "Manhattan",
+      "address": "2130 Broadway, New York, NY 10023",
+      "official_url": "https://www.beaconhotel.com/",
+      "summary": "A mid-size boutique hotel with apartment-style rooms and kitchenettes, adjacent to the landmark Beacon Theatre and near Central Park.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "central-park",
+      "name": "Central Park",
+      "kind": "park",
+      "town": "Upper West Side",
+      "state": "New York",
+      "county": "Manhattan",
+      "address": "Bordered on the west by Central Park West, Manhattan",
+      "summary": "Manhattan's great public park, its western edge lined by Central Park West, the Upper West Side's namesake spine, home along that stretch to the American Museum of Natural History, the New York Historical, and The Dakota. Bethesda Fountain and the Lake sit inside the park near this border.",
+      "status": "open",
+      "photos": [
+        {
+          "src": "/photos/ny/manhattan/upper-west-side/bethesda-fountain.jpg",
+          "thumb": "/photos/ny/manhattan/upper-west-side/bethesda-fountain_thumb.jpg",
+          "title": "Bethesda Fountain, Central Park",
+          "description": "Bethesda Fountain and the Angel of the Waters beside the Lake in Central Park.",
+          "author": "Christian David",
+          "license": "CC BY-SA 4.0",
+          "source_url": "https://commons.wikimedia.org/wiki/File:Bethesda_Fountain_and_the_Lake,_Central_Park,_Manhattan,_New_York.jpg"
+        }
+      ]
+    }
+  ],
+  "entries": [
+    {
+      "kind": "sight",
+      "name": "American Museum of Natural History",
+      "place_slug": "american-museum-of-natural-history",
+      "note": "A 21-building museum complex with the Richard Gilder Center, opened 2023."
+    },
+    {
+      "kind": "walk",
+      "name": "Riverside Park",
+      "place_slug": "riverside-park",
+      "note": "Six miles of Hudson River waterfront with playgrounds and monuments."
+    },
+    {
+      "kind": "sight",
+      "name": "New York Historical",
+      "place_slug": "new-york-historical",
+      "note": "New York's oldest museum, recently expanded with the Tang Wing."
+    },
+    {
+      "kind": "sight",
+      "name": "Beacon Theatre",
+      "place_slug": "beacon-theatre",
+      "note": "A 1929 movie palace turned landmark concert hall on Broadway."
+    },
+    {
+      "kind": "sight",
+      "name": "Lincoln Center for the Performing Arts",
+      "place_slug": "lincoln-center-for-the-performing-arts",
+      "note": "Ten resident arts organizations on the former site of San Juan Hill."
+    },
+    {
+      "kind": "walk",
+      "name": "Central Park",
+      "place_slug": "central-park",
+      "note": "The park along the neighborhood's Central Park West edge, home to Bethesda Fountain."
+    },
+    {
+      "kind": "food",
+      "name": "Barney Greengrass",
+      "place_slug": "barney-greengrass",
+      "note": "A century-old appetizing institution known as \"The Sturgeon King.\""
+    },
+    {
+      "kind": "food",
+      "name": "Zabar's",
+      "place_slug": "zabars",
+      "note": "A 90-year-old gourmet landmark for smoked fish, rugelach, and coffee."
+    },
+    {
+      "kind": "food",
+      "name": "Levain Bakery",
+      "place_slug": "levain-bakery",
+      "note": "The original West 74th Street home of Levain's famous chocolate chip cookies."
+    },
+    {
+      "kind": "food",
+      "name": "Cafe Luxembourg",
+      "place_slug": "cafe-luxembourg",
+      "note": "A French-American brasserie serving bistro fare since 1983."
+    },
+    {
+      "kind": "stay",
+      "name": "The Lucerne Hotel",
+      "place_slug": "the-lucerne-hotel",
+      "note": "A landmark 1904 building with the adjoining Nice Matin restaurant."
+    },
+    {
+      "kind": "stay",
+      "name": "Hotel Beacon",
+      "place_slug": "hotel-beacon",
+      "note": "Apartment-style rooms with kitchenettes next to the Beacon Theatre."
+    }
+  ]
+}

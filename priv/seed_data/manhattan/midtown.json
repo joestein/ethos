@@ -1,0 +1,270 @@
+{
+  "guide": {
+    "slug": "midtown-manhattan-guide",
+    "title": "Midtown, Manhattan: Terminal City and the Tallest Tower",
+    "destination": "Midtown, New York",
+    "state": "New York",
+    "county": "Manhattan",
+    "intro": "Midtown Manhattan is the world's largest central business district, with about 400 million square feet of office space, its skyline anchored by two landmarks built for different purposes. Grand Central Terminal opened on February 2, 1913, after a decade of construction by the New York Central Railroad on the site of two predecessor stations dating to 1871; the terminal's \"Terminal City\" development boom shaped the modern district around it, and in the 1970s Jacqueline Kennedy Onassis helped block its demolition and a proposed office tower over the Main Concourse, a victory later honored with the Jacqueline Kennedy Onassis Foyer in 2014. Nearby, the Empire State Building opened May 1, 1931, and held the title of world's tallest building for 39 years, until the World Trade Center's North Tower topped out in 1970. Together they frame a district that is equal parts commerce, transit, and spectacle, with Times Square serving as its brightly illuminated hub of the Broadway Theater District.",
+    "sections": [
+      {
+        "heading": "Grand Central and the Rise of Terminal City",
+        "body": "Grand Central Terminal opened February 2, 1913, built by and named for the New York Central Railroad after a decade of construction on the site of two predecessor stations dating to 1871; its arrival catalyzed the \"Terminal City\" development boom that shaped modern Midtown. In the 1970s, Jacqueline Kennedy Onassis helped lead the fight that blocked the Main Concourse's demolition and a proposed Grand Central Tower, a landmark preservation victory later commemorated with the Jacqueline Kennedy Onassis Foyer, dedicated in 2014. A few blocks south, the Empire State Building opened May 1, 1931, and held the title of world's tallest building for about 39 years, until the World Trade Center's North Tower was topped out in 1970."
+      },
+      {
+        "heading": "Midtown's Museum Corridor",
+        "body": "The Museum of Modern Art at 11 West 53rd Street anchors Midtown's cultural side, with 2026 exhibitions including a Marcel Duchamp retrospective and a survey of a century of animation. A few blocks south, Bryant Park — named for poet-editor William Cullen Bryant and built on the former site of the Croton Reservoir — draws more than 12 million visitors a year, while the Beaux-Arts New York Public Library Stephen A. Schwarzman Building next door, opened in 1911 and guarded by the marble lions Patience and Fortitude, offers free daily tours of its Rose Main Reading Room."
+      },
+      {
+        "heading": "Getting there by subway",
+        "body": "Midtown is the best-connected district in the city: nearly every subway line converges on the 42nd Street corridor. Times Sq-42 St — the system's busiest complex, with 65 million riders in 2019 — brings together the 1/2/3, N/Q/R/W, and 7 trains with the S shuttle to Grand Central-42 St, which also connects to Metro-North and LIRR service. The A/C/E stop at 42 St-Port Authority Bus Terminal, and the B/D/F/M serve 42 St-Bryant Park/Fifth Avenue via a free daytime passageway to the Times Square complex."
+      }
+    ],
+    "faq": [
+      {
+        "question": "How do I get to Midtown by subway?",
+        "answer": "Nearly every line converges here: the 1/2/3, N/Q/R/W, 7, and S shuttle at Times Sq-42 St; the 4/5/6, 7, and S at Grand Central-42 St; the A/C/E at 42 St-Port Authority Bus Terminal; and the B/D/F/M at 42 St-Bryant Park/Fifth Avenue."
+      },
+      {
+        "question": "How tall is the Empire State Building, and how long was it the world's tallest?",
+        "answer": "Opened May 1, 1931, it held the title of world's tallest building for about 39 years, until the World Trade Center's North Tower topped out in 1970."
+      },
+      {
+        "question": "Is Grand Central Terminal still an active train station?",
+        "answer": "Yes. Opened in 1913, it remains a working commuter terminal connecting to Metro-North and the LIRR at Grand Central Madison, alongside its landmark Main Concourse and the Grand Central Oyster Bar on the lower level."
+      },
+      {
+        "question": "What's showing at MoMA right now?",
+        "answer": "As of 2026, exhibitions include a Marcel Duchamp retrospective (April 12-August 22) and It's Alive! A Century of Animation from the Collection (August 1, 2026-summer 2027); New York State residents get in free on UNIQLO Friday Nights."
+      },
+      {
+        "question": "Where can I stay in Midtown?",
+        "answer": "The Algonquin Hotel, home of the 1920s Round Table and now part of Marriott's Autograph Collection, and the Dewey-Decimal-themed Library Hotel near Grand Central are both verified in-neighborhood options."
+      }
+    ],
+    "photos": [
+      {
+        "src": "/photos/ny/manhattan/midtown/empire-state-building.jpg",
+        "thumb": "/photos/ny/manhattan/midtown/empire-state-building_thumb.jpg",
+        "title": "Empire State Building",
+        "description": "The Empire State Building seen from Rockefeller Center.",
+        "author": "Daniel Schwen",
+        "license": "CC BY-SA 4.0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Empire_State_Building_pano.jpg"
+      },
+      {
+        "src": "/photos/ny/manhattan/midtown/grand-central-concourse.jpg",
+        "thumb": "/photos/ny/manhattan/midtown/grand-central-concourse_thumb.jpg",
+        "title": "Grand Central Terminal Main Concourse",
+        "description": "The Main Concourse looking east, with its celestial ceiling and ticket windows.",
+        "author": "4300streetcar",
+        "license": "CC BY 4.0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Grand_Central_Terminal_main_concourse_looking_east_Jan_2025.jpg"
+      },
+      {
+        "src": "/photos/ny/manhattan/midtown/nypl-lion.jpg",
+        "thumb": "/photos/ny/manhattan/midtown/nypl-lion_thumb.jpg",
+        "title": "New York Public Library Lion",
+        "description": "One of Edward Clark Potter's marble lions guarding the Schwarzman Building.",
+        "author": "Ken Thomas",
+        "license": "Public domain",
+        "source_url": "https://commons.wikimedia.org/wiki/File:New_York_Public_Library_Lion-27527.jpg"
+      },
+      {
+        "src": "/photos/ny/manhattan/midtown/bryant-park.jpg",
+        "thumb": "/photos/ny/manhattan/midtown/bryant-park_thumb.jpg",
+        "title": "Bryant Park",
+        "description": "An aerial view of Bryant Park's lawn and tree border.",
+        "author": "Larry D. Moore",
+        "license": "CC BY 4.0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Bryant_Park_from_One_Vanderbilt_New_York_City_2022.jpg"
+      }
+    ]
+  },
+  "places": [
+    {
+      "slug": "grand-central-terminal",
+      "name": "Grand Central Terminal",
+      "kind": "historic-site",
+      "town": "Midtown",
+      "state": "New York",
+      "county": "Manhattan",
+      "address": "89 East 42nd Street, New York, NY",
+      "official_url": "https://www.grandcentralterminal.com/",
+      "summary": "Opened February 2, 1913, by the New York Central Railroad, still an active commuter terminal serving about 67 million rail passengers a year and drawing 21.6 million tourist visits in 2018. Jacqueline Kennedy Onassis helped save it from demolition in the 1970s.",
+      "status": "open",
+      "photos": [
+        {
+          "src": "/photos/ny/manhattan/midtown/grand-central-concourse.jpg",
+          "thumb": "/photos/ny/manhattan/midtown/grand-central-concourse_thumb.jpg",
+          "title": "Grand Central Terminal Main Concourse",
+          "description": "The Main Concourse looking east, with its celestial ceiling and ticket windows.",
+          "author": "4300streetcar",
+          "license": "CC BY 4.0",
+          "source_url": "https://commons.wikimedia.org/wiki/File:Grand_Central_Terminal_main_concourse_looking_east_Jan_2025.jpg"
+        }
+      ]
+    },
+    {
+      "slug": "museum-of-modern-art",
+      "name": "The Museum of Modern Art (MoMA)",
+      "kind": "museum",
+      "town": "Midtown",
+      "state": "New York",
+      "county": "Manhattan",
+      "address": "11 West 53 Street, New York, NY",
+      "official_url": "https://www.moma.org/",
+      "summary": "One of the world's leading modern-art museums; 2026 exhibitions include Marcel Duchamp (April 12-August 22) and It's Alive! A Century of Animation from the Collection (August 1, 2026-summer 2027). Free for New York State residents on UNIQLO Friday Nights.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "bryant-park",
+      "name": "Bryant Park",
+      "kind": "park",
+      "town": "Midtown",
+      "state": "New York",
+      "county": "Manhattan",
+      "address": "Behind the New York Public Library at Fifth Avenue and 42nd Street, New York, NY",
+      "official_url": "https://bryantpark.org/",
+      "summary": "Named for 19th-century poet-editor William Cullen Bryant and built on the former site of the Croton Reservoir; one of the world's busiest public spaces with over 12 million visitors annually and year-round free programming.",
+      "status": "open",
+      "photos": [
+        {
+          "src": "/photos/ny/manhattan/midtown/bryant-park.jpg",
+          "thumb": "/photos/ny/manhattan/midtown/bryant-park_thumb.jpg",
+          "title": "Bryant Park",
+          "description": "An aerial view of Bryant Park's lawn and tree border.",
+          "author": "Larry D. Moore",
+          "license": "CC BY 4.0",
+          "source_url": "https://commons.wikimedia.org/wiki/File:Bryant_Park_from_One_Vanderbilt_New_York_City_2022.jpg"
+        }
+      ]
+    },
+    {
+      "slug": "new-york-public-library-stephen-a-schwarzman-building",
+      "name": "New York Public Library - Stephen A. Schwarzman Building",
+      "kind": "historic-site",
+      "town": "Midtown",
+      "state": "New York",
+      "county": "Manhattan",
+      "address": "476 Fifth Avenue at 42nd Street, New York, NY 10018",
+      "official_url": "https://www.nypl.org/locations/schwarzman",
+      "summary": "Landmark Beaux-Arts building opened in 1911, guarded by the marble lions Patience and Fortitude; offers free daily guided tours of the Rose Main Reading Room and the Polonsky Exhibition of treasures.",
+      "status": "open",
+      "photos": [
+        {
+          "src": "/photos/ny/manhattan/midtown/nypl-lion.jpg",
+          "thumb": "/photos/ny/manhattan/midtown/nypl-lion_thumb.jpg",
+          "title": "New York Public Library Lion",
+          "description": "One of Edward Clark Potter's marble lions guarding the Schwarzman Building.",
+          "author": "Ken Thomas",
+          "license": "Public domain",
+          "source_url": "https://commons.wikimedia.org/wiki/File:New_York_Public_Library_Lion-27527.jpg"
+        }
+      ]
+    },
+    {
+      "slug": "le-bernardin",
+      "name": "Le Bernardin",
+      "kind": "restaurant",
+      "town": "Midtown",
+      "state": "New York",
+      "county": "Manhattan",
+      "address": "155 West 51st Street, New York, NY 10019",
+      "official_url": "https://www.le-bernardin.com/",
+      "summary": "Eric Ripert's seafood restaurant, relocated from Paris to New York in 1986 by Gilbert and Maguy Le Coze; has held three Michelin stars since the first NYC Michelin Guide in 2005.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "grand-central-oyster-bar",
+      "name": "Grand Central Oyster Bar",
+      "kind": "restaurant",
+      "town": "Midtown",
+      "state": "New York",
+      "county": "Manhattan",
+      "address": "Grand Central Terminal, Lower Level, 89 East 42nd Street, New York, NY 10017",
+      "official_url": "https://www.oysterbarny.com/",
+      "summary": "Opened in 1913, three weeks after Grand Central Terminal itself, beneath Rafael Guastavino's tiled vaults; celebrated its 110th anniversary in 2023.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "the-algonquin-hotel",
+      "name": "The Algonquin Hotel Times Square, Autograph Collection",
+      "kind": "hotel",
+      "town": "Midtown",
+      "state": "New York",
+      "county": "Manhattan",
+      "address": "59 West 44th Street, New York, NY 10036",
+      "official_url": "https://www.algonquinhotel.com/",
+      "summary": "Opened in 1902 and famous as home of the 1920s Algonquin Round Table of writers and critics; now part of Marriott's Autograph Collection, with the reopened Blue Bar Restaurant & Lounge.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "library-hotel",
+      "name": "Library Hotel",
+      "kind": "hotel",
+      "town": "Midtown",
+      "state": "New York",
+      "county": "Manhattan",
+      "address": "299 Madison Avenue at East 41st Street, New York, NY 10017",
+      "official_url": "https://libraryhotel.com/",
+      "summary": "Boutique hotel themed on the Dewey Decimal System with over 6,000 books distributed across subject-themed floors, plus the rooftop Bookmarks Lounge.",
+      "status": "open",
+      "photos": []
+    }
+  ],
+  "entries": [
+    {
+      "kind": "sight",
+      "name": "Grand Central Terminal",
+      "place_slug": "grand-central-terminal",
+      "note": "The 1913 Beaux-Arts terminal that catalyzed Midtown's development, saved from demolition by Jacqueline Kennedy Onassis."
+    },
+    {
+      "kind": "sight",
+      "name": "The Museum of Modern Art (MoMA)",
+      "place_slug": "museum-of-modern-art",
+      "note": "One of the world's leading modern-art museums, a few blocks from Bryant Park."
+    },
+    {
+      "kind": "walk",
+      "name": "Bryant Park",
+      "place_slug": "bryant-park",
+      "note": "A former reservoir site turned one of the world's busiest public parks."
+    },
+    {
+      "kind": "sight",
+      "name": "New York Public Library - Stephen A. Schwarzman Building",
+      "place_slug": "new-york-public-library-stephen-a-schwarzman-building",
+      "note": "The 1911 Beaux-Arts library guarded by the lions Patience and Fortitude, with free daily tours."
+    },
+    {
+      "kind": "food",
+      "name": "Le Bernardin",
+      "place_slug": "le-bernardin",
+      "note": "Eric Ripert's three-Michelin-star seafood restaurant, open since 1986."
+    },
+    {
+      "kind": "food",
+      "name": "Grand Central Oyster Bar",
+      "place_slug": "grand-central-oyster-bar",
+      "note": "Opened in 1913 beneath Guastavino's tiled vaults on the terminal's lower level."
+    },
+    {
+      "kind": "stay",
+      "name": "The Algonquin Hotel",
+      "place_slug": "the-algonquin-hotel",
+      "note": "The 1902 hotel that hosted the 1920s Algonquin Round Table."
+    },
+    {
+      "kind": "stay",
+      "name": "Library Hotel",
+      "place_slug": "library-hotel",
+      "note": "A Dewey-Decimal-themed boutique hotel near Grand Central."
+    }
+  ]
+}

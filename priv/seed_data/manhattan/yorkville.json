@@ -1,0 +1,250 @@
+{
+  "guide": {
+    "slug": "yorkville-manhattan-guide",
+    "title": "Yorkville, Manhattan: Manhattan's Old Germantown",
+    "destination": "Yorkville, New York",
+    "state": "New York",
+    "county": "Manhattan",
+    "intro": "Yorkville began as a hamlet clustered around the 86th Street railroad station in the 1830s and '40s, known by that name before 1867, with its street grid laid out between 1839 and 1844. East 86th Street became the commercial heart of a German \"Germantown\" that defined the neighborhood through much of the 19th and 20th centuries, swelled after the 1904 General Slocum steamship fire killed an estimated 1,021 of the 1,342 people aboard — mostly German immigrants from the Lower East Side — and sent survivors uptown. Hungarian, Czech, Polish, and Irish immigrants settled alongside them, though a darker chapter arrived in 1936, when the German American Bund set up headquarters on East 85th Street. The riverfront park was renamed Carl Schurz Park around 1910-1911 for the German-born U.S. Interior Secretary, and it contains Gracie Mansion, built in 1799 and the mayor's official residence since 1942.",
+    "sections": [
+      {
+        "heading": "Germantown on East 86th Street",
+        "body": "Yorkville grew from a hamlet around the 86th Street railroad station in the 1830s and 1840s, referred to by that name before 1867 and laid out on its street grid between 1839 and 1844. For much of the 19th and 20th centuries it was predominantly German, with East 86th Street as the commercial and cultural heart of \"Germantown,\" lined with German shops, restaurants, and bakeries. The 1904 General Slocum steamship fire, which killed an estimated 1,021 of the 1,342 people aboard — mostly German immigrants from the Lower East Side — accelerated the community's move uptown to Yorkville, which went on to draw Hungarian, Czech, Polish, and Irish immigrants as well. A darker chapter: the German American Bund established its headquarters on East 85th Street in 1936 and staged its notorious rally at Madison Square Garden in 1939."
+      },
+      {
+        "heading": "Carl Schurz Park and Gracie Mansion",
+        "body": "The neighborhood's riverfront park was set aside in part as \"East River Park\" in 1876 and renamed Carl Schurz Park around 1910-1911 for German-born U.S. Interior Secretary Carl Schurz. Within it stands Gracie Mansion, built in 1799 for merchant Archibald Gracie at East End Avenue and 88th Street; it has been the official residence of the Mayor of New York City since 1942, when Fiorello H. La Guardia's family moved in, and was designated a New York City landmark on September 20, 1966."
+      },
+      {
+        "heading": "Getting there by subway",
+        "body": "Yorkville is served directly by the Second Avenue Subway (Q) at 86th and 96th Streets, with the Lexington Avenue 4/5/6 trains one block west at 77th, 86th, and 96th Streets — for most visitors, the Q or the 4/5/6 at 86th Street is the practical gateway into the neighborhood."
+      }
+    ],
+    "faq": [
+      {
+        "question": "How do I get to Yorkville by subway?",
+        "answer": "The Second Avenue Subway's Q train stops at 86th and 96th Streets, and the Lexington Avenue 4/5/6 trains stop one block west at 77th, 86th, and 96th Streets. The Q or the 4/5/6 at 86th Street is the practical gateway for most visitors."
+      },
+      {
+        "question": "Why was Yorkville known as \"Germantown\"?",
+        "answer": "East 86th Street was the commercial heart of a predominantly German enclave from 1880 onward, swelled further after the 1904 General Slocum steamship fire, which killed an estimated 1,021 of the 1,342 people aboard, mostly German immigrants from the Lower East Side, and accelerated the community's move uptown."
+      },
+      {
+        "question": "Can I tour Gracie Mansion?",
+        "answer": "Public tours are currently paused while the Conservancy plans its next era of programming, per the official site. The 1799 mansion's exterior remains viewable from within Carl Schurz Park."
+      },
+      {
+        "question": "What is the Henderson Place Historic District?",
+        "answer": "It's 24 surviving Queen Anne-style rowhouses built 1880-1882 by developer John C. Henderson, designated a New York City landmark district in 1969 and listed on the National Register in 1974."
+      },
+      {
+        "question": "Where can I stay in Yorkville?",
+        "answer": "No hotel or bed-and-breakfast inside Yorkville could be verified as currently operating; the nearest candidate is the Courtyard by Marriott New York Manhattan/Upper East Side on East 92nd Street, though its current operation should be confirmed directly before booking."
+      }
+    ],
+    "photos": [
+      {
+        "src": "/photos/ny/manhattan/yorkville/carl-schurz-park.jpg",
+        "thumb": "/photos/ny/manhattan/yorkville/carl-schurz-park_thumb.jpg",
+        "title": "Carl Schurz Park",
+        "description": "Carl Schurz Park in spring.",
+        "author": "Epicgenius",
+        "license": "CC BY-SA 4.0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Carl_Schurz_Park_Apr_2026_01.jpg"
+      },
+      {
+        "src": "/photos/ny/manhattan/yorkville/gracie-mansion.jpg",
+        "thumb": "/photos/ny/manhattan/yorkville/gracie-mansion_thumb.jpg",
+        "title": "Gracie Mansion",
+        "description": "The east front of Gracie Mansion on a summer morning.",
+        "author": "Jim.henderson",
+        "license": "CC0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Gracie_East_front_summer_jeh.jpg"
+      },
+      {
+        "src": "/photos/ny/manhattan/yorkville/86th-street.jpg",
+        "thumb": "/photos/ny/manhattan/yorkville/86th-street_thumb.jpg",
+        "title": "86th Street and York Avenue",
+        "description": "The corner of York Avenue and East 86th Street, the old heart of Germantown.",
+        "author": "Deans Charbal",
+        "license": "CC BY-SA 4.0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:1622_York_Avenue_@_86th_Street,_Yorkville,_Upper_East_Side,_Manhattan_3.jpg"
+      }
+    ]
+  },
+  "places": [
+    {
+      "slug": "carl-schurz-park",
+      "name": "Carl Schurz Park",
+      "kind": "park",
+      "town": "Yorkville",
+      "state": "New York",
+      "county": "Manhattan",
+      "address": "Along East End Avenue at East 86th Street (John Finley Walk), New York, NY 10028",
+      "official_url": "https://carlschurzparknyc.org/",
+      "summary": "A 14.9-acre riverfront park named around 1910-1911 for German-born U.S. Interior Secretary Carl Schurz; contains Gracie Mansion and the John Finley Walk esplanade along the East River, with active summer programming from the Carl Schurz Park Conservancy.",
+      "history": "Part of the site was set aside as \"East River Park\" in 1876, before the 1910-1911 renaming.",
+      "status": "open",
+      "photos": [
+        {
+          "src": "/photos/ny/manhattan/yorkville/carl-schurz-park.jpg",
+          "thumb": "/photos/ny/manhattan/yorkville/carl-schurz-park_thumb.jpg",
+          "title": "Carl Schurz Park",
+          "description": "Carl Schurz Park in spring.",
+          "author": "Epicgenius",
+          "license": "CC BY-SA 4.0",
+          "source_url": "https://commons.wikimedia.org/wiki/File:Carl_Schurz_Park_Apr_2026_01.jpg"
+        }
+      ]
+    },
+    {
+      "slug": "gracie-mansion",
+      "name": "Gracie Mansion",
+      "kind": "historic-site",
+      "town": "Yorkville",
+      "state": "New York",
+      "county": "Manhattan",
+      "address": "East End Avenue at East 88th Street, New York, NY",
+      "summary": "Built in 1799 for merchant Archibald Gracie within what is now Carl Schurz Park; the official residence of the Mayor of New York City since 1942 and a New York City landmark since September 20, 1966. Public tours are currently paused; the exterior remains viewable from the park.",
+      "status": "open",
+      "photos": [
+        {
+          "src": "/photos/ny/manhattan/yorkville/gracie-mansion.jpg",
+          "thumb": "/photos/ny/manhattan/yorkville/gracie-mansion_thumb.jpg",
+          "title": "Gracie Mansion",
+          "description": "The east front of Gracie Mansion on a summer morning.",
+          "author": "Jim.henderson",
+          "license": "CC0",
+          "source_url": "https://commons.wikimedia.org/wiki/File:Gracie_East_front_summer_jeh.jpg"
+        }
+      ]
+    },
+    {
+      "slug": "henderson-place-historic-district",
+      "name": "Henderson Place Historic District",
+      "kind": "historic-site",
+      "town": "Yorkville",
+      "state": "New York",
+      "county": "Manhattan",
+      "address": "Henderson Place and East End Avenue, between East 86th and East 87th Streets, New York, NY",
+      "summary": "24 surviving Queen Anne-style rowhouses built 1880-1882 by developer John C. Henderson to designs of Lamb & Rich; designated a New York City landmark district in 1969 and listed on the National Register in 1974.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "asphalt-green",
+      "name": "Asphalt Green (Upper East Side campus)",
+      "kind": "attraction",
+      "town": "Yorkville",
+      "state": "New York",
+      "county": "Manhattan",
+      "address": "555 East 90th Street, New York, NY 10128",
+      "official_url": "https://www.asphaltgreen.org/ues",
+      "summary": "Community sports and recreation center whose Murphy Center is the landmark former Municipal Asphalt Plant, converted and opened in 1984; the AquaCenter houses an Olympic-sized pool, and outdoor spaces include a FIFA-certified soccer field.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "church-of-the-holy-trinity",
+      "name": "Church of the Holy Trinity (Episcopal)",
+      "kind": "historic-site",
+      "town": "Yorkville",
+      "state": "New York",
+      "county": "Manhattan",
+      "address": "316 East 88th Street, New York, NY 10128",
+      "official_url": "https://www.holytrinity-nyc.org/",
+      "summary": "An Episcopal parish in the Anglican Communion at this site since 1899, known for its architecture and stained-glass windows.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "schaller-weber",
+      "name": "Schaller & Weber",
+      "kind": "restaurant",
+      "town": "Yorkville",
+      "state": "New York",
+      "county": "Manhattan",
+      "address": "1654 Second Avenue, New York, NY 10028",
+      "official_url": "https://schallerweber.com/",
+      "summary": "A German butcher and European specialty shop founded in 1937, a living remnant of Yorkville's Germantown era; also operates the casual sausage eatery Schaller's Stube and Jeremy's cocktail bar.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "cafe-dalsace",
+      "name": "Cafe d'Alsace",
+      "kind": "restaurant",
+      "town": "Yorkville",
+      "state": "New York",
+      "county": "Manhattan",
+      "address": "1703 2nd Avenue, New York, NY 10128",
+      "official_url": "https://www.cafedalsace.com/",
+      "summary": "An Alsatian brasserie blending German and French influences — tarte flambee, choucroute garnie — with a 130-plus beer list curated by an in-house cicerone.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "the-penrose",
+      "name": "The Penrose",
+      "kind": "restaurant",
+      "town": "Yorkville",
+      "state": "New York",
+      "county": "Manhattan",
+      "address": "1590 Second Avenue (between 82nd & 83rd Streets), New York, NY",
+      "official_url": "https://www.penrosebar.com/",
+      "summary": "A neighborhood gastropub with classic cocktails, craft beer, and elevated pub food, steps from the Q at 86th Street; weekend brunch and a late-night menu until 2 a.m.",
+      "status": "open",
+      "photos": []
+    }
+  ],
+  "entries": [
+    {
+      "kind": "walk",
+      "name": "Carl Schurz Park",
+      "place_slug": "carl-schurz-park",
+      "note": "A 14.9-acre riverfront park named for the German-born U.S. Interior Secretary."
+    },
+    {
+      "kind": "sight",
+      "name": "Gracie Mansion",
+      "place_slug": "gracie-mansion",
+      "note": "The 1799 mayoral residence inside Carl Schurz Park; tours currently paused."
+    },
+    {
+      "kind": "sight",
+      "name": "Henderson Place Historic District",
+      "place_slug": "henderson-place-historic-district",
+      "note": "24 surviving 1880s Queen Anne rowhouses, landmarked since 1969."
+    },
+    {
+      "kind": "sight",
+      "name": "Asphalt Green",
+      "place_slug": "asphalt-green",
+      "note": "A sports and recreation center in the former Municipal Asphalt Plant."
+    },
+    {
+      "kind": "sight",
+      "name": "Church of the Holy Trinity (Episcopal)",
+      "place_slug": "church-of-the-holy-trinity",
+      "note": "An Episcopal parish on this site since 1899, known for its stained glass."
+    },
+    {
+      "kind": "food",
+      "name": "Schaller & Weber",
+      "place_slug": "schaller-weber",
+      "note": "A 1937 German butcher and specialty shop, a living remnant of old Germantown."
+    },
+    {
+      "kind": "food",
+      "name": "Cafe d'Alsace",
+      "place_slug": "cafe-dalsace",
+      "note": "An Alsatian brasserie with a 130-plus beer list and an in-house cicerone."
+    },
+    {
+      "kind": "food",
+      "name": "The Penrose",
+      "place_slug": "the-penrose",
+      "note": "A neighborhood gastropub steps from the Q train at 86th Street."
+    }
+  ]
+}

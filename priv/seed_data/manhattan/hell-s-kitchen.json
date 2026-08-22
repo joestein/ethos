@@ -1,0 +1,251 @@
+{
+  "guide": {
+    "slug": "hell-s-kitchen-manhattan-guide",
+    "title": "Hell's Kitchen, Manhattan: From Gopher Gang to Restaurant Row",
+    "destination": "Hell's Kitchen, New York",
+    "state": "New York",
+    "county": "Manhattan",
+    "intro": "Hell's Kitchen's name first appeared in print on September 22, 1881, when a New York Times reporter used it to describe an infamous tenement at 39th Street and Tenth Avenue — though a rival story credits a veteran policeman, \"Dutch Fred the Cop,\" who told his rookie partner watching a riot nearby, \"This is Hell's Kitchen.\" Irish immigrants fleeing the famine had settled the docks and the Hudson River Railroad's route in the mid-1800s, and post-Civil War tenements grew severely overcrowded as tanneries and slaughterhouses industrialized the district. The neighborhood was long defined by organized crime: the Gopher Gang ruled at the turn of the 20th century, Prohibition turned warehouses into bootleg distilleries after 1919, and by 1965 the Irish-American Westies operated in league with the Gambino family. A 1959 rebranding as \"Clinton\" never stuck; residents kept the older name. Today it's also home to the Actors Studio and Manhattan Plaza's subsidized artist housing.",
+    "sections": [
+      {
+        "heading": "From Tenements to the Westies",
+        "body": "Hell's Kitchen urbanized in the mid-1800s when Irish immigrants fleeing the Great Famine built shantytowns along the Hudson River docks and the new Hudson River Railroad, whose first 40-mile leg to Peekskill was completed September 29, 1849. Tenements became severely overcrowded after the Civil War as the district industrialized with tanneries and slaughterhouses, and organized crime took root: the Gopher Gang, led first by One Lung Curran and then Owney Madden, controlled the neighborhood at the start of the 20th century; Prohibition-era warehouses became bootleg distilleries after 1919; and by 1965 the Westies, an Irish mob aligned with the Gambino crime family, operated from the neighborhood. In 1959, city boosters tried renaming the area \"Clinton\" after DeWitt Clinton Park, but residents never gave up \"Hell's Kitchen.\""
+      },
+      {
+        "heading": "An Anchor for the Arts",
+        "body": "The neighborhood became a performing-arts hub in its own right: the Actors Studio on West 44th Street is the storied home of method-acting training, and Manhattan Plaza on West 43rd Street was built in the 1970s as subsidized housing for artists and performers. Studio 54, built as the Gallo Opera House in 1927 and legendary as a disco-era nightclub in the late 1970s, has been a permanent Broadway home of the Roundabout Theatre Company since 1998."
+      },
+      {
+        "heading": "Getting there by subway",
+        "body": "Hell's Kitchen has no subway line running through its center. Riders use the A/C/E along Eighth Avenue on the eastern edge, notably at 42 St-Port Authority Bus Terminal, and the 7 train's southern terminal at 34 St-Hudson Yards, opened September 13, 2015; crosstown buses like the M42 and M50 cover the interior blocks between the two."
+      }
+    ],
+    "faq": [
+      {
+        "question": "How do I get to Hell's Kitchen by subway?",
+        "answer": "There's no line through the neighborhood's center. Use the A/C/E along Eighth Avenue, notably at 42 St-Port Authority Bus Terminal, or the 7 train at 34 St-Hudson Yards on the southern end, and cover the interior blocks with crosstown buses like the M42 or M50."
+      },
+      {
+        "question": "Where does the name \"Hell's Kitchen\" come from?",
+        "answer": "It first appeared in print on September 22, 1881, describing an infamous tenement at 39th Street and Tenth Avenue. A rival story credits veteran policeman \"Dutch Fred the Cop,\" who told his rookie partner watching a riot there, \"This is Hell's Kitchen.\""
+      },
+      {
+        "question": "Is Hell's Kitchen still called \"Clinton\"?",
+        "answer": "The name \"Clinton\" was adopted in 1959, taken from DeWitt Clinton Park, in an effort to rehabilitate the area's image — but residents have always preferred \"Hell's Kitchen.\""
+      },
+      {
+        "question": "What's inside the Intrepid Museum?",
+        "answer": "Built around the WWII aircraft carrier USS Intrepid, it displays the space shuttle Enterprise, the submarine Growler, a Concorde, and dozens of military aircraft on Pier 86 at the Hudson River."
+      },
+      {
+        "question": "Where can I stay in Hell's Kitchen?",
+        "answer": "Pod Times Square, at 400 West 42nd Street, is the verified in-neighborhood option, with compact pod rooms, apartment-style units, and on-site Bar 42 & Pizzoteca."
+      }
+    ],
+    "photos": [
+      {
+        "src": "/photos/ny/manhattan/hell-s-kitchen/ninth-avenue-food-festival.jpg",
+        "thumb": "/photos/ny/manhattan/hell-s-kitchen/ninth-avenue-food-festival_thumb.jpg",
+        "title": "Ninth Avenue Street Scene",
+        "description": "Looking south on Ninth Avenue during the International Food Festival.",
+        "author": "Jim.henderson",
+        "license": "Public domain",
+        "source_url": "https://commons.wikimedia.org/wiki/File:9thavfoodfestjeh.jpg"
+      },
+      {
+        "src": "/photos/ny/manhattan/hell-s-kitchen/intrepid-museum.jpg",
+        "thumb": "/photos/ny/manhattan/hell-s-kitchen/intrepid-museum_thumb.jpg",
+        "title": "Intrepid Sea, Air & Space Museum",
+        "description": "The USS Intrepid with the West Side Manhattan skyline, seen from the Hudson River.",
+        "author": "Acroterion",
+        "license": "CC BY-SA 4.0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Intrepid_and_west_side_Manhattan_skyline_NY1.jpg"
+      },
+      {
+        "src": "/photos/ny/manhattan/hell-s-kitchen/dewitt-clinton-park.jpg",
+        "thumb": "/photos/ny/manhattan/hell-s-kitchen/dewitt-clinton-park_thumb.jpg",
+        "title": "DeWitt Clinton Park",
+        "description": "The main entrance court at Eleventh Avenue and West 52nd Street.",
+        "author": "Tdorante10",
+        "license": "CC BY-SA 4.0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:DeWitt_Clinton_Pk_td_(2023-04-04)_003.jpg"
+      }
+    ]
+  },
+  "places": [
+    {
+      "slug": "intrepid-museum",
+      "name": "Intrepid Museum (Intrepid Sea, Air & Space Museum)",
+      "kind": "museum",
+      "town": "Hell's Kitchen",
+      "state": "New York",
+      "county": "Manhattan",
+      "address": "Pier 86, West 46th Street at the Hudson River, New York, NY",
+      "official_url": "https://intrepidmuseum.org/",
+      "summary": "Built around the WWII aircraft carrier USS Intrepid, commissioned 1943, the museum displays the space shuttle Enterprise, the submarine Growler, a Concorde, and dozens of military aircraft.",
+      "status": "open",
+      "photos": [
+        {
+          "src": "/photos/ny/manhattan/hell-s-kitchen/intrepid-museum.jpg",
+          "thumb": "/photos/ny/manhattan/hell-s-kitchen/intrepid-museum_thumb.jpg",
+          "title": "Intrepid Sea, Air & Space Museum",
+          "description": "The USS Intrepid with the West Side Manhattan skyline, seen from the Hudson River.",
+          "author": "Acroterion",
+          "license": "CC BY-SA 4.0",
+          "source_url": "https://commons.wikimedia.org/wiki/File:Intrepid_and_west_side_Manhattan_skyline_NY1.jpg"
+        }
+      ]
+    },
+    {
+      "slug": "dewitt-clinton-park",
+      "name": "DeWitt Clinton Park",
+      "kind": "park",
+      "town": "Hell's Kitchen",
+      "state": "New York",
+      "county": "Manhattan",
+      "address": "West 52nd to West 54th Streets between Eleventh and Twelfth Avenues, New York, NY",
+      "official_url": "https://www.nycgovparks.org/parks/de-witt-clinton-park",
+      "summary": "A 5.8-acre park opened in 1906 from an 1901 design by Samuel Parsons Jr.; the neighborhood's largest park and the source of Hell's Kitchen's alternative name \"Clinton,\" adopted in 1959. Open 6 a.m. to 1 a.m. year-round with ballfields, courts, a dog run, and a playground.",
+      "status": "open",
+      "photos": [
+        {
+          "src": "/photos/ny/manhattan/hell-s-kitchen/dewitt-clinton-park.jpg",
+          "thumb": "/photos/ny/manhattan/hell-s-kitchen/dewitt-clinton-park_thumb.jpg",
+          "title": "DeWitt Clinton Park",
+          "description": "The main entrance court at Eleventh Avenue and West 52nd Street.",
+          "author": "Tdorante10",
+          "license": "CC BY-SA 4.0",
+          "source_url": "https://commons.wikimedia.org/wiki/File:DeWitt_Clinton_Pk_td_(2023-04-04)_003.jpg"
+        }
+      ]
+    },
+    {
+      "slug": "studio-54",
+      "name": "Studio 54 (Roundabout Theatre Company)",
+      "kind": "theater",
+      "town": "Hell's Kitchen",
+      "state": "New York",
+      "county": "Manhattan",
+      "address": "254 West 54th Street, New York, NY 10019",
+      "official_url": "https://www.roundabouttheatre.org/get-tickets/studio-54/",
+      "summary": "Built as the Gallo Opera House in 1927, it became the most legendary nightclub of the disco era in the late 1970s; since 1998 it has been a permanent Broadway home of the Roundabout Theatre Company.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "pure-thai-cookhouse",
+      "name": "Pure Thai Cookhouse",
+      "kind": "restaurant",
+      "town": "Hell's Kitchen",
+      "state": "New York",
+      "county": "Manhattan",
+      "address": "766 9th Avenue, New York, NY 10019",
+      "official_url": "https://www.purethaicookhouse.com/",
+      "summary": "Shophouse-style Thai restaurant known for homemade noodles from a family recipe, including Ratchaburi Crab & Pork Dry Noodles and wok dishes drawn from regional Thai cooking.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "danji",
+      "name": "Danji",
+      "kind": "restaurant",
+      "town": "Hell's Kitchen",
+      "state": "New York",
+      "county": "Manhattan",
+      "address": "346 West 52nd Street (between 8th & 9th Avenues), New York, NY",
+      "official_url": "https://www.danjinyc.com/",
+      "summary": "Korean small-plates restaurant noted for its bulgogi sliders and crispy tofu rolls.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "don-antonio",
+      "name": "Don Antonio",
+      "kind": "restaurant",
+      "town": "Hell's Kitchen",
+      "state": "New York",
+      "county": "Manhattan",
+      "address": "309 West 50th Street (between 8th & 9th Avenues), New York, NY",
+      "official_url": "https://www.donantoniopizza.com/",
+      "summary": "Neapolitan pizzeria led by award-winning master pizzaiola Giorgia Caporuscio, known for wood-fired pies baked at 850F in under 90 seconds and its signature fried-pizza \"Montanara.\"",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "sullivan-street-bakery",
+      "name": "Sullivan Street Bakery (Hell's Kitchen)",
+      "kind": "cafe",
+      "town": "Hell's Kitchen",
+      "state": "New York",
+      "county": "Manhattan",
+      "address": "533 West 47th Street, New York, NY",
+      "official_url": "https://www.sullivanstreetbakery.com/",
+      "summary": "Artisan bread bakery whose flagship Hell's Kitchen location supplies breads and Roman-style pizza, alongside online store, catering, and wholesale operations.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "pod-times-square",
+      "name": "Pod Times Square",
+      "kind": "hotel",
+      "town": "Hell's Kitchen",
+      "state": "New York",
+      "county": "Manhattan",
+      "address": "400 West 42nd Street, New York, NY",
+      "official_url": "https://www.thepodhotel.com/pod-times-square",
+      "summary": "Value-oriented hotel with compact \"pod\" rooms and apartment-style units for extended stays, plus on-site Bar 42 & Pizzoteca; located at 42nd Street and Ninth Avenue.",
+      "status": "open",
+      "photos": []
+    }
+  ],
+  "entries": [
+    {
+      "kind": "sight",
+      "name": "Intrepid Museum",
+      "place_slug": "intrepid-museum",
+      "note": "A WWII aircraft carrier turned museum, with the space shuttle Enterprise and a Concorde."
+    },
+    {
+      "kind": "walk",
+      "name": "DeWitt Clinton Park",
+      "place_slug": "dewitt-clinton-park",
+      "note": "The neighborhood's largest park, and the source of its short-lived \"Clinton\" nickname."
+    },
+    {
+      "kind": "sight",
+      "name": "Studio 54",
+      "place_slug": "studio-54",
+      "note": "A 1927 opera house turned legendary disco club, now a Roundabout Theatre Company home."
+    },
+    {
+      "kind": "food",
+      "name": "Pure Thai Cookhouse",
+      "place_slug": "pure-thai-cookhouse",
+      "note": "Shophouse-style Thai noodles from a family recipe on Ninth Avenue."
+    },
+    {
+      "kind": "food",
+      "name": "Danji",
+      "place_slug": "danji",
+      "note": "Korean small plates known for bulgogi sliders and crispy tofu rolls."
+    },
+    {
+      "kind": "food",
+      "name": "Don Antonio",
+      "place_slug": "don-antonio",
+      "note": "Wood-fired Neapolitan pizza from an award-winning master pizzaiola."
+    },
+    {
+      "kind": "food",
+      "name": "Sullivan Street Bakery",
+      "place_slug": "sullivan-street-bakery",
+      "note": "The flagship location of this artisan bread and Roman-style pizza bakery."
+    },
+    {
+      "kind": "stay",
+      "name": "Pod Times Square",
+      "place_slug": "pod-times-square",
+      "note": "Compact pod rooms and apartment-style units near 42nd Street and Ninth Avenue."
+    }
+  ]
+}
