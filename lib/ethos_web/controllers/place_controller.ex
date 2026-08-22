@@ -21,9 +21,15 @@ defmodule EthosWeb.PlaceController do
           url: url(~p"/p/#{place.slug}")
         }
 
+        current_user = conn.assigns[:current_user]
+
+        visited? =
+          if current_user, do: Ethos.Visits.visited?(current_user, place), else: false
+
         render(conn, :show,
           place: place,
           featured_guides: featured,
+          visited?: visited?,
           page_title: "#{place.name} — #{place.town}, #{place.state}",
           page_og: og,
           page_meta_description: meta_description,
@@ -31,6 +37,20 @@ defmodule EthosWeb.PlaceController do
           json_ld: [place_ld(place, meta_description), breadcrumb_ld(place)]
         )
     end
+  end
+
+  def visit(conn, %{"slug" => slug}) do
+    place = Places.get_place_by_slug!(slug)
+    user = conn.assigns.current_user
+
+    conn =
+      case Ethos.Visits.toggle_visit(user, place) do
+        {:ok, :visited} -> put_flash(conn, :info, "Checked off #{place.name}!")
+        {:ok, :unvisited} -> put_flash(conn, :info, "Removed #{place.name} from your visits.")
+        {:error, :closed} -> put_flash(conn, :error, "#{place.name} is permanently closed.")
+      end
+
+    redirect(conn, to: ~p"/p/#{place.slug}")
   end
 
   defp place_ld(place, description) do
