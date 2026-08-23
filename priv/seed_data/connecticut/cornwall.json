@@ -1,0 +1,234 @@
+{
+  "guide": {
+    "slug": "cornwall-ct-travel-guide",
+    "title": "Cornwall, Connecticut: A Covered Bridge and Two Blast Furnaces",
+    "destination": "Cornwall, Connecticut",
+    "state": "Connecticut",
+    "county": "Litchfield County",
+    "intro": "Cornwall was incorporated in May 1740 on the Housatonic River in Litchfield County and has remained one of Connecticut's smallest, most rural towns ever since. Iron became its defining 19th-century industry, supported by two blast furnaces and charcoal-making operations. The West Cornwall Covered Bridge, most likely built in 1864 of red spruce fastened with wooden treenails, still carries a single lane of traffic across the Housatonic and is listed on the National Register of Historic Places; earlier crossings at the same spot, dating to 1762, were destroyed by ice and the Flood of 1837. The town's notable figures include Ethan Allen, raised here as a boy; General John Sedgwick; and Pulitzer Prize-winning poet Mark Van Doren. Henry ʻŌpūkahaʻia, the young Hawaiian whose story inspired Cornwall's Foreign Mission School (1817-1826), was buried in Cornwall Cemetery before his remains were returned to Hawaii in 1993.",
+    "sections": [
+      {
+        "heading": "Iron, a bridge, and a Hawaiian connection",
+        "body": "Cornwall's 19th-century economy ran on iron: two blast furnaces and the charcoal-making operations that fed them. The West Cornwall Covered Bridge — 172 feet long, 15 feet wide, its red-spruce timbers held together with wooden treenails — most likely dates to 1864 and still carries traffic on a single lane. Decades earlier, Cornwall's Foreign Mission School trained Indigenous and international students as missionaries from 1817 to 1826; its most famous student, the young Hawaiian Henry ʻŌpūkahaʻia, was originally buried in Cornwall Cemetery, and though his remains were returned to Hawaii in 1993, the town still marks and commemorates the connection."
+      },
+      {
+        "heading": "Getting there",
+        "body": "Cornwall is a drive-to destination in the Litchfield Hills: US Route 7 follows the Housatonic River through Cornwall Bridge and West Cornwall, CT Route 4 crosses the town past Mohawk State Forest, and CT Route 128 carries traffic over the covered bridge itself. There's no passenger rail in Cornwall; the nearest station is Metro-North's Harlem Line terminus at Wassaic, New York."
+      },
+      {
+        "heading": "Mohawk Mountain and Cornwall Bridge",
+        "body": "Mohawk State Forest surrounds 1,683-foot Mohawk Mountain with ten miles of hiking trails and a rare black spruce bog; the adjoining Mohawk Mountain Ski Area is Connecticut's largest ski hill, with night skiing and snowmaking. At Cornwall Bridge, Housatonic Meadows State Park — which sits on the Sharon/Cornwall town line — offers riverside camping and a stretch of the Housatonic restricted to catch-and-release fly fishing. Cornwall Market bakes bread and pastries daily, and the family-run Cornwall Inn is the area's main lodging."
+      }
+    ],
+    "faq": [
+      {
+        "question": "How do I get to Cornwall?",
+        "answer": "By car via US Route 7 (through Cornwall Bridge and West Cornwall), CT Route 4, or CT Route 128 over the covered bridge. There's no passenger rail; the nearest station is Metro-North's Harlem Line terminus at Wassaic, NY."
+      },
+      {
+        "question": "Is the West Cornwall Covered Bridge still open to cars?",
+        "answer": "Yes — it carries a single lane of traffic on CT Route 128, though it's officially considered functionally obsolete and was reinforced with hidden steel supports in 1968 and 1973."
+      },
+      {
+        "question": "What is the Foreign Mission School's connection to Hawaii?",
+        "answer": "Cornwall's Foreign Mission School (1817-1826) trained Indigenous and international students as missionaries; its best-known student, Henry ʻŌpūkahaʻia, was buried in Cornwall Cemetery before his remains were returned to Hawaii in 1993. The town still commemorates the link."
+      },
+      {
+        "question": "Can I ski at Mohawk Mountain?",
+        "answer": "Yes — Mohawk Mountain Ski Area is Connecticut's largest ski hill, with a 650-foot vertical drop, night skiing, and snowmaking, adjoining Mohawk State Forest."
+      },
+      {
+        "question": "Where can I eat and stay in Cornwall?",
+        "answer": "Cornwall Market in Cornwall Bridge bakes bread and pastries daily and serves breakfast and lunch. The family-run Cornwall Inn, also in Cornwall Bridge, is the area's main lodging, with 13 rooms and a continental breakfast."
+      }
+    ],
+    "photos": [
+      {
+        "src": "/photos/ct/cornwall/west-cornwall-covered-bridge.jpg",
+        "thumb": "/photos/ct/cornwall/west-cornwall-covered-bridge_thumb.jpg",
+        "title": "West Cornwall Covered Bridge",
+        "description": "The red West Cornwall Covered Bridge spanning the Housatonic River at peak fall color.",
+        "author": "Marc Dantzker",
+        "license": "CC BY-SA 4.0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:West_Cornwall_Covered_Bridge_over_the_Housatonic_River_1.jpg"
+      },
+      {
+        "src": "/photos/ct/cornwall/west-cornwall-village.jpg",
+        "thumb": "/photos/ct/cornwall/west-cornwall-village_thumb.jpg",
+        "title": "West Cornwall village street",
+        "description": "Looking down Route 128 through the West Cornwall village center toward the covered bridge.",
+        "author": "Joe Mabel",
+        "license": "CC BY-SA 3.0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:West_Cornwall,_CT_-_02.jpg"
+      },
+      {
+        "src": "/photos/ct/cornwall/cathedral-pines.jpg",
+        "thumb": "/photos/ct/cornwall/cathedral-pines_thumb.jpg",
+        "title": "Cathedral Pines Preserve",
+        "description": "Towering white pines in Cornwall's Cathedral Pines Preserve.",
+        "author": "Marty Aligata",
+        "license": "CC BY-SA 4.0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:White_Pine_Trees_in_Cathedral_Pines_Preserve,_Cornwall,_CT_-_April_2022.jpg"
+      }
+    ]
+  },
+  "places": [
+    {
+      "slug": "west-cornwall-covered-bridge",
+      "name": "West Cornwall Covered Bridge",
+      "kind": "historic-site",
+      "town": "Cornwall",
+      "state": "Connecticut",
+      "county": "Litchfield County",
+      "address": "CT Route 128 over the Housatonic River, West Cornwall, CT 06796",
+      "official_url": "https://cornwallct.org/explore-cornwall-ct/cornwall-ct-covered-bridge/",
+      "summary": "A lattice-truss bridge most likely built in 1864 of red spruce fastened with treenails, 172 feet long, listed on the National Register of Historic Places and still carrying a single lane of vehicle traffic. 'The Bend' parking area just south of the bridge offers river access.",
+      "status": "open",
+      "photos": [
+        {
+          "src": "/photos/ct/cornwall/west-cornwall-covered-bridge.jpg",
+          "thumb": "/photos/ct/cornwall/west-cornwall-covered-bridge_thumb.jpg",
+          "title": "West Cornwall Covered Bridge",
+          "description": "The red West Cornwall Covered Bridge spanning the Housatonic River at peak fall color.",
+          "author": "Marc Dantzker",
+          "license": "CC BY-SA 4.0",
+          "source_url": "https://commons.wikimedia.org/wiki/File:West_Cornwall_Covered_Bridge_over_the_Housatonic_River_1.jpg"
+        }
+      ]
+    },
+    {
+      "slug": "cornwall-historical-society",
+      "name": "Cornwall Historical Society",
+      "kind": "museum",
+      "town": "Cornwall",
+      "state": "Connecticut",
+      "county": "Litchfield County",
+      "address": "7 Pine Street, Cornwall, CT 06753",
+      "official_url": "https://cornwallhistoricalsociety.org/",
+      "summary": "A local-history museum and archive; its 2026 exhibition 'War Stories: Cornwall in the Revolution' explores the farming village's role in the American Revolution, 1775-1783. Hours Saturday 10 a.m.-4 p.m., Sunday 1-4 p.m.; archives by appointment.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "mohawk-state-forest",
+      "name": "Mohawk State Forest",
+      "kind": "park",
+      "town": "Cornwall",
+      "state": "Connecticut",
+      "county": "Litchfield County",
+      "address": "Route 4, Cornwall, CT 06753",
+      "official_url": "https://www.ctvisit.com/listings/mohawk-state-forest",
+      "summary": "A state forest around 1,683-foot Mohawk Mountain with ten miles of hiking trails, a black spruce bog recognized as a unique natural area, and long-range summit views. Open for hiking, fishing, and picnicking.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "mohawk-mountain-ski-area",
+      "name": "Mohawk Mountain Ski Area",
+      "kind": "attraction",
+      "town": "Cornwall",
+      "state": "Connecticut",
+      "county": "Litchfield County",
+      "address": "46 Great Hollow Rd., Cornwall, CT 06753",
+      "official_url": "https://www.mohawkmtn.com/",
+      "summary": "Connecticut's largest ski area, with a 650-foot vertical drop, snowmaking, night skiing through the week, a ski shop, and on-site dining.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "housatonic-meadows-state-park",
+      "name": "Housatonic Meadows State Park",
+      "kind": "park",
+      "town": "Cornwall",
+      "state": "Connecticut",
+      "county": "Litchfield County",
+      "address": "90 US Route 7, on the Sharon/Cornwall town line near Cornwall Bridge, CT 06069",
+      "official_url": "https://ctparks.com/node/66",
+      "summary": "A riverside park with 61 RV/tent campsites and four rustic cabins; a two-mile stretch of the Housatonic here is restricted to catch-and-release fly fishing only. 2026 camping season runs May 22-September 7.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "cornwall-market",
+      "name": "Cornwall Market",
+      "kind": "cafe",
+      "town": "Cornwall",
+      "state": "Connecticut",
+      "county": "Litchfield County",
+      "address": "25 Kent Road South (US Route 7), Cornwall Bridge, CT 06754",
+      "official_url": "https://www.cornwallmarket.com/",
+      "summary": "Market-cafe with pastries and bread baked on premises daily, breakfast and lunch menus, prepared foods, a chocolate room, and a craft beer and natural wine selection. Spring hours as posted; call to confirm seasonally.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "cornwall-inn",
+      "name": "Cornwall Inn",
+      "kind": "bnb",
+      "town": "Cornwall",
+      "state": "Connecticut",
+      "county": "Litchfield County",
+      "address": "270 Kent Road South (US Route 7), Cornwall Bridge, CT 06754",
+      "official_url": "https://www.cornwallinn.com/",
+      "summary": "Family-owned country inn with 13 rooms across a Main Inn and a pet-friendly Country Lodge, serving a continental breakfast; no on-site restaurant.",
+      "status": "open",
+      "photos": []
+    }
+  ],
+  "entries": [
+    {
+      "kind": "sight",
+      "name": "West Cornwall Covered Bridge",
+      "place_slug": "west-cornwall-covered-bridge",
+      "note": "An 1864 lattice-truss bridge still open to a single lane of traffic."
+    },
+    {
+      "kind": "sight",
+      "name": "Cornwall Historical Society",
+      "place_slug": "cornwall-historical-society",
+      "note": "A local-history museum with a 2026 Revolutionary War exhibition."
+    },
+    {
+      "kind": "walk",
+      "name": "Mohawk State Forest",
+      "place_slug": "mohawk-state-forest",
+      "note": "Ten miles of trails around 1,683-foot Mohawk Mountain."
+    },
+    {
+      "kind": "sight",
+      "name": "Mohawk Mountain Ski Area",
+      "place_slug": "mohawk-mountain-ski-area",
+      "note": "Connecticut's largest ski area, with night skiing and snowmaking."
+    },
+    {
+      "kind": "walk",
+      "name": "Housatonic Meadows State Park",
+      "place_slug": "housatonic-meadows-state-park",
+      "note": "Riverside camping and catch-and-release fly fishing on the Housatonic."
+    },
+    {
+      "kind": "food",
+      "name": "Cornwall Market",
+      "place_slug": "cornwall-market",
+      "note": "Daily-baked pastries and bread, breakfast and lunch."
+    },
+    {
+      "kind": "stay",
+      "name": "Cornwall Inn",
+      "place_slug": "cornwall-inn",
+      "note": "A 13-room family-owned country inn in Cornwall Bridge."
+    }
+  ],
+  "links": [
+    {
+      "target": "guide:norfolk-ct-travel-guide",
+      "kind": "nearby",
+      "note": null
+    },
+    {
+      "target": "guide:salisbury-ct-travel-guide",
+      "kind": "shared-history",
+      "note": "Cornwall and Salisbury both built 19th-century economies on Litchfield Hills iron furnaces."
+    }
+  ]
+}

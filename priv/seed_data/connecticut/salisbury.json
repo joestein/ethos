@@ -1,0 +1,278 @@
+{
+  "guide": {
+    "slug": "salisbury-ct-travel-guide",
+    "title": "Salisbury, Connecticut: Arsenal of the Revolution",
+    "destination": "Salisbury, Connecticut",
+    "state": "Connecticut",
+    "county": "Litchfield County",
+    "intro": "Salisbury was incorporated in October 1741 and sits in Connecticut's far northwest corner, bordering both New York and Massachusetts; the town comprises the villages of Lakeville, Taconic, Lime Rock, and Amesville, and takes its name from the cathedral city of Salisbury, England. Surveyors discovered iron ore here in 1728 when their compasses malfunctioned over the deposits underfoot, and Thomas Lamb built the district's first forge in 1734. In 1762 the Forbes brothers, John Hazeltine, and a young Ethan Allen built the region's first blast furnace in Lakeville; during the Revolution roughly 80 percent of the colonies' cannon were cast here, earning the district the nickname \"Arsenal of the Revolution.\" Iron production continued for about 191 years, into 1925. The south slope of Mount Frissell, Connecticut's highest point at 2,380 feet, lies within Salisbury's borders.",
+    "sections": [
+      {
+        "heading": "Arsenal of the Revolution",
+        "body": "Salisbury's iron district armed the Continental Army: roughly 80 percent of the cannon cast in the colonies came from the Salisbury Furnace, and the region's first blast furnace, built in Lakeville in 1762, had among its builders a 23-year-old Ethan Allen, years before his Revolutionary War fame. Iron production continued in the district for about 191 years, from Thomas Lamb's 1734 bloomery until the Lime Rock Foundry stopped manufacturing in 1925. Today Lime Rock is better known for its road-racing circuit than its furnaces, but the district's name for itself — the Arsenal of the Revolution — still describes what put Salisbury on the map."
+      },
+      {
+        "heading": "Getting there",
+        "body": "Salisbury is a drive-to destination reached by US Route 44 (east-west), CT Route 41 (north-south), CT Route 112, and nearby US Route 7 along the Housatonic. There's no rail station in town; the closest is Metro-North's Harlem Line northern terminus at Wassaic, New York (in the town of Amenia), a short drive from Lakeville."
+      },
+      {
+        "heading": "Jumpfest and the village green",
+        "body": "The all-volunteer Salisbury Winter Sports Association, now in its 100th year, hosts the annual Jumpfest ski-jumping festival at Satre Hill, which in 2026 included the Eastern National Ski Jumping Championships. In the village center, the Scoville Memorial Library on Main Street hosts concerts and workshops, and the Salisbury Association runs 14 public hiking preserves, several connecting to the Appalachian Trail. The White Hart Inn anchors the green with a restaurant, taproom, cafe, and guest rooms — it took storm damage on July 4, 2026, and continued operating through recovery, so it's worth confirming room availability by phone before a visit."
+      }
+    ],
+    "faq": [
+      {
+        "question": "How do I get to Salisbury?",
+        "answer": "By car via US Route 44, CT Route 41, CT Route 112, or US Route 7. There's no rail station in Salisbury; the nearest is Metro-North's Harlem Line terminus at Wassaic, NY, a short drive from Lakeville."
+      },
+      {
+        "question": "Why is Salisbury called the \"Arsenal of the Revolution\"?",
+        "answer": "Roughly 80 percent of the cannon cast in the American colonies came from the Salisbury Furnace, part of an iron district that ran for about 191 years, starting with Thomas Lamb's 1734 bloomery."
+      },
+      {
+        "question": "Does Connecticut's highest point lie in Salisbury?",
+        "answer": "Yes — the south slope of Mount Frissell, at 2,380 feet, is the highest point in Connecticut and lies within Salisbury (the mountain's true summit is just over the line in Massachusetts)."
+      },
+      {
+        "question": "What is Jumpfest?",
+        "answer": "An annual ski-jumping festival at Satre Hill, run by the all-volunteer Salisbury Winter Sports Association, now in its 100th year. The 2026 edition included the Eastern National Ski Jumping Championships."
+      },
+      {
+        "question": "Where can I eat and stay in Salisbury?",
+        "answer": "The White Hart Inn on the village green combines a restaurant, taproom, cafe, and guest rooms. In Lakeville, Black Rabbit Bar & Grille and Morgan's Restaurant at the Interlaken Inn are the other main sit-down options, and the 30-acre Interlaken Inn is the area's resort-style lodging."
+      }
+    ],
+    "photos": [
+      {
+        "src": "/photos/ct/salisbury/scoville-memorial-library.jpg",
+        "thumb": "/photos/ct/salisbury/scoville-memorial-library_thumb.jpg",
+        "title": "Scoville Memorial Library",
+        "description": "The stone Scoville Memorial Library on Main Street in Salisbury's town center.",
+        "author": "John Phelan",
+        "license": "CC BY-SA 4.0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Scoville_Memorial_Library,_Salisbury_CT.jpg"
+      },
+      {
+        "src": "/photos/ct/salisbury/main-street.jpg",
+        "thumb": "/photos/ct/salisbury/main-street_thumb.jpg",
+        "title": "Main Street, Salisbury",
+        "description": "Autumn on Salisbury's Main Street, looking past the brick post office.",
+        "author": "John Phelan",
+        "license": "CC BY-SA 4.0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Main_Street,_Salisbury_CT.jpg"
+      },
+      {
+        "src": "/photos/ct/salisbury/lions-head.jpg",
+        "thumb": "/photos/ct/salisbury/lions-head_thumb.jpg",
+        "title": "Lion's Head, Appalachian Trail",
+        "description": "Low-lying fog seen from Lion's Head, a peak on the Appalachian Trail in Salisbury.",
+        "author": "Juliancolton",
+        "license": "CC BY-SA 4.0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Foggy_view_east_from_Lion%27s_Head.jpg"
+      }
+    ]
+  },
+  "places": [
+    {
+      "slug": "lime-rock-park",
+      "name": "Lime Rock Park",
+      "kind": "attraction",
+      "town": "Salisbury",
+      "state": "Connecticut",
+      "county": "Litchfield County",
+      "address": "60 White Hollow Road, Lakeville, CT 06039",
+      "official_url": "https://limerock.com/",
+      "summary": "A storied road-racing circuit in the Lime Rock section of Salisbury, with a full 2026 season of vintage car races, autocross, and driving programs.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "scoville-memorial-library",
+      "name": "Scoville Memorial Library",
+      "kind": "historic-site",
+      "town": "Salisbury",
+      "state": "Connecticut",
+      "county": "Litchfield County",
+      "address": "38 Main Street, Salisbury, CT 06068",
+      "official_url": "https://www.scovillelibrary.org/",
+      "summary": "The town's historic library on Main Street, hosting concerts, art workshops, and community programming. Hours Tuesday-Friday 10-5 (Thursday to 7), Saturday 10-4, Sunday 1-4; closed Monday.",
+      "status": "open",
+      "photos": [
+        {
+          "src": "/photos/ct/salisbury/scoville-memorial-library.jpg",
+          "thumb": "/photos/ct/salisbury/scoville-memorial-library_thumb.jpg",
+          "title": "Scoville Memorial Library",
+          "description": "The stone Scoville Memorial Library on Main Street in Salisbury's town center.",
+          "author": "John Phelan",
+          "license": "CC BY-SA 4.0",
+          "source_url": "https://commons.wikimedia.org/wiki/File:Scoville_Memorial_Library,_Salisbury_CT.jpg"
+        }
+      ]
+    },
+    {
+      "slug": "salisbury-association-academy-building",
+      "name": "Salisbury Association (Academy Building)",
+      "kind": "historic-site",
+      "town": "Salisbury",
+      "state": "Connecticut",
+      "county": "Litchfield County",
+      "address": "24 Main Street, Salisbury, CT 06068",
+      "official_url": "https://salisburyassociation.org/",
+      "summary": "Founded in 1902, the Association runs a historical society plus a land trust with 14 public hiking preserves, several connecting to the Appalachian Trail. Office hours Tuesday-Saturday 10 a.m.-1 p.m.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "town-grove",
+      "name": "Town Grove",
+      "kind": "park",
+      "town": "Salisbury",
+      "state": "Connecticut",
+      "county": "Litchfield County",
+      "address": "42 Ethan Allen Street, Lakeville, CT 06039",
+      "official_url": "https://www.salisburyct.us/town-grove/",
+      "summary": "Salisbury's lakeside town park and beach on Lake Wononscopomuc, with swim areas, sailing, kayaking, boat moorings, a playground, and grills. Open daily, 7 a.m.-8 p.m., with certified lifeguards.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "satre-hill",
+      "name": "Satre Hill (Salisbury Winter Sports Association)",
+      "kind": "attraction",
+      "town": "Salisbury",
+      "state": "Connecticut",
+      "county": "Litchfield County",
+      "address": "80 Indian Cave Rd, Salisbury, CT 06068",
+      "official_url": "https://jumpfest.org/",
+      "summary": "Home of the annual Jumpfest winter festival — ski jumping, the Human Dog Sled Race, and winter jump camps — run by an all-volunteer nonprofit now in its 100th year.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "white-hart-inn",
+      "name": "The White Hart Inn",
+      "kind": "hotel",
+      "town": "Salisbury",
+      "state": "Connecticut",
+      "county": "Litchfield County",
+      "address": "15 Under Mountain Road, Salisbury, CT 06068",
+      "official_url": "https://www.whitehartinn.com/",
+      "summary": "The village-green landmark inn, combining a dinner restaurant, Provisions cafe for breakfast and lunch, a taproom, and guest rooms. The inn took storm damage on July 4, 2026, and continued operating through recovery — confirm room availability by phone (860-435-0030).",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "black-rabbit-bar-grille",
+      "name": "Black Rabbit Bar & Grille",
+      "kind": "restaurant",
+      "town": "Salisbury",
+      "state": "Connecticut",
+      "county": "Litchfield County",
+      "address": "2 Ethan Allen Street, Lakeville, CT 06039",
+      "official_url": "https://www.blackrabbitbarandgrille.com/",
+      "summary": "Local bar and grille open since 2011 under owner Kendra Chapman, with indoor/outdoor seating and Sunday brunch 11 a.m.-4 p.m. Closed Monday and Tuesday.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "morgans-restaurant-interlaken-inn",
+      "name": "Morgan's Restaurant at the Interlaken Inn",
+      "kind": "restaurant",
+      "town": "Salisbury",
+      "state": "Connecticut",
+      "county": "Litchfield County",
+      "address": "74 Interlaken Road, Lakeville, CT 06039",
+      "official_url": "https://www.interlakeninn.com/",
+      "summary": "The lakeside resort's on-site restaurant, serving cocktails and meals Wednesday through Sunday.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "interlaken-inn",
+      "name": "Interlaken Inn",
+      "kind": "hotel",
+      "town": "Salisbury",
+      "state": "Connecticut",
+      "county": "Litchfield County",
+      "address": "74 Interlaken Road, Lakeville, CT 06039",
+      "official_url": "https://www.interlakeninn.com/",
+      "summary": "A 30-acre lakeside resort between two lakes in the Lakeville section of Salisbury, with guest rooms and suites, spa services, a fitness center, event spaces, and Morgan's Restaurant.",
+      "status": "open",
+      "photos": []
+    }
+  ],
+  "entries": [
+    {
+      "kind": "sight",
+      "name": "Lime Rock Park",
+      "place_slug": "lime-rock-park",
+      "note": "A storied road-racing circuit with a full 2026 season."
+    },
+    {
+      "kind": "sight",
+      "name": "Scoville Memorial Library",
+      "place_slug": "scoville-memorial-library",
+      "note": "Salisbury's historic Main Street library with concerts and workshops."
+    },
+    {
+      "kind": "walk",
+      "name": "Salisbury Association preserves",
+      "place_slug": "salisbury-association-academy-building",
+      "note": "14 public hiking preserves, several linking to the Appalachian Trail."
+    },
+    {
+      "kind": "sight",
+      "name": "Town Grove",
+      "place_slug": "town-grove",
+      "note": "Lakeside town beach and park on Lake Wononscopomuc."
+    },
+    {
+      "kind": "sight",
+      "name": "Satre Hill / Jumpfest",
+      "place_slug": "satre-hill",
+      "note": "A century-old ski-jumping hill and winter festival."
+    },
+    {
+      "kind": "food",
+      "name": "The White Hart Inn",
+      "place_slug": "white-hart-inn",
+      "note": "Restaurant, taproom, and cafe on the Salisbury village green."
+    },
+    {
+      "kind": "stay",
+      "name": "The White Hart Inn",
+      "place_slug": "white-hart-inn",
+      "note": "Guest rooms on the village green; confirm availability after 2026 storm repairs."
+    },
+    {
+      "kind": "food",
+      "name": "Black Rabbit Bar & Grille",
+      "place_slug": "black-rabbit-bar-grille",
+      "note": "A Lakeville bar and grille open since 2011."
+    },
+    {
+      "kind": "food",
+      "name": "Morgan's Restaurant at the Interlaken Inn",
+      "place_slug": "morgans-restaurant-interlaken-inn",
+      "note": "The resort's on-site restaurant, Wednesday-Sunday."
+    },
+    {
+      "kind": "stay",
+      "name": "Interlaken Inn",
+      "place_slug": "interlaken-inn",
+      "note": "A 30-acre lakeside resort with spa and event spaces."
+    }
+  ],
+  "links": [
+    {
+      "target": "guide:norfolk-ct-travel-guide",
+      "kind": "same-region",
+      "note": null
+    },
+    {
+      "target": "guide:cornwall-ct-travel-guide",
+      "kind": "same-region",
+      "note": null
+    }
+  ]
+}

@@ -1,0 +1,272 @@
+{
+  "guide": {
+    "slug": "new-milford-ct-travel-guide",
+    "title": "New Milford, Connecticut: Roger Sherman's Town Green",
+    "destination": "New Milford, Connecticut",
+    "state": "Connecticut",
+    "county": "Litchfield County",
+    "intro": "New Milford was settled in 1707 by John Noble, Sr., of Westfield, Massachusetts, and his eight-year-old daughter Sarah, and the town incorporated in 1712. Its most famous resident, Roger Sherman, lived here before moving to New Haven in 1761 and went on to sign both the Declaration of Independence and the U.S. Constitution; the lot of his former house is the site of today's Town Hall. New Milford is Connecticut's largest town by total area, at 63.7 square miles. Tobacco cultivation and warehouses drove its economy by the late 1800s, alongside factories producing buttons, paint and varnish, hats, and furnishings. During the Revolutionary War the town sent 285 men to fight out of a population of 2,776, and the 7th Connecticut Regiment was raised here on September 16, 1776.",
+    "sections": [
+      {
+        "heading": "Roger Sherman's town",
+        "body": "Roger Sherman is the reason New Milford shows up in national history — before he moved to New Haven in 1761, he lived on the lot that is now the town's Town Hall, and he went on to sign both the Declaration of Independence and the U.S. Constitution. The town's own Revolutionary War contribution was substantial for its size: 285 men out of a population of 2,776, with the 7th Connecticut Regiment raised in town on September 16, 1776. By the late 1800s, tobacco warehouses and factories making buttons, paint and varnish, hats, and furnishings had replaced agriculture as the main economy."
+      },
+      {
+        "heading": "Getting there",
+        "body": "New Milford is a drive-to destination: exit I-84 at Danbury and drive roughly 12-14 miles north on US Route 7 or US Route 202 — the two highways intersect and merge to form the town's main corridor — with CT Route 67 also serving the town. New Milford is about 80 miles from Midtown Manhattan. There's no passenger rail station in town; the closest is Metro-North's Danbury Branch terminus in Danbury, about 14 miles south. Tracks running north through New Milford now carry Housatonic Railroad freight only, and a long-studied extension of passenger service to New Milford has never been built."
+      },
+      {
+        "heading": "The green, a flea market, and Main Street",
+        "body": "New Milford's long town green anchors the center, with Lovers Leap State Park and its 1895 Berlin Iron Bridge over the Housatonic gorge a short drive away. The Elephant's Trunk Country Flea Market, the largest weekly flea market in New England, marked its 50th anniversary in 2026 with its usual Sunday season, April through December. TheatreWorks New Milford and the Bank Street Theater cover live theater and independent film downtown, and Housatonic River Brewing and Contempo Kitchen & Bar are among the newer names on the dining scene, alongside the historic Homestead Inn."
+      }
+    ],
+    "faq": [
+      {
+        "question": "How do I get to New Milford?",
+        "answer": "By car: exit I-84 at Danbury and drive roughly 12-14 miles north on US Route 7 or US Route 202. There's no passenger rail station in town; the nearest is Metro-North's Danbury Branch terminus in Danbury, about 14 miles south."
+      },
+      {
+        "question": "Who was Roger Sherman?",
+        "answer": "New Milford's most famous resident before he moved to New Haven in 1761. Sherman signed both the Declaration of Independence and the U.S. Constitution; the lot of his former New Milford house is the site of today's Town Hall."
+      },
+      {
+        "question": "Is New Milford really Connecticut's largest town?",
+        "answer": "By total area, yes — 63.7 square miles (61.6 of it land, 2.2 water), ahead of second-place Greenwich at 47.62 square miles."
+      },
+      {
+        "question": "What is the Elephant's Trunk Flea Market?",
+        "answer": "Billed as the largest weekly flea market in New England, operating since 1976 and marking its 50th anniversary in 2026. It runs every Sunday, April through December, with $4 general admission."
+      },
+      {
+        "question": "Where can I eat and stay in New Milford?",
+        "answer": "Housatonic River Brewing and Contempo Kitchen & Bar are two of downtown's newer dining spots. The Homestead Inn, on the north end of the Village Green, has welcomed guests since 1928."
+      }
+    ],
+    "photos": [
+      {
+        "src": "/photos/ct/new-milford/town-green-aerial.jpg",
+        "thumb": "/photos/ct/new-milford/town-green-aerial_thumb.jpg",
+        "title": "New Milford Town Green",
+        "description": "An aerial view down New Milford's long town green, with its bandstand in the foreground.",
+        "author": "JustinMurphyIsCool",
+        "license": "CC BY-SA 4.0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:New_Milford,_CT_Town_Green.jpg"
+      },
+      {
+        "src": "/photos/ct/new-milford/town-green-autumn.jpg",
+        "thumb": "/photos/ct/new-milford/town-green-autumn_thumb.jpg",
+        "title": "New Milford Green in autumn",
+        "description": "A street-level view along New Milford's green in peak autumn color.",
+        "author": "Bob P. B.",
+        "license": "CC BY 2.0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:New_Milford,_Connecticut.jpg"
+      },
+      {
+        "src": "/photos/ct/new-milford/housatonic-river-lovers-leap.jpg",
+        "thumb": "/photos/ct/new-milford/housatonic-river-lovers-leap_thumb.jpg",
+        "title": "Housatonic River at Lovers Leap",
+        "description": "The Housatonic River gorge in autumn color, seen from the Lovers Leap bridge.",
+        "author": "Bob P. B.",
+        "license": "CC BY 2.0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Housatonic_River3.jpg"
+      }
+    ]
+  },
+  "places": [
+    {
+      "slug": "new-milford-historical-society-museum",
+      "name": "New Milford Historical Society & Museum",
+      "kind": "museum",
+      "town": "New Milford",
+      "state": "Connecticut",
+      "county": "Litchfield County",
+      "address": "6 Aspetuck Avenue, New Milford, CT 06776",
+      "official_url": "https://www.nmhistorical.org/",
+      "summary": "Exhibits artifacts and photographs of the town from Indigenous peoples to modern times, including the colonial-era Knapp House and a colonial garden. Admission $5 adults, children under 12 free. Open Tuesday-Saturday 11 a.m.-2 p.m., and by appointment.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "lovers-leap-state-park",
+      "name": "Lovers Leap State Park",
+      "kind": "park",
+      "town": "New Milford",
+      "state": "Connecticut",
+      "county": "Litchfield County",
+      "address": "178 Still River Drive, New Milford, CT 06776",
+      "official_url": "https://ctparks.com/node/78",
+      "summary": "A 160-acre park over the Housatonic River gorge featuring an 1895 Berlin Iron Bridge — one of only four remaining lenticular truss bridges in Connecticut — and the Lovers Leap rock overlook. Four miles of trails, free admission, open daily 8 a.m. to sunset.",
+      "status": "open",
+      "photos": [
+        {
+          "src": "/photos/ct/new-milford/housatonic-river-lovers-leap.jpg",
+          "thumb": "/photos/ct/new-milford/housatonic-river-lovers-leap_thumb.jpg",
+          "title": "Housatonic River at Lovers Leap",
+          "description": "The Housatonic River gorge in autumn color, seen from the Lovers Leap bridge.",
+          "author": "Bob P. B.",
+          "license": "CC BY 2.0",
+          "source_url": "https://commons.wikimedia.org/wiki/File:Housatonic_River3.jpg"
+        }
+      ]
+    },
+    {
+      "slug": "harrybrooke-park",
+      "name": "Harrybrooke Park & Harden House Museum",
+      "kind": "park",
+      "town": "New Milford",
+      "state": "Connecticut",
+      "county": "Litchfield County",
+      "address": "100 Still River Drive, New Milford, CT 06776",
+      "official_url": "https://www.harrybrookepark.org/",
+      "summary": "A nonprofit park open 365 days a year with walking and cycling paths and picnic pavilions, on the grounds of a former weekend estate. The on-site Harden House Museum is not on a published tour schedule — call 860-799-6520 to arrange a visit.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "theatreworks-new-milford",
+      "name": "TheatreWorks New Milford",
+      "kind": "theater",
+      "town": "New Milford",
+      "state": "Connecticut",
+      "county": "Litchfield County",
+      "address": "5 Brookside Avenue (parking GPS: 20 Elm Street Extension), New Milford, CT 06776",
+      "official_url": "https://theatreworks.us/",
+      "summary": "Community theater founded in 1967 as the New Milford Players and renamed TheatreWorks in 1992; stages a year-round season of plays and musicals.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "bank-street-theater",
+      "name": "Bank Street Theater",
+      "kind": "theater",
+      "town": "New Milford",
+      "state": "Connecticut",
+      "county": "Litchfield County",
+      "address": "46 Bank Street, New Milford, CT 06776",
+      "official_url": "https://bankstreettheater.com/",
+      "summary": "Downtown New Milford's independent movie house on historic Bank Street, showing first-run and specialty films. Check the site's ticketing system for current showtimes.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "elephants-trunk-flea-market",
+      "name": "Elephant's Trunk Country Flea Market",
+      "kind": "attraction",
+      "town": "New Milford",
+      "state": "Connecticut",
+      "county": "Litchfield County",
+      "address": "490 Danbury Road (Route 7/202), New Milford, CT 06776",
+      "official_url": "https://www.etflea.com/",
+      "summary": "Billed as the largest weekly flea market in New England, operating since 1976 and celebrating its 50th anniversary in 2026. Runs every Sunday, April through December, general admission $4, gates open 7 a.m.-2 p.m.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "housatonic-river-brewing",
+      "name": "Housatonic River Brewing",
+      "kind": "brewery",
+      "town": "New Milford",
+      "state": "Connecticut",
+      "county": "Litchfield County",
+      "address": "30 Kent Road, New Milford, CT 06776",
+      "official_url": "https://www.housatonicriverbrewing.com/",
+      "summary": "Craft brewery with a full kitchen and live music, taproom hours Wednesday-Thursday 4-9 p.m., Friday 3-10 p.m., Saturday 1-10 p.m., Sunday 1-7 p.m.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "contempo-kitchen-bar",
+      "name": "Contempo Kitchen & Bar",
+      "kind": "restaurant",
+      "town": "New Milford",
+      "state": "Connecticut",
+      "county": "Litchfield County",
+      "address": "300 Kent Road, New Milford, CT 06776",
+      "official_url": "https://www.contemporestaurant.com/",
+      "summary": "Mediterranean restaurant, a 'Popular' listing in the Greater New Milford Chamber of Commerce directory. Open Tuesday-Saturday 11:30 a.m.-10 p.m., Sunday 11:30 a.m.-9 p.m.; closed Monday.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "the-homestead-inn",
+      "name": "The Homestead Inn",
+      "kind": "hotel",
+      "town": "New Milford",
+      "state": "Connecticut",
+      "county": "Litchfield County",
+      "address": "5 Elm Street, New Milford, CT 06776",
+      "official_url": "https://www.homesteadct.com/",
+      "summary": "Historic inn on the north end of New Milford's Village Green, welcoming guests since 1928, with 16 rooms across the Main House and the 1938-built Treadwell Annex.",
+      "status": "open",
+      "photos": []
+    }
+  ],
+  "entries": [
+    {
+      "kind": "sight",
+      "name": "New Milford Historical Society & Museum",
+      "place_slug": "new-milford-historical-society-museum",
+      "note": "Town history from Indigenous peoples to modern times, plus the colonial Knapp House."
+    },
+    {
+      "kind": "sight",
+      "name": "Lovers Leap State Park",
+      "place_slug": "lovers-leap-state-park",
+      "note": "An 1895 iron bridge over the Housatonic gorge and a legendary overlook."
+    },
+    {
+      "kind": "walk",
+      "name": "Harrybrooke Park & Harden House Museum",
+      "place_slug": "harrybrooke-park",
+      "note": "A 365-day-a-year park with walking paths and a former weekend estate."
+    },
+    {
+      "kind": "sight",
+      "name": "TheatreWorks New Milford",
+      "place_slug": "theatreworks-new-milford",
+      "note": "Community theater since 1967, staging a year-round season."
+    },
+    {
+      "kind": "sight",
+      "name": "Bank Street Theater",
+      "place_slug": "bank-street-theater",
+      "note": "Downtown's independent movie house on historic Bank Street."
+    },
+    {
+      "kind": "sight",
+      "name": "Elephant's Trunk Country Flea Market",
+      "place_slug": "elephants-trunk-flea-market",
+      "note": "New England's largest weekly flea market, since 1976."
+    },
+    {
+      "kind": "food",
+      "name": "Housatonic River Brewing",
+      "place_slug": "housatonic-river-brewing",
+      "note": "A craft brewery with a full kitchen and live music."
+    },
+    {
+      "kind": "food",
+      "name": "Contempo Kitchen & Bar",
+      "place_slug": "contempo-kitchen-bar",
+      "note": "A popular Mediterranean restaurant on Kent Road."
+    },
+    {
+      "kind": "stay",
+      "name": "The Homestead Inn",
+      "place_slug": "the-homestead-inn",
+      "note": "A historic inn on the Village Green, welcoming guests since 1928."
+    }
+  ],
+  "links": [
+    {
+      "target": "guide:danbury-ct-travel-guide",
+      "kind": "same-region",
+      "note": "New Milford sits roughly 12-14 miles north of Danbury via US-7/US-202."
+    },
+    {
+      "target": "guide:ridgefield-ct-travel-guide",
+      "kind": "same-region",
+      "note": null
+    }
+  ]
+}

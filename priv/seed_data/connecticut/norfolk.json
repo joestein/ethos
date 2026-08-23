@@ -1,0 +1,314 @@
+{
+  "guide": {
+    "slug": "norfolk-ct-travel-guide",
+    "title": "Norfolk, Connecticut: The Icebox and a Century of Chamber Music",
+    "destination": "Norfolk, Connecticut",
+    "state": "Connecticut",
+    "county": "Litchfield County",
+    "intro": "The land that became Norfolk was divided into fifty-three rights of four hundred acres each and offered for sale by the Colony of Connecticut in 1738, though the dense hemlock 'Green Woods' terrain drew few early buyers. Settlement began in 1744 and the town incorporated in 1758, in Litchfield County's northwest corner bordering Massachusetts, taking its name from Norfolk, England. At 1,230 feet elevation, severe winters and cool summers earned it the nickname 'the Icebox of Connecticut.' Norfolk evolved from farming to small 19th-century factories making tools and farm implements from locally mined iron ore, then became a resort destination for visitors from Connecticut, New York, and Massachusetts by the late 1800s. Physician William H. Welch, a celebrated Norfolk native, and the Norfolk Chamber Music Festival — a Yale School of Music program running more than 120 years — are among the town's lasting legacies.",
+    "sections": [
+      {
+        "heading": "Green Woods to the Icebox of Connecticut",
+        "body": "Norfolk's fifty-three 400-acre rights went up for sale in 1738, but the dense hemlock forest — locally called the Green Woods — meant settlement waited until 1744 and incorporation until 1758. At 1,230 feet, the town's severe winters and cool summers earned it the nickname 'the Icebox of Connecticut.' Small streamside factories turned locally mined iron ore into tools and farm implements through the 19th century before Norfolk reinvented itself as a summer resort for visitors from Connecticut, New York, and Massachusetts. James Mars is buried in Center Cemetery, a stop on the Connecticut Freedom Trail."
+      },
+      {
+        "heading": "Getting there",
+        "body": "Norfolk sits at the junction of US Route 44 and CT Route 272 in the Litchfield Hills, reached via CT Route 8 north from I-84 at Waterbury and then US 44 west, or via US 44 west roughly 35 miles from Hartford. There's no passenger rail service in or near town."
+      },
+      {
+        "heading": "Music, mountains, and Station Place",
+        "body": "Infinity Hall, an intimate music venue in the town center, and the Norfolk Chamber Music Festival's Music Shed on the Ellen Battell Stoeckel Estate give Norfolk an outsized concert calendar for its size — the festival's roster of faculty quartets-in-residence has included the Emerson, Brentano, Miró, Tokyo, Guarneri, Cleveland, and Vermeer quartets. Haystack Mountain and Dennis Hill state parks both offer free summit views over the Berkshires. On Station Place, Berkshire Country Store and Icebox Cafe cover breakfast and lunch, and Manor House Inn, Blackberry River Inn, and Wildwood 1880 are the town's historic bed-and-breakfasts."
+      }
+    ],
+    "faq": [
+      {
+        "question": "How do I get to Norfolk?",
+        "answer": "By car, via CT Route 8 north from I-84 at Waterbury then US Route 44 west, or US 44 west about 35 miles from Hartford. There's no passenger rail service in Norfolk."
+      },
+      {
+        "question": "Why is Norfolk called the \"Icebox of Connecticut\"?",
+        "answer": "At 1,230 feet elevation, Norfolk's severe winters and particularly cool summers earned it the nickname."
+      },
+      {
+        "question": "What is the Norfolk Chamber Music Festival?",
+        "answer": "A Yale School of Music summer chamber music program with a tradition of more than 120 years, held in the Music Shed on the Ellen Battell Stoeckel Estate. Its faculty quartets-in-residence have included the Emerson, Brentano, and Tokyo quartets, among others."
+      },
+      {
+        "question": "Are Haystack Mountain and Dennis Hill free to visit?",
+        "answer": "Yes, both state parks have free admission and are open 8 a.m. to sunset. Haystack's summit road is drivable late April through November; Dennis Hill's pavilion shelters are rentable May through October."
+      },
+      {
+        "question": "Where can I eat and stay in Norfolk?",
+        "answer": "Berkshire Country Store and Icebox Cafe, both on Station Place, cover breakfast and lunch, with Norfolk Bistro at Infinity Hall for dinner. Manor House Inn, Blackberry River Inn, and Wildwood 1880 are the town's historic bed-and-breakfasts."
+      }
+    ],
+    "photos": [
+      {
+        "src": "/photos/ct/norfolk/soldiers-monument.jpg",
+        "thumb": "/photos/ct/norfolk/soldiers-monument_thumb.jpg",
+        "title": "Soldiers' Monument, Norfolk village green",
+        "description": "The granite Soldiers' Monument on Norfolk's village green, with the Norfolk Library behind.",
+        "author": "John Phelan",
+        "license": "CC BY-SA 4.0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Soldiers_Monument,_Norfolk_CT.jpg"
+      },
+      {
+        "src": "/photos/ct/norfolk/haystack-mountain-tower.jpg",
+        "thumb": "/photos/ct/norfolk/haystack-mountain-tower_thumb.jpg",
+        "title": "Haystack Mountain State Park tower",
+        "description": "The 1929 stone observation tower on the summit of Haystack Mountain State Park.",
+        "author": "Ieateggseverymorning",
+        "license": "CC BY-SA 3.0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:2013-06-22_Haystack_Mountain_State_Park_(42).JPG"
+      },
+      {
+        "src": "/photos/ct/norfolk/infinity-hall.jpg",
+        "thumb": "/photos/ct/norfolk/infinity-hall_thumb.jpg",
+        "title": "Infinity Hall, Norfolk",
+        "description": "The 1883 green-shingled Infinity Hall concert venue on the corner of the Norfolk green.",
+        "author": "Dmadeo",
+        "license": "CC BY-SA 3.0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Infinity_Hall.JPG"
+      }
+    ]
+  },
+  "places": [
+    {
+      "slug": "infinity-hall-norfolk",
+      "name": "Infinity Hall Norfolk",
+      "kind": "theater",
+      "town": "Norfolk",
+      "state": "Connecticut",
+      "county": "Litchfield County",
+      "address": "20 Greenwoods Road (Route 44), Norfolk, CT 06058",
+      "official_url": "https://www.infinityhall.com/",
+      "summary": "An intimate historic music venue in Norfolk's center, with free parking behind the hall and on nearby streets and a regular calendar of national touring acts.",
+      "status": "open",
+      "photos": [
+        {
+          "src": "/photos/ct/norfolk/infinity-hall.jpg",
+          "thumb": "/photos/ct/norfolk/infinity-hall_thumb.jpg",
+          "title": "Infinity Hall, Norfolk",
+          "description": "The 1883 green-shingled Infinity Hall concert venue on the corner of the Norfolk green.",
+          "author": "Dmadeo",
+          "license": "CC BY-SA 3.0",
+          "source_url": "https://commons.wikimedia.org/wiki/File:Infinity_Hall.JPG"
+        }
+      ]
+    },
+    {
+      "slug": "haystack-mountain-state-park",
+      "name": "Haystack Mountain State Park",
+      "kind": "park",
+      "town": "Norfolk",
+      "state": "Connecticut",
+      "county": "Litchfield County",
+      "address": "Route 272, Norfolk, CT 06058",
+      "official_url": "https://ctparks.com/node/59",
+      "summary": "A 34-foot stone summit tower built in 1929, with views reaching the Berkshires, New York, and Vermont's Green Mountains. Free admission, open 8 a.m. to sunset; summit road drivable late April-November, walk-in otherwise.",
+      "status": "open",
+      "photos": [
+        {
+          "src": "/photos/ct/norfolk/haystack-mountain-tower.jpg",
+          "thumb": "/photos/ct/norfolk/haystack-mountain-tower_thumb.jpg",
+          "title": "Haystack Mountain State Park tower",
+          "description": "The 1929 stone observation tower on the summit of Haystack Mountain State Park.",
+          "author": "Ieateggseverymorning",
+          "license": "CC BY-SA 3.0",
+          "source_url": "https://commons.wikimedia.org/wiki/File:2013-06-22_Haystack_Mountain_State_Park_(42).JPG"
+        }
+      ]
+    },
+    {
+      "slug": "dennis-hill-state-park",
+      "name": "Dennis Hill State Park",
+      "kind": "park",
+      "town": "Norfolk",
+      "state": "Connecticut",
+      "county": "Litchfield County",
+      "address": "519 Litchfield Road, Norfolk, CT 06058",
+      "official_url": "https://ctparks.com/node/39",
+      "summary": "A 1,627-foot summit topped by a historic pavilion — a former summer residence and WWII lookout station — with panoramic Litchfield County views. Free admission, open 8 a.m. to sunset; shelter rentals Memorial Day weekend through late October.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "norfolk-historical-society-museum",
+      "name": "Norfolk Historical Society & Museum",
+      "kind": "museum",
+      "town": "Norfolk",
+      "state": "Connecticut",
+      "county": "Litchfield County",
+      "address": "13 Village Green, Norfolk, CT 06058",
+      "official_url": "https://norfolkhistoricalsociety.org/",
+      "summary": "Free-admission museum on the Village Green with archives, historic maps, and a walking tour of Norfolk architecture. Open early June through mid-October, Friday by chance, Saturday-Sunday 1-4 p.m.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "norfolk-chamber-music-festival",
+      "name": "Norfolk Chamber Music Festival (The Music Shed)",
+      "kind": "attraction",
+      "town": "Norfolk",
+      "state": "Connecticut",
+      "county": "Litchfield County",
+      "address": "20 Litchfield Road, Norfolk, CT 06058",
+      "official_url": "https://norfolkmusic.org/",
+      "summary": "Yale School of Music's summer chamber music festival, a tradition of more than 120 years, held in the Music Shed on the Ellen Battell Stoeckel Estate; the Emerson, Brentano, Miro, Tokyo, Guarneri, Cleveland, and Vermeer quartets have all served as faculty quartets-in-residence. Concert season runs June-August.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "berkshire-country-store",
+      "name": "Berkshire Country Store",
+      "kind": "cafe",
+      "town": "Norfolk",
+      "state": "Connecticut",
+      "county": "Litchfield County",
+      "address": "6 Station Place, Norfolk, CT 06058",
+      "official_url": "https://berkshirecountry.com",
+      "summary": "Downtown deli-cafe and country store serving breakfast, coffee, sandwiches, soups, and baked goods, with a deli counter and catering. Open Monday-Saturday 7 a.m.-2 p.m., Sunday 8 a.m.-2 p.m.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "icebox-cafe",
+      "name": "Icebox Cafe",
+      "kind": "cafe",
+      "town": "Norfolk",
+      "state": "Connecticut",
+      "county": "Litchfield County",
+      "address": "10 Station Place, Norfolk, CT 06058",
+      "summary": "A small cafe in the old railroad station area serving breakfast and lunch — oatmeal, pastries, sandwiches, soup, and breads by the loaf. Open Wednesday-Sunday, 7 a.m.-2 p.m.; closed Tuesday, Monday hours seasonal.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "norfolk-bistro-infinity-hall",
+      "name": "Norfolk Bistro at Infinity Hall",
+      "kind": "restaurant",
+      "town": "Norfolk",
+      "state": "Connecticut",
+      "county": "Litchfield County",
+      "address": "20 Greenwoods Road, Norfolk, CT 06058",
+      "official_url": "https://www.infinityhall.com/norfolk-bistro/make-reservations/",
+      "summary": "Contemporary American restaurant attached to Infinity Music Hall, open Wednesday-Sunday, 5-9 p.m.; reservations recommended on show nights.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "manor-house-inn",
+      "name": "Manor House Inn",
+      "kind": "bnb",
+      "town": "Norfolk",
+      "state": "Connecticut",
+      "county": "Litchfield County",
+      "address": "69 Maple Avenue, Norfolk, CT 06058",
+      "official_url": "https://manorhouse-norfolk.com/",
+      "summary": "An 1898 Victorian Tudor estate on five acres in the Norfolk Historic District, with nine individually designed suites, an included two-course seasonal breakfast, and a Connecticut Green Lodging designation.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "blackberry-river-inn",
+      "name": "Blackberry River Inn",
+      "kind": "bnb",
+      "town": "Norfolk",
+      "state": "Connecticut",
+      "county": "Litchfield County",
+      "address": "538 Greenwoods Road West, Norfolk, CT 06058",
+      "official_url": "https://blackberryriverinn.com",
+      "summary": "A historic colonial mansion bed and breakfast in West Norfolk overlooking Canaan Mountain, with main-house suites, carriage house rooms, a cottage, and complimentary made-to-order breakfast served 8-10 a.m.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "wildwood-1880",
+      "name": "Wildwood 1880",
+      "kind": "bnb",
+      "town": "Norfolk",
+      "state": "Connecticut",
+      "county": "Litchfield County",
+      "address": "67 Litchfield Road, Norfolk, CT 06058",
+      "official_url": "https://wildwood1880.com",
+      "summary": "A period Victorian built in 1880 in the Norfolk Historic District, converted to a seven-bedroom luxury inn with private baths, bookable by the room or as a whole-house rental, with patio, lawn, and firepit.",
+      "status": "open",
+      "photos": []
+    }
+  ],
+  "entries": [
+    {
+      "kind": "sight",
+      "name": "Infinity Hall Norfolk",
+      "place_slug": "infinity-hall-norfolk",
+      "note": "An intimate historic music venue with a busy touring calendar."
+    },
+    {
+      "kind": "walk",
+      "name": "Haystack Mountain State Park",
+      "place_slug": "haystack-mountain-state-park",
+      "note": "A 1929 stone tower with views into three states."
+    },
+    {
+      "kind": "walk",
+      "name": "Dennis Hill State Park",
+      "place_slug": "dennis-hill-state-park",
+      "note": "A former summer residence and WWII lookout atop a 1,627-foot summit."
+    },
+    {
+      "kind": "sight",
+      "name": "Norfolk Historical Society & Museum",
+      "place_slug": "norfolk-historical-society-museum",
+      "note": "Free museum on the Village Green with a walking tour of the architecture."
+    },
+    {
+      "kind": "sight",
+      "name": "Norfolk Chamber Music Festival",
+      "place_slug": "norfolk-chamber-music-festival",
+      "note": "A Yale School of Music summer festival running more than 120 years."
+    },
+    {
+      "kind": "food",
+      "name": "Berkshire Country Store",
+      "place_slug": "berkshire-country-store",
+      "note": "Downtown deli-cafe for breakfast, coffee, and sandwiches."
+    },
+    {
+      "kind": "food",
+      "name": "Icebox Cafe",
+      "place_slug": "icebox-cafe",
+      "note": "A small breakfast-and-lunch cafe near the old railroad station."
+    },
+    {
+      "kind": "food",
+      "name": "Norfolk Bistro at Infinity Hall",
+      "place_slug": "norfolk-bistro-infinity-hall",
+      "note": "Contemporary American dinner attached to the concert hall."
+    },
+    {
+      "kind": "stay",
+      "name": "Manor House Inn",
+      "place_slug": "manor-house-inn",
+      "note": "An 1898 Victorian Tudor estate with nine suites."
+    },
+    {
+      "kind": "stay",
+      "name": "Blackberry River Inn",
+      "place_slug": "blackberry-river-inn",
+      "note": "A colonial mansion B&B overlooking Canaan Mountain."
+    },
+    {
+      "kind": "stay",
+      "name": "Wildwood 1880",
+      "place_slug": "wildwood-1880",
+      "note": "An 1880 Victorian converted to a seven-bedroom luxury inn."
+    }
+  ],
+  "links": [
+    {
+      "target": "guide:litchfield-ct-travel-guide",
+      "kind": "same-region",
+      "note": "Both became Litchfield Hills resort communities in the late 1800s after their earlier industries faded."
+    }
+  ]
+}
