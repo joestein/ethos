@@ -16,6 +16,12 @@ import Config
 #
 # Alternatively, you can use `mix phx.gen.release` to generate a `bin/server`
 # script that automatically sets the env var above.
+# Google Search Console ownership verification: when set, the root layout
+# renders <meta name="google-site-verification" content="..."/> on every page.
+if gsv = System.get_env("GOOGLE_SITE_VERIFICATION") do
+  config :ethos, :google_site_verification, gsv
+end
+
 if System.get_env("PHX_SERVER") do
   config :ethos, EthosWeb.Endpoint, server: true
 end
