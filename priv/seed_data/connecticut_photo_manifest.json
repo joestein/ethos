@@ -55,6 +55,10 @@
     "sha256": "382028c5ae68221f71a913b47fdbc7f0ff007bb0d8f29fe6660e2833c2b47e76",
     "source_url": "https://commons.wikimedia.org/wiki/File:Branford_Town_Green,_Connecticut.jpg"
   },
+  "brownstone-quarry-arrigoni-bridge-portland": {
+    "sha256": "373bfc8f602320d8d379ad28b833808e49a2eb964a3d8b85f4b9948b6fb06df3",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Brownstone_quarry_and_Arrigoni_Bridge,_2022-4-15.jpg"
+  },
   "bruce-museum": {
     "sha256": "199562e852713f6f561a59979ad9659b22bc174c89d757a4a2207f2f6d1ed394",
     "source_url": "https://commons.wikimedia.org/wiki/File:The_New_Bruce.jpg"
@@ -99,6 +103,10 @@
     "sha256": "f2311fb27ee721d7a7c5632624aef576300787ca87b2203b3e5713109af51201",
     "source_url": "https://commons.wikimedia.org/wiki/File:Charles_W._Morgan.jpg"
   },
+  "chatfield-hollow-schreeder-pond": {
+    "sha256": "bdde45b68e8b29df1d27b63ebbae4eaeb41498ecc6982b05b1fdeda0ba5a99d7",
+    "source_url": "https://commons.wikimedia.org/wiki/File:ChatfieldHollowSP_SchreederPond.jpg"
+  },
   "chester-hadlyme-ferry-crossing": {
     "sha256": "c89e1e5401116b6685ecf51dd2d8db6923421029d0f4ac6feb29a8dc8a97ae94",
     "source_url": "https://commons.wikimedia.org/wiki/File:Chester_Hadlyme_Ferry,_Hadlyme_CT.jpg"
@@ -123,9 +131,17 @@
     "sha256": "43b4e4ac4d788fff4c1506961cf89bb100154677f352036453b05ace4876ddc3",
     "source_url": "https://commons.wikimedia.org/wiki/File:Compo_Beach,_Westport,_CT.JPG"
   },
+  "comstock-covered-bridge-east-hampton": {
+    "sha256": "49ff8e91952c2710bf1659fc88abc2553873b123d7997b07670858b8e5a6f622",
+    "source_url": "https://commons.wikimedia.org/wiki/File:MMDA-Photos_-_2023-12-16_-_Comstock-Covered_Bridge.jpg"
+  },
   "congregational-church": {
     "sha256": "840155762b1e419949ac3f0d5cd72bbd87d5d3b9677d76a46a86cc9183501afc",
     "source_url": "https://commons.wikimedia.org/wiki/File:Roxbury_Congregational_Church_075.JPG"
+  },
+  "connecticut-river-deep-river": {
+    "sha256": "50ceaadaf4883229a66925b32b3f34f17d413243b5ea15d224b02aafb5398cf5",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Connecticut_River,_Deep_River,_CT_(53796578623).jpg"
   },
   "connecticut-river-glastonbury-bar": {
     "sha256": "6de4c114c9f0d8f8f92e7ac7bca84b537d988d64daa0695b71073afe78e322fb",
@@ -163,6 +179,10 @@
     "sha256": "6819d08d0ed8fcebd48cdecc4ae08cc1f9805bba40eb5ab5ad4ec9922fffb6a9",
     "source_url": "https://commons.wikimedia.org/wiki/File:Deacon_John_Graves_HABS.jpg"
   },
+  "deep-river-town-hall": {
+    "sha256": "84a94edcc07ce543c5490b5defd10f175845f1b2290db62aeb89fbf9345bd115",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Town_Hall,_Deep_River_CT.jpg"
+  },
   "devils-hopyard-chapman-falls": {
     "sha256": "24888f197948d8e9f6714f8ccdafb99157c22d7d408fe816610daba4dac118e5",
     "source_url": "https://commons.wikimedia.org/wiki/File:Devils_Hopyard_Falls_-_panoramio.jpg"
@@ -187,6 +207,10 @@
     "sha256": "97570248be1338cf0c98771bb2ecaffbcb191531003e61aadd9d71fb73e143fc",
     "source_url": "https://commons.wikimedia.org/wiki/File:Drake_Hill_Flower_Bridge,_Simsbury,_CT_(June_2026).jpg"
   },
+  "durham-main-street-hd": {
+    "sha256": "9dc4837d2f60f5bde1722f06c764e043350a0948b43ae6ced556cb705054692f",
+    "source_url": "https://commons.wikimedia.org/wiki/File:DurhamCT_MainStreetHD_1.jpg"
+  },
   "east-main-street-clinton": {
     "sha256": "02fe48b9570ddb56f2b19d0cee59d1005cd6ca34968850d489726ad68b42f864",
     "source_url": "https://commons.wikimedia.org/wiki/File:Clinton,_Connecticut.jpg"
@@ -200,7 +224,7 @@
     "source_url": "https://commons.wikimedia.org/wiki/File:HamdenCT_EliWhitneyMuseum.jpg"
   },
   "ellington-green-gazebo": {
-    "sha256": "f4a96e2b5c615afaeca4d07be4fe57cf59f5b454415f75d2305f53f4bd2e1784",
+    "sha256": "3600550a3ae27ffed1d618d59b350ae88a732284bd2291a65d614d07ab476afa",
     "source_url": "https://commons.wikimedia.org/wiki/File:Ellington_Green,_Ellington_CT.jpg"
   },
   "essex-main-street": {
@@ -210,6 +234,10 @@
   "essex-steam-train": {
     "sha256": "06b6e40f369b5bdd4f66dc0c1759e9b841c14929cc1517562dc4e4a8223dbc6c",
     "source_url": "https://commons.wikimedia.org/wiki/File:Essex_station_and_steam_train,_December_2016.JPG"
+  },
+  "essex-steam-train-deep-river": {
+    "sha256": "9e99f6921f1acc73699a438c93f6bef660e1c60c3a3483349a273bfeb08bb164",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Valley_Railroad_40_Arriving_At_Deep_River_October_22,_2021.jpg"
   },
   "fairfield-town-green": {
     "sha256": "9693c765030aa3ee52f658d5bb34e0a9abfa818077d7f2fdafb2454c438ed5c1",
@@ -315,6 +343,10 @@
     "sha256": "e8d4608afc64139f7054a9020d0656ee8fc4c9b7a316389b4d13aaea919d81c3",
     "source_url": "https://commons.wikimedia.org/wiki/File:The_Guilford_Town_Green_in_Connecticut.jpg"
   },
+  "haddam-meadows-state-park": {
+    "sha256": "99adb4fc792246957814a06fb8fa8adfb2591c9a41946b3d9ed515f6b874c88a",
+    "source_url": "https://commons.wikimedia.org/wiki/File:HaddamMeadowsSP_View.jpg"
+  },
   "harbor-park-middletown-river": {
     "sha256": "176e3cbd288e29a17209ea20a76f640ef075317fe4e7ebe10465f6dfe1aca818",
     "source_url": "https://commons.wikimedia.org/wiki/File:Middletown_CT_river_skyline.JPG"
@@ -366,6 +398,10 @@
   "huntington-homestead-scotland": {
     "sha256": "12b9a026a36b3595afdfb1e2168aea0994180490fe1de38e0da62cb00fb13d96",
     "source_url": "https://commons.wikimedia.org/wiki/File:Samuel_Huntington_Homestead,_Scotland,_CT_01.jpg"
+  },
+  "hurd-state-park-east-hampton": {
+    "sha256": "e455e371dcd1210ec53e0585cd8764b0c315d0a2f24dc6e8f550506c6485d964",
+    "source_url": "https://commons.wikimedia.org/wiki/File:HurdSP_IMG_0250.JPG"
   },
   "hyde-park-stafford-springs": {
     "sha256": "c43002bb4c00907b1372d6cd81df0d9e25d2867941913cca30c6770bd8c2b036",
@@ -423,6 +459,10 @@
     "sha256": "6b09f2aa7283b74709ec526d19326e81784f5e8c70e36bbb39492ae8f0fff8c9",
     "source_url": "https://commons.wikimedia.org/wiki/File:Ledyard_Center_panorama_(cropped).jpg"
   },
+  "levi-coe-library-middlefield": {
+    "sha256": "adb292b898e4762c359f0074f89bf7d28816156562c48ad2af327eeb272dc494",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Levi_E_Coe_Library,_Middlefield_CT.jpg"
+  },
   "lions-head": {
     "sha256": "9d3b9d74b8338983ef1c763c107b766842bc30b10df5a23f95424b1f4ab49292",
     "source_url": "https://commons.wikimedia.org/wiki/File:Foggy_view_east_from_Lion%27s_Head.jpg"
@@ -435,6 +475,10 @@
     "sha256": "621eab50f03a14e3280b79acb7be61ed4dceff80204409afff2f37f250f99fcb",
     "source_url": "https://commons.wikimedia.org/wiki/File:Broad_Street_in_New_Britain,_Connecticut,_2009-09-15.jpg"
   },
+  "lyman-orchards-peaches": {
+    "sha256": "da63722309275e2895fcbabb0899e3e85ccc571141ae07e2687399c83801d85c",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Harrow_Beauty_peaches_at_Lyman_Orchards,_2009-08-30.jpg"
+  },
   "lyme-street-historic-district": {
     "sha256": "d8af63783bd5cb27de944451253e7896d19360849a1e854c0c55b0c47e6dc71f",
     "source_url": "https://commons.wikimedia.org/wiki/File:OldLymeCT_HistoricDistrict1.jpg"
@@ -446,6 +490,14 @@
   "main-street-coventry": {
     "sha256": "3c94fe36f06f075bcbcde7c0b301dfca6b370bc84e662b6e3208ff351a1e575d",
     "source_url": "https://commons.wikimedia.org/wiki/File:Coventry_Village.jpg"
+  },
+  "main-street-cromwell": {
+    "sha256": "2a58da0812f5b7abed05bc33cd4aa315b475d0061585a0527c27cc5598e1d81b",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Main_Street,_Cromwell_CT.jpg"
+  },
+  "main-street-durham": {
+    "sha256": "3f85b806c7df3cfb0c4c029a14f0c9ad5288ab757e1aed041c6e0935adfccd16",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Main_Street,_Durham_CT.jpg"
   },
   "main-street-glastonbury": {
     "sha256": "4e1be7391b29e1e9a2c4fb2988616cb1d92baf623d90b6e16b7e431666621340",
@@ -486,6 +538,14 @@
   "meriden-green-harbor-brook": {
     "sha256": "6439d8be5b75c39eb6e94210e95716033b31226754faedcf6005559cd6598483",
     "source_url": "https://commons.wikimedia.org/wiki/File:Harbor_Brook_in_Meriden_Green_1.jpg"
+  },
+  "middle-haddam-hd-east-hampton": {
+    "sha256": "c87b4ec0ef6e2c5693f909e3c2eb593317aa90d6929fa1a7ae1a9b659c0b53b0",
+    "source_url": "https://commons.wikimedia.org/wiki/File:EastHamptonCT_MiddleHaddamHD_1.jpg"
+  },
+  "middletown-upper-houses-cromwell": {
+    "sha256": "102a28d84b57102e750e1546887d74662ae1883a368b432ec0191ae11a3d93e3",
+    "source_url": "https://commons.wikimedia.org/wiki/File:CromwellCT_MiddletownUpperHousesHD_1.jpg"
   },
   "milford-green": {
     "sha256": "dce999b760c0962f674690ca76eb422287ee6136b7b2379a2212eb1b4bc7370e",
@@ -591,6 +651,14 @@
     "sha256": "005566ae500cd73fac64ebe894f4330208da61d7458b43694c57f5437fec85cf",
     "source_url": "https://commons.wikimedia.org/wiki/File:Clark_Memorial_Chapel,_Pomfret_School,_Pomfret_CT.JPG"
   },
+  "portland-brownstone-quarries-wide": {
+    "sha256": "e694489348c20fb1f460a1e1be9bb78a791f72699b5fce78980e46646ede42aa",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Connecticut_-_Portland_Brownstone_Quarries_-_20200720162027.jpg"
+  },
+  "portland-main-street-town-hall": {
+    "sha256": "ef629265f6b38b79db3900462d386c3c3fce153367f766bfc9a2a3c756bb483e",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Portland_Main_Street_facing_town_hall,_2022-4-15.jpg"
+  },
   "prudence-crandall-house-canterbury": {
     "sha256": "82cae3a9148e2c427649847973f4ed01a05d8cfd2de951ae14f9eda585e199b3",
     "source_url": "https://commons.wikimedia.org/wiki/File:Prudence_Crandall_House_7-11.jpg"
@@ -611,6 +679,14 @@
     "sha256": "db1b6dfa315d528a34bbf9fd39ce9fa9fbe506f1e7711750452bab97fd32339b",
     "source_url": "https://commons.wikimedia.org/wiki/File:Ridgefield,_Connecticut.jpg"
   },
+  "river-highlands-overlook-cromwell": {
+    "sha256": "c1563e3c3955b81344ba7a169b51ed7afc4cf0fa0686a1d0cb6efc74a9b2ad6f",
+    "source_url": "https://commons.wikimedia.org/wiki/File:RiverHighlandsSP_IMG_1427.JPG"
+  },
+  "rock-landing-haddam": {
+    "sha256": "8e998ad8ceaf6a98d363fc6d714ea3db3780ca5b66efc199fbb26c5f5e5b2f5b",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Rock_Landing,_Haddam_CT.jpg"
+  },
   "rocky-hill-glastonbury-ferry": {
     "sha256": "74d64cefc441469f37b57ef05d5d1e6de224c8b08b440acce6e45dbec73771eb",
     "source_url": "https://commons.wikimedia.org/wiki/File:West_terminal_of_Rocky_Hill-Glastonbury_ferry,_March_2023.jpg"
@@ -622,6 +698,10 @@
   "roseland-park-woodstock": {
     "sha256": "5ace5429cfcead376863aebff4b17bf6093c367f56c48745a9311b41c319b707",
     "source_url": "https://commons.wikimedia.org/wiki/File:Autumn_at_Roseland_Park,_Woodstock_Connecticut.jpg"
+  },
+  "salt-meadow-sunset-westbrook": {
+    "sha256": "6090c89e6c5364a5163b349f67b141a04acd066542dd57e6bd4f9810acb02c0b",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Sunset_at_Salt_Meadow_(11800427905).jpg"
   },
   "sawmill-park": {
     "sha256": "0b43835c52d3b9e3a3a22db724b7e2205d3a365b14762940496a40e1f7e47184",
@@ -703,6 +783,10 @@
     "sha256": "840624d9916d1db66098ca11ac03ffc9e4af08bcd804ae168bcce5656439a972",
     "source_url": "https://commons.wikimedia.org/wiki/File:Tapping_Reeve_House_and_Law_School,_Litchfield,_CT.jpg"
   },
+  "thankful-arnold-house-haddam": {
+    "sha256": "2afec6a4dd127766e6251999b57d53b7daf292d1c111b155d2c6c849a3bffd60",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Thankful_Arnold_House_Museum,_Haddam_CT.jpg"
+  },
   "thimble-islands-stony-creek": {
     "sha256": "f61a7563206ba995836178d6c62fbadd5a253a34d731213dfa9cf71fc42460bc",
     "source_url": "https://commons.wikimedia.org/wiki/File:STONY_CREEK-THIMBLE_ISLANDS,_H.D.,_BRANFORD,_NEW_HAVEN_COUNTY,_CT.jpg"
@@ -747,9 +831,17 @@
     "sha256": "f1e3e620debb5d5bca457ad85fb821c5a466deef0de3436c3879d0a5ee213736",
     "source_url": "https://commons.wikimedia.org/wiki/File:USS_Nautilus_SSN571.JPG"
   },
+  "veterans-monument-durham": {
+    "sha256": "de8bcd91b1e85897611ac7e5962c64b8ccd2dc25cceedaed3abb85f21ef8272e",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Veterans_Monument,_Durham_CT.jpg"
+  },
   "wadsworth-atheneum": {
     "sha256": "d76839566a9beb592641dab1a98ba25919f54d5f2d277233a91c2448c72a060f",
     "source_url": "https://commons.wikimedia.org/wiki/File:Wadsworth_Athenaeum,_Hartford,_Connecticut.jpg"
+  },
+  "wadsworth-falls-middlefield": {
+    "sha256": "978d45116d88f84d3bf422cd8394b37d0daa8d6e3e2acb5380b9c2fad0870e47",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Wadsworth_Falls_State_Park_-_falls.jpg"
   },
   "walnut-hill-park": {
     "sha256": "3b956baf410cfc31e6f83dbb00462c706eac50ee6eaf68d7c9b2bd8ef3160c53",
@@ -778,6 +870,14 @@
   "west-hartford-center-street-scene": {
     "sha256": "ac505da3a55edd0735d0aa6cc55aa9c32e1d9099b797db42065067953cb57e1b",
     "source_url": "https://commons.wikimedia.org/wiki/File:West_Hartford_Center,_August_10,_2008.jpg"
+  },
+  "westbrook-congregational-church": {
+    "sha256": "18b35f32623f873b1603dc93b07013b8fa4220b32e9e188d4917669de5291422",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Westbrook_Congregational_Church,_Westbrook_CT.jpg"
+  },
+  "westbrook-green": {
+    "sha256": "030aad4e3b9a43b0b1afdce0d8f04bbeddd0f281e61c063d89abb352a1e763d4",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Westbrook_Green,_Westbrook_CT.jpg"
   },
   "westport-country-playhouse": {
     "sha256": "31df54ce0311ac87b1ff0fee8ba943627636344db4d12da2352ccf4abfa60edf",

@@ -1,0 +1,177 @@
+{
+  "guide": {
+    "slug": "killingworth-ct-travel-guide",
+    "title": "Killingworth, Connecticut: A Farmer's Folk-Art Automata",
+    "destination": "Killingworth, Connecticut",
+    "state": "Connecticut",
+    "county": "Middlesex County",
+    "tier": "town-page",
+    "intro": "European settlement began in 1663 as a plantation called \"Homonoscitt,\" named after the Hammonasset people; the General Assembly incorporated it as Kenilworth in 1703, and the name gradually became Killingworth. It traces to Kenilworth, England, the former home of early settler Edward Griswold, with the town named in 1667. Killingworth's original lands reached Long Island Sound and included present-day Clinton, which separated in 1838. The town's most notorious 18th-century citizen was Abel Buell, an inventor and convicted counterfeiter who engraved one of the first maps of America made by an American. In the 1890s, farmer Clark Coe built life-sized folk-art automata on his Green Hill Road farm; surviving figures are now held by the Smithsonian American Art Museum and the American Folk Art Museum.",
+    "sections": [
+      {
+        "heading": "Getting there",
+        "body": "Killingworth is a car-first inland town with no rail station and no interstate of its own — you arrive on the two state highways that cross near the town center, CT Route 81 (Town Hall is at 323 Route 81) and CT Route 80 (Chatfield Hollow State Park is at 381 CT-80). The nearest passenger rail is Shore Line East at Clinton or Madison, a short drive south toward the shoreline."
+      },
+      {
+        "heading": "Chatfield Hollow and Parmelee Farm",
+        "body": "Chatfield Hollow's valley was used by Native people for hunting and shelter in its rock recesses, and later held a stream-powered grist mill; the Civilian Conservation Corps built the earth-and-stone dam that created Schreeder Pond in 1934, and the land became a state park in 1949. Parmelee Farm, a 132-acre town-owned property the town bought in 2000, keeps an 18th-century farmhouse, a stone barn and a historic one-room schoolhouse open to walkers dawn to dusk."
+      }
+    ],
+    "faq": [
+      {
+        "question": "How do I get to Killingworth?",
+        "answer": "By car — Route 81 and Route 80 cross near the town center. There is no rail station or interstate in Killingworth; the nearest passenger rail is Shore Line East at Clinton or Madison, a short drive south."
+      },
+      {
+        "question": "What is Chatfield Hollow State Park?",
+        "answer": "An 18-mile trail network around Schreeder Pond, created by a 1934 Civilian Conservation Corps dam and made a state park in 1949. It offers swimming, fishing at a designated Trout Park, hiking and cross-country skiing; open daily 8 a.m.–sunset, free for in-state vehicles."
+      },
+      {
+        "question": "Is there a hotel in Killingworth?",
+        "answer": "No hotel, inn, motel or B&B could be verified operating inside Killingworth. The nearest verified option is Saybrook Point Resort & Marina, 2 Bridge Street, Old Saybrook, a Shore Line East station stop."
+      }
+    ],
+    "photos": [
+      {
+        "src": "/photos/ct/killingworth/chatfield-hollow-schreeder-pond.jpg",
+        "thumb": "/photos/ct/killingworth/chatfield-hollow-schreeder-pond_thumb.jpg",
+        "title": "Schreeder Pond, Chatfield Hollow State Park",
+        "description": "Schreeder Pond, the signature swimming and fishing feature of Chatfield Hollow State Park.",
+        "author": "Magicpiano",
+        "license": "CC BY-SA 4.0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:ChatfieldHollowSP_SchreederPond.jpg"
+      }
+    ]
+  },
+  "places": [
+    {
+      "slug": "chatfield-hollow-state-park",
+      "name": "Chatfield Hollow State Park",
+      "kind": "park",
+      "town": "Killingworth",
+      "state": "Connecticut",
+      "county": "Middlesex County",
+      "address": "381 CT-80, Killingworth, CT 06419",
+      "official_url": "https://ctparks.com/node/34",
+      "summary": "Roughly 18 miles of trails for hiking, mountain biking, horseback riding and cross-country skiing, plus swimming and picnicking at Schreeder Pond, a designated Trout Park for fishing. A restored waterwheel, a covered bridge and old building foundations remain in the valley. Open daily 8 a.m.–sunset, free for in-state vehicles, $10–$15 out-of-state.",
+      "status": "open",
+      "photos": [
+        {
+          "src": "/photos/ct/killingworth/chatfield-hollow-schreeder-pond.jpg",
+          "thumb": "/photos/ct/killingworth/chatfield-hollow-schreeder-pond_thumb.jpg",
+          "title": "Schreeder Pond, Chatfield Hollow State Park",
+          "description": "Schreeder Pond, the signature swimming and fishing feature of Chatfield Hollow State Park.",
+          "author": "Magicpiano",
+          "license": "CC BY-SA 4.0",
+          "source_url": "https://commons.wikimedia.org/wiki/File:ChatfieldHollowSP_SchreederPond.jpg"
+        }
+      ]
+    },
+    {
+      "slug": "parmelee-farm",
+      "name": "Parmelee Farm",
+      "kind": "historic-site",
+      "town": "Killingworth",
+      "state": "Connecticut",
+      "county": "Middlesex County",
+      "address": "465 Route 81, Killingworth, CT 06419",
+      "official_url": "https://parmeleefarm.org/",
+      "summary": "A 132-acre town-owned historic farm on Connecticut's State Register of Historic Places, bought by the town in 2000. On the grounds are an 18th-century farmhouse, a stone barn, a historic one-room schoolhouse, a sugar shack, a corn crib and community gardens; trails open dawn to dusk. The pavilion hosts events up to 150 guests.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "platt-nature-center",
+      "name": "Platt Nature Center",
+      "kind": "park",
+      "town": "Killingworth",
+      "state": "Connecticut",
+      "county": "Middlesex County",
+      "address": "344 Roast Meat Hill Road, Killingworth, CT 06419",
+      "official_url": "https://killingworthlandconservationtrust.org/platt-nature-center.html",
+      "summary": "A 9-acre property centered on a former barn, donated by Marion Platt in 1974, that serves as headquarters for the Killingworth Land Conservation Trust and houses an herbarium of local flora begun in 1972. A marked trail circuit is always open to the public.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "killingworth-library-association",
+      "name": "Killingworth Library Association",
+      "kind": "attraction",
+      "town": "Killingworth",
+      "state": "Connecticut",
+      "county": "Middlesex County",
+      "address": "301 Route 81, Killingworth, CT 06419",
+      "official_url": "https://www.killingworthlibrary.org/",
+      "summary": "The town's independent library association near the town center, with curbside pickup six days a week. Open Monday/Wednesday/Friday 9 a.m.–6 p.m., Tuesday/Thursday 9 a.m.–7 p.m., Saturday 9 a.m.–1 p.m., closed Sunday; phone (860) 663-2000.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "shipwreck-tavern",
+      "name": "Shipwreck Tavern",
+      "kind": "restaurant",
+      "town": "Killingworth",
+      "state": "Connecticut",
+      "county": "Middlesex County",
+      "address": "256 Route 81, Killingworth, CT 06419",
+      "official_url": "https://shipwrecktavernct.com/",
+      "summary": "A neighborhood bar and restaurant with live music, trivia nights and karaoke. Kitchen opens daily at 4 p.m. (closes 8 p.m. Sundays), bar open until 1 a.m.; phone (860) 452-4847.",
+      "status": "open",
+      "photos": []
+    }
+  ],
+  "entries": [
+    {
+      "kind": "sight",
+      "name": "Chatfield Hollow State Park",
+      "place_slug": "chatfield-hollow-state-park",
+      "note": "18 miles of trails around Schreeder Pond, a former CCC dam."
+    },
+    {
+      "kind": "sight",
+      "name": "Parmelee Farm",
+      "place_slug": "parmelee-farm",
+      "note": "A 132-acre town-owned historic farm bought in 2000."
+    },
+    {
+      "kind": "walk",
+      "name": "Platt Nature Center",
+      "place_slug": "platt-nature-center",
+      "note": "A 9-acre nature center headquarters, always open."
+    },
+    {
+      "kind": "sight",
+      "name": "Killingworth Library Association",
+      "place_slug": "killingworth-library-association",
+      "note": "The town's independent library, with curbside pickup."
+    },
+    {
+      "kind": "food",
+      "name": "Shipwreck Tavern",
+      "place_slug": "shipwreck-tavern",
+      "note": "Neighborhood bar and restaurant with live music and trivia."
+    }
+  ],
+  "links": [
+    {
+      "target": "guide:clinton-ct-travel-guide",
+      "kind": "shared-history",
+      "note": "Clinton was originally part of Killingworth's lands, separating along ecclesiastical boundaries in 1838."
+    },
+    {
+      "target": "guide:madison-ct-travel-guide",
+      "kind": "nearby",
+      "note": "CT Route 79 runs from Madison north through Killingworth to Durham, and Madison is one of the closest Shore Line East stations to Killingworth."
+    },
+    {
+      "target": "guide:durham-ct-travel-guide",
+      "kind": "nearby",
+      "note": "CT Route 79 connects Killingworth directly to Durham, its northern neighbor."
+    },
+    {
+      "target": "guide:deep-river-ct-travel-guide",
+      "kind": "same-region",
+      "note": "CT Route 80 runs east from Killingworth toward Deep River."
+    }
+  ]
+}
