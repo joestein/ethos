@@ -1,41 +1,45 @@
 {
   "guide": {
     "slug": "norwalk-ct-travel-guide",
-    "title": "Norwalk, Connecticut: A Rail Junction on the Sound",
+    "title": "Norwalk, Connecticut: Oyster Town and a Second Empire Mansion",
     "destination": "Norwalk, Connecticut",
     "state": "Connecticut",
     "county": "Fairfield County",
-    "intro": "Norwalk sits where Metro-North's New Haven Line meets the Danbury Branch, which splits off at South Norwalk station on its way north — a working rail junction on Long Island Sound as much as a beach city. That harbor identity carries through its anchor institutions: the Maritime Aquarium interprets the Sound itself, the Lockwood-Mathews Mansion Museum offers guided tours of a preserved historic house, and the Norwalk Seaport Association runs seasonal cruises out to the Sheffield Island Lighthouse. Families gravitate to Stepping Stones Museum for Children in Mathews Park, while South Norwalk — known locally as SoNo — is the city's dining and entertainment neighborhood, its storefronts lining historic Washington Street. Together, these anchors make Norwalk a practical rail-accessible base for exploring the Connecticut shoreline.",
+    "intro": "Settlers from Massachusetts bought the land that became Norwalk in 1640 and 1641; homesteaders arrived from Hartford in 1649, and the town incorporated in 1651. Its name likely comes from the Native American \"Naramauke.\" During the Revolution, British forces under General Tryon nearly destroyed the town. Norwalk rebuilt around the water: by 1880, oyster farming dominated local industry, and the city had the world's largest fleet of steam-powered oyster boats, a legacy still marked by the Norwalk Oyster Festival. It reincorporated as a city in 1893 and consolidated into its modern form in 1913. That era also built Norwalk's grandest landmark: financier LeGrand Lockwood, treasurer of the New York Stock Exchange, began his 62-room mansion in 1864, reportedly costing nearly two million dollars by 1868, when his family moved in. Offshore, the Sheffield Island Lighthouse, the current 1868 tower succeeding an 1828 original, has watched over the harbor ever since.",
     "sections": [
       {
-        "heading": "A rail junction on the Sound",
-        "body": "South Norwalk station is where Metro-North's Danbury Branch splits off from the New Haven Line's main trunk — the kind of junction that has long made Norwalk a stopping-off point rather than a pass-through. That harbor identity is visible in what the city has built up around it: the Maritime Aquarium tells the story of Long Island Sound's marine life, the Lockwood-Mathews Mansion Museum preserves a historic house with guided tours, and the Norwalk Seaport Association runs seasonal cruises out to the Sheffield Island Lighthouse, including sunset trips and Tuesday clambakes in July and August. South Norwalk itself — SoNo — is Norwalk's dining and entertainment neighborhood, its storefronts still lining historic Washington Street."
+        "heading": "Oyster Town, from Naramauke to consolidation",
+        "body": "Settlers from Massachusetts purchased the land that became Norwalk in two transactions, in 1640 and 1641; the first homesteaders arrived from Hartford in 1649, and the town incorporated in 1651. Its name derives from the Algonquin word \"noyank,\" meaning \"point of land,\" or more probably from the Native American name \"Naramauke.\" During the Revolutionary War, British forces under General Tryon nearly destroyed the entire town. Norwalk rebuilt around its harbor: by 1880, oyster farming dominated local industry and Norwalk had the largest fleet of steam-powered oyster boats in the world, a legacy carried today by the city's nickname \"Oyster Town\" and the annual Norwalk Oyster Festival. The town reincorporated as a city in 1893 and consolidated in 1913 into the city known today. That prosperous era also built Norwalk's grandest landmark: financier LeGrand Lockwood, Treasurer of the New York Stock Exchange in 1862, began building his 62-room mansion in 1864; The New York Times reported in 1867 that it cost nearly two million dollars, and the family moved in by 1868. Offshore, Sheffield Island's first lighthouse was completed in 1828; the current 1868 Victorian limestone lighthouse was added to the National Register of Historic Places in 1989 and has been owned by the Norwalk Seaport Association since 1986."
       },
       {
         "heading": "Getting there",
-        "body": "Metro-North's New Haven Line serves Norwalk at South Norwalk, East Norwalk, and Rowayton stations, with the Danbury Branch diverging northward at South Norwalk — the junction station and the fastest way in from Grand Central Terminal or intermediate New Haven Line stops."
+        "body": "Drivers reach Norwalk via I-95 or the Merritt Parkway (Route 15), both of which pass through the city with multiple exits, plus US Route 7 and US Route 1. Rail travelers use Metro-North's New Haven Line at Rowayton, South Norwalk, and East Norwalk stations, with the Danbury Branch — including the Merritt 7 station — joining the main line at South Norwalk. Amtrak trains pass through Norwalk but do not stop."
+      },
+      {
+        "heading": "A mansion, a lighthouse, and a children's museum",
+        "body": "The Lockwood-Mathews Mansion Museum, a 62-room Second Empire mansion designated a National Historic Landmark in 1971, offers guided house tours Wednesday-Sunday at 12, 1, and 2 p.m. (the 3 p.m. slot is an exhibits-only tour), March 12 through December 31, with reduced days in winter. The Norwalk Seaport Association runs 3-hour cruises out to the Sheffield Island Lighthouse from its Water Street dock. The Maritime Aquarium, a short walk from the South Norwalk train station, is home to more than 6,800 animals, including a 110,000-gallon shark habitat and the Pinniped Cove seal habitat. Families also gravitate to Stepping Stones Museum for Children in Mathews Park, while the Norwalk Historical Society preserves four historic sites at Mill Hill Historic Park, including an 1835 town house and a circa-1740 law office."
       }
     ],
     "faq": [
       {
         "question": "How do I get to Norwalk?",
-        "answer": "Metro-North's New Haven Line stops at South Norwalk, East Norwalk, and Rowayton, with the Danbury Branch diverging northward at South Norwalk station."
+        "answer": "Drivers use I-95, the Merritt Parkway (Route 15), US Route 7, or US Route 1. Metro-North's New Haven Line stops at Rowayton, South Norwalk, and East Norwalk, with the Danbury Branch (including Merritt 7 station) joining the main line at South Norwalk; Amtrak passes through without stopping."
       },
       {
-        "question": "What are the Maritime Aquarium's hours?",
-        "answer": "Open daily, 10 a.m. to 5 p.m., at 10 North Water Street in South Norwalk."
+        "question": "What is the Lockwood-Mathews Mansion Museum?",
+        "answer": "A 62-room Second Empire mansion built 1864-1868 for financier LeGrand Lockwood, reportedly costing nearly two million dollars; it was designated a National Historic Landmark in 1971. Guided house tours run Wednesday-Sunday, March 12-December 31."
       },
       {
-        "question": "When can I tour the Lockwood-Mathews Mansion Museum?",
-        "answer": "Guided tours run Wednesday through Sunday on a March-through-December schedule."
+        "question": "Why is Norwalk nicknamed \"Oyster Town\"?",
+        "answer": "By 1880, oyster farming dominated the local economy and Norwalk had the largest fleet of steam-powered oyster boats in the world — a legacy still celebrated at the annual Norwalk Oyster Festival."
       },
       {
         "question": "How do I get to the Sheffield Island Lighthouse?",
-        "answer": "The Norwalk Seaport Association runs seasonal three-hour cruises out to the lighthouse, along with sunset cruises and Tuesday clambakes in July and August."
+        "answer": "The Norwalk Seaport Association runs 3-hour cruises to the lighthouse from its Water Street dock. The current 1868 Victorian limestone lighthouse succeeded an 1828 original and has been owned by the Seaport Association since 1986."
       },
       {
         "question": "Where can I stay in Norwalk?",
-        "answer": "The Watershed, part of the Hotel Zero Degrees/RMS hotel family, is Norwalk's verified in-town lodging option."
+        "answer": "The Norwalk Inn & Conference Center, a family-owned inn on East Avenue with a seasonal saltwater pool, and The Watershed, a boutique riverfront hotel on Main Avenue, are both verified in-town options."
       }
     ],
     "photos": [
@@ -43,7 +47,7 @@
         "src": "/photos/ct/norwalk/sono-washington-street.jpg",
         "thumb": "/photos/ct/norwalk/sono-washington-street_thumb.jpg",
         "title": "Washington Street, SoNo",
-        "description": "Historic storefronts on Washington Street in South Norwalk (SoNo).",
+        "description": "Historic storefronts on Washington Street in South Norwalk (SoNo), home to restaurants including The Spread.",
         "author": "JohnOwensCT",
         "license": "CC BY-SA 3.0",
         "source_url": "https://commons.wikimedia.org/wiki/File:SoNo_Historic_Washington_Street_1.jpg"
@@ -61,7 +65,7 @@
         "src": "/photos/ct/norwalk/sheffield-island-lighthouse.jpg",
         "thumb": "/photos/ct/norwalk/sheffield-island-lighthouse_thumb.jpg",
         "title": "Sheffield Island Lighthouse",
-        "description": "The Sheffield Island Lighthouse off Norwalk, reached by seasonal cruise.",
+        "description": "The 1868 Sheffield Island Lighthouse off Norwalk, reached by seasonal Seaport Association cruise.",
         "author": "Hayden Soloviev",
         "license": "CC BY 4.0",
         "source_url": "https://commons.wikimedia.org/wiki/File:Sheffield_Island_Lighthouse.jpg"
@@ -78,7 +82,7 @@
       "county": "Fairfield County",
       "address": "10 North Water Street, Norwalk, CT 06854",
       "official_url": "https://www.maritimeaquarium.org/",
-      "summary": "An aquarium on the Norwalk waterfront interpreting Long Island Sound's marine life, open daily 10 a.m. to 5 p.m.",
+      "summary": "A nonprofit aquarium focused on Long Island Sound, a federally designated Estuary of National Significance, with more than 6,800 animals, a 110,000-gallon shark habitat, Pinniped Cove seal habitat, and a 4D theater. Open daily, 10 a.m.-5 p.m.; a short walk from the South Norwalk Metro-North station.",
       "status": "open",
       "photos": [
         {
@@ -99,27 +103,31 @@
       "town": "Norwalk",
       "state": "Connecticut",
       "county": "Fairfield County",
+      "address": "295 West Avenue, Norwalk, CT 06850",
       "official_url": "https://www.lockwoodmathewsmansion.com/",
-      "summary": "A preserved historic mansion offering guided tours Wednesday through Sunday, March through December, with rotating exhibits.",
+      "summary": "A 62-room Second Empire mansion built 1864-1868 for NYSE Treasurer LeGrand Lockwood at a reported cost of nearly $2 million; designated a National Historic Landmark in 1971. Guided house tours Wednesday-Sunday at 12, 1, and 2 p.m. (the 3 p.m. slot is exhibits-only), March 12-December 31, with reduced winter days.",
+      "history": "Built 1864-1868 for financier and New York Stock Exchange Treasurer LeGrand Lockwood; The New York Times reported in 1867 that construction cost nearly two million dollars.",
       "status": "open",
       "photos": []
     },
     {
       "slug": "sheffield-island-lighthouse-cruises",
-      "name": "Sheffield Island Lighthouse Cruises (Norwalk Seaport Association)",
-      "kind": "attraction",
+      "name": "Sheffield Island Lighthouse (Norwalk Seaport Association cruises)",
+      "kind": "historic-site",
       "town": "Norwalk",
       "state": "Connecticut",
       "county": "Fairfield County",
-      "official_url": "https://seaport.org/",
-      "summary": "Seasonal three-hour cruises out to the Sheffield Island Lighthouse, plus sunset cruises and Tuesday clambakes in July and August, run by the Norwalk Seaport Association.",
+      "address": "Ferry dock: 90 Water Street, Norwalk, CT 06854",
+      "official_url": "https://www.seaport.org/",
+      "summary": "The 1868 Victorian limestone lighthouse, successor to an 1828 tower, is on the National Register of Historic Places; the Norwalk Seaport Association has owned it since 1986 and runs 3-hour ferry cruises with lighthouse tours.",
+      "history": "The first Sheffield Island lighthouse was completed in 1828; the current 1868 Victorian limestone lighthouse was added to the National Register of Historic Places in 1989.",
       "status": "open",
       "photos": [
         {
           "src": "/photos/ct/norwalk/sheffield-island-lighthouse.jpg",
           "thumb": "/photos/ct/norwalk/sheffield-island-lighthouse_thumb.jpg",
           "title": "Sheffield Island Lighthouse",
-          "description": "The Sheffield Island Lighthouse off Norwalk, reached by seasonal cruise.",
+          "description": "The 1868 Sheffield Island Lighthouse off Norwalk, reached by seasonal Seaport Association cruise.",
           "author": "Hayden Soloviev",
           "license": "CC BY 4.0",
           "source_url": "https://commons.wikimedia.org/wiki/File:Sheffield_Island_Lighthouse.jpg"
@@ -133,33 +141,86 @@
       "town": "Norwalk",
       "state": "Connecticut",
       "county": "Fairfield County",
-      "address": "303 West Avenue, Mathews Park, Norwalk, CT",
+      "address": "Mathews Park, 303 West Avenue, Norwalk, CT 06850",
       "official_url": "https://www.steppingstonesmuseum.org/",
-      "summary": "A hands-on children's museum in Mathews Park, open 10 a.m. to 5 p.m., closed Wednesdays.",
+      "summary": "A children's museum styled an \"Institute of Creative Exploration,\" with indoor and outdoor interactive exhibits, puppet shows, and the on-site Healthyville Cafe. Open 10 a.m.-5 p.m., closed Wednesdays.",
       "status": "open",
       "photos": []
     },
     {
-      "slug": "sono-norwalk",
-      "name": "South Norwalk (SoNo)",
-      "kind": "attraction",
+      "slug": "mill-hill-historic-park",
+      "name": "Mill Hill Historic Park (Norwalk Historical Society)",
+      "kind": "historic-site",
       "town": "Norwalk",
       "state": "Connecticut",
       "county": "Fairfield County",
-      "official_url": "https://visitnorwalk.org/",
-      "summary": "Norwalk's dining and entertainment neighborhood, its storefronts lining historic Washington Street.",
+      "address": "2 East Wall Street, Norwalk, CT 06852",
+      "official_url": "https://www.norwalkhistoricalsociety.org/",
+      "summary": "A historic campus of four sites — an 1835 town house, an 1826 schoolhouse, a circa-1740 law office, and a circa-1767 burial ground. Grounds open year-round, sunrise to sunset; the Society's museum at 141 East Avenue keeps Norwalk history collections, open Wednesday-Saturday, noon-4 p.m.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "sono-baking-company-cafe",
+      "name": "SoNo Baking Company & Cafe",
+      "kind": "cafe",
+      "town": "Norwalk",
+      "state": "Connecticut",
+      "county": "Fairfield County",
+      "address": "101 Water Street, South Norwalk, CT 06854",
+      "official_url": "https://www.sonobaking.com/",
+      "summary": "Founded in 2005 by baker-chef John Barricelli, author of The SoNo Baking Company Cookbook and The Seasonal Baker, in a former warehouse; serves an all-day menu and Sunday brunch.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "the-spread-norwalk",
+      "name": "The Spread",
+      "kind": "restaurant",
+      "town": "Norwalk",
+      "state": "Connecticut",
+      "county": "Fairfield County",
+      "address": "127 Washington Street, South Norwalk, CT 06854",
+      "official_url": "https://www.thespreadsono.com/",
+      "summary": "An American restaurant on SoNo's Washington Street strip, named a 2025 OpenTable Diner's Choice honoree.",
       "status": "open",
       "photos": [
         {
           "src": "/photos/ct/norwalk/sono-washington-street.jpg",
           "thumb": "/photos/ct/norwalk/sono-washington-street_thumb.jpg",
           "title": "Washington Street, SoNo",
-          "description": "Historic storefronts on Washington Street in South Norwalk (SoNo).",
+          "description": "Historic storefronts on Washington Street in South Norwalk (SoNo), home to restaurants including The Spread.",
           "author": "JohnOwensCT",
           "license": "CC BY-SA 3.0",
           "source_url": "https://commons.wikimedia.org/wiki/File:SoNo_Historic_Washington_Street_1.jpg"
         }
       ]
+    },
+    {
+      "slug": "mecha-noodle-bar-norwalk",
+      "name": "Mecha Noodle Bar (Norwalk)",
+      "kind": "restaurant",
+      "town": "Norwalk",
+      "state": "Connecticut",
+      "county": "Fairfield County",
+      "address": "116 Washington Street, Norwalk, CT 06854",
+      "official_url": "https://www.mechanoodlebar.com/",
+      "summary": "A Connecticut-born Asian noodle-bar group serving pho and ramen, with its Norwalk outpost on the SoNo Washington Street restaurant row.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "norwalk-inn-conference-center",
+      "name": "Norwalk Inn & Conference Center",
+      "kind": "hotel",
+      "town": "Norwalk",
+      "state": "Connecticut",
+      "county": "Fairfield County",
+      "address": "99 East Avenue, Norwalk, CT 06851",
+      "official_url": "https://www.norwalkinn.com/",
+      "summary": "An independent, family-owned (Handrinos family) inn with multiple room categories and a separate Guest House, on-site Adam's Rib Restaurant & Bar, and a seasonal saltwater pool (June-October).",
+      "status": "open",
+      "photos": []
     },
     {
       "slug": "the-watershed-norwalk",
@@ -168,7 +229,9 @@
       "town": "Norwalk",
       "state": "Connecticut",
       "county": "Fairfield County",
-      "summary": "A boutique hotel in Norwalk, part of the Hotel Zero Degrees/RMS hotel family.",
+      "address": "353 Main Avenue, Norwalk, CT 06851",
+      "official_url": "https://thewatershednorwalk.com/",
+      "summary": "A boutique riverfront hotel with newly redesigned guest rooms, a renovated lobby and lounge, and on-site dining at Siena Ristorante; part of a Connecticut boutique hospitality portfolio affiliated with Hotel Zero Degrees.",
       "status": "open",
       "photos": []
     }
@@ -178,19 +241,19 @@
       "kind": "sight",
       "name": "The Maritime Aquarium at Norwalk",
       "place_slug": "maritime-aquarium-norwalk",
-      "note": "Long Island Sound's marine life, on the Norwalk waterfront. Open daily, 10-5."
+      "note": "6,800-plus animals, a 110,000-gallon shark habitat, and Pinniped Cove. Open daily, 10-5."
     },
     {
       "kind": "sight",
       "name": "Lockwood-Mathews Mansion Museum",
       "place_slug": "lockwood-mathews-mansion-museum",
-      "note": "Guided tours of a preserved historic mansion, Wednesday-Sunday, March through December."
+      "note": "A 62-room 1868 Second Empire mansion, a National Historic Landmark since 1971. Guided tours Wed-Sun."
     },
     {
       "kind": "sight",
       "name": "Sheffield Island Lighthouse Cruises",
       "place_slug": "sheffield-island-lighthouse-cruises",
-      "note": "Seasonal three-hour cruises, sunset trips, and July-August clambakes from the Norwalk Seaport Association."
+      "note": "3-hour Seaport Association cruises to the 1868 lighthouse, owned by the Association since 1986."
     },
     {
       "kind": "sight",
@@ -199,16 +262,40 @@
       "note": "A hands-on children's museum in Mathews Park. Closed Wednesdays."
     },
     {
-      "kind": "walk",
-      "name": "South Norwalk (SoNo)",
-      "place_slug": "sono-norwalk",
-      "note": "A stroll down historic Washington Street, Norwalk's dining and entertainment neighborhood."
+      "kind": "sight",
+      "name": "Mill Hill Historic Park",
+      "place_slug": "mill-hill-historic-park",
+      "note": "Four historic sites, including an 1835 town house and a circa-1740 law office, dawn to dusk."
+    },
+    {
+      "kind": "food",
+      "name": "SoNo Baking Company & Cafe",
+      "place_slug": "sono-baking-company-cafe",
+      "note": "An all-day bakery-cafe from cookbook author John Barricelli, since 2005."
+    },
+    {
+      "kind": "food",
+      "name": "The Spread",
+      "place_slug": "the-spread-norwalk",
+      "note": "A 2025 OpenTable Diner's Choice honoree on SoNo's Washington Street."
+    },
+    {
+      "kind": "food",
+      "name": "Mecha Noodle Bar",
+      "place_slug": "mecha-noodle-bar-norwalk",
+      "note": "Connecticut-born pho and ramen, on the SoNo restaurant row."
+    },
+    {
+      "kind": "stay",
+      "name": "Norwalk Inn & Conference Center",
+      "place_slug": "norwalk-inn-conference-center",
+      "note": "Family-owned since decades past, with a seasonal saltwater pool and Adam's Rib on site."
     },
     {
       "kind": "stay",
       "name": "The Watershed",
       "place_slug": "the-watershed-norwalk",
-      "note": "Norwalk's boutique hotel option, part of the Hotel Zero Degrees/RMS family."
+      "note": "A boutique riverfront hotel with newly redesigned rooms and Siena Ristorante on site."
     }
   ],
   "links": [
