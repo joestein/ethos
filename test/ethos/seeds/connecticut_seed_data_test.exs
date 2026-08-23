@@ -60,11 +60,13 @@ defmodule Ethos.Seeds.ConnecticutSeedDataTest do
       manhattan_files = @manhattan_glob |> Path.wildcard() |> Enum.sort()
       Enum.each(manhattan_files, &DataGuide.upsert_places!/1)
       Enum.each(manhattan_files, &DataGuide.upsert_guide!(&1, user.email))
+      Enum.each(manhattan_files, &DataGuide.upsert_links!/1)
 
-      # two-pass load, twice
+      # three-pass load, twice
       for _pass <- 1..2 do
         Enum.each(files, &DataGuide.upsert_places!/1)
         Enum.each(files, &DataGuide.upsert_guide!(&1, user.email))
+        Enum.each(files, &DataGuide.upsert_links!/1)
       end
 
       ct_guides =

@@ -4,9 +4,10 @@ defmodule Ethos.Seeds.DataGuide do
   `Ethos.Seeds.GuideRunner`. Seed files live under `priv/seed_data/` and are
   the authoring format for all data-driven destinations (Manhattan onward).
 
-  Seeding is two-pass at the directory level (see `Ethos.Release.seed_manhattan/1`):
-  all files' places first, then all guides — so entries may reference places
-  defined in any file of the same run.
+  Seeding is three-pass at the directory level (see `Ethos.Release.seed_manhattan/1`):
+  all files' places, then all guides, then all links — so entries may reference
+  places, and links may reference guides, defined in any file of the same run
+  regardless of the order the files are processed in.
 
   A seed file may optionally declare a top-level `"links"` array — edges
   from that file's guide to other guides or places, in the form
@@ -24,7 +25,9 @@ defmodule Ethos.Seeds.DataGuide do
 
   def upsert_from_file!(path, email) do
     upsert_places!(path)
-    upsert_guide!(path, email)
+    guide = upsert_guide!(path, email)
+    upsert_links!(path)
+    guide
   end
 
   def load!(path) do
@@ -69,14 +72,23 @@ defmodule Ethos.Seeds.DataGuide do
         end)
     }
 
-    guide = GuideRunner.upsert!(runner_data, email)
+    GuideRunner.upsert!(runner_data, email)
+  end
+
+  @doc """
+  Applies the file's `"links"` edges. Runs as its own directory-level pass so a
+  file may link to any guide in the run, not only ones seeded before it.
+  """
+  def upsert_links!(path) do
+    data = load!(path)
+    source_slug = data["guide"]["slug"]
 
     for l <- data["links"] || [] do
       target = parse_ref!(path, l["target"])
 
       try do
         Ethos.Links.upsert_link!(%{
-          source: {:guide, guide.slug},
+          source: {:guide, source_slug},
           target: target,
           kind: l["kind"],
           note: l["note"]
@@ -87,7 +99,7 @@ defmodule Ethos.Seeds.DataGuide do
       end
     end
 
-    guide
+    :ok
   end
 
   defp parse_ref!(_path, "guide:" <> slug), do: {:guide, slug}

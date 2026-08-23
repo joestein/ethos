@@ -60,6 +60,8 @@ defmodule Ethos.Release do
       guide = Ethos.Seeds.DataGuide.upsert_guide!(file, email)
       IO.puts("Seeded: /g/#{guide.slug}")
     end
+
+    Enum.each(files, &Ethos.Seeds.DataGuide.upsert_links!/1)
   end
 
   def seed_links do
@@ -92,6 +94,8 @@ defmodule Ethos.Release do
       guide = Ethos.Seeds.DataGuide.upsert_guide!(file, email)
       IO.puts("Seeded: /g/#{guide.slug}")
     end
+
+    Enum.each(files, &Ethos.Seeds.DataGuide.upsert_links!/1)
   end
 
   defp repos do
