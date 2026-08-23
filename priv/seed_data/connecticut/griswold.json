@@ -204,7 +204,7 @@
       "county": "New London County",
       "address": "375 Voluntown Road, Griswold, CT 06351",
       "official_url": "https://www.choicehotels.com/connecticut/griswold/comfort-inn-hotels/ct158",
-      "summary": "The one branded hotel physically inside Griswold, sited on Route 138 near the I-395 Exit 22 corridor within an easy drive of Foxwoods and Mohegan Sun. Phone (860) 376-3200 to confirm rates and availability.",
+      "summary": "The one branded hotel physically inside Griswold, sited on Route 138 near the I-395 Exit 22 corridor. Phone (860) 376-3200 to confirm rates and availability.",
       "status": "open",
       "photos": []
     }
@@ -274,7 +274,7 @@
     {
       "target": "guide:lisbon-ct-travel-guide",
       "kind": "nearby",
-      "note": "Route 138 runs directly from Lisbon into Griswold, both signed together at I-395 Exit 21."
+      "note": "Route 12 connects Lisbon and Griswold's Jewett City section, both signed together at I-395 Exit 21."
     },
     {
       "target": "guide:voluntown-ct-travel-guide",

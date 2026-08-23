@@ -13,7 +13,7 @@
       },
       {
         "heading": "Getting there",
-        "body": "North Stonington sits in Connecticut's southeastern corner on I-95: Exit 92 (Route 2 / Route 49) and Exit 93 (Route 216, the last exit before Rhode Island) are both inside the town. There is no rail station in North Stonington; the closest Amtrak Northeast Regional stops are Mystic, Connecticut and Westerly, Rhode Island, both roughly 10-15 minutes away by car. CTrail Shore Line East's eastern terminus is New London and does not reach North Stonington, Mystic or Westerly."
+        "body": "North Stonington sits in Connecticut's southeastern corner on I-95: Exit 92 (Route 2 / Route 49) and Exit 93 (Route 216, the last exit before Rhode Island) are both inside the town. There is no rail station in North Stonington; the closest Amtrak Northeast Regional stops are Mystic, Connecticut, reached via I-95 or Route 1, and Westerly, Rhode Island, just across the state line. CTrail Shore Line East's eastern terminus is New London and does not reach North Stonington, Mystic or Westerly."
       },
       {
         "heading": "A winery, a fair and twelve preserves",
@@ -23,7 +23,7 @@
     "faq": [
       {
         "question": "How do I get to North Stonington?",
-        "answer": "By car — I-95 Exit 92 (Route 2/49) and Exit 93 (Route 216) are both inside the town. There is no rail station in North Stonington; the nearest Amtrak stops are Mystic, CT and Westerly, RI, both about 10-15 minutes away."
+        "answer": "By car — I-95 Exit 92 (Route 2/49) and Exit 93 (Route 216) are both inside the town. There is no rail station in North Stonington; the nearest Amtrak stops are Mystic, CT, reached via I-95 or Route 1, and Westerly, RI, just across the state line."
       },
       {
         "question": "Is there a train to North Stonington?",
@@ -73,19 +73,6 @@
     ]
   },
   "places": [
-    {
-      "slug": "hewitt-farm-north-stonington",
-      "name": "Hewitt Farm",
-      "kind": "park",
-      "town": "North Stonington",
-      "state": "Connecticut",
-      "county": "New London County",
-      "address": "North Stonington, CT 06359",
-      "official_url": "https://www.northstoningtonct.gov/286/Hewitt-Farm-Vision",
-      "summary": "A town-owned open space of fields, forests, a pond and waterways, with stone walls, an eighteenth-century house, a Green and an amphitheater used for public gatherings, plus a marked trail network. Download the trail map from the town's website; contact Town Hall to confirm current access.",
-      "status": "open",
-      "photos": []
-    },
     {
       "slug": "jonathan-edwards-winery",
       "name": "Jonathan Edwards Winery",
@@ -213,12 +200,6 @@
   "entries": [
     {
       "kind": "sight",
-      "name": "Hewitt Farm",
-      "place_slug": "hewitt-farm-north-stonington",
-      "note": "Town-owned open space with a Green, amphitheater and trail network."
-    },
-    {
-      "kind": "sight",
       "name": "Jonathan Edwards Winery",
       "place_slug": "jonathan-edwards-winery",
       "note": "Walk-in tastings at a hilltop winery, seven days a week."
@@ -280,7 +261,7 @@
     {
       "target": "guide:mystic-ct-travel-guide",
       "kind": "same-region",
-      "note": "Mystic, CT is the nearest Amtrak Northeast Regional stop for North Stonington travelers, about 10-15 minutes away."
+      "note": "Mystic, CT, reached via I-95 or Route 1, is the nearest Amtrak Northeast Regional stop for North Stonington travelers."
     }
   ]
 }

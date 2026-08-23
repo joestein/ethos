@@ -13,7 +13,7 @@
       },
       {
         "heading": "Getting there",
-        "body": "East Lyme sits on I-95 roughly midway between New York and Boston: take Exit 74 from the north for Flanders or Niantic village, or Exit 72 from the south for Niantic, with Route 156 running the shore road through Niantic past Rocky Neck State Park. Amtrak's Northeast Corridor and CTrail Shore Line East tracks cross the Niantic River in town, but neither stops here — rail travelers get off at New London, about ten minutes east, or Old Saybrook, about twenty minutes west, and finish the trip by car."
+        "body": "East Lyme sits on I-95 roughly midway between New York and Boston: take Exit 74 from the north for Flanders or Niantic village, or Exit 72 from the south for Niantic, with Route 156 running the shore road through Niantic past Rocky Neck State Park. Amtrak's Northeast Corridor and CTrail Shore Line East tracks cross the Niantic River in town, but neither stops here — rail travelers get off at New London to the east or Old Saybrook to the west, both on the Shore Line East corridor, and finish the trip by car."
       },
       {
         "heading": "Niantic's beaches, boardwalk and books",
@@ -23,7 +23,7 @@
     "faq": [
       {
         "question": "How do I get to East Lyme?",
-        "answer": "By car — I-95 Exit 74 serves Flanders and Niantic from the north, Exit 72 serves Niantic from the south, and Route 156 is the shore road through Niantic. There is no rail station in East Lyme; the nearest is New London, about ten minutes east, or Old Saybrook, about twenty minutes west."
+        "answer": "By car — I-95 Exit 74 serves Flanders and Niantic from the north, Exit 72 serves Niantic from the south, and Route 156 is the shore road through Niantic. There is no rail station in East Lyme; the nearest is New London to the east or Old Saybrook to the west, both on the Shore Line East corridor."
       },
       {
         "question": "Is there a train to East Lyme or Niantic?",
@@ -310,7 +310,7 @@
     {
       "target": "guide:new-london-ct-travel-guide",
       "kind": "same-region",
-      "note": "New London Union Station, about ten minutes east, is the nearest passenger rail stop for East Lyme travelers."
+      "note": "New London Union Station, east of East Lyme on the Shore Line East corridor, is the nearest passenger rail stop for East Lyme travelers."
     }
   ]
 }

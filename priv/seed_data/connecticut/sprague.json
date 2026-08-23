@@ -5,7 +5,7 @@
     "destination": "Sprague, Connecticut",
     "state": "Connecticut",
     "county": "New London County",
-    "intro": "Sprague was incorporated in 1861 out of parts of Lisbon and Franklin, named for Rhode Island mill tycoon William Sprague, who bought land near Lord's Bridge on the Shetucket River in 1854 and founded the Baltic cotton mill there in 1856. At its height the mill ran 1,750 looms and 70,000 spindles and employed more than a thousand people — the 1870 workforce counted 804 men, 396 women and 210 children. A fire gutted the mill in the late 19th century, ending the Sprague family's operation; Frederick Sayles bought the property around 1900 and ran it as the Baltic Mills Company until the late 1960s. The Baltic Historic District, listed on the National Register in 1987, takes in virtually the whole village — 210 contributing structures across 122 acres. Charles Seymour Whitman, later the 41st Governor of New York, was born in Sprague's Hanover village in 1868.",
+    "intro": "Sprague was incorporated in 1861 out of parts of Lisbon and Franklin, named for Rhode Island mill tycoon William Sprague, who purchased about 300 acres near Lord's Bridge on the Shetucket River shortly after the railroad reached the area in 1854 and founded the Baltic cotton mill there in 1856. At its height the mill ran 1,750 looms and 70,000 spindles — the 1870 workforce counted 804 men, 396 women and 210 children. A fire gutted the mill in the late 19th century, ending the Sprague family's operation; Frederick Sayles bought the property around 1900 and ran it as the Baltic Mills Company until the late 1960s. The Baltic Historic District, listed on the National Register in 1987, takes in virtually the whole village — 210 contributing structures across 122 acres. Charles Seymour Whitman, later the 41st Governor of New York, was born in Sprague's Hanover village in 1868.",
     "sections": [
       {
         "heading": "Baltic, Hanover and Versailles",
@@ -13,7 +13,7 @@
       },
       {
         "heading": "Getting there",
-        "body": "Sprague is a drive-to town in eastern Connecticut with no passenger rail station of its own: take I-395 to Route 97 near the Occum section of Norwich and follow Route 97 north along the Shetucket River into Baltic, where Route 207 arrives from Hebron, Lebanon and Franklin and ends at Route 97. The nearest passenger trains are Amtrak and CTrail Shore Line East at New London, roughly 45 minutes south by the town's own estimate; Metro-North and the CTrail Hartford Line do not serve eastern New London County."
+        "body": "Sprague is a drive-to town in eastern Connecticut with no passenger rail station of its own: take I-395 to Route 97 near the Occum section of Norwich and follow Route 97 north along the Shetucket River into Baltic, where Route 207 arrives from Hebron, Lebanon and Franklin and ends at Route 97. The nearest passenger trains are Amtrak and CTrail Shore Line East at New London, reached via Route 97 south to I-395; Metro-North and the CTrail Hartford Line do not serve eastern New London County."
       },
       {
         "heading": "Camping, golf and pizza in Baltic",
@@ -23,7 +23,7 @@
     "faq": [
       {
         "question": "How do I get to Sprague?",
-        "answer": "By car — take I-395 to Route 97 near Occum in Norwich, then follow Route 97 north into Baltic. There is no passenger rail station in Sprague; the nearest is New London, roughly 45 minutes south."
+        "answer": "By car — take I-395 to Route 97 near Occum in Norwich, then follow Route 97 north into Baltic. There is no passenger rail station in Sprague; the nearest is New London, south via Route 97 and I-395."
       },
       {
         "question": "Is there a train to Sprague or Baltic?",
@@ -258,7 +258,7 @@
     {
       "target": "guide:norwich-ct-travel-guide",
       "kind": "same-region",
-      "note": "The Town of Sprague describes itself as about a 45-minute drive from New London via the Route 97/I-395 corridor through Norwich."
+      "note": "Sprague sits along the Route 97/I-395 corridor toward New London, through Norwich."
     }
   ]
 }

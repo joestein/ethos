@@ -104,28 +104,6 @@
       "photos": []
     },
     {
-      "slug": "hopemead-state-park-bozrah",
-      "name": "Hopemead State Park",
-      "kind": "park",
-      "town": "Bozrah",
-      "state": "Connecticut",
-      "county": "New London County",
-      "address": "Bozrah, CT 06334",
-      "summary": "A small state park fronting Gardner Lake on the Bozrah shore, with a stone-pillar entrance gate and a woodland trail.",
-      "status": "open",
-      "photos": [
-        {
-          "src": "/photos/ct/bozrah/hopemead-state-park-entrance.jpg",
-          "thumb": "/photos/ct/bozrah/hopemead-state-park-entrance_thumb.jpg",
-          "title": "Hopemead State Park entrance",
-          "description": "The stone-pillar gate and woodland trail at the entrance to Hopemead State Park, which fronts Gardner Lake on the Bozrah side.",
-          "author": "John Phelan",
-          "license": "CC BY 4.0",
-          "source_url": "https://commons.wikimedia.org/wiki/File:Hopemead_State_Park_entrance,_Bozrah_CT.jpg"
-        }
-      ]
-    },
-    {
       "slug": "bozrah-farmers-market",
       "name": "Bozrah Farmers Market",
       "kind": "attraction",
@@ -206,12 +184,6 @@
     },
     {
       "kind": "sight",
-      "name": "Hopemead State Park",
-      "place_slug": "hopemead-state-park-bozrah",
-      "note": "A small state park fronting Gardner Lake on the Bozrah shore."
-    },
-    {
-      "kind": "sight",
       "name": "Bozrah Farmers Market",
       "place_slug": "bozrah-farmers-market",
       "note": "Fridays in season on the grounds of Maples Farm Park."
@@ -266,6 +238,11 @@
       "target": "guide:franklin-ct-travel-guide",
       "kind": "nearby",
       "note": "Bozrah borders Franklin to the north."
+    },
+    {
+      "target": "guide:salem-ct-travel-guide",
+      "kind": "nearby",
+      "note": "Bozrah borders Salem to the south."
     },
     {
       "target": "guide:salem-ct-travel-guide",

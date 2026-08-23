@@ -318,7 +318,7 @@
     },
     {
       "target": "guide:hebron-ct-travel-guide",
-      "kind": "shared-history",
+      "kind": "same-region",
       "note": "Salmon River State Forest, nearly 7,000 acres, spans Colchester, Hebron and three other towns."
     }
   ]

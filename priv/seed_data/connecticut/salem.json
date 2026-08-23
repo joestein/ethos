@@ -13,7 +13,7 @@
       },
       {
         "heading": "Getting there",
-        "body": "Salem is a drive-only destination — there is no train station and no interstate exit inside the town. Visitors arrive at the CT Route 85/Route 82 crossroads, where Route 11's short expressway from Colchester comes to an end; the extension planned to continue toward Waterford was formally abandoned in October 2016, which is why the highway simply ends onto Salem's two-lane roads. The nearest rail is Shore Line East and Amtrak at New London, roughly a half-hour southeast via Route 85, where you will still need a car for the final leg."
+        "body": "Salem is a drive-only destination — there is no train station and no interstate exit inside the town. Visitors arrive at the CT Route 85/Route 82 crossroads, where Route 11's short expressway from Colchester comes to an end; the extension planned to continue toward Waterford was formally abandoned in October 2016, which is why the highway simply ends onto Salem's two-lane roads. The nearest rail is Shore Line East and Amtrak at New London, reached via Route 85 southeast, where you will still need a car for the final leg."
       },
       {
         "heading": "A lake, a brewery and an ice cream stand",
@@ -23,7 +23,7 @@
     "faq": [
       {
         "question": "How do I get to Salem?",
-        "answer": "By car — Route 85 and Route 82 cross at Salem Four Corners, and Route 11's short expressway from Colchester ends at Route 82. There is no passenger rail station in Salem; the nearest is New London, roughly a half-hour southeast."
+        "answer": "By car — Route 85 and Route 82 cross at Salem Four Corners, and Route 11's short expressway from Colchester ends at Route 82. There is no passenger rail station in Salem; the nearest is New London, southeast of Salem via Route 85."
       },
       {
         "question": "Is there a train to Salem?",
@@ -247,7 +247,7 @@
     {
       "target": "guide:bozrah-ct-travel-guide",
       "kind": "shared-history",
-      "note": "Gardner Lake's 529 acres span Salem and Bozrah's southwestern corner."
+      "note": "Gardner Lake's 528 acres span Salem and Bozrah's southwestern corner."
     }
   ]
 }
