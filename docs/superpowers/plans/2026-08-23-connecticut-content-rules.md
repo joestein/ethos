@@ -134,3 +134,48 @@ load-twice idempotency) then full `mix test`. Both green.
 Concrete, specific, warm but not breathless. Titles
 "{Town}, Connecticut: {hook}" where the hook names something real
 ("Whaling Money and a Submarine Base", not "A Coastal Gem").
+
+## Tiers (Connecticut completion onward)
+
+Every seed file declares `"tier"` inside its `guide` object: `"guide"` or
+`"town-page"`. Omitting it means `"guide"`.
+
+**The tier is decided by the research, after verdict filtering — never by the
+town's reputation beforehand.** Count the places that survive filtering:
+
+- **6 or more → `"guide"`.** The full format, exactly as specified above.
+- **Fewer than 6 → `"town-page"`.** The orientation format below.
+
+Record the surviving count and the resulting tier in your report so the
+reviewer can check the call rather than take it on trust. A town nobody
+expects much from can earn a full guide; a well-known town whose listings
+will not verify does not get padded into one.
+
+### The orientation format
+
+- **Intro**: 90-130 words, history-forward, from verified `history_facts` only.
+- **Sections**: a "Getting there" section, from the research's `getting_there`
+  data. Optional second section only where the research genuinely supports one.
+- **Entries and places**: every verified place, however few. If a town yields
+  ZERO verified places, ship `"places": []` and `"entries": []` — the template
+  omits the section rather than rendering it empty.
+- **FAQ**: 2-3 entries, one of which is "How do I get to {Town}?".
+- **Photos**: one if a free-licensed candidate exists for that town, otherwise
+  `"photos": []`. Do not reach for a loosely-related image.
+- **Links**: at least 3, and this is a floor the validation test enforces.
+
+### The floor — what does not ship
+
+An orientation page must clear BOTH:
+
+- an intro of at least 90 words of real, town-specific history, and
+- at least 3 outbound links to neighbouring covered towns.
+
+A town that cannot clear the floor is **omitted**, and the omission is recorded
+in your wave report with the reason. Never ship a stub to fill the roster.
+
+### Proximity language
+
+No drive times, ever — nothing in the research supports them. State proximity
+in checkable terms only: "borders Canterbury", "12 miles north of Norwich on
+Route 97". Distances and roads come from the research like any other fact.

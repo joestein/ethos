@@ -51,6 +51,42 @@ defmodule Ethos.Seeds.ConnecticutSeedDataTest do
              "#{Path.basename(f)}: bad license #{inspect(p["license"])}"
     end
 
+    # Tier invariants: the tier a file declares must match the evidence it ships.
+    tier_violations =
+      for f <- files,
+          data = DataGuide.load!(f),
+          tier = data["guide"]["tier"] || "guide",
+          n = length(data["places"]),
+          violation =
+            (cond do
+               tier == "guide" and n < 6 -> "full guide with only #{n} places"
+               tier == "town-page" and n >= 6 -> "town-page with #{n} places — should be a guide"
+               true -> nil
+             end),
+          not is_nil(violation),
+          do: {Path.basename(f), violation}
+
+    assert tier_violations == [], "tier does not match place count: #{inspect(tier_violations)}"
+
+    # The floor an orientation page must clear, or it should not have shipped.
+    floor_violations =
+      for f <- files,
+          data = DataGuide.load!(f),
+          (data["guide"]["tier"] || "guide") == "town-page",
+          words = data["guide"]["intro"] |> String.split(~r/\s+/, trim: true) |> length(),
+          links = length(data["links"] || []),
+          violation =
+            (cond do
+               words < 90 -> "intro is #{words} words, floor is 90"
+               links < 3 -> "only #{links} outbound links, floor is 3"
+               true -> nil
+             end),
+          not is_nil(violation),
+          do: {Path.basename(f), violation}
+
+    assert floor_violations == [],
+           "orientation pages below the floor: #{inspect(floor_violations)}"
+
     # Photo labels are the optimizer's lookup key: mix ethos.optimize_connecticut_photos
     # resolves every /photos/ct/{town}/{label}.jpg from images/connecticut/{label}.*, so
     # one label may never stand for two different source images.
