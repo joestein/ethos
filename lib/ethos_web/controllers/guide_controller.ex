@@ -31,7 +31,7 @@ defmodule EthosWeb.GuideController do
 
     destination_name = guide.destination |> String.split(",") |> List.first()
 
-    render(conn, :show,
+    render(conn, template_for(guide),
       guide: guide,
       entries: entries,
       research: research,
@@ -45,6 +45,9 @@ defmodule EthosWeb.GuideController do
       has_booking: has_booking
     )
   end
+
+  defp template_for(%Guide{tier: "town-page"}), do: :town_page
+  defp template_for(%Guide{}), do: :show
 
   defp article_ld(guide, fallback_description) do
     %{
