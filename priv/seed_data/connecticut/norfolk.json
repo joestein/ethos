@@ -17,7 +17,7 @@
       },
       {
         "heading": "Music, mountains, and Station Place",
-        "body": "Infinity Hall, an intimate music venue in the town center, and the Norfolk Chamber Music Festival's Music Shed on the Ellen Battell Stoeckel Estate give Norfolk an outsized concert calendar for its size — the festival's roster of faculty quartets-in-residence has included the Emerson, Brentano, Miró, Tokyo, Guarneri, Cleveland, and Vermeer quartets. Haystack Mountain and Dennis Hill state parks both offer free summit views over the Berkshires. On Station Place, Berkshire Country Store and Icebox Cafe cover breakfast and lunch, and Manor House Inn, Blackberry River Inn, and Wildwood 1880 are the town's historic bed-and-breakfasts."
+        "body": "Infinity Hall, an intimate music venue in the town center, and the Norfolk Chamber Music Festival's Music Shed on the Ellen Battell Stoeckel Estate give Norfolk an outsized concert calendar for its size — the festival's roster of faculty quartets-in-residence has included the Emerson, Brentano, Miró, Tokyo, Guarneri, Cleveland, and Vermeer quartets. Haystack Mountain and Dennis Hill state parks both offer free summit views over the Berkshires. On Station Place, Berkshire Country Store covers breakfast and lunch, and Manor House Inn, Blackberry River Inn, and Wildwood 1880 are the town's historic bed-and-breakfasts."
       }
     ],
     "faq": [
@@ -39,7 +39,7 @@
       },
       {
         "question": "Where can I eat and stay in Norfolk?",
-        "answer": "Berkshire Country Store and Icebox Cafe, both on Station Place, cover breakfast and lunch, with Norfolk Bistro at Infinity Hall for dinner. Manor House Inn, Blackberry River Inn, and Wildwood 1880 are the town's historic bed-and-breakfasts."
+        "answer": "Berkshire Country Store on Station Place covers breakfast and lunch, with Norfolk Bistro at Infinity Hall for dinner. Manor House Inn, Blackberry River Inn, and Wildwood 1880 are the town's historic bed-and-breakfasts."
       }
     ],
     "photos": [
@@ -172,18 +172,6 @@
       "photos": []
     },
     {
-      "slug": "icebox-cafe",
-      "name": "Icebox Cafe",
-      "kind": "cafe",
-      "town": "Norfolk",
-      "state": "Connecticut",
-      "county": "Litchfield County",
-      "address": "10 Station Place, Norfolk, CT 06058",
-      "summary": "A small cafe in the old railroad station area serving breakfast and lunch — oatmeal, pastries, sandwiches, soup, and breads by the loaf. Open Wednesday-Sunday, 7 a.m.-2 p.m.; closed Tuesday, Monday hours seasonal.",
-      "status": "open",
-      "photos": []
-    },
-    {
       "slug": "norfolk-bistro-infinity-hall",
       "name": "Norfolk Bistro at Infinity Hall",
       "kind": "restaurant",
@@ -272,12 +260,6 @@
       "name": "Berkshire Country Store",
       "place_slug": "berkshire-country-store",
       "note": "Downtown deli-cafe for breakfast, coffee, and sandwiches."
-    },
-    {
-      "kind": "food",
-      "name": "Icebox Cafe",
-      "place_slug": "icebox-cafe",
-      "note": "A small breakfast-and-lunch cafe near the old railroad station."
     },
     {
       "kind": "food",
