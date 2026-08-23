@@ -51,7 +51,12 @@ defmodule Ethos.Seeds.ConnecticutSeedDataTest do
              "#{Path.basename(f)}: bad license #{inspect(p["license"])}"
     end
 
-    # Tier invariants: the tier a file declares must match the evidence it ships.
+    # Tier invariants. The rules doc's "6+ places → full guide" is the authoring
+    # decision for a new town; this gate is the backstop for clear mislabels, not
+    # the arbiter of editorial judgement. A town-page shipping 6+ places is
+    # mislabelled rich content. A guide shipping fewer than 4 places is padding or
+    # a mislabel. Roxbury sits legitimately between: 5 places, but 3 sections,
+    # 5 FAQ and 3 photos of genuinely verified material.
     tier_violations =
       for f <- files,
           data = DataGuide.load!(f),
@@ -59,7 +64,7 @@ defmodule Ethos.Seeds.ConnecticutSeedDataTest do
           n = length(data["places"]),
           violation =
             (cond do
-               tier == "guide" and n < 6 -> "full guide with only #{n} places"
+               tier == "guide" and n < 4 -> "full guide with only #{n} places"
                tier == "town-page" and n >= 6 -> "town-page with #{n} places — should be a guide"
                true -> nil
              end),

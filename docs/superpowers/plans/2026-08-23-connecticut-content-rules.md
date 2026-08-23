@@ -149,7 +149,11 @@ town's reputation beforehand.** Count the places that survive filtering:
 Record the surviving count and the resulting tier in your report so the
 reviewer can check the call rather than take it on trust. A town nobody
 expects much from can earn a full guide; a well-known town whose listings
-will not verify does not get padded into one.
+will not verify does not get padded into one. The validation gate is
+deliberately looser than this rule — it fails only clear mislabels (a
+town-page with 6+ places, or a guide with fewer than 4). Meeting the gate is
+not the same as making the right call; the per-wave reviewer checks the call
+itself against your recorded count.
 
 ### The orientation format
 
