@@ -1,0 +1,267 @@
+{
+  "guide": {
+    "slug": "sherman-ct-travel-guide",
+    "title": "Sherman, Connecticut: The Forgotten Founder's Namesake Town",
+    "destination": "Sherman, Connecticut",
+    "state": "Connecticut",
+    "county": "Fairfield County",
+    "intro": "Sherman was incorporated in 1802, split off from the northern portion of neighboring New Fairfield, and named for Roger Sherman — the only Founding Father to sign all four of the nation's founding documents. The underlying land traces to a 1729 purchase: Fairfield settlers, approved in 1724 to form a township, bought a roughly 31,000-acre tract covering today's New Fairfield and Sherman for 65 pounds sterling. Sherman is the northernmost and least-populous town in Fairfield County, bordering New York State to the west. Candlewood Lake, completed in 1928, forms Sherman's eastern shoreline and engulfed the southern portion of the town's farmland when it was built. In the 1800s Sherman was known for superior tobacco leaf; working farms survive today on land protected by the Naromi Land Trust.",
+    "sections": [
+      {
+        "heading": "The Forgotten Founder's town",
+        "body": "Roger Sherman signed the Articles of Association, the Declaration of Independence, the Articles of Confederation and the U.S. Constitution — the only person to sign all four. The Sherman Historical Society runs a Roger Sherman Learning Center by appointment and keeps its main museum in the Northrop House. The road between Sherman Center and New Milford, today's Route 37, was once the New Milford and Sherman Turnpike, chartered in 1818; the Sherman Historic District, centered on the Route 37/39 junction, was added to the National Register on July 31, 1991."
+      },
+      {
+        "heading": "Getting there",
+        "body": "Sherman has no rail station and no interstate of its own. Route 37, an 18.66-mile road beginning at I-84 in Danbury, runs through New Fairfield and Sherman — as Greenwoods Hill Road through Pootatuck State Forest, then Barnes Hill Road — to US Route 7 in New Milford; Route 55, just 2.64 miles long, runs from the New York state line to US Route 7 in Gaylordsville. The nearest rail is Metro-North's Danbury Branch at Danbury, about a half-hour drive south, or the lightly used Harlem Valley-Wingdale station across the New York line."
+      }
+    ],
+    "faq": [
+      {
+        "question": "How do I get to Sherman?",
+        "answer": "By car — Route 37 north from I-84 in Danbury through New Fairfield, about a half-hour drive, or Route 55 west from US Route 7 at Gaylordsville. There is no train station in Sherman."
+      },
+      {
+        "question": "What was Roger Sherman's connection to the town?",
+        "answer": "The town is named for him. He is the only Founding Father to sign all four founding documents of the United States: the Articles of Association, the Declaration of Independence, the Articles of Confederation and the Constitution."
+      },
+      {
+        "question": "Is White Silo Farm & Winery open year-round?",
+        "answer": "No — it's open late April through December, Friday-Sunday 11 a.m.-6 p.m. (Fridays to 8 p.m. in July and August), plus Memorial Day, July 4th and Labor Day."
+      },
+      {
+        "question": "Is there a hotel in Sherman?",
+        "answer": "No lodging inside Sherman could be verified. The nearest option is the Fife 'n Drum Restaurant & Inn in Kent, about 12 miles north."
+      }
+    ],
+    "photos": [
+      {
+        "src": "/photos/ct/sherman/sherman-center-church.jpg",
+        "thumb": "/photos/ct/sherman/sherman-center-church_thumb.jpg",
+        "title": "Sherman Center Church",
+        "description": "The 1837 Greek Revival Center Church at the heart of Sherman's town center.",
+        "author": "Bmzuckerman",
+        "license": "CC BY 4.0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Greek_Revival_-_Center_Church_-_Sherman,_CT_(1).jpg"
+      },
+      {
+        "src": "/photos/ct/sherman/1886-town-hall-sherman.jpg",
+        "thumb": "/photos/ct/sherman/1886-town-hall-sherman_thumb.jpg",
+        "title": "The 1886 Town Hall in the Sherman Historic District",
+        "description": "The 1886 Town Hall in Sherman's National Register-listed Sherman Historic District.",
+        "author": "Doug Kerr",
+        "license": "CC BY-SA 2.0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:OldTownHallShermanCT.jpg"
+      },
+      {
+        "src": "/photos/ct/sherman/old-store-sherman.jpg",
+        "thumb": "/photos/ct/sherman/old-store-sherman_thumb.jpg",
+        "title": "The Old Store, Sherman",
+        "description": "The Old Store in the Sherman Historic District, run as a museum and gift shop by the Sherman Historical Society.",
+        "author": "Jerry Dougherty",
+        "license": "CC BY 2.5",
+        "source_url": "https://commons.wikimedia.org/wiki/File:TheOldStoreInShermanCT.jpg"
+      }
+    ]
+  },
+  "places": [
+    {
+      "slug": "sherman-playhouse",
+      "name": "The Sherman Playhouse",
+      "kind": "theater",
+      "town": "Sherman",
+      "state": "Connecticut",
+      "county": "Fairfield County",
+      "address": "5 Route 39 N, Sherman, CT 06784",
+      "official_url": "https://www.shermanplayers.org/",
+      "summary": "A community theater that has been \"putting on a show since 1926,\" celebrating its centennial season in 2026. Tickets through TicketLeap. Box office (860) 354-3622.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "northrop-house-museum-sherman",
+      "name": "Northrop House Museum",
+      "kind": "museum",
+      "town": "Sherman",
+      "state": "Connecticut",
+      "county": "Fairfield County",
+      "address": "10 Route 37 Center, Sherman, CT 06784",
+      "official_url": "https://www.shermanhistoricalsociety.org/",
+      "summary": "The Sherman Historical Society's main museum, with exhibits on town history and the Roger Sherman Learning Center (by appointment). Open Saturday and Sunday, 1-3 p.m. Phone (860) 354-3083.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "old-store-museum-gift-shop-sherman",
+      "name": "The Old Store Museum & Gift Shop",
+      "kind": "museum",
+      "town": "Sherman",
+      "state": "Connecticut",
+      "county": "Fairfield County",
+      "address": "3 Route 37 Center, Sherman, CT 06784",
+      "official_url": "https://www.shermanhistoricalsociety.org/",
+      "summary": "A restored village store run as a museum and gift shop by the Sherman Historical Society, staffed entirely by volunteers. Open Friday-Sunday, noon-4 p.m. Phone (860) 350-3475.",
+      "status": "open",
+      "photos": [
+        {
+          "src": "/photos/ct/sherman/old-store-sherman.jpg",
+          "thumb": "/photos/ct/sherman/old-store-sherman_thumb.jpg",
+          "title": "The Old Store, Sherman",
+          "description": "The Old Store in the Sherman Historic District, run as a museum and gift shop by the Sherman Historical Society.",
+          "author": "Jerry Dougherty",
+          "license": "CC BY 2.5",
+          "source_url": "https://commons.wikimedia.org/wiki/File:TheOldStoreInShermanCT.jpg"
+        }
+      ]
+    },
+    {
+      "slug": "white-silo-farm-winery",
+      "name": "White Silo Farm & Winery",
+      "kind": "attraction",
+      "town": "Sherman",
+      "state": "Connecticut",
+      "county": "Fairfield County",
+      "address": "32 Route 37 East, Sherman, CT 06784",
+      "official_url": "https://www.whitesilowinery.com/",
+      "summary": "A family farm winery in a renovated 1780s dairy barn, making small-batch wines from farm-grown fruit since 2000; grape vineyards were planted starting in 2010. Wine flights $13-15; cheese platters and coffee also served. Open late April-December, Fri-Sun 11 a.m.-6 p.m. (Fridays to 8 p.m. in July-August), plus Memorial Day, July 4th and Labor Day. Phone (860) 355-0271.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "pootatuck-state-forest",
+      "name": "Pootatuck State Forest",
+      "kind": "park",
+      "town": "Sherman",
+      "state": "Connecticut",
+      "county": "Fairfield County",
+      "address": "Reached via trails from Squantz Pond State Park off CT Route 39 in New Fairfield; Route 37 crosses the forest in Sherman as Greenwoods Hill Road",
+      "summary": "A 1,103-acre state forest lying mainly in New Fairfield with a small portion in Sherman. About five miles of hiking trails; the Pine Hill Trail overlooks Squantz Pond and Candlewood Lake. Supports hiking, mountain biking, hunting and cross-country skiing.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "appalachian-trail-sherman-corner",
+      "name": "Appalachian Trail — Sherman Corner",
+      "kind": "park",
+      "town": "Sherman",
+      "state": "Connecticut",
+      "county": "Fairfield County",
+      "address": "Trail parking near the New York line off CT Route 55, Sherman, CT",
+      "summary": "The Appalachian Trail crosses Sherman's northwestern corner on its way in from New York; a trail parking area sits at that corner of town. The nearby Wiley Shelter is just over the state line in New York, not in Sherman.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "sherman-library",
+      "name": "Sherman Library",
+      "kind": "attraction",
+      "town": "Sherman",
+      "state": "Connecticut",
+      "county": "Fairfield County",
+      "address": "1 Sherman Center, Sherman, CT 06784",
+      "official_url": "https://www.shermanlibrary.org/",
+      "summary": "The town's public library, with adult and children's programming, art exhibitions and museum passes. Hours are not published online — call (860) 354-2455 before visiting.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "american-pie-company-sherman",
+      "name": "American Pie Company",
+      "kind": "restaurant",
+      "town": "Sherman",
+      "state": "Connecticut",
+      "county": "Fairfield County",
+      "address": "29 Route 37 Center, Sherman, CT 06784",
+      "official_url": "http://americanpiecompany.com/",
+      "summary": "The anchor of Sherman's tiny village center, built around its namesake pies but serving breakfast, brunch and American traditional fare since 1993, with indoor and outdoor dining. Open 7 days: Mon 9 a.m.-3 p.m., Tue-Fri 9 a.m.-8 p.m., Sat-Sun 8 a.m.-8 p.m.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "the-daily-market-sherman",
+      "name": "The Daily Market",
+      "kind": "cafe",
+      "town": "Sherman",
+      "state": "Connecticut",
+      "county": "Fairfield County",
+      "address": "15 Route 39, Sherman, CT 06784",
+      "official_url": "https://www.thedailymarketct.com/",
+      "summary": "A country grocery in Sherman Center with a deli counter, online ordering and catering — the town's only everyday early-morning coffee-and-sandwich stop. Open Mon-Sat 6 a.m.-8 p.m., Sun 6 a.m.-7 p.m. Phone (860) 354-8488.",
+      "status": "open",
+      "photos": []
+    }
+  ],
+  "entries": [
+    {
+      "kind": "sight",
+      "name": "The Sherman Playhouse",
+      "place_slug": "sherman-playhouse",
+      "note": "A community theater since 1926."
+    },
+    {
+      "kind": "sight",
+      "name": "Northrop House Museum",
+      "place_slug": "northrop-house-museum-sherman",
+      "note": "The Historical Society's main museum."
+    },
+    {
+      "kind": "sight",
+      "name": "The Old Store Museum & Gift Shop",
+      "place_slug": "old-store-museum-gift-shop-sherman",
+      "note": "A restored village store."
+    },
+    {
+      "kind": "sight",
+      "name": "White Silo Farm & Winery",
+      "place_slug": "white-silo-farm-winery",
+      "note": "Small-batch wines from farm-grown fruit."
+    },
+    {
+      "kind": "sight",
+      "name": "Pootatuck State Forest",
+      "place_slug": "pootatuck-state-forest",
+      "note": "Hiking trails overlooking Candlewood Lake."
+    },
+    {
+      "kind": "sight",
+      "name": "Appalachian Trail — Sherman Corner",
+      "place_slug": "appalachian-trail-sherman-corner",
+      "note": "The AT crosses Sherman's northwest corner."
+    },
+    {
+      "kind": "sight",
+      "name": "Sherman Library",
+      "place_slug": "sherman-library",
+      "note": "The town's public library."
+    },
+    {
+      "kind": "food",
+      "name": "American Pie Company",
+      "place_slug": "american-pie-company-sherman",
+      "note": "The anchor of the village center, since 1993."
+    },
+    {
+      "kind": "food",
+      "name": "The Daily Market",
+      "place_slug": "the-daily-market-sherman",
+      "note": "The town's early-morning coffee-and-sandwich stop."
+    }
+  ],
+  "links": [
+    {
+      "target": "guide:new-fairfield-ct-travel-guide",
+      "kind": "shared-history",
+      "note": "Sherman split off from the northern portion of neighboring New Fairfield in 1802."
+    },
+    {
+      "target": "guide:new-milford-ct-travel-guide",
+      "kind": "nearby",
+      "note": "The road between Sherman Center and New Milford, today's Route 37, was once the New Milford and Sherman Turnpike."
+    },
+    {
+      "target": "guide:danbury-ct-travel-guide",
+      "kind": "same-region",
+      "note": "Route 37 runs from Sherman south to I-84 in Danbury, about a half-hour drive."
+    }
+  ]
+}

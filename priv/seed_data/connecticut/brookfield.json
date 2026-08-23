@@ -1,0 +1,283 @@
+{
+  "guide": {
+    "slug": "brookfield-ct-travel-guide",
+    "title": "Brookfield, Connecticut: A Craft Center in an Old Depot",
+    "destination": "Brookfield, Connecticut",
+    "state": "Connecticut",
+    "county": "Fairfield County",
+    "intro": "The land that became Brookfield was set off in 1752 as the Parish of Newbury, formed from pieces of Newtown, New Milford and Danbury — the parish literally borrowed parts of each town's name along with its land. The first meetinghouse was dedicated September 28, 1757, with Reverend Thomas Brooks as its first settled minister. In May 1788 the Connecticut General Assembly granted the parish town status, renaming it Brookfield in Brooks's honor; the first town meeting convened June 9, 1788, with a population of 1,018 by 1790. From about 1732, the Iron Works District along the Still River powered mills, foundries and hat factories. Candlewood Lake, Connecticut's largest man-made lake, was completed in 1928 and forms Brookfield's western edge. Brookfield Center was added to the National Register of Historic Places in 1991.",
+    "sections": [
+      {
+        "heading": "From the Iron Works to Candlewood Lake",
+        "body": "Brookfield's Iron Works District, settled around 1732 along the Still River, once ran furnaces, grist mills, sawmills, comb shops, carding and cotton mills, a paper mill, a knife factory and hat factories. The town held near 1,700 residents through 1950, then grew fast — 3,405 by 1960 and 9,688 by 1970 — and counts about 17,500 residents today. Brookfield once had two railroad stations, one in the Iron Works District and one called Junction Station, but passenger service through town ended with the last northbound train in April 1971. M. Jodi Rell, Connecticut's 87th governor from 2004 to 2011, lived in Brookfield from 1969 until her death in 2024 and represented the town in the state legislature."
+      },
+      {
+        "heading": "Getting there",
+        "body": "Brookfield has no passenger rail station of its own. Interstate 84 crosses the town's southern end, and US Route 7 and US Route 202, which run concurrently through town, form the main north-south corridor; Route 25 and Route 133 (to the Lake Lillinonah bridge and Bridgewater) fill out the local roads. The nearest train service is the Metro-North Danbury Branch terminus in Danbury, a short drive southwest, reached from the New Haven Line by a change at South Norwalk on most off-peak trips. A \"Brookfield\" station appears only as a proposed, unfunded stop in long-range plans to extend service north from Danbury toward New Milford."
+      },
+      {
+        "heading": "Craft school, theater and Federal Road dining",
+        "body": "The Brookfield Craft Center, on Whisconier Road, teaches clay, fiber, blacksmithing, glass, jewelry and woodworking in a campus that incorporates a former train station building; its gallery mounts rotating exhibitions through the year, including a 50th Annual Holiday Exhibition each winter. The Brookfield Museum and Historical Society, founded in 1968, keeps the town's local-history collections and hosts an annual Festival of Crafts each November. The all-volunteer Brookfield Theatre for the Arts has staged \"quality live theatre since 1957.\" Federal Road carries Brookfield's dining: Market Place Tavern serves American fare in a renovated 150-year-old building, Tabouli & More is an independent Middle Eastern restaurant and market, and BarNaan serves Indian food near the Danbury line."
+      }
+    ],
+    "faq": [
+      {
+        "question": "How do I get to Brookfield?",
+        "answer": "By car — Interstate 84 crosses the southern end of town, with US Route 7/202 as the main north-south corridor. There is no passenger rail station in Brookfield; the nearest is the Metro-North Danbury Branch terminus in Danbury, a short drive southwest."
+      },
+      {
+        "question": "Is there a train station in Brookfield?",
+        "answer": "No. A \"Brookfield\" station exists only as a proposed, unfunded stop in long-range plans to extend Danbury Branch service north toward New Milford."
+      },
+      {
+        "question": "What is the Still River Greenway?",
+        "answer": "A 2.25-mile paved path linking the Brookfield Municipal Center to the Town Center \"Four Corners\" district, with entrances on Silvermine Road and Federal Road and a footbridge crossing the Still River beneath Route 7."
+      },
+      {
+        "question": "Can I visit Candlewood Lake from Brookfield?",
+        "answer": "Yes — Brookfield Town Beach on Candlewood Lake, Connecticut's largest man-made lake, is run by the town's Parks & Recreation department; call ahead for season and hours."
+      },
+      {
+        "question": "Is there a hotel in Brookfield?",
+        "answer": "No hotel or inn inside Brookfield could be verified; the area's lodging clusters a few miles southwest in Danbury and Bethel along I-84."
+      }
+    ],
+    "photos": [
+      {
+        "src": "/photos/ct/brookfield/brookfield-mills-craft-center.jpg",
+        "thumb": "/photos/ct/brookfield/brookfield-mills-craft-center_thumb.jpg",
+        "title": "Brookfield Craft Center (Brookfield Mills)",
+        "description": "The Brookfield Craft Center occupies the 1780 Brookfield Mills building, with its painted signage still visible.",
+        "author": "CityLimitsJunction",
+        "license": "CC0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Brookfield_Mills_(2021).jpg"
+      },
+      {
+        "src": "/photos/ct/brookfield/brookfield-center-hd-meetinghouse.jpg",
+        "thumb": "/photos/ct/brookfield/brookfield-center-hd-meetinghouse_thumb.jpg",
+        "title": "Brookfield Historical Society building",
+        "description": "The Brookfield Historical Society's former meetinghouse building in the Brookfield Center Historic District.",
+        "author": "Magicpiano",
+        "license": "CC BY-SA 3.0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:BrookfieldCT_BrookfieldCenterHD_3.jpg"
+      },
+      {
+        "src": "/photos/ct/brookfield/candlewood-lake-brookfield-beach.jpg",
+        "thumb": "/photos/ct/brookfield/candlewood-lake-brookfield-beach_thumb.jpg",
+        "title": "Candlewood Lake at Brookfield Town Beach",
+        "description": "The marina and Candlewood Lake seen from Brookfield Town Beach.",
+        "author": "AirportExpert",
+        "license": "CC0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Brookfield_Town_Beach_Park.jpg"
+      }
+    ]
+  },
+  "places": [
+    {
+      "slug": "brookfield-craft-center",
+      "name": "Brookfield Craft Center",
+      "kind": "attraction",
+      "town": "Brookfield",
+      "state": "Connecticut",
+      "county": "Fairfield County",
+      "address": "286 Whisconier Road, Brookfield, CT 06804",
+      "official_url": "https://brookfieldcraft.org/",
+      "summary": "A nonprofit craft school whose campus incorporates a former train station building, with studios in clay, fiber, blacksmithing, glass, jewelry, digital arts, woodturning, woodworking and drawing/painting, and open-studio access in several shops. Rotating gallery exhibitions and an Annual Holiday Exhibition each winter. Phone (203) 775-4526.",
+      "status": "open",
+      "photos": [
+        {
+          "src": "/photos/ct/brookfield/brookfield-mills-craft-center.jpg",
+          "thumb": "/photos/ct/brookfield/brookfield-mills-craft-center_thumb.jpg",
+          "title": "Brookfield Craft Center (Brookfield Mills)",
+          "description": "The Brookfield Craft Center occupies the 1780 Brookfield Mills building, with its painted signage still visible.",
+          "author": "CityLimitsJunction",
+          "license": "CC0",
+          "source_url": "https://commons.wikimedia.org/wiki/File:Brookfield_Mills_(2021).jpg"
+        }
+      ]
+    },
+    {
+      "slug": "brookfield-museum-historical-society",
+      "name": "Brookfield Museum and Historical Society",
+      "kind": "museum",
+      "town": "Brookfield",
+      "state": "Connecticut",
+      "county": "Fairfield County",
+      "address": "165 Whisconier Road, Brookfield, CT 06804",
+      "official_url": "https://www.brookfieldcthistory.org/",
+      "summary": "Founded in 1968, the society keeps the town's local-history collections, genealogy files and photographs, and hosts the annual Festival of Crafts each November at Whisconier Middle School with about 40 juried crafters. Museum open Saturdays noon-4 p.m. Phone (203) 297-4692.",
+      "status": "open",
+      "photos": [
+        {
+          "src": "/photos/ct/brookfield/brookfield-center-hd-meetinghouse.jpg",
+          "thumb": "/photos/ct/brookfield/brookfield-center-hd-meetinghouse_thumb.jpg",
+          "title": "Brookfield Historical Society building",
+          "description": "The Brookfield Historical Society's former meetinghouse building in the Brookfield Center Historic District.",
+          "author": "Magicpiano",
+          "license": "CC BY-SA 3.0",
+          "source_url": "https://commons.wikimedia.org/wiki/File:BrookfieldCT_BrookfieldCenterHD_3.jpg"
+        }
+      ]
+    },
+    {
+      "slug": "brookfield-theatre-for-the-arts",
+      "name": "The Brookfield Theatre for the Arts",
+      "kind": "theater",
+      "town": "Brookfield",
+      "state": "Connecticut",
+      "county": "Fairfield County",
+      "address": "184 Whisconier Road, Brookfield, CT 06804",
+      "official_url": "https://www.brookfieldtheatre.org/",
+      "summary": "An all-volunteer community theater staging \"quality live theatre since 1957,\" next to the Brookfield Library on Route 25. Tickets generally run $20-$35 with senior and student discounts.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "still-river-greenway",
+      "name": "Still River Greenway",
+      "kind": "park",
+      "town": "Brookfield",
+      "state": "Connecticut",
+      "county": "Fairfield County",
+      "address": "63 Silvermine Road, Brookfield, CT 06804 (trailhead)",
+      "official_url": "https://brookfieldct.myrec.com/info/facilities/default.aspx",
+      "summary": "A 2.25-mile paved greenway linking the Brookfield Municipal Center to the Town Center \"Four Corners\" district, with entrances on Silvermine Road and Federal Road and a footbridge crossing the Still River beneath Route 7. Built in phases, 2012 and 2016. No parking sticker required.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "brookfield-town-beach",
+      "name": "Brookfield Town Beach",
+      "kind": "park",
+      "town": "Brookfield",
+      "state": "Connecticut",
+      "county": "Fairfield County",
+      "address": "162 Whisconier Road, Brookfield, CT 06804 (Parks & Recreation office)",
+      "official_url": "https://brookfieldct.myrec.com/info/default.aspx",
+      "summary": "The town's swimming beach on Candlewood Lake, Connecticut's largest man-made lake, administered by Brookfield Parks & Recreation. Season, hours and non-resident pass policy are not published online — call (203) 775-7310.",
+      "status": "open",
+      "photos": [
+        {
+          "src": "/photos/ct/brookfield/candlewood-lake-brookfield-beach.jpg",
+          "thumb": "/photos/ct/brookfield/candlewood-lake-brookfield-beach_thumb.jpg",
+          "title": "Candlewood Lake at Brookfield Town Beach",
+          "description": "The marina and Candlewood Lake seen from Brookfield Town Beach.",
+          "author": "AirportExpert",
+          "license": "CC0",
+          "source_url": "https://commons.wikimedia.org/wiki/File:Brookfield_Town_Beach_Park.jpg"
+        }
+      ]
+    },
+    {
+      "slug": "market-place-tavern-brookfield",
+      "name": "Market Place Tavern",
+      "kind": "restaurant",
+      "town": "Brookfield",
+      "state": "Connecticut",
+      "county": "Fairfield County",
+      "address": "189 Federal Road, Brookfield, CT 06804",
+      "official_url": "https://mptavern.com/brookfield",
+      "summary": "American tavern fare in a renovated 150-year-old building, modernized in 2019 while keeping its historic character. Part of the Market Hospitality Group. Phone (203) 775-7072.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "tabouli-and-more",
+      "name": "Tabouli & More",
+      "kind": "restaurant",
+      "town": "Brookfield",
+      "state": "Connecticut",
+      "county": "Fairfield County",
+      "address": "270 Federal Road, Brookfield, CT 06804",
+      "official_url": "https://www.tabouliandmore.com/",
+      "summary": "Independent Middle Eastern restaurant and market on the Federal Road corridor, open breakfast through dinner with takeout and delivery. Phone (203) 885-0355.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "barnaan-brookfield",
+      "name": "BarNaan",
+      "kind": "restaurant",
+      "town": "Brookfield",
+      "state": "Connecticut",
+      "county": "Fairfield County",
+      "address": "15 Federal Road, Brookfield, CT 06804",
+      "official_url": "https://barnaanct.com/",
+      "summary": "Independent Indian restaurant at the southern end of Federal Road, near the Danbury line. Phone 475-237-5471 — call ahead, as full hours are not yet posted online.",
+      "status": "open",
+      "photos": []
+    }
+  ],
+  "entries": [
+    {
+      "kind": "sight",
+      "name": "Brookfield Craft Center",
+      "place_slug": "brookfield-craft-center",
+      "note": "A craft school in a former train station building."
+    },
+    {
+      "kind": "sight",
+      "name": "Brookfield Museum and Historical Society",
+      "place_slug": "brookfield-museum-historical-society",
+      "note": "Local history since 1968, plus an annual Festival of Crafts."
+    },
+    {
+      "kind": "sight",
+      "name": "The Brookfield Theatre for the Arts",
+      "place_slug": "brookfield-theatre-for-the-arts",
+      "note": "Community theater staging shows since 1957."
+    },
+    {
+      "kind": "sight",
+      "name": "Still River Greenway",
+      "place_slug": "still-river-greenway",
+      "note": "A 2.25-mile paved path with a footbridge over the Still River."
+    },
+    {
+      "kind": "sight",
+      "name": "Brookfield Town Beach",
+      "place_slug": "brookfield-town-beach",
+      "note": "The town's Candlewood Lake swimming beach."
+    },
+    {
+      "kind": "food",
+      "name": "Market Place Tavern",
+      "place_slug": "market-place-tavern-brookfield",
+      "note": "American tavern fare in a renovated 150-year-old building."
+    },
+    {
+      "kind": "food",
+      "name": "Tabouli & More",
+      "place_slug": "tabouli-and-more",
+      "note": "Independent Middle Eastern restaurant and market."
+    },
+    {
+      "kind": "food",
+      "name": "BarNaan",
+      "place_slug": "barnaan-brookfield",
+      "note": "Indian food near the Danbury line."
+    }
+  ],
+  "links": [
+    {
+      "target": "guide:danbury-ct-travel-guide",
+      "kind": "nearby",
+      "note": "Brookfield borders Danbury; I-84 climbs from Danbury into Bethel and Brookfield."
+    },
+    {
+      "target": "guide:bethel-ct-travel-guide",
+      "kind": "nearby",
+      "note": "I-84 climbs from Danbury into the neighboring towns of Bethel and Brookfield."
+    },
+    {
+      "target": "guide:new-milford-ct-travel-guide",
+      "kind": "nearby",
+      "note": "Brookfield and New Milford both border Candlewood Lake, Connecticut's largest man-made lake."
+    },
+    {
+      "target": "guide:new-fairfield-ct-travel-guide",
+      "kind": "same-region",
+      "note": "Brookfield and New Fairfield both border Candlewood Lake."
+    }
+  ]
+}

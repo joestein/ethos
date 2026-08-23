@@ -1,0 +1,299 @@
+{
+  "guide": {
+    "slug": "new-canaan-ct-travel-guide",
+    "title": "New Canaan, Connecticut: A Glass House and the Harvard Five",
+    "destination": "New Canaan, Connecticut",
+    "state": "Connecticut",
+    "county": "Fairfield County",
+    "intro": "Connecticut's General Assembly established Canaan Parish in 1731 out of northwestern Norwalk and northeastern Stamford, though European settlement had begun around 1715; the name comes from the Biblical Canaan, the \"promised land.\" New Canaan was incorporated as a town in May 1801. Shoemaking, introduced in 1818, became the dominant industry by 1850, until a railroad spur from Stamford, built in 1866, brought wealthy New Yorkers who built summer estates and then settled year-round; the first train reached New Canaan on July 4, 1868. In the 1940s, five modernist architects who became known as the \"Harvard Five\" — Philip Johnson, Marcel Breuer, Landis Gores, John M. Johansen and Eliot Noyes — built more than 80 houses here, making New Canaan a center of American modernist design. Sculptor John Rogers also lived and worked in town; his studio, a National Historic Landmark, survives on the New Canaan Museum & Historical Society's campus.",
+    "sections": [
+      {
+        "heading": "Shoemakers, a railroad and the Harvard Five",
+        "body": "New Canaan's shoemaking industry, introduced in 1818, peaked around 1850 before declining after the trade failed to adopt automatic sewing machines ahead of the Civil War; the last shoemaker closed in 1913. The 1866 railroad spur from Stamford, merged into the New York, New Haven & Hartford Railroad in 1890, remade the town by bringing New York money. The New Canaan Museum & Historical Society, founded in 1889, keeps a two-acre campus of five buildings including the 1764 Hanford-Silliman House, the 1825 Town House — the town's original town hall — and John Rogers's 1875 sculpture studio, a National Historic Landmark and one of only two in New Canaan, alongside the Philip Johnson Glass House."
+      },
+      {
+        "heading": "Getting there",
+        "body": "Most visitors drive in on the Merritt Parkway and then take Route 123, 124 or 106 into the village, but New Canaan is one of the easiest Connecticut towns to reach car-free. Metro-North's New Canaan Branch, 8.2 miles and fully electrified, runs from a junction east of downtown Stamford to New Canaan station in the middle of the village, with Talmadge Hill the only other in-town stop; many weekday trains run direct to and from Grand Central without a change at Stamford. No Amtrak, Shore Line East or CTrail Hartford Line service reaches New Canaan."
+      }
+    ],
+    "faq": [
+      {
+        "question": "How do I get to New Canaan?",
+        "answer": "By car via the Merritt Parkway and Routes 123, 124 or 106, or by train — Metro-North's New Canaan Branch runs from Stamford to New Canaan station downtown, with Talmadge Hill the only other in-town stop."
+      },
+      {
+        "question": "Is there a direct train to Grand Central from New Canaan?",
+        "answer": "Many weekday trains run through without a change at Stamford; check the timetable, since not every train does."
+      },
+      {
+        "question": "What is the Philip Johnson Glass House?",
+        "answer": "Philip Johnson's 1949 house, now a National Trust for Historic Preservation site. Access is by shuttle tour only from the downtown Visitor Center at 199 Elm Street; the 2026 season runs April 16-December 14."
+      },
+      {
+        "question": "Is Grace Farms free to visit?",
+        "answer": "Yes, though advance registration is requested. Open Tuesday-Saturday 10 a.m.-5 p.m., Sunday noon-5 p.m., closed Monday."
+      },
+      {
+        "question": "Is there a hotel in New Canaan?",
+        "answer": "No overnight lodging could be verified in town. The nearest option is in Stamford, about 8 miles away, near the New Canaan Branch's junction with the New Haven Line."
+      }
+    ],
+    "photos": [
+      {
+        "src": "/photos/ct/new-canaan/new-canaan-elm-street-downtown.jpg",
+        "thumb": "/photos/ct/new-canaan/new-canaan-elm-street-downtown_thumb.jpg",
+        "title": "Elm Street, downtown New Canaan",
+        "description": "A downtown New Canaan streetscape on Elm Street, with white clapboard storefronts.",
+        "author": "ajay_suresh",
+        "license": "CC BY 2.0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:New_Canaan,_CT_-_Downtown_(54103008122).jpg"
+      },
+      {
+        "src": "/photos/ct/new-canaan/glass-house-new-canaan.jpg",
+        "thumb": "/photos/ct/new-canaan/glass-house-new-canaan_thumb.jpg",
+        "title": "The Philip Johnson Glass House",
+        "description": "The 1949 Glass House across its lawn in peak autumn foliage.",
+        "author": "Carol M. Highsmith",
+        "license": "Public domain",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Glass_House_2006.jpg"
+      },
+      {
+        "src": "/photos/ct/new-canaan/grace-farms-river-building.jpg",
+        "thumb": "/photos/ct/new-canaan/grace-farms-river-building_thumb.jpg",
+        "title": "Grace Farms River building",
+        "description": "The SANAA-designed River building sweeping across the meadow at Grace Farms.",
+        "author": "Adam.thatcher",
+        "license": "CC BY-SA 4.0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Grace_Farms_River_building.jpg"
+      }
+    ]
+  },
+  "places": [
+    {
+      "slug": "philip-johnson-glass-house",
+      "name": "The Philip Johnson Glass House",
+      "kind": "historic-site",
+      "town": "New Canaan",
+      "state": "Connecticut",
+      "county": "Fairfield County",
+      "address": "199 Elm Street, New Canaan, CT 06840 (Visitor Center)",
+      "official_url": "https://theglasshouse.org/",
+      "summary": "Philip Johnson's 1949 house, a National Trust for Historic Preservation site reached only by guided or self-guided shuttle tour from the downtown Visitor Center. 2026 season April 16-December 14, Sunday/Monday/Thursday/Friday/Saturday; tours from $25. Free parking after 10:30 a.m. in the Lumberyard Lot, 244 Elm Street.",
+      "status": "open",
+      "photos": [
+        {
+          "src": "/photos/ct/new-canaan/glass-house-new-canaan.jpg",
+          "thumb": "/photos/ct/new-canaan/glass-house-new-canaan_thumb.jpg",
+          "title": "The Philip Johnson Glass House",
+          "description": "The 1949 Glass House across its lawn in peak autumn foliage.",
+          "author": "Carol M. Highsmith",
+          "license": "Public domain",
+          "source_url": "https://commons.wikimedia.org/wiki/File:Glass_House_2006.jpg"
+        }
+      ]
+    },
+    {
+      "slug": "grace-farms",
+      "name": "Grace Farms",
+      "kind": "attraction",
+      "town": "New Canaan",
+      "state": "Connecticut",
+      "county": "Fairfield County",
+      "address": "365 Lukes Wood Road, New Canaan, CT 06840",
+      "official_url": "https://www.gracefarms.org/",
+      "summary": "SANAA's serpentine \"River\" building winds through restored meadows with a one-mile walking loop, Cattail Pond and a Tea Pavilion. Free, advance registration requested. Open Tue-Sat 10 a.m.-5 p.m., Sun noon-5 p.m., closed Monday; public tours Thursdays (May-December) and Saturdays year-round at 10:30 a.m.",
+      "status": "open",
+      "photos": [
+        {
+          "src": "/photos/ct/new-canaan/grace-farms-river-building.jpg",
+          "thumb": "/photos/ct/new-canaan/grace-farms-river-building_thumb.jpg",
+          "title": "Grace Farms River building",
+          "description": "The SANAA-designed River building sweeping across the meadow at Grace Farms.",
+          "author": "Adam.thatcher",
+          "license": "CC BY-SA 4.0",
+          "source_url": "https://commons.wikimedia.org/wiki/File:Grace_Farms_River_building.jpg"
+        }
+      ]
+    },
+    {
+      "slug": "new-canaan-museum-historical-society",
+      "name": "New Canaan Museum & Historical Society",
+      "kind": "museum",
+      "town": "New Canaan",
+      "state": "Connecticut",
+      "county": "Fairfield County",
+      "address": "13 Oenoke Ridge Road, New Canaan, CT 06840",
+      "official_url": "https://nchistory.org/",
+      "summary": "Founded in 1889, a two-acre campus of five buildings including the 1764 Hanford-Silliman House, the 1825 Town House — New Canaan's original town hall — and sculptor John Rogers's 1875 studio, a National Historic Landmark. Open Tue-Sat 10 a.m.-4 p.m. Phone (203) 966-1776.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "waveny-park",
+      "name": "Waveny Park",
+      "kind": "park",
+      "town": "New Canaan",
+      "state": "Connecticut",
+      "county": "Fairfield County",
+      "address": "677 South Avenue, New Canaan, CT 06840",
+      "official_url": "https://wavenyparkconservancy.org/",
+      "summary": "A 450-acre former estate designed by the Olmsted Brothers, with 3.5 miles of trails through 83-plus acres of woodland, formal gardens and a renovated pond, drawing more than 250,000 visitors a year. A 2026 scaffolding project at Waveny House has disrupted some booked weddings — check ahead for events.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "silvermine-arts-center",
+      "name": "Silvermine Arts Center",
+      "kind": "museum",
+      "town": "New Canaan",
+      "state": "Connecticut",
+      "county": "Fairfield County",
+      "address": "1037 Silvermine Road, New Canaan, CT 06840",
+      "official_url": "https://silvermineart.org/",
+      "summary": "A nonprofit arts center pairing exhibition galleries and a shop with a School of Art teaching ceramics, drawing and other studio disciplines. Open Tue-Sat 10 a.m.-4 p.m.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "new-canaan-nature-center",
+      "name": "New Canaan Nature Center",
+      "kind": "park",
+      "town": "New Canaan",
+      "state": "Connecticut",
+      "county": "Fairfield County",
+      "address": "144 Oenoke Ridge, New Canaan, CT 06840",
+      "official_url": "https://newcanaannature.org/",
+      "summary": "Grounds include a children's play garden with a boxwood maze and captive birds of prey; the center's nature-based preschool, established in 1967, describes itself as the oldest in the country. Runs a full seasonal calendar of birding walks and workshops.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "new-canaan-playhouse",
+      "name": "New Canaan Playhouse",
+      "kind": "theater",
+      "town": "New Canaan",
+      "state": "Connecticut",
+      "county": "Fairfield County",
+      "address": "Elm Street, New Canaan, CT 06840",
+      "summary": "A roughly 100-year-old twin-screen movie theater restored and reopened in 2024 by CinemaLab, running a recurring \"Morning Movie Club\" series each fall.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "elm-restaurant-new-canaan",
+      "name": "Elm Restaurant",
+      "kind": "restaurant",
+      "town": "New Canaan",
+      "state": "Connecticut",
+      "county": "Fairfield County",
+      "address": "73 Elm Street, New Canaan, CT 06840",
+      "official_url": "https://www.elmrestaurant.com/",
+      "summary": "New American cooking from chef Luke Venner, emphasizing cool-climate wines and classic cocktails. Lunch Mon-Sat 11:30 a.m.-3:30 p.m., Sunday brunch to 3:30 p.m., Friday-Saturday afternoon tea by reservation.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "doppio-new-canaan",
+      "name": "Doppio",
+      "kind": "restaurant",
+      "town": "New Canaan",
+      "state": "Connecticut",
+      "county": "Fairfield County",
+      "address": "62 Main Street, New Canaan, CT 06840",
+      "summary": "Italian restaurant from Joseph and Louis Barresi, an offshoot of their Greenwich restaurant that opened on Main Street in August 2025, with a popular outdoor patio and both dinner and weekend lunch service.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "roger-sherman-inn",
+      "name": "Roger Sherman Inn",
+      "kind": "restaurant",
+      "town": "New Canaan",
+      "state": "Connecticut",
+      "county": "Fairfield County",
+      "address": "195 Oenoke Ridge, New Canaan, CT 06840",
+      "summary": "A historic New Canaan property operating as a restaurant and event venue after a 2025 sale to a local couple restoring its dining rooms; it has no overnight guest rooms despite the \"Inn\" name.",
+      "status": "open",
+      "photos": []
+    }
+  ],
+  "entries": [
+    {
+      "kind": "sight",
+      "name": "The Philip Johnson Glass House",
+      "place_slug": "philip-johnson-glass-house",
+      "note": "Johnson's 1949 house, tour-only."
+    },
+    {
+      "kind": "sight",
+      "name": "Grace Farms",
+      "place_slug": "grace-farms",
+      "note": "SANAA's serpentine River building on restored meadows."
+    },
+    {
+      "kind": "sight",
+      "name": "New Canaan Museum & Historical Society",
+      "place_slug": "new-canaan-museum-historical-society",
+      "note": "A five-building campus including a National Historic Landmark studio."
+    },
+    {
+      "kind": "sight",
+      "name": "Waveny Park",
+      "place_slug": "waveny-park",
+      "note": "A 450-acre Olmsted Brothers-designed estate landscape."
+    },
+    {
+      "kind": "sight",
+      "name": "Silvermine Arts Center",
+      "place_slug": "silvermine-arts-center",
+      "note": "Galleries and a School of Art."
+    },
+    {
+      "kind": "sight",
+      "name": "New Canaan Nature Center",
+      "place_slug": "new-canaan-nature-center",
+      "note": "A boxwood maze and birds of prey."
+    },
+    {
+      "kind": "sight",
+      "name": "New Canaan Playhouse",
+      "place_slug": "new-canaan-playhouse",
+      "note": "A restored twin-screen movie theater."
+    },
+    {
+      "kind": "food",
+      "name": "Elm Restaurant",
+      "place_slug": "elm-restaurant-new-canaan",
+      "note": "New American cooking downtown."
+    },
+    {
+      "kind": "food",
+      "name": "Doppio",
+      "place_slug": "doppio-new-canaan",
+      "note": "Italian from an established Greenwich kitchen."
+    },
+    {
+      "kind": "food",
+      "name": "Roger Sherman Inn",
+      "place_slug": "roger-sherman-inn",
+      "note": "A historic restaurant and event venue."
+    }
+  ],
+  "links": [
+    {
+      "target": "guide:norwalk-ct-travel-guide",
+      "kind": "nearby",
+      "note": "New Canaan's parish was carved from northwestern Norwalk and northeastern Stamford land in 1731."
+    },
+    {
+      "target": "guide:stamford-ct-travel-guide",
+      "kind": "nearby",
+      "note": "New Canaan's parish was carved from northeastern Stamford land in 1731, and the New Canaan Branch still meets the New Haven Line at Stamford."
+    },
+    {
+      "target": "guide:darien-ct-travel-guide",
+      "kind": "same-region",
+      "note": "Route 124 reaches the Merritt Parkway at the same New Canaan exit that also serves Darien."
+    }
+  ]
+}
