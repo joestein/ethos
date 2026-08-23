@@ -1,0 +1,239 @@
+{
+  "guide": {
+    "slug": "woodstock-ct-travel-guide",
+    "title": "Woodstock, Connecticut: A Pink Cottage on Route 169",
+    "destination": "Woodstock, Connecticut",
+    "state": "Connecticut",
+    "county": "Windham County",
+    "intro": "Woodstock was settled in 1686 by thirteen men from Roxbury, Massachusetts, who first named the plantation New Roxbury; Judge Samuel Sewall suggested the name Woodstock, after the English town, in 1690. Massachusetts had purchased the land from the Mohegans in 1682, and the town remained part of that colony until 1749, when it incorporated and joined Connecticut, resolving a long-running boundary dispute. Woodstock was a farming community through the 18th century, developed shoe factories in the 19th, then reverted largely to farming while becoming a summer destination for wealthy East Coast families. The best-known symbol of that era is Roseland Cottage, the pink Gothic Revival summer home New York merchant and abolitionist Henry C. Bowen built in 1846. Bowen opened his adjoining park to the public in 1876; today Woodstock is Connecticut's second-largest town by land area, after New Milford, and home to the Woodstock Fair, one of the state's oldest agricultural fairs.",
+    "sections": [
+      {
+        "heading": "New Roxbury to the pink cottage",
+        "body": "Thirteen men from Roxbury, Massachusetts settled the plantation in 1686 and first called it New Roxbury; the name changed to Woodstock in 1690 at the suggestion of Judge Samuel Sewall. Massachusetts had bought the land from the Mohegans in 1682, and the town remained part of that colony until 1749, when it incorporated and became part of Connecticut. Farming defined Woodstock through the 18th century; a 19th-century turn to industry made it known for shoe factories before the town reverted largely to farming and became a summer destination for wealthy East Coast families. New York merchant, publisher, and abolitionist Henry C. Bowen built his pink Gothic Revival summer house, Roseland Cottage, in 1846, and opened his adjoining park to the public in 1876. The Woodstock Fair, run by the Woodstock Agricultural Society, reaches its 165th edition in 2026 — one of Connecticut's oldest continuously held agricultural fairs."
+      },
+      {
+        "heading": "Getting there",
+        "body": "Woodstock is a drive-to town: from I-395, take Exit 47 at Putnam, follow Route 44 west about a mile, then Route 171 west about three miles to Route 169 north. Route 169 itself is a 32-mile National Scenic Byway running the length of town and on to the Massachusetts line. There is no passenger rail anywhere in Windham County — neither the CTrail Hartford Line nor Shore Line East reaches this part of the state. From Boston, the drive is about I-90 west to the Auburn interchange, then I-290 and I-395 south; from Providence, I-95 north to I-395 north."
+      },
+      {
+        "heading": "Roseland Cottage and Roseland Park",
+        "body": "Roseland Cottage, a National Historic Landmark operated by Historic New England, sits on Route 169 with a boxwood garden and what is described as the nation's oldest surviving indoor bowling alley; it hosts an annual Fine Arts and Crafts Festival each October. Henry Bowen's adjoining Roseland Park, opened to the public in 1876 and still run by the Trustees of the Bowen Family Trust, wraps a lake with a nine-hole public golf course — Connecticut's second oldest — plus boating, a playground, and picnic grounds; swimming is not permitted. For lodging, the Inn at Woodstock Hill offers 21 rooms in a country house near the junction of Route 169 and Plaine Hill Road; its restaurant currently serves private events only."
+      }
+    ],
+    "faq": [
+      {
+        "question": "How do I get to Woodstock?",
+        "answer": "By car — from I-395, take Exit 47 at Putnam, follow Route 44 west about a mile, then Route 171 west about three miles to Route 169 north. There is no passenger rail anywhere in Windham County."
+      },
+      {
+        "question": "What is Roseland Cottage?",
+        "answer": "The 1846 pink Gothic Revival summer home of New York merchant and abolitionist Henry C. Bowen, now a National Historic Landmark operated by Historic New England, with a boxwood garden and the nation's oldest surviving indoor bowling alley."
+      },
+      {
+        "question": "When is the Woodstock Fair?",
+        "answer": "The fair runs the week including Labor Day, opening the Thursday before and closing Labor Day Monday. It's run by the Woodstock Agricultural Society and reaches its 165th edition in 2026."
+      },
+      {
+        "question": "Can I swim at Roseland Park?",
+        "answer": "No — swimming isn't permitted on Roseland Lake. The park does allow boating and fishing, and has a nine-hole public golf course, Connecticut's second oldest."
+      },
+      {
+        "question": "Where can I stay in Woodstock?",
+        "answer": "The Inn at Woodstock Hill has 21 rooms in a country house near Route 169 and Plaine Hill Road. Its restaurant currently operates for private events only, not general public dining."
+      }
+    ],
+    "photos": [
+      {
+        "src": "/photos/ct/woodstock/roseland-cottage-woodstock.jpg",
+        "thumb": "/photos/ct/woodstock/roseland-cottage-woodstock_thumb.jpg",
+        "title": "Roseland Cottage",
+        "description": "The pink Gothic Revival Roseland Cottage, built in 1846 for Henry C. Bowen.",
+        "author": "Marty Aligata",
+        "license": "CC BY-SA 4.0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Roseland_Cottage,_Woodstock,_CT_2020.jpg"
+      },
+      {
+        "src": "/photos/ct/woodstock/first-congregational-church-woodstock.jpg",
+        "thumb": "/photos/ct/woodstock/first-congregational-church-woodstock_thumb.jpg",
+        "title": "First Congregational Church, Woodstock Hill",
+        "description": "The white clapboard meetinghouse on the Woodstock Hill common.",
+        "author": "John Phelan",
+        "license": "CC BY 3.0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:First_Congregational_Church,_Woodstock_CT.jpg"
+      },
+      {
+        "src": "/photos/ct/woodstock/roseland-park-woodstock.jpg",
+        "thumb": "/photos/ct/woodstock/roseland-park-woodstock_thumb.jpg",
+        "title": "Roseland Park in autumn",
+        "description": "A picnic table beside Roseland Lake, framed by fall foliage.",
+        "author": "ML.Nature.Photo",
+        "license": "CC BY-SA 4.0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Autumn_at_Roseland_Park,_Woodstock_Connecticut.jpg"
+      }
+    ]
+  },
+  "places": [
+    {
+      "slug": "roseland-cottage",
+      "name": "Roseland Cottage",
+      "kind": "historic-site",
+      "town": "Woodstock",
+      "state": "Connecticut",
+      "county": "Windham County",
+      "address": "556 Route 169, Woodstock, CT 06281",
+      "official_url": "https://roselandcottage.org/",
+      "summary": "The 1846 pink Gothic Revival summer home of New York merchant, publisher, and abolitionist Henry C. Bowen, and a National Historic Landmark operated by Historic New England. Its grounds include a boxwood garden and what is described as the nation's oldest surviving indoor bowling alley. Open seasonally; check current hours before visiting.",
+      "status": "open",
+      "photos": [
+        {
+          "src": "/photos/ct/woodstock/roseland-cottage-woodstock.jpg",
+          "thumb": "/photos/ct/woodstock/roseland-cottage-woodstock_thumb.jpg",
+          "title": "Roseland Cottage",
+          "description": "The pink Gothic Revival Roseland Cottage, built in 1846 for Henry C. Bowen.",
+          "author": "Marty Aligata",
+          "license": "CC BY-SA 4.0",
+          "source_url": "https://commons.wikimedia.org/wiki/File:Roseland_Cottage,_Woodstock,_CT_2020.jpg"
+        }
+      ]
+    },
+    {
+      "slug": "roseland-park",
+      "name": "Roseland Park",
+      "kind": "park",
+      "town": "Woodstock",
+      "state": "Connecticut",
+      "county": "Windham County",
+      "address": "205 Roseland Park Road, Woodstock, CT 06281",
+      "official_url": "https://www.roselandpark.org/",
+      "summary": "A roughly 90- to 94-acre lake wrapped by forested land, lawns, and sports fields, with a nine-hole public golf course — Connecticut's second oldest — plus boating, a playground, and picnic grounds. No swimming is permitted.",
+      "history": "New York merchant Henry C. Bowen created the privately owned park and opened it to the public in 1876; it is still run by the Trustees of the Bowen Family Trust.",
+      "status": "open",
+      "photos": [
+        {
+          "src": "/photos/ct/woodstock/roseland-park-woodstock.jpg",
+          "thumb": "/photos/ct/woodstock/roseland-park-woodstock_thumb.jpg",
+          "title": "Roseland Park in autumn",
+          "description": "A picnic table beside Roseland Lake, framed by fall foliage.",
+          "author": "ML.Nature.Photo",
+          "license": "CC BY-SA 4.0",
+          "source_url": "https://commons.wikimedia.org/wiki/File:Autumn_at_Roseland_Park,_Woodstock_Connecticut.jpg"
+        }
+      ]
+    },
+    {
+      "slug": "woodstock-fair",
+      "name": "Woodstock Fair",
+      "kind": "attraction",
+      "town": "Woodstock",
+      "state": "Connecticut",
+      "county": "Windham County",
+      "address": "Woodstock Fairgrounds, South Woodstock, CT 06281",
+      "official_url": "https://www.woodstockfair.com",
+      "summary": "Run by the Woodstock Agricultural Society, the fair opens the Thursday before Labor Day and runs through Labor Day Monday, with livestock shows, entertainment, a midway, and camping. It reaches its 165th edition in 2026.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "center-for-woodstock-history",
+      "name": "Center for Woodstock History",
+      "kind": "museum",
+      "town": "Woodstock",
+      "state": "Connecticut",
+      "county": "Windham County",
+      "official_url": "https://www.centerforwoodstockhistory.com/",
+      "summary": "Woodstock's historical society and archive, interpreting the town's story from the Nipmuc people through the arrival of the 'Thirteen Goers' and the legal fight that split the town from Massachusetts. Exhibitions are on view Sundays, 10 a.m.-1 p.m., or by appointment — email ahead before a special trip.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "mansion-at-bald-hill",
+      "name": "The Mansion at Bald Hill",
+      "kind": "restaurant",
+      "town": "Woodstock",
+      "state": "Connecticut",
+      "county": "Windham County",
+      "address": "29 Plaine Hill Rd, Woodstock, CT 06281",
+      "official_url": "https://www.mansionatbaldhill.com/",
+      "summary": "Fine dining in a Woodstock mansion, with a menu ranging from French onion soup to sushi rolls, plus a Sunday brunch.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "taylor-brooke-brewery",
+      "name": "Taylor Brooke Brewery",
+      "kind": "brewery",
+      "town": "Woodstock",
+      "state": "Connecticut",
+      "county": "Windham County",
+      "address": "818 Route 171, Woodstock, CT 06281",
+      "official_url": "https://www.taylorbrookebrewery.com",
+      "summary": "A taproom pouring hop-forward IPAs, milk stouts, fruited sours, and lagers, with live music on weekends. It shares a 44-acre farm with the adjacent Taylor Brooke Winery.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "inn-at-woodstock-hill",
+      "name": "The Inn at Woodstock Hill",
+      "kind": "bnb",
+      "town": "Woodstock",
+      "state": "Connecticut",
+      "county": "Windham County",
+      "address": "94 Plaine Hill Road, Woodstock, CT 06281-2912",
+      "official_url": "https://www.woodstockhill.com/",
+      "summary": "A country inn with 21 individually decorated guest rooms across the main house and a separate cottage, six with four-poster beds and eight with working gas fireplaces. The restaurant currently operates for private events only.",
+      "status": "open",
+      "photos": []
+    }
+  ],
+  "entries": [
+    {
+      "kind": "sight",
+      "name": "Roseland Cottage",
+      "place_slug": "roseland-cottage",
+      "note": "The 1846 pink Gothic Revival summer home of Henry C. Bowen."
+    },
+    {
+      "kind": "walk",
+      "name": "Roseland Park",
+      "place_slug": "roseland-park",
+      "note": "A lake, golf course, and picnic grounds opened to the public in 1876."
+    },
+    {
+      "kind": "sight",
+      "name": "Woodstock Fair",
+      "place_slug": "woodstock-fair",
+      "note": "One of Connecticut's oldest agricultural fairs, held over Labor Day weekend."
+    },
+    {
+      "kind": "sight",
+      "name": "Center for Woodstock History",
+      "place_slug": "center-for-woodstock-history",
+      "note": "The town's historical society and archive."
+    },
+    {
+      "kind": "food",
+      "name": "The Mansion at Bald Hill",
+      "place_slug": "mansion-at-bald-hill",
+      "note": "Fine dining in a Woodstock mansion."
+    },
+    {
+      "kind": "food",
+      "name": "Taylor Brooke Brewery",
+      "place_slug": "taylor-brooke-brewery",
+      "note": "Hop-forward IPAs and lagers, live music on weekends."
+    },
+    {
+      "kind": "stay",
+      "name": "The Inn at Woodstock Hill",
+      "place_slug": "inn-at-woodstock-hill",
+      "note": "21 rooms in a country house; restaurant is private-events only."
+    }
+  ],
+  "links": [
+    {
+      "target": "guide:pomfret-ct-travel-guide",
+      "kind": "nearby",
+      "note": "Route 169 runs directly between the two village centers."
+    }
+  ]
+}

@@ -1,0 +1,248 @@
+{
+  "guide": {
+    "slug": "pomfret-ct-travel-guide",
+    "title": "Pomfret, Connecticut: The Wolf Den and a Hilltop Vineyard",
+    "destination": "Pomfret, Connecticut",
+    "state": "Connecticut",
+    "county": "Windham County",
+    "intro": "The land that became Pomfret was recognized as English property in 1686 and incorporated as a town in 1713, taking its name from Pontefract, in Yorkshire, England. That 1686 transaction — the Wabbaquasset Purchase — saw Major James Fitch sell roughly 15,000 acres to twelve settlers for thirty pounds; Pomfret School's campus sits on that land today. Pomfret's best-known story dates to 1742, when young farmer Israel Putnam tracked a wolf that had killed seventy of his sheep and goats to a den about three miles from his farm and crawled in with a torch to shoot it — traditionally regarded as the last wolf in Connecticut. The Wolf Den, a 19th-century tourist draw, still sits inside Mashamoquet Brook State Park. Painter James Abbott McNeill Whistler lived in Pomfret from 1849 to 1851, and Pomfret School, founded in 1894, hired U.S. Naval Academy architect Ernest Flagg to design its campus starting in 1905.",
+    "sections": [
+      {
+        "heading": "Wolf Putnam and a Wabbaquasset farm",
+        "body": "In 1686, Major James Fitch — who had received title to the land from the sachem Owaneco two years earlier — sold roughly 15,000 acres to twelve settlers for thirty pounds, in what Pomfret School calls the Wabbaquasset Purchase; the town incorporated in 1713, naming itself for Pontefract in Yorkshire, England. In 1742 a young Pomfret farmer named Israel Putnam tracked a wolf that had killed seventy of his sheep and goats to a den about three miles from his farm, crawled in with a torch, and shot it — an exploit that earned him the nickname 'Wolf Putnam' and is traditionally regarded as the last wolf killed in Connecticut. The Wolf Den became a popular 19th-century tourist attraction and still sits inside Mashamoquet Brook State Park. Painter James Abbott McNeill Whistler lived in Pomfret from 1849 to 1851 after his father's death, finishing his childhood schooling there. Pomfret School was founded in 1894 by William E. Peck, a former St. Mark's headmaster, who bought the Charles Grosvenor Inn as the school's first building; in 1905 the school hired Ernest Flagg, architect of the U.S. Naval Academy, to master-plan its campus."
+      },
+      {
+        "heading": "Getting there",
+        "body": "Pomfret is a car destination in the Quiet Corner, reached via US Route 44 or Route 169, with I-395 a short drive east via the Putnam or Danielson exits. There is no passenger rail station in Pomfret or anywhere nearby: the nearest Connecticut station is Hartford Union Station, about 38 miles west, and the closest rail service overall is out of state, in Worcester, Massachusetts, or Providence, Rhode Island. Neither Metro-North's New Haven Line nor Shore Line East reaches Windham County."
+      },
+      {
+        "heading": "Parks, an orchard, and a hilltop vineyard",
+        "body": "Mashamoquet Brook State Park merges three former parks into more than 1,000 acres, with 6.5 miles of trails past the Wolf Den and rock formations called Table Rock and the Indian Chair. The Connecticut Audubon Society's Bafflin Sanctuary carries seven miles of trails across 700 acres, recognized as an Important Bird Area for grassland species like Eastern Meadowlarks and Bobolinks. Pomfret Forest and the Air Line State Park Trail, a rail-trail running roughly 50 miles across eastern Connecticut, add more hiking and biking. Lapsley Orchard's farm stand sells pick-your-own blueberries, apples, and pumpkins in season, and Gwyn Careg Inn, a 1761 colonial-revival estate with six guest rooms, is the town's own verified lodging."
+      }
+    ],
+    "faq": [
+      {
+        "question": "How do I get to Pomfret?",
+        "answer": "By car — US Route 44 or Route 169, with I-395 a short drive east via the Putnam or Danielson exits. There is no passenger rail station in Pomfret; the nearest Connecticut station is Hartford Union Station, about 38 miles west."
+      },
+      {
+        "question": "What is the Wolf Den?",
+        "answer": "A den inside Mashamoquet Brook State Park where, in 1742, farmer Israel Putnam is said to have tracked and shot a wolf — traditionally regarded as the last wolf in Connecticut. It became a popular 19th-century tourist attraction."
+      },
+      {
+        "question": "Where can I hike in Pomfret?",
+        "answer": "Mashamoquet Brook State Park has 6.5 miles of trails past the Wolf Den and rock formations; the Connecticut Audubon Society's Bafflin Sanctuary has seven miles across 700 acres; Pomfret Forest and the Air Line State Park Trail add more."
+      },
+      {
+        "question": "Is there lodging in Pomfret?",
+        "answer": "Yes — Gwyn Careg Inn, a 1761 colonial-revival estate with six guest rooms and a full breakfast, is Pomfret's own verified lodging. It's seasonal, open April through December."
+      },
+      {
+        "question": "What food options does Pomfret have?",
+        "answer": "The Vanilla Bean Cafe, family-owned since 1989 in a restored barn, and We-Li-Kit Ice Cream, a family farm making ice cream since 1990."
+      }
+    ],
+    "photos": [
+      {
+        "src": "/photos/ct/pomfret/first-congregational-church-pomfret.jpg",
+        "thumb": "/photos/ct/pomfret/first-congregational-church-pomfret_thumb.jpg",
+        "title": "First Congregational Church of Pomfret",
+        "description": "The Greek Revival First Congregational Church on Pomfret Street.",
+        "author": "John Phelan",
+        "license": "CC BY-SA 3.0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:First_Congregational_Church_of_Pomfret_CT.JPG"
+      },
+      {
+        "src": "/photos/ct/pomfret/mashamoquet-brook-pomfret.jpg",
+        "thumb": "/photos/ct/pomfret/mashamoquet-brook-pomfret_thumb.jpg",
+        "title": "Mashamoquet Brook",
+        "description": "Mashamoquet Brook running through spring-green woodland in the state park.",
+        "author": "John Phelan",
+        "license": "CC BY 4.0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Mashamoquet_Brook,_Pomfret_CT.jpg"
+      },
+      {
+        "src": "/photos/ct/pomfret/pomfret-school-chapel.jpg",
+        "thumb": "/photos/ct/pomfret/pomfret-school-chapel_thumb.jpg",
+        "title": "Clark Memorial Chapel, Pomfret School",
+        "description": "The fieldstone Gothic chapel at Pomfret School.",
+        "author": "John Phelan",
+        "license": "CC BY-SA 3.0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Clark_Memorial_Chapel,_Pomfret_School,_Pomfret_CT.JPG"
+      }
+    ]
+  },
+  "places": [
+    {
+      "slug": "mashamoquet-brook-state-park",
+      "name": "Mashamoquet Brook State Park",
+      "kind": "park",
+      "town": "Pomfret",
+      "state": "Connecticut",
+      "county": "Windham County",
+      "address": "276 Mashamoquet Road, Pomfret, CT 06259",
+      "official_url": "https://ctparks.com/node/82",
+      "summary": "Formed by merging three parks into more than 1,000 acres, with a 6.5-mile trail network passing the Wolf Den, Table Rock, and the Indian Chair rock formation. Two campgrounds hold 53 sites; open daily, 8 a.m. to sunset.",
+      "history": "In 1742, young farmer Israel Putnam is said to have tracked a wolf to a den here and shot it, earning the nickname 'Wolf Putnam.' The site joined the National Register of Historic Places in 1985.",
+      "status": "open",
+      "photos": [
+        {
+          "src": "/photos/ct/pomfret/mashamoquet-brook-pomfret.jpg",
+          "thumb": "/photos/ct/pomfret/mashamoquet-brook-pomfret_thumb.jpg",
+          "title": "Mashamoquet Brook",
+          "description": "Mashamoquet Brook running through spring-green woodland in the state park.",
+          "author": "John Phelan",
+          "license": "CC BY 4.0",
+          "source_url": "https://commons.wikimedia.org/wiki/File:Mashamoquet_Brook,_Pomfret_CT.jpg"
+        }
+      ]
+    },
+    {
+      "slug": "ct-audubon-bafflin-sanctuary",
+      "name": "Connecticut Audubon Society Center at Pomfret",
+      "kind": "attraction",
+      "town": "Pomfret",
+      "state": "Connecticut",
+      "county": "Windham County",
+      "address": "218 Day Road, Pomfret Center, CT 06259",
+      "official_url": "https://www.ctaudubon.org/pomfret-home/",
+      "summary": "A nature center with environmental and art exhibits, plus the surrounding 700-acre Bafflin Sanctuary and its seven miles of trails through grassland, wetland, and forest. More than 200 bird species have been recorded, and the site is a nationally recognized Important Bird Area. Center open Tuesday-Sunday, noon-4 p.m.; trails dawn to dusk.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "pomfret-forest",
+      "name": "Pomfret Forest",
+      "kind": "park",
+      "town": "Pomfret",
+      "state": "Connecticut",
+      "county": "Windham County",
+      "address": "118 Wolf Den Road, Pomfret Center, CT 06259",
+      "summary": "A 150-acre town-owned nature preserve with nearly 8 miles of trails, managed by the Town of Pomfret in partnership with the local mountain-biking club. Open to hikers, trail runners, leashed dog walkers, mountain bikers, and equestrians.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "air-line-state-park-trail",
+      "name": "Air Line State Park Trail",
+      "kind": "park",
+      "town": "Pomfret",
+      "state": "Connecticut",
+      "county": "Windham County",
+      "address": "Trailhead at Pomfret Station, 13 Railroad Avenue, Pomfret, CT 06259",
+      "official_url": "https://ctparks.com/parks/air-line-state-park-trail",
+      "summary": "A rail-trail on the former Air Line Railroad right-of-way running roughly 50 miles across eastern Connecticut, including a 21-mile section between Windham and Putnam that passes through Pomfret. Free admission; leashed pets allowed.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "lapsley-orchard",
+      "name": "Lapsley Orchard",
+      "kind": "attraction",
+      "town": "Pomfret",
+      "state": "Connecticut",
+      "county": "Windham County",
+      "address": "403 Orchard Hill Road, Pomfret Center, CT 06259",
+      "official_url": "http://lapsleyorchard.com",
+      "summary": "A 200-acre family farm with a stand selling pick-your-own blueberries (from mid-July), apples (from September), and pumpkins (from October), plus free wagon rides on Sundays in September and October. Open daily, 10 a.m.-6 p.m., mid-July through December.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "the-vanilla-bean-cafe",
+      "name": "The Vanilla Bean Cafe",
+      "kind": "cafe",
+      "town": "Pomfret",
+      "state": "Connecticut",
+      "county": "Windham County",
+      "address": "450 Deerfield Road, Pomfret, CT 06259",
+      "official_url": "https://thevanillabeancafe.com/",
+      "summary": "Family-owned since 1989 in a restored early-19th-century barn near the junction of Routes 44, 169, and 97, serving breakfast, lunch, and dinner alongside a long-running weekend live-music series. Named Connecticut's Best Country Cafe by Yankee Magazine.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "we-li-kit-ice-cream",
+      "name": "We-Li-Kit Ice Cream",
+      "kind": "cafe",
+      "town": "Pomfret",
+      "state": "Connecticut",
+      "county": "Windham County",
+      "address": "728 Hampton Road, Pomfret Center, CT 06259",
+      "official_url": "https://we-li-kit.com",
+      "summary": "A family farm making ice cream since 1990, plus Connecticut maple syrup and local beef and pork. Open seasonally, daily from May through the fall.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "gwyn-careg-inn",
+      "name": "Gwyn Careg Inn",
+      "kind": "bnb",
+      "town": "Pomfret",
+      "state": "Connecticut",
+      "county": "Windham County",
+      "address": "68 Wolf Den Road, Pomfret Center, CT 06259",
+      "official_url": "http://www.gwyncareginn.com",
+      "summary": "A 1761 colonial-revival estate on 14 acres with a walled garden and a pond, offering six guest rooms and suites with a full breakfast included. Seasonal, April through December; reserve by phone.",
+      "status": "open",
+      "photos": []
+    }
+  ],
+  "entries": [
+    {
+      "kind": "walk",
+      "name": "Mashamoquet Brook State Park",
+      "place_slug": "mashamoquet-brook-state-park",
+      "note": "1,000+ acres, 6.5 miles of trails past the Wolf Den."
+    },
+    {
+      "kind": "sight",
+      "name": "Connecticut Audubon Society Center at Pomfret",
+      "place_slug": "ct-audubon-bafflin-sanctuary",
+      "note": "700-acre Bafflin Sanctuary, an Important Bird Area."
+    },
+    {
+      "kind": "walk",
+      "name": "Pomfret Forest",
+      "place_slug": "pomfret-forest",
+      "note": "150-acre preserve with nearly 8 miles of trails."
+    },
+    {
+      "kind": "walk",
+      "name": "Air Line State Park Trail",
+      "place_slug": "air-line-state-park-trail",
+      "note": "A rail-trail running roughly 50 miles across eastern Connecticut."
+    },
+    {
+      "kind": "sight",
+      "name": "Lapsley Orchard",
+      "place_slug": "lapsley-orchard",
+      "note": "Pick-your-own blueberries, apples, and pumpkins in season."
+    },
+    {
+      "kind": "food",
+      "name": "The Vanilla Bean Cafe",
+      "place_slug": "the-vanilla-bean-cafe",
+      "note": "Family-owned since 1989 in a restored barn."
+    },
+    {
+      "kind": "food",
+      "name": "We-Li-Kit Ice Cream",
+      "place_slug": "we-li-kit-ice-cream",
+      "note": "Family-farm ice cream since 1990."
+    },
+    {
+      "kind": "stay",
+      "name": "Gwyn Careg Inn",
+      "place_slug": "gwyn-careg-inn",
+      "note": "1761 colonial-revival estate with six guest rooms."
+    }
+  ],
+  "links": [
+    {
+      "target": "guide:canterbury-ct-travel-guide",
+      "kind": "same-region",
+      "note": "Both sit along Route 169, Connecticut's Quiet Corner scenic corridor."
+    }
+  ]
+}

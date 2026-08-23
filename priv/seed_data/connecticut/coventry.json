@@ -1,0 +1,259 @@
+{
+  "guide": {
+    "slug": "coventry-ct-travel-guide",
+    "title": "Coventry, Connecticut: Nathan Hale's Farm and a Glass Factory District",
+    "destination": "Coventry, Connecticut",
+    "state": "Connecticut",
+    "county": "Tolland County",
+    "intro": "Coventry was settled in 1709 by about a dozen families from Massachusetts and incorporated in 1712, on land sold to Hartford men by the Native American sachem Joshua. The town takes its name from Coventry, England — chosen in October 1711, the first town in the American colonies to use it. Coventry is best known as the birthplace of Captain Nathan Hale, born on the family farm in 1755, one of eight brothers, six of whom served in the Continental Army during the Revolution. Hale trained as a schoolteacher before being recruited as an early American spy, and was captured and executed by the British in September 1776, at age twenty-one; Connecticut named him its official State Hero in 1985. Beyond farming, Coventry used its three rivers to develop manufacturing — glass flasks, cardboard boxes, and textiles — a past preserved today in the National Historic Glass Factory District and the Museum of Connecticut Glass.",
+    "sections": [
+      {
+        "heading": "Farm to Revolution",
+        "body": "Coventry was settled in 1709 by about a dozen families arriving from Massachusetts and incorporated in 1712, on land sold to Hartford men by the sachem Joshua. Richard Hale bought the family farm in 1740; his son Nathan was born there in 1755, one of eight brothers, six of whom served in the Continental Army. Nathan Hale trained as a schoolteacher before being recruited as an early American spy; captured behind British lines, he was executed in September 1776 at age twenty-one and was named Connecticut's official State Hero in 1985. The farmhouse standing today, the Nathan Hale Homestead, was built the year of his execution and is now a museum. Coventry's later economy turned to manufacturing along its three rivers — glass flasks, cardboard boxes, and textiles — and the town's glassmaking past survives in the National Historic Glass Factory District, where the Museum of Connecticut Glass occupies the historic John Turner House."
+      },
+      {
+        "heading": "Getting there",
+        "body": "Coventry has no rail station of its own; nearly every visitor arrives by car. The main route is I-84 to Exit 77 in Vernon, then Route 31 southeast through Tolland into Coventry — Route 31 runs concurrently with US Route 44 for about a mile in town and crosses Route 275. No passenger rail serves Coventry; the nearest CTrail Hartford Line station is Hartford Union Station, roughly a half-hour drive west, and neither Metro-North's New Haven Line nor Shore Line East reaches this part of the state."
+      },
+      {
+        "heading": "Where to eat and stay",
+        "body": "Coventry's dining runs from Woke Breakfast & Coffee's all-day breakfast to Wicked Slice's hand-tossed pizza, with Dragonfire Meadery pouring small-batch meads from a working farm property. No hotel, inn, or B&B could be verified operating inside Coventry itself; the nearest confirmed option is the Inn on Storrs, about five minutes from the UConn campus in neighboring Mansfield Center."
+      }
+    ],
+    "faq": [
+      {
+        "question": "How do I get to Coventry?",
+        "answer": "By car — I-84 to Exit 77 in Vernon, then Route 31 southeast through Tolland into Coventry. There is no passenger rail station in Coventry; the nearest CTrail Hartford Line station is Hartford Union Station, roughly a half-hour drive west."
+      },
+      {
+        "question": "What is the Nathan Hale Homestead?",
+        "answer": "The 1776 farmhouse where Captain Nathan Hale grew up, on the family farm his father Richard bought in 1740. It's operated as a museum by Connecticut Landmarks, open May through October."
+      },
+      {
+        "question": "Where can I swim in Coventry?",
+        "answer": "Patriots Park Beach, the town's guarded beach on Coventry Lake (Lake Wangumbaug), and Lisicke Beach, a smaller unguarded beach nearby. Both open Memorial Weekend."
+      },
+      {
+        "question": "What is the Museum of Connecticut Glass?",
+        "answer": "A museum founded in 1994 in the historic John Turner House, within Coventry's National Historic Glass Factory District, preserving glass made by Connecticut glassworks. It holds free seasonal open houses."
+      },
+      {
+        "question": "Is there a hotel in Coventry?",
+        "answer": "No hotel, inn, or B&B could be verified operating inside Coventry. The nearest confirmed option is the Inn on Storrs, about five minutes from the UConn campus in neighboring Mansfield Center."
+      }
+    ],
+    "photos": [
+      {
+        "src": "/photos/ct/coventry/nathan-hale-homestead-coventry.jpg",
+        "thumb": "/photos/ct/coventry/nathan-hale-homestead-coventry_thumb.jpg",
+        "title": "Nathan Hale Homestead",
+        "description": "Aerial view of the 1776 Hale family farmhouse and its outbuildings.",
+        "author": "CTLandmarks",
+        "license": "CC BY-SA 4.0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Nathan_Hale_Homestead_Drone.jpg"
+      },
+      {
+        "src": "/photos/ct/coventry/main-street-coventry.jpg",
+        "thumb": "/photos/ct/coventry/main-street-coventry_thumb.jpg",
+        "title": "Coventry village",
+        "description": "Main Street in Coventry village, with the town's ornate post clock.",
+        "author": "Mal2172",
+        "license": "CC BY-SA 4.0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Coventry_Village.jpg"
+      },
+      {
+        "src": "/photos/ct/coventry/coventry-lake.jpg",
+        "thumb": "/photos/ct/coventry/coventry-lake_thumb.jpg",
+        "title": "Coventry Lake",
+        "description": "Coventry Lake (Lake Wangumbaug), the largest lake in northeastern Connecticut.",
+        "author": "John Phelan",
+        "license": "CC BY 4.0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Wangumbaug_Lake,_South_Coventry_CT.jpg"
+      }
+    ]
+  },
+  "places": [
+    {
+      "slug": "nathan-hale-homestead",
+      "name": "Nathan Hale Homestead",
+      "kind": "historic-site",
+      "town": "Coventry",
+      "state": "Connecticut",
+      "county": "Tolland County",
+      "address": "2299 South Street, Coventry, CT 06238",
+      "official_url": "https://www.ctlandmarks.org/properties/nathan-hale-homestead/",
+      "summary": "The 1776 farmhouse where Nathan Hale grew up, built the year of his execution and operated as a museum by Connecticut Landmarks. Open May through October, Friday-Saturday noon-4 p.m. and Sunday 10 a.m.-2 p.m., with tours on the hour; grounds open dawn to dusk year-round.",
+      "history": "Richard Hale bought the farm in 1740; Nathan Hale was born here in 1755, one of eight brothers, six of whom served in the Continental Army.",
+      "status": "open",
+      "photos": [
+        {
+          "src": "/photos/ct/coventry/nathan-hale-homestead-coventry.jpg",
+          "thumb": "/photos/ct/coventry/nathan-hale-homestead-coventry_thumb.jpg",
+          "title": "Nathan Hale Homestead",
+          "description": "Aerial view of the 1776 Hale family farmhouse and its outbuildings.",
+          "author": "CTLandmarks",
+          "license": "CC BY-SA 4.0",
+          "source_url": "https://commons.wikimedia.org/wiki/File:Nathan_Hale_Homestead_Drone.jpg"
+        }
+      ]
+    },
+    {
+      "slug": "coventry-regional-farmers-market",
+      "name": "Coventry Regional Farmers' Market",
+      "kind": "attraction",
+      "town": "Coventry",
+      "state": "Connecticut",
+      "county": "Tolland County",
+      "address": "Nathan Hale Homestead, 2299 South Street, Coventry, CT 06238",
+      "official_url": "https://www.ctlandmarks.org/events/",
+      "summary": "Billed as the largest farmers' market in the state, held on Sunday mornings on the Nathan Hale Homestead grounds with staff-led family activities. Homestead tour admission is separate from market attendance.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "museum-of-connecticut-glass",
+      "name": "Museum of Connecticut Glass",
+      "kind": "museum",
+      "town": "Coventry",
+      "state": "Connecticut",
+      "county": "Tolland County",
+      "address": "North River Road at Route 44, Coventry, CT",
+      "official_url": "https://www.glassmuseum.org/",
+      "summary": "Founded in 1994, the museum occupies the historic John Turner House within the National Historic Glass Factory District, preserving and exhibiting glass made by Connecticut glassworks. Open for free seasonal open houses, typically one Saturday afternoon a month.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "patriots-park-beach",
+      "name": "Patriots Park Beach",
+      "kind": "park",
+      "town": "Coventry",
+      "state": "Connecticut",
+      "county": "Tolland County",
+      "address": "124 Lake Street, Coventry, CT 06238",
+      "official_url": "https://www.coventry-ct.gov/612/Beach-Information",
+      "summary": "The town's guarded swimming beach on Coventry Lake (Lake Wangumbaug), the largest lake in northeastern Connecticut at 373 acres. Season runs from Memorial Weekend through summer; non-resident passes are sold at the gate.",
+      "status": "open",
+      "photos": [
+        {
+          "src": "/photos/ct/coventry/coventry-lake.jpg",
+          "thumb": "/photos/ct/coventry/coventry-lake_thumb.jpg",
+          "title": "Coventry Lake",
+          "description": "Coventry Lake (Lake Wangumbaug), the largest lake in northeastern Connecticut.",
+          "author": "John Phelan",
+          "license": "CC BY 4.0",
+          "source_url": "https://commons.wikimedia.org/wiki/File:Wangumbaug_Lake,_South_Coventry_CT.jpg"
+        }
+      ]
+    },
+    {
+      "slug": "lisicke-beach",
+      "name": "Lisicke Beach",
+      "kind": "park",
+      "town": "Coventry",
+      "state": "Connecticut",
+      "county": "Tolland County",
+      "address": "Corner of Cheney Lane & Main Street, Coventry, CT 06238",
+      "official_url": "https://www.coventry-ct.gov/612/Beach-Information",
+      "summary": "Coventry's second, unguarded town beach on Coventry Lake. Resident beach passes are required; visitor passes are sold only at Patriots Park.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "woke-breakfast-coffee",
+      "name": "Woke Breakfast & Coffee",
+      "kind": "cafe",
+      "town": "Coventry",
+      "state": "Connecticut",
+      "county": "Tolland County",
+      "address": "1201 Main Street, Coventry, CT 06238",
+      "official_url": "https://wokebreakfastct.com/",
+      "summary": "A family-owned breakfast and coffee shop serving omelets, pancakes, waffles, and French toast, with espresso drinks and vegetarian options. Open daily.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "dragonfire-meadery",
+      "name": "Dragonfire Meadery",
+      "kind": "brewery",
+      "town": "Coventry",
+      "state": "Connecticut",
+      "county": "Tolland County",
+      "address": "580 Main Street, Coventry, CT 06238",
+      "official_url": "https://www.dragonfiremeadery.com/",
+      "summary": "A small-batch meadery with a tasting room and farm animals on the property, pouring meads such as Tiamat and Muirdris. Tasting room open Thursday through Sunday.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "wicked-slice",
+      "name": "Wicked Slice",
+      "kind": "restaurant",
+      "town": "Coventry",
+      "state": "Connecticut",
+      "county": "Tolland County",
+      "address": "3466 Main Street, Coventry, CT 06238",
+      "official_url": "https://wickedslice.pizza/",
+      "summary": "A locally owned pizzeria serving hand-tossed Italian thin-crust pizza with fresh dough and homemade sauce. Open daily.",
+      "status": "open",
+      "photos": []
+    }
+  ],
+  "entries": [
+    {
+      "kind": "sight",
+      "name": "Nathan Hale Homestead",
+      "place_slug": "nathan-hale-homestead",
+      "note": "The 1776 farmhouse where Nathan Hale grew up, now a museum."
+    },
+    {
+      "kind": "sight",
+      "name": "Coventry Regional Farmers' Market",
+      "place_slug": "coventry-regional-farmers-market",
+      "note": "Billed as the largest farmers' market in the state, on the Homestead grounds."
+    },
+    {
+      "kind": "sight",
+      "name": "Museum of Connecticut Glass",
+      "place_slug": "museum-of-connecticut-glass",
+      "note": "Occupies the historic John Turner House; free seasonal open houses."
+    },
+    {
+      "kind": "sight",
+      "name": "Patriots Park Beach",
+      "place_slug": "patriots-park-beach",
+      "note": "Coventry's guarded swimming beach on Coventry Lake."
+    },
+    {
+      "kind": "sight",
+      "name": "Lisicke Beach",
+      "place_slug": "lisicke-beach",
+      "note": "A smaller, unguarded town beach on Coventry Lake."
+    },
+    {
+      "kind": "food",
+      "name": "Woke Breakfast & Coffee",
+      "place_slug": "woke-breakfast-coffee",
+      "note": "All-day breakfast and espresso drinks."
+    },
+    {
+      "kind": "food",
+      "name": "Dragonfire Meadery",
+      "place_slug": "dragonfire-meadery",
+      "note": "Small-batch meads on a working farm property."
+    },
+    {
+      "kind": "food",
+      "name": "Wicked Slice",
+      "place_slug": "wicked-slice",
+      "note": "Hand-tossed Italian thin-crust pizza."
+    }
+  ],
+  "links": [
+    {
+      "target": "guide:vernon-ct-travel-guide",
+      "kind": "same-region",
+      "note": "Route 31 begins in Vernon and runs southeast into Coventry."
+    }
+  ]
+}
