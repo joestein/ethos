@@ -13,7 +13,7 @@
       },
       {
         "heading": "A Nature Conservancy flagship and a working town farm",
-        "body": "The Lucius Pond Ordway-Devil's Den Preserve, The Nature Conservancy's largest continuous preserve in Connecticut at roughly 1,800 acres, draws more than 40,000 visits a year on its 20-mile trail system; Katharine Ordway created it starting with a 1,100-acre purchase in 1966. Lachat Town Farm, a 42-acre farm the late Leon Lachat deeded to the town and the Conservancy in 1997, keeps a circa-1770 farmhouse and runs a community garden, farmers markets and concerts. Weston farmers once grew a variety of onion called the Southport Globe, stored in local onion barns before shipment to warehouses in Southport and Norwalk and on to New York City; the surviving Onion Barn, at the Weston Road/Norfield Road junction, still serves as the town's community bulletin board. The Weston History & Culture Center, run by the Weston Historical Society, occupies the David Dimon Coley House and a visitor center with rotating exhibits."
+        "body": "The Lucius Pond Ordway-Devil's Den Preserve, The Nature Conservancy's largest continuous preserve in Connecticut at roughly 1,800 acres, draws more than 40,000 visits a year on its 20-mile trail system; Katharine Ordway created it starting with a 1,100-acre purchase in 1966. A second Aspetuck Land Trust property, Trout Brook Valley Preserve, straddles Weston's border with Easton and adds nearly 14 miles of trails through meadows, woods and a working orchard — see Easton's guide for trailhead details. Lachat Town Farm, a 42-acre farm the late Leon Lachat deeded to the town and the Conservancy in 1997, keeps a circa-1770 farmhouse and runs a community garden, farmers markets and concerts. Weston farmers once grew a variety of onion called the Southport Globe, stored in local onion barns before shipment to warehouses in Southport and Norwalk and on to New York City; the surviving Onion Barn, at the Weston Road/Norfield Road junction, still serves as the town's community bulletin board. The Weston History & Culture Center, run by the Weston Historical Society, occupies the David Dimon Coley House and a visitor center with rotating exhibits."
       }
     ],
     "faq": [
@@ -128,6 +128,11 @@
       "target": "guide:easton-ct-travel-guide",
       "kind": "shared-history",
       "note": "Easton split off from Weston's eastern half in 1845."
+    },
+    {
+      "target": "place:trout-brook-valley-preserve",
+      "kind": "nearby",
+      "note": "Trout Brook Valley Preserve straddles Weston and Easton; Easton's guide has the trailhead details."
     },
     {
       "target": "guide:redding-ct-travel-guide",

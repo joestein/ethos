@@ -13,11 +13,11 @@
       },
       {
         "heading": "Getting there",
-        "body": "Bethel sits in northern Fairfield County just southeast of Danbury, and Interstate 84 passes through town (Exit 8, Newtown Road). Bethel is also one of the few small Connecticut towns with its own commuter rail stop: Bethel station, 13 Durant Avenue, on Metro-North's Danbury Branch, with about 197 parking spaces and two EV chargers. Many weekday Danbury Branch trains continue straight through to Stamford and New York City without a change at South Norwalk, though off-peak trips generally do require that transfer; limited through service to Grand Central takes roughly two hours. The branch is not electrified, so these are diesel-hauled trains. Ticket machines are not reported at the station — buy tickets in advance through the TrainTime app. HART Route 5 connects at Bethel station. No Amtrak, Shore Line East, or CTrail Hartford Line service reaches Bethel."
+        "body": "Bethel sits in northern Fairfield County just southeast of Danbury, and Interstate 84 passes through town (Exit 8, Newtown Road). Bethel is also one of the few small Connecticut towns with its own commuter rail stop: Bethel station, 13 Durant Avenue, on Metro-North's Danbury Branch, with about 197 parking spaces and two EV chargers. Many weekday Danbury Branch trains continue straight through to Stamford and New York City without a change at South Norwalk, though off-peak trips generally do require that transfer. The branch is not electrified, so these are diesel-hauled trains. Ticket machines are not reported at the station — buy tickets in advance through the TrainTime app. HART Route 5 connects at Bethel station. No Amtrak, Shore Line East, or CTrail Hartford Line service reaches Bethel."
       },
       {
-        "heading": "A shared state park and a downtown of pizzerias",
-        "body": "Collis P. Huntington State Park, 1,017 acres of ponds, a lagoon and about ten miles of trails guarded at the entrance by Anna Hyatt Huntington's bronze bears and wolves, spans Bethel, Redding and Newtown. Putnam Memorial State Park, the Continental Army's 1778-79 winter encampment site known as \"Connecticut's Valley Forge,\" sits just over the line in neighboring Redding. Downtown, Greenwood Avenue carries Bethel's restaurant scene: Bethel Pizza House and Village Pizzeria near the I-84 approach both keep loyal followings, Grassy Plain Pizzeria serves the Grassy Plain Street side of town, and Portofino Restaurant & Wine Bar is the sit-down option for a slower dinner. Jubi Tea & Sweets pours bubble tea and matcha in the heart of downtown."
+        "heading": "Two neighboring state parks and a downtown of pizzerias",
+        "body": "Two state parks reach into Bethel from next door in Redding. Putnam Memorial State Park, the Continental Army's 1778-79 winter encampment site known as \"Connecticut's Valley Forge,\" sits just over the line in Redding. Collis P. Huntington State Park, 1,017 acres of ponds, a lagoon and about ten miles of trails guarded at the entrance by Anna Hyatt Huntington's bronze bears and wolves, is centered in Redding but its grounds spread into Bethel and Newtown too. Downtown, Greenwood Avenue carries Bethel's restaurant scene: Bethel Pizza House and Village Pizzeria near the I-84 approach both keep loyal followings, Grassy Plain Pizzeria serves the Grassy Plain Street side of town, and Portofino Restaurant & Wine Bar is the sit-down option for a slower dinner. Jubi Tea & Sweets pours bubble tea and matcha in the heart of downtown."
       }
     ],
     "faq": [
@@ -30,8 +30,8 @@
         "answer": "Yes — Bethel station, 13 Durant Avenue, is a stop on Metro-North's Danbury Branch. The branch is not electrified, so trains are diesel-hauled, and there are no ticket machines at the station; buy in advance through the TrainTime app."
       },
       {
-        "question": "What is Collis P. Huntington State Park?",
-        "answer": "A 1,017-acre state park spanning Bethel, Redding and Newtown, with about ten miles of trails, five ponds and a 15-acre lake. Bronze bear and wolf sculptures by Anna Hyatt Huntington stand at the entrance. Open daily 8 a.m. to sunset, free admission, leashed pets allowed."
+        "question": "Is Collis P. Huntington State Park in Bethel?",
+        "answer": "The park's grounds reach into Bethel, but its official address and the bulk of its 1,017 acres are in neighboring Redding, along with a corner in Newtown. Bronze bear and wolf sculptures by Anna Hyatt Huntington stand at the entrance. Open daily 8 a.m. to sunset, free admission, leashed pets allowed."
       },
       {
         "question": "Is there a hotel in Bethel?",
@@ -73,29 +73,6 @@
     ]
   },
   "places": [
-    {
-      "slug": "collis-p-huntington-state-park",
-      "name": "Collis P. Huntington State Park",
-      "kind": "park",
-      "town": "Bethel",
-      "state": "Connecticut",
-      "county": "Fairfield County",
-      "address": "9 Dodgingtown Rd, Redding/Bethel/Newtown, CT 06896",
-      "official_url": "https://ctparks.com/node/29",
-      "summary": "1,017 acres spanning Bethel, Redding and Newtown, with five ponds, a lagoon, the 15-acre Lake Hopewell and about ten miles of trails for hiking, biking and horseback riding. Anna Hyatt Huntington's life-size bronze bears and wolves guard the entrance; the land was the Huntington family's former estate. Open daily 8 a.m. to sunset, free admission, leashed pets welcome.",
-      "status": "open",
-      "photos": [
-        {
-          "src": "/photos/ct/bethel/collis-p-huntington-bear-bethel.jpg",
-          "thumb": "/photos/ct/bethel/collis-p-huntington-bear-bethel_thumb.jpg",
-          "title": "Collis P. Huntington State Park bear sculpture",
-          "description": "The bronze mother bear and cubs by Anna Hyatt Huntington at the entrance to Collis P. Huntington State Park, which spans Bethel, Redding and Newtown.",
-          "author": "AskJoanne (English Wikipedia uploader/photographer); sculpture by Anna Hyatt Huntington",
-          "license": "Public domain",
-          "source_url": "https://commons.wikimedia.org/wiki/File:Bear-Huntington-State-Park.jpg"
-        }
-      ]
-    },
     {
       "slug": "bethel-public-library",
       "name": "Bethel Public Library",
@@ -188,12 +165,6 @@
   "entries": [
     {
       "kind": "sight",
-      "name": "Collis P. Huntington State Park",
-      "place_slug": "collis-p-huntington-state-park",
-      "note": "1,017 acres of trails, ponds and Huntington bronzes, shared with Redding and Newtown."
-    },
-    {
-      "kind": "sight",
       "name": "Bethel Public Library",
       "place_slug": "bethel-public-library",
       "note": "Downtown anchor with programming tied to the Bethel 250 celebration."
@@ -247,14 +218,19 @@
       "note": "Bethel borders Redding; Putnam Memorial State Park, \"Connecticut's Valley Forge,\" sits just over the line in Redding."
     },
     {
+      "target": "place:collis-p-huntington-state-park",
+      "kind": "nearby",
+      "note": "Collis P. Huntington State Park is centered in Redding, but its grounds reach into Bethel and Newtown."
+    },
+    {
       "target": "guide:newtown-ct-travel-guide",
       "kind": "nearby",
       "note": "Collis P. Huntington State Park spans Bethel, Redding and Newtown."
     },
     {
       "target": "guide:brookfield-ct-travel-guide",
-      "kind": "nearby",
-      "note": "I-84 climbs from Danbury into Bethel and then Brookfield."
+      "kind": "same-region",
+      "note": "I-84 climbs from Danbury into the rural towns of Bethel and Brookfield, though the two do not share a border."
     }
   ]
 }

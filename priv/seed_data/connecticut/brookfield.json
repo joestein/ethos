@@ -13,7 +13,7 @@
       },
       {
         "heading": "Getting there",
-        "body": "Brookfield has no passenger rail station of its own. Interstate 84 crosses the town's southern end, and US Route 7 and US Route 202, which run concurrently through town, form the main north-south corridor; Route 25 and Route 133 (to the Lake Lillinonah bridge and Bridgewater) fill out the local roads. The nearest train service is the Metro-North Danbury Branch terminus in Danbury, a short drive southwest, reached from the New Haven Line by a change at South Norwalk on most off-peak trips. A \"Brookfield\" station appears only as a proposed, unfunded stop in long-range plans to extend service north from Danbury toward New Milford."
+        "body": "Brookfield has no passenger rail station of its own. Interstate 84 crosses the town's southern end, and US Route 7 and US Route 202, which run concurrently through town, form the main north-south corridor; Route 25 and Route 133 (to the Lake Lillinonah bridge and Bridgewater) fill out the local roads. The nearest train service is the Metro-North Danbury Branch terminus in Danbury, a few miles southwest, reached from the New Haven Line by a change at South Norwalk on most off-peak trips. A \"Brookfield\" station appears only as a proposed, unfunded stop in long-range plans to extend service north from Danbury toward New Milford."
       },
       {
         "heading": "Craft school, theater and Federal Road dining",
@@ -23,7 +23,7 @@
     "faq": [
       {
         "question": "How do I get to Brookfield?",
-        "answer": "By car — Interstate 84 crosses the southern end of town, with US Route 7/202 as the main north-south corridor. There is no passenger rail station in Brookfield; the nearest is the Metro-North Danbury Branch terminus in Danbury, a short drive southwest."
+        "answer": "By car — Interstate 84 crosses the southern end of town, with US Route 7/202 as the main north-south corridor. There is no passenger rail station in Brookfield; the nearest is the Metro-North Danbury Branch terminus in Danbury, a few miles southwest."
       },
       {
         "question": "Is there a train station in Brookfield?",
@@ -266,8 +266,8 @@
     },
     {
       "target": "guide:bethel-ct-travel-guide",
-      "kind": "nearby",
-      "note": "I-84 climbs from Danbury into the neighboring towns of Bethel and Brookfield."
+      "kind": "same-region",
+      "note": "I-84 climbs from Danbury into the rural towns of Bethel and Brookfield, though the two do not share a border."
     },
     {
       "target": "guide:new-milford-ct-travel-guide",

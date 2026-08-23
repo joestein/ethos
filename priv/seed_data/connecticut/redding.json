@@ -9,7 +9,7 @@
     "sections": [
       {
         "heading": "Connecticut's Valley Forge",
-        "body": "The Redding encampment ground is preserved as Putnam Memorial State Park, Connecticut's first State Archaeological Preserve and a National Register site, with reconstructed log buildings, a museum of excavated tools, buttons and ammunition, and a 44-foot granite monument built in 1888. Gilbert & Bennett, founded in 1834 in Georgetown, made wire mesh that supplied both World Wars before the mill site later became an EPA Superfund cleanup. Collis P. Huntington State Park, 1,017 acres with about ten miles of trails guarded by Anna Hyatt Huntington's bronze bears and wolves, also spans Redding, sharing the corner with Bethel and Newtown."
+        "body": "The Redding encampment ground is preserved as Putnam Memorial State Park, Connecticut's first State Archaeological Preserve and a National Register site, with reconstructed log buildings, a museum of excavated tools, buttons and ammunition, and a 44-foot granite monument built in 1888. Gilbert & Bennett, founded in 1834 in Georgetown, made wire mesh that supplied both World Wars before the mill site later became an EPA Superfund cleanup. Collis P. Huntington State Park, 1,017 acres with about ten miles of trails guarded by Anna Hyatt Huntington's bronze bears and wolves, is based in Redding and reaches into the neighboring corners of Bethel and Newtown."
       },
       {
         "heading": "Getting there",
@@ -27,7 +27,7 @@
       },
       {
         "question": "Is Collis P. Huntington State Park in Redding?",
-        "answer": "Yes, along with Bethel and Newtown — the 1,017-acre park sits at the corner of all three towns."
+        "answer": "Yes — Redding is its base, though the 1,017-acre park's grounds also reach into neighboring Bethel and Newtown. About ten miles of trails, five ponds and bronze bear and wolf sculptures by Anna Hyatt Huntington at the entrance. Open daily 8 a.m. to sunset, free admission, leashed pets allowed."
       },
       {
         "question": "Is there a hotel in Redding?",
@@ -65,6 +65,19 @@
     ]
   },
   "places": [
+    {
+      "slug": "collis-p-huntington-state-park",
+      "name": "Collis P. Huntington State Park",
+      "kind": "park",
+      "town": "Redding",
+      "state": "Connecticut",
+      "county": "Fairfield County",
+      "address": "9 Dodgingtown Rd, Redding/Bethel/Newtown, CT 06896",
+      "official_url": "https://ctparks.com/node/29",
+      "summary": "1,017 acres based in Redding, with grounds reaching into neighboring Bethel and Newtown: five ponds, a lagoon, the 15-acre Lake Hopewell and about ten miles of trails for hiking, biking and horseback riding. Anna Hyatt Huntington's life-size bronze bears and wolves guard the entrance; the land was the Huntington family's former estate. Open daily 8 a.m. to sunset, free admission, leashed pets welcome.",
+      "status": "open",
+      "photos": []
+    },
     {
       "slug": "putnam-memorial-state-park",
       "name": "Putnam Memorial State Park",
@@ -174,6 +187,12 @@
     }
   ],
   "entries": [
+    {
+      "kind": "sight",
+      "name": "Collis P. Huntington State Park",
+      "place_slug": "collis-p-huntington-state-park",
+      "note": "1,017 acres of trails and Huntington bronzes, based in Redding."
+    },
     {
       "kind": "sight",
       "name": "Putnam Memorial State Park",
