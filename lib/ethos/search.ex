@@ -19,6 +19,8 @@ defmodule Ethos.Search do
     end
   end
 
+  def query(_q, _limit), do: %{guides: [], places: []}
+
   defp search_guides(q, limit) do
     Repo.all(
       from g in Guide,

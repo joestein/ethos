@@ -22,4 +22,10 @@ defmodule EthosWeb.SearchControllerTest do
     html = conn |> get(~p"/destinations") |> html_response(200)
     assert html =~ ~s(action="/search")
   end
+
+  test "array-valued q param does not crash the controller", %{conn: conn} do
+    html = conn |> get("/search?q[]=x") |> html_response(200)
+    assert html =~ "Search"
+    refute html =~ "No results"
+  end
 end

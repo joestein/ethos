@@ -2,7 +2,12 @@ defmodule EthosWeb.SearchController do
   use EthosWeb, :controller
 
   def index(conn, params) do
-    q = Map.get(params, "q", "")
+    q =
+      case Map.get(params, "q", "") do
+        q when is_binary(q) -> q
+        _ -> ""
+      end
+
     results = Ethos.Search.query(q)
 
     render(conn, :index,
