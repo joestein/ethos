@@ -1,0 +1,292 @@
+{
+  "guide": {
+    "slug": "westport-ct-travel-guide",
+    "title": "Westport, Connecticut: From Onion Fields to an Arts Colony",
+    "destination": "Westport, Connecticut",
+    "state": "Connecticut",
+    "county": "Fairfield County",
+    "intro": "Westport's story starts as \"Green's Farm,\" named in 1732 for Bankside farmer John Green, after the area was briefly known as Bankside in 1693. Daniel Nash led 130 residents in petitioning Fairfield to protect their seaport's economic viability, and on May 28, 1835, Westport incorporated from lands taken from Fairfield, Weston, and Norwalk. The Revolution had already reached the shoreline: in April 1777, 1,850 British troops under Tryon landed at Compo Beach during the Danbury Raid, and Minutemen ambushed the column from the rear on its return, a stand the Minute Man statue still commemorates. By the 19th century, Westport was the leading onion-growing center in the United States until blight collapsed the industry and mills took its place. Around 1910, the town became a magnet for artists and writers, F. Scott Fitzgerald among them, a legacy carried on by residents Martha Stewart and, from 1960 until his 2008 death, Paul Newman.",
+    "sections": [
+      {
+        "heading": "From Bankside to an arts colony",
+        "body": "The area now known as Westport was briefly called Bankside in 1693, then officially named Green's Farm in 1732 in honor of Bankside farmer John Green. Daniel Nash led 130 residents in petitioning the Town of Fairfield to protect their seaport's economic viability, and on May 28, 1835, Westport incorporated from lands taken from Fairfield, Weston, and Norwalk. In April 1777, a British force of 1,850 troops under Major General William Tryon landed at Compo Beach during the Danbury Raid; local Minutemen ambushed the returning column from the rear, a stand the Minute Man statue commemorates today. By the 19th century Westport was the leading onion-growing center in the United States and a bustling Long Island Sound shipping center, until blight collapsed the onion industry and mills and factories replaced agriculture. Starting around 1910, Westport became a lively arts colony attracting artists, musicians, and writers — F. Scott Fitzgerald among them — a legacy carried forward by residents Martha Stewart and Paul Newman, who lived in town from 1960 until his death in 2008. Sherwood Island, whose first land the state acquired in 1914, became Connecticut's first state park after a 23-year battle with resisting landowners."
+      },
+      {
+        "heading": "Getting there",
+        "body": "Drivers reach Westport via I-95 along the shoreline, the Merritt Parkway (Route 15) inland, or U.S. Route 1. Train travelers use Metro-North's New Haven Line, which has two stations in town — Westport (in the Saugatuck section, 1 Railroad Place) and Green's Farms — with direct service to Grand Central Terminal."
+      },
+      {
+        "heading": "Stages, studios, and a shoreline park",
+        "body": "Sherwood Island State Park, Connecticut's first, spans 235 acres with a mile-long Long Island Sound beach, a seasonal nature center, disc golf, and the state's 9/11 Living Memorial. The Westport Country Playhouse presents mainstage productions, concerts, and its Barnstormer Series, while the Westport Museum for History and Culture tells the town's story, currently through \"The Real Revolution,\" a 250th-anniversary exhibit. MoCA CT offers contemporary art exhibitions and a performing-arts season, and the Levitt Pavilion hosts free outdoor summer concerts on the riverside."
+      }
+    ],
+    "faq": [
+      {
+        "question": "How do I get to Westport?",
+        "answer": "Drivers use I-95, the Merritt Parkway (Route 15), or U.S. Route 1. Metro-North's New Haven Line stops at two in-town stations — Westport (Saugatuck) and Green's Farms — with direct service to Grand Central Terminal."
+      },
+      {
+        "question": "What happened at Compo Beach in 1777?",
+        "answer": "During the April 1777 Danbury Raid, 1,850 British troops under Major General William Tryon landed at Compo Beach; local Minutemen ambushed the returning column from the rear, a stand the Minute Man statue commemorates."
+      },
+      {
+        "question": "Is Sherwood Island really Connecticut's first state park?",
+        "answer": "Yes. The state acquired its first land there in 1914, though the park only fully opened to the public after a 23-year battle with resisting landowners."
+      },
+      {
+        "question": "Is the Levitt Pavilion free?",
+        "answer": "Yes — its hallmark is free summer concert programming, supported by the CT Department of Economic and Community Development and the National Endowment for the Arts."
+      },
+      {
+        "question": "Where can I stay in Westport?",
+        "answer": "The Inn at Longshore, a historic waterfront inn on the Longshore estate with fourteen rooms and the on-site restaurant La Plage, is Westport's verified in-town option."
+      }
+    ],
+    "photos": [
+      {
+        "src": "/photos/ct/westport/westport-downtown.jpg",
+        "thumb": "/photos/ct/westport/westport-downtown_thumb.jpg",
+        "title": "Downtown Westport",
+        "description": "A view of downtown Westport, Connecticut.",
+        "author": "Quintin Soloviev",
+        "license": "CC BY 4.0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Westport,_Connecticut_downtown.jpg"
+      },
+      {
+        "src": "/photos/ct/westport/compo-beach.jpg",
+        "thumb": "/photos/ct/westport/compo-beach_thumb.jpg",
+        "title": "Compo Beach",
+        "description": "Compo Beach, where British troops landed during the 1777 Danbury Raid.",
+        "author": "WestportWiki",
+        "license": "CC BY-SA 3.0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Compo_Beach,_Westport,_CT.JPG"
+      },
+      {
+        "src": "/photos/ct/westport/westport-country-playhouse.jpg",
+        "thumb": "/photos/ct/westport/westport-country-playhouse_thumb.jpg",
+        "title": "Westport Country Playhouse",
+        "description": "Exterior of the Westport Country Playhouse.",
+        "author": "WestportWiki",
+        "license": "CC BY-SA 3.0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Westport_Country_Playhouse.jpg"
+      }
+    ]
+  },
+  "places": [
+    {
+      "slug": "sherwood-island-state-park",
+      "name": "Sherwood Island State Park",
+      "kind": "park",
+      "town": "Westport",
+      "state": "Connecticut",
+      "county": "Fairfield County",
+      "address": "Sherwood Island Connector, Westport, CT 06880",
+      "official_url": "https://ctparks.com/node/132",
+      "summary": "Connecticut's first state park, spanning 235 acres with a mile-long Long Island Sound beach, a seasonal nature center, disc golf, and the state's 9/11 Living Memorial. Open daily, 8 a.m. to sunset.",
+      "history": "The state acquired the first land here in 1914; the park fully opened to the public only after a 23-year battle with resisting landowners.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "westport-country-playhouse",
+      "name": "Westport Country Playhouse",
+      "kind": "theater",
+      "town": "Westport",
+      "state": "Connecticut",
+      "county": "Fairfield County",
+      "address": "25 Powers Court, Westport, CT 06880",
+      "official_url": "https://www.westportplayhouse.org/",
+      "summary": "A historic professional theater and cornerstone of Westport's arts community, presenting mainstage productions, concerts, and its Barnstormer Series.",
+      "status": "open",
+      "photos": [
+        {
+          "src": "/photos/ct/westport/westport-country-playhouse.jpg",
+          "thumb": "/photos/ct/westport/westport-country-playhouse_thumb.jpg",
+          "title": "Westport Country Playhouse",
+          "description": "Exterior of the Westport Country Playhouse.",
+          "author": "WestportWiki",
+          "license": "CC BY-SA 3.0",
+          "source_url": "https://commons.wikimedia.org/wiki/File:Westport_Country_Playhouse.jpg"
+        }
+      ]
+    },
+    {
+      "slug": "westport-museum-history-culture",
+      "name": "Westport Museum for History and Culture",
+      "kind": "museum",
+      "town": "Westport",
+      "state": "Connecticut",
+      "county": "Fairfield County",
+      "address": "25 Avery Place, Westport, CT 06880",
+      "official_url": "https://westporthistory.org/",
+      "summary": "The town's history museum, currently presenting \"The Real Revolution,\" an exhibit marking the 250th anniversary of the Declaration of Independence through Revolutionary-era voices. Open Thursday-Saturday, 11 a.m.-5 p.m.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "moca-ct-westport",
+      "name": "MoCA CT",
+      "kind": "museum",
+      "town": "Westport",
+      "state": "Connecticut",
+      "county": "Fairfield County",
+      "address": "19 Newtown Turnpike, Westport, CT 06880",
+      "official_url": "https://mocact.org/",
+      "summary": "A contemporary art museum and cultural arts hub offering exhibitions, performing arts events, and education programs.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "levitt-pavilion-westport",
+      "name": "Levitt Pavilion for the Performing Arts",
+      "kind": "attraction",
+      "town": "Westport",
+      "state": "Connecticut",
+      "county": "Fairfield County",
+      "official_url": "https://www.levittpavilion.com/",
+      "summary": "An outdoor riverside venue whose hallmark is free summer concert programming, supported by the CT Department of Economic and Community Development and the National Endowment for the Arts.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "kawa-ni",
+      "name": "Kawa Ni",
+      "kind": "restaurant",
+      "town": "Westport",
+      "state": "Connecticut",
+      "county": "Fairfield County",
+      "address": "19A Bridge Square, Westport, CT 06880",
+      "official_url": "https://www.kawaniwestport.com/",
+      "summary": "Chef Bill Taibe's playful Japanese izakaya-style pub in the Saugatuck neighborhood, focused on dumplings and noodle and rice bowls with whiskey, sake, and cocktails.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "golds-delicatessen",
+      "name": "Gold's Delicatessen",
+      "kind": "restaurant",
+      "town": "Westport",
+      "state": "Connecticut",
+      "county": "Fairfield County",
+      "address": "421 Post Road East, Westport, CT 06880",
+      "official_url": "https://www.goldsdelicatessen.com/",
+      "summary": "A Westport institution since 1958, this New York-style Jewish deli is known for house-made matzo ball soup, hand-sliced Nova lox, and fresh-roasted pastrami and corned beef.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "massi-co",
+      "name": "Massi Co",
+      "kind": "restaurant",
+      "town": "Westport",
+      "state": "Connecticut",
+      "county": "Fairfield County",
+      "address": "90 Post Road East, Westport, CT 06880",
+      "official_url": "https://massicowestport.com/",
+      "summary": "A Neapolitan-focused restaurant from AVPN-certified chef-owner Massimo, serving wood-fired Neapolitan-style pizzas and pastas rolled, cut, and shaped by hand daily.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "inn-at-longshore",
+      "name": "The Inn at Longshore",
+      "kind": "hotel",
+      "town": "Westport",
+      "state": "Connecticut",
+      "county": "Fairfield County",
+      "address": "260 Compo Rd South, Westport, CT 06880",
+      "official_url": "https://www.innatlongshore.com/",
+      "summary": "A historic waterfront inn on the Longshore estate between Long Island Sound and the Saugatuck River, with fourteen individually shaped rooms and the on-site restaurant La Plage.",
+      "status": "open",
+      "photos": []
+    }
+  ],
+  "entries": [
+    {
+      "kind": "sight",
+      "name": "Sherwood Island State Park",
+      "place_slug": "sherwood-island-state-park",
+      "note": "Connecticut's first state park: 235 acres, a mile-long beach, and the state's 9/11 Living Memorial."
+    },
+    {
+      "kind": "sight",
+      "name": "Westport Country Playhouse",
+      "place_slug": "westport-country-playhouse",
+      "note": "A historic professional theater with mainstage shows, concerts, and the Barnstormer Series."
+    },
+    {
+      "kind": "sight",
+      "name": "Westport Museum for History and Culture",
+      "place_slug": "westport-museum-history-culture",
+      "note": "The town's history museum, currently presenting a 250th-anniversary Revolutionary War exhibit."
+    },
+    {
+      "kind": "sight",
+      "name": "MoCA CT",
+      "place_slug": "moca-ct-westport",
+      "note": "Contemporary art exhibitions and a performing-arts season on Newtown Turnpike."
+    },
+    {
+      "kind": "sight",
+      "name": "Levitt Pavilion for the Performing Arts",
+      "place_slug": "levitt-pavilion-westport",
+      "note": "Free outdoor summer concerts on the riverside, all season long."
+    },
+    {
+      "kind": "food",
+      "name": "Kawa Ni",
+      "place_slug": "kawa-ni",
+      "note": "Bill Taibe's Japanese izakaya-style pub in Saugatuck — dumplings, noodles, and rice bowls."
+    },
+    {
+      "kind": "food",
+      "name": "Gold's Delicatessen",
+      "place_slug": "golds-delicatessen",
+      "note": "A New York-style Jewish deli on the Post Road since 1958."
+    },
+    {
+      "kind": "food",
+      "name": "Massi Co",
+      "place_slug": "massi-co",
+      "note": "Wood-fired Neapolitan pizzas and hand-made pasta from an AVPN-certified chef."
+    },
+    {
+      "kind": "stay",
+      "name": "The Inn at Longshore",
+      "place_slug": "inn-at-longshore",
+      "note": "A historic waterfront inn on the Longshore estate, with the restaurant La Plage on site."
+    }
+  ],
+  "links": [
+    {
+      "target": "guide:fairfield-ct-travel-guide",
+      "kind": "nearby",
+      "note": null
+    },
+    {
+      "target": "guide:fairfield-ct-travel-guide",
+      "kind": "shared-history",
+      "note": "Westport's 1835 incorporation carved land from Fairfield, its parent town, to form the new seaport community."
+    },
+    {
+      "target": "guide:norwalk-ct-travel-guide",
+      "kind": "nearby",
+      "note": null
+    },
+    {
+      "target": "guide:norwalk-ct-travel-guide",
+      "kind": "shared-history",
+      "note": "Westport's 1835 incorporation also drew land from Norwalk, alongside Fairfield and Weston, to form the new town."
+    },
+    {
+      "target": "guide:ridgefield-ct-travel-guide",
+      "kind": "shared-history",
+      "note": "The same April 1777 force that fought the Battle of Ridgefield had landed at Westport's Compo Beach, ambushed by Minutemen on its way back."
+    },
+    {
+      "target": "guide:midtown-manhattan-guide",
+      "kind": "see-also",
+      "note": "Metro-North's New Haven Line reaches Grand Central Terminal directly from Westport's two stations."
+    }
+  ]
+}

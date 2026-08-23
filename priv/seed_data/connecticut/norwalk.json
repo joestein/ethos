@@ -1,0 +1,221 @@
+{
+  "guide": {
+    "slug": "norwalk-ct-travel-guide",
+    "title": "Norwalk, Connecticut: A Rail Junction on the Sound",
+    "destination": "Norwalk, Connecticut",
+    "state": "Connecticut",
+    "county": "Fairfield County",
+    "intro": "Norwalk sits where Metro-North's New Haven Line meets the Danbury Branch, which splits off at South Norwalk station on its way north — a working rail junction on Long Island Sound as much as a beach city. That harbor identity carries through its anchor institutions: the Maritime Aquarium interprets the Sound itself, the Lockwood-Mathews Mansion Museum offers guided tours of a preserved historic house, and the Norwalk Seaport Association runs seasonal cruises out to the Sheffield Island Lighthouse. Families gravitate to Stepping Stones Museum for Children in Mathews Park, while South Norwalk — known locally as SoNo — is the city's dining and entertainment neighborhood, its storefronts lining historic Washington Street. Together, these anchors make Norwalk a practical rail-accessible base for exploring the Connecticut shoreline.",
+    "sections": [
+      {
+        "heading": "A rail junction on the Sound",
+        "body": "South Norwalk station is where Metro-North's Danbury Branch splits off from the New Haven Line's main trunk — the kind of junction that has long made Norwalk a stopping-off point rather than a pass-through. That harbor identity is visible in what the city has built up around it: the Maritime Aquarium tells the story of Long Island Sound's marine life, the Lockwood-Mathews Mansion Museum preserves a historic house with guided tours, and the Norwalk Seaport Association runs seasonal cruises out to the Sheffield Island Lighthouse, including sunset trips and Tuesday clambakes in July and August. South Norwalk itself — SoNo — is Norwalk's dining and entertainment neighborhood, its storefronts still lining historic Washington Street."
+      },
+      {
+        "heading": "Getting there",
+        "body": "Metro-North's New Haven Line serves Norwalk at South Norwalk, East Norwalk, and Rowayton stations, with the Danbury Branch diverging northward at South Norwalk — the junction station and the fastest way in from Grand Central Terminal or intermediate New Haven Line stops."
+      }
+    ],
+    "faq": [
+      {
+        "question": "How do I get to Norwalk?",
+        "answer": "Metro-North's New Haven Line stops at South Norwalk, East Norwalk, and Rowayton, with the Danbury Branch diverging northward at South Norwalk station."
+      },
+      {
+        "question": "What are the Maritime Aquarium's hours?",
+        "answer": "Open daily, 10 a.m. to 5 p.m., at 10 North Water Street in South Norwalk."
+      },
+      {
+        "question": "When can I tour the Lockwood-Mathews Mansion Museum?",
+        "answer": "Guided tours run Wednesday through Sunday on a March-through-December schedule."
+      },
+      {
+        "question": "How do I get to the Sheffield Island Lighthouse?",
+        "answer": "The Norwalk Seaport Association runs seasonal three-hour cruises out to the lighthouse, along with sunset cruises and Tuesday clambakes in July and August."
+      },
+      {
+        "question": "Where can I stay in Norwalk?",
+        "answer": "The Watershed, part of the Hotel Zero Degrees/RMS hotel family, is Norwalk's verified in-town lodging option."
+      }
+    ],
+    "photos": [
+      {
+        "src": "/photos/ct/norwalk/sono-washington-street.jpg",
+        "thumb": "/photos/ct/norwalk/sono-washington-street_thumb.jpg",
+        "title": "Washington Street, SoNo",
+        "description": "Historic storefronts on Washington Street in South Norwalk (SoNo).",
+        "author": "JohnOwensCT",
+        "license": "CC BY-SA 3.0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:SoNo_Historic_Washington_Street_1.jpg"
+      },
+      {
+        "src": "/photos/ct/norwalk/maritime-aquarium-norwalk.jpg",
+        "thumb": "/photos/ct/norwalk/maritime-aquarium-norwalk_thumb.jpg",
+        "title": "The Maritime Aquarium at Norwalk",
+        "description": "Exterior of the Maritime Aquarium at Norwalk.",
+        "author": "ajay_suresh",
+        "license": "CC BY 2.0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Maritime_Aquarium_at_Norwalk_(54412835630).jpg"
+      },
+      {
+        "src": "/photos/ct/norwalk/sheffield-island-lighthouse.jpg",
+        "thumb": "/photos/ct/norwalk/sheffield-island-lighthouse_thumb.jpg",
+        "title": "Sheffield Island Lighthouse",
+        "description": "The Sheffield Island Lighthouse off Norwalk, reached by seasonal cruise.",
+        "author": "Hayden Soloviev",
+        "license": "CC BY 4.0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Sheffield_Island_Lighthouse.jpg"
+      }
+    ]
+  },
+  "places": [
+    {
+      "slug": "maritime-aquarium-norwalk",
+      "name": "The Maritime Aquarium at Norwalk",
+      "kind": "attraction",
+      "town": "Norwalk",
+      "state": "Connecticut",
+      "county": "Fairfield County",
+      "address": "10 North Water Street, Norwalk, CT 06854",
+      "official_url": "https://www.maritimeaquarium.org/",
+      "summary": "An aquarium on the Norwalk waterfront interpreting Long Island Sound's marine life, open daily 10 a.m. to 5 p.m.",
+      "status": "open",
+      "photos": [
+        {
+          "src": "/photos/ct/norwalk/maritime-aquarium-norwalk.jpg",
+          "thumb": "/photos/ct/norwalk/maritime-aquarium-norwalk_thumb.jpg",
+          "title": "The Maritime Aquarium at Norwalk",
+          "description": "Exterior of the Maritime Aquarium at Norwalk.",
+          "author": "ajay_suresh",
+          "license": "CC BY 2.0",
+          "source_url": "https://commons.wikimedia.org/wiki/File:Maritime_Aquarium_at_Norwalk_(54412835630).jpg"
+        }
+      ]
+    },
+    {
+      "slug": "lockwood-mathews-mansion-museum",
+      "name": "Lockwood-Mathews Mansion Museum",
+      "kind": "museum",
+      "town": "Norwalk",
+      "state": "Connecticut",
+      "county": "Fairfield County",
+      "official_url": "https://www.lockwoodmathewsmansion.com/",
+      "summary": "A preserved historic mansion offering guided tours Wednesday through Sunday, March through December, with rotating exhibits.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "sheffield-island-lighthouse-cruises",
+      "name": "Sheffield Island Lighthouse Cruises (Norwalk Seaport Association)",
+      "kind": "attraction",
+      "town": "Norwalk",
+      "state": "Connecticut",
+      "county": "Fairfield County",
+      "official_url": "https://seaport.org/",
+      "summary": "Seasonal three-hour cruises out to the Sheffield Island Lighthouse, plus sunset cruises and Tuesday clambakes in July and August, run by the Norwalk Seaport Association.",
+      "status": "open",
+      "photos": [
+        {
+          "src": "/photos/ct/norwalk/sheffield-island-lighthouse.jpg",
+          "thumb": "/photos/ct/norwalk/sheffield-island-lighthouse_thumb.jpg",
+          "title": "Sheffield Island Lighthouse",
+          "description": "The Sheffield Island Lighthouse off Norwalk, reached by seasonal cruise.",
+          "author": "Hayden Soloviev",
+          "license": "CC BY 4.0",
+          "source_url": "https://commons.wikimedia.org/wiki/File:Sheffield_Island_Lighthouse.jpg"
+        }
+      ]
+    },
+    {
+      "slug": "stepping-stones-museum-children",
+      "name": "Stepping Stones Museum for Children",
+      "kind": "museum",
+      "town": "Norwalk",
+      "state": "Connecticut",
+      "county": "Fairfield County",
+      "address": "303 West Avenue, Mathews Park, Norwalk, CT",
+      "official_url": "https://www.steppingstonesmuseum.org/",
+      "summary": "A hands-on children's museum in Mathews Park, open 10 a.m. to 5 p.m., closed Wednesdays.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "sono-norwalk",
+      "name": "South Norwalk (SoNo)",
+      "kind": "attraction",
+      "town": "Norwalk",
+      "state": "Connecticut",
+      "county": "Fairfield County",
+      "official_url": "https://visitnorwalk.org/",
+      "summary": "Norwalk's dining and entertainment neighborhood, its storefronts lining historic Washington Street.",
+      "status": "open",
+      "photos": [
+        {
+          "src": "/photos/ct/norwalk/sono-washington-street.jpg",
+          "thumb": "/photos/ct/norwalk/sono-washington-street_thumb.jpg",
+          "title": "Washington Street, SoNo",
+          "description": "Historic storefronts on Washington Street in South Norwalk (SoNo).",
+          "author": "JohnOwensCT",
+          "license": "CC BY-SA 3.0",
+          "source_url": "https://commons.wikimedia.org/wiki/File:SoNo_Historic_Washington_Street_1.jpg"
+        }
+      ]
+    },
+    {
+      "slug": "the-watershed-norwalk",
+      "name": "The Watershed",
+      "kind": "hotel",
+      "town": "Norwalk",
+      "state": "Connecticut",
+      "county": "Fairfield County",
+      "summary": "A boutique hotel in Norwalk, part of the Hotel Zero Degrees/RMS hotel family.",
+      "status": "open",
+      "photos": []
+    }
+  ],
+  "entries": [
+    {
+      "kind": "sight",
+      "name": "The Maritime Aquarium at Norwalk",
+      "place_slug": "maritime-aquarium-norwalk",
+      "note": "Long Island Sound's marine life, on the Norwalk waterfront. Open daily, 10-5."
+    },
+    {
+      "kind": "sight",
+      "name": "Lockwood-Mathews Mansion Museum",
+      "place_slug": "lockwood-mathews-mansion-museum",
+      "note": "Guided tours of a preserved historic mansion, Wednesday-Sunday, March through December."
+    },
+    {
+      "kind": "sight",
+      "name": "Sheffield Island Lighthouse Cruises",
+      "place_slug": "sheffield-island-lighthouse-cruises",
+      "note": "Seasonal three-hour cruises, sunset trips, and July-August clambakes from the Norwalk Seaport Association."
+    },
+    {
+      "kind": "sight",
+      "name": "Stepping Stones Museum for Children",
+      "place_slug": "stepping-stones-museum-children",
+      "note": "A hands-on children's museum in Mathews Park. Closed Wednesdays."
+    },
+    {
+      "kind": "walk",
+      "name": "South Norwalk (SoNo)",
+      "place_slug": "sono-norwalk",
+      "note": "A stroll down historic Washington Street, Norwalk's dining and entertainment neighborhood."
+    },
+    {
+      "kind": "stay",
+      "name": "The Watershed",
+      "place_slug": "the-watershed-norwalk",
+      "note": "Norwalk's boutique hotel option, part of the Hotel Zero Degrees/RMS family."
+    }
+  ],
+  "links": [
+    {
+      "target": "guide:midtown-manhattan-guide",
+      "kind": "see-also",
+      "note": "Metro-North's New Haven Line serves Norwalk at South Norwalk, East Norwalk, and Rowayton, with direct trains to Grand Central Terminal."
+    }
+  ]
+}

@@ -1,0 +1,300 @@
+{
+  "guide": {
+    "slug": "stamford-ct-travel-guide",
+    "title": "Stamford, Connecticut: Typewriters, Shavers, and a Rail Junction",
+    "destination": "Stamford, Connecticut",
+    "state": "Connecticut",
+    "county": "Fairfield County",
+    "intro": "Stamford was settled in 1641 by families from Wethersfield, and its 18th-century prosperity came from a harbor that shipped goods to New York and the West Indies. The town incorporated as a borough in 1830 and became a city in 1893. Along the way, Stamford turned into a hub of American invention: George C. Blickensderfer patented his typewriter there on April 12, 1892, and Jacob Schick patented his electric shaving implement on July 23, 1929; Phillips' Milk of Magnesia was also produced in the city. The 1699 Hoyt Barnum House, preserved by the Stamford History Center, survives as a visitable relic of that colonial period. Today Stamford is Connecticut's second-largest city, a corporate-headquarters hub and New York City suburb whose residents have included Jackie Robinson and football star Andy Robustelli.",
+    "sections": [
+      {
+        "heading": "Typewriters, shavers, and a second-largest city",
+        "body": "Stamford was settled in 1641 by families from Wethersfield. By the 1700s it was a successful commercial center, its prosperity built on a harbor that shipped and received goods with New York and the West Indies; the town incorporated as a borough in 1830 and became a city in 1893. Stamford also became a hub of American invention: George C. Blickensderfer patented his typewriter on April 12, 1892, and Jacob Schick patented his electric shaving implement on July 23, 1929, while Phillips' Milk of Magnesia was produced in the city as well. The 1699 Hoyt Barnum House, preserved by the Stamford History Center, survives as a visitable relic of that colonial period. Per the 2020 census, Stamford surpassed both Hartford and New Haven to become Connecticut's second-largest city, behind only Bridgeport — a corporate hub and New York suburb whose residents have included Jackie Robinson and football star Andy Robustelli."
+      },
+      {
+        "heading": "Getting there",
+        "body": "Most visitors arrive at the Stamford Transportation Center, one of the busiest rail hubs in the Northeast: Metro-North's New Haven Line runs trains as often as every 3-7 minutes at peak, with connecting New Canaan Branch and Danbury Branch service. Amtrak stops with the Acela, Northeast Regional, and Vermonter, and Shore Line East service to Stamford resumed October 7, 2024. Drivers come in on the I-95 corridor, which passes directly over the transportation center."
+      },
+      {
+        "heading": "Museums, parks, and a downtown stage",
+        "body": "The Stamford Museum & Nature Center spans 80-plus acres with the Bendel Mansion's art galleries, the working Heckscher Farm, nature trails, and a new Planetarium & Astronomy Center. The Palace Theatre on Atlantic Street hosts touring concerts, comedy, and tribute acts. Bartlett Arboretum & Gardens in North Stamford is free and open year-round, dawn to dusk, and downtown's Mill River Park offers a carousel, an ice-skating center, and a fountain. The Stamford History Center preserves the city's story, including stewardship of the Hoyt Barnum House."
+      }
+    ],
+    "faq": [
+      {
+        "question": "How do I get to Stamford?",
+        "answer": "The Stamford Transportation Center is a major Metro-North New Haven Line hub, with peak trains every 3-7 minutes and connecting New Canaan and Danbury Branch service; Amtrak Acela, Northeast Regional, and Vermonter also stop, along with Shore Line East (service resumed October 7, 2024). I-95 passes directly over the station."
+      },
+      {
+        "question": "What did Stamford invent?",
+        "answer": "George C. Blickensderfer patented his typewriter in Stamford on April 12, 1892, and Jacob Schick patented his electric shaving implement there on July 23, 1929; Phillips' Milk of Magnesia was also produced in the city."
+      },
+      {
+        "question": "What is the Hoyt Barnum House?",
+        "answer": "A house built in 1699, preserved by the Stamford History Center as a visitable relic of Stamford's colonial period."
+      },
+      {
+        "question": "Where can I stay in Stamford?",
+        "answer": "The Stamford Hotel on East Main Street is a boutique option with a heated indoor pool, a 24/7 fitness center, and pet-friendly rooms."
+      },
+      {
+        "question": "Is Stamford really Connecticut's second-largest city?",
+        "answer": "Yes — per the 2020 census, Stamford surpassed Hartford and New Haven and now ranks second only to Bridgeport."
+      }
+    ],
+    "photos": [
+      {
+        "src": "/photos/ct/stamford/stamford-skyline.jpg",
+        "thumb": "/photos/ct/stamford/stamford-skyline_thumb.jpg",
+        "title": "Downtown Stamford skyline",
+        "description": "A view of the downtown Stamford skyline.",
+        "author": "AirportExpert",
+        "license": "CC0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Stamford,_CT_Skyline_View.jpg"
+      },
+      {
+        "src": "/photos/ct/stamford/fish-church-stamford.jpg",
+        "thumb": "/photos/ct/stamford/fish-church-stamford_thumb.jpg",
+        "title": "First Presbyterian Church (the \"Fish Church\")",
+        "description": "Exterior of Stamford's First Presbyterian Church, known locally as the Fish Church for its shape.",
+        "author": "Xman1101",
+        "license": "CC BY-SA 4.0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Fish_church_of_conneicut_69420.jpg"
+      },
+      {
+        "src": "/photos/ct/stamford/mill-river-park-stamford.jpg",
+        "thumb": "/photos/ct/stamford/mill-river-park-stamford_thumb.jpg",
+        "title": "Mill River Park",
+        "description": "Mill River Park's green with the downtown Stamford skyline behind it.",
+        "author": "John9474",
+        "license": "CC BY-SA 4.0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Mill_River_Park_Stamford.jpg"
+      }
+    ]
+  },
+  "places": [
+    {
+      "slug": "stamford-museum-nature-center",
+      "name": "Stamford Museum & Nature Center",
+      "kind": "museum",
+      "town": "Stamford",
+      "state": "Connecticut",
+      "county": "Fairfield County",
+      "address": "39 Scofieldtown Road, Stamford, CT 06903",
+      "official_url": "https://www.stamfordmuseum.org/",
+      "summary": "An 80-plus-acre nonprofit campus combining the Bendel Mansion's art galleries, the working Heckscher Farm with interactive animal exhibits, nature trails, and a Planetarium & Astronomy Center.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "palace-theatre-stamford",
+      "name": "The Palace Theatre",
+      "kind": "theater",
+      "town": "Stamford",
+      "state": "Connecticut",
+      "county": "Fairfield County",
+      "address": "61 Atlantic Street, Stamford, CT 06901",
+      "official_url": "https://palacestamford.org/",
+      "summary": "Downtown Stamford's flagship performing-arts venue, hosting national touring concerts, comedy, and tribute acts.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "bartlett-arboretum-gardens",
+      "name": "Bartlett Arboretum & Gardens",
+      "kind": "park",
+      "town": "Stamford",
+      "state": "Connecticut",
+      "county": "Fairfield County",
+      "address": "151 Brookdale Road, Stamford, CT 06903",
+      "official_url": "https://bartlettarboretum.org/",
+      "summary": "A gardens-and-collections arboretum in North Stamford, open year-round from dawn to dusk with free admission for all.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "mill-river-park-stamford",
+      "name": "Mill River Park",
+      "kind": "park",
+      "town": "Stamford",
+      "state": "Connecticut",
+      "county": "Fairfield County",
+      "official_url": "https://millriverpark.org/",
+      "summary": "A nonprofit-run downtown greenway with the David & Marian Nissen Carousel, the Cohen Skating Center, the Steven & Alexandra Cohen Fountain, and the Whittingham Discovery Center.",
+      "status": "open",
+      "photos": [
+        {
+          "src": "/photos/ct/stamford/mill-river-park-stamford.jpg",
+          "thumb": "/photos/ct/stamford/mill-river-park-stamford_thumb.jpg",
+          "title": "Mill River Park",
+          "description": "Mill River Park's green with the downtown Stamford skyline behind it.",
+          "author": "John9474",
+          "license": "CC BY-SA 4.0",
+          "source_url": "https://commons.wikimedia.org/wiki/File:Mill_River_Park_Stamford.jpg"
+        }
+      ]
+    },
+    {
+      "slug": "stamford-history-center",
+      "name": "Stamford History Center",
+      "kind": "historic-site",
+      "town": "Stamford",
+      "state": "Connecticut",
+      "county": "Fairfield County",
+      "address": "1508 High Ridge Rd, Stamford, CT 06903",
+      "official_url": "https://stamfordhistory.org/",
+      "summary": "A museum and research institution preserving Stamford's history, with exhibitions, the Marcus Research Library, indexed photo archives, and stewardship of the 1699 Hoyt Barnum House. Open Thursday-Saturday, 10 a.m. to 4 p.m.",
+      "history": "Steward of the Hoyt Barnum House, built in 1699 and relocated to the History Center's campus, one of the city's visitable relics of its colonial period.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "colony-grill-stamford",
+      "name": "Colony Grill",
+      "kind": "restaurant",
+      "town": "Stamford",
+      "state": "Connecticut",
+      "county": "Fairfield County",
+      "address": "172 Myrtle Ave, Stamford, CT 06902",
+      "official_url": "https://colonygrill.com/",
+      "summary": "Established in 1935 as a post-Prohibition tavern, famous for thin-crust pizza topped with spicy, pepper-infused \"hot oil\" — the original location behind a multi-state chain.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "pelliccis-ristorante",
+      "name": "Pellicci's Ristorante",
+      "kind": "restaurant",
+      "town": "Stamford",
+      "state": "Connecticut",
+      "county": "Fairfield County",
+      "official_url": "https://www.pelliccis.com/",
+      "summary": "A family-owned Italian-American institution on Stamford's Italian West Side since 1947, still serving a secret family recipe for baked chicken.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "zaza-italian-gastrobar",
+      "name": "ZAZA Italian Gastrobar",
+      "kind": "restaurant",
+      "town": "Stamford",
+      "state": "Connecticut",
+      "county": "Fairfield County",
+      "address": "122 Broad Street, Stamford, CT 06901",
+      "official_url": "https://zazagastrobar.com/",
+      "summary": "A modern Italian gastrobar known for Italian tapas, house-made pasta, and handcrafted pizzas including a signature Vodka Pizza.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "half-full-brewery",
+      "name": "Half Full Brewery",
+      "kind": "brewery",
+      "town": "Stamford",
+      "state": "Connecticut",
+      "county": "Fairfield County",
+      "address": "575 Pacific St, Stamford, CT 06902",
+      "official_url": "https://halffullbrewery.com/",
+      "summary": "Stamford's hometown brewery, operating a brewpub and beer garden plus the \"Third Place\" coffee-and-coworking taproom, with beer service Tuesday-Sunday from noon.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "stamford-hotel",
+      "name": "The Stamford Hotel",
+      "kind": "hotel",
+      "town": "Stamford",
+      "state": "Connecticut",
+      "county": "Fairfield County",
+      "address": "700 East Main Street, Stamford, CT 06901",
+      "official_url": "https://www.thestamfordhotel.com/",
+      "summary": "A boutique hotel with a heated indoor pool, 24/7 fitness center, pet-friendly rooms, and an on-site bar serving nightly.",
+      "status": "open",
+      "photos": []
+    }
+  ],
+  "entries": [
+    {
+      "kind": "sight",
+      "name": "Stamford Museum & Nature Center",
+      "place_slug": "stamford-museum-nature-center",
+      "note": "80-plus acres of art galleries, a working farm, nature trails, and a new planetarium."
+    },
+    {
+      "kind": "sight",
+      "name": "The Palace Theatre",
+      "place_slug": "palace-theatre-stamford",
+      "note": "Downtown's flagship stage for touring concerts, comedy, and tribute acts."
+    },
+    {
+      "kind": "sight",
+      "name": "Bartlett Arboretum & Gardens",
+      "place_slug": "bartlett-arboretum-gardens",
+      "note": "Free, year-round gardens and collections in North Stamford, dawn to dusk."
+    },
+    {
+      "kind": "walk",
+      "name": "Mill River Park",
+      "place_slug": "mill-river-park-stamford",
+      "note": "A downtown greenway with a carousel, ice-skating center, and fountain."
+    },
+    {
+      "kind": "sight",
+      "name": "Stamford History Center",
+      "place_slug": "stamford-history-center",
+      "note": "The city's research library, photo archives, and steward of the 1699 Hoyt Barnum House."
+    },
+    {
+      "kind": "food",
+      "name": "Colony Grill",
+      "place_slug": "colony-grill-stamford",
+      "note": "The 1935 original of the hot-oil thin-crust pizza chain."
+    },
+    {
+      "kind": "food",
+      "name": "Pellicci's Ristorante",
+      "place_slug": "pelliccis-ristorante",
+      "note": "Family-owned since 1947, on Stamford's Italian West Side — famous for baked chicken."
+    },
+    {
+      "kind": "food",
+      "name": "ZAZA Italian Gastrobar",
+      "place_slug": "zaza-italian-gastrobar",
+      "note": "Italian tapas, house-made pasta, and a signature Vodka Pizza."
+    },
+    {
+      "kind": "food",
+      "name": "Half Full Brewery",
+      "place_slug": "half-full-brewery",
+      "note": "Stamford's hometown brewery, with a taproom and a coffee-and-coworking side."
+    },
+    {
+      "kind": "stay",
+      "name": "The Stamford Hotel",
+      "place_slug": "stamford-hotel",
+      "note": "A boutique pick on East Main Street, with a heated indoor pool and 24/7 gym."
+    }
+  ],
+  "links": [
+    {
+      "target": "guide:greenwich-ct-travel-guide",
+      "kind": "nearby",
+      "note": null
+    },
+    {
+      "target": "guide:greenwich-ct-travel-guide",
+      "kind": "shared-history",
+      "note": "In 1779, Gen. Israel Putnam rode down Put's Hill in Greenwich to rally support in Stamford during the British invasion of the town."
+    },
+    {
+      "target": "guide:norwalk-ct-travel-guide",
+      "kind": "nearby",
+      "note": null
+    },
+    {
+      "target": "guide:midtown-manhattan-guide",
+      "kind": "see-also",
+      "note": "The Stamford Transportation Center is a major Metro-North New Haven Line hub with direct service to Grand Central Terminal."
+    }
+  ]
+}

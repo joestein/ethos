@@ -1,0 +1,218 @@
+{
+  "guide": {
+    "slug": "bridgeport-ct-travel-guide",
+    "title": "Bridgeport, Connecticut: Barnum's Park by the Sound",
+    "destination": "Bridgeport, Connecticut",
+    "state": "Connecticut",
+    "county": "Fairfield County",
+    "intro": "Bridgeport's grandest public space, Seaside Park, took shape starting in 1864, when P. T. Barnum and other residents donated land along Long Island Sound for a park designed by Frederick Law Olmsted and Calvert Vaux — the same team behind Central Park. Today the 375-acre park anchors a city that, per neighboring Stamford's own civic record, remains Connecticut's largest. Connecticut's Beardsley Zoo keeps daily hours a few miles north, the Klein Memorial Auditorium hosts touring orchestras and concerts downtown, and the Bridgeport & Port Jefferson Ferry still carries passengers and cars across the Sound to Long Island. It is a working city first, with Metro-North and Amtrak both stopping downtown, a brewery taproom on the I-95 corridor, and a Main Street restaurant still serving Sunday Sauce.",
+    "sections": [
+      {
+        "heading": "Seaside Park and a city by the Sound",
+        "body": "Bridgeport's Seaside Park began taking shape in 1864, when P. T. Barnum and other residents donated roughly 35 acres of land along Long Island Sound, eventually growing to the 375-acre public park it is today — with a beach, ball fields, and trails designed by Frederick Law Olmsted and Calvert Vaux, the same landscape architects behind Central Park. Stamford's own civic record, drawn from the 2020 census, notes that Bridgeport remains Connecticut's largest city, a status that has shaped the region around it ever since."
+      },
+      {
+        "heading": "Getting there",
+        "body": "Drivers use I-95, Route 8/25, or the nearby Merritt Parkway. Metro-North's New Haven Line stops at Bridgeport station, which also serves as the southern terminus and transfer point for the Waterbury Branch — check current timetables, since branch service is limited. Amtrak's Northeast Regional and Vermonter also stop at Bridgeport (Acela does not). The Bridgeport & Port Jefferson Ferry operates from 1 Ferry Access Road, carrying passengers and cars across Long Island Sound to Port Jefferson, New York."
+      },
+      {
+        "heading": "Where to stay",
+        "body": "As of this writing, no downtown Bridgeport hotel could be verified as currently operating — the longtime downtown Holiday Inn was sold for conversion to affordable housing. Until a verified in-town option turns up, the nearest confirmed lodging in this guide is a short Metro-North ride away in Fairfield or Stamford."
+      }
+    ],
+    "faq": [
+      {
+        "question": "How do I get to Bridgeport?",
+        "answer": "Drivers use I-95, Route 8/25, or the nearby Merritt Parkway. Metro-North's New Haven Line and the Waterbury Branch both stop at Bridgeport station, along with Amtrak's Northeast Regional and Vermonter (not Acela)."
+      },
+      {
+        "question": "What are Beardsley Zoo's hours?",
+        "answer": "Open daily, 9 a.m. to 4 p.m. (last ticket 3 p.m.), at 1875 Noble Avenue."
+      },
+      {
+        "question": "What is Seaside Park?",
+        "answer": "A 375-acre public park along Long Island Sound designed by Frederick Law Olmsted and Calvert Vaux, whose land donations began in 1864 with P. T. Barnum among the contributing residents."
+      },
+      {
+        "question": "Where can I stay in Bridgeport?",
+        "answer": "No downtown Bridgeport hotel could be verified as currently operating; the nearest verified lodging is a short Metro-North ride away in Fairfield or Stamford."
+      },
+      {
+        "question": "Can I take a ferry from Bridgeport?",
+        "answer": "Yes — the Bridgeport & Port Jefferson Ferry runs from 1 Ferry Access Road across Long Island Sound to Port Jefferson, New York, on a year-round schedule."
+      }
+    ],
+    "photos": [
+      {
+        "src": "/photos/ct/bridgeport/beardsley-zoo-entrance.jpg",
+        "thumb": "/photos/ct/bridgeport/beardsley-zoo-entrance_thumb.jpg",
+        "title": "Beardsley Zoo entrance",
+        "description": "The entrance to Connecticut's Beardsley Zoo.",
+        "author": "Sage Ross",
+        "license": "CC BY-SA 3.0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Entrance,_Beardsley_Zoo,_2009-11-06.jpg"
+      },
+      {
+        "src": "/photos/ct/bridgeport/seaside-park-arch-bridgeport.jpg",
+        "thumb": "/photos/ct/bridgeport/seaside-park-arch-bridgeport_thumb.jpg",
+        "title": "Perry Memorial Arch, Seaside Park",
+        "description": "The stone entrance arch to Bridgeport's Seaside Park.",
+        "author": "Magicpiano",
+        "license": "CC BY-SA 4.0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:BridgeportCT_SeasidePark_PerryMemorialArch.jpg"
+      },
+      {
+        "src": "/photos/ct/bridgeport/mclevy-hall-bridgeport.jpg",
+        "thumb": "/photos/ct/bridgeport/mclevy-hall-bridgeport_thumb.jpg",
+        "title": "McLevy Hall",
+        "description": "McLevy Hall, Bridgeport's former Greek Revival city hall on State Street.",
+        "author": "Garcicar",
+        "license": "CC BY-SA 3.0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Bridgeport_City_Hall_01.JPG"
+      }
+    ]
+  },
+  "places": [
+    {
+      "slug": "beardsley-zoo",
+      "name": "Connecticut's Beardsley Zoo",
+      "kind": "attraction",
+      "town": "Bridgeport",
+      "state": "Connecticut",
+      "county": "Fairfield County",
+      "address": "1875 Noble Avenue, Bridgeport, CT",
+      "official_url": "https://beardsleyzoo.org/",
+      "summary": "A zoo open daily, 9 a.m. to 4 p.m. (last ticket 3 p.m.), with a Red Panda Playground under construction through fall 2026.",
+      "status": "open",
+      "photos": [
+        {
+          "src": "/photos/ct/bridgeport/beardsley-zoo-entrance.jpg",
+          "thumb": "/photos/ct/bridgeport/beardsley-zoo-entrance_thumb.jpg",
+          "title": "Beardsley Zoo entrance",
+          "description": "The entrance to Connecticut's Beardsley Zoo.",
+          "author": "Sage Ross",
+          "license": "CC BY-SA 3.0",
+          "source_url": "https://commons.wikimedia.org/wiki/File:Entrance,_Beardsley_Zoo,_2009-11-06.jpg"
+        }
+      ]
+    },
+    {
+      "slug": "seaside-park-bridgeport",
+      "name": "Seaside Park",
+      "kind": "park",
+      "town": "Bridgeport",
+      "state": "Connecticut",
+      "county": "Fairfield County",
+      "summary": "A 375-acre public park along Long Island Sound with a beach, ball fields, and trails, designed by Frederick Law Olmsted and Calvert Vaux; P. T. Barnum was among the residents who donated land for it starting in 1864.",
+      "history": "Land donations for the park began in 1864, led in part by P. T. Barnum, with roughly 35 acres from Barnum and other residents; the Olmsted/Vaux design links it to the same team behind Central Park.",
+      "status": "open",
+      "photos": [
+        {
+          "src": "/photos/ct/bridgeport/seaside-park-arch-bridgeport.jpg",
+          "thumb": "/photos/ct/bridgeport/seaside-park-arch-bridgeport_thumb.jpg",
+          "title": "Perry Memorial Arch, Seaside Park",
+          "description": "The stone entrance arch to Bridgeport's Seaside Park.",
+          "author": "Magicpiano",
+          "license": "CC BY-SA 4.0",
+          "source_url": "https://commons.wikimedia.org/wiki/File:BridgeportCT_SeasidePark_PerryMemorialArch.jpg"
+        }
+      ]
+    },
+    {
+      "slug": "klein-memorial-auditorium",
+      "name": "Klein Memorial Auditorium",
+      "kind": "theater",
+      "town": "Bridgeport",
+      "state": "Connecticut",
+      "county": "Fairfield County",
+      "official_url": "https://theklein.org/",
+      "summary": "A concert hall hosting touring orchestras, ballet, and film festivals, with an active 2026 calendar including the Greater Bridgeport Symphony.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "brewport-brewing-co",
+      "name": "Brewport Brewing Co.",
+      "kind": "brewery",
+      "town": "Bridgeport",
+      "state": "Connecticut",
+      "county": "Fairfield County",
+      "address": "225 South Frontage Road, Bridgeport, CT",
+      "official_url": "https://brewportct.com/",
+      "summary": "A brewery on the I-95 corridor with full weekly hours and regular trivia and salsa nights.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "ralph-n-richs",
+      "name": "Ralph 'n Rich's",
+      "kind": "restaurant",
+      "town": "Bridgeport",
+      "state": "Connecticut",
+      "county": "Fairfield County",
+      "address": "815 Main Street, Bridgeport, CT",
+      "official_url": "https://ralphnrichs.com/",
+      "summary": "A longtime Main Street restaurant known for its Sunday Sauce service.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "bridgeport-port-jefferson-ferry",
+      "name": "Bridgeport & Port Jefferson Ferry",
+      "kind": "attraction",
+      "town": "Bridgeport",
+      "state": "Connecticut",
+      "county": "Fairfield County",
+      "address": "1 Ferry Access Road, Bridgeport, CT",
+      "official_url": "https://www.88844ferry.com/",
+      "summary": "A car-and-passenger ferry crossing Long Island Sound to Port Jefferson, New York, operating on a year-round schedule.",
+      "status": "open",
+      "photos": []
+    }
+  ],
+  "entries": [
+    {
+      "kind": "sight",
+      "name": "Connecticut's Beardsley Zoo",
+      "place_slug": "beardsley-zoo",
+      "note": "Open daily, 9-4, with a Red Panda Playground under construction through fall 2026."
+    },
+    {
+      "kind": "sight",
+      "name": "Seaside Park",
+      "place_slug": "seaside-park-bridgeport",
+      "note": "375 acres of beach, ball fields, and trails, designed by Frederick Law Olmsted and Calvert Vaux."
+    },
+    {
+      "kind": "sight",
+      "name": "Klein Memorial Auditorium",
+      "place_slug": "klein-memorial-auditorium",
+      "note": "Touring orchestras, ballet, and film festivals downtown, including the Greater Bridgeport Symphony."
+    },
+    {
+      "kind": "sight",
+      "name": "Bridgeport & Port Jefferson Ferry",
+      "place_slug": "bridgeport-port-jefferson-ferry",
+      "note": "A year-round car-and-passenger crossing of Long Island Sound to Port Jefferson, New York."
+    },
+    {
+      "kind": "food",
+      "name": "Brewport Brewing Co.",
+      "place_slug": "brewport-brewing-co",
+      "note": "A brewery on the I-95 corridor, with trivia and salsa nights."
+    },
+    {
+      "kind": "food",
+      "name": "Ralph 'n Rich's",
+      "place_slug": "ralph-n-richs",
+      "note": "A longtime Main Street restaurant, known for Sunday Sauce."
+    }
+  ],
+  "links": [
+    {
+      "target": "guide:midtown-manhattan-guide",
+      "kind": "see-also",
+      "note": "Metro-North's New Haven Line and Amtrak both stop at Bridgeport station, with direct trains to Grand Central Terminal."
+    }
+  ]
+}
