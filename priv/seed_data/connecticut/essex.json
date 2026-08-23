@@ -257,18 +257,13 @@
   "links": [
     {
       "target": "guide:chester-ct-travel-guide",
-      "kind": "nearby",
-      "note": null
+      "kind": "same-region",
+      "note": "Connecticut River valley neighbours a short drive apart, with Deep River in between."
     },
     {
       "target": "guide:old-saybrook-ct-travel-guide",
       "kind": "nearby",
       "note": null
-    },
-    {
-      "target": "guide:chester-ct-travel-guide",
-      "kind": "shared-history",
-      "note": "Both were Connecticut River trade towns — Essex built the warship Oliver Cromwell; Chester's mills ran on West Stream water power."
     }
   ]
 }

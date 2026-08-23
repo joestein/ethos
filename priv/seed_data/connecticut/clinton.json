@@ -26,8 +26,8 @@
         "answer": "Drivers use I-95 or US Route 1 (East/West Main Street). Clinton's own Shore Line East station (10 John Street Extension) has free daily parking, level boarding, and River Valley Transit bus connections."
       },
       {
-        "question": "Can I reach New York City by train from Clinton?",
-        "answer": "Clinton's CTrail Shore Line East station is on the New Haven-New London line, connecting through New Haven Union Station to Metro-North and Amtrak trains into New York."
+        "question": "Does the train from Clinton go to New York?",
+        "answer": "No. Shore Line East runs between New Haven Union Station and New London, so there is no direct New York service from Clinton; the station is for travel along the Connecticut shoreline."
       },
       {
         "question": "What is the Adam Stanton House?",
@@ -211,8 +211,8 @@
     },
     {
       "target": "guide:old-saybrook-ct-travel-guide",
-      "kind": "nearby",
-      "note": "Neighbouring shoreline towns; both are stops on the Shore Line East commuter line."
+      "kind": "same-region",
+      "note": "Two Shore Line East towns a few minutes apart on I-95, with Westbrook in between."
     }
   ]
 }
