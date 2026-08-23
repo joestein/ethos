@@ -1,0 +1,269 @@
+{
+  "guide": {
+    "slug": "essex-ct-travel-guide",
+    "title": "Essex, Connecticut: Shipyards, a British Raid, and Ivory Row",
+    "destination": "Essex, Connecticut",
+    "state": "Connecticut",
+    "county": "Middlesex County",
+    "intro": "Essex began as the Potapaug Quarter of Saybrook, separating into its own town in 1852 and taking the name Essex in 1854; the villages of Ivoryton and Centerbrook joined it in 1859, and Essex served as Saybrook's main port until 1871. Its shipyards built the Oliver Cromwell, Connecticut's first warship of the Revolutionary era, and in April 1814 British forces rowed six miles up the Connecticut River to the village then called Pettipaug and burned twenty-eight ships in the harbor. Essex's economy later turned to ivory: Ivoryton's Comstock, Cheney & Company and Deep River's Pratt, Read & Company processed up to ninety percent of the ivory imported into the United States, chiefly for piano keys, merging in 1936 and consolidating production in Ivoryton. The Ivoryton Playhouse, built in 1911 as a recreation hall for ivory-works employees, opened as a theater in 1930, with Katharine Hepburn among its early performers.",
+    "sections": [
+      {
+        "heading": "From Potapaug to ivory row",
+        "body": "Essex began as the Potapaug Quarter of Saybrook, separating into its own town in 1852 and taking the name Essex in 1854; the villages of Ivoryton and Centerbrook joined it in 1859, and Essex served as Saybrook's main port until 1871. Its shipyards built the Oliver Cromwell, Connecticut's first warship of the Revolutionary era. In April 1814, during the War of 1812, British forces rowed six miles up the Connecticut River to the village then called Pettipaug and burned twenty-eight ships in the harbor. Essex's economy later turned to ivory: Ivoryton's Comstock, Cheney & Company and neighboring Pratt, Read & Company of Deep River processed up to ninety percent of the ivory imported into the United States at their peak, chiefly for piano keys, merging in 1936 and consolidating production in Ivoryton. The Ivoryton Playhouse building was constructed in 1911 as a recreation hall for Comstock & Cheney employees and opened as a theater on June 17, 1930, with Katharine Hepburn among its early performers."
+      },
+      {
+        "heading": "Getting there",
+        "body": "Essex is a driving destination reached from Route 9 Exit 3 — via I-95 Exit 69 (Route 9 North) from the shoreline or I-91 Exit 22S (Route 9 South) from Hartford, about 45 minutes from either Hartford or New Haven. There is no passenger rail station in Essex itself; the nearest Shore Line East commuter stops are Old Saybrook (Boston Post Road) and Westbrook (Norris Ave)."
+      },
+      {
+        "heading": "Three villages: Essex, Ivoryton, and Centerbrook",
+        "body": "The Connecticut River Museum at Steamboat Dock covers the river's 410-mile course with a replica of the Turtle, the world's first combat submarine, and exhibits on the 1814 British Raid; it also runs seasonal river cruises May through October. The Essex Steam Train & Riverboat, run by the Valley Railroad Company since 1971, offers vintage excursions including dinner trains and a holiday North Pole Express. In Ivoryton, the 274-seat Ivoryton Playhouse produces seven shows a year, and the Copper Beech Inn offers about 18 rooms across three historic buildings with an award-winning restaurant. Back in Essex village, the Griswold Inn — open since 1776 and among the oldest continuously operating inns in the country — serves tavern fare and live music in its Tap Room alongside 34 guest rooms; Black Seal Seafood Grille and Scotch Plains Tavern round out the dining options."
+      }
+    ],
+    "faq": [
+      {
+        "question": "How do I get to Essex?",
+        "answer": "Drivers use Route 9 Exit 3, reached via I-95 Exit 69 (Route 9 North) from the shoreline or I-91 Exit 22S (Route 9 South) from Hartford — about 45 minutes from either Hartford or New Haven. Essex has no rail station; the nearest Shore Line East stops are Old Saybrook and Westbrook."
+      },
+      {
+        "question": "What is the Connecticut River Museum?",
+        "answer": "A waterfront museum at Steamboat Dock covering the river's 410-mile course, with a replica of the Turtle submarine and exhibits on the 1814 British Raid. Open Tuesday-Sunday, 10 a.m.-5 p.m.; seasonal river cruises run May through October."
+      },
+      {
+        "question": "What is the Essex Steam Train & Riverboat?",
+        "answer": "Vintage steam train and riverboat excursions run by the Valley Railroad Company, serving the lower Connecticut River Valley since 1971, with dinner trains and a North Pole Express during the holidays."
+      },
+      {
+        "question": "What is the Ivoryton Playhouse?",
+        "answer": "A 274-seat professional theater in the village of Ivoryton, producing seven shows a year. Built in 1911 as an ivory-company recreation hall, it hosted Katharine Hepburn, Marlon Brando, and Mae West in its summer-stock heyday."
+      },
+      {
+        "question": "Where can I stay in Essex?",
+        "answer": "The Griswold Inn on Main Street, open since 1776 with 34 rooms, and the Copper Beech Inn in Ivoryton, with about 18 rooms and an award-winning restaurant, are both verified in-town options."
+      }
+    ],
+    "photos": [
+      {
+        "src": "/photos/ct/essex/essex-main-street.jpg",
+        "thumb": "/photos/ct/essex/essex-main-street_thumb.jpg",
+        "title": "Main Street, Essex",
+        "description": "A view down Main Street in Essex village.",
+        "author": "Joe Mabel",
+        "license": "CC BY-SA 3.0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Essex_CT_-_Main_Street_01_(9365823444).jpg"
+      },
+      {
+        "src": "/photos/ct/essex/connecticut-river-museum.jpg",
+        "thumb": "/photos/ct/essex/connecticut-river-museum_thumb.jpg",
+        "title": "Connecticut River Museum",
+        "description": "The Connecticut River Museum building at Steamboat Dock, Essex.",
+        "author": "Joe Mabel",
+        "license": "CC BY-SA 3.0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Essex_CT_-_museum_01_(9363087823).jpg"
+      },
+      {
+        "src": "/photos/ct/essex/essex-steam-train.jpg",
+        "thumb": "/photos/ct/essex/essex-steam-train_thumb.jpg",
+        "title": "Essex Steam Train",
+        "description": "The Valley Railroad's steam train at the Essex station.",
+        "author": "Pi.1415926535",
+        "license": "CC BY-SA 3.0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Essex_station_and_steam_train,_December_2016.JPG"
+      }
+    ]
+  },
+  "places": [
+    {
+      "slug": "connecticut-river-museum",
+      "name": "Connecticut River Museum",
+      "kind": "museum",
+      "town": "Essex",
+      "state": "Connecticut",
+      "county": "Middlesex County",
+      "address": "67 Main Street, Steamboat Dock, Essex, CT 06426",
+      "official_url": "https://www.ctrivermuseum.org",
+      "summary": "A waterfront museum at Steamboat Dock covering the river's 410-mile course, with a replica of the Turtle, the world's first combat submarine, and exhibits on the 1814 British Raid. Open Tuesday-Sunday, 10 a.m.-5 p.m.; admission $12 adults; seasonal river cruises May-October.",
+      "status": "open",
+      "photos": [
+        {
+          "src": "/photos/ct/essex/connecticut-river-museum.jpg",
+          "thumb": "/photos/ct/essex/connecticut-river-museum_thumb.jpg",
+          "title": "Connecticut River Museum",
+          "description": "The Connecticut River Museum building at Steamboat Dock, Essex.",
+          "author": "Joe Mabel",
+          "license": "CC BY-SA 3.0",
+          "source_url": "https://commons.wikimedia.org/wiki/File:Essex_CT_-_museum_01_(9363087823).jpg"
+        }
+      ]
+    },
+    {
+      "slug": "essex-steam-train-riverboat",
+      "name": "Essex Steam Train & Riverboat",
+      "kind": "attraction",
+      "town": "Essex",
+      "state": "Connecticut",
+      "county": "Middlesex County",
+      "address": "1 Railroad Ave, Essex, CT 06426",
+      "official_url": "https://essexsteamtrain.com",
+      "summary": "Vintage steam train and riverboat excursions run by the Valley Railroad Company, which has served the lower Connecticut River Valley since 1971; offerings include dinner trains and the holiday North Pole Express.",
+      "status": "open",
+      "photos": [
+        {
+          "src": "/photos/ct/essex/essex-steam-train.jpg",
+          "thumb": "/photos/ct/essex/essex-steam-train_thumb.jpg",
+          "title": "Essex Steam Train",
+          "description": "The Valley Railroad's steam train at the Essex station.",
+          "author": "Pi.1415926535",
+          "license": "CC BY-SA 3.0",
+          "source_url": "https://commons.wikimedia.org/wiki/File:Essex_station_and_steam_train,_December_2016.JPG"
+        }
+      ]
+    },
+    {
+      "slug": "ivoryton-playhouse",
+      "name": "Ivoryton Playhouse",
+      "kind": "theater",
+      "town": "Essex",
+      "state": "Connecticut",
+      "county": "Middlesex County",
+      "address": "103 Main Street, Ivoryton, CT 06442",
+      "official_url": "https://www.ivorytonplayhouse.org",
+      "summary": "A 274-seat professional theater producing seven shows annually; built in 1911 as an ivory-company recreation hall, it hosted Katharine Hepburn, Marlon Brando, and Mae West in its summer-stock heyday.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "essex-historical-society-hills-academy",
+      "name": "Essex Historical Society at Hills Academy",
+      "kind": "museum",
+      "town": "Essex",
+      "state": "Connecticut",
+      "county": "Middlesex County",
+      "address": "22 Prospect St, Essex, CT 06426",
+      "official_url": "https://essexhistory.org",
+      "summary": "The society interprets the shared history of Essex's three villages — Essex, Centerbrook, and Ivoryton — and maintains the historic Pratt House property, with walking tours and a Holiday House Tour. Pratt House open hours are not posted; call ahead (860-767-0681).",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "black-seal-seafood-grille",
+      "name": "Black Seal Seafood Grille",
+      "kind": "restaurant",
+      "town": "Essex",
+      "state": "Connecticut",
+      "county": "Middlesex County",
+      "address": "15 C Main Street, Essex, CT 06426",
+      "official_url": "https://theblackseal.net",
+      "summary": "A nautical-themed village landmark serving classic pub fare and seafood; kitchen hours run from 11:30 a.m. daily, dinner into the evening.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "griswold-inn",
+      "name": "The Griswold Inn",
+      "kind": "bnb",
+      "town": "Essex",
+      "state": "Connecticut",
+      "county": "Middlesex County",
+      "address": "36 Main St., Essex, CT 06426",
+      "official_url": "https://www.griswoldinn.com",
+      "summary": "Opened in 1776 and among the oldest continuously operating inns in the country, with 34 guest rooms across a campus of 18th- and 19th-century buildings. Its Tap Room serves tavern fare with live music several nights a week, alongside historic dining rooms and a Wine Bar & Bistro; dining rooms and Tap Room operate year-round, closing only Christmas Eve and December 25.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "scotch-plains-tavern",
+      "name": "Scotch Plains Tavern",
+      "kind": "restaurant",
+      "town": "Essex",
+      "state": "Connecticut",
+      "county": "Middlesex County",
+      "address": "124 Westbrook Road, Essex, CT 06426",
+      "official_url": "https://scotchplainstavern.com",
+      "summary": "An American tavern with a patio and fire-pit courtyard, live music Tuesday-Saturday, and an OpenTable Diner's Choice award; open daily from 11:30 a.m.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "copper-beech-inn",
+      "name": "Copper Beech Inn",
+      "kind": "bnb",
+      "town": "Essex",
+      "state": "Connecticut",
+      "county": "Middlesex County",
+      "address": "46 Main Street, Ivoryton, CT 06442",
+      "official_url": "https://www.copperbeechinn.com",
+      "summary": "A country inn with roughly 17-18 rooms across the Main House, Carriage House, and Comstock House, plus an award-winning on-site restaurant.",
+      "status": "open",
+      "photos": []
+    }
+  ],
+  "entries": [
+    {
+      "kind": "sight",
+      "name": "Connecticut River Museum",
+      "place_slug": "connecticut-river-museum",
+      "note": "A Turtle submarine replica and exhibits on the 1814 British Raid at Steamboat Dock."
+    },
+    {
+      "kind": "sight",
+      "name": "Essex Steam Train & Riverboat",
+      "place_slug": "essex-steam-train-riverboat",
+      "note": "Vintage steam train and riverboat excursions since 1971."
+    },
+    {
+      "kind": "sight",
+      "name": "Ivoryton Playhouse",
+      "place_slug": "ivoryton-playhouse",
+      "note": "A 274-seat theater in a former ivory-company recreation hall."
+    },
+    {
+      "kind": "sight",
+      "name": "Essex Historical Society at Hills Academy",
+      "place_slug": "essex-historical-society-hills-academy",
+      "note": "Walking tours and exhibits on Essex, Centerbrook, and Ivoryton."
+    },
+    {
+      "kind": "food",
+      "name": "Black Seal Seafood Grille",
+      "place_slug": "black-seal-seafood-grille",
+      "note": "Nautical-themed pub fare and seafood on Main Street."
+    },
+    {
+      "kind": "food",
+      "name": "Griswold Inn Tap Room",
+      "place_slug": "griswold-inn",
+      "note": "Tavern fare and live music at the 1776 Griswold Inn."
+    },
+    {
+      "kind": "food",
+      "name": "Scotch Plains Tavern",
+      "place_slug": "scotch-plains-tavern",
+      "note": "An American tavern with a fire-pit courtyard and live music."
+    },
+    {
+      "kind": "stay",
+      "name": "The Griswold Inn",
+      "place_slug": "griswold-inn",
+      "note": "Historic 1776 inn with 34 rooms across a campus of buildings."
+    },
+    {
+      "kind": "stay",
+      "name": "Copper Beech Inn",
+      "place_slug": "copper-beech-inn",
+      "note": "An 18-room country inn in Ivoryton with an award-winning restaurant."
+    }
+  ],
+  "links": [
+    {
+      "target": "guide:chester-ct-travel-guide",
+      "kind": "same-region",
+      "note": "Connecticut River valley neighbours a short drive apart, with Deep River in between."
+    },
+    {
+      "target": "guide:old-saybrook-ct-travel-guide",
+      "kind": "nearby",
+      "note": null
+    }
+  ]
+}

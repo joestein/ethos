@@ -1,0 +1,238 @@
+{
+  "guide": {
+    "slug": "chester-ct-travel-guide",
+    "title": "Chester, Connecticut: A Mill Village on the River",
+    "destination": "Chester, Connecticut",
+    "state": "Connecticut",
+    "county": "Middlesex County",
+    "intro": "Chester was settled in 1692 on land of the Wangunks, formed from the northern quarter of Saybrook, and incorporated as its own town in 1836. Originally called Pattaconk, a term the town describes as referring to a wigwam-shaped hill, it was renamed for Chester, England; Jonah Dibble was its first English settler, arriving in 1692. The Chester-Hadlyme Ferry across the Connecticut River began operating in 1769 under Jonathan Warner and became the second-oldest continuously operating ferry service in Connecticut. Chester's economy grew on water power: forges operated here from 1790 to 1818, and later mills included the Russell Jennings Company's carpenter tools and the Middlesex Handle Company and Rogers Brush Shop, both powered by West Stream. Two nationally significant figures later made Chester home — civil rights lawyer and judge Constance Baker Motley and conceptual artist Sol LeWitt — while the Chester Library, established in 1875, moved into its present building in 1907.",
+    "sections": [
+      {
+        "heading": "Pattaconk to Chester",
+        "body": "Chester was settled in 1692 on land of the Wangunks, formed from the northern quarter of Saybrook, and incorporated as its own town in 1836. The area was originally called Pattaconk, a term the town describes as referring to a wigwam-shaped hill, before being renamed for Chester, England; Jonah Dibble was its first English settler, arriving in 1692. The Chester-Hadlyme Ferry across the Connecticut River began operating in 1769 under Jonathan Warner and became the second-oldest continuously operating ferry service in Connecticut. Chester's economy grew on water power — forges operated here from 1790 to 1818, and later mills included the Russell Jennings Company's carpenter tools and the Middlesex Handle Company and Rogers Brush Shop, both powered by West Stream. Two nationally significant figures later made Chester home: civil rights lawyer and judge Constance Baker Motley (1921-2005) and conceptual artist Sol LeWitt (1928-2007)."
+      },
+      {
+        "heading": "Getting there",
+        "body": "Chester is a drive-to town on Route 9 in the lower Connecticut River Valley, with local access via Routes 148 and 154 and the seasonal Route 148 Chester-Hadlyme Ferry crossing. There is no rail station in Chester itself: River Valley Transit (formerly 9 Town Transit / Estuary Transit District) Route 642 connects the village with the Old Saybrook train station, served by Amtrak and Shore Line East. Neither the CTrail Hartford Line nor Metro-North reaches the lower Connecticut River valley."
+      },
+      {
+        "heading": "A village of mills, a museum, and a ferry",
+        "body": "Chester Museum at The Mill, run by the Chester Historical Society, occupies a historic 19th-century mill site on a mill dam near the town center, with free weekend admission June through October. The Terris Theatre is Goodspeed Musicals' second stage, used to develop new musicals alongside the company's East Haddam main stage. Just outside the village, Cockaponset State Forest — at over 17,000 acres, Connecticut's second-largest — offers more than 100 miles of hiking trails and swimming at Pattaconk Lake. Downtown, Grano Arso mills its own grains for pasta and bread, Little House Brewing Company pours in an 1836 building, and Simon's Marketplace anchors the breakfast-and-lunch counter. No hotel, inn, or B&B in Chester itself could be verified as operating in 2026; the nearest option is the Griswold Inn in Essex, about a 10-15 minute drive."
+      }
+    ],
+    "faq": [
+      {
+        "question": "How do I get to Chester?",
+        "answer": "Chester is reached by Route 9, with local access via Routes 148 and 154. There is no rail station in town; River Valley Transit Route 642 connects Chester to the Old Saybrook train station (Amtrak and Shore Line East)."
+      },
+      {
+        "question": "What is the Chester-Hadlyme Ferry?",
+        "answer": "Connecticut's second-oldest continuously operating ferry, running since 1769. The vessel Selden III carries 8-9 cars across the Connecticut River near Gillette Castle State Park in about five minutes. Seasonal operation April 1-November 30; $4-$5 per vehicle."
+      },
+      {
+        "question": "What is The Terris Theatre?",
+        "answer": "Goodspeed Musicals' second stage in Chester, at 33 N Main Street, used for developing new musicals alongside the company's East Haddam main stage."
+      },
+      {
+        "question": "What is Cockaponset State Forest?",
+        "answer": "At over 17,000 acres across Chester, Haddam, and nine other towns, it's Connecticut's second-largest state forest, with more than 100 miles of hiking trails and swimming and kayaking at Pattaconk Lake."
+      },
+      {
+        "question": "Where can I stay in Chester?",
+        "answer": "No hotel, inn, or B&B physically in Chester could be verified as operating in 2026. The nearest option is the Griswold Inn in Essex (established 1776, 34 rooms), about a 10-15 minute drive."
+      },
+      {
+        "question": "What is Chester Museum at The Mill?",
+        "answer": "The Chester Historical Society's museum, housed in a historic 19th-century mill building on a mill dam near the town center. Open free of charge on weekends, June through October, or by appointment."
+      }
+    ],
+    "photos": [
+      {
+        "src": "/photos/ct/chester/chester-main-street.jpg",
+        "thumb": "/photos/ct/chester/chester-main-street_thumb.jpg",
+        "title": "Main Street, Chester",
+        "description": "Chester's village center along Main Street.",
+        "author": "John Phelan",
+        "license": "CC BY-SA 4.0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Main_Street,_Chester_CT.jpg"
+      },
+      {
+        "src": "/photos/ct/chester/chester-hadlyme-ferry-crossing.jpg",
+        "thumb": "/photos/ct/chester/chester-hadlyme-ferry-crossing_thumb.jpg",
+        "title": "Chester-Hadlyme Ferry",
+        "description": "The Chester-Hadlyme Ferry crossing the Connecticut River.",
+        "author": "John Phelan",
+        "license": "CC BY 4.0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Chester_Hadlyme_Ferry,_Hadlyme_CT.jpg"
+      },
+      {
+        "src": "/photos/ct/chester/chester-old-town-hall.jpg",
+        "thumb": "/photos/ct/chester/chester-old-town-hall_thumb.jpg",
+        "title": "Chester Old Town Hall",
+        "description": "The Old Town Hall in Chester's village center.",
+        "author": "Magicpiano",
+        "license": "CC BY-SA 4.0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:ChesterCT_OldTownHall.jpg"
+      }
+    ]
+  },
+  "places": [
+    {
+      "slug": "chester-hadlyme-ferry",
+      "name": "Chester-Hadlyme Ferry",
+      "kind": "historic-site",
+      "town": "Chester",
+      "state": "Connecticut",
+      "county": "Middlesex County",
+      "address": "99 Ferry Rd. (Route 148), Chester, CT 06412",
+      "summary": "Connecticut's second-oldest continuously operating ferry, established in 1769. The vessel Selden III carries 8-9 cars across the Connecticut River near Gillette Castle State Park in about five minutes. Seasonal operation April 1-November 30, weekdays 7 a.m.-6:45 p.m., weekends 10:30 a.m.-5 p.m.; $4-$5 per vehicle.",
+      "history": "Established in 1769 under Jonathan Warner.",
+      "status": "open",
+      "photos": [
+        {
+          "src": "/photos/ct/chester/chester-hadlyme-ferry-crossing.jpg",
+          "thumb": "/photos/ct/chester/chester-hadlyme-ferry-crossing_thumb.jpg",
+          "title": "Chester-Hadlyme Ferry",
+          "description": "The Chester-Hadlyme Ferry crossing the Connecticut River.",
+          "author": "John Phelan",
+          "license": "CC BY 4.0",
+          "source_url": "https://commons.wikimedia.org/wiki/File:Chester_Hadlyme_Ferry,_Hadlyme_CT.jpg"
+        }
+      ]
+    },
+    {
+      "slug": "chester-museum-at-the-mill",
+      "name": "Chester Museum at The Mill",
+      "kind": "museum",
+      "town": "Chester",
+      "state": "Connecticut",
+      "county": "Middlesex County",
+      "address": "9 West Main Street, Chester, CT 06412",
+      "official_url": "https://chesterhistoricalsociety.org/",
+      "summary": "The Chester Historical Society's museum, housed on a historic 19th-century mill site on a mill dam near the town center, with exhibits on two floors. Society established 1970; museum opened 2010. Open free of charge weekends, June through October, or by appointment.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "terris-theatre",
+      "name": "The Terris Theatre",
+      "kind": "theater",
+      "town": "Chester",
+      "state": "Connecticut",
+      "county": "Middlesex County",
+      "address": "33 N Main Street, Chester, CT 06412",
+      "official_url": "https://www.goodspeed.org/",
+      "summary": "Goodspeed Musicals' second stage in Chester, used for developing new musicals alongside the company's East Haddam main stage. Check Goodspeed's season calendar for Chester dates.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "cockaponset-state-forest-pattaconk",
+      "name": "Cockaponset State Forest - Pattaconk Recreation Area",
+      "kind": "park",
+      "town": "Chester",
+      "state": "Connecticut",
+      "county": "Middlesex County",
+      "address": "Filley Road, Haddam/Chester, CT (access via Route 9)",
+      "official_url": "https://ctparks.com/parks/cockaponset-state-forest",
+      "summary": "At over 17,000 acres across Chester, Haddam, and nine other towns, Cockaponset is Connecticut's second-largest state forest, with more than 100 miles of hiking trails and swimming and kayaking at Pattaconk Lake. Open daily 8 a.m.-sunset.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "grano-arso",
+      "name": "Grano Arso",
+      "kind": "restaurant",
+      "town": "Chester",
+      "state": "Connecticut",
+      "county": "Middlesex County",
+      "address": "6 Main Street, Chester, CT 06412",
+      "official_url": "https://granoct.com/",
+      "summary": "Chef Joel Gargano's Italian scratch kitchen, known for house-milled pasta and a chef's tasting menu. Hours Tuesday-Thursday 5-8:30 p.m., Friday-Saturday 4:30-9 p.m.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "little-house-brewing-company",
+      "name": "Little House Brewing Company",
+      "kind": "brewery",
+      "town": "Chester",
+      "state": "Connecticut",
+      "county": "Middlesex County",
+      "address": "16 Main Street, Chester, CT 06412",
+      "official_url": "https://littlehousebrewing.com/",
+      "summary": "A downtown taproom brewery housed in a building dating to 1836 — the year of Chester's incorporation — powered in part by a Tesla solar roof installed in 2021.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "simons-marketplace",
+      "name": "Simon's Marketplace",
+      "kind": "cafe",
+      "town": "Chester",
+      "state": "Connecticut",
+      "county": "Middlesex County",
+      "address": "17 Main Street, Chester, CT 06412",
+      "official_url": "https://www.simonsmarketplace.net/",
+      "summary": "A village cafe and marketplace on Main Street combining a breakfast/lunch counter with a gift shop. Hours Monday-Saturday 8 a.m.-6 p.m., Sunday 8 a.m.-5 p.m.",
+      "status": "open",
+      "photos": []
+    }
+  ],
+  "entries": [
+    {
+      "kind": "sight",
+      "name": "Chester-Hadlyme Ferry",
+      "place_slug": "chester-hadlyme-ferry",
+      "note": "Connecticut's second-oldest continuously operating ferry, crossing near Gillette Castle."
+    },
+    {
+      "kind": "sight",
+      "name": "Chester Museum at The Mill",
+      "place_slug": "chester-museum-at-the-mill",
+      "note": "Local history exhibits in a historic 19th-century mill building."
+    },
+    {
+      "kind": "sight",
+      "name": "The Terris Theatre",
+      "place_slug": "terris-theatre",
+      "note": "Goodspeed Musicals' second stage for developing new work."
+    },
+    {
+      "kind": "sight",
+      "name": "Cockaponset State Forest",
+      "place_slug": "cockaponset-state-forest-pattaconk",
+      "note": "Connecticut's second-largest state forest, with 100+ miles of trails."
+    },
+    {
+      "kind": "food",
+      "name": "Grano Arso",
+      "place_slug": "grano-arso",
+      "note": "Italian scratch kitchen with house-milled pasta."
+    },
+    {
+      "kind": "food",
+      "name": "Little House Brewing Company",
+      "place_slug": "little-house-brewing-company",
+      "note": "Downtown taproom in an 1836 building."
+    },
+    {
+      "kind": "food",
+      "name": "Simon's Marketplace",
+      "place_slug": "simons-marketplace",
+      "note": "A village breakfast-and-lunch counter with a gift shop."
+    }
+  ],
+  "links": [
+    {
+      "target": "guide:east-haddam-ct-travel-guide",
+      "kind": "nearby",
+      "note": "The seasonal Chester-Hadlyme Ferry (Route 148) crosses the Connecticut River between the two villages, near Gillette Castle State Park."
+    },
+    {
+      "target": "guide:east-haddam-ct-travel-guide",
+      "kind": "shared-history",
+      "note": "Goodspeed Musicals, based at the 1876 Goodspeed Opera House in East Haddam, develops new musicals at Chester's Terris Theatre."
+    }
+  ]
+}

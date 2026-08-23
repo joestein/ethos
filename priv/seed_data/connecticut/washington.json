@@ -1,0 +1,261 @@
+{
+  "guide": {
+    "slug": "washington-ct-travel-guide",
+    "title": "Washington, Connecticut: The Gunnery and Five Villages",
+    "destination": "Washington, Connecticut",
+    "state": "Connecticut",
+    "county": "Litchfield County",
+    "intro": "Colonists began settling Washington in 1734, and the town incorporated in 1779 from parts of Woodbury, Litchfield, Kent, and New Milford, taking its name for George Washington, who traveled through the area during the Revolution and proverbially slept in New Preston in 1781. Settlers built an ironworks and began mining iron ore by 1746, and by the early 19th century mills and factories lined the Shepaug and East Aspetuck Rivers. In 1850 abolitionist educator Frederick Gunn founded The Gunnery — today the Frederick Gunn School — and in 1861 opened one of America's earliest summer camps in town. The Shepaug Railroad reached Washington in 1872, but passenger service ended by 1932 and the tracks were pulled up in 1949; the town has had no rail since. Local history-keeping dates to 1899, when the Daughters of the American Revolution founded what became the Gunn Museum.",
+    "sections": [
+      {
+        "heading": "Ironworks to The Gunnery",
+        "body": "Washington's early economy ran on water power: an ironworks and iron-ore mining by 1746, then mills and factories along the Shepaug and East Aspetuck Rivers by the early 1800s. The town's most lasting institution followed in 1850, when Frederick Gunn — a teacher, abolitionist, and pioneer of American recreational camping — founded The Gunnery, known today as the Frederick Gunn School, and opened one of the country's earliest organized summer camps in 1861. The Daughters of the American Revolution began collecting local history in 1899; that collection is now the Gunn Museum, in an 1781 house on Washington Green since 1965."
+      },
+      {
+        "heading": "Getting there",
+        "body": "Washington is a drive-to Litchfield Hills town with no rail station or public transportation of its own. Travelers arrive by car via US Route 202, which runs east-west through the northern part of town serving New Preston and Marbledale, and state Routes 47, 109, 199, and 45, which link the town's five villages — Washington Green, Washington Depot, New Preston, Marbledale, and Woodville."
+      },
+      {
+        "heading": "A museum, a garden, and New Preston's tables",
+        "body": "The Institute for American Indian Studies holds over 300,000 archaeological artifacts and 6,000 ethnographic items spanning more than 12,000 years, with a replica outdoor village. Hollister House Garden, a classic English-style garden and Garden Conservancy preservation partner, keeps limited seasonal hours. For food, G.W. Tavern sits on the Shepaug River in Washington Depot, and White Horse Country Pub and The Smithy Market & Cafe anchor New Preston. The landmark Mayflower Inn & Spa, an Auberge Resorts property, hosted a Daniel Boulud dining residency in 2026 — check current availability before planning a trip around it."
+      }
+    ],
+    "faq": [
+      {
+        "question": "How do I get to Washington?",
+        "answer": "By car — there's no rail station or public transportation in town. US Route 202 runs through the northern part of Washington serving New Preston and Marbledale, with state Routes 47, 109, 199, and 45 linking the town's five villages."
+      },
+      {
+        "question": "What is the Institute for American Indian Studies?",
+        "answer": "A museum holding over 300,000 archaeological artifacts and 6,000 ethnographic items spanning more than 12,000 years, with a replica outdoor Algonkian village. Open Thursday-Sunday, 11 a.m.-4 p.m."
+      },
+      {
+        "question": "What is Steep Rock?",
+        "answer": "A land trust whose origins date to 1889, when architect Ehrick Rossiter bought land — including Steep Rock Summit — to stop it from being clear-cut; in 1925 he deeded it to community trustees. Its preserves now offer 46 miles of trails."
+      },
+      {
+        "question": "Is the Gunn Historical Museum free?",
+        "answer": "Yes, free admission. It's in an 1781 colonial house overlooking Washington Green, open Thursday-Friday 10-4 and Saturday 10-3, with guided tours Saturdays at 1 p.m."
+      },
+      {
+        "question": "Where can I eat and stay in Washington?",
+        "answer": "G.W. Tavern in Washington Depot and White Horse Country Pub in New Preston are the area's main sit-down restaurants, with The Smithy Market & Cafe for something lighter. The Mayflower Inn & Spa, an Auberge Resorts property, is the town's landmark lodging."
+      }
+    ],
+    "photos": [
+      {
+        "src": "/photos/ct/washington/first-congregational-church-washington.jpg",
+        "thumb": "/photos/ct/washington/first-congregational-church-washington_thumb.jpg",
+        "title": "First Congregational Church, Washington Green",
+        "description": "The First Congregational Church on the hill overlooking the Washington Green.",
+        "author": "Pedro Xing",
+        "license": "CC0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Washington_First_Congregational_044.JPG"
+      },
+      {
+        "src": "/photos/ct/washington/steep-rock-hauser-footbridge.jpg",
+        "thumb": "/photos/ct/washington/steep-rock-hauser-footbridge_thumb.jpg",
+        "title": "Shepaug River from the Hauser footbridge",
+        "description": "The Shepaug River seen from the Hauser suspension footbridge in Steep Rock Preserve.",
+        "author": "Pedro Xing",
+        "license": "CC0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:View_from_Hauser_footbridge_034.JPG"
+      },
+      {
+        "src": "/photos/ct/washington/lake-waramaug.jpg",
+        "thumb": "/photos/ct/washington/lake-waramaug_thumb.jpg",
+        "title": "Lake Waramaug with Mount Bushnell",
+        "description": "A shoreline view across Lake Waramaug toward Mount Bushnell.",
+        "author": "Magicpiano",
+        "license": "CC BY-SA 4.0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:LakeWaureganWithMountBushnell.jpg"
+      }
+    ]
+  },
+  "places": [
+    {
+      "slug": "institute-american-indian-studies",
+      "name": "Institute for American Indian Studies",
+      "kind": "museum",
+      "town": "Washington",
+      "state": "Connecticut",
+      "county": "Litchfield County",
+      "address": "38 Curtis Road, Washington, CT 06793",
+      "official_url": "https://www.iaismuseum.org/",
+      "summary": "Founded in 1975, the museum holds over 300,000 archaeological artifacts and 6,000 ethnographic items, and has excavated or surveyed more than 500 sites including the 11,000-year-old Templeton Site. Open Thursday-Sunday, 11 a.m.-4 p.m.; closed Monday-Wednesday.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "steep-rock-association",
+      "name": "Steep Rock Association preserves",
+      "kind": "park",
+      "town": "Washington",
+      "state": "Connecticut",
+      "county": "Litchfield County",
+      "official_url": "https://steeprockassoc.org/",
+      "summary": "A land trust whose origins date to 1889, when architect Ehrick Rossiter bought roughly 165 acres — including Steep Rock Summit — to stop a timber company from clear-cutting it; in 1925 he deeded the land to community trustees. Its preserves (Steep Rock, Hidden Valley, Macricostas) now offer 46 miles of trails, plus Judea Garden, an organic farm.",
+      "status": "open",
+      "photos": [
+        {
+          "src": "/photos/ct/washington/steep-rock-hauser-footbridge.jpg",
+          "thumb": "/photos/ct/washington/steep-rock-hauser-footbridge_thumb.jpg",
+          "title": "Shepaug River from the Hauser footbridge",
+          "description": "The Shepaug River seen from the Hauser suspension footbridge in Steep Rock Preserve.",
+          "author": "Pedro Xing",
+          "license": "CC0",
+          "source_url": "https://commons.wikimedia.org/wiki/File:View_from_Hauser_footbridge_034.JPG"
+        }
+      ]
+    },
+    {
+      "slug": "gunn-historical-museum",
+      "name": "Gunn Historical Museum",
+      "kind": "museum",
+      "town": "Washington",
+      "state": "Connecticut",
+      "county": "Litchfield County",
+      "address": "5 Wykeham Road, Washington, CT 06793",
+      "official_url": "https://www.gunnlibrary.org/gunn-museum/",
+      "summary": "A free-admission local history museum in an 1781 colonial house overlooking Washington Green, with the exhibit 'Washington, Connecticut - An American Story.' Open Thursday-Friday 10 a.m.-4 p.m., Saturday 10 a.m.-3 p.m., with guided tours Saturdays at 1 p.m.; not currently handicap accessible.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "hollister-house-garden",
+      "name": "Hollister House Garden",
+      "kind": "attraction",
+      "town": "Washington",
+      "state": "Connecticut",
+      "county": "Litchfield County",
+      "address": "300 Nettleton Hollow Road, Washington, CT 06793",
+      "official_url": "https://hollisterhousegarden.org/",
+      "summary": "A classic garden in the English manner founded by George Schoellkopf, operating as a preservation partner of The Garden Conservancy. Seasonal hours: Wednesday and Friday 1-4 p.m., Saturday 10 a.m.-4 p.m.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "gw-tavern",
+      "name": "G.W. Tavern",
+      "kind": "restaurant",
+      "town": "Washington",
+      "state": "Connecticut",
+      "county": "Litchfield County",
+      "address": "20 Bee Brook Road, Washington Depot, CT 06794",
+      "official_url": "https://www.gwtavern.com/",
+      "summary": "Contemporary tavern fare sourced from local farms including Waldingfield organic farm, with patio seating overlooking the Shepaug River. Open Sunday, Monday, and Thursday noon-8:30 p.m., Friday-Saturday noon-9 p.m.; closed Tuesday and Wednesday.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "white-horse-country-pub",
+      "name": "The White Horse Country Pub & Restaurant",
+      "kind": "restaurant",
+      "town": "Washington",
+      "state": "Connecticut",
+      "county": "Litchfield County",
+      "address": "258 New Milford Turnpike (Route 202), New Preston (Marbledale), CT 06777",
+      "official_url": "https://www.whitehorsecountrypub.com/",
+      "summary": "A country pub on a river with a waterfall, four patios, and two fireplaces, open seven days with Sunday brunch; named Connecticut Magazine's Best Fireside Dining and Best Outdoor Dining statewide in 2025.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "smithy-market-cafe",
+      "name": "The Smithy Market & Cafe",
+      "kind": "cafe",
+      "town": "Washington",
+      "state": "Connecticut",
+      "county": "Litchfield County",
+      "address": "10 Main Street, New Preston, CT 06777",
+      "official_url": "https://thesmithymarket.com/",
+      "summary": "A local-foods market and community hub in New Preston, in a recreation of the village's mid-19th-century blacksmith shop, selling produce, meats, and specialty groceries from area farms, with an associated cafe next door. Call ahead to confirm hours.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "mayflower-inn-spa",
+      "name": "Mayflower Inn & Spa, Auberge Resorts Collection",
+      "kind": "hotel",
+      "town": "Washington",
+      "state": "Connecticut",
+      "county": "Litchfield County",
+      "official_url": "https://auberge.com/mayflower/",
+      "summary": "Washington's landmark luxury country inn, operated by Auberge Resorts Collection. In summer 2026, chef Daniel Boulud brought a dining residency to the property — a time-limited partnership, so check current availability before planning a visit around it.",
+      "status": "open",
+      "photos": []
+    }
+  ],
+  "entries": [
+    {
+      "kind": "sight",
+      "name": "Institute for American Indian Studies",
+      "place_slug": "institute-american-indian-studies",
+      "note": "300,000-plus artifacts spanning more than 12,000 years, with a replica village."
+    },
+    {
+      "kind": "walk",
+      "name": "Steep Rock Association preserves",
+      "place_slug": "steep-rock-association",
+      "note": "46 miles of trails across Steep Rock, Hidden Valley, and Macricostas preserves."
+    },
+    {
+      "kind": "sight",
+      "name": "Gunn Historical Museum",
+      "place_slug": "gunn-historical-museum",
+      "note": "Free local history museum in an 1781 house on Washington Green."
+    },
+    {
+      "kind": "sight",
+      "name": "Hollister House Garden",
+      "place_slug": "hollister-house-garden",
+      "note": "An English-manner garden and Garden Conservancy preservation partner."
+    },
+    {
+      "kind": "food",
+      "name": "G.W. Tavern",
+      "place_slug": "gw-tavern",
+      "note": "Farm-sourced tavern fare on the Shepaug River in Washington Depot."
+    },
+    {
+      "kind": "food",
+      "name": "White Horse Country Pub & Restaurant",
+      "place_slug": "white-horse-country-pub",
+      "note": "An award-winning riverside pub in New Preston/Marbledale."
+    },
+    {
+      "kind": "food",
+      "name": "The Smithy Market & Cafe",
+      "place_slug": "smithy-market-cafe",
+      "note": "A local-foods market and cafe in a recreated 19th-century blacksmith shop."
+    },
+    {
+      "kind": "stay",
+      "name": "Mayflower Inn & Spa",
+      "place_slug": "mayflower-inn-spa",
+      "note": "Washington's landmark Auberge Resorts luxury inn."
+    }
+  ],
+  "links": [
+    {
+      "target": "guide:woodbury-ct-travel-guide",
+      "kind": "shared-history",
+      "note": "Washington was incorporated in 1779 from parts of Woodbury, Litchfield, Kent, and New Milford."
+    },
+    {
+      "target": "guide:litchfield-ct-travel-guide",
+      "kind": "shared-history",
+      "note": "Washington was incorporated in 1779 from parts of Litchfield, Woodbury, Kent, and New Milford."
+    },
+    {
+      "target": "guide:kent-ct-travel-guide",
+      "kind": "shared-history",
+      "note": "Washington was incorporated in 1779 from parts of Kent, Woodbury, Litchfield, and New Milford."
+    },
+    {
+      "target": "guide:new-milford-ct-travel-guide",
+      "kind": "shared-history",
+      "note": "Washington was incorporated in 1779 from parts of New Milford, Woodbury, Litchfield, and Kent."
+    }
+  ]
+}

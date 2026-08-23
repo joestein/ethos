@@ -1,0 +1,215 @@
+{
+  "guide": {
+    "slug": "milford-ct-travel-guide",
+    "title": "Milford, Connecticut: Oysters, a Tombolo, and Captain Kidd's Legend",
+    "destination": "Milford, Connecticut",
+    "state": "Connecticut",
+    "county": "New Haven County",
+    "intro": "Milford was settled in 1639, when English colonists affiliated with New Haven Colony purchased land comprising today's Milford, Orange, and West Haven from Ansantawae, chief of the local Paugussett; the area's original name was Wepawaug, after the river. By 1822, Orange had separated from Milford, significantly reducing its size. In the nineteenth century, Milford was a successful shipbuilding, oystering, and farming community, as well as a popular beach resort on Long Island Sound. After postwar suburbanization, the Town of Milford, including the Borough of Woodmont, was incorporated as the City of Milford in 1959. Submarine pioneer Simon Lake was a Milford resident, and the town's maritime identity lives on in its Oyster Festival, established in 1975. Local legend holds that privateer Captain William Kidd buried treasure on Charles Island, off Milford's Silver Sands beach, in 1699, before sailing to Boston, where he was arrested.",
+    "sections": [
+      {
+        "heading": "Wepawaug, oysters, and a pirate's legend",
+        "body": "Milford was settled in 1639, when English colonists affiliated with New Haven Colony purchased land comprising today's Milford, Orange, and West Haven from Ansantawae, chief of the local Paugussett; the area's original Native American name, Wepawaug, came from the river. The original settlement included what would become Orange and West Haven; by 1822 Orange had separated, significantly reducing Milford's size. Through the nineteenth century, Milford was a successful shipbuilding, oystering, and farming community, as well as a popular beach resort on Long Island Sound. After postwar suburbanization, the Town of Milford, including the Borough of Woodmont, was incorporated as the City of Milford in 1959. Simon Lake (1866-1945), the inventor and naval engineer known for his pioneering submarine work, was a Milford resident; the town's maritime identity also lives on in its Oyster Festival, established in 1975. Local legend holds that privateer Captain William Kidd visited Charles Island, just off Milford's Silver Sands beach, in 1699 and buried treasure there before sailing to Boston, where he was arrested."
+      },
+      {
+        "heading": "Getting there",
+        "body": "Milford sits directly on the I-95 corridor between Bridgeport and New Haven, with U.S. Route 1 (Boston Post Road) and Route 15/the Wilbur Cross Parkway also crossing town. The downtown Milford station, 1 Railroad Avenue, offers Metro-North New Haven Line service direct to Grand Central Terminal in New York, plus limited weekday CTrail Shore Line East service, restored October 7, 2024."
+      },
+      {
+        "heading": "A tombolo, two breweries, and where to stay",
+        "body": "Silver Sands State Park has a three-quarter-mile all-weather boardwalk and a natural sandbar, or tombolo, connecting the beach to 14-acre Charles Island, a wildlife sanctuary; sandbar crossing is prohibited May 1-September 9 for bird-nesting season. The Milford Historical Society operates three eighteenth-century houses near the harbor, headlined by the Eells-Stow House, built around 1700. Dockside Brewery pairs house-brewed beer with an outdoor biergarten and its own marina moorings on the Housatonic, while Tribus Beer Co. runs a taproom with weekly can releases and rotating food trucks. Milford itself has no independently verified in-town hotel or inn; travelers wanting a confirmed option can find Hotel Marcel, a Marcel Breuer-designed National Register landmark, about 15 minutes north on I-95 in New Haven."
+      }
+    ],
+    "faq": [
+      {
+        "question": "How do I get to Milford?",
+        "answer": "Milford sits directly on I-95 between Bridgeport and New Haven, with US-1 (Boston Post Road) and Route 15/the Wilbur Cross Parkway also crossing town. The Milford train station (1 Railroad Avenue) has Metro-North New Haven Line service to Grand Central, plus limited weekday CTrail Shore Line East service."
+      },
+      {
+        "question": "What is the legend of Charles Island?",
+        "answer": "Local legend holds that privateer Captain William Kidd visited the island, just off Silver Sands State Park, in 1699 and buried treasure there before sailing to Boston, where he was arrested."
+      },
+      {
+        "question": "Where can I stay in Milford?",
+        "answer": "No hotel or inn located within Milford could be independently verified as currently operating. The nearest confirmed option is Hotel Marcel, a Marcel Breuer-designed National Register landmark about 15 minutes away on I-95 in New Haven."
+      },
+      {
+        "question": "What is the Milford Oyster Festival?",
+        "answer": "An annual festival, established in 1975, celebrating the town's long oystering history and maritime identity."
+      },
+      {
+        "question": "Where can I get a local beer in Milford?",
+        "answer": "Dockside Brewery, a waterfront brewery on the Housatonic with an outdoor biergarten and marina moorings, and Tribus Beer Co., a taproom with weekly can releases and rotating food trucks, are both verified in-town options."
+      }
+    ],
+    "photos": [
+      {
+        "src": "/photos/ct/milford/milford-green.jpg",
+        "thumb": "/photos/ct/milford/milford-green_thumb.jpg",
+        "title": "Milford Green",
+        "description": "The Milford Green in downtown Milford.",
+        "author": "Fadein",
+        "license": "CC0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Milford_Green.jpg"
+      },
+      {
+        "src": "/photos/ct/milford/charles-island-silver-sands.jpg",
+        "thumb": "/photos/ct/milford/charles-island-silver-sands_thumb.jpg",
+        "title": "Charles Island from Silver Sands State Park",
+        "description": "Charles Island and the tombolo sandbar at Silver Sands State Park.",
+        "author": "Rhododendrites",
+        "license": "CC BY-SA 4.0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Charles_Island_Silver_Sands_State_Park_(21019).jpg"
+      },
+      {
+        "src": "/photos/ct/milford/milford-harbor.jpg",
+        "thumb": "/photos/ct/milford/milford-harbor_thumb.jpg",
+        "title": "Milford Harbor",
+        "description": "Boats moored in Milford Harbor.",
+        "author": "Fadein",
+        "license": "CC0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Milford_Harbor.jpg"
+      }
+    ]
+  },
+  "places": [
+    {
+      "slug": "silver-sands-state-park",
+      "name": "Silver Sands State Park",
+      "kind": "park",
+      "town": "Milford",
+      "state": "Connecticut",
+      "county": "New Haven County",
+      "address": "1 Silver Sands Parkway, Milford, CT 06460",
+      "official_url": "https://ctparks.com/node/133",
+      "summary": "A shoreline state park with a three-quarter-mile all-weather boardwalk and a natural sandbar (tombolo) connecting the beach to 14-acre Charles Island, a wildlife sanctuary tied to the Captain Kidd buried-treasure legend of 1699. Open daily 8 a.m. to sunset; sandbar crossing to the island is prohibited May 1-Sept 9 for bird-nesting season.",
+      "history": "Acquired after Hurricane Diane in 1955, becoming Connecticut's fourth shoreline park in 1960.",
+      "status": "open",
+      "photos": [
+        {
+          "src": "/photos/ct/milford/charles-island-silver-sands.jpg",
+          "thumb": "/photos/ct/milford/charles-island-silver-sands_thumb.jpg",
+          "title": "Charles Island from Silver Sands State Park",
+          "description": "Charles Island and the tombolo sandbar at Silver Sands State Park.",
+          "author": "Rhododendrites",
+          "license": "CC BY-SA 4.0",
+          "source_url": "https://commons.wikimedia.org/wiki/File:Charles_Island_Silver_Sands_State_Park_(21019).jpg"
+        }
+      ]
+    },
+    {
+      "slug": "eells-stow-house",
+      "name": "Milford Historical Society (Eells-Stow House)",
+      "kind": "historic-site",
+      "town": "Milford",
+      "state": "Connecticut",
+      "county": "New Haven County",
+      "address": "34 High Street, Milford, CT 06460",
+      "official_url": "https://milfordhistoricalsociety.org/",
+      "summary": "The society operates three eighteenth-century houses near Milford Harbor, headlined by the Eells-Stow House (built c. 1700), one of the best-preserved examples of Colonial life in New England; walkable from downtown and the train station. Open seasonally June-September, Sat/Sun 1-4 p.m.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "milford-arts-council",
+      "name": "Milford Arts Council (the MAC)",
+      "kind": "theater",
+      "town": "Milford",
+      "state": "Connecticut",
+      "county": "New Haven County",
+      "address": "40 Railroad Ave South, Milford, CT 06460",
+      "official_url": "https://milfordarts.org/",
+      "summary": "A nonprofit arts center founded in 1972, housed in a restored train station, presenting Eastbound Theatre productions, concerts, comedy, and gallery exhibits, plus a second Firehouse Gallery at 81 Naugatuck Ave.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "coastal-center-milford-point",
+      "name": "Connecticut Audubon Society Coastal Center at Milford Point",
+      "kind": "attraction",
+      "town": "Milford",
+      "state": "Connecticut",
+      "county": "New Haven County",
+      "official_url": "https://www.ctaudubon.org/coastal-center/",
+      "summary": "A birding and coastal-habitat center at Milford Point with marsh and Long Island Sound observation platforms, an outer platform, and an adjoining sandbar overlooking tidal marshes; recently celebrated its 25th anniversary.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "dockside-brewery",
+      "name": "Dockside Brewery",
+      "kind": "brewery",
+      "town": "Milford",
+      "state": "Connecticut",
+      "county": "New Haven County",
+      "address": "40 Bridgeport Ave, Milford, CT 06460",
+      "official_url": "https://www.docksidebrewery.com/",
+      "summary": "Waterfront brewery on the Housatonic with an outdoor biergarten, sandy beach area, cabanas, and its own marina moorings, serving house-brewed beer alongside a full food and cocktail menu.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "tribus-beer-co",
+      "name": "Tribus Beer Co.",
+      "kind": "brewery",
+      "town": "Milford",
+      "state": "Connecticut",
+      "county": "New Haven County",
+      "address": "100 Raton Drive, Milford, CT 06461",
+      "official_url": "https://tribusbeer.co/",
+      "summary": "Craft brewery and biergarten with a taproom, weekly Thursday can releases, Wednesday trivia nights, and rotating food trucks.",
+      "status": "open",
+      "photos": []
+    }
+  ],
+  "entries": [
+    {
+      "kind": "sight",
+      "name": "Silver Sands State Park",
+      "place_slug": "silver-sands-state-park",
+      "note": "A boardwalk beach with a tombolo to Charles Island and its Captain Kidd legend."
+    },
+    {
+      "kind": "sight",
+      "name": "Milford Historical Society (Eells-Stow House)",
+      "place_slug": "eells-stow-house",
+      "note": "Three 18th-century houses near the harbor; the Eells-Stow House dates to c. 1700."
+    },
+    {
+      "kind": "sight",
+      "name": "Milford Arts Council (the MAC)",
+      "place_slug": "milford-arts-council",
+      "note": "Theater, concerts, and gallery exhibits in a restored train station."
+    },
+    {
+      "kind": "sight",
+      "name": "CT Audubon Coastal Center at Milford Point",
+      "place_slug": "coastal-center-milford-point",
+      "note": "Birding platforms overlooking Long Island Sound tidal marshes."
+    },
+    {
+      "kind": "food",
+      "name": "Dockside Brewery",
+      "place_slug": "dockside-brewery",
+      "note": "Waterfront brewery on the Housatonic with a biergarten and marina moorings."
+    },
+    {
+      "kind": "food",
+      "name": "Tribus Beer Co.",
+      "place_slug": "tribus-beer-co",
+      "note": "Craft-beer taproom with weekly can releases and food trucks."
+    }
+  ],
+  "links": [
+    {
+      "target": "guide:bridgeport-ct-travel-guide",
+      "kind": "same-region",
+      "note": "Neighbouring shoreline cities a few minutes apart on I-95, with Stratford in between."
+    },
+    {
+      "target": "guide:midtown-manhattan-guide",
+      "kind": "see-also",
+      "note": "Metro-North's New Haven Line runs direct from Milford station to Grand Central Terminal."
+    }
+  ]
+}

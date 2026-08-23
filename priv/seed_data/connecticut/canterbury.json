@@ -1,0 +1,240 @@
+{
+  "guide": {
+    "slug": "canterbury-ct-travel-guide",
+    "title": "Canterbury, Connecticut: Prudence Crandall's School",
+    "destination": "Canterbury, Connecticut",
+    "state": "Connecticut",
+    "county": "Windham County",
+    "intro": "Canterbury was first settled as part of neighboring Plainfield in the late 1600s and was officially separated and named the Town of Canterbury in 1703, becoming Connecticut's 38th town. The town's defining history is Prudence Crandall's: in 1831 she opened the Canterbury Female Boarding School in a Georgian house on the town green, and after admitting Black student Sarah Harris in 1832, she reopened the school in 1833 exclusively for African American young women — the first such academy in New England. Connecticut's General Assembly passed the discriminatory “Black Law” that May, Crandall was arrested that August, and a mob ransacked the school in September 1834, closing it for good; she was named the state's official heroine in 1995. Canterbury also claims Moses Cleaveland, born here in 1754, who led the 1796 survey that founded the Ohio city later named for him — Cleveland.",
+    "sections": [
+      {
+        "heading": "Prudence Crandall's fight",
+        "body": "Prudence Crandall opened the Canterbury Female Boarding School in 1831, in a Georgian house on the town green. After she admitted Black student Sarah Harris in the autumn of 1832, white families withdrew their daughters, and by spring 1833 Crandall had reopened the school exclusively for African American young women — the first such academy in New England. Connecticut's General Assembly responded on May 24, 1833, with the 'Black Law,' barring out-of-state Black students; Crandall was arrested that August 23. A mob ransacked the school on September 9, 1834, closing it permanently. Crandall was named Connecticut's official State Heroine in 1995, and the house is now a National Historic Landmark and International Site of Conscience. Canterbury's other notable native is Moses Cleaveland, born here in 1754, who led the Connecticut Land Company's 1796 survey of the Western Reserve and platted the Ohio town that took his name. The Comte de Rochambeau's French army also passed through, camping in Canterbury on November 7, 1782, during its march from Yorktown toward Boston."
+      },
+      {
+        "heading": "Getting there",
+        "body": "Canterbury is a drive-to town in the Quiet Corner, reached where Route 169 crosses Route 14, about five miles west of Interstate 395 at Plainfield. Route 169 itself begins in Norwich and runs 38 miles north through Connecticut; the 32-mile National Scenic Byway portion of it runs from Lisbon to the Massachusetts line. There is no rail station, bus terminal, or airport in Canterbury; the nearest passenger rail is New London Union Station, about a half-hour south, with Amtrak Northeast Regional and CTrail Shore Line East service."
+      },
+      {
+        "heading": "Where to eat and stay",
+        "body": "Canterbury's dining is small but real: D&G Pizza and Pub and Ryan's Place both serve pub fare on Westminster Road, and Wicked Cow is a seasonal ice cream stand near Butts Bridge. No hotel, inn, or bed-and-breakfast could be verified in Canterbury itself; the nearest confirmed lodging is the Inn at Woodstock Hill, in Woodstock."
+      }
+    ],
+    "faq": [
+      {
+        "question": "How do I get to Canterbury?",
+        "answer": "By car — Route 169 crosses Route 14 in the town center, about five miles west of Interstate 395 at Plainfield. There is no rail station, bus terminal, or airport in Canterbury; the nearest passenger rail is New London Union Station, about a half-hour south."
+      },
+      {
+        "question": "What did Prudence Crandall do?",
+        "answer": "In 1833 she reopened her Canterbury school exclusively for African American young women — the first such academy in New England — after white families withdrew their daughters over the admission of Black student Sarah Harris. A mob ransacked the school in 1834; Crandall was named Connecticut's State Heroine in 1995."
+      },
+      {
+        "question": "Is Canterbury connected to Cleveland, Ohio?",
+        "answer": "Yes — Moses Cleaveland, born in Canterbury in 1754, led the Connecticut Land Company's 1796 survey of the Western Reserve and platted the Ohio town that was later named for him."
+      },
+      {
+        "question": "Where can I paddle near Canterbury?",
+        "answer": "Robert Manship Park is the put-in for a 5.6-mile designated National Recreation Trail paddle down the Quinebaug River to the Butts Bridge take-out. There's no launch fee."
+      },
+      {
+        "question": "Is there a hotel in Canterbury?",
+        "answer": "No hotel, inn, or bed-and-breakfast could be verified in Canterbury itself. The nearest confirmed lodging is the Inn at Woodstock Hill, in Woodstock."
+      }
+    ],
+    "photos": [
+      {
+        "src": "/photos/ct/canterbury/prudence-crandall-house-canterbury.jpg",
+        "thumb": "/photos/ct/canterbury/prudence-crandall-house-canterbury_thumb.jpg",
+        "title": "Prudence Crandall House",
+        "description": "The Federal-style house at the Route 14/169 junction in Canterbury center, evening light.",
+        "author": "JJBers",
+        "license": "CC BY-SA 4.0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Prudence_Crandall_House_7-11.jpg"
+      },
+      {
+        "src": "/photos/ct/canterbury/canterbury-green.jpg",
+        "thumb": "/photos/ct/canterbury/canterbury-green_thumb.jpg",
+        "title": "Canterbury town green",
+        "description": "The Canterbury green in October light, with the First Congregational Church beyond.",
+        "author": "John Phelan",
+        "license": "CC BY 4.0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Canterbury_Green,_Canterbury_CT.jpg"
+      },
+      {
+        "src": "/photos/ct/canterbury/first-congregational-church-canterbury.jpg",
+        "thumb": "/photos/ct/canterbury/first-congregational-church-canterbury_thumb.jpg",
+        "title": "First Congregational Church, Canterbury",
+        "description": "The white First Congregational Church on the Canterbury green.",
+        "author": "John Phelan",
+        "license": "CC BY 4.0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:First_Congregational_Church,_Canterbury_CT.jpg"
+      }
+    ]
+  },
+  "places": [
+    {
+      "slug": "prudence-crandall-museum",
+      "name": "Prudence Crandall Museum",
+      "kind": "museum",
+      "town": "Canterbury",
+      "state": "Connecticut",
+      "county": "Windham County",
+      "address": "1 South Canterbury Road, Canterbury, CT 06331",
+      "official_url": "https://portal.ct.gov/ecd-prudencecrandallmuseum",
+      "summary": "The house where Prudence Crandall ran New England's first academy for African American young women, now a National Historic Landmark, International Site of Conscience, and Archaeological Preserve, with conversational tours. Open for the season, May through October.",
+      "status": "open",
+      "photos": [
+        {
+          "src": "/photos/ct/canterbury/prudence-crandall-house-canterbury.jpg",
+          "thumb": "/photos/ct/canterbury/prudence-crandall-house-canterbury_thumb.jpg",
+          "title": "Prudence Crandall House",
+          "description": "The Federal-style house at the Route 14/169 junction in Canterbury center, evening light.",
+          "author": "JJBers",
+          "license": "CC BY-SA 4.0",
+          "source_url": "https://commons.wikimedia.org/wiki/File:Prudence_Crandall_House_7-11.jpg"
+        }
+      ]
+    },
+    {
+      "slug": "finnish-american-heritage-society-of-connecticut",
+      "name": "Finnish American Heritage Society of Connecticut",
+      "kind": "museum",
+      "town": "Canterbury",
+      "state": "Connecticut",
+      "county": "Windham County",
+      "address": "76 North Canterbury Road (Route 169), Canterbury, CT 06331",
+      "official_url": "https://www.fahs-ct.org/",
+      "summary": "A museum of Finland and Finnish immigration to America, with an archive and research room holding one of the country's largest collections of Finnish-American records, plus a library, art gallery, and sauna. Open every Wednesday and the 2nd and 4th Saturday, May through October.",
+      "history": "The Finnish Hall was dedicated on Christmas Day 1925; the Sampo Club took over the property in 1963, and the Finnish American Heritage Society formed in 1987 to preserve it. It joined the National Register of Historic Places on April 10, 1998.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "robert-manship-park",
+      "name": "Robert Manship Park",
+      "kind": "park",
+      "town": "Canterbury",
+      "state": "Connecticut",
+      "county": "Windham County",
+      "address": "55 Lovell Lane, Canterbury, CT 06331",
+      "official_url": "https://thelastgreenvalley.org/member-directory/quinebaug-river-nrt-robert-manship-park-to-butts-bridge-canterbury/",
+      "summary": "The put-in for a 5.6-mile designated National Recreation Trail paddle down the Quinebaug River to the Butts Bridge take-out. No launch fee; ample parking, and portable restrooms are often available.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "green-district-schoolhouse",
+      "name": "Green (Centre) District Schoolhouse",
+      "kind": "historic-site",
+      "town": "Canterbury",
+      "state": "Connecticut",
+      "county": "Windham County",
+      "address": "Library Road at South Canterbury Road (Route 169), Canterbury, CT 06331",
+      "official_url": "https://canterburyhistorical.org/venue/green-district-schoolhouse/",
+      "summary": "Canterbury's last one-room district schoolhouse open to the public, restored by volunteers beginning in 2002. It opens only a few times a year — contact the Canterbury Historical Society at info@canterburyhistorical.org before visiting.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "d-and-g-pizza-and-pub",
+      "name": "D&G Pizza and Pub",
+      "kind": "restaurant",
+      "town": "Canterbury",
+      "state": "Connecticut",
+      "county": "Windham County",
+      "address": "200 Westminster Road, Canterbury, CT 06331",
+      "official_url": "https://dgpizzapub.com",
+      "summary": "A Westminster Road pizza and pub restaurant with rotating craft beers on tap.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "ryans-place",
+      "name": "Ryan's Place",
+      "kind": "restaurant",
+      "town": "Canterbury",
+      "state": "Connecticut",
+      "county": "Windham County",
+      "address": "180 Westminster Road, Canterbury, CT 06331",
+      "official_url": "https://www.facebook.com/ryansplace.canterbury/",
+      "summary": "An American comfort-food restaurant and bar with pizza, breakfast, and seafood, plus outdoor seating. Open daily, 11 a.m. to 9 p.m.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "wicked-cow",
+      "name": "Wicked Cow",
+      "kind": "cafe",
+      "town": "Canterbury",
+      "state": "Connecticut",
+      "county": "Windham County",
+      "address": "7 Plainfield Road, Canterbury, CT 06331",
+      "official_url": "https://www.facebook.com/people/Wicked-Cow/100092314214609/",
+      "summary": "A seasonal ice cream stand near Butts Bridge, a natural stop after paddling the Quinebaug. Open Wednesday-Friday, 3-8 p.m., and Saturday-Sunday, 2-8 p.m., spring through fall.",
+      "status": "open",
+      "photos": []
+    }
+  ],
+  "entries": [
+    {
+      "kind": "sight",
+      "name": "Prudence Crandall Museum",
+      "place_slug": "prudence-crandall-museum",
+      "note": "The site of New England's first academy for African American young women."
+    },
+    {
+      "kind": "sight",
+      "name": "Finnish American Heritage Society of Connecticut",
+      "place_slug": "finnish-american-heritage-society-of-connecticut",
+      "note": "A museum of Finland and Finnish immigration to America."
+    },
+    {
+      "kind": "walk",
+      "name": "Robert Manship Park",
+      "place_slug": "robert-manship-park",
+      "note": "Put-in for a 5.6-mile Quinebaug River paddle."
+    },
+    {
+      "kind": "sight",
+      "name": "Green (Centre) District Schoolhouse",
+      "place_slug": "green-district-schoolhouse",
+      "note": "Canterbury's last one-room schoolhouse open to the public."
+    },
+    {
+      "kind": "food",
+      "name": "D&G Pizza and Pub",
+      "place_slug": "d-and-g-pizza-and-pub",
+      "note": "Pizza and pub fare with rotating craft beers."
+    },
+    {
+      "kind": "food",
+      "name": "Ryan's Place",
+      "place_slug": "ryans-place",
+      "note": "Comfort food, pizza, breakfast, and seafood."
+    },
+    {
+      "kind": "food",
+      "name": "Wicked Cow",
+      "place_slug": "wicked-cow",
+      "note": "Seasonal ice cream stand near Butts Bridge."
+    }
+  ],
+  "links": [
+    {
+      "target": "guide:putnam-ct-travel-guide",
+      "kind": "same-region",
+      "note": "Both are served by the Northeastern Connecticut Transit District's regional bus network."
+    },
+    {
+      "target": "guide:norwich-ct-travel-guide",
+      "kind": "same-region",
+      "note": "Route 169 begins in Norwich and runs north through Canterbury."
+    },
+    {
+      "target": "guide:woodstock-ct-travel-guide",
+      "kind": "shared-history",
+      "note": "Route 169's 32-mile National Scenic Byway threads Canterbury and Woodstock, with Pomfret in between."
+    }
+  ]
+}

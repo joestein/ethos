@@ -1,0 +1,258 @@
+{
+  "guide": {
+    "slug": "litchfield-ct-travel-guide",
+    "title": "Litchfield, Connecticut: The First Law School and a Quiet Green",
+    "destination": "Litchfield, Connecticut",
+    "state": "Connecticut",
+    "county": "Litchfield County",
+    "intro": "Litchfield was incorporated in 1719 by settlers from Hartford and Windsor, on land originally called Bantam township — a name that survives today as a borough within the town — and took its present name from Lichfield, England. By the late 1700s it had become northwestern Connecticut's commercial and cultural center: in 1784 Tapping Reeve opened the Litchfield Law School, the first law school in the United States, and in 1792 Sarah Pierce founded the Litchfield Female Academy, one of the nation's first schools built for the higher education of girls. When 19th-century industry faltered, the town settled into life as a quiet resort community, leaving the Colonial and Colonial Revival architecture that still lines its streets. The Shepaug Valley Railroad reached Litchfield in 1872, but passenger service ended in 1930 and freight in 1948 — the town has had no rail since.",
+    "sections": [
+      {
+        "heading": "A law school, a girls' academy, and a green",
+        "body": "Litchfield's rise came fast and its industry faded faster. Tapping Reeve founded his law school in 1784, and Sarah Pierce's Female Academy followed in 1792, one of the country's first institutions dedicated to educating young women. Both buildings still stand on South Street, run today by the Litchfield Historical Society. When the mills and factories of the 19th century bypassed the hill town, Litchfield turned into a summer resort instead, and the Colonial and Colonial Revival houses built during that era — rather than any surviving industry — are what draw visitors to the green today."
+      },
+      {
+        "heading": "Getting there",
+        "body": "Litchfield is a drive-to destination: US-202 runs east-west through Bantam and the town center, CT-63 runs north-south through the green, and CT-118 connects the green to CT-8 on the Harwinton line. There is no passenger rail in town — service ended in 1930 — and the nearest Metro-North branch, the Waterbury Branch, has rail service suspended for station construction from July 2026 through May 2027, with buses substituting in the meantime. For now, Litchfield is a drive-only destination."
+      }
+    ],
+    "faq": [
+      {
+        "question": "How do I get to Litchfield?",
+        "answer": "By car: US-202 runs east-west through Bantam and the town center, CT-63 runs north-south through the green, and CT-118 connects to CT-8 on the Harwinton line. There's no passenger rail in Litchfield, and the nearest Metro-North branch (Waterbury) has service suspended for construction through May 2027, so plan on driving."
+      },
+      {
+        "question": "What was the Litchfield Law School?",
+        "answer": "Founded by Tapping Reeve in 1784, it was the first law school in the United States. The Tapping Reeve House and Law School building, on South Street, is now a free museum run by the Litchfield Historical Society."
+      },
+      {
+        "question": "What is Bantam?",
+        "answer": "Bantam is a borough within the town of Litchfield — in fact, Litchfield's original name was Bantam township before it incorporated in 1719. Arethusa Farm's dairy store, cafe, and restaurant are located there today."
+      },
+      {
+        "question": "Is Topsmead State Forest free to visit?",
+        "answer": "Yes. The former Chase family estate is open daily, 8 a.m. to sunset, at no charge, with free tours of the 1925 English Tudor Revival cottage on the second and fourth weekends from June through October."
+      },
+      {
+        "question": "Where should I eat in Litchfield?",
+        "answer": "West Street Grill has faced the green since 1990. In the Bantam section, Arethusa Farm runs both a mano, a daytime bakery cafe, and al tavolo, its dinner-only, dairy-to-table restaurant — call ahead, since al tavolo does not open for lunch."
+      }
+    ],
+    "photos": [
+      {
+        "src": "/photos/ct/litchfield/first-congregational-church.jpg",
+        "thumb": "/photos/ct/litchfield/first-congregational-church_thumb.jpg",
+        "title": "First Congregational Church, Litchfield",
+        "description": "The white-steepled First Congregational Church on Litchfield's green, a contributing property of the Litchfield Historic District.",
+        "author": "Daniel Case",
+        "license": "CC BY-SA 3.0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:First_Congregational_Church,_Litchfield,_CT.jpg"
+      },
+      {
+        "src": "/photos/ct/litchfield/tapping-reeve-house.jpg",
+        "thumb": "/photos/ct/litchfield/tapping-reeve-house_thumb.jpg",
+        "title": "Tapping Reeve House and Law School",
+        "description": "The Tapping Reeve House and Law School on South Street, home of the first law school in the United States.",
+        "author": "Daniel Case",
+        "license": "CC BY-SA 3.0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Tapping_Reeve_House_and_Law_School,_Litchfield,_CT.jpg"
+      },
+      {
+        "src": "/photos/ct/litchfield/litchfield-green.jpg",
+        "thumb": "/photos/ct/litchfield/litchfield-green_thumb.jpg",
+        "title": "Litchfield Green and West Street",
+        "description": "Looking across the Litchfield Green toward the brick West Street commercial block.",
+        "author": "Joe Mabel",
+        "license": "CC BY-SA 3.0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Litchfield,_CT_33_(9374639510).jpg"
+      }
+    ]
+  },
+  "places": [
+    {
+      "slug": "litchfield-history-museum",
+      "name": "Litchfield History Museum",
+      "kind": "museum",
+      "town": "Litchfield",
+      "state": "Connecticut",
+      "county": "Litchfield County",
+      "address": "7 South Street, Litchfield, CT 06759",
+      "official_url": "https://www.litchfieldhistoricalsociety.org/visit/litchfield-history-museum/",
+      "summary": "The Litchfield Historical Society's flagship museum on South Street, covering the town's history with free admission. Open Wednesday-Sunday, 11 a.m.-5 p.m.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "tapping-reeve-house-law-school",
+      "name": "Tapping Reeve House & Litchfield Law School",
+      "kind": "historic-site",
+      "town": "Litchfield",
+      "state": "Connecticut",
+      "county": "Litchfield County",
+      "address": "82 South Street, Litchfield, CT 06759",
+      "official_url": "https://www.litchfieldhistoricalsociety.org/visit/",
+      "summary": "Site of the first law school in the United States, founded by Tapping Reeve in 1784 and operated today by the Litchfield Historical Society. Free admission, Wednesday-Sunday 11 a.m.-5 p.m.; the adjacent Tapping Reeve Meadow is open daily, dawn to dusk.",
+      "status": "open",
+      "photos": [
+        {
+          "src": "/photos/ct/litchfield/tapping-reeve-house.jpg",
+          "thumb": "/photos/ct/litchfield/tapping-reeve-house_thumb.jpg",
+          "title": "Tapping Reeve House and Law School",
+          "description": "The Tapping Reeve House and Law School on South Street, home of the first law school in the United States.",
+          "author": "Daniel Case",
+          "license": "CC BY-SA 3.0",
+          "source_url": "https://commons.wikimedia.org/wiki/File:Tapping_Reeve_House_and_Law_School,_Litchfield,_CT.jpg"
+        }
+      ]
+    },
+    {
+      "slug": "topsmead-state-forest",
+      "name": "Topsmead State Forest",
+      "kind": "park",
+      "town": "Litchfield",
+      "state": "Connecticut",
+      "county": "Litchfield County",
+      "address": "Buell Road, Litchfield, CT 06759",
+      "official_url": "https://ctparks.com/parks/topsmead-state-forest",
+      "summary": "The former 510-acre summer estate of brass heiress Edith Morton Chase, bequeathed to the state at her death in 1972; its centerpiece is her 1925 English Tudor Revival cottage. Open daily, 8 a.m. to sunset, free, with cottage tours on the second and fourth weekends from June through October.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "white-memorial-conservation-center",
+      "name": "White Memorial Conservation Center",
+      "kind": "attraction",
+      "town": "Litchfield",
+      "state": "Connecticut",
+      "county": "Litchfield County",
+      "address": "80 Whitehall Road, Litchfield, CT 06759",
+      "official_url": "https://whitememorialcc.org/",
+      "summary": "An environmental education center and nature museum at the heart of the 4,000-acre White Memorial Foundation, with extensive hiking trails, campgrounds, and boat launches. Museum hours Tuesday-Saturday 9 a.m.-5 p.m., Sunday noon-5 p.m.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "west-street-grill",
+      "name": "West Street Grill",
+      "kind": "restaurant",
+      "town": "Litchfield",
+      "state": "Connecticut",
+      "county": "Litchfield County",
+      "address": "43 West Street, Litchfield, CT 06759",
+      "official_url": "https://weststreetgrill.com/",
+      "summary": "New American, farm-to-table dining room facing the Litchfield green, opened in 1990 by James O'Shea and Charles Kafferman. Closed Monday and Tuesday; lunch and dinner Wednesday-Friday, lunch and dinner Saturday-Sunday.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "arethusa-a-mano",
+      "name": "Arethusa a mano",
+      "kind": "cafe",
+      "town": "Litchfield",
+      "state": "Connecticut",
+      "county": "Litchfield County",
+      "address": "833 Bantam Road, Bantam (Litchfield), CT 06750",
+      "official_url": "https://arethusafarm.com/",
+      "summary": "Bakery cafe on the Arethusa Farm dairy campus in the borough of Bantam, serving fresh-baked goods with Stumptown coffee. Hours Saturday-Sunday 7 a.m.-4 p.m., Monday and Wednesday-Friday 7:30 a.m.-3:30 p.m.; closed Tuesday.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "arethusa-al-tavolo",
+      "name": "Arethusa al tavolo",
+      "kind": "restaurant",
+      "town": "Litchfield",
+      "state": "Connecticut",
+      "county": "Litchfield County",
+      "address": "828 Bantam Road, Bantam (Litchfield), CT 06750",
+      "official_url": "https://arethusafarm.com/",
+      "summary": "Arethusa Farm's dairy-to-table restaurant, recognized on OpenTable's Top 100 in America list. Dinner only, Tuesday-Saturday from 5 p.m.; closed Sunday and Monday.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "litchfield-inn",
+      "name": "The Litchfield Inn",
+      "kind": "hotel",
+      "town": "Litchfield",
+      "state": "Connecticut",
+      "county": "Litchfield County",
+      "official_url": "https://litchfieldinnct.com/",
+      "summary": "A 32-room New England inn with a recently opened Pool & Field House and seasonal Field Club programming on ten acres.",
+      "status": "open",
+      "photos": []
+    }
+  ],
+  "entries": [
+    {
+      "kind": "sight",
+      "name": "Litchfield History Museum",
+      "place_slug": "litchfield-history-museum",
+      "note": "The historical society's free flagship museum on South Street."
+    },
+    {
+      "kind": "sight",
+      "name": "Tapping Reeve House & Litchfield Law School",
+      "place_slug": "tapping-reeve-house-law-school",
+      "note": "The first law school in the United States, founded in 1784."
+    },
+    {
+      "kind": "sight",
+      "name": "Topsmead State Forest",
+      "place_slug": "topsmead-state-forest",
+      "note": "A brass heiress's 1925 Tudor Revival cottage on a 510-acre free state forest."
+    },
+    {
+      "kind": "walk",
+      "name": "White Memorial Conservation Center",
+      "place_slug": "white-memorial-conservation-center",
+      "note": "Nature museum and trails at the heart of a 4,000-acre foundation."
+    },
+    {
+      "kind": "food",
+      "name": "West Street Grill",
+      "place_slug": "west-street-grill",
+      "note": "Farm-to-table New American dining on the green since 1990."
+    },
+    {
+      "kind": "food",
+      "name": "Arethusa a mano",
+      "place_slug": "arethusa-a-mano",
+      "note": "Daytime bakery cafe on the Arethusa Farm campus in Bantam."
+    },
+    {
+      "kind": "food",
+      "name": "Arethusa al tavolo",
+      "place_slug": "arethusa-al-tavolo",
+      "note": "Arethusa Farm's dairy-to-table dinner restaurant, dinner only."
+    },
+    {
+      "kind": "stay",
+      "name": "The Litchfield Inn",
+      "place_slug": "litchfield-inn",
+      "note": "A 32-room inn with a new Pool & Field House."
+    }
+  ],
+  "links": [
+    {
+      "target": "guide:woodbury-ct-travel-guide",
+      "kind": "same-region",
+      "note": null
+    },
+    {
+      "target": "guide:washington-ct-travel-guide",
+      "kind": "same-region",
+      "note": null
+    },
+    {
+      "target": "guide:cornwall-ct-travel-guide",
+      "kind": "same-region",
+      "note": null
+    },
+    {
+      "target": "guide:waterbury-ct-travel-guide",
+      "kind": "same-region",
+      "note": "Waterbury is about a half-hour drive from Litchfield and the nearest Metro-North branch terminus."
+    }
+  ]
+}

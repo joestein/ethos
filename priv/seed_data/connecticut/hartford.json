@@ -1,0 +1,340 @@
+{
+  "guide": {
+    "slug": "hartford-ct-travel-guide",
+    "title": "Hartford, Connecticut: The Constitution State's Capital",
+    "destination": "Hartford, Connecticut",
+    "state": "Connecticut",
+    "county": "Hartford County",
+    "intro": "Hartford was settled in 1636 by Thomas Hooker, John Haynes, and roughly 100 followers from the Massachusetts Bay Colony under the name Newtown; the settlement was renamed Hartford in 1637 in honor of Rev. Samuel Stone's hometown of Hertford, England, and the city incorporated in 1784. On January 14, 1639, the Connecticut General Court adopted the Fundamental Orders, a framework of government for Windsor, Hartford, and Wethersfield that later earned Connecticut its 1959 designation as the Constitution State. By the late nineteenth century, Hartford had grown into the wealthiest city in the country, known as the Insurance Capital of the World and tied to the Colt Manufacturing Company. Mark Twain lived here from 1874 to 1891, writing Adventures of Huckleberry Finn and The Adventures of Tom Sawyer in his Farmington Avenue home. Connecticut's Old State House, attributed to Charles Bulfinch and completed in 1796, hosted all three branches of state government until 1878.",
+    "sections": [
+      {
+        "heading": "Newtown to the Constitution State",
+        "body": "Hartford began in 1636 as Newtown, settled by Thomas Hooker, John Haynes, and about 100 followers from the Massachusetts Bay Colony; it was renamed Hartford the following year for Samuel Stone's hometown of Hertford, England, and the city incorporated in 1784. Hooker's May 31, 1638 sermon helped inspire the Fundamental Orders, adopted by the Connecticut General Court on January 14, 1639 as a framework of government for Windsor, Hartford, and Wethersfield — the document behind Connecticut's 1959 designation as the Constitution State. Connecticut's Old State House, attributed to Charles Bulfinch and completed in 1796, housed all three branches of state government from 1796 to 1878; it hosted the 1818 Constitutional Convention and, on appeal, proceedings connected to the 1839 Amistad case and Prudence Crandall's prosecution. By the late nineteenth century Hartford was the wealthiest city in the country, the Insurance Capital of the World, with ties to the Colt Manufacturing Company."
+      },
+      {
+        "heading": "Getting there",
+        "body": "Drivers reach Hartford at the junction of I-84 and I-91. Hartford Union Station (One Union Place), opened in 1889 and serving 226,436 riders in fiscal year 2025, is served by Amtrak's Hartford Line, Northeast Regional, Valley Flyer, and Vermonter, plus CTrail Hartford Line commuter trains on the New Haven-Springfield corridor, and connects to the CTfastrak bus rapid transit hub. On some dates the Hartford Line runs bus-substituted service for planned construction; check servicealerts.ctrail.com before you travel."
+      },
+      {
+        "heading": "Twain, Stowe, and a relocated dining room",
+        "body": "The Mark Twain House, where Twain lived from 1874 to 1891 and wrote Adventures of Huckleberry Finn and The Adventures of Tom Sawyer, sits near the Harriet Beecher Stowe Center in the Nook Farm neighborhood, the preserved home of the Uncle Tom's Cabin author. The Wadsworth Atheneum, founded in 1842 and open to visitors since 1844, is the oldest continuously operating public art museum in the country, with nearly 50,000 works; it's open Thursday-Friday noon-5 p.m. and Saturday-Sunday 10 a.m.-5 p.m., closed Monday-Wednesday. For dinner, note that Max Downtown's flagship dining room at City Place is temporarily relocated to Bar Max inside the Goodwin Hotel while its kitchen is renovated, a residency that began August 18, 2026 — call ahead if you're set on the usual room."
+      }
+    ],
+    "faq": [
+      {
+        "question": "How do I get to Hartford?",
+        "answer": "Drivers reach Hartford at the junction of I-84 and I-91. Hartford Union Station is served by Amtrak's Hartford Line, Northeast Regional, Valley Flyer, and Vermonter, plus CTrail Hartford Line commuter trains on the New Haven-Springfield corridor. Some Hartford Line trains run bus-substituted service on planned construction dates — check servicealerts.ctrail.com."
+      },
+      {
+        "question": "Why is Hartford called the Insurance Capital of the World?",
+        "answer": "By the late nineteenth century Hartford had become the wealthiest city in the country, with an insurance industry that gave it the nickname; the city's economy was also historically tied to the Colt Manufacturing Company."
+      },
+      {
+        "question": "What did Mark Twain write in Hartford?",
+        "answer": "Twain lived in his Farmington Avenue home from 1874 to 1891 and wrote Adventures of Huckleberry Finn and The Adventures of Tom Sawyer there. The house is a National Historic Landmark that Forbes named 'America's Best House Museum' in 2021."
+      },
+      {
+        "question": "What is Connecticut's Old State House?",
+        "answer": "A National Historic Landmark completed in 1796 and attributed to architect Charles Bulfinch, it housed all three branches of Connecticut government from 1796 to 1878 and hosted the 1818 Constitutional Convention. Open Tuesday-Saturday, noon-5 p.m."
+      },
+      {
+        "question": "Is Max Downtown still open?",
+        "answer": "Yes, but its flagship dining room at City Place is temporarily operating out of Bar Max at the Goodwin Hotel during a kitchen renovation, a residency that began August 18, 2026."
+      },
+      {
+        "question": "Where can I stay in Hartford?",
+        "answer": "The Goodwin Hotel, a boutique hotel in a landmark building dating to 1881, has 124 guestrooms and the on-site Bar Max restaurant and cocktail lounge in the heart of downtown."
+      }
+    ],
+    "photos": [
+      {
+        "src": "/photos/ct/hartford/mark-twain-house.jpg",
+        "thumb": "/photos/ct/hartford/mark-twain-house_thumb.jpg",
+        "title": "The Mark Twain House & Museum",
+        "description": "Golden-hour view of the Mark Twain House & Museum, where Twain lived from 1874 to 1891.",
+        "author": "TrigPhotography",
+        "license": "CC BY-SA 3.0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:The_Sun_Sets_on_the_Mark_Twain_House_and_Museum.jpg"
+      },
+      {
+        "src": "/photos/ct/hartford/old-state-house.jpg",
+        "thumb": "/photos/ct/hartford/old-state-house_thumb.jpg",
+        "title": "Connecticut's Old State House",
+        "description": "Front facade of the 1796 Old State House, attributed to architect Charles Bulfinch.",
+        "author": "Daderot",
+        "license": "Public domain",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Old_State_House,_Hartford_CT_-_front_facade.JPG"
+      },
+      {
+        "src": "/photos/ct/hartford/wadsworth-atheneum.jpg",
+        "thumb": "/photos/ct/hartford/wadsworth-atheneum_thumb.jpg",
+        "title": "Wadsworth Atheneum Museum of Art",
+        "description": "The Gothic Revival main facade of the Wadsworth Atheneum on Main Street.",
+        "author": "Kenneth C. Zirkel",
+        "license": "CC BY-SA 4.0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Wadsworth_Athenaeum,_Hartford,_Connecticut.jpg"
+      }
+    ]
+  },
+  "places": [
+    {
+      "slug": "mark-twain-house-museum",
+      "name": "The Mark Twain House & Museum",
+      "kind": "historic-site",
+      "town": "Hartford",
+      "state": "Connecticut",
+      "county": "Hartford County",
+      "address": "351 Farmington Ave., Hartford, CT 06105",
+      "official_url": "https://marktwainhouse.org/",
+      "summary": "Mark Twain's home from 1874 to 1891, where he wrote Adventures of Huckleberry Finn and The Adventures of Tom Sawyer. A National Historic Landmark that Forbes named 'America's Best House Museum' in 2021. Open daily 9:30 a.m.-5:30 p.m., final tours at 4:15 p.m.",
+      "status": "open",
+      "photos": [
+        {
+          "src": "/photos/ct/hartford/mark-twain-house.jpg",
+          "thumb": "/photos/ct/hartford/mark-twain-house_thumb.jpg",
+          "title": "The Mark Twain House & Museum",
+          "description": "Golden-hour view of the Mark Twain House & Museum, where Twain lived from 1874 to 1891.",
+          "author": "TrigPhotography",
+          "license": "CC BY-SA 3.0",
+          "source_url": "https://commons.wikimedia.org/wiki/File:The_Sun_Sets_on_the_Mark_Twain_House_and_Museum.jpg"
+        }
+      ]
+    },
+    {
+      "slug": "harriet-beecher-stowe-center",
+      "name": "Harriet Beecher Stowe Center",
+      "kind": "historic-site",
+      "town": "Hartford",
+      "state": "Connecticut",
+      "county": "Hartford County",
+      "address": "77 Forest Street, Hartford, CT 06105",
+      "official_url": "https://stowecenter.org/",
+      "summary": "The preserved home of Uncle Tom's Cabin author Harriet Beecher Stowe, near the Mark Twain House in Hartford's Nook Farm neighborhood; the center awards the annual Stowe Prize for Literary Activism. Hours Wed 10:45 a.m.-5 p.m., Thu-Sat 9:45 a.m.-5 p.m.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "wadsworth-atheneum-museum-of-art",
+      "name": "Wadsworth Atheneum Museum of Art",
+      "kind": "museum",
+      "town": "Hartford",
+      "state": "Connecticut",
+      "county": "Hartford County",
+      "address": "600 Main Street, Hartford, CT 06103",
+      "official_url": "https://www.thewadsworth.org/",
+      "summary": "Founded in 1842 by Daniel Wadsworth and open to visitors since 1844, the Wadsworth is the oldest continuously operating public art museum in the United States, with nearly 50,000 works spanning Hudson River School landscapes to Baroque and Surrealist paintings. Open Thursday-Friday noon-5 p.m., Saturday-Sunday 10 a.m.-5 p.m., closed Monday-Wednesday; admission $22 (free for Hartford residents).",
+      "status": "open",
+      "photos": [
+        {
+          "src": "/photos/ct/hartford/wadsworth-atheneum.jpg",
+          "thumb": "/photos/ct/hartford/wadsworth-atheneum_thumb.jpg",
+          "title": "Wadsworth Atheneum Museum of Art",
+          "description": "The Gothic Revival main facade of the Wadsworth Atheneum on Main Street.",
+          "author": "Kenneth C. Zirkel",
+          "license": "CC BY-SA 4.0",
+          "source_url": "https://commons.wikimedia.org/wiki/File:Wadsworth_Athenaeum,_Hartford,_Connecticut.jpg"
+        }
+      ]
+    },
+    {
+      "slug": "connecticuts-old-state-house",
+      "name": "Connecticut's Old State House",
+      "kind": "historic-site",
+      "town": "Hartford",
+      "state": "Connecticut",
+      "county": "Hartford County",
+      "address": "800 Main Street, Hartford, CT 06103",
+      "official_url": "https://wp.cga.ct.gov/osh",
+      "summary": "A National Historic Landmark completed in 1796 and attributed to architect Charles Bulfinch, Connecticut's Old State House housed all three branches of state government from 1796 to 1878 and hosted the 1818 Constitutional Convention. Appellate proceedings connected to the 1839 Amistad case and Prudence Crandall's prosecution were also held here. Open Tuesday-Saturday, noon-5 p.m., last ticket one hour before closing.",
+      "status": "open",
+      "photos": [
+        {
+          "src": "/photos/ct/hartford/old-state-house.jpg",
+          "thumb": "/photos/ct/hartford/old-state-house_thumb.jpg",
+          "title": "Connecticut's Old State House",
+          "description": "Front facade of the 1796 Old State House, attributed to architect Charles Bulfinch.",
+          "author": "Daderot",
+          "license": "Public domain",
+          "source_url": "https://commons.wikimedia.org/wiki/File:Old_State_House,_Hartford_CT_-_front_facade.JPG"
+        }
+      ]
+    },
+    {
+      "slug": "bushnell-center-for-performing-arts",
+      "name": "The Bushnell Center for the Performing Arts",
+      "kind": "theater",
+      "town": "Hartford",
+      "state": "Connecticut",
+      "county": "Hartford County",
+      "address": "166 Capitol Avenue, Hartford, CT 06106",
+      "official_url": "https://bushnell.org/",
+      "summary": "Hartford's principal performing-arts venue, with two theaters — the historic 2,799-seat Mortensen Hall and the 908-seat Belding Theater — hosting the region's touring Broadway series.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "first-and-last-tavern-hartford",
+      "name": "First and Last Tavern",
+      "kind": "restaurant",
+      "town": "Hartford",
+      "state": "Connecticut",
+      "county": "Hartford County",
+      "address": "939 Maple Avenue, Hartford, CT 06114",
+      "official_url": "https://www.firstandlasttavern.com/",
+      "summary": "A Hartford landmark since 1936, known for coal-fired brick-oven pizza and Italian entrees, with additional locations in Plainville and Glastonbury.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "mozzicato-depasquale-bakery-pastry-shop",
+      "name": "Mozzicato DePasquale Bakery & Pastry Shop",
+      "kind": "cafe",
+      "town": "Hartford",
+      "state": "Connecticut",
+      "county": "Hartford County",
+      "address": "329 Franklin Ave, Hartford, CT 06114",
+      "official_url": "https://www.mozzicatobakery.com/",
+      "summary": "A generations-old Italian bakery and pastry shop on Franklin Avenue in Hartford's Italian district, with an adjacent cafe open until midnight Friday and Saturday.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "bears-smokehouse-bbq-hartford",
+      "name": "Bear's Smokehouse BBQ",
+      "kind": "restaurant",
+      "town": "Hartford",
+      "state": "Connecticut",
+      "county": "Hartford County",
+      "address": "25 Front St., Hartford, CT",
+      "official_url": "https://www.bearsbbq.com/",
+      "summary": "The downtown Hartford location of a homegrown Connecticut barbecue group, anchoring the Front Street entertainment district.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "max-downtown-hartford",
+      "name": "Max Downtown",
+      "kind": "restaurant",
+      "town": "Hartford",
+      "state": "Connecticut",
+      "county": "Hartford County",
+      "address": "City Place, 185 Asylum St., Hartford, CT 06103",
+      "official_url": "http://www.maxdowntown.com/",
+      "summary": "The Max Restaurant Group's contemporary fine-dining flagship, normally at City Place on Asylum Street with its own tavern and whiskey bar. During a kitchen renovation, Max Downtown is operating temporarily out of Bar Max at the Goodwin Hotel, a residency that began August 18, 2026 — call ahead to confirm the current dining room.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "goodwin-hotel-hartford",
+      "name": "The Goodwin Hotel",
+      "kind": "hotel",
+      "town": "Hartford",
+      "state": "Connecticut",
+      "county": "Hartford County",
+      "address": "One Haynes Street, Hartford, CT 06103",
+      "official_url": "https://goodwinhartford.com/",
+      "summary": "A boutique hotel in a landmark 19th-century building — standing as 'a landmark of style in the heart of downtown Hartford' since 1881 — with 124 guestrooms and the Bar Max restaurant and cocktail lounge on site, currently also hosting Max Downtown's relocated dining room.",
+      "status": "open",
+      "photos": []
+    }
+  ],
+  "entries": [
+    {
+      "kind": "sight",
+      "name": "The Mark Twain House & Museum",
+      "place_slug": "mark-twain-house-museum",
+      "note": "Twain's home 1874-1891, where he wrote Huckleberry Finn and Tom Sawyer."
+    },
+    {
+      "kind": "sight",
+      "name": "Harriet Beecher Stowe Center",
+      "place_slug": "harriet-beecher-stowe-center",
+      "note": "The Uncle Tom's Cabin author's preserved home in Nook Farm."
+    },
+    {
+      "kind": "sight",
+      "name": "Wadsworth Atheneum Museum of Art",
+      "place_slug": "wadsworth-atheneum-museum-of-art",
+      "note": "The oldest continuously operating public art museum in the US."
+    },
+    {
+      "kind": "sight",
+      "name": "Connecticut's Old State House",
+      "place_slug": "connecticuts-old-state-house",
+      "note": "The 1796 statehouse attributed to Charles Bulfinch."
+    },
+    {
+      "kind": "sight",
+      "name": "The Bushnell Center for the Performing Arts",
+      "place_slug": "bushnell-center-for-performing-arts",
+      "note": "Hartford's principal performing-arts venue and Broadway series host."
+    },
+    {
+      "kind": "food",
+      "name": "First and Last Tavern",
+      "place_slug": "first-and-last-tavern-hartford",
+      "note": "Coal-fired brick-oven pizza, a Hartford landmark since 1936."
+    },
+    {
+      "kind": "food",
+      "name": "Mozzicato DePasquale Bakery & Pastry Shop",
+      "place_slug": "mozzicato-depasquale-bakery-pastry-shop",
+      "note": "Generations-old Italian bakery on Franklin Avenue."
+    },
+    {
+      "kind": "food",
+      "name": "Bear's Smokehouse BBQ",
+      "place_slug": "bears-smokehouse-bbq-hartford",
+      "note": "Connecticut barbecue anchoring the Front Street district."
+    },
+    {
+      "kind": "food",
+      "name": "Max Downtown",
+      "place_slug": "max-downtown-hartford",
+      "note": "Fine-dining flagship, temporarily in residence at Bar Max."
+    },
+    {
+      "kind": "stay",
+      "name": "The Goodwin Hotel",
+      "place_slug": "goodwin-hotel-hartford",
+      "note": "A boutique downtown hotel in an 1881 landmark building."
+    }
+  ],
+  "links": [
+    {
+      "target": "guide:west-hartford-ct-travel-guide",
+      "kind": "nearby",
+      "note": "West Hartford began as Hartford's outlying West Division parish before incorporating separately in 1854."
+    },
+    {
+      "target": "guide:wethersfield-ct-travel-guide",
+      "kind": "nearby",
+      "note": "Wethersfield sits immediately south of Hartford via I-91 Exit 26, about four miles from Union Station."
+    },
+    {
+      "target": "guide:wethersfield-ct-travel-guide",
+      "kind": "shared-history",
+      "note": "Hartford and Wethersfield both trace to the 1639 Fundamental Orders, the framework behind Connecticut's Constitution State nickname."
+    },
+    {
+      "target": "guide:glastonbury-ct-travel-guide",
+      "kind": "same-region",
+      "note": "Glastonbury lies about 7 miles southeast of Hartford, across the Connecticut River."
+    },
+    {
+      "target": "guide:new-haven-ct-travel-guide",
+      "kind": "same-region",
+      "note": "Both sit on the CTrail Hartford Line, which runs Hartford Union Station to New Haven Union Station."
+    },
+    {
+      "target": "guide:meriden-ct-travel-guide",
+      "kind": "same-region",
+      "note": "Both are CTrail Hartford Line stops on the New Haven-Springfield corridor."
+    },
+    {
+      "target": "guide:new-britain-ct-travel-guide",
+      "kind": "shared-history",
+      "note": "Insurance money built Hartford's wealth as manufacturing money built New Britain's — 19th-century industrial neighbors."
+    }
+  ]
+}

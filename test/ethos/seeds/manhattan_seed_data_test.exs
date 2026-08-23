@@ -48,6 +48,7 @@ defmodule Ethos.Seeds.ManhattanSeedDataTest do
     for _pass <- 1..2 do
       Enum.each(files, &DataGuide.upsert_places!/1)
       Enum.each(files, &DataGuide.upsert_guide!(&1, user.email))
+      Enum.each(files, &DataGuide.upsert_links!/1)
     end
 
     manhattan_guides =

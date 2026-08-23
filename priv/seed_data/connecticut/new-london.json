@@ -1,0 +1,286 @@
+{
+  "guide": {
+    "slug": "new-london-ct-travel-guide",
+    "title": "New London, Connecticut: The Whaling City's Harbor",
+    "destination": "New London, Connecticut",
+    "state": "Connecticut",
+    "county": "New London County",
+    "intro": "New London was founded in 1646 by John Winthrop Jr., who named it and its river — the Thames — after England's capital. Incorporated in 1784 as one of Connecticut's first five cities, it served as the colony's first official port and, by the nineteenth century, ranked as New England's second-largest whaling and sealing port by volume, earning the nickname \"The Whaling City.\" The city's history includes hard blows: on September 6, 1781, British forces under the turncoat Benedict Arnold attacked Forts Trumbull and Griswold and burned the town. The schooner Amistad entered New London harbor in late August 1839, an event now commemorated inside the 1833 U.S. Custom House on Bank Street. Playwright Eugene O'Neill spent boyhood summers here at Monte Cristo Cottage. Today the U.S. Coast Guard Academy, Fort Trumbull, and Ocean Beach define a city still built around its harbor.",
+    "sections": [
+      {
+        "heading": "The Whaling City's harbor",
+        "body": "New London was founded in 1646 by John Winthrop Jr., who named it and its river — the Thames — after England's capital. Incorporated in 1784 as one of Connecticut's first five cities, it served as the colony's first official port and, by the nineteenth century, ranked as New England's second-largest whaling and sealing port by volume, earning the nickname \"The Whaling City.\" The city's history includes hard blows: on September 6, 1781, British forces under the turncoat Benedict Arnold attacked Forts Trumbull and Griswold and burned the town. The schooner Amistad entered New London harbor in late August 1839, an event now commemorated inside the 1833 U.S. Custom House on Bank Street — designed by architect Robert Mills and a museum since 1983. Playwright Eugene O'Neill spent boyhood summers here at Monte Cristo Cottage, preserved today by the Eugene O'Neill Theater Center."
+      },
+      {
+        "heading": "Getting there",
+        "body": "Drivers reach New London directly off I-95, with CT Routes 32 and 85 feeding the city. Train travelers arrive at the 1887 H.H. Richardson-designed Union Station (27-35 Water Street), served by about nine Amtrak Northeast Regional trains each direction daily (Acela no longer stops here) and by CTrail Shore Line East commuter trains from New Haven. Cross Sound Ferry connections to Long Island, Fishers Island, and Block Island depart steps from the station."
+      },
+      {
+        "heading": "Forts, museums, and the harborfront",
+        "body": "Fort Trumbull State Park, built 1839-1852 on a site first fortified in 1777, spans more than 225 years of military history on the harbor. The Lyman Allyn Art Museum, founded in 1932, and the Garde Arts Center, a 1926 downtown theater, anchor the arts scene, while Ocean Beach Park offers a city-owned boardwalk on Long Island Sound. Verified lodging inside New London's city limits was sparse when this guide was researched — Groton and Mystic to the east offer verified hotel options a short drive away."
+      }
+    ],
+    "faq": [
+      {
+        "question": "How do I get to New London?",
+        "answer": "Drivers use I-95 with CT Routes 32 and 85 feeding downtown. By rail, Union Station (27-35 Water Street) has about nine Amtrak Northeast Regional trains each direction daily (Acela no longer stops) plus CTrail Shore Line East service from New Haven; Cross Sound Ferry connections depart nearby."
+      },
+      {
+        "question": "Can I take the train from New London to New York?",
+        "answer": "Yes — Amtrak Northeast Regional runs about nine trains each direction daily from Union Station toward New York on the Northeast Corridor. Acela no longer stops at New London."
+      },
+      {
+        "question": "Why is New London called 'The Whaling City'?",
+        "answer": "By volume, New London was New England's second-largest whaling and sealing port in the nineteenth century, a legacy that gave the city its nickname."
+      },
+      {
+        "question": "What happened to New London during the Revolutionary War?",
+        "answer": "On September 6, 1781, British forces commanded by the turncoat Benedict Arnold attacked Forts Trumbull and Griswold and burned the city — the same raid remembered in Groton at Fort Griswold Battlefield State Park."
+      },
+      {
+        "question": "What is the Custom House Maritime Museum?",
+        "answer": "Housed in the 1833 U.S. Custom House on Bank Street, designed by architect Robert Mills, it has been a museum since 1983 and includes a permanent exhibition on the schooner Amistad's 1839 arrival in New London harbor. Open Thursday-Sunday, 1-5 p.m. (Saturday from 10 a.m.)."
+      },
+      {
+        "question": "Where can I stay in New London?",
+        "answer": "Verified lodging directly in New London was limited when this guide was researched; travelers should check current chain listings directly, or consider Groton or Mystic a short drive to the east."
+      }
+    ],
+    "photos": [
+      {
+        "src": "/photos/ct/new-london/union-station.jpg",
+        "thumb": "/photos/ct/new-london/union-station_thumb.jpg",
+        "title": "New London Union Station",
+        "description": "The east facade of the H.H. Richardson-designed Union Station at the foot of State Street.",
+        "author": "Beyond My Ken",
+        "license": "CC BY-SA 4.0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:2022_New_London_Union_Station,_east_facade.jpg"
+      },
+      {
+        "src": "/photos/ct/new-london/state-bank-street-corner.jpg",
+        "thumb": "/photos/ct/new-london/state-bank-street-corner_thumb.jpg",
+        "title": "State Street and Bank Street",
+        "description": "The downtown corner where State Street meets Bank Street in New London.",
+        "author": "Ianolivermartin",
+        "license": "CC BY-SA 4.0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Bank_Street_at_State_Street,_New_London,_Connecticut.jpg"
+      },
+      {
+        "src": "/photos/ct/new-london/fort-trumbull.jpg",
+        "thumb": "/photos/ct/new-london/fort-trumbull_thumb.jpg",
+        "title": "Fort Trumbull State Park",
+        "description": "The granite fort at Fort Trumbull State Park on the Thames River waterfront.",
+        "author": "Giorgio Galeotti",
+        "license": "CC BY-SA 4.0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Fort_Trumbull_-_New_London,_Connecticut,_USA_-_October_2,_2023.jpg"
+      }
+    ]
+  },
+  "places": [
+    {
+      "slug": "fort-trumbull-state-park",
+      "name": "Fort Trumbull State Park",
+      "kind": "historic-site",
+      "town": "New London",
+      "state": "Connecticut",
+      "county": "New London County",
+      "address": "90 Walbach St., New London, CT 06320",
+      "official_url": "https://ctparks.com/node/47",
+      "summary": "The current fort was built 1839-1852 on a site first fortified in 1777 to guard New London Harbor; the original fort was destroyed in Benedict Arnold's 1781 raid. Grounds open daily 8 a.m.-sunset, free; visitor center/fort Wed-Sun 9-5 Memorial Day-Labor Day, adult tickets $6.",
+      "history": "The site spans over 225 years of military history from the Revolution to the Cold War.",
+      "status": "open",
+      "photos": [
+        {
+          "src": "/photos/ct/new-london/fort-trumbull.jpg",
+          "thumb": "/photos/ct/new-london/fort-trumbull_thumb.jpg",
+          "title": "Fort Trumbull State Park",
+          "description": "The granite fort at Fort Trumbull State Park on the Thames River waterfront.",
+          "author": "Giorgio Galeotti",
+          "license": "CC BY-SA 4.0",
+          "source_url": "https://commons.wikimedia.org/wiki/File:Fort_Trumbull_-_New_London,_Connecticut,_USA_-_October_2,_2023.jpg"
+        }
+      ]
+    },
+    {
+      "slug": "lyman-allyn-art-museum",
+      "name": "Lyman Allyn Art Museum",
+      "kind": "museum",
+      "town": "New London",
+      "state": "Connecticut",
+      "county": "New London County",
+      "address": "625 Williams Street, New London, CT 06320",
+      "official_url": "https://www.lymanallyn.org/",
+      "summary": "Founded in 1932, the museum is known for strong collections of American paintings and decorative arts. Open Tuesday-Saturday 10-5, Sunday 1-5.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "garde-arts-center",
+      "name": "Garde Arts Center",
+      "kind": "theater",
+      "town": "New London",
+      "state": "Connecticut",
+      "county": "New London County",
+      "address": "325 State Street, New London, CT 06320",
+      "official_url": "https://gardearts.org/",
+      "summary": "A downtown theater that opened in 1926, celebrating its centennial in 2026. Box office hours Tuesday-Friday 10-5.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "custom-house-maritime-museum",
+      "name": "Custom House Maritime Museum",
+      "kind": "museum",
+      "town": "New London",
+      "state": "Connecticut",
+      "county": "New London County",
+      "address": "150 Bank Street, New London, CT 06320",
+      "official_url": "https://nlmaritimesociety.org/",
+      "summary": "Housed in the 1833 U.S. Custom House designed by architect Robert Mills, a museum since 1983, with a permanent exhibition on the schooner Amistad's arrival in New London harbor in late August 1839. Open Thursday-Sunday 1-5 (Saturday from 10), $10 adults, free for New London residents.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "ocean-beach-park-new-london",
+      "name": "Ocean Beach Park",
+      "kind": "park",
+      "town": "New London",
+      "state": "Connecticut",
+      "county": "New London County",
+      "address": "98 Neptune Ave, New London, CT 06320",
+      "official_url": "https://ocean-beach-park.com/",
+      "summary": "A city-owned beach and boardwalk park with dining, attractions, and live entertainment on Long Island Sound.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "new-london-union-station",
+      "name": "New London Union Station",
+      "kind": "historic-site",
+      "town": "New London",
+      "state": "Connecticut",
+      "county": "New London County",
+      "address": "27-35 Water Street, New London, CT 06320",
+      "summary": "An 1887 station designed by architect H.H. Richardson, served by about nine Amtrak Northeast Regional trains each direction daily and by CTrail Shore Line East, with Cross Sound Ferry connections nearby. Acela no longer stops here.",
+      "status": "open",
+      "photos": [
+        {
+          "src": "/photos/ct/new-london/union-station.jpg",
+          "thumb": "/photos/ct/new-london/union-station_thumb.jpg",
+          "title": "New London Union Station",
+          "description": "The east facade of the H.H. Richardson-designed Union Station at the foot of State Street.",
+          "author": "Beyond My Ken",
+          "license": "CC BY-SA 4.0",
+          "source_url": "https://commons.wikimedia.org/wiki/File:2022_New_London_Union_Station,_east_facade.jpg"
+        }
+      ]
+    },
+    {
+      "slug": "captain-scotts-lobster-dock",
+      "name": "Captain Scott's Lobster Dock",
+      "kind": "restaurant",
+      "town": "New London",
+      "state": "Connecticut",
+      "county": "New London County",
+      "address": "80 Hamilton Street, New London, CT 06320",
+      "official_url": "https://captscotts.com/",
+      "summary": "A family-owned waterfront seafood shack on Shaw's Cove, famous for lobster rolls, operating since 1996 and celebrating 30 years in 2026. Open daily 11 a.m.-8 p.m.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "freds-shanty",
+      "name": "Fred's Shanty",
+      "kind": "restaurant",
+      "town": "New London",
+      "state": "Connecticut",
+      "county": "New London County",
+      "address": "262 & 272 Pequot Ave, New London, CT 06320",
+      "official_url": "https://fredsshanty.com/",
+      "summary": "A Pequot Avenue seafood-and-ice-cream stand and local institution since 1972, serving fried seafood, pizza, subs, and Hershey's ice cream. Daily hours 11 a.m.-8/9 p.m.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "on-the-waterfront-new-london",
+      "name": "On the Waterfront",
+      "kind": "restaurant",
+      "town": "New London",
+      "state": "Connecticut",
+      "county": "New London County",
+      "address": "250 Pequot Avenue, New London, CT 06320",
+      "official_url": "https://onthewaterfrontnl.com/",
+      "summary": "A seafood and Italian restaurant with harbor views, run by Stash Schiavone and Chef Anthony Schiavone.",
+      "status": "open",
+      "photos": []
+    }
+  ],
+  "entries": [
+    {
+      "kind": "sight",
+      "name": "Fort Trumbull State Park",
+      "place_slug": "fort-trumbull-state-park",
+      "note": "225+ years of military history on the harbor, from a site first fortified in 1777."
+    },
+    {
+      "kind": "sight",
+      "name": "Lyman Allyn Art Museum",
+      "place_slug": "lyman-allyn-art-museum",
+      "note": "American paintings and decorative arts since 1932."
+    },
+    {
+      "kind": "sight",
+      "name": "Garde Arts Center",
+      "place_slug": "garde-arts-center",
+      "note": "A 1926 downtown theater marking its centennial."
+    },
+    {
+      "kind": "sight",
+      "name": "Custom House Maritime Museum",
+      "place_slug": "custom-house-maritime-museum",
+      "note": "The 1833 Custom House, with a permanent Amistad exhibition."
+    },
+    {
+      "kind": "sight",
+      "name": "Ocean Beach Park",
+      "place_slug": "ocean-beach-park-new-london",
+      "note": "A city-owned boardwalk beach on Long Island Sound."
+    },
+    {
+      "kind": "sight",
+      "name": "New London Union Station",
+      "place_slug": "new-london-union-station",
+      "note": "An 1887 H.H. Richardson-designed station, still the city's rail hub."
+    },
+    {
+      "kind": "food",
+      "name": "Captain Scott's Lobster Dock",
+      "place_slug": "captain-scotts-lobster-dock",
+      "note": "A waterfront lobster-roll shack on Shaw's Cove since 1996."
+    },
+    {
+      "kind": "food",
+      "name": "Fred's Shanty",
+      "place_slug": "freds-shanty",
+      "note": "A Pequot Avenue seafood stand and local institution since 1972."
+    },
+    {
+      "kind": "food",
+      "name": "On the Waterfront",
+      "place_slug": "on-the-waterfront-new-london",
+      "note": "Family-run seafood and Italian dining with harbor views."
+    }
+  ],
+  "links": [
+    {
+      "target": "guide:groton-ct-travel-guide",
+      "kind": "nearby",
+      "note": "Electric Boat's submarine industry made Groton the 'Submarine Capital of the World' just across the Thames from New London's harbor and Coast Guard Academy."
+    },
+    {
+      "target": "guide:midtown-manhattan-guide",
+      "kind": "see-also",
+      "note": "New London Union Station has about nine Amtrak Northeast Regional trains each direction daily toward New York; Acela no longer stops here."
+    }
+  ]
+}

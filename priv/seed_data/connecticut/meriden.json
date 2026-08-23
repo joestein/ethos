@@ -1,0 +1,300 @@
+{
+  "guide": {
+    "slug": "meriden-ct-travel-guide",
+    "title": "Meriden, Connecticut: Silver City and the Steamed Cheeseburger",
+    "destination": "Meriden, Connecticut",
+    "state": "Connecticut",
+    "county": "New Haven County",
+    "intro": "Meriden, formerly known as North Farms, was incorporated as a town from parts of Wallingford in 1806 and became a city in 1867, named for the village of Meriden in England's West Midlands. The city earned the nickname \"Silver City\" for its dominant silverware industry, established with help from Horace and Dennis Wilcox and firms including the Meriden Britannia Company and the International Silver Company. In 1944, the War Manpower Commission named Meriden \"The Nation's Ideal War Community\" for its industrial and patriotic contributions during World War II. Castle Craig, a 32-foot stone observation tower atop 976-foot East Peak, was built in 1900 and formally presented to the city by philanthropist Walter Hubbard, president of Bradley & Hubbard Manufacturing; Hubbard Park's layout was designed in consultation with the Olmsted Brothers. Meriden's Daffodil Festival, the city's largest community event, has been a tradition in Hubbard Park since 1978.",
+    "sections": [
+      {
+        "heading": "North Farms to the Silver City",
+        "body": "Meriden, formerly known as North Farms, was incorporated as a town from parts of Wallingford in 1806 with just over 1,000 residents, and became a city in 1867 with just under 9,000 residents; it was named for the village of Meriden in England's West Midlands, near Birmingham. The city earned the nickname \"Silver City\" for its dominant silverware industry: Horace and Dennis Wilcox helped establish it, and major firms included the Meriden Britannia Company and the International Silver Company. In 1944, the War Manpower Commission named Meriden \"The Nation's Ideal War Community\" for its industrial and patriotic contributions during World War II. Castle Craig, a 32-foot stone observation tower of native trap rock atop 976-foot East Peak, was built in 1900 and formally presented to the city on October 29, 1900 by philanthropist Walter Hubbard, president of Bradley & Hubbard Manufacturing; Hubbard Park's layout was designed in consultation with the Olmsted Brothers. Meriden's Daffodil Festival, the city's largest community event, has been a tradition in Hubbard Park since 1978."
+      },
+      {
+        "heading": "Getting there",
+        "body": "Meriden sits at the \"Crossroads of Connecticut,\" midway between New York and Boston. Drivers arrive via I-91, I-691 (connecting to I-84), Route 15 (the Wilbur Cross Parkway/Berlin Turnpike), and US 5. The downtown Meriden Transit Center is a stop on the CTrail Hartford Line commuter rail between New Haven, Hartford, and Springfield, with Amtrak's Hartford Line, Northeast Regional, Valley Flyer, and Vermonter service on the same New Haven-Springfield corridor; Meriden has no Metro-North or Shore Line East service."
+      },
+      {
+        "heading": "Steamed cheeseburgers and a stone tower",
+        "body": "Meriden is the hometown of the steamed cheeseburger, a local invention best known through Ted's Restaurant, serving its \"World Famous Steamed Cheeseburgers\" since 1959, and K LaMay's Steamed Cheeseburgers, the city's other beloved counter. The access road to Castle Craig, atop Hubbard Park's East Peak, is open May 10 through October 30, 10 a.m.-5:30 p.m. weather permitting, with the tower top reaching 1,002 feet above sea level. Meriden Green, a 14-acre downtown park opened in September 2016 on a former industrial site, daylights Harbor Brook while doubling as flood-storage infrastructure, a block from the Meriden Transit Center. For lodging, Holiday Inn Express & Suites Meriden near Silver Lake and Red Roof Inn Meriden at the I-91/I-691 interchange are both established options on the north side of town."
+      }
+    ],
+    "faq": [
+      {
+        "question": "How do I get to Meriden?",
+        "answer": "Drivers arrive via I-91, I-691 (to I-84), Route 15/the Wilbur Cross Parkway, or US 5. The Meriden Transit Center has CTrail Hartford Line commuter service plus Amtrak Hartford Line, Northeast Regional, Valley Flyer, and Vermonter trains; there is no Metro-North or Shore Line East service."
+      },
+      {
+        "question": "Why is Meriden called the Silver City?",
+        "answer": "For its dominant nineteenth-century silverware industry, established with help from Horace and Dennis Wilcox and firms including the Meriden Britannia Company and the International Silver Company."
+      },
+      {
+        "question": "What is a steamed cheeseburger?",
+        "answer": "A Meriden invention: a cheeseburger steamed rather than grilled. Ted's Restaurant has served its version since 1959, and K LaMay's Steamed Cheeseburgers is the city's other longtime purveyor."
+      },
+      {
+        "question": "What is Castle Craig?",
+        "answer": "A 32-foot stone observation tower atop Hubbard Park's 976-foot East Peak, built in 1900 and donated by philanthropist Walter Hubbard. The access road is open May 10-October 30, 10 a.m.-5:30 p.m., weather permitting."
+      },
+      {
+        "question": "Where can I stay in Meriden?",
+        "answer": "Holiday Inn Express & Suites Meriden, near Silver Lake, and Red Roof Inn Meriden, at the I-91/I-691 interchange, are Meriden's two verified in-town hotels."
+      }
+    ],
+    "photos": [
+      {
+        "src": "/photos/ct/meriden/castle-craig-tower.jpg",
+        "thumb": "/photos/ct/meriden/castle-craig-tower_thumb.jpg",
+        "title": "Castle Craig, Hubbard Park",
+        "description": "The 1900 stone observation tower atop East Peak in Hubbard Park, Meriden.",
+        "author": "Hallettx",
+        "license": "CC BY-SA 4.0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Castle_Craig_Meriden_CT.jpg"
+      },
+      {
+        "src": "/photos/ct/meriden/meriden-green-harbor-brook.jpg",
+        "thumb": "/photos/ct/meriden/meriden-green-harbor-brook_thumb.jpg",
+        "title": "Harbor Brook in Meriden Green",
+        "description": "Harbor Brook running through the Meriden Green downtown park.",
+        "author": "MConradWard",
+        "license": "CC BY-SA 4.0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Harbor_Brook_in_Meriden_Green_1.jpg"
+      },
+      {
+        "src": "/photos/ct/meriden/downtown-meriden.jpg",
+        "thumb": "/photos/ct/meriden/downtown-meriden_thumb.jpg",
+        "title": "Downtown Meriden",
+        "description": "A street scene in downtown Meriden.",
+        "author": "MConradWard",
+        "license": "CC BY-SA 4.0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Downtown_Meriden_January.jpg"
+      }
+    ]
+  },
+  "places": [
+    {
+      "slug": "hubbard-park-castle-craig",
+      "name": "Hubbard Park & Castle Craig",
+      "kind": "park",
+      "town": "Meriden",
+      "state": "Connecticut",
+      "county": "New Haven County",
+      "address": "999 West Main Street, Meriden, CT 06451",
+      "official_url": "https://www.meridenct.gov/city-services/parks-and-recreation/hubbard-park/",
+      "summary": "An approximately 1,800-acre municipal park donated by Walter Hubbard and laid out in consultation with the Olmsted Brothers; its 1900 stone observation tower, Castle Craig, stands on East Peak at 976 feet, with the tower top reaching 1,002 feet above sea level. Access road open May 10-October 30, 10 a.m.-5:30 p.m., weather permitting.",
+      "history": "Castle Craig was formally presented to the city on October 29, 1900 by philanthropist Walter Hubbard, president of Bradley & Hubbard Manufacturing. Hosts the Daffodil Festival, a tradition since 1978.",
+      "status": "open",
+      "photos": [
+        {
+          "src": "/photos/ct/meriden/castle-craig-tower.jpg",
+          "thumb": "/photos/ct/meriden/castle-craig-tower_thumb.jpg",
+          "title": "Castle Craig, Hubbard Park",
+          "description": "The 1900 stone observation tower atop East Peak in Hubbard Park, Meriden.",
+          "author": "Hallettx",
+          "license": "CC BY-SA 4.0",
+          "source_url": "https://commons.wikimedia.org/wiki/File:Castle_Craig_Meriden_CT.jpg"
+        }
+      ]
+    },
+    {
+      "slug": "meriden-museum-history-center",
+      "name": "Meriden Museum & History Center",
+      "kind": "museum",
+      "town": "Meriden",
+      "state": "Connecticut",
+      "county": "New Haven County",
+      "address": "41 W. Main St., Meriden, CT 06451",
+      "official_url": "https://meridenhistoricalsociety.org/",
+      "summary": "The Meriden Historical Society's downtown museum and research center preserving the Silver City's history; the society also operates the historic Andrews Homestead house museum. Open Tuesday, Wednesday, and Friday, 9-12.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "meriden-green",
+      "name": "Meriden Green",
+      "kind": "park",
+      "town": "Meriden",
+      "state": "Connecticut",
+      "county": "New Haven County",
+      "address": "77 State Street, Meriden, CT",
+      "official_url": "https://www.meridenct.gov/city-services/parks-and-recreation/meriden-green/",
+      "summary": "A 14-acre, $14 million downtown park opened to the public in September 2016 on a former industrial site, featuring a daylighted Harbor Brook, walking trails, and an amphitheater while doubling as flood-storage infrastructure. A block from the Meriden Transit Center.",
+      "status": "open",
+      "photos": [
+        {
+          "src": "/photos/ct/meriden/meriden-green-harbor-brook.jpg",
+          "thumb": "/photos/ct/meriden/meriden-green-harbor-brook_thumb.jpg",
+          "title": "Harbor Brook in Meriden Green",
+          "description": "Harbor Brook running through the Meriden Green downtown park.",
+          "author": "MConradWard",
+          "license": "CC BY-SA 4.0",
+          "source_url": "https://commons.wikimedia.org/wiki/File:Harbor_Brook_in_Meriden_Green_1.jpg"
+        }
+      ]
+    },
+    {
+      "slug": "almira-f-stephan-memorial-playhouse",
+      "name": "Almira F. Stephan Memorial Playhouse (Castle Craig Players)",
+      "kind": "theater",
+      "town": "Meriden",
+      "state": "Connecticut",
+      "county": "New Haven County",
+      "address": "59 West Main Street, Meriden, CT 06451",
+      "official_url": "https://www.castlecraigplayers.org/",
+      "summary": "Home stage of the Castle Craig Players, a community troupe bringing affordable, professional-quality theatre to the greater Meriden community since 1992, performing in an intimate cabaret-style room with table seating.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "teds-restaurant",
+      "name": "Ted's Restaurant",
+      "kind": "restaurant",
+      "town": "Meriden",
+      "state": "Connecticut",
+      "county": "New Haven County",
+      "address": "1046 Broad Street, Meriden, CT 06450",
+      "official_url": "https://www.tedsrestaurant.com/",
+      "summary": "Meriden's signature food institution, serving its \"World Famous Steamed Cheeseburgers\" since 1959 — the steamed cheeseburger is a Meriden invention and Ted's is its best-known purveyor.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "k-lamays-steamed-cheeseburgers",
+      "name": "K LaMay's Steamed Cheeseburgers",
+      "kind": "restaurant",
+      "town": "Meriden",
+      "state": "Connecticut",
+      "county": "New Haven County",
+      "address": "690 East Main Street, Meriden, CT",
+      "official_url": "https://klamayssteamedcheeseburgers.com/",
+      "summary": "The city's other beloved steamed-cheeseburger counter, a local favorite in the dish's hometown, with a second location in Wallingford. Hours Mon-Sat 10:30 a.m.-8 p.m., closed Sunday.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "sakimura-japanese-steakhouse",
+      "name": "Sakimura Japanese Steakhouse",
+      "kind": "restaurant",
+      "town": "Meriden",
+      "state": "Connecticut",
+      "county": "New Haven County",
+      "address": "496 South Broad St., Meriden, CT 06450",
+      "official_url": "https://sakimurameriden.com/",
+      "summary": "Well-regarded local Japanese steakhouse and sushi bar with 8 hibachi tables and daily fresh sushi.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "flavors-of-nawab-meriden",
+      "name": "Flavors of Nawab Restaurant & Banquet Hall",
+      "kind": "restaurant",
+      "town": "Meriden",
+      "state": "Connecticut",
+      "county": "New Haven County",
+      "address": "1835 N Broad St, Meriden, CT",
+      "official_url": "https://www.flavorsofnawab.com/",
+      "summary": "Halal Indian restaurant and banquet hall, one of Meriden's highest-rated independents; also operates an Ellington location.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "holiday-inn-express-suites-meriden",
+      "name": "Holiday Inn Express & Suites Meriden",
+      "kind": "hotel",
+      "town": "Meriden",
+      "state": "Connecticut",
+      "county": "New Haven County",
+      "address": "2104 North Broad Street, Meriden, CT 06450",
+      "summary": "Upper-midscale hotel near Silver Lake with a heated pool, on the US 5/Berlin Turnpike corridor north of downtown.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "red-roof-inn-meriden",
+      "name": "Red Roof Inn Meriden",
+      "kind": "hotel",
+      "town": "Meriden",
+      "state": "Connecticut",
+      "county": "New Haven County",
+      "address": "10 Bee Street, Meriden, CT 06450",
+      "summary": "Budget, smoke-free interstate hotel at the I-91/I-691 junction — the most convenient bed to the highway interchange in town.",
+      "status": "open",
+      "photos": []
+    }
+  ],
+  "entries": [
+    {
+      "kind": "sight",
+      "name": "Hubbard Park & Castle Craig",
+      "place_slug": "hubbard-park-castle-craig",
+      "note": "An 1,800-acre park with the 1900 Castle Craig stone tower on East Peak."
+    },
+    {
+      "kind": "sight",
+      "name": "Meriden Museum & History Center",
+      "place_slug": "meriden-museum-history-center",
+      "note": "The Historical Society's downtown museum on the Silver City's past."
+    },
+    {
+      "kind": "walk",
+      "name": "Meriden Green",
+      "place_slug": "meriden-green",
+      "note": "A 14-acre downtown park with a daylighted Harbor Brook and amphitheater."
+    },
+    {
+      "kind": "sight",
+      "name": "Almira F. Stephan Memorial Playhouse",
+      "place_slug": "almira-f-stephan-memorial-playhouse",
+      "note": "Cabaret-style community theater, home of the Castle Craig Players since 1992."
+    },
+    {
+      "kind": "food",
+      "name": "Ted's Restaurant",
+      "place_slug": "teds-restaurant",
+      "note": "Meriden's signature steamed cheeseburger, served since 1959."
+    },
+    {
+      "kind": "food",
+      "name": "K LaMay's Steamed Cheeseburgers",
+      "place_slug": "k-lamays-steamed-cheeseburgers",
+      "note": "The city's other beloved steamed-cheeseburger counter."
+    },
+    {
+      "kind": "food",
+      "name": "Sakimura Japanese Steakhouse",
+      "place_slug": "sakimura-japanese-steakhouse",
+      "note": "Hibachi and daily fresh sushi on South Broad Street."
+    },
+    {
+      "kind": "food",
+      "name": "Flavors of Nawab Restaurant & Banquet Hall",
+      "place_slug": "flavors-of-nawab-meriden",
+      "note": "Halal Indian restaurant, one of Meriden's top-rated independents."
+    },
+    {
+      "kind": "stay",
+      "name": "Holiday Inn Express & Suites Meriden",
+      "place_slug": "holiday-inn-express-suites-meriden",
+      "note": "Upper-midscale hotel near Silver Lake with a heated pool."
+    },
+    {
+      "kind": "stay",
+      "name": "Red Roof Inn Meriden",
+      "place_slug": "red-roof-inn-meriden",
+      "note": "Budget interstate hotel at the I-91/I-691 junction."
+    }
+  ],
+  "links": [
+    {
+      "target": "guide:hamden-ct-travel-guide",
+      "kind": "same-region",
+      "note": "Both sit along the Route 10 / I-91 corridor north of New Haven."
+    },
+    {
+      "target": "guide:waterbury-ct-travel-guide",
+      "kind": "same-region",
+      "note": "Two central Connecticut manufacturing cities, roughly twenty miles apart."
+    }
+  ]
+}

@@ -103,6 +103,29 @@ defmodule Ethos.Links do
     end
   end
 
+  @doc """
+  Makes `source`'s outgoing edges exactly `links`, dropping any it no longer
+  declares. Seed files are the authority for their own outgoing edges, so
+  re-seeding a corrected file must retire the edge it corrected — `upsert_link!/1`
+  keys on `{source, target, kind}`, so a re-typed edge would otherwise leave the
+  old row behind and the target would render under two headings.
+
+  Callers that also author outgoing edges from these sources (`Ethos.Seeds.BackfillLinks`)
+  must run AFTER this, which is the order `Ethos.Release` and the deploy runbook use.
+  """
+  def replace_outgoing_links!(source, links) do
+    {st, sid} = resolve!(source)
+
+    {:ok, :ok} =
+      Repo.transaction(fn ->
+        Repo.delete_all(from l in Link, where: l.source_type == ^st and l.source_id == ^sid)
+        Enum.each(links, &upsert_link!(Map.put(&1, :source, source)))
+        :ok
+      end)
+
+    :ok
+  end
+
   def delete_links_for(type, id) when type in ["guide", "place"] do
     Repo.delete_all(
       from l in Link,

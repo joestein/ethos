@@ -1,0 +1,278 @@
+{
+  "guide": {
+    "slug": "greenwich-ct-travel-guide",
+    "title": "Greenwich, Connecticut: Twenty-Five Coats and a Harbor Point",
+    "destination": "Greenwich, Connecticut",
+    "state": "Connecticut",
+    "county": "Fairfield County",
+    "intro": "Greenwich's founding families bought the land that is now Old Greenwich from the Siwanoy in 1640, paying twenty-five coats through agents Robert Feake and Captain Daniel Patrick, sent from Watertown, Massachusetts. The area first fell under a New Netherland claim, then joined the New Haven Colony in 1650; the Connecticut General Assembly in Hartford declared it a township, named for Greenwich near London, on May 11, 1665. That same purchase gave Elizabeth Winthrop Feake her own \"particular purchase\" at Greenwich Point, among the earliest instances of a woman individually holding title to real property in the New World. The Revolution reached town in February 1779, when General Israel Putnam eluded British dragoons by riding down today's Put's Hill to rally support in Stamford. By the 1880s, banker J. Kennedy Tod had turned that same point into his private \"Innis Arden\" estate; the town bought it back for the public in 1945.",
+    "sections": [
+      {
+        "heading": "Twenty-five coats and a point of her own",
+        "body": "Greenwich's founding families bought the land that is now Old Greenwich from the Siwanoy in 1640, paying twenty-five coats through agents Robert Feake and Captain Daniel Patrick, sent from Watertown, Massachusetts. The area was first claimed by New Netherland, then joined the New Haven Colony in 1650; the Connecticut General Assembly in Hartford declared it a township, named for Greenwich near London, on May 11, 1665. That same purchase gave Elizabeth Winthrop Feake her own \"particular purchase\" at Greenwich Point — among the earliest instances of a woman individually holding title to real property in the New World. The Revolution reached town on February 26, 1779, when General Israel Putnam eluded British dragoons by riding down today's Put's Hill to rally support in Stamford; the c. 1690 Knapp Tavern where Patriots gathered survives today as Putnam Cottage. By the 1880s, banker J. Kennedy Tod had assembled Greenwich Point into his private \"Innis Arden\" estate; the Town of Greenwich bought it back for the public for $550,000 on January 10, 1945, and Connecticut's Supreme Court overturned its residents-only beach rule in 2001."
+      },
+      {
+        "heading": "Getting there",
+        "body": "Drivers reach Greenwich on I-95 (exits 2-5) or the Merritt Parkway, with U.S. Route 1 (the Post Road) running through town. Car-free travelers use Metro-North's New Haven Line, which stops at four stations in town — Greenwich, Cos Cob, Riverside, and Old Greenwich — about 50 to 60 minutes from Grand Central Terminal. No Amtrak, Shore Line East, or Hartford Line service stops in Greenwich; the nearest Amtrak station is in neighboring Stamford."
+      },
+      {
+        "heading": "A museum, a sanctuary, and the shoreline",
+        "body": "The Bruce Museum on Museum Drive combines art, science, and natural history under one roof. In Cos Cob, the Greenwich Historical Society operates the Bush-Holley House, once the center of the Cos Cob art colony and a landmark of American Impressionism, with tours that also cover the Bush family's Revolutionary-era history from 1777 to 1783. The Greenwich Audubon Center, established in 1943 as the National Audubon Society's first environmental education center in the country, now stewards 686 acres across seven sanctuaries. And Greenwich Point Park — Tod's former estate — remains open to the public year-round for swimming, boating, and walks along Long Island Sound."
+      }
+    ],
+    "faq": [
+      {
+        "question": "How do I get to Greenwich?",
+        "answer": "Drivers use I-95 (exits 2-5), the Merritt Parkway, or U.S. Route 1. Metro-North's New Haven Line stops at four in-town stations — Greenwich, Cos Cob, Riverside, and Old Greenwich — about 50-60 minutes from Grand Central Terminal; there is no Amtrak, Shore Line East, or Hartford Line service here."
+      },
+      {
+        "question": "Why is it called Greenwich Point, or Tod's Point?",
+        "answer": "Banker J. Kennedy Tod assembled the peninsula into his \"Innis Arden\" estate between 1884 and 1887. The Town of Greenwich bought it for $550,000 on January 10, 1945; its residents-only beach rule stood until Connecticut's Supreme Court overturned it in 2001."
+      },
+      {
+        "question": "What is the Bush-Holley House?",
+        "answer": "A house museum in Cos Cob run by the Greenwich Historical Society, central to the Cos Cob art colony and American Impressionism, with tours also covering the Bush family's Revolutionary-era history from 1777 to 1783."
+      },
+      {
+        "question": "When was Greenwich founded?",
+        "answer": "Founding families bought the Old Greenwich area from the Siwanoy in 1640; the Connecticut General Assembly declared Greenwich a township on May 11, 1665."
+      },
+      {
+        "question": "Where can I stay in Greenwich?",
+        "answer": "The Delamar Greenwich Harbor is the waterfront luxury option on Steamboat Road; the Stanton House Inn is a 21-room, family-run 1843 bed & breakfast on Maple Avenue."
+      }
+    ],
+    "photos": [
+      {
+        "src": "/photos/ct/greenwich/greenwich-avenue.jpg",
+        "thumb": "/photos/ct/greenwich/greenwich-avenue_thumb.jpg",
+        "title": "Greenwich Avenue",
+        "description": "A view down Greenwich Avenue, the town's main shopping street.",
+        "author": "Quintin Soloviev",
+        "license": "CC BY 4.0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Greenwich_Ave.jpg"
+      },
+      {
+        "src": "/photos/ct/greenwich/bruce-museum.jpg",
+        "thumb": "/photos/ct/greenwich/bruce-museum_thumb.jpg",
+        "title": "Bruce Museum",
+        "description": "Exterior of the Bruce Museum's expanded wing on Museum Drive.",
+        "author": "ajay_suresh",
+        "license": "CC BY 2.0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:The_New_Bruce.jpg"
+      },
+      {
+        "src": "/photos/ct/greenwich/greenwich-point-beach.jpg",
+        "thumb": "/photos/ct/greenwich/greenwich-point-beach_thumb.jpg",
+        "title": "Greenwich Point Park beach",
+        "description": "The beach at Greenwich Point Park (Tod's Point).",
+        "author": "Jllm06",
+        "license": "CC BY-SA 4.0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Greenwich_Point_Park_3_-_beach.jpg"
+      }
+    ]
+  },
+  "places": [
+    {
+      "slug": "bruce-museum",
+      "name": "Bruce Museum",
+      "kind": "museum",
+      "town": "Greenwich",
+      "state": "Connecticut",
+      "county": "Fairfield County",
+      "address": "1 Museum Drive, Greenwich, CT 06830",
+      "official_url": "https://brucemuseum.org/",
+      "summary": "A combined art, science, and natural-history museum with rotating exhibitions, a cafe, and family and school programs. Open Tuesday-Sunday, 10 a.m. to 5 p.m.",
+      "status": "open",
+      "photos": [
+        {
+          "src": "/photos/ct/greenwich/bruce-museum.jpg",
+          "thumb": "/photos/ct/greenwich/bruce-museum_thumb.jpg",
+          "title": "Bruce Museum",
+          "description": "Exterior of the Bruce Museum's expanded wing on Museum Drive.",
+          "author": "ajay_suresh",
+          "license": "CC BY 2.0",
+          "source_url": "https://commons.wikimedia.org/wiki/File:The_New_Bruce.jpg"
+        }
+      ]
+    },
+    {
+      "slug": "bush-holley-house",
+      "name": "Greenwich Historical Society / Bush-Holley House",
+      "kind": "historic-site",
+      "town": "Greenwich",
+      "state": "Connecticut",
+      "county": "Fairfield County",
+      "address": "47 Strickland Road, Cos Cob, CT 06807",
+      "official_url": "https://greenwichhistory.org/",
+      "summary": "A historic house museum central to the Cos Cob art colony and American Impressionism, with guided tours covering the Bush family's experience during the American Revolution (1777-1783). Open Tuesday-Sunday, 11 a.m. to 4 p.m.",
+      "history": "The center of the Cos Cob art colony, a landmark community of American Impressionism, interpreted today by the Greenwich Historical Society alongside the house's Revolutionary-era Bush family history from 1777 to 1783.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "greenwich-audubon-center",
+      "name": "Greenwich Audubon Center",
+      "kind": "attraction",
+      "town": "Greenwich",
+      "state": "Connecticut",
+      "county": "Fairfield County",
+      "address": "613 Riversville Road, Greenwich, CT 06831",
+      "official_url": "https://www.audubon.org/greenwich",
+      "summary": "Established in 1943 as the National Audubon Society's first environmental education center in the country, the center stewards 686 acres across seven sanctuaries with hiking trails and bird-watching. Nature center open 10 a.m.-4 p.m.; trails sunrise to sunset.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "greenwich-point-park",
+      "name": "Greenwich Point Park (Tod's Point)",
+      "kind": "park",
+      "town": "Greenwich",
+      "state": "Connecticut",
+      "county": "Fairfield County",
+      "official_url": "https://greenwichpoint.org/",
+      "summary": "A roughly 147-acre beach peninsula in Old Greenwich, once banker J. Kennedy Tod's private \"Innis Arden\" estate, open to the public year-round during daylight for swimming, boating, and walks; restored historic buildings on site include the Feake-Ferris House and Innis Arden Cottage.",
+      "history": "Assembled by banker J. Kennedy Tod in 1884-1887 as his private estate; the Town of Greenwich bought it for $550,000 on January 10, 1945, and Connecticut's Supreme Court overturned its residents-only beach rule in 2001.",
+      "status": "open",
+      "photos": [
+        {
+          "src": "/photos/ct/greenwich/greenwich-point-beach.jpg",
+          "thumb": "/photos/ct/greenwich/greenwich-point-beach_thumb.jpg",
+          "title": "Greenwich Point Park beach",
+          "description": "The beach at Greenwich Point Park (Tod's Point).",
+          "author": "Jllm06",
+          "license": "CC BY-SA 4.0",
+          "source_url": "https://commons.wikimedia.org/wiki/File:Greenwich_Point_Park_3_-_beach.jpg"
+        }
+      ]
+    },
+    {
+      "slug": "elm-street-oyster-house",
+      "name": "Elm Street Oyster House",
+      "kind": "restaurant",
+      "town": "Greenwich",
+      "state": "Connecticut",
+      "county": "Fairfield County",
+      "address": "11 West Elm Street, Greenwich, CT 06830",
+      "official_url": "https://www.elmstreetoysterhouse.com/",
+      "summary": "A seafood restaurant with more than 20 years in operation, known for its raw bar with six daily oyster varieties and signature pan-fried oysters.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "ginger-man-greenwich",
+      "name": "The Ginger Man",
+      "kind": "restaurant",
+      "town": "Greenwich",
+      "state": "Connecticut",
+      "county": "Fairfield County",
+      "address": "64 Greenwich Avenue, Greenwich, CT",
+      "official_url": "https://www.gingermangreenwich.com/",
+      "summary": "A longtime tavern-restaurant on Greenwich Avenue with a late-open bar, seven-day service, and online ordering.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "lescale-greenwich",
+      "name": "L'escale",
+      "kind": "restaurant",
+      "town": "Greenwich",
+      "state": "Connecticut",
+      "county": "Fairfield County",
+      "address": "500 Steamboat Road, Greenwich, CT 06830",
+      "official_url": "https://www.lescalerestaurant.com/",
+      "summary": "A French Provencal-style waterfront restaurant at the Delamar Greenwich Harbor hotel, built around 200-year-old terra cotta tiles and a wood-burning fireplace, serving breakfast through dinner plus afternoon tea.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "delamar-greenwich-harbor",
+      "name": "Delamar Greenwich Harbor",
+      "kind": "hotel",
+      "town": "Greenwich",
+      "state": "Connecticut",
+      "county": "Fairfield County",
+      "address": "500 Steamboat Road, Greenwich, CT 06830",
+      "official_url": "https://www.delamar.com/hotels/delamar-greenwich-harbor",
+      "summary": "A waterfront luxury hotel on Greenwich Harbor with an award-winning spa, a marina offering charter cruises, and the French restaurant L'escale on site.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "stanton-house-inn-greenwich",
+      "name": "Stanton House Inn",
+      "kind": "bnb",
+      "town": "Greenwich",
+      "state": "Connecticut",
+      "county": "Fairfield County",
+      "address": "76 Maple Avenue, Greenwich, CT 06830",
+      "official_url": "https://www.stantonhouseinn.com/",
+      "summary": "A 21-room bed & breakfast in an 1843 historic mansion, family-run for 35 years, with complimentary breakfast, free parking, and a seasonal pool.",
+      "status": "open",
+      "photos": []
+    }
+  ],
+  "entries": [
+    {
+      "kind": "sight",
+      "name": "Bruce Museum",
+      "place_slug": "bruce-museum",
+      "note": "Art, science, and natural history under one roof, with rotating exhibitions and a cafe. Tue-Sun, 10-5."
+    },
+    {
+      "kind": "sight",
+      "name": "Bush-Holley House",
+      "place_slug": "bush-holley-house",
+      "note": "The Greenwich Historical Society's house museum at the center of the Cos Cob art colony, with Revolutionary-era Bush family history. Tue-Sun, 11-4."
+    },
+    {
+      "kind": "sight",
+      "name": "Greenwich Audubon Center",
+      "place_slug": "greenwich-audubon-center",
+      "note": "The National Audubon Society's first environmental education center, opened 1943; 686 acres across seven sanctuaries and miles of trails."
+    },
+    {
+      "kind": "sight",
+      "name": "Greenwich Point Park (Tod's Point)",
+      "place_slug": "greenwich-point-park",
+      "note": "147 acres of beach, restored historic buildings, and Long Island Sound views on banker J. Kennedy Tod's former estate."
+    },
+    {
+      "kind": "food",
+      "name": "Elm Street Oyster House",
+      "place_slug": "elm-street-oyster-house",
+      "note": "Six daily oyster varieties and signature pan-fried oysters at a 20-plus-year Greenwich institution."
+    },
+    {
+      "kind": "food",
+      "name": "The Ginger Man",
+      "place_slug": "ginger-man-greenwich",
+      "note": "A Greenwich Avenue tavern-restaurant with a late-open bar, seven nights a week."
+    },
+    {
+      "kind": "food",
+      "name": "L'escale",
+      "place_slug": "lescale-greenwich",
+      "note": "French Provencal waterfront dining at the Delamar, from breakfast through afternoon tea."
+    },
+    {
+      "kind": "stay",
+      "name": "Delamar Greenwich Harbor",
+      "place_slug": "delamar-greenwich-harbor",
+      "note": "Waterfront luxury on Greenwich Harbor, with a spa, marina charters, and L'escale on site."
+    },
+    {
+      "kind": "stay",
+      "name": "Stanton House Inn",
+      "place_slug": "stanton-house-inn-greenwich",
+      "note": "A 21-room, family-run 1843 bed & breakfast with complimentary breakfast and a seasonal pool."
+    }
+  ],
+  "links": [
+    {
+      "target": "guide:midtown-manhattan-guide",
+      "kind": "see-also",
+      "note": "Metro-North's New Haven Line reaches four Greenwich stations in 50-60 minutes from Grand Central Terminal."
+    }
+  ]
+}

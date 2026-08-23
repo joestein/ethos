@@ -92,7 +92,17 @@ Each file's `links` array must include:
 - Optional `see-also` for special cases named in your dispatch (e.g. New
   Haven Line towns → `guide:midtown-manhattan-guide` with a Metro-North
   note).
-- One direction per pair is enough (rendering unions both directions).
+- One direction per pair is enough (rendering unions both directions), and
+  direction is free: links are applied in their own seeding pass, so a file
+  may link to any guide in the run regardless of file order.
+- `nearby` means the two towns **share a border**. Towns that are close but
+  have another town between them (New Haven and Branford, Milford and
+  Bridgeport, Meriden and Waterbury) are `same-region`, not `nearby` — a
+  wave-2 review caught five of these. When you are not certain two towns
+  border each other, use `same-region`.
+- A note attached to an edge is a factual claim like any other: it must
+  trace to the research for one of the two towns. Do not characterise a
+  town's region, nickname, or industry from your own knowledge.
 
 ## Place slugs — GLOBAL uniqueness
 

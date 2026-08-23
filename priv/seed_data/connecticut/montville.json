@@ -1,0 +1,252 @@
+{
+  "guide": {
+    "slug": "montville-ct-travel-guide",
+    "title": "Montville, Connecticut: Mohegan Ground on the Oxoboxo",
+    "destination": "Montville, Connecticut",
+    "state": "Connecticut",
+    "county": "New London County",
+    "intro": "Montville separated from New London and incorporated as its own town in 1786; its name signifies \"mountain village,\" and it now comprises four principal villages — Chesterfield, Mohegan, Oakdale, and Uncasville. Rocky, forested terrain made farming difficult, so the town turned to waterpower instead: early enterprises smelted bog ore into iron, and by the late 1800s manufacturers lined the Oxoboxo River. Montville's deeper history centers on the Mohegan people: in the seventeenth century, sachem Uncas established a fortified village at Fort Shantok above the Thames River, the tribe's principal settlement from 1636 to 1682, which withstood a Narragansett siege there in 1645. Mohegan medicine woman and anthropologist Gladys Tantaquidgeon co-founded the Tantaquidgeon Museum in 1931 with her father and brother; her research later helped the Mohegan Tribe win federal recognition in 1994. The tribe's 700-acre reservation, a sovereign nation within Montville's borders, is now home to the Mohegan Sun casino resort.",
+    "sections": [
+      {
+        "heading": "Mohegan ground on the Oxoboxo",
+        "body": "Montville separated from New London and incorporated as its own town in 1786; its name signifies \"mountain village,\" and it now comprises four principal villages — Chesterfield, Mohegan, Oakdale, and Uncasville. Rocky, forested terrain made farming difficult, so the town turned to waterpower instead: early enterprises smelted bog ore into iron, and by the late 1800s manufacturers lined the Oxoboxo River. Montville's deeper history centers on the Mohegan people: in the seventeenth century, sachem Uncas established a fortified village at Fort Shantok above the Thames River, the tribe's principal settlement from 1636 to 1682, which withstood a Narragansett siege there in 1645. Mohegan medicine woman and anthropologist Gladys Tantaquidgeon co-founded the Tantaquidgeon Museum in 1931 with her father and brother; her research later helped the Mohegan Tribe win federal recognition in 1994."
+      },
+      {
+        "heading": "Getting there",
+        "body": "Montville is a drive-to destination on the west bank of the Thames River, reached via I-395 and CT Route 32 (the Norwich-New London Turnpike). There is no train station in town — the nearest Amtrak service is in New London, about 10 minutes south on Route 32."
+      },
+      {
+        "heading": "Mohegan Sun and the villages beyond",
+        "body": "The tribe's 700-acre reservation, a sovereign nation within Montville's borders, is home to the Mohegan Sun casino resort, opened in 1996 with a 10,000-seat arena and more than 35 restaurants, bars, and cafes. The Tantaquidgeon Museum, the oldest Native American-owned and operated museum in the United States, traces Mohegan heritage from prehistoric times to the present, while Fort Shantok, a National Historic Landmark since 1993, marks the tribe's seventeenth-century settlement above the Thames. Uncasville's Norwich-New London Turnpike carries a strip of longtime local restaurants outside the reservation."
+      }
+    ],
+    "faq": [
+      {
+        "question": "How do I get to Montville?",
+        "answer": "Montville is reached via I-395 and CT Route 32 (the Norwich-New London Turnpike). There is no train station in town; the nearest Amtrak service is in New London, about 10 minutes south on Route 32."
+      },
+      {
+        "question": "What is Mohegan Sun?",
+        "answer": "A casino resort on the sovereign Mohegan reservation within Montville, opened in 1996, with a 10,000-seat arena, more than 35 restaurants, bars, and cafes, an 18-hole golf course, a spa, and 30-plus shops."
+      },
+      {
+        "question": "What is the Tantaquidgeon Museum?",
+        "answer": "The oldest Native American-owned and operated museum in the United States, established in 1931 by Gladys Tantaquidgeon with her brother Harold and father John; its collections trace Mohegan heritage from prehistoric times to the present. Visits are by appointment — call (860) 862-0875 ahead."
+      },
+      {
+        "question": "What is Fort Shantok?",
+        "answer": "The site of the principal Mohegan settlement from 1636 to 1682, associated with sachem Uncas, designated the Fort Shantok Archaeological District, a National Historic Landmark, in 1993, and returned to Mohegan control in 1995."
+      },
+      {
+        "question": "Where can I stay in Montville?",
+        "answer": "Mohegan Sun's Sky Tower and Earth Tower, with about 1,600 rooms and suites combined, are the town's verified lodging option; no independent historic inn or B&B in Montville could be verified as currently operating."
+      }
+    ],
+    "photos": [
+      {
+        "src": "/photos/ct/montville/mohegan-sun-sky-tower.jpg",
+        "thumb": "/photos/ct/montville/mohegan-sun-sky-tower_thumb.jpg",
+        "title": "Mohegan Sun Sky Tower",
+        "description": "The Sky Tower exterior at Mohegan Sun in Uncasville.",
+        "author": "JJBers",
+        "license": "CC BY 4.0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Sky_Tower,_Mohegan_Sun,_Uncasville,_CT.jpg"
+      },
+      {
+        "src": "/photos/ct/montville/fort-shantok-glade.jpg",
+        "thumb": "/photos/ct/montville/fort-shantok-glade_thumb.jpg",
+        "title": "Fort Shantok",
+        "description": "A glade at Fort Shantok on the Mohegan Reservation.",
+        "author": "Magicpiano",
+        "license": "CC BY-SA 4.0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:MoheganRes_FortShantokGlade.jpg"
+      }
+    ]
+  },
+  "places": [
+    {
+      "slug": "tantaquidgeon-museum",
+      "name": "Tantaquidgeon Museum",
+      "kind": "museum",
+      "town": "Montville",
+      "state": "Connecticut",
+      "county": "New London County",
+      "address": "One Church Lane, Uncasville, CT 06382",
+      "official_url": "https://www.mohegan.nsn.us",
+      "summary": "The oldest Native American-owned and operated museum in the United States, established in 1931 by Gladys Tantaquidgeon with her brother Harold and father John; collections trace Mohegan heritage from prehistoric times to the present, with a reconstructed traditional dwelling outdoors. Visits are by appointment — call (860) 862-0875 ahead.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "fort-shantok",
+      "name": "Fort Shantok (Shantok, Village of Uncas)",
+      "kind": "historic-site",
+      "town": "Montville",
+      "state": "Connecticut",
+      "county": "New London County",
+      "address": "Off CT Route 32, Uncasville, CT",
+      "summary": "Site of the principal Mohegan settlement 1636-1682 and sacred ground associated with sachem Uncas; designated the Fort Shantok Archaeological District, a National Historic Landmark, in 1993, and returned from state park ownership to Mohegan control in 1995. The Mohegan Tribe operates the grounds as a local park within the reservation.",
+      "status": "open",
+      "photos": [
+        {
+          "src": "/photos/ct/montville/fort-shantok-glade.jpg",
+          "thumb": "/photos/ct/montville/fort-shantok-glade_thumb.jpg",
+          "title": "Fort Shantok",
+          "description": "A glade at Fort Shantok on the Mohegan Reservation.",
+          "author": "Magicpiano",
+          "license": "CC BY-SA 4.0",
+          "source_url": "https://commons.wikimedia.org/wiki/File:MoheganRes_FortShantokGlade.jpg"
+        }
+      ]
+    },
+    {
+      "slug": "mohegan-sun",
+      "name": "Mohegan Sun",
+      "kind": "attraction",
+      "town": "Montville",
+      "state": "Connecticut",
+      "county": "New London County",
+      "address": "1 Mohegan Sun Boulevard, Uncasville, CT 06382",
+      "official_url": "https://mohegansun.com",
+      "summary": "A casino resort on the sovereign Mohegan reservation within Montville, opened in 1996, with a 10,000-seat arena, more than 35 restaurants, bars, and cafes, an 18-hole golf course, a spa, and 30-plus shops.",
+      "status": "open",
+      "photos": [
+        {
+          "src": "/photos/ct/montville/mohegan-sun-sky-tower.jpg",
+          "thumb": "/photos/ct/montville/mohegan-sun-sky-tower_thumb.jpg",
+          "title": "Mohegan Sun Sky Tower",
+          "description": "The Sky Tower exterior at Mohegan Sun in Uncasville.",
+          "author": "JJBers",
+          "license": "CC BY 4.0",
+          "source_url": "https://commons.wikimedia.org/wiki/File:Sky_Tower,_Mohegan_Sun,_Uncasville,_CT.jpg"
+        }
+      ]
+    },
+    {
+      "slug": "mohegan-sun-sky-earth-towers",
+      "name": "Mohegan Sun (Sky Tower and Earth Tower)",
+      "kind": "hotel",
+      "town": "Montville",
+      "state": "Connecticut",
+      "county": "New London County",
+      "address": "1 Mohegan Sun Boulevard, Uncasville, CT 06382",
+      "official_url": "https://mohegansun.com",
+      "summary": "About 1,600 rooms and suites across two towers at the casino resort, with 35-plus restaurants, a spa, golf, and the 10,000-seat arena on site.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "breakfast-at-dianas",
+      "name": "Breakfast at Diana's",
+      "kind": "restaurant",
+      "town": "Montville",
+      "state": "Connecticut",
+      "county": "New London County",
+      "address": "1100 Norwich-New London Turnpike, Uncasville, CT 06382",
+      "summary": "A beloved local breakfast spot serving home-style meals daily 5:30 a.m.-2 p.m.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "ninos-pizzeria-montville",
+      "name": "Nino's Pizzeria",
+      "kind": "restaurant",
+      "town": "Montville",
+      "state": "Connecticut",
+      "county": "New London County",
+      "address": "1031 Norwich-New London Turnpike, Uncasville, CT 06382",
+      "official_url": "https://www.ninospizzeriauncasville.com/",
+      "summary": "A neighborhood Italian pizzeria known for its alfredo, open seven days.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "michael-jordans-steak-house-montville",
+      "name": "Michael Jordan's Steak House",
+      "kind": "restaurant",
+      "town": "Montville",
+      "state": "Connecticut",
+      "county": "New London County",
+      "address": "1 Mohegan Sun Boulevard, Uncasville, CT 06382",
+      "official_url": "https://mohegansun.com/dining-reservations.html",
+      "summary": "A signature steakhouse inside Mohegan Sun accepting online reservations.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "the-dinosaur-place-montville",
+      "name": "The Dinosaur Place at Nature's Art Village",
+      "kind": "attraction",
+      "town": "Montville",
+      "state": "Connecticut",
+      "county": "New London County",
+      "address": "1650 Hartford-New London Turnpike, Oakdale, CT 06370",
+      "official_url": "https://naturesartvillage.com/",
+      "summary": "Sixty acres of family attraction built around a mile and a half of nature trails lined with more than a hundred life-sized dinosaur sculptures, plus a splash pad, the A-MAZE-asaurus maze, Monty's Playground, a gem-mining and gold-panning Discovery Depot, and an adjoining mini-golf course. Admission is charged; check current pricing before you go.",
+      "status": "open",
+      "photos": []
+    }
+  ],
+  "entries": [
+    {
+      "kind": "sight",
+      "name": "Tantaquidgeon Museum",
+      "place_slug": "tantaquidgeon-museum",
+      "note": "The oldest Native American-owned and operated museum in the U.S."
+    },
+    {
+      "kind": "sight",
+      "name": "Fort Shantok (Shantok, Village of Uncas)",
+      "place_slug": "fort-shantok",
+      "note": "The Mohegan Tribe's principal 17th-century settlement, an NHL since 1993."
+    },
+    {
+      "kind": "sight",
+      "name": "Mohegan Sun",
+      "place_slug": "mohegan-sun",
+      "note": "A casino resort on the sovereign Mohegan reservation."
+    },
+    {
+      "kind": "food",
+      "name": "Breakfast at Diana's",
+      "place_slug": "breakfast-at-dianas",
+      "note": "A beloved local home-style breakfast spot."
+    },
+    {
+      "kind": "food",
+      "name": "Nino's Pizzeria",
+      "place_slug": "ninos-pizzeria-montville",
+      "note": "A neighborhood Italian pizzeria in Uncasville."
+    },
+    {
+      "kind": "food",
+      "name": "Michael Jordan's Steak House",
+      "place_slug": "michael-jordans-steak-house-montville",
+      "note": "A signature steakhouse inside Mohegan Sun."
+    },
+    {
+      "kind": "stay",
+      "name": "Mohegan Sun (Sky Tower and Earth Tower)",
+      "place_slug": "mohegan-sun-sky-earth-towers",
+      "note": "About 1,600 rooms across two resort towers."
+    },
+    {
+      "kind": "sight",
+      "name": "The Dinosaur Place at Nature's Art Village",
+      "place_slug": "the-dinosaur-place-montville",
+      "note": "The one stop in Montville aimed squarely at children, open daily 10am to 6pm with last entry at 5pm."
+    }
+  ],
+  "links": [
+    {
+      "target": "guide:norwich-ct-travel-guide",
+      "kind": "nearby",
+      "note": "Adjoining towns on the Thames; Montville's 19th-century manufacturers worked the Oxoboxo River as Norwich's mills worked its own falls."
+    },
+    {
+      "target": "guide:new-london-ct-travel-guide",
+      "kind": "same-region",
+      "note": "Montville has no train station; the nearest Amtrak service is in New London, about 10 minutes south on Route 32."
+    }
+  ]
+}

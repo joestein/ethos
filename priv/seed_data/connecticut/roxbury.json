@@ -1,0 +1,223 @@
+{
+  "guide": {
+    "slug": "roxbury-ct-travel-guide",
+    "title": "Roxbury, Connecticut: Rocky Water and Mine Hill",
+    "destination": "Roxbury, Connecticut",
+    "state": "Connecticut",
+    "county": "Litchfield County",
+    "intro": "Roxbury was settled in 1713 as part of neighboring Woodbury and incorporated as a separate town in October 1796. Its original name was Shepaug, a Mahican word meaning \"rocky water,\" after the rocky river that still defines the landscape. By the mid-18th century, residents had discovered iron ore and granite at Mine Hill, where a silver-mining operation was later found to hold spathic iron suited to steelmaking; the furnace and quarry ruins visitors see today date to an 1865-1905 iron works, and the Roxbury Iron Mine and Furnace Complex has been listed on the National Register of Historic Places since 1979. Roxbury's residents have ranged from Revolutionary War hero Seth Warner to sculptor Alexander Calder, playwright Arthur Miller, and actress Marilyn Monroe. The 32-building Roxbury Center Historic District preserves the village core.",
+    "sections": [
+      {
+        "heading": "Shepaug to Mine Hill",
+        "body": "What began as a silver-prospecting claim at Mine Hill turned out to hold spathic iron especially suited to steelmaking, and by 1865 the Shepaug Spathic Iron and Steel Company had built the furnace and quarry whose ruins still stand — production continued until 1905. The Roxbury Station Historic District, a legacy of the town's 19th-century Shepaug Valley Railroad era, joined the National Register of Historic Places in 2009. Long before any of that, the town's original name, Shepaug, described the rocky river valley itself: a Mahican word meaning 'rocky water.'"
+      },
+      {
+        "heading": "Getting there",
+        "body": "Roxbury is a drive-to destination in the Litchfield Hills: CT Route 67 is the main road, running roughly 8 miles southeast to Southbury and the I-84 corridor and northwest toward New Milford, with Route 199 running north to Washington and Route 317 running east to Woodbury. Portions of Routes 67 and 317 are designated Connecticut State Scenic Highways. No passenger rail line serves the town."
+      },
+      {
+        "heading": "Where to eat and stay",
+        "body": "Roxbury itself is quiet and residential, and its one confirmed food and drink stop is Mine Hill Distillery, a craft distillery in restored historic-landmark buildings beside Mine Hill Preserve. Fuller dining is a short drive away: G.W. Tavern in Washington Depot, White Horse Country Pub in New Preston/Marbledale, and John's Cafe in Woodbury. No hotel, inn, or B&B could be confirmed within Roxbury; the nearest verified lodging is the Heritage Hotel & Conference Center in neighboring Southbury, about 15 minutes away via CT-67."
+      }
+    ],
+    "faq": [
+      {
+        "question": "How do I get to Roxbury?",
+        "answer": "By car via CT Route 67, which runs southeast to Southbury and the I-84 corridor and northwest toward New Milford, or CT Route 199 north to Washington and CT Route 317 east to Woodbury. There is no passenger rail service to Roxbury."
+      },
+      {
+        "question": "What is Mine Hill Preserve?",
+        "answer": "An 1860s iron-making complex with furnace ruins and a granite quarry, listed on the National Register of Historic Places, with a roughly 3-mile moderate loop trail through the historic mining landscape."
+      },
+      {
+        "question": "Did Marilyn Monroe live in Roxbury?",
+        "answer": "Yes — Roxbury's notable residents span centuries, from Revolutionary War hero Seth Warner to sculptor Alexander Calder, playwright Arthur Miller, and actress Marilyn Monroe."
+      },
+      {
+        "question": "Where can I eat in Roxbury?",
+        "answer": "Mine Hill Distillery's tasting room is the one confirmed spot in town. For a fuller meal, G.W. Tavern (Washington Depot), White Horse Country Pub (New Preston/Marbledale), and John's Cafe (Woodbury) are all a short drive away."
+      },
+      {
+        "question": "Is there a hotel or inn in Roxbury?",
+        "answer": "No lodging could be confirmed within Roxbury itself — it's a residential, rural town. The nearest verified option is the Heritage Hotel & Conference Center in Southbury, about 15 minutes away."
+      }
+    ],
+    "photos": [
+      {
+        "src": "/photos/ct/roxbury/congregational-church.jpg",
+        "thumb": "/photos/ct/roxbury/congregational-church_thumb.jpg",
+        "title": "Roxbury Congregational Church",
+        "description": "The white Greek Revival Roxbury Congregational Church, viewed from CT Route 67.",
+        "author": "Pedro Xing",
+        "license": "CC0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Roxbury_Congregational_Church_075.JPG"
+      },
+      {
+        "src": "/photos/ct/roxbury/mine-hill-furnace.jpg",
+        "thumb": "/photos/ct/roxbury/mine-hill-furnace_thumb.jpg",
+        "title": "Mine Hill iron furnace ruins",
+        "description": "The stone blast-furnace ruins of the Roxbury Iron Mine and Furnace Complex at Mine Hill Preserve.",
+        "author": "Magicpiano",
+        "license": "CC BY-SA 3.0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:RoxburyCT_IronFurnace_1.jpg"
+      },
+      {
+        "src": "/photos/ct/roxbury/town-hall.jpg",
+        "thumb": "/photos/ct/roxbury/town-hall_thumb.jpg",
+        "title": "Roxbury Town Hall",
+        "description": "Roxbury Town Hall's pedimented portico across the green from CT Route 67.",
+        "author": "Pedro Xing",
+        "license": "CC0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Roxbury_Town_Hall_021.JPG"
+      }
+    ]
+  },
+  "places": [
+    {
+      "slug": "mine-hill-preserve",
+      "name": "Mine Hill Preserve",
+      "kind": "historic-site",
+      "town": "Roxbury",
+      "state": "Connecticut",
+      "county": "Litchfield County",
+      "address": "6 Mine Hill Road, Roxbury, CT 06783",
+      "official_url": "https://www.roxburylandtrust.org/",
+      "summary": "An 1860s iron-making complex with furnace ruins and a granite quarry, part of the Roxbury Iron Mine and Furnace Complex listed on the National Register of Historic Places since 1979, with a roughly 3-mile moderate loop trail through the historic mining landscape.",
+      "status": "open",
+      "photos": [
+        {
+          "src": "/photos/ct/roxbury/mine-hill-furnace.jpg",
+          "thumb": "/photos/ct/roxbury/mine-hill-furnace_thumb.jpg",
+          "title": "Mine Hill iron furnace ruins",
+          "description": "The stone blast-furnace ruins of the Roxbury Iron Mine and Furnace Complex at Mine Hill Preserve.",
+          "author": "Magicpiano",
+          "license": "CC BY-SA 3.0",
+          "source_url": "https://commons.wikimedia.org/wiki/File:RoxburyCT_IronFurnace_1.jpg"
+        }
+      ]
+    },
+    {
+      "slug": "roxbury-land-trust",
+      "name": "Roxbury Land Trust preserves",
+      "kind": "park",
+      "town": "Roxbury",
+      "state": "Connecticut",
+      "county": "Litchfield County",
+      "official_url": "https://www.roxburylandtrust.org/",
+      "summary": "The trust protects roughly 4,000 acres across more than 32 preserves in Roxbury, with about 30 miles of free public hiking trails through woodlands, farms, and the Shepaug River valley.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "minor-memorial-library-gallery",
+      "name": "Minor Memorial Library Gallery",
+      "kind": "attraction",
+      "town": "Roxbury",
+      "state": "Connecticut",
+      "county": "Litchfield County",
+      "official_url": "https://www.minormemoriallibrary.org/",
+      "summary": "Roxbury's public library doubles as a community arts venue: its gallery and Community Studio host exhibitions by locally and nationally known artists, plus concerts, book sales, and workshops. Closed Tuesday and Sunday.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "roxbury-center-historic-district",
+      "name": "Roxbury Center Historic District",
+      "kind": "historic-site",
+      "town": "Roxbury",
+      "state": "Connecticut",
+      "county": "Litchfield County",
+      "summary": "The village center is a designated local historic district containing 32 buildings — an easy walk or drive-through snapshot of a classic Litchfield Hills town green.",
+      "status": "open",
+      "photos": [
+        {
+          "src": "/photos/ct/roxbury/town-hall.jpg",
+          "thumb": "/photos/ct/roxbury/town-hall_thumb.jpg",
+          "title": "Roxbury Town Hall",
+          "description": "Roxbury Town Hall's pedimented portico across the green from CT Route 67.",
+          "author": "Pedro Xing",
+          "license": "CC0",
+          "source_url": "https://commons.wikimedia.org/wiki/File:Roxbury_Town_Hall_021.JPG"
+        }
+      ]
+    },
+    {
+      "slug": "mine-hill-distillery",
+      "name": "Mine Hill Distillery",
+      "kind": "brewery",
+      "town": "Roxbury",
+      "state": "Connecticut",
+      "county": "Litchfield County",
+      "address": "5 Mine Hill Rd, Roxbury, CT 06783",
+      "official_url": "https://minehilldistillery.com/",
+      "summary": "A craft distillery making small-batch bourbon and other spirits from Connecticut grains and local well water, in restored historic-landmark buildings beside Mine Hill Preserve. Tasting room open daily, noon-5 p.m., walk-ins welcome.",
+      "status": "open",
+      "photos": []
+    }
+  ],
+  "entries": [
+    {
+      "kind": "sight",
+      "name": "Mine Hill Preserve",
+      "place_slug": "mine-hill-preserve",
+      "note": "1860s furnace ruins and a granite quarry, NRHP-listed since 1979."
+    },
+    {
+      "kind": "walk",
+      "name": "Mine Hill Preserve trail",
+      "place_slug": "mine-hill-preserve",
+      "note": "A roughly 3-mile moderate loop through the historic mining landscape."
+    },
+    {
+      "kind": "walk",
+      "name": "Roxbury Land Trust preserves",
+      "place_slug": "roxbury-land-trust",
+      "note": "About 30 miles of free trails across more than 32 preserves."
+    },
+    {
+      "kind": "sight",
+      "name": "Minor Memorial Library Gallery",
+      "place_slug": "minor-memorial-library-gallery",
+      "note": "The town library's gallery hosts rotating art exhibitions."
+    },
+    {
+      "kind": "walk",
+      "name": "Roxbury Center Historic District",
+      "place_slug": "roxbury-center-historic-district",
+      "note": "A 32-building village core, easy to walk or drive through."
+    },
+    {
+      "kind": "food",
+      "name": "Mine Hill Distillery",
+      "place_slug": "mine-hill-distillery",
+      "note": "Small-batch spirits in restored historic buildings, tastings daily."
+    }
+  ],
+  "links": [
+    {
+      "target": "guide:washington-ct-travel-guide",
+      "kind": "nearby",
+      "note": null
+    },
+    {
+      "target": "guide:new-milford-ct-travel-guide",
+      "kind": "nearby",
+      "note": null
+    },
+    {
+      "target": "guide:southbury-ct-travel-guide",
+      "kind": "nearby",
+      "note": null
+    },
+    {
+      "target": "guide:woodbury-ct-travel-guide",
+      "kind": "nearby",
+      "note": null
+    },
+    {
+      "target": "guide:woodbury-ct-travel-guide",
+      "kind": "shared-history",
+      "note": "Roxbury was settled in 1713 as part of Woodbury before incorporating separately in 1796."
+    }
+  ]
+}

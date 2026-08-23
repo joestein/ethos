@@ -1,0 +1,253 @@
+{
+  "guide": {
+    "slug": "putnam-ct-travel-guide",
+    "title": "Putnam, Connecticut: Mill Town Turned Antiques Capital",
+    "destination": "Putnam, Connecticut",
+    "state": "Connecticut",
+    "county": "Windham County",
+    "intro": "Putnam was originally known as Aspinock and was incorporated in 1855 from sections of Killingly, Pomfret, and Thompson, taking its name from Revolutionary War hero General Israel Putnam. The Quinebaug River powered the town's growth: grist and saw mills served local farmers through the mid-1700s, and by incorporation several large cotton mills lined the river alongside a new rail line. In August 1955, hurricanes Connie and Diane brought torrential rain across Connecticut within a week of each other; the resulting flood destroyed homes, businesses, and factories in Putnam and washed away the railroad bed, accelerating the decline of the town's mill economy. Putnam reinvented itself by filling its empty mills with antique dealers, and beginning in the early 2000s many of those shops gave way to restaurants and a walkable Main Street arts district — the character the town keeps today.",
+    "sections": [
+      {
+        "heading": "From Aspinock to antiques",
+        "body": "The land along the Quinebaug River was first developed by grist and saw mills serving local farms in the mid-1700s. By 1855, when the town incorporated as Putnam — named for Revolutionary War hero General Israel Putnam — cotton mills and a rail line had already arrived, and the town became a manufacturing center supplying goods for Civil War soldiers. That mill economy ended abruptly in August 1955, when hurricanes Connie and Diane dropped heavy rain across Connecticut within a week of each other; the resulting flood destroyed homes, businesses, and factories in Putnam and washed away the railroad bed. The town's empty mill buildings found a second life as an antiques center, and beginning in the early 2000s many antique shops were replaced by restaurants and a small arts community — the walkable Main Street that visitors find today. Textile executive George Morse's mansion and the River Mills Heritage Trail, which interprets six former factory sites, still trace that manufacturing past."
+      },
+      {
+        "heading": "Getting there",
+        "body": "Putnam is a drive-to destination in the Quiet Corner: Interstate 395 is the main north-south corridor through town, and US Route 44 is the principal east-west route, with Routes 12, 21, and 171 feeding Main Street. There is no passenger rail station in Putnam. The nearest rail service is Union Station in Worcester, Massachusetts, about 30 miles north, with Amtrak's Lake Shore Limited and MBTA commuter rail to Boston; New London Union Station, about 45 miles south, offers Amtrak Northeast Regional trains and CTrail Shore Line East. The Northeastern Connecticut Transit District runs local bus service connecting Putnam to ten other Quiet Corner towns."
+      },
+      {
+        "heading": "Where to eat and stay",
+        "body": "Downtown Putnam's Main Street carries the town's dining, from 85 Main's fusion menu and raw bar to Blackstone Putnam's steakhouse plates, Courthouse Bar & Grille's pub fare, and Bear Hands Brewing's taproom of house beers and ciders. Putnam has no hotel, inn, or B&B of its own; the closest confirmed options are the Inn at Woodstock Hill, about seven miles west in neighboring Woodstock, and the Quiet Corner Inn in Brooklyn."
+      }
+    ],
+    "faq": [
+      {
+        "question": "How do I get to Putnam?",
+        "answer": "By car — Interstate 395 is the main north-south corridor, and US Route 44 the principal east-west route, with Routes 12, 21, and 171 feeding Main Street. There is no passenger rail station in Putnam; the nearest rail service is in Worcester, MA (about 30 miles north) or New London Union Station (about 45 miles south)."
+      },
+      {
+        "question": "Why is Putnam known for antiques?",
+        "answer": "After the town's textile mills declined, empty mill buildings were filled with antique dealers. Beginning in the early 2000s many of those shops gave way to restaurants and a small arts community along Main Street."
+      },
+      {
+        "question": "What happened to Putnam in 1955?",
+        "answer": "Hurricanes Connie and Diane brought heavy rain to Connecticut within a week of each other that August; the resulting flood destroyed homes, businesses, and factories in Putnam and washed away the railroad bed."
+      },
+      {
+        "question": "Is there a train to Putnam?",
+        "answer": "No — there is no passenger rail station in Putnam. The nearest rail service is Union Station in Worcester, Massachusetts (about 30 miles north) or New London Union Station (about 45 miles south)."
+      },
+      {
+        "question": "Where can I stay near Putnam?",
+        "answer": "Putnam has no hotel, inn, or B&B of its own. The closest confirmed options are the Inn at Woodstock Hill, about seven miles west in neighboring Woodstock, and the Quiet Corner Inn in Brooklyn."
+      }
+    ],
+    "photos": [
+      {
+        "src": "/photos/ct/putnam/downtown-putnam.jpg",
+        "thumb": "/photos/ct/putnam/downtown-putnam_thumb.jpg",
+        "title": "Downtown Putnam",
+        "description": "Elevated view of downtown Putnam's Main Street rooftops above the Quinebaug River.",
+        "author": "JJBers",
+        "license": "CC BY-SA 4.0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:PutnamCT.jpg"
+      },
+      {
+        "src": "/photos/ct/putnam/quinebaug-river-falls-putnam.jpg",
+        "thumb": "/photos/ct/putnam/quinebaug-river-falls-putnam_thumb.jpg",
+        "title": "Falls on the Quinebaug River",
+        "description": "The dam and falls on the Quinebaug River in Putnam.",
+        "author": "JimiLH (Jim L'Heureux)",
+        "license": "CC BY-SA 4.0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Falls_on_the_Quinebaug_River_in_Putnam,_CT._10192021_-_Jimiphoto.jpg"
+      },
+      {
+        "src": "/photos/ct/putnam/bradley-playhouse-putnam.jpg",
+        "thumb": "/photos/ct/putnam/bradley-playhouse-putnam_thumb.jpg",
+        "title": "Bradley Playhouse",
+        "description": "The Bradley Playhouse marquee amid Putnam's Main Street antiques storefronts.",
+        "author": "John Phelan",
+        "license": "CC BY 4.0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Bradley_Playhouse,_Putnam_CT.jpg"
+      }
+    ]
+  },
+  "places": [
+    {
+      "slug": "bradley-playhouse",
+      "name": "The Bradley Playhouse",
+      "kind": "theater",
+      "town": "Putnam",
+      "state": "Connecticut",
+      "county": "Windham County",
+      "address": "30 Front Street, Putnam, CT 06260",
+      "official_url": "https://www.thebradleyplayhouse.org/",
+      "summary": "A former vaudeville theater in downtown Putnam, now home to a local performing arts company staging a full season of plays and musicals.",
+      "status": "open",
+      "photos": [
+        {
+          "src": "/photos/ct/putnam/bradley-playhouse-putnam.jpg",
+          "thumb": "/photos/ct/putnam/bradley-playhouse-putnam_thumb.jpg",
+          "title": "Bradley Playhouse",
+          "description": "The Bradley Playhouse marquee amid Putnam's Main Street antiques storefronts.",
+          "author": "John Phelan",
+          "license": "CC BY 4.0",
+          "source_url": "https://commons.wikimedia.org/wiki/File:Bradley_Playhouse,_Putnam_CT.jpg"
+        }
+      ]
+    },
+    {
+      "slug": "putnam-river-trail",
+      "name": "Putnam River Trail",
+      "kind": "park",
+      "town": "Putnam",
+      "state": "Connecticut",
+      "county": "Windham County",
+      "address": "Trailhead parking along Kennedy Drive, Putnam, CT 06260",
+      "official_url": "https://www.putnamct.us/visit-us/putnam-river-trail",
+      "summary": "A paved 2.7-mile multi-use path along the Quinebaug River, built in 1998 and extended in 2009 and 2016, with five parking areas and five bridges offering river views.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "the-complex-performing-creative-arts-centre",
+      "name": "The Complex Performing & Creative Arts Centre",
+      "kind": "theater",
+      "town": "Putnam",
+      "state": "Connecticut",
+      "county": "Windham County",
+      "address": "135 Main St., Putnam, CT 06260",
+      "official_url": "https://www.thecpac.org/",
+      "summary": "A Main Street community arts school and conservatory-style training program in dance, theatre, music, and creative arts, which stages its own seasonal productions.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "aspinock-historical-society-of-putnam",
+      "name": "Aspinock Historical Society of Putnam",
+      "kind": "museum",
+      "town": "Putnam",
+      "state": "Connecticut",
+      "county": "Windham County",
+      "address": "Suite 250, Putnam Municipal Complex, 200 School St., Putnam, CT 06260",
+      "official_url": "https://putnamaspinockhistsoc.com/",
+      "summary": "Founded in 1972, this nonprofit runs a research center and museum of Putnam's mill-town history, with re-enactors, lectures, and community tours. Open Tuesday-Thursday, 10 a.m.-2 p.m., and Saturdays by appointment.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "85-main",
+      "name": "85 Main",
+      "kind": "restaurant",
+      "town": "Putnam",
+      "state": "Connecticut",
+      "county": "Windham County",
+      "address": "85 Main Street, Putnam, CT 06260",
+      "official_url": "https://www.85main.com/",
+      "summary": "Downtown Putnam's best-known dining room, open since 2005, serving American fusion cuisine with a raw bar and sushi alongside New American plates.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "blackstone-putnam",
+      "name": "Blackstone Putnam",
+      "kind": "restaurant",
+      "town": "Putnam",
+      "state": "Connecticut",
+      "county": "Windham County",
+      "address": "35 Main Street, Putnam, CT 06260",
+      "official_url": "https://blackstoneputnam.com/",
+      "summary": "A steakhouse-leaning restaurant on Main Street, open since 2024, known for food flights, land-and-sea plates, and a seasonal outdoor bar and patio.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "courthouse-bar-grille",
+      "name": "Courthouse Bar & Grille",
+      "kind": "restaurant",
+      "town": "Putnam",
+      "state": "Connecticut",
+      "county": "Windham County",
+      "address": "121 Main Street, Putnam, CT 06260",
+      "official_url": "https://www.courthousebarandgrille.com/",
+      "summary": "A long-running Main Street pub-restaurant serving burgers, wraps, steaks, and pasta, with rotating draft beers and weekly promotions.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "bear-hands-brewing-company",
+      "name": "Bear Hands Brewing Company",
+      "kind": "brewery",
+      "town": "Putnam",
+      "state": "Connecticut",
+      "county": "Windham County",
+      "address": "75 Main Street, Suite 1, Putnam, CT 06260",
+      "official_url": "https://bearhandsbrewing.com/",
+      "summary": "Putnam's downtown production brewery and taproom, pouring roughly a dozen house beers and ciders, with weekly trivia in the lounge.",
+      "status": "open",
+      "photos": []
+    }
+  ],
+  "entries": [
+    {
+      "kind": "sight",
+      "name": "The Bradley Playhouse",
+      "place_slug": "bradley-playhouse",
+      "note": "A former vaudeville theater staging a full season of plays and musicals."
+    },
+    {
+      "kind": "walk",
+      "name": "Putnam River Trail",
+      "place_slug": "putnam-river-trail",
+      "note": "A paved 2.7-mile path along the Quinebaug River."
+    },
+    {
+      "kind": "sight",
+      "name": "The Complex Performing & Creative Arts Centre",
+      "place_slug": "the-complex-performing-creative-arts-centre",
+      "note": "A community arts school staging its own seasonal productions."
+    },
+    {
+      "kind": "sight",
+      "name": "Aspinock Historical Society of Putnam",
+      "place_slug": "aspinock-historical-society-of-putnam",
+      "note": "Research center and museum of Putnam's mill-town history."
+    },
+    {
+      "kind": "food",
+      "name": "85 Main",
+      "place_slug": "85-main",
+      "note": "American fusion cuisine with a raw bar, open since 2005."
+    },
+    {
+      "kind": "food",
+      "name": "Blackstone Putnam",
+      "place_slug": "blackstone-putnam",
+      "note": "Steakhouse-leaning Main Street newcomer with a seasonal patio."
+    },
+    {
+      "kind": "food",
+      "name": "Courthouse Bar & Grille",
+      "place_slug": "courthouse-bar-grille",
+      "note": "Long-running Main Street pub-restaurant."
+    },
+    {
+      "kind": "food",
+      "name": "Bear Hands Brewing Company",
+      "place_slug": "bear-hands-brewing-company",
+      "note": "Downtown production brewery and taproom."
+    }
+  ],
+  "links": [
+    {
+      "target": "guide:pomfret-ct-travel-guide",
+      "kind": "nearby",
+      "note": "US Route 44 runs directly from Pomfret into Putnam."
+    },
+    {
+      "target": "guide:woodstock-ct-travel-guide",
+      "kind": "nearby",
+      "note": "The drive into Woodstock begins at I-395 Exit 47 in Putnam."
+    }
+  ]
+}

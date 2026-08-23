@@ -1,0 +1,309 @@
+{
+  "guide": {
+    "slug": "vernon-ct-travel-guide",
+    "title": "Vernon, Connecticut: Rockville's Woolen-Mill Legacy",
+    "destination": "Vernon, Connecticut",
+    "state": "Connecticut",
+    "county": "Tolland County",
+    "intro": "Vernon was incorporated in October 1808 out of the town of Bolton and named for George Washington's Mount Vernon estate. Its industrial history centers on the Hockanum River, where the Rock Manufacturing Company built the river's first mill and gave rise to a woolen-goods industry that created the city of Rockville. Rockville's first textile mill went up in 1821 beside a natural stone formation called “the Rock”; by 1836 the settlement's population had reached 440, and its mills eventually grew prestigious enough that three U.S. presidents chose Rockville-made cloth for their inauguration suits. Rockville incorporated as its own city in January 1889 and was consolidated back into Vernon in January 1965. Today Vernon also encompasses the mill village of Talcottville, founded in 1802 by English immigrant John Warburton, whose cotton mill was the first financially successful one in Connecticut.",
+    "sections": [
+      {
+        "heading": "Mount Vernon's name, the Hockanum's mills",
+        "body": "Vernon was carved out of Bolton and incorporated in October 1808, taking its name from George Washington's Mount Vernon estate. The Rock Manufacturing Company built the first mill on the Hockanum River, launching a woolen-goods industry that grew into the city of Rockville — Rockville's first mill went up in 1821 beside a natural stone formation called 'the Rock,' and by 1836 the settlement's population had reached 440. Rockville incorporated as a separate city in January 1889 and consolidated back into Vernon in January 1965; at its height, three U.S. presidents chose Rockville-made woolen cloth for their inauguration suits. Painter Charles Ethan Porter, one of the first African Americans to exhibit at New York's National Academy of Design, moved to Rockville with his family in the early 1850s and died there in poverty at 75. The mill village of Talcottville, founded in 1802 by English immigrant John Warburton, was home to Connecticut's first financially successful cotton mill; the Talcott brothers took over in 1856 and ran it until 1940."
+      },
+      {
+        "heading": "Getting there",
+        "body": "Vernon is a drive-to town: Interstate 84 cuts straight through it, with exits 63, 64, and 65 feeding Routes 30 and 83 toward Rockville and Vernon Center. There is no passenger rail station in Vernon or Rockville; rail travelers use the CTrail Hartford Line to Hartford Union Station, the nearest stop, and finish the trip by car. Vernon's own railroad heritage survives only as recreation: the former Hartford, Providence and Fishkill line, whose last train ran in 1970, is now the Hop River State Park Trail and Vernon's Rails to Trails."
+      },
+      {
+        "heading": "Trails, food, and where to stay",
+        "body": "Vernon's Rails to Trails follows the old rail bed for 5.10 miles, with a 4.1-mile Rockville Spur crossing the Tankerhoosen River on a footbridge completed in 1998; beyond Vernon's line with Bolton, the corridor continues as the Hop River State Park Trail. For food, Rein's New York Style Deli-Restaurant near I-84 Exit 65 has served hot pastrami and cheesecake since 1972, while the Vernon Diner and Beni's Restaurant round out the town's sit-down options. No historic inn or B&B could be verified inside Vernon; lodging here means highway hotels near I-84, including a Holiday Inn Express and a Travelodge by Wyndham."
+      }
+    ],
+    "faq": [
+      {
+        "question": "How do I get to Vernon?",
+        "answer": "By car — Interstate 84 runs through Vernon, with exits 63, 64, and 65 feeding Routes 30 and 83 toward Rockville and Vernon Center. There is no passenger rail station in Vernon; the nearest CTrail Hartford Line stop is Hartford Union Station."
+      },
+      {
+        "question": "Is Rockville part of Vernon?",
+        "answer": "Yes — Rockville was a separate city from 1889 to 1965, when it consolidated into the Town of Vernon. It remains Vernon's historic mill-town center, along with the smaller village of Talcottville."
+      },
+      {
+        "question": "What is Rein's Deli known for?",
+        "answer": "Connecticut's best-known Jewish delicatessen, founded in 1972, serving hot pastrami and corned beef on rye, hand-cut lox, and New York cheesecake near I-84 Exit 65."
+      },
+      {
+        "question": "Where can I hike or bike in Vernon?",
+        "answer": "Vernon's Rails to Trails follows the former Hartford, Providence and Fishkill rail bed for 5.10 miles, with a 4.1-mile Rockville Spur; Valley Falls Park, a 196-acre town park, also has hiking and fishing."
+      },
+      {
+        "question": "Is there lodging in Vernon?",
+        "answer": "No historic inn or B&B could be verified inside Vernon. Lodging is limited to highway hotels near I-84, including a Holiday Inn Express and a Travelodge by Wyndham."
+      }
+    ],
+    "photos": [
+      {
+        "src": "/photos/ct/vernon/memorial-building-rockville.jpg",
+        "thumb": "/photos/ct/vernon/memorial-building-rockville_thumb.jpg",
+        "title": "Memorial Building, Rockville",
+        "description": "The 1889 Memorial Building on Rockville's Central Park.",
+        "author": "John Phelan",
+        "license": "CC BY-SA 4.0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Memorial_Building,_Rockville_CT.jpg"
+      },
+      {
+        "src": "/photos/ct/vernon/talcott-park-rockville.jpg",
+        "thumb": "/photos/ct/vernon/talcott-park-rockville_thumb.jpg",
+        "title": "Talcott Park, Rockville",
+        "description": "The walking path through Rockville's downtown green in autumn.",
+        "author": "John Phelan",
+        "license": "CC BY 4.0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Talcott_Park,_Rockville_CT.jpg"
+      },
+      {
+        "src": "/photos/ct/vernon/hop-river-trail-cut-vernon.jpg",
+        "thumb": "/photos/ct/vernon/hop-river-trail-cut-vernon_thumb.jpg",
+        "title": "Hop River State Park Trail",
+        "description": "The former railbed running through a rock cut on the Hop River Trail.",
+        "author": "John Phelan",
+        "license": "CC BY 4.0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Hop_River_State_Park_Trail_cut,_Vernon_CT.jpg"
+      }
+    ]
+  },
+  "places": [
+    {
+      "slug": "new-england-civil-war-museum",
+      "name": "New England Civil War Museum",
+      "kind": "museum",
+      "town": "Vernon",
+      "state": "Connecticut",
+      "county": "Tolland County",
+      "address": "14 Park Place, Vernon, CT 06066",
+      "official_url": "https://newenglandcivilwarmuseum.com/",
+      "summary": "Housed in the same building as Vernon Town Hall, the museum interprets the citizen soldier's Civil War experience through letters, diaries, photographs, and discharge papers. Open weekends, 10 a.m. to 3 p.m.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "valley-falls-park",
+      "name": "Valley Falls Park",
+      "kind": "park",
+      "town": "Vernon",
+      "state": "Connecticut",
+      "county": "Tolland County",
+      "address": "Valley Falls Road, Vernon, CT 06066",
+      "official_url": "https://www.vernon-ct.gov/page/valley-falls-park/",
+      "summary": "A 196-acre town park and nature preserve with hiking, fishing, and picnic areas. Across the road, the 1850s Valley Falls Farm operates seasonally as a Heritage Center with self-guided and guided tours on select weekends.",
+      "history": "Christian Sharps, inventor of the Sharps Rifle, bought the 150-acre property in 1871 and ran a trout-breeding operation there until his death in 1874; the Vernon Fire District purchased the original parcel around 1962, with more acreage donated to the town in 1972.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "vernon-historical-society-museum",
+      "name": "Vernon Historical Society Museum",
+      "kind": "museum",
+      "town": "Vernon",
+      "state": "Connecticut",
+      "county": "Tolland County",
+      "address": "734 Hartford Turnpike (Route 30), Vernon, CT 06066",
+      "official_url": "http://www.vernonhistoricalsoc.org/",
+      "summary": "A volunteer-run museum and research repository preserving Vernon and Rockville's history, with digitized runs of The Rockville Journal, World War II letters, and oral histories. Open Thursdays, 10 a.m.-noon and 2-4 p.m., plus select Sundays.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "arts-center-east",
+      "name": "Arts Center East",
+      "kind": "attraction",
+      "town": "Vernon",
+      "state": "Connecticut",
+      "county": "Tolland County",
+      "address": "709 Hartford Turnpike, Vernon, CT 06066",
+      "official_url": "https://artscentereast.org/",
+      "summary": "A community arts organization with two free-admission galleries showing rotating juried exhibitions, plus art classes and a gift shop. Gallery hours Thursday-Saturday, 1-5 p.m.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "vernon-rails-to-trails",
+      "name": "Vernon Rails to Trails",
+      "kind": "park",
+      "town": "Vernon",
+      "state": "Connecticut",
+      "county": "Tolland County",
+      "summary": "A multi-use greenway along the former Hartford, Providence and Fishkill rail bed — 5.10 miles from the Manchester town line into Rockville, plus a 4.1-mile Rockville Spur crossing the Tankerhoosen River on a footbridge completed in 1998. Beyond Vernon's line with Bolton, the route continues as the Hop River State Park Trail.",
+      "status": "open",
+      "photos": [
+        {
+          "src": "/photos/ct/vernon/hop-river-trail-cut-vernon.jpg",
+          "thumb": "/photos/ct/vernon/hop-river-trail-cut-vernon_thumb.jpg",
+          "title": "Hop River State Park Trail",
+          "description": "The former railbed running through a rock cut on the Hop River Trail.",
+          "author": "John Phelan",
+          "license": "CC BY 4.0",
+          "source_url": "https://commons.wikimedia.org/wiki/File:Hop_River_State_Park_Trail_cut,_Vernon_CT.jpg"
+        }
+      ]
+    },
+    {
+      "slug": "reins-deli",
+      "name": "Rein's New York Style Deli-Restaurant",
+      "kind": "restaurant",
+      "town": "Vernon",
+      "state": "Connecticut",
+      "county": "Tolland County",
+      "address": "435 Hartford Turnpike, Vernon, CT 06066",
+      "official_url": "https://www.reinsdeli.com/",
+      "summary": "Connecticut's best-known Jewish delicatessen, founded in 1972 by Bob and Betty Rein with Bob's brother Bernie, serving hot pastrami and corned beef on rye, hand-cut lox, and New York cheesecake. Open daily, 8 a.m. to 8 p.m.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "vernon-diner",
+      "name": "Vernon Diner",
+      "kind": "restaurant",
+      "town": "Vernon",
+      "state": "Connecticut",
+      "county": "Tolland County",
+      "address": "453 Hartford Turnpike, Vernon, CT 06066",
+      "official_url": "https://www.vernondiner.com/",
+      "summary": "A New York-style diner established in 2000 on the site of the former Olympic Diner, serving breakfast, lunch, and dinner with a renovated, climate-controlled outdoor patio.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "benis-restaurant",
+      "name": "Beni's Restaurant, Bar & Banquet",
+      "kind": "restaurant",
+      "town": "Vernon",
+      "state": "Connecticut",
+      "county": "Tolland County",
+      "address": "1280 Hartford Turnpike, Vernon Rockville, CT 06066",
+      "official_url": "https://www.benisct.com/",
+      "summary": "A family- and locally owned American comfort-food restaurant with pasta, burgers, and steaks, plus private banquet rooms and full-service catering.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "between-rounds-bakery-vernon",
+      "name": "Between Rounds Bakery Sandwich Cafe",
+      "kind": "cafe",
+      "town": "Vernon",
+      "state": "Connecticut",
+      "county": "Tolland County",
+      "address": "Vernon Circle Shopping Center, Vernon, CT 06066",
+      "official_url": "https://betweenroundsbagels.com/locations/between-rounds-bagels-vernon/",
+      "summary": "The Vernon shop of a small Connecticut bagel bakery and sandwich cafe operating in five area towns. Open daily from early morning.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "holiday-inn-express-vernon",
+      "name": "Holiday Inn Express Vernon - Manchester",
+      "kind": "hotel",
+      "town": "Vernon",
+      "state": "Connecticut",
+      "county": "Tolland County",
+      "address": "346 Kelly Road, Vernon, CT 06066",
+      "official_url": "https://www.ihg.com/holidayinnexpress/hotels/us/en/vernon/verct/hoteldetail",
+      "summary": "A highway hotel just off I-84 with an indoor pool, a gym, and complimentary parking. Pets are not permitted.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "travelodge-vernon",
+      "name": "Travelodge by Wyndham Vernon CT",
+      "kind": "hotel",
+      "town": "Vernon",
+      "state": "Connecticut",
+      "county": "Tolland County",
+      "address": "51 Hartford Tpke, Vernon, CT 06066",
+      "official_url": "https://www.wyndhamhotels.com/travelodge/vernon-connecticut/travelodge-vernon-ct/overview",
+      "summary": "A budget, pet-friendly hotel off I-84, positioned for trips to UConn and Six Flags New England, about 22 miles from Bradley International Airport.",
+      "status": "open",
+      "photos": []
+    }
+  ],
+  "entries": [
+    {
+      "kind": "sight",
+      "name": "New England Civil War Museum",
+      "place_slug": "new-england-civil-war-museum",
+      "note": "Letters, diaries, and photographs from Civil War veterans."
+    },
+    {
+      "kind": "walk",
+      "name": "Valley Falls Park",
+      "place_slug": "valley-falls-park",
+      "note": "196-acre town park with hiking, fishing, and picnic areas."
+    },
+    {
+      "kind": "sight",
+      "name": "Vernon Historical Society Museum",
+      "place_slug": "vernon-historical-society-museum",
+      "note": "Local archive on Vernon and Rockville's history."
+    },
+    {
+      "kind": "sight",
+      "name": "Arts Center East",
+      "place_slug": "arts-center-east",
+      "note": "Two free galleries of rotating juried exhibitions."
+    },
+    {
+      "kind": "walk",
+      "name": "Vernon Rails to Trails",
+      "place_slug": "vernon-rails-to-trails",
+      "note": "5.10 miles on the former Hartford, Providence and Fishkill rail bed."
+    },
+    {
+      "kind": "food",
+      "name": "Rein's New York Style Deli-Restaurant",
+      "place_slug": "reins-deli",
+      "note": "Connecticut's best-known Jewish deli, since 1972."
+    },
+    {
+      "kind": "food",
+      "name": "Vernon Diner",
+      "place_slug": "vernon-diner",
+      "note": "New York-style diner with a retractable-roof patio."
+    },
+    {
+      "kind": "food",
+      "name": "Beni's Restaurant, Bar & Banquet",
+      "place_slug": "benis-restaurant",
+      "note": "American comfort food and full-service catering."
+    },
+    {
+      "kind": "food",
+      "name": "Between Rounds Bakery Sandwich Cafe",
+      "place_slug": "between-rounds-bakery-vernon",
+      "note": "Connecticut-grown bagel bakery and sandwich cafe."
+    },
+    {
+      "kind": "stay",
+      "name": "Holiday Inn Express Vernon - Manchester",
+      "place_slug": "holiday-inn-express-vernon",
+      "note": "Highway hotel just off I-84 with an indoor pool."
+    },
+    {
+      "kind": "stay",
+      "name": "Travelodge by Wyndham Vernon CT",
+      "place_slug": "travelodge-vernon",
+      "note": "Budget, pet-friendly hotel off I-84."
+    }
+  ],
+  "links": [
+    {
+      "target": "guide:storrs-ct-travel-guide",
+      "kind": "same-region",
+      "note": "Both sit along the I-84 corridor in Connecticut's northeast."
+    },
+    {
+      "target": "guide:hartford-ct-travel-guide",
+      "kind": "same-region",
+      "note": "Hartford Union Station, reached via I-84, is the nearest passenger rail stop to Vernon."
+    }
+  ]
+}
