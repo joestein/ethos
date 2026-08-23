@@ -1,0 +1,264 @@
+{
+  "guide": {
+    "slug": "morningside-heights-manhattan-guide",
+    "title": "Morningside Heights, Manhattan: The Academic Acropolis",
+    "destination": "Morningside Heights, New York",
+    "state": "New York",
+    "county": "Manhattan",
+    "intro": "As early as 1738 this plateau was known as Vandewater Heights; Morningside Heights became the standard name only after 1898, once Morningside Park (completed 1895) settled a contest against rivals like Bloomingdale and Cathedral Heights. For most of the 19th century the land was dominated by the Bloomingdale Insane Asylum and the Leake and Watts Orphan Asylum, whose grounds Columbia University and the Episcopal Diocese bought between 1888 and 1891. Columbia's new campus opened in 1897, joined by Teachers College, Barnard, and the Union and Jewish Theological Seminaries, earning the nickname Academic Acropolis. The subway arrived in October 1904, and St. John the Divine laid its cornerstone in 1892; still two-thirds finished, it is nicknamed St. John the Unfinished. In 1968, Columbia's plan for a gymnasium with separate entrances in Morningside Park triggered a student occupation; trustees cancelled it in 1969, and the excavation became the park's pond and waterfall in 1993.",
+    "sections": [
+      {
+        "heading": "From Farmland and Asylums to the Academic Acropolis",
+        "body": "The Battle of Harlem Heights was fought here on September 16, 1776, with the fiercest fighting in a wheat field on the site of today's Barnard College. The plateau stayed largely institutional through the 19th century — home to the Bloomingdale Insane Asylum (opened 1821) and the Leake and Watts Orphan Asylum — until their land was sold to Columbia University and the Episcopal Diocese of New York between 1888 and 1891. Columbia's new campus welcomed its first classes in October 1897, and within a decade the surrounding blocks held Teachers College, Barnard College, Union Theological Seminary, Jewish Theological Seminary, St. Luke's Hospital, and Woman's Hospital, earning the neighborhood its nickname, the Academic Acropolis. The Cathedral of St. John the Divine, whose cornerstone was laid December 27, 1892, remains only about two-thirds complete and ranks as the fourth-largest Christian cathedral in the world."
+      },
+      {
+        "heading": "Getting there by subway",
+        "body": "The neighborhood is served by a single line, the 1 train on the IRT Broadway-Seventh Avenue Line, which opened here in October 1904. Take it to 116th Street-Columbia University for the campus core, Cathedral Parkway-110th Street for the cathedral and Morningside Park's south end, or 125th Street for the north end near Riverside Church and Grant's Tomb."
+      }
+    ],
+    "faq": [
+      {
+        "question": "How do I get to Morningside Heights by subway?",
+        "answer": "Take the 1 train to 116th Street-Columbia University for the campus, Cathedral Parkway-110th Street for St. John the Divine and Morningside Park, or 125th Street for Riverside Church and Grant's Tomb."
+      },
+      {
+        "question": "Why is it called the Academic Acropolis?",
+        "answer": "By the early 1900s the plateau held Columbia University (new campus opened 1897), Teachers College, Barnard College, Union Theological Seminary, Jewish Theological Seminary, and two hospitals — a concentration of institutions that earned it the nickname."
+      },
+      {
+        "question": "Is the Cathedral of St. John the Divine finished?",
+        "answer": "No. Its cornerstone was laid in 1892, and it remains about two-thirds complete, earning the nickname St. John the Unfinished; it is nonetheless the fourth-largest Christian cathedral in the world."
+      },
+      {
+        "question": "What happened with Columbia's gym in Morningside Park?",
+        "answer": "In 1968 Columbia planned a gymnasium in the park with separate entrances that protesters saw as circumventing civil rights law, triggering a student building occupation; trustees cancelled the project in March 1969, and the excavated site became the park's ornamental pond and waterfall, completed in 1993."
+      },
+      {
+        "question": "Where can I stay in Morningside Heights?",
+        "answer": "No hotel or bed-and-breakfast currently operates within Morningside Heights itself; travelers typically base themselves nearby on the Upper West Side or in Harlem."
+      }
+    ],
+    "photos": [
+      {
+        "src": "/photos/ny/manhattan/morningside-heights/cathedral.jpg",
+        "thumb": "/photos/ny/manhattan/morningside-heights/cathedral_thumb.jpg",
+        "title": "Cathedral of St. John the Divine",
+        "description": "The west front and tower of the still-unfinished cathedral.",
+        "author": "Dimcherney",
+        "license": "CC BY-SA 4.0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Cathedral_of_St._John_the_Divine_Front_and_Tower.jpg"
+      },
+      {
+        "src": "/photos/ny/manhattan/morningside-heights/columbia.jpg",
+        "thumb": "/photos/ny/manhattan/morningside-heights/columbia_thumb.jpg",
+        "title": "Columbia University",
+        "description": "Low Memorial Library and the campus plaza.",
+        "author": "King of Hearts",
+        "license": "CC BY-SA 4.0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Columbia_University_New_York_November_2016_002.jpg"
+      },
+      {
+        "src": "/photos/ny/manhattan/morningside-heights/riverside-church.jpg",
+        "thumb": "/photos/ny/manhattan/morningside-heights/riverside-church_thumb.jpg",
+        "title": "The Riverside Church",
+        "description": "The church's tower, the tallest in North America.",
+        "author": "Epicgenius",
+        "license": "CC BY-SA 4.0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Riverside_Church_Mar_2026_24.jpg"
+      },
+      {
+        "src": "/photos/ny/manhattan/morningside-heights/grants-tomb.jpg",
+        "thumb": "/photos/ny/manhattan/morningside-heights/grants-tomb_thumb.jpg",
+        "title": "General Grant National Memorial",
+        "description": "The front elevation of Grant's Tomb on Riverside Drive.",
+        "author": "King of Hearts",
+        "license": "CC BY-SA 4.0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:General_Grant_National_Memorial_New_York_November_2016_001.jpg"
+      }
+    ]
+  },
+  "places": [
+    {
+      "slug": "cathedral-of-st-john-the-divine",
+      "name": "Cathedral of St. John the Divine",
+      "kind": "historic-site",
+      "town": "Morningside Heights",
+      "state": "New York",
+      "county": "Manhattan",
+      "address": "1047 Amsterdam Avenue at 112th Street, New York, NY",
+      "official_url": "https://www.stjohndivine.org/",
+      "summary": "Cornerstone laid December 27, 1892; ranks as the fourth-largest Christian cathedral in the world and remains only about two-thirds complete, earning the nickname St. John the Unfinished. Confirm hours directly before visiting.",
+      "status": "open",
+      "photos": [
+        {
+          "src": "/photos/ny/manhattan/morningside-heights/cathedral.jpg",
+          "thumb": "/photos/ny/manhattan/morningside-heights/cathedral_thumb.jpg",
+          "title": "Cathedral of St. John the Divine",
+          "description": "The west front and tower of the still-unfinished cathedral.",
+          "author": "Dimcherney",
+          "license": "CC BY-SA 4.0",
+          "source_url": "https://commons.wikimedia.org/wiki/File:Cathedral_of_St._John_the_Divine_Front_and_Tower.jpg"
+        }
+      ]
+    },
+    {
+      "slug": "the-riverside-church",
+      "name": "The Riverside Church",
+      "kind": "historic-site",
+      "town": "Morningside Heights",
+      "state": "New York",
+      "county": "Manhattan",
+      "address": "490 Riverside Drive, New York, NY 10027",
+      "official_url": "https://www.trcnyc.org/visit/",
+      "summary": "Home to the tallest church tower in North America, with skyline-view tower tours and an active carillon program. Open to visitors Wednesday-Sunday, 9 a.m.-5 p.m.",
+      "status": "open",
+      "photos": [
+        {
+          "src": "/photos/ny/manhattan/morningside-heights/riverside-church.jpg",
+          "thumb": "/photos/ny/manhattan/morningside-heights/riverside-church_thumb.jpg",
+          "title": "The Riverside Church",
+          "description": "The church's tower, the tallest in North America.",
+          "author": "Epicgenius",
+          "license": "CC BY-SA 4.0",
+          "source_url": "https://commons.wikimedia.org/wiki/File:Riverside_Church_Mar_2026_24.jpg"
+        }
+      ]
+    },
+    {
+      "slug": "general-grant-national-memorial",
+      "name": "General Grant National Memorial",
+      "kind": "historic-site",
+      "town": "Morningside Heights",
+      "state": "New York",
+      "county": "Manhattan",
+      "address": "Riverside Drive at West 122nd Street, New York, NY",
+      "official_url": "https://www.nps.gov/gegr/index.htm",
+      "summary": "The largest mausoleum in North America, entombing President Ulysses S. Grant and Julia Grant; Grant's remains lay in a temporary vault for 12 years before the mausoleum was completed. No entrance fee. Open Wednesday-Sunday, 10 a.m.-5 p.m.",
+      "status": "open",
+      "photos": [
+        {
+          "src": "/photos/ny/manhattan/morningside-heights/grants-tomb.jpg",
+          "thumb": "/photos/ny/manhattan/morningside-heights/grants-tomb_thumb.jpg",
+          "title": "General Grant National Memorial",
+          "description": "The front elevation of Grant's Tomb on Riverside Drive.",
+          "author": "King of Hearts",
+          "license": "CC BY-SA 4.0",
+          "source_url": "https://commons.wikimedia.org/wiki/File:General_Grant_National_Memorial_New_York_November_2016_001.jpg"
+        }
+      ]
+    },
+    {
+      "slug": "morningside-park",
+      "name": "Morningside Park",
+      "kind": "park",
+      "town": "Morningside Heights",
+      "state": "New York",
+      "county": "Manhattan",
+      "address": "W 110th St to W 123rd St, between Morningside Drive and Morningside Avenue, New York, NY",
+      "official_url": "https://www.nycgovparks.org/parks/morningside-park",
+      "summary": "A 30-acre park designed by Frederick Law Olmsted and Calvert Vaux, opened in 1895 and designated a NYC scenic landmark in 2008; its pond and waterfall, completed in 1993, occupy the site of a cancelled 1968 Columbia gymnasium.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "toms-restaurant",
+      "name": "Tom's Restaurant",
+      "kind": "restaurant",
+      "town": "Morningside Heights",
+      "state": "New York",
+      "county": "Manhattan",
+      "address": "2880 Broadway at W 112th Street, New York, NY",
+      "summary": "Greek-American diner founded in the 1940s by Tom Glikas, now run by the Zoulis family; its exterior stood in for Monk's Cafe on Seinfeld and inspired Suzanne Vega's song 'Tom's Diner.'",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "the-hungarian-pastry-shop",
+      "name": "The Hungarian Pastry Shop",
+      "kind": "cafe",
+      "town": "Morningside Heights",
+      "state": "New York",
+      "county": "Manhattan",
+      "address": "1030 Amsterdam Avenue (between W 110th and 111th Streets), New York, NY 10025",
+      "summary": "No-wifi literary cafe founded in 1961, run by the Binioris family since 1976; books written there include Sebastian Junger's 'The Perfect Storm' and Ta-Nehisi Coates's 'Between the World and Me.'",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "le-monde",
+      "name": "Le Monde",
+      "kind": "restaurant",
+      "town": "Morningside Heights",
+      "state": "New York",
+      "county": "Manhattan",
+      "address": "2885 Broadway, New York, NY 10025",
+      "official_url": "https://www.lemondenyc.com/",
+      "summary": "Classic French brasserie serving the Morningside Heights community since 1998 — escargot, steak tartare, house-made crepes — with weekday happy hour 4-7 p.m.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "pisticci",
+      "name": "Pisticci",
+      "kind": "restaurant",
+      "town": "Morningside Heights",
+      "state": "New York",
+      "county": "Manhattan",
+      "address": "125 La Salle Street, New York, NY 10027",
+      "official_url": "https://www.pisticcinyc.com/",
+      "summary": "Neighborhood Italian trattoria near the 125th Street 1 train, serving weekday lunch, nightly dinner, and weekend brunch under the motto 'A tavola non si invecchia.'",
+      "status": "open",
+      "photos": []
+    }
+  ],
+  "entries": [
+    {
+      "kind": "sight",
+      "name": "Cathedral of St. John the Divine",
+      "place_slug": "cathedral-of-st-john-the-divine",
+      "note": "The still-unfinished fourth-largest Christian cathedral in the world."
+    },
+    {
+      "kind": "sight",
+      "name": "The Riverside Church",
+      "place_slug": "the-riverside-church",
+      "note": "The tallest church tower in North America, with skyline tours."
+    },
+    {
+      "kind": "sight",
+      "name": "General Grant National Memorial",
+      "place_slug": "general-grant-national-memorial",
+      "note": "The largest mausoleum in North America, entombing President Grant."
+    },
+    {
+      "kind": "walk",
+      "name": "Morningside Park",
+      "place_slug": "morningside-park",
+      "note": "An Olmsted and Vaux park whose pond marks the site of a cancelled 1968 gymnasium."
+    },
+    {
+      "kind": "food",
+      "name": "Tom's Restaurant",
+      "place_slug": "toms-restaurant",
+      "note": "A 1940s Greek-American diner known as the Seinfeld exterior and Tom's Diner muse."
+    },
+    {
+      "kind": "food",
+      "name": "The Hungarian Pastry Shop",
+      "place_slug": "the-hungarian-pastry-shop",
+      "note": "A no-wifi literary cafe operating since 1961."
+    },
+    {
+      "kind": "food",
+      "name": "Le Monde",
+      "place_slug": "le-monde",
+      "note": "A French brasserie serving the neighborhood since 1998."
+    },
+    {
+      "kind": "food",
+      "name": "Pisticci",
+      "place_slug": "pisticci",
+      "note": "A neighborhood Italian trattoria near the 125th Street subway."
+    }
+  ]
+}

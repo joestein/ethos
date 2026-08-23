@@ -1,0 +1,261 @@
+{
+  "guide": {
+    "slug": "east-harlem-manhattan-guide",
+    "title": "East Harlem, Manhattan: Italian Harlem to El Barrio",
+    "destination": "East Harlem, New York",
+    "state": "New York",
+    "county": "Manhattan",
+    "intro": "East Harlem stayed largely rural until an elevated line reached it in 1879-1880 and the Lexington Avenue subway followed in 1918, opening the land to development. Southern Italian and Sicilian immigrants arrived from the 1870s on, and by the 1930s more than 110,000 Italian Americans lived here as Italian Harlem, a community whose remnants survive around Pleasant Avenue and institutions like Patsy's Pizzeria, open since 1933, and Rao's. After World War I, Puerto Rican and Latin American migrants built an enclave around 110th Street and Lexington Avenue; the Puerto Rican population reached about 63,000 by 1950, and the neighborhood became known as Spanish Harlem and, to residents, El Barrio. La Marqueta, the market beneath the Park Avenue railroad viaduct, was officially sanctioned by the city in 1936 and held over 500 vendors at its 1950s-60s peak. El Museo del Barrio, a community museum of Puerto Rican, Latin American, and Caribbean art, was founded here in 1969.",
+    "sections": [
+      {
+        "heading": "Italian Harlem to El Barrio",
+        "body": "East Harlem's two great immigrant chapters left their mark on the same blocks. Italian workers arrived from the 1870s, and Italian Harlem peaked in the 1930s with more than 110,000 Italian Americans, remembered today around Pleasant Avenue and the Church of Our Lady of Mount Carmel, and still tasted at Patsy's Pizzeria (1933) and Rao's, founded 1896. After World War I, Puerto Rican and Latin American migrants settled around 110th Street and Lexington Avenue; by 1950 the Puerto Rican population had reached about 63,000, and the neighborhood became known as Spanish Harlem and, to residents, El Barrio, later noted for its contributions to salsa and Latin freestyle music. La Marqueta, sanctioned by the city in 1936 beneath the Park Avenue viaduct, held over 500 vendors at its 1950s-60s peak as a central social and economic hub for Hispanic New York; in 2026 the city announced plans for a city-owned grocery store on the site. El Museo del Barrio, founded in 1969 by artist-educator Rafael Montañez Ortíz as a community alternative to orthodox museums, remains devoted to Puerto Rican, Latin American, and Caribbean art."
+      },
+      {
+        "heading": "Getting there by subway",
+        "body": "East Harlem is served chiefly by the IRT Lexington Avenue line — 6 local trains at 96th, 103rd, 110th, and 116th Streets and the 4/5/6 express hub at 125th Street-Lexington Avenue — plus the Q at 96th Street/Second Avenue on the neighborhood's southern edge and Metro-North commuter trains at Harlem-125th Street. Second Avenue Subway Phase 2, under construction since 2024 with major tunneling beginning in June 2026, will eventually extend the Q to 106th, 116th, and 125th Streets, but those stations are not yet open."
+      }
+    ],
+    "faq": [
+      {
+        "question": "How do I get to East Harlem by subway?",
+        "answer": "Take the 6 local to 96th, 103rd, 110th, or 116th Streets, or the 4/5/6 express to 125th Street-Lexington Avenue. The Q reaches the neighborhood's southern edge at 96th Street/Second Avenue, and Metro-North stops at Harlem-125th Street."
+      },
+      {
+        "question": "What is La Marqueta?",
+        "answer": "A public market beneath the Park Avenue railroad viaduct between East 111th and 116th Streets, officially sanctioned by the city in 1936 and once home to more than 500 vendors at its 1950s-60s peak; it remains an active city property today."
+      },
+      {
+        "question": "Why is East Harlem also called Spanish Harlem or El Barrio?",
+        "answer": "Puerto Rican and Latin American migrants settled around 110th Street and Lexington Avenue after World War I; by 1950 the Puerto Rican population had reached about 63,000, and the community became known as Spanish Harlem and, to residents, El Barrio."
+      },
+      {
+        "question": "Is Second Avenue Subway Phase 2 open yet?",
+        "answer": "No. Major tunneling began in June 2026 on the roughly 1.5-mile, $6 billion extension that will bring the Q to 106th, 116th, and 125th Streets, but none of those East Harlem stations are open to riders yet."
+      },
+      {
+        "question": "Where can I stay in East Harlem?",
+        "answer": "No hotel or bed-and-breakfast within East Harlem itself could be verified as operating. Travelers typically stay in Central Harlem or on the Upper East Side, both a short ride away on the 4/5/6 or Q."
+      }
+    ],
+    "photos": [
+      {
+        "src": "/photos/ny/manhattan/east-harlem/el-museo-del-barrio.jpg",
+        "thumb": "/photos/ny/manhattan/east-harlem/el-museo-del-barrio_thumb.jpg",
+        "title": "El Museo del Barrio",
+        "description": "The museum's exterior on Fifth Avenue.",
+        "author": "Cristian Redondo",
+        "license": "CC BY 4.0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:El_Museo_del_Barrio%27s_exterior.jpg"
+      },
+      {
+        "src": "/photos/ny/manhattan/east-harlem/thomas-jefferson-park.jpg",
+        "thumb": "/photos/ny/manhattan/east-harlem/thomas-jefferson-park_thumb.jpg",
+        "title": "Thomas Jefferson Park",
+        "description": "A view of the neighborhood park along the FDR Drive.",
+        "author": "Deansfa",
+        "license": "CC BY-SA 4.0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Thomas_Jefferson_Park,_East_Harlem,_Manhattan,_New_York,_2022-03-13_(2).jpg"
+      },
+      {
+        "src": "/photos/ny/manhattan/east-harlem/graffiti-hall-of-fame.jpg",
+        "thumb": "/photos/ny/manhattan/east-harlem/graffiti-hall-of-fame_thumb.jpg",
+        "title": "Graffiti Hall of Fame",
+        "description": "Murals at the Graffiti Hall of Fame schoolyard on East 106th Street.",
+        "author": "Flocci Nivis",
+        "license": "CC BY 4.0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:20210809_Graffiti_Hall-of-Fame_4560_01.jpg"
+      }
+    ]
+  },
+  "places": [
+    {
+      "slug": "el-museo-del-barrio",
+      "name": "El Museo del Barrio",
+      "kind": "museum",
+      "town": "East Harlem",
+      "state": "New York",
+      "county": "Manhattan",
+      "address": "1230 Fifth Avenue (at 104th Street), New York, NY",
+      "official_url": "https://www.elmuseo.org/",
+      "summary": "Founded in 1969 by Rafael Montañez Ortíz as a museum for the Puerto Rican community of El Barrio; holds 6,500-plus works spanning 800-plus years of Latin American and Caribbean art; its Teatro reopened in 2021 after restoration.",
+      "status": "open",
+      "photos": [
+        {
+          "src": "/photos/ny/manhattan/east-harlem/el-museo-del-barrio.jpg",
+          "thumb": "/photos/ny/manhattan/east-harlem/el-museo-del-barrio_thumb.jpg",
+          "title": "El Museo del Barrio",
+          "description": "The museum's exterior on Fifth Avenue.",
+          "author": "Cristian Redondo",
+          "license": "CC BY 4.0",
+          "source_url": "https://commons.wikimedia.org/wiki/File:El_Museo_del_Barrio%27s_exterior.jpg"
+        }
+      ]
+    },
+    {
+      "slug": "museum-of-the-city-of-new-york",
+      "name": "Museum of the City of New York",
+      "kind": "museum",
+      "town": "East Harlem",
+      "state": "New York",
+      "county": "Manhattan",
+      "address": "1220 Fifth Avenue at 103rd Street, New York, NY",
+      "official_url": "https://www.mcny.org/",
+      "summary": "City-history museum at the neighborhood's southwest corner; 2026 exhibitions include 'Another Wonderland,' a restored New Deal-era children's-hospital mural cycle, and 'He Built This City,' a handmade architectural model of New York. Open every day.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "thomas-jefferson-park",
+      "name": "Thomas Jefferson Park",
+      "kind": "park",
+      "town": "East Harlem",
+      "state": "New York",
+      "county": "Manhattan",
+      "address": "First Avenue and FDR Drive, between E 111th and E 114th Streets, Manhattan",
+      "official_url": "https://www.nycgovparks.org/parks/thomas-jefferson-park",
+      "summary": "Neighborhood park with a running track, baseball and handball courts, a recreation center, and a seasonal outdoor pool; received expansion planning in the mid-1930s under Mayor La Guardia.",
+      "status": "open",
+      "photos": [
+        {
+          "src": "/photos/ny/manhattan/east-harlem/thomas-jefferson-park.jpg",
+          "thumb": "/photos/ny/manhattan/east-harlem/thomas-jefferson-park_thumb.jpg",
+          "title": "Thomas Jefferson Park",
+          "description": "A view of the neighborhood park along the FDR Drive.",
+          "author": "Deansfa",
+          "license": "CC BY-SA 4.0",
+          "source_url": "https://commons.wikimedia.org/wiki/File:Thomas_Jefferson_Park,_East_Harlem,_Manhattan,_New_York,_2022-03-13_(2).jpg"
+        }
+      ]
+    },
+    {
+      "slug": "la-marqueta",
+      "name": "La Marqueta",
+      "kind": "attraction",
+      "town": "East Harlem",
+      "state": "New York",
+      "county": "Manhattan",
+      "address": "Park Avenue beneath the Metro-North viaduct, between E 111th and E 116th Streets, Manhattan",
+      "summary": "Historic public market officially sanctioned by the city in 1936, once home to more than 500 vendors at its 1950s-60s peak; today hosts a small group of food vendors and the HBK Incubates kitchen-incubator. In 2026 the city announced a city-owned grocery store planned for the site.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "raos",
+      "name": "Rao's",
+      "kind": "restaurant",
+      "town": "East Harlem",
+      "state": "New York",
+      "county": "Manhattan",
+      "address": "455 E 114th Street, New York, NY",
+      "official_url": "https://raos.com/",
+      "summary": "Southern Italian institution founded in 1896 by Charles Rao, famous for reservations that are essentially impossible to get, with tables informally 'owned' by regulars.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "patsys-pizzeria",
+      "name": "Patsy's Pizzeria",
+      "kind": "restaurant",
+      "town": "East Harlem",
+      "state": "New York",
+      "county": "Manhattan",
+      "address": "2287 First Avenue (at E 118th Street), New York, NY",
+      "summary": "Historic coal-oven pizzeria operating since 1933, a survivor of the Italian Harlem era and one of New York's original slice institutions.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "ollin",
+      "name": "Ollin (Cafe Ollin)",
+      "kind": "restaurant",
+      "town": "East Harlem",
+      "state": "New York",
+      "county": "Manhattan",
+      "address": "339 E 108th Street, New York, NY",
+      "summary": "Family-run Mexican restaurant known for chorizo burritos, cemitas, and a bottomless brunch.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "la-fonda-boricua",
+      "name": "La Fonda (La Fonda Boricua)",
+      "kind": "restaurant",
+      "town": "East Harlem",
+      "state": "New York",
+      "county": "Manhattan",
+      "address": "169 E 106th Street, New York, NY",
+      "summary": "Puerto Rican establishment of 35-plus years on the 106th Street cultural corridor, known for home-style cooking with live Latin jazz.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "super-nice-coffee-and-bakery",
+      "name": "Super Nice Coffee and Bakery",
+      "kind": "cafe",
+      "town": "East Harlem",
+      "state": "New York",
+      "county": "Manhattan",
+      "address": "156 E 117th Street, New York, NY",
+      "summary": "Neighborhood takeout-window coffee shop and bakery known for specialty donuts such as glazed loganberry.",
+      "status": "open",
+      "photos": []
+    }
+  ],
+  "entries": [
+    {
+      "kind": "sight",
+      "name": "El Museo del Barrio",
+      "place_slug": "el-museo-del-barrio",
+      "note": "A community museum of Puerto Rican, Latin American, and Caribbean art founded in 1969."
+    },
+    {
+      "kind": "sight",
+      "name": "Museum of the City of New York",
+      "place_slug": "museum-of-the-city-of-new-york",
+      "note": "A city-history museum on the neighborhood's southwest corner, open every day."
+    },
+    {
+      "kind": "walk",
+      "name": "Thomas Jefferson Park",
+      "place_slug": "thomas-jefferson-park",
+      "note": "A riverside recreation park with a running track and seasonal pool."
+    },
+    {
+      "kind": "sight",
+      "name": "La Marqueta",
+      "place_slug": "la-marqueta",
+      "note": "A city-sanctioned market since 1936, once a central hub of Hispanic New York."
+    },
+    {
+      "kind": "food",
+      "name": "Rao's",
+      "place_slug": "raos",
+      "note": "A Southern Italian institution since 1896, with tables nearly impossible to book."
+    },
+    {
+      "kind": "food",
+      "name": "Patsy's Pizzeria",
+      "place_slug": "patsys-pizzeria",
+      "note": "A coal-oven pizzeria operating since 1933, a survivor of Italian Harlem."
+    },
+    {
+      "kind": "food",
+      "name": "Ollin (Cafe Ollin)",
+      "place_slug": "ollin",
+      "note": "A family-run Mexican restaurant known for chorizo burritos and cemitas."
+    },
+    {
+      "kind": "food",
+      "name": "La Fonda (La Fonda Boricua)",
+      "place_slug": "la-fonda-boricua",
+      "note": "A 35-plus-year Puerto Rican spot with live Latin jazz."
+    },
+    {
+      "kind": "food",
+      "name": "Super Nice Coffee and Bakery",
+      "place_slug": "super-nice-coffee-and-bakery",
+      "note": "A takeout-window coffee shop known for specialty donuts."
+    }
+  ]
+}

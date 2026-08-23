@@ -1,0 +1,285 @@
+{
+  "guide": {
+    "slug": "washington-heights-manhattan-guide",
+    "title": "Washington Heights, Manhattan: Fort Washington to Frankfurt-on-the-Hudson",
+    "destination": "Washington Heights, New York",
+    "state": "New York",
+    "county": "Manhattan",
+    "intro": "Washington Heights takes its name from Fort Washington, a Revolutionary War fortification the Continental Army built at Manhattan's highest natural point; the British captured it in the November 16, 1776 Battle of Fort Washington, in which Margaret Corbin, wounded defending the fort, became the first woman known to fight in the Revolutionary War. The neighborhood stayed sparsely populated through the 19th century, urbanizing rapidly after the IRT Broadway-Seventh Avenue subway opened stations between 1904 and 1911. In the 1930s and 1940s it became a haven for German Jewish refugees fleeing Nazism, earning the nickname Frankfurt-on-the-Hudson; Dominican immigration accelerated after 1966, and by 2000 Washington Heights and Inwood together had a slim Dominican majority. Malcolm X delivered his final speech and was assassinated at the Audubon Ballroom on February 21, 1965. Morris-Jumel Mansion, built in 1765, is Manhattan's oldest surviving residence and served as George Washington's 1776 headquarters.",
+    "sections": [
+      {
+        "heading": "A Fort, a Battle, and Waves of Refuge",
+        "body": "Fort Washington, a Continental Army fortification at the highest natural point on Manhattan, gave the neighborhood its name; it fell to the British in the Battle of Fort Washington on November 16, 1776, where Margaret Corbin, wounded in combat, became the first woman known to fight in the Revolutionary War (Fort Tryon Park's main drive and southern entrance were named for her in 1977). Development followed the subway, which opened stations here between 1904 and 1911. In the 1930s and 1940s the neighborhood became a haven for German Jews fleeing Nazism, earning the nickname Frankfurt-on-the-Hudson; Dominican immigration accelerated after 1966 and Washington Heights is now, together with Inwood, the cultural heart of Dominican New York. Malcolm X delivered his final speech and was assassinated at the Audubon Ballroom, 3940 Broadway, on February 21, 1965; the site now houses the Malcolm X and Dr. Betty Shabazz Memorial and Educational Center as a living memorial. Morris-Jumel Mansion, built in 1765, is Manhattan's oldest surviving residence and served as a Revolutionary War headquarters, including for George Washington in 1776."
+      },
+      {
+        "heading": "Getting there by subway",
+        "body": "Two trunk lines cover the neighborhood: the 1 local runs up Broadway/St. Nicholas with closely spaced stops at 157th, 168th, 181st, 191st, and Dyckman Streets, while the A on the IND Eighth Avenue Line at 175th, 181st, and 190th Streets is the fastest ride to and from Midtown. 168th Street is the main transfer hub, also served by the C, which terminates there."
+      }
+    ],
+    "faq": [
+      {
+        "question": "How do I get to Washington Heights by subway?",
+        "answer": "Take the 1 local for stops at 157th, 168th, 181st, 191st, and Dyckman Streets, or the A for the fastest ride to Midtown at 175th, 181st, and 190th Streets. The C also serves 168th Street, the main transfer hub."
+      },
+      {
+        "question": "Why is it called Washington Heights?",
+        "answer": "It's named for Fort Washington, a Revolutionary War fortification the Continental Army built at the highest natural point on Manhattan to defend against the British."
+      },
+      {
+        "question": "Where was Malcolm X assassinated?",
+        "answer": "At the Audubon Ballroom, 3940 Broadway, on February 21, 1965, while delivering his final speech. The site now houses the Malcolm X and Dr. Betty Shabazz Memorial and Educational Center."
+      },
+      {
+        "question": "What is the best park in Washington Heights?",
+        "answer": "Fort Tryon Park, a 67-acre park donated to the city by John D. Rockefeller Jr. and opened in 1935, with a 3-acre Heather Garden that is the largest public garden with unrestricted access in New York City."
+      },
+      {
+        "question": "Where can I stay in Washington Heights?",
+        "answer": "The Edge Hotel, a 54-room boutique hotel at 514 West 168th Street near Columbia University Irving Medical Center, is one of the few hotels actually located in the neighborhood."
+      }
+    ],
+    "photos": [
+      {
+        "src": "/photos/ny/manhattan/washington-heights/met-cloisters.jpg",
+        "thumb": "/photos/ny/manhattan/washington-heights/met-cloisters_thumb.jpg",
+        "title": "The Met Cloisters",
+        "description": "The Met Cloisters seen from Margaret Corbin Drive in Fort Tryon Park.",
+        "author": "Joe Mabel",
+        "license": "CC BY-SA 4.0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:The_Cloisters_from_Margaret_Corbin_Drive_01.jpg"
+      },
+      {
+        "src": "/photos/ny/manhattan/washington-heights/little-red-lighthouse.jpg",
+        "thumb": "/photos/ny/manhattan/washington-heights/little-red-lighthouse_thumb.jpg",
+        "title": "Little Red Lighthouse and the George Washington Bridge",
+        "description": "The Little Red Lighthouse beneath the George Washington Bridge.",
+        "author": "Beyond My Ken",
+        "license": "CC BY-SA 4.0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:2015_Little_Red_Lighthouse_annual_tour_(13)_with_George_Washington_Bridge.jpg"
+      },
+      {
+        "src": "/photos/ny/manhattan/washington-heights/heather-garden.jpg",
+        "thumb": "/photos/ny/manhattan/washington-heights/heather-garden_thumb.jpg",
+        "title": "Fort Tryon Park Heather Garden",
+        "description": "The Heather Garden in bloom within Fort Tryon Park.",
+        "author": "Beyond My Ken",
+        "license": "CC BY-SA 4.0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:2014_Fort_Tryon_Park_Heather_Garden.jpg"
+      },
+      {
+        "src": "/photos/ny/manhattan/washington-heights/morris-jumel-mansion.jpg",
+        "thumb": "/photos/ny/manhattan/washington-heights/morris-jumel-mansion_thumb.jpg",
+        "title": "Morris-Jumel Mansion",
+        "description": "The mansion's front portico, seen from the south.",
+        "author": "Beyond My Ken",
+        "license": "CC BY-SA 4.0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:2014_Morris-Jumel_Mansion_from_south.jpg"
+      }
+    ]
+  },
+  "places": [
+    {
+      "slug": "fort-tryon-park",
+      "name": "Fort Tryon Park",
+      "kind": "park",
+      "town": "Washington Heights",
+      "state": "New York",
+      "county": "Manhattan",
+      "address": "Riverside Drive to Broadway, W 192nd St to Dyckman St, New York, NY",
+      "official_url": "https://www.nycgovparks.org/parks/fort-tryon-park",
+      "summary": "A 67-acre park donated to the city by John D. Rockefeller Jr., designed by the Olmsted Brothers firm and opened in 1935; its 3-acre Heather Garden is the largest public garden with unrestricted access in NYC, and the site saw the Battle of Fort Washington in 1776.",
+      "status": "open",
+      "photos": [
+        {
+          "src": "/photos/ny/manhattan/washington-heights/heather-garden.jpg",
+          "thumb": "/photos/ny/manhattan/washington-heights/heather-garden_thumb.jpg",
+          "title": "Fort Tryon Park Heather Garden",
+          "description": "The Heather Garden in bloom within Fort Tryon Park.",
+          "author": "Beyond My Ken",
+          "license": "CC BY-SA 4.0",
+          "source_url": "https://commons.wikimedia.org/wiki/File:2014_Fort_Tryon_Park_Heather_Garden.jpg"
+        }
+      ]
+    },
+    {
+      "slug": "the-met-cloisters",
+      "name": "The Met Cloisters",
+      "kind": "museum",
+      "town": "Washington Heights",
+      "state": "New York",
+      "county": "Manhattan",
+      "address": "99 Margaret Corbin Drive, Fort Tryon Park, New York, NY 10040",
+      "official_url": "https://www.metmuseum.org/visit/plan-your-visit/met-cloisters",
+      "summary": "The Metropolitan Museum of Art's branch for medieval European art, built within Fort Tryon Park and opened to the public in 1938; its collection includes the famous Unicorn Tapestries. Confirm hours on metmuseum.org before visiting.",
+      "status": "open",
+      "photos": [
+        {
+          "src": "/photos/ny/manhattan/washington-heights/met-cloisters.jpg",
+          "thumb": "/photos/ny/manhattan/washington-heights/met-cloisters_thumb.jpg",
+          "title": "The Met Cloisters",
+          "description": "The Met Cloisters seen from Margaret Corbin Drive in Fort Tryon Park.",
+          "author": "Joe Mabel",
+          "license": "CC BY-SA 4.0",
+          "source_url": "https://commons.wikimedia.org/wiki/File:The_Cloisters_from_Margaret_Corbin_Drive_01.jpg"
+        }
+      ]
+    },
+    {
+      "slug": "united-palace",
+      "name": "United Palace",
+      "kind": "theater",
+      "town": "Washington Heights",
+      "state": "New York",
+      "county": "Manhattan",
+      "address": "4140 Broadway at 175th St, New York, NY 10033",
+      "official_url": "https://www.unitedpalace.org/",
+      "summary": "One of Manhattan's largest theaters, billed as its fourth largest, operating as a hybrid arts, spiritual, and cultural venue under the United Palace of Spiritual Arts with an active concert and event season.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "hispanic-society-museum-library",
+      "name": "Hispanic Society Museum & Library",
+      "kind": "museum",
+      "town": "Washington Heights",
+      "state": "New York",
+      "county": "Manhattan",
+      "address": "3741 Broadway (between 155th and 156th Streets), New York, NY 10032",
+      "official_url": "https://hispanicsociety.org/",
+      "summary": "Housed in the historic Audubon Terrace complex; holds major Spanish and Latin American collections including significant Goya-related holdings and a dedicated Goya research center. Open Thursday-Sunday, noon-5 p.m., free with advance reservation.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "malcolm-x-and-dr-betty-shabazz-memorial-and-educational-center",
+      "name": "Malcolm X and Dr. Betty Shabazz Memorial and Educational Center",
+      "kind": "historic-site",
+      "town": "Washington Heights",
+      "state": "New York",
+      "county": "Manhattan",
+      "address": "3940 Broadway, New York, NY 10032",
+      "official_url": "https://theshabazzcenter.org/",
+      "summary": "Occupies the historic Audubon Ballroom where Malcolm X was assassinated on February 21, 1965; operates as a living memorial and education center. Open Tuesday-Friday, 10 a.m.-6 p.m. (Saturdays by appointment).",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "morris-jumel-mansion",
+      "name": "Morris-Jumel Mansion",
+      "kind": "historic-site",
+      "town": "Washington Heights",
+      "state": "New York",
+      "county": "Manhattan",
+      "address": "65 Jumel Terrace, New York, NY 10032",
+      "official_url": "https://morrisjumel.org/",
+      "summary": "Manhattan's oldest surviving residence (1765) and George Washington's 1776 headquarters, sitting in Roger Morris Park. The mansion interior is temporarily closed weekdays for a roof replacement through fall 2026, but the park is open daily and weekend guided walking tours run as scheduled.",
+      "status": "open",
+      "photos": [
+        {
+          "src": "/photos/ny/manhattan/washington-heights/morris-jumel-mansion.jpg",
+          "thumb": "/photos/ny/manhattan/washington-heights/morris-jumel-mansion_thumb.jpg",
+          "title": "Morris-Jumel Mansion",
+          "description": "The mansion's front portico, seen from the south.",
+          "author": "Beyond My Ken",
+          "license": "CC BY-SA 4.0",
+          "source_url": "https://commons.wikimedia.org/wiki/File:2014_Morris-Jumel_Mansion_from_south.jpg"
+        }
+      ]
+    },
+    {
+      "slug": "buunni-coffee",
+      "name": "Buunni Coffee",
+      "kind": "cafe",
+      "town": "Washington Heights",
+      "state": "New York",
+      "county": "Manhattan",
+      "address": "213 Pinehurst Ave, New York, NY 10033",
+      "official_url": "https://www.buunnicoffee.com/",
+      "summary": "Ethiopian-owned specialty coffee roaster whose original Pinehurst Avenue cafe is a Washington Heights community fixture; beans roasted weekly at its own Bronx roasting room. Open Mon-Fri 7am-5pm, weekends 8am-5pm.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "native-noodles",
+      "name": "Native Noodles",
+      "kind": "restaurant",
+      "town": "Washington Heights",
+      "state": "New York",
+      "county": "Manhattan",
+      "address": "2129 Amsterdam Ave, New York, NY 10032",
+      "official_url": "https://www.nativenoodles.com/",
+      "summary": "Casual counter-service Singaporean noodle restaurant, one of the few Singaporean spots in NYC. Open daily 11:30 a.m.-9 p.m.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "the-edge-hotel",
+      "name": "The Edge Hotel",
+      "kind": "hotel",
+      "town": "Washington Heights",
+      "state": "New York",
+      "county": "Manhattan",
+      "address": "514 W 168th St, New York, NY 10032",
+      "official_url": "https://edgehotelnyc.com/",
+      "summary": "A 54-room contemporary boutique hotel near Columbia University Irving Medical Center, with rooms marketed as having George Washington Bridge views; one of very few hotels actually in the neighborhood.",
+      "status": "open",
+      "photos": []
+    }
+  ],
+  "entries": [
+    {
+      "kind": "walk",
+      "name": "Fort Tryon Park",
+      "place_slug": "fort-tryon-park",
+      "note": "A 67-acre Rockefeller-donated park with the Heather Garden and Revolutionary War history."
+    },
+    {
+      "kind": "sight",
+      "name": "The Met Cloisters",
+      "place_slug": "the-met-cloisters",
+      "note": "The Met's medieval-art branch, home to the Unicorn Tapestries."
+    },
+    {
+      "kind": "sight",
+      "name": "United Palace",
+      "place_slug": "united-palace",
+      "note": "One of Manhattan's largest theaters, now a hybrid arts and cultural venue."
+    },
+    {
+      "kind": "sight",
+      "name": "Hispanic Society Museum & Library",
+      "place_slug": "hispanic-society-museum-library",
+      "note": "Major Spanish and Latin American collections in the historic Audubon Terrace."
+    },
+    {
+      "kind": "sight",
+      "name": "Malcolm X and Dr. Betty Shabazz Memorial and Educational Center",
+      "place_slug": "malcolm-x-and-dr-betty-shabazz-memorial-and-educational-center",
+      "note": "The former Audubon Ballroom, site of Malcolm X's 1965 assassination, now a living memorial."
+    },
+    {
+      "kind": "sight",
+      "name": "Morris-Jumel Mansion",
+      "place_slug": "morris-jumel-mansion",
+      "note": "Manhattan's oldest surviving residence, built in 1765."
+    },
+    {
+      "kind": "food",
+      "name": "Buunni Coffee",
+      "place_slug": "buunni-coffee",
+      "note": "An Ethiopian-owned specialty roaster and community fixture."
+    },
+    {
+      "kind": "food",
+      "name": "Native Noodles",
+      "place_slug": "native-noodles",
+      "note": "A casual Singaporean noodle spot, one of the few in NYC."
+    },
+    {
+      "kind": "stay",
+      "name": "The Edge Hotel",
+      "place_slug": "the-edge-hotel",
+      "note": "A 54-room boutique hotel with George Washington Bridge views."
+    }
+  ]
+}

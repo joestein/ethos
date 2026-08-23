@@ -1,0 +1,271 @@
+{
+  "guide": {
+    "slug": "carnegie-hill-manhattan-guide",
+    "title": "Carnegie Hill, Manhattan: A Steel-Framed Mansion and Museum Mile's North End",
+    "destination": "Carnegie Hill, New York",
+    "state": "New York",
+    "county": "Manhattan",
+    "intro": "Andrew Carnegie bought land far north of his Fifth Avenue peers in 1898, wanting room for a proper private garden. The Georgian mansion architects Babb, Cook and Willard completed there in 1902 was an engineering landmark: the first private U.S. residence with a structural steel frame, one of New York's first residential Otis elevators, and central heating fed by a cellar coal car on miniature rails. Carnegie directed roughly 350 million dollars in philanthropy from the house; landmarked in 1974, it reopened in 1976 as the Smithsonian's Cooper Hewitt Design Museum, anchoring a historic district (designated 1974, expanded 1993) that drew Marjorie Merriweather Post and John Hay Whitney north of 90th Street. Two blocks south, the Jewish Museum opened in 1904 inside the landmarked Warburg Mansion, the first institution of its kind in the country. The Guggenheim, Frank Lloyd Wright's last major work, opened its Fifth Avenue rotunda in 1959.",
+    "sections": [
+      {
+        "heading": "An Industrialist's Estate Becomes a Design Museum",
+        "body": "Carnegie's 64-room mansion at Fifth Avenue and 91st Street took architects Babb, Cook and Willard from 1899 to 1902 to complete in the style of an English Georgian country house. Beyond its engineering firsts, it served as headquarters for Carnegie's philanthropy before landmark designation in 1974 and its 1976 reopening as the Smithsonian's Cooper Hewitt, Smithsonian Design Museum, the only U.S. museum devoted exclusively to design. Two blocks south, the Jewish Museum has occupied the landmarked Warburg Mansion at Fifth Avenue and 92nd Street since 1904, the first Jewish museum in the United States, with a collection now approaching 30,000 works. On the district's western edge, the Solomon R. Guggenheim Museum — Frank Lloyd Wright's last major work, opened October 21, 1959 and a UNESCO World Heritage Site since 2019 — is documented in the neighboring Upper East Side guide."
+      },
+      {
+        "heading": "Getting there by subway",
+        "body": "Carnegie Hill sits between the Lexington Avenue 4/5/6 stop at 86th Street — the express station — and the 6 local at 96th Street; the Q on the Second Avenue Subway, which opened January 1, 2017, adds a 96th Street stop that covers the neighborhood's eastern edge. Most Museum Mile destinations, including Cooper Hewitt and the Jewish Museum, are a short crosstown walk from either Lexington or Second Avenue."
+      },
+      {
+        "heading": "Where to stay",
+        "body": "No hotel or bed-and-breakfast currently operates within Carnegie Hill itself. The nearest verified full-service option is The Carlyle, A Rosewood Hotel, about a mile south at 35 East 76th Street on the Upper East Side, documented in that neighborhood's guide."
+      }
+    ],
+    "faq": [
+      {
+        "question": "How do I get to Carnegie Hill by subway?",
+        "answer": "Take the 4/5/6 to 86th Street for the neighborhood's southern half, the 6 local to 96th Street for the north, or the Q on the Second Avenue Subway to 96th Street for the eastern edge."
+      },
+      {
+        "question": "Why is it called Carnegie Hill?",
+        "answer": "It's named for Andrew Carnegie's mansion at Fifth Avenue and 91st Street, completed in 1901-1902, which now houses the Cooper Hewitt, Smithsonian Design Museum."
+      },
+      {
+        "question": "Is the Guggenheim in Carnegie Hill?",
+        "answer": "Yes, the Solomon R. Guggenheim Museum sits on Fifth Avenue at the neighborhood's western edge; it's documented as a place in the neighboring Upper East Side guide."
+      },
+      {
+        "question": "Where can I stay near Carnegie Hill?",
+        "answer": "No hotel currently operates within Carnegie Hill itself. The Carlyle, A Rosewood Hotel, about a mile south at 35 East 76th Street, is the nearest verified option."
+      },
+      {
+        "question": "What made the Carnegie Mansion an engineering landmark?",
+        "answer": "It was the first private U.S. residence with a structural steel frame, one of New York's first residential Otis passenger elevators, and central heating fed by a cellar coal car running on miniature tracks."
+      }
+    ],
+    "photos": [
+      {
+        "src": "/photos/ny/manhattan/carnegie-hill/cooper-hewitt.jpg",
+        "thumb": "/photos/ny/manhattan/carnegie-hill/cooper-hewitt_thumb.jpg",
+        "title": "Cooper Hewitt, Smithsonian Design Museum",
+        "description": "The former Andrew Carnegie mansion on Fifth Avenue, now the Cooper Hewitt.",
+        "author": "Ajay Suresh",
+        "license": "CC BY 2.0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Cooper_Hewitt_(48059131921).jpg"
+      },
+      {
+        "src": "/photos/ny/manhattan/carnegie-hill/guggenheim.jpg",
+        "thumb": "/photos/ny/manhattan/carnegie-hill/guggenheim_thumb.jpg",
+        "title": "Solomon R. Guggenheim Museum",
+        "description": "Frank Lloyd Wright's spiral rotunda seen from Fifth Avenue, at the neighborhood's western edge.",
+        "author": "Ajay Suresh",
+        "license": "CC BY 2.0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Solomon_R._Guggenheim_Museum_(48059131351).jpg"
+      },
+      {
+        "src": "/photos/ny/manhattan/carnegie-hill/jewish-museum.jpg",
+        "thumb": "/photos/ny/manhattan/carnegie-hill/jewish-museum_thumb.jpg",
+        "title": "The Jewish Museum",
+        "description": "The Chateauesque Warburg Mansion at 1109 Fifth Avenue, home to the Jewish Museum since 1904.",
+        "author": "Rolf Müller (User:Rolfmueller)",
+        "license": "CC BY-SA 3.0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Jewish_museum_new_york_2006.jpg"
+      },
+      {
+        "src": "/photos/ny/manhattan/carnegie-hill/reservoir.jpg",
+        "thumb": "/photos/ny/manhattan/carnegie-hill/reservoir_thumb.jpg",
+        "title": "Jacqueline Kennedy Onassis Reservoir",
+        "description": "The reservoir in Central Park, directly across Fifth Avenue from Carnegie Hill.",
+        "author": "Jakub Halun",
+        "license": "CC BY 4.0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Jacqueline_Kennedy_Onassis_Reservoir,_Central_Park,_New_York_City,_20231003_1818_2059.jpg"
+      }
+    ]
+  },
+  "places": [
+    {
+      "slug": "cooper-hewitt-smithsonian-design-museum",
+      "name": "Cooper Hewitt, Smithsonian Design Museum",
+      "kind": "museum",
+      "town": "Carnegie Hill",
+      "state": "New York",
+      "county": "Manhattan",
+      "address": "2 East 91st Street, New York, NY 10128",
+      "official_url": "https://www.cooperhewitt.org/",
+      "summary": "Housed in Andrew Carnegie's 1899-1902 mansion, the only U.S. museum devoted exclusively to historic and contemporary design, with over 215,000 objects spanning 30 centuries. Open daily 10 a.m.-6 p.m., closed only Thanksgiving and Christmas.",
+      "history": "Carnegie commissioned the Georgian-style mansion from Babb, Cook & Willard in 1899 as an engineering landmark: the first private U.S. residence with a structural steel frame, one of New York's first residential Otis elevators, and central heating. Landmarked in 1974, it opened as the Smithsonian's Cooper-Hewitt Museum in 1976.",
+      "status": "open",
+      "photos": [
+        {
+          "src": "/photos/ny/manhattan/carnegie-hill/cooper-hewitt.jpg",
+          "thumb": "/photos/ny/manhattan/carnegie-hill/cooper-hewitt_thumb.jpg",
+          "title": "Cooper Hewitt, Smithsonian Design Museum",
+          "description": "The former Andrew Carnegie mansion on Fifth Avenue, now the Cooper Hewitt.",
+          "author": "Ajay Suresh",
+          "license": "CC BY 2.0",
+          "source_url": "https://commons.wikimedia.org/wiki/File:Cooper_Hewitt_(48059131921).jpg"
+        }
+      ]
+    },
+    {
+      "slug": "the-jewish-museum-carnegie-hill",
+      "name": "The Jewish Museum",
+      "kind": "museum",
+      "town": "Carnegie Hill",
+      "state": "New York",
+      "county": "Manhattan",
+      "address": "1109 5th Avenue at 92nd Street, New York, NY 10128",
+      "official_url": "https://thejewishmuseum.org/",
+      "summary": "Founded in 1904, the first Jewish museum in the United States, housed in the landmarked Warburg Mansion with a collection of nearly 30,000 works; free admission every Saturday.",
+      "status": "open",
+      "photos": [
+        {
+          "src": "/photos/ny/manhattan/carnegie-hill/jewish-museum.jpg",
+          "thumb": "/photos/ny/manhattan/carnegie-hill/jewish-museum_thumb.jpg",
+          "title": "The Jewish Museum",
+          "description": "The Chateauesque Warburg Mansion at 1109 Fifth Avenue, home to the Jewish Museum since 1904.",
+          "author": "Rolf Müller (User:Rolfmueller)",
+          "license": "CC BY-SA 3.0",
+          "source_url": "https://commons.wikimedia.org/wiki/File:Jewish_museum_new_york_2006.jpg"
+        }
+      ]
+    },
+    {
+      "slug": "92ny",
+      "name": "92NY (92nd Street Y)",
+      "kind": "theater",
+      "town": "Carnegie Hill",
+      "state": "New York",
+      "county": "Manhattan",
+      "address": "1395 Lexington Avenue at East 92nd Street, New York, NY",
+      "official_url": "https://www.92ny.org/",
+      "summary": "Founded in 1874, a landmark cultural center known for its concert hall, literary readings, talks, and dance, serving about 300,000 people annually; rebranded as 92NY in 2022.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "jacqueline-kennedy-onassis-reservoir",
+      "name": "Jacqueline Kennedy Onassis Reservoir",
+      "kind": "park",
+      "town": "Carnegie Hill",
+      "state": "New York",
+      "county": "Manhattan",
+      "address": "Central Park, along Fifth Avenue from 86th to 96th Streets",
+      "official_url": "https://www.centralparknyc.org/",
+      "summary": "A 106-acre reservoir completed in 1862 and decommissioned in 1993, renamed in 1994 for Jacqueline Kennedy Onassis, who lived at 1040 Fifth Avenue overlooking it; ringed by the 1.58-mile Shuman Running Track.",
+      "status": "open",
+      "photos": [
+        {
+          "src": "/photos/ny/manhattan/carnegie-hill/reservoir.jpg",
+          "thumb": "/photos/ny/manhattan/carnegie-hill/reservoir_thumb.jpg",
+          "title": "Jacqueline Kennedy Onassis Reservoir",
+          "description": "The reservoir in Central Park, directly across Fifth Avenue from Carnegie Hill.",
+          "author": "Jakub Halun",
+          "license": "CC BY 4.0",
+          "source_url": "https://commons.wikimedia.org/wiki/File:Jacqueline_Kennedy_Onassis_Reservoir,_Central_Park,_New_York_City,_20231003_1818_2059.jpg"
+        }
+      ]
+    },
+    {
+      "slug": "paolas",
+      "name": "Paola's",
+      "kind": "restaurant",
+      "town": "Carnegie Hill",
+      "state": "New York",
+      "county": "Manhattan",
+      "address": "1302 Madison Avenue (between East 92nd and 93rd Streets), New York, NY",
+      "official_url": "https://www.paolasrestaurant.com/",
+      "summary": "Beloved Italian restaurant established in 1983, a Carnegie Hill institution serving dinner nightly and weekend brunch; also runs Paola's Cafe on Lexington Avenue.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "yura-on-madison",
+      "name": "Yura on Madison",
+      "kind": "cafe",
+      "town": "Carnegie Hill",
+      "state": "New York",
+      "county": "Manhattan",
+      "address": "1350 Madison Avenue, New York, NY",
+      "official_url": "http://yura.nyc/",
+      "summary": "Neighborhood bakery-cafe and prepared-foods shop near the 92nd-95th Street school corridor, open Mon-Sat 7:30 a.m.-4 p.m. with take-home meals and outdoor seating.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "lox-at-the-jewish-museum",
+      "name": "Lox at the Jewish Museum",
+      "kind": "cafe",
+      "town": "Carnegie Hill",
+      "state": "New York",
+      "county": "Manhattan",
+      "address": "Inside the Jewish Museum, 1109 5th Avenue at 92nd Street, New York, NY",
+      "official_url": "https://thejewishmuseum.org/visit",
+      "summary": "OU Kosher-certified cafe by executive chef David Teyf serving house-cured salmon, handcrafted bagels, blintzes, and herring; museum admission is not required to dine. Closed Saturdays and Tuesday-Wednesday.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "bluestone-lane-church-of-the-heavenly-rest",
+      "name": "Bluestone Lane at Church of the Heavenly Rest",
+      "kind": "cafe",
+      "town": "Carnegie Hill",
+      "state": "New York",
+      "county": "Manhattan",
+      "address": "1085 Fifth Avenue at East 90th Street, New York, NY",
+      "official_url": "https://bluestonelane.com/cafes/upper-east-side/",
+      "summary": "Australian-style coffee shop set inside the historic Church of the Heavenly Rest on Museum Mile, opposite Central Park's Engineers' Gate, with indoor and Fifth Avenue outdoor seating.",
+      "status": "open",
+      "photos": []
+    }
+  ],
+  "entries": [
+    {
+      "kind": "sight",
+      "name": "Cooper Hewitt, Smithsonian Design Museum",
+      "place_slug": "cooper-hewitt-smithsonian-design-museum",
+      "note": "Andrew Carnegie's 1902 mansion, an engineering landmark now devoted to design."
+    },
+    {
+      "kind": "sight",
+      "name": "The Jewish Museum",
+      "place_slug": "the-jewish-museum-carnegie-hill",
+      "note": "The first Jewish museum in the United States, founded 1904 in the Warburg Mansion."
+    },
+    {
+      "kind": "sight",
+      "name": "92NY (92nd Street Y)",
+      "place_slug": "92ny",
+      "note": "A landmark cultural center for concerts, literary readings, and dance since 1874."
+    },
+    {
+      "kind": "walk",
+      "name": "Jacqueline Kennedy Onassis Reservoir",
+      "place_slug": "jacqueline-kennedy-onassis-reservoir",
+      "note": "A 106-acre reservoir in Central Park ringed by a running track, directly across Fifth Avenue."
+    },
+    {
+      "kind": "food",
+      "name": "Paola's",
+      "place_slug": "paolas",
+      "note": "A Carnegie Hill Italian institution since 1983."
+    },
+    {
+      "kind": "food",
+      "name": "Yura on Madison",
+      "place_slug": "yura-on-madison",
+      "note": "A neighborhood bakery-cafe favored by the nearby school corridor."
+    },
+    {
+      "kind": "food",
+      "name": "Lox at the Jewish Museum",
+      "place_slug": "lox-at-the-jewish-museum",
+      "note": "A kosher cafe serving house-cured salmon and bagels; no museum ticket required."
+    },
+    {
+      "kind": "food",
+      "name": "Bluestone Lane at Church of the Heavenly Rest",
+      "place_slug": "bluestone-lane-church-of-the-heavenly-rest",
+      "note": "Coffee inside a historic Museum Mile church, opposite Central Park's Engineers' Gate."
+    }
+  ]
+}

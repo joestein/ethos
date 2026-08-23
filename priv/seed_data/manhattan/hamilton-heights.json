@@ -1,0 +1,255 @@
+{
+  "guide": {
+    "slug": "hamilton-heights-manhattan-guide",
+    "title": "Hamilton Heights, Manhattan: The Grange and Sugar Hill",
+    "destination": "Hamilton Heights, New York",
+    "state": "New York",
+    "county": "Manhattan",
+    "intro": "Hamilton Heights takes its name from Alexander Hamilton, who spent his life's last two years at The Grange, the Federal-style house architect John McComb Jr. completed for him in 1802 on a 32-acre estate, before his fatal 1804 duel with Aaron Burr; his widow Elizabeth lived there another 30 years. Most of the neighborhood's housing dates from the late 19th and early 20th centuries, built up once elevated and subway lines arrived, and nearly all of it now sits within National Register historic districts. In the 1930s and 1940s the neighborhood transitioned from white to Black residents, and its Sugar Hill section became home to Duke Ellington, Count Basie, Thurgood Marshall, and Malcolm X; large-scale Dominican immigration followed in the 1980s. Hamilton's nearly 300-ton house was later moved by hydraulics to St. Nicholas Park, where the Park Service preserves it. City College of New York, founded in 1847, anchors the neighborhood with its Gothic Shepard Hall campus.",
+    "sections": [
+      {
+        "heading": "Hamilton's Grange and Sugar Hill",
+        "body": "Alexander Hamilton commissioned architect John McComb Jr. in 1801 to design The Grange, a Federal-style country house on a 32-acre estate, completed in 1802 and named for his family's ancestral home in Scotland; Hamilton enjoyed it only two years before his fatal 1804 duel with Aaron Burr, and his widow Elizabeth lived there for 30 more years. The nearly 300-ton house was later raised on hydraulics and relocated to its current site in St. Nicholas Park at 414 West 141st Street, where the National Park Service now operates it as Hamilton Grange National Memorial. Most of the surrounding housing stock rose in the late 19th and early 20th centuries after elevated and subway lines reached the area, and nearly all of Hamilton Heights now lies within National Register historic districts. The neighborhood transitioned from white to Black residents in the 1930s and 1940s, and its Sugar Hill section became home to Duke Ellington, Count Basie, Thurgood Marshall, and Malcolm X, before large-scale Dominican immigration arrived in the 1980s. City College of New York, founded in 1847 and anchored by the Gothic Shepard Hall, today serves more than 16,000 students."
+      },
+      {
+        "heading": "Getting there by subway",
+        "body": "The 1 train runs along Broadway with stops at 137th Street-City College and 145th Street, while the IND Eighth Avenue Line reaches the neighborhood's eastern side: the A, B, C, and D all stop at 145th Street, the B and C stop at 135th Street, and the C alone stops at 155th Street (with the B and D reachable at the nearby 155th Street Concourse Line station). Most blocks are within a short walk of one of these stations."
+      }
+    ],
+    "faq": [
+      {
+        "question": "How do I get to Hamilton Heights by subway?",
+        "answer": "Take the 1 train to 137th Street-City College or 145th Street, or the A/B/C/D to 145th Street. The B and C also stop at 135th Street, and the C stops at 155th Street on the Eighth Avenue Line."
+      },
+      {
+        "question": "Why is it called Hamilton Heights?",
+        "answer": "It's named for Alexander Hamilton, who lived the last two years of his life at his country home, The Grange, completed in 1802 when upper Manhattan was still largely farmland."
+      },
+      {
+        "question": "What is Sugar Hill?",
+        "answer": "A section of Hamilton Heights that became home to Duke Ellington, Count Basie, Thurgood Marshall, and Malcolm X after the neighborhood transitioned from white to Black residents in the 1930s and 1940s."
+      },
+      {
+        "question": "Is Hamilton Grange still in its original location?",
+        "answer": "No. The nearly 300-ton house was moved by hydraulics from its original site to St. Nicholas Park at 414 West 141st Street, where the National Park Service preserves it as Hamilton Grange National Memorial."
+      },
+      {
+        "question": "Where can I stay in Hamilton Heights?",
+        "answer": "No hotel or bed-and-breakfast could be verified as operating within Hamilton Heights itself; travelers typically base themselves in nearby Central Harlem or on the Upper West Side."
+      }
+    ],
+    "photos": [
+      {
+        "src": "/photos/ny/manhattan/hamilton-heights/hamilton-grange.jpg",
+        "thumb": "/photos/ny/manhattan/hamilton-heights/hamilton-grange_thumb.jpg",
+        "title": "Hamilton Grange National Memorial",
+        "description": "The front entrance of The Grange in St. Nicholas Park.",
+        "author": "Ajay Suresh",
+        "license": "CC BY 2.0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Hamilton_Grange_National_Memorial_-_Entrance_(48170424452).jpg"
+      },
+      {
+        "src": "/photos/ny/manhattan/hamilton-heights/city-college.jpg",
+        "thumb": "/photos/ny/manhattan/hamilton-heights/city-college_thumb.jpg",
+        "title": "City College of New York",
+        "description": "The Gothic facade of Shepard Hall on the CCNY campus.",
+        "author": "King of Hearts",
+        "license": "CC BY-SA 4.0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:City_College_of_New_York_November_2016.jpg"
+      },
+      {
+        "src": "/photos/ny/manhattan/hamilton-heights/sugar-hill.jpg",
+        "thumb": "/photos/ny/manhattan/hamilton-heights/sugar-hill_thumb.jpg",
+        "title": "Sugar Hill",
+        "description": "The landmark Bailey House on St. Nicholas Place, with the Benziger House behind it.",
+        "author": "Epicgenius",
+        "license": "CC BY-SA 4.0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Hamilton_Heights_Mar_2026_01.jpg"
+      }
+    ]
+  },
+  "places": [
+    {
+      "slug": "hamilton-grange-national-memorial",
+      "name": "Hamilton Grange National Memorial",
+      "kind": "historic-site",
+      "town": "Hamilton Heights",
+      "state": "New York",
+      "county": "Manhattan",
+      "address": "414 West 141st Street (in St. Nicholas Park), New York, NY 10031",
+      "official_url": "https://www.nps.gov/hagr/index.htm",
+      "summary": "Alexander Hamilton's 1802 Federal-style country home, designed by John McComb Jr.; the nearly 300-ton house was moved by hydraulics to its current site in St. Nicholas Park. Free ranger-led tours. Open Wednesday-Sunday, 10 a.m.-5 p.m.",
+      "status": "open",
+      "photos": [
+        {
+          "src": "/photos/ny/manhattan/hamilton-heights/hamilton-grange.jpg",
+          "thumb": "/photos/ny/manhattan/hamilton-heights/hamilton-grange_thumb.jpg",
+          "title": "Hamilton Grange National Memorial",
+          "description": "The front entrance of The Grange in St. Nicholas Park.",
+          "author": "Ajay Suresh",
+          "license": "CC BY 2.0",
+          "source_url": "https://commons.wikimedia.org/wiki/File:Hamilton_Grange_National_Memorial_-_Entrance_(48170424452).jpg"
+        }
+      ]
+    },
+    {
+      "slug": "denny-farrell-riverbank-state-park",
+      "name": "Denny Farrell Riverbank State Park",
+      "kind": "park",
+      "town": "Hamilton Heights",
+      "state": "New York",
+      "county": "Manhattan",
+      "address": "679 Riverside Drive, New York, NY 10031",
+      "official_url": "https://parks.ny.gov/parks/93/details.aspx",
+      "summary": "A state park complex on the Hudson with a 50-meter pool, skating rink, 800-seat theater, carousel, running track, and sports fields across five major buildings. Open 7 days a week, 6 a.m.-11 p.m., year-round.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "sugar-hill-childrens-museum-of-art-storytelling",
+      "name": "Sugar Hill Children's Museum of Art & Storytelling",
+      "kind": "museum",
+      "town": "Hamilton Heights",
+      "state": "New York",
+      "county": "Manhattan",
+      "address": "898 St. Nicholas Avenue at 155th Street, New York, NY 10032",
+      "official_url": "https://sugarhillmuseum.org",
+      "summary": "A children's museum dedicated to art and storytelling with deep ties to artist Faith Ringgold; current exhibitions include 'Faith Ringgold: Freedom Tales.' Open for special programs and events only — check the museum's site before visiting.",
+      "status": "open",
+      "photos": [
+        {
+          "src": "/photos/ny/manhattan/hamilton-heights/sugar-hill.jpg",
+          "thumb": "/photos/ny/manhattan/hamilton-heights/sugar-hill_thumb.jpg",
+          "title": "Sugar Hill",
+          "description": "The landmark Bailey House on St. Nicholas Place, with the Benziger House behind it.",
+          "author": "Epicgenius",
+          "license": "CC BY-SA 4.0",
+          "source_url": "https://commons.wikimedia.org/wiki/File:Hamilton_Heights_Mar_2026_01.jpg"
+        }
+      ]
+    },
+    {
+      "slug": "dance-theatre-of-harlem",
+      "name": "Dance Theatre of Harlem",
+      "kind": "theater",
+      "town": "Hamilton Heights",
+      "state": "New York",
+      "county": "Manhattan",
+      "official_url": "https://dancetheatreofharlem.org",
+      "summary": "Storied ballet company and school, 'Raising the Barre Since 1969,' founded by Arthur Mitchell; its Hamilton Heights studio building offers open houses, drop-in classes, and community arts programs.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "city-college-of-new-york",
+      "name": "City College of New York (historic campus)",
+      "kind": "historic-site",
+      "town": "Hamilton Heights",
+      "state": "New York",
+      "county": "Manhattan",
+      "official_url": "https://www.ccny.cuny.edu/about",
+      "summary": "CUNY's founding college (1847); its Gothic North Campus centered on Shepard Hall is a neighborhood landmark serving more than 16,000 students.",
+      "status": "open",
+      "photos": [
+        {
+          "src": "/photos/ny/manhattan/hamilton-heights/city-college.jpg",
+          "thumb": "/photos/ny/manhattan/hamilton-heights/city-college_thumb.jpg",
+          "title": "City College of New York",
+          "description": "The Gothic facade of Shepard Hall on the CCNY campus.",
+          "author": "King of Hearts",
+          "license": "CC BY-SA 4.0",
+          "source_url": "https://commons.wikimedia.org/wiki/File:City_College_of_New_York_November_2016.jpg"
+        }
+      ]
+    },
+    {
+      "slug": "harlem-public",
+      "name": "Harlem Public",
+      "kind": "restaurant",
+      "town": "Hamilton Heights",
+      "state": "New York",
+      "county": "Manhattan",
+      "address": "3612 Broadway, New York, NY 10031",
+      "official_url": "https://www.harlempublic.com",
+      "summary": "Neighborhood bar-restaurant, 'Do Work, Sip Brews,' that helped kick off the Hamilton Heights restaurant scene along Broadway in the 140s.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "tsion-cafe",
+      "name": "Tsion Cafe",
+      "kind": "cafe",
+      "town": "Hamilton Heights",
+      "state": "New York",
+      "county": "Manhattan",
+      "address": "763 St. Nicholas Ave, New York, NY 10031",
+      "official_url": "https://www.tsioncafe.com",
+      "summary": "Ethiopian-Israeli cafe and cultural hub in the Sugar Hill section run by chef-founder Beejhy Barhany, known for shakshuka and the immersive 'Gursha Experience' dinners. Currently emphasizes events and catering rather than posted daily walk-in hours — check ahead.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "the-edge-harlem",
+      "name": "The Edge Harlem",
+      "kind": "restaurant",
+      "town": "Hamilton Heights",
+      "state": "New York",
+      "county": "Manhattan",
+      "address": "101 Edgecombe Avenue, New York, NY 10030",
+      "official_url": "https://www.theedgeharlem.com",
+      "summary": "Restaurant-bar blending UK, Jamaican, and NYC influences on the neighborhood's eastern edge, with soulful live-music Wednesdays.",
+      "status": "open",
+      "photos": []
+    }
+  ],
+  "entries": [
+    {
+      "kind": "sight",
+      "name": "Hamilton Grange National Memorial",
+      "place_slug": "hamilton-grange-national-memorial",
+      "note": "Alexander Hamilton's country home, moved by hydraulics to St. Nicholas Park."
+    },
+    {
+      "kind": "walk",
+      "name": "Denny Farrell Riverbank State Park",
+      "place_slug": "denny-farrell-riverbank-state-park",
+      "note": "A Hudson-side state park with a pool, rink, and running track."
+    },
+    {
+      "kind": "sight",
+      "name": "Sugar Hill Children's Museum of Art & Storytelling",
+      "place_slug": "sugar-hill-childrens-museum-of-art-storytelling",
+      "note": "A children's museum with deep ties to artist Faith Ringgold; check for open program dates."
+    },
+    {
+      "kind": "sight",
+      "name": "Dance Theatre of Harlem",
+      "place_slug": "dance-theatre-of-harlem",
+      "note": "A storied ballet company and school founded by Arthur Mitchell in 1969."
+    },
+    {
+      "kind": "sight",
+      "name": "City College of New York (historic campus)",
+      "place_slug": "city-college-of-new-york",
+      "note": "CUNY's founding college, anchored by the Gothic Shepard Hall since 1847."
+    },
+    {
+      "kind": "food",
+      "name": "Harlem Public",
+      "place_slug": "harlem-public",
+      "note": "A neighborhood bar-restaurant that helped launch the Broadway-in-the-140s dining scene."
+    },
+    {
+      "kind": "food",
+      "name": "Tsion Cafe",
+      "place_slug": "tsion-cafe",
+      "note": "An Ethiopian-Israeli cafe known for shakshuka and immersive dinners; call ahead."
+    },
+    {
+      "kind": "food",
+      "name": "The Edge Harlem",
+      "place_slug": "the-edge-harlem",
+      "note": "A restaurant-bar with UK, Jamaican, and NYC influences and Wednesday live music."
+    }
+  ]
+}

@@ -1,0 +1,275 @@
+{
+  "guide": {
+    "slug": "harlem-manhattan-guide",
+    "title": "Harlem, Manhattan: The Renaissance and the Apollo",
+    "destination": "Harlem, New York",
+    "state": "New York",
+    "county": "Manhattan",
+    "intro": "Harlem takes its name from Haarlem in the Netherlands, settled by the Dutch and formally incorporated in 1660 under Peter Stuyvesant. Growth lagged after the Revolution until an 1868 boom, when the New York and Harlem Railroad and elevated lines connected the area to lower and midtown Manhattan. During the Great Migration, Harlem's Black population grew from about 10 percent in 1910 to roughly 70 percent by 1930, as African Americans fled Jim Crow, and the neighborhood became the center of the Harlem Renaissance, an unprecedented outpouring of Black literature, theater, and visual art through the 1920s and 1930s. The Apollo Theater opened January 26, 1934, its Amateur Night launching careers from Ella Fitzgerald to Lauryn Hill and D'Angelo. The Schomburg Center for Research in Black Culture, built around Arturo Schomburg's personal library, now holds over 11 million items. In Marcus Garvey Park stands the 1855-57 Harlem Fire Watchtower, sole survivor of eleven once built citywide.",
+    "sections": [
+      {
+        "heading": "From Nieuw Haarlem to the Harlem Renaissance",
+        "body": "The Dutch settlement of Nieuw Haarlem was formally incorporated in 1660 under Peter Stuyvesant, but the area stayed thinly settled until an economic boom began in 1868, as the New York and Harlem Railroad and elevated lines linked it to lower and midtown Manhattan. The neighborhood's defining transformation came in the early 20th century: during the Great Migration, Harlem's Black population climbed from about 10 percent in 1910 to roughly 70 percent by 1930, as African Americans moved north to escape Jim Crow. Through the 1920s and 1930s, Harlem became the center of the Harlem Renaissance, an outpouring of poetry, novels, theater, and visual art without precedent in Black America. The Apollo Theater, which opened January 26, 1934, became a signature stage of that legacy; its Amateur Night, introduced the same year, launched careers from Ella Fitzgerald to Lauryn Hill and D'Angelo, and James Brown recorded 'Live at the Apollo' there in 1962. The Schomburg Center for Research in Black Culture, built around Arturo Schomburg's personal library and now marking its 100th anniversary, holds over 11 million items on the African Diaspora."
+      },
+      {
+        "heading": "Getting there by subway",
+        "body": "Harlem's transit spine is 125th Street, where four separate subway stations cross the neighborhood west to east — the 1 at Broadway, the A/B/C/D at St. Nicholas Avenue, the 2/3 at Lenox Avenue, and the 4/5/6 at Lexington Avenue — plus a Metro-North stop, so nearly every trunk line in Manhattan reaches Harlem directly."
+      }
+    ],
+    "faq": [
+      {
+        "question": "How do I get to Harlem by subway?",
+        "answer": "Ride any trunk line to 125th Street: the 1 at Broadway, the A/B/C/D at St. Nicholas Avenue, the 2/3 at Lenox Avenue, or the 4/5/6 at Lexington Avenue. Metro-North also stops at Harlem-125th Street."
+      },
+      {
+        "question": "Why is it called Harlem?",
+        "answer": "It's named after the Dutch city of Haarlem; the settlement of Nieuw Haarlem was formally incorporated in 1660 under Peter Stuyvesant."
+      },
+      {
+        "question": "Is the Apollo Theater still open?",
+        "answer": "Yes. Its Historic Theater main stage is closed for a generational restoration expected to complete in 2026, but the institution remains active through the Apollo Stages at The Victoria nearby."
+      },
+      {
+        "question": "What is the best park in Harlem?",
+        "answer": "Marcus Garvey Park, opened in 1840 as Mount Morris Park and renamed for Marcus Garvey in 1973, holds the 1855-57 Harlem Fire Watchtower, the only survivor of eleven once built across the city."
+      },
+      {
+        "question": "Where can I stay in Harlem?",
+        "answer": "The Renaissance New York Harlem Hotel, a 210-room Marriott-managed hotel at 233 West 125th Street, opened in 2023 inside the redeveloped Victoria Theater and is the neighborhood's verified in-neighborhood option."
+      }
+    ],
+    "photos": [
+      {
+        "src": "/photos/ny/manhattan/harlem/apollo-theater.jpg",
+        "thumb": "/photos/ny/manhattan/harlem/apollo-theater_thumb.jpg",
+        "title": "Apollo Theater",
+        "description": "The vertical APOLLO blade sign and marquee on 125th Street.",
+        "author": "Stu pendousmat",
+        "license": "CC BY-SA 3.0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Apollo_Theater,_Harlem_(2009).jpg"
+      },
+      {
+        "src": "/photos/ny/manhattan/harlem/125th-street.jpg",
+        "thumb": "/photos/ny/manhattan/harlem/125th-street_thumb.jpg",
+        "title": "125th Street",
+        "description": "A street-level view along West 125th Street, Harlem's transit spine.",
+        "author": "Esnate",
+        "license": "CC BY-SA 4.0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:West_125th_Street,_Harlem.jpg"
+      },
+      {
+        "src": "/photos/ny/manhattan/harlem/strivers-row.jpg",
+        "thumb": "/photos/ny/manhattan/harlem/strivers-row_thumb.jpg",
+        "title": "Strivers' Row",
+        "description": "Stanford White rowhouses on West 139th Street in the St. Nicholas Historic District.",
+        "author": "Alberto-g-rovi",
+        "license": "CC BY 3.0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Strivers%27_Row-2023_01.jpg"
+      },
+      {
+        "src": "/photos/ny/manhattan/harlem/fire-watchtower.jpg",
+        "thumb": "/photos/ny/manhattan/harlem/fire-watchtower_thumb.jpg",
+        "title": "Harlem Fire Watchtower",
+        "description": "The restored 1855-57 cast-iron watchtower in Marcus Garvey Park.",
+        "author": "Jim.henderson",
+        "license": "CC BY-SA 4.0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Watch_Tower_restored_2020_jeh.jpg"
+      }
+    ]
+  },
+  "places": [
+    {
+      "slug": "apollo-theater",
+      "name": "Apollo Theater",
+      "kind": "theater",
+      "town": "Harlem",
+      "state": "New York",
+      "county": "Manhattan",
+      "address": "West 125th Street, Harlem, New York",
+      "official_url": "https://www.apollotheater.org/",
+      "summary": "Opened January 26, 1934; its Amateur Night launched careers from Ella Fitzgerald to Lauryn Hill, and it is the largest performing arts institution committed to Black culture and creativity.",
+      "history": "The Historic Theater's main stage is closed for a generational restoration expected to complete in 2026; the institution remains active via the Apollo Stages at The Victoria.",
+      "status": "open",
+      "photos": [
+        {
+          "src": "/photos/ny/manhattan/harlem/apollo-theater.jpg",
+          "thumb": "/photos/ny/manhattan/harlem/apollo-theater_thumb.jpg",
+          "title": "Apollo Theater",
+          "description": "The vertical APOLLO blade sign and marquee on 125th Street.",
+          "author": "Stu pendousmat",
+          "license": "CC BY-SA 3.0",
+          "source_url": "https://commons.wikimedia.org/wiki/File:Apollo_Theater,_Harlem_(2009).jpg"
+        }
+      ]
+    },
+    {
+      "slug": "studio-museum-in-harlem",
+      "name": "Studio Museum in Harlem",
+      "kind": "museum",
+      "town": "Harlem",
+      "state": "New York",
+      "county": "Manhattan",
+      "address": "144 West 125th Street, New York, NY 10027",
+      "official_url": "https://www.studiomuseum.org/",
+      "summary": "Museum devoted to artists of African descent, recently reopened in a new building; current shows include 'Fade' and 'Dreams of This Future: The Collection of Peggy Cooper Cafritz.'",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "schomburg-center-for-research-in-black-culture",
+      "name": "Schomburg Center for Research in Black Culture",
+      "kind": "museum",
+      "town": "Harlem",
+      "state": "New York",
+      "county": "Manhattan",
+      "address": "515 Malcolm X Boulevard (at 135th St), New York, NY 10037",
+      "official_url": "https://www.nypl.org/locations/schomburg",
+      "summary": "New York Public Library research center marking its 100th anniversary, with over 11 million items on the African Diaspora; grew from Arturo Schomburg's personal library. Open Monday-Saturday, 10 a.m.-6 p.m.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "marcus-garvey-park",
+      "name": "Marcus Garvey Park",
+      "kind": "park",
+      "town": "Harlem",
+      "state": "New York",
+      "county": "Manhattan",
+      "address": "Bounded by 120th St (south), 124th St (north), and Madison Ave (east), Harlem",
+      "official_url": "https://www.nycgovparks.org/parks/marcus-garvey-park",
+      "summary": "Opened in 1840 as Mount Morris Park and renamed for Marcus Garvey by City Council vote in 1973; contains the 1855-57 cast-iron Harlem Fire Watchtower, the only survivor of eleven built citywide.",
+      "status": "open",
+      "photos": [
+        {
+          "src": "/photos/ny/manhattan/harlem/fire-watchtower.jpg",
+          "thumb": "/photos/ny/manhattan/harlem/fire-watchtower_thumb.jpg",
+          "title": "Harlem Fire Watchtower",
+          "description": "The restored 1855-57 cast-iron watchtower in Marcus Garvey Park.",
+          "author": "Jim.henderson",
+          "license": "CC BY-SA 4.0",
+          "source_url": "https://commons.wikimedia.org/wiki/File:Watch_Tower_restored_2020_jeh.jpg"
+        }
+      ]
+    },
+    {
+      "slug": "sylvias-restaurant",
+      "name": "Sylvia's Restaurant",
+      "kind": "restaurant",
+      "town": "Harlem",
+      "state": "New York",
+      "county": "Manhattan",
+      "address": "328 Malcolm X Blvd, Harlem, NY 10027",
+      "official_url": "https://sylviasrestaurant.com/",
+      "summary": "Soul food institution founded in 1962 by Sylvia Woods; received the James Beard Foundation America's Classics Award in 2024.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "red-rooster-harlem",
+      "name": "Red Rooster Harlem",
+      "kind": "restaurant",
+      "town": "Harlem",
+      "state": "New York",
+      "county": "Manhattan",
+      "address": "310 Lenox Avenue, Harlem, NY 10027",
+      "official_url": "https://www.redroosterharlem.com/",
+      "summary": "Opened in 2010 by chef Marcus Samuelsson, serving soul and comfort food drawing on Harlem's African American, Caribbean, and Southern traditions, with the Ginny's Supperclub venue and a live music series.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "amy-ruths",
+      "name": "Amy Ruth's",
+      "kind": "restaurant",
+      "town": "Harlem",
+      "state": "New York",
+      "county": "Manhattan",
+      "address": "113 West 116th Street, Harlem, New York 10026",
+      "official_url": "https://amyruths.com/",
+      "summary": "Soul food restaurant famous for chicken and waffles, named in memory of founder's grandmother Amy Ruth Moore Bass, an Alabama-born cook.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "harlem-shake",
+      "name": "Harlem Shake",
+      "kind": "restaurant",
+      "town": "Harlem",
+      "state": "New York",
+      "county": "Manhattan",
+      "address": "100 W. 124th Street, New York, NY 10027",
+      "official_url": "https://www.harlemshake.com/",
+      "summary": "Retro-style local spot serving smash burgers, milkshakes, and fries 'the Harlem way,' with a second location in Brooklyn.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "renaissance-new-york-harlem-hotel",
+      "name": "Renaissance New York Harlem Hotel",
+      "kind": "hotel",
+      "town": "Harlem",
+      "state": "New York",
+      "county": "Manhattan",
+      "address": "233 West 125th Street, New York, NY",
+      "summary": "210-room Marriott-managed hotel that opened October 17, 2023 in a 27-story tower built as part of the Victoria Theater redevelopment, which preserved the historic theater's facade, marquee, and lobby.",
+      "status": "open",
+      "photos": []
+    }
+  ],
+  "entries": [
+    {
+      "kind": "sight",
+      "name": "Apollo Theater",
+      "place_slug": "apollo-theater",
+      "note": "Opened 1934; Amateur Night launched careers from Ella Fitzgerald to Lauryn Hill."
+    },
+    {
+      "kind": "sight",
+      "name": "Studio Museum in Harlem",
+      "place_slug": "studio-museum-in-harlem",
+      "note": "A museum devoted to artists of African descent, recently reopened in a new building."
+    },
+    {
+      "kind": "sight",
+      "name": "Schomburg Center for Research in Black Culture",
+      "place_slug": "schomburg-center-for-research-in-black-culture",
+      "note": "An NYPL research center holding over 11 million items on the African Diaspora."
+    },
+    {
+      "kind": "walk",
+      "name": "Marcus Garvey Park",
+      "place_slug": "marcus-garvey-park",
+      "note": "Home to the last surviving 19th-century fire watchtower in New York City."
+    },
+    {
+      "kind": "food",
+      "name": "Sylvia's Restaurant",
+      "place_slug": "sylvias-restaurant",
+      "note": "A soul food institution since 1962, honored with a 2024 James Beard award."
+    },
+    {
+      "kind": "food",
+      "name": "Red Rooster Harlem",
+      "place_slug": "red-rooster-harlem",
+      "note": "Marcus Samuelsson's soul-food restaurant, with live music and Ginny's Supperclub."
+    },
+    {
+      "kind": "food",
+      "name": "Amy Ruth's",
+      "place_slug": "amy-ruths",
+      "note": "Famous for chicken and waffles, named for the founder's grandmother."
+    },
+    {
+      "kind": "food",
+      "name": "Harlem Shake",
+      "place_slug": "harlem-shake",
+      "note": "A retro burger-and-milkshake spot done 'the Harlem way.'"
+    },
+    {
+      "kind": "stay",
+      "name": "Renaissance New York Harlem Hotel",
+      "place_slug": "renaissance-new-york-harlem-hotel",
+      "note": "A 2023-opened Marriott hotel inside the redeveloped Victoria Theater."
+    }
+  ]
+}

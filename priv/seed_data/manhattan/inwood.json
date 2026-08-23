@@ -1,0 +1,235 @@
+{
+  "guide": {
+    "slug": "inwood-manhattan-guide",
+    "title": "Inwood, Manhattan: Old-Growth Forest and the Legend of Shorakkopoch",
+    "destination": "Inwood, New York",
+    "state": "New York",
+    "county": "Manhattan",
+    "intro": "Before European arrival, this was Shorakapkok, a Lenape settlement whose clam beds, cornfields, and fish runs led the National Museum of the American Indian to call it the best place to live on the island. By legend, Peter Minuit's 1626 purchase of Manhattan from the Lenape took place here; Shorakkopoch Rock bears a commemorative plaque, though no historical record confirms the meeting happened at this spot. Inwood remained rural until the subway arrived in 1906, spurring the Art Deco apartment buildings that still define its streets. The Dyckman Oval hosted Negro League baseball until its 1938 demolition, and Hessian troops camped here during the British occupation, their huts' remains discovered in 1914. Predominantly Irish and Jewish for much of the 20th century, Inwood now has New York City's highest concentration of Dominican residents. Inwood Hill Park, opened in 1926, preserves Manhattan's largest old-growth forest and one of its last salt marshes.",
+    "sections": [
+      {
+        "heading": "Shorakapkok to Sherman Creek",
+        "body": "Long before Europeans arrived, this plateau was Shorakapkok, a Lenape settlement site whose clam beds, cornfields, and annual fish runs led the National Museum of the American Indian to describe it as the 'best place to live' on Manhattan. By legend, Peter Minuit's 1626 purchase of the island from the Lenape happened here; Shorakkopoch Rock in Inwood Hill Park carries a commemorative plaque, though the story appears in no historical record and historians debate whether the meeting took place at this spot at all. During the Revolutionary War's British occupation, Hessian troops kept a camp of more than 60 huts between 201st and 204th Streets along Payson Avenue, whose remains were discovered in 1914. The neighborhood stayed largely rural until the IRT Broadway-Seventh Avenue subway reached it in 1906 and the IND Eighth Avenue Line followed in the 1930s, spurring the Art Deco apartment construction that still defines its streets. The Dyckman Oval, a 4,500-seat stadium, hosted Negro League baseball until its demolition in 1938; the Dyckman Houses public housing complex was built on the site in 1951. Predominantly Irish, with a significant Jewish community, for much of the 20th century, Inwood today has New York City's highest concentration of residents of Dominican descent."
+      },
+      {
+        "heading": "Getting there by subway",
+        "body": "Inwood is served by two lines: the A train on the IND Eighth Avenue Line, underground, at Dyckman Street and its terminal, Inwood-207th Street, and the 1 train on the IRT Broadway-Seventh Avenue Line, elevated, at Dyckman Street, 207th Street, and 215th Street. Take the A for the faster ride to Midtown and the 1 for local stops along Broadway."
+      }
+    ],
+    "faq": [
+      {
+        "question": "How do I get to Inwood by subway?",
+        "answer": "Take the A train to Dyckman Street or its terminal at Inwood-207th Street for the faster ride to Midtown, or the elevated 1 train to Dyckman Street, 207th Street, or 215th Street for local stops along Broadway."
+      },
+      {
+        "question": "What is Shorakkopoch Rock?",
+        "answer": "A boulder in Inwood Hill Park bearing a plaque commemorating the legendary site of Peter Minuit's 1626 purchase of Manhattan from the Lenape. No historical record confirms the meeting happened here; historians debate the location."
+      },
+      {
+        "question": "What is the best park in Inwood?",
+        "answer": "Inwood Hill Park, a 196-acre park opened May 8, 1926, that preserves Manhattan's largest remaining old-growth forest, the Muscota Marsh salt marsh, and the city's largest glacial pothole."
+      },
+      {
+        "question": "Is Dyckman Farmhouse still standing?",
+        "answer": "Yes. Billed as Manhattan's last farmhouse, the Dutch Colonial Dyckman house at 4881 Broadway now operates as a museum, open Wednesday-Friday noon-4 p.m. and Saturday 10 a.m.-4 p.m."
+      },
+      {
+        "question": "Where can I stay in Inwood?",
+        "answer": "No hotel or bed-and-breakfast could be verified as operating within Inwood itself; the nearest verified option is the Radio Hotel in Washington Heights, about two miles south."
+      }
+    ],
+    "photos": [
+      {
+        "src": "/photos/ny/manhattan/inwood/inwood-hill-forest.jpg",
+        "thumb": "/photos/ny/manhattan/inwood/inwood-hill-forest_thumb.jpg",
+        "title": "Inwood Hill Park",
+        "description": "Old-growth forest in the park's Shorakapok Preserve.",
+        "author": "Tdorante10",
+        "license": "CC BY-SA 4.0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Inwood_Hill_Park_td_(2019-04-27)_068_-_Shorakapok_Preserve.jpg"
+      },
+      {
+        "src": "/photos/ny/manhattan/inwood/shorakkopoch-rock.jpg",
+        "thumb": "/photos/ny/manhattan/inwood/shorakkopoch-rock_thumb.jpg",
+        "title": "Shorakkopoch Rock",
+        "description": "The rock and plaque marking the legendary site of the 1626 Manhattan purchase.",
+        "author": "ZanderZ",
+        "license": "CC BY-SA 3.0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Shorakkopoch_Rock.jpg"
+      },
+      {
+        "src": "/photos/ny/manhattan/inwood/dyckman-farmhouse.jpg",
+        "thumb": "/photos/ny/manhattan/inwood/dyckman-farmhouse_thumb.jpg",
+        "title": "Dyckman Farmhouse",
+        "description": "The Dutch Colonial farmhouse above Broadway, Manhattan's last surviving farmhouse.",
+        "author": "Thummin12",
+        "license": "CC BY 4.0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Dyckman_Farmhouse_Museum.jpg"
+      },
+      {
+        "src": "/photos/ny/manhattan/inwood/muscota-marsh.jpg",
+        "thumb": "/photos/ny/manhattan/inwood/muscota-marsh_thumb.jpg",
+        "title": "Muscota Marsh",
+        "description": "The salt marsh at low tide, with Inwood Hill beyond.",
+        "author": "Beyond My Ken",
+        "license": "CC BY-SA 4.0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Muscota_Marsh_summer_low_tide.jpg"
+      }
+    ]
+  },
+  "places": [
+    {
+      "slug": "inwood-hill-park",
+      "name": "Inwood Hill Park",
+      "kind": "park",
+      "town": "Inwood",
+      "state": "New York",
+      "county": "Manhattan",
+      "address": "Bounded by Dyckman Street (south), the Hudson River (west), and West 218th Street (north), Manhattan",
+      "official_url": "https://www.nycgovparks.org/parks/inwood-hill-park",
+      "summary": "A 196-acre park opened May 8, 1926, containing Manhattan's largest remaining old-growth forest, the Muscota Marsh salt marsh, New York City's largest glacial pothole, and Lenape rock shelters with excavated artifacts.",
+      "status": "open",
+      "photos": [
+        {
+          "src": "/photos/ny/manhattan/inwood/inwood-hill-forest.jpg",
+          "thumb": "/photos/ny/manhattan/inwood/inwood-hill-forest_thumb.jpg",
+          "title": "Inwood Hill Park",
+          "description": "Old-growth forest in the park's Shorakapok Preserve.",
+          "author": "Tdorante10",
+          "license": "CC BY-SA 4.0",
+          "source_url": "https://commons.wikimedia.org/wiki/File:Inwood_Hill_Park_td_(2019-04-27)_068_-_Shorakapok_Preserve.jpg"
+        },
+        {
+          "src": "/photos/ny/manhattan/inwood/muscota-marsh.jpg",
+          "thumb": "/photos/ny/manhattan/inwood/muscota-marsh_thumb.jpg",
+          "title": "Muscota Marsh",
+          "description": "The salt marsh at low tide, with Inwood Hill beyond.",
+          "author": "Beyond My Ken",
+          "license": "CC BY-SA 4.0",
+          "source_url": "https://commons.wikimedia.org/wiki/File:Muscota_Marsh_summer_low_tide.jpg"
+        }
+      ]
+    },
+    {
+      "slug": "shorakkopoch-rock",
+      "name": "Shorakkopoch Rock",
+      "kind": "historic-site",
+      "town": "Inwood",
+      "state": "New York",
+      "county": "Manhattan",
+      "address": "Inwood Hill Park, near the Hudson River, Manhattan",
+      "summary": "A boulder bearing a commemorative plaque for the legendary 1626 site of Peter Minuit's purchase of Manhattan from the Lenape; the account appears in no historical record, and historians debate whether the meeting happened here at all.",
+      "status": "open",
+      "photos": [
+        {
+          "src": "/photos/ny/manhattan/inwood/shorakkopoch-rock.jpg",
+          "thumb": "/photos/ny/manhattan/inwood/shorakkopoch-rock_thumb.jpg",
+          "title": "Shorakkopoch Rock",
+          "description": "The rock and plaque marking the legendary site of the 1626 Manhattan purchase.",
+          "author": "ZanderZ",
+          "license": "CC BY-SA 3.0",
+          "source_url": "https://commons.wikimedia.org/wiki/File:Shorakkopoch_Rock.jpg"
+        }
+      ]
+    },
+    {
+      "slug": "dyckman-farmhouse-museum",
+      "name": "Dyckman Farmhouse Museum",
+      "kind": "museum",
+      "town": "Inwood",
+      "state": "New York",
+      "county": "Manhattan",
+      "address": "4881 Broadway (at West 204th Street), New York, NY 10034",
+      "official_url": "https://dyckmanfarmhouse.org/",
+      "summary": "Billed as Manhattan's last farmhouse, the Dutch Colonial Dyckman house is the borough's sole surviving farmhouse and now operates as a house museum. Open Wednesday-Friday, noon-4 p.m., and Saturday, 10 a.m.-4 p.m.",
+      "status": "open",
+      "photos": [
+        {
+          "src": "/photos/ny/manhattan/inwood/dyckman-farmhouse.jpg",
+          "thumb": "/photos/ny/manhattan/inwood/dyckman-farmhouse_thumb.jpg",
+          "title": "Dyckman Farmhouse",
+          "description": "The Dutch Colonial farmhouse above Broadway, Manhattan's last surviving farmhouse.",
+          "author": "Thummin12",
+          "license": "CC BY 4.0",
+          "source_url": "https://commons.wikimedia.org/wiki/File:Dyckman_Farmhouse_Museum.jpg"
+        }
+      ]
+    },
+    {
+      "slug": "isham-park",
+      "name": "Isham Park",
+      "kind": "park",
+      "town": "Inwood",
+      "state": "New York",
+      "county": "Manhattan",
+      "address": "Between Broadway, Isham Street, Seaman Avenue, and West 214th-215th Streets, Manhattan",
+      "summary": "A 20-acre hilltop park created from Isham family land gifts beginning with Julia Isham Taylor's 1911 donation; features Cambrian-era marble outcroppings, a milestone from the old Kingsbridge Road, and a ginkgo named one of NYC's 'Great Trees' in 1985.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "the-inwood-farm",
+      "name": "The Inwood Farm",
+      "kind": "restaurant",
+      "town": "Inwood",
+      "state": "New York",
+      "county": "Manhattan",
+      "address": "600 West 218th Street, New York, NY 10034",
+      "official_url": "https://theinwoodfarm.com/",
+      "summary": "'Born in 2020' in the former Indian Road Cafe space, serving American cooking with Italian influences, weekend brunch, and live music, steps from Inwood Hill Park.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "809-restaurant-lounge",
+      "name": "809 Restaurant & Lounge",
+      "kind": "restaurant",
+      "town": "Inwood",
+      "state": "New York",
+      "county": "Manhattan",
+      "address": "112 Dyckman Street, New York, NY 10040",
+      "official_url": "https://www.809nyc.com/",
+      "summary": "Dominican and Caribbean institution on the Dyckman Street strip since 2004, known for mofongo, churrasco, and pescado frito, with a lounge and catering.",
+      "status": "open",
+      "photos": []
+    }
+  ],
+  "entries": [
+    {
+      "kind": "walk",
+      "name": "Inwood Hill Park",
+      "place_slug": "inwood-hill-park",
+      "note": "Manhattan's largest old-growth forest, a salt marsh, and the city's largest glacial pothole."
+    },
+    {
+      "kind": "sight",
+      "name": "Shorakkopoch Rock",
+      "place_slug": "shorakkopoch-rock",
+      "note": "The legendary, unconfirmed site of Peter Minuit's 1626 Manhattan purchase."
+    },
+    {
+      "kind": "sight",
+      "name": "Dyckman Farmhouse Museum",
+      "place_slug": "dyckman-farmhouse-museum",
+      "note": "Manhattan's last surviving farmhouse, now a house museum."
+    },
+    {
+      "kind": "walk",
+      "name": "Isham Park",
+      "place_slug": "isham-park",
+      "note": "A 20-acre hilltop park with marble outcroppings and a colonial-road milestone."
+    },
+    {
+      "kind": "food",
+      "name": "The Inwood Farm",
+      "place_slug": "the-inwood-farm",
+      "note": "American-Italian cooking and live music steps from Inwood Hill Park."
+    },
+    {
+      "kind": "food",
+      "name": "809 Restaurant & Lounge",
+      "place_slug": "809-restaurant-lounge",
+      "note": "A Dominican and Caribbean institution on Dyckman Street since 2004."
+    }
+  ]
+}
