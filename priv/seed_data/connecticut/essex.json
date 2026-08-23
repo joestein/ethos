@@ -13,7 +13,7 @@
       },
       {
         "heading": "Getting there",
-        "body": "Essex is a driving destination reached from Route 9 Exit 3 — via I-95 Exit 69 (Route 9 North) from the shoreline or I-91 Exit 22S (Route 9 South) from Hartford, about 45 minutes from either Hartford or New Haven. There is no passenger rail station in Essex itself; the nearest Shore Line East commuter stops are Old Saybrook (Boston Post Road) and Westbrook (Norris Ave)."
+        "body": "Essex is a driving destination reached from Route 9 Exit 3 — via I-95 Exit 69 (Route 9 North) from the shoreline or I-91 Exit 22S (Route 9 South) from Hartford. There is no passenger rail station in Essex itself; the nearest Shore Line East commuter stops are Old Saybrook (Boston Post Road) and Westbrook (Norris Ave)."
       },
       {
         "heading": "Three villages: Essex, Ivoryton, and Centerbrook",
@@ -23,7 +23,7 @@
     "faq": [
       {
         "question": "How do I get to Essex?",
-        "answer": "Drivers use Route 9 Exit 3, reached via I-95 Exit 69 (Route 9 North) from the shoreline or I-91 Exit 22S (Route 9 South) from Hartford — about 45 minutes from either Hartford or New Haven. Essex has no rail station; the nearest Shore Line East stops are Old Saybrook and Westbrook."
+        "answer": "Drivers use Route 9 Exit 3, reached via I-95 Exit 69 (Route 9 North) from the shoreline or I-91 Exit 22S (Route 9 South) from Hartford. Essex has no rail station; the nearest Shore Line East stops are Old Saybrook and Westbrook."
       },
       {
         "question": "What is the Connecticut River Museum?",
@@ -258,7 +258,7 @@
     {
       "target": "guide:chester-ct-travel-guide",
       "kind": "same-region",
-      "note": "Connecticut River valley neighbours a short drive apart, with Deep River in between."
+      "note": "Connecticut River valley neighbours, with Deep River in between."
     },
     {
       "target": "guide:old-saybrook-ct-travel-guide",

@@ -13,13 +13,13 @@
       },
       {
         "heading": "Getting there",
-        "body": "Sherman has no rail station and no interstate of its own. Route 37, an 18.66-mile road beginning at I-84 in Danbury, runs through New Fairfield and Sherman — as Greenwoods Hill Road through Pootatuck State Forest, then Barnes Hill Road — to US Route 7 in New Milford; Route 55, just 2.64 miles long, runs from the New York state line to US Route 7 in Gaylordsville. The nearest rail is Metro-North's Danbury Branch at Danbury, about a half-hour drive south, or the lightly used Harlem Valley-Wingdale station across the New York line."
+        "body": "Sherman has no rail station and no interstate of its own. Route 37, an 18.66-mile road beginning at I-84 in Danbury, runs through New Fairfield and Sherman — as Greenwoods Hill Road through Pootatuck State Forest, then Barnes Hill Road — to US Route 7 in New Milford; Route 55, just 2.64 miles long, runs from the New York state line to US Route 7 in Gaylordsville. The nearest rail is Metro-North's Danbury Branch at Danbury, south on Route 37, or the lightly used Harlem Valley-Wingdale station across the New York line."
       }
     ],
     "faq": [
       {
         "question": "How do I get to Sherman?",
-        "answer": "By car — Route 37 north from I-84 in Danbury through New Fairfield, about a half-hour drive, or Route 55 west from US Route 7 at Gaylordsville. There is no train station in Sherman."
+        "answer": "By car — Route 37 north from I-84 in Danbury through New Fairfield, or Route 55 west from US Route 7 at Gaylordsville. There is no train station in Sherman."
       },
       {
         "question": "What was Roger Sherman's connection to the town?",
@@ -261,7 +261,7 @@
     {
       "target": "guide:danbury-ct-travel-guide",
       "kind": "same-region",
-      "note": "Route 37 runs from Sherman south to I-84 in Danbury, about a half-hour drive."
+      "note": "Route 37 runs from Sherman south to I-84 in Danbury."
     }
   ]
 }

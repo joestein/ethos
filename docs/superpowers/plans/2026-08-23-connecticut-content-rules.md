@@ -183,3 +183,23 @@ in your wave report with the reason. Never ship a stub to fill the roster.
 No drive times, ever — nothing in the research supports them. State proximity
 in checkable terms only: "borders Canterbury", "12 miles north of Norwich on
 Route 97". Distances and roads come from the research like any other fact.
+
+**This rule is now mechanically enforced.** Restating it in every wave's
+dispatch and checking for it in every review was proven insufficient — task
+55 found 58 drive-time occurrences across 28 already-committed files despite
+both. `test/ethos/seeds/connecticut_seed_data_test.exs` now asserts that no
+committed Connecticut seed file matches a ported set of drive-time/duration
+patterns (digit-minute forms, half/quarter/hour-plus-drive forms, spelled-out
+numbers five through ninety, and vague "short/quick/easy drive" phrasing);
+the assertion fails the build and names the offending file and text if the
+ban is violated. Do not write around the gate by phrasing a duration it
+happens not to catch — the ban is on the underlying claim, not the specific
+wording the regex looks for.
+
+A drive-time claim can hide in any of **six places**, and across several
+waves at least one of the six survived a pass that fixed the others: the
+**intro**, a **section body**, an **FAQ answer**, a **place summary**, a
+**photo caption/description**, and a **link note**. When editing proximity
+language, check all six for the town(s) involved, not just the "Getting
+there" section — the mechanical gate checks every string in the file, and a
+human review pass should too.

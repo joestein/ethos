@@ -13,7 +13,7 @@
       },
       {
         "heading": "Getting there",
-        "body": "Drivers reach Greenwich on I-95 (exits 2-5) or the Merritt Parkway, with U.S. Route 1 (the Post Road) running through town. Car-free travelers use Metro-North's New Haven Line, which stops at four stations in town — Greenwich, Cos Cob, Riverside, and Old Greenwich — about 50 to 60 minutes from Grand Central Terminal. No Amtrak, Shore Line East, or Hartford Line service stops in Greenwich; the nearest Amtrak station is in neighboring Stamford."
+        "body": "Drivers reach Greenwich on I-95 (exits 2-5) or the Merritt Parkway, with U.S. Route 1 (the Post Road) running through town. Car-free travelers use Metro-North's New Haven Line, which stops at four stations in town — Greenwich, Cos Cob, Riverside, and Old Greenwich, with direct service to Grand Central Terminal. No Amtrak, Shore Line East, or Hartford Line service stops in Greenwich; the nearest Amtrak station is in neighboring Stamford."
       },
       {
         "heading": "A museum, a sanctuary, and the shoreline",
@@ -23,7 +23,7 @@
     "faq": [
       {
         "question": "How do I get to Greenwich?",
-        "answer": "Drivers use I-95 (exits 2-5), the Merritt Parkway, or U.S. Route 1. Metro-North's New Haven Line stops at four in-town stations — Greenwich, Cos Cob, Riverside, and Old Greenwich — about 50-60 minutes from Grand Central Terminal; there is no Amtrak, Shore Line East, or Hartford Line service here."
+        "answer": "Drivers use I-95 (exits 2-5), the Merritt Parkway, or U.S. Route 1. Metro-North's New Haven Line stops at four in-town stations — Greenwich, Cos Cob, Riverside, and Old Greenwich, with direct service to Grand Central Terminal; there is no Amtrak, Shore Line East, or Hartford Line service here."
       },
       {
         "question": "Why is it called Greenwich Point, or Tod's Point?",
@@ -272,7 +272,7 @@
     {
       "target": "guide:midtown-manhattan-guide",
       "kind": "see-also",
-      "note": "Metro-North's New Haven Line reaches four Greenwich stations in 50-60 minutes from Grand Central Terminal."
+      "note": "Metro-North's New Haven Line reaches four Greenwich stations with direct service from Grand Central Terminal."
     }
   ]
 }
