@@ -43,6 +43,22 @@ defmodule Ethos.Seeds.ConnecticutSeedDataTest do
                "#{Path.basename(f)}: bad license #{inspect(p["license"])}"
       end
 
+      # Photo labels are the optimizer's lookup key: mix ethos.optimize_connecticut_photos
+      # resolves every /photos/ct/{town}/{label}.jpg from images/connecticut/{label}.*, so
+      # one label may never stand for two different source images.
+      label_sources =
+        for f <- files,
+            p <- all_photos(DataGuide.load!(f)),
+            do: {Path.rootname(Path.basename(p["src"])), p["source_url"]}
+
+      label_dups =
+        label_sources
+        |> Enum.group_by(&elem(&1, 0), &elem(&1, 1))
+        |> Enum.filter(fn {_label, sources} -> length(Enum.uniq(sources)) > 1 end)
+
+      assert label_dups == [],
+             "photo labels standing for more than one image: #{inspect(label_dups)}"
+
       # Seed the link-target universe (mirrors prod seeding order):
       user = user_fixture()
 
