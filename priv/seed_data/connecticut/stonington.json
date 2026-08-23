@@ -1,0 +1,258 @@
+{
+  "guide": {
+    "slug": "stonington-ct-travel-guide",
+    "title": "Stonington, Connecticut: A Borough That Defied the British Navy",
+    "destination": "Stonington, Connecticut",
+    "state": "Connecticut",
+    "county": "New London County",
+    "intro": "Stonington, settled in 1649 and named in 1666, occupies New London County's southeastern corner against the Rhode Island line. Its shipbuilding and whaling industries once thrived, and the state's last commercial fishing fleet still works out of Stonington Harbor. During the War of 1812, townspeople defied a British naval attack on August 10, 1814, by nailing a large American flag to a pole above the shore battery — remembered as the Stonington Battle Flag. The borough also produced Captain Nathaniel B. Palmer, credited with an early sighting of Antarctica; his home on Palmer Street is now a National Historic Landmark museum. At the harbor's edge, the Old Lighthouse Museum, run by the Stonington Historical Society, is billed as America's first lighthouse museum. Vineyards, a working harborfront, and the borough's Water Street storefronts carry that maritime history into the present day.",
+    "sections": [
+      {
+        "heading": "A borough that defied the British Navy",
+        "body": "Stonington, settled in 1649 and named in 1666, occupies New London County's southeastern corner against the Rhode Island line. Its shipbuilding and whaling industries once thrived, and the state's last commercial fishing fleet still works out of Stonington Harbor. During the War of 1812, townspeople defied a British naval attack on August 10, 1814, by nailing a large American flag to a pole above the shore battery — remembered as the Stonington Battle Flag. The borough also produced Captain Nathaniel B. Palmer, credited with an early sighting of Antarctica; his home on Palmer Street is now a National Historic Landmark museum. At the harbor's edge, the Old Lighthouse Museum, run by the Stonington Historical Society, is billed as America's first lighthouse museum."
+      },
+      {
+        "heading": "Getting there",
+        "body": "Drivers reach Stonington's Mystic-side neighborhoods via I-95 Exit 90 to CT Route 27; the borough itself sits further east along Route 1. There is no Metro-North or Shore Line East service in Stonington — the nearest Amtrak trains serve Mystic and New London daily."
+      },
+      {
+        "heading": "Vineyards, a working harbor, and Water Street",
+        "body": "Stonington Vineyards and Saltwater Farm Vineyard, both working shoreline wineries, host tastings and summer events. At the foot of the borough, duBois Beach offers a small stretch of sand at Stonington Point, reached by a walk down Water Street past the Old Lighthouse Museum. The state's last commercial fishing fleet still docks in Stonington Harbor, and Water Street's restaurants — Breakwater at Stonington Harbor and Water Street Cafe among them — look out over the working waterfront."
+      }
+    ],
+    "faq": [
+      {
+        "question": "How do I get to Stonington?",
+        "answer": "Drivers take I-95 Exit 90 to CT Route 27 for the Mystic side of town; Route 1 continues east to the borough itself. There is no Metro-North or Shore Line East service in Stonington — Amtrak trains serve nearby Mystic and New London daily instead."
+      },
+      {
+        "question": "What is the Old Lighthouse Museum?",
+        "answer": "Billed as America's first lighthouse museum, it sits at the foot of Stonington Borough near Stonington Point and is operated by the Stonington Historical Society, open daily 10 a.m.-4 p.m."
+      },
+      {
+        "question": "What is the Stonington Battle Flag?",
+        "answer": "During a lull in the British attack on Stonington on August 10, 1814, townspeople nailed a large American flag to a pole above the shore battery as a banner of defiance — the event remembered today as the Stonington Battle Flag."
+      },
+      {
+        "question": "Who was Nathaniel B. Palmer?",
+        "answer": "A Stonington sea captain credited with an early sighting of Antarctica. His home at 40 Palmer Street is now a National Historic Landmark museum with China-trade artifacts, open daily 10 a.m.-4 p.m. with tours on the hour."
+      },
+      {
+        "question": "Is there a beach in Stonington Borough?",
+        "answer": "Yes — duBois Beach, a small beach at Stonington Point, sits at the end of a walk down Water Street through the historic borough."
+      },
+      {
+        "question": "Does Mystic Seaport Museum count as a Stonington attraction?",
+        "answer": "Mystic Seaport Museum sits on the Stonington side of the Mystic River, but the village of Mystic itself straddles Stonington and Groton as its own census-designated place — see the separate Mystic guide."
+      }
+    ],
+    "photos": [
+      {
+        "src": "/photos/ct/stonington/old-lighthouse-museum.jpg",
+        "thumb": "/photos/ct/stonington/old-lighthouse-museum_thumb.jpg",
+        "title": "Stonington Harbor Light",
+        "description": "The 1840 stone lighthouse that houses the Old Lighthouse Museum.",
+        "author": "Jonathan Ralton",
+        "license": "CC BY-SA 4.0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Stonington_Harbor_Light.jpg"
+      },
+      {
+        "src": "/photos/ct/stonington/water-street-shops.jpg",
+        "thumb": "/photos/ct/stonington/water-street-shops_thumb.jpg",
+        "title": "Water Street shops",
+        "description": "Storefronts along Water Street in historic Stonington Borough.",
+        "author": "Kenneth C. Zirkel",
+        "license": "CC BY-SA 4.0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Shops_in_historic_Stonington,_Connecticut.jpg"
+      }
+    ]
+  },
+  "places": [
+    {
+      "slug": "old-lighthouse-museum-stonington",
+      "name": "Old Lighthouse Museum",
+      "kind": "museum",
+      "town": "Stonington",
+      "state": "Connecticut",
+      "county": "New London County",
+      "address": "7 Water Street, Stonington, CT 06378",
+      "official_url": "https://www.historicstonington.org/visit",
+      "summary": "Billed as America's first lighthouse museum, at the foot of Stonington Borough near Stonington Point; operated by the Stonington Historical Society. Open daily 10 a.m.-4 p.m. with exhibits and a gift shop.",
+      "status": "open",
+      "photos": [
+        {
+          "src": "/photos/ct/stonington/old-lighthouse-museum.jpg",
+          "thumb": "/photos/ct/stonington/old-lighthouse-museum_thumb.jpg",
+          "title": "Stonington Harbor Light",
+          "description": "The 1840 stone lighthouse that houses the Old Lighthouse Museum.",
+          "author": "Jonathan Ralton",
+          "license": "CC BY-SA 4.0",
+          "source_url": "https://commons.wikimedia.org/wiki/File:Stonington_Harbor_Light.jpg"
+        }
+      ]
+    },
+    {
+      "slug": "nathaniel-b-palmer-house-museum",
+      "name": "Captain Nathaniel B. Palmer House Museum",
+      "kind": "historic-site",
+      "town": "Stonington",
+      "state": "Connecticut",
+      "county": "New London County",
+      "address": "40 Palmer Street, Stonington, CT 06378",
+      "official_url": "https://www.historicstonington.org/visit",
+      "summary": "National Historic Landmark home of Capt. Nathaniel B. Palmer, the Stonington captain credited with an early sighting of Antarctica; displays China-trade artifacts. Open daily 10 a.m.-4 p.m. with tours on the hour.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "stonington-vineyards",
+      "name": "Stonington Vineyards",
+      "kind": "attraction",
+      "town": "Stonington",
+      "state": "Connecticut",
+      "county": "New London County",
+      "address": "523 Taugwonk Rd, Stonington, CT 06378",
+      "official_url": "https://stoningtonvineyards.com/",
+      "summary": "A working shoreline winery with tastings and a Friday Summer Evening Concert Series each July and August, plus the Sound Waves Music Festival.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "saltwater-farm-vineyard",
+      "name": "Saltwater Farm Vineyard",
+      "kind": "attraction",
+      "town": "Stonington",
+      "state": "Connecticut",
+      "county": "New London County",
+      "address": "349 Elm Street, Stonington, CT 06378",
+      "official_url": "https://www.saltwaterfarmvineyard.com/",
+      "summary": "An award-winning vineyard on former coastal farmland that includes a WWII-era private airport; its tasting room hosts tastings and music events. Hours vary seasonally — call ahead.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "dubois-beach-stonington",
+      "name": "duBois Beach",
+      "kind": "park",
+      "town": "Stonington",
+      "state": "Connecticut",
+      "county": "New London County",
+      "address": "Water Street at Stonington Point, Stonington Borough, CT",
+      "official_url": "https://stoningtonboroughct.com/",
+      "summary": "A small borough beach at Stonington Point, at the end of a walk down Water Street near the Old Lighthouse Museum.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "breakwater-stonington-harbor",
+      "name": "Breakwater at Stonington Harbor",
+      "kind": "restaurant",
+      "town": "Stonington",
+      "state": "Connecticut",
+      "county": "New London County",
+      "address": "66 Water Street, Stonington, CT 06378",
+      "official_url": "https://www.breakwaterstonington.com/",
+      "summary": "A waterfront seafood restaurant with views of Stonington Harbor and Fishers Island Sound; year-round outdoor seating and a weekday happy hour. Open seven days, 11:30 a.m.-9 p.m.",
+      "status": "open",
+      "photos": [
+        {
+          "src": "/photos/ct/stonington/water-street-shops.jpg",
+          "thumb": "/photos/ct/stonington/water-street-shops_thumb.jpg",
+          "title": "Water Street shops",
+          "description": "Storefronts along Water Street in historic Stonington Borough.",
+          "author": "Kenneth C. Zirkel",
+          "license": "CC BY-SA 4.0",
+          "source_url": "https://commons.wikimedia.org/wiki/File:Shops_in_historic_Stonington,_Connecticut.jpg"
+        }
+      ]
+    },
+    {
+      "slug": "water-street-cafe-stonington",
+      "name": "Water Street Cafe",
+      "kind": "restaurant",
+      "town": "Stonington",
+      "state": "Connecticut",
+      "county": "New London County",
+      "address": "143 Water Street, Stonington, CT 06378",
+      "official_url": "https://www.waterstcafe.com/",
+      "summary": "A borough institution serving French- and Asian-inspired dishes built on local seafood, including Stonington oysters; praised by the New York Times, Zagat, and Connecticut Magazine. Open Tuesday-Saturday 5-9 p.m.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "inn-at-stonington",
+      "name": "Inn at Stonington",
+      "kind": "hotel",
+      "town": "Stonington",
+      "state": "Connecticut",
+      "county": "New London County",
+      "address": "Water Street, Stonington Borough, CT 06378",
+      "official_url": "https://www.innatstonington.com/",
+      "summary": "An 18-room boutique inn on the Stonington Harbor waterfront with in-room gas fireplaces and soaking tubs.",
+      "status": "open",
+      "photos": []
+    }
+  ],
+  "entries": [
+    {
+      "kind": "sight",
+      "name": "Old Lighthouse Museum",
+      "place_slug": "old-lighthouse-museum-stonington",
+      "note": "America's first lighthouse museum, run by the Stonington Historical Society."
+    },
+    {
+      "kind": "sight",
+      "name": "Captain Nathaniel B. Palmer House Museum",
+      "place_slug": "nathaniel-b-palmer-house-museum",
+      "note": "National Historic Landmark home of the Antarctica-sighting sea captain."
+    },
+    {
+      "kind": "sight",
+      "name": "Stonington Vineyards",
+      "place_slug": "stonington-vineyards",
+      "note": "A working shoreline winery with a summer concert series."
+    },
+    {
+      "kind": "sight",
+      "name": "Saltwater Farm Vineyard",
+      "place_slug": "saltwater-farm-vineyard",
+      "note": "A coastal-farmland winery with a WWII-era airfield."
+    },
+    {
+      "kind": "walk",
+      "name": "duBois Beach",
+      "place_slug": "dubois-beach-stonington",
+      "note": "A small beach at the end of a Water Street stroll."
+    },
+    {
+      "kind": "food",
+      "name": "Breakwater at Stonington Harbor",
+      "place_slug": "breakwater-stonington-harbor",
+      "note": "Waterfront seafood open seven days."
+    },
+    {
+      "kind": "food",
+      "name": "Water Street Cafe",
+      "place_slug": "water-street-cafe-stonington",
+      "note": "A borough institution built on local seafood."
+    },
+    {
+      "kind": "stay",
+      "name": "Inn at Stonington",
+      "place_slug": "inn-at-stonington",
+      "note": "An 18-room boutique inn on the harbor waterfront."
+    }
+  ],
+  "links": [
+    {
+      "target": "guide:groton-ct-travel-guide",
+      "kind": "same-region",
+      "note": "Both towns' eastern coastline meets at the shared village of Mystic, a census-designated place straddling the Groton-Stonington line."
+    },
+    {
+      "target": "guide:new-london-ct-travel-guide",
+      "kind": "same-region",
+      "note": "Stonington has no rail station of its own; Amtrak trains serving the area stop at Mystic and at New London instead."
+    }
+  ]
+}

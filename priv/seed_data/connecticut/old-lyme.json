@@ -1,0 +1,272 @@
+{
+  "guide": {
+    "slug": "old-lyme-ct-travel-guide",
+    "title": "Old Lyme, Connecticut: Where American Impressionism Boarded",
+    "destination": "Old Lyme, Connecticut",
+    "state": "Connecticut",
+    "county": "New London County",
+    "intro": "Old Lyme separated from Saybrook in 1665, was incorporated as South Lyme in 1855, and took its current name in 1857. Its early economy ran on fishing, shipping, shipbuilding, and a colonial salt monopoly before the town reinvented itself as a nineteenth-century summer resort and artists' colony. That colony began in 1899, when landscape painter Henry Ward Ranger arrived at Florence Griswold's Lyme Street boardinghouse; Childe Hassam and Ellen Axson Wilson, wife of President Woodrow Wilson, later joined him there. Starting in 1900, resident American Impressionists painted 41 scenes directly onto the house's doors and wall panels, a tradition that survives today. The 1817 Griswold house became a public museum in 1947, a decade after Florence Griswold's death, and earned National Historic Landmark status in 1993. The Lyme Art Association, founded in 1914 and still exhibiting on Lyme Street, grew directly out of that same colony.",
+    "sections": [
+      {
+        "heading": "Where American Impressionism boarded",
+        "body": "Old Lyme separated from Saybrook in 1665, was incorporated as South Lyme in 1855, and took its current name in 1857. Its early economy ran on fishing, shipping, shipbuilding, and a colonial salt monopoly before the town reinvented itself as a nineteenth-century summer resort and artists' colony. That colony began in 1899, when landscape painter Henry Ward Ranger arrived at Florence Griswold's Lyme Street boardinghouse; Childe Hassam and Ellen Axson Wilson, wife of President Woodrow Wilson, later joined him there. Starting in 1900, resident American Impressionists painted 41 scenes directly onto the house's doors and wall panels, at roughly $7 a week for room and board — a tradition that survives on view today. The 1817 Griswold house became a public museum in 1947, a decade after Florence Griswold's death, and earned National Historic Landmark status in 1993 after a 2006 restoration returned its first floor to its circa-1910 appearance."
+      },
+      {
+        "heading": "Getting there",
+        "body": "Old Lyme sits on the east bank of the Connecticut River at I-95 Exit 70, with US Route 1 and CT Route 156 serving the shoreline villages. The town has no rail station of its own — the nearest stations are Old Saybrook (Amtrak Northeast Regional and Shore Line East, just across the river) and New London (Shore Line East and Amtrak)."
+      },
+      {
+        "heading": "Lyme Street's galleries and the shoreline",
+        "body": "Beyond the Florence Griswold Museum, Lyme Street holds the Lyme Art Association's gallery, still exhibiting since 1914, and the Lyme Academy of Fine Arts, a classical figurative art school marking its 50th anniversary. The Roger Tory Peterson Estuary Center, a free Connecticut Audubon nature center at the river's mouth, is currently building an accessible River Walk along its sanctuary. Sound View Beach offers public Long Island Sound access in Old Lyme's historic beach village, and the Old Lyme Inn, on Lyme Street since its restaurant and Side Door Jazz Club opened, is the town's verified overnight option."
+      }
+    ],
+    "faq": [
+      {
+        "question": "How do I get to Old Lyme?",
+        "answer": "Old Lyme sits at I-95 Exit 70 on the east bank of the Connecticut River, with US Route 1 and CT Route 156 serving the shoreline. There is no station in Old Lyme itself; the nearest are Old Saybrook (Amtrak Northeast Regional and Shore Line East) across the river and New London (Shore Line East and Amtrak)."
+      },
+      {
+        "question": "What is the Florence Griswold Museum?",
+        "answer": "A 12-acre riverside campus centered on the restored boardinghouse of the Lyme Art Colony, with 41 panels painted on its doors and walls by resident Impressionists; a National Historic Landmark, open as a museum since 1947. Open Tue-Sun, 10-5 April-December and 10-4 January-March."
+      },
+      {
+        "question": "Who were the Lyme Art Colony's painters?",
+        "answer": "Landscape painter Henry Ward Ranger arrived at Florence Griswold's boardinghouse in 1899, launching the colony; Childe Hassam and Ellen Axson Wilson, wife of President Woodrow Wilson, were among the artists who later stayed there."
+      },
+      {
+        "question": "Is there a beach in Old Lyme?",
+        "answer": "Yes — Sound View Beach, in Old Lyme's historic Sound View village, offers public Long Island Sound access with a food concession, picnic area, and ADA access."
+      },
+      {
+        "question": "Where can I stay in Old Lyme?",
+        "answer": "The Old Lyme Inn, a 13-room historic inn on Lyme Street in the arts district, is the town's verified lodging, with an on-site restaurant and the Side Door Jazz Club."
+      }
+    ],
+    "photos": [
+      {
+        "src": "/photos/ct/old-lyme/florence-griswold-museum.jpg",
+        "thumb": "/photos/ct/old-lyme/florence-griswold-museum_thumb.jpg",
+        "title": "Florence Griswold Museum",
+        "description": "The restored Florence Griswold House on Lyme Street, Old Lyme.",
+        "author": "MMDA-Photos",
+        "license": "CC BY-SA 4.0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:MMDA-Photos_-_2025-01-02_-_Florence_Griswold_Museum.jpg"
+      },
+      {
+        "src": "/photos/ct/old-lyme/lyme-street-historic-district.jpg",
+        "thumb": "/photos/ct/old-lyme/lyme-street-historic-district_thumb.jpg",
+        "title": "Lyme Street Historic District",
+        "description": "A street scene in the Old Lyme Historic District along Lyme Street.",
+        "author": "Magicpiano",
+        "license": "CC BY-SA 3.0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:OldLymeCT_HistoricDistrict1.jpg"
+      }
+    ]
+  },
+  "places": [
+    {
+      "slug": "florence-griswold-museum",
+      "name": "Florence Griswold Museum",
+      "kind": "museum",
+      "town": "Old Lyme",
+      "state": "Connecticut",
+      "county": "New London County",
+      "address": "96 Lyme St., Old Lyme, CT 06371",
+      "official_url": "https://flogris.org/",
+      "summary": "A 12-acre riverside campus centered on the restored 1910-era boardinghouse of the Lyme Art Colony, with 41 panels painted on its doors and walls by resident Impressionists; a National Historic Landmark, open as a museum since 1947, with galleries, gardens, and seasonal Cafe Flo. Open Tue-Sun, 10-5 April-December, 10-4 January-March.",
+      "status": "open",
+      "photos": [
+        {
+          "src": "/photos/ct/old-lyme/florence-griswold-museum.jpg",
+          "thumb": "/photos/ct/old-lyme/florence-griswold-museum_thumb.jpg",
+          "title": "Florence Griswold Museum",
+          "description": "The restored Florence Griswold House on Lyme Street, Old Lyme.",
+          "author": "MMDA-Photos",
+          "license": "CC BY-SA 4.0",
+          "source_url": "https://commons.wikimedia.org/wiki/File:MMDA-Photos_-_2025-01-02_-_Florence_Griswold_Museum.jpg"
+        }
+      ]
+    },
+    {
+      "slug": "lyme-art-association",
+      "name": "Lyme Art Association",
+      "kind": "attraction",
+      "town": "Old Lyme",
+      "state": "Connecticut",
+      "county": "New London County",
+      "address": "90 Lyme Street, Old Lyme, CT 06371",
+      "official_url": "https://lymeartassociation.org/",
+      "summary": "Founded in 1914 and among America's longest-running art associations, its gallery grew directly out of the Lyme Art Colony's American Impressionist community.",
+      "status": "open",
+      "photos": [
+        {
+          "src": "/photos/ct/old-lyme/lyme-street-historic-district.jpg",
+          "thumb": "/photos/ct/old-lyme/lyme-street-historic-district_thumb.jpg",
+          "title": "Lyme Street Historic District",
+          "description": "A street scene in the Old Lyme Historic District along Lyme Street.",
+          "author": "Magicpiano",
+          "license": "CC BY-SA 3.0",
+          "source_url": "https://commons.wikimedia.org/wiki/File:OldLymeCT_HistoricDistrict1.jpg"
+        }
+      ]
+    },
+    {
+      "slug": "lyme-academy-of-fine-arts",
+      "name": "Lyme Academy of Fine Arts",
+      "kind": "attraction",
+      "town": "Old Lyme",
+      "state": "Connecticut",
+      "county": "New London County",
+      "address": "84 Lyme Street, Old Lyme, CT 06371",
+      "official_url": "https://lymeacademy.edu/",
+      "summary": "A classical figurative art school, celebrating its 50th anniversary, whose exhibitions, lectures, and art store are open to the public.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "roger-tory-peterson-estuary-center",
+      "name": "Roger Tory Peterson Estuary Center",
+      "kind": "attraction",
+      "town": "Old Lyme",
+      "state": "Connecticut",
+      "county": "New London County",
+      "address": "100 Lyme Street, Old Lyme, CT 06371",
+      "official_url": "https://www.ctaudubon.org/roger-tory-peterson-estuary-center/",
+      "summary": "A free Connecticut Audubon nature center at the Connecticut River estuary, with the Eleanor P. Robinson Environmental Education Center and a sanctuary open dawn to dusk year-round; an accessible River Walk along the sanctuary perimeter is currently under construction. Education center hours Mon-Fri 9-4.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "sound-view-beach",
+      "name": "Sound View Beach",
+      "kind": "park",
+      "town": "Old Lyme",
+      "state": "Connecticut",
+      "county": "New London County",
+      "address": "Hartford Ave., Old Lyme, CT 06371",
+      "summary": "A publicly accessible Long Island Sound beach in Old Lyme's historic Sound View village, with food concession, picnic area, restrooms, and ADA access, and shops within walking distance.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "old-lyme-inn-restaurant-jazz-club",
+      "name": "Old Lyme Inn Restaurant & The Side Door Jazz Club",
+      "kind": "restaurant",
+      "town": "Old Lyme",
+      "state": "Connecticut",
+      "county": "New London County",
+      "address": "85 Lyme Street, Old Lyme, CT 06371",
+      "official_url": "https://www.oldlymeinn.com/",
+      "summary": "A full-service dining room in a historic inn offering brunch, dinner, and afternoon tea, with the attached Side Door Jazz Club hosting nationally known live jazz.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "coffees-country-market",
+      "name": "Coffee's Country Market",
+      "kind": "cafe",
+      "town": "Old Lyme",
+      "state": "Connecticut",
+      "county": "New London County",
+      "address": "169 Boston Post Road, Old Lyme, CT 06371",
+      "official_url": "https://www.coffeescountrymarket.com/",
+      "summary": "A local-institution country market, deli, bakery, and coffee/smoothie bar that also runs a full catering operation. Store hours Mon-Sat 7 a.m.-7 p.m.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "hallmark-drive-in",
+      "name": "Hallmark Drive-In",
+      "kind": "restaurant",
+      "town": "Old Lyme",
+      "state": "Connecticut",
+      "county": "New London County",
+      "address": "113 Shore Rd, Old Lyme, CT 06371",
+      "official_url": "https://www.hallmarkdrivein.com/",
+      "summary": "A classic shoreline drive-in near Sound View serving fresh seafood, ice cream, breakfast, lunch, and dinner with water views; largely seasonal. Daily hours 12-8 p.m. (grill closes 7 p.m.).",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "old-lyme-inn",
+      "name": "Old Lyme Inn",
+      "kind": "bnb",
+      "town": "Old Lyme",
+      "state": "Connecticut",
+      "county": "New London County",
+      "address": "85 Lyme Street, Old Lyme, CT 06371",
+      "official_url": "https://www.oldlymeinn.com/",
+      "summary": "A 13-room historic inn in Old Lyme's arts district on Lyme Street, with an on-site restaurant and the Side Door Jazz Club.",
+      "status": "open",
+      "photos": []
+    }
+  ],
+  "entries": [
+    {
+      "kind": "sight",
+      "name": "Florence Griswold Museum",
+      "place_slug": "florence-griswold-museum",
+      "note": "The Lyme Art Colony's boardinghouse, painted doors and all."
+    },
+    {
+      "kind": "sight",
+      "name": "Lyme Art Association",
+      "place_slug": "lyme-art-association",
+      "note": "Exhibiting since 1914, grown out of the same art colony."
+    },
+    {
+      "kind": "sight",
+      "name": "Lyme Academy of Fine Arts",
+      "place_slug": "lyme-academy-of-fine-arts",
+      "note": "A classical figurative art school marking its 50th year."
+    },
+    {
+      "kind": "walk",
+      "name": "Roger Tory Peterson Estuary Center",
+      "place_slug": "roger-tory-peterson-estuary-center",
+      "note": "A free Audubon nature sanctuary at the river's mouth."
+    },
+    {
+      "kind": "sight",
+      "name": "Sound View Beach",
+      "place_slug": "sound-view-beach",
+      "note": "Public Long Island Sound access in a historic beach village."
+    },
+    {
+      "kind": "food",
+      "name": "Old Lyme Inn Restaurant & The Side Door Jazz Club",
+      "place_slug": "old-lyme-inn-restaurant-jazz-club",
+      "note": "Full-service dining with an attached live-jazz club."
+    },
+    {
+      "kind": "food",
+      "name": "Coffee's Country Market",
+      "place_slug": "coffees-country-market",
+      "note": "A country market, deli, bakery, and coffee bar."
+    },
+    {
+      "kind": "food",
+      "name": "Hallmark Drive-In",
+      "place_slug": "hallmark-drive-in",
+      "note": "A seasonal shoreline drive-in near Sound View."
+    },
+    {
+      "kind": "stay",
+      "name": "Old Lyme Inn",
+      "place_slug": "old-lyme-inn",
+      "note": "A 13-room historic inn on Lyme Street."
+    }
+  ],
+  "links": [
+    {
+      "target": "guide:old-saybrook-ct-travel-guide",
+      "kind": "nearby",
+      "note": "The two shoreline towns face each other across the mouth of the Connecticut River."
+    },
+    {
+      "target": "guide:new-london-ct-travel-guide",
+      "kind": "same-region",
+      "note": "Old Lyme has no station of its own; New London's Amtrak and Shore Line East station is one of its two nearest rail options, along with Old Saybrook."
+    }
+  ]
+}

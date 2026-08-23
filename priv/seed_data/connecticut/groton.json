@@ -1,0 +1,257 @@
+{
+  "guide": {
+    "slug": "groton-ct-travel-guide",
+    "title": "Groton, Connecticut: From Fort Griswold to the Submarine Capital",
+    "destination": "Groton, Connecticut",
+    "state": "Connecticut",
+    "county": "New London County",
+    "intro": "Groton traces its founding to 1646, when John Winthrop Jr. established Pequot Plantation on former Pequot land at the mouth of the Thames River; the town separated from New London and incorporated on its own in 1705, taking its name from the Winthrop family's English estate. Its bloodiest chapter came on September 6, 1781, when British forces under the turncoat Benedict Arnold stormed Fort Griswold on Groton Heights and killed 88 of the fort's 165 defenders, including commander Col. William Ledyard — Connecticut's costliest Revolutionary War battle. Groton's maritime economy turned to submarines in the twentieth century: the Electric Boat Division delivered 74 diesel submarines during World War II, earning Groton the title \"Submarine Capital of the World,\" and in 1954 the USS Nautilus, the world's first nuclear-powered submarine, launched here and remains berthed at Goss Cove. The City of Groton, a separate municipality within the town, incorporated in 1903.",
+    "sections": [
+      {
+        "heading": "From Fort Griswold to the Submarine Capital",
+        "body": "Groton traces its founding to 1646, when John Winthrop Jr. established Pequot Plantation on former Pequot land at the mouth of the Thames River; the town separated from New London and incorporated on its own in 1705, taking its name from the Winthrop family's English estate. Its bloodiest chapter came on September 6, 1781, when British forces under the turncoat Benedict Arnold stormed Fort Griswold on Groton Heights and killed 88 of the fort's 165 defenders, including commander Col. William Ledyard — Connecticut's costliest Revolutionary War battle. Groton's maritime economy turned to submarines in the twentieth century: the Electric Boat Division delivered 74 diesel submarines during World War II, earning Groton the title \"Submarine Capital of the World,\" and in 1954 the USS Nautilus, the world's first nuclear-powered submarine, launched here and remains permanently berthed at Goss Cove near the Naval Submarine Base."
+      },
+      {
+        "heading": "Getting there",
+        "body": "Groton straddles I-95 roughly midway between New York and Boston, with Exit 88 serving the Mystic/North Road side of town. There is no rail station in Groton itself — trains arrive at New London Union Station just across the Thames River, with about nine daily Amtrak Northeast Regional trains in each direction (Acela no longer stops) plus Shore Line East commuter service from New Haven, which terminates at New London."
+      },
+      {
+        "heading": "Fort Griswold, Bluff Point, and the Thames waterfront",
+        "body": "Fort Griswold Battlefield State Park preserves the 1781 battlefield with a 135-foot granite obelisk and a museum in the restored Ebenezer Avery House. Bluff Point State Park, an 800-acre wooded peninsula designated a Coastal Reserve in 1975, circles a flat 3.45-mile gravel loop trail along Long Island Sound. On weekends through September, the Thames River Heritage Park water taxi connects more than 30 historic sites in Groton and New London — including Fort Griswold and the Submarine Force Museum, home of the historic USS Nautilus."
+      }
+    ],
+    "faq": [
+      {
+        "question": "How do I get to Groton?",
+        "answer": "Groton sits on I-95 roughly midway between New York and Boston, with Exit 88 serving the Mystic/North Road side of town. There is no rail station in Groton itself; the nearest is New London Union Station across the Thames, with about nine daily Amtrak Northeast Regional trains each way and Shore Line East service from New Haven."
+      },
+      {
+        "question": "What happened at Fort Griswold?",
+        "answer": "On September 6, 1781, British forces under the turncoat Benedict Arnold stormed Fort Griswold on Groton Heights and killed 88 of its 165 defenders, including commander Col. William Ledyard — Connecticut's bloodiest Revolutionary War engagement. The site is preserved as Fort Griswold Battlefield State Park."
+      },
+      {
+        "question": "Why is Groton called the 'Submarine Capital of the World'?",
+        "answer": "The Electric Boat Division of General Dynamics delivered 74 diesel submarines to the Navy from Groton during World War II, and in 1954 the USS Nautilus, the world's first nuclear-powered submarine, launched here and remains berthed at Goss Cove."
+      },
+      {
+        "question": "What is Bluff Point State Park?",
+        "answer": "An 800-acre wooded peninsula on Long Island Sound, designated a Coastal Reserve in 1975 as the last major undeveloped coastal tract in Connecticut, with a flat 3.45-mile loop trail for foot and non-motorized traffic. Open daily 8 a.m. to sunset."
+      },
+      {
+        "question": "Is Mystic part of Groton?",
+        "answer": "The village of Mystic is a census-designated place straddling both Groton and Stonington — see the separate Mystic guide for its landmarks."
+      }
+    ],
+    "photos": [
+      {
+        "src": "/photos/ct/groton/fort-griswold-monument.jpg",
+        "thumb": "/photos/ct/groton/fort-griswold-monument_thumb.jpg",
+        "title": "Fort Griswold Monument",
+        "description": "The 135-foot granite obelisk at Fort Griswold Battlefield State Park.",
+        "author": "Ieateggseverymorning",
+        "license": "CC BY-SA 3.0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:2013-04-24_Groton_Fort_Griswold_Monument.jpg"
+      },
+      {
+        "src": "/photos/ct/groton/uss-nautilus.jpg",
+        "thumb": "/photos/ct/groton/uss-nautilus_thumb.jpg",
+        "title": "USS Nautilus",
+        "description": "The USS Nautilus (SSN-571), the world's first nuclear-powered submarine, at her berth on the Thames River.",
+        "author": "Victor-ny",
+        "license": "CC BY-SA 3.0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:USS_Nautilus_SSN571.JPG"
+      },
+      {
+        "src": "/photos/ct/groton/bluff-point-shoreline.jpg",
+        "thumb": "/photos/ct/groton/bluff-point-shoreline_thumb.jpg",
+        "title": "Bluff Point State Park",
+        "description": "Coastal scenery at Bluff Point State Park and Coastal Reserve.",
+        "author": "Morrowlong",
+        "license": "CC BY-SA 4.0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:BluffPointSP_IMG_1527.jpg"
+      }
+    ]
+  },
+  "places": [
+    {
+      "slug": "fort-griswold-battlefield-state-park",
+      "name": "Fort Griswold Battlefield State Park",
+      "kind": "historic-site",
+      "town": "Groton",
+      "state": "Connecticut",
+      "county": "New London County",
+      "address": "Park Avenue and Monument Street, Groton, CT 06340",
+      "official_url": "https://ctparks.com/node/46",
+      "summary": "Site of the September 6, 1781 Battle of Groton Heights, where Benedict Arnold's British force killed 88 of 165 American defenders; the 135-foot granite Groton Monument obelisk and a museum in the restored Ebenezer Avery House mark the site. Grounds open year-round sunrise to sunset; museum and monument open Wed-Sun 9-5, Memorial Day to Labor Day.",
+      "status": "open",
+      "photos": [
+        {
+          "src": "/photos/ct/groton/fort-griswold-monument.jpg",
+          "thumb": "/photos/ct/groton/fort-griswold-monument_thumb.jpg",
+          "title": "Fort Griswold Monument",
+          "description": "The 135-foot granite obelisk at Fort Griswold Battlefield State Park.",
+          "author": "Ieateggseverymorning",
+          "license": "CC BY-SA 3.0",
+          "source_url": "https://commons.wikimedia.org/wiki/File:2013-04-24_Groton_Fort_Griswold_Monument.jpg"
+        }
+      ]
+    },
+    {
+      "slug": "bluff-point-state-park",
+      "name": "Bluff Point State Park",
+      "kind": "park",
+      "town": "Groton",
+      "state": "Connecticut",
+      "county": "New London County",
+      "address": "55 Depot Road, Groton, CT 06340",
+      "official_url": "https://ctparks.com/parks/bluff-point-state-park",
+      "summary": "An 800-acre wooded peninsula on Long Island Sound, designated a Coastal Reserve in 1975 as the last major undeveloped coastal tract in Connecticut; a flat 3.45-mile loop gravel trail circles the point (foot and non-motorized traffic only). Open daily 8 a.m. to sunset, free parking for CT-registered vehicles.",
+      "status": "open",
+      "photos": [
+        {
+          "src": "/photos/ct/groton/bluff-point-shoreline.jpg",
+          "thumb": "/photos/ct/groton/bluff-point-shoreline_thumb.jpg",
+          "title": "Bluff Point State Park",
+          "description": "Coastal scenery at Bluff Point State Park and Coastal Reserve.",
+          "author": "Morrowlong",
+          "license": "CC BY-SA 4.0",
+          "source_url": "https://commons.wikimedia.org/wiki/File:BluffPointSP_IMG_1527.jpg"
+        }
+      ]
+    },
+    {
+      "slug": "avery-copp-house-museum",
+      "name": "Avery-Copp House Museum",
+      "kind": "museum",
+      "town": "Groton",
+      "state": "Connecticut",
+      "county": "New London County",
+      "address": "154 Thames Street, Groton, CT 06340",
+      "official_url": "https://averycopphouse.org/",
+      "summary": "A house built around 1800 by Rufus Avery and held by the Avery/Copp family until 1991, interpreted to the 1890-1930 period, including the quarters of the family's Irish immigrant domestic servants. Open weekends noon-4 p.m. in season; admission has been free in recent seasons — check before visiting.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "thames-river-heritage-park",
+      "name": "Thames River Heritage Park",
+      "kind": "attraction",
+      "town": "Groton",
+      "state": "Connecticut",
+      "county": "New London County",
+      "official_url": "https://thamesriverheritagepark.org/",
+      "summary": "A water-linked heritage park connecting more than 30 historic sites in Groton and New London — including Fort Griswold and the Submarine Force Museum — via a weekend hop-on/hop-off water taxi running an hourly loop from three departure points through September.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "pauls-pasta-shop",
+      "name": "Paul's Pasta Shop",
+      "kind": "restaurant",
+      "town": "Groton",
+      "state": "Connecticut",
+      "county": "New London County",
+      "address": "223 Thames St, Groton, CT 06340",
+      "official_url": "https://paulspastashop.com/",
+      "summary": "A Groton Bank institution founded in 1988, making fresh pasta daily on-site and selling retail pasta and sauces; repeat winner of Connecticut Magazine Readers' Choice awards for Best Italian and Best Value. Hours Sun-Thu 11-8, Fri-Sat 11-9.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "outer-light-brewing-company",
+      "name": "Outer Light Brewing Company",
+      "kind": "brewery",
+      "town": "Groton",
+      "state": "Connecticut",
+      "county": "New London County",
+      "address": "266 Bridge Street, Groton, CT 06340",
+      "official_url": "https://outerlightbrewing.com/",
+      "summary": "A craft brewery founded in 2015 with a taproom, events calendar, and in-house coffee alongside its beer lineup. Taproom hours Wed-Fri 11-9, Sat 10-9, Sun 10-6.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "abbotts-lobster-in-the-rough",
+      "name": "Abbott's Lobster in the Rough",
+      "kind": "restaurant",
+      "town": "Groton",
+      "state": "Connecticut",
+      "county": "New London County",
+      "address": "117 Pearl Street, Noank, CT 06340",
+      "official_url": "https://www.abbottslobster.com/",
+      "summary": "A seasonal, BYOB waterside lobster shack in the Noank section of Groton, founded in 1947 and famous for hot lobster rolls, steamers, stuffed clams, and chowder. Open for the season daily 11 a.m.-8 p.m.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "mystic-marriott-hotel-spa",
+      "name": "Mystic Marriott Hotel & Spa",
+      "kind": "hotel",
+      "town": "Groton",
+      "state": "Connecticut",
+      "county": "New London County",
+      "address": "625 North Rd, Groton, CT 06340",
+      "official_url": "https://www.marriott.com/en-us/hotels/gonmc-mystic-marriott-hotel-and-spa/overview/",
+      "summary": "A full-service 285-room hotel at I-95 Exit 88 with the Cerulean Beauty & Spa, indoor pool, Octagon Restaurant, and a 10,320-square-foot Grand Ballroom — despite the Mystic name, it sits within the town of Groton.",
+      "status": "open",
+      "photos": []
+    }
+  ],
+  "entries": [
+    {
+      "kind": "sight",
+      "name": "Fort Griswold Battlefield State Park",
+      "place_slug": "fort-griswold-battlefield-state-park",
+      "note": "The 1781 battlefield, its granite obelisk, and the Ebenezer Avery House."
+    },
+    {
+      "kind": "walk",
+      "name": "Bluff Point State Park",
+      "place_slug": "bluff-point-state-park",
+      "note": "An 800-acre coastal reserve with a 3.45-mile loop trail."
+    },
+    {
+      "kind": "sight",
+      "name": "Avery-Copp House Museum",
+      "place_slug": "avery-copp-house-museum",
+      "note": "A c.1800 house museum interpreted to the 1890-1930 period."
+    },
+    {
+      "kind": "sight",
+      "name": "Thames River Heritage Park",
+      "place_slug": "thames-river-heritage-park",
+      "note": "A weekend water taxi connecting Groton and New London's historic sites."
+    },
+    {
+      "kind": "food",
+      "name": "Paul's Pasta Shop",
+      "place_slug": "pauls-pasta-shop",
+      "note": "Fresh pasta made daily since 1988."
+    },
+    {
+      "kind": "food",
+      "name": "Outer Light Brewing Company",
+      "place_slug": "outer-light-brewing-company",
+      "note": "A craft taproom founded in 2015."
+    },
+    {
+      "kind": "food",
+      "name": "Abbott's Lobster in the Rough",
+      "place_slug": "abbotts-lobster-in-the-rough",
+      "note": "A seasonal, BYOB waterside lobster shack in Noank since 1947."
+    },
+    {
+      "kind": "stay",
+      "name": "Mystic Marriott Hotel & Spa",
+      "place_slug": "mystic-marriott-hotel-spa",
+      "note": "A full-service 285-room hotel at I-95 Exit 88."
+    }
+  ],
+  "links": [
+    {
+      "target": "guide:ledyard-ct-travel-guide",
+      "kind": "nearby",
+      "note": null
+    }
+  ]
+}

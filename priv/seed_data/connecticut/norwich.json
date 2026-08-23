@@ -1,0 +1,229 @@
+{
+  "guide": {
+    "slug": "norwich-ct-travel-guide",
+    "title": "Norwich, Connecticut: Mill Town at the Head of the Thames",
+    "destination": "Norwich, Connecticut",
+    "state": "Connecticut",
+    "county": "New London County",
+    "intro": "Norwich was established in 1658-59, when 69 families from Saybrook settled at the head of the Thames River in southeastern Connecticut. By 1694 residents had built a public landing there for trade, and through the nineteenth century the city grew into a manufacturing hub, producing textiles, armaments, and specialty goods along a rail line to Springfield. Smith & Wesson got its start here in 1852, developing the \"Volcanic\" repeating rifle at the water-powered confluence of the Shetucket and Yantic Rivers. Norwich is also the birthplace of Benedict Arnold, born in 1741 before his 1781 betrayal led him to burn nearby New London. Long before any of that, the gorge and waterfall at Uncas Leap on the Yantic River had already been sacred Mohegan ground since 1643, site of the Battle of Great Plains; the city acquired it as a heritage park in 2010. The 1675 Leffingwell House, once a Revolutionary-era tavern, still stands downtown.",
+    "sections": [
+      {
+        "heading": "Mill town at the head of the Thames",
+        "body": "Norwich was established in 1658-59, when 69 families from Saybrook settled at the head of the Thames River in southeastern Connecticut. By 1694 residents had built a public landing there for trade, and through the nineteenth century the city grew into a manufacturing hub, producing textiles, armaments, and specialty goods along a rail line to Springfield. Smith & Wesson got its start here in 1852, developing the \"Volcanic\" repeating rifle at the water-powered confluence of the Shetucket and Yantic Rivers. Norwich is also the birthplace of Benedict Arnold, born in 1741 before his 1781 betrayal led him to burn nearby New London. Long before any of that, the gorge and waterfall at Uncas Leap on the Yantic River had already been sacred Mohegan ground since 1643, site of the Battle of Great Plains; the city acquired it as a heritage park in 2010."
+      },
+      {
+        "heading": "Getting there",
+        "body": "Norwich is a drive-to destination reached via I-395, connecting to CT Route 2/2A and Route 32, with routes from Boston, Hartford, New York, and Providence all converging there. There is no rail station in Norwich itself — the nearest trains are at New London Union Station, about 20 minutes south, the terminus of Shore Line East commuter rail and also an Amtrak Northeast Corridor stop."
+      },
+      {
+        "heading": "Museums, a playhouse, and a Georgian-manor spa",
+        "body": "The Slater Memorial Museum, on the Norwich Free Academy campus, is one of only two museums in the country situated on a high school campus, holding roughly 10,000 objects by about 1,000 artists. The 1675 Leffingwell House, a pre-Revolutionary tavern by 1701, opens seasonally April through October. Chestnut Street Playhouse stages community theater year-round downtown. For an overnight stay, The Spa at Norwich Inn occupies a 1929 Georgian-manor estate on 42 acres, now owned by the Mashantucket Pequot Tribal Nation, with 27 treatment rooms and two on-site restaurants."
+      }
+    ],
+    "faq": [
+      {
+        "question": "How do I get to Norwich?",
+        "answer": "Norwich is reached via I-395, connecting to CT Route 2/2A and Route 32. There is no rail station in Norwich — the nearest is New London Union Station, about 20 minutes south, served by Shore Line East and Amtrak's Northeast Corridor."
+      },
+      {
+        "question": "What is Uncas Leap Heritage Park?",
+        "answer": "A 1.2-acre city park on the Yantic River featuring a gorge and waterfall that has been sacred Mohegan ground since 1643, marking where the Battle of Great Plains between the Mohegan and Narragansett Tribes concluded. The city acquired the site in 2010."
+      },
+      {
+        "question": "What is the Slater Memorial Museum?",
+        "answer": "A museum on the Norwich Free Academy campus, one of only two museums in the country situated on a high school campus, with roughly 10,000 objects by about 1,000 artists from five continents. Open Monday, Wednesday-Saturday, 10 a.m.-4 p.m."
+      },
+      {
+        "question": "Was Benedict Arnold from Norwich?",
+        "answer": "Yes — Arnold was born in Norwich in 1741. Forty years later, on September 6, 1781, he led the British burning of nearby New London before fleeing to England, where he died in 1801."
+      },
+      {
+        "question": "What is The Spa at Norwich Inn?",
+        "answer": "A destination spa resort on a 1929 Georgian-manor estate, now owned by the Mashantucket Pequot Tribal Nation, with 27 treatment rooms, pools, and two on-site restaurants."
+      }
+    ],
+    "photos": [
+      {
+        "src": "/photos/ct/norwich/downtown-chelsea-district.jpg",
+        "thumb": "/photos/ct/norwich/downtown-chelsea-district_thumb.jpg",
+        "title": "Downtown Norwich",
+        "description": "The downtown Chelsea district of Norwich, seen from across the harbor.",
+        "author": "Marcbela (Marc N. Belanger)",
+        "license": "Public domain",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Downtown_Norwich_CT.jpg"
+      },
+      {
+        "src": "/photos/ct/norwich/slater-memorial-museum.jpg",
+        "thumb": "/photos/ct/norwich/slater-memorial-museum_thumb.jpg",
+        "title": "Slater Memorial Museum",
+        "description": "The exterior of the Slater Memorial Museum on the Norwich Free Academy campus.",
+        "author": "Mark Landon",
+        "license": "CC BY 4.0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Slater_Memorial_Museum,_Norwich,_CT_(2023)_01.jpg"
+      },
+      {
+        "src": "/photos/ct/norwich/norwich-harbor.jpg",
+        "thumb": "/photos/ct/norwich/norwich-harbor_thumb.jpg",
+        "title": "Norwich Harbor",
+        "description": "Norwich Harbor at the head of the Thames River.",
+        "author": "Bobphoenix",
+        "license": "CC BY-SA 4.0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Norwich_CT_harbor_at_night.jpg"
+      }
+    ]
+  },
+  "places": [
+    {
+      "slug": "slater-memorial-museum",
+      "name": "Slater Memorial Museum",
+      "kind": "museum",
+      "town": "Norwich",
+      "state": "Connecticut",
+      "county": "New London County",
+      "address": "108 Crescent Street, Norwich, CT 06360",
+      "official_url": "https://www.slatermuseum.org/",
+      "summary": "Located on the Norwich Free Academy campus, it is one of only two museums in the country situated on a high school campus and holds roughly 10,000 objects by about 1,000 artists from five continents, operating for more than a century. Open Monday, Wednesday-Saturday, 10 a.m.-4 p.m.",
+      "status": "open",
+      "photos": [
+        {
+          "src": "/photos/ct/norwich/slater-memorial-museum.jpg",
+          "thumb": "/photos/ct/norwich/slater-memorial-museum_thumb.jpg",
+          "title": "Slater Memorial Museum",
+          "description": "The exterior of the Slater Memorial Museum on the Norwich Free Academy campus.",
+          "author": "Mark Landon",
+          "license": "CC BY 4.0",
+          "source_url": "https://commons.wikimedia.org/wiki/File:Slater_Memorial_Museum,_Norwich,_CT_(2023)_01.jpg"
+        }
+      ]
+    },
+    {
+      "slug": "leffingwell-house-museum",
+      "name": "Leffingwell House Museum",
+      "kind": "historic-site",
+      "town": "Norwich",
+      "state": "Connecticut",
+      "county": "New London County",
+      "address": "348 Washington Street, Norwich, CT",
+      "official_url": "https://www.leffingwellhousemuseum.org/",
+      "summary": "A 1675 two-room home that became a pre-Revolutionary tavern by 1701 and by 1776 was the townhouse of Patriot Christopher Leffingwell; the adjacent Joseph Carpenter Silversmith Shop is also toured. Open seasonally April-October, Saturdays 11 a.m.-3 p.m. ($8/person); tours by appointment year-round.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "uncas-leap-heritage-park",
+      "name": "Uncas Leap Heritage Park",
+      "kind": "park",
+      "town": "Norwich",
+      "state": "Connecticut",
+      "county": "New London County",
+      "address": "196-200 Yantic Street, Norwich, CT 06360",
+      "official_url": "https://www.norwichct.gov/853/Uncas-Leap-Heritage-Park",
+      "summary": "A 1.2-acre city heritage site sacred to the Mohegan Tribe since 1643, featuring a gorge and waterfall on the Yantic River plus a nineteenth-century mill ruin; connected to the Walk Norwich trail system via the 2.8-mile Heritage Trail and roughly 1-mile Uncas Leap Trail. Open year-round with wheelchair-accessible water views.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "chestnut-street-playhouse",
+      "name": "Chestnut Street Playhouse",
+      "kind": "theater",
+      "town": "Norwich",
+      "state": "Connecticut",
+      "county": "New London County",
+      "address": "24 Chestnut Street, Norwich, CT 06360",
+      "official_url": "https://www.chestnutstreetplayhouse.org/",
+      "summary": "A community theater in downtown Norwich staging musicals, plays, and cabaret events year-round.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "epicure-brewing",
+      "name": "Epicure Brewing",
+      "kind": "brewery",
+      "town": "Norwich",
+      "state": "Connecticut",
+      "county": "New London County",
+      "address": "40 Franklin Street, Norwich, CT 06360",
+      "official_url": "https://www.epicurebrewing.com/",
+      "summary": "An independent craft brewery and taproom in the historic Norwich Harbor district, with a regular live-music schedule.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "olde-tymes-restaurant",
+      "name": "Olde Tymes Restaurant",
+      "kind": "restaurant",
+      "town": "Norwich",
+      "state": "Connecticut",
+      "county": "New London County",
+      "address": "360 West Main Street, Norwich, CT 06360",
+      "official_url": "https://www.oldetymes.com/",
+      "summary": "A family-style local landmark serving classic home cooking — breakfast, lunch, and dinner — for over 42 years.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "spa-at-norwich-inn",
+      "name": "The Spa at Norwich Inn",
+      "kind": "hotel",
+      "town": "Norwich",
+      "state": "Connecticut",
+      "county": "New London County",
+      "address": "607 West Thames Street (Route 32), Norwich, CT 06360",
+      "official_url": "https://www.thespaatnorwichinn.com/",
+      "summary": "A 1929 Georgian-manor estate on 42 acres — inn rooms date to its 1930 opening — now a destination spa resort owned by the Mashantucket Pequot Tribal Nation, with 27 treatment rooms, pools, Kensington's Restaurant, and Ascot's Pub.",
+      "status": "open",
+      "photos": []
+    }
+  ],
+  "entries": [
+    {
+      "kind": "sight",
+      "name": "Slater Memorial Museum",
+      "place_slug": "slater-memorial-museum",
+      "note": "One of only two U.S. museums on a high school campus."
+    },
+    {
+      "kind": "sight",
+      "name": "Leffingwell House Museum",
+      "place_slug": "leffingwell-house-museum",
+      "note": "A 1675 home turned pre-Revolutionary tavern and Patriot townhouse."
+    },
+    {
+      "kind": "walk",
+      "name": "Uncas Leap Heritage Park",
+      "place_slug": "uncas-leap-heritage-park",
+      "note": "A gorge and waterfall sacred to the Mohegan Tribe since 1643."
+    },
+    {
+      "kind": "sight",
+      "name": "Chestnut Street Playhouse",
+      "place_slug": "chestnut-street-playhouse",
+      "note": "A downtown community theater staging shows year-round."
+    },
+    {
+      "kind": "food",
+      "name": "Epicure Brewing",
+      "place_slug": "epicure-brewing",
+      "note": "An independent craft taproom in the harbor district."
+    },
+    {
+      "kind": "food",
+      "name": "Olde Tymes Restaurant",
+      "place_slug": "olde-tymes-restaurant",
+      "note": "Classic home cooking for over 42 years."
+    },
+    {
+      "kind": "stay",
+      "name": "The Spa at Norwich Inn",
+      "place_slug": "spa-at-norwich-inn",
+      "note": "A 1929 Georgian-manor spa resort on 42 acres."
+    }
+  ],
+  "links": [
+    {
+      "target": "guide:new-london-ct-travel-guide",
+      "kind": "shared-history",
+      "note": "Norwich-born Benedict Arnold, before his 1781 betrayal, led the British force that burned New London that same year."
+    }
+  ]
+}
