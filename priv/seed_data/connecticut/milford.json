@@ -203,8 +203,8 @@
   "links": [
     {
       "target": "guide:bridgeport-ct-travel-guide",
-      "kind": "nearby",
-      "note": null
+      "kind": "same-region",
+      "note": "Neighbouring shoreline cities a few minutes apart on I-95, with Stratford in between."
     },
     {
       "target": "guide:midtown-manhattan-guide",

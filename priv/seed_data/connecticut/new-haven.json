@@ -138,7 +138,7 @@
       "state": "Connecticut",
       "county": "New Haven County",
       "official_url": "https://www.pepespizzeria.com/",
-      "summary": "Frank Pepe originated New Haven-style apizza here in 1925, baked in coal-fired ovens. The original Wooster Street location anchors a chain now spanning multiple states.",
+      "summary": "Frank Pepe originated New Haven-style apizza here in 1925, baked in coal-fired ovens. The original shop anchors a chain now spanning multiple states.",
       "status": "open",
       "photos": []
     },
@@ -163,7 +163,7 @@
       "state": "Connecticut",
       "county": "New Haven County",
       "official_url": "https://www.sallysapizza.com/",
-      "summary": "Established in New Haven in 1938 by Salvatore \"Sally\" Consiglio; the original Wooster Street location is the flagship of a coal-fired apizza brand now expanded to seven locations in Connecticut and Massachusetts.",
+      "summary": "Established in New Haven in 1938 by Salvatore \"Sally\" Consiglio; the original shop is the flagship of a coal-fired apizza brand now expanded to seven locations in Connecticut and Massachusetts.",
       "status": "open",
       "photos": []
     },
@@ -277,8 +277,8 @@
     },
     {
       "target": "guide:branford-ct-travel-guide",
-      "kind": "nearby",
-      "note": null
+      "kind": "same-region",
+      "note": "A short drive along the shoreline; the two are near neighbours rather than bordering towns."
     },
     {
       "target": "guide:branford-ct-travel-guide",
@@ -287,8 +287,8 @@
     },
     {
       "target": "guide:milford-ct-travel-guide",
-      "kind": "nearby",
-      "note": null
+      "kind": "same-region",
+      "note": "A short drive along the shoreline; the two are near neighbours rather than bordering towns."
     },
     {
       "target": "guide:milford-ct-travel-guide",

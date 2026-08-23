@@ -288,18 +288,13 @@
   "links": [
     {
       "target": "guide:hamden-ct-travel-guide",
-      "kind": "nearby",
-      "note": null
+      "kind": "same-region",
+      "note": "Both sit along the Route 10 / I-91 corridor north of New Haven."
     },
     {
       "target": "guide:waterbury-ct-travel-guide",
-      "kind": "nearby",
-      "note": null
-    },
-    {
-      "target": "guide:waterbury-ct-travel-guide",
-      "kind": "shared-history",
-      "note": "Meriden earned the nickname \"Silver City\" for its silverware industry, echoing fellow Naugatuck Valley manufacturing town Waterbury's \"Brass City\" identity."
+      "kind": "same-region",
+      "note": "Two central Connecticut manufacturing cities, roughly twenty miles apart."
     }
   ]
 }
