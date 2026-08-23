@@ -727,13 +727,12 @@ defmodule Ethos.Seeds.ConnecticutPlaces do
         photos: []
       }),
       Map.merge(@woodbury, %{
-        slug: "mix-prime-steakhouse-woodbury",
-        name: "MIX Prime Steakhouse",
+        slug: "good-news-restaurant-woodbury",
+        name: "Good News Restaurant & Bar",
         kind: "restaurant",
-        address: "757 Main Street South, Woodbury, CT 06798",
-        official_url: "https://www.mixprimesteakhouse.com/woodbury",
+        address: "694 Main Street South, Woodbury, CT 06798",
         summary:
-          "A Main Street steakhouse advertising the area's only 40-day prime aged beef, plus fresh seafood and a sushi bar.",
+          "The Main Street dining room carrying on Woodbury's best-known restaurant name — the address made famous by chef Carole Peck's Good News Cafe.",
         photos: []
       }),
       Map.merge(@woodbury, %{

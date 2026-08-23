@@ -68,9 +68,10 @@ defmodule Ethos.Seeds.WoodburyGuide do
         },
         %{
           kind: "food",
-          name: "MIX Prime Steakhouse",
-          place_slug: "mix-prime-steakhouse-woodbury",
-          note: "40-day aged prime beef and a sushi bar on Main Street."
+          name: "Good News Restaurant & Bar",
+          place_slug: "good-news-restaurant-woodbury",
+          note:
+            "The storied Good News name lives on at 694 Main Street South — the address chef Carole Peck put on Connecticut's dining map."
         },
         %{
           kind: "stay",
@@ -103,8 +104,8 @@ defmodule Ethos.Seeds.WoodburyGuide do
           residential buildings along Woodbury's town center, and the town became
           known as Connecticut's antiques capital. The dealers change; the
           streetscape doesn't. Park once and walk Main Street South — the shops,
-          John's Cafe, and MIX are all on the same stretch, with the Glebe House a
-          turn away on Hollow Road.
+          John's Cafe, and Good News are all on the same stretch, with the Glebe
+          House a turn away on Hollow Road.
           """
         }
       ],
@@ -130,9 +131,9 @@ defmodule Ethos.Seeds.WoodburyGuide do
             "A c. 1740 gambrel-roofed house, occupied from 1771 by Anglican priest John Rutgers Marshall, known as the birthplace of the Episcopal Church in the United States."
         },
         %{
-          "question" => "Is the Good News Cafe still open?",
+          "question" => "Is the Good News name still on Main Street?",
           "answer" =>
-            "No — Carole Peck's famed Good News Cafe could not be verified as operating in 2026; its successors appear closed. John's Cafe and Market Place are the current Main Street picks."
+            "Yes — Good News Restaurant & Bar carries on the name at 694 Main Street South, the address chef Carole Peck's famed Good News Cafe made known. John's Cafe and Market Place round out the Main Street picks."
         }
       ],
       photos: [
