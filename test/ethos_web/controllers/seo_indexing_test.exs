@@ -11,6 +11,16 @@ defmodule EthosWeb.SeoIndexingTest do
     assert body =~ "Sitemap: " <> url(~p"/sitemap.xml")
   end
 
+  test "AdSense script loads in the head on every page", %{conn: conn} do
+    html = conn |> get(~p"/") |> html_response(200)
+
+    assert html =~
+             "pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1129507921747579"
+
+    html = build_conn() |> get(~p"/destinations") |> html_response(200)
+    assert html =~ "adsbygoogle.js?client=ca-pub-1129507921747579"
+  end
+
   test "google-site-verification meta renders only when configured", %{conn: conn} do
     original = Application.get_env(:ethos, :google_site_verification)
 

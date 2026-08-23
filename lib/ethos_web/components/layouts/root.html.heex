@@ -7,6 +7,12 @@
     <%= if gsv = Application.get_env(:ethos, :google_site_verification) do %>
       <meta name="google-site-verification" content={gsv} />
     <% end %>
+    <script
+      async
+      src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1129507921747579"
+      crossorigin="anonymous"
+    >
+    </script>
     <.live_title suffix=" · Ethos">
       {assigns[:page_title] || "Ethos"}
     </.live_title>
