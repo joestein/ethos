@@ -7,7 +7,12 @@ primary_region = "iad"
   release_command = "/app/bin/migrate"
 
 [env]
-  PHX_HOST = "ethos.fly.dev"
+  # The canonical domain: this feeds every canonical tag, OG URL and sitemap
+  # <loc>. Pointing it at the fly.dev hostname would have Google index that
+  # instead of the domain verified in Search Console, and would make the
+  # sitemap cross-domain. LiveView still works on ethos.fly.dev — runtime.exs
+  # keeps it in check_origin.
+  PHX_HOST = "ethosguides.com"
   PORT = "8080"
   # Fly's internal .flycast Postgres address is IPv6-only.
   ECTO_IPV6 = "true"
