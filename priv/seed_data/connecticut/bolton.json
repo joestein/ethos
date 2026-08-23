@@ -17,7 +17,7 @@
       },
       {
         "heading": "Where to eat and stay",
-        "body": "Bolton's dining runs along US Route 44: Georgina's Restaurant & Banquets has served Italian-American food since 1992, and Park Side Pizza & Ice Cream pairs a pizzeria with an ice cream counter. No hotel, motel, inn or bed-and-breakfast could be verified operating within Bolton itself; travelers should expect to base in the Manchester or Vernon hotel corridor roughly 6-10 miles west along I-384 and I-84, though no specific property there is confirmed in this research."
+        "body": "Bolton's dining runs along US Route 44: Georgina's Restaurant & Banquets has served Italian-American food since 1992, and Parkside Pizza & Ice Cream pairs a pizzeria with an ice cream counter. No hotel, motel, inn or bed-and-breakfast could be verified operating within Bolton itself; travelers should expect to base in the Manchester or Vernon hotel corridor roughly 6-10 miles west along I-384 and I-84, though no specific property there is confirmed in this research."
       }
     ],
     "faq": [
@@ -164,7 +164,7 @@
     },
     {
       "slug": "park-side-pizza-ice-cream",
-      "name": "Park Side Pizza & Ice Cream",
+      "name": "Parkside Pizza & Ice Cream",
       "kind": "restaurant",
       "town": "Bolton",
       "state": "Connecticut",
@@ -215,7 +215,7 @@
     },
     {
       "kind": "food",
-      "name": "Park Side Pizza & Ice Cream",
+      "name": "Parkside Pizza & Ice Cream",
       "place_slug": "park-side-pizza-ice-cream",
       "note": "Neighborhood pizzeria and ice cream counter on West Street."
     }

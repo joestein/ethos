@@ -5,11 +5,11 @@
     "destination": "Hampton, Connecticut",
     "state": "Connecticut",
     "county": "Windham County",
-    "intro": "Hampton was incorporated in 1786 from portions of five surrounding towns — Pomfret, Brooklyn, Canterbury, Mansfield and Windham — having been settled in the early 18th century as an agricultural community originally called \"Windham Village.\" European settlement began about 1712, largely by families from the Massachusetts Bay Colony, in territory that lay within the Nipmuck people's homeland. Hampton was an early mill town, with mills along the Little River as early as 1718 making cider, shingles and cotton. In 1872, a railroad station built through the efforts of former Governor Chauncey Cleveland let farmers ship perishables to distant markets and turned the farming town into a summer colony. Pulitzer Prize-winning naturalist Edwin Way Teale and his wife Nellie moved to their Hampton farm, Trail Wood, in 1959; Teale wrote ten of his 27 books there before his death in 1980, and Nellie donated the property to the Connecticut Audubon Society in 1981.",
+    "intro": "Hampton was incorporated in 1786 from portions of five surrounding towns — Pomfret, Brooklyn, Canterbury, Mansfield and Windham — having been settled in the early 18th century as an agricultural community originally called \"Windham Village.\" European settlement began about 1712, largely by families from the Massachusetts Bay Colony, in territory that lay within the Nipmuck people's homeland. Hampton was an early mill town, with mills along the Little River as early as 1718 making cider, shingles and cotton. In 1872, a railroad station built through the efforts of former Governor Chauncey Cleveland let farmers ship perishables to distant markets, and the town eventually grew into a summer colony. Pulitzer Prize-winning naturalist Edwin Way Teale and his wife Nellie moved to their Hampton farm, Trail Wood, in 1959; Teale wrote ten of his 27 books there before his death in 1980, and Nellie donated the property to the Connecticut Audubon Society in 1981.",
     "sections": [
       {
         "heading": "A summer colony and a naturalist's farm",
-        "body": "Hampton was incorporated in 1786 from portions of five surrounding towns — Pomfret, Brooklyn, Canterbury, Mansfield and Windham — settled from about 1712 mostly by families from the Massachusetts Bay Colony. Mills operated along the Little River as early as 1718, and the town later supported a tannery and factories making pins, buttons, rakes, spectacles, hats and silver spoons. In 1872, a railroad station built through the efforts of former Governor Chauncey Cleveland — who had practiced law in Hampton since 1819 and served as the state's 31st governor — let farmers ship perishables to distant markets and turned Hampton into a summer colony. Pulitzer Prize-winning naturalist Edwin Way Teale and his wife Nellie moved to their Hampton farm, Trail Wood, in 1959; Teale wrote ten of his 27 books there before his death in 1980, and Nellie donated the property to the Connecticut Audubon Society in 1981. The Hampton Hill Historic District, listed on the National Register in 1982, survives largely intact because industry and the railroads bypassed it."
+        "body": "Hampton was incorporated in 1786 from portions of five surrounding towns — Pomfret, Brooklyn, Canterbury, Mansfield and Windham — settled from about 1712 mostly by families from the Massachusetts Bay Colony. Mills operated along the Little River as early as 1718, and the town later supported a tannery and factories making pins, buttons, rakes, spectacles, hats and silver spoons. In 1872, a railroad station built through the efforts of former Governor Chauncey Cleveland — who had practiced law in Hampton since 1819 and served as the state's 31st governor — let farmers ship perishables to distant markets, and Hampton eventually grew into a summer colony. Pulitzer Prize-winning naturalist Edwin Way Teale and his wife Nellie moved to their Hampton farm, Trail Wood, in 1959; Teale wrote ten of his 27 books there before his death in 1980, and Nellie donated the property to the Connecticut Audubon Society in 1981. The Hampton Hill Historic District, listed on the National Register in 1982, survives largely intact because industry and the railroads bypassed it."
       },
       {
         "heading": "Getting there",
@@ -62,7 +62,7 @@
         "thumb": "/photos/ct/hampton/pine-acres-lake-goodwin-forest_thumb.jpg",
         "title": "Pine Acres Lake observation deck",
         "description": "The observation deck at the Pine Acres Lake boat launch in James L. Goodwin State Forest.",
-        "author": "Morrowlong",
+        "author": "Morrowlong (Morrow Long)",
         "license": "CC BY-SA 4.0",
         "source_url": "https://commons.wikimedia.org/wiki/File:James_Goodwin_State_Forest_Pine_Acres_Lake_Observation_Deck_at_Boat_Launch.jpg"
       }
@@ -109,7 +109,7 @@
           "thumb": "/photos/ct/hampton/pine-acres-lake-goodwin-forest_thumb.jpg",
           "title": "Pine Acres Lake observation deck",
           "description": "The observation deck at the Pine Acres Lake boat launch in James L. Goodwin State Forest.",
-          "author": "Morrowlong",
+          "author": "Morrowlong (Morrow Long)",
           "license": "CC BY-SA 4.0",
           "source_url": "https://commons.wikimedia.org/wiki/File:James_Goodwin_State_Forest_Pine_Acres_Lake_Observation_Deck_at_Boat_Launch.jpg"
         }
@@ -144,7 +144,7 @@
     {
       "slug": "quiet-corner-winery",
       "name": "Quiet Corner Winery",
-      "kind": "brewery",
+      "kind": "attraction",
       "town": "Hampton",
       "state": "Connecticut",
       "county": "Windham County",
