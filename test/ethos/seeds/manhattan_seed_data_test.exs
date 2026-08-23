@@ -18,37 +18,41 @@ defmodule Ethos.Seeds.ManhattanSeedDataTest do
 
   test "every committed manhattan seed file is valid, unique, and loads twice" do
     files = files()
+    assert files != []
 
-    if files != [] do
-      # global place-slug ownership: a slug is defined in exactly one file
-      owned =
-        for f <- files, p <- DataGuide.load!(f)["places"], do: {p["slug"], Path.basename(f)}
+    # global place-slug ownership: a slug is defined in exactly one file
+    owned =
+      for f <- files, p <- DataGuide.load!(f)["places"], do: {p["slug"], Path.basename(f)}
 
-      dups =
-        owned
-        |> Enum.group_by(&elem(&1, 0), &elem(&1, 1))
-        |> Enum.filter(fn {_slug, fs} -> length(fs) > 1 end)
+    dups =
+      owned
+      |> Enum.group_by(&elem(&1, 0), &elem(&1, 1))
+      |> Enum.filter(fn {_slug, fs} -> length(fs) > 1 end)
 
-      assert dups == [], "place slugs defined in multiple files: #{inspect(dups)}"
+    assert dups == [], "place slugs defined in multiple files: #{inspect(dups)}"
 
-      # licenses
-      for f <- files, p <- all_photos(DataGuide.load!(f)) do
-        assert allowed_license?(p["license"]),
-               "#{Path.basename(f)}: bad license #{inspect(p["license"])}"
-      end
+    # licenses + photo existence
+    static_root = Path.expand("../../../priv/static", __DIR__)
 
-      # two-pass load, twice (idempotency)
-      user = user_fixture()
+    for f <- files, p <- all_photos(DataGuide.load!(f)) do
+      assert allowed_license?(p["license"]),
+             "#{Path.basename(f)}: bad license #{inspect(p["license"])}"
 
-      for _pass <- 1..2 do
-        Enum.each(files, &DataGuide.upsert_places!/1)
-        Enum.each(files, &DataGuide.upsert_guide!(&1, user.email))
-      end
-
-      manhattan_guides =
-        Ethos.Guides.list_published_guides() |> Enum.filter(&(&1.county == "Manhattan"))
-
-      assert length(manhattan_guides) == length(files)
+      assert File.exists?(Path.join(static_root, p["src"])), "missing #{p["src"]}"
+      assert File.exists?(Path.join(static_root, p["thumb"])), "missing #{p["thumb"]}"
     end
+
+    # two-pass load, twice (idempotency)
+    user = user_fixture()
+
+    for _pass <- 1..2 do
+      Enum.each(files, &DataGuide.upsert_places!/1)
+      Enum.each(files, &DataGuide.upsert_guide!(&1, user.email))
+    end
+
+    manhattan_guides =
+      Ethos.Guides.list_published_guides() |> Enum.filter(&(&1.county == "Manhattan"))
+
+    assert length(manhattan_guides) == length(files)
   end
 end
