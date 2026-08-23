@@ -39,6 +39,15 @@ defmodule Ethos.SearchTest do
     assert Enum.any?(places, &(&1.slug == "other-museum"))
   end
 
+  test "quoted phrase narrows results to that exact word order" do
+    published_guide_fixture(%{title: "Cast Iron District Guide"})
+    published_guide_fixture(%{title: "Iron Cast Backwards"})
+
+    %{guides: guides} = Search.query(~s("cast iron"))
+
+    assert Enum.map(guides, & &1.title) == ["Cast Iron District Guide"]
+  end
+
   test "short and empty queries return empties" do
     assert Search.query("") == %{guides: [], places: []}
     assert Search.query("a") == %{guides: [], places: []}

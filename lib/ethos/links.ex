@@ -6,6 +6,7 @@ defmodule Ethos.Links do
   """
 
   import Ecto.Query, warn: false
+  require Logger
 
   alias Ethos.Repo
   alias Ethos.Links.Link
@@ -74,8 +75,12 @@ defmodule Ethos.Links do
     edges
     |> Enum.flat_map(fn {link, {ot, oid}} ->
       case hydrate(ot, oid, guides, places) do
-        nil -> []
-        other -> [%{kind: link.kind, note: link.note, other: other}]
+        nil ->
+          Logger.warning("page link skipped: dangling #{ot} #{oid}")
+          []
+
+        other ->
+          [%{kind: link.kind, note: link.note, other: other}]
       end
     end)
     |> Enum.uniq_by(&{&1.other.type, &1.other.id, &1.kind})

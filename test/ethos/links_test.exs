@@ -119,6 +119,66 @@ defmodule Ethos.LinksTest do
     assert p1.id != p2.id
   end
 
+  test "links_for issues a bounded number of queries" do
+    g = published_guide_fixture(%{title: "Query Count Guide"})
+    p1 = place!("qc-place-1", "QC Place 1")
+    p2 = place!("qc-place-2", "QC Place 2")
+    p3 = place!("qc-place-3", "QC Place 3")
+
+    Links.upsert_link!(%{
+      source: {:guide, g.slug},
+      target: {:place, p1.slug},
+      kind: "nearby",
+      note: nil
+    })
+
+    Links.upsert_link!(%{
+      source: {:place, p2.slug},
+      target: {:guide, g.slug},
+      kind: "nearby",
+      note: nil
+    })
+
+    Links.upsert_link!(%{
+      source: {:guide, g.slug},
+      target: {:place, p3.slug},
+      kind: "nearby",
+      note: nil
+    })
+
+    handler_id = {:links_for_query_count, self()}
+    test_pid = self()
+
+    :telemetry.attach(
+      handler_id,
+      [:ethos, :repo, :query],
+      fn _event, _measurements, _metadata, _config ->
+        # Telemetry handlers fire for every query system-wide, including ones
+        # from other async tests; only count queries issued by this test's
+        # own (synchronous) process.
+        if self() == test_pid, do: send(test_pid, :query_event)
+      end,
+      nil
+    )
+
+    on_exit(fn -> :telemetry.detach(handler_id) end)
+
+    Links.links_for("guide", g.id)
+
+    query_count =
+      Stream.repeatedly(fn ->
+        receive do
+          :query_event -> :event
+        after
+          0 -> :done
+        end
+      end)
+      |> Enum.take_while(&(&1 == :event))
+      |> length()
+
+    assert query_count <= 4
+  end
+
   test "prune_orphans removes edges whose endpoints are gone" do
     g = published_guide_fixture(%{title: "Doomed"})
     g2 = published_guide_fixture(%{title: "Stays"})

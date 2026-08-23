@@ -500,6 +500,27 @@ defmodule Ethos.AccountsTest do
     end
   end
 
+  describe "admin?/1" do
+    test "returns false for nil" do
+      refute Accounts.admin?(nil)
+    end
+
+    test "returns true for the configured admin email" do
+      user = user_fixture(%{email: "cryptcom@gmail.com"})
+      assert Accounts.admin?(user)
+    end
+
+    test "is case-insensitive" do
+      user = user_fixture(%{email: "CRYPTCOM@GMAIL.COM"})
+      assert Accounts.admin?(user)
+    end
+
+    test "returns false for any other email" do
+      user = user_fixture()
+      refute Accounts.admin?(user)
+    end
+  end
+
   describe "inspect/2 for the User module" do
     test "does not include password" do
       refute inspect(%User{password: "123456"}) =~ "password: \"123456\""
