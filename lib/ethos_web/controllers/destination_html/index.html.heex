@@ -4,6 +4,15 @@
     <p class="mt-1 text-zinc-500">Real trip guides by destination.</p>
   </header>
 
+  <section :if={@collections != []} class="mt-6">
+    <h2 class="font-semibold">Collections</h2>
+    <ul class="mt-3 space-y-2">
+      <li :for={c <- @collections}>
+        <.link navigate={~p"/c/#{c.slug}"} class="underline">{c.title}</.link>
+      </li>
+    </ul>
+  </section>
+
   <section :if={@states != []} class="mt-6">
     <h2 class="font-semibold">By state</h2>
     <ul class="mt-3 space-y-2">

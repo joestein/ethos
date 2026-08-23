@@ -2,6 +2,9 @@
   <header>
     <h1 class="text-3xl font-bold">{@guide.title}</h1>
     <p class="mt-1 text-zinc-500">{@guide.destination}</p>
+    <p :for={c <- @collections} class="mt-1 text-sm text-zinc-500">
+      Part of <.link navigate={~p"/c/#{c.slug}"} class="underline">{c.title}</.link>
+    </p>
   </header>
 
   <section :if={(@guide.photos || []) != []} class="mt-6">

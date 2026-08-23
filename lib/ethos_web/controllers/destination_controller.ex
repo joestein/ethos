@@ -6,10 +6,12 @@ defmodule EthosWeb.DestinationController do
   def index(conn, _params) do
     destinations = Guides.list_destinations_without_state()
     states = Guides.list_states()
+    collections = Ethos.Collections.list_published()
 
     render(conn, :index,
       destinations: destinations,
       states: states,
+      collections: collections,
       page_title: "Destinations",
       page_meta_description:
         "Real trip guides by destination — places, verdicts, and tips from travelers who went.",

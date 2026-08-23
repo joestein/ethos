@@ -29,6 +29,9 @@ defmodule EthosWeb.SitemapController do
         end) ++
         Enum.map(Places.list_places(), fn p ->
           %{loc: url(~p"/p/#{p.slug}"), lastmod: DateTime.to_date(p.updated_at)}
+        end) ++
+        Enum.map(Ethos.Collections.list_published(), fn c ->
+          %{loc: url(~p"/c/#{c.slug}"), lastmod: DateTime.to_date(c.updated_at)}
         end)
 
     xml =

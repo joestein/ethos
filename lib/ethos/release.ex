@@ -69,6 +69,13 @@ defmodule Ethos.Release do
     IO.puts("Upserted #{count} page links")
   end
 
+  def seed_collections do
+    load_app()
+    Application.ensure_all_started(@app)
+    collection = Ethos.Seeds.BurysCollection.upsert!()
+    IO.puts("Seeded collection: /c/#{collection.slug}")
+  end
+
   defp repos do
     Application.fetch_env!(@app, :ecto_repos)
   end
