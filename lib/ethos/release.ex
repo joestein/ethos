@@ -76,6 +76,24 @@ defmodule Ethos.Release do
     IO.puts("Seeded collection: /c/#{collection.slug}")
   end
 
+  def seed_connecticut_expansion(email) do
+    load_app()
+    Application.ensure_all_started(@app)
+
+    files =
+      [:code.priv_dir(@app) |> to_string(), "seed_data", "connecticut", "*.json"]
+      |> Path.join()
+      |> Path.wildcard()
+      |> Enum.sort()
+
+    Enum.each(files, &Ethos.Seeds.DataGuide.upsert_places!/1)
+
+    for file <- files do
+      guide = Ethos.Seeds.DataGuide.upsert_guide!(file, email)
+      IO.puts("Seeded: /g/#{guide.slug}")
+    end
+  end
+
   defp repos do
     Application.fetch_env!(@app, :ecto_repos)
   end
