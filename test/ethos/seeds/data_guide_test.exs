@@ -61,4 +61,23 @@ defmodule Ethos.Seeds.DataGuideTest do
     DataGuide.upsert_places!(bad)
     assert_raise Ecto.NoResultsError, fn -> DataGuide.upsert_guide!(bad, user.email) end
   end
+
+  test "seed file links array creates edges from the guide" do
+    user = user_fixture()
+    for path <- [@testville, @refville], do: DataGuide.upsert_places!(path)
+    for path <- [@testville, @refville], do: DataGuide.upsert_guide!(path, user.email)
+    # run twice — idempotent
+    DataGuide.upsert_guide!(@refville, user.email)
+
+    ref = Guides.get_published_guide_by_slug!("refville-manhattan-guide")
+    connected = Ethos.Links.links_for("guide", ref.id)
+
+    assert Enum.any?(
+             connected,
+             &(&1.kind == "nearby" and &1.other.slug == "testville-manhattan-guide")
+           )
+
+    assert Enum.any?(connected, &(&1.kind == "see-also" and &1.other.slug == "test-square-park"))
+    assert length(connected) == 2
+  end
 end

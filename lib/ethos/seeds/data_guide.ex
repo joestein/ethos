@@ -7,6 +7,14 @@ defmodule Ethos.Seeds.DataGuide do
   Seeding is two-pass at the directory level (see `Ethos.Release.seed_manhattan/1`):
   all files' places first, then all guides — so entries may reference places
   defined in any file of the same run.
+
+  A seed file may optionally declare a top-level `"links"` array — edges
+  from that file's guide to other guides or places, in the form
+  `{"target": "guide:<slug>"|"place:<slug>", "kind": "...", "note": "..."}`.
+  These are authored intentionally by whoever wrote the file, so resolution
+  is strict: an unknown target raises with the offending file path, unlike
+  the skip-if-missing backfill in `Ethos.Seeds.BackfillLinks` (which links
+  pages that may or may not have been seeded yet).
   """
 
   alias Ethos.Places
@@ -61,8 +69,29 @@ defmodule Ethos.Seeds.DataGuide do
         end)
     }
 
-    GuideRunner.upsert!(runner_data, email)
+    guide = GuideRunner.upsert!(runner_data, email)
+
+    for l <- data["links"] || [] do
+      Ethos.Links.upsert_link!(%{
+        source: {:guide, guide.slug},
+        target: parse_ref!(path, l["target"]),
+        kind: l["kind"],
+        note: l["note"]
+      })
+    end
+
+    guide
   end
+
+  defp parse_ref!(_path, "guide:" <> slug), do: {:guide, slug}
+  defp parse_ref!(_path, "place:" <> slug), do: {:place, slug}
+
+  defp parse_ref!(path, other),
+    do:
+      raise(
+        ArgumentError,
+        "#{path}: bad link target #{inspect(other)} (want guide:<slug> or place:<slug>)"
+      )
 
   defp validate_shape!(path, data) do
     guide = data["guide"]

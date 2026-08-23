@@ -62,6 +62,13 @@ defmodule Ethos.Release do
     end
   end
 
+  def seed_links do
+    load_app()
+    Application.ensure_all_started(@app)
+    count = Ethos.Seeds.BackfillLinks.upsert_all!()
+    IO.puts("Upserted #{count} page links")
+  end
+
   defp repos do
     Application.fetch_env!(@app, :ecto_repos)
   end

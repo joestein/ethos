@@ -13,5 +13,9 @@
   "places": [],
   "entries": [
     {"kind": "walk", "name": "Test Square Park", "place_slug": "test-square-park", "note": "Shared park next door."}
+  ],
+  "links": [
+    {"target": "guide:testville-manhattan-guide", "kind": "nearby", "note": "Fixture neighbors."},
+    {"target": "place:test-square-park", "kind": "see-also", "note": null}
   ]
 }
