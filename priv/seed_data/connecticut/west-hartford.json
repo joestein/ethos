@@ -1,0 +1,235 @@
+{
+  "guide": {
+    "slug": "west-hartford-ct-travel-guide",
+    "title": "West Hartford, Connecticut: From West Division to Webster's Birthplace",
+    "destination": "West Hartford, Connecticut",
+    "state": "Connecticut",
+    "county": "Hartford County",
+    "intro": "West Hartford began in 1672 as the \"West Division\" of Hartford, a name that stuck until 1806, when the Connecticut General Assembly began calling it the Society of West Hartford; area residents petitioned for separate incorporation in 1854, and West Hartford became its own town on May 3 of that year. Lexicographer Noah Webster, creator of the first American dictionary, was born here in 1758; his birthplace survives as the Noah Webster House museum on South Main Street. In 1817, the American School for the Deaf opened on North Main Street as the first permanent school for the deaf in the United States, and it still teaches deaf and hard-of-hearing students today. Originally farmland, West Hartford grew mills, tanneries, and blacksmith shops into a thriving industrial area by the late nineteenth century, before becoming an educational hub home to the University of Hartford and the University of Saint Joseph.",
+    "sections": [
+      {
+        "heading": "From West Division to college town",
+        "body": "In 1672, the Proprietors of Hartford ordered a Division created to the west, and 'West Division' remained the area's official name until 1806, when the Connecticut General Assembly began calling it the Society of West Hartford; area delegates petitioned for a separate town, and it incorporated on May 3, 1854. Lexicographer Noah Webster was born here in 1758, and his birthplace survives as the Noah Webster House on South Main Street. In 1817, the American School for the Deaf opened on North Main Street as the first permanent school for the deaf in the United States and still serves students today. An early farming area, West Hartford had mills, tanneries, and blacksmith shops, and was a thriving industrial area by the late nineteenth century before turning into an educational hub home to the University of Hartford and the University of Saint Joseph."
+      },
+      {
+        "heading": "Getting there",
+        "body": "West Hartford is a drive-first destination, reached via I-84, which passes through town, and US Routes 6 and 44, plus CT Routes 4 and 218. There is no rail station in West Hartford itself; the nearest CTrail Hartford Line and Amtrak stop is Hartford Union Station in adjacent Hartford. CTfastrak bus rapid transit serves the town at its Elmwood and Flatbush Avenue stations, connecting to downtown Hartford and New Britain; a Flatbush Avenue rail station has secured funding but remains unbuilt."
+      },
+      {
+        "heading": "Blue Back Square and Westmoor Park",
+        "body": "West Hartford Center and the adjoining Blue Back Square anchor the town's shopping and dining, built around Max's Oyster Bar, Hartford Baking Company, and a run of independent storefronts. Westmoor Park, a 162-acre town-run environmental and agricultural education center, keeps a working demonstration farm with cows, llamas, goats, sheep, donkeys, and poultry alongside wildflower meadows and woodland trails; it earned Level II Arboretum accreditation in 2024. Playhouse on Park, on Park Road, is Greater Hartford's intimate professional theater, with no seat more than four rows from the stage. For a place to stay, the Delamar West Hartford sits right on Blue Back Square, Connecticut's only hotel named to Travel + Leisure's 2026 T+L 500."
+      }
+    ],
+    "faq": [
+      {
+        "question": "How do I get to West Hartford?",
+        "answer": "Drivers use I-84, US Routes 6 and 44, and CT Routes 4 and 218. There's no rail station in town; the nearest CTrail Hartford Line and Amtrak stop is Hartford Union Station. CTfastrak buses connect West Hartford's Elmwood and Flatbush Avenue stations to Hartford and New Britain."
+      },
+      {
+        "question": "What is West Hartford's connection to Noah Webster?",
+        "answer": "Noah Webster, creator of the first American dictionary, was born in West Hartford in 1758. His birthplace survives as the Noah Webster House & West Hartford History Center on South Main Street."
+      },
+      {
+        "question": "What is the American School for the Deaf?",
+        "answer": "Founded in 1817 on North Main Street, it was the first permanent school for the deaf in the United States and still serves deaf and hard-of-hearing students today."
+      },
+      {
+        "question": "Where should I eat and drink in West Hartford?",
+        "answer": "New Park Brewing pours house IPAs and sour ales with sourdough pizza; Max's Oyster Bar is the West Hartford Center raw-bar institution; Hartford Baking Company serves scratch-made breads and pastries daily from 7 a.m."
+      },
+      {
+        "question": "Where can I stay in West Hartford?",
+        "answer": "The Delamar West Hartford, a LEED Gold boutique hotel adjacent to Blue Back Square, is the town's marquee option, with an on-site spa and Artisan Restaurant."
+      }
+    ],
+    "photos": [
+      {
+        "src": "/photos/ct/west-hartford/west-hartford-center-street-scene.jpg",
+        "thumb": "/photos/ct/west-hartford/west-hartford-center-street-scene_thumb.jpg",
+        "title": "West Hartford Center",
+        "description": "Shops and restaurants along West Hartford Center's traditional shopping district.",
+        "author": "Ragesoss",
+        "license": "CC BY-SA 3.0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:West_Hartford_Center,_August_10,_2008.jpg"
+      },
+      {
+        "src": "/photos/ct/west-hartford/blue-back-square.jpg",
+        "thumb": "/photos/ct/west-hartford/blue-back-square_thumb.jpg",
+        "title": "Blue Back Square",
+        "description": "An elevated view of the Blue Back Square shopping district in West Hartford.",
+        "author": "Ragesoss",
+        "license": "CC BY-SA 3.0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Blue_Back_Square_in_West_Hartford,_Connecticut_2,_August_10,_2008.jpg"
+      },
+      {
+        "src": "/photos/ct/west-hartford/noah-webster-house.jpg",
+        "thumb": "/photos/ct/west-hartford/noah-webster-house_thumb.jpg",
+        "title": "Noah Webster House",
+        "description": "The front facade of the Noah Webster House and West Hartford Historical Society.",
+        "author": "Marty Aligata",
+        "license": "CC BY-SA 4.0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Noah_Webster_House,_West_Hartford,_CT_(January_2026).jpg"
+      }
+    ]
+  },
+  "places": [
+    {
+      "slug": "noah-webster-house-west-hartford-history-center",
+      "name": "Noah Webster House & West Hartford History Center",
+      "kind": "historic-site",
+      "town": "West Hartford",
+      "state": "Connecticut",
+      "county": "Hartford County",
+      "address": "227 South Main St, West Hartford, CT 06107",
+      "official_url": "https://noahwebsterhouse.org/",
+      "summary": "Birthplace museum of lexicographer Noah Webster, creator of the first American dictionary, born here in 1758; houses the Tracey M. Wilson West Hartford History Center with exhibits on local history. School-year hours Mon-Fri 1-4 p.m.; summer hours Mon-Sat 10 a.m.-2 p.m.",
+      "history": "West Hartford was Hartford's 'West Division' from 1672 until it incorporated separately on May 3, 1854.",
+      "status": "open",
+      "photos": [
+        {
+          "src": "/photos/ct/west-hartford/noah-webster-house.jpg",
+          "thumb": "/photos/ct/west-hartford/noah-webster-house_thumb.jpg",
+          "title": "Noah Webster House",
+          "description": "The front facade of the Noah Webster House and West Hartford Historical Society.",
+          "author": "Marty Aligata",
+          "license": "CC BY-SA 4.0",
+          "source_url": "https://commons.wikimedia.org/wiki/File:Noah_Webster_House,_West_Hartford,_CT_(January_2026).jpg"
+        }
+      ]
+    },
+    {
+      "slug": "westmoor-park",
+      "name": "Westmoor Park",
+      "kind": "park",
+      "town": "West Hartford",
+      "state": "Connecticut",
+      "county": "Hartford County",
+      "address": "119 Flagg Rd, West Hartford, CT 06117",
+      "official_url": "https://www.westhartfordct.gov/town-departments/leisure-services/westmoor-park",
+      "summary": "A 162-acre town-run environmental, agricultural, and horticultural education center with a demonstration farm — cows, llamas, goats, sheep, donkeys, and poultry — plus wildflower meadows, gardens, and woodland trails. Trails open daily 7 a.m. to dusk; the farm is open 9 a.m.-4 p.m. Achieved Level II Arboretum accreditation in 2024.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "playhouse-on-park",
+      "name": "Playhouse on Park",
+      "kind": "theater",
+      "town": "West Hartford",
+      "state": "Connecticut",
+      "county": "Hartford County",
+      "address": "244 Park Rd, West Hartford, CT 06119",
+      "official_url": "https://www.playhouseonpark.org/",
+      "summary": "Greater Hartford's intimate professional theater — no seat more than four rows from the stage — staging mainstage plays and musicals, Theatre for Young Audiences shows, and comedy nights, with a pre-K-through-high-school theatre academy.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "new-park-brewing",
+      "name": "New Park Brewing",
+      "kind": "brewery",
+      "town": "West Hartford",
+      "state": "Connecticut",
+      "county": "Hartford County",
+      "address": "485 New Park Ave, West Hartford, CT 06110",
+      "official_url": "https://www.newparkbrewing.com/",
+      "summary": "Craft brewery founded in 2015, known for IPAs and sour ales, with a taproom serving hand-tossed sourdough pizzas and wings plus The Green Room live-music venue.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "maxs-oyster-bar",
+      "name": "Max's Oyster Bar",
+      "kind": "restaurant",
+      "town": "West Hartford",
+      "state": "Connecticut",
+      "county": "Hartford County",
+      "address": "964 Farmington Ave, West Hartford, CT 06107",
+      "official_url": "https://www.maxsoysterbar.com/",
+      "summary": "A West Hartford Center seafood institution from the Max Restaurant Group, with a raw bar of bi-coastal oysters and shellfish alongside chop-house selections. Open daily.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "hartford-baking-company-west-hartford",
+      "name": "Hartford Baking Company (West Hartford Center)",
+      "kind": "cafe",
+      "town": "West Hartford",
+      "state": "Connecticut",
+      "county": "Hartford County",
+      "address": "965 Farmington Ave, West Hartford, CT 06107",
+      "official_url": "https://hartfordbaking.com/",
+      "summary": "Artisan bakery-cafe in West Hartford Center serving hand-crafted breads, pastries, coffee, and sandwiches made from scratch daily, open seven days a week from 7 a.m.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "delamar-west-hartford",
+      "name": "Delamar West Hartford",
+      "kind": "hotel",
+      "town": "West Hartford",
+      "state": "Connecticut",
+      "county": "Hartford County",
+      "address": "1 Memorial Rd, West Hartford, CT 06107",
+      "official_url": "https://www.delamar.com/hotels/delamar-west-hartford",
+      "summary": "Luxury boutique hotel adjacent to Blue Back Square, built to LEED Gold standard, with an on-site spa, Artisan Restaurant, complimentary breakfast, and valet parking — Connecticut's only property named to Travel + Leisure's T+L 500 for 2026.",
+      "status": "open",
+      "photos": []
+    }
+  ],
+  "entries": [
+    {
+      "kind": "sight",
+      "name": "Noah Webster House & West Hartford History Center",
+      "place_slug": "noah-webster-house-west-hartford-history-center",
+      "note": "The birthplace museum of dictionary-maker Noah Webster."
+    },
+    {
+      "kind": "sight",
+      "name": "Westmoor Park",
+      "place_slug": "westmoor-park",
+      "note": "A 162-acre farm and education center with trails and animals."
+    },
+    {
+      "kind": "sight",
+      "name": "Playhouse on Park",
+      "place_slug": "playhouse-on-park",
+      "note": "Greater Hartford's intimate professional theater on Park Road."
+    },
+    {
+      "kind": "food",
+      "name": "New Park Brewing",
+      "place_slug": "new-park-brewing",
+      "note": "IPAs and sour ales with sourdough pizza, founded 2015."
+    },
+    {
+      "kind": "food",
+      "name": "Max's Oyster Bar",
+      "place_slug": "maxs-oyster-bar",
+      "note": "West Hartford Center's raw-bar and chop-house institution."
+    },
+    {
+      "kind": "food",
+      "name": "Hartford Baking Company",
+      "place_slug": "hartford-baking-company-west-hartford",
+      "note": "Scratch-made breads and pastries, open daily from 7 a.m."
+    },
+    {
+      "kind": "stay",
+      "name": "Delamar West Hartford",
+      "place_slug": "delamar-west-hartford",
+      "note": "A LEED Gold boutique hotel on Blue Back Square."
+    }
+  ],
+  "links": [
+    {
+      "target": "guide:farmington-ct-travel-guide",
+      "kind": "nearby",
+      "note": "Both sit along I-84 and Route 4, just west of Hartford."
+    },
+    {
+      "target": "guide:simsbury-ct-travel-guide",
+      "kind": "same-region",
+      "note": "Both are Farmington Valley towns in northern Hartford County."
+    }
+  ]
+}

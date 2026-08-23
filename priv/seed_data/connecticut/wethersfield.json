@@ -1,0 +1,243 @@
+{
+  "guide": {
+    "slug": "wethersfield-ct-travel-guide",
+    "title": "Wethersfield, Connecticut: Onions, Seeds, and Connecticut's Oldest Streets",
+    "destination": "Wethersfield, Connecticut",
+    "state": "Connecticut",
+    "county": "Hartford County",
+    "intro": "Wethersfield was settled in 1634, or possibly earlier, and vies with Windsor for the title of Connecticut's first town; the Connecticut River forms its eastern boundary. Early wealth came from shipbuilding, onion growing, and river trade, and by the 1800s Wethersfield had become a center of commercial seed production. In 1781, the Webb House on Main Street hosted George Washington and the Comte de Rochambeau as they planned the campaign that led to victory at Yorktown, Virginia. The town also weathered witch trials during its early colonial years, part of Connecticut's seventeenth-century witchcraft prosecutions. Today the Old Wethersfield Historic District preserves more than 150 structures built before 1850, one of the largest concentrations of early buildings in Connecticut, including the circa-1711 Buttolph-Williams House, which inspired Elizabeth George Speare's Newbery Medal-winning novel The Witch of Blackbird Pond.",
+    "sections": [
+      {
+        "heading": "Connecticut's first town?",
+        "body": "Wethersfield was settled in 1634, or possibly earlier, and vies with Windsor for the title of Connecticut's first town; the Connecticut River forms its eastern boundary. Early wealth came from shipbuilding, onion growing, and river trade, and by the 1800s Wethersfield had turned to commercial seed production, with the seed firm Johnson, Robbins and Co. among its notable businesses. The town's early colonial history also includes witch trials, part of Connecticut's seventeenth-century witchcraft prosecutions. In 1781, the Webb House hosted George Washington and the Comte de Rochambeau as they planned the campaign that led to victory at Yorktown, Virginia — a meeting now interpreted at the Webb-Deane-Stevens Museum, which anchors the Old Wethersfield Historic District's more than 150 structures built before 1850."
+      },
+      {
+        "heading": "Getting there",
+        "body": "Wethersfield is a driving destination immediately south of Hartford: take I-91 to Exit 26 (Old Wethersfield) and follow Marsh Street to Main Street. There is no rail station in town, so train travelers use Hartford Union Station, about four miles north, for CTrail Hartford Line and Amtrak service; Berlin is the next-closest Hartford Line stop."
+      },
+      {
+        "heading": "A walk through Old Wethersfield",
+        "body": "The Webb-Deane-Stevens Museum's guided tours (11 a.m., 1 p.m., and 3 p.m.) take in the Webb House and its neighbors, while the circa-1711 Buttolph-Williams House, ticketed through the same museum, is the building that inspired The Witch of Blackbird Pond. The Wethersfield Museum at the Keeney Memorial Cultural Center rounds out the historical-society sites with exhibits and a research library. For food, Village Pizza has served Old Wethersfield since 1983 and Main Street Creamery & Cafe scoops ice cream nearby, while Vito's Restaurant and Pizzeria on the Silas Deane Highway has been a local Italian-American fixture since 1978. The Silas W. Robbins House, an 1873 Second Empire mansion on the Broad Street Green, is the town's bed and breakfast."
+      }
+    ],
+    "faq": [
+      {
+        "question": "How do I get to Wethersfield?",
+        "answer": "Take I-91 to Exit 26 (Old Wethersfield) and follow Marsh Street to Main Street. There's no rail station in town; the nearest CTrail Hartford Line and Amtrak stop is Hartford Union Station, about four miles north, with Berlin as the next-closest stop."
+      },
+      {
+        "question": "What is the Old Wethersfield Historic District?",
+        "answer": "Connecticut's largest early historic district, preserving more than 150 structures built before 1850 around Main Street, the Broad Street Green, and Wethersfield Cove."
+      },
+      {
+        "question": "What happened at the Webb House in 1781?",
+        "answer": "George Washington and the Comte de Rochambeau met there to plan the campaign that led to victory at Yorktown, Virginia. The house is now part of the Webb-Deane-Stevens Museum."
+      },
+      {
+        "question": "What inspired The Witch of Blackbird Pond?",
+        "answer": "The circa-1711 Buttolph-Williams House on Broad Street, owned by Connecticut Landmarks and operated by the Webb-Deane-Stevens Museum, inspired Elizabeth George Speare's Newbery Medal-winning novel."
+      },
+      {
+        "question": "Where can I eat and stay in Wethersfield?",
+        "answer": "Village Pizza and Vito's Restaurant and Pizzeria are Old Wethersfield's long-running Italian spots, with Main Street Creamery & Cafe for ice cream. The Silas W. Robbins House, an 1873 Second Empire mansion, is the town's bed and breakfast."
+      }
+    ],
+    "photos": [
+      {
+        "src": "/photos/ct/wethersfield/webb-deane-stevens-museum.jpg",
+        "thumb": "/photos/ct/wethersfield/webb-deane-stevens-museum_thumb.jpg",
+        "title": "Webb-Deane-Stevens Museum",
+        "description": "The Joseph Webb and Isaac Stevens Houses of the Webb-Deane-Stevens Museum on Main Street in Old Wethersfield.",
+        "author": "Daderot",
+        "license": "Public domain",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Joseph_Webb_and_Isaac_Stevens_Houses_-_Wethersfield,_CT_-_1.jpg"
+      },
+      {
+        "src": "/photos/ct/wethersfield/cove-warehouse.jpg",
+        "thumb": "/photos/ct/wethersfield/cove-warehouse_thumb.jpg",
+        "title": "Cove Warehouse, Wethersfield Cove",
+        "description": "The 17th-century Cove Warehouse at Wethersfield Cove; currently closed to the public for renovations through fall 2026.",
+        "author": "Ethan Long",
+        "license": "CC BY-SA 2.0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Wethersfield_Cove_Warehouse_(54571935481).jpg"
+      }
+    ]
+  },
+  "places": [
+    {
+      "slug": "webb-deane-stevens-museum",
+      "name": "Webb-Deane-Stevens Museum",
+      "kind": "museum",
+      "town": "Wethersfield",
+      "state": "Connecticut",
+      "county": "Hartford County",
+      "address": "211 Main Street, Wethersfield, CT 06109",
+      "official_url": "https://wdsmuseum.org/",
+      "summary": "A complex of preserved 18th-century houses including the Webb House, where Washington and Rochambeau planned the 1781 Yorktown campaign. Guided tours at 11 a.m., 1 p.m., and 3 p.m.; adult admission $20 ($27 for the four-house tour). Open May-October and December, Wednesday-Sunday 10 a.m.-4 p.m.",
+      "status": "open",
+      "photos": [
+        {
+          "src": "/photos/ct/wethersfield/webb-deane-stevens-museum.jpg",
+          "thumb": "/photos/ct/wethersfield/webb-deane-stevens-museum_thumb.jpg",
+          "title": "Webb-Deane-Stevens Museum",
+          "description": "The Joseph Webb and Isaac Stevens Houses of the Webb-Deane-Stevens Museum on Main Street in Old Wethersfield.",
+          "author": "Daderot",
+          "license": "Public domain",
+          "source_url": "https://commons.wikimedia.org/wiki/File:Joseph_Webb_and_Isaac_Stevens_Houses_-_Wethersfield,_CT_-_1.jpg"
+        }
+      ]
+    },
+    {
+      "slug": "buttolph-williams-house",
+      "name": "Buttolph-Williams House",
+      "kind": "historic-site",
+      "town": "Wethersfield",
+      "state": "Connecticut",
+      "county": "Hartford County",
+      "address": "249 Broad Street, Wethersfield, CT 06109",
+      "official_url": "https://www.ctlandmarks.org/properties/buttolph-williams-house/",
+      "summary": "Built around 1711 and owned by Connecticut Landmarks, the house inspired Elizabeth George Speare's Newbery Medal-winning novel The Witch of Blackbird Pond. Tours are ticketed and operated by the Webb-Deane-Stevens Museum (860-529-0612).",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "wethersfield-museum-keeney-memorial-cultural-center",
+      "name": "Wethersfield Museum at the Keeney Memorial Cultural Center",
+      "kind": "museum",
+      "town": "Wethersfield",
+      "state": "Connecticut",
+      "county": "Hartford County",
+      "address": "200 Main Street, Wethersfield, CT 06109",
+      "official_url": "https://wethersfieldhistory.org/",
+      "summary": "The Wethersfield Historical Society's museum and visitor center, with historical exhibits and cultural programming; the society, founded in 1932, also maintains a research library at the Old Academy, 150 Main Street. Free parking and elevator access.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "old-wethersfield-historic-district",
+      "name": "Old Wethersfield Historic District",
+      "kind": "historic-site",
+      "town": "Wethersfield",
+      "state": "Connecticut",
+      "county": "Hartford County",
+      "address": "Main Street and Broad Street area, Wethersfield, CT",
+      "summary": "Connecticut's largest early historic district, with more than 150 structures built before 1850 spanning three centuries of settlement, walkable year-round around Main Street, the Broad Street Green, and Wethersfield Cove.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "village-pizza-wethersfield",
+      "name": "Village Pizza",
+      "kind": "restaurant",
+      "town": "Wethersfield",
+      "state": "Connecticut",
+      "county": "Hartford County",
+      "address": "233 Main Street, Wethersfield, CT 06109",
+      "official_url": "https://villagepizzact.com/",
+      "summary": "Family-run pizzeria in the heart of Old Wethersfield since 1983, known for handcrafted pizzas with homemade sauces. Open daily, until 10 p.m. Friday and Saturday.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "main-street-creamery-cafe",
+      "name": "Main Street Creamery & Cafe",
+      "kind": "cafe",
+      "town": "Wethersfield",
+      "state": "Connecticut",
+      "county": "Hartford County",
+      "address": "271 Main Street, Wethersfield, CT 06109",
+      "official_url": "https://www.mainstreetcreamery.com/",
+      "summary": "Old Wethersfield ice cream parlor and cafe serving regular and seasonal flavors, pies, sundaes, and floats. Open daily 11 a.m.-10 p.m.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "vitos-restaurant-pizzeria",
+      "name": "Vito's Restaurant and Pizzeria",
+      "kind": "restaurant",
+      "town": "Wethersfield",
+      "state": "Connecticut",
+      "county": "Hartford County",
+      "address": "673 Silas Deane Highway, Wethersfield, CT 06109",
+      "official_url": "https://www.vitosct.com/",
+      "summary": "Italian-American institution on the Silas Deane Highway since 1978, specializing in hand-stretched dough made fresh daily, homemade pasta, and seafood. Closed Wednesdays.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "silas-w-robbins-house",
+      "name": "Silas W. Robbins House",
+      "kind": "bnb",
+      "town": "Wethersfield",
+      "state": "Connecticut",
+      "county": "Hartford County",
+      "address": "Broad Street Green, Old Wethersfield, CT 06109",
+      "official_url": "https://www.silaswrobbins.com/",
+      "summary": "A restored 1873 Second Empire mansion built by seed merchant Silas Robbins of Johnson, Robbins and Co.; five guest rooms with private baths, hand-painted Victorian-inspired decor, and period furnishings. Featured in the 2018 Hallmark film Christmas on Honeysuckle Lane.",
+      "status": "open",
+      "photos": []
+    }
+  ],
+  "entries": [
+    {
+      "kind": "sight",
+      "name": "Webb-Deane-Stevens Museum",
+      "place_slug": "webb-deane-stevens-museum",
+      "note": "Where Washington and Rochambeau planned the 1781 Yorktown campaign."
+    },
+    {
+      "kind": "sight",
+      "name": "Buttolph-Williams House",
+      "place_slug": "buttolph-williams-house",
+      "note": "The circa-1711 house that inspired The Witch of Blackbird Pond."
+    },
+    {
+      "kind": "sight",
+      "name": "Wethersfield Museum at the Keeney Memorial Cultural Center",
+      "place_slug": "wethersfield-museum-keeney-memorial-cultural-center",
+      "note": "The Historical Society's museum, visitor center, and research library."
+    },
+    {
+      "kind": "walk",
+      "name": "Old Wethersfield Historic District",
+      "place_slug": "old-wethersfield-historic-district",
+      "note": "150-plus structures built before 1850, Connecticut's largest such district."
+    },
+    {
+      "kind": "food",
+      "name": "Village Pizza",
+      "place_slug": "village-pizza-wethersfield",
+      "note": "Handcrafted pizza in Old Wethersfield since 1983."
+    },
+    {
+      "kind": "food",
+      "name": "Main Street Creamery & Cafe",
+      "place_slug": "main-street-creamery-cafe",
+      "note": "Old Wethersfield's ice cream parlor and cafe."
+    },
+    {
+      "kind": "food",
+      "name": "Vito's Restaurant and Pizzeria",
+      "place_slug": "vitos-restaurant-pizzeria",
+      "note": "Italian-American institution on Silas Deane Highway since 1978."
+    },
+    {
+      "kind": "stay",
+      "name": "Silas W. Robbins House",
+      "place_slug": "silas-w-robbins-house",
+      "note": "An 1873 Second Empire mansion turned bed and breakfast."
+    }
+  ],
+  "links": [
+    {
+      "target": "guide:glastonbury-ct-travel-guide",
+      "kind": "nearby",
+      "note": "Wethersfield and Glastonbury face each other across the Connecticut River — Wethersfield's eastern boundary."
+    },
+    {
+      "target": "guide:glastonbury-ct-travel-guide",
+      "kind": "shared-history",
+      "note": "Glastonbury began in 1636 as part of Wethersfield, settled as the Pyaug tract, before incorporating separately in 1693."
+    }
+  ]
+}

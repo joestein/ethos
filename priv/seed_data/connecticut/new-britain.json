@@ -1,0 +1,262 @@
+{
+  "guide": {
+    "slug": "new-britain-ct-travel-guide",
+    "title": "New Britain, Connecticut: The Hardware City",
+    "destination": "New Britain, Connecticut",
+    "state": "Connecticut",
+    "county": "Hartford County",
+    "intro": "New Britain began in 1754 as a new parish called \"New Briton\" in the Great Swamp area, growing into an industrial village by the early 1800s. Manufacturing dominance earned it the nickname \"Hardware City\": the American Hardware Corporation and Stanley Works made New Britain Connecticut's largest employer by 1913, with 12,000 workers, and Stanley Black & Decker still keeps its headquarters here since the 2010 merger. Elihu Burritt, \"the Learned Blacksmith,\" was born in New Britain on December 8, 1810; while working at the forge he taught himself nearly 50 languages, became the leading pacifist of his age, and founded the League of Universal Brotherhood in 1846. The city's motto, \"Industry Fills the Hive and Enjoys the Honey,\" reflects that heritage, and New Britain keeps about 1,200 acres of parkland, including Frederick Law Olmsted's Walnut Hill Park. It's also home to Little Poland, one of the nation's most thriving Polish immigrant communities.",
+    "sections": [
+      {
+        "heading": "From New Briton parish to the Hardware City",
+        "body": "New Britain began in 1754 as a new parish called 'New Briton' in the Great Swamp area, and grew into an industrial village by the early nineteenth century. Manufacturing dominance earned it the nickname 'Hardware City': the American Hardware Corporation and Stanley Works made it Connecticut's largest employer by 1913, with 12,000 workers, and Stanley Black & Decker still keeps its headquarters here following the 2010 Stanley Works-Black & Decker merger. Elihu Burritt, 'the Learned Blacksmith,' was born in New Britain on December 8, 1810; while working at the forge he taught himself nearly 50 languages, became the leading pacifist of his age, and founded the League of Universal Brotherhood in 1846. The city's motto, 'Industry Fills the Hive and Enjoys the Honey,' reflects that manufacturing heritage, and New Britain also developed one of the nation's most notable Polish immigrant communities — today's Little Poland district along Broad Street."
+      },
+      {
+        "heading": "Getting there",
+        "body": "New Britain has no passenger rail station of its own. Drivers use the city's in-town interstate connections between New York and Boston, while transit riders arrive via CTfastrak, Connecticut's first bus rapid transit system, on a dedicated 9.1-mile busway from downtown Hartford with peak service every 7-8 minutes. Rail travelers can also reach Berlin station, one town east, for Amtrak Northeast Regional, Amtrak Valley Flyer, and CTrail Hartford Line trains, then connect into New Britain on CTtransit bus routes 511, 512, or 513."
+      },
+      {
+        "heading": "Museum, ballpark, and Broad Street",
+        "body": "The New Britain Museum of American Art calls itself the first museum in the country dedicated to acquiring American art, with more than 9,000 works. Walnut Hill Park, designed by Frederick Law Olmsted, is the flagship of the city's roughly 1,200 acres of parkland. The New Britain Bees play at New Britain Stadium, and the all-volunteer Hole in the Wall Theater has staged community productions for more than 50 years. For food, Capitol Lunch has served its natural-casing hot dogs since 1929, East Side Restaurant has poured German beer since 1934, and Alvarium Beer Co. brews and roasts coffee in a taproom aimed at revitalizing the city's industrial core."
+      }
+    ],
+    "faq": [
+      {
+        "question": "How do I get to New Britain?",
+        "answer": "New Britain has no passenger rail station. Drivers use the city's interstate connections; CTfastrak bus rapid transit runs a dedicated busway from downtown Hartford. Rail travelers can reach Berlin station, one town east, for Amtrak and CTrail Hartford Line service, then take CTtransit bus routes 511, 512, or 513 into the city."
+      },
+      {
+        "question": "Why is New Britain called the Hardware City?",
+        "answer": "The American Hardware Corporation and Stanley Works made New Britain Connecticut's largest employer by 1913, with 12,000 workers. Stanley Black & Decker, formed by the 2010 merger, still headquarters in the city."
+      },
+      {
+        "question": "Who was Elihu Burritt?",
+        "answer": "'The Learned Blacksmith,' born in New Britain on December 8, 1810. While working at the forge he taught himself nearly 50 languages, became the leading pacifist of his age, and founded the League of Universal Brotherhood in 1846."
+      },
+      {
+        "question": "What is Little Poland?",
+        "answer": "New Britain's Broad Street district, called by the city's tourism office 'one of the nation's most popular and thriving Polish communities,' with Polish restaurants, bakeries, and shops."
+      },
+      {
+        "question": "Where should I eat in New Britain?",
+        "answer": "Capitol Lunch has served natural-casing hot dogs with its 'Grandpa Art's' meat sauce since 1929; East Side Restaurant is a family-owned German spot since 1934; Alvarium Beer Co. pairs a taproom with an adjoining coffee roastery."
+      }
+    ],
+    "photos": [
+      {
+        "src": "/photos/ct/new-britain/nbmaa-chase-family-building.jpg",
+        "thumb": "/photos/ct/new-britain/nbmaa-chase-family-building_thumb.jpg",
+        "title": "New Britain Museum of American Art",
+        "description": "The Chase Family Building, the main exterior of the New Britain Museum of American Art.",
+        "author": "Daderot",
+        "license": "CC0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Chase_Family_Building_-_New_Britain_Museum_of_American_Art_-_DSC08970.JPG"
+      },
+      {
+        "src": "/photos/ct/new-britain/walnut-hill-park.jpg",
+        "thumb": "/photos/ct/new-britain/walnut-hill-park_thumb.jpg",
+        "title": "Walnut Hill Park",
+        "description": "A landscape view of the Olmsted-designed Walnut Hill Park in New Britain.",
+        "author": "John Phelan",
+        "license": "CC BY-SA 3.0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Walnut_Hill_Park,_New_Britain_CT.jpg"
+      },
+      {
+        "src": "/photos/ct/new-britain/little-poland-broad-street.jpg",
+        "thumb": "/photos/ct/new-britain/little-poland-broad-street_thumb.jpg",
+        "title": "Broad Street, Little Poland",
+        "description": "A street scene in New Britain's Little Poland neighborhood along Broad Street.",
+        "author": "Sage Ross",
+        "license": "CC BY-SA 3.0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Broad_Street_in_New_Britain,_Connecticut,_2009-09-15.jpg"
+      }
+    ]
+  },
+  "places": [
+    {
+      "slug": "new-britain-museum-of-american-art",
+      "name": "New Britain Museum of American Art",
+      "kind": "museum",
+      "town": "New Britain",
+      "state": "Connecticut",
+      "county": "Hartford County",
+      "address": "56 Lexington Street, New Britain, CT 06052",
+      "official_url": "https://nbmaa.org/",
+      "summary": "Describes itself as the first museum in the country dedicated to acquiring American art, with more than 9,000 works spanning three centuries. Open Tuesday-Sunday 10 a.m.-5 p.m., Friday to 8 p.m.",
+      "status": "open",
+      "photos": [
+        {
+          "src": "/photos/ct/new-britain/nbmaa-chase-family-building.jpg",
+          "thumb": "/photos/ct/new-britain/nbmaa-chase-family-building_thumb.jpg",
+          "title": "New Britain Museum of American Art",
+          "description": "The Chase Family Building, the main exterior of the New Britain Museum of American Art.",
+          "author": "Daderot",
+          "license": "CC0",
+          "source_url": "https://commons.wikimedia.org/wiki/File:Chase_Family_Building_-_New_Britain_Museum_of_American_Art_-_DSC08970.JPG"
+        }
+      ]
+    },
+    {
+      "slug": "walnut-hill-park-new-britain",
+      "name": "Walnut Hill Park",
+      "kind": "park",
+      "town": "New Britain",
+      "state": "Connecticut",
+      "county": "Hartford County",
+      "address": "184 West Main Street, New Britain, CT 06051",
+      "official_url": "https://www.newbritainct.gov/services/recreation/directionshtm/park-directions/directions-to-walnut-hill-park",
+      "summary": "Designed by Frederick Law Olmsted, it is the flagship of New Britain's roughly 1,200 acres of parkland; the NRHP-listed park's initial landscaping dates to the 1860s, with roadways laid out 1870-72.",
+      "status": "open",
+      "photos": [
+        {
+          "src": "/photos/ct/new-britain/walnut-hill-park.jpg",
+          "thumb": "/photos/ct/new-britain/walnut-hill-park_thumb.jpg",
+          "title": "Walnut Hill Park",
+          "description": "A landscape view of the Olmsted-designed Walnut Hill Park in New Britain.",
+          "author": "John Phelan",
+          "license": "CC BY-SA 3.0",
+          "source_url": "https://commons.wikimedia.org/wiki/File:Walnut_Hill_Park,_New_Britain_CT.jpg"
+        }
+      ]
+    },
+    {
+      "slug": "new-britain-stadium-bees",
+      "name": "New Britain Stadium (New Britain Bees Baseball)",
+      "kind": "attraction",
+      "town": "New Britain",
+      "state": "Connecticut",
+      "county": "Hartford County",
+      "address": "230 John Karbonic Way, New Britain, CT 06051",
+      "official_url": "https://www.nbbees.com/",
+      "summary": "Home of the New Britain Bees of the Futures Collegiate Baseball League of New England, who won their first Futures League title in 2026.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "hole-in-the-wall-theater",
+      "name": "Hole in the Wall Theater",
+      "kind": "theater",
+      "town": "New Britain",
+      "state": "Connecticut",
+      "county": "Hartford County",
+      "address": "116 Main Street, New Britain, CT 06051",
+      "official_url": "https://hitw.org/",
+      "summary": "All-volunteer 501(c)(3) community theater operating for over 50 years; every Main Stage production includes a 'Pay What You Can Night' (general admission $25).",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "little-poland-district-new-britain",
+      "name": "Little Poland District",
+      "kind": "attraction",
+      "town": "New Britain",
+      "state": "Connecticut",
+      "county": "Hartford County",
+      "address": "Broad Street, New Britain, CT",
+      "official_url": "https://www.visitnbct.com/",
+      "summary": "The city's official tourism site calls Little Poland 'one of the nation's most popular and thriving Polish communities,' with Polish restaurants, bakeries, and shops along Broad Street.",
+      "status": "open",
+      "photos": [
+        {
+          "src": "/photos/ct/new-britain/little-poland-broad-street.jpg",
+          "thumb": "/photos/ct/new-britain/little-poland-broad-street_thumb.jpg",
+          "title": "Broad Street, Little Poland",
+          "description": "A street scene in New Britain's Little Poland neighborhood along Broad Street.",
+          "author": "Sage Ross",
+          "license": "CC BY-SA 3.0",
+          "source_url": "https://commons.wikimedia.org/wiki/File:Broad_Street_in_New_Britain,_Connecticut,_2009-09-15.jpg"
+        }
+      ]
+    },
+    {
+      "slug": "capitol-lunch",
+      "name": "Capitol Lunch",
+      "kind": "restaurant",
+      "town": "New Britain",
+      "state": "Connecticut",
+      "county": "Hartford County",
+      "address": "510 Main Street, New Britain, CT 06051",
+      "official_url": "https://www.capitollunch.com/",
+      "summary": "Hot dog institution founded in 1929, famous for Martin Rosol's natural-casing franks topped with the legendary 'Grandpa Art's' meat sauce. Hours Mon-Sat 10 a.m.-6 p.m.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "east-side-restaurant-new-britain",
+      "name": "East Side Restaurant",
+      "kind": "restaurant",
+      "town": "New Britain",
+      "state": "Connecticut",
+      "county": "Hartford County",
+      "address": "131 Dwight Street, New Britain, CT 06051",
+      "official_url": "https://www.eastsiderestaurant.com/",
+      "summary": "Family-owned German restaurant serving since 1934, with a Mug Club and German beer events.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "alvarium-beer-co",
+      "name": "Alvarium Beer Co.",
+      "kind": "brewery",
+      "town": "New Britain",
+      "state": "Connecticut",
+      "county": "Hartford County",
+      "address": "365 John Downey Dr, Suite B, New Britain, CT 06051",
+      "official_url": "https://www.alvariumbeer.com/",
+      "summary": "Craft brewery founded with a mission of helping revitalize industrial New Britain; also runs an adjoining coffee roastery and cafe in Suite A. Taproom hours Wed-Fri 3-10 p.m., Sat noon-10 p.m., Sun noon-7 p.m.",
+      "status": "open",
+      "photos": []
+    }
+  ],
+  "entries": [
+    {
+      "kind": "sight",
+      "name": "New Britain Museum of American Art",
+      "place_slug": "new-britain-museum-of-american-art",
+      "note": "The first US museum dedicated to acquiring American art."
+    },
+    {
+      "kind": "sight",
+      "name": "Walnut Hill Park",
+      "place_slug": "walnut-hill-park-new-britain",
+      "note": "The Olmsted-designed flagship of the city's parkland."
+    },
+    {
+      "kind": "sight",
+      "name": "New Britain Stadium (New Britain Bees Baseball)",
+      "place_slug": "new-britain-stadium-bees",
+      "note": "Home of the 2026 Futures League champion New Britain Bees."
+    },
+    {
+      "kind": "sight",
+      "name": "Hole in the Wall Theater",
+      "place_slug": "hole-in-the-wall-theater",
+      "note": "All-volunteer community theater, staging shows for 50-plus years."
+    },
+    {
+      "kind": "walk",
+      "name": "Little Poland District",
+      "place_slug": "little-poland-district-new-britain",
+      "note": "One of the nation's most thriving Polish communities, on Broad Street."
+    },
+    {
+      "kind": "food",
+      "name": "Capitol Lunch",
+      "place_slug": "capitol-lunch",
+      "note": "Natural-casing hot dogs with 'Grandpa Art's' meat sauce since 1929."
+    },
+    {
+      "kind": "food",
+      "name": "East Side Restaurant",
+      "place_slug": "east-side-restaurant-new-britain",
+      "note": "Family-owned German restaurant and Mug Club since 1934."
+    },
+    {
+      "kind": "food",
+      "name": "Alvarium Beer Co.",
+      "place_slug": "alvarium-beer-co",
+      "note": "Craft brewery and coffee roastery in industrial New Britain."
+    }
+  ],
+  "links": []
+}

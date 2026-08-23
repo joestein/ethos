@@ -1,0 +1,277 @@
+{
+  "guide": {
+    "slug": "simsbury-ct-travel-guide",
+    "title": "Simsbury, Connecticut: Copper Coins, Safety Fuses, and a Hilltop Tower",
+    "destination": "Simsbury, Connecticut",
+    "state": "Connecticut",
+    "county": "Hartford County",
+    "intro": "Simsbury was settled as \"the Windsor plantation at Massacoe\" and incorporated as a town in 1670, one of Connecticut's oldest. In March 1676, during King Philip's War, the town was pillaged and burned to the ground; residents sheltered in Windsor before returning to rebuild in the spring of 1677. The name's origin is uncertain — it may come from the English town of Symondsbury, or from early settler Simon Wolcott, known familiarly as \"Sim.\" Simsbury claims a string of industrial firsts: the nation's earliest steel-making venture in 1728, the Colonies' first copper coins, minted in 1737 by Dr. Samuel Higley with ore from his Copper Hill Mine, and America's first safety fuses for blasting in 1836, a business that evolved into an aerospace and defense company still headquartered nearby. Gifford Pinchot, first chief of the U.S. Forest Service and founder of the Yale School of Forestry, was born here in 1865.",
+    "sections": [
+      {
+        "heading": "Massacoe to the Learned Blacksmith's neighbor",
+        "body": "Simsbury was settled as 'the Windsor plantation at Massacoe' and incorporated in 1670, one of Connecticut's oldest towns. In March 1676, during King Philip's War, it was pillaged and burned to the ground; residents sheltered in Windsor and returned to rebuild in spring 1677. The town's name is of uncertain origin — the English town of Symondsbury, or early settler Simon Wolcott, known familiarly as 'Sim,' are the two candidates. Simsbury strung together a remarkable run of industrial firsts: the nation's earliest steel-making venture in 1728, the Colonies' first copper coins in 1737 (minted by Dr. Samuel Higley from his own Copper Hill Mine ore), the first carpet factory in 1825, and America's first safety fuses for blasting in 1836, a business that grew into an aerospace and defense company still headquartered nearby. Gifford Pinchot, first chief of the U.S. Forest Service and founder of the Yale School of Forestry, was born in Simsbury in 1865; under his leadership, federal forest holdings grew from 56 million acres in 1905 to 172 million acres across 150 national forests by 1910."
+      },
+      {
+        "heading": "Getting there",
+        "body": "Simsbury is a Farmington Valley town in northern Hartford County, reached by car about 20-25 minutes northwest of Hartford. There is no passenger rail station in Simsbury; the nearest CTrail Hartford Line and Amtrak service is at Hartford Union Station or Windsor."
+      },
+      {
+        "heading": "A tower, a flower bridge, and the state's biggest tree",
+        "body": "Heublein Tower, a 165-foot structure built in 1914 as Gilbert Heublein's summer home, stands 1,000 feet above the Farmington River Valley in Talcott Mountain State Park, reached by the moderate 2.5-mile Tower Trail; Republican leaders reportedly urged Eisenhower to run for president at a gathering here in the early 1950s. The Old Drake Hill Flower Bridge, an 1892 span restored as a pedestrian crossing in 1995, is decorated with more than 60 volunteer-tended flower boxes over the Farmington River, not far from the Pinchot Sycamore — the largest known tree in Connecticut, dedicated to native son Gifford Pinchot. Millwright's Restaurant and Present Company, in the Tariffville village, anchor the dining scene, with Tulmeadow Farm Store for ice cream; The Simsbury Inn and the Simsbury 1820 House are the town's two lodging options."
+      }
+    ],
+    "faq": [
+      {
+        "question": "How do I get to Simsbury?",
+        "answer": "Simsbury is reached by car, about 20-25 minutes northwest of Hartford in the Farmington Valley. There is no passenger rail station in town; the nearest CTrail Hartford Line and Amtrak service is at Hartford Union Station or Windsor."
+      },
+      {
+        "question": "What is Heublein Tower?",
+        "answer": "A 165-foot tower built in 1914 as Gilbert Heublein's summer home atop Talcott Mountain, 1,000 feet above the Farmington River Valley with views spanning roughly 1,200 square miles. The 2.5-mile Tower Trail leads to it; the tower is open Friday-Monday, May through early November."
+      },
+      {
+        "question": "What industrial firsts happened in Simsbury?",
+        "answer": "The nation's earliest steel-making venture in 1728, the Colonies' first copper coins in 1737, the first carpet factory in 1825, and America's first safety fuses for blasting in 1836 — a business that grew into an aerospace and defense company still headquartered nearby."
+      },
+      {
+        "question": "Who was Gifford Pinchot?",
+        "answer": "The first chief of the U.S. Forest Service and founder of the Yale School of Forestry, born in Simsbury in 1865. The Pinchot Sycamore, Connecticut's largest known tree, stands beside the Farmington River in his honor."
+      },
+      {
+        "question": "Where can I eat and stay in Simsbury?",
+        "answer": "Millwright's Restaurant is the destination fine-dining room; Present Company serves seasonal menus in the Tariffville village; Tulmeadow Farm Store is the local ice cream stop. The Simsbury Inn and the Simsbury 1820 House are the town's two lodging options."
+      }
+    ],
+    "photos": [
+      {
+        "src": "/photos/ct/simsbury/heublein-tower.jpg",
+        "thumb": "/photos/ct/simsbury/heublein-tower_thumb.jpg",
+        "title": "Heublein Tower",
+        "description": "Heublein Tower atop Talcott Mountain in Simsbury.",
+        "author": "Marty Aligata",
+        "license": "CC BY-SA 4.0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Heublein_Tower,_Simsbury,_CT_(August_2024).jpg"
+      },
+      {
+        "src": "/photos/ct/simsbury/drake-hill-flower-bridge.jpg",
+        "thumb": "/photos/ct/simsbury/drake-hill-flower-bridge_thumb.jpg",
+        "title": "Old Drake Hill Flower Bridge",
+        "description": "The flower-decked pedestrian bridge over the Farmington River in Simsbury.",
+        "author": "Marty Aligata",
+        "license": "CC BY-SA 4.0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Drake_Hill_Flower_Bridge,_Simsbury,_CT_(June_2026).jpg"
+      },
+      {
+        "src": "/photos/ct/simsbury/pinchot-sycamore.jpg",
+        "thumb": "/photos/ct/simsbury/pinchot-sycamore_thumb.jpg",
+        "title": "Pinchot Sycamore",
+        "description": "Connecticut's largest known tree, beside the Farmington River in Simsbury.",
+        "author": "Marcdcheung",
+        "license": "CC BY 4.0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Pinchot_Sycamore-2.jpg"
+      }
+    ]
+  },
+  "places": [
+    {
+      "slug": "talcott-mountain-state-park-heublein-tower",
+      "name": "Talcott Mountain State Park / Heublein Tower",
+      "kind": "park",
+      "town": "Simsbury",
+      "state": "Connecticut",
+      "county": "Hartford County",
+      "address": "Summit Ridge Drive, Simsbury, CT 06070",
+      "official_url": "https://ctparks.com/node/142",
+      "summary": "The 165-foot Heublein Tower, built in 1914 as Gilbert Heublein's summer home, stands 1,000 feet above the Farmington River Valley with views spanning roughly 1,200 square miles; the moderate 2.5-mile Tower Trail leads to it. Republican leaders reportedly urged Eisenhower to run for president at a gathering here in the early 1950s. Tower open May 22-November 2, 2026, Friday-Monday 10 a.m.-4 p.m.; the park itself is open daily 8 a.m. to sunset.",
+      "status": "open",
+      "photos": [
+        {
+          "src": "/photos/ct/simsbury/heublein-tower.jpg",
+          "thumb": "/photos/ct/simsbury/heublein-tower_thumb.jpg",
+          "title": "Heublein Tower",
+          "description": "Heublein Tower atop Talcott Mountain in Simsbury.",
+          "author": "Marty Aligata",
+          "license": "CC BY-SA 4.0",
+          "source_url": "https://commons.wikimedia.org/wiki/File:Heublein_Tower,_Simsbury,_CT_(August_2024).jpg"
+        }
+      ]
+    },
+    {
+      "slug": "simsbury-historical-society-phelps-tavern-museum",
+      "name": "Simsbury Historical Society / Phelps Tavern Museum",
+      "kind": "museum",
+      "town": "Simsbury",
+      "state": "Connecticut",
+      "county": "Hartford County",
+      "address": "800 Hopmeadow Street, Simsbury, CT 06070",
+      "official_url": "https://simsburyhistory.org/",
+      "summary": "A 2-plus-acre campus of more than a dozen historic buildings centered on the 1771 Phelps Tavern, listed on the National Register of Historic Places; the society was established in 1911 and the Phelps family donated the tavern, barn, and land in 1962. Ellsworth Visitor Center open Thursday-Saturday noon-4 p.m., with guided tours Saturdays at 1 and 2:30 p.m., April-November.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "old-drake-hill-flower-bridge",
+      "name": "Old Drake Hill Flower Bridge",
+      "kind": "historic-site",
+      "town": "Simsbury",
+      "state": "Connecticut",
+      "county": "Hartford County",
+      "address": "Drake Hill Road, Simsbury, CT 06070",
+      "summary": "An 1892 metal-truss road bridge spanning 183 feet over the Farmington River; after a replacement bridge opened in 1992 it was restored in 1995 as a pedestrian flower bridge, now decorated with 62 flower boxes and 32 hanging baskets planted and maintained by volunteers. Free and open to the public.",
+      "status": "open",
+      "photos": [
+        {
+          "src": "/photos/ct/simsbury/drake-hill-flower-bridge.jpg",
+          "thumb": "/photos/ct/simsbury/drake-hill-flower-bridge_thumb.jpg",
+          "title": "Old Drake Hill Flower Bridge",
+          "description": "The flower-decked pedestrian bridge over the Farmington River in Simsbury.",
+          "author": "Marty Aligata",
+          "license": "CC BY-SA 4.0",
+          "source_url": "https://commons.wikimedia.org/wiki/File:Drake_Hill_Flower_Bridge,_Simsbury,_CT_(June_2026).jpg"
+        }
+      ]
+    },
+    {
+      "slug": "pinchot-sycamore",
+      "name": "Pinchot Sycamore",
+      "kind": "attraction",
+      "town": "Simsbury",
+      "state": "Connecticut",
+      "county": "Hartford County",
+      "address": "Along the Farmington River, Simsbury, CT",
+      "summary": "The largest known tree in Connecticut and one of the two or three largest American sycamores in the United States, growing beside the Farmington River and dedicated to Simsbury-born conservationist Gifford Pinchot. Freely accessible roadside site.",
+      "status": "open",
+      "photos": [
+        {
+          "src": "/photos/ct/simsbury/pinchot-sycamore.jpg",
+          "thumb": "/photos/ct/simsbury/pinchot-sycamore_thumb.jpg",
+          "title": "Pinchot Sycamore",
+          "description": "Connecticut's largest known tree, beside the Farmington River in Simsbury.",
+          "author": "Marcdcheung",
+          "license": "CC BY 4.0",
+          "source_url": "https://commons.wikimedia.org/wiki/File:Pinchot_Sycamore-2.jpg"
+        }
+      ]
+    },
+    {
+      "slug": "millwrights-restaurant",
+      "name": "Millwright's Restaurant",
+      "kind": "restaurant",
+      "town": "Simsbury",
+      "state": "Connecticut",
+      "county": "Hartford County",
+      "address": "77 West Street, Simsbury, CT 06070",
+      "official_url": "https://millwrightsrestaurant.com/",
+      "summary": "Destination fine-dining restaurant led by chef Tyler Anderson, with a dining room, enclosed bridge, and tavern seating plus Sunday brunch.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "tulmeadow-farm-store",
+      "name": "Tulmeadow Farm Store",
+      "kind": "cafe",
+      "town": "Simsbury",
+      "state": "Connecticut",
+      "county": "Hartford County",
+      "address": "255 Farms Village Road, West Simsbury, CT 06092",
+      "official_url": "https://tulmeadowfarmstore.com/",
+      "summary": "A local institution on farmland with original ownership dating to the 1700s, famous for homemade ice cream served from walk-up windows alongside farm-raised beef, produce, and local goods. Farm store open daily 9 a.m.-9 p.m.; ice cream windows daily noon-9 p.m.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "present-company-tariffville",
+      "name": "Present Company",
+      "kind": "restaurant",
+      "town": "Simsbury",
+      "state": "Connecticut",
+      "county": "Hartford County",
+      "address": "2 Tunxis Road, Tariffville (Simsbury), CT 06081",
+      "official_url": "https://www.presentcompanyct.com/",
+      "summary": "Well-regarded chef-driven restaurant in Simsbury's Tariffville village, offering seasonal menus including a tasting-menu option.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "the-simsbury-inn",
+      "name": "The Simsbury Inn",
+      "kind": "hotel",
+      "town": "Simsbury",
+      "state": "Connecticut",
+      "county": "Hartford County",
+      "official_url": "https://www.simsburyinn.com/",
+      "summary": "Full-service New England inn in the Farmington Valley with Twigs Lounge (fireplace and terrace dining), a ballroom for up to 200 guests, and multiple room types; markets itself as a home base for Talcott Mountain State Park and Heublein Tower.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "simsbury-1820-house",
+      "name": "Simsbury 1820 House",
+      "kind": "bnb",
+      "town": "Simsbury",
+      "state": "Connecticut",
+      "county": "Hartford County",
+      "official_url": "https://www.simsbury1820house.com/",
+      "summary": "Historic country inn in an 1820 house, offering suites and deluxe rooms with check-in amenities (wine and chocolates) and an on-site restaurant, Soma Grille; a 2024 Kayak Travel Awards winner.",
+      "status": "open",
+      "photos": []
+    }
+  ],
+  "entries": [
+    {
+      "kind": "sight",
+      "name": "Talcott Mountain State Park / Heublein Tower",
+      "place_slug": "talcott-mountain-state-park-heublein-tower",
+      "note": "A 1914 hilltop tower with views spanning roughly 1,200 square miles."
+    },
+    {
+      "kind": "sight",
+      "name": "Simsbury Historical Society / Phelps Tavern Museum",
+      "place_slug": "simsbury-historical-society-phelps-tavern-museum",
+      "note": "A dozen-plus historic buildings centered on the 1771 Phelps Tavern."
+    },
+    {
+      "kind": "walk",
+      "name": "Old Drake Hill Flower Bridge",
+      "place_slug": "old-drake-hill-flower-bridge",
+      "note": "An 1892 bridge over the Farmington River, restored with flower boxes."
+    },
+    {
+      "kind": "sight",
+      "name": "Pinchot Sycamore",
+      "place_slug": "pinchot-sycamore",
+      "note": "Connecticut's largest known tree, beside the Farmington River."
+    },
+    {
+      "kind": "food",
+      "name": "Millwright's Restaurant",
+      "place_slug": "millwrights-restaurant",
+      "note": "Destination fine dining from chef Tyler Anderson."
+    },
+    {
+      "kind": "food",
+      "name": "Tulmeadow Farm Store",
+      "place_slug": "tulmeadow-farm-store",
+      "note": "Farmland ice cream windows dating to the 1700s."
+    },
+    {
+      "kind": "food",
+      "name": "Present Company",
+      "place_slug": "present-company-tariffville",
+      "note": "Chef-driven seasonal menus in the Tariffville village."
+    },
+    {
+      "kind": "stay",
+      "name": "The Simsbury Inn",
+      "place_slug": "the-simsbury-inn",
+      "note": "Full-service New England inn near Heublein Tower."
+    },
+    {
+      "kind": "stay",
+      "name": "Simsbury 1820 House",
+      "place_slug": "simsbury-1820-house",
+      "note": "An 1820 country inn with on-site restaurant Soma Grille."
+    }
+  ],
+  "links": []
+}
