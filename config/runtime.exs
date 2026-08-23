@@ -22,6 +22,10 @@ if gsv = System.get_env("GOOGLE_SITE_VERIFICATION") do
   config :ethos, :google_site_verification, gsv
 end
 
+if admin_email = System.get_env("ADMIN_EMAIL") do
+  config :ethos, :admin_email, admin_email
+end
+
 if System.get_env("PHX_SERVER") do
   config :ethos, EthosWeb.Endpoint, server: true
 end

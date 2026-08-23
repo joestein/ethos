@@ -95,6 +95,14 @@ defmodule EthosWeb.Router do
     get "/badges", BadgeController, :index
   end
 
+  scope "/admin", EthosWeb do
+    pipe_through [:browser, :require_authenticated_user, :require_admin_user]
+
+    get "/suggestions", AdminSuggestionController, :index
+    post "/suggestions/:id/accept", AdminSuggestionController, :accept
+    post "/suggestions/:id/decline", AdminSuggestionController, :decline
+  end
+
   scope "/", EthosWeb do
     pipe_through [:browser]
 

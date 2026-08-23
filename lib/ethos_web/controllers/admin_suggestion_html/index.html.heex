@@ -1,0 +1,31 @@
+<div class="mx-auto max-w-2xl px-4 py-10">
+  <h1 class="text-3xl font-bold">Suggestion queue</h1>
+  <p class="mt-1 text-zinc-500">{length(@suggestions)} pending</p>
+
+  <p :if={@suggestions == []} class="mt-8 text-zinc-500">Nothing waiting. 🎉</p>
+
+  <ul class="mt-6 space-y-4">
+    <li :for={s <- @suggestions} class="rounded-xl border p-5">
+      <p class="text-sm text-zinc-500">
+        For <.link navigate={~p"/g/#{s.guide.slug}"} class="underline">{s.guide.title}</.link>
+        <span :if={s.author}>· from {s.author.email}</span>
+        <span :if={is_nil(s.author)}>· via {s.origin}</span>
+      </p>
+      <p class="mt-1 font-semibold">{s.place_name}</p>
+      <p :if={s.body} class="mt-1 text-sm text-zinc-600">{s.body}</p>
+      <p :if={EthosWeb.Url.safe_http?(s.url)} class="mt-1 text-sm">
+        <a href={s.url} class="underline" rel="nofollow noopener" target="_blank">{s.url}</a>
+      </p>
+      <div class="mt-3 flex gap-3">
+        <form action={~p"/admin/suggestions/#{s.id}/accept"} method="post">
+          <input type="hidden" name="_csrf_token" value={Plug.CSRFProtection.get_csrf_token()} />
+          <button class="rounded-lg bg-emerald-600 px-3 py-1.5 text-sm text-white">Accept</button>
+        </form>
+        <form action={~p"/admin/suggestions/#{s.id}/decline"} method="post">
+          <input type="hidden" name="_csrf_token" value={Plug.CSRFProtection.get_csrf_token()} />
+          <button class="rounded-lg border px-3 py-1.5 text-sm">Decline</button>
+        </form>
+      </div>
+    </li>
+  </ul>
+</div>

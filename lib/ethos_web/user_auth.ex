@@ -213,6 +213,22 @@ defmodule EthosWeb.UserAuth do
     end
   end
 
+  @doc """
+  Used for routes that require the single configured admin. Renders 404 for
+  any other user so the admin surface is not advertised.
+  """
+  def require_admin_user(conn, _opts) do
+    if Ethos.Accounts.admin?(conn.assigns[:current_user]) do
+      conn
+    else
+      conn
+      |> Plug.Conn.put_status(:not_found)
+      |> Phoenix.Controller.put_view(EthosWeb.ErrorHTML)
+      |> Phoenix.Controller.render(:"404")
+      |> halt()
+    end
+  end
+
   defp put_token_in_session(conn, token) do
     conn
     |> put_session(:user_token, token)

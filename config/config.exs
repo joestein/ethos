@@ -10,7 +10,8 @@ import Config
 config :ethos,
   ecto_repos: [Ethos.Repo],
   generators: [timestamp_type: :utc_datetime],
-  env: config_env()
+  env: config_env(),
+  admin_email: "cryptcom@gmail.com"
 
 # Configures the endpoint
 config :ethos, EthosWeb.Endpoint,

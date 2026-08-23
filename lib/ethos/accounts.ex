@@ -60,6 +60,14 @@ defmodule Ethos.Accounts do
   """
   def get_user!(id), do: Repo.get!(User, id)
 
+  @doc "True when the user is THE admin (single admin, bound by email config)."
+  def admin?(%Ethos.Accounts.User{email: email}) when is_binary(email) do
+    admin = Application.get_env(:ethos, :admin_email) || ""
+    String.downcase(email) == String.downcase(admin)
+  end
+
+  def admin?(_), do: false
+
   ## User registration
 
   @doc """

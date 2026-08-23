@@ -37,6 +37,17 @@ defmodule Ethos.Contributions do
 
   def get_suggestion!(guide, id), do: Repo.get_by!(Suggestion, id: id, guide_id: guide.id)
 
+  def list_all_pending_suggestions do
+    Repo.all(
+      from s in Suggestion,
+        where: s.status == "pending",
+        order_by: [desc: s.id],
+        preload: [:author, :guide]
+    )
+  end
+
+  def get_suggestion_by_id!(id), do: Repo.get_by!(Suggestion, id: id)
+
   def accept_suggestion(%Suggestion{status: "pending"} = suggestion) do
     guide = Guides.get_guide!(suggestion.guide_id)
     source = if suggestion.origin == "gap_fill", do: "gap_fill", else: "suggestion"
