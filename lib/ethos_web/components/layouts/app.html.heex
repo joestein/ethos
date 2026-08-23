@@ -4,6 +4,14 @@
       Ethos
     </a>
     <nav class="flex items-center gap-4 font-semibold leading-6 text-zinc-900">
+      <form action={~p"/search"} method="get" class="hidden sm:block">
+        <input
+          type="search"
+          name="q"
+          placeholder="Search"
+          class="w-36 rounded-lg border-zinc-300 py-1 text-sm"
+        />
+      </form>
       <.link href={~p"/destinations"} class="hover:text-zinc-700">
         Destinations
       </.link>
