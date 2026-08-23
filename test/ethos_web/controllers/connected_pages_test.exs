@@ -41,4 +41,86 @@ defmodule EthosWeb.ConnectedPagesTest do
     html = conn |> get(~p"/g/#{g.slug}") |> html_response(200)
     refute html =~ "Connected pages"
   end
+
+  test "links render in correct order regardless of insertion order", %{conn: conn} do
+    g = published_guide_fixture(%{title: "Test Guide"})
+
+    # Create places
+    Places.upsert_place!(%{
+      slug: "nearby-place",
+      name: "Nearby Place",
+      kind: "museum",
+      town: "TestTown",
+      state: "TestState",
+      county: "TestCounty",
+      summary: "nearby"
+    })
+
+    Places.upsert_place!(%{
+      slug: "shared-place",
+      name: "Shared Place",
+      kind: "restaurant",
+      town: "TestTown",
+      state: "TestState",
+      county: "TestCounty",
+      summary: "shared"
+    })
+
+    Places.upsert_place!(%{
+      slug: "region-place",
+      name: "Region Place",
+      kind: "historic-site",
+      town: "TestTown",
+      state: "TestState",
+      county: "TestCounty",
+      summary: "region"
+    })
+
+    # Insert links in non-sorted order: same-region, nearby, shared-history
+    Links.upsert_link!(%{
+      source: {:guide, g.slug},
+      target: {:place, "region-place"},
+      kind: "same-region",
+      note: "Same region"
+    })
+
+    Links.upsert_link!(%{
+      source: {:guide, g.slug},
+      target: {:place, "nearby-place"},
+      kind: "nearby",
+      note: "Nearby"
+    })
+
+    Links.upsert_link!(%{
+      source: {:guide, g.slug},
+      target: {:place, "shared-place"},
+      kind: "shared-history",
+      note: "Shared"
+    })
+
+    html = conn |> get(~p"/g/#{g.slug}") |> html_response(200)
+
+    # Find positions of headings in rendered HTML
+    nearby_pos =
+      case :binary.match(html, "Nearby") do
+        {pos, _len} -> pos
+        :nomatch -> 999_999
+      end
+
+    shared_pos =
+      case :binary.match(html, "Shared history") do
+        {pos, _len} -> pos
+        :nomatch -> 999_999
+      end
+
+    region_pos =
+      case :binary.match(html, "Same region") do
+        {pos, _len} -> pos
+        :nomatch -> 999_999
+      end
+
+    # Verify correct order: Nearby < Shared history < Same region
+    assert nearby_pos < shared_pos, "Nearby should appear before Shared history"
+    assert shared_pos < region_pos, "Shared history should appear before Same region"
+  end
 end

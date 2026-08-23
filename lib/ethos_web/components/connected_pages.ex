@@ -1,7 +1,10 @@
 defmodule EthosWeb.ConnectedPages do
+  @moduledoc "Renders grouped page links between guides and places."
+
   use Phoenix.Component
   use EthosWeb, :verified_routes
 
+  @order ~w(nearby shared-history same-region see-also)
   @headings %{
     "nearby" => "Nearby",
     "shared-history" => "Shared history",
@@ -16,7 +19,7 @@ defmodule EthosWeb.ConnectedPages do
       assigns.connected
       |> Enum.group_by(& &1.kind)
       |> Enum.sort_by(fn {kind, _} ->
-        Enum.find_index(Map.keys(@headings), &(&1 == kind)) || 99
+        Enum.find_index(@order, &(&1 == kind)) || 99
       end)
 
     assigns = assign(assigns, :groups, groups) |> assign(:headings, @headings)
