@@ -1,7 +1,7 @@
 defmodule EthosWeb.GuideController do
   use EthosWeb, :controller
 
-  alias Ethos.{Guides, Research}
+  alias Ethos.{Guides, Links, Research}
   alias Ethos.Guides.Guide
 
   def show(conn, %{"slug" => slug}) do
@@ -35,6 +35,7 @@ defmodule EthosWeb.GuideController do
       guide: guide,
       entries: entries,
       research: research,
+      connected: Links.links_for("guide", guide.id),
       page_title: "#{guide.title} — #{destination_name} guide",
       page_og: og,
       page_meta_description: meta_description,

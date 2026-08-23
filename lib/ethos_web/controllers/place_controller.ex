@@ -1,7 +1,7 @@
 defmodule EthosWeb.PlaceController do
   use EthosWeb, :controller
 
-  alias Ethos.Places
+  alias Ethos.{Links, Places}
 
   def show(conn, %{"slug" => slug}) do
     case Places.get_place_by_slug(slug) do
@@ -30,6 +30,7 @@ defmodule EthosWeb.PlaceController do
           place: place,
           featured_guides: featured,
           visited?: visited?,
+          connected: Links.links_for("place", place.id),
           page_title: "#{place.name} — #{place.town}, #{place.state}",
           page_og: og,
           page_meta_description: meta_description,

@@ -140,6 +140,8 @@
     Some booking links on this page earn Ethos a commission at no extra cost to you.
   </p>
 
+  <EthosWeb.ConnectedPages.connected_pages connected={@connected} />
+
   <footer class="mt-10 flex flex-wrap gap-4 border-t pt-6">
     <.link
       navigate={~p"/g/#{@guide.slug}/suggest"}
