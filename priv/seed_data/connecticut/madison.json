@@ -1,0 +1,316 @@
+{
+  "guide": {
+    "slug": "madison-ct-travel-guide",
+    "title": "Madison, Connecticut: East Guilford's 200-Year-Old Independence",
+    "destination": "Madison, Connecticut",
+    "state": "Connecticut",
+    "county": "New Haven County",
+    "intro": "Madison was settled by English colonists in 1641 as part of Guilford and was known as East Guilford until it incorporated as its own town in 1826 — a bicentennial the town is celebrating in 2026 with official \"Madison 200\" events. The early economy was largely agricultural, with notable industries such as shipbuilding; the Boston Post Road and later turnpikes helped transform Madison into a popular seasonal shoreline resort, a character it retains today. The Deacon John Grave House, built on the Boston Post Road in 1685, was occupied by seven generations of the Grave family, whose original account books survive at the Connecticut State Library. The Madison Historical Society, founded during World War I, documents local figures including philanthropist Daniel Hand and sea captain Frederick Lee. The town's Hammonasset Beach, Connecticut's largest shoreline park, takes its name from an eastern woodland Indian term for the farming area along the Hammonasset River.",
+    "sections": [
+      {
+        "heading": "From East Guilford to a bicentennial town",
+        "body": "English colonists settled the area in 1641 as part of Guilford, and it was known as East Guilford until it incorporated as the separate town of Madison in 1826 — a bicentennial the town is marking in 2026 with official \"Madison 200\" celebrations. The town's early economy was largely agricultural, with notable early industries such as shipbuilding; the Boston Post Road and later turnpikes helped transform Madison into a popular seasonal shoreline resort, a character it retains to this day. The Deacon John Grave House on the Boston Post Road was built in 1685 and occupied by seven generations of the Grave family, who served as farmers, innkeepers, and shoemakers; the family's original account books survive at the Connecticut State Library. The Madison Historical Society was founded during World War I and documents local figures including philanthropist Daniel Hand, sea captain Frederick Lee, artist Clarissa Munger Badger, and Charles Ferdinand Dowd. The name of Hammonasset, Madison's famous beach and Connecticut's largest shoreline park, comes from an eastern woodland Indian term describing their farming area along the Hammonasset River."
+      },
+      {
+        "heading": "Getting there",
+        "body": "Madison sits on the Connecticut shoreline about 20 miles east of New Haven along the I-95/US-1 (Boston Post Road) corridor. Its own Shore Line East commuter rail station, 77 Bradley Road, sits on the line linking New Haven Union Station — where Metro-North, Amtrak, and CTrail Hartford Line connections are made — with Old Saybrook and New London."
+      },
+      {
+        "heading": "Hammonasset, downtown, and a historic saltbox",
+        "body": "Hammonasset Beach State Park, Connecticut's largest shoreline park, has a two-mile sandy beach, a 558-site campground holding about 40% of all campsites in the state, and the Meigs Point Nature Center's hands-on exhibits with touch tanks and live wildlife. The Deacon John Grave House offers free tours led by costumed docents, with hearth-cooking demonstrations and gardens maintained by the Garden Club of Madison. The Madison Center for History & Culture, in the historic Lee's Academy building, and the Allis-Bushnell House, both run by the Madison Historical Society, host rotating exhibits on the town's past. Downtown, RJ Julia Booksellers anchors Boston Post Road with an in-house cafe and a busy calendar of author events."
+      }
+    ],
+    "faq": [
+      {
+        "question": "How do I get to Madison?",
+        "answer": "Drivers use I-95 or US-1 (Boston Post Road). Madison's own Shore Line East station (77 Bradley Road) connects to New Haven Union Station, where Metro-North, Amtrak, and the CTrail Hartford Line meet, and continues east to Old Saybrook and New London."
+      },
+      {
+        "question": "What is Hammonasset Beach State Park?",
+        "answer": "Connecticut's largest shoreline park, with a two-mile sandy beach, a 558-site campground (about 40% of the state's total campsites), and the Meigs Point Nature Center with touch tanks and live wildlife. Open 8 a.m. to sunset; the 2026 camping season runs May 22-October 12."
+      },
+      {
+        "question": "What is Madison celebrating in 2026?",
+        "answer": "Its bicentennial — 200 years since incorporating as a separate town from Guilford in 1826 — marked with official \"Madison 200\" events and exhibits at the Madison Center for History & Culture and Deacon John Grave House."
+      },
+      {
+        "question": "Where can I stay in Madison?",
+        "answer": "Madison Beach Hotel, Curio Collection by Hilton, a AAA Four Diamond boutique beachfront property with 34 rooms and The Wharf Restaurant, and the Scranton Seahorse Inn, a seven-room bed and breakfast in an 1833 Greek Revival home, are both verified in-town options."
+      },
+      {
+        "question": "What is RJ Julia Booksellers?",
+        "answer": "A celebrated independent bookstore on the Boston Post Road with an in-house cafe and a busy calendar of author events, story times, and book clubs."
+      }
+    ],
+    "photos": [
+      {
+        "src": "/photos/ct/madison/meigs-point-hammonasset.jpg",
+        "thumb": "/photos/ct/madison/meigs-point-hammonasset_thumb.jpg",
+        "title": "Meigs Point, Hammonasset Beach State Park",
+        "description": "The shoreline at Meigs Point in Hammonasset Beach State Park, Madison.",
+        "author": "TheManInTheBlackHat",
+        "license": "CC BY-SA 4.0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Meigs_Point_At_Hammonassett_Beach.jpg"
+      },
+      {
+        "src": "/photos/ct/madison/downtown-madison.jpg",
+        "thumb": "/photos/ct/madison/downtown-madison_thumb.jpg",
+        "title": "Downtown Madison",
+        "description": "A street scene in downtown Madison, along the Boston Post Road.",
+        "author": "TheManInTheBlackHat",
+        "license": "CC BY-SA 4.0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Downtown_Madison_Connecticut.jpg"
+      },
+      {
+        "src": "/photos/ct/madison/deacon-john-grave-house.jpg",
+        "thumb": "/photos/ct/madison/deacon-john-grave-house_thumb.jpg",
+        "title": "Deacon John Grave House",
+        "description": "The 1685 Deacon John Grave House on the Boston Post Road, Madison.",
+        "author": "Stanely P. Mixon (Historic American Buildings Survey)",
+        "license": "Public domain",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Deacon_John_Graves_HABS.jpg"
+      }
+    ]
+  },
+  "places": [
+    {
+      "slug": "hammonasset-beach-state-park",
+      "name": "Hammonasset Beach State Park",
+      "kind": "park",
+      "town": "Madison",
+      "state": "Connecticut",
+      "county": "New Haven County",
+      "address": "1288 Boston Post Road, Madison, CT 06443",
+      "official_url": "https://ctparks.com/node/57",
+      "summary": "Connecticut's largest shoreline park with a two-mile sandy beach; its 558-site campground holds about 40% of all campsites in the state, and the Meigs Point Nature Center offers 4,000 sq ft of hands-on exhibits with touch tanks and live wildlife. Open 8 a.m. to sunset; 2026 camping season May 22-October 12.",
+      "status": "open",
+      "photos": [
+        {
+          "src": "/photos/ct/madison/meigs-point-hammonasset.jpg",
+          "thumb": "/photos/ct/madison/meigs-point-hammonasset_thumb.jpg",
+          "title": "Meigs Point, Hammonasset Beach State Park",
+          "description": "The shoreline at Meigs Point in Hammonasset Beach State Park, Madison.",
+          "author": "TheManInTheBlackHat",
+          "license": "CC BY-SA 4.0",
+          "source_url": "https://commons.wikimedia.org/wiki/File:Meigs_Point_At_Hammonassett_Beach.jpg"
+        }
+      ]
+    },
+    {
+      "slug": "deacon-john-grave-house",
+      "name": "Deacon John Grave House",
+      "kind": "historic-site",
+      "town": "Madison",
+      "state": "Connecticut",
+      "county": "New Haven County",
+      "address": "581 Boston Post Road, Madison, CT 06443",
+      "official_url": "https://www.deaconjohngrave.org/",
+      "summary": "A 1685 saltbox home occupied by seven generations of the Grave family; free tours led by costumed docents, with hearth-cooking demonstrations and gardens maintained by the Garden Club of Madison.",
+      "history": "Built in 1685; the Grave family's original account books survive at the Connecticut State Library. Participates in Madison's 2026 bicentennial celebrations.",
+      "status": "open",
+      "photos": [
+        {
+          "src": "/photos/ct/madison/deacon-john-grave-house.jpg",
+          "thumb": "/photos/ct/madison/deacon-john-grave-house_thumb.jpg",
+          "title": "Deacon John Grave House",
+          "description": "The 1685 Deacon John Grave House on the Boston Post Road, Madison.",
+          "author": "Stanely P. Mixon (Historic American Buildings Survey)",
+          "license": "Public domain",
+          "source_url": "https://commons.wikimedia.org/wiki/File:Deacon_John_Graves_HABS.jpg"
+        }
+      ]
+    },
+    {
+      "slug": "madison-center-for-history-culture",
+      "name": "Madison Center for History & Culture at Lee's Academy",
+      "kind": "museum",
+      "town": "Madison",
+      "state": "Connecticut",
+      "county": "New Haven County",
+      "address": "14 Meetinghouse Lane, Madison, CT 06443",
+      "official_url": "https://www.madisonhistory.org/",
+      "summary": "The Madison Historical Society's exhibit and program center in the historic Lee's Academy building; its Spring 2026 exhibit, \"A Town Named Madison: Celebrating 200 Years,\" marks the town bicentennial. Free admission, Wed-Fri 10 am-2 pm.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "allis-bushnell-house",
+      "name": "Allis-Bushnell House",
+      "kind": "historic-site",
+      "town": "Madison",
+      "state": "Connecticut",
+      "county": "New Haven County",
+      "address": "853 Boston Post Road, Madison, CT 06443",
+      "official_url": "https://www.madisonhistory.org/",
+      "summary": "A historic house museum operated by the Madison Historical Society, with a Spring 2026 exhibit on individuals who shaped the town through photography, poetry, and philanthropy. Open 1st & 3rd Saturday, 11 am-1 pm, free admission.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "rj-julia-booksellers",
+      "name": "RJ Julia Booksellers",
+      "kind": "attraction",
+      "town": "Madison",
+      "state": "Connecticut",
+      "county": "New Haven County",
+      "address": "768 Boston Post Road, Madison, CT 06443",
+      "official_url": "https://www.rjjulia.com/",
+      "summary": "A celebrated independent bookstore anchoring downtown Madison, with an in-house RJ Cafe & Bistro and a busy calendar of author events, story times, and book clubs. Hours Mon-Sat 10 am-8 pm, Sun 10 am-6 pm.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "bar-bouchee",
+      "name": "Bar Bouchée",
+      "kind": "restaurant",
+      "town": "Madison",
+      "state": "Connecticut",
+      "county": "New Haven County",
+      "address": "8 Scotland Avenue, Madison, CT 06443",
+      "official_url": "https://www.barbouchee.com/",
+      "summary": "An authentic French bistro serving home-style \"cuisine de grand-mère\" in a Parisian bouchon atmosphere with imported fixtures; reservations highly recommended. Lunch Fri-Sun, dinner seven nights, heated patio.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "cafe-allegre",
+      "name": "Café Allegre",
+      "kind": "restaurant",
+      "town": "Madison",
+      "state": "Connecticut",
+      "county": "New Haven County",
+      "address": "725 Boston Post Road, Madison, CT 06443",
+      "official_url": "https://www.cafeallegre.com/",
+      "summary": "Award-winning Italian-Mediterranean restaurant with roots in New Haven's dining heritage; 175 seats with casual fine dining and banquet space. Hours Tue-Sun from 4 pm, closed Mondays.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "friends-company-madison",
+      "name": "Friends & Company",
+      "kind": "restaurant",
+      "town": "Madison",
+      "state": "Connecticut",
+      "county": "New Haven County",
+      "address": "11 Boston Post Road, Madison, CT 06443",
+      "official_url": "https://www.friendsandcompanyrestaurant.com/",
+      "summary": "A long-running local restaurant and bar near the Hammonasset end of town, known for seasonal specials such as lobster rolls. Wednesday-Sunday dinner hours.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "wharf-restaurant-madison",
+      "name": "The Wharf Restaurant",
+      "kind": "restaurant",
+      "town": "Madison",
+      "state": "Connecticut",
+      "county": "New Haven County",
+      "address": "94 W. Wharf Road, Madison, CT 06443",
+      "official_url": "https://www.ctvisit.com/listings/madison-beach-hotel",
+      "summary": "Waterfront restaurant at the Madison Beach Hotel overlooking Long Island Sound, ranked #3 Best Hotel Restaurant in USA TODAY's 10Best Readers' Choice awards (2025). Open daily for breakfast, lunch, and dinner.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "madison-beach-hotel",
+      "name": "Madison Beach Hotel, Curio Collection by Hilton",
+      "kind": "hotel",
+      "town": "Madison",
+      "state": "Connecticut",
+      "county": "New Haven County",
+      "address": "94 W. Wharf Road, Madison, CT 06443",
+      "official_url": "https://www.ctvisit.com/listings/madison-beach-hotel",
+      "summary": "AAA Four Diamond boutique beachfront hotel with 34 rooms (33 with balconies over Long Island Sound), private beach access, the Sounds of the Sea Spa, and The Wharf Restaurant; ranked #4 Best Waterfront Hotel by USA TODAY 10Best Readers' Choice (2025).",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "scranton-seahorse-inn",
+      "name": "Scranton Seahorse Inn",
+      "kind": "bnb",
+      "town": "Madison",
+      "state": "Connecticut",
+      "county": "New Haven County",
+      "address": "818 Boston Post Road, Madison, CT 06443",
+      "official_url": "https://www.scrantonseahorseinn.com/",
+      "summary": "A seven-room bed and breakfast in the 1833 Greek Revival home of Sereno Scranton; all rooms have private baths. Call ahead to confirm availability (203-245-0550).",
+      "status": "open",
+      "photos": []
+    }
+  ],
+  "entries": [
+    {
+      "kind": "sight",
+      "name": "Hammonasset Beach State Park",
+      "place_slug": "hammonasset-beach-state-park",
+      "note": "Connecticut's largest shoreline park, with a two-mile beach and a nature center."
+    },
+    {
+      "kind": "sight",
+      "name": "Deacon John Grave House",
+      "place_slug": "deacon-john-grave-house",
+      "note": "An 1685 saltbox home with free docent-led tours."
+    },
+    {
+      "kind": "sight",
+      "name": "Madison Center for History & Culture",
+      "place_slug": "madison-center-for-history-culture",
+      "note": "The Historical Society's museum in the historic Lee's Academy building."
+    },
+    {
+      "kind": "sight",
+      "name": "Allis-Bushnell House",
+      "place_slug": "allis-bushnell-house",
+      "note": "A historic house museum open two Saturdays a month."
+    },
+    {
+      "kind": "sight",
+      "name": "RJ Julia Booksellers",
+      "place_slug": "rj-julia-booksellers",
+      "note": "A celebrated independent bookstore with a busy author-events calendar."
+    },
+    {
+      "kind": "food",
+      "name": "Bar Bouchée",
+      "place_slug": "bar-bouchee",
+      "note": "An authentic French bistro with a heated patio."
+    },
+    {
+      "kind": "food",
+      "name": "Café Allegre",
+      "place_slug": "cafe-allegre",
+      "note": "Award-winning Italian-Mediterranean dining, closed Mondays."
+    },
+    {
+      "kind": "food",
+      "name": "Friends & Company",
+      "place_slug": "friends-company-madison",
+      "note": "Local restaurant and bar known for seasonal lobster-roll specials."
+    },
+    {
+      "kind": "food",
+      "name": "The Wharf Restaurant",
+      "place_slug": "wharf-restaurant-madison",
+      "note": "Waterfront dining at Madison Beach Hotel; a top-ranked hotel restaurant."
+    },
+    {
+      "kind": "stay",
+      "name": "Madison Beach Hotel",
+      "place_slug": "madison-beach-hotel",
+      "note": "AAA Four Diamond beachfront hotel with private beach access."
+    },
+    {
+      "kind": "stay",
+      "name": "Scranton Seahorse Inn",
+      "place_slug": "scranton-seahorse-inn",
+      "note": "A seven-room B&B in an 1833 Greek Revival home."
+    }
+  ],
+  "links": [
+    {
+      "target": "guide:guilford-ct-travel-guide",
+      "kind": "nearby",
+      "note": null
+    }
+  ]
+}

@@ -1,0 +1,304 @@
+{
+  "guide": {
+    "slug": "new-haven-ct-travel-guide",
+    "title": "New Haven, Connecticut: A Grid, a Colony, and Coal-Fired Apizza",
+    "destination": "New Haven, Connecticut",
+    "state": "Connecticut",
+    "county": "New Haven County",
+    "intro": "New Haven was founded in 1638, when English Puritans established New Haven Colony and laid out the town on a grid — the \"Nine Square Plan,\" which arguably makes New Haven America's first planned town. The original nine squares remain at the heart of downtown, centered on the Green. New Haven was incorporated as a city in 1784. Its port and mercantile trade gave way to nineteenth-century industry, and in 1839, after enslaved Africans revolted aboard the schooner Amistad and the ship was captured off Long Island, the captives were imprisoned in New Haven, making the city central to the Amistad trials. In the mid-1900s, as industrial decline reshaped American cities, New Haven took the lead in federal urban renewal programs, a legacy still visible downtown today.",
+    "sections": [
+      {
+        "heading": "A grid, a colony, and the Amistad trials",
+        "body": "English Puritans founded New Haven in 1638, establishing New Haven Colony and laying out the town according to the \"Nine Square Plan\" — a grid that arguably makes New Haven America's first planned town, and whose original nine squares still form the heart of downtown, centered on the Green. New Haven was incorporated as a city in 1784. Early New Haven thrived as a port and mercantile center; by the nineteenth century, industry had become the dominant force in the city's economy. In 1839, enslaved Africans revolted aboard the schooner Amistad; after the ship was captured off Long Island, its captives were imprisoned in New Haven, putting the city at the center of the Amistad trials. In the mid-1900s, as industrial decline reshaped many American cities, New Haven took the lead in federal urban renewal programs, reshaping downtown in ways still visible today."
+      },
+      {
+        "heading": "Getting there",
+        "body": "Drivers reach New Haven where I-95, the shoreline corridor, meets I-91 north to Hartford. Rail travelers arrive at Union Station, 50 Union Avenue — the busiest train station in Connecticut — served by Metro-North's New Haven Line direct to Grand Central Terminal, Amtrak's Northeast Regional, Acela, and Vermonter, CT Rail Shore Line East (from Union Station and the State Street stop, east to New London), and the CTrail Hartford Line north to Hartford and Springfield, Massachusetts."
+      },
+      {
+        "heading": "Yale, apizza, and a pre-Broadway stage",
+        "body": "The Yale Peabody Museum offers free admission to newly renovated galleries across three levels, including its famous Brontosaurus skeleton, with no reservations required for individual visitors. The Yale University Art Gallery is likewise free and open to the public. The New Haven Museum tells the city's own history, including an exhibition on Roger Sherman, a framer of the Constitution. The Shubert Theatre, opened December 11, 1914, is nicknamed the \"Birthplace of the Nation's Greatest Hits\" for hosting more than 600 pre-Broadway tryouts, including the 1943 premiere of Oklahoma! and the 1947 premiere of A Streetcar Named Desire, which launched Marlon Brando. New Haven is also the birthplace of New Haven-style apizza: Frank Pepe originated the coal-fired style in 1925, Sally's Apizza followed in 1938, and Modern Apizza bakes its pies in 700-degree brick ovens. Louis' Lunch, founded in 1895, is recognized by the Library of Congress as the birthplace of the hamburger sandwich and still cooks on its original 1898 cast-iron vertical broilers."
+      }
+    ],
+    "faq": [
+      {
+        "question": "How do I get to New Haven?",
+        "answer": "Drivers reach New Haven where I-95 meets I-91. Union Station (50 Union Avenue), the busiest train station in Connecticut, has Metro-North New Haven Line service direct to Grand Central Terminal, Amtrak Northeast Regional/Acela/Vermonter, CT Rail Shore Line East, and the CTrail Hartford Line."
+      },
+      {
+        "question": "What is New Haven-style apizza?",
+        "answer": "A coal-fired pizza style originated by Frank Pepe in 1925; Sally's Apizza (founded 1938 by Salvatore \"Sally\" Consiglio) and Modern Apizza, whose brick ovens reach 700 degrees Fahrenheit, are two of the city's other classic apizza houses."
+      },
+      {
+        "question": "Is Louis' Lunch really the birthplace of the hamburger?",
+        "answer": "It's recognized as such by the Library of Congress. Founded in 1895 at 261 Crown Street, it still cooks burgers on the original 1898 cast-iron vertical gas broilers under fourth-generation family ownership."
+      },
+      {
+        "question": "Are the Yale museums free to visit?",
+        "answer": "Yes. Both the Yale Peabody Museum (170 Whitney Ave.) and the Yale University Art Gallery (1111 Chapel St.) offer free general admission; the Peabody requires no reservation for individual visitors."
+      },
+      {
+        "question": "Where can I stay in New Haven?",
+        "answer": "The Study at Yale (1157 Chapel Street), a 124-room boutique hotel with Heirloom Restaurant & Lounge, and The Blake New Haven (9 High Street), near Yale with the modern Italian restaurant Siena, are both verified in-town options."
+      },
+      {
+        "question": "What is the Shubert Theatre known for?",
+        "answer": "Opened in 1914 and nicknamed the \"Birthplace of the Nation's Greatest Hits,\" it has hosted over 600 pre-Broadway tryouts, including the 1943 world premiere of Oklahoma! and the 1947 premiere of A Streetcar Named Desire."
+      }
+    ],
+    "photos": [
+      {
+        "src": "/photos/ct/new-haven/new-haven-green.jpg",
+        "thumb": "/photos/ct/new-haven/new-haven-green_thumb.jpg",
+        "title": "New Haven Green and skyline",
+        "description": "The New Haven Green with the downtown skyline behind it.",
+        "author": "Christian David",
+        "license": "CC BY-SA 4.0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:New_Haven_skyline_from_the_New_Haven_Green,_Connecticut.jpg"
+      },
+      {
+        "src": "/photos/ct/new-haven/harkness-tower-yale.jpg",
+        "thumb": "/photos/ct/new-haven/harkness-tower-yale_thumb.jpg",
+        "title": "Harkness Tower, Yale University",
+        "description": "Harkness Tower on the Yale University campus in downtown New Haven.",
+        "author": "ajay_suresh",
+        "license": "CC BY 2.0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Harkness_Tower_-_Yale_University_(54106458290).jpg"
+      },
+      {
+        "src": "/photos/ct/new-haven/east-rock-skyline-view.jpg",
+        "thumb": "/photos/ct/new-haven/east-rock-skyline-view_thumb.jpg",
+        "title": "New Haven skyline from East Rock",
+        "description": "A panorama of downtown New Haven seen from the East Rock Park summit.",
+        "author": "Wobbanight",
+        "license": "CC0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:New_Haven_Skyline_East_Rock.jpg"
+      }
+    ]
+  },
+  "places": [
+    {
+      "slug": "yale-peabody-museum",
+      "name": "Yale Peabody Museum",
+      "kind": "museum",
+      "town": "New Haven",
+      "state": "Connecticut",
+      "county": "New Haven County",
+      "address": "170 Whitney Ave., New Haven, CT 06520",
+      "official_url": "https://peabody.yale.edu/visit",
+      "summary": "Free admission to newly renovated and expanded galleries across three levels, including the famous Brontosaurus skeleton, mineralogy, and ancient Egyptian and Mesopotamian collections; no reservations required for individual visitors. Hours Tue-Sat 10-5, Sun 12-5, closed Monday.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "yale-university-art-gallery",
+      "name": "Yale University Art Gallery",
+      "kind": "museum",
+      "town": "New Haven",
+      "state": "Connecticut",
+      "county": "New Haven County",
+      "address": "1111 Chapel Street, New Haven, CT",
+      "official_url": "https://artgallery.yale.edu/visit",
+      "summary": "Free and open to the public, between York and High Streets. Hours Tue-Fri 10-5 (Thursdays to 8 p.m. Sept-June) and weekends 11-5, closed Monday.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "new-haven-museum",
+      "name": "New Haven Museum",
+      "kind": "museum",
+      "town": "New Haven",
+      "state": "Connecticut",
+      "county": "New Haven County",
+      "address": "114 Whitney Avenue, New Haven, CT 06510",
+      "official_url": "https://www.newhavenmuseum.org/",
+      "summary": "Local history museum and research library with exhibitions including \"Roger Sherman: Connecticut's Founding Father.\" Adult admission $5, children 12 and under free. Open Wed-Fri 10-5, Sat 12-5.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "shubert-theatre",
+      "name": "Shubert Theatre",
+      "kind": "theater",
+      "town": "New Haven",
+      "state": "Connecticut",
+      "county": "New Haven County",
+      "address": "247 College Street, New Haven, CT",
+      "official_url": "https://www.shubert.com/",
+      "summary": "Opened December 11, 1914, and nicknamed the \"Birthplace of the Nation's Greatest Hits\" for hosting over 600 pre-Broadway tryouts.",
+      "history": "Hosted the 1943 world premiere of Oklahoma! and the 1947 premiere of A Streetcar Named Desire, which launched Marlon Brando.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "frank-pepe-pizzeria-napoletana",
+      "name": "Frank Pepe Pizzeria Napoletana",
+      "kind": "restaurant",
+      "town": "New Haven",
+      "state": "Connecticut",
+      "county": "New Haven County",
+      "official_url": "https://www.pepespizzeria.com/",
+      "summary": "Frank Pepe originated New Haven-style apizza here in 1925, baked in coal-fired ovens. The original Wooster Street location anchors a chain now spanning multiple states.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "louis-lunch",
+      "name": "Louis' Lunch",
+      "kind": "restaurant",
+      "town": "New Haven",
+      "state": "Connecticut",
+      "county": "New Haven County",
+      "address": "261 Crown Street, New Haven, CT 06511",
+      "official_url": "https://louislunch.com/",
+      "summary": "Founded in 1895 and recognized by the Library of Congress as the birthplace of the hamburger sandwich; burgers are still cooked on the original 1898 cast-iron vertical gas broilers by the fourth-generation family owners. Hours Tue-Wed 12-8, Thu-Sat 12-12.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "sallys-apizza",
+      "name": "Sally's Apizza",
+      "kind": "restaurant",
+      "town": "New Haven",
+      "state": "Connecticut",
+      "county": "New Haven County",
+      "official_url": "https://www.sallysapizza.com/",
+      "summary": "Established in New Haven in 1938 by Salvatore \"Sally\" Consiglio; the original Wooster Street location is the flagship of a coal-fired apizza brand now expanded to seven locations in Connecticut and Massachusetts.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "modern-apizza",
+      "name": "Modern Apizza",
+      "kind": "restaurant",
+      "town": "New Haven",
+      "state": "Connecticut",
+      "county": "New Haven County",
+      "address": "874 State Street, New Haven, CT 06511",
+      "official_url": "https://modernapizza.com/",
+      "summary": "One of New Haven's classic apizza houses, baking pies in brick ovens that reach 700 degrees Fahrenheit. Closed Mondays; Tue-Thu 10:30-9, Fri-Sat 10:30-10, Sun 3-9.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "study-at-yale",
+      "name": "The Study at Yale",
+      "kind": "hotel",
+      "town": "New Haven",
+      "state": "Connecticut",
+      "county": "New Haven County",
+      "address": "1157 Chapel Street, New Haven, CT 06511",
+      "official_url": "https://www.thestudyatyale.com/",
+      "summary": "Boutique hotel with 124 guestrooms and an academic-inspired atmosphere, home to Heirloom Restaurant & Lounge serving farm and coastal cuisine, steps from the Yale University Art Gallery.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "blake-new-haven",
+      "name": "The Blake New Haven",
+      "kind": "hotel",
+      "town": "New Haven",
+      "state": "Connecticut",
+      "county": "New Haven County",
+      "address": "9 High Street, New Haven, CT 06510",
+      "official_url": "https://www.theblakenewhaven.com/",
+      "summary": "Downtown boutique hotel near Yale featuring the modern Italian restaurant Siena and the High George rooftop bar.",
+      "status": "open",
+      "photos": []
+    }
+  ],
+  "entries": [
+    {
+      "kind": "sight",
+      "name": "Yale Peabody Museum",
+      "place_slug": "yale-peabody-museum",
+      "note": "Free natural-history galleries across three levels, including the famous Brontosaurus skeleton."
+    },
+    {
+      "kind": "sight",
+      "name": "Yale University Art Gallery",
+      "place_slug": "yale-university-art-gallery",
+      "note": "Free and open to the public, between York and High Streets."
+    },
+    {
+      "kind": "sight",
+      "name": "New Haven Museum",
+      "place_slug": "new-haven-museum",
+      "note": "The city's own history museum, with a Roger Sherman exhibition."
+    },
+    {
+      "kind": "sight",
+      "name": "Shubert Theatre",
+      "place_slug": "shubert-theatre",
+      "note": "Opened 1914; hosted 600-plus pre-Broadway tryouts, including Oklahoma! and A Streetcar Named Desire."
+    },
+    {
+      "kind": "food",
+      "name": "Frank Pepe Pizzeria Napoletana",
+      "place_slug": "frank-pepe-pizzeria-napoletana",
+      "note": "The 1925 birthplace of New Haven-style coal-fired apizza."
+    },
+    {
+      "kind": "food",
+      "name": "Louis' Lunch",
+      "place_slug": "louis-lunch",
+      "note": "Library of Congress-recognized birthplace of the hamburger, cooking since 1895."
+    },
+    {
+      "kind": "food",
+      "name": "Sally's Apizza",
+      "place_slug": "sallys-apizza",
+      "note": "Founded 1938 by Salvatore \"Sally\" Consiglio; now seven locations across two states."
+    },
+    {
+      "kind": "food",
+      "name": "Modern Apizza",
+      "place_slug": "modern-apizza",
+      "note": "Brick-oven apizza at 700 degrees; closed Mondays."
+    },
+    {
+      "kind": "stay",
+      "name": "The Study at Yale",
+      "place_slug": "study-at-yale",
+      "note": "124-room boutique hotel steps from the Yale University Art Gallery."
+    },
+    {
+      "kind": "stay",
+      "name": "The Blake New Haven",
+      "place_slug": "blake-new-haven",
+      "note": "Boutique hotel near Yale with the High George rooftop bar."
+    }
+  ],
+  "links": [
+    {
+      "target": "guide:hamden-ct-travel-guide",
+      "kind": "nearby",
+      "note": null
+    },
+    {
+      "target": "guide:branford-ct-travel-guide",
+      "kind": "nearby",
+      "note": null
+    },
+    {
+      "target": "guide:branford-ct-travel-guide",
+      "kind": "shared-history",
+      "note": "Branford was established in 1644 on land New Haven Colony settlers had purchased in 1638."
+    },
+    {
+      "target": "guide:milford-ct-travel-guide",
+      "kind": "nearby",
+      "note": null
+    },
+    {
+      "target": "guide:milford-ct-travel-guide",
+      "kind": "shared-history",
+      "note": "Milford's 1639 land purchase from Ansantawae was made by colonists affiliated with New Haven Colony."
+    },
+    {
+      "target": "guide:midtown-manhattan-guide",
+      "kind": "see-also",
+      "note": "Union Station, the busiest train station in Connecticut, has Metro-North New Haven Line service direct to Grand Central Terminal."
+    }
+  ]
+}

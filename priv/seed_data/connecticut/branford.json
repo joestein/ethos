@@ -1,0 +1,223 @@
+{
+  "guide": {
+    "slug": "branford-ct-travel-guide",
+    "title": "Branford, Connecticut: Granite Quarries and the Thimble Islands",
+    "destination": "Branford, Connecticut",
+    "state": "Connecticut",
+    "county": "New Haven County",
+    "intro": "Branford was established in 1644 on land along Long Island Sound that New Haven Colony settlers had purchased from Native peoples in 1638; the area was known to its Indigenous inhabitants as Totoket. The town was incorporated in 1685, its name said to derive from Brentford, England. After the railroad arrived in 1852, Stony Creek's granite quarries rose to prominence, supplying stone for the Brooklyn Bridge and the Statue of Liberty's base. The Thimble Islands, an archipelago of glacial granite islands off Stony Creek, made Branford a popular tourist destination from the 1850s through the 1920s, and the town still maintains roughly 20 miles of coastline. The Branford Electric Railway, preserved today as the oldest continuously operating suburban trolley line in the United States, still runs cars toward Branford's Short Beach section. Notable figures include forensic scientist Henry Lee and 2009 Nobel chemistry laureate Thomas Steitz.",
+    "sections": [
+      {
+        "heading": "Totoket, granite, and the Thimble Islands",
+        "body": "Branford was established in 1644 on land along Long Island Sound that settlers from New Haven Colony had purchased from Native peoples in 1638; the area was known to its Indigenous inhabitants as Totoket. The town was incorporated in 1685, its name said to derive from the town of Brentford, England. After the railroad arrived in 1852, Stony Creek's granite quarries rose to prominence, supplying stone for landmarks including the Brooklyn Bridge and the base of the Statue of Liberty; other defining industries included the Malleable Iron Fittings Company, Branford Lockworks, and Atlantic Wire Company. The Thimble Islands, an archipelago of glacial granite islands off Stony Creek, made Branford a popular tourist destination from the 1850s through the 1920s, and the town still maintains roughly 20 miles of coastline with town parks and beaches. The Harrison House, built in 1724 by Nathaniel Harrison 2nd, retains original hand-hewn oak corner posts and exposed joists; the Branford Historical Society, founded in 1960, preserves it as a museum. Notable Branford figures include forensic scientist Henry Lee, 2009 Nobel chemistry laureate Thomas Steitz, and celebrity chef Todd English."
+      },
+      {
+        "heading": "Getting there",
+        "body": "Drivers reach Branford on I-95 along the shoreline, with US 1 (Main Street) and scenic Route 146 threading the coastal villages. Train travelers use CTrail Shore Line East's accessible Branford station at 39 Maple Street, with free daily parking, level boarding, and elevators; the line connects at New Haven Union Station to Metro-North's New Haven Line, Amtrak, and the CTrail Hartford Line."
+      },
+      {
+        "heading": "The Thimble Islands and a historic beach inn",
+        "body": "Narrated Sea Mist cruises depart the Stony Creek Town Dock for sightseeing among the Thimble Islands, charted by Adriaen Block in 1614 and tied to Captain Kidd treasure lore, with past uses ranging from farming to granite quarrying. The Legacy Theatre, in a restored historic building in Stony Creek village, presents a mainstage season plus concert and comedy series. The Branford Electric Railway, preserved by the Shore Line Trolley Museum, is billed as the oldest continuously operating suburban trolley line in the United States, with cars still running toward Branford's Short Beach. For lodging, the Owenego Inn & Beach Club, a beachfront inn and family beach club that has welcomed guests since 1847, is the one independently verified inn in Branford; travelers wanting more options should look to New Haven's hotel stock, about 8 miles west on I-95."
+      }
+    ],
+    "faq": [
+      {
+        "question": "How do I get to Branford?",
+        "answer": "Drivers use I-95 along the shoreline, with US 1 (Main Street) or scenic Route 146. CTrail Shore Line East's Branford station (39 Maple Street) connects at New Haven Union Station to Metro-North's New Haven Line, Amtrak, and the CTrail Hartford Line."
+      },
+      {
+        "question": "What are the Thimble Islands?",
+        "answer": "An archipelago of glacial granite islands off Branford's Stony Creek village, charted by Adriaen Block in 1614 and tied to Captain Kidd treasure lore; Sea Mist offers narrated sightseeing cruises from the Stony Creek Town Dock."
+      },
+      {
+        "question": "Can I ride a historic trolley near Branford?",
+        "answer": "Yes. The Shore Line Trolley Museum (17 River Street, East Haven) preserves the Branford Electric Railway, billed as the oldest continuously operating suburban trolley line in the U.S., with cars running toward Branford's Short Beach section."
+      },
+      {
+        "question": "Where can I stay in Branford?",
+        "answer": "The Owenego Inn & Beach Club, a beachfront inn welcoming guests since 1847, is the one independently verified inn in Branford. Travelers wanting more options should look to New Haven, about 8 miles west."
+      },
+      {
+        "question": "What is the Harrison House Museum?",
+        "answer": "A saltbox home built in 1724 by Nathaniel Harrison 2nd, with original hand-hewn oak corner posts, operated by the Branford Historical Society (founded 1960). Open June-September, Saturdays 1-4 p.m., free admission."
+      }
+    ],
+    "photos": [
+      {
+        "src": "/photos/ct/branford/branford-town-green.jpg",
+        "thumb": "/photos/ct/branford/branford-town-green_thumb.jpg",
+        "title": "Branford Town Green",
+        "description": "The town green in downtown Branford.",
+        "author": "Kenneth C. Zirkel",
+        "license": "CC BY-SA 4.0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Branford_Town_Green,_Connecticut.jpg"
+      },
+      {
+        "src": "/photos/ct/branford/thimble-islands-stony-creek.jpg",
+        "thumb": "/photos/ct/branford/thimble-islands-stony-creek_thumb.jpg",
+        "title": "Thimble Islands from Stony Creek",
+        "description": "A view of the Thimble Islands from Branford's Stony Creek village.",
+        "author": "JERRYE & ROY KLOTZ, M.D.",
+        "license": "CC BY-SA 4.0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:STONY_CREEK-THIMBLE_ISLANDS,_H.D.,_BRANFORD,_NEW_HAVEN_COUNTY,_CT.jpg"
+      },
+      {
+        "src": "/photos/ct/branford/branford-point.jpg",
+        "thumb": "/photos/ct/branford/branford-point_thumb.jpg",
+        "title": "Branford Point Historic District",
+        "description": "The shoreline at Branford Point.",
+        "author": "JERRYE & ROY KLOTZ, M.D.",
+        "license": "CC BY-SA 4.0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:BRANFORD_POINT_HISTORIC_DISTRICT,_NEW_HAVEN_COUNTY_CT.jpg"
+      }
+    ]
+  },
+  "places": [
+    {
+      "slug": "harrison-house-museum",
+      "name": "Harrison House Museum, Barn & Gardens",
+      "kind": "museum",
+      "town": "Branford",
+      "state": "Connecticut",
+      "county": "New Haven County",
+      "address": "124 Main Street, Branford, CT 06405",
+      "official_url": "https://branfordhistoricalsociety.org/",
+      "summary": "A saltbox home built in 1724 by Nathaniel Harrison 2nd, with original hand-hewn oak corner posts and exposed joists; operated by the Branford Historical Society (founded 1960) with a house, barn, and gardens. Open June-September, Saturdays 1-4 p.m. or by appointment, free admission.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "legacy-theatre",
+      "name": "Legacy Theatre",
+      "kind": "theater",
+      "town": "Branford",
+      "state": "Connecticut",
+      "county": "New Haven County",
+      "address": "128 Thimble Islands Road, Branford, CT 06405",
+      "official_url": "https://legacytheatrect.org/",
+      "summary": "Professional theater in the Stony Creek village of Branford, in a restored historic theater building; presents a mainstage season plus concert and comedy series.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "sea-mist-thimble-island-cruise",
+      "name": "Sea Mist Thimble Island Cruise",
+      "kind": "attraction",
+      "town": "Branford",
+      "state": "Connecticut",
+      "county": "New Haven County",
+      "address": "Stony Creek Town Dock, Stony Creek village, Branford, CT",
+      "official_url": "https://www.thimbleislandcruise.com/",
+      "summary": "Narrated sightseeing cruises among the Thimble Islands, charted by Adriaen Block in 1614 and tied to Captain Kidd treasure lore, with past uses from farming to granite quarrying. Call ahead to confirm departures (203-488-8905).",
+      "status": "open",
+      "photos": [
+        {
+          "src": "/photos/ct/branford/thimble-islands-stony-creek.jpg",
+          "thumb": "/photos/ct/branford/thimble-islands-stony-creek_thumb.jpg",
+          "title": "Thimble Islands from Stony Creek",
+          "description": "A view of the Thimble Islands from Branford's Stony Creek village.",
+          "author": "JERRYE & ROY KLOTZ, M.D.",
+          "license": "CC BY-SA 4.0",
+          "source_url": "https://commons.wikimedia.org/wiki/File:STONY_CREEK-THIMBLE_ISLANDS,_H.D.,_BRANFORD,_NEW_HAVEN_COUNTY,_CT.jpg"
+        }
+      ]
+    },
+    {
+      "slug": "lennys-indian-head-inn",
+      "name": "Lenny's Indian Head Inn",
+      "kind": "restaurant",
+      "town": "Branford",
+      "state": "Connecticut",
+      "county": "New Haven County",
+      "address": "205 South Montowese Street (Route 146), Branford, CT 06405",
+      "official_url": "https://www.lennysnow.com/",
+      "summary": "Classic New England shoreline seafood house established in 1968 — homemade chowders, lobster, clams, oysters, and fried seafood cooked to order, plus steaks and ribs. Open year-round.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "home-restaurant-branford",
+      "name": "Home Restaurant",
+      "kind": "restaurant",
+      "town": "Branford",
+      "state": "Connecticut",
+      "county": "New Haven County",
+      "address": "1114 Main Street, Branford, CT 06405",
+      "official_url": "https://homerestaurantct.com/",
+      "summary": "Downtown comfort-food restaurant celebrating 14 years serving Branford, with local beverage selections and a gluten-free menu.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "new-england-brewing-branford",
+      "name": "New England Brewing Co. — Branford",
+      "kind": "brewery",
+      "town": "Branford",
+      "state": "Connecticut",
+      "county": "New Haven County",
+      "address": "5 Indian Neck Avenue, Branford, CT 06405",
+      "official_url": "https://newenglandbrewing.com/",
+      "summary": "One of Connecticut's best-known craft brewers operates the former Stony Creek Brewery waterfront site on the Branford River as a taproom and venue with food.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "owenego-inn-beach-club",
+      "name": "Owenego Inn & Beach Club",
+      "kind": "bnb",
+      "town": "Branford",
+      "state": "Connecticut",
+      "county": "New Haven County",
+      "address": "40 Linden Avenue, Branford, CT 06405",
+      "official_url": "https://www.owenego.com/",
+      "summary": "Historic beachfront inn and family-oriented beach and tennis club that has welcomed guests since 1847, offering cottage-themed guest rooms, private beach access, dining, and events. Call ahead for availability (203-488-3805).",
+      "status": "open",
+      "photos": []
+    }
+  ],
+  "entries": [
+    {
+      "kind": "sight",
+      "name": "Harrison House Museum, Barn & Gardens",
+      "place_slug": "harrison-house-museum",
+      "note": "An 1724 saltbox home run by the Branford Historical Society."
+    },
+    {
+      "kind": "sight",
+      "name": "Legacy Theatre",
+      "place_slug": "legacy-theatre",
+      "note": "Mainstage, concert, and comedy series in Stony Creek village."
+    },
+    {
+      "kind": "sight",
+      "name": "Sea Mist Thimble Island Cruise",
+      "place_slug": "sea-mist-thimble-island-cruise",
+      "note": "Narrated cruises among the granite Thimble Islands."
+    },
+    {
+      "kind": "food",
+      "name": "Lenny's Indian Head Inn",
+      "place_slug": "lennys-indian-head-inn",
+      "note": "Shoreline seafood house serving chowders and lobster since 1968."
+    },
+    {
+      "kind": "food",
+      "name": "Home Restaurant",
+      "place_slug": "home-restaurant-branford",
+      "note": "Downtown comfort food, 14 years running."
+    },
+    {
+      "kind": "food",
+      "name": "New England Brewing Co. — Branford",
+      "place_slug": "new-england-brewing-branford",
+      "note": "Waterfront taproom on the Branford River, at the former Stony Creek Brewery site."
+    },
+    {
+      "kind": "stay",
+      "name": "Owenego Inn & Beach Club",
+      "place_slug": "owenego-inn-beach-club",
+      "note": "A beachfront inn and beach club welcoming guests since 1847."
+    }
+  ],
+  "links": []
+}

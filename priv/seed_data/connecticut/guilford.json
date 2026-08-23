@@ -1,0 +1,257 @@
+{
+  "guide": {
+    "slug": "guilford-ct-travel-guide",
+    "title": "Guilford, Connecticut: Puritans, Granite, and the Oldest Stone House",
+    "destination": "Guilford, Connecticut",
+    "state": "Connecticut",
+    "county": "New Haven County",
+    "intro": "Guilford was settled in 1639 by English Puritan families led by Rev. Henry Whitfield, on land the Quinnipiac sold along with territory stretching from present-day Niantic to Branford. The settlement was originally called Menunkatucket and later renamed Guilford, assumed to honor Guildford, England, home of some of its first settlers. Guilford joined New Haven Colony in 1643, and in 1664 New Haven Colony, Guilford included, joined Connecticut Colony. The 1639 Henry Whitfield House, built of local granite, is Connecticut's oldest house and New England's oldest stone house, a National Historic Landmark. Granite quarried from Guilford's Leete's Island later went into the Statue of Liberty and the Brooklyn Bridge. Guilford was one of the few Connecticut shore towns to escape British attack in the Revolutionary War; its citizens instead raided British provisions stored at Sag Harbor, Long Island.",
+    "sections": [
+      {
+        "heading": "A Puritan land purchase and a granite legacy",
+        "body": "In 1639, a group of English Puritan families led by Rev. Henry Whitfield settled the area on land the Quinnipiac had sold, stretching from present-day Niantic to Branford; the settlement, originally called Menunkatucket, was renamed Guilford, assumed to honor Guildford, England, the home of some of the first settlers. Guilford was admitted to New Haven Colony in 1643, and in 1664 New Haven Colony, including Guilford, joined Connecticut Colony. The 1639 Henry Whitfield House is Connecticut's oldest house and New England's oldest stone house, built of local granite to serve as both a defensive building and a private residence; it is a National Historic Landmark. Granite quarried from Guilford's Leete's Island was later used in building the Statue of Liberty, the Brooklyn Bridge, and the lighthouse at Lighthouse Point in New Haven. Guilford was one of the few Connecticut shore towns to escape British attack during the Revolutionary War, and its citizens organized a raid on British provisions stored at Sag Harbor, Long Island. Guilford is considered by some to have the third-largest collection of historic homes in New England, spread across four historic districts, including the Guilford Historic Town Center around the green."
+      },
+      {
+        "heading": "Getting there",
+        "body": "Drivers reach Guilford via I-95 (exits 57, 58, and 59) or the Boston Post Road (US 1) through downtown, with Route 77 running north to Durham and scenic Route 146 hugging the coast to Branford. Train riders use Shore Line East's Guilford station at 325 Old Whitfield Street, with free daily parking; trains run seven days a week between New Haven and New London and connect at New Haven with Metro-North's New Haven Line and Amtrak."
+      },
+      {
+        "heading": "Farms, a lobster pound, and a working art center",
+        "body": "Dudley Farm Museum is a nineteenth-century working farm with farmhouse tours and an active farmers market, grounds open dawn to dusk year-round. Bishop's Orchards Farm Market & Winery, a family farm for more than 150 years, pairs a year-round farm market and winery with seasonal pick-your-own berries, peaches, apples, and pears. The Guilford Art Center runs classes in blacksmithing, ceramics, weaving, and painting, and organizes the annual Craft Expo on the Guilford Green. For food, The Place is a cash-only, wood-fire seafood cookout where diners sit on tree stumps at red tables, and the Guilford Lobster Pound serves hot Connecticut-style lobster rolls from a dockside deck on the harbor."
+      }
+    ],
+    "faq": [
+      {
+        "question": "How do I get to Guilford?",
+        "answer": "Drivers use I-95 (exits 57-59) or the Boston Post Road (US 1), with Route 146 hugging the shore to Branford. Shore Line East's Guilford station (325 Old Whitfield Street, free parking) runs New Haven-New London service, connecting at New Haven to Metro-North and Amtrak."
+      },
+      {
+        "question": "Can I tour the Henry Whitfield House?",
+        "answer": "The 1639 stone house itself is currently closed for restoration (stone repointing and rewiring), but the Visitor Center, gift shop, and a free archaeology exhibit are open Monday-Friday, 10 a.m.-4 p.m."
+      },
+      {
+        "question": "What is Guilford known for historically?",
+        "answer": "Its 1639 Puritan settlement, the Henry Whitfield House (Connecticut's oldest house), Leete's Island granite used in the Statue of Liberty and Brooklyn Bridge, and one of New England's largest collections of historic homes across four historic districts."
+      },
+      {
+        "question": "Where can I get a lobster roll in Guilford?",
+        "answer": "Guilford Lobster Pound serves hot Connecticut-style lobster rolls from a dockside deck on the harbor; The Place, a cash-only wood-fire seafood cookout on the Post Road, is known for fire-roasted clams and lobster."
+      },
+      {
+        "question": "Where can I stay in Guilford?",
+        "answer": "No historic inn or B&B in Guilford could be independently verified as currently operating; travelers may want to look to nearby Madison or New Haven, both a short drive away, for confirmed lodging."
+      }
+    ],
+    "photos": [
+      {
+        "src": "/photos/ct/guilford/henry-whitfield-house.jpg",
+        "thumb": "/photos/ct/guilford/henry-whitfield-house_thumb.jpg",
+        "title": "Henry Whitfield House",
+        "description": "The 1639 Henry Whitfield State Museum, Connecticut's oldest house and New England's oldest stone house.",
+        "author": "Swampyank",
+        "license": "CC BY-SA 4.0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Henry_Whitfield_State_Museum_circa_1639_Oldest_house_in_Connecticut_Guilford_CT_USA.jpg"
+      },
+      {
+        "src": "/photos/ct/guilford/guilford-town-green.jpg",
+        "thumb": "/photos/ct/guilford/guilford-town-green_thumb.jpg",
+        "title": "The Guilford Town Green",
+        "description": "The Guilford Green, heart of the Guilford Historic Town Center.",
+        "author": "Fergo22",
+        "license": "CC BY-SA 4.0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:The_Guilford_Town_Green_in_Connecticut.jpg"
+      },
+      {
+        "src": "/photos/ct/guilford/great-harbor-causeway-guilford.jpg",
+        "thumb": "/photos/ct/guilford/great-harbor-causeway-guilford_thumb.jpg",
+        "title": "Great Harbor, Guilford",
+        "description": "The causeway across Great Harbor, Guilford's harbor inlet on Long Island Sound.",
+        "author": "Pi.1415926535",
+        "license": "CC BY-SA 4.0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Causeway_across_Great_Harbor_March,_August_2022.JPG"
+      }
+    ]
+  },
+  "places": [
+    {
+      "slug": "henry-whitfield-state-museum",
+      "name": "Henry Whitfield State Museum",
+      "kind": "museum",
+      "town": "Guilford",
+      "state": "Connecticut",
+      "county": "New Haven County",
+      "address": "248 Old Whitfield St., Guilford, CT 06437",
+      "official_url": "https://portal.ct.gov/ECD-HenryWhitfieldStateMuseum",
+      "summary": "The 1639 granite Whitfield House, Connecticut's oldest house and New England's oldest stone house, is currently closed for restoration; the Visitor Center, gift shop, and free archaeology exhibit remain open Monday-Friday, 10 a.m.-4 p.m.",
+      "history": "Built in 1639 by the Puritan settlers led by Rev. Henry Whitfield; a National Historic Landmark.",
+      "status": "open",
+      "photos": [
+        {
+          "src": "/photos/ct/guilford/henry-whitfield-house.jpg",
+          "thumb": "/photos/ct/guilford/henry-whitfield-house_thumb.jpg",
+          "title": "Henry Whitfield House",
+          "description": "The 1639 Henry Whitfield State Museum, Connecticut's oldest house and New England's oldest stone house.",
+          "author": "Swampyank",
+          "license": "CC BY-SA 4.0",
+          "source_url": "https://commons.wikimedia.org/wiki/File:Henry_Whitfield_State_Museum_circa_1639_Oldest_house_in_Connecticut_Guilford_CT_USA.jpg"
+        }
+      ]
+    },
+    {
+      "slug": "dudley-farm-museum",
+      "name": "Dudley Farm Museum",
+      "kind": "museum",
+      "town": "Guilford",
+      "state": "Connecticut",
+      "county": "New Haven County",
+      "address": "2351 Durham Road, Guilford, CT 06437",
+      "official_url": "https://dudleyfarm.com/",
+      "summary": "A nineteenth-century working farm museum with farmhouse tours and an active farmers market; grounds open dawn to dusk year-round.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "bishops-orchards-farm-market-winery",
+      "name": "Bishop's Orchards Farm Market & Winery",
+      "kind": "attraction",
+      "town": "Guilford",
+      "state": "Connecticut",
+      "county": "New Haven County",
+      "address": "1355 Boston Post Road, Guilford, CT 06437",
+      "official_url": "https://www.bishopsorchards.com/",
+      "summary": "A 150-plus-year, multi-generation family farm with a year-round farm market, winery pouring fruit wines and hard ciders, seasonal pick-your-own berries, peaches, apples and pears, and a creamery. Hours Mon-Sat 8am-7pm, Sun 9am-6pm.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "guilford-art-center",
+      "name": "Guilford Art Center",
+      "kind": "attraction",
+      "town": "Guilford",
+      "state": "Connecticut",
+      "county": "New Haven County",
+      "address": "411 Church Street, Guilford, CT 06437",
+      "official_url": "https://guilfordartcenter.org/",
+      "summary": "A community art school, gallery, and shop offering classes in blacksmithing, ceramics, weaving, and painting, and organizer of the annual Craft Expo on the Guilford Green. Open Mon-Sat 10am-4pm, Sun 12-4pm.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "guilford-green",
+      "name": "Guilford Historic Town Center (Guilford Green)",
+      "kind": "historic-site",
+      "town": "Guilford",
+      "state": "Connecticut",
+      "county": "New Haven County",
+      "official_url": "https://www.guilfordct.gov/",
+      "summary": "The downtown green is the heart of the community, surrounded by one of New England's largest collections of historic homes from the seventeenth through nineteenth centuries; one of four historic districts in town.",
+      "status": "open",
+      "photos": [
+        {
+          "src": "/photos/ct/guilford/guilford-town-green.jpg",
+          "thumb": "/photos/ct/guilford/guilford-town-green_thumb.jpg",
+          "title": "The Guilford Town Green",
+          "description": "The Guilford Green, heart of the Guilford Historic Town Center.",
+          "author": "Fergo22",
+          "license": "CC BY-SA 4.0",
+          "source_url": "https://commons.wikimedia.org/wiki/File:The_Guilford_Town_Green_in_Connecticut.jpg"
+        }
+      ]
+    },
+    {
+      "slug": "the-place-restaurant-guilford",
+      "name": "The Place Restaurant",
+      "kind": "restaurant",
+      "town": "Guilford",
+      "state": "Connecticut",
+      "county": "New Haven County",
+      "address": "901 Boston Post Rd, Guilford, CT 06437",
+      "official_url": "https://theplaceguilford.com/",
+      "summary": "An open-air, wood-fire seafood cookout where diners sit on tree stumps at red tables; known for fire-roasted clams and lobster. Cash only, seasonal May through October.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "guilford-lobster-pound",
+      "name": "Guilford Lobster Pound",
+      "kind": "restaurant",
+      "town": "Guilford",
+      "state": "Connecticut",
+      "county": "New Haven County",
+      "official_url": "https://www.guilfordlobsterpound.com/",
+      "summary": "A dockside deck on Guilford's harbor serving hot Connecticut-style lobster rolls (\"No mayo. No fillers.\") plus live lobsters at market price; owner Bart Mansi has lobstered Long Island Sound since the 1970s.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "shoreline-diner-guilford",
+      "name": "Shoreline Diner",
+      "kind": "restaurant",
+      "town": "Guilford",
+      "state": "Connecticut",
+      "county": "New Haven County",
+      "address": "345 Boston Post Road, Guilford, CT 06437",
+      "official_url": "https://www.shorelinediner.com/",
+      "summary": "A local diner known for dry-aged burgers made from a custom blend of sirloin, brisket, short rib, and dry-aged ribeye ground in house, paired with hand-cut fries.",
+      "status": "open",
+      "photos": []
+    }
+  ],
+  "entries": [
+    {
+      "kind": "sight",
+      "name": "Henry Whitfield State Museum",
+      "place_slug": "henry-whitfield-state-museum",
+      "note": "Connecticut's oldest house; Visitor Center and archaeology exhibit open while the 1639 house is under restoration."
+    },
+    {
+      "kind": "sight",
+      "name": "Dudley Farm Museum",
+      "place_slug": "dudley-farm-museum",
+      "note": "A working 19th-century farm with farmhouse tours and a farmers market."
+    },
+    {
+      "kind": "sight",
+      "name": "Bishop's Orchards Farm Market & Winery",
+      "place_slug": "bishops-orchards-farm-market-winery",
+      "note": "A 150-plus-year family farm with a winery and pick-your-own orchards."
+    },
+    {
+      "kind": "sight",
+      "name": "Guilford Art Center",
+      "place_slug": "guilford-art-center",
+      "note": "Classes and a gallery shop; organizer of the Guilford Green Craft Expo."
+    },
+    {
+      "kind": "walk",
+      "name": "Guilford Historic Town Center (Guilford Green)",
+      "place_slug": "guilford-green",
+      "note": "The downtown green, ringed by one of New England's largest historic-home collections."
+    },
+    {
+      "kind": "food",
+      "name": "The Place Restaurant",
+      "place_slug": "the-place-restaurant-guilford",
+      "note": "Cash-only wood-fire seafood cookout with tree-stump seating."
+    },
+    {
+      "kind": "food",
+      "name": "Guilford Lobster Pound",
+      "place_slug": "guilford-lobster-pound",
+      "note": "Hot Connecticut-style lobster rolls on a dockside deck."
+    },
+    {
+      "kind": "food",
+      "name": "Shoreline Diner",
+      "place_slug": "shoreline-diner-guilford",
+      "note": "Dry-aged burgers ground in house, on the Boston Post Road."
+    }
+  ],
+  "links": [
+    {
+      "target": "guide:branford-ct-travel-guide",
+      "kind": "nearby",
+      "note": null
+    }
+  ]
+}

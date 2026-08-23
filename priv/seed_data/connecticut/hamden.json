@@ -1,0 +1,244 @@
+{
+  "guide": {
+    "slug": "hamden-ct-travel-guide",
+    "title": "Hamden, Connecticut: An Armory, a Ridge, and a Sleeping Giant",
+    "destination": "Hamden, Connecticut",
+    "state": "Connecticut",
+    "county": "New Haven County",
+    "intro": "Hamden was originally settled by Puritans as part of the New Haven Colony and was incorporated as its own town in May 1786, taking its name from the English statesman John Hampden at separation. Eli Whitney's armory operated in Hamden and played a crucial role in America's Industrial Revolution; the Whitney Avenue site is now home to the Eli Whitney Museum & Workshop. Hamden's nickname, \"The Land of the Sleeping Giant,\" comes from a traprock ridge six miles north of New Haven that resembles a recumbent person from a distance. In Quinnipiac legend, the giant is the spirit Hobbomock, cast into eternal sleep beneath the traprock; the state park protecting the ridge was created after quarry blasting threatened the giant's profile and spurred preservation efforts. Modern Hamden, Connecticut's thirteenth-largest town, is home to Quinnipiac University and has an urban southern section alongside a rural-suburban north.",
+    "sections": [
+      {
+        "heading": "An armory town and its sleeping giant",
+        "body": "Hamden was originally settled by Puritans as part of the New Haven Colony and was incorporated as its own town in May 1786, named for the English statesman John Hampden at separation. Eli Whitney's armory operated in Hamden and played a crucial role in America's Industrial Revolution; the site on Whitney Avenue is now home to the Eli Whitney Museum & Workshop. Hamden's nickname, \"The Land of the Sleeping Giant,\" comes from a traprock ridge six miles north of New Haven that resembles a recumbent person when seen from a distance. In Quinnipiac legend, the giant is the spirit Hobbomock, cast into eternal sleep beneath the traprock; the state park protecting the ridge was created after quarry blasting threatened the giant's profile and spurred preservation efforts. Modern Hamden is home to Quinnipiac University and is Connecticut's thirteenth-largest town, with an urban southern section and a rural-suburban north."
+      },
+      {
+        "heading": "Getting there",
+        "body": "The Wilbur Cross Parkway (Route 15) runs through the town center, I-91 connects via the Route 40 spur to the Mount Carmel section, and Route 10 (Whitney and Dixwell Avenues) is the main local corridor. There is no train station in Hamden itself, so rail travelers use New Haven's Union Station hub, a few miles south, for Metro-North's New Haven Line, Amtrak, Shore Line East, and the CTrail Hartford Line; a Hartford Line station is planned at the Hamden-North Haven border near the Route 40 Connector."
+      },
+      {
+        "heading": "A traprock summit, a canal trail, and where to stay",
+        "body": "Sleeping Giant State Park's 1,439 acres hold about 40 miles of trails and a stone observation tower at the summit with 360-degree views; its Tower Trail was designated Connecticut's first National Recreation Trail. The Eli Whitney Museum & Workshop is a hands-on learning museum on the site of Whitney's historic armory, known for its annual holiday Train Display. The Farmington Canal Heritage Trail runs 54 miles from New Haven through Hamden to the Massachusetts border along the route of the old Farmington Canal and railroad. No hotel or inn within Hamden could be independently verified as currently operating; the nearest confirmed option is The Study at Yale, a 124-room boutique hotel in adjacent New Haven."
+      }
+    ],
+    "faq": [
+      {
+        "question": "How do I get to Hamden?",
+        "answer": "The Wilbur Cross Parkway (Route 15), I-91 via the Route 40 spur, and Route 10 (Whitney/Dixwell Avenues) serve Hamden by car. There is no rail station in town; the nearest hub is New Haven Union Station, a few miles south, with a Hartford Line station planned at the Hamden-North Haven border."
+      },
+      {
+        "question": "What is the legend of the Sleeping Giant?",
+        "answer": "Hamden's nickname, \"The Land of the Sleeping Giant,\" comes from a traprock ridge resembling a recumbent person. In Quinnipiac legend, the giant is the spirit Hobbomock, cast into eternal sleep beneath the ridge."
+      },
+      {
+        "question": "Where can I stay in Hamden?",
+        "answer": "No hotel or inn within Hamden could be independently verified as currently operating. The nearest confirmed option is The Study at Yale, a 124-room boutique hotel in adjacent New Haven."
+      },
+      {
+        "question": "What is the Eli Whitney Museum & Workshop?",
+        "answer": "A hands-on learning museum on the site of Eli Whitney's historic armory, which played a crucial role in America's Industrial Revolution; known for its annual holiday Train Display and the Leonardo Challenge fundraiser."
+      },
+      {
+        "question": "Where can I get a hot dog or a big sandwich in Hamden?",
+        "answer": "Glenwood Drive-In, a 70-plus-year institution voted #1 Hot Dog in CT by Connecticut Magazine, and Ray & Mike's Dairy and Deli, known for oversized sandwiches, are both on Whitney Avenue."
+      }
+    ],
+    "photos": [
+      {
+        "src": "/photos/ct/hamden/sleeping-giant-tower.jpg",
+        "thumb": "/photos/ct/hamden/sleeping-giant-tower_thumb.jpg",
+        "title": "Sleeping Giant State Park tower",
+        "description": "The stone observation tower atop the Sleeping Giant traprock ridge.",
+        "author": "Craig R.",
+        "license": "CC BY-SA 4.0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Sleeping_Giant_Tower_from_above.jpg"
+      },
+      {
+        "src": "/photos/ct/hamden/eli-whitney-museum-barn.jpg",
+        "thumb": "/photos/ct/hamden/eli-whitney-museum-barn_thumb.jpg",
+        "title": "Eli Whitney Museum",
+        "description": "Museum buildings at the Eli Whitney Museum & Workshop site in Hamden.",
+        "author": "Magicpiano",
+        "license": "CC BY-SA 4.0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:HamdenCT_EliWhitneyMuseum.jpg"
+      },
+      {
+        "src": "/photos/ct/hamden/farmington-canal-trail-hamden.jpg",
+        "thumb": "/photos/ct/hamden/farmington-canal-trail-hamden_thumb.jpg",
+        "title": "Farmington Canal Heritage Trail",
+        "description": "The Farmington Canal Heritage Trail in Hamden's Mount Carmel section.",
+        "author": "Pi.1415926535",
+        "license": "CC BY-SA 4.0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Farmington_Canal_Trail_in_Mount_Carmel,_October_2020.jpg"
+      }
+    ]
+  },
+  "places": [
+    {
+      "slug": "sleeping-giant-state-park",
+      "name": "Sleeping Giant State Park",
+      "kind": "park",
+      "town": "Hamden",
+      "state": "Connecticut",
+      "county": "New Haven County",
+      "address": "200 Mount Carmel Avenue, Hamden, CT 06518",
+      "official_url": "https://ctparks.com/node/134",
+      "summary": "A 1,439-acre traprock ridge park with about 40 miles of trails and a stone observation tower at the summit with 360-degree views; its Tower Trail was designated Connecticut's first National Recreation Trail. Open daily 8 a.m. to sunset; frequently reaches capacity in fall.",
+      "history": "Named for a traprock ridge said to resemble a sleeping giant; in Quinnipiac legend the giant is the spirit Hobbomock. The park was created after quarry blasting threatened the ridge's profile.",
+      "status": "open",
+      "photos": [
+        {
+          "src": "/photos/ct/hamden/sleeping-giant-tower.jpg",
+          "thumb": "/photos/ct/hamden/sleeping-giant-tower_thumb.jpg",
+          "title": "Sleeping Giant State Park tower",
+          "description": "The stone observation tower atop the Sleeping Giant traprock ridge.",
+          "author": "Craig R.",
+          "license": "CC BY-SA 4.0",
+          "source_url": "https://commons.wikimedia.org/wiki/File:Sleeping_Giant_Tower_from_above.jpg"
+        }
+      ]
+    },
+    {
+      "slug": "eli-whitney-museum-workshop",
+      "name": "Eli Whitney Museum & Workshop",
+      "kind": "museum",
+      "town": "Hamden",
+      "state": "Connecticut",
+      "county": "New Haven County",
+      "address": "915 Whitney Avenue, Hamden, CT 06517",
+      "official_url": "https://www.eliwhitney.org/",
+      "summary": "A hands-on learning museum on the site of Eli Whitney's historic armory, teaching through experiment and building with tools and materials; known for its annual holiday Train Display and the Leonardo Challenge fundraiser.",
+      "history": "Eli Whitney's armory operated on this site and played a crucial role in America's Industrial Revolution.",
+      "status": "open",
+      "photos": [
+        {
+          "src": "/photos/ct/hamden/eli-whitney-museum-barn.jpg",
+          "thumb": "/photos/ct/hamden/eli-whitney-museum-barn_thumb.jpg",
+          "title": "Eli Whitney Museum",
+          "description": "Museum buildings at the Eli Whitney Museum & Workshop site in Hamden.",
+          "author": "Magicpiano",
+          "license": "CC BY-SA 4.0",
+          "source_url": "https://commons.wikimedia.org/wiki/File:HamdenCT_EliWhitneyMuseum.jpg"
+        }
+      ]
+    },
+    {
+      "slug": "best-video-film-cultural-center",
+      "name": "Best Video Film & Cultural Center",
+      "kind": "attraction",
+      "town": "Hamden",
+      "state": "Connecticut",
+      "county": "New Haven County",
+      "address": "1842 Whitney Avenue, Hamden, CT 06517",
+      "official_url": "https://www.bestvideo.com/",
+      "summary": "A nonprofit film archive and cultural hub combining a video rental collection, a coffee/wine bar serving Willoughby's Coffee, and a performance space hosting film screenings and live music.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "farmington-canal-heritage-trail-hamden",
+      "name": "Farmington Canal Heritage Trail (Hamden section)",
+      "kind": "park",
+      "town": "Hamden",
+      "state": "Connecticut",
+      "county": "New Haven County",
+      "official_url": "https://fchtrail.org/",
+      "summary": "A rails-to-trails greenway running 54 miles from New Haven through Hamden to the Massachusetts border, part of an 81-mile trail system, along the route of the old Farmington Canal and railroad.",
+      "status": "open",
+      "photos": [
+        {
+          "src": "/photos/ct/hamden/farmington-canal-trail-hamden.jpg",
+          "thumb": "/photos/ct/hamden/farmington-canal-trail-hamden_thumb.jpg",
+          "title": "Farmington Canal Heritage Trail",
+          "description": "The Farmington Canal Heritage Trail in Hamden's Mount Carmel section.",
+          "author": "Pi.1415926535",
+          "license": "CC BY-SA 4.0",
+          "source_url": "https://commons.wikimedia.org/wiki/File:Farmington_Canal_Trail_in_Mount_Carmel,_October_2020.jpg"
+        }
+      ]
+    },
+    {
+      "slug": "glenwood-drive-in",
+      "name": "Glenwood Drive-In",
+      "kind": "restaurant",
+      "town": "Hamden",
+      "state": "Connecticut",
+      "county": "New Haven County",
+      "address": "2538 Whitney Ave, Hamden, CT 06518",
+      "official_url": "https://www.glenwooddrivein.com/",
+      "summary": "A Hamden institution operating for over 70 years, voted #1 Hot Dog in CT by Connecticut Magazine; also known for lobster rolls, onion rings, and seafood. Open daily 11am-8pm.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "ray-mikes-dairy-deli",
+      "name": "Ray & Mike's Dairy and Deli",
+      "kind": "restaurant",
+      "town": "Hamden",
+      "state": "Connecticut",
+      "county": "New Haven County",
+      "address": "3030 Whitney Avenue, Hamden, CT 06518",
+      "official_url": "https://rayandmikesdeli.com/",
+      "summary": "A beloved local deli famous for oversized sandwiches — steak and cheese, pastrami, and signature builds like the MacDaddy. Hours Mon-Sat 6am-9pm, Sun 8am-7pm.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "mikro-depot",
+      "name": "Mikro Depot",
+      "kind": "restaurant",
+      "town": "Hamden",
+      "state": "Connecticut",
+      "county": "New Haven County",
+      "address": "0 Depot Avenue, Hamden, CT 06518",
+      "official_url": "https://www.mikrodepot.com/",
+      "summary": "A craft beer bar and gastropub in Hamden's old depot area serving a rotating lineup of craft beers with small plates, heartier fare, and Sunday brunch. Kitchen open Tue-Sun.",
+      "status": "open",
+      "photos": []
+    }
+  ],
+  "entries": [
+    {
+      "kind": "sight",
+      "name": "Sleeping Giant State Park",
+      "place_slug": "sleeping-giant-state-park",
+      "note": "A traprock ridge with 40 miles of trails and a summit observation tower."
+    },
+    {
+      "kind": "sight",
+      "name": "Eli Whitney Museum & Workshop",
+      "place_slug": "eli-whitney-museum-workshop",
+      "note": "A hands-on learning museum on the site of Whitney's historic armory."
+    },
+    {
+      "kind": "sight",
+      "name": "Best Video Film & Cultural Center",
+      "place_slug": "best-video-film-cultural-center",
+      "note": "A nonprofit film archive with a coffee/wine bar and screening events."
+    },
+    {
+      "kind": "walk",
+      "name": "Farmington Canal Heritage Trail",
+      "place_slug": "farmington-canal-heritage-trail-hamden",
+      "note": "A 54-mile rails-to-trails greenway from New Haven toward Massachusetts."
+    },
+    {
+      "kind": "food",
+      "name": "Glenwood Drive-In",
+      "place_slug": "glenwood-drive-in",
+      "note": "A 70-plus-year hot dog institution voted #1 in CT."
+    },
+    {
+      "kind": "food",
+      "name": "Ray & Mike's Dairy and Deli",
+      "place_slug": "ray-mikes-dairy-deli",
+      "note": "Oversized sandwiches on Whitney Avenue."
+    },
+    {
+      "kind": "food",
+      "name": "Mikro Depot",
+      "place_slug": "mikro-depot",
+      "note": "Craft beer gastropub in the old depot area, with Sunday brunch."
+    }
+  ],
+  "links": []
+}
