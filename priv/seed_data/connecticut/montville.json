@@ -172,6 +172,19 @@
       "summary": "A signature steakhouse inside Mohegan Sun accepting online reservations.",
       "status": "open",
       "photos": []
+    },
+    {
+      "slug": "the-dinosaur-place-montville",
+      "name": "The Dinosaur Place at Nature's Art Village",
+      "kind": "attraction",
+      "town": "Montville",
+      "state": "Connecticut",
+      "county": "New London County",
+      "address": "1650 Hartford-New London Turnpike, Oakdale, CT 06370",
+      "official_url": "https://naturesartvillage.com/",
+      "summary": "Sixty acres of family attraction built around a mile and a half of nature trails lined with more than a hundred life-sized dinosaur sculptures, plus a splash pad, the A-MAZE-asaurus maze, Monty's Playground, a gem-mining and gold-panning Discovery Depot, and an adjoining mini-golf course. Admission is charged; check current pricing before you go.",
+      "status": "open",
+      "photos": []
     }
   ],
   "entries": [
@@ -216,13 +229,19 @@
       "name": "Mohegan Sun (Sky Tower and Earth Tower)",
       "place_slug": "mohegan-sun-sky-earth-towers",
       "note": "About 1,600 rooms across two resort towers."
+    },
+    {
+      "kind": "sight",
+      "name": "The Dinosaur Place at Nature's Art Village",
+      "place_slug": "the-dinosaur-place-montville",
+      "note": "The one stop in Montville aimed squarely at children, open daily 10am to 6pm with last entry at 5pm."
     }
   ],
   "links": [
     {
       "target": "guide:norwich-ct-travel-guide",
       "kind": "nearby",
-      "note": "Both towns built 19th-century economies on water power from the same river system — Norwich's mills and Montville's manufacturers along the Oxoboxo River."
+      "note": "Adjoining towns on the Thames; Montville's 19th-century manufacturers worked the Oxoboxo River as Norwich's mills worked its own falls."
     },
     {
       "target": "guide:new-london-ct-travel-guide",

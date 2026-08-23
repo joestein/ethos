@@ -195,6 +195,18 @@
       "summary": "A full-service 285-room hotel at I-95 Exit 88 with the Cerulean Beauty & Spa, indoor pool, Octagon Restaurant, and a 10,320-square-foot Grand Ballroom — despite the Mystic name, it sits within the town of Groton.",
       "status": "open",
       "photos": []
+    },
+    {
+      "slug": "submarine-force-library-and-museum",
+      "name": "Submarine Force Library and Museum",
+      "kind": "museum",
+      "town": "Groton",
+      "state": "Connecticut",
+      "county": "New London County",
+      "official_url": "https://www.ussnautilus.org/",
+      "summary": "The Navy's own submarine museum, beside Naval Submarine Base New London on the Thames, built around USS Nautilus — the world's first nuclear-powered submarine. Some 33,000 artifacts cover submarine history, from a replica of Bushnell's Turtle to captured Japanese midget submarines. Whether Nautilus herself is open for boarding varies, so check before you drive out.",
+      "status": "open",
+      "photos": []
     }
   ],
   "entries": [
@@ -245,6 +257,12 @@
       "name": "Mystic Marriott Hotel & Spa",
       "place_slug": "mystic-marriott-hotel-spa",
       "note": "A full-service 285-room hotel at I-95 Exit 88."
+    },
+    {
+      "kind": "sight",
+      "name": "Submarine Force Library and Museum",
+      "place_slug": "submarine-force-library-and-museum",
+      "note": "Free, Navy-run, and the reason most first-time visitors come to Groton."
     }
   ],
   "links": [
