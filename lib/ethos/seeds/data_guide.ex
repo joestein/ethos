@@ -72,12 +72,19 @@ defmodule Ethos.Seeds.DataGuide do
     guide = GuideRunner.upsert!(runner_data, email)
 
     for l <- data["links"] || [] do
-      Ethos.Links.upsert_link!(%{
-        source: {:guide, guide.slug},
-        target: parse_ref!(path, l["target"]),
-        kind: l["kind"],
-        note: l["note"]
-      })
+      target = parse_ref!(path, l["target"])
+
+      try do
+        Ethos.Links.upsert_link!(%{
+          source: {:guide, guide.slug},
+          target: target,
+          kind: l["kind"],
+          note: l["note"]
+        })
+      rescue
+        e in ArgumentError ->
+          reraise ArgumentError, [message: "#{path}: #{Exception.message(e)}"], __STACKTRACE__
+      end
     end
 
     guide

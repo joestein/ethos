@@ -80,4 +80,20 @@ defmodule Ethos.Seeds.DataGuideTest do
     assert Enum.any?(connected, &(&1.kind == "see-also" and &1.other.slug == "test-square-park"))
     assert length(connected) == 2
   end
+
+  test "unknown link target in links array raises with the file path" do
+    user = user_fixture()
+    bad = Path.join(System.tmp_dir!(), "bad-link-seed.json")
+
+    File.write!(
+      bad,
+      ~s({"guide": {"slug": "bad-link-guide", "title": "Bad", "destination": "Bad, New York", "state": "New York", "county": "Manhattan", "intro": "x", "sections": [], "faq": [], "photos": []}, "places": [], "entries": [], "links": [{"target": "guide:no-such-guide-slug", "kind": "nearby", "note": null}]})
+    )
+
+    DataGuide.upsert_places!(bad)
+
+    assert_raise ArgumentError, ~r/bad-link-seed\.json.*no-such-guide-slug/s, fn ->
+      DataGuide.upsert_guide!(bad, user.email)
+    end
+  end
 end
