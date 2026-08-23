@@ -27,7 +27,9 @@ defmodule Ethos.Seeds.BackfillLinks do
       {"waterbury#{@ct_g}", "middlebury#{@ct_g}", "nearby", nil},
       {"middlebury#{@ct_g}", "woodbury#{@ct_g}", "nearby", nil},
       {"woodbury#{@ct_g}", "southbury#{@ct_g}", "nearby", nil},
-      {"southbury#{@ct_g}", "danbury#{@ct_g}", "nearby", nil}
+      # Newtown lies between them, so this is same-region under the rule the
+      # Connecticut expansion codifies: `nearby` means the towns share a border.
+      {"southbury#{@ct_g}", "danbury#{@ct_g}", "same-region", nil}
     ]
   end
 

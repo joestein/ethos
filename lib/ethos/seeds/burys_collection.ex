@@ -13,10 +13,10 @@ defmodule Ethos.Seeds.BurysCollection do
       *-bury* — "fortified settlement" — and ten of its towns carry it.
       Five sit within a short drive of each other in the state's western
       hills, sharing colonial roots and brass-and-hat industrial history.
-      The other five are scattered across the state, from an iron town in
-      the northwest corner to a Quiet Corner village that changed who was
-      allowed to go to school in America. This collection gathers our
-      guides to all ten — start anywhere and follow the connections.
+      The rest range from an iron town in the northwest corner to a Quiet
+      Corner village that changed who was allowed to go to school in
+      America. This collection gathers our guides to all ten — start
+      anywhere and follow the connections.
       """,
       items: [
         %{

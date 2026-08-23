@@ -83,23 +83,17 @@ defmodule Ethos.Seeds.DataGuide do
     data = load!(path)
     source_slug = data["guide"]["slug"]
 
-    for l <- data["links"] || [] do
-      target = parse_ref!(path, l["target"])
-
-      try do
-        Ethos.Links.upsert_link!(%{
-          source: {:guide, source_slug},
-          target: target,
-          kind: l["kind"],
-          note: l["note"]
-        })
-      rescue
-        e in ArgumentError ->
-          reraise ArgumentError, [message: "#{path}: #{Exception.message(e)}"], __STACKTRACE__
+    links =
+      for l <- data["links"] || [] do
+        %{target: parse_ref!(path, l["target"]), kind: l["kind"], note: l["note"]}
       end
-    end
 
-    :ok
+    try do
+      Ethos.Links.replace_outgoing_links!({:guide, source_slug}, links)
+    rescue
+      e in ArgumentError ->
+        reraise ArgumentError, [message: "#{path}: #{Exception.message(e)}"], __STACKTRACE__
+    end
   end
 
   defp parse_ref!(_path, "guide:" <> slug), do: {:guide, slug}

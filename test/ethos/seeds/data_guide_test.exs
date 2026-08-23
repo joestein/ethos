@@ -99,6 +99,35 @@ defmodule Ethos.Seeds.DataGuideTest do
     end
   end
 
+  test "re-seeding a corrected links array retires the edge it corrected" do
+    user = user_fixture()
+    for path <- [@testville, @refville], do: DataGuide.upsert_places!(path)
+    for path <- [@testville, @refville], do: DataGuide.upsert_guide!(path, user.email)
+    for path <- [@testville, @refville], do: DataGuide.upsert_links!(path)
+
+    ref = Guides.get_published_guide_by_slug!("refville-manhattan-guide")
+    assert Enum.any?(Ethos.Links.links_for("guide", ref.id), &(&1.kind == "nearby"))
+
+    # Same edge, re-typed — exactly what the wave reviews kept producing.
+    corrected = Path.join(System.tmp_dir!(), "refville-corrected.json")
+
+    @refville
+    |> File.read!()
+    |> String.replace(~s("kind": "nearby"), ~s("kind": "same-region"))
+    |> then(&File.write!(corrected, &1))
+
+    DataGuide.upsert_links!(corrected)
+
+    kinds =
+      "guide"
+      |> Ethos.Links.links_for(ref.id)
+      |> Enum.filter(&(&1.other.slug == "testville-manhattan-guide"))
+      |> Enum.map(& &1.kind)
+
+    assert kinds == ["same-region"],
+           "stale edge survived correction — target would render under two headings"
+  end
+
   test "links resolve regardless of file order — a file may link forward" do
     user = user_fixture()
     # @testville links to nothing; @refville links back to it. Seeding guides in

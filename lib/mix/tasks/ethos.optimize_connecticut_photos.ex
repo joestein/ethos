@@ -4,14 +4,25 @@ defmodule Mix.Tasks.Ethos.OptimizeConnecticutPhotos do
   use Mix.Task
 
   @source_exts ~w(jpg jpeg png tif tiff JPG JPEG PNG)
+  @manifest_path "priv/seed_data/connecticut_photo_manifest.json"
 
   @impl true
   def run(_args) do
-    "priv/seed_data/connecticut/*.json"
-    |> Path.wildcard()
-    |> Enum.flat_map(&photo_srcs/1)
-    |> Enum.uniq()
-    |> Enum.each(&optimize_src/1)
+    files = Path.wildcard("priv/seed_data/connecticut/*.json")
+
+    if files == [] do
+      Mix.raise(
+        "no seed files matched priv/seed_data/connecticut/*.json — run this from the project root"
+      )
+    end
+
+    srcs =
+      files
+      |> Enum.flat_map(&photo_srcs/1)
+      |> Enum.uniq()
+
+    Enum.each(srcs, &optimize_src/1)
+    Mix.shell().info("optimized #{length(srcs)} photos from #{length(files)} seed files")
   end
 
   defp photo_srcs(file) do
@@ -40,9 +51,46 @@ defmodule Mix.Tasks.Ethos.OptimizeConnecticutPhotos do
   end
 
   defp find_source!(label) do
-    Enum.find_value(@source_exts, fn ext ->
-      path = Path.join(["images", "connecticut", "#{label}.#{ext}"])
-      if File.exists?(path), do: path
-    end) || Mix.raise("no source image for #{label} under images/connecticut/")
+    path =
+      Enum.find_value(@source_exts, fn ext ->
+        path = Path.join(["images", "connecticut", "#{label}.#{ext}"])
+        if File.exists?(path), do: path
+      end) || Mix.raise("no source image for #{label} under images/connecticut/")
+
+    verify_provenance!(label, path)
+    path
+  end
+
+  # Source images resolve by bare label, so the wrong file under that name would
+  # publish a real photo carrying another image's author and licence credit. The
+  # manifest pins each label to the Commons file it was downloaded from.
+  defp verify_provenance!(label, path) do
+    case manifest()[label] do
+      nil ->
+        Mix.raise("#{label} is not in #{@manifest_path} — regenerate the manifest")
+
+      %{"sha256" => expected} ->
+        actual = :crypto.hash(:sha256, File.read!(path)) |> Base.encode16(case: :lower)
+
+        if actual != expected do
+          Mix.raise(
+            "#{path} does not match the image recorded for #{label} " <>
+              "(expected #{String.slice(expected, 0, 12)}…, got #{String.slice(actual, 0, 12)}…). " <>
+              "The published author and licence would credit the wrong photo."
+          )
+        end
+    end
+  end
+
+  defp manifest do
+    case :persistent_term.get({__MODULE__, :manifest}, nil) do
+      nil ->
+        data = @manifest_path |> File.read!() |> Jason.decode!()
+        :persistent_term.put({__MODULE__, :manifest}, data)
+        data
+
+      data ->
+        data
+    end
   end
 end

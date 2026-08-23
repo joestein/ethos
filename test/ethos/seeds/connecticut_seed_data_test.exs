@@ -7,6 +7,7 @@ defmodule Ethos.Seeds.ConnecticutSeedDataTest do
   @ct_glob Path.expand("../../../priv/seed_data/connecticut/*.json", __DIR__)
   @manhattan_glob Path.expand("../../../priv/seed_data/manhattan/*.json", __DIR__)
   @static_root Path.expand("../../../priv/static", __DIR__)
+  @manifest_path Path.expand("../../../priv/seed_data/connecticut_photo_manifest.json", __DIR__)
 
   defp ct_files, do: @ct_glob |> Path.wildcard() |> Enum.sort()
 
@@ -29,7 +30,9 @@ defmodule Ethos.Seeds.ConnecticutSeedDataTest do
     json_owned =
       for f <- files ++ Path.wildcard(@manhattan_glob),
           p <- DataGuide.load!(f)["places"],
-          do: {p["slug"], Path.basename(f)}
+          # Directory-qualified: connecticut/ and manhattan/ may hold the same
+          # basename, which would hide a genuine cross-destination collision.
+          do: {p["slug"], Path.join(Path.basename(Path.dirname(f)), Path.basename(f))}
 
     code_owned =
       for p <- Ethos.Seeds.ConnecticutPlaces.places(), do: {p.slug, "connecticut_places.ex"}
@@ -37,7 +40,8 @@ defmodule Ethos.Seeds.ConnecticutSeedDataTest do
     dups =
       (json_owned ++ code_owned)
       |> Enum.group_by(&elem(&1, 0), &elem(&1, 1))
-      |> Enum.filter(fn {_slug, owners} -> length(Enum.uniq(owners)) > 1 end)
+      # length/1, not uniq — two places sharing a slug inside ONE file collide too.
+      |> Enum.filter(fn {_slug, owners} -> length(owners) > 1 end)
 
     assert dups == [], "place slugs with multiple owners: #{inspect(dups)}"
 
@@ -74,6 +78,20 @@ defmodule Ethos.Seeds.ConnecticutSeedDataTest do
           do: {Path.basename(f), path}
 
     assert missing == [], "seed photos with no optimized file on disk: #{inspect(missing)}"
+
+    # The manifest pins each label to the Commons file it came from, so the author
+    # and licence a page prints always belong to the image beside them.
+    manifest = @manifest_path |> File.read!() |> Jason.decode!()
+
+    unpinned =
+      for f <- files,
+          p <- all_photos(DataGuide.load!(f)),
+          label = Path.rootname(Path.basename(p["src"])),
+          manifest[label]["source_url"] != p["source_url"],
+          do: {Path.basename(f), label, manifest[label]["source_url"], p["source_url"]}
+
+    assert unpinned == [],
+           "photos whose manifest provenance disagrees with the published credit: #{inspect(unpinned)}"
 
     # Seed the link-target universe (mirrors prod seeding order):
     user = user_fixture()
