@@ -1,0 +1,277 @@
+{
+  "guide": {
+    "slug": "tolland-ct-travel-guide",
+    "title": "Tolland, Connecticut: A County Seat's Courthouse and Jail",
+    "destination": "Tolland, Connecticut",
+    "state": "Connecticut",
+    "county": "Tolland County",
+    "intro": "Tolland was originally part of Windsor and named in 1715, then incorporated in May 1722 to settle Connecticut's hill country. When the General Assembly created Tolland County in 1785, Tolland became the county seat; its jail and courthouse sat at the terminus of five turnpikes by the early 19th century, and the town's early economy centered on farming. The name is traced either to a toll station on the old Boston-to-New York road or to Tolland in Somerset, England. The Old Tolland County Court House, built in 1822, has been called one of the five most important surviving examples of early Connecticut civic architecture; courts sat there until about 1890, and the county jail's 1856 cellblock remained in use until 1968. Daniel Benton received his Tolland land in 1719; the homestead's cellar held Hessian and English prisoners for eighteen months during the Revolutionary War.",
+    "sections": [
+      {
+        "heading": "Tolland Green's museums",
+        "body": "Tolland was originally part of Windsor and named in 1715, incorporated in May 1722 to grow the population in Connecticut's hill country. When the General Assembly created Tolland County in 1785, Tolland became the county seat, and its jail and courthouse sat at the terminus of five turnpikes by the early 19th century. The Old Tolland County Court House, built in 1822, has been called one of the five most important surviving examples of early Connecticut civic architecture; courts sat there until about 1890, when proceedings moved to Rockville, and the public library occupied its first floor from 1899 to 1985. The county jail's 1856 cellblock, with an 1893 jailer's residence, remained in use until 1968; both buildings are now Tolland Historical Society museums on Tolland Green. Nearby, Daniel Benton received his Tolland land in 1719 and was 'made an inhabitant' in 1720 at age 24; the homestead's cellar held Hessian and English prisoners for eighteen months during the Revolutionary War."
+      },
+      {
+        "heading": "Getting there",
+        "body": "Interstate 84 bisects Tolland on the Hartford-to-Boston run, with Exit 68 (Route 195 / Merrow Road) serving as the visitor gateway to both the commercial strip and the historic Tolland Green. Route 74 (Tolland Stage Road) runs through the Tolland Green Historic District and is the posted access road for Nye-Holman State Forest. There is no passenger rail station anywhere in Tolland; train travelers ride the CTrail Hartford Line or Amtrak to Hartford Union Station, roughly 20 miles west, and drive the last leg. Metro-North's New Haven Line and Shore Line East serve the coast and southwestern Connecticut and do not reach Tolland."
+      },
+      {
+        "heading": "Where to eat",
+        "body": "Tolland's dining clusters near I-84 Exit 68 on Merrow Road: Papa T's Family Restaurant serves pizza, grinders and weekend breakfast; The Spot Bar and Grill offers dine-in and takeout minutes off the highway; and Camille's Wood Fired Pizza serves handcrafted pies in a 'funky modern' room. No hotel, motel, inn or B&B could be verified inside Tolland town limits; the nearest option is Graduate by Hilton Storrs, roughly nine miles south in Mansfield."
+      }
+    ],
+    "faq": [
+      {
+        "question": "How do I get to Tolland?",
+        "answer": "By car — Interstate 84 bisects the town, with Exit 68 (Route 195 / Merrow Road) the visitor gateway. There is no passenger rail station anywhere in Tolland; the nearest CTrail Hartford Line stop is Hartford Union Station, roughly 20 miles west."
+      },
+      {
+        "question": "Is there a train to Tolland?",
+        "answer": "No. There is no passenger rail station anywhere in Tolland, and Metro-North's New Haven Line and Shore Line East do not reach this part of the state. The nearest station is Hartford Union Station."
+      },
+      {
+        "question": "What are the Tolland Historical Society museums?",
+        "answer": "Three sites on Tolland Green: the Old Tolland County Jail (1856 cellblock, 1893 jailer's residence), the Old Tolland County Court House (built 1822), and the Daniel Benton Homestead, the town's oldest house, on Metcalf Road."
+      },
+      {
+        "question": "What is Nye-Holman State Forest?",
+        "answer": "An 818-acre state forest spanning Tolland, Ellington and Willington along the Willimantic River, with a fly-fishing-only trout management area, an archery range, and a youth-group campground."
+      },
+      {
+        "question": "Is there a hotel in Tolland?",
+        "answer": "No hotel, motel, inn or B&B could be verified inside Tolland town limits. The nearest option is Graduate by Hilton Storrs, roughly nine miles south in Mansfield."
+      }
+    ],
+    "photos": [
+      {
+        "src": "/photos/ct/tolland/old-tolland-county-courthouse.jpg",
+        "thumb": "/photos/ct/tolland/old-tolland-county-courthouse_thumb.jpg",
+        "title": "Old Tolland County Court House",
+        "description": "The 1822 Old Tolland County Court House on Tolland Green.",
+        "author": "Magicpiano",
+        "license": "CC BY-SA 4.0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:TollandCT_FormerCountyCourthouse.jpg"
+      },
+      {
+        "src": "/photos/ct/tolland/old-tolland-county-jail-museum.jpg",
+        "thumb": "/photos/ct/tolland/old-tolland-county-jail-museum_thumb.jpg",
+        "title": "Old Tolland County Jail Museum",
+        "description": "The Old Tolland County Jail, its 1856 cellblock now a museum.",
+        "author": "Greg O'Beirne",
+        "license": "CC BY-SA 3.0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:CountyJailMuseumTollandCT_gobeirne.JPG"
+      },
+      {
+        "src": "/photos/ct/tolland/daniel-benton-homestead.jpg",
+        "thumb": "/photos/ct/tolland/daniel-benton-homestead_thumb.jpg",
+        "title": "Daniel Benton Homestead",
+        "description": "The 1720 saltbox Daniel Benton Homestead Museum in Tolland.",
+        "author": "Marty Aligata",
+        "license": "CC BY-SA 4.0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Daniel_Benton_Homestead_Museum,_Tolland,_CT_(January_2026).jpg"
+      }
+    ]
+  },
+  "places": [
+    {
+      "slug": "old-tolland-county-jail-museum",
+      "name": "Old Tolland County Jail and Museum",
+      "kind": "museum",
+      "town": "Tolland",
+      "state": "Connecticut",
+      "county": "Tolland County",
+      "address": "52 Tolland Green, Tolland, CT 06084",
+      "official_url": "https://tollandhistorical.org/old-tolland-county-jail-and-museum-2/",
+      "summary": "The cellblock dates to 1856, with a jailer's residence added in 1893; the museum holds thousands of items used in Tolland homes, farms and businesses, plus the original cellblock. Open Sundays noon-3 p.m., June through September; year-round tours by appointment (860-872-7716).",
+      "status": "open",
+      "photos": [
+        {
+          "src": "/photos/ct/tolland/old-tolland-county-jail-museum.jpg",
+          "thumb": "/photos/ct/tolland/old-tolland-county-jail-museum_thumb.jpg",
+          "title": "Old Tolland County Jail Museum",
+          "description": "The Old Tolland County Jail, its 1856 cellblock now a museum.",
+          "author": "Greg O'Beirne",
+          "license": "CC BY-SA 3.0",
+          "source_url": "https://commons.wikimedia.org/wiki/File:CountyJailMuseumTollandCT_gobeirne.JPG"
+        }
+      ]
+    },
+    {
+      "slug": "old-tolland-county-courthouse-museum",
+      "name": "Old Tolland County Court House Museum",
+      "kind": "museum",
+      "town": "Tolland",
+      "state": "Connecticut",
+      "county": "Tolland County",
+      "address": "53 Tolland Green, Tolland, CT 06084",
+      "official_url": "https://tollandhistorical.org/old-tolland-county-courthouse/",
+      "summary": "Built in 1822 and called one of the five most important remaining examples of its kind in Connecticut; the second floor holds a restored courtroom with a cove ceiling and Palladian window. Open Memorial Day through September, 1-4 p.m.; year-round appointments (860-871-2575).",
+      "status": "open",
+      "photos": [
+        {
+          "src": "/photos/ct/tolland/old-tolland-county-courthouse.jpg",
+          "thumb": "/photos/ct/tolland/old-tolland-county-courthouse_thumb.jpg",
+          "title": "Old Tolland County Court House",
+          "description": "The 1822 Old Tolland County Court House on Tolland Green.",
+          "author": "Magicpiano",
+          "license": "CC BY-SA 4.0",
+          "source_url": "https://commons.wikimedia.org/wiki/File:TollandCT_FormerCountyCourthouse.jpg"
+        }
+      ]
+    },
+    {
+      "slug": "daniel-benton-homestead-museum",
+      "name": "Daniel Benton Homestead Museum",
+      "kind": "historic-site",
+      "town": "Tolland",
+      "state": "Connecticut",
+      "county": "Tolland County",
+      "address": "154 Metcalf Road, Tolland, CT 06084",
+      "official_url": "https://tollandhistorical.org/daniel-benton-homestead/",
+      "summary": "Tolland's oldest house, on land Daniel Benton received in 1719. Its cellar, with its own large cooking fireplace, held Hessian and English prisoners for eighteen months during the Revolution. Open in season; $5 admission, tours by appointment (860-974-1875).",
+      "status": "open",
+      "photos": [
+        {
+          "src": "/photos/ct/tolland/daniel-benton-homestead.jpg",
+          "thumb": "/photos/ct/tolland/daniel-benton-homestead_thumb.jpg",
+          "title": "Daniel Benton Homestead",
+          "description": "The 1720 saltbox Daniel Benton Homestead Museum in Tolland.",
+          "author": "Marty Aligata",
+          "license": "CC BY-SA 4.0",
+          "source_url": "https://commons.wikimedia.org/wiki/File:Daniel_Benton_Homestead_Museum,_Tolland,_CT_(January_2026).jpg"
+        }
+      ]
+    },
+    {
+      "slug": "tolland-green-historic-district",
+      "name": "Tolland Green Historic District",
+      "kind": "historic-site",
+      "town": "Tolland",
+      "state": "Connecticut",
+      "county": "Tolland County",
+      "address": "Tolland Green, along Route 74 (Tolland Stage Road) and Route 195 (Merrow Road), Tolland, CT 06084",
+      "summary": "Listed on the National Register of Historic Places in 1997, with 55 contributing buildings including the 1879 Old Town Hall, the 1909 Town Hall, the 1822 Old Tolland County Courthouse and the 1908 Ratcliffe Hicks Memorial School. Federal and Victorian architecture rings a narrow north-south green, publicly accessible with no admission.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "nye-holman-state-forest",
+      "name": "Nye-Holman State Forest",
+      "kind": "park",
+      "town": "Tolland",
+      "state": "Connecticut",
+      "county": "Tolland County",
+      "address": "Route 74, Tolland, CT 06084",
+      "official_url": "https://ctparks.com/parks/nye-holman-state-forest",
+      "summary": "An 818-acre state forest spanning Tolland, Ellington and Willington along the Willimantic River, including the Cole-Wilde Trout Management Area (fly-fishing only). The Tolland section holds an archery range and a youth-group campground. Open daily 8 a.m.-sunset, free, leashed pets.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "papa-ts-family-restaurant",
+      "name": "Papa T's Family Restaurant",
+      "kind": "restaurant",
+      "town": "Tolland",
+      "state": "Connecticut",
+      "county": "Tolland County",
+      "address": "64 Merrow Road, Tolland, CT 06084",
+      "official_url": "https://www.papatstolland.com/",
+      "summary": "A family pizza-and-grinder house right off I-84 Exit 68, with weekend breakfast service starting at 7 a.m. Friday through Sunday. Open Monday-Thursday 11 a.m.-9 p.m., Friday-Saturday 7 a.m.-10 p.m., Sunday 7 a.m.-8 p.m.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "the-spot-bar-grill-tolland",
+      "name": "The Spot Bar and Grill",
+      "kind": "restaurant",
+      "town": "Tolland",
+      "state": "Connecticut",
+      "county": "Tolland County",
+      "address": "200 Merrow Road, Tolland, CT 06084",
+      "official_url": "https://www.thespotintolland.com/",
+      "summary": "A local bar and grill minutes off I-84 Exit 68, between Tolland and UConn, with dine-in and takeout and online ordering. Open Tuesday-Thursday noon-9 p.m., Friday-Saturday noon-10 p.m., Sunday noon-8 p.m.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "camilles-wood-fired-pizza",
+      "name": "Camille's Wood Fired Pizza",
+      "kind": "restaurant",
+      "town": "Tolland",
+      "state": "Connecticut",
+      "county": "Tolland County",
+      "address": "23E Fieldstone Commons, Tolland, CT 06084",
+      "official_url": "https://www.camillespizza.com/",
+      "summary": "A single-location wood-fired pizzeria just off I-84 Exit 68, serving handcrafted pies, seasonal small plates and craft drafts. Open Tuesday through Sunday; call to confirm hours.",
+      "status": "open",
+      "photos": []
+    }
+  ],
+  "entries": [
+    {
+      "kind": "sight",
+      "name": "Old Tolland County Jail and Museum",
+      "place_slug": "old-tolland-county-jail-museum",
+      "note": "The 1856 county jail, now a Tolland Historical Society museum."
+    },
+    {
+      "kind": "sight",
+      "name": "Old Tolland County Court House Museum",
+      "place_slug": "old-tolland-county-courthouse-museum",
+      "note": "Built 1822; one of Connecticut's most important surviving civic buildings."
+    },
+    {
+      "kind": "sight",
+      "name": "Daniel Benton Homestead Museum",
+      "place_slug": "daniel-benton-homestead-museum",
+      "note": "Tolland's oldest house, which held Revolutionary War prisoners."
+    },
+    {
+      "kind": "sight",
+      "name": "Tolland Green Historic District",
+      "place_slug": "tolland-green-historic-district",
+      "note": "55 contributing buildings on a National Register green."
+    },
+    {
+      "kind": "sight",
+      "name": "Nye-Holman State Forest",
+      "place_slug": "nye-holman-state-forest",
+      "note": "818 acres along the Willimantic River, with fly-fishing water."
+    },
+    {
+      "kind": "food",
+      "name": "Papa T's Family Restaurant",
+      "place_slug": "papa-ts-family-restaurant",
+      "note": "Pizza, grinders and weekend breakfast off I-84 Exit 68."
+    },
+    {
+      "kind": "food",
+      "name": "The Spot Bar and Grill",
+      "place_slug": "the-spot-bar-grill-tolland",
+      "note": "Local bar and grill between Tolland and UConn."
+    },
+    {
+      "kind": "food",
+      "name": "Camille's Wood Fired Pizza",
+      "place_slug": "camilles-wood-fired-pizza",
+      "note": "Handcrafted wood-fired pies near I-84 Exit 68."
+    }
+  ],
+  "links": [
+    {
+      "target": "guide:willington-ct-travel-guide",
+      "kind": "shared-history",
+      "note": "Nye-Holman State Forest, 818 acres along the Willimantic River, spans Tolland, Ellington and Willington."
+    },
+    {
+      "target": "guide:ellington-ct-travel-guide",
+      "kind": "shared-history",
+      "note": "Nye-Holman State Forest also spans into Ellington, alongside Tolland and Willington."
+    },
+    {
+      "target": "guide:vernon-ct-travel-guide",
+      "kind": "same-region",
+      "note": "Interstate 84 connects Tolland to Vernon on the Hartford-to-Boston run."
+    }
+  ]
+}

@@ -1,0 +1,230 @@
+{
+  "guide": {
+    "slug": "stafford-ct-travel-guide",
+    "title": "Stafford, Connecticut: Mineral Springs and a Half-Mile Oval",
+    "destination": "Stafford, Connecticut",
+    "state": "Connecticut",
+    "county": "Tolland County",
+    "intro": "Stafford was settled and incorporated in 1719, its iron bogs and mineral springs having drawn Indigenous peoples and then colonial settlers to the area; the town most likely takes its name from Staffordshire, England, and joined Tolland County on October 13, 1785. Stafford Springs built a 19th-century reputation as a mineral-springs resort, drawing visitors who came for the therapeutic waters, including President John Adams. As spring tourism faded in the late 1800s, textile mills and other enterprises formed Stafford's industrial hub, powered by water from tributaries of the Willimantic River; during the Civil War, Stafford factories made cannonballs for the northern forces. On March 27, 1877, the recently raised Staffordville Reservoir dam burst while full for the first time, devastating roughly five miles of the valley — bridges, livery stables, a church, cotton and woolen factories, and two to three miles of railroad. Two people died and about 1,000 workers lost their jobs.",
+    "sections": [
+      {
+        "heading": "Mineral springs to mill town",
+        "body": "Stafford was settled and incorporated in 1719, its iron bogs and mineral springs having drawn Indigenous peoples and then colonial settlers. Stafford Springs built a 19th-century reputation as a mineral-springs resort, drawing visitors including President John Adams. As spring tourism faded in the late 1800s, textile mills and other enterprises formed the town's industrial hub, powered by water from tributaries of the Willimantic River. On March 27, 1877, the recently raised Staffordville Reservoir dam burst while full for the first time, devastating roughly five miles of the valley and costing two lives and about 1,000 jobs. Hyde Park exists because Stafford native Isaac Perkins Hyde bequeathed funds in 1897 for the town to buy parkland; trustees developed the 150-acre park in 1911, and its Stafford Soldiers Monument, a gift of Colonel Charles Warren erected in 1924, was designed by sculptor Frederic Wellington Ruckstull. The building that now houses the Stafford Historical Society museum was built in 1887-1889 as the office of Julius Converse's Mineral Springs Manufacturing Company mill; it served as the town library until 2001."
+      },
+      {
+        "heading": "Getting there",
+        "body": "Stafford is a drive-to destination in the northeastern hills: Routes 190 and 32 cross at Stafford Springs, with Interstate 84 passing nearby to the south. There is no passenger rail station in Stafford or anywhere in Tolland County; rail travelers must use the CTrail Hartford Line or Amtrak to Hartford Union Station or Windsor Locks and finish the trip by car."
+      },
+      {
+        "heading": "Racing, brewing and Main Street",
+        "body": "Stafford Speedway (formerly Stafford Motor Speedway, renamed in 2022) hosts weekly racing and NASCAR Whelen Modified Tour events on a half-mile paved oval that developed drivers Ryan Preece and Ted Christopher. Off the Rails Brewing Co. pours in a downtown Main Street taproom, and LuAnn's Bakery & Cafe and Basil's Restaurant & Bar round out the dining. No hotel, motel, inn or campground could be verified inside Stafford; the nearest confirmed option is the Publick House Historic Inn in Sturbridge, Massachusetts, roughly 20 miles northeast."
+      }
+    ],
+    "faq": [
+      {
+        "question": "How do I get to Stafford?",
+        "answer": "By car — Routes 190 and 32 cross at Stafford Springs, with I-84 passing nearby to the south. There is no passenger rail station in Stafford or anywhere in Tolland County; the nearest CTrail Hartford Line stops are Hartford Union Station and Windsor Locks."
+      },
+      {
+        "question": "Is there a train to Stafford?",
+        "answer": "No. Stafford and all of Tolland County have no passenger rail station. Rail travelers use the CTrail Hartford Line or Amtrak to Hartford Union Station or Windsor Locks and finish the trip by car."
+      },
+      {
+        "question": "What is Stafford Speedway?",
+        "answer": "A half-mile paved, semi-banked oval (formerly Stafford Motor Speedway, renamed in 2022) that hosts weekly racing and NASCAR Whelen Modified Tour events, and that developed drivers including Ryan Preece and Ted Christopher."
+      },
+      {
+        "question": "What happened at Stafford in 1877?",
+        "answer": "The recently raised Staffordville Reservoir dam burst while full for the first time on March 27, 1877, devastating roughly five miles of the valley — bridges, livery stables, a church, and cotton and woolen factories. Two people died and about 1,000 workers lost their jobs."
+      },
+      {
+        "question": "Is there a hotel in Stafford?",
+        "answer": "No hotel, motel, inn or campground could be verified inside Stafford. The nearest confirmed option is the Publick House Historic Inn in Sturbridge, Massachusetts, roughly 20 miles northeast."
+      }
+    ],
+    "photos": [
+      {
+        "src": "/photos/ct/stafford/stafford-springs-main-street.jpg",
+        "thumb": "/photos/ct/stafford/stafford-springs-main-street_thumb.jpg",
+        "title": "Main Street, Stafford Springs",
+        "description": "The commercial block along Main Street in Stafford Springs village.",
+        "author": "John Phelan",
+        "license": "CC BY 4.0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Main_Street,_Stafford_Springs_CT.jpg"
+      },
+      {
+        "src": "/photos/ct/stafford/stafford-speedway-race-start.jpg",
+        "thumb": "/photos/ct/stafford/stafford-speedway-race-start_thumb.jpg",
+        "title": "Stafford Speedway race start",
+        "description": "The start of a NASCAR Whelen Modified Tour race on the half-mile oval at Stafford Speedway.",
+        "author": "Mike Petrucci",
+        "license": "CC BY-SA 4.0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:WMT_Start.jpg"
+      },
+      {
+        "src": "/photos/ct/stafford/hyde-park-stafford-springs.jpg",
+        "thumb": "/photos/ct/stafford/hyde-park-stafford-springs_thumb.jpg",
+        "title": "Hyde Park, Stafford Springs",
+        "description": "Hyde Park, the 150-acre public park on the Middle River in downtown Stafford Springs.",
+        "author": "Daderot",
+        "license": "CC0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Hyde_Park_-_Stafford_Springs,_Connecticut_-_DSC04179.jpg"
+      }
+    ]
+  },
+  "places": [
+    {
+      "slug": "stafford-speedway",
+      "name": "Stafford Speedway",
+      "kind": "attraction",
+      "town": "Stafford",
+      "state": "Connecticut",
+      "county": "Tolland County",
+      "address": "55 West St. (Rte. 140), Stafford Springs, CT 06076",
+      "official_url": "https://staffordmotorspeedway.com/",
+      "summary": "A half-mile paved, semi-banked oval (formerly Stafford Motor Speedway, renamed in 2022) that hosts weekly racing and NASCAR Whelen Modified Tour events, and that has developed drivers including Ryan Preece and Ted Christopher. Gates open 5 p.m.; admission $20 adults, $5 children 6-14, free under 6. The property also runs the Speedway Meadows golf driving range and Wild Thing Karts.",
+      "status": "open",
+      "photos": [
+        {
+          "src": "/photos/ct/stafford/stafford-speedway-race-start.jpg",
+          "thumb": "/photos/ct/stafford/stafford-speedway-race-start_thumb.jpg",
+          "title": "Stafford Speedway race start",
+          "description": "The start of a NASCAR Whelen Modified Tour race on the half-mile oval at Stafford Speedway.",
+          "author": "Mike Petrucci",
+          "license": "CC BY-SA 4.0",
+          "source_url": "https://commons.wikimedia.org/wiki/File:WMT_Start.jpg"
+        }
+      ]
+    },
+    {
+      "slug": "shenipsit-state-forest-stafford",
+      "name": "Shenipsit State Forest (Stafford section)",
+      "kind": "park",
+      "town": "Stafford",
+      "state": "Connecticut",
+      "county": "Tolland County",
+      "address": "Off Route 190, Stafford/Somers/Ellington, CT 06029",
+      "official_url": "https://ctparks.com/parks/shenipsit-state-forest",
+      "summary": "7,170 acres across Ellington, Somers and Stafford, with an observation tower on Soapstone Mountain. Hiking, mountain biking, horseback riding, fishing and picnicking are permitted, with snowmobiling in winter. Free, open daily; no camping or ground fires.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "hyde-park-stafford",
+      "name": "Hyde Park",
+      "kind": "park",
+      "town": "Stafford",
+      "state": "Connecticut",
+      "county": "Tolland County",
+      "address": "Hyde Park Road, Stafford Springs, CT 06076",
+      "official_url": "https://www.explorestaffordct.com/hydepark",
+      "summary": "A 150-acre public park on the south side of the Middle River, created in 1911 from Julius Converse's former estate using an 1897 bequest from Stafford native Isaac Perkins Hyde. Its centerpiece is the Stafford Soldiers Monument, erected 1924 by sculptor Frederic Wellington Ruckstull, honoring Civil War veterans.",
+      "status": "open",
+      "photos": [
+        {
+          "src": "/photos/ct/stafford/hyde-park-stafford-springs.jpg",
+          "thumb": "/photos/ct/stafford/hyde-park-stafford-springs_thumb.jpg",
+          "title": "Hyde Park, Stafford Springs",
+          "description": "Hyde Park, the 150-acre public park on the Middle River in downtown Stafford Springs.",
+          "author": "Daderot",
+          "license": "CC0",
+          "source_url": "https://commons.wikimedia.org/wiki/File:Hyde_Park_-_Stafford_Springs,_Connecticut_-_DSC04179.jpg"
+        }
+      ]
+    },
+    {
+      "slug": "off-the-rails-brewing-co",
+      "name": "Off the Rails Brewing Co.",
+      "kind": "brewery",
+      "town": "Stafford",
+      "state": "Connecticut",
+      "county": "Tolland County",
+      "address": "86 Main Street, Unit E, Stafford Springs, CT 06076",
+      "official_url": "https://www.offtherailsbrewingco.com/",
+      "summary": "A downtown Stafford Springs taproom on Main Street. Open Friday 4-11 p.m., Saturday 1-11 p.m., Sunday 1-8 p.m.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "luanns-bakery-cafe-stafford",
+      "name": "LuAnn's Bakery & Cafe",
+      "kind": "cafe",
+      "town": "Stafford",
+      "state": "Connecticut",
+      "county": "Tolland County",
+      "address": "42 Main Street, Stafford Springs, CT 06076",
+      "official_url": "https://www.luannsbakery.com/",
+      "summary": "The Stafford Springs location of a small Connecticut cafe chain serving made-from-scratch baked goods, wholesome meals and coffee drinks. Open Monday-Saturday 6:30 a.m.-2 p.m.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "basils-restaurant-bar",
+      "name": "Basil's Restaurant & Bar",
+      "kind": "restaurant",
+      "town": "Stafford",
+      "state": "Connecticut",
+      "county": "Tolland County",
+      "address": "64 West Stafford Road (Route 190), Stafford, CT 06076",
+      "official_url": "https://www.basilsofstafford.com/",
+      "summary": "An American-Italian restaurant and bar open Wednesday, Thursday and Sunday 11 a.m.-10 p.m. and Friday-Saturday 11 a.m.-11 p.m., closed Monday and Tuesday; reservations recommended for parties of six or more.",
+      "status": "open",
+      "photos": []
+    }
+  ],
+  "entries": [
+    {
+      "kind": "sight",
+      "name": "Stafford Speedway",
+      "place_slug": "stafford-speedway",
+      "note": "A half-mile oval hosting weekly racing and NASCAR Whelen Modified Tour events."
+    },
+    {
+      "kind": "sight",
+      "name": "Shenipsit State Forest",
+      "place_slug": "shenipsit-state-forest-stafford",
+      "note": "7,170 acres of trails centered on Soapstone Mountain."
+    },
+    {
+      "kind": "sight",
+      "name": "Hyde Park",
+      "place_slug": "hyde-park-stafford",
+      "note": "A 150-acre park with the 1924 Stafford Soldiers Monument."
+    },
+    {
+      "kind": "food",
+      "name": "Off the Rails Brewing Co.",
+      "place_slug": "off-the-rails-brewing-co",
+      "note": "Downtown Main Street taproom."
+    },
+    {
+      "kind": "food",
+      "name": "LuAnn's Bakery & Cafe",
+      "place_slug": "luanns-bakery-cafe-stafford",
+      "note": "Made-from-scratch baked goods and wholesome meals."
+    },
+    {
+      "kind": "food",
+      "name": "Basil's Restaurant & Bar",
+      "place_slug": "basils-restaurant-bar",
+      "note": "American-Italian restaurant and bar on Route 190."
+    }
+  ],
+  "links": [
+    {
+      "target": "guide:somers-ct-travel-guide",
+      "kind": "shared-history",
+      "note": "Route 190 runs directly from Stafford into Somers, and Shenipsit State Forest spans both."
+    },
+    {
+      "target": "guide:ellington-ct-travel-guide",
+      "kind": "shared-history",
+      "note": "Shenipsit State Forest, 7,170 acres of multi-use trails, spans Stafford, Somers and Ellington."
+    },
+    {
+      "target": "guide:union-ct-travel-guide",
+      "kind": "same-region",
+      "note": "Route 190 continues east from Stafford toward Union."
+    }
+  ]
+}

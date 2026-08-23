@@ -1,0 +1,171 @@
+{
+  "guide": {
+    "slug": "sterling-ct-travel-guide",
+    "title": "Sterling, Connecticut: A Dye House and the Birthplace of Dow Jones",
+    "destination": "Sterling, Connecticut",
+    "state": "Connecticut",
+    "county": "Windham County",
+    "tier": "town-page",
+    "intro": "Sterling was the northern section of Voluntown until it separated and obtained town privileges from the Connecticut Assembly in May 1794. The town was named for Dr. John Sterling, a local resident who pledged to give the town a library in return for the honor but never fulfilled the promise — the community later built its library through private fundraising. Sterling's first mill opened in 1800 on the Quandock River, and the Pike family ran the town's dye works for roughly 100 years beginning in 1811, when William Pike pioneered chlorine bleaching of fabric. Dow Jones co-founder Charles Dow was born in Sterling in 1851 into a farming family. The Comte de Rochambeau's French army marched through and camped in Sterling in 1781, en route to join Washington's forces.",
+    "sections": [
+      {
+        "heading": "Getting there",
+        "body": "Sterling is reached entirely by car: take I-395 to Exit 32 in the Moosup section of Plainfield and head east on Route 14, or east on Route 14A (Plainfield Pike) through Oneco. Route 14 continues into Rhode Island as Rhode Island Route 14. There is no passenger rail service in Sterling or anywhere in Windham County; the railbed that carried the New Haven Railroad through town from 1898 to 1968 is now the Moosup Valley State Park Trail. The nearest CTrail and Amtrak platforms are well to the south and west."
+      },
+      {
+        "heading": "Rochambeau's route and a dye house dynasty",
+        "body": "The Sterling Hill Historic District, listed on the National Register in 1986, preserves 15 principal structures on a ridge that straddles the Plainfield-Sterling line, including the Dorrance Homestead (c. 1716) and the Gallup Homestead, or Dorrance Inn (c. 1732). Rochambeau's French army camped here in 1781 on the march to join Washington. The Pike family ran Sterling's dye works for a century starting in 1811, when William Pike pioneered chlorine bleaching of fabric; his son James later developed a permanent fast-black dye process."
+      }
+    ],
+    "faq": [
+      {
+        "question": "How do I get to Sterling?",
+        "answer": "By car — take I-395 to Exit 32 in Moosup (Plainfield) and head east on Route 14 or Route 14A. There is no passenger rail service anywhere in Windham County."
+      },
+      {
+        "question": "What is the Sterling Hill Historic District?",
+        "answer": "A ridge-top village straddling the Plainfield-Sterling line, listed on the National Register in 1986, with 15 principal structures including 18th-century houses and the Greek Revival Sterling Hill Baptist Church. The houses are private residences, viewable from the road."
+      },
+      {
+        "question": "Is there a restaurant in Sterling?",
+        "answer": "Weidele's Pizza & Pub on Main Street serves pizza, wings and fried seafood; call ahead to confirm current hours."
+      }
+    ],
+    "photos": [
+      {
+        "src": "/photos/ct/sterling/sterling-hill-historic-district.jpg",
+        "thumb": "/photos/ct/sterling/sterling-hill-historic-district_thumb.jpg",
+        "title": "Sterling Hill Historic District",
+        "description": "The Sterling Hill Historic District streetscape.",
+        "author": "Magicpiano",
+        "license": "CC BY-SA 3.0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:SterlingCT_SterlingHillHD.jpg"
+      }
+    ]
+  },
+  "places": [
+    {
+      "slug": "moosup-valley-state-park-trail",
+      "name": "Moosup Valley State Park Trail",
+      "kind": "park",
+      "town": "Sterling",
+      "state": "Connecticut",
+      "county": "Windham County",
+      "address": "Trailhead parking at 2-58 Withey Hill Road, Sterling/Plainfield, CT 06354",
+      "official_url": "https://ctparks.com/parks/moosup-valley-state-park-trail",
+      "summary": "A 5.8-mile multi-use rail-trail on a retired railbed that carried the New Haven Railroad from 1898 to 1968, spanning about 62 acres of wetlands, rivers and ponds — 3.6 miles in Sterling and 2.2 in Plainfield. Open for biking, hiking, fishing, horseback riding and winter snowshoeing; connects to the Coventry Greenway.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "sterling-hill-historic-district",
+      "name": "Sterling Hill Historic District",
+      "kind": "historic-site",
+      "town": "Sterling",
+      "state": "Connecticut",
+      "county": "Windham County",
+      "address": "Along Plainfield Pike (Route 14A) and Green Lane, Sterling Hill, Sterling, CT",
+      "summary": "Listed on the National Register in 1986, the district straddles the Plainfield-Sterling line on a broad ridge, preserving 15 principal structures including seven 18th-century center-chimney houses and the Greek Revival Sterling Hill Baptist Church. The Dorrance Homestead dates to about 1716; the houses are private residences viewable from the road.",
+      "history": "A 3.6-mile stretch of Plainfield Pike that Rochambeau's French army traveled in 1781, marching to join Washington's forces, runs through the district.",
+      "status": "open",
+      "photos": [
+        {
+          "src": "/photos/ct/sterling/sterling-hill-historic-district.jpg",
+          "thumb": "/photos/ct/sterling/sterling-hill-historic-district_thumb.jpg",
+          "title": "Sterling Hill Historic District",
+          "description": "The Sterling Hill Historic District streetscape.",
+          "author": "Magicpiano",
+          "license": "CC BY-SA 3.0",
+          "source_url": "https://commons.wikimedia.org/wiki/File:SterlingCT_SterlingHillHD.jpg"
+        }
+      ]
+    },
+    {
+      "slug": "sterling-historical-society",
+      "name": "Sterling Historical Society",
+      "kind": "museum",
+      "town": "Sterling",
+      "state": "Connecticut",
+      "county": "Windham County",
+      "address": "Room 19, Sterling Municipal Building, 1183 Plainfield Pike, Oneco, CT 06373",
+      "official_url": "https://sterlinghistoricalsocietyct.weebly.com/",
+      "summary": "Collects and preserves documents, artifacts and historic sites relating to Sterling's history. Open by appointment and on the second Tuesday of every month, 6-7 p.m., with a business meeting following from 7-8 p.m.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "sterling-public-library",
+      "name": "Sterling Public Library",
+      "kind": "attraction",
+      "town": "Sterling",
+      "state": "Connecticut",
+      "county": "Windham County",
+      "address": "1183 Plainfield Pike, Oneco, CT 06373",
+      "official_url": "https://sterlingct.gov/184/Public-Library",
+      "summary": "The descendant of the library Dr. John Sterling promised but never gave the town. Lends discount passes to Connecticut state museums and parks, and runs children's programs and a free clothing bank. Open Tuesday 10 a.m.-7 p.m., Thursday 1-5 p.m., Saturday 9 a.m.-noon.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "weideles-pizza-pub",
+      "name": "Weidele's Pizza & Pub",
+      "kind": "restaurant",
+      "town": "Sterling",
+      "state": "Connecticut",
+      "county": "Windham County",
+      "address": "50 Main Street, Sterling, CT 06377",
+      "summary": "Sterling's main sit-down restaurant, serving pizza including gluten-free and cauliflower crust options, wings, fresh-cut fries, meatball grinders, baked haddock and fish and chips. Listed as open daily; call (860) 564-6680 to confirm hours.",
+      "status": "open",
+      "photos": []
+    }
+  ],
+  "entries": [
+    {
+      "kind": "walk",
+      "name": "Moosup Valley State Park Trail",
+      "place_slug": "moosup-valley-state-park-trail",
+      "note": "A 5.8-mile rail-trail spanning Sterling and Plainfield."
+    },
+    {
+      "kind": "sight",
+      "name": "Sterling Hill Historic District",
+      "place_slug": "sterling-hill-historic-district",
+      "note": "A ridge-top 18th-century village on the Rochambeau march route."
+    },
+    {
+      "kind": "sight",
+      "name": "Sterling Historical Society",
+      "place_slug": "sterling-historical-society",
+      "note": "Monthly meetings preserving local documents and artifacts."
+    },
+    {
+      "kind": "sight",
+      "name": "Sterling Public Library",
+      "place_slug": "sterling-public-library",
+      "note": "Lends museum and park discount passes."
+    },
+    {
+      "kind": "food",
+      "name": "Weidele's Pizza & Pub",
+      "place_slug": "weideles-pizza-pub",
+      "note": "Sterling's main sit-down restaurant on Main Street."
+    }
+  ],
+  "links": [
+    {
+      "target": "guide:plainfield-ct-travel-guide",
+      "kind": "shared-history",
+      "note": "The Sterling Hill Historic District and the Moosup Valley State Park Trail both straddle the Plainfield-Sterling line."
+    },
+    {
+      "target": "guide:killingly-ct-travel-guide",
+      "kind": "same-region",
+      "note": "Sterling and Killingly are both eastern Windham County Quiet Corner towns reached via I-395."
+    },
+    {
+      "target": "guide:woodstock-ct-travel-guide",
+      "kind": "same-region",
+      "note": "The nearest lodging to Sterling is The Inn at Woodstock Hill, in Woodstock."
+    }
+  ]
+}

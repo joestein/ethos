@@ -1,0 +1,270 @@
+{
+  "guide": {
+    "slug": "ashford-ct-travel-guide",
+    "title": "Ashford, Connecticut: Colonel Knowlton's Rangers",
+    "destination": "Ashford, Connecticut",
+    "state": "Connecticut",
+    "county": "Windham County",
+    "intro": "Ashford was settled in 1710 and incorporated in October 1714, originally known as New Scituate, in the northwestern corner of Windham County's \"Quiet Corner.\" The Old Connecticut Path, an early Native American route, crossed what is now Ashford Common; the later Boston and Hartford Turnpike ran a direct route through town and drove its early commerce. Ashford selectman Colonel Thomas Knowlton led a militia company of 78 men to Boston after Lexington and Concord, later commanded the intelligence unit Knowlton's Rangers — in which Nathan Hale served — and was killed on September 16, 1776 at Harlem Heights; Washington called him \"the gallant and brave Colonel Knowlton, who would have been an honor to any country.\" The town's rural economy diversified into tanneries, grist mills, dairy and chicken farms and a glass factory; its population swung from 2,286 in 1782 down to just 668 by 1910. Eastford split off from Ashford in 1847.",
+    "sections": [
+      {
+        "heading": "Colonel Knowlton's Rangers",
+        "body": "Ashford was settled in 1710 and incorporated in October 1714, originally known as New Scituate. The Old Connecticut Path, an early Native American route, crossed what is now Ashford Common; the Boston and Hartford Turnpike later ran a direct route through town. Ashford selectman Colonel Thomas Knowlton led a militia company of 78 men to Boston after Lexington and Concord, later commanded the intelligence unit known as Knowlton's Rangers — in which Nathan Hale served — and was killed on September 16, 1776 at the Battle of Harlem Heights; Washington called him \"the gallant and brave Colonel Knowlton, who would have been an honor to any country.\" Knowlton Memorial Hall, built in 1923-24 by Charles C. Knowlton to honor his father and Colonel Knowlton, was listed on the National Register in 1994. Eastford split off from Ashford in 1847, and Ashford still contains Snow Hill, at 1,210 feet the highest point in Windham County."
+      },
+      {
+        "heading": "Getting there",
+        "body": "Interstate 84 clips Ashford's northwestern corner, with Exit 72 (Route 89) the common gateway, and US Route 44 meets Route 74 in the town center, about 29 miles east of Hartford. There is no passenger rail station in Ashford or anywhere in northeastern Connecticut; the nearest practical rail access is Hartford Union Station on the CTrail Hartford Line and Amtrak, about 29 miles west."
+      },
+      {
+        "heading": "Preserves and a raptor center",
+        "body": "Joshua's Trust maintains two Ashford preserves open for hiking: Church Farm Preserve, where a yellow-blazed trail climbs to a ledge viewpoint over the Mount Hope River valley, and the Friedman Memorial Forest, 143 acres of oak-hickory woods. Horizon Wings gives guided tours of its raptor rehabilitation center by appointment, and Crookes Orchard runs a pick-your-own operation from blueberry season through apples. No hotel, motel, inn or B&B could be verified inside Ashford; the nearest apparent option is The Inn on Storrs in Mansfield Center — call ahead to confirm."
+      }
+    ],
+    "faq": [
+      {
+        "question": "How do I get to Ashford?",
+        "answer": "By car — Interstate 84 clips the northwestern corner (Exit 72 / Route 89), and US Route 44 meets Route 74 in the town center. There is no passenger rail station in Ashford; the nearest is Hartford Union Station, about 29 miles west."
+      },
+      {
+        "question": "Is there a train to Ashford?",
+        "answer": "No. There is no passenger rail station in Ashford or anywhere in northeastern Connecticut. The nearest station is Hartford Union Station on the CTrail Hartford Line."
+      },
+      {
+        "question": "Who was Colonel Thomas Knowlton?",
+        "answer": "An Ashford selectman who led 78 men to Boston after Lexington and Concord, later commanded the intelligence unit Knowlton's Rangers (in which Nathan Hale served), and was killed at the Battle of Harlem Heights in 1776. Knowlton Memorial Hall on Pompey Hollow Road honors him."
+      },
+      {
+        "question": "What is Horizon Wings?",
+        "answer": "A raptor rehabilitation and education center housing more than 20 permanent resident birds that cannot be released. Private guided tours run by appointment; the center is closed Sundays and Mondays."
+      },
+      {
+        "question": "Is there a hotel in Ashford?",
+        "answer": "No hotel, motel, inn or B&B could be verified inside Ashford's town limits. The nearest apparent option is The Inn on Storrs in Mansfield Center, about 10 miles southwest — call ahead to confirm."
+      }
+    ],
+    "photos": [
+      {
+        "src": "/photos/ct/ashford/knowlton-memorial-hall.jpg",
+        "thumb": "/photos/ct/ashford/knowlton-memorial-hall_thumb.jpg",
+        "title": "Knowlton Memorial Hall",
+        "description": "Knowlton Memorial Hall, home to Babcock Library, in Ashford.",
+        "author": "Magicpiano",
+        "license": "CC BY-SA 3.0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:AshfordCT_KnowltonHall.jpg"
+      },
+      {
+        "src": "/photos/ct/ashford/lake-chaffee-ashford.jpg",
+        "thumb": "/photos/ct/ashford/lake-chaffee-ashford_thumb.jpg",
+        "title": "Lake Chaffee",
+        "description": "Lake Chaffee in Ashford.",
+        "author": "John Phelan",
+        "license": "CC BY 4.0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Lake_Chaffee,_Ashford_CT.jpg"
+      },
+      {
+        "src": "/photos/ct/ashford/church-farm-ashford.jpg",
+        "thumb": "/photos/ct/ashford/church-farm-ashford_thumb.jpg",
+        "title": "Church Farm, Ashford",
+        "description": "The historic Church Farm farmstead in Ashford, part of the Church Farm Preserve.",
+        "author": "Magicpiano",
+        "license": "CC BY-SA 3.0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:AshfordCT_ChurchFarm.jpg"
+      }
+    ]
+  },
+  "places": [
+    {
+      "slug": "knowlton-memorial-hall-babcock-library",
+      "name": "Knowlton Memorial Hall & Babcock Library",
+      "kind": "historic-site",
+      "town": "Ashford",
+      "state": "Connecticut",
+      "county": "Windham County",
+      "address": "25 Pompey Hollow Road, Ashford, CT 06278",
+      "official_url": "https://www.babcocklibrary.org/",
+      "summary": "Built in 1923-24 by Charles C. Knowlton to honor his father and Revolutionary War hero Col. Thomas Knowlton, the hall was listed on the National Register in 1994 and has served as town offices, library and meeting hall. Babcock Library occupies the second floor; open Monday, Tuesday and Friday 9-5, Wednesday noon-8, Saturday 9-1, closed Thursday and Sunday.",
+      "status": "open",
+      "photos": [
+        {
+          "src": "/photos/ct/ashford/knowlton-memorial-hall.jpg",
+          "thumb": "/photos/ct/ashford/knowlton-memorial-hall_thumb.jpg",
+          "title": "Knowlton Memorial Hall",
+          "description": "Knowlton Memorial Hall, home to Babcock Library, in Ashford.",
+          "author": "Magicpiano",
+          "license": "CC BY-SA 3.0",
+          "source_url": "https://commons.wikimedia.org/wiki/File:AshfordCT_KnowltonHall.jpg"
+        }
+      ]
+    },
+    {
+      "slug": "church-farm-preserve",
+      "name": "Church Farm Preserve",
+      "kind": "park",
+      "town": "Ashford",
+      "state": "Connecticut",
+      "county": "Windham County",
+      "address": "Parking on Varga Road, about 500 feet off Route 89, Ashford, CT 06278",
+      "official_url": "https://joshuastrust.org/property-list/ashford/church-farm-2/",
+      "summary": "A 79-acre Joshua's Trust preserve assembled in 1985, 1987 and 1998. The yellow-blazed 'The Ledges' trail runs roughly 2 miles to a 480-foot ledge viewpoint over the Mount Hope River valley. The farm's 1700s house and 1895 barn are on the National Register of Historic Places.",
+      "status": "open",
+      "photos": [
+        {
+          "src": "/photos/ct/ashford/church-farm-ashford.jpg",
+          "thumb": "/photos/ct/ashford/church-farm-ashford_thumb.jpg",
+          "title": "Church Farm, Ashford",
+          "description": "The historic Church Farm farmstead in Ashford, part of the Church Farm Preserve.",
+          "author": "Magicpiano",
+          "license": "CC BY-SA 3.0",
+          "source_url": "https://commons.wikimedia.org/wiki/File:AshfordCT_ChurchFarm.jpg"
+        }
+      ]
+    },
+    {
+      "slug": "friedman-memorial-forest",
+      "name": "Abraham R. and Samuel H. Friedman Memorial Forest",
+      "kind": "park",
+      "town": "Ashford",
+      "state": "Connecticut",
+      "county": "Windham County",
+      "address": "Bebbington Road off Bicknell Road, Ashford, CT 06278",
+      "official_url": "https://joshuastrust.org/property-list/ashford/friedman-memorial-forest/",
+      "summary": "143 acres of oak-hickory forest with Bebbington Brook running through the western third. Hartford lawyers Abraham R. and Samuel H. Friedman donated the land in 1987 under a deed requiring it be held as a nature and wildlife preserve open to the public for walking, hiking and observing.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "horizon-wings-raptor-rehabilitation",
+      "name": "Horizon Wings Raptor Rehabilitation & Education",
+      "kind": "attraction",
+      "town": "Ashford",
+      "state": "Connecticut",
+      "county": "Windham County",
+      "address": "Ashford, CT 06278",
+      "official_url": "https://www.horizonwings.org/",
+      "summary": "A 501(c)(3) raptor rehabilitation center founded in 2001 by Mary-Beth Kaeser, housing more than 20 permanent resident birds — corvids, falcons, hawks, owls and eagles — that cannot be released. Private guided tours by appointment only; closed Sundays and Mondays. Funded by educational programs, donations and grants; contact by email via the official site.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "crookes-orchard",
+      "name": "Crookes Orchard",
+      "kind": "attraction",
+      "town": "Ashford",
+      "state": "Connecticut",
+      "county": "Windham County",
+      "address": "317 Bebbington Road, Ashford, CT 06278",
+      "official_url": "https://crookesorchard.com/",
+      "summary": "A pick-your-own orchard and farm shop: blueberries from July, peaches in August, flowers from August and apples from September, plus a shop selling seasonal produce, fresh-baked breads, cider, cider donuts, ice cream sandwiches, honey, maple syrup and jams. Open Wednesday-Friday 11 a.m.-5 p.m., Saturday-Sunday 9 a.m.-5 p.m., closed Monday-Tuesday.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "pompey-hollow-park",
+      "name": "Pompey Hollow Park",
+      "kind": "park",
+      "town": "Ashford",
+      "state": "Connecticut",
+      "county": "Windham County",
+      "address": "25 Tremko Lane, Ashford, CT 06278",
+      "summary": "Ashford's one handicapped-accessible walking trail and a public access point to the Mount Hope River, with pickle ball courts and benches. Hosts the Ashford Farmers' Market on Sundays 10 a.m.-1 p.m. from Mother's Day through Thanksgiving.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "midway-restaurant-pizza",
+      "name": "Midway Restaurant & Pizza",
+      "kind": "restaurant",
+      "town": "Ashford",
+      "state": "Connecticut",
+      "county": "Windham County",
+      "address": "174 Ashford Center Road, Ashford, CT 06278",
+      "summary": "A long-running roadside restaurant and pizzeria on Route 44, Ashford's only establishment currently holding an on-premises restaurant liquor permit. Takeout available.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "westford-hill-distillers",
+      "name": "Westford Hill Distillers",
+      "kind": "brewery",
+      "town": "Ashford",
+      "state": "Connecticut",
+      "county": "Windham County",
+      "address": "196 Chatey Road, Ashford, CT 06278",
+      "summary": "A small farm distillery in Ashford's Westford section, a licensed Connecticut spirits manufacturer since 1999 under the Chatey family. Visitor hours and tasting-room access could not be confirmed — call ahead before visiting.",
+      "status": "open",
+      "photos": []
+    }
+  ],
+  "entries": [
+    {
+      "kind": "sight",
+      "name": "Knowlton Memorial Hall & Babcock Library",
+      "place_slug": "knowlton-memorial-hall-babcock-library",
+      "note": "An NRHP-listed 1923-24 hall honoring Colonel Thomas Knowlton."
+    },
+    {
+      "kind": "sight",
+      "name": "Church Farm Preserve",
+      "place_slug": "church-farm-preserve",
+      "note": "A 79-acre preserve with a ledge trail over the Mount Hope River valley."
+    },
+    {
+      "kind": "sight",
+      "name": "Friedman Memorial Forest",
+      "place_slug": "friedman-memorial-forest",
+      "note": "143 acres of oak-hickory forest open for walking and hiking."
+    },
+    {
+      "kind": "sight",
+      "name": "Horizon Wings Raptor Rehabilitation & Education",
+      "place_slug": "horizon-wings-raptor-rehabilitation",
+      "note": "Guided tours of a raptor rehabilitation center, by appointment."
+    },
+    {
+      "kind": "sight",
+      "name": "Crookes Orchard",
+      "place_slug": "crookes-orchard",
+      "note": "Pick-your-own blueberries, peaches and apples plus a farm shop."
+    },
+    {
+      "kind": "sight",
+      "name": "Pompey Hollow Park",
+      "place_slug": "pompey-hollow-park",
+      "note": "An accessible walking trail and Sunday farmers' market."
+    },
+    {
+      "kind": "food",
+      "name": "Midway Restaurant & Pizza",
+      "place_slug": "midway-restaurant-pizza",
+      "note": "Roadside restaurant and pizzeria on Route 44."
+    },
+    {
+      "kind": "food",
+      "name": "Westford Hill Distillers",
+      "place_slug": "westford-hill-distillers",
+      "note": "A farm distillery operating since 1999; call ahead for visits."
+    }
+  ],
+  "links": [
+    {
+      "target": "guide:eastford-ct-travel-guide",
+      "kind": "shared-history",
+      "note": "Eastford was part of Ashford until 1847, when it split off to organize its own town."
+    },
+    {
+      "target": "guide:willington-ct-travel-guide",
+      "kind": "shared-history",
+      "note": "A one-mile strip of Ashford was annexed to Willington in October 1727."
+    },
+    {
+      "target": "guide:storrs-ct-travel-guide",
+      "kind": "same-region",
+      "note": "The Nipmuck Trail runs through Ashford, Willington, Mansfield and Union."
+    },
+    {
+      "target": "guide:chaplin-ct-travel-guide",
+      "kind": "shared-history",
+      "note": "Natchaug State Forest spans Ashford, Chaplin, Eastford and three other towns."
+    }
+  ]
+}

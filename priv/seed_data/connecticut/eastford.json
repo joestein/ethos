@@ -1,0 +1,175 @@
+{
+  "guide": {
+    "slug": "eastford-ct-travel-guide",
+    "title": "Eastford, Connecticut: A Forest Town Split from Ashford",
+    "destination": "Eastford, Connecticut",
+    "state": "Connecticut",
+    "county": "Windham County",
+    "tier": "town-page",
+    "intro": "Eastford was settled in the early 1700s and incorporated as its own town in 1847, when it split off from parent town Ashford; it now contains a large share of Natchaug State Forest. Before settling into farming, Eastford ran light industry — cotton batting, twine and wooden handles — and the village of Phoenixville grew up around a twine mill on the Still River. General Nathaniel Lyon was born in what was then Ashford (now Eastford) in 1818 and died in 1861 at the Battle of Wilson's Creek, the first Union general killed in the Civil War; roughly 15,000 people attended his funeral. Andrew T. Judson, born here in 1784, became a federal judge who ruled for the Amistad captives' freedom in 1840, a decision the Supreme Court upheld.",
+    "sections": [
+      {
+        "heading": "Getting there",
+        "body": "US Route 44 crosses the south of town and Route 198 runs north-south through the village, meeting Route 244 in Eastford center. Route 198 runs about 19 miles across Connecticut from US 6 in Chaplin, across the Natchaug River, through Eastford, and on toward Woodstock and Southbridge, Massachusetts. There is no passenger rail station anywhere in Windham County; the nearest Connecticut rail station is Hartford Union Station, well to the west, and Worcester, Massachusetts is a comparable option to the northeast. Plan on a car for the last leg either way."
+      },
+      {
+        "heading": "Natchaug Forest and Frog Rock",
+        "body": "Natchaug State Forest, established in 1917, covers 13,438 acres across six towns including Eastford, and preserves the birthplace site of General Nathaniel Lyon as a small state park within its boundaries. On US Route 44, Frog Rock — a glacial boulder first painted to resemble a frog in 1881 by state legislator Thomas J. Thurber — remains one of the Quiet Corner's best-known roadside photo stops, privately owned since 2012."
+      }
+    ],
+    "faq": [
+      {
+        "question": "How do I get to Eastford?",
+        "answer": "By car — US Route 44 crosses the south of town and Route 198 runs north-south through the village. There is no passenger rail station anywhere in Windham County; the nearest is Hartford Union Station, well to the west."
+      },
+      {
+        "question": "What is Frog Rock?",
+        "answer": "A glacial boulder on US Route 44 first painted to resemble a frog in 1881 by state legislator Thomas J. Thurber. It has been a privately owned roadside attraction since 2012."
+      },
+      {
+        "question": "Is there a hotel in Eastford?",
+        "answer": "No hotel, inn or B&B could be verified operating inside Eastford. The nearest verified lodging is The Inn at Woodstock Hill in Woodstock; for an in-town overnight, Charlie Brown Campground on Route 198 offers RV sites and cabins."
+      }
+    ],
+    "photos": [
+      {
+        "src": "/photos/ct/eastford/natchaug-state-forest-river-eastford.jpg",
+        "thumb": "/photos/ct/eastford/natchaug-state-forest-river-eastford_thumb.jpg",
+        "title": "Natchaug State Forest",
+        "description": "The Natchaug River running through Natchaug State Forest in Eastford.",
+        "author": "JJBers",
+        "license": "CC BY 2.0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Natchaug_State_Forest_-_24200408188.jpg"
+      }
+    ]
+  },
+  "places": [
+    {
+      "slug": "natchaug-state-forest-eastford",
+      "name": "Natchaug State Forest",
+      "kind": "park",
+      "town": "Eastford",
+      "state": "Connecticut",
+      "county": "Windham County",
+      "address": "Route 198, Eastford, CT 06242",
+      "official_url": "https://portal.ct.gov/deep/state-parks/forests/natchaug-state-forest",
+      "summary": "A 13,438-acre forest, established in 1917, spreading across six towns including Eastford, Ashford and Chaplin. Popular for horse trails, fishing and riverfront picnic sites, with a trail network including the Natchaug Trail. Open 8 a.m. to sunset.",
+      "status": "open",
+      "photos": [
+        {
+          "src": "/photos/ct/eastford/natchaug-state-forest-river-eastford.jpg",
+          "thumb": "/photos/ct/eastford/natchaug-state-forest-river-eastford_thumb.jpg",
+          "title": "Natchaug State Forest",
+          "description": "The Natchaug River running through Natchaug State Forest in Eastford.",
+          "author": "JJBers",
+          "license": "CC BY 2.0",
+          "source_url": "https://commons.wikimedia.org/wiki/File:Natchaug_State_Forest_-_24200408188.jpg"
+        }
+      ]
+    },
+    {
+      "slug": "nathaniel-lyon-birthplace-site",
+      "name": "Nathaniel Lyon Birthplace Site",
+      "kind": "historic-site",
+      "town": "Eastford",
+      "state": "Connecticut",
+      "county": "Windham County",
+      "address": "Within Natchaug State Forest, off Route 198, Eastford, CT 06242",
+      "summary": "A stone fireplace and chimney are all that remain of the house where Gen. Nathaniel Lyon was born in 1818, preserved as a small state park inside Natchaug State Forest. Lyon was the first Union general killed in the Civil War, at Wilson's Creek, Missouri, in 1861.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "buells-orchard",
+      "name": "Buell's Orchard",
+      "kind": "attraction",
+      "town": "Eastford",
+      "state": "Connecticut",
+      "county": "Windham County",
+      "address": "108 Crystal Pond Road, Eastford, CT 06242",
+      "official_url": "https://www.buellsorchard.com/",
+      "summary": "A family farm serving the community since 1889, with pick-your-own strawberries, blueberries, peaches, apples and pumpkins plus a farm market. Open Monday 8 a.m.-7 p.m., Tuesday-Friday 8 a.m.-5 p.m., Saturday 8 a.m.-3 p.m., closed Sunday.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "frog-rock",
+      "name": "Frog Rock",
+      "kind": "attraction",
+      "town": "Eastford",
+      "state": "Connecticut",
+      "county": "Windham County",
+      "address": "212 Pomfret Road (US Route 44), Eastford, CT 06242",
+      "summary": "A glacial boulder painted to look like a frog, first decorated in 1881 by state legislator Thomas J. Thurber. One of the Quiet Corner's best-known roadside photo stops; privately owned since 2012, with a seasonal food shack alongside it.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "crystal-pond-park",
+      "name": "Crystal Pond Park",
+      "kind": "park",
+      "town": "Eastford",
+      "state": "Connecticut",
+      "county": "Windham County",
+      "address": "305 Crystal Pond Rd., Woodstock, CT 06281 (on the Eastford/Woodstock line)",
+      "official_url": "https://crystalpondpark.com/",
+      "summary": "134 wooded acres with 2,500 feet of waterfront, an 18-hole disc golf course, hiking trails, and a dining hall, lakeside pavilion and cabin available for rent. Open daily, year-round, during daylight hours; swim at your own risk, no lifeguards.",
+      "status": "open",
+      "photos": []
+    }
+  ],
+  "entries": [
+    {
+      "kind": "sight",
+      "name": "Natchaug State Forest",
+      "place_slug": "natchaug-state-forest-eastford",
+      "note": "13,438 acres across six towns, with horse trails and fishing."
+    },
+    {
+      "kind": "sight",
+      "name": "Nathaniel Lyon Birthplace Site",
+      "place_slug": "nathaniel-lyon-birthplace-site",
+      "note": "A stone fireplace marking the birthplace of a Civil War general."
+    },
+    {
+      "kind": "sight",
+      "name": "Buell's Orchard",
+      "place_slug": "buells-orchard",
+      "note": "Pick-your-own fruit and a farm market, family-run since 1889."
+    },
+    {
+      "kind": "sight",
+      "name": "Frog Rock",
+      "place_slug": "frog-rock",
+      "note": "A painted boulder roadside attraction on US Route 44."
+    },
+    {
+      "kind": "sight",
+      "name": "Crystal Pond Park",
+      "place_slug": "crystal-pond-park",
+      "note": "134 acres of woods and waterfront on the Eastford/Woodstock line."
+    }
+  ],
+  "links": [
+    {
+      "target": "guide:ashford-ct-travel-guide",
+      "kind": "shared-history",
+      "note": "Eastford was part of Ashford until 1847, when it split off to organize its own town."
+    },
+    {
+      "target": "guide:chaplin-ct-travel-guide",
+      "kind": "nearby",
+      "note": "CT Route 198 begins at US 6 in Chaplin and heads north across the Natchaug River into Eastford."
+    },
+    {
+      "target": "guide:woodstock-ct-travel-guide",
+      "kind": "shared-history",
+      "note": "Crystal Pond Park, 134 wooded acres, sits on the Eastford/Woodstock town line."
+    },
+    {
+      "target": "guide:union-ct-travel-guide",
+      "kind": "same-region",
+      "note": "Route 171 runs east and southeast from Union's town center into Eastford."
+    }
+  ]
+}

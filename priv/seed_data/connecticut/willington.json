@@ -1,0 +1,265 @@
+{
+  "guide": {
+    "slug": "willington-ct-travel-guide",
+    "title": "Willington, Connecticut: Glassworks, a Turnpike Tavern, and Harvard's President",
+    "destination": "Willington, Connecticut",
+    "state": "Connecticut",
+    "county": "Tolland County",
+    "intro": "Willington began as a 1720 land patent: the Connecticut General Assembly granted roughly 16,000 acres to nine proprietors, including Roger Wolcott. The town incorporated on May 11, 1727, and a one-mile strip of Ashford was annexed that October. Its name comes from Wellington in Somersetshire, birthplace of Roger Wolcott's grandfather; Wolcott later became the 28th governor of the Connecticut Colony. Willington was a 19th-century glassmaking town — the West Willington Glass Works operated from 1814 to 1872 — and water power drove mills from the earliest settlement onward. The New London, Willimantic and Palmer Railroad reached Willington in 1850 with depots in South and West Willington, though no passenger service remains today. Jared Sparks, born in Willington in 1789, became one of America's first great documentary historians and served as president of Harvard from 1849 to 1853. Hardware magnate Philip Corbin, born here in 1824, built the firm that became New Britain's P&F Corbin Company.",
+    "sections": [
+      {
+        "heading": "Glassworks and a Harvard president",
+        "body": "Willington began as a 1720 land patent for roughly 16,000 acres to nine proprietors, including Roger Wolcott, whose grandfather was born in Wellington, Somersetshire, England — the source of the town's name. The town incorporated on May 11, 1727. Its 19th-century economy ran on water power and glass: the West Willington Glass Works turned out bottles, inkwells, tableware and jars from 1814 to 1872, and mills lined the town's brooks and rivers from the earliest settlement. The New London, Willimantic and Palmer Railroad reached Willington in 1850 with depots in South and West Willington, though no passenger service remains today. Two Willington natives left an outsized mark: Jared Sparks, born in 1789, became one of America's first great documentary historians, editing the writings of Washington and Franklin, and served as president of Harvard from 1849 to 1853; hardware magnate Philip Corbin, born in 1824, built the firm that became New Britain's P&F Corbin Company, whose decorative hardware was used in the Connecticut State Capitol."
+      },
+      {
+        "heading": "Getting there",
+        "body": "Interstate 84 runs straight through Willington, about 25 miles northeast of Hartford, continuing on toward Boston. US Route 44 heads east toward Providence, with Routes 32, 74 and 320 serving as local corridors. There is no passenger rail station in Willington or anywhere in Tolland County; the nearest train service is the CTrail Hartford Line or Amtrak at Hartford Union Station, roughly 25 miles west-southwest. Metro-North's New Haven Line and Shore Line East serve the coast and do not come near Willington."
+      },
+      {
+        "heading": "Where to eat",
+        "body": "Willington Pizza House, open since 1978, is known for its Red Potato and Seafood Casino pizzas and national pizza-competition wins; its sister location, Willington Pizza Too, opened in 1988 on Route 74 with beer and wine rather than a full bar. Hilltop Restaurant Bar & Banquet serves American-Italian fare and weekend breakfast with produce from its own garden. No hotel, inn or B&B could be verified inside Willington; the nearest confirmed lodging clusters sit 12-13 miles west in Vernon."
+      }
+    ],
+    "faq": [
+      {
+        "question": "How do I get to Willington?",
+        "answer": "By car — Interstate 84 runs straight through town, about 25 miles northeast of Hartford. There is no passenger rail station in Willington or anywhere in Tolland County; the nearest train service is Hartford Union Station."
+      },
+      {
+        "question": "Is there a train to Willington?",
+        "answer": "No. Willington's rail history ended long ago — the New London, Willimantic and Palmer Railroad reached town in 1850 but no passenger service remains. The nearest current station is Hartford Union Station, roughly 25 miles west-southwest."
+      },
+      {
+        "question": "What is the Daniel Glazier Tavern?",
+        "answer": "A Federal-period tavern built around 1815 at the west end of the Willington green, owned by the Willington Historical Society. It is currently under stabilization and restoration with no active museum or public hours; the society holds programs at the Town Office Building or the Public Library instead."
+      },
+      {
+        "question": "What is Willington Pizza known for?",
+        "answer": "The Red Potato Pizza (sour cream, potatoes and sharp cheddar) and the Seafood Casino Pizza, both national pizza-competition winners. Opened in 1978, the original location on River Road now seats over 200."
+      },
+      {
+        "question": "Is there a hotel in Willington?",
+        "answer": "No hotel, inn or B&B could be verified inside Willington. The nearest confirmed lodging clusters sit 12-13 miles west in Vernon."
+      }
+    ],
+    "photos": [
+      {
+        "src": "/photos/ct/willington/daniel-glazier-tavern.jpg",
+        "thumb": "/photos/ct/willington/daniel-glazier-tavern_thumb.jpg",
+        "title": "Daniel Glazier Tavern",
+        "description": "The Daniel Glazier Tavern, owned by the Willington Historical Society, at the west end of the Willington green.",
+        "author": "John Phelan",
+        "license": "CC BY 4.0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Willington_Historical_Society_Glazier_Tavern,_Willington_CT.jpg"
+      },
+      {
+        "src": "/photos/ct/willington/fenton-ruby-park-willington.jpg",
+        "thumb": "/photos/ct/willington/fenton-ruby-park-willington_thumb.jpg",
+        "title": "Fenton-Ruby Park and Wildlife Preserve",
+        "description": "Spring foliage at Fenton-Ruby Park and Wildlife Preserve in Willington.",
+        "author": "John Phelan",
+        "license": "CC BY 4.0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Fenton_Ruby_Park,_Willington_CT.jpg"
+      }
+    ]
+  },
+  "places": [
+    {
+      "slug": "daniel-glazier-tavern",
+      "name": "Daniel Glazier Tavern",
+      "kind": "historic-site",
+      "town": "Willington",
+      "state": "Connecticut",
+      "county": "Tolland County",
+      "address": "1 Common Road, Willington, CT 06279",
+      "official_url": "https://willingtonhistoricalsocietyct.org/",
+      "summary": "A Federal-period, two-story, hip-roofed tavern built around 1815 by Daniel Glazier at the junction of Route 74 and Route 320, at the west end of the Willington green. Owned by the Willington Historical Society since 2009, the building is currently under stabilization and restoration; it has no active museum or public hours, and society programs are held at the Town Office Building or the Public Library instead.",
+      "history": "Tavern keepers included Isaac Glazier (1815-1835), Arial Eldridge, Alden Skinner and Fielder Heath, serving stagecoach travelers on the old turnpikes.",
+      "status": "open",
+      "photos": [
+        {
+          "src": "/photos/ct/willington/daniel-glazier-tavern.jpg",
+          "thumb": "/photos/ct/willington/daniel-glazier-tavern_thumb.jpg",
+          "title": "Daniel Glazier Tavern",
+          "description": "The Daniel Glazier Tavern, owned by the Willington Historical Society, at the west end of the Willington green.",
+          "author": "John Phelan",
+          "license": "CC BY 4.0",
+          "source_url": "https://commons.wikimedia.org/wiki/File:Willington_Historical_Society_Glazier_Tavern,_Willington_CT.jpg"
+        }
+      ]
+    },
+    {
+      "slug": "fenton-ruby-park-wildlife-preserve",
+      "name": "Fenton-Ruby Park & Wildlife Preserve",
+      "kind": "park",
+      "town": "Willington",
+      "state": "Connecticut",
+      "county": "Tolland County",
+      "address": "Burma Road, Willington, CT 06279",
+      "official_url": "https://www.willingtonct.gov/1272/Trails---Fenton-Ruby-Park-Wildlife-Prese",
+      "summary": "A 305-acre town-owned preserve of mixed forest, wetlands, ponds and grassland, including Taylor Pond and a beaver pond, threaded by old agricultural stone walls. Hiking and walking trails, bird watching, fishing, non-motorized boating, cross-country skiing and picnic areas.",
+      "status": "open",
+      "photos": [
+        {
+          "src": "/photos/ct/willington/fenton-ruby-park-willington.jpg",
+          "thumb": "/photos/ct/willington/fenton-ruby-park-willington_thumb.jpg",
+          "title": "Fenton-Ruby Park and Wildlife Preserve",
+          "description": "Spring foliage at Fenton-Ruby Park and Wildlife Preserve in Willington.",
+          "author": "John Phelan",
+          "license": "CC BY 4.0",
+          "source_url": "https://commons.wikimedia.org/wiki/File:Fenton_Ruby_Park,_Willington_CT.jpg"
+        }
+      ]
+    },
+    {
+      "slug": "talmadge-tract-royal-knowlton-preserve",
+      "name": "Talmadge Tract & Royal Knowlton Preserve",
+      "kind": "park",
+      "town": "Willington",
+      "state": "Connecticut",
+      "county": "Tolland County",
+      "address": "50 Mason Road, Willington, CT 06279",
+      "official_url": "https://www.willingtonct.gov/1271/Trails---Talmadge-Tract-Knowlton-Preserv",
+      "summary": "Roughly 586 protected acres, with the 28-acre Talmadge Tract and 138-acre Royal Knowlton Preserve forming a hiking core connected to the Blue-Blazed Nipmuck Trail. Combined circuits run up to about 2.2 miles, passing hemlock groves, ravine views above the Fenton River, and a glacial erratic.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "roaring-brook-park-willington",
+      "name": "Roaring Brook Park",
+      "kind": "park",
+      "town": "Willington",
+      "state": "Connecticut",
+      "county": "Tolland County",
+      "address": "46 Village Hill Road, Willington, CT 06279",
+      "official_url": "https://www.willingtonct.gov/1273/Town-Parks-and-Amenities",
+      "summary": "A small town park on Roaring Brook, one of the historic mill-power streams named in the town's own history, offering scenic brook views and seasonal fishing.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "willington-public-library",
+      "name": "Willington Public Library",
+      "kind": "attraction",
+      "town": "Willington",
+      "state": "Connecticut",
+      "county": "Tolland County",
+      "address": "7 Ruby Road, Willington, CT 06279",
+      "official_url": "https://www.willingtonpubliclibrary.org/",
+      "summary": "Beyond books, the library lends museum and attraction passes and runs a 'Library of Things' with a 3D printer, WiFi hotspots and Chromebooks. Open Tuesday noon-8, Wednesday noon-5, Thursday noon-8, Friday and Saturday 10-3, closed Monday.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "willington-pizza-house",
+      "name": "Willington Pizza House",
+      "kind": "restaurant",
+      "town": "Willington",
+      "state": "Connecticut",
+      "county": "Tolland County",
+      "address": "25 River Road (Route 32), Willington, CT 06279",
+      "official_url": "https://www.willingtonpizza.com/",
+      "summary": "Opened in 1978 with four tables, now seating over 200. Known for the Red Potato Pizza (sour cream, potatoes and sharp cheddar) and the Seafood Casino Pizza, both national pizza-competition winners, with recognition from Connecticut Magazine, Good Morning America and the New York Times. Open Monday-Thursday 10:30 a.m.-9 p.m., Friday-Saturday to 10 p.m., Sunday to 9 p.m.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "willington-pizza-too",
+      "name": "Willington Pizza Too",
+      "kind": "restaurant",
+      "town": "Willington",
+      "state": "Connecticut",
+      "county": "Tolland County",
+      "address": "11 Phelps Way (Route 74), Willington, CT 06279",
+      "official_url": "https://www.willingtonpizza.com/willington-pizza-too/",
+      "summary": "The second Willington Pizza location, opened in 1988, mirroring the original's award-winning pies plus bone-in wings and Greek pizza. Beer and wine only — 11 rotating craft beers on tap plus about nine wines. Open Monday-Saturday 10 a.m.-10 p.m., Sunday 9 a.m.-9 p.m.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "hilltop-restaurant-bar-banquet",
+      "name": "Hilltop Restaurant Bar & Banquet",
+      "kind": "restaurant",
+      "town": "Willington",
+      "state": "Connecticut",
+      "county": "Tolland County",
+      "address": "39 Adamec Road, Willington, CT 06279",
+      "official_url": "https://www.hilltopct.net/",
+      "summary": "A full-service American/Italian-American and seafood restaurant with daily chef's specials, weekend breakfast, and produce grown in an on-site garden. Banquet rooms seat up to 85. Open Monday-Wednesday 11 a.m.-9 p.m., Thursday-Friday to 10 p.m., Saturday from 8 a.m., Sunday from 8 a.m.",
+      "status": "open",
+      "photos": []
+    }
+  ],
+  "entries": [
+    {
+      "kind": "sight",
+      "name": "Daniel Glazier Tavern",
+      "place_slug": "daniel-glazier-tavern",
+      "note": "An 1815 turnpike tavern on the Willington green, under restoration."
+    },
+    {
+      "kind": "sight",
+      "name": "Fenton-Ruby Park & Wildlife Preserve",
+      "place_slug": "fenton-ruby-park-wildlife-preserve",
+      "note": "305 acres of forest, wetlands and ponds with hiking trails."
+    },
+    {
+      "kind": "sight",
+      "name": "Talmadge Tract & Royal Knowlton Preserve",
+      "place_slug": "talmadge-tract-royal-knowlton-preserve",
+      "note": "586 protected acres linked to the Blue-Blazed Nipmuck Trail."
+    },
+    {
+      "kind": "sight",
+      "name": "Roaring Brook Park",
+      "place_slug": "roaring-brook-park-willington",
+      "note": "A small park on a historic mill-power stream."
+    },
+    {
+      "kind": "sight",
+      "name": "Willington Public Library",
+      "place_slug": "willington-public-library",
+      "note": "Lends museum passes and runs a 'Library of Things.'"
+    },
+    {
+      "kind": "food",
+      "name": "Willington Pizza House",
+      "place_slug": "willington-pizza-house",
+      "note": "Since 1978; national-award-winning Red Potato and Seafood Casino pizzas."
+    },
+    {
+      "kind": "food",
+      "name": "Willington Pizza Too",
+      "place_slug": "willington-pizza-too",
+      "note": "The 1988 sister location on Route 74, beer and wine only."
+    },
+    {
+      "kind": "food",
+      "name": "Hilltop Restaurant Bar & Banquet",
+      "place_slug": "hilltop-restaurant-bar-banquet",
+      "note": "American-Italian dining with produce from an on-site garden."
+    }
+  ],
+  "links": [
+    {
+      "target": "guide:tolland-ct-travel-guide",
+      "kind": "nearby",
+      "note": "Nye-Holman State Forest spans Tolland, Ellington and Willington."
+    },
+    {
+      "target": "guide:ashford-ct-travel-guide",
+      "kind": "shared-history",
+      "note": "A one-mile strip of Ashford was annexed to Willington in October 1727."
+    },
+    {
+      "target": "guide:union-ct-travel-guide",
+      "kind": "shared-history",
+      "note": "Nipmuck State Forest and the Nipmuck Trail both run through Union and Willington."
+    },
+    {
+      "target": "guide:storrs-ct-travel-guide",
+      "kind": "same-region",
+      "note": "The Nipmuck Trail runs through Ashford, Willington, Mansfield and Union."
+    }
+  ]
+}

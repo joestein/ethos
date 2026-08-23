@@ -1,0 +1,231 @@
+{
+  "guide": {
+    "slug": "hampton-ct-travel-guide",
+    "title": "Hampton, Connecticut: A Naturalist's Farm in the Quiet Corner",
+    "destination": "Hampton, Connecticut",
+    "state": "Connecticut",
+    "county": "Windham County",
+    "intro": "Hampton was incorporated in 1786 from portions of five surrounding towns — Pomfret, Brooklyn, Canterbury, Mansfield and Windham — having been settled in the early 18th century as an agricultural community originally called \"Windham Village.\" European settlement began about 1712, largely by families from the Massachusetts Bay Colony, in territory that lay within the Nipmuck people's homeland. Hampton was an early mill town, with mills along the Little River as early as 1718 making cider, shingles and cotton. In 1872, a railroad station built through the efforts of former Governor Chauncey Cleveland let farmers ship perishables to distant markets and turned the farming town into a summer colony. Pulitzer Prize-winning naturalist Edwin Way Teale and his wife Nellie moved to their Hampton farm, Trail Wood, in 1959; Teale wrote ten of his 27 books there before his death in 1980, and Nellie donated the property to the Connecticut Audubon Society in 1981.",
+    "sections": [
+      {
+        "heading": "A summer colony and a naturalist's farm",
+        "body": "Hampton was incorporated in 1786 from portions of five surrounding towns — Pomfret, Brooklyn, Canterbury, Mansfield and Windham — settled from about 1712 mostly by families from the Massachusetts Bay Colony. Mills operated along the Little River as early as 1718, and the town later supported a tannery and factories making pins, buttons, rakes, spectacles, hats and silver spoons. In 1872, a railroad station built through the efforts of former Governor Chauncey Cleveland — who had practiced law in Hampton since 1819 and served as the state's 31st governor — let farmers ship perishables to distant markets and turned Hampton into a summer colony. Pulitzer Prize-winning naturalist Edwin Way Teale and his wife Nellie moved to their Hampton farm, Trail Wood, in 1959; Teale wrote ten of his 27 books there before his death in 1980, and Nellie donated the property to the Connecticut Audubon Society in 1981. The Hampton Hill Historic District, listed on the National Register in 1982, survives largely intact because industry and the railroads bypassed it."
+      },
+      {
+        "heading": "Getting there",
+        "body": "Hampton has no rail or transit of its own. US Route 6 runs east-west through town on the Willimantic-to-Brooklyn/Danielson corridor, and Connecticut Route 97 crosses it north-south as the tree-lined boulevard through the historic village center, continuing toward Pomfret and Scotland. The nearest interstate interchange is I-395 in Killingly to the east. There is no passenger rail station in Hampton or anywhere in Windham County; the practical rail options are Amtrak at New London to the south or Amtrak/CTrail at Hartford to the west, followed by a substantial drive."
+      }
+    ],
+    "faq": [
+      {
+        "question": "How do I get to Hampton?",
+        "answer": "By car — US Route 6 runs east-west through town, and Route 97 crosses it north-south through the village center. There is no passenger rail station in Hampton or anywhere in Windham County."
+      },
+      {
+        "question": "Is there a train to Hampton?",
+        "answer": "No. The practical rail options are Amtrak at New London to the south or Amtrak/CTrail at Hartford to the west, both followed by a substantial drive."
+      },
+      {
+        "question": "What is Trail Wood?",
+        "answer": "The former farm of Pulitzer Prize-winning naturalist Edwin Way Teale, now a 168-acre Connecticut Audubon Society sanctuary with nearly 4 miles of trails, open dawn to dusk with a suggested $2 donation. The historic house is shown by appointment only."
+      },
+      {
+        "question": "Is there a restaurant in Hampton?",
+        "answer": "No restaurant, cafe, diner or bakery could be verified operating in Hampton. Quiet Corner Winery pours wine with visiting food trucks rather than serving full meals; plan meals in a neighboring town along US 6 or Route 97."
+      },
+      {
+        "question": "Is there a hotel in Hampton?",
+        "answer": "No hotel, motel or staffed inn could be verified inside Hampton. The one confirmed lodging option is Quiet Corner Cottage, a self-catering vacation rental near Pine Acres Lake."
+      }
+    ],
+    "photos": [
+      {
+        "src": "/photos/ct/hampton/trail-wood-teale-writing-cabin.jpg",
+        "thumb": "/photos/ct/hampton/trail-wood-teale-writing-cabin_thumb.jpg",
+        "title": "Trail Wood writing cabin",
+        "description": "Edwin Way Teale's writing cabin at Trail Wood sanctuary in Hampton.",
+        "author": "Johnston9494",
+        "license": "CC BY-SA 4.0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Trail_Wood_writing_cabin.jpg"
+      },
+      {
+        "src": "/photos/ct/hampton/fletcher-memorial-library-hampton.jpg",
+        "thumb": "/photos/ct/hampton/fletcher-memorial-library-hampton_thumb.jpg",
+        "title": "Fletcher Memorial Library",
+        "description": "Fletcher Memorial Library on Hampton Hill.",
+        "author": "John Phelan",
+        "license": "CC BY 4.0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Fletcher_Memorial_Library,_Hampton_CT.jpg"
+      },
+      {
+        "src": "/photos/ct/hampton/pine-acres-lake-goodwin-forest.jpg",
+        "thumb": "/photos/ct/hampton/pine-acres-lake-goodwin-forest_thumb.jpg",
+        "title": "Pine Acres Lake observation deck",
+        "description": "The observation deck at the Pine Acres Lake boat launch in James L. Goodwin State Forest.",
+        "author": "Morrowlong",
+        "license": "CC BY-SA 4.0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:James_Goodwin_State_Forest_Pine_Acres_Lake_Observation_Deck_at_Boat_Launch.jpg"
+      }
+    ]
+  },
+  "places": [
+    {
+      "slug": "trail-wood-edwin-way-teale-sanctuary",
+      "name": "Trail Wood — Edwin Way Teale Memorial Sanctuary",
+      "kind": "park",
+      "town": "Hampton",
+      "state": "Connecticut",
+      "county": "Windham County",
+      "address": "93 Kenyon Road, Hampton, CT 06247",
+      "official_url": "https://www.ctaudubon.org/trail-wood-home/",
+      "summary": "A 168-acre Connecticut Audubon Society sanctuary with nearly 4 miles of trails through forest, fields, brooks and ponds — the former home of Pulitzer Prize-winning naturalist Edwin Way Teale. Trails open dawn to dusk, $2 suggested donation; the historic house is shown by appointment only.",
+      "status": "open",
+      "photos": [
+        {
+          "src": "/photos/ct/hampton/trail-wood-teale-writing-cabin.jpg",
+          "thumb": "/photos/ct/hampton/trail-wood-teale-writing-cabin_thumb.jpg",
+          "title": "Trail Wood writing cabin",
+          "description": "Edwin Way Teale's writing cabin at Trail Wood sanctuary in Hampton.",
+          "author": "Johnston9494",
+          "license": "CC BY-SA 4.0",
+          "source_url": "https://commons.wikimedia.org/wiki/File:Trail_Wood_writing_cabin.jpg"
+        }
+      ]
+    },
+    {
+      "slug": "james-l-goodwin-state-forest",
+      "name": "James L. Goodwin State Forest & Goodwin Conservation Center",
+      "kind": "park",
+      "town": "Hampton",
+      "state": "Connecticut",
+      "county": "Windham County",
+      "address": "23 Potter Road, Hampton, CT 06247",
+      "official_url": "https://ctparks.com/parks/james-l-goodwin-state-forest",
+      "summary": "More than 2,000 acres with 14 miles of trails, centered on the 135-acre Pine Acres Lake with a boat launch (electric motors only). The Conservation Center houses a small nature museum and the Richard D. Haley Native Plant Wildlife Gardens; call ahead, as the Center operates part-time.",
+      "status": "open",
+      "photos": [
+        {
+          "src": "/photos/ct/hampton/pine-acres-lake-goodwin-forest.jpg",
+          "thumb": "/photos/ct/hampton/pine-acres-lake-goodwin-forest_thumb.jpg",
+          "title": "Pine Acres Lake observation deck",
+          "description": "The observation deck at the Pine Acres Lake boat launch in James L. Goodwin State Forest.",
+          "author": "Morrowlong",
+          "license": "CC BY-SA 4.0",
+          "source_url": "https://commons.wikimedia.org/wiki/File:James_Goodwin_State_Forest_Pine_Acres_Lake_Observation_Deck_at_Boat_Launch.jpg"
+        }
+      ]
+    },
+    {
+      "slug": "fletcher-memorial-library",
+      "name": "Fletcher Memorial Library",
+      "kind": "historic-site",
+      "town": "Hampton",
+      "state": "Connecticut",
+      "county": "Windham County",
+      "address": "257 Main Street, Hampton, CT 06247",
+      "official_url": "https://www.fletchermemoriallibrary.org/",
+      "summary": "An Italian Victorian building established as a library in 1924 by Austin B. Fletcher as a memorial to his mother Harriet and aunt Eliza Durkee; it marked its centenary in 2024 and still serves as Hampton's library. Open Wednesday noon-7, Thursday-Friday 9-noon, Saturday 9-3.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "hampton-hill-historic-district",
+      "name": "Hampton Hill Historic District",
+      "kind": "historic-site",
+      "town": "Hampton",
+      "state": "Connecticut",
+      "county": "Windham County",
+      "address": "Main Street, Old Route 6 and Cedar Swamp Road (along Route 97), Hampton, CT 06247",
+      "official_url": "https://www.hamptonct.org/",
+      "summary": "Listed on the National Register in 1982, the district holds 62 contributing buildings — 15 houses from the 18th century — along roughly a mile of tree-lined Route 97. Landmarks visible from the street include the Congregational Church, a circa-1727 tavern now a private residence, and the town hall in a 1920s former firehouse.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "quiet-corner-winery",
+      "name": "Quiet Corner Winery",
+      "kind": "brewery",
+      "town": "Hampton",
+      "state": "Connecticut",
+      "county": "Windham County",
+      "address": "217 N Bigelow Rd, Hampton, CT 06247",
+      "official_url": "https://quietcornerwinery.com/",
+      "summary": "A small-batch farm winery with a public tasting room, hosting paint nights and live-music weekends, with food supplied by visiting food trucks rather than an in-house kitchen. No hours are published — call (860) 248-6630 to confirm before visiting.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "quiet-corner-cottage",
+      "name": "Quiet Corner Cottage",
+      "kind": "bnb",
+      "town": "Hampton",
+      "state": "Connecticut",
+      "county": "Windham County",
+      "address": "41 Old Town Pound Road, Hampton, CT 06247",
+      "official_url": "https://quietcornercottage.com/",
+      "summary": "A whole-house vacation rental sleeping up to 8 guests in 3 bedrooms, on a private yard with a wood-burning fire pit, near Pine Acres Lake in James L. Goodwin State Forest. Self-catering, with no breakfast service or front desk; also listed on Airbnb and VRBO.",
+      "status": "open",
+      "photos": []
+    }
+  ],
+  "entries": [
+    {
+      "kind": "sight",
+      "name": "Trail Wood — Edwin Way Teale Memorial Sanctuary",
+      "place_slug": "trail-wood-edwin-way-teale-sanctuary",
+      "note": "The naturalist's former farm, now a 168-acre Audubon sanctuary."
+    },
+    {
+      "kind": "sight",
+      "name": "James L. Goodwin State Forest & Goodwin Conservation Center",
+      "place_slug": "james-l-goodwin-state-forest",
+      "note": "2,000-plus acres centered on Pine Acres Lake."
+    },
+    {
+      "kind": "sight",
+      "name": "Fletcher Memorial Library",
+      "place_slug": "fletcher-memorial-library",
+      "note": "An Italian Victorian building serving as Hampton's library since 1924."
+    },
+    {
+      "kind": "sight",
+      "name": "Hampton Hill Historic District",
+      "place_slug": "hampton-hill-historic-district",
+      "note": "62 contributing buildings along a tree-lined stretch of Route 97."
+    },
+    {
+      "kind": "food",
+      "name": "Quiet Corner Winery",
+      "place_slug": "quiet-corner-winery",
+      "note": "Farm winery tasting room with visiting food trucks."
+    },
+    {
+      "kind": "stay",
+      "name": "Quiet Corner Cottage",
+      "place_slug": "quiet-corner-cottage",
+      "note": "Self-catering vacation rental near Pine Acres Lake."
+    }
+  ],
+  "links": [
+    {
+      "target": "guide:brooklyn-ct-travel-guide",
+      "kind": "shared-history",
+      "note": "Hampton was incorporated in 1786 from portions of Brooklyn, Pomfret, Canterbury, Mansfield and Windham."
+    },
+    {
+      "target": "guide:windham-ct-travel-guide",
+      "kind": "shared-history",
+      "note": "Hampton was also incorporated in part from Windham in 1786."
+    },
+    {
+      "target": "guide:chaplin-ct-travel-guide",
+      "kind": "shared-history",
+      "note": "Natchaug State Forest spans six towns including Hampton and Chaplin, and US Route 6 links the two."
+    },
+    {
+      "target": "guide:pomfret-ct-travel-guide",
+      "kind": "same-region",
+      "note": "Route 97 runs north from Hampton's village center toward Pomfret."
+    }
+  ]
+}

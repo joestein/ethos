@@ -1,0 +1,211 @@
+{
+  "guide": {
+    "slug": "union-ct-travel-guide",
+    "title": "Union, Connecticut: Graphite, Forest, and Connecticut's Least-Populated Town",
+    "destination": "Union, Connecticut",
+    "state": "Connecticut",
+    "county": "Tolland County",
+    "intro": "Union's origin is a land sale, not a grant: on July 1, 1720 the Connecticut General Assembly sold 12,500 acres to 12 proprietors for 307 pounds. James McNall became the earliest settler in 1727, and the town was incorporated in 1734, taking its name from being formed out of leftover sections left when neighboring towns' boundaries were fixed. Because of its rough terrain and poor soil, Union was the last town settled east of the Connecticut River, and it remains Connecticut's least-populated town, with 785 residents at the 2020 census. During the Revolution, Governor Trumbull drew on a local graphite deposit — first sampled by Massachusetts adventurer John Oldham from Native people as early as 1633 — for use at cannon foundries. Alonzo Erastus Horton, born in Union in 1813, later founded modern San Diego and pushed for the public park that became Balboa Park.",
+    "sections": [
+      {
+        "heading": "Leftover land and a founder of San Diego",
+        "body": "Union's origin is a land sale, not a grant: on July 1, 1720 the Connecticut General Assembly sold 12,500 acres to 12 proprietors for 307 pounds. James McNall became the earliest settler in 1727, and the town was incorporated in 1734; its name is thought to come from being assembled out of leftover sections when surrounding towns' boundaries were fixed. Rough terrain and poor soil made Union the last town settled east of the Connecticut River, and it remains Connecticut's least-populated town — 785 residents at the 2020 census — with roughly a third of the municipality in state park and forest land. During the Revolution, Governor Trumbull drew on a local graphite deposit, first sampled by Massachusetts adventurer John Oldham from Native people as early as 1633, for use at cannon foundries. Alonzo Erastus Horton, born in Union in 1813, later founded modern San Diego, buying 960 acres on San Diego Bay and pushing for the public park that became Balboa Park. Union also claims the highest elevation in Connecticut east of the river: Interstate 84 reaches its statewide maximum, 1,002 feet, inside town."
+      },
+      {
+        "heading": "Getting there",
+        "body": "Union is a car trip, full stop. Interstate 84 runs across the town near the Massachusetts line; leave it at Exit 97 (Route 171, at Mashapaug, the fastest way to Bigelow Hollow) or Exit 93 (Route 190, about two miles west of the town center). Route 171 runs south from Exit 97 to the town center, then east and southeast into Eastford, ending in Putnam. Route 197's western terminus is at Route 171 in Union, running east toward North Woodstock. There is no passenger rail station in Union or any adjacent town; the nearest CTrail Hartford Line and Amtrak stops are far to the west at Hartford Union Station and Windsor Locks, with the line's northern terminus at Springfield Union Station, Massachusetts."
+      }
+    ],
+    "faq": [
+      {
+        "question": "How do I get to Union?",
+        "answer": "By car — Interstate 84 crosses the town near the Massachusetts line; take Exit 97 (Route 171) for Bigelow Hollow or Exit 93 (Route 190) for the town center. There is no passenger rail station in Union or any adjacent town."
+      },
+      {
+        "question": "Is there a train to Union?",
+        "answer": "No. There is no passenger rail station in Union or any neighboring town. The nearest CTrail Hartford Line and Amtrak stops are Hartford Union Station and Windsor Locks, both a substantial drive west."
+      },
+      {
+        "question": "Why is Union so sparsely populated?",
+        "answer": "Rough terrain and poor soil made it the last Connecticut town settled east of the Connecticut River. It remains the state's least-populated town, with 785 residents at the 2020 census, and roughly a third of its land is state park and forest."
+      },
+      {
+        "question": "What is Bigelow Hollow State Park?",
+        "answer": "A 516-acre park combined with the adjoining Breakneck Block of Nipmuck State Forest into a 3,400-acre block with 419 acres of open water, including Mashapaug Lake and Bigelow Pond. It's a rare inland scuba-diving spot in summer; no camping."
+      },
+      {
+        "question": "Is there a hotel in Union?",
+        "answer": "No hotel, inn, motel or B&B could be verified inside Union. The nearest option is The Inn at Woodstock Hill in Woodstock, though its dining room is now open for private events only. Backpack campsites by reservation are available in Nipmuck State Forest."
+      }
+    ],
+    "photos": [
+      {
+        "src": "/photos/ct/union/mashapaug-pond-bigelow-hollow.jpg",
+        "thumb": "/photos/ct/union/mashapaug-pond-bigelow-hollow_thumb.jpg",
+        "title": "Mashapaug Pond, Bigelow Hollow State Park",
+        "description": "A view north over Mashapaug Pond from the Mashapaug Pond View Trail in Bigelow Hollow State Park.",
+        "author": "Morrow Long",
+        "license": "CC BY-SA 3.0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Bigelow_Hollow_State_Park_view_north_from_southern_shore_of_Mashapaug_Pond.jpg"
+      },
+      {
+        "src": "/photos/ct/union/union-town-green-war-memorial.jpg",
+        "thumb": "/photos/ct/union/union-town-green-war-memorial_thumb.jpg",
+        "title": "Union town green war memorial",
+        "description": "The war memorial on Union's town green.",
+        "author": "Peter Cooper Jr.",
+        "license": "CC0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:War_memorial_on_town_green_of_Union,_Connecticut.jpg"
+      }
+    ]
+  },
+  "places": [
+    {
+      "slug": "bigelow-hollow-state-park",
+      "name": "Bigelow Hollow State Park",
+      "kind": "park",
+      "town": "Union",
+      "state": "Connecticut",
+      "county": "Tolland County",
+      "address": "298 Bigelow Hollow Rd., Union, CT 06076",
+      "official_url": "https://ctparks.com/parks/bigelow-hollow-state-park",
+      "summary": "A 516-acre park inside one of the largest unbroken forest stretches in eastern Connecticut; combined with the adjoining Breakneck Block of Nipmuck State Forest it forms a block with 419 acres of open water — Mashapaug Lake, Breakneck Pond and Bigelow Pond. Boat launches on Bigelow Pond and Mashapaug Lake; summer scuba diving. Open daily 8 a.m.-sunset; no camping.",
+      "status": "open",
+      "photos": [
+        {
+          "src": "/photos/ct/union/mashapaug-pond-bigelow-hollow.jpg",
+          "thumb": "/photos/ct/union/mashapaug-pond-bigelow-hollow_thumb.jpg",
+          "title": "Mashapaug Pond, Bigelow Hollow State Park",
+          "description": "A view north over Mashapaug Pond from the Mashapaug Pond View Trail in Bigelow Hollow State Park.",
+          "author": "Morrow Long",
+          "license": "CC BY-SA 3.0",
+          "source_url": "https://commons.wikimedia.org/wiki/File:Bigelow_Hollow_State_Park_view_north_from_southern_shore_of_Mashapaug_Pond.jpg"
+        }
+      ]
+    },
+    {
+      "slug": "nipmuck-state-forest-union",
+      "name": "Nipmuck State Forest",
+      "kind": "park",
+      "town": "Union",
+      "state": "Connecticut",
+      "county": "Tolland County",
+      "address": "Access from Route 190 in Union, CT 06076",
+      "official_url": "https://ctparks.com/parks/nipmuck-state-forest",
+      "summary": "Over 9,400 acres across five towns including Union, Woodstock and Willington. Its signature feature is the Mountain Laurel Sanctuary, a mile-long scenic drive that peaks late June to early July, plus backpack campsites by reservation. Open daily 8 a.m.-sunset, free.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "union-historical-society",
+      "name": "Union Historical Society",
+      "kind": "museum",
+      "town": "Union",
+      "state": "Connecticut",
+      "county": "Tolland County",
+      "address": "6 Town Hall Road, Union, CT 06076",
+      "official_url": "https://www.unionconnecticut.org/historical-society/",
+      "summary": "A collection of photographs and artifacts documenting Union's past and present, curated by director Jeannine Upson. Open Wednesdays 2-4 p.m. or by appointment (860-684-7078).",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "nipmuck-trail",
+      "name": "Nipmuck Trail",
+      "kind": "attraction",
+      "town": "Union",
+      "state": "Connecticut",
+      "county": "Tolland County",
+      "address": "Northern terminus at Bigelow Hollow State Park, 298 Bigelow Hollow Rd., Union, CT 06076",
+      "official_url": "https://ctwoodlands.org/trails/nipmuck-trail/",
+      "summary": "A roughly 30-mile Blue-Blazed hiking trail running through Ashford, Willington, Mansfield and Union, maintained by the Connecticut Forest & Park Association, with its northern end inside Bigelow Hollow State Park.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "union-free-public-library",
+      "name": "Union Free Public Library",
+      "kind": "attraction",
+      "town": "Union",
+      "state": "Connecticut",
+      "county": "Tolland County",
+      "address": "979 Buckley Highway, Union, CT 06076",
+      "official_url": "http://unionctfreepubliclibrary.org/",
+      "summary": "A small rural library holding more than 10,000 print volumes and borrowing from 60-plus Connecticut libraries via the Bibliomation/Evergreen consortium. Open Monday 1-5 p.m., Wednesday 1-7 p.m., Saturday 9 a.m.-2 p.m.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "blondies-travelers-diner",
+      "name": "Blondie's Travelers Diner",
+      "kind": "restaurant",
+      "town": "Union",
+      "state": "Connecticut",
+      "county": "Tolland County",
+      "address": "1257 Buckley Highway, Union, CT 06076",
+      "summary": "A roadside diner just off I-84 Exit 97, the reason many travelers know Union at all; long known as the Traveler Restaurant, where guests received free books with their meal. Now operating under new ownership since 2026 — call ahead to confirm whether the book tradition continues.",
+      "status": "open",
+      "photos": []
+    }
+  ],
+  "entries": [
+    {
+      "kind": "sight",
+      "name": "Bigelow Hollow State Park",
+      "place_slug": "bigelow-hollow-state-park",
+      "note": "516 acres of forest, lakes and ponds; a rare inland scuba-diving spot."
+    },
+    {
+      "kind": "sight",
+      "name": "Nipmuck State Forest",
+      "place_slug": "nipmuck-state-forest-union",
+      "note": "9,400-plus acres, with the mile-long Mountain Laurel Sanctuary drive."
+    },
+    {
+      "kind": "sight",
+      "name": "Union Historical Society",
+      "place_slug": "union-historical-society",
+      "note": "Photographs and artifacts documenting Union's history."
+    },
+    {
+      "kind": "walk",
+      "name": "Nipmuck Trail",
+      "place_slug": "nipmuck-trail",
+      "note": "A 30-mile Blue-Blazed trail with its northern terminus in Union."
+    },
+    {
+      "kind": "sight",
+      "name": "Union Free Public Library",
+      "place_slug": "union-free-public-library",
+      "note": "A small rural library serving fewer than 1,000 residents."
+    },
+    {
+      "kind": "food",
+      "name": "Blondie's Travelers Diner",
+      "place_slug": "blondies-travelers-diner",
+      "note": "Roadside diner off I-84, long known for its free-book tradition."
+    }
+  ],
+  "links": [
+    {
+      "target": "guide:stafford-ct-travel-guide",
+      "kind": "nearby",
+      "note": "Route 190 runs directly from Union's town center west into Stafford."
+    },
+    {
+      "target": "guide:willington-ct-travel-guide",
+      "kind": "shared-history",
+      "note": "Nipmuck State Forest, over 9,400 acres, spans Union, Willington, Ashford, Woodstock and Stafford."
+    },
+    {
+      "target": "guide:woodstock-ct-travel-guide",
+      "kind": "shared-history",
+      "note": "Nipmuck State Forest also spans into Woodstock, and Route 197 links Union to North Woodstock."
+    },
+    {
+      "target": "guide:eastford-ct-travel-guide",
+      "kind": "same-region",
+      "note": "Route 171 runs east and southeast from Union's town center into Eastford."
+    }
+  ]
+}

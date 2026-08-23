@@ -1,0 +1,286 @@
+{
+  "guide": {
+    "slug": "somers-ct-travel-guide",
+    "title": "Somers, Connecticut: A Massachusetts Town That Switched Sides",
+    "destination": "Somers, Connecticut",
+    "state": "Connecticut",
+    "county": "Tolland County",
+    "intro": "Settlement of what was then called \"East Enfield\" began around 1706, when Benjamin Jones arrived with fellow settlers Edward Kibbe, James Pease, Timothy Roote and John McGregory. The town was incorporated in 1734 by the General Court of Massachusetts and named for Lord John Somers of England — Somers was a Massachusetts town at its founding. In 1749 it separated from Massachusetts and was annexed to Connecticut, in the same border realignment that moved Enfield, Suffield and Woodstock. Milling of grain and lumber were Somers's first industries; the Billings Satinette Mill, opened on the Scantic River in 1839, later became the Somersville Manufacturing Company and remained the main industry until 1970. The Four-Town Fair, one of Connecticut's oldest agricultural fairs, was organized in 1838 as a contest among the town's ten school districts for the most oxen. \"Little Sorrel,\" Stonewall Jackson's favorite horse, is believed to have been born around 1850 on a Somers farm.",
+    "sections": [
+      {
+        "heading": "From East Enfield to Connecticut",
+        "body": "Settlement of what was then called \"East Enfield\" began around 1706. The town was incorporated in 1734 by the General Court of Massachusetts and named for Lord John Somers of England — Somers began as a Massachusetts town. In 1749 it separated from Massachusetts and was annexed to Connecticut, in the same realignment that moved Enfield, Suffield and Woodstock. Milling of grain and lumber were the town's first industries; the Billings Satinette Mill, opened on the Scantic River in 1839, later became the Somersville Manufacturing Company under Rockwell Keeney and remained the town's main industry until 1970. \"Little Sorrel,\" Confederate General Stonewall Jackson's favorite horse, is believed to have been born around 1850 at the Collins farm on what is now Springfield Road."
+      },
+      {
+        "heading": "Getting there",
+        "body": "Somers has no rail station of its own. Take I-91 to the Route 190 cloverleaf interchange in Enfield (Exits 47E/47W) and head east about eight miles to Somers center, where Route 190 crosses Route 83, the town's main north-south road. Route 190 is the main east-west corridor, running from Suffield through Enfield, Somers and Stafford to Union; Route 83 runs north-south from Glastonbury through Manchester, Vernon and Ellington into Somers and on to Springfield, Massachusetts. I-84 is reached via Route 83 south to the Route 30/83 interchange in Vernon, or via Route 190 east to I-84 in Union. There is no CTrail Hartford Line, Metro-North or Shore Line East station in Somers; Windsor Locks is the closest Hartford Line stop, and Springfield Union Station, Massachusetts is the nearest Amtrak hub."
+      },
+      {
+        "heading": "Farms, wine and racing",
+        "body": "Sonny's Place, a family entertainment park on Route 190, runs mini golf, go-karts, laser tag and its own eateries. Worthington Vineyards & Winery pours estate wines beside a beaver pond and covered bridge. The Four Town Fair, tracing to 1838, draws crowds each September. No lodging could be verified inside Somers; the nearest confirmed option is the Fairfield Inn & Suites Springfield Enfield, roughly eight miles west."
+      }
+    ],
+    "faq": [
+      {
+        "question": "How do I get to Somers?",
+        "answer": "By car — I-91 to the Route 190 interchange in Enfield, then east about eight miles to Somers center. There is no passenger rail station in Somers; Windsor Locks is the closest CTrail Hartford Line stop."
+      },
+      {
+        "question": "Is there a train to Somers?",
+        "answer": "No. Somers is not on the CTrail Hartford Line, Metro-North or Shore Line East. Windsor Locks is the closest Hartford Line station, and Springfield Union Station, Massachusetts is the nearest Amtrak hub."
+      },
+      {
+        "question": "Was Somers really part of Massachusetts?",
+        "answer": "Yes — Somers was incorporated in 1734 by the General Court of Massachusetts. In 1749 it separated from Massachusetts and was annexed to Connecticut, along with Enfield, Suffield and Woodstock."
+      },
+      {
+        "question": "What is the Four Town Fair?",
+        "answer": "One of Connecticut's oldest agricultural fairs, tracing to 1838 when it began as a contest among the town's ten school districts to see which had the most oxen. It's held each September at 56 Egypt Road."
+      },
+      {
+        "question": "Is there a hotel in Somers?",
+        "answer": "No lodging could be verified inside Somers. The nearest confirmed option is the Fairfield Inn & Suites Springfield Enfield, roughly eight miles west."
+      }
+    ],
+    "photos": [
+      {
+        "src": "/photos/ct/somers/somers-congregational-church.jpg",
+        "thumb": "/photos/ct/somers/somers-congregational-church_thumb.jpg",
+        "title": "Somers Congregational Church",
+        "description": "The Congregational Church at the center of Somers.",
+        "author": "John Phelan",
+        "license": "CC BY 4.0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Congregational_Church_in_2025,_Somers_CT.jpg"
+      },
+      {
+        "src": "/photos/ct/somers/soapstone-mountain-shenipsit-somers.jpg",
+        "thumb": "/photos/ct/somers/soapstone-mountain-shenipsit-somers_thumb.jpg",
+        "title": "Soapstone Mountain lookout tower view",
+        "description": "The panoramic view from the Soapstone Mountain summit observation tower, in the Somers portion of Shenipsit State Forest.",
+        "author": "Morrowlong",
+        "license": "CC BY-SA 3.0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:View_from_Soapstone_Mountain_summit_lookout_tower_in_Connecticut%27s_Shenipsit_State_Forest..JPG"
+      },
+      {
+        "src": "/photos/ct/somers/somersville-millpond-dam.jpg",
+        "thumb": "/photos/ct/somers/somersville-millpond-dam_thumb.jpg",
+        "title": "Somersville millpond and dam",
+        "description": "The Scantic River millpond and dam in the Somersville village of Somers.",
+        "author": "John Phelan",
+        "license": "CC BY-SA 4.0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Millpond_and_dam,_Somersville_CT.jpg"
+      }
+    ]
+  },
+  "places": [
+    {
+      "slug": "scantic-river-state-park-somers",
+      "name": "Scantic River State Park",
+      "kind": "park",
+      "town": "Somers",
+      "state": "Connecticut",
+      "county": "Tolland County",
+      "address": "Off Route 190, Enfield/East Windsor/Somers, CT",
+      "official_url": "https://ctparks.com/parks/scantic-river-state-park",
+      "summary": "784 acres spread across six parking areas and three towns, with roughly 10 miles of river for canoeing and white-water kayaking, plus trout, bass and yellow perch fishing. Hikers can find ruins of the historic Hazard Powder Company along the river. Open daily 8 a.m.-sunset, free, no camping.",
+      "status": "open",
+      "photos": [
+        {
+          "src": "/photos/ct/somers/somersville-millpond-dam.jpg",
+          "thumb": "/photos/ct/somers/somersville-millpond-dam_thumb.jpg",
+          "title": "Somersville millpond and dam",
+          "description": "The Scantic River millpond and dam in the Somersville village of Somers.",
+          "author": "John Phelan",
+          "license": "CC BY-SA 4.0",
+          "source_url": "https://commons.wikimedia.org/wiki/File:Millpond_and_dam,_Somersville_CT.jpg"
+        }
+      ]
+    },
+    {
+      "slug": "shenipsit-state-forest-somers",
+      "name": "Shenipsit State Forest (Somers section)",
+      "kind": "park",
+      "town": "Somers",
+      "state": "Connecticut",
+      "county": "Tolland County",
+      "address": "Off Route 190, Stafford/Somers/Ellington, CT 06029",
+      "official_url": "https://ctparks.com/parks/shenipsit-state-forest",
+      "summary": "A 7,170-acre state forest centered on Soapstone Mountain, with an observation tower giving views across the region. Somers's Bald Mountain, at 1,121 feet, is the highest point along the Connecticut River Valley in Connecticut. Free, open daily; no camping or ground fires.",
+      "status": "open",
+      "photos": [
+        {
+          "src": "/photos/ct/somers/soapstone-mountain-shenipsit-somers.jpg",
+          "thumb": "/photos/ct/somers/soapstone-mountain-shenipsit-somers_thumb.jpg",
+          "title": "Soapstone Mountain lookout tower view",
+          "description": "The panoramic view from the Soapstone Mountain summit observation tower, in the Somers portion of Shenipsit State Forest.",
+          "author": "Morrowlong",
+          "license": "CC BY-SA 3.0",
+          "source_url": "https://commons.wikimedia.org/wiki/File:View_from_Soapstone_Mountain_summit_lookout_tower_in_Connecticut%27s_Shenipsit_State_Forest..JPG"
+        }
+      ]
+    },
+    {
+      "slug": "sonnys-place",
+      "name": "Sonny's Place",
+      "kind": "amusement-park",
+      "town": "Somers",
+      "state": "Connecticut",
+      "county": "Tolland County",
+      "address": "349 Main Street (CT-190), Somers, CT 06071",
+      "official_url": "https://www.sonnysplace.com/",
+      "summary": "A family entertainment park with mini golf, go-karts, laser tag, batting cages, bumper boats, a carousel, climbing walls, a zipline and an arcade, plus its own eateries including a New England-style smokehouse, a pavilion restaurant and a cantina. Outdoor live music runs Memorial Day to Labor Day.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "worthington-vineyards-winery",
+      "name": "Worthington Vineyards & Winery",
+      "kind": "brewery",
+      "town": "Somers",
+      "state": "Connecticut",
+      "county": "Tolland County",
+      "address": "359 Mountain Road, Somers, CT 06071",
+      "official_url": "https://worthingtonwinery.com/",
+      "summary": "A Somers vineyard whose grounds include a beaver pond, a covered bridge, gardens and walking trails; winemaker Karen Murdoch produces estate wines. Tasting room open Wednesday-Saturday noon-8 p.m., Sunday noon-6 p.m.; Monday-Tuesday bottle sales noon-6.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "four-town-fair",
+      "name": "Four Town Fair",
+      "kind": "attraction",
+      "town": "Somers",
+      "state": "Connecticut",
+      "county": "Tolland County",
+      "address": "56 Egypt Road, Somers, CT",
+      "official_url": "https://4townfair.com/",
+      "summary": "One of Connecticut's oldest agricultural fairs, tracing to 1838 when it began as a contest among the town's ten school districts to see which had the most oxen. The modern fair features a main stage, horse show, baking and state competitions, parades and concessions each September.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "bond-124",
+      "name": "Bond 124",
+      "kind": "restaurant",
+      "town": "Somers",
+      "state": "Connecticut",
+      "county": "Tolland County",
+      "address": "124 Main Street, Somers, CT 06071",
+      "official_url": "https://bond124.com/",
+      "summary": "An Italian-American restaurant and gastropub in Somers center with 26 craft beers on tap plus signature cocktails. Open Monday-Saturday 11:30 a.m.-11:30 p.m., Sunday 11:30 a.m.-9 p.m.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "somers-pizza-family-restaurant",
+      "name": "Somers Pizza and Family Restaurant",
+      "kind": "restaurant",
+      "town": "Somers",
+      "state": "Connecticut",
+      "county": "Tolland County",
+      "address": "106 Main Street, Somers, CT 06071",
+      "official_url": "https://somerspizza.com/",
+      "summary": "A Main Street family pizzeria and Italian restaurant serving pizza, entrees, grinders, wraps, burgers, seafood, chicken and veal. Open Sunday-Thursday 11 a.m.-9 p.m., Friday-Saturday 11 a.m.-10 p.m.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "cedar-knob-restaurant-banquets",
+      "name": "Cedar Knob Restaurant & Banquets",
+      "kind": "restaurant",
+      "town": "Somers",
+      "state": "Connecticut",
+      "county": "Tolland County",
+      "address": "446 Billings Road, Somers, CT 06071",
+      "official_url": "https://cedarknobrestaurantct.com/",
+      "summary": "A restaurant and banquet facility on the Cedar Knob golf grounds, hosting weddings and group outings. Dinner service is seasonal, running roughly Thursday-Sunday from 5 p.m.; call (860) 749-4877 to confirm before visiting.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "hometown-kitchen-somers",
+      "name": "Hometown Kitchen",
+      "kind": "restaurant",
+      "town": "Somers",
+      "state": "Connecticut",
+      "county": "Tolland County",
+      "address": "48 South Road, Somers, CT 06071",
+      "summary": "A small comfort-food and seafood spot known for homemade desserts and fresh pies. Open Wednesday-Sunday 7 a.m.-8 p.m., closed Monday and Tuesday.",
+      "status": "open",
+      "photos": []
+    }
+  ],
+  "entries": [
+    {
+      "kind": "sight",
+      "name": "Scantic River State Park",
+      "place_slug": "scantic-river-state-park-somers",
+      "note": "784 acres for canoeing, kayaking and fishing across three towns."
+    },
+    {
+      "kind": "sight",
+      "name": "Shenipsit State Forest",
+      "place_slug": "shenipsit-state-forest-somers",
+      "note": "7,170 acres centered on Soapstone Mountain and Somers's Bald Mountain."
+    },
+    {
+      "kind": "sight",
+      "name": "Sonny's Place",
+      "place_slug": "sonnys-place",
+      "note": "Family entertainment park with mini golf, go-karts and laser tag."
+    },
+    {
+      "kind": "sight",
+      "name": "Worthington Vineyards & Winery",
+      "place_slug": "worthington-vineyards-winery",
+      "note": "Estate wines beside a beaver pond and covered bridge."
+    },
+    {
+      "kind": "sight",
+      "name": "Four Town Fair",
+      "place_slug": "four-town-fair",
+      "note": "A Connecticut agricultural fair tracing to 1838, each September."
+    },
+    {
+      "kind": "food",
+      "name": "Bond 124",
+      "place_slug": "bond-124",
+      "note": "Italian-American gastropub with 26 craft beers on tap."
+    },
+    {
+      "kind": "food",
+      "name": "Somers Pizza and Family Restaurant",
+      "place_slug": "somers-pizza-family-restaurant",
+      "note": "Main Street family pizzeria and Italian restaurant."
+    },
+    {
+      "kind": "food",
+      "name": "Cedar Knob Restaurant & Banquets",
+      "place_slug": "cedar-knob-restaurant-banquets",
+      "note": "Seasonal dinner service on the Cedar Knob golf grounds."
+    },
+    {
+      "kind": "food",
+      "name": "Hometown Kitchen",
+      "place_slug": "hometown-kitchen-somers",
+      "note": "Comfort food and homemade pies on South Road."
+    }
+  ],
+  "links": [
+    {
+      "target": "guide:ellington-ct-travel-guide",
+      "kind": "shared-history",
+      "note": "Shenipsit State Forest, 7,170 acres of multi-use trails, spans Somers, Ellington and Stafford."
+    },
+    {
+      "target": "guide:stafford-ct-travel-guide",
+      "kind": "shared-history",
+      "note": "Route 190 runs directly from Somers into Stafford, and Shenipsit State Forest spans both."
+    },
+    {
+      "target": "guide:vernon-ct-travel-guide",
+      "kind": "same-region",
+      "note": "CT Route 83 links Somers to Vernon by way of Ellington."
+    }
+  ]
+}

@@ -1,0 +1,329 @@
+{
+  "guide": {
+    "slug": "plainfield-ct-travel-guide",
+    "title": "Plainfield, Connecticut: Four Villages and a Fish Hatchery",
+    "destination": "Plainfield, Connecticut",
+    "state": "Connecticut",
+    "county": "Windham County",
+    "intro": "Plainfield was incorporated in 1699 under the name \"Quinebaug\"; Governor Fitz-John Winthrop renamed it Plainfield a year later. The town is made up of four distinct villages — Plainfield, Moosup, Wauregan and Central Village — each with its own postal and fire service. Plainfield Academy, established in 1770 and incorporated in 1784 as only the third school incorporated in Connecticut, prepared boys for Yale before closing in 1890. The town's 19th- and 20th-century prosperity came from water power on the Moosup and Quinebaug Rivers and from four railways that once intersected here, drawing French Canadian, Irish and British immigrants to work the mills. Moosup, named for Narragansett sachem Maussup, has held an annual V-J Day parade since 1961, one of only a handful still held in the United States. Major League first baseman Walt Dropo, \"the Moose from Moosup,\" grew up here, where his father worked at the local textile mill.",
+    "sections": [
+      {
+        "heading": "Four villages and a V-J Day tradition",
+        "body": "Plainfield was incorporated in 1699 as \"Quinebaug\" and renamed Plainfield a year later by Governor Fitz-John Winthrop. The town comprises four villages — Plainfield, Moosup, Wauregan and Central Village — each with its own post office and fire department. Plainfield Academy, founded in 1770 and incorporated in 1784 as only the third school incorporated in Connecticut, prepared boys for Yale before closing in 1890. Central Village's mill history began in 1814 with a small cotton mill on the Moosup River, followed by an 1845 brick mill and rail service in 1839. Moosup, settled around 1689 and named for Narragansett sachem Maussup, has held an annual V-J Day parade since 1961 — one of only a handful still held in the United States, and the only one in Connecticut. Major League first baseman Walt Dropo, \"the Moose from Moosup,\" grew up in the village, where his father worked at the local textile mill."
+      },
+      {
+        "heading": "Getting there",
+        "body": "Interstate 395 bisects Plainfield with three exits — 28 (Lathrop Road), 29 (Route 14A, Moosup) and 32 (Route 14, Central Village) — and Routes 12, 14 and 14A handle local travel. There is no passenger rail station in Plainfield; the Providence & Worcester line through town carries freight only. Rail travelers use Amtrak/CTrail Shore Line East at New London or Amtrak at Providence, Rhode Island, and finish the trip by car. Metro-North's New Haven Line and the CTrail Hartford Line do not serve eastern Windham County."
+      }
+    ],
+    "faq": [
+      {
+        "question": "How do I get to Plainfield?",
+        "answer": "By car — Interstate 395 bisects the town with three exits (28, 29, 32), and Routes 12, 14 and 14A handle local travel. There is no passenger rail station in Plainfield; the nearest is Shore Line East at New London."
+      },
+      {
+        "question": "Is there a train to Plainfield?",
+        "answer": "No. The Providence & Worcester line through Plainfield carries freight only. Rail travelers use Amtrak/CTrail Shore Line East at New London or Amtrak at Providence, Rhode Island, and drive the rest of the way."
+      },
+      {
+        "question": "What is the Quinebaug Valley State Fish Hatchery?",
+        "answer": "A state fish hatchery built in 1971 on about 2,000 acres, drawing on 14 wells to supply fish-production tanks. Open to the public 8 a.m.-3 p.m. seven days a week, with group tours by arrangement."
+      },
+      {
+        "question": "What is the Moosup V-J Day Parade?",
+        "answer": "An annual parade held in the Moosup village since 1961, one of only a handful still held in the United States and the only one in Connecticut, stepping off at 1:01 p.m. — the exact minute of the Japanese surrender."
+      },
+      {
+        "question": "Is there a hotel in Plainfield?",
+        "answer": "Yes — La Quinta Inn & Suites by Wyndham and Quality Inn Plainfield I-395 both sit off the interstate, and the independent Elite Inn operates in the Moosup village. No historic inn or B&B could be verified in town."
+      }
+    ],
+    "photos": [
+      {
+        "src": "/photos/ct/plainfield/central-village-historic-district-plainfield.jpg",
+        "thumb": "/photos/ct/plainfield/central-village-historic-district-plainfield_thumb.jpg",
+        "title": "Central Village Historic District",
+        "description": "Streetscape in the Central Village Historic District of Plainfield.",
+        "author": "Magicpiano",
+        "license": "CC BY-SA 4.0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:PlainfieldCT_CentralVillageHD2.jpg"
+      },
+      {
+        "src": "/photos/ct/plainfield/moosup-valley-state-park-trail-moosup.jpg",
+        "thumb": "/photos/ct/plainfield/moosup-valley-state-park-trail-moosup_thumb.jpg",
+        "title": "Moosup Valley State Park Trail",
+        "description": "The Moosup Valley State Park Trail in the Moosup village of Plainfield.",
+        "author": "Pi.1415926535",
+        "license": "CC BY-SA 4.0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Moosup_Valley_State_Park_Trail_in_Moosup,_October_2020.JPG"
+      }
+    ]
+  },
+  "places": [
+    {
+      "slug": "quinebaug-valley-state-fish-hatchery",
+      "name": "Quinebaug Valley State Fish Hatchery",
+      "kind": "attraction",
+      "town": "Plainfield",
+      "state": "Connecticut",
+      "county": "Windham County",
+      "address": "145 Trout Hatchery Road, Plainfield, CT 06374",
+      "official_url": "https://portal.ct.gov/deep/fishing/fisheries-management/fish-hatcheries",
+      "summary": "Built in 1971 on approximately 2,000 acres, drawing on 14 wells for the 5,000 gallons per minute needed for fish production. Visitors can walk past the hatch house, circular grow-out tanks and brood-stock raceways. Open to the public 8 a.m.-3 p.m., seven days a week; group tours by arrangement (860-564-7542).",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "moosup-valley-state-park-trail-plainfield",
+      "name": "Moosup Valley State Park Trail",
+      "kind": "park",
+      "town": "Plainfield",
+      "state": "Connecticut",
+      "county": "Windham County",
+      "address": "Western trailhead at Village Center Circle, Moosup, CT 06354",
+      "official_url": "https://ctparks.com/parks/moosup-valley-state-park-trail",
+      "summary": "A 5.8-mile multi-use rail-trail across 62 acres of wetlands, rivers and ponds, laid on a retired railbed that carried trains from 1898 to 1968. Open daily 8 a.m.-sunset, free, leashed pets welcome; motorized vehicles are prohibited.",
+      "status": "open",
+      "photos": [
+        {
+          "src": "/photos/ct/plainfield/moosup-valley-state-park-trail-moosup.jpg",
+          "thumb": "/photos/ct/plainfield/moosup-valley-state-park-trail-moosup_thumb.jpg",
+          "title": "Moosup Valley State Park Trail",
+          "description": "The Moosup Valley State Park Trail in the Moosup village of Plainfield.",
+          "author": "Pi.1415926535",
+          "license": "CC BY-SA 4.0",
+          "source_url": "https://commons.wikimedia.org/wiki/File:Moosup_Valley_State_Park_Trail_in_Moosup,_October_2020.JPG"
+        }
+      ]
+    },
+    {
+      "slug": "aldrich-free-public-library",
+      "name": "Aldrich Free Public Library",
+      "kind": "historic-site",
+      "town": "Plainfield",
+      "state": "Connecticut",
+      "county": "Windham County",
+      "address": "299 Main Street, Moosup, CT 06354",
+      "official_url": "https://www.aldrichlibrary.org/",
+      "summary": "Built in 1895 in Queen Anne Victorian style by architect Charles F. Wilcox, funded by a bequest from mill owner David L. Aldrich, with land donated by business partner Edwin Milner. Listed on the National Register in 1994, retaining original oak bookcases, furniture and trim. Open Monday and Wednesday 10-6, Friday 10-3, Saturday 10-1; call ahead to confirm hours.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "central-village-historic-district",
+      "name": "Central Village Historic District",
+      "kind": "historic-site",
+      "town": "Plainfield",
+      "state": "Connecticut",
+      "county": "Windham County",
+      "address": "Bounded by School, Main and Water Streets and Putnam Road, Central Village, CT 06332",
+      "summary": "A 130-acre mill-village district listed on the National Register in 1991, with Greek Revival, Italianate and Bungalow/Craftsman architecture. Landmarks include the 1872 town hall, the 1924 Plainfield High School, the c. 1855 Arthur Fenner mansion and the 1845 Greek Revival Congregational Church. A publicly walkable streetscape.",
+      "status": "open",
+      "photos": [
+        {
+          "src": "/photos/ct/plainfield/central-village-historic-district-plainfield.jpg",
+          "thumb": "/photos/ct/plainfield/central-village-historic-district-plainfield_thumb.jpg",
+          "title": "Central Village Historic District",
+          "description": "Streetscape in the Central Village Historic District of Plainfield.",
+          "author": "Magicpiano",
+          "license": "CC BY-SA 4.0",
+          "source_url": "https://commons.wikimedia.org/wiki/File:PlainfieldCT_CentralVillageHD2.jpg"
+        }
+      ]
+    },
+    {
+      "slug": "pachaug-state-forest-plainfield",
+      "name": "Pachaug State Forest (Plainfield section)",
+      "kind": "park",
+      "town": "Plainfield",
+      "state": "Connecticut",
+      "county": "Windham County",
+      "address": "Enduro motorcycle trailhead on Spaulding Road, Plainfield, CT",
+      "official_url": "https://ctparks.com/parks/pachaug-state-forest",
+      "summary": "At 26,477 acres across six towns, Pachaug is Connecticut's largest state forest. Plainfield's slice includes the Spaulding Road enduro motorcycle trailhead, part of a 58-mile trail marked with white diamonds and red arrows, open year-round except mud season. Open daily 8 a.m.-sunset.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "moosup-pond",
+      "name": "Moosup Pond",
+      "kind": "park",
+      "town": "Plainfield",
+      "state": "Connecticut",
+      "county": "Windham County",
+      "address": "Moosup Pond Road, Moosup, CT 06354",
+      "summary": "A town beach, boat launch and fishing spot on Moosup Pond — the closest thing Plainfield has to a summer swimming destination. Lifeguard coverage is unsettled; confirm with Plainfield Recreation (860-564-1819) before planning a swim.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "hanks-dairy-bar",
+      "name": "Hank's Dairy Bar",
+      "kind": "restaurant",
+      "town": "Plainfield",
+      "state": "Connecticut",
+      "county": "Windham County",
+      "address": "1006 Norwich Road, Plainfield, CT 06374",
+      "official_url": "https://www.hanksdairybar.com/",
+      "summary": "A seasonal drive-up stand operating since 1957, serving soft-serve cones, breaded seafood, lobster rolls and burgers, with a picnic area and monthly car cruises. Season opens each March; closed Mondays, otherwise 11 a.m.-8 p.m.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "mr-zs-restaurant-lounge",
+      "name": "Mr. Z's Restaurant & Lounge",
+      "kind": "restaurant",
+      "town": "Plainfield",
+      "state": "Connecticut",
+      "county": "Windham County",
+      "address": "788 Norwich Road, Plainfield, CT 06374",
+      "official_url": "https://www.mrzsplainfield.com/",
+      "summary": "An Italian-American family restaurant and lounge with pizza, pasta, salads, grinders and seafood, plus a full bar. Kitchen open Sunday-Thursday 11 a.m.-9 p.m., Friday-Saturday to 10 p.m.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "the-victorian-village-bakery",
+      "name": "The Victorian & The Village Bakery",
+      "kind": "cafe",
+      "town": "Plainfield",
+      "state": "Connecticut",
+      "county": "Windham County",
+      "address": "159 Norwich Road, Plainfield, CT 06374",
+      "official_url": "https://www.thevictorianvillagebakery.com/",
+      "summary": "A breakfast-and-lunch restaurant paired with a full bakery, run by Seabird Enterprises, a Connecticut nonprofit providing vocational training and employment for people with disabilities. Open Monday-Friday 7 a.m.-1:30 p.m.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "la-quinta-inn-suites-plainfield",
+      "name": "La Quinta Inn & Suites by Wyndham Norwich-Plainfield-Casino",
+      "kind": "hotel",
+      "town": "Plainfield",
+      "state": "Connecticut",
+      "county": "Windham County",
+      "address": "18 Pratt Rd., Plainfield, CT 06374",
+      "official_url": "https://www.wyndhamhotels.com/laquinta/plainfield-connecticut/la-quinta-norwich-plainfield-casino/overview",
+      "summary": "A budget hotel just off I-395, positioned for Mohegan Sun and Foxwoods as well as historic Norwich. Free breakfast, indoor pool, fitness center and non-smoking rooms with mini-refrigerator and microwave.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "quality-inn-plainfield-i395",
+      "name": "Quality Inn Plainfield I-395",
+      "kind": "hotel",
+      "town": "Plainfield",
+      "state": "Connecticut",
+      "county": "Windham County",
+      "address": "55 Lathrop Road, Plainfield, CT 06374",
+      "official_url": "https://www.choicehotels.com/connecticut/plainfield/quality-inn-hotels/ct116",
+      "summary": "A bare-bones interstate hotel directly off I-395, roughly 15-16 miles from the region's casino resorts, with free breakfast and a fitness center. Some guests report the outdoor pool is not reliably available.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "elite-inn-moosup",
+      "name": "Elite Inn",
+      "kind": "hotel",
+      "town": "Plainfield",
+      "state": "Connecticut",
+      "county": "Windham County",
+      "address": "66 E Main St, Moosup, CT 06354",
+      "official_url": "https://eliteinnmoosup.com/",
+      "summary": "An independent budget motel in the Moosup village with a 24-hour front desk, free WiFi and parking, and pet-friendly rooms with A/C, cable TV and a refrigerator.",
+      "status": "open",
+      "photos": []
+    }
+  ],
+  "entries": [
+    {
+      "kind": "sight",
+      "name": "Quinebaug Valley State Fish Hatchery",
+      "place_slug": "quinebaug-valley-state-fish-hatchery",
+      "note": "A public state fish hatchery with tours by arrangement."
+    },
+    {
+      "kind": "walk",
+      "name": "Moosup Valley State Park Trail",
+      "place_slug": "moosup-valley-state-park-trail-plainfield",
+      "note": "A 5.8-mile rail-trail spanning Plainfield and Sterling."
+    },
+    {
+      "kind": "sight",
+      "name": "Aldrich Free Public Library",
+      "place_slug": "aldrich-free-public-library",
+      "note": "An 1895 Queen Anne library serving Moosup."
+    },
+    {
+      "kind": "sight",
+      "name": "Central Village Historic District",
+      "place_slug": "central-village-historic-district",
+      "note": "A 130-acre mill-village National Register district."
+    },
+    {
+      "kind": "sight",
+      "name": "Pachaug State Forest",
+      "place_slug": "pachaug-state-forest-plainfield",
+      "note": "Connecticut's largest state forest, with an enduro trailhead in Plainfield."
+    },
+    {
+      "kind": "sight",
+      "name": "Moosup Pond",
+      "place_slug": "moosup-pond",
+      "note": "Plainfield's summer swimming destination."
+    },
+    {
+      "kind": "food",
+      "name": "Hank's Dairy Bar",
+      "place_slug": "hanks-dairy-bar",
+      "note": "Seasonal drive-up stand serving since 1957."
+    },
+    {
+      "kind": "food",
+      "name": "Mr. Z's Restaurant & Lounge",
+      "place_slug": "mr-zs-restaurant-lounge",
+      "note": "Italian-American family restaurant and lounge."
+    },
+    {
+      "kind": "food",
+      "name": "The Victorian & The Village Bakery",
+      "place_slug": "the-victorian-village-bakery",
+      "note": "Breakfast, lunch and bakery run by a vocational nonprofit."
+    },
+    {
+      "kind": "stay",
+      "name": "La Quinta Inn & Suites by Wyndham",
+      "place_slug": "la-quinta-inn-suites-plainfield",
+      "note": "Budget hotel off I-395 near the casino resorts."
+    },
+    {
+      "kind": "stay",
+      "name": "Quality Inn Plainfield I-395",
+      "place_slug": "quality-inn-plainfield-i395",
+      "note": "Interstate hotel with free breakfast."
+    },
+    {
+      "kind": "stay",
+      "name": "Elite Inn",
+      "place_slug": "elite-inn-moosup",
+      "note": "Independent budget motel in the Moosup village."
+    }
+  ],
+  "links": [
+    {
+      "target": "guide:sterling-ct-travel-guide",
+      "kind": "shared-history",
+      "note": "The Moosup Valley State Park Trail and the Sterling Hill Historic District both straddle the Plainfield-Sterling line."
+    },
+    {
+      "target": "guide:killingly-ct-travel-guide",
+      "kind": "same-region",
+      "note": "Interstate 395 and Route 12 both connect Plainfield north to Killingly."
+    },
+    {
+      "target": "guide:scotland-ct-travel-guide",
+      "kind": "same-region",
+      "note": "CT Route 14 reaches Interstate 395 at Exit 32 in Plainfield's Moosup section, en route from Scotland."
+    }
+  ]
+}

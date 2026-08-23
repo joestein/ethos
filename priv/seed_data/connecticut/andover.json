@@ -1,0 +1,156 @@
+{
+  "guide": {
+    "slug": "andover-ct-travel-guide",
+    "title": "Andover, Connecticut: A Man-Made Lake and Rochambeau's Route",
+    "destination": "Andover, Connecticut",
+    "state": "Connecticut",
+    "county": "Tolland County",
+    "tier": "town-page",
+    "intro": "Andover existed as an ecclesiastical parish from 1748, nearly a century before it incorporated on May 18, 1848, formed from portions of neighboring Hebron and Coventry. The name comes from Andover in Hampshire, England; the town covers 15.7 square miles in southern Tolland County, bordered by Coventry, Columbia, Hebron and Bolton. Its early economy rested on a flaxseed oil mill and traffic along the Hartford–Norwich Turnpike, joined later by the Andover Creamery Corporation, founded 1886. In 1781, French officers marching with the Comte de Rochambeau lodged at White's Tavern, built in 1773 by Daniel White; now a private residence, it has been listed on the National Register since 1991. Andover Lake, the town's defining feature, is entirely man-made, created in 1926–27 when investors flooded a swampy area called Cheney Hollow.",
+    "sections": [
+      {
+        "heading": "Getting there",
+        "body": "Andover is a car-trip town: take I-384 east from I-84 in East Hartford to its eastern terminus at the US 6/US 44 junction in Bolton, then continue on US Route 6 (Jonathan Trumbull Highway) about five miles into Andover. CT Route 316 branches south from US 6 in Andover toward Hebron, and CT Route 87 begins on the town's east side and runs southeast toward Norwich. There is no passenger rail station in Andover or anywhere in Tolland County; the nearest CTrail Hartford Line station is Hartford Union Station, about 18 miles west."
+      },
+      {
+        "heading": "History",
+        "body": "Andover's early economy centered on a small flaxseed oil mill and traffic along the Hartford-Norwich Turnpike, dating to its years as an ecclesiastical parish after 1748. The Andover Creamery Corporation, founded in 1886, exemplified the cooperative dairy enterprises common in town at the time. Andover Lake, the town's defining feature today, is entirely man-made: investors formed the Andover Lake Corporation in 1926 to flood a swampy area called Cheney Hollow, and by the 1940s several hundred cottages ringed the shore. White's Tavern, built in 1773 by Daniel White on US Route 6, hosted French officers under the Comte de Rochambeau — including the Marquis de Chastellux — in 1781; it is listed on the National Register of Historic Places but is now a private residence, viewable from the road only."
+      }
+    ],
+    "faq": [
+      {
+        "question": "How do I get to Andover?",
+        "answer": "By car — I-384 east from I-84 in East Hartford to its end at US 6/US 44 in Bolton, then US Route 6 (Jonathan Trumbull Highway) about five miles east into Andover. There is no passenger rail station in Andover or anywhere in Tolland County; the nearest CTrail Hartford Line station is Hartford Union Station, about 18 miles west."
+      },
+      {
+        "question": "Is there a train to Andover?",
+        "answer": "No. Andover and all of Tolland County have no passenger rail station. The nearest CTrail Hartford Line stop is Hartford Union Station, about 18 miles west, and neither Metro-North's New Haven Line nor Shore Line East reaches this part of the state."
+      },
+      {
+        "question": "What is Andover Lake?",
+        "answer": "A man-made lake created in 1926–27 when the Andover Lake Corporation flooded a swampy area called Cheney Hollow; several hundred cottages ringed it by the 1940s. It remains the town's geographic center, though it is ringed mostly by private cottages and public access is not verified."
+      }
+    ],
+    "photos": [
+      {
+        "src": "/photos/ct/andover/hop-river-trail-bridge-andover.jpg",
+        "thumb": "/photos/ct/andover/hop-river-trail-bridge-andover_thumb.jpg",
+        "title": "Hop River Trail bridge, Andover",
+        "description": "The covered pedestrian and bike truss bridge carrying the Hop River rail-trail over U.S. Route 6 in Andover.",
+        "author": "John Phelan",
+        "license": "CC BY-SA 4.0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Andover_Memorial_Bridge,_Hop_River_State_Park_Trail,_Andover_CT.jpg"
+      }
+    ]
+  },
+  "places": [
+    {
+      "slug": "hop-river-state-park-trail-andover",
+      "name": "Hop River State Park Trail (Andover section)",
+      "kind": "park",
+      "town": "Andover",
+      "state": "Connecticut",
+      "county": "Tolland County",
+      "address": "Trailhead parking on Burnap Brook Road, Andover, CT 06232; additional access on Wales Road, Shoddy Mill Road and Lake Road",
+      "official_url": "https://ctparks.com/node/61",
+      "summary": "A crushed-stone rail trail of more than 20 miles on the former Hartford, Providence and Fishkill Railroad bed, running from Manchester through Vernon, Bolton, Coventry, Andover and Columbia to Willimantic. Open daily 8 a.m. to sunset, free, leashed pets welcome.",
+      "status": "open",
+      "photos": [
+        {
+          "src": "/photos/ct/andover/hop-river-trail-bridge-andover.jpg",
+          "thumb": "/photos/ct/andover/hop-river-trail-bridge-andover_thumb.jpg",
+          "title": "Hop River Trail bridge, Andover",
+          "description": "The covered pedestrian and bike truss bridge carrying the Hop River rail-trail over U.S. Route 6 in Andover.",
+          "author": "John Phelan",
+          "license": "CC BY-SA 4.0",
+          "source_url": "https://commons.wikimedia.org/wiki/File:Andover_Memorial_Bridge,_Hop_River_State_Park_Trail,_Andover_CT.jpg"
+        }
+      ]
+    },
+    {
+      "slug": "andover-center-historic-district",
+      "name": "Andover Center Historic District",
+      "kind": "historic-site",
+      "town": "Andover",
+      "state": "Connecticut",
+      "county": "Tolland County",
+      "address": "Center of Andover, roughly along Hebron Road, Boston Hill Road and US Route 6, Andover, CT 06232",
+      "summary": "A 270-acre historic district listed on the National Register of Historic Places in 2003, with 60 contributing buildings including the Georgian Phelps-Bingham House (1740), the Greek Revival First Congregational Church (1833) and a cemetery established in 1750. Public streetscape, viewable from the road.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "toms-place-andover",
+      "name": "Tom's Place",
+      "kind": "restaurant",
+      "town": "Andover",
+      "state": "Connecticut",
+      "county": "Tolland County",
+      "address": "108 US-6, Andover, CT 06232",
+      "summary": "A roadside stand on Route 6, open Monday-Friday 7 a.m.-2 p.m. and closed weekends. The highest-rated eatery in town on local restaurant directories.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "andover-pizza-bar",
+      "name": "Andover Pizza & Bar",
+      "kind": "restaurant",
+      "town": "Andover",
+      "state": "Connecticut",
+      "county": "Tolland County",
+      "address": "130 Jonathan Trumbull Hwy (US Route 6), Andover, CT 06232",
+      "official_url": "http://andoverpizzact.com",
+      "summary": "Andover's sit-down pizzeria, serving pizza, Italian dishes, seafood, burgers and grinders with delivery and takeout. Open Monday and Wednesday-Thursday 11 a.m.-9 p.m., Friday-Saturday to 10 p.m., Sunday noon-8 p.m., closed Tuesday.",
+      "status": "open",
+      "photos": []
+    }
+  ],
+  "entries": [
+    {
+      "kind": "walk",
+      "name": "Hop River State Park Trail (Andover section)",
+      "place_slug": "hop-river-state-park-trail-andover",
+      "note": "A crushed-stone rail trail through Andover, crossing US Route 6 on a covered truss bridge."
+    },
+    {
+      "kind": "sight",
+      "name": "Andover Center Historic District",
+      "place_slug": "andover-center-historic-district",
+      "note": "A 270-acre National Register district anchored by an 18th-century village core."
+    },
+    {
+      "kind": "food",
+      "name": "Tom's Place",
+      "place_slug": "toms-place-andover",
+      "note": "A weekday-only roadside stand on Route 6."
+    },
+    {
+      "kind": "food",
+      "name": "Andover Pizza & Bar",
+      "place_slug": "andover-pizza-bar",
+      "note": "Sit-down pizzeria and Italian kitchen on Route 6."
+    }
+  ],
+  "links": [
+    {
+      "target": "guide:bolton-ct-travel-guide",
+      "kind": "nearby",
+      "note": "Andover borders Bolton to the northwest, reached via US Route 6."
+    },
+    {
+      "target": "guide:columbia-ct-travel-guide",
+      "kind": "nearby",
+      "note": "Andover borders Columbia to the southeast."
+    },
+    {
+      "target": "guide:hebron-ct-travel-guide",
+      "kind": "nearby",
+      "note": "Andover borders Hebron to the south; CT Route 316 runs from US 6 in Andover directly into Hebron."
+    },
+    {
+      "target": "guide:coventry-ct-travel-guide",
+      "kind": "shared-history",
+      "note": "The Nathan Hale Homestead, about five miles from Andover center, sits in neighboring Coventry, which also borders Andover."
+    }
+  ]
+}

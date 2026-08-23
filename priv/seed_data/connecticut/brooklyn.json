@@ -1,0 +1,315 @@
+{
+  "guide": {
+    "slug": "brooklyn-ct-travel-guide",
+    "title": "Brooklyn, Connecticut: A General's Grave and America's Oldest Fair",
+    "destination": "Brooklyn, Connecticut",
+    "state": "Connecticut",
+    "county": "Windham County",
+    "intro": "Brooklyn was settled in the late 17th century in territory then known as Mortlake, and incorporated as a town separate from Canterbury and Pomfret in May 1786; its name is thought to derive from the Quinebaug River, or \"Brook Line,\" which forms its eastern boundary. Revolutionary War general Israel Putnam kept a farm in Brooklyn and died there in 1790; in 1888 his remains were reinterred beneath a bronze equestrian statue by sculptor Karl Gerhardt on Canterbury Road. Brooklyn served as an early Windham County seat and hosted the 1833 trial of schoolteacher Prudence Crandall, charged with educating Black students; Rev. Samuel J. May, who became the first Unitarian pastor of Brooklyn's 1771 meeting house in 1822, publicly defended her and helped found the American Anti-Slavery Society. In 1871, Celia Burleigh became minister of Brooklyn's Unitarian congregation. The Brooklyn Fair, tracing to 1809, is described by Connecticut Humanities as America's oldest continuously operating agricultural fair.",
+    "sections": [
+      {
+        "heading": "A general's grave and a schoolteacher's trial",
+        "body": "Brooklyn was settled in the late 17th century in territory then known as Mortlake, and incorporated separate from Canterbury and Pomfret in May 1786. Revolutionary War general Israel Putnam kept a farm in Brooklyn and died there in 1790; in 1888 his remains were reinterred beneath a bronze equestrian statue by sculptor Karl Gerhardt on Canterbury Road. Brooklyn served as an early Windham County seat and hosted the 1833 trial of schoolteacher Prudence Crandall, charged with educating Black students. Rev. Samuel J. May, the first Unitarian pastor of Brooklyn's 1771 meeting house from 1822, organized the Windham County Peace Society, helped found the American Anti-Slavery Society, and publicly defended Crandall at a Canterbury town meeting. In 1871, lifelong activist Celia Burleigh became minister of Brooklyn's Unitarian congregation. The Brooklyn Fair, run by the Windham County Agricultural Society and tracing to 1809, is described by Connecticut Humanities as America's oldest continuously operating agricultural fair."
+      },
+      {
+        "heading": "Getting there",
+        "body": "Brooklyn sits where US Route 6 crosses Route 169, a National Scenic Byway, reached most easily from Interstate 395 Exit 37 at Danielson and then west on US 6. Route 169 bisects the town north-south for a 32-mile stretch that's a designated National Scenic Byway, and Route 205 intersects it in town. There is no passenger rail station in Brooklyn, and no CTrail Hartford Line, Shore Line East or Metro-North service reaches the town; the nearest Amtrak station is New London Union Station, about 30 miles south."
+      }
+    ],
+    "faq": [
+      {
+        "question": "How do I get to Brooklyn?",
+        "answer": "By car — Brooklyn sits where US Route 6 crosses Route 169, reached from Interstate 395 Exit 37 at Danielson and west on US 6. There is no passenger rail station in Brooklyn; the nearest is New London Union Station, about 30 miles south."
+      },
+      {
+        "question": "Is there a train to Brooklyn?",
+        "answer": "No. No CTrail Hartford Line, Shore Line East or Metro-North service reaches Brooklyn. The nearest Amtrak station is New London Union Station, about 30 miles south."
+      },
+      {
+        "question": "What is the Brooklyn Fair?",
+        "answer": "An agricultural fair run by the Windham County Agricultural Society, tracing to 1809 and described as America's oldest continuously operating agricultural fair. The 176th annual fair runs August 27-30, 2026 at 15 Fairgrounds Road."
+      },
+      {
+        "question": "Can I tour Creamery Brook Bison?",
+        "answer": "The farm store is open Thursday and Friday 2-6 p.m. and Saturday 9 a.m.-1 p.m. Wagon tours of the bison herd are by private group booking only ($150 per group), not a walk-up experience — call ahead."
+      },
+      {
+        "question": "Is there a hotel in Brooklyn?",
+        "answer": "No hotel, inn or B&B could be verified operating inside Brooklyn. The nearest confirmed option is The Inn at Woodstock Hill, about 11 miles north, though its restaurant is open for private events only."
+      }
+    ],
+    "photos": [
+      {
+        "src": "/photos/ct/brooklyn/israel-putnam-monument-brooklyn.jpg",
+        "thumb": "/photos/ct/brooklyn/israel-putnam-monument-brooklyn_thumb.jpg",
+        "title": "General Israel Putnam Monument",
+        "description": "The 1888 bronze equestrian monument to General Israel Putnam in Brooklyn.",
+        "author": "Kenneth C. Zirkel",
+        "license": "CC BY-SA 4.0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Israel_Putnam_Monument,_Brooklyn_Connecticut.jpg"
+      },
+      {
+        "src": "/photos/ct/brooklyn/old-trinity-church-brooklyn.jpg",
+        "thumb": "/photos/ct/brooklyn/old-trinity-church-brooklyn_thumb.jpg",
+        "title": "Old Trinity Church",
+        "description": "Old Trinity Church, completed in 1771, the oldest Episcopal church building in Connecticut.",
+        "author": "Ethan Long",
+        "license": "CC BY-SA 2.0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Old_Trinity_Church,_Brooklyn,_Connecticut_(53852193392).jpg"
+      },
+      {
+        "src": "/photos/ct/brooklyn/unitarian-meeting-house-brooklyn.jpg",
+        "thumb": "/photos/ct/brooklyn/unitarian-meeting-house-brooklyn_thumb.jpg",
+        "title": "Unitarian Meeting House",
+        "description": "The 1771 Unitarian Meeting House in Brooklyn, where Rev. Samuel J. May served as first pastor.",
+        "author": "Neccog1",
+        "license": "CC BY-SA 4.0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Unitarian_Meetinghouse_in_Brooklyn.JPG"
+      }
+    ]
+  },
+  "places": [
+    {
+      "slug": "brooklyn-historical-society-museum",
+      "name": "Brooklyn Historical Society Museum & Daniel Putnam Tyler Law Office Museum",
+      "kind": "museum",
+      "town": "Brooklyn",
+      "state": "Connecticut",
+      "county": "Windham County",
+      "address": "25 Canterbury Road, Brooklyn, CT 06234",
+      "official_url": "http://www.brooklynct.gov/333/Historical-Society",
+      "summary": "The main museum's General Putnam Gallery includes the 1888 Karl Gerhardt bronze wolf heads stolen from the Putnam statue in 1984-85 and returned in 2015. Free admission. Open Wednesday and Sunday, May 20-October 11, 1-5 p.m.; the Law Office Museum is open year-round by appointment.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "israel-putnam-equestrian-monument",
+      "name": "General Israel Putnam Equestrian Monument and Burial Site",
+      "kind": "historic-site",
+      "town": "Brooklyn",
+      "state": "Connecticut",
+      "county": "Windham County",
+      "address": "Canterbury Road (Route 169) near the Brooklyn Green, Brooklyn, CT 06234",
+      "summary": "A bronze equestrian statue erected in 1888 by sculptor Karl Gerhardt, with General Israel Putnam's remains reinterred beneath it that same year. A permanent outdoor roadside landmark within the Brooklyn Green National Register historic district.",
+      "status": "open",
+      "photos": [
+        {
+          "src": "/photos/ct/brooklyn/israel-putnam-monument-brooklyn.jpg",
+          "thumb": "/photos/ct/brooklyn/israel-putnam-monument-brooklyn_thumb.jpg",
+          "title": "General Israel Putnam Monument",
+          "description": "The 1888 bronze equestrian monument to General Israel Putnam in Brooklyn.",
+          "author": "Kenneth C. Zirkel",
+          "license": "CC BY-SA 4.0",
+          "source_url": "https://commons.wikimedia.org/wiki/File:Israel_Putnam_Monument,_Brooklyn_Connecticut.jpg"
+        }
+      ]
+    },
+    {
+      "slug": "old-trinity-church-brooklyn",
+      "name": "Old Trinity Church",
+      "kind": "historic-site",
+      "town": "Brooklyn",
+      "state": "Connecticut",
+      "county": "Windham County",
+      "address": "Church Street, Brooklyn, CT 06234 (about three miles east of Brooklyn Center)",
+      "summary": "Completed in 1771 and little altered since, it is the oldest Episcopal church building in Connecticut, listed on the National Register in 1970. The congregation now worships mainly at a newer church in Brooklyn Center; treat visits here as by-event or exterior-only.",
+      "status": "open",
+      "photos": [
+        {
+          "src": "/photos/ct/brooklyn/old-trinity-church-brooklyn.jpg",
+          "thumb": "/photos/ct/brooklyn/old-trinity-church-brooklyn_thumb.jpg",
+          "title": "Old Trinity Church",
+          "description": "Old Trinity Church, completed in 1771, the oldest Episcopal church building in Connecticut.",
+          "author": "Ethan Long",
+          "license": "CC BY-SA 2.0",
+          "source_url": "https://commons.wikimedia.org/wiki/File:Old_Trinity_Church,_Brooklyn,_Connecticut_(53852193392).jpg"
+        }
+      ]
+    },
+    {
+      "slug": "unitarian-meeting-house-brooklyn",
+      "name": "Unitarian Meeting House",
+      "kind": "historic-site",
+      "town": "Brooklyn",
+      "state": "Connecticut",
+      "county": "Windham County",
+      "address": "7 Hartford Road, Brooklyn, CT 06234",
+      "official_url": "https://ctfreedomtrail.org/connecticut-freedom-trail-sites/unitarian-meeting-house/",
+      "summary": "Built in 1771 by Daniel Tyler, it became home to Connecticut's first Unitarian congregation, with abolitionist Rev. Samuel J. May as first pastor from 1822. A Connecticut Freedom Trail site, individually listed on the National Register and open to the public.",
+      "status": "open",
+      "photos": [
+        {
+          "src": "/photos/ct/brooklyn/unitarian-meeting-house-brooklyn.jpg",
+          "thumb": "/photos/ct/brooklyn/unitarian-meeting-house-brooklyn_thumb.jpg",
+          "title": "Unitarian Meeting House",
+          "description": "The 1771 Unitarian Meeting House in Brooklyn, where Rev. Samuel J. May served as first pastor.",
+          "author": "Neccog1",
+          "license": "CC BY-SA 4.0",
+          "source_url": "https://commons.wikimedia.org/wiki/File:Unitarian_Meetinghouse_in_Brooklyn.JPG"
+        }
+      ]
+    },
+    {
+      "slug": "creamery-brook-bison",
+      "name": "Creamery Brook Bison",
+      "kind": "attraction",
+      "town": "Brooklyn",
+      "state": "Connecticut",
+      "county": "Windham County",
+      "address": "19 Purvis Road, Brooklyn, CT 06234",
+      "official_url": "https://www.creamerybrookbison.net/",
+      "summary": "A working bison farm with an on-farm store selling pasture-raised bison meat, open Thursday-Friday 2-6 p.m. and Saturday 9 a.m.-1 p.m. Wagon tours of the herd are by private group booking only ($150/group), not a walk-up experience. Closed August 27-30 for the Brooklyn Fair.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "brooklyn-fairgrounds",
+      "name": "Brooklyn Fairgrounds (Brooklyn Fair)",
+      "kind": "attraction",
+      "town": "Brooklyn",
+      "state": "Connecticut",
+      "county": "Windham County",
+      "address": "15 Fairgrounds Road, Brooklyn, CT 06234",
+      "official_url": "https://www.brooklynfair.org/",
+      "summary": "Home of the Brooklyn Fair, run by the Windham County Agricultural Society and traced to 1809, described as America's oldest continuously operating agricultural fair, with livestock shows, contests and entertainment. The 176th annual fair runs August 27-30, 2026.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "hanks-restaurant",
+      "name": "Hank's Restaurant",
+      "kind": "restaurant",
+      "town": "Brooklyn",
+      "state": "Connecticut",
+      "county": "Windham County",
+      "address": "416 Providence Road, Brooklyn, CT 06234",
+      "official_url": "https://www.hanksrestaurant.com/",
+      "summary": "A home-style Quiet Corner institution founded in 1971, under new owners since 2024. Open Monday-Thursday 11:30 a.m.-9 p.m., Friday-Saturday to 10 p.m. with a late menu to midnight, Sunday noon-8 p.m.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "bakers-dozen-brooklyn",
+      "name": "Baker's Dozen",
+      "kind": "cafe",
+      "town": "Brooklyn",
+      "state": "Connecticut",
+      "county": "Windham County",
+      "address": "520 Providence Road, Brooklyn, CT 06234",
+      "official_url": "https://bakersdozenct.com/",
+      "summary": "Family-owned coffee-and-baked-goods shop serving the Quiet Corner since 1980; Brooklyn is the corporate home location of about ten Baker's Dozen shops around northeastern Connecticut. Open weekdays 5 a.m.-7 p.m., weekends 5:30 a.m.-7 p.m.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "classic-pizza-family-restaurant",
+      "name": "Classic Pizza & Family Restaurant",
+      "kind": "restaurant",
+      "town": "Brooklyn",
+      "state": "Connecticut",
+      "county": "Windham County",
+      "address": "597 Providence Rd, Brooklyn, CT 06234",
+      "official_url": "https://classicpizzact.com/",
+      "summary": "A family restaurant serving Brooklyn since 1981, with pizza, calzones, grinders, seafood, pasta and a prime rib special Thursday-Saturday nights. Open Tuesday-Sunday 11 a.m.-9 p.m., closed Monday.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "little-dipper-farm",
+      "name": "Little Dipper Farm",
+      "kind": "restaurant",
+      "town": "Brooklyn",
+      "state": "Connecticut",
+      "county": "Windham County",
+      "address": "499 Wolf Den Rd, Brooklyn, CT 06234",
+      "official_url": "http://littledipperfarm.org/",
+      "summary": "Occupies the farm long home to the Golden Lamb Buttery, now hosting ticketed chef-driven farm dinners overlooking open pasture and a lake, plus periodic evening farmers markets, barn music nights and festivals. Reservations required — this is an events venue, not a walk-in restaurant.",
+      "status": "open",
+      "photos": []
+    }
+  ],
+  "entries": [
+    {
+      "kind": "sight",
+      "name": "Brooklyn Historical Society Museum & Daniel Putnam Tyler Law Office Museum",
+      "place_slug": "brooklyn-historical-society-museum",
+      "note": "Free local-history museums with a General Putnam Gallery."
+    },
+    {
+      "kind": "sight",
+      "name": "General Israel Putnam Equestrian Monument and Burial Site",
+      "place_slug": "israel-putnam-equestrian-monument",
+      "note": "An 1888 bronze equestrian statue marking Putnam's grave."
+    },
+    {
+      "kind": "sight",
+      "name": "Old Trinity Church",
+      "place_slug": "old-trinity-church-brooklyn",
+      "note": "Connecticut's oldest Episcopal church building, completed 1771."
+    },
+    {
+      "kind": "sight",
+      "name": "Unitarian Meeting House",
+      "place_slug": "unitarian-meeting-house-brooklyn",
+      "note": "An 1771 meeting house and Connecticut Freedom Trail site."
+    },
+    {
+      "kind": "sight",
+      "name": "Creamery Brook Bison",
+      "place_slug": "creamery-brook-bison",
+      "note": "A working bison farm with a farm store."
+    },
+    {
+      "kind": "sight",
+      "name": "Brooklyn Fairgrounds",
+      "place_slug": "brooklyn-fairgrounds",
+      "note": "Home to America's oldest continuously operating agricultural fair."
+    },
+    {
+      "kind": "food",
+      "name": "Hank's Restaurant",
+      "place_slug": "hanks-restaurant",
+      "note": "A Quiet Corner home-style institution since 1971."
+    },
+    {
+      "kind": "food",
+      "name": "Baker's Dozen",
+      "place_slug": "bakers-dozen-brooklyn",
+      "note": "Corporate home shop of a regional coffee-and-bakery chain."
+    },
+    {
+      "kind": "food",
+      "name": "Classic Pizza & Family Restaurant",
+      "place_slug": "classic-pizza-family-restaurant",
+      "note": "Family restaurant serving Brooklyn since 1981."
+    },
+    {
+      "kind": "food",
+      "name": "Little Dipper Farm",
+      "place_slug": "little-dipper-farm",
+      "note": "Ticketed farm dinners on the former Golden Lamb Buttery property."
+    }
+  ],
+  "links": [
+    {
+      "target": "guide:canterbury-ct-travel-guide",
+      "kind": "shared-history",
+      "note": "Brooklyn was incorporated separate from Canterbury and Pomfret in May 1786."
+    },
+    {
+      "target": "guide:pomfret-ct-travel-guide",
+      "kind": "shared-history",
+      "note": "Brooklyn was also incorporated separate from Pomfret in 1786."
+    },
+    {
+      "target": "guide:hampton-ct-travel-guide",
+      "kind": "shared-history",
+      "note": "Hampton was incorporated in 1786 in part from Brooklyn."
+    },
+    {
+      "target": "guide:killingly-ct-travel-guide",
+      "kind": "same-region",
+      "note": "Interstate 395 Exit 41 for Route 12/101 serves Dayville in Killingly, near Brooklyn."
+    }
+  ]
+}
