@@ -4,10 +4,10 @@ defmodule Ethos.LinksTest do
   import Ethos.GuidesFixtures
   alias Ethos.{Links, Places}
 
-  defp place!(slug, name \\ nil) do
+  defp place!(slug, name) do
     Places.upsert_place!(%{
       slug: slug,
-      name: name || slug,
+      name: name,
       kind: "museum",
       town: "Testville",
       state: "New York",
@@ -110,7 +110,7 @@ defmodule Ethos.LinksTest do
     assert nearby.other.slug == "out-place"
     assert nearby.other.title == "Out Place"
     assert nearby.other.type == "place"
-    assert nearby.other.subtitle =~ "Testville"
+    assert nearby.other.subtitle == "museum · Testville"
 
     hist = Enum.find(results, &(&1.kind == "shared-history"))
     assert hist.other.slug == "in-place"

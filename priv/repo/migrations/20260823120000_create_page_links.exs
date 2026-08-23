@@ -12,7 +12,10 @@ defmodule Ethos.Repo.Migrations.CreatePageLinks do
       timestamps(type: :utc_datetime)
     end
 
-    create unique_index(:page_links, [:source_type, :source_id, :target_type, :target_id, :kind])
+    create unique_index(:page_links, [:source_type, :source_id, :target_type, :target_id, :kind],
+             name: :page_links_edge_index
+           )
+
     create index(:page_links, [:source_type, :source_id])
     create index(:page_links, [:target_type, :target_id])
   end

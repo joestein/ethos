@@ -27,7 +27,7 @@ defmodule Ethos.Links.Link do
     |> validate_length(:note, max: 160)
     |> validate_not_self()
     |> unique_constraint([:source_type, :source_id, :target_type, :target_id, :kind],
-      name: :page_links_source_type_source_id_target_type_target_id_kind_index
+      name: :page_links_edge_index
     )
   end
 
