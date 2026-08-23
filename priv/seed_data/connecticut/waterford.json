@@ -1,0 +1,258 @@
+{
+  "guide": {
+    "slug": "waterford-ct-travel-guide",
+    "title": "Waterford, Connecticut: A Standard Oil Mansion and a Nuclear Plant",
+    "destination": "Waterford, Connecticut",
+    "state": "Connecticut",
+    "county": "New London County",
+    "intro": "Waterford separated from New London and was incorporated on October 8, 1801; its original designation was \"West Farms,\" and the town's name is commonly traced to Waterford, Ireland. Granite quarrying began at Millstone Point as early as 1737, named for its chief product, and today the same site is home to Connecticut's only nuclear power generating station, giving the town a dual identity as shoreline resort and power producer. Eolia, the 42-room Renaissance Revival mansion now at the center of Harkness Memorial State Park, was completed in 1906 and purchased the following year as a summer residence by Edward and Mary Harkness, whose fortune came from Standard Oil; on her death in 1950 Mary Harkness left the estate to Connecticut, and it was dedicated as a state park in 1953. The oceanfront Seaside Sanatorium, designed chiefly by Cass Gilbert, treated children with tuberculosis using sunlight and sea air until 1958.",
+    "sections": [
+      {
+        "heading": "A mansion, a sanatorium and a nuclear plant",
+        "body": "Fifteen of Harkness Memorial's 60 structures are listed on the National Register of Historic Places, following a $3.8 million restoration of the mansion and grounds in the mid-1990s. The Seaside Sanatorium's main Maher building, built in 1934, originally treated children with bone and glandular tuberculosis and later pulmonary cases as well; the 30-acre property was designated a state park in 2014, and while its historic buildings remain locked and off-limits, the grounds themselves are open to visitors for hiking, fishing and surfcasting. The New London-Waterford Speedbowl, a 3/8-mile asphalt oval on Route 85, has hosted stock car racing every season since April 15, 1951 except 2019, when it went dark over a required grandstand replacement."
+      },
+      {
+        "heading": "Getting there",
+        "body": "Waterford sits at the junction of I-95 and I-395 on Connecticut's southeastern shoreline; I-395's southern terminus is at the East Lyme-Waterford town line. The town has no rail station of its own, so travelers arriving by train use New London Union Station in the neighboring city, served by Amtrak Northeast Regional trains and the eastern terminus of CTrail Shore Line East, with SEAT local buses connecting onward into Waterford."
+      },
+      {
+        "heading": "Theater, beaches and byrek",
+        "body": "The Eugene O'Neill Theater Center, founded in 1964 and billing itself the \"launchpad of American theater,\" runs a summer season of new-play conferences where audiences can see works in development before they reach Broadway. Waterford Beach Park, on Great Neck Road beside the O'Neill campus, has a quarter-mile stretch of sand and a tidal marsh. For food, The Shack has served shoreline breakfasts on Boston Post Road since the chain's founding, and Nana's Byrek & Pizza serves Albanian savory phyllo pie alongside pizza — an unusual find on the Connecticut shoreline."
+      }
+    ],
+    "faq": [
+      {
+        "question": "How do I get to Waterford?",
+        "answer": "By car — Waterford sits at the I-95/I-395 junction. There is no passenger rail station in Waterford; the nearest is New London Union Station, with SEAT local buses connecting onward into town."
+      },
+      {
+        "question": "Is there a train to Waterford?",
+        "answer": "No. Amtrak Northeast Regional and CTrail Shore Line East both stop at New London, next door, but not in Waterford itself."
+      },
+      {
+        "question": "What is Harkness Memorial State Park?",
+        "answer": "A 230-acre former Standard Oil family estate centered on Eolia, a 42-room 1906 mansion. Grounds open daily 8 a.m. to sunset; mansion tours run weekends and holidays, Memorial Day through Labor Day, 10 a.m.-2 p.m. Swimming is not permitted."
+      },
+      {
+        "question": "Can I visit Seaside State Park?",
+        "answer": "Yes — the 30-acre grounds are open daily 8 a.m. to sunset for hiking, fishing and surfcasting, free, with pets on leash. The historic Cass Gilbert-designed buildings are locked and strictly off-limits; view them from outside only."
+      },
+      {
+        "question": "Is there a hotel in Waterford?",
+        "answer": "Mapping data shows a SpringHill Suites by Marriott on North Frontage Road and a couple of independent motels, but current operating status could not be independently confirmed — call ahead before booking."
+      }
+    ],
+    "photos": [
+      {
+        "src": "/photos/ct/waterford/eolia-mansion.jpg",
+        "thumb": "/photos/ct/waterford/eolia-mansion_thumb.jpg",
+        "title": "Eolia Mansion",
+        "description": "The front elevation of Eolia Mansion at Harkness Memorial State Park.",
+        "author": "Flintlock1204",
+        "license": "CC BY-SA 4.0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Eolia_Front_View_2020.jpg"
+      },
+      {
+        "src": "/photos/ct/waterford/long-island-sound-harkness.jpg",
+        "thumb": "/photos/ct/waterford/long-island-sound-harkness_thumb.jpg",
+        "title": "Long Island Sound at Harkness Memorial State Park",
+        "description": "Long Island Sound seen from the shoreline of Harkness Memorial State Park in Waterford.",
+        "author": "rboed*",
+        "license": "CC BY 2.0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Long_Island_Sound_from_Harkness_Park,_New_London,_CT.jpg"
+      },
+      {
+        "src": "/photos/ct/waterford/eugene-oneill-theater-center.jpg",
+        "thumb": "/photos/ct/waterford/eugene-oneill-theater-center_thumb.jpg",
+        "title": "Eugene O'Neill Theater Center",
+        "description": "The Hammond Mansion on the Eugene O'Neill Theater Center campus.",
+        "author": "Ijberliner",
+        "license": "CC BY-SA 4.0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:EOTC_HammondMansion.jpg"
+      }
+    ]
+  },
+  "places": [
+    {
+      "slug": "harkness-memorial-state-park",
+      "name": "Harkness Memorial State Park",
+      "kind": "park",
+      "town": "Waterford",
+      "state": "Connecticut",
+      "county": "New London County",
+      "address": "275 Great Neck Road, Waterford, CT 06385",
+      "official_url": "https://ctparks.com/parks/harkness-memorial-state-park",
+      "summary": "Over 230 acres of lawns, gardens, dunes and coastal grassland on Long Island Sound, centered on Eolia, the 42-room 1906 mansion of Edward and Mary Harkness. Fifteen of the park's 60 structures are on the National Register. Two trails, fishing, picnicking and birding — swimming is not permitted. Open daily 8 a.m. to sunset; mansion tours weekends and holidays, Memorial Day-Labor Day, 10 a.m.-2 p.m., last tour 1:30 p.m.",
+      "status": "open",
+      "photos": [
+        {
+          "src": "/photos/ct/waterford/eolia-mansion.jpg",
+          "thumb": "/photos/ct/waterford/eolia-mansion_thumb.jpg",
+          "title": "Eolia Mansion",
+          "description": "The front elevation of Eolia Mansion at Harkness Memorial State Park.",
+          "author": "Flintlock1204",
+          "license": "CC BY-SA 4.0",
+          "source_url": "https://commons.wikimedia.org/wiki/File:Eolia_Front_View_2020.jpg"
+        },
+        {
+          "src": "/photos/ct/waterford/long-island-sound-harkness.jpg",
+          "thumb": "/photos/ct/waterford/long-island-sound-harkness_thumb.jpg",
+          "title": "Long Island Sound at Harkness Memorial State Park",
+          "description": "Long Island Sound seen from the shoreline of Harkness Memorial State Park in Waterford.",
+          "author": "rboed*",
+          "license": "CC BY 2.0",
+          "source_url": "https://commons.wikimedia.org/wiki/File:Long_Island_Sound_from_Harkness_Park,_New_London,_CT.jpg"
+        }
+      ]
+    },
+    {
+      "slug": "eugene-oneill-theater-center",
+      "name": "Eugene O'Neill Theater Center",
+      "kind": "theater",
+      "town": "Waterford",
+      "state": "Connecticut",
+      "county": "New London County",
+      "address": "305 Great Neck Road, Waterford, CT 06385",
+      "official_url": "https://www.theoneill.org/",
+      "summary": "Founded in 1964 and billing itself the \"launchpad of American theater,\" the center has supported over 1,000 new stage works and won the 2010 Tony Award for Regional Theatre. Summer programs, including the National Playwrights Conference, let audiences see new plays in development. Phone (860) 443-5378.",
+      "status": "open",
+      "photos": [
+        {
+          "src": "/photos/ct/waterford/eugene-oneill-theater-center.jpg",
+          "thumb": "/photos/ct/waterford/eugene-oneill-theater-center_thumb.jpg",
+          "title": "Eugene O'Neill Theater Center",
+          "description": "The Hammond Mansion on the Eugene O'Neill Theater Center campus.",
+          "author": "Ijberliner",
+          "license": "CC BY-SA 4.0",
+          "source_url": "https://commons.wikimedia.org/wiki/File:EOTC_HammondMansion.jpg"
+        }
+      ]
+    },
+    {
+      "slug": "new-london-waterford-speedbowl",
+      "name": "New London-Waterford Speedbowl",
+      "kind": "attraction",
+      "town": "Waterford",
+      "state": "Connecticut",
+      "county": "New London County",
+      "address": "1080 Hartford Turnpike, Waterford, CT 06385",
+      "official_url": "https://speedbowlct.com/",
+      "summary": "A 3/8-mile asphalt oval that has hosted stock car racing since it opened April 15, 1951 — one of the Northeast's oldest short tracks, running every season except 2019, when it went dark over a required grandstand replacement. Weekly Speedbowl Saturday Nights and Thursday Night Thunder programs. Phone (860) 442-RACE.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "waterford-beach-park",
+      "name": "Waterford Beach Park",
+      "kind": "park",
+      "town": "Waterford",
+      "state": "Connecticut",
+      "county": "New London County",
+      "address": "317 Great Neck Road, Waterford, CT 06385",
+      "official_url": "https://www.waterfordct.gov/462/Discover-Waterford",
+      "summary": "A town-run beach with nearly a quarter-mile of sand and a tidal marsh on Long Island Sound, beside the Eugene O'Neill Theater Center. Parking is limited; daily or seasonal passes sold through Recreation & Parks, (860) 442-0553.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "seaside-state-park",
+      "name": "Seaside State Park",
+      "kind": "park",
+      "town": "Waterford",
+      "state": "Connecticut",
+      "county": "New London County",
+      "address": "Waterford, CT 06385",
+      "official_url": "https://ctparks.com/parks/seaside-state-park",
+      "summary": "30 acres of rocky shoreline and beach, Connecticut's first new shoreline park in over 50 years when designated in 2014. The Cass Gilbert-designed former tuberculosis sanatorium buildings, which treated children with heliotherapy until 1958, are on the National Register but remain locked and strictly off-limits — view them from outside only. Grounds open daily 8 a.m. to sunset, free, leashed pets welcome; fishing, hiking, kayaking and surfcasting.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "the-shack-waterford",
+      "name": "The Shack",
+      "kind": "restaurant",
+      "town": "Waterford",
+      "state": "Connecticut",
+      "county": "New London County",
+      "address": "131 Boston Post Road, Waterford, CT 06385",
+      "official_url": "https://shackrestaurants.com/location/the-shack-waterford/",
+      "summary": "A shoreline breakfast institution with locations in East Lyme, Waterford and Groton, serving breakfast, lunch and dinner. Open Mon-Sat 6 a.m.-8 p.m., Sun 6 a.m.-1 p.m. (breakfast only). Phone (860) 442-6660.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "nanas-byrek-pizza",
+      "name": "Nana's Byrek & Pizza",
+      "kind": "restaurant",
+      "town": "Waterford",
+      "state": "Connecticut",
+      "county": "New London County",
+      "address": "316 Boston Post Road, Waterford, CT 06385",
+      "official_url": "https://nanasbyrek.com/",
+      "summary": "An Albanian-American spot specializing in byrek, savory layered phyllo pie, alongside pizza. Dine-in, take-out, delivery and online ordering. Open Tue-Sat 11 a.m.-9 p.m., Sun noon-8:30 p.m., closed Monday. Phone (860) 437-3030.",
+      "status": "open",
+      "photos": []
+    }
+  ],
+  "entries": [
+    {
+      "kind": "sight",
+      "name": "Harkness Memorial State Park",
+      "place_slug": "harkness-memorial-state-park",
+      "note": "A 42-room Standard Oil family mansion on 230 shoreline acres."
+    },
+    {
+      "kind": "sight",
+      "name": "Eugene O'Neill Theater Center",
+      "place_slug": "eugene-oneill-theater-center",
+      "note": "The \"launchpad of American theater,\" founded 1964."
+    },
+    {
+      "kind": "sight",
+      "name": "New London-Waterford Speedbowl",
+      "place_slug": "new-london-waterford-speedbowl",
+      "note": "Stock car racing since 1951 on a 3/8-mile oval."
+    },
+    {
+      "kind": "sight",
+      "name": "Waterford Beach Park",
+      "place_slug": "waterford-beach-park",
+      "note": "A town beach beside the O'Neill Theater Center."
+    },
+    {
+      "kind": "sight",
+      "name": "Seaside State Park",
+      "place_slug": "seaside-state-park",
+      "note": "30 acres of shoreline around a locked Cass Gilbert-designed former sanatorium."
+    },
+    {
+      "kind": "food",
+      "name": "The Shack",
+      "place_slug": "the-shack-waterford",
+      "note": "A shoreline breakfast institution on Boston Post Road."
+    },
+    {
+      "kind": "food",
+      "name": "Nana's Byrek & Pizza",
+      "place_slug": "nanas-byrek-pizza",
+      "note": "Albanian savory phyllo pie alongside pizza."
+    }
+  ],
+  "links": [
+    {
+      "target": "guide:new-london-ct-travel-guide",
+      "kind": "nearby",
+      "note": "Waterford borders New London, home to the nearest passenger rail station."
+    },
+    {
+      "target": "guide:east-lyme-ct-travel-guide",
+      "kind": "nearby",
+      "note": "Waterford borders East Lyme; I-395's southern terminus sits on their shared town line."
+    },
+    {
+      "target": "guide:norwich-ct-travel-guide",
+      "kind": "same-region",
+      "note": "I-395 runs north from Waterford toward Norwich."
+    }
+  ]
+}

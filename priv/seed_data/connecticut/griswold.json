@@ -1,0 +1,285 @@
+{
+  "guide": {
+    "slug": "griswold-ct-travel-guide",
+    "title": "Griswold, Connecticut: Jewett City and the Slater Mills",
+    "destination": "Griswold, Connecticut",
+    "state": "Connecticut",
+    "county": "New London County",
+    "intro": "Griswold's roots reach to 1716, when Preston residents tired of traveling south to church organized their own \"North Society.\" The town, then still part of Preston, was incorporated separately in 1815 and named for Roger Griswold, who died in office as governor in October 1812 — a posthumous honor. In the late 1700s Eliezer Jewett opened mills and an irrigation plant at the settlement that came to bear his name; Rhode Islanders John and Lafayette Tibbits founded the Jewett City Cotton Manufacturing Company there in 1809, and in 1823 Samuel Slater, who had helped establish the nation's first cotton mill in Pawtucket, bought the struggling operation with his brother John and renamed it the Slater Company. Jewett City incorporated as a borough of Griswold in 1895. Long before the mills, the Pachaug River was Mohegan fishing ground; stone weirs the tribe built are still visible in Hopeville Pond at low water.",
+    "sections": [
+      {
+        "heading": "Slater Library and a borough within a town",
+        "body": "The Slater name is stamped on the borough beyond the mills: the Slater Library at 26 Main Street was a gift of industrialist-philanthropist John Fox Slater, built in 1884 to a Romanesque Revival design by Stephen C. Earle, with the Fanning Annex added in 1930. It was listed on the National Register of Historic Places in January 2002. Griswold covers 37.1 square miles at the northeastern edge of New London County, with a 2020 census population of 11,402, and contains the borough of Jewett City plus the villages of Doaneville, Glasgo, Hopeville, Kaalmanville, Nathanieltown, Pachaug and Rixtown. John Cantius Garand, designer of the M1 Garand rifle, is among its notable residents."
+      },
+      {
+        "heading": "Getting there",
+        "body": "Griswold sits in Connecticut's Quiet Corner along I-395: take Exit 21 for Route 12 into Jewett City, Exit 22 for Routes 138/164 toward the Pachaug side, or Exit 24 for Route 201 toward Hopeville. There is no passenger rail station anywhere in Griswold or the Borough of Jewett City; rail travelers should ride Shore Line East or Amtrak to New London and finish the trip by car via I-395."
+      },
+      {
+        "heading": "A mill pond, sunflowers and Main Street diners",
+        "body": "Hopeville Pond State Park sits on a former woolen-mill site with a swimming beach, boating and a wooded campground. Buttonwood Farm, family-owned since 1975, hand-crafts ice cream on site and plants a summer sunflower field for its Sunflowers for Wishes fundraiser, which has raised over $1.9 million for Make-A-Wish Connecticut across two dozen seasons — though the bloom window is a short midsummer stretch separate from the March-through-October ice cream season. Downtown, Charlene's Diner has run a breakfast counter for decades, Mandarin Garden Restaurant serves Main Street Chinese and Asian food, and Uncle Kranky's Cafe and Brewett City Pub anchor the borough's bar-and-grill scene into the evening."
+      }
+    ],
+    "faq": [
+      {
+        "question": "How do I get to Griswold?",
+        "answer": "By car — I-395 Exit 21 (Route 12) reaches Jewett City, Exit 22 (Routes 138/164) serves the Pachaug side, and Exit 24 (Route 201) serves Hopeville. There is no passenger rail station in Griswold; the nearest is New London, reached via I-395."
+      },
+      {
+        "question": "Is there a train to Griswold or Jewett City?",
+        "answer": "No. No Amtrak, Metro-North, CTrail Hartford Line or Shore Line East station exists in Griswold. The nearest rail is New London Union Station."
+      },
+      {
+        "question": "What is the Slater Library?",
+        "answer": "An 1884 Romanesque Revival library at 26 Main Street, Jewett City, a gift of industrialist John Fox Slater, with the Fanning Annex added in 1930. Listed on the National Register of Historic Places in 2002; open Monday-Saturday with hours varying by day."
+      },
+      {
+        "question": "Can I still see the sunflowers at Buttonwood Farm?",
+        "answer": "The Sunflowers for Wishes fundraiser runs a short midsummer window each year; the farm's ice cream stand stays open March 1 through October 31 regardless. Check buttonwoodfarmicecream.com for current-season sunflower dates."
+      },
+      {
+        "question": "Is there a hotel in Griswold?",
+        "answer": "Comfort Inn Griswold, on Voluntown Road near I-395 Exit 22, is the one branded hotel physically inside town. Call ahead to confirm rates and availability."
+      }
+    ],
+    "photos": [
+      {
+        "src": "/photos/ct/griswold/hopeville-pond-beach.jpg",
+        "thumb": "/photos/ct/griswold/hopeville-pond-beach_thumb.jpg",
+        "title": "Hopeville Pond State Park beach",
+        "description": "The swimming beach at Hopeville Pond State Park.",
+        "author": "John Phelan",
+        "license": "CC BY-SA 4.0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Beach,_Hopeville_Pond,_Griswold_CT.jpg"
+      },
+      {
+        "src": "/photos/ct/griswold/slater-library-jewett-city.jpg",
+        "thumb": "/photos/ct/griswold/slater-library-jewett-city_thumb.jpg",
+        "title": "Slater Library, Jewett City",
+        "description": "The 1884 Slater Library on Main Street in Jewett City.",
+        "author": "Pi.1415926535",
+        "license": "CC BY-SA 4.0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Slater_Library_in_Jewett_City_(1),_December_2022.jpg"
+      },
+      {
+        "src": "/photos/ct/griswold/jewett-city-center.jpg",
+        "thumb": "/photos/ct/griswold/jewett-city-center_thumb.jpg",
+        "title": "Jewett City center",
+        "description": "A street scene in the center of the Jewett City borough.",
+        "author": "Doug Kerr",
+        "license": "CC BY-SA 2.0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:JewettCityCT_Center.jpg"
+      }
+    ]
+  },
+  "places": [
+    {
+      "slug": "hopeville-pond-state-park",
+      "name": "Hopeville Pond State Park",
+      "kind": "park",
+      "town": "Griswold",
+      "state": "Connecticut",
+      "county": "New London County",
+      "address": "929 Hopeville Road, Griswold, CT 06351",
+      "official_url": "https://ctparks.com/node/63",
+      "summary": "A former woolen-mill site where Mohegan-built stone fishing weirs are visible in the pond at low water. Swimming, boating, fishing, hiking and a wooded campground of 80 sites plus one rustic cabin. Open daily 8 a.m. to sunset, April to October; recreation field open year-round. Park office (860) 376-2920.",
+      "status": "open",
+      "photos": [
+        {
+          "src": "/photos/ct/griswold/hopeville-pond-beach.jpg",
+          "thumb": "/photos/ct/griswold/hopeville-pond-beach_thumb.jpg",
+          "title": "Hopeville Pond State Park beach",
+          "description": "The swimming beach at Hopeville Pond State Park.",
+          "author": "John Phelan",
+          "license": "CC BY-SA 4.0",
+          "source_url": "https://commons.wikimedia.org/wiki/File:Beach,_Hopeville_Pond,_Griswold_CT.jpg"
+        }
+      ]
+    },
+    {
+      "slug": "pachaug-pond-boat-launch",
+      "name": "Pachaug Pond Boat Launch",
+      "kind": "park",
+      "town": "Griswold",
+      "state": "Connecticut",
+      "county": "New London County",
+      "address": "945 Voluntown Road, Griswold, CT",
+      "official_url": "https://portal.ct.gov/deep/boating/boat-launches/pachaug-pond-boat-launch",
+      "summary": "A CT DEEP boat launch at the north end of 841-acre Pachaug Pond, with a concrete-slab ramp and 40 parking spaces. No water-skiing within 1,000 feet of the dam. An active advisory warns that the invasive plant hydrilla has been found in this waterbody — clean, drain and dry your boat.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "slater-library-griswold",
+      "name": "Slater Library",
+      "kind": "historic-site",
+      "town": "Griswold",
+      "state": "Connecticut",
+      "county": "New London County",
+      "address": "26 Main Street, Jewett City, Griswold, CT 06351",
+      "official_url": "https://sites.google.com/site/slaterlibrary/",
+      "summary": "A granite-and-brownstone Romanesque Revival library built in 1884 as a gift from industrialist John Fox Slater, designed by architect Stephen C. Earle, with the Fanning Annex added in 1930. Listed on the National Register of Historic Places in January 2002. Open Mon-Wed 12-5:30, Thu 12-6:30, Fri 11-5, Sat 10-2, closed Sunday. Phone (860) 376-0024.",
+      "status": "open",
+      "photos": [
+        {
+          "src": "/photos/ct/griswold/slater-library-jewett-city.jpg",
+          "thumb": "/photos/ct/griswold/slater-library-jewett-city_thumb.jpg",
+          "title": "Slater Library, Jewett City",
+          "description": "The 1884 Slater Library on Main Street in Jewett City.",
+          "author": "Pi.1415926535",
+          "license": "CC BY-SA 4.0",
+          "source_url": "https://commons.wikimedia.org/wiki/File:Slater_Library_in_Jewett_City_(1),_December_2022.jpg"
+        }
+      ]
+    },
+    {
+      "slug": "buttonwood-farm-griswold",
+      "name": "Buttonwood Farm",
+      "kind": "attraction",
+      "town": "Griswold",
+      "state": "Connecticut",
+      "county": "New London County",
+      "address": "473 Shetucket Turnpike, Griswold, CT 06351",
+      "official_url": "https://www.buttonwoodfarmicecream.com/",
+      "summary": "A working family farm since 1975, hand-crafting ice cream on site with over 50 flavors, open daily noon-8:30 p.m., March 1 through October 31. Each summer the farm plants 14 acres of sunflowers for its Sunflowers for Wishes fundraiser, which has raised over $1.9 million for Make-A-Wish Connecticut; the sunflower field itself is open only for a short midsummer window. Phone (860) 376-4081.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "mandarin-garden-restaurant",
+      "name": "Mandarin Garden Restaurant",
+      "kind": "restaurant",
+      "town": "Griswold",
+      "state": "Connecticut",
+      "county": "New London County",
+      "address": "31 Main Street, Jewett City, Griswold, CT 06351",
+      "official_url": "https://www.mandaringardenjc.com",
+      "summary": "A long-running Main Street Chinese and Asian kitchen with pickup and delivery. Open Mon, Wed-Thu 11 a.m.-9 p.m., Fri-Sat 11 a.m.-10 p.m., Sun noon-9 p.m., closed Tuesday. Phone (860) 376-1531.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "brewett-city-pub",
+      "name": "Brewett City Pub",
+      "kind": "restaurant",
+      "town": "Griswold",
+      "state": "Connecticut",
+      "county": "New London County",
+      "address": "1 East Main Street, Jewett City, Griswold, CT 06351",
+      "official_url": "https://www.brewettcity.com",
+      "summary": "A small independent gastropub — draft beer, cocktails and a food menu — open since late 2023. Despite the name it is a pub, not a working brewery. Evening hours roughly Wed-Sat from 5 p.m., closed Sunday-Tuesday; phone (860) 912-8551.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "charlenes-diner",
+      "name": "Charlene's Diner",
+      "kind": "restaurant",
+      "town": "Griswold",
+      "state": "Connecticut",
+      "county": "New London County",
+      "address": "37 Main Street, Jewett City, Griswold, CT 06351",
+      "summary": "A family-owned downtown breakfast counter opening at 5 a.m. daily, known for its patty melt, blueberry crepes and home fries. Hours Mon 5-11, Tue-Fri 5-1:30, Sat-Sun 5-12:30. Phone (860) 376-9465.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "uncle-krankys-cafe",
+      "name": "Uncle Kranky's Cafe",
+      "kind": "restaurant",
+      "town": "Griswold",
+      "state": "Connecticut",
+      "county": "New London County",
+      "address": "37 Main Street, Jewett City, Griswold, CT 06351",
+      "summary": "A midday-to-late-night bar and grill known for its Irish nachos, closed Tuesdays. Hours roughly Mon 4-10 p.m., Wed 12-11 p.m., Thu-Sat 12 p.m.-midnight, Sun 12-10 p.m. Phone (860) 376-4226.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "comfort-inn-griswold",
+      "name": "Comfort Inn Griswold",
+      "kind": "hotel",
+      "town": "Griswold",
+      "state": "Connecticut",
+      "county": "New London County",
+      "address": "375 Voluntown Road, Griswold, CT 06351",
+      "official_url": "https://www.choicehotels.com/connecticut/griswold/comfort-inn-hotels/ct158",
+      "summary": "The one branded hotel physically inside Griswold, sited on Route 138 near the I-395 Exit 22 corridor within an easy drive of Foxwoods and Mohegan Sun. Phone (860) 376-3200 to confirm rates and availability.",
+      "status": "open",
+      "photos": []
+    }
+  ],
+  "entries": [
+    {
+      "kind": "sight",
+      "name": "Hopeville Pond State Park",
+      "place_slug": "hopeville-pond-state-park",
+      "note": "A mill-pond park with Mohegan stone fishing weirs visible at low water."
+    },
+    {
+      "kind": "sight",
+      "name": "Pachaug Pond Boat Launch",
+      "place_slug": "pachaug-pond-boat-launch",
+      "note": "A CT DEEP launch on 841-acre Pachaug Pond."
+    },
+    {
+      "kind": "sight",
+      "name": "Slater Library",
+      "place_slug": "slater-library-griswold",
+      "note": "An 1884 Romanesque Revival library, a gift of John Fox Slater."
+    },
+    {
+      "kind": "sight",
+      "name": "Buttonwood Farm",
+      "place_slug": "buttonwood-farm-griswold",
+      "note": "Hand-crafted ice cream and a summer sunflower fundraiser for Make-A-Wish."
+    },
+    {
+      "kind": "food",
+      "name": "Mandarin Garden Restaurant",
+      "place_slug": "mandarin-garden-restaurant",
+      "note": "Main Street Chinese and Asian food in Jewett City."
+    },
+    {
+      "kind": "food",
+      "name": "Brewett City Pub",
+      "place_slug": "brewett-city-pub",
+      "note": "An independent gastropub, evenings only."
+    },
+    {
+      "kind": "food",
+      "name": "Charlene's Diner",
+      "place_slug": "charlenes-diner",
+      "note": "A downtown breakfast counter open from 5 a.m."
+    },
+    {
+      "kind": "food",
+      "name": "Uncle Kranky's Cafe",
+      "place_slug": "uncle-krankys-cafe",
+      "note": "A midday-to-late-night bar and grill known for Irish nachos."
+    },
+    {
+      "kind": "stay",
+      "name": "Comfort Inn Griswold",
+      "place_slug": "comfort-inn-griswold",
+      "note": "Griswold's one branded hotel, near I-395 Exit 22."
+    }
+  ],
+  "links": [
+    {
+      "target": "guide:preston-ct-travel-guide",
+      "kind": "shared-history",
+      "note": "Griswold was originally the northern part of Preston before its 1815 incorporation."
+    },
+    {
+      "target": "guide:lisbon-ct-travel-guide",
+      "kind": "nearby",
+      "note": "Route 138 runs directly from Lisbon into Griswold, both signed together at I-395 Exit 21."
+    },
+    {
+      "target": "guide:voluntown-ct-travel-guide",
+      "kind": "nearby",
+      "note": "Route 138 continues east from Griswold directly into Voluntown."
+    }
+  ]
+}

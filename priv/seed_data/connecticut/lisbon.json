@@ -1,0 +1,278 @@
+{
+  "guide": {
+    "slug": "lisbon-ct-travel-guide",
+    "title": "Lisbon, Connecticut: A Railroad Tunnel and a Rural Synagogue",
+    "destination": "Lisbon, Connecticut",
+    "state": "Connecticut",
+    "county": "New London County",
+    "intro": "Lisbon was incorporated in 1786, set off from Norwich, and sits in New London County between the Quinebaug and Shetucket rivers, inside The Last Green Valley National Heritage Corridor; its town center is the village of Newent. The town takes its name from Lisbon, the capital of Portugal. The Taft Tunnel, completed August 28, 1837 for the Norwich and Worcester Railroad, was Connecticut's first railroad tunnel and is still in freight use. Cabinetmaker Ebenezer Tracy ran his shop here from the 1770s to 1803, becoming the preeminent Windsor chair maker in Connecticut; his work is held by the Connecticut Historical Society, Winterthur Museum and the Metropolitan Museum of Art. On September 4, 1774, 464 men mustered at Captain Benjamin Burnham's inn after the alarm from Boston. Anshei Israel Synagogue, a rare rural synagogue built in 1936 by fifteen Russian and Polish immigrant farming families, closed in 1987 and was later transferred to the town.",
+    "sections": [
+      {
+        "heading": "A meeting house, a tavern and a synagogue",
+        "body": "Religious use of the Newent Meeting House site dates to 1723; the present building opened in 1858, and after its congregation wound down, the church and grounds were given to the Town of Lisbon in August 2023 and leased for 100 years to the Lisbon Historical Society. Burnham Tavern, on land the Burnham family bought in 1723 and ran as a tavern from 1755, was a thrice-daily stagecoach stop on the Norwich-to-Woodstock turnpike until the railroad arrived; it now covers 129 acres of walled fields still leased to local farmers, with newly designed walking trails. The John Bishop House, an 11-room Georgian farmhouse built in 1810 by John Bishop at age 79, has had only three owner families, and its granite basement fireplace, crane and iron cauldron survive intact. Through the 1800s Lisbon's economy rested on agriculture together with wool and silk factories."
+      },
+      {
+        "heading": "Getting there",
+        "body": "Lisbon is a drive-to town on the I-395 corridor, roughly seven miles northeast of Norwich: take I-395 Exit 21 for Route 12 (River Road) to reach Lisbon Landing and the commercial strip, or Exit 19 for Route 169, a National Scenic Byway that runs up through the historic town center at Newent. There is no passenger rail station in Lisbon; the lines through town, including the Taft Tunnel, carry only freight. The nearest passenger rail is New London Union Station, reached via I-395 south to I-95."
+      },
+      {
+        "heading": "Berries, pizza and a green with a farmers' market",
+        "body": "Grant's Berry Patch & Farm Stand, working over 12 acres since 1997, offers pick-your-own strawberries, blueberries, raspberries and pumpkins alongside a farm stand and CSA. Lisbon Meadows Park, a 59-acre town park off South Burnham Highway, has ballfields, a tennis court, walking trails and disc golf. The Lisbon Farmers' Market sets up on the Newent Meeting House Green each Thursday afternoon through the season. For food, Green Onion Pizza Restaurant has served Route 12 since 1986, and Chili's Grill & Bar anchors the Lisbon Landing retail strip. Haskell House Bed & Breakfast, an authentic 1798 colonial on Ross Hill Road recorded on the National Register as the Andrew Clark House, is the only lodging verified inside Lisbon."
+      }
+    ],
+    "faq": [
+      {
+        "question": "How do I get to Lisbon?",
+        "answer": "By car — I-395 Exit 21 (Route 12) reaches Lisbon Landing, and Exit 19 (Route 169) reaches the historic Newent town center. There is no passenger rail station in Lisbon; the nearest is New London Union Station."
+      },
+      {
+        "question": "Is there a train to Lisbon?",
+        "answer": "No. The rail lines through Lisbon, including the historic 1837 Taft Tunnel, carry only freight. The nearest passenger rail is New London, reached via I-395 south to I-95."
+      },
+      {
+        "question": "What is the Taft Tunnel?",
+        "answer": "Completed August 28, 1837 for the Norwich and Worcester Railroad, it was the first railroad tunnel in Connecticut and remains in active freight use — there is no public viewing area or safe visitor access."
+      },
+      {
+        "question": "Is there a hotel in Lisbon?",
+        "answer": "Haskell House Bed & Breakfast, a 1798 colonial home on Ross Hill Road, is the only lodging verified inside Lisbon. Book through Airbnb or VRBO."
+      },
+      {
+        "question": "Can I visit the Anshei Israel Synagogue?",
+        "answer": "The 1936 building, no longer a house of worship, is a museum open by appointment; email the Lisbon Historical Society's Paula Adams at padams60@sbcglobal.net."
+      }
+    ],
+    "photos": [
+      {
+        "src": "/photos/ct/lisbon/newent-congregational-church.jpg",
+        "thumb": "/photos/ct/lisbon/newent-congregational-church_thumb.jpg",
+        "title": "Newent Congregational Church",
+        "description": "The 1858 Newent Meeting House on Newent Road.",
+        "author": "John Phelan",
+        "license": "CC BY-SA 4.0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Newent_Congregational_Church,_Lisbon_CT.jpg"
+      },
+      {
+        "src": "/photos/ct/lisbon/andrew-clark-house.jpg",
+        "thumb": "/photos/ct/lisbon/andrew-clark-house_thumb.jpg",
+        "title": "Haskell House (Andrew Clark House)",
+        "description": "The 1798 Haskell House on Ross Hill Road, recorded on the National Register as the Andrew Clark House.",
+        "author": "Cathy Cline",
+        "license": "CC BY-SA 3.0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Andrew_Clark_House,_Lisbon,_CT.JPG"
+      }
+    ]
+  },
+  "places": [
+    {
+      "slug": "john-bishop-house-museum",
+      "name": "John Bishop House Museum",
+      "kind": "museum",
+      "town": "Lisbon",
+      "state": "Connecticut",
+      "county": "New London County",
+      "address": "11 South Burnham Highway (Route 169), Lisbon, CT 06351",
+      "official_url": "https://lisbonhistoricalsociety.org/john-bishop-house",
+      "summary": "An 11-room Georgian farmhouse built in 1810 by John Bishop at age 79, with only three owner families in its history. Interior survivals include seven fireplaces and a granite basement fireplace with crane and iron cauldron. Town-owned, leased to the Lisbon Historical Society; open for summer tours and the Fall Festival — check the town newsletter for current dates.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "anshei-israel-synagogue",
+      "name": "Anshei Israel Synagogue",
+      "kind": "historic-site",
+      "town": "Lisbon",
+      "state": "Connecticut",
+      "county": "New London County",
+      "address": "142 Newent Road (Route 138), Lisbon, CT 06351",
+      "official_url": "https://lisbonhistoricalsociety.org/anshei-israel-synagogue",
+      "summary": "A Colonial Revival building of 1936, built by fifteen immigrant Russian and Polish Jewish farming families; one of very few surviving rural synagogues in Connecticut. Listed on the National Register of Historic Places in July 1995; town-owned since 1998. Open by appointment — email padams60@sbcglobal.net.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "newent-meeting-house",
+      "name": "Newent Meeting House and Green",
+      "kind": "historic-site",
+      "town": "Lisbon",
+      "state": "Connecticut",
+      "county": "New London County",
+      "address": "12 South Burnham Highway, Lisbon, CT 06351",
+      "official_url": "https://lisbonhistoricalsociety.org/meeting-house",
+      "summary": "Religious use of the site dates to 1723; the present building opened in 1858. Given to the Town of Lisbon in August 2023 and leased for 100 years to the Lisbon Historical Society, the hall seats about 130 and hosts concerts, lectures and the town's Thursday farmers' market on the Green.",
+      "status": "open",
+      "photos": [
+        {
+          "src": "/photos/ct/lisbon/newent-congregational-church.jpg",
+          "thumb": "/photos/ct/lisbon/newent-congregational-church_thumb.jpg",
+          "title": "Newent Congregational Church",
+          "description": "The 1858 Newent Meeting House on Newent Road.",
+          "author": "John Phelan",
+          "license": "CC BY-SA 4.0",
+          "source_url": "https://commons.wikimedia.org/wiki/File:Newent_Congregational_Church,_Lisbon_CT.jpg"
+        }
+      ]
+    },
+    {
+      "slug": "burnham-tavern-lisbon",
+      "name": "Burnham Tavern and Trails",
+      "kind": "historic-site",
+      "town": "Lisbon",
+      "state": "Connecticut",
+      "county": "New London County",
+      "address": "223 North Burnham Highway, Lisbon, CT 06351; trailhead at 62 Kimball Road",
+      "official_url": "https://lisbonhistoricalsociety.org/burnham-tavern",
+      "summary": "A post-and-beam Colonial and Georgian house on land the Burnham family bought in 1723, run as a tavern from 1755; 464 men mustered here on September 4, 1774. Listed on the National Register in March 2022. Now 129 acres of walled fields still leased to local farmers, with newly designed walking trails from the Kimball Road trailhead.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "lisbon-meadows-park",
+      "name": "Lisbon Meadows Park",
+      "kind": "park",
+      "town": "Lisbon",
+      "state": "Connecticut",
+      "county": "New London County",
+      "address": "South Burnham Highway (Route 169), Lisbon, CT 06351",
+      "official_url": "https://www.lisbonct.gov/285/Visiting-Lisbon",
+      "summary": "A 59-acre town park with baseball and soccer fields, a tennis court, walking trails, disc golf and a boat launch on the Shetucket River.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "grants-berry-patch-farm-stand",
+      "name": "Grant's Berry Patch & Farm Stand",
+      "kind": "attraction",
+      "town": "Lisbon",
+      "state": "Connecticut",
+      "county": "New London County",
+      "address": "188 Mell Road, Lisbon, CT 06351",
+      "official_url": "https://grantsberrypatch.net/",
+      "summary": "A pick-your-own farm working over 12 acres since 1997, with PYO strawberries, blueberries, raspberries and pumpkins, a farm stand and a CSA program. Posted hours are Mon-Fri 9 a.m.-1 p.m., Sat-Sun 9 a.m.-4 p.m., seasonal and subject to change. Phone (860) 376-5625.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "green-onion-pizza-restaurant",
+      "name": "Green Onion Pizza Restaurant",
+      "kind": "restaurant",
+      "town": "Lisbon",
+      "state": "Connecticut",
+      "county": "New London County",
+      "address": "10 River Road (Route 12), Lisbon, CT 06351",
+      "official_url": "https://www.greenonionlisbon.com/",
+      "summary": "A family Italian-American pizzeria on Route 12, serving pizza and gourmet pasta in large portions since 1986. Phone (860) 376-3817.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "chilis-grill-bar-lisbon",
+      "name": "Chili's Grill & Bar",
+      "kind": "restaurant",
+      "town": "Lisbon",
+      "state": "Connecticut",
+      "county": "New London County",
+      "address": "151 River Road, Lisbon, CT 06351",
+      "official_url": "https://www.chilis.com/locations/us/connecticut/jewett-city/lisbon",
+      "summary": "A full-service chain restaurant and bar on the Lisbon Landing retail strip, the one sit-down bar-and-grill verified operating in town. Open Sun-Thu 11 a.m.-11 p.m., Fri-Sat 11 a.m.-midnight. Phone (860) 376-5862.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "haskell-house-bed-breakfast",
+      "name": "Haskell House Bed & Breakfast",
+      "kind": "bnb",
+      "town": "Lisbon",
+      "state": "Connecticut",
+      "county": "New London County",
+      "address": "45 Ross Hill Road, Lisbon, CT 06351",
+      "official_url": "http://haskellhousect.com",
+      "summary": "An authentic colonial house on Ross Hill Road, recorded on the National Register of Historic Places as the Andrew Clark House — a 2.5-story home built about 1798 by Captain Andrew Clark, with a second-story Palladian window and a gilded eagle ornament. The only lodging verified inside Lisbon; rooms booked through Airbnb and VRBO. Phone (860) 917-5456.",
+      "status": "open",
+      "photos": [
+        {
+          "src": "/photos/ct/lisbon/andrew-clark-house.jpg",
+          "thumb": "/photos/ct/lisbon/andrew-clark-house_thumb.jpg",
+          "title": "Haskell House (Andrew Clark House)",
+          "description": "The 1798 Haskell House on Ross Hill Road, recorded on the National Register as the Andrew Clark House.",
+          "author": "Cathy Cline",
+          "license": "CC BY-SA 3.0",
+          "source_url": "https://commons.wikimedia.org/wiki/File:Andrew_Clark_House,_Lisbon,_CT.JPG"
+        }
+      ]
+    }
+  ],
+  "entries": [
+    {
+      "kind": "sight",
+      "name": "John Bishop House Museum",
+      "place_slug": "john-bishop-house-museum",
+      "note": "An 1810 Georgian farmhouse with only three owner families."
+    },
+    {
+      "kind": "sight",
+      "name": "Anshei Israel Synagogue",
+      "place_slug": "anshei-israel-synagogue",
+      "note": "A rare 1936 rural synagogue, open by appointment."
+    },
+    {
+      "kind": "sight",
+      "name": "Newent Meeting House and Green",
+      "place_slug": "newent-meeting-house",
+      "note": "An 1858 meetinghouse hosting concerts and the town farmers' market."
+    },
+    {
+      "kind": "sight",
+      "name": "Burnham Tavern and Trails",
+      "place_slug": "burnham-tavern-lisbon",
+      "note": "A 1755 tavern where 464 men mustered in 1774."
+    },
+    {
+      "kind": "walk",
+      "name": "Lisbon Meadows Park",
+      "place_slug": "lisbon-meadows-park",
+      "note": "A 59-acre park with trails and disc golf."
+    },
+    {
+      "kind": "sight",
+      "name": "Grant's Berry Patch & Farm Stand",
+      "place_slug": "grants-berry-patch-farm-stand",
+      "note": "Pick-your-own berries and pumpkins since 1997."
+    },
+    {
+      "kind": "food",
+      "name": "Green Onion Pizza Restaurant",
+      "place_slug": "green-onion-pizza-restaurant",
+      "note": "Route 12 pizza and pasta since 1986."
+    },
+    {
+      "kind": "food",
+      "name": "Chili's Grill & Bar",
+      "place_slug": "chilis-grill-bar-lisbon",
+      "note": "A full-service bar and grill at Lisbon Landing."
+    },
+    {
+      "kind": "stay",
+      "name": "Haskell House Bed & Breakfast",
+      "place_slug": "haskell-house-bed-breakfast",
+      "note": "An authentic 1798 colonial, Lisbon's only verified lodging."
+    }
+  ],
+  "links": [
+    {
+      "target": "guide:griswold-ct-travel-guide",
+      "kind": "nearby",
+      "note": "Route 138 runs directly from Lisbon into Griswold, both signed together at I-395 Exit 21."
+    },
+    {
+      "target": "guide:norwich-ct-travel-guide",
+      "kind": "shared-history",
+      "note": "Lisbon was set off from Norwich and incorporated as its own town in 1786."
+    },
+    {
+      "target": "guide:sprague-ct-travel-guide",
+      "kind": "nearby",
+      "note": "Sprague was formed in 1861 out of parts of the \"neighboring towns\" of Lisbon and Franklin."
+    }
+  ]
+}

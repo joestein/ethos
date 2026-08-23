@@ -1,0 +1,253 @@
+{
+  "guide": {
+    "slug": "salem-ct-travel-guide",
+    "title": "Salem, Connecticut: A Vanished Music Conservatory",
+    "destination": "Salem, Connecticut",
+    "state": "Connecticut",
+    "county": "New London County",
+    "intro": "Salem was incorporated in 1819, carved from parts of Colchester, Lyme and Montville, and first organized as New Salem Parish in honor of Colonel Samuel Browne, its largest landowner, who came from Salem, Massachusetts; European settlement began in 1664 on land that had been Mohegan. Salem's most surprising claim to fame is musical: Orramel Whittlesey founded Music Vale Seminary here, often credited as the first music conservatory in the United States, with roughly 80 students, mostly women, boarding here by the mid-1800s. A fire destroyed the building in 1868; it was rebuilt, but closed for good a few years after Whittlesey's death in 1876 — only the name survives, in Music Vale Road. Two Binghams are tied to the town: explorer Hiram Bingham III, who brought Machu Picchu to international attention in 1911, and his son Hiram Bingham IV, the U.S. vice-consul in Marseille who helped thousands of Jewish refugees escape Vichy France.",
+    "sections": [
+      {
+        "heading": "A rural electrification pioneer",
+        "body": "Farming drove Salem's early economy, and one wealthy outsider reshaped its infrastructure: in the early 20th century, millionaire Frederick C. Rawolle Jr. purchased thousands of acres in town that became one of the first rural electrification sites in the country. The Salem Historical Society is housed in the Salem Town House itself, a building constructed in 1749 and moved to Salem in 1831, standing in the town's historic district along Route 85."
+      },
+      {
+        "heading": "Getting there",
+        "body": "Salem is a drive-only destination — there is no train station and no interstate exit inside the town. Visitors arrive at the CT Route 85/Route 82 crossroads, where Route 11's short expressway from Colchester comes to an end; the extension planned to continue toward Waterford was formally abandoned in October 2016, which is why the highway simply ends onto Salem's two-lane roads. The nearest rail is Shore Line East and Amtrak at New London, roughly a half-hour southeast via Route 85, where you will still need a car for the final leg."
+      },
+      {
+        "heading": "A lake, a brewery and an ice cream stand",
+        "body": "Gardner Lake State Park, on a 528-acre lake shared with Bozrah and Montville, has a renovated boat launch, a swimming beach and picnic areas, and is the only way to reach Minnie Island, Connecticut's smallest state park. Witch Meadow Lake Family Campground, built around a 14-acre freshwater lake, is one of four campgrounds the town lists. Fox Farm Brewery pours from a restored 1960s barn on Music Vale Road — the same road name as the vanished conservatory — with a rotating lineup of farmhouse ales, lagers and hoppy beers. Salem Valley Farms Ice Cream, open March through October, scoops roughly 70 flavors from cash-only takeout windows, and The Plum Tomato serves pizza and Italian-American plates at the Route 85/82 crossroads."
+      }
+    ],
+    "faq": [
+      {
+        "question": "How do I get to Salem?",
+        "answer": "By car — Route 85 and Route 82 cross at Salem Four Corners, and Route 11's short expressway from Colchester ends at Route 82. There is no passenger rail station in Salem; the nearest is New London, roughly a half-hour southeast."
+      },
+      {
+        "question": "Is there a train to Salem?",
+        "answer": "No. Salem does not appear on Shore Line East's station list, and no branch line reaches town. New London is the nearest station."
+      },
+      {
+        "question": "What was Music Vale Seminary?",
+        "answer": "A music school founded by Orramel Whittlesey, often credited as the first music conservatory in the United States, with about 80 students by the mid-1800s. It burned in 1868, was rebuilt, and closed for good a few years after Whittlesey's death in 1876; only the Music Vale Road name survives."
+      },
+      {
+        "question": "Is there a hotel in Salem?",
+        "answer": "No hotel, motel, inn or B&B could be verified inside Salem. Witch Meadow Lake Family Campground is the only overnight option physically in town; the nearest conventional hotel is Holiday Inn Norwich, about 15 miles east."
+      },
+      {
+        "question": "Is there a brewery in Salem?",
+        "answer": "Fox Farm Brewery, on Music Vale Road, pours from a restored 1960s barn on thirty acres that once held a small dairy operation. Hours shift seasonally — confirm before driving out."
+      }
+    ],
+    "photos": [
+      {
+        "src": "/photos/ct/salem/salem-town-house.jpg",
+        "thumb": "/photos/ct/salem/salem-town-house_thumb.jpg",
+        "title": "Salem Town House",
+        "description": "The Salem Town House, home of the Salem Historical Society, built in 1749 and moved to Salem in 1831.",
+        "author": "John Phelan",
+        "license": "CC BY-SA 4.0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Salem_Town_House,_Salem_CT.jpg"
+      },
+      {
+        "src": "/photos/ct/salem/salem-green.jpg",
+        "thumb": "/photos/ct/salem/salem-green_thumb.jpg",
+        "title": "Salem Green",
+        "description": "Salem's town green.",
+        "author": "John Phelan",
+        "license": "CC BY 4.0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Salem_Green,_Salem_CT.jpg"
+      },
+      {
+        "src": "/photos/ct/salem/gardner-lake.jpg",
+        "thumb": "/photos/ct/salem/gardner-lake_thumb.jpg",
+        "title": "Gardner Lake",
+        "description": "Gardner Lake, seen from the Salem shore.",
+        "author": "John Phelan",
+        "license": "CC BY 4.0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Gardner_Lake,_Salem_CT.jpg"
+      }
+    ]
+  },
+  "places": [
+    {
+      "slug": "gardner-lake-state-park",
+      "name": "Gardner Lake State Park",
+      "kind": "park",
+      "town": "Salem",
+      "state": "Connecticut",
+      "county": "New London County",
+      "address": "126 Old Colchester Road, Salem, CT 06420",
+      "official_url": "https://ctparks.com/parks/gardner-lake-state-park",
+      "summary": "A newly renovated boat launch with generous parking, a swimming beach and picnic areas on a 528-acre lake shared with Bozrah and Montville. The only way to reach Minnie Island State Park, Connecticut's smallest at 0.88 acres. Fishing for bass, crappie, sunfish, walleye and catfish; boat speeds limited to 6 mph from sunset to 8 a.m. Open daily 8 a.m. to sunset, free.",
+      "status": "open",
+      "photos": [
+        {
+          "src": "/photos/ct/salem/gardner-lake.jpg",
+          "thumb": "/photos/ct/salem/gardner-lake_thumb.jpg",
+          "title": "Gardner Lake",
+          "description": "Gardner Lake, seen from the Salem shore.",
+          "author": "John Phelan",
+          "license": "CC BY 4.0",
+          "source_url": "https://commons.wikimedia.org/wiki/File:Gardner_Lake,_Salem_CT.jpg"
+        }
+      ]
+    },
+    {
+      "slug": "salem-historical-society-town-house",
+      "name": "Salem Historical Society (Salem Town House)",
+      "kind": "historic-site",
+      "town": "Salem",
+      "state": "Connecticut",
+      "county": "New London County",
+      "address": "Hartford Road (CT Route 85), Salem, CT 06420",
+      "summary": "The Salem Historical Society occupies the Salem Town House, built in 1749 and moved to Salem in 1831, in the town's historic district near Town Hall. Free admission. Open Memorial Day through October, 1-4 p.m. on the second and fourth Saturdays only — call Town Hall at (860) 859-3873 to confirm.",
+      "status": "open",
+      "photos": [
+        {
+          "src": "/photos/ct/salem/salem-town-house.jpg",
+          "thumb": "/photos/ct/salem/salem-town-house_thumb.jpg",
+          "title": "Salem Town House",
+          "description": "The Salem Town House, home of the Salem Historical Society, built in 1749 and moved to Salem in 1831.",
+          "author": "John Phelan",
+          "license": "CC BY-SA 4.0",
+          "source_url": "https://commons.wikimedia.org/wiki/File:Salem_Town_House,_Salem_CT.jpg"
+        }
+      ]
+    },
+    {
+      "slug": "walden-preserve-zemko-wma",
+      "name": "Walden Preserve and Zemko Pond WMA",
+      "kind": "park",
+      "town": "Salem",
+      "state": "Connecticut",
+      "county": "New London County",
+      "address": "Salem, CT 06420",
+      "official_url": "https://www.salemct.gov/274/Salem-Trails",
+      "summary": "Miles of trail through open fields and forest, singled out by the town for hiking and bird watching. Walden is one of roughly ten Salem Land Trust preserves; trail maps are on the town's Salem Trails page.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "witch-meadow-lake-family-campground",
+      "name": "Witch Meadow Lake Family Campground",
+      "kind": "attraction",
+      "town": "Salem",
+      "state": "Connecticut",
+      "county": "New London County",
+      "address": "139 Witch Meadow Road, Salem, CT 06420",
+      "official_url": "https://witchmeadowcampground.com/",
+      "summary": "A 140-acre wooded campground built around a 14-acre freshwater lake for swimming, boating and fishing, plus a pool and a tennis court. One of four campgrounds the town lists. Themed activity weekends run most of the season. Phone (860) 859-1542.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "fox-farm-brewery",
+      "name": "Fox Farm Brewery",
+      "kind": "brewery",
+      "town": "Salem",
+      "state": "Connecticut",
+      "county": "New London County",
+      "address": "62 Music Vale Road, Salem, CT 06420",
+      "official_url": "https://www.foxfarmbeer.com/",
+      "summary": "A tasting room in a restored 1960s barn on thirty acres of farmland that once held a small dairy operation, pouring farmhouse ales, lagers and hoppy beers. Posted hours are Thu 12-7 p.m., Sat 11 a.m.-6 p.m., Sun 11 a.m.-5 p.m.; Friday hours shift seasonally — confirm before driving out.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "salem-valley-farms-ice-cream",
+      "name": "Salem Valley Farms Ice Cream",
+      "kind": "cafe",
+      "town": "Salem",
+      "state": "Connecticut",
+      "county": "New London County",
+      "address": "20 Darling Road, Salem, CT 06420",
+      "official_url": "https://salemvalleyfarmsicecream.com/",
+      "summary": "Hand-crafted ice cream made on site, with a dairy-free and vegan lineup among roughly 70 flavors. Cash and checks only, with an ATM on site; service is from takeout windows with outdoor picnic tables. Open daily noon-9 p.m., end of March through end of October. Phone (860) 859-2980.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "the-plum-tomato-salem",
+      "name": "The Plum Tomato",
+      "kind": "restaurant",
+      "town": "Salem",
+      "state": "Connecticut",
+      "county": "New London County",
+      "address": "1 New London Road, Salem, CT 06420",
+      "official_url": "https://theplumtomato.com/salem-menu/",
+      "summary": "Family-run Italian-American pizza, grinders, sandwiches and salads at the Route 85/82 crossroads, with a dedicated Salem menu separate from its Colchester and East Lyme sibling locations. Open Sunday through Saturday 11 a.m.-9 p.m. Phone (860) 892-5295.",
+      "status": "open",
+      "photos": []
+    }
+  ],
+  "entries": [
+    {
+      "kind": "sight",
+      "name": "Gardner Lake State Park",
+      "place_slug": "gardner-lake-state-park",
+      "note": "A boat launch and beach on Salem's 528-acre lake."
+    },
+    {
+      "kind": "sight",
+      "name": "Salem Historical Society (Salem Town House)",
+      "place_slug": "salem-historical-society-town-house",
+      "note": "A 1749 town house, open two Saturdays a month in season."
+    },
+    {
+      "kind": "walk",
+      "name": "Walden Preserve and Zemko Pond WMA",
+      "place_slug": "walden-preserve-zemko-wma",
+      "note": "Fields and forest trails for hiking and bird watching."
+    },
+    {
+      "kind": "sight",
+      "name": "Witch Meadow Lake Family Campground",
+      "place_slug": "witch-meadow-lake-family-campground",
+      "note": "A wooded campground around a 14-acre freshwater lake."
+    },
+    {
+      "kind": "food",
+      "name": "Fox Farm Brewery",
+      "place_slug": "fox-farm-brewery",
+      "note": "A tasting room in a restored 1960s barn."
+    },
+    {
+      "kind": "food",
+      "name": "Salem Valley Farms Ice Cream",
+      "place_slug": "salem-valley-farms-ice-cream",
+      "note": "Roughly 70 hand-crafted flavors, cash only."
+    },
+    {
+      "kind": "food",
+      "name": "The Plum Tomato",
+      "place_slug": "the-plum-tomato-salem",
+      "note": "Italian-American pizza and grinders at the town crossroads."
+    }
+  ],
+  "links": [
+    {
+      "target": "guide:montville-ct-travel-guide",
+      "kind": "nearby",
+      "note": "Salem was incorporated in 1819 partly from Montville's land, and Gardner Lake's shoreline spans both towns."
+    },
+    {
+      "target": "guide:colchester-ct-travel-guide",
+      "kind": "shared-history",
+      "note": "Salem was incorporated in 1819 partly from Colchester's land."
+    },
+    {
+      "target": "guide:lyme-ct-travel-guide",
+      "kind": "shared-history",
+      "note": "Salem was incorporated in 1819 partly from Lyme's land."
+    },
+    {
+      "target": "guide:bozrah-ct-travel-guide",
+      "kind": "shared-history",
+      "note": "Gardner Lake's 529 acres span Salem and Bozrah's southwestern corner."
+    }
+  ]
+}

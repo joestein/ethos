@@ -1,0 +1,275 @@
+{
+  "guide": {
+    "slug": "lebanon-ct-travel-guide",
+    "title": "Lebanon, Connecticut: Heartbeat of the Revolution",
+    "destination": "Lebanon, Connecticut",
+    "state": "Connecticut",
+    "county": "New London County",
+    "intro": "Lebanon was incorporated by the Connecticut General Assembly on October 10, 1700, on land granted to Major John Mason in 1664; it was the first town in the colony given a Biblical name, chosen by a son of Rev. James Fitch for the height of the land and a cedar forest. Jonathan Trumbull, the only sitting colonial governor to take up the Patriot cause at the war's outbreak, held more than 500 of the Council of Safety's 1,000-plus meetings in his Lebanon War Office, earning the town the label \"Heartbeat of the Revolution.\" At least 677 Lebanon men served in the militia and Continental Army — over half the adult male population — and about 220 hussars of Lauzun's Legion camped on the green from November 1780 to June 1781. William Williams, Trumbull's son-in-law, signed the Declaration of Independence here in 1776. Eleazar Wheelock preached in Lebanon from 1735 to 1770 before founding Dartmouth College.",
+    "sections": [
+      {
+        "heading": "A mile-long green and a Council of Safety",
+        "body": "Lebanon's mile-long town green is one of the largest in the nation and the only one still partially used for agriculture; it is ringed by a 20th-century reconstruction of the 1804-1809 meetinghouse (destroyed in the 1938 hurricane), the Revolutionary War Office, and the homes of the Trumbull family. George Washington reviewed Lauzun's French cavalry during a Lebanon stopover on March 4-5, 1781, likely lodging at Jonathan Trumbull Jr.'s house. Lebanon is also the birthplace of Dr. William Beaumont, the Army surgeon known as the \"father of gastric physiology\" for his studies of human digestion; his father Samuel's circa-1790 house survives as a restored museum. By 1725 Lebanon already had sawmills, gristmills, tanners and coopers, and by 1756 its 3,274 residents made it the sixth-largest town in the colony."
+      },
+      {
+        "heading": "Getting there",
+        "body": "Lebanon is a car-trip town with no station of its own: most visitors exit CT Route 2, the Hartford-to-Norwich expressway that clips the town between Colchester and Bozrah, and follow Route 207 or Route 87 (Trumbull Highway) into the town center, roughly 20 miles east of Hartford and 20 miles north of New London. The nearest CTrail service is Shore Line East, whose eastern terminus, New London, is about 20 miles south; the CTrail Hartford Line reaches Hartford, about 20 miles west, from New Haven and Springfield."
+      },
+      {
+        "heading": "Museums on the green and where to eat",
+        "body": "The Lebanon Historical Society Museum & Visitors Center, open year-round Wednesday through Saturday, traces the town from its Paleo-Indian site to the 1990s and includes a hands-on Revolution gallery. The Governor Jonathan Trumbull House & Wadsworth Stable, a National Historic Landmark run by the Connecticut DAR, opens on the second Saturday of each month through November, while the Historical Society's Jonathan Trumbull Jr. House Museum opens Fridays and Saturdays through early October. Blue Iris Farm, a 114-acre nonprofit animal sanctuary, offers ticketed day visits and retreats rather than overnight stays. For food, Roberto's Log Cabin serves burgers, ribs and a Mexican menu on Trumbull Highway, and the Lebanon Green Store, a two-tenths-of-a-mile walk from the Trumbull House, is the closest deli-sandwich stop to the historic sites."
+      }
+    ],
+    "faq": [
+      {
+        "question": "How do I get to Lebanon?",
+        "answer": "By car — exit Route 2 and follow Route 207 or Route 87 (Trumbull Highway) into the town center. There is no passenger rail station in Lebanon; the nearest CTrail service is Shore Line East at New London, about 20 miles south, or the Hartford Line at Hartford, about 20 miles west."
+      },
+      {
+        "question": "Is there a train to Lebanon?",
+        "answer": "No. No CTrail, Shore Line East, Metro-North or Amtrak line serves the town."
+      },
+      {
+        "question": "What is the Lebanon Green?",
+        "answer": "A mile-long green, one of the largest in the nation and the only one still partially used for agriculture, ringed by the Revolutionary War Office, the Trumbull family homes and a reconstruction of the 1804-1809 meetinghouse. About 220 hussars of Lauzun's Legion camped just west of it from November 1780 to June 1781."
+      },
+      {
+        "question": "Is there a hotel in Lebanon?",
+        "answer": "No hotel, inn or bed and breakfast could be verified in Lebanon. The nearest lodging is The Spa at Norwich Inn, about 15 miles southeast."
+      },
+      {
+        "question": "What museums are on the Lebanon Green?",
+        "answer": "The Lebanon Historical Society Museum, the Governor Jonathan Trumbull House & Wadsworth Stable, and the Jonathan Trumbull Jr. House Museum — all within walking distance of each other, with seasonal weekend and Friday-Saturday hours."
+      }
+    ],
+    "photos": [
+      {
+        "src": "/photos/ct/lebanon/lebanon-green.jpg",
+        "thumb": "/photos/ct/lebanon/lebanon-green_thumb.jpg",
+        "title": "Lebanon Green",
+        "description": "The mile-long Lebanon Green in peak autumn color.",
+        "author": "John Phelan",
+        "license": "CC BY 4.0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Lebanon_Town_Common,_Lebanon_CT.jpg"
+      },
+      {
+        "src": "/photos/ct/lebanon/wadsworth-stable.jpg",
+        "thumb": "/photos/ct/lebanon/wadsworth-stable_thumb.jpg",
+        "title": "Wadsworth Stable",
+        "description": "The pedimented Wadsworth Stable on the Lebanon Green.",
+        "author": "M.M.Dwyer",
+        "license": "CC BY-SA 4.0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:MMDA-Photos_-_2020-07-21_-_Wadsworth_Stable_-2,_Lebanon,_Connecticut,_USA.jpg"
+      },
+      {
+        "src": "/photos/ct/lebanon/trumbull-house.jpg",
+        "thumb": "/photos/ct/lebanon/trumbull-house_thumb.jpg",
+        "title": "Governor Jonathan Trumbull House",
+        "description": "The 1735 Governor Jonathan Trumbull House, with the Wadsworth Stable visible at right.",
+        "author": "Cg-realms",
+        "license": "CC BY 3.0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Trumbull_House_02Jan2007.jpg"
+      }
+    ]
+  },
+  "places": [
+    {
+      "slug": "lebanon-historical-society-museum",
+      "name": "Lebanon Historical Society Museum & Visitors Center",
+      "kind": "museum",
+      "town": "Lebanon",
+      "state": "Connecticut",
+      "county": "New London County",
+      "address": "856 Trumbull Highway (CT Route 87), Lebanon, CT 06249",
+      "official_url": "https://historyoflebanon.org/",
+      "summary": "A permanent hallway exhibit traces Lebanon from its Paleo-Indian site to the 1990s, alongside a hands-on gallery on Lebanon in the Revolution and a rotating gallery. Open year round, Wednesday through Saturday, 12-4 p.m., free (donations welcomed).",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "governor-jonathan-trumbull-house",
+      "name": "Governor Jonathan Trumbull House & Wadsworth Stable",
+      "kind": "historic-site",
+      "town": "Lebanon",
+      "state": "Connecticut",
+      "county": "New London County",
+      "address": "169 West Town Street, Lebanon, CT 06249",
+      "official_url": "https://govtrumbullhousedar.org/",
+      "summary": "Built in 1735 and designated a National Historic Landmark in 1965, the home of Jonathan Trumbull has been run as a museum by the Connecticut DAR since 1934. The adjacent 1730 Wadsworth Stable is tied to Commissary General Jeremiah Wadsworth's work supplying Washington's army. Open the second Saturday of each month, noon-4 p.m., through November; free.",
+      "status": "open",
+      "photos": [
+        {
+          "src": "/photos/ct/lebanon/trumbull-house.jpg",
+          "thumb": "/photos/ct/lebanon/trumbull-house_thumb.jpg",
+          "title": "Governor Jonathan Trumbull House",
+          "description": "The 1735 Governor Jonathan Trumbull House, with the Wadsworth Stable visible at right.",
+          "author": "Cg-realms",
+          "license": "CC BY 3.0",
+          "source_url": "https://commons.wikimedia.org/wiki/File:Trumbull_House_02Jan2007.jpg"
+        },
+        {
+          "src": "/photos/ct/lebanon/wadsworth-stable.jpg",
+          "thumb": "/photos/ct/lebanon/wadsworth-stable_thumb.jpg",
+          "title": "Wadsworth Stable",
+          "description": "The pedimented Wadsworth Stable on the Lebanon Green.",
+          "author": "M.M.Dwyer",
+          "license": "CC BY-SA 4.0",
+          "source_url": "https://commons.wikimedia.org/wiki/File:MMDA-Photos_-_2020-07-21_-_Wadsworth_Stable_-2,_Lebanon,_Connecticut,_USA.jpg"
+        }
+      ]
+    },
+    {
+      "slug": "jonathan-trumbull-jr-house-museum",
+      "name": "Jonathan Trumbull Jr. House Museum",
+      "kind": "historic-site",
+      "town": "Lebanon",
+      "state": "Connecticut",
+      "county": "New London County",
+      "address": "780 Trumbull Highway, Lebanon, CT 06249",
+      "official_url": "https://historyoflebanon.org/",
+      "summary": "Home of Jonathan Trumbull Jr., paymaster of the Continental Army's Northern Department and later military secretary to George Washington and Speaker of the U.S. House. Washington likely lodged here during his March 1781 stop to review Lauzun's French cavalry. Run by the Lebanon Historical Society; open Fridays and Saturdays, noon-4 p.m., through early October, free.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "lebanon-green-historic-district",
+      "name": "The Lebanon Green",
+      "kind": "historic-site",
+      "town": "Lebanon",
+      "state": "Connecticut",
+      "county": "New London County",
+      "address": "West Town Street / Trumbull Highway, Lebanon, CT 06249",
+      "summary": "A mile-long town green, one of the largest in the nation and the only one still partially used for agriculture. Ringed by the Revolutionary War Office, the Jonathan Trumbull Library, and the homes of the Trumbull family; about 220 hussars of Lauzun's Legion camped just west of it from November 1780 to June 1781. Free, always accessible.",
+      "status": "open",
+      "photos": [
+        {
+          "src": "/photos/ct/lebanon/lebanon-green.jpg",
+          "thumb": "/photos/ct/lebanon/lebanon-green_thumb.jpg",
+          "title": "Lebanon Green",
+          "description": "The mile-long Lebanon Green in peak autumn color.",
+          "author": "John Phelan",
+          "license": "CC BY 4.0",
+          "source_url": "https://commons.wikimedia.org/wiki/File:Lebanon_Town_Common,_Lebanon_CT.jpg"
+        }
+      ]
+    },
+    {
+      "slug": "air-line-state-park-trail-lebanon",
+      "name": "Air Line State Park Trail (Lebanon section)",
+      "kind": "park",
+      "town": "Lebanon",
+      "state": "Connecticut",
+      "county": "New London County",
+      "address": "Trailhead parking at Leonard Bridge Road, Chesbro Bridge Road, Cook Hill Road and Kingsley Road, Lebanon, CT 06249",
+      "official_url": "https://ctparks.com/node/16",
+      "summary": "The 50-mile rail-trail crosses Lebanon on its route from Thompson to Portland, open to walking, biking, horseback riding and cross-country skiing. Free.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "blue-iris-farm-lebanon",
+      "name": "Blue Iris Farm",
+      "kind": "attraction",
+      "town": "Lebanon",
+      "state": "Connecticut",
+      "county": "New London County",
+      "address": "1339 Trumbull Highway, Lebanon, CT 06249",
+      "official_url": "https://www.blueirisfarm.com/",
+      "summary": "A nonprofit animal sanctuary and retreat center on 114 acres, offering ticketed day visits such as \"Time with the Herd,\" farm visits and corporate retreats rather than overnight guest accommodations.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "robertos-log-cabin",
+      "name": "Roberto's Log Cabin",
+      "kind": "restaurant",
+      "town": "Lebanon",
+      "state": "Connecticut",
+      "county": "New London County",
+      "address": "383 Trumbull Highway (Route 87), Lebanon, CT 06249",
+      "official_url": "https://www.logcabinct.com/",
+      "summary": "A Lebanon roadhouse serving lunch and dinner daily — burgers, ribs, pizza, tacos and a Mexican menu — plus take-out and delivery. Open Mon-Thu 11:30 a.m.-9 p.m., Fri 11:30 a.m.-10 p.m., Sat 11 a.m.-10 p.m., Sun 11 a.m.-9 p.m. Phone (860) 456-7663.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "lebanon-green-store",
+      "name": "The Green Store",
+      "kind": "cafe",
+      "town": "Lebanon",
+      "state": "Connecticut",
+      "county": "New London County",
+      "address": "199 West Town Street, Lebanon, CT 06249",
+      "summary": "A small general store and deli counter on the Lebanon Green, about a two-tenths-of-a-mile walk from the Governor Jonathan Trumbull House — the closest walk-up lunch option to the historic sites. Phone (860) 468-0323.",
+      "status": "open",
+      "photos": []
+    }
+  ],
+  "entries": [
+    {
+      "kind": "sight",
+      "name": "Lebanon Historical Society Museum & Visitors Center",
+      "place_slug": "lebanon-historical-society-museum",
+      "note": "Lebanon's history from the Paleo-Indian era to the 1990s."
+    },
+    {
+      "kind": "sight",
+      "name": "Governor Jonathan Trumbull House & Wadsworth Stable",
+      "place_slug": "governor-jonathan-trumbull-house",
+      "note": "A National Historic Landmark run by the Connecticut DAR."
+    },
+    {
+      "kind": "sight",
+      "name": "Jonathan Trumbull Jr. House Museum",
+      "place_slug": "jonathan-trumbull-jr-house-museum",
+      "note": "Home of Washington's military secretary and future House Speaker."
+    },
+    {
+      "kind": "walk",
+      "name": "The Lebanon Green",
+      "place_slug": "lebanon-green-historic-district",
+      "note": "A mile-long green, one of the nation's largest."
+    },
+    {
+      "kind": "walk",
+      "name": "Air Line State Park Trail (Lebanon section)",
+      "place_slug": "air-line-state-park-trail-lebanon",
+      "note": "A 50-mile rail-trail crossing Lebanon."
+    },
+    {
+      "kind": "sight",
+      "name": "Blue Iris Farm",
+      "place_slug": "blue-iris-farm-lebanon",
+      "note": "A 114-acre nonprofit animal sanctuary with ticketed visits."
+    },
+    {
+      "kind": "food",
+      "name": "Roberto's Log Cabin",
+      "place_slug": "robertos-log-cabin",
+      "note": "Burgers, ribs and a Mexican menu on Trumbull Highway."
+    },
+    {
+      "kind": "food",
+      "name": "The Green Store",
+      "place_slug": "lebanon-green-store",
+      "note": "A deli counter steps from the Trumbull House."
+    }
+  ],
+  "links": [
+    {
+      "target": "guide:bozrah-ct-travel-guide",
+      "kind": "nearby",
+      "note": "Lebanon borders Bozrah to the southeast."
+    },
+    {
+      "target": "guide:franklin-ct-travel-guide",
+      "kind": "nearby",
+      "note": "Route 207 runs directly between Lebanon and Franklin."
+    },
+    {
+      "target": "guide:hartford-ct-travel-guide",
+      "kind": "same-region",
+      "note": "Lebanon sits roughly 20 miles east of Hartford along the Route 2 corridor."
+    }
+  ]
+}
