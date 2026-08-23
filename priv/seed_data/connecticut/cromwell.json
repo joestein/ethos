@@ -288,6 +288,11 @@
   "links": [
     {
       "target": "guide:middletown-ct-travel-guide",
+      "kind": "nearby",
+      "note": "Cromwell borders Middletown, the town it was split off from by the General Assembly in 1851."
+    },
+    {
+      "target": "guide:middletown-ct-travel-guide",
       "kind": "shared-history",
       "note": "Cromwell was the \"Upper Houses\" of Middletown until the General Assembly split it off as a separate town in 1851."
     },

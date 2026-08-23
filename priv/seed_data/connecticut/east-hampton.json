@@ -17,7 +17,7 @@
       },
       {
         "heading": "Where to eat and stay",
-        "body": "East Hampton's dining runs along West High Street and East High Street near the town center: The Tavern on 66 and Rossini's Pizza (family-run since 1991) anchor West High Street, while The Dublin Beef & Seafood Co. and Po's Rice and Spice sit on East High Street and Main Street. In the Cobalt village section, Pizzeria Da Vinci Cobalt serves New Haven–style pizza on the Route 66 corridor. The Bevin House Bed & Breakfast, a restored 1872 French Empire mansion named for the bell-making family, is the only conventional lodging verified inside East Hampton; travelers needing overflow rooms should look to Middletown or Cromwell, roughly 8–12 miles west."
+        "body": "East Hampton's dining runs along West High Street and East High Street near the town center: The Tavern on 66 and Rossini's Pizza (family-run since 1991) anchor West High Street, while Po's Rice and Spice sits on Main Street in the village center. In the Cobalt village section, Pizzeria Da Vinci Cobalt serves New Haven–style pizza on the Route 66 corridor. The Bevin House Bed & Breakfast, a restored 1872 French Empire mansion named for the bell-making family, is the only conventional lodging verified inside East Hampton; travelers needing overflow rooms should look to Middletown or Cromwell, roughly 8–12 miles west."
       }
     ],
     "faq": [
@@ -194,19 +194,6 @@
       "photos": []
     },
     {
-      "slug": "the-dublin-beef-seafood-co",
-      "name": "The Dublin Beef & Seafood Co.",
-      "kind": "restaurant",
-      "town": "East Hampton",
-      "state": "Connecticut",
-      "county": "Middlesex County",
-      "address": "42 East High Street, East Hampton, CT 06424",
-      "official_url": "https://www.the-dublin.com/",
-      "summary": "An Irish pub serving pub classics alongside seafood and steaks, with live music including Sunday music on the patio. Open Sunday–Thursday 11:30 a.m.–11 p.m., Friday–Saturday 11:30 a.m.–midnight; phone (860) 365-5238. Call ahead to confirm current hours.",
-      "status": "open",
-      "photos": []
-    },
-    {
       "slug": "pos-rice-and-spice",
       "name": "Po's Rice and Spice",
       "kind": "restaurant",
@@ -288,12 +275,6 @@
       "name": "Rossini's Pizza East Hampton",
       "place_slug": "rossinis-pizza-east-hampton",
       "note": "Family-run Italian restaurant and pizzeria since 1991."
-    },
-    {
-      "kind": "food",
-      "name": "The Dublin Beef & Seafood Co.",
-      "place_slug": "the-dublin-beef-seafood-co",
-      "note": "Irish pub serving pub classics, seafood and steaks."
     },
     {
       "kind": "food",

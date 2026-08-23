@@ -37,7 +37,7 @@
         "thumb": "/photos/ct/killingworth/chatfield-hollow-schreeder-pond_thumb.jpg",
         "title": "Schreeder Pond, Chatfield Hollow State Park",
         "description": "Schreeder Pond, the signature swimming and fishing feature of Chatfield Hollow State Park.",
-        "author": "Magicpiano",
+        "author": "Magicpiano (User:Magicpiano)",
         "license": "CC BY-SA 4.0",
         "source_url": "https://commons.wikimedia.org/wiki/File:ChatfieldHollowSP_SchreederPond.jpg"
       }
@@ -61,7 +61,7 @@
           "thumb": "/photos/ct/killingworth/chatfield-hollow-schreeder-pond_thumb.jpg",
           "title": "Schreeder Pond, Chatfield Hollow State Park",
           "description": "Schreeder Pond, the signature swimming and fishing feature of Chatfield Hollow State Park.",
-          "author": "Magicpiano",
+          "author": "Magicpiano (User:Magicpiano)",
           "license": "CC BY-SA 4.0",
           "source_url": "https://commons.wikimedia.org/wiki/File:ChatfieldHollowSP_SchreederPond.jpg"
         }
@@ -160,13 +160,8 @@
     },
     {
       "target": "guide:madison-ct-travel-guide",
-      "kind": "nearby",
-      "note": "CT Route 79 runs from Madison north through Killingworth to Durham, and Madison is one of the closest Shore Line East stations to Killingworth."
-    },
-    {
-      "target": "guide:durham-ct-travel-guide",
-      "kind": "nearby",
-      "note": "CT Route 79 connects Killingworth directly to Durham, its northern neighbor."
+      "kind": "same-region",
+      "note": "Madison is one of the closest Shore Line East stations to Killingworth."
     },
     {
       "target": "guide:deep-river-ct-travel-guide",

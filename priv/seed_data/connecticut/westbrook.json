@@ -48,7 +48,7 @@
         "thumb": "/photos/ct/westbrook/salt-meadow-sunset-westbrook_thumb.jpg",
         "title": "Sunset at Salt Meadow",
         "description": "Sunset over the Salt Meadow Unit marsh, the original core of the Stewart B. McKinney National Wildlife Refuge.",
-        "author": "U.S. Fish and Wildlife Service Northeast Region",
+        "author": "U.S. Fish and Wildlife Service Northeast Region (USFWS)",
         "license": "CC BY 2.0",
         "source_url": "https://commons.wikimedia.org/wiki/File:Sunset_at_Salt_Meadow_(11800427905).jpg"
       },
@@ -90,7 +90,7 @@
           "thumb": "/photos/ct/westbrook/salt-meadow-sunset-westbrook_thumb.jpg",
           "title": "Sunset at Salt Meadow",
           "description": "Sunset over the Salt Meadow Unit marsh, the original core of the Stewart B. McKinney National Wildlife Refuge.",
-          "author": "U.S. Fish and Wildlife Service Northeast Region",
+          "author": "U.S. Fish and Wildlife Service Northeast Region (USFWS)",
           "license": "CC BY 2.0",
           "source_url": "https://commons.wikimedia.org/wiki/File:Sunset_at_Salt_Meadow_(11800427905).jpg"
         }
@@ -296,6 +296,11 @@
   "links": [
     {
       "target": "guide:clinton-ct-travel-guide",
+      "kind": "nearby",
+      "note": "Westbrook sits on the shoreline between Clinton and Old Saybrook, bordering both."
+    },
+    {
+      "target": "guide:old-saybrook-ct-travel-guide",
       "kind": "nearby",
       "note": "Westbrook sits on the shoreline between Clinton and Old Saybrook, bordering both."
     },

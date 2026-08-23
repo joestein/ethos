@@ -13,7 +13,7 @@
       },
       {
         "heading": "Getting there",
-        "body": "Durham has no interstate and no rail station of its own. Connecticut Route 17 is the two-lane spine running from I-91 in New Haven north through Durham to Middletown and on to Route 2 in Glastonbury, with Routes 68, 77, 79 and 147 feeding in from Guilford, Madison, Killingworth and Middlefield. The nearest passenger rail is the CTrail Hartford Line at Meriden or Wallingford, or Shore Line East at Guilford or Madison — all a short drive away."
+        "body": "Durham has no interstate and no rail station of its own. Connecticut Route 17 is the two-lane spine running from I-91 in New Haven north through Durham to Middletown and on to Route 2 in Glastonbury, with Route 68 crossing east–west and Routes 77, 79 and 147 running south to Guilford, south to Madison, and north into Middlefield. The nearest passenger rail is the CTrail Hartford Line at Meriden or Wallingford, or Shore Line East at Guilford or Madison — all a short drive away."
       },
       {
         "heading": "The Durham Fair and outdoor Durham",
@@ -23,7 +23,7 @@
     "faq": [
       {
         "question": "How do I get to Durham?",
-        "answer": "By car — Route 17 runs north–south through town from I-91 in New Haven toward Middletown, with Routes 68, 77, 79 and 147 feeding in from Guilford, Madison, Killingworth and Middlefield. There is no rail station in Durham; the nearest CTrail Hartford Line stops are Meriden and Wallingford, and the nearest Shore Line East stops are Guilford and Madison."
+        "answer": "By car — Route 17 runs north–south through town from I-91 in New Haven toward Middletown, with Route 68 crossing east–west and Routes 77, 79 and 147 running to Guilford, Madison and Middlefield. There is no rail station in Durham; the nearest CTrail Hartford Line stops are Meriden and Wallingford, and the nearest Shore Line East stops are Guilford and Madison."
       },
       {
         "question": "When is the Durham Fair?",
@@ -240,9 +240,9 @@
       "note": "CT Route 147 runs from Durham's town center directly north into Middlefield."
     },
     {
-      "target": "guide:killingworth-ct-travel-guide",
+      "target": "guide:madison-ct-travel-guide",
       "kind": "nearby",
-      "note": "CT Route 79 runs from Madison north through Killingworth to end at Route 17 in Durham."
+      "note": "CT Route 79 runs from Durham's town center directly south to Madison."
     },
     {
       "target": "guide:guilford-ct-travel-guide",

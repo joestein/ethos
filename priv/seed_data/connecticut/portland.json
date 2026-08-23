@@ -13,7 +13,7 @@
       },
       {
         "heading": "Getting there",
-        "body": "Portland is a driving destination, reached across the Arrigoni Bridge (Routes 66 and 17) from Middletown, about a mile west, and roughly 16 miles south of Hartford. There is no passenger rail station in Portland or in neighboring Middletown; the nearest CTrail Hartford Line stops are Berlin and Meriden. Route 2 provides access to Meshomasic State Forest between Exits 10 and 12. Local bus service is run by Middletown Area Transit."
+        "body": "Portland is a driving destination, reached across the Arrigoni Bridge (Routes 66 and 17) from Middletown, about a mile west, and roughly 16 miles south of Hartford. There is no passenger rail station in Portland or in neighboring Middletown; the nearest CTrail Hartford Line stops are Berlin and Meriden. Route 2 provides access to Meshomasic State Forest between Exits 10 and 12."
       }
     ],
     "faq": [
@@ -205,6 +205,11 @@
       "target": "guide:middletown-ct-travel-guide",
       "kind": "nearby",
       "note": "The Arrigoni Bridge (Routes 66/17) links Portland to Middletown, about a mile away."
+    },
+    {
+      "target": "guide:east-hampton-ct-travel-guide",
+      "kind": "nearby",
+      "note": "CT Route 66 runs directly from Portland into East Hampton after crossing the Arrigoni Bridge from Middletown."
     },
     {
       "target": "guide:east-hampton-ct-travel-guide",
