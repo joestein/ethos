@@ -232,7 +232,7 @@
     },
     {
       "target": "guide:salisbury-ct-travel-guide",
-      "kind": "same-region",
+      "kind": "nearby",
       "note": null
     }
   ]
