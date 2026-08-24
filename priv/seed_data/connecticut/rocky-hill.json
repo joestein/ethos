@@ -1,0 +1,288 @@
+{
+  "guide": {
+    "slug": "rocky-hill-ct-travel-guide",
+    "title": "Rocky Hill, Connecticut: Dinosaur Tracks and the Nation's Oldest Ferry",
+    "destination": "Rocky Hill, Connecticut",
+    "state": "Connecticut",
+    "county": "Hartford County",
+    "intro": "The land that became Rocky Hill was originally home to the Wangunk people; Europeans began settling it in 1650 as part of Wethersfield, and the settlement was set off as Stepney Parish in 1722 before incorporating as the separate town of Rocky Hill in May 1843. The name comes from the trap rock ridge rising in the town's northeastern section, now within Rocky Hill's Quarry Park. Its position on the Connecticut River made Rocky Hill the natural port for Wethersfield and an early center of shipbuilding, agriculture and trade — a legacy carried on by the Rocky Hill-Glastonbury Ferry, which has crossed the river since 1655 and which the state's transportation department calls the oldest continuously operational ferry in the United States. In 1966, excavation for a state building uncovered more than 2,600 Early Jurassic dinosaur footprints roughly 200 million years old, and the site was declared a state park that September.",
+    "sections": [
+      {
+        "heading": "750 dinosaur tracks under a geodesic dome",
+        "body": "Dinosaur State Park's Exhibit Center is built directly over roughly 750 preserved Early Jurassic dinosaur tracks, part of the more than 2,600 footprints uncovered in 1966; the dominant track type, Eubrontes giganteus, is Connecticut's state fossil. The surrounding arboretum holds more than 250 Mesozoic-era plant species and over two miles of nature trails. Academy Hall Museum, the Rocky Hill Historical Society's home in the historic 1803 Academy Hall building, has been the society's base since 1967, with local collections on the town's history."
+      },
+      {
+        "heading": "Getting there",
+        "body": "Rocky Hill is a drive-to town roughly 10 miles south of Hartford on Interstate 91, with exits at Route 3 and Route 99 (Silas Deane Highway), the town's north-south commercial spine paralleling the Connecticut River. There is no rail station in Rocky Hill itself; train travelers use the CTrail Hartford Line at Berlin or Hartford Union Station and finish the trip by car. A seasonal option is the Route 160 Rocky Hill-Glastonbury Ferry across the Connecticut River, running April 1-November 30, weekdays 7 a.m.-6:45 p.m. and weekends 10:30 a.m.-5 p.m., $5-$6 per vehicle and $2 for walk-ons and cyclists."
+      }
+    ],
+    "faq": [
+      {
+        "question": "How do I get to Rocky Hill?",
+        "answer": "By car — Interstate 91 has exits at Route 3 and Route 99 (Silas Deane Highway) for Rocky Hill. There is no rail station in town; the nearest CTrail Hartford Line stops are Berlin and Hartford Union Station."
+      },
+      {
+        "question": "Is there a train to Rocky Hill?",
+        "answer": "No. The nearest CTrail Hartford Line stations are Berlin and Hartford Union Station, both reached by car."
+      },
+      {
+        "question": "What is Dinosaur State Park?",
+        "answer": "A state park built around roughly 750 preserved Early Jurassic dinosaur tracks under a geodesic Exhibit Center dome, plus an arboretum and two miles of nature trails. Grounds open daily 9 a.m. to 30 minutes before sundown; Exhibit Center Tue-Sun 9 a.m.-4:30 p.m., closed Mondays. Admission $6 ages 13+, $2 ages 6-12, free under 6."
+      },
+      {
+        "question": "What is the Rocky Hill-Glastonbury Ferry?",
+        "answer": "A seasonal car-and-passenger crossing of the Connecticut River in service since 1655, run by the state's transportation department and billed as the oldest continuously operational ferry in the United States. It runs April 1-November 30."
+      },
+      {
+        "question": "Is there a hotel in Rocky Hill?",
+        "answer": "Rocky Hill has several hotels along Cromwell Avenue near I-91, though their current booking status could not be independently confirmed — call ahead."
+      }
+    ],
+    "photos": [
+      {
+        "src": "/photos/ct/rocky-hill/dinosaur-state-park-dome.jpg",
+        "thumb": "/photos/ct/rocky-hill/dinosaur-state-park-dome_thumb.jpg",
+        "title": "Dinosaur State Park, Exhibit Center dome",
+        "description": "The geodesic Exhibit Center dome at Dinosaur State Park in Rocky Hill.",
+        "author": "Daderot",
+        "license": "CC BY-SA 3.0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Dinosaur_State_Park_(Rocky_Hill,_CT)_-_dome.JPG"
+      },
+      {
+        "src": "/photos/ct/rocky-hill/rocky-hill-ferry-landing.jpg",
+        "thumb": "/photos/ct/rocky-hill/rocky-hill-ferry-landing_thumb.jpg",
+        "title": "Rocky Hill-Glastonbury Ferry, west terminal",
+        "description": "The Rocky Hill terminal of the Rocky Hill-Glastonbury ferry on the Connecticut River.",
+        "author": "Pi.1415926535",
+        "license": "CC BY-SA 4.0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:West_terminal_of_Rocky_Hill-Glastonbury_ferry,_March_2023.jpg"
+      },
+      {
+        "src": "/photos/ct/rocky-hill/elm-street-rocky-hill.jpg",
+        "thumb": "/photos/ct/rocky-hill/elm-street-rocky-hill_thumb.jpg",
+        "title": "Elm Street, Rocky Hill",
+        "description": "A street scene on Elm Street in Rocky Hill's town center.",
+        "author": "John Phelan",
+        "license": "CC BY 4.0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Elm_Street,_Rocky_Hill_CT.jpg"
+      }
+    ]
+  },
+  "places": [
+    {
+      "slug": "dinosaur-state-park",
+      "name": "Dinosaur State Park",
+      "kind": "park",
+      "town": "Rocky Hill",
+      "state": "Connecticut",
+      "county": "Hartford County",
+      "address": "400 West Street, Rocky Hill, CT 06067",
+      "official_url": "https://ctparks.com/parks/dinosaur-state-park",
+      "summary": "A geodesic dome Exhibit Center built directly over roughly 750 preserved Early Jurassic dinosaur tracks, part of the more than 2,600 footprints uncovered in 1966. The surrounding arboretum holds more than 250 Mesozoic-era plant species and over two miles of nature trails. Grounds open daily 9 a.m. to 30 minutes before sundown, free; Exhibit Center Tue-Sun 9 a.m.-4:30 p.m., closed Mondays, admission $6 ages 13+, $2 ages 6-12, free under 6.",
+      "status": "open",
+      "photos": [
+        {
+          "src": "/photos/ct/rocky-hill/dinosaur-state-park-dome.jpg",
+          "thumb": "/photos/ct/rocky-hill/dinosaur-state-park-dome_thumb.jpg",
+          "title": "Dinosaur State Park, Exhibit Center dome",
+          "description": "The geodesic Exhibit Center dome at Dinosaur State Park in Rocky Hill.",
+          "author": "Daderot",
+          "license": "CC BY-SA 3.0",
+          "source_url": "https://commons.wikimedia.org/wiki/File:Dinosaur_State_Park_(Rocky_Hill,_CT)_-_dome.JPG"
+        }
+      ]
+    },
+    {
+      "slug": "academy-hall-museum-rocky-hill",
+      "name": "Academy Hall Museum",
+      "kind": "museum",
+      "town": "Rocky Hill",
+      "state": "Connecticut",
+      "county": "Hartford County",
+      "address": "785 Old Main Street, Rocky Hill, CT 06067",
+      "official_url": "https://www.rhhistory.org",
+      "summary": "The Rocky Hill Historical Society's home in the historic 1803 Academy Hall building, occupied by the all-volunteer society since 1967, collecting and displaying objects, photographs and archives on the town's history. Open Saturdays, March through December, 12:30-3:00 p.m., or by appointment. Phone (860) 563-6704.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "dividend-pond-trails",
+      "name": "Dividend Pond Trails & Archaeological District",
+      "kind": "park",
+      "town": "Rocky Hill",
+      "state": "Connecticut",
+      "county": "Hartford County",
+      "address": "Dividend Road and Old Forge Road, Rocky Hill, CT 06067",
+      "official_url": "https://www.rockyhillct.gov/Facilities/Facility/Details/Dividend-Pond-Trails-Archaeological-Dist-8",
+      "summary": "68 acres with about three miles of marked trails and ten documented archaeological sites; wooden footbridges carry the trail across a ravine.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "fun-city-trampoline-adventure-park",
+      "name": "Fun City Trampoline & Adventure Park",
+      "kind": "amusement-park",
+      "town": "Rocky Hill",
+      "state": "Connecticut",
+      "county": "Hartford County",
+      "address": "30 Waterchase Drive, Rocky Hill, CT 06067",
+      "official_url": "https://www.funcityrockyhill.com",
+      "summary": "An indoor family park with trampoline courts, a ninja warrior and ropes course, indoor rock climbing, bumper cars, dodgeball and an arcade. Hours Mon-Thu 2-9 p.m., Fri noon-10 p.m., Sat 10 a.m.-10:30 p.m., Sun 10 a.m.-9 p.m. Phone (860) 436-5371.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "chucks-steak-house-rocky-hill",
+      "name": "Chuck's Steak House",
+      "kind": "restaurant",
+      "town": "Rocky Hill",
+      "state": "Connecticut",
+      "county": "Hartford County",
+      "address": "2199 Silas Deane Highway, Rocky Hill, CT 06067",
+      "official_url": "https://www.chucksrockyhill.com",
+      "summary": "Open at this location since 1970 (the chain's first location opened in Waikiki in 1959), serving hand-cut USDA Black Angus beef aged on premises, seafood and a long-running salad bar. Lounge from 3 p.m. weekdays and weekends; dining room from 4 p.m. weekdays. Phone (860) 529-0222.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "cuginos-restaurant",
+      "name": "Cugino's Restaurant",
+      "kind": "restaurant",
+      "town": "Rocky Hill",
+      "state": "Connecticut",
+      "county": "Hartford County",
+      "address": "2132 Silas Deane Highway, Rocky Hill, CT 06067",
+      "official_url": "https://www.cuginosrestaurantct.com",
+      "summary": "A family-run Northern Italian and Italian-American kitchen operating in Rocky Hill for more than 30 years. Lunch 11:30 a.m.-3 p.m., dinner to 9:30 p.m. (10 p.m. Saturday), closed Sundays, happy hour Mon-Sat 4-8 p.m. Phone (860) 500-0166.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "elizabeths-bar-restaurant",
+      "name": "Elizabeth's Bar & Restaurant",
+      "kind": "restaurant",
+      "town": "Rocky Hill",
+      "state": "Connecticut",
+      "county": "Hartford County",
+      "address": "825 Cromwell Avenue, Rocky Hill, CT 06067",
+      "official_url": "https://www.elizabethsrockyhill.com",
+      "summary": "Family-owned since 1997, blending Italian and Portuguese cooking across a 90-plus item menu. Hours Mon 11 a.m.-9 p.m., Tue-Fri to 10 p.m., Sat noon-10 p.m., closed Sunday, happy hour Mon-Fri 4-6 p.m. Phone (860) 721-6932.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "flock-and-herd-gastropub",
+      "name": "Flock & Herd Gastropub",
+      "kind": "restaurant",
+      "town": "Rocky Hill",
+      "state": "Connecticut",
+      "county": "Hartford County",
+      "address": "945B Cromwell Avenue, Rocky Hill, CT 06067",
+      "official_url": "https://www.flockandherdgastropub.com",
+      "summary": "A from-scratch gastropub kitchen leaning on locally sourced ingredients, with separate all-day, happy-hour, cocktail and draft-beer menus. Hours Mon-Thu noon-9 p.m., Fri-Sat noon-10 p.m., Sun noon-8 p.m. Phone (860) 436-5322.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "mozzicato-depasquale-rocky-hill",
+      "name": "Mozzicato DePasquale Bakery & Pastry Shop",
+      "kind": "cafe",
+      "town": "Rocky Hill",
+      "state": "Connecticut",
+      "county": "Hartford County",
+      "address": "412 Cromwell Avenue, Rocky Hill, CT 06067",
+      "official_url": "https://www.mozzicatobakery.com",
+      "summary": "The Rocky Hill branch of the multi-generational Hartford Franklin Avenue Italian bakery, known for Italian pastries, cakes, cookies and breads — one of five Connecticut locations. Hours Sun-Thu 8 a.m.-8 p.m., Fri-Sat to 9 p.m. Phone (860) 257-2100.",
+      "status": "open",
+      "photos": []
+    }
+  ],
+  "entries": [
+    {
+      "kind": "sight",
+      "name": "Dinosaur State Park",
+      "place_slug": "dinosaur-state-park",
+      "note": "Roughly 750 preserved dinosaur tracks under a geodesic dome."
+    },
+    {
+      "kind": "sight",
+      "name": "Academy Hall Museum",
+      "place_slug": "academy-hall-museum-rocky-hill",
+      "note": "The Historical Society's home in an 1803 building."
+    },
+    {
+      "kind": "walk",
+      "name": "Dividend Pond Trails & Archaeological District",
+      "place_slug": "dividend-pond-trails",
+      "note": "68 acres with ten documented archaeological sites."
+    },
+    {
+      "kind": "sight",
+      "name": "Fun City Trampoline & Adventure Park",
+      "place_slug": "fun-city-trampoline-adventure-park",
+      "note": "An indoor family park with trampolines and rock climbing."
+    },
+    {
+      "kind": "food",
+      "name": "Chuck's Steak House",
+      "place_slug": "chucks-steak-house-rocky-hill",
+      "note": "Hand-cut Black Angus beef since 1970."
+    },
+    {
+      "kind": "food",
+      "name": "Cugino's Restaurant",
+      "place_slug": "cuginos-restaurant",
+      "note": "Family-run Northern Italian cooking."
+    },
+    {
+      "kind": "food",
+      "name": "Elizabeth's Bar & Restaurant",
+      "place_slug": "elizabeths-bar-restaurant",
+      "note": "Italian and Portuguese cooking since 1997."
+    },
+    {
+      "kind": "food",
+      "name": "Flock & Herd Gastropub",
+      "place_slug": "flock-and-herd-gastropub",
+      "note": "A from-scratch gastropub kitchen."
+    },
+    {
+      "kind": "food",
+      "name": "Mozzicato DePasquale Bakery & Pastry Shop",
+      "place_slug": "mozzicato-depasquale-rocky-hill",
+      "note": "The Rocky Hill branch of a Hartford Italian bakery."
+    }
+  ],
+  "links": [
+    {
+      "target": "guide:wethersfield-ct-travel-guide",
+      "kind": "nearby",
+      "note": "Rocky Hill separated from Wethersfield in 1843 and borders it to the north."
+    },
+    {
+      "target": "guide:wethersfield-ct-travel-guide",
+      "kind": "shared-history",
+      "note": "Rocky Hill was settled as part of Wethersfield in 1650, incorporating separately in May 1843."
+    },
+    {
+      "target": "guide:cromwell-ct-travel-guide",
+      "kind": "nearby",
+      "note": "Rocky Hill borders Cromwell to the south."
+    },
+    {
+      "target": "guide:berlin-ct-travel-guide",
+      "kind": "nearby",
+      "note": "Rocky Hill borders Berlin to the west."
+    },
+    {
+      "target": "guide:glastonbury-ct-travel-guide",
+      "kind": "nearby",
+      "note": "Rocky Hill faces Glastonbury across the Connecticut River, connected by the Rocky Hill-Glastonbury Ferry."
+    },
+    {
+      "target": "guide:glastonbury-ct-travel-guide",
+      "kind": "shared-history",
+      "note": "The Rocky Hill-Glastonbury Ferry, in service since 1655, links the two towns across the Connecticut River."
+    }
+  ]
+}

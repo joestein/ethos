@@ -1,0 +1,328 @@
+{
+  "guide": {
+    "slug": "bristol-ct-travel-guide",
+    "title": "Bristol, Connecticut: Clockmakers, Carousels and America's Oldest Amusement Park",
+    "destination": "Bristol, Connecticut",
+    "state": "Connecticut",
+    "county": "Hartford County",
+    "intro": "Bristol began as the agricultural village of New Cambridge, incorporated under the name Bristol — for Bristol, England — in 1785, and as a city in 1911; first permanent settler Ebenezer Barnes arrived in 1728. By 1790 Gideon Roberts was making wooden-movement clocks and peddling them by horseback, and the trade grew through the 19th century with manufacturers such as J.H. Sessions and Son and Ingraham Clocks; Noble Jerome patented a clock design here in 1839, and Hugh M. and Stanley P. Rockwell patented the Rockwell hardness tester in 1919. In 1846 Gad Norton opened the lakefront at Lake Compounce to the public, founding what is now the oldest continually operating amusement park in the United States. Bristol is nicknamed the \"Mum City\" for its former leadership in chrysanthemum production, and ESPN has broadcast from studios on Middle Street since 1979.",
+    "sections": [
+      {
+        "heading": "Clocks, carousels and Babe Ruth's home run",
+        "body": "The American Clock & Watch Museum opened April 10, 1954 in the 1801 Federal-style Miles Lewis House — the first museum in America devoted entirely to horology — and its collection has grown to more than 6,000 timepieces. The Carousel Museum preserves hand-carved carousel animals from across the country, including horses from around 1890 and 1905, and is running a major exhibition on Lake Compounce's 180-year history. Muzzy Field, opened July 8, 1914 on land donated by Adrian Muzzy, hosted Babe Ruth for a 1919 home run before a crowd of nearly five thousand and later fielded the Bristol Owls, the Bristol Red Sox and even the Green Bay Packers in 1943; today it holds baseball, football and soccer fields, and the Bristol Historical Society has revived vintage 1864-rules games there since 2018."
+      },
+      {
+        "heading": "Getting there",
+        "body": "Bristol is a drive-to city with no passenger rail station of its own. Route 72, the E. Bartlett Barnes Highway, runs as a limited-access expressway from the Plainville town line into eastern Bristol, connecting to I-84 at Plainville and to Route 9 at New Britain; west of downtown it continues as a boulevard and surface streets. U.S. Route 6 also serves the city. The nearest CTrail Hartford Line stops are Berlin and Hartford Union Station; Bristol's former Forestville railroad station is no longer in passenger use. CTtransit's New Britain division runs local routes 541, 542 and 543 within Bristol, with Route 923 Bristol Express connecting toward Hartford."
+      },
+      {
+        "heading": "Where to eat and stay",
+        "body": "Riverside Restaurant, a throwback breakfast-and-brunch diner on Riverside Avenue, has served omelettes, Belgian waffles and diner staples since long before its 2014 \"Best Breakfast\" honor. Parkside Cafe on North Main Street serves homemade omelettes, pancakes and daily specials. Bristol's lodging clusters in the Lake District around Century Drive: the DoubleTree by Hilton has a saltwater pool and on-site dining, while the extended-stay Home2 Suites has 90 suites with efficiency kitchens — both a short walk from Lake Compounce."
+      }
+    ],
+    "faq": [
+      {
+        "question": "How do I get to Bristol?",
+        "answer": "By car — Route 72 (the E. Bartlett Barnes Highway) connects to I-84 at Plainville and to Route 9 at New Britain, and US Route 6 also serves the city. There is no passenger rail station in Bristol; the nearest CTrail Hartford Line stops are Berlin and Hartford Union Station."
+      },
+      {
+        "question": "Is there a train to Bristol?",
+        "answer": "No. Bristol's former Forestville railroad station is no longer used for passenger service. The nearest CTrail Hartford Line stations are Berlin and Hartford Union Station, both reached by car."
+      },
+      {
+        "question": "What is Lake Compounce?",
+        "answer": "Opened in 1846 by Gad Norton, Lake Compounce is the oldest continually operating amusement park in the United States, with the 1927 Wildcat roller coaster and the wooden Boulder Dash (2000). It straddles the Bristol-Southington town line."
+      },
+      {
+        "question": "What is the American Clock & Watch Museum?",
+        "answer": "The first American museum devoted entirely to horology, opened in 1954 in the 1801 Miles Lewis House. Open Wednesday-Sunday 10 a.m.-5 p.m. (Monday-Tuesday by appointment); admission $12 adults, $10 seniors, $5 students, free under 6. Phone (860) 583-6070."
+      },
+      {
+        "question": "Is there a hotel in Bristol?",
+        "answer": "Yes — the DoubleTree by Hilton Bristol and the Home2 Suites by Hilton Bristol both sit in the Lake District near Century Drive, within walking distance of Lake Compounce."
+      }
+    ],
+    "photos": [
+      {
+        "src": "/photos/ct/bristol/lake-compounce-aerial.jpg",
+        "thumb": "/photos/ct/bristol/lake-compounce-aerial_thumb.jpg",
+        "title": "Lake Compounce, aerial view",
+        "description": "An aerial view of Lake Compounce amusement park in Bristol, showing the Ferris wheel and wooden coasters.",
+        "author": "AirportExpert",
+        "license": "CC0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Aerial_View_of_Lake_Compounce.jpg"
+      },
+      {
+        "src": "/photos/ct/bristol/american-clock-and-watch-museum.jpg",
+        "thumb": "/photos/ct/bristol/american-clock-and-watch-museum_thumb.jpg",
+        "title": "American Clock & Watch Museum",
+        "description": "The 1801 Miles Lewis House, home of the American Clock & Watch Museum in Bristol.",
+        "author": "John Phelan",
+        "license": "CC BY-SA 3.0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:American_Clock_and_Watch_Museum,_Bristol_CT.jpg"
+      },
+      {
+        "src": "/photos/ct/bristol/carousel-museum-horse.jpg",
+        "thumb": "/photos/ct/bristol/carousel-museum-horse_thumb.jpg",
+        "title": "Carved carousel horse, The Carousel Museum",
+        "description": "A hand-carved carousel horse on display at The Carousel Museum in Bristol.",
+        "author": "Carol M. Highsmith",
+        "license": "Public domain",
+        "source_url": "https://commons.wikimedia.org/wiki/File:New_England_Carousel_Museum,_Bristol,_Connecticut_LCCN2012631522.tif"
+      }
+    ]
+  },
+  "places": [
+    {
+      "slug": "lake-compounce",
+      "name": "Lake Compounce",
+      "kind": "amusement-park",
+      "town": "Bristol",
+      "state": "Connecticut",
+      "county": "Hartford County",
+      "address": "185 Enterprise Drive, Bristol, CT 06010",
+      "official_url": "https://www.lakecompounce.com/",
+      "summary": "Opened in 1846 by Gad Norton, Lake Compounce is the oldest continually operating amusement park in the United States, with 44 attractions including 5 roller coasters and 13 water rides. The 1927 Wildcat is among the oldest operating roller coasters in the world, and Boulder Dash (2000) has won the Golden Ticket Award for Best Wooden Coaster. The park straddles the Bristol-Southington town line and was acquired by Herschend in March 2025. Season and pricing vary — check before visiting.",
+      "status": "open",
+      "photos": [
+        {
+          "src": "/photos/ct/bristol/lake-compounce-aerial.jpg",
+          "thumb": "/photos/ct/bristol/lake-compounce-aerial_thumb.jpg",
+          "title": "Lake Compounce, aerial view",
+          "description": "An aerial view of Lake Compounce amusement park in Bristol, showing the Ferris wheel and wooden coasters.",
+          "author": "AirportExpert",
+          "license": "CC0",
+          "source_url": "https://commons.wikimedia.org/wiki/File:Aerial_View_of_Lake_Compounce.jpg"
+        }
+      ]
+    },
+    {
+      "slug": "american-clock-and-watch-museum",
+      "name": "American Clock & Watch Museum",
+      "kind": "museum",
+      "town": "Bristol",
+      "state": "Connecticut",
+      "county": "Hartford County",
+      "address": "100 Maple Street, Bristol, CT 06010",
+      "official_url": "https://www.clockandwatchmuseum.org/",
+      "summary": "Housed in the 1801 Federal-style Miles Lewis House, it opened April 10, 1954 as the first American museum devoted entirely to horology; the collection has grown to over 6,000 timepieces across eight galleries. Open Wed-Sun 10 a.m.-5 p.m. (Mon-Tue by appointment); admission $12 adults, $10 seniors 60+, $5 students, free under 6, $25 family. Phone (860) 583-6070.",
+      "status": "open",
+      "photos": [
+        {
+          "src": "/photos/ct/bristol/american-clock-and-watch-museum.jpg",
+          "thumb": "/photos/ct/bristol/american-clock-and-watch-museum_thumb.jpg",
+          "title": "American Clock & Watch Museum",
+          "description": "The 1801 Miles Lewis House, home of the American Clock & Watch Museum in Bristol.",
+          "author": "John Phelan",
+          "license": "CC BY-SA 3.0",
+          "source_url": "https://commons.wikimedia.org/wiki/File:American_Clock_and_Watch_Museum,_Bristol_CT.jpg"
+        }
+      ]
+    },
+    {
+      "slug": "the-carousel-museum",
+      "name": "The Carousel Museum",
+      "kind": "museum",
+      "town": "Bristol",
+      "state": "Connecticut",
+      "county": "Hartford County",
+      "address": "95 Riverside Avenue, Bristol, CT 06010",
+      "official_url": "https://www.thecarouselmuseum.org/",
+      "summary": "A permanent collection of hand-carved carousel animals donated from across the United States, including horses from around 1890 and a Dentzel Factory horse from about 1905, plus a major exhibition on Lake Compounce's 180-year history running through October 2027. Open Wed-Sat 10 a.m.-5 p.m., Sun noon-5 p.m., closed Mon-Tue. Phone (860) 585-5411.",
+      "status": "open",
+      "photos": [
+        {
+          "src": "/photos/ct/bristol/carousel-museum-horse.jpg",
+          "thumb": "/photos/ct/bristol/carousel-museum-horse_thumb.jpg",
+          "title": "Carved carousel horse, The Carousel Museum",
+          "description": "A hand-carved carousel horse on display at The Carousel Museum in Bristol.",
+          "author": "Carol M. Highsmith",
+          "license": "Public domain",
+          "source_url": "https://commons.wikimedia.org/wiki/File:New_England_Carousel_Museum,_Bristol,_Connecticut_LCCN2012631522.tif"
+        }
+      ]
+    },
+    {
+      "slug": "bristol-historical-society-museum",
+      "name": "Bristol Historical Society Museum",
+      "kind": "museum",
+      "town": "Bristol",
+      "state": "Connecticut",
+      "county": "Hartford County",
+      "address": "98 Summer Street, Bristol, CT 06010",
+      "official_url": "https://www.bristolhistoricalsociety.org/",
+      "summary": "Occupies the former Bristol High School, built in 1890, and houses the Memorial Military Museum, the Bristol Sports Hall of Fame, a general-store display and a \"Builders of Bristol\" exhibit. Open Wednesday and Saturday 10 a.m.-2 p.m. Phone (860) 583-6309.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "barnes-memorial-nature-center",
+      "name": "Barnes Memorial Nature Center",
+      "kind": "park",
+      "town": "Bristol",
+      "state": "Connecticut",
+      "county": "Hartford County",
+      "address": "175 Shrub Road, Bristol, CT 06010",
+      "official_url": "https://www.elcct.org/",
+      "summary": "Run by Environmental Learning Centers of Connecticut, with the one-mile, fully accessible Wallace Barnes Accessible Nature Trail and a link to the Tunxis Mainline of the state's Blue-Blazed Hiking Trail System. Active 2026 programming includes Discovery Days and a Wild Edible Series. Phone (860) 583-1234.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "muzzy-field",
+      "name": "Muzzy Field",
+      "kind": "historic-site",
+      "town": "Bristol",
+      "state": "Connecticut",
+      "county": "Hartford County",
+      "address": "Park & Muzzy Street, Bristol, CT 06010",
+      "summary": "Land donated in 1912 by Adrian Muzzy; the ballpark opened July 8, 1914 with backing from the New Departure manufacturing company. Babe Ruth homered here in 1919 before nearly five thousand spectators, and the field later hosted the Bristol Owls, the Bristol Red Sox and the Green Bay Packers in 1943. The Bristol Blues collegiate baseball team now plays here, and the Historical Society has hosted vintage 1864-rules games since 2018.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "riverside-restaurant-bristol",
+      "name": "Riverside Restaurant",
+      "kind": "restaurant",
+      "town": "Bristol",
+      "state": "Connecticut",
+      "county": "Hartford County",
+      "address": "170 Riverside Avenue, Bristol, CT 06010",
+      "summary": "A throwback breakfast and brunch diner with omelettes, pancakes, Belgian waffles and diner staples like corned beef and cabbage. Named Best Breakfast Restaurant in a 2014 Reader's Choice award. Open Mon-Sat 6 a.m.-2 p.m., Sun 7 a.m.-1 p.m. Phone (860) 582-7009.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "parkside-cafe-bristol",
+      "name": "Parkside Cafe",
+      "kind": "cafe",
+      "town": "Bristol",
+      "state": "Connecticut",
+      "county": "Hartford County",
+      "address": "224 North Main Street, Bristol, CT 06010",
+      "summary": "A downtown breakfast-and-lunch cafe serving homemade omelettes, breakfast sandwiches, pancakes and waffles alongside salads, sandwiches and soups. Open Mon-Sat 6 a.m.-2 p.m., Sun 6 a.m.-1 p.m. Phone (860) 584-1841.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "doubletree-bristol",
+      "name": "DoubleTree by Hilton Bristol",
+      "kind": "hotel",
+      "town": "Bristol",
+      "state": "Connecticut",
+      "county": "Hartford County",
+      "address": "42 Century Drive, Bristol, CT 06010",
+      "official_url": "https://www.bristoleventcenter.com/accommodations/",
+      "summary": "A 140-room full-service hotel in the Lake District, with a saltwater pool, fitness center, on-site dining including Time Out Sports & Pizza Bar, and roughly 7,200 square feet of meeting space.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "home2-suites-bristol",
+      "name": "Home2 Suites by Hilton Bristol",
+      "kind": "hotel",
+      "town": "Bristol",
+      "state": "Connecticut",
+      "county": "Hartford County",
+      "address": "112 Century Drive, Bristol, CT 06010",
+      "official_url": "https://www.bristoleventcenter.com/accommodations/",
+      "summary": "Extended-stay property with 90 suites featuring efficiency kitchens, pet-friendly rooms, a billiards and entertainment room, outdoor firepits and access to the adjacent saltwater pool. Phone (860) 845-1555.",
+      "status": "open",
+      "photos": []
+    }
+  ],
+  "entries": [
+    {
+      "kind": "sight",
+      "name": "Lake Compounce",
+      "place_slug": "lake-compounce",
+      "note": "America's oldest continually operating amusement park, since 1846."
+    },
+    {
+      "kind": "sight",
+      "name": "American Clock & Watch Museum",
+      "place_slug": "american-clock-and-watch-museum",
+      "note": "The first American museum devoted entirely to horology."
+    },
+    {
+      "kind": "sight",
+      "name": "The Carousel Museum",
+      "place_slug": "the-carousel-museum",
+      "note": "Hand-carved carousel animals, with a Lake Compounce anniversary exhibit."
+    },
+    {
+      "kind": "sight",
+      "name": "Bristol Historical Society Museum",
+      "place_slug": "bristol-historical-society-museum",
+      "note": "Housed in the former Bristol High School, built 1890."
+    },
+    {
+      "kind": "walk",
+      "name": "Barnes Memorial Nature Center",
+      "place_slug": "barnes-memorial-nature-center",
+      "note": "A free nature center with an accessible mile-long trail."
+    },
+    {
+      "kind": "sight",
+      "name": "Muzzy Field",
+      "place_slug": "muzzy-field",
+      "note": "Where Babe Ruth hit a 1919 home run."
+    },
+    {
+      "kind": "food",
+      "name": "Riverside Restaurant",
+      "place_slug": "riverside-restaurant-bristol",
+      "note": "A throwback breakfast and brunch diner."
+    },
+    {
+      "kind": "food",
+      "name": "Parkside Cafe",
+      "place_slug": "parkside-cafe-bristol",
+      "note": "A downtown breakfast-and-lunch cafe."
+    },
+    {
+      "kind": "stay",
+      "name": "DoubleTree by Hilton Bristol",
+      "place_slug": "doubletree-bristol",
+      "note": "A full-service hotel in the Lake District."
+    },
+    {
+      "kind": "stay",
+      "name": "Home2 Suites by Hilton Bristol",
+      "place_slug": "home2-suites-bristol",
+      "note": "Extended-stay suites near Lake Compounce."
+    }
+  ],
+  "links": [
+    {
+      "target": "guide:plainville-ct-travel-guide",
+      "kind": "nearby",
+      "note": "Bristol borders Plainville; Route 72 connects the two."
+    },
+    {
+      "target": "guide:southington-ct-travel-guide",
+      "kind": "nearby",
+      "note": "Bristol borders Southington, and Lake Compounce straddles the town line between them."
+    },
+    {
+      "target": "guide:burlington-ct-travel-guide",
+      "kind": "nearby",
+      "note": "Bristol borders Burlington, which separated from Bristol in 1806."
+    },
+    {
+      "target": "guide:burlington-ct-travel-guide",
+      "kind": "shared-history",
+      "note": "Burlington was set off from the Parish of West Britain and incorporated as a town in 1806, split from Bristol."
+    },
+    {
+      "target": "guide:plymouth-ct-travel-guide",
+      "kind": "nearby",
+      "note": "Bristol borders Plymouth to the west."
+    },
+    {
+      "target": "guide:new-britain-ct-travel-guide",
+      "kind": "same-region",
+      "note": "New Britain sits east of Bristol along the Route 72/Route 9 corridor."
+    }
+  ]
+}

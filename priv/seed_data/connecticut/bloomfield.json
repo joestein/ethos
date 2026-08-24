@@ -1,0 +1,302 @@
+{
+  "guide": {
+    "slug": "bloomfield-ct-travel-guide",
+    "title": "Bloomfield, Connecticut: Wintonbury Parish and a Helicopter Pioneer",
+    "destination": "Bloomfield, Connecticut",
+    "state": "Connecticut",
+    "county": "Hartford County",
+    "intro": "The Town of Bloomfield traces its origins to 1640 as \"Messenger Farms\" within Windsor, on land originally home to the Poquonock people. In 1736 the area was formally organized as the Parish of Wintonbury, a name coined from its three parent towns — WINdsor, farmingTON and simsBURY — that survives today in Wintonbury Avenue and the Wintonbury Historical Society. The Connecticut General Assembly incorporated Bloomfield as a separate town on May 28, 1835, with more than 900 residents; the town gained rail service by the mid-1800s and electric service from the Hartford Electric Light Company in 1891. Bloomfield's economy stayed agricultural — dairy and shade-grown tobacco — until it developed as a postwar suburb of Hartford beginning in the 1950s. Charles Kaman founded his helicopter company in a West Hartford garage in 1945 with two friends' $2,000 and built it into the Kaman Corporation of Bloomfield, which produced the first gas turbine-powered helicopter.",
+    "sections": [
+      {
+        "heading": "From tobacco fields to a modernist office campus",
+        "body": "The Connecticut General Life Insurance Company Headquarters at 900 Cottage Grove Road, built 1954-1957 to a Gordon Bunshaft design with grounds by Isamu Noguchi and interiors by Florence Knoll, was the first complex of its kind designed as office space for a large corporate employer and became the model for a generation of suburban office parks; it is listed on the National Register of Historic Places and today houses Cigna. The Captain Oliver Filley House on Mountain Avenue, an 1834 Greek Revival farmhouse of local rubblestone and traprock, is one of only four stone houses built in early 19th-century Bloomfield; town-owned since 1992, it is leased to the Wintonbury Historical Society, which restores and displays it to the public — the Society's Fannie R. Gabriel History Center at 153 School Street and the adjoining 1700s Old Farm School are open on a regular schedule."
+      },
+      {
+        "heading": "Getting there",
+        "body": "Bloomfield is reached via Interstates 91 and 84 (both via Hartford or Windsor) and then state Routes 218, 187 (Blue Hills Avenue) or 189 (Bloomfield/Tunxis Avenues). There is no rail station in Bloomfield itself; rail travelers use the CTrail Hartford Line's Hartford Union Station, also served by Amtrak, or the Windsor station, reached by car. The full Hartford Line runs Springfield Union Station, Windsor Locks, Windsor, Hartford Union Station, Berlin, Meriden, Wallingford, New Haven State Street and New Haven Union Station."
+      },
+      {
+        "heading": "Trails, a scenic reserve and a farmstay",
+        "body": "Industrialist Curtis H. Veeder donated the land for Penwood State Park to Connecticut in 1944, wishing it \"be kept in a natural state so that those who love nature may enjoy\" it — which is why camping, horseback riding and ground fires remain prohibited on its nearly 800 traprock acres. Auerfarm State Park Scenic Reserve, Connecticut's 110th state park when designated in 2015, honors the Auerbach family's 90 years of farming on the site with an easy woodland loop past historic apple orchards. The adjoining nonprofit Auerfarm runs seasonal events and rents two-bedroom farmstay cottages with full kitchens, run of the farm animals, hayrides and hiking trails."
+      }
+    ],
+    "faq": [
+      {
+        "question": "How do I get to Bloomfield?",
+        "answer": "By car via Interstates 91 and 84, then Routes 218, 187 or 189. There is no passenger rail station in Bloomfield; the nearest CTrail Hartford Line stops are Hartford Union Station and Windsor."
+      },
+      {
+        "question": "Is there a train to Bloomfield?",
+        "answer": "No. The nearest Hartford Line stations are Hartford Union Station (also served by Amtrak) and Windsor."
+      },
+      {
+        "question": "What is Penwood State Park?",
+        "answer": "Nearly 800 acres on the Talcott Mountain traprock ridge, donated to the state in 1944 by inventor Curtis H. Veeder. The blue-blazed Metacomet Trail runs through it, with views over the Farmington River Valley. Open daily 8 a.m. to sunset, free; camping, horseback riding and ground fires are prohibited."
+      },
+      {
+        "question": "Can I stay overnight in Bloomfield?",
+        "answer": "The Auerfarm Farmstay cottages, on the 120-acre Auerfarm property, are the town's verified lodging — two-bedroom cottages with full kitchens, booked through Airbnb. A full-service hotel is not confirmed inside Bloomfield; nearby Windsor and Hartford have chain options."
+      },
+      {
+        "question": "What is the Wintonbury Historical Society's history center?",
+        "answer": "The Fannie R. Gabriel History Center at 153 School Street, open Monday afternoons 1-3 p.m. by appointment for research; the adjoining Old Farm School is open Sundays 1-4 p.m., May 15 through October 15."
+      }
+    ],
+    "photos": [
+      {
+        "src": "/photos/ct/bloomfield/village-green.jpg",
+        "thumb": "/photos/ct/bloomfield/village-green_thumb.jpg",
+        "title": "Bloomfield Village Green",
+        "description": "The Village Green in Bloomfield, with the First Congregational Church and war memorials.",
+        "author": "Daderot",
+        "license": "CC0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Village_Green_-_Bloomfield,_CT_-_DSC09378.JPG"
+      },
+      {
+        "src": "/photos/ct/bloomfield/penwood-lake-louise.jpg",
+        "thumb": "/photos/ct/bloomfield/penwood-lake-louise_thumb.jpg",
+        "title": "Lake Louise, Penwood State Park",
+        "description": "Lake Louise in Penwood State Park, mirroring the surrounding forest.",
+        "author": "Sage Ross",
+        "license": "CC BY-SA 3.0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Lake_Louise_in_Penwood_State_Park_1,_2010-04-11.jpg"
+      },
+      {
+        "src": "/photos/ct/bloomfield/auerfarm-scenic-reserve.jpg",
+        "thumb": "/photos/ct/bloomfield/auerfarm-scenic-reserve_thumb.jpg",
+        "title": "Auerfarm State Park Scenic Reserve",
+        "description": "The trailhead at Auerfarm State Park Scenic Reserve in Bloomfield.",
+        "author": "John Phelan",
+        "license": "CC BY 4.0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Auerfarm_Scenic_Reserve,_Bloomfield_CT.jpg"
+      }
+    ]
+  },
+  "places": [
+    {
+      "slug": "penwood-state-park",
+      "name": "Penwood State Park",
+      "kind": "park",
+      "town": "Bloomfield",
+      "state": "Connecticut",
+      "county": "Hartford County",
+      "address": "560 Simsbury Road, Bloomfield, CT 06002",
+      "official_url": "https://ctparks.com/node/110",
+      "summary": "Nearly 800 acres on the Talcott Mountain traprock ridge, donated to the state in 1944 by inventor Curtis H. Veeder, whose own trails still lace the property. The blue-blazed Metacomet Trail runs through much of the park, opening to views of the Farmington River Valley. Camping, horseback riding and ground fires are prohibited, honoring the donor's wishes. Open daily 8 a.m. to sunset, free; phone (860) 242-1158.",
+      "status": "open",
+      "photos": [
+        {
+          "src": "/photos/ct/bloomfield/penwood-lake-louise.jpg",
+          "thumb": "/photos/ct/bloomfield/penwood-lake-louise_thumb.jpg",
+          "title": "Lake Louise, Penwood State Park",
+          "description": "Lake Louise in Penwood State Park, mirroring the surrounding forest.",
+          "author": "Sage Ross",
+          "license": "CC BY-SA 3.0",
+          "source_url": "https://commons.wikimedia.org/wiki/File:Lake_Louise_in_Penwood_State_Park_1,_2010-04-11.jpg"
+        }
+      ]
+    },
+    {
+      "slug": "auerfarm-state-park-scenic-reserve",
+      "name": "Auerfarm State Park Scenic Reserve",
+      "kind": "park",
+      "town": "Bloomfield",
+      "state": "Connecticut",
+      "county": "Hartford County",
+      "address": "35 Auer Farm Road, Bloomfield, CT 06002",
+      "official_url": "https://ctparks.com/parks/auerfarm-state-park-scenic-reserve",
+      "summary": "A 40-acre reserve established in 2015 as Connecticut's 110th state park, honoring the Auerbach family's 90 years of farming here. An easy loop of just under a mile passes historic apple orchards with views toward Heublein Tower and Avon Mountain. Open daily 8 a.m. to sunset, free, leashed pets welcome; buses seating 30 or more are not permitted.",
+      "status": "open",
+      "photos": [
+        {
+          "src": "/photos/ct/bloomfield/auerfarm-scenic-reserve.jpg",
+          "thumb": "/photos/ct/bloomfield/auerfarm-scenic-reserve_thumb.jpg",
+          "title": "Auerfarm State Park Scenic Reserve",
+          "description": "The trailhead at Auerfarm State Park Scenic Reserve in Bloomfield.",
+          "author": "John Phelan",
+          "license": "CC BY 4.0",
+          "source_url": "https://commons.wikimedia.org/wiki/File:Auerfarm_Scenic_Reserve,_Bloomfield_CT.jpg"
+        }
+      ]
+    },
+    {
+      "slug": "auerfarm-4h-education-center",
+      "name": "Auerfarm / 4-H Education Center",
+      "kind": "attraction",
+      "town": "Bloomfield",
+      "state": "Connecticut",
+      "county": "Hartford County",
+      "address": "158 Auer Farm Road, Bloomfield, CT 06002",
+      "official_url": "https://auerfarm.org/",
+      "summary": "A 120-acre nonprofit educational farm adjacent to the state scenic reserve, \"inspiring children and adults to engage in, learn about, and enjoy agriculture, science, and the natural environment.\" Seasonal public events include the Fall Festival and Maple Breakfast, plus hayrides, goat walks and hiking trails. Phone (860) 242-7144.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "wintonbury-hills-golf-course",
+      "name": "Wintonbury Hills Golf Course",
+      "kind": "attraction",
+      "town": "Bloomfield",
+      "state": "Connecticut",
+      "county": "Hartford County",
+      "address": "206 Terry Plains Road, Bloomfield, CT 06002",
+      "official_url": "https://www.wintonburyhillsgolf.com/",
+      "summary": "A Pete Dye-designed public course the club advertises as GolfPass's #1 public course in Connecticut and #40 nationally, with Golfweek ranking it #2 in the state. The Tap Inn clubhouse restaurant is open to the public, Mon-Fri 11 a.m. to close, Sat-Sun 10 a.m. to close (weather and play dependent). Phone (860) 242-1401.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "farmington-river-park-bloomfield",
+      "name": "Farmington River Park",
+      "kind": "park",
+      "town": "Bloomfield",
+      "state": "Connecticut",
+      "county": "Hartford County",
+      "address": "460 Tunxis Avenue, Bloomfield, CT 06002",
+      "official_url": "https://www.bloomfieldct.gov/facilities",
+      "summary": "A quiet town park on the Farmington River at Bloomfield's northern edge, listed by the town for fishing, hiking and water studies.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "old-farm-school-fannie-gabriel-history-center",
+      "name": "Old Farm School & Fannie R. Gabriel History Center",
+      "kind": "museum",
+      "town": "Bloomfield",
+      "state": "Connecticut",
+      "county": "Hartford County",
+      "address": "153 School Street, Bloomfield, CT 06002",
+      "official_url": "https://bloomfieldcthistory.org/",
+      "summary": "The Wintonbury Historical Society's history center, at the corner of School Street and Park Avenue behind the Old Farm School. The Old Farm School is open Sundays 1-4 p.m., May 15 through October 15; the history center offers historical and genealogical research Monday afternoons 1-3 p.m. by appointment. Phone (860) 243-1531.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "back-east-brewing-company",
+      "name": "Back East Brewing Company",
+      "kind": "brewery",
+      "town": "Bloomfield",
+      "state": "Connecticut",
+      "county": "Hartford County",
+      "address": "1296 Blue Hills Avenue A, Bloomfield, CT 06002",
+      "official_url": "https://www.backeastbrewing.com/",
+      "summary": "Bloomfield's craft brewery and taproom, with a kitchen alongside the beer. Wednesday burgers come with a free beer plus trivia at 6:30 p.m.; Thursday brings $10 nachos and Music Bingo. Taproom hours: Wed-Thu 3-9 p.m., Fri-Sat noon-10 p.m., Sun noon-6 p.m. Phone (860) 242-1793.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "the-tap-inn-wintonbury-hills",
+      "name": "The Tap Inn at Wintonbury Hills",
+      "kind": "restaurant",
+      "town": "Bloomfield",
+      "state": "Connecticut",
+      "county": "Hartford County",
+      "address": "206 Terry Plains Road, Bloomfield, CT 06002",
+      "official_url": "https://www.wintonburyhillsgolf.com/restaurant/",
+      "summary": "The public restaurant at Wintonbury Hills Golf Course, serving breakfast, lunch, dinner and snacks. Hours Mon-Fri 11 a.m. to close, Sat-Sun 10 a.m. to close — subject to weather and play, so call ahead. Phone (860) 242-1401 ext. 3.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "auerfarm-farmstay-cottages",
+      "name": "Auerfarm Farmstay Cottages",
+      "kind": "bnb",
+      "town": "Bloomfield",
+      "state": "Connecticut",
+      "county": "Hartford County",
+      "address": "158 Auer Farm Road, Bloomfield, CT 06002",
+      "official_url": "https://auerfarm.org/farmstay/",
+      "summary": "Two-bedroom cottages on the 120-acre historic Auerfarm property, each with a full bathroom, kitchen, TV and Wi-Fi. Guests get run of the farm — animals, hayrides, goat walks, hiking and biking trails with Talcott Mountain views. Booked through Airbnb; contact farmstay@auerfarm.org or (860) 242-7144.",
+      "status": "open",
+      "photos": []
+    }
+  ],
+  "entries": [
+    {
+      "kind": "sight",
+      "name": "Penwood State Park",
+      "place_slug": "penwood-state-park",
+      "note": "Nearly 800 traprock acres donated by inventor Curtis H. Veeder in 1944."
+    },
+    {
+      "kind": "sight",
+      "name": "Auerfarm State Park Scenic Reserve",
+      "place_slug": "auerfarm-state-park-scenic-reserve",
+      "note": "Connecticut's 110th state park, an easy loop past historic orchards."
+    },
+    {
+      "kind": "sight",
+      "name": "Auerfarm / 4-H Education Center",
+      "place_slug": "auerfarm-4h-education-center",
+      "note": "A 120-acre educational farm with seasonal events."
+    },
+    {
+      "kind": "sight",
+      "name": "Wintonbury Hills Golf Course",
+      "place_slug": "wintonbury-hills-golf-course",
+      "note": "A Pete Dye-designed public course."
+    },
+    {
+      "kind": "walk",
+      "name": "Farmington River Park",
+      "place_slug": "farmington-river-park-bloomfield",
+      "note": "A riverside town park on the Farmington River."
+    },
+    {
+      "kind": "sight",
+      "name": "Old Farm School & Fannie R. Gabriel History Center",
+      "place_slug": "old-farm-school-fannie-gabriel-history-center",
+      "note": "The Wintonbury Historical Society's history center and schoolhouse."
+    },
+    {
+      "kind": "food",
+      "name": "Back East Brewing Company",
+      "place_slug": "back-east-brewing-company",
+      "note": "Bloomfield's craft brewery, with a full kitchen."
+    },
+    {
+      "kind": "food",
+      "name": "The Tap Inn at Wintonbury Hills",
+      "place_slug": "the-tap-inn-wintonbury-hills",
+      "note": "The golf course's public clubhouse restaurant."
+    },
+    {
+      "kind": "stay",
+      "name": "Auerfarm Farmstay Cottages",
+      "place_slug": "auerfarm-farmstay-cottages",
+      "note": "Two-bedroom cottages on a working farm."
+    }
+  ],
+  "links": [
+    {
+      "target": "guide:windsor-ct-travel-guide",
+      "kind": "nearby",
+      "note": "Bloomfield's Parish of Wintonbury was coined from Windsor, Farmington and Simsbury; the towns border each other."
+    },
+    {
+      "target": "guide:simsbury-ct-travel-guide",
+      "kind": "nearby",
+      "note": "Bloomfield borders Simsbury, one of the three parent towns of the 1736 Wintonbury parish."
+    },
+    {
+      "target": "guide:west-hartford-ct-travel-guide",
+      "kind": "nearby",
+      "note": "Bloomfield borders West Hartford to the south."
+    },
+    {
+      "target": "guide:hartford-ct-travel-guide",
+      "kind": "nearby",
+      "note": "Bloomfield borders Hartford, home to the nearest CTrail Hartford Line station."
+    },
+    {
+      "target": "guide:east-granby-ct-travel-guide",
+      "kind": "nearby",
+      "note": "Bloomfield borders East Granby to the north."
+    },
+    {
+      "target": "guide:avon-ct-travel-guide",
+      "kind": "same-region",
+      "note": "Avon sits west of Bloomfield in the Farmington Valley."
+    }
+  ]
+}

@@ -1,0 +1,260 @@
+{
+  "guide": {
+    "slug": "marlborough-ct-travel-guide",
+    "title": "Marlborough, Connecticut: Three Towns' Corners and a Colonial Tavern",
+    "destination": "Marlborough, Connecticut",
+    "state": "Connecticut",
+    "county": "Hartford County",
+    "intro": "Marlborough's origins trace to Sadler's Ordinary, a colonial-era tavern and rest stop remembered as serving travelers crossing this corner of the colony long before the town existed. In 1747, William Buell and Joel Foote petitioned the colonial General Court to form an Ecclesiastical Society for the scattered settlers in the corners of Glastonbury, Colchester and Hebron, and the town was officially incorporated on October 13, 1803, formed from portions of all three neighboring towns at the southeastern tip of Hartford County. It took its name from Marlborough, Massachusetts, itself named for Marlborough in Wiltshire, England. Primarily a farming community, Marlborough also supported grain and lumber mills, a gunnery owned by Colonel Elisha Buell, and the Union Manufacturing Company. Mary Hall, a Marlborough-born writer and suffragist, studied law under John Hooker and in July 1882 became Connecticut's first female attorney.",
+    "sections": [
+      {
+        "heading": "A tavern that survives as a restaurant",
+        "body": "The building now home to Marlborough Tavern, at Routes 2 and 66, is itself on the National Register of Historic Places as the Marlborough Tavern-Col. Elisha Buell House, built about 1760 — tying the current restaurant directly to the same Colonel Buell whose gunnery once ran in town. The Marlborough Congregational Church at 35 South Main Street, a Greek Revival meetinghouse built in 1842 by architect Augustus Truedale for a congregational society dating to 1747, kept hosting town meetings into the 20th century for its seating capacity; it was listed on the National Register of Historic Places in December 1993."
+      },
+      {
+        "heading": "Getting there",
+        "body": "Marlborough is a drive-to town: Route 2 bisects it with three exits, at South Main Street, Route 66 and West Road — though South Main's ramp runs westbound only and West Road's runs eastbound only. Route 66 is the east-west route through the town center, meeting Route 2 at one of those exits. There is no passenger rail station anywhere in Marlborough; rail travelers use the CTrail Hartford Line to Hartford Union Station and drive the remaining stretch southeast on Route 2."
+      }
+    ],
+    "faq": [
+      {
+        "question": "How do I get to Marlborough?",
+        "answer": "By car — Route 2 bisects the town with three exits (South Main Street, Route 66 and West Road), and Route 66 runs east-west through the center. There is no passenger rail station in Marlborough; the nearest CTrail Hartford Line stop is Hartford Union Station."
+      },
+      {
+        "question": "Is there a train to Marlborough?",
+        "answer": "No. Marlborough has no rail station of its own. The nearest CTrail Hartford Line stop is Hartford Union Station, reached by car via Route 2."
+      },
+      {
+        "question": "What is the Marlborough Congregational Church?",
+        "answer": "An 1842 Greek Revival meetinghouse at 35 South Main Street, built for a congregational society dating to 1747 and listed on the National Register of Historic Places in 1993. It remains an active congregation, so treat it as an exterior stop unless you contact the church."
+      },
+      {
+        "question": "Is there a hotel in Marlborough?",
+        "answer": "No hotel, inn or B&B inside Marlborough could be verified. The nearest verified lodging is the Butternut Farm Bed & Breakfast in neighboring Glastonbury."
+      }
+    ],
+    "photos": [
+      {
+        "src": "/photos/ct/marlborough/lake-terramuggus.jpg",
+        "thumb": "/photos/ct/marlborough/lake-terramuggus_thumb.jpg",
+        "title": "Lake Terramuggus",
+        "description": "A shoreline view of Lake Terramuggus in Marlborough.",
+        "author": "John Phelan",
+        "license": "CC BY 4.0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Lake_Terramuggus,_Terramuggus_CT.jpg"
+      },
+      {
+        "src": "/photos/ct/marlborough/marlborough-congregational-church.jpg",
+        "thumb": "/photos/ct/marlborough/marlborough-congregational-church_thumb.jpg",
+        "title": "Marlborough Congregational Church",
+        "description": "The 1842 Marlborough Congregational Church, a Greek Revival meetinghouse.",
+        "author": "Grondemar",
+        "license": "CC BY-SA 3.0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Marlborough_Congregational_Church_Marlborough_CT.JPG"
+      },
+      {
+        "src": "/photos/ct/marlborough/marlborough-tavern.jpg",
+        "thumb": "/photos/ct/marlborough/marlborough-tavern_thumb.jpg",
+        "title": "Marlborough Tavern",
+        "description": "The historic building at the Marlborough crossroads, now home to Marlborough Tavern.",
+        "author": "Grondemar",
+        "license": "CC BY-SA 3.0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Marlborough_Tavern_Marlborough_CT.JPG"
+      }
+    ]
+  },
+  "places": [
+    {
+      "slug": "marlborough-arts-center",
+      "name": "Marlborough Arts Center",
+      "kind": "attraction",
+      "town": "Marlborough",
+      "state": "Connecticut",
+      "county": "Hartford County",
+      "address": "231 North Main Street, Marlborough, CT 06447",
+      "official_url": "https://www.marlborougharts.org/",
+      "summary": "A non-profit regional center for fine arts, performing arts and crafts, running a \"4th Friday @ the Arts Cafe\" live-music series, hands-on classes and rotating member exhibitions. Membership starts at $25/year. Phone (860) 926-7500.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "blish-memorial-park-lake-terramuggus",
+      "name": "Blish Memorial Park at Lake Terramuggus",
+      "kind": "park",
+      "town": "Marlborough",
+      "state": "Connecticut",
+      "county": "Hartford County",
+      "address": "Marlborough, CT 06447",
+      "official_url": "https://www.marlboroughct.net/government/parks_and_recreation.php",
+      "summary": "The town's lakefront park and swimming area on Lake Terramuggus. Parks & Recreation runs kayak rentals at $10 per hour whenever staff are at the lake, 10 a.m.-6 p.m.; the 2026 kayak season runs May 1-November 1. The park hosts the 2026 Blish Park Summer Concert Series and the town's summer triathlon.",
+      "status": "open",
+      "photos": [
+        {
+          "src": "/photos/ct/marlborough/lake-terramuggus.jpg",
+          "thumb": "/photos/ct/marlborough/lake-terramuggus_thumb.jpg",
+          "title": "Lake Terramuggus",
+          "description": "A shoreline view of Lake Terramuggus in Marlborough.",
+          "author": "John Phelan",
+          "license": "CC BY 4.0",
+          "source_url": "https://commons.wikimedia.org/wiki/File:Lake_Terramuggus,_Terramuggus_CT.jpg"
+        }
+      ]
+    },
+    {
+      "slug": "marlborough-congregational-church",
+      "name": "Marlborough Congregational Church",
+      "kind": "historic-site",
+      "town": "Marlborough",
+      "state": "Connecticut",
+      "county": "Hartford County",
+      "address": "35 South Main Street, Marlborough, CT 06447",
+      "summary": "A single-story wood-frame Greek Revival meetinghouse built in 1842 to a design by Augustus Truedale, with fluted Doric columns and a three-stage square tower. The congregational society dates to 1747; the building hosted town meetings into the 20th century for its seating capacity. Listed on the National Register of Historic Places, December 10, 1993. An active congregation — treat as an exterior stop unless you contact the church.",
+      "status": "open",
+      "photos": [
+        {
+          "src": "/photos/ct/marlborough/marlborough-congregational-church.jpg",
+          "thumb": "/photos/ct/marlborough/marlborough-congregational-church_thumb.jpg",
+          "title": "Marlborough Congregational Church",
+          "description": "The 1842 Marlborough Congregational Church, a Greek Revival meetinghouse.",
+          "author": "Grondemar",
+          "license": "CC BY-SA 3.0",
+          "source_url": "https://commons.wikimedia.org/wiki/File:Marlborough_Congregational_Church_Marlborough_CT.JPG"
+        }
+      ]
+    },
+    {
+      "slug": "marlborough-town-nature-trails",
+      "name": "Marlborough Town Nature Trails",
+      "kind": "park",
+      "town": "Marlborough",
+      "state": "Connecticut",
+      "county": "Hartford County",
+      "address": "Marlborough, CT 06447",
+      "official_url": "https://www.marlboroughct.net/services/nature_trails.php",
+      "summary": "Three town-maintained walking areas: the Blackledge River Greenway Trail, the Ogden Lord Road Open Space Trail and the Elementary School Trail, which carries interpretive \"Panther Path\" signage. Overseen by the town's Nature Trails and Sidewalk Commission; downloadable trail maps are on the town's website.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "marlborough-tavern",
+      "name": "Marlborough Tavern",
+      "kind": "restaurant",
+      "town": "Marlborough",
+      "state": "Connecticut",
+      "county": "Hartford County",
+      "address": "3 East Hampton Road, Marlborough, CT 06447",
+      "official_url": "https://www.marlboroughtavernct.com/",
+      "summary": "American modern cuisine — burgers, mac and cheese, tavern wings and a cocktail program — in a building on the National Register of Historic Places as the Marlborough Tavern-Col. Elisha Buell House, built around 1760. Closed Mon-Tue; Wed-Fri 4-9 p.m., Sat noon-10 p.m., Sun noon-8 p.m. Phone (860) 365-5942.",
+      "status": "open",
+      "photos": [
+        {
+          "src": "/photos/ct/marlborough/marlborough-tavern.jpg",
+          "thumb": "/photos/ct/marlborough/marlborough-tavern_thumb.jpg",
+          "title": "Marlborough Tavern",
+          "description": "The historic building at the Marlborough crossroads, now home to Marlborough Tavern.",
+          "author": "Grondemar",
+          "license": "CC BY-SA 3.0",
+          "source_url": "https://commons.wikimedia.org/wiki/File:Marlborough_Tavern_Marlborough_CT.JPG"
+        }
+      ]
+    },
+    {
+      "slug": "zinas-cucina",
+      "name": "Zina's Cucina",
+      "kind": "restaurant",
+      "town": "Marlborough",
+      "state": "Connecticut",
+      "county": "Hartford County",
+      "address": "17 North Main Street, Marlborough, CT 06447",
+      "official_url": "https://www.zinascucina.com/",
+      "summary": "A Sicilian-leaning Italian kitchen known for handmade pastas and fresh salads, with dine-in, patio seating, takeout, delivery and catering. Hours: Sun 3-8 p.m. (dinner only), Mon-Wed 11:30 a.m.-8 p.m., Thu-Sat 11:30 a.m.-9 p.m. Phone (860) 365-5940.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "marlborough-pizza-restaurant",
+      "name": "Marlborough Pizza & Restaurant",
+      "kind": "restaurant",
+      "town": "Marlborough",
+      "state": "Connecticut",
+      "county": "Hartford County",
+      "address": "7 Independence Drive, Marlborough, CT 06447",
+      "official_url": "https://www.marlboroughpizza.com/",
+      "summary": "A neighborhood pizzeria in the Four Corners area, taking pickup and delivery orders online. Approximate hours 10:30 a.m.-9:00 p.m.; call to confirm. Phone (860) 615-3572.",
+      "status": "open",
+      "photos": []
+    }
+  ],
+  "entries": [
+    {
+      "kind": "sight",
+      "name": "Marlborough Arts Center",
+      "place_slug": "marlborough-arts-center",
+      "note": "A regional arts center with a live-music cafe series."
+    },
+    {
+      "kind": "walk",
+      "name": "Blish Memorial Park at Lake Terramuggus",
+      "place_slug": "blish-memorial-park-lake-terramuggus",
+      "note": "The town's lakefront park, with kayak rentals and a summer concert series."
+    },
+    {
+      "kind": "sight",
+      "name": "Marlborough Congregational Church",
+      "place_slug": "marlborough-congregational-church",
+      "note": "An 1842 Greek Revival meetinghouse on the National Register."
+    },
+    {
+      "kind": "walk",
+      "name": "Marlborough Town Nature Trails",
+      "place_slug": "marlborough-town-nature-trails",
+      "note": "Three town-maintained walking trails."
+    },
+    {
+      "kind": "food",
+      "name": "Marlborough Tavern",
+      "place_slug": "marlborough-tavern",
+      "note": "American cuisine in a National Register-listed c.1760 tavern building."
+    },
+    {
+      "kind": "food",
+      "name": "Zina's Cucina",
+      "place_slug": "zinas-cucina",
+      "note": "Sicilian-leaning Italian, with a patio."
+    },
+    {
+      "kind": "food",
+      "name": "Marlborough Pizza & Restaurant",
+      "place_slug": "marlborough-pizza-restaurant",
+      "note": "A neighborhood pizzeria in the Four Corners area."
+    }
+  ],
+  "links": [
+    {
+      "target": "guide:glastonbury-ct-travel-guide",
+      "kind": "nearby",
+      "note": "Marlborough was incorporated in 1803 from parts of Glastonbury, Colchester and Hebron, and borders Glastonbury."
+    },
+    {
+      "target": "guide:glastonbury-ct-travel-guide",
+      "kind": "shared-history",
+      "note": "Marlborough was formed in 1803 from portions of Glastonbury, Colchester and Hebron."
+    },
+    {
+      "target": "guide:hebron-ct-travel-guide",
+      "kind": "nearby",
+      "note": "Marlborough borders Hebron, one of its three parent towns."
+    },
+    {
+      "target": "guide:colchester-ct-travel-guide",
+      "kind": "nearby",
+      "note": "Marlborough borders Colchester, one of its three parent towns."
+    },
+    {
+      "target": "guide:east-hampton-ct-travel-guide",
+      "kind": "nearby",
+      "note": "Marlborough borders East Hampton to the south."
+    }
+  ]
+}

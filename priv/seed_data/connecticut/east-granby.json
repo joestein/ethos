@@ -1,0 +1,311 @@
+{
+  "guide": {
+    "slug": "east-granby-ct-travel-guide",
+    "title": "East Granby, Connecticut: A Copper Mine Turned Colonial Prison",
+    "destination": "East Granby, Connecticut",
+    "state": "Connecticut",
+    "county": "Hartford County",
+    "intro": "East Granby was first settled by Europeans in 1664 as part of Simsbury, later becoming the Turkey Hills Ecclesiastical Society in 1786, before the town incorporated independently in 1858. In 1705, 64 Simsbury residents formed what is described as the first chartered copper mining company in America on the land that became Old New-Gate; when the mine played out, Connecticut converted it into a prison in 1773, and John Hinson, sentenced to ten years for burglary, became its first prisoner that December — he escaped 18 days later. During the Revolutionary War the underground prison held British Loyalists among more than 100 prisoners working as shoemakers, coopers and blacksmiths. The state closed New-Gate in 1827, moving inmates to the new Wethersfield State Prison; the National Park Service designated the site a National Historic Landmark in 1973. Bradley International Airport's property extends into East Granby from neighboring Windsor Locks.",
+    "sections": [
+      {
+        "heading": "New-Gate's caverns and a traprock ridge",
+        "body": "Old New-Gate Prison & Copper Mine's visitor center, outdoor prison yard and historic ruins sit above the abandoned copper mine, open for guided tours down into the caverns; a rotating prison arts program and the Connecticut Hall of Change honor formerly incarcerated people. A $750,000 federal grant is funding the rehabilitation of Viets Tavern, the former warden's residence, toward eventual public use, and a Save America's Treasures grant is stabilizing the 1824 four-story cell block — neither building is yet open to visitors. Above it rises Peak Mountain, a roughly 730-foot traprock summit of the Metacomet Ridge with cliffs about 200 feet high; the 51-mile Metacomet Trail crosses its top, with views down onto Old New-Gate and out to Congamond Lake and the Salmon Brook Valley."
+      },
+      {
+        "heading": "Getting there",
+        "body": "East Granby is a car-first Farmington Valley town reached on Connecticut Route 20, the main east-west corridor linking Bradley International Airport and Windsor Locks to the east with Granby to the west, plus Routes 187 and 189. Interstate 91 lies just east of town, improving access between the Bradley Airport area and both Hartford and Springfield. There is no train station in East Granby itself; rail travelers use the CTrail Hartford Line and Amtrak stop in adjacent Windsor Locks, whose nine-station line runs Springfield Union, Windsor Locks, Windsor, Hartford Union, Berlin, Meriden, Wallingford, New Haven State Street and New Haven Union."
+      },
+      {
+        "heading": "Vineyard tables and a taproom that changed hands",
+        "body": "Brignole Vineyards pours 38 wine varieties in its tasting room, with ticketed wine dinners, pasta-making classes and goat yoga alongside seasonal live music and food trucks. Luppoleto Brewing opened its second taproom in East Granby in June 2026, in the Kripes Road space vacated by Almost Famous Brewing, running a 15-barrel brewhouse with 28 draft lines. For a sit-down meal, J & G Restaurant & Lounge has been, in its own words, \"a go-to place for locals for over 40 years,\" and Frank's Place serves slow-smoked barbecue in the former Kane's Market building on South Main Street."
+      }
+    ],
+    "faq": [
+      {
+        "question": "How do I get to East Granby?",
+        "answer": "By car — Route 20 is the main east-west corridor, connecting Windsor Locks and Bradley International Airport to Granby. There is no train station in East Granby; the nearest CTrail Hartford Line and Amtrak stop is in Windsor Locks."
+      },
+      {
+        "question": "Is there a train to East Granby?",
+        "answer": "No. The nearest station is Windsor Locks on the CTrail Hartford Line, also served by Amtrak."
+      },
+      {
+        "question": "What is Old New-Gate Prison & Copper Mine?",
+        "answer": "A former colonial copper mine converted to a state prison in 1773, now a National Historic Landmark with guided tours into the mine caverns. Open seasonally, roughly May-October, Friday-Monday 10 a.m.-4:30 p.m.; admission $10 adults, $8 seniors, $5 youth. Phone (860) 653-3563."
+      },
+      {
+        "question": "Can I hike Peak Mountain?",
+        "answer": "Yes — the Metacomet Trail crosses its roughly 730-foot summit, with cliffs looking down on Old New-Gate Prison and out to Congamond Lake and the Salmon Brook Valley. Hiking, bird watching and snowshoeing are permitted."
+      },
+      {
+        "question": "Is there a hotel in East Granby?",
+        "answer": "No hotel, inn or B&B could be verified inside East Granby. The nearest chain hotels cluster around Bradley International Airport in neighboring Windsor Locks."
+      }
+    ],
+    "photos": [
+      {
+        "src": "/photos/ct/east-granby/old-newgate-prison-entrance.jpg",
+        "thumb": "/photos/ct/east-granby/old-newgate-prison-entrance_thumb.jpg",
+        "title": "Old New-Gate Prison, original entrance",
+        "description": "The original entrance and roofless women's prison building at Old New-Gate Prison, East Granby.",
+        "author": "Thedevildrivesme",
+        "license": "CC BY-SA 4.0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Old_Newgate_Prison_Original_Entrance,_East_Granby,_CT_October_9,_2024_03.jpg"
+      },
+      {
+        "src": "/photos/ct/east-granby/peak-mountain-newgate-view.jpg",
+        "thumb": "/photos/ct/east-granby/peak-mountain-newgate-view_thumb.jpg",
+        "title": "Old New-Gate Prison from Peak Mountain",
+        "description": "Old New-Gate Prison seen from the traprock ridge of Peak Mountain on the Metacomet Trail.",
+        "author": "Paul Gagnon",
+        "license": "CC BY 3.0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Peakedmountain_newgateview.jpg"
+      }
+    ]
+  },
+  "places": [
+    {
+      "slug": "old-new-gate-prison-copper-mine",
+      "name": "Old New-Gate Prison & Copper Mine",
+      "kind": "historic-site",
+      "town": "East Granby",
+      "state": "Connecticut",
+      "county": "Hartford County",
+      "address": "115 Newgate Road, East Granby, CT 06026",
+      "official_url": "https://portal.ct.gov/ECD-OldNewGate",
+      "summary": "The first chartered copper mine in early America (1705) and, from 1773, Connecticut's first state prison. A visitor center, outdoor prison yard, historic ruins and guided tours down into the abandoned mine, plus a rotating prison arts program and the Connecticut Hall of Change. Designated a National Historic Landmark in 1973. Open seasonally, roughly May-October, Fri-Mon 10 a.m.-4:30 p.m.; admission $10/$8/$5, free under 6 and active military. Phone (860) 653-3563.",
+      "status": "open",
+      "photos": [
+        {
+          "src": "/photos/ct/east-granby/old-newgate-prison-entrance.jpg",
+          "thumb": "/photos/ct/east-granby/old-newgate-prison-entrance_thumb.jpg",
+          "title": "Old New-Gate Prison, original entrance",
+          "description": "The original entrance and roofless women's prison building at Old New-Gate Prison, East Granby.",
+          "author": "Thedevildrivesme",
+          "license": "CC BY-SA 4.0",
+          "source_url": "https://commons.wikimedia.org/wiki/File:Old_Newgate_Prison_Original_Entrance,_East_Granby,_CT_October_9,_2024_03.jpg"
+        }
+      ]
+    },
+    {
+      "slug": "peak-mountain-metacomet-trail",
+      "name": "Peak Mountain (Metacomet Trail)",
+      "kind": "park",
+      "town": "East Granby",
+      "state": "Connecticut",
+      "county": "Hartford County",
+      "address": "East Granby, CT 06026",
+      "summary": "A roughly 730-foot traprock summit of the Metacomet Ridge, with cliffs about 200 feet high looking down on Old New-Gate Prison and out to Congamond Lake, the Salmon Brook Valley, the Barn Door Hills and Manitook Mountain. The 51-mile Metacomet Trail crosses the summit; hiking, bird watching and snowshoeing are permitted.",
+      "status": "open",
+      "photos": [
+        {
+          "src": "/photos/ct/east-granby/peak-mountain-newgate-view.jpg",
+          "thumb": "/photos/ct/east-granby/peak-mountain-newgate-view_thumb.jpg",
+          "title": "Old New-Gate Prison from Peak Mountain",
+          "description": "Old New-Gate Prison seen from the traprock ridge of Peak Mountain on the Metacomet Trail.",
+          "author": "Paul Gagnon",
+          "license": "CC BY 3.0",
+          "source_url": "https://commons.wikimedia.org/wiki/File:Peakedmountain_newgateview.jpg"
+        }
+      ]
+    },
+    {
+      "slug": "cowles-park",
+      "name": "Cowles Park",
+      "kind": "park",
+      "town": "East Granby",
+      "state": "Connecticut",
+      "county": "Hartford County",
+      "address": "250 South Main Street, East Granby, CT 06026",
+      "official_url": "https://eastgranbyct.org/parks-recreation-department/",
+      "summary": "Over 15 miles of wooded trails, some connecting to the Metacomet Trail, known regionally for its NEMBA-built mountain biking trails. Parks & Recreation Department, (860) 653-7660.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "east-granby-farms-recreation-center",
+      "name": "East Granby Farms & Recreation Center",
+      "kind": "park",
+      "town": "East Granby",
+      "state": "Connecticut",
+      "county": "Hartford County",
+      "address": "79 North Main Street, East Granby, CT 06026",
+      "official_url": "https://eastgranbyct.org/parks-recreation-department/",
+      "summary": "A 480-acre town property of open fields and maintained trails against the Metacomet Ridge, including the David K. Kilbon Recreation Center (\"The Barn\"), a rentable 2,400-square-foot facility. A new playscape opened May 2025.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "granbrook-park",
+      "name": "Granbrook Park",
+      "kind": "park",
+      "town": "East Granby",
+      "state": "Connecticut",
+      "county": "Hartford County",
+      "address": "10 Granbrook Park Road, East Granby, CT 06026",
+      "official_url": "https://eastgranbyct.org/parks-recreation-department/",
+      "summary": "A town park with a playground, picnic facilities including a rentable pavilion and outdoor grills, and recreational access to the federally designated Wild & Scenic Salmon Brook. Open dawn to dusk.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "brignole-vineyards",
+      "name": "Brignole Vineyards",
+      "kind": "attraction",
+      "town": "East Granby",
+      "state": "Connecticut",
+      "county": "Hartford County",
+      "address": "103 Hartford Avenue, East Granby, CT 06026",
+      "official_url": "https://www.brignolevineyards.com/",
+      "summary": "A vineyard and tasting room pouring 38 wine varieties alongside local beers, with seasonal live music and food trucks. Ticketed experiences include wine dinners, pasta making, paint-and-sip, charcuterie classes and goat yoga. Open Mon-Fri 1-7 p.m., Sat noon-7 p.m., Sun noon-6 p.m. Phone (860) 653-9463.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "j-and-g-restaurant-lounge",
+      "name": "J & G Restaurant & Lounge",
+      "kind": "restaurant",
+      "town": "East Granby",
+      "state": "Connecticut",
+      "county": "Hartford County",
+      "address": "35 South Main Street, East Granby, CT 06026",
+      "official_url": "http://www.jgrestaurant.com/",
+      "summary": "An Italian-American restaurant and lounge the owners describe as \"a go-to place for locals for over 40 years.\" Closed Mon; Tue-Thu 11 a.m.-9 p.m., Fri-Sat to 10 p.m., Sun to 9 p.m.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "the-grille-at-copper-hill",
+      "name": "The Grill at Copper Hill",
+      "kind": "restaurant",
+      "town": "East Granby",
+      "state": "Connecticut",
+      "county": "Hartford County",
+      "address": "20 Copper Hill Road, East Granby, CT 06026",
+      "official_url": "https://www.thegrilleatcopperhillct.com",
+      "summary": "A family-run casual American grill with 40-plus made-to-order items — hand-cut fries, burgers and wings — open year-round, seven days a week. Mon 3-9 p.m., Tue-Sat 11 a.m.-9 p.m., Sun 11 a.m.-6 p.m. Phone (860) 844-8280.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "luppoleto-east-granby",
+      "name": "Luppoleto Brewing — East Granby Taproom",
+      "kind": "brewery",
+      "town": "East Granby",
+      "state": "Connecticut",
+      "county": "Hartford County",
+      "address": "17 Kripes Road, East Granby, CT 06026",
+      "official_url": "https://luppoleto.com/east-granby/",
+      "summary": "Luppoleto's second taproom, opened June 2026 in the space vacated by Almost Famous Brewing, running a 15-barrel brewhouse with 28 draft lines and rotating food trucks. Closed Mon-Tue; Wed-Thu 4-9 p.m., Fri 3-10 p.m., Sat 1-10 p.m., Sun 1-7 p.m.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "franks-place-east-granby",
+      "name": "Frank's Place",
+      "kind": "restaurant",
+      "town": "East Granby",
+      "state": "Connecticut",
+      "county": "Hartford County",
+      "address": "16 South Main Street, East Granby, CT 06026",
+      "official_url": "https://franksplaceeg.com/",
+      "summary": "A barbecue joint in the former Kane's Market building — slow-smoked brisket, pulled pork, BBQ platters and Sunday brunch, plus a food truck and catering. Open Mon-Sat 11 a.m.-8 p.m., Sun 10 a.m.-8 p.m. Phone (860) 651-6555.",
+      "status": "open",
+      "photos": []
+    }
+  ],
+  "entries": [
+    {
+      "kind": "sight",
+      "name": "Old New-Gate Prison & Copper Mine",
+      "place_slug": "old-new-gate-prison-copper-mine",
+      "note": "A National Historic Landmark colonial copper mine turned prison."
+    },
+    {
+      "kind": "walk",
+      "name": "Peak Mountain (Metacomet Trail)",
+      "place_slug": "peak-mountain-metacomet-trail",
+      "note": "Traprock cliffs looking down on Old New-Gate Prison."
+    },
+    {
+      "kind": "walk",
+      "name": "Cowles Park",
+      "place_slug": "cowles-park",
+      "note": "15-plus miles of wooded and mountain-biking trails."
+    },
+    {
+      "kind": "sight",
+      "name": "East Granby Farms & Recreation Center",
+      "place_slug": "east-granby-farms-recreation-center",
+      "note": "480 acres of open fields and trails against the Metacomet Ridge."
+    },
+    {
+      "kind": "sight",
+      "name": "Granbrook Park",
+      "place_slug": "granbrook-park",
+      "note": "A playground and picnic park on the Wild & Scenic Salmon Brook."
+    },
+    {
+      "kind": "sight",
+      "name": "Brignole Vineyards",
+      "place_slug": "brignole-vineyards",
+      "note": "A tasting room pouring 38 wine varieties."
+    },
+    {
+      "kind": "food",
+      "name": "J & G Restaurant & Lounge",
+      "place_slug": "j-and-g-restaurant-lounge",
+      "note": "A local Italian-American fixture for over 40 years."
+    },
+    {
+      "kind": "food",
+      "name": "The Grill at Copper Hill",
+      "place_slug": "the-grille-at-copper-hill",
+      "note": "A family-run American grill open year-round."
+    },
+    {
+      "kind": "food",
+      "name": "Luppoleto Brewing — East Granby Taproom",
+      "place_slug": "luppoleto-east-granby",
+      "note": "A 15-barrel brewhouse that opened in 2026."
+    },
+    {
+      "kind": "food",
+      "name": "Frank's Place",
+      "place_slug": "franks-place-east-granby",
+      "note": "Slow-smoked barbecue on South Main Street."
+    }
+  ],
+  "links": [
+    {
+      "target": "guide:granby-ct-travel-guide",
+      "kind": "nearby",
+      "note": "East Granby borders Granby to the west along Route 20; both were once part of Simsbury."
+    },
+    {
+      "target": "guide:suffield-ct-travel-guide",
+      "kind": "nearby",
+      "note": "East Granby borders Suffield to the north."
+    },
+    {
+      "target": "guide:windsor-locks-ct-travel-guide",
+      "kind": "nearby",
+      "note": "East Granby borders Windsor Locks; Bradley International Airport's property extends into East Granby from there."
+    },
+    {
+      "target": "guide:windsor-ct-travel-guide",
+      "kind": "nearby",
+      "note": "East Granby borders Windsor to the south."
+    },
+    {
+      "target": "guide:simsbury-ct-travel-guide",
+      "kind": "nearby",
+      "note": "East Granby borders Simsbury; both were settled as part of Simsbury before East Granby's 1858 incorporation."
+    },
+    {
+      "target": "guide:bloomfield-ct-travel-guide",
+      "kind": "same-region",
+      "note": "Bloomfield sits just south of East Granby in the Farmington Valley."
+    }
+  ]
+}

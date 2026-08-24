@@ -1,0 +1,163 @@
+{
+  "guide": {
+    "slug": "east-hartford-ct-travel-guide",
+    "title": "East Hartford, Connecticut: Across the River from the Capital",
+    "destination": "East Hartford, Connecticut",
+    "state": "Connecticut",
+    "county": "Hartford County",
+    "tier": "town-page",
+    "intro": "East Hartford was part of Hartford until it was incorporated as a separate town in October 1783, taking a purely geographic name for sitting on the east bank of the Connecticut River directly across from the capital. The land was home to the Podunk people, governed by sachems Waginacut and Arramamet, and in 1659 Thomas Burnham purchased the tract now covered by East Hartford and South Windsor from Tantinomo, chief sachem of the Podunk. French troops under the Comte de Rochambeau camped in East Hartford twice, before and after the 1781 victory at Yorktown. Agriculture, especially tobacco, ran the local economy until 1929, when Frederick Rentschler moved Pratt & Whitney production here from Hartford; the aircraft-engine maker remains the town's largest employer today.",
+    "sections": [
+      {
+        "heading": "Getting there",
+        "body": "East Hartford sits at the crossroads of I-84, Route 2 and Route 15/US 5 immediately across the Connecticut River from Hartford; I-84 Exit 58 (Roberts Street/Silver Lane) is the main gateway, with Route 2 Exit 5A (Main Street) from the south and Route 15's Charter Oak Bridge carrying US 5 across the river. Interstate 291 does not pass through East Hartford — it runs through Windsor, South Windsor and Manchester — though its US 5 interchange provides access toward town. There is no rail station in East Hartford; the nearest is Hartford Union Station, about two miles west, served by the CTrail Hartford Line and Amtrak's Northeast Regional, Valley Flyer and Vermonter."
+      },
+      {
+        "heading": "A stadium built on a former airfield",
+        "body": "Pratt & Whitney Stadium at Rentschler Field opened August 30, 2003 on the site of the company's former airfield, and is named for Frederick Rentschler, who founded Pratt & Whitney in 1925; it hosts UConn Huskies football, soccer, lacrosse and concerts. Riverfront Recapture's Great River Park runs free weekly programs — Friday Tai Chi, Monday HIIT, Wednesday yoga and Thursday RiverZumba — on the Connecticut River facing the Hartford skyline. Augie & Ray's Drive-In, founded in 1946 by two East Hartford police officers and still run by the founder's great-grandsons, is the town's classic stop for footlong hot dogs and milkshakes."
+      }
+    ],
+    "faq": [
+      {
+        "question": "How do I get to East Hartford?",
+        "answer": "By car via I-84, Route 2 or Route 15's Charter Oak Bridge across the Connecticut River. There is no rail station in East Hartford; the nearest is Hartford Union Station, about two miles west, served by the CTrail Hartford Line and Amtrak."
+      },
+      {
+        "question": "Is there a train to East Hartford?",
+        "answer": "No. The CTrail Hartford Line bypasses the town entirely; the nearest stop is Hartford Union Station across the river."
+      },
+      {
+        "question": "What is Pratt & Whitney Stadium at Rentschler Field?",
+        "answer": "UConn Huskies football's home stadium, opened in 2003 on the site of Pratt & Whitney's former airfield, also hosting soccer, lacrosse and concerts."
+      }
+    ],
+    "photos": [
+      {
+        "src": "/photos/ct/east-hartford/pratt-whitney-stadium-rentschler-field.jpg",
+        "thumb": "/photos/ct/east-hartford/pratt-whitney-stadium-rentschler-field_thumb.jpg",
+        "title": "Pratt & Whitney Stadium at Rentschler Field",
+        "description": "Pratt & Whitney Stadium at Rentschler Field in East Hartford, home of UConn Huskies football.",
+        "author": "Quintin Soloviev",
+        "license": "CC BY 4.0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Pratt_%26_Whitney_Stadium_at_Rentschler_Field_(UCONN).jpg"
+      }
+    ]
+  },
+  "places": [
+    {
+      "slug": "great-river-park-east-hartford",
+      "name": "Great River Park",
+      "kind": "park",
+      "town": "East Hartford",
+      "state": "Connecticut",
+      "county": "Hartford County",
+      "address": "301 East River Drive, East Hartford, CT 06108",
+      "official_url": "https://riverfront.org/parks/great-river-park/",
+      "summary": "A Riverfront Recapture park on the Connecticut River facing the Hartford skyline, open daily sunrise to sunset with walking, biking, birding, rowing and paddling access. Free weekly programs include Friday Tai Chi, Monday HIIT, Wednesday yoga and Thursday RiverZumba.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "pratt-whitney-stadium-rentschler-field",
+      "name": "Pratt & Whitney Stadium at Rentschler Field",
+      "kind": "attraction",
+      "town": "East Hartford",
+      "state": "Connecticut",
+      "county": "Hartford County",
+      "address": "615 Silver Lane, East Hartford, CT 06118",
+      "official_url": "https://rentschlerfield.com/",
+      "summary": "Opened August 30, 2003 on the site of Pratt & Whitney's former Rentschler Field airport, named for company founder Frederick Rentschler. Home to UConn Huskies football, plus soccer, lacrosse, rugby and stadium concerts.",
+      "status": "open",
+      "photos": [
+        {
+          "src": "/photos/ct/east-hartford/pratt-whitney-stadium-rentschler-field.jpg",
+          "thumb": "/photos/ct/east-hartford/pratt-whitney-stadium-rentschler-field_thumb.jpg",
+          "title": "Pratt & Whitney Stadium at Rentschler Field",
+          "description": "Pratt & Whitney Stadium at Rentschler Field in East Hartford, home of UConn Huskies football.",
+          "author": "Quintin Soloviev",
+          "license": "CC BY 4.0",
+          "source_url": "https://commons.wikimedia.org/wiki/File:Pratt_%26_Whitney_Stadium_at_Rentschler_Field_(UCONN).jpg"
+        }
+      ]
+    },
+    {
+      "slug": "augie-and-rays-drive-in",
+      "name": "Augie & Ray's Drive-In",
+      "kind": "restaurant",
+      "town": "East Hartford",
+      "state": "Connecticut",
+      "county": "Hartford County",
+      "address": "314 Main Street, East Hartford, CT 06118",
+      "official_url": "https://www.augieandrays.com/",
+      "summary": "Founded in 1946 by two East Hartford police officers and still run by founder Ray's great-grandsons. Footlong hot dogs, burgers, fried seafood and milkshakes, with a house chili known as \"The Sauce.\" Hours Mon/Tue/Sat 5:45 a.m.-3 p.m., Wed-Fri 5:45 a.m.-6 p.m., closed Sunday. Phone (860) 568-3770.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "carmines-bar-grill-stage",
+      "name": "Carmine's Bar • Grill • Stage",
+      "kind": "restaurant",
+      "town": "East Hartford",
+      "state": "Connecticut",
+      "county": "Hartford County",
+      "address": "389 Main Street, East Hartford, CT 06118",
+      "official_url": "https://carmines389.com/",
+      "summary": "Sicilian-inspired Italian cooking — calamari, chicken milanese, fettuccine carbonara — paired with a live-music stage for local performers and open-mic nights. Open Mon-Thu 3 p.m.-1 a.m., Fri to 2 a.m., Sat 4:30 p.m.-2 a.m., closed Sunday, with happy hour Tue-Fri 3-7 p.m. and all day Monday. Phone (860) 206-4580.",
+      "status": "open",
+      "photos": []
+    }
+  ],
+  "entries": [
+    {
+      "kind": "sight",
+      "name": "Great River Park",
+      "place_slug": "great-river-park-east-hartford",
+      "note": "A Riverfront Recapture park facing the Hartford skyline."
+    },
+    {
+      "kind": "sight",
+      "name": "Pratt & Whitney Stadium at Rentschler Field",
+      "place_slug": "pratt-whitney-stadium-rentschler-field",
+      "note": "UConn Huskies football's home stadium, opened 2003."
+    },
+    {
+      "kind": "food",
+      "name": "Augie & Ray's Drive-In",
+      "place_slug": "augie-and-rays-drive-in",
+      "note": "An East Hartford institution since 1946."
+    },
+    {
+      "kind": "food",
+      "name": "Carmine's Bar • Grill • Stage",
+      "place_slug": "carmines-bar-grill-stage",
+      "note": "Sicilian-inspired Italian cooking with a live-music stage."
+    }
+  ],
+  "links": [
+    {
+      "target": "guide:hartford-ct-travel-guide",
+      "kind": "nearby",
+      "note": "East Hartford was part of Hartford until it incorporated separately in October 1783, and borders it across the Connecticut River."
+    },
+    {
+      "target": "guide:manchester-ct-travel-guide",
+      "kind": "nearby",
+      "note": "East Hartford borders Manchester; Wickham Park's grounds cross the town line between them."
+    },
+    {
+      "target": "guide:south-windsor-ct-travel-guide",
+      "kind": "nearby",
+      "note": "East Hartford borders South Windsor; Thomas Burnham's 1659 land purchase from the Podunk covered both towns."
+    },
+    {
+      "target": "guide:south-windsor-ct-travel-guide",
+      "kind": "shared-history",
+      "note": "In 1659 Thomas Burnham purchased the tract now covered by East Hartford and South Windsor from Tantinomo, chief sachem of the Podunk."
+    },
+    {
+      "target": "guide:glastonbury-ct-travel-guide",
+      "kind": "same-region",
+      "note": "Glastonbury sits south of East Hartford along the Connecticut River."
+    }
+  ]
+}

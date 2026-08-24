@@ -1,0 +1,289 @@
+{
+  "guide": {
+    "slug": "plainville-ct-travel-guide",
+    "title": "Plainville, Connecticut: Connecticut's Oldest Airport and a Flying Governor",
+    "destination": "Plainville, Connecticut",
+    "state": "Connecticut",
+    "county": "Hartford County",
+    "intro": "Known in early settlement as \"the Great Plain of Farmington,\" Plainville sits between Bradley Mountain and Pinnacle Rock on the Metacomet Ridge; Europeans first inhabited the area around 1650, and it remained part of Farmington from the 1660s until Plainville separated in 1869 as the town center grew and the New York, New Haven and Hartford and Hartford, Providence and Fishkill railroads arrived. The Farmington Canal, which opened through town in 1828 and was completed to Northampton by 1835, brought warehouses, factories and taverns; when rail replaced canal traffic, Plainville's towpaths became railways. Robertson Field, founded in 1911, is the oldest airport in Connecticut and was the home field of Governor John H. Trumbull, who grew up in Plainville, co-founded Trumbull Electric there in 1899, and earned the nickname \"the Flying Governor\" after getting his pilot's license in 1926 at age 53. The Town of Plainville has owned the airport since 2009.",
+    "sections": [
+      {
+        "heading": "Balloons, an axe-and-plow museum, and a Civil War monument",
+        "body": "Plainville's hot air balloon festival was established in 1985 to mark the local fire department's centennial and has drawn as many as 20,000 people to Norton Park; it is one of the last such festivals still held in the region. Veterans Memorial Park, established in 1945 at the corner of Maple and Whiting Streets, holds an early-1900s 22-foot granite Civil War standard-bearer statue first proposed in 1872 and moved from New Haven Railroad property, alongside monuments for both World Wars, Korea and Vietnam, and Desert Storm. The Plainville Historic Center covers the town's industrial, aviation and family history, including a private pilot's license issued in 1930."
+      },
+      {
+        "heading": "Getting there",
+        "body": "Plainville is a drive-to town about ten miles southwest of Hartford: take I-84 to Exit 46 (formerly Exit 32) for Route 10/Queen Street, or Exit 48 (formerly Exit 33) for the Route 72 freeway, which runs west from Route 9 in New Britain and ends at Route 372 in Plainville, continuing as the E. Bartlett Barnes Highway through Bristol. There is no passenger rail station in town — the two rail lines crossing Plainville carry freight only — so the nearest CTrail Hartford Line stop is Berlin. General-aviation pilots can land at town-owned Robertson Field (FAA identifier 4B8)."
+      }
+    ],
+    "faq": [
+      {
+        "question": "How do I get to Plainville?",
+        "answer": "By car — I-84 Exit 46 reaches Route 10/Queen Street, and Exit 48 reaches the Route 72 freeway into town. There is no passenger rail station in Plainville; the nearest CTrail Hartford Line stop is Berlin."
+      },
+      {
+        "question": "Is there a train to Plainville?",
+        "answer": "No. The two rail lines through Plainville carry freight only. The nearest CTrail Hartford Line station is Berlin."
+      },
+      {
+        "question": "What is Robertson Field?",
+        "answer": "Connecticut's oldest airport, founded in 1911 and town-owned since 2009, home field of \"Flying Governor\" John H. Trumbull. It operates today as a public-use general aviation, charter and flight-training airport."
+      },
+      {
+        "question": "What is the Plainville hot air balloon festival?",
+        "answer": "An annual festival at Norton Park, established in 1985 to mark the fire department's centennial, drawing up to 20,000 people. Confirm current-year dates with the Plainville Fire Company before planning a trip."
+      },
+      {
+        "question": "Is there a hotel in Plainville?",
+        "answer": "A Fairfield Inn & Suites by Marriott is mapped at 400 New Britain Avenue near J. Timothy's Taverne; confirm rates and availability directly before booking."
+      }
+    ],
+    "photos": [
+      {
+        "src": "/photos/ct/plainville/pinnacle-rock.jpg",
+        "thumb": "/photos/ct/plainville/pinnacle-rock_thumb.jpg",
+        "title": "Pinnacle Rock",
+        "description": "Pinnacle Rock on the Metacomet Ridge, straddling Plainville and Farmington.",
+        "author": "Ragesoss",
+        "license": "CC BY-SA 3.0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Pinnacle_Rock,_with_Rattlesnake_Mountain_in_the_distance.jpg"
+      },
+      {
+        "src": "/photos/ct/plainville/robertson-airport-aerial.jpg",
+        "thumb": "/photos/ct/plainville/robertson-airport-aerial_thumb.jpg",
+        "title": "Robertson Airport, aerial view",
+        "description": "An aerial view of Robertson Airport, Connecticut's oldest airport, in Plainville.",
+        "author": "AirportExpert",
+        "license": "CC0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Robertson_Airport_(2026).jpg"
+      },
+      {
+        "src": "/photos/ct/plainville/downtown-plainville.jpg",
+        "thumb": "/photos/ct/plainville/downtown-plainville_thumb.jpg",
+        "title": "Downtown Plainville",
+        "description": "A downtown street scene near East Main Street, Plainville.",
+        "author": "Kenneth C. Zirkel",
+        "license": "CC BY-SA 4.0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Downtown_Plainville,_Connecticut.jpg"
+      }
+    ]
+  },
+  "places": [
+    {
+      "slug": "plainville-historic-center",
+      "name": "Plainville Historic Center",
+      "kind": "museum",
+      "town": "Plainville",
+      "state": "Connecticut",
+      "county": "Hartford County",
+      "address": "29 Pierce Street, Plainville, CT 06062",
+      "official_url": "https://plainvillehistoricalsociety.com/",
+      "summary": "Exhibits on the town's industrial heritage, transportation history and early aviation, including a private pilot's license issued in 1930. Open Mondays and Wednesdays 10 a.m.-1 p.m., other times by appointment. Phone (860) 747-6577.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "pinnacle-rock-metacomet-trail",
+      "name": "Pinnacle Rock and the Metacomet Trail",
+      "kind": "park",
+      "town": "Plainville",
+      "state": "Connecticut",
+      "county": "Hartford County",
+      "address": "Pinnacle Rock, Metacomet Ridge on the Plainville/Farmington town line, Plainville, CT",
+      "summary": "A 600-foot basalt traprock summit formed roughly 200 million years ago, straddling Farmington and Plainville about ten miles southwest of Hartford. An important raptor migration path with rare cliff-and-ravine plant communities; the blue-blazed Metacomet Trail crosses the peak.",
+      "status": "open",
+      "photos": [
+        {
+          "src": "/photos/ct/plainville/pinnacle-rock.jpg",
+          "thumb": "/photos/ct/plainville/pinnacle-rock_thumb.jpg",
+          "title": "Pinnacle Rock",
+          "description": "Pinnacle Rock on the Metacomet Ridge, straddling Plainville and Farmington.",
+          "author": "Ragesoss",
+          "license": "CC BY-SA 3.0",
+          "source_url": "https://commons.wikimedia.org/wiki/File:Pinnacle_Rock,_with_Rattlesnake_Mountain_in_the_distance.jpg"
+        }
+      ]
+    },
+    {
+      "slug": "norton-park-plainville",
+      "name": "Norton Park",
+      "kind": "park",
+      "town": "Plainville",
+      "state": "Connecticut",
+      "county": "Hartford County",
+      "address": "Plainville, CT 06062",
+      "summary": "Plainville's signature municipal park and home of the town's hot air balloon festival, established in 1985 to mark the fire department's centennial and drawing as many as 20,000 people annually.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "farmington-canal-heritage-trail-plainville",
+      "name": "Farmington Canal Heritage Trail",
+      "kind": "park",
+      "town": "Plainville",
+      "state": "Connecticut",
+      "county": "Hartford County",
+      "address": "Northwest Drive, Plainville, CT 06062",
+      "official_url": "https://www.fchtrail.org/",
+      "summary": "A paved rail-trail following the bed of the Farmington Canal, which opened in 1828 and was completed to Northampton by 1835, and the New Haven and Northampton Railroad, built 1847. Plainville's Northwest Drive trailhead anchors the continuous northern section running toward the Massachusetts border in Suffield; check the trail association's current maps, as gaps have continued to close.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "robertson-field",
+      "name": "Robertson Field",
+      "kind": "historic-site",
+      "town": "Plainville",
+      "state": "Connecticut",
+      "county": "Hartford County",
+      "address": "Robertson Field, Plainville, CT 06062 (FAA identifier 4B8)",
+      "summary": "Founded in 1911, Robertson Field is the oldest airport in Connecticut and was the home field of Governor John H. Trumbull, the \"Flying Governor.\" Town-owned since December 2009, it operates as a public-use general aviation, charter and flight-training airport.",
+      "status": "open",
+      "photos": [
+        {
+          "src": "/photos/ct/plainville/robertson-airport-aerial.jpg",
+          "thumb": "/photos/ct/plainville/robertson-airport-aerial_thumb.jpg",
+          "title": "Robertson Airport, aerial view",
+          "description": "An aerial view of Robertson Airport, Connecticut's oldest airport, in Plainville.",
+          "author": "AirportExpert",
+          "license": "CC0",
+          "source_url": "https://commons.wikimedia.org/wiki/File:Robertson_Airport_(2026).jpg"
+        }
+      ]
+    },
+    {
+      "slug": "veterans-memorial-park-plainville",
+      "name": "Veterans Memorial Park",
+      "kind": "historic-site",
+      "town": "Plainville",
+      "state": "Connecticut",
+      "county": "Hartford County",
+      "address": "Corner of Maple and Whiting Streets, Plainville, CT 06062",
+      "summary": "Established by the town in 1945, gathering four war memorials: an early-1900s 22-foot granite Civil War standard-bearer, first proposed in 1872 and moved from New Haven Railroad property; an 8-ton World Wars I & II monument dedicated 1943; a 12-foot Korea and Vietnam monument dedicated Memorial Day 1984; and a Desert Storm monument dedicated May 27, 1991.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "j-timothys-taverne",
+      "name": "J. Timothy's Taverne",
+      "kind": "restaurant",
+      "town": "Plainville",
+      "state": "Connecticut",
+      "county": "Hartford County",
+      "address": "143 New Britain Avenue, Plainville, CT 06062",
+      "official_url": "https://www.jtimothys.com/",
+      "summary": "Housed in a building dating to 1789, known statewide for its \"Dirt Wings.\" Closed Mondays; Tue-Thu 11:30 a.m.-10 p.m., Fri-Sat to 10:30 p.m., Sun to 9:30 p.m. Closed July 4 and July 6-16 for annual maintenance. Phone (860) 747-6813.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "transcend-beer-crafters",
+      "name": "Transcend Beer Crafters",
+      "kind": "brewery",
+      "town": "Plainville",
+      "state": "Connecticut",
+      "county": "Hartford County",
+      "address": "45 Northwest Drive, Unit A, Plainville, CT 06062",
+      "official_url": "https://www.transcendbeer.com/",
+      "summary": "An independent, small-batch, family-owned brewery taproom on Northwest Drive, the same street as the Farmington Canal Heritage Trail's Plainville trailhead. Hours Mon 3-9 p.m., closed Tue, Wed 3-9 p.m., Thu noon-10 p.m., Fri-Sat noon-11 p.m., Sun noon-8 p.m. Phone (860) 245-1821.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "hungry-bull-burger-co",
+      "name": "Hungry Bull Burger Co.",
+      "kind": "restaurant",
+      "town": "Plainville",
+      "state": "Connecticut",
+      "county": "Hartford County",
+      "address": "381 Farmington Avenue, Plainville, CT 06062",
+      "official_url": "https://www.hungrybullburger.com/",
+      "summary": "A gourmet burger and American comfort-food spot using a custom blend of chuck, brisket and short rib, plus handcrafted milkshakes. BYOB, with a liquor store next door. Open Mon-Sat 11 a.m.-8 p.m., closed Sunday. Phone (860) 351-5399.",
+      "status": "open",
+      "photos": []
+    }
+  ],
+  "entries": [
+    {
+      "kind": "sight",
+      "name": "Plainville Historic Center",
+      "place_slug": "plainville-historic-center",
+      "note": "Industrial, transportation and aviation history exhibits."
+    },
+    {
+      "kind": "walk",
+      "name": "Pinnacle Rock and the Metacomet Trail",
+      "place_slug": "pinnacle-rock-metacomet-trail",
+      "note": "A 600-foot traprock summit on the Plainville-Farmington line."
+    },
+    {
+      "kind": "sight",
+      "name": "Norton Park",
+      "place_slug": "norton-park-plainville",
+      "note": "Home of Plainville's hot air balloon festival since 1985."
+    },
+    {
+      "kind": "walk",
+      "name": "Farmington Canal Heritage Trail",
+      "place_slug": "farmington-canal-heritage-trail-plainville",
+      "note": "A paved rail-trail on the historic canal towpath."
+    },
+    {
+      "kind": "sight",
+      "name": "Robertson Field",
+      "place_slug": "robertson-field",
+      "note": "Connecticut's oldest airport, founded 1911."
+    },
+    {
+      "kind": "sight",
+      "name": "Veterans Memorial Park",
+      "place_slug": "veterans-memorial-park-plainville",
+      "note": "Four war memorials, established 1945."
+    },
+    {
+      "kind": "food",
+      "name": "J. Timothy's Taverne",
+      "place_slug": "j-timothys-taverne",
+      "note": "Statewide-known wings in an 18th-century building."
+    },
+    {
+      "kind": "food",
+      "name": "Transcend Beer Crafters",
+      "place_slug": "transcend-beer-crafters",
+      "note": "A family-owned small-batch brewery."
+    },
+    {
+      "kind": "food",
+      "name": "Hungry Bull Burger Co.",
+      "place_slug": "hungry-bull-burger-co",
+      "note": "A gourmet burger spot, BYOB."
+    }
+  ],
+  "links": [
+    {
+      "target": "guide:farmington-ct-travel-guide",
+      "kind": "nearby",
+      "note": "Plainville separated from Farmington in 1869 and borders it; Pinnacle Rock straddles the two towns."
+    },
+    {
+      "target": "guide:farmington-ct-travel-guide",
+      "kind": "shared-history",
+      "note": "Plainville was part of Farmington from the 1660s until it separated as its own town in 1869."
+    },
+    {
+      "target": "guide:bristol-ct-travel-guide",
+      "kind": "nearby",
+      "note": "Plainville borders Bristol; Route 72 connects the two."
+    },
+    {
+      "target": "guide:southington-ct-travel-guide",
+      "kind": "nearby",
+      "note": "Plainville borders Southington to the south."
+    },
+    {
+      "target": "guide:new-britain-ct-travel-guide",
+      "kind": "nearby",
+      "note": "Plainville borders New Britain, reached via the Route 72 freeway."
+    }
+  ]
+}

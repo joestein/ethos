@@ -1,0 +1,355 @@
+{
+  "guide": {
+    "slug": "manchester-ct-travel-guide",
+    "title": "Manchester, Connecticut: The Silk City's Mill Empire",
+    "destination": "Manchester, Connecticut",
+    "state": "Connecticut",
+    "county": "Hartford County",
+    "intro": "Manchester was settled in 1672 and incorporated as a town in 1823 from part of East Hartford; before taking its current name, honoring Manchester, England, the area was known as the Five Mile Track and later as Orford Parish. The Cheney family began cultivating mulberry trees in the 1830s and moved into silk production in 1838, becoming the first America-based silk company to successfully raise silkworms and master spinning and weaving, and practicing \"welfare capitalism\" by providing workers housing, utilities, churches and schools. Cheney Brothers Mills grew into the world's largest silk factory complex, earning Manchester its \"Silk City\" nickname, while the Hockanum River powered textile, paper, repeating-rifle and glass manufacturing; Pitkin Glassworks, operating from 1783 to 1830, was Connecticut's first successful glassworks. The Cheney Brothers Historic District, a National Historic Landmark since 1978, covers 175 acres with over 275 surviving mill buildings, workers' houses and family mansions.",
+    "sections": [
+      {
+        "heading": "A silk empire, preserved",
+        "body": "Sixteen mill buildings survive along Pine and Elm Streets, built mostly between 1880 and 1920, before the Cheney firm declined after synthetic fibers arrived in the 1920s and sold out in 1954. Cheney Hall, the family's social hall on Hartford Road within the historic district, bills itself the oldest operating theater in Connecticut and is home to the Little Theatre of Manchester. Nearby, the 1785 Cheney Homestead — the oldest of the family's surviving buildings — and a one-room Keeney Schoolhouse are run as a house museum by the Manchester Historical Society, which also keeps the Old Manchester Museum on Cedar Street with exhibits on the town's Podunk and dinosaur-fossil history."
+      },
+      {
+        "heading": "Getting there",
+        "body": "Manchester is a highway town about 10 miles east of Hartford, reached on I-84, I-291, I-384, US Routes 6 and 44 (the main east-west arterial) and Route 83 north-south. There is no passenger rail station in Manchester — \"no passenger service currently exists in town,\" per the town's own transportation record — so rail travelers use Hartford Union Station, about 10 miles away on the CTrail Hartford Line and Amtrak, and finish the trip by CTtransit bus. CTtransit routes 80, 82, 83, 84, 85, 88 and 121 connect Manchester directly to Hartford."
+      },
+      {
+        "heading": "Where to eat and stay",
+        "body": "Shady Glen, founded June 12, 1948 by John and Bernice Rieg, is a James Beard \"American Classic\" for its fried-cheese \"Bernice Original\" burger, whose cheese is cooked until it forms crisp upturned corners at its original East Middle Turnpike location. Silk City Coffee roasts its own beans on downtown Main Street, and Urban Lodge Brewing Co. runs its original taproom on Purnell Place. For a place to stay, both the Residence Inn by Marriott and the Fairfield Inn & Suites cluster near I-84 in the Buckland/Pavilions Drive retail district."
+      }
+    ],
+    "faq": [
+      {
+        "question": "How do I get to Manchester?",
+        "answer": "By car via I-84, I-291, I-384, US Routes 6 and 44, or Route 83. There is no rail station in Manchester; the nearest is Hartford Union Station, about 10 miles away, reachable onward by CTtransit bus routes 80, 82, 83, 84, 85, 88 or 121."
+      },
+      {
+        "question": "Is there a train to Manchester?",
+        "answer": "No. Manchester has no passenger rail service of its own. The nearest station is Hartford Union Station, served by Amtrak and the CTrail Hartford Line."
+      },
+      {
+        "question": "What is Cheney Hall?",
+        "answer": "The Cheney family's social hall on Hartford Road, within the National Historic Landmark Cheney Brothers Historic District, billed as the oldest operating theater in Connecticut and home to the Little Theatre of Manchester."
+      },
+      {
+        "question": "What is Wickham Park?",
+        "answer": "A 280-acre former private estate, opened to the public in 1960 from the will of industrialist Clarence Horace Wickham, with an Olmsted Associates-designed layout, gardens and trails; its western section reaches into East Hartford. Open April-October, daily 9:30 a.m. to dusk; per-vehicle admission $7 weekdays, $10 weekends. The park's address is 1329 Middle Turnpike West, Manchester."
+      },
+      {
+        "question": "Is there a hotel in Manchester?",
+        "answer": "Yes — the Residence Inn by Marriott Hartford Manchester and the Fairfield Inn & Suites both sit near I-84 in the Buckland Hills retail area."
+      }
+    ],
+    "photos": [
+      {
+        "src": "/photos/ct/manchester/cheney-hall.jpg",
+        "thumb": "/photos/ct/manchester/cheney-hall_thumb.jpg",
+        "title": "Cheney Hall",
+        "description": "Cheney Hall in Manchester, home of the Little Theatre of Manchester.",
+        "author": "Ltman",
+        "license": "CC BY-SA 4.0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Cheney_Hall.jpg"
+      },
+      {
+        "src": "/photos/ct/manchester/main-street-manchester.jpg",
+        "thumb": "/photos/ct/manchester/main-street-manchester_thumb.jpg",
+        "title": "Main Street, Manchester",
+        "description": "Main Street in Manchester's Main Street Historic District.",
+        "author": "John Phelan",
+        "license": "CC BY-SA 3.0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Main_Street,_Manchester_CT.jpg"
+      },
+      {
+        "src": "/photos/ct/manchester/center-memorial-park.jpg",
+        "thumb": "/photos/ct/manchester/center-memorial-park_thumb.jpg",
+        "title": "Center Memorial Park",
+        "description": "Center Memorial Park in downtown Manchester.",
+        "author": "Kenneth C. Zirkel",
+        "license": "CC BY-SA 4.0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Center_Memorial_Park,_Manchester,_Connecticut.jpg"
+      }
+    ]
+  },
+  "places": [
+    {
+      "slug": "cheney-hall",
+      "name": "Cheney Hall",
+      "kind": "theater",
+      "town": "Manchester",
+      "state": "Connecticut",
+      "county": "Hartford County",
+      "address": "177 Hartford Road, Manchester, CT 06040",
+      "official_url": "https://www.cheneyhall.org/",
+      "summary": "The Cheney family's social hall within the National Historic Landmark Cheney Brothers Historic District, billing itself the oldest operating theater in Connecticut and home to the Little Theatre of Manchester. Box office Tue-Fri 10 a.m.-4 p.m. Phone (860) 647-9824.",
+      "status": "open",
+      "photos": [
+        {
+          "src": "/photos/ct/manchester/cheney-hall.jpg",
+          "thumb": "/photos/ct/manchester/cheney-hall_thumb.jpg",
+          "title": "Cheney Hall",
+          "description": "Cheney Hall in Manchester, home of the Little Theatre of Manchester.",
+          "author": "Ltman",
+          "license": "CC BY-SA 4.0",
+          "source_url": "https://commons.wikimedia.org/wiki/File:Cheney_Hall.jpg"
+        }
+      ]
+    },
+    {
+      "slug": "lutz-childrens-museum",
+      "name": "Lutz Children's Museum",
+      "kind": "museum",
+      "town": "Manchester",
+      "state": "Connecticut",
+      "county": "Hartford County",
+      "address": "247 South Main Street, Manchester, CT 06040",
+      "official_url": "https://www.lutzmuseum.org/",
+      "summary": "A hands-on children's museum for roughly ages 2-10, with interactive exhibits, live animal ambassadors and an affiliated Oak Grove Nature Center. Open Tue-Fri 9 a.m.-4 p.m., Sat-Sun noon-4 p.m., closed Monday. Admission $14 per child (age 2+) and $14 per adult.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "cheney-homestead-keeney-schoolhouse",
+      "name": "Cheney Homestead & Keeney Schoolhouse",
+      "kind": "historic-site",
+      "town": "Manchester",
+      "state": "Connecticut",
+      "county": "Hartford County",
+      "address": "106 Hartford Road, Manchester, CT 06040",
+      "official_url": "https://manchesterhistory.org/",
+      "summary": "The 1785 Cheney Homestead is the oldest surviving Cheney family building, run as a historic house museum by the Manchester Historical Society, with a one-room Keeney Schoolhouse on the same site. Open by scheduled open house; check the Society's calendar. Phone (860) 647-9983.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "old-manchester-museum",
+      "name": "Old Manchester Museum",
+      "kind": "museum",
+      "town": "Manchester",
+      "state": "Connecticut",
+      "county": "Hartford County",
+      "address": "126 Cedar Street, Manchester, CT 06040",
+      "official_url": "https://manchesterhistory.org/",
+      "summary": "One of four Manchester Historical Society sites, with local-history collections including exhibits on Podunk history and dinosaur fossil finds in Buckland. Open by scheduled open house; check the Society's calendar.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "case-mountain-recreation-area",
+      "name": "Case Mountain Recreation Area",
+      "kind": "park",
+      "town": "Manchester",
+      "state": "Connecticut",
+      "county": "Hartford County",
+      "address": "Spring Street trailhead, Manchester, CT 06040",
+      "summary": "A 640-acre town-owned recreation area in southeastern Manchester on the Glastonbury line; Lookout Mountain reaches 744 feet and Case Mountain 735 feet, with summit views of downtown Manchester and Hartford. About 5 miles of the blue-blazed Shenipsit Trail run through the property, voted \"Best Ride in Connecticut\" by Mountain Bike Magazine readers. Trails maintained by the Manchester Conservation Commission and the Connecticut Forest and Park Association.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "wickham-park",
+      "name": "Wickham Park",
+      "kind": "park",
+      "town": "Manchester",
+      "state": "Connecticut",
+      "county": "Hartford County",
+      "address": "1329 Middle Turnpike West, Manchester, CT 06040",
+      "official_url": "https://www.wickhampark.org/",
+      "summary": "A 280-acre former private estate opened to the public in 1960 under the will of industrialist Clarence Horace Wickham, with an original layout by Olmsted Associates of Brookline and 67 acres added by Myrtle Williams in 1967. The park's western section reaches into East Hartford, with panoramic Hartford skyline views and a favorite sledding hill. Open April-October, daily 9:30 a.m. to dusk; per-vehicle admission $7 weekdays, $10 weekends and holidays.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "center-memorial-park-manchester",
+      "name": "Center Memorial Park",
+      "kind": "park",
+      "town": "Manchester",
+      "state": "Connecticut",
+      "county": "Hartford County",
+      "address": "Main Street, Manchester, CT 06040",
+      "summary": "A downtown Manchester green with a fountain designed by Charles A. Platt in 1921 — a practical downtown counterpart to the larger Wickham Park.",
+      "status": "open",
+      "photos": [
+        {
+          "src": "/photos/ct/manchester/center-memorial-park.jpg",
+          "thumb": "/photos/ct/manchester/center-memorial-park_thumb.jpg",
+          "title": "Center Memorial Park",
+          "description": "Center Memorial Park in downtown Manchester.",
+          "author": "Kenneth C. Zirkel",
+          "license": "CC BY-SA 4.0",
+          "source_url": "https://commons.wikimedia.org/wiki/File:Center_Memorial_Park,_Manchester,_Connecticut.jpg"
+        }
+      ]
+    },
+    {
+      "slug": "shady-glen",
+      "name": "Shady Glen",
+      "kind": "restaurant",
+      "town": "Manchester",
+      "state": "Connecticut",
+      "county": "Hartford County",
+      "address": "840 East Middle Turnpike, Manchester, CT 06040",
+      "summary": "Founded June 12, 1948 by John and Bernice Rieg, famous for homemade ice cream and the \"Bernice Original\" cheeseburger, whose cheese is fried until it forms crisp corners. Recognized by the James Beard Foundation as an \"American Classic\" in 2012. Phone (860) 649-4245.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "silk-city-coffee",
+      "name": "Silk City Coffee",
+      "kind": "cafe",
+      "town": "Manchester",
+      "state": "Connecticut",
+      "county": "Hartford County",
+      "address": "763 Main Street, Manchester, CT 06040",
+      "official_url": "https://www.silkcitycoffee.com/",
+      "summary": "A specialty coffee shop, roastery and bakery named for Manchester's silk-mill nickname, roasting its own beans with a \"Give Back\" community program. Open Mon-Sat 7 a.m.-5 p.m. Phone (860) 432-1805.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "urban-lodge-brewing",
+      "name": "Urban Lodge Brewing Co.",
+      "kind": "brewery",
+      "town": "Manchester",
+      "state": "Connecticut",
+      "county": "Hartford County",
+      "address": "47 Purnell Place, Manchester, CT 06040",
+      "official_url": "https://www.urbanlodgebrewing.com/",
+      "summary": "A Manchester-founded brewery whose site says its \"roots run deep through Manchester,\" now with a second taproom in Hartford. Open Mon closed, Tue-Thu 3-9 p.m., Fri-Sat noon-10 p.m., Sun noon-6 p.m. Phone (860) 791-8100.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "residence-inn-hartford-manchester",
+      "name": "Residence Inn by Marriott Hartford Manchester",
+      "kind": "hotel",
+      "town": "Manchester",
+      "state": "Connecticut",
+      "county": "Hartford County",
+      "address": "201 Hale Road, Manchester, CT 06042",
+      "official_url": "https://www.marriott.com/hotels/travel/bdlha-residence-inn-hartford-manchester/",
+      "summary": "Extended-stay hotel in the Buckland/Hale Road commercial area of north Manchester, close to I-84 and the Shoppes at Buckland Hills. Phone (860) 432-4242.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "fairfield-inn-suites-hartford-manchester",
+      "name": "Fairfield Inn & Suites by Marriott Hartford Manchester",
+      "kind": "hotel",
+      "town": "Manchester",
+      "state": "Connecticut",
+      "county": "Hartford County",
+      "address": "121 Pavilions Drive, Manchester, CT 06040",
+      "summary": "Select-service hotel on Pavilions Drive near Manchester's Buckland Hills retail district and I-84. Phone (860) 648-9796.",
+      "status": "open",
+      "photos": []
+    }
+  ],
+  "entries": [
+    {
+      "kind": "sight",
+      "name": "Cheney Hall",
+      "place_slug": "cheney-hall",
+      "note": "Connecticut's oldest operating theater, home to the Little Theatre of Manchester."
+    },
+    {
+      "kind": "sight",
+      "name": "Lutz Children's Museum",
+      "place_slug": "lutz-childrens-museum",
+      "note": "A hands-on children's museum with live animal ambassadors."
+    },
+    {
+      "kind": "sight",
+      "name": "Cheney Homestead & Keeney Schoolhouse",
+      "place_slug": "cheney-homestead-keeney-schoolhouse",
+      "note": "The oldest surviving Cheney family building, 1785."
+    },
+    {
+      "kind": "sight",
+      "name": "Old Manchester Museum",
+      "place_slug": "old-manchester-museum",
+      "note": "Local history from Podunk times to Buckland's dinosaur finds."
+    },
+    {
+      "kind": "walk",
+      "name": "Case Mountain Recreation Area",
+      "place_slug": "case-mountain-recreation-area",
+      "note": "640 acres with skyline views and a well-regarded bike trail."
+    },
+    {
+      "kind": "walk",
+      "name": "Wickham Park",
+      "place_slug": "wickham-park",
+      "note": "A 280-acre estate park opened to the public in 1960."
+    },
+    {
+      "kind": "walk",
+      "name": "Center Memorial Park",
+      "place_slug": "center-memorial-park-manchester",
+      "note": "A downtown green with a 1921 fountain."
+    },
+    {
+      "kind": "food",
+      "name": "Shady Glen",
+      "place_slug": "shady-glen",
+      "note": "A James Beard \"American Classic\" since 1948."
+    },
+    {
+      "kind": "food",
+      "name": "Silk City Coffee",
+      "place_slug": "silk-city-coffee",
+      "note": "A roastery and cafe on downtown Main Street."
+    },
+    {
+      "kind": "food",
+      "name": "Urban Lodge Brewing Co.",
+      "place_slug": "urban-lodge-brewing",
+      "note": "A Manchester-founded brewery's original taproom."
+    },
+    {
+      "kind": "stay",
+      "name": "Residence Inn by Marriott Hartford Manchester",
+      "place_slug": "residence-inn-hartford-manchester",
+      "note": "Extended-stay hotel near I-84."
+    },
+    {
+      "kind": "stay",
+      "name": "Fairfield Inn & Suites by Marriott Hartford Manchester",
+      "place_slug": "fairfield-inn-suites-hartford-manchester",
+      "note": "A select-service hotel near Buckland Hills."
+    }
+  ],
+  "links": [
+    {
+      "target": "guide:east-hartford-ct-travel-guide",
+      "kind": "nearby",
+      "note": "Manchester was incorporated in 1823 from part of East Hartford, which it borders."
+    },
+    {
+      "target": "guide:east-hartford-ct-travel-guide",
+      "kind": "shared-history",
+      "note": "Manchester was incorporated as a town in 1823 from part of East Hartford."
+    },
+    {
+      "target": "guide:glastonbury-ct-travel-guide",
+      "kind": "nearby",
+      "note": "Manchester borders Glastonbury; Case Mountain sits on the town line."
+    },
+    {
+      "target": "guide:bolton-ct-travel-guide",
+      "kind": "nearby",
+      "note": "Manchester borders Bolton to the east."
+    },
+    {
+      "target": "guide:vernon-ct-travel-guide",
+      "kind": "nearby",
+      "note": "Manchester borders Vernon to the north."
+    },
+    {
+      "target": "guide:south-windsor-ct-travel-guide",
+      "kind": "nearby",
+      "note": "Manchester borders South Windsor to the northwest."
+    }
+  ]
+}

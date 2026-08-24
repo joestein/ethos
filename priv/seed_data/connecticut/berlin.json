@@ -1,0 +1,297 @@
+{
+  "guide": {
+    "slug": "berlin-ct-travel-guide",
+    "title": "Berlin, Connecticut: Tinware Peddlers and the Oldest Civil War Monument",
+    "destination": "Berlin, Connecticut",
+    "state": "Connecticut",
+    "county": "Hartford County",
+    "intro": "European settlement traces to 1659, when Sergeant Richard Beckley bought 300 acres from Chief Tarramuggus in what was then the Great Swamp Society; the General Assembly incorporated the town as Berlin in 1785, and New Britain split off from it in 1850. Around 1740, Irish immigrant brothers Edward and William Pattison set up the first tinware business in the American colonies here, launching the door-to-door \"Yankee Peddler\" trade still pictured on the town seal. Berlin native Emma Hart Willard, a pioneer of women's higher education, was born in 1787 and opened the Troy Female Seminary in 1821. On March 9, 1799, Simeon North of Berlin received the U.S. government's first pistol contract; he went on to pioneer interchangeable-parts manufacturing. The geographic center of Connecticut lies within Berlin, which today comprises Berlin Center, Kensington and East Berlin.",
+    "sections": [
+      {
+        "heading": "The oldest Civil War monument in the country",
+        "body": "The Kensington Soldiers Monument, dedicated July 28, 1863 — less than a month after Gettysburg — is recognized as the country's oldest permanent Civil War monument. It was designed by Kensington resident Nelson Augustus Moore, a Hudson River School-associated landscape artist, from brown Portland sandstone moved by a sledge drawn by 14 oxen to a Bacon quarry in East Berlin for finishing, and it still stands on the grounds of the Kensington Congregational Church. Ragged Mountain, whose traprock cliffs straddle Berlin and Southington, is one of Connecticut's premier rock-climbing destinations, with the 51-mile Metacomet Trail running its ridge; the main trailhead is on West Lane off Route 71A in Berlin, about 2.75 miles south of downtown New Britain."
+      },
+      {
+        "heading": "Getting there",
+        "body": "Berlin sits at the crossroads of central Connecticut: Route 9 has a grade-separated interchange with the Berlin Turnpike (US 5/Route 15), a 12.17-mile commercial arterial running from Meriden to the Wethersfield-Hartford line; Route 372 also connects to the Turnpike, and Interstate 91 exit 20 is the nearest access for the Ragged Mountain/Lamentation Mountain side of town. Unusually for a town this size, Berlin has its own real rail stop: Berlin station, 51 Depot Road, is one of nine CTrail Hartford Line stations between New Haven Union Station and Springfield Union Station, also served by Amtrak Northeast Regional and Valley Flyer trains, with 235 free parking spaces. Metro-North's New Haven Line and Shore Line East do not serve Berlin; connections to those systems are made at New Haven Union Station."
+      }
+    ],
+    "faq": [
+      {
+        "question": "How do I get to Berlin?",
+        "answer": "By car via Route 9, Interstate 91, or the Berlin Turnpike (US 5/Route 15) — or by train: Berlin station, 51 Depot Road, is a stop on the CTrail Hartford Line, also served by Amtrak Northeast Regional and Valley Flyer trains."
+      },
+      {
+        "question": "Is there a train to Berlin?",
+        "answer": "Yes. Berlin station is one of nine Hartford Line stations between New Haven Union Station and Springfield Union Station, with 235 free parking spaces, a ticket vending machine and bike racks. Metro-North and Shore Line East do not reach Berlin; connect at New Haven Union Station."
+      },
+      {
+        "question": "What is the Kensington Soldiers Monument?",
+        "answer": "A brown sandstone Civil War monument dedicated July 28, 1863, recognized as the country's oldest permanent Civil War monument. It stands on the grounds of the Kensington Congregational Church."
+      },
+      {
+        "question": "Is there hiking in Berlin?",
+        "answer": "Yes — Ragged Mountain Memorial Preserve, straddling Berlin and Southington, has traprock cliffs and the blue-blazed Metacomet Trail; the main trailhead is on West Lane off Route 71A in Berlin."
+      },
+      {
+        "question": "Is there a hotel in Berlin?",
+        "answer": "Yes — Days Inn by Wyndham Berlin Meriden on the Berlin Turnpike is a verified operating property. Call ahead to confirm rates and availability."
+      }
+    ],
+    "photos": [
+      {
+        "src": "/photos/ct/berlin/kensington-soldiers-monument.jpg",
+        "thumb": "/photos/ct/berlin/kensington-soldiers-monument_thumb.jpg",
+        "title": "Kensington Soldiers Monument",
+        "description": "The 1863 Kensington Soldiers Monument on the grounds of Kensington Congregational Church, Berlin.",
+        "author": "John Phelan",
+        "license": "CC BY-SA 4.0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Kensington_Soldiers_Monument,_Kensington_CT.jpg"
+      },
+      {
+        "src": "/photos/ct/berlin/ragged-mountain-preserve.jpg",
+        "thumb": "/photos/ct/berlin/ragged-mountain-preserve_thumb.jpg",
+        "title": "Ragged Mountain Memorial Preserve",
+        "description": "A clifftop traprock ledge at Ragged Mountain Memorial Preserve, looking over the Wassel Reservoir.",
+        "author": "PA Uploader",
+        "license": "CC0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Ragged_Mountain_Memorial_Preserve.jpg"
+      },
+      {
+        "src": "/photos/ct/berlin/berlin-peck-memorial-library.jpg",
+        "thumb": "/photos/ct/berlin/berlin-peck-memorial-library_thumb.jpg",
+        "title": "Berlin-Peck Memorial Library",
+        "description": "The entrance plaza of the Berlin-Peck Memorial Library in downtown Berlin.",
+        "author": "John Phelan",
+        "license": "CC BY 4.0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Berlin_Peck_Memorial_Library,_Berlin_CT.jpg"
+      }
+    ]
+  },
+  "places": [
+    {
+      "slug": "kensington-soldiers-monument",
+      "name": "Kensington Soldiers Monument",
+      "kind": "historic-site",
+      "town": "Berlin",
+      "state": "Connecticut",
+      "county": "Hartford County",
+      "address": "Kensington Congregational Church grounds, Kensington section of Berlin, CT 06037",
+      "summary": "Dedicated July 28, 1863 and recognized as the country's oldest permanent Civil War monument, commemorating six fallen Kensington residents. Designed by Hudson River School-associated artist Nelson Augustus Moore from brown Portland sandstone; owned and maintained by the Kensington Congregational Church.",
+      "status": "open",
+      "photos": [
+        {
+          "src": "/photos/ct/berlin/kensington-soldiers-monument.jpg",
+          "thumb": "/photos/ct/berlin/kensington-soldiers-monument_thumb.jpg",
+          "title": "Kensington Soldiers Monument",
+          "description": "The 1863 Kensington Soldiers Monument on the grounds of Kensington Congregational Church, Berlin.",
+          "author": "John Phelan",
+          "license": "CC BY-SA 4.0",
+          "source_url": "https://commons.wikimedia.org/wiki/File:Kensington_Soldiers_Monument,_Kensington_CT.jpg"
+        }
+      ]
+    },
+    {
+      "slug": "ragged-mountain-memorial-preserve",
+      "name": "Ragged Mountain Memorial Preserve",
+      "kind": "park",
+      "town": "Berlin",
+      "state": "Connecticut",
+      "county": "Hartford County",
+      "address": "Main trailhead on West Lane, off Route 71A, Berlin, CT 06037",
+      "official_url": "https://www.raggedmtn.org/",
+      "summary": "Traprock cliffs from 20 to 60 feet, among Connecticut's premier rock-climbing terrain, including the well-known \"Running Man\" face. The 51-mile Metacomet Trail runs the length of the ridge; the Red Dot Trail is the easiest route to the summit. Held under a conservation restriction with the Berlin Land Trust.",
+      "status": "open",
+      "photos": [
+        {
+          "src": "/photos/ct/berlin/ragged-mountain-preserve.jpg",
+          "thumb": "/photos/ct/berlin/ragged-mountain-preserve_thumb.jpg",
+          "title": "Ragged Mountain Memorial Preserve",
+          "description": "A clifftop traprock ledge at Ragged Mountain Memorial Preserve, looking over the Wassel Reservoir.",
+          "author": "PA Uploader",
+          "license": "CC0",
+          "source_url": "https://commons.wikimedia.org/wiki/File:Ragged_Mountain_Memorial_Preserve.jpg"
+        }
+      ]
+    },
+    {
+      "slug": "timberlin-golf-club",
+      "name": "Timberlin Golf Club",
+      "kind": "attraction",
+      "town": "Berlin",
+      "state": "Connecticut",
+      "county": "Hartford County",
+      "address": "330 Southington Road, Berlin, CT 06037",
+      "official_url": "https://www.timberlingolf.com/",
+      "summary": "An 18-hole municipal course designed by Al Zikorus and built in 1970, playing to par 72 at 6,733 yards from the championship tees. The on-site Par For The Course restaurant serves golfers and the public; junior, women's, senior and men's club programs run through the season. Phone (860) 828-7987.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "kensington-pizza",
+      "name": "Kensington Pizza",
+      "kind": "restaurant",
+      "town": "Berlin",
+      "state": "Connecticut",
+      "county": "Hartford County",
+      "address": "366 Main Street, Kensington, CT 06037",
+      "official_url": "https://www.kensingtonpizzact.com/",
+      "summary": "A family-run pizzeria established in 1974, with Italian-style pizza alongside pasta, calzones, wings, subs and burgers. Open daily 11 a.m.-9 p.m., with online ordering for carryout and delivery. Phone (860) 828-0949.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "soulfully-vegan-berlin",
+      "name": "SoulFully Vegan",
+      "kind": "restaurant",
+      "town": "Berlin",
+      "state": "Connecticut",
+      "county": "Hartford County",
+      "address": "1240 Farmington Avenue, Berlin, CT 06037",
+      "official_url": "https://soulfullyvegan.com",
+      "summary": "A plant-based kitchen that grew from a food truck into a sit-down restaurant, known for its burgers and boldly spiced dishes drawing on diverse culinary traditions. Open Tue-Thu 11 a.m.-8 p.m., Fri-Sat 11 a.m.-10 p.m., closed Sun-Mon.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "east-tokyo-asian-restaurant",
+      "name": "East Tokyo Asian Restaurant",
+      "kind": "restaurant",
+      "town": "Berlin",
+      "state": "Connecticut",
+      "county": "Hartford County",
+      "address": "1135 B Farmington Avenue, Berlin, CT 06037",
+      "official_url": "https://www.easttokyoct.com/",
+      "summary": "A neighborhood Japanese and Asian restaurant on the Farmington Avenue corridor, with active takeout and online ordering. Phone (860) 828-8808.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "bills-farmington-ave-pizza",
+      "name": "Bill's Farmington Ave Pizza",
+      "kind": "restaurant",
+      "town": "Berlin",
+      "state": "Connecticut",
+      "county": "Hartford County",
+      "address": "1181 Farmington Avenue, Berlin, CT 06037",
+      "official_url": "https://www.billsfarmingtonavepizzamenu.com/",
+      "summary": "An independent Berlin pizzeria offering delivery, pickup and curbside pickup. Open daily 11:00 a.m.-9:30 p.m. Phone (860) 979-6282.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "days-inn-berlin-meriden",
+      "name": "Days Inn by Wyndham Berlin Meriden",
+      "kind": "hotel",
+      "town": "Berlin",
+      "state": "Connecticut",
+      "county": "Hartford County",
+      "address": "2387 Berlin Turnpike, Berlin, CT 06037",
+      "official_url": "https://www.wyndhamhotels.com/days-inn/berlin-connecticut/days-inn-berlin-meriden/overview",
+      "summary": "A newly renovated Berlin Turnpike hotel with live online booking. Phone (860) 438-6178.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "berlin-station",
+      "name": "Berlin Station",
+      "kind": "historic-site",
+      "town": "Berlin",
+      "state": "Connecticut",
+      "county": "Hartford County",
+      "address": "51 Depot Road, Berlin, CT 06037",
+      "official_url": "https://hartfordline.com/route_stations/berlin/",
+      "summary": "One of nine CTrail Hartford Line stations between New Haven and Springfield, also served by Amtrak Northeast Regional and Valley Flyer trains. The historic 1900 depot burned in a December 2016 fire; the rebuilt station opened June 16, 2018 alongside the launch of Hartford Line service. 235 free parking spaces, ticket vending machine and bike racks.",
+      "status": "open",
+      "photos": []
+    }
+  ],
+  "entries": [
+    {
+      "kind": "sight",
+      "name": "Kensington Soldiers Monument",
+      "place_slug": "kensington-soldiers-monument",
+      "note": "The country's oldest permanent Civil War monument, dedicated 1863."
+    },
+    {
+      "kind": "walk",
+      "name": "Ragged Mountain Memorial Preserve",
+      "place_slug": "ragged-mountain-memorial-preserve",
+      "note": "Traprock cliffs and the Metacomet Trail on the Berlin-Southington line."
+    },
+    {
+      "kind": "sight",
+      "name": "Timberlin Golf Club",
+      "place_slug": "timberlin-golf-club",
+      "note": "An 18-hole municipal course built in 1970."
+    },
+    {
+      "kind": "sight",
+      "name": "Berlin Station",
+      "place_slug": "berlin-station",
+      "note": "A working CTrail Hartford Line and Amtrak stop with a rebuilt 2018 depot."
+    },
+    {
+      "kind": "food",
+      "name": "Kensington Pizza",
+      "place_slug": "kensington-pizza",
+      "note": "A family pizzeria on Main Street since 1974."
+    },
+    {
+      "kind": "food",
+      "name": "SoulFully Vegan",
+      "place_slug": "soulfully-vegan-berlin",
+      "note": "A plant-based kitchen on Farmington Avenue."
+    },
+    {
+      "kind": "food",
+      "name": "East Tokyo Asian Restaurant",
+      "place_slug": "east-tokyo-asian-restaurant",
+      "note": "A neighborhood Japanese and Asian restaurant."
+    },
+    {
+      "kind": "food",
+      "name": "Bill's Farmington Ave Pizza",
+      "place_slug": "bills-farmington-ave-pizza",
+      "note": "An independent pizzeria open daily."
+    },
+    {
+      "kind": "stay",
+      "name": "Days Inn by Wyndham Berlin Meriden",
+      "place_slug": "days-inn-berlin-meriden",
+      "note": "A renovated hotel on the Berlin Turnpike."
+    }
+  ],
+  "links": [
+    {
+      "target": "guide:new-britain-ct-travel-guide",
+      "kind": "nearby",
+      "note": "New Britain separated from Berlin in 1850 and borders it to the west."
+    },
+    {
+      "target": "guide:newington-ct-travel-guide",
+      "kind": "nearby",
+      "note": "Berlin borders Newington along the Berlin Turnpike corridor."
+    },
+    {
+      "target": "guide:wethersfield-ct-travel-guide",
+      "kind": "nearby",
+      "note": "Berlin borders Wethersfield; the Berlin Turnpike runs from Meriden to the Wethersfield-Hartford line."
+    },
+    {
+      "target": "guide:meriden-ct-travel-guide",
+      "kind": "nearby",
+      "note": "Berlin borders Meriden; the Berlin Turnpike's southern terminus is near Meriden."
+    },
+    {
+      "target": "guide:southington-ct-travel-guide",
+      "kind": "nearby",
+      "note": "Berlin borders Southington; Ragged Mountain straddles the two towns."
+    },
+    {
+      "target": "guide:cromwell-ct-travel-guide",
+      "kind": "same-region",
+      "note": "Berlin station is the nearest CTrail Hartford Line stop to Cromwell, which has none of its own."
+    }
+  ]
+}

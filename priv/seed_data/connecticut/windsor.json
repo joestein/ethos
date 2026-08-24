@@ -1,0 +1,254 @@
+{
+  "guide": {
+    "slug": "windsor-ct-travel-guide",
+    "title": "Windsor, Connecticut: The State's First English Settlement",
+    "destination": "Windsor, Connecticut",
+    "state": "Connecticut",
+    "county": "Hartford County",
+    "intro": "Windsor is Connecticut's first English settlement: a party of Plymouth Colony settlers under William Holmes arrived on September 26, 1633 to found a trading post, first called Dorchester after the Massachusetts town its second wave of settlers came from. The colony's General Court renamed it Windsor, after Windsor in Berkshire, England, on February 21, 1637. Palisado Green takes its name from a palisade hastily erected that year during the Pequot War, when settlers inside gave up their home lots to shelter families from outside it. Colonial Windsor ran a working river port in the West Indies trade, and tobacco has been grown here since 1640; the first shade-grown tobacco in the United States was raised on a half-acre plot in Windsor's Poquonock village in 1900, under cloth tents that mimicked Sumatran growing conditions. Oliver Ellsworth, a framer of the U.S. Constitution and the third Chief Justice of the United States, lived on Palisado Avenue.",
+    "sections": [
+      {
+        "heading": "A trading post that outlasted its palisade",
+        "body": "The Hooker and Chaffee mercantile firm kept a store and packing houses just off Palisado Green, shipping timber, wheat, livestock and tobacco to the West Indies and importing sugar, molasses, salt and British textiles and hardware; by the mid-1700s flaxseed had become one of the valley's most important exports. Shade tobacco reshaped the town's population in the 20th century: after World War I immigration restrictions cut the supply of European labor, growers recruited college students and workers from the American South, and beginning in 1947 Puerto Rican and Jamaican laborers came to Connecticut by the thousands, with many settling permanently in the area. Regional shade-tobacco acreage fell from about 30,000 acres in the 1930s to under 2,000 by 2006. The Luddy/Taylor Connecticut Valley Tobacco Museum, in Northwest Park, preserves that heritage in a restored curing shed."
+      },
+      {
+        "heading": "Getting there",
+        "body": "Windsor sits just north of Hartford on I-91, and unusually for a Connecticut town of its size it has real passenger rail: CTrail Hartford Line and Amtrak Northeast Regional and Valley Flyer trains both stop at the 1870 depot at 41 Central Street in the middle of downtown, with 22 free parking spaces available 24/7. Connecticut Route 75 (Poquonock Avenue) runs north toward Bradley International Airport, which borders the town, and Route 159 (Palisado Avenue) is the historic spine past Palisado Green."
+      },
+      {
+        "heading": "Where to eat and stay",
+        "body": "Bart's Drive-In on Palisado Avenue is a longtime local name for chili dogs, fried clams and soft serve — call ahead to confirm current hours. Tunxis Grill & Pizzeria, in a 100-year-old downtown building with brick booths, has served steaks, seafood and pizza since 2008. Yosi Kitchen on Hayden Station Road runs a Mediterranean and Middle Eastern kosher restaurant, market and bakery under one roof. For lodging, the Hartford/Windsor Marriott Airport on Day Hill Road runs a complimentary shuttle to Bradley International Airport, with the Hyatt House and a Residence Inn nearby."
+      }
+    ],
+    "faq": [
+      {
+        "question": "How do I get to Windsor?",
+        "answer": "By car via I-91, or by train — CTrail Hartford Line and Amtrak both stop at Windsor station, 41 Central Street, in the middle of downtown."
+      },
+      {
+        "question": "Is there a train to Windsor?",
+        "answer": "Yes. Windsor station is a scheduled stop on the CTrail Hartford Line, with Amtrak Northeast Regional and Valley Flyer trains also serving it, and 22 free parking spaces."
+      },
+      {
+        "question": "What is the Windsor Historical Society?",
+        "answer": "Founded in 1921, the society interprets nearly 400 years of Windsor history at 96 Palisado Avenue, with guided tours of two restored colonial houses — the 1758 Strong-Howard House and the 1767 Dr. Hezekiah Chaffee House. Open Wed-Sat 11 a.m.-4 p.m."
+      },
+      {
+        "question": "What is Oliver Ellsworth Homestead?",
+        "answer": "The home of Oliver Ellsworth, a framer of the U.S. Constitution and third Chief Justice of the United States, on Palisado Avenue. Run as a museum by the Connecticut Daughters of the American Revolution, open for tours May through the end of October."
+      },
+      {
+        "question": "Is there a hotel in Windsor?",
+        "answer": "Yes — the Hartford/Windsor Marriott Airport, the Hyatt House Hartford North/Windsor and a Residence Inn by Marriott all cluster in the Day Hill Road corporate corridor, with shuttle service toward Bradley International Airport."
+      }
+    ],
+    "photos": [
+      {
+        "src": "/photos/ct/windsor/palisado-green.jpg",
+        "thumb": "/photos/ct/windsor/palisado-green_thumb.jpg",
+        "title": "Palisado Green",
+        "description": "Palisado Green in Windsor, with the soldier monument and houses along Palisado Avenue.",
+        "author": "John Phelan",
+        "license": "CC BY 4.0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Palisado_Green,_Windsor_CT.jpg"
+      },
+      {
+        "src": "/photos/ct/windsor/windsor-historical-society.jpg",
+        "thumb": "/photos/ct/windsor/windsor-historical-society_thumb.jpg",
+        "title": "Windsor Historical Society",
+        "description": "The Windsor Historical Society building on Palisado Avenue.",
+        "author": "Daderot",
+        "license": "CC0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Windsor_Historical_Society_-_Windsor,_Connecticut_-_DSC04424.jpg"
+      },
+      {
+        "src": "/photos/ct/windsor/tobacco-barn-windsor.jpg",
+        "thumb": "/photos/ct/windsor/tobacco-barn-windsor_thumb.jpg",
+        "title": "Shade tobacco curing shed",
+        "description": "A shade-tobacco curing shed in Windsor, with leaves hung to dry.",
+        "author": "Ethan Long",
+        "license": "CC BY-SA 2.0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Tobacco_Barn,_Windsor,_CT_(53993129151).jpg"
+      }
+    ]
+  },
+  "places": [
+    {
+      "slug": "windsor-historical-society",
+      "name": "Windsor Historical Society",
+      "kind": "museum",
+      "town": "Windsor",
+      "state": "Connecticut",
+      "county": "Hartford County",
+      "address": "96 Palisado Avenue, Windsor, CT 06095",
+      "official_url": "https://windsorhistoricalsociety.org/visit/",
+      "summary": "Founded in 1921, the society interprets nearly 400 years of Windsor history through exhibition galleries, a research library and a museum shop; admission includes guided tours of the 1758 Strong-Howard House and the 1767 Dr. Hezekiah Chaffee House. Open Wed-Sat 11 a.m.-4 p.m., last house tour 3 p.m. Admission $10 adults, $8 seniors, $6 students; free for children under 12. Phone (860) 688-3813.",
+      "status": "open",
+      "photos": [
+        {
+          "src": "/photos/ct/windsor/windsor-historical-society.jpg",
+          "thumb": "/photos/ct/windsor/windsor-historical-society_thumb.jpg",
+          "title": "Windsor Historical Society",
+          "description": "The Windsor Historical Society building on Palisado Avenue.",
+          "author": "Daderot",
+          "license": "CC0",
+          "source_url": "https://commons.wikimedia.org/wiki/File:Windsor_Historical_Society_-_Windsor,_Connecticut_-_DSC04424.jpg"
+        }
+      ]
+    },
+    {
+      "slug": "luddy-taylor-tobacco-museum",
+      "name": "Luddy/Taylor Connecticut Valley Tobacco Museum",
+      "kind": "museum",
+      "town": "Windsor",
+      "state": "Connecticut",
+      "county": "Hartford County",
+      "address": "Northwest Park, 135 Lang Road, Windsor, CT 06095",
+      "official_url": "https://ctvalleytobaccohistorical.org/",
+      "summary": "Run by the Connecticut Valley Tobacco Historical Society, preserving the heritage of the Connecticut River \"Tobacco Valley\" in a restored tobacco curing shed with historical and contemporary equipment. Free admission; self-guided visit runs 45-60 minutes. Season roughly first Thursday in March through last Saturday in October, open Friday and Saturday noon-4 p.m.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "northwest-park-nature-center",
+      "name": "Northwest Park & Nature Center",
+      "kind": "park",
+      "town": "Windsor",
+      "state": "Connecticut",
+      "county": "Hartford County",
+      "address": "145 Lang Road, Windsor, CT 06095",
+      "official_url": "https://www.northwestpark.org/",
+      "summary": "A 473-acre town-owned park with 12 miles of hiking trails, grown back from former tobacco farmland into forest and field habitat. Free and open dawn to dusk; a working maple sugar house, farm animals and year-round programming including a coffee house concert series and annual country fair. Nature center open Mon-Sat 8:30 a.m.-4:30 p.m., Sun 1-4 p.m.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "oliver-ellsworth-homestead",
+      "name": "Oliver Ellsworth Homestead",
+      "kind": "historic-site",
+      "town": "Windsor",
+      "state": "Connecticut",
+      "county": "Hartford County",
+      "address": "788 Palisado Avenue, Windsor, CT 06095",
+      "official_url": "https://ctdar.org/ctdar-properties/",
+      "summary": "The home of Oliver Ellsworth, a delegate to the Continental Congress and third Chief Justice of the U.S. Supreme Court; both George Washington and John Adams visited. David Ellsworth built the original structure in 1740, and Oliver Ellsworth's family moved into a new house in 1782. The Ellsworth family transferred it to the Connecticut Daughters of the American Revolution in 1903, which has operated it as a house museum since. Open for tours May through the end of October.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "windsor-art-center",
+      "name": "Windsor Art Center",
+      "kind": "attraction",
+      "town": "Windsor",
+      "state": "Connecticut",
+      "county": "Hartford County",
+      "address": "40 Mechanic Street, Windsor, CT 06095",
+      "official_url": "https://windsorartcenter.org/",
+      "summary": "Founded in 2007 in a restored freight house a short walk from Windsor station, a 1,500-square-foot gallery presenting rotating visual art exhibitions plus musical performances, artist talks and workshops. Exhibition hours Thu 6-8 p.m., Sat 10 a.m.-4 p.m., Sun 11 a.m.-4 p.m.; free on-site parking. Also runs adult and kids' art classes and Sunday evening yoga.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "tunxis-grill-pizzeria",
+      "name": "Tunxis Grill & Pizzeria",
+      "kind": "restaurant",
+      "town": "Windsor",
+      "state": "Connecticut",
+      "county": "Hartford County",
+      "address": "3 Tunxis Street, Windsor, CT 06095",
+      "official_url": "https://www.tunxisgrill.com/",
+      "summary": "Established in 2008 in a 100-year-old downtown building with brick booths and an open kitchen, serving steaks, seafood, pasta, pizza, salads and burgers for lunch and dinner seven days a week. Hours Sun-Wed 11 a.m.-9 p.m., Thu-Sat to 10 p.m. Phone (860) 688-6429.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "yosi-kitchen",
+      "name": "Yosi Kitchen",
+      "kind": "restaurant",
+      "town": "Windsor",
+      "state": "Connecticut",
+      "county": "Hartford County",
+      "address": "598 Hayden Station Road, Windsor, CT 06095",
+      "official_url": "https://www.yosikitchen.com/",
+      "summary": "A Mediterranean and Middle Eastern kosher restaurant, market and caterer under one roof, with shawarma, falafel, schnitzel and fresh-baked pita. Open year-round: Mon-Thu 9 a.m.-5 p.m., Fri 9 a.m.-3 p.m., Sun 11 a.m.-4 p.m., closed Saturdays. Phone (860) 688-6677.",
+      "status": "open",
+      "photos": []
+    }
+  ],
+  "entries": [
+    {
+      "kind": "sight",
+      "name": "Windsor Historical Society",
+      "place_slug": "windsor-historical-society",
+      "note": "Two restored colonial houses interpreting 400 years of history."
+    },
+    {
+      "kind": "sight",
+      "name": "Luddy/Taylor Connecticut Valley Tobacco Museum",
+      "place_slug": "luddy-taylor-tobacco-museum",
+      "note": "A restored curing shed preserving Windsor's tobacco heritage."
+    },
+    {
+      "kind": "walk",
+      "name": "Northwest Park & Nature Center",
+      "place_slug": "northwest-park-nature-center",
+      "note": "473 acres of former tobacco farmland with 12 miles of trails."
+    },
+    {
+      "kind": "sight",
+      "name": "Oliver Ellsworth Homestead",
+      "place_slug": "oliver-ellsworth-homestead",
+      "note": "The home of a Constitution framer and Chief Justice."
+    },
+    {
+      "kind": "sight",
+      "name": "Windsor Art Center",
+      "place_slug": "windsor-art-center",
+      "note": "A gallery in a restored freight house near the train station."
+    },
+    {
+      "kind": "food",
+      "name": "Tunxis Grill & Pizzeria",
+      "place_slug": "tunxis-grill-pizzeria",
+      "note": "Steaks, seafood and pizza in a 100-year-old building."
+    },
+    {
+      "kind": "food",
+      "name": "Yosi Kitchen",
+      "place_slug": "yosi-kitchen",
+      "note": "A kosher Mediterranean restaurant, market and bakery."
+    }
+  ],
+  "links": [
+    {
+      "target": "guide:bloomfield-ct-travel-guide",
+      "kind": "nearby",
+      "note": "Windsor borders Bloomfield, part of the 1736 Wintonbury parish coined from Windsor, Farmington and Simsbury."
+    },
+    {
+      "target": "guide:hartford-ct-travel-guide",
+      "kind": "nearby",
+      "note": "Windsor borders Hartford to the south."
+    },
+    {
+      "target": "guide:windsor-locks-ct-travel-guide",
+      "kind": "nearby",
+      "note": "Windsor Locks separated from Windsor in 1854 and borders it to the north."
+    },
+    {
+      "target": "guide:windsor-locks-ct-travel-guide",
+      "kind": "shared-history",
+      "note": "Windsor Locks, named for the canal locks built around Enfield Falls, was set off from Windsor in 1854."
+    },
+    {
+      "target": "guide:east-granby-ct-travel-guide",
+      "kind": "nearby",
+      "note": "Windsor borders East Granby to the north."
+    },
+    {
+      "target": "guide:south-windsor-ct-travel-guide",
+      "kind": "nearby",
+      "note": "Windsor faces South Windsor across the Connecticut River."
+    }
+  ]
+}

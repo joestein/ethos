@@ -1,0 +1,172 @@
+{
+  "guide": {
+    "slug": "enfield-ct-travel-guide",
+    "title": "Enfield, Connecticut: A Massachusetts Town on the Connecticut Border",
+    "destination": "Enfield, Connecticut",
+    "state": "Connecticut",
+    "county": "Hartford County",
+    "tier": "town-page",
+    "intro": "Enfield was first settled in 1679 by John and Robert Pease of Salem in the Massachusetts Bay Colony, and Massachusetts incorporated the town in 1683; it did not join Connecticut until 1749, after a boundary dispute traced to a surveyor's error was settled. A Shaker community founded in 1792 on land donated by David Meacham, called \"The City of Union,\" grew to nearly 3,000 acres across five families; beginning in 1802 Enfield became the first Shaker community to raise garden seed commercially, pioneering the paper seed packet still standard today. Colonel Augustus Hazard ran more than 100 gunpowder mills across 400 acres in Hazardville, supplying 40 percent of the Union army's gunpowder until an explosion destroyed the works in 1913.",
+    "sections": [
+      {
+        "heading": "Getting there",
+        "body": "Enfield sits on Interstate 91 at the Massachusetts line, roughly midway between Hartford and Springfield, so nearly every visitor arrives by car via I-91, U.S. Route 5 or Connecticut Routes 190, 191 and 220. There is no passenger rail station in Enfield as of 2026; the nearest CTrail Hartford Line stops are Windsor Locks to the south and Springfield Union Station to the north, both reached by car. The Town of Enfield's own economic-development page refers to a future Enfield train station tied to the Hartford Line's 2029 opening — not available for a 2026 trip. Bradley International Airport is the region's principal commercial airport."
+      },
+      {
+        "heading": "A Shaker seed business and a mill town",
+        "body": "Orrin Thompson founded the Thompsonville Carpet Manufacturing Company in Enfield in 1828, employing Scottish weavers to make ingrain carpets; by 1850 it produced 250,000 yards of carpet a year with 1,650 employees, and the mill — reorganized as the Hartford Carpet Company in 1854 and later part of Bigelow-Sanford — finally closed in 1971. Jonathan Edwards preached his famous Great Awakening sermon \"Sinners in the Hands of an Angry God\" in Enfield on July 8, 1741, when the town was still under Massachusetts jurisdiction. Martha A. Parsons, a Connecticut Women's Hall of Fame inductee, lived in the 1782 house on Enfield Street that she bequeathed to the Enfield Historical Society, which today runs it as a museum alongside the Old Town Hall."
+      }
+    ],
+    "faq": [
+      {
+        "question": "How do I get to Enfield?",
+        "answer": "By car — Interstate 91, U.S. Route 5 or Connecticut Routes 190, 191 and 220. There is no passenger rail station in Enfield in 2026; the nearest CTrail Hartford Line stops are Windsor Locks and Springfield Union Station."
+      },
+      {
+        "question": "Is there a train to Enfield?",
+        "answer": "No, not yet. A future Enfield station on the Hartford Line is a town economic-development project tied to a 2029 opening. The nearest current stations are Windsor Locks and Springfield Union Station."
+      },
+      {
+        "question": "What is the Old Town Hall Museum?",
+        "answer": "The Enfield Historical Society's flagship museum, with three floors of exhibits on the Shakers, the Revolutionary and Civil Wars, and Thompsonville carpet manufacturing. Open Sundays 1-5 p.m., May through October, at 1294 Enfield Street."
+      }
+    ],
+    "photos": [
+      {
+        "src": "/photos/ct/enfield/old-town-hall-enfield.jpg",
+        "thumb": "/photos/ct/enfield/old-town-hall-enfield_thumb.jpg",
+        "title": "Old Town Hall, Enfield",
+        "description": "The Old Town Hall on Enfield Street, home of the Enfield Historical Society's museum.",
+        "author": "John Phelan",
+        "license": "CC BY 4.0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Old_Town_Hall,_Enfield_CT.jpg"
+      }
+    ]
+  },
+  "places": [
+    {
+      "slug": "old-town-hall-museum-enfield",
+      "name": "Old Town Hall Museum (Enfield Historical Society)",
+      "kind": "museum",
+      "town": "Enfield",
+      "state": "Connecticut",
+      "county": "Hartford County",
+      "address": "1294 Enfield Street, Enfield, CT 06082",
+      "official_url": "https://www.enfieldhistoricalsociety.org/old-town-hall-museum",
+      "summary": "Three floors of exhibits telling Enfield's story, covering the Shakers, the Revolutionary and Civil Wars, and Thompsonville carpet manufacturing, with archives volunteers help researchers use. Open Sundays 1:00-5:00 p.m., May through October; other times by appointment.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "martha-parsons-house-museum",
+      "name": "Martha Parsons House Museum",
+      "kind": "historic-site",
+      "town": "Enfield",
+      "state": "Connecticut",
+      "county": "Hartford County",
+      "address": "1387 Enfield Street (Route 5), Enfield, CT 06082",
+      "official_url": "https://www.enfieldhistoricalsociety.org/visit",
+      "summary": "Built in 1782, the house holds generations of Parsons family heirlooms and early-19th-century wallpaper commemorating George Washington. Home of Martha A. Parsons (1869-1965), a 2010 Connecticut Women's Hall of Fame inductee who bequeathed the property to the Enfield Historical Society. Free admission, open by appointment; call (860) 745-6064.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "higgins-park-bandshell",
+      "name": "The Bandshell at Higgins Park",
+      "kind": "park",
+      "town": "Enfield",
+      "state": "Connecticut",
+      "county": "Hartford County",
+      "address": "820 Enfield Street, Enfield, CT 06082",
+      "official_url": "https://www.enfieldsummerconcertseries.com/",
+      "summary": "A quarter-mile walking trail, exercise stations, a playscape and a basketball court behind Enfield Town Hall. The bandshell hosts the town's free Enfield Summer Concert Series at 7:00 p.m., with ten dated concerts running June through August and food trucks on site.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "figaros-italian-restaurant",
+      "name": "Figaro's Italian Restaurant",
+      "kind": "restaurant",
+      "town": "Enfield",
+      "state": "Connecticut",
+      "county": "Hartford County",
+      "address": "92 Elm Street, Enfield, CT 06082",
+      "official_url": "https://figaroct.com/",
+      "summary": "A family Italian restaurant in the Thompsonville section, serving Springfield and Hartford for over 40 years. Hours vary — the site lists both 11:30 a.m.-8 p.m. daily and later evening closes — so call ahead. Phone (860) 745-2414.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "the-country-diner-enfield",
+      "name": "The Country Diner",
+      "kind": "restaurant",
+      "town": "Enfield",
+      "state": "Connecticut",
+      "county": "Hartford County",
+      "address": "111 Hazard Avenue, Enfield, CT 06082",
+      "official_url": "https://www.thecountrydiner.com/",
+      "summary": "A family breakfast-and-lunch diner on Route 190 in Hazardville, serving omelets, French toast, pancakes and sandwiches. Open Mon-Sat 6:00 a.m.-3:00 p.m., Sun 7:00 a.m.-2:00 p.m. Phone (860) 763-5338.",
+      "status": "open",
+      "photos": []
+    }
+  ],
+  "entries": [
+    {
+      "kind": "sight",
+      "name": "Old Town Hall Museum (Enfield Historical Society)",
+      "place_slug": "old-town-hall-museum-enfield",
+      "note": "Three floors of exhibits on Enfield's Shaker and industrial history."
+    },
+    {
+      "kind": "sight",
+      "name": "Martha Parsons House Museum",
+      "place_slug": "martha-parsons-house-museum",
+      "note": "An 1782 house museum on Enfield Street."
+    },
+    {
+      "kind": "sight",
+      "name": "The Bandshell at Higgins Park",
+      "place_slug": "higgins-park-bandshell",
+      "note": "Home of the town's free summer concert series."
+    },
+    {
+      "kind": "food",
+      "name": "Figaro's Italian Restaurant",
+      "place_slug": "figaros-italian-restaurant",
+      "note": "A family Italian restaurant in Thompsonville."
+    },
+    {
+      "kind": "food",
+      "name": "The Country Diner",
+      "place_slug": "the-country-diner-enfield",
+      "note": "A breakfast-and-lunch diner in Hazardville."
+    }
+  ],
+  "links": [
+    {
+      "target": "guide:east-windsor-ct-travel-guide",
+      "kind": "nearby",
+      "note": "Enfield borders East Windsor to the south; Scantic River State Park spans both towns."
+    },
+    {
+      "target": "guide:suffield-ct-travel-guide",
+      "kind": "nearby",
+      "note": "Enfield sits across the Connecticut River from Suffield, both joining Connecticut from Massachusetts in 1749."
+    },
+    {
+      "target": "guide:suffield-ct-travel-guide",
+      "kind": "shared-history",
+      "note": "Both Enfield and Suffield were Massachusetts towns until the 1715-1749 boundary settlement brought them into Connecticut."
+    },
+    {
+      "target": "guide:windsor-locks-ct-travel-guide",
+      "kind": "nearby",
+      "note": "Enfield borders Windsor Locks to the south."
+    },
+    {
+      "target": "guide:somers-ct-travel-guide",
+      "kind": "nearby",
+      "note": "Enfield borders Somers to the east."
+    }
+  ]
+}
