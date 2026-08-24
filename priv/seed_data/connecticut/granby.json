@@ -17,7 +17,7 @@
       },
       {
         "heading": "Land trust preserves and an orchard bakery",
-        "body": "The Granby Land Trust owns 2,421 acres and holds conservation easements on another 1,070, including the Seth and Lucy Holcombe Preserve and the Dewey-Granby Oak, a white oak said to be among the oldest trees in New England. Lost Acres Vineyard in North Granby runs a tasting room, art gallery and pizza nights, and hosts the Land Trust's annual juried art show. La Figata Restaurant on Bank Street serves wood-fired Italian cooking, while Julien Tessier — the Connecticut Restaurant Association's 2025 Pastry Chef of the Year — runs Julien's Bakery from a converted farm shop and a new Bank Street location."
+        "body": "The Granby Land Trust owns 2,421 acres and holds conservation easements on another 1,070, including the Seth and Lucy Holcombe Preserve and the Godard Preserve. Lost Acres Vineyard in North Granby runs a tasting room, art gallery and pizza nights, and hosts the Land Trust's annual juried art show. La Figata Restaurant on Bank Street serves wood-fired Italian cooking, while Julien Tessier — the Connecticut Restaurant Association's 2025 Pastry Chef of the Year — runs Julien's Bakery from a converted farm shop and a new Bank Street location."
       }
     ],
     "faq": [
@@ -27,7 +27,7 @@
       },
       {
         "question": "Is there a train to Granby?",
-        "answer": "No. The nearest CTrail Hartford Line stations are Windsor Locks and Windsor, both requiring a car or rideshare from Granby."
+        "answer": "No. The nearest CTrail Hartford Line stations are Windsor Locks and Windsor. Public transit to Granby itself is limited — check CTtransit for current routes."
       },
       {
         "question": "What is the McLean Game Refuge?",
@@ -82,7 +82,7 @@
       "county": "Hartford County",
       "address": "208 Salmon Brook Street, Granby, CT 06035",
       "official_url": "https://www.salmonbrookhistoricalsociety.com/visit",
-      "summary": "A campus with a Research Library in the Preservation Barn and a Museum Store in the Enders House. Research library typically available by appointment Tuesdays and Thursdays, 9 a.m.-noon; genealogical research $25 per hour. The Wilcox House at 143 Simsbury Road opens for free public tours on selected Saturdays and Open Farm Day.",
+      "summary": "A campus with a Research Library in the Preservation Barn and a Museum Store in the Enders House. Research library typically available by appointment Tuesdays and Thursdays, 9 a.m.-noon; genealogical research $25 per hour. The Wilcox House (address per a third-party listing only, unconfirmed by the society's own site) opens for free public tours on selected Saturdays and Open Farm Day.",
       "status": "open",
       "photos": []
     },
@@ -93,7 +93,7 @@
       "town": "Granby",
       "state": "Connecticut",
       "county": "Hartford County",
-      "address": "Route 219, Granby, CT 06035",
+      "address": "Off Route 219, Granby, CT 06035 (DEEP publishes no street address for the forest)",
       "official_url": "https://portal.ct.gov/deep/state-parks/forests/enders-state-forest",
       "summary": "A state forest lying predominantly in Granby, with portions extending into Barkhamsted, known for its waterfalls and wetlands. DEEP directs visitors to stay on the main purple-blazed stone-dust trail and view the falls from a distance — rocks near the falls are extremely slippery, and swimming or wading is not recommended.",
       "status": "open",
@@ -193,7 +193,7 @@
       "town": "Granby",
       "state": "Connecticut",
       "county": "Hartford County",
-      "address": "4 Park Place, Granby, CT 06035",
+      "address": "4 Park Place, Granby, CT 06035 (address per a third-party directory only, not the operator's own site)",
       "summary": "A paired ice cream shop and street-food counter, part of a three-location group with Simsbury and New Milford. In 2026 the company runs three Give Back Days — May 19, July 21 and September 15 — donating 10 percent of profits from all three locations to Holcomb Farm's Fresh Access program.",
       "status": "open",
       "photos": []
@@ -234,7 +234,7 @@
       "kind": "walk",
       "name": "Granby Land Trust Preserves",
       "place_slug": "granby-land-trust-preserves",
-      "note": "3,491 protected acres including the ancient Dewey-Granby Oak."
+      "note": "3,491 protected acres across the Seth and Lucy Holcombe, Godard and other preserves."
     },
     {
       "kind": "sight",

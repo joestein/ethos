@@ -35,7 +35,7 @@
       },
       {
         "question": "What is Wickham Park?",
-        "answer": "A 280-acre former private estate, opened to the public in 1960 from the will of industrialist Clarence Horace Wickham, with an Olmsted Associates-designed layout, gardens and trails; its western section reaches into East Hartford. Open April-October, daily 9:30 a.m. to dusk; per-vehicle admission $7 weekdays, $10 weekends. The park's address is 1329 Middle Turnpike West, Manchester."
+        "answer": "A 280-acre former private estate, opened to the public in 1960 from the will of industrialist Clarence Horace Wickham, with an Olmsted Associates-designed layout, gardens and trails; its western section reaches into East Hartford. Manchester's own park site could not be reached to confirm current hours, admission or the exact street address — call ahead before visiting."
       },
       {
         "question": "Is there a hotel in Manchester?",
@@ -64,8 +64,8 @@
       {
         "src": "/photos/ct/manchester/center-memorial-park.jpg",
         "thumb": "/photos/ct/manchester/center-memorial-park_thumb.jpg",
-        "title": "Center Memorial Park",
-        "description": "Center Memorial Park in downtown Manchester.",
+        "title": "A downtown Manchester green",
+        "description": "A public green in downtown Manchester, an honest photo substitute since Wickham Park has no free-licensed images on Wikimedia Commons.",
         "author": "Kenneth C. Zirkel",
         "license": "CC BY-SA 4.0",
         "source_url": "https://commons.wikimedia.org/wiki/File:Center_Memorial_Park,_Manchester,_Connecticut.jpg"
@@ -154,33 +154,11 @@
       "town": "Manchester",
       "state": "Connecticut",
       "county": "Hartford County",
-      "address": "1329 Middle Turnpike West, Manchester, CT 06040",
+      "address": "Manchester, CT 06040 (exact street address not confirmed by Manchester's own official site)",
       "official_url": "https://www.wickhampark.org/",
-      "summary": "A 280-acre former private estate opened to the public in 1960 under the will of industrialist Clarence Horace Wickham, with an original layout by Olmsted Associates of Brookline and 67 acres added by Myrtle Williams in 1967. The park's western section reaches into East Hartford, with panoramic Hartford skyline views and a favorite sledding hill. Open April-October, daily 9:30 a.m. to dusk; per-vehicle admission $7 weekdays, $10 weekends and holidays.",
+      "summary": "A former private estate opened to the public in 1960 under the will of industrialist Clarence Horace Wickham, with an original layout by Olmsted Associates of Brookline and 67 acres added by Myrtle Williams in 1967, totaling 280 acres. The park's western section reaches into East Hartford. Manchester's own official park site could not be reached to confirm current hours, admission or the exact street address — call ahead or check ctvisit.com before visiting.",
       "status": "open",
       "photos": []
-    },
-    {
-      "slug": "center-memorial-park-manchester",
-      "name": "Center Memorial Park",
-      "kind": "park",
-      "town": "Manchester",
-      "state": "Connecticut",
-      "county": "Hartford County",
-      "address": "Main Street, Manchester, CT 06040",
-      "summary": "A downtown Manchester green with a fountain designed by Charles A. Platt in 1921 — a practical downtown counterpart to the larger Wickham Park.",
-      "status": "open",
-      "photos": [
-        {
-          "src": "/photos/ct/manchester/center-memorial-park.jpg",
-          "thumb": "/photos/ct/manchester/center-memorial-park_thumb.jpg",
-          "title": "Center Memorial Park",
-          "description": "Center Memorial Park in downtown Manchester.",
-          "author": "Kenneth C. Zirkel",
-          "license": "CC BY-SA 4.0",
-          "source_url": "https://commons.wikimedia.org/wiki/File:Center_Memorial_Park,_Manchester,_Connecticut.jpg"
-        }
-      ]
     },
     {
       "slug": "shady-glen",
@@ -240,7 +218,7 @@
       "town": "Manchester",
       "state": "Connecticut",
       "county": "Hartford County",
-      "address": "121 Pavilions Drive, Manchester, CT 06040",
+      "address": "121 Pavilions Drive, Manchester, CT (ZIP contested between sources, either 06040 or 06074)",
       "summary": "Select-service hotel on Pavilions Drive near Manchester's Buckland Hills retail district and I-84. Phone (860) 648-9796.",
       "status": "open",
       "photos": []
@@ -282,12 +260,6 @@
       "name": "Wickham Park",
       "place_slug": "wickham-park",
       "note": "A 280-acre estate park opened to the public in 1960."
-    },
-    {
-      "kind": "walk",
-      "name": "Center Memorial Park",
-      "place_slug": "center-memorial-park-manchester",
-      "note": "A downtown green with a 1921 fountain."
     },
     {
       "kind": "food",

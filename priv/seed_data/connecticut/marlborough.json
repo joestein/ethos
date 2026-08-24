@@ -79,29 +79,6 @@
       "photos": []
     },
     {
-      "slug": "blish-memorial-park-lake-terramuggus",
-      "name": "Blish Memorial Park at Lake Terramuggus",
-      "kind": "park",
-      "town": "Marlborough",
-      "state": "Connecticut",
-      "county": "Hartford County",
-      "address": "Marlborough, CT 06447",
-      "official_url": "https://www.marlboroughct.net/government/parks_and_recreation.php",
-      "summary": "The town's lakefront park and swimming area on Lake Terramuggus. Parks & Recreation runs kayak rentals at $10 per hour whenever staff are at the lake, 10 a.m.-6 p.m.; the 2026 kayak season runs May 1-November 1. The park hosts the 2026 Blish Park Summer Concert Series and the town's summer triathlon.",
-      "status": "open",
-      "photos": [
-        {
-          "src": "/photos/ct/marlborough/lake-terramuggus.jpg",
-          "thumb": "/photos/ct/marlborough/lake-terramuggus_thumb.jpg",
-          "title": "Lake Terramuggus",
-          "description": "A shoreline view of Lake Terramuggus in Marlborough.",
-          "author": "John Phelan",
-          "license": "CC BY 4.0",
-          "source_url": "https://commons.wikimedia.org/wiki/File:Lake_Terramuggus,_Terramuggus_CT.jpg"
-        }
-      ]
-    },
-    {
       "slug": "marlborough-congregational-church",
       "name": "Marlborough Congregational Church",
       "kind": "historic-site",
@@ -192,12 +169,6 @@
       "name": "Marlborough Arts Center",
       "place_slug": "marlborough-arts-center",
       "note": "A regional arts center with a live-music cafe series."
-    },
-    {
-      "kind": "walk",
-      "name": "Blish Memorial Park at Lake Terramuggus",
-      "place_slug": "blish-memorial-park-lake-terramuggus",
-      "note": "The town's lakefront park, with kayak rentals and a summer concert series."
     },
     {
       "kind": "sight",

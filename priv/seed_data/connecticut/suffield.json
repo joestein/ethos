@@ -18,7 +18,7 @@
       {
         "heading": "Two lakefront parks and a Broad Brook brewery"
         ,
-        "body": "Sunrise Park, bought by the townspeople from the estate of Edward M. White and dedicated July 2, 1966, offers swimming, dog swimming, canoeing and kayaking on its namesake pond. Babb's Beach on Lake Congamond, which straddles the Suffield-Southwick, Massachusetts line, runs a full lifeguarded 2026 season starting June 6. Broad Brook Brewing, which got its start in a garage in Broad Brook village and debuted in East Windsor in 2013, has since relocated its taproom to South Street in Suffield, open Wednesday through Sunday."
+        "body": "Sunrise Park, bought by the townspeople from the estate of Edward M. White and dedicated July 2, 1966, offers swimming, dog swimming, canoeing and kayaking. Babb's Beach on Lake Congamond, which straddles the Suffield-Southwick, Massachusetts line, runs a full lifeguarded 2026 season starting June 6. Broad Brook Brewing, which got its start in a garage in Broad Brook village and debuted in East Windsor in 2013, has since relocated its taproom to South Street in Suffield, open Wednesday through Sunday."
       }
     ],
     "faq": [
@@ -52,8 +52,8 @@
       {
         "src": "/photos/ct/suffield/suffield-civil-war-monument.jpg",
         "thumb": "/photos/ct/suffield/suffield-civil-war-monument_thumb.jpg",
-        "title": "Civil War Monument, Suffield green",
-        "description": "The 1888 Civil War monument on the Suffield town green.",
+        "title": "Soldier monument, Suffield green",
+        "description": "A soldier monument on the Suffield town green.",
         "author": "Daderot",
         "license": "CC0",
         "source_url": "https://commons.wikimedia.org/wiki/File:Civil_War_Monument_-_Suffield,_Connecticut_-_DSC09872.JPG"
@@ -62,7 +62,7 @@
         "src": "/photos/ct/suffield/king-house-museum-suffield.jpg",
         "thumb": "/photos/ct/suffield/king-house-museum-suffield_thumb.jpg",
         "title": "King House Museum",
-        "description": "The King House Museum, an 18th-century gambrel house on South Main Street, Suffield.",
+        "description": "The King House Museum on South Main Street, Suffield.",
         "author": "Magicpiano",
         "license": "CC BY-SA 4.0",
         "source_url": "https://commons.wikimedia.org/wiki/File:SuffieldCT_AlexanderKingHouse.jpg"
@@ -102,14 +102,14 @@
       "county": "Hartford County",
       "address": "232 South Main Street, Suffield, CT 06078",
       "official_url": "https://www.suffieldhistoricalsociety.org/",
-      "summary": "The Suffield Historical Society's home museum, an 18th-century gambrel house with a barn holding local collections. Free admission; open seasonally and by appointment — call to confirm current hours. Phone (860) 668-5256.",
+      "summary": "The Suffield Historical Society's home museum, with a barn holding local collections. Free admission; open seasonally and by appointment — call to confirm current hours. Phone (860) 668-5256.",
       "status": "open",
       "photos": [
         {
           "src": "/photos/ct/suffield/king-house-museum-suffield.jpg",
           "thumb": "/photos/ct/suffield/king-house-museum-suffield_thumb.jpg",
           "title": "King House Museum",
-          "description": "The King House Museum, an 18th-century gambrel house on South Main Street, Suffield.",
+          "description": "The King House Museum on South Main Street, Suffield.",
           "author": "Magicpiano",
           "license": "CC BY-SA 4.0",
           "source_url": "https://commons.wikimedia.org/wiki/File:SuffieldCT_AlexanderKingHouse.jpg"
@@ -123,7 +123,7 @@
       "town": "Suffield",
       "state": "Connecticut",
       "county": "Hartford County",
-      "address": "1499 Mountain Road, West Suffield, CT 06093",
+      "address": "1499 Mountain Road, West Suffield, CT",
       "official_url": "https://www.suffieldhistoricalsociety.org/events",
       "summary": "A restored exhibit hall operated in partnership with the West Suffield Village Improvement Association, showing the Suffield Pharmacy Collection, Native American artifacts, historic tinware and student artwork. Public exhibit afternoons scheduled periodically, 1-4 p.m. — check the Historical Society's events page for current dates.",
       "status": "open",
@@ -175,7 +175,7 @@
       "town": "Suffield",
       "state": "Connecticut",
       "county": "Hartford County",
-      "address": "Lake Congamond, Suffield, CT 06078",
+      "address": "Lake Congamond, Suffield, CT (no street address published)",
       "official_url": "https://www.suffieldct.gov/things-to-do/babbs-congamond",
       "summary": "A town-owned swimming beach on Lake Congamond, which straddles the Suffield, CT and Southwick, MA line, with lifeguards, picnic pavilions and wheelchair beach access. 2026 season: weekends only from June 6, then daily from June 20, 11 a.m.-6 p.m. Non-resident admission $40 per vehicle, up to five people; free for residents with a park sticker.",
       "status": "open",
