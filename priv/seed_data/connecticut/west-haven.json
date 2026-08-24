@@ -1,0 +1,266 @@
+{
+  "guide": {
+    "slug": "west-haven-ct-travel-guide",
+    "title": "West Haven, Connecticut: Connecticut's Youngest City",
+    "destination": "West Haven, Connecticut",
+    "state": "Connecticut",
+    "county": "New Haven County",
+    "intro": "West Haven was settled in 1648 as \"West Farms,\" part of the original New Haven Colony — one of Connecticut's oldest continuously settled areas. In 1719 West Farms became the separate parish of West Haven, and in 1822, after several failed incorporation attempts, it joined with neighboring North Milford to form the town of Orange. West Haven split from Orange to become a separate town in 1921 and was finally incorporated as a city in 1961, the last city incorporated in the state, earning it the nickname \"Connecticut's Youngest City.\" On July 5, 1779, British forces invaded New Haven Harbor by landing at West Haven; British Adjutant William Campbell intervened to protect the Reverend Noah Williston from his own troops, and was himself killed later that day on Allingtown Hill. Savin Rock, \"Connecticut's Coney Island,\" was a major shoreline amusement resort from the late 19th century until a 1938 hurricane destroyed its pier and the park closed during the 1960s.",
+    "sections": [
+      {
+        "heading": "A shoreline reborn",
+        "body": "Lender's Beigel Bakery was founded in West Haven in 1927 by Polish immigrant Harry Lender and went on to pioneer the frozen bagel, one of the city's most far-reaching industrial legacies. Today West Haven's nearly four-mile tract of Long Island Sound beach comprises about 25% of Connecticut's public beaches; a 1.7-mile recreation path ties together the shoreline from Sandy Point to Bradley Point, following the footprint of the vanished Savin Rock amusement park. Sandy Point Beach & Bird Sanctuary, an Important Bird Area since 2003, hosts piping plovers, American oystercatchers and least terns; Bradley Point Park marks the site of the 1779 British landing, its shorefront outcropping the source of the Savin Rock name. West Haven Eco Park, a 1.5-acre shoreline restoration site planted with more than 16,000 native trees and shrubs, held its grand opening in June 2026."
+      },
+      {
+        "heading": "Getting there",
+        "body": "Most travelers reach West Haven by car via Interstate 95 — Exit 42 to Route 162 (Sawmill Road) or Exit 43 to Campbell Avenue, both signed toward Captain Thomas Boulevard and the shore. Rail riders use West Haven station at 20 Railroad Avenue, a full-service stop on Metro-North's New Haven Line with roughly 660 parking spaces, opened in 2013. Shore Line East and the CTrail Hartford Line do not serve West Haven; those services, along with Amtrak, are reached at New Haven Union Station."
+      }
+    ],
+    "faq": [
+      {
+        "question": "How do I get to West Haven?",
+        "answer": "By car via I-95 Exit 42 (Route 162/Sawmill Road) or Exit 43 (Campbell Avenue), both signed toward the shore. West Haven station at 20 Railroad Avenue offers full Metro-North New Haven Line service; Shore Line East and the Hartford Line do not stop here."
+      },
+      {
+        "question": "Can I still visit Savin Rock amusement park?",
+        "answer": "No — the amusement park closed during the 1960s after a 1938 hurricane destroyed its pier. The site is now a shoreline walking and biking path; the annual Savin Rock Festival celebrates the memory without reviving the rides."
+      },
+      {
+        "question": "Are West Haven's beaches open for swimming?",
+        "answer": "Sandy Point and Oak Street Beach are open. Sea Bluff Beach has at times been closed due to elevated bacteria levels — check the city's official alerts page before planning to swim there."
+      },
+      {
+        "question": "Is there a hotel in West Haven?",
+        "answer": "No hotel, inn or B&B physically in West Haven could be verified as currently operating; the former Debonair Beach Motel was demolished in late 2025. The nearest verified lodging is The Blake New Haven, a boutique hotel at 9 High Street."
+      }
+    ],
+    "photos": [
+      {
+        "src": "/photos/ct/west-haven/savin-rock-shoreline-west-haven.jpg",
+        "thumb": "/photos/ct/west-haven/savin-rock-shoreline-west-haven_thumb.jpg",
+        "title": "Savin Rock shoreline",
+        "description": "The Savin Rock outcropping and beach on Long Island Sound in West Haven.",
+        "author": "Staib",
+        "license": "CC BY-SA 4.0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Savin_Rock,_West_Haven,_CT,_USA.jpg"
+      },
+      {
+        "src": "/photos/ct/west-haven/bradley-point-park-aerial.jpg",
+        "thumb": "/photos/ct/west-haven/bradley-point-park-aerial_thumb.jpg",
+        "title": "Bradley Point Park aerial",
+        "description": "An aerial view of Bradley Point Park and the Ocean Avenue shoreline in West Haven.",
+        "author": "Marcc16",
+        "license": "CC BY-SA 4.0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Ocean_Ave_Aerial-1.jpg"
+      },
+      {
+        "src": "/photos/ct/west-haven/sandy-point-piping-plover.jpg",
+        "thumb": "/photos/ct/west-haven/sandy-point-piping-plover_thumb.jpg",
+        "title": "Piping plover at Sandy Point",
+        "description": "A piping plover at Sandy Point Beach & Bird Sanctuary, an Important Bird Area since 2003.",
+        "author": "Paul Danese",
+        "license": "CC BY-SA 4.0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:20260516_piping_plover_sandy_point_bird_sanctuary_PD01792.jpg"
+      }
+    ]
+  },
+  "places": [
+    {
+      "slug": "west-haven-veterans-museum-learning-center",
+      "name": "West Haven Veterans Museum & Learning Center",
+      "kind": "museum",
+      "town": "West Haven",
+      "state": "Connecticut",
+      "county": "New Haven County",
+      "address": "30 Hood Terrace, West Haven, CT 06516",
+      "official_url": "http://www.whmilmuseum.org/",
+      "summary": "A nonprofit run by retired veterans and local volunteers, with a Wall of Honor, a collection gallery available by appointment, and a focus on Connecticut's 102nd Regiment. Admission free, donations accepted. Posted hours are Thursday-Saturday 10 a.m.-2 p.m.; the museum's website has shown no updates in some time, so call or email ahead to confirm before visiting.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "sandy-point-beach-bird-sanctuary",
+      "name": "Sandy Point Beach & Bird Sanctuary",
+      "kind": "park",
+      "town": "West Haven",
+      "state": "Connecticut",
+      "county": "New Haven County",
+      "address": "Beach Street, West Haven, CT 06516",
+      "official_url": "https://www.cityofwesthaven.com/329/Sandy-Point-Beach-Bird-Sanctuary",
+      "summary": "Designated an Important Bird Area by Audubon Connecticut in 2003, hosting piping plovers, American oystercatchers, least terns, common terns and sharp-tailed sparrows in the adjacent tidal marsh. Boston Globe Magazine ranked it among New England's best beaches in 2018 for birding, fishing and trails; trained Audubon Wildlife Guards monitor nesting sites in season.",
+      "status": "open",
+      "photos": [
+        {
+          "src": "/photos/ct/west-haven/sandy-point-piping-plover.jpg",
+          "thumb": "/photos/ct/west-haven/sandy-point-piping-plover_thumb.jpg",
+          "title": "Piping plover at Sandy Point",
+          "description": "A piping plover at Sandy Point Beach & Bird Sanctuary, an Important Bird Area since 2003.",
+          "author": "Paul Danese",
+          "license": "CC BY-SA 4.0",
+          "source_url": "https://commons.wikimedia.org/wiki/File:20260516_piping_plover_sandy_point_bird_sanctuary_PD01792.jpg"
+        }
+      ]
+    },
+    {
+      "slug": "bradley-point-park",
+      "name": "Bradley Point Park",
+      "kind": "historic-site",
+      "town": "West Haven",
+      "state": "Connecticut",
+      "county": "New Haven County",
+      "address": "Captain Thomas Boulevard, West Haven, CT 06516",
+      "summary": "Marks the spot where British troops landed to invade New Haven on July 5, 1779. The rocky outcropping on its shorefront is the Savin Rock that gave the surrounding neighborhood and the vanished amusement resort their name. Today the park occupies redeveloped former amusement-park land, with picnic areas, a Veterans Walk of Honor and open views across Long Island Sound.",
+      "status": "open",
+      "photos": [
+        {
+          "src": "/photos/ct/west-haven/bradley-point-park-aerial.jpg",
+          "thumb": "/photos/ct/west-haven/bradley-point-park-aerial_thumb.jpg",
+          "title": "Bradley Point Park aerial",
+          "description": "An aerial view of Bradley Point Park and the Ocean Avenue shoreline in West Haven.",
+          "author": "Marcc16",
+          "license": "CC BY-SA 4.0",
+          "source_url": "https://commons.wikimedia.org/wiki/File:Ocean_Ave_Aerial-1.jpg"
+        }
+      ]
+    },
+    {
+      "slug": "west-haven-eco-park",
+      "name": "West Haven Eco Park",
+      "kind": "park",
+      "town": "West Haven",
+      "state": "Connecticut",
+      "county": "New Haven County",
+      "address": "Adjacent to Old Grove Park, West Haven, CT 06516",
+      "official_url": "https://landtrustwesthavenct.org/ecopark/",
+      "summary": "A 1.5-acre shoreline restoration park on Long Island Sound planted with more than 16,000 native trees, plants and shrubs, with 13 interpretive signs carrying QR codes on shoreline ecosystems and climate resilience. Held its grand opening June 16, 2026, run collaboratively by the Land Trust of West Haven, the city and local environmental partners.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "savin-rock-shoreline-path",
+      "name": "Savin Rock Shoreline Path",
+      "kind": "attraction",
+      "town": "West Haven",
+      "state": "Connecticut",
+      "county": "New Haven County",
+      "address": "Runs along Captain Thomas Boulevard and Beach Street between Bradley Point and Sandy Point, West Haven, CT 06516",
+      "summary": "A 1.7-mile paved recreation path linking West Haven's nearly four miles of publicly accessible beach — about 25% of all public beach in Connecticut — following the footprint of the vanished Savin Rock amusement park.",
+      "status": "open",
+      "photos": [
+        {
+          "src": "/photos/ct/west-haven/savin-rock-shoreline-west-haven.jpg",
+          "thumb": "/photos/ct/west-haven/savin-rock-shoreline-west-haven_thumb.jpg",
+          "title": "Savin Rock shoreline",
+          "description": "The Savin Rock outcropping and beach on Long Island Sound in West Haven.",
+          "author": "Staib",
+          "license": "CC BY-SA 4.0",
+          "source_url": "https://commons.wikimedia.org/wiki/File:Savin_Rock,_West_Haven,_CT,_USA.jpg"
+        }
+      ]
+    },
+    {
+      "slug": "zuppardis-apizza",
+      "name": "Zuppardi's Apizza",
+      "kind": "restaurant",
+      "town": "West Haven",
+      "state": "Connecticut",
+      "county": "New Haven County",
+      "address": "179 Union Ave, West Haven, CT 06516",
+      "official_url": "http://zuppardisapizza.com/west-haven/",
+      "summary": "Established in 1934 and still run by Anthony Zuppardi's children and grandchildren, the family's original pizzeria — a New Haven-style apizza institution known for its fresh-shucked white clam pie. Hours Mon-Thu 11 a.m.-8 p.m., Fri-Sat 11 a.m.-9 p.m., Sun noon-8 p.m. Phone (203) 934-1949.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "biagettis-restaurant",
+      "name": "Biagetti's Restaurant",
+      "kind": "restaurant",
+      "town": "West Haven",
+      "state": "Connecticut",
+      "county": "New Haven County",
+      "address": "77 Campbell Ave, West Haven, CT 06516",
+      "summary": "A long-running Campbell Avenue Italian-American restaurant with a patio, and a standing venue for West Haven community gatherings and reunion dinners with music and dancing.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "salty-tomato",
+      "name": "Salty Tomato",
+      "kind": "restaurant",
+      "town": "West Haven",
+      "state": "Connecticut",
+      "county": "New Haven County",
+      "address": "18 Ocean Ave (Baybrook Plaza), West Haven, CT 06516",
+      "summary": "Opened by chef-owner Nikolaos \"Niko\" Saragias, a Culinary Institute of America graduate with more than 30 years in the kitchen, including Manhattan stints before moving to Connecticut. Blends New York and New Haven pizza styles with Sicilian squares, grinders and wings; nothing served is canned or pre-made. Delivery via DoorDash and Grubhub.",
+      "status": "open",
+      "photos": []
+    }
+  ],
+  "entries": [
+    {
+      "kind": "sight",
+      "name": "West Haven Veterans Museum & Learning Center",
+      "place_slug": "west-haven-veterans-museum-learning-center",
+      "note": "A veteran-run museum with a focus on Connecticut's 102nd Regiment."
+    },
+    {
+      "kind": "sight",
+      "name": "Sandy Point Beach & Bird Sanctuary",
+      "place_slug": "sandy-point-beach-bird-sanctuary",
+      "note": "An Important Bird Area hosting piping plovers and least terns."
+    },
+    {
+      "kind": "sight",
+      "name": "Bradley Point Park",
+      "place_slug": "bradley-point-park",
+      "note": "The site of the 1779 British landing, source of the Savin Rock name."
+    },
+    {
+      "kind": "sight",
+      "name": "West Haven Eco Park",
+      "place_slug": "west-haven-eco-park",
+      "note": "A new shoreline restoration park, opened June 2026."
+    },
+    {
+      "kind": "walk",
+      "name": "Savin Rock Shoreline Path",
+      "place_slug": "savin-rock-shoreline-path",
+      "note": "A 1.7-mile path linking West Haven's public beaches."
+    },
+    {
+      "kind": "food",
+      "name": "Zuppardi's Apizza",
+      "place_slug": "zuppardis-apizza",
+      "note": "A New Haven-style apizza institution since 1934."
+    },
+    {
+      "kind": "food",
+      "name": "Biagetti's Restaurant",
+      "place_slug": "biagettis-restaurant",
+      "note": "A long-running Italian-American restaurant on Campbell Avenue."
+    },
+    {
+      "kind": "food",
+      "name": "Salty Tomato",
+      "place_slug": "salty-tomato",
+      "note": "New York and New Haven pizza styles at Baybrook Plaza."
+    }
+  ],
+  "links": [
+    {
+      "target": "guide:orange-ct-travel-guide",
+      "kind": "nearby",
+      "note": "West Haven split from Orange to become a separate town in 1921."
+    },
+    {
+      "target": "guide:new-haven-ct-travel-guide",
+      "kind": "same-region",
+      "note": "The nearest verified lodging, The Blake New Haven, sits in downtown New Haven near Yale and the Green."
+    },
+    {
+      "target": "guide:midtown-manhattan-guide",
+      "kind": "see-also",
+      "note": "West Haven station offers full Metro-North New Haven Line service direct to Grand Central Terminal."
+    }
+  ]
+}

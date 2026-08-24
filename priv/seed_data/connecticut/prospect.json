@@ -1,0 +1,254 @@
+{
+  "guide": {
+    "slug": "prospect-ct-travel-guide",
+    "title": "Prospect, Connecticut: The Highest Ground in New Haven County",
+    "destination": "Prospect, Connecticut",
+    "state": "Connecticut",
+    "county": "New Haven County",
+    "intro": "Prospect was settled in the 1710s and incorporated as a town in 1827, formed from the \"South Farms\" section of Waterbury and the \"West Rocks\" section of Cheshire. Originally called Columbia Parish, it was renamed Prospect for the long views from the town green, which before tree growth reportedly took in Long Island Sound, the Connecticut River and Long Island on clear days; sitting at the highest elevation in New Haven County, the town is named for the views it provided. In 1853 Connecticut's only completed plank road was built through Prospect, connecting Waterbury to Cheshire, but unable to compete with the industrial centers of Waterbury and Naugatuck, Prospect has remained a rural suburb. Small manufacturers in the Rag Hollow area, using waterpower from the Ten Mile River, once produced sewing needles, cutlery and hardware, and Prospect is credited as the place where the first parlor matches in the United States were made.",
+    "sections": [
+      {
+        "heading": "A pumpkin festival on the town green",
+        "body": "Today Prospect is a town of roughly 9,400 residents, bordered by Bethany, Waterbury, Cheshire and Naugatuck, roughly five miles long by four miles wide, with Town Hall at 36 Center Street; the town brands itself \"The Best Small Town In Connecticut.\" The Prospect Historical Society is headquartered in the Hotchkiss House, a home owned by the same family for over 160 years, holding artifacts and exhibits on the town's past. The town has hosted its Pumpkin Festival on the Prospect Town Green every year since 2004, with a pumpkin-decorating contest, scarecrow contest, a costume parade down Route 69, and a haybale race — the 2026 edition runs October 17."
+      },
+      {
+        "heading": "Getting there",
+        "body": "Prospect is a car-town: it has no rail station and no interstate exit of its own, so visitors drive in on Route 69 and Route 68, which cross near the town green, using nearby I-84 and I-691 interchanges in Waterbury and Cheshire. The nearest passenger rail is Metro-North's Waterbury Branch, at Waterbury and Naugatuck stations — though buses currently replace all rail on that branch from July 20, 2026 through May 31, 2027 during station reconstruction."
+      }
+    ],
+    "faq": [
+      {
+        "question": "How do I get to Prospect?",
+        "answer": "By car on Route 69 or Route 68, using nearby I-84 and I-691 interchanges in Waterbury and Cheshire. There is no rail station in Prospect; the nearest are Waterbury and Naugatuck on Metro-North's Waterbury Branch, though buses currently replace trains on that branch through May 31, 2027."
+      },
+      {
+        "question": "Why is Prospect called that?",
+        "answer": "For the long views from the town green — before tree growth, they reportedly took in Long Island Sound, the Connecticut River and Long Island on clear days. Prospect sits at the highest elevation in New Haven County."
+      },
+      {
+        "question": "Is there a hotel in Prospect?",
+        "answer": "No hotel, motel or B&B could be verified as physically located in Prospect. The nearest options are in adjacent Waterbury and Naugatuck, though their current operating status could not be independently confirmed — call ahead."
+      },
+      {
+        "question": "What is the Prospect Pumpkin Festival?",
+        "answer": "The town's signature annual event, held on the Prospect Town Green every year since 2004, with a pumpkin-decorating contest, scarecrow contest, a costume parade down Route 69, a dog costume contest and a haybale race. The 2026 edition runs October 17, 4-8 p.m."
+      }
+    ],
+    "photos": [
+      {
+        "src": "/photos/ct/prospect/prospect-town-green.jpg",
+        "thumb": "/photos/ct/prospect/prospect-town-green_thumb.jpg",
+        "title": "Prospect Town Green",
+        "description": "The Prospect Town Green, home of the annual Pumpkin Festival since 2004.",
+        "author": "CosmicKanan",
+        "license": "CC0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Prospect,_Connecticut_Town_Green.jpg"
+      },
+      {
+        "src": "/photos/ct/prospect/prospect-congregational-church.jpg",
+        "thumb": "/photos/ct/prospect/prospect-congregational-church_thumb.jpg",
+        "title": "Prospect Congregational Church",
+        "description": "The Prospect Congregational Church on Center Street, anchoring the town green.",
+        "author": "CosmicKanan",
+        "license": "CC BY-SA 4.0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Prospect,_Connecticut_Congregational_Church.jpg"
+      }
+    ]
+  },
+  "places": [
+    {
+      "slug": "prospect-historical-society-hotchkiss-house",
+      "name": "Prospect Historical Society (Hotchkiss House)",
+      "kind": "museum",
+      "town": "Prospect",
+      "state": "Connecticut",
+      "county": "New Haven County",
+      "address": "61 Waterbury Rd, Prospect, CT 06712",
+      "official_url": "https://townofprospect.gov/prospect-historical-society/",
+      "summary": "Headquartered in the Hotchkiss House, built in 1819 and owned by the same family for over 160 years, now holding artifacts, documents and exhibits on Prospect's past. The society publishes historical booklets and awards annual scholarships. Open Thursdays 9 a.m.-noon. Phone (203) 758-5503.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "prospect-town-green",
+      "name": "Prospect Town Green",
+      "kind": "park",
+      "town": "Prospect",
+      "state": "Connecticut",
+      "county": "New Haven County",
+      "address": "Center Street, Prospect, CT 06712 (adjacent to Town Hall, 36 Center Street)",
+      "official_url": "https://townofprospect.gov/pumpkin-festival/",
+      "summary": "The town's civic heart and the site of the annual Prospect Pumpkin Festival, held on the green since 2004, with a pumpkin-decorating contest, scarecrow contest, a costume parade down Route 69, a dog costume contest and a haybale race. Also the viewpoint that gave the town its name. The 2026 festival runs October 17, 4-8 p.m.",
+      "status": "open",
+      "photos": [
+        {
+          "src": "/photos/ct/prospect/prospect-town-green.jpg",
+          "thumb": "/photos/ct/prospect/prospect-town-green_thumb.jpg",
+          "title": "Prospect Town Green",
+          "description": "The Prospect Town Green, home of the annual Pumpkin Festival since 2004.",
+          "author": "CosmicKanan",
+          "license": "CC0",
+          "source_url": "https://commons.wikimedia.org/wiki/File:Prospect,_Connecticut_Town_Green.jpg"
+        },
+        {
+          "src": "/photos/ct/prospect/prospect-congregational-church.jpg",
+          "thumb": "/photos/ct/prospect/prospect-congregational-church_thumb.jpg",
+          "title": "Prospect Congregational Church",
+          "description": "The Prospect Congregational Church on Center Street, anchoring the town green.",
+          "author": "CosmicKanan",
+          "license": "CC BY-SA 4.0",
+          "source_url": "https://commons.wikimedia.org/wiki/File:Prospect,_Connecticut_Congregational_Church.jpg"
+        }
+      ]
+    },
+    {
+      "slug": "prospect-public-library",
+      "name": "Prospect Public Library",
+      "kind": "attraction",
+      "town": "Prospect",
+      "state": "Connecticut",
+      "county": "New Haven County",
+      "address": "17 Center Street, Prospect, CT 06712",
+      "official_url": "https://www.prospectlibrary.com/",
+      "summary": "Beyond books, the library lends Connecticut museum passes, runs an \"Artist of the Month\" exhibit program, keeps a board game and puzzle collection, offers notary service and rents out its gazebo. Hours Mon/Wed/Fri 10 a.m.-5 p.m., Tue/Thu 10 a.m.-7 p.m., Sat 10 a.m.-3 p.m. (closed Saturdays in July and August). Phone (203) 758-3001.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "hotchkiss-field",
+      "name": "Hotchkiss Field",
+      "kind": "park",
+      "town": "Prospect",
+      "state": "Connecticut",
+      "county": "New Haven County",
+      "address": "61 Waterbury Road, Prospect, CT 06712",
+      "summary": "One of Prospect's municipal parks, on the same parcel as the Hotchkiss House and Historical Society. The town has solicited proposals for an inclusive replacement playground on the site. Call Town Hall at (203) 758-4461 for current details.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "haven-pizzeria-napoletana",
+      "name": "Haven Pizzeria Napoletana",
+      "kind": "restaurant",
+      "town": "Prospect",
+      "state": "Connecticut",
+      "county": "New Haven County",
+      "address": "22 Union City Road, Prospect, CT 06712",
+      "official_url": "https://www.havenpizzerianapoletana.com/",
+      "summary": "Wood-fired Neapolitan pizza and Italian cooking, with fresh pasta, panuozzos, grilled octopus and Italian cocktails. Hours Wed-Sat 3-9 p.m., Sun 1-8 p.m., closed Mon-Tue. The restaurant closes annually for brick-oven maintenance in mid-to-late August — call (203) 758-0873 to confirm before visiting.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "first-class-pizzeria-bar",
+      "name": "1st Class Pizzeria & Bar",
+      "kind": "restaurant",
+      "town": "Prospect",
+      "state": "Connecticut",
+      "county": "New Haven County",
+      "address": "105 Waterbury Rd, Prospect, CT 06712",
+      "official_url": "https://1stclasspizzeria.com/",
+      "summary": "A neighborhood pizzeria with a full barroom that bills itself as \"More than just pizza,\" serving Italian entrees, soups and salads alongside the pies. Hours closed Monday, Tue-Sun 3-9 p.m., bar open later. Phone (203) 527-4433.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "big-dipper-ice-cream-parlour",
+      "name": "The Big Dipper Ice Cream Parlour",
+      "kind": "cafe",
+      "town": "Prospect",
+      "state": "Connecticut",
+      "county": "New Haven County",
+      "address": "91 Waterbury Rd, Prospect, CT 06712",
+      "official_url": "https://bigdipper.com/",
+      "summary": "Founded in Prospect in 1986, with more than 50 flavors of hand-scooped ice cream. Hours Mon-Fri noon-9:30 p.m., Sat-Sun 11 a.m.-9:30 p.m. Phone (203) 758-3200.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "senor-panchos-prospect",
+      "name": "Señor Pancho's of Prospect",
+      "kind": "restaurant",
+      "town": "Prospect",
+      "state": "Connecticut",
+      "county": "New Haven County",
+      "address": "280 Cheshire Rd, Prospect, CT 06712",
+      "official_url": "https://senorpanchos.com/",
+      "summary": "Part of a Connecticut family-run Mexican group founded in 1989, known locally for fajitas, tacos, margaritas and an outdoor patio. Hours Mon-Thu 11 a.m.-10 p.m., Fri-Sat 11 a.m.-11 p.m., Sun 11 a.m.-9 p.m. Phone (203) 758-7788.",
+      "status": "open",
+      "photos": []
+    }
+  ],
+  "entries": [
+    {
+      "kind": "sight",
+      "name": "Prospect Historical Society (Hotchkiss House)",
+      "place_slug": "prospect-historical-society-hotchkiss-house",
+      "note": "An 1819 house owned by the same family for over 160 years."
+    },
+    {
+      "kind": "sight",
+      "name": "Prospect Town Green",
+      "place_slug": "prospect-town-green",
+      "note": "Site of the annual Pumpkin Festival since 2004."
+    },
+    {
+      "kind": "sight",
+      "name": "Prospect Public Library",
+      "place_slug": "prospect-public-library",
+      "note": "Lends museum passes and runs an Artist of the Month program."
+    },
+    {
+      "kind": "sight",
+      "name": "Hotchkiss Field",
+      "place_slug": "hotchkiss-field",
+      "note": "A municipal park on the Hotchkiss House parcel."
+    },
+    {
+      "kind": "food",
+      "name": "Haven Pizzeria Napoletana",
+      "place_slug": "haven-pizzeria-napoletana",
+      "note": "Wood-fired Neapolitan pizza and Italian cooking."
+    },
+    {
+      "kind": "food",
+      "name": "1st Class Pizzeria & Bar",
+      "place_slug": "first-class-pizzeria-bar",
+      "note": "A neighborhood pizzeria with a full barroom."
+    },
+    {
+      "kind": "food",
+      "name": "The Big Dipper Ice Cream Parlour",
+      "place_slug": "big-dipper-ice-cream-parlour",
+      "note": "50+ flavors of hand-scooped ice cream since 1986."
+    },
+    {
+      "kind": "food",
+      "name": "Señor Pancho's of Prospect",
+      "place_slug": "senor-panchos-prospect",
+      "note": "Family-run Mexican cooking with an outdoor patio."
+    }
+  ],
+  "links": [
+    {
+      "target": "guide:bethany-ct-travel-guide",
+      "kind": "nearby",
+      "note": "Prospect's own town page lists Bethany among its four bordering towns."
+    },
+    {
+      "target": "guide:cheshire-ct-travel-guide",
+      "kind": "nearby",
+      "note": "Prospect was formed partly from Cheshire's \"West Rocks\" section, and Cheshire is one of Prospect's four bordering towns."
+    },
+    {
+      "target": "guide:naugatuck-ct-travel-guide",
+      "kind": "nearby",
+      "note": "Prospect's own town page lists Naugatuck among its four bordering towns."
+    },
+    {
+      "target": "guide:waterbury-ct-travel-guide",
+      "kind": "nearby",
+      "note": "Prospect was formed partly from Waterbury's \"South Farms\" section, and Waterbury is one of Prospect's four bordering towns."
+    }
+  ]
+}

@@ -1,0 +1,203 @@
+{
+  "guide": {
+    "slug": "bethany-ct-travel-guide",
+    "title": "Bethany, Connecticut: A Rural Airfield's Airmail Arrow",
+    "destination": "Bethany, Connecticut",
+    "state": "Connecticut",
+    "county": "New Haven County",
+    "intro": "Bethany was first settled in 1717 as part of Woodbridge and separated to be incorporated as its own town in May 1832, taking its name from the biblical village. Its territory shrank twice in the 19th century: in 1844 the Straitsville area, along with parts of Waterbury and Oxford, was removed to help form Naugatuck, and the town's western section later became Beacon Falls. Dairying and agriculture were historic mainstays, and Bethany's reservoirs still serve the far larger municipalities of Naugatuck and New Haven — a role that has helped keep the town rural. Bethany Airport opened in 1923 as one of the first airports in New England and served early airmail flights before closing in 1965; the Town of Bethany bought the 112-acre property in 1967, and a preserved concrete airmail navigation arrow survives on the grounds today. Bethany remains the least densely populated town in New Haven County.",
+    "sections": [
+      {
+        "heading": "An airfield, a lake and a wartime escape",
+        "body": "Clockmaker Silas Hoadley was born in Bethany in 1786. Bethany native Rollin Booth Fowler flew with the 435th Troop Carrier Group and crash-landed a glider during the D-Day Normandy invasion on June 6, 1944; captured as a POW, he escaped by throwing a grenade at a German colonel's staff car and racing back to Allied lines on a commandeered German motorcycle. Veterans Memorial Park, built around Hockanum Lake, was originally a ski club property the town acquired in 1997, opening to the public in 1999 with a veterans' Wall of Honor added in 2002; it offers a swimming beach and an easy Lake Loop Trail. The Bethany Historical Society, incorporated in 1993, occupies the town's former 1914 Town Hall, renamed the Stanley Downs Memorial Building."
+      },
+      {
+        "heading": "Getting there",
+        "body": "Bethany is a drive-to town with no rail station, no interstate and no scheduled transit of its own. It sits midway between New Haven and Waterbury on Routes 63 (Amity Road) and 69, with Route 42 running west toward Beacon Falls and the Naugatuck Valley. New Haven Union Station, southeast down Route 63, is the nearest passenger rail hub, served by Metro-North's New Haven Line, CTrail Shore Line East, the CTrail Hartford Line and Amtrak."
+      }
+    ],
+    "faq": [
+      {
+        "question": "How do I get to Bethany?",
+        "answer": "By car — Bethany has no rail station, interstate or scheduled transit of its own. Routes 63 (Amity Road) and 69 run north-south between New Haven and Waterbury; the nearest rail is New Haven Union Station, southeast down Route 63."
+      },
+      {
+        "question": "What was Bethany Airport?",
+        "answer": "One of the first airports in New England, opened in 1923 and used for early airmail flights before closing in 1965. The Town of Bethany bought the 112-acre property in 1967; a preserved concrete airmail navigation arrow and a historic hangar remain on the site, now used for soccer and equestrian fields and trails."
+      },
+      {
+        "question": "Is there a hotel in Bethany?",
+        "answer": "No hotel, motel, inn or bed-and-breakfast could be verified in Bethany, a rural town with no municipal water or sewer service. The nearest verified lodging is The Blake New Haven, a boutique hotel at 9 High Street in New Haven."
+      },
+      {
+        "question": "Can I hike the Quinnipiac Trail from Bethany?",
+        "answer": "Yes. The Blue-Blazed Quinnipiac Trail runs 21 miles through Hamden, Cheshire, Bethany and Prospect over steep traprock-ridge terrain, passing through Sleeping Giant and West Rock Ridge state parks; its northern end was extended in 2020 to Kathan Woods Nature Preserve in Prospect."
+      }
+    ],
+    "photos": [
+      {
+        "src": "/photos/ct/bethany/downs-road-bethany.jpg",
+        "thumb": "/photos/ct/bethany/downs-road-bethany_thumb.jpg",
+        "title": "Downs Road, Bethany",
+        "description": "A rural street scene along Downs Road in Bethany.",
+        "author": "Ethan Long",
+        "license": "CC BY-SA 2.0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Downs_Road,_Bethany,_Connecticut_(53834031755).jpg"
+      },
+      {
+        "src": "/photos/ct/bethany/bethany-veterans-wall-of-honor.jpg",
+        "thumb": "/photos/ct/bethany/bethany-veterans-wall-of-honor_thumb.jpg",
+        "title": "Bethany Veterans Wall of Honor",
+        "description": "The Veterans Wall of Honor in the Bethany town center.",
+        "author": "Ferrantep2",
+        "license": "Public domain",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Bethany_Veterans_Wall_of_Honor.jpg"
+      }
+    ]
+  },
+  "places": [
+    {
+      "slug": "bethany-airport-property",
+      "name": "Bethany Airport Property",
+      "kind": "historic-site",
+      "town": "Bethany",
+      "state": "Connecticut",
+      "county": "New Haven County",
+      "address": "719 Amity Road, Bethany, CT 06524",
+      "official_url": "https://bethanyct.gov/parks/airport",
+      "summary": "A 112-acre town-owned recreation area on the site of Bethany Airport, which opened in 1923 and served early airmail flights before closing in 1965; the Town of Bethany bought the property in 1967. The site preserves a concrete airmail navigation arrow and a historic hangar, plus soccer and football fields, two equestrian riding rings, and a three-loop trail system (Yellow 0.28 mi, White 0.47 mi, Red 0.9 mi).",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "veterans-memorial-park-bethany",
+      "name": "Veterans Memorial Park",
+      "kind": "park",
+      "town": "Bethany",
+      "state": "Connecticut",
+      "county": "New Haven County",
+      "address": "265 Beacon Road, Bethany, CT 06524",
+      "official_url": "https://bethanyct.gov/parks/vets-park",
+      "summary": "A 149-acre town park built around Hockanum Lake, formerly a ski club property the town acquired in 1997 and opened to the public in 1999. Features a swimming beach, an easy Lake Loop Trail, moderate woodland trails, basketball and tennis courts, a playground, and a veterans' Wall of Honor added in 2002. Non-residents need a parking pass from the Tax Collector's Office.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "bethany-historical-society",
+      "name": "Bethany Historical Society",
+      "kind": "museum",
+      "town": "Bethany",
+      "state": "Connecticut",
+      "county": "New Haven County",
+      "address": "512 Amity Road, Bethany, CT 06524",
+      "official_url": "https://bethanyhistoricalsociety.org/",
+      "summary": "Incorporated August 2, 1993, the society occupies Bethany's former 1914 Town Hall, renamed the Stanley Downs Memorial Building for a past First Selectman. Archives and programs cover the town's rural history. Hours are not posted online; call (203) 393-1832 before visiting.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "quinnipiac-trail-bethany-section",
+      "name": "Quinnipiac Trail (Bethany section)",
+      "kind": "park",
+      "town": "Bethany",
+      "state": "Connecticut",
+      "county": "New Haven County",
+      "address": "Bethany, CT 06524 (the trail crosses Bethany between Hamden and Prospect)",
+      "official_url": "https://ctwoodlands.org/trails/quinnipiac-trail/",
+      "summary": "Connecticut's Blue-Blazed Quinnipiac Trail runs 21 miles through Hamden, Cheshire, Bethany and Prospect over steep traprock-ridge terrain, passing through Sleeping Giant and West Rock Ridge state parks. Its northern end was extended in 2020 to Kathan Woods Nature Preserve in Prospect.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "country-corner-restaurant",
+      "name": "Country Corner Restaurant",
+      "kind": "restaurant",
+      "town": "Bethany",
+      "state": "Connecticut",
+      "county": "New Haven County",
+      "address": "756 Amity Road, Bethany, CT 06524",
+      "official_url": "https://countrycornerct.com/",
+      "summary": "A family-owned diner and bakery, in business since 2000, known for comfort-food plates, fresh-baked bread and house cakes, with an outdoor deck; gluten-free and vegan options available. Hours Wed-Thu 8 a.m.-8 p.m., Fri-Sat 8 a.m.-8:30 p.m., Sun 8 a.m.-3 p.m., closed Mon-Tue. Phone (203) 393-1489.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "teddy-bs-restaurant-pizzeria",
+      "name": "Teddy B's Restaurant & Pizzeria",
+      "kind": "restaurant",
+      "town": "Bethany",
+      "state": "Connecticut",
+      "county": "New Haven County",
+      "address": "136 Amity Road, Bethany, CT 06524",
+      "official_url": "https://teddybsfood.com/",
+      "summary": "A casual all-day spot blending diner breakfasts, pizza and Italian-American dinners — chicken parmesan, veal or chicken piccata, penne alla vodka — plus a Greek spinach pie with Greek salad. Hours Mon-Fri 8 a.m.-9 p.m., Sat 7 a.m.-9 p.m., Sun 7 a.m.-2 p.m. Phone (203) 393-1525.",
+      "status": "open",
+      "photos": []
+    }
+  ],
+  "entries": [
+    {
+      "kind": "sight",
+      "name": "Bethany Airport Property",
+      "place_slug": "bethany-airport-property",
+      "note": "A former 1923 airfield with a preserved airmail navigation arrow."
+    },
+    {
+      "kind": "sight",
+      "name": "Veterans Memorial Park",
+      "place_slug": "veterans-memorial-park-bethany",
+      "note": "A 149-acre lake park with a swimming beach and Wall of Honor."
+    },
+    {
+      "kind": "sight",
+      "name": "Bethany Historical Society",
+      "place_slug": "bethany-historical-society",
+      "note": "Housed in the town's renamed 1914 former Town Hall."
+    },
+    {
+      "kind": "walk",
+      "name": "Quinnipiac Trail (Bethany section)",
+      "place_slug": "quinnipiac-trail-bethany-section",
+      "note": "A 21-mile blue-blazed trail crossing Bethany's traprock ridges."
+    },
+    {
+      "kind": "food",
+      "name": "Country Corner Restaurant",
+      "place_slug": "country-corner-restaurant",
+      "note": "A family diner and bakery on Amity Road since 2000."
+    },
+    {
+      "kind": "food",
+      "name": "Teddy B's Restaurant & Pizzeria",
+      "place_slug": "teddy-bs-restaurant-pizzeria",
+      "note": "Diner breakfasts, pizza and Italian-American dinners."
+    }
+  ],
+  "links": [
+    {
+      "target": "guide:woodbridge-ct-travel-guide",
+      "kind": "nearby",
+      "note": "Bethany was first settled as part of Woodbridge before separating in 1832."
+    },
+    {
+      "target": "guide:beacon-falls-ct-travel-guide",
+      "kind": "nearby",
+      "note": "Beacon Falls was carved partly from Bethany's territory in 1871."
+    },
+    {
+      "target": "guide:cheshire-ct-travel-guide",
+      "kind": "nearby",
+      "note": "The Quinnipiac Trail runs through both Cheshire and Bethany."
+    },
+    {
+      "target": "guide:prospect-ct-travel-guide",
+      "kind": "nearby",
+      "note": "The Quinnipiac Trail runs through both Bethany and Prospect, ending at Prospect's Kathan Woods Nature Preserve."
+    },
+    {
+      "target": "guide:naugatuck-ct-travel-guide",
+      "kind": "same-region",
+      "note": "Bethany's Straitsville section was removed in 1844 to help form Naugatuck."
+    }
+  ]
+}

@@ -1,0 +1,262 @@
+{
+  "guide": {
+    "slug": "north-haven-ct-travel-guide",
+    "title": "North Haven, Connecticut: A Continent's First Brickyard",
+    "destination": "North Haven, Connecticut",
+    "state": "Connecticut",
+    "county": "New Haven County",
+    "intro": "North Haven grew out of New Haven's colonial land \"Divisions\" — the Third, Fourth and Fifth Divisions eventually became the town. Settled in 1680, it remained mostly a farming community into the mid-1800s before industry arrived, and it was incorporated as a town separate from New Haven on October 19, 1786, with its first town meeting held that November in a meetinghouse bequeathed by Rev. James Pierpont. The town's own historical record claims the first brickyard on the continent stood here, after Theophilus Eaton found clay on his property on the west side of the Quinnipiac River; brickmaking became North Haven's defining industry, and by 1880 immigrants from Ireland, Germany, Italy and Poland had made the growing brick trade their home. Ezra Stiles, seventh president of Yale College and a co-founder of Brown University, was born in North Haven on December 10, 1727, son of the town's minister.",
+    "sections": [
+      {
+        "heading": "A traprock summit and a river state park",
+        "body": "Peter's Rock, at 373 feet the town's highest point, is North Haven's largest open space at roughly 220 acres with about five miles of trails; local tradition names it for Revolutionary War veteran Peter Brockett, and stone ruins remain from a 1901 hunting lodge called The Hermitage. Quinnipiac River State Park, a 323-acre park created in 1948 from land left over after construction of the Wilbur Cross Parkway, protects about six miles of the Quinnipiac River across several riverside sections, with a trailhead on Banton Street. Brick Yard Point, a 57-acre tract of restored habitat on the Quinnipiac River, carries self-guided interpretive trails through tidal marsh and estuary — a direct link to the clay banks that made North Haven a brickmaking town. The North Haven Fair, a family tradition since 1942, is held each September at the North Haven Fairgrounds."
+      },
+      {
+        "heading": "Getting there",
+        "body": "North Haven is a drive-to town just north of New Haven, reached by I-91 (Exit 12, Washington Avenue), the Wilbur Cross Parkway/Route 15 (Exit 63), U.S. Route 5 and Route 17. There is no train station in town — a North Haven stop remains only a proposed future Hartford Line station with no completion date. Rail travelers use New Haven Union Station, served by Amtrak, Metro-North's New Haven Line and the CTrail Hartford Line, or Wallingford, the nearest Hartford Line station to the north."
+      }
+    ],
+    "faq": [
+      {
+        "question": "How do I get to North Haven?",
+        "answer": "By car via I-91 Exit 12 (Washington Avenue) or the Wilbur Cross Parkway (Route 15, Exit 63). There is no train station in North Haven; the nearest are New Haven Union Station to the south and Wallingford to the north."
+      },
+      {
+        "question": "Is North Haven the same as New Haven?",
+        "answer": "No — North Haven separated from New Haven and was incorporated as its own town on October 19, 1786. They remain neighboring but distinct towns."
+      },
+      {
+        "question": "What is Peter's Rock Park?",
+        "answer": "A traprock ridge at 373 feet, North Haven's highest point and largest open space at roughly 220 acres, with about five miles of trails and views over the Quinnipiac River estuary, New Haven Harbor and Long Island Sound. Trailheads are on Middletown Avenue (Route 17) and Hermitage Lane."
+      },
+      {
+        "question": "Is there a hotel in North Haven?",
+        "answer": "Yes — the Clarion Inn North Haven, on Washington Avenue near I-91, is the confirmed full-service hotel in town, with an indoor pool and 24-hour fitness center."
+      }
+    ],
+    "photos": [
+      {
+        "src": "/photos/ct/north-haven/quinnipiac-river-state-park-north-haven.jpg",
+        "thumb": "/photos/ct/north-haven/quinnipiac-river-state-park-north-haven_thumb.jpg",
+        "title": "Quinnipiac River State Park",
+        "description": "An autumn view of the Quinnipiac River at Quinnipiac River State Park in North Haven.",
+        "author": "Eric",
+        "license": "CC BY 2.0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Quinnipiac_River_State_Park.jpg"
+      },
+      {
+        "src": "/photos/ct/north-haven/st-johns-episcopal-church-north-haven.jpg",
+        "thumb": "/photos/ct/north-haven/st-johns-episcopal-church-north-haven_thumb.jpg",
+        "title": "St. John's Episcopal Church",
+        "description": "St. John's Episcopal Church, an 1834 landmark in the North Haven town center.",
+        "author": "Paperchaser29",
+        "license": "CC BY-SA 3.0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:St._Johns_Episcopal_Church,_North_Haven,_CT.jpg"
+      }
+    ]
+  },
+  "places": [
+    {
+      "slug": "peters-rock-park",
+      "name": "Peter's Rock Park",
+      "kind": "park",
+      "town": "North Haven",
+      "state": "Connecticut",
+      "county": "New Haven County",
+      "address": "Trailheads on Middletown Avenue (Route 17) and Hermitage Lane, North Haven, CT",
+      "official_url": "https://www.northhaven-ct.gov/visitors/hiking.php",
+      "summary": "At 373 feet, the town's highest point and largest open space, roughly 220 acres with about five miles of trails and a 360-degree view over the Quinnipiac River estuary, New Haven Harbor and Long Island Sound. Local tradition names it for Revolutionary War veteran Peter Brockett; stone ruins remain from a 1901 hunting lodge called The Hermitage. Open for hiking during daylight hours.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "quinnipiac-river-state-park-north-haven",
+      "name": "Quinnipiac River State Park",
+      "kind": "park",
+      "town": "North Haven",
+      "state": "Connecticut",
+      "county": "New Haven County",
+      "address": "Trailhead on Banton Street (off State Street), North Haven, CT",
+      "summary": "A 323-acre state park created in 1948 from land left over after construction of the Wilbur Cross Parkway, spanning North Haven and Wallingford and protecting about six miles of the Quinnipiac River across several riverside sections. Gentle riverside walking suited to canoeing and fishing; trails maintained by the North Haven Trail Association.",
+      "status": "open",
+      "photos": [
+        {
+          "src": "/photos/ct/north-haven/quinnipiac-river-state-park-north-haven.jpg",
+          "thumb": "/photos/ct/north-haven/quinnipiac-river-state-park-north-haven_thumb.jpg",
+          "title": "Quinnipiac River State Park",
+          "description": "An autumn view of the Quinnipiac River at Quinnipiac River State Park in North Haven.",
+          "author": "Eric",
+          "license": "CC BY 2.0",
+          "source_url": "https://commons.wikimedia.org/wiki/File:Quinnipiac_River_State_Park.jpg"
+        }
+      ]
+    },
+    {
+      "slug": "brick-yard-point",
+      "name": "Brick Yard Point",
+      "kind": "park",
+      "town": "North Haven",
+      "state": "Connecticut",
+      "county": "New Haven County",
+      "address": "On the Quinnipiac River, North Haven, CT",
+      "official_url": "https://www.northhaven-ct.gov/visitors/hiking.php",
+      "summary": "A 57-acre tract of restored habitat with self-guided interpretive trails through tidal marsh, estuary and freshwater wetland — a direct link to the clay banks that made North Haven a brickmaking town.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "north-haven-historical-society",
+      "name": "North Haven Historical Society",
+      "kind": "museum",
+      "town": "North Haven",
+      "state": "Connecticut",
+      "county": "New Haven County",
+      "address": "27 Broadway, North Haven, CT",
+      "summary": "A local history museum with collections and exhibits on the town's past, in the Center Block district near the historic Town Green, Memorial Town Hall and the old burying ground. No operating hours are published online; call ahead.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "north-haven-fair",
+      "name": "North Haven Fair",
+      "kind": "attraction",
+      "town": "North Haven",
+      "state": "Connecticut",
+      "county": "New Haven County",
+      "address": "North Haven Fairgrounds, North Haven, CT",
+      "official_url": "https://www.northhaven-ct.gov/visitors/festivals_and_special_events.php",
+      "summary": "The town's signature event and a family tradition since 1942, with agricultural exhibits, entertainment and fair food. Scheduled for September 10-13, 2026; confirm dates before travel.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "pats-apizza-north-haven",
+      "name": "Pat's Apizza",
+      "kind": "restaurant",
+      "town": "North Haven",
+      "state": "Connecticut",
+      "county": "New Haven County",
+      "address": "289 Washington Avenue, North Haven, CT 06473",
+      "official_url": "https://patsapizza.com/",
+      "summary": "Opened in September 2025 by East Haven native Patrick Hennessey inside the family-owned Forbes Premium Fuel gas station, serving New Haven-style apizza by the slice and whole — tomato pie, the Florina with spinach and roasted red peppers, and mashed potato and bacon among them. Hours Mon-Sat 11 a.m.-8 p.m., closed Sunday. Phone (475) 234-6466.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "haven-hot-chicken-north-haven",
+      "name": "Haven Hot Chicken",
+      "kind": "restaurant",
+      "town": "North Haven",
+      "state": "Connecticut",
+      "county": "New Haven County",
+      "address": "146 Washington Avenue, North Haven, CT 06473",
+      "official_url": "https://havenhotchicken.com/north-haven-ct",
+      "summary": "The New Haven-born Nashville hot chicken chainlet's North Haven shop, mainly takeout and delivery with very limited dine-in seating; vegetarian options alongside the spicy fried chicken. Online ordering only, no phone orders. Hours Sun-Thu 10 a.m.-10 p.m., Fri-Sat 10 a.m.-midnight.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "soga-sushi",
+      "name": "Soga Sushi",
+      "kind": "restaurant",
+      "town": "North Haven",
+      "state": "Connecticut",
+      "county": "New Haven County",
+      "address": "170 Washington Avenue, North Haven, CT 06473",
+      "official_url": "http://www.sogasushi.com/",
+      "summary": "A family-owned Japanese restaurant doing sushi, sashimi, hibachi and noodle dishes, with lunch specials. Sunday hours noon-9:30 p.m.; call (203) 239-3355 for the full weekly schedule.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "clarion-inn-north-haven",
+      "name": "Clarion Inn North Haven",
+      "kind": "hotel",
+      "town": "North Haven",
+      "state": "Connecticut",
+      "county": "New Haven County",
+      "address": "Washington Avenue, North Haven, CT 06473",
+      "summary": "Sits just off I-91, with an indoor swimming pool and a 24-hour fitness center. Booking.com also lists a Hampton Inn & Suites by Hilton in North Haven, though its exact street address could not be independently confirmed.",
+      "status": "open",
+      "photos": []
+    }
+  ],
+  "entries": [
+    {
+      "kind": "sight",
+      "name": "Peter's Rock Park",
+      "place_slug": "peters-rock-park",
+      "note": "The town's highest point, with a 360-degree Long Island Sound view."
+    },
+    {
+      "kind": "sight",
+      "name": "Quinnipiac River State Park",
+      "place_slug": "quinnipiac-river-state-park-north-haven",
+      "note": "323 riverside acres protecting six miles of the Quinnipiac River."
+    },
+    {
+      "kind": "walk",
+      "name": "Brick Yard Point",
+      "place_slug": "brick-yard-point",
+      "note": "Interpretive trails through tidal marsh on the Quinnipiac River."
+    },
+    {
+      "kind": "sight",
+      "name": "North Haven Historical Society",
+      "place_slug": "north-haven-historical-society",
+      "note": "A local history museum near the historic Town Green."
+    },
+    {
+      "kind": "sight",
+      "name": "North Haven Fair",
+      "place_slug": "north-haven-fair",
+      "note": "A family tradition since 1942, each September."
+    },
+    {
+      "kind": "food",
+      "name": "Pat's Apizza",
+      "place_slug": "pats-apizza-north-haven",
+      "note": "New Haven-style apizza inside a gas station, opened 2025."
+    },
+    {
+      "kind": "food",
+      "name": "Haven Hot Chicken",
+      "place_slug": "haven-hot-chicken-north-haven",
+      "note": "Nashville-style hot chicken, mainly takeout and delivery."
+    },
+    {
+      "kind": "food",
+      "name": "Soga Sushi",
+      "place_slug": "soga-sushi",
+      "note": "Family-owned sushi, sashimi and hibachi."
+    },
+    {
+      "kind": "stay",
+      "name": "Clarion Inn North Haven",
+      "place_slug": "clarion-inn-north-haven",
+      "note": "A full-service hotel just off I-91."
+    }
+  ],
+  "links": [
+    {
+      "target": "guide:new-haven-ct-travel-guide",
+      "kind": "nearby",
+      "note": "North Haven grew out of New Haven's colonial land divisions and separated as its own town in 1786."
+    },
+    {
+      "target": "guide:wallingford-ct-travel-guide",
+      "kind": "nearby",
+      "note": "Quinnipiac River State Park spans North Haven and Wallingford, and Wallingford's Wharton Brook State Park sits on both towns' shared address."
+    },
+    {
+      "target": "guide:north-branford-ct-travel-guide",
+      "kind": "nearby",
+      "note": "Route 22 runs from North Haven through the Northford village of North Branford."
+    },
+    {
+      "target": "guide:hamden-ct-travel-guide",
+      "kind": "same-region",
+      "note": "North Haven's own hiking page files Sleeping Giant State Park under nearby attractions in Hamden."
+    }
+  ]
+}

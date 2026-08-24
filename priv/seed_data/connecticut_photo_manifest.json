@@ -23,6 +23,10 @@
     "sha256": "5771e5f246dd715a8140bf0f34dd0a23f3634734d4679745f29e3038fdd1e236",
     "source_url": "https://commons.wikimedia.org/wiki/File:The_Aldrich_Contemporary_Art_Museum_(53563761267).jpg"
   },
+  "alice-newton-street-park-wepawaug-falls": {
+    "sha256": "8709327ba62dc33085aca1470c06ecdd83420fb6c387b1f8971ea0a94b008261",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Alice-newton-park-woodbridge-ct.jpg"
+  },
   "ambler-farm-red-barn-wilton": {
     "sha256": "fe0cc971400ac2fc33fa170d40653fd7073ac7e031b0a1ec2c53e8c04a7c2ab5",
     "source_url": "https://commons.wikimedia.org/wiki/File:Ambler_Farm_4_-_red_barn.jpg"
@@ -30,6 +34,14 @@
   "andrew-clark-house": {
     "sha256": "e72816e310dbdc7308c623546ef2262b0b8b826f507dd4b52f9f8623add870f7",
     "source_url": "https://commons.wikimedia.org/wiki/File:Andrew_Clark_House,_Lisbon,_CT.JPG"
+  },
+  "ansonia-library": {
+    "sha256": "40c3e8accf2595a287e6ad29df89b3a5d5a38f7728f48916819ef33ee4ede272",
+    "source_url": "https://commons.wikimedia.org/wiki/File:AnsoniaCT_PublicLibrary.jpg"
+  },
+  "ansonia-nature-and-recreation-center": {
+    "sha256": "75b3612fbb8ebdccbcf242bdb81901c074bfd39a3d7602857ade9c815a7b9c89",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Ansonia_Nature_and_Recreation_Center_-_building.jpg"
   },
   "ashbel-woodward-house": {
     "sha256": "d611b7d9d50864a90b30e8c75570f7df46bd27122b7b7129a248cf89e777c01b",
@@ -39,9 +51,17 @@
     "sha256": "67dbb213f0e6e9a30f9458b6c785de98dc5543b9ea73bd569dfa41dce819315f",
     "source_url": "https://commons.wikimedia.org/wiki/File:Baltic_Mill,_Sprague,_CT.jpg"
   },
+  "bank-street-seymour": {
+    "sha256": "8c86edec194e0d4b5161877f34fe0ef467c7479e0bad5619ad8c53623eb0f04d",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Seymour,_CT_-_Bank_St_01.jpg"
+  },
   "beardsley-zoo-entrance": {
     "sha256": "e072148bac68c32e3e0665e738b917ecbe994717889bd5e92a7030df103c5041",
     "source_url": "https://commons.wikimedia.org/wiki/File:Entrance,_Beardsley_Zoo,_2009-11-06.jpg"
+  },
+  "bethany-veterans-wall-of-honor": {
+    "sha256": "5d5470446028eaeea5646b95ddf20685fec0a6c0b59ed833abdc0adaec4f4d2c",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Bethany_Veterans_Wall_of_Honor.jpg"
   },
   "bethel-metro-north-station": {
     "sha256": "29201b675224aa37a155d923db50ad5c7ddfd126b3183d4b56336118e12d3b99",
@@ -82,6 +102,10 @@
   "bradley-playhouse-putnam": {
     "sha256": "bf053fa544c6c751e58b1afbcbd2bdd5e0a16cdcb1c7adeeb49e59930a893ba3",
     "source_url": "https://commons.wikimedia.org/wiki/File:Bradley_Playhouse,_Putnam_CT.jpg"
+  },
+  "bradley-point-park-aerial": {
+    "sha256": "64c6db544347af324d166e346ab4fa4718dfd042c623154f06e1234cbe1124dc",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Ocean_Ave_Aerial-1.jpg"
   },
   "branford-point": {
     "sha256": "c8faff13ceaaf413f58ba32819c429a68096dcab593471a8236c83795b13daf6",
@@ -175,6 +199,10 @@
     "sha256": "bc7181b45046a2b7afda80ff9e828f6bba2ba47f90868e7dcd208723ad41f418",
     "source_url": "https://commons.wikimedia.org/wiki/File:ChesterCT_OldTownHall.jpg"
   },
+  "choate-rosemary-hall-walkway": {
+    "sha256": "69d0f57b19d7ded9bb182ed3605298e1df98021ebf631e05ffbeeccb8538b85e",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Walkway_in_autumn_-_Choate_Rosemary_Hall.jpg"
+  },
   "church-farm-ashford": {
     "sha256": "6842bd5082d313b3f9115d10df715e1b64238b681b13b64454f8185ca7a61cf1",
     "source_url": "https://commons.wikimedia.org/wiki/File:AshfordCT_ChurchFarm.jpg"
@@ -255,6 +283,14 @@
     "sha256": "84a94edcc07ce543c5490b5defd10f175845f1b2290db62aeb89fbf9345bd115",
     "source_url": "https://commons.wikimedia.org/wiki/File:Town_Hall,_Deep_River_CT.jpg"
   },
+  "depot-street-bridge-beacon-falls": {
+    "sha256": "9d7e6732a31d5a352194c888b753ee8abe8ca17fc194d3b13df970eb6d10ae6c",
+    "source_url": "https://commons.wikimedia.org/wiki/File:BeaconFalls_DepotStreetBridge.jpg"
+  },
+  "derby-greenway": {
+    "sha256": "59d579349029d8bf9d055957c629977784f60454c5562946442ed459ede84381",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Derby_greenway.jpg"
+  },
   "derby-shelton-bridge-housatonic": {
     "sha256": "818bd69aa1115be73c209d4c6cf65cb04ce4dfcc816388bb7d4cec5e65206f2f",
     "source_url": "https://commons.wikimedia.org/wiki/File:Derby-Shelton_Bridge_over_the_Housatonic,_Connecticut,_USA.jpg"
@@ -262,6 +298,10 @@
   "devils-hopyard-chapman-falls": {
     "sha256": "24888f197948d8e9f6714f8ccdafb99157c22d7d408fe816610daba4dac118e5",
     "source_url": "https://commons.wikimedia.org/wiki/File:Devils_Hopyard_Falls_-_panoramio.jpg"
+  },
+  "downs-road-bethany": {
+    "sha256": "55a56c1c6abf9583ff065e10728f14901c714543c3667ebb2244cc55d3e8cd46",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Downs_Road,_Bethany,_Connecticut_(53834031755).jpg"
   },
   "downtown-chelsea-district": {
     "sha256": "3e2d560febed3e017a91502fd294127707ae7d85953691b9ba230bf67a48822b",
@@ -278,6 +318,10 @@
   "downtown-putnam": {
     "sha256": "bf9c4fafe7a7b17e1a5a37c23e4db12a0da3e1439f7673bbf2b9ae8d7a041c7e",
     "source_url": "https://commons.wikimedia.org/wiki/File:PutnamCT.jpg"
+  },
+  "downtown-seymour-historic-district": {
+    "sha256": "7723c308cdfd756eba75fd9395cf75d068b6e89027cb6f4dbee4a65f6cd3e2bf",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Seymour,_CT_01.jpg"
   },
   "drake-hill-flower-bridge": {
     "sha256": "97570248be1338cf0c98771bb2ecaffbcb191531003e61aadd9d71fb73e143fc",
@@ -306,6 +350,10 @@
   "edmond-town-hall-newtown": {
     "sha256": "972ea95d5ca47e038bc37afc01627cf04bc60c109ca4baab2b8e5a52c8bd1503",
     "source_url": "https://commons.wikimedia.org/wiki/File:NEWTOWNEDMONDTOWNHALL01.jpg"
+  },
+  "edward-smith-library-northford": {
+    "sha256": "3467a1aac989910c7358970697927b9017ff3b20c1b672f76cb53dfc341d97f1",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Edward_Smith_Library,_Northford_CT.jpg"
   },
   "eli-whitney-museum-barn": {
     "sha256": "24f9129c2e5ac0d24252159c0a168b25ae7f66c2a5beaf216690c5ddcc229c4f",
@@ -342,6 +390,10 @@
   "fairfield-town-green": {
     "sha256": "9693c765030aa3ee52f658d5bb34e0a9abfa818077d7f2fdafb2454c438ed5c1",
     "source_url": "https://commons.wikimedia.org/wiki/File:MMDA-Photos_-_2025-01-22_-_Sun_Tavern_-4.jpg"
+  },
+  "farm-river-state-park-marshes": {
+    "sha256": "2fa5e5978ed1eb8cdfa5f840d90ce8a91d30eb2f4c52629df950a399bb3a4be0",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Marshes_at_Farm_River_State_Park_(54052819227).jpg"
   },
   "farmington-canal-trail-hamden": {
     "sha256": "ba8edfb2c32f33e53b24353d64cddbd544a61bbafd131895d19f5522a9bc2235",
@@ -503,6 +555,10 @@
     "sha256": "bd89dfd94a86c748a9d47566d196a22b9d5914cad1a83b73a2eb8e403e57e819",
     "source_url": "https://commons.wikimedia.org/wiki/File:Hill-Stead_Museum_(Farmington,_CT)_-_south_facade.JPG"
   },
+  "hitchcock-phillips-house": {
+    "sha256": "7d152268db3f00594ea1467076d04afbe93bac11afee5523d0c97f755b32e449",
+    "source_url": "https://commons.wikimedia.org/wiki/File:CheshireCT_HistoricalSociety.jpg"
+  },
   "hop-river-trail-bridge-andover": {
     "sha256": "b7509401e0b0592485904d1aa5b0e6b9d137a829c8abebc11481e0b9a3e97a91",
     "source_url": "https://commons.wikimedia.org/wiki/File:Andover_Memorial_Bridge,_Hop_River_State_Park_Trail,_Andover_CT.jpg"
@@ -550,6 +606,10 @@
   "israel-putnam-monument-brooklyn": {
     "sha256": "c1ba0f62bf2141a337475b594a8b0c19ca510f8c6a6dfe20772a8826530e195b",
     "source_url": "https://commons.wikimedia.org/wiki/File:Israel_Putnam_Monument,_Brooklyn_Connecticut.jpg"
+  },
+  "jackson-cove-lake-zoar-oxford": {
+    "sha256": "2bf64862f223f6d7ddf3a1ab5564becab9cb95ce560b1804b045e55547ab811c",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Partially_frozen_Lake_Zoar_viewed_from_the_Pomperaug_Trail_just_south_of_Oxford_Connecticut%27s_Jackson_Cove_Town_Park.jpg"
   },
   "jewett-city-center": {
     "sha256": "d4411a526c2c4abfa416d2d81c0f001fb446ddadce9a660786d1e64391859db0",
@@ -618,6 +678,10 @@
   "little-poland-broad-street": {
     "sha256": "621eab50f03a14e3280b79acb7be61ed4dceff80204409afff2f37f250f99fcb",
     "source_url": "https://commons.wikimedia.org/wiki/File:Broad_Street_in_New_Britain,_Connecticut,_2009-09-15.jpg"
+  },
+  "lock-12-historical-park": {
+    "sha256": "79d6465c46aa3868008668aa3a06c8f6ee01a574ec807f0d39c068747bbe7298",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Lock_12_Historic_Park,_Cheshire_CT.jpg"
   },
   "long-hill-sign-trumbull": {
     "sha256": "eb0b9b67d6f7f1e2a1e1a49aad7b3cfcff4bf41deaf032105a7c2d7f27fcc27d",
@@ -759,6 +823,22 @@
     "sha256": "882ab5ae815dcbce59709bd383f9f11f0478dc3780ff298cecee055c4a7a111e",
     "source_url": "https://commons.wikimedia.org/wiki/File:Nathan_Hale_Homestead_Drone.jpg"
   },
+  "naugatuck-green": {
+    "sha256": "1508e81a5c5c3691a381aaf86a951c329846a1542134238fb3bc8a05b4fa6ea6",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Naugatuck_Green,_Connecticut.jpg"
+  },
+  "naugatuck-river-seymour": {
+    "sha256": "7bd7ddce8d9a610a0b3f7982187f3f3008d27fa14eb6c372bd5dd32733e7e723",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Seymour,_CT_-_upstream_on_the_Naugatuck_01.jpg"
+  },
+  "naugatuck-town-hall": {
+    "sha256": "7c3cc7dccebc4018e1b5179b43e4e9200acad5aeea8c5cb0ca5d05544e877b02",
+    "source_url": "https://commons.wikimedia.org/wiki/File:NaugatuckCT_TownHall.jpg"
+  },
+  "naugatuck-trail-route-8-border-beacon-falls": {
+    "sha256": "f97091a04cf3bec3e0336cfc0bf19efa66b50ae6f3cfb03b7c920860ac6b906b",
+    "source_url": "https://commons.wikimedia.org/wiki/File:NaugatuckTrailNaugatuckStateForestBeaconFallsCT-CTRoute8Border.jpg"
+  },
   "nbmaa-chase-family-building": {
     "sha256": "97a589b5187bb37ebabdbd8b78d79a617092a70bdd8d5ee27a68c5731a2806d1",
     "source_url": "https://commons.wikimedia.org/wiki/File:Chase_Family_Building_-_New_Britain_Museum_of_American_Art_-_DSC08970.JPG"
@@ -799,6 +879,14 @@
     "sha256": "13a48f93aedd8479a05b2109f9d1ad91b7df36d134f3ee6512db83f830cc63b6",
     "source_url": "https://commons.wikimedia.org/wiki/File:Noah_Webster_House,_West_Hartford,_CT_(January_2026).jpg"
   },
+  "north-branford-center-historic-district": {
+    "sha256": "5fcf4113b45f4fa50a102785c95127576f44c7129794cec3c8f44d9d18b91fab",
+    "source_url": "https://commons.wikimedia.org/wiki/File:NorthBranfordCT_CenterHD_1.jpg"
+  },
+  "north-branford-town-hall": {
+    "sha256": "29bf6606dbe10a99b9490658a9e5040daad065c88753bb6081fc65dcfe9f4ed4",
+    "source_url": "https://commons.wikimedia.org/wiki/File:North_Branford_Town_Hall_099.JPG"
+  },
   "norwich-harbor": {
     "sha256": "4029845d4fe823653ffea8d43de809fcf2a42fef1d5e354241b9bc4f32c6feaa",
     "source_url": "https://commons.wikimedia.org/wiki/File:Norwich_CT_harbor_at_night.jpg"
@@ -818,6 +906,10 @@
   "old-state-house": {
     "sha256": "4babed6e5a6e2ae55dcef59e325a00f42d16224c4a4da24e44c8489c44d2e0a4",
     "source_url": "https://commons.wikimedia.org/wiki/File:Old_State_House,_Hartford_CT_-_front_facade.JPG"
+  },
+  "old-stone-church-east-haven": {
+    "sha256": "9f9c9587a440eb24e6ba915b3c40a8246193c6af04e1d835f8fda5063f2c45c0",
+    "source_url": "https://commons.wikimedia.org/wiki/File:FirstCongregationalChurchofEastHavenCT.jpg"
   },
   "old-store-sherman": {
     "sha256": "f9da2e9feaddaf734f82875a4e8eab801ad284f2cbdc2d25df70e45769759281",
@@ -839,6 +931,18 @@
     "sha256": "cc989fecd525e4e31f1f1c35b2f55a8a8fc181740774b8bfb50481de42afd977",
     "source_url": "https://commons.wikimedia.org/wiki/File:WestonCTOnionBarn08042007.JPG"
   },
+  "orange-congregational-church": {
+    "sha256": "5da428ad58c84656a65b6320a3ac54a3b087e530862a6af1784958e07bad3b2d",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Orange_ct_congregational_church.jpg"
+  },
+  "osborne-homestead-museum": {
+    "sha256": "d0adf6aa8b4b3fa6b701e5b42e9d13ca2c97cec683570623bd7ede81cf5b7ce9",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Derby_Osbornedale_house.jpg"
+  },
+  "osbornedale-state-park-sign": {
+    "sha256": "0fb8ebdb548d4e9cbe7471ff13effc52b3ce18e43f313c476fe6bc6b49a9af57",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Osbornedale_State_Park_sign.jpg"
+  },
   "pachaug-state-forest-picnic": {
     "sha256": "7978bed78aa206d70416e7e14d0357bcd7fd210dce304067a9fc41ed35397eae",
     "source_url": "https://commons.wikimedia.org/wiki/File:Picnic_Table_in_Pachaug_State_Forest.jpg"
@@ -846,6 +950,14 @@
   "penfield-reef-lighthouse": {
     "sha256": "15f728887376e445d79f3b10a8686b3fbaca4fa125b7773d38352683a76e7b8a",
     "source_url": "https://commons.wikimedia.org/wiki/File:Penfield_Reef_Light_CT_01_NRHP_89001473.jpg"
+  },
+  "peterson-park-wolcott": {
+    "sha256": "c3151ca9703e06ec520188340a3c0ceda68e8c52dd42a7bee3484d5cb21dcf8f",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Peterson_Park,_Wolcott_CT.jpg"
+  },
+  "pez-visitor-center": {
+    "sha256": "e3b352944b03559d666f36c37e774236c9ad441b52c2cf8ec730a78fc0706faf",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Pez_Visitor%27s_Center_208.JPG"
   },
   "pinchot-sycamore": {
     "sha256": "edf94e71cced750725399305164b549c0085d520749dfc3e65e204459da36b09",
@@ -875,6 +987,14 @@
     "sha256": "0d9ba7717aca0af69b5d8f8d5f06b5bb119446edf53deb61eefc395802209cc1",
     "source_url": "https://commons.wikimedia.org/wiki/File:Preston_Town_Hall,_Preston_CT.jpg"
   },
+  "prospect-congregational-church": {
+    "sha256": "aad221676f76a4f7fab09ca629293cd8ed125b0bad30db6dbb120b0066552c74",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Prospect,_Connecticut_Congregational_Church.jpg"
+  },
+  "prospect-town-green": {
+    "sha256": "c30abb6130a64118c6ea1f5b17a8370a2cb681f03f86a513178dc8304d0b97a0",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Prospect,_Connecticut_Town_Green.jpg"
+  },
   "prudence-crandall-house-canterbury": {
     "sha256": "82cae3a9148e2c427649847973f4ed01a05d8cfd2de951ae14f9eda585e199b3",
     "source_url": "https://commons.wikimedia.org/wiki/File:Prudence_Crandall_House_7-11.jpg"
@@ -903,6 +1023,10 @@
     "sha256": "851be949f0f556c4a4c2e893d039e931ae48298247a1d592f13cc351eb9c7227",
     "source_url": "https://commons.wikimedia.org/wiki/File:Quinebaug_River_Trail_view_of_the_Quinebaug_River,_Danielson_CT.jpg"
   },
+  "quinnipiac-river-state-park-north-haven": {
+    "sha256": "8d19f882d68c08e34892ae45f17d2c86eb0504b3c0f16c019d1075e8cdb9fbde",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Quinnipiac_River_State_Park.jpg"
+  },
   "rhododendron-sanctuary-trail": {
     "sha256": "ab06151b3021b5ba2f5ea65c8288eff043a470ab7ee0174c416dc1aebd93c4fc",
     "source_url": "https://commons.wikimedia.org/wiki/File:Nehantic_Trail_-_Rhododendron_Sanctuary_Trail_planked_wooden_boardwalk_section.jpg"
@@ -910,6 +1034,10 @@
   "ridgefield-main-street": {
     "sha256": "db1b6dfa315d528a34bbf9fd39ce9fa9fbe506f1e7711750452bab97fd32339b",
     "source_url": "https://commons.wikimedia.org/wiki/File:Ridgefield,_Connecticut.jpg"
+  },
+  "rimmon-school-house": {
+    "sha256": "4125aa84f8deab7cc6072825dc114ad05228ff8486b69a9c9be1ef3d44286d07",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Rimmon_School_House,_Beacon_Falls,_CT_(2012).jpg"
   },
   "river-at-old-mine-park-trumbull": {
     "sha256": "a02e90d476fda11ae0fe5bc3307853ace4477c642f0736bf4ad8d7fef8f4f51a",
@@ -951,6 +1079,14 @@
     "sha256": "6090c89e6c5364a5163b349f67b141a04acd066542dd57e6bd4f9810acb02c0b",
     "source_url": "https://commons.wikimedia.org/wiki/File:Sunset_at_Salt_Meadow_(11800427905).jpg"
   },
+  "sandy-point-piping-plover": {
+    "sha256": "1294cc06f3894e695dd1d71f470a61a974fa5f7f6eacc2961622d630adc7868d",
+    "source_url": "https://commons.wikimedia.org/wiki/File:20260516_piping_plover_sandy_point_bird_sanctuary_PD01792.jpg"
+  },
+  "savin-rock-shoreline-west-haven": {
+    "sha256": "0e4f96ced7c893287c14ee5895c0ce72b20319a81d7f688ff58cc14f1c04e1ba",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Savin_Rock,_West_Haven,_CT,_USA.jpg"
+  },
   "sawmill-park": {
     "sha256": "0b43835c52d3b9e3a3a22db724b7e2205d3a365b14762940496a40e1f7e47184",
     "source_url": "https://commons.wikimedia.org/wiki/File:Front_view,_Main_Sawmill,_Ledyard,_CT.JPG"
@@ -982,6 +1118,10 @@
   "shetucket-river-salt-rock": {
     "sha256": "e73dde8e3695417c2f8fcaceba3a2f458fcb5c01f38e7437d5f0993a696ad5fd",
     "source_url": "https://commons.wikimedia.org/wiki/File:Shetucket_River,_Baltic,_CT.jpg"
+  },
+  "shore-line-trolley-museum": {
+    "sha256": "c6c73a278030f5bff3462c12ec3e8068f53bbc0ad987eb92f010aba91d83b553",
+    "source_url": "https://commons.wikimedia.org/wiki/File:BERA_Trolley_Station_EastHaven-CT.jpg"
   },
   "slater-library-jewett-city": {
     "sha256": "0678e5af43fb2ad7a6cd2e0f8386c9f0b82233924c7de1fe4ba5bde0dad59dda",
@@ -1023,6 +1163,10 @@
     "sha256": "86542ce67bf37f6ff739b73d515aa3ed7f8935cb5741ecd5785b3a0bd9956c0e",
     "source_url": "https://commons.wikimedia.org/wiki/File:Squantz_Pond_early_morning_autumn.JPG"
   },
+  "st-johns-episcopal-church-north-haven": {
+    "sha256": "c460fbf0da33e1e6974903d369fae2bf8aceaf632a0142e19084662f34194906",
+    "source_url": "https://commons.wikimedia.org/wiki/File:St._Johns_Episcopal_Church,_North_Haven,_CT.jpg"
+  },
   "stafford-speedway-race-start": {
     "sha256": "37dca624f8567d843f01fdc2d588f5fb66c7d3b9ed46acccef3308f39ce176a9",
     "source_url": "https://commons.wikimedia.org/wiki/File:WMT_Start.jpg"
@@ -1051,6 +1195,10 @@
     "sha256": "8aba753bde994fb26167b9a7bb3a4ed8dae54ac0f4a955ee6bc169852b41d47e",
     "source_url": "https://commons.wikimedia.org/wiki/File:SterlingCT_SterlingHillHD.jpg"
   },
+  "stone-otis-house-orange": {
+    "sha256": "5aeac6f79518d4489df92cd97477b95519ba41c2daa078150d5e04a2b3e78e4a",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Stone-Otis_House_114.JPG"
+  },
   "stratford-point-lighthouse": {
     "sha256": "2706bb1d29287f57422680991ae4d2078af1f1b2e6f20352716ca3d099923347",
     "source_url": "https://commons.wikimedia.org/wiki/File:Historic_Stratford_Point_Lighthouse_-_150808-G-KU792-571.jpg"
@@ -1070,6 +1218,10 @@
   "thimble-islands-stony-creek": {
     "sha256": "f61a7563206ba995836178d6c62fbadd5a253a34d731213dfa9cf71fc42460bc",
     "source_url": "https://commons.wikimedia.org/wiki/File:STONY_CREEK-THIMBLE_ISLANDS,_H.D.,_BRANFORD,_NEW_HAVEN_COUNTY,_CT.jpg"
+  },
+  "thomas-darling-house": {
+    "sha256": "0f66052b56848e151333500bc39a3e85eb7fd39cd2d0d19bc982c239d90edf69",
+    "source_url": "https://commons.wikimedia.org/wiki/File:WoodbridgeCT_ThomasDarlingHouse.jpg"
   },
   "thomas-lee-house": {
     "sha256": "caffa1b8fdc6c28ec098932ec98bf3e828a9ca01e7489f1bd6bbddd0c6358bfd",
@@ -1119,6 +1271,10 @@
     "sha256": "ca594d3d2b6382da11cc4e9a55c6fa74c1e03f248bf7d9edc2a450772e37366a",
     "source_url": "https://commons.wikimedia.org/wiki/File:Unitarian_Meetinghouse_in_Brooklyn.JPG"
   },
+  "upper-main-street-historic-district-ansonia": {
+    "sha256": "774da36e0909198e0728d2436da079a83395b741a84d6021689ed3607f3eb438",
+    "source_url": "https://commons.wikimedia.org/wiki/File:AnsoniaCT_UpperMainStreetHD.jpg"
+  },
   "uss-nautilus": {
     "sha256": "f1e3e620debb5d5bca457ad85fb821c5a466deef0de3436c3879d0a5ee213736",
     "source_url": "https://commons.wikimedia.org/wiki/File:USS_Nautilus_SSN571.JPG"
@@ -1135,6 +1291,10 @@
     "sha256": "bb215d97e04b8d50bb0cc61c5d7a6e50a4742d05573da21914544198df8e8c4e",
     "source_url": "https://commons.wikimedia.org/wiki/File:NorthStoningtonCT_UCC.jpg"
   },
+  "vineyard-wallingford-sunset": {
+    "sha256": "fef4c6c2ef91d502c81da29a83caacf3994b2800f11f1345e672c7452de469d7",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Vineyard_in_Wallingford.jpg"
+  },
   "voluntown-baptist-church": {
     "sha256": "e59a24a482b27bf777de3267ea83869d76ea091dd07bbb6f1e288b91c1cfc5e6",
     "source_url": "https://commons.wikimedia.org/wiki/File:Voluntown_Baptist_Church,_Voluntown_CT.jpg"
@@ -1150,6 +1310,10 @@
   "wadsworth-stable": {
     "sha256": "26fe003d981892bedf6f153d6e31c98cb00b488974ee9292f42b1faddee420cf",
     "source_url": "https://commons.wikimedia.org/wiki/File:MMDA-Photos_-_2020-07-21_-_Wadsworth_Stable_-2,_Lebanon,_Connecticut,_USA.jpg"
+  },
+  "wallingford-center-historic-district": {
+    "sha256": "6ef32ef761cc7b7a0de7e34399e58a8eb8a11a2fb8189902f8575f7627b731c2",
+    "source_url": "https://commons.wikimedia.org/wiki/File:WallingfordCT_CenterHD_7.jpg"
   },
   "walnut-hill-park": {
     "sha256": "3b956baf410cfc31e6f83dbb00462c706eac50ee6eaf68d7c9b2bd8ef3160c53",
@@ -1195,9 +1359,25 @@
     "sha256": "00949744146b9ed8078f27226349d2cd77dcc099615590eebab2377ef4df04ba",
     "source_url": "https://commons.wikimedia.org/wiki/File:Westport,_Connecticut_downtown.jpg"
   },
+  "wharton-brook-state-park": {
+    "sha256": "34b84fa4d82d18b3833d0145362b92b05ca7bcd5f38013cdf564396c1e64e2f3",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Allen_Brook_Pond_in_Wharton_Brook_SP_at_dusk.jpg"
+  },
+  "whittemore-glen-state-park": {
+    "sha256": "db403f4179574df8eef5fde58bed68d43ad63fcf4cafe73a965c3f828cccf77b",
+    "source_url": "https://commons.wikimedia.org/wiki/File:The_Larkin_Trail_in_Whittemore_Glen_State_Park_in_Naugatuck_Connecticut.jpg"
+  },
   "wilton-historical-society-campus": {
     "sha256": "bc6387b6473ea9a35d3a23de0411b531d104d06132948b23ae58209ba7246a04",
     "source_url": "https://commons.wikimedia.org/wiki/File:Wilton_Historical_Society_078.JPG"
+  },
+  "woodbridge-first-church-of-christ": {
+    "sha256": "01be7f3609ecda2355f2569b86d6343fad9a90302ccf6bd47f3373e12ef52d73",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Woodbridge-ct-1st-church-of-christ.jpg"
+  },
+  "woodtick-recreation-area-beach": {
+    "sha256": "9d99f8b5516d324a687225262229debbf0fb88cd246f9e821d492cc70b63ef73",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Woodtick_Recreation_Area_Beach,_Woodtick_CT.jpg"
   },
   "wyassup-lake-high-ledge": {
     "sha256": "8cd474f7b2b4b84ff81a67e415b973879e6f9167c9e214595c8f925fd4bd2390",

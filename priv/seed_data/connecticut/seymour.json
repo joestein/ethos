@@ -1,0 +1,296 @@
+{
+  "guide": {
+    "slug": "seymour-ct-travel-guide",
+    "title": "Seymour, Connecticut: From Humphreysville to a Flood-Changed Town",
+    "destination": "Seymour, Connecticut",
+    "state": "Connecticut",
+    "county": "New Haven County",
+    "intro": "The area along the Naugatuck River was first settled in the late 1600s as part of the town of Derby, with settlers drawn by the river's water power. Before it was Seymour, the settlement carried Native American and early colonial names — Wesquantuck, then Chusetown, named for the sachem Joseph Mauwehu, known as Chuse. General David Humphreys, Revolutionary War aide-de-camp to George Washington, acquired a mill complex here in the early 1800s and built it into a leading American woolen manufactory; the village was renamed Humphreysville in his honor, and his broadcloth coats were reportedly worn by Presidents Jefferson and Madison. The town was incorporated in May 1850 and renamed for Governor Thomas H. Seymour. Nineteenth-century Seymour manufactured pins, hoopskirts and hard-rubber fountain pens — the H.P. & E. Day Company here eventually became the Bic Pen Company. The catastrophic flood of 1955 turned Seymour from an active factory town into a quiet residential community.",
+    "sections": [
+      {
+        "heading": "A downtown historic district and ten town parks",
+        "body": "The Downtown Seymour Historic District, roughly 21 acres bounded by the Naugatuck River and Main, Wakeley and DeForest Streets, was added to the National Register of Historic Places on August 25, 1983; it is mostly vernacular Queen Anne wood-frame houses plus commercial buildings from about 1880-1940, and 26-28 Main Street, long known as the Trestle Tavern building and built around 1850, is believed to be the district's oldest structure. Town Hall, the post office and the fire station are all still in municipal use within the district. Seymour maintains ten municipal parks, from the downtown Broad Street/Chuse Town Park — its name a nod to one of the town's earliest identities — to Little-Laurel Lime Ridge Park's wooded ridge trails."
+      },
+      {
+        "heading": "Getting there",
+        "body": "Seymour sits in the lower Naugatuck Valley and is reached almost entirely by car via Route 8, the valley expressway, with Route 67 (West Street) as the local east-west connector. Metro-North's Waterbury Branch stops in Seymour at 1 Main Street, connecting to the New Haven Line at Stratford and Bridgeport — but as of 2026, buses replace all Waterbury Branch rail service from July 20, 2026 through May 31, 2027 while stations are rebuilt, with Seymour's new platform expected in November 2027. There is no Amtrak, Shore Line East or CTrail Hartford Line service in Seymour."
+      }
+    ],
+    "faq": [
+      {
+        "question": "How do I get to Seymour?",
+        "answer": "By car on Route 8, the Naugatuck Valley expressway. Seymour's Metro-North station at 1 Main Street is currently served by substitute buses, not trains, from July 20, 2026 through May 31, 2027 while the station is rebuilt."
+      },
+      {
+        "question": "Why was Seymour once called Humphreysville?",
+        "answer": "For General David Humphreys, aide-de-camp to George Washington, who acquired a mill complex here in the early 1800s and built it into a leading American woolen manufactory. The town was renamed and incorporated in 1850, honoring Governor Thomas H. Seymour instead."
+      },
+      {
+        "question": "What is the Downtown Seymour Historic District?",
+        "answer": "A 21-acre National Register district (listed 1983) of mostly vernacular Queen Anne houses and commercial buildings from about 1880-1940, bounded by the Naugatuck River and Main, Wakeley and DeForest Streets. Freely walkable at any time."
+      },
+      {
+        "question": "Is there a hotel in Seymour?",
+        "answer": "No hotel, motel, inn or B&B could be verified inside Seymour town limits. The nearest verified option is the Heritage Hotel & Conference Center in Southbury."
+      }
+    ],
+    "photos": [
+      {
+        "src": "/photos/ct/seymour/downtown-seymour-historic-district.jpg",
+        "thumb": "/photos/ct/seymour/downtown-seymour-historic-district_thumb.jpg",
+        "title": "Downtown Seymour Historic District",
+        "description": "Main Street in the Downtown Seymour Historic District.",
+        "author": "Joe Mabel",
+        "license": "CC BY-SA 3.0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Seymour,_CT_01.jpg"
+      },
+      {
+        "src": "/photos/ct/seymour/naugatuck-river-seymour.jpg",
+        "thumb": "/photos/ct/seymour/naugatuck-river-seymour_thumb.jpg",
+        "title": "Naugatuck River at Seymour",
+        "description": "The Naugatuck River, looking upstream from Seymour.",
+        "author": "Joe Mabel",
+        "license": "CC BY-SA 3.0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Seymour,_CT_-_upstream_on_the_Naugatuck_01.jpg"
+      },
+      {
+        "src": "/photos/ct/seymour/bank-street-seymour.jpg",
+        "thumb": "/photos/ct/seymour/bank-street-seymour_thumb.jpg",
+        "title": "Bank Street, Seymour",
+        "description": "A historic commercial block on Bank Street in the Downtown Seymour Historic District.",
+        "author": "Joe Mabel",
+        "license": "CC BY-SA 3.0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Seymour,_CT_-_Bank_St_01.jpg"
+      }
+    ]
+  },
+  "places": [
+    {
+      "slug": "downtown-seymour-historic-district",
+      "name": "Downtown Seymour Historic District",
+      "kind": "historic-site",
+      "town": "Seymour",
+      "state": "Connecticut",
+      "county": "New Haven County",
+      "address": "Roughly bounded by the Naugatuck River and Main, Wakeley and DeForest Streets, Seymour, CT 06483",
+      "summary": "A 21-acre National Register district listed August 25, 1983, made up mostly of vernacular Queen Anne wood-frame houses plus commercial and industrial buildings from about 1880-1940. Its southern end holds the former Waterman Pen Complex, and 26-28 Main Street, long known as the Trestle Tavern building and built around 1850, is believed to be the district's oldest structure. Freely walkable public streets; town hall, post office and fire station are all still in municipal use here.",
+      "status": "open",
+      "photos": [
+        {
+          "src": "/photos/ct/seymour/downtown-seymour-historic-district.jpg",
+          "thumb": "/photos/ct/seymour/downtown-seymour-historic-district_thumb.jpg",
+          "title": "Downtown Seymour Historic District",
+          "description": "Main Street in the Downtown Seymour Historic District.",
+          "author": "Joe Mabel",
+          "license": "CC BY-SA 3.0",
+          "source_url": "https://commons.wikimedia.org/wiki/File:Seymour,_CT_01.jpg"
+        },
+        {
+          "src": "/photos/ct/seymour/bank-street-seymour.jpg",
+          "thumb": "/photos/ct/seymour/bank-street-seymour_thumb.jpg",
+          "title": "Bank Street, Seymour",
+          "description": "A historic commercial block on Bank Street in the Downtown Seymour Historic District.",
+          "author": "Joe Mabel",
+          "license": "CC BY-SA 3.0",
+          "source_url": "https://commons.wikimedia.org/wiki/File:Seymour,_CT_-_Bank_St_01.jpg"
+        }
+      ]
+    },
+    {
+      "slug": "broad-street-chuse-town-park",
+      "name": "Broad Street / Chuse Town Park",
+      "kind": "park",
+      "town": "Seymour",
+      "state": "Connecticut",
+      "county": "New Haven County",
+      "address": "Broad Street, Seymour, CT 06483",
+      "summary": "A town park carrying in its official name a nod to Chusetown, one of Seymour's pre-1850 names. Sits within walking distance of Main Street and the Metro-North station at 1 Main Street.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "little-laurel-lime-ridge-park",
+      "name": "Little-Laurel Lime Ridge Park",
+      "kind": "park",
+      "town": "Seymour",
+      "state": "Connecticut",
+      "county": "New Haven County",
+      "address": "Tomilson Road, Seymour, CT 06483",
+      "summary": "A wooded ridge tract on the town's eastern side, one of Seymour's ten municipal parks, used for walking and passive recreation rather than organized sports.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "gary-park-seymour",
+      "name": "Gary Park",
+      "kind": "park",
+      "town": "Seymour",
+      "state": "Connecticut",
+      "county": "New Haven County",
+      "address": "Gary Park Drive, Seymour, CT 06483",
+      "summary": "A neighborhood town park with its own access road off the local street grid, one of ten municipal parks Seymour maintains.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "legion-pool-seymour",
+      "name": "Legion Pool",
+      "kind": "park",
+      "town": "Seymour",
+      "state": "Connecticut",
+      "county": "New Haven County",
+      "address": "Chatfield Road, Seymour, CT 06483",
+      "summary": "The town's seasonal outdoor swimming facility, sited next to Chatfield Park. A summer-only destination — check with the town for season dates before visiting.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "french-memorial-park-seymour",
+      "name": "French Memorial Park",
+      "kind": "park",
+      "town": "Seymour",
+      "state": "Connecticut",
+      "county": "New Haven County",
+      "address": "73 Spruce Street, Seymour, CT 06483",
+      "summary": "A municipal park in Seymour's residential Spruce Street neighborhood, one of the town's ten official parks alongside Casagrande Field, Sochrin Park and Katherine Matthies Field.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "zois-pizza",
+      "name": "Zois Pizza",
+      "kind": "restaurant",
+      "town": "Seymour",
+      "state": "Connecticut",
+      "county": "New Haven County",
+      "address": "48 Main Street, Seymour, CT 06483",
+      "official_url": "https://www.zoispizza.com/",
+      "summary": "Greek-style pizza in the heart of downtown, plus salads, appetizers, grinders and calzones, with gluten-free, vegetarian and vegan options. Hours Tue-Sat 11 a.m.-9 p.m., Sun 2-8 p.m., closed Mondays. Phone (203) 888-1131.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "pub-67-seymour",
+      "name": "Pub 67",
+      "kind": "restaurant",
+      "town": "Seymour",
+      "state": "Connecticut",
+      "county": "New Haven County",
+      "address": "225 West Street, Seymour, CT 06483",
+      "official_url": "https://www.pub67ct.com/",
+      "summary": "A Route 67 bar and grill known locally for burgers and Cajun tater tots, with a rotating craft-beer list and event nights. The official site publishes no hours or contact details — call (203) 828-6666 to confirm before visiting.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "jimmies-place",
+      "name": "Jimmie's Place",
+      "kind": "restaurant",
+      "town": "Seymour",
+      "state": "Connecticut",
+      "county": "New Haven County",
+      "address": "133 Main Street, Seymour, CT 06483",
+      "official_url": "https://www.jimmiesplace.com/",
+      "summary": "A downtown Main Street restaurant, bar and lounge serving wings, burgers, sandwiches and entrees, with a Taco Tuesday deal (tacos from $2, margaritas from $5). Kitchen and bar keep separate hours; also runs a food truck and catering. Phone (203) 881-3026.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "housatonic-house",
+      "name": "Housatonic House",
+      "kind": "restaurant",
+      "town": "Seymour",
+      "state": "Connecticut",
+      "county": "New Haven County",
+      "address": "337 Roosevelt Drive, Seymour, CT 06483",
+      "official_url": "https://www.thehousatonichouse.com/",
+      "summary": "A riverside restaurant and bar overlooking the Housatonic, opened at this location in 2022 by a family with over 30 years in the restaurant business, drawing on Italian, Cuban, Thai and Greek influences for a menu heavy on seafood, steaks and ribs. Operates on a seasonal calendar; hours Mon-Thu 11:30 a.m.-9 p.m., Fri-Sat 11:30 a.m.-10 p.m., Sun 11:30 a.m.-9 p.m. Phone (203) 516-5030.",
+      "status": "open",
+      "photos": []
+    }
+  ],
+  "entries": [
+    {
+      "kind": "sight",
+      "name": "Downtown Seymour Historic District",
+      "place_slug": "downtown-seymour-historic-district",
+      "note": "A 21-acre National Register district of Queen Anne houses."
+    },
+    {
+      "kind": "sight",
+      "name": "Broad Street / Chuse Town Park",
+      "place_slug": "broad-street-chuse-town-park",
+      "note": "A downtown park named for one of Seymour's earliest identities."
+    },
+    {
+      "kind": "walk",
+      "name": "Little-Laurel Lime Ridge Park",
+      "place_slug": "little-laurel-lime-ridge-park",
+      "note": "A wooded ridge tract for walking and passive recreation."
+    },
+    {
+      "kind": "sight",
+      "name": "Gary Park",
+      "place_slug": "gary-park-seymour",
+      "note": "A neighborhood town park."
+    },
+    {
+      "kind": "sight",
+      "name": "Legion Pool",
+      "place_slug": "legion-pool-seymour",
+      "note": "The town's seasonal outdoor swimming facility."
+    },
+    {
+      "kind": "sight",
+      "name": "French Memorial Park",
+      "place_slug": "french-memorial-park-seymour",
+      "note": "A municipal park in the Spruce Street neighborhood."
+    },
+    {
+      "kind": "food",
+      "name": "Zois Pizza",
+      "place_slug": "zois-pizza",
+      "note": "Greek-style pizza in the heart of downtown."
+    },
+    {
+      "kind": "food",
+      "name": "Pub 67",
+      "place_slug": "pub-67-seymour",
+      "note": "A Route 67 bar and grill known for Cajun tater tots."
+    },
+    {
+      "kind": "food",
+      "name": "Jimmie's Place",
+      "place_slug": "jimmies-place",
+      "note": "A Main Street restaurant, bar and lounge."
+    },
+    {
+      "kind": "food",
+      "name": "Housatonic House",
+      "place_slug": "housatonic-house",
+      "note": "A riverside restaurant and bar overlooking the Housatonic."
+    }
+  ],
+  "links": [
+    {
+      "target": "guide:derby-ct-travel-guide",
+      "kind": "nearby",
+      "note": "Seymour was first settled in the late 1600s as part of the town of Derby."
+    },
+    {
+      "target": "guide:ansonia-ct-travel-guide",
+      "kind": "nearby",
+      "note": "Ansonia's Metro-North station sits between Derby-Shelton to the south and Seymour to the north on the Waterbury Branch."
+    },
+    {
+      "target": "guide:beacon-falls-ct-travel-guide",
+      "kind": "nearby",
+      "note": "Beacon Falls was carved from parts of four neighboring towns in 1871, Seymour among them."
+    },
+    {
+      "target": "guide:oxford-ct-travel-guide",
+      "kind": "same-region",
+      "note": "Both sit in the lower Naugatuck Valley along the Waterbury Branch rail corridor."
+    }
+  ]
+}

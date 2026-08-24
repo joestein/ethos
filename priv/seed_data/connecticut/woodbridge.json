@@ -1,0 +1,274 @@
+{
+  "guide": {
+    "slug": "woodbridge-ct-travel-guide",
+    "title": "Woodbridge, Connecticut: From Amity Parish to a Printing Press",
+    "destination": "Woodbridge, Connecticut",
+    "state": "Connecticut",
+    "county": "New Haven County",
+    "intro": "Woodbridge began not as a town but as a parish, set off in 1739 as the independent ecclesiastical society of \"Amity,\" carved from land belonging to New Haven and Milford. The parish took the name Woodbridge after the Rev. Benjamin Woodbridge, ordained here in 1742, and the town was formally incorporated in 1784. Thomas Darling — a Yale graduate, New Haven merchant and Judge of the County Probate Court who as Benjamin Franklin's agent is credited with bringing the first printing press to New Haven — built the Darling House in Woodbridge in 1772-1774. The Sperry family settled the Sperry Park area beginning in the late 1680s; Revolutionary War sergeant Simeon Sperry filed manumission papers in 1781 freeing an enslaved man named Alexander, and Enoch Sperry's son Nehemiah Day Sperry, an early anti-slavery advocate, later served eight terms in the U.S. House. The Amity and Woodbridge Historical Society, which runs the Darling House museum, was founded in 1936.",
+    "sections": [
+      {
+        "heading": "A working organic farm and a traprock ridge",
+        "body": "Massaro Community Farm, a nonprofit certified-organic vegetable farm on 57 acres run collaboratively by the town and a local board, operates under the motto \"Keep Farming. Feed People. Build Community,\" with a weekly farm stand, a CSA and volunteer days. West Rock Ridge State Park's 1,691 acres run along a six-mile trap-rock ridge through New Haven, Hamden and Woodbridge, reaching 715 feet at High Rock in Bethany at its northern end; Judges' Cave, where the regicide judges Whalley and Goffe sheltered in 1661 and 1664, sits on the New Haven side of the park, reached from Wintergreen Avenue. The Woodbridge Town Library, marking its centennial in 2026, lends Connecticut museum passes and a \"Library of Things\" collection."
+      },
+      {
+        "heading": "Getting there",
+        "body": "Woodbridge has no train station of its own — drive in from neighboring New Haven on Route 63 (Amity Road, becoming Litchfield Turnpike), which leaves Whalley Avenue in New Haven and runs northwest through Woodbridge toward Bethany, or on Route 69, whose southern end meets Route 63 near the New Haven/Woodbridge line. Most of Woodbridge's restaurants and its brewery sit along Route 63. Rail travelers arrive at New Haven Union Station, served by Metro-North's New Haven Line, Amtrak, CTrail Shore Line East and the CTrail Hartford Line, and cover the last leg by car or rideshare via Whalley Avenue onto Route 63."
+      }
+    ],
+    "faq": [
+      {
+        "question": "How do I get to Woodbridge?",
+        "answer": "By car on Route 63 (Amity Road/Litchfield Turnpike) from New Haven, or Route 69. Woodbridge has no train station; the nearest is New Haven Union Station, reached via Whalley Avenue onto Route 63."
+      },
+      {
+        "question": "What is the Thomas Darling House?",
+        "answer": "An 118-acre town-owned property built in 1772-1774 by Thomas Darling, Benjamin Franklin's agent credited with bringing the first printing press to New Haven; now the Amity and Woodbridge Historical Society's museum, open by appointment. Phone (203) 387-2823."
+      },
+      {
+        "question": "Can I visit Massaro Community Farm?",
+        "answer": "Yes. The certified-organic farm at 41 Ford Road runs a weekly farm stand, CSA, cooking workshops and volunteer days, open roughly 8:30 a.m.-5 p.m., March through November."
+      },
+      {
+        "question": "Is there a hotel in Woodbridge?",
+        "answer": "No lodging appears in Connecticut's official tourism directory for Woodbridge. The nearest verified option is the Courtyard by Marriott at 136 Marsh Hill Road in neighboring Orange."
+      }
+    ],
+    "photos": [
+      {
+        "src": "/photos/ct/woodbridge/thomas-darling-house.jpg",
+        "thumb": "/photos/ct/woodbridge/thomas-darling-house_thumb.jpg",
+        "title": "Thomas Darling House",
+        "description": "The Thomas Darling House and Tavern, built 1772-1774 and now Woodbridge's history museum.",
+        "author": "Magicpiano",
+        "license": "CC BY-SA 4.0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:WoodbridgeCT_ThomasDarlingHouse.jpg"
+      },
+      {
+        "src": "/photos/ct/woodbridge/woodbridge-first-church-of-christ.jpg",
+        "thumb": "/photos/ct/woodbridge/woodbridge-first-church-of-christ_thumb.jpg",
+        "title": "First Church of Christ, Woodbridge",
+        "description": "The white-steepled First Church of Christ anchoring the Woodbridge town center.",
+        "author": "Staib",
+        "license": "CC BY-SA 3.0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Woodbridge-ct-1st-church-of-christ.jpg"
+      },
+      {
+        "src": "/photos/ct/woodbridge/alice-newton-street-park-wepawaug-falls.jpg",
+        "thumb": "/photos/ct/woodbridge/alice-newton-street-park-wepawaug-falls_thumb.jpg",
+        "title": "Wepawaug Falls",
+        "description": "Wepawaug Falls in Alice Newton Street Park, Woodbridge.",
+        "author": "Staib",
+        "license": "CC BY-SA 3.0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Alice-newton-park-woodbridge-ct.jpg"
+      }
+    ]
+  },
+  "places": [
+    {
+      "slug": "amity-woodbridge-historical-society-darling-house",
+      "name": "Amity & Woodbridge Historical Society at the Thomas Darling House",
+      "kind": "museum",
+      "town": "Woodbridge",
+      "state": "Connecticut",
+      "county": "New Haven County",
+      "address": "1907 Litchfield Turnpike, Woodbridge, CT 06525",
+      "official_url": "https://www.woodbridgehistory.org/the-darling-house/",
+      "summary": "Thomas Darling built the house in 1772-1774; it stayed in the Darling family until the Town purchased it in 1973, and almost all of the furnishings are original. The Garden Club of Woodbridge maintains an herb garden on the grounds, and the surrounding 118-acre property is town-owned. Visits by appointment; phone (203) 387-2823.",
+      "status": "open",
+      "photos": [
+        {
+          "src": "/photos/ct/woodbridge/thomas-darling-house.jpg",
+          "thumb": "/photos/ct/woodbridge/thomas-darling-house_thumb.jpg",
+          "title": "Thomas Darling House",
+          "description": "The Thomas Darling House and Tavern, built 1772-1774 and now Woodbridge's history museum.",
+          "author": "Magicpiano",
+          "license": "CC BY-SA 4.0",
+          "source_url": "https://commons.wikimedia.org/wiki/File:WoodbridgeCT_ThomasDarlingHouse.jpg"
+        }
+      ]
+    },
+    {
+      "slug": "massaro-community-farm",
+      "name": "Massaro Community Farm",
+      "kind": "attraction",
+      "town": "Woodbridge",
+      "state": "Connecticut",
+      "county": "New Haven County",
+      "address": "41 Ford Road, Woodbridge, CT 06525",
+      "official_url": "https://massarofarm.org/",
+      "summary": "A nonprofit, certified-organic vegetable farm on 57 acres, run collaboratively by the Town of Woodbridge and a local board of directors under the motto \"Keep Farming. Feed People. Build Community.\" Weekly farm stand, a CSA for produce and eggs, cooking workshops, field trips and volunteer days. Hours roughly 8:30 a.m.-5 p.m., March through November.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "woodbridge-town-library",
+      "name": "Woodbridge Town Library",
+      "kind": "attraction",
+      "town": "Woodbridge",
+      "state": "Connecticut",
+      "county": "New Haven County",
+      "address": "10 Newton Road, Woodbridge, CT 06525",
+      "official_url": "https://www.woodbridgetownlibrary.org/",
+      "summary": "Marking its centennial in 2026 with a 1920s-themed Centennial Gala. Visitors can borrow museum passes to regional attractions, use a \"Library of Things\" collection, book meeting rooms, and access notary and technology services. Hours Mon-Thu 10 a.m.-8 p.m., Fri-Sat 10 a.m.-5 p.m. Phone (203) 389-3433.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "jcc-greater-new-haven",
+      "name": "JCC of Greater New Haven",
+      "kind": "attraction",
+      "town": "Woodbridge",
+      "state": "Connecticut",
+      "county": "New Haven County",
+      "address": "360 Amity Road, Woodbridge, CT 06525",
+      "official_url": "https://www.jccnh.org/",
+      "summary": "The regional Jewish Community Center, headquartered in Woodbridge, runs public-facing cultural programming through its Beckerman Cultural Arts Series, alongside an aquatics center, gymnasium, fitness studios, day camps and Cafe J. Hours Mon-Thu 5:30 a.m.-9 p.m., Fri 5:30 a.m.-5:30 p.m., Sat-Sun 7 a.m.-4 p.m. Phone (203) 387-2424.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "tradition-golf-club-oak-lane",
+      "name": "The Tradition Golf Club at Oak Lane",
+      "kind": "attraction",
+      "town": "Woodbridge",
+      "state": "Connecticut",
+      "county": "New Haven County",
+      "address": "1027 Racebrook Rd., Woodbridge, CT 06525",
+      "official_url": "https://traditionatoaklane.com/",
+      "summary": "A golf club on Racebrook Road; call ahead for tee times. Phone (203) 397-5103.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "new-england-brewing-woodbridge",
+      "name": "New England Brewing Company (Woodbridge taproom)",
+      "kind": "brewery",
+      "town": "Woodbridge",
+      "state": "Connecticut",
+      "county": "New Haven County",
+      "address": "175 Amity Road, Woodbridge, CT 06525",
+      "official_url": "https://newenglandbrewing.com/",
+      "summary": "One of Connecticut's best-known craft breweries, with core brands including Sea Hag IPA, Fuzzy Baby Ducks and Wee Hag, plus seasonal releases and taproom exclusives; a second taproom operates in Branford. Hours Sun noon-6 p.m., Mon-Fri noon-9 p.m., Sat 11 a.m.-9 p.m.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "katzs-restaurant-deli",
+      "name": "Katz's Restaurant & Deli",
+      "kind": "restaurant",
+      "town": "Woodbridge",
+      "state": "Connecticut",
+      "county": "New Haven County",
+      "address": "1658 Litchfield Turnpike, Woodbridge, CT 06525",
+      "official_url": "http://www.katzsdeli.net/",
+      "summary": "A New Haven-area Jewish-style deli institution known for corned beef and pastrami sandwiches, matzo ball soup, deluxe smoked fish platters, and \"Steve's Sky Highs.\" Open 7 days, 10 a.m.-8 p.m. Phone (203) 389-5301.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "solun-tapas-bar-restaurant",
+      "name": "Solun Tapas Bar Restaurant",
+      "kind": "restaurant",
+      "town": "Woodbridge",
+      "state": "Connecticut",
+      "county": "New Haven County",
+      "address": "245 Amity Road, Woodbridge, CT 06525",
+      "official_url": "https://www.soluntapasbar.com/",
+      "summary": "A Spanish tapas and Mediterranean restaurant built around shareable small plates, seafood entrees and an extensive wine list. Hours closed Monday, Tue-Thu 11 a.m.-9 p.m., Fri-Sat 11 a.m.-10 p.m., Sun 11 a.m.-8 p.m.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "thai-stories",
+      "name": "Thai Stories",
+      "kind": "restaurant",
+      "town": "Woodbridge",
+      "state": "Connecticut",
+      "county": "New Haven County",
+      "address": "16 Selden Street, Woodbridge, CT 06525",
+      "official_url": "https://www.thaistoriesrestaurant.com/",
+      "summary": "A Thai restaurant in Woodbridge's small Selden Street business cluster, serving lunch and dinner with dine-in, takeout and online ordering. Lunch Mon-Fri 11:30 a.m.-2:30 p.m., Sat noon-3 p.m.; dinner Mon-Thu 4:30-9 p.m., Fri to 9:30 p.m., Sat 3-9:30 p.m.; closed Sunday. Phone (203) 389-3363.",
+      "status": "open",
+      "photos": []
+    }
+  ],
+  "entries": [
+    {
+      "kind": "sight",
+      "name": "Amity & Woodbridge Historical Society at the Thomas Darling House",
+      "place_slug": "amity-woodbridge-historical-society-darling-house",
+      "note": "A 1772-1774 house museum on 118 town-owned acres."
+    },
+    {
+      "kind": "sight",
+      "name": "Massaro Community Farm",
+      "place_slug": "massaro-community-farm",
+      "note": "A certified-organic farm with a weekly farm stand and CSA."
+    },
+    {
+      "kind": "sight",
+      "name": "Woodbridge Town Library",
+      "place_slug": "woodbridge-town-library",
+      "note": "Marking its centennial in 2026, with a Library of Things."
+    },
+    {
+      "kind": "sight",
+      "name": "JCC of Greater New Haven",
+      "place_slug": "jcc-greater-new-haven",
+      "note": "The regional Jewish Community Center's cultural arts series."
+    },
+    {
+      "kind": "sight",
+      "name": "The Tradition Golf Club at Oak Lane",
+      "place_slug": "tradition-golf-club-oak-lane",
+      "note": "A golf club on Racebrook Road."
+    },
+    {
+      "kind": "food",
+      "name": "New England Brewing Company (Woodbridge taproom)",
+      "place_slug": "new-england-brewing-woodbridge",
+      "note": "One of Connecticut's best-known craft breweries."
+    },
+    {
+      "kind": "food",
+      "name": "Katz's Restaurant & Deli",
+      "place_slug": "katzs-restaurant-deli",
+      "note": "A New Haven-area Jewish-style deli institution."
+    },
+    {
+      "kind": "food",
+      "name": "Solun Tapas Bar Restaurant",
+      "place_slug": "solun-tapas-bar-restaurant",
+      "note": "Spanish tapas and Mediterranean small plates."
+    },
+    {
+      "kind": "food",
+      "name": "Thai Stories",
+      "place_slug": "thai-stories",
+      "note": "A Thai restaurant in the Selden Street business cluster."
+    }
+  ],
+  "links": [
+    {
+      "target": "guide:bethany-ct-travel-guide",
+      "kind": "nearby",
+      "note": "Bethany was first settled as part of Woodbridge before separating in 1832."
+    },
+    {
+      "target": "guide:new-haven-ct-travel-guide",
+      "kind": "nearby",
+      "note": "Woodbridge was incorporated from portions of New Haven and Milford; West Rock Ridge State Park also spans Woodbridge and New Haven."
+    },
+    {
+      "target": "guide:hamden-ct-travel-guide",
+      "kind": "nearby",
+      "note": "West Rock Ridge State Park's six-mile trap-rock ridge runs through Hamden and Woodbridge."
+    },
+    {
+      "target": "guide:orange-ct-travel-guide",
+      "kind": "same-region",
+      "note": "The nearest verified hotel to Woodbridge, a Courtyard by Marriott, sits in neighboring Orange."
+    }
+  ]
+}

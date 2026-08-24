@@ -84,8 +84,8 @@ defmodule Ethos.Seeds.ConnecticutSeedDataTest do
     files = ct_files()
 
     # The expansion has shipped: this gate is no longer allowed to pass vacuously.
-    assert length(files) == 109,
-           "expected 109 connecticut seed files, found #{length(files)}"
+    assert length(files) == 126,
+           "expected 126 connecticut seed files, found #{length(files)}"
 
     # place-slug ownership across connecticut + manhattan + CT-5 code module
     json_owned =

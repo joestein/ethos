@@ -1,0 +1,154 @@
+{
+  "guide": {
+    "slug": "oxford-ct-travel-guide",
+    "title": "Oxford, Connecticut: A Turnpike Town on the Housatonic",
+    "destination": "Oxford, Connecticut",
+    "state": "Connecticut",
+    "county": "New Haven County",
+    "intro": "Oxford began as farmland within Derby, set off as a separate ecclesiastical parish in 1741 after residents tired of long Sabbath trips to the Derby Meeting House. The General Assembly incorporated Oxford as a town in October 1798, formed from parts of Derby and Southbury and named for Oxford, England; the land's original inhabitants were the Pootatuck and Paugussett peoples, followed by English settlers arriving around the 1680s. Oxford's early economy ran on waterpower — sawmills, grist mills and paper mills clustered along the streams, notably at what is now Southford Falls. The Oxford Turnpike, today's Route 67, was established in 1798 and carried Litchfield County farm goods toward New York markets, supporting roadside taverns including the Oxford House.",
+    "sections": [
+      {
+        "heading": "Getting there",
+        "body": "Oxford has no train station of its own and no scheduled commercial air service, so nearly every visitor arrives by car. Interstate 84 runs along the town's northern edge, and Route 67 bisects Oxford, historically the Oxford Turnpike. Route 188 serves the Quaker Farms section, and Route 34 follows the Housatonic River. The closest rail is Metro-North's Waterbury Branch at Seymour, Beacon Falls or Derby-Shelton, all needing a car for the final leg — and as of 2026, buses replace all Waterbury Branch rail service from July 20, 2026 through May 31, 2027 during station accessibility work."
+      }
+    ],
+    "faq": [
+      {
+        "question": "How do I get to Oxford?",
+        "answer": "By car — Interstate 84 runs along the town's northern edge, and Route 67 bisects Oxford. There is no rail station in Oxford; the nearest Metro-North Waterbury Branch stations (Seymour, Beacon Falls, Derby-Shelton) are themselves served by substitute buses, not trains, from July 20, 2026 through May 31, 2027."
+      },
+      {
+        "question": "What is the Oxford Historical Society Museum?",
+        "answer": "The 1752 Twitchell-Rowland Homestead, moved to Towner Lane in 2006 and opened as a museum in 2010, with the relocated one-room Munn Schoolhouse on the same property. Open for tours the first and third Sundays of each month."
+      },
+      {
+        "question": "Is there a hotel in Oxford?",
+        "answer": "No hotel, inn or bed-and-breakfast physically located in Oxford could be verified. The nearest verified option is the Heritage Hotel & Conference Center in neighboring Southbury."
+      }
+    ],
+    "photos": [
+      {
+        "src": "/photos/ct/oxford/jackson-cove-lake-zoar-oxford.jpg",
+        "thumb": "/photos/ct/oxford/jackson-cove-lake-zoar-oxford_thumb.jpg",
+        "title": "Lake Zoar at Jackson Cove",
+        "description": "Lake Zoar viewed from the Pomperaug Trail near Jackson Cove Park in Oxford.",
+        "author": "Morrowlong",
+        "license": "CC BY-SA 4.0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Partially_frozen_Lake_Zoar_viewed_from_the_Pomperaug_Trail_just_south_of_Oxford_Connecticut%27s_Jackson_Cove_Town_Park.jpg"
+      }
+    ],
+    "tier": "town-page"
+  },
+  "places": [
+    {
+      "slug": "jackson-cove-park",
+      "name": "Jackson Cove Park",
+      "kind": "park",
+      "town": "Oxford",
+      "state": "Connecticut",
+      "county": "New Haven County",
+      "address": "26 Jackson Cove Road, Oxford, CT 06478",
+      "official_url": "https://oxfordct.myrec.com/info/facilities/",
+      "summary": "Oxford's town park on Lake Zoar — a beach with a large pavilion, playground, boat launch and volleyball court, backed by 27 acres of woodland trails. Carries the Oxford loop of the Pomperaug Trail and the Housatonic River Belt Greenway. Watch for posted no-lifeguard dates before swimming. Parks & Rec office: (203) 828-6505.",
+      "status": "open",
+      "photos": [
+        {
+          "src": "/photos/ct/oxford/jackson-cove-lake-zoar-oxford.jpg",
+          "thumb": "/photos/ct/oxford/jackson-cove-lake-zoar-oxford_thumb.jpg",
+          "title": "Lake Zoar at Jackson Cove",
+          "description": "Lake Zoar viewed from the Pomperaug Trail near Jackson Cove Park in Oxford.",
+          "author": "Morrowlong",
+          "license": "CC BY-SA 4.0",
+          "source_url": "https://commons.wikimedia.org/wiki/File:Partially_frozen_Lake_Zoar_viewed_from_the_Pomperaug_Trail_just_south_of_Oxford_Connecticut%27s_Jackson_Cove_Town_Park.jpg"
+        }
+      ]
+    },
+    {
+      "slug": "twitchell-rowland-homestead-munn-schoolhouse",
+      "name": "Twitchell-Rowland Homestead & Munn Schoolhouse",
+      "kind": "museum",
+      "town": "Oxford",
+      "state": "Connecticut",
+      "county": "New Haven County",
+      "address": "60 Towner Lane, Oxford, CT 06478",
+      "official_url": "http://oxford-historical-society.org/",
+      "summary": "The 1752 Twitchell-Rowland Homestead was saved from demolition, moved to Towner Lane in 2006, and opened as a museum in 2010. The relocated one-room Munn Schoolhouse became available for public tours in 2025. Open for tours the first and third Sundays of each month.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "oec-brewing",
+      "name": "OEC Brewing",
+      "kind": "brewery",
+      "town": "Oxford",
+      "state": "Connecticut",
+      "county": "New Haven County",
+      "address": "7 Fox Hollow Rd., Oxford, CT 06478",
+      "official_url": "https://www.oecbrewing.com/",
+      "summary": "A nationally known experimental brewery specializing in open fermentation — sour ales, coolship lagers and barrel-aged projects, with fruit-forward releases drawn from their own horticultural area. Founded around 2012. Hours closed Monday, Tue-Thu noon-6 p.m., Fri-Sat noon-7 p.m., Sun noon-6 p.m. Phone (203) 295-2831.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "oxford-house-tavern",
+      "name": "Oxford House Tavern",
+      "kind": "restaurant",
+      "town": "Oxford",
+      "state": "Connecticut",
+      "county": "New Haven County",
+      "address": "441 Oxford Road, Oxford, CT 06478",
+      "official_url": "https://www.oxfordhousetavern.com/",
+      "summary": "A neighborhood American tavern serving burgers, entrees and appetizers, operating since 2018 and named for the historic Oxford House inn that once served Oxford Turnpike traffic. Known for fish and chips and clam chowder. Open daily 11:30 a.m.-10 p.m. Phone (203) 463-8904.",
+      "status": "open",
+      "photos": []
+    }
+  ],
+  "entries": [
+    {
+      "kind": "sight",
+      "name": "Jackson Cove Park",
+      "place_slug": "jackson-cove-park",
+      "note": "A Lake Zoar beach with woodland trails and a boat launch."
+    },
+    {
+      "kind": "sight",
+      "name": "Twitchell-Rowland Homestead & Munn Schoolhouse",
+      "place_slug": "twitchell-rowland-homestead-munn-schoolhouse",
+      "note": "A rescued 1752 homestead with a relocated one-room schoolhouse."
+    },
+    {
+      "kind": "food",
+      "name": "OEC Brewing",
+      "place_slug": "oec-brewing",
+      "note": "A nationally known experimental brewery specializing in open fermentation."
+    },
+    {
+      "kind": "food",
+      "name": "Oxford House Tavern",
+      "place_slug": "oxford-house-tavern",
+      "note": "A neighborhood tavern named for a historic turnpike inn."
+    }
+  ],
+  "links": [
+    {
+      "target": "guide:derby-ct-travel-guide",
+      "kind": "nearby",
+      "note": "Oxford was incorporated in 1798 from parts of Derby."
+    },
+    {
+      "target": "guide:southbury-ct-travel-guide",
+      "kind": "nearby",
+      "note": "Oxford was incorporated in 1798 from parts of Southbury, and Southford Falls State Park straddles their shared border."
+    },
+    {
+      "target": "guide:beacon-falls-ct-travel-guide",
+      "kind": "nearby",
+      "note": "Beacon Falls was carved from parts of four neighboring towns in 1871, Oxford among them."
+    },
+    {
+      "target": "guide:naugatuck-ct-travel-guide",
+      "kind": "nearby",
+      "note": "Naugatuck was incorporated in 1844 from portions of Oxford, and the Larkin State Park Trail links the two towns."
+    }
+  ]
+}
