@@ -1,0 +1,278 @@
+{
+  "guide": {
+    "slug": "watertown-ct-travel-guide",
+    "title": "Watertown, Connecticut: Sewing Machines and the Old Leatherman's Loop",
+    "destination": "Watertown, Connecticut",
+    "state": "Connecticut",
+    "county": "Litchfield County",
+    "intro": "The land that became Watertown was bought in 1684 by Thomas Judd and 35 other proprietors from the Paugasuck people; the First Ecclesiastical Society of Westbury formed in 1738, and the parish separated from Waterbury and was renamed Watertown upon incorporation in 1780. Watertown's original territory also included what are now Plymouth and Thomaston, with Plymouth set off in 1795. Carriage-maker Nathaniel Wheeler met sewing-machine inventor Allen B. Wilson in August 1851 and formed the Wheeler & Wilson Manufacturing Co. two years later; the firm outgrew Watertown, moved to Bridgeport in 1856, and was sold to Singer in 1905. Light manufacturing followed too, from spooled silk thread to plastic dinnerware, while dairying peaked at more than 30 operations before falling to four by 1986. Watertown was a regular stop on the leather-clad Old Leatherman's 365-mile circuit through Connecticut and New York from the 1850s until his 1889 death.",
+    "sections": [
+      {
+        "heading": "A sewing-machine startup and a dairy peak",
+        "body": "Wheeler & Wilson's Watertown-born sewing machine venture started with an August 1851 handshake and 500 machines, growing into a $160,000 company by 1853 before outgrowing the town and relocating to Bridgeport in 1856; Singer bought the firm in 1905. Joseph Munson, Watertown's first dairy farmer, was producing 6,000 to 7,000 quarts of milk a year by 1896, and more than 30 dairy operations followed over the next several decades — Peter Petersen won the New England Green Pastures Contest in 1960 — before the industry contracted to just four operations by 1986. John Trumbull, the Revolutionary-era satirical poet and one of the \"Hartford Wits\" (not the painter of the same name), was born in Watertown in 1750."
+      },
+      {
+        "heading": "Getting there",
+        "body": "Watertown is a drive-to town in the Litchfield Hills: the Route 8 expressway runs through the eastern edge of town, with I-84 interchanges in neighboring Waterbury and Middlebury, and US Route 6, Route 63 and Route 73 leading into the center. There is no train station in Watertown itself; the nearest rail is Metro-North's Waterbury Branch terminal in Waterbury. Local bus service runs via CTtransit and Northeast Transportation."
+      },
+      {
+        "heading": "A state park and a working winery",
+        "body": "Black Rock State Park, whose 444 acres straddle the Thomaston-Watertown line, offers swimming, hiking and camping around Black Rock Pond, one of Connecticut's designated trout parks. Hawk Ridge Winery, established in 2013 on 58 acres overlooking the Litchfield Hills, pours more than two dozen wines with an on-premise scratch kitchen and weekend live music. The Watertown Library Association, founded in 1865, runs a circulating museum-pass program useful for touring other Connecticut attractions, and the Watertown Land Trust maintains several free preserves including the Fleischer Preserve's Gail Sangree Loop Trail."
+      }
+    ],
+    "faq": [
+      {
+        "question": "How do I get to Watertown?",
+        "answer": "By car — the Route 8 expressway runs through the eastern edge of town, with I-84 interchanges in neighboring Waterbury and Middlebury, and US Route 6, Route 63 and Route 73 leading into the center. There's no train station in Watertown; the nearest is Metro-North's Waterbury Branch terminal in Waterbury."
+      },
+      {
+        "question": "Is Black Rock State Park in Watertown?",
+        "answer": "Yes — its official address and administration are in Watertown, though the park's 444 acres border neighboring Thomaston too. It offers swimming, hiking and camping around Black Rock Pond, one of Connecticut's designated trout parks."
+      },
+      {
+        "question": "What is Hawk Ridge Winery?",
+        "answer": "An estate winery established in 2013 on 58 acres overlooking the Litchfield Hills, pouring more than two dozen wines from eight grape varieties with an on-premise scratch kitchen. Hours run Sunday-Tuesday noon-6 p.m., Wednesday-Saturday noon-8 p.m."
+      },
+      {
+        "question": "Who was the Old Leatherman?",
+        "answer": "A leather-clad itinerant who walked a 365-mile loop through southwestern Connecticut and adjacent New York from the 1850s until his death in 1889, passing through Watertown, Danbury, New Fairfield and other towns on a roughly 34-day circuit."
+      },
+      {
+        "question": "Where can I eat and stay in Watertown?",
+        "answer": "The Local 63 and Echo Craft Kitchen anchor Main Street dining. No hotel, inn or B&B could be verified as operating in Watertown; the nearest confirmed option is the Heritage Hotel & Conference Center in Southbury."
+      }
+    ],
+    "photos": [
+      {
+        "src": "/photos/ct/watertown/watertown-main-street.jpg",
+        "thumb": "/photos/ct/watertown/watertown-main-street_thumb.jpg",
+        "title": "Main Street, Watertown",
+        "description": "A downtown street scene on Main Street (Route 63) in Watertown.",
+        "author": "John Phelan",
+        "license": "CC BY 4.0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Main_Street,_Watertown_CT.jpg"
+      },
+      {
+        "src": "/photos/ct/watertown/black-rock-overlook-watertown.jpg",
+        "thumb": "/photos/ct/watertown/black-rock-overlook-watertown_thumb.jpg",
+        "title": "Black Rock State Park overlook",
+        "description": "A scenic overlook from the Mattatuck Trail in Black Rock State Park.",
+        "author": "Morrowlong",
+        "license": "CC BY-SA 4.0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Black_Rock_State_Park_Black_Rock_Scenic_View_Looking_North_off_Mattatuck_Trail.jpg"
+      },
+      {
+        "src": "/photos/ct/watertown/munson-memorial-park.jpg",
+        "thumb": "/photos/ct/watertown/munson-memorial-park_thumb.jpg",
+        "title": "Munson Memorial Park",
+        "description": "The bandstand at Munson Memorial Park, Watertown's town green.",
+        "author": "Jerry Dougherty",
+        "license": "CC BY 2.5",
+        "source_url": "https://commons.wikimedia.org/wiki/File:MunsonMemorialParkWatertownCT.jpg"
+      }
+    ]
+  },
+  "places": [
+    {
+      "slug": "black-rock-state-park",
+      "name": "Black Rock State Park",
+      "kind": "park",
+      "town": "Watertown",
+      "state": "Connecticut",
+      "county": "Litchfield County",
+      "address": "2065 Thomaston Road, Watertown, CT 06795",
+      "official_url": "https://ctparks.com/node/24",
+      "summary": "A 444-acre park with swimming, hiking, fishing and picnicking around Black Rock Pond, bisected by the Mattatuck Trail and one of Connecticut's designated trout parks. 78 campsites and four rustic cabins; 2026 camping season May 22-October 12. An alcohol ban is in force parkwide. Open daily 8 a.m.-sunset.",
+      "status": "open",
+      "photos": [
+        {
+          "src": "/photos/ct/watertown/black-rock-overlook-watertown.jpg",
+          "thumb": "/photos/ct/watertown/black-rock-overlook-watertown_thumb.jpg",
+          "title": "Black Rock State Park overlook",
+          "description": "A scenic overlook from the Mattatuck Trail in Black Rock State Park.",
+          "author": "Morrowlong",
+          "license": "CC BY-SA 4.0",
+          "source_url": "https://commons.wikimedia.org/wiki/File:Black_Rock_State_Park_Black_Rock_Scenic_View_Looking_North_off_Mattatuck_Trail.jpg"
+        }
+      ]
+    },
+    {
+      "slug": "hawk-ridge-winery",
+      "name": "Hawk Ridge Winery",
+      "kind": "attraction",
+      "town": "Watertown",
+      "state": "Connecticut",
+      "county": "Litchfield County",
+      "address": "28 Plungis Road, Watertown, CT 06795",
+      "official_url": "https://www.ctwine.com/winery/hawk-ridge-winery/",
+      "summary": "Established in 2013 on 58 acres overlooking the Litchfield Hills, with a 5,500-square-foot tasting-room building pouring more than two dozen wines from eight grape varieties. An on-premise chef cooks scratch-kitchen fare; children and pets welcome. Hours Sunday-Tuesday noon-6 p.m., Wednesday-Saturday noon-8 p.m. Phone (860) 274-7440.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "crestbrook-park-golf-course",
+      "name": "Crestbrook Park Golf Course",
+      "kind": "attraction",
+      "town": "Watertown",
+      "state": "Connecticut",
+      "county": "Litchfield County",
+      "address": "834 Northfield Road, Watertown, CT 06795",
+      "official_url": "http://crestbrookpark.com/",
+      "summary": "Watertown's municipal golf facility, established in 1975, with fairways, water hazards and sand traps playable across a range of skill levels. Tee times online or by phone, (860) 945-5249.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "mark-w-potter-gallery-taft-school",
+      "name": "Mark W. Potter Gallery, The Taft School",
+      "kind": "museum",
+      "town": "Watertown",
+      "state": "Connecticut",
+      "county": "Litchfield County",
+      "address": "110 Woodbury Road, Watertown, CT 06795",
+      "official_url": "https://www.taftschool.org/arts/mark-w-potter-gallery",
+      "summary": "A rotating exhibition program at the crossroads of the school's historic and modern arts buildings; Taft was founded in 1890 and occupies a 226-acre campus with two theaters and a \"Music for a While\" concert series. Posted hours Monday-Friday 8 a.m.-5 p.m. when school is in session — call (860) 945-7777 to confirm public access.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "watertown-library-association",
+      "name": "Watertown Library Association",
+      "kind": "attraction",
+      "town": "Watertown",
+      "state": "Connecticut",
+      "county": "Litchfield County",
+      "address": "470 Main Street, Watertown, CT 06795",
+      "official_url": "https://www.watertownlibrary.org/",
+      "summary": "An independent library association founded in 1865, serving Watertown for more than 160 years, with an \"Our History\" local-history timeline and a circulating museum-pass program. Oakville Branch at 55 Davis Street. Hours Monday 10-5, Tuesday-Thursday 10-7, Friday 10-5, Saturday 10-2 (closed Saturdays in summer). Phone (860) 945-5360.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "watertown-land-trust-preserves",
+      "name": "Watertown Land Trust Preserves",
+      "kind": "park",
+      "town": "Watertown",
+      "state": "Connecticut",
+      "county": "Litchfield County",
+      "address": "Fleischer Preserve trailhead on Northfield Road, Watertown, CT 06795",
+      "official_url": "https://www.watertownlandtrust.org/",
+      "summary": "Several free, publicly walkable preserves with published trail maps, including the Fleischer Preserve's Gail Sangree Loop Trail — renamed for a charter member with nearly 50 years of service — and the Franson Farm Preserve.",
+      "status": "open",
+      "photos": [
+        {
+          "src": "/photos/ct/watertown/munson-memorial-park.jpg",
+          "thumb": "/photos/ct/watertown/munson-memorial-park_thumb.jpg",
+          "title": "Munson Memorial Park",
+          "description": "The bandstand at Munson Memorial Park, Watertown's town green.",
+          "author": "Jerry Dougherty",
+          "license": "CC BY 2.5",
+          "source_url": "https://commons.wikimedia.org/wiki/File:MunsonMemorialParkWatertownCT.jpg"
+        }
+      ]
+    },
+    {
+      "slug": "the-local-63",
+      "name": "The Local 63",
+      "kind": "restaurant",
+      "town": "Watertown",
+      "state": "Connecticut",
+      "county": "Litchfield County",
+      "address": "465 Main Street, Watertown, CT 06795",
+      "official_url": "https://www.thelocal63.com/",
+      "summary": "A farm-to-table spot showcasing sustainably grown local ingredients, with a daily 2-5 p.m. happy hour and Taco Mondays. Hours Sunday-Monday and Thursday noon-8 p.m., Friday-Saturday noon-9 p.m., closed Tuesday-Wednesday.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "echo-craft-kitchen",
+      "name": "Echo Craft Kitchen",
+      "kind": "restaurant",
+      "town": "Watertown",
+      "state": "Connecticut",
+      "county": "Litchfield County",
+      "address": "150 Echo Lake Road, Watertown, CT 06795",
+      "official_url": "https://www.echocraftkitchen.com/",
+      "summary": "Fresh American fare, hand-tossed pizzas and craft cocktails, with a Sunday brunch buffet 10:30 a.m.-1 p.m. Hours Monday noon-8 p.m., Tuesday-Thursday noon-9 p.m., Friday-Saturday noon-10 p.m., Sunday 10:30 a.m.-8 p.m. Phone (860) 274-8829.",
+      "status": "open",
+      "photos": []
+    }
+  ],
+  "entries": [
+    {
+      "kind": "sight",
+      "name": "Black Rock State Park",
+      "place_slug": "black-rock-state-park",
+      "note": "444 acres of swimming, hiking and camping on the Thomaston line."
+    },
+    {
+      "kind": "sight",
+      "name": "Hawk Ridge Winery",
+      "place_slug": "hawk-ridge-winery",
+      "note": "An estate winery overlooking the Litchfield Hills."
+    },
+    {
+      "kind": "sight",
+      "name": "Crestbrook Park Golf Course",
+      "place_slug": "crestbrook-park-golf-course",
+      "note": "Watertown's municipal 18-hole golf course."
+    },
+    {
+      "kind": "sight",
+      "name": "Mark W. Potter Gallery, The Taft School",
+      "place_slug": "mark-w-potter-gallery-taft-school",
+      "note": "A rotating exhibition program on the historic Taft campus."
+    },
+    {
+      "kind": "sight",
+      "name": "Watertown Library Association",
+      "place_slug": "watertown-library-association",
+      "note": "A 160-year-old library with a museum-pass program."
+    },
+    {
+      "kind": "walk",
+      "name": "Watertown Land Trust Preserves",
+      "place_slug": "watertown-land-trust-preserves",
+      "note": "Free preserves including the Gail Sangree Loop Trail."
+    },
+    {
+      "kind": "food",
+      "name": "The Local 63",
+      "place_slug": "the-local-63",
+      "note": "Farm-to-table dining named for the town's main highway."
+    },
+    {
+      "kind": "food",
+      "name": "Echo Craft Kitchen",
+      "place_slug": "echo-craft-kitchen",
+      "note": "Fresh American fare and a Sunday brunch buffet."
+    }
+  ],
+  "links": [
+    {
+      "target": "guide:thomaston-ct-travel-guide",
+      "kind": "nearby",
+      "note": "Black Rock State Park sits on the shared Thomaston-Watertown line."
+    },
+    {
+      "target": "guide:bethlehem-ct-travel-guide",
+      "kind": "nearby",
+      "note": null
+    },
+    {
+      "target": "guide:plymouth-ct-travel-guide",
+      "kind": "nearby",
+      "note": null
+    },
+    {
+      "target": "guide:waterbury-ct-travel-guide",
+      "kind": "nearby",
+      "note": null
+    },
+    {
+      "target": "guide:middlebury-ct-travel-guide",
+      "kind": "same-region",
+      "note": null
+    }
+  ]
+}

@@ -1,0 +1,253 @@
+{
+  "guide": {
+    "slug": "harwinton-ct-travel-guide",
+    "title": "Harwinton, Connecticut: A Portmanteau Town Since 1737",
+    "destination": "Harwinton, Connecticut",
+    "state": "Connecticut",
+    "county": "Litchfield County",
+    "intro": "Harwinton was first settled around 1730 and incorporated in October 1737, its first town meeting held that December 20 at Jacob Benton's house when the town counted roughly 161 residents and 25 to 30 scattered houses. The name is a portmanteau — HAR from Hartford, WIN from Windsor, and the Old English -ton for town — reflecting that Hartford and Windsor proprietors had jointly held the land since the 1680s. A 1726 arbitration split the disputed tract between the colony and the two towns, with Hartford taking the eastern half and Windsor the western half along a ten-rod-wide highway, before the halves were rejoined in 1732, five years before incorporation. Harwinton's craft economy produced pitchforks, clocks, bricks, tinware, hats and cutlery; railroad builder Collis P. Huntington was born here, and publisher Theodore A. Hungerford's trust funded the town's first library. The Harwinton Fair traces to an 1853 record book, making 2026 its 169th year.",
+    "sections": [
+      {
+        "heading": "Two halves reunited",
+        "body": "Hartford and Windsor's proprietors held Harwinton jointly through the colonial era, splitting it along a straight north-south highway before rejoining East and West Harwinton in 1732. The town's craft economy diversified beyond farming into pitchforks, clocks — the firm of Edward Hopkins and Augustus Alfred among its makers — bricks, tinware, hats and cutlery. Railroad builder Collis P. Huntington, later a founder of the Central Pacific Railroad, was born in Harwinton, and Chicago publisher Theodore A. Hungerford's trust funded the Carnegie-style building that is now the T. A. Hungerford Memorial Museum."
+      },
+      {
+        "heading": "Getting there",
+        "body": "Harwinton is a drive-to town in eastern Litchfield County with no passenger rail station of its own. CT Route 4 is the main east-west route through the town center, with Route 8 running along the western edge toward Torrington and Waterbury, and Routes 72, 118 and 222 feeding in from Bristol, Litchfield and Torrington. Rail travelers connect at Hartford Union Station on the CTrail Hartford Line and finish the trip by car."
+      },
+      {
+        "heading": "A fairground and two land trust preserves",
+        "body": "The Harwinton Fair, run by the volunteer Harwinton Agricultural Society, traces its first written record to an 1853 \"Harwinton Cattle Show and Fair\" and marks its 169th year in 2026. The Harwinton Historical Society restored a one-room 1840 schoolhouse the Lions Club relocated in 1972, alongside a replica 1800s barn museum. The Harwinton Land Trust maintains Bull Pond Preserve, with an 80-foot boardwalk over a beaver marsh, and the smaller Forever Forest Preserve off Whetstone Road."
+      }
+    ],
+    "faq": [
+      {
+        "question": "How do I get to Harwinton?",
+        "answer": "By car — CT Route 4 runs through the town center, with Route 8 along the western edge and Routes 72, 118 and 222 feeding in from Bristol, Litchfield and Torrington. There's no passenger rail station in Harwinton; the nearest CTrail Hartford Line stop is Hartford Union Station."
+      },
+      {
+        "question": "Where does the name Harwinton come from?",
+        "answer": "It's a portmanteau of HAR (Hartford) and WIN (Windsor), plus the Old English -ton for town, reflecting that the land was held by proprietors of both towns before Harwinton incorporated separately in 1737."
+      },
+      {
+        "question": "What is the Harwinton Fair?",
+        "answer": "A volunteer-run agricultural fair whose first written record dates to 1853; 2026 marks its 169th annual edition, held Friday through Sunday, October 2-4, at the Locust Road fairgrounds."
+      },
+      {
+        "question": "What is Bull Pond Preserve?",
+        "answer": "A 71-acre Harwinton Land Trust preserve including the 20-acre Bull Pond, with four color-blazed loop trails totaling roughly two miles, an 80-foot boardwalk over a beaver marsh, and wildlife-viewing decks. Trailhead is across from the Harwinton Fairgrounds on Locust Road."
+      },
+      {
+        "question": "Where can I eat and stay in Harwinton?",
+        "answer": "The Edison Grill serves breakfast through dinner with a full bar, and Fairview Farm Golf Course Restaurant & Bar is open to the public during golf season. No lodging could be verified inside Harwinton; the nearest option is the Litchfield Inn, roughly ten miles west."
+      }
+    ],
+    "photos": [
+      {
+        "src": "/photos/ct/harwinton/harwinton-congregational-church.jpg",
+        "thumb": "/photos/ct/harwinton/harwinton-congregational-church_thumb.jpg",
+        "title": "Harwinton Congregational Church",
+        "description": "Harwinton Congregational Church at the town green.",
+        "author": "John Phelan",
+        "license": "CC BY-SA 4.0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Harwinton_Congregational_Church,_Harwinton_CT.jpg"
+      },
+      {
+        "src": "/photos/ct/harwinton/harwinton-green-house.jpg",
+        "thumb": "/photos/ct/harwinton/harwinton-green-house_thumb.jpg",
+        "title": "Harwinton town green, 1783 colonial",
+        "description": "A white 1783 colonial house facing the Harwinton town green in the Litchfield-South Roads Historic District.",
+        "author": "Magicpiano",
+        "license": "CC BY-SA 4.0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:HarwintonCT_LitchfieldSouthRoadsHD_2.jpg"
+      },
+      {
+        "src": "/photos/ct/harwinton/harwinton-green-streetscape.jpg",
+        "thumb": "/photos/ct/harwinton/harwinton-green-streetscape_thumb.jpg",
+        "title": "Harwinton town green streetscape",
+        "description": "A lane along the Harwinton town green in the Litchfield-South Roads Historic District.",
+        "author": "Magicpiano",
+        "license": "CC BY-SA 4.0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:HarwintonCT_LitchfieldSouthRoadsHD_3.jpg"
+      }
+    ]
+  },
+  "places": [
+    {
+      "slug": "harwinton-fairgrounds-fair",
+      "name": "Harwinton Fairgrounds / The Harwinton Fair",
+      "kind": "attraction",
+      "town": "Harwinton",
+      "state": "Connecticut",
+      "county": "Litchfield County",
+      "address": "150 Locust Road, Harwinton, CT 06791",
+      "official_url": "https://harwintonfair.com/",
+      "summary": "Run by the volunteer Harwinton Agricultural Society, tracing to an 1853 \"Harwinton Cattle Show and Fair\" record book — 2026 is its 169th year, held Friday-Sunday, October 2-4. The fairgrounds are also available to rent for events.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "harwinton-historical-society",
+      "name": "Harwinton Historical Society — First District School House & Barn Museum",
+      "kind": "museum",
+      "town": "Harwinton",
+      "state": "Connecticut",
+      "county": "Litchfield County",
+      "address": "137 Litchfield Road, Harwinton, CT 06791",
+      "official_url": "https://harwintonhistory.org/",
+      "summary": "A one-room schoolhouse built in 1840, relocated by the Lions Club in 1972 and restored by the historical society, beside a replica 1800s barn museum with blacksmith bellows, sleighs and butter churns. Open for scheduled events; check the society's 2026 program calendar.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "bull-pond-preserve",
+      "name": "Bull Pond Preserve",
+      "kind": "park",
+      "town": "Harwinton",
+      "state": "Connecticut",
+      "county": "Litchfield County",
+      "address": "Locust Road, Harwinton, CT 06791",
+      "official_url": "https://harwintonlandtrust.org/?page_id=16",
+      "summary": "71 acres including the 20-acre Bull Pond, with four color-blazed loop trails totaling roughly two miles, an 80-foot boardwalk over a beaver dam and marsh, wildlife-viewing decks and a historic \"wolf tree.\" Trailhead across from the Harwinton Fairgrounds.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "forever-forest-preserve",
+      "name": "Forever Forest Preserve",
+      "kind": "park",
+      "town": "Harwinton",
+      "state": "Connecticut",
+      "county": "Litchfield County",
+      "address": "Whetstone Road, Harwinton, CT 06791",
+      "official_url": "https://harwintonlandtrust.org/?page_id=21",
+      "summary": "14 acres with yellow, white, red and blue blazed trails, an observation deck over a marsh, ledge-top views and a footbridge over Kelly Pond Brook. Mountain laurel peaks mid-to-late June. Gravel pull-off parking for about six cars.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "harwinton-conservation-recreation-area",
+      "name": "Harwinton Conservation/Recreation Area",
+      "kind": "park",
+      "town": "Harwinton",
+      "state": "Connecticut",
+      "county": "Litchfield County",
+      "address": "Off Bentley Drive, Harwinton, CT 06791",
+      "official_url": "https://www.harwinton.gov/395/Conservation-Recreation-Area",
+      "summary": "Town-run open space with a children's playground, a seasonally trout-stocked fishing pond, sand volleyball and tennis courts, and trails linking the library, town hall and sports complex. Dogs must be leashed.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "deeply-rooted-farms",
+      "name": "Deeply Rooted Farms",
+      "kind": "attraction",
+      "town": "Harwinton",
+      "state": "Connecticut",
+      "county": "Litchfield County",
+      "address": "130 Terryville Road, Harwinton, CT 06791",
+      "official_url": "https://deeplyrootedfarms.net/",
+      "summary": "A working farm growing strawberries, black raspberries, squash, pumpkins and Christmas trees, with seasonal harvest windows posted on its own calendar. Check the farm's site before visiting — it closes between raspberry crops. Phone (860) 921-3434.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "edison-grill",
+      "name": "The Edison Grill",
+      "kind": "restaurant",
+      "town": "Harwinton",
+      "state": "Connecticut",
+      "county": "Litchfield County",
+      "address": "178 Birge Park Road, Harwinton, CT 06791",
+      "official_url": "https://edisongrill.com/",
+      "summary": "An independent restaurant and bar serving breakfast, lunch, dinner and catering. Closed Monday-Tuesday; Wednesday-Thursday noon-8 p.m., Friday-Saturday noon-9 p.m., Sunday 8 a.m.-7 p.m. Phone (860) 485-1401.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "fairview-farm-golf-course-restaurant",
+      "name": "Fairview Farm Golf Course Restaurant & Bar",
+      "kind": "restaurant",
+      "town": "Harwinton",
+      "state": "Connecticut",
+      "county": "Litchfield County",
+      "address": "300 Hill Road, Harwinton, CT 06791",
+      "official_url": "https://www.fairviewfarmgc.com/",
+      "summary": "Open to the public during golf season at an 18-hole, par-72 course on 180 acres, with seating overlooking the 9th and 18th greens; also a banquet and wedding venue. Phone (860) 689-1000.",
+      "status": "open",
+      "photos": []
+    }
+  ],
+  "entries": [
+    {
+      "kind": "sight",
+      "name": "Harwinton Fairgrounds / The Harwinton Fair",
+      "place_slug": "harwinton-fairgrounds-fair",
+      "note": "A volunteer-run agricultural fair tracing to an 1853 record book."
+    },
+    {
+      "kind": "sight",
+      "name": "Harwinton Historical Society",
+      "place_slug": "harwinton-historical-society",
+      "note": "A relocated 1840 one-room schoolhouse and a replica barn museum."
+    },
+    {
+      "kind": "walk",
+      "name": "Bull Pond Preserve",
+      "place_slug": "bull-pond-preserve",
+      "note": "71 acres with a boardwalk over a beaver marsh."
+    },
+    {
+      "kind": "walk",
+      "name": "Forever Forest Preserve",
+      "place_slug": "forever-forest-preserve",
+      "note": "14 acres with ledge-top views, peak with June mountain laurel."
+    },
+    {
+      "kind": "sight",
+      "name": "Harwinton Conservation/Recreation Area",
+      "place_slug": "harwinton-conservation-recreation-area",
+      "note": "Town-run trails, a fishing pond and playground near Bentley Drive."
+    },
+    {
+      "kind": "sight",
+      "name": "Deeply Rooted Farms",
+      "place_slug": "deeply-rooted-farms",
+      "note": "A working farm growing berries, pumpkins and Christmas trees."
+    },
+    {
+      "kind": "food",
+      "name": "The Edison Grill",
+      "place_slug": "edison-grill",
+      "note": "Breakfast through dinner with a full bar."
+    },
+    {
+      "kind": "food",
+      "name": "Fairview Farm Golf Course Restaurant & Bar",
+      "place_slug": "fairview-farm-golf-course-restaurant",
+      "note": "Public dining overlooking an 18-hole course, in golf season."
+    }
+  ],
+  "links": [
+    {
+      "target": "guide:litchfield-ct-travel-guide",
+      "kind": "nearby",
+      "note": "CT-118 connects Harwinton to Litchfield and CT-8."
+    },
+    {
+      "target": "guide:torrington-ct-travel-guide",
+      "kind": "nearby",
+      "note": null
+    },
+    {
+      "target": "guide:thomaston-ct-travel-guide",
+      "kind": "nearby",
+      "note": null
+    },
+    {
+      "target": "guide:plymouth-ct-travel-guide",
+      "kind": "nearby",
+      "note": null
+    }
+  ]
+}

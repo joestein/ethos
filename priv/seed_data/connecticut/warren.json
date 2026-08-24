@@ -1,0 +1,241 @@
+{
+  "guide": {
+    "slug": "warren-ct-travel-guide",
+    "title": "Warren, Connecticut: A Bunker Hill General's Namesake",
+    "destination": "Warren, Connecticut",
+    "state": "Connecticut",
+    "county": "Litchfield County",
+    "intro": "Warren was first settled in 1737 as part of Kent and incorporated separately in 1786, named for Revolutionary War hero General Joseph Warren, killed at the Battle of Bunker Hill. Its religious life predates civil independence: an ecclesiastical society formed in 1750 and a church gathered in 1756, while the area still belonged to Kent. Early Warren was an agricultural community that also took part in northwestern Connecticut's iron industry, and by 1810 the town, with under a thousand residents, supported five private schools and an academy. Charles Grandison Finney, the Second Great Awakening revivalist who later served as president of Oberlin College from 1851 to 1866, was born in Warren in 1792, though his family moved to frontier New York while he was still a small child. Warren's Brick School, the Warren Historical Society says, holds the longest record of continuous operation of any one-room schoolhouse in Connecticut.",
+    "sections": [
+      {
+        "heading": "A general's name and an unusual concentration of schools",
+        "body": "Warren's fifty-odd years as part of Kent ended with its 1786 incorporation, named for General Joseph Warren rather than any local figure. By 1810 this agricultural town of under a thousand people supported five private schools and an academy — a striking ratio for a town this size, though Charles Finney, its most famous educational alumnus by birth, left for New York as a small child and never actually attended those schools. The Warren Congregational Church on the hilltop green, built 1818-1820 in the Federal style on the site of a 1769 meetinghouse, holds one of only three documented Federal-period pulpits in Connecticut and was listed on the National Register of Historic Places in 1991."
+      },
+      {
+        "heading": "Getting there",
+        "body": "Warren has no rail station and no interstate of its own. Route 45 runs north-south through town and Route 341 runs east-west, the two overlapping for about a mile and a half through the center; Route 341 connects west to US Route 7 in Kent and east to US Route 202 in Washington. There's no rail service of any kind in Warren — the nearest passenger rail is Metro-North's Harlem Line terminus at Wassaic, New York, reachable only by car."
+      },
+      {
+        "heading": "A hilltop inn above Lake Waramaug",
+        "body": "The Hopkins Inn has welcomed travelers to its perch above Lake Waramaug's north shore since 1847, serving breakfast, lunch and dinner on a terrace overlooking the water, with eleven guest rooms and two apartments upstairs. Warren Woods, the town's main open-space facility, hosts community events including the Warren Historical Society's fall gathering, while Above All State Park, a 31-acre undeveloped DEEP property established in 1927, keeps informal trails past Cold War-era radar ruins for visitors willing to explore without marked paths or facilities."
+      }
+    ],
+    "faq": [
+      {
+        "question": "How do I get to Warren?",
+        "answer": "By car — Route 45 runs north-south and Route 341 runs east-west through town, overlapping for about a mile and a half in the center; Route 341 connects west to Kent and east to Washington. There's no rail service in Warren; the nearest passenger station is Metro-North's Harlem Line terminus at Wassaic, New York."
+      },
+      {
+        "question": "Why is the town named Warren?",
+        "answer": "For General Joseph Warren, the Revolutionary War hero killed at the Battle of Bunker Hill in 1775 — not for any local resident. Warren incorporated as its own town in 1786 after fifty years as part of Kent."
+      },
+      {
+        "question": "What is the Warren Congregational Church?",
+        "answer": "A Federal-style meetinghouse built 1818-1820 on Warren's hilltop green, replacing an earlier 1769 building; its congregation dates to 1750, when the area was still part of Kent. The pulpit is one of only three documented Federal-period pulpits surviving in Connecticut, and the church was listed on the National Register of Historic Places in 1991."
+      },
+      {
+        "question": "Is Above All State Park developed?",
+        "answer": "No — it's a 31-acre undeveloped DEEP-administered park established in 1927, with informal, unmaintained trails, no facilities and no marked parking, plus remnants of a Cold War-era radar installation. It's a spot for experienced explorers, not a typical day-use park."
+      },
+      {
+        "question": "Where can I eat and stay in Warren?",
+        "answer": "The Hopkins Inn is Warren's definitive restaurant and lodging, perched above Lake Waramaug's north shore since 1847, with eleven guest rooms and two apartments. Its 2026 season runs March 24 through January 1; the restaurant and front desk are closed Mondays."
+      }
+    ],
+    "photos": [
+      {
+        "src": "/photos/ct/warren/warren-congregational-church.jpg",
+        "thumb": "/photos/ct/warren/warren-congregational-church_thumb.jpg",
+        "title": "Warren Congregational Church",
+        "description": "The 1818-1820 Warren Congregational Church on the town's hilltop green.",
+        "author": "John Phelan",
+        "license": "CC BY-SA 4.0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Warren_Congregational_Church,_Warren_CT.jpg"
+      },
+      {
+        "src": "/photos/ct/warren/hopkins-road-warren.jpg",
+        "thumb": "/photos/ct/warren/hopkins-road-warren_thumb.jpg",
+        "title": "Hopkins Road, Warren",
+        "description": "A country road in Warren near Hopkins Inn, above the Lake Waramaug highlands.",
+        "author": "Bob P. B.",
+        "license": "CC BY 2.0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Hopkins_Road,_Warren,_Connecticut.jpg"
+      },
+      {
+        "src": "/photos/ct/warren/lake-waramaug-mount-bushnell.jpg",
+        "thumb": "/photos/ct/warren/lake-waramaug-mount-bushnell_thumb.jpg",
+        "title": "Lake Waramaug",
+        "description": "Lake Waramaug with Mount Bushnell on the horizon.",
+        "author": "Magicpiano",
+        "license": "CC BY-SA 4.0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:LakeWaureganSP_and_MountBushnellSP.jpg"
+      }
+    ]
+  },
+  "places": [
+    {
+      "slug": "warren-congregational-church",
+      "name": "Warren Congregational Church",
+      "kind": "historic-site",
+      "town": "Warren",
+      "state": "Connecticut",
+      "county": "Litchfield County",
+      "address": "4 Sackett Hill Road, Warren, CT 06754",
+      "summary": "Built 1818-1820 in the Federal style on Warren's hilltop green, replacing a 1769 meetinghouse; the congregation dates to 1750, when the area was part of Kent. Its pulpit is one of only three documented Federal-period pulpits in Connecticut. Listed on the National Register of Historic Places November 29, 1991; still an active church, viewable from the green.",
+      "status": "open",
+      "photos": [
+        {
+          "src": "/photos/ct/warren/warren-congregational-church.jpg",
+          "thumb": "/photos/ct/warren/warren-congregational-church_thumb.jpg",
+          "title": "Warren Congregational Church",
+          "description": "The 1818-1820 Warren Congregational Church on the town's hilltop green.",
+          "author": "John Phelan",
+          "license": "CC BY-SA 4.0",
+          "source_url": "https://commons.wikimedia.org/wiki/File:Warren_Congregational_Church,_Warren_CT.jpg"
+        }
+      ]
+    },
+    {
+      "slug": "warren-historical-society",
+      "name": "Warren Historical Society",
+      "kind": "museum",
+      "town": "Warren",
+      "state": "Connecticut",
+      "county": "Litchfield County",
+      "address": "7 Sackett Hill Road, Warren, CT 06754",
+      "official_url": "https://warrencthistoricalsociety.org/",
+      "summary": "Keeps Warren's local collections and documents the town's founding as part of Kent, its 1786 incorporation, and the Brick School — described by the society as the one-room schoolhouse with the longest record of continuous operation in Connecticut. Visits by appointment through the society's contact form. Phone (860) 503-8545.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "warren-woods",
+      "name": "Warren Woods",
+      "kind": "park",
+      "town": "Warren",
+      "state": "Connecticut",
+      "county": "Litchfield County",
+      "address": "251 Brick School Road, Warren, CT 06754",
+      "official_url": "https://warrenct.gov/parks-recreation",
+      "summary": "Town-owned open space managed by Warren Parks & Recreation, one of three public facilities the town lists alongside the Town Beach and Community Center; it hosts town events including the Historical Society's fall gathering. Phone (860) 868-7881 ext. 113.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "above-all-state-park",
+      "name": "Above All State Park",
+      "kind": "park",
+      "town": "Warren",
+      "state": "Connecticut",
+      "county": "Litchfield County",
+      "summary": "A 31-acre undeveloped state park established in 1927 and administered by CT DEEP, with informal, unmaintained trails, no facilities and no marked parking. Remnants of a Cold War-era radar installation remain on site — a spot for experienced explorers, not a typical day-use destination.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "hopkins-inn-restaurant",
+      "name": "The Hopkins Inn Restaurant",
+      "kind": "restaurant",
+      "town": "Warren",
+      "state": "Connecticut",
+      "county": "Litchfield County",
+      "address": "22 Hopkins Road, Warren, CT 06777",
+      "official_url": "https://www.thehopkinsinn.com/",
+      "summary": "Perched above the northern shore of Lake Waramaug, the Hopkins Inn has welcomed travelers since 1847, serving breakfast, lunch and dinner with a terrace overlooking the lake. 2026 season March 24-January 1; breakfast Tuesday-Sunday 8:30-10 a.m., lunch Tuesday-Saturday noon-2 p.m., dinner Tuesday-Friday 5:30-8 p.m., closed Monday.",
+      "status": "open",
+      "photos": [
+        {
+          "src": "/photos/ct/warren/hopkins-road-warren.jpg",
+          "thumb": "/photos/ct/warren/hopkins-road-warren_thumb.jpg",
+          "title": "Hopkins Road, Warren",
+          "description": "A country road in Warren near Hopkins Inn, above the Lake Waramaug highlands.",
+          "author": "Bob P. B.",
+          "license": "CC BY 2.0",
+          "source_url": "https://commons.wikimedia.org/wiki/File:Hopkins_Road,_Warren,_Connecticut.jpg"
+        },
+        {
+          "src": "/photos/ct/warren/lake-waramaug-mount-bushnell.jpg",
+          "thumb": "/photos/ct/warren/lake-waramaug-mount-bushnell_thumb.jpg",
+          "title": "Lake Waramaug",
+          "description": "Lake Waramaug with Mount Bushnell on the horizon.",
+          "author": "Magicpiano",
+          "license": "CC BY-SA 4.0",
+          "source_url": "https://commons.wikimedia.org/wiki/File:LakeWaureganSP_and_MountBushnellSP.jpg"
+        }
+      ]
+    },
+    {
+      "slug": "hopkins-inn",
+      "name": "The Hopkins Inn",
+      "kind": "bnb",
+      "town": "Warren",
+      "state": "Connecticut",
+      "county": "Litchfield County",
+      "address": "22 Hopkins Road, Warren, CT 06777",
+      "official_url": "https://www.thehopkinsinn.com/",
+      "summary": "Eleven guest rooms and two apartments above the north shore of Lake Waramaug, welcoming travelers since 1847. Most rooms have no phone or television, and there's no elevator; the front desk is closed Mondays. Reservations (860) 868-7295.",
+      "status": "open",
+      "photos": []
+    }
+  ],
+  "entries": [
+    {
+      "kind": "sight",
+      "name": "Warren Congregational Church",
+      "place_slug": "warren-congregational-church",
+      "note": "A 1818-1820 Federal-style meetinghouse on the town's hilltop green."
+    },
+    {
+      "kind": "sight",
+      "name": "Warren Historical Society",
+      "place_slug": "warren-historical-society",
+      "note": "Town history and the Brick School's record-setting one-room schoolhouse."
+    },
+    {
+      "kind": "walk",
+      "name": "Warren Woods",
+      "place_slug": "warren-woods",
+      "note": "The town's main public open space and event ground."
+    },
+    {
+      "kind": "walk",
+      "name": "Above All State Park",
+      "place_slug": "above-all-state-park",
+      "note": "A 31-acre undeveloped park with Cold War radar ruins."
+    },
+    {
+      "kind": "food",
+      "name": "The Hopkins Inn Restaurant",
+      "place_slug": "hopkins-inn-restaurant",
+      "note": "Lakeside dining above Lake Waramaug since 1847."
+    },
+    {
+      "kind": "stay",
+      "name": "The Hopkins Inn",
+      "place_slug": "hopkins-inn",
+      "note": "Eleven rooms and two apartments, Warren's main lodging."
+    }
+  ],
+  "links": [
+    {
+      "target": "guide:kent-ct-travel-guide",
+      "kind": "nearby",
+      "note": "Warren was settled in 1737 as part of Kent; Route 341 connects the two directly."
+    },
+    {
+      "target": "guide:kent-ct-travel-guide",
+      "kind": "shared-history",
+      "note": "Warren was first settled in 1737 as part of Kent, incorporating separately in 1786."
+    },
+    {
+      "target": "guide:washington-ct-travel-guide",
+      "kind": "nearby",
+      "note": "Route 341 connects Warren directly east to Washington."
+    },
+    {
+      "target": "guide:cornwall-ct-travel-guide",
+      "kind": "same-region",
+      "note": null
+    }
+  ]
+}

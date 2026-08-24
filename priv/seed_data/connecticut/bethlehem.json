@@ -1,0 +1,256 @@
+{
+  "guide": {
+    "slug": "bethlehem-ct-travel-guide",
+    "title": "Bethlehem, Connecticut: America's Christmas Town",
+    "destination": "Bethlehem, Connecticut",
+    "state": "Connecticut",
+    "county": "Litchfield County",
+    "intro": "Bethlehem sits on land that was part of Woodbury's 1710 \"North Purchase,\" settled by pioneers beginning in 1734; residents won separate parish privileges in October 1739 under preacher Joseph Bellamy, and the town incorporated independently in 1787. Bellamy, Yale-educated at 16 and a student of Jonathan Edwards, named the settlement, became its wealthiest citizen, and ran what's considered the first theological school in America from his home, training students including Aaron Burr. Farming gave way by the early 1800s to grist and saw mills, cotton and woolen factories, and hat manufacture. Bethlehem became \"Connecticut's Christmas Town\" in 1938, when Postmaster Earl Johnson mailed cards reading \"Merry Christmas from the little Town of Bethlehem\"; national press coverage soon had the post office handling over 200,000 pieces of December mail during the 1950s and '60s, about ten times its normal volume.",
+    "sections": [
+      {
+        "heading": "A theological school and a Christmas legend",
+        "body": "Joseph Bellamy's Main Street house, built in stages from 1754 to 1767, stayed in his family until 1868 and was later restored by human-rights advocate Caroline Ferriday, who spent 78 summers there aiding Ravensbrück concentration-camp survivors before bequeathing the property to Connecticut Landmarks on her 1990 death. The Abbey of Regina Laudis, a community of contemplative Benedictine women established in 1947, still chants the Divine Office daily and once counted former Hollywood actress Dolores Hart among its nuns. Bethlehem held its first Christmas Town Festival in 1981, and the post office at 34 East Street has introduced a new hand-stamped holiday cachet every year since 1938."
+      },
+      {
+        "heading": "Getting there",
+        "body": "Bethlehem has no rail station and no interstate of its own — drivers take Route 61 north from Woodbury toward Morris and Litchfield, or Route 132 from Woodbury and Watertown. From I-84 eastbound, exit toward Route 6 north through Woodbury; from I-84 westbound, take Exit 17 to Route 64 through Middlebury, merging onto Route 6 in Woodbury. The nearest Metro-North station is Waterbury, at the top of the Waterbury Branch."
+      }
+    ],
+    "faq": [
+      {
+        "question": "How do I get to Bethlehem?",
+        "answer": "By car — Route 61 runs through the town center, north to Morris and Litchfield and south to US 6 in Woodbury, with Route 132 leading south to Woodbury and east into Watertown. There's no rail station in Bethlehem; the nearest is Waterbury, on Metro-North's Waterbury Branch, roughly 12 miles east."
+      },
+      {
+        "question": "Can I visit the Abbey of Regina Laudis?",
+        "answer": "Yes — visitors may attend daily Mass at 8:15 a.m. and browse the monastic Art Shop (Friday 10 a.m.-noon; Saturday-Sunday 10 a.m.-noon and 1:30-4 p.m.). The abbey's 18th-century Neapolitan crèche is open daily 10 a.m.-4 p.m. but closes for winter, reopening at Easter — plan around that if visiting during the Christmas Town Festival."
+      },
+      {
+        "question": "What is the Christmas Town Festival?",
+        "answer": "An annual December festival, first held in 1981, centered on the Bethlehem Town Green and the post office, which has issued a new hand-stamped holiday \"cachet\" design every year since 1938 — over 80 are now available to visitors."
+      },
+      {
+        "question": "Is there a hotel in Bethlehem?",
+        "answer": "No hotel, inn or B&B could be verified as operating in Bethlehem itself. The nearest verified option is Winvian Farm, an 18-cottage luxury resort a short distance north in neighboring Morris."
+      },
+      {
+        "question": "Where can I eat in Bethlehem?",
+        "answer": "The Painted Pony Restaurant serves American fare and pizza on Main Street with weekly Trivia Tuesdays, and March Farm's store and bakery sells fresh-baked goods alongside its pick-your-own fruit and pumpkins."
+      }
+    ],
+    "photos": [
+      {
+        "src": "/photos/ct/bethlehem/bellamy-ferriday-house.jpg",
+        "thumb": "/photos/ct/bethlehem/bellamy-ferriday-house_thumb.jpg",
+        "title": "Bellamy-Ferriday House & Garden",
+        "description": "The front elevation of the Bellamy-Ferriday House in Bethlehem.",
+        "author": "CTLandmarks",
+        "license": "CC BY-SA 4.0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Bellamy-Ferriday_House_%26_Garden.jpg"
+      },
+      {
+        "src": "/photos/ct/bethlehem/bethlehem-main-street.jpg",
+        "thumb": "/photos/ct/bethlehem/bethlehem-main-street_thumb.jpg",
+        "title": "Main Street South, Bethlehem",
+        "description": "A street scene along Main Street South through the Bethlehem town center.",
+        "author": "John Phelan",
+        "license": "CC BY 4.0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Main_St_S,_Bethlehem_CT.jpg"
+      },
+      {
+        "src": "/photos/ct/bethlehem/bethlehem-schoolhouse.jpg",
+        "thumb": "/photos/ct/bethlehem/bethlehem-schoolhouse_thumb.jpg",
+        "title": "District No. 1 Schoolhouse",
+        "description": "The District No. 1 Schoolhouse on the Bethlehem town green.",
+        "author": "John Phelan",
+        "license": "CC BY 4.0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:District_No_1_Schoolhouse,_Bethlehem_CT.jpg"
+      }
+    ]
+  },
+  "places": [
+    {
+      "slug": "bellamy-ferriday-house-garden",
+      "name": "Bellamy-Ferriday House & Garden",
+      "kind": "museum",
+      "town": "Bethlehem",
+      "state": "Connecticut",
+      "county": "Litchfield County",
+      "address": "9 Main Street North, Bethlehem, CT 06751",
+      "official_url": "https://ctlandmarks.org/properties/bellamy-ferriday-house-garden/",
+      "summary": "Built in stages from 1754 to 1767 for preacher Joseph Bellamy and later the summer home of human-rights advocate Caroline Ferriday. The formal garden holds historic roses, peonies and lilacs. Open May-September, Thursday-Sunday noon-4 p.m., plus Saturdays in October; tours on the hour. Admission $18 house tour, $14 garden tour, $10 grounds pass.",
+      "status": "open",
+      "photos": [
+        {
+          "src": "/photos/ct/bethlehem/bellamy-ferriday-house.jpg",
+          "thumb": "/photos/ct/bethlehem/bellamy-ferriday-house_thumb.jpg",
+          "title": "Bellamy-Ferriday House & Garden",
+          "description": "The front elevation of the Bellamy-Ferriday House in Bethlehem.",
+          "author": "CTLandmarks",
+          "license": "CC BY-SA 4.0",
+          "source_url": "https://commons.wikimedia.org/wiki/File:Bellamy-Ferriday_House_%26_Garden.jpg"
+        }
+      ]
+    },
+    {
+      "slug": "abbey-of-regina-laudis",
+      "name": "Abbey of Regina Laudis",
+      "kind": "historic-site",
+      "town": "Bethlehem",
+      "state": "Connecticut",
+      "county": "Litchfield County",
+      "address": "273 Flanders Road, Bethlehem, CT 06751",
+      "official_url": "https://www.abbeyofreginalaudis.org/",
+      "summary": "A community of contemplative Benedictine women founded in 1947; visitors may attend daily Mass at 8:15 a.m., browse the monastic Art Shop, and view an 18th-century Neapolitan crèche. Art Shop hours Friday 10 a.m.-noon, Saturday-Sunday 10 a.m.-noon and 1:30-4 p.m.; the crèche is open daily 10 a.m.-4 p.m. but closes for winter, reopening at Easter.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "march-farm",
+      "name": "March Farm",
+      "kind": "attraction",
+      "town": "Bethlehem",
+      "state": "Connecticut",
+      "county": "Litchfield County",
+      "address": "160 Munger Lane, Bethlehem, CT 06751",
+      "official_url": "https://marchfarm.com/",
+      "summary": "A working Litchfield County farm with pick-your-own berries, fruit and pumpkins, a farm store and bakery selling fresh-baked goods, plus a Hayloft Playscape, animal yard and corn maze. Open daily 10 a.m.-6 p.m., with the harvest season running into October. Phone (203) 266-7721.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "old-bethlem-historical-society-museum",
+      "name": "Old Bethlem Historical Society Museum & District #1 Schoolhouse",
+      "kind": "museum",
+      "town": "Bethlehem",
+      "state": "Connecticut",
+      "county": "Litchfield County",
+      "address": "4 Main Street North, Bethlehem, CT 06751",
+      "official_url": "https://bethlehemct.org/oldbethlemhistoricalsociety",
+      "summary": "Established in 1968, the society opened its museum in 1976 and also maintains the circa-1850 District #1 one-room schoolhouse. Museum open Sundays 1-4 p.m. in July and August, and by appointment year-round; schoolhouse open Memorial Day and during the Christmas Town Festival in December. Phone (203) 266-7852.",
+      "status": "open",
+      "photos": [
+        {
+          "src": "/photos/ct/bethlehem/bethlehem-schoolhouse.jpg",
+          "thumb": "/photos/ct/bethlehem/bethlehem-schoolhouse_thumb.jpg",
+          "title": "District No. 1 Schoolhouse",
+          "description": "The District No. 1 Schoolhouse on the Bethlehem town green.",
+          "author": "John Phelan",
+          "license": "CC BY 4.0",
+          "source_url": "https://commons.wikimedia.org/wiki/File:District_No_1_Schoolhouse,_Bethlehem_CT.jpg"
+        }
+      ]
+    },
+    {
+      "slug": "barns-caroline-ferriday-preserve",
+      "name": "The Barns at the Caroline Ferriday Preserve",
+      "kind": "park",
+      "town": "Bethlehem",
+      "state": "Connecticut",
+      "county": "Litchfield County",
+      "address": "45 Main Street North, Bethlehem, CT 06751",
+      "official_url": "http://www.bethlehemlandtrustct.org/",
+      "summary": "Open space held by the Bethlehem Land Trust; the restored barns host a summer concert series (June through August, 5:30-7 p.m.), with attendees bringing their own picnics. The trust's Green Hill Road headquarters hosts an annual Earth Day celebration each April.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "bethlehem-fair",
+      "name": "Bethlehem Fair",
+      "kind": "attraction",
+      "town": "Bethlehem",
+      "state": "Connecticut",
+      "county": "Litchfield County",
+      "address": "Bethlehem, CT 06751",
+      "official_url": "https://www.bethlehemfair.com/",
+      "summary": "A long-running Litchfield County agricultural fair held each September, with exhibits, competitions, entertainment and fair food. The fair does not sell entry tickets or take vendor bookings online; office phone (203) 266-5350.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "painted-pony-restaurant",
+      "name": "Painted Pony Restaurant",
+      "kind": "restaurant",
+      "town": "Bethlehem",
+      "state": "Connecticut",
+      "county": "Litchfield County",
+      "address": "74 Main Street South, Bethlehem, CT 06751",
+      "official_url": "https://paintedponyrestaurant.net/",
+      "summary": "Bethlehem's village restaurant and tavern, serving American and New American fare and pizza with take-out, delivery, catering and weekly Trivia Tuesdays. Open Tuesday-Sunday, closed Monday. Phone (203) 266-5771.",
+      "status": "open",
+      "photos": []
+    }
+  ],
+  "entries": [
+    {
+      "kind": "sight",
+      "name": "Bellamy-Ferriday House & Garden",
+      "place_slug": "bellamy-ferriday-house-garden",
+      "note": "An 18th-century preacher's house with a historic rose and lilac garden."
+    },
+    {
+      "kind": "sight",
+      "name": "Abbey of Regina Laudis",
+      "place_slug": "abbey-of-regina-laudis",
+      "note": "A working Benedictine abbey with daily Mass and an 18th-century crèche."
+    },
+    {
+      "kind": "sight",
+      "name": "March Farm",
+      "place_slug": "march-farm",
+      "note": "Pick-your-own fruit and pumpkins with a farm store and bakery."
+    },
+    {
+      "kind": "food",
+      "name": "March Farm Store & Bakery",
+      "place_slug": "march-farm",
+      "note": "Fresh-baked goods alongside the pick-your-own operation."
+    },
+    {
+      "kind": "sight",
+      "name": "Old Bethlem Historical Society Museum",
+      "place_slug": "old-bethlem-historical-society-museum",
+      "note": "Town history plus a relocated circa-1850 one-room schoolhouse."
+    },
+    {
+      "kind": "walk",
+      "name": "The Barns at the Caroline Ferriday Preserve",
+      "place_slug": "barns-caroline-ferriday-preserve",
+      "note": "A Land Trust preserve with a summer barn concert series."
+    },
+    {
+      "kind": "sight",
+      "name": "Bethlehem Fair",
+      "place_slug": "bethlehem-fair",
+      "note": "A September agricultural fair with exhibits and competitions."
+    },
+    {
+      "kind": "food",
+      "name": "Painted Pony Restaurant",
+      "place_slug": "painted-pony-restaurant",
+      "note": "American fare and pizza on Main Street, with Trivia Tuesdays."
+    }
+  ],
+  "links": [
+    {
+      "target": "guide:morris-ct-travel-guide",
+      "kind": "nearby",
+      "note": "Route 61 runs north from Bethlehem to Morris and Litchfield; the nearest verified lodging, Winvian Farm, is in Morris."
+    },
+    {
+      "target": "guide:woodbury-ct-travel-guide",
+      "kind": "shared-history",
+      "note": "Bethlehem's land was part of Woodbury's 1710 North Purchase before settlement began in 1734."
+    },
+    {
+      "target": "guide:watertown-ct-travel-guide",
+      "kind": "nearby",
+      "note": null
+    },
+    {
+      "target": "guide:washington-ct-travel-guide",
+      "kind": "same-region",
+      "note": null
+    }
+  ]
+}

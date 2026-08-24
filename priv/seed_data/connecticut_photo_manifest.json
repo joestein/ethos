@@ -55,9 +55,25 @@
     "sha256": "8c86edec194e0d4b5161877f34fe0ef467c7479e0bad5619ad8c53623eb0f04d",
     "source_url": "https://commons.wikimedia.org/wiki/File:Seymour,_CT_-_Bank_St_01.jpg"
   },
+  "bantam-lake-morris": {
+    "sha256": "7080516c0a5c5530e3f6baa6e389a48fffa871e0847863a01f0655352a451c96",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Bantam_Lake,_Morris_CT.jpg"
+  },
+  "barkhamsted-reservoir": {
+    "sha256": "6bf5b045e43fdd3ed9cbd97fece255bb77ea7b62652459856bacb413be390232",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Barkhamsted_Reservoir.jpg"
+  },
   "beardsley-zoo-entrance": {
     "sha256": "e072148bac68c32e3e0665e738b917ecbe994717889bd5e92a7030df103c5041",
     "source_url": "https://commons.wikimedia.org/wiki/File:Entrance,_Beardsley_Zoo,_2009-11-06.jpg"
+  },
+  "beckley-furnace": {
+    "sha256": "cc00e819a3ac3370befa51a1560fce9ee544ef53187ffbd02366dfc610e18610",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Beckley_Furnace_Industrial_Monument_-_North_Canaan,_Connecticut.jpg"
+  },
+  "bellamy-ferriday-house": {
+    "sha256": "bb5ee54dd799bba1b8025cbfee04b8f2b975bb8156379ac5abcefcc77efd85d9",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Bellamy-Ferriday_House_%26_Garden.jpg"
   },
   "bethany-veterans-wall-of-honor": {
     "sha256": "5d5470446028eaeea5646b95ddf20685fec0a6c0b59ed833abdc0adaec4f4d2c",
@@ -67,6 +83,14 @@
     "sha256": "29201b675224aa37a155d923db50ad5c7ddfd126b3183d4b56336118e12d3b99",
     "source_url": "https://commons.wikimedia.org/wiki/File:Bethel_station_building,_November_2011.jpg"
   },
+  "bethlehem-main-street": {
+    "sha256": "7ee0213d7cbe674c301078c3ccb82f203526c81464e622410d6c0fcb10e88f1a",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Main_St_S,_Bethlehem_CT.jpg"
+  },
+  "bethlehem-schoolhouse": {
+    "sha256": "975cf76d73e0a5a0c8a604c08deb39e956b05f4cbd253e39e4df53c63a431831",
+    "source_url": "https://commons.wikimedia.org/wiki/File:District_No_1_Schoolhouse,_Bethlehem_CT.jpg"
+  },
   "betsy-paterson-square-storrs": {
     "sha256": "41a14f8aa3561efcde13d5a40cab85cc7a4557a57547ae9b24d8a63ad420ecfd",
     "source_url": "https://commons.wikimedia.org/wiki/File:Betsy_Paterson_Square,_Storrs_CT.jpg"
@@ -74,6 +98,10 @@
   "birdcraft-sanctuary-exterior": {
     "sha256": "32d3e1a9f5b6dfb3510a2b1f877deb1eab59de7ba11de92fc7422237843db429",
     "source_url": "https://commons.wikimedia.org/wiki/File:Connecticut_Audubon_Birdcraft_Museum_Exterior.jpg"
+  },
+  "black-rock-overlook-watertown": {
+    "sha256": "a67851fe72f6cca7f72a50620333df89e7f879c6e4779a808866cc14c7c82f69",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Black_Rock_State_Park_Black_Rock_Scenic_View_Looking_North_off_Mattatuck_Trail.jpg"
   },
   "black-spruce-pond-natchaug": {
     "sha256": "bbc61f93a36d4f7116afad268dd24a24dcdd0a8b6833252002a67306236c8f5c",
@@ -115,6 +143,14 @@
     "sha256": "382028c5ae68221f71a913b47fdbc7f0ff007bb0d8f29fe6660e2833c2b47e76",
     "source_url": "https://commons.wikimedia.org/wiki/File:Branford_Town_Green,_Connecticut.jpg"
   },
+  "bridgewater-town-center": {
+    "sha256": "000dd2cf1cc2dc6a367a4db5485ac6858656d4e53d363d2182462f6e1ee28a96",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Bridgewater,_CT_Town_Center.jpg"
+  },
+  "bridgewater-village-store": {
+    "sha256": "129c4082400a619625cfc188e15ef4846e2bb0aaaa1a34638eb59a3cfc3b3f63",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Bridgewater_Village_Store_039.JPG"
+  },
   "brookfield-center-hd-meetinghouse": {
     "sha256": "8cc93f60404262ad10114f5f5eaa2056499e8015da361af02948f9a59eeffe82",
     "source_url": "https://commons.wikimedia.org/wiki/File:BrookfieldCT_BrookfieldCenterHD_3.jpg"
@@ -134,6 +170,10 @@
   "bulls-bridge": {
     "sha256": "9a02d9c7266fbd5cbd032667f7d2cd58460b6b50e91c0ed429a9ea4a75dba181",
     "source_url": "https://commons.wikimedia.org/wiki/File:Bull%27s_Bridge.jpg"
+  },
+  "canaan-union-depot": {
+    "sha256": "a3370db13b2226146f9e72b9b505d1b1d3dda9deda99fc32e6537f590bcea21b",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Union_Depot,_North_Canaan_CT.jpg"
   },
   "candlewood-lake-brookfield-beach": {
     "sha256": "3c16966c7fec98cfc5a66b230b8235b0d234a631bb759a55f588dce390703ce2",
@@ -211,9 +251,25 @@
     "sha256": "a5f2b3d26abc2ead3a51add75345517a72395dc70c4234130bbf754651f1101f",
     "source_url": "https://commons.wikimedia.org/wiki/File:Colchester_Federated_Church,_Connecticut.jpg"
   },
+  "colebrook-congregational-church": {
+    "sha256": "d4521403ae8c464dc903cb9babadf263416ea7c90c21d7f8e45f2e24beb293b9",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Colebrook_Congregational_Church,_Colebrook_CT.jpg"
+  },
+  "colebrook-river-lake": {
+    "sha256": "c36f5ccba03fafd964a57d656813e2cd0e2dfab908bddd2c16b0b922eaf05e9b",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Colebrook_Dam_in_Connecticut_-_USACE-p15141coll5-497.jpeg"
+  },
+  "colebrook-store": {
+    "sha256": "4ecd654d232457bd2488c8e215b0f77672cbb7bf927755652f445315b72a55a2",
+    "source_url": "https://commons.wikimedia.org/wiki/File:ColebrookCT_ColebrookStore.jpg"
+  },
   "collis-p-huntington-bear-bethel": {
     "sha256": "607431eeb1b765d51bfb24760e39d915c0ac2706be1966d4830e61967b45e4fd",
     "source_url": "https://commons.wikimedia.org/wiki/File:Bear-Huntington-State-Park.jpg"
+  },
+  "colonial-theatre-railroad-street": {
+    "sha256": "b0608e7b90187a8dad4a1f77c85c764bd8d62284b9e9318e5c965884ca25776e",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Colonial_Theatre,_North_Canaan_CT.jpg"
   },
   "columbia-green-congregational-church": {
     "sha256": "d7d90bbb1c113a5313c6b11c0c6d79b1d850d8c87108745ca12efe43d5f31f5f",
@@ -391,6 +447,14 @@
     "sha256": "9693c765030aa3ee52f658d5bb34e0a9abfa818077d7f2fdafb2454c438ed5c1",
     "source_url": "https://commons.wikimedia.org/wiki/File:MMDA-Photos_-_2025-01-22_-_Sun_Tavern_-4.jpg"
   },
+  "fall-mountain-lake": {
+    "sha256": "a577b868c047651b4129a8d0b3ee07c519edebed316381115e2d0da1f63ce6e0",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Fall_Mountain_Lake,_Plymouth_CT.jpg"
+  },
+  "falls-village-great-falls": {
+    "sha256": "ae6dc987bf20c6fbafd70a695cf4b3c4d94e963dabfa3d1eba62e95800d5856a",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Great_Falls,_Housatonic_River,_Falls_Village,_CT.jpg"
+  },
   "farm-river-state-park-marshes": {
     "sha256": "2fa5e5978ed1eb8cdfa5f840d90ce8a91d30eb2f4c52629df950a399bb3a4be0",
     "source_url": "https://commons.wikimedia.org/wiki/File:Marshes_at_Farm_River_State_Park_(54052819227).jpg"
@@ -495,6 +559,14 @@
     "sha256": "ad2c596dd470d99ffd1319ca5b70b148e0adbbbcbc5fcca657a142775d33421c",
     "source_url": "https://commons.wikimedia.org/wiki/File:Gorham%27s_Pond,_Darien,_Connecticut_LCCN2012631430.tif"
   },
+  "goshen-congregational-church": {
+    "sha256": "fbb487aeab927b0031fbe4f923dc33cfb4f63e478cd06bd4b51d5d5b10d00c51",
+    "source_url": "https://commons.wikimedia.org/wiki/File:The_Church_of_Christ_Congregational,_Goshen,_Connecticut_LCCN2012631608.tif"
+  },
+  "goshen-village-sign": {
+    "sha256": "ac0a11fd342e8667187519bb41313d3f0d5fc3374b7c8bd68459572987023b9b",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Goshen,_CT.jpg"
+  },
   "grace-farms-river-building": {
     "sha256": "f4a01b74491789572add5ecfd6a7beaf7609c374a8da4a4e3a07018c6b4ec835",
     "source_url": "https://commons.wikimedia.org/wiki/File:Grace_Farms_River_building.jpg"
@@ -534,6 +606,18 @@
   "harkness-tower-yale": {
     "sha256": "81bfff2e770bd9a7010e3a1289f7c9084a48bd3327a16a9da6c46548b6e6a69b",
     "source_url": "https://commons.wikimedia.org/wiki/File:Harkness_Tower_-_Yale_University_(54106458290).jpg"
+  },
+  "harwinton-congregational-church": {
+    "sha256": "d61aceae7b91731208ab1b5dcab49bface4483558629431b697a192428b26325",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Harwinton_Congregational_Church,_Harwinton_CT.jpg"
+  },
+  "harwinton-green-house": {
+    "sha256": "5321530af3753b68b6e79a4c8a54db162d46a9a9484d85da08080335cbcc03fe",
+    "source_url": "https://commons.wikimedia.org/wiki/File:HarwintonCT_LitchfieldSouthRoadsHD_2.jpg"
+  },
+  "harwinton-green-streetscape": {
+    "sha256": "7b796e178b1668bbe296434246d10052a9f0852241478bfa60d37fbe4bddaecb",
+    "source_url": "https://commons.wikimedia.org/wiki/File:HarwintonCT_LitchfieldSouthRoadsHD_3.jpg"
   },
   "haystack-mountain-tower": {
     "sha256": "02722c87d900ec3358b8259ea152fad90d172a4bd4e200e39eb8e716a554f489",
@@ -575,9 +659,17 @@
     "sha256": "0df9dca373bf521157b30289f58e6b838010089d645fc9f8a93472c947b582c0",
     "source_url": "https://commons.wikimedia.org/wiki/File:Beach,_Hopeville_Pond,_Griswold_CT.jpg"
   },
+  "hopkins-road-warren": {
+    "sha256": "fc15ade364ca2f62f7a66896bdd7a8c88da78c4b51be7324a74f5eaea21aee8a",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Hopkins_Road,_Warren,_Connecticut.jpg"
+  },
   "horsebarn-hill-storrs": {
     "sha256": "6688c80837f94b04ede9d19239cabb124a736829a715b96f6bf874126bef0d80",
     "source_url": "https://commons.wikimedia.org/wiki/File:University_of_Connecticut_(UConn)_main_campus,_Storrs,_Connecticut_LCCN2012630537.tif"
+  },
+  "hotchkiss-fyler-house": {
+    "sha256": "25e31bcc2232e16ba077981a1717565160d199f21b33e92fe183dbb2fa994d7d",
+    "source_url": "https://commons.wikimedia.org/wiki/File:HotchkissFylerHouse486sm.jpg"
   },
   "housatonic-river-lovers-leap": {
     "sha256": "612888fee231b257f7adc638addd79c4da780d3228bccad7c9598c5ade061fdb",
@@ -651,9 +743,17 @@
     "sha256": "2766ecc4f6fbd1fdcf9f82c21233dc5c141e345e0b04b321fdbdbf149ea4b353",
     "source_url": "https://commons.wikimedia.org/wiki/File:Lake_Chaffee,_Ashford_CT.jpg"
   },
+  "lake-lillinonah": {
+    "sha256": "dc5f5d666691bfd864017d15f2c3efee84c62d1f4d087caeb5965ae2dff4f8e2",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Lake_Lillinonah.jpg"
+  },
   "lake-waramaug": {
     "sha256": "dd6bb456b46f17025a1e15bdeb7160eddf454ef0612557ede223a7d2e51cd479",
     "source_url": "https://commons.wikimedia.org/wiki/File:LakeWaureganWithMountBushnell.jpg"
+  },
+  "lake-waramaug-mount-bushnell": {
+    "sha256": "32999ccd08c99bc92610fca5716df7a556506f89ede9e36571d803178e42cfa9",
+    "source_url": "https://commons.wikimedia.org/wiki/File:LakeWaureganSP_and_MountBushnellSP.jpg"
   },
   "lebanon-green": {
     "sha256": "de015a8e6335258199d8c0bb341e78b3e7f074a0783f9a490939ef97457863d2",
@@ -682,6 +782,10 @@
   "lock-12-historical-park": {
     "sha256": "79d6465c46aa3868008668aa3a06c8f6ee01a574ec807f0d39c068747bbe7298",
     "source_url": "https://commons.wikimedia.org/wiki/File:Lock_12_Historic_Park,_Cheshire_CT.jpg"
+  },
+  "lock-museum-terryville": {
+    "sha256": "ffa9bfe0747bcdf637bc696f99a4eb8d859b9b7f2487d2adc250ce0ec4078118",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Lock_Museum_of_America,_Terryville_CT.jpg"
   },
   "long-hill-sign-trumbull": {
     "sha256": "eb0b9b67d6f7f1e2a1e1a49aad7b3cfcff4bf41deaf032105a7c2d7f27fcc27d",
@@ -803,6 +907,18 @@
     "sha256": "83b3eced75448a68e34c04f946ad04192ad42660fa1b41f750fc14eff442f38f",
     "source_url": "https://commons.wikimedia.org/wiki/File:Moosup_Valley_State_Park_Trail_in_Moosup,_October_2020.JPG"
   },
+  "morris-community-hall": {
+    "sha256": "8d19d7e3a36b3b1172eb0ff58a7785b822272a98f331c1c2095633624434ffb9",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Morris_Community_Hall,_Morris_CT.jpg"
+  },
+  "munson-memorial-park": {
+    "sha256": "d2fc5d9d3f227411dceb579445b3f0756df3cfd4114a0bba592575aa2ce8f971",
+    "source_url": "https://commons.wikimedia.org/wiki/File:MunsonMemorialParkWatertownCT.jpg"
+  },
+  "music-mountain-gordon-hall": {
+    "sha256": "b54b83e26ccfd11b9da417afaa237799a2f4d61fd9aba1a2befdb2a87f8bb692",
+    "source_url": "https://commons.wikimedia.org/wiki/File:CanaanCT_MusicMountain_MainHall.jpg"
+  },
   "mystic-aquarium-beluga": {
     "sha256": "7445114fece9eae1a12516237fdf493861aebe1935b8e478f52a1ea91548006c",
     "source_url": "https://commons.wikimedia.org/wiki/File:Juno_the_Beluga_Whale_at_Mystic_Aquarium_by_David_Shankbone.jpg"
@@ -851,6 +967,10 @@
     "sha256": "1b5a1e6f6995ab4bf96ab2c2bb0eaaf39c39b0b65a58308c95bce0b8da55127a",
     "source_url": "https://commons.wikimedia.org/wiki/File:Ellington_Historical_Society,_Ellington_CT.jpg"
   },
+  "nepaug-valley-outlook": {
+    "sha256": "b73914318b8cf21ed835d5035cd21c15cc82b7d903a67b2bb1d528c07ac2d9c3",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Nepaug_State_Forest_Valley_Outlook_Trail_View_Of_Nepaug_Valley_And_Yellow_Mountain.jpg"
+  },
   "new-canaan-elm-street-downtown": {
     "sha256": "35ccae7eb65fb2ce92d81ac889554535835674d85c0c9a0e19f67870956c8006",
     "source_url": "https://commons.wikimedia.org/wiki/File:New_Canaan,_CT_-_Downtown_(54103008122).jpg"
@@ -858,6 +978,10 @@
   "new-fairfield-town-hall": {
     "sha256": "9eea5b0814262327b00eaa2c0285cc31a7b45c12ec155733a4bb0a891a0f3d02",
     "source_url": "https://commons.wikimedia.org/wiki/File:NewFairfieldCT_TownHall.jpg"
+  },
+  "new-hartford-town-hall": {
+    "sha256": "bfbf453cef1593a529281e42a23df25c776131c6ac26de0ad6b5d31041e6a7b6",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Town_Hall,_New_Hartford_CT.jpg"
   },
   "new-haven-green": {
     "sha256": "6557498319512e032e0521097f9be794a18fa98c9c49aae895e2d584fbb39fe4",
@@ -967,6 +1091,10 @@
     "sha256": "0d03cc0069eab9027665d5a8c5800f9ac9ef118a06bb207a766e49a98d22a006",
     "source_url": "https://commons.wikimedia.org/wiki/File:James_Goodwin_State_Forest_Pine_Acres_Lake_Observation_Deck_at_Boat_Launch.jpg"
   },
+  "plymouth-green": {
+    "sha256": "3fce5fc79bbb31f54ec9f600a2d468f56f2fc4ddc9f63512eb4e705d8525e491",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Plymouth_Green,_Plymouth_CT.jpg"
+  },
   "pomfret-school-chapel": {
     "sha256": "005566ae500cd73fac64ebe894f4330208da61d7458b43694c57f5437fec85cf",
     "source_url": "https://commons.wikimedia.org/wiki/File:Clark_Memorial_Chapel,_Pomfret_School,_Pomfret_CT.JPG"
@@ -1047,6 +1175,10 @@
     "sha256": "c1563e3c3955b81344ba7a169b51ed7afc4cf0fa0686a1d0cb6efc74a9b2ad6f",
     "source_url": "https://commons.wikimedia.org/wiki/File:RiverHighlandsSP_IMG_1427.JPG"
   },
+  "riverton-general-store": {
+    "sha256": "0c6ab5f97b59ec835ac5841937a9eb3d0653afacd52011a6d580533add21a183",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Riverton_General_Store,_Riverton_CT.jpg"
+  },
   "rock-landing-haddam": {
     "sha256": "8e998ad8ceaf6a98d363fc6d714ea3db3780ca5b66efc199fbb26c5f5e5b2f5b",
     "source_url": "https://commons.wikimedia.org/wiki/File:Rock_Landing,_Haddam_CT.jpg"
@@ -1083,6 +1215,10 @@
     "sha256": "1294cc06f3894e695dd1d71f470a61a974fa5f7f6eacc2961622d630adc7868d",
     "source_url": "https://commons.wikimedia.org/wiki/File:20260516_piping_plover_sandy_point_bird_sanctuary_PD01792.jpg"
   },
+  "saville-dam-gatehouse": {
+    "sha256": "8eab2c2b52a9f7d9629b353d8d500e41a1720862b4cf037e2f8a9dfa96794504",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Dusk_at_the_Saville_Dam_gatehouse.jpg"
+  },
   "savin-rock-shoreline-west-haven": {
     "sha256": "0e4f96ced7c893287c14ee5895c0ce72b20319a81d7f688ff58cc14f1c04e1ba",
     "source_url": "https://commons.wikimedia.org/wiki/File:Savin_Rock,_West_Haven,_CT,_USA.jpg"
@@ -1103,6 +1239,18 @@
     "sha256": "284b3cb2609136615733be097a41440dd01ac87c6a5779a4971cdce889c5665b",
     "source_url": "https://commons.wikimedia.org/wiki/File:BridgeportCT_SeasidePark_PerryMemorialArch.jpg"
   },
+  "sharon-audubon-center": {
+    "sha256": "74001aef1c82ec869dbf5d51069166b1db418f9cd0dc3965124b36034d01a59b",
+    "source_url": "https://commons.wikimedia.org/wiki/File:SharonCT_Audubon_Center.tiff"
+  },
+  "sharon-clock-tower": {
+    "sha256": "fc52e26f4ad1ddb9e59529c8052534eb75da0dbbeda4dde9e4d26292a54e593e",
+    "source_url": "https://commons.wikimedia.org/wiki/File:SharonCT_ClockTower1.jpg"
+  },
+  "sharon-historic-district": {
+    "sha256": "d405db8e89fcafbe374f2d5a57672a4712b71f5c57d2b0d89b08850978104004",
+    "source_url": "https://commons.wikimedia.org/wiki/File:SharonCT_HistoricDistrict1.jpg"
+  },
   "sheffield-island-lighthouse": {
     "sha256": "a12f832abf9976ffd436fddd1098349f0daa122b993e323677cc858f328151ce",
     "source_url": "https://commons.wikimedia.org/wiki/File:Sheffield_Island_Lighthouse.jpg"
@@ -1122,6 +1270,10 @@
   "shore-line-trolley-museum": {
     "sha256": "c6c73a278030f5bff3462c12ec3e8068f53bbc0ad987eb92f010aba91d83b553",
     "source_url": "https://commons.wikimedia.org/wiki/File:BERA_Trolley_Station_EastHaven-CT.jpg"
+  },
+  "ski-sundown-aerial": {
+    "sha256": "59756d231245d3e213b1391e5c06aaf7865163dcbbdfaa8b263ea6c56ab8383f",
+    "source_url": "https://commons.wikimedia.org/wiki/File:DJI_0032-ENHC.jpg"
   },
   "slater-library-jewett-city": {
     "sha256": "0678e5af43fb2ad7a6cd2e0f8386c9f0b82233924c7de1fe4ba5bde0dad59dda",
@@ -1195,6 +1347,10 @@
     "sha256": "8aba753bde994fb26167b9a7bb3a4ed8dae54ac0f4a955ee6bc169852b41d47e",
     "source_url": "https://commons.wikimedia.org/wiki/File:SterlingCT_SterlingHillHD.jpg"
   },
+  "stillwater-pond-torrington": {
+    "sha256": "b57fdeb70e483b545763fb01fd87f0c6004a5e9fe454b0ba31979a892768ecf9",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Stillwater_Pond,_Torrington_CT.jpg"
+  },
   "stone-otis-house-orange": {
     "sha256": "5aeac6f79518d4489df92cd97477b95519ba41c2daa078150d5e04a2b3e78e4a",
     "source_url": "https://commons.wikimedia.org/wiki/File:Stone-Otis_House_114.JPG"
@@ -1226,6 +1382,18 @@
   "thomas-lee-house": {
     "sha256": "caffa1b8fdc6c28ec098932ec98bf3e828a9ca01e7489f1bd6bbddd0c6358bfd",
     "source_url": "https://commons.wikimedia.org/wiki/File:Thomas_Lee_House.jpg"
+  },
+  "thomaston-dam": {
+    "sha256": "b36bf25194f602047bf6b0353e6709177e5b72b2e31572ca14de4cf16d582713",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Thomaston_Dam_panorama,_October_2020.jpg"
+  },
+  "thomaston-main-street": {
+    "sha256": "23466fb35cd866848fe50fdbbc670917478f716e6cd98c8b4394c17b0fa292a6",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Main_Street,_Thomaston_CT.jpg"
+  },
+  "thomaston-opera-house": {
+    "sha256": "3c746a8710b56b46e80ba766d05299c149c0eaeea39d875b9117e850e5550f64",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Thomaston_Opera_House_323.jpg"
   },
   "thompson-hill-common": {
     "sha256": "e7b80abd74523986ef062a45e50e412f53458b3815b8be0f84d8c76492ae1913",
@@ -1319,9 +1487,21 @@
     "sha256": "3b956baf410cfc31e6f83dbb00462c706eac50ee6eaf68d7c9b2bd8ef3160c53",
     "source_url": "https://commons.wikimedia.org/wiki/File:Walnut_Hill_Park,_New_Britain_CT.jpg"
   },
+  "warner-theatre-marquee": {
+    "sha256": "3185c6ed6ef39adafeeb3c8cd7328d21c54fbd093ef9cbe66232d1751262ae81",
+    "source_url": "https://commons.wikimedia.org/wiki/File:The_Warner_Theatre_in_Torrington,_CT2.jpg"
+  },
+  "warren-congregational-church": {
+    "sha256": "4bd82daa07f75f0021daecd1c82c3f6a78e43d0c42b0e230719b6d2edee401b4",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Warren_Congregational_Church,_Warren_CT.jpg"
+  },
   "water-street-shops": {
     "sha256": "23eb04711753759638804543071ed9d74c56893145e8f2a0d44d026005f2211e",
     "source_url": "https://commons.wikimedia.org/wiki/File:Shops_in_historic_Stonington,_Connecticut.jpg"
+  },
+  "watertown-main-street": {
+    "sha256": "0cfd7794f9173067cf357bcb1a9b0b2cf715701f947b353e8ab51c622b489376",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Main_Street,_Watertown_CT.jpg"
   },
   "webb-deane-stevens-museum": {
     "sha256": "7910977ae8990dea843ec5ba222d7f340d4c04770df39acd2b61bf135be0dfc6",
@@ -1338,6 +1518,10 @@
   "west-cornwall-village": {
     "sha256": "ca8ce804b030e737dbb88f66ef425ce02d950422c2d5b5051af43641efc21829",
     "source_url": "https://commons.wikimedia.org/wiki/File:West_Cornwall,_CT_-_02.jpg"
+  },
+  "west-goshen-historic-district": {
+    "sha256": "d01a47c3205c9855994cfbaa3c0f1add79d23c43f9a4eea9179718951466cabc",
+    "source_url": "https://commons.wikimedia.org/wiki/File:GoshenCT_WestGoshenHD_1.jpg"
   },
   "west-hartford-center-street-scene": {
     "sha256": "ac505da3a55edd0735d0aa6cc55aa9c32e1d9099b797db42065067953cb57e1b",
@@ -1370,6 +1554,18 @@
   "wilton-historical-society-campus": {
     "sha256": "bc6387b6473ea9a35d3a23de0411b531d104d06132948b23ae58209ba7246a04",
     "source_url": "https://commons.wikimedia.org/wiki/File:Wilton_Historical_Society_078.JPG"
+  },
+  "winchester-center-congregational-church": {
+    "sha256": "1f92669d56a3a998720354395a05f626699d7411173526d4d9b4362f1ca5c43c",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Winchester_Center_Congregational_Church,_Winchester_CT.jpg"
+  },
+  "winchester-center-gazebo": {
+    "sha256": "031b63a3a7594e24de3049f4be08f382e2017b2d526159d95e16e56f36f492c0",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Gazebo,_Winchester_CT.jpg"
+  },
+  "winsted-gilson-theatre": {
+    "sha256": "fc75c8c0f5571a183a0d5b6bb3d60a3202eb07f72a010231a74a1562bc97a2e2",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Winsted,_Connecticut_-_4956050303.jpg"
   },
   "woodbridge-first-church-of-christ": {
     "sha256": "01be7f3609ecda2355f2569b86d6343fad9a90302ccf6bd47f3373e12ef52d73",

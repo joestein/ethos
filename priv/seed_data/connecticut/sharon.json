@@ -1,0 +1,239 @@
+{
+  "guide": {
+    "slug": "sharon-ct-travel-guide",
+    "title": "Sharon, Connecticut: The Plain of Sharon in the Northwest Corner",
+    "destination": "Sharon, Connecticut",
+    "state": "Connecticut",
+    "county": "Litchfield County",
+    "intro": "Sharon was incorporated in 1739 by the Connecticut General Assembly, named for the biblical Plain of Sharon, after the township's home lots were auctioned at New Haven in 1738 to fifty proprietors whose names survive in local place names like Calkinstown Road and Mudge Pond. Ironworking began here in 1740, when Joseph Skinner built a forge at Mudge Pond's outlet. In the early 1800s, resident Asahel Hotchkiss made rakes, buckles and currycombs from locally mined ore, and during the Civil War the town manufactured munitions including the Hotchkiss explosive shell; old iron stacks from the era still stand around town. Benjamin Berkeley Hotchkiss, the arms inventor, was brought to Sharon at age three in 1829, and John Cotton Smith, born in Sharon in 1765, served as Connecticut governor from 1812 to 1817. William F. Buckley Jr. made Sharon his home and founded Young Americans for Freedom on his family estate there in 1960.",
+    "sections": [
+      {
+        "heading": "Iron forges and a governor",
+        "body": "Sharon's iron era began in 1740 at Joseph Skinner's forge by Mudge Pond, and Asahel Hotchkiss's early-1800s ironware gave way to Civil War munitions manufacturing, including the Hotchkiss explosive shell for rifled guns — old iron stacks from the industry survive around town today. John Cotton Smith, born in Sharon in 1765, served as the last Federalist governor of Connecticut, from 1812 to 1817. William F. Buckley Jr., born in 1925, made Sharon his home and founded Young Americans for Freedom at his family's Sharon estate in September 1960, drafting what became known as the Sharon Statement."
+      },
+      {
+        "heading": "Getting there",
+        "body": "Sharon has no railroad station of its own and no Metro-North New Haven Line, Shore Line East, Amtrak or CTrail Hartford Line service reaches it. Most visitors arrive by car on state Routes 4, 41, 343 and 361, with US Route 7 running up the town's eastern edge along the Housatonic. The nearest rail is Metro-North's Harlem Line terminal at Wassaic, New York, in Dutchess County, just west across the state line."
+      },
+      {
+        "heading": "An Audubon sanctuary and a summer theater",
+        "body": "Sharon Audubon Center, founded in 1961 as part of Audubon Connecticut, offers 8 miles of trails open daily from sunrise to sunset, including the boardwalked Hendrickson Bog Meadow Trail — though the visitor center and nature store are currently closed. Sharon Playhouse traces to a 1920s play-reading group that became the Pitchfork Playhouse in 1947 and built its permanent Amenia Road home in 1955. Housatonic Meadows State Park, whose entrance sits at 90 US Route 7 on the Sharon side of the Sharon-Cornwall town line, offers riverside camping and catch-and-release fly fishing on the Housatonic."
+      }
+    ],
+    "faq": [
+      {
+        "question": "How do I get to Sharon?",
+        "answer": "By car — state Routes 4, 41, 343 and 361 serve the town, with US Route 7 running along its eastern edge. There's no passenger rail in Sharon; the nearest station is Metro-North's Harlem Line terminal at Wassaic, New York."
+      },
+      {
+        "question": "Is the Sharon Audubon Center open?",
+        "answer": "Its 8 miles of trails are open daily, sunrise to sunset, with a suggested $5 donation — but the visitor center and nature store are currently closed. Call (860) 364-0520 before planning around indoor access."
+      },
+      {
+        "question": "What is the Sharon Playhouse?",
+        "answer": "A nonprofit professional regional theater on Amenia Road tracing to a 1920s play-reading group; it became the Pitchfork Playhouse in 1947 and built its permanent home in 1955. Its 2026 season includes 42nd Street, Come From Away and Zombie Prom."
+      },
+      {
+        "question": "Is Housatonic Meadows State Park in Sharon or Cornwall?",
+        "answer": "Both — its entrance address, 90 US Route 7, sits on the Sharon side of the Sharon-Cornwall town line. The park offers riverside camping and a stretch of the Housatonic restricted to catch-and-release fly fishing."
+      },
+      {
+        "question": "Where can I eat and stay in Sharon?",
+        "answer": "Le Gamin serves French bistro fare on Gay Street, with J.P. Gifford Sharon Café for breakfast and lunch. The Sharon Country Inn, at the edge of the village, is the town's one verified lodging option."
+      }
+    ],
+    "photos": [
+      {
+        "src": "/photos/ct/sharon/sharon-clock-tower.jpg",
+        "thumb": "/photos/ct/sharon/sharon-clock-tower_thumb.jpg",
+        "title": "Sharon clock tower",
+        "description": "The 1885 clock tower at the head of the Sharon town green.",
+        "author": "Magicpiano",
+        "license": "CC BY-SA 3.0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:SharonCT_ClockTower1.jpg"
+      },
+      {
+        "src": "/photos/ct/sharon/sharon-historic-district.jpg",
+        "thumb": "/photos/ct/sharon/sharon-historic-district_thumb.jpg",
+        "title": "Sharon Historic District",
+        "description": "A street scene in the Sharon Historic District.",
+        "author": "Magicpiano",
+        "license": "CC BY-SA 3.0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:SharonCT_HistoricDistrict1.jpg"
+      },
+      {
+        "src": "/photos/ct/sharon/sharon-audubon-center.jpg",
+        "thumb": "/photos/ct/sharon/sharon-audubon-center_thumb.jpg",
+        "title": "Sharon Audubon Center",
+        "description": "The Sharon Audubon Center grounds.",
+        "author": "Morrowlong",
+        "license": "CC BY-SA 4.0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:SharonCT_Audubon_Center.tiff"
+      }
+    ]
+  },
+  "places": [
+    {
+      "slug": "sharon-audubon-center",
+      "name": "Sharon Audubon Center",
+      "kind": "park",
+      "town": "Sharon",
+      "state": "Connecticut",
+      "county": "Litchfield County",
+      "address": "325 Cornwall Bridge Road, Sharon, CT 06069",
+      "official_url": "https://www.audubon.org/sharon",
+      "summary": "Founded in 1961 as part of Audubon Connecticut, with 8 miles of trails open daily sunrise to sunset, a suggested $5 donation, and an on-site wildlife rehabilitation clinic. Named routes include the 1.6-mile Hendrickson Bog Meadow Trail. The visitor center and nature store are currently closed; call (860) 364-0520.",
+      "status": "open",
+      "photos": [
+        {
+          "src": "/photos/ct/sharon/sharon-audubon-center.jpg",
+          "thumb": "/photos/ct/sharon/sharon-audubon-center_thumb.jpg",
+          "title": "Sharon Audubon Center",
+          "description": "The Sharon Audubon Center grounds.",
+          "author": "Morrowlong",
+          "license": "CC BY-SA 4.0",
+          "source_url": "https://commons.wikimedia.org/wiki/File:SharonCT_Audubon_Center.tiff"
+        }
+      ]
+    },
+    {
+      "slug": "sharon-historical-society-museum",
+      "name": "Sharon Historical Society & Museum",
+      "kind": "museum",
+      "town": "Sharon",
+      "state": "Connecticut",
+      "county": "Litchfield County",
+      "address": "18 Main Street, Sharon, CT 06069",
+      "official_url": "https://www.sharonhist.org/",
+      "summary": "Free admission, with galleries of historical and contemporary exhibitions plus a genealogy research library. The 2026 headline exhibition, \"Independence Revisited: Sharon in 1776, 1876 & 1976,\" runs through January 17, 2027. Hours Wednesday-Friday noon-4 p.m., Saturday 10 a.m.-2 p.m.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "sharon-playhouse",
+      "name": "Sharon Playhouse",
+      "kind": "theater",
+      "town": "Sharon",
+      "state": "Connecticut",
+      "county": "Litchfield County",
+      "address": "49 Amenia Road, Sharon, CT 06069",
+      "official_url": "https://www.sharonplayhouse.org/",
+      "summary": "A nonprofit professional regional theater tracing to a 1920s play-reading group; it became the Pitchfork Playhouse in 1947 and built its permanent Amenia Road home in 1955, designed by architect Frank Poehler. 2026 season includes 42nd Street, Come From Away, Swingtime Canteen and Zombie Prom, plus YouthStage productions. Phone (860) 364-7469.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "hotchkiss-library-of-sharon",
+      "name": "Hotchkiss Library of Sharon",
+      "kind": "attraction",
+      "town": "Sharon",
+      "state": "Connecticut",
+      "county": "Litchfield County",
+      "address": "10 Upper Main Street, Sharon, CT 06069",
+      "official_url": "http://hotchkisslibraryofsharon.org/",
+      "summary": "The village's landmark library on the green, open seven days a week with three adult book groups and children's programming. Hours Monday 10-5, Tuesday noon-7, Wednesday-Thursday noon-5, Friday 10-5, Saturday 10-4, Sunday noon-3.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "le-gamin-le-bar",
+      "name": "Le Gamin (and Le Bar)",
+      "kind": "restaurant",
+      "town": "Sharon",
+      "state": "Connecticut",
+      "county": "Litchfield County",
+      "address": "10 Gay Street, Sharon, CT 06069",
+      "official_url": "https://legamin.com/",
+      "summary": "The country outpost of Robert Arbor's New York bistro Le Gamin, serving casual French food — crêpes, croque monsieur, steak frites — daily 9 a.m.-8 p.m. The adjacent Le Bar leans more American, with burgers and a cocktail program. Phone (860) 397-5382.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "jp-gifford-sharon-cafe",
+      "name": "J.P. Gifford Sharon Café",
+      "kind": "cafe",
+      "town": "Sharon",
+      "state": "Connecticut",
+      "county": "Litchfield County",
+      "address": "16 West Main Street, Sharon, CT 06069",
+      "official_url": "https://jpgifford.com/",
+      "summary": "The Northwest Corner market-and-catering operation's Sharon café, doing breakfast, lunch, coffee and espresso — sandwiches, chicken cutlet and pastries, with vegetarian options. Hours Monday-Friday 7:30 a.m.-3 p.m., Saturday-Sunday 8 a.m.-3 p.m. Phone (860) 238-3080.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "sharon-country-inn",
+      "name": "Sharon Country Inn",
+      "kind": "hotel",
+      "town": "Sharon",
+      "state": "Connecticut",
+      "county": "Litchfield County",
+      "address": "1 Calkinstown Road, Sharon, CT 06069",
+      "official_url": "https://www.sharoncountryinn.com/",
+      "summary": "A country inn at the edge of Sharon village, positioned as a base for Mohawk Mountain, the Hudson Valley and the Berkshires. Reservations (860) 364-0036.",
+      "status": "open",
+      "photos": []
+    }
+  ],
+  "entries": [
+    {
+      "kind": "walk",
+      "name": "Sharon Audubon Center",
+      "place_slug": "sharon-audubon-center",
+      "note": "8 miles of trails; visitor center and nature store currently closed."
+    },
+    {
+      "kind": "sight",
+      "name": "Sharon Historical Society & Museum",
+      "place_slug": "sharon-historical-society-museum",
+      "note": "Free exhibitions and genealogy research on Main Street."
+    },
+    {
+      "kind": "sight",
+      "name": "Sharon Playhouse",
+      "place_slug": "sharon-playhouse",
+      "note": "A regional theater with roots to a 1920s play-reading group."
+    },
+    {
+      "kind": "sight",
+      "name": "Hotchkiss Library of Sharon",
+      "place_slug": "hotchkiss-library-of-sharon",
+      "note": "The village's landmark library, open seven days a week."
+    },
+    {
+      "kind": "food",
+      "name": "Le Gamin (and Le Bar)",
+      "place_slug": "le-gamin-le-bar",
+      "note": "A French bistro outpost with an adjoining American-leaning bar."
+    },
+    {
+      "kind": "food",
+      "name": "J.P. Gifford Sharon Café",
+      "place_slug": "jp-gifford-sharon-cafe",
+      "note": "Breakfast and lunch on West Main Street."
+    },
+    {
+      "kind": "stay",
+      "name": "Sharon Country Inn",
+      "place_slug": "sharon-country-inn",
+      "note": "A country inn at the edge of the village, Sharon's one lodging option."
+    }
+  ],
+  "links": [
+    {
+      "target": "guide:cornwall-ct-travel-guide",
+      "kind": "nearby",
+      "note": "Housatonic Meadows State Park sits on the Sharon-Cornwall town line."
+    },
+    {
+      "target": "guide:kent-ct-travel-guide",
+      "kind": "nearby",
+      "note": null
+    },
+    {
+      "target": "guide:salisbury-ct-travel-guide",
+      "kind": "same-region",
+      "note": null
+    }
+  ]
+}

@@ -1,0 +1,335 @@
+{
+  "guide": {
+    "slug": "torrington-ct-travel-guide",
+    "title": "Torrington, Connecticut: John Brown's Birthplace and a Brass City Cousin",
+    "destination": "Torrington, Connecticut",
+    "state": "Connecticut",
+    "county": "Litchfield County",
+    "intro": "Torrington was first settled in 1735 by Ebenezer Lyman Jr., incorporated as a town in October 1740, and chartered as a city in 1923; the area was originally called \"Mast Swamp\" for the pines harvested there as ship masts, later renamed for Torrington in Devon, England. The town grew into an industrial center on the Naugatuck River for brass, needles and woolen cloth — Frederick Wolcott built a woolen mill in 1813, Israel Coe and Erastus Hodges began a brass mill in 1834, and the railroad arrived in 1849. Abolitionist John Brown was born in Torrington in 1800; his restored birthplace burned in 1918, and a granite monument has marked the site since 1932. Gail Borden Jr. built his condensed-milk factory, vital to the Union Army, at what is now Burr Pond State Park in 1857. Torringford, a section of Torrington, served as an Underground Railroad transportation hub before the Civil War.",
+    "sections": [
+      {
+        "heading": "Brass, an abolitionist and a theater",
+        "body": "Torrington's mills — woolen cloth from 1813, brass from 1834 — grew alongside the 1849 arrival of the railroad, cementing the town's place in the Naugatuck Valley's industrial belt. John Brown's birthplace, restored in 1901 as one of Connecticut's first house museums, burned in 1918; the 40-acre homestead, now a Connecticut Archaeological Preserve and stop on the Connecticut Freedom Trail, offers a 2/3-mile nature trail with a newly opened wetland boardwalk. The Warner Theatre opened August 19, 1931, built by Warner Bros. Studios to a design by architect Thomas W. Lamb; closed and slated for demolition in the early 1980s, it was rescued by the nonprofit Northwest Connecticut Association for the Arts and reopened May 22, 1983."
+      },
+      {
+        "heading": "Getting there",
+        "body": "Torrington is a drive-to destination in the Litchfield Hills: Route 8, Route 4 and US Route 202 all meet in downtown Torrington. There is no passenger rail station in the city — the only rail service is freight, operated by the Naugatuck Railroad up the Waterbury Branch — and the nearest passenger rail is Waterbury station, the branch's terminus; Metro-North passenger service north of Waterbury ended in 1958. Local buses run through the Northwestern Connecticut Transit District, with connections to Waterbury."
+      },
+      {
+        "heading": "Two museums and a state park",
+        "body": "The Torrington Historical Society runs both the Hotchkiss-Fyler House Museum, a Queen Anne Victorian mansion commissioned in 1897, and the Torrington History Museum's \"No Place Like Home\" exhibit, both seasonal, April 15 through October 31. Burr Pond State Park, on the site of Gail Borden's 1857 condensed-milk factory, has a sandy beach, canoe rentals and the 2.5-mile Walcott Trail loop. KidsPlay Children's Museum runs a Torrington-themed Town Center exhibit for younger visitors, and Bad Dog Brewing Company pours out of a converted 1901 firehouse on Water Street."
+      }
+    ],
+    "faq": [
+      {
+        "question": "How do I get to Torrington?",
+        "answer": "By car — Route 8, Route 4 and US Route 202 all meet downtown. There's no passenger rail station in Torrington; the only rail service is Naugatuck Railroad freight, and the nearest passenger station is Waterbury, on Metro-North's Waterbury Branch."
+      },
+      {
+        "question": "Can I visit John Brown's birthplace?",
+        "answer": "Yes — the 40-acre homestead is open and accessible as a quiet, contemplative site, with a 2/3-mile nature trail and a newly opened wetland boardwalk at the trailhead. The house itself burned in 1918; a 1932 granite monument marks the spot."
+      },
+      {
+        "question": "Is the Warner Theatre still open?",
+        "answer": "Yes — it runs more than 160 performances a year. Built by Warner Bros. Studios and opened in 1931, it was rescued from demolition and reopened in 1983 by the Northwest Connecticut Association for the Arts."
+      },
+      {
+        "question": "What are the Torrington Historical Society's museums?",
+        "answer": "The Hotchkiss-Fyler House, an 1897-1900 Queen Anne Victorian mansion with guided tours, and the Torrington History Museum's \"No Place Like Home\" exhibit, both at 192 Main Street. Both run seasonally, April 15 through October 31, Thursday-Saturday."
+      },
+      {
+        "question": "Where can I eat and stay in Torrington?",
+        "answer": "Bad Dog Brewing Company pours out of a converted 1901 firehouse, with LaMonica's for breakfast and Frank's Pizza and Nardelli's Grinder Shoppe for a casual meal. Days Inn by Wyndham and Americas Best Value Inn are Torrington's two verified hotels."
+      }
+    ],
+    "photos": [
+      {
+        "src": "/photos/ct/torrington/warner-theatre-marquee.jpg",
+        "thumb": "/photos/ct/torrington/warner-theatre-marquee_thumb.jpg",
+        "title": "Warner Theatre vertical sign",
+        "description": "The Warner Theatre's vertical blade sign and marquee in downtown Torrington.",
+        "author": "Torrct (en.wikipedia)",
+        "license": "Public domain",
+        "source_url": "https://commons.wikimedia.org/wiki/File:The_Warner_Theatre_in_Torrington,_CT2.jpg"
+      },
+      {
+        "src": "/photos/ct/torrington/hotchkiss-fyler-house.jpg",
+        "thumb": "/photos/ct/torrington/hotchkiss-fyler-house_thumb.jpg",
+        "title": "Hotchkiss-Fyler House Museum",
+        "description": "The Hotchkiss-Fyler House Museum, an 1897-1900 Queen Anne Victorian mansion.",
+        "author": "Doncram",
+        "license": "CC BY-SA 3.0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:HotchkissFylerHouse486sm.jpg"
+      },
+      {
+        "src": "/photos/ct/torrington/stillwater-pond-torrington.jpg",
+        "thumb": "/photos/ct/torrington/stillwater-pond-torrington_thumb.jpg",
+        "title": "Stillwater Pond",
+        "description": "A shoreline view of Stillwater Pond in Torrington.",
+        "author": "John Phelan",
+        "license": "CC BY 4.0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Stillwater_Pond,_Torrington_CT.jpg"
+      }
+    ]
+  },
+  "places": [
+    {
+      "slug": "warner-theatre",
+      "name": "Warner Theatre",
+      "kind": "theater",
+      "town": "Torrington",
+      "state": "Connecticut",
+      "county": "Litchfield County",
+      "address": "68 Main Street, Torrington, CT 06790",
+      "official_url": "https://www.warnertheatre.org",
+      "summary": "Opened August 19, 1931, built by Warner Bros. Studios to a design by theater architect Thomas W. Lamb, with 1,772 seats in an Art Deco style. Closed and slated for demolition in the early 1980s, it was rescued by the Northwest Connecticut Association for the Arts and reopened May 22, 1983; today it runs more than 160 performances a year. Phone (860) 489-7180.",
+      "status": "open",
+      "photos": [
+        {
+          "src": "/photos/ct/torrington/warner-theatre-marquee.jpg",
+          "thumb": "/photos/ct/torrington/warner-theatre-marquee_thumb.jpg",
+          "title": "Warner Theatre vertical sign",
+          "description": "The Warner Theatre's vertical blade sign and marquee in downtown Torrington.",
+          "author": "Torrct (en.wikipedia)",
+          "license": "Public domain",
+          "source_url": "https://commons.wikimedia.org/wiki/File:The_Warner_Theatre_in_Torrington,_CT2.jpg"
+        }
+      ]
+    },
+    {
+      "slug": "torrington-historical-society-museums",
+      "name": "Torrington Historical Society — Hotchkiss-Fyler House & History Museum",
+      "kind": "museum",
+      "town": "Torrington",
+      "state": "Connecticut",
+      "county": "Litchfield County",
+      "address": "192 Main Street, Torrington, CT 06790",
+      "official_url": "https://torringtonhistoricalsociety.org/",
+      "summary": "The Hotchkiss-Fyler House, an 1897-1900 Queen Anne Victorian mansion bequeathed to the society in 1956, offers guided tours on the hour; next door, the Torrington History Museum's free \"No Place Like Home\" exhibit traces the city's story, including a restored 1930s machine shop. Both open seasonally April 15-October 31, Thursday-Saturday. House tour $10; museum free.",
+      "status": "open",
+      "photos": [
+        {
+          "src": "/photos/ct/torrington/hotchkiss-fyler-house.jpg",
+          "thumb": "/photos/ct/torrington/hotchkiss-fyler-house_thumb.jpg",
+          "title": "Hotchkiss-Fyler House Museum",
+          "description": "The Hotchkiss-Fyler House Museum, an 1897-1900 Queen Anne Victorian mansion.",
+          "author": "Doncram",
+          "license": "CC BY-SA 3.0",
+          "source_url": "https://commons.wikimedia.org/wiki/File:HotchkissFylerHouse486sm.jpg"
+        }
+      ]
+    },
+    {
+      "slug": "john-browns-birthplace-site",
+      "name": "John Brown's Birthplace Site",
+      "kind": "historic-site",
+      "town": "Torrington",
+      "state": "Connecticut",
+      "county": "Litchfield County",
+      "address": "John Brown Road, Torrington, CT 06790",
+      "official_url": "https://torringtonhistoricalsociety.org/john-browns-birthplace-site",
+      "summary": "The 40-acre homestead where abolitionist John Brown was born in 1800, surrounded by roughly 100 acres of forest. The house burned in a 1918 chimney fire; a 1932 granite monument marks the spot. On the Connecticut Freedom Trail since 1997 and a Connecticut Archaeological Preserve since 2003, with a 2/3-mile nature trail and a newly opened wetland boardwalk at the trailhead.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "burr-pond-state-park",
+      "name": "Burr Pond State Park",
+      "kind": "park",
+      "town": "Torrington",
+      "state": "Connecticut",
+      "county": "Litchfield County",
+      "address": "384 Burr Mountain Road, Torrington, CT 06790",
+      "official_url": "https://ctparks.com/node/28",
+      "summary": "Site of Gail Borden Jr.'s 1857 condensed-milk factory, vital to the Union Army and marked today by a bronze tablet. A sandy beach with roped-off swimming and seasonal lifeguard, canoe and kayak rentals, and the 2.5-mile Walcott Trail loop. Open daily 8 a.m.-sunset. Phone (860) 482-1817.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "kidsplay-childrens-museum",
+      "name": "KidsPlay Children's Museum",
+      "kind": "museum",
+      "town": "Torrington",
+      "state": "Connecticut",
+      "county": "Litchfield County",
+      "address": "61 Main Street, Torrington, CT 06790",
+      "official_url": "https://www.kidsplaymuseum.org/",
+      "summary": "Interactive exhibits include a Town Center modeled on Torrington itself, a Literacy Tree House and Physical Phenomena climbing walls, offered in English, Spanish and American Sign Language. Hours Monday/Wednesday/Friday 9 a.m.-4 p.m., Thursday 10 a.m.-7 p.m., Saturday-Sunday 10 a.m.-4 p.m., closed Tuesday.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "bad-dog-brewing-company",
+      "name": "Bad Dog Brewing Company",
+      "kind": "brewery",
+      "town": "Torrington",
+      "state": "Connecticut",
+      "county": "Litchfield County",
+      "address": "117 Water Street, Torrington, CT 06790",
+      "official_url": "https://www.bdbrewco.com/",
+      "summary": "Operates out of a historic firehouse built in 1901, focusing on small-batch brewing with local ingredients. Taproom hours Wednesday 4:30-9:30 p.m., Thursday 4-9:30 p.m., Friday-Saturday noon-9:30 p.m., Sunday noon-6 p.m., closed Monday-Tuesday.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "lamonicas-restaurant-catering",
+      "name": "LaMonica's Restaurant & Catering",
+      "kind": "restaurant",
+      "town": "Torrington",
+      "state": "Connecticut",
+      "county": "Litchfield County",
+      "address": "395 Migeon Avenue, Torrington, CT 06790",
+      "official_url": "https://www.lamonicascatering.com/",
+      "summary": "Family owned since 1976, serving breakfast and lunch plus catering. Wednesday-Friday from 6:30 a.m., Saturday-Sunday from 7:30 a.m.; closed Monday-Tuesday, catering still available. Phone (860) 489-6652.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "franks-pizza-restaurant",
+      "name": "Frank's Pizza Restaurant",
+      "kind": "restaurant",
+      "town": "Torrington",
+      "state": "Connecticut",
+      "county": "Litchfield County",
+      "address": "836 Riverside Avenue, Torrington, CT 06790",
+      "official_url": "https://www.frankspizzaoftorrington.com/",
+      "summary": "A long-standing neighborhood pizzeria serving pizza, appetizers, salads and grinders, with catering. Open daily 11 a.m.-10 p.m. Phone (860) 482-7110.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "nardellis-grinder-shoppe-torrington",
+      "name": "Nardelli's Grinder Shoppe (Torrington)",
+      "kind": "restaurant",
+      "town": "Torrington",
+      "state": "Connecticut",
+      "county": "Litchfield County",
+      "address": "1268 East Main Street, Torrington, CT 06790",
+      "official_url": "https://nardellis.com/locations/",
+      "summary": "Torrington outpost of the long-running Connecticut grinder shop. Hours Monday-Saturday 10:30 a.m.-8 p.m., Sunday to 6 p.m., with extended summer hours April through October. Phone (860) 482-5454.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "days-inn-torrington",
+      "name": "Days Inn by Wyndham Torrington",
+      "kind": "hotel",
+      "town": "Torrington",
+      "state": "Connecticut",
+      "county": "Litchfield County",
+      "address": "492 East Main Street, Torrington, CT 06790",
+      "official_url": "https://www.wyndhamhotels.com/days-inn/torrington-connecticut/days-inn-torrington/overview",
+      "summary": "A budget property just off Route 8 with free Wi-Fi and parking, a light breakfast, 24-hour front desk and free truck/RV parking. Phone (860) 496-0811.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "americas-best-value-inn-torrington",
+      "name": "Americas Best Value Inn Torrington",
+      "kind": "hotel",
+      "town": "Torrington",
+      "state": "Connecticut",
+      "county": "Litchfield County",
+      "address": "395 Winsted Road, Torrington, CT 06790",
+      "official_url": "https://www.sonesta.com/americas-best-value-inn/ct/torrington/americas-best-value-inn-torrington-ct",
+      "summary": "Free high-speed Wi-Fi, a complimentary continental breakfast, an on-site fitness center and pet-friendly rooms ($40 per pet per night, up to two pets). Near the Warner Theatre and KidsPlay Children's Museum.",
+      "status": "open",
+      "photos": []
+    }
+  ],
+  "entries": [
+    {
+      "kind": "sight",
+      "name": "Warner Theatre",
+      "place_slug": "warner-theatre",
+      "note": "A 1931 Art Deco theater built by Warner Bros. Studios."
+    },
+    {
+      "kind": "sight",
+      "name": "Torrington Historical Society museums",
+      "place_slug": "torrington-historical-society-museums",
+      "note": "A Victorian mansion and a free city-history exhibit."
+    },
+    {
+      "kind": "walk",
+      "name": "John Brown's Birthplace Site",
+      "place_slug": "john-browns-birthplace-site",
+      "note": "A 40-acre homestead and Connecticut Freedom Trail stop."
+    },
+    {
+      "kind": "sight",
+      "name": "Burr Pond State Park",
+      "place_slug": "burr-pond-state-park",
+      "note": "A sandy beach on the site of Gail Borden's 1857 milk factory."
+    },
+    {
+      "kind": "sight",
+      "name": "KidsPlay Children's Museum",
+      "place_slug": "kidsplay-childrens-museum",
+      "note": "Interactive exhibits modeled on the city itself."
+    },
+    {
+      "kind": "food",
+      "name": "Bad Dog Brewing Company",
+      "place_slug": "bad-dog-brewing-company",
+      "note": "Small-batch beer out of a converted 1901 firehouse."
+    },
+    {
+      "kind": "food",
+      "name": "LaMonica's Restaurant & Catering",
+      "place_slug": "lamonicas-restaurant-catering",
+      "note": "Family-owned breakfast and lunch since 1976."
+    },
+    {
+      "kind": "food",
+      "name": "Frank's Pizza Restaurant",
+      "place_slug": "franks-pizza-restaurant",
+      "note": "A long-standing neighborhood pizzeria."
+    },
+    {
+      "kind": "food",
+      "name": "Nardelli's Grinder Shoppe",
+      "place_slug": "nardellis-grinder-shoppe-torrington",
+      "note": "The Torrington outpost of a long-running grinder shop."
+    },
+    {
+      "kind": "stay",
+      "name": "Days Inn by Wyndham Torrington",
+      "place_slug": "days-inn-torrington",
+      "note": "A budget property just off Route 8."
+    },
+    {
+      "kind": "stay",
+      "name": "Americas Best Value Inn Torrington",
+      "place_slug": "americas-best-value-inn-torrington",
+      "note": "A pet-friendly budget hotel near downtown."
+    }
+  ],
+  "links": [
+    {
+      "target": "guide:litchfield-ct-travel-guide",
+      "kind": "nearby",
+      "note": null
+    },
+    {
+      "target": "guide:goshen-ct-travel-guide",
+      "kind": "nearby",
+      "note": null
+    },
+    {
+      "target": "guide:harwinton-ct-travel-guide",
+      "kind": "nearby",
+      "note": null
+    },
+    {
+      "target": "guide:new-hartford-ct-travel-guide",
+      "kind": "nearby",
+      "note": null
+    },
+    {
+      "target": "guide:winchester-ct-travel-guide",
+      "kind": "nearby",
+      "note": "Northwestern Connecticut Transit District buses connect Torrington and Winsted."
+    }
+  ]
+}
