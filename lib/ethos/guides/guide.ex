@@ -11,6 +11,7 @@ defmodule Ethos.Guides.Guide do
     field :starts_on, :date
     field :ends_on, :date
     field :status, :string, default: "draft"
+    field :tier, :string, default: "guide"
     field :view_count, :integer, default: 0
     field :og_image_path, :string
     field :intro, :string

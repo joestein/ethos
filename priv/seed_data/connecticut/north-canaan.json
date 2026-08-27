@@ -1,0 +1,261 @@
+{
+  "guide": {
+    "slug": "north-canaan-ct-travel-guide",
+    "title": "North Canaan, Connecticut: Beckley Furnace and a Railroad Crossing",
+    "destination": "North Canaan, Connecticut",
+    "state": "Connecticut",
+    "county": "Litchfield County",
+    "intro": "North Canaan incorporated in 1858 when it split from the original town of Canaan — a division long underway since the Second Ecclesiastical Society formed in 1769. The town center kept the name \"Canaan\" because it had been the old town's main village, which is why North Canaan today contains a village called Canaan, while the separate town of Canaan is locally known as Falls Village. Iron, then agriculture and dairying — including a Borden milk plant — drove the local economy; the town still quarries lime, sand and gravel. Beckley Furnace in East Canaan, built in 1847, is Connecticut's only State Industrial Monument and the best-preserved surviving blast furnace from the Salisbury iron district. Canaan Union Depot, an 1872 Gothic Revival station where the Housatonic and Connecticut Western railroads crossed at an 85-degree angle, survived a 2001 arson fire and was gradually rebuilt.",
+    "sections": [
+      {
+        "heading": "Iron, dairy and a railroad crossing",
+        "body": "Beckley Furnace became a state park in 1946 and joined the National Register of Historic Places in 1978, anchoring the region's Iron Heritage Trail. Nearby, the Land of Nod Farm has worked the same East Canaan land since 1788 under the Adam family — John Adam Jr. moved to Canaan in 1780 to work for ironmaster Samuel Forbes, later marrying his daughter Abigail, and the farm fed Beckley Furnace's workers until it closed in 1919. Canaan Union Depot's three-story tower once housed a telegraph operator between 90-foot wings for each railroad; in April 2026 the Connecticut Railroad Historical Association sold the building for $800,000 to a Housatonic Railroad affiliate, which is returning it to railroad use under a 99-year town lease preserving public parking."
+      },
+      {
+        "heading": "Getting there",
+        "body": "North Canaan sits right at the junction of U.S. Route 7, running north-south through the town center, and U.S. Route 44, crossing it at Canaan village — Connecticut's northwest corner, just below the Massachusetts line. There is no passenger rail service; the Housatonic Railroad tracks through Canaan Union Station carry freight only, regular passenger service having ended in 1971. The nearest passenger rail is Metro-North's Harlem Line terminus at Wassaic, New York."
+      },
+      {
+        "heading": "A depot museum and an accordion collection",
+        "body": "The Railroad Museum inside Canaan Union Station remains open to the public Saturdays, alongside Housatonic Railroad offices and the station's annual Railroad Days festival each August. The New England Accordion Connection & Museum moved into the restored station in July 2021, holding what's billed as the world's largest privately owned accordion collection; a 2026 ownership change at the building means its exact space may shift, so call ahead. The Colonial Theatre on Railroad Street, built in 1923 as a movie theater, bowling alley and ballroom, was restored to its Art Deco character in the early 2000s and still runs films and live events."
+      }
+    ],
+    "faq": [
+      {
+        "question": "How do I get to North Canaan?",
+        "answer": "By car — U.S. Route 7 runs north-south through the town center, crossing U.S. Route 44 at Canaan village. There's no passenger rail service in North Canaan; the Housatonic Railroad tracks through the old Canaan Union Station carry freight only, and the nearest passenger rail is Metro-North's Harlem Line terminus at Wassaic, New York."
+      },
+      {
+        "question": "Is North Canaan the same as Canaan?",
+        "answer": "No — North Canaan split off from the original town of Canaan in 1858 and kept the name \"Canaan\" for its village center, since it had been the old town's main village. The separate town of Canaan, to the south, is locally called Falls Village."
+      },
+      {
+        "question": "What is Beckley Furnace?",
+        "answer": "An 1847 blast furnace in East Canaan, Connecticut's only officially designated State Industrial Monument and the best-preserved survivor of the Salisbury iron district. It became a state park in 1946, joined the National Register in 1978, and offers guided tours Saturdays, 10 a.m.-1 p.m., May through mid-October."
+      },
+      {
+        "question": "Can I still see trains at Canaan Union Station?",
+        "answer": "The station's Railroad Museum is open Saturdays, 10 a.m.-2 p.m., and the building was sold in April 2026 to a Housatonic Railroad affiliate returning it to active railroad use — but the historic north-south Housatonic freight line remains active through town regardless; the old east-west line through the depot has carried no trains since 1974."
+      },
+      {
+        "question": "Where can I eat in North Canaan?",
+        "answer": "Teo Tacos opened on Main Street in May 2026, and Industry Kitchen and Bar and Freund's Farm Market & Bakery round out the village center. No lodging could be verified inside North Canaan; the nearest option is the Blackberry River Inn in neighboring Norfolk."
+      }
+    ],
+    "photos": [
+      {
+        "src": "/photos/ct/north-canaan/beckley-furnace.jpg",
+        "thumb": "/photos/ct/north-canaan/beckley-furnace_thumb.jpg",
+        "title": "Beckley Furnace Industrial Monument",
+        "description": "The restored 1847 blast furnace stack at Beckley Furnace Industrial Monument in East Canaan.",
+        "author": "Doug Kerr",
+        "license": "CC BY-SA 2.0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Beckley_Furnace_Industrial_Monument_-_North_Canaan,_Connecticut.jpg"
+      },
+      {
+        "src": "/photos/ct/north-canaan/canaan-union-depot.jpg",
+        "thumb": "/photos/ct/north-canaan/canaan-union-depot_thumb.jpg",
+        "title": "Canaan Union Depot",
+        "description": "Canaan Union Depot, the restored 1872 railroad station in North Canaan.",
+        "author": "John Phelan",
+        "license": "CC BY-SA 4.0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Union_Depot,_North_Canaan_CT.jpg"
+      },
+      {
+        "src": "/photos/ct/north-canaan/colonial-theatre-railroad-street.jpg",
+        "thumb": "/photos/ct/north-canaan/colonial-theatre-railroad-street_thumb.jpg",
+        "title": "Colonial Theatre",
+        "description": "The facade of the Colonial Theatre on Railroad Street.",
+        "author": "John Phelan",
+        "license": "CC BY 4.0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Colonial_Theatre,_North_Canaan_CT.jpg"
+      }
+    ]
+  },
+  "places": [
+    {
+      "slug": "beckley-furnace-industrial-monument",
+      "name": "Beckley Furnace Industrial Monument",
+      "kind": "historic-site",
+      "town": "North Canaan",
+      "state": "Connecticut",
+      "county": "Litchfield County",
+      "address": "140 Lower Road, East Canaan, CT 06024",
+      "official_url": "https://www.beckleyfurnace.org/",
+      "summary": "Built in 1847, Connecticut's only official State Industrial Monument and the best-preserved blast furnace from the vanished Salisbury iron industry, anchoring the region's Iron Heritage Trail. Grounds open daily 8 a.m.-sunset; guided tours Saturdays 10 a.m.-1 p.m., May through mid-October.",
+      "status": "open",
+      "photos": [
+        {
+          "src": "/photos/ct/north-canaan/beckley-furnace.jpg",
+          "thumb": "/photos/ct/north-canaan/beckley-furnace_thumb.jpg",
+          "title": "Beckley Furnace Industrial Monument",
+          "description": "The restored 1847 blast furnace stack at Beckley Furnace Industrial Monument in East Canaan.",
+          "author": "Doug Kerr",
+          "license": "CC BY-SA 2.0",
+          "source_url": "https://commons.wikimedia.org/wiki/File:Beckley_Furnace_Industrial_Monument_-_North_Canaan,_Connecticut.jpg"
+        }
+      ]
+    },
+    {
+      "slug": "canaan-union-station-railroad-museum",
+      "name": "Canaan Union Station and Railroad Museum",
+      "kind": "historic-site",
+      "town": "North Canaan",
+      "state": "Connecticut",
+      "county": "Litchfield County",
+      "address": "Junction of U.S. Routes 7 and 44, Main Street at Railroad Street, North Canaan, CT 06018",
+      "summary": "An 1872 Gothic Revival depot where the Housatonic and Connecticut Western railroads once crossed at an 85-degree angle; sold in April 2026 to a Housatonic Railroad affiliate returning it to active use. The Railroad Museum inside stays open to the public Saturdays, 10 a.m.-2 p.m., and the station hosts the annual Canaan Railroad Days festival each August.",
+      "status": "open",
+      "photos": [
+        {
+          "src": "/photos/ct/north-canaan/canaan-union-depot.jpg",
+          "thumb": "/photos/ct/north-canaan/canaan-union-depot_thumb.jpg",
+          "title": "Canaan Union Depot",
+          "description": "Canaan Union Depot, the restored 1872 railroad station in North Canaan.",
+          "author": "John Phelan",
+          "license": "CC BY-SA 4.0",
+          "source_url": "https://commons.wikimedia.org/wiki/File:Union_Depot,_North_Canaan_CT.jpg"
+        }
+      ]
+    },
+    {
+      "slug": "new-england-accordion-museum",
+      "name": "New England Accordion Connection & Museum Co.",
+      "kind": "museum",
+      "town": "North Canaan",
+      "state": "Connecticut",
+      "county": "Litchfield County",
+      "address": "75 Main Street, North Canaan, CT 06018",
+      "official_url": "https://newenglandaccordionconnectionandmuseumcompany.com/",
+      "summary": "Founded by Angelo Paul Ramunni and moved into the restored Canaan station in July 2021, holding what's billed as the world's largest privately owned accordion collection. Hours Tuesday-Sunday 9 a.m.-4 p.m., closed Mondays — a 2026 ownership change at the station may shift the museum's exact space, so call (860) 833-1374 before visiting.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "colonial-theatre-north-canaan",
+      "name": "The Colonial Theatre",
+      "kind": "theater",
+      "town": "North Canaan",
+      "state": "Connecticut",
+      "county": "Litchfield County",
+      "address": "27 Railroad Street, North Canaan, CT 06018",
+      "summary": "Opened in 1923 as \"The Casino\" with a movie theater, bowling alley and upstairs ballroom, renamed the Colonial Theatre in 1929 and restored to its Art Deco character in an early-2000s project costing roughly $1 million. Runs films, comedy, live music and community events.",
+      "status": "open",
+      "photos": [
+        {
+          "src": "/photos/ct/north-canaan/colonial-theatre-railroad-street.jpg",
+          "thumb": "/photos/ct/north-canaan/colonial-theatre-railroad-street_thumb.jpg",
+          "title": "Colonial Theatre",
+          "description": "The facade of the Colonial Theatre on Railroad Street.",
+          "author": "John Phelan",
+          "license": "CC BY 4.0",
+          "source_url": "https://commons.wikimedia.org/wiki/File:Colonial_Theatre,_North_Canaan_CT.jpg"
+        }
+      ]
+    },
+    {
+      "slug": "teo-tacos",
+      "name": "Teo Tacos",
+      "kind": "restaurant",
+      "town": "North Canaan",
+      "state": "Connecticut",
+      "county": "Litchfield County",
+      "address": "85 Main Street, North Canaan, CT 06018",
+      "summary": "Opened May 2026 by Carlos and Yesica Gomez in the former McMuckle's Market space, named for Carlos's mother Teodora. Tacos, burritos, enchiladas, quesadillas and nachos; no alcohol served. Hours Thursday-Monday 7 a.m.-9 p.m., Wednesday to 5 p.m., closed Tuesday.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "industry-kitchen-and-bar",
+      "name": "Industry Kitchen and Bar",
+      "kind": "restaurant",
+      "town": "North Canaan",
+      "state": "Connecticut",
+      "county": "Litchfield County",
+      "address": "14 Railroad Street, North Canaan, CT 06018",
+      "official_url": "https://industrykitchenbar.com/",
+      "summary": "An American restaurant and bar on Railroad Street in the village center, with an appetizer, mains and happy-hour menu and online ordering. Phone (860) 453-4317.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "freunds-farm-market-bakery",
+      "name": "Freund's Farm Market & Bakery",
+      "kind": "cafe",
+      "town": "North Canaan",
+      "state": "Connecticut",
+      "county": "Litchfield County",
+      "address": "324 Norfolk Road, East Canaan, CT 06024",
+      "official_url": "https://freundsfarmmarket.com/",
+      "summary": "A working family dairy farm's market and bakery, selling seasonal produce, pantry staples, pies and breads, greenhouse plants and the farm's own CowPots. Summer hours daily 9 a.m.-5 p.m.",
+      "status": "open",
+      "photos": []
+    }
+  ],
+  "entries": [
+    {
+      "kind": "sight",
+      "name": "Beckley Furnace Industrial Monument",
+      "place_slug": "beckley-furnace-industrial-monument",
+      "note": "Connecticut's only State Industrial Monument, an 1847 blast furnace."
+    },
+    {
+      "kind": "sight",
+      "name": "Canaan Union Station and Railroad Museum",
+      "place_slug": "canaan-union-station-railroad-museum",
+      "note": "An 1872 depot where two railroads crossed, open Saturdays."
+    },
+    {
+      "kind": "sight",
+      "name": "New England Accordion Connection & Museum Co.",
+      "place_slug": "new-england-accordion-museum",
+      "note": "A world-class private accordion collection inside the old depot."
+    },
+    {
+      "kind": "sight",
+      "name": "The Colonial Theatre",
+      "place_slug": "colonial-theatre-north-canaan",
+      "note": "A restored 1923 Art Deco theater on Railroad Street."
+    },
+    {
+      "kind": "food",
+      "name": "Teo Tacos",
+      "place_slug": "teo-tacos",
+      "note": "A new Main Street taqueria that opened in May 2026."
+    },
+    {
+      "kind": "food",
+      "name": "Industry Kitchen and Bar",
+      "place_slug": "industry-kitchen-and-bar",
+      "note": "American fare and a full bar on Railroad Street."
+    },
+    {
+      "kind": "food",
+      "name": "Freund's Farm Market & Bakery",
+      "place_slug": "freunds-farm-market-bakery",
+      "note": "Seasonal produce, pies and breads from a working dairy farm."
+    }
+  ],
+  "links": [
+    {
+      "target": "guide:canaan-ct-travel-guide",
+      "kind": "nearby",
+      "note": "North Canaan and Canaan split from one undivided town in 1858."
+    },
+    {
+      "target": "guide:canaan-ct-travel-guide",
+      "kind": "shared-history",
+      "note": "North Canaan split from the original town of Canaan in 1858, keeping the \"Canaan\" name for its village center."
+    },
+    {
+      "target": "guide:norfolk-ct-travel-guide",
+      "kind": "nearby",
+      "note": "The nearest verified lodging to North Canaan, the Blackberry River Inn, sits in neighboring Norfolk."
+    },
+    {
+      "target": "guide:salisbury-ct-travel-guide",
+      "kind": "nearby",
+      "note": null
+    }
+  ]
+}

@@ -1,0 +1,260 @@
+{
+  "guide": {
+    "slug": "redding-ct-travel-guide",
+    "title": "Redding, Connecticut: Connecticut's Valley Forge and Mark Twain's Library",
+    "destination": "Redding, Connecticut",
+    "state": "Connecticut",
+    "county": "Fairfield County",
+    "intro": "Redding was incorporated in 1767, separated from Fairfield; its name comes from John Read, an early landholder, and the town was originally spelled \"Reading\" until the U.S. Postal Service formalized \"Redding\" in 1844. During the winter of 1778-79, General Israel Putnam and three Continental Army brigades — about 3,000 soldiers — held a strategic winter encampment here guarding the Hudson Valley and Long Island Sound, a site still known as \"Connecticut's Valley Forge.\" Redding's early economy rested on quarrying and, in the Georgetown section, wire-screen manufacturing at the Gilbert & Bennett mill, founded in 1834. Mark Twain moved to Redding in 1908, built his last home, and shortly after founded the Mark Twain Library Association. The Umpawaug Schoolhouse, built around 1789, is the town's only surviving one-room brick schoolhouse.",
+    "sections": [
+      {
+        "heading": "Connecticut's Valley Forge",
+        "body": "The Redding encampment ground is preserved as Putnam Memorial State Park, Connecticut's first State Archaeological Preserve and a National Register site, with reconstructed log buildings, a museum of excavated tools, buttons and ammunition, and a 44-foot granite monument built in 1888. Gilbert & Bennett, founded in 1834 in Georgetown, made wire mesh that supplied both World Wars before the mill site later became an EPA Superfund cleanup. Collis P. Huntington State Park, 1,017 acres with about ten miles of trails guarded by Anna Hyatt Huntington's bronze bears and wolves, is based in Redding and reaches into the neighboring corners of Bethel and Newtown."
+      },
+      {
+        "heading": "Getting there",
+        "body": "Redding is a back-roads town: US Route 7 runs along its western edge, Route 107 connects Georgetown to Redding Center, and Route 53, a designated state scenic road for a stretch starting at the Weston town line, runs north to I-84 in Danbury. Redding is one of the few small Connecticut towns with its own commuter rail stop — the Metro-North Danbury Branch station at 3 Long Ridge Road, opened in 1852 as an original Danbury and Norwalk Railroad station. Some weekday trains run through to Stamford and Grand Central, while others require a change at South Norwalk; there is no fixed-route local bus service in Redding."
+      }
+    ],
+    "faq": [
+      {
+        "question": "How do I get to Redding?",
+        "answer": "By car on US Route 7, Route 107 or Route 53. Redding also has its own Metro-North Danbury Branch station at 3 Long Ridge Road — some weekday trains run through to Stamford and Grand Central, others require a change at South Norwalk."
+      },
+      {
+        "question": "What is Putnam Memorial State Park?",
+        "answer": "The site of the Continental Army's 1778-79 winter encampment under General Israel Putnam, known as \"Connecticut's Valley Forge.\" Park open daily 8 a.m.-sunset; museum/visitor center open Memorial Day-Veterans Day, Friday-Monday, 10 a.m.-5 p.m."
+      },
+      {
+        "question": "Is Collis P. Huntington State Park in Redding?",
+        "answer": "Yes — Redding is its base, though the 1,017-acre park's grounds also reach into neighboring Bethel and Newtown. About ten miles of trails, five ponds and bronze bear and wolf sculptures by Anna Hyatt Huntington at the entrance. Open daily 8 a.m. to sunset, free admission, leashed pets allowed."
+      },
+      {
+        "question": "Is there a hotel in Redding?",
+        "answer": "No hotel, inn or B&B could be verified in Redding. The nearest option is a Days Inn on the Route 7 corridor in neighboring Ridgefield."
+      }
+    ],
+    "photos": [
+      {
+        "src": "/photos/ct/redding/putnam-log-hut-redding.jpg",
+        "thumb": "/photos/ct/redding/putnam-log-hut-redding_thumb.jpg",
+        "title": "Putnam Memorial State Park log hut",
+        "description": "A reconstructed log hut with fieldstone chimney at Putnam Memorial State Park, \"Connecticut's Valley Forge.\"",
+        "author": "Jllm06",
+        "license": "CC BY-SA 4.0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Putnam_Memorial_State_Park_-_officer%27s_quarters,_magazine.jpg"
+      },
+      {
+        "src": "/photos/ct/redding/putnam-monument-redding.jpg",
+        "thumb": "/photos/ct/redding/putnam-monument-redding_thumb.jpg",
+        "title": "Putnam Memorial State Park monument",
+        "description": "The 1888 granite memorial monument at Putnam Memorial State Park, honoring the Continental Army's 1778-79 winter encampment.",
+        "author": "Jllm06",
+        "license": "CC BY-SA 4.0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Putnam_Memorial_State_Park_-_Memorial_Monument.jpg"
+      },
+      {
+        "src": "/photos/ct/redding/mark-twain-library-redding.jpg",
+        "thumb": "/photos/ct/redding/mark-twain-library-redding_thumb.jpg",
+        "title": "Mark Twain Library",
+        "description": "The front elevation of the Mark Twain Library in Redding, founded by Samuel Clemens.",
+        "author": "Aab254",
+        "license": "CC BY-SA 4.0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Mark_Twain_Library_Front.jpg"
+      }
+    ]
+  },
+  "places": [
+    {
+      "slug": "collis-p-huntington-state-park",
+      "name": "Collis P. Huntington State Park",
+      "kind": "park",
+      "town": "Redding",
+      "state": "Connecticut",
+      "county": "Fairfield County",
+      "address": "9 Dodgingtown Rd, Redding/Bethel/Newtown, CT 06896",
+      "official_url": "https://ctparks.com/node/29",
+      "summary": "1,017 acres based in Redding, with grounds reaching into neighboring Bethel and Newtown: five ponds, a lagoon, the 15-acre Lake Hopewell and about ten miles of trails for hiking, biking and horseback riding. Anna Hyatt Huntington's life-size bronze bears and wolves guard the entrance; the land was the Huntington family's former estate. Open daily 8 a.m. to sunset, free admission, leashed pets welcome.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "putnam-memorial-state-park",
+      "name": "Putnam Memorial State Park",
+      "kind": "historic-site",
+      "town": "Redding",
+      "state": "Connecticut",
+      "county": "Fairfield County",
+      "address": "499 Black Rock Turnpike, Redding, CT 06896",
+      "official_url": "https://ctparks.com/node/115",
+      "summary": "183 acres preserving the Continental Army's 1778-79 winter encampment under General Israel Putnam, Connecticut's first State Archaeological Preserve. Reconstructed log buildings, an artifact museum and a 44-foot granite monument built in 1888. Park open daily 8 a.m.-sunset, free; museum/visitor center open Memorial Day-Veterans Day, Friday-Monday, 10 a.m.-5 p.m. — hours vary slightly by source, so call (203) 938-2285 to confirm.",
+      "status": "open",
+      "photos": [
+        {
+          "src": "/photos/ct/redding/putnam-log-hut-redding.jpg",
+          "thumb": "/photos/ct/redding/putnam-log-hut-redding_thumb.jpg",
+          "title": "Putnam Memorial State Park log hut",
+          "description": "A reconstructed log hut with fieldstone chimney at Putnam Memorial State Park, \"Connecticut's Valley Forge.\"",
+          "author": "Jllm06",
+          "license": "CC BY-SA 4.0",
+          "source_url": "https://commons.wikimedia.org/wiki/File:Putnam_Memorial_State_Park_-_officer%27s_quarters,_magazine.jpg"
+        },
+        {
+          "src": "/photos/ct/redding/putnam-monument-redding.jpg",
+          "thumb": "/photos/ct/redding/putnam-monument-redding_thumb.jpg",
+          "title": "Putnam Memorial State Park monument",
+          "description": "The 1888 granite memorial monument at Putnam Memorial State Park, honoring the Continental Army's 1778-79 winter encampment.",
+          "author": "Jllm06",
+          "license": "CC BY-SA 4.0",
+          "source_url": "https://commons.wikimedia.org/wiki/File:Putnam_Memorial_State_Park_-_Memorial_Monument.jpg"
+        }
+      ]
+    },
+    {
+      "slug": "mark-twain-library",
+      "name": "Mark Twain Library",
+      "kind": "attraction",
+      "town": "Redding",
+      "state": "Connecticut",
+      "county": "Fairfield County",
+      "address": "439 Redding Road, Redding, CT 06896",
+      "official_url": "https://marktwainlibrary.org/",
+      "summary": "Founded by Samuel Clemens after he moved to Redding in 1908, the library still carries his name and keeps exhibits on his life, alongside a MakerSpace. Hosts an annual Book Fair each Labor Day weekend. Hours Mon & Thu 10 a.m.-8 p.m., Tue/Wed/Fri/Sat 10 a.m.-5 p.m., closed Sunday. Phone (203) 938-2545.",
+      "status": "open",
+      "photos": [
+        {
+          "src": "/photos/ct/redding/mark-twain-library-redding.jpg",
+          "thumb": "/photos/ct/redding/mark-twain-library-redding_thumb.jpg",
+          "title": "Mark Twain Library",
+          "description": "The front elevation of the Mark Twain Library in Redding, founded by Samuel Clemens.",
+          "author": "Aab254",
+          "license": "CC BY-SA 4.0",
+          "source_url": "https://commons.wikimedia.org/wiki/File:Mark_Twain_Library_Front.jpg"
+        }
+      ]
+    },
+    {
+      "slug": "redding-historical-society-lonetown-farm-museum",
+      "name": "Redding Historical Society — Lonetown Farm Museum & Umpawaug Schoolhouse",
+      "kind": "museum",
+      "town": "Redding",
+      "state": "Connecticut",
+      "county": "Fairfield County",
+      "address": "43 Lonetown Road, Redding, CT 06896",
+      "official_url": "https://reddingcthistoricalsociety.org/",
+      "summary": "Preserves the Lonetown Farm Museum farmhouse and the Umpawaug Schoolhouse, Redding's only surviving one-room brick schoolhouse, built around 1789. Founded in the 1940s and incorporated in 1962. Hosts an annual music festival and a free Umpawaug School open house. Phone (203) 938-9095.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "wire-mill-saloon-barbecue",
+      "name": "Wire Mill Saloon & Barbecue",
+      "kind": "restaurant",
+      "town": "Redding",
+      "state": "Connecticut",
+      "county": "Fairfield County",
+      "address": "12 Old Mill Road, Redding, CT 06896",
+      "official_url": "https://wiremillbbq.com/",
+      "summary": "Smokehouse barbecue in the old Gilbert & Bennett wire-mill district of Georgetown: pulled pork, brisket and house-made smoked sausage. Open Wed-Sun noon-9 p.m. or until the food runs out, closed Mon-Tue. Phone (203) 544-9988.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "georgetown-owl-restaurant-saloon",
+      "name": "The Georgetown Owl Restaurant & Saloon",
+      "kind": "restaurant",
+      "town": "Redding",
+      "state": "Connecticut",
+      "county": "Fairfield County",
+      "address": "19 Main Street, Georgetown, Redding, CT 06896",
+      "official_url": "https://www.georgetownowl.com/",
+      "summary": "Two food destinations under one roof: a Market & Cafe for breakfast and lunch (daily 8 a.m.-3 p.m.), and a Restaurant & Saloon for dinner with craft cocktails, Tuesday-Saturday from 4 p.m. Reservations (203) 544-9102.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "quartertone-coffee-roasters",
+      "name": "Quartertone Coffee Roasters",
+      "kind": "cafe",
+      "town": "Redding",
+      "state": "Connecticut",
+      "county": "Fairfield County",
+      "address": "19 Main St, Redding, CT 06896",
+      "official_url": "https://quartertonecoffee.com/",
+      "summary": "Small-batch specialty coffee roaster operating in Georgetown since 2021, pouring at the Georgetown Owl Market cafe bar daily 8 a.m.-3 p.m.",
+      "status": "open",
+      "photos": []
+    }
+  ],
+  "entries": [
+    {
+      "kind": "sight",
+      "name": "Collis P. Huntington State Park",
+      "place_slug": "collis-p-huntington-state-park",
+      "note": "1,017 acres of trails and Huntington bronzes, based in Redding."
+    },
+    {
+      "kind": "sight",
+      "name": "Putnam Memorial State Park",
+      "place_slug": "putnam-memorial-state-park",
+      "note": "\"Connecticut's Valley Forge\" encampment site."
+    },
+    {
+      "kind": "sight",
+      "name": "Mark Twain Library",
+      "place_slug": "mark-twain-library",
+      "note": "Founded by Samuel Clemens in 1908."
+    },
+    {
+      "kind": "sight",
+      "name": "Redding Historical Society — Lonetown Farm Museum & Umpawaug Schoolhouse",
+      "place_slug": "redding-historical-society-lonetown-farm-museum",
+      "note": "Redding's only surviving one-room brick schoolhouse."
+    },
+    {
+      "kind": "food",
+      "name": "Wire Mill Saloon & Barbecue",
+      "place_slug": "wire-mill-saloon-barbecue",
+      "note": "Smokehouse barbecue in the old wire-mill district."
+    },
+    {
+      "kind": "food",
+      "name": "The Georgetown Owl Restaurant & Saloon",
+      "place_slug": "georgetown-owl-restaurant-saloon",
+      "note": "A market/cafe and dinner saloon in one."
+    },
+    {
+      "kind": "food",
+      "name": "Quartertone Coffee Roasters",
+      "place_slug": "quartertone-coffee-roasters",
+      "note": "Small-batch coffee roasted in Georgetown."
+    }
+  ],
+  "links": [
+    {
+      "target": "guide:bethel-ct-travel-guide",
+      "kind": "nearby",
+      "note": "Redding borders Bethel; Putnam Memorial State Park sits just over the line from Bethel."
+    },
+    {
+      "target": "guide:easton-ct-travel-guide",
+      "kind": "nearby",
+      "note": "Route 58 runs north from Easton through Redding to Bethel."
+    },
+    {
+      "target": "guide:wilton-ct-travel-guide",
+      "kind": "nearby",
+      "note": "The village of Georgetown straddles Redding and Wilton."
+    },
+    {
+      "target": "guide:weston-ct-travel-guide",
+      "kind": "nearby",
+      "note": "Route 53's designated scenic stretch in Redding begins at the Weston town line."
+    },
+    {
+      "target": "guide:newtown-ct-travel-guide",
+      "kind": "nearby",
+      "note": "Collis P. Huntington State Park spans Redding, Bethel and Newtown."
+    }
+  ]
+}

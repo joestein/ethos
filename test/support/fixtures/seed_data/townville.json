@@ -1,0 +1,41 @@
+{
+  "guide": {
+    "slug": "townville-ct-travel-guide",
+    "title": "Townville, Connecticut: A Fixture Town",
+    "destination": "Townville, Connecticut",
+    "state": "Connecticut",
+    "county": "Windham County",
+    "tier": "town-page",
+    "intro": "A fixture orientation page used by the seed tests.",
+    "sections": [{"heading": "Getting there", "body": "Route 1."}],
+    "faq": [{"question": "How do I get to Townville?", "answer": "Route 1."}],
+    "photos": [
+      {
+        "src": "/photos/ct/scotland/huntington-homestead-scotland.jpg",
+        "thumb": "/photos/ct/scotland/huntington-homestead-scotland_thumb.jpg",
+        "title": "Huntington Homestead",
+        "description": "The Huntington Homestead, birthplace of Declaration of Independence signer Samuel Huntington, in Scotland.",
+        "author": "JJBers",
+        "license": "CC BY 4.0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Samuel_Huntington_Homestead,_Scotland,_CT_01.jpg"
+      }
+    ]
+  },
+  "places": [
+    {
+      "slug": "townville-green",
+      "name": "Townville Green",
+      "kind": "park",
+      "town": "Townville",
+      "state": "Connecticut",
+      "county": "Windham County",
+      "summary": "The town green.",
+      "status": "open",
+      "photos": []
+    }
+  ],
+  "entries": [
+    {"kind": "sight", "name": "Townville Green", "place_slug": "townville-green", "note": "The green."}
+  ],
+  "links": []
+}

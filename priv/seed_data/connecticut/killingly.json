@@ -1,0 +1,285 @@
+{
+  "guide": {
+    "slug": "killingly-ct-travel-guide",
+    "title": "Killingly, Connecticut: Cotton Mills, a Diner, and a Tiffany Birthplace",
+    "destination": "Killingly, Connecticut",
+    "state": "Connecticut",
+    "county": "Windham County",
+    "intro": "Killingly was settled in 1700 and incorporated in 1708, beginning as a cluster of mill villages on the Five Mile and Quinebaug Rivers; English colonists first called the area \"Aspinock\" before Governor Gurdon Saltonstall suggested \"Kellingly,\" later altered to Killingly. In the first half of the 19th century Killingly was the largest producer of cotton goods in Connecticut, and it later became known as \"the curtain capital of the world.\" Mary Dixon Kies, born in South Killingly in 1752, received a U.S. patent in 1809 for weaving straw with silk and thread — often cited as the first patent issued to a woman in her own name. Charles Lewis Tiffany, founder of Tiffany & Company, was born in Killingly in 1812 and worked in his father's store and cotton mill before leaving for New York. Danielson has had a notable Laotian community since 1979, when the first refugee family arrived sponsored by a local couple.",
+    "sections": [
+      {
+        "heading": "Cotton, curtains, and a Tiffany birthplace",
+        "body": "Killingly was settled in 1700 and incorporated in 1708, beginning as a cluster of mill villages on the Five Mile and Quinebaug Rivers. In the first half of the 19th century Killingly was the largest producer of cotton goods in Connecticut, later known as \"the curtain capital of the world.\" Mary Dixon Kies, born in South Killingly in 1752, received a U.S. patent in 1809 for weaving straw with silk and thread — often cited as the first patent issued to a woman in her own name; she is buried in Old South Killingly Cemetery. Charles Lewis Tiffany, founder of Tiffany & Company, was born in Killingly in 1812 and worked in his father's general store and cotton mill office before leaving for New York. The borough of Danielson, originally \"Danielsonville\" for Gen. James Danielson, has had a notable Laotian community since September 1979, when the first refugee family arrived sponsored by Daniel and Carolyn O'Leary — a heritage visible today in the borough's Lao restaurants."
+      },
+      {
+        "heading": "Getting there",
+        "body": "Interstate 395 is the primary north-south corridor through Killingly, meeting US Route 6 and Route 101 near downtown Danielson; Route 12 also passes through and divides downtown. There is no passenger rail station in Killingly or Danielson; the Norwich and Worcester Railroad reached the village by 1840 and shaped Main Street's growth, but no passenger service remains. The nearest Connecticut rail service is CTrail Shore Line East at New London, reached by driving south on I-395. Metro-North's New Haven Line and the CTrail Hartford Line do not serve northeastern Connecticut at all."
+      }
+    ],
+    "faq": [
+      {
+        "question": "How do I get to Killingly?",
+        "answer": "By car — Interstate 395 is the main corridor, meeting US Route 6 and Route 101 near downtown Danielson. There is no passenger rail station in Killingly; the nearest Connecticut rail service is Shore Line East at New London."
+      },
+      {
+        "question": "Is there a train to Killingly?",
+        "answer": "No. Killingly has no passenger rail station today, and Metro-North's New Haven Line and the CTrail Hartford Line do not serve northeastern Connecticut at all. Drive south on I-395 to reach Shore Line East at New London."
+      },
+      {
+        "question": "What is the Danielson Main Street Historic District?",
+        "answer": "A 20-acre National Register district with more than 40 commercial buildings from about 1850-1920, including the 1901 Bugbee Memorial Library, the 1855 Westfield Congregational Church and the 1856 Attawaugan Hotel."
+      },
+      {
+        "question": "Can I go skydiving in Killingly?",
+        "answer": "Yes — Skydive Danielson offers tandem jumps for first-timers at Danielson Airport, operating seasonally May through October, seven days a week."
+      },
+      {
+        "question": "Is there a hotel in Killingly?",
+        "answer": "No hotel or inn inside Killingly could be independently confirmed as bookable; travelers should check availability directly before planning around any single property."
+      }
+    ],
+    "photos": [
+      {
+        "src": "/photos/ct/killingly/danielson-main-street-historic-district.jpg",
+        "thumb": "/photos/ct/killingly/danielson-main-street-historic-district_thumb.jpg",
+        "title": "Danielson Main Street Historic District",
+        "description": "Downtown Danielson's Main Street, with the 1855 Westfield Congregational Church and the 1901 Bugbee Memorial Library.",
+        "author": "Kenneth C. Zirkel",
+        "license": "CC BY-SA 4.0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Danielson_Main_Street_Historic_District_Killingly,_Connecticut.jpg"
+      },
+      {
+        "src": "/photos/ct/killingly/killingly-pond.jpg",
+        "thumb": "/photos/ct/killingly/killingly-pond_thumb.jpg",
+        "title": "Killingly Pond",
+        "description": "The shoreline of Killingly Pond at Killingly Pond State Park.",
+        "author": "John Phelan",
+        "license": "CC BY 4.0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Killingly_Pond,_Killingly_CT.jpg"
+      },
+      {
+        "src": "/photos/ct/killingly/quinebaug-river-trail-danielson.jpg",
+        "thumb": "/photos/ct/killingly/quinebaug-river-trail-danielson_thumb.jpg",
+        "title": "Quinebaug River Trail",
+        "description": "Autumn foliage along the Quinebaug River Trail in Danielson.",
+        "author": "John Phelan",
+        "license": "CC BY-SA 4.0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Quinebaug_River_Trail_view_of_the_Quinebaug_River,_Danielson_CT.jpg"
+      }
+    ]
+  },
+  "places": [
+    {
+      "slug": "killingly-historical-genealogical-center",
+      "name": "Killingly Historical & Genealogical Center",
+      "kind": "museum",
+      "town": "Killingly",
+      "state": "Connecticut",
+      "county": "Windham County",
+      "address": "196 Main Street, Danielson, CT 06239",
+      "official_url": "https://www.killinglyhistorical.org/",
+      "summary": "Housed in the Bugbee Memorial building, a local-history museum with changing exhibits, a biographical research library and a genealogical research center. Open Wednesdays and Saturdays 10 a.m.-4 p.m.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "old-furnace-state-park",
+      "name": "Old Furnace State Park",
+      "kind": "park",
+      "town": "Killingly",
+      "state": "Connecticut",
+      "county": "Windham County",
+      "address": "Russ Road, Killingly, CT 06241",
+      "summary": "A 367-acre state park named for a pre-Revolutionary iron furnace that sold horseshoes to the Continental Army. A roughly 3-mile blue-blazed trail crosses Furnace Brook and climbs Half Hill for views into Rhode Island; a shorter three-quarter-mile spur reaches an overlook. Free, year-round hiking, boating, fishing and hunting.",
+      "status": "open",
+      "photos": [
+        {
+          "src": "/photos/ct/killingly/old-furnace-state-park-marsh.jpg",
+          "thumb": "/photos/ct/killingly/old-furnace-state-park-marsh_thumb.jpg",
+          "title": "Old Furnace State Park marsh",
+          "description": "Marsh along Half Hill Brook on the Old Furnace Trail in Killingly.",
+          "author": "Morrow Long",
+          "license": "CC BY-SA 3.0",
+          "source_url": "https://commons.wikimedia.org/wiki/File:Marsh_with_reeds_along_Half_Hill_Brook_on_Old_Furnace_Trail.jpg"
+        }
+      ]
+    },
+    {
+      "slug": "killingly-pond-state-park",
+      "name": "Killingly Pond State Park",
+      "kind": "park",
+      "town": "Killingly",
+      "state": "Connecticut",
+      "county": "Windham County",
+      "address": "Off Route 101, Killingly, CT 06241",
+      "summary": "A 162-acre park on the western shore of Killingly Pond, which straddles the Connecticut-Rhode Island line. Open for boating, fishing, hiking and hunting.",
+      "status": "open",
+      "photos": [
+        {
+          "src": "/photos/ct/killingly/killingly-pond.jpg",
+          "thumb": "/photos/ct/killingly/killingly-pond_thumb.jpg",
+          "title": "Killingly Pond",
+          "description": "The shoreline of Killingly Pond at Killingly Pond State Park.",
+          "author": "John Phelan",
+          "license": "CC BY 4.0",
+          "source_url": "https://commons.wikimedia.org/wiki/File:Killingly_Pond,_Killingly_CT.jpg"
+        }
+      ]
+    },
+    {
+      "slug": "quinebaug-river-trail",
+      "name": "Quinebaug River Trail",
+      "kind": "park",
+      "town": "Killingly",
+      "state": "Connecticut",
+      "county": "Windham County",
+      "address": "Trailhead at Water Street and Commerce Avenue, Danielson, CT 06239",
+      "summary": "A paved riverside path starting in downtown Killingly and running south along the Quinebaug River, becoming an off-road corridor through wooded parks with a canoe launch and riparian wildlife viewing.",
+      "status": "open",
+      "photos": [
+        {
+          "src": "/photos/ct/killingly/quinebaug-river-trail-danielson.jpg",
+          "thumb": "/photos/ct/killingly/quinebaug-river-trail-danielson_thumb.jpg",
+          "title": "Quinebaug River Trail",
+          "description": "Autumn foliage along the Quinebaug River Trail in Danielson.",
+          "author": "John Phelan",
+          "license": "CC BY-SA 4.0",
+          "source_url": "https://commons.wikimedia.org/wiki/File:Quinebaug_River_Trail_view_of_the_Quinebaug_River,_Danielson_CT.jpg"
+        }
+      ]
+    },
+    {
+      "slug": "skydive-danielson",
+      "name": "Skydive Danielson",
+      "kind": "attraction",
+      "town": "Killingly",
+      "state": "Connecticut",
+      "county": "Windham County",
+      "address": "Danielson Airport, 41 Airport Road, Danielson, CT 06239",
+      "official_url": "https://skydivedanielson.com/",
+      "summary": "A tandem skydiving operation open to first-timers, a member of the United States Parachute Association. Operates seasonally May through October, seven days a week; closed early November through mid-April. Plan on three to five hours at the dropzone.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "danielson-main-street-historic-district",
+      "name": "Danielson Main Street Historic District",
+      "kind": "historic-site",
+      "town": "Killingly",
+      "state": "Connecticut",
+      "county": "Windham County",
+      "address": "Main Street between the Five Mile River and Spring Street, Danielson, CT 06239",
+      "summary": "A 20-acre National Register district with more than 40 mostly commercial buildings from about 1850-1920, including the 1901 Bugbee Memorial Library, the 1855 Westfield Congregational Church, the 1902 Danielson Methodist Church and the 1856 Attawaugan Hotel. A publicly walkable streetscape; downtown construction may affect parking during the ongoing Brickyard Plaza project.",
+      "status": "open",
+      "photos": [
+        {
+          "src": "/photos/ct/killingly/danielson-main-street-historic-district.jpg",
+          "thumb": "/photos/ct/killingly/danielson-main-street-historic-district_thumb.jpg",
+          "title": "Danielson Main Street Historic District",
+          "description": "Downtown Danielson's Main Street, with the 1855 Westfield Congregational Church and the 1901 Bugbee Memorial Library.",
+          "author": "Kenneth C. Zirkel",
+          "license": "CC BY-SA 4.0",
+          "source_url": "https://commons.wikimedia.org/wiki/File:Danielson_Main_Street_Historic_District_Killingly,_Connecticut.jpg"
+        }
+      ]
+    },
+    {
+      "slug": "black-pond-brews",
+      "name": "Black Pond Brews",
+      "kind": "brewery",
+      "town": "Killingly",
+      "state": "Connecticut",
+      "county": "Windham County",
+      "address": "1001 Hartford Pike, Dayville, CT 06241",
+      "official_url": "https://www.blackpondbrews.com/",
+      "summary": "A small-batch craft brewery, kitchen and events venue with indoor and outdoor seating. Open Wednesday 2-8 p.m., Thursday 2-10 p.m., Friday-Saturday noon-10 p.m., Sunday noon-8 p.m., closed Monday-Tuesday.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "heirloom-food-company",
+      "name": "Heirloom Food Company",
+      "kind": "cafe",
+      "town": "Killingly",
+      "state": "Connecticut",
+      "county": "Windham County",
+      "address": "630 N. Main Street, Danielson, CT 06239",
+      "official_url": "https://www.eatheirloomfood.com/",
+      "summary": "A small cafe focused on organic, locally sourced food, with extensive vegan and gluten-free options. Open Tuesday-Saturday 10 a.m.-5 p.m.",
+      "status": "open",
+      "photos": []
+    }
+  ],
+  "entries": [
+    {
+      "kind": "sight",
+      "name": "Killingly Historical & Genealogical Center",
+      "place_slug": "killingly-historical-genealogical-center",
+      "note": "Local-history museum and genealogical research center."
+    },
+    {
+      "kind": "sight",
+      "name": "Old Furnace State Park",
+      "place_slug": "old-furnace-state-park",
+      "note": "367 acres named for a pre-Revolutionary iron furnace."
+    },
+    {
+      "kind": "sight",
+      "name": "Killingly Pond State Park",
+      "place_slug": "killingly-pond-state-park",
+      "note": "162 acres on a pond straddling the Rhode Island line."
+    },
+    {
+      "kind": "walk",
+      "name": "Quinebaug River Trail",
+      "place_slug": "quinebaug-river-trail",
+      "note": "A paved riverside path through downtown Danielson."
+    },
+    {
+      "kind": "sight",
+      "name": "Skydive Danielson",
+      "place_slug": "skydive-danielson",
+      "note": "Tandem skydiving for first-timers, May through October."
+    },
+    {
+      "kind": "sight",
+      "name": "Danielson Main Street Historic District",
+      "place_slug": "danielson-main-street-historic-district",
+      "note": "A 20-acre National Register district of 19th-century commercial buildings."
+    },
+    {
+      "kind": "food",
+      "name": "Black Pond Brews",
+      "place_slug": "black-pond-brews",
+      "note": "Small-batch craft brewery and kitchen in Dayville."
+    },
+    {
+      "kind": "food",
+      "name": "Heirloom Food Company",
+      "place_slug": "heirloom-food-company",
+      "note": "Organic, locally sourced cafe with vegan and gluten-free options."
+    }
+  ],
+  "links": [
+    {
+      "target": "guide:putnam-ct-travel-guide",
+      "kind": "nearby",
+      "note": "Interstate 395 continues north from Killingly directly into Putnam."
+    },
+    {
+      "target": "guide:thompson-ct-travel-guide",
+      "kind": "nearby",
+      "note": "Interstate 395 continues north from Killingly to the Massachusetts line at Thompson."
+    },
+    {
+      "target": "guide:plainfield-ct-travel-guide",
+      "kind": "same-region",
+      "note": "Interstate 395 and Route 12 both connect Killingly south to Plainfield."
+    },
+    {
+      "target": "guide:brooklyn-ct-travel-guide",
+      "kind": "same-region",
+      "note": "Interstate 395 Exit 41 for Route 12/101 serves Dayville in Killingly, near Brooklyn."
+    }
+  ]
+}

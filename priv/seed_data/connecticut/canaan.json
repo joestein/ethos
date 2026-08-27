@@ -1,0 +1,267 @@
+{
+  "guide": {
+    "slug": "canaan-ct-travel-guide",
+    "title": "Canaan, Connecticut: A Village Called Falls Village",
+    "destination": "Canaan, Connecticut",
+    "state": "Connecticut",
+    "county": "Litchfield County",
+    "intro": "The land that became Canaan sold sight-unseen as \"Town C\" at a New London auction on January 3, 1738, divided into 53 shares at 60 pounds each; the General Assembly incorporated the town in 1739. The Housatonic Railroad arrived in 1841 and named its stop \"Falls Village,\" a name that stuck so firmly that residents still call the town's center Falls Village rather than Canaan. An 1845 canal venture to harness the Great Falls failed publicly at its opening, when water \"squirted from leaks all along the canal.\" The Ames Iron Works, built at Amesville on the Salisbury side of the falls in 1833, made locomotive wheels and Civil War ordnance before it closed after the war. In 1858, a legislative committee found the undivided town naturally divided by an impassable mountain, splitting off North Canaan — which is why a village called Canaan sits in a different town today.",
+    "sections": [
+      {
+        "heading": "Falls Village, not Canaan",
+        "body": "Confusingly, the village of Canaan lies inside the town of North Canaan, while the town of Canaan's own center has been called Falls Village since the Housatonic Railroad's 1841 station. The 1858 division followed a legislative finding that an \"impassable mountain\" made the two halves of the old undivided town \"two distinct communities.\" The region's iron industry sat just over the line at Amesville, in Salisbury: the Ames Iron Works produced locomotive wheels and Civil War ordnance there from 1833 until it closed after the war. James Mars, born into slavery in the undivided town in 1790 — in what is now North Canaan — later wrote one of New England's best-known slave narratives."
+      },
+      {
+        "heading": "Getting there",
+        "body": "There is no passenger train to Falls Village — Metro-North, Shore Line East, Amtrak and the CTrail Hartford Line all stay well south and east of Litchfield County. Most visitors drive in on US Route 7 along the Housatonic or on CT Routes 63 and 126 through the village center, with US Route 44 the approach from Hartford and NY Route 22 the approach from New York. The nearest passenger rail is Metro-North's Harlem Line terminus at Wassaic, New York, in Dutchess County."
+      },
+      {
+        "heading": "Music Mountain and the Great Falls",
+        "body": "Music Mountain, founded in 1930 by Chicago Symphony concertmaster Jacques Gordon, runs a summer chamber-music festival in the acoustically celebrated Gordon Hall — The New Yorker called it \"the summer shrine of the string quartet.\" The Great Falls of the Housatonic tumble roughly sixty feet, with an overlook and trail system beside the hydroelectric station that has run since 1914. Great Mountain Forest protects more than 6,000 acres spanning Canaan and Norfolk, and the Appalachian Trail runs directly through the village past the unused 1851 canal."
+      }
+    ],
+    "faq": [
+      {
+        "question": "How do I get to Canaan (Falls Village)?",
+        "answer": "By car — US Route 7 follows the Housatonic through the village, with CT Routes 63 and 126 crossing through the center and US Route 44 the approach from Hartford. There's no passenger rail in town; the nearest station is Metro-North's Harlem Line terminus at Wassaic, New York."
+      },
+      {
+        "question": "Is Canaan the same as North Canaan?",
+        "answer": "No — they're two different towns. The town of Canaan is locally called Falls Village, its center since the railroad arrived in 1841. The village actually named Canaan sits inside the separate town of North Canaan, which split off in 1858."
+      },
+      {
+        "question": "What is Music Mountain?",
+        "answer": "A chamber-music venue founded in 1930 by Jacques Gordon, former concertmaster of the Chicago Symphony. Its 2026 season runs 15 consecutive weekends from June 7 through a September 13 finale, with Sunday chamber concerts and Saturday jazz in the National Register-listed Gordon Hall."
+      },
+      {
+        "question": "Can I hike near the Great Falls?",
+        "answer": "Yes — the hydroelectric station beside the falls maintains two trail systems with direct access to the Appalachian Trail, which runs through the village past the unused 1851 canal. Great Mountain Forest, spanning Canaan and Norfolk, adds more than 6,000 acres of additional trails."
+      },
+      {
+        "question": "Where can I eat and stay in Falls Village?",
+        "answer": "The Falls Village Inn's dining room serves dinner nightly, with Mountainside Café and Off the Trail Café covering breakfast and lunch. The inn's five guest rooms, in an 1834 building restored in 2010, are the town's main lodging."
+      }
+    ],
+    "photos": [
+      {
+        "src": "/photos/ct/canaan/falls-village-great-falls.jpg",
+        "thumb": "/photos/ct/canaan/falls-village-great-falls_thumb.jpg",
+        "title": "Great Falls of the Housatonic",
+        "description": "The Great Falls of the Housatonic River at Falls Village.",
+        "author": "Zeete",
+        "license": "CC BY-SA 4.0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Great_Falls,_Housatonic_River,_Falls_Village,_CT.jpg"
+      },
+      {
+        "src": "/photos/ct/canaan/music-mountain-gordon-hall.jpg",
+        "thumb": "/photos/ct/canaan/music-mountain-gordon-hall_thumb.jpg",
+        "title": "Music Mountain, Gordon Hall",
+        "description": "Gordon Hall, the main concert hall at Music Mountain in Falls Village.",
+        "author": "Magicpiano",
+        "license": "CC BY-SA 4.0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:CanaanCT_MusicMountain_MainHall.jpg"
+      }
+    ]
+  },
+  "places": [
+    {
+      "slug": "music-mountain",
+      "name": "Music Mountain",
+      "kind": "theater",
+      "town": "Canaan",
+      "state": "Connecticut",
+      "county": "Litchfield County",
+      "address": "225 Music Mountain Road, Falls Village, CT 06031",
+      "official_url": "https://www.musicmountain.org/",
+      "summary": "Founded in 1930 by Jacques Gordon, former concertmaster of the Chicago Symphony, with concerts in the acoustically celebrated, air-conditioned Gordon Hall — The New Yorker dubbed it \"the summer shrine of the string quartet.\" The mountaintop campus is listed on the National Register of Historic Places. 2026 season: 15 weekends, June 7-September 13, Sunday chamber concerts and Saturday jazz.",
+      "status": "open",
+      "photos": [
+        {
+          "src": "/photos/ct/canaan/music-mountain-gordon-hall.jpg",
+          "thumb": "/photos/ct/canaan/music-mountain-gordon-hall_thumb.jpg",
+          "title": "Music Mountain, Gordon Hall",
+          "description": "Gordon Hall, the main concert hall at Music Mountain in Falls Village.",
+          "author": "Magicpiano",
+          "license": "CC BY-SA 4.0",
+          "source_url": "https://commons.wikimedia.org/wiki/File:CanaanCT_MusicMountain_MainHall.jpg"
+        }
+      ]
+    },
+    {
+      "slug": "david-m-hunt-library",
+      "name": "David M. Hunt Library",
+      "kind": "attraction",
+      "town": "Canaan",
+      "state": "Connecticut",
+      "county": "Litchfield County",
+      "address": "63 Main Street, Falls Village, CT 06031",
+      "official_url": "https://www.huntlibrary.org/",
+      "summary": "Established in 1891, the library doubles as Falls Village's community and arts center with a rotating ArtWall exhibition program and a lawn used for concerts. Hours: Tuesday 10-5, Wednesday 1-5, Thursday 10-7, Friday 1-5, Saturday 10-1.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "great-falls-housatonic-falls-village",
+      "name": "Great Falls of the Housatonic",
+      "kind": "park",
+      "town": "Canaan",
+      "state": "Connecticut",
+      "county": "Litchfield County",
+      "address": "Falls Village, CT 06031",
+      "summary": "The Housatonic tumbles roughly sixty feet over rock and ledge here, throwing up its biggest mist plumes during spring runoff. The hydroelectric station beside the falls, running since 1914, maintains an overlook and two trail systems with direct access to the Appalachian Trail, which passes through the village along the unused 1851 canal.",
+      "status": "open",
+      "photos": [
+        {
+          "src": "/photos/ct/canaan/falls-village-great-falls.jpg",
+          "thumb": "/photos/ct/canaan/falls-village-great-falls_thumb.jpg",
+          "title": "Great Falls of the Housatonic",
+          "description": "The Great Falls of the Housatonic River at Falls Village.",
+          "author": "Zeete",
+          "license": "CC BY-SA 4.0",
+          "source_url": "https://commons.wikimedia.org/wiki/File:Great_Falls,_Housatonic_River,_Falls_Village,_CT.jpg"
+        }
+      ]
+    },
+    {
+      "slug": "great-mountain-forest",
+      "name": "Great Mountain Forest",
+      "kind": "park",
+      "town": "Canaan",
+      "state": "Connecticut",
+      "county": "Litchfield County",
+      "address": "200 Canaan Mountain Road, Falls Village, CT 06031",
+      "official_url": "https://greatmountainforest.org/",
+      "summary": "More than 6,000 acres of contiguous forestland spanning Norfolk and Canaan, run as a nonprofit private operating foundation with published recreational trail maps and an active program of talks and workshops.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "falls-village-inn-restaurant",
+      "name": "The Falls Village Inn",
+      "kind": "restaurant",
+      "town": "Canaan",
+      "state": "Connecticut",
+      "county": "Litchfield County",
+      "address": "33 Railroad Street, Falls Village, CT 06031",
+      "official_url": "https://www.thefallsvillageinn.com/",
+      "summary": "The dining room and tavern of a Litchfield County landmark built in 1834 and restored in 2010, pouring local draught beer with indoor and patio seating. Dinner served daily, 5-8 p.m. Phone (860) 824-0033.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "mountainside-cafe",
+      "name": "Mountainside Café",
+      "kind": "cafe",
+      "town": "Canaan",
+      "state": "Connecticut",
+      "county": "Litchfield County",
+      "address": "251 Route 7 South, Falls Village, CT 06031",
+      "official_url": "https://mountainside.com/cafe",
+      "summary": "A farm-to-table café sourcing from local farmers, with twists on American classics and vegetarian options; the café also employs people in Mountainside's Extended-Care recovery program. Open Wednesday-Sunday, 7 a.m.-3 p.m. Phone (860) 824-7876.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "off-the-trail-cafe",
+      "name": "Off the Trail Café",
+      "kind": "cafe",
+      "town": "Canaan",
+      "state": "Connecticut",
+      "county": "Litchfield County",
+      "address": "107 Main Street, Falls Village, CT 06031",
+      "summary": "Opened in July 2025 by Liz Ives in the ground floor of the town-owned Main Street building, pitched squarely at Appalachian Trail hikers passing through the village, with indoor and outdoor seating and a logbook for thru-hikers to sign.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "falls-village-inn",
+      "name": "The Falls Village Inn",
+      "kind": "bnb",
+      "town": "Canaan",
+      "state": "Connecticut",
+      "county": "Litchfield County",
+      "address": "33 Railroad Street, Falls Village, CT 06031",
+      "official_url": "https://www.thefallsvillageinn.com/",
+      "summary": "Five guest rooms in an 1834 building restored in 2010, in the middle of the village. Music Mountain sells a Saturday pre-concert dinner package hosted here during the summer festival season. Phone (860) 824-0033.",
+      "status": "open",
+      "photos": []
+    }
+  ],
+  "entries": [
+    {
+      "kind": "sight",
+      "name": "Music Mountain",
+      "place_slug": "music-mountain",
+      "note": "A 1930-founded chamber-music festival in an acoustically celebrated hall."
+    },
+    {
+      "kind": "sight",
+      "name": "David M. Hunt Library",
+      "place_slug": "david-m-hunt-library",
+      "note": "Falls Village's de facto community and arts center since 1891."
+    },
+    {
+      "kind": "walk",
+      "name": "Great Falls of the Housatonic",
+      "place_slug": "great-falls-housatonic-falls-village",
+      "note": "A sixty-foot cascade with an overlook and Appalachian Trail access."
+    },
+    {
+      "kind": "walk",
+      "name": "Great Mountain Forest",
+      "place_slug": "great-mountain-forest",
+      "note": "6,000-plus acres of trails spanning Canaan and Norfolk."
+    },
+    {
+      "kind": "food",
+      "name": "The Falls Village Inn",
+      "place_slug": "falls-village-inn-restaurant",
+      "note": "Dinner nightly in an 1834 building restored in 2010."
+    },
+    {
+      "kind": "food",
+      "name": "Mountainside Café",
+      "place_slug": "mountainside-cafe",
+      "note": "Farm-to-table breakfast and lunch, Wednesday-Sunday."
+    },
+    {
+      "kind": "food",
+      "name": "Off the Trail Café",
+      "place_slug": "off-the-trail-cafe",
+      "note": "A new café pitched to Appalachian Trail thru-hikers."
+    },
+    {
+      "kind": "stay",
+      "name": "The Falls Village Inn",
+      "place_slug": "falls-village-inn",
+      "note": "Five rooms in the village center, Canaan's only lodging."
+    }
+  ],
+  "links": [
+    {
+      "target": "guide:north-canaan-ct-travel-guide",
+      "kind": "nearby",
+      "note": "Canaan and North Canaan split from one undivided town in 1858."
+    },
+    {
+      "target": "guide:north-canaan-ct-travel-guide",
+      "kind": "shared-history",
+      "note": "A legislative committee split the undivided town of Canaan in 1858, finding it \"naturally divided...by an impassable mountain.\""
+    },
+    {
+      "target": "guide:salisbury-ct-travel-guide",
+      "kind": "nearby",
+      "note": "The Ames Iron Works, built at Amesville in 1833, sat on the Salisbury side of the Great Falls."
+    },
+    {
+      "target": "guide:norfolk-ct-travel-guide",
+      "kind": "shared-history",
+      "note": "Great Mountain Forest's 6,000-plus acres span both Canaan and Norfolk."
+    },
+    {
+      "target": "guide:cornwall-ct-travel-guide",
+      "kind": "nearby",
+      "note": null
+    }
+  ]
+}

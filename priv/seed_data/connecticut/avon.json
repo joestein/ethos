@@ -1,0 +1,277 @@
+{
+  "guide": {
+    "slug": "avon-ct-travel-guide",
+    "title": "Avon, Connecticut: A Canal Town Turned Farmington Valley Suburb",
+    "destination": "Avon, Connecticut",
+    "state": "Connecticut",
+    "county": "Hartford County",
+    "intro": "Europeans first settled the land known as \"Nod\" around 1645 as part of Farmington, where Stephen Hart became the first landowner; the Tunxis people had kept seasonal villages along the Farmington River well before that. Growing apart from Farmington's center, the area split off in 1750 as the parish of Northington, and the General Assembly incorporated it as Avon — named for England's River Avon — on May 5, 1830, with 1,025 residents. The Farmington Canal, which opened through town in 1828, fed hopes of an industrial boom that never arrived; Avon settled instead into the Farmington Valley suburb it remains today. The Talcott Mountain Turnpike, now Route 44, had already linked Avon to Hartford, Boston and Albany since 1799. In 2018, bridge work on Route 10 uncovered the Brian D. Jones Paleoindian Site, with artifacts roughly 12,500 years old — the oldest known human occupation site in southern New England.",
+    "sections": [
+      {
+        "heading": "A canal, a turnpike and a railroad that came and went",
+        "body": "The Farmington Canal ran 35 feet wide through Avon on its way from New Haven to Northampton, Massachusetts, and its opening in 1828 was enough to spur the town's 1830 incorporation — though the industrial and commercial growth its backers hoped for never came, and Avon became a suburban town in the 1900s instead. A railroad followed the old canal alignment through town from the late 1840s until 1991, when the last rail service ended; the segment north toward Simsbury was abandoned earlier, around 1982. Avon is a stop on the Connecticut Freedom Trail, honoring Private Leverett Holden of the 29th Connecticut Regiment Volunteer Infantry (Colored). The Avon Historical Society keeps this history at the Avon History Museum, an 1823 one-room schoolhouse on Route 44, and at the nearby Pine Grove Schoolhouse, an 1865 one-room school open seasonally on Sundays."
+      },
+      {
+        "heading": "Getting there",
+        "body": "Avon has no passenger rail station of its own — the old canal-route railroad through town shut down in 1991 — so visitors drive in on US Route 44 (the historic Talcott Mountain and Albany Turnpike) over Avon Mountain, or on Route 10/US 202 (Simsbury Road/West Main Street), the north-south Farmington Valley corridor that meets Route 44 in the town center. Route 167 (West Avon Road) and Route 4/Old Farms Road provide connections toward Farmington and Interstate 84. The nearest scheduled passenger rail is Hartford Union Station on the CTrail Hartford Line, also served by Amtrak; the line's nine stations run New Haven Union, New Haven State Street, Wallingford, Meriden, Berlin, Hartford, Windsor, Windsor Locks and Springfield Union — none in the Farmington Valley."
+      },
+      {
+        "heading": "Where to eat and stay",
+        "body": "Max a Mia Ristorante, a modern Italian bistro on West Main Street, has been a local tradition since 1991, with veal, pork, pasta and risotto dishes. Chokaico Craft Chocolate, a bean-to-bar chocolate maker at Riverdale Farms, roasts cacao from Ecuador, Peru and Bolivia and runs shop tours. J Foster Ice Cream on Bailey Road makes its own ice cream, gelato and sorbet daily. For a place to stay, the 160-room Avon Old Farms Hotel at the Routes 10 and 44 junction has been a Farmington Valley fixture named \"Best of the Best\" lodging by Yankee Magazine, with its own Seasons Restaurant & Tap Room serving breakfast through dinner."
+      }
+    ],
+    "faq": [
+      {
+        "question": "How do I get to Avon?",
+        "answer": "By car — US Route 44 crosses Avon Mountain into town from Hartford, and Route 10/US 202 runs north-south through the Farmington Valley. There is no passenger rail station in Avon; the nearest is Hartford Union Station on the CTrail Hartford Line and Amtrak."
+      },
+      {
+        "question": "Is there a train to Avon?",
+        "answer": "No. Rail on the old canal alignment through Avon ran from the late 1840s until 1991 and no longer exists. The nearest station today is Hartford Union Station."
+      },
+      {
+        "question": "What is the Avon History Museum?",
+        "answer": "A fully renovated 1823 one-room schoolhouse at 8 East Main Street run by the Avon Historical Society, open year-round on Sundays from 1 to 4 p.m."
+      },
+      {
+        "question": "Can I visit the Pine Grove Schoolhouse?",
+        "answer": "Yes — the restored 1865 one-room school at 3 Harris Road (Route 167) is open seasonally on Sundays, summer through early fall, 1 to 4 p.m. Renovation work beginning in August 2026 may affect access, so check with the Avon Historical Society first."
+      },
+      {
+        "question": "Is there a hotel in Avon?",
+        "answer": "Yes — the Avon Old Farms Hotel, a 160-room independent country hotel at the Routes 10 and 44 junction, with an outdoor pool, sauna, pet-friendly rooms and a free Bradley Airport shuttle."
+      }
+    ],
+    "photos": [
+      {
+        "src": "/photos/ct/avon/avon-congregational-church.jpg",
+        "thumb": "/photos/ct/avon/avon-congregational-church_thumb.jpg",
+        "title": "Avon Congregational Church",
+        "description": "The white New England meetinghouse of Avon Congregational Church.",
+        "author": "Daderot",
+        "license": "CC0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Avon_Congregational_Church_-_Avon,_CT_-_DSC02212.JPG"
+      },
+      {
+        "src": "/photos/ct/avon/route-44-town-center.jpg",
+        "thumb": "/photos/ct/avon/route-44-town-center_thumb.jpg",
+        "title": "US Route 44, Avon town center",
+        "description": "US Route 44 westbound through Avon's town center, the historic Talcott Mountain Turnpike.",
+        "author": "John Phelan",
+        "license": "CC BY 4.0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:US_Route_44_westbound,_Avon_CT.jpg"
+      },
+      {
+        "src": "/photos/ct/avon/farmington-river-footbridge.jpg",
+        "thumb": "/photos/ct/avon/farmington-river-footbridge_thumb.jpg",
+        "title": "Farmington River footbridge",
+        "description": "A footbridge across the Farmington River in Avon, with Talcott Mountain behind.",
+        "author": "John Phelan",
+        "license": "CC BY 4.0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Golf_course_bridge_across_the_Farmington_River,_Avon_CT.jpg"
+      }
+    ]
+  },
+  "places": [
+    {
+      "slug": "avon-history-museum",
+      "name": "Avon History Museum (Schoolhouse No. 3)",
+      "kind": "museum",
+      "town": "Avon",
+      "state": "Connecticut",
+      "county": "Hartford County",
+      "address": "8 East Main Street (Route 44), Avon, CT 06001",
+      "official_url": "https://avonhistoricalsociety.org/",
+      "summary": "A fully renovated 1823 one-room schoolhouse operated by the Avon Historical Society, with exhibits on Avon's history including the 12,500-year-old Brian D. Jones Paleoindian site found along the Farmington River. Open year-round, Sundays 1:00-4:00 p.m.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "farmington-valley-arts-center",
+      "name": "Farmington Valley Arts Center",
+      "kind": "attraction",
+      "town": "Avon",
+      "state": "Connecticut",
+      "county": "Hartford County",
+      "address": "25 Arts Center Lane, Avon, CT 06001",
+      "official_url": "https://www.artsfvac.org/",
+      "summary": "A working arts campus with the Drezner and Fisher galleries showing rotating exhibitions, resident artist studios visitors can walk through, and a gift shop; \"First Saturday Open Studios\" opens the artists' workspaces to the public. Open Mon-Fri 10 a.m.-4 p.m., Sat noon-4 p.m. Phone (860) 678-1867.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "fisher-meadows-recreation-area",
+      "name": "Fisher Meadows Recreation Area",
+      "kind": "park",
+      "town": "Avon",
+      "state": "Connecticut",
+      "county": "Hartford County",
+      "address": "800 Old Farms Road, Avon, CT 06001",
+      "official_url": "https://www.avonct.gov/departments/recreation_parks/parks_facilities.php",
+      "summary": "A 250-acre town recreation area on the Farmington River floodplain, carrying a 4.5-mile section of the roughly 40-mile Farmington Valley Greenway trail network. Open field areas and trail access; rental and contact information through Avon Recreation & Parks, (860) 409-4332.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "pine-grove-schoolhouse",
+      "name": "Pine Grove Schoolhouse",
+      "kind": "historic-site",
+      "town": "Avon",
+      "state": "Connecticut",
+      "county": "Hartford County",
+      "address": "3 Harris Road (Route 167), Avon, CT 06001",
+      "official_url": "https://avonhistoricalsociety.org/",
+      "summary": "A restored 1865 one-room schoolhouse maintained by the Avon Historical Society, open seasonally on Sundays from 1:00-4:00 p.m., summer through early fall. Renovation work beginning August 2026 — repainting the interior, fixing a 19th-century chalkboard pulley system and roof repairs — may affect access.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "max-a-mia-ristorante",
+      "name": "Max a Mia Ristorante",
+      "kind": "restaurant",
+      "town": "Avon",
+      "state": "Connecticut",
+      "county": "Hartford County",
+      "address": "380 West Main Street, Avon, CT 06001",
+      "official_url": "http://www.maxamiaristorante.com",
+      "summary": "A modern Italian bistro and \"local tradition since 1991,\" part of the Max Hospitality group, with veal, pork, pasta and risotto on the menu. Open Mon-Tue 11:30 a.m.-9 p.m., Wed-Thu to 10 p.m., Fri-Sat to 11 p.m., Sun 11 a.m.-9 p.m.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "seasons-restaurant-tap-room-avon",
+      "name": "Seasons Restaurant & Tap Room",
+      "kind": "restaurant",
+      "town": "Avon",
+      "state": "Connecticut",
+      "county": "Hartford County",
+      "address": "279 Avon Mountain Road, Avon, CT 06001",
+      "official_url": "https://www.avonoldfarmshotel.com/dine",
+      "summary": "The seasonal, farm-to-table dining room at the Avon Old Farms Hotel, with views toward Talcott Mountain and an adjoining Tap Room pouring six beers on tap plus wine and cocktails. Breakfast, lunch and dinner service, with Sunday brunch offered by the hotel. Phone (860) 269-0240.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "chokaico-craft-chocolate",
+      "name": "Chokaico Craft Chocolate",
+      "kind": "cafe",
+      "town": "Avon",
+      "state": "Connecticut",
+      "county": "Hartford County",
+      "address": "136 Simsbury Road, Building 15, Avon, CT 06001",
+      "official_url": "https://chokaico.com/",
+      "summary": "A bean-to-bar chocolate maker roasting cacao from Ecuador, Peru and Bolivia, with hot chocolate, single-origin bars and shop tours scheduled through the fall. Open Tue-Thu 10 a.m.-6 p.m., Fri to 7 p.m., Sat 9 a.m.-7 p.m., Sun 10 a.m.-5 p.m.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "j-foster-ice-cream",
+      "name": "J Foster Ice Cream",
+      "kind": "cafe",
+      "town": "Avon",
+      "state": "Connecticut",
+      "county": "Hartford County",
+      "address": "4 Bailey Road, Avon, CT 06001",
+      "official_url": "https://jfostericecream.com/index.html",
+      "summary": "A scoop shop making its own ice cream with vanillas from Madagascar and Tahiti and its own cocoa bases, plus gelato and dairy-free sorbets. Open daily noon-9 p.m. Phone (860) 676-CONE.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "avon-old-farms-hotel",
+      "name": "Avon Old Farms Hotel",
+      "kind": "hotel",
+      "town": "Avon",
+      "state": "Connecticut",
+      "county": "Hartford County",
+      "address": "279 Avon Mountain Road, Avon, CT 06001",
+      "official_url": "https://www.avonoldfarmshotel.com/",
+      "summary": "A 160-room independent country hotel on 10 acres at the Routes 10 and 44 junction, named \"Best of the Best\" lodging by Yankee Magazine. Outdoor pool, sauna, free Bradley Airport shuttle, pet-friendly rooms and the on-site Seasons Restaurant & Tap Room. Phone (860) 677-1651.",
+      "status": "open",
+      "photos": []
+    }
+  ],
+  "entries": [
+    {
+      "kind": "sight",
+      "name": "Avon History Museum (Schoolhouse No. 3)",
+      "place_slug": "avon-history-museum",
+      "note": "An 1823 one-room schoolhouse on the site of the 12,500-year-old Paleoindian find."
+    },
+    {
+      "kind": "sight",
+      "name": "Farmington Valley Arts Center",
+      "place_slug": "farmington-valley-arts-center",
+      "note": "Working artist studios and rotating gallery exhibitions."
+    },
+    {
+      "kind": "walk",
+      "name": "Fisher Meadows Recreation Area",
+      "place_slug": "fisher-meadows-recreation-area",
+      "note": "250 acres on the Farmington River, with a stretch of the Farmington Valley Greenway."
+    },
+    {
+      "kind": "sight",
+      "name": "Pine Grove Schoolhouse",
+      "place_slug": "pine-grove-schoolhouse",
+      "note": "A restored 1865 one-room school, open seasonally on Sundays."
+    },
+    {
+      "kind": "food",
+      "name": "Max a Mia Ristorante",
+      "place_slug": "max-a-mia-ristorante",
+      "note": "A modern Italian bistro on West Main Street since 1991."
+    },
+    {
+      "kind": "food",
+      "name": "Seasons Restaurant & Tap Room",
+      "place_slug": "seasons-restaurant-tap-room-avon",
+      "note": "Farm-to-table dining at the Avon Old Farms Hotel."
+    },
+    {
+      "kind": "food",
+      "name": "Chokaico Craft Chocolate",
+      "place_slug": "chokaico-craft-chocolate",
+      "note": "A bean-to-bar chocolate maker at Riverdale Farms."
+    },
+    {
+      "kind": "food",
+      "name": "J Foster Ice Cream",
+      "place_slug": "j-foster-ice-cream",
+      "note": "A family scoop shop on Bailey Road."
+    },
+    {
+      "kind": "stay",
+      "name": "Avon Old Farms Hotel",
+      "place_slug": "avon-old-farms-hotel",
+      "note": "A 160-room country hotel at the Routes 10 and 44 junction."
+    }
+  ],
+  "links": [
+    {
+      "target": "guide:farmington-ct-travel-guide",
+      "kind": "nearby",
+      "note": "Avon separated from Farmington's parish of Northington in 1750 and borders it to the south."
+    },
+    {
+      "target": "guide:simsbury-ct-travel-guide",
+      "kind": "nearby",
+      "note": "Avon borders Simsbury; the Talcott Mountain ridge that forms Avon's northeastern edge is addressed in Simsbury."
+    },
+    {
+      "target": "guide:canton-ct-travel-guide",
+      "kind": "nearby",
+      "note": "Avon borders Canton, both reached on US Route 44."
+    },
+    {
+      "target": "guide:west-hartford-ct-travel-guide",
+      "kind": "nearby",
+      "note": "Avon borders West Hartford to the east."
+    },
+    {
+      "target": "guide:burlington-ct-travel-guide",
+      "kind": "same-region",
+      "note": "Burlington sits west of Avon in the Farmington Valley hills."
+    }
+  ]
+}

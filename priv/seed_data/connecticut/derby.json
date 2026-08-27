@@ -1,0 +1,254 @@
+{
+  "guide": {
+    "slug": "derby-ct-travel-guide",
+    "title": "Derby, Connecticut: Connecticut's Smallest City by Area",
+    "destination": "Derby, Connecticut",
+    "state": "Connecticut",
+    "county": "New Haven County",
+    "intro": "Derby began as a trading post established in 1642 at the confluence of the Housatonic and Naugatuck Rivers, with the first year-round houses built around 1651. New Haven Colony recognized it as a town in 1651, but the order was rescinded after Milford objected; the settlement was readmitted as the township of Derby, named for Derby, England, in 1675. The city was chartered by the State of Connecticut in 1893, and at roughly 5.3 square miles it is Connecticut's smallest city by area. Water power drove Derby's industrial rise, from the first water-powered gristmill in 1681 through the Housatonic Dam's completion in 1870, when the city's nineteenth-century factories turned out goods including hoopskirts and corsets. Derby is the birthplace of Revolutionary War officer David Humphreys, an aide and friend of George Washington who became the first U.S. diplomatic minister appointed under the Constitution.",
+    "sections": [
+      {
+        "heading": "A dairy dynasty and a rowing tradition",
+        "body": "Frances Osborne Kellogg took over her father's businesses after his death in 1907 and built the Osbornedale Farms dairy herd starting with foundation Holstein-Friesian stock bought in 1920; the bull \"Osborndale Ivanhoe,\" born in Derby in 1952, sired more than one hundred sons and five thousand daughters, leaving an estimated 100,000 direct descendants. On her death in 1956, Kellogg deeded her homestead and farms to Connecticut, forming Osbornedale State Park, straddling Derby and Ansonia. The Housatonic Dam's 1870 completion created Lake Housatonic, which from 1918 hosted Yale intercollegiate rowing; \"Derby Day\" regattas drew 30,000-50,000 spectators at their peak before Yale discontinued the tradition in 1951, though Yale rowing still calls the lake home. Derby's 1889 Sterling Opera House, one of the first two Connecticut properties listed on the National Register of Historic Places in 1968, remains closed to the public today."
+      },
+      {
+        "heading": "Getting there",
+        "body": "Most visitors drive to Derby via Connecticut Route 8 through the lower Naugatuck Valley; the highway's mid-century construction forced the 1951 relocation of the city's 1906 National Humane Alliance fountain. Derby is one of the few Valley towns with real passenger rail: Metro-North's Waterbury Branch stops at Derby-Shelton station, 1 Main Street, within walking distance of downtown. As of 2026, however, buses replace all Waterbury Branch rail service from July 20, 2026 through May 31, 2027 as part of a $39.8 million station-reconstruction program; the new accessible platform is expected in November 2027. No Amtrak, Shore Line East or CTrail Hartford Line service reaches Derby; the nearest hub is New Haven Union Station."
+      }
+    ],
+    "faq": [
+      {
+        "question": "How do I get to Derby?",
+        "answer": "By car on Connecticut Route 8. Derby-Shelton station at 1 Main Street normally offers Metro-North Waterbury Branch service, but buses currently replace all rail on the branch from July 20, 2026 through May 31, 2027 while the station is rebuilt."
+      },
+      {
+        "question": "What is Osbornedale State Park?",
+        "answer": "A 350-acre state park spanning Derby and Ansonia, bequeathed to Connecticut in 1956 by dairy pioneer Frances Osborne Kellogg. Its pond is regularly tested for safe winter ice skating, and the adjoining Osborne Homestead Museum shows the Kellogg family home with original furnishings."
+      },
+      {
+        "question": "Can I tour the Sterling Opera House?",
+        "answer": "No. Built in 1889 and one of the first two Connecticut properties listed on the National Register of Historic Places (November 8, 1968), it remains closed to the public while awaiting restoration — worth admiring from outside on the Derby Green."
+      },
+      {
+        "question": "Is there a hotel in Derby?",
+        "answer": "No hotel, inn or bed-and-breakfast located within Derby's 5.3 square miles could be verified. The nearest lodging cluster is in Shelton, about four miles away, or New Haven, roughly ten miles southeast."
+      }
+    ],
+    "photos": [
+      {
+        "src": "/photos/ct/derby/osborne-homestead-museum.jpg",
+        "thumb": "/photos/ct/derby/osborne-homestead-museum_thumb.jpg",
+        "title": "Osborne Homestead Museum",
+        "description": "The Osborne Homestead, home of dairy pioneer Frances Osborne Kellogg, at Osbornedale State Park in Derby.",
+        "author": "Polaron",
+        "license": "CC BY 3.0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Derby_Osbornedale_house.jpg"
+      },
+      {
+        "src": "/photos/ct/derby/osbornedale-state-park-sign.jpg",
+        "thumb": "/photos/ct/derby/osbornedale-state-park-sign_thumb.jpg",
+        "title": "Osbornedale State Park",
+        "description": "The entrance sign at Osbornedale State Park, spanning Derby and Ansonia.",
+        "author": "Jllm06",
+        "license": "CC BY-SA 4.0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Osbornedale_State_Park_sign.jpg"
+      },
+      {
+        "src": "/photos/ct/derby/derby-greenway.jpg",
+        "thumb": "/photos/ct/derby/derby-greenway_thumb.jpg",
+        "title": "Derby Greenway",
+        "description": "The riverside Derby Greenway, running along the Housatonic and Naugatuck Rivers.",
+        "author": "Nwdantona",
+        "license": "CC BY-SA 4.0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Derby_greenway.jpg"
+      }
+    ]
+  },
+  "places": [
+    {
+      "slug": "osbornedale-state-park",
+      "name": "Osbornedale State Park",
+      "kind": "park",
+      "town": "Derby",
+      "state": "Connecticut",
+      "county": "New Haven County",
+      "address": "43 Chatfield Street, Derby, CT 06418",
+      "official_url": "https://ctparks.com/node/105",
+      "summary": "350 acres spanning Derby and Ansonia, once the Osborne family's dairy land, bequeathed to Connecticut by Frances Osborne Kellogg in 1956. Hiking, fishing and picnicking, plus a pond regularly tested for safe winter ice skating. Open daily 8 a.m. to sunset, free admission.",
+      "status": "open",
+      "photos": [
+        {
+          "src": "/photos/ct/derby/osbornedale-state-park-sign.jpg",
+          "thumb": "/photos/ct/derby/osbornedale-state-park-sign_thumb.jpg",
+          "title": "Osbornedale State Park",
+          "description": "The entrance sign at Osbornedale State Park, spanning Derby and Ansonia.",
+          "author": "Jllm06",
+          "license": "CC BY-SA 4.0",
+          "source_url": "https://commons.wikimedia.org/wiki/File:Osbornedale_State_Park_sign.jpg"
+        }
+      ]
+    },
+    {
+      "slug": "osborne-homestead-museum",
+      "name": "Osborne Homestead Museum",
+      "kind": "museum",
+      "town": "Derby",
+      "state": "Connecticut",
+      "county": "New Haven County",
+      "address": "500 Hawthorne Avenue, Derby, CT 06418",
+      "official_url": "https://ctparks.com/osborne-homestead-museum",
+      "summary": "The Osborne family home, built in the mid-1800s and remodeled Colonial Revival in the 1920s, shown with original contents, antiques and fine art. Home of dairy pioneer Frances Osborne Kellogg. Guided-tour season runs May through October; garden hours Mon-Sat 9 a.m.-4:30 p.m., Sun noon-4:30 p.m. Phone (203) 734-2513.",
+      "status": "open",
+      "photos": [
+        {
+          "src": "/photos/ct/derby/osborne-homestead-museum.jpg",
+          "thumb": "/photos/ct/derby/osborne-homestead-museum_thumb.jpg",
+          "title": "Osborne Homestead Museum",
+          "description": "The Osborne Homestead, home of dairy pioneer Frances Osborne Kellogg, at Osbornedale State Park in Derby.",
+          "author": "Polaron",
+          "license": "CC BY 3.0",
+          "source_url": "https://commons.wikimedia.org/wiki/File:Derby_Osbornedale_house.jpg"
+        }
+      ]
+    },
+    {
+      "slug": "derby-greenway",
+      "name": "Derby Greenway",
+      "kind": "park",
+      "town": "Derby",
+      "state": "Connecticut",
+      "county": "New Haven County",
+      "address": "Endpoints at 1st Street and Division Street, Derby, CT 06418",
+      "summary": "A roughly two-mile riverside path along the Housatonic and Naugatuck Rivers, crossing O'Sullivan's Island with a sea-green bike-pedestrian bridge at its southern end. Its eastern end holds the Derby Hall of Fame Plaza and a five-ton granite National Humane Alliance horse-watering fountain, presented to Derby in 1906 and restored on the Greenway in 2007.",
+      "status": "open",
+      "photos": [
+        {
+          "src": "/photos/ct/derby/derby-greenway.jpg",
+          "thumb": "/photos/ct/derby/derby-greenway_thumb.jpg",
+          "title": "Derby Greenway",
+          "description": "The riverside Derby Greenway, running along the Housatonic and Naugatuck Rivers.",
+          "author": "Nwdantona",
+          "license": "CC BY-SA 4.0",
+          "source_url": "https://commons.wikimedia.org/wiki/File:Derby_greenway.jpg"
+        }
+      ]
+    },
+    {
+      "slug": "roseland-apizza",
+      "name": "Roseland Apizza",
+      "kind": "restaurant",
+      "town": "Derby",
+      "state": "Connecticut",
+      "county": "New Haven County",
+      "address": "350 Hawthorne Ave., Derby, CT 06418",
+      "summary": "A Connecticut apizza institution founded in 1935 by Italian immigrant Giovanni \"John\" Scatolini, in Derby since 1938 and still family-operated, known for classic red pies with light garlic and white pies topped with seafood, chicken or vegetables. Phone (203) 735-0494.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "tipsy-tomato-bar-pizzeria",
+      "name": "Tipsy Tomato Bar and Pizzeria",
+      "kind": "restaurant",
+      "town": "Derby",
+      "state": "Connecticut",
+      "county": "New Haven County",
+      "address": "656 New Haven Ave., Derby, CT 06418",
+      "official_url": "https://tipsytomatopizzeria.com",
+      "summary": "New Haven-style apizza in two sizes with 30+ toppings, plus appetizers, pastas and Italian entrees. Hours Fri-Sat 11 a.m.-10 p.m., Sun-Thu 11 a.m.-9 p.m.; happy hour 11 a.m.-6 p.m. Phone (203) 732-7931.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "dew-drop-inn",
+      "name": "Dew Drop Inn",
+      "kind": "restaurant",
+      "town": "Derby",
+      "state": "Connecticut",
+      "county": "New Haven County",
+      "address": "25 North Ave, Derby, CT 06418",
+      "official_url": "https://www.dewdropinnct.com/",
+      "summary": "A Valley wing destination advertising over 110 wing preparations alongside burgers, steaks, craft beer and bourbon, with a monthly bourbon club. Bar hours Sun-Thu 11 a.m.-11 p.m., Fri-Sat 11 a.m.-midnight. Phone (203) 735-7757.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "the-quail-ale",
+      "name": "The Quail & Ale",
+      "kind": "restaurant",
+      "town": "Derby",
+      "state": "Connecticut",
+      "county": "New Haven County",
+      "address": "328 Derby Avenue, Derby, CT 06418",
+      "official_url": "https://www.quailandale.com/",
+      "summary": "Housed in a historic Brewery Building, with a rotating weekly seasonal menu, specialty cocktails and a whiskey-of-the-week program. Hours closed Mon-Wed, Thu-Sat 4 p.m. to close (kitchen to 9 p.m.), Sun 3 p.m. to close (kitchen to 8 p.m.). Phone (203) 308-2217.",
+      "status": "open",
+      "photos": []
+    }
+  ],
+  "entries": [
+    {
+      "kind": "sight",
+      "name": "Osbornedale State Park",
+      "place_slug": "osbornedale-state-park",
+      "note": "350 acres bequeathed by dairy pioneer Frances Osborne Kellogg."
+    },
+    {
+      "kind": "sight",
+      "name": "Osborne Homestead Museum",
+      "place_slug": "osborne-homestead-museum",
+      "note": "The Osborne family home, shown with original furnishings."
+    },
+    {
+      "kind": "walk",
+      "name": "Derby Greenway",
+      "place_slug": "derby-greenway",
+      "note": "A riverside path with a restored 1906 horse-watering fountain."
+    },
+    {
+      "kind": "food",
+      "name": "Roseland Apizza",
+      "place_slug": "roseland-apizza",
+      "note": "A Connecticut apizza institution founded in 1935."
+    },
+    {
+      "kind": "food",
+      "name": "Tipsy Tomato Bar and Pizzeria",
+      "place_slug": "tipsy-tomato-bar-pizzeria",
+      "note": "New Haven-style apizza with 30+ toppings."
+    },
+    {
+      "kind": "food",
+      "name": "Dew Drop Inn",
+      "place_slug": "dew-drop-inn",
+      "note": "A Valley wing destination with over 110 preparations."
+    },
+    {
+      "kind": "food",
+      "name": "The Quail & Ale",
+      "place_slug": "the-quail-ale",
+      "note": "A rotating seasonal menu in a historic Brewery Building."
+    }
+  ],
+  "links": [
+    {
+      "target": "guide:ansonia-ct-travel-guide",
+      "kind": "nearby",
+      "note": "Ansonia separated from Derby township; Osbornedale State Park still straddles both towns' shared border."
+    },
+    {
+      "target": "guide:oxford-ct-travel-guide",
+      "kind": "nearby",
+      "note": "Oxford was incorporated in 1798 from parts of Derby and Southbury."
+    },
+    {
+      "target": "guide:seymour-ct-travel-guide",
+      "kind": "nearby",
+      "note": "Seymour was first settled in the late 1600s as part of the town of Derby."
+    },
+    {
+      "target": "guide:shelton-ct-travel-guide",
+      "kind": "same-region",
+      "note": "Derby's nearest hotel cluster is in neighboring Shelton, across the Housatonic River."
+    }
+  ]
+}

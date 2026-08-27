@@ -1,0 +1,297 @@
+{
+  "guide": {
+    "slug": "burlington-ct-travel-guide",
+    "title": "Burlington, Connecticut: West Britain's Woodlands and a Pink Tavern",
+    "destination": "Burlington, Connecticut",
+    "state": "Connecticut",
+    "county": "Hartford County",
+    "intro": "Burlington's land was Tunxis territory before Hartford residents negotiated a purchase from the tribe in 1640, and the area became part of Farmington when that town incorporated in 1645. Its remote western forestlands stayed undeveloped until 1721, when Farmington's proprietors divided the land into lots; the first known settler, a man named Strong, arrived in 1740. In 1774 residents petitioned for ecclesiastical independence rather than keep traveling to Farmington for worship, and the General Assembly incorporated the Parish of West Britain that October. Burlington was set off from the parish and established as an independent town on June 16, 1806, its new name chosen by the General Assembly to honor England's third Earl of Burlington. Small water-powered mills once made cider brandy, flintlock muskets, mantel clocks and carriages, but Burlington was never as heavily industrialized as its neighbors and keeps its rural character today.",
+    "sections": [
+      {
+        "heading": "A 1810 tavern and Connecticut's oldest hatchery",
+        "body": "Elton Tavern, built in 1810 by merchant Giles Griswold, was first taxed as \"a house with seven fireplaces — more than any other in town.\" Its Federal-style building has a barrel-vaulted second-floor ballroom ceiling spanning the full width of the facade and a Palladian-style entry window; it served as private home, public house and inn across 164 years before the town of Burlington purchased it in 1974, and the Burlington Historical Society now runs it as a museum with a full calendar of events. The Burlington State Fish Hatchery, established in 1923, is Connecticut's oldest fish hatchery — fed by artesian wells that keep it, DEEP says, \"the State of Connecticut's most cost effective facility\" — and runs a Brown Trout Survivor Program that returns wild-broodstock offspring to the West Branch Farmington River."
+      },
+      {
+        "heading": "Getting there",
+        "body": "Burlington is a car-trip town in the Farmington River hills, reached on Route 4 (Spielman Highway), the primary corridor through its central business district, or Route 69 (Milford Street) running north-south. US Route 6 passes about three miles south of the Sessions Woods Wildlife Management Area. There is no rail station and no bus terminal; the former New Haven and Northampton Railroad branch through town was abandoned in 1968 after the nearby Collins Company factory closed, and the corridor is now a multi-use paved rail trail. The nearest CTrail Hartford Line stations are Hartford Union Station and Berlin."
+      }
+    ],
+    "faq": [
+      {
+        "question": "How do I get to Burlington?",
+        "answer": "By car — Route 4 (Spielman Highway) runs through the town center, and Route 69 crosses north-south. There is no rail station or bus terminal in Burlington; the nearest CTrail Hartford Line stops are Hartford Union Station and Berlin."
+      },
+      {
+        "question": "Is there a train to Burlington?",
+        "answer": "No. The former railroad through town was abandoned in 1968 and is now a rail trail. The nearest Hartford Line stations are Hartford Union Station and Berlin."
+      },
+      {
+        "question": "What is Elton Tavern?",
+        "answer": "An 1810 Federal-style tavern on George Washington Turnpike, run today by the Burlington Historical Society, with a barrel-vaulted ballroom ceiling and a full calendar of tours and events. The Society publishes no standing hours; visits outside event days should be arranged in advance."
+      },
+      {
+        "question": "Can I visit the Burlington State Fish Hatchery?",
+        "answer": "Yes — Connecticut's oldest fish hatchery, established 1923, is open for self-guided visits 8 a.m. to 3 p.m., seven days a week, or by reserved tour. Phone (860) 673-2340."
+      },
+      {
+        "question": "Is there a hotel in Burlington?",
+        "answer": "No hotel, inn or B&B could be verified inside Burlington. The nearest options are in Bristol, south on Route 4, and Farmington to the east."
+      }
+    ],
+    "photos": [
+      {
+        "src": "/photos/ct/burlington/elton-tavern.jpg",
+        "thumb": "/photos/ct/burlington/elton-tavern_thumb.jpg",
+        "title": "Elton Tavern",
+        "description": "The 1810 Elton Tavern in Burlington, with its hanging sign in the foreground.",
+        "author": "John Phelan",
+        "license": "CC BY-SA 4.0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Elton_Tavern,_Burlington_CT.jpg"
+      },
+      {
+        "src": "/photos/ct/burlington/sessions-woods-trail.jpg",
+        "thumb": "/photos/ct/burlington/sessions-woods-trail_thumb.jpg",
+        "title": "Sessions Woods Tree I.D. Trail",
+        "description": "A gravel path through summer woodland on the Tree I.D. Trail at Sessions Woods.",
+        "author": "Morrowlong",
+        "license": "CC BY-SA 4.0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Sessions_Woods_Wildlife_Management_Tree_ID_Trail.jpg"
+      },
+      {
+        "src": "/photos/ct/burlington/farmington-river-trail-burlington.jpg",
+        "thumb": "/photos/ct/burlington/farmington-river-trail-burlington_thumb.jpg",
+        "title": "Farmington River Trail, Burlington",
+        "description": "The paved Farmington River Trail receding into early-autumn woods in Burlington.",
+        "author": "John Phelan",
+        "license": "CC BY-SA 4.0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Farmington_River_Trail,_Burlington_CT.jpg"
+      }
+    ]
+  },
+  "places": [
+    {
+      "slug": "sessions-woods-wma",
+      "name": "Sessions Woods Wildlife Management Area & Conservation Education Center",
+      "kind": "park",
+      "town": "Burlington",
+      "state": "Connecticut",
+      "county": "Hartford County",
+      "address": "341 Milford Street (Route 69), Burlington, CT 06013",
+      "official_url": "https://portal.ct.gov/DEEP/Wildlife/Wildlife-Mangement-Areas/Sessions-Woods-Wildlife-Management-Area",
+      "summary": "DEEP's Conservation Education Center has an exhibit space, interpretive hiking trails including the Beaver Pond Trail and Forest Meadow Trail, and a Backyard Habitat Demonstration Area. Black bears are commonly seen on the trails, and dogs must be leashed. Education Center open Mon-Fri 8:30 a.m.-4 p.m.; trails and parking open sunrise to sunset. Phone (860) 424-3011.",
+      "status": "open",
+      "photos": [
+        {
+          "src": "/photos/ct/burlington/sessions-woods-trail.jpg",
+          "thumb": "/photos/ct/burlington/sessions-woods-trail_thumb.jpg",
+          "title": "Sessions Woods Tree I.D. Trail",
+          "description": "A gravel path through summer woodland on the Tree I.D. Trail at Sessions Woods.",
+          "author": "Morrowlong",
+          "license": "CC BY-SA 4.0",
+          "source_url": "https://commons.wikimedia.org/wiki/File:Sessions_Woods_Wildlife_Management_Tree_ID_Trail.jpg"
+        }
+      ]
+    },
+    {
+      "slug": "burlington-state-fish-hatchery",
+      "name": "Burlington State Fish Hatchery",
+      "kind": "attraction",
+      "town": "Burlington",
+      "state": "Connecticut",
+      "county": "Hartford County",
+      "address": "34 Belden Road, Burlington, CT 06013",
+      "official_url": "https://portal.ct.gov/deep/fishing/fisheries-management/fish-hatcheries",
+      "summary": "Established in 1923, Burlington is Connecticut's oldest fish hatchery, raising Brook, Brown and Rainbow Trout plus Kokanee. Its Brown Trout \"Survivor\" Program collects wild broodstock from the West Branch Farmington River each year and returns their offspring to the river. Open 8 a.m.-3 p.m., seven days weekly, self-guided or by reserved tour. Phone (860) 673-2340.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "elton-tavern-burlington",
+      "name": "Elton Tavern",
+      "kind": "historic-site",
+      "town": "Burlington",
+      "state": "Connecticut",
+      "county": "Hartford County",
+      "address": "781 George Washington Turnpike, Burlington, CT 06013",
+      "official_url": "https://burlington-history.org/home/our-history/the-tavern",
+      "summary": "Built in 1810 by merchant Giles Griswold and first taxed as \"a house with seven fireplaces — more than any other in town.\" The second-floor ballroom's barrel-vaulted ceiling spans the full building facade, with a Palladian-style window over the entry. Used as a private home, public house and inn before the Town of Burlington bought it in 1974; the Historical Society now runs it as a museum with a full events calendar.",
+      "status": "open",
+      "photos": [
+        {
+          "src": "/photos/ct/burlington/elton-tavern.jpg",
+          "thumb": "/photos/ct/burlington/elton-tavern_thumb.jpg",
+          "title": "Elton Tavern",
+          "description": "The 1810 Elton Tavern in Burlington, with its hanging sign in the foreground.",
+          "author": "John Phelan",
+          "license": "CC BY-SA 4.0",
+          "source_url": "https://commons.wikimedia.org/wiki/File:Elton_Tavern,_Burlington_CT.jpg"
+        }
+      ]
+    },
+    {
+      "slug": "nassahegon-state-forest",
+      "name": "Nassahegon State Forest",
+      "kind": "park",
+      "town": "Burlington",
+      "state": "Connecticut",
+      "county": "Hartford County",
+      "address": "Route 4, Burlington, CT 06013",
+      "summary": "A state forest offering hiking, letterboxing and hunting, one of Burlington's principal natural landmarks alongside Sessions Woods and the Nepaug Reservoir. DEEP contact (860) 424-3200.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "greenhouse-cafe-and-tavern",
+      "name": "Greenhouse Cafe & Tavern",
+      "kind": "restaurant",
+      "town": "Burlington",
+      "state": "Connecticut",
+      "county": "Hartford County",
+      "address": "511 Spielman Highway, Burlington, CT 06013",
+      "official_url": "https://www.greenhousecafeandtavern.com/",
+      "summary": "American tavern fare on a seasonal menu with a Sunday brunch, plus an on-site ice cream shop, Frozen Gnome. Open Tue-Thu noon-8 p.m., Fri-Sat noon-8:30 p.m., Sunday brunch 10:30-1 then dinner 1-7, closed Mondays.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "enclave-grille",
+      "name": "Enclave Grille",
+      "kind": "restaurant",
+      "town": "Burlington",
+      "state": "Connecticut",
+      "county": "Hartford County",
+      "address": "292 Spielman Highway, Burlington, CT 06013",
+      "official_url": "https://www.enclavegrille.com/",
+      "summary": "An American menu built on locally sourced ingredients — grass-fed burgers, halal chicken and scratch-made sauces. Phone (860) 404-5316.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "kin-you-dee-restaurant",
+      "name": "Kin You Dee Restaurant",
+      "kind": "restaurant",
+      "town": "Burlington",
+      "state": "Connecticut",
+      "county": "Hartford County",
+      "address": "232 Spielman Highway, Burlington, CT 06013",
+      "official_url": "https://www.kinyoudee.com/",
+      "summary": "Thai and Asian-inspired cooking led by Chef Phop, with over 24 years of experience in Thai cuisine — appetizers, soups, noodles, ramen and curries. Open Sun/Mon/Wed/Thu 11-3 and 4-9, Fri-Sat 11-3 and 4-9:30, closed Tuesdays. Phone (860) 404-2209.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "the-b-hive",
+      "name": "The B. Hive",
+      "kind": "cafe",
+      "town": "Burlington",
+      "state": "Connecticut",
+      "county": "Hartford County",
+      "address": "221 Spielman Highway, Burlington, CT 06013",
+      "official_url": "https://www.thebhiveburlington.com/",
+      "summary": "A family-owned cafe and roastery serving single-origin coffees roasted in-house, seasonal specialty drinks, breakfast burritos and scones. Open seven days a week, 8 a.m. to 2 p.m.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "hogans-cider-mill",
+      "name": "Hogan's Cider Mill",
+      "kind": "brewery",
+      "town": "Burlington",
+      "state": "Connecticut",
+      "county": "Hartford County",
+      "address": "522 Spielman Highway (Route 4), Burlington, CT 06013",
+      "official_url": "https://hoganscidermill.com/",
+      "summary": "A cider mill dating its cider-making to 1912, now brewing hard and sweet ciders on site from locally grown apples, with a taproom, an on-site bakery making cider donuts, a mill shop and an attached mini golf course. Outside food is allowed in the picnic areas; outside beverages are not. Phone (860) 675-7320.",
+      "status": "open",
+      "photos": []
+    }
+  ],
+  "entries": [
+    {
+      "kind": "sight",
+      "name": "Sessions Woods Wildlife Management Area & Conservation Education Center",
+      "place_slug": "sessions-woods-wma",
+      "note": "A DEEP education center with interpretive trails."
+    },
+    {
+      "kind": "sight",
+      "name": "Burlington State Fish Hatchery",
+      "place_slug": "burlington-state-fish-hatchery",
+      "note": "Connecticut's oldest fish hatchery, established 1923."
+    },
+    {
+      "kind": "sight",
+      "name": "Elton Tavern",
+      "place_slug": "elton-tavern-burlington",
+      "note": "An 1810 tavern with a barrel-vaulted ballroom ceiling."
+    },
+    {
+      "kind": "walk",
+      "name": "Nassahegon State Forest",
+      "place_slug": "nassahegon-state-forest",
+      "note": "State forest for hiking and letterboxing."
+    },
+    {
+      "kind": "food",
+      "name": "Greenhouse Cafe & Tavern",
+      "place_slug": "greenhouse-cafe-and-tavern",
+      "note": "Seasonal tavern fare with an on-site ice cream shop."
+    },
+    {
+      "kind": "food",
+      "name": "Enclave Grille",
+      "place_slug": "enclave-grille",
+      "note": "Grass-fed burgers and halal chicken."
+    },
+    {
+      "kind": "food",
+      "name": "Kin You Dee Restaurant",
+      "place_slug": "kin-you-dee-restaurant",
+      "note": "Thai cooking led by Chef Phop."
+    },
+    {
+      "kind": "food",
+      "name": "The B. Hive",
+      "place_slug": "the-b-hive",
+      "note": "A family-owned coffee roastery and cafe."
+    },
+    {
+      "kind": "food",
+      "name": "Hogan's Cider Mill",
+      "place_slug": "hogans-cider-mill",
+      "note": "A working cider mill with a taproom and mini golf."
+    }
+  ],
+  "links": [
+    {
+      "target": "guide:bristol-ct-travel-guide",
+      "kind": "nearby",
+      "note": "Burlington was set off from Bristol as an independent town in 1806."
+    },
+    {
+      "target": "guide:bristol-ct-travel-guide",
+      "kind": "shared-history",
+      "note": "Burlington was set off from the Parish of West Britain, which had been folded into Bristol's 1785 incorporation."
+    },
+    {
+      "target": "guide:farmington-ct-travel-guide",
+      "kind": "nearby",
+      "note": "Burlington's land was part of Farmington from 1645 until West Britain parish was set off."
+    },
+    {
+      "target": "guide:canton-ct-travel-guide",
+      "kind": "nearby",
+      "note": "Burlington borders Canton to the west."
+    },
+    {
+      "target": "guide:harwinton-ct-travel-guide",
+      "kind": "nearby",
+      "note": "Burlington borders Harwinton to the northwest."
+    },
+    {
+      "target": "guide:avon-ct-travel-guide",
+      "kind": "same-region",
+      "note": "Avon sits east of Burlington in the Farmington Valley."
+    }
+  ]
+}

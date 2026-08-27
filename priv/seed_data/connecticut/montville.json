@@ -13,7 +13,7 @@
       },
       {
         "heading": "Getting there",
-        "body": "Montville is a drive-to destination on the west bank of the Thames River, reached via I-395 and CT Route 32 (the Norwich-New London Turnpike). There is no train station in town — the nearest Amtrak service is in New London, about 10 minutes south on Route 32."
+        "body": "Montville is a drive-to destination on the west bank of the Thames River, reached via I-395 and CT Route 32 (the Norwich-New London Turnpike). There is no train station in town — the nearest Amtrak service is in New London, south on Route 32."
       },
       {
         "heading": "Mohegan Sun and the villages beyond",
@@ -23,7 +23,7 @@
     "faq": [
       {
         "question": "How do I get to Montville?",
-        "answer": "Montville is reached via I-395 and CT Route 32 (the Norwich-New London Turnpike). There is no train station in town; the nearest Amtrak service is in New London, about 10 minutes south on Route 32."
+        "answer": "Montville is reached via I-395 and CT Route 32 (the Norwich-New London Turnpike). There is no train station in town; the nearest Amtrak service is in New London, south on Route 32."
       },
       {
         "question": "What is Mohegan Sun?",
@@ -246,7 +246,7 @@
     {
       "target": "guide:new-london-ct-travel-guide",
       "kind": "same-region",
-      "note": "Montville has no train station; the nearest Amtrak service is in New London, about 10 minutes south on Route 32."
+      "note": "Montville has no train station; the nearest Amtrak service is in New London, south on Route 32."
     }
   ]
 }

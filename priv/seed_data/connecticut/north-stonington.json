@@ -1,0 +1,267 @@
+{
+  "guide": {
+    "slug": "north-stonington-ct-travel-guide",
+    "title": "North Stonington, Connecticut: The Town That Wasn't Named Jefferson",
+    "destination": "North Stonington, Connecticut",
+    "state": "Connecticut",
+    "county": "New London County",
+    "intro": "Europeans first settled this area around 1667, when Ezekiel Main and Jeremiah Burch established homesteads that became North Stonington village and Clark's Falls; the land had been part of Stonington, founded in 1649 under Massachusetts and brought under Connecticut by the 1662 Charter. Voters chose to divide the town in April 1807; the new town was to be named \"Jefferson,\" but the General Assembly rejected that name — likely from Federalist opposition to the president — and designated it North Stonington instead, a name used locally since 1724. From the early 1800s, water power from the Shunock and Assekonk rivers drove gristmills, sawmills and woolen mills, and the town became a well-known mercantile center producing fine silk, satin, wools and thread lace. The Civil War and the rise of larger city mills ended the cottage industries, and North Stonington turned primarily agricultural, with dairy farming its principal trade — a rural character it retains today.",
+    "sections": [
+      {
+        "heading": "A village on the National Register",
+        "body": "North Stonington Village was listed on the National Register of Historic Places on March 17, 1983: a 105-acre district of 72 contributing buildings, mostly from the late 18th and early 19th centuries, in Federal, Greek Revival and Italianate styles, including an 1809 Federal commercial building that once held town offices. Three figures with North Stonington roots reached national prominence: Ellen Fitz Pendleton, president of Wellesley College from 1911 to 1936; Samuel Prentice, Chief Justice of Connecticut from 1913 to 1920; and Otis Randall, a Brown University mathematics professor and dean from 1913 to 1930."
+      },
+      {
+        "heading": "Getting there",
+        "body": "North Stonington sits in Connecticut's southeastern corner on I-95: Exit 92 (Route 2 / Route 49) and Exit 93 (Route 216, the last exit before Rhode Island) are both inside the town. There is no rail station in North Stonington; the closest Amtrak Northeast Regional stops are Mystic, Connecticut, reached via I-95 or Route 1, and Westerly, Rhode Island, just across the state line. CTrail Shore Line East's eastern terminus is New London and does not reach North Stonington, Mystic or Westerly."
+      },
+      {
+        "heading": "A winery, a fair and twelve preserves",
+        "body": "Jonathan Edwards Winery pours tastings from a hilltop tasting room open seven days a week, no reservations required — though it frequently closes early on Saturdays in season for private events. The North Stonington Agricultural Fair, which traditionally opens Connecticut's fair season each July, added a new covered livestock pulling ring in 2026, billed as the state's first. Wheeler Library, a Richardsonian Romanesque building on Main Street, lends museum passes and runs an Arts Corridor exhibition program. The Avalonia Land Conservancy maintains twelve preserves across town, all open dawn to dusk, including the Tri-town Ridgeline Forest Preserve's 9.4 miles of trail. For food and lodging, Matches Tavern at the Lake of Isles golf resort and Buon Appetito Ristorante both serve year-round, and the Bellissimo Grande Hotel offers 164 rooms just off I-95 Exit 92."
+      }
+    ],
+    "faq": [
+      {
+        "question": "How do I get to North Stonington?",
+        "answer": "By car — I-95 Exit 92 (Route 2/49) and Exit 93 (Route 216) are both inside the town. There is no rail station in North Stonington; the nearest Amtrak stops are Mystic, CT, reached via I-95 or Route 1, and Westerly, RI, just across the state line."
+      },
+      {
+        "question": "Is there a train to North Stonington?",
+        "answer": "No. CTrail Shore Line East terminates at New London and does not reach North Stonington, Mystic or Westerly. The nearest Amtrak Northeast Regional stops are Mystic and Westerly."
+      },
+      {
+        "question": "Why isn't the town called Jefferson?",
+        "answer": "In 1807 the newly divided town was proposed to be named Jefferson, but the Connecticut General Assembly rejected the name — likely from Federalist opposition to the president — and designated it North Stonington instead, a name already used locally since 1724."
+      },
+      {
+        "question": "Is there a hotel in North Stonington?",
+        "answer": "The Bellissimo Grande Hotel, a 164-room Italian-themed hotel just off I-95 Exit 92, offers a complimentary shuttle to Foxwoods."
+      },
+      {
+        "question": "What is North Stonington Village Historic District?",
+        "answer": "A 105-acre National Register district listed in 1983, with 72 contributing buildings from the town's pre-Civil War prosperity, in Federal, Greek Revival and Italianate styles. It is a public, freely walkable streetscape."
+      }
+    ],
+    "photos": [
+      {
+        "src": "/photos/ct/north-stonington/village-historic-district.jpg",
+        "thumb": "/photos/ct/north-stonington/village-historic-district_thumb.jpg",
+        "title": "North Stonington Village Historic District",
+        "description": "A streetscape in the North Stonington Village Historic District.",
+        "author": "Magicpiano",
+        "license": "CC BY-SA 4.0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:NorthStoningtonCT_VillageHD_1.jpg"
+      },
+      {
+        "src": "/photos/ct/north-stonington/village-ucc-church.jpg",
+        "thumb": "/photos/ct/north-stonington/village-ucc-church_thumb.jpg",
+        "title": "United Church of Christ, North Stonington",
+        "description": "The white-steepled meetinghouse anchoring the North Stonington village historic district.",
+        "author": "Magicpiano",
+        "license": "CC BY-SA 4.0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:NorthStoningtonCT_UCC.jpg"
+      },
+      {
+        "src": "/photos/ct/north-stonington/wyassup-lake-high-ledge.jpg",
+        "thumb": "/photos/ct/north-stonington/wyassup-lake-high-ledge_thumb.jpg",
+        "title": "Wyassup Lake from High Ledge",
+        "description": "Wyassup Lake seen from High Ledge on the Narragansett Trail.",
+        "author": "Morrow Long",
+        "license": "CC BY 3.0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Narragansett_Trail_-_View_of_Wyassup_Lake_from_High_Ledge.jpg"
+      }
+    ]
+  },
+  "places": [
+    {
+      "slug": "jonathan-edwards-winery",
+      "name": "Jonathan Edwards Winery",
+      "kind": "attraction",
+      "town": "North Stonington",
+      "state": "Connecticut",
+      "county": "New London County",
+      "address": "74 Chester Maine Road, North Stonington, CT 06359",
+      "official_url": "https://jedwardswinery.com/",
+      "summary": "A hilltop winery making wines from Connecticut and California fruit, with a tasting room open seven days a week, 11 a.m.-5 p.m., no reservations required. Sells local cheeses, meats and crackers; outside food permitted. The tasting room frequently closes early on Saturdays (May-October) and select Fridays/Sundays for events — call (860) 535-0202 to confirm.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "north-stonington-village-historic-district",
+      "name": "North Stonington Village Historic District",
+      "kind": "historic-site",
+      "town": "North Stonington",
+      "state": "Connecticut",
+      "county": "New London County",
+      "address": "Along CT Route 2, Main Street, Wyassup, Babcock, Caswell and Rocky Hollow Roads, North Stonington, CT 06359",
+      "official_url": "https://www.northstoningtonct.gov/245/Historic-Walking-Trail-Map",
+      "summary": "Listed on the National Register of Historic Places on March 17, 1983: a 105-acre district with 72 contributing buildings from the town's late-18th and early-19th-century prosperity, in Federal, Greek Revival and Italianate styles, including an 1809 Federal commercial building. A public, freely walkable streetscape.",
+      "status": "open",
+      "photos": [
+        {
+          "src": "/photos/ct/north-stonington/village-historic-district.jpg",
+          "thumb": "/photos/ct/north-stonington/village-historic-district_thumb.jpg",
+          "title": "North Stonington Village Historic District",
+          "description": "A streetscape in the North Stonington Village Historic District.",
+          "author": "Magicpiano",
+          "license": "CC BY-SA 4.0",
+          "source_url": "https://commons.wikimedia.org/wiki/File:NorthStoningtonCT_VillageHD_1.jpg"
+        },
+        {
+          "src": "/photos/ct/north-stonington/village-ucc-church.jpg",
+          "thumb": "/photos/ct/north-stonington/village-ucc-church_thumb.jpg",
+          "title": "United Church of Christ, North Stonington",
+          "description": "The white-steepled meetinghouse anchoring the North Stonington village historic district.",
+          "author": "Magicpiano",
+          "license": "CC BY-SA 4.0",
+          "source_url": "https://commons.wikimedia.org/wiki/File:NorthStoningtonCT_UCC.jpg"
+        }
+      ]
+    },
+    {
+      "slug": "wheeler-library",
+      "name": "Wheeler Library",
+      "kind": "attraction",
+      "town": "North Stonington",
+      "state": "Connecticut",
+      "county": "New London County",
+      "address": "101 Main Street, North Stonington, CT 06359",
+      "official_url": "https://www.wheelerlibrary.org/",
+      "summary": "An early-20th-century Richardsonian Romanesque building, probably the most architecturally sophisticated structure in the village historic district. Lends museum passes to regional attractions and runs an Arts Corridor exhibition program. Open Mon 9-5, Tue 10-6, Wed 9-5, Thu 10-6, Fri 10-4, Sat 10-1, closed Sunday.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "north-stonington-agricultural-fair",
+      "name": "North Stonington Agricultural Fair",
+      "kind": "attraction",
+      "town": "North Stonington",
+      "state": "Connecticut",
+      "county": "New London County",
+      "address": "21 Wyassup Road, North Stonington, CT 06359",
+      "official_url": "https://northstoningtonfair.org/",
+      "summary": "A four-day agricultural fair that traditionally opens Connecticut's fair season in July, run by an association belonging to the Association of Connecticut Fairs. The 2026 fair added a new covered livestock pulling ring, billed as the first in Connecticut. Check northstoningtonfair.org for current-year dates.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "avalonia-preserves-north-stonington",
+      "name": "Avalonia Land Conservancy Preserves",
+      "kind": "park",
+      "town": "North Stonington",
+      "state": "Connecticut",
+      "county": "New London County",
+      "address": "Multiple trailheads across North Stonington, CT 06359",
+      "official_url": "https://avalonia.org/trail-finder/",
+      "summary": "Twelve Avalonia Land Conservancy preserves in town, all open to the public dawn to dusk, with mapped trail networks including the Tri-town Ridgeline Forest Preserve (9.4 miles), Mitchell Preserve & Reed Woodlands (shared with Preston) and Bell Cedar Swamp.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "matches-tavern-lake-of-isles",
+      "name": "Matches Tavern at Lake of Isles",
+      "kind": "restaurant",
+      "town": "North Stonington",
+      "state": "Connecticut",
+      "county": "New London County",
+      "address": "1 Clubhouse Drive, North Stonington, CT 06359",
+      "official_url": "https://www.lakeofisles.com/matches-tavern",
+      "summary": "The clubhouse restaurant at the Rees Jones-designed Lake of Isles golf resort, open to the public year round with elevated pub fare, craft cocktails and a separate breakfast menu. Open daily 7 a.m.-8 p.m. Phone (860) 313-3260.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "buon-appetito-ristorante-pizzeria",
+      "name": "Buon Appetito Ristorante & Pizzeria",
+      "kind": "restaurant",
+      "town": "North Stonington",
+      "state": "Connecticut",
+      "county": "New London County",
+      "address": "386 Norwich-Westerly Road, North Stonington, CT 06359",
+      "official_url": "https://buonappetitoristorante.com/",
+      "summary": "A family-owned northern Italian restaurant open since 2011, serving pappardelle Bolognese, porcini mushroom risotto and pan-roasted Stonington scallops alongside pizza. Open Mon-Tue 3-9 p.m., Wed 3-9:30 p.m., Thu 12-9:30 p.m., Fri-Sat 12-10 p.m., Sun 12-9:30 p.m. Phone (860) 535-2333.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "bellissimo-grande-hotel",
+      "name": "Bellissimo Grande Hotel",
+      "kind": "hotel",
+      "town": "North Stonington",
+      "state": "Connecticut",
+      "county": "New London County",
+      "address": "411 Norwich-Westerly Road, North Stonington, CT 06359",
+      "official_url": "https://www.bellissimogrande.com/",
+      "summary": "An Italian-themed hotel just off I-95 Exit 92 with 164 rooms including Presidential, Venetian and Sicilian suites, a coffee kiosk, a 24/7 pantry, EV charging and a complimentary shuttle to Foxwoods. Phone (860) 535-0022.",
+      "status": "open",
+      "photos": []
+    }
+  ],
+  "entries": [
+    {
+      "kind": "sight",
+      "name": "Jonathan Edwards Winery",
+      "place_slug": "jonathan-edwards-winery",
+      "note": "Walk-in tastings at a hilltop winery, seven days a week."
+    },
+    {
+      "kind": "sight",
+      "name": "North Stonington Village Historic District",
+      "place_slug": "north-stonington-village-historic-district",
+      "note": "A 105-acre National Register district with 72 contributing buildings."
+    },
+    {
+      "kind": "sight",
+      "name": "Wheeler Library",
+      "place_slug": "wheeler-library",
+      "note": "A Richardsonian Romanesque library lending museum passes."
+    },
+    {
+      "kind": "sight",
+      "name": "North Stonington Agricultural Fair",
+      "place_slug": "north-stonington-agricultural-fair",
+      "note": "A four-day fair that opens Connecticut's fair season each July."
+    },
+    {
+      "kind": "walk",
+      "name": "Avalonia Land Conservancy Preserves",
+      "place_slug": "avalonia-preserves-north-stonington",
+      "note": "Twelve preserves with trail networks open dawn to dusk."
+    },
+    {
+      "kind": "food",
+      "name": "Matches Tavern at Lake of Isles",
+      "place_slug": "matches-tavern-lake-of-isles",
+      "note": "The public clubhouse restaurant at the Lake of Isles golf resort."
+    },
+    {
+      "kind": "food",
+      "name": "Buon Appetito Ristorante & Pizzeria",
+      "place_slug": "buon-appetito-ristorante-pizzeria",
+      "note": "Northern Italian dining since 2011."
+    },
+    {
+      "kind": "stay",
+      "name": "Bellissimo Grande Hotel",
+      "place_slug": "bellissimo-grande-hotel",
+      "note": "A 164-room hotel just off I-95 Exit 92."
+    }
+  ],
+  "links": [
+    {
+      "target": "guide:stonington-ct-travel-guide",
+      "kind": "shared-history",
+      "note": "North Stonington separated from Stonington and was incorporated as its own town in 1807."
+    },
+    {
+      "target": "guide:preston-ct-travel-guide",
+      "kind": "nearby",
+      "note": "The Avalonia Mitchell Preserve & Reed Woodlands straddles the North Stonington-Preston line."
+    },
+    {
+      "target": "guide:mystic-ct-travel-guide",
+      "kind": "same-region",
+      "note": "Mystic, CT, reached via I-95 or Route 1, is the nearest Amtrak Northeast Regional stop for North Stonington travelers."
+    }
+  ]
+}

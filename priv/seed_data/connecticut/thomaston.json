@@ -1,0 +1,334 @@
+{
+  "guide": {
+    "slug": "thomaston-ct-travel-guide",
+    "title": "Thomaston, Connecticut: A Clockmaker's Name on the Naugatuck",
+    "destination": "Thomaston, Connecticut",
+    "state": "Connecticut",
+    "county": "Litchfield County",
+    "intro": "Thomaston's land was part of the Farmington proprietors' 1684 purchase of the Mattatuck Plantation, becoming the separate Northbury Parish in 1739, merging into Watertown in 1780, then splitting off again as Plymouth in 1795 — with the section that is now Thomaston known as \"Plymouth Hollow.\" Clockmaking predates the town's namesake: Eli Terry established a factory in 1803 and patented the shelf clock in 1814, but it was Seth Thomas, who came to the hollow to manufacture clocks in 1813, whose name the town took when the legislature confirmed its 1875 separation from Plymouth. Father Michael J. McGivney, founder of the Knights of Columbus, served as pastor of St. Thomas Church here from 1884 until his death in 1890 and was beatified in 2020. After catastrophic 1955 flooding on the Naugatuck River, the U.S. Army Corps of Engineers built Thomaston Dam, completed in 1960 at a cost of $14 million.",
+    "sections": [
+      {
+        "heading": "Clockmakers and a catastrophic flood",
+        "body": "Eli Terry's 1814 shelf-clock patent reduced the cost of a clock from roughly $25 to $5, helping pioneer American mass production, before Seth Thomas built the factory that gave the town its name in 1875. Hurricane Diane dropped record rainfall in August 1955, and the resulting Naugatuck River flood killed dozens statewide and destroyed bridges throughout the valley — Thomaston Dam, completed in 1960 for $14 million, now covers 849 acres of recreation land spanning Thomaston, Harwinton, Litchfield and Plymouth. The Thomaston Opera House, built 1883-1885 by Waterbury architect Robert Hill, doubles uniquely as the town hall and is listed on the National Register of Historic Places."
+      },
+      {
+        "heading": "Getting there",
+        "body": "Route 8, the Naugatuck Valley expressway, runs right through Thomaston along the river with three town exits, and US Route 6 comes in from Bristol and Hartford to the east. There is no passenger rail station in Thomaston — the Naugatuck Railroad tracks through town carry heritage excursion trains and freight between Torrington and a Waterbury interchange, not scheduled passenger transit. The nearest Metro-North service is the Waterbury Branch, terminating in Waterbury to the south — though Branch trains are replaced by buses from July 20, 2026 through May 31, 2027 for station reconstruction."
+      },
+      {
+        "heading": "A heritage railroad and a clock tower",
+        "body": "The Railroad Museum of New England runs the Naugatuck Railroad out of the 1881 Thomaston Station, marking 30 years of operation in September 2026 with special excursions on restored New Haven equipment. The Seth Thomas Bradstreet House, on Main Street since at least 1838, opens for guided tours on select Saturdays. Black Rock State Park, whose 444 acres border Thomaston, is administered from neighboring Watertown. On Main Street, Black Rock Tavern and Crabby Al's Seafood anchor Thomaston's dining, and the Plume House Inn is the town's one verified bed-and-breakfast."
+      }
+    ],
+    "faq": [
+      {
+        "question": "How do I get to Thomaston?",
+        "answer": "By car — Route 8 runs through town along the Naugatuck River with three local exits, and US Route 6 enters from Bristol and Hartford. There's no passenger rail station in Thomaston; the nearest Metro-North service is the Waterbury Branch, terminating in Waterbury, but Branch trains are replaced by buses from July 20, 2026 through May 31, 2027 for station reconstruction."
+      },
+      {
+        "question": "Why is Thomaston named for a clockmaker?",
+        "answer": "Seth Thomas came to the village then called Plymouth Hollow in 1813 to manufacture clocks, and by 1856 was labeling them \"Thomas Town.\" On July 6, 1875, the Connecticut legislature confirmed the town's separation from Plymouth under the name Thomaston, in his memory."
+      },
+      {
+        "question": "Can I ride a train at the Railroad Museum of New England?",
+        "answer": "Yes — the Naugatuck Railroad runs seasonal excursions from the 1881 Thomaston Station, including a \"Celebrate 30\" weekend in September 2026 marking 30 years of operation, with trains running between Thomaston, Waterville and Thomaston Dam."
+      },
+      {
+        "question": "Is Black Rock State Park in Thomaston?",
+        "answer": "The park borders Thomaston along the Route 6 corridor, but its official address and administration are in neighboring Watertown. It's a 444-acre park with swimming, hiking and camping around Black Rock Pond."
+      },
+      {
+        "question": "Where can I eat and stay in Thomaston?",
+        "answer": "Black Rock Tavern and Crabby Al's Seafood anchor Main Street dining, with Clocktown Brewing Company for beer and Cutie Pies for cupcakes and cakes. The Plume House Inn, a restored historic home on Union Street, is Thomaston's one verified bed-and-breakfast."
+      }
+    ],
+    "photos": [
+      {
+        "src": "/photos/ct/thomaston/thomaston-opera-house.jpg",
+        "thumb": "/photos/ct/thomaston/thomaston-opera-house_thumb.jpg",
+        "title": "Thomaston Opera House",
+        "description": "The 1884 Thomaston Opera House, which also houses the town hall.",
+        "author": "Doncram",
+        "license": "CC BY-SA 3.0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Thomaston_Opera_House_323.jpg"
+      },
+      {
+        "src": "/photos/ct/thomaston/thomaston-main-street.jpg",
+        "thumb": "/photos/ct/thomaston/thomaston-main-street_thumb.jpg",
+        "title": "Main Street, Thomaston",
+        "description": "A downtown street scene on Main Street in Thomaston.",
+        "author": "John Phelan",
+        "license": "CC BY 4.0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Main_Street,_Thomaston_CT.jpg"
+      },
+      {
+        "src": "/photos/ct/thomaston/thomaston-dam.jpg",
+        "thumb": "/photos/ct/thomaston/thomaston-dam_thumb.jpg",
+        "title": "Thomaston Dam",
+        "description": "A panorama of Thomaston Dam in fall color.",
+        "author": "Pi.1415926535",
+        "license": "CC BY-SA 4.0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Thomaston_Dam_panorama,_October_2020.jpg"
+      }
+    ]
+  },
+  "places": [
+    {
+      "slug": "railroad-museum-new-england-thomaston-station",
+      "name": "Railroad Museum of New England / Naugatuck Railroad — Thomaston Station",
+      "kind": "museum",
+      "town": "Thomaston",
+      "state": "Connecticut",
+      "county": "Litchfield County",
+      "address": "242 East Main Street, Thomaston, CT 06787",
+      "official_url": "https://rmne.org/",
+      "summary": "A Victorian depot built in 1881, damaged by arson in 1993 and stabilized by volunteers since the heritage railroad resumed service in 1996. Seasonal excursions run between Thomaston, Waterville and Thomaston Dam on former New Haven trackage; a \"Celebrate 30\" weekend runs September 25-27, 2026. Check RMNE's calendar for current excursion dates and pricing.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "thomaston-opera-house",
+      "name": "Thomaston Opera House (Landmark Community Theatre)",
+      "kind": "theater",
+      "town": "Thomaston",
+      "state": "Connecticut",
+      "county": "Litchfield County",
+      "address": "158 Main Street, Thomaston, CT 06787",
+      "official_url": "https://www.landmarkcommunitytheatre.org/",
+      "summary": "Built 1883-1885 by Waterbury architect Robert Hill, a three-story Romanesque brick building with a clock tower, listed on the National Register of Historic Places April 26, 1972 — and uniquely doubling as Thomaston's town hall. Landmark Community Theatre's 2026 season includes Ragtime and The Heart of Rock and Roll.",
+      "status": "open",
+      "photos": [
+        {
+          "src": "/photos/ct/thomaston/thomaston-opera-house.jpg",
+          "thumb": "/photos/ct/thomaston/thomaston-opera-house_thumb.jpg",
+          "title": "Thomaston Opera House",
+          "description": "The 1884 Thomaston Opera House, which also houses the town hall.",
+          "author": "Doncram",
+          "license": "CC BY-SA 3.0",
+          "source_url": "https://commons.wikimedia.org/wiki/File:Thomaston_Opera_House_323.jpg"
+        }
+      ]
+    },
+    {
+      "slug": "seth-thomas-bradstreet-house",
+      "name": "Seth Thomas Bradstreet House",
+      "kind": "historic-site",
+      "town": "Thomaston",
+      "state": "Connecticut",
+      "county": "Litchfield County",
+      "address": "Main Street, Thomaston, CT 06787",
+      "official_url": "https://www.thomastonct.gov/culture-recreation/seth-thomas-bradstreet-house",
+      "summary": "Standing on Main Street since at least 1838, sold by Seth Thomas to his daughter Amanda Thomas Bradstreet in 1850 and kept in the family for generations before the town acquired it in 2005 with a state grant. Guided tours on the hour, Saturdays in May, June, September and October, free with donations welcome.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "thomaston-dam",
+      "name": "Thomaston Dam",
+      "kind": "park",
+      "town": "Thomaston",
+      "state": "Connecticut",
+      "county": "Litchfield County",
+      "official_url": "https://www.thomastonct.gov/culture-recreation/thomaston-dam",
+      "summary": "Built by the U.S. Army Corps of Engineers after catastrophic 1955 Naugatuck River flooding, completed in 1960 at a cost of $14 million; its recreation lands cover 849 acres spanning Thomaston, Harwinton, Litchfield and Plymouth. Hiking, sightseeing, fishing and seasonal snowmobiling on designated trails, open late May through mid-September. Phone (860) 283-5540.",
+      "status": "open",
+      "photos": [
+        {
+          "src": "/photos/ct/thomaston/thomaston-dam.jpg",
+          "thumb": "/photos/ct/thomaston/thomaston-dam_thumb.jpg",
+          "title": "Thomaston Dam",
+          "description": "A panorama of Thomaston Dam in fall color.",
+          "author": "Pi.1415926535",
+          "license": "CC BY-SA 4.0",
+          "source_url": "https://commons.wikimedia.org/wiki/File:Thomaston_Dam_panorama,_October_2020.jpg"
+        }
+      ]
+    },
+    {
+      "slug": "thomaston-historical-society-museum",
+      "name": "Thomaston Historical Society Museum",
+      "kind": "museum",
+      "town": "Thomaston",
+      "state": "Connecticut",
+      "county": "Litchfield County",
+      "address": "158 Main Street, 6th Floor, Thomaston, CT 06787",
+      "official_url": "https://thomastoncthistoricalsociety.org/",
+      "summary": "Housed atop the Opera House/town hall building, with farm implements, period clothing and Seth Thomas memorabilia including his nightstand and portrait. Visits by appointment only. Phone (860) 283-4421.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "black-rock-tavern",
+      "name": "Black Rock Tavern",
+      "kind": "restaurant",
+      "town": "Thomaston",
+      "state": "Connecticut",
+      "county": "Litchfield County",
+      "address": "78 Main Street, Thomaston, CT 06787",
+      "official_url": "https://blackrocktavern.com/",
+      "summary": "A Main Street tavern serving comfort classics to chef-crafted favorites, a short walk from the Opera House, with 10% off for ticket holders. Kitchen Wednesday-Thursday 11:30 a.m.-9 p.m., Friday-Saturday to 10 p.m., Sunday 11 a.m.-8 p.m., closed Monday-Tuesday.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "clocktown-brewing-company",
+      "name": "Clocktown Brewing Company",
+      "kind": "brewery",
+      "town": "Thomaston",
+      "state": "Connecticut",
+      "county": "Litchfield County",
+      "address": "135 South Main Street, Thomaston, CT 06787",
+      "official_url": "https://clocktownbrewingco.com/",
+      "summary": "Thomaston's own brewery and taproom with a kitchen, named for the town's clockmaking heritage. Trivia Wednesdays and Jukebox Bingo the first and third Thursday of the month. Hours Wednesday 4-9 p.m., Thursday 4-10 p.m., Friday-Saturday noon-10 p.m., Sunday 11 a.m.-8 p.m.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "crabby-als-seafood",
+      "name": "Crabby Al's Seafood",
+      "kind": "restaurant",
+      "town": "Thomaston",
+      "state": "Connecticut",
+      "county": "Litchfield County",
+      "address": "157 East Main Street, Thomaston, CT 06787",
+      "official_url": "https://crabbyals.com/",
+      "summary": "A seafood-and-American-classics house near the railroad station, with a seasonal outdoor deck, raw bar, Sunday brunch and live bands Friday and Saturday. Kitchen Sunday-Thursday 11 a.m.-10 p.m., Friday-Saturday to 11 p.m.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "rozzis-restaurant",
+      "name": "Rozzi's Restaurant",
+      "kind": "restaurant",
+      "town": "Thomaston",
+      "state": "Connecticut",
+      "county": "Litchfield County",
+      "address": "265 Watertown Road, Thomaston, CT 06787",
+      "official_url": "https://rozzisrestaurant.com/",
+      "summary": "A local American diner serving breakfast all day, lunch and dinner, with a drive-thru window, delivery and a Breakfast Club loyalty program. Hours Monday-Thursday 7 a.m.-8 p.m., Friday-Saturday to 9 p.m., Sunday 7 a.m.-3 p.m.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "cutie-pies-bakery-cafe",
+      "name": "Cutie Pies Bakery & Café",
+      "kind": "cafe",
+      "town": "Thomaston",
+      "state": "Connecticut",
+      "county": "Litchfield County",
+      "address": "131 Main Street, Suite 105A, Thomaston, CT 06787",
+      "official_url": "https://cutiepiesct.com/",
+      "summary": "A small Main Street boutique bakery that opened in 2023, specializing in cupcakes, cakes and custom sweets for showers and birthdays. Hours not posted online — call (860) 484-4838.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "plume-house-inn",
+      "name": "Plume House Inn",
+      "kind": "bnb",
+      "town": "Thomaston",
+      "state": "Connecticut",
+      "county": "Litchfield County",
+      "address": "67 Union Street, Thomaston, CT 06787",
+      "official_url": "https://plumehouseinn.com/",
+      "summary": "A restored historic home run as a bed and breakfast, with rooms furnished to the period of the house, scratch-made breakfasts from garden produce and backyard honey, and a \"Hunter Library\" sitting room. Named a Best of Connecticut honoree by CT Insider. Phone (860) 480-2490.",
+      "status": "open",
+      "photos": []
+    }
+  ],
+  "entries": [
+    {
+      "kind": "sight",
+      "name": "Railroad Museum of New England / Naugatuck Railroad",
+      "place_slug": "railroad-museum-new-england-thomaston-station",
+      "note": "Heritage excursions from the 1881 Thomaston Station."
+    },
+    {
+      "kind": "sight",
+      "name": "Thomaston Opera House",
+      "place_slug": "thomaston-opera-house",
+      "note": "An 1885 building that doubles as both theater and town hall."
+    },
+    {
+      "kind": "sight",
+      "name": "Seth Thomas Bradstreet House",
+      "place_slug": "seth-thomas-bradstreet-house",
+      "note": "A clockmaker's family home, open for tours select Saturdays."
+    },
+    {
+      "kind": "walk",
+      "name": "Thomaston Dam",
+      "place_slug": "thomaston-dam",
+      "note": "849 acres of flood-control recreation land across four towns."
+    },
+    {
+      "kind": "sight",
+      "name": "Thomaston Historical Society Museum",
+      "place_slug": "thomaston-historical-society-museum",
+      "note": "Seth Thomas memorabilia atop the Opera House, by appointment."
+    },
+    {
+      "kind": "food",
+      "name": "Black Rock Tavern",
+      "place_slug": "black-rock-tavern",
+      "note": "A Main Street tavern near the Opera House."
+    },
+    {
+      "kind": "food",
+      "name": "Clocktown Brewing Company",
+      "place_slug": "clocktown-brewing-company",
+      "note": "Thomaston's own brewery, with weekly trivia and bingo."
+    },
+    {
+      "kind": "food",
+      "name": "Crabby Al's Seafood",
+      "place_slug": "crabby-als-seafood",
+      "note": "Seafood and a raw bar near the railroad station."
+    },
+    {
+      "kind": "food",
+      "name": "Rozzi's Restaurant",
+      "place_slug": "rozzis-restaurant",
+      "note": "An all-day breakfast diner with a drive-thru window."
+    },
+    {
+      "kind": "food",
+      "name": "Cutie Pies Bakery & Café",
+      "place_slug": "cutie-pies-bakery-cafe",
+      "note": "A boutique cupcake and cake bakery on Main Street."
+    },
+    {
+      "kind": "stay",
+      "name": "Plume House Inn",
+      "place_slug": "plume-house-inn",
+      "note": "A restored historic home on Union Street, Thomaston's one B&B."
+    }
+  ],
+  "links": [
+    {
+      "target": "guide:plymouth-ct-travel-guide",
+      "kind": "nearby",
+      "note": "Thomaston split off from Plymouth in 1875."
+    },
+    {
+      "target": "guide:plymouth-ct-travel-guide",
+      "kind": "shared-history",
+      "note": "Thomaston was Plymouth's western section, \"Plymouth Hollow,\" until splitting off in 1875."
+    },
+    {
+      "target": "guide:watertown-ct-travel-guide",
+      "kind": "nearby",
+      "note": "Black Rock State Park borders Thomaston but is administered from Watertown."
+    },
+    {
+      "target": "guide:harwinton-ct-travel-guide",
+      "kind": "nearby",
+      "note": null
+    },
+    {
+      "target": "guide:litchfield-ct-travel-guide",
+      "kind": "same-region",
+      "note": null
+    }
+  ]
+}

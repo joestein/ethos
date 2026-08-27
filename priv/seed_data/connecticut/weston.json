@@ -1,0 +1,153 @@
+{
+  "guide": {
+    "slug": "weston-ct-travel-guide",
+    "title": "Weston, Connecticut: Where a Meteorite Founded a Science",
+    "destination": "Weston, Connecticut",
+    "state": "Connecticut",
+    "county": "Fairfield County",
+    "intro": "Weston began as Norfield Parish: in 1757, \"outlivers\" in Fairfield's remote northern lots petitioned to form their own parish, and in 1787 the Connecticut General Assembly combined Norfield with North Fairfield Parish to create Weston. In 1845 the eastern half split off to become Easton, giving Weston its present boundaries. Weston's defining event came December 14, 1807, when roughly 350 pounds of meteorite fell on the town; Yale professor Benjamin Silliman performed what is believed to be the first chemical analysis of a meteorite in the United States, founding the field of meteoritics. In the early 1800s Weston was an industrial town of mills and tanneries along the Saugatuck and Aspetuck Rivers, not the quiet town it became once the Merritt Parkway arrived in the 1930s.",
+    "sections": [
+      {
+        "heading": "Getting there",
+        "body": "Weston has no train station of its own — Wikipedia calls it the closest Connecticut town to New York City without one. Exit the Merritt Parkway in Westport onto Route 57 (Weston Road) and follow it north into the town center, where it briefly overlaps Route 53, the only two through-routes in town. Rail travelers can use Metro-North's New Haven Line at Westport (Saugatuck) station, 1 Railroad Place, and drive the remaining few miles north, or the Danbury Branch's Cannondale station in neighboring Wilton. There is no Amtrak, Shore Line East or CTrail Hartford Line service in or near Weston."
+      },
+      {
+        "heading": "A Nature Conservancy flagship and a working town farm",
+        "body": "The Lucius Pond Ordway-Devil's Den Preserve, The Nature Conservancy's largest continuous preserve in Connecticut at roughly 1,800 acres, draws more than 40,000 visits a year on its 20-mile trail system; Katharine Ordway created it starting with a 1,100-acre purchase in 1966. A second Aspetuck Land Trust property, Trout Brook Valley Preserve, straddles Weston's border with Easton and adds nearly 14 miles of trails through meadows, woods and a working orchard — see Easton's guide for trailhead details. Lachat Town Farm, a 42-acre farm the late Leon Lachat deeded to the town and the Conservancy in 1997, keeps a circa-1770 farmhouse and runs a community garden, farmers markets and concerts. Weston farmers once grew a variety of onion called the Southport Globe, stored in local onion barns before shipment to warehouses in Southport and Norwalk and on to New York City; the surviving Onion Barn, at the Weston Road/Norfield Road junction, still serves as the town's community bulletin board. The Weston History & Culture Center, run by the Weston Historical Society, occupies the David Dimon Coley House and a visitor center with rotating exhibits."
+      }
+    ],
+    "faq": [
+      {
+        "question": "How do I get to Weston?",
+        "answer": "By car — exit the Merritt Parkway in Westport onto Route 57 (Weston Road) into the town center. The nearest train service is Metro-North's Westport (Saugatuck) station, a few miles south."
+      },
+      {
+        "question": "Is there a restaurant in Weston?",
+        "answer": "Weston's commercial core is a single shopping center at 190 Weston Road, anchored by Lily's Weston Market. There is essentially no restaurant scene in town — plan to eat just over the line."
+      },
+      {
+        "question": "What fell on Weston in 1807?",
+        "answer": "A meteorite — about 350 pounds of stone, the first meteorite fall recorded and scientifically studied in the United States, effectively founding the field of meteoritics."
+      }
+    ],
+    "photos": [
+      {
+        "src": "/photos/ct/weston/onion-barn-weston.jpg",
+        "thumb": "/photos/ct/weston/onion-barn-weston_thumb.jpg",
+        "title": "Weston's Onion Barn",
+        "description": "Weston's Onion Barn at the Weston Road/Norfield Road junction, tied to the town's Southport Globe onion trade and still used as a community bulletin board.",
+        "author": "Noroton (Wikipedia user)",
+        "license": "Public domain",
+        "source_url": "https://commons.wikimedia.org/wiki/File:WestonCTOnionBarn08042007.JPG"
+      }
+    ],
+    "tier": "town-page"
+  },
+  "places": [
+    {
+      "slug": "lucius-pond-ordway-devils-den-preserve",
+      "name": "Lucius Pond Ordway–Devil's Den Preserve",
+      "kind": "park",
+      "town": "Weston",
+      "state": "Connecticut",
+      "county": "Fairfield County",
+      "address": "33 Pent Road, Weston, CT 06883",
+      "official_url": "https://www.nature.org/en-us/get-involved/how-to-help/places-we-protect/lucius-pond-ordwaydevils-den-preserve/",
+      "summary": "The Nature Conservancy's largest continuous preserve in Connecticut, roughly 1,800 acres with a 20-mile blazed trail system drawing more than 40,000 visits a year. Katharine Ordway began assembling it with a 1,100-acre purchase from the Bridgeport Hydraulic Company in 1966. Open sunrise to sunset; no dogs, bikes or motorized vehicles.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "weston-history-culture-center",
+      "name": "Weston History & Culture Center",
+      "kind": "museum",
+      "town": "Weston",
+      "state": "Connecticut",
+      "county": "Fairfield County",
+      "address": "104 Weston Road, Weston, CT 06883 (parking off High Acre Road)",
+      "official_url": "https://www.westonhistoricalsociety.org/",
+      "summary": "Run by the Weston Historical Society: a Visitor's Center with rotating exhibits, the David Dimon Coley House restored to its 1940s appearance, and the Offutt Sculpture Garden. Open Thursdays 1-4 p.m. and the first and last Sunday of the month, 1-4 p.m., starting in March; grounds dawn to dusk. Phone (203) 226-1804.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "lachat-town-farm",
+      "name": "Lachat Town Farm",
+      "kind": "historic-site",
+      "town": "Weston",
+      "state": "Connecticut",
+      "county": "Fairfield County",
+      "address": "106 Godfrey Road West, Weston, CT 06883",
+      "official_url": "https://www.lachattownfarm.org/",
+      "summary": "A 42-acre working farm the late Leon Lachat deeded to the Town of Weston and The Nature Conservancy in 1997, with a circa-1770 farmhouse and milking barn. Run with Friends of Lachat support; hosts a community garden, farmers markets, yoga and Music in the Meadow concerts.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "lilys-weston-market",
+      "name": "Lily's Weston Market",
+      "kind": "cafe",
+      "town": "Weston",
+      "state": "Connecticut",
+      "county": "Fairfield County",
+      "address": "190 Weston Road, Weston, CT 06883 (Weston Shopping Center)",
+      "official_url": "https://lilyswestonmarket.com/",
+      "summary": "Weston's grocery and prepared-food counter, effectively the town's only sit-down-adjacent food source, in the town's single shopping center. Open Mon-Sat 8 a.m.-8 p.m., Sun 8 a.m.-7 p.m. Phone (203) 557-8375.",
+      "status": "open",
+      "photos": []
+    }
+  ],
+  "entries": [
+    {
+      "kind": "sight",
+      "name": "Lucius Pond Ordway–Devil's Den Preserve",
+      "place_slug": "lucius-pond-ordway-devils-den-preserve",
+      "note": "The Nature Conservancy's largest continuous preserve in Connecticut."
+    },
+    {
+      "kind": "sight",
+      "name": "Weston History & Culture Center",
+      "place_slug": "weston-history-culture-center",
+      "note": "Run by the Weston Historical Society."
+    },
+    {
+      "kind": "sight",
+      "name": "Lachat Town Farm",
+      "place_slug": "lachat-town-farm",
+      "note": "A 42-acre working farm deeded to the town in 1997."
+    },
+    {
+      "kind": "food",
+      "name": "Lily's Weston Market",
+      "place_slug": "lilys-weston-market",
+      "note": "The town's grocery and prepared-food counter."
+    }
+  ],
+  "links": [
+    {
+      "target": "guide:easton-ct-travel-guide",
+      "kind": "shared-history",
+      "note": "Easton split off from Weston's eastern half in 1845."
+    },
+    {
+      "target": "place:trout-brook-valley-preserve",
+      "kind": "nearby",
+      "note": "Trout Brook Valley Preserve straddles Weston and Easton; Easton's guide has the trailhead details."
+    },
+    {
+      "target": "guide:redding-ct-travel-guide",
+      "kind": "nearby",
+      "note": "Route 53's designated scenic stretch begins at the Weston town line in Redding."
+    },
+    {
+      "target": "guide:westport-ct-travel-guide",
+      "kind": "nearby",
+      "note": "Route 57 begins at Route 33 in Westport and runs north into Weston."
+    },
+    {
+      "target": "guide:wilton-ct-travel-guide",
+      "kind": "nearby",
+      "note": "Route 57 continues north from Weston's town center to US Route 7 in Wilton's Georgetown section."
+    }
+  ]
+}

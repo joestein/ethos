@@ -1,0 +1,293 @@
+{
+  "guide": {
+    "slug": "wallingford-ct-travel-guide",
+    "title": "Wallingford, Connecticut: A Silver Town Between Two Cities",
+    "destination": "Wallingford, Connecticut",
+    "state": "Connecticut",
+    "county": "New Haven County",
+    "intro": "The Connecticut General Assembly authorized \"the making of a village on the east river\" on October 10, 1667; roughly 126 residents settled by May 12, 1670, when boundaries were set and Wallingford incorporated. A separate borough incorporated in 1853 and consolidated back into the town in 1958. The town takes its name from Wallingford, England, and sits roughly halfway between New Haven and Hartford. Wallingford's defining industry was silver: small pewter and Britannia-ware shops gave way to nickel silver after Robert Wallace obtained a formula and joined Samuel Simpson to found R. Wallace & Company, forerunner of Wallace Silversmiths. John Humphrey Noyes's Oneida Community ran a Wallingford branch commune from 1851 until 1880, moving from farming into tin-plated silverware production from 1877 — an important original site for what became Oneida Limited. The Great Wallingford Tornado of August 9, 1878 killed 34 people, the most destructive tornado to strike Connecticut up to that time.",
+    "sections": [
+      {
+        "heading": "Signers, aces and a saltbox house",
+        "body": "Wallingford native Lyman Hall served in the Second Continental Congress and signed the Declaration of Independence; the 1916 Beaux-Arts Town Hall is named for him. World War I flying ace Raoul Lufbery spent his childhood in Wallingford. Choate Rosemary Hall traces its founding to Rosemary Hall in 1890; The Choate School followed in 1896 and the two merged in 1978, with the campus centered on Christian Street at North Elm Street. Wallingford's oldest standing building is the 1672 Nehemiah Royce House at 538 North Main Street, one of Connecticut's most notable saltbox houses, though it is privately owned and not open to visitors — the Samuel Parsons House, a c.1759 former tavern and stagecoach stop at 180 South Main Street, is the one notable historic house open to the public as the Wallingford Historical Society's headquarters."
+      },
+      {
+        "heading": "Getting there",
+        "body": "Wallingford sits on the I-91/U.S. Route 5 corridor midway between New Haven and Hartford, and — unusually for a town this size — it has a real rail station at 343 North Cherry Street, unstaffed but with ticket machines, elevators and a covered platform, served by both CTrail's Hartford Line and Amtrak Northeast Regional and Valley Flyer trains. You can arrive without a car from New Haven, Hartford or Springfield, or with a change at New Haven from New York. Wallingford is not on Metro-North's New Haven Line or Shore Line East; connect to those at New Haven Union Station. CTtransit's Meriden/Wallingford Division buses connect at the station."
+      }
+    ],
+    "faq": [
+      {
+        "question": "How do I get to Wallingford?",
+        "answer": "By car on I-91 or U.S. Route 5, or by CTrail Hartford Line or Amtrak train to Wallingford station, 343 North Cherry Street — unstaffed but with ticket machines, elevators and free parking. Wallingford is not on Metro-North's New Haven Line; connect to that at New Haven Union Station."
+      },
+      {
+        "question": "What happened in the Great Wallingford Tornado?",
+        "answer": "On August 9, 1878, a tornado cut a path roughly half a mile wide and two miles long across the north of town, killing 34 people, injuring 70, and destroying 40 houses and the Oneida Community's windmill and brick factory — the most destructive tornado to strike Connecticut up to that time."
+      },
+      {
+        "question": "Is there a winery in Wallingford?",
+        "answer": "Gouveia Vineyards, a hilltop tasting room on Whirlwind Hill Road pouring estate wines with long valley views, is one of the best-known stops on the Connecticut Wine Trail's central stretch. Open daily; hours Mon-Sat 11 a.m.-8 p.m., Sun 11 a.m.-6 p.m."
+      },
+      {
+        "question": "Is there a hotel in Wallingford?",
+        "answer": "Three chain hotels list Wallingford addresses — a Courtyard by Marriott, a Hilton Garden Inn and a Fairfield Inn — but their current operating status could not be independently verified beyond a chamber-of-commerce directory. Call ahead, or look to Hampton Inn & Suites in North Haven or Residence Inn in Hamden."
+      }
+    ],
+    "photos": [
+      {
+        "src": "/photos/ct/wallingford/wallingford-center-historic-district.jpg",
+        "thumb": "/photos/ct/wallingford/wallingford-center-historic-district_thumb.jpg",
+        "title": "Wallingford Center Historic District",
+        "description": "A commercial streetscape in the Wallingford Center Historic District.",
+        "author": "Magicpiano",
+        "license": "CC BY-SA 4.0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:WallingfordCT_CenterHD_7.jpg"
+      },
+      {
+        "src": "/photos/ct/wallingford/choate-rosemary-hall-walkway.jpg",
+        "thumb": "/photos/ct/wallingford/choate-rosemary-hall-walkway_thumb.jpg",
+        "title": "Choate Rosemary Hall in autumn",
+        "description": "A campus walkway at Choate Rosemary Hall in autumn.",
+        "author": "Daderot",
+        "license": "Public domain",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Walkway_in_autumn_-_Choate_Rosemary_Hall.jpg"
+      },
+      {
+        "src": "/photos/ct/wallingford/vineyard-wallingford-sunset.jpg",
+        "thumb": "/photos/ct/wallingford/vineyard-wallingford-sunset_thumb.jpg",
+        "title": "A vineyard in Wallingford",
+        "description": "A vineyard at sunset in Wallingford — believed to be Gouveia Vineyards, the town's only commercial vineyard.",
+        "author": "Karl Thomas Moore",
+        "license": "CC BY-SA 4.0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Vineyard_in_Wallingford.jpg"
+      },
+      {
+        "src": "/photos/ct/wallingford/wharton-brook-state-park.jpg",
+        "thumb": "/photos/ct/wallingford/wharton-brook-state-park_thumb.jpg",
+        "title": "Wharton Brook State Park",
+        "description": "Allen Brook Pond at dusk in Wharton Brook State Park.",
+        "author": "Morrowlong",
+        "license": "CC BY-SA 4.0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Allen_Brook_Pond_in_Wharton_Brook_SP_at_dusk.jpg"
+      }
+    ]
+  },
+  "places": [
+    {
+      "slug": "toyota-oakdale-theatre",
+      "name": "Toyota Presents the Oakdale Theatre",
+      "kind": "theater",
+      "town": "Wallingford",
+      "state": "Connecticut",
+      "county": "New Haven County",
+      "address": "95 South Turnpike Road, Wallingford, CT 06492",
+      "official_url": "https://www.livenation.com/venue/KovZpZAEkFtA",
+      "summary": "Opened June 21, 1954 as a theatre-in-the-round; a $21 million 1996 renovation converted it to a 4,803-seat auditorium, with the original wooden dome later reborn as the 1,649-capacity concert room \"The Dome at Oakdale.\" Operated by Live Nation Connecticut, Wallingford's marquee touring-music venue.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "gouveia-vineyards",
+      "name": "Gouveia Vineyards",
+      "kind": "attraction",
+      "town": "Wallingford",
+      "state": "Connecticut",
+      "county": "New Haven County",
+      "address": "1339 Whirlwind Hill Road, Wallingford, CT 06492",
+      "official_url": "https://www.gouveiavineyards.com/",
+      "summary": "A hilltop tasting room on Whirlwind Hill billing itself \"where the old world meets the new,\" pouring estate wines with long valley views — one of the best-known stops on the Connecticut Wine Trail's central stretch. Hours Mon-Sat 11 a.m.-8 p.m., Sun 11 a.m.-6 p.m. Phone (203) 265-5526.",
+      "status": "open",
+      "photos": [
+        {
+          "src": "/photos/ct/wallingford/vineyard-wallingford-sunset.jpg",
+          "thumb": "/photos/ct/wallingford/vineyard-wallingford-sunset_thumb.jpg",
+          "title": "A vineyard in Wallingford",
+          "description": "A vineyard at sunset in Wallingford — believed to be Gouveia Vineyards, the town's only commercial vineyard.",
+          "author": "Karl Thomas Moore",
+          "license": "CC BY-SA 4.0",
+          "source_url": "https://commons.wikimedia.org/wiki/File:Vineyard_in_Wallingford.jpg"
+        }
+      ]
+    },
+    {
+      "slug": "ann-george-colony-hall",
+      "name": "Ann & George Colony Hall (Wallingford Symphony Orchestra)",
+      "kind": "theater",
+      "town": "Wallingford",
+      "state": "Connecticut",
+      "county": "New Haven County",
+      "address": "333 Christian Street, Wallingford, CT 06492",
+      "official_url": "https://www.wallingfordsymphony.org/concerts",
+      "summary": "The concert hall on the Choate Rosemary Hall campus, home stage of the Wallingford Symphony Orchestra. The 2026-27 season opens October 25, 2026 with \"A Tribute to Herb Alpert & Sergio Mendes\"; some concerts, including an annual Patriotic Pops, are held outdoors on the Choate Chapel Lawn.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "downtown-wallingford-historic-streetscape",
+      "name": "Downtown Wallingford Historic Streetscape",
+      "kind": "historic-site",
+      "town": "Wallingford",
+      "state": "Connecticut",
+      "county": "New Haven County",
+      "address": "Center Street, North Cherry Street, Hall Avenue and South Main Street, Wallingford, CT 06492",
+      "official_url": "https://www.wallingfordct.gov/our-town/points-of-interest/",
+      "summary": "A compact walkable district: Fishbein Park with its 1986 gazebo; the 1871 Hartford & New Haven Railroad depot, a Second Empire landmark closed to the public as a station since 1994; Center Street Cemetery with burials as early as 1673; the 1847 Hall Elton Building; the 1895 Wallace Hose House with its hose-drying tower; and the 1916 Beaux-Arts Town Hall named for Lyman Hall.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "wharton-brook-state-park",
+      "name": "Wharton Brook State Park",
+      "kind": "park",
+      "town": "Wallingford",
+      "state": "Connecticut",
+      "county": "New Haven County",
+      "address": "675 US Route 5, Wallingford/North Haven, CT",
+      "official_url": "https://ctparks.com/node/149",
+      "summary": "A 96-acre park established in 1918 as a motorists' wayside — a forerunner of the modern highway rest area and one of Connecticut's earliest state parks — straddling the Wallingford/North Haven line. A designated Trout Park with swimming, picnicking, a perimeter hiking loop and winter ice skating. Open daily 8 a.m. to sunset, free admission. Phone (203) 287-5658.",
+      "status": "open",
+      "photos": [
+        {
+          "src": "/photos/ct/wallingford/wharton-brook-state-park.jpg",
+          "thumb": "/photos/ct/wallingford/wharton-brook-state-park_thumb.jpg",
+          "title": "Wharton Brook State Park",
+          "description": "Allen Brook Pond at dusk in Wharton Brook State Park.",
+          "author": "Morrowlong",
+          "license": "CC BY-SA 4.0",
+          "source_url": "https://commons.wikimedia.org/wiki/File:Allen_Brook_Pond_in_Wharton_Brook_SP_at_dusk.jpg"
+        }
+      ]
+    },
+    {
+      "slug": "center-street-brewing-company",
+      "name": "Center Street Brewing Company",
+      "kind": "brewery",
+      "town": "Wallingford",
+      "state": "Connecticut",
+      "county": "New Haven County",
+      "address": "24 Wallace Avenue, Wallingford, CT 06492",
+      "official_url": "https://www.centerstreetbrewing.com/",
+      "summary": "Wallingford's hometown craft brewery, with a rotating tap list spanning ESBs, lagers, double IPAs and stouts, plus a brewery club and regular taproom events. Hours closed Mon-Tue, Wed-Fri 4-10 p.m., Sat noon-10 p.m., Sun noon-7 p.m. Phone (203) 626-9056.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "gaetanos-tavern-on-main",
+      "name": "Gaetano's Tavern on Main",
+      "kind": "restaurant",
+      "town": "Wallingford",
+      "state": "Connecticut",
+      "county": "New Haven County",
+      "address": "40 North Main Street, Wallingford, CT 06492",
+      "official_url": "https://www.gaetanostavern.com/",
+      "summary": "A downtown American tavern known for Penne alla Vodka, Yankee Pot Roast and Shrimp Gaetano, with a casual bar and outdoor seating. Hours Sun 11 a.m.-8:30 p.m., Mon-Fri 11:30 a.m.-9 p.m., Sat 11:30 a.m.-10 p.m. Phone (203) 294-1114.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "the-bees-knees-bistro",
+      "name": "The Bees Knees Bistro",
+      "kind": "restaurant",
+      "town": "Wallingford",
+      "state": "Connecticut",
+      "county": "New Haven County",
+      "address": "350 Center Street, Wallingford, CT 06492",
+      "official_url": "https://beeskneesbistro.net/",
+      "summary": "A small family-owned breakfast-and-lunch bistro; breakfast runs weekday mornings through mid-day, weekends until noon, with a menu ranging from pancakes and eggs to falafel. No reservations. Hours Mon-Fri 7 a.m.-2:30 p.m., Sat-Sun 8 a.m.-2:30 p.m. Phone (203) 303-1955.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "green-kettle-coffee",
+      "name": "Green Kettle Coffee",
+      "kind": "cafe",
+      "town": "Wallingford",
+      "state": "Connecticut",
+      "county": "New Haven County",
+      "address": "208 Center Street, Wallingford, CT 06492",
+      "official_url": "https://www.greenkettlecoffee.com/",
+      "summary": "A specialty coffee and espresso bar founded by two sisters who moved to Wallingford during the pandemic to fill a gap in the local specialty-coffee scene; also runs a mobile espresso cart for events. Hours Mon-Fri 7 a.m.-4 p.m., Sat-Sun 8 a.m.-4 p.m. Phone (203) 793-7186.",
+      "status": "open",
+      "photos": []
+    }
+  ],
+  "entries": [
+    {
+      "kind": "sight",
+      "name": "Toyota Presents the Oakdale Theatre",
+      "place_slug": "toyota-oakdale-theatre",
+      "note": "Wallingford's marquee touring-music venue since 1954."
+    },
+    {
+      "kind": "sight",
+      "name": "Gouveia Vineyards",
+      "place_slug": "gouveia-vineyards",
+      "note": "A hilltop tasting room on the Connecticut Wine Trail."
+    },
+    {
+      "kind": "sight",
+      "name": "Ann & George Colony Hall",
+      "place_slug": "ann-george-colony-hall",
+      "note": "Home stage of the Wallingford Symphony Orchestra."
+    },
+    {
+      "kind": "sight",
+      "name": "Downtown Wallingford Historic Streetscape",
+      "place_slug": "downtown-wallingford-historic-streetscape",
+      "note": "A walkable district anchored by the 1916 Beaux-Arts Town Hall."
+    },
+    {
+      "kind": "sight",
+      "name": "Wharton Brook State Park",
+      "place_slug": "wharton-brook-state-park",
+      "note": "One of Connecticut's earliest state parks, a designated Trout Park."
+    },
+    {
+      "kind": "food",
+      "name": "Center Street Brewing Company",
+      "place_slug": "center-street-brewing-company",
+      "note": "Wallingford's hometown craft brewery."
+    },
+    {
+      "kind": "food",
+      "name": "Gaetano's Tavern on Main",
+      "place_slug": "gaetanos-tavern-on-main",
+      "note": "A downtown American tavern known for its Penne alla Vodka."
+    },
+    {
+      "kind": "food",
+      "name": "The Bees Knees Bistro",
+      "place_slug": "the-bees-knees-bistro",
+      "note": "A small family-owned breakfast-and-lunch bistro."
+    },
+    {
+      "kind": "food",
+      "name": "Green Kettle Coffee",
+      "place_slug": "green-kettle-coffee",
+      "note": "A specialty coffee bar founded by two sisters."
+    }
+  ],
+  "links": [
+    {
+      "target": "guide:cheshire-ct-travel-guide",
+      "kind": "nearby",
+      "note": "Cheshire was settled as part of Wallingford before separating and incorporating in 1780."
+    },
+    {
+      "target": "guide:north-haven-ct-travel-guide",
+      "kind": "nearby",
+      "note": "Wharton Brook State Park sits on the Wallingford/North Haven line, and Quinnipiac River State Park spans both towns."
+    },
+    {
+      "target": "guide:hamden-ct-travel-guide",
+      "kind": "same-region",
+      "note": "A nearby Residence Inn in Hamden is among the closest lodging alternatives to Wallingford's own hotels."
+    },
+    {
+      "target": "guide:midtown-manhattan-guide",
+      "kind": "see-also",
+      "note": "Amtrak trains from Wallingford station reach New York, and a change at New Haven connects to Metro-North's New Haven Line for Grand Central Terminal."
+    }
+  ]
+}

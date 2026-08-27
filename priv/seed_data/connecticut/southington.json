@@ -1,0 +1,292 @@
+{
+  "guide": {
+    "slug": "southington-ct-travel-guide",
+    "title": "Southington, Connecticut: Birthplace of the American Nut and Bolt",
+    "destination": "Southington, Connecticut",
+    "state": "Connecticut",
+    "county": "Hartford County",
+    "intro": "Southington's first European settler, Samuel Woodruff, moved south from Farmington to an area then known as \"Panthorne\" around 1698; a meeting house independent of the Farmington parish, built in 1726, created the \"South Society of Farmington,\" a name later shortened to \"South Farmington\" and then Southington, which formally incorporated as an independent town on February 15, 1779. Industry arrived early — Atwater's grist mill in 1767, and by 1790 a button factory, saw mills, a brass foundry and potash works. In the mid-1800s Micah Rugg and Martin Barnes ran a factory producing the first machine-made nuts and bolts, with Rugg patenting bolt-trimming machinery in 1842, making Southington the birthplace of the American nut-and-bolt industry. George Washington, the Marquis de Lafayette and the Comte de Rochambeau all passed through town during the Revolution, and Southington's Apple Harvest Festival, running since 1969, draws over 100,000 people to the Town Green each October.",
+    "sections": [
+      {
+        "heading": "Wooden coasters and a homestead intact since 1973",
+        "body": "The Barnes Museum, an 1836 Greek Revival homestead built for Amon and Sylvia Bradley, stayed in the family for 137 years until grandson Bradley Barnes — reputedly \"the richest man in Southington\" — bequeathed the house and all its contents to the town on his death in 1973, so its interiors are original rather than reconstructed. Lake Compounce, which opened in 1846 and is the oldest continuously operating amusement park in the United States, straddles the Bristol-Southington line; its 1927 Wildcat is among the oldest operating roller coasters in the world, and the wooden Boulder Dash has repeatedly won the Golden Ticket Award for Best Wooden Coaster. Rogers Orchards, an eight-generation family farm established in 1809, runs pick-your-own apples from Labor Day weekend through October and a bakery turning out cider donuts daily."
+      },
+      {
+        "heading": "Getting there",
+        "body": "Southington sits at the crossroads of I-84 (the Yankee Expressway) and I-691, which connects east toward Meriden and I-91. There is no rail station in Southington; rail travelers use the CTrail Hartford Line and Amtrak stops at Meriden or Berlin, or Metro-North's Waterbury Branch terminus in Waterbury — though Waterbury Branch trains are replaced by buses from July 20, 2026 through May 31, 2027 for station reconstruction — and finish by car. CTtransit's Route 928 Southington-Cheshire-Waterbury Express runs onto the CTfastrak busway into downtown Hartford."
+      },
+      {
+        "heading": "A brewery in a bolt factory",
+        "body": "Kinsmen Brewing Company occupies a restored 1854 factory building — the former Clark Brothers Bolt Company — tying directly into Southington's nut-and-bolt heritage, its taproom fitted with reclaimed lumber and pipes from the mill, and it sits directly on the Farmington Canal Heritage Trail. Witchdoctor Brewing Company runs a downtown taproom built around a 34-foot bar of reclaimed wood, with photographs of musicians who've played Connecticut shows on the walls. Long View Ciderhouse, built on the Rogers Orchards property, runs a seasonal Orchard Bar & Cider Truck among the apple trees and a year-round bottle shop."
+      }
+    ],
+    "faq": [
+      {
+        "question": "How do I get to Southington?",
+        "answer": "By car — I-84 (the Yankee Expressway) and I-691 both serve the town. There is no rail station in Southington; the nearest CTrail Hartford Line stops are Meriden and Berlin."
+      },
+      {
+        "question": "Is there a train to Southington?",
+        "answer": "No. The nearest CTrail Hartford Line and Amtrak stops are Meriden and Berlin, both reached by car. Metro-North's Waterbury Branch terminates in nearby Waterbury, but Branch trains are replaced by buses from July 20, 2026 through May 31, 2027 for station reconstruction."
+      },
+      {
+        "question": "Is Lake Compounce in Southington?",
+        "answer": "Lake Compounce straddles the Bristol-Southington line; its main address and gate are in Bristol. It's the oldest continuously operating amusement park in the United States, opened in 1846."
+      },
+      {
+        "question": "What is the Barnes Museum?",
+        "answer": "An 1836 Greek Revival homestead at 85 North Main Street, bequeathed to the town with all its original contents in 1973. Open Wed/Thu/Fri 1-5 p.m. plus select Saturdays; admission $10 adults, $8 seniors, $5 students, free for Southington Public Library cardholders and children under 5."
+      },
+      {
+        "question": "Is there a hotel in Southington?",
+        "answer": "Southington's hotel cluster sits along West Street near I-84, though current operating status could not be independently confirmed — call ahead. The Farmington Inn, an independent inn in neighboring Farmington, is a verified alternative."
+      }
+    ],
+    "photos": [
+      {
+        "src": "/photos/ct/southington/southington-town-green.jpg",
+        "thumb": "/photos/ct/southington/southington-town-green_thumb.jpg",
+        "title": "Southington Town Green",
+        "description": "The Southington Town Green, home of the annual Apple Harvest Festival.",
+        "author": "Ethan Long",
+        "license": "CC BY-SA 2.0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Southington_Town_Green_(54531521019).jpg"
+      },
+      {
+        "src": "/photos/ct/southington/southington-town-green-2.jpg",
+        "thumb": "/photos/ct/southington/southington-town-green-2_thumb.jpg",
+        "title": "Southington Town Green, second view",
+        "description": "Another view across the Southington Town Green.",
+        "author": "Ethan Long",
+        "license": "CC BY-SA 2.0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Southington_Town_Green_(54531681460).jpg"
+      },
+      {
+        "src": "/photos/ct/southington/farmington-canal-trail-southington.jpg",
+        "thumb": "/photos/ct/southington/farmington-canal-trail-southington_thumb.jpg",
+        "title": "Farmington Canal Heritage Trail, Southington",
+        "description": "The Farmington Canal Heritage Trail passing through Southington.",
+        "author": "John Phelan",
+        "license": "CC BY 4.0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Farmington_Canal_Heritage_Trail,_Southington_CT.jpg"
+      }
+    ]
+  },
+  "places": [
+    {
+      "slug": "the-barnes-museum",
+      "name": "The Barnes Museum",
+      "kind": "museum",
+      "town": "Southington",
+      "state": "Connecticut",
+      "county": "Hartford County",
+      "address": "85 North Main Street, Southington, CT 06489",
+      "official_url": "http://www.thebarnesmuseum.org/",
+      "summary": "An 1836 Greek Revival homestead built for Amon and Sylvia Bradley, in the family for 137 years until Bradley Barnes bequeathed it and all its contents to the Town of Southington in 1973 — original interiors, not reconstructed. Open Wed/Thu/Fri 1-5 p.m., plus by appointment and select Saturdays. Admission $10 general, $8 seniors, $5 students, free for museum members and children under 5. Phone (860) 628-5426.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "rogers-orchards",
+      "name": "Rogers Orchards",
+      "kind": "attraction",
+      "town": "Southington",
+      "state": "Connecticut",
+      "county": "Hartford County",
+      "address": "Home Farm: 336 Long Bottom Road; Sunnymount Farm: 2876 Meriden-Waterbury Turnpike, Southington, CT 06489",
+      "official_url": "http://rogersorchards.com/",
+      "summary": "An eight-generation family farm established in 1809. Both farm stores are open seven days a week, 9 a.m.-6 p.m. Pick-your-own apples typically run Labor Day weekend through October, Fridays-Sundays; call to confirm current-year field openings. The bakery turns out apple cider donuts, fruit pies, fritters and dumplings daily. Home Farm (860) 229-4240; Sunnymount (203) 879-1206.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "mount-southington-ski-area",
+      "name": "Mount Southington Ski Area",
+      "kind": "attraction",
+      "town": "Southington",
+      "state": "Connecticut",
+      "county": "Hartford County",
+      "address": "396 Mount Vernon Road, Plantsville, CT 06479",
+      "official_url": "https://www.mountsouthington.com/",
+      "summary": "Central Connecticut's local ski hill, with 14 trails served by 8 lifts, running a full winter season and converting to weddings, camps and events in the warm months. Phone (860) 628-0954.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "farmington-canal-heritage-trail-southington",
+      "name": "Farmington Canal Heritage Trail (Southington)",
+      "kind": "park",
+      "town": "Southington",
+      "state": "Connecticut",
+      "county": "Hartford County",
+      "address": "Trail runs north to Aircraft Road, Southington, CT, paralleling Route 10 through Plantsville and Milldale",
+      "official_url": "https://www.fchtrail.org/",
+      "summary": "A rail-trail following the bed of the Farmington Canal, which broke ground July 4, 1825, and the New Haven-Northampton Company railroad that replaced it in 1847. A long continuous paved stretch runs from New Haven north into Southington, ending near Aircraft Road; check the trail association's current maps for the latest connections.",
+      "status": "open",
+      "photos": [
+        {
+          "src": "/photos/ct/southington/farmington-canal-trail-southington.jpg",
+          "thumb": "/photos/ct/southington/farmington-canal-trail-southington_thumb.jpg",
+          "title": "Farmington Canal Heritage Trail, Southington",
+          "description": "The Farmington Canal Heritage Trail passing through Southington.",
+          "author": "John Phelan",
+          "license": "CC BY 4.0",
+          "source_url": "https://commons.wikimedia.org/wiki/File:Farmington_Canal_Heritage_Trail,_Southington_CT.jpg"
+        }
+      ]
+    },
+    {
+      "slug": "crescent-lake-southington",
+      "name": "Crescent Lake",
+      "kind": "park",
+      "town": "Southington",
+      "state": "Connecticut",
+      "county": "Hartford County",
+      "address": "495 Shuttle Meadow Road, Southington, CT 06489",
+      "official_url": "http://www.southingtonct.gov/departments/highway_parks_department/directions_to_parks.php",
+      "summary": "A town-owned reservoir park on Southington's eastern ridge with walking trails, one of the town's major public parks alongside Panthorn Park and Recreation Park. Recreation Department (860) 276-6217.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "anthony-jacks-wood-fired-grill",
+      "name": "Anthony Jack's Wood Fired Grill",
+      "kind": "restaurant",
+      "town": "Southington",
+      "state": "Connecticut",
+      "county": "Hartford County",
+      "address": "30 Center Street, Southington, CT 06489",
+      "official_url": "https://www.anthonyjacksrestaurant.com/",
+      "summary": "Open since 2001 in downtown Southington, serving Angus steaks and fresh seafood over a wood-fired grill, with a patio for outdoor dining. Lunch and dinner service six days a week. Phone (860) 426-1487.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "witchdoctor-brewing-company",
+      "name": "Witchdoctor Brewing Company",
+      "kind": "brewery",
+      "town": "Southington",
+      "state": "Connecticut",
+      "county": "Hartford County",
+      "address": "168 Center Street, Southington, CT 06489",
+      "official_url": "https://www.witchdoctorbrewing.com/",
+      "summary": "A downtown taproom built around a 34-foot bar and tables handmade from wood reclaimed while building the brewhouse, with photographs of musicians who've played Connecticut shows and live music some evenings. Closed Mon-Tue; Wed-Thu 4-10 p.m., Fri 4-11 p.m., Sat 1-11 p.m., Sun noon-6 p.m.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "long-view-ciderhouse",
+      "name": "Long View Ciderhouse",
+      "kind": "brewery",
+      "town": "Southington",
+      "state": "Connecticut",
+      "county": "Hartford County",
+      "address": "On the Rogers Orchards property, 336 Long Bottom Road, Southington, CT 06489",
+      "official_url": "https://www.longviewcider.com/",
+      "summary": "A branch-to-bottle ciderhouse and distillery built on Rogers Orchards, using fruit grown on the property. The seasonal Orchard Bar & Cider Truck serves outdoors amid the apple trees, Thu-Fri 4-8 p.m., Sat noon-8 p.m., Sun noon-7 p.m.; the bottle shop is open daily 10 a.m.-4:30 p.m.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "nardellis-grinder-shoppe-southington",
+      "name": "Nardelli's Grinder Shoppe",
+      "kind": "restaurant",
+      "town": "Southington",
+      "state": "Connecticut",
+      "county": "Hartford County",
+      "address": "Queen Street, Southington, CT 06489",
+      "official_url": "https://www.nardellis.com/",
+      "summary": "A Connecticut grinder institution founded in 1922, family owned and operated across three generations, with online ordering, delivery, pickup and catering. Hours vary by location; most locations close Sundays.",
+      "status": "open",
+      "photos": []
+    }
+  ],
+  "entries": [
+    {
+      "kind": "sight",
+      "name": "The Barnes Museum",
+      "place_slug": "the-barnes-museum",
+      "note": "An 1836 homestead bequeathed intact to the town in 1973."
+    },
+    {
+      "kind": "sight",
+      "name": "Rogers Orchards",
+      "place_slug": "rogers-orchards",
+      "note": "An eight-generation family farm since 1809."
+    },
+    {
+      "kind": "sight",
+      "name": "Mount Southington Ski Area",
+      "place_slug": "mount-southington-ski-area",
+      "note": "Central Connecticut's local ski hill."
+    },
+    {
+      "kind": "walk",
+      "name": "Farmington Canal Heritage Trail (Southington)",
+      "place_slug": "farmington-canal-heritage-trail-southington",
+      "note": "A paved rail-trail along the historic canal towpath."
+    },
+    {
+      "kind": "walk",
+      "name": "Crescent Lake",
+      "place_slug": "crescent-lake-southington",
+      "note": "A reservoir park with walking trails."
+    },
+    {
+      "kind": "food",
+      "name": "Anthony Jack's Wood Fired Grill",
+      "place_slug": "anthony-jacks-wood-fired-grill",
+      "note": "Angus steaks over a wood-fired grill since 2001."
+    },
+    {
+      "kind": "food",
+      "name": "Witchdoctor Brewing Company",
+      "place_slug": "witchdoctor-brewing-company",
+      "note": "A downtown taproom with live music."
+    },
+    {
+      "kind": "food",
+      "name": "Long View Ciderhouse",
+      "place_slug": "long-view-ciderhouse",
+      "note": "A cidery and distillery on Rogers Orchards."
+    },
+    {
+      "kind": "food",
+      "name": "Nardelli's Grinder Shoppe",
+      "place_slug": "nardellis-grinder-shoppe-southington",
+      "note": "A Connecticut grinder institution since 1922."
+    }
+  ],
+  "links": [
+    {
+      "target": "guide:plainville-ct-travel-guide",
+      "kind": "nearby",
+      "note": "Southington borders Plainville to the north."
+    },
+    {
+      "target": "guide:bristol-ct-travel-guide",
+      "kind": "nearby",
+      "note": "Southington borders Bristol; Lake Compounce straddles the town line between them."
+    },
+    {
+      "target": "guide:bristol-ct-travel-guide",
+      "kind": "shared-history",
+      "note": "Lake Compounce, open since 1846, straddles the Bristol-Southington town line."
+    },
+    {
+      "target": "guide:berlin-ct-travel-guide",
+      "kind": "nearby",
+      "note": "Southington borders Berlin; Ragged Mountain straddles both towns."
+    },
+    {
+      "target": "guide:cheshire-ct-travel-guide",
+      "kind": "nearby",
+      "note": "Southington borders Cheshire to the south."
+    },
+    {
+      "target": "guide:wolcott-ct-travel-guide",
+      "kind": "nearby",
+      "note": "Southington borders Wolcott to the west."
+    }
+  ]
+}

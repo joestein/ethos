@@ -1,0 +1,273 @@
+{
+  "guide": {
+    "slug": "monroe-ct-travel-guide",
+    "title": "Monroe, Connecticut: Ghost Hunters and a Dam-Made Lake",
+    "destination": "Monroe, Connecticut",
+    "state": "Connecticut",
+    "county": "Fairfield County",
+    "intro": "Monroe's land passed to Stratford's control in 1671 through the White Hills Purchase from the Paugusset, but the town itself was incorporated separately from Huntington — today's Shelton — in May 1823, and named for President James Monroe, then in office. It had earlier been known as the parish of New Stratford. Monroe grew up around three villages, Stepney, Stevenson and Monroe Center, and in the 19th century became a transportation hub for travelers moving between Danbury, Bridgeport and New York; today it serves largely as a bedroom community. The Stevenson Dam, built 1917-1919 on the Monroe-Oxford line, impounded the Housatonic to create Lake Zoar and its 27 miles of shoreline. In 1952 paranormal investigators Ed and Lorraine Warren founded the New England Society for Psychic Research in Monroe.",
+    "sections": [
+      {
+        "heading": "A dam-made lake and the Warrens' legacy",
+        "body": "The Stevenson Dam Hydroelectric Plant, built 1917-1919 on the Monroe-Oxford town line, impounded the Housatonic River to create Lake Zoar; Route 34 crosses on a reinforced-concrete bridge integral with the dam, which was added to the National Register of Historic Places in 2000. Ed and Lorraine Warren founded the New England Society for Psychic Research in Monroe in 1952, noted by some as the oldest continually operating paranormal group in the country; their Warrens' Occult Museum, however, is no longer open to the public. The Pequonnock River rises inside William E. Wolfe Park, and Monroe's northern edge borders Lake Zoar."
+      },
+      {
+        "heading": "Getting there",
+        "body": "Monroe has no railroad station of its own. Most visitors arrive by car on Route 25 or Route 111 from the Bridgeport/Merritt Parkway side, or on Route 34 along the Housatonic from the I-84 side; Route 25 itself runs Bridgeport-Trumbull-Monroe-Newtown-Brookfield. Rail travelers should use Metro-North's Bridgeport station on the New Haven Line, about 10.7 miles away; the closer Derby-Shelton stop on the Waterbury Branch, 6.4 miles from Monroe, has its rail service replaced by buses from July 20, 2026 through May 31, 2027 during a station reconstruction."
+      }
+    ],
+    "faq": [
+      {
+        "question": "How do I get to Monroe?",
+        "answer": "By car — Route 25 or Route 111 from the Bridgeport/Merritt Parkway side, or Route 34 along the Housatonic. There is no rail station in Monroe; the nearest working Metro-North stop is Bridgeport, about 10.7 miles away."
+      },
+      {
+        "question": "Is there a train near Monroe?",
+        "answer": "The closer option, Derby-Shelton on the Waterbury Branch (6.4 miles away), has its rail service replaced by buses from July 20, 2026 through May 31, 2027 for a station rebuild. Use Bridgeport station instead during that window."
+      },
+      {
+        "question": "Can I visit the Warrens' Occult Museum?",
+        "answer": "No — it is no longer open to the public and sits on private property."
+      },
+      {
+        "question": "Is there a golf course open to the public in Monroe?",
+        "answer": "Yes — Chris Bargas Golf Club & Event Venue at Whitney Farms, an 18-hole public course renamed in 2024, with tee times seven days a week."
+      },
+      {
+        "question": "Is there a hotel in Monroe?",
+        "answer": "No lodging inside Monroe could be verified."
+      }
+    ],
+    "photos": [
+      {
+        "src": "/photos/ct/monroe/monroe-center-hd-bandstand.jpg",
+        "thumb": "/photos/ct/monroe/monroe-center-hd-bandstand_thumb.jpg",
+        "title": "Monroe town green bandstand",
+        "description": "The white octagonal bandstand on Monroe's town green, in the Monroe Center Historic District.",
+        "author": "Magicpiano",
+        "license": "CC BY-SA 4.0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:MonroeCT_CenterHD5.jpg"
+      },
+      {
+        "src": "/photos/ct/monroe/monroe-town-hall.jpg",
+        "thumb": "/photos/ct/monroe/monroe-town-hall_thumb.jpg",
+        "title": "Monroe Town Hall",
+        "description": "Monroe Town Hall at Monroe Center.",
+        "author": "Michaelphayes",
+        "license": "CC BY-SA 4.0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Town_Hall_Monroe_Connecticut.jpg"
+      },
+      {
+        "src": "/photos/ct/monroe/great-hollow-lake-monroe.jpg",
+        "thumb": "/photos/ct/monroe/great-hollow-lake-monroe_thumb.jpg",
+        "title": "Great Hollow Lake",
+        "description": "Great Hollow Lake in Monroe, reflecting autumn foliage.",
+        "author": "RabinoWIN",
+        "license": "CC0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Great_Hollow_Lake_at_William_E._Wolfe_Park_in_Monroe,_Connecticut,_viewed_from_east_side.jpg"
+      }
+    ]
+  },
+  "places": [
+    {
+      "slug": "webb-mountain-discovery-zone",
+      "name": "Webb Mountain Discovery Zone",
+      "kind": "park",
+      "town": "Monroe",
+      "state": "Connecticut",
+      "county": "Fairfield County",
+      "address": "71 Webb Circle, Monroe, CT 06468",
+      "official_url": "https://webbmountaindiscoveryzone.com/",
+      "summary": "A 171-acre outdoor learning center off Route 111 with three trails carrying a 27-station scavenger hunt and a bird-watching area near the entrance. Free admission; runs toddler, homeschool and after-school programs each fall.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "william-e-wolfe-park",
+      "name": "William E. Wolfe Park",
+      "kind": "park",
+      "town": "Monroe",
+      "state": "Connecticut",
+      "county": "Fairfield County",
+      "address": "285 Cutlers Farm Road, Monroe, CT 06468",
+      "official_url": "https://monroect.myrec.com/info/facilities/default.aspx",
+      "summary": "Monroe's flagship municipal park, with a swimming pool, ball fields, soccer and football fields, tennis/pickleball courts, trails and a bike path; the Pequonnock River rises inside the park. Check the town's facility portal for same-day closures before visiting.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "great-hollow-lake-monroe",
+      "name": "Great Hollow Lake",
+      "kind": "park",
+      "town": "Monroe",
+      "state": "Connecticut",
+      "county": "Fairfield County",
+      "address": "454 Purdy Hill Road, Monroe, CT 06468",
+      "official_url": "https://monroect.myrec.com/info/facilities/default.aspx",
+      "summary": "Town lake park with a beach area, softball fields and a pavilion. Swimming status changes with water conditions — check the Parks & Recreation portal before planning a swim day.",
+      "status": "open",
+      "photos": [
+        {
+          "src": "/photos/ct/monroe/great-hollow-lake-monroe.jpg",
+          "thumb": "/photos/ct/monroe/great-hollow-lake-monroe_thumb.jpg",
+          "title": "Great Hollow Lake",
+          "description": "Great Hollow Lake in Monroe, reflecting autumn foliage.",
+          "author": "RabinoWIN",
+          "license": "CC0",
+          "source_url": "https://commons.wikimedia.org/wiki/File:Great_Hollow_Lake_at_William_E._Wolfe_Park_in_Monroe,_Connecticut,_viewed_from_east_side.jpg"
+        }
+      ]
+    },
+    {
+      "slug": "webb-mountain-park-monroe",
+      "name": "Webb Mountain Park",
+      "kind": "park",
+      "town": "Monroe",
+      "state": "Connecticut",
+      "county": "Fairfield County",
+      "address": "Old Fish House Road, Monroe, CT 06468",
+      "official_url": "https://monroect.myrec.com/info/facilities/default.aspx",
+      "summary": "Wooded town park in northern Monroe near the Housatonic, with 11 campsites — an unusual amenity for a municipal park.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "chris-bargas-golf-club-whitney-farms",
+      "name": "Chris Bargas Golf Club & Event Venue at Whitney Farms",
+      "kind": "attraction",
+      "town": "Monroe",
+      "state": "Connecticut",
+      "county": "Fairfield County",
+      "address": "175 Shelton Road, Monroe, CT 06468",
+      "official_url": "https://www.whitneyfarmsgc.com/",
+      "summary": "An 18-hole public course designed by Hal C. Purdy, renamed in 2024 from Whitney Farms to honor founder Chris Bargas Sr. Tee times available seven days a week. Pro Shop (203) 268-0707.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "the-smithy-restaurant",
+      "name": "The Smithy Restaurant",
+      "kind": "restaurant",
+      "town": "Monroe",
+      "state": "Connecticut",
+      "county": "Fairfield County",
+      "address": "171 Main St, Monroe, CT 06468",
+      "official_url": "https://smithyrestaurantct.com/",
+      "summary": "Family steakhouse opened in 1973, serving steaks, seafood and stuffed scallops in a room filled with local antiques, under current ownership since February 2020. Dinner only, closed Mondays, 5 p.m. seatings Tuesday-Sunday.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "testos-restaurant-banquets",
+      "name": "Testo's Restaurant & Banquets",
+      "kind": "restaurant",
+      "town": "Monroe",
+      "state": "Connecticut",
+      "county": "Fairfield County",
+      "address": "505 Main St, Monroe, CT 06468",
+      "official_url": "https://testosmonroe.com/",
+      "summary": "Italian-American cornerstone founded in 1976, known for homemade pastas and oversized stuffed shrimp. Lunch and dinner Tuesday-Sunday; Mondays reserved for private events.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "monroe-social",
+      "name": "Monroe Social",
+      "kind": "restaurant",
+      "town": "Monroe",
+      "state": "Connecticut",
+      "county": "Fairfield County",
+      "address": "494 Main Street, Monroe, CT 06468",
+      "official_url": "https://themonroesocial.com/",
+      "summary": "Modern American gastropub with a deep bourbon and whiskey list, Friday-night karaoke and brunch. Hours Mon-Thu 4-9 p.m., Fri-Sat noon-10 p.m., Sun noon-8 p.m.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "mr-macs-canteen-monroe",
+      "name": "Mr. Mac's Canteen",
+      "kind": "restaurant",
+      "town": "Monroe",
+      "state": "Connecticut",
+      "county": "Fairfield County",
+      "address": "838 Main St, Monroe, CT 06468",
+      "official_url": "https://www.mrmacscanteen.com/",
+      "summary": "Fast-casual counter open early for breakfast through dinner, with a second Connecticut location in Milford and a food truck. Open Mon-Sat 7 a.m.-8 p.m., Sun 8 a.m.-4 p.m. Phone (203) 459-9595.",
+      "status": "open",
+      "photos": []
+    }
+  ],
+  "entries": [
+    {
+      "kind": "sight",
+      "name": "Webb Mountain Discovery Zone",
+      "place_slug": "webb-mountain-discovery-zone",
+      "note": "A 171-acre outdoor learning center."
+    },
+    {
+      "kind": "sight",
+      "name": "William E. Wolfe Park",
+      "place_slug": "william-e-wolfe-park",
+      "note": "Monroe's flagship municipal park."
+    },
+    {
+      "kind": "sight",
+      "name": "Great Hollow Lake",
+      "place_slug": "great-hollow-lake-monroe",
+      "note": "A town lake park with a beach."
+    },
+    {
+      "kind": "sight",
+      "name": "Webb Mountain Park",
+      "place_slug": "webb-mountain-park-monroe",
+      "note": "Wooded park with 11 campsites."
+    },
+    {
+      "kind": "sight",
+      "name": "Chris Bargas Golf Club & Event Venue at Whitney Farms",
+      "place_slug": "chris-bargas-golf-club-whitney-farms",
+      "note": "An 18-hole public golf course."
+    },
+    {
+      "kind": "food",
+      "name": "The Smithy Restaurant",
+      "place_slug": "the-smithy-restaurant",
+      "note": "A steakhouse since 1973."
+    },
+    {
+      "kind": "food",
+      "name": "Testo's Restaurant & Banquets",
+      "place_slug": "testos-restaurant-banquets",
+      "note": "Italian-American since 1976."
+    },
+    {
+      "kind": "food",
+      "name": "Monroe Social",
+      "place_slug": "monroe-social",
+      "note": "A gastropub with Friday karaoke."
+    },
+    {
+      "kind": "food",
+      "name": "Mr. Mac's Canteen",
+      "place_slug": "mr-macs-canteen-monroe",
+      "note": "Fast-casual breakfast through dinner."
+    }
+  ],
+  "links": [
+    {
+      "target": "guide:trumbull-ct-travel-guide",
+      "kind": "nearby",
+      "note": "Route 111 runs from the Merritt Parkway in Trumbull to Route 34 in Monroe's Stevenson section."
+    },
+    {
+      "target": "guide:shelton-ct-travel-guide",
+      "kind": "shared-history",
+      "note": "Monroe was incorporated from Huntington — today's Shelton — in 1823."
+    },
+    {
+      "target": "guide:newtown-ct-travel-guide",
+      "kind": "nearby",
+      "note": "Route 25 runs Bridgeport-Trumbull-Monroe-Newtown-Brookfield in sequence."
+    }
+  ]
+}

@@ -1,0 +1,265 @@
+{
+  "guide": {
+    "slug": "windsor-locks-ct-travel-guide",
+    "title": "Windsor Locks, Connecticut: A Canal Town That Became an Airport",
+    "destination": "Windsor Locks, Connecticut",
+    "state": "Connecticut",
+    "county": "Hartford County",
+    "intro": "The area was settled in 1633 as part of Windsor and known as Pine Meadow; the town takes its later name from the canal locks built around Enfield Falls, part of the Enfield Falls Canal that broke ground in June 1827 and opened in November 1829 under engineer Canvass White. Irish immigrants made up a large share of the canal workforce and reshaped the town — an Irish population near 1 percent of Windsor's residents before the canal grew to almost 20 percent within 30 years — and the settlement was formally recognized as Windsor Locks in 1854. Connecticut bought 1,700 acres of local tobacco farmland in 1941 for what became Bradley International Airport, renamed in 1942 for Lt. Eugene M. Bradley after he died in a training crash; civilian service began in 1947. Ella Tambussi Grasso, born here in 1919, became the first woman elected governor of a U.S. state in her own right in 1975.",
+    "sections": [
+      {
+        "heading": "A canal-power century and a governor's train",
+        "body": "Once the canal's usefulness for shipping faded after railroads reached town in 1844, it became an industrial power source for roughly a century, driving textile mills, paper mills and foundries; C.H. Dexter and Sons, founded in 1767 as a saw and grist mill, grew into the Dexter Corporation, until 2000 the oldest corporation listed on the New York Stock Exchange. On January 8, 1975, Ella Grasso boarded a train at the town's 1875 depot for her inauguration as governor. That Windsor Locks Passenger Station, threatened with demolition, was saved by the Save the Station Committee and listed on the National Register of Historic Places in 1975; Penn Central closed the building to passengers in 1971, and the site kept serving trains from its platform until 1981, when Amtrak moved operations to a park-and-ride south of downtown."
+      },
+      {
+        "heading": "Getting there",
+        "body": "Windsor Locks sits on I-91 about halfway between Hartford and Springfield and wraps around Bradley International Airport, with Route 20 as the airport connector and Route 75 (Ella Grasso Turnpike) as the airport commercial strip. The town has its own station, served by CTrail's Hartford Line plus Amtrak Northeast Regional, Valley Flyer and Vermonter trains — but a $87 million rebuild is relocating the station to the historic downtown depot site, with 2026 bus substitutions and modified weekday schedules during construction, so check HartfordLine.com before booking a trip; the new station is expected to open in fall 2027."
+      },
+      {
+        "heading": "Where to eat and stay",
+        "body": "The New England Air Museum, the largest aerospace museum in New England, holds over 100 aircraft including a Boeing B-29A Superfortress and the one-of-a-kind Sikorsky VS-44A flying boat \"Excambian.\" Luppoleto Brewing's original taproom sits in Dexter Plaza, named for the town's historic paper company, pouring 11 house beers alongside Connecticut ciders and wines. Bobby V's Restaurant & Sports Bar sits immediately next to Bradley International Airport, and three chain hotels — Homewood Suites, Candlewood Suites and a DoubleTree — cluster along the Ella Grasso Turnpike airport corridor."
+      }
+    ],
+    "faq": [
+      {
+        "question": "How do I get to Windsor Locks?",
+        "answer": "By car via I-91, or by train — CTrail Hartford Line and Amtrak trains serve Windsor Locks station, though a station rebuild is causing 2026 schedule changes and bus substitutions; check HartfordLine.com before booking."
+      },
+      {
+        "question": "Is there a train to Windsor Locks?",
+        "answer": "Yes, at the current park-and-ride station south of downtown. A new high-level-platform station at the historic 1875 depot site is under construction, expected to open fall 2027."
+      },
+      {
+        "question": "What is the New England Air Museum?",
+        "answer": "The largest aerospace museum in New England, at 36 Perimeter Road, with over 100 aircraft across three hangars. Open daily 9 a.m.-4 p.m. in summer (Memorial Day-Labor Day), Tuesday-Sunday the rest of the year; admission $23 adults, $18 seniors, $13 youth."
+      },
+      {
+        "question": "Is there a hotel in Windsor Locks?",
+        "answer": "Yes — Homewood Suites, Candlewood Suites and a DoubleTree by Hilton all cluster along the Ella Grasso Turnpike near Bradley International Airport. Call ahead to confirm rates and availability."
+      }
+    ],
+    "photos": [
+      {
+        "src": "/photos/ct/windsor-locks/neam-f100.jpg",
+        "thumb": "/photos/ct/windsor-locks/neam-f100_thumb.jpg",
+        "title": "F-100 Super Sabre, New England Air Museum",
+        "description": "A North American F-100 Super Sabre on display at the New England Air Museum in Windsor Locks.",
+        "author": "Carol M. Highsmith",
+        "license": "Public domain",
+        "source_url": "https://commons.wikimedia.org/wiki/File:New_England_Air_Museum_(NEAM)_at_Bradley_International_Airport,_Windsor_Locks,_Connecticut_LCCN2012630905.tif"
+      },
+      {
+        "src": "/photos/ct/windsor-locks/canal-trail-windsor-locks.jpg",
+        "thumb": "/photos/ct/windsor-locks/canal-trail-windsor-locks_thumb.jpg",
+        "title": "Windsor Locks Canal Trail",
+        "description": "The paved towpath of the Windsor Locks Canal Trail State Park.",
+        "author": "John Phelan",
+        "license": "CC BY 4.0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Windsor_Locks_Canal_State_Park_Trail,_Windsor_Locks_CT.jpg"
+      },
+      {
+        "src": "/photos/ct/windsor-locks/noden-reed-museum.jpg",
+        "thumb": "/photos/ct/windsor-locks/noden-reed-museum_thumb.jpg",
+        "title": "Noden-Reed Museum",
+        "description": "The 1862 brick barn at the Noden-Reed Museum in Windsor Locks.",
+        "author": "Magicpiano",
+        "license": "CC BY-SA 3.0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:WindsorLocksCT_NodenReedMuseum1.jpg"
+      }
+    ]
+  },
+  "places": [
+    {
+      "slug": "new-england-air-museum",
+      "name": "New England Air Museum",
+      "kind": "museum",
+      "town": "Windsor Locks",
+      "state": "Connecticut",
+      "county": "Hartford County",
+      "address": "36 Perimeter Road, Windsor Locks, CT 06096",
+      "official_url": "https://www.neam.org/",
+      "summary": "The largest aerospace museum in New England, with over 100 aircraft plus engines, instruments and artifacts across three hangars; signature airframes include a Boeing B-29A Superfortress, a Douglas DC-3 and the one-of-a-kind Sikorsky VS-44A flying boat \"Excambian.\" Open daily 9 a.m.-4 p.m. Memorial Day-Labor Day, Tuesday-Sunday the rest of the year; last admission 3:30 p.m. Admission $23 adults, $18 seniors, $13 youth, $12 veterans.",
+      "status": "open",
+      "photos": [
+        {
+          "src": "/photos/ct/windsor-locks/neam-f100.jpg",
+          "thumb": "/photos/ct/windsor-locks/neam-f100_thumb.jpg",
+          "title": "F-100 Super Sabre, New England Air Museum",
+          "description": "A North American F-100 Super Sabre on display at the New England Air Museum in Windsor Locks.",
+          "author": "Carol M. Highsmith",
+          "license": "Public domain",
+          "source_url": "https://commons.wikimedia.org/wiki/File:New_England_Air_Museum_(NEAM)_at_Bradley_International_Airport,_Windsor_Locks,_Connecticut_LCCN2012630905.tif"
+        }
+      ]
+    },
+    {
+      "slug": "windsor-locks-canal-trail",
+      "name": "Windsor Locks Canal Trail State Park",
+      "kind": "park",
+      "town": "Windsor Locks",
+      "state": "Connecticut",
+      "county": "Hartford County",
+      "address": "Canal Road, Windsor Locks/Suffield, CT 06078",
+      "official_url": "https://ctparks.com/node/151",
+      "summary": "A 4.5-mile paved trail on the towpath where mules once hauled freight barges beside the historic canal. Free, with parking and leashed pets allowed. Season April 1-November 15, closed the rest of the year for bald eagle nesting; open a half hour before sunrise to a half hour after sunset.",
+      "status": "open",
+      "photos": [
+        {
+          "src": "/photos/ct/windsor-locks/canal-trail-windsor-locks.jpg",
+          "thumb": "/photos/ct/windsor-locks/canal-trail-windsor-locks_thumb.jpg",
+          "title": "Windsor Locks Canal Trail",
+          "description": "The paved towpath of the Windsor Locks Canal Trail State Park.",
+          "author": "John Phelan",
+          "license": "CC BY 4.0",
+          "source_url": "https://commons.wikimedia.org/wiki/File:Windsor_Locks_Canal_State_Park_Trail,_Windsor_Locks_CT.jpg"
+        }
+      ]
+    },
+    {
+      "slug": "noden-reed-museum",
+      "name": "Noden-Reed Museum",
+      "kind": "historic-site",
+      "town": "Windsor Locks",
+      "state": "Connecticut",
+      "county": "Hartford County",
+      "address": "58 West Street, Windsor Locks, CT 06096",
+      "official_url": "https://www.windsorlockshistoricalsociety.org/nodeen-reed-musem",
+      "summary": "An 1862 brick barn, one of the few remaining brick barns in New England, and an 1840 farmhouse with period furnishings, antique carriages and 19th-century kitchen items. Local lore holds that Connecticut's first Christmas tree was put up on the property in 1777. Guided tours by appointment only — not a walk-in museum. Admission $2 adults, $1 students/seniors, free for children under 12 and members. Phone (860) 835-3698.",
+      "status": "open",
+      "photos": [
+        {
+          "src": "/photos/ct/windsor-locks/noden-reed-museum.jpg",
+          "thumb": "/photos/ct/windsor-locks/noden-reed-museum_thumb.jpg",
+          "title": "Noden-Reed Museum",
+          "description": "The 1862 brick barn at the Noden-Reed Museum in Windsor Locks.",
+          "author": "Magicpiano",
+          "license": "CC BY-SA 3.0",
+          "source_url": "https://commons.wikimedia.org/wiki/File:WindsorLocksCT_NodenReedMuseum1.jpg"
+        }
+      ]
+    },
+    {
+      "slug": "luppoleto-brewing-windsor-locks",
+      "name": "Luppoleto Brewing Co.",
+      "kind": "brewery",
+      "town": "Windsor Locks",
+      "state": "Connecticut",
+      "county": "Hartford County",
+      "address": "20 Main Street, Unit #15, Windsor Locks, CT 06096",
+      "official_url": "https://luppoleto.com/windsor-locks/",
+      "summary": "The original Luppoleto taproom, in Dexter Plaza, named for the town's historic paper company. Pours 11 house-brewed beers alongside Connecticut ciders, wines and cocktails; seasonal patio open mid-April through October. Hours Wed-Fri 4-9 p.m., Sat 3-8 p.m., closed Sun-Tue.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "doro-marketplace-windsor-locks",
+      "name": "Doro Marketplace",
+      "kind": "cafe",
+      "town": "Windsor Locks",
+      "state": "Connecticut",
+      "county": "Hartford County",
+      "address": "2 National Drive, Windsor Locks, CT 06096",
+      "official_url": "https://www.doromkpl.com/",
+      "summary": "A European-style cafe, bakery and artisan market — fresh baked loaves, cappuccinos, gourmet sandwiches and pastries. One of six Connecticut Doro locations. Open daily 7 a.m.-8 p.m. Phone (860) 370-5003.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "skyline-restaurant-banquet",
+      "name": "Skyline Restaurant & Banquet",
+      "kind": "restaurant",
+      "town": "Windsor Locks",
+      "state": "Connecticut",
+      "county": "Hartford County",
+      "address": "106 Ella Grasso Turnpike, Windsor Locks, CT 06096",
+      "official_url": "https://www.skylinerestaurantct.com/",
+      "summary": "An Italian steakhouse on the airport strip serving hand-cut steaks, prime rib, Italian dishes and fresh seafood, with attached banquet space. Hours Mon-Thu 11 a.m.-1 a.m., Fri-Sat to 2 a.m., Sun noon-9 p.m. Phone (860) 623-9296.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "bobby-vs-restaurant-sports-bar",
+      "name": "Bobby V's Restaurant & Sports Bar",
+      "kind": "restaurant",
+      "town": "Windsor Locks",
+      "state": "Connecticut",
+      "county": "Hartford County",
+      "address": "11 Schoephoester Road, Windsor Locks, CT 06096",
+      "official_url": "https://bobbyvsrestaurant.com/",
+      "summary": "A large sports bar and restaurant immediately next to Bradley International Airport, with a scratch-made menu, handcrafted burgers and craft beer. Kitchen hours 11:30 a.m.-9 p.m. Sun-Wed, to 10 p.m. Thu-Sat. Phone (860) 627-5808.",
+      "status": "open",
+      "photos": []
+    }
+  ],
+  "entries": [
+    {
+      "kind": "sight",
+      "name": "New England Air Museum",
+      "place_slug": "new-england-air-museum",
+      "note": "New England's largest aerospace museum, with over 100 aircraft."
+    },
+    {
+      "kind": "walk",
+      "name": "Windsor Locks Canal Trail State Park",
+      "place_slug": "windsor-locks-canal-trail",
+      "note": "A 4.5-mile paved towpath along the historic canal."
+    },
+    {
+      "kind": "sight",
+      "name": "Noden-Reed Museum",
+      "place_slug": "noden-reed-museum",
+      "note": "An 1862 brick barn and 1840 farmhouse, tours by appointment."
+    },
+    {
+      "kind": "food",
+      "name": "Luppoleto Brewing Co.",
+      "place_slug": "luppoleto-brewing-windsor-locks",
+      "note": "The original taproom, named for the town's paper heritage."
+    },
+    {
+      "kind": "food",
+      "name": "Doro Marketplace",
+      "place_slug": "doro-marketplace-windsor-locks",
+      "note": "A European-style cafe and bakery."
+    },
+    {
+      "kind": "food",
+      "name": "Skyline Restaurant & Banquet",
+      "place_slug": "skyline-restaurant-banquet",
+      "note": "An Italian steakhouse on the airport strip."
+    },
+    {
+      "kind": "food",
+      "name": "Bobby V's Restaurant & Sports Bar",
+      "place_slug": "bobby-vs-restaurant-sports-bar",
+      "note": "A sports bar next to Bradley International Airport."
+    }
+  ],
+  "links": [
+    {
+      "target": "guide:windsor-ct-travel-guide",
+      "kind": "nearby",
+      "note": "Windsor Locks was set off from Windsor in 1854 and borders it to the south."
+    },
+    {
+      "target": "guide:windsor-ct-travel-guide",
+      "kind": "shared-history",
+      "note": "Windsor Locks, named for the canal locks built around Enfield Falls, was formally recognized as a separate settlement in 1854."
+    },
+    {
+      "target": "guide:east-granby-ct-travel-guide",
+      "kind": "nearby",
+      "note": "Windsor Locks borders East Granby; Bradley International Airport's property extends into both towns."
+    },
+    {
+      "target": "guide:suffield-ct-travel-guide",
+      "kind": "nearby",
+      "note": "Windsor Locks borders Suffield to the north."
+    },
+    {
+      "target": "guide:east-windsor-ct-travel-guide",
+      "kind": "nearby",
+      "note": "Windsor Locks faces East Windsor across the Connecticut River."
+    }
+  ]
+}

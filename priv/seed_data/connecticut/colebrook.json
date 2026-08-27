@@ -1,0 +1,256 @@
+{
+  "guide": {
+    "slug": "colebrook-ct-travel-guide",
+    "title": "Colebrook, Connecticut: A Mizner Mansion in the Green Woods",
+    "destination": "Colebrook, Connecticut",
+    "state": "Connecticut",
+    "county": "Litchfield County",
+    "intro": "Colebrook was settled in 1765 by families from Windsor and East Windsor and incorporated as a town in 1779, on the Massachusetts border in Litchfield County's northwest corner. The village center around its triangular common was laid out around 1790 and has seen little change since roughly 1860. The town's early economy ran on timber: abundant wood supplied charcoal that fueled furnaces smelting iron ore mined in Salisbury, alongside lumber mills, cider mills and tanneries, before agriculture became the principal modern industry. The Colebrook Store, a Federal-style building dating to 1812, held the record as Connecticut's longest continuously operating general store from 1792 until 2007. Rock Hall, a 10,000-square-foot Tudor Revival mansion built in 1911-1912 for Jerome and Violet Alexandre, is reportedly the only surviving northern U.S. work of Palm Beach architect Addison Mizner. Colebrook was also the birthplace, on December 7, 1837, of Abiram Chamberlain, Connecticut's 60th governor.",
+    "sections": [
+      {
+        "heading": "Timber, iron and a Mizner mansion",
+        "body": "Colebrook's abundant timber made the charcoal that fueled iron furnaces fed by ore mined in Salisbury, supporting lumber, cider and tanning mills through the 19th century before agriculture took over. Rock Hall, the 1911-1912 Tudor Revival mansion built for Jerome and Violet Alexandre, is reportedly architect Addison Mizner's only surviving work in the northern United States and was listed on the National Register of Historic Places in 2010. The Colebrook Center Historic District, a 110-acre streetscape around a triangular common listed on the National Register in 1991, includes an 1842 Greek Revival church and the Samuel Rockwell House, whose ell dates to the 1760s settlement era."
+      },
+      {
+        "heading": "Getting there",
+        "body": "Colebrook is a car-only destination: CT Route 8 runs the north-south spine along the east side of town, with Route 183 reaching Colebrook Center and Route 182 linking west to US Route 44 in neighboring Norfolk, the main east-west corridor from Hartford and the Berkshires. There is no passenger rail station in Colebrook or any bordering town; the nearest CTrail Hartford Line and Amtrak stops are Hartford Union Station and Windsor Locks, more than 30 miles away."
+      },
+      {
+        "heading": "A dammed river and a farm brewery",
+        "body": "The Colebrook River Dam, dedicated June 27, 1969, holds back a 700-acre U.S. Army Corps of Engineers flood-control reservoir on the West Branch Farmington River — a known fall-foliage vantage point with boating and fishing. Norbrook Farm Brewery, the town's one substantial food-and-drink destination, pairs a taproom with mountain bike trails, disc golf and a single Airbnb cottage on-site. The Colebrook Land Conservancy maintains four public trails, and the Colebrook Historical Society occupies the 1816 Seymour Inn alongside the 1779 Rock School, a colonial one-room schoolhouse."
+      }
+    ],
+    "faq": [
+      {
+        "question": "How do I get to Colebrook?",
+        "answer": "By car — CT Route 8 runs north-south along the east side of town, with Route 183 reaching the town center and Route 182 connecting west to US Route 44 in Norfolk. There's no passenger rail station in Colebrook or any neighboring town; the nearest CTrail Hartford Line stops are Hartford Union Station and Windsor Locks."
+      },
+      {
+        "question": "What is Rock Hall?",
+        "answer": "A 10,000-square-foot Tudor Revival mansion built in 1911-1912 for Jerome and Violet Alexandre, reportedly the only surviving northern U.S. work of Palm Beach architect Addison Mizner. It was listed on the National Register of Historic Places in 2010 but is a private property today — view it from the road only."
+      },
+      {
+        "question": "Is the Colebrook Store still open?",
+        "answer": "Its current status is unverified. The Colebrook Preservation Society bought the Federal-style building in 2013 and began restoration work in 2025 after its previous operator's tenure ended; check the society's own updates before planning a visit around it."
+      },
+      {
+        "question": "What can I do at Colebrook River Lake?",
+        "answer": "The 700-acre U.S. Army Corps of Engineers reservoir behind the Colebrook River Dam, dedicated in 1969, offers boating, fishing and a large boat ramp, plus hiking and wildlife viewing — and doubles as a fall-foliage viewpoint from the dam."
+      },
+      {
+        "question": "Where can I eat and stay in Colebrook?",
+        "answer": "Norbrook Farm Brewery is the town's main food and drink destination, with a taproom, mountain bike trails and disc golf; it also rents a single on-site Airbnb cottage, Colebrook's only verified lodging."
+      }
+    ],
+    "photos": [
+      {
+        "src": "/photos/ct/colebrook/colebrook-store.jpg",
+        "thumb": "/photos/ct/colebrook/colebrook-store_thumb.jpg",
+        "title": "Colebrook Store",
+        "description": "The historic Colebrook Store, a Federal-style building in the Colebrook Center Historic District.",
+        "author": "Magicpiano",
+        "license": "CC BY-SA 3.0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:ColebrookCT_ColebrookStore.jpg"
+      },
+      {
+        "src": "/photos/ct/colebrook/colebrook-congregational-church.jpg",
+        "thumb": "/photos/ct/colebrook/colebrook-congregational-church_thumb.jpg",
+        "title": "Colebrook Congregational Church",
+        "description": "The Colebrook Congregational Church on the town green, at the center of the Colebrook Center Historic District.",
+        "author": "John Phelan",
+        "license": "CC BY-SA 4.0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Colebrook_Congregational_Church,_Colebrook_CT.jpg"
+      },
+      {
+        "src": "/photos/ct/colebrook/colebrook-river-lake.jpg",
+        "thumb": "/photos/ct/colebrook/colebrook-river-lake_thumb.jpg",
+        "title": "Colebrook River Lake",
+        "description": "The Colebrook River Dam impounding the West Branch Farmington River.",
+        "author": "U.S. Army Corps of Engineers, New England District",
+        "license": "Public domain",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Colebrook_Dam_in_Connecticut_-_USACE-p15141coll5-497.jpeg"
+      }
+    ]
+  },
+  "places": [
+    {
+      "slug": "colebrook-historical-society-museum",
+      "name": "Colebrook Historical Society Museum (the Seymour Inn)",
+      "kind": "museum",
+      "town": "Colebrook",
+      "state": "Connecticut",
+      "county": "Litchfield County",
+      "address": "558 Colebrook Road, Colebrook, CT 06021",
+      "official_url": "https://colebrookhistoricalsociety.org/",
+      "summary": "The society occupies the 1816 Seymour Inn, its home since forming in 1953, and also stewards the 1779 Rock School, a colonial one-room schoolhouse open on select weekends. Hours not posted online — call (860) 738-8682.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "algonquin-state-forest",
+      "name": "Algonquin State Forest",
+      "kind": "park",
+      "town": "Colebrook",
+      "state": "Connecticut",
+      "county": "Litchfield County",
+      "address": "Off Sandy Brook Road, Colebrook, CT 06021",
+      "official_url": "https://www.ctvisit.com/listings/algonquin-state-forest",
+      "summary": "Occupies the central portion of Colebrook, with hiking, letterboxing and wildlife viewing, plus hunting in some sections; free parking. Info line (860) 424-3200.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "colebrook-river-lake",
+      "name": "Colebrook River Lake",
+      "kind": "park",
+      "town": "Colebrook",
+      "state": "Connecticut",
+      "county": "Litchfield County",
+      "address": "Colebrook River Lake, Colebrook, CT 06021, off Route 8",
+      "official_url": "https://www.recreation.gov/gateways/206",
+      "summary": "A 700-acre U.S. Army Corps of Engineers flood-control reservoir on the West Branch Farmington River, behind a dam dedicated June 27, 1969. Fishing, boating, hiking and wildlife viewing, with a large boat ramp and a known fall-foliage vantage point from the dam. Phone (860) 379-8234.",
+      "status": "open",
+      "photos": [
+        {
+          "src": "/photos/ct/colebrook/colebrook-river-lake.jpg",
+          "thumb": "/photos/ct/colebrook/colebrook-river-lake_thumb.jpg",
+          "title": "Colebrook River Lake",
+          "description": "The Colebrook River Dam impounding the West Branch Farmington River.",
+          "author": "U.S. Army Corps of Engineers, New England District",
+          "license": "Public domain",
+          "source_url": "https://commons.wikimedia.org/wiki/File:Colebrook_Dam_in_Connecticut_-_USACE-p15141coll5-497.jpeg"
+        }
+      ]
+    },
+    {
+      "slug": "colebrook-land-conservancy",
+      "name": "Colebrook Land Conservancy preserves and trails",
+      "kind": "park",
+      "town": "Colebrook",
+      "state": "Connecticut",
+      "county": "Litchfield County",
+      "official_url": "https://colebrooklandconservancy.org/",
+      "summary": "Four public trails — Sandy Brook, Deer Hill, Hale and Rockwell — with downloadable maps, plus the 241-acre Pruyn-Trowbridge Woods. The conservancy runs an active calendar of nature programs from its Town Hall meeting room.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "colebrook-center-historic-district",
+      "name": "Colebrook Center Historic District",
+      "kind": "historic-site",
+      "town": "Colebrook",
+      "state": "Connecticut",
+      "county": "Litchfield County",
+      "address": "Junction of Rockwell, Colebrook, Schoolhouse and Smith Hill Roads with Route 183, Colebrook, CT 06021",
+      "summary": "A 110-acre district centered on a triangular common, listed on the National Register of Historic Places July 26, 1991. Landmarks include an 1842 Greek Revival church, the Federal-style Colebrook Store, and the Samuel Rockwell House, whose ell dates to the 1760s settlement period. A walkable outdoor streetscape at any time.",
+      "status": "open",
+      "photos": [
+        {
+          "src": "/photos/ct/colebrook/colebrook-congregational-church.jpg",
+          "thumb": "/photos/ct/colebrook/colebrook-congregational-church_thumb.jpg",
+          "title": "Colebrook Congregational Church",
+          "description": "The Colebrook Congregational Church on the town green, at the center of the Colebrook Center Historic District.",
+          "author": "John Phelan",
+          "license": "CC BY-SA 4.0",
+          "source_url": "https://commons.wikimedia.org/wiki/File:Colebrook_Congregational_Church,_Colebrook_CT.jpg"
+        },
+        {
+          "src": "/photos/ct/colebrook/colebrook-store.jpg",
+          "thumb": "/photos/ct/colebrook/colebrook-store_thumb.jpg",
+          "title": "Colebrook Store",
+          "description": "The historic Colebrook Store, a Federal-style building in the Colebrook Center Historic District.",
+          "author": "Magicpiano",
+          "license": "CC BY-SA 3.0",
+          "source_url": "https://commons.wikimedia.org/wiki/File:ColebrookCT_ColebrookStore.jpg"
+        }
+      ]
+    },
+    {
+      "slug": "norbrook-farm-brewery",
+      "name": "Norbrook Farm Brewery",
+      "kind": "brewery",
+      "town": "Colebrook",
+      "state": "Connecticut",
+      "county": "Litchfield County",
+      "address": "204 Stillman Hill Road, Colebrook, CT 06021",
+      "official_url": "https://www.norbrookfarm.com/",
+      "summary": "Colebrook's one substantial food-and-drink destination: a taproom pouring IPAs, pilsners, stouts and farmhouse ales, with mountain bike trails, an 18-hole disc golf course, hiking and e-bike rentals on the working farm. Open Wednesday-Saturday noon-8 p.m., Sunday noon-6 p.m., closed Monday-Tuesday. Phone (860) 909-1016.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "norbrook-farm-brewery-cottage",
+      "name": "Norbrook Farm Brewery Cottage",
+      "kind": "bnb",
+      "town": "Colebrook",
+      "state": "Connecticut",
+      "county": "Litchfield County",
+      "address": "204 Stillman Hill Road, Colebrook, CT 06021",
+      "official_url": "https://www.norbrookfarm.com/",
+      "summary": "A single vacation-rental cottage on the Norbrook Farm Brewery property, steps from the taproom and booked through Airbnb. Colebrook's only verified lodging, and an RV overnight stop on the Harvest Hosts network.",
+      "status": "open",
+      "photos": []
+    }
+  ],
+  "entries": [
+    {
+      "kind": "sight",
+      "name": "Colebrook Historical Society Museum",
+      "place_slug": "colebrook-historical-society-museum",
+      "note": "The society's home since 1953, in the 1816 Seymour Inn."
+    },
+    {
+      "kind": "walk",
+      "name": "Algonquin State Forest",
+      "place_slug": "algonquin-state-forest",
+      "note": "Hiking and wildlife viewing across the center of town."
+    },
+    {
+      "kind": "sight",
+      "name": "Colebrook River Lake",
+      "place_slug": "colebrook-river-lake",
+      "note": "A 700-acre Army Corps reservoir behind a 1969 dam."
+    },
+    {
+      "kind": "walk",
+      "name": "Colebrook Land Conservancy preserves",
+      "place_slug": "colebrook-land-conservancy",
+      "note": "Four public trails plus the 241-acre Pruyn-Trowbridge Woods."
+    },
+    {
+      "kind": "walk",
+      "name": "Colebrook Center Historic District",
+      "place_slug": "colebrook-center-historic-district",
+      "note": "A 110-acre streetscape around a triangular common, little changed since 1860."
+    },
+    {
+      "kind": "food",
+      "name": "Norbrook Farm Brewery",
+      "place_slug": "norbrook-farm-brewery",
+      "note": "Colebrook's main food and drink stop, with mountain bike trails."
+    },
+    {
+      "kind": "stay",
+      "name": "Norbrook Farm Brewery Cottage",
+      "place_slug": "norbrook-farm-brewery-cottage",
+      "note": "A single Airbnb cottage, Colebrook's only lodging."
+    }
+  ],
+  "links": [
+    {
+      "target": "guide:norfolk-ct-travel-guide",
+      "kind": "nearby",
+      "note": "Route 182 links Colebrook west to US Route 44 in Norfolk."
+    },
+    {
+      "target": "guide:winchester-ct-travel-guide",
+      "kind": "nearby",
+      "note": null
+    },
+    {
+      "target": "guide:barkhamsted-ct-travel-guide",
+      "kind": "same-region",
+      "note": null
+    }
+  ]
+}

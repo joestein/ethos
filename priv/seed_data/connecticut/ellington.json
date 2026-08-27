@@ -1,0 +1,273 @@
+{
+  "guide": {
+    "slug": "ellington-ct-travel-guide",
+    "title": "Ellington, Connecticut: A Self-Governing Windmill and a Country Synagogue",
+    "destination": "Ellington, Connecticut",
+    "state": "Connecticut",
+    "county": "Tolland County",
+    "intro": "Ellington was incorporated in May 1786, set off from East Windsor, and grew as an agricultural community in Tolland County's northern Connecticut River Valley before becoming one of the state's faster-growing bedroom communities. Its original Native American name, Weexskashuck, meant \"Great Marsh\"; Samuel Pinney was its first settler, and the area became a parish of Windsor in 1733. In 1854, Ellington machinist Daniel Halladay patented a self-governing windmill at the request of local businessman John Burnham — a prototype ran six months unattended, lifting water more than 100 feet from a 28-foot well. Halladay's windmill company, founded in Ellington, moved to South Coventry and then to Batavia, Illinois, where it became the US Wind Engine and Pump Company. Crystal Lake, in the town's eastern section, was a popular summer resort from the late 1890s through the Great Depression. Congregation Knesseth Israel, founded in 1906 by Yiddish-speaking Jewish farmers, built its wooden synagogue in 1913.",
+    "sections": [
+      {
+        "heading": "Windmills and a country synagogue",
+        "body": "Ellington's original Native American name, Weexskashuck, meant \"Great Marsh\"; Samuel Pinney was its first settler, and the area became a parish of Windsor in 1733 before incorporating in May 1786. In 1854, Ellington machinist Daniel Halladay patented an \"Improved Governor for Windmills\" at the request of local businessman John Burnham — a self-governing mill that turned itself into the wind; a prototype ran six months unattended, lifting water more than 100 feet from a 28-foot well. Halladay's windmill company, founded in Ellington, moved to South Coventry and then to Batavia, Illinois, becoming the US Wind Engine and Pump Company. Congregation Knesseth Israel, one of Connecticut's rare surviving early-20th-century country synagogues, was founded in 1906 by Yiddish-speaking Jewish farmers from Russia and Eastern Europe; its 1913 Colonial Revival building is listed on the National Register of Historic Places."
+      },
+      {
+        "heading": "Getting there",
+        "body": "No passenger rail station exists in Ellington, and visitors arrive by car on Connecticut Routes 83, 30, 140, 74, 286 and 32 — Route 83 is the town's main north-south corridor. No interstate passes directly through Ellington, but the town sits roughly equidistant between Interstate 84 and Interstate 91. The nearest CTrail Hartford Line stops are Windsor Locks and Windsor, with Hartford Union Station — also served by Amtrak Northeast Regional and Valley Flyer — the nearest major hub, all west of town. Metro-North's New Haven Line and Shore Line East serve the coast and do not reach Ellington. A seven-mile rail line built in 1876 once ran from Vernon to Melrose through Ellington but went defunct by the mid-20th century."
+      },
+      {
+        "heading": "Farms and fairs",
+        "body": "Oakridge Dairy's self-serve farm store at 80 Meadow Brook Road sells glass-bottled milk, ice cream, juices and cider around the clock; the farm also hosts an annual Farm Day with tours, food trucks and games. The Ellington Farmers Market runs Saturday mornings at Market Park through the end of October. No hotel, inn or B&B could be verified inside Ellington; the nearest confirmed options are Holiday Inn Express in Vernon and Graduate Storrs."
+      }
+    ],
+    "faq": [
+      {
+        "question": "How do I get to Ellington?",
+        "answer": "By car — no interstate runs directly through Ellington, but Connecticut Routes 83, 30, 140, 74, 286 and 32 all serve the town. There is no passenger rail station; the nearest CTrail Hartford Line stops are Windsor Locks and Windsor, west of town."
+      },
+      {
+        "question": "Is there a train to Ellington?",
+        "answer": "No. Ellington has no passenger rail station today — a seven-mile line that once ran from Vernon to Melrose through town went defunct by the mid-20th century. Metro-North's New Haven Line and Shore Line East do not reach this part of the state."
+      },
+      {
+        "question": "What is the Nellie McKnight Museum?",
+        "answer": "A circa-1812 house museum on Main Street run by the Ellington Historical Society. It is named for Nellie McKnight (1894-1981), a teacher who returned to Ellington in 1929 and served as librarian of the Hall Memorial Library until 1967. The museum keeps no regular public hours; it opens for scheduled events."
+      },
+      {
+        "question": "Where can I swim in Ellington?",
+        "answer": "Crystal Lake Sandy Beach, the town's guarded beach, typically runs mid-June through mid-August. Non-resident walk-in rates are $20 for adults, $10 for ages 5-17 and $1 for seniors 60+; resident rates are lower."
+      },
+      {
+        "question": "Is there a hotel in Ellington?",
+        "answer": "No hotel, inn or B&B could be verified inside Ellington. The nearest confirmed options are Holiday Inn Express in Vernon and Graduate Storrs."
+      }
+    ],
+    "photos": [
+      {
+        "src": "/photos/ct/ellington/ellington-green-gazebo.jpg",
+        "thumb": "/photos/ct/ellington/ellington-green-gazebo_thumb.jpg",
+        "title": "Ellington Green gazebo",
+        "description": "The Victorian gazebo on Ellington's town green in the Ellington Center Historic District.",
+        "author": "John Phelan",
+        "license": "CC BY 4.0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Ellington_Green,_Ellington_CT.jpg"
+      },
+      {
+        "src": "/photos/ct/ellington/nellie-mcknight-museum-ellington.jpg",
+        "thumb": "/photos/ct/ellington/nellie-mcknight-museum-ellington_thumb.jpg",
+        "title": "Nellie McKnight Museum",
+        "description": "The Nellie McKnight Museum with the Ellington Congregational Church steeple behind it.",
+        "author": "John Phelan",
+        "license": "CC BY 4.0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Ellington_Historical_Society,_Ellington_CT.jpg"
+      },
+      {
+        "src": "/photos/ct/ellington/crystal-lake-sandy-beach-ellington.jpg",
+        "thumb": "/photos/ct/ellington/crystal-lake-sandy-beach-ellington_thumb.jpg",
+        "title": "Sandy Beach, Crystal Lake",
+        "description": "The curving sand beach and swim raft at Crystal Lake's Sandy Beach in Ellington.",
+        "author": "Elipongo",
+        "license": "Public domain",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Sandy_Beach,_Crystal_Lake,_Ellington_Connecticut_USA.JPG"
+      }
+    ]
+  },
+  "places": [
+    {
+      "slug": "nellie-mcknight-museum",
+      "name": "Nellie McKnight Museum",
+      "kind": "museum",
+      "town": "Ellington",
+      "state": "Connecticut",
+      "county": "Tolland County",
+      "address": "70 Main Street, Ellington, CT 06029",
+      "official_url": "https://ellingtonhistsoc.org/",
+      "summary": "A circa-1812 house museum wholly owned and operated by the Ellington Historical Society, a 501(c)(3) that preserves the town's agricultural heritage. Keeps no regular public hours; opens for scheduled events, most with free admission.",
+      "history": "Named for Nellie McKnight (1894-1981), a teacher who returned to Ellington in 1929 and served as librarian of the Hall Memorial Library until her retirement in 1967.",
+      "status": "open",
+      "photos": [
+        {
+          "src": "/photos/ct/ellington/nellie-mcknight-museum-ellington.jpg",
+          "thumb": "/photos/ct/ellington/nellie-mcknight-museum-ellington_thumb.jpg",
+          "title": "Nellie McKnight Museum",
+          "description": "The Nellie McKnight Museum with the Ellington Congregational Church steeple behind it.",
+          "author": "John Phelan",
+          "license": "CC BY 4.0",
+          "source_url": "https://commons.wikimedia.org/wiki/File:Ellington_Historical_Society,_Ellington_CT.jpg"
+        }
+      ]
+    },
+    {
+      "slug": "crystal-lake-sandy-beach",
+      "name": "Crystal Lake Sandy Beach",
+      "kind": "park",
+      "town": "Ellington",
+      "state": "Connecticut",
+      "county": "Tolland County",
+      "address": "Crystal Lake, Ellington, CT 06029 (Parks & Recreation office: 31 Arbor Way)",
+      "official_url": "https://parkrec.ellington-ct.gov/facilities-parks/sandy-beach",
+      "summary": "Ellington's town beach on Crystal Lake, run by Parks & Recreation, typically open mid-June through mid-August. Restrooms and parking provided; non-resident walk-in rates are $20 adult, $10 ages 5-17, $1 senior 60+; a carry-in/carry-out trash policy is in effect and grilling, fires, smoking and vaping are prohibited.",
+      "status": "open",
+      "photos": [
+        {
+          "src": "/photos/ct/ellington/crystal-lake-sandy-beach-ellington.jpg",
+          "thumb": "/photos/ct/ellington/crystal-lake-sandy-beach-ellington_thumb.jpg",
+          "title": "Sandy Beach, Crystal Lake",
+          "description": "The curving sand beach and swim raft at Crystal Lake's Sandy Beach in Ellington.",
+          "author": "Elipongo",
+          "license": "Public domain",
+          "source_url": "https://commons.wikimedia.org/wiki/File:Sandy_Beach,_Crystal_Lake,_Ellington_Connecticut_USA.JPG"
+        }
+      ]
+    },
+    {
+      "slug": "shenipsit-state-forest-ellington",
+      "name": "Shenipsit State Forest (Ellington section)",
+      "kind": "park",
+      "town": "Ellington",
+      "state": "Connecticut",
+      "county": "Tolland County",
+      "address": "Main signed access off Route 190; the forest spans Ellington, Somers and Stafford",
+      "official_url": "https://ctparks.com/parks/shenipsit-state-forest",
+      "summary": "A 7,170-acre state forest with free admission, open daily half an hour before sunrise to half an hour after sunset. Activities include hiking, mountain biking, horseback riding, hunting, fishing, picnicking and winter snowmobiling.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "ellington-farmers-market",
+      "name": "Ellington Farmers Market",
+      "kind": "attraction",
+      "town": "Ellington",
+      "state": "Connecticut",
+      "county": "Tolland County",
+      "address": "Market Park, 72 Maple Street, Ellington, CT",
+      "official_url": "https://www.ellingtonfarmersmarket.org/",
+      "summary": "A Saturday-morning market, 9 a.m. to noon, running through the end of October, accepting SNAP and FMNP and running a \"Kids Power of Produce\" program alongside local farms and food producers.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "oakridge-dairy-farm-store",
+      "name": "Oakridge Dairy Farm Store",
+      "kind": "attraction",
+      "town": "Ellington",
+      "state": "Connecticut",
+      "county": "Tolland County",
+      "address": "80 Meadow Brook Road, Ellington, CT 06029",
+      "official_url": "https://www.oakridgedairy.com/",
+      "summary": "A self-serve, 24/7, card-only farm store selling glass-bottled milk (now 100% A2A2), ice cream, juices and cider from a working Ellington dairy. The farm office at 76 Jobs Hill Road (860-875-2858) is staffed Monday-Friday 8:30 a.m.-3:30 p.m.; 2026 tours are by appointment only.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "congregation-knesseth-israel",
+      "name": "Congregation Knesseth Israel",
+      "kind": "historic-site",
+      "town": "Ellington",
+      "state": "Connecticut",
+      "county": "Tolland County",
+      "address": "236 Pinney Street, Ellington, CT 06029",
+      "summary": "One of Connecticut's rare surviving early-20th-century country synagogues: a modest 1913 Colonial Revival wooden building designed by Leon Dobkin, moved to its Pinney Street site in 1954. Listed on the National Register of Historic Places in 1995. Described as an active Modern Orthodox congregation; no public visitor hours are published, so it's best appreciated from the street.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "no-coast-taqueria",
+      "name": "No Coast Taqueria",
+      "kind": "restaurant",
+      "town": "Ellington",
+      "state": "Connecticut",
+      "county": "Tolland County",
+      "address": "12 Main Street, Ellington, CT 06029",
+      "official_url": "https://nocoasttaqueria.com/",
+      "summary": "Chef-owned Mexican fusion in Ellington Center, from loaded tacos to rotating specials. Weekly deals include $1 off tacos on Tuesdays and $1 wings on Wednesdays.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "luanns-bakery-cafe-ellington",
+      "name": "LuAnn's Bakery & Cafe",
+      "kind": "cafe",
+      "town": "Ellington",
+      "state": "Connecticut",
+      "county": "Tolland County",
+      "address": "238 Somers Road, Ellington, CT 06029 (drive-thru at 140 West Road)",
+      "official_url": "https://luannsbakery.com/",
+      "summary": "A locally grown bakery-cafe group headquartered in Ellington, with the Somers Road cafe open Monday-Saturday 8 a.m.-2 p.m. and the West Road drive-thru Monday-Saturday 6 a.m.-6 p.m. Fresh baked goods, specialty beverages and seasonal specials.",
+      "status": "open",
+      "photos": []
+    }
+  ],
+  "entries": [
+    {
+      "kind": "sight",
+      "name": "Nellie McKnight Museum",
+      "place_slug": "nellie-mcknight-museum",
+      "note": "A circa-1812 house museum on the town's agricultural heritage."
+    },
+    {
+      "kind": "sight",
+      "name": "Crystal Lake Sandy Beach",
+      "place_slug": "crystal-lake-sandy-beach",
+      "note": "Ellington's guarded town beach on Crystal Lake."
+    },
+    {
+      "kind": "sight",
+      "name": "Shenipsit State Forest",
+      "place_slug": "shenipsit-state-forest-ellington",
+      "note": "7,170 acres of hiking and multi-use trails spanning Ellington, Somers and Stafford."
+    },
+    {
+      "kind": "sight",
+      "name": "Ellington Farmers Market",
+      "place_slug": "ellington-farmers-market",
+      "note": "Saturday mornings at Market Park through October."
+    },
+    {
+      "kind": "sight",
+      "name": "Oakridge Dairy Farm Store",
+      "place_slug": "oakridge-dairy-farm-store",
+      "note": "A 24/7 self-serve farm store for glass-bottled milk and ice cream."
+    },
+    {
+      "kind": "sight",
+      "name": "Congregation Knesseth Israel",
+      "place_slug": "congregation-knesseth-israel",
+      "note": "An NRHP-listed 1913 country synagogue, best viewed from the street."
+    },
+    {
+      "kind": "food",
+      "name": "No Coast Taqueria",
+      "place_slug": "no-coast-taqueria",
+      "note": "Chef-owned Mexican fusion in Ellington Center."
+    },
+    {
+      "kind": "food",
+      "name": "LuAnn's Bakery & Cafe",
+      "place_slug": "luanns-bakery-cafe-ellington",
+      "note": "Locally grown bakery-cafe, headquartered in Ellington."
+    }
+  ],
+  "links": [
+    {
+      "target": "guide:somers-ct-travel-guide",
+      "kind": "shared-history",
+      "note": "Shenipsit State Forest, 7,170 acres of multi-use trails, spans Ellington, Somers and Stafford."
+    },
+    {
+      "target": "guide:stafford-ct-travel-guide",
+      "kind": "shared-history",
+      "note": "Shenipsit State Forest also spans into Stafford, alongside Ellington and Somers."
+    },
+    {
+      "target": "guide:vernon-ct-travel-guide",
+      "kind": "shared-history",
+      "note": "A seven-mile rail line built in 1876 once ran from Vernon to Melrose through Ellington."
+    },
+    {
+      "target": "guide:tolland-ct-travel-guide",
+      "kind": "same-region",
+      "note": "Ellington and Tolland both sit in Connecticut's northern Tolland County, with Ellington roughly equidistant between Interstate 84 and Interstate 91."
+    }
+  ]
+}

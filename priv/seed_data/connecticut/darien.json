@@ -1,0 +1,306 @@
+{
+  "guide": {
+    "slug": "darien-ct-travel-guide",
+    "title": "Darien, Connecticut: Two Stations and a Park Service Founder",
+    "destination": "Darien, Connecticut",
+    "state": "Connecticut",
+    "county": "Fairfield County",
+    "intro": "Darien began as part of Stamford: the New Haven Colony purchased land along the Rippowam River in 1640, and the area became Middlesex Parish of Stamford in 1737, with its first church built in 1739. It was incorporated as its own town in May 1820, and tradition holds a sailor suggested the name after the Isthmus of Darien in present-day Panama, since residents could not agree on one. On July 22, 1781, Tories raided the Middlesex Parish meetinghouse and captured minister Dr. Moses Mather and 47 other men; Mather and 26 parishioners spent five months in British prisons. The railroad reached Darien in 1848, shifting its commercial center from the harbor to the new station. Stephen Tyng Mather, founder of the National Park Service, owned the family's 1778 homestead here from 1906 until his death in 1930. The Connecticut Turnpike arrived in 1958, and Darien became part of the shoreline's affluent \"Gold Coast.\"",
+    "sections": [
+      {
+        "heading": "A minister's capture and a park founder's homestead",
+        "body": "Benjamin Fitch founded the first U.S. home for disabled war veterans and soldiers' orphans at Noroton Heights in 1864. The Mather Homestead, built in 1778, stayed in the Mather family for generations; Stephen Tyng Mather, who became the National Park Service's first director, owned it from 1906 until his death in 1930, and the Mather Homestead Foundation was created in 2016 to operate it as a museum. It is Darien's only National Historic Landmark. Today Darien covers 23.4 square miles, about 12.9 of it land, with roughly 21,500 residents and, by the town's own description, no industrial enterprises."
+      },
+      {
+        "heading": "Getting there",
+        "body": "Darien sits on Long Island Sound in lower Fairfield County between Stamford and Norwalk. Interstate 95 (the Connecticut Turnpike, opened 1958) is the main through corridor, with US Route 1 (the Boston Post Road) as the local commercial spine; Route 124 connects Darien north to the Merritt Parkway, which itself runs through Greenwich, Stamford, New Canaan, Norwalk, Westport, Fairfield and Trumbull, but not Darien. Metro-North's New Haven Line stops in town at both Darien station (33 West Avenue, opened December 25, 1848) and Noroton Heights station (325 Heights Road) — a rare convenience for a town this size, and the easiest car-free arrival from Grand Central. No Amtrak, Shore Line East or CTrail Hartford Line service stops in Darien."
+      },
+      {
+        "heading": "Two beaches and a Post Road institution",
+        "body": "Pear Tree Point Beach Park and Weed Beach, which the town calls \"the crown jewel\" of its parks, are Darien's two Long Island Sound beach parks; both require a beach emblem in season, issued by Parks & Recreation. Cherry Lawn Park surrounds the Darien Nature Center with tennis courts, a baseball field and a playground. On the Post Road, Uncle's Deli has served overstuffed sandwiches since 1987, Post Corner Pizza has passed its 40th anniversary, and Palmer's Market, family-run since 1921, sits an easy walk from the Noroton Heights station."
+      }
+    ],
+    "faq": [
+      {
+        "question": "How do I get to Darien?",
+        "answer": "By car on I-95 or US Route 1. By train, Metro-North's New Haven Line stops at both Darien station (33 West Avenue) and Noroton Heights station (325 Heights Road), with service to Stamford and Grand Central Terminal."
+      },
+      {
+        "question": "Is there an Amtrak stop in Darien?",
+        "answer": "No. Both of Darien's stations are Metro-North New Haven Line only; Amtrak trains pass through without stopping."
+      },
+      {
+        "question": "Is the Merritt Parkway in Darien?",
+        "answer": "No — the Merritt Parkway runs through Greenwich, Stamford, New Canaan, Norwalk, Westport, Fairfield and Trumbull. Route 124 connects Darien north to the parkway."
+      },
+      {
+        "question": "What is the Mather Homestead?",
+        "answer": "Darien's only National Historic Landmark, an 1778 home owned by National Park Service founder Stephen Tyng Mather from 1906 to 1930. Open for tours Monday-Thursday 9 a.m.-2 p.m., with Friday-Saturday tours by appointment."
+      },
+      {
+        "question": "Is there a hotel in Darien?",
+        "answer": "No lodging could be verified inside Darien, a mostly residential town with no industrial enterprises. The nearest option is in neighboring Stamford, a couple of Metro-North stops west of Darien station."
+      }
+    ],
+    "photos": [
+      {
+        "src": "/photos/ct/darien/darien-aerial-downtown.jpg",
+        "thumb": "/photos/ct/darien/darien-aerial-downtown_thumb.jpg",
+        "title": "Darien downtown, aerial",
+        "description": "An aerial view of downtown Darien's commercial core along the Post Road and rail corridor.",
+        "author": "Quintin Soloviev",
+        "license": "CC BY 4.0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Darien,_Connecticut.jpg"
+      },
+      {
+        "src": "/photos/ct/darien/mather-homestead-darien.jpg",
+        "thumb": "/photos/ct/darien/mather-homestead-darien_thumb.jpg",
+        "title": "Mather Homestead",
+        "description": "The Mather Homestead, Darien's only National Historic Landmark and the boyhood home of National Park Service founder Stephen Tyng Mather.",
+        "author": "Magicpiano",
+        "license": "CC BY-SA 3.0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:DarienCT_MatherHouse.jpg"
+      },
+      {
+        "src": "/photos/ct/darien/gorhams-pond-near-pear-tree-point-darien.jpg",
+        "thumb": "/photos/ct/darien/gorhams-pond-near-pear-tree-point-darien_thumb.jpg",
+        "title": "Gorham's Pond, near Pear Tree Point",
+        "description": "The stone bridge and tidal spillway at Gorham's Pond, adjacent to Pear Tree Point Beach Park in Darien.",
+        "author": "Carol M. Highsmith",
+        "license": "Public domain",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Gorham%27s_Pond,_Darien,_Connecticut_LCCN2012631430.tif"
+      }
+    ]
+  },
+  "places": [
+    {
+      "slug": "mather-homestead",
+      "name": "The Mather Homestead",
+      "kind": "historic-site",
+      "town": "Darien",
+      "state": "Connecticut",
+      "county": "Fairfield County",
+      "address": "19 Stephen Mather Road, Darien, CT 06820",
+      "official_url": "https://matherhomestead.org/",
+      "summary": "Darien's only National Historic Landmark: an 1778 homestead that stayed in the Mather family for generations. Stephen Tyng Mather, founder and first director of the National Park Service, owned it from 1906 until his death in 1930; the Mather Homestead Foundation was created in 2016 to run it as a museum. Open Monday-Thursday 9 a.m.-2 p.m.; Friday-Saturday tours by appointment. Phone (203) 202-7602.",
+      "status": "open",
+      "photos": [
+        {
+          "src": "/photos/ct/darien/mather-homestead-darien.jpg",
+          "thumb": "/photos/ct/darien/mather-homestead-darien_thumb.jpg",
+          "title": "Mather Homestead",
+          "description": "The Mather Homestead, Darien's only National Historic Landmark and the boyhood home of National Park Service founder Stephen Tyng Mather.",
+          "author": "Magicpiano",
+          "license": "CC BY-SA 3.0",
+          "source_url": "https://commons.wikimedia.org/wiki/File:DarienCT_MatherHouse.jpg"
+        }
+      ]
+    },
+    {
+      "slug": "pear-tree-point-beach-park",
+      "name": "Pear Tree Point Beach Park",
+      "kind": "park",
+      "town": "Darien",
+      "state": "Connecticut",
+      "county": "Fairfield County",
+      "address": "Pear Tree Point Road, Darien, CT 06820",
+      "official_url": "https://www.darienct.gov/262/Pear-Tree-Point-Beach-Park",
+      "summary": "An 8-acre town park with two beaches at the mouth of the Goodwives River, plus a picnic area, gazebo, bathhouse and boat launch. Beach access is emblem-controlled in season — contact Parks & Recreation, (203) 656-7325.",
+      "status": "open",
+      "photos": [
+        {
+          "src": "/photos/ct/darien/gorhams-pond-near-pear-tree-point-darien.jpg",
+          "thumb": "/photos/ct/darien/gorhams-pond-near-pear-tree-point-darien_thumb.jpg",
+          "title": "Gorham's Pond, near Pear Tree Point",
+          "description": "The stone bridge and tidal spillway at Gorham's Pond, adjacent to Pear Tree Point Beach Park in Darien.",
+          "author": "Carol M. Highsmith",
+          "license": "Public domain",
+          "source_url": "https://commons.wikimedia.org/wiki/File:Gorham%27s_Pond,_Darien,_Connecticut_LCCN2012631430.tif"
+        }
+      ]
+    },
+    {
+      "slug": "weed-beach",
+      "name": "Weed Beach",
+      "kind": "park",
+      "town": "Darien",
+      "state": "Connecticut",
+      "county": "Fairfield County",
+      "address": "Darien, CT 06820",
+      "official_url": "https://www.darienct.gov/268/Weed-Beach",
+      "summary": "Called \"the crown jewel of Darien's parks\" by the town: a Long Island Sound swimming beach with tennis and paddle courts, a clubhouse, playground and seasonal concession stand. Emblem required in season — contact Parks & Recreation, (203) 656-7325.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "cherry-lawn-park",
+      "name": "Cherry Lawn Park",
+      "kind": "park",
+      "town": "Darien",
+      "state": "Connecticut",
+      "county": "Fairfield County",
+      "address": "120 Brookside Road, Darien, CT 06820",
+      "official_url": "https://www.darienct.gov/242/Cherry-Lawn-Park",
+      "summary": "A town park with tennis courts, a baseball field, a community garden and a playground, surrounding the Darien Nature Center. The nature center's animal exhibits were closed in 2026 for construction, but the park's trails and grounds remain open.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "darien-library",
+      "name": "Darien Library",
+      "kind": "attraction",
+      "town": "Darien",
+      "state": "Connecticut",
+      "county": "Fairfield County",
+      "address": "1441 Post Road, Darien, CT 06820",
+      "official_url": "https://www.darienlibrary.org/",
+      "summary": "A large public library on the Post Road with study rooms, a seed library and museum passes — a useful stop between trains. Hours Monday-Thursday 9 a.m.-9 p.m., Friday 9 a.m.-6 p.m., Saturday 9 a.m.-5 p.m., Sunday 1-5 p.m.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "sellecks-woods-nature-preserve",
+      "name": "Selleck's Woods Nature Preserve",
+      "kind": "park",
+      "town": "Darien",
+      "state": "Connecticut",
+      "county": "Fairfield County",
+      "address": "Darien, CT 06820",
+      "official_url": "https://www.darienct.gov/202/Parks-Recreation",
+      "summary": "One of two nature preserves in Darien's municipal park system, offering woodland walking rather than shoreline recreation. No address or hours are published — call Parks & Recreation, (203) 656-7325, for the trailhead.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "uncles-deli-darien",
+      "name": "Uncle's Deli",
+      "kind": "cafe",
+      "town": "Darien",
+      "state": "Connecticut",
+      "county": "Fairfield County",
+      "address": "1041 Post Road, Darien, CT 06820",
+      "official_url": "https://www.unclesdeli.com/",
+      "summary": "A Darien institution since 1987, known for overstuffed sandwiches and bacon-egg-and-cheese breakfasts. Open Mon-Sat 7 a.m.-5 p.m., Sun 8 a.m.-4 p.m. Phone (203) 655-9701.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "post-corner-pizza",
+      "name": "Post Corner Pizza",
+      "kind": "restaurant",
+      "town": "Darien",
+      "state": "Connecticut",
+      "county": "Fairfield County",
+      "address": "847 Boston Post Road, Darien, CT 06820",
+      "official_url": "https://www.postcornerpizza.com/",
+      "summary": "A long-running Post Road pizzeria that has passed its 40th anniversary, serving pizza, salads and lunch specials. Open daily 11 a.m.-10 p.m., closed only Christmas Day. Phone (203) 655-7721.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "palmers-market-darien",
+      "name": "Palmer's Market",
+      "kind": "cafe",
+      "town": "Darien",
+      "state": "Connecticut",
+      "county": "Fairfield County",
+      "address": "264 Heights Road, Darien, CT 06820",
+      "official_url": "https://www.palmersdarien.com/",
+      "summary": "Family-owned since 1921, with a \"Gourmet to Go\" counter of chef-crafted platters, sandwiches and salads. A short walk from the Noroton Heights Metro-North station on the same street. Open 7 a.m.-8 p.m. weekdays, 7 a.m.-7 p.m. weekends.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "bodega-taco-bar-darien",
+      "name": "Bodega Taco Bar",
+      "kind": "restaurant",
+      "town": "Darien",
+      "state": "Connecticut",
+      "county": "Fairfield County",
+      "address": "980 Post Road, Darien, CT 06820",
+      "official_url": "https://www.bodegatacobar.com/",
+      "summary": "A small Connecticut-owned taco bar with just two locations, Darien and Fairfield. Publishes brunch and happy-hour times but not full daily hours — call (203) 655-8500 to confirm.",
+      "status": "open",
+      "photos": []
+    }
+  ],
+  "entries": [
+    {
+      "kind": "sight",
+      "name": "The Mather Homestead",
+      "place_slug": "mather-homestead",
+      "note": "Darien's only National Historic Landmark, the boyhood home of the NPS founder."
+    },
+    {
+      "kind": "sight",
+      "name": "Pear Tree Point Beach Park",
+      "place_slug": "pear-tree-point-beach-park",
+      "note": "A town beach with a boat launch."
+    },
+    {
+      "kind": "sight",
+      "name": "Weed Beach",
+      "place_slug": "weed-beach",
+      "note": "\"The crown jewel of Darien's parks.\""
+    },
+    {
+      "kind": "sight",
+      "name": "Cherry Lawn Park",
+      "place_slug": "cherry-lawn-park",
+      "note": "Ballfields and a playground around the nature center."
+    },
+    {
+      "kind": "sight",
+      "name": "Darien Library",
+      "place_slug": "darien-library",
+      "note": "A large library with museum passes."
+    },
+    {
+      "kind": "sight",
+      "name": "Selleck's Woods Nature Preserve",
+      "place_slug": "sellecks-woods-nature-preserve",
+      "note": "Woodland walking trails."
+    },
+    {
+      "kind": "food",
+      "name": "Uncle's Deli",
+      "place_slug": "uncles-deli-darien",
+      "note": "Overstuffed sandwiches since 1987."
+    },
+    {
+      "kind": "food",
+      "name": "Post Corner Pizza",
+      "place_slug": "post-corner-pizza",
+      "note": "A Post Road pizzeria for four decades."
+    },
+    {
+      "kind": "food",
+      "name": "Palmer's Market",
+      "place_slug": "palmers-market-darien",
+      "note": "Family-owned since 1921, near Noroton Heights station."
+    },
+    {
+      "kind": "food",
+      "name": "Bodega Taco Bar",
+      "place_slug": "bodega-taco-bar-darien",
+      "note": "One of only two locations of this CT-owned taco bar."
+    }
+  ],
+  "links": [
+    {
+      "target": "guide:stamford-ct-travel-guide",
+      "kind": "nearby",
+      "note": "Darien borders Stamford; Metro-North's New Haven Line runs directly between the two."
+    },
+    {
+      "target": "guide:norwalk-ct-travel-guide",
+      "kind": "nearby",
+      "note": "Darien borders Norwalk, sitting between Stamford and Norwalk on Long Island Sound."
+    },
+    {
+      "target": "guide:new-canaan-ct-travel-guide",
+      "kind": "same-region",
+      "note": "Route 124 connects Darien north to the Merritt Parkway at the same New Canaan exit that serves both towns."
+    }
+  ]
+}

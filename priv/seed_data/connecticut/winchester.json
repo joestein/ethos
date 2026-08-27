@@ -1,0 +1,309 @@
+{
+  "guide": {
+    "slug": "winchester-ct-travel-guide",
+    "title": "Winchester, Connecticut: Winsted, a Museum of Torts, and a Flood",
+    "destination": "Winchester, Connecticut",
+    "state": "Connecticut",
+    "county": "Litchfield County",
+    "intro": "Winchester was settled in 1732 and incorporated as a town in 1771, in Connecticut's northwest corner. Winsted, the city inside Winchester's borders and the town's downtown, was settled in 1750 and became a borough in 1858 and a city in 1917, its name blending Winchester and neighboring Barkhamsted. The Gilbert Clock Company on the Still River was one of the largest mechanical-clock operations in the world at the turn of the 20th century, and the Naugatuck Railroad reached Winsted in 1849 — though passenger service north of Waterbury ended in 1958. The August 1955 flood, from Hurricanes Connie and Diane five days apart, devastated Winsted's Main Street and killed 77 people statewide; a monument at East End Park commemorates it. Consumer advocate Ralph Nader opened the American Museum of Tort Law — the world's first museum dedicated to the law — in downtown Winsted's restored 1873 savings bank building in September 2015.",
+    "sections": [
+      {
+        "heading": "A clock city and a devastating flood",
+        "body": "Nineteenth-century Winsted diversified beyond clockmaking into tanneries and undertakers' goods, served by two railroads that made it the industrial hub of rural northwest Connecticut — O.H. Bailey & Co.'s bird's-eye lithographs of 1877 and 1908 document the boom. The August 1955 flood struck five days after Hurricane Connie saturated the ground, and a National Guard officer described Main Street as looking \"like someone had taken cars and thrown them at one another\"; flood photographs are held at the Winchester Historical Society. The Route 8 expressway ends at its intersection with US Route 44 in downtown Winsted — Route 8 itself continues north as a rural road through Colebrook to the Massachusetts line."
+      },
+      {
+        "heading": "Getting there",
+        "body": "Winsted is a drive-to destination: the Route 8 expressway ends downtown at US Route 44, which runs east-west across northern Litchfield County as Main Street. There is no passenger rail anywhere in Winchester — the CTrail Hartford Line has no Litchfield County station, and the nearest Metro-North service is the Waterbury Branch terminus at Waterbury, but Branch trains are replaced by buses from July 20, 2026 through May 31, 2027 for station reconstruction. Local Northwestern Connecticut Transit District buses separately link Winsted with Torrington and Litchfield on weekdays."
+      },
+      {
+        "heading": "A tort museum and a giant mural",
+        "body": "The American Museum of Tort Law walks visitors through landmark cases including the Ford Pinto case and the tobacco litigation, in the restored Winsted Savings Bank building. The American Mural Project holds what it describes as the largest indoor collaborative artwork in the world — a mural 120 feet long and five stories high honoring American workers. Highland Lake, more than three miles long and 444 acres, is one of Connecticut's largest lakes for swimming, fishing and boating, and the Sue Grossman Still River Greenway offers a paved, wheelchair-accessible rail-trail between Winsted and Torrington."
+      }
+    ],
+    "faq": [
+      {
+        "question": "How do I get to Winchester (Winsted)?",
+        "answer": "By car — the Route 8 expressway ends downtown at US Route 44, which runs east-west through Winsted as Main Street. There's no passenger rail anywhere in Winchester; the nearest Metro-North service is the Waterbury Branch terminus at Waterbury, but Branch trains are replaced by buses from July 20, 2026 through May 31, 2027 for station reconstruction. Local Northwestern Connecticut Transit District buses separately connect Winsted with Torrington and Litchfield on weekdays."
+      },
+      {
+        "question": "Is Winsted a separate town from Winchester?",
+        "answer": "No — Winsted is the city inside the town of Winchester's borders and serves as its downtown. The name blends Winchester and neighboring Barkhamsted; Winsted was settled in 1750, became a borough in 1858 and a city in 1917."
+      },
+      {
+        "question": "What is the American Museum of Tort Law?",
+        "answer": "Billed as the world's first museum dedicated to the law, founded by consumer advocate Ralph Nader and opened in September 2015 in the restored 1873 Winsted Savings Bank building. Exhibits walk visitors through landmark cases including the Ford Pinto case and tobacco litigation. Hours Tuesday-Saturday 10 a.m.-5 p.m., Sunday 11 a.m.-4 p.m."
+      },
+      {
+        "question": "What happened in the 1955 flood?",
+        "answer": "Hurricanes Connie and Diane struck five days apart in August 1955, devastating Winsted's Main Street and killing 77 people across Connecticut. A monument at East End Park commemorates the disaster, and flood photographs are held by the Winchester Historical Society."
+      },
+      {
+        "question": "Where can I eat and stay in Winsted?",
+        "answer": "Noujaim's Bistro serves Lebanese and Mediterranean fare, and Little Red Barn Brewers pairs a kitchen with live music. No hotel, motel, inn or B&B could be verified operating in Winchester; the nearest option is the Old Riverton Inn in neighboring Barkhamsted."
+      }
+    ],
+    "photos": [
+      {
+        "src": "/photos/ct/winchester/winsted-gilson-theatre.jpg",
+        "thumb": "/photos/ct/winchester/winsted-gilson-theatre_thumb.jpg",
+        "title": "Winsted Main Street",
+        "description": "The historic Gilson Theatre building on Main Street in Winsted.",
+        "author": "Dougtone (Doug Kerr)",
+        "license": "CC BY-SA 2.0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Winsted,_Connecticut_-_4956050303.jpg"
+      },
+      {
+        "src": "/photos/ct/winchester/winchester-center-congregational-church.jpg",
+        "thumb": "/photos/ct/winchester/winchester-center-congregational-church_thumb.jpg",
+        "title": "Winchester Center Congregational Church",
+        "description": "The Greek Revival Winchester Center Congregational Church in the Winchester Center Historic District.",
+        "author": "John Phelan",
+        "license": "CC BY 4.0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Winchester_Center_Congregational_Church,_Winchester_CT.jpg"
+      },
+      {
+        "src": "/photos/ct/winchester/winchester-center-gazebo.jpg",
+        "thumb": "/photos/ct/winchester/winchester-center-gazebo_thumb.jpg",
+        "title": "Winchester Center gazebo",
+        "description": "A Victorian gazebo on the Winchester Center green.",
+        "author": "John Phelan",
+        "license": "CC BY 4.0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Gazebo,_Winchester_CT.jpg"
+      }
+    ]
+  },
+  "places": [
+    {
+      "slug": "american-museum-of-tort-law",
+      "name": "American Museum of Tort Law",
+      "kind": "museum",
+      "town": "Winchester",
+      "state": "Connecticut",
+      "county": "Litchfield County",
+      "address": "654 Main Street, Winsted, CT 06098",
+      "official_url": "https://www.tortmuseum.org/",
+      "summary": "Founded by consumer advocate Ralph Nader and opened in September 2015, billed as the world's first museum dedicated to the law, housed in the restored historic Winsted Savings Bank. Exhibits cover landmark cases including the Ford Pinto case and tobacco litigation. Hours Tuesday-Saturday 10 a.m.-5 p.m., Sunday 11 a.m.-4 p.m.; free on-site parking. Phone (860) 379-0505.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "american-mural-project",
+      "name": "American Mural Project",
+      "kind": "museum",
+      "town": "Winchester",
+      "state": "Connecticut",
+      "county": "Litchfield County",
+      "address": "90 Whiting Street, Winsted, CT 06098",
+      "official_url": "https://americanmuralproject.org/",
+      "summary": "Home to what it describes as the largest indoor collaborative artwork in the world — a mural 120 feet long and five stories high honoring American workers. Hours Friday-Saturday 10 a.m.-5 p.m., Sunday noon-5 p.m. Admission $15 adults, $12 seniors and veterans, $5 students, free under 5. Phone (860) 379-3006.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "soldiers-monument-memorial-park-winsted",
+      "name": "Soldiers' Monument and Memorial Park",
+      "kind": "historic-site",
+      "town": "Winchester",
+      "state": "Connecticut",
+      "county": "Litchfield County",
+      "address": "84 Crown Street, Winsted, CT 06098",
+      "official_url": "https://www.soldiersmonumentwinsted.org/",
+      "summary": "A Civil War memorial tower dedicated September 11, 1891, standing over Winsted on Crown Street. Park open daylight hours; tower open on scheduled days and by appointment. An annual Dedication Day event runs each September 11.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "platt-hill-state-park",
+      "name": "Platt Hill State Park",
+      "kind": "park",
+      "town": "Winchester",
+      "state": "Connecticut",
+      "county": "Litchfield County",
+      "address": "Off Route 263, Winchester, CT 06098",
+      "official_url": "https://www.ctvisit.com/listings/platt-hill-state-park",
+      "summary": "A 159-acre undeveloped state park in the Litchfield Hills with grassy fields, scenic vistas and autumn color; activities are hiking, picnicking and bird watching. Phone (860) 424-3200.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "sue-grossman-still-river-greenway",
+      "name": "Sue Grossman Still River Greenway",
+      "kind": "park",
+      "town": "Winchester",
+      "state": "Connecticut",
+      "county": "Litchfield County",
+      "address": "Trailhead at 18 Lanson Drive, Winsted, CT 06098",
+      "summary": "A fully paved, wheelchair-accessible rail-trail of roughly 3.4 miles following the former Naugatuck Division railroad corridor between Winsted and Torrington, used for walking, biking, inline skating and cross-country skiing.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "highland-lake",
+      "name": "Highland Lake",
+      "kind": "park",
+      "town": "Winchester",
+      "state": "Connecticut",
+      "county": "Litchfield County",
+      "address": "Public marina at 173 Lake Street, Winsted, CT 06098",
+      "official_url": "https://townofwinchester.org/our-town/attractions-tourism",
+      "summary": "A resort lake more than three miles long and 444 acres in area, one of Connecticut's larger lakes, used for swimming, fishing, boating and water skiing. A public marina operates on Lake Street — call ahead for current rental and slip information.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "noujaims-bistro",
+      "name": "Noujaim's Bistro",
+      "kind": "restaurant",
+      "town": "Winchester",
+      "state": "Connecticut",
+      "county": "Litchfield County",
+      "address": "436 Main Street, Winsted, CT 06098",
+      "official_url": "https://www.noujaimsbistro.com/",
+      "summary": "Lebanese, Levantine and Mediterranean cooking on Main Street — lemon and garlic, mint and yogurt, lamb, spices and smoke. Dinner service Thursday-Saturday 5-9 p.m.; catering and takeout. Phone (860) 379-0559.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "little-red-barn-brewers",
+      "name": "Little Red Barn Brewers",
+      "kind": "brewery",
+      "town": "Winchester",
+      "state": "Connecticut",
+      "county": "Litchfield County",
+      "address": "32 Lake Street, Winsted, CT 06098",
+      "official_url": "https://lrbbrewers.com/",
+      "summary": "Winsted's craft brewery and taproom, brewing since 2019 per the Town of Winchester, with a kitchen, live music and trivia nights. Taproom hours Wednesday-Thursday 3-9 p.m., Friday-Saturday noon-9 p.m., Sunday noon-6 p.m., closed Monday-Tuesday.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "railway-cafe",
+      "name": "Railway Café",
+      "kind": "cafe",
+      "town": "Winchester",
+      "state": "Connecticut",
+      "county": "Litchfield County",
+      "address": "580 Main Street, Winsted, CT 06098",
+      "official_url": "https://www.railwaycafewinsted.com/",
+      "summary": "A morning-and-midday Main Street café doing breakfast and brunch, with fresh-baked cinnamon rolls as its calling card and a coffee bar. Open Wednesday-Friday 7 a.m.-2 p.m., Saturday 8 a.m.-1 p.m., Sunday 8 a.m.-noon; no weekend reservations. Phone (860) 238-7677.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "marios-tuscany-grill-bar",
+      "name": "Mario's Tuscany Grill & Bar",
+      "kind": "restaurant",
+      "town": "Winchester",
+      "state": "Connecticut",
+      "county": "Litchfield County",
+      "address": "560 Main Street, Winsted, CT 06098",
+      "official_url": "https://www.mariostuscanygrill.com/",
+      "summary": "An Italian kitchen and bar on upper Main Street built around fresh, seasonal ingredients — salads, seafood, veal, pasta and steaks. Open Tuesday-Thursday 4-10 p.m., Friday-Saturday 11 a.m.-10 p.m., Sunday noon-9 p.m.; closed Mondays. Phone (860) 379-7415.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "rooted-market",
+      "name": "Rooted Market",
+      "kind": "cafe",
+      "town": "Winchester",
+      "state": "Connecticut",
+      "county": "Litchfield County",
+      "address": "406 Main Street, Winsted, CT 06098",
+      "official_url": "https://www.rootedmkt.com/",
+      "summary": "A downtown health-food market and café counter — fresh produce, vitamins and supplements, plus smoothies, açaí bowls and kombucha. Hours Monday-Friday 9 a.m.-6 p.m. (Wednesday to 7 p.m.), Saturday 9:30 a.m.-5 p.m., Sunday 11 a.m.-3 p.m. Phone (860) 738-9222.",
+      "status": "open",
+      "photos": []
+    }
+  ],
+  "entries": [
+    {
+      "kind": "sight",
+      "name": "American Museum of Tort Law",
+      "place_slug": "american-museum-of-tort-law",
+      "note": "The world's first museum dedicated to the law, founded by Ralph Nader."
+    },
+    {
+      "kind": "sight",
+      "name": "American Mural Project",
+      "place_slug": "american-mural-project",
+      "note": "A five-story mural billed as the largest indoor collaborative artwork in the world."
+    },
+    {
+      "kind": "sight",
+      "name": "Soldiers' Monument and Memorial Park",
+      "place_slug": "soldiers-monument-memorial-park-winsted",
+      "note": "A Civil War memorial tower dedicated in 1891."
+    },
+    {
+      "kind": "walk",
+      "name": "Platt Hill State Park",
+      "place_slug": "platt-hill-state-park",
+      "note": "159 undeveloped acres with grassy fields and autumn color."
+    },
+    {
+      "kind": "walk",
+      "name": "Sue Grossman Still River Greenway",
+      "place_slug": "sue-grossman-still-river-greenway",
+      "note": "A paved rail-trail linking Winsted and Torrington."
+    },
+    {
+      "kind": "sight",
+      "name": "Highland Lake",
+      "place_slug": "highland-lake",
+      "note": "One of Connecticut's larger lakes, over three miles long."
+    },
+    {
+      "kind": "food",
+      "name": "Noujaim's Bistro",
+      "place_slug": "noujaims-bistro",
+      "note": "Lebanese and Mediterranean cooking on Main Street."
+    },
+    {
+      "kind": "food",
+      "name": "Little Red Barn Brewers",
+      "place_slug": "little-red-barn-brewers",
+      "note": "Winsted's craft brewery, with live music and trivia."
+    },
+    {
+      "kind": "food",
+      "name": "Railway Café",
+      "place_slug": "railway-cafe",
+      "note": "Breakfast and brunch, known for cinnamon rolls."
+    },
+    {
+      "kind": "food",
+      "name": "Mario's Tuscany Grill & Bar",
+      "place_slug": "marios-tuscany-grill-bar",
+      "note": "Seasonal Italian cooking on upper Main Street."
+    },
+    {
+      "kind": "food",
+      "name": "Rooted Market",
+      "place_slug": "rooted-market",
+      "note": "A downtown health-food market and café counter."
+    }
+  ],
+  "links": [
+    {
+      "target": "guide:barkhamsted-ct-travel-guide",
+      "kind": "nearby",
+      "note": "The nearest verified lodging to Winsted, the Old Riverton Inn, sits in neighboring Barkhamsted."
+    },
+    {
+      "target": "guide:colebrook-ct-travel-guide",
+      "kind": "nearby",
+      "note": null
+    },
+    {
+      "target": "guide:norfolk-ct-travel-guide",
+      "kind": "nearby",
+      "note": null
+    },
+    {
+      "target": "guide:torrington-ct-travel-guide",
+      "kind": "nearby",
+      "note": "Northwestern Connecticut Transit District buses connect Winsted and Torrington."
+    }
+  ]
+}

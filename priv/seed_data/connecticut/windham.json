@@ -1,0 +1,279 @@
+{
+  "guide": {
+    "slug": "windham-ct-travel-guide",
+    "title": "Windham, Connecticut: Thread City and the Frog Fight",
+    "destination": "Windham, Connecticut",
+    "state": "Connecticut",
+    "county": "Windham County",
+    "intro": "Windham was incorporated in 1692; the original town was far larger than today's, taking in what are now Mansfield and Scotland plus parts of Chaplin and Hampton, reaching its present shape only in 1857. Its name comes from Wyndham, England. Willimantic, the borough within Windham, became known as \"Thread City\" for the mills that made it a national leader in thread manufacturing: the Willimantic Linen Company, founded in 1854, had grown by the 1880s into four granite mills employing about a thousand workers, later sold to British and Scottish interests as the American Thread Company. Willimantic's city government dissolved in 1983 and consolidated with Windham. In June 1754, drought-concentrated bullfrogs fought so loudly in the town's last pond that terrified residents fired muskets into the dark — the \"Windham Frog Fight,\" now commemorated on the Thread City Crossing bridge.",
+    "sections": [
+      {
+        "heading": "Thread City and the Frog Fight",
+        "body": "Windham was incorporated in 1692, its original territory taking in what are now Mansfield and Scotland plus parts of Chaplin and Hampton; it took its present shape in 1857, when the last of those areas split off. Willimantic, the borough within Windham, became \"Thread City\": the Willimantic Linen Company, founded in 1854, had grown by the 1880s into four granite mills employing about a thousand workers. In 1899 British and Scottish interests took control as the American Thread Company, and a 1912 strike organized by Industrial Workers of the World members preceded a 1914 federal antitrust action that separated it from Scottish ownership; the granite mill still stands. Willimantic's city government dissolved in 1983 and consolidated with Windham. One night in June 1754, a severe drought had concentrated bullfrogs into the area's last pond, and townspeople terrified by their nighttime battle fired muskets into the dark — the \"Windham Frog Fight,\" now commemorated by four frog sculptures by Leo Jensen atop the Thread City Crossing bridge, opened in 2000."
+      },
+      {
+        "heading": "Getting there",
+        "body": "Windham/Willimantic is reached on state highways rather than an interstate: most visitors come off I-84 from the Hartford/Tolland side or I-395 from the Norwich/Plainfield side, finishing on US Route 6 (the Willimantic Bypass), Route 32, Route 66 or Route 195. No interstate directly serves Windham — a 1960s plan to extend I-84 through Willimantic toward Providence was abandoned. Willimantic station has had no active passenger service since Amtrak's Montrealer ended in 1995; the CTrail Hartford Line and Shore Line East both run well west and south of Windham County, so the closest rail boarding points are Hartford or New London. Windham Region Transit District buses cover Willimantic and connect to Storrs/UConn, Norwich and Danielson."
+      }
+    ],
+    "faq": [
+      {
+        "question": "How do I get to Windham?",
+        "answer": "By car — most visitors come off I-84 from Hartford/Tolland or I-395 from Norwich/Plainfield, finishing on US Route 6, Route 32, Route 66 or Route 195. No interstate directly serves Windham."
+      },
+      {
+        "question": "Is there a train to Windham?",
+        "answer": "No. Willimantic station has had no active passenger service since Amtrak's Montrealer ended in 1995. The closest rail boarding points are Hartford or New London; Windham Region Transit District buses connect Willimantic to Storrs, Norwich and Danielson."
+      },
+      {
+        "question": "What is the Windham Frog Fight?",
+        "answer": "A June 1754 incident when drought concentrated bullfrogs into the area's last remaining pond; their nighttime battle terrified townspeople, who fired muskets into the dark. Hundreds of frog corpses were found the next day. The legend is now commemorated by four frog sculptures by Leo Jensen on the Thread City Crossing bridge."
+      },
+      {
+        "question": "What is the Jillson House Museum?",
+        "answer": "A circa-1824 house of gneiss granite quarried from the Willimantic River, home to the Windham Historical Society. Open Saturdays 1-4 p.m., with exhibits on the town's history and the Frog Bridge."
+      },
+      {
+        "question": "Is there a hotel in Windham?",
+        "answer": "No hotel, inn, motel or B&B inside the Town of Windham could be verified. The nearest confirmed option is Graduate by Hilton Storrs, on the UConn campus in neighboring Mansfield, reached north on Route 195."
+      }
+    ],
+    "photos": [
+      {
+        "src": "/photos/ct/windham/frog-bridge-ornament-willimantic.jpg",
+        "thumb": "/photos/ct/windham/frog-bridge-ornament-willimantic_thumb.jpg",
+        "title": "Thread City Crossing frog ornament",
+        "description": "A close-up of one of the frog sculptures atop the Thread City Crossing (Frog Bridge) in Willimantic.",
+        "author": "Grendelkhan",
+        "license": "CC BY-SA 4.0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Frog_ornament_on_Thread_City_Bridge.gk.jpg"
+      },
+      {
+        "src": "/photos/ct/windham/jillson-house-willimantic.jpg",
+        "thumb": "/photos/ct/windham/jillson-house-willimantic_thumb.jpg",
+        "title": "Jillson House",
+        "description": "The circa-1824 stone Jillson House, home of the Windham Historical Society, in Willimantic.",
+        "author": "JJBers",
+        "license": "CC BY 2.0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:WillimanticCT_JillsonHouse.jpg"
+      },
+      {
+        "src": "/photos/ct/windham/air-line-trail-willimantic.jpg",
+        "thumb": "/photos/ct/windham/air-line-trail-willimantic_thumb.jpg",
+        "title": "Air Line State Park Trail, Willimantic",
+        "description": "The Air Line State Park Trail within Willimantic.",
+        "author": "John Phelan",
+        "license": "CC BY 4.0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Air_Line_State_Park_Trail_W,_Willimantic_CT.jpg"
+      }
+    ]
+  },
+  "places": [
+    {
+      "slug": "jillson-house-museum",
+      "name": "Jillson House Museum",
+      "kind": "museum",
+      "town": "Windham",
+      "state": "Connecticut",
+      "county": "Windham County",
+      "address": "627 Main St., Willimantic, CT 06226",
+      "official_url": "https://jillsonhousemuseum.com/",
+      "summary": "A circa-1824 house built of gneiss granite quarried from the nearby Willimantic River, home to the Windham Historical Society. Exhibits include 'Portrait of a Town' and 'Fashion in the Early 1900s.' Open Saturdays 1-4 p.m.",
+      "status": "open",
+      "photos": [
+        {
+          "src": "/photos/ct/windham/jillson-house-willimantic.jpg",
+          "thumb": "/photos/ct/windham/jillson-house-willimantic_thumb.jpg",
+          "title": "Jillson House",
+          "description": "The circa-1824 stone Jillson House, home of the Windham Historical Society, in Willimantic.",
+          "author": "JJBers",
+          "license": "CC BY 2.0",
+          "source_url": "https://commons.wikimedia.org/wiki/File:WillimanticCT_JillsonHouse.jpg"
+        }
+      ]
+    },
+    {
+      "slug": "windham-theatre-guild",
+      "name": "Windham Theatre Guild at the Burton Leavitt Theatre",
+      "kind": "theater",
+      "town": "Windham",
+      "state": "Connecticut",
+      "county": "Windham County",
+      "address": "779 Main St., Willimantic, CT 06226",
+      "official_url": "https://windhamtheatreguild.org/",
+      "summary": "A community theater company with about 40 years of productions in downtown Willimantic, presenting a full season of plays and musicals with tickets sold online.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "air-line-state-park-trail-windham",
+      "name": "Air Line State Park Trail (Windham section)",
+      "kind": "park",
+      "town": "Windham",
+      "state": "Connecticut",
+      "county": "Windham County",
+      "address": "Multiple trailhead parking areas in Windham/Willimantic",
+      "official_url": "https://ctparks.com/node/16",
+      "summary": "A free, 50-mile multi-use rail-trail running from Thompson to Portland through Windham and eleven other towns, open to hiking, biking, horseback riding and winter sports. It follows the old Air Line Railroad and connects to the Hop River Trail and the Southern New England Trunkline Trail.",
+      "status": "open",
+      "photos": [
+        {
+          "src": "/photos/ct/windham/air-line-trail-willimantic.jpg",
+          "thumb": "/photos/ct/windham/air-line-trail-willimantic_thumb.jpg",
+          "title": "Air Line State Park Trail, Willimantic",
+          "description": "The Air Line State Park Trail within Willimantic.",
+          "author": "John Phelan",
+          "license": "CC BY 4.0",
+          "source_url": "https://commons.wikimedia.org/wiki/File:Air_Line_State_Park_Trail_W,_Willimantic_CT.jpg"
+        }
+      ]
+    },
+    {
+      "slug": "thread-city-crossing",
+      "name": "Thread City Crossing (the Frog Bridge)",
+      "kind": "historic-site",
+      "town": "Windham",
+      "state": "Connecticut",
+      "county": "Windham County",
+      "address": "South Street over the Willimantic River, Willimantic, CT",
+      "summary": "Opened in 2000, Windham's signature roadside landmark: four 11-foot frog sculptures by Leo Jensen sit atop giant thread spools, marrying the 1754 Frog Fight legend to Willimantic's 'Thread City' industry. A public bridge, free and always accessible.",
+      "history": "The 1857 stone arch bridge it replaced survives nearby as a garden walkway, reopened in 2006 as the Windham Garden on the Bridge pedestrian span.",
+      "status": "open",
+      "photos": [
+        {
+          "src": "/photos/ct/windham/frog-bridge-ornament-willimantic.jpg",
+          "thumb": "/photos/ct/windham/frog-bridge-ornament-willimantic_thumb.jpg",
+          "title": "Thread City Crossing frog ornament",
+          "description": "A close-up of one of the frog sculptures atop the Thread City Crossing (Frog Bridge) in Willimantic.",
+          "author": "Grendelkhan",
+          "license": "CC BY-SA 4.0",
+          "source_url": "https://commons.wikimedia.org/wiki/File:Frog_ornament_on_Thread_City_Bridge.gk.jpg"
+        }
+      ]
+    },
+    {
+      "slug": "willimantic-brewing-company",
+      "name": "Willimantic Brewing Company / Main Street Café",
+      "kind": "brewery",
+      "town": "Windham",
+      "state": "Connecticut",
+      "county": "Windham County",
+      "address": "967 Main Street, Willimantic, CT 06226",
+      "official_url": "https://willimanticbrewingcompany.com/",
+      "summary": "A brewpub inside the 1909 U.S. Post Office building, vacant nearly 30 years before its 1990s conversion; the dining room was the post office work room and the pub was the customer lobby. A 7-barrel brewhouse, visible from the dining room, turns out house beers. Gluten-free options; reservations suggested for parties of four or more.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "cafemantic",
+      "name": "Cafemantic",
+      "kind": "restaurant",
+      "town": "Windham",
+      "state": "Connecticut",
+      "county": "Windham County",
+      "address": "948 Main Street, Willimantic, CT 06226",
+      "official_url": "https://www.cafemantic.com/",
+      "summary": "A chef-driven neighborhood eatery built around seasonal, homemade food from local farmers and fishers. Lunch Tuesday-Saturday 11:30 a.m.-3 p.m.; dinner Tuesday-Thursday 5-9 p.m., Friday-Saturday to 10 p.m., Sunday 4-9 p.m.; Sunday brunch 10 a.m.-2 p.m.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "willimantic-food-co-op",
+      "name": "Willimantic Food Co-op",
+      "kind": "cafe",
+      "town": "Windham",
+      "state": "Connecticut",
+      "county": "Windham County",
+      "address": "91 Valley Street, Willimantic, CT 06226",
+      "official_url": "https://willimanticfood.coop/",
+      "summary": "A member-owned natural foods cooperative founded in 1980, open to everyone, with a deli and rotating weekly soup menu — a grocery stop for provisions or trail food before the Air Line Trail. Open daily 8 a.m.-8 p.m.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "hosmer-mountain-soda-willimantic",
+      "name": "Hosmer Mountain Soda (Willimantic store)",
+      "kind": "cafe",
+      "town": "Windham",
+      "state": "Connecticut",
+      "county": "Windham County",
+      "address": "217 Mountain Street, Willimantic, CT 06226",
+      "official_url": "https://hosmersoda.com/",
+      "summary": "The factory retail store of a family soda bottler in Willimantic since 1912 — buy handmade sodas by the bottle or case rather than sit down for a meal. Open Monday-Saturday 10 a.m.-6 p.m., closed Sunday.",
+      "status": "open",
+      "photos": []
+    }
+  ],
+  "entries": [
+    {
+      "kind": "sight",
+      "name": "Jillson House Museum",
+      "place_slug": "jillson-house-museum",
+      "note": "An 1824 stone house museum run by the Windham Historical Society."
+    },
+    {
+      "kind": "sight",
+      "name": "Windham Theatre Guild at the Burton Leavitt Theatre",
+      "place_slug": "windham-theatre-guild",
+      "note": "Community theater with about 40 years of productions."
+    },
+    {
+      "kind": "walk",
+      "name": "Air Line State Park Trail",
+      "place_slug": "air-line-state-park-trail-windham",
+      "note": "A 50-mile rail-trail running through Willimantic."
+    },
+    {
+      "kind": "sight",
+      "name": "Thread City Crossing (the Frog Bridge)",
+      "place_slug": "thread-city-crossing",
+      "note": "Four giant frog sculptures atop a Willimantic bridge."
+    },
+    {
+      "kind": "food",
+      "name": "Willimantic Brewing Company / Main Street Café",
+      "place_slug": "willimantic-brewing-company",
+      "note": "Brewpub inside a converted 1909 post office building."
+    },
+    {
+      "kind": "food",
+      "name": "Cafemantic",
+      "place_slug": "cafemantic",
+      "note": "Chef-driven neighborhood eatery with seasonal menus."
+    },
+    {
+      "kind": "food",
+      "name": "Willimantic Food Co-op",
+      "place_slug": "willimantic-food-co-op",
+      "note": "Member-owned natural foods grocery with a deli."
+    },
+    {
+      "kind": "food",
+      "name": "Hosmer Mountain Soda (Willimantic store)",
+      "place_slug": "hosmer-mountain-soda-willimantic",
+      "note": "Factory retail store for a soda bottler since 1912."
+    }
+  ],
+  "links": [
+    {
+      "target": "guide:scotland-ct-travel-guide",
+      "kind": "shared-history",
+      "note": "Scotland separated from Windham and was incorporated as its own town in 1857."
+    },
+    {
+      "target": "guide:chaplin-ct-travel-guide",
+      "kind": "shared-history",
+      "note": "Chaplin was incorporated in 1822 from parts of Hampton, Mansfield and Windham."
+    },
+    {
+      "target": "guide:hampton-ct-travel-guide",
+      "kind": "shared-history",
+      "note": "Hampton was incorporated in 1786 in part from Windham."
+    },
+    {
+      "target": "guide:storrs-ct-travel-guide",
+      "kind": "shared-history",
+      "note": "Windham's original territory, before 1857, included what is now Mansfield."
+    }
+  ]
+}

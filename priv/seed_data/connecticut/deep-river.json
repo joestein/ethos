@@ -1,0 +1,244 @@
+{
+  "guide": {
+    "slug": "deep-river-ct-travel-guide",
+    "title": "Deep River, Connecticut: Ivory, Combs and a Steam Train Landing",
+    "destination": "Deep River, Connecticut",
+    "state": "Connecticut",
+    "county": "Middlesex County",
+    "intro": "Deep River was settled in 1635 as part of the Saybrook Colony, first known as \"Eight Mile Meadow\" or \"Potapaug Quarter.\" It remained part of the town of Saybrook until that town's remaining section renamed itself Deep River in 1947, after Chester, Westbrook and Essex had each split off earlier. The town's defining industry began in 1798, when Phineas Pratt invented mechanical comb-cutting technology; Ezra Williams soon built the country's largest comb shop here, and by 1900 Deep River and neighboring Ivoryton processed up to 90 percent of the ivory imported into the United States, employing more than 1,400 workers between them. That wealth — and the human cost behind it, since tusks were carried to the coast using enslaved labor — earned Deep River the nickname \"Queen of the Valley.\" The Deep River Ancient Muster, a fife-and-drum gathering begun in 1953, set a Guinness world record in 1976 and is still held every July.",
+    "sections": [
+      {
+        "heading": "Ivory, combs and the world's largest muster",
+        "body": "Phineas Pratt's 1798 mechanical comb-cutting invention drew Ezra Williams' comb shop to Deep River, where it became the largest of its kind in the country; George Read & Company, the Pratt Brothers and Julius Pratt & Company merged into Pratt, Read & Company in 1862–63. By 1900, Deep River and Ivoryton together employed more than 1,400 workers processing up to 90 percent of the ivory imported into the United States — a single 75-pound tusk could yield veneers for the keys of 45 pianos, and the last shipment reached Ivoryton in 1954. The former Pratt, Read & Company Factory Complex still stands on Main Street and has been on the National Register since 1984. The Deep River Ancient Muster began on September 5, 1953, when fifteen corps gathered to mark the Deep River Drum Corps' 80th anniversary; in 1976 it set the Guinness World Record for the largest Ancient Fife and Drum Muster, and it is still held every third Saturday in July at Devitt's Field."
+      },
+      {
+        "heading": "Getting there",
+        "body": "Deep River is a car-first destination on Route 9 in the lower Connecticut River valley: take Exit 7 and follow signs to Deep River from I-95 northbound (Route 9N) or I-91 southbound (Route 9S). Route 154 (Main Street) is the scenic river road through the village center, and Route 80 runs west toward Killingworth. There is no passenger rail station in Deep River; the nearest is Old Saybrook, roughly 10 miles south on Shore Line East and Amtrak. The Essex Steam Train, a heritage excursion railroad rather than scheduled transit, runs through Deep River and transfers passengers to the Becky Thatcher riverboat at Deep River Landing for a Connecticut River cruise past Gillette Castle, the Goodspeed Opera House and the Haddam Swing Bridge."
+      },
+      {
+        "heading": "Where to eat",
+        "body": "High Nine Brewing is Deep River's own production brewery and taproom, with an events calendar of live music and taproom yoga and dogs welcome on the patio. Red House Restaurant and Bar serves dinner Tuesday through Sunday on Main Street, and Hally Jo's Corner Cafe opens at 5:30 a.m. daily for house-baked muffins and breakfast. No hotel, inn or B&B could be verified as operating inside Deep River; the nearest option is in neighboring Essex, about four miles away."
+      }
+    ],
+    "faq": [
+      {
+        "question": "How do I get to Deep River?",
+        "answer": "By car — take Route 9 Exit 7 and follow signs to Deep River from I-95 north or I-91 south. There is no passenger rail station in town; the nearest is Old Saybrook, roughly 10 miles south on Shore Line East and Amtrak."
+      },
+      {
+        "question": "Can I ride a train through Deep River?",
+        "answer": "The Essex Steam Train, a heritage excursion railroad rather than scheduled transit, runs through Deep River and transfers passengers to the Becky Thatcher riverboat at Deep River Landing for a Connecticut River cruise."
+      },
+      {
+        "question": "What was Deep River's ivory industry?",
+        "answer": "From the late 1700s through the mid-20th century, Deep River and neighboring Ivoryton processed up to 90 percent of the ivory imported into the United States, mostly for piano keys and combs, employing more than 1,400 workers by 1900. The last shipment reached Ivoryton in 1954."
+      },
+      {
+        "question": "What is the Deep River Ancient Muster?",
+        "answer": "A fife-and-drum gathering held every third Saturday in July at Devitt's Field, tracing to a 1953 celebration of the Deep River Drum Corps' 80th anniversary. It set the Guinness World Record for the largest Ancient Fife and Drum Muster in 1976."
+      },
+      {
+        "question": "Is there a hotel in Deep River?",
+        "answer": "No hotel, inn or B&B could be verified as currently operating inside Deep River. The nearest option is in neighboring Essex, about four miles away."
+      }
+    ],
+    "photos": [
+      {
+        "src": "/photos/ct/deep-river/essex-steam-train-deep-river.jpg",
+        "thumb": "/photos/ct/deep-river/essex-steam-train-deep-river_thumb.jpg",
+        "title": "Essex Steam Train at Deep River",
+        "description": "The Essex Steam Train arriving at Deep River station, the transfer point for the Becky Thatcher riverboat.",
+        "author": "Nathan Dimartino",
+        "license": "CC BY-SA 4.0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Valley_Railroad_40_Arriving_At_Deep_River_October_22,_2021.jpg"
+      },
+      {
+        "src": "/photos/ct/deep-river/connecticut-river-deep-river.jpg",
+        "thumb": "/photos/ct/deep-river/connecticut-river-deep-river_thumb.jpg",
+        "title": "Connecticut River at Deep River",
+        "description": "The Connecticut River shoreline near Deep River Landing.",
+        "author": "Ethan Long",
+        "license": "CC BY-SA 2.0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Connecticut_River,_Deep_River,_CT_(53796578623).jpg"
+      },
+      {
+        "src": "/photos/ct/deep-river/deep-river-town-hall.jpg",
+        "thumb": "/photos/ct/deep-river/deep-river-town-hall_thumb.jpg",
+        "title": "Deep River Town Hall",
+        "description": "Deep River's Town Hall on Main Street.",
+        "author": "John Phelan",
+        "license": "CC BY-SA 4.0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Town_Hall,_Deep_River_CT.jpg"
+      }
+    ]
+  },
+  "places": [
+    {
+      "slug": "deep-river-historical-society-stone-house",
+      "name": "Deep River Historical Society — The Stone House",
+      "kind": "museum",
+      "town": "Deep River",
+      "state": "Connecticut",
+      "county": "Middlesex County",
+      "address": "245 Main Street, Deep River, CT 06417",
+      "official_url": "https://www.deepriverhistoricalsociety.org/",
+      "summary": "\"Three museums in one\": the Stone House, built in 1841 from locally quarried stone and holding original Southworth family furnishings; a Carriage House; and a Bleach House surviving from the ivory-manufacturing era. Ada Southworth Munson bequeathed the property to the society in 1946. Exhibits cover the ivory industry, women's suffrage and World War II. Free admission; open June through September, Thursdays 10 a.m.–noon and Sundays 2–4 p.m., with year-round appointments at (860) 526-1449.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "deep-river-landing",
+      "name": "Deep River Landing (Town Landing Park)",
+      "kind": "park",
+      "town": "Deep River",
+      "state": "Connecticut",
+      "county": "Middlesex County",
+      "address": "Intersection of Kirtland Street and River Street, Deep River, CT 06417",
+      "official_url": "https://essexsteamtrain.com/train-boat/",
+      "summary": "The town landing on the Connecticut River and the transfer point for the Essex Steam Train & Riverboat: passengers board the Becky Thatcher riverboat here for a roughly 1¼-hour cruise past Gillette Castle, the Goodspeed Opera House and the Haddam Swing Bridge before reboarding the steam train. The 2026 season ran weekends in May (plus Monday, May 25), Thursdays–Sundays from June through September, and Thursdays–Mondays in October; fares started at $29 for the train alone and $49 for the combined trip.",
+      "status": "open",
+      "photos": [
+        {
+          "src": "/photos/ct/deep-river/essex-steam-train-deep-river.jpg",
+          "thumb": "/photos/ct/deep-river/essex-steam-train-deep-river_thumb.jpg",
+          "title": "Essex Steam Train at Deep River",
+          "description": "The Essex Steam Train arriving at Deep River station, the transfer point for the Becky Thatcher riverboat.",
+          "author": "Nathan Dimartino",
+          "license": "CC BY-SA 4.0",
+          "source_url": "https://commons.wikimedia.org/wiki/File:Valley_Railroad_40_Arriving_At_Deep_River_October_22,_2021.jpg"
+        }
+      ]
+    },
+    {
+      "slug": "pratt-cove-smythe-preserve",
+      "name": "Pratt Cove and the Smythe Preserve",
+      "kind": "park",
+      "town": "Deep River",
+      "state": "Connecticut",
+      "county": "Middlesex County",
+      "address": "Downtown Deep River, CT 06417, on the Connecticut River near River Street",
+      "official_url": "https://www.deepriverct.us/198/Land-Trust",
+      "summary": "Pratt Cove is a rare freshwater tidal marsh on the Connecticut River that the town describes as recognized for its exceptional environmental importance by state, federal and international organizations. The adjoining Smythe Preserve is part of the Deep River Land Trust's network of publicly accessible preserves. Land Trust contact: (860) 526-5957.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "deep-river-ancient-muster",
+      "name": "Deep River Ancient Muster at Devitt's Field",
+      "kind": "attraction",
+      "town": "Deep River",
+      "state": "Connecticut",
+      "county": "Middlesex County",
+      "address": "Devitt's Field, Deep River, CT 06417",
+      "official_url": "https://www.deepriverct.us/196/Deep-River-Ancient-Muster",
+      "summary": "\"The Granddaddy of All Musters,\" held annually on the third Saturday of July: a free Friday-night Tattoo at 7 p.m. at Devitt's Field, followed by Saturday's parade at 11 a.m. from Main and Kirtland Streets down to the field and the muster itself, drawing 40-plus invited fife-and-drum corps. Public parking is offered at the Congregational Church, the Stone House, Deep River Hardware, the public library and along Route 80.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "high-nine-brewing",
+      "name": "High Nine Brewing",
+      "kind": "brewery",
+      "town": "Deep River",
+      "state": "Connecticut",
+      "county": "Middlesex County",
+      "address": "6 Winter Avenue, Unit 7, Deep River, CT 06417",
+      "official_url": "https://www.highninebrewing.com/",
+      "summary": "Deep River's own production brewery and taproom, with an events calendar of live music and taproom yoga. Dogs are welcome on the patio and outside food is allowed. Open Monday–Friday 3–9 p.m., Saturday noon–9 p.m., Sunday noon–7 p.m.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "red-house-restaurant-bar",
+      "name": "Red House Restaurant and Bar",
+      "kind": "restaurant",
+      "town": "Deep River",
+      "state": "Connecticut",
+      "county": "Middlesex County",
+      "address": "158 Main Street, Deep River, CT 06417",
+      "official_url": "https://www.redhousect.com/",
+      "summary": "A Main Street American restaurant and bar serving dinner Tuesday through Sunday, reservations welcomed. Open Tuesday–Thursday 4–8:30 p.m., Friday 4–9 p.m., Saturday noon–9 p.m., Sunday noon–8 p.m.; phone (860) 526-2600.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "hally-jos-corner-cafe",
+      "name": "Hally Jo's Corner Cafe",
+      "kind": "cafe",
+      "town": "Deep River",
+      "state": "Connecticut",
+      "county": "Middlesex County",
+      "address": "165 Main Street, Deep River, CT 06417",
+      "official_url": "https://www.hallyjos.com/",
+      "summary": "An early-opening village breakfast-and-lunch counter, known for house-baked muffins in blueberry, honey raisin, morning glory, corn and cranberry nut. Open Monday–Saturday from 5:30 a.m., closing hours vary — call (860) 526-8838 to confirm.",
+      "status": "open",
+      "photos": []
+    }
+  ],
+  "entries": [
+    {
+      "kind": "sight",
+      "name": "Deep River Historical Society — The Stone House",
+      "place_slug": "deep-river-historical-society-stone-house",
+      "note": "Three museums in one, covering the ivory industry and town history."
+    },
+    {
+      "kind": "sight",
+      "name": "Deep River Landing",
+      "place_slug": "deep-river-landing",
+      "note": "The steam train's transfer point for the Becky Thatcher riverboat."
+    },
+    {
+      "kind": "walk",
+      "name": "Pratt Cove and the Smythe Preserve",
+      "place_slug": "pratt-cove-smythe-preserve",
+      "note": "A rare freshwater tidal marsh on the Connecticut River."
+    },
+    {
+      "kind": "sight",
+      "name": "Deep River Ancient Muster",
+      "place_slug": "deep-river-ancient-muster",
+      "note": "An annual fife-and-drum gathering dating to 1953."
+    },
+    {
+      "kind": "food",
+      "name": "High Nine Brewing",
+      "place_slug": "high-nine-brewing",
+      "note": "Deep River's own production brewery and taproom."
+    },
+    {
+      "kind": "food",
+      "name": "Red House Restaurant and Bar",
+      "place_slug": "red-house-restaurant-bar",
+      "note": "Main Street American dinner spot, open Tuesday through Sunday."
+    },
+    {
+      "kind": "food",
+      "name": "Hally Jo's Corner Cafe",
+      "place_slug": "hally-jos-corner-cafe",
+      "note": "Early-opening breakfast counter known for house-baked muffins."
+    }
+  ],
+  "links": [
+    {
+      "target": "guide:essex-ct-travel-guide",
+      "kind": "nearby",
+      "note": "Deep River shares a border with Essex; the nearest verified lodging to Deep River is in Essex, about four miles away."
+    },
+    {
+      "target": "guide:chester-ct-travel-guide",
+      "kind": "nearby",
+      "note": "Deep River shares a border with Chester along the Route 9 corridor."
+    },
+    {
+      "target": "guide:killingworth-ct-travel-guide",
+      "kind": "same-region",
+      "note": "CT Route 80 runs west from Deep River toward Killingworth."
+    },
+    {
+      "target": "guide:old-saybrook-ct-travel-guide",
+      "kind": "same-region",
+      "note": "Old Saybrook, roughly 10 miles south, is the nearest passenger rail station to Deep River."
+    }
+  ]
+}

@@ -37,6 +37,7 @@ defmodule Ethos.Seeds.GuideRunner do
             "county" => data.county
           })
           |> Ecto.Changeset.put_change(:slug, data.slug)
+          |> Ecto.Changeset.put_change(:tier, Map.get(data, :tier, "guide"))
           |> Repo.update!()
 
         {:ok, guide} =

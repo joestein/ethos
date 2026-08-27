@@ -1,0 +1,225 @@
+{
+  "guide": {
+    "slug": "portland-ct-travel-guide",
+    "title": "Portland, Connecticut: Brownstone That Built Manhattan",
+    "destination": "Portland, Connecticut",
+    "state": "Connecticut",
+    "county": "Middlesex County",
+    "intro": "The land at the Connecticut River's \"big bend\" was home to the Wangunk people; Europeans settled the area in 1692, and it carried a succession of names — Mattabesset, Middletown, East Middletown, Chatham — before becoming the Town of Portland, incorporated in 1841. The name comes from Portland, Dorset, England, another place famous for its quarry industry. English stonecutter James Stanclift began working the brownstone deposits around 1690, and by the 1850s the quarries employed more than 1,500 workers, with over 25 ships carrying stone to markets across the U.S., Canada and England. Portland brownstone built the rowhouses of Manhattan and Brooklyn, buildings in Boston and San Francisco, and Hartford's Old State House. The Portland Brownstone Quarries were designated a National Historic Landmark in 2000; a 1936 flood and the 1938 hurricane flooded the pits permanently, ending extraction. The Arrigoni Bridge, linking Portland to Middletown since 1938, holds the longest bridge spans in Connecticut.",
+    "sections": [
+      {
+        "heading": "Brownstone that built Manhattan",
+        "body": "Commercial quarrying began in 1783 with the Brainerd Quarry Company; successive waves of Irish, Swedish and Italian immigrants supplied the labor that made Portland brownstone one of the country's defining building materials, used in Manhattan and Brooklyn rowhouses, buildings in Boston and San Francisco, and Wesleyan University's campus. The 1936 flood and 1938 hurricane flooded the quarry pits permanently, ending commercial extraction; the town acquired the site in 1999–2000, and it was designated a National Historic Landmark on May 16, 2000. The flooded pit is now developed for recreational use by a private operator; call ahead to confirm current hours before visiting. The Arrigoni Bridge, opened August 6, 1938 at a cost of $3.5 million, carries Routes 66 and 17 across the river to Middletown on 600-foot arch spans, the longest bridge spans in Connecticut, and won the American Institute of Steel Construction's first \"Most Beautiful Steel Bridge\" award."
+      },
+      {
+        "heading": "Getting there",
+        "body": "Portland is a driving destination, reached across the Arrigoni Bridge (Routes 66 and 17) from Middletown, about a mile west, and roughly 16 miles south of Hartford. There is no passenger rail station in Portland or in neighboring Middletown; the nearest CTrail Hartford Line stops are Berlin and Meriden. Route 2 provides access to Meshomasic State Forest between Exits 10 and 12."
+      }
+    ],
+    "faq": [
+      {
+        "question": "How do I get to Portland?",
+        "answer": "By car — Routes 66 and 17 cross the Arrigoni Bridge from Middletown, about a mile west. There is no passenger rail station in Portland or Middletown; the nearest CTrail Hartford Line stops are Berlin and Meriden."
+      },
+      {
+        "question": "Can I visit the Portland brownstone quarries?",
+        "answer": "The historic quarry pits themselves are permanently flooded and no longer worked. A private operator has developed part of the site for outdoor recreation — call ahead to confirm current hours and access before visiting."
+      },
+      {
+        "question": "What is Meshomasic State Forest?",
+        "answer": "Established in 1903 and covering roughly 9,000 acres primarily in Portland, East Hampton and Marlborough (with smaller portions in Glastonbury and Hebron), it was the first state forest in Connecticut and the second in the United States. It offers hiking, including the blue-blazed Shenipsit Trail, and holds Connecticut's largest population of the endangered timber rattlesnake."
+      },
+      {
+        "question": "Is there a hotel in Portland?",
+        "answer": "No hotel, inn or B&B could be verified operating inside Portland. The nearest verified option is the Inn at Middletown, 70 Main Street, Middletown, roughly a mile across the Arrigoni Bridge."
+      }
+    ],
+    "photos": [
+      {
+        "src": "/photos/ct/portland/brownstone-quarry-arrigoni-bridge-portland.jpg",
+        "thumb": "/photos/ct/portland/brownstone-quarry-arrigoni-bridge-portland_thumb.jpg",
+        "title": "Brownstone quarry and Arrigoni Bridge",
+        "description": "The flooded Portland brownstone quarry with the Arrigoni Bridge behind it.",
+        "author": "Artsistra",
+        "license": "CC BY-SA 4.0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Brownstone_quarry_and_Arrigoni_Bridge,_2022-4-15.jpg"
+      },
+      {
+        "src": "/photos/ct/portland/portland-brownstone-quarries-wide.jpg",
+        "thumb": "/photos/ct/portland/portland-brownstone-quarries-wide_thumb.jpg",
+        "title": "Portland Brownstone Quarries",
+        "description": "A wide view of the flooded Portland Brownstone Quarries, a National Historic Landmark.",
+        "author": "NicholasDawson",
+        "license": "CC BY-SA 4.0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Connecticut_-_Portland_Brownstone_Quarries_-_20200720162027.jpg"
+      },
+      {
+        "src": "/photos/ct/portland/portland-main-street-town-hall.jpg",
+        "thumb": "/photos/ct/portland/portland-main-street-town-hall_thumb.jpg",
+        "title": "Portland Main Street",
+        "description": "Main Street in Portland, looking toward town hall.",
+        "author": "Artsistra",
+        "license": "CC BY-SA 4.0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Portland_Main_Street_facing_town_hall,_2022-4-15.jpg"
+      }
+    ]
+  },
+  "places": [
+    {
+      "slug": "air-line-state-park-trail-portland",
+      "name": "Air Line State Park Trail (Portland)",
+      "kind": "park",
+      "town": "Portland",
+      "state": "Connecticut",
+      "county": "Middlesex County",
+      "address": "Trailhead parking at 82 Middle Haddam Road, Portland, CT 06480",
+      "official_url": "https://ctparks.com/node/16",
+      "summary": "Portland is the southern terminus of this 50-mile rail-trail built on the 1870s Air Line Railroad, which once offered fast passenger service between New York and Boston and gave rise to the legend of the \"Ghost Train\" of the 1890s. Free for walkers, hikers, cyclists, horseback riders and skaters, with cross-country skiing and snowshoeing in winter.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "meshomasic-state-forest",
+      "name": "Meshomasic State Forest",
+      "kind": "park",
+      "town": "Portland",
+      "state": "Connecticut",
+      "county": "Middlesex County",
+      "address": "Spans Portland, East Hampton and Marlborough, CT; accessible from CT Route 2 between Exits 10 and 12",
+      "summary": "Established in 1903 and covering roughly 9,000 acres primarily in Portland, East Hampton and Marlborough, with smaller portions in Glastonbury and Hebron — the first state forest in Connecticut and the second in the United States. Offers hiking including the blue-blazed Shenipsit Trail, mountain biking and hunting; camping is not permitted. Holds Connecticut's largest population of the endangered timber rattlesnake.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "star-hill-family-farm",
+      "name": "Star Hill Family Farm",
+      "kind": "attraction",
+      "town": "Portland",
+      "state": "Connecticut",
+      "county": "Middlesex County",
+      "address": "819 Glastonbury Turnpike, Portland, CT 06480",
+      "official_url": "https://starhillfamilyfarm.com",
+      "summary": "A family-run seasonal farm destination with choose-your-own Christmas trees, handmade wreaths, horse-drawn wagon rides, farm animals, photos with Santa, hot cocoa and s'mores. Public season runs between Thanksgiving and Christmas; January through mid-November is by appointment only for private events. Phone (860) 426-4621.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "quarry-ridge-golf-course",
+      "name": "Quarry Ridge Golf Course",
+      "kind": "attraction",
+      "town": "Portland",
+      "state": "Connecticut",
+      "county": "Middlesex County",
+      "address": "9A Rose Hill Rd., Portland, CT 06480",
+      "official_url": "https://quarryridge.com",
+      "summary": "An 18-hole public course designed by Al Zikorus and Joe Kelley that opened in 1993, playing 6,400 yards to a par 72 among rolling hills and granite outcroppings with views over Meshomasic State Forest and the Connecticut River. Season runs March 15–December 1; ADA compliant, pro shop, restaurant on site.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "terrazza-restaurant",
+      "name": "Terrazza Restaurant",
+      "kind": "restaurant",
+      "town": "Portland",
+      "state": "Connecticut",
+      "county": "Middlesex County",
+      "address": "9 Rose Hill Rd, Portland, CT 06480",
+      "official_url": "https://www.terrazzact.com/",
+      "summary": "Italian cooking with locally sourced ingredients at Quarry Ridge Golf Course, with multiple dining rooms overlooking the fairways and a patio party space. Open Sunday–Thursday 11 a.m.–9 p.m., Friday–Saturday 11 a.m.–10 p.m., bar open until 1 a.m.; phone (860) 788-3558.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "arrigoni-winery",
+      "name": "Arrigoni Winery",
+      "kind": "attraction",
+      "town": "Portland",
+      "state": "Connecticut",
+      "county": "Middlesex County",
+      "address": "1287 Portland-Cobalt Rd (Route 66), Portland, CT 06480",
+      "official_url": "https://www.arrigoniwinery.com/",
+      "summary": "A tasting room in a restored barn on an 1800s farm, pouring 14 wines plus New England ciders with a covered pavilion and vineyard-view patio. Free admission; a five-wine tasting with signature glass is $14.95. Open Friday 11 a.m.–9 p.m., Saturday–Sunday 11 a.m.–6 p.m., closed Monday–Thursday.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "the-pub-at-pgc",
+      "name": "The Pub at PGC",
+      "kind": "restaurant",
+      "town": "Portland",
+      "state": "Connecticut",
+      "county": "Middlesex County",
+      "address": "169 Bartlett St., Portland, CT 06480 (at Portland Golf Course)",
+      "official_url": "http://www.portlandgolfcourse.com",
+      "summary": "Casual pub dining on the grounds of Portland Golf Course, an 18-hole public course opened in 1974 to a Geoffrey Cornish design and owned by the Kelley family ever since. Phone (860) 788-2362.",
+      "status": "open",
+      "photos": []
+    }
+  ],
+  "entries": [
+    {
+      "kind": "walk",
+      "name": "Air Line State Park Trail",
+      "place_slug": "air-line-state-park-trail-portland",
+      "note": "Portland is the southern terminus of this 50-mile rail-trail."
+    },
+    {
+      "kind": "sight",
+      "name": "Meshomasic State Forest",
+      "place_slug": "meshomasic-state-forest",
+      "note": "Connecticut's first state forest, established 1903."
+    },
+    {
+      "kind": "sight",
+      "name": "Star Hill Family Farm",
+      "place_slug": "star-hill-family-farm",
+      "note": "A seasonal Christmas-tree farm with wagon rides."
+    },
+    {
+      "kind": "sight",
+      "name": "Quarry Ridge Golf Course",
+      "place_slug": "quarry-ridge-golf-course",
+      "note": "An 18-hole public course over the old quarry landscape."
+    },
+    {
+      "kind": "food",
+      "name": "Terrazza Restaurant",
+      "place_slug": "terrazza-restaurant",
+      "note": "Italian dining overlooking the Quarry Ridge fairways."
+    },
+    {
+      "kind": "food",
+      "name": "Arrigoni Winery",
+      "place_slug": "arrigoni-winery",
+      "note": "A restored-barn tasting room pouring wines and ciders."
+    },
+    {
+      "kind": "food",
+      "name": "The Pub at PGC",
+      "place_slug": "the-pub-at-pgc",
+      "note": "Casual pub dining at Portland Golf Course."
+    }
+  ],
+  "links": [
+    {
+      "target": "guide:middletown-ct-travel-guide",
+      "kind": "nearby",
+      "note": "The Arrigoni Bridge (Routes 66/17) links Portland to Middletown, about a mile away."
+    },
+    {
+      "target": "guide:east-hampton-ct-travel-guide",
+      "kind": "nearby",
+      "note": "CT Route 66 runs directly from Portland into East Hampton after crossing the Arrigoni Bridge from Middletown."
+    },
+    {
+      "target": "guide:east-hampton-ct-travel-guide",
+      "kind": "shared-history",
+      "note": "Meshomasic State Forest and the Air Line State Park Trail both span Portland and East Hampton."
+    },
+    {
+      "target": "guide:glastonbury-ct-travel-guide",
+      "kind": "shared-history",
+      "note": "Meshomasic State Forest, centered on Portland and East Hampton, extends into Glastonbury."
+    }
+  ]
+}

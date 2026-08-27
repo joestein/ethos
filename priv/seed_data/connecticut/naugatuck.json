@@ -1,0 +1,315 @@
+{
+  "guide": {
+    "slug": "naugatuck-ct-travel-guide",
+    "title": "Naugatuck, Connecticut: Vulcanized Rubber and Naugahyde",
+    "destination": "Naugatuck, Connecticut",
+    "state": "Connecticut",
+    "county": "New Haven County",
+    "intro": "Naugatuck was settled around 1701 as a rural farming community, known first as Judds Meadow and then, from 1752, as Salem Bridge, before incorporating as a town in 1844 from portions of Waterbury, Bethany and Oxford. Its name comes from an Algonquian word generally translated as \"lone tree by the fishing place.\" Naugatuck is the only consolidated borough and town in Connecticut — the Borough was established in 1893 and merged with the town in 1895. Charles Goodyear, born in New Haven and raised here, patented the vulcanization of rubber in 1844, a year after founding the Naugatuck India-Rubber Company; the industry it launched gave the town its main street, Rubber Avenue, and in 1892 nine rubber firms merged into the United States Rubber Company, organized in Naugatuck. That company introduced Naugahyde, the vinyl-coated fabric named for the town, in 1936.",
+    "sections": [
+      {
+        "heading": "A green built by McKim, Mead & White",
+        "body": "Industrialist John Howard Whittemore retained the architectural firm McKim, Mead & White to design no fewer than eleven civic and private buildings around the town green — including the Whittemore Library and the Spanish Revival railroad station and post office — and the resulting Naugatuck Center Historic District, an 80-acre district built around a green donated by an innkeeper in 1831, was listed on the National Register of Historic Places on July 30, 1999. Naugatuck State Forest, a 4,153-acre forest in five blocks, traces its founding to state forest commissioner Harris Whittemore's purchases beginning in 1921, with nearly 2,000 acres donated by his family in 1931; it offers blue-blazed hiking on the Naugatuck and Quinnipiac trails and mountain-bike singletrack in the Quillinan block. The Larkin State Park Trail, a 10.3-mile rail-trail through Southbury, Oxford, Middlebury and Naugatuck, has its eastern terminus in Naugatuck at North Church Street."
+      },
+      {
+        "heading": "Getting there",
+        "body": "Route 8 is the expressway spine down the Naugatuck Valley, with exits into downtown and a junction with I-84 at Waterbury's Mixmaster interchange about five miles north. Route 63 runs surface toward New Haven and Route 68 runs east toward Cheshire and Durham. Naugatuck has a Metro-North Waterbury Branch station at 195 Water Street, but buses replace rail service on the branch from July 20, 2026 through May 31, 2027 during construction of a $33.2 million replacement station roughly a third of a mile south, expected to finish by mid-2027. Shore Line East and the CTrail Hartford Line do not reach Naugatuck, and there is no Amtrak stop in town."
+      }
+    ],
+    "faq": [
+      {
+        "question": "How do I get to Naugatuck?",
+        "answer": "By car on Route 8, the Naugatuck Valley expressway. Naugatuck's Metro-North Waterbury Branch station at 195 Water Street is currently served by substitute buses, not trains, from July 20, 2026 through May 31, 2027 while a new station is built nearby."
+      },
+      {
+        "question": "What is Naugahyde?",
+        "answer": "A vinyl-coated fabric named for Naugatuck and introduced by U.S. Rubber in 1936. The company was formed in 1892 when nine rubber firms merged, following Charles Goodyear's 1844 patent for vulcanized rubber and his Naugatuck India-Rubber Company, founded here in 1843."
+      },
+      {
+        "question": "What is the Naugatuck Center Historic District?",
+        "answer": "An 80-acre National Register district (listed 1999) around the town green, with eleven McKim, Mead & White buildings commissioned by industrialist John Howard Whittemore, including the Whittemore Library and the Spanish Revival train station and post office. A self-guided walking tour is available from the Naugatuck Historical Society."
+      },
+      {
+        "question": "Is there a hotel in Naugatuck?",
+        "answer": "No hotel, inn, motel or B&B inside Naugatuck town limits could be verified. The nearest hotel cluster is in downtown Waterbury, about five miles north via Route 8."
+      }
+    ],
+    "photos": [
+      {
+        "src": "/photos/ct/naugatuck/naugatuck-green.jpg",
+        "thumb": "/photos/ct/naugatuck/naugatuck-green_thumb.jpg",
+        "title": "Naugatuck Green",
+        "description": "The Naugatuck Green, centerpiece of the Naugatuck Center Historic District.",
+        "author": "Kenneth C. Zirkel",
+        "license": "CC BY-SA 4.0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Naugatuck_Green,_Connecticut.jpg"
+      },
+      {
+        "src": "/photos/ct/naugatuck/naugatuck-town-hall.jpg",
+        "thumb": "/photos/ct/naugatuck/naugatuck-town-hall_thumb.jpg",
+        "title": "Naugatuck Town Hall",
+        "description": "Naugatuck Town Hall, one of eleven McKim, Mead & White buildings commissioned by John Howard Whittemore.",
+        "author": "Magicpiano",
+        "license": "CC BY-SA 4.0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:NaugatuckCT_TownHall.jpg"
+      },
+      {
+        "src": "/photos/ct/naugatuck/whittemore-glen-state-park.jpg",
+        "thumb": "/photos/ct/naugatuck/whittemore-glen-state-park_thumb.jpg",
+        "title": "Whittemore Glen State Park",
+        "description": "The Larkin Trail passing through Whittemore Glen State Park in Naugatuck.",
+        "author": "Morrowlong",
+        "license": "CC BY-SA 4.0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:The_Larkin_Trail_in_Whittemore_Glen_State_Park_in_Naugatuck_Connecticut.jpg"
+      }
+    ]
+  },
+  "places": [
+    {
+      "slug": "naugatuck-history-museum-tuttle-house",
+      "name": "Naugatuck History Museum at the Tuttle House",
+      "kind": "museum",
+      "town": "Naugatuck",
+      "state": "Connecticut",
+      "county": "New Haven County",
+      "address": "380 Church St., Naugatuck, CT 06770",
+      "official_url": "https://naugatuckhistory.org/",
+      "summary": "Run by the Naugatuck Historical Society inside the Bronson B. Tuttle House, a brick Victorian mansion and the only major industrialist's residence to survive in the town center. Admission free with free parking, wheelchair accessible. Saturday hours are posted as 10 a.m.-2 p.m. by the society and 10 a.m.-4 p.m. by state tourism listings — call (203) 729-9039 to confirm.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "naugatuck-green-historic-district",
+      "name": "Naugatuck Green and the Naugatuck Center Historic District",
+      "kind": "historic-site",
+      "town": "Naugatuck",
+      "state": "Connecticut",
+      "county": "New Haven County",
+      "address": "Roughly bounded by Fairview Avenue, Hillside Avenue, Terrace Avenue, Water Street and Pleasant View Street, Naugatuck, CT 06770",
+      "official_url": "https://naugatuckhistory.org/naugatuck-architectural-walking-tour",
+      "summary": "An 80-acre district listed on the National Register on July 30, 1999, built around a green donated by an innkeeper in 1831. Contributing buildings include eleven McKim, Mead & White commissions financed by industrialist John Howard Whittemore — among them the Whittemore Library — plus the Spanish Revival railroad station and post office. A self-guided walking tour is available from the Naugatuck Historical Society.",
+      "status": "open",
+      "photos": [
+        {
+          "src": "/photos/ct/naugatuck/naugatuck-green.jpg",
+          "thumb": "/photos/ct/naugatuck/naugatuck-green_thumb.jpg",
+          "title": "Naugatuck Green",
+          "description": "The Naugatuck Green, centerpiece of the Naugatuck Center Historic District.",
+          "author": "Kenneth C. Zirkel",
+          "license": "CC BY-SA 4.0",
+          "source_url": "https://commons.wikimedia.org/wiki/File:Naugatuck_Green,_Connecticut.jpg"
+        },
+        {
+          "src": "/photos/ct/naugatuck/naugatuck-town-hall.jpg",
+          "thumb": "/photos/ct/naugatuck/naugatuck-town-hall_thumb.jpg",
+          "title": "Naugatuck Town Hall",
+          "description": "Naugatuck Town Hall, one of eleven McKim, Mead & White buildings commissioned by John Howard Whittemore.",
+          "author": "Magicpiano",
+          "license": "CC BY-SA 4.0",
+          "source_url": "https://commons.wikimedia.org/wiki/File:NaugatuckCT_TownHall.jpg"
+        }
+      ]
+    },
+    {
+      "slug": "whittemore-glen-state-park",
+      "name": "Whittemore Glen State Park",
+      "kind": "park",
+      "town": "Naugatuck",
+      "state": "Connecticut",
+      "county": "New Haven County",
+      "address": "Route 63, Naugatuck, CT",
+      "official_url": "https://ctvisit.com/listings/whittemore-glen-state-park",
+      "summary": "A 242-acre undeveloped state park on Route 63, directly across from Hop Brook Dam. A rugged, facility-free property used for hiking and, via the adjoining Larkin State Park Trail, horseback riding. DEEP contact (860) 424-3200.",
+      "status": "open",
+      "photos": [
+        {
+          "src": "/photos/ct/naugatuck/whittemore-glen-state-park.jpg",
+          "thumb": "/photos/ct/naugatuck/whittemore-glen-state-park_thumb.jpg",
+          "title": "Whittemore Glen State Park",
+          "description": "The Larkin Trail passing through Whittemore Glen State Park in Naugatuck.",
+          "author": "Morrowlong",
+          "license": "CC BY-SA 4.0",
+          "source_url": "https://commons.wikimedia.org/wiki/File:The_Larkin_Trail_in_Whittemore_Glen_State_Park_in_Naugatuck_Connecticut.jpg"
+        }
+      ]
+    },
+    {
+      "slug": "larkin-state-park-trail",
+      "name": "Larkin State Park Trail",
+      "kind": "park",
+      "town": "Naugatuck",
+      "state": "Connecticut",
+      "county": "New Haven County",
+      "address": "Eastern terminus at North Church Street (Route 63), Naugatuck, CT",
+      "official_url": "https://ctparks.com/node/77",
+      "summary": "A 10.3-mile linear rail-trail on a former railroad bed running through Southbury, Oxford, Middlebury and Naugatuck, open to hiking, biking, horseback riding and cross-country skiing. Its eastern terminus is in Naugatuck at North Church Street. The section between Kettletown Road in Southbury and Christian Street in Oxford remains closed from August 2024 flood damage.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "naugatuck-state-forest",
+      "name": "Naugatuck State Forest",
+      "kind": "park",
+      "town": "Naugatuck",
+      "state": "Connecticut",
+      "county": "New Haven County",
+      "address": "Naugatuck, CT (blocks also reach Beacon Falls, Oxford and other neighboring towns)",
+      "summary": "A 4,153-acre state forest in five blocks (Mount Sanford, East, West, Quillinan Reservoir and Great Hill), managed by CT DEEP. Its founding land was assembled by Harris Whittemore of Naugatuck beginning in 1921, with nearly 2,000 acres donated by his family in 1931. Recreation includes blue-blazed Naugatuck and Quinnipiac trail hiking, mountain-bike singletrack in the Quillinan block, fishing, hunting and cross-country skiing.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "hop-brook-lake",
+      "name": "Hop Brook Lake",
+      "kind": "park",
+      "town": "Naugatuck",
+      "state": "Connecticut",
+      "county": "New Haven County",
+      "address": "Naugatuck, CT (recreation area spans Naugatuck, Middlebury and Waterbury)",
+      "summary": "A U.S. Army Corps of Engineers flood-control reservoir with a 21-acre recreation pool, its dam completed in December 1968. Picnic sites, walking trails, a swimming beach, a ball field and parking; fished for largemouth bass, panfish and state-stocked trout. Call ahead to confirm beach season and gate hours.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "nardellis-grinder-shoppe-naugatuck",
+      "name": "Nardelli's Grinder Shoppe",
+      "kind": "restaurant",
+      "town": "Naugatuck",
+      "state": "Connecticut",
+      "county": "New Haven County",
+      "address": "87 Maple Street, Naugatuck, CT 06770",
+      "official_url": "https://www.nardellis.com/",
+      "summary": "A Connecticut grinder institution operating since 1922, family owned and operated by three generations. Hours Mon-Sat 10:30 a.m.-8 p.m. (Thu-Fri to 9 p.m. April 1-October 31), closed Sundays.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "jesse-camilles-restaurant",
+      "name": "Jesse Camille's Restaurant",
+      "kind": "restaurant",
+      "town": "Naugatuck",
+      "state": "Connecticut",
+      "county": "New Haven County",
+      "address": "615 North Church Street, Naugatuck, CT 06770",
+      "official_url": "https://www.jessecamilles.com/",
+      "summary": "A casual American restaurant with a seafood bent, hosting special events for more than 25 years. Weekend brunch 11 a.m.-2 p.m., dog-friendly lower patio. Hours Sun-Mon 11:30 a.m.-8 p.m., Tue-Sat 11:30 a.m.-9 p.m. Phone (203) 723-2275.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "the-corner-tavern-naugatuck",
+      "name": "The Corner Tavern",
+      "kind": "restaurant",
+      "town": "Naugatuck",
+      "state": "Connecticut",
+      "county": "New Haven County",
+      "address": "178 N Main Street, Naugatuck, CT 06770",
+      "official_url": "https://cornertavernct.com/",
+      "summary": "A downtown neighborhood tavern with a rotating craft beer list, recognized by Connecticut Magazine in 2024 for Best Beer Selection. Trivia Tuesdays at 8 p.m., Karaoke Saturdays from 9 p.m. Closed Mondays, open to 2 a.m. Saturdays. Phone (203) 729-3640.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "the-loaded-goat-coffee-company",
+      "name": "The Loaded Goat Coffee Company",
+      "kind": "cafe",
+      "town": "Naugatuck",
+      "state": "Connecticut",
+      "county": "New Haven County",
+      "address": "64 Church St, Naugatuck, CT 06770",
+      "official_url": "https://www.theloadedgoatcoffeeco.com/",
+      "summary": "An independent coffee house serving espresso drinks and locally sourced baked goods, with board games and social seating. Hours Mon-Fri 7 a.m.-7 p.m., Sat 8 a.m.-5 p.m., Sun 8 a.m.-3 p.m. Phone (203) 632-5517.",
+      "status": "open",
+      "photos": []
+    }
+  ],
+  "entries": [
+    {
+      "kind": "sight",
+      "name": "Naugatuck History Museum at the Tuttle House",
+      "place_slug": "naugatuck-history-museum-tuttle-house",
+      "note": "A Victorian mansion holding exhibits on Naugatuck's industrial past."
+    },
+    {
+      "kind": "sight",
+      "name": "Naugatuck Green and the Naugatuck Center Historic District",
+      "place_slug": "naugatuck-green-historic-district",
+      "note": "Eleven McKim, Mead & White buildings around an 1831 green."
+    },
+    {
+      "kind": "sight",
+      "name": "Whittemore Glen State Park",
+      "place_slug": "whittemore-glen-state-park",
+      "note": "242 undeveloped acres across from Hop Brook Dam."
+    },
+    {
+      "kind": "walk",
+      "name": "Larkin State Park Trail",
+      "place_slug": "larkin-state-park-trail",
+      "note": "A 10.3-mile rail-trail with its eastern terminus in Naugatuck."
+    },
+    {
+      "kind": "walk",
+      "name": "Naugatuck State Forest",
+      "place_slug": "naugatuck-state-forest",
+      "note": "A 4,153-acre forest founded on land assembled by Harris Whittemore."
+    },
+    {
+      "kind": "sight",
+      "name": "Hop Brook Lake",
+      "place_slug": "hop-brook-lake",
+      "note": "A flood-control reservoir with a swimming beach and fishing."
+    },
+    {
+      "kind": "food",
+      "name": "Nardelli's Grinder Shoppe",
+      "place_slug": "nardellis-grinder-shoppe-naugatuck",
+      "note": "A grinder institution operating since 1922."
+    },
+    {
+      "kind": "food",
+      "name": "Jesse Camille's Restaurant",
+      "place_slug": "jesse-camilles-restaurant",
+      "note": "Casual American cooking with a seafood bent."
+    },
+    {
+      "kind": "food",
+      "name": "The Corner Tavern",
+      "place_slug": "the-corner-tavern-naugatuck",
+      "note": "A downtown tavern with a rotating craft beer list."
+    },
+    {
+      "kind": "food",
+      "name": "The Loaded Goat Coffee Company",
+      "place_slug": "the-loaded-goat-coffee-company",
+      "note": "An independent coffee house on Church Street."
+    }
+  ],
+  "links": [
+    {
+      "target": "guide:waterbury-ct-travel-guide",
+      "kind": "nearby",
+      "note": "Naugatuck was incorporated in 1844 from portions of Waterbury, and its Metro-North station is the next stop south of Waterbury on the Waterbury Branch."
+    },
+    {
+      "target": "guide:bethany-ct-travel-guide",
+      "kind": "nearby",
+      "note": "Naugatuck was incorporated in 1844 from portions of Bethany."
+    },
+    {
+      "target": "guide:oxford-ct-travel-guide",
+      "kind": "nearby",
+      "note": "Naugatuck was incorporated in 1844 from portions of Oxford, and the Larkin State Park Trail links the two towns."
+    },
+    {
+      "target": "guide:beacon-falls-ct-travel-guide",
+      "kind": "nearby",
+      "note": "Beacon Falls was carved from parts of four neighboring towns in 1871, Naugatuck among them."
+    },
+    {
+      "target": "guide:middlebury-ct-travel-guide",
+      "kind": "same-region",
+      "note": "Hop Brook Lake's recreation area spans Naugatuck, Middlebury and Waterbury."
+    }
+  ]
+}

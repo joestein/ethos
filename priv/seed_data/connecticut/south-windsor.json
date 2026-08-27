@@ -1,0 +1,240 @@
+{
+  "guide": {
+    "slug": "south-windsor-ct-travel-guide",
+    "title": "South Windsor, Connecticut: An Indigenous Village Museum on the Old Ferry Road",
+    "destination": "South Windsor, Connecticut",
+    "state": "Connecticut",
+    "county": "Hartford County",
+    "intro": "In 1659, Thomas Burnham purchased the tract that became South Windsor and East Hartford from Tantinomo, chief sachem of the Podunk, after settlers from Windsor had already been crossing the Connecticut River to graze and farm the east bank. The east-side settlement incorporated as the town of East Windsor in 1768, and South Windsor separated from it to become its own town in 1845; English settlers had reached the pasturelands via John Bissell's ferry, which operated from about 1633 to 1925 and fueled growth at East Windsor Hill. Tobacco has been a major crop since the town's founding, and South Windsor sent more than 200 volunteers to the American Revolution. Theologian Jonathan Edwards, steamboat inventor John Fitch and clockmaking innovator Eli Terry are among the town's notable historical figures — US Route 5 through town is signed John Fitch Boulevard.",
+    "sections": [
+      {
+        "heading": "A 1638 village and an Indigenous life museum",
+        "body": "The East Windsor Hill neighborhood in the town's northwest corner was settled in 1638 by families from Windsor and got an economic boost in the 1830s when Bennett Tyler's Theological Institute of Connecticut located there; the 535-acre historic district, listed on the National Register in 1986, includes buildings from about 1700 to 1860 with the elaborate carved doorway surrounds typical of the Connecticut River valley. Nowashe Village, an outdoor Indigenous-life museum on wooded ground behind the Wood Memorial Library, has reconstructed traditional structures, an archaeology display case and a multimedia self-guided tour, with docents and rotating themed programs. At Ferry Farm on the river meadows, the 1786 Bissell House — built by Major Noadiah Bissell — is the last surviving structure of the historic Bissell Ferry site, opened to the public only through rare ticketed tours."
+      },
+      {
+        "heading": "Getting there",
+        "body": "South Windsor is a drive-to town: Interstate 291 cuts across it between I-91 in Windsor and I-84 in Manchester, with an interchange at US Route 5 (John Fitch Boulevard) and Route 30. There is no passenger rail station in South Windsor itself; rail travelers use the CTrail Hartford Line's Hartford Union Station or Windsor station across the river and finish the trip by car."
+      }
+    ],
+    "faq": [
+      {
+        "question": "How do I get to South Windsor?",
+        "answer": "By car — Interstate 291 crosses the town with an interchange at US Route 5 (John Fitch Boulevard) and Route 30. There is no rail station in South Windsor; the nearest CTrail Hartford Line stops are Hartford Union Station and Windsor."
+      },
+      {
+        "question": "Is there a train to South Windsor?",
+        "answer": "No. The nearest CTrail Hartford Line stations are Hartford Union Station and Windsor, both reached by car."
+      },
+      {
+        "question": "What is Nowashe Village?",
+        "answer": "An outdoor Indigenous-life museum behind Wood Memorial Library on Main Street, with reconstructed traditional structures and a self-guided tour. Season runs June through November, Mondays and Thursdays 9 a.m.-4:30 p.m. plus select Saturdays; suggested donation $10 adults, $5 children."
+      },
+      {
+        "question": "Can I visit Ferry Farm and the Bissell House?",
+        "answer": "Only rarely, through ticketed guided tours arranged by the Watershed History Collective — this is not a regularly staffed, drop-in attraction."
+      }
+    ],
+    "photos": [
+      {
+        "src": "/photos/ct/south-windsor/wood-memorial-library.jpg",
+        "thumb": "/photos/ct/south-windsor/wood-memorial-library_thumb.jpg",
+        "title": "Wood Memorial Library and Museum",
+        "description": "Wood Memorial Library and Museum on Main Street in South Windsor.",
+        "author": "John Phelan",
+        "license": "CC BY 4.0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Wood_Memorial_Library_And_Museum,_South_Windsor_CT.jpg"
+      },
+      {
+        "src": "/photos/ct/south-windsor/ebenezer-grant-house.jpg",
+        "thumb": "/photos/ct/south-windsor/ebenezer-grant-house_thumb.jpg",
+        "title": "Ebenezer Grant House",
+        "description": "The Ebenezer Grant House in South Windsor's East Windsor Hill Historic District.",
+        "author": "Grondemar",
+        "license": "CC BY-SA 3.0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Ebenezer_Grant_House_South_Windsor_CT.jpg"
+      },
+      {
+        "src": "/photos/ct/south-windsor/field-behind-post-office.jpg",
+        "thumb": "/photos/ct/south-windsor/field-behind-post-office_thumb.jpg",
+        "title": "Open field, East Windsor Hill",
+        "description": "Open Connecticut River floodplain behind the post office in South Windsor's East Windsor Hill district.",
+        "author": "John Phelan",
+        "license": "CC BY-SA 4.0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Field_behind_the_Post_Office,_East_Windsor_Hill_CT.jpg"
+      }
+    ]
+  },
+  "places": [
+    {
+      "slug": "nowashe-village",
+      "name": "Nowashe Village",
+      "kind": "museum",
+      "town": "South Windsor",
+      "state": "Connecticut",
+      "county": "Hartford County",
+      "address": "787 Main Street, South Windsor, CT 06074",
+      "official_url": "https://nowashe.org/",
+      "summary": "An outdoor Indigenous-life museum on three-quarters of a wooded acre behind Wood Memorial Library, with reconstructed traditional structures, an archaeology display case and a multimedia self-guided tour. Docents staff the site; special programs rotate through storytelling, stone tools and domestic arts. Season June-November, Mon/Thu 9 a.m.-4:30 p.m. plus select Saturdays; suggested donation $10 adults, $5 children, $25 family. Phone (860) 864-6618.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "east-windsor-hill-historic-district",
+      "name": "East Windsor Hill Historic District",
+      "kind": "historic-site",
+      "town": "South Windsor",
+      "state": "Connecticut",
+      "county": "Hartford County",
+      "address": "Old Main Street area, northwest South Windsor, CT",
+      "summary": "A 535-acre National Register district, listed May 30, 1986, of Georgian, Federal and Greek Revival buildings put up between about 1700 and 1860, settled in 1638 by families from Windsor. Landmarks include the 1788 John Watson House and a ferry tavern house from around 1750. Old Main Street is a public road, open year-round for self-guided walking and driving.",
+      "status": "open",
+      "photos": [
+        {
+          "src": "/photos/ct/south-windsor/ebenezer-grant-house.jpg",
+          "thumb": "/photos/ct/south-windsor/ebenezer-grant-house_thumb.jpg",
+          "title": "Ebenezer Grant House",
+          "description": "The Ebenezer Grant House in South Windsor's East Windsor Hill Historic District.",
+          "author": "Grondemar",
+          "license": "CC BY-SA 3.0",
+          "source_url": "https://commons.wikimedia.org/wiki/File:Ebenezer_Grant_House_South_Windsor_CT.jpg"
+        }
+      ]
+    },
+    {
+      "slug": "ferry-farm-bissell-house",
+      "name": "Ferry Farm (Bissell House)",
+      "kind": "historic-site",
+      "town": "South Windsor",
+      "state": "Connecticut",
+      "county": "Hartford County",
+      "address": "315 Ferry Lane, South Windsor, CT 06074",
+      "official_url": "https://thewatershedcollective.org/explore-ferry-farm/",
+      "summary": "The riverside meadow site of the historic Bissell Ferry, which operated from about 1633 to 1925. The 1786 Bissell House, built by Major Noadiah Bissell, is the last remaining structure of that era at the site. Not a regularly staffed attraction — opens only through rare ticketed guided tours from the Watershed History Collective.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "the-mill-on-the-river",
+      "name": "The Mill on the River",
+      "kind": "restaurant",
+      "town": "South Windsor",
+      "state": "Connecticut",
+      "county": "Hartford County",
+      "address": "989 Ellington Road, South Windsor, CT 06074",
+      "official_url": "https://www.themillontheriver.com/",
+      "summary": "A long-running special-occasion restaurant and banquet venue serving \"creative continental cuisine\" in a waterside mill property, with catering and online ordering. Closed Mondays; Tue-Thu dining noon-2 p.m. and 5-8:30 p.m.; Sun brunch 11 a.m.-2 p.m. and dinner 3-8 p.m. Phone (860) 289-7929.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "connecticut-valley-brewing",
+      "name": "Connecticut Valley Brewing Company",
+      "kind": "brewery",
+      "town": "South Windsor",
+      "state": "Connecticut",
+      "county": "Hartford County",
+      "address": "765 Sullivan Avenue, South Windsor, CT 06074",
+      "official_url": "https://www.ctvalleybrewing.com/",
+      "summary": "A production brewery and taproom whose cans celebrate Connecticut icons, including the F4U Corsair, the state airplane. A recurring event slate includes Monday and Thursday cruise nights, Tuesday trivia and Wednesday brewery bike rides. Taproom hours Mon-Thu 2-9 p.m., Fri-Sat noon-10 p.m., Sun noon-6 p.m.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "alexias-pizza-restaurant",
+      "name": "Alexia's Pizza & Restaurant",
+      "kind": "restaurant",
+      "town": "South Windsor",
+      "state": "Connecticut",
+      "county": "Hartford County",
+      "address": "950 Sullivan Avenue, South Windsor, CT 06074",
+      "official_url": "https://www.alexiaspizza.com/",
+      "summary": "A family-owned neighborhood Italian-American spot open since 1993, billed \"Home of the 5lb Pizza,\" with grinders, gyros, calzones and gluten-free pizza now offered. Hours Mon-Sat 11 a.m.-8 p.m., Sun noon-8 p.m., last call-in orders 7:45 p.m. Phone (860) 648-1553.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "birdhouse-coffee",
+      "name": "Birdhouse Coffee",
+      "kind": "cafe",
+      "town": "South Windsor",
+      "state": "Connecticut",
+      "county": "Hartford County",
+      "address": "765 Sullivan Avenue, South Windsor, CT 06074",
+      "official_url": "https://www.birdhousecoffee.com/",
+      "summary": "A local roaster and coffee bar sharing the 765 Sullivan Avenue campus with Connecticut Valley Brewing, selling house blends and single-origin lots. Hours Mon-Thu 7 a.m.-8 p.m., Fri 7 a.m.-9 p.m., Sat 8 a.m.-9 p.m., Sun 8 a.m.-5 p.m. Phone (860) 474-3737.",
+      "status": "open",
+      "photos": []
+    }
+  ],
+  "entries": [
+    {
+      "kind": "sight",
+      "name": "Nowashe Village",
+      "place_slug": "nowashe-village",
+      "note": "An outdoor Indigenous-life museum with docent-led programs."
+    },
+    {
+      "kind": "sight",
+      "name": "East Windsor Hill Historic District",
+      "place_slug": "east-windsor-hill-historic-district",
+      "note": "A 535-acre historic district settled in 1638."
+    },
+    {
+      "kind": "sight",
+      "name": "Ferry Farm (Bissell House)",
+      "place_slug": "ferry-farm-bissell-house",
+      "note": "The last structure of the historic Bissell Ferry, rarely open."
+    },
+    {
+      "kind": "food",
+      "name": "The Mill on the River",
+      "place_slug": "the-mill-on-the-river",
+      "note": "A waterside continental restaurant and banquet venue."
+    },
+    {
+      "kind": "food",
+      "name": "Connecticut Valley Brewing Company",
+      "place_slug": "connecticut-valley-brewing",
+      "note": "A brewery branded with Connecticut's state airplane."
+    },
+    {
+      "kind": "food",
+      "name": "Alexia's Pizza & Restaurant",
+      "place_slug": "alexias-pizza-restaurant",
+      "note": "\"Home of the 5lb Pizza\" since 1993."
+    },
+    {
+      "kind": "food",
+      "name": "Birdhouse Coffee",
+      "place_slug": "birdhouse-coffee",
+      "note": "A local roaster sharing a campus with the brewery."
+    }
+  ],
+  "links": [
+    {
+      "target": "guide:east-windsor-ct-travel-guide",
+      "kind": "nearby",
+      "note": "South Windsor separated from East Windsor in 1845 and borders it to the north."
+    },
+    {
+      "target": "guide:east-hartford-ct-travel-guide",
+      "kind": "nearby",
+      "note": "South Windsor borders East Hartford; Thomas Burnham's 1659 purchase from the Podunk covered both towns."
+    },
+    {
+      "target": "guide:manchester-ct-travel-guide",
+      "kind": "nearby",
+      "note": "South Windsor borders Manchester to the southeast."
+    },
+    {
+      "target": "guide:windsor-ct-travel-guide",
+      "kind": "nearby",
+      "note": "South Windsor faces Windsor across the Connecticut River."
+    },
+    {
+      "target": "guide:vernon-ct-travel-guide",
+      "kind": "same-region",
+      "note": "Vernon sits northeast of South Windsor in Hartford County."
+    }
+  ]
+}

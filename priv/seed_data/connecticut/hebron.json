@@ -1,0 +1,231 @@
+{
+  "guide": {
+    "slug": "hebron-ct-travel-guide",
+    "title": "Hebron, Connecticut: A Rescued Family and a Ghost Mill Town",
+    "destination": "Hebron, Connecticut",
+    "state": "Connecticut",
+    "county": "Tolland County",
+    "intro": "Hebron was settled in 1704 and incorporated on May 26, 1708. It began in Hartford County, shifted to Windham County in 1726, and has been part of Tolland County since 1785; the diamond on its town seal comes from a livestock brand a 1710 Colonial Assembly act required on all horses kept in town. Hebron kept a strong agricultural base into the late 1800s while also manufacturing charcoal, bricks, textiles and paper. In September 1787, six armed men seized Cesar and Lowis Peters and their children in Hebron to sell south; townspeople intervened when tailor Elijah Graves swore out a complaint that let a constable overtake the abductors near Norwich, and Connecticut's General Assembly formally emancipated the family in January 1789. Hebron was also the 1814 birthplace of Josephine Sophia White Griffing, who took part in the Women's Loyal National League and served the Freedmen's Bureau in Washington, D.C. before her death in 1872.",
+    "sections": [
+      {
+        "heading": "A rescue, an abolitionist, and a lost mill village",
+        "body": "In September 1787, six armed men seized Cesar and Lowis Peters and their children in Hebron, intending to sell them south to cover the debts of the loyalist Rev. Samuel Peters. Townspeople intervened: local tailor Elijah Graves swore out a complaint over an unpaid clothing debt so a constable could lawfully overtake the abductors near Norwich and bring the family home. Connecticut's General Assembly formally emancipated Cesar and Lowis in January 1789. Hebron was also the 1814 birthplace of Josephine Sophia White Griffing, who later took part in the Women's Loyal National League founded by Elizabeth Cady Stanton and Susan B. Anthony, and served the Freedmen's Bureau in Washington, D.C. before her death in 1872; she is buried in Hebron's Burrows Hill Cemetery. Within Gay City State Park, the ruins of a mill village founded in 1796 by Methodists at odds with Hartford's alcohol restrictions still stand along the trails."
+      },
+      {
+        "heading": "Getting there",
+        "body": "Hebron is a drive-to town with no passenger rail station and no interstate of its own. CT Route 66, the town's busiest road at up to 16,000 vehicle trips a day, is the main east-west corridor, feeding traffic toward Hartford and Route 2. CT Route 85 is the north-south spine through Hebron Center, and CT Route 207 (Lebanon Road) serves the southeast and an Air Line State Park Trail parking area. Route 2 and I-84 connect Hebron to the interstate system. There is no passenger rail station in Hebron; the CTrail Hartford Line's nearest access point is Hartford Union Station, reached via Route 2/Route 66, and Amtrak and Metro-North New Haven Line connections are made at New Haven Union Station, well south and west of Hebron."
+      },
+      {
+        "heading": "Where to eat and stay",
+        "body": "Hebron's dining leans toward its golf clubs: the Blackledge River Tavern, in the clubhouse at Blackledge Country Club, was named by Connecticut Magazine for overall dining excellence in Tolland County, and Tallwood Country Club runs a grill room alongside its public course. No hotel, inn or B&B could be verified inside Hebron; the nearest overnight options are chain hotels in Manchester, Glastonbury and Colchester, or camping at Gay City State Park's youth-group site."
+      }
+    ],
+    "faq": [
+      {
+        "question": "How do I get to Hebron?",
+        "answer": "By car — CT Route 66 is the main east-west corridor and CT Route 85 the north-south spine through Hebron Center, both reached from Route 2 or I-84. There is no passenger rail station in Hebron; the CTrail Hartford Line's nearest access point is Hartford Union Station."
+      },
+      {
+        "question": "Is there a train to Hebron?",
+        "answer": "No. Hebron has no passenger rail station. The CTrail Hartford Line's nearest stop is Hartford Union Station, and Shore Line East, Amtrak and Metro-North connections are made well south and west of Hebron."
+      },
+      {
+        "question": "What is Gay City State Park?",
+        "answer": "A 1,500-plus-acre state park straddling Hebron and Bolton, built around the ruins of a mill village founded in 1796 by Methodists at odds with Hartford's alcohol restrictions. It has a lakeside beach, hiking trails, and an old burying ground."
+      },
+      {
+        "question": "What is the Hebron Harvest Fair?",
+        "answer": "Billed by the town as Connecticut's third-largest agricultural fair, run by the Hebron Lions Agricultural Society each September at 347 Gilead Street, with livestock pulls, a midway, food vendors and live music."
+      },
+      {
+        "question": "Is there a hotel in Hebron?",
+        "answer": "No hotel, inn or B&B could be verified inside Hebron. The nearest overnight options are chain hotels in Manchester, Glastonbury and Colchester, or the youth-group camping area at Gay City State Park."
+      }
+    ],
+    "photos": [
+      {
+        "src": "/photos/ct/hebron/hebron-congregational-church.jpg",
+        "thumb": "/photos/ct/hebron/hebron-congregational-church_thumb.jpg",
+        "title": "Hebron Congregational Church",
+        "description": "The First Congregational Church on Hebron's town green.",
+        "author": "Ethan Long",
+        "license": "CC BY-SA 2.0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:First_Congregational_Church,_Hebron_(53853305315).jpg"
+      },
+      {
+        "src": "/photos/ct/hebron/gay-city-state-park-split-rock.jpg",
+        "thumb": "/photos/ct/hebron/gay-city-state-park-split-rock_thumb.jpg",
+        "title": "Split Rock, Gay City State Park",
+        "description": "The Split Rock rock formation along the trails of Gay City State Park.",
+        "author": "Morrowlong",
+        "license": "CC BY-SA 3.0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Gay_City_Connecticut_State_Park_Split_Rock_Formation.JPG"
+      }
+    ]
+  },
+  "places": [
+    {
+      "slug": "gay-city-state-park",
+      "name": "Gay City State Park",
+      "kind": "park",
+      "town": "Hebron",
+      "state": "Connecticut",
+      "county": "Tolland County",
+      "address": "435 North St., Hebron, CT 06248",
+      "official_url": "https://ctparks.com/node/49",
+      "summary": "More than 1,500 acres straddling Hebron and Bolton, with a lakeside swimming beach, fishing, picnicking, hiking, and cross-country skiing and snowshoeing in winter. Open daily late April through Columbus Day, 8 a.m. to sunset; free for in-state vehicles, $10-$15 for out-of-state.",
+      "history": "The park preserves the site and ruins of the 1796 Methodist mill village of Gay City, founded by settlers unhappy with Hartford's alcohol restrictions.",
+      "status": "open",
+      "photos": [
+        {
+          "src": "/photos/ct/hebron/gay-city-state-park-split-rock.jpg",
+          "thumb": "/photos/ct/hebron/gay-city-state-park-split-rock_thumb.jpg",
+          "title": "Split Rock, Gay City State Park",
+          "description": "The Split Rock rock formation along the trails of Gay City State Park.",
+          "author": "Morrowlong",
+          "license": "CC BY-SA 3.0",
+          "source_url": "https://commons.wikimedia.org/wiki/File:Gay_City_Connecticut_State_Park_Split_Rock_Formation.JPG"
+        }
+      ]
+    },
+    {
+      "slug": "air-line-state-park-trail-hebron",
+      "name": "Air Line State Park Trail (Hebron section)",
+      "kind": "park",
+      "town": "Hebron",
+      "state": "Connecticut",
+      "county": "Tolland County",
+      "address": "Trailhead parking on Old Colchester Road, on Church Street (Route 85), and on Lebanon Road (Route 207), Hebron, CT",
+      "official_url": "https://ctparks.com/node/16",
+      "summary": "A 50-mile rail-trail on an 1870s railroad bed running from Thompson to Portland, part of the East Coast Greenway. Free and open, leashed pets allowed, with three Hebron trailheads.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "hebron-historical-society",
+      "name": "Hebron Historical Society",
+      "kind": "historic-site",
+      "town": "Hebron",
+      "state": "Connecticut",
+      "county": "Tolland County",
+      "address": "26 Main Street, Hebron, CT 06248",
+      "official_url": "https://www.hebronhistoricalsociety.org/",
+      "summary": "Incorporated in May 1965, the society preserves and interprets Hebron's local history through collections, an interactive timeline, and building restoration projects, with monthly meetings open to the public.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "hebron-harvest-fair",
+      "name": "Hebron Harvest Fair",
+      "kind": "attraction",
+      "town": "Hebron",
+      "state": "Connecticut",
+      "county": "Tolland County",
+      "address": "347 Gilead Street, Hebron, CT 06248",
+      "official_url": "https://hebronharvestfair.org/",
+      "summary": "Run by the Hebron Lions Agricultural Society and billed by the town as Connecticut's third-largest agricultural fair, with livestock pulls, agricultural exhibits, a midway, motorized events, food vendors and live music each September.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "douglas-library-of-hebron",
+      "name": "Douglas Library of Hebron",
+      "kind": "attraction",
+      "town": "Hebron",
+      "state": "Connecticut",
+      "county": "Tolland County",
+      "address": "22 Main Street, Hebron, CT 06248",
+      "official_url": "https://www.douglaslibrary.org/",
+      "summary": "Hebron's public library in the town's historic center. Open Monday & Wednesday noon-8, Tuesday & Thursday 10-8, Friday noon-6, Saturday 10-3, closed Sunday.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "blackledge-river-tavern",
+      "name": "The Blackledge River Tavern",
+      "kind": "restaurant",
+      "town": "Hebron",
+      "state": "Connecticut",
+      "county": "Tolland County",
+      "address": "180 West St, Hebron, CT 06248",
+      "official_url": "https://www.blackledgecc.net/tavern/",
+      "summary": "Upscale tavern fare in the clubhouse at Blackledge Country Club, less than half a mile from the Blackledge River, with a fireside lounge, patio seating, golf simulators and live music. Named by Connecticut Magazine for overall dining excellence in Tolland County.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "tallwood-country-club-grill-room",
+      "name": "Tallwood Country Club Grill Room",
+      "kind": "restaurant",
+      "town": "Hebron",
+      "state": "Connecticut",
+      "county": "Tolland County",
+      "address": "91 North Street, Hebron, CT 06248",
+      "official_url": "https://www.tallwoodcountryclub.com/",
+      "summary": "A grill room at a public golf course that operates roughly 6 a.m. to dusk seven days a week; call ahead (860-791-7117) for the grill room's own food-service hours.",
+      "status": "open",
+      "photos": []
+    }
+  ],
+  "entries": [
+    {
+      "kind": "sight",
+      "name": "Gay City State Park",
+      "place_slug": "gay-city-state-park",
+      "note": "A former Methodist mill village, now ruins along the trails; lakeside beach."
+    },
+    {
+      "kind": "walk",
+      "name": "Air Line State Park Trail",
+      "place_slug": "air-line-state-park-trail-hebron",
+      "note": "A 50-mile rail-trail with three Hebron trailheads."
+    },
+    {
+      "kind": "sight",
+      "name": "Hebron Historical Society",
+      "place_slug": "hebron-historical-society",
+      "note": "Local history collections and building restoration projects."
+    },
+    {
+      "kind": "sight",
+      "name": "Hebron Harvest Fair",
+      "place_slug": "hebron-harvest-fair",
+      "note": "Connecticut's third-largest agricultural fair, each September."
+    },
+    {
+      "kind": "sight",
+      "name": "Douglas Library of Hebron",
+      "place_slug": "douglas-library-of-hebron",
+      "note": "Hebron's public library on Main Street."
+    },
+    {
+      "kind": "food",
+      "name": "The Blackledge River Tavern",
+      "place_slug": "blackledge-river-tavern",
+      "note": "Clubhouse tavern fare, honored for Tolland County dining excellence."
+    },
+    {
+      "kind": "food",
+      "name": "Tallwood Country Club Grill Room",
+      "place_slug": "tallwood-country-club-grill-room",
+      "note": "Grill room at a public golf course."
+    }
+  ],
+  "links": [
+    {
+      "target": "guide:andover-ct-travel-guide",
+      "kind": "nearby",
+      "note": "Andover borders Hebron to the south; CT Route 316 connects the two town centers."
+    },
+    {
+      "target": "guide:bolton-ct-travel-guide",
+      "kind": "shared-history",
+      "note": "Gay City State Park, a former Methodist mill village with a lakeside beach, spans the Hebron-Bolton line."
+    },
+    {
+      "target": "guide:columbia-ct-travel-guide",
+      "kind": "same-region",
+      "note": "Route 66 links Hebron to Columbia on its way from Marlborough."
+    }
+  ]
+}

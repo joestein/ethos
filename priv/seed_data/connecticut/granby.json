@@ -1,0 +1,308 @@
+{
+  "guide": {
+    "slug": "granby-ct-travel-guide",
+    "title": "Granby, Connecticut: Cider Distilling and a Notch on the Massachusetts Line",
+    "destination": "Granby, Connecticut",
+    "state": "Connecticut",
+    "county": "Hartford County",
+    "intro": "Granby's roots lie in land grants made \"at Salmon Brook\" in the late 17th century, after King Philip's War, to Puritan families including Nathaniel Holcomb, Nicholas Gossard, George Hayes and James Hillyer, who were required to travel to Simsbury for church meetings. The town was incorporated in 1786 from a section of Simsbury, and Samuel Hayes, a yeoman farmer and militia captain, became its first elected magistrate. Granby remained Hartford County's leading cider-distilling area throughout the 19th century, even as temperance campaigns pushed against it; brook-powered manufacturing never took hold because small shops couldn't compete with steam-powered city factories. The distinctive notch in Granby's northern border with Massachusetts is the result of a 150-year boundary dispute settlement. The early economy rested on tobacco, farming and dairying into the mid-20th century, and U.S. Senator George P. McLean's 1932 bequest created the 4,400-acre McLean Game Refuge across Granby, Simsbury and Canton.",
+    "sections": [
+      {
+        "heading": "Salmon Brook, waterfalls and a working farm",
+        "body": "The Salmon Brook Historical Society keeps Granby's story at its Salmon Brook Street campus, with a Research Library in the Preservation Barn and a Museum Store in the Enders House, plus free tours of the Wilcox House on selected Saturdays and Open Farm Day. Enders State Forest, lying predominantly in Granby with a share in Barkhamsted, is known for waterfalls; DEEP directs visitors to the main purple-blazed trail and warns against swimming or wading near the slippery rocks. Holcomb Farm, a working 300-acre farm with more than 10 miles of woodland trails, supplies produce to about 600 food-insecure households a week through its Fresh Access program and hosts an annual Holcomb Hoedown."
+      },
+      {
+        "heading": "Getting there",
+        "body": "Granby is a drive-to town with no rail service of its own: Interstate 91 sits about 8.6 miles east of town, reached via Route 20, with Routes 10, 189, 202 and 219 also serving Granby. Bradley International Airport is about six miles east on Route 20, and downtown Hartford is about 13.6 miles south. The nearest CTrail Hartford Line stations are Windsor Locks and Windsor; the line runs Springfield-Windsor Locks-Windsor-Hartford-Berlin-Meriden-Wallingford-New Haven, with no Metro-North or Shore Line East service reaching this part of the state."
+      },
+      {
+        "heading": "Land trust preserves and an orchard bakery",
+        "body": "The Granby Land Trust owns 2,421 acres and holds conservation easements on another 1,070, including the Seth and Lucy Holcombe Preserve and the Godard Preserve. Lost Acres Vineyard in North Granby runs a tasting room, art gallery and pizza nights, and hosts the Land Trust's annual juried art show. La Figata Restaurant on Bank Street serves wood-fired Italian cooking, while Julien Tessier — the Connecticut Restaurant Association's 2025 Pastry Chef of the Year — runs Julien's Bakery from a converted farm shop and a new Bank Street location."
+      }
+    ],
+    "faq": [
+      {
+        "question": "How do I get to Granby?",
+        "answer": "By car — Route 20 connects to I-91, about 8.6 miles east of town, with Routes 10, 189, 202 and 219 also serving Granby. There is no passenger rail station in Granby; the nearest CTrail Hartford Line stops are Windsor Locks and Windsor."
+      },
+      {
+        "question": "Is there a train to Granby?",
+        "answer": "No. The nearest CTrail Hartford Line stations are Windsor Locks and Windsor. Public transit to Granby itself is limited — check CTtransit for current routes."
+      },
+      {
+        "question": "What is the McLean Game Refuge?",
+        "answer": "A 4,400-acre nature refuge across Granby, Simsbury and Canton, created by an 1932 bequest from U.S. Senator George P. McLean, with over twenty miles of hiking trails and forest roads. The staffed main entrance is on Great Pond Road in Simsbury."
+      },
+      {
+        "question": "What is the Salmon Brook Historical Society?",
+        "answer": "Granby's history museum at 208 Salmon Brook Street, with a research library, museum store and free Wilcox House tours on selected Saturdays. Admission $5 adults, $2 children, $12 family maximum. Phone the society for current hours."
+      },
+      {
+        "question": "Is there a hotel in Granby?",
+        "answer": "No hotel, inn or B&B could be verified inside Granby. The nearest verified option is the Simsbury 1820 House, a historic inn in neighboring Simsbury."
+      }
+    ],
+    "photos": [
+      {
+        "src": "/photos/ct/granby/mclean-trout-pond.jpg",
+        "thumb": "/photos/ct/granby/mclean-trout-pond_thumb.jpg",
+        "title": "Trout Pond, McLean Game Refuge",
+        "description": "Trout Pond in the McLean Game Refuge, which stretches into Granby.",
+        "author": "John Phelan",
+        "license": "CC BY 4.0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Trout_Pond,_McLean_Game_Refuge,_Granby_CT.jpg"
+      },
+      {
+        "src": "/photos/ct/granby/enders-state-forest-falls.jpg",
+        "thumb": "/photos/ct/granby/enders-state-forest-falls_thumb.jpg",
+        "title": "Enders State Forest waterfall",
+        "description": "The pool and falls at Enders State Forest in Granby.",
+        "author": "John Phelan",
+        "license": "CC BY 4.0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Enders_State_Forest_pool_and_falls,_Granby_CT.jpg"
+      },
+      {
+        "src": "/photos/ct/granby/granby-town-green.jpg",
+        "thumb": "/photos/ct/granby/granby-town-green_thumb.jpg",
+        "title": "Granby town green",
+        "description": "The town green in Granby center.",
+        "author": "Magicpiano",
+        "license": "CC BY-SA 3.0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:GranbyCT_Green.jpg"
+      }
+    ]
+  },
+  "places": [
+    {
+      "slug": "salmon-brook-historical-society",
+      "name": "Salmon Brook Historical Society",
+      "kind": "museum",
+      "town": "Granby",
+      "state": "Connecticut",
+      "county": "Hartford County",
+      "address": "208 Salmon Brook Street, Granby, CT 06035",
+      "official_url": "https://www.salmonbrookhistoricalsociety.com/visit",
+      "summary": "A campus with a Research Library in the Preservation Barn and a Museum Store in the Enders House. Research library typically available by appointment Tuesdays and Thursdays, 9 a.m.-noon; genealogical research $25 per hour. The Wilcox House (address per a third-party listing only, unconfirmed by the society's own site) opens for free public tours on selected Saturdays and Open Farm Day.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "enders-state-forest",
+      "name": "Enders State Forest",
+      "kind": "park",
+      "town": "Granby",
+      "state": "Connecticut",
+      "county": "Hartford County",
+      "address": "Off Route 219, Granby, CT 06035 (DEEP publishes no street address for the forest)",
+      "official_url": "https://portal.ct.gov/deep/state-parks/forests/enders-state-forest",
+      "summary": "A state forest lying predominantly in Granby, with portions extending into Barkhamsted, known for its waterfalls and wetlands. DEEP directs visitors to stay on the main purple-blazed stone-dust trail and view the falls from a distance — rocks near the falls are extremely slippery, and swimming or wading is not recommended.",
+      "status": "open",
+      "photos": [
+        {
+          "src": "/photos/ct/granby/enders-state-forest-falls.jpg",
+          "thumb": "/photos/ct/granby/enders-state-forest-falls_thumb.jpg",
+          "title": "Enders State Forest waterfall",
+          "description": "The pool and falls at Enders State Forest in Granby.",
+          "author": "John Phelan",
+          "license": "CC BY 4.0",
+          "source_url": "https://commons.wikimedia.org/wiki/File:Enders_State_Forest_pool_and_falls,_Granby_CT.jpg"
+        }
+      ]
+    },
+    {
+      "slug": "holcomb-farm",
+      "name": "Holcomb Farm",
+      "kind": "attraction",
+      "town": "Granby",
+      "state": "Connecticut",
+      "county": "Hartford County",
+      "address": "87 Simsbury Road, West Granby, CT 06090",
+      "official_url": "https://www.holcombfarm.org/",
+      "summary": "A working farm on roughly 300 acres with more than 10 miles of woodland trails and two miles of mowed meadow paths, open dawn to dusk. Its Fresh Access program supplies produce to about 600 food-insecure households a week; the farm hosts the annual Holcomb Hoedown and a fall Harvest Celebration in the North Barn. The farm store, in the former West Granby United Methodist Church, is open Wed-Sat 10 a.m.-6 p.m.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "granby-land-trust-preserves",
+      "name": "Granby Land Trust Preserves",
+      "kind": "park",
+      "town": "Granby",
+      "state": "Connecticut",
+      "county": "Hartford County",
+      "address": "Seth and Lucy Holcombe Preserve, parking off Silver Street, North Granby, CT 06060",
+      "official_url": "https://granbylandtrust.org/",
+      "summary": "The land trust owns 2,421 acres and holds conservation easements on another 1,070, for 3,491 protected acres. Public preserves include the Seth and Lucy Holcombe Preserve, Godard Preserve, Dismal Brook Wildlife Preserve and Western Barn Door Hill Preserve. The trust hosts its 19th Annual Juried Art Show at Lost Acres Vineyard each October-November.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "lost-acres-vineyard",
+      "name": "Lost Acres Vineyard",
+      "kind": "attraction",
+      "town": "Granby",
+      "state": "Connecticut",
+      "county": "Hartford County",
+      "address": "80 Lost Acres Road, North Granby, CT 06060",
+      "official_url": "https://www.lostacresvineyard.com/",
+      "summary": "A North Granby vineyard with a tasting room, art gallery, live music and pizza nights, which hosts the Granby Land Trust's annual juried art show. Open Fri noon-7 p.m., Sat noon-6 p.m., Sun noon-5 p.m.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "la-figata-restaurant",
+      "name": "La Figata Restaurant",
+      "kind": "restaurant",
+      "town": "Granby",
+      "state": "Connecticut",
+      "county": "Hartford County",
+      "address": "9 Bank Street, Granby, CT 06035",
+      "official_url": "https://www.lafigata.com/",
+      "summary": "Upscale-casual Italian cooking with a wine list and a daily happy hour, 3-6 p.m. Hours: Mon 3-9 p.m., Tue-Thu 11 a.m.-9 p.m., Fri-Sat 11 a.m.-10 p.m., Sun 11 a.m.-9 p.m.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "clark-farms-bushy-hill-orchard",
+      "name": "Clark Farms at Bushy Hill Orchard",
+      "kind": "cafe",
+      "town": "Granby",
+      "state": "Connecticut",
+      "county": "Hartford County",
+      "address": "29 Bushy Hill Road, Granby, CT 06035",
+      "official_url": "https://clarkfarmsct.com/",
+      "summary": "An orchard with a hard cidery producing several ciders — including dry, cranberry and honey-sweetened varieties — plus apple wines, a pub-style cafe and ice cream, and pick-your-own blueberries in July and apples starting in September. Cafe open Sat-Sun 9 a.m.-1 p.m. for breakfast; closed January-March.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "juliens-bakery",
+      "name": "Julien's Bakery",
+      "kind": "cafe",
+      "town": "Granby",
+      "state": "Connecticut",
+      "county": "Hartford County",
+      "address": "Geissler's Plaza, Bank Street, Granby, CT 06035; original farm shop at 175 Barn Door Hills Road",
+      "summary": "Owner Julien Tessier, a French-born and French-trained pastry chef who cooked in high-end London restaurants, was named Pastry Chef of the Year by the Connecticut Restaurant Association in December 2025. The Bank Street location opened March 2026, open seven days with indoor seating; the original farm shop at the Valkyrie Equestrian Center is open Thursday-Sunday.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "grassroots-ice-cream-deep-roots",
+      "name": "Grassroots Ice Cream and Deep Roots Street Food",
+      "kind": "cafe",
+      "town": "Granby",
+      "state": "Connecticut",
+      "county": "Hartford County",
+      "address": "4 Park Place, Granby, CT 06035 (address per a third-party directory only, not the operator's own site)",
+      "summary": "A paired ice cream shop and street-food counter, part of a three-location group with Simsbury and New Milford. In 2026 the company runs three Give Back Days — May 19, July 21 and September 15 — donating 10 percent of profits from all three locations to Holcomb Farm's Fresh Access program.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "lost-acres-orchard",
+      "name": "Lost Acres Orchard",
+      "kind": "cafe",
+      "town": "Granby",
+      "state": "Connecticut",
+      "county": "Hartford County",
+      "address": "130 Lost Acres Road, North Granby, CT 06060",
+      "summary": "An orchard growing peaches, apples and berries with a bakery turning out pies and prepared foods; a current supplier to Holcomb Farm's renovated farm store. Call ahead to confirm hours.",
+      "status": "open",
+      "photos": []
+    }
+  ],
+  "entries": [
+    {
+      "kind": "sight",
+      "name": "Salmon Brook Historical Society",
+      "place_slug": "salmon-brook-historical-society",
+      "note": "Granby's history museum, with a research library and free Wilcox House tours."
+    },
+    {
+      "kind": "walk",
+      "name": "Enders State Forest",
+      "place_slug": "enders-state-forest",
+      "note": "Waterfalls and a purple-blazed trail, mostly in Granby."
+    },
+    {
+      "kind": "sight",
+      "name": "Holcomb Farm",
+      "place_slug": "holcomb-farm",
+      "note": "A working 300-acre farm with woodland trails and Fresh Access produce donations."
+    },
+    {
+      "kind": "walk",
+      "name": "Granby Land Trust Preserves",
+      "place_slug": "granby-land-trust-preserves",
+      "note": "3,491 protected acres across the Seth and Lucy Holcombe, Godard and other preserves."
+    },
+    {
+      "kind": "sight",
+      "name": "Lost Acres Vineyard",
+      "place_slug": "lost-acres-vineyard",
+      "note": "A North Granby tasting room with an art gallery."
+    },
+    {
+      "kind": "food",
+      "name": "La Figata Restaurant",
+      "place_slug": "la-figata-restaurant",
+      "note": "Upscale-casual Italian cooking on Bank Street."
+    },
+    {
+      "kind": "food",
+      "name": "Clark Farms at Bushy Hill Orchard",
+      "place_slug": "clark-farms-bushy-hill-orchard",
+      "note": "A hard cidery and pick-your-own orchard."
+    },
+    {
+      "kind": "food",
+      "name": "Julien's Bakery",
+      "place_slug": "juliens-bakery",
+      "note": "A pastry shop run by the state's 2025 Pastry Chef of the Year."
+    },
+    {
+      "kind": "food",
+      "name": "Grassroots Ice Cream and Deep Roots Street Food",
+      "place_slug": "grassroots-ice-cream-deep-roots",
+      "note": "Ice cream and street food, with charity Give Back Days."
+    },
+    {
+      "kind": "food",
+      "name": "Lost Acres Orchard",
+      "place_slug": "lost-acres-orchard",
+      "note": "An orchard bakery in North Granby."
+    }
+  ],
+  "links": [
+    {
+      "target": "guide:east-granby-ct-travel-guide",
+      "kind": "nearby",
+      "note": "Granby borders East Granby to the east; both were once part of Simsbury."
+    },
+    {
+      "target": "guide:simsbury-ct-travel-guide",
+      "kind": "nearby",
+      "note": "Granby was incorporated in 1786 from a section of Simsbury and borders it to the south."
+    },
+    {
+      "target": "guide:simsbury-ct-travel-guide",
+      "kind": "shared-history",
+      "note": "Granby was incorporated in 1786 from a section of Simsbury; the McLean Game Refuge, created by an 1932 bequest, spans both towns plus Canton."
+    },
+    {
+      "target": "guide:canton-ct-travel-guide",
+      "kind": "nearby",
+      "note": "Granby borders Canton to the south."
+    },
+    {
+      "target": "guide:hartland-ct-travel-guide",
+      "kind": "nearby",
+      "note": "Granby borders Hartland to the west."
+    },
+    {
+      "target": "guide:suffield-ct-travel-guide",
+      "kind": "same-region",
+      "note": "Suffield sits east of Granby across East Granby."
+    }
+  ]
+}

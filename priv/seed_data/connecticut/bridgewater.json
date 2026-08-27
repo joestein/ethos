@@ -1,0 +1,234 @@
+{
+  "guide": {
+    "slug": "bridgewater-ct-travel-guide",
+    "title": "Bridgewater, Connecticut: The Last Dry Town on the Housatonic",
+    "destination": "Bridgewater, Connecticut",
+    "state": "Connecticut",
+    "county": "Litchfield County",
+    "intro": "Bridgewater's land was surveyed in 1722 by New Milford proprietor Samuel Clark as \"Shepaug Neck,\" the southern section of New Milford, with early inhabitants including Joseph Treat, grandson of colonial governor Robert Treat. Residents won ecclesiastical independence from New Milford in 1803, and the Congregational Church meetinghouse still standing today was erected in 1807, but Bridgewater didn't incorporate as its own town until 1856. Hat manufacturing under Glover Sanford and Sons defined the local economy from 1823 to 1870 — the road name \"Hat Shop Hill\" survives — as the town shifted from sheep raising and tobacco toward dairy farming. Around the turn of the century, Charles B. Thompson built a mail-order toiletries factory at what is now 27 Main Street South; at its peak, more mail shipped out of Bridgewater in a single day than out of New York City. Bridgewater remained one of Connecticut's last dry towns until a 2014 referendum passed 660-246.",
+    "sections": [
+      {
+        "heading": "A dry town's general store",
+        "body": "The building at 27 Main Street South has cycled through a century of Bridgewater commerce: Charles Thompson's mail-order factory around 1899, Pete's Emporium from 1927, a Bridgewater IGA store from 1937, and the Gowans' Village Store from 1954. Leni and Peter May bought it in 1989 and, after the town's 2014 vote ended its dry-town status, reopened it in 2016 with the Bridgewater Bistro attached. The Bridgewater Center Historic District, roughly along Main Street, Warner Road, Clapboard Road and Hat Shop Hill, was listed on the National Register of Historic Places on July 19, 2000."
+      },
+      {
+        "heading": "Getting there",
+        "body": "Bridgewater has no train station, bus service or highway of its own. Route 133 runs north from US Route 202 in Brookfield, crossing Lake Lillinonah on the Southville Bridge into town, while Route 67 crosses the northern end of Bridgewater east-west, linking New Milford and Southbury. The nearest passenger rail is Metro-North's Danbury Branch, whose northern terminus at Danbury connects south to the New Haven Line at South Norwalk."
+      },
+      {
+        "heading": "A preserve and a lake",
+        "body": "Sunny Valley Preserve, a Nature Conservancy property spanning Bridgewater and New Milford, protects 1,850 acres and more than 18 miles of hiking trails across the Housatonic River Valley. Bridgewater Town Park on Tappen Road gives direct access to Lake Lillinonah with a small boat launch, and the Bridgewater Land Trust's Tappen Brook Trails begin at the same lot. Bridgewater Village Store & Bistro remains the only sit-down restaurant confirmed inside town limits; fuller dining options sit north across the New Milford town line."
+      }
+    ],
+    "faq": [
+      {
+        "question": "How do I get to Bridgewater?",
+        "answer": "By car — Route 133 runs north from US Route 202 in Brookfield, crossing Lake Lillinonah into town, while Route 67 crosses the northern end of Bridgewater linking New Milford and Southbury. There's no passenger rail or bus service in Bridgewater; the nearest station is Metro-North's Danbury Branch terminus in Danbury."
+      },
+      {
+        "question": "Was Bridgewater really a dry town?",
+        "answer": "Yes — Bridgewater was one of the last remaining dry towns in Connecticut until voters approved the sale of alcohol in a 2014 referendum, 660-246. The Bridgewater Village Store added its Bistro and liquor service after a 2016 reopening."
+      },
+      {
+        "question": "What is Sunny Valley Preserve?",
+        "answer": "A 1,850-acre Nature Conservancy property spanning Bridgewater and New Milford, with more than 18 miles of hiking trails through the Housatonic River Valley. Open dawn to dusk; permitted uses are passive — hiking, birding and nature study, with leashed dogs allowed."
+      },
+      {
+        "question": "Is there a hotel in Bridgewater?",
+        "answer": "No hotel, inn or B&B could be verified as operating inside Bridgewater. The nearest verified option is the Homestead Inn on the Village Green in neighboring New Milford."
+      },
+      {
+        "question": "Where can I eat in Bridgewater?",
+        "answer": "Bridgewater Village Store & Bistro, in a building that has served the town's commerce since around 1899, is the one confirmed sit-down restaurant in town — serving breakfast and lunch daily with dinner Thursday through Saturday."
+      }
+    ],
+    "photos": [
+      {
+        "src": "/photos/ct/bridgewater/bridgewater-town-center.jpg",
+        "thumb": "/photos/ct/bridgewater/bridgewater-town-center_thumb.jpg",
+        "title": "Bridgewater town center",
+        "description": "Bridgewater's town center and green.",
+        "author": "AirportExpert",
+        "license": "CC BY-SA 4.0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Bridgewater,_CT_Town_Center.jpg"
+      },
+      {
+        "src": "/photos/ct/bridgewater/bridgewater-village-store.jpg",
+        "thumb": "/photos/ct/bridgewater/bridgewater-village-store_thumb.jpg",
+        "title": "Bridgewater Village Store",
+        "description": "The historic Bridgewater Village Store building on Main Street South.",
+        "author": "Pedro Xing",
+        "license": "CC0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Bridgewater_Village_Store_039.JPG"
+      },
+      {
+        "src": "/photos/ct/bridgewater/lake-lillinonah.jpg",
+        "thumb": "/photos/ct/bridgewater/lake-lillinonah_thumb.jpg",
+        "title": "Lake Lillinonah",
+        "description": "The shoreline of Lake Lillinonah, the impounded Housatonic River bordering Bridgewater.",
+        "author": "AirportExpert",
+        "license": "CC0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Lake_Lillinonah.jpg"
+      }
+    ]
+  },
+  "places": [
+    {
+      "slug": "sunny-valley-preserve",
+      "name": "Sunny Valley Preserve",
+      "kind": "park",
+      "town": "Bridgewater",
+      "state": "Connecticut",
+      "county": "Litchfield County",
+      "official_url": "https://www.nature.org/en-us/get-involved/how-to-help/places-we-protect/sunny-valley-preserve/",
+      "summary": "A Nature Conservancy property spanning 1,850 acres across 19 parcels in Bridgewater and New Milford, with more than 18 miles of hiking trails through the Housatonic River Valley including Wolf Pit Mountain and Rocky Hill. Open dawn to dusk; hiking, birding and nature study only — no bicycling, camping or hunting. Phone (860) 355-3716.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "bridgewater-town-park-boat-launch",
+      "name": "Bridgewater Town Park & Boat Launch",
+      "kind": "park",
+      "town": "Bridgewater",
+      "state": "Connecticut",
+      "county": "Litchfield County",
+      "address": "221 Tappen Road, Bridgewater, CT 06752",
+      "official_url": "https://www.bridgewater-ct.gov/1268/Town-Park-Boat-Launch",
+      "summary": "The town-owned park on Tappen Road gives direct access to Lake Lillinonah with parking, trail access, a small boat launch and a picnic area. The Bridgewater Land Trust's Tappen Brook Trails, including a 5K running course, start from the same lot.",
+      "status": "open",
+      "photos": [
+        {
+          "src": "/photos/ct/bridgewater/lake-lillinonah.jpg",
+          "thumb": "/photos/ct/bridgewater/lake-lillinonah_thumb.jpg",
+          "title": "Lake Lillinonah",
+          "description": "The shoreline of Lake Lillinonah, the impounded Housatonic River bordering Bridgewater.",
+          "author": "AirportExpert",
+          "license": "CC0",
+          "source_url": "https://commons.wikimedia.org/wiki/File:Lake_Lillinonah.jpg"
+        }
+      ]
+    },
+    {
+      "slug": "burnham-library",
+      "name": "Burnham Library",
+      "kind": "historic-site",
+      "town": "Bridgewater",
+      "state": "Connecticut",
+      "county": "Litchfield County",
+      "address": "62 Main Street South, Bridgewater, CT 06752",
+      "official_url": "https://www.burnhamlibrary.org/",
+      "summary": "Endowed by shipping captain William D. Burnham, the library traces to 1904 and its Greek Revival building — constructed of granite quarried in nearby Roxbury — was dedicated in 1926; the library itself dates its founding to that year. Open Tuesday-Friday 10 a.m.-5 p.m., Saturday 9 a.m.-1 p.m. Phone (860) 354-6937.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "bridgewater-historical-society",
+      "name": "Bridgewater Historical Society",
+      "kind": "museum",
+      "town": "Bridgewater",
+      "state": "Connecticut",
+      "county": "Litchfield County",
+      "address": "48 Main Street South, Bridgewater, CT 06752",
+      "official_url": "https://www.bridgewaterhistoricalsocietyct.com/",
+      "summary": "Founded in 1928, the society's museum occupies the boyhood home of clipper-ship captain William D. Burnham, with exhibits on WWII quilts and early Bridgewater school life. No public hours posted — call ahead. Phone (860) 350-3515.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "bridgewater-country-fair",
+      "name": "Bridgewater Country Fair",
+      "kind": "attraction",
+      "town": "Bridgewater",
+      "state": "Connecticut",
+      "county": "Litchfield County",
+      "address": "Bridgewater Fair Grounds, 100 Main Street South, Bridgewater, CT 06752",
+      "official_url": "https://www.bridgewaterfair.com/",
+      "summary": "Held every August and run by the Bridgewater Volunteer Fire Department, which describes itself as Connecticut's last self-sustaining fire department and relies on the fair as its main source of income. Admission $10 general, $8 seniors and veterans, free under 12.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "bridgewater-village-store-bistro",
+      "name": "Bridgewater Village Store & Bistro",
+      "kind": "restaurant",
+      "town": "Bridgewater",
+      "state": "Connecticut",
+      "county": "Litchfield County",
+      "address": "27 Main Street South, Bridgewater, CT 06752",
+      "official_url": "https://bridgewatervillagestoreandbistro.com/",
+      "summary": "The only sit-down restaurant confirmed inside Bridgewater, in a building that has held the town's general store since around 1899. Leni and Peter May reopened it in 2016 with the attached Bistro. Breakfast and lunch daily; dinner Thursday-Saturday 5-9 p.m.; Sunday brunch all day. Phone (860) 354-2863.",
+      "status": "open",
+      "photos": [
+        {
+          "src": "/photos/ct/bridgewater/bridgewater-village-store.jpg",
+          "thumb": "/photos/ct/bridgewater/bridgewater-village-store_thumb.jpg",
+          "title": "Bridgewater Village Store",
+          "description": "The historic Bridgewater Village Store building on Main Street South.",
+          "author": "Pedro Xing",
+          "license": "CC0",
+          "source_url": "https://commons.wikimedia.org/wiki/File:Bridgewater_Village_Store_039.JPG"
+        }
+      ]
+    }
+  ],
+  "entries": [
+    {
+      "kind": "walk",
+      "name": "Sunny Valley Preserve",
+      "place_slug": "sunny-valley-preserve",
+      "note": "1,850 acres and 18-plus miles of trails through the Housatonic Valley."
+    },
+    {
+      "kind": "sight",
+      "name": "Bridgewater Town Park & Boat Launch",
+      "place_slug": "bridgewater-town-park-boat-launch",
+      "note": "Lake Lillinonah access with a boat launch and picnic area."
+    },
+    {
+      "kind": "sight",
+      "name": "Burnham Library",
+      "place_slug": "burnham-library",
+      "note": "A Greek Revival library endowed by a Bridgewater shipping captain."
+    },
+    {
+      "kind": "sight",
+      "name": "Bridgewater Historical Society",
+      "place_slug": "bridgewater-historical-society",
+      "note": "Town history museum in Captain Burnham's boyhood home."
+    },
+    {
+      "kind": "sight",
+      "name": "Bridgewater Country Fair",
+      "place_slug": "bridgewater-country-fair",
+      "note": "An August fair run by the town's volunteer fire department."
+    },
+    {
+      "kind": "food",
+      "name": "Bridgewater Village Store & Bistro",
+      "place_slug": "bridgewater-village-store-bistro",
+      "note": "The town's one confirmed sit-down restaurant, since 2016."
+    }
+  ],
+  "links": [
+    {
+      "target": "guide:new-milford-ct-travel-guide",
+      "kind": "nearby",
+      "note": "Sunny Valley Preserve spans Bridgewater and New Milford."
+    },
+    {
+      "target": "guide:roxbury-ct-travel-guide",
+      "kind": "shared-history",
+      "note": "Burnham Library's granite was quarried in neighboring Roxbury."
+    },
+    {
+      "target": "guide:warren-ct-travel-guide",
+      "kind": "same-region",
+      "note": null
+    },
+    {
+      "target": "guide:washington-ct-travel-guide",
+      "kind": "same-region",
+      "note": null
+    }
+  ]
+}

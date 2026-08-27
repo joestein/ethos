@@ -1,0 +1,263 @@
+{
+  "guide": {
+    "slug": "thompson-ct-travel-guide",
+    "title": "Thompson, Connecticut: A Train Wreck and the First Paved Oval",
+    "destination": "Thompson, Connecticut",
+    "state": "Connecticut",
+    "county": "Windham County",
+    "intro": "Thompson was incorporated in 1785, named for English landholder Sir Robert Thompson, in Connecticut's northeastern corner bordering Massachusetts and Rhode Island. The town comprises ten villages, and the area was the site of a colonial-era indigenous village called Maanexit. On December 4, 1891, the Great East Thompson Train Wreck put four trains into collision in fog — one of the only accidents in U.S. history to involve four trains — killing engineer Harry Tabor and fireman Jeremiah Fitzgerald and destroying roughly 500 yards of track. Architect Ithiel Town, one of the first professional architects in the United States, was born in Thompson in 1784; the Old Town Hall he is believed to have designed now houses the Thompson Historical Society. Thompson's mill era centered on North Grosvenordale, where an 1872 brick cotton mill gave the village its name. Thompson Speedway, breaking ground in 1938, was the first asphalt-paved racing oval in the United States.",
+    "sections": [
+      {
+        "heading": "A four-train wreck and a mill village",
+        "body": "Thompson was incorporated in 1785, named for English landholder Sir Robert Thompson, in the state's northeastern corner bordering Massachusetts and Rhode Island. On December 4, 1891, the Great East Thompson Train Wreck put four trains into collision in fog — one of the only accidents in U.S. history to involve four trains — killing engineer Harry Tabor and fireman Jeremiah Fitzgerald and destroying roughly 500 yards of track; the line was rerouted rather than rebuilt. Architect Ithiel Town, one of the first professional architects in the United States, was born in Thompson in 1784; the Old Town Hall he is believed, though not proven, to have designed now houses the Thompson Historical Society. Thompson's mill era centered on North Grosvenordale, where an 1872 brick cotton mill built by the Grosvenor-Dale Company gave the village its name; the surrounding mill village, with more than 100 houses and structures, was listed on the National Register in 1993."
+      },
+      {
+        "heading": "Getting there",
+        "body": "Interstate 395 runs the length of Thompson before crossing into Massachusetts, signed the American Ex-Prisoner of War Memorial Highway. Take Exit 50 (Route 200) for Thompson and North Grosvenor Dale, Exit 49 (Route 12) for Grosvenor Dale, or Exit 47 (US 44) for the Putnam/Woodstock side. I-395 connects south to I-95 at the East Lyme/Waterford line and north to I-90 at Auburn, Massachusetts. There is no passenger rail station in Thompson; the CTrail Hartford Line runs well to the west along the I-91 corridor, and Shore Line East runs along the shoreline and does not reach northeastern Connecticut."
+      }
+    ],
+    "faq": [
+      {
+        "question": "How do I get to Thompson?",
+        "answer": "By car — Interstate 395 runs the length of the town. Take Exit 50 (Route 200) for Thompson and North Grosvenor Dale, or Exit 49 (Route 12) for Grosvenor Dale. There is no passenger rail station in Thompson."
+      },
+      {
+        "question": "Is there a train to Thompson?",
+        "answer": "No. Neither the CTrail Hartford Line nor Shore Line East reaches northeastern Connecticut, and no Metro-North or Amtrak stop exists in or near Thompson."
+      },
+      {
+        "question": "What happened at the Great East Thompson Train Wreck?",
+        "answer": "On December 4, 1891, a dispatcher's routing error in fog put four trains into collision — one of the only accidents in U.S. history to involve four trains. Two crew members were killed and the line was rerouted rather than rebuilt."
+      },
+      {
+        "question": "What is Thompson Speedway?",
+        "answer": "A motorsports venue that broke ground in 1938 and opened in 1940, billed as the first asphalt-paved racing oval in the United States. It has hosted 159 NASCAR Whelen Modified Tour races since 1985, more than any other track."
+      },
+      {
+        "question": "Is there a hotel in Thompson?",
+        "answer": "The Watson Boutique Bed and Breakfast on Thompson Hill is the only conventional traveler lodging verified inside Thompson. The Inn at Woodstock Hill, about 6 miles southwest, is another option, though its restaurant is open for private events only."
+      }
+    ],
+    "photos": [
+      {
+        "src": "/photos/ct/thompson/quaddick-reservoir-thompson.jpg",
+        "thumb": "/photos/ct/thompson/quaddick-reservoir-thompson_thumb.jpg",
+        "title": "Quaddick Reservoir",
+        "description": "The shoreline of Quaddick Reservoir at Quaddick State Park in Thompson.",
+        "author": "John Phelan",
+        "license": "CC BY 4.0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Quaddick_Reservoir,_Thompson_CT.jpg"
+      },
+      {
+        "src": "/photos/ct/thompson/thompson-speedway-motorsports-park.jpg",
+        "thumb": "/photos/ct/thompson/thompson-speedway-motorsports-park_thumb.jpg",
+        "title": "Thompson Speedway Motorsports Park",
+        "description": "A view of Thompson Speedway Motorsports Park.",
+        "author": "Veilleux79",
+        "license": "CC BY-SA 4.0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Thompson_speedway.jpg"
+      },
+      {
+        "src": "/photos/ct/thompson/thompson-hill-common.jpg",
+        "thumb": "/photos/ct/thompson/thompson-hill-common_thumb.jpg",
+        "title": "Thompson Hill Common",
+        "description": "The town green at Thompson Hill Common.",
+        "author": "John Phelan",
+        "license": "CC BY 4.0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Thompson_Hill_Common,_Thompson_CT.jpg"
+      }
+    ]
+  },
+  "places": [
+    {
+      "slug": "quaddick-state-park",
+      "name": "Quaddick State Park",
+      "kind": "park",
+      "town": "Thompson",
+      "state": "Connecticut",
+      "county": "Windham County",
+      "address": "811 Quaddick Town Farm Road, Thompson, CT 06277",
+      "official_url": "https://ctparks.com/parks/quaddick-state-park",
+      "summary": "Quaddick Lake draws swimmers, boaters and sun lovers from across the tri-state area, with boating, fishing, hiking, picnicking and field sports. Open daily 8 a.m.-sunset; free for in-state vehicles. Restrooms are closed for the 2026 season, with portable toilets provided; the youth-group campground is currently closed.",
+      "status": "open",
+      "photos": [
+        {
+          "src": "/photos/ct/thompson/quaddick-reservoir-thompson.jpg",
+          "thumb": "/photos/ct/thompson/quaddick-reservoir-thompson_thumb.jpg",
+          "title": "Quaddick Reservoir",
+          "description": "The shoreline of Quaddick Reservoir at Quaddick State Park in Thompson.",
+          "author": "John Phelan",
+          "license": "CC BY 4.0",
+          "source_url": "https://commons.wikimedia.org/wiki/File:Quaddick_Reservoir,_Thompson_CT.jpg"
+        }
+      ]
+    },
+    {
+      "slug": "thompson-speedway-motorsports-park",
+      "name": "Thompson Speedway Motorsports Park",
+      "kind": "attraction",
+      "town": "Thompson",
+      "state": "Connecticut",
+      "county": "Windham County",
+      "address": "205 East Thompson Road, Thompson, CT 06277",
+      "official_url": "https://thompsonspeedway.com/",
+      "summary": "A family-owned motorsports venue combining a high-banked (26-degree) 5/8-mile asphalt oval — the first asphalt-paved racing oval in the United States — with an 11-turn, 1.7-mile road course, plus the Raceway Restaurant, an 18-hole golf course and Bogey's ice cream stand. Hosted 159 NASCAR Whelen Modified Tour races from 1985 to 2026, more than any other track.",
+      "status": "open",
+      "photos": [
+        {
+          "src": "/photos/ct/thompson/thompson-speedway-motorsports-park.jpg",
+          "thumb": "/photos/ct/thompson/thompson-speedway-motorsports-park_thumb.jpg",
+          "title": "Thompson Speedway Motorsports Park",
+          "description": "A view of Thompson Speedway Motorsports Park.",
+          "author": "Veilleux79",
+          "license": "CC BY-SA 4.0",
+          "source_url": "https://commons.wikimedia.org/wiki/File:Thompson_speedway.jpg"
+        }
+      ]
+    },
+    {
+      "slug": "fort-hill-farms",
+      "name": "Fort Hill Farms",
+      "kind": "attraction",
+      "town": "Thompson",
+      "state": "Connecticut",
+      "county": "Windham County",
+      "address": "260 Quaddick Road, Thompson, CT 06277",
+      "official_url": "https://forthillfarms.com/",
+      "summary": "A working farm with a themed corn maze, guided nature walks through maple, spruce and oak groves, and a farm stand selling local dairy and artisan goods. The 2026 maze, 'Star-Spangled Maze,' runs daily 9 a.m.-9 p.m. through November 1.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "thompson-historical-society",
+      "name": "Thompson Historical Society",
+      "kind": "museum",
+      "town": "Thompson",
+      "state": "Connecticut",
+      "county": "Windham County",
+      "address": "Ellen Larned Memorial Museum, 339 Thompson Road, Thompson, CT 06277",
+      "official_url": "https://thompsonhistorical.org/",
+      "summary": "Preserves documents and artifacts of Thompson and northeastern Connecticut, including cemetery records and a photo gallery. The Ellen Larned Memorial building is open Sundays 9 a.m.-noon; the Old Town Hall at 1 Chase Road is open by appointment.",
+      "history": "The Old Town Hall served the town for 80 years and is believed, though not proven, to have been designed by Thompson native Ithiel Town.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "north-grosvenordale-mill-historic-district",
+      "name": "North Grosvenordale Mill Historic District",
+      "kind": "historic-site",
+      "town": "Thompson",
+      "state": "Connecticut",
+      "county": "Windham County",
+      "address": "North Grosvenordale village, Thompson, CT 06255",
+      "summary": "A National Register district listed April 16, 1993, covering more than 100 houses and mill-related structures around the large brick cotton mill built in 1872 by the Grosvenor-Dale Company. A walkable/drivable public streetscape.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "anya",
+      "name": "ANYA",
+      "kind": "restaurant",
+      "town": "Thompson",
+      "state": "Connecticut",
+      "county": "Windham County",
+      "address": "49 Route 193, Thompson, CT 06277",
+      "official_url": "https://anyadining.com/",
+      "summary": "A fine-dining restaurant with seasonal menus and a private dining room seating up to 50, using a dandelion as its logo to symbolize hope and optimism. Open Wednesday-Saturday 4-9 p.m., Sunday noon-8 p.m., closed Monday-Tuesday.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "lbs-family-restaurant",
+      "name": "L.B.'s Family Restaurant",
+      "kind": "restaurant",
+      "town": "Thompson",
+      "state": "Connecticut",
+      "county": "Windham County",
+      "address": "860 Riverside Drive, North Grosvenordale, CT 06255",
+      "summary": "A long-running local diner-style family restaurant serving breakfast, lunch and dinner, with breakfast starting at 6 a.m. on weekdays. Open Tuesday-Friday 6 a.m.-8 p.m., Saturday-Sunday 7 a.m.-1 p.m., closed Monday. Phone (860) 923-1899.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "watson-boutique-bed-and-breakfast",
+      "name": "The Watson Boutique Bed and Breakfast",
+      "kind": "bnb",
+      "town": "Thompson",
+      "state": "Connecticut",
+      "county": "Windham County",
+      "address": "374 Thompson Road, Thompson, CT 06277",
+      "official_url": "https://thewatsonboutiquebb.com/",
+      "summary": "A boutique bed and breakfast on Thompson Hill with room types including a Master Suite, Watson Suite, Premium Suite, Premium King, Deluxe King and a one-bedroom suite. Phone (860) 315-7831.",
+      "status": "open",
+      "photos": []
+    }
+  ],
+  "entries": [
+    {
+      "kind": "sight",
+      "name": "Quaddick State Park",
+      "place_slug": "quaddick-state-park",
+      "note": "Swimming, boating and fishing on Quaddick Lake."
+    },
+    {
+      "kind": "sight",
+      "name": "Thompson Speedway Motorsports Park",
+      "place_slug": "thompson-speedway-motorsports-park",
+      "note": "The first asphalt-paved racing oval in the United States."
+    },
+    {
+      "kind": "sight",
+      "name": "Fort Hill Farms",
+      "place_slug": "fort-hill-farms",
+      "note": "A working farm with a seasonal corn maze and nature walks."
+    },
+    {
+      "kind": "sight",
+      "name": "Thompson Historical Society",
+      "place_slug": "thompson-historical-society",
+      "note": "Local history museum in the Old Town Hall."
+    },
+    {
+      "kind": "sight",
+      "name": "North Grosvenordale Mill Historic District",
+      "place_slug": "north-grosvenordale-mill-historic-district",
+      "note": "A 100-plus-building mill village listed on the National Register."
+    },
+    {
+      "kind": "food",
+      "name": "ANYA",
+      "place_slug": "anya",
+      "note": "Fine dining with seasonal menus."
+    },
+    {
+      "kind": "food",
+      "name": "L.B.'s Family Restaurant",
+      "place_slug": "lbs-family-restaurant",
+      "note": "Long-running diner-style restaurant in North Grosvenordale."
+    },
+    {
+      "kind": "stay",
+      "name": "The Watson Boutique Bed and Breakfast",
+      "place_slug": "watson-boutique-bed-and-breakfast",
+      "note": "Boutique B&B on Thompson Hill."
+    }
+  ],
+  "links": [
+    {
+      "target": "guide:killingly-ct-travel-guide",
+      "kind": "nearby",
+      "note": "Interstate 395 connects Thompson south directly to Killingly."
+    },
+    {
+      "target": "guide:woodstock-ct-travel-guide",
+      "kind": "nearby",
+      "note": "I-395 Exit 47 (US 44) serves the Putnam/Woodstock side of Thompson."
+    },
+    {
+      "target": "guide:putnam-ct-travel-guide",
+      "kind": "same-region",
+      "note": "US Route 44 links Thompson to Putnam and East Putnam."
+    }
+  ]
+}

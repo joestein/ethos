@@ -1,0 +1,272 @@
+{
+  "guide": {
+    "slug": "preston-ct-travel-guide",
+    "title": "Preston, Connecticut: Three Villages Between Norwich and Stonington",
+    "destination": "Preston, Connecticut",
+    "state": "Connecticut",
+    "county": "New London County",
+    "intro": "Preston was created from the land between Norwich and Stonington: the General Assembly allowed the first settlers to establish a plantation in 1686 and incorporated the town in 1687 (sources dispute the month), after residents petitioned in 1686 and were granted the town that January. It took its name from the English home of the Park family, early settlers, in Preston, Lancashire. On March 17, 1687, Owaneco, son of the Mohegan sachem Uncas, gave a confirmatory deed for the land; the first English settler was Jonathan Brewster, who acquired land at Poquetanuck Cove from Uncas. The town is really three villages: Preston City, Long Society and Poquetanuck. Norwich State Hospital, opened in 1904 partly on Preston land, closed in 1996; the town bought about 390 acres for one dollar in 2009, and most of the campus was demolished by 2021. Preston also produced Isaac E. Crary, Michigan's first elected congressman, and abolitionist Henry Brewster Stanton.",
+    "sections": [
+      {
+        "heading": "Preston City's green",
+        "body": "Early trades in Preston included shoemaking, metalsmithing, shipbuilding and brickmaking. Poquetanuck grew up around a gristmill established in 1685 and Samuel Whipple's ironworks of about 1707, which supported shipbuilding and potash export. The Preston City Historic District, a 25-acre National Register district listed in 1987 with 24 contributing buildings, centers on the 1812 Preston City Baptist Church, whose steeple and bell tower were added in 1832, alongside the 1786-1800 Calvin Barstow House and the 1733 Ephraim Jones House, later the town poorhouse. Needlework artist Prudence Punderson, born in Preston, made the 18th-century \"The First, Second and Last Scene of Mortality,\" among the most reproduced pieces in the Connecticut Historical Society's collection."
+      },
+      {
+        "heading": "Getting there",
+        "body": "Preston is a road-trip town: drive Connecticut Route 2 southeast out of Norwich, where it meets I-395 at a partial cloverleaf, with Routes 2A, 12, 164 and 165 serving the villages. There is no passenger rail station in Preston; the nearest train service is at New London's Water Street station, the eastern terminus of CTrail Shore Line East and an Amtrak stop, south of Preston via Route 2."
+      },
+      {
+        "heading": "A vineyard, a berry farm and preserve trails",
+        "body": "Preston Ridge Vineyard offers wine tastings, live music and a disc golf course on its family-owned property. Maple Lane Farms, a 325-acre operation since 1978, rents its restored 1791 farmhouse as a whole-house vacation stay sleeping twelve, with fishing ponds on the surrounding acreage. Preston Nature Preserve's roughly two miles of trail cross an old ice pond and a swamp, open August 15 to April 15 only; the Mitchell Preserve & Reed Woodlands, spanning Preston and North Stonington, add about 2.5 to 3.6 miles more across six contiguous Avalonia Land Conservancy properties. For food, Solis Pizza Restaurant and Square Peg Pizzeria serve Route 2 and Route 165, and Toppin' pours açaí bowls and coffee at the Route 2 gateway into town."
+      }
+    ],
+    "faq": [
+      {
+        "question": "How do I get to Preston?",
+        "answer": "By car — Route 2 runs southeast from Norwich into Preston, meeting I-395 at a partial cloverleaf. There is no passenger rail station in Preston; the nearest is New London's Water Street station, south of Preston via Route 2."
+      },
+      {
+        "question": "Is there a train to Preston?",
+        "answer": "No. CTrail Shore Line East's nine core stations run between New Haven and New London; New London, roughly 20 miles south, is the nearest to Preston."
+      },
+      {
+        "question": "What happened to Norwich State Hospital?",
+        "answer": "The hospital, partly in Preston, operated from 1904 to 1996. The town bought about 390 acres for one dollar in 2009, and most buildings were demolished by 2021; the site is now the town-owned Preston Riverwalk redevelopment campus, not a visitor attraction."
+      },
+      {
+        "question": "Is there a hotel in Preston?",
+        "answer": "No conventional hotel was found within Preston. The 1791 House at Maple Lane Farms is a whole-house vacation rental sleeping twelve, and Strawberry Park Resort Campground offers RV sites and cabins. The nearest full-service hotels are at Foxwoods, about 6 miles southeast in Mashantucket."
+      },
+      {
+        "question": "What is the Preston City Historic District?",
+        "answer": "A 25-acre National Register district listed in 1987, with 24 contributing buildings in Greek Revival, Georgian and Federal styles, centered on the 1812 Preston City Baptist Church. It is a public streetscape viewable year-round."
+      }
+    ],
+    "photos": [
+      {
+        "src": "/photos/ct/preston/preston-city-congregational-church.jpg",
+        "thumb": "/photos/ct/preston/preston-city-congregational-church_thumb.jpg",
+        "title": "Preston City Congregational Church",
+        "description": "The white clapboard Preston City Congregational Church facing the Preston City green.",
+        "author": "Jerry Dougherty",
+        "license": "CC BY 2.5",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Preston_City_Congregational_Church.jpg"
+      },
+      {
+        "src": "/photos/ct/preston/preston-town-hall.jpg",
+        "thumb": "/photos/ct/preston/preston-town-hall_thumb.jpg",
+        "title": "Preston Town Hall",
+        "description": "Preston Town Hall.",
+        "author": "John Phelan",
+        "license": "CC BY 4.0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Preston_Town_Hall,_Preston_CT.jpg"
+      }
+    ]
+  },
+  "places": [
+    {
+      "slug": "preston-ridge-vineyard",
+      "name": "Preston Ridge Vineyard",
+      "kind": "attraction",
+      "town": "Preston",
+      "state": "Connecticut",
+      "county": "New London County",
+      "address": "100 Miller Road, Preston, CT 06365",
+      "official_url": "https://prestonridgevineyard.com/",
+      "summary": "A family-owned vineyard and events venue with wine tastings, live music, weddings and a disc golf course. Open Fri 1-8 p.m., Sat 11 a.m.-4:30 p.m., Sun 11 a.m.-4:30 p.m. Phone (860) 383-4278.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "preston-nature-preserve",
+      "name": "Preston Nature Preserve",
+      "kind": "park",
+      "town": "Preston",
+      "state": "Connecticut",
+      "county": "New London County",
+      "address": "South side of Krug Road, Preston, CT 06365",
+      "official_url": "https://avalonia.org/preserves/preston-nature-preserve/",
+      "summary": "A 55.7-acre Avalonia Land Conservancy preserve protected in 1989, with about 2 miles of trail past historic stone walls, an old ice pond and a swamp crossing. Open August 15 to April 15 only; leashed dogs permitted.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "mitchell-preserve-reed-woodlands",
+      "name": "Mitchell Preserve & Reed Woodlands",
+      "kind": "park",
+      "town": "Preston",
+      "state": "Connecticut",
+      "county": "New London County",
+      "address": "Trailhead on Northwest Corner Road near mailbox #368; additional access at Lake of Isles Road, Preston, CT 06365",
+      "official_url": "https://avalonia.org/preserves/mitchell-preserve-reed-woodlands/",
+      "summary": "244.68 acres across six contiguous Avalonia properties spanning Preston and North Stonington, with roughly 2.5 to 3.6 miles of blue-, red- and yellow-blazed trail through hardwood forest, wetlands and cedar-topped outcrops along Main Brook.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "preston-city-historic-district",
+      "name": "Preston City Historic District",
+      "kind": "historic-site",
+      "town": "Preston",
+      "state": "Connecticut",
+      "county": "New London County",
+      "address": "Old Shetucket Road, Amos Road, Northwest Corner Road and CT Route 164, Preston, CT 06365",
+      "summary": "A 25-acre National Register district listed July 31, 1987, with 24 contributing buildings in Greek Revival, Georgian and Federal styles, including the 1812 Preston City Baptist Church and the 1733 Ephraim Jones House, later the town poorhouse. A public streetscape, viewable year-round from Route 164.",
+      "status": "open",
+      "photos": [
+        {
+          "src": "/photos/ct/preston/preston-city-congregational-church.jpg",
+          "thumb": "/photos/ct/preston/preston-city-congregational-church_thumb.jpg",
+          "title": "Preston City Congregational Church",
+          "description": "The white clapboard Preston City Congregational Church facing the Preston City green.",
+          "author": "Jerry Dougherty",
+          "license": "CC BY 2.5",
+          "source_url": "https://commons.wikimedia.org/wiki/File:Preston_City_Congregational_Church.jpg"
+        }
+      ]
+    },
+    {
+      "slug": "strawberry-park-resort-campground",
+      "name": "Strawberry Park Resort Campground",
+      "kind": "attraction",
+      "town": "Preston",
+      "state": "Connecticut",
+      "county": "New London County",
+      "address": "42 Pierce Road, Preston, CT 06365",
+      "official_url": "https://www.strawberrypark.net/",
+      "summary": "A family resort campground with RV sites, log cabins and rental trailers, plus pools, a splash pad, playgrounds and live entertainment. Long known in southeastern Connecticut for its music-festival weekends. Phone (860) 886-1944.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "solis-pizza-restaurant",
+      "name": "Solis Pizza Restaurant",
+      "kind": "restaurant",
+      "town": "Preston",
+      "state": "Connecticut",
+      "county": "New London County",
+      "address": "352 CT-2, Preston, CT 06365",
+      "official_url": "https://www.solisrestaurantmenu.com/",
+      "summary": "A Route 2 Italian-American spot with pizza, calzones, grinders, seafood platters and Italian dinners. Open daily 11 a.m.-8:30 p.m. with curbside pickup. Phone (860) 383-4530.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "square-peg-pizzeria-preston",
+      "name": "Square Peg Pizzeria Preston",
+      "kind": "restaurant",
+      "town": "Preston",
+      "state": "Connecticut",
+      "county": "New London County",
+      "address": "353 CT-165, Fleming's Center, Preston, CT 06365",
+      "official_url": "https://squarepegpizzeria.com/",
+      "summary": "A brick-oven pizzeria and bar, part of a small eastern-Connecticut chain, with a happy-hour menu and full bar. Open Mon-Tue 11:30 a.m.-9 p.m., Wed-Thu 11:30 a.m.-10 p.m., Fri 11:30 a.m.-11 p.m., Sat 11 a.m.-11 p.m., Sun 11 a.m.-9 p.m. Phone (860) 319-0930.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "toppin-preston",
+      "name": "Toppin'",
+      "kind": "cafe",
+      "town": "Preston",
+      "state": "Connecticut",
+      "county": "New London County",
+      "address": "1 Norwich-Westerly Road, Preston, CT 06365",
+      "official_url": "https://toppin-ct.square.site/",
+      "summary": "A small açaí bowl, smoothie and coffee shop at the Route 2 gateway into Preston, with gluten-free granola options and outdoor picnic tables. Open Tuesday-Sunday 10 a.m.-5 p.m., closed Monday. Phone (860) 514-8378.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "1791-house-maple-lane-farms",
+      "name": "The 1791 House at Maple Lane Farms",
+      "kind": "bnb",
+      "town": "Preston",
+      "state": "Connecticut",
+      "county": "New London County",
+      "address": "57 NW Corner Road, Preston, CT 06365",
+      "official_url": "https://www.maplelane.com/1791-house",
+      "summary": "A restored 1791 farmhouse on the 325-acre Maple Lane Farms property, rented whole-house: 6 bedrooms, 3.5 baths, sleeps 12, with a screened porch and fishing ponds on the surrounding acreage. Booked through the farm or Airbnb. Phone (860) 889-3766.",
+      "status": "open",
+      "photos": []
+    }
+  ],
+  "entries": [
+    {
+      "kind": "sight",
+      "name": "Preston Ridge Vineyard",
+      "place_slug": "preston-ridge-vineyard",
+      "note": "Wine tastings, live music and disc golf on a family farm."
+    },
+    {
+      "kind": "sight",
+      "name": "Preston Nature Preserve",
+      "place_slug": "preston-nature-preserve",
+      "note": "Two miles of trail past an old ice pond, open half the year."
+    },
+    {
+      "kind": "walk",
+      "name": "Mitchell Preserve & Reed Woodlands",
+      "place_slug": "mitchell-preserve-reed-woodlands",
+      "note": "244 acres of trail spanning Preston and North Stonington."
+    },
+    {
+      "kind": "sight",
+      "name": "Preston City Historic District",
+      "place_slug": "preston-city-historic-district",
+      "note": "24 contributing buildings around the 1812 Baptist church."
+    },
+    {
+      "kind": "sight",
+      "name": "Strawberry Park Resort Campground",
+      "place_slug": "strawberry-park-resort-campground",
+      "note": "A family resort campground known for music-festival weekends."
+    },
+    {
+      "kind": "food",
+      "name": "Solis Pizza Restaurant",
+      "place_slug": "solis-pizza-restaurant",
+      "note": "Route 2 Italian-American pizza and seafood."
+    },
+    {
+      "kind": "food",
+      "name": "Square Peg Pizzeria Preston",
+      "place_slug": "square-peg-pizzeria-preston",
+      "note": "Brick-oven pizza and a full bar on Route 165."
+    },
+    {
+      "kind": "food",
+      "name": "Toppin'",
+      "place_slug": "toppin-preston",
+      "note": "Açaí bowls and coffee at the Route 2 gateway."
+    },
+    {
+      "kind": "stay",
+      "name": "The 1791 House at Maple Lane Farms",
+      "place_slug": "1791-house-maple-lane-farms",
+      "note": "A whole-house farmhouse rental sleeping twelve."
+    }
+  ],
+  "links": [
+    {
+      "target": "guide:norwich-ct-travel-guide",
+      "kind": "nearby",
+      "note": "Preston borders Norwich, where Route 2 meets I-395."
+    },
+    {
+      "target": "guide:ledyard-ct-travel-guide",
+      "kind": "nearby",
+      "note": "Preston borders Ledyard to the east."
+    },
+    {
+      "target": "guide:north-stonington-ct-travel-guide",
+      "kind": "nearby",
+      "note": "The Mitchell Preserve & Reed Woodlands straddle the Preston-North Stonington line."
+    },
+    {
+      "target": "guide:griswold-ct-travel-guide",
+      "kind": "shared-history",
+      "note": "Griswold was originally the northern part of Preston before its 1815 incorporation."
+    }
+  ]
+}

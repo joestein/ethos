@@ -1,0 +1,256 @@
+{
+  "guide": {
+    "slug": "cheshire-ct-travel-guide",
+    "title": "Cheshire, Connecticut: Barite Mines and Bedding Plants",
+    "destination": "Cheshire, Connecticut",
+    "state": "Connecticut",
+    "county": "New Haven County",
+    "intro": "Cheshire was settled in 1694 as part of Wallingford and separated to become its own town, incorporated in May 1780. Barite mining was the town's defining 19th-century industry: mining began in 1835 and was suspended in 1878, producing roughly 180,000 tons of barite from mines off Jinny Hill Road, Peck Lane and Reinhard Road, worked by Cornish miners underground and Irish miners above ground. Cheshire was a farming community that industrialized and suburbanized after World War II while retaining much of its rural character, and it is known today as the \"Bedding Plant Capital of Connecticut\" for its commercial greenhouse industry. Samuel Augustus Foot, born in Cheshire in 1780, served as U.S. Senator and Governor of Connecticut; landscape painter John Frederick Kensett, born here in 1816, co-founded the Metropolitan Museum of Art. Cheshire Academy, founded in 1794, still anchors the town's green district a century after Foot and Kensett's births.",
+    "sections": [
+      {
+        "heading": "A canal, a green and a working academy",
+        "body": "The Farmington Canal ran through Cheshire from 1828 to 1848; a restored section with its lock chamber and a helicoidal stone bridge survives at Lock 12 Historical Park, now linked to the wider Farmington Canal trail system. The Hitchcock-Phillips House on the town green was built in 1785 by merchant and town clerk Rufus Hitchcock and has served as headquarters of the Cheshire Historical Society since 1972, retaining original wood paneling and a beehive-oven fireplace. Cheshire Academy, founded in 1794, occupies a 100-acre campus at 10 Main Street. The town holds over 1,500 acres of publicly purchased open space, and roughly 4,700 acres — about 22% of Cheshire's land — is protected when partner holdings are counted."
+      },
+      {
+        "heading": "Getting there",
+        "body": "Cheshire is a drive-to town with no rail station of its own. Reach it via I-691 Exit 3 to Route 10 south from Hartford and Meriden, I-84 Exit 26 to Route 70 from Waterbury, or I-91 Exit 10 to the Route 40 connector and Route 10 north from New Haven. Route 10 (South/North Main Street) is the main spine through Cheshire Center. The nearest passenger rail is the CTrail Hartford Line at Meriden or Wallingford; New Haven Union Station, the line's southern terminus, is the regional Amtrak and Metro-North New Haven Line hub."
+      }
+    ],
+    "faq": [
+      {
+        "question": "How do I get to Cheshire?",
+        "answer": "By car — I-691 Exit 3 to Route 10 south, I-84 Exit 26 to Route 70, or I-91 Exit 10 to the Route 40 connector and Route 10 north. There is no passenger rail station in Cheshire; the nearest CTrail Hartford Line stops are Meriden and Wallingford."
+      },
+      {
+        "question": "What is Lock 12 Historical Park?",
+        "answer": "A restored section of the Farmington Canal, which operated 1828-1848, including the lock chamber and a helicoidal stone bridge, plus a small museum, picnic area and a 2.9-mile hiking/biking trail. At 487 N. Brooksvale Rd. (Route 42)."
+      },
+      {
+        "question": "Why is Cheshire called the Bedding Plant Capital of Connecticut?",
+        "answer": "For its lively commercial greenhouse and bedding-plant industry, a nickname that survives from the town's farming era even as Cheshire industrialized and suburbanized after World War II."
+      },
+      {
+        "question": "Is there a hotel in Cheshire?",
+        "answer": "Cheshire has one lodging listing, the Cheshire Welcome Inn on Route 10, but its status could not be independently verified. Travelers wanting confirmed lodging should look to the I-84/I-691 hotel clusters in Southington, Waterbury, Meriden or New Haven."
+      }
+    ],
+    "photos": [
+      {
+        "src": "/photos/ct/cheshire/lock-12-historical-park.jpg",
+        "thumb": "/photos/ct/cheshire/lock-12-historical-park_thumb.jpg",
+        "title": "Lock 12 Historical Park",
+        "description": "The restored Farmington Canal lock at Lock 12 Historical Park in Cheshire.",
+        "author": "John Phelan",
+        "license": "CC BY 4.0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Lock_12_Historic_Park,_Cheshire_CT.jpg"
+      },
+      {
+        "src": "/photos/ct/cheshire/hitchcock-phillips-house.jpg",
+        "thumb": "/photos/ct/cheshire/hitchcock-phillips-house_thumb.jpg",
+        "title": "Hitchcock-Phillips House",
+        "description": "The 1785 Hitchcock-Phillips House on the Cheshire town green, home of the Cheshire Historical Society.",
+        "author": "Magicpiano",
+        "license": "CC BY-SA 4.0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:CheshireCT_HistoricalSociety.jpg"
+      }
+    ]
+  },
+  "places": [
+    {
+      "slug": "lock-12-historical-park",
+      "name": "Lock 12 Historical Park",
+      "kind": "park",
+      "town": "Cheshire",
+      "state": "Connecticut",
+      "county": "New Haven County",
+      "address": "487 N. Brooksvale Rd. (Route 42), Cheshire, CT 06410",
+      "official_url": "https://ctvisit.com/listings/lock-12-historical-park",
+      "summary": "A restored section of the Farmington Canal, which operated 1828-1848, including the lock chamber and a helicoidal stone bridge. Includes a small museum, picnic area and a 2.9-mile hiking/biking trail connecting to the wider Farmington Canal trail system; a typical visit runs about an hour. The small museum's hours are seasonal and unpublished — call (203) 272-2743 first.",
+      "status": "open",
+      "photos": [
+        {
+          "src": "/photos/ct/cheshire/lock-12-historical-park.jpg",
+          "thumb": "/photos/ct/cheshire/lock-12-historical-park_thumb.jpg",
+          "title": "Lock 12 Historical Park",
+          "description": "The restored Farmington Canal lock at Lock 12 Historical Park in Cheshire.",
+          "author": "John Phelan",
+          "license": "CC BY 4.0",
+          "source_url": "https://commons.wikimedia.org/wiki/File:Lock_12_Historic_Park,_Cheshire_CT.jpg"
+        }
+      ]
+    },
+    {
+      "slug": "hitchcock-phillips-house",
+      "name": "Hitchcock-Phillips House",
+      "kind": "museum",
+      "town": "Cheshire",
+      "state": "Connecticut",
+      "county": "New Haven County",
+      "address": "43 Church Drive, Cheshire, CT 06410",
+      "official_url": "https://www.cheshirehistory.org/the-hitchcockphillips-house",
+      "summary": "Built in 1785 by merchant and town clerk Rufus Hitchcock and headquarters of the Cheshire Historical Society since 1972. Holdings include an overmantel painting of Cheshire's center made around 1810, the Medal of Honor awarded to Eri D. Woodbury, and 1880s Cheshire Watch Company pocket watches. Open the 2nd and 4th Sundays of the month, 2-4 p.m.; email cheshirehistorical@gmail.com for research appointments.",
+      "status": "open",
+      "photos": [
+        {
+          "src": "/photos/ct/cheshire/hitchcock-phillips-house.jpg",
+          "thumb": "/photos/ct/cheshire/hitchcock-phillips-house_thumb.jpg",
+          "title": "Hitchcock-Phillips House",
+          "description": "The 1785 Hitchcock-Phillips House on the Cheshire town green, home of the Cheshire Historical Society.",
+          "author": "Magicpiano",
+          "license": "CC BY-SA 4.0",
+          "source_url": "https://commons.wikimedia.org/wiki/File:CheshireCT_HistoricalSociety.jpg"
+        }
+      ]
+    },
+    {
+      "slug": "barker-character-comic-cartoon-museum",
+      "name": "Barker Character, Comic and Cartoon Museum",
+      "kind": "museum",
+      "town": "Cheshire",
+      "state": "Connecticut",
+      "county": "New Haven County",
+      "address": "1188 Highland Avenue, Building B, Cheshire, CT 06410",
+      "official_url": "https://www.barkermuseum.com/PlanYourVisit.aspx",
+      "summary": "A pop-culture museum of antique toys and character collectibles, including 1930s Mickey Mouse toothpaste and a life-size Hulk replica. Admission $5 adults, $4 seniors/students, $3 children 4-17, free under 3. 2026 hours: off-season April 26-June 6 (Wed-Sat 11 a.m.-5 p.m.), summer June 7-Sept 12 (Tue-Sat 11 a.m.-5 p.m.). Phone (203) 272-2357.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "bartlem-recreation-area",
+      "name": "Bartlem Recreation Area",
+      "kind": "park",
+      "town": "Cheshire",
+      "state": "Connecticut",
+      "county": "New Haven County",
+      "address": "Route 10, Cheshire, CT 06410",
+      "official_url": "https://ctvisit.com/listings/bartlem-recreation-area",
+      "summary": "The town's central recreation hub, with the Kids in Motion Playground, the Bartlem Pavilion, the community pool, a 90-foot baseball diamond, soccer and lacrosse fields, a skate park and community gardens. Hosts the town's summer \"Bartlem Beats\" concert series. Managed by the Cheshire Recreation Department, (203) 272-2743.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "roaring-brook-open-space",
+      "name": "Roaring Brook Open Space",
+      "kind": "park",
+      "town": "Cheshire",
+      "state": "Connecticut",
+      "county": "New Haven County",
+      "address": "Cheshire, CT 06410 (consult the town's Roaring Brook directions and trail-map PDFs)",
+      "official_url": "http://www.cheshirect.gov/389/Open-Space",
+      "summary": "One of Cheshire's town open-space properties for hiking. The town holds over 1,500 acres of publicly purchased open space, and roughly 4,700 acres total — about 22% of Cheshire's land — is protected when partner holdings are counted.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "blackies-hot-dog-stand",
+      "name": "Blackie's Hot Dog Stand",
+      "kind": "restaurant",
+      "town": "Cheshire",
+      "state": "Connecticut",
+      "county": "New Haven County",
+      "address": "2200 Waterbury Rd., Cheshire, CT 06410",
+      "official_url": "https://www.blackieshotdogs.com/",
+      "summary": "A roadside institution founded in 1928, serving hot dogs custom-made for Blackie's by Martin Rosol's of New Britain, topped with a secret-family-recipe hot pepper relish also sold by the jar. Cash only, with an ATM on site; closed every Friday. Hours Jan-Mar 11 a.m.-7 p.m., Apr-Dec 11 a.m.-8 p.m. Phone (203) 699-1819.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "viron-rondo-osteria",
+      "name": "Viron Rondo Osteria",
+      "kind": "restaurant",
+      "town": "Cheshire",
+      "state": "Connecticut",
+      "county": "New Haven County",
+      "address": "1721 Highland Ave, Cheshire, CT 06410",
+      "official_url": "https://www.vironrondoosteria.com/",
+      "summary": "An upscale Italian and Mediterranean osteria built around wood-fired cooking, advertising an unbroken Wine Spectator Award of Excellence run from 2017 through 2026. Hours Mon-Sat 11 a.m.-10 p.m., Sun 11 a.m.-9 p.m.; social hour Mon-Fri 2-5:30 p.m. Phone (203) 439-2727.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "cheshire-craft-brewing",
+      "name": "Cheshire Craft Brewing",
+      "kind": "brewery",
+      "town": "Cheshire",
+      "state": "Connecticut",
+      "county": "New Haven County",
+      "address": "125 Commerce Court, Suite 7, Cheshire, CT 06410",
+      "official_url": "https://www.cheshirecraftbrewing.com/",
+      "summary": "A small five-barrel brewhouse founded in spring 2021. Flagship \"First Time\" New England IPA, plus \"Dark Side of the Moo\" milk stout and \"Summer Knights\" watermelon wheat; flight of four for $12, stone-oven pizza and pretzel sticks. Hours Thu 4-9 p.m., Fri 3-10 p.m., Sat 1-10 p.m., Sun 1-6 p.m. Phone (203) 806-1027.",
+      "status": "open",
+      "photos": []
+    }
+  ],
+  "entries": [
+    {
+      "kind": "sight",
+      "name": "Lock 12 Historical Park",
+      "place_slug": "lock-12-historical-park",
+      "note": "A restored Farmington Canal lock with a helicoidal stone bridge."
+    },
+    {
+      "kind": "sight",
+      "name": "Hitchcock-Phillips House",
+      "place_slug": "hitchcock-phillips-house",
+      "note": "The 1785 home of the Cheshire Historical Society, on the town green."
+    },
+    {
+      "kind": "sight",
+      "name": "Barker Character, Comic and Cartoon Museum",
+      "place_slug": "barker-character-comic-cartoon-museum",
+      "note": "A pop-culture museum of antique toys and character collectibles."
+    },
+    {
+      "kind": "sight",
+      "name": "Bartlem Recreation Area",
+      "place_slug": "bartlem-recreation-area",
+      "note": "The town's central recreation hub on Route 10."
+    },
+    {
+      "kind": "walk",
+      "name": "Roaring Brook Open Space",
+      "place_slug": "roaring-brook-open-space",
+      "note": "One of Cheshire's 1,500+ acres of protected open space."
+    },
+    {
+      "kind": "food",
+      "name": "Blackie's Hot Dog Stand",
+      "place_slug": "blackies-hot-dog-stand",
+      "note": "A roadside institution since 1928, cash only, closed Fridays."
+    },
+    {
+      "kind": "food",
+      "name": "Viron Rondo Osteria",
+      "place_slug": "viron-rondo-osteria",
+      "note": "Upscale Italian and Mediterranean cooking with an award-winning wine list."
+    },
+    {
+      "kind": "food",
+      "name": "Cheshire Craft Brewing",
+      "place_slug": "cheshire-craft-brewing",
+      "note": "A small five-barrel brewhouse with stone-oven pizza."
+    }
+  ],
+  "links": [
+    {
+      "target": "guide:wallingford-ct-travel-guide",
+      "kind": "nearby",
+      "note": "Cheshire was settled as part of Wallingford before separating and incorporating in 1780."
+    },
+    {
+      "target": "guide:prospect-ct-travel-guide",
+      "kind": "nearby",
+      "note": "Prospect's own records list Cheshire as one of its four bordering towns."
+    },
+    {
+      "target": "guide:bethany-ct-travel-guide",
+      "kind": "nearby",
+      "note": "The Quinnipiac Trail runs through both Cheshire and Bethany."
+    },
+    {
+      "target": "guide:hamden-ct-travel-guide",
+      "kind": "same-region",
+      "note": "Both sit along the Quinnipiac Trail's traprock-ridge corridor."
+    }
+  ]
+}

@@ -63,6 +63,7 @@ defmodule Ethos.Seeds.DataGuide do
       state: g["state"],
       county: g["county"],
       intro: g["intro"],
+      tier: g["tier"] || "guide",
       sections: g["sections"] || [],
       faq: g["faq"] || [],
       photos: g["photos"] || [],
@@ -118,6 +119,10 @@ defmodule Ethos.Seeds.DataGuide do
           Enum.filter(@required_guide_keys, &(not is_binary(guide[&1]) or guide[&1] == ""))
 
         raise ArgumentError, "#{path}: guide missing required keys #{inspect(missing)}"
+
+      not is_nil(guide["tier"]) and guide["tier"] not in ["guide", "town-page"] ->
+        raise ArgumentError,
+              "#{path}: bad tier #{inspect(guide["tier"])} (want \"guide\" or \"town-page\")"
 
       true ->
         :ok

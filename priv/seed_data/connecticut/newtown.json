@@ -1,0 +1,329 @@
+{
+  "guide": {
+    "slug": "newtown-ct-travel-guide",
+    "title": "Newtown, Connecticut: Scrabble, a Flagpole and a Cultural District",
+    "destination": "Newtown, Connecticut",
+    "state": "Connecticut",
+    "county": "Fairfield County",
+    "intro": "English colonists purchased the townsite, then known as Quanneapague, from the Pohtatuck Indians in 1705, and Newtown, settled from Stratford, was incorporated in 1711; a 1709 town plan laid out a 132-foot-wide Main Street with four-acre home lots, which is why Main Street is still unusually broad today. Newtown was a stronghold of Tory sentiment during the Revolution, and French troops under General Rochambeau camped in town in 1781 on the march to Yorktown. James Brunot bought the manufacturing rights to Scrabble in 1948 and refined and renamed the game in the Dodgingtown section of town. Fairfield Hills, a state psychiatric hospital, operated from 1933 to 1995; Newtown bought the campus in 2004, and it now holds the town's municipal offices, walking trails and NewSylum Brewing. On August 10, 2026, Newtown became Connecticut's 17th state Cultural District, with Main Street, Fairfield Hills and Sandy Hook subdistricts.",
+    "sections": [
+      {
+        "heading": "A broad Main Street and a psychiatric hospital's second act",
+        "body": "Newtown's landmark flagpole, first erected in 1876, still stands in the middle of Main Street. The Cyrenius H. Booth Library opened December 17, 1932, designed by architect Philip Sutherland, who also designed Edmond Town Hall. Fairfield Hills Hospital opened June 1, 1933 and closed December 8, 1995; the town bought the 1930s campus from the state in 2004, and the Newtown Municipal Center opened there in the former Bridgeport Hall in 2009. NewSylum Brewing Company, its name a play on the site's former life, opened in the restored Stratford Hall building in June 2020. Sandy Hook Permanent Memorial, a five-acre site honoring the 26 victims of the December 14, 2012 shooting, opened to the public in November 2022."
+      },
+      {
+        "heading": "Getting there",
+        "body": "Newtown sits on Interstate 84, with an exit for Route 25 toward Brookfield and another for Route 6 serving Newtown borough and Sandy Hook; Route 34 heads toward Derby and the lower Housatonic valley. There is no passenger rail station in Newtown. Rail travelers use the Metro-North Danbury Branch, with Bethel and Danbury (the branch's northern terminus) the closest stations; many weekday trains continue through to Stamford and New York City without a change at South Norwalk. Shore Line East, Amtrak and the CTrail Hartford Line do not serve Newtown."
+      }
+    ],
+    "faq": [
+      {
+        "question": "How do I get to Newtown?",
+        "answer": "By car on I-84, with exits for Route 25 and US Route 6. There is no train station in Newtown; the nearest are Bethel and Danbury on the Metro-North Danbury Branch."
+      },
+      {
+        "question": "What is Newtown's Cultural District?",
+        "answer": "Connecticut's 17th, designated August 10, 2026, spanning three subdistricts: Main Street (the flagpole, Edmond Town Hall, Matthew Curtiss House), Fairfield Hills (EverWonder Children's Museum) and Sandy Hook (public art, restaurants and shops)."
+      },
+      {
+        "question": "Where was Scrabble invented?",
+        "answer": "Alfred Butts invented the original game in New York, but James Brunot bought the rights, renamed it Scrabble, simplified the rules and first manufactured it starting in 1948-49 in the Dodgingtown section of Newtown."
+      },
+      {
+        "question": "Can I visit the Sandy Hook Permanent Memorial?",
+        "answer": "Yes — it has been open to the public since its November 2022 dedication. Treat it as a place of quiet remembrance."
+      },
+      {
+        "question": "Is there a hotel in Newtown?",
+        "answer": "No lodging inside Newtown could be verified. The nearest option is the Hampton Inn in Danbury, about 10 miles away on I-84."
+      }
+    ],
+    "photos": [
+      {
+        "src": "/photos/ct/newtown/newtown-main-street.jpg",
+        "thumb": "/photos/ct/newtown/newtown-main-street_thumb.jpg",
+        "title": "Main Street, Newtown",
+        "description": "A classic New England street scene on Main Street, Newtown, in fall.",
+        "author": "John Phelan",
+        "license": "CC BY-SA 3.0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Main_Street,_Newtown_CT.jpg"
+      },
+      {
+        "src": "/photos/ct/newtown/edmond-town-hall-newtown.jpg",
+        "thumb": "/photos/ct/newtown/edmond-town-hall-newtown_thumb.jpg",
+        "title": "Edmond Town Hall",
+        "description": "The brick-and-marble Georgian Revival facade of Edmond Town Hall in Newtown.",
+        "author": "Jerry Dougherty",
+        "license": "CC BY 2.5",
+        "source_url": "https://commons.wikimedia.org/wiki/File:NEWTOWNEDMONDTOWNHALL01.jpg"
+      },
+      {
+        "src": "/photos/ct/newtown/fairfield-hills-main-building.jpg",
+        "thumb": "/photos/ct/newtown/fairfield-hills-main-building_thumb.jpg",
+        "title": "Former Fairfield Hills Hospital main building",
+        "description": "The former Fairfield Hills Hospital main building on the town-owned Fairfield Hills campus in Newtown; the building itself is not open to the public.",
+        "author": "Marty Aligata",
+        "license": "CC BY-SA 4.0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Main_building_at_abandoned_Fairfield_Hills_Hospital,_Newtown,_CT_(November_2017).jpg"
+      }
+    ]
+  },
+  "places": [
+    {
+      "slug": "edmond-town-hall",
+      "name": "Edmond Town Hall",
+      "kind": "theater",
+      "town": "Newtown",
+      "state": "Connecticut",
+      "county": "Fairfield County",
+      "address": "45 Main Street, Newtown, CT 06470",
+      "official_url": "https://www.edmondtownhall.org/",
+      "summary": "A 1930 Georgian-style National Register building with a 500-seat theater, a banquet room and a gymnasium. Its \"Under the Stars\" drive-in movie series runs ten Friday nights each summer in the rear parking lot, $20 per carload. Phone (203) 270-4285.",
+      "status": "open",
+      "photos": [
+        {
+          "src": "/photos/ct/newtown/edmond-town-hall-newtown.jpg",
+          "thumb": "/photos/ct/newtown/edmond-town-hall-newtown_thumb.jpg",
+          "title": "Edmond Town Hall",
+          "description": "The brick-and-marble Georgian Revival facade of Edmond Town Hall in Newtown.",
+          "author": "Jerry Dougherty",
+          "license": "CC BY 2.5",
+          "source_url": "https://commons.wikimedia.org/wiki/File:NEWTOWNEDMONDTOWNHALL01.jpg"
+        }
+      ]
+    },
+    {
+      "slug": "matthew-curtiss-house",
+      "name": "Matthew Curtiss House",
+      "kind": "historic-site",
+      "town": "Newtown",
+      "state": "Connecticut",
+      "county": "Fairfield County",
+      "address": "44 Main Street, Newtown, CT 06470",
+      "official_url": "https://www.newtownhistory.org/",
+      "summary": "An 18th-century house museum run by the Newtown Historical Society, part of the Newtown Borough Historic District. Open for scheduled Society events, such as a Holiday Open House, rather than regular walk-in hours — call (203) 426-5937 first.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "everwonder-childrens-museum",
+      "name": "EverWonder Children's Museum",
+      "kind": "museum",
+      "town": "Newtown",
+      "state": "Connecticut",
+      "county": "Fairfield County",
+      "address": "11 Mile Hill Road, Newtown, CT 06470",
+      "official_url": "https://everwondermuseum.org/",
+      "summary": "A hands-on STEAM museum for children. Admission $13 for adults and children, free under one year. Hours vary by season — closed Mondays and Tuesdays September through June (open Sundays 10 a.m.-3 p.m.), closed Sundays and Mondays in July-August; call ahead.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "sandy-hook-permanent-memorial",
+      "name": "Sandy Hook Permanent Memorial",
+      "kind": "historic-site",
+      "town": "Newtown",
+      "state": "Connecticut",
+      "county": "Fairfield County",
+      "address": "32A Riverside Road, Sandy Hook, Newtown, CT 06482",
+      "summary": "A five-acre memorial to the 26 victims of the December 14, 2012 Sandy Hook Elementary School shooting, opened to the public November 13, 2022. Centered on a granite water basin engraved with the victims' names. A place of quiet remembrance.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "ch-booth-library",
+      "name": "C.H. Booth Library",
+      "kind": "attraction",
+      "town": "Newtown",
+      "state": "Connecticut",
+      "county": "Fairfield County",
+      "address": "25 Main Street, Newtown, CT 06470",
+      "official_url": "https://chboothlibrary.org/",
+      "summary": "Newtown's landmark public library, opened December 17, 1932 and designed by Philip Sutherland, who also designed Edmond Town Hall. Runs a maker's corner, a Library of Things and the annual Newtown Turkey Trot. Hours Mon-Thu 9:30 a.m.-8 p.m., Fri-Sat 9:30 a.m.-5 p.m., closed Sunday.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "fairfield-hills-campus",
+      "name": "Fairfield Hills Campus",
+      "kind": "park",
+      "town": "Newtown",
+      "state": "Connecticut",
+      "county": "Fairfield County",
+      "address": "Wasserman Way / Trades Lane, Newtown, CT 06470",
+      "summary": "The town-owned former state hospital campus, with public walking trails, the Newtown Municipal Center in the former Bridgeport Hall, and NewSylum Brewing in the restored Stratford Hall. Remaining vacant hospital buildings are unsafe and off-limits — the trails and reused buildings are the visitor experience.",
+      "status": "open",
+      "photos": [
+        {
+          "src": "/photos/ct/newtown/fairfield-hills-main-building.jpg",
+          "thumb": "/photos/ct/newtown/fairfield-hills-main-building_thumb.jpg",
+          "title": "Former Fairfield Hills Hospital main building",
+          "description": "The former Fairfield Hills Hospital main building on the town-owned Fairfield Hills campus in Newtown; the building itself is not open to the public.",
+          "author": "Marty Aligata",
+          "license": "CC BY-SA 4.0",
+          "source_url": "https://commons.wikimedia.org/wiki/File:Main_building_at_abandoned_Fairfield_Hills_Hospital,_Newtown,_CT_(November_2017).jpg"
+        }
+      ]
+    },
+    {
+      "slug": "blue-colony-diner",
+      "name": "Blue Colony Diner",
+      "kind": "restaurant",
+      "town": "Newtown",
+      "state": "Connecticut",
+      "county": "Fairfield County",
+      "address": "66 Church Hill Road, Newtown, CT 06470",
+      "official_url": "https://www.bluecolonydiner.com/",
+      "summary": "A 24-hour roadside diner just off I-84 with a large comfort-food menu and an in-house bakery counter. Accommodates tour groups and offers catering. Phone (203) 426-0745.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "newsylum-brewing-company",
+      "name": "NewSylum Brewing Company",
+      "kind": "brewery",
+      "town": "Newtown",
+      "state": "Connecticut",
+      "county": "Fairfield County",
+      "address": "36 Keating Farms Avenue, Newtown, CT 06470",
+      "official_url": "https://www.newsylumbrewing.com/",
+      "summary": "Opened June 2020 inside the restored Stratford Hall building on the Fairfield Hills campus, its name a play on the site's former life as a state hospital. Dart night Wednesdays, trivia Thursdays, weekend live music June-October. Hours Wed-Thu 4-9:30 p.m., Fri 3-10 p.m., Sat 1-10 p.m., Sun noon-7 p.m.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "reverie-brewing-company",
+      "name": "Reverie Brewing Company",
+      "kind": "brewery",
+      "town": "Newtown",
+      "state": "Connecticut",
+      "county": "Fairfield County",
+      "address": "57B Church Hill Rd., Newtown, CT 06470",
+      "official_url": "https://reveriebrewing.com/",
+      "summary": "Craft brewery taproom pouring rotating drafts and flights on wooden paddles; visiting food trucks stand in for a kitchen. Hours not independently confirmed — call (203) 872-2124 before visiting.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "newtown-general-store",
+      "name": "Newtown General Store",
+      "kind": "cafe",
+      "town": "Newtown",
+      "state": "Connecticut",
+      "county": "Fairfield County",
+      "address": "43 Main Street, Newtown, CT 06470",
+      "official_url": "https://www.newtowngeneralstore.com/",
+      "summary": "A Main Street fixture the business dates to 1847, serving breakfast sandwiches, deli lunches and hot specials, inside the Newtown Borough Historic District. Phone (203) 426-9901.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "barnwood-grill-newtown",
+      "name": "Barnwood Grill",
+      "kind": "restaurant",
+      "town": "Newtown",
+      "state": "Connecticut",
+      "county": "Fairfield County",
+      "address": "5 Queen St., Newtown, CT 06470",
+      "official_url": "https://www.barnwoodgrill.com/",
+      "summary": "An elevated New American menu with a sister location in Yorktown Heights, New York. Hours Mon-Thu noon-9 p.m., Fri noon-10 p.m., Sat 11:30 a.m.-10 p.m., Sun 11:30 a.m.-9 p.m. Phone (203) 491-2215.",
+      "status": "open",
+      "photos": []
+    }
+  ],
+  "entries": [
+    {
+      "kind": "sight",
+      "name": "Edmond Town Hall",
+      "place_slug": "edmond-town-hall",
+      "note": "A 1930 building with a 500-seat theater and drive-in movies."
+    },
+    {
+      "kind": "sight",
+      "name": "Matthew Curtiss House",
+      "place_slug": "matthew-curtiss-house",
+      "note": "An 18th-century house museum, open for events."
+    },
+    {
+      "kind": "sight",
+      "name": "EverWonder Children's Museum",
+      "place_slug": "everwonder-childrens-museum",
+      "note": "A hands-on STEAM museum."
+    },
+    {
+      "kind": "sight",
+      "name": "Sandy Hook Permanent Memorial",
+      "place_slug": "sandy-hook-permanent-memorial",
+      "note": "A memorial to the 26 victims of 2012."
+    },
+    {
+      "kind": "sight",
+      "name": "C.H. Booth Library",
+      "place_slug": "ch-booth-library",
+      "note": "Newtown's landmark 1932 library."
+    },
+    {
+      "kind": "sight",
+      "name": "Fairfield Hills Campus",
+      "place_slug": "fairfield-hills-campus",
+      "note": "The town-owned former state hospital grounds."
+    },
+    {
+      "kind": "food",
+      "name": "Blue Colony Diner",
+      "place_slug": "blue-colony-diner",
+      "note": "A 24-hour roadside diner off I-84."
+    },
+    {
+      "kind": "food",
+      "name": "NewSylum Brewing Company",
+      "place_slug": "newsylum-brewing-company",
+      "note": "A brewery in the restored Stratford Hall."
+    },
+    {
+      "kind": "food",
+      "name": "Reverie Brewing Company",
+      "place_slug": "reverie-brewing-company",
+      "note": "Craft brewery with rotating drafts."
+    },
+    {
+      "kind": "food",
+      "name": "Newtown General Store",
+      "place_slug": "newtown-general-store",
+      "note": "A Main Street fixture since 1847."
+    },
+    {
+      "kind": "food",
+      "name": "Barnwood Grill",
+      "place_slug": "barnwood-grill-newtown",
+      "note": "Elevated New American dining."
+    }
+  ],
+  "links": [
+    {
+      "target": "guide:southbury-ct-travel-guide",
+      "kind": "nearby",
+      "note": "The Newtown-Southbury boundary runs along the Housatonic River at the Rochambeau Bridge."
+    },
+    {
+      "target": "guide:bethel-ct-travel-guide",
+      "kind": "nearby",
+      "note": "Collis P. Huntington State Park spans Bethel, Redding and Newtown, and Bethel is the closest Danbury Branch station to Newtown."
+    },
+    {
+      "target": "guide:redding-ct-travel-guide",
+      "kind": "nearby",
+      "note": "Collis P. Huntington State Park spans Redding, Bethel and Newtown."
+    },
+    {
+      "target": "guide:brookfield-ct-travel-guide",
+      "kind": "nearby",
+      "note": "I-84 Exit 9 is signed jointly for Brookfield and Newtown, at CT 25."
+    },
+    {
+      "target": "guide:monroe-ct-travel-guide",
+      "kind": "nearby",
+      "note": "Route 25 runs Bridgeport-Trumbull-Monroe-Newtown-Brookfield in sequence."
+    }
+  ]
+}

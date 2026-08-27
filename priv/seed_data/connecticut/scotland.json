@@ -1,0 +1,152 @@
+{
+  "guide": {
+    "slug": "scotland-ct-travel-guide",
+    "title": "Scotland, Connecticut: A Signer's Birthplace",
+    "destination": "Scotland, Connecticut",
+    "state": "Connecticut",
+    "county": "Windham County",
+    "tier": "town-page",
+    "intro": "Scotland traces its settlement to 1700, when Isaac Magoon purchased roughly 1,950 acres in the southeast corner of Windham and named the tract Scotland to commemorate his ancestral homeland. The town separated from Windham and incorporated on its own in May 1857. Samuel Huntington, born here on July 16, 1731, signed the Declaration of Independence, presided over the Continental Congress from 1779 to 1781, and served as Governor of Connecticut until his death in 1796; his birthplace was designated a National Historic Landmark in 1971. Unlike most of eastern Connecticut, Scotland never industrialized, and its economy has remained predominantly agricultural. The Edward Waldo House, built in 1715, stayed in the Waldo family until 1975. With 1,576 residents at the 2020 census, Scotland is the least populous town in Windham County.",
+    "sections": [
+      {
+        "heading": "Getting there",
+        "body": "Scotland is a car-only destination: come in on Route 14 (Huntington Road/Palmer Road through the town center, briefly overlapping Route 97) from Willimantic and Route 66 to the west, or from I-395 to the east. Route 97 is the north-south spine, connecting north toward US 6 and south toward I-395. No passenger train stops anywhere in town — only a freight line crosses the southwestern corner. The nearest passenger rail is New London Union Station, about 30 miles south, served by Amtrak Northeast Regional and Shore Line East."
+      },
+      {
+        "heading": "A signer's birthplace and a Waldo family house",
+        "body": "Samuel Huntington, born in Scotland in 1731, signed the Declaration of Independence and served as Governor of Connecticut until his death in 1796; his birthplace, an 18th-century saltbox on its original foundation, is a National Historic Landmark open first and third Saturdays, May through October. The Edward Waldo House, built in 1715 and in the Waldo family until 1975, is run as a house museum by the Scotland Historical Society, with free admission on scheduled open house dates. No restaurant, cafe or store could be verified operating inside Scotland itself; plan to eat in nearby Willimantic or Pomfret."
+      }
+    ],
+    "faq": [
+      {
+        "question": "How do I get to Scotland?",
+        "answer": "By car — Route 14 runs through the town center from Willimantic, and Route 97 is the north-south spine. No passenger train stops in Scotland; the nearest is New London Union Station, about 30 miles south."
+      },
+      {
+        "question": "What is the Huntington Homestead Museum?",
+        "answer": "The birthplace of Declaration of Independence signer Samuel Huntington, an 18th-century saltbox house on its original foundation and a National Historic Landmark. Open first and third Saturdays, May through October, 11 a.m.-3 p.m."
+      },
+      {
+        "question": "Is there a restaurant in Scotland?",
+        "answer": "No restaurant, cafe, bar, brewery or general store could be verified operating inside Scotland. The nearest options are in Willimantic, about 8 miles west, or Pomfret, about 15 miles north."
+      }
+    ],
+    "photos": [
+      {
+        "src": "/photos/ct/scotland/huntington-homestead-scotland.jpg",
+        "thumb": "/photos/ct/scotland/huntington-homestead-scotland_thumb.jpg",
+        "title": "Huntington Homestead",
+        "description": "The Huntington Homestead, birthplace of Declaration of Independence signer Samuel Huntington, in Scotland.",
+        "author": "JJBers",
+        "license": "CC BY 4.0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Samuel_Huntington_Homestead,_Scotland,_CT_01.jpg"
+      }
+    ]
+  },
+  "places": [
+    {
+      "slug": "huntington-homestead-museum",
+      "name": "Huntington Homestead Museum",
+      "kind": "historic-site",
+      "town": "Scotland",
+      "state": "Connecticut",
+      "county": "Windham County",
+      "address": "36 Huntington Road, Scotland, CT 06264",
+      "official_url": "https://www.huntingtonhomestead.org/",
+      "summary": "The birthplace of Declaration of Independence signer Samuel Huntington: an 18th-century colonial house on its original foundation, bordered by Merrick Brook, with old-growth trees and stone walls. A National Historic Landmark on the Washington-Rochambeau Revolutionary Route. Open first and third Saturdays, May-October, 11 a.m.-3 p.m.",
+      "status": "open",
+      "photos": [
+        {
+          "src": "/photos/ct/scotland/huntington-homestead-scotland.jpg",
+          "thumb": "/photos/ct/scotland/huntington-homestead-scotland_thumb.jpg",
+          "title": "Huntington Homestead",
+          "description": "The Huntington Homestead, birthplace of Declaration of Independence signer Samuel Huntington, in Scotland.",
+          "author": "JJBers",
+          "license": "CC BY 4.0",
+          "source_url": "https://commons.wikimedia.org/wiki/File:Samuel_Huntington_Homestead,_Scotland,_CT_01.jpg"
+        }
+      ]
+    },
+    {
+      "slug": "edward-waldo-house",
+      "name": "Edward Waldo House",
+      "kind": "historic-site",
+      "town": "Scotland",
+      "state": "Connecticut",
+      "county": "Windham County",
+      "address": "96 Waldo Road, Scotland, CT 06264",
+      "official_url": "https://www.scotlandhistoricalsociety.org/",
+      "summary": "A circa-1715 house built by Edward Waldo that stayed in one family until 1975, run as a house museum by the Scotland Historical Society. Listed on the National Register in 1978. Open on scheduled 2026 dates including May 2, June 6, July 4, August 1 and October 3, 11 a.m.-3 p.m.; free admission.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "mohegan-state-forest",
+      "name": "Mohegan State Forest",
+      "kind": "park",
+      "town": "Scotland",
+      "state": "Connecticut",
+      "county": "Windham County",
+      "address": "Off Route 97, Scotland, CT 06264",
+      "summary": "A Connecticut state forest offering hiking, letterboxing and hunting; roughly 700 acres lie immediately north of the Pappenheimer Preserve, so the two can be walked as one block of woods. Managed by CT DEEP.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "pappenheimer-preserve",
+      "name": "Sarah A. and John F. Pappenheimer Preserve",
+      "kind": "park",
+      "town": "Scotland",
+      "state": "Connecticut",
+      "county": "Windham County",
+      "address": "Trailhead on Route 97 between Murphy Hill Road and Waldo Road, Scotland, CT",
+      "official_url": "https://joshuastrust.org/property-list/scotland/pappenheimer-preserve/",
+      "summary": "A 101.87-acre preserve of mostly level forest and marsh, donated in 2005 by Sarah and John Pappenheimer. It abuts about 700 acres of Mohegan State Forest to the north; hunting is not permitted on the preserve itself. Roadside parking is very limited.",
+      "status": "open",
+      "photos": []
+    }
+  ],
+  "entries": [
+    {
+      "kind": "sight",
+      "name": "Huntington Homestead Museum",
+      "place_slug": "huntington-homestead-museum",
+      "note": "The birthplace of Declaration of Independence signer Samuel Huntington."
+    },
+    {
+      "kind": "sight",
+      "name": "Edward Waldo House",
+      "place_slug": "edward-waldo-house",
+      "note": "A 1715 house museum run by the Scotland Historical Society."
+    },
+    {
+      "kind": "sight",
+      "name": "Mohegan State Forest",
+      "place_slug": "mohegan-state-forest",
+      "note": "Hiking and letterboxing adjoining the Pappenheimer Preserve."
+    },
+    {
+      "kind": "sight",
+      "name": "Sarah A. and John F. Pappenheimer Preserve",
+      "place_slug": "pappenheimer-preserve",
+      "note": "A 101.87-acre preserve of forest and marsh."
+    }
+  ],
+  "links": [
+    {
+      "target": "guide:windham-ct-travel-guide",
+      "kind": "shared-history",
+      "note": "Scotland separated from Windham and was incorporated as its own town in 1857."
+    },
+    {
+      "target": "guide:hampton-ct-travel-guide",
+      "kind": "same-region",
+      "note": "CT Route 97 connects Hampton's village center toward Scotland."
+    },
+    {
+      "target": "guide:plainfield-ct-travel-guide",
+      "kind": "same-region",
+      "note": "CT Route 14 reaches Interstate 395 at Exit 32 in Plainfield."
+    }
+  ]
+}

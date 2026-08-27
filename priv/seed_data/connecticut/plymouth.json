@@ -1,0 +1,265 @@
+{
+  "guide": {
+    "slug": "plymouth-ct-travel-guide",
+    "title": "Plymouth, Connecticut: Eli Terry and the Lock Museum of America",
+    "destination": "Plymouth, Connecticut",
+    "state": "Connecticut",
+    "county": "Litchfield County",
+    "intro": "Plymouth was originally part of Waterbury, known as the Northbury parish, before it separated and incorporated in 1795 in the eastern corner of Litchfield County; the town today includes the villages of Terryville and Pequabuck alongside Plymouth Center. Clock manufacturing became Plymouth's largest industry: Eli Terry Sr., who worked in the section later renamed Terryville, is credited with one of the first clock patents the U.S. Patent Office ever issued, sometime between 1797 and 1801, and is considered the father of American mass-production clockmaking. Eli Terry Jr. brought lockmaking to Terryville through a predecessor firm that became the Eagle Lock Company, which anchored the local economy until it closed in 1975, the year its abandoned plant burned. Plymouth's western section split off in 1875 to become Thomaston, after which growth concentrated in Terryville while Plymouth Center's village core stopped expanding — which is why its colonial, Federal and Greek Revival streetscape survives today.",
+    "sections": [
+      {
+        "heading": "Clocks, locks and a town that stopped growing",
+        "body": "Eli Terry's clockmaking innovations, alongside Seth Thomas and Silas Hoadley, brought Plymouth national recognition before Thomaston split away in 1875. Terryville's lock industry, seeded by Eli Terry Jr., grew into the Eagle Lock Company, and the Lock Museum of America now occupies the site of its former headquarters. The Plymouth Center Historic District — about 130 acres listed on the National Register of Historic Places on July 22, 1999 — preserves the village core that stopped growing once industry moved to Terryville, including an 1838 Greek Revival Congregational Church and worker housing on Maple Street."
+      },
+      {
+        "heading": "Getting there",
+        "body": "Plymouth has no passenger rail station of its own, so nearly everyone arrives by car on U.S. Route 6, the main east-west corridor through Terryville and Plymouth Center, with Connecticut Routes 72 and 262 feeding in from Bristol and serving Terryville and Pequabuck. The closest passenger rail is Metro-North's Waterbury Branch terminal in Waterbury, southwest of town — though Branch trains are replaced by buses from July 20, 2026 through May 31, 2027 for station reconstruction; there is no CTrail Hartford Line stop in Plymouth."
+      },
+      {
+        "heading": "A lock museum and a Litchfield Hills trail",
+        "body": "The Lock Museum of America holds what it calls the largest collection of locks, keys and ornate door hardware in the world across eight themed rooms, with limited seasonal hours — call ahead. The Terryville Lions Country Fair, the club's biggest annual fundraiser, runs each August with tractor pulls, carnival rides and fireworks. Mattatuck State Forest reaches into Plymouth alongside five other towns, and the Mattatuck Trail's \"spectacular terraced\" Buttermilk Falls, in the Allentown section, is a highlight of the 42-mile hiking-only route."
+      }
+    ],
+    "faq": [
+      {
+        "question": "How do I get to Plymouth?",
+        "answer": "By car — U.S. Route 6 runs through Terryville and Plymouth Center, with Connecticut Routes 72 and 262 feeding in from Bristol. There's no passenger rail station in Plymouth; the nearest is Metro-North's Waterbury Branch terminal in Waterbury, southwest of town, but Branch trains are replaced by buses from July 20, 2026 through May 31, 2027 for station reconstruction."
+      },
+      {
+        "question": "Who was Eli Terry?",
+        "answer": "A clockmaker who worked in the Plymouth section later renamed Terryville and is credited with one of the first clock patents the U.S. Patent Office ever issued, sometime between 1797 and 1801. He's considered the father of American mass-production clockmaking; his son, Eli Terry Jr., brought lockmaking to Terryville through the predecessor of the Eagle Lock Company."
+      },
+      {
+        "question": "What is the Lock Museum of America?",
+        "answer": "A museum on Main Street in Terryville holding what it calls the largest collection of locks, keys, handcuffs and ornate door hardware in the world, across eight themed rooms, on the site tied to the historic Eagle Lock Company. Hours are limited and seasonal — call (860) 480-4408 before visiting."
+      },
+      {
+        "question": "When is the Terryville Lions Country Fair?",
+        "answer": "Each August at the Terryville Fairgrounds — the 78th annual fair ran August 28-30, 2026. It's the Terryville Lions Club's biggest fundraiser, with a music lineup, tractor and truck pulls, a demolition derby, carnival rides and fireworks."
+      },
+      {
+        "question": "Where can I eat and stay in Plymouth?",
+        "answer": "Salsa's 5 Pizza & Mexican Grill and Hometown Pizza anchor Terryville's Main Street. No hotel, inn or B&B could be verified inside Plymouth or Terryville; the nearest verified option is the DoubleTree by Hilton in neighboring Bristol."
+      }
+    ],
+    "photos": [
+      {
+        "src": "/photos/ct/plymouth/lock-museum-terryville.jpg",
+        "thumb": "/photos/ct/plymouth/lock-museum-terryville_thumb.jpg",
+        "title": "Lock Museum of America",
+        "description": "The Lock Museum of America building on Main Street in Terryville.",
+        "author": "John Phelan",
+        "license": "CC BY 4.0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Lock_Museum_of_America,_Terryville_CT.jpg"
+      },
+      {
+        "src": "/photos/ct/plymouth/plymouth-green.jpg",
+        "thumb": "/photos/ct/plymouth/plymouth-green_thumb.jpg",
+        "title": "Plymouth Green",
+        "description": "Autumn on the Plymouth Green in the Plymouth Center Historic District.",
+        "author": "John Phelan",
+        "license": "CC BY 4.0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Plymouth_Green,_Plymouth_CT.jpg"
+      },
+      {
+        "src": "/photos/ct/plymouth/fall-mountain-lake.jpg",
+        "thumb": "/photos/ct/plymouth/fall-mountain-lake_thumb.jpg",
+        "title": "Fall Mountain Lake",
+        "description": "Fall Mountain Lake in Plymouth.",
+        "author": "John Phelan",
+        "license": "CC BY 4.0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Fall_Mountain_Lake,_Plymouth_CT.jpg"
+      }
+    ]
+  },
+  "places": [
+    {
+      "slug": "lock-museum-of-america",
+      "name": "Lock Museum of America",
+      "kind": "museum",
+      "town": "Plymouth",
+      "state": "Connecticut",
+      "county": "Litchfield County",
+      "address": "230 Main Street, Terryville, CT 06786",
+      "official_url": "https://www.lockmuseumofamerica.org/",
+      "summary": "Holds what it calls the largest collection of locks, keys, handcuffs and ornate door hardware in the world across eight themed rooms, on the site tied to the Eagle Lock Company, the firm that made Terryville a lockmaking center. 2026 season opens May 2, with limited Wednesday and Friday hours through September; visits can also be scheduled by calling (860) 480-4408.",
+      "status": "open",
+      "photos": [
+        {
+          "src": "/photos/ct/plymouth/lock-museum-terryville.jpg",
+          "thumb": "/photos/ct/plymouth/lock-museum-terryville_thumb.jpg",
+          "title": "Lock Museum of America",
+          "description": "The Lock Museum of America building on Main Street in Terryville.",
+          "author": "John Phelan",
+          "license": "CC BY 4.0",
+          "source_url": "https://commons.wikimedia.org/wiki/File:Lock_Museum_of_America,_Terryville_CT.jpg"
+        }
+      ]
+    },
+    {
+      "slug": "terryville-lions-country-fair",
+      "name": "Terryville Lions Country Fair",
+      "kind": "attraction",
+      "town": "Plymouth",
+      "state": "Connecticut",
+      "county": "Litchfield County",
+      "address": "Terryville Fairgrounds, 171 Town Hill Road, Terryville, CT 06786",
+      "official_url": "https://www.terryvillefair.org/",
+      "summary": "The Terryville Lions Club's biggest annual fundraiser, held each August with a MainStage music lineup, tractor and truck pulls, a demolition derby, cattle and poultry barns, carnival rides and fireworks. 2026 marked the 78th annual fair, August 28-30.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "mattatuck-state-forest",
+      "name": "Mattatuck State Forest",
+      "kind": "park",
+      "town": "Plymouth",
+      "state": "Connecticut",
+      "county": "Litchfield County",
+      "summary": "A state forest whose land reaches into Plymouth alongside five other towns — Harwinton, Litchfield, Thomaston, Waterbury and Watertown — with trails leading to excellent overlooks and hunting permitted in season.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "buttermilk-falls-plymouth",
+      "name": "Buttermilk Falls (Mattatuck Trail)",
+      "kind": "park",
+      "town": "Plymouth",
+      "state": "Connecticut",
+      "county": "Litchfield County",
+      "address": "Allentown section of Plymouth, CT 06786",
+      "official_url": "https://ctwoodlands.org/trails/mattatuck-trail/",
+      "summary": "A \"spectacular terraced\" waterfall on the 42-mile, hiking-only Mattatuck Trail, which passes through Plymouth's Allentown section along with Wolcott, Thomaston, Watertown, Morris, Litchfield, Warren and Cornwall.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "plymouth-center-historic-district",
+      "name": "Plymouth Center Historic District",
+      "kind": "historic-site",
+      "town": "Plymouth",
+      "state": "Connecticut",
+      "county": "Litchfield County",
+      "address": "Roughly along Main, North and South Streets, Carter, Hillside Avenue, Ives Crossing and Maple Street, Plymouth, CT 06782",
+      "summary": "Listed on the National Register of Historic Places July 22, 1999, about 130 acres, predominantly Greek Revival — an 1838 Congregational Church, the 1915 stone Gothic former St. Peter's Episcopal Church, worker housing on Maple Street, and Plymouth Park, the original town common.",
+      "status": "open",
+      "photos": [
+        {
+          "src": "/photos/ct/plymouth/plymouth-green.jpg",
+          "thumb": "/photos/ct/plymouth/plymouth-green_thumb.jpg",
+          "title": "Plymouth Green",
+          "description": "Autumn on the Plymouth Green in the Plymouth Center Historic District.",
+          "author": "John Phelan",
+          "license": "CC BY 4.0",
+          "source_url": "https://commons.wikimedia.org/wiki/File:Plymouth_Green,_Plymouth_CT.jpg"
+        },
+        {
+          "src": "/photos/ct/plymouth/fall-mountain-lake.jpg",
+          "thumb": "/photos/ct/plymouth/fall-mountain-lake_thumb.jpg",
+          "title": "Fall Mountain Lake",
+          "description": "Fall Mountain Lake in Plymouth.",
+          "author": "John Phelan",
+          "license": "CC BY 4.0",
+          "source_url": "https://commons.wikimedia.org/wiki/File:Fall_Mountain_Lake,_Plymouth_CT.jpg"
+        }
+      ]
+    },
+    {
+      "slug": "salsas-5-pizza-mexican-grill",
+      "name": "Salsa's 5 Pizza & Mexican Grill",
+      "kind": "restaurant",
+      "town": "Plymouth",
+      "state": "Connecticut",
+      "county": "Litchfield County",
+      "address": "446 Main Street, Terryville, CT 06786",
+      "official_url": "http://salsas5pizzamexicangrill.com/",
+      "summary": "An unusual pizza-and-Mexican hybrid — birria tacos, tlayudas and empanadas alongside grinders, calzones and specialty pizzas. Daily 10:30 a.m.-8:30 p.m., dine-in, delivery and pickup. Phone (860) 973-4055.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "hometown-pizza-terryville",
+      "name": "Hometown Pizza",
+      "kind": "restaurant",
+      "town": "Plymouth",
+      "state": "Connecticut",
+      "county": "Litchfield County",
+      "address": "124 Main Street, Terryville, CT 06786",
+      "official_url": "https://www.hometownpizzaterryville.com/",
+      "summary": "A Terryville pizza-and-sports-bar spot known for crispy crust pizzas and large hoagies. Open Monday-Saturday 11 a.m.-10 p.m., Sunday noon-9 p.m. Phone (860) 583-2555.",
+      "status": "open",
+      "photos": []
+    }
+  ],
+  "entries": [
+    {
+      "kind": "sight",
+      "name": "Lock Museum of America",
+      "place_slug": "lock-museum-of-america",
+      "note": "The world's largest lock, key and door-hardware collection, per the museum."
+    },
+    {
+      "kind": "sight",
+      "name": "Terryville Lions Country Fair",
+      "place_slug": "terryville-lions-country-fair",
+      "note": "An August agricultural fair with fireworks and a demolition derby."
+    },
+    {
+      "kind": "walk",
+      "name": "Mattatuck State Forest",
+      "place_slug": "mattatuck-state-forest",
+      "note": "Trails and overlooks reaching into Plymouth from six towns."
+    },
+    {
+      "kind": "walk",
+      "name": "Buttermilk Falls",
+      "place_slug": "buttermilk-falls-plymouth",
+      "note": "A terraced waterfall on the 42-mile Mattatuck Trail."
+    },
+    {
+      "kind": "walk",
+      "name": "Plymouth Center Historic District",
+      "place_slug": "plymouth-center-historic-district",
+      "note": "A 130-acre streetscape that stopped growing after Thomaston split off."
+    },
+    {
+      "kind": "food",
+      "name": "Salsa's 5 Pizza & Mexican Grill",
+      "place_slug": "salsas-5-pizza-mexican-grill",
+      "note": "Pizza and Mexican fare on Terryville's Main Street."
+    },
+    {
+      "kind": "food",
+      "name": "Hometown Pizza",
+      "place_slug": "hometown-pizza-terryville",
+      "note": "A pizza-and-sports-bar spot known for crispy crust."
+    }
+  ],
+  "links": [
+    {
+      "target": "guide:thomaston-ct-travel-guide",
+      "kind": "nearby",
+      "note": "Plymouth's western section split off in 1875 to become Thomaston."
+    },
+    {
+      "target": "guide:thomaston-ct-travel-guide",
+      "kind": "shared-history",
+      "note": "Plymouth's western section split off in 1875 to become Thomaston, named for clockmaker Seth Thomas."
+    },
+    {
+      "target": "guide:watertown-ct-travel-guide",
+      "kind": "nearby",
+      "note": null
+    },
+    {
+      "target": "guide:harwinton-ct-travel-guide",
+      "kind": "nearby",
+      "note": null
+    },
+    {
+      "target": "guide:wolcott-ct-travel-guide",
+      "kind": "same-region",
+      "note": "The Mattatuck Trail runs through both Plymouth and Wolcott."
+    }
+  ]
+}

@@ -1,0 +1,267 @@
+{
+  "guide": {
+    "slug": "voluntown-ct-travel-guide",
+    "title": "Voluntown, Connecticut: A Volunteer Town on the Rhode Island Line",
+    "destination": "Voluntown, Connecticut",
+    "state": "Connecticut",
+    "county": "New London County",
+    "intro": "Voluntown was incorporated in 1721 in the northeast corner of New London County on Connecticut's border with Rhode Island. Its name comes from a land grant around 1700, when the volunteers of the 1675 King Philip's War were given lots to build homesteads here — thus a Volunteer Town; Lieutenant Thomas Leffingwell was among the town's founders. Farming and textile mills drove the 19th-century economy, with Briggs Manufacturing's cotton mills, opened in 1856, running well into the 1920s before closing in 1926. Pachaug State Forest, Connecticut's largest, occupies roughly two-thirds of Voluntown's land area. The Voluntown Peace Trust, founded in 1962 by Robert and Marjorie Swann on land purchased by Mary Meigs, has been continuously active for over 60 years; bullet holes from a shooting attack are still preserved in the wall of its Campbell House. Voluntown covers 39.8 square miles, with 2,570 residents at the 2020 census.",
+    "sections": [
+      {
+        "heading": "Pachaug State Forest",
+        "body": "Pachaug State Forest, Connecticut's largest at 26,477 acres across six towns, has its headquarters and much of its acreage in Voluntown, with Mount Misery rising to 441 feet for panoramic forest views. Three campgrounds operate here — Green Falls, Mount Misery and the Frog Hollow equestrian sites — plus four backcountry lean-to shelters. The Rhododendron Sanctuary Trail, a short walk on a planked path through native rhododendron, peaks in bloom around July 4th, and the 24.4-mile blue-blazed Pachaug Trail runs from Green Fall Pond in Voluntown to Pachaug Pond in Griswold, connecting to the Nehantic, Quinebaug and Narragansett trails for extended backpacking loops."
+      },
+      {
+        "heading": "Getting there",
+        "body": "Voluntown has no rail station and no interstate of its own: drivers take I-395 to the Route 138 interchange at Jewett City in Griswold and follow Route 138 east about 8 miles into Voluntown center, where Routes 138, 165 and the scenic Route 49 all converge. Rail travelers use Amtrak or CTrail Shore Line East to New London, about 20 miles south, and drive the last leg; Metro-North and the CTrail Hartford Line do not reach this corner of the state."
+      },
+      {
+        "heading": "A peace community and a glamping resort",
+        "body": "The Voluntown Peace Trust, a 54-acre educational center on Beach Pond Road, hosts workshops, retreats and conferences year-round. Final Shot Paintball, on Ekonk Hill Road at the edge of Pachaug State Forest, runs reservation-only paintball and airsoft sessions on weekends, sharing its address with Nature's Campsites, a family-owned campground with four cabin rentals open May through mid-October. Tamarack Lodge Resort & Glamping, the town's only resort-style lodging, pairs a guest house and vintage cabins with an on-site restaurant and pub that runs a regular live-music calendar. Town Grill & Pizzeria, on the Route 165 corridor, is the closest sit-down food to the Peace Trust and the eastern Pachaug trailheads."
+      }
+    ],
+    "faq": [
+      {
+        "question": "How do I get to Voluntown?",
+        "answer": "By car — I-395 to the Route 138 interchange at Jewett City in Griswold, then Route 138 east about 8 miles into Voluntown center. There is no passenger rail station in Voluntown; the nearest is New London, about 20 miles south."
+      },
+      {
+        "question": "Is there a train to Voluntown?",
+        "answer": "No. No passenger rail station exists in Voluntown or any adjoining town, and Metro-North and the CTrail Hartford Line do not serve this corner of the state."
+      },
+      {
+        "question": "What is Pachaug State Forest?",
+        "answer": "Connecticut's largest state forest at 26,477 acres across six towns, with its headquarters in Voluntown. It offers camping, the blue-blazed Pachaug Trail, and the Rhododendron Sanctuary Trail, best visited around its July bloom."
+      },
+      {
+        "question": "Is there a hotel in Voluntown?",
+        "answer": "Tamarack Lodge Resort & Glamping is Voluntown's only resort-style lodging, with a guest house, vintage cabins and bell tents. Nature's Campsites and Circle C Campground offer camping and cabin rentals."
+      },
+      {
+        "question": "What is the Voluntown Peace Trust?",
+        "answer": "A 54-acre educational center and community land trust founded in 1962 by Robert and Marjorie Swann, continuously active for over 60 years. It rents facilities year-round for retreats and conferences."
+      }
+    ],
+    "photos": [
+      {
+        "src": "/photos/ct/voluntown/voluntown-baptist-church.jpg",
+        "thumb": "/photos/ct/voluntown/voluntown-baptist-church_thumb.jpg",
+        "title": "Voluntown Baptist Church",
+        "description": "The Voluntown Baptist Church at the town center.",
+        "author": "John Phelan",
+        "license": "CC BY-SA 4.0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Voluntown_Baptist_Church,_Voluntown_CT.jpg"
+      },
+      {
+        "src": "/photos/ct/voluntown/rhododendron-sanctuary-trail.jpg",
+        "thumb": "/photos/ct/voluntown/rhododendron-sanctuary-trail_thumb.jpg",
+        "title": "Rhododendron Sanctuary Trail",
+        "description": "The planked boardwalk section of the Rhododendron Sanctuary Trail in Pachaug State Forest.",
+        "author": "Morrow Long",
+        "license": "CC BY-SA 3.0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Nehantic_Trail_-_Rhododendron_Sanctuary_Trail_planked_wooden_boardwalk_section.jpg"
+      },
+      {
+        "src": "/photos/ct/voluntown/pachaug-state-forest-picnic.jpg",
+        "thumb": "/photos/ct/voluntown/pachaug-state-forest-picnic_thumb.jpg",
+        "title": "Pachaug State Forest",
+        "description": "A picnic table in Pachaug State Forest.",
+        "author": "U+1F360",
+        "license": "CC BY-SA 4.0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Picnic_Table_in_Pachaug_State_Forest.jpg"
+      }
+    ]
+  },
+  "places": [
+    {
+      "slug": "pachaug-state-forest-voluntown",
+      "name": "Pachaug State Forest",
+      "kind": "park",
+      "town": "Voluntown",
+      "state": "Connecticut",
+      "county": "New London County",
+      "address": "219 Ekonk Hill Road, Voluntown, CT 06384",
+      "official_url": "https://ctparks.com/parks/pachaug-state-forest",
+      "summary": "Connecticut's largest state forest at 26,477 acres of public land across six towns, with Mount Misery rising to 441 feet. Camping, hiking, biking, boating, fishing, horseback riding, hunting and cross-country skiing. Three campgrounds — Green Falls (18 sites), Mount Misery (22 sites) and Frog Hollow Equestrian (18 sites) — at $17/day resident, $27 non-resident, plus four backcountry lean-to shelters. Open daily 8 a.m. to sunset; 2026 camping season April 10-October 12. Phone (860) 376-4075.",
+      "status": "open",
+      "photos": [
+        {
+          "src": "/photos/ct/voluntown/pachaug-state-forest-picnic.jpg",
+          "thumb": "/photos/ct/voluntown/pachaug-state-forest-picnic_thumb.jpg",
+          "title": "Pachaug State Forest",
+          "description": "A picnic table in Pachaug State Forest.",
+          "author": "U+1F360",
+          "license": "CC BY-SA 4.0",
+          "source_url": "https://commons.wikimedia.org/wiki/File:Picnic_Table_in_Pachaug_State_Forest.jpg"
+        }
+      ]
+    },
+    {
+      "slug": "rhododendron-sanctuary-trail",
+      "name": "Rhododendron Sanctuary Trail",
+      "kind": "park",
+      "town": "Voluntown",
+      "state": "Connecticut",
+      "county": "New London County",
+      "address": "Within Pachaug State Forest off Route 49, near Mount Misery, Voluntown, CT 06384",
+      "official_url": "https://ctparks.com/parks/pachaug-state-forest",
+      "summary": "A short scenic walk on a planked path through a stand of native rhododendron, especially spectacular when the shrubs bloom, usually around July 4th.",
+      "status": "open",
+      "photos": [
+        {
+          "src": "/photos/ct/voluntown/rhododendron-sanctuary-trail.jpg",
+          "thumb": "/photos/ct/voluntown/rhododendron-sanctuary-trail_thumb.jpg",
+          "title": "Rhododendron Sanctuary Trail",
+          "description": "The planked boardwalk section of the Rhododendron Sanctuary Trail in Pachaug State Forest.",
+          "author": "Morrow Long",
+          "license": "CC BY-SA 3.0",
+          "source_url": "https://commons.wikimedia.org/wiki/File:Nehantic_Trail_-_Rhododendron_Sanctuary_Trail_planked_wooden_boardwalk_section.jpg"
+        }
+      ]
+    },
+    {
+      "slug": "pachaug-trail",
+      "name": "Pachaug Trail",
+      "kind": "park",
+      "town": "Voluntown",
+      "state": "Connecticut",
+      "county": "New London County",
+      "address": "Runs 24.4 miles from Green Fall Pond in Voluntown to Pachaug Pond in Griswold",
+      "official_url": "https://ctwoodlands.org/trails/pachaug-trail/",
+      "summary": "A 24.4-mile blue-blazed hiking trail crossing Voluntown, Sterling and Griswold, past ponds, streams and rock outcrops, with four backcountry shelters for overnight trips. Connects to the Nehantic, Quinebaug and Narragansett trails for extended loops. Hiking only; maintained by Friends of Pachaug Forest and CT DEEP.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "voluntown-peace-trust",
+      "name": "Voluntown Peace Trust",
+      "kind": "historic-site",
+      "town": "Voluntown",
+      "state": "Connecticut",
+      "county": "New London County",
+      "address": "539 Beach Pond Road (CT Route 165), Voluntown, CT 06384",
+      "official_url": "https://voluntownpeacetrust.org/",
+      "summary": "Founded in 1962 by Robert and Marjorie Swann on land purchased by Mary Meigs, this 54-acre educational center has been continuously active for over 60 years. Bullet holes from a shooting attack are preserved in the wall of its Campbell House. Hosts workshops, retreats and conferences; visit by appointment. Phone (860) 376-9970.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "final-shot-paintball",
+      "name": "Final Shot Paintball",
+      "kind": "attraction",
+      "town": "Voluntown",
+      "state": "Connecticut",
+      "county": "New London County",
+      "address": "96 Ekonk Hill Road, Voluntown, CT 06384",
+      "official_url": "https://www.finalshotpaintball.com/",
+      "summary": "A paintball and airsoft arena on Ekonk Hill Road at the edge of Pachaug State Forest, with gear rental and bookings for birthday, bachelor and corporate events. Reservations only: paintball Saturday-Sunday 10 a.m.-4 p.m., airsoft Sunday noon-5 p.m. Phone (860) 884-1682.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "tamarack-lodge-resort-glamping",
+      "name": "Tamarack Lodge Resort & Glamping",
+      "kind": "hotel",
+      "town": "Voluntown",
+      "state": "Connecticut",
+      "county": "New London County",
+      "address": "21 Ten Rod Road, Voluntown, CT 06384",
+      "official_url": "https://www.tamaracklodgect.com/",
+      "summary": "Voluntown's only resort-style lodging: a guest house, vintage cabins and bell tents, open for glamping Thursday through Sunday, with an on-site restaurant and pub that hosts a regular live-music calendar on show nights. Seasonal — call (860) 376-0224 to confirm current dates before visiting.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "town-grill-pizzeria-voluntown",
+      "name": "Town Grill & Pizzeria",
+      "kind": "restaurant",
+      "town": "Voluntown",
+      "state": "Connecticut",
+      "county": "New London County",
+      "address": "104 Beach Pond Road, Voluntown, CT 06384",
+      "summary": "Voluntown's village grill and pizzeria, on the Route 165 corridor between the town center and the Rhode Island line — the closest sit-down option to the Voluntown Peace Trust and the eastern Pachaug trailheads. No published hours; call ahead.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "natures-campsites",
+      "name": "Nature's Campsites",
+      "kind": "attraction",
+      "town": "Voluntown",
+      "state": "Connecticut",
+      "county": "New London County",
+      "address": "96 Ekonk Hill Road, Voluntown, CT 06384",
+      "official_url": "https://www.naturescampsites.com/",
+      "summary": "A family-owned campground on the edge of Pachaug State Forest with four cabin rentals alongside full-hookup RV, tent and seasonal sites. Open May 1-October 15. Final Shot Paintball operates at the same address. Reservations through ReserveAmerica; phone (860) 376-4203.",
+      "status": "open",
+      "photos": []
+    }
+  ],
+  "entries": [
+    {
+      "kind": "sight",
+      "name": "Pachaug State Forest",
+      "place_slug": "pachaug-state-forest-voluntown",
+      "note": "Connecticut's largest state forest, headquartered in Voluntown."
+    },
+    {
+      "kind": "walk",
+      "name": "Rhododendron Sanctuary Trail",
+      "place_slug": "rhododendron-sanctuary-trail",
+      "note": "A short planked walk through native rhododendron."
+    },
+    {
+      "kind": "walk",
+      "name": "Pachaug Trail",
+      "place_slug": "pachaug-trail",
+      "note": "A 24.4-mile blue-blazed trail to Griswold."
+    },
+    {
+      "kind": "sight",
+      "name": "Voluntown Peace Trust",
+      "place_slug": "voluntown-peace-trust",
+      "note": "A 54-acre peace and nonviolence community founded in 1962."
+    },
+    {
+      "kind": "sight",
+      "name": "Final Shot Paintball",
+      "place_slug": "final-shot-paintball",
+      "note": "Reservation-only paintball and airsoft, weekends."
+    },
+    {
+      "kind": "stay",
+      "name": "Tamarack Lodge Resort & Glamping",
+      "place_slug": "tamarack-lodge-resort-glamping",
+      "note": "Voluntown's only resort-style lodging, with a restaurant and pub."
+    },
+    {
+      "kind": "food",
+      "name": "Town Grill & Pizzeria",
+      "place_slug": "town-grill-pizzeria-voluntown",
+      "note": "Voluntown's village grill on Route 165."
+    },
+    {
+      "kind": "stay",
+      "name": "Nature's Campsites",
+      "place_slug": "natures-campsites",
+      "note": "A family-owned campground with four cabin rentals."
+    }
+  ],
+  "links": [
+    {
+      "target": "guide:griswold-ct-travel-guide",
+      "kind": "nearby",
+      "note": "Route 138 runs directly from Voluntown into Griswold."
+    },
+    {
+      "target": "guide:sterling-ct-travel-guide",
+      "kind": "nearby",
+      "note": "Route 49 continues north from Voluntown's boat launch directly into Sterling."
+    },
+    {
+      "target": "guide:norwich-ct-travel-guide",
+      "kind": "same-region",
+      "note": "I-395 to the Route 138 interchange at Jewett City is the standard approach to Voluntown from Norwich."
+    }
+  ]
+}

@@ -1,0 +1,220 @@
+{
+  "guide": {
+    "slug": "north-branford-ct-travel-guide",
+    "title": "North Branford, Connecticut: The Shredded Coconut Capital That Almost Was",
+    "destination": "North Branford, Connecticut",
+    "state": "Connecticut",
+    "county": "New Haven County",
+    "intro": "North Branford separated from Branford and was incorporated as its own town in 1831, emerging as an early mill and farming community. The area was originally known as Totoket, after the Algonkian-speaking people who lived here; the English later renamed the coastal settlement Branford, and Totoket survives locally in Totoket Mountain, Totoket Road and the Totoket Historical Society. Industry began with buttons: Maltby Fowler opened a button-making shop in 1830, and his six sons devised machines to produce screws, embossed silk, pins and horseshoe nails. In the 1870s, E. Chapman Maltby began shredding coconut meat previously discarded from his button-and-spoon factory; a patented paring machine won first prize at the 1876 Philadelphia Centennial Exposition, briefly making Northford a contender for \"shredded coconut capital of the world.\"",
+    "sections": [
+      {
+        "heading": "Trap rock, a reservoir and a historic village",
+        "body": "By the early 1900s trap rock quarrying dominated the local economy, supplying crushed stone for roadbuilding; the Branford Steam Railroad moved quarried product to shoreline barges. Lake Gaillard, the reservoir on Totoket Mountain formed in 1926, is managed by the South Central Connecticut Regional Water Authority, which is said to own roughly one-third of the town's total area — the reason so much of North Branford remains undeveloped watershed land. The Northford Center Historic District, a 230-acre village core along Middletown Avenue, was added to the National Register of Historic Places on December 31, 2002; most of its buildings predate the Civil War, and the Northford Congregational Church is a Gothic Revival design by New Haven architect Henry Austin."
+      },
+      {
+        "heading": "Getting there",
+        "body": "North Branford has no interstate and no train station of its own. Drivers come in on Route 80 (Foxon Road), which begins at the I-91/Route 17 junction in New Haven and runs east through North Branford toward Guilford, or via Route 22 and Route 17 through the Northford village center — Route 22 runs from Hamden through North Haven and Northford, overlapping Route 80 for 1.5 miles before continuing to US 1 in Guilford. The nearest passenger rail is Shore Line East at Branford or Guilford, connecting to Metro-North's New Haven Line at New Haven Union Station."
+      }
+    ],
+    "faq": [
+      {
+        "question": "How do I get to North Branford?",
+        "answer": "By car on Route 80 (Foxon Road) from New Haven, or Route 22/Route 17 through Northford. North Branford has no train station; the nearest are Shore Line East's Branford and Guilford stations."
+      },
+      {
+        "question": "Is North Branford the same as Branford?",
+        "answer": "No — North Branford separated from Branford and incorporated as its own town in 1831. They remain neighboring but distinct towns."
+      },
+      {
+        "question": "What is the Northford Center Historic District?",
+        "answer": "A 230-acre village core along Middletown Avenue, listed on the National Register in 2002, with buildings mostly predating the Civil War and the Gothic Revival Northford Congregational Church, designed by Henry Austin."
+      },
+      {
+        "question": "Is there a hotel in North Branford?",
+        "answer": "No lodging could be located within the town; travelers typically stay in New Haven, Branford or Guilford. The Study at Yale, a 124-room boutique hotel in New Haven, is the nearest confirmed option."
+      }
+    ],
+    "photos": [
+      {
+        "src": "/photos/ct/north-branford/north-branford-center-historic-district.jpg",
+        "thumb": "/photos/ct/north-branford/north-branford-center-historic-district_thumb.jpg",
+        "title": "North Branford Center Historic District",
+        "description": "A streetscape in the North Branford Center Historic District.",
+        "author": "Magicpiano",
+        "license": "CC BY-SA 4.0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:NorthBranfordCT_CenterHD_1.jpg"
+      },
+      {
+        "src": "/photos/ct/north-branford/edward-smith-library-northford.jpg",
+        "thumb": "/photos/ct/north-branford/edward-smith-library-northford_thumb.jpg",
+        "title": "Edward Smith Library, Northford",
+        "description": "The Edward Smith Library in the Northford Center Historic District.",
+        "author": "John Phelan",
+        "license": "CC BY 4.0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Edward_Smith_Library,_Northford_CT.jpg"
+      },
+      {
+        "src": "/photos/ct/north-branford/north-branford-town-hall.jpg",
+        "thumb": "/photos/ct/north-branford/north-branford-town-hall_thumb.jpg",
+        "title": "North Branford Town Hall",
+        "description": "North Branford Town Hall on Foxon Road (Route 80).",
+        "author": "Pedro Xing",
+        "license": "CC0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:North_Branford_Town_Hall_099.JPG"
+      }
+    ]
+  },
+  "places": [
+    {
+      "slug": "northford-center-historic-district",
+      "name": "Northford Center Historic District",
+      "kind": "historic-site",
+      "town": "North Branford",
+      "state": "Connecticut",
+      "county": "New Haven County",
+      "address": "Middletown Avenue (CT Route 17), Northford village, North Branford, CT",
+      "summary": "A 230-acre district listed on the National Register on December 31, 2002, running along Middletown Avenue from the village center north past the Old Post Road junction. Buildings span the 18th to early 20th centuries, most predating the Civil War, with work by architects Henry Austin and Alfred W. Boylan; landmarks include the Gothic Revival Northford Congregational Church, the Howd-Linsley House and a tavern built in 1776. Free to walk at any time.",
+      "status": "open",
+      "photos": [
+        {
+          "src": "/photos/ct/north-branford/north-branford-center-historic-district.jpg",
+          "thumb": "/photos/ct/north-branford/north-branford-center-historic-district_thumb.jpg",
+          "title": "North Branford Center Historic District",
+          "description": "A streetscape in the North Branford Center Historic District.",
+          "author": "Magicpiano",
+          "license": "CC BY-SA 4.0",
+          "source_url": "https://commons.wikimedia.org/wiki/File:NorthBranfordCT_CenterHD_1.jpg"
+        },
+        {
+          "src": "/photos/ct/north-branford/edward-smith-library-northford.jpg",
+          "thumb": "/photos/ct/north-branford/edward-smith-library-northford_thumb.jpg",
+          "title": "Edward Smith Library, Northford",
+          "description": "The Edward Smith Library in the Northford Center Historic District.",
+          "author": "John Phelan",
+          "license": "CC BY 4.0",
+          "source_url": "https://commons.wikimedia.org/wiki/File:Edward_Smith_Library,_Northford_CT.jpg"
+        }
+      ]
+    },
+    {
+      "slug": "van-wilgens-garden-center",
+      "name": "Van Wilgen's Garden Center",
+      "kind": "attraction",
+      "town": "North Branford",
+      "state": "Connecticut",
+      "county": "New Haven County",
+      "address": "51 Valley Road, North Branford, CT 06471",
+      "official_url": "https://www.vanwilgens.com/",
+      "summary": "A fourth-generation family-owned garden center — its North Branford location is the flagship main store, with satellite stores in Clinton, Southington, Guilford, Milford and Old Saybrook. Houseplants, trees, shrubs, annuals, perennials, herbs and vegetables, plus landscape design appointments. Hours 8 a.m.-5 p.m. daily. Phone (203) 488-2110.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "connecticut-sportsplex",
+      "name": "Connecticut Sportsplex",
+      "kind": "attraction",
+      "town": "North Branford",
+      "state": "Connecticut",
+      "county": "New Haven County",
+      "address": "216 Foxon Rd, North Branford, CT 06471",
+      "official_url": "https://www.ctsportsplex.com/",
+      "summary": "A multi-field sports complex on Route 80 hosting baseball, softball, soccer and football, plus an on-site Family Fun Center and rentable event space. Phone (203) 484-4383.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "millpond-gatherings",
+      "name": "Millpond Gatherings",
+      "kind": "restaurant",
+      "town": "North Branford",
+      "state": "Connecticut",
+      "county": "New Haven County",
+      "address": "1565 Middletown Ave, Northford, CT 06472",
+      "official_url": "https://www.millpondgatherings.com/",
+      "summary": "Set in a restored 1700s mill overlooking the river, on the same millpond site where E. Chapman Maltby's brick coconut factory once stood until its mid-1930s demolition. A wood-fired steakhouse (40-day aged Tomahawk Thursdays), a casual tavern with a river patio, and an event venue, plus Taco Tuesday and Sunday brunch. Phone (203) 714-4400.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "bobbys-apizza",
+      "name": "Bobby's Apizza",
+      "kind": "restaurant",
+      "town": "North Branford",
+      "state": "Connecticut",
+      "county": "New Haven County",
+      "address": "1181 Foxon Road, North Branford, CT 06471",
+      "official_url": "https://bobbysapizza.com/",
+      "summary": "A Cappetta family pizzeria established in 1969, serving Neapolitan-style apizza and Italian-American fare under the motto \"Imitated Never Duplicated.\" Hours Tue-Thu 11 a.m.-9 p.m., Fri-Sat 11 a.m.-10 p.m., Sun 1-9 p.m. Phone (203) 484-0773.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "kat-su-restaurant",
+      "name": "Kat-Su Restaurant",
+      "kind": "restaurant",
+      "town": "North Branford",
+      "state": "Connecticut",
+      "county": "New Haven County",
+      "address": "280 Branford Road, North Branford, CT 06471",
+      "official_url": "https://kat-sunorthbranford.com/",
+      "summary": "An unusual local hybrid billing itself as a \"Japanese Sushi bar and Mexican Food\" restaurant. Hours Tue-Thu 10:30 a.m.-10 p.m., Fri-Sat 10:30 a.m.-11 p.m., Sun 3-9:30 p.m., closed Mondays. Phone (203) 488-7711.",
+      "status": "open",
+      "photos": []
+    }
+  ],
+  "entries": [
+    {
+      "kind": "sight",
+      "name": "Northford Center Historic District",
+      "place_slug": "northford-center-historic-district",
+      "note": "A 230-acre village core with buildings mostly predating the Civil War."
+    },
+    {
+      "kind": "sight",
+      "name": "Van Wilgen's Garden Center",
+      "place_slug": "van-wilgens-garden-center",
+      "note": "A fourth-generation family garden center, flagship store."
+    },
+    {
+      "kind": "sight",
+      "name": "Connecticut Sportsplex",
+      "place_slug": "connecticut-sportsplex",
+      "note": "A multi-field sports complex with a Family Fun Center."
+    },
+    {
+      "kind": "food",
+      "name": "Millpond Gatherings",
+      "place_slug": "millpond-gatherings",
+      "note": "A restored 1700s mill, now a steakhouse and tavern."
+    },
+    {
+      "kind": "food",
+      "name": "Bobby's Apizza",
+      "place_slug": "bobbys-apizza",
+      "note": "A Cappetta family pizzeria since 1969."
+    },
+    {
+      "kind": "food",
+      "name": "Kat-Su Restaurant",
+      "place_slug": "kat-su-restaurant",
+      "note": "A Japanese sushi bar and Mexican food hybrid."
+    }
+  ],
+  "links": [
+    {
+      "target": "guide:branford-ct-travel-guide",
+      "kind": "nearby",
+      "note": "North Branford separated from Branford and was incorporated as its own town in 1831."
+    },
+    {
+      "target": "guide:north-haven-ct-travel-guide",
+      "kind": "nearby",
+      "note": "Route 22 runs from North Haven through the Northford village of North Branford before continuing to Guilford."
+    },
+    {
+      "target": "guide:guilford-ct-travel-guide",
+      "kind": "nearby",
+      "note": "Route 80 runs east from North Branford to Guilford, where it meets US Route 1."
+    }
+  ]
+}

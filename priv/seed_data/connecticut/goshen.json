@@ -1,0 +1,289 @@
+{
+  "guide": {
+    "slug": "goshen-ct-travel-guide",
+    "title": "Goshen, Connecticut: The Birthplace of Pineapple Cheese",
+    "destination": "Goshen, Connecticut",
+    "state": "Connecticut",
+    "county": "Litchfield County",
+    "intro": "Goshen's town center was first settled in 1738 and the town incorporated a year later, taking its name from the biblical Land of Goshen. Primarily a farming community through the 18th century, Goshen manufactured musket rifles during the Revolution. Its best-known export was culinary: inspired by a Dutch cheese his uncle brought home in 1808, Lewis Norton of West Goshen began making \"pineapple cheese\" in 1809, patented the process in 1810, and built a factory beside his house in 1844 — among America's earliest cheese factories — pressing curds into pineapple-shaped molds; Kraft eventually bought the business and sold the product until 1931. Astronomer Asaph Hall, born in Goshen in 1829 to a Hart Hollow clockmaker, discovered the two moons of Mars in 1877 while working at the U.S. Naval Observatory. The Goshen Fair descends from an annual Labor Day horse race, with its first recognized fair opening September 5, 1910.",
+    "sections": [
+      {
+        "heading": "Pineapple cheese and an astronomer",
+        "body": "Lewis Norton's pineapple-shaped cheese molds left a diamond rind pattern that became a Goshen trademark; by 1888 the operation was using roughly a million pounds of milk a year, and Kraft sold the product until 1931. Potter Hervey Brooks, who arrived in Goshen in 1795 at age 16, fired his kiln just one day a year from 1828 to 1864, making 26 forms of red earthenware; his original shop moved to Old Sturbridge Village in 1961. Asaph Hall, born in Goshen's Hart Hollow section in 1829, discovered Mars's two moons — Phobos and Deimos — in 1877 and returned to Goshen in 1901 after winning the French Academy of Sciences' Lalande Prize and the Royal Astronomical Society's gold medal."
+      },
+      {
+        "heading": "Getting there",
+        "body": "Goshen has no passenger rail service of any kind. Route 4 is the east-west spine, running from Sharon and Cornwall east through Goshen to Torrington, meeting Route 63 at a roundabout in the village center; Route 63 is the main north-south corridor linking Litchfield to the south and Canaan to the north. Route 272 runs northwest through Goshen toward Norfolk and the Massachusetts line. The nearest limited-access highway is Route 8 in Torrington, about six miles east."
+      },
+      {
+        "heading": "A wildlife park and a fairground",
+        "body": "The Goshen Fair, always held over Labor Day weekend since its 1910 debut, is Goshen's biggest annual event, with livestock, crops and wood-chopping competitions. Action Wildlife Foundation runs a drive-thru safari with more than 350 exotic and heritage animals on Route 4. Part of Mohawk State Forest — centered on 1,683-foot Mohawk Mountain in neighboring Cornwall — extends across the Goshen town line. On Torrington Road, Thorncrest Farm turns its own cream into artisanal chocolates, and AJ's Steak and Pizza has handed out free peanuts to customers since 1995."
+      }
+    ],
+    "faq": [
+      {
+        "question": "How do I get to Goshen?",
+        "answer": "By car — Route 4 runs east-west through the village, meeting Route 63 at a roundabout in the center, with Route 272 heading northwest toward Norfolk. There's no passenger rail service in Goshen or anywhere in the immediate Litchfield Hills."
+      },
+      {
+        "question": "What is pineapple cheese?",
+        "answer": "A cheese Lewis Norton of West Goshen began making in 1809 and patented in 1810, pressed into pineapple-shaped molds that left a distinctive diamond rind. His factory, built beside his house in 1844, was among America's earliest cheese factories; Kraft later bought the business and sold the product until 1931."
+      },
+      {
+        "question": "When is the Goshen Fair?",
+        "answer": "Always Labor Day weekend — September 5, 6 and 7 in 2026 — at the fairgrounds on Old Middle Street. The fair descends from an annual Labor Day horse race and first opened as a recognized fair on September 5, 1910."
+      },
+      {
+        "question": "Can I visit Mohawk State Forest from Goshen?",
+        "answer": "Yes — the forest, centered on 1,683-foot Mohawk Mountain in neighboring Cornwall, extends across the Goshen town line with hiking trails, a black spruce bog and long-range views."
+      },
+      {
+        "question": "Where can I eat and stay in Goshen?",
+        "answer": "Goshen Pizza and AJ's Steak and Pizza anchor Torrington Road, with Thorncrest Farm's chocolate shop for something sweeter. No hotel, inn or B&B operating in Goshen could be verified; the nearest option is the Litchfield Inn, about seven miles south via Route 63."
+      }
+    ],
+    "photos": [
+      {
+        "src": "/photos/ct/goshen/goshen-congregational-church.jpg",
+        "thumb": "/photos/ct/goshen/goshen-congregational-church_thumb.jpg",
+        "title": "Church of Christ Congregational, Goshen",
+        "description": "The white 1833 Church of Christ Congregational on the Goshen town green.",
+        "author": "Carol M. Highsmith",
+        "license": "Public domain",
+        "source_url": "https://commons.wikimedia.org/wiki/File:The_Church_of_Christ_Congregational,_Goshen,_Connecticut_LCCN2012631608.tif"
+      },
+      {
+        "src": "/photos/ct/goshen/west-goshen-historic-district.jpg",
+        "thumb": "/photos/ct/goshen/west-goshen-historic-district_thumb.jpg",
+        "title": "West Goshen Historic District",
+        "description": "A historic clapboard building on Route 4 in the West Goshen Historic District.",
+        "author": "Magicpiano",
+        "license": "CC BY-SA 4.0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:GoshenCT_WestGoshenHD_1.jpg"
+      },
+      {
+        "src": "/photos/ct/goshen/goshen-village-sign.jpg",
+        "thumb": "/photos/ct/goshen/goshen-village-sign_thumb.jpg",
+        "title": "Goshen town sign",
+        "description": "The Goshen town gateway sign on Route 4.",
+        "author": "CTsignhunt",
+        "license": "CC0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Goshen,_CT.jpg"
+      }
+    ]
+  },
+  "places": [
+    {
+      "slug": "goshen-fairgrounds-fair",
+      "name": "Goshen Fairgrounds / The Goshen Fair",
+      "kind": "attraction",
+      "town": "Goshen",
+      "state": "Connecticut",
+      "county": "Litchfield County",
+      "address": "116 Old Middle Street, Goshen, CT 06756",
+      "official_url": "https://goshenfair.org/",
+      "summary": "Run by the Goshen Agricultural Society, always held over Labor Day weekend — September 5, 6 and 7 in 2026. Descends from an annual Labor Day horse race; the first recognized fair opened September 5, 1910. Livestock, crops, wood chopping and Hartford Election Cake competitions.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "action-wildlife-foundation",
+      "name": "Action Wildlife Foundation",
+      "kind": "attraction",
+      "town": "Goshen",
+      "state": "Connecticut",
+      "county": "Litchfield County",
+      "address": "435 Torrington Road (Route 4), Goshen, CT 06756",
+      "official_url": "https://www.actionwildlifefoundation.com/",
+      "summary": "A nonprofit wildlife park with more than 350 exotic and heritage animals, a safari drive-thru, petting zoo, museum and picnic area. Open Wednesday-Sunday, 10 a.m.-5 p.m., weather permitting; Wednesdays are walk-through only before noon.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "goshen-historic-district",
+      "name": "Goshen Historic District",
+      "kind": "historic-site",
+      "town": "Goshen",
+      "state": "Connecticut",
+      "county": "Litchfield County",
+      "address": "Junction of Route 4 and Route 63, Goshen Center, Goshen, CT 06756",
+      "summary": "A 160-acre National Register district listed in 1982, at the crossroads village where two turnpikes met. Landmarks include the 1832 Goshen Congregational Church, the old Goshen Academy, and the Shingle-style Old Town Hall of 1895, with houses largely from the first half of the 19th century.",
+      "status": "open",
+      "photos": [
+        {
+          "src": "/photos/ct/goshen/goshen-congregational-church.jpg",
+          "thumb": "/photos/ct/goshen/goshen-congregational-church_thumb.jpg",
+          "title": "Church of Christ Congregational, Goshen",
+          "description": "The white 1833 Church of Christ Congregational on the Goshen town green.",
+          "author": "Carol M. Highsmith",
+          "license": "Public domain",
+          "source_url": "https://commons.wikimedia.org/wiki/File:The_Church_of_Christ_Congregational,_Goshen,_Connecticut_LCCN2012631608.tif"
+        },
+        {
+          "src": "/photos/ct/goshen/west-goshen-historic-district.jpg",
+          "thumb": "/photos/ct/goshen/west-goshen-historic-district_thumb.jpg",
+          "title": "West Goshen Historic District",
+          "description": "A historic clapboard building on Route 4 in the West Goshen Historic District.",
+          "author": "Magicpiano",
+          "license": "CC BY-SA 4.0",
+          "source_url": "https://commons.wikimedia.org/wiki/File:GoshenCT_WestGoshenHD_1.jpg"
+        }
+      ]
+    },
+    {
+      "slug": "sunset-meadow-vineyards",
+      "name": "Sunset Meadow Vineyards",
+      "kind": "attraction",
+      "town": "Goshen",
+      "state": "Connecticut",
+      "county": "Litchfield County",
+      "address": "599 Old Middle Street, Goshen, CT 06756",
+      "official_url": "https://www.sunsetmeadowvineyards.com/",
+      "summary": "An estate winery on the Connecticut Wine Trail pouring its own white, red, rosé and sparkling bottlings, plus a newly opened farm market. Named among the Daily Meal's 101 Best Wineries in America. Call (860) 201-4654 to confirm tasting-room hours.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "fox-brook-trail-system",
+      "name": "Fox Brook Trail System (Goshen Land Trust)",
+      "kind": "park",
+      "town": "Goshen",
+      "state": "Connecticut",
+      "county": "Litchfield County",
+      "address": "Trailheads on Pie Hill Road and East Street South, Goshen, CT 06756",
+      "official_url": "https://goshenlandtrust.org/trails/",
+      "summary": "A free, moderately easy hiking network through hemlock forest and open marsh, along the river and above a steep canyon; well marked with some rock-hopping. A second Goshen Land Trust property, the Mountain View Trail, leads to a rock viewpoint. Phone (860) 491-5263.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "goshen-pizza",
+      "name": "Goshen Pizza",
+      "kind": "restaurant",
+      "town": "Goshen",
+      "state": "Connecticut",
+      "county": "Litchfield County",
+      "address": "59 Torrington Road, Goshen, CT 06756",
+      "summary": "A village pizzeria in the Torrington Road plaza doing classic cheese and build-your-own pies for dine-in and takeout. Phone (860) 491-2121.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "ajs-steak-and-pizza",
+      "name": "AJ's Steak and Pizza",
+      "kind": "restaurant",
+      "town": "Goshen",
+      "state": "Connecticut",
+      "county": "Litchfield County",
+      "address": "171 Torrington Road, Goshen, CT 06756",
+      "official_url": "https://ajssteakandpizza.com/",
+      "summary": "A local institution known for its free-peanut tradition alongside steak and pizza — the house counter has tracked giveaways since 1995. Hours run roughly 11:30 a.m.-9 p.m. Sunday-Thursday and to 9:30 p.m. Friday-Saturday; call to confirm. Phone (860) 491-4733.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "thorncrest-farm-milk-house-chocolates",
+      "name": "Thorncrest Farm & Milk House Chocolates",
+      "kind": "cafe",
+      "town": "Goshen",
+      "state": "Connecticut",
+      "county": "Litchfield County",
+      "address": "280 Town Hill Road, Goshen, CT 06756",
+      "official_url": "https://milkhousechocolates.net/",
+      "summary": "A working dairy farm whose cream is turned into artisanal chocolates, truffles and caramels on site; visitors can shop the chocolate room and tour the stable. Chocolate shop Monday-Saturday 10 a.m.-5 p.m., Sunday 10 a.m.-4 p.m.; farm and stable Thursday-Sunday 11 a.m.-3 p.m. Phone (860) 309-2545.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "nodines-smokehouse-goshen",
+      "name": "Nodine's Smokehouse",
+      "kind": "cafe",
+      "town": "Goshen",
+      "state": "Connecticut",
+      "county": "Litchfield County",
+      "address": "39 North Street, Goshen, CT 06756",
+      "official_url": "https://www.nodinesmokehouse.com/",
+      "summary": "The retail shop of a Litchfield Hills smokehouse built around hand-cured bacon, hams, poultry, sausages and smoked cheeses, smoked with real hardwood. Open Monday-Saturday 9 a.m.-5 p.m., Sunday 10 a.m.-4 p.m. Phone (860) 491-4009.",
+      "status": "open",
+      "photos": []
+    }
+  ],
+  "entries": [
+    {
+      "kind": "sight",
+      "name": "Goshen Fairgrounds / The Goshen Fair",
+      "place_slug": "goshen-fairgrounds-fair",
+      "note": "A Labor Day agricultural fair dating to 1910."
+    },
+    {
+      "kind": "sight",
+      "name": "Action Wildlife Foundation",
+      "place_slug": "action-wildlife-foundation",
+      "note": "A drive-thru safari with 350-plus exotic and heritage animals."
+    },
+    {
+      "kind": "walk",
+      "name": "Goshen Historic District",
+      "place_slug": "goshen-historic-district",
+      "note": "A 160-acre crossroads village listed on the National Register in 1982."
+    },
+    {
+      "kind": "sight",
+      "name": "Sunset Meadow Vineyards",
+      "place_slug": "sunset-meadow-vineyards",
+      "note": "An estate winery on the Connecticut Wine Trail."
+    },
+    {
+      "kind": "walk",
+      "name": "Fox Brook Trail System",
+      "place_slug": "fox-brook-trail-system",
+      "note": "A free, moderately easy hiking network through hemlock forest."
+    },
+    {
+      "kind": "food",
+      "name": "Goshen Pizza",
+      "place_slug": "goshen-pizza",
+      "note": "A village pizzeria on Torrington Road."
+    },
+    {
+      "kind": "food",
+      "name": "AJ's Steak and Pizza",
+      "place_slug": "ajs-steak-and-pizza",
+      "note": "Steaks and pizza, with free peanuts since 1995."
+    },
+    {
+      "kind": "food",
+      "name": "Thorncrest Farm & Milk House Chocolates",
+      "place_slug": "thorncrest-farm-milk-house-chocolates",
+      "note": "A dairy farm turning its own cream into artisanal chocolates."
+    },
+    {
+      "kind": "food",
+      "name": "Nodine's Smokehouse",
+      "place_slug": "nodines-smokehouse-goshen",
+      "note": "Hand-cured, hardwood-smoked bacon, hams and sausages."
+    }
+  ],
+  "links": [
+    {
+      "target": "guide:cornwall-ct-travel-guide",
+      "kind": "nearby",
+      "note": "Mohawk State Forest, centered on Mohawk Mountain in Cornwall, extends across the Goshen town line."
+    },
+    {
+      "target": "guide:torrington-ct-travel-guide",
+      "kind": "nearby",
+      "note": null
+    },
+    {
+      "target": "guide:norfolk-ct-travel-guide",
+      "kind": "nearby",
+      "note": null
+    },
+    {
+      "target": "guide:litchfield-ct-travel-guide",
+      "kind": "nearby",
+      "note": null
+    }
+  ]
+}

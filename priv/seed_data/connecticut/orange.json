@@ -1,0 +1,297 @@
+{
+  "guide": {
+    "slug": "orange-ct-travel-guide",
+    "title": "Orange, Connecticut: PEZ Candy's North American Home",
+    "destination": "Orange, Connecticut",
+    "state": "Connecticut",
+    "county": "New Haven County",
+    "intro": "Orange was farmed as part of Milford — the area known as \"Bryan's Farms\" — before residents separated and incorporated their own town in 1822. The name honors King William III of England, who was Prince of Orange from birth. Orange was once much larger: West Haven separated from Orange and became its own city in 1921. During the Cold War, Orange hosted a Nike missile site defending Greater New Haven; the property is now home to the 103rd Air Control Squadron of the Connecticut Air National Guard, one of the oldest units of its kind. Rail once ran through town on the New Haven and Derby Railroad, whose passenger trains operated from 1871 until 1925. Today Orange is the North American home of PEZ Candy, whose plant and visitor center sit on Prindle Hill Road and are the town's best-known industry.",
+    "sections": [
+      {
+        "heading": "A colonial green and a candy landmark",
+        "body": "The Orange Center Historic District preserves the town's colonial core, including the 1810 Congregational Church designed by noted Connecticut architect David Hoadley, plus the Stone-Otis House and the 1878 Academy building. The Orange Historical Society, founded in 1964, stewards three properties: the 1740 Bryan-Andrew House, the 1830s Stone-Otis House, and the 1878 Academy, which also houses the Mary Rebecca Woodruff Research Center. The PEZ Visitor Center at 35 Prindle Hill Road holds the largest collection of PEZ memorabilia on public display in the world, including the world's largest PEZ dispenser, with viewing windows onto the candy production floor."
+      },
+      {
+        "heading": "Getting there",
+        "body": "Orange is a drive-to town on the New Haven shoreline: come in on Interstate 95 or U.S. Route 1 (Boston Post Road) from the coast, or the Route 15 Wilbur Cross Parkway from inland. Orange has no passenger rail station of its own — a Metro-North \"Orange\" station has been proposed since 2017 but funding was halted that November, and it remains unbuilt. The nearest in-service Metro-North New Haven Line stops are Milford to the south and West Haven to the east, both requiring a car or rideshare to finish the trip into Orange."
+      }
+    ],
+    "faq": [
+      {
+        "question": "How do I get to Orange?",
+        "answer": "By car on I-95, U.S. Route 1 or the Wilbur Cross Parkway (Route 15). Orange has no train station; the nearest Metro-North New Haven Line stops are Milford and West Haven."
+      },
+      {
+        "question": "What can I see at the PEZ Visitor Center?",
+        "answer": "The largest collection of PEZ memorabilia on public display in the world, including the world's largest PEZ dispenser, at 35 Prindle Hill Road. Hours 10 a.m.-5 p.m. daily; admission $5 adults, $4 children 3-12 and seniors 60+, free under 3."
+      },
+      {
+        "question": "Is Orange, Connecticut the same as Orange, New Jersey?",
+        "answer": "No — this is Orange, Connecticut, in New Haven County on the shoreline near Milford and West Haven, unrelated to the New Jersey or California towns of the same name."
+      },
+      {
+        "question": "Is there a hotel in Orange?",
+        "answer": "Yes — the Courtyard by Marriott at 136 Marsh Hill Road is the one full-service hotel inside Orange town limits. Travelers wanting more choice should look to neighboring Milford, West Haven and New Haven."
+      }
+    ],
+    "photos": [
+      {
+        "src": "/photos/ct/orange/pez-visitor-center.jpg",
+        "thumb": "/photos/ct/orange/pez-visitor-center_thumb.jpg",
+        "title": "PEZ Visitor Center",
+        "description": "The PEZ Visitor Center on Prindle Hill Road in Orange, home of PEZ Candy's North American headquarters.",
+        "author": "Pedro Xing",
+        "license": "CC0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Pez_Visitor%27s_Center_208.JPG"
+      },
+      {
+        "src": "/photos/ct/orange/orange-congregational-church.jpg",
+        "thumb": "/photos/ct/orange/orange-congregational-church_thumb.jpg",
+        "title": "Orange Congregational Church",
+        "description": "The 1810 Orange Congregational Church, designed by David Hoadley, on the Orange town green.",
+        "author": "Staib",
+        "license": "CC BY 2.5",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Orange_ct_congregational_church.jpg"
+      },
+      {
+        "src": "/photos/ct/orange/stone-otis-house-orange.jpg",
+        "thumb": "/photos/ct/orange/stone-otis-house-orange_thumb.jpg",
+        "title": "Stone-Otis House",
+        "description": "The 1830s Stone-Otis House in the Orange Center Historic District.",
+        "author": "Pedro Xing",
+        "license": "CC0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Stone-Otis_House_114.JPG"
+      }
+    ]
+  },
+  "places": [
+    {
+      "slug": "pez-visitor-center",
+      "name": "PEZ Visitor Center",
+      "kind": "museum",
+      "town": "Orange",
+      "state": "Connecticut",
+      "county": "New Haven County",
+      "address": "35 Prindle Hill Road, Orange, CT 06477",
+      "official_url": "https://us.pez.com/pages/hours-and-location",
+      "summary": "Holds the largest collection of PEZ memorabilia on public display in the world, including the world's largest PEZ dispenser and a PEZ motorcycle customized by Orange County Choppers. The self-guided tour includes viewing windows onto the candy production floor. Hours 10 a.m.-5 p.m. daily. Admission $5 adults, $4 children 3-12 and seniors 60+, free under 3; each paid admission includes a $2 store credit.",
+      "status": "open",
+      "photos": [
+        {
+          "src": "/photos/ct/orange/pez-visitor-center.jpg",
+          "thumb": "/photos/ct/orange/pez-visitor-center_thumb.jpg",
+          "title": "PEZ Visitor Center",
+          "description": "The PEZ Visitor Center on Prindle Hill Road in Orange, home of PEZ Candy's North American headquarters.",
+          "author": "Pedro Xing",
+          "license": "CC0",
+          "source_url": "https://commons.wikimedia.org/wiki/File:Pez_Visitor%27s_Center_208.JPG"
+        }
+      ]
+    },
+    {
+      "slug": "academy-museum-orange",
+      "name": "The Academy Museum",
+      "kind": "museum",
+      "town": "Orange",
+      "state": "Connecticut",
+      "county": "New Haven County",
+      "address": "605 Orange Center Road, Orange, CT 06477",
+      "official_url": "https://www.orangehistory.org/",
+      "summary": "Run by the Orange Historical Society, housed in the town's 1878 Academy building; contains the Mary Rebecca Woodruff Research Center. Free admission. Open every Saturday, 10 a.m.-3 p.m.; a second-floor Southern New England Telephone exhibit opens the fourth Saturday of each month.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "bryan-andrew-house",
+      "name": "Bryan-Andrew House",
+      "kind": "historic-site",
+      "town": "Orange",
+      "state": "Connecticut",
+      "county": "New Haven County",
+      "address": "131 Old Tavern Road, Orange, CT 06477",
+      "official_url": "https://www.orangehistory.org/",
+      "summary": "A residence dated by the Orange Historical Society to 1740, built by one of Orange's earliest families and the oldest of the society's three properties; hearth-cooked dinners by request. Open Sundays 1-3 p.m., $4 admission; call (203) 795-3106 for appointments.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "stone-otis-house-orange",
+      "name": "Stone-Otis House",
+      "kind": "historic-site",
+      "town": "Orange",
+      "state": "Connecticut",
+      "county": "New Haven County",
+      "address": "615 Orange Center Road, Orange, CT 06477",
+      "official_url": "https://www.orangehistory.org/",
+      "summary": "An 1830s restored homestead in the Orange Center Historic District, alongside the 1878 Academy and the 1810 Congregational Church. Open the third Saturday of each month, noon-3 p.m., $4 admission; visits also by appointment at (203) 795-3106.",
+      "status": "open",
+      "photos": [
+        {
+          "src": "/photos/ct/orange/stone-otis-house-orange.jpg",
+          "thumb": "/photos/ct/orange/stone-otis-house-orange_thumb.jpg",
+          "title": "Stone-Otis House",
+          "description": "The 1830s Stone-Otis House in the Orange Center Historic District.",
+          "author": "Pedro Xing",
+          "license": "CC0",
+          "source_url": "https://commons.wikimedia.org/wiki/File:Stone-Otis_House_114.JPG"
+        }
+      ]
+    },
+    {
+      "slug": "orange-country-fair",
+      "name": "Orange Country Fair",
+      "kind": "attraction",
+      "town": "Orange",
+      "state": "Connecticut",
+      "county": "New Haven County",
+      "address": "525 Orange Center Road, Orange, CT 06477",
+      "official_url": "https://orangectfair.com/",
+      "summary": "Orange's signature agricultural fair, held on the town-owned High Plains Community Center grounds, which also house the Parks & Recreation office, pool and fitness center. Run by a volunteer committee; scheduled for September 19-20, 2026.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "cedar-hill-farm",
+      "name": "Cedar Hill Farm",
+      "kind": "attraction",
+      "town": "Orange",
+      "state": "Connecticut",
+      "county": "New Haven County",
+      "address": "831 Derby Milford Road, Orange, CT 06477",
+      "official_url": "https://www.cedarhillfarmct.com/",
+      "summary": "A five-generation Bespuda family farm with an on-site farm store selling locally raised beef, chicken, pork, turkey, fresh eggs, maple syrup and seasonal produce, also sourcing area restaurants. Farm-store hours Friday noon-5:30 p.m. and Saturday 9 a.m.-noon.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "andinis-restaurant",
+      "name": "Andini's Restaurant",
+      "kind": "restaurant",
+      "town": "Orange",
+      "state": "Connecticut",
+      "county": "New Haven County",
+      "address": "555 Boston Post Road, Orange, CT 06477",
+      "official_url": "https://www.andinisrestaurant.com/",
+      "summary": "Italian-American kitchen doing handcrafted pastas, fresh seafood, signature pizzas and salads, a Boston Post Road fixture for more than 15 years with catering and a mobile pizza trailer. Phone (203) 799-0200.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "haven-hot-chicken-orange",
+      "name": "Haven Hot Chicken",
+      "kind": "restaurant",
+      "town": "Orange",
+      "state": "Connecticut",
+      "county": "New Haven County",
+      "address": "550 Boston Post Road, Orange, CT 06477",
+      "official_url": "https://www.havenhotchicken.com/locations/orange",
+      "summary": "The Orange outpost of the Connecticut-grown Nashville-style hot chicken brand, now with nine Connecticut locations plus a food truck. Hours Sun-Thu 10:30 a.m.-10 p.m., Fri-Sat 10:30 a.m.-midnight. Phone (203) 590-2223.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "chips-restaurant-orange",
+      "name": "Chip's Restaurant",
+      "kind": "restaurant",
+      "town": "Orange",
+      "state": "Connecticut",
+      "county": "New Haven County",
+      "address": "321 Boston Post Road, Orange, CT 06477",
+      "official_url": "https://chipsrestaurants.com/",
+      "summary": "A long-running Connecticut breakfast-and-diner institution on the Boston Post Road, best known for its oversized pancakes; now down to two locations, Orange and Fairfield. Open daily 7 a.m.-9 p.m., with online ordering. Phone (203) 795-5065.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "courtyard-marriott-orange",
+      "name": "Courtyard by Marriott (New Haven/Orange)",
+      "kind": "hotel",
+      "town": "Orange",
+      "state": "Connecticut",
+      "county": "New Haven County",
+      "address": "136 Marsh Hill Road, Orange, CT 06477",
+      "summary": "The one full-service hotel inside Orange town limits, in the Marsh Hill Road corporate district just off Interstate 95; doubles as the area's main meeting venue. Phone (203) 799-2200.",
+      "status": "open",
+      "photos": []
+    }
+  ],
+  "entries": [
+    {
+      "kind": "sight",
+      "name": "PEZ Visitor Center",
+      "place_slug": "pez-visitor-center",
+      "note": "The largest collection of PEZ memorabilia on public display in the world."
+    },
+    {
+      "kind": "sight",
+      "name": "The Academy Museum",
+      "place_slug": "academy-museum-orange",
+      "note": "Orange Historical Society's home in the 1878 Academy building."
+    },
+    {
+      "kind": "sight",
+      "name": "Bryan-Andrew House",
+      "place_slug": "bryan-andrew-house",
+      "note": "A 1740 residence, the oldest of the historical society's properties."
+    },
+    {
+      "kind": "sight",
+      "name": "Stone-Otis House",
+      "place_slug": "stone-otis-house-orange",
+      "note": "An 1830s restored homestead in the Orange Center Historic District."
+    },
+    {
+      "kind": "sight",
+      "name": "Orange Country Fair",
+      "place_slug": "orange-country-fair",
+      "note": "Orange's signature agricultural fair, held each September."
+    },
+    {
+      "kind": "sight",
+      "name": "Cedar Hill Farm",
+      "place_slug": "cedar-hill-farm",
+      "note": "A five-generation family farm with a working farm store."
+    },
+    {
+      "kind": "food",
+      "name": "Andini's Restaurant",
+      "place_slug": "andinis-restaurant",
+      "note": "Italian-American cooking on Boston Post Road since the 2000s."
+    },
+    {
+      "kind": "food",
+      "name": "Haven Hot Chicken",
+      "place_slug": "haven-hot-chicken-orange",
+      "note": "Nashville-style hot chicken, part of a growing Connecticut chain."
+    },
+    {
+      "kind": "food",
+      "name": "Chip's Restaurant",
+      "place_slug": "chips-restaurant-orange",
+      "note": "A breakfast-and-diner institution known for oversized pancakes."
+    },
+    {
+      "kind": "stay",
+      "name": "Courtyard by Marriott (New Haven/Orange)",
+      "place_slug": "courtyard-marriott-orange",
+      "note": "The full-service hotel inside Orange town limits."
+    }
+  ],
+  "links": [
+    {
+      "target": "guide:milford-ct-travel-guide",
+      "kind": "nearby",
+      "note": "Orange was farmed as part of Milford (\"Bryan's Farms\") before separating and incorporating in 1822."
+    },
+    {
+      "target": "guide:west-haven-ct-travel-guide",
+      "kind": "nearby",
+      "note": "West Haven separated from Orange and became its own city in 1921."
+    },
+    {
+      "target": "guide:new-haven-ct-travel-guide",
+      "kind": "same-region",
+      "note": "New Haven Union Station, reached via I-95 or U.S. Route 1, is the nearest Amtrak and Metro-North hub to Orange."
+    }
+  ]
+}

@@ -1,0 +1,269 @@
+{
+  "guide": {
+    "slug": "shelton-ct-travel-guide",
+    "title": "Shelton, Connecticut: Wiffle Balls and a Housatonic Waterfall",
+    "destination": "Shelton, Connecticut",
+    "state": "Connecticut",
+    "county": "Fairfield County",
+    "intro": "Shelton was settled in 1639 as part of Stratford, going by the names Coram and Ripton before it was set off on its own — incorporated in 1789 as Huntington, renamed Shelton in 1882 for industrialist Edward N. Shelton, and reaching city status in 1915; the city and town of Huntington consolidated in 1919, which is why \"Huntington\" survives today only as a neighborhood name. Sitting at the confluence of the Housatonic and Naugatuck Rivers, Shelton's dam-and-canal waterpower system once drove factories making, as Connecticut Humanities puts it, everything \"from pins to pianos.\" The Wiffle Ball, introduced in Shelton in 1953 by David N. Mullany, is still made there today. Harvey Hubbell, who patented the pull-chain light socket in 1896, founded the company still headquartered in Shelton as Hubbell Incorporated.",
+    "sections": [
+      {
+        "heading": "Pins to pianos, and a 1975 arson",
+        "body": "Shelton's waterpower system, built out in the 1860s by Edward N. Shelton's Ousatonic Water Power Company, drove factories that made everything from pins to pianos. The 1975 fire at the Sponge Rubber Products plant, one of the largest arson fires in U.S. history and set for insurance money, marked the start of the town's industrial decline; the 10-acre Riverwalk Park now occupies the former plant site along Canal Street, next to the adjacent Veterans Memorial Park's monuments to WWI, WWII, Korea, Vietnam, the USS Thresher and the Civil War."
+      },
+      {
+        "heading": "Getting there",
+        "body": "Shelton is a drive-to town on Route 8, which leaves I-95 in Bridgeport, meets the Merritt Parkway in Trumbull, briefly clips Stratford, then serves Shelton's business parks before crossing the Housatonic toward Ansonia, Seymour and Waterbury. There is no rail station inside Shelton; the nearest, Metro-North's Derby-Shelton stop just across the Housatonic, has its rail service replaced by buses from July 20, 2026 through May 31, 2027 while the station is rebuilt with a new 350-foot accessible platform, expected to open in November 2027."
+      }
+    ],
+    "faq": [
+      {
+        "question": "How do I get to Shelton?",
+        "answer": "By car on Route 8, which meets the Merritt Parkway in Trumbull and I-95 in Bridgeport. There is no train station in Shelton itself."
+      },
+      {
+        "question": "Is there a train near Shelton?",
+        "answer": "The closest option, Derby-Shelton on the Waterbury Branch, has its rail service replaced by buses from July 20, 2026 through May 31, 2027 during a station rebuild; the new platform is expected to open in November 2027."
+      },
+      {
+        "question": "Can I still see the Star Pin Company mill?",
+        "answer": "No — the historic 1875 mill on Canal Street burned down in June 2020. It survives only in photographs."
+      },
+      {
+        "question": "What is Jones Family Farms & Jones Winery?",
+        "answer": "A multi-property working farm with a pick-your-own calendar (strawberries in June, blueberries in July, pumpkins in fall, Christmas trees in December) and a winery tasting room in a former dairy barn. No street address is published — check the farm's site before visiting."
+      },
+      {
+        "question": "Is there a hotel in Shelton?",
+        "answer": "Yes — the Hilton Garden Inn Shelton, 25 Old Stratford Road, with 142 rooms, an indoor pool and an on-site restaurant."
+      }
+    ],
+    "photos": [
+      {
+        "src": "/photos/ct/shelton/star-pin-company-mill-shelton.jpg",
+        "thumb": "/photos/ct/shelton/star-pin-company-mill-shelton_thumb.jpg",
+        "title": "The former Star Pin Company mill",
+        "description": "The former Star Pin Company mill on Canal Street in downtown Shelton, photographed before it burned down in June 2020; it no longer stands.",
+        "author": "Hallettx",
+        "license": "CC BY-SA 4.0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Star_Pin_Company_Building_Shelton_CT.jpg"
+      },
+      {
+        "src": "/photos/ct/shelton/indian-well-sunset-shelton.jpg",
+        "thumb": "/photos/ct/shelton/indian-well-sunset-shelton_thumb.jpg",
+        "title": "Indian Well State Park at sunset",
+        "description": "The Housatonic riverfront at Indian Well State Park in Shelton, at sunset.",
+        "author": "TheDemonChicken",
+        "license": "CC BY 3.0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Indian_well_at_sunset.JPG"
+      },
+      {
+        "src": "/photos/ct/shelton/derby-shelton-bridge-housatonic.jpg",
+        "thumb": "/photos/ct/shelton/derby-shelton-bridge-housatonic_thumb.jpg",
+        "title": "The Housatonic River near downtown Shelton",
+        "description": "The Housatonic River at the Derby-Shelton Bridge, near Shelton's Riverwalk and Veterans Memorial Park.",
+        "author": "Staib",
+        "license": "CC BY-SA 4.0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Derby-Shelton_Bridge_over_the_Housatonic,_Connecticut,_USA.jpg"
+      }
+    ]
+  },
+  "places": [
+    {
+      "slug": "indian-well-state-park",
+      "name": "Indian Well State Park",
+      "kind": "park",
+      "town": "Shelton",
+      "state": "Connecticut",
+      "county": "Fairfield County",
+      "address": "1 Indian Well Road, Shelton, CT 06484",
+      "official_url": "https://ctparks.com/node/69",
+      "summary": "A Housatonic riverfront park built around a waterfall and gorge, with a sandy swimming beach, the river's only public boat launch, seasonal kayak rentals and access to the blue-blazed Paugussett Trail. Open daily 8 a.m.-sunset; November-March closed to vehicles, walk-in only. Free for CT-plated vehicles; out-of-state parking $10 weekdays, $15 weekends.",
+      "status": "open",
+      "photos": [
+        {
+          "src": "/photos/ct/shelton/indian-well-sunset-shelton.jpg",
+          "thumb": "/photos/ct/shelton/indian-well-sunset-shelton_thumb.jpg",
+          "title": "Indian Well State Park at sunset",
+          "description": "The Housatonic riverfront at Indian Well State Park in Shelton, at sunset.",
+          "author": "TheDemonChicken",
+          "license": "CC BY 3.0",
+          "source_url": "https://commons.wikimedia.org/wiki/File:Indian_well_at_sunset.JPG"
+        }
+      ]
+    },
+    {
+      "slug": "jones-family-farms-winery",
+      "name": "Jones Family Farms & Jones Winery",
+      "kind": "attraction",
+      "town": "Shelton",
+      "state": "Connecticut",
+      "county": "Fairfield County",
+      "address": "Shelton, CT 06484 (check the farm's site for directions to each property)",
+      "official_url": "https://jonesfamilyfarms.com/",
+      "summary": "A multi-property working farm — Homestead Farm, Pumpkinseed Hill Farm, Valley Farm and a greenhouse nursery — with a pick-your-own calendar: flowers in May, strawberries in June, blueberries in July, pumpkins in fall, and cut-your-own Christmas trees in December. The Jones Winery tasting room occupies a former dairy barn. Tasting room hours Mon-Thu noon-6 p.m., Fri noon-7:30 p.m., Sat-Sun noon-6 p.m. Phone (203) 929-8425.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "riverwalk-veterans-memorial-park-shelton",
+      "name": "Riverwalk / Veterans Memorial Park",
+      "kind": "park",
+      "town": "Shelton",
+      "state": "Connecticut",
+      "county": "Fairfield County",
+      "address": "Canal Street, Shelton, CT 06484",
+      "official_url": "https://www.cityofshelton.org/p/riverwalk",
+      "summary": "A 10-acre riverside park along Canal Street, created on the remediated site of the former Sponge Rubber plant that burned in a 1975 arson. Holds monuments to WWI, WWII, Korea, Vietnam, the USS Thresher and the Civil War, and hosts the city's carnivals, fairs and fireworks.",
+      "status": "open",
+      "photos": [
+        {
+          "src": "/photos/ct/shelton/derby-shelton-bridge-housatonic.jpg",
+          "thumb": "/photos/ct/shelton/derby-shelton-bridge-housatonic_thumb.jpg",
+          "title": "The Housatonic River near downtown Shelton",
+          "description": "The Housatonic River at the Derby-Shelton Bridge, near Shelton's Riverwalk and Veterans Memorial Park.",
+          "author": "Staib",
+          "license": "CC BY-SA 4.0",
+          "source_url": "https://commons.wikimedia.org/wiki/File:Derby-Shelton_Bridge_over_the_Housatonic,_Connecticut,_USA.jpg"
+        }
+      ]
+    },
+    {
+      "slug": "shelton-farmers-market",
+      "name": "Shelton Farmers Market",
+      "kind": "attraction",
+      "town": "Shelton",
+      "state": "Connecticut",
+      "county": "Fairfield County",
+      "address": "100 Canal Street, Shelton, CT 06484",
+      "official_url": "http://www.sheltonctfarmersmarket.com/",
+      "summary": "An open-air Saturday market across from Riverwalk Park, 9 a.m.-noon, every Saturday May through October. Vendors are inspected to confirm they are growers selling their own produce, not resellers.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "riverdale-diner-shelton",
+      "name": "Riverdale Diner",
+      "kind": "restaurant",
+      "town": "Shelton",
+      "state": "Connecticut",
+      "county": "Fairfield County",
+      "address": "521 River Road, Shelton, CT 06484",
+      "official_url": "https://www.riverdalediner.net/",
+      "summary": "Classic Connecticut diner serving breakfast anytime, half-pound never-frozen burgers and homemade cheesecake. Open daily 8 a.m.-8 p.m., closed Christmas. Phone (203) 924-4084.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "kickstart-cafe-shelton",
+      "name": "Kickstart Cafe",
+      "kind": "cafe",
+      "town": "Shelton",
+      "state": "Connecticut",
+      "county": "Fairfield County",
+      "address": "462 Howe Avenue, Shelton, CT 06484",
+      "official_url": "https://kickstartcafe.co/",
+      "summary": "Downtown coffee house with dedicated vegetarian and vegan prep areas, serving coffee, smoothies and sandwiches. Open 6 a.m.-3 p.m. every day.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "gioves-pizza-kitchen",
+      "name": "Giove's Pizza Kitchen",
+      "kind": "restaurant",
+      "town": "Shelton",
+      "state": "Connecticut",
+      "county": "Fairfield County",
+      "address": "494 Bridgeport Ave, Shelton, CT 06484",
+      "official_url": "https://www.giovespizzakitchen.com/",
+      "summary": "Pizzeria on the Bridgeport Avenue corridor working in traditional, Sicilian and Detroit-style pan pizza, plus a catering menu. Hours not published online — call (203) 225-6000.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "hilton-garden-inn-shelton",
+      "name": "Hilton Garden Inn Shelton",
+      "kind": "hotel",
+      "town": "Shelton",
+      "state": "Connecticut",
+      "county": "Fairfield County",
+      "address": "25 Old Stratford Road, Shelton, CT 06484",
+      "official_url": "https://www.hilton.com/en/hotels/hvnshgi-hilton-garden-inn-shelton/",
+      "summary": "A 142-room full-service hotel just off the Route 8 corporate corridor, with an indoor pool and hot tub, a 24-hour fitness center and the on-site Garden Grille Restaurant and Bar. Phone (203) 255-5900.",
+      "status": "open",
+      "photos": []
+    }
+  ],
+  "entries": [
+    {
+      "kind": "sight",
+      "name": "Indian Well State Park",
+      "place_slug": "indian-well-state-park",
+      "note": "A riverfront park with a waterfall and swimming beach."
+    },
+    {
+      "kind": "sight",
+      "name": "Jones Family Farms & Jones Winery",
+      "place_slug": "jones-family-farms-winery",
+      "note": "A pick-your-own farm and winery."
+    },
+    {
+      "kind": "sight",
+      "name": "Riverwalk / Veterans Memorial Park",
+      "place_slug": "riverwalk-veterans-memorial-park-shelton",
+      "note": "A riverside park on the former Sponge Rubber plant site."
+    },
+    {
+      "kind": "sight",
+      "name": "Shelton Farmers Market",
+      "place_slug": "shelton-farmers-market",
+      "note": "A Saturday market of verified growers."
+    },
+    {
+      "kind": "food",
+      "name": "Riverdale Diner",
+      "place_slug": "riverdale-diner-shelton",
+      "note": "A classic Connecticut diner."
+    },
+    {
+      "kind": "food",
+      "name": "Kickstart Cafe",
+      "place_slug": "kickstart-cafe-shelton",
+      "note": "Downtown coffee with vegan and vegetarian prep."
+    },
+    {
+      "kind": "food",
+      "name": "Giove's Pizza Kitchen",
+      "place_slug": "gioves-pizza-kitchen",
+      "note": "Three styles of pizza on Bridgeport Avenue."
+    },
+    {
+      "kind": "stay",
+      "name": "Hilton Garden Inn Shelton",
+      "place_slug": "hilton-garden-inn-shelton",
+      "note": "A 142-room full-service hotel."
+    }
+  ],
+  "links": [
+    {
+      "target": "guide:trumbull-ct-travel-guide",
+      "kind": "nearby",
+      "note": "Route 8 runs from Trumbull through Shelton on its way north."
+    },
+    {
+      "target": "guide:stratford-ct-travel-guide",
+      "kind": "nearby",
+      "note": "Route 8 briefly clips Stratford between Trumbull and Shelton, and Shelton was itself settled in 1639 as part of Stratford."
+    },
+    {
+      "target": "guide:monroe-ct-travel-guide",
+      "kind": "shared-history",
+      "note": "Monroe was incorporated from Huntington — today's Shelton — in 1823."
+    },
+    {
+      "target": "guide:bridgeport-ct-travel-guide",
+      "kind": "same-region",
+      "note": "Route 8 begins at I-95 in Bridgeport and runs north to Shelton's business parks."
+    }
+  ]
+}

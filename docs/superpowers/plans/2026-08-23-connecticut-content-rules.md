@@ -134,3 +134,72 @@ load-twice idempotency) then full `mix test`. Both green.
 Concrete, specific, warm but not breathless. Titles
 "{Town}, Connecticut: {hook}" where the hook names something real
 ("Whaling Money and a Submarine Base", not "A Coastal Gem").
+
+## Tiers (Connecticut completion onward)
+
+Every seed file declares `"tier"` inside its `guide` object: `"guide"` or
+`"town-page"`. Omitting it means `"guide"`.
+
+**The tier is decided by the research, after verdict filtering — never by the
+town's reputation beforehand.** Count the places that survive filtering:
+
+- **6 or more → `"guide"`.** The full format, exactly as specified above.
+- **Fewer than 6 → `"town-page"`.** The orientation format below.
+
+Record the surviving count and the resulting tier in your report so the
+reviewer can check the call rather than take it on trust. A town nobody
+expects much from can earn a full guide; a well-known town whose listings
+will not verify does not get padded into one. The validation gate is
+deliberately looser than this rule — it fails only clear mislabels (a
+town-page with 6+ places, or a guide with fewer than 4). Meeting the gate is
+not the same as making the right call; the per-wave reviewer checks the call
+itself against your recorded count.
+
+### The orientation format
+
+- **Intro**: 90-130 words, history-forward, from verified `history_facts` only.
+- **Sections**: a "Getting there" section, from the research's `getting_there`
+  data. Optional second section only where the research genuinely supports one.
+- **Entries and places**: every verified place, however few. If a town yields
+  ZERO verified places, ship `"places": []` and `"entries": []` — the template
+  omits the section rather than rendering it empty.
+- **FAQ**: 2-3 entries, one of which is "How do I get to {Town}?".
+- **Photos**: one if a free-licensed candidate exists for that town, otherwise
+  `"photos": []`. Do not reach for a loosely-related image.
+- **Links**: at least 3, and this is a floor the validation test enforces.
+
+### The floor — what does not ship
+
+An orientation page must clear BOTH:
+
+- an intro of at least 90 words of real, town-specific history, and
+- at least 3 outbound links to neighbouring covered towns.
+
+A town that cannot clear the floor is **omitted**, and the omission is recorded
+in your wave report with the reason. Never ship a stub to fill the roster.
+
+### Proximity language
+
+No drive times, ever — nothing in the research supports them. State proximity
+in checkable terms only: "borders Canterbury", "12 miles north of Norwich on
+Route 97". Distances and roads come from the research like any other fact.
+
+**This rule is now mechanically enforced.** Restating it in every wave's
+dispatch and checking for it in every review was proven insufficient — task
+55 found 58 drive-time occurrences across 28 already-committed files despite
+both. `test/ethos/seeds/connecticut_seed_data_test.exs` now asserts that no
+committed Connecticut seed file matches a ported set of drive-time/duration
+patterns (digit-minute forms, half/quarter/hour-plus-drive forms, spelled-out
+numbers five through ninety, and vague "short/quick/easy drive" phrasing);
+the assertion fails the build and names the offending file and text if the
+ban is violated. Do not write around the gate by phrasing a duration it
+happens not to catch — the ban is on the underlying claim, not the specific
+wording the regex looks for.
+
+A drive-time claim can hide in any of **six places**, and across several
+waves at least one of the six survived a pass that fixed the others: the
+**intro**, a **section body**, an **FAQ answer**, a **place summary**, a
+**photo caption/description**, and a **link note**. When editing proximity
+language, check all six for the town(s) involved, not just the "Getting
+there" section — the mechanical gate checks every string in the file, and a
+human review pass should too.

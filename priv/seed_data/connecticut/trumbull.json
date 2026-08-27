@@ -1,0 +1,341 @@
+{
+  "guide": {
+    "slug": "trumbull-ct-travel-guide",
+    "title": "Trumbull, Connecticut: A Vanished Amusement Park and a Tungsten Mine",
+    "destination": "Trumbull, Connecticut",
+    "state": "Connecticut",
+    "county": "Fairfield County",
+    "intro": "Trumbull was settled in 1639 as part of Stratford, known then as North Stratford, and was incorporated as its own town in 1797, taking its name from Jonathan Trumbull, Connecticut's Revolutionary War governor. Nero Hawley, an enslaved man in North Stratford, enlisted in the Continental Army in 1777, wintered at Valley Forge, was freed in 1782, and became a Trumbull brickmaker; he is buried in Riverside Cemetery and honored on the state's Freedom Trail. Parlor Rock Park, a 13-acre amusement ground reachable only by train, drew up to 3,000 visitors a day between 1878 and 1908, when it was dismantled. In the Long Hill section, Yale professor Benjamin Silliman identified tungsten around 1818, and the Hubbard Tungsten Mine later worked the site into the 20th century. Trumbull today comprises five villages: Nichols, Long Hill, Tashua, Daniels Farm and Trumbull Center.",
+    "sections": [
+      {
+        "heading": "A vanished amusement park and a tungsten mine",
+        "body": "Parlor Rock Park, bought by the Housatonic Railroad Company in 1877 and opened in 1878, offered a dance hall, a carousel, a roller-skating rink, rowboats and, from 1888, a toboggan slide; it was the first place in Trumbull with electricity. Only the namesake rock and a fountain's brick foundation survive today, on land the Pequonnock River Trail now crosses. The Old Mine Park Archeological Site, added to the National Register in 1990, preserves the Hubbard Tungsten Mine, worked under the Rare Minerals Company from 1898 and later the American Tungsten Mining and Milling Company until a 1916 fire, with a final wartime run in 1942-46."
+      },
+      {
+        "heading": "Getting there",
+        "body": "Trumbull is reached by the Route 8 and Route 25 expressways, the Merritt Parkway (Exits 49 and 50) and Route 111. There is no train station in Trumbull itself; the nearest Metro-North New Haven Line stops are Bridgeport (about 4.6 miles), Stratford (about 4.9 miles) and Fairfield-Black Rock (about 5.7 miles). Bridgeport station also connects to Amtrak Northeast Regional and Vermonter service and the Waterbury Branch, though Waterbury Branch trains are replaced by buses from July 20, 2026 through May 31, 2027 for station reconstruction. Greater Bridgeport Transit's Route 8 bus links downtown Bridgeport to the Westfield Trumbull mall via Main Street roughly every 20 minutes on weekdays and Saturdays (shorter Sunday hours)."
+      }
+    ],
+    "faq": [
+      {
+        "question": "How do I get to Trumbull?",
+        "answer": "By car on Route 8, Route 25, the Merritt Parkway (Exits 49-50) or Route 111. There is no train station in Trumbull; the nearest is Bridgeport, about 4.6 miles away on the Metro-North New Haven Line."
+      },
+      {
+        "question": "Is there a bus in Trumbull?",
+        "answer": "Greater Bridgeport Transit's Route 8 links downtown Bridgeport to the Westfield Trumbull mall via Main Street, roughly every 20 minutes weekdays and Saturdays."
+      },
+      {
+        "question": "Who was Nero Hawley?",
+        "answer": "An enslaved man in North Stratford (Trumbull) who won his freedom serving in the Continental Army, wintering at Valley Forge in 1777-78. He later became a Trumbull brickmaker; his grave at Riverside Cemetery is a Connecticut Freedom Trail site."
+      },
+      {
+        "question": "Is there a hotel in Trumbull?",
+        "answer": "Yes — the Marriott off the Merritt Parkway at 180 Hawley Lane, Trumbull's only hotel, with about 323 rooms, indoor and outdoor pools and an on-site restaurant."
+      }
+    ],
+    "photos": [
+      {
+        "src": "/photos/ct/trumbull/long-hill-sign-trumbull.jpg",
+        "thumb": "/photos/ct/trumbull/long-hill-sign-trumbull_thumb.jpg",
+        "title": "Long Hill village sign",
+        "description": "The Long Hill village sign in Trumbull, one of the town's five historic villages.",
+        "author": "Tomticker5",
+        "license": "CC BY-SA 3.0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Long_Hill_sign_Trumbull,_Connecticut.JPG"
+      },
+      {
+        "src": "/photos/ct/trumbull/river-at-old-mine-park-trumbull.jpg",
+        "thumb": "/photos/ct/trumbull/river-at-old-mine-park-trumbull_thumb.jpg",
+        "title": "The Pequonnock River at Old Mine Park",
+        "description": "The Pequonnock River inside Old Mine Park, part of the same river corridor as Pequonnock River Valley Park.",
+        "author": "Karl Thomas Moore",
+        "license": "CC BY-SA 4.0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:River_at_Old_Mine_Park.jpg"
+      },
+      {
+        "src": "/photos/ct/trumbull/old-mine-park-trumbull.jpg",
+        "thumb": "/photos/ct/trumbull/old-mine-park-trumbull_thumb.jpg",
+        "title": "Old Mine Park",
+        "description": "Old Mine Park, a National Register site preserving the former Hubbard Tungsten Mine workings in Trumbull.",
+        "author": "Karl Thomas Moore",
+        "license": "CC BY-SA 4.0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Old_Mine_Park_V.jpg"
+      }
+    ]
+  },
+  "places": [
+    {
+      "slug": "pequonnock-river-valley-park",
+      "name": "Pequonnock River Valley Park",
+      "kind": "park",
+      "town": "Trumbull",
+      "state": "Connecticut",
+      "county": "Fairfield County",
+      "address": "Trailhead parking on Tait Road and off Whitney Avenue, Trumbull, CT 06611",
+      "official_url": "https://www.trumbull-ct.gov/862/Pequonnock-River-Valley-Park",
+      "summary": "Miles of hiking trails in a deep valley along a former reservoir river, with a flat 2.5-mile former railroad bed plus steeper ridge trails on both sides. The rail-trail corridor runs from Bridgeport to Newtown, passing the site of the vanished Parlor Rock amusement park. No parking sticker required.",
+      "status": "open",
+      "photos": [
+        {
+          "src": "/photos/ct/trumbull/river-at-old-mine-park-trumbull.jpg",
+          "thumb": "/photos/ct/trumbull/river-at-old-mine-park-trumbull_thumb.jpg",
+          "title": "The Pequonnock River at Old Mine Park",
+          "description": "The Pequonnock River inside Old Mine Park, part of the same river corridor as Pequonnock River Valley Park.",
+          "author": "Karl Thomas Moore",
+          "license": "CC BY-SA 4.0",
+          "source_url": "https://commons.wikimedia.org/wiki/File:River_at_Old_Mine_Park.jpg"
+        }
+      ]
+    },
+    {
+      "slug": "old-mine-park-trumbull",
+      "name": "Old Mine Park",
+      "kind": "historic-site",
+      "town": "Trumbull",
+      "state": "Connecticut",
+      "county": "Fairfield County",
+      "address": "121 Old Mine Road, Trumbull, CT 06611",
+      "official_url": "https://www.trumbull-ct.gov/Facilities/Facility/Details/Old-Mine-Park-16",
+      "summary": "A 72.1-acre National Register site preserving the workings of the Hubbard Tungsten Mine, worked under two companies from 1898 until a 1916 fire, with a final run in 1942-46. Hiking trails, a walking bridge over the Pequonnock River, two pavilions and picnic areas. A valid park sticker is required to park.",
+      "status": "open",
+      "photos": [
+        {
+          "src": "/photos/ct/trumbull/old-mine-park-trumbull.jpg",
+          "thumb": "/photos/ct/trumbull/old-mine-park-trumbull_thumb.jpg",
+          "title": "Old Mine Park",
+          "description": "Old Mine Park, a National Register site preserving the former Hubbard Tungsten Mine workings in Trumbull.",
+          "author": "Karl Thomas Moore",
+          "license": "CC BY-SA 4.0",
+          "source_url": "https://commons.wikimedia.org/wiki/File:Old_Mine_Park_V.jpg"
+        }
+      ]
+    },
+    {
+      "slug": "trumbull-historical-society-woods-estate",
+      "name": "Trumbull Historical Society Museum at the Woods Estate",
+      "kind": "museum",
+      "town": "Trumbull",
+      "state": "Connecticut",
+      "county": "Fairfield County",
+      "address": "1856 Huntington Turnpike, Trumbull, CT 06611",
+      "official_url": "https://trumbullhistory.org/",
+      "summary": "A 501(c)(3) society, active since the 1960s, keeping a museum, photograph collection and local-history archive in the historic Woods Estate next to Abraham Nichols Park. Runs a full calendar of talks, walks and open houses.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "nero-hawley-gravesite-riverside-cemetery",
+      "name": "Nero Hawley Gravesite, Riverside Cemetery",
+      "kind": "historic-site",
+      "town": "Trumbull",
+      "state": "Connecticut",
+      "county": "Fairfield County",
+      "address": "Daniels Farm Road (off Route 127, about one mile from Merritt Parkway Exits 49 & 50), Trumbull, CT 06611",
+      "official_url": "https://ctfreedomtrail.org/connecticut-freedom-trail-sites/nero-hawley-gravesite/",
+      "summary": "An official Connecticut Freedom Trail site marking the grave of Nero Hawley (1742-1817), who won his freedom serving in the Continental Army and became a Trumbull brickmaker. The gravestone platform is inscribed with the location of the clay pits where he made bricks.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "tashua-knolls-tashua-glen-golf",
+      "name": "Tashua Knolls & Tashua Glen Golf Courses",
+      "kind": "attraction",
+      "town": "Trumbull",
+      "state": "Connecticut",
+      "county": "Fairfield County",
+      "address": "40 Tashua Knolls Lane, Trumbull, CT 06611",
+      "official_url": "https://www.tashuaknolls.com/",
+      "summary": "Town-owned daily-fee golf facility with two public courses, plus an on-site restaurant and banquet operation. Tashua Knolls opened in 1976 and marked its 50th anniversary in 2026.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "twin-brooks-park-trumbull",
+      "name": "Twin Brooks Park",
+      "kind": "park",
+      "town": "Trumbull",
+      "state": "Connecticut",
+      "county": "Fairfield County",
+      "address": "1 Twin Brooks Drive, Trumbull, CT 06611",
+      "official_url": "https://www.trumbull-ct.gov/819/Parks",
+      "summary": "One of Trumbull's main town parks, hosting the weekly Trumbull Farmer's Market on Thursday afternoons, 4-7 p.m. All Trumbull parks are open 9 a.m. to dusk; a valid park sticker is required for vehicles.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "antonios-kitchen-bar-trumbull",
+      "name": "Antonio's Kitchen & Bar",
+      "kind": "restaurant",
+      "town": "Trumbull",
+      "state": "Connecticut",
+      "county": "Fairfield County",
+      "address": "921 White Plains Road, Trumbull, CT 06611",
+      "official_url": "https://antoniostrumbull.com/",
+      "summary": "Italian fine dining with house-made pasta, chicken scarpariello and whole branzino. Phone (203) 220-8301.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "old-towne-restaurant-trumbull",
+      "name": "Old Towne Restaurant",
+      "kind": "restaurant",
+      "town": "Trumbull",
+      "state": "Connecticut",
+      "county": "Fairfield County",
+      "address": "60 Quality Street, Trumbull, CT 06611",
+      "official_url": "https://www.oldtownerestaurant.net/",
+      "summary": "Family-owned Italian-American kitchen with more than 30 years in business, offering dine-in, carryout, delivery and catering consultations.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "fryborg-trumbull",
+      "name": "Fryborg",
+      "kind": "restaurant",
+      "town": "Trumbull",
+      "state": "Connecticut",
+      "county": "Fairfield County",
+      "address": "10 Broadway, Trumbull, CT 06611",
+      "official_url": "https://www.fryborg.com/",
+      "summary": "Belgian-style hand-cut, double-fried fries with a long list of dipping sauces, plus burgers and hot dogs; grew out of a food truck that still caters across the region. Open seven days. Phone (203) 880-9250.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "sunny-daes-trumbull",
+      "name": "Sunny Daes of Trumbull",
+      "kind": "cafe",
+      "town": "Trumbull",
+      "state": "Connecticut",
+      "county": "Fairfield County",
+      "address": "900 White Plains Road #4, Trumbull, CT 06611",
+      "official_url": "https://sunnydaesicecream.com/",
+      "summary": "The Trumbull branch of a small family-owned Fairfield County ice cream chain, making its own ice cream and gelato alongside a WichDay breakfast-and-lunch counter. Open daily 11:30 a.m.-10 p.m. Phone (203) 459-2663.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "natural-kitchen-trumbull",
+      "name": "Natural Kitchen",
+      "kind": "restaurant",
+      "town": "Trumbull",
+      "state": "Connecticut",
+      "county": "Fairfield County",
+      "address": "30 Quality Street, Trumbull, CT 06611",
+      "official_url": "https://www.naturalkitchentrumbull.com/",
+      "summary": "Casual Trumbull Center spot open daily 11 a.m.-9 p.m., with online ordering. Phone (203) 880-9085.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "trumbull-marriott-merritt-parkway",
+      "name": "Trumbull Marriott (Merritt Parkway)",
+      "kind": "hotel",
+      "town": "Trumbull",
+      "state": "Connecticut",
+      "county": "Fairfield County",
+      "address": "180 Hawley Lane, Trumbull, CT 06611",
+      "official_url": "https://www.marriott.com/en-us/hotels/bdrct-trumbull-marriott-shelton/overview/",
+      "summary": "Trumbull's only hotel, a full-service property off the Merritt Parkway with about 323 rooms, indoor and outdoor pools, a hot tub, a health club and an on-site restaurant and lounge — confirm current dining directly with the property.",
+      "status": "open",
+      "photos": []
+    }
+  ],
+  "entries": [
+    {
+      "kind": "sight",
+      "name": "Pequonnock River Valley Park",
+      "place_slug": "pequonnock-river-valley-park",
+      "note": "A rail-trail corridor through a river valley."
+    },
+    {
+      "kind": "sight",
+      "name": "Old Mine Park",
+      "place_slug": "old-mine-park-trumbull",
+      "note": "The former Hubbard Tungsten Mine workings."
+    },
+    {
+      "kind": "sight",
+      "name": "Trumbull Historical Society Museum at the Woods Estate",
+      "place_slug": "trumbull-historical-society-woods-estate",
+      "note": "Local history in a historic estate."
+    },
+    {
+      "kind": "sight",
+      "name": "Nero Hawley Gravesite, Riverside Cemetery",
+      "place_slug": "nero-hawley-gravesite-riverside-cemetery",
+      "note": "A Connecticut Freedom Trail site."
+    },
+    {
+      "kind": "sight",
+      "name": "Tashua Knolls & Tashua Glen Golf Courses",
+      "place_slug": "tashua-knolls-tashua-glen-golf",
+      "note": "Town-owned public golf, 50 years in 2026."
+    },
+    {
+      "kind": "sight",
+      "name": "Twin Brooks Park",
+      "place_slug": "twin-brooks-park-trumbull",
+      "note": "Home of the weekly Trumbull Farmer's Market."
+    },
+    {
+      "kind": "food",
+      "name": "Antonio's Kitchen & Bar",
+      "place_slug": "antonios-kitchen-bar-trumbull",
+      "note": "Italian fine dining."
+    },
+    {
+      "kind": "food",
+      "name": "Old Towne Restaurant",
+      "place_slug": "old-towne-restaurant-trumbull",
+      "note": "Family-owned Italian-American, 30-plus years."
+    },
+    {
+      "kind": "food",
+      "name": "Fryborg",
+      "place_slug": "fryborg-trumbull",
+      "note": "Belgian-style double-fried fries."
+    },
+    {
+      "kind": "food",
+      "name": "Sunny Daes of Trumbull",
+      "place_slug": "sunny-daes-trumbull",
+      "note": "House-made ice cream and gelato."
+    },
+    {
+      "kind": "food",
+      "name": "Natural Kitchen",
+      "place_slug": "natural-kitchen-trumbull",
+      "note": "A casual Trumbull Center spot."
+    },
+    {
+      "kind": "stay",
+      "name": "Trumbull Marriott (Merritt Parkway)",
+      "place_slug": "trumbull-marriott-merritt-parkway",
+      "note": "Trumbull's only hotel."
+    }
+  ],
+  "links": [
+    {
+      "target": "guide:bridgeport-ct-travel-guide",
+      "kind": "nearby",
+      "note": "Route 8 begins at I-95 in Bridgeport and has an interchange with the Merritt Parkway in Trumbull."
+    },
+    {
+      "target": "guide:monroe-ct-travel-guide",
+      "kind": "nearby",
+      "note": "Route 111 runs from the Merritt Parkway in Trumbull to Route 34 in Monroe's Stevenson section."
+    },
+    {
+      "target": "guide:stratford-ct-travel-guide",
+      "kind": "shared-history",
+      "note": "Trumbull was settled in 1639 as part of Stratford, then known as North Stratford."
+    },
+    {
+      "target": "guide:shelton-ct-travel-guide",
+      "kind": "same-region",
+      "note": "Route 8 runs from Trumbull, briefly through Stratford, to Shelton."
+    }
+  ]
+}

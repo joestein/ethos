@@ -1,0 +1,211 @@
+{
+  "guide": {
+    "slug": "beacon-falls-ct-travel-guide",
+    "title": "Beacon Falls, Connecticut: Matches, Boots and a Signal Hill",
+    "destination": "Beacon Falls, Connecticut",
+    "state": "Connecticut",
+    "county": "New Haven County",
+    "intro": "Before English settlement the area, called Nyumps, was a Native American camping ground where colonists from Derby arrived in 1678. In June 1871 the General Assembly incorporated Beacon Falls out of pieces of four neighboring towns — Bethany, Oxford, Naugatuck and Seymour — making it one of Connecticut's smallest towns by land area. The name comes from Beacon Hill, where colonists once lit signal fires to warn of hostile movements, and a small waterfall descending the hill. Thomas Sanford manufactured the first friction matches here in 1834, later selling his formula for $10 to the firm that became the Diamond Match Company. The Beacon Falls Rubber Shoe Company, founded in 1898 by George and Tracy Lewis, grew from fewer than 150 pairs of boots in 1899 to 5.5 million pairs by 1920, driving the town's population from 623 to about 1,600 by 1922 on the strength of European immigrant labor.",
+    "sections": [
+      {
+        "heading": "Rubber boots, wool shawls and a river town",
+        "body": "United States Rubber bought the Beacon Falls Rubber Shoe Company plant in 1921, moved manufacturing to Naugatuck in 1930, and kept corporate offices in town until the mid-1950s. Decades earlier, the Home Woolen Company had bought a vacant rubber plant in 1863 and turned out roughly 13,000 shawls a month after an 1867 expansion, before production halted in December 1876; the complex was converted to apartments in 1986 as Beacon Mill Village, now listed on the National Register of Historic Places. The Naugatuck River bisects the town's roughly 9.8 square miles, and Beacon Falls sits within the Eastern Block of Naugatuck State Forest, whose blue-blazed Naugatuck Trail runs hiking-only through laurel groves and open balds along Route 8."
+      },
+      {
+        "heading": "Getting there",
+        "body": "Nearly everyone arrives by car on Route 8, the Naugatuck Valley expressway that runs through Beacon Falls between Ansonia and Naugatuck; I-84 is roughly eight miles north at Waterbury's Mixmaster interchange, and Route 8 continues south to I-95 in Bridgeport. Route 42 runs east-west through town, connecting Beacon Falls to Oxford, Bethany, Prospect and Cheshire — from Route 67 in Oxford to Route 10 in Cheshire. Beacon Falls has a Metro-North Waterbury Branch station at 1 Railroad Avenue, but buses replace all rail service on the branch from July 20, 2026 through May 31, 2027 for station reconstruction, with a new platform expected in September 2027. There is no Amtrak, Shore Line East or CTrail Hartford Line service in Beacon Falls."
+      }
+    ],
+    "faq": [
+      {
+        "question": "How do I get to Beacon Falls?",
+        "answer": "By car on Route 8, the Naugatuck Valley expressway. Beacon Falls has a Metro-North Waterbury Branch station at 1 Railroad Avenue, but buses currently replace all rail service on the branch from July 20, 2026 through May 31, 2027 while the station is rebuilt."
+      },
+      {
+        "question": "What towns did Beacon Falls come from?",
+        "answer": "The General Assembly incorporated Beacon Falls in June 1871 out of pieces of four neighboring towns — Bethany, Oxford, Naugatuck and Seymour."
+      },
+      {
+        "question": "Where does the name Beacon Falls come from?",
+        "answer": "From Beacon Hill, a lookout where colonists lit signal fires to warn of hostile movements, and a small waterfall descending the hill."
+      },
+      {
+        "question": "Is there a hotel in Beacon Falls?",
+        "answer": "No hotel, inn, motel or B&B could be verified inside Beacon Falls. The nearest verified lodging is the Heritage Hotel & Conference Center in Southbury."
+      },
+      {
+        "question": "Can I hike the Naugatuck Trail from Beacon Falls?",
+        "answer": "Yes. The blue-blazed, hiking-only Naugatuck Trail runs through the Eastern Block of Naugatuck State Forest along Route 8, with laurel groves, seasonal wildflower balds and its steepest elevation change near Egypt Brook."
+      }
+    ],
+    "photos": [
+      {
+        "src": "/photos/ct/beacon-falls/depot-street-bridge-beacon-falls.jpg",
+        "thumb": "/photos/ct/beacon-falls/depot-street-bridge-beacon-falls_thumb.jpg",
+        "title": "Depot Street Bridge",
+        "description": "The Depot Street Bridge crosses the Naugatuck River in the center of Beacon Falls.",
+        "author": "Magicpiano",
+        "license": "CC BY-SA 4.0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:BeaconFalls_DepotStreetBridge.jpg"
+      },
+      {
+        "src": "/photos/ct/beacon-falls/naugatuck-trail-route-8-border-beacon-falls.jpg",
+        "thumb": "/photos/ct/beacon-falls/naugatuck-trail-route-8-border-beacon-falls_thumb.jpg",
+        "title": "Naugatuck Trail at the Route 8 border",
+        "description": "The blue-blazed Naugatuck Trail crossing the Eastern Block of Naugatuck State Forest at the Route 8 border in Beacon Falls.",
+        "author": "Morrowlong",
+        "license": "CC BY-SA 3.0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:NaugatuckTrailNaugatuckStateForestBeaconFallsCT-CTRoute8Border.jpg"
+      },
+      {
+        "src": "/photos/ct/beacon-falls/rimmon-school-house.jpg",
+        "thumb": "/photos/ct/beacon-falls/rimmon-school-house_thumb.jpg",
+        "title": "Rimmon School House",
+        "description": "The historic one-room Rimmon School House in Beacon Falls.",
+        "author": "Marty Aligata",
+        "license": "CC BY-SA 4.0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Rimmon_School_House,_Beacon_Falls,_CT_(2012).jpg"
+      }
+    ]
+  },
+  "places": [
+    {
+      "slug": "matthies-memorial-park",
+      "name": "Matthies Memorial Park",
+      "kind": "park",
+      "town": "Beacon Falls",
+      "state": "Connecticut",
+      "county": "New Haven County",
+      "address": "Beacon Falls, CT 06403 (near Carrington Pond)",
+      "official_url": "https://www.beaconfalls-ct.org/376/Beacon-Falls---Parks-and-Recreation-Faci",
+      "summary": "A 300-acre town park with eight wooded trails, kayaking and canoeing on Carrington Pond, a playground, wildlife viewing and a rentable picnic pavilion.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "tobys-pond",
+      "name": "Toby's Pond",
+      "kind": "park",
+      "town": "Beacon Falls",
+      "state": "Connecticut",
+      "county": "New Haven County",
+      "address": "Off Pinesbridge Road at the corner of Old Pinesbridge Road and Lopus Road, Beacon Falls, CT 06403",
+      "official_url": "https://www.beaconfalls-ct.org/376/Beacon-Falls---Parks-and-Recreation-Faci",
+      "summary": "A quiet town-owned pond with fishing, a two-mile scenic trail, kayaking and canoeing, and a pavilion, near the Naugatuck River.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "lantern-ridge-open-space",
+      "name": "Lantern Ridge Open Space",
+      "kind": "park",
+      "town": "Beacon Falls",
+      "state": "Connecticut",
+      "county": "New Haven County",
+      "address": "Off Skokorat Road near Lantern Ridge Road, Beacon Falls, CT 06403",
+      "official_url": "https://www.beaconfalls-ct.org/358/Lantern-Ridge",
+      "summary": "Ninety acres of town open space with walking trails, dog-friendly for hiking, maintained by the town's Conservation Commission.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "pent-road-recreation-center",
+      "name": "Pent Road Recreation Center",
+      "kind": "park",
+      "town": "Beacon Falls",
+      "state": "Connecticut",
+      "county": "New Haven County",
+      "address": "Pent Road, Beacon Falls, CT 06403",
+      "official_url": "https://www.beaconfalls-ct.org/376/Beacon-Falls---Parks-and-Recreation-Faci",
+      "summary": "The town's main active-recreation complex: ball fields, pickleball, tennis and basketball courts, playgrounds, a mile-long walking track and a rentable pavilion, home to the Robert A. Cole Baseball League and Woodland Valley Softball League.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "riverbend-park-beacon-falls",
+      "name": "Riverbend Park",
+      "kind": "park",
+      "town": "Beacon Falls",
+      "state": "Connecticut",
+      "county": "New Haven County",
+      "address": "Off Nancy Avenue, Beacon Falls, CT 06403",
+      "official_url": "https://www.beaconfalls-ct.org/376/Beacon-Falls---Parks-and-Recreation-Faci",
+      "summary": "A Naugatuck River access point for kayaking, canoeing and fishing; the town recommends this stretch of river for experienced paddlers only.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "beacon-falls-tavern",
+      "name": "Beacon Falls Tavern",
+      "kind": "restaurant",
+      "town": "Beacon Falls",
+      "state": "Connecticut",
+      "county": "New Haven County",
+      "address": "57 South Main Street, Beacon Falls, CT 06403",
+      "official_url": "https://www.beaconfallstavern.com/",
+      "summary": "A neighborhood tavern with a full kitchen — daily specials, a recurring Rib Night, and games on the TVs. Kitchen hours run Tue 3-9 p.m., Wed-Thu 11:30 a.m.-9 p.m., Fri 11:30 a.m.-10 p.m., Sat 11:30 a.m.-9 p.m., Sun noon-8 p.m. Phone (203) 714-7542.",
+      "status": "open",
+      "photos": []
+    }
+  ],
+  "entries": [
+    {
+      "kind": "sight",
+      "name": "Matthies Memorial Park",
+      "place_slug": "matthies-memorial-park",
+      "note": "300 acres of trails and paddling on Carrington Pond."
+    },
+    {
+      "kind": "sight",
+      "name": "Toby's Pond",
+      "place_slug": "tobys-pond",
+      "note": "A quiet pond with fishing and a two-mile scenic trail."
+    },
+    {
+      "kind": "sight",
+      "name": "Lantern Ridge Open Space",
+      "place_slug": "lantern-ridge-open-space",
+      "note": "Ninety acres of dog-friendly walking trails."
+    },
+    {
+      "kind": "sight",
+      "name": "Pent Road Recreation Center",
+      "place_slug": "pent-road-recreation-center",
+      "note": "The town's main ball fields, courts and walking track."
+    },
+    {
+      "kind": "sight",
+      "name": "Riverbend Park",
+      "place_slug": "riverbend-park-beacon-falls",
+      "note": "Naugatuck River access for kayaking and fishing."
+    },
+    {
+      "kind": "food",
+      "name": "Beacon Falls Tavern",
+      "place_slug": "beacon-falls-tavern",
+      "note": "A neighborhood tavern with daily specials and Rib Night."
+    }
+  ],
+  "links": [
+    {
+      "target": "guide:bethany-ct-travel-guide",
+      "kind": "nearby",
+      "note": "Beacon Falls was carved from parts of four neighboring towns in 1871, Bethany among them."
+    },
+    {
+      "target": "guide:naugatuck-ct-travel-guide",
+      "kind": "nearby",
+      "note": "Beacon Falls was carved from parts of four neighboring towns in 1871, Naugatuck among them."
+    },
+    {
+      "target": "guide:oxford-ct-travel-guide",
+      "kind": "nearby",
+      "note": "Beacon Falls was carved from parts of four neighboring towns in 1871, Oxford among them."
+    },
+    {
+      "target": "guide:seymour-ct-travel-guide",
+      "kind": "nearby",
+      "note": "Beacon Falls was carved from parts of four neighboring towns in 1871, Seymour among them."
+    }
+  ]
+}

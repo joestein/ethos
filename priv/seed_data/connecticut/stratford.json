@@ -1,0 +1,270 @@
+{
+  "guide": {
+    "slug": "stratford-ct-travel-guide",
+    "title": "Stratford, Connecticut: Birthplace of the American Helicopter",
+    "destination": "Stratford, Connecticut",
+    "state": "Connecticut",
+    "county": "Fairfield County",
+    "intro": "Stratford was settled in 1639 by Rev. Adam Blakeman and William Beardsley with a group of families, and by April 13, 1643 the growing settlement was known as Stratford, honoring Stratford-upon-Avon; the Paugussett had called the place Cupheag. Stratford's original colonial land grant was far larger than today's town, including territory that later became Trumbull, Shelton, Monroe and part of Bridgeport. Oystering and shipbuilding were the early industries, later giving way to manufacturing. Stratford is recognized as the birthplace of the American helicopter industry: Igor Sikorsky's VS-300, the world's first practical helicopter, flew here on September 14, 1939, and every Marine One presidential helicopter has been built in Stratford since 1957. Stratford's railroad station opened December 25, 1848; the same depot building now also houses the National Helicopter Museum.",
+    "sections": [
+      {
+        "heading": "Birthplace of the American helicopter",
+        "body": "Igor Sikorsky's tethered September 14, 1939 flight of the VS-300 in Stratford is credited as the world's first practical helicopter; the aircraft's first free flight followed on May 13, 1940. Every Marine One presidential helicopter has been manufactured in Stratford since 1957, continuing Sikorsky's legacy. The American Shakespeare Theatre, an 1,100-seat house that opened in 1955 and drew major stage actors, ceased operations in the mid-1980s and burned down in 2019 — it no longer hosts performances. Two Roads Brewing Company, one of Connecticut's largest craft breweries, anchors a multi-venue campus on Stratford Avenue that also includes a separate experimental brewhouse and a food hall."
+      },
+      {
+        "heading": "Getting there",
+        "body": "Stratford sits on Long Island Sound between Bridgeport and Milford, reached by car on I-95, US Route 1 or the Merritt Parkway. Metro-North's New Haven Line stops at Stratford station, 2480 Main Street, with 294 parking spaces; adjacent stations are Bridgeport toward Grand Central and Milford toward New Haven. Shore Line East, as of 2026, runs only between New Haven and New London and does not stop in Stratford. Amtrak does not stop at Stratford either — the nearest Amtrak service is at Bridgeport and New Haven on the Northeast Corridor."
+      }
+    ],
+    "faq": [
+      {
+        "question": "How do I get to Stratford?",
+        "answer": "By car on I-95, US Route 1 or the Merritt Parkway, or by train — Metro-North's New Haven Line stops at Stratford station, 2480 Main Street, between Bridgeport and Milford."
+      },
+      {
+        "question": "Is there Amtrak or Shore Line East service in Stratford?",
+        "answer": "No. Amtrak does not stop in Stratford (nearest is Bridgeport or New Haven), and Shore Line East runs only between New Haven and New London as of 2026."
+      },
+      {
+        "question": "What is the National Helicopter Museum?",
+        "answer": "A free museum inside Stratford's historic 1848 railroad depot, with a model of the town's 1939 first helicopter flight and an actual Sikorsky S-76 cockpit. Open Wednesday-Sunday, 1-4 p.m., Memorial Day through mid-October."
+      },
+      {
+        "question": "Is there a hotel in Stratford?",
+        "answer": "No lodging inside Stratford could be verified. The nearest confirmed option is the Delamar Southport, about a dozen miles west."
+      }
+    ],
+    "photos": [
+      {
+        "src": "/photos/ct/stratford/stratford-point-lighthouse.jpg",
+        "thumb": "/photos/ct/stratford/stratford-point-lighthouse_thumb.jpg",
+        "title": "Stratford Point Lighthouse",
+        "description": "Stratford Point Lighthouse, at the mouth of the Housatonic River.",
+        "author": "U.S. Coast Guard — Petty Officer 2nd Class Sabrina Laberdesque",
+        "license": "Public domain",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Historic_Stratford_Point_Lighthouse_-_150808-G-KU792-571.jpg"
+      },
+      {
+        "src": "/photos/ct/stratford/boothe-memorial-clocktower.jpg",
+        "thumb": "/photos/ct/stratford/boothe-memorial-clocktower_thumb.jpg",
+        "title": "Boothe Memorial Park Clock Tower",
+        "description": "The Clock Tower Museum at Boothe Memorial Park, one of the park's eccentric collection of buildings.",
+        "author": "Ieateggseverymorning",
+        "license": "CC BY-SA 3.0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Boothe_Memorial_Clocktower.JPG"
+      },
+      {
+        "src": "/photos/ct/stratford/captain-david-judson-house-stratford.jpg",
+        "thumb": "/photos/ct/stratford/captain-david-judson-house-stratford_thumb.jpg",
+        "title": "Captain David Judson House",
+        "description": "The Captain David Judson House, a colonial-era house museum run by the Stratford Historical Society.",
+        "author": "Magicpiano",
+        "license": "CC BY-SA 4.0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:StratfordCT_JudsonHouse.jpg"
+      }
+    ]
+  },
+  "places": [
+    {
+      "slug": "boothe-memorial-park-museum",
+      "name": "Boothe Memorial Park & Museum",
+      "kind": "historic-site",
+      "town": "Stratford",
+      "state": "Connecticut",
+      "county": "Fairfield County",
+      "address": "5774 Main St, Stratford, CT 06614",
+      "official_url": "https://boothememorialpark.com/",
+      "summary": "A 32-acre former Boothe family homestead (1663-1949) with an eccentric collection of historic structures, rose and wedding gardens, and farm-equipment and trolley displays. Free admission. Grounds open daily 9 a.m.-5 p.m.; museum buildings open June 1-October 1, Tue-Fri 11 a.m.-1 p.m., Sun 1-4 p.m.",
+      "status": "open",
+      "photos": [
+        {
+          "src": "/photos/ct/stratford/boothe-memorial-clocktower.jpg",
+          "thumb": "/photos/ct/stratford/boothe-memorial-clocktower_thumb.jpg",
+          "title": "Boothe Memorial Park Clock Tower",
+          "description": "The Clock Tower Museum at Boothe Memorial Park, one of the park's eccentric collection of buildings.",
+          "author": "Ieateggseverymorning",
+          "license": "CC BY-SA 3.0",
+          "source_url": "https://commons.wikimedia.org/wiki/File:Boothe_Memorial_Clocktower.JPG"
+        }
+      ]
+    },
+    {
+      "slug": "national-helicopter-museum",
+      "name": "National Helicopter Museum",
+      "kind": "museum",
+      "town": "Stratford",
+      "state": "Connecticut",
+      "county": "Fairfield County",
+      "address": "2480 Main Street, Stratford, CT 06615",
+      "official_url": "https://nationalhelicoptermuseum.org/",
+      "summary": "Free museum inside Stratford's historic 1848 railroad depot, with a model of the town's 1939 first helicopter flight and a Sikorsky S-76 cockpit. Open Wednesday-Sunday, 1-4 p.m., Memorial Day through mid-October.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "stratford-historical-society-judson-house",
+      "name": "Stratford Historical Society — Captain David Judson House & Catharine B. Mitchell Museum",
+      "kind": "historic-site",
+      "town": "Stratford",
+      "state": "Connecticut",
+      "county": "Fairfield County",
+      "address": "967 Academy Hill, Stratford, CT 06615",
+      "official_url": "https://www.stratfordhistoricalsociety.org/",
+      "summary": "Interprets Stratford's colonial past through the Captain David Judson House, the Catharine B. Mitchell Museum and the Beach Family Carriage House. Open Tuesdays and Fridays, 10 a.m.-2 p.m., or by appointment. Phone (203) 378-0630.",
+      "status": "open",
+      "photos": [
+        {
+          "src": "/photos/ct/stratford/captain-david-judson-house-stratford.jpg",
+          "thumb": "/photos/ct/stratford/captain-david-judson-house-stratford_thumb.jpg",
+          "title": "Captain David Judson House",
+          "description": "The Captain David Judson House, a colonial-era house museum run by the Stratford Historical Society.",
+          "author": "Magicpiano",
+          "license": "CC BY-SA 4.0",
+          "source_url": "https://commons.wikimedia.org/wiki/File:StratfordCT_JudsonHouse.jpg"
+        }
+      ]
+    },
+    {
+      "slug": "great-meadows-marsh-mckinney-refuge",
+      "name": "Great Meadows Marsh Unit, Stewart B. McKinney National Wildlife Refuge",
+      "kind": "park",
+      "town": "Stratford",
+      "state": "Connecticut",
+      "county": "Fairfield County",
+      "address": "Stratford, CT",
+      "official_url": "https://www.fws.gov/refuge/stewart-b-mckinney",
+      "summary": "The Stratford unit of the Stewart B. McKinney National Wildlife Refuge, one of ten units spread across 70 miles of Connecticut coastline and designated an Important Bird Area. Stay on established trails and viewing platforms. Visitor services (860) 399-2513 ext. 8134.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "two-roads-brewing-company",
+      "name": "Two Roads Brewing Company",
+      "kind": "brewery",
+      "town": "Stratford",
+      "state": "Connecticut",
+      "county": "Fairfield County",
+      "address": "1700 Stratford Ave, Stratford, CT 06615",
+      "official_url": "https://tworoadsbrewing.com/",
+      "summary": "One of Connecticut's largest and best-known craft breweries, anchoring a multi-venue campus on Stratford Avenue. Phone (203) 335-2010.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "two-roads-food-hall-bar",
+      "name": "Two Roads Food Hall + Bar",
+      "kind": "restaurant",
+      "town": "Stratford",
+      "state": "Connecticut",
+      "county": "Fairfield County",
+      "address": "1625 Stratford Ave, Stratford, CT 06615",
+      "official_url": "https://tworoadsbrewing.com/food-hall/",
+      "summary": "Kiosk-and-counter food hall on the Two Roads campus, with a drink list of Two Roads beers, ready-to-drink cocktails and local spirits. Hours Wed-Thu 4-9 p.m., Fri-Sat noon-9 p.m., Sun noon-6 p.m. Phone (203) 290-4731.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "area-two-experimental-brewing",
+      "name": "Area Two Experimental Brewing",
+      "kind": "brewery",
+      "town": "Stratford",
+      "state": "Connecticut",
+      "county": "Fairfield County",
+      "address": "1526 Stratford Ave, Stratford, CT 06615",
+      "official_url": "https://tworoadsbrewing.com/visit-us/",
+      "summary": "Two Roads' separate experimental brewhouse and taproom on the same Stratford Avenue campus. Shares the (203) 335-2010 line.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "duchess-restaurant-stratford",
+      "name": "Duchess Restaurant",
+      "kind": "restaurant",
+      "town": "Stratford",
+      "state": "Connecticut",
+      "county": "Fairfield County",
+      "address": "690 Lordship Blvd, Stratford, CT 06615",
+      "official_url": "https://www.duchessrestaurants.com/locations",
+      "summary": "Stratford outpost of Duchess, a Connecticut-owned family burger-and-diner group with 11 locations concentrated in the Bridgeport/Fairfield County area. Phone (203) 378-2141.",
+      "status": "open",
+      "photos": []
+    }
+  ],
+  "entries": [
+    {
+      "kind": "sight",
+      "name": "Boothe Memorial Park & Museum",
+      "place_slug": "boothe-memorial-park-museum",
+      "note": "A 32-acre former homestead of eccentric buildings."
+    },
+    {
+      "kind": "sight",
+      "name": "National Helicopter Museum",
+      "place_slug": "national-helicopter-museum",
+      "note": "Free museum inside the historic 1848 depot."
+    },
+    {
+      "kind": "sight",
+      "name": "Stratford Historical Society — Captain David Judson House & Catharine B. Mitchell Museum",
+      "place_slug": "stratford-historical-society-judson-house",
+      "note": "Colonial-era house museums."
+    },
+    {
+      "kind": "sight",
+      "name": "Great Meadows Marsh Unit, Stewart B. McKinney National Wildlife Refuge",
+      "place_slug": "great-meadows-marsh-mckinney-refuge",
+      "note": "A coastal refuge unit and Important Bird Area."
+    },
+    {
+      "kind": "food",
+      "name": "Two Roads Brewing Company",
+      "place_slug": "two-roads-brewing-company",
+      "note": "One of Connecticut's largest craft breweries."
+    },
+    {
+      "kind": "food",
+      "name": "Two Roads Food Hall + Bar",
+      "place_slug": "two-roads-food-hall-bar",
+      "note": "Counter-service food on the brewery campus."
+    },
+    {
+      "kind": "food",
+      "name": "Area Two Experimental Brewing",
+      "place_slug": "area-two-experimental-brewing",
+      "note": "Two Roads' experimental brewhouse."
+    },
+    {
+      "kind": "food",
+      "name": "Duchess Restaurant",
+      "place_slug": "duchess-restaurant-stratford",
+      "note": "A Connecticut-owned burger-and-diner group."
+    }
+  ],
+  "links": [
+    {
+      "target": "guide:bridgeport-ct-travel-guide",
+      "kind": "nearby",
+      "note": "Stratford sits between Bridgeport and Milford; Stratford's original land grant included part of Bridgeport."
+    },
+    {
+      "target": "guide:milford-ct-travel-guide",
+      "kind": "nearby",
+      "note": "Stratford sits between Milford and Bridgeport on Long Island Sound."
+    },
+    {
+      "target": "guide:trumbull-ct-travel-guide",
+      "kind": "shared-history",
+      "note": "Stratford's original colonial land grant included territory that later became Trumbull."
+    },
+    {
+      "target": "guide:shelton-ct-travel-guide",
+      "kind": "shared-history",
+      "note": "Stratford's original colonial land grant included territory that later became Shelton."
+    },
+    {
+      "target": "guide:monroe-ct-travel-guide",
+      "kind": "shared-history",
+      "note": "Stratford's original colonial land grant included territory that later became Monroe."
+    }
+  ]
+}

@@ -1,0 +1,212 @@
+{
+  "guide": {
+    "slug": "easton-ct-travel-guide",
+    "title": "Easton, Connecticut: Reservoirs, Farms and Two Famous Retirees",
+    "destination": "Easton, Connecticut",
+    "state": "Connecticut",
+    "county": "Fairfield County",
+    "intro": "Easton was first settled in 1757 out of a congregation called the North Fairfield Society, established in 1762, but it was not until 1845 that the town separated from Weston to become its own place; hilly terrain along the Aspetuck River had made early development difficult, and Easton has stayed rural and residential ever since. Today the town covers about 28.6 square miles with a 2020 population of 7,605. Roughly half of Easton's land is owned by the Aquarion Water Company, and the town calls itself \"a proud guardian of the region's drinking water supply,\" with four reservoirs, trout streams and more than twenty working farms. Muckraking journalist Ida Tarbell retired to a farm here in 1924, and Helen Keller died at her Easton home, Arcan Ridge, on June 1, 1968.",
+    "sections": [
+      {
+        "heading": "Water, farms and two famous retirees",
+        "body": "Ida Tarbell, author of the 1904 exposé \"The History of the Standard Oil Company,\" used her royalties to buy the Easton farm she called \"Twin Oaks\" in 1906 and retired there in 1924; the house became a National Historic Landmark in 1993 but remains a private residence, viewable only from the road. Helen Keller spent her final decades at Arcan Ridge, also private property; the town's middle school carries her name. Union Cemetery, with gravestones dating to 1761, is Easton's oldest burial ground and, by local reputation, one of the most-visited \"haunted\" sites in the country. The New Academy on Westport Road, built in 1795, is Easton's oldest public building, next to an 1836 Congregational church."
+      },
+      {
+        "heading": "Getting there",
+        "body": "Easton has no train station and no interstate of its own. Route 58 (Black Rock Turnpike) runs 18.58 miles north from US Route 1 in Fairfield, through Easton, Redding and on to Bethel, crossing the Merritt Parkway along the way; Route 136 and Route 59 (over the Mill River) fill out the local grid. The nearest Metro-North New Haven Line stations are Fairfield-Black Rock, Fairfield, Southport and Bridgeport, all south of town; the nearest Danbury Branch station to the north is Redding. Amtrak Northeast Regional and Vermonter trains do stop at Bridgeport, so an intercity arrival there is possible, though Acela does not; neither Shore Line East nor the CTrail Hartford Line comes near Easton."
+      }
+    ],
+    "faq": [
+      {
+        "question": "How do I get to Easton?",
+        "answer": "By car only — Route 58 (Black Rock Turnpike) runs north from Fairfield through Easton toward Redding and Bethel. The nearest Metro-North stations are Fairfield, Southport and Bridgeport to the south."
+      },
+      {
+        "question": "Is there a train to Easton?",
+        "answer": "No station exists in Easton. The closest options are Fairfield-area New Haven Line stations to the south or Redding on the Danbury Branch to the north."
+      },
+      {
+        "question": "What is Trout Brook Valley Preserve?",
+        "answer": "A 1,009-acre Aspetuck Land Trust preserve straddling Easton and Weston, with nearly 14 miles of trails through meadows, woods and a working orchard. Trailhead parking is on Bradley, Black Rock, Freeborn and Wells Hill Roads."
+      },
+      {
+        "question": "Is there a hotel in Easton?",
+        "answer": "No hotel, inn or B&B operating in Easton could be verified. The nearest option is the Delamar Southport, south of Easton center via Route 58 and US 1."
+      }
+    ],
+    "photos": [
+      {
+        "src": "/photos/ct/easton/easton-firemans-carnival-aerial.jpg",
+        "thumb": "/photos/ct/easton/easton-firemans-carnival-aerial_thumb.jpg",
+        "title": "Easton town center, aerial",
+        "description": "A dusk aerial view over Easton's town center, showing the fire station, Easton Village Store and Silverman's Farm's orchards during the annual Firemen's Carnival.",
+        "author": "Benjamin Carter",
+        "license": "CC BY-SA 4.0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Easton_Fireman%27s_Carnival._August_5,_2021.jpg"
+      },
+      {
+        "src": "/photos/ct/easton/easton-town-hall.jpg",
+        "thumb": "/photos/ct/easton/easton-town-hall_thumb.jpg",
+        "title": "Easton Town Hall",
+        "description": "Easton Town Hall, a red-brick civic building with a white cupola.",
+        "author": "Doug Kerr",
+        "license": "CC BY-SA 2.0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Town_Hall,_Easton,_Connecticut.jpg"
+      },
+      {
+        "src": "/photos/ct/easton/trout-brook-ordway-trailhead-easton.jpg",
+        "thumb": "/photos/ct/easton/trout-brook-ordway-trailhead-easton_thumb.jpg",
+        "title": "Trout Brook Valley Preserve trailhead",
+        "description": "The Ordway (Red) Trail southern trailhead sign at Trout Brook Valley Preserve, which straddles Easton and Weston.",
+        "author": "Morrowlong",
+        "license": "CC BY-SA 3.0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:TroutBrookValleyPreserve_OrdwayRedTrailHead.jpg"
+      }
+    ]
+  },
+  "places": [
+    {
+      "slug": "trout-brook-valley-preserve",
+      "name": "Trout Brook Valley Preserve",
+      "kind": "park",
+      "town": "Easton",
+      "state": "Connecticut",
+      "county": "Fairfield County",
+      "address": "Trailhead parking on Bradley Road, Black Rock Road, Freeborn Road and Wells Hill Road, Easton/Weston, CT",
+      "official_url": "https://aspetucklandtrust.org/easton-preserves",
+      "summary": "Aspetuck Land Trust's largest preserve, 1,009 combined acres straddling Easton and Weston with nearly 14 miles of trails through wildflower meadows, woodlands and a working apple and blueberry orchard, joined to the adjoining Crow Hill and Jump Hill preserves. Open year-round.",
+      "status": "open",
+      "photos": [
+        {
+          "src": "/photos/ct/easton/trout-brook-ordway-trailhead-easton.jpg",
+          "thumb": "/photos/ct/easton/trout-brook-ordway-trailhead-easton_thumb.jpg",
+          "title": "Trout Brook Valley Preserve trailhead",
+          "description": "The Ordway (Red) Trail southern trailhead sign at Trout Brook Valley Preserve, which straddles Easton and Weston.",
+          "author": "Morrowlong",
+          "license": "CC BY-SA 3.0",
+          "source_url": "https://commons.wikimedia.org/wiki/File:TroutBrookValleyPreserve_OrdwayRedTrailHead.jpg"
+        }
+      ]
+    },
+    {
+      "slug": "aspetuck-park",
+      "name": "Aspetuck Park",
+      "kind": "park",
+      "town": "Easton",
+      "state": "Connecticut",
+      "county": "Fairfield County",
+      "address": "369 Black Rock Road, Easton, CT 06612",
+      "official_url": "https://www.eastonct.gov/2000/Parks-and-Fields",
+      "summary": "Town-run park with a little league field, small playground, picnic area and a beach area where fishing is permitted. Open sunrise to sunset; dogs, horses, snowmobiles and motorized vehicles are prohibited from most Easton parks.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "union-cemetery-easton",
+      "name": "Union Cemetery",
+      "kind": "historic-site",
+      "town": "Easton",
+      "state": "Connecticut",
+      "county": "Fairfield County",
+      "address": "Sport Hill Road at Stepney Road, Easton, CT 06612",
+      "official_url": "https://www.eastonct.gov/1759/Historical-Sites-and-Resources",
+      "summary": "Easton's oldest cemetery, with gravestones dating to 1761 and, by local reputation, one of the most-visited \"haunted\" sites in the country. It is an active town burial ground with no staff or set hours — visit respectfully in daylight.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "congregational-church-new-academy-easton",
+      "name": "Congregational Church and the New Academy",
+      "kind": "historic-site",
+      "town": "Easton",
+      "state": "Connecticut",
+      "county": "Fairfield County",
+      "address": "336 Westport Road, Easton, CT 06612",
+      "official_url": "https://www.eastonct.gov/1759/Historical-Sites-and-Resources",
+      "summary": "The New Academy, built in 1795, is Easton's oldest public building; the adjoining Congregational church dates to 1836. Both are exterior/streetscape sights on a self-guided historic drive — no ticketed visitor hours are published.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "olde-blue-bird-inn",
+      "name": "The Olde Blue Bird Inn",
+      "kind": "restaurant",
+      "town": "Easton",
+      "state": "Connecticut",
+      "county": "Fairfield County",
+      "address": "363 Black Rock Turnpike, Easton, CT 06612",
+      "official_url": "https://www.oldebluebirdinn.com/",
+      "summary": "Easton's landmark breakfast-and-lunch spot, serving the town since 1919 in a building that began as a bed and breakfast. Breakfast all day, lunch from 11 a.m., kitchen closes at 2 p.m.; no alcohol served. Open Tue-Sat 7 a.m.-2 p.m., Sun 8 a.m.-2 p.m., closed Mondays. Phone (203) 452-0697.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "greisers-coffee-market",
+      "name": "Greiser's Coffee & Market",
+      "kind": "cafe",
+      "town": "Easton",
+      "state": "Connecticut",
+      "county": "Fairfield County",
+      "address": "299 Center Rd, Easton, CT 06612",
+      "official_url": "https://www.greisers.com/",
+      "summary": "Country cafe and curated market in a roughly 250-year-old building at Easton's historic center; three generations of the Greiser family have run it since 1926, first as a luncheonette and general store, then a gas station and deli, and now as a cafe and market since 2018. Open Mon-Fri 7 a.m.-5 p.m., Sat-Sun 7 a.m.-3 p.m. Phone (203) 220-9424.",
+      "status": "open",
+      "photos": []
+    }
+  ],
+  "entries": [
+    {
+      "kind": "sight",
+      "name": "Trout Brook Valley Preserve",
+      "place_slug": "trout-brook-valley-preserve",
+      "note": "1,009 acres of trails straddling Easton and Weston."
+    },
+    {
+      "kind": "sight",
+      "name": "Aspetuck Park",
+      "place_slug": "aspetuck-park",
+      "note": "A town park with fishing and a little league field."
+    },
+    {
+      "kind": "sight",
+      "name": "Union Cemetery",
+      "place_slug": "union-cemetery-easton",
+      "note": "Easton's oldest cemetery, with 1761 gravestones."
+    },
+    {
+      "kind": "sight",
+      "name": "Congregational Church and the New Academy",
+      "place_slug": "congregational-church-new-academy-easton",
+      "note": "Easton's oldest public building, from 1795."
+    },
+    {
+      "kind": "food",
+      "name": "The Olde Blue Bird Inn",
+      "place_slug": "olde-blue-bird-inn",
+      "note": "Breakfast and lunch since 1919."
+    },
+    {
+      "kind": "food",
+      "name": "Greiser's Coffee & Market",
+      "place_slug": "greisers-coffee-market",
+      "note": "A cafe and market since 1926."
+    }
+  ],
+  "links": [
+    {
+      "target": "guide:weston-ct-travel-guide",
+      "kind": "shared-history",
+      "note": "Easton separated from Weston in 1845 to become its own town."
+    },
+    {
+      "target": "guide:redding-ct-travel-guide",
+      "kind": "nearby",
+      "note": "Route 58 runs north from Easton through Redding to Bethel."
+    },
+    {
+      "target": "guide:fairfield-ct-travel-guide",
+      "kind": "nearby",
+      "note": "Route 58 begins at US Route 1 in Fairfield and runs north through Easton."
+    }
+  ]
+}

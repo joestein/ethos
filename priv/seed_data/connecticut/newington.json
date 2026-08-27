@@ -1,0 +1,317 @@
+{
+  "guide": {
+    "slug": "newington-ct-travel-guide",
+    "title": "Newington, Connecticut: World Headquarters of Amateur Radio",
+    "destination": "Newington, Connecticut",
+    "state": "Connecticut",
+    "county": "Hartford County",
+    "intro": "Newington began as the western farmlands of Wethersfield, used for timber and pasture as early as 1636 and known variously as Pipestaves Swamp, Cow Plain and West Farms before residents requested the name \"Newington\" in 1721 to denote \"the new town in the meadow\" — 150 years before it actually became a town. Early settlers made pipe and barrel staves, powered by the Mill Pond falls that still appear on the town seal. When Wethersfield's town meeting refused to fund highway improvements for better railroad access, Newington sought its own government, incorporating as a separate town on July 10, 1871. The Hartford and New Haven Turnpike, built through the future Newington in 1798, is today's Berlin Turnpike, and the railroad arrived in the 1830s. Inventor Hiram Percy Maxim organized the Radio Club of Hartford in April 1914; Newington is today the world headquarters of amateur radio, home to the ARRL and Maxim's memorial station W1AW.",
+    "sections": [
+      {
+        "heading": "The world's smallest waterfall and a radio landmark",
+        "body": "Mill Pond Falls, a roughly 12-to-16-foot cascade tumbling under a footbridge in Mill Pond Park, is promoted as the smallest natural waterfall in the United States and appears on the town seal, having once powered an early sawmill; the park also has walking paths, a fishing pond and swimming and wading pools. ARRL Headquarters & W1AW, the Hiram Percy Maxim Memorial Station, is \"known the world over for its on-air Morse code practice sessions and news bulletins,\" with Maxim's own desk on display, a rotating museum exhibit and an outdoor self-guided tour; licensed visitors can operate a guest station."
+      },
+      {
+        "heading": "Getting there",
+        "body": "Newington is a drive-to suburb just south of Hartford, reached on the Berlin Turnpike (US 5/Route 15) or I-84/I-91 to CT Route 175 (Cedar Street). The town has no passenger rail station, despite the Newington Junction neighborhood's name, though CTfastrak bus rapid transit does serve the town directly at the Cedar Street and Newington Junction stations. The nearest CTrail Hartford Line stops are Hartford Union Station, about 8 miles north, and Berlin. A Hartford Line infill station named \"Newington\" is planned as a later phase but has not been built."
+      }
+    ],
+    "faq": [
+      {
+        "question": "How do I get to Newington?",
+        "answer": "By car via the Berlin Turnpike (US 5/Route 15) or I-84/I-91 to Route 175 — or by CTfastrak bus rapid transit, which stops at Cedar Street and Newington Junction. There is no passenger rail station in Newington; the nearest CTrail Hartford Line stops are Hartford Union Station and Berlin."
+      },
+      {
+        "question": "Is there a train to Newington?",
+        "answer": "No, despite the Newington Junction neighborhood's name. A Hartford Line infill station is planned there as a later phase but has not been built. CTfastrak bus rapid transit does serve Newington directly."
+      },
+      {
+        "question": "What is ARRL Headquarters & W1AW?",
+        "answer": "The headquarters of the American Radio Relay League and the Hiram Percy Maxim Memorial Station, at 225 Main Street. Headquarters and store open Mon-Fri 8 a.m.-5 p.m.; W1AW open to visitors 10 a.m.-3:45 p.m. weekdays, closed major holidays. Phone (860) 594-0200."
+      },
+      {
+        "question": "What is Mill Pond Falls?",
+        "answer": "A roughly 12-to-16-foot waterfall in Mill Pond Park, promoted as the smallest natural waterfall in the United States. The park also has walking paths, a fishing pond and swimming pools; open dawn to dusk."
+      },
+      {
+        "question": "Is there a hotel in Newington?",
+        "answer": "The Holiday Inn Express Hartford-Newington on the Berlin Turnpike is the only Newington hotel found in this research; its current operating status could not be independently confirmed beyond a chamber/property listing, so call ahead before booking."
+      }
+    ],
+    "photos": [
+      {
+        "src": "/photos/ct/newington/w1aw-front.jpg",
+        "thumb": "/photos/ct/newington/w1aw-front_thumb.jpg",
+        "title": "W1AW, the Hiram Percy Maxim Memorial Station",
+        "description": "The front of the W1AW building at ARRL Headquarters in Newington.",
+        "author": "ARRL",
+        "license": "CC0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:W1AW_front.jpg"
+      },
+      {
+        "src": "/photos/ct/newington/mill-pond-falls.jpg",
+        "thumb": "/photos/ct/newington/mill-pond-falls_thumb.jpg",
+        "title": "Mill Pond Falls",
+        "description": "Mill Pond Falls in Newington's Mill Pond Park.",
+        "author": "John Phelan",
+        "license": "CC BY 4.0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Mill_Pond_Falls,_Newington_CT.jpg"
+      },
+      {
+        "src": "/photos/ct/newington/main-street-newington.jpg",
+        "thumb": "/photos/ct/newington/main-street-newington_thumb.jpg",
+        "title": "Main Street, Newington",
+        "description": "Main Street in Newington's town center.",
+        "author": "John Phelan",
+        "license": "CC BY-SA 3.0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Main_Street,_Newington_CT.jpg"
+      }
+    ]
+  },
+  "places": [
+    {
+      "slug": "arrl-headquarters-w1aw",
+      "name": "ARRL Headquarters & W1AW",
+      "kind": "museum",
+      "town": "Newington",
+      "state": "Connecticut",
+      "county": "Hartford County",
+      "address": "225 Main Street, Newington, CT 06111",
+      "official_url": "https://www.arrl.org/visit-us",
+      "summary": "The Hiram Percy Maxim Memorial Station, named for the founder of the Radio Club of Hartford, \"known the world over for its on-air Morse code practice sessions and news bulletins.\" A reception area with exhibits, a rotating museum display, Maxim's own desk and an outdoor self-guided tour of the Diamond Terrace and antenna array. Headquarters and store Mon-Fri 8 a.m.-5 p.m.; W1AW open to visitors 10 a.m.-3:45 p.m. weekdays, closed major U.S. holidays. Phone (860) 594-0200.",
+      "status": "open",
+      "photos": [
+        {
+          "src": "/photos/ct/newington/w1aw-front.jpg",
+          "thumb": "/photos/ct/newington/w1aw-front_thumb.jpg",
+          "title": "W1AW, the Hiram Percy Maxim Memorial Station",
+          "description": "The front of the W1AW building at ARRL Headquarters in Newington.",
+          "author": "ARRL",
+          "license": "CC0",
+          "source_url": "https://commons.wikimedia.org/wiki/File:W1AW_front.jpg"
+        }
+      ]
+    },
+    {
+      "slug": "kellogg-eddy-house-museum",
+      "name": "Kellogg-Eddy House & Museum",
+      "kind": "historic-site",
+      "town": "Newington",
+      "state": "Connecticut",
+      "county": "Hartford County",
+      "address": "679 Willard Avenue, Newington, CT 06111",
+      "official_url": "https://newingtonhistoricalsociety.org/kellogg-eddy-house/",
+      "summary": "Built in 1808 by Captain Martin Kellogg for his son and his bride, a two-story New England Georgian house with Greek Revival touches, listed on the National Register of Historic Places. Inside are a Farm Tool Museum, period parlors and the original cooking fireplace. Tours during public events or by appointment. Phone (860) 666-7118.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "enoch-kelsey-house",
+      "name": "Enoch Kelsey House",
+      "kind": "historic-site",
+      "town": "Newington",
+      "state": "Connecticut",
+      "county": "Hartford County",
+      "address": "1702 Main Street, Newington, CT 06111",
+      "official_url": "https://newingtonhistoricalsociety.org/enoch-kelsey-house/",
+      "summary": "Built in 1799 by farmer and tinsmith Enoch Kelsey and his son David, a National Register-listed house preserving rare free-hand painted wall decorations that imitate wallpaper, found in several rooms. Also on view: original paneling, a beehive oven, tinware and a 19th-century barn loom. Tours during public events or by appointment. Phone (860) 666-7118.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "mill-pond-park",
+      "name": "Mill Pond Park",
+      "kind": "park",
+      "town": "Newington",
+      "state": "Connecticut",
+      "county": "Hartford County",
+      "address": "123 Garfield Street, Newington, CT 06111",
+      "official_url": "https://www.newingtonct.gov/Facilities/Facility/Details/Mill-Pond-Park-15",
+      "summary": "Home to Mill Pond Falls, a roughly 12-to-16-foot cascade promoted as the smallest natural waterfall in the United States and pictured on the town seal. The park also has walking paths, a fishing pond, swimming and wading pools, a concert pavilion, tennis and basketball courts and an ADA-accessible playground. Open dawn to dusk.",
+      "status": "open",
+      "photos": [
+        {
+          "src": "/photos/ct/newington/mill-pond-falls.jpg",
+          "thumb": "/photos/ct/newington/mill-pond-falls_thumb.jpg",
+          "title": "Mill Pond Falls",
+          "description": "Mill Pond Falls in Newington's Mill Pond Park.",
+          "author": "John Phelan",
+          "license": "CC BY 4.0",
+          "source_url": "https://commons.wikimedia.org/wiki/File:Mill_Pond_Falls,_Newington_CT.jpg"
+        }
+      ]
+    },
+    {
+      "slug": "cedar-mountain-hiking-trail",
+      "name": "Cedar Mountain Hiking Trail",
+      "kind": "park",
+      "town": "Newington",
+      "state": "Connecticut",
+      "county": "Hartford County",
+      "address": "Trailhead behind the Connecticut Humane Society, Russell Road, Newington, CT 06111",
+      "official_url": "https://www.newingtonct.gov/1470/Cedar-Mountain-Hiking-Trail",
+      "summary": "The Old Cedar Mountain Highway Trail, with mulched connector trails through red maple, white ash, oak and cedar; deer, raccoons and the occasional coyote are seen. Dogs welcome; the ridge is used for stargazing, and the town's own page notes reported UFO sightings in 1965 and 1966. Open year-round, part of Newington's Greenway System.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "casadoro",
+      "name": "Casadoro",
+      "kind": "restaurant",
+      "town": "Newington",
+      "state": "Connecticut",
+      "county": "Hartford County",
+      "address": "2929 Berlin Turnpike, Newington, CT 06111",
+      "official_url": "https://casadoroct.com/",
+      "summary": "Casual southern Italian red-sauce cooking from West Hartford's DORO Restaurant Group, with a Marra Forni wood-fired oven turning out 13-inch neo-Neapolitan pizzas alongside housemade pastas. Opened December 2024. Hours Mon-Thu 11:30 a.m.-10 p.m., Fri-Sat to 11 p.m., Sun to 9 p.m., happy hour 3-6 p.m. weekdays. Phone (860) 422-4404.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "doogies-newington",
+      "name": "Doogie's",
+      "kind": "restaurant",
+      "town": "Newington",
+      "state": "Connecticut",
+      "county": "Hartford County",
+      "address": "2525 Berlin Turnpike, Newington, CT 06111",
+      "official_url": "https://www.doogieshotdogs.com/",
+      "summary": "A retro Berlin Turnpike hot dog stand billing itself \"The Home of the Two Foot Hot Dog,\" featured on the show Man v. Food. Hours Mon-Wed and Sun 11 a.m.-7 p.m., Thu-Sat 11 a.m.-8 p.m. Phone (860) 666-3647.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "goldburgers",
+      "name": "GoldBurgers",
+      "kind": "restaurant",
+      "town": "Newington",
+      "state": "Connecticut",
+      "county": "Hartford County",
+      "address": "1096 Main Street, Newington, CT 06111",
+      "official_url": "https://www.goldburgers.com/",
+      "summary": "A made-to-order burger and hot dog counter in Newington Center — build-your-own gourmet burgers, Chicago-style dogs and a homemade veggie burger. Open daily 11 a.m.-9 p.m. Phone (860) 665-0478.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "joey-garlics-newington",
+      "name": "Joey Garlic's",
+      "kind": "restaurant",
+      "town": "Newington",
+      "state": "Connecticut",
+      "county": "Hartford County",
+      "address": "150 Kitts Lane, Newington, CT 06111",
+      "official_url": "https://newington.joeygarlics.com/",
+      "summary": "A Connecticut-grown Italian-American family restaurant known for oversized portions — pizza, eggplant fries, mozzarella sticks and mac and cheese. Hours Sun-Thu 11:30 a.m.-9 p.m., Fri-Sat to 9:30 p.m. Phone (860) 372-4620.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "market-place-kitchen-bar-newington",
+      "name": "Market Place Kitchen & Bar",
+      "kind": "restaurant",
+      "town": "Newington",
+      "state": "Connecticut",
+      "county": "Hartford County",
+      "address": "3331 Berlin Turnpike, Newington, CT 06111",
+      "official_url": "https://marketplacekitchenbar.com/newington/",
+      "summary": "An American kitchen-and-bar concept anchoring the Meadow Commons development, part of the Connecticut Market Place Kitchen & Bar group, opened November 2025. Kitchen hours Mon-Thu 11:30 a.m.-9:30 p.m., Fri-Sat to 10:30 p.m., Sun to 9 p.m. Phone (860) 909-9001.",
+      "status": "open",
+      "photos": []
+    }
+  ],
+  "entries": [
+    {
+      "kind": "sight",
+      "name": "ARRL Headquarters & W1AW",
+      "place_slug": "arrl-headquarters-w1aw",
+      "note": "The world headquarters of amateur radio, with self-guided tours."
+    },
+    {
+      "kind": "sight",
+      "name": "Kellogg-Eddy House & Museum",
+      "place_slug": "kellogg-eddy-house-museum",
+      "note": "An 1808 Georgian house with a Farm Tool Museum."
+    },
+    {
+      "kind": "sight",
+      "name": "Enoch Kelsey House",
+      "place_slug": "enoch-kelsey-house",
+      "note": "An 1799 house with rare hand-painted wall decorations."
+    },
+    {
+      "kind": "walk",
+      "name": "Mill Pond Park",
+      "place_slug": "mill-pond-park",
+      "note": "Home to Mill Pond Falls, promoted as America's smallest waterfall."
+    },
+    {
+      "kind": "walk",
+      "name": "Cedar Mountain Hiking Trail",
+      "place_slug": "cedar-mountain-hiking-trail",
+      "note": "A ridge trail with a history of reported UFO sightings."
+    },
+    {
+      "kind": "food",
+      "name": "Casadoro",
+      "place_slug": "casadoro",
+      "note": "Southern Italian cooking with a wood-fired oven."
+    },
+    {
+      "kind": "food",
+      "name": "Doogie's",
+      "place_slug": "doogies-newington",
+      "note": "\"The Home of the Two Foot Hot Dog.\""
+    },
+    {
+      "kind": "food",
+      "name": "GoldBurgers",
+      "place_slug": "goldburgers",
+      "note": "Build-your-own burgers in Newington Center."
+    },
+    {
+      "kind": "food",
+      "name": "Joey Garlic's",
+      "place_slug": "joey-garlics-newington",
+      "note": "A Connecticut-grown Italian-American restaurant."
+    },
+    {
+      "kind": "food",
+      "name": "Market Place Kitchen & Bar",
+      "place_slug": "market-place-kitchen-bar-newington",
+      "note": "An American kitchen-and-bar on the Berlin Turnpike."
+    }
+  ],
+  "links": [
+    {
+      "target": "guide:wethersfield-ct-travel-guide",
+      "kind": "nearby",
+      "note": "Newington began as the western farmlands of Wethersfield, separating in 1871, and borders it."
+    },
+    {
+      "target": "guide:wethersfield-ct-travel-guide",
+      "kind": "shared-history",
+      "note": "Newington was Wethersfield's western farmland until a railroad-funding dispute led to its 1871 separation."
+    },
+    {
+      "target": "guide:west-hartford-ct-travel-guide",
+      "kind": "nearby",
+      "note": "Newington borders West Hartford to the north."
+    },
+    {
+      "target": "guide:berlin-ct-travel-guide",
+      "kind": "nearby",
+      "note": "Newington borders Berlin along the Berlin Turnpike corridor."
+    },
+    {
+      "target": "guide:new-britain-ct-travel-guide",
+      "kind": "nearby",
+      "note": "Newington borders New Britain to the west."
+    },
+    {
+      "target": "guide:rocky-hill-ct-travel-guide",
+      "kind": "same-region",
+      "note": "Rocky Hill sits southeast of Newington along the Silas Deane Highway corridor."
+    }
+  ]
+}

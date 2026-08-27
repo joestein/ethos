@@ -1,0 +1,256 @@
+{
+  "guide": {
+    "slug": "wilton-ct-travel-guide",
+    "title": "Wilton, Connecticut: An Impressionist's Farm on Two Rail Stops",
+    "destination": "Wilton, Connecticut",
+    "state": "Connecticut",
+    "county": "Fairfield County",
+    "intro": "The first written records of the Wilton area date to 1640, when Roger Ludlow purchased land from the Indigenous people between the Norwalk and Saugatuck rivers; the area became a separate parish in 1726 and, over Norwalk's objections, an independent town in 1802. In 1777, British troops retreating from the raid on Danbury burned several Wilton homes, though the town survived largely intact; more than 300 Wilton men served in the Revolution, among them Cato Treadwell, an African American who served three years in the Connecticut Line. Early industries included shoemaking, shirt manufacturing and carriage building, and the Gilbert and Bennett Manufacturing Company began making wire sieves in 1834. In 1882, painter Julian Alden Weir acquired a 153-acre Branchville farm by trading a still-life painting valued at $560; he painted there for nearly four decades and hosted Childe Hassam, John Twachtman and other artists who came to define American Impressionism.",
+    "sections": [
+      {
+        "heading": "An artist's farm and a rural holdout",
+        "body": "The industrial era largely bypassed Wilton's small farming community, and 20th-century zoning preserved its rural character, leaving a mix of 18th- and 19th-century homes and small subdivisions. Cannondale, the bicycle company founded in 1971, took its name from Wilton's own Cannondale train station. Wilton's notable residents have included Weir, jazz musician Dave Brubeck, illustrator Lillian Hoban, cartoonist Dik Browne, and actors Christopher Walken and Paul Dano. Weir Farm National Historical Park, straddling the Wilton/Ridgefield line, preserves the home and studio where Weir worked."
+      },
+      {
+        "heading": "Getting there",
+        "body": "Wilton sits on the U.S. Route 7 corridor in the Norwalk River Valley, with Route 33 (Ridgefield Road) as the other main road. Wilton is served by two of its own Metro-North stations, Wilton and Cannondale, both on the Danbury Branch, which meets the New Haven Line at South Norwalk; many weekday trains run through to Stamford and New York City without a change there, though the branch is not electrified (catenary was removed in 1961), so these are diesel-hauled trains. Merritt 7 station, the branch's next stop toward South Norwalk, is in Norwalk, not Wilton."
+      }
+    ],
+    "faq": [
+      {
+        "question": "How do I get to Wilton?",
+        "answer": "By car on US Route 7 or Route 33, or by train — Wilton has two of its own Metro-North Danbury Branch stations, Wilton and Cannondale, both connecting to the New Haven Line at South Norwalk."
+      },
+      {
+        "question": "Do I need to change trains to reach Wilton from Grand Central?",
+        "answer": "Not always — many weekday Danbury Branch trains run through to Stamford and New York City without a transfer at South Norwalk, though the branch itself is diesel-hauled (not electrified)."
+      },
+      {
+        "question": "What is Weir Farm National Historical Park?",
+        "answer": "The former home and studio of Impressionist painter J. Alden Weir, straddling the Wilton/Ridgefield line — the only National Historical Park dedicated to an American artist's home, studio and grounds. Buildings open seasonally, May-October; grounds open daily, sunrise to sunset, year-round."
+      },
+      {
+        "question": "Is there a hotel in Wilton?",
+        "answer": "No hotel, inn or B&B inside Wilton could be verified. The nearest option is the West Lane Inn in neighboring Ridgefield, about 17 rooms."
+      }
+    ],
+    "photos": [
+      {
+        "src": "/photos/ct/wilton/wilton-historical-society-campus.jpg",
+        "thumb": "/photos/ct/wilton/wilton-historical-society-campus_thumb.jpg",
+        "title": "Wilton Historical Society campus",
+        "description": "The historic buildings along Route 7 that form the Wilton Historical Society's museum campus.",
+        "author": "Pedro Xing",
+        "license": "CC0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Wilton_Historical_Society_078.JPG"
+      },
+      {
+        "src": "/photos/ct/wilton/ambler-farm-red-barn-wilton.jpg",
+        "thumb": "/photos/ct/wilton/ambler-farm-red-barn-wilton_thumb.jpg",
+        "title": "Ambler Farm red barn",
+        "description": "The red barn at Ambler Farm, Wilton's town-owned working farm.",
+        "author": "Jllm06",
+        "license": "CC BY-SA 4.0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Ambler_Farm_4_-_red_barn.jpg"
+      }
+    ]
+  },
+  "places": [
+    {
+      "slug": "wilton-historical-society",
+      "name": "Wilton Historical Society",
+      "kind": "museum",
+      "town": "Wilton",
+      "state": "Connecticut",
+      "county": "Fairfield County",
+      "address": "224 Danbury Road, Wilton, CT 06897",
+      "official_url": "https://wiltonhistorical.org/",
+      "summary": "Founded in 1938 to preserve Wilton's history, with a Colonial Garden, Lambert Corner, Cannon Corner and a History Room of archival records. Open Tuesday-Saturday, 10 a.m.-4 p.m. Phone (203) 762-7257.",
+      "status": "open",
+      "photos": [
+        {
+          "src": "/photos/ct/wilton/wilton-historical-society-campus.jpg",
+          "thumb": "/photos/ct/wilton/wilton-historical-society-campus_thumb.jpg",
+          "title": "Wilton Historical Society campus",
+          "description": "The historic buildings along Route 7 that form the Wilton Historical Society's museum campus.",
+          "author": "Pedro Xing",
+          "license": "CC0",
+          "source_url": "https://commons.wikimedia.org/wiki/File:Wilton_Historical_Society_078.JPG"
+        }
+      ]
+    },
+    {
+      "slug": "ambler-farm",
+      "name": "Ambler Farm",
+      "kind": "attraction",
+      "town": "Wilton",
+      "state": "Connecticut",
+      "county": "Fairfield County",
+      "address": "257 Hurlbutt Street, Wilton, CT 06897",
+      "official_url": "https://amblerfarm.org/",
+      "summary": "An educational working farm with animals, organic gardens and historic buildings. Farm stand Saturdays 9 a.m.-1 p.m.; sells at the Wilton Farmers' Market on Wednesdays, 11 a.m.-3 p.m. Hosts the Annual Ambler Farm Day each October.",
+      "status": "open",
+      "photos": [
+        {
+          "src": "/photos/ct/wilton/ambler-farm-red-barn-wilton.jpg",
+          "thumb": "/photos/ct/wilton/ambler-farm-red-barn-wilton_thumb.jpg",
+          "title": "Ambler Farm red barn",
+          "description": "The red barn at Ambler Farm, Wilton's town-owned working farm.",
+          "author": "Jllm06",
+          "license": "CC BY-SA 4.0",
+          "source_url": "https://commons.wikimedia.org/wiki/File:Ambler_Farm_4_-_red_barn.jpg"
+        }
+      ]
+    },
+    {
+      "slug": "woodcock-nature-center",
+      "name": "Woodcock Nature Center",
+      "kind": "park",
+      "town": "Wilton",
+      "state": "Connecticut",
+      "county": "Fairfield County",
+      "address": "56 Deer Run Road, Wilton, CT 06897",
+      "official_url": "https://www.woodcocknaturecenter.org/",
+      "summary": "A nature center near the Ridgefield line, reconnecting the community with nature since 1972. Trails open dawn to dusk daily; offers hikes, camps, after-school activities and scout programs. Phone (203) 762-7280.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "wilton-playshop",
+      "name": "The Wilton Playshop",
+      "kind": "theater",
+      "town": "Wilton",
+      "state": "Connecticut",
+      "county": "Fairfield County",
+      "address": "15 Lovers Lane, Wilton, CT 06897",
+      "official_url": "https://www.wiltonplayshop.org/",
+      "summary": "A 501(c)(3) community theater, \"Wilton's Community Theater since 1937.\" Check the season page for current show titles.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "orems-diner",
+      "name": "Orem's Diner",
+      "kind": "restaurant",
+      "town": "Wilton",
+      "state": "Connecticut",
+      "county": "Fairfield County",
+      "address": "167 Danbury Road, Wilton, CT 06897",
+      "official_url": "https://www.oremsdiner.com/",
+      "summary": "Family-owned classic diner serving Wilton and surrounding towns since 1921, with breakfast, lunch and dinner. Open daily 6 a.m.-10 p.m. Phone (203) 762-7370.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "marlys-bar-bistro",
+      "name": "Marly's Bar & Bistro",
+      "kind": "restaurant",
+      "town": "Wilton",
+      "state": "Connecticut",
+      "county": "Fairfield County",
+      "address": "101 Old Ridgefield Road, Wilton, CT 06897",
+      "official_url": "https://www.marlysbistro.com/",
+      "summary": "Contemporary pub fare built on locally sourced ingredients, known for its burger. Hours Sun-Thu 11:30 a.m.-9 p.m., Fri-Sat 11:30 a.m.-10 p.m. Phone (203) 834-2000.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "little-pub-wilton",
+      "name": "Little Pub Wilton",
+      "kind": "restaurant",
+      "town": "Wilton",
+      "state": "Connecticut",
+      "county": "Fairfield County",
+      "address": "26 Danbury Road, Wilton, CT 06897",
+      "official_url": "https://littlepub.com/wilton/",
+      "summary": "Part of a small Connecticut regional group: crispy fish and chips, falafel and the Legendary Graceland Burger. Phone (203) 762-1122.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "village-market-wilton",
+      "name": "Village Market Wilton",
+      "kind": "cafe",
+      "town": "Wilton",
+      "state": "Connecticut",
+      "county": "Fairfield County",
+      "address": "108 Old Ridgefield Road, Wilton, CT 06897",
+      "official_url": "https://www.villagemarketwilton.com/",
+      "summary": "Neighborhood market with a deli counter, bakery and prepared foods — a practical stop for picnic supplies before Weir Farm or Woodcock Nature Center. Open daily 7 a.m.-7 p.m. Phone (203) 762-7283.",
+      "status": "open",
+      "photos": []
+    }
+  ],
+  "entries": [
+    {
+      "kind": "sight",
+      "name": "Wilton Historical Society",
+      "place_slug": "wilton-historical-society",
+      "note": "Founded 1938, with a Colonial Garden."
+    },
+    {
+      "kind": "sight",
+      "name": "Ambler Farm",
+      "place_slug": "ambler-farm",
+      "note": "An educational working farm with animals."
+    },
+    {
+      "kind": "sight",
+      "name": "Woodcock Nature Center",
+      "place_slug": "woodcock-nature-center",
+      "note": "Trails and programs since 1972."
+    },
+    {
+      "kind": "sight",
+      "name": "The Wilton Playshop",
+      "place_slug": "wilton-playshop",
+      "note": "Community theater since 1937."
+    },
+    {
+      "kind": "food",
+      "name": "Orem's Diner",
+      "place_slug": "orems-diner",
+      "note": "A classic diner since 1921."
+    },
+    {
+      "kind": "food",
+      "name": "Marly's Bar & Bistro",
+      "place_slug": "marlys-bar-bistro",
+      "note": "Contemporary pub fare, known for its burger."
+    },
+    {
+      "kind": "food",
+      "name": "Little Pub Wilton",
+      "place_slug": "little-pub-wilton",
+      "note": "Fish and chips and the Graceland Burger."
+    },
+    {
+      "kind": "food",
+      "name": "Village Market Wilton",
+      "place_slug": "village-market-wilton",
+      "note": "A neighborhood market and deli counter."
+    }
+  ],
+  "links": [
+    {
+      "target": "guide:ridgefield-ct-travel-guide",
+      "kind": "nearby",
+      "note": "Weir Farm National Historical Park sits directly on the Wilton/Ridgefield line."
+    },
+    {
+      "target": "guide:norwalk-ct-travel-guide",
+      "kind": "shared-history",
+      "note": "Wilton was part of Norwalk until it was granted separate town status in 1802."
+    },
+    {
+      "target": "guide:redding-ct-travel-guide",
+      "kind": "nearby",
+      "note": "The village of Georgetown straddles Wilton and Redding."
+    },
+    {
+      "target": "guide:weston-ct-travel-guide",
+      "kind": "nearby",
+      "note": "Route 57 runs north from Weston's town center to US Route 7 in Wilton's Georgetown section."
+    }
+  ]
+}

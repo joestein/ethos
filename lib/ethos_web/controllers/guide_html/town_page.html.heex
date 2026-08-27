@@ -1,0 +1,69 @@
+<article class="mx-auto max-w-2xl px-4 py-10">
+  <header>
+    <p class="text-xs font-semibold uppercase tracking-wide text-zinc-500">Orientation</p>
+    <h1 class="mt-1 text-3xl font-bold">{@guide.title}</h1>
+    <p class="mt-1 text-zinc-500">{@guide.destination}</p>
+  </header>
+
+  <figure :if={(@guide.photos || []) != []} class="mt-6">
+    <% photo = hd(@guide.photos) %>
+    <.link navigate={~p"/g/#{@guide.slug}/photos"}>
+      <img
+        src={photo["thumb"]}
+        alt={photo["title"]}
+        loading="lazy"
+        class="w-full rounded-xl object-cover"
+      />
+    </.link>
+    <figcaption class="mt-1">
+      <span :if={photo["author"]} class="text-zinc-400">
+        — {photo["author"]}, {photo["license"]}, via
+        <a
+          :if={EthosWeb.Url.safe_http?(photo["source_url"])}
+          href={photo["source_url"]}
+          class="underline"
+          rel="nofollow noopener"
+        >
+          Wikimedia Commons
+        </a>
+        <span :if={!EthosWeb.Url.safe_http?(photo["source_url"])}>Wikimedia Commons</span>
+      </span>
+    </figcaption>
+  </figure>
+
+  <div :if={@guide.intro} class="prose mt-6">{EthosWeb.Markdown.render(@guide.intro)}</div>
+
+  <section :for={section <- @guide.sections || []} class="mt-10">
+    <h2 class="font-semibold">{section["heading"]}</h2>
+    <div class="prose mt-2">{EthosWeb.Markdown.render(section["body"])}</div>
+  </section>
+
+  <section :if={@entries != []} class="mt-10">
+    <h2 class="font-semibold">What's here</h2>
+    <ul class="mt-3 space-y-3">
+      <li :for={entry <- @entries} class="rounded-xl border p-4">
+        <.link
+          :if={match?(%{slug: _}, entry.place)}
+          navigate={~p"/p/#{entry.place.slug}"}
+          class="font-semibold hover:underline"
+        >
+          {entry.name}
+        </.link>
+        <span :if={!match?(%{slug: _}, entry.place)} class="font-semibold">{entry.name}</span>
+        <p :if={entry.note} class="mt-1 text-sm text-zinc-600">{entry.note}</p>
+      </li>
+    </ul>
+  </section>
+
+  <section :if={(@guide.faq || []) != []} class="mt-10">
+    <h2 class="font-semibold">Questions</h2>
+    <div class="mt-3 space-y-4">
+      <div :for={item <- @guide.faq}>
+        <p class="font-medium">{item["question"]}</p>
+        <p class="text-sm text-zinc-600">{item["answer"]}</p>
+      </div>
+    </div>
+  </section>
+
+  <EthosWeb.ConnectedPages.connected_pages connected={@connected} />
+</article>

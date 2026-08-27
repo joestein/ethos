@@ -1,0 +1,220 @@
+{
+  "guide": {
+    "slug": "lyme-ct-travel-guide",
+    "title": "Lyme, Connecticut: A River Town That Split in Two",
+    "destination": "Lyme, Connecticut",
+    "state": "Connecticut",
+    "county": "New London County",
+    "intro": "Lyme began as \"East Saybrook,\" the Saybrook Colony's land east of the Connecticut River; it separated from Saybrook in 1665 and was formally recognized as the town of Lyme in 1667, named for Lyme Regis on England's southwest coast. Modern Lyme is what remains after two splits — East Lyme separated in 1823, and the southern shoreline broke off in 1855 as South Lyme, renamed Old Lyme in 1857. Shipbuilding, lumber, farms and ferries were the town's early industries; Hamburg Cove, at the mouth of the Eightmile River, remains the river's only navigable waterway here. Lyme adopted zoning regulations as early as 1943, which helped preserve its rural character. A ferry has crossed the Connecticut River to Lyme's Hadlyme landing since 1769. Roger Griswold, later governor of Connecticut, was born here. With about 2,350 residents across 34.5 square miles, Lyme remains genuinely rural.",
+    "sections": [
+      {
+        "heading": "A ferry landing and a fairground",
+        "body": "The Nehantic people wintered in the hills and summered along the shore here before the tribe was declared officially extinct in 1880. The Hamburg Fair, Lyme's signature agricultural fair, was established in 1897 at fairgrounds that have stood empty only six times since — four years during World War II and two during the Coronavirus pandemic — resuming in 2022. Besides Griswold, U.S. Chief Justice Morrison Remick Waite and oceanographer Robert Ballard are also associated with the town. The Chester-Hadlyme Ferry, running since 1769 when Jonathan Warner of Chester started the service, still crosses to Lyme's Hadlyme landing on Route 148, offering a scenic approach from the Chester side."
+      },
+      {
+        "heading": "Getting there",
+        "body": "Lyme has no interstate and no train station of its own, so nearly everyone arrives by car: take I-95 to Exit 70 in Old Lyme and follow Route 156 north about 7-8 miles into Hamburg village, Lyme's town center, with Route 82 crossing the town east-west and the seasonal Chester-Hadlyme Ferry on Route 148 offering a scenic river approach. There is no rail station in Lyme or Old Lyme; the nearest is Old Saybrook, served by Amtrak and CTrail Shore Line East across the Connecticut River."
+      },
+      {
+        "heading": "State forest, a preserve network and a farm",
+        "body": "Nehantic State Forest's roughly 4,400 acres include 12 miles of trails and boat launches at Norwich Pond and Uncas Lake. Selden Neck State Park, a 607-acre island rising nearly 230 feet, is accessible only by boat, with primitive river campsites. Hartman Park, cooperatively owned by the Town of Lyme and the Lyme Land Conservation Trust, anchors a network of connecting preserves totaling 422 acres and about 12 miles of trail. The Lyme Public Hall, built in 1887, houses the town's Local History Archives and hosts concerts, lectures and a tag sale each fall. Beaver Brook Farm, home to the Sankow family since 1917, produces sheep and cow's-milk cheeses, lamb and wool goods on 175 acres — call ahead, since store hours are not posted online. Beyond the farm, no restaurant or cafe could be verified operating inside the town of Lyme itself."
+      }
+    ],
+    "faq": [
+      {
+        "question": "How do I get to Lyme?",
+        "answer": "By car — I-95 Exit 70 in Old Lyme, then Route 156 north about 7-8 miles through Hamburg village. There is no rail station in Lyme; the nearest is Old Saybrook, across the Connecticut River."
+      },
+      {
+        "question": "Is there a train to Lyme?",
+        "answer": "No. Neither Lyme nor Old Lyme has a rail station. The nearest is Old Saybrook, served by Amtrak and CTrail Shore Line East."
+      },
+      {
+        "question": "Is there a restaurant in Lyme?",
+        "answer": "No restaurant or cafe could be verified operating inside the town of Lyme. Beaver Brook Farm sells cheese, lamb and wool products directly from the farm, but posts no retail hours online — call ahead. The nearest restaurants are in Old Lyme and East Haddam."
+      },
+      {
+        "question": "Is there a hotel in Lyme?",
+        "answer": "No hotel, inn or bed and breakfast could be verified inside Lyme. The nearest is the Old Lyme Inn, south on Route 156 in Old Lyme."
+      },
+      {
+        "question": "How do I reach Selden Neck State Park?",
+        "answer": "By boat only — it is an island in the Connecticut River with four primitive campsites, open May 1 through September 30. Reservations run through Reserve America."
+      }
+    ],
+    "photos": [
+      {
+        "src": "/photos/ct/lyme/chester-hadlyme-ferry.jpg",
+        "thumb": "/photos/ct/lyme/chester-hadlyme-ferry_thumb.jpg",
+        "title": "Chester-Hadlyme Ferry",
+        "description": "The Chester-Hadlyme Ferry, photographed from the Hadlyme landing in Lyme.",
+        "author": "John Phelan",
+        "license": "CC BY 4.0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Chester_Hadlyme_Ferry,_Hadlyme_CT.jpg"
+      },
+      {
+        "src": "/photos/ct/lyme/hamburg-cove.jpg",
+        "thumb": "/photos/ct/lyme/hamburg-cove_thumb.jpg",
+        "title": "Hamburg Cove",
+        "description": "Hamburg Cove, at the mouth of the Eightmile River in Lyme.",
+        "author": "MMDA-Photos",
+        "license": "CC BY-SA 4.0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:MMDA-Photos_-_2024-11-08_-_Hamburg_Cove_Lyme_CT.jpg"
+      },
+      {
+        "src": "/photos/ct/lyme/nehantic-state-forest.jpg",
+        "thumb": "/photos/ct/lyme/nehantic-state-forest_thumb.jpg",
+        "title": "Nehantic State Forest",
+        "description": "Norwich Pond in Nehantic State Forest.",
+        "author": "Magicpiano",
+        "license": "CC BY-SA 4.0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:NehanticSF_NorwichPond.jpg"
+      }
+    ]
+  },
+  "places": [
+    {
+      "slug": "nehantic-state-forest",
+      "name": "Nehantic State Forest",
+      "kind": "park",
+      "town": "Lyme",
+      "state": "Connecticut",
+      "county": "New London County",
+      "address": "Route 156, Lyme, CT 06371",
+      "official_url": "https://ctparks.com/parks/nehantic-state-forest",
+      "summary": "About 4,400 acres with 12 miles of trails of varying difficulty, including the blue-blazed Nayantaquit Trail, and overlooks such as Nickerson Hill. Boat launches at Norwich Pond and Uncas Lake; 24-hour access is permitted for fishing only. Open daily 8 a.m. to sunset, free, leashed pets. Phone (860) 739-5471.",
+      "status": "open",
+      "photos": [
+        {
+          "src": "/photos/ct/lyme/nehantic-state-forest.jpg",
+          "thumb": "/photos/ct/lyme/nehantic-state-forest_thumb.jpg",
+          "title": "Nehantic State Forest",
+          "description": "Norwich Pond in Nehantic State Forest.",
+          "author": "Magicpiano",
+          "license": "CC BY-SA 4.0",
+          "source_url": "https://commons.wikimedia.org/wiki/File:NehanticSF_NorwichPond.jpg"
+        }
+      ]
+    },
+    {
+      "slug": "selden-neck-state-park",
+      "name": "Selden Neck State Park",
+      "kind": "park",
+      "town": "Lyme",
+      "state": "Connecticut",
+      "county": "New London County",
+      "address": "Lyme, CT 06371 (island in the Connecticut River, boat access only)",
+      "official_url": "https://ctparks.com/node/130",
+      "summary": "A 607-acre island in the Connecticut River, once a farm and granite quarry, with woodland hiking trails and four primitive river campsites — Cedars, Hogback, Springledge and Quarry Knob. Accessible only by boat. Open daily 8 a.m. to sunset, free entry; 2026 camping season May 1-September 30, reservations via Reserve America.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "hartman-park-lyme",
+      "name": "Hartman Park",
+      "kind": "park",
+      "town": "Lyme",
+      "state": "Connecticut",
+      "county": "New London County",
+      "address": "Gungy Road, Lyme, CT 06371",
+      "official_url": "https://www.lymelandtrust.org/properties/hartman-park/",
+      "summary": "302 acres cooperatively owned and managed by the Town of Lyme and the Lyme Land Conservation Trust, with roughly 9 miles of trails past archaeological ruins and beaver activity. Connecting preserves extend the network to 422 acres and about 12 miles of trail. Use the Hartman Field entrance on Gungy Road for easiest access.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "lyme-public-hall",
+      "name": "Lyme Public Hall & Local History Archives",
+      "kind": "museum",
+      "town": "Lyme",
+      "state": "Connecticut",
+      "county": "New London County",
+      "address": "249 Hamburg Road (Route 156), Lyme, CT 06371",
+      "official_url": "https://lymepublichall.org/",
+      "summary": "Built in 1887, Lyme's community gathering place hosts concerts, lectures, exhibits and an annual fall tag sale. The town's Local History Archives, housed at the Lyme Public Library, holds photographs, diaries and family documents relating to Lyme residents.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "hamburg-fair",
+      "name": "Hamburg Fair",
+      "kind": "attraction",
+      "town": "Lyme",
+      "state": "Connecticut",
+      "county": "New London County",
+      "address": "2 Sterling City Road, Lyme, CT 06371",
+      "official_url": "https://hamburgfair.org/",
+      "summary": "A small-town agricultural fair founded in 1897, with carnival rides, food concessions, farm-animal exhibits and live music, held annually on a weekend in late August. Proceeds support the Grange Association and Lyme EMS. Check hamburgfair.org for current-year dates.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "beaver-brook-farm-lyme",
+      "name": "Beaver Brook Farm",
+      "kind": "attraction",
+      "town": "Lyme",
+      "state": "Connecticut",
+      "county": "New London County",
+      "address": "139 Beaver Brook Road, Lyme, CT 06371",
+      "official_url": "https://www.beaverbrookfarm.com/",
+      "summary": "Home to the Sankow family since 1917, the 175-acre farm added sheep in 1984 and cattle in 2002, now producing artisan sheep and cow's-milk cheeses, ricotta-based spreads, lamb, poultry and wool. Specific store hours are not posted online — call (860) 434-2843 before visiting.",
+      "status": "open",
+      "photos": []
+    }
+  ],
+  "entries": [
+    {
+      "kind": "sight",
+      "name": "Nehantic State Forest",
+      "place_slug": "nehantic-state-forest",
+      "note": "4,400 acres with 12 miles of trails and two boat launches."
+    },
+    {
+      "kind": "sight",
+      "name": "Selden Neck State Park",
+      "place_slug": "selden-neck-state-park",
+      "note": "A 607-acre Connecticut River island, boat access only."
+    },
+    {
+      "kind": "walk",
+      "name": "Hartman Park",
+      "place_slug": "hartman-park-lyme",
+      "note": "302 acres with about 9 miles of trails past archaeological ruins."
+    },
+    {
+      "kind": "sight",
+      "name": "Lyme Public Hall & Local History Archives",
+      "place_slug": "lyme-public-hall",
+      "note": "An 1887 gathering place hosting concerts and a fall tag sale."
+    },
+    {
+      "kind": "sight",
+      "name": "Hamburg Fair",
+      "place_slug": "hamburg-fair",
+      "note": "A small-town agricultural fair founded in 1897."
+    },
+    {
+      "kind": "food",
+      "name": "Beaver Brook Farm",
+      "place_slug": "beaver-brook-farm-lyme",
+      "note": "Artisan sheep and cow's-milk cheeses since the Sankow family arrived in 1917."
+    }
+  ],
+  "links": [
+    {
+      "target": "guide:old-lyme-ct-travel-guide",
+      "kind": "nearby",
+      "note": "Lyme borders Old Lyme, which split off from it in 1855 and was renamed in 1857."
+    },
+    {
+      "target": "guide:east-haddam-ct-travel-guide",
+      "kind": "nearby",
+      "note": "Lyme borders East Haddam; the Chester-Hadlyme Ferry lands in Hadlyme village on their shared line."
+    },
+    {
+      "target": "guide:east-lyme-ct-travel-guide",
+      "kind": "shared-history",
+      "note": "East Lyme separated from Lyme in 1823, sixteen years before its own incorporation."
+    }
+  ]
+}

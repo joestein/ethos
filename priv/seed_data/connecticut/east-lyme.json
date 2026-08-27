@@ -1,0 +1,316 @@
+{
+  "guide": {
+    "slug": "east-lyme-ct-travel-guide",
+    "title": "East Lyme, Connecticut: A Saltbox, a Submarine and Niantic Beach",
+    "destination": "East Lyme, Connecticut",
+    "state": "Connecticut",
+    "county": "New London County",
+    "intro": "East Lyme's name traces to its colonial church: residents on the west bank of the Niantic River formed their own congregation in 1719, becoming the \"Second or East Ecclesiastical Society of Lyme,\" which eventually gave the area its name. First settled in the mid-1600s, the town incorporated in 1839 from parts of Lyme and Waterford, comprising the shore village of Niantic and inland Flanders. Fishing, quarrying and shipbuilding were the town's defining industries — by the 1840s a fleet of more than forty vessels worked out of the Niantic River, and granite quarrying begun around 1815 drew English stoneworkers. The railroad's arrival in 1851 remade the shoreline, as fishing, shipyards and quarries gave way to summer resorts and camp-meeting grounds. East Lyme's best-known native son is Ezra Lee, who in 1776 piloted the Turtle, the first American submarine, against a British warship in New York Harbor.",
+    "sections": [
+      {
+        "heading": "From fishing fleet to summer resort",
+        "body": "The Nehantic people wintered in the hills and summered along the shore here before the tribe was declared officially extinct in 1880; descendants still gather each summer at the Thomas Lee House grounds. That house, on West Main Street, dates to the late 1660s and is one of the oldest wood-frame houses in Connecticut; it stayed in the Lee family until the late 1800s, faced demolition in 1914, and was rescued and restored by the East Lyme Historical Society, reopening on June 9, 1915. Ezra Lee, born in the town, piloted the Turtle submarine in 1776 in an attempt to attach explosives to a British warship in New York Harbor; the Lee House barn now displays exhibits on the episode. When the railroad reached East Lyme in 1851, the fishing fleet, shipyards and granite quarries that had defined the town's economy gave way to summer residences and resorts, setting up the beach-town character visitors find today."
+      },
+      {
+        "heading": "Getting there",
+        "body": "East Lyme sits on I-95 roughly midway between New York and Boston: take Exit 74 from the north for Flanders or Niantic village, or Exit 72 from the south for Niantic, with Route 156 running the shore road through Niantic past Rocky Neck State Park. Amtrak's Northeast Corridor and CTrail Shore Line East tracks cross the Niantic River in town, but neither stops here — rail travelers get off at New London to the east or Old Saybrook to the west, both on the Shore Line East corridor, and finish the trip by car."
+      },
+      {
+        "heading": "Niantic's beaches, boardwalk and books",
+        "body": "Rocky Neck State Park's half-mile crescent of white-sand beach and boardwalk centers on the Ellie Mitchell Pavilion, built 1934-1937 with Depression-era WPA labor from the park's own stone walls and fieldstone hauled from Devil's Hopyard State Park. The 1.1-mile Niantic Bay Boardwalk links Cini Park to Hole-in-the-Wall beach, and McCook Point Park adds two more white-sand beaches about two miles east. The Book Barn, a sprawling secondhand bookshop spread across three shops within a mile of each other, stocks more than 350,000 volumes among gardens and resident farm animals. For dinner, Flanders Fish Market & Restaurant has sourced through the Boston Fish Pier since 1983, and Skipper's Seafood has served the shore since 2003."
+      }
+    ],
+    "faq": [
+      {
+        "question": "How do I get to East Lyme?",
+        "answer": "By car — I-95 Exit 74 serves Flanders and Niantic from the north, Exit 72 serves Niantic from the south, and Route 156 is the shore road through Niantic. There is no rail station in East Lyme; the nearest is New London to the east or Old Saybrook to the west, both on the Shore Line East corridor."
+      },
+      {
+        "question": "Is there a train to East Lyme or Niantic?",
+        "answer": "No. Amtrak and CTrail Shore Line East tracks cross the Niantic River in town, but no train stops there. Shore Line East's nine stations run New Haven to New London; the nearest are New London and Old Saybrook."
+      },
+      {
+        "question": "What is the Thomas Lee House?",
+        "answer": "One of the oldest wood-frame houses in Connecticut, dating to the late 1660s, saved from demolition in 1914 by the East Lyme Historical Society and reopened in 1915. The adjoining Little Boston School barn holds exhibits on the Nehantic people and Ezra Lee's Revolutionary War submarine, the Turtle."
+      },
+      {
+        "question": "What beaches are in East Lyme?",
+        "answer": "Rocky Neck State Park has a half-mile crescent beach and boardwalk; McCook Point Park and the town's Niantic Bay Boardwalk, linking Cini Park to Hole-in-the-Wall beach, are both in Niantic village."
+      },
+      {
+        "question": "Is there a hotel in East Lyme?",
+        "answer": "The Niantic Inn, a 24-room seaside hotel across from Hole-in-the-Wall beach, and The Inn at Harbor Hill Marina, a 16-suite waterfront bed and breakfast on Niantic Bay, are both verified and open year-round."
+      }
+    ],
+    "photos": [
+      {
+        "src": "/photos/ct/east-lyme/rocky-neck-pavilion.jpg",
+        "thumb": "/photos/ct/east-lyme/rocky-neck-pavilion_thumb.jpg",
+        "title": "Ellie Mitchell Pavilion, Rocky Neck State Park",
+        "description": "The 1930s WPA stone-and-timber pavilion at Rocky Neck State Park.",
+        "author": "Bjturon",
+        "license": "CC BY-SA 4.0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Rocky_Neck_State_Park_Pavillion_IMG_6095_(2)_6x8.jpg"
+      },
+      {
+        "src": "/photos/ct/east-lyme/niantic-boardwalk.jpg",
+        "thumb": "/photos/ct/east-lyme/niantic-boardwalk_thumb.jpg",
+        "title": "Niantic Bay Boardwalk",
+        "description": "The Niantic Bay Boardwalk along the seawall, with Niantic Bay beyond.",
+        "author": "Pi.1415926535",
+        "license": "CC BY-SA 3.0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Niantic_Boardwalk,_June_2013.JPG"
+      },
+      {
+        "src": "/photos/ct/east-lyme/thomas-lee-house.jpg",
+        "thumb": "/photos/ct/east-lyme/thomas-lee-house_thumb.jpg",
+        "title": "Thomas Lee House",
+        "description": "The Thomas Lee House, a dark-stained 1660s saltbox on West Main Street in Niantic.",
+        "author": "Dmcoxe",
+        "license": "CC BY-SA 3.0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Thomas_Lee_House.jpg"
+      }
+    ]
+  },
+  "places": [
+    {
+      "slug": "rocky-neck-state-park",
+      "name": "Rocky Neck State Park",
+      "kind": "park",
+      "town": "East Lyme",
+      "state": "Connecticut",
+      "county": "New London County",
+      "address": "244 West Main Street, Niantic, CT 06357",
+      "official_url": "https://ctparks.com/node/122",
+      "summary": "A 710-acre coastal park between a salt marsh and tidal river on Long Island Sound, with a half-mile crescent of white-sand beach, a boardwalk with viewing platforms, about five miles of trails, a 160-site campground and three rustic cabins. The Ellie Mitchell Pavilion, built 1934-1937 with WPA labor, is on the National Register of Historic Places. Open daily 8 a.m. to sunset; free for in-state vehicles.",
+      "status": "open",
+      "photos": [
+        {
+          "src": "/photos/ct/east-lyme/rocky-neck-pavilion.jpg",
+          "thumb": "/photos/ct/east-lyme/rocky-neck-pavilion_thumb.jpg",
+          "title": "Ellie Mitchell Pavilion, Rocky Neck State Park",
+          "description": "The 1930s WPA stone-and-timber pavilion at Rocky Neck State Park.",
+          "author": "Bjturon",
+          "license": "CC BY-SA 4.0",
+          "source_url": "https://commons.wikimedia.org/wiki/File:Rocky_Neck_State_Park_Pavillion_IMG_6095_(2)_6x8.jpg"
+        }
+      ]
+    },
+    {
+      "slug": "thomas-lee-house-east-lyme",
+      "name": "Thomas Lee House and Little Boston School",
+      "kind": "historic-site",
+      "town": "East Lyme",
+      "state": "Connecticut",
+      "county": "New London County",
+      "address": "228 West Main Street, Niantic, CT 06357",
+      "official_url": "https://eastlymehistoricalsociety.org/",
+      "summary": "One of the oldest wood-frame houses in Connecticut, built in the late 1660s and saved from demolition in 1914 by the East Lyme Historical Society. The adjoining Little Boston School, founded 1734 with the present schoolhouse built 1803, moved to the grounds in 1931; its barn displays Nehantic artifacts and exhibits on Ezra Lee's Revolutionary War submarine, the Turtle. Regular season opens in summer, Wednesday-Sunday 1-4 p.m. — call ahead to confirm dates.",
+      "status": "open",
+      "photos": [
+        {
+          "src": "/photos/ct/east-lyme/thomas-lee-house.jpg",
+          "thumb": "/photos/ct/east-lyme/thomas-lee-house_thumb.jpg",
+          "title": "Thomas Lee House",
+          "description": "The Thomas Lee House, a dark-stained 1660s saltbox on West Main Street in Niantic.",
+          "author": "Dmcoxe",
+          "license": "CC BY-SA 3.0",
+          "source_url": "https://commons.wikimedia.org/wiki/File:Thomas_Lee_House.jpg"
+        }
+      ]
+    },
+    {
+      "slug": "niantic-childrens-museum",
+      "name": "Niantic Children's Museum",
+      "kind": "museum",
+      "town": "East Lyme",
+      "state": "Connecticut",
+      "county": "New London County",
+      "address": "409 Main Street, Niantic, CT 06357",
+      "official_url": "https://www.nianticchildrensmuseum.org/",
+      "summary": "A hands-on museum for children roughly 9 months to 9 years, with rotating exhibits — a fishing-boat piloting station, a Global Village cultural room, live animals, a pipe organ and an outdoor musical playscape — beside Hole-in-the-Wall beach and the Niantic Bay Boardwalk. Summer hours Monday-Saturday 9:30 a.m.-4:30 p.m., Sunday noon-3:30 p.m.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "the-book-barn-niantic",
+      "name": "The Book Barn",
+      "kind": "attraction",
+      "town": "East Lyme",
+      "state": "Connecticut",
+      "county": "New London County",
+      "address": "41 West Main Street, Niantic, CT 06357 (Main Barn; two further shops, Chapter Three at 55 West Main Street and Downtown at 65 Pennsylvania Avenue, within about a mile)",
+      "official_url": "https://bookbarnniantic.com/",
+      "summary": "A secondhand and rare bookshop spread across three shops within about a mile of each other, stocking over 350,000 books, with gardens, outdoor games and resident farm animals at the Main Barn. Open daily 11 a.m.-6 p.m. April-October; Wednesday-Sunday 11 a.m.-6 p.m. November-March.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "niantic-bay-boardwalk",
+      "name": "Niantic Bay Boardwalk",
+      "kind": "park",
+      "town": "East Lyme",
+      "state": "Connecticut",
+      "county": "New London County",
+      "address": "30 Main Street, Niantic, CT 06357",
+      "official_url": "https://nianticmainstreet.org/business/niantic-bay-boardwalk/",
+      "summary": "A 1.1-mile waterfront boardwalk along Long Island Sound linking Cini Park to Hole-in-the-Wall beach, with parking at either end and the Main Street shops and restaurants a short walk away.",
+      "status": "open",
+      "photos": [
+        {
+          "src": "/photos/ct/east-lyme/niantic-boardwalk.jpg",
+          "thumb": "/photos/ct/east-lyme/niantic-boardwalk_thumb.jpg",
+          "title": "Niantic Bay Boardwalk",
+          "description": "The Niantic Bay Boardwalk along the seawall, with Niantic Bay beyond.",
+          "author": "Pi.1415926535",
+          "license": "CC BY-SA 3.0",
+          "source_url": "https://commons.wikimedia.org/wiki/File:Niantic_Boardwalk,_June_2013.JPG"
+        }
+      ]
+    },
+    {
+      "slug": "mccook-point-park",
+      "name": "McCook Point Park",
+      "kind": "park",
+      "town": "East Lyme",
+      "state": "Connecticut",
+      "county": "New London County",
+      "address": "10 Atlantic Street, Niantic, CT 06357",
+      "official_url": "https://nianticmainstreet.org/business/mccook-point-park/",
+      "summary": "A town-owned shorefront park about two miles east of Rocky Neck State Park, known locally as \"McCooks,\" with two white-sand beaches, a bandshell, pavilion, playground and restrooms with outdoor showers. Access is year-round; beach passes are required Memorial Day through Labor Day.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "flanders-fish-market-restaurant",
+      "name": "Flanders Fish Market & Restaurant",
+      "kind": "restaurant",
+      "town": "East Lyme",
+      "state": "Connecticut",
+      "county": "New London County",
+      "address": "22 Chesterfield Road, East Lyme, CT 06333",
+      "official_url": "https://www.flandersfish.com/",
+      "summary": "A family-owned fish market and restaurant open since 1983, sourcing through the Boston Fish Pier. Signature dishes include lobster pot pie, lobster bisque and clam chowder, alongside live lobster for sale. Phone (860) 739-8866.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "skippers-seafood-niantic",
+      "name": "Skipper's Seafood",
+      "kind": "restaurant",
+      "town": "East Lyme",
+      "state": "Connecticut",
+      "county": "New London County",
+      "address": "167 Main Street, Niantic, CT 06357",
+      "official_url": "https://www.skippersseafood.com/",
+      "summary": "A Niantic seafood house established in 2003, serving lobster rolls, fish and chips and clam chowder alongside a Greek menu. Open Mon-Thu 11 a.m.-8 p.m., Fri-Sun 11 a.m.-9 p.m., with take-out daily until 7 p.m. Phone (860) 739-3230.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "inn-at-harbor-hill-marina",
+      "name": "The Inn at Harbor Hill Marina",
+      "kind": "bnb",
+      "town": "East Lyme",
+      "state": "Connecticut",
+      "county": "New London County",
+      "address": "60 Grand Street, Niantic, CT 06357",
+      "official_url": "https://www.innharborhill.com/",
+      "summary": "A waterfront bed and breakfast on Niantic Bay with 16 individually decorated suites, king or queen beds and private baths, some with soaking tubs and fireplaces. Complimentary breakfast and WiFi included; open year-round. Phone (860) 739-0331.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "the-niantic-inn",
+      "name": "The Niantic Inn",
+      "kind": "hotel",
+      "town": "East Lyme",
+      "state": "Connecticut",
+      "county": "New London County",
+      "address": "345 Main Street, Niantic, CT 06357",
+      "official_url": "https://www.thenianticinn.com/",
+      "summary": "A 24-room seaside hotel directly across from Hole-in-the-Wall beach, with studio and efficiency rooms, refrigerators, microwaves and free WiFi. Complimentary beach passes are included when booking directly on the inn's own site. Phone (860) 739-5451.",
+      "status": "open",
+      "photos": []
+    }
+  ],
+  "entries": [
+    {
+      "kind": "sight",
+      "name": "Rocky Neck State Park",
+      "place_slug": "rocky-neck-state-park",
+      "note": "710 coastal acres with a crescent beach and the WPA-built Ellie Mitchell Pavilion."
+    },
+    {
+      "kind": "sight",
+      "name": "Thomas Lee House and Little Boston School",
+      "place_slug": "thomas-lee-house-east-lyme",
+      "note": "A 1660s saltbox, one of Connecticut's oldest wood-frame houses."
+    },
+    {
+      "kind": "sight",
+      "name": "Niantic Children's Museum",
+      "place_slug": "niantic-childrens-museum",
+      "note": "Hands-on exhibits for young children beside the boardwalk."
+    },
+    {
+      "kind": "walk",
+      "name": "The Book Barn",
+      "place_slug": "the-book-barn-niantic",
+      "note": "Three secondhand bookshops with over 350,000 volumes."
+    },
+    {
+      "kind": "walk",
+      "name": "Niantic Bay Boardwalk",
+      "place_slug": "niantic-bay-boardwalk",
+      "note": "A 1.1-mile waterfront walk from Cini Park to Hole-in-the-Wall beach."
+    },
+    {
+      "kind": "sight",
+      "name": "McCook Point Park",
+      "place_slug": "mccook-point-park",
+      "note": "Two more white-sand beaches, two miles east of Rocky Neck."
+    },
+    {
+      "kind": "food",
+      "name": "Flanders Fish Market & Restaurant",
+      "place_slug": "flanders-fish-market-restaurant",
+      "note": "Family-owned since 1983, sourcing from the Boston Fish Pier."
+    },
+    {
+      "kind": "food",
+      "name": "Skipper's Seafood",
+      "place_slug": "skippers-seafood-niantic",
+      "note": "A Niantic seafood house since 2003."
+    },
+    {
+      "kind": "stay",
+      "name": "The Inn at Harbor Hill Marina",
+      "place_slug": "inn-at-harbor-hill-marina",
+      "note": "A 16-suite waterfront bed and breakfast on Niantic Bay."
+    },
+    {
+      "kind": "stay",
+      "name": "The Niantic Inn",
+      "place_slug": "the-niantic-inn",
+      "note": "A 24-room hotel across from Hole-in-the-Wall beach."
+    }
+  ],
+  "links": [
+    {
+      "target": "guide:waterford-ct-travel-guide",
+      "kind": "nearby",
+      "note": "East Lyme was formed in 1839 from parts of Lyme and Waterford, and still borders Waterford."
+    },
+    {
+      "target": "guide:lyme-ct-travel-guide",
+      "kind": "shared-history",
+      "note": "East Lyme separated from Lyme in 1823, sixteen years before its own 1839 incorporation."
+    },
+    {
+      "target": "guide:new-london-ct-travel-guide",
+      "kind": "same-region",
+      "note": "New London Union Station, east of East Lyme on the Shore Line East corridor, is the nearest passenger rail stop for East Lyme travelers."
+    }
+  ]
+}

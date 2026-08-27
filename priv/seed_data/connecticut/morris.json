@@ -1,0 +1,299 @@
+{
+  "guide": {
+    "slug": "morris-ct-travel-guide",
+    "title": "Morris, Connecticut: South Farms on Connecticut's Largest Lake",
+    "destination": "Morris, Connecticut",
+    "state": "Connecticut",
+    "county": "Litchfield County",
+    "intro": "Europeans began settling the area around 1723, calling it \"South Farms\" because it lay about five miles south of Litchfield's center; the parish organized formally in 1767, and the section remained part of Litchfield until incorporating as a separate town in 1859, named for James Morris, a Yale graduate and Continental Army officer who fought at Long Island, White Plains and Germantown before becoming an educator. His Morris Academy, established in 1803, was one of the nation's first coeducational secondary schools, drawing students from 63 Connecticut towns, 15 states and 10 countries before closing in 1888. Columbia University ran a summer engineering field school on Route 109 from 1885 until 1983, growing to a 500-plus-acre campus; Connecticut bought the property in 2000, and only a stone tower, boathouse and instrument house remain. Morris contains most of Bantam Lake, Connecticut's largest natural lake at roughly 947 acres.",
+    "sections": [
+      {
+        "heading": "South Farms to a Yale man's academy",
+        "body": "James Morris fought at Long Island, White Plains and Germantown — where he was captured and later exchanged — and served under Alexander Hamilton at Yorktown before turning to education; his Morris Academy trained more than 1,200 students, including abolitionist John Brown and Harriet Beecher Stowe's brothers William and Henry Ward Beecher, before closing in 1888. Camp Columbia's 500-plus-acre campus, used by Columbia University's engineering students from 1885, included dormitories, a mess hall and an observatory beneath its 60-foot stone tower, a gift of the Class of 1906; the state bought the property for $2.1 million in 2000."
+      },
+      {
+        "heading": "Getting there",
+        "body": "Morris has no railroad station and no interstate of its own — it's a drive-to town reached on US Route 202 and Connecticut Routes 61, 63, 109 and 209, roughly 12 miles northwest of Waterbury, the nearest interstate access at I-84. The closest passenger rail is Metro-North's Waterbury Branch, terminating in Waterbury, but Branch trains are replaced by buses from July 20, 2026 through May 31, 2027 for station reconstruction, so driving is the only practical approach through spring 2027; Amtrak connections are made at New Haven Union Station."
+      },
+      {
+        "heading": "Bantam Lake and South Farms",
+        "body": "Bantam Lake, Connecticut's largest natural lake at roughly 947 acres, has two public beaches — Sandy Beach, run through a joint Morris-Litchfield arrangement, and a boat launch off East Shore Road. South Farms, a working farm and event destination centered on the White Barn, runs public programming including a summer Thursday-night music-and-food series called The Social. Winvian Farm, an 18-cottage luxury resort on 113 acres, anchors Morris's dining and lodging alongside the more casual La Guera Cantina and West Shore Seafood on the lake."
+      }
+    ],
+    "faq": [
+      {
+        "question": "How do I get to Morris?",
+        "answer": "By car — US Route 202 and Connecticut Routes 61, 63, 109 and 209 all serve the town, roughly 12 miles northwest of Waterbury, the nearest interstate access at I-84. There's no rail station in Morris; the closest is Metro-North's Waterbury Branch terminus in Waterbury, but Branch trains are replaced by buses from July 20, 2026 through May 31, 2027 for station reconstruction."
+      },
+      {
+        "question": "Can I visit Camp Columbia?",
+        "answer": "Yes — Camp Columbia State Park and Forest is open for hiking on the former 500-plus-acre Columbia University field-school site. The stone observation tower, boathouse and instrument house survive among the regrown forest; the state bought the property in 2000."
+      },
+      {
+        "question": "Can I swim in Bantam Lake?",
+        "answer": "Yes, at Sandy Beach on East Shore Road, the larger of the lake's two public beaches, run through a joint Morris-Litchfield arrangement with lifeguards, a canoe launch and a snack shack. There's also a public boat launch off East Shore Road."
+      },
+      {
+        "question": "What is South Farms?",
+        "answer": "A working farm and event destination centered on the White Barn, running public ticketed programming including \"The Social,\" a summer Thursday-night series with live music and food, plus chef dinners and wine tastings."
+      },
+      {
+        "question": "Where can I eat and stay in Morris?",
+        "answer": "Winvian Farm's restaurant is Morris's fine-dining anchor, with La Guera Cantina and West Shore Seafood for something more casual. Winvian's 18 architect-designed cottages and Camp David's lakefront cottages on Bantam Lake are the town's lodging options."
+      }
+    ],
+    "photos": [
+      {
+        "src": "/photos/ct/morris/bantam-lake-morris.jpg",
+        "thumb": "/photos/ct/morris/bantam-lake-morris_thumb.jpg",
+        "title": "Bantam Lake shoreline",
+        "description": "The shoreline of Bantam Lake, Connecticut's largest natural lake, in Morris.",
+        "author": "John Phelan",
+        "license": "CC BY-SA 4.0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Bantam_Lake,_Morris_CT.jpg"
+      },
+      {
+        "src": "/photos/ct/morris/morris-community-hall.jpg",
+        "thumb": "/photos/ct/morris/morris-community-hall_thumb.jpg",
+        "title": "Morris Community Hall",
+        "description": "Morris Community Hall and the adjacent church on South Street.",
+        "author": "John Phelan",
+        "license": "CC BY-SA 4.0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Morris_Community_Hall,_Morris_CT.jpg"
+      }
+    ]
+  },
+  "places": [
+    {
+      "slug": "camp-columbia-state-park-forest",
+      "name": "Camp Columbia State Park and Forest",
+      "kind": "historic-site",
+      "town": "Morris",
+      "state": "Connecticut",
+      "county": "Litchfield County",
+      "address": "West Street (Route 109), Morris, CT 06763",
+      "official_url": "https://www.ctvisit.com/listings/camp-columbis-state-parkforest",
+      "summary": "The former Columbia University engineering field school (1885-1983); the state bought the 500-plus-acre property for $2.1 million in 2000, and the stone tower given by the Class of 1906, the boathouse and the instrument house still stand among the regrown forest. Open for hiking.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "sandy-beach-bantam-lake",
+      "name": "Sandy Beach on Bantam Lake",
+      "kind": "park",
+      "town": "Morris",
+      "state": "Connecticut",
+      "county": "Litchfield County",
+      "address": "Bantam Lake, East Shore Road, Morris, CT 06763",
+      "summary": "Lifeguard-protected swimming, swim instruction, changing rooms, volleyball, a canoe launch, snack shack and a float with a slide — the larger of Bantam Lake's two public beaches, run through a joint Morris-Litchfield arrangement. Phone (860) 567-5871.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "bantam-lake",
+      "name": "Bantam Lake",
+      "kind": "park",
+      "town": "Morris",
+      "state": "Connecticut",
+      "county": "Litchfield County",
+      "address": "East Shore Drive, Morris, CT 06763",
+      "summary": "Connecticut's largest natural lake at roughly 947 acres, used for sailing, ice boating, freshwater fishing and ice fishing. The boat launch is reached via East Shore Road off Route 109, with parking limited; the protected northern end is managed by the White Memorial Foundation, based in neighboring Litchfield.",
+      "status": "open",
+      "photos": [
+        {
+          "src": "/photos/ct/morris/bantam-lake-morris.jpg",
+          "thumb": "/photos/ct/morris/bantam-lake-morris_thumb.jpg",
+          "title": "Bantam Lake shoreline",
+          "description": "The shoreline of Bantam Lake, Connecticut's largest natural lake, in Morris.",
+          "author": "John Phelan",
+          "license": "CC BY-SA 4.0",
+          "source_url": "https://commons.wikimedia.org/wiki/File:Bantam_Lake,_Morris_CT.jpg"
+        }
+      ]
+    },
+    {
+      "slug": "south-farms",
+      "name": "South Farms",
+      "kind": "attraction",
+      "town": "Morris",
+      "state": "Connecticut",
+      "county": "Litchfield County",
+      "address": "21 Higbie Road, Morris, CT 06763",
+      "official_url": "https://southfarms.org/",
+      "summary": "A working farm and event destination centered on the White Barn, running public ticketed programming beyond weddings — including \"The Social,\" a summer Thursday-night series with live music and food, plus chef dinners and wine tastings. Phone (860) 567-9847.",
+      "status": "open",
+      "photos": [
+        {
+          "src": "/photos/ct/morris/morris-community-hall.jpg",
+          "thumb": "/photos/ct/morris/morris-community-hall_thumb.jpg",
+          "title": "Morris Community Hall",
+          "description": "Morris Community Hall and the adjacent church on South Street.",
+          "author": "John Phelan",
+          "license": "CC BY-SA 4.0",
+          "source_url": "https://commons.wikimedia.org/wiki/File:Morris_Community_Hall,_Morris_CT.jpg"
+        }
+      ]
+    },
+    {
+      "slug": "restaurant-at-winvian-farm",
+      "name": "The Restaurant at Winvian Farm",
+      "kind": "restaurant",
+      "town": "Morris",
+      "state": "Connecticut",
+      "county": "Litchfield County",
+      "address": "155 Alain White Road, Morris, CT 06763",
+      "official_url": "https://winvian.com/dining/",
+      "summary": "Seasonal fine dining on the AAA Five Diamond Winvian Farm property, led by Executive Chef Chris Eddy and drawing on the property's organic garden; a Wine Spectator Best of Award of Excellence winner. Reservations required, (860) 393-3004. The casual Maggie's Tavern is on the same property.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "la-guera-cantina",
+      "name": "La Güera Cantina",
+      "kind": "restaurant",
+      "town": "Morris",
+      "state": "Connecticut",
+      "county": "Litchfield County",
+      "address": "5 Watertown Road, Morris, CT 06763",
+      "official_url": "https://lagueracantina.com/",
+      "summary": "A Mexican cantina known for birria tacos, al pastor and margaritas, with a second location in New Preston. Open daily 11 a.m.-9 p.m.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "west-shore-seafood",
+      "name": "West Shore Seafood",
+      "kind": "restaurant",
+      "town": "Morris",
+      "state": "Connecticut",
+      "county": "Litchfield County",
+      "address": "449 Bantam Lake Road, Morris, CT 06763",
+      "official_url": "https://westshoreseafood.com/",
+      "summary": "A casual seafood spot on Bantam Lake known for clam strips and lobster rolls. Hours run roughly Wednesday-Thursday 2-8 p.m., Friday-Saturday 11 a.m.-9 p.m., Sunday noon-7 p.m., closed Monday-Tuesday — call to confirm. Phone (860) 567-8000.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "popeys-ice-cream-shoppe",
+      "name": "Popey's Ice Cream Shoppe",
+      "kind": "cafe",
+      "town": "Morris",
+      "state": "Connecticut",
+      "county": "Litchfield County",
+      "address": "7 West Street, Morris, CT 06763",
+      "summary": "An old-style drive-in serving ice cream plus burgers and hot dogs. Hours run roughly Tuesday-Thursday and Sunday 11 a.m.-9 p.m., Friday-Saturday 11 a.m.-9:30 p.m., closed Monday; no official website — call ahead. Phone (860) 567-0504.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "winvian-farm",
+      "name": "Winvian Farm",
+      "kind": "hotel",
+      "town": "Morris",
+      "state": "Connecticut",
+      "county": "Litchfield County",
+      "address": "155 Alain White Road, Morris, CT 06763",
+      "official_url": "https://winvian.com/",
+      "summary": "A Relais & Châteaux, AAA Five Diamond property with 18 individually designed cottages and one suite by 15 different architects across 113 acres, plus a destination spa and organic garden. Reservations (860) 567-9600.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "camp-david-bantam-lake",
+      "name": "Camp David Bantam Lake",
+      "kind": "bnb",
+      "town": "Morris",
+      "state": "Connecticut",
+      "county": "Litchfield County",
+      "address": "382 Bantam Lake Road, Morris, CT 06763",
+      "official_url": "https://www.campdavidct.com/",
+      "summary": "Four furnished lakefront cottages — Lakefront, Viewpoint, Maplecrest and Hilltop — with a lake-view community room, complimentary kayaks, grills, fire pits and about 100 feet of private shoreline.",
+      "status": "open",
+      "photos": []
+    }
+  ],
+  "entries": [
+    {
+      "kind": "sight",
+      "name": "Camp Columbia State Park and Forest",
+      "place_slug": "camp-columbia-state-park-forest",
+      "note": "A former Columbia University field school, now a hiking park."
+    },
+    {
+      "kind": "sight",
+      "name": "Sandy Beach on Bantam Lake",
+      "place_slug": "sandy-beach-bantam-lake",
+      "note": "Lifeguarded swimming on Connecticut's largest natural lake."
+    },
+    {
+      "kind": "walk",
+      "name": "Bantam Lake",
+      "place_slug": "bantam-lake",
+      "note": "947 acres of sailing, fishing and ice boating."
+    },
+    {
+      "kind": "sight",
+      "name": "South Farms",
+      "place_slug": "south-farms",
+      "note": "A working farm with public music, food and wine events."
+    },
+    {
+      "kind": "food",
+      "name": "The Restaurant at Winvian Farm",
+      "place_slug": "restaurant-at-winvian-farm",
+      "note": "Seasonal fine dining on an AAA Five Diamond property."
+    },
+    {
+      "kind": "food",
+      "name": "La Güera Cantina",
+      "place_slug": "la-guera-cantina",
+      "note": "Birria tacos, al pastor and margaritas."
+    },
+    {
+      "kind": "food",
+      "name": "West Shore Seafood",
+      "place_slug": "west-shore-seafood",
+      "note": "Casual seafood on Bantam Lake."
+    },
+    {
+      "kind": "food",
+      "name": "Popey's Ice Cream Shoppe",
+      "place_slug": "popeys-ice-cream-shoppe",
+      "note": "An old-style ice cream drive-in on West Street."
+    },
+    {
+      "kind": "stay",
+      "name": "Winvian Farm",
+      "place_slug": "winvian-farm",
+      "note": "18 architect-designed cottages on 113 acres."
+    },
+    {
+      "kind": "stay",
+      "name": "Camp David Bantam Lake",
+      "place_slug": "camp-david-bantam-lake",
+      "note": "Four furnished lakefront cottages on Bantam Lake."
+    }
+  ],
+  "links": [
+    {
+      "target": "guide:litchfield-ct-travel-guide",
+      "kind": "nearby",
+      "note": "Bantam Lake spans Morris and Litchfield, and White Memorial Foundation land at the lake's northern end is managed from Litchfield."
+    },
+    {
+      "target": "guide:bethlehem-ct-travel-guide",
+      "kind": "nearby",
+      "note": "Route 61 runs south from Morris to Bethlehem."
+    },
+    {
+      "target": "guide:washington-ct-travel-guide",
+      "kind": "same-region",
+      "note": null
+    },
+    {
+      "target": "guide:watertown-ct-travel-guide",
+      "kind": "same-region",
+      "note": null
+    }
+  ]
+}

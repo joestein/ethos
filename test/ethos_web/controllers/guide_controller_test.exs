@@ -67,6 +67,28 @@ defmodule EthosWeb.GuideControllerTest do
     on_exit(fn -> File.rm(path) end)
   end
 
+  test "an orientation page renders the leaner template", %{conn: conn} do
+    user = user_fixture()
+
+    guide =
+      Ethos.Seeds.DataGuide.upsert_from_file!(
+        Path.expand("../../support/fixtures/seed_data/townville.json", __DIR__),
+        user.email
+      )
+
+    html = conn |> get(~p"/g/#{guide.slug}") |> html_response(200)
+
+    assert html =~ "What's here"
+    assert html =~ "Orientation"
+    refute html =~ "Explore tours"
+
+    # The guide photo carries an attribution-required licence (CC BY 4.0); the
+    # page must credit the photographer and link to the full credit on the
+    # photos page rather than publishing the image bare.
+    assert html =~ "JJBers"
+    assert html =~ ~p"/g/#{guide.slug}/photos"
+  end
+
   test "404s for drafts", %{conn: conn} do
     guide = guide_fixture()
 

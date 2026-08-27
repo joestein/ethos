@@ -1,0 +1,230 @@
+{
+  "guide": {
+    "slug": "haddam-ct-travel-guide",
+    "title": "Haddam, Connecticut: The Town the River Splits in Two",
+    "destination": "Haddam, Connecticut",
+    "state": "Connecticut",
+    "county": "Middlesex County",
+    "intro": "The land that became Haddam and East Haddam was bought from its Native inhabitants in 1662 for 30 coats — roughly 150 square miles whose purchase value probably did not exceed $100. The deed was signed by six Wangunk leaders, two women and four men, who reserved the island in the Connecticut River and 40 acres at Pattaquonk along with their hunting and fishing rights. English settlers first called the tract \"Thirty Mile Island\"; the name changed to Haddam in 1668, and the town was incorporated that October. Haddam is the only town in Connecticut that the Connecticut River runs through the middle of, rather than along its border, and it comprises five villages: Higganum, Shailerville, Tylerville and Hidden Lake on the west bank, and Haddam Neck on the east. Shad fishing has been part of Haddam life since 1662, peaking in 1814 with a 200,000-fish catch from at least 17 locations in town.",
+    "sections": [
+      {
+        "heading": "A river town of shad and quarries",
+        "body": "Shad fishing peaked in the 18th and 19th centuries: in 1814 there were at least 17 places in town where shad were caught, and that year's catch reached 200,000 fish. Commercial haul seining dominated until the 1950s, when drift netting at night replaced it. Haddam Neck, the town's east-bank village, was an industrial pioneer — Deacon Ezra Brainerd opened the town's first granite quarry there in 1762, and the mid-19th century brought a feldspar quarry the town describes as the first in the nation. Venture Smith, born Broteer Furro in West Africa around 1729, bought his freedom in 1765 and moved to Haddam Neck in 1774–75, where he became a mariner-merchant-farmer owning over 100 acres; his 1798 narrative is one of the few firsthand accounts of slavery in colonial New England. The Haddam Neck Fair has run since 1911."
+      },
+      {
+        "heading": "Getting there",
+        "body": "Haddam is a drive-to town with no rail station of its own. Route 9 is the expressway spine, with two exits serving Haddam: Exit 10 (Route 82, also signed for East Haddam's Goodspeed Opera House and Gillette Castle — those attractions are across the river in East Haddam, not in Haddam itself) and Exit 13 (Beaver Meadow Road). Route 154 (Saybrook Road), a 9.16-mile state-designated scenic road along the west bank of the Connecticut River, is the slower, prettier alternative, passing Haddam Meadows State Park. The nearest passenger rail is Old Saybrook, roughly 15–20 miles south on Shore Line East and Amtrak."
+      }
+    ],
+    "faq": [
+      {
+        "question": "How do I get to Haddam?",
+        "answer": "By car — Route 9 serves Haddam at Exit 10 (Route 82) and Exit 13 (Beaver Meadow Road), or take the scenic Route 154 along the river. There is no rail station in Haddam; the nearest is Old Saybrook, roughly 15–20 miles south on Shore Line East."
+      },
+      {
+        "question": "Are Gillette Castle and the Goodspeed Opera House in Haddam?",
+        "answer": "No — despite Route 9's Exit 10 signage listing them as nearby destinations, Gillette Castle, the Goodspeed Opera House and the Chester–Hadlyme Ferry are all across the river in East Haddam or in Chester, not in Haddam itself."
+      },
+      {
+        "question": "What is the Haddam Shad Museum?",
+        "answer": "Housed in the former Bill Maynard Shad Shack in Higganum, it is the only museum in the country devoted solely to shad fishing. It runs a spring season (Sundays, roughly April through June) with year-round appointments at (860) 345-2400."
+      },
+      {
+        "question": "Can I watch eagles in Haddam?",
+        "answer": "Eagle Landing State Park, a 16-acre riverfront park on Route 82, is a well-known bald-eagle-watching spot, especially in January and February. Connecticut RiverQuest and the Lady Katharine run river cruises from the park, including winter eagle cruises."
+      },
+      {
+        "question": "Is there a hotel in Haddam?",
+        "answer": "No hotel, inn or B&B could be verified operating inside Haddam. The nearest verified option is Saybrook Point Resort & Marina, 2 Bridge Street, Old Saybrook, south via Route 9."
+      }
+    ],
+    "photos": [
+      {
+        "src": "/photos/ct/haddam/thankful-arnold-house-haddam.jpg",
+        "thumb": "/photos/ct/haddam/thankful-arnold-house-haddam_thumb.jpg",
+        "title": "Thankful Arnold House Museum",
+        "description": "The Thankful Arnold House Museum, a late-18th-century historic house museum in Haddam.",
+        "author": "John Phelan",
+        "license": "CC BY 4.0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Thankful_Arnold_House_Museum,_Haddam_CT.jpg"
+      },
+      {
+        "src": "/photos/ct/haddam/haddam-meadows-state-park.jpg",
+        "thumb": "/photos/ct/haddam/haddam-meadows-state-park_thumb.jpg",
+        "title": "Haddam Meadows State Park",
+        "description": "An open meadow view within Haddam Meadows State Park.",
+        "author": "Magicpiano (User:Magicpiano)",
+        "license": "CC BY-SA 4.0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:HaddamMeadowsSP_View.jpg"
+      },
+      {
+        "src": "/photos/ct/haddam/rock-landing-haddam.jpg",
+        "thumb": "/photos/ct/haddam/rock-landing-haddam_thumb.jpg",
+        "title": "Rock Landing",
+        "description": "Rock Landing, a Connecticut River landing in Haddam.",
+        "author": "John Phelan",
+        "license": "CC BY 4.0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Rock_Landing,_Haddam_CT.jpg"
+      }
+    ]
+  },
+  "places": [
+    {
+      "slug": "thankful-arnold-house-museum",
+      "name": "Thankful Arnold House Museum",
+      "kind": "museum",
+      "town": "Haddam",
+      "state": "Connecticut",
+      "county": "Middlesex County",
+      "address": "14 Hayden Hill Road, Haddam, CT 06438",
+      "official_url": "https://haddamhistory.org/museums/thankful-arnold-house/",
+      "summary": "A late-18th-century house museum run by the Haddam Historical Society, telling the story of the Widow Thankful Arnold; its gardens are recognized as one of Connecticut's Historic Gardens. Open Wednesday 9 a.m.–3 p.m., Thursday noon–6 p.m., Friday noon–3 p.m., plus Sunday 1–4 p.m. June through September. Admission $10 adults, $8 seniors, $5 children 5–17; phone (860) 345-2400.",
+      "status": "open",
+      "photos": [
+        {
+          "src": "/photos/ct/haddam/thankful-arnold-house-haddam.jpg",
+          "thumb": "/photos/ct/haddam/thankful-arnold-house-haddam_thumb.jpg",
+          "title": "Thankful Arnold House Museum",
+          "description": "The Thankful Arnold House Museum, a late-18th-century historic house museum in Haddam.",
+          "author": "John Phelan",
+          "license": "CC BY 4.0",
+          "source_url": "https://commons.wikimedia.org/wiki/File:Thankful_Arnold_House_Museum,_Haddam_CT.jpg"
+        }
+      ]
+    },
+    {
+      "slug": "haddam-shad-museum",
+      "name": "Haddam Shad Museum",
+      "kind": "museum",
+      "town": "Haddam",
+      "state": "Connecticut",
+      "county": "Middlesex County",
+      "address": "272 Saybrook Road, Higganum, CT 06441",
+      "official_url": "https://haddamhistory.org/museums/haddam-shad-museum/",
+      "summary": "Housed in the former Bill Maynard Shad Shack, the only museum in the country devoted solely to shad fishing — Connecticut's state fish, harvested in Haddam since 1662. Exhibits cover the industry's 18th- and 19th-century peak, including 1814's catch of 200,000 fish from 17 town locations. Runs a spring season on Sundays (roughly April–June); year-round appointments at (860) 345-2400.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "haddam-meadows-state-park",
+      "name": "Haddam Meadows State Park",
+      "kind": "park",
+      "town": "Haddam",
+      "state": "Connecticut",
+      "county": "Middlesex County",
+      "address": "20 Parmelee Rd., Haddam, CT 06438",
+      "official_url": "https://ctparks.com/node/55",
+      "summary": "A 154-acre riverside flat gifted by the Hazen Foundation in 1944; today it holds a public boat launch and hosts Little League games and Haddam River Days. The river here is known for catfish and pike. Open daily 8 a.m.–sunset, free admission, wheelchair accessible; phone (860) 345-8521.",
+      "status": "open",
+      "photos": [
+        {
+          "src": "/photos/ct/haddam/haddam-meadows-state-park.jpg",
+          "thumb": "/photos/ct/haddam/haddam-meadows-state-park_thumb.jpg",
+          "title": "Haddam Meadows State Park",
+          "description": "An open meadow view within Haddam Meadows State Park.",
+          "author": "Magicpiano (User:Magicpiano)",
+          "license": "CC BY-SA 4.0",
+          "source_url": "https://commons.wikimedia.org/wiki/File:HaddamMeadowsSP_View.jpg"
+        }
+      ]
+    },
+    {
+      "slug": "eagle-landing-state-park",
+      "name": "Eagle Landing State Park",
+      "kind": "park",
+      "town": "Haddam",
+      "state": "Connecticut",
+      "county": "Middlesex County",
+      "address": "14 Little Meadow Rd., Haddam, CT 06438",
+      "official_url": "https://ctparks.com/parks/eagle-landing-state-park",
+      "summary": "A 16-acre riverfront park at the Route 82 river crossing with a fishing pier and cartop boat access to the Connecticut River — a well-known bald-eagle-watching spot, especially in January and February. Connecticut RiverQuest and the Lady Katharine run river cruises from the park, including winter eagle cruises. Open daily 8 a.m.–sunset, free admission.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "cockaponset-state-forest",
+      "name": "Cockaponset State Forest",
+      "kind": "park",
+      "town": "Haddam",
+      "state": "Connecticut",
+      "county": "Middlesex County",
+      "address": "Filley Road, Haddam/Chester, CT",
+      "official_url": "https://ctparks.com/parks/cockaponset-state-forest",
+      "summary": "Connecticut's second-largest state forest, spanning over 17,000 acres across eleven towns, with more than 100 miles of trails and swimming at Pattaconk Lake. Open daily 8 a.m.–sunset, free for in-state vehicles; out-of-state vehicles pay $10 weekday / $15 weekend at the Pattaconk Recreation Area.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "jacks-country-restaurant",
+      "name": "Jack's Country Restaurant",
+      "kind": "restaurant",
+      "town": "Haddam",
+      "state": "Connecticut",
+      "county": "Middlesex County",
+      "address": "Higganum, CT 06441",
+      "summary": "A local breakfast institution in Higganum owned by Nicole Martin since 2018, winner of a Best Breakfast in Connecticut Magazine award in 2021. No confirmed street address or website is available — call ahead.",
+      "status": "open",
+      "photos": []
+    }
+  ],
+  "entries": [
+    {
+      "kind": "sight",
+      "name": "Thankful Arnold House Museum",
+      "place_slug": "thankful-arnold-house-museum",
+      "note": "A late-18th-century house museum with a recognized historic garden."
+    },
+    {
+      "kind": "sight",
+      "name": "Haddam Shad Museum",
+      "place_slug": "haddam-shad-museum",
+      "note": "The only US museum devoted solely to shad fishing."
+    },
+    {
+      "kind": "sight",
+      "name": "Haddam Meadows State Park",
+      "place_slug": "haddam-meadows-state-park",
+      "note": "A 154-acre riverside flat with a boat launch."
+    },
+    {
+      "kind": "sight",
+      "name": "Eagle Landing State Park",
+      "place_slug": "eagle-landing-state-park",
+      "note": "A bald-eagle-watching spot with cruises from the park."
+    },
+    {
+      "kind": "walk",
+      "name": "Cockaponset State Forest",
+      "place_slug": "cockaponset-state-forest",
+      "note": "Connecticut's second-largest state forest, over 100 miles of trails."
+    },
+    {
+      "kind": "food",
+      "name": "Jack's Country Restaurant",
+      "place_slug": "jacks-country-restaurant",
+      "note": "A Higganum breakfast institution since 2018."
+    }
+  ],
+  "links": [
+    {
+      "target": "guide:chester-ct-travel-guide",
+      "kind": "nearby",
+      "note": "Route 9 runs sequentially from Essex through Deep River, Chester and Haddam to Middletown, with Chester directly south of Haddam."
+    },
+    {
+      "target": "guide:east-haddam-ct-travel-guide",
+      "kind": "nearby",
+      "note": "Haddam and East Haddam sit on opposite banks of the Connecticut River, linked by the Route 82 crossing at Route 9 Exit 10."
+    },
+    {
+      "target": "guide:middletown-ct-travel-guide",
+      "kind": "nearby",
+      "note": "Route 9 continues north from Haddam directly to Middletown."
+    },
+    {
+      "target": "guide:old-saybrook-ct-travel-guide",
+      "kind": "same-region",
+      "note": "Old Saybrook, roughly 15–20 miles south via Route 9, is the nearest passenger rail station to Haddam."
+    }
+  ]
+}

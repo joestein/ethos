@@ -1,0 +1,245 @@
+{
+  "guide": {
+    "slug": "bolton-ct-travel-guide",
+    "title": "Bolton, Connecticut: Quarry Stone and Rochambeau's Camp Five",
+    "destination": "Bolton, Connecticut",
+    "state": "Connecticut",
+    "county": "Tolland County",
+    "intro": "Bolton incorporated in October 1720, split off from Hartford, where the area had been known as the \"Hartford Mountains\" or \"Hanover\"; the town takes its name from Bolton, England, near Manchester. Its northern half was set off in 1808 to form Vernon. Quarrying drove Bolton's early economy: stone was cut at Quarryville, a small quarrying community near Bolton Notch, and hauled by oxcart to the Connecticut River for shipment to East Coast cities before the railroads arrived. In late June 1781, French troops under the Comte de Rochambeau camped in Bolton — French Camp Site Five on the march to join Washington's army — on ground now preserved as the town-owned Bolton Heritage Farm, formerly Valley View Farm. Library service began in 1881, growing from a corner of a general store into today's Bentley Memorial Library, built in 1975 and named for longtime librarian Elinor Hees Bentley.",
+    "sections": [
+      {
+        "heading": "Quarries and Rochambeau's march",
+        "body": "Before Bolton incorporated in October 1720, the area belonged to Hartford and was known as the \"Hartford Mountains\" or \"Hanover.\" Its early economy centered on quarrying: stone was cut at Quarryville, a small quarrying settlement near Bolton Notch, and hauled by oxcart to the Connecticut River for shipment before the railroads arrived. In late June 1781, French troops under the Comte de Rochambeau camped in Bolton — French Camp Site Five on the Washington-Rochambeau Revolutionary Route — as four divisions passed through on successive days. That ground is preserved today as Bolton Heritage Farm, formerly Valley View Farm, which received a Connecticut Preservation Award for its recovery after an arsonist destroyed the historic barn complex in May 2015. Bolton's northern half was set off in 1808 to form the town of Vernon."
+      },
+      {
+        "heading": "Getting there",
+        "body": "Bolton sits about 15 miles east of Hartford at the eastern terminus of Interstate 384, which meets US Route 6 and US Route 44 in town. US Route 6 runs east-west through Bolton Notch toward Windham and the Quiet Corner; US Route 44 runs east-west through Bolton Center toward Coventry and Storrs; CT Route 85 runs north-south toward Hebron and Colchester. There is no passenger rail station in Bolton or anywhere in eastern Tolland County. The CTrail Hartford Line's nearest stop is Hartford Union Station, about 15 miles west, which also serves Amtrak; neither Metro-North's New Haven Line nor Shore Line East comes anywhere near Bolton."
+      },
+      {
+        "heading": "Where to eat and stay",
+        "body": "Bolton's dining runs along US Route 44: Georgina's Restaurant & Banquets has served Italian-American food since 1992, and Parkside Pizza & Ice Cream pairs a pizzeria with an ice cream counter. No hotel, motel, inn or bed-and-breakfast could be verified operating within Bolton itself; travelers should expect to base in the Manchester or Vernon hotel corridor roughly 6-10 miles west along I-384 and I-84, though no specific property there is confirmed in this research."
+      }
+    ],
+    "faq": [
+      {
+        "question": "How do I get to Bolton?",
+        "answer": "By car — Interstate 384 ends in Bolton at the US Route 6/US Route 44 junction. There is no passenger rail station in Bolton; the nearest CTrail Hartford Line stop, also served by Amtrak, is Hartford Union Station, about 15 miles west."
+      },
+      {
+        "question": "Is there a train to Bolton?",
+        "answer": "No. Bolton and eastern Tolland County have no passenger rail station. The closest service is the CTrail Hartford Line and Amtrak at Hartford Union Station, about 15 miles west."
+      },
+      {
+        "question": "What is Bolton Notch State Park?",
+        "answer": "A 95-acre park built around a natural notch eroded through mica-schist ledges, with the 1.7-mile Mohegan Trail climbing to views of the Connecticut River Valley, caves, and connections to the Shenipsit Trail and the Hop River State Park Trail. Open daily 8 a.m. to sunset, free admission."
+      },
+      {
+        "question": "What is Bolton Heritage Farm?",
+        "answer": "A town-owned farmstead, formerly Valley View Farm, where French troops under the Comte de Rochambeau camped in late June 1781 while marching to join Washington's army. It received a Connecticut Preservation Award for its recovery after an arsonist destroyed the historic barn complex in May 2015."
+      },
+      {
+        "question": "Is there a hotel in Bolton?",
+        "answer": "No hotel, motel, inn or bed-and-breakfast could be verified operating within Bolton. The nearest hotel corridor is in Manchester and Vernon, roughly 6-10 miles west along I-384 and I-84."
+      }
+    ],
+    "photos": [
+      {
+        "src": "/photos/ct/bolton/hop-river-trail-tunnel-bolton.jpg",
+        "thumb": "/photos/ct/bolton/hop-river-trail-tunnel-bolton_thumb.jpg",
+        "title": "Hop River Trail tunnel, Bolton Notch",
+        "description": "The Hop River State Park Trail tunnel beneath I-384 at Bolton Notch.",
+        "author": "John Phelan",
+        "license": "CC BY-SA 4.0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Hop_River_State_Park_Trail_tunnel,_Bolton_CT.jpg"
+      },
+      {
+        "src": "/photos/ct/bolton/bolton-heritage-farm-barn.jpg",
+        "thumb": "/photos/ct/bolton/bolton-heritage-farm-barn_thumb.jpg",
+        "title": "Bolton Heritage Farm barn",
+        "description": "The historic barn and silo at Bolton Heritage Farm, site of Rochambeau's 1781 encampment.",
+        "author": "Marty Aligata",
+        "license": "CC BY-SA 4.0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Barn_at_Bolton_Heritage_Farm,_Bolton,_CT_(June_2021).jpg"
+      }
+    ]
+  },
+  "places": [
+    {
+      "slug": "bolton-notch-state-park",
+      "name": "Bolton Notch State Park",
+      "kind": "park",
+      "town": "Bolton",
+      "state": "Connecticut",
+      "county": "Tolland County",
+      "address": "Bolton Notch State Park Access Rd, Bolton, CT 06043",
+      "official_url": "https://ctparks.com/parks/bolton-notch-state-park",
+      "summary": "A 95-acre park built around a natural notch eroded through mica-schist ledges. The 1.7-mile Mohegan Trail climbs to views of the Connecticut River Valley, Talcott Mountain and the Hanging Hills of Meriden; the park also has caves and links to the Shenipsit Trail and Hop River State Park Trail. Open daily 8 a.m.-sunset, free, leashed pets welcome; no restrooms on site.",
+      "status": "open",
+      "photos": [
+        {
+          "src": "/photos/ct/bolton/hop-river-trail-tunnel-bolton.jpg",
+          "thumb": "/photos/ct/bolton/hop-river-trail-tunnel-bolton_thumb.jpg",
+          "title": "Hop River Trail tunnel, Bolton Notch",
+          "description": "The Hop River State Park Trail tunnel beneath I-384 at Bolton Notch.",
+          "author": "John Phelan",
+          "license": "CC BY-SA 4.0",
+          "source_url": "https://commons.wikimedia.org/wiki/File:Hop_River_State_Park_Trail_tunnel,_Bolton_CT.jpg"
+        }
+      ]
+    },
+    {
+      "slug": "hop-river-state-park-trail-bolton",
+      "name": "Hop River State Park Trail (Bolton section)",
+      "kind": "park",
+      "town": "Bolton",
+      "state": "Connecticut",
+      "county": "Tolland County",
+      "address": "Trailhead parking at Bolton Notch State Park and at Steeles Crossing Road, Bolton, CT 06043",
+      "official_url": "https://ctparks.com/node/61",
+      "summary": "A rail-trail of more than 20 miles on a former railroad line running through Manchester, Vernon, Bolton, Coventry, Andover and Columbia, passing historic stone structures and river crossings. Open daily 8 a.m.-sunset, free, leashed pets allowed.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "munsons-chocolates-bolton",
+      "name": "Munson's Chocolates",
+      "kind": "attraction",
+      "town": "Bolton",
+      "state": "Connecticut",
+      "county": "Tolland County",
+      "address": "174 Hop River Road, Bolton, CT 06043",
+      "official_url": "https://www.munsonschocolates.com/",
+      "summary": "The headquarters and flagship store of a Connecticut chocolatier founded in 1946 by Ben and Josephine Munson. The company now runs eight Connecticut stores, in Bolton, Avon, Newington, Mystic, Orange, South Windsor, Glastonbury and West Hartford.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "bolton-heritage-farm",
+      "name": "Bolton Heritage Farm",
+      "kind": "historic-site",
+      "town": "Bolton",
+      "state": "Connecticut",
+      "county": "Tolland County",
+      "address": "266 Bolton Center Road, Bolton, CT 06043",
+      "official_url": "https://www.boltonct.gov/boards-commissions/heritage-farm-commission",
+      "summary": "A town-owned farmstead, formerly Valley View Farm, on the ground where French troops under the Comte de Rochambeau camped in late June 1781 — French Camp Site Five on the Washington-Rochambeau Revolutionary Route. It received a Connecticut Preservation Award for its recovery after an arsonist destroyed the historic barn complex in May 2015.",
+      "status": "open",
+      "photos": [
+        {
+          "src": "/photos/ct/bolton/bolton-heritage-farm-barn.jpg",
+          "thumb": "/photos/ct/bolton/bolton-heritage-farm-barn_thumb.jpg",
+          "title": "Bolton Heritage Farm barn",
+          "description": "The historic barn and silo at Bolton Heritage Farm, site of Rochambeau's 1781 encampment.",
+          "author": "Marty Aligata",
+          "license": "CC BY-SA 4.0",
+          "source_url": "https://commons.wikimedia.org/wiki/File:Barn_at_Bolton_Heritage_Farm,_Bolton,_CT_(June_2021).jpg"
+        }
+      ]
+    },
+    {
+      "slug": "herrick-park-bolton",
+      "name": "Herrick Park",
+      "kind": "park",
+      "town": "Bolton",
+      "state": "Connecticut",
+      "county": "Tolland County",
+      "address": "29 Hebron Road, Bolton, CT 06043",
+      "official_url": "https://www.boltonct.gov/services/town-parks",
+      "summary": "Bolton's year-round town park, with a playscape, picnic area, two ball fields that convert to soccer in fall, an outdoor basketball court, and a winter flooded ice-skating area. A rentable community building seats up to 80 with a full kitchen.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "georginas-restaurant-bolton",
+      "name": "Georgina's Restaurant & Banquets",
+      "kind": "restaurant",
+      "town": "Bolton",
+      "state": "Connecticut",
+      "county": "Tolland County",
+      "address": "275 Boston Turnpike (US Route 44), Bolton, CT 06043",
+      "official_url": "https://www.georginasrestaurant.com/",
+      "summary": "A family-owned Italian-American restaurant serving Bolton since 1992, with pizza, grinders, burgers, gyros, pasta and dinner entrees, a weekday luncheon menu (Mon-Fri 11 a.m.-3 p.m.), and patio dining. Banquet spaces include a Grand Ballroom and a smaller Grecian Ballroom.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "park-side-pizza-ice-cream",
+      "name": "Parkside Pizza & Ice Cream",
+      "kind": "restaurant",
+      "town": "Bolton",
+      "state": "Connecticut",
+      "county": "Tolland County",
+      "address": "270 West Street, Bolton, CT 06043",
+      "official_url": "https://www.parksidepizzact.com/",
+      "summary": "A neighborhood pizza-and-ice-cream shop serving specialty pizzas, wings, grinders and burgers alongside ice cream, plus beer and wine. Open Tuesday-Thursday and Sunday noon-8 p.m., Friday-Saturday noon-9 p.m., closed Monday.",
+      "status": "open",
+      "photos": []
+    }
+  ],
+  "entries": [
+    {
+      "kind": "sight",
+      "name": "Bolton Notch State Park",
+      "place_slug": "bolton-notch-state-park",
+      "note": "A 95-acre park around a mica-schist notch, with the Mohegan Trail and caves."
+    },
+    {
+      "kind": "walk",
+      "name": "Hop River State Park Trail (Bolton section)",
+      "place_slug": "hop-river-state-park-trail-bolton",
+      "note": "A rail-trail through Bolton, part of a 20-plus-mile corridor to Willimantic."
+    },
+    {
+      "kind": "sight",
+      "name": "Munson's Chocolates",
+      "place_slug": "munsons-chocolates-bolton",
+      "note": "The flagship store and headquarters of the Connecticut chocolate maker."
+    },
+    {
+      "kind": "sight",
+      "name": "Bolton Heritage Farm",
+      "place_slug": "bolton-heritage-farm",
+      "note": "Site of Rochambeau's 1781 French encampment, Camp Site Five."
+    },
+    {
+      "kind": "sight",
+      "name": "Herrick Park",
+      "place_slug": "herrick-park-bolton",
+      "note": "Bolton's year-round town park with ball fields and winter skating."
+    },
+    {
+      "kind": "food",
+      "name": "Georgina's Restaurant & Banquets",
+      "place_slug": "georginas-restaurant-bolton",
+      "note": "Italian-American dining and banquet halls on US Route 44, open since 1992."
+    },
+    {
+      "kind": "food",
+      "name": "Parkside Pizza & Ice Cream",
+      "place_slug": "park-side-pizza-ice-cream",
+      "note": "Neighborhood pizzeria and ice cream counter on West Street."
+    }
+  ],
+  "links": [
+    {
+      "target": "guide:vernon-ct-travel-guide",
+      "kind": "nearby",
+      "note": "Bolton's northern half was set off in 1808 to form the town of Vernon."
+    },
+    {
+      "target": "guide:andover-ct-travel-guide",
+      "kind": "nearby",
+      "note": "Andover borders Bolton to the southeast, reached via US Route 6."
+    },
+    {
+      "target": "guide:coventry-ct-travel-guide",
+      "kind": "same-region",
+      "note": "US Route 44 runs east-west through Bolton Center toward Coventry and Storrs."
+    },
+    {
+      "target": "guide:hebron-ct-travel-guide",
+      "kind": "shared-history",
+      "note": "Gay City State Park, a former Methodist mill village with a lakeside beach, spans the Bolton-Hebron line."
+    }
+  ]
+}

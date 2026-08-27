@@ -84,7 +84,8 @@ defmodule EthosWeb.DestinationController do
           state_slug: state_slug,
           county: g.county,
           county_slug: county_slug,
-          guides: guides,
+          guides: Enum.filter(guides, &(&1.tier == "guide")),
+          town_pages: Enum.filter(guides, &(&1.tier == "town-page")),
           page_title: "#{g.county}, #{g.state} travel guides",
           page_meta_description:
             "Travel guides for #{g.county}, #{g.state} — towns, history, sites, restaurants, and places to stay.",

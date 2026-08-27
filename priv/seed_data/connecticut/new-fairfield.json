@@ -1,0 +1,246 @@
+{
+  "guide": {
+    "slug": "new-fairfield-ct-travel-guide",
+    "title": "New Fairfield, Connecticut: Squantz Pond on Candlewood's Shore",
+    "destination": "New Fairfield, Connecticut",
+    "state": "Connecticut",
+    "county": "Fairfield County",
+    "intro": "Colonial settlers from Fairfield won approval in 1724 to establish a township, and in 1729 purchased a roughly 31,000-acre tract — today's New Fairfield and Sherman — for the equivalent of about $300; New Fairfield was incorporated in 1740. Its heavily wooded \"Big Basin\" section supported a modest timber industry into the 1920s, when Connecticut Light & Power flooded the area to create Candlewood Lake, the state's largest lake and the first large-scale pumped-storage hydroelectric project in the United States: board approval came July 15, 1926, and the lake was filled by September 29, 1928. Typographer Bruce Rogers, designer of the 1936 Oxford Lectern Bible, settled in New Fairfield. The surviving West Centre School, built by 1852, is preserved today as the Little Red Schoolhouse.",
+    "sections": [
+      {
+        "heading": "A lake built for power, not for swimming",
+        "body": "Candlewood Lake was engineered as a pumped-storage facility, not a recreational amenity — water was pumped up from the Housatonic River and released through turbines to generate power on demand. Filling it flooded about 5,420 acres across New Fairfield and four other towns, including the small community of Jerusalem, and required roughly 100 buildings to be moved or demolished; the finished lake runs about 16 miles long and 3.2 miles wide. New Fairfield's own economy had rested on farming and small enterprises before the lake reshaped the town into a summer and lake retreat."
+      },
+      {
+        "heading": "Getting there",
+        "body": "New Fairfield has no train station of its own. Route 37 is the main road through the town center, and Route 39 runs north from Danbury along the Candlewood Lake side of town, past Squantz Pond; both connect to I-84 at Danbury to the south. The nearest rail options are Metro-North's Danbury station, terminus of the Danbury Branch, and Southeast station on the Harlem Line in Brewster, New York, which HART links to New Fairfield with a weekday commuter shuttle from the Ball Pond and Company A firehouse park-and-ride lots."
+      }
+    ],
+    "faq": [
+      {
+        "question": "How do I get to New Fairfield?",
+        "answer": "By car on Route 37 or Route 39, both connecting to I-84 at Danbury. There is no train station in town; the closest is Danbury, terminus of the Metro-North Danbury Branch."
+      },
+      {
+        "question": "Is there a bus to New Fairfield?",
+        "answer": "HART runs a weekday commuter shuttle between New Fairfield and Southeast station on the Metro-North Harlem Line in Brewster, New York, from two local park-and-ride lots."
+      },
+      {
+        "question": "Can I swim in Candlewood Lake from New Fairfield?",
+        "answer": "Squantz Pond State Park has its own beach and boat launch onto Squantz Pond, adjoining Candlewood Lake — not a direct Candlewood launch. No dogs are allowed April 15-September 30."
+      },
+      {
+        "question": "Is there a hotel in New Fairfield?",
+        "answer": "No hotel, motel or inn could be verified in New Fairfield; the nearest confirmed option is the Ethan Allen Hotel in Danbury."
+      }
+    ],
+    "photos": [
+      {
+        "src": "/photos/ct/new-fairfield/new-fairfield-town-hall.jpg",
+        "thumb": "/photos/ct/new-fairfield/new-fairfield-town-hall_thumb.jpg",
+        "title": "New Fairfield Town Hall",
+        "description": "New Fairfield Town Hall, a white clapboard building with a pedimented portico.",
+        "author": "Magicpiano",
+        "license": "CC BY-SA 4.0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:NewFairfieldCT_TownHall.jpg"
+      },
+      {
+        "src": "/photos/ct/new-fairfield/squantz-pond-autumn.jpg",
+        "thumb": "/photos/ct/new-fairfield/squantz-pond-autumn_thumb.jpg",
+        "title": "Squantz Pond, early morning",
+        "description": "Squantz Pond at early morning in autumn, at Squantz Pond State Park.",
+        "author": "Juliancolton",
+        "license": "CC0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Squantz_Pond_early_morning_autumn.JPG"
+      },
+      {
+        "src": "/photos/ct/new-fairfield/squantz-candlewood-overlook.jpg",
+        "thumb": "/photos/ct/new-fairfield/squantz-candlewood-overlook_thumb.jpg",
+        "title": "Squantz Pond and Candlewood Lake overlook",
+        "description": "Squantz Pond and Candlewood Lake seen from a scenic outlook on the Pootatuck State Forest Blue Trail.",
+        "author": "Morrowlong",
+        "license": "CC BY-SA 4.0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Squantz_Pond_and_Candlewood_Lake_from_scenic_outlook_on_Pootatuck_State_Forest_Blue_Trail.jpg"
+      }
+    ]
+  },
+  "places": [
+    {
+      "slug": "squantz-pond-state-park",
+      "name": "Squantz Pond State Park",
+      "kind": "park",
+      "town": "New Fairfield",
+      "state": "Connecticut",
+      "county": "Fairfield County",
+      "address": "178 Shortwoods Road, New Fairfield, CT 06812",
+      "official_url": "https://ctparks.com/node/136",
+      "summary": "A 172-acre state park on Squantz Pond with a swimming beach, boat launch, hiking and picnicking. Open daily 8 a.m. to sunset in summer, but closed to vehicles in fall, winter and spring (walk-in only); no dogs April 15-September 30. Free for Connecticut-plated vehicles; out-of-state parking $15 weekdays, $22 weekends and holidays.",
+      "status": "open",
+      "photos": [
+        {
+          "src": "/photos/ct/new-fairfield/squantz-pond-autumn.jpg",
+          "thumb": "/photos/ct/new-fairfield/squantz-pond-autumn_thumb.jpg",
+          "title": "Squantz Pond, early morning",
+          "description": "Squantz Pond at early morning in autumn, at Squantz Pond State Park.",
+          "author": "Juliancolton",
+          "license": "CC0",
+          "source_url": "https://commons.wikimedia.org/wiki/File:Squantz_Pond_early_morning_autumn.JPG"
+        }
+      ]
+    },
+    {
+      "slug": "great-hollow-nature-preserve",
+      "name": "Great Hollow Nature Preserve & Ecological Research Center",
+      "kind": "park",
+      "town": "New Fairfield",
+      "state": "Connecticut",
+      "county": "Fairfield County",
+      "address": "225 Route 37, New Fairfield, CT 06812",
+      "official_url": "https://greathollow.org/",
+      "summary": "An 825-acre preserve with five miles of hiking trails open to the public year-round, plus adult workshops, school programs and a nature day camp. Phone (203) 546-7789.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "little-red-schoolhouse-new-fairfield",
+      "name": "The Little Red Schoolhouse",
+      "kind": "museum",
+      "town": "New Fairfield",
+      "state": "Connecticut",
+      "county": "Fairfield County",
+      "address": "19 Brush Hill Road, New Fairfield, CT 06812",
+      "official_url": "https://www.newfairfieldhistoricalsociety.org/",
+      "summary": "The former West Centre School, one of seven one-room district schoolhouses that educated New Fairfield's children in the 19th century, first documented on an 1852 map. Run as a living-history museum by the New Fairfield Historical Society; no set public hours, so call (203) 312-5687 to arrange a visit.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "candlewood-lake-new-fairfield",
+      "name": "Candlewood Lake",
+      "kind": "attraction",
+      "town": "New Fairfield",
+      "state": "Connecticut",
+      "county": "Fairfield County",
+      "address": "New Fairfield, CT 06812",
+      "official_url": "https://www.candlewoodlakeauthority.org/",
+      "summary": "Connecticut's largest lake, about 16 miles long and 5,400 acres, forms New Fairfield's entire eastern edge. Built as a pumped-storage reservoir and completed in 1928, it is owned by FirstLight Power and stewarded by the Candlewood Lake Authority. Squantz Pond State Park's boat launch reaches Squantz Pond itself, not Candlewood directly.",
+      "status": "open",
+      "photos": [
+        {
+          "src": "/photos/ct/new-fairfield/squantz-candlewood-overlook.jpg",
+          "thumb": "/photos/ct/new-fairfield/squantz-candlewood-overlook_thumb.jpg",
+          "title": "Squantz Pond and Candlewood Lake overlook",
+          "description": "Squantz Pond and Candlewood Lake seen from a scenic outlook on the Pootatuck State Forest Blue Trail.",
+          "author": "Morrowlong",
+          "license": "CC BY-SA 4.0",
+          "source_url": "https://commons.wikimedia.org/wiki/File:Squantz_Pond_and_Candlewood_Lake_from_scenic_outlook_on_Pootatuck_State_Forest_Blue_Trail.jpg"
+        }
+      ]
+    },
+    {
+      "slug": "biscottis-ristorante-new-fairfield",
+      "name": "Biscotti's Ristorante",
+      "kind": "restaurant",
+      "town": "New Fairfield",
+      "state": "Connecticut",
+      "county": "Fairfield County",
+      "address": "4 Cottontail Road, New Fairfield, CT 06812",
+      "official_url": "https://www.biscottisristorante.net/",
+      "summary": "Italian and seafood kitchen serving New Fairfield for more than 15 years, with outdoor seating. Open Mon-Sat 11:30 a.m.-10 p.m., Sun 11:30 a.m.-8:30 p.m. Phone (203) 746-9900.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "twelve-grapes-new-fairfield",
+      "name": "Twelve Grapes",
+      "kind": "restaurant",
+      "town": "New Fairfield",
+      "state": "Connecticut",
+      "county": "Fairfield County",
+      "address": "28 Route 39, New Fairfield, CT 06812",
+      "official_url": "http://www.twelvegrapesnf.com/",
+      "summary": "A wine bar built around a curated wine list, charcuterie boards and sliders. Open Wednesday-Sunday, with Sunday afternoons only and late Friday-Saturday hours to 1 a.m. Phone (203) 546-7025.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "froggys-sandwiches-new-fairfield",
+      "name": "Froggy's Sandwiches",
+      "kind": "cafe",
+      "town": "New Fairfield",
+      "state": "Connecticut",
+      "county": "Fairfield County",
+      "address": "9 Brush Hill Road, New Fairfield, CT 06812",
+      "official_url": "https://www.myfroggys.com/",
+      "summary": "New York-style deli known for its Goliath breakfast sandwich and a breaded chicken cutlet prepared daily; one of six shops in a small CT/NY border group. Open Mon-Sat 6 a.m.-4 p.m., Sun 7 a.m.-4 p.m. Phone (203) 546-8899.",
+      "status": "open",
+      "photos": []
+    }
+  ],
+  "entries": [
+    {
+      "kind": "sight",
+      "name": "Squantz Pond State Park",
+      "place_slug": "squantz-pond-state-park",
+      "note": "A swimming beach and boat launch on Squantz Pond."
+    },
+    {
+      "kind": "sight",
+      "name": "Great Hollow Nature Preserve & Ecological Research Center",
+      "place_slug": "great-hollow-nature-preserve",
+      "note": "825 acres, open year-round."
+    },
+    {
+      "kind": "sight",
+      "name": "The Little Red Schoolhouse",
+      "place_slug": "little-red-schoolhouse-new-fairfield",
+      "note": "A living-history one-room schoolhouse."
+    },
+    {
+      "kind": "sight",
+      "name": "Candlewood Lake",
+      "place_slug": "candlewood-lake-new-fairfield",
+      "note": "Connecticut's largest lake."
+    },
+    {
+      "kind": "food",
+      "name": "Biscotti's Ristorante",
+      "place_slug": "biscottis-ristorante-new-fairfield",
+      "note": "Italian and seafood since more than 15 years ago."
+    },
+    {
+      "kind": "food",
+      "name": "Twelve Grapes",
+      "place_slug": "twelve-grapes-new-fairfield",
+      "note": "A curated wine bar."
+    },
+    {
+      "kind": "food",
+      "name": "Froggy's Sandwiches",
+      "place_slug": "froggys-sandwiches-new-fairfield",
+      "note": "New York-style deli sandwiches."
+    }
+  ],
+  "links": [
+    {
+      "target": "guide:sherman-ct-travel-guide",
+      "kind": "shared-history",
+      "note": "Sherman split off from the northern portion of neighboring New Fairfield in 1802."
+    },
+    {
+      "target": "guide:brookfield-ct-travel-guide",
+      "kind": "same-region",
+      "note": "New Fairfield and Brookfield both border Candlewood Lake, Connecticut's largest man-made lake."
+    },
+    {
+      "target": "guide:new-milford-ct-travel-guide",
+      "kind": "same-region",
+      "note": "New Fairfield and New Milford both border Candlewood Lake."
+    },
+    {
+      "target": "guide:danbury-ct-travel-guide",
+      "kind": "same-region",
+      "note": "New Fairfield's main roads, Routes 37 and 39, both connect south to Danbury and I-84."
+    }
+  ]
+}

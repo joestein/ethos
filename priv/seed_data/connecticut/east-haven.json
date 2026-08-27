@@ -1,0 +1,326 @@
+{
+  "guide": {
+    "slug": "east-haven-ct-travel-guide",
+    "title": "East Haven, Connecticut: Iron Works and a Century-Old Trolley Line",
+    "destination": "East Haven, Connecticut",
+    "state": "Connecticut",
+    "county": "New Haven County",
+    "intro": "East Haven was settled in 1638 as part of the original New Haven land purchase and was first known as \"East Farms,\" reflecting its role as New Haven's eastern farmland. Connecticut's first iron works was established here in 1655 near Lake Saltonstall by New Haven businessman Stephen Goodyear and Boston mining entrepreneur John Winthrop Jr., with Branford supplying land and charcoal; the Connecticut Colony granted township status in 1707, renaming the settlement from \"Iron Works Village\" to East Haven, though that status was later rescinded. After decades of petitioning, East Haven was finally incorporated as an independent town in 1785. During the Revolution, East Haven merchant Amos Morris ran a shoreline salt works to replace imports cut off by the war, until British Major General William Tryon's 1779 coastal raid destroyed the equipment. Foxon Park Beverages, the locally famous cane-sugar soda maker, was founded here in 1922 and is still family-owned.",
+    "sections": [
+      {
+        "heading": "The oldest trolley line in the country",
+        "body": "The Branford Electric Railway running through East Haven is preserved as the oldest continuously operating suburban trolley line in the United States and is a designated National Historic District; it is operated today by the Branford Electric Railway Association as the Shore Line Trolley Museum, with a collection of preserved trolley and transit vehicles and unlimited rides included with admission. The Old Stone Church — the First Congregational Church of East Haven — is a red sandstone meeting house built 1769-1774 by stonemason George Lancraft and stands on the East Haven Green, added to the National Register of Historic Places on March 25, 1982. Farm River State Park, designated in 1998, occupies the western shoreline of the Farm River estuary with trails, kayaking, fishing and birding for the snowy egrets, herons, ducks and gulls that gather along Long Island Sound."
+      },
+      {
+        "heading": "Getting there",
+        "body": "East Haven sits about three miles east of New Haven and is reached almost entirely by car via I-95 and U.S. Route 1, with Connecticut Routes 80, 100 and 142 feeding the Foxon, Center and shoreline Momauguin sections. The town has no rail station of its own; rail travelers use New Haven Union Station or New Haven State Street to the west, or Branford to the east, on Metro-North's New Haven Line, CTrail Shore Line East, the CTrail Hartford Line and Amtrak, and drive the last few miles. Tweed New Haven Airport (HVN) straddles the New Haven-East Haven line and is served by Avelo Airlines and Breeze Airways."
+      }
+    ],
+    "faq": [
+      {
+        "question": "How do I get to East Haven?",
+        "answer": "By car via I-95 or U.S. Route 1. East Haven has no rail station; the nearest stops are New Haven Union Station and New Haven State Street to the west, and Branford to the east, all on Metro-North, Shore Line East, the Hartford Line and Amtrak."
+      },
+      {
+        "question": "Where is the Shore Line Trolley Museum?",
+        "answer": "At 17 River Street in East Haven, operated by the Branford Electric Railway Association on what it calls the oldest continuously operating suburban trolley line in the U.S. The 2026 season runs through August 30, Wednesday-Sunday 11 a.m.-4 p.m. (last trolley 3 p.m.); special events continue into September, so check the program calendar if visiting later."
+      },
+      {
+        "question": "Is there a train to East Haven?",
+        "answer": "No. East Haven has no train station of its own; the nearest are New Haven Union Station and State Street to the west and Branford to the east."
+      },
+      {
+        "question": "Is there a hotel in East Haven?",
+        "answer": "Yes — the Home2 Suites by Hilton East Haven New Haven, a 103-room all-suite hotel at 30 Frontage Road that opened in 2024 on the site of the former Quality Inn."
+      }
+    ],
+    "photos": [
+      {
+        "src": "/photos/ct/east-haven/shore-line-trolley-museum.jpg",
+        "thumb": "/photos/ct/east-haven/shore-line-trolley-museum_thumb.jpg",
+        "title": "Shore Line Trolley Museum",
+        "description": "A restored trolley at the Shore Line Trolley Museum's station in East Haven, on the oldest continuously operating suburban trolley line in the United States.",
+        "author": "Versageek",
+        "license": "CC BY-SA 3.0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:BERA_Trolley_Station_EastHaven-CT.jpg"
+      },
+      {
+        "src": "/photos/ct/east-haven/old-stone-church-east-haven.jpg",
+        "thumb": "/photos/ct/east-haven/old-stone-church-east-haven_thumb.jpg",
+        "title": "Old Stone Church",
+        "description": "The red sandstone Old Stone Church, the First Congregational Church of East Haven, facing the East Haven town green.",
+        "author": "Versageek",
+        "license": "CC BY-SA 3.0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:FirstCongregationalChurchofEastHavenCT.jpg"
+      },
+      {
+        "src": "/photos/ct/east-haven/farm-river-state-park-marshes.jpg",
+        "thumb": "/photos/ct/east-haven/farm-river-state-park-marshes_thumb.jpg",
+        "title": "Farm River State Park marshes",
+        "description": "Tidal marshes at Farm River State Park in East Haven.",
+        "author": "Ethan Long",
+        "license": "CC BY-SA 2.0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Marshes_at_Farm_River_State_Park_(54052819227).jpg"
+      }
+    ]
+  },
+  "places": [
+    {
+      "slug": "shore-line-trolley-museum",
+      "name": "Shore Line Trolley Museum",
+      "kind": "museum",
+      "town": "East Haven",
+      "state": "Connecticut",
+      "county": "New Haven County",
+      "address": "17 River Street, East Haven, CT 06512",
+      "official_url": "https://www.shorelinetrolley.org/",
+      "summary": "Operated by the Branford Electric Railway Association on what it calls the oldest continuously operating suburban trolley line in the U.S., a designated National Historic District, with one of the largest collections of electric railway equipment in North America. Admission includes unlimited rides on trolleys departing every half hour. 2026 season through August 30, Wed-Sun 11 a.m.-4 p.m. (last trolley 3 p.m.); special events continue into September. Admission $15 adults, $14 seniors, $10 children. Phone (203) 467-6927.",
+      "status": "open",
+      "photos": [
+        {
+          "src": "/photos/ct/east-haven/shore-line-trolley-museum.jpg",
+          "thumb": "/photos/ct/east-haven/shore-line-trolley-museum_thumb.jpg",
+          "title": "Shore Line Trolley Museum",
+          "description": "A restored trolley at the Shore Line Trolley Museum's station in East Haven, on the oldest continuously operating suburban trolley line in the United States.",
+          "author": "Versageek",
+          "license": "CC BY-SA 3.0",
+          "source_url": "https://commons.wikimedia.org/wiki/File:BERA_Trolley_Station_EastHaven-CT.jpg"
+        }
+      ]
+    },
+    {
+      "slug": "farm-river-state-park",
+      "name": "Farm River State Park",
+      "kind": "park",
+      "town": "East Haven",
+      "state": "Connecticut",
+      "county": "New Haven County",
+      "address": "150 Short Beach Road, East Haven, CT 06512",
+      "official_url": "https://ctparks.com/parks/farm-river-state-park",
+      "summary": "Occupies the western shoreline of the Farm River estuary where the river meets Long Island Sound; designated a state park in 1998. Trails, kayaking and canoeing, a boat launch and dock rentals, fishing, picnicking and birding. Open daily 8 a.m. to sunset, free admission, leashed pets allowed. Phone (203) 287-5658.",
+      "status": "open",
+      "photos": [
+        {
+          "src": "/photos/ct/east-haven/farm-river-state-park-marshes.jpg",
+          "thumb": "/photos/ct/east-haven/farm-river-state-park-marshes_thumb.jpg",
+          "title": "Farm River State Park marshes",
+          "description": "Tidal marshes at Farm River State Park in East Haven.",
+          "author": "Ethan Long",
+          "license": "CC BY-SA 2.0",
+          "source_url": "https://commons.wikimedia.org/wiki/File:Marshes_at_Farm_River_State_Park_(54052819227).jpg"
+        }
+      ]
+    },
+    {
+      "slug": "east-haven-town-beach",
+      "name": "East Haven Town Beach",
+      "kind": "park",
+      "town": "East Haven",
+      "state": "Connecticut",
+      "county": "New Haven County",
+      "address": "165 Cosey Beach Ave, East Haven, CT 06512",
+      "official_url": "https://www.easthaven-ct.gov/471/East-Haven-Town-Beach",
+      "summary": "The town's Long Island Sound beach in the Momauguin section, with a splash pad (10 a.m.-6 p.m.), grass areas, playground, picnic area and pavilions. Closes at 9 p.m. in season and 6 p.m. in the October-February off-season. Non-resident parking is $35 per day, Apple Pay or credit card only. Dogs, smoking/vaping, flotation devices, grills and bonfires are prohibited.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "east-haven-historical-society-museum",
+      "name": "East Haven Historical Society Museum & Research Center",
+      "kind": "museum",
+      "town": "East Haven",
+      "state": "Connecticut",
+      "county": "New Haven County",
+      "address": "R. Vernon Hays School, 1 Maple St., East Haven, CT 06512",
+      "official_url": "https://www.easthavenhistoricalsociety.org/",
+      "summary": "A volunteer-run museum and research center holding town artifacts, photo galleries and genealogical documentation; the society also maintains an old town cemetery. Open Wednesdays 10 a.m.-1 p.m. and the first Saturday of each month, 10 a.m.-1 p.m.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "old-stone-church-east-haven",
+      "name": "Old Stone Church",
+      "kind": "historic-site",
+      "town": "East Haven",
+      "state": "Connecticut",
+      "county": "New Haven County",
+      "address": "251 Main Street, East Haven, CT 06512",
+      "official_url": "https://oldstonechurchucc.org/",
+      "summary": "A red sandstone meeting house built 1769-1774 by stonemason George Lancraft, standing on the East Haven Green; added to the National Register of Historic Places on March 25, 1982, and anchoring the East Haven Green Historic District (listed 2002). Still an active congregation, with Sunday worship at 10 a.m.",
+      "status": "open",
+      "photos": [
+        {
+          "src": "/photos/ct/east-haven/old-stone-church-east-haven.jpg",
+          "thumb": "/photos/ct/east-haven/old-stone-church-east-haven_thumb.jpg",
+          "title": "Old Stone Church",
+          "description": "The red sandstone Old Stone Church, the First Congregational Church of East Haven, facing the East Haven town green.",
+          "author": "Versageek",
+          "license": "CC BY-SA 3.0",
+          "source_url": "https://commons.wikimedia.org/wiki/File:FirstCongregationalChurchofEastHavenCT.jpg"
+        }
+      ]
+    },
+    {
+      "slug": "foxon-park-beverages",
+      "name": "Foxon Park Beverages",
+      "kind": "attraction",
+      "town": "East Haven",
+      "state": "Connecticut",
+      "county": "New Haven County",
+      "address": "103 Foxon Blvd, East Haven, CT 06513",
+      "official_url": "https://www.foxonpark.com/",
+      "summary": "Founded in East Haven in 1922 by Italian immigrant Matteo Naclerio and still family-owned, Foxon Park is the cane-sugar soda that New Haven-area pizzerias pour by default; the signature White Birch has a subtle wintergreen taste. A working bottling plant with a small retail counter, cash only. Walk-in hours Mon-Fri 8 a.m.-3:30 p.m., closed weekends.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "john-and-marias-pizzeria",
+      "name": "John & Maria's Pizzeria & Restaurant",
+      "kind": "restaurant",
+      "town": "East Haven",
+      "state": "Connecticut",
+      "county": "New Haven County",
+      "address": "280 Foxon Rd, East Haven, CT 06513",
+      "official_url": "https://johnandmariaspizza.com/",
+      "summary": "Serving the community since 1990, with a Southern Italian menu drawn from the owner's Neapolitan heritage. Seasonal outdoor patio, party/event space, and a renovated lounge pouring local beers on tap. Phone (203) 466-1550.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "one-world-roasters",
+      "name": "One World Roasters",
+      "kind": "cafe",
+      "town": "East Haven",
+      "state": "Connecticut",
+      "county": "New Haven County",
+      "address": "967 North High Street, East Haven, CT 06512",
+      "official_url": "https://www.oneworldroasters.com/",
+      "summary": "A small-batch coffee roaster and cafe working with fair-trade, organic and ethically sourced beans, selling coffee by the cup and the pound alongside espresso drinks. Hours weekdays 7 a.m.-noon, Sat-Sun 9 a.m.-3 p.m.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "koi-sushi-east-haven",
+      "name": "Koi Sushi",
+      "kind": "restaurant",
+      "town": "East Haven",
+      "state": "Connecticut",
+      "county": "New Haven County",
+      "address": "352 Hemingway Ave, East Haven, CT 06512",
+      "official_url": "https://www.koisushieasthaven.com/",
+      "summary": "Bills itself as \"East Haven's Japanese Gem,\" serving sushi rolls and Japanese dishes with pickup and delivery. Hours Mon 11:30 a.m.-9 p.m., Wed-Thu 11:30 a.m.-9 p.m., Fri-Sat 11:30 a.m.-9:30 p.m., Sun noon-9 p.m., closed Tuesdays. Phone (203) 666-7799.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "shong-fa-jiang",
+      "name": "Shong Fa Jiang Chinese Restaurant",
+      "kind": "restaurant",
+      "town": "East Haven",
+      "state": "Connecticut",
+      "county": "New Haven County",
+      "address": "670 Foxon Road, East Haven, CT 06512",
+      "summary": "A Foxon-section Chinese kitchen serving pickup and delivery. Hours Tue-Thu 11 a.m.-10 p.m., Fri-Sat 11 a.m.-11 p.m., Sun noon-10 p.m., closed Mondays. Phone (203) 468-2066.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "home2-suites-east-haven",
+      "name": "Home2 Suites by Hilton East Haven New Haven",
+      "kind": "hotel",
+      "town": "East Haven",
+      "state": "Connecticut",
+      "county": "New Haven County",
+      "address": "30 Frontage Road, East Haven, CT 06512",
+      "official_url": "https://www.hilton.com/en/hotels/hvnehht-home2-suites-east-haven-new-haven/",
+      "summary": "A 103-room all-suite hotel that opened in 2024 on the site of the former Quality Inn. Suites have kitchenettes; amenities include free breakfast, free WiFi, an indoor pool and laundry and fitness facilities.",
+      "status": "open",
+      "photos": []
+    }
+  ],
+  "entries": [
+    {
+      "kind": "sight",
+      "name": "Shore Line Trolley Museum",
+      "place_slug": "shore-line-trolley-museum",
+      "note": "The oldest continuously operating suburban trolley line in the U.S."
+    },
+    {
+      "kind": "sight",
+      "name": "Farm River State Park",
+      "place_slug": "farm-river-state-park",
+      "note": "Shoreline trails, kayaking and birding at the Farm River estuary."
+    },
+    {
+      "kind": "sight",
+      "name": "East Haven Town Beach",
+      "place_slug": "east-haven-town-beach",
+      "note": "A Long Island Sound beach with a splash pad in Momauguin."
+    },
+    {
+      "kind": "sight",
+      "name": "East Haven Historical Society Museum & Research Center",
+      "place_slug": "east-haven-historical-society-museum",
+      "note": "Town artifacts, photo galleries and genealogical records."
+    },
+    {
+      "kind": "sight",
+      "name": "Old Stone Church",
+      "place_slug": "old-stone-church-east-haven",
+      "note": "A 1774 red sandstone meeting house on the East Haven Green."
+    },
+    {
+      "kind": "sight",
+      "name": "Foxon Park Beverages",
+      "place_slug": "foxon-park-beverages",
+      "note": "The cane-sugar soda maker behind White Birch, since 1922."
+    },
+    {
+      "kind": "food",
+      "name": "John & Maria's Pizzeria & Restaurant",
+      "place_slug": "john-and-marias-pizzeria",
+      "note": "Southern Italian cooking since 1990."
+    },
+    {
+      "kind": "food",
+      "name": "One World Roasters",
+      "place_slug": "one-world-roasters",
+      "note": "A small-batch coffee roaster on North High Street."
+    },
+    {
+      "kind": "food",
+      "name": "Koi Sushi",
+      "place_slug": "koi-sushi-east-haven",
+      "note": "\"East Haven's Japanese Gem,\" sushi with pickup and delivery."
+    },
+    {
+      "kind": "food",
+      "name": "Shong Fa Jiang Chinese Restaurant",
+      "place_slug": "shong-fa-jiang",
+      "note": "A Foxon-section Chinese kitchen."
+    },
+    {
+      "kind": "stay",
+      "name": "Home2 Suites by Hilton East Haven New Haven",
+      "place_slug": "home2-suites-east-haven",
+      "note": "A 103-room all-suite hotel on Frontage Road."
+    }
+  ],
+  "links": [
+    {
+      "target": "guide:new-haven-ct-travel-guide",
+      "kind": "nearby",
+      "note": "East Haven separated from New Haven, incorporating as its own town in 1785."
+    },
+    {
+      "target": "guide:branford-ct-travel-guide",
+      "kind": "nearby",
+      "note": "East Haven borders Branford; the Shore Line Trolley Museum's Branford Electric Railway still runs cars toward Branford's Short Beach section."
+    },
+    {
+      "target": "guide:branford-ct-travel-guide",
+      "kind": "shared-history",
+      "note": "Branford supplied land and charcoal for Connecticut's first iron works, built near Lake Saltonstall in East Haven in 1655."
+    }
+  ]
+}

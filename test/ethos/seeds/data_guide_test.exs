@@ -8,6 +8,7 @@ defmodule Ethos.Seeds.DataGuideTest do
   @fixtures Path.expand("../../support/fixtures/seed_data", __DIR__)
   @testville Path.join(@fixtures, "testville.json")
   @refville Path.join(@fixtures, "refville.json")
+  @townville Path.join(@fixtures, "townville.json")
 
   test "upsert_from_file! creates places, guide, and linked entries; idempotent" do
     user = user_fixture()
@@ -126,6 +127,27 @@ defmodule Ethos.Seeds.DataGuideTest do
 
     assert kinds == ["same-region"],
            "stale edge survived correction — target would render under two headings"
+  end
+
+  test "tier defaults to guide and is read from the seed file" do
+    user = user_fixture()
+
+    guide = DataGuide.upsert_from_file!(@testville, user.email)
+    assert guide.tier == "guide"
+
+    town = DataGuide.upsert_from_file!(@townville, user.email)
+    assert town.tier == "town-page"
+  end
+
+  test "an unknown tier raises with the file path" do
+    bad = Path.join(System.tmp_dir!(), "bad-tier-seed.json")
+
+    File.write!(
+      bad,
+      ~s({"guide": {"slug": "bad-tier-guide", "title": "Bad", "destination": "Bad, Connecticut", "state": "Connecticut", "county": "Windham County", "intro": "x", "tier": "leaflet", "sections": [], "faq": [], "photos": []}, "places": [], "entries": []})
+    )
+
+    assert_raise ArgumentError, ~r/bad-tier-seed\.json.*leaflet/s, fn -> DataGuide.load!(bad) end
   end
 
   test "links resolve regardless of file order — a file may link forward" do

@@ -1,0 +1,162 @@
+{
+  "guide": {
+    "slug": "hartland-ct-travel-guide",
+    "title": "Hartland, Connecticut: A Valley Flooded for Hartford's Water",
+    "destination": "Hartland, Connecticut",
+    "state": "Connecticut",
+    "county": "Hartford County",
+    "tier": "town-page",
+    "intro": "Hartland's name is a contraction of \"Hart(ford)land\": the tract was granted to Hartford proprietors and appeared on tax lists as \"Hartford land\" by 1720, shortened after landowners organized the Proprietors of Hartland in 1733. Thomas Giddings, the first permanent settler, arrived in 1754, and the General Court incorporated Hartland in 1761 as the colony's 69th town. In the late 1920s the Metropolitan District Commission bought Hartland Hollow, built the Saville Dam through 1940 and flooded the valley to create the Barkhamsted Reservoir, relocating over 1,000 people and four cemeteries and splitting the town into East and West Hartland. Population collapsed from an 1800s high of 1,318 to just 296 by 1930, recovering to 1,901 at the 2020 census. Asher Benjamin, born here, wrote America's first architectural pattern books.",
+    "sections": [
+      {
+        "heading": "Getting there",
+        "body": "Hartland has no rail station and no transit — visitors drive, almost always via Route 20, the scenic two-lane road running the length of the town, connecting west to Route 8 in Winchester and east to I-91 at Windsor Locks via the Bradley Airport Connector. Route 181 meets Route 20 at the reference junction for Tunxis State Forest, and Route 179 runs east of the Barkhamsted Reservoir. The nearest passenger rail is the CTrail Hartford Line station in Windsor Locks, reached by driving Route 20 east; Metro-North and Shore Line East do not reach this part of the state."
+      },
+      {
+        "heading": "A state forest and a rescued farmhouse",
+        "body": "Tunxis State Forest, whose first land purchase came in 1923, covers most of northern Hartland, with DEEP's own directions to Howell's Pond, the Falls Brook Trail and a CCC-era ski area all measured from the Route 20/Route 181 junction in Hartland. The Gaylord House Museum, a six-room 1845 house built by architect Elias Gilman, was nearly demolished after the Metropolitan District Commission bought it in 1930; local advocates saved it, and the Hartland Historical Society has run it as a museum since restoring it in the 1980s, with a standing schedule of first-Sunday openings, May through October. The Mill District Preserve, a 117-acre North Woods Land Conservancy property in West Hartland, sits between two branches of the Farmington River, adjoining several other conserved tracts for longer linked walks."
+      }
+    ],
+    "faq": [
+      {
+        "question": "How do I get to Hartland?",
+        "answer": "By car — Route 20 runs the length of the town, connecting Route 8 in Winchester to I-91 at Windsor Locks. There is no rail station or transit in Hartland; the nearest passenger rail is Windsor Locks on the CTrail Hartford Line."
+      },
+      {
+        "question": "Is there a train to Hartland?",
+        "answer": "No. Hartland has no rail line of its own. The nearest station is Windsor Locks, reached by driving Route 20 east."
+      },
+      {
+        "question": "What happened to Hartland Hollow?",
+        "answer": "Starting in the late 1920s, the Metropolitan District Commission bought the valley, built the Saville Dam through 1940 and flooded it to create the Barkhamsted Reservoir, relocating over 1,000 people and four cemeteries and splitting the town into East and West Hartland."
+      }
+    ],
+    "photos": [
+      {
+        "src": "/photos/ct/hartland/tunxis-state-forest-falls-brook-falls.jpg",
+        "thumb": "/photos/ct/hartland/tunxis-state-forest-falls-brook-falls_thumb.jpg",
+        "title": "Falls Brook Falls, Tunxis State Forest",
+        "description": "Falls Brook Falls and pool inside Tunxis State Forest in Hartland.",
+        "author": "Morrowlong",
+        "license": "CC BY-SA 3.0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:FallsBrookFalls-Hartland-CT-TunxisSF.JPG"
+      }
+    ]
+  },
+  "places": [
+    {
+      "slug": "the-coach-stop",
+      "name": "The Coach Stop",
+      "kind": "restaurant",
+      "town": "Hartland",
+      "state": "Connecticut",
+      "county": "Hartford County",
+      "address": "6 Hartland Boulevard, East Hartland, CT 06027",
+      "summary": "A full-service restaurant on the Route 20 corridor in East Hartland, holding an active Connecticut restaurant liquor permit. No official website was found; call ahead for hours.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "tunxis-state-forest",
+      "name": "Tunxis State Forest",
+      "kind": "park",
+      "town": "Hartland",
+      "state": "Connecticut",
+      "county": "Hartford County",
+      "address": "Access from the junction of Route 20 and Route 181, Hartland, CT 06027",
+      "official_url": "https://portal.ct.gov/deep/state-parks/locate-park-forest/other-state-parks-and-forests",
+      "summary": "A state forest spanning Granby, Barkhamsted and Hartland, with major features on or near Routes 20 and 179. Reached from the Route 20/181 junction in Hartland: Howell's Pond with a state boat launch, the Falls Brook Trail to Falls Brook Falls, and a CCC-era ski area off Balance Rock Road. Cross-country skiing, fishing, hiking, letterboxing, mountain biking and hunting; no parking fee.",
+      "status": "open",
+      "photos": [
+        {
+          "src": "/photos/ct/hartland/tunxis-state-forest-falls-brook-falls.jpg",
+          "thumb": "/photos/ct/hartland/tunxis-state-forest-falls-brook-falls_thumb.jpg",
+          "title": "Falls Brook Falls, Tunxis State Forest",
+          "description": "Falls Brook Falls and pool inside Tunxis State Forest in Hartland.",
+          "author": "Morrowlong",
+          "license": "CC BY-SA 3.0",
+          "source_url": "https://commons.wikimedia.org/wiki/File:FallsBrookFalls-Hartland-CT-TunxisSF.JPG"
+        }
+      ]
+    },
+    {
+      "slug": "mill-district-preserve",
+      "name": "Mill District Preserve",
+      "kind": "park",
+      "town": "Hartland",
+      "state": "Connecticut",
+      "county": "Hartford County",
+      "address": "West Hartland, CT 06091",
+      "official_url": "https://www.northwoodslc.org/milldistrict-preserve",
+      "summary": "A 117-acre public preserve owned by North Woods Land Conservancy, set between two branches of the Farmington River — a mosaic of woodlands, marsh, vernal pools and brooks. It adjoins the Bassett-Kell Preserve, Audubon Connecticut's Pasquariello Wildlife Sanctuary and Tunxis State Forest for longer linked walks. Trail map and kiosk on site.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "gaylord-house-museum",
+      "name": "Gaylord House Museum",
+      "kind": "museum",
+      "town": "Hartland",
+      "state": "Connecticut",
+      "county": "Hartford County",
+      "address": "141 Center Street, West Hartland, CT 06027",
+      "official_url": "http://hartlandhistoricalsociety.com/gaylord-house-museum",
+      "summary": "A six-room 1845 house museum built by architect Elias Gilman and later owned by Edward Arthur \"Art\" Gaylord. Sold to the Metropolitan District Commission in 1930 and nearly demolished, it was saved, leased to the Hartland Historical Society in 1981 and restored. Standing schedule: first Sunday of each month, May through October, 2-4 p.m., or by appointment; admission free. Email hartlandhistoricalsociety@gmail.com to confirm before visiting.",
+      "status": "open",
+      "photos": []
+    }
+  ],
+  "entries": [
+    {
+      "kind": "food",
+      "name": "The Coach Stop",
+      "place_slug": "the-coach-stop",
+      "note": "Hartland's own restaurant, on the Route 20 corridor."
+    },
+    {
+      "kind": "walk",
+      "name": "Tunxis State Forest",
+      "place_slug": "tunxis-state-forest",
+      "note": "Waterfalls, a state boat launch and a CCC-era ski area."
+    },
+    {
+      "kind": "walk",
+      "name": "Mill District Preserve",
+      "place_slug": "mill-district-preserve",
+      "note": "117 acres between two branches of the Farmington River."
+    },
+    {
+      "kind": "sight",
+      "name": "Gaylord House Museum",
+      "place_slug": "gaylord-house-museum",
+      "note": "An 1845 house museum, rescued from demolition and restored."
+    }
+  ],
+  "links": [
+    {
+      "target": "guide:granby-ct-travel-guide",
+      "kind": "nearby",
+      "note": "Hartland borders Granby to the east."
+    },
+    {
+      "target": "guide:barkhamsted-ct-travel-guide",
+      "kind": "nearby",
+      "note": "Hartland borders Barkhamsted to the south; the Barkhamsted Reservoir, built by flooding Hartland Hollow, straddles both towns."
+    },
+    {
+      "target": "guide:barkhamsted-ct-travel-guide",
+      "kind": "shared-history",
+      "note": "The Metropolitan District Commission's Saville Dam flooded Hartland Hollow to create the Barkhamsted Reservoir, which forms the two towns' shared border."
+    },
+    {
+      "target": "guide:colebrook-ct-travel-guide",
+      "kind": "nearby",
+      "note": "Hartland borders Colebrook to the northwest."
+    },
+    {
+      "target": "guide:new-hartford-ct-travel-guide",
+      "kind": "same-region",
+      "note": "New Hartford sits southwest of Hartland along the Farmington River."
+    }
+  ]
+}

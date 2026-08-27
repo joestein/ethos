@@ -1,0 +1,315 @@
+{
+  "guide": {
+    "slug": "east-hampton-ct-travel-guide",
+    "title": "East Hampton, Connecticut: Belltown, USA",
+    "destination": "East Hampton, Connecticut",
+    "state": "Connecticut",
+    "county": "Middlesex County",
+    "intro": "European settlers arrived in the area in 1739 from Eastham, Massachusetts, and the community was incorporated in 1767 as the township of Chatham — a name borrowed from Chatham in England, a fellow shipbuilding town. Chatham kept that name until 1915, when it was renamed East Hampton, long its informal second name. In the 19th century the town became known as \"Belltown, USA\": William Barton built the first bell factory in 1808, and firms including Bevin Brothers and Gong Bell followed. Bevin Brothers, founded in 1832 and now in its sixth generation of family ownership, is America's only dedicated bell manufacturer and still produces bells here, including the bell that opened and closed the New York Stock Exchange for nearly seven decades. Across the river, the village of Middle Haddam was an important shipbuilding port from roughly 1730 to 1880. William A. O'Neill, Governor of Connecticut from 1980 to 1991, was an East Hampton resident.",
+    "sections": [
+      {
+        "heading": "Belltown, USA",
+        "body": "William Barton built East Hampton's first bell factory in 1808 on what became Barton Hill, and firms including Bevin Brothers and Gong Bell followed, giving the town its nickname \"Belltown, USA.\" Bevin Brothers, founded in 1832, is now in its sixth generation of family ownership and is America's only dedicated bell manufacturer, producing more than 50 sizes and styles — its bells have rung as the New York Stock Exchange's opening and closing gong and on Salvation Army kettles and Good Humor trucks. Across the river, the village of Middle Haddam was a shipbuilding port trading with the West Indies from about 1730 to 1880; its 110-acre historic district of 58 buildings, most predating 1835, was added to the National Register in 1984. East Hampton is also home to Lake Pocotopaug, a 512-acre natural lake — the largest in town, though far smaller than Candlewood Lake."
+      },
+      {
+        "heading": "Getting there",
+        "body": "East Hampton has no passenger rail station of its own. Connecticut Route 66 is the main east–west corridor through the town center, narrowing to two lanes as it follows the east shore of the Connecticut River after crossing the Arrigoni Bridge from Portland and Middletown; it begins at Interstate 91 in Meriden to the west and meets the Route 2 freeway at Exit 15 in Marlborough to the east. Route 16 serves the southeast corner of town, running past Comstock's Bridge and through Salmon River State Forest toward Colchester. The nearest passenger rail is the CTrail Hartford Line at Berlin, Meriden or Hartford, or Shore Line East at Old Saybrook."
+      },
+      {
+        "heading": "Where to eat and stay",
+        "body": "East Hampton's dining runs along West High Street and East High Street near the town center: The Tavern on 66 and Rossini's Pizza (family-run since 1991) anchor West High Street, while Po's Rice and Spice sits on Main Street in the village center. In the Cobalt village section, Pizzeria Da Vinci Cobalt serves New Haven–style pizza on the Route 66 corridor. The Bevin House Bed & Breakfast, a restored 1872 French Empire mansion named for the bell-making family, is the only conventional lodging verified inside East Hampton; travelers needing overflow rooms should look to Middletown or Cromwell, roughly 8–12 miles west."
+      }
+    ],
+    "faq": [
+      {
+        "question": "How do I get to East Hampton?",
+        "answer": "By car — Route 66 runs through the town center, reached from I-91 in Meriden to the west or the Route 2 freeway at Exit 15 in Marlborough to the east, crossing the Arrigoni Bridge from Portland/Middletown. There is no passenger rail station in East Hampton; the nearest CTrail Hartford Line stops are Berlin, Meriden and Hartford."
+      },
+      {
+        "question": "Why is East Hampton called \"Belltown, USA\"?",
+        "answer": "The town's 19th-century bell-manufacturing industry began with William Barton's 1808 factory. Bevin Brothers, founded in 1832 and still operating in East Hampton today, is now America's only dedicated bell manufacturer."
+      },
+      {
+        "question": "Can I tour the Bevin Brothers bell factory?",
+        "answer": "Not with a formal tour — regulations prohibit the company from offering factory tours. Visitors can browse a small display in the factory office at 17 Watrous Street, Monday–Thursday 7:30 a.m.–4:30 p.m. (closed to the public on Fridays)."
+      },
+      {
+        "question": "What is Comstock's Bridge?",
+        "answer": "A covered bridge built in 1840 and rebuilt in the late 1860s–1870s, restored by a Civilian Conservation Corps crew in the 1930s. Now closed to vehicles but open to pedestrians from a small public park, it is one of only three historic covered bridges remaining in Connecticut."
+      },
+      {
+        "question": "Is there a hotel in East Hampton?",
+        "answer": "The Bevin House Bed & Breakfast, a restored 1872 mansion, is the only conventional lodging verified inside East Hampton. Travelers needing additional rooms should look to Middletown or Cromwell, roughly 8–12 miles west."
+      }
+    ],
+    "photos": [
+      {
+        "src": "/photos/ct/east-hampton/comstock-covered-bridge-east-hampton.jpg",
+        "thumb": "/photos/ct/east-hampton/comstock-covered-bridge-east-hampton_thumb.jpg",
+        "title": "Comstock Covered Bridge",
+        "description": "Comstock's Bridge over the Salmon River, one of only three historic covered bridges remaining in Connecticut.",
+        "author": "M.M.Dwyer",
+        "license": "CC BY-SA 4.0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:MMDA-Photos_-_2023-12-16_-_Comstock-Covered_Bridge.jpg"
+      },
+      {
+        "src": "/photos/ct/east-hampton/hurd-state-park-east-hampton.jpg",
+        "thumb": "/photos/ct/east-hampton/hurd-state-park-east-hampton_thumb.jpg",
+        "title": "Hurd State Park",
+        "description": "The Connecticut River viewed from Hurd State Park's rock jetty.",
+        "author": "Morrowlong",
+        "license": "CC BY-SA 4.0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:HurdSP_IMG_0250.JPG"
+      },
+      {
+        "src": "/photos/ct/east-hampton/middle-haddam-hd-east-hampton.jpg",
+        "thumb": "/photos/ct/east-hampton/middle-haddam-hd-east-hampton_thumb.jpg",
+        "title": "Middle Haddam Historic District",
+        "description": "A building in the Middle Haddam Historic District, a former Connecticut River shipbuilding port.",
+        "author": "Magicpiano",
+        "license": "CC BY-SA 4.0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:EastHamptonCT_MiddleHaddamHD_1.jpg"
+      }
+    ]
+  },
+  "places": [
+    {
+      "slug": "hurd-state-park",
+      "name": "Hurd State Park",
+      "kind": "park",
+      "town": "East Hampton",
+      "state": "Connecticut",
+      "county": "Middlesex County",
+      "address": "74 Hurd Park Road, East Hampton, CT 06424",
+      "official_url": "https://ctparks.com/node/68",
+      "summary": "Nearly 1,000 acres on the Connecticut River, known for its \"split rock\" geologic formation and preserved feldspar mining sites; offers hiking, biking, fishing, horseback riding, picnicking and boat-in river camping (May 1–September 30). Open daily 8 a.m.–sunset, free admission; gates close after the first snow.",
+      "status": "open",
+      "photos": [
+        {
+          "src": "/photos/ct/east-hampton/hurd-state-park-east-hampton.jpg",
+          "thumb": "/photos/ct/east-hampton/hurd-state-park-east-hampton_thumb.jpg",
+          "title": "Hurd State Park",
+          "description": "The Connecticut River viewed from Hurd State Park's rock jetty.",
+          "author": "Morrowlong",
+          "license": "CC BY-SA 4.0",
+          "source_url": "https://commons.wikimedia.org/wiki/File:HurdSP_IMG_0250.JPG"
+        }
+      ]
+    },
+    {
+      "slug": "comstocks-bridge",
+      "name": "Comstock's Bridge",
+      "kind": "historic-site",
+      "town": "East Hampton",
+      "state": "Connecticut",
+      "county": "Middlesex County",
+      "address": "14 Bridge Street, East Hampton, CT 06424 (off Route 16, spanning the Salmon River toward Colchester)",
+      "official_url": "https://ctparks.com/parks/salmon-river-state-forest",
+      "summary": "Built in 1840 and rebuilt in the late 1860s–1870s, this 80-foot covered bridge was restored by a Civilian Conservation Corps crew in the 1930s after a truck crashed through its floor in the 1920s. Added to the National Register in 1976. Closed to vehicles but open to pedestrians from a small public park; one of only three historic covered bridges left in Connecticut.",
+      "status": "open",
+      "photos": [
+        {
+          "src": "/photos/ct/east-hampton/comstock-covered-bridge-east-hampton.jpg",
+          "thumb": "/photos/ct/east-hampton/comstock-covered-bridge-east-hampton_thumb.jpg",
+          "title": "Comstock Covered Bridge",
+          "description": "Comstock's Bridge over the Salmon River, one of only three historic covered bridges remaining in Connecticut.",
+          "author": "M.M.Dwyer",
+          "license": "CC BY-SA 4.0",
+          "source_url": "https://commons.wikimedia.org/wiki/File:MMDA-Photos_-_2023-12-16_-_Comstock-Covered_Bridge.jpg"
+        }
+      ]
+    },
+    {
+      "slug": "air-line-state-park-trail-east-hampton",
+      "name": "Air Line State Park Trail (East Hampton)",
+      "kind": "park",
+      "town": "East Hampton",
+      "state": "Connecticut",
+      "county": "Middlesex County",
+      "address": "East Hampton trailhead: 69 Smith Street, East Hampton, CT 06424",
+      "official_url": "https://ctparks.com/parks/air-line-state-park-trail",
+      "summary": "A 50-mile multi-use rail trail on a former railroad bed running from Thompson to Portland, passing through East Hampton; the southern section alone covers 31 miles from Portland to Windham. Free and open year-round for walking, hiking, biking, horseback riding and skating, with cross-country skiing and snowshoeing in winter. East Hampton parking at Smith Street.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "middle-haddam-historic-district",
+      "name": "Middle Haddam Historic District",
+      "kind": "historic-site",
+      "town": "East Hampton",
+      "state": "Connecticut",
+      "county": "Middlesex County",
+      "address": "Along Moodus and Long Hill Roads, Middle Haddam village, East Hampton, CT 06456",
+      "summary": "A 110-acre riverfront district of 58 primary buildings, most predating 1835, in Federal, Colonial and Mid-19th Century Revival styles dating from 1732 onward. It preserves the streetscape of a port that built ocean-going vessels for the West Indies trade from about 1730 to 1880. Added to the National Register on February 3, 1984. A public streetscape, walkable at any time.",
+      "status": "open",
+      "photos": [
+        {
+          "src": "/photos/ct/east-hampton/middle-haddam-hd-east-hampton.jpg",
+          "thumb": "/photos/ct/east-hampton/middle-haddam-hd-east-hampton_thumb.jpg",
+          "title": "Middle Haddam Historic District",
+          "description": "A building in the Middle Haddam Historic District, a former Connecticut River shipbuilding port.",
+          "author": "Magicpiano",
+          "license": "CC BY-SA 4.0",
+          "source_url": "https://commons.wikimedia.org/wiki/File:EastHamptonCT_MiddleHaddamHD_1.jpg"
+        }
+      ]
+    },
+    {
+      "slug": "bevin-bros-manufacturing",
+      "name": "Bevin Bros. Manufacturing Co.",
+      "kind": "attraction",
+      "town": "East Hampton",
+      "state": "Connecticut",
+      "county": "Middlesex County",
+      "address": "17 Watrous Street, East Hampton, CT 06424",
+      "official_url": "https://bevinbells.com/",
+      "summary": "Founded in 1832 and now in its sixth generation of family ownership, America's only dedicated bell manufacturer, producing more than 50 sizes and styles — the reason East Hampton is called \"Belltown, USA.\" Its bells have rung as the NYSE opening and closing gong and on Salvation Army kettles and Good Humor trucks. No factory tours are offered, but visitors may browse a small display in the factory office. Office hours Monday–Thursday 7:30 a.m.–4:30 p.m., closed to the public Fridays.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "the-tavern-on-66",
+      "name": "The Tavern on 66",
+      "kind": "restaurant",
+      "town": "East Hampton",
+      "state": "Connecticut",
+      "county": "Middlesex County",
+      "address": "227 West High Street, East Hampton, CT 06424",
+      "official_url": "https://thetavernon66.com/",
+      "summary": "A local tavern on the Route 66 corridor serving pub fare and craft beers, with happy hour and rotating weekly specials. Open Monday–Thursday 11:30 a.m.–1 a.m., Friday–Saturday to 2 a.m., Sunday 11 a.m.–1 a.m.; phone (860) 267-6569.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "rossinis-pizza-east-hampton",
+      "name": "Rossini's Pizza East Hampton",
+      "kind": "restaurant",
+      "town": "East Hampton",
+      "state": "Connecticut",
+      "county": "Middlesex County",
+      "address": "62 West High Street, East Hampton, CT 06424",
+      "official_url": "https://rossiniseasthampton.com/",
+      "summary": "An Italian restaurant and pizzeria run by the Simoni family since opening on October 15, 1991, serving pizza, pasta, chicken and seafood.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "pos-rice-and-spice",
+      "name": "Po's Rice and Spice",
+      "kind": "restaurant",
+      "town": "East Hampton",
+      "state": "Connecticut",
+      "county": "Middlesex County",
+      "address": "97 Main Street, East Hampton, CT 06424",
+      "official_url": "https://posriceandspice.com/",
+      "summary": "A Thai and Chinese restaurant in the village center, which states it was voted best Thai food in Connecticut in 2023. Closed Sunday–Monday; open Tuesday–Friday 11 a.m.–3 p.m. and 4–9:30 p.m., Saturday 11 a.m.–9:30 p.m. (last seating 9 p.m.).",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "pizzeria-da-vinci-cobalt",
+      "name": "Pizzeria Da Vinci Cobalt",
+      "kind": "restaurant",
+      "town": "East Hampton",
+      "state": "Connecticut",
+      "county": "Middlesex County",
+      "address": "363 West High Street (Route 66), Cobalt village, East Hampton, CT 06414",
+      "official_url": "https://davincicobalt.com/",
+      "summary": "New Haven–style thin-crust pizza, wings, grinders and salads in the Cobalt village section of East Hampton. Open Monday–Saturday 11 a.m.–9 p.m., Sunday 3–9 p.m.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "the-bevin-house-bed-breakfast",
+      "name": "The Bevin House Bed & Breakfast",
+      "kind": "bnb",
+      "town": "East Hampton",
+      "state": "Connecticut",
+      "county": "Middlesex County",
+      "address": "26 Barton Hill Road, East Hampton, CT 06424",
+      "official_url": "https://thebevinhouse.com/",
+      "summary": "A French Empire mansion built in 1872 for the Bevin bell-making family, restored in 2016, with six guest bedrooms within a 15-room house on a 2.6-acre estate and a 1,200-book library. The only conventional lodging verified inside East Hampton. Phone (860) 310-4913.",
+      "status": "open",
+      "photos": []
+    }
+  ],
+  "entries": [
+    {
+      "kind": "sight",
+      "name": "Hurd State Park",
+      "place_slug": "hurd-state-park",
+      "note": "Nearly 1,000 riverside acres with the landmark split-rock formation."
+    },
+    {
+      "kind": "sight",
+      "name": "Comstock's Bridge",
+      "place_slug": "comstocks-bridge",
+      "note": "One of only three historic covered bridges left in Connecticut."
+    },
+    {
+      "kind": "walk",
+      "name": "Air Line State Park Trail",
+      "place_slug": "air-line-state-park-trail-east-hampton",
+      "note": "A 50-mile rail trail on a former railroad bed through East Hampton."
+    },
+    {
+      "kind": "sight",
+      "name": "Middle Haddam Historic District",
+      "place_slug": "middle-haddam-historic-district",
+      "note": "A former Connecticut River shipbuilding port, 1730 to 1880."
+    },
+    {
+      "kind": "sight",
+      "name": "Bevin Bros. Manufacturing Co.",
+      "place_slug": "bevin-bros-manufacturing",
+      "note": "America's only dedicated bell manufacturer, founded 1832."
+    },
+    {
+      "kind": "food",
+      "name": "The Tavern on 66",
+      "place_slug": "the-tavern-on-66",
+      "note": "Pub fare and craft beers on the Route 66 corridor."
+    },
+    {
+      "kind": "food",
+      "name": "Rossini's Pizza East Hampton",
+      "place_slug": "rossinis-pizza-east-hampton",
+      "note": "Family-run Italian restaurant and pizzeria since 1991."
+    },
+    {
+      "kind": "food",
+      "name": "Po's Rice and Spice",
+      "place_slug": "pos-rice-and-spice",
+      "note": "Thai and Chinese restaurant in the village center."
+    },
+    {
+      "kind": "food",
+      "name": "Pizzeria Da Vinci Cobalt",
+      "place_slug": "pizzeria-da-vinci-cobalt",
+      "note": "New Haven–style pizza in the Cobalt village section."
+    },
+    {
+      "kind": "stay",
+      "name": "The Bevin House Bed & Breakfast",
+      "place_slug": "the-bevin-house-bed-breakfast",
+      "note": "A restored 1872 mansion named for East Hampton's bell-making family."
+    }
+  ],
+  "links": [
+    {
+      "target": "guide:portland-ct-travel-guide",
+      "kind": "shared-history",
+      "note": "Meshomasic State Forest and the Air Line State Park Trail both span East Hampton and Portland."
+    },
+    {
+      "target": "guide:haddam-ct-travel-guide",
+      "kind": "same-region",
+      "note": "East Hampton's Middle Haddam village and Haddam's Haddam Neck village both sit on the Connecticut River's east bank."
+    },
+    {
+      "target": "guide:old-saybrook-ct-travel-guide",
+      "kind": "same-region",
+      "note": "Old Saybrook is one of the nearest Shore Line East stations to East Hampton."
+    }
+  ]
+}

@@ -1,0 +1,265 @@
+{
+  "guide": {
+    "slug": "wolcott-ct-travel-guide",
+    "title": "Wolcott, Connecticut: Farmingbury's Hilltop Reservoirs",
+    "destination": "Wolcott, Connecticut",
+    "state": "Connecticut",
+    "county": "New Haven County",
+    "intro": "Wolcott was settled by English colonists as early as the 1730s, in territory known as Farmingbury, a name drawn from its parent communities of Farmington and Waterbury. The town incorporated in 1796, separating from land that had belonged to Waterbury and Farmington; the eastern portion had by then come under Southington, itself split from Farmington in 1779, so sources differ on the parent towns. It takes its name from Oliver Wolcott, who cast the tie-breaking vote for its incorporation while serving as Connecticut's lieutenant governor. Sitting on high ground at the northern tip of New Haven County, Wolcott lacked the rivers needed to power early industry, so it remained rural into the 20th century, functioning mainly as a crossroads before becoming a suburban residential town. Clockmaker Seth Thomas was born in Wolcott in 1785, and progressive educator Amos Bronson Alcott, father of \"Little Women\" author Louisa May Alcott, was born here in 1799.",
+    "sections": [
+      {
+        "heading": "Reservoirs built for Waterbury's brass mills",
+        "body": "Waterbury's brass industry reshaped Wolcott's landscape: the Woodtick (Scovill) Reservoir was built in 1917 by the Scovill Manufacturing Company to supply water for brass production, and Chestnut Hill Reservoir — once called Lyman's Pond, on land that was Tunxis hunting ground and swampland known as Ash Swamp — was built to regulate flow to the Waterbury mills. Peterson Park, over 65 acres, is the starting point of the 35-mile Mattatuck Trail, which runs north to meet the Appalachian Trail; the Mill Pond Way Walking Trail loops 3.5 miles around Scovill Reservoir past old stone walls and foundations from earlier settlement. Farmingbury Hills Golf Course, a 9-hole public course atop Southington Mountain, offers views over Apple Valley and the Meriden and Avon mountains."
+      },
+      {
+        "heading": "Getting there",
+        "body": "Wolcott is a car-first hill town with no rail station of its own: drive in on Route 69 (north-south) or Route 322 (east-west), both reached from Interstate 84 — Route 69 (signed for Wolcott/Prospect) at Exit 33B (formerly Exit 23, eastbound access only) and Route 322 (signed Marion/Milldale/Wolcott) at Exit 40B (formerly Exit 28). Connecticut renumbered I-84 exits to mileage-based numbers in mid-2026, so older directions and GPS entries may still cite the old numbers. Treat Waterbury, directly next door, as the nearest passenger-rail point, on Metro-North's Waterbury Branch — though Branch trains are replaced by buses from July 20, 2026 through May 31, 2027 for station reconstruction."
+      }
+    ],
+    "faq": [
+      {
+        "question": "How do I get to Wolcott?",
+        "answer": "By car on Route 69 or Route 322, reached from Interstate 84 — Route 69 at Exit 33B (formerly Exit 23) and Route 322 at Exit 40B (formerly Exit 28); Connecticut renumbered I-84 exits in mid-2026. Wolcott has no rail station; the nearest is Waterbury, directly next door, on Metro-North's Waterbury Branch — though Branch trains are replaced by buses from July 20, 2026 through May 31, 2027 for station reconstruction."
+      },
+      {
+        "question": "Why is Wolcott called that?",
+        "answer": "For Oliver Wolcott, who cast the tie-breaking vote for the town's incorporation in 1796 while serving as Connecticut's lieutenant governor. The area was earlier known as Farmingbury, for its parent towns of Farmington and Waterbury."
+      },
+      {
+        "question": "Can I swim at Wolcott's reservoirs?",
+        "answer": "The town-run Woodtick Recreation Center beach has been posted closed for swimming in recent seasons, with no reopening date confirmed. Chestnut Hill Reservoir and Woodtick (Scovill) Reservoir both allow carry-in boating — electric motors only at Woodtick, no motors of any kind at Chestnut Hill."
+      },
+      {
+        "question": "Is there a hotel in Wolcott?",
+        "answer": "No hotel, inn, motel or B&B could be verified as operating inside Wolcott. The nearest overnight option is the campground at Black Rock State Park in Watertown."
+      }
+    ],
+    "photos": [
+      {
+        "src": "/photos/ct/wolcott/woodtick-recreation-area-beach.jpg",
+        "thumb": "/photos/ct/wolcott/woodtick-recreation-area-beach_thumb.jpg",
+        "title": "Woodtick Recreation Area beach",
+        "description": "The town swimming beach at Woodtick Recreation Area on Scovill (Woodtick) Reservoir.",
+        "author": "John Phelan",
+        "license": "CC BY-SA 4.0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Woodtick_Recreation_Area_Beach,_Woodtick_CT.jpg"
+      },
+      {
+        "src": "/photos/ct/wolcott/peterson-park-wolcott.jpg",
+        "thumb": "/photos/ct/wolcott/peterson-park-wolcott_thumb.jpg",
+        "title": "Peterson Park",
+        "description": "Peterson Park, starting point of the 35-mile Mattatuck Trail, in Wolcott.",
+        "author": "John Phelan",
+        "license": "CC BY 4.0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Peterson_Park,_Wolcott_CT.jpg"
+      }
+    ]
+  },
+  "places": [
+    {
+      "slug": "peterson-park-wolcott",
+      "name": "Peterson Park",
+      "kind": "park",
+      "town": "Wolcott",
+      "state": "Connecticut",
+      "county": "New Haven County",
+      "address": "123 Mad River Road, Wolcott, CT 06716",
+      "official_url": "https://www.wolcottct.org/273/Peterson-Park",
+      "summary": "Over 65 acres of open space and forest, and the starting point of the 35-mile Mattatuck Trail, which runs to meet the Appalachian Trail. Basketball, tennis and volleyball courts, a skate park, paved walking trails, two playgrounds installed in 2022, and a picnic grove with two pavilions. Open sunrise to sunset.",
+      "status": "open",
+      "photos": [
+        {
+          "src": "/photos/ct/wolcott/peterson-park-wolcott.jpg",
+          "thumb": "/photos/ct/wolcott/peterson-park-wolcott_thumb.jpg",
+          "title": "Peterson Park",
+          "description": "Peterson Park, starting point of the 35-mile Mattatuck Trail, in Wolcott.",
+          "author": "John Phelan",
+          "license": "CC BY 4.0",
+          "source_url": "https://commons.wikimedia.org/wiki/File:Peterson_Park,_Wolcott_CT.jpg"
+        }
+      ]
+    },
+    {
+      "slug": "woodtick-reservoir-wolcott",
+      "name": "Woodtick Reservoir (Scovill Reservoir)",
+      "kind": "park",
+      "town": "Wolcott",
+      "state": "Connecticut",
+      "county": "New Haven County",
+      "address": "Main entrance at the end of Scovill Road, Wolcott, CT 06716",
+      "official_url": "https://www.wolcottct.org/275/Woodtick-Reservoir",
+      "summary": "A man-made pond built in 1917 by the Scovill Manufacturing Company to supply water for brass production in Waterbury, stocked twice a year by CT DEEP. Public boat launch; electric motors only, no sailboats, no mooring within 50 feet of the water line.",
+      "status": "open",
+      "photos": [
+        {
+          "src": "/photos/ct/wolcott/woodtick-recreation-area-beach.jpg",
+          "thumb": "/photos/ct/wolcott/woodtick-recreation-area-beach_thumb.jpg",
+          "title": "Woodtick Recreation Area beach",
+          "description": "The town swimming beach at Woodtick Recreation Area on Scovill (Woodtick) Reservoir.",
+          "author": "John Phelan",
+          "license": "CC BY-SA 4.0",
+          "source_url": "https://commons.wikimedia.org/wiki/File:Woodtick_Recreation_Area_Beach,_Woodtick_CT.jpg"
+        }
+      ]
+    },
+    {
+      "slug": "mill-pond-way-walking-trail",
+      "name": "Mill Pond Way Walking Trail",
+      "kind": "park",
+      "town": "Wolcott",
+      "state": "Connecticut",
+      "county": "New Haven County",
+      "address": "Wolcott, CT 06716 (access points include Boundline Road, Munson Road, Wolf Hill Road and the end of Scovill Road)",
+      "official_url": "https://www.wolcottct.org/270/Mill-Pond-Way-Walking-Trail",
+      "summary": "A 3.5-mile trail looping around Scovill Reservoir past old stone walls, roads and foundations left by earlier settlement, with benches along the way; much of the route is ADA-compliant. Walking, running, bicycling and licensed fishing permitted; no motor vehicles or horses.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "chestnut-hill-reservoir-wolcott",
+      "name": "Chestnut Hill Reservoir",
+      "kind": "park",
+      "town": "Wolcott",
+      "state": "Connecticut",
+      "county": "New Haven County",
+      "address": "Lyman Road, western Wolcott, CT 06716",
+      "official_url": "https://www.wolcottct.org/268/Chestnut-Hill-Reservoir",
+      "summary": "Formerly known as Lyman's Pond, built to regulate water flow to Waterbury's brass mills on land that was once Tunxis hunting ground and a swamp called Ash Swamp, where arrowheads have been found. Carry-in only: rowboats, canoes and kayaks allowed, no motors of any kind, including electric.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "farmingbury-hills-golf-course",
+      "name": "Farmingbury Hills Golf Course",
+      "kind": "attraction",
+      "town": "Wolcott",
+      "state": "Connecticut",
+      "county": "New Haven County",
+      "address": "141 East Street, Wolcott, CT 06716",
+      "official_url": "https://farmingburygolf.com/",
+      "summary": "A 9-hole public course (playable as 18 from alternate tees) on 85 acres atop Southington Mountain, par 35 at 2,966 yards, with views over Apple Valley and the Meriden and Avon mountains. East Street Eatery operates on site with a patio overlooking the course. Phone (203) 879-8038.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "zuppa-italian-pub",
+      "name": "Zuppa - Unique Italian Pub",
+      "kind": "restaurant",
+      "town": "Wolcott",
+      "state": "Connecticut",
+      "county": "New Haven County",
+      "address": "524 Wolcott Rd, Wolcott, CT 06716",
+      "official_url": "https://www.zuppaitalianpub.com/",
+      "summary": "Family owned and operated since 2014, known for handcrafted soups, house-made dressings and desserts made fresh daily, prime rib every Saturday, and curated Italian wines. Hours closed Monday, Tue-Sat 11 a.m.-9 p.m., Sun noon-7 p.m. Phone (203) 441-6950.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "johnny-bs-roadside-saloon",
+      "name": "Johnny B's Roadside Saloon",
+      "kind": "restaurant",
+      "town": "Wolcott",
+      "state": "Connecticut",
+      "county": "New Haven County",
+      "address": "1457 Meriden Rd, Wolcott, CT 06716",
+      "official_url": "https://johnnybsroadsidesaloon.com/",
+      "summary": "A bar and grill on Route 322 serving hand-cut steaks and fresh seafood, with a patio and a regular calendar of live music and karaoke nights. Open daily 11 a.m. to midnight. Phone (203) 879-2216.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "mad-river-creamery-deli",
+      "name": "Mad River Creamery & Deli",
+      "kind": "cafe",
+      "town": "Wolcott",
+      "state": "Connecticut",
+      "county": "New Haven County",
+      "address": "605 Wolcott Road, Wolcott, CT 06716",
+      "official_url": "https://madriver-creamerydeli.com/",
+      "summary": "A combined ice cream shop and deli with a wide flavor list including Amaretto Cherry and Eskimo Kisses, plus paninis, burgers, grinders, wraps and salads. Outdoor seating available. Hours Tue-Sat 11 a.m.-9 p.m., Sun noon-8 p.m., closed Monday. Phone (203) 441-4802.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "east-street-eatery",
+      "name": "East Street Eatery",
+      "kind": "restaurant",
+      "town": "Wolcott",
+      "state": "Connecticut",
+      "county": "New Haven County",
+      "address": "141 East St, Wolcott, CT 06716",
+      "official_url": "https://eaststreeteatery.com/",
+      "summary": "Italian-American cooking at Farmingbury Hills Golf Course, open year round, with house specialties like eggplant torte and seafood fra diavolo, a signature sangria and patio seating over the course. Private events for 20-120 guests. The site publishes no hours online — call (203) 879-8823 ahead.",
+      "status": "open",
+      "photos": []
+    }
+  ],
+  "entries": [
+    {
+      "kind": "sight",
+      "name": "Peterson Park",
+      "place_slug": "peterson-park-wolcott",
+      "note": "65+ acres of trails, courts and a skate park."
+    },
+    {
+      "kind": "sight",
+      "name": "Woodtick Reservoir (Scovill Reservoir)",
+      "place_slug": "woodtick-reservoir-wolcott",
+      "note": "A 1917 reservoir built to supply water for Waterbury brass mills."
+    },
+    {
+      "kind": "walk",
+      "name": "Mill Pond Way Walking Trail",
+      "place_slug": "mill-pond-way-walking-trail",
+      "note": "A 3.5-mile loop around Scovill Reservoir, mostly ADA-compliant."
+    },
+    {
+      "kind": "sight",
+      "name": "Chestnut Hill Reservoir",
+      "place_slug": "chestnut-hill-reservoir-wolcott",
+      "note": "A carry-in-only reservoir on former Tunxis hunting ground."
+    },
+    {
+      "kind": "sight",
+      "name": "Farmingbury Hills Golf Course",
+      "place_slug": "farmingbury-hills-golf-course",
+      "note": "A 9-hole public course atop Southington Mountain."
+    },
+    {
+      "kind": "food",
+      "name": "Zuppa - Unique Italian Pub",
+      "place_slug": "zuppa-italian-pub",
+      "note": "Family-owned since 2014, known for handcrafted soups."
+    },
+    {
+      "kind": "food",
+      "name": "Johnny B's Roadside Saloon",
+      "place_slug": "johnny-bs-roadside-saloon",
+      "note": "Hand-cut steaks and live music on Route 322."
+    },
+    {
+      "kind": "food",
+      "name": "Mad River Creamery & Deli",
+      "place_slug": "mad-river-creamery-deli",
+      "note": "A combined ice cream shop and deli."
+    },
+    {
+      "kind": "food",
+      "name": "East Street Eatery",
+      "place_slug": "east-street-eatery",
+      "note": "Italian-American cooking at Farmingbury Hills Golf Course."
+    }
+  ],
+  "links": [
+    {
+      "target": "guide:waterbury-ct-travel-guide",
+      "kind": "nearby",
+      "note": "Wolcott separated from land belonging to Waterbury, and the town's own guide treats Waterbury as directly next door."
+    },
+    {
+      "target": "guide:prospect-ct-travel-guide",
+      "kind": "same-region",
+      "note": "Both towns sit atop the high ground of northern New Haven County."
+    }
+  ]
+}

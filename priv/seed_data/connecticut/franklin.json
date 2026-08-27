@@ -1,0 +1,269 @@
+{
+  "guide": {
+    "slug": "franklin-ct-travel-guide",
+    "title": "Franklin, Connecticut: A Battlefield Surgeon and a Waterfall Preserve",
+    "destination": "Franklin, Connecticut",
+    "state": "Connecticut",
+    "county": "New London County",
+    "intro": "Europeans first settled this stretch of Norwich's outlying land in 1663; when the West Farms and Pautipaug societies separated and incorporated as their own town in 1786, they named it for Benjamin Franklin. Dr. Ashbel Woodward, born in Willington and trained at Bowdoin, settled in Franklin in 1834 and was the town's only physician for more than fifty years; already in his late fifties when the Civil War began, he served as a Union battlefield surgeon, and his descendants gave his Greek Revival house to the state in 1947. Uriah Tracy, who represented Franklin in Congress, was the first person interred in Washington's Congressional Cemetery. Lafayette S. Foster, born here in 1806, served as U.S. Senate president pro tempore from 1865 to 1867 — next in line to the presidency after Lincoln's assassination. Franklin remains one of Connecticut's smallest towns, with 1,863 residents at the 2020 census.",
+    "sections": [
+      {
+        "heading": "A physician, a senator and a mushroom farm",
+        "body": "Before incorporation the parish was known as West Farms. Dr. Ashbel Woodward wrote the historical address for Franklin's 1868 bicentennial; his circa-1835 house was listed on the National Register of Historic Places in 1992. Lafayette S. Foster represented Connecticut in the U.S. Senate from 1855 to 1867, and as president pro tempore for nearly two years after Lincoln's death he was effectively acting vice president, though no such constitutional office exists. Franklin's best-known modern industry was the Franklin Mushroom Farm off Route 32, once described as New England's largest mushroom grower; it ended production in 2006 when operations moved to Pennsylvania, and the property sold in 2015. Franklin is one of the 35 towns in The Last Green Valley National Heritage Corridor — 26 in eastern Connecticut and 9 in south-central Massachusetts — designated by Congress in 1994 to preserve rural culture and natural resources."
+      },
+      {
+        "heading": "Getting there",
+        "body": "Franklin is a car-only destination: there is no train station and no interstate inside the town, so nearly everyone arrives on CT Route 32, the Norwich-Willimantic corridor that doubles as the town's main street through North Franklin, or CT Route 207. The standard approach is Route 2 to Exit 25 in Yantic, then Route 32 north into North Franklin; I-395 is reached through Norwich to the southeast. The nearest passenger rail is New London Union Station, roughly 20 miles south, so plan on a car for the final leg."
+      },
+      {
+        "heading": "A waterfall preserve and a Route 32 creamery",
+        "body": "The Ashbel Woodward Museum occupies Dr. Woodward's own homestead on Route 32, maintained by a volunteer team and open Friday and Saturday afternoons in season. Blue Slope Country Museum, a working farm on Blue Hill Road, runs old-time square dances through the summer and is otherwise open by appointment. Ayers Gap Preserve, an 80-acre Nature Conservancy property off Route 207, hides a cascading waterfall where Bailey Brook drops through a ravine walled with glittering Scotland Schist. Franklin Swamp Wildlife Management Area covers 772 acres of marsh and mixed forest managed for young-forest wildlife, while Giddings Park anchors the town's recreation with ballfields, a horse ring and a wooded trail loop studded with fitness obstacles. On Route 32, Meyer's Crazy Hollow Creamery scoops more than thirty hard-serve flavors, and Emely's Pizza Restaurant serves an unusually wide all-day menu."
+      }
+    ],
+    "faq": [
+      {
+        "question": "How do I get to Franklin?",
+        "answer": "By car — take Route 2 to Exit 25 in Yantic, then Route 32 north into North Franklin, or approach on Route 207. There is no passenger rail station in Franklin; the nearest is New London Union Station, roughly 20 miles south."
+      },
+      {
+        "question": "Is there a train to Franklin?",
+        "answer": "No. No Metro-North, Shore Line East, or CTrail Hartford Line service reaches the town. New London Union Station, about 20 miles south, is the nearest passenger rail hub."
+      },
+      {
+        "question": "What is the Ashbel Woodward Museum?",
+        "answer": "The circa-1835 Greek Revival homestead of Dr. Ashbel Woodward, Franklin's physician for over 50 years and a Union Civil War surgeon. Listed on the National Register in 1992, it is maintained by a volunteer team and open Friday and Saturday afternoons in season; phone (860) 642-1988."
+      },
+      {
+        "question": "Is there a hotel in Franklin?",
+        "answer": "No lodging could be verified within Franklin. The nearest option is The Spa at Norwich Inn, about 7 miles southeast in Norwich."
+      },
+      {
+        "question": "What happened to the Franklin Mushroom Farm?",
+        "answer": "Once described as New England's largest mushroom grower, it ended production in 2006 when operations moved to Pennsylvania, and the Route 32 property was sold in 2015. It is historically significant but not a visitable attraction."
+      }
+    ],
+    "photos": [
+      {
+        "src": "/photos/ct/franklin/ashbel-woodward-house.jpg",
+        "thumb": "/photos/ct/franklin/ashbel-woodward-house_thumb.jpg",
+        "title": "Ashbel Woodward House",
+        "description": "The circa-1835 Ashbel Woodward House on Route 32, now a seasonal museum.",
+        "author": "CLK Hatcher",
+        "license": "CC BY-SA 2.0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Woodward,_Ashbel,_House_(New_London_County,_Connecticut).jpg"
+      },
+      {
+        "src": "/photos/ct/franklin/franklin-congregational-church.jpg",
+        "thumb": "/photos/ct/franklin/franklin-congregational-church_thumb.jpg",
+        "title": "Franklin Congregational Church",
+        "description": "The 1863 Congregational Church on the Franklin green at Meeting House Hill.",
+        "author": "John Phelan",
+        "license": "CC BY-SA 3.0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Congregational_Church,_Franklin_CT.JPG"
+      }
+    ]
+  },
+  "places": [
+    {
+      "slug": "ashbel-woodward-museum",
+      "name": "Ashbel Woodward Museum",
+      "kind": "historic-site",
+      "town": "Franklin",
+      "state": "Connecticut",
+      "county": "New London County",
+      "address": "387 Route 32, North Franklin, CT 06254",
+      "official_url": "https://www.ashbelwoodwardmuseum.org/",
+      "summary": "The circa-1835 Greek Revival homestead of Dr. Ashbel Woodward, Franklin's town physician for over 50 years and a Union Civil War battlefield surgeon. His descendants gave the house to the state in 1947; it was listed on the National Register of Historic Places in 1992 and is maintained by a volunteer team. Open Friday and Saturday afternoons, 11 a.m.-4 p.m., in season. Phone (860) 642-1988.",
+      "status": "open",
+      "photos": [
+        {
+          "src": "/photos/ct/franklin/ashbel-woodward-house.jpg",
+          "thumb": "/photos/ct/franklin/ashbel-woodward-house_thumb.jpg",
+          "title": "Ashbel Woodward House",
+          "description": "The circa-1835 Ashbel Woodward House on Route 32, now a seasonal museum.",
+          "author": "CLK Hatcher",
+          "license": "CC BY-SA 2.0",
+          "source_url": "https://commons.wikimedia.org/wiki/File:Woodward,_Ashbel,_House_(New_London_County,_Connecticut).jpg"
+        }
+      ]
+    },
+    {
+      "slug": "blue-slope-country-museum",
+      "name": "Blue Slope Country Museum",
+      "kind": "museum",
+      "town": "Franklin",
+      "state": "Connecticut",
+      "county": "New London County",
+      "address": "138 Blue Hill Road, Franklin, CT 06254",
+      "official_url": "https://blueslope.com/",
+      "summary": "A rural agricultural-history museum on a working farm, uniting farm history with the land. Runs old-time square dances on select summer Saturdays, 7-9:30 p.m. ($10 adults, $8 students, $35 families); museum visits are otherwise by appointment. Contact (860) 460-9877 or museum@blueslope.com.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "ayers-gap-preserve",
+      "name": "Ayers Gap Preserve",
+      "kind": "park",
+      "town": "Franklin",
+      "state": "Connecticut",
+      "county": "New London County",
+      "address": "Route 207, North Franklin, CT 06254",
+      "official_url": "https://www.nature.org/en-us/get-involved/how-to-help/places-we-protect/ayers-gap-preserve/",
+      "summary": "An 80-acre Nature Conservancy preserve, purchased in 1988, where Bailey Brook drops through a ravine walled with Scotland Schist cliffs to a cascading waterfall, with hemlocks and a fern species known from only a handful of Connecticut sites. Open dawn to dusk for hiking, birding and cross-country skiing; no bikes, pets or fishing. From Route 2, take Exit 25 to Route 32 north, then Route 207 east about one mile.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "franklin-swamp-wildlife-management-area",
+      "name": "Franklin Swamp Wildlife Management Area",
+      "kind": "park",
+      "town": "Franklin",
+      "state": "Connecticut",
+      "county": "New London County",
+      "address": "Off Route 32, North Franklin, CT 06254",
+      "official_url": "https://portal.ct.gov/DEEP/Wildlife/Wildlife-Mangement-Areas",
+      "summary": "A 772-acre state Wildlife Management Area of marsh, open water and mixed forest, holding white-tailed deer, wild turkey and ruffed grouse. A CT DEEP young-forest habitat project has run here since 2022 under a 2021-2030 management plan. Working state land open to hunting — wear blaze orange outside quiet-season visits.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "giddings-park-franklin",
+      "name": "Giddings Park",
+      "kind": "park",
+      "town": "Franklin",
+      "state": "Connecticut",
+      "county": "New London County",
+      "address": "Pond Road (Route 207), Franklin, CT 06254",
+      "summary": "Franklin's municipal recreation park, with ballfields, a horse ring, tennis and basketball courts, a playground, picnic pavilions and a small lending library, plus a wooded loop trail studded with fitness-challenge obstacles. Free and open to the public; contact the Town of Franklin at (860) 642-7352 for field schedules.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "franklin-town-line-diner",
+      "name": "Franklin Town Line Diner",
+      "kind": "restaurant",
+      "town": "Franklin",
+      "state": "Connecticut",
+      "county": "New London County",
+      "address": "107 Route 32, North Franklin, CT 06254",
+      "summary": "A classic breakfast-and-lunch diner on the Route 32 strip, known for oversized omelettes and home fries. Open Monday-Friday 6 a.m.-2 p.m., Saturday-Sunday 6:30 a.m.-2 p.m. Phone (860) 823-1811.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "emelys-pizza-restaurant",
+      "name": "Emely's Pizza Restaurant",
+      "kind": "restaurant",
+      "town": "Franklin",
+      "state": "Connecticut",
+      "county": "New London County",
+      "address": "260 Route 32, North Franklin, CT 06254",
+      "official_url": "https://emelyspizza.com/",
+      "summary": "An all-day family restaurant with breakfast platters and Belgian waffles from 7 a.m., specialty pizzas, Italian pasta, seafood and Mexican plates. Open roughly 7 a.m. to 8:30 p.m.; some directories list it closed Mondays, so call ahead. Phone (860) 642-4343.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "meyers-crazy-hollow-creamery",
+      "name": "Meyer's Crazy Hollow Creamery",
+      "kind": "cafe",
+      "town": "Franklin",
+      "state": "Connecticut",
+      "county": "New London County",
+      "address": "888 Route 32, North Franklin, CT 06254",
+      "summary": "A husband-and-wife creamery started in 2022, serving over 30 hard-serve flavors and 8 soft-serve, homemade waffle cones, and dairy-free and gluten-free options, with picnic tables and country outdoor seating. Open daily noon-8 p.m. Phone (860) 642-8075.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "dennys-fritters-more",
+      "name": "Denny's Fritter's & More",
+      "kind": "restaurant",
+      "town": "Franklin",
+      "state": "Connecticut",
+      "county": "New London County",
+      "address": "892 Route 32, Franklin, CT 06254",
+      "summary": "A small New England seafood-shack stand that opened in August 2025 next door to Meyer's Crazy Hollow Creamery, serving clam fritters, chowder, corn fritters and burgers. Closes for the winter season — call (860) 204-6677 before a visit outside summer months.",
+      "status": "open",
+      "photos": []
+    }
+  ],
+  "entries": [
+    {
+      "kind": "sight",
+      "name": "Ashbel Woodward Museum",
+      "place_slug": "ashbel-woodward-museum",
+      "note": "The homestead of Franklin's Civil War-surgeon town physician."
+    },
+    {
+      "kind": "sight",
+      "name": "Blue Slope Country Museum",
+      "place_slug": "blue-slope-country-museum",
+      "note": "A working farm museum with summer square dances."
+    },
+    {
+      "kind": "sight",
+      "name": "Ayers Gap Preserve",
+      "place_slug": "ayers-gap-preserve",
+      "note": "An 80-acre preserve hiding a cascading waterfall."
+    },
+    {
+      "kind": "sight",
+      "name": "Franklin Swamp Wildlife Management Area",
+      "place_slug": "franklin-swamp-wildlife-management-area",
+      "note": "772 acres of marsh and forest managed for young-forest wildlife."
+    },
+    {
+      "kind": "sight",
+      "name": "Giddings Park",
+      "place_slug": "giddings-park-franklin",
+      "note": "Franklin's town park, with ballfields and a fitness-obstacle trail loop."
+    },
+    {
+      "kind": "food",
+      "name": "Franklin Town Line Diner",
+      "place_slug": "franklin-town-line-diner",
+      "note": "A morning-hours diner known for oversized omelettes."
+    },
+    {
+      "kind": "food",
+      "name": "Emely's Pizza Restaurant",
+      "place_slug": "emelys-pizza-restaurant",
+      "note": "An all-day menu spanning breakfast, pizza, pasta and Mexican plates."
+    },
+    {
+      "kind": "food",
+      "name": "Meyer's Crazy Hollow Creamery",
+      "place_slug": "meyers-crazy-hollow-creamery",
+      "note": "Over 30 hard-serve flavors on the Route 32 strip."
+    },
+    {
+      "kind": "food",
+      "name": "Denny's Fritter's & More",
+      "place_slug": "dennys-fritters-more",
+      "note": "A seasonal seafood-shack stand next to the creamery."
+    }
+  ],
+  "links": [
+    {
+      "target": "guide:bozrah-ct-travel-guide",
+      "kind": "nearby",
+      "note": "Franklin borders Bozrah to the south."
+    },
+    {
+      "target": "guide:lebanon-ct-travel-guide",
+      "kind": "nearby",
+      "note": "Route 207 runs directly between Lebanon and Franklin, crossing Route 32 in Franklin."
+    },
+    {
+      "target": "guide:sprague-ct-travel-guide",
+      "kind": "nearby",
+      "note": "Route 207 continues east from Franklin to its terminus at Route 97 in Sprague's Baltic village."
+    },
+    {
+      "target": "guide:norwich-ct-travel-guide",
+      "kind": "shared-history",
+      "note": "Franklin separated from Norwich and was incorporated as its own town in 1786."
+    }
+  ]
+}
