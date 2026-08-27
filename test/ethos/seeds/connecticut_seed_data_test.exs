@@ -6,7 +6,9 @@ defmodule Ethos.Seeds.ConnecticutSeedDataTest do
 
   @ct_glob Path.expand("../../../priv/seed_data/connecticut/*.json", __DIR__)
   @manhattan_glob Path.expand("../../../priv/seed_data/manhattan/*.json", __DIR__)
-  @static_root Path.expand("../../../priv/static", __DIR__)
+  # Photo srcs are "/photos/...", served from priv/photos by its own Plug.Static
+  # rather than from priv/static — see EthosWeb.Endpoint for why.
+  @static_root Path.expand("../../../priv", __DIR__)
   @manifest_path Path.expand("../../../priv/seed_data/connecticut_photo_manifest.json", __DIR__)
   @seed_module_glob Path.expand("../../../lib/ethos/seeds/*.ex", __DIR__)
 

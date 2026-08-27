@@ -1,5 +1,5 @@
 defmodule Mix.Tasks.Ethos.OptimizeCtPhotos do
-  @shortdoc "Optimizes Connecticut source photos from images/ct/ into priv/static/photos/ct/"
+  @shortdoc "Optimizes Connecticut source photos from images/ct/ into priv/photos/ct/"
   @moduledoc "Run after downloading Commons originals: mix ethos.optimize_ct_photos"
   use Mix.Task
 
@@ -41,7 +41,7 @@ defmodule Mix.Tasks.Ethos.OptimizeCtPhotos do
   def run(_args) do
     Enum.each(@mapping, fn {town, label, src} ->
       src_path = Path.join(["images", "ct", src])
-      out_dir = Path.join(["priv", "static", "photos", "ct", town])
+      out_dir = Path.join(["priv", "photos", "ct", town])
       File.mkdir_p!(out_dir)
 
       case Ethos.PhotoOptimizer.optimize(src_path, out_dir, label) do
