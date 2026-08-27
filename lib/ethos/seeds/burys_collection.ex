@@ -11,12 +11,11 @@ defmodule Ethos.Seeds.BurysCollection do
       intro: """
       Connecticut has a habit of naming towns with the Old English ending
       *-bury* — "fortified settlement" — and ten of its towns carry it.
-      Five sit within a short drive of each other in the state's western
-      hills, sharing colonial roots and brass-and-hat industrial history.
-      The rest range from an iron town in the northwest corner to a Quiet
-      Corner village that changed who was allowed to go to school in
-      America. This collection gathers our guides to all ten — start
-      anywhere and follow the connections.
+      Five cluster in the state's western hills, sharing colonial roots and
+      brass-and-hat industrial history. The rest range from an iron town in
+      the northwest corner to a Quiet Corner village that changed who was
+      allowed to go to school in America. This collection gathers our
+      guides to all ten — start anywhere and follow the connections.
       """,
       items: [
         %{

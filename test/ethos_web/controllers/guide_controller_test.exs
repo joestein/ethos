@@ -81,6 +81,12 @@ defmodule EthosWeb.GuideControllerTest do
     assert html =~ "What's here"
     assert html =~ "Orientation"
     refute html =~ "Explore tours"
+
+    # The guide photo carries an attribution-required licence (CC BY 4.0); the
+    # page must credit the photographer and link to the full credit on the
+    # photos page rather than publishing the image bare.
+    assert html =~ "JJBers"
+    assert html =~ ~p"/g/#{guide.slug}/photos"
   end
 
   test "404s for drafts", %{conn: conn} do

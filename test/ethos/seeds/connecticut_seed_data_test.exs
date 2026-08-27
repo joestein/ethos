@@ -8,6 +8,7 @@ defmodule Ethos.Seeds.ConnecticutSeedDataTest do
   @manhattan_glob Path.expand("../../../priv/seed_data/manhattan/*.json", __DIR__)
   @static_root Path.expand("../../../priv/static", __DIR__)
   @manifest_path Path.expand("../../../priv/seed_data/connecticut_photo_manifest.json", __DIR__)
+  @seed_module_glob Path.expand("../../../lib/ethos/seeds/*.ex", __DIR__)
 
   defp ct_files, do: @ct_glob |> Path.wildcard() |> Enum.sort()
 
@@ -60,7 +61,13 @@ defmodule Ethos.Seeds.ConnecticutSeedDataTest do
   # "~45-minute tours" as a fact about the Stanley-Whitman House visit itself,
   # with no town-to-town distance implied. Confirmed by manual read during
   # task 55; do not add further entries here without the same scrutiny.
-  @drive_time_allowlist [{"farmington.json", "places[1].summary"}]
+  #
+  # Keyed on {file, path, matched phrase} and applied AFTER the regex runs
+  # (see the filter below), so only that exact phrase is pardoned in that
+  # string — a second, genuine drive-time claim appended to the same field
+  # still fails. Earlier this was keyed on {file, path} alone, which excused
+  # the *entire* string at that path regardless of what was appended to it.
+  @drive_time_allowlist [{"farmington.json", "places[1].summary", "about 45 min"}]
 
   defp collect_strings(term, path \\ "")
 
@@ -201,12 +208,13 @@ defmodule Ethos.Seeds.ConnecticutSeedDataTest do
       for f <- files,
           data = DataGuide.load!(f),
           {path, text} <- collect_strings(data),
-          {Path.basename(f), path} not in @drive_time_allowlist,
           pattern <- @drive_time_patterns,
           match = Regex.run(pattern, text),
           not is_nil(match),
+          matched = hd(match),
+          {Path.basename(f), path, matched} not in @drive_time_allowlist,
           uniq: true,
-          do: {Path.basename(f), path, hd(match)}
+          do: {Path.basename(f), path, matched}
 
     assert drive_time_violations == [],
            "drive-time phrasing found (banned — state proximity as a road, direction, " <>
@@ -245,5 +253,45 @@ defmodule Ethos.Seeds.ConnecticutSeedDataTest do
       )
 
     assert length(ct_guides) == length(files) + 5
+  end
+
+  # Connecticut reader-facing prose lives in two places: the JSON seed files
+  # under priv/seed_data/connecticut/*.json, which the drive-time scan above
+  # walks field by field, and the Elixir seed modules under
+  # lib/ethos/seeds/*.ex (the CT-5 code guides plus BurysCollection), whose
+  # strings are embedded directly in source and were never covered by the
+  # JSON-only glob. That gap was live: burys_collection.ex and
+  # middlebury_guide.ex shipped "within a short drive", "ten minutes east",
+  # "ten minutes southwest" and "about ten minutes away" to production
+  # because nothing scanned code-module source. Both locations must be
+  # covered for the ban to mean what it claims to mean.
+  #
+  # This reads each seed module as plain text and runs the same
+  # @drive_time_patterns over it — coarser than the JSON walk (no per-field
+  # path, and it cannot distinguish prose from a code comment or a variable
+  # name), but it is simple, honest, and needs no Elixir parsing.
+  #
+  # rome_guide.ex predates the Connecticut expansion and seeds an unrelated
+  # destination; the Connecticut content-rules doc's drive-time ban was never
+  # meant to reach it (it correctly contains "20-minute walk" as a walkable
+  # distance, reviewed under Rome's own rules), so it is excluded by name
+  # rather than left to silently fail this Connecticut-specific gate.
+  @non_connecticut_seed_modules ["rome_guide.ex"]
+
+  test "connecticut prose in lib/ethos/seeds/*.ex is free of banned drive-time phrasing" do
+    violations =
+      for f <- @seed_module_glob |> Path.wildcard() |> Enum.sort(),
+          Path.basename(f) not in @non_connecticut_seed_modules,
+          text = File.read!(f),
+          pattern <- @drive_time_patterns,
+          match = Regex.run(pattern, text),
+          not is_nil(match),
+          uniq: true,
+          do: {Path.basename(f), hd(match)}
+
+    assert violations == [],
+           "drive-time phrasing found in seed module source (banned — state proximity as a " <>
+             "road, direction, distance in miles, or bordering relationship instead): " <>
+             inspect(violations)
   end
 end

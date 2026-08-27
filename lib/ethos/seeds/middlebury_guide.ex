@@ -101,9 +101,10 @@ defmodule Ethos.Seeds.MiddleburyGuide do
           "body" => """
           Middlebury itself has no verified operating hotel or B&B as of 2026 (the
           longtime Tucker Hill Inn appears to have closed). The closest verified
-          bases are the Courtyard by Marriott in downtown Waterbury, ten minutes
-          east, or the resort-style Heritage Hotel in Southbury, ten minutes
-          southwest — both covered in their towns' Ethos guides.
+          bases are the Courtyard by Marriott in downtown Waterbury, which
+          borders Middlebury to the east, or the resort-style Heritage Hotel in
+          Southbury, which borders Middlebury to the southwest — both covered in
+          their towns' Ethos guides.
           """
         }
       ],
@@ -121,7 +122,7 @@ defmodule Ethos.Seeds.MiddleburyGuide do
         %{
           "question" => "Where do I stay for a Quassy trip?",
           "answer" =>
-            "In neighboring towns: downtown Waterbury's Courtyard by Marriott or Southbury's Heritage Hotel are the closest verified options, each about ten minutes away."
+            "In neighboring towns: downtown Waterbury's Courtyard by Marriott or Southbury's Heritage Hotel are the closest verified options."
         },
         %{
           "question" => "What's Middlebury's history in one line?",
