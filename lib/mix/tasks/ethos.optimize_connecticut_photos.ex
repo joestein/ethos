@@ -1,5 +1,5 @@
 defmodule Mix.Tasks.Ethos.OptimizeConnecticutPhotos do
-  @shortdoc "Optimizes CT-expansion photos from images/connecticut/ into priv/static/photos/ct/, driven by seed JSONs"
+  @shortdoc "Optimizes CT-expansion photos from images/connecticut/ into priv/photos/ct/, driven by seed JSONs"
   @moduledoc "Scans priv/seed_data/connecticut/*.json for photo srcs and optimizes images/connecticut/{label}.* accordingly."
   use Mix.Task
 
@@ -37,7 +37,7 @@ defmodule Mix.Tasks.Ethos.OptimizeConnecticutPhotos do
     case String.split(src, "/") do
       ["", "photos", "ct", town, file] ->
         label = Path.rootname(file)
-        out_dir = Path.join(["priv", "static", "photos", "ct", town])
+        out_dir = Path.join(["priv", "photos", "ct", town])
         File.mkdir_p!(out_dir)
 
         case Ethos.PhotoOptimizer.optimize(find_source!(label), out_dir, label) do

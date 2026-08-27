@@ -17,7 +17,10 @@ defmodule EthosWeb do
   those modules here.
   """
 
-  def static_paths, do: ~w(assets fonts images photos favicon.ico)
+  # "photos" is deliberately absent: guide photos are served from priv/photos by
+  # their own Plug.Static in the endpoint, so `mix phx.digest` does not duplicate
+  # ~300 MB of images that are never requested through a digested path.
+  def static_paths, do: ~w(assets fonts images favicon.ico)
 
   def router do
     quote do

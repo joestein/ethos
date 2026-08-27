@@ -24,6 +24,16 @@ defmodule EthosWeb.Endpoint do
     from: {:ethos, "priv/uploads"},
     gzip: false
 
+  # Guide photos live outside priv/static deliberately. There are thousands of
+  # them (~300 MB), their paths are stored in the database rather than emitted
+  # through ~p static helpers, so a digested copy would never be requested —
+  # leaving them in priv/static made `mix phx.digest` duplicate the whole set
+  # into the release image for nothing.
+  plug Plug.Static,
+    at: "/photos",
+    from: {:ethos, "priv/photos"},
+    gzip: false
+
   plug Plug.Static,
     at: "/",
     from: :ethos,

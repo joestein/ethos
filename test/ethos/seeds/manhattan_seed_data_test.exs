@@ -32,7 +32,9 @@ defmodule Ethos.Seeds.ManhattanSeedDataTest do
     assert dups == [], "place slugs defined in multiple files: #{inspect(dups)}"
 
     # licenses + photo existence
-    static_root = Path.expand("../../../priv/static", __DIR__)
+    # Photos are served from priv/photos by their own Plug.Static, not from
+    # priv/static — see EthosWeb.Endpoint.
+    static_root = Path.expand("../../../priv", __DIR__)
 
     for f <- files, p <- all_photos(DataGuide.load!(f)) do
       assert allowed_license?(p["license"]),

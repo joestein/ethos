@@ -1,11 +1,11 @@
 defmodule Mix.Tasks.Ethos.OptimizePhotos do
   use Mix.Task
 
-  @shortdoc "Optimize trip photos into priv/static/photos"
+  @shortdoc "Optimize trip photos into priv/photos"
 
   @moduledoc """
   Resizes and re-encodes the Rome trip source photos from `images/` into
-  optimized JPEGs (full-size + thumbnail) under `priv/static/photos/rome/`.
+  optimized JPEGs (full-size + thumbnail) under `priv/photos/rome/`.
 
   Source files are looked up as `images/IMG_<n>.png`, per the hardcoded
   label -> filename manifest below. Missing sources are skipped with a
@@ -15,7 +15,7 @@ defmodule Mix.Tasks.Ethos.OptimizePhotos do
   """
 
   @source_dir "images"
-  @out_dir "priv/static/photos/rome"
+  @out_dir "priv/photos/rome"
 
   @manifest [
     {"food-flatbread-lunch", "IMG_3618.png"},
