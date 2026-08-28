@@ -106,6 +106,27 @@ Apply this to every item before you write a single line of copy.
   note called that ranking "not independently verified beyond being
   plausible." Confirming the designation did not confirm the superlative
   riding along with it.
+- **Architectural style is a clause of this kind, and it is the most common
+  one.** A verifier almost never repeats a style, because it is checking
+  that a building is the one named, stands where it is said to stand and
+  still does what it is said to do — not what its ornament is. Treat a
+  style exactly like a superlative. **The trap is the district inventory**,
+  where a style list rides inside a sentence whose counts, dates and
+  boundaries *are* confirmed, so the whole sentence reads as verified;
+  check the clause, not the sentence. And where a verifier quotes its
+  source verbatim, **where the quotation stops is the edge of what is
+  confirmed** — a finder sentence that runs on past the closing quotation
+  mark runs on past the evidence. Wave 3 checked twelve style clauses this
+  way: four survived because a verdict genuinely restated them (Vinegar
+  Hill's Federal/Greek Revival, quoted verbatim from the LPC report in the
+  verdict's own reason; Clinton Hill's Gothic Revival, in two verdicts),
+  and one was a false positive that a substring search would have cut
+  ("Federal authorities bought forty acres"). **Read the verdict, do not
+  grep the file.** The corollary Wave 3 established: text the verifier
+  itself wrote counts as restated, even when it appears in a field other
+  than `item` or `reason` — the verifier does not stop being the measure
+  of confirmation when it writes in `closed_or_unverified`. Wave 3's
+  "rowhouse" clause was kept on exactly this basis.
 
 There is no mechanical gate behind this rule. It is enforced by the wave's
 fact-fidelity review, which traces every claim in every file back to the
@@ -276,6 +297,9 @@ Entry `kind` is one of `sight`, `food`, `stay`, `walk`:
 - a park or greenway you frame as a stroll → `walk` (otherwise `sight`)
 - restaurants, cafés, bakeries, breweries → `food`
 - hotels and B&Bs → `stay`
+- a historic **district** → `walk` — it is an area a visitor walks through,
+  not a single site; an individual landmark, building or monument inside a
+  district → `sight`. Wave 3 established this usage.
 
 The `entries` schema also accepts `tour` and `tip`; Brooklyn does not use
 them, matching Manhattan and Connecticut.
@@ -392,6 +416,22 @@ answer.** Red Hook is the canonical case:
 
 Straining to present Smith–Ninth Streets as Red Hook's station — because
 some station must be named — is exactly the failure this rule forbids.
+
+**Case C applies to ferry landings and LIRR stations exactly as it applies
+to subway stations.** The artifact schema splits `landing`/`station` from
+`location` for all of them, and a `location` of `null` means the research
+did not establish where the stop sits.
+
+**A stop whose name contains a neighborhood name is not a location
+claim.** "South Williamsburg" is what NYC Ferry calls a landing, not an
+assertion about which neighborhood it sits in. Name the landing, give the
+street corner if the artifact has one, and assert no neighborhood unless a
+verdict's `location` field supplies it.
+
+Wave 2's worked example: South Williamsburg's own artifact had an empty
+`transit.ferry` array while the landing appeared only in Williamsburg's
+artifact, with `location: null` on both landings. The claim came out of
+the file whose research never carried it.
 
 ### 6.4 Never state a trip duration
 
@@ -985,6 +1025,7 @@ not mean a compliant file** — it means nothing in this table was checked.
 | --- | --- |
 | 2 | All verdict filtering — nothing mechanical can tell a verified fact from an invented one |
 | 2 | A `confirmed` verdict's scope — whether a shipped clause was actually restated in the verdict's `item` text, or only present in the finder's original sentence (the New Lots case) |
+| 2 | Architectural style clauses — whether a style was genuinely restated by the verifier (in `item`, `reason`, or any other verifier-authored field) or merely rode along inside a district-inventory sentence whose counts and dates are confirmed |
 | 3 | The 6-place threshold itself (the gate only fails clear mislabels: guide < 4, town-page ≥ 6) |
 | 4 | **Every fixed value except `guide.county`**: `places[].county`, `places[].state`, `places[].town`, `places[].status` beyond `{open,closed}`, `guide.destination`, and the `{slug}-brooklyn-guide` slug pattern. `Place.changeset` requires `county` and `state` to be *present*, never to hold a particular value — a place carrying `"Kings County"` publishes cleanly and wrong |
 | 5 | **Intro 100-160 words**; 2-3 sections; **FAQ count 4-6**; **places 6-12**; **entries 6-12** |
