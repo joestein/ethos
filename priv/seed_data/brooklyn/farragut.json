@@ -1,0 +1,55 @@
+{
+  "guide": {
+    "slug": "farragut-brooklyn-guide",
+    "title": "Farragut, Brooklyn: The Central Section of East Flatbush",
+    "destination": "Farragut, New York",
+    "state": "New York",
+    "county": "Brooklyn",
+    "tier": "town-page",
+    "intro": "Farragut is the central section of East Flatbush and was originally part of the colonial Town of Flatbush. It is named for the American Civil War Admiral David Farragut. Wikipedia's description puts Cortelyou Road and Holy Cross Cemetery on its northern side, Kings Highway to the east, Brooklyn Avenue to the west and the LIRR Bay Ridge Branch to the south; that single tertiary description is all this page has, and it should be read as approximate rather than official. The population was largely Jewish and Italian before 1950, and by the 1990s African Americans had become the majority, alongside many immigrants from the West Indies. Flatbush Gardens, formerly Vanderveer Estates, sits within the area: 59 buildings put up in 1949 on the site of the Flatbush Water Works.",
+    "sections": [
+      {
+        "heading": "A residential middle with no visitor sites of its own",
+        "body": "Farragut is a place to understand rather than a place to tour, and this page lists no attractions because the research for it verified none inside the area's stated bounds. Its two named edges both belong to something else. Holy Cross Cemetery, which forms part of the stated northern boundary, opened on July 13, 1849 and is a Catholic cemetery overseen by the Diocese of Brooklyn; it is covered on the East Flatbush page, which is where the sources place it. The LIRR Bay Ridge Branch, the stated southern boundary, carried its last passengers in 1924 and has run freight only ever since, operated today by the New York and Atlantic Railway.\n\nFlatbush Gardens is described as one of the largest privately held working-class housing complexes in New York City, and Barbra Streisand and the actor Michael K. Williams are among its former residents. It is a private residential complex rather than a site open to visitors, and it is listed here for context only.\n\nThe research also flags what it could not settle. Only a single tertiary source describes Farragut's boundaries at all, and no Landmarks Preservation Commission report or City Planning community district profile could be reached to check it. No restaurant, cafe or bakery inside Farragut could be verified, because the research pass had no working search tool by the time it reached this neighborhood; that is a gap in the research, not evidence that nothing is there."
+      },
+      {
+        "heading": "Getting there",
+        "body": "No subway station sits inside Farragut. The nearest are on the IRT Nostrand Avenue Line, along Nostrand Avenue, which runs west of Brooklyn Avenue, the street given as Farragut's own western boundary. Church Avenue, at Church and Nostrand Avenues, is served by the 2 at all times and the 5 on weekdays. Newkirk Avenue-Little Haiti, at Newkirk and Nostrand Avenues, has the same service, as does Beverly Road at Beverley Road and Nostrand Avenue. All three are described as serving the broader Flatbush and East Flatbush area rather than sitting inside Farragut.\n\nThat leaves the bus. The B44 and B44 Select Bus Service run mostly along Nostrand Avenue, and Farragut Road is named as a point on the route where the northbound local shifts back onto Nostrand Avenue.\n\nThere is no Long Island Rail Road option. The Bay Ridge Branch along the southern edge has carried freight only since 1924."
+      }
+    ],
+    "faq": [
+      {
+        "question": "How do I get to Farragut?",
+        "answer": "No station sits inside the area. Church Avenue, Newkirk Avenue-Little Haiti and Beverly Road on the IRT Nostrand Avenue Line are the nearest, served by the 2 at all times and the 5 on weekdays, and all are described as serving the broader Flatbush and East Flatbush area. The B44 and B44 Select Bus Service run along Nostrand Avenue, passing Farragut Road."
+      },
+      {
+        "question": "Where does the name Farragut come from?",
+        "answer": "From the American Civil War Admiral David Farragut. The area is the central of the three informal sections of East Flatbush, alongside Erasmus to the west and Remsen Village and Rugby to the east."
+      },
+      {
+        "question": "Is there anything to visit in Farragut?",
+        "answer": "Nothing this page can verify. Holy Cross Cemetery, on the stated northern edge, is covered on the East Flatbush page, and Flatbush Gardens is a private residential complex rather than a visitor site. The research pass ran out of search access before it could check for restaurants or cafes here, so that gap is unresearched rather than empty."
+      }
+    ],
+    "photos": []
+  },
+  "places": [],
+  "entries": [],
+  "links": [
+    {
+      "target": "guide:east-flatbush-brooklyn-guide",
+      "kind": "same-region",
+      "note": "Farragut is the central section of East Flatbush, named for the Civil War Admiral David Farragut."
+    },
+    {
+      "target": "guide:flatbush-brooklyn-guide",
+      "kind": "shared-history",
+      "note": "Farragut was originally part of the colonial Town of Flatbush."
+    },
+    {
+      "target": "guide:remsen-village-brooklyn-guide",
+      "kind": "same-region",
+      "note": "Wikipedia's East Flatbush article places the 59-building Flatbush Gardens complex of 1949 in the Farragut section rather than further east."
+    }
+  ]
+}

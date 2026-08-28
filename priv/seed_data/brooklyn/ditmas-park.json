@@ -1,0 +1,151 @@
+{
+  "guide": {
+    "slug": "ditmas-park-brooklyn-guide",
+    "title": "Ditmas Park, Brooklyn: A Landmarked District Inside Flatbush",
+    "destination": "Ditmas Park, New York",
+    "state": "New York",
+    "county": "Brooklyn",
+    "tier": "town-page",
+    "intro": "Ditmas Park takes its name from the Ditmas family, who owned the farmland before it was built on. Development ran from 1902 to 1914 and produced roughly 2,000 to 2,500 buildings, mostly Colonial Revival with Bungalow, Craftsman, Queen Anne and Tudor examples among them. Lewis H. Pounds, Brooklyn Borough President from January 1, 1914 to December 31, 1917, was an early developer here. The tract followed Dean Alvord's neighbouring Prospect Park South, begun in 1899, and Wikipedia lists Ditmas Park among the developments it inspired. The historic district was designated a New York City landmark on July 28, 1981 and listed on the National Register on September 30, 1983. It sits within the broader Flatbush area, and the narrow landmark line and the wider colloquial one have never agreed.",
+    "sections": [
+      {
+        "heading": "A district inside a district",
+        "body": "Ditmas Park is a section of Flatbush rather than a neighborhood alongside it, and two different boundaries circulate under the name. The Landmarks Preservation Commission's designation describes a narrow line around Ocean Avenue, Dorchester Road, Marlborough Road, portions of East 16th and East 17th Streets and Newkirk Avenue. Broader everyday and real-estate use of the name reaches well past that, toward Coney Island Avenue and Foster Avenue and up against Prospect Park South and Kensington. Neither line is definitive, and this page does not pick one.\n\nThe houses inside the district are private residences, and the visit is walking the tree-lined streets to look at exteriors and porches. The Craftsman bungalow row on East 16th Street, thirteen houses designed by Arlington D. Isham for builder Harry Grattan in 1908 and 1909, is the most concentrated set. Flatbush itself is older than any of it: the surrounding town was settled by the Dutch and, during the Revolutionary War, lay in the path of the British advance under Lord Cornwallis after the Battle of Long Island on August 27, 1776, and was occupied by British forces until 1783."
+      },
+      {
+        "heading": "Getting there",
+        "body": "The BMT Brighton Line runs through the area. Cortelyou Road, which the research places across Ditmas Park and Flatbush, is served by the Q at all times, as is Beverley Road. Newkirk Plaza, also described as sitting across Flatbush and Ditmas Park, is served by the Q and the B.\n\nAvenue H, further south on the same line and served by the Q, sits near the border of Midwood and Flatbush and also serves Fiske Terrace; the research is explicit that it is not inside Ditmas Park."
+      }
+    ],
+    "faq": [
+      {
+        "question": "How do I get to Ditmas Park?",
+        "answer": "By subway on the BMT Brighton Line. Cortelyou Road and Beverley Road are served by the Q at all times, and Newkirk Plaza is served by the Q and the B."
+      },
+      {
+        "question": "Is Ditmas Park part of Flatbush?",
+        "answer": "Sources treat it as a section of Flatbush, and Wikipedia's Flatbush article lists it among the sub-sections understood to fall inside the broader area. The Landmarks Preservation Commission's historic-district line is much narrower than the name's everyday use, and the two do not agree."
+      },
+      {
+        "question": "Can I go inside the historic houses?",
+        "answer": "No. The district's roughly 2,000 to 2,500 buildings are private residences. What is on offer is the street itself: exteriors, porches and the 1908-1909 Craftsman bungalow row on East 16th Street."
+      }
+    ],
+    "photos": [
+      {
+        "src": "/photos/ny/brooklyn/ditmas-park/ditmas-park-historic-district-ditmas-park.jpg",
+        "thumb": "/photos/ny/brooklyn/ditmas-park/ditmas-park-historic-district-ditmas-park_thumb.jpg",
+        "title": "A street in the Ditmas Park Historic District",
+        "description": "Freestanding houses set behind lawns and porches along a tree-lined street, with a flowering tree in the foreground.",
+        "author": "Fuzheado",
+        "license": "CC BY-SA 3.0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Ditmas_Park_Historic_District.jpg"
+      }
+    ]
+  },
+  "places": [
+    {
+      "slug": "ditmas-park-historic-district",
+      "name": "Ditmas Park Historic District",
+      "kind": "historic-site",
+      "town": "Ditmas Park",
+      "state": "New York",
+      "county": "Brooklyn",
+      "address": "Streets including Ocean Avenue, Marlborough Road, Argyle Road, Rugby Road, Westminster Road and East 16th to 19th Streets, Brooklyn, NY",
+      "summary": "A district of roughly 2,000 to 2,500 freestanding houses built between 1902 and 1914, mostly Colonial Revival with Bungalow, Craftsman, Queen Anne and Tudor examples. The houses are private residences; the visit is walking the streets.",
+      "history": "Designated a New York City landmark on July 28, 1981 and listed on the National Register of Historic Places on September 30, 1983. The land had been Ditmas family farmland, and Lewis H. Pounds was an early developer.",
+      "status": "open",
+      "photos": [
+        {
+          "src": "/photos/ny/brooklyn/ditmas-park/ditmas-park-historic-district-ditmas-park.jpg",
+          "thumb": "/photos/ny/brooklyn/ditmas-park/ditmas-park-historic-district-ditmas-park_thumb.jpg",
+          "title": "A street in the Ditmas Park Historic District",
+          "description": "Freestanding houses set behind lawns and porches along a tree-lined street, with a flowering tree in the foreground.",
+          "author": "Fuzheado",
+          "license": "CC BY-SA 3.0",
+          "source_url": "https://commons.wikimedia.org/wiki/File:Ditmas_Park_Historic_District.jpg"
+        }
+      ]
+    },
+    {
+      "slug": "flatbush-tompkins-congregational-church",
+      "name": "Flatbush-Tompkins Congregational Church",
+      "kind": "historic-site",
+      "town": "Ditmas Park",
+      "state": "New York",
+      "county": "Brooklyn",
+      "address": "Ditmas Park area, Brooklyn, NY",
+      "summary": "A brick Neo-Georgian church built in 1910 and cited in the Ditmas Park Historic District's designation report. The congregation remains active, with Conrad Tillard as senior minister since 2018.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "brush-and-van-ness-residences",
+      "name": "Thomas H. Brush and George Van Ness Residences",
+      "kind": "historic-site",
+      "town": "Ditmas Park",
+      "state": "New York",
+      "county": "Brooklyn",
+      "address": "1000 and 1010 Ocean Avenue, Brooklyn, NY",
+      "summary": "A pair of historic houses on Ocean Avenue named in the district's designation report. Brownstoner covers 1000 Ocean Avenue as a still-standing Ditmas Park mansion and 1010 Ocean Avenue as its sibling next door.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "sycamore-ditmas-park",
+      "name": "Sycamore",
+      "kind": "cafe",
+      "town": "Ditmas Park",
+      "state": "New York",
+      "county": "Brooklyn",
+      "address": "1118 Cortelyou Road, Brooklyn, NY 11218",
+      "official_url": "https://www.sycamorebrooklyn.com",
+      "summary": "A combined bar and flower shop on Cortelyou Road, open since 2010-2011, with a cocktail and whiskey bar, rotating food vendors from Thursday to Sunday, and a flower counter.",
+      "status": "open",
+      "photos": []
+    }
+  ],
+  "entries": [
+    {
+      "kind": "walk",
+      "name": "Ditmas Park Historic District",
+      "place_slug": "ditmas-park-historic-district",
+      "note": "Eight blocks of freestanding houses built 1902-1914, landmarked in 1981 and on the National Register since 1983."
+    },
+    {
+      "kind": "sight",
+      "name": "Flatbush-Tompkins Congregational Church",
+      "place_slug": "flatbush-tompkins-congregational-church",
+      "note": "A brick Neo-Georgian church of 1910, named in the historic district's designation report and still an active congregation."
+    },
+    {
+      "kind": "sight",
+      "name": "Thomas H. Brush and George Van Ness Residences",
+      "place_slug": "brush-and-van-ness-residences",
+      "note": "A paired set of houses at 1000 and 1010 Ocean Avenue, singled out in the district's designation report."
+    },
+    {
+      "kind": "food",
+      "name": "Sycamore",
+      "place_slug": "sycamore-ditmas-park",
+      "note": "A bar and flower shop in one on Cortelyou Road, with food vendors rotating through from Thursday to Sunday."
+    }
+  ],
+  "links": [
+    {
+      "target": "guide:prospect-park-south-brooklyn-guide",
+      "kind": "shared-history",
+      "note": "Wikipedia lists Ditmas Park among the developments that followed and were inspired by Dean Alvord's Prospect Park South, begun in 1899."
+    },
+    {
+      "target": "guide:kensington-brooklyn-guide",
+      "kind": "same-region",
+      "note": "The broader traditional Ditmas Park boundary is described as reaching toward Coney Island Avenue, Prospect Park South and Kensington."
+    },
+    {
+      "target": "guide:midwood-brooklyn-guide",
+      "kind": "same-region",
+      "note": "Avenue H on the Q sits near the Midwood and Flatbush border and serves Fiske Terrace, south of Ditmas Park rather than within it."
+    }
+  ]
+}

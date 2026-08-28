@@ -47,9 +47,17 @@
     "sha256": "7c1f8dcd95c78a4607cb57239e98d408e93c67de3a066c83ba5ece917e8902f1",
     "source_url": "https://commons.wikimedia.org/wiki/File:Columbia_Street_Waterfront_District.jpg"
   },
+  "congregation-beth-israel-east-flatbush": {
+    "sha256": "dbb904a4a537fb7982aa2ceb80c65c0d73bcebbb69ef630070462b3120ca71a1",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Congregation_Beth_Israel_-_Front_Gate.JPG"
+  },
   "court-street-downtown-brooklyn": {
     "sha256": "986ea0baa18e843d14b689346f487c5e012c0e3036f84123660a0981d2d14390",
     "source_url": "https://commons.wikimedia.org/wiki/File:Brooklyn_Court_St_from_Borough_Hall.JPG"
+  },
+  "ditmas-park-historic-district-ditmas-park": {
+    "sha256": "0dbaffc35f1aca0d75de065266eb681e78cc08704bd3904679786c0926b9abdb",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Ditmas_Park_Historic_District.jpg"
   },
   "domino-sugar-refinery-williamsburg": {
     "sha256": "b90507b03760241a6ee2e69dd47ac797afbe8727d7c088593dcd6b305ec14e48",
@@ -59,6 +67,10 @@
     "sha256": "c080dab0f8646328f6906b9a6808b6a05094ffb001f135082e8312e671fb2a07",
     "source_url": "https://commons.wikimedia.org/wiki/File:Dry_Dock_at_Brooklyn_Navy_Yard.jpg"
   },
+  "east-flatbush-library-east-flatbush": {
+    "sha256": "628c0adc87e8e4fb2a774fc7f745a672eba3e650639f713e7dd6339e78a948fd",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Brooklyn_Public_Library_East_Flatbush_Branch.jpg"
+  },
   "emmanuel-baptist-church-clinton-hill": {
     "sha256": "c7d3770ae36ce08070cfcf0d4783e04983cbe030b14257c3ca33c7538547d473",
     "source_url": "https://commons.wikimedia.org/wiki/File:Emmanuel_Baptist_Church.jpg"
@@ -66,6 +78,10 @@
   "erie-basin-piers-red-hook": {
     "sha256": "c35946c895a954934f65d5d07d0cee4309e08e3a1e85fe91ec0018515e62fe62",
     "source_url": "https://commons.wikimedia.org/wiki/File:RedHookByLuigiNovi_P1.jpg"
+  },
+  "flatbush-reformed-dutch-church-flatbush": {
+    "sha256": "c14f872146abca014f58ef2cbf46612a1eb305fecc27b87e9c5c98134f275049",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Flatbush_Reformed_Protestant_Dutch_Church_20210821_173303387.MP.jpg"
   },
   "fort-greene-park-fort-greene": {
     "sha256": "7b957f4edc78cb786690b829c486192d41135436d935998592a856ad2a49cde3",
@@ -80,14 +96,14 @@
     "source_url": "https://commons.wikimedia.org/wiki/File:Fulton_Mall_Brooklyn.jpg"
   },
   "green-wood-cemetery-gate-greenwood": {
+    "fetched_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e2/2015_Green-Wood_Cemetery_Gate_from_outside.jpg/1280px-2015_Green-Wood_Cemetery_Gate_from_outside.jpg",
     "sha256": "dded3ee22e600bcd3ef7cec827816ef9d76d08a2ab5e926b3619cc5f614543c7",
-    "source_url": "https://commons.wikimedia.org/wiki/File:2015_Green-Wood_Cemetery_Gate_from_outside.jpg",
-    "fetched_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e2/2015_Green-Wood_Cemetery_Gate_from_outside.jpg/1280px-2015_Green-Wood_Cemetery_Gate_from_outside.jpg"
+    "source_url": "https://commons.wikimedia.org/wiki/File:2015_Green-Wood_Cemetery_Gate_from_outside.jpg"
   },
   "green-wood-chapel-greenwood": {
+    "fetched_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8f/Green-Wood_Cemetery_Chapel.jpg/1280px-Green-Wood_Cemetery_Chapel.jpg",
     "sha256": "e0fb660ca2ffe09a6ac4ab41649aa6b74556daace6a60dc3556c611ad24a49aa",
-    "source_url": "https://commons.wikimedia.org/wiki/File:Green-Wood_Cemetery_Chapel.jpg",
-    "fetched_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8f/Green-Wood_Cemetery_Chapel.jpg/1280px-Green-Wood_Cemetery_Chapel.jpg"
+    "source_url": "https://commons.wikimedia.org/wiki/File:Green-Wood_Cemetery_Chapel.jpg"
   },
   "herbert-von-king-park-bedford-stuyvesant": {
     "sha256": "4fedc639baf8debc3ba80c1db22b09231cb4f88d154918f87c8bf67b650b15e9",
@@ -96,6 +112,10 @@
   "highland-park-entrance-highland-park": {
     "sha256": "724cb74913a228c3b903800445ba78357d33cf1c4a75f81f1b23e3dd14627c12",
     "source_url": "https://commons.wikimedia.org/wiki/File:HighlandparkBrooklyn.jpg"
+  },
+  "holy-cross-cemetery-gate-east-flatbush": {
+    "sha256": "89908fb7fe914735ee44bb4820009be3abb811111965beca419577719dd08402",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Holy_Cross_Cemetery_gate_jeh.jpg"
   },
   "hotel-bossert-brooklyn-heights": {
     "sha256": "f11aee4a05c8d6702b2ec3ac02e4f67d02177b8cf94876200bfb459e56398822",
@@ -113,6 +133,14 @@
     "sha256": "2b528715a68c9ea99ff3b66685e1eedac58e36cb5e831eb6a9dc12c453733bcf",
     "source_url": "https://commons.wikimedia.org/wiki/File:Kane_Street_synagogue_exterior.jpg"
   },
+  "kensington-library-kensington": {
+    "sha256": "728e16f7eccec661969e5f8d02670e52a5280dac6fe1674c157ba6bb2a123b47",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Kensington_library.jpg"
+  },
+  "kensington-post-office-kensington": {
+    "sha256": "849f725d36b6c03d3084632ebb018383501adc70b48de10242c93be089d4322d",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Kensington_PO_jeh.JPG"
+  },
   "kings-county-savings-bank-crown-heights": {
     "sha256": "288fd5f44f69d2e99197616d7bdce1700f46c271ac003104332e526fe787c9f5",
     "source_url": "https://commons.wikimedia.org/wiki/File:Eastern_Pkwy_Nostrand_Av_td_(2019-09-23)_01_-_Kings_County_Savings_Bank.jpg"
@@ -120,6 +148,14 @@
   "kings-county-savings-bank-south-williamsburg": {
     "sha256": "7e535d6bcb16814b596dbb1b012c02a6b4ac930a19e43a36e8eeaefc154f477c",
     "source_url": "https://commons.wikimedia.org/wiki/File:Kings_County_Savings_shady_135_Bwy_jeh.jpg"
+  },
+  "kings-highway-savings-bank-midwood": {
+    "sha256": "58b531d3154fbab74fbe9fab5a2606447ccdc1ff3ec8e8497ad4ab68cbc32fab",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Kings_Hwy_E_16th_St_td_(2022-04-24)_05_-_Kings_Highway_Savings_Bank.jpg"
+  },
+  "kings-theatre-flatbush": {
+    "sha256": "bb0f5b6029964a5c264285c2d11f41f2ee1601728862f032daf341ec545ccb38",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Kings_Theatre_Flatbush_finished_jeh.jpg"
   },
   "loews-pitkin-theatre-brownsville": {
     "sha256": "0b5d85d04c4efbfb4188bbdce6561f126518572ed28749424ad627b1510c6f38",
@@ -145,15 +181,19 @@
     "sha256": "b5275d59fda206d6cdf4ae8545d7f34c6ce0ddb6d591424b3af56c42758ea8a9",
     "source_url": "https://commons.wikimedia.org/wiki/File:Maria_Hernandez_Park_June_2021_center_plaza.jpg"
   },
+  "midwood-high-school-midwood": {
+    "sha256": "4d28acb60f6445bb73e0be896ac8de14563ce278d142839c2343f7a7284fbb68",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Midwood_HS_td_(2019-03-30)_01.jpg"
+  },
   "minerva-battle-hill-greenwood": {
+    "fetched_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/56/Minerva_in_Green-wood_Cemetery_waving_to_Lady_Liberty.JPG/1280px-Minerva_in_Green-wood_Cemetery_waving_to_Lady_Liberty.JPG",
     "sha256": "128699b9f73e8f54215b778dd263aeb42e90ebb5c15748973d209b42a7a82d50",
-    "source_url": "https://commons.wikimedia.org/wiki/File:Minerva_in_Green-wood_Cemetery_waving_to_Lady_Liberty.JPG",
-    "fetched_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/56/Minerva_in_Green-wood_Cemetery_waving_to_Lady_Liberty.JPG/1280px-Minerva_in_Green-wood_Cemetery_waving_to_Lady_Liberty.JPG"
+    "source_url": "https://commons.wikimedia.org/wiki/File:Minerva_in_Green-wood_Cemetery_waving_to_Lady_Liberty.JPG"
   },
   "montauk-club-park-slope": {
+    "fetched_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/19950701_35_Montauk_Club%2C_Park_Slope%2C_Brooklyn%2C_NY.jpg/1280px-19950701_35_Montauk_Club%2C_Park_Slope%2C_Brooklyn%2C_NY.jpg",
     "sha256": "1493e5996471903568b3d0350bab986eae8ff3e5cc7f560adcb13dd0e9ce0b5a",
-    "source_url": "https://commons.wikimedia.org/wiki/File:19950701_35_Montauk_Club,_Park_Slope,_Brooklyn,_NY.jpg",
-    "fetched_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/19950701_35_Montauk_Club%2C_Park_Slope%2C_Brooklyn%2C_NY.jpg/1280px-19950701_35_Montauk_Club%2C_Park_Slope%2C_Brooklyn%2C_NY.jpg"
+    "source_url": "https://commons.wikimedia.org/wiki/File:19950701_35_Montauk_Club,_Park_Slope,_Brooklyn,_NY.jpg"
   },
   "mount-prospect-park-prospect-heights": {
     "sha256": "43168e52770d5623a6e1cec9db05c744b51ffe266cd84ffdae4de0478eedec99",
@@ -164,9 +204,9 @@
     "source_url": "https://commons.wikimedia.org/wiki/File:New_Lots_Community_Church_jeh.jpg"
   },
   "old-stone-house-park-slope": {
+    "fetched_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b1/Old_Stone_House_Brooklyn_NY.jpg/1280px-Old_Stone_House_Brooklyn_NY.jpg",
     "sha256": "e0ad94c94d815ee896291e7e59e340aa698a3e2c31219a6991f265064922a7f6",
-    "source_url": "https://commons.wikimedia.org/wiki/File:Old_Stone_House_Brooklyn_NY.jpg",
-    "fetched_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b1/Old_Stone_House_Brooklyn_NY.jpg/1280px-Old_Stone_House_Brooklyn_NY.jpg"
+    "source_url": "https://commons.wikimedia.org/wiki/File:Old_Stone_House_Brooklyn_NY.jpg"
   },
   "pacific-branch-library-boerum-hill": {
     "sha256": "f548f174e081e400e9b6f37c9c4d38c634f81418b006e19ba987dae548e79856",
@@ -188,6 +228,10 @@
     "sha256": "4d96ef28ed677113aa4c9fdfeef38f46484ca7ec670a9f3ba082d456322922bd",
     "source_url": "https://commons.wikimedia.org/wiki/File:Brooklyn_Heights_Promenade_NY1.jpg"
   },
+  "prospect-park-south-gatepost": {
+    "sha256": "6d468628526eae6d3277c928ce55375e89afa475d3aac8fa0e5f7fcadc88af19",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Prospect_Park_South_gatepost_jeh.JPG"
+  },
   "pulaski-bridge-greenpoint": {
     "sha256": "2ac4397eaec73c7ccd1b5411d96f5f88ea7b5de01f7a1f19a046f874b28ab993",
     "source_url": "https://commons.wikimedia.org/wiki/File:Pulaski_Bridge_from_west_jeh.JPG"
@@ -200,6 +244,14 @@
     "sha256": "f37d80692fb5eb0d99723ab92f2cb9dcf138f16eb9cd471d4fbe0f721d6374b2",
     "source_url": "https://commons.wikimedia.org/wiki/File:RestoPlaza.jpg"
   },
+  "roosevelt-hall-brooklyn-college-flatbush": {
+    "sha256": "969f793345d2cc8cedced434e9d1ffb811b1c0bb05c6726754c1b27c06e66075",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Roosevelt_Hall,_Brooklyn_College_(2013).jpg"
+  },
+  "rugby-library-rugby": {
+    "sha256": "7547aca93046c95cd9ea6b82e266be0bc0d3c13d0e93159a921ab9a76624f3d4",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Brooklyn_Public_Library_Rugby_Branch.jpg"
+  },
   "smith-ninth-streets-station-gowanus": {
     "sha256": "9c2c1f3ef04e5dee581ae0444e18e3e4d7d4f1662b4206bf646efe38d73fe50f",
     "source_url": "https://commons.wikimedia.org/wiki/File:Gowanus_Exy_Smith-Ninth_06.jpg"
@@ -209,9 +261,9 @@
     "source_url": "https://commons.wikimedia.org/wiki/File:Soldiers_and_Sailors_Memorial_Arch_December_2006.jpg"
   },
   "soldiers-and-sailors-arch-quadriga-park-slope": {
+    "fetched_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f3/Brooklyn_Grand_Army_Plaza_Arch_Quadriga.JPG/1280px-Brooklyn_Grand_Army_Plaza_Arch_Quadriga.JPG",
     "sha256": "d3ab4270c10a818576c8547a93ce2c0eab3d5d32e9d24d97f3e4ac897172dcd8",
-    "source_url": "https://commons.wikimedia.org/wiki/File:Brooklyn_Grand_Army_Plaza_Arch_Quadriga.JPG",
-    "fetched_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f3/Brooklyn_Grand_Army_Plaza_Arch_Quadriga.JPG/1280px-Brooklyn_Grand_Army_Plaza_Arch_Quadriga.JPG"
+    "source_url": "https://commons.wikimedia.org/wiki/File:Brooklyn_Grand_Army_Plaza_Arch_Quadriga.JPG"
   },
   "st-barbaras-church-bushwick": {
     "sha256": "ed7603423a32685859c768922c4176c420fc19e5c6e4ea7639b9d48137220b5f",
@@ -262,9 +314,9 @@
     "source_url": "https://commons.wikimedia.org/wiki/File:Billyb_Sav_Bank_dome_bright_jeh.JPG"
   },
   "windsor-terrace-library-windsor-terrace": {
+    "fetched_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/19/Windsor_Terrace_BPL_jeh.jpg/1280px-Windsor_Terrace_BPL_jeh.jpg",
     "sha256": "b28253ad4d12e24b1e070904e10f99f27f02865dc961661d68a43a05c80dd415",
-    "source_url": "https://commons.wikimedia.org/wiki/File:Windsor_Terrace_BPL_jeh.jpg",
-    "fetched_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/19/Windsor_Terrace_BPL_jeh.jpg/1280px-Windsor_Terrace_BPL_jeh.jpg"
+    "source_url": "https://commons.wikimedia.org/wiki/File:Windsor_Terrace_BPL_jeh.jpg"
   },
   "winthrop-shelter-pavilion-greenpoint": {
     "sha256": "8de2ffd02a2abefd4a3447320a8392c47bec1b9d14f1a50e65625394ad3a8c7f",

@@ -1,0 +1,97 @@
+{
+  "guide": {
+    "slug": "rugby-brooklyn-guide",
+    "title": "Rugby, Brooklyn: The Old Name for Remsen Village",
+    "destination": "Rugby, New York",
+    "state": "New York",
+    "county": "Brooklyn",
+    "tier": "town-page",
+    "intro": "Rugby is the original name for what is now the eastern section of East Flatbush, and developers chose it in the 1890s. Building accelerated after 1892, when they acquired roughly 65 acres expecting a promised subway extension, and again once the IRT line reached Nostrand Avenue in 1912 and the area grew quickly as a residential neighborhood. Before either, in May 1900, the Brooklyn Heights Railroad extended its Reid Avenue trolley line south along Utica Avenue to reach Rugby, terminating at Utica and Church Avenues: a streetcar suburb before any subway. The Remsen name that displaced it comes from the family of Joris Remsen, an early settler and landowner. Everyday use shifted to Remsen Village from the mid-1990s, and by 2016 Rugby was the old name for the area.",
+    "sections": [
+      {
+        "heading": "What survives of the name",
+        "body": "Rugby is a name more than a place with edges. Sources use Rugby and Remsen Village inconsistently for the same or overlapping ground: one passage calls it the eastern section of East Flatbush, another, citing 2020 Census tabulation areas, places Rugby north of Farragut, and press coverage sometimes hyphenates the two as Rugby-Remsen Village. No source gives a single definitive line, and none is asserted here.\n\nWhat carries the name today is Rugby Road and the Brooklyn Public Library's Rugby branch at 1000 Utica Avenue, which opened in 1957. The branch closed in 2017 for a renovation whose budget grew from an original $1 million to $10.2 million, delayed by funding gaps, Hurricane Sandy repairs, contracting problems and the pandemic, with a mobile library trailer serving patrons in the meantime. It reopened on a Monday in July 2021 with new heating and cooling, accessibility upgrades, a garden, a mural by the artist J. Mikal Davis and sustainable materials including cork and bamboo flooring.\n\nBy 2020 Census tabulation-area data, the Rugby area had between 30,000 and 39,999 Black residents, with the Hispanic, White and Asian populations each fewer than 5,000. In summer 2006 the New York City Department of Transportation co-named the stretch of Church Avenue from Remsen Avenue to East 98th Street as Bob Marley Boulevard, reflecting the area's large Caribbean, and particularly Jamaican, population; that co-naming is covered on the Remsen Village page."
+      },
+      {
+        "heading": "Getting there",
+        "body": "Sutter Avenue-Rutland Road, on the IRT New Lots Line, sits at the meeting of Sutter Avenue, Rutland Road and East 98th Street, on the border of East Flatbush and Brownsville; sources commonly describe East 98th Street as Rugby's eastern edge. It is served by the 3 at all times except late nights, when the 4 takes over, with limited rush-hour 2 and 5 service.\n\nThe research for this page records that the IRT Nostrand Avenue Line stations, on the opposite side of East Flatbush, are not a realistic access point for Rugby, which leaves the bus. The B46 and B46 Select Bus Service run north-south along Utica Avenue, passing the Rugby branch library at 1000 Utica Avenue; the corridor has served this ground since the trolley line was extended here in 1900."
+      }
+    ],
+    "faq": [
+      {
+        "question": "How do I get to Rugby?",
+        "answer": "Sutter Avenue-Rutland Road on the IRT New Lots Line, at Sutter Avenue, Rutland Road and East 98th Street, is the nearest station; it is served by the 3, with the 4 taking over late nights. The B46 and B46 Select Bus Service run along Utica Avenue past the Rugby branch library."
+      },
+      {
+        "question": "Is Rugby the same place as Remsen Village?",
+        "answer": "Sources use the two names for the same or overlapping ground. Rugby was chosen by developers in the 1890s; Remsen Village came into everyday and real-estate use from the mid-1990s, and press coverage sometimes hyphenates them as Rugby-Remsen Village. No source draws a definitive line between them."
+      },
+      {
+        "question": "Where does the name Rugby come from?",
+        "answer": "Developers chose it in the 1890s for this section of East Flatbush. It survives on Rugby Road and on the Brooklyn Public Library's Rugby branch at 1000 Utica Avenue, which opened in 1957."
+      }
+    ],
+    "photos": [
+      {
+        "src": "/photos/ny/brooklyn/rugby/rugby-library-rugby.jpg",
+        "thumb": "/photos/ny/brooklyn/rugby/rugby-library-rugby_thumb.jpg",
+        "title": "The Rugby branch library on Utica Avenue",
+        "description": "A low library front of glass and pale panels lettered Brooklyn Public Library, with a brick end wall and a planter along the pavement.",
+        "author": "QuasyBoy",
+        "license": "CC BY-SA 4.0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Brooklyn_Public_Library_Rugby_Branch.jpg"
+      }
+    ]
+  },
+  "places": [
+    {
+      "slug": "rugby-branch-library",
+      "name": "Rugby Branch, Brooklyn Public Library",
+      "kind": "historic-site",
+      "town": "Rugby",
+      "state": "New York",
+      "county": "Brooklyn",
+      "address": "1000 Utica Avenue, Brooklyn, NY 11203",
+      "official_url": "https://www.bklynlibrary.org/locations/rugby",
+      "summary": "The branch opened in 1957 and is named for Rugby, the 1890s developer name for this section of East Flatbush. It closed in 2017 for renovation and reopened on a Monday in July 2021.",
+      "history": "The renovation grew from an original $1 million budget to $10.2 million, delayed by funding gaps, Hurricane Sandy repairs, contracting problems and the pandemic; a mobile library trailer served patrons during the closure. The reopened branch has new heating and cooling, accessibility upgrades, a garden, a mural by the artist J. Mikal Davis, and cork and bamboo flooring.",
+      "status": "open",
+      "photos": [
+        {
+          "src": "/photos/ny/brooklyn/rugby/rugby-library-rugby.jpg",
+          "thumb": "/photos/ny/brooklyn/rugby/rugby-library-rugby_thumb.jpg",
+          "title": "The Rugby branch library on Utica Avenue",
+          "description": "A low library front of glass and pale panels lettered Brooklyn Public Library, with a brick end wall and a planter along the pavement.",
+          "author": "QuasyBoy",
+          "license": "CC BY-SA 4.0",
+          "source_url": "https://commons.wikimedia.org/wiki/File:Brooklyn_Public_Library_Rugby_Branch.jpg"
+        }
+      ]
+    }
+  ],
+  "entries": [
+    {
+      "kind": "sight",
+      "name": "Rugby Branch, Brooklyn Public Library",
+      "place_slug": "rugby-branch-library",
+      "note": "The 1957 branch on Utica Avenue that keeps the Rugby name in use, reopened in July 2021 after a long renovation."
+    }
+  ],
+  "links": [
+    {
+      "target": "guide:east-flatbush-brooklyn-guide",
+      "kind": "same-region",
+      "note": "Rugby is the original name for the eastern section of East Flatbush, chosen by developers in the 1890s."
+    },
+    {
+      "target": "guide:crown-heights-brooklyn-guide",
+      "kind": "same-region",
+      "note": "The B44 runs mostly along Nostrand Avenue through Crown Heights and Flatbush, west of the Rugby section."
+    },
+    {
+      "target": "guide:brownsville-brooklyn-guide",
+      "kind": "nearby",
+      "note": "Sutter Avenue-Rutland Road sits at Sutter Avenue, Rutland Road and East 98th Street, on the East Flatbush and Brownsville border."
+    }
+  ]
+}

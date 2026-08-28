@@ -1,0 +1,150 @@
+{
+  "guide": {
+    "slug": "prospect-park-south-brooklyn-guide",
+    "title": "Prospect Park South, Brooklyn: Dean Alvord's Rus in Urbe",
+    "destination": "Prospect Park South, New York",
+    "state": "New York",
+    "county": "Brooklyn",
+    "tier": "town-page",
+    "intro": "Developer Dean Alvord bought roughly 60 acres of farmland in 1899 and marketed what he built on it as rus in urbe, the country in the city. He laid out utilities and set brick entrance piers with cast-concrete PPS plaques before selling a single lot. His covenants required freestanding houses larger than 3,500 square feet and costing more than $5,000; he hired the Scottish landscape gardener John Aitkin for the plantings and John J. Petit as principal architect, working in Colonial Revival, Tudor Revival and Queen Anne. Alvord's prospectus was explicit about courting a wealthy Protestant clientele and excluding immigrant populations. The neighborhood is named for its position south of Prospect Park, and its plan became the template for South Midwood, Fiske Terrace and Ditmas Park.",
+    "sections": [
+      {
+        "heading": "The malls and the landmark district",
+        "body": "The tree-lined centre-street medians on Albemarle Road and Buckingham Road went in with the original 1899 plan. John Aiken designed them, modelled on Boston's Commonwealth Avenue Mall, and NYC Parks maintains them today through the Greenstreets programme. A second, related series was built in 1905 further south at Glenwood Road and East 17th Street in Fiske Terrace-Midwood Park; part of that southern series was removed from 1932 onward.\n\nThe Prospect Park South Historic District was designated a New York City landmark on February 8, 1979 under LP-0979 and listed on the National Register of Historic Places on July 21, 1983. The designation covers about 47 acres, with Church Avenue, the BMT Brighton Line, Beverley Road and Stratford Road to Coney Island Avenue given as its edges — the landmark district's own boundary, which is not the same thing as an agreed neighborhood line. The houses inside it are private residences viewable only from the street, which makes the district a walk rather than a site. Two of them are singled out in the district's architectural history: the Frederick S. Kolle House of 1902-03 at 131 Buckingham Road, designed by Petit & Green in a Japanese pagoda-influenced style, and the John S. Eakins House of 1905 at 1306 Albemarle Road, in a Shingle and Colonial Revival style attributed to John J. Petit."
+      },
+      {
+        "heading": "Getting there",
+        "body": "The research places no subway station inside Prospect Park South. The nearest are on the BMT Brighton Line: Church Avenue, described as being in Flatbush, served by the Q at all times and the B on weekdays; and Beverley Road, described as being in Flatbush and Ditmas Park, served by the Q at all times.\n\nBuses run on the streets the landmark designation gives as the district's edges. The B35 runs along Church Avenue, connecting Sunset Park to the west and Brownsville to the east. The B68 runs along Coney Island Avenue, linking Park Slope and Windsor Terrace with Brighton Beach and Coney Island. The B103 runs limited-stop between Downtown Brooklyn and Canarsie, its southbound path taking in Church Avenue, Coney Island Avenue and Cortelyou Road."
+      }
+    ],
+    "faq": [
+      {
+        "question": "How do I get to Prospect Park South?",
+        "answer": "There is no subway station inside the neighborhood. The nearest are Church Avenue on the Q and B, described as being in Flatbush, and Beverley Road on the Q, described as being in Flatbush and Ditmas Park. The B35 on Church Avenue and the B68 on Coney Island Avenue run along the district's designated edges."
+      },
+      {
+        "question": "Is Prospect Park South the same as Prospect Park?",
+        "answer": "No. Prospect Park South is a residential neighborhood laid out from 1899 by Dean Alvord, and it takes its name from its position south of the park. The park itself is a separate place covered elsewhere on this site."
+      },
+      {
+        "question": "Can I go inside the houses?",
+        "answer": "No. The historic district is made up of large freestanding private residences, viewable only from the street. The landscaped malls on Albemarle and Buckingham Roads are public."
+      }
+    ],
+    "photos": [
+      {
+        "src": "/photos/ny/brooklyn/prospect-park-south/prospect-park-south-gatepost.jpg",
+        "thumb": "/photos/ny/brooklyn/prospect-park-south/prospect-park-south-gatepost_thumb.jpg",
+        "title": "A Prospect Park South entrance pier",
+        "description": "A brick pier capped with a carved stone urn, a lettered Church Avenue block below it and an interlaced PPS plaque set into the brick.",
+        "author": "Jim.henderson",
+        "license": "Public domain",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Prospect_Park_South_gatepost_jeh.JPG"
+      }
+    ]
+  },
+  "places": [
+    {
+      "slug": "prospect-park-south-historic-district",
+      "name": "Prospect Park South Historic District",
+      "kind": "historic-site",
+      "town": "Prospect Park South",
+      "state": "New York",
+      "county": "Brooklyn",
+      "address": "Streets including Albemarle Road, Buckingham Road, Marlborough Road, Rugby Road and Westminster Road, Brooklyn, NY",
+      "summary": "About 47 acres of large freestanding Colonial Revival, Tudor Revival and Queen Anne houses built from 1899 to Dean Alvord's plan. The houses are private residences viewable only from the street.",
+      "history": "Designated a New York City landmark on February 8, 1979 under LP-0979, and listed on the National Register of Historic Places on July 21, 1983.",
+      "status": "open",
+      "photos": [
+        {
+          "src": "/photos/ny/brooklyn/prospect-park-south/prospect-park-south-gatepost.jpg",
+          "thumb": "/photos/ny/brooklyn/prospect-park-south/prospect-park-south-gatepost_thumb.jpg",
+          "title": "A Prospect Park South entrance pier",
+          "description": "A brick pier capped with a carved stone urn, a lettered Church Avenue block below it and an interlaced PPS plaque set into the brick.",
+          "author": "Jim.henderson",
+          "license": "Public domain",
+          "source_url": "https://commons.wikimedia.org/wiki/File:Prospect_Park_South_gatepost_jeh.JPG"
+        }
+      ]
+    },
+    {
+      "slug": "flatbush-malls-albemarle-buckingham",
+      "name": "Flatbush Malls: Albemarle and Buckingham Roads",
+      "kind": "park",
+      "town": "Prospect Park South",
+      "state": "New York",
+      "county": "Brooklyn",
+      "address": "Centre medians of Albemarle Road and Buckingham Road, Brooklyn, NY",
+      "summary": "Landscaped centre-street medians built in 1899 as part of Dean Alvord's original plan, designed by the Scottish landscape gardener John Aiken and modelled on Boston's Commonwealth Avenue Mall. NYC Parks maintains them under its Greenstreets programme.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "frederick-s-kolle-house",
+      "name": "Frederick S. Kolle House",
+      "kind": "historic-site",
+      "town": "Prospect Park South",
+      "state": "New York",
+      "county": "Brooklyn",
+      "address": "131 Buckingham Road, Brooklyn, NY",
+      "summary": "A house of 1902-03 designed by Petit & Green in a Japanese pagoda-influenced style, cited in the historic district's landmark history. It is a privately owned residence viewable only from the street.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "john-s-eakins-house",
+      "name": "John S. Eakins House",
+      "kind": "historic-site",
+      "town": "Prospect Park South",
+      "state": "New York",
+      "county": "Brooklyn",
+      "address": "1306 Albemarle Road, Brooklyn, NY",
+      "summary": "A house of 1905 in a Shingle and Colonial Revival style attributed to John J. Petit, noted in the district's architectural history. It is a privately owned residence viewable only from the street.",
+      "status": "open",
+      "photos": []
+    }
+  ],
+  "entries": [
+    {
+      "kind": "walk",
+      "name": "Prospect Park South Historic District",
+      "place_slug": "prospect-park-south-historic-district",
+      "note": "Forty-seven acres of freestanding houses laid out from 1899, landmarked in 1979 and on the National Register since 1983."
+    },
+    {
+      "kind": "walk",
+      "name": "Flatbush Malls: Albemarle and Buckingham Roads",
+      "place_slug": "flatbush-malls-albemarle-buckingham",
+      "note": "Planted centre medians from the 1899 plan, designed by John Aiken after Boston's Commonwealth Avenue Mall."
+    },
+    {
+      "kind": "sight",
+      "name": "Frederick S. Kolle House",
+      "place_slug": "frederick-s-kolle-house",
+      "note": "The 1902-03 house on Buckingham Road that Petit & Green built in a Japanese pagoda-influenced style."
+    },
+    {
+      "kind": "sight",
+      "name": "John S. Eakins House",
+      "place_slug": "john-s-eakins-house",
+      "note": "A Shingle and Colonial Revival house of 1905 on Albemarle Road, attributed to John J. Petit."
+    }
+  ],
+  "links": [
+    {
+      "target": "place:prospect-park",
+      "kind": "nearby",
+      "note": "The neighborhood takes its name from its position directly south of Prospect Park."
+    },
+    {
+      "target": "guide:flatbush-brooklyn-guide",
+      "kind": "same-region",
+      "note": "Prospect Park South is one of the planned enclaves grouped informally as Victorian Flatbush."
+    },
+    {
+      "target": "guide:midwood-brooklyn-guide",
+      "kind": "same-region",
+      "note": "Alvord's plan became the template for South Midwood and Fiske Terrace, which the Midwood guide covers."
+    }
+  ]
+}

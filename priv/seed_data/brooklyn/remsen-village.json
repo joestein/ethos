@@ -1,0 +1,75 @@
+{
+  "guide": {
+    "slug": "remsen-village-brooklyn-guide",
+    "title": "Remsen Village, Brooklyn: A 1990s Name for Rugby",
+    "destination": "Remsen Village, New York",
+    "state": "New York",
+    "county": "Brooklyn",
+    "tier": "town-page",
+    "intro": "Remsen Village is a subsection of the larger East Flatbush neighborhood, with an estimated 60,000 residents, over a third of the population of Brooklyn Community Board 17, which consists entirely of East Flatbush and its subsections. The name is recent: its use here appears to date only to the mid-1990s, and a New York Times real-estate feature of April 30, 1995 on Brooklyn neighborhood names is the source usually cited for it. Before that, the same ground was known as Rugby, a name developers chose in the 1890s and which the Times described in 2016 as the old name for the area. Press coverage sometimes hyphenates the two as Rugby-Remsen Village, and the area has at times been treated as a neighborhood in its own right rather than a subsection.",
+    "sections": [
+      {
+        "heading": "Bob Marley Boulevard",
+        "body": "In summer 2006 the New York City Department of Transportation co-named the stretch of Church Avenue from Remsen Avenue to East 98th Street as Bob Marley Boulevard, in recognition of the large Caribbean, and particularly Jamaican, population of this part of East Flatbush. It is a co-naming on an ordinary commercial street rather than a site with an entrance or opening hours, and walking it is the whole of the visit.\n\nThe Rugby name has not disappeared either. It survives on a street name and on the Brooklyn Public Library's Rugby branch at 1000 Utica Avenue, which opened in 1957; that branch is covered on the Rugby page. Sources describe Remsen Village only loosely, as the eastern section of East Flatbush extending to approximately East 98th Street, and the population figures in circulation are drawn from zip codes that themselves overlap neighbouring East Flatbush, Brownsville, Crown Heights and Canarsie. No source gives a definitive boundary, and none is asserted here."
+      },
+      {
+        "heading": "Getting there",
+        "body": "Sutter Avenue-Rutland Road, on the IRT New Lots Line, sits at the meeting of Sutter Avenue, Rutland Road and East 98th Street, on the border of East Flatbush and Brownsville; East 98th Street is the street sources use to mark this area's eastern edge. Regular service is the 3 at all times except late nights, when the 4 takes over, with limited peak-direction 4 service, limited reverse-peak 2 service and limited morning northbound 5 service.\n\nNo Long Island Rail Road station serves the area. The nearest Atlantic Branch station, East New York, sits in the East New York and Ocean Hill neighborhoods, and no source ties it to Remsen Village as an access point."
+      }
+    ],
+    "faq": [
+      {
+        "question": "How do I get to Remsen Village?",
+        "answer": "Sutter Avenue-Rutland Road on the IRT New Lots Line, at Sutter Avenue, Rutland Road and East 98th Street, is the station sources give for this area. It is served by the 3 at all times except late nights, when the 4 takes over, with limited rush-hour 2 and 5 service."
+      },
+      {
+        "question": "Is Remsen Village the same as Rugby?",
+        "answer": "Sources use both names for the same or overlapping ground. Rugby was the developers' name from the 1890s; Remsen Village came into use only in the mid-1990s, and press coverage sometimes hyphenates them as Rugby-Remsen Village."
+      },
+      {
+        "question": "What is Bob Marley Boulevard?",
+        "answer": "A co-naming of Church Avenue between Remsen Avenue and East 98th Street, made by the Department of Transportation in summer 2006 in recognition of the area's Caribbean, and particularly Jamaican, population."
+      }
+    ],
+    "photos": []
+  },
+  "places": [
+    {
+      "slug": "bob-marley-boulevard",
+      "name": "Bob Marley Boulevard",
+      "kind": "historic-site",
+      "town": "Remsen Village",
+      "state": "New York",
+      "county": "Brooklyn",
+      "address": "Church Avenue between Remsen Avenue and East 98th Street, Brooklyn, NY",
+      "summary": "A stretch of Church Avenue co-named by the New York City Department of Transportation in summer 2006 in recognition of the neighborhood's Caribbean, and particularly Jamaican, population. It is a street co-naming, not a site with visiting hours.",
+      "status": "open",
+      "photos": []
+    }
+  ],
+  "entries": [
+    {
+      "kind": "walk",
+      "name": "Bob Marley Boulevard",
+      "place_slug": "bob-marley-boulevard",
+      "note": "The stretch of Church Avenue between Remsen Avenue and East 98th Street, co-named in summer 2006."
+    }
+  ],
+  "links": [
+    {
+      "target": "guide:east-flatbush-brooklyn-guide",
+      "kind": "same-region",
+      "note": "Remsen Village is described as a subsection of East Flatbush, with an estimated 60,000 residents."
+    },
+    {
+      "target": "guide:rugby-brooklyn-guide",
+      "kind": "shared-history",
+      "note": "Rugby was the 1890s developer name for the same ground; the Remsen Village name only came into use in the mid-1990s."
+    },
+    {
+      "target": "guide:brownsville-brooklyn-guide",
+      "kind": "nearby",
+      "note": "Sutter Avenue-Rutland Road, the station sources give for this area, sits on the border of Brownsville and East Flatbush."
+    }
+  ]
+}
