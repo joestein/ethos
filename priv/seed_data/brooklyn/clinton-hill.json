@@ -1,0 +1,213 @@
+{
+  "guide": {
+    "slug": "clinton-hill-brooklyn-guide",
+    "title": "Clinton Hill, Brooklyn: The Gold Coast and Pratt",
+    "destination": "Clinton Hill, New York",
+    "state": "New York",
+    "county": "Brooklyn",
+    "tier": "guide",
+    "intro": "European settlement here dates to the 1640s, when the land above Wallabout Bay was Dutch colonial farm and tobacco-plantation ground. The neighborhood takes its name from Clinton Avenue, laid out in 1832 and named for DeWitt Clinton, the New York governor who pushed the Erie Canal through. By the 1840s it had become a fashionable retreat from the density of urban Brooklyn; Walt Whitman, then editing the Brooklyn Daily Eagle, wrote in 1846 of people determined to escape the closeness of city life by moving there. Rowhouse construction dominated by the 1880s, but it was the oil refiner Charles Pratt who set the tone: his 1874 mansion at 232 Clinton Avenue turned the street into a corridor of large freestanding houses and earned the area its nickname as Brooklyn's Gold Coast. In 1887 he founded Pratt Institute.",
+    "sections": [
+      {
+        "heading": "Pratt's mansions and Pratt's school",
+        "body": "Charles Pratt founded Pratt Institute in 1887 to give working men and women access to training in trades and the applied arts. Its 25-acre main campus is still in the neighborhood, at 200 Willoughby Avenue, and it holds the Pratt Sculpture Park, founded in 1999, which Pratt describes as the largest contemporary sculpture park in New York City; more than forty works stand on the grounds, among them pieces by Mark di Suvero and Richard Serra.\n\nPratt money built the churches too. Emmanuel Baptist Church, whose congregation formed around 1882 when about 194 members split away from Washington Avenue Baptist Church, got its Gothic Revival building on the strength of Pratt's funding: Francis H. Kimball designed it and it opened on April 17, 1887. It was added to the National Register of Historic Places in 1977. St. Joseph's University's Brooklyn campus, at 245 Clinton Avenue, occupies former Pratt-era mansions; the college moved onto the site in 1918 and was renamed from St. Joseph's College in 2022.\n\nThe Clinton Hill Historic District was listed on the National Register on June 19, 1985 under reference number 85001335. It covers roughly 100 acres and 1,063 largely residential contributing buildings put up between the 1840s and 1930, bounded roughly by Willoughby and Grand Avenues, Fulton Street and Vanderbilt Avenue. Merrill Hesch wrote the nomination in September 1984."
+      },
+      {
+        "heading": "Getting there",
+        "body": "Two separate stations share the name Clinton–Washington Avenues, and both are in Clinton Hill. The one on Fulton Street, between Clinton and Washington Avenues, is served by the C at all times except late nights, when the A substitutes. The one on Lafayette Avenue, between the same two avenues, is served by the G at all times.\n\nClasson Avenue, at Classon and Lafayette Avenues, is served by the G at all times and sits on the border of Bedford-Stuyvesant and Clinton Hill.\n\nNYC Ferry's Astoria route calls at the Brooklyn Navy Yard landing, at 141 Flushing Avenue. The landing opened on May 20, 2019 and sits in the Navy Yard, which runs along Clinton Hill's northern edge."
+      }
+    ],
+    "faq": [
+      {
+        "question": "How do I get to Clinton Hill?",
+        "answer": "Two stations named Clinton–Washington Avenues both sit in the neighborhood: the one on Fulton Street is served by the C, with the A substituting late nights, and the one on Lafayette Avenue by the G. Classon Avenue, on the Bedford-Stuyvesant border, is also served by the G. NYC Ferry's Astoria route calls at the Brooklyn Navy Yard landing at 141 Flushing Avenue, on the neighborhood's northern edge."
+      },
+      {
+        "question": "Why is Clinton Hill called the Gold Coast?",
+        "answer": "Because of Clinton Avenue. Charles Pratt built his mansion at 232 Clinton Avenue in 1874, and the street developed into a corridor of large freestanding mansions in its wake, at a time when rowhouses dominated the rest of the neighborhood."
+      },
+      {
+        "question": "Can visitors walk through the Pratt Institute campus?",
+        "answer": "The 25-acre campus at 200 Willoughby Avenue holds the Pratt Sculpture Park, founded in 1999, with more than forty works including pieces by Mark di Suvero and Richard Serra. Pratt describes it as the largest contemporary sculpture park in New York City."
+      },
+      {
+        "question": "What is protected in the Clinton Hill Historic District?",
+        "answer": "About 1,063 contributing buildings across roughly 100 acres, mostly residential and built between the 1840s and 1930, including the Pratt-era mansions on Clinton Avenue and Italianate and Beaux-Arts rowhouses. It was listed on the National Register of Historic Places on June 19, 1985 under reference number 85001335."
+      },
+      {
+        "question": "Where can I stay in Clinton Hill?",
+        "answer": "No hotel inside Clinton Hill could be found from the sources available for this guide, which is consistent with the neighborhood's largely residential and institutional character. The nearest verified option is the New York Marriott at the Brooklyn Bridge, a 32-story tower on Adams Street in Downtown Brooklyn."
+      }
+    ],
+    "photos": []
+  },
+  "places": [
+    {
+      "slug": "pratt-institute",
+      "name": "Pratt Institute Campus and Sculpture Park",
+      "kind": "park",
+      "town": "Clinton Hill",
+      "state": "New York",
+      "county": "Brooklyn",
+      "address": "200 Willoughby Avenue, Brooklyn, NY 11205",
+      "official_url": "https://www.pratt.edu/about/visit-pratt/",
+      "summary": "A 25-acre campus holding the Pratt Sculpture Park, founded in 1999, with more than forty works including pieces by Mark di Suvero and Richard Serra. Pratt describes it as the largest contemporary sculpture park in New York City.",
+      "history": "Charles Pratt founded Pratt Institute in 1887 as a school to give working people, including immigrants, training in trades and the applied arts.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "clinton-hill-historic-district",
+      "name": "Clinton Hill Historic District",
+      "kind": "historic-site",
+      "town": "Clinton Hill",
+      "state": "New York",
+      "county": "Brooklyn",
+      "address": "Roughly bounded by Willoughby and Grand Avenues, Fulton Street and Vanderbilt Avenue, Brooklyn, NY",
+      "summary": "Roughly 100 acres and 1,063 largely residential contributing buildings dating from the 1840s to 1930, including the Charles Pratt-era mansions on Clinton Avenue and Italianate and Beaux-Arts rowhouses.",
+      "history": "Listed on the National Register of Historic Places on June 19, 1985, reference number 85001335. Merrill Hesch wrote the nomination in September 1984.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "emmanuel-baptist-church",
+      "name": "Emmanuel Baptist Church",
+      "kind": "historic-site",
+      "town": "Clinton Hill",
+      "state": "New York",
+      "county": "Brooklyn",
+      "address": "Northwest corner of Lafayette Avenue and St. James Place, Brooklyn, NY",
+      "summary": "A Gothic Revival church funded by Charles Pratt and designed by Francis H. Kimball, with an active congregation in the American Baptist Churches USA.",
+      "history": "The congregation formed around 1882, when about 194 members split from Washington Avenue Baptist Church. The building opened on April 17, 1887 and was listed on the National Register of Historic Places in 1977.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "st-marys-episcopal-church",
+      "name": "St. Mary's Episcopal Church",
+      "kind": "historic-site",
+      "town": "Clinton Hill",
+      "state": "New York",
+      "county": "Brooklyn",
+      "address": "230 Classon Avenue, at the corner of Classon and Willoughby Avenues, Brooklyn, NY 11205",
+      "official_url": "https://www.stmarysbrooklyn.org/",
+      "summary": "An active parish holding Sunday and Wednesday services, with community programs including a clothing pantry.",
+      "history": "The congregation traces to 1836; the church building dates to about 1859.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "church-of-st-luke-and-st-matthew",
+      "name": "Church of St. Luke and St. Matthew",
+      "kind": "historic-site",
+      "town": "Clinton Hill",
+      "state": "New York",
+      "county": "Brooklyn",
+      "address": "520 Clinton Avenue, Brooklyn, NY 11238",
+      "official_url": "https://stlukeandstmatthew.org/",
+      "summary": "An Episcopal church serving Clinton Hill, Fort Greene and Prospect Heights, with an active congregation holding Sunday Holy Eucharist.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "st-josephs-university-brooklyn",
+      "name": "St. Joseph's University, Brooklyn Campus",
+      "kind": "historic-site",
+      "town": "Clinton Hill",
+      "state": "New York",
+      "county": "Brooklyn",
+      "address": "245 Clinton Avenue, Brooklyn, NY 11205",
+      "summary": "A working campus occupying former Charles Pratt-era mansions on Clinton Avenue.",
+      "history": "The college moved to this site in 1918 and was renamed from St. Joseph's College to St. Joseph's University in 2022.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "brooklyn-public-library-clinton-hill-branch",
+      "name": "Brooklyn Public Library, Clinton Hill Branch",
+      "kind": "historic-site",
+      "town": "Clinton Hill",
+      "state": "New York",
+      "county": "Brooklyn",
+      "address": "380 Washington Avenue, near Lafayette Avenue, Brooklyn, NY",
+      "summary": "A Brooklyn Public Library branch that opened in 1973.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "locanda-vini-e-olii",
+      "name": "Locanda Vini e Olii",
+      "kind": "restaurant",
+      "town": "Clinton Hill",
+      "state": "New York",
+      "county": "Brooklyn",
+      "address": "129 Gates Avenue, Brooklyn, NY 11238",
+      "official_url": "https://www.locandany.com/",
+      "summary": "A Tuscan restaurant open since 2001 in a converted 1896 neighborhood pharmacy, which retains much of the original apothecary's woodwork, cabinetry and ceilings.",
+      "status": "open",
+      "photos": []
+    }
+  ],
+  "entries": [
+    {
+      "kind": "walk",
+      "name": "Pratt Institute Campus and Sculpture Park",
+      "place_slug": "pratt-institute",
+      "note": "A 25-acre campus with a sculpture park founded in 1999, holding work by Mark di Suvero and Richard Serra."
+    },
+    {
+      "kind": "walk",
+      "name": "Clinton Hill Historic District",
+      "place_slug": "clinton-hill-historic-district",
+      "note": "About 1,063 contributing buildings of the 1840s to 1930, listed on the National Register in June 1985."
+    },
+    {
+      "kind": "sight",
+      "name": "Emmanuel Baptist Church",
+      "place_slug": "emmanuel-baptist-church",
+      "note": "Francis H. Kimball's Gothic Revival church, funded by Charles Pratt and opened in April 1887."
+    },
+    {
+      "kind": "sight",
+      "name": "St. Mary's Episcopal Church",
+      "place_slug": "st-marys-episcopal-church",
+      "note": "A congregation of 1836 in a building of about 1859, at Classon and Willoughby Avenues."
+    },
+    {
+      "kind": "sight",
+      "name": "Church of St. Luke and St. Matthew",
+      "place_slug": "church-of-st-luke-and-st-matthew",
+      "note": "An Episcopal parish on Clinton Avenue serving Clinton Hill, Fort Greene and Prospect Heights."
+    },
+    {
+      "kind": "sight",
+      "name": "St. Joseph's University, Brooklyn Campus",
+      "place_slug": "st-josephs-university-brooklyn",
+      "note": "Former Pratt-era mansions on Clinton Avenue, a college campus since 1918."
+    },
+    {
+      "kind": "sight",
+      "name": "Brooklyn Public Library, Clinton Hill Branch",
+      "place_slug": "brooklyn-public-library-clinton-hill-branch",
+      "note": "The neighborhood branch on Washington Avenue, open since 1973."
+    },
+    {
+      "kind": "food",
+      "name": "Locanda Vini e Olii",
+      "place_slug": "locanda-vini-e-olii",
+      "note": "Tuscan cooking in a converted 1896 pharmacy on Gates Avenue, open since 2001."
+    }
+  ],
+  "links": [
+    {
+      "target": "guide:navy-yard-brooklyn-guide",
+      "kind": "nearby",
+      "note": "The Brooklyn Navy Yard, and Flushing Avenue with it, runs along Clinton Hill's northern edge."
+    },
+    {
+      "target": "guide:downtown-brooklyn-brooklyn-guide",
+      "kind": "same-region",
+      "note": "No hotel was found inside Clinton Hill; the nearest verified one, the New York Marriott at the Brooklyn Bridge, is on Adams Street in Downtown Brooklyn."
+    }
+  ]
+}

@@ -11,17 +11,41 @@
     "sha256": "72fe613557419d67af2a7b4f9b4118416486351343623d16b3118ababd9e6116",
     "source_url": "https://commons.wikimedia.org/wiki/File:Blessed_Sacrament_Church_from_Crescent_Street_Jamaica_El-1.jpg"
   },
+  "brooklyn-navy-yard-panorama-navy-yard": {
+    "sha256": "897c400db440c6b2868c2ff24bc4413ef46b4c6ff1bd566bd1e39e4caaf3d5ea",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Brooklyn_Navy_Yard_-_Panorama.jpg"
+  },
+  "building-92-navy-yard": {
+    "sha256": "968cc60d4c244e493300a6b2c863442f0befaaafd31eddd973df871f897977ca",
+    "source_url": "https://commons.wikimedia.org/wiki/File:BLDG_92_BNY_jeh.jpg"
+  },
+  "court-street-downtown-brooklyn": {
+    "sha256": "986ea0baa18e843d14b689346f487c5e012c0e3036f84123660a0981d2d14390",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Brooklyn_Court_St_from_Borough_Hall.JPG"
+  },
   "domino-sugar-refinery-williamsburg": {
     "sha256": "b90507b03760241a6ee2e69dd47ac797afbe8727d7c088593dcd6b305ec14e48",
     "source_url": "https://commons.wikimedia.org/wiki/File:Domino_Refinery_in_2023.jpg"
+  },
+  "dry-dock-navy-yard": {
+    "sha256": "c080dab0f8646328f6906b9a6808b6a05094ffb001f135082e8312e671fb2a07",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Dry_Dock_at_Brooklyn_Navy_Yard.jpg"
   },
   "franklin-k-lane-high-school-cypress-hills": {
     "sha256": "b9381f8f633baafd20814c99453ce2206097efc3e216cbd44b45131d0752a533",
     "source_url": "https://commons.wikimedia.org/wiki/File:75th_St-Elderts_Ln_04_-_FK_Lane_HS.jpg"
   },
+  "fulton-mall-downtown-brooklyn": {
+    "sha256": "617063a7c3d8857ccd0717e866a0d05540920df53738817bd741ff2b334271c5",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Fulton_Mall_Brooklyn.jpg"
+  },
   "highland-park-entrance-highland-park": {
     "sha256": "724cb74913a228c3b903800445ba78357d33cf1c4a75f81f1b23e3dd14627c12",
     "source_url": "https://commons.wikimedia.org/wiki/File:HighlandparkBrooklyn.jpg"
+  },
+  "hotel-bossert-brooklyn-heights": {
+    "sha256": "f11aee4a05c8d6702b2ec3ac02e4f67d02177b8cf94876200bfb459e56398822",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Hotel_Bossert_Hicks_Montague_jeh.jpg"
   },
   "kings-county-savings-bank-south-williamsburg": {
     "sha256": "7e535d6bcb16814b596dbb1b012c02a6b4ac930a19e43a36e8eeaefc154f477c",
@@ -30,6 +54,14 @@
   "loews-pitkin-theatre-brownsville": {
     "sha256": "0b5d85d04c4efbfb4188bbdce6561f126518572ed28749424ad627b1510c6f38",
     "source_url": "https://commons.wikimedia.org/wiki/File:Loew%27s_Pitkin_Theatre_HDR_2021_jeh.jpg"
+  },
+  "manhattan-bridge-arch-dumbo": {
+    "sha256": "230db1ad53d4b1d9a1978fbfeafcce11d6765c9804e7dc3f7fdc4179b32f9810",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Empire_State_Building_through_the_Manhattan_Bridge_arch,_Dumbo,_Brooklyn,_New_York.jpg"
+  },
+  "manhattan-bridge-washington-street-dumbo": {
+    "sha256": "0b1930128f165bd74d89e079cbf68cebc8a38d60c31a6082f877d1c810419389",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Manhattan_Bridge_and_Empire_State_Building_from_Washington_Street,_Dumbo,_Brooklyn,_New_York.jpg"
   },
   "maria-hernandez-park-entrance-bushwick": {
     "sha256": "6add691b922a062b678cb409e0e3977e0025622d98dbbe6ed3bc8fadc7d4d012",
@@ -42,6 +74,14 @@
   "new-lots-community-church-new-lots": {
     "sha256": "d4e825a3c2e17d125b5baac853b808619fb540c96f37e19b68013eaa9dc747af",
     "source_url": "https://commons.wikimedia.org/wiki/File:New_Lots_Community_Church_jeh.jpg"
+  },
+  "plymouth-church-brooklyn-heights": {
+    "sha256": "88767e7068d74bb2f0a6f1c1c30383bd4e61292941107ae9215370d048437f7d",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Plymouth_Church_-_Brooklyn_(55268323821).jpg"
+  },
+  "promenade-brooklyn-heights": {
+    "sha256": "4d96ef28ed677113aa4c9fdfeef38f46484ca7ec670a9f3ba082d456322922bd",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Brooklyn_Heights_Promenade_NY1.jpg"
   },
   "pulaski-bridge-greenpoint": {
     "sha256": "2ac4397eaec73c7ccd1b5411d96f5f88ea7b5de01f7a1f19a046f874b28ab993",
@@ -58,6 +98,10 @@
   "st-sylvester-church-city-line": {
     "sha256": "d1d73d17996380b0a9c7a9c0df14c8130abf8d67cede4ac0bc1f690ff25eb24b",
     "source_url": "https://commons.wikimedia.org/wiki/File:St_Sylvester_Church_in_City_Line,Brooklyn.jpg"
+  },
+  "vinegar-hill-historic-district-vinegar-hill": {
+    "sha256": "e050f75f990dcbaba1333cb717a50ad04ca3f3ab2207dfac1c673afc91958d0d",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Vinegar_Hill_Historic_District,_Brooklyn,_New_York,_US.jpg"
   },
   "williamsburg-bridge-williamsburg": {
     "sha256": "abc1d9b8eb1ca320c2c8c9e5dce8be5a97dbeb604d2ea5e05dea6491a492c697",

@@ -1,0 +1,137 @@
+{
+  "guide": {
+    "slug": "boerum-hill-brooklyn-guide",
+    "title": "Boerum Hill, Brooklyn: A Name Coined in 1964",
+    "destination": "Boerum Hill, New York",
+    "state": "New York",
+    "county": "Brooklyn",
+    "tier": "town-page",
+    "intro": "The name here is younger than the houses. Boerum Hill takes it from the colonial farm of the Boerum family, which occupied most of the area during early Dutch settlement, but as a place-name it is modern coinage: Helen Buckler, founder of the Boerum Hill Association, revived the old farming family's name in early 1964 for a preservation campaign. What she was defending was a rowhouse district. Most of the housing is three-story rowhouses built between 1840 and 1870, and the Landmarks Preservation Commission designated a historic district here on November 20, 1973. For roughly fifty years of the twentieth century, the north end of Smith Street was the center of New York City's Mohawk community, nicknamed Little Caughnawaga.",
+    "sections": [
+      {
+        "heading": "Little Caughnawaga and the rowhouse district",
+        "body": "The Mohawk families on the north end of Smith Street came mostly from the Akwesasne and Kahnawake reserves in Quebec. Many of the men worked as ironworkers on the city's bridges and skyscrapers; the Mohawk language was widely used in daily life, including at the Cuyler Church, and families frequently returned to Kahnawake in the summers.\n\nThe historic district that Helen Buckler's association helped win was designated by the Landmarks Preservation Commission on November 20, 1973 and added to the National Register of Historic Places on September 26, 1983, under reference number 83001686. Its original core held about 238 contributing rowhouses and a few commercial buildings built between 1845 and 1890, mostly three-bay, three-story brick Greek Revival or Italianate houses with stoops, roughly bounded by Pacific, Wyckoff, Bergen, Nevins, Bond and Hoyt Streets. The protected area was roughly doubled in 2018.\n\nFrom the early 1970s until about 2003 the neighborhood was populated mostly by working- and middle-class African-American and Puerto Rican families; gentrification since the late 1990s shifted it, and by 2012 Boerum Hill had the sixth-highest median home prices of any New York City neighborhood and the highest of any outside Manhattan.\n\nEach fall since 1974 the Atlantic Antic street fair has run along Atlantic Avenue, produced by the Atlantic Avenue Local Development Corporation. It spans about ten blocks across Brooklyn Heights, Cobble Hill and Boerum Hill rather than belonging to any one of them, and it was canceled in 2001 after the September 11 attacks, in 2002 over a street-closure policy dispute, and in 2020 for COVID-19."
+      },
+      {
+        "heading": "Getting there",
+        "body": "Bergen Street, at Bergen and Smith Streets, sits on the border of Cobble Hill and Boerum Hill and is served by the F and G at all times.\n\nHoyt–Schermerhorn Streets, at Hoyt and Schermerhorn Streets, sits on the border of Downtown Brooklyn and Boerum Hill. The A and G serve it at all times and the C except late nights.\n\nThe Atlantic Avenue–Barclays Center complex borders Boerum Hill along with Fort Greene, Park Slope and Prospect Heights. The 2, 4, D, N, Q and R serve it at all times, the 3 at all times except late nights, the 5 and B on weekdays during the day, and the W at rush hours only.\n\nThe Long Island Rail Road's Atlantic Terminal, at Flatbush and Atlantic Avenues in Downtown Brooklyn, adjoins that subway complex. It is the primary terminal for the West Hempstead Branch and a peak-hour terminal for some trains on the Hempstead, Far Rockaway, Port Jefferson, Ronkonkoma and Babylon branches; most other service runs as shuttles to Jamaica."
+      }
+    ],
+    "faq": [
+      {
+        "question": "How do I get to Boerum Hill?",
+        "answer": "Bergen Street, on the Cobble Hill border at Bergen and Smith Streets, is served by the F and G. Hoyt–Schermerhorn Streets, on the Downtown Brooklyn border, has the A and G at all times and the C except late nights. The Atlantic Avenue–Barclays Center complex, which borders the neighborhood, is served by the 2, 4, D, N, Q and R at all times among others, and the Long Island Rail Road runs to Atlantic Terminal alongside it."
+      },
+      {
+        "question": "Is the Atlantic Antic a Boerum Hill event?",
+        "answer": "Partly. The fall street fair, run annually on Atlantic Avenue since 1974 by the Atlantic Avenue Local Development Corporation, spans about ten blocks across Brooklyn Heights, Cobble Hill and Boerum Hill, so it belongs to all three rather than to any one of them."
+      },
+      {
+        "question": "Where can I stay near Boerum Hill?",
+        "answer": "No hotel inside Boerum Hill appears in the research behind this page. The nearest verified option is the New York Marriott at the Brooklyn Bridge, a 32-story tower on Adams Street in Downtown Brooklyn, the neighborhood across the Hoyt–Schermerhorn Streets border."
+      }
+    ],
+    "photos": []
+  },
+  "places": [
+    {
+      "slug": "boerum-hill-historic-district",
+      "name": "Boerum Hill Historic District",
+      "kind": "historic-site",
+      "town": "Boerum Hill",
+      "state": "New York",
+      "county": "Brooklyn",
+      "address": "Roughly bounded by Pacific, Wyckoff, Bergen, Nevins, Bond and Hoyt Streets, Brooklyn, NY",
+      "summary": "About 238 contributing rowhouses and a few commercial buildings built between 1845 and 1890 in the original core, mostly three-bay, three-story brick Greek Revival or Italianate houses with stoops.",
+      "history": "Designated by the New York City Landmarks Preservation Commission on November 20, 1973 and added to the National Register of Historic Places on September 26, 1983, reference number 83001686. The protected area was roughly doubled in 2018.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "pacific-branch-brooklyn-public-library",
+      "name": "Pacific Branch, Brooklyn Public Library",
+      "kind": "historic-site",
+      "town": "Boerum Hill",
+      "state": "New York",
+      "county": "Brooklyn",
+      "address": "25 Fourth Avenue, near Pacific Street, Brooklyn, NY",
+      "summary": "Brooklyn's oldest Carnegie library, opened in 1905.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "roulette-boerum-hill",
+      "name": "Roulette",
+      "kind": "theater",
+      "town": "Boerum Hill",
+      "state": "New York",
+      "county": "Brooklyn",
+      "address": "509 Atlantic Avenue, Brooklyn, NY",
+      "official_url": "https://roulette.org/",
+      "summary": "A nonprofit venue presenting experimental music, movement and media performance since 1978, actively programming through the 2026 season.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "issue-project-room",
+      "name": "ISSUE Project Room",
+      "kind": "theater",
+      "town": "Boerum Hill",
+      "state": "New York",
+      "county": "Brooklyn",
+      "address": "22 Boerum Place, Brooklyn, NY 11201",
+      "official_url": "https://issueprojectroom.org/",
+      "summary": "A nonprofit performance space founded in 2003, presenting interdisciplinary music, dance, literature and film, with active programming through the 2026 season.",
+      "status": "open",
+      "photos": []
+    }
+  ],
+  "entries": [
+    {
+      "kind": "walk",
+      "name": "Boerum Hill Historic District",
+      "place_slug": "boerum-hill-historic-district",
+      "note": "About 238 contributing rowhouses of 1845 to 1890, designated in November 1973 and doubled in area in 2018."
+    },
+    {
+      "kind": "sight",
+      "name": "Pacific Branch, Brooklyn Public Library",
+      "place_slug": "pacific-branch-brooklyn-public-library",
+      "note": "Brooklyn's oldest Carnegie library, at 25 Fourth Avenue near Pacific Street, open since 1905."
+    },
+    {
+      "kind": "sight",
+      "name": "Roulette",
+      "place_slug": "roulette-boerum-hill",
+      "note": "Experimental music, movement and media on Atlantic Avenue, presented since 1978."
+    },
+    {
+      "kind": "sight",
+      "name": "ISSUE Project Room",
+      "place_slug": "issue-project-room",
+      "note": "Interdisciplinary performance on Boerum Place, founded in 2003."
+    }
+  ],
+  "links": [
+    {
+      "target": "guide:cobble-hill-brooklyn-guide",
+      "kind": "nearby",
+      "note": "The Bergen Street station, on the F and G, sits at Bergen and Smith Streets on the border of Cobble Hill and Boerum Hill."
+    },
+    {
+      "target": "guide:downtown-brooklyn-brooklyn-guide",
+      "kind": "nearby",
+      "note": "Hoyt–Schermerhorn Streets sits on the Downtown Brooklyn and Boerum Hill border, and the nearest verified hotel is in Downtown Brooklyn."
+    },
+    {
+      "target": "guide:fort-greene-brooklyn-guide",
+      "kind": "same-region",
+      "note": "The Atlantic Avenue–Barclays Center complex borders Boerum Hill, Fort Greene, Park Slope and Prospect Heights."
+    },
+    {
+      "target": "guide:brooklyn-heights-brooklyn-guide",
+      "kind": "same-region",
+      "note": "The Atlantic Antic street fair spans about ten blocks of Atlantic Avenue across Brooklyn Heights, Cobble Hill and Boerum Hill."
+    }
+  ]
+}

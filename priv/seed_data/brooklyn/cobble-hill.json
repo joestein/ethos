@@ -1,0 +1,150 @@
+{
+  "guide": {
+    "slug": "cobble-hill-brooklyn-guide",
+    "title": "Cobble Hill, Brooklyn: A Name Revived in 1959",
+    "destination": "Cobble Hill, New York",
+    "state": "New York",
+    "county": "Brooklyn",
+    "tier": "town-page",
+    "intro": "Cobble Hill is named for a conical hill — recorded as Cobleshill, and also as Ponkiesbergh — that once stood at roughly the present intersection of Atlantic Avenue, Pacific Street and Court Street. Dutch farmers settled the ground in the 1640s, following land grants from Willem Kieft. The name itself had died out by the 1880s and was only formally revived in 1959, a decade before the New York City Landmarks Preservation Commission designated the Cobble Hill Historic District on December 20, 1969. Beneath Atlantic Avenue, between Columbia Street and Boerum Place, runs a railway tunnel begun as an open cut in May 1844 and opened that December to give the Long Island Rail Road a grade-separated right-of-way to South Ferry.",
+    "sections": [
+      {
+        "heading": "The tunnel, the district, and the churches",
+        "body": "The Atlantic Avenue Tunnel, also called the Cobble Hill Tunnel, was fully operational by the middle of 1845 and was roofed over roughly five years after it opened. Guinness World Records is among the sources citing it as the oldest railway tunnel beneath a city street in North America. It is not listed here as a visitable site.\n\nThe historic district above it, designated on December 20, 1969 and extended on June 7, 1988, is roughly bounded by Atlantic Avenue and Court, Degraw and Hicks Streets, and is separately listed on the National Register of Historic Places from June 11, 1976. Four churches stand within it: Christ Church and Holy Family, by Richard Upjohn, 1841-42; Old St. Paul's Roman Catholic Church, by Gamaliel King, 1838, with later additions; the former Strong Place Baptist Church by Minard Lafever, 1851-52, now St. Francis Cabrini Chapel; and the former Middle Dutch Reformed Church of 1855-56, now the Kane Street Synagogue.\n\nThat congregation, Baith Israel Anshei Emes, was founded in 1856 and rented space at 155 Atlantic Street before building the first purpose-built synagogue in Brooklyn, at State Street and Boerum Place, in 1862. It bought the Kane Street building in 1905; the 1908 merger with Talmud Torah Anshei Emes, which gave the congregation its present name, came three years after that purchase.\n\nOn the neighborhood's northern side, Long Island College Hospital ceased operations on August 30, 2014. The site was redeveloped as the multi-tower River Park complex, and NYU Langone acquired the property in March 2020."
+      },
+      {
+        "heading": "Getting there",
+        "body": "Bergen Street, at Bergen and Smith Streets, sits on the boundary of Boerum Hill and Cobble Hill and is served by the F and G.\n\nCarroll Street, at Carroll and Smith Streets, is also served by the F and G, but the sources consulted here place it in Carroll Gardens, adjacent to Cobble Hill rather than inside it.\n\nNYC Ferry's South Brooklyn route has called at the Brooklyn Bridge Park Pier 6 landing since June 2017. That landing sits on Cobble Hill's border with Brooklyn Heights rather than squarely inside the neighborhood."
+      }
+    ],
+    "faq": [
+      {
+        "question": "How do I get to Cobble Hill?",
+        "answer": "Bergen Street, on the F and G at Bergen and Smith Streets, sits on the boundary of Boerum Hill and Cobble Hill. Carroll Street, also on the F and G, is placed by the sources used here in Carroll Gardens, next to Cobble Hill rather than in it. NYC Ferry's South Brooklyn route calls at the Brooklyn Bridge Park Pier 6 landing on the Brooklyn Heights border."
+      },
+      {
+        "question": "What is the Atlantic Avenue Tunnel?",
+        "answer": "A railway tunnel beneath Atlantic Avenue between Columbia Street and Boerum Place, begun as an open cut in May 1844 and opened on December 3, 1844 to give the Long Island Rail Road a grade-separated right-of-way to South Ferry. It was fully operational by mid-1845 and roofed over about five years after opening. Guinness World Records is among the sources citing it as the oldest railway tunnel beneath a city street in North America."
+      },
+      {
+        "question": "Where can I stay near Cobble Hill?",
+        "answer": "No hotel physically inside Cobble Hill was identified in the research behind this page. The nearest verified option is 1 Hotel Brooklyn Bridge at 60 Furman Street, in Brooklyn Heights — the neighborhood on whose border the Pier 6 ferry landing sits."
+      }
+    ],
+    "photos": []
+  },
+  "places": [
+    {
+      "slug": "cobble-hill-park",
+      "name": "Cobble Hill Park",
+      "kind": "park",
+      "town": "Cobble Hill",
+      "state": "New York",
+      "county": "Brooklyn",
+      "address": "Clinton Street between Verandah Place and Congress Street, Brooklyn, NY",
+      "summary": "A small New York City parkland unit created in 1965, on the site of former mansions and the Second Unitarian Church.",
+      "history": "Its 1989 reconstruction won the Art Commission's 1988 Annual Award for Excellence in Design.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "cobble-hill-historic-district",
+      "name": "Cobble Hill Historic District",
+      "kind": "historic-site",
+      "town": "Cobble Hill",
+      "state": "New York",
+      "county": "Brooklyn",
+      "address": "Roughly bounded by Atlantic Avenue and Court, Degraw and Hicks Streets, Brooklyn, NY",
+      "summary": "A district of nineteenth-century rowhouses and churches, walkable as public streetscape rather than a ticketed site.",
+      "history": "Designated by the New York City Landmarks Preservation Commission on December 20, 1969 and extended on June 7, 1988. It is separately listed on the National Register of Historic Places from June 11, 1976.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "kane-street-synagogue",
+      "name": "Kane Street Synagogue",
+      "kind": "historic-site",
+      "town": "Cobble Hill",
+      "state": "New York",
+      "county": "Brooklyn",
+      "address": "236 Kane Street, Brooklyn, NY 11231",
+      "summary": "An active Conservative synagogue, home to Congregation Baith Israel Anshei Emes, in a building of 1855-56 that was originally the Middle Dutch Reformed Church.",
+      "history": "The congregation was founded in 1856 and rented space at 155 Atlantic Street before building the first purpose-built synagogue in Brooklyn, at State Street and Boerum Place, in 1862. It purchased the Kane Street building in 1905; the 1908 merger with Talmud Torah Anshei Emes gave the congregation its present name three years after that purchase.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "christ-church-and-holy-family",
+      "name": "Christ Church and Holy Family",
+      "kind": "historic-site",
+      "town": "Cobble Hill",
+      "state": "New York",
+      "county": "Brooklyn",
+      "summary": "An active Episcopal church designed by Richard Upjohn and built in 1841-42, within the Cobble Hill Historic District. No street address could be confirmed from the sources used for this page.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "clover-club-cobble-hill",
+      "name": "Clover Club",
+      "kind": "cafe",
+      "town": "Cobble Hill",
+      "state": "New York",
+      "county": "Brooklyn",
+      "address": "210 Smith Street, Brooklyn, NY 11201",
+      "official_url": "https://www.cloverclubny.com",
+      "summary": "A cocktail bar operating at 210 Smith Street since 2008. It has also launched a sibling concept called The Saloon, so visitors may see both names referenced.",
+      "status": "open",
+      "photos": []
+    }
+  ],
+  "entries": [
+    {
+      "kind": "walk",
+      "name": "Cobble Hill Park",
+      "place_slug": "cobble-hill-park",
+      "note": "A small park on Clinton Street, created in 1965 and rebuilt in 1989 to an award-winning design."
+    },
+    {
+      "kind": "walk",
+      "name": "Cobble Hill Historic District",
+      "place_slug": "cobble-hill-historic-district",
+      "note": "Nineteenth-century rowhouses and four churches, designated in December 1969 and extended in June 1988."
+    },
+    {
+      "kind": "sight",
+      "name": "Kane Street Synagogue",
+      "place_slug": "kane-street-synagogue",
+      "note": "Congregation Baith Israel Anshei Emes, in the former Middle Dutch Reformed Church of 1855-56."
+    },
+    {
+      "kind": "sight",
+      "name": "Christ Church and Holy Family",
+      "place_slug": "christ-church-and-holy-family",
+      "note": "Richard Upjohn's Episcopal church of 1841-42, one of four churches in the historic district."
+    },
+    {
+      "kind": "food",
+      "name": "Clover Club",
+      "place_slug": "clover-club-cobble-hill",
+      "note": "Cocktails at 210 Smith Street, open since 2008."
+    }
+  ],
+  "links": [
+    {
+      "target": "guide:boerum-hill-brooklyn-guide",
+      "kind": "nearby",
+      "note": "The Bergen Street station on the F and G stands at Bergen and Smith Streets, on the boundary of Boerum Hill and Cobble Hill."
+    },
+    {
+      "target": "guide:brooklyn-heights-brooklyn-guide",
+      "kind": "nearby",
+      "note": "The Pier 6 ferry landing sits on Cobble Hill's border with Brooklyn Heights, where 1 Hotel Brooklyn Bridge is the nearest verified hotel."
+    },
+    {
+      "target": "guide:downtown-brooklyn-brooklyn-guide",
+      "kind": "same-region",
+      "note": "The B65 runs down Bergen Street to Smith Street, at the Cobble Hill and Boerum Hill boundary corner, on its way to its Downtown Brooklyn terminus."
+    }
+  ]
+}
