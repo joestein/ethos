@@ -1,0 +1,256 @@
+{
+  "guide": {
+    "slug": "brownsville-brooklyn-guide",
+    "title": "Brownsville, Brooklyn: A Movie Palace and a WPA Pool",
+    "destination": "Brownsville, New York",
+    "state": "New York",
+    "county": "Brooklyn",
+    "tier": "guide",
+    "intro": "Brownsville was farmland parceled out by William Suydam in 1858, and it takes its name from Charles S. Brown, a judge and developer who bought the land in 1866, cut it into small lots, and advertised its open space to Jewish residents of Manhattan's Lower East Side. They came, and from the 1880s through the 1950s Brownsville was a dense, working-class Jewish garment neighborhood. Margaret Sanger opened the first American birth-control clinic on Amboy Street here in 1916, and the crime syndicate remembered as Murder, Inc. is traced to these blocks in the 1930s. By 1970 the population was roughly 77% Black and 19% Puerto Rican, after a decade that included the 1967 riot following the death of 11-year-old Richard Ross and the 1968 teachers' strike over community control of schools, fought alongside adjoining Ocean Hill.",
+    "sections": [
+      {
+        "heading": "Small lots, libraries and a pool",
+        "body": "Charles S. Brown's subdivision worked because it was cheap and because it was sold as air: wide-open space, advertised to families packed into Lower East Side tenements. What followed was a garment-trade neighborhood that stayed predominantly Jewish and working class for some seventy years.\n\nTwo library buildings survive from that period and still operate. The Brownsville branch of the Brooklyn Public Library opened in 1905 and has occupied its building at 61 Glenmore Avenue since 1908. The Stone Avenue branch, now at 581 Mother Gaston Boulevard, opened in 1914 and is described as one of the world's first libraries built with a dedicated children's room.\n\nBetsy Head Park came from an unlikely bequest. Betsy Head, a wealthy British resident, died in 1907 and left $190,000 for New York City park facilities; Brownsville residents petitioned for the money, the city approved the land acquisition in July 1913, the architect Henry Beaumont Herts finished his plans in May 1914, and the park opened on September 30, 1915. The Works Progress Administration rebuilt the pool in 1935-1936. Fire destroyed the original bathhouse on August 17, 1937, and the Art Moderne bathhouse that stands today opened on May 27, 1939.\n\nThe 1960s and 1970s were hard on the neighborhood: the 1967 riot, the 1968 teachers' strike, sanitation-protest riots in 1970, and a wave of arson and abandonment through the disinvestment years. The Loew's Pitkin Theatre, an 85-foot-high, 2,827-seat movie palace built in 1929, came through it and was redeveloped in 2008 into a charter school and retail space."
+      },
+      {
+        "heading": "Getting there",
+        "body": "The elevated IRT New Lots Line runs through the middle of the neighborhood, and the 3 stops at Rockaway Avenue, Junius Street and Saratoga Avenue, all three of which sources place in Brownsville.\n\nThe L on the BMT Canarsie Line adds two more: Livonia Avenue and Sutter Avenue, both recorded as sitting on the border of Brownsville and East New York.\n\nThere is no Long Island Rail Road station in Brownsville. The nearest Atlantic Branch stop, East New York, is placed by its own source in the East New York and Ocean Hill neighborhoods."
+      }
+    ],
+    "faq": [
+      {
+        "question": "How do I get to Brownsville?",
+        "answer": "Take the 3 on the IRT New Lots Line to Rockaway Avenue, Junius Street or Saratoga Avenue, all in Brownsville, or the L on the BMT Canarsie Line to Livonia Avenue or Sutter Avenue, both on the border of Brownsville and East New York. There is no Long Island Rail Road station in the neighborhood."
+      },
+      {
+        "question": "Where does the name Brownsville come from?",
+        "answer": "From Charles S. Brown, a local judge and developer who acquired the land in 1866, subdivided it into small lots and advertised the area's wide-open spaces to Jewish residents of Manhattan's Lower East Side. The farmer William Suydam had first parceled out the land in 1858."
+      },
+      {
+        "question": "What is Betsy Head Park?",
+        "answer": "A 10.55-acre park that opened on September 30, 1915, paid for out of a $190,000 bequest from Betsy Head, a British resident who died in 1907. Its outdoor pool complex, with a main pool 330 by 165 feet, was rebuilt by the WPA in 1935-1936, and the Art Moderne bathhouse beside it opened on May 27, 1939 after fire destroyed the original."
+      },
+      {
+        "question": "Can you still see a film at the Loew's Pitkin Theatre?",
+        "answer": "No. The 2,827-seat movie palace, built in 1929 and 85 feet high, was redeveloped in 2008 into a charter school and retail space. The building is preserved but it is not a working performance venue."
+      },
+      {
+        "question": "Are there hotels in Brownsville?",
+        "answer": "No hotel physically located within Brownsville was found in any source consulted for this guide, and none surfaced in the other East Brooklyn neighborhoods covered alongside it. Plan on staying elsewhere in the city."
+      }
+    ],
+    "photos": [
+      {
+        "src": "/photos/ny/brooklyn/brownsville/loews-pitkin-theatre-brownsville.jpg",
+        "thumb": "/photos/ny/brooklyn/brownsville/loews-pitkin-theatre-brownsville_thumb.jpg",
+        "title": "The former Loew's Pitkin Theatre",
+        "description": "The terra-cotta bulk of the old movie palace rises above street-level storefronts and a row of trees.",
+        "author": "Jim.henderson",
+        "license": "CC BY-SA 4.0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Loew%27s_Pitkin_Theatre_HDR_2021_jeh.jpg"
+      },
+      {
+        "src": "/photos/ny/brooklyn/brownsville/betsy-head-play-center-brownsville.jpg",
+        "thumb": "/photos/ny/brooklyn/brownsville/betsy-head-play-center-brownsville_thumb.jpg",
+        "title": "Betsy Head Play Center",
+        "description": "An archival black-and-white photograph looking up at people on the brick terraces of the play center.",
+        "author": "Gottscho-Schleisner Collection",
+        "license": "Public domain",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Betsy_Head_Play_Center._LOC_gsc.5a30636.jpg"
+      },
+      {
+        "src": "/photos/ny/brooklyn/brownsville/zion-triangle-memorial-brownsville.jpg",
+        "thumb": "/photos/ny/brooklyn/brownsville/zion-triangle-memorial-brownsville_thumb.jpg",
+        "title": "Zion Triangle World War I Memorial",
+        "description": "A stone memorial carved with a striding soldier stands at the head of a paved plaza among bare trees.",
+        "author": "Jim.henderson",
+        "license": "CC0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Zion_Triangle_park_jeh.JPG"
+      }
+    ]
+  },
+  "places": [
+    {
+      "slug": "betsy-head-park",
+      "name": "Betsy Head Park",
+      "kind": "park",
+      "town": "Brownsville",
+      "state": "New York",
+      "county": "Brooklyn",
+      "address": "Dumont Avenue at Thomas S. Boyland Street, Brooklyn, NY",
+      "summary": "A 10.55-acre city park with an outdoor swimming complex whose main pool measures 330 by 165 feet, set beside an Art Moderne bathhouse. It also holds ball fields, tennis and basketball courts, a running track, a synthetic turf field added in 2021, a playground, a skate park and a parkour course, and was renovated between 2019 and 2022 under the city's Anchor Parks initiative. It is listed as open from 6 a.m. to 1 a.m. daily.",
+      "history": "Betsy Head, a wealthy British resident, died in 1907 and left $190,000 for New York City park facilities. Brownsville residents petitioned for the money, the city approved the land acquisition in July 1913, the architect Henry Beaumont Herts completed plans in May 1914, and the park opened on September 30, 1915. The Works Progress Administration rebuilt the pool in 1935-1936; fire destroyed the original bathhouse on August 17, 1937, and the current Art Moderne bathhouse opened on May 27, 1939.",
+      "status": "open",
+      "photos": [
+        {
+          "src": "/photos/ny/brooklyn/brownsville/betsy-head-play-center-brownsville.jpg",
+          "thumb": "/photos/ny/brooklyn/brownsville/betsy-head-play-center-brownsville_thumb.jpg",
+          "title": "Betsy Head Play Center",
+          "description": "An archival black-and-white photograph looking up at people on the brick terraces of the play center.",
+          "author": "Gottscho-Schleisner Collection",
+          "license": "Public domain",
+          "source_url": "https://commons.wikimedia.org/wiki/File:Betsy_Head_Play_Center._LOC_gsc.5a30636.jpg"
+        }
+      ]
+    },
+    {
+      "slug": "lincoln-terrace-park",
+      "name": "Lincoln Terrace Park (Arthur S. Somers Park)",
+      "kind": "park",
+      "town": "Brownsville",
+      "state": "New York",
+      "county": "Brooklyn",
+      "summary": "A 21-acre park on the Crown Heights and Brownsville border, also known as Arthur S. Somers Park.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "livonia-park",
+      "name": "Livonia Park",
+      "kind": "park",
+      "town": "Brownsville",
+      "state": "New York",
+      "county": "Brooklyn",
+      "address": "Livonia Avenue and Powell Street, Brooklyn, NY",
+      "summary": "A small neighborhood park at Livonia Avenue and Powell Street.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "brownsville-recreation-center",
+      "name": "Brownsville Recreation Center",
+      "kind": "park",
+      "town": "Brownsville",
+      "state": "New York",
+      "county": "Brooklyn",
+      "address": "At the corner of Linden Boulevard, Mother Gaston Boulevard and Christopher Avenue, Brooklyn, NY",
+      "summary": "A city recreation center that opened in 1953, at the meeting of Linden Boulevard, Mother Gaston Boulevard and Christopher Avenue.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "soul-in-the-hole-court",
+      "name": "\"Soul in the Hole\" street basketball court",
+      "kind": "attraction",
+      "town": "Brownsville",
+      "state": "New York",
+      "county": "Brooklyn",
+      "address": "Brownsville Houses, Brooklyn, NY",
+      "summary": "A well-known street-basketball court inside the Brownsville Houses public-housing development.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "loews-pitkin-theatre",
+      "name": "Loew's Pitkin Theatre",
+      "kind": "historic-site",
+      "town": "Brownsville",
+      "state": "New York",
+      "county": "Brooklyn",
+      "summary": "An 85-foot-high, 2,827-seat movie palace built in 1929 and redeveloped in 2008 into a charter school and retail space. The building is preserved rather than restored to use as a theater, so it is a facade to look at rather than a venue to attend.",
+      "status": "open",
+      "photos": [
+        {
+          "src": "/photos/ny/brooklyn/brownsville/loews-pitkin-theatre-brownsville.jpg",
+          "thumb": "/photos/ny/brooklyn/brownsville/loews-pitkin-theatre-brownsville_thumb.jpg",
+          "title": "The former Loew's Pitkin Theatre",
+          "description": "The terra-cotta bulk of the old movie palace rises above street-level storefronts and a row of trees.",
+          "author": "Jim.henderson",
+          "license": "CC BY-SA 4.0",
+          "source_url": "https://commons.wikimedia.org/wiki/File:Loew%27s_Pitkin_Theatre_HDR_2021_jeh.jpg"
+        }
+      ]
+    },
+    {
+      "slug": "brooklyn-public-library-brownsville-branch",
+      "name": "Brooklyn Public Library, Brownsville branch",
+      "kind": "historic-site",
+      "town": "Brownsville",
+      "state": "New York",
+      "county": "Brooklyn",
+      "address": "61 Glenmore Avenue, Brooklyn, NY",
+      "summary": "A branch library that opened in 1905 and has occupied its current building since 1908. It is still an operating branch.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "brooklyn-public-library-stone-avenue-branch",
+      "name": "Brooklyn Public Library, Stone Avenue branch",
+      "kind": "historic-site",
+      "town": "Brownsville",
+      "state": "New York",
+      "county": "Brooklyn",
+      "address": "581 Mother Gaston Boulevard, Brooklyn, NY",
+      "summary": "A branch library that opened in 1914, described as one of the world's first libraries built with a dedicated children's room. It is still an operating branch.",
+      "status": "open",
+      "photos": []
+    }
+  ],
+  "entries": [
+    {
+      "kind": "walk",
+      "name": "Betsy Head Park",
+      "place_slug": "betsy-head-park",
+      "note": "A 1915 park paid for by a British stranger's bequest, with a WPA pool and a 1939 Art Moderne bathhouse."
+    },
+    {
+      "kind": "sight",
+      "name": "Loew's Pitkin Theatre",
+      "place_slug": "loews-pitkin-theatre",
+      "note": "A 2,827-seat movie palace of 1929, now a charter school and shops behind a preserved facade."
+    },
+    {
+      "kind": "sight",
+      "name": "Brooklyn Public Library, Stone Avenue branch",
+      "place_slug": "brooklyn-public-library-stone-avenue-branch",
+      "note": "Opened in 1914 as one of the world's first libraries with a dedicated children's room, and still lending."
+    },
+    {
+      "kind": "sight",
+      "name": "Brooklyn Public Library, Brownsville branch",
+      "place_slug": "brooklyn-public-library-brownsville-branch",
+      "note": "A branch since 1905, in the same building on Glenmore Avenue since 1908."
+    },
+    {
+      "kind": "walk",
+      "name": "Lincoln Terrace Park",
+      "place_slug": "lincoln-terrace-park",
+      "note": "Twenty-one acres straddling the Crown Heights and Brownsville border, also known as Arthur S. Somers Park."
+    },
+    {
+      "kind": "walk",
+      "name": "Livonia Park",
+      "place_slug": "livonia-park",
+      "note": "A small park at Livonia Avenue and Powell Street, under the elevated line."
+    },
+    {
+      "kind": "sight",
+      "name": "Brownsville Recreation Center",
+      "place_slug": "brownsville-recreation-center",
+      "note": "A city recreation center open since 1953 on Linden Boulevard."
+    },
+    {
+      "kind": "sight",
+      "name": "\"Soul in the Hole\" street basketball court",
+      "place_slug": "soul-in-the-hole-court",
+      "note": "The street-basketball court inside the Brownsville Houses."
+    }
+  ],
+  "links": [
+    {
+      "target": "guide:ocean-hill-brooklyn-guide",
+      "kind": "shared-history",
+      "note": "The 1968 teachers' strike over community control of schools was fought in Brownsville and adjoining Ocean Hill together."
+    },
+    {
+      "target": "guide:canarsie-brooklyn-guide",
+      "kind": "same-region",
+      "note": "The B60 runs between Williamsburg Bridge Plaza and Canarsie, and lists Brownsville among the communities it serves."
+    },
+    {
+      "target": "guide:city-line-brooklyn-guide",
+      "kind": "same-region",
+      "note": null
+    }
+  ]
+}

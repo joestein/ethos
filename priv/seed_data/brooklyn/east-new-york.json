@@ -1,0 +1,113 @@
+{
+  "guide": {
+    "slug": "east-new-york-brooklyn-guide",
+    "title": "East New York, Brooklyn: John Pitkin's Rival Metropolis",
+    "destination": "East New York, New York",
+    "state": "New York",
+    "county": "Brooklyn",
+    "tier": "town-page",
+    "intro": "East New York carries the name a speculator gave it. In 1835 the Connecticut merchant John Pitkin bought land here and built a shoe factory, calling the development East New York in a deliberate bid to make it a rival metropolis to Manhattan. Dutch colonists had settled the ground in the 1650s as part of the Town of New Lots, one of eastern Brooklyn's original towns alongside Flatbush and Bushwick. New Lots was ceded from the Town of Flatbush in 1852, annexed into the City of Brooklyn in 1886 as the 26th Ward, and folded into New York City at consolidation in 1898. By the 1930s the population was largely Italian, Jewish, German and Russian; postwar Puerto Rican and African American migration reshaped it again.",
+    "sections": [
+      {
+        "heading": "From the Town of New Lots to the Nehemiah houses",
+        "body": "The oldest event recorded here predates the name. In 1776, during the Battle of Long Island, British and Hessian troops used Jamaica Pass, in the vicinity of present-day East New York and Cypress Hills, to outflank George Washington's forces.\n\nThe Dutch Reformed congregation at what is now 630 New Lots Avenue raised its wood-frame church on a burial ground whose oldest graves date to the seventeenth century and hold Revolutionary War soldiers and enslaved people. The building was designated a New York City Landmark on July 19, 1966 and listed on the National Register of Historic Places in 1983.\n\nThe railroad left its own mark on American law. A 1924 accident involving a locker of fireworks at the Long Island Rail Road's East New York station produced Palsgraf v. Long Island Railroad Co., the foundational American tort case on proximate cause.\n\nAfter the disinvestment and arson of the 1970s, the faith-based coalition East Brooklyn Congregations organized the Nehemiah Program, which built thousands of affordable single-family rowhouses on the neighborhood's vacant lots through the 1980s. In the Spring Creek section, Starrett City had already opened on October 13, 1974 with 5,881 apartments across 46 buildings, described as the largest federally assisted rental housing complex in the United States; its on-site cogeneration plant kept it lit through the 1977 blackout."
+      },
+      {
+        "heading": "Getting there",
+        "body": "East New York is served by the subway on four lines and by the Long Island Rail Road.\n\nOn the IRT New Lots Line, New Lots Avenue is the terminal: the 3 stops at all times except late nights, the 4 late nights, and the 2, 4 and 5 at limited rush hours. Pennsylvania Avenue and Van Siclen Avenue on the same line are served by the 2, 3, 4 and 5.\n\nThe IND Fulton Street Line runs beneath the neighborhood. The A and C both call at Shepherd Avenue and at Euclid Avenue, and at Liberty Avenue and Van Siclen Avenue, where the C runs at all times except late nights and the A covers late nights.\n\nThe L calls at Atlantic Avenue, and at New Lots Avenue, Livonia Avenue and Sutter Avenue on the border with Brownsville. Broadway Junction, on the border of Bedford-Stuyvesant, Bushwick and East New York, carries the A, C, J and Z.\n\nThe Long Island Rail Road's East New York station stands at Atlantic Avenue and Havens Place, on the Atlantic Branch, described by its source as serving the East New York and Ocean Hill neighborhoods. It is served by City Terminal Zone and West Hempstead Branch trains, and the MTA has scheduled it for a station-wide ADA accessibility renewal under the 2025-2029 Capital Program."
+      }
+    ],
+    "faq": [
+      {
+        "question": "How do I get to East New York?",
+        "answer": "By subway on the 2, 3, 4 and 5 along the IRT New Lots Line, the A and C on the IND Fulton Street Line, or the L; Broadway Junction, on the border of Bedford-Stuyvesant, Bushwick and East New York, joins the A, C, J and Z. The Long Island Rail Road's East New York station, on the Atlantic Branch, is at Atlantic Avenue and Havens Place, served by City Terminal Zone and West Hempstead Branch trains."
+      },
+      {
+        "question": "Why is it called East New York?",
+        "answer": "The Connecticut merchant John Pitkin bought land here in 1835, built a shoe factory, and named the development East New York in a deliberate bid to make it a rival metropolis to Manhattan. The wider area had been settled by Dutch colonists in the 1650s as part of the Town of New Lots."
+      },
+      {
+        "question": "Is Highland Park in East New York?",
+        "answer": "Not squarely. Sources describe Highland Park as bordering Cypress Hills, in Community District 5, on its south side while being centered on the Brooklyn-Queens line and abutting Glendale and Ridgewood in Queens. Neighborhood boundaries here are not authoritatively fixed, so the park is best treated as adjacent to East New York rather than inside it."
+      }
+    ],
+    "photos": []
+  },
+  "places": [
+    {
+      "slug": "spring-creek-park",
+      "name": "Spring Creek Park",
+      "kind": "park",
+      "town": "East New York",
+      "state": "New York",
+      "county": "Brooklyn",
+      "address": "Along the Jamaica Bay shoreline in the Spring Creek section of East New York, Brooklyn, NY",
+      "official_url": "https://www.nycgovparks.org/parks/spring-creek-park",
+      "summary": "A former salt marsh converted to parkland by landfill operations that began in 1949, following a 1930 Robert Moses park proposal. Most of the Brooklyn section, Spring Creek North, is an undeveloped wetland preserve without public access infrastructure; the Queens section to the south, in Howard Beach, is part of Gateway National Recreation Area and has two publicly accessible pathways.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "gateway-center-east-new-york",
+      "name": "Gateway Center",
+      "kind": "attraction",
+      "town": "East New York",
+      "state": "New York",
+      "county": "Brooklyn",
+      "address": "501 Gateway Drive, Brooklyn, NY 11239",
+      "official_url": "https://shopgatewaycenterbrooklyn.com",
+      "summary": "An open-air shopping center built on a former landfill in two phases, the south section in 2002 and the north section in 2014. It holds roughly 51 retail tenants, including big-box stores and a Lidl grocery that opened in 2025, and is the largest retail destination inside East New York.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "public-school-73-east-new-york",
+      "name": "Public School 73 (former)",
+      "kind": "historic-site",
+      "town": "East New York",
+      "state": "New York",
+      "county": "Brooklyn",
+      "address": "241 Macdougal Street, East New York, Brooklyn, NY",
+      "summary": "A former public school building designated a New York City Landmark on September 11, 1984. It is of exterior and landmark interest rather than a general visitor site.",
+      "status": "open",
+      "photos": []
+    }
+  ],
+  "entries": [
+    {
+      "kind": "walk",
+      "name": "Spring Creek Park",
+      "place_slug": "spring-creek-park",
+      "note": "Landfilled salt marsh on the Jamaica Bay shoreline; the Brooklyn side is a wetland preserve rather than a developed park."
+    },
+    {
+      "kind": "sight",
+      "name": "Gateway Center",
+      "place_slug": "gateway-center-east-new-york",
+      "note": "An open-air shopping center on a former landfill, built in two phases in 2002 and 2014."
+    },
+    {
+      "kind": "sight",
+      "name": "Public School 73 (former)",
+      "place_slug": "public-school-73-east-new-york",
+      "note": "A landmarked former school building on Macdougal Street, designated in 1984 and best seen from the street."
+    }
+  ],
+  "links": [
+    {
+      "target": "guide:new-lots-brooklyn-guide",
+      "kind": "shared-history",
+      "note": "Both grew out of the Town of New Lots, ceded from Flatbush in 1852 and annexed by the City of Brooklyn in 1886."
+    },
+    {
+      "target": "guide:starrett-city-brooklyn-guide",
+      "kind": "shared-history",
+      "note": "Starrett City opened in 1974 in the Spring Creek section of East New York."
+    },
+    {
+      "target": "guide:brownsville-brooklyn-guide",
+      "kind": "nearby",
+      "note": "The L's New Lots Avenue, Livonia Avenue and Sutter Avenue stations sit on the border of the two neighborhoods."
+    }
+  ]
+}

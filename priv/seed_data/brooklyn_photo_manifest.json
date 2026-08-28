@@ -1,1 +1,38 @@
-{}
+{
+  "1530-pennsylvania-avenue-starrett-city": {
+    "source_url": "https://commons.wikimedia.org/wiki/File:Pennsylvania_Av_Hornell_Loop_td_(2018-08-15)_01_-_1530_Pennsylvania_Avenue.jpg",
+    "sha256": "2f5bda6100c7367830c22a9fb7e124cec2932a2b783ee099cb4b5518e503e7a3"
+  },
+  "betsy-head-play-center-brownsville": {
+    "source_url": "https://commons.wikimedia.org/wiki/File:Betsy_Head_Play_Center._LOC_gsc.5a30636.jpg",
+    "sha256": "bd5d53579c929086ace49a9edf0035604f01280e680b20ed2d3dfdcac8f3f237"
+  },
+  "blessed-sacrament-church-cypress-hills": {
+    "source_url": "https://commons.wikimedia.org/wiki/File:Blessed_Sacrament_Church_from_Crescent_Street_Jamaica_El-1.jpg",
+    "sha256": "72fe613557419d67af2a7b4f9b4118416486351343623d16b3118ababd9e6116"
+  },
+  "franklin-k-lane-high-school-cypress-hills": {
+    "source_url": "https://commons.wikimedia.org/wiki/File:75th_St-Elderts_Ln_04_-_FK_Lane_HS.jpg",
+    "sha256": "b9381f8f633baafd20814c99453ce2206097efc3e216cbd44b45131d0752a533"
+  },
+  "highland-park-entrance-highland-park": {
+    "source_url": "https://commons.wikimedia.org/wiki/File:HighlandparkBrooklyn.jpg",
+    "sha256": "724cb74913a228c3b903800445ba78357d33cf1c4a75f81f1b23e3dd14627c12"
+  },
+  "loews-pitkin-theatre-brownsville": {
+    "source_url": "https://commons.wikimedia.org/wiki/File:Loew%27s_Pitkin_Theatre_HDR_2021_jeh.jpg",
+    "sha256": "0b5d85d04c4efbfb4188bbdce6561f126518572ed28749424ad627b1510c6f38"
+  },
+  "new-lots-community-church-new-lots": {
+    "source_url": "https://commons.wikimedia.org/wiki/File:New_Lots_Community_Church_jeh.jpg",
+    "sha256": "d4e825a3c2e17d125b5baac853b808619fb540c96f37e19b68013eaa9dc747af"
+  },
+  "st-sylvester-church-city-line": {
+    "source_url": "https://commons.wikimedia.org/wiki/File:St_Sylvester_Church_in_City_Line,Brooklyn.jpg",
+    "sha256": "d1d73d17996380b0a9c7a9c0df14c8130abf8d67cede4ac0bc1f690ff25eb24b"
+  },
+  "zion-triangle-memorial-brownsville": {
+    "source_url": "https://commons.wikimedia.org/wiki/File:Zion_Triangle_park_jeh.JPG",
+    "sha256": "fc8b8471bdf8cb30bae307aabd4f990f38c55ddbea5c46e52bded04297033001"
+  }
+}

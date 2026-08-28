@@ -1,0 +1,150 @@
+{
+  "guide": {
+    "slug": "bergen-beach-brooklyn-guide",
+    "title": "Bergen Beach, Brooklyn: An Island, a Resort, a Parkway",
+    "destination": "Bergen Beach, New York",
+    "state": "New York",
+    "county": "Brooklyn",
+    "tier": "town-page",
+    "intro": "Bergen Beach was an island in Jamaica Bay before it was a neighborhood. The Canarsie called it Winnipague; by the mid-1600s it had come into the hands of Hans Hansen Bergen, a Norwegian-born settler of New Netherland, and the neighborhood carries his name. From the 1890s the theater impresario Percy G. Williams and the chewing-gum manufacturer Thomas Adams Jr. ran an amusement park and resort on the Bergen homestead grounds, with a dance hall, concessions, rides, a pier, a mock Irish village, a Moorish castle and vaudeville, reached by streetcar down Flatbush Avenue and a causeway. Sources disagree on the year it closed, but what remained of the park and of the old homestead was razed in 1939 for the construction of the Belt Parkway.",
+    "sections": [
+      {
+        "heading": "Streets that were never built",
+        "body": "How Bergen Island stopped being an island is genuinely unsettled. Wikipedia's account, and one Forgotten NY article, put a landfill connection at around 1918; another Forgotten NY piece describes the area as staying marshy and largely undeveloped until an extensive landfilling project in the 1960s, with most of the housing going up in the 1970s and 1980s.\n\nWhat is certain is that the neighborhood was planned long before it was built. A 1922 Hagstrom map shows streets, and even bridges at Bergen 6th and Bergen 12th Streets, that were platted and never constructed; numbered Bergen Streets from 1st to 20th and named courts including Appolline, Brenda, Celestial, Damask and La France exist only on that paper. Some of the houses that did get built stand on unstable landfill, and local accounts describe them built with the expectation that extra entrance steps could be added later if the ground in front settled.\n\nThe trolley down Avenue N and Island Avenue, the causeway route to the mainland, ran until March 1951, when the B41 bus replaced it; Island Avenue was later renamed Veterans Avenue in honor of the Second World War's veterans, and the bus still traces much of the old alignment. Ferries ran to Canarsie from roughly 1905 to 1921, and a brief, unprofitable run to Rockaway Beach was tried; neither survives.\n\nThe Jamaica Bay Riding Academy, a fixture in the area for roughly 50 years, closed permanently in 2026. Its horses were rehomed to 13 Hands Equine Rescue in Dutchess County."
+      },
+      {
+        "heading": "Getting there",
+        "body": "No subway, Long Island Rail Road or ferry service currently reaches Bergen Beach. The bus is the only public transit answer.\n\nThe B41 runs the length of Flatbush Avenue from Cadman Plaza West in Downtown Brooklyn, and south of Avenue P it splits: one branch continues to Kings Plaza, the other runs via Avenue N and Veterans Avenue to a terminal at Veterans Avenue and East 71st Street, near Avenue U, in Bergen Beach. It descends from the Flatbush Avenue and Island Avenue streetcar that ran until March 1951.\n\nThe B3 runs along Avenue U between a Bergen Beach terminal at East 71st Street and Avenue U and a Bath Beach terminal at Harway Avenue and 25th Avenue; it was truncated to that Bergen Beach terminus in 2010. A weekday-morning short-turn ends at Avenue U and East 16th Street in Homecrest, at the Q train's Avenue U station.\n\nThe BM1 express began service on July 10, 1972 from Avenue U and Bergen Avenue; its Brooklyn terminal today is 56th Drive and Strickland Avenue in adjacent Mill Basin, running to East 57th Street and Second Avenue in Midtown with a downtown variant at State Street and Battery Place. It runs weekday peak hours only, with no overnight or Sunday service."
+      }
+    ],
+    "faq": [
+      {
+        "question": "How do I get to Bergen Beach?",
+        "answer": "By bus only. No subway, Long Island Rail Road or ferry service reaches Bergen Beach. The B41 comes down Flatbush Avenue from Downtown Brooklyn and branches via Avenue N and Veterans Avenue to a terminal at Veterans Avenue and East 71st Street. The B3 runs along Avenue U between Bergen Beach and Bath Beach, with a weekday-morning short-turn to the Q train at Avenue U and East 16th Street."
+      },
+      {
+        "question": "Why is it called Bergen Beach?",
+        "answer": "For Hans Hansen Bergen, a Norwegian-born settler of New Netherland who came to own the island in the mid-1600s. The Canarsie had called the island Winnipague. Nearby Paerdegat Basin takes its name from Dutch words meaning horse gate."
+      },
+      {
+        "question": "Is the Jamaica Bay Riding Academy still open?",
+        "answer": "No. The riding academy is permanently closed as of 2026, after roughly 50 years of operation, and its horses were rehomed to 13 Hands Equine Rescue in Dutchess County. Do not plan a visit."
+      }
+    ],
+    "photos": []
+  },
+  "places": [
+    {
+      "slug": "joseph-t-mcguire-park",
+      "name": "Joseph T. McGuire Park",
+      "kind": "park",
+      "town": "Bergen Beach",
+      "state": "New York",
+      "county": "Brooklyn",
+      "address": "Bergen Avenue between Avenue V and Shore Parkway, Brooklyn, NY",
+      "official_url": "https://www.nycgovparks.org/parks/joseph-t-mcguire-park",
+      "summary": "An NYC Parks property in Bergen Beach, between Avenue V and Shore Parkway on Bergen Avenue.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "bergen-beach-playground",
+      "name": "Bergen Beach Playground",
+      "kind": "park",
+      "town": "Bergen Beach",
+      "state": "New York",
+      "county": "Brooklyn",
+      "address": "East 71st Street between Avenues N and T, Brooklyn, NY",
+      "official_url": "https://www.nycgovparks.org/parks/bergen-beach-playground",
+      "summary": "An NYC Parks playground on East 71st Street serving the neighborhood.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "hickman-playground",
+      "name": "Hickman Playground",
+      "kind": "park",
+      "town": "Bergen Beach",
+      "state": "New York",
+      "county": "Brooklyn",
+      "address": "Veterans Avenue between East 66th and East 68th Streets, Brooklyn, NY",
+      "official_url": "https://www.nycgovparks.org/parks/hickman-playground",
+      "summary": "An NYC Parks playground on Veterans Avenue, the street that carried the old trolley causeway to the mainland.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "st-bernard-of-clairvaux-church",
+      "name": "St. Bernard of Clairvaux Roman Catholic Church",
+      "kind": "historic-site",
+      "town": "Bergen Beach",
+      "state": "New York",
+      "county": "Brooklyn",
+      "address": "East 68th Street near Avenue U, Brooklyn, NY",
+      "summary": "A parish established in 1961 whose present building, unusually modern by conventional Catholic-church standards, opened in 1964. No parish website could be reached to confirm a current Mass schedule or whether the interior is open to visitors.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "hudson-river-yacht-club",
+      "name": "Hudson River Yacht Club",
+      "kind": "historic-site",
+      "town": "Bergen Beach",
+      "state": "New York",
+      "county": "Brooklyn",
+      "address": "Avenue U and Bergen Avenue, Brooklyn, NY",
+      "summary": "A long-standing yacht club at Avenue U and Bergen Avenue, reported to have relocated to Bergen Beach from Manhattan in the nineteenth century. It is a private membership club rather than a public attraction, and no club website could be reached to confirm whether any public access exists.",
+      "status": "open",
+      "photos": []
+    }
+  ],
+  "entries": [
+    {
+      "kind": "walk",
+      "name": "Joseph T. McGuire Park",
+      "place_slug": "joseph-t-mcguire-park",
+      "note": "Parkland on Bergen Avenue between Avenue V and Shore Parkway, at the Jamaica Bay edge of the neighborhood."
+    },
+    {
+      "kind": "walk",
+      "name": "Bergen Beach Playground",
+      "place_slug": "bergen-beach-playground",
+      "note": "The neighborhood playground on East 71st Street, near the B3 and B41 bus terminals."
+    },
+    {
+      "kind": "walk",
+      "name": "Hickman Playground",
+      "place_slug": "hickman-playground",
+      "note": "A playground on Veterans Avenue, which carried the trolley causeway until March 1951."
+    },
+    {
+      "kind": "sight",
+      "name": "St. Bernard of Clairvaux Roman Catholic Church",
+      "place_slug": "st-bernard-of-clairvaux-church",
+      "note": "A 1961 parish whose 1964 building is strikingly modern for a Catholic church of its era."
+    },
+    {
+      "kind": "sight",
+      "name": "Hudson River Yacht Club",
+      "place_slug": "hudson-river-yacht-club",
+      "note": "A private club at Avenue U and Bergen Avenue that moved here from Manhattan in the nineteenth century."
+    }
+  ],
+  "links": [
+    {
+      "target": "guide:canarsie-brooklyn-guide",
+      "kind": "same-region",
+      "note": "Ferries ran between Bergen Beach and Canarsie from roughly 1905 to 1921; both sit in Brooklyn Community District 18."
+    },
+    {
+      "target": "guide:flatlands-brooklyn-guide",
+      "kind": "same-region",
+      "note": "Both sit in Brooklyn Community District 18, which groups Bergen Beach with Flatlands, Canarsie, Mill Basin, Marine Park and Georgetown."
+    },
+    {
+      "target": "guide:marine-park-brooklyn-guide",
+      "kind": "same-region",
+      "note": "The B3 bus runs along Avenue U between its Bergen Beach terminal and Bath Beach, through Marine Park."
+    }
+  ]
+}

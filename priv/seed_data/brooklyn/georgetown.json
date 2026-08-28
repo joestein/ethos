@@ -1,0 +1,55 @@
+{
+  "guide": {
+    "slug": "georgetown-brooklyn-guide",
+    "title": "Georgetown, Brooklyn: Named for a Development Half Built",
+    "destination": "Georgetown, New York",
+    "state": "New York",
+    "county": "Brooklyn",
+    "tier": "town-page",
+    "intro": "Georgetown is a small, mostly residential pocket that its sources treat as the northern section of the larger Bergen Beach area rather than as a historically independent neighborhood; Wikipedia has no standalone article for it, only a section inside the Bergen Beach one. The name comes from Georgetowne Greens, a housing development proposed in the 1960s of about 400 two-story semi-attached colonial-style houses. The project was built out only in part, but the name stuck to the area. The pocket exists at all because the city-owned land ringing Paerdegat Basin was sold off to private developers through the 1950s and 1960s, and Georgetown and Bergen Beach went up along the basin's banks, with some lots still undeveloped into the 2000s.",
+    "sections": [
+      {
+        "heading": "The Harbour Village fight",
+        "body": "The defining local event of the period was a housing project that never happened. On March 25, 1971 the New York City Board of Estimate voted 18-0 to approve Mayor John Lindsay's Harbour Village, a 904-unit Mitchell-Lama development proposed for the Bergen Beach and Georgetown area. In September 1972, after sustained public opposition from area residents, the board reversed itself and rejected the project. Parcels in the area stayed undeveloped for years afterwards.\n\nGeorgetown's edges are described only loosely. Sources give its rough extent in relation to Ralph Avenue on the west, Avenue N on the south, Avenue U on the southeast and Paerdegat Basin on the northeast, and are explicit that this is a characterization rather than an officially fixed line. Administratively the picture is clearer: Georgetown falls within Brooklyn Community District 18, which also covers Canarsie, Bergen Beach, Mill Basin, Marine Park and the southern part of Flatlands. It lies in ZIP code 11234 and is patrolled by the New York Police Department's 63rd Precinct.\n\nThe wider Bergen Beach area of which Georgetown is a part is named for Hans Hansen Bergen, an early Dutch-era settler; the Canarsie people are reported to have called the area Winnipague or Wimbaco. That is area-wide etymology rather than evidence of a distinct history for the Georgetown pocket, which is a creation of the 1960s."
+      },
+      {
+        "heading": "Getting there",
+        "body": "No subway station is recorded in Georgetown, and no Long Island Rail Road station or ferry landing either. Two bus routes reach the area.\n\nThe B3 runs along Avenue U, which sources describe as part of Georgetown's southeastern edge, to a terminus at East 71st Street and Avenue U in Bergen Beach. It connects to the Q train at the Avenue U station on the BMT Brighton Line, which is in the Homecrest and Gravesend area rather than in Georgetown.\n\nThe B41 runs the length of Flatbush Avenue from Downtown Brooklyn, where its northern end connects to the Borough Hall and Court Street subway complex, and has a branch terminating at Veterans Avenue and East 71st Street in Bergen Beach, the neighborhood Georgetown sits within."
+      }
+    ],
+    "faq": [
+      {
+        "question": "How do I get to Georgetown?",
+        "answer": "By bus. No subway station is recorded in Georgetown. The B3 runs along Avenue U to its terminus at East 71st Street and Avenue U in Bergen Beach, connecting on the way to the Q train at the Avenue U station in the Homecrest and Gravesend area. The B41 comes down Flatbush Avenue from Downtown Brooklyn, where it meets the Borough Hall and Court Street subway complex, with a branch ending at Veterans Avenue and East 71st Street."
+      },
+      {
+        "question": "Where does the name Georgetown come from?",
+        "answer": "From Georgetowne Greens, a development proposed in the 1960s of about 400 two-story semi-attached colonial-style houses. Only part of it was ever built, but the name attached itself to the area and stayed."
+      },
+      {
+        "question": "Is Georgetown part of Bergen Beach?",
+        "answer": "Sources treat it that way. Georgetown is generally described as the northern section of the larger Bergen Beach area rather than as a historically independent neighborhood, and most of the material about the area's origins is written about Bergen Beach as a whole. Both fall within Brooklyn Community District 18."
+      }
+    ],
+    "photos": []
+  },
+  "places": [],
+  "entries": [],
+  "links": [
+    {
+      "target": "guide:bergen-beach-brooklyn-guide",
+      "kind": "shared-history",
+      "note": "Sources treat Georgetown as the northern section of the larger Bergen Beach area rather than as an independent neighborhood."
+    },
+    {
+      "target": "guide:canarsie-brooklyn-guide",
+      "kind": "same-region",
+      "note": "Both sit in Brooklyn Community District 18, which also covers Bergen Beach, Mill Basin, Marine Park and southern Flatlands."
+    },
+    {
+      "target": "guide:marine-park-brooklyn-guide",
+      "kind": "same-region",
+      "note": "Both sit in Brooklyn Community District 18, which also covers Canarsie, Bergen Beach, Mill Basin and southern Flatlands."
+    }
+  ]
+}

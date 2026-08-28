@@ -1,0 +1,215 @@
+{
+  "guide": {
+    "slug": "cypress-hills-brooklyn-guide",
+    "title": "Cypress Hills, Brooklyn: Cemeteries Along Jamaica Avenue",
+    "destination": "Cypress Hills, New York",
+    "state": "New York",
+    "county": "Brooklyn",
+    "tier": "guide",
+    "intro": "Cypress Hills is a subsection of East New York in Brooklyn's Community District 5, and its ridge was given over to burial grounds before it was given over to houses. Cypress Hills Cemetery was chartered by New York State on April 27, 1847 and dedicated the following year; Beth Olam followed in 1851, founded by three Manhattan congregations; and Cypress Hills National Cemetery was established in 1862 to bury Union casualties. Houses arrived with the trains: elevated rail reached the area on the Jamaica Avenue Line in 1885 and the Fulton Street Line in 1889, and the area was annexed as the 26th Ward of the City of Brooklyn in 1886 before consolidation into New York City in 1898. Historically Italian, German and Irish, Cypress Hills recorded a Hispanic or Latino population of 60.9% at the 2020 census.",
+    "sections": [
+      {
+        "heading": "A ridge of burial grounds",
+        "body": "Three cemeteries account for most of the ground here, and each was founded for a different constituency.\n\nCypress Hills Cemetery was chartered on April 27, 1847 and dedicated on November 21, 1848 as a non-sectarian rural cemetery; its founders chose an elevated, wooded hilltop over cheaper lowland for what they described as seclusion, privacy and pensive tranquility. It now covers 225 acres split by the Jackie Robinson Parkway, with more than 400,000 interments, among them Jackie Robinson, Mae West, Piet Mondrian, the boxer James J. Corbett and Eubie Blake, and two chapels, the Cypress Hills Abbey of 1926 and the Memorial Abbey of 1936.\n\nBeth Olam Cemetery was founded in 1851 by three Manhattan Jewish congregations, Shearith Israel, B'nai Jeshurun and Temple Shaaray Tefila. Its 1882 Metaher house and gates were designed by Calvert Vaux, co-designer of Central Park, and are the only religious building he is known to have designed; they carry Tiffany stained glass and LaFarge bronze doors. Benjamin Cardozo, Emma Lazarus and the chess champion Emanuel Lasker are buried there, and the cemetery was listed on the National Register of Historic Places on May 16, 2016.\n\nCypress Hills National Cemetery, established in 1862, is the only United States National Cemetery within New York City. Its wrought-iron main gates date from 1886 and its visitors' lodge from 1887, and it holds more than 21,100 interments spanning the Revolutionary War through Vietnam, including 24 Medal of Honor recipients."
+      },
+      {
+        "heading": "Getting there",
+        "body": "The elevated BMT Jamaica Line is the neighborhood's spine, and the J and Z serve its stations here.\n\nCypress Hills station stands at Hemlock Street and Jamaica Avenue and is the easternmost station in Brooklyn on the line. Crescent Street is at Crescent Street and Fulton Street. Norwood Avenue is a Jamaica Line station in Cypress Hills as well, served by the J at all times other than rush hour and by the Z during rush hours in the peak direction; neither the A nor the C stops there.\n\nThe nearest Long Island Rail Road stop is East New York, on the Atlantic Branch at Atlantic Avenue and Havens Place, which the research places in East New York and Ocean Hill rather than in Cypress Hills itself."
+      }
+    ],
+    "faq": [
+      {
+        "question": "How do I get to Cypress Hills?",
+        "answer": "By the elevated BMT Jamaica Line, on the J and Z. Its stations here include Cypress Hills, at Hemlock Street and Jamaica Avenue, Crescent Street, at Crescent Street and Fulton Street, and Norwood Avenue. The nearest Long Island Rail Road station is East New York, on the Atlantic Branch, which sits in East New York and Ocean Hill."
+      },
+      {
+        "question": "Who is buried at Cypress Hills Cemetery?",
+        "answer": "Among more than 400,000 interments are Jackie Robinson, Mae West, Piet Mondrian, the boxer James J. Corbett and Eubie Blake. The cemetery covers 225 acres, split by the Jackie Robinson Parkway, and remains active and open to visitors."
+      },
+      {
+        "question": "What makes Cypress Hills National Cemetery unusual?",
+        "answer": "It is the only United States National Cemetery within New York City. Established in 1862 for Union Civil War casualties, it holds more than 21,100 interments including 24 Medal of Honor recipients, and was listed on the National Register of Historic Places in 1997. It stopped accepting new veteran burials when space was exhausted in 1954 but remains open to visitors."
+      },
+      {
+        "question": "Why is Beth Olam Cemetery architecturally significant?",
+        "answer": "Its 1882 Metaher house and gates were designed by Calvert Vaux, co-designer of Central Park, and are the only religious building he is known to have designed. They include Tiffany stained glass and LaFarge bronze doors."
+      },
+      {
+        "question": "Are there hotels in Cypress Hills?",
+        "answer": "The research behind this guide found no hotel physically located in Cypress Hills, which is a residential neighborhood, and no verified lodging surfaced in the other East Brooklyn neighborhoods covered alongside it. Visitors should plan on staying elsewhere in the city."
+      }
+    ],
+    "photos": [
+      {
+        "src": "/photos/ny/brooklyn/cypress-hills/blessed-sacrament-church-cypress-hills.jpg",
+        "thumb": "/photos/ny/brooklyn/cypress-hills/blessed-sacrament-church-cypress-hills_thumb.jpg",
+        "title": "Blessed Sacrament Church",
+        "description": "A stone church with a tall bell tower under an overcast sky, seen from the elevated line.",
+        "author": "DanTD",
+        "license": "CC BY-SA 4.0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Blessed_Sacrament_Church_from_Crescent_Street_Jamaica_El-1.jpg"
+      },
+      {
+        "src": "/photos/ny/brooklyn/cypress-hills/franklin-k-lane-high-school-cypress-hills.jpg",
+        "thumb": "/photos/ny/brooklyn/cypress-hills/franklin-k-lane-high-school-cypress-hills_thumb.jpg",
+        "title": "Franklin K. Lane High School",
+        "description": "A long brick school building with a columned entrance and cupola behind a snow-covered athletic field.",
+        "author": "Tdorante10",
+        "license": "CC BY-SA 4.0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:75th_St-Elderts_Ln_04_-_FK_Lane_HS.jpg"
+      }
+    ]
+  },
+  "places": [
+    {
+      "slug": "cypress-hills-cemetery",
+      "name": "Cypress Hills Cemetery",
+      "kind": "historic-site",
+      "town": "Cypress Hills",
+      "state": "New York",
+      "county": "Brooklyn",
+      "address": "833 Jamaica Avenue, Brooklyn, NY",
+      "official_url": "https://www.cypresshillscemetery.org/",
+      "summary": "A non-sectarian rural cemetery dedicated on November 21, 1848, covering 225 acres split by the Jackie Robinson Parkway. More than 400,000 interments include Jackie Robinson, Mae West, Piet Mondrian, James J. Corbett and Eubie Blake. It is active and open to visitors.",
+      "history": "Chartered by New York State on April 27, 1847 and dedicated the following year, it was one of the first non-sectarian cemetery corporations organized in New York City. Its founders chose an elevated, wooded hilltop site over cheaper lowland for seclusion, privacy and pensive tranquility. Two chapels stand on the grounds: the Cypress Hills Abbey of 1926 and the Memorial Abbey of 1936.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "cypress-hills-national-cemetery",
+      "name": "Cypress Hills National Cemetery",
+      "kind": "historic-site",
+      "town": "Cypress Hills",
+      "state": "New York",
+      "county": "Brooklyn",
+      "address": "625 Jamaica Avenue, Brooklyn, NY, with two additional parcels within the adjacent private Cypress Hills Cemetery",
+      "official_url": "https://www.cem.va.gov/cems/nchp/cypresshills.asp",
+      "summary": "The only United States National Cemetery within New York City, established in 1862 for Union Civil War casualties. It holds more than 21,100 interments spanning the Revolutionary War through Vietnam, including 24 Medal of Honor recipients, and remains open to visitors although it stopped accepting new veteran burials when space was exhausted in 1954.",
+      "history": "Listed on the National Register of Historic Places in 1997. The main entrance carries wrought-iron gates from 1886, and an 1887 visitors' lodge holds a museum and a grave locator. The cemetery is administered by Long Island National Cemetery staff.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "beth-olam-cemetery",
+      "name": "Beth Olam Cemetery",
+      "kind": "historic-site",
+      "town": "Cypress Hills",
+      "state": "New York",
+      "county": "Brooklyn",
+      "address": "2 Cypress Hills Street, Brooklyn, NY, straddling the Brooklyn-Queens border",
+      "summary": "A Jewish cemetery founded in 1851 by three Manhattan congregations. Its 1882 Metaher house and gates were designed by Calvert Vaux and include Tiffany stained glass and LaFarge bronze doors. Benjamin Cardozo, Emma Lazarus and the chess champion Emanuel Lasker are buried here.",
+      "history": "Founded by Shearith Israel, B'nai Jeshurun and Temple Shaaray Tefila. The Metaher house and gates are the only religious building Calvert Vaux, co-designer of Central Park, is known to have designed. The cemetery was listed on the National Register of Historic Places on May 16, 2016.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "cypress-hills-playground",
+      "name": "Cypress Hills Playground",
+      "kind": "park",
+      "town": "Cypress Hills",
+      "state": "New York",
+      "county": "Brooklyn",
+      "address": "Euclid Avenue between Dumont Avenue and Blake Avenue, Brooklyn, NY 11208",
+      "summary": "A 4.947-acre NYC Parks neighborhood park, acquired by the city in 1929.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "cypress-hills-change-garden",
+      "name": "Cypress Hills Change Garden",
+      "kind": "park",
+      "town": "Cypress Hills",
+      "state": "New York",
+      "county": "Brooklyn",
+      "address": "9 Chestnut Street, Brooklyn, NY",
+      "summary": "A 0.086-acre NYC Parks community garden, acquired by the city in 2016.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "public-school-108-cypress-hills",
+      "name": "Public School 108 (Sal Abbracciamento School)",
+      "kind": "historic-site",
+      "town": "Cypress Hills",
+      "state": "New York",
+      "county": "Brooklyn",
+      "address": "200 Linwood Street, Cypress Hills, Brooklyn, NY",
+      "summary": "A school building designated a New York City Landmark on February 3, 1981. It is a functioning New York City public school, so the landmark interest is in the exterior.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "public-school-65k-cypress-hills",
+      "name": "Public School 65K",
+      "kind": "historic-site",
+      "town": "Cypress Hills",
+      "state": "New York",
+      "county": "Brooklyn",
+      "address": "158 Richmond Street, Cypress Hills, Brooklyn, NY",
+      "summary": "A school building designated a New York City Landmark on February 3, 1981. It is a functioning New York City public school, so the landmark interest is in the exterior.",
+      "status": "open",
+      "photos": []
+    }
+  ],
+  "entries": [
+    {
+      "kind": "sight",
+      "name": "Cypress Hills Cemetery",
+      "place_slug": "cypress-hills-cemetery",
+      "note": "225 acres of non-sectarian rural cemetery dedicated in 1848, with Jackie Robinson, Mae West and Eubie Blake among the interments."
+    },
+    {
+      "kind": "sight",
+      "name": "Cypress Hills National Cemetery",
+      "place_slug": "cypress-hills-national-cemetery",
+      "note": "The only United States National Cemetery in New York City, with 1886 gates and an 1887 visitors' lodge holding a museum."
+    },
+    {
+      "kind": "sight",
+      "name": "Beth Olam Cemetery",
+      "place_slug": "beth-olam-cemetery",
+      "note": "Calvert Vaux designed its 1882 Metaher house and gates, the only religious building he is known to have designed."
+    },
+    {
+      "kind": "walk",
+      "name": "Cypress Hills Playground",
+      "place_slug": "cypress-hills-playground",
+      "note": "A five-acre neighborhood park on Euclid Avenue that the city acquired in 1929."
+    },
+    {
+      "kind": "walk",
+      "name": "Cypress Hills Change Garden",
+      "place_slug": "cypress-hills-change-garden",
+      "note": "A community garden on Chestnut Street, added to the NYC Parks system in 2016."
+    },
+    {
+      "kind": "sight",
+      "name": "Public School 108 (Sal Abbracciamento School)",
+      "place_slug": "public-school-108-cypress-hills",
+      "note": "A landmarked school on Linwood Street, designated in 1981 and still in use, so the interest is in the facade."
+    },
+    {
+      "kind": "sight",
+      "name": "Public School 65K",
+      "place_slug": "public-school-65k-cypress-hills",
+      "note": "A second Cypress Hills school landmarked on the same day in 1981, on Richmond Street."
+    }
+  ],
+  "links": [
+    {
+      "target": "guide:highland-park-brooklyn-guide",
+      "kind": "nearby",
+      "note": "Highland Park borders Cypress Hills to its south, and its Ridgewood Reservoir meets Cypress Hills National Cemetery on the east."
+    },
+    {
+      "target": "guide:east-new-york-brooklyn-guide",
+      "kind": "shared-history",
+      "note": "Cypress Hills is a subsection of East New York; British and Hessian troops used Jamaica Pass, in the vicinity of both, in 1776."
+    },
+    {
+      "target": "guide:new-lots-brooklyn-guide",
+      "kind": "same-region",
+      "note": null
+    }
+  ]
+}

@@ -1,0 +1,134 @@
+{
+  "guide": {
+    "slug": "highland-park-brooklyn-guide",
+    "title": "Highland Park, Brooklyn: A Park Built Around a Reservoir",
+    "destination": "Highland Park, New York",
+    "state": "New York",
+    "county": "Brooklyn",
+    "tier": "town-page",
+    "intro": "The neighborhood takes its name from the park, and the park was built around a reservoir. The City of Brooklyn bought the land surrounding the Ridgewood Reservoir in 1891, and Highland Park was established on it in 1901. The site was first called Ridgewood Park, then renamed for the higher terrain near the reservoir, and the Brooklyn Department of Parks improved it between 1901 and 1905 with structures, pathways and gardens. It grew twice more, through the purchase of the Schenck estate in 1905 and land acquired from the Department of Water in 1906; an aquatic garden was added in 1907 and a children's farm garden in 1915. The park straddles the Brooklyn-Queens border, bordering Cypress Hills to the south and abutting Glendale and Ridgewood, Queens, to the north.",
+    "sections": [
+      {
+        "heading": "The reservoir at the center",
+        "body": "The Ridgewood Reservoir was built between 1856 and 1858 to hold drinking water, and was formally decommissioned and drained in 1989. It has been left as a wildlife area rather than rebuilt, and in 2018 it was designated a Class I freshwater wetland. A $6.92 million renovation completed in October 2013 added accessible, bicycle-friendly pathways, new fencing, lighting and plantings around it while preserving the wildlife habitat, and the perimeter trail connects to the Brooklyn-Queens Greenway.\n\nThe park around it covers 141.28 acres and holds football and baseball fields, tennis courts and seasonal ice skating. Its western section was renamed the Vito P. Battista Playground in 1991. The \"Dawn of Glory\" World War I monument, a bronze by the sculptor Pietro Montana, also stands in the park."
+      },
+      {
+        "heading": "Getting there",
+        "body": "No subway station is documented inside Highland Park itself, and no bus route has been confirmed at the park's own entrances on Force Tube Avenue, Highland Boulevard and Vermont Place.\n\nThe closest station on the elevated BMT Jamaica Line is Cypress Hills, served by the J, which sources place in the Cypress Hills neighborhood of northeastern Brooklyn; it is the nearest Jamaica Line stop to the park's southern Force Tube Avenue entrance. Further east, 75th Street–Elderts Lane lies largely within Woodhaven, Queens, with a small portion in Cypress Hills, Brooklyn; the J calls there at all times except peak-direction rush hours, when the Z substitutes."
+      }
+    ],
+    "faq": [
+      {
+        "question": "How do I get to Highland Park?",
+        "answer": "On the elevated BMT Jamaica Line. The J stops at Cypress Hills station, in the Cypress Hills neighborhood, which is the nearest stop to the park's southern entrance on Force Tube Avenue. The 75th Street–Elderts Lane station further east is largely in Woodhaven, Queens, with a small portion in Cypress Hills, and is served by the J, with the Z substituting during peak-direction rush hours."
+      },
+      {
+        "question": "What is the Ridgewood Reservoir?",
+        "answer": "A drinking-water reservoir built between 1856 and 1858 at what is now the center of Highland Park, decommissioned and drained in 1989 and left as a wildlife area. It was designated a Class I freshwater wetland in 2018, and a perimeter path rebuilt in a $6.92 million renovation completed in October 2013 connects to the Brooklyn-Queens Greenway."
+      },
+      {
+        "question": "Is Highland Park in Brooklyn or Queens?",
+        "answer": "Both. The park straddles the Brooklyn-Queens border, bordering Cypress Hills, in Brooklyn Community District 5, on its south side and abutting Glendale and Ridgewood, Queens, on its north. The Brooklyn-side entrances are off Force Tube Avenue, Highland Boulevard and Vermont Place."
+      }
+    ],
+    "photos": [
+      {
+        "src": "/photos/ny/brooklyn/highland-park/highland-park-entrance-highland-park.jpg",
+        "thumb": "/photos/ny/brooklyn/highland-park/highland-park-entrance-highland-park_thumb.jpg",
+        "title": "Highland Park sign",
+        "description": "A green and gold NYC Parks sign reading Highland Park is mounted on a chain-link fence beside woodland.",
+        "author": "Amyarmi",
+        "license": "CC BY-SA 4.0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:HighlandparkBrooklyn.jpg"
+      }
+    ]
+  },
+  "places": [
+    {
+      "slug": "highland-park-brooklyn",
+      "name": "Highland Park",
+      "kind": "park",
+      "town": "Highland Park",
+      "state": "New York",
+      "county": "Brooklyn",
+      "address": "Spans the Brooklyn-Queens border along Jamaica Avenue, Force Tube Avenue, Highland Boulevard and Vermont Place, Brooklyn, NY",
+      "official_url": "https://www.nycgovparks.org/parks/highland-park",
+      "summary": "A 141.28-acre NYC Parks property established in 1901 around the Ridgewood Reservoir, with football and baseball fields, tennis courts, seasonal ice skating, the Vito P. Battista Playground and Pietro Montana's \"Dawn of Glory\" World War I monument.",
+      "history": "The City of Brooklyn bought the reservoir land in 1891 and the park was established in 1901, first under the name Ridgewood Park. The Brooklyn Department of Parks improved it between 1901 and 1905, and it was enlarged by the purchase of the Schenck estate in 1905 and by land from the Department of Water in 1906. An aquatic garden followed in 1907 and a children's farm garden in 1915.",
+      "status": "open",
+      "photos": [
+        {
+          "src": "/photos/ny/brooklyn/highland-park/highland-park-entrance-highland-park.jpg",
+          "thumb": "/photos/ny/brooklyn/highland-park/highland-park-entrance-highland-park_thumb.jpg",
+          "title": "Highland Park sign",
+          "description": "A green and gold NYC Parks sign reading Highland Park is mounted on a chain-link fence beside woodland.",
+          "author": "Amyarmi",
+          "license": "CC BY-SA 4.0",
+          "source_url": "https://commons.wikimedia.org/wiki/File:HighlandparkBrooklyn.jpg"
+        }
+      ]
+    },
+    {
+      "slug": "ridgewood-reservoir",
+      "name": "Ridgewood Reservoir",
+      "kind": "attraction",
+      "town": "Highland Park",
+      "state": "New York",
+      "county": "Brooklyn",
+      "address": "Within Highland Park, near Force Tube Avenue, on the Brooklyn-Queens border, Brooklyn, NY",
+      "summary": "A drinking-water reservoir built between 1856 and 1858, decommissioned and drained in 1989 and preserved since as a wildlife area. It was designated a Class I freshwater wetland in 2018, and its perimeter walking and cycling path connects to the Brooklyn-Queens Greenway.",
+      "history": "A $6.92 million renovation completed in October 2013 added accessible, bicycle-friendly pathways, new fencing, lighting and plantings around the basins while preserving them as habitat. The reservoir sits between the Jackie Robinson Parkway to the north, Highland Boulevard to the south, Vermont Place to the west and Cypress Hills National Cemetery to the east.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "vito-p-battista-playground",
+      "name": "Vito P. Battista Playground",
+      "kind": "park",
+      "town": "Highland Park",
+      "state": "New York",
+      "county": "Brooklyn",
+      "address": "Western section of Highland Park, Brooklyn, NY",
+      "summary": "The playground occupying the western section of Highland Park, renamed in 1991.",
+      "status": "open",
+      "photos": []
+    }
+  ],
+  "entries": [
+    {
+      "kind": "walk",
+      "name": "Highland Park",
+      "place_slug": "highland-park-brooklyn",
+      "note": "141 acres of ballfields, tennis courts and paths established in 1901 on the ridge above the old reservoir."
+    },
+    {
+      "kind": "walk",
+      "name": "Ridgewood Reservoir",
+      "place_slug": "ridgewood-reservoir",
+      "note": "Drained in 1989 and left to grow wild, with a perimeter path rebuilt in 2013 that joins the Brooklyn-Queens Greenway."
+    },
+    {
+      "kind": "walk",
+      "name": "Vito P. Battista Playground",
+      "place_slug": "vito-p-battista-playground",
+      "note": "The park's western section, renamed in 1991."
+    }
+  ],
+  "links": [
+    {
+      "target": "guide:east-new-york-brooklyn-guide",
+      "kind": "same-region",
+      "note": "Both are among the seven neighborhoods that make up Brooklyn Community District 5."
+    },
+    {
+      "target": "guide:ocean-hill-brooklyn-guide",
+      "kind": "same-region",
+      "note": null
+    },
+    {
+      "target": "guide:brownsville-brooklyn-guide",
+      "kind": "same-region",
+      "note": null
+    }
+  ]
+}

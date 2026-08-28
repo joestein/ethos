@@ -1,0 +1,148 @@
+{
+  "guide": {
+    "slug": "mill-basin-brooklyn-guide",
+    "title": "Mill Basin, Brooklyn: The Island That Became a Peninsula",
+    "destination": "Mill Basin, New York",
+    "state": "New York",
+    "county": "Brooklyn",
+    "tier": "town-page",
+    "intro": "The Lenape called this ground Equendito, or Broken Lands, and Canarsie leaders signed agreements between 1636 and 1667 ceding the area, including what became Mill Island, to Dutch settlers. The neighborhood's name comes from a tide mill built on that island; sources put its construction somewhere between 1660 and 1675, and before Mill Island came into use as a name in the late nineteenth century, settlers simply called the place the mill. Jans Martense Schenck acquired the land in 1675 and built a house there believed to be among the oldest in New York City. It no longer stands here: the house was dismantled in 1952 and is preserved as a period room inside the Brooklyn Museum. The island itself was connected to the Brooklyn mainland by 1926.",
+    "sections": [
+      {
+        "heading": "From shipping basin to bungalows",
+        "body": "Industry came before housing. Robert Crooke's lead-smelting plant opened on the basin in 1890 and passed to the National Lead Company, and the city set about turning the inlet into a working port. Dredging of the Jamaica Bay ship channel started in 1912 and was substantially finished in 1913, stalled in lawsuits, and resumed in 1923, with later phases widening and deepening it. Dry docks stood on Mill Island by 1919 and more dock construction began in 1927. The rail connection that would have made the port viable was never built, and the port never grew into what was planned.\n\nThe Belt Parkway, driven through the neighborhood in the 1930s and opened in 1940, cut off some of the marsh and industrial waterfront and set up a postwar building boom instead: more than 100 brick bungalows went up in the late 1940s and early 1950s, and by 1956 builders had announced 1,500 new houses. Many of the streets were private developer roads until the city took them over in 1964.\n\nThe population was predominantly Italian American from the 1950s through the 1980s and has since taken in large Russian and Israeli communities, reflected in roughly ten synagogues in the neighborhood today, several of them converted from houses. The Mill Basin Bridge, a drawbridge when it was built in 1940, was reconstructed between 2015 and 2019 into two parallel fixed spans with 60 feet of clearance, ending the openings for good."
+      },
+      {
+        "heading": "Getting there",
+        "body": "There is no subway station in Mill Basin, and the bus is the connection.\n\nThe B100 runs directly between the Kings Highway subway station, served by the B and Q on the border of Midwood and Homecrest at Kings Highway and East 16th Street, and Mill Basin, terminating at National Drive and Mill Avenue for drop-off and 56th Drive and Strickland Avenue for pick-up. The B41 comes the length of Flatbush Avenue from Cadman Plaza West in Downtown Brooklyn and splits south of Avenue P, one branch serving Kings Plaza at the edge of Mill Basin and the other Bergen Beach. The BM1 express runs between 56th Drive and Strickland Avenue and Manhattan, at East 57th Street and Second Avenue and at State Street and Battery Place.\n\nThe other subway station within reach is Flatbush Avenue–Brooklyn College, served by the 2 and 5 at Flatbush and Nostrand Avenues in Flatbush, the corner known as The Junction."
+      }
+    ],
+    "faq": [
+      {
+        "question": "How do I get to Mill Basin?",
+        "answer": "By bus. No subway station is in Mill Basin; the B100 runs directly from the Kings Highway station on the B and Q into the neighborhood, the B41 comes down Flatbush Avenue from Downtown Brooklyn with a branch to Kings Plaza, and the BM1 express connects 56th Drive and Strickland Avenue with Midtown and Downtown Manhattan."
+      },
+      {
+        "question": "Why is it called Mill Basin?",
+        "answer": "For a tide mill built on what was then Mill Island, constructed at some point between 1660 and 1675 according to the sources. Settlers called the place simply the mill before the name Mill Island came into use in the late nineteenth century."
+      },
+      {
+        "question": "Can I see the Jans Martense Schenck house?",
+        "answer": "Not in Mill Basin. Schenck acquired the land in 1675 and built a house believed to be among the oldest in New York City, but it was dismantled in 1952 and is preserved as a period-room exhibit inside the Brooklyn Museum. Nothing stands on the original site."
+      }
+    ],
+    "photos": []
+  },
+  "places": [
+    {
+      "slug": "kings-plaza",
+      "name": "Kings Plaza",
+      "kind": "attraction",
+      "town": "Mill Basin",
+      "state": "New York",
+      "county": "Brooklyn",
+      "address": "5100 Kings Plaza, Brooklyn, NY 11234",
+      "summary": "An enclosed shopping mall of roughly 150 stores and about 1.1 million square feet at Flatbush Avenue and Avenue U, which opened on September 11, 1970. Anchors include Target, Burlington, Primark and Macy's. No working official website could be confirmed; the mall's former domain now resolves to a domain-resale page.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "lindower-park",
+      "name": "Lindower Park",
+      "kind": "park",
+      "town": "Mill Basin",
+      "state": "New York",
+      "county": "Brooklyn",
+      "address": "Mill Avenue and Strickland Avenue, Brooklyn, NY",
+      "summary": "A 6.7-acre NYC Parks property named for the lawyer and community activist Alex Lindower, with baseball fields, basketball and handball courts and a children's playground.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "james-marshall-power-playground",
+      "name": "James Marshall Power Playground",
+      "kind": "park",
+      "town": "Mill Basin",
+      "state": "New York",
+      "county": "Brooklyn",
+      "address": "Avenue N and Utica Avenue, Brooklyn, NY",
+      "summary": "An NYC Parks playground in the Old Mill Basin section, at Avenue N and Utica Avenue.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "monsignor-crawford-athletic-field",
+      "name": "Monsignor Crawford Athletic Field",
+      "kind": "park",
+      "town": "Mill Basin",
+      "state": "New York",
+      "county": "Brooklyn",
+      "address": "Avenue U between East 58th and East 60th Streets, Brooklyn, NY",
+      "summary": "An NYC Parks athletic field named for the first pastor of the nearby Mary Queen of Heaven Church.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "mill-basin-kosher-delicatessen",
+      "name": "Mill Basin Kosher Delicatessen",
+      "kind": "cafe",
+      "town": "Mill Basin",
+      "state": "New York",
+      "county": "Brooklyn",
+      "address": "5823 Avenue T, Brooklyn, NY 11234",
+      "official_url": "https://www.millbasindeli.com/",
+      "summary": "A kosher deli operating since 1974, known for overstuffed pastrami sandwiches and for the fine art hung on its walls beside the deli tables; the deli's own site names Chagall and Erte among the artists.",
+      "status": "open",
+      "photos": []
+    }
+  ],
+  "entries": [
+    {
+      "kind": "food",
+      "name": "Mill Basin Kosher Delicatessen",
+      "place_slug": "mill-basin-kosher-delicatessen",
+      "note": "Pastrami sandwiches under framed art on Avenue T, in business since 1974."
+    },
+    {
+      "kind": "sight",
+      "name": "Kings Plaza",
+      "place_slug": "kings-plaza",
+      "note": "The enclosed mall at Flatbush Avenue and Avenue U, open since September 11, 1970."
+    },
+    {
+      "kind": "walk",
+      "name": "Lindower Park",
+      "place_slug": "lindower-park",
+      "note": "Nearly seven acres of ballfields and courts at Mill Avenue and Strickland Avenue."
+    },
+    {
+      "kind": "walk",
+      "name": "James Marshall Power Playground",
+      "place_slug": "james-marshall-power-playground",
+      "note": "A playground in the Old Mill Basin section, at Avenue N and Utica Avenue."
+    },
+    {
+      "kind": "walk",
+      "name": "Monsignor Crawford Athletic Field",
+      "place_slug": "monsignor-crawford-athletic-field",
+      "note": "An athletic field on Avenue U named for the first pastor of Mary Queen of Heaven Church."
+    }
+  ],
+  "links": [
+    {
+      "target": "guide:canarsie-brooklyn-guide",
+      "kind": "same-region",
+      "note": "Both sit in Brooklyn Community District 18, which groups Mill Basin with Canarsie, Bergen Beach, Marine Park, Georgetown and southern Flatlands."
+    },
+    {
+      "target": "guide:bergen-beach-brooklyn-guide",
+      "kind": "same-region",
+      "note": "The B41's two southern branches end at Kings Plaza, on Mill Basin's edge, and in Bergen Beach."
+    },
+    {
+      "target": "guide:georgetown-brooklyn-guide",
+      "kind": "same-region",
+      "note": "Both sit in Brooklyn Community District 18, which groups Georgetown with Mill Basin, Canarsie, Bergen Beach, Marine Park and southern Flatlands."
+    }
+  ]
+}

@@ -1,0 +1,86 @@
+{
+  "guide": {
+    "slug": "starrett-city-brooklyn-guide",
+    "title": "Starrett City, Brooklyn: Towers in the Park on Jamaica Bay",
+    "destination": "Starrett City, New York",
+    "state": "New York",
+    "county": "Brooklyn",
+    "tier": "town-page",
+    "intro": "Starrett City stands on reclaimed marshland on the north shore of Jamaica Bay, on a peninsula between Fresh Creek and Hendrix Creek in Brooklyn's Community District 5. Two earlier schemes failed on the site: a California investment group bought land here in 1962 for a project called Park Shore Village that was never built, and the United Housing Foundation's cooperative Twin Pines Village, proposed in June 1967 for about 6,000 families, was abandoned in March 1971. Starrett City Associates took the site over that year, switched it from cooperative to rental, and resumed construction in 1972 to Herman Jessor's towers-in-the-park design: 46 buildings of 11 to 20 stories across eight residential sections. It was dedicated on October 13, 1974.",
+    "sections": [
+      {
+        "heading": "Quotas, power and prizefighters",
+        "body": "At 5,881 apartments, the complex has been described as the largest federally assisted rental housing property in the United States. It now occupies 140 acres, down from an original 153 after a 2009 subdivision, and its eight sections carry upstate names: Ardsley, Bethel, Croton, Delmar, Elmira, Freeport, Geneva and Hornell. Governor Malcolm Wilson and Mayor Abraham Beame dedicated it on October 13, 1974, and the first 300 families moved in that November.\n\nFrom the start the complex used a racial occupancy quota, initially about 70% white units to 30% minority, to maintain integration. The NAACP filed a class-action suit in 1979; the U.S. Department of Justice sued separately in 1984 under the Reagan administration; a federal judge ruled in 1987 that the quotas violated the Fair Housing Act, and the system ended in November 1988.\n\nThe property has its own power station. The Starrett City Cogeneration Facility, which opened in 1973, supplies electricity, heat, cooling and hot water to every resident, and it kept the complex self-sufficient through the July 1977 New York City blackout.\n\nAn on-site boxing program at the community and recreation center, which opened in 1978, produced a run of world champions: Zab Judah, Shannon Briggs, Dmitriy Salita, Luis Collazo and Will Rosinsky all trained there.\n\nFred Trump took a 20% ownership interest in 1973, part of which Donald Trump later inherited. The property was renamed Starrett at Spring Creek around 1989 and officially became Spring Creek Towers on September 25, 2002 during a $70 million renovation. A $905 million sale to the Brooksville Company and Rockpoint Group closed on May 8, 2018, and in 2021 Governor Andrew Cuomo announced affordability protections extended through 2069 alongside $140 million in planned renovations."
+      },
+      {
+        "heading": "Getting there",
+        "body": "Starrett City has no subway station of its own. The nearest are Canarsie–Rockaway Parkway and East 105th Street on the L, both of which the research places in Canarsie.\n\nBuses are the neighborhood's real connection. The B82, including its Select Bus Service, along with the B83, B6, B60 and B103, are recorded as serving Starrett City and Spring Creek Towers, and the BM2 and BM5 express routes run to Manhattan. Pennsylvania Avenue runs through the complex and carries two of the entrances to Shirley Chisholm State Park."
+      }
+    ],
+    "faq": [
+      {
+        "question": "How do I get to Starrett City?",
+        "answer": "By bus. There is no subway station in Starrett City; the closest are Canarsie–Rockaway Parkway and East 105th Street on the L, both in Canarsie. The B82 and B82 Select Bus Service, B83, B6, B60 and B103 serve the complex, and the BM2 and BM5 are express routes to Manhattan."
+      },
+      {
+        "question": "Why is Starrett City also called Spring Creek Towers?",
+        "answer": "The complex was named for its developer, the Starrett Corporation. It was renamed Starrett at Spring Creek around 1989 and officially became Spring Creek Towers on September 25, 2002, as part of a $70 million renovation program. Both names remain in use."
+      },
+      {
+        "question": "What is Shirley Chisholm State Park?",
+        "answer": "A New York State park built on top of the former Pennsylvania Avenue and Fountain Avenue landfills, which the city's sanitation department closed in 1983. It was developed for public use between 2017 and 2019 and named for the Brooklyn-born congresswoman. Its entrances are at 950 Fountain Avenue and 1750 Pennsylvania Avenue."
+      }
+    ],
+    "photos": [
+      {
+        "src": "/photos/ny/brooklyn/starrett-city/1530-pennsylvania-avenue-starrett-city.jpg",
+        "thumb": "/photos/ny/brooklyn/starrett-city/1530-pennsylvania-avenue-starrett-city_thumb.jpg",
+        "title": "1530 Pennsylvania Avenue",
+        "description": "A long brick apartment tower rises above a wide avenue and parked cars under a summer sky.",
+        "author": "Tdorante10",
+        "license": "CC BY-SA 4.0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Pennsylvania_Av_Hornell_Loop_td_(2018-08-15)_01_-_1530_Pennsylvania_Avenue.jpg"
+      }
+    ]
+  },
+  "places": [
+    {
+      "slug": "shirley-chisholm-state-park",
+      "name": "Shirley Chisholm State Park",
+      "kind": "park",
+      "town": "Starrett City",
+      "state": "New York",
+      "county": "Brooklyn",
+      "address": "950 Fountain Avenue and 1750 Pennsylvania Avenue, Brooklyn, NY 11239",
+      "official_url": "https://parks.ny.gov/parks/shirleychisholm",
+      "summary": "A New York State park built atop the former Pennsylvania Avenue and Fountain Avenue landfills, which NYC Sanitation closed in 1983, and developed for public use between 2017 and 2019. It is named for the Brooklyn-born congresswoman Shirley Chisholm. The state lists it as open year-round from 8:00 AM to dusk, with about 10 miles of biking and hiking trails, waterfront piers, picnic areas and a free bike-library program.",
+      "status": "open",
+      "photos": []
+    }
+  ],
+  "entries": [
+    {
+      "kind": "walk",
+      "name": "Shirley Chisholm State Park",
+      "place_slug": "shirley-chisholm-state-park",
+      "note": "Trails and waterfront piers on two capped landfills, opened in stages between 2017 and 2019, with entrances on Pennsylvania and Fountain Avenues."
+    }
+  ],
+  "links": [
+    {
+      "target": "guide:canarsie-brooklyn-guide",
+      "kind": "same-region",
+      "note": "The L's Canarsie–Rockaway Parkway and East 105th Street stations, the nearest to Starrett City, are in Canarsie."
+    },
+    {
+      "target": "guide:highland-park-brooklyn-guide",
+      "kind": "same-region",
+      "note": "Both are among the seven neighborhoods that make up Brooklyn Community District 5."
+    },
+    {
+      "target": "guide:brownsville-brooklyn-guide",
+      "kind": "same-region",
+      "note": null
+    }
+  ]
+}

@@ -1,0 +1,55 @@
+{
+  "guide": {
+    "slug": "ocean-hill-brooklyn-guide",
+    "title": "Ocean Hill, Brooklyn: A Hill With No Ocean",
+    "destination": "Ocean Hill, New York",
+    "state": "New York",
+    "county": "Brooklyn",
+    "tier": "town-page",
+    "intro": "Ocean Hill was subdivided from the larger Stuyvesant Heights community and established as a distinct area around 1890. The name is topographic rather than literal: there is no ocean here, only slightly hilly ground. From the early twentieth century into the 1960s it was predominantly an Italian enclave, before its population became majority African American and later increasingly Caribbean and Latino. By the late 1960s Ocean Hill together with Bedford-Stuyvesant proper formed one of the largest concentrations of African American residents in the United States, and the two are still commonly grouped together, though Brooklyn's neighborhood lines here are not fixed by any authority. At the 2020 census the neighborhood counted 37,952 residents, 18.8% more than in 2010.",
+    "sections": [
+      {
+        "heading": "The school crisis of 1968",
+        "body": "For one autumn, this small neighborhood was the center of American education politics. Ocean Hill-Brownsville was chosen for a Ford Foundation-funded experiment in community control of public schools, run by a local governing board under superintendent Rhody McCoy.\n\nOn May 9, 1968, the governing board dismissed 19 teachers and administrators without the notice the union contract required. The confrontation that followed set the community-control movement against the United Federation of Teachers under Albert Shanker, and it went citywide. A teachers' strike began on September 9, 1968; roughly 93% of the city's 58,000 teachers walked out, closing schools for more than a million students across a series of strikes totalling about 36 days, and it ended on November 17, 1968 with state intervention.\n\nThe dismissed teachers were reinstated. Ocean Hill-Brownsville lost the direct community control its schools had briefly been granted, and the conflict left a lasting strain between Black and Jewish communities across the city.\n\nHarder years followed. During the July 1977 blackout a fire set in a looted warehouse spread to neighboring structures and severely damaged tenement buildings in the Ocean Hill-Brownsville area, part of the arson and looting that hit dozens of Brooklyn blocks that night. Prospect Plaza Houses, built here in 1974 between St. Marks and Sterling Place and Howard and Saratoga Avenues, is cited as the first NYCHA development to be fully demolished: it came down between 2005 and 2014 and was rebuilt as mixed-income housing completed in 2017."
+      },
+      {
+        "heading": "Getting there",
+        "body": "The IND Fulton Street Line runs along the neighborhood's northern edge, with the C at all times except late nights and the A late nights. Ralph Avenue, at Ralph Avenue and Fulton Street, and Rockaway Avenue, at Rockaway Avenue and Fulton Street, both sit on the border of Bedford-Stuyvesant and Ocean Hill.\n\nOcean Hill also has a commuter rail stop. The Long Island Rail Road's East New York station, on the Atlantic Branch at Atlantic Avenue and Havens Place, is described by its source as serving both the East New York and Ocean Hill neighborhoods.\n\nBroadway Junction, the big transfer hub east of here at Broadway, Fulton Street and Van Sinderen Avenue, sits at the border of Bedford-Stuyvesant, Bushwick and East New York. It carries the A, C, J, Z and L."
+      }
+    ],
+    "faq": [
+      {
+        "question": "How do I get to Ocean Hill?",
+        "answer": "The C, and the A late nights, stop at Ralph Avenue and at Rockaway Avenue on the IND Fulton Street Line, both on the border of Bedford-Stuyvesant and Ocean Hill. The Long Island Rail Road's East New York station, on the Atlantic Branch at Atlantic Avenue and Havens Place, is recorded as serving Ocean Hill as well as East New York."
+      },
+      {
+        "question": "Why is it called Ocean Hill?",
+        "answer": "For the terrain. The ground here is slightly hilly, and the name is topographic rather than literal; there is no ocean nearby. The area was subdivided from Stuyvesant Heights and established as a distinct neighborhood around 1890."
+      },
+      {
+        "question": "What was the Ocean Hill-Brownsville school crisis?",
+        "answer": "A 1968 confrontation over community control of public schools. A local governing board running a Ford Foundation-funded experiment dismissed 19 teachers and administrators on May 9, 1968 without the notice the union contract required. The citywide teachers' strike that followed began on September 9, closed schools for more than a million students over about 36 days, and ended on November 17, 1968 with state intervention. The teachers were reinstated and the experiment ended."
+      }
+    ],
+    "photos": []
+  },
+  "places": [],
+  "entries": [],
+  "links": [
+    {
+      "target": "guide:east-new-york-brooklyn-guide",
+      "kind": "same-region",
+      "note": "The Long Island Rail Road's East New York station is recorded as serving both neighborhoods."
+    },
+    {
+      "target": "guide:new-lots-brooklyn-guide",
+      "kind": "same-region",
+      "note": null
+    },
+    {
+      "target": "guide:cypress-hills-brooklyn-guide",
+      "kind": "same-region",
+      "note": null
+    }
+  ]
+}

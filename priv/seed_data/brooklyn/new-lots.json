@@ -1,0 +1,132 @@
+{
+  "guide": {
+    "slug": "new-lots-brooklyn-guide",
+    "title": "New Lots, Brooklyn: A Church Raised Without Nails",
+    "destination": "New Lots, New York",
+    "state": "New York",
+    "county": "Brooklyn",
+    "tier": "town-page",
+    "intro": "The New Lots were laid out by Dutch colonists in the seventeenth and eighteenth centuries as an eastward extension of the Town of Flatbush, one of eastern Brooklyn's original towns alongside Bushwick. New Lots seceded from Flatbush in 1852, ran its own town hall at 109-111 Bradford Street, was annexed into the City of Brooklyn in 1886 as the 26th Ward, and joined New York City at the 1898 consolidation. In 1835 the Connecticut merchant John Pitkin had bought land in the northern part of the town and named his development East New York; that name spread across the old township over the twentieth century, while New Lots persists as the residential neighborhood centered on New Lots Avenue. No authoritative source fixes the line between the two.",
+    "sections": [
+      {
+        "heading": "The church on New Lots Avenue",
+        "body": "Local farming families built the New Lots Reformed Church at 630 New Lots Avenue themselves. They seasoned oak timber felled by a hurricane for nearly two years, then raised the wood-frame building in a communal building bee in May 1823 at a cost of about $35. It is assembled entirely with notched, pegged timber joinery rather than nails.\n\nThe adjoining two-acre cemetery holds an older section dating to the seventeenth century, with Revolutionary War soldiers and enslaved people among the burials; the present section was established in 1841. The church was designated a New York City Landmark on July 19, 1966 and listed on the National Register of Historic Places on May 19, 1983.\n\nThe building has not been a museum piece. In 1990 a large truss beam cracked and the church was declared unusable; the congregation raised the repair money and resumed services in 1991. It remains an active house of worship under the African Methodist Episcopal Zion denomination, operating as New Lots Community Church.\n\nFurther along New Lots Avenue, African Burial Ground Square was officially designated in 2013 after human remains were discovered on the block bounded by New Lots and Livonia Avenues and Barbey and Schenck Streets. It marks a burial ground associated with the neighborhood's early Black and enslaved population, and shares its block with the New Lots branch of the Brooklyn Public Library."
+      },
+      {
+        "heading": "Getting there",
+        "body": "Both nearby subway stations are named for New Lots Avenue, and neither is placed in New Lots by the sources consulted.\n\nNew Lots Avenue on the IRT New Lots Line is the eastern terminal of the line, served by the 3 at all times except late nights, the 4 late nights, and the 2, 4 and 5 at limited rush hours; Wikipedia's own neighborhood tag for it reads East New York. It was built elevated because the water table made a tunnel prohibitively expensive, opening for shuttle service on October 16, 1922, with through service to Manhattan from October 31, 1924.\n\nNew Lots Avenue on the BMT Canarsie Line, at Van Sinderen Avenue, carries the L at all times and is recorded as sitting on the border of Brownsville and East New York. It opened on July 28, 1906 under the name New Lots Road.\n\nBecause no station is documented inside the neighborhood itself, the bus matters here: the B15 runs along New Lots Avenue and Linden Boulevard, the two streets that frame the neighborhood core, and currently ends at the Lefferts Boulevard AirTrain station in Queens, where riders transfer to AirTrain JFK.\n\nThe nearest Long Island Rail Road station is East New York on the Atlantic Branch, at Atlantic Avenue and Havens Place, described by its source as serving East New York and Ocean Hill rather than New Lots."
+      }
+    ],
+    "faq": [
+      {
+        "question": "How do I get to New Lots?",
+        "answer": "The 3, and at some hours the 2, 4 and 5, terminate at New Lots Avenue on the IRT New Lots Line, and the L stops at the separate New Lots Avenue station on the BMT Canarsie Line at Van Sinderen Avenue. Sources place the first in East New York and the second on the Brownsville-East New York border, so the B15 bus along New Lots Avenue and Linden Boulevard is the route that runs through the neighborhood core."
+      },
+      {
+        "question": "What is the New Lots Reformed Church?",
+        "answer": "A wood-frame church at 630 New Lots Avenue, raised by local farming families in a communal building bee in May 1823 using notched and pegged timber joinery rather than nails. It was designated a New York City Landmark in 1966 and listed on the National Register of Historic Places in 1983, and is still an active AME Zion congregation known as New Lots Community Church."
+      },
+      {
+        "question": "What is African Burial Ground Square?",
+        "answer": "A memorial square designated in 2013 after human remains were discovered on the block bounded by New Lots and Livonia Avenues and Barbey and Schenck Streets. It marks a burial ground associated with the neighborhood's early Black and enslaved population and shares its block with the New Lots branch of the Brooklyn Public Library."
+      }
+    ],
+    "photos": [
+      {
+        "src": "/photos/ny/brooklyn/new-lots/new-lots-community-church-new-lots.jpg",
+        "thumb": "/photos/ny/brooklyn/new-lots/new-lots-community-church-new-lots_thumb.jpg",
+        "title": "New Lots Community Church and cemetery",
+        "description": "A white wood-frame church with a steeple stands behind rows of weathered headstones and an obelisk.",
+        "author": "Jim.henderson",
+        "license": "Public domain",
+        "source_url": "https://commons.wikimedia.org/wiki/File:New_Lots_Community_Church_jeh.jpg"
+      }
+    ]
+  },
+  "places": [
+    {
+      "slug": "new-lots-reformed-church",
+      "name": "New Lots Reformed Church and Cemetery",
+      "kind": "historic-site",
+      "town": "New Lots",
+      "state": "New York",
+      "county": "Brooklyn",
+      "address": "630 New Lots Avenue, Brooklyn, NY 11207",
+      "summary": "A wood-frame Dutch Reformed church raised by local farming families in 1823, one of the few surviving wood-framed early Brooklyn churches, with an adjoining two-acre cemetery holding seventeenth-century graves, Revolutionary War soldiers and enslaved people. A New York City Landmark since 1966 and on the National Register of Historic Places since 1983, it remains an active AME Zion congregation known as New Lots Community Church. No source consulted specified public visiting hours beyond services.",
+      "history": "The builders seasoned oak felled by a hurricane for nearly two years and raised the frame in a communal building bee in May 1823 for about $35, using notched and pegged joinery rather than nails. The present cemetery section was established in 1841. Designated a New York City Landmark on July 19, 1966 and listed on the National Register on May 19, 1983. A cracked truss beam closed the building in 1990; the congregation funded repairs and resumed services in 1991.",
+      "status": "open",
+      "photos": [
+        {
+          "src": "/photos/ny/brooklyn/new-lots/new-lots-community-church-new-lots.jpg",
+          "thumb": "/photos/ny/brooklyn/new-lots/new-lots-community-church-new-lots_thumb.jpg",
+          "title": "New Lots Community Church and cemetery",
+          "description": "A white wood-frame church with a steeple stands behind rows of weathered headstones and an obelisk.",
+          "author": "Jim.henderson",
+          "license": "Public domain",
+          "source_url": "https://commons.wikimedia.org/wiki/File:New_Lots_Community_Church_jeh.jpg"
+        }
+      ]
+    },
+    {
+      "slug": "african-burial-ground-square",
+      "name": "African Burial Ground Square",
+      "kind": "historic-site",
+      "town": "New Lots",
+      "state": "New York",
+      "county": "Brooklyn",
+      "address": "New Lots Avenue between Barbey and Schenck Streets, Brooklyn, NY",
+      "summary": "A memorial square designated in 2013 after human remains were discovered on the block bounded by New Lots and Livonia Avenues and Barbey and Schenck Streets. It marks a burial ground associated with the neighborhood's early Black and enslaved population, and shares its block with the New Lots branch of the Brooklyn Public Library.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "boulevard-houses",
+      "name": "Boulevard Houses",
+      "kind": "historic-site",
+      "town": "New Lots",
+      "state": "New York",
+      "county": "Brooklyn",
+      "address": "Bounded roughly by Ashford Street, Wortman Avenue, Schenck Avenue and Stanley Avenue, Brooklyn, NY",
+      "summary": "A New York City Housing Authority development listed on the National Register of Historic Places as part of a multiple-property submission documenting historic NYCHA public housing. It is an occupied residential complex rather than a site with public tours or visitor access.",
+      "status": "open",
+      "photos": []
+    }
+  ],
+  "entries": [
+    {
+      "kind": "sight",
+      "name": "New Lots Reformed Church and Cemetery",
+      "place_slug": "new-lots-reformed-church",
+      "note": "Raised in a building bee in May 1823 with pegged joinery and no nails; still an active AME Zion congregation."
+    },
+    {
+      "kind": "sight",
+      "name": "African Burial Ground Square",
+      "place_slug": "african-burial-ground-square",
+      "note": "Designated in 2013 on the block where human remains were found, beside the New Lots branch library."
+    },
+    {
+      "kind": "sight",
+      "name": "Boulevard Houses",
+      "place_slug": "boulevard-houses",
+      "note": "An occupied NYCHA development on the National Register as part of a survey of historic public housing."
+    }
+  ],
+  "links": [
+    {
+      "target": "guide:highland-park-brooklyn-guide",
+      "kind": "same-region",
+      "note": "Both are among the seven neighborhoods that make up Brooklyn Community District 5."
+    },
+    {
+      "target": "guide:starrett-city-brooklyn-guide",
+      "kind": "same-region",
+      "note": "Both are among the seven neighborhoods that make up Brooklyn Community District 5."
+    },
+    {
+      "target": "guide:brownsville-brooklyn-guide",
+      "kind": "same-region",
+      "note": "The L's New Lots Avenue station, named for the avenue this neighborhood centers on, sits on the border of Brownsville and East New York."
+    }
+  ]
+}

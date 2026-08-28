@@ -1,0 +1,70 @@
+{
+  "guide": {
+    "slug": "city-line-brooklyn-guide",
+    "title": "City Line, Brooklyn: A Border That No Longer Exists",
+    "destination": "City Line, New York",
+    "state": "New York",
+    "county": "Brooklyn",
+    "tier": "town-page",
+    "intro": "City Line is named for a boundary that stopped mattering in 1898. The blocks here sat beside the former City of Brooklyn's border with Queens County, and the name outlived the consolidation that erased it. It is a sub-section of East New York and one of the seven neighborhoods that make up Brooklyn Community District 5, alongside East New York, Cypress Hills, Highland Park, New Lots, Spring Creek and Starrett City. Italians, Germans and Irish residents populated the area first. It is now counted among the Bangladeshi enclaves of New York City, alongside Kensington in Brooklyn, Ozone Park in Queens and Parkchester in the Bronx, and is home to immigrants from Bangladesh, the Dominican Republic and Guyana as well as African American, Hispanic and South Asian residents.",
+    "sections": [
+      {
+        "heading": "Liberty Avenue",
+        "body": "City Line's main commercial district runs along Liberty Avenue, lined with restaurants, shops and food markets. It is the reason the neighborhood registers at all on a map of eating and shopping in eastern Brooklyn, and it is the spine of one of the city's Bangladeshi enclaves.\n\nThe research behind this page could not verify a single named restaurant, cafe or bakery with a confirmed City Line address, so none are listed here. That is a gap in the sourcing rather than a verdict on the corridor: the neighborhood's commercial life is documented, its individual businesses are not."
+      },
+      {
+        "heading": "Getting there",
+        "body": "The IND Fulton Street Line is the neighborhood's subway. Grant Avenue, served by the A and C, straddles Cypress Hills and City Line just north of Pitkin Avenue near the Brooklyn-Queens border.\n\nThe next stations west on the same line sit in East New York: Euclid Avenue, at Euclid and Pitkin Avenues, is the transfer point for the Lefferts Boulevard branch, followed by Shepherd Avenue, Van Siclen Avenue and Liberty Avenue.\n\nGrant Avenue opened late. A Pitkin Avenue extension begun in 1940 was stalled for years by wartime material shortages; the connecting Euclid Avenue segment opened in November 1948, six years behind its original 1942 target, and Grant Avenue itself did not open until April 29, 1956.\n\nThe nearest Long Island Rail Road station is East New York, on the Atlantic Branch at Atlantic Avenue and Havens Place, which sources place in East New York and Ocean Hill rather than in City Line."
+      }
+    ],
+    "faq": [
+      {
+        "question": "How do I get to City Line?",
+        "answer": "Take the A or C on the IND Fulton Street Line to Grant Avenue, which straddles Cypress Hills and City Line just north of Pitkin Avenue near the Brooklyn-Queens border. Euclid Avenue, the next station west and the transfer point for the Lefferts Boulevard branch, is in East New York."
+      },
+      {
+        "question": "Why is it called City Line?",
+        "answer": "The name refers to the former City of Brooklyn's border with Queens County, which ran near here before Brooklyn and parts of Queens County were consolidated into the City of New York in 1898."
+      },
+      {
+        "question": "What is there to see in City Line?",
+        "answer": "City Line is a small residential sub-section of East New York, and no park, museum, landmark or National Register listing could be sourced inside its blocks. Its commercial life is on Liberty Avenue. For parks and cemeteries, neighboring Cypress Hills, and Highland Park a little further on, are the places to look."
+      }
+    ],
+    "photos": [
+      {
+        "src": "/photos/ny/brooklyn/city-line/st-sylvester-church-city-line.jpg",
+        "thumb": "/photos/ny/brooklyn/city-line/st-sylvester-church-city-line_thumb.jpg",
+        "title": "Sign for St. Sylvester Church",
+        "description": "A blue and gold sign for the Roman Catholic Church of Saint Sylvester stands on a lawn among bare trees.",
+        "author": "Youngking11",
+        "license": "CC BY-SA 3.0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:St_Sylvester_Church_in_City_Line,Brooklyn.jpg"
+      }
+    ]
+  },
+  "places": [],
+  "entries": [],
+  "links": [
+    {
+      "target": "guide:east-new-york-brooklyn-guide",
+      "kind": "shared-history",
+      "note": "City Line is a sub-section of East New York, named for the former City of Brooklyn's border with Queens County."
+    },
+    {
+      "target": "guide:cypress-hills-brooklyn-guide",
+      "kind": "nearby",
+      "note": "City Line borders Cypress Hills to its north and southwest."
+    },
+    {
+      "target": "guide:new-lots-brooklyn-guide",
+      "kind": "same-region",
+      "note": "Both are among the seven neighborhoods that make up Brooklyn Community District 5."
+    },
+    {
+      "target": "guide:highland-park-brooklyn-guide",
+      "kind": "same-region",
+      "note": "Both are among the seven neighborhoods that make up Brooklyn Community District 5."
+    }
+  ]
+}

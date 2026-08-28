@@ -1,0 +1,174 @@
+{
+  "guide": {
+    "slug": "flatlands-brooklyn-guide",
+    "title": "Flatlands, Brooklyn: Nieuw Amersfoort's Old Town Center",
+    "destination": "Flatlands, New York",
+    "state": "New York",
+    "county": "Brooklyn",
+    "tier": "guide",
+    "intro": "Flatlands was Nieuw Amersfoort first, named for the Dutch city of Amersfoort and established as a farming community in 1636, when Wolfert Gerritse Van Couwenhoven and Andries Hudde bought 15,000 acres centered on what is now the corner of Kings Highway and Flatbush Avenue. Peter Stuyvesant granted the town the right to local rule in 1661, making it one of the original Dutch towns of Kings County, and it governed itself until the City of Brooklyn annexed it in 1896. The old center at Kings Highway and East 40th Street still holds the Flatlands Dutch Reformed Church, whose congregation was organized in 1654 and whose burying ground has graves going back to 1660. What surrounds it now is a low-rise residential neighborhood of small parks and playgrounds rather than farms.",
+    "sections": [
+      {
+        "heading": "The old town of Nieuw Amersfoort",
+        "body": "The 1636 purchase by Wolfert Gerritse Van Couwenhoven and Andries Hudde covered 15,000 acres, and the settlement they founded took the name of Amersfoort in the Netherlands. Local rule came in 1661 from Peter Stuyvesant, and Nieuw Amersfoort became one of the original Dutch towns of Kings County. It kept that independence for more than two centuries, until annexation by the City of Brooklyn in 1896.\n\nThe Flatlands Dutch Reformed Church marks the old center. The congregation was organized in 1654; the Greek Revival building that stands today dates from 1848, an administration building was added in 1904 and enlarged in the 1920s, and the cemetery holds roughly 1,500 burials with the oldest dating to 1660. The 2.5-acre complex was designated a New York City Landmark on July 19, 1966 and listed on the National Register of Historic Places on August 30, 1979.\n\nTwo Dutch farmhouses from the same world survive nearby but are not open to the public. The Hendrick I. Lott House at 1940 East 36th Street began as a farmhouse of about 1720 built by Johannes Lott and was enlarged into a Federal-style house by Hendrick I. Lott in 1800, with the older structure kept as a kitchen wing; the family farmed roughly 200 acres, freed most of the people they had enslaved by 1805, and the house is believed to have been a stop on the Underground Railroad. Descendants farmed the land until 1923, the last resident left in 1989, and the New York City Department of Parks and Recreation acquired the property in 2001. The Wyckoff-Bennett Homestead at 1669 East 22nd Street, a Dutch Colonial farmhouse of about 1766 built by Hendrick H. Wyckoff, is a National Historic Landmark and a private residence. Sources differ on whether either house falls in Flatlands or in a neighboring neighborhood."
+      },
+      {
+        "heading": "Getting there",
+        "body": "No subway station sits inside Flatlands, and the buses matter more here than the trains.\n\nThe closest station is Flatbush Avenue–Brooklyn College on the IRT Nostrand Avenue Line, served by the 2 and 5, at Flatbush and Nostrand Avenues in the area locally called The Junction, which sources describe as bordering Flatbush, East Flatbush, Flatlands and Midwood. The other nearby stations are further off: Canarsie–Rockaway Parkway on the L, in Canarsie; Kings Highway on the B and Q, on the border of Midwood and Homecrest; and Avenue U on the Q, in Homecrest and Sheepshead Bay.\n\nTwo bus routes run through the neighborhood itself. The B6 runs local and limited-stop service along Avenue J, Avenue H and Flatlands Avenue, connecting Midwood to the Rockaway Parkway station in Canarsie, with a branch continuing toward East New York. The Q35 runs south on Flatbush Avenue from the Flatbush Avenue–Brooklyn College station through Flatlands and Marine Park, past Kings Plaza and Floyd Bennett Field and over the Marine Parkway–Gil Hodges Memorial Bridge to Rockaway Park in Queens.\n\nThere is no Long Island Rail Road station in Flatlands and no NYC Ferry landing; it is an inland neighborhood."
+      }
+    ],
+    "faq": [
+      {
+        "question": "How do I get to Flatlands?",
+        "answer": "There is no subway station in Flatlands. The nearest is Flatbush Avenue–Brooklyn College on the 2 and 5, at The Junction, which sources describe as bordering Flatbush, East Flatbush, Flatlands and Midwood. Within the neighborhood, the B6 runs along Avenue J, Avenue H and Flatlands Avenue, and the Q35 runs down Flatbush Avenue through Flatlands and Marine Park."
+      },
+      {
+        "question": "Why was Flatlands called Nieuw Amersfoort?",
+        "answer": "The farming community founded here in 1636 was named after Amersfoort in the Netherlands. Wolfert Gerritse Van Couwenhoven and Andries Hudde purchased 15,000 acres centered on what is now Kings Highway and Flatbush Avenue, and Peter Stuyvesant granted the town local rule in 1661."
+      },
+      {
+        "question": "What is the Flatlands Dutch Reformed Church?",
+        "answer": "The anchor of the old town center at Kings Highway and East 40th Street. The congregation was organized in 1654 and the Greek Revival building dates from 1848; the cemetery holds about 1,500 burials, the oldest from 1660. The 2.5-acre complex is a New York City Landmark and has been on the National Register of Historic Places since 1979. The grounds and cemetery are viewable from the street; whether the interior is open could not be confirmed."
+      },
+      {
+        "question": "Can I visit the old Dutch farmhouses?",
+        "answer": "Not at present. The Hendrick I. Lott House at 1940 East 36th Street is closed to visitors because of unrenovated interiors, with restoration into a historic house museum scheduled to begin in 2026. The Wyckoff-Bennett Homestead at 1669 East 22nd Street is a private residence with no documented public visiting arrangement. Sources also differ on which neighborhood each house belongs to."
+      },
+      {
+        "question": "Are there hotels in Flatlands?",
+        "answer": "No hotel or other lodging inside Flatlands was found in any source consulted, which fits a low-rise residential neighborhood with essentially no visitor-lodging infrastructure. No verified lodging surfaced in the other East Brooklyn neighborhoods covered alongside it either."
+      }
+    ],
+    "photos": []
+  },
+  "places": [
+    {
+      "slug": "flatlands-dutch-reformed-church",
+      "name": "Flatlands Dutch Reformed Church and Cemetery",
+      "kind": "historic-site",
+      "town": "Flatlands",
+      "state": "New York",
+      "county": "Brooklyn",
+      "address": "Kings Highway and East 40th Street, Brooklyn, NY 11234",
+      "summary": "An 1848 Greek Revival church on the site of a congregation organized in 1654, with a cemetery holding roughly 1,500 burials, the oldest dating to 1660. The grounds and cemetery are viewable from the street; the current status of the congregation and of interior access could not be confirmed.",
+      "history": "The 2.5-acre complex was designated a New York City Landmark on July 19, 1966 and listed on the National Register of Historic Places on August 30, 1979. An administration building was added in 1904 and enlarged in the 1920s.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "amersfort-park",
+      "name": "Amersfort Park",
+      "kind": "park",
+      "town": "Flatlands",
+      "state": "New York",
+      "county": "Brooklyn",
+      "address": "East 38th Street between Avenue I and Avenue J, Brooklyn, NY 11210",
+      "summary": "A 3.557-acre neighborhood park named for Nieuw Amersfoort, the original Dutch name of Flatlands.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "sarsfield-playground",
+      "name": "Sarsfield Playground",
+      "kind": "park",
+      "town": "Flatlands",
+      "state": "New York",
+      "county": "Brooklyn",
+      "address": "3801 Flatlands Avenue, at East 38th Street and Avenue M, Brooklyn, NY 11234",
+      "summary": "A 0.579-acre neighborhood playground on Flatlands Avenue.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "sunners-playground",
+      "name": "Sunners Playground",
+      "kind": "park",
+      "town": "Flatlands",
+      "state": "New York",
+      "county": "Brooklyn",
+      "address": "4814 Kings Highway, on Avenue H between Kings Highway and East 49th Street, Brooklyn, NY 11234",
+      "summary": "A 0.197-acre playground near the historic town center at Kings Highway and Flatbush Avenue.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "fraser-square",
+      "name": "Fraser Square",
+      "kind": "park",
+      "town": "Flatlands",
+      "state": "New York",
+      "county": "Brooklyn",
+      "address": "Kings Highway and Avenue M, between East 34th and East 35th Streets, Brooklyn, NY 11234",
+      "summary": "A 0.667-acre triangle and sitting area near Kings Highway and Flatbush Avenue.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "trust-triangle",
+      "name": "Trust Triangle",
+      "kind": "park",
+      "town": "Flatlands",
+      "state": "New York",
+      "county": "Brooklyn",
+      "address": "Flatbush Avenue at Schenectady Avenue and Avenue O, Brooklyn, NY 11234",
+      "summary": "A 0.078-acre triangle and plaza along Flatbush Avenue.",
+      "status": "open",
+      "photos": []
+    }
+  ],
+  "entries": [
+    {
+      "kind": "sight",
+      "name": "Flatlands Dutch Reformed Church and Cemetery",
+      "place_slug": "flatlands-dutch-reformed-church",
+      "note": "An 1848 church on a congregation's 1654 site, with a burying ground whose oldest graves date to 1660."
+    },
+    {
+      "kind": "walk",
+      "name": "Amersfort Park",
+      "place_slug": "amersfort-park",
+      "note": "Three and a half acres named for Nieuw Amersfoort, the settlement that became Flatlands."
+    },
+    {
+      "kind": "walk",
+      "name": "Sarsfield Playground",
+      "place_slug": "sarsfield-playground",
+      "note": "A small playground where East 38th Street meets Flatlands Avenue."
+    },
+    {
+      "kind": "walk",
+      "name": "Sunners Playground",
+      "place_slug": "sunners-playground",
+      "note": "A pocket playground on Avenue H, near the old town center."
+    },
+    {
+      "kind": "walk",
+      "name": "Fraser Square",
+      "place_slug": "fraser-square",
+      "note": "A triangular sitting area where Kings Highway meets Avenue M."
+    },
+    {
+      "kind": "walk",
+      "name": "Trust Triangle",
+      "place_slug": "trust-triangle",
+      "note": "A small plaza where Flatbush Avenue, Schenectady Avenue and Avenue O meet."
+    }
+  ],
+  "links": [
+    {
+      "target": "guide:marine-park-brooklyn-guide",
+      "kind": "same-region",
+      "note": "The Q35 runs down Flatbush Avenue through both neighborhoods, and both sit in Brooklyn Community District 18."
+    },
+    {
+      "target": "guide:mill-basin-brooklyn-guide",
+      "kind": "same-region",
+      "note": "Both sit in Brooklyn Community District 18, which groups Flatlands with Mill Basin, Canarsie, Bergen Beach, Marine Park and Georgetown."
+    },
+    {
+      "target": "guide:georgetown-brooklyn-guide",
+      "kind": "same-region",
+      "note": "Both sit in Brooklyn Community District 18, which groups Georgetown with Canarsie, Bergen Beach, Mill Basin, Marine Park and southern Flatlands."
+    }
+  ]
+}

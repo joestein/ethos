@@ -1,0 +1,180 @@
+{
+  "guide": {
+    "slug": "marine-park-brooklyn-guide",
+    "title": "Marine Park, Brooklyn: A Tide Mill on Gerritsen Creek",
+    "destination": "Marine Park, New York",
+    "state": "New York",
+    "county": "Brooklyn",
+    "tier": "guide",
+    "intro": "Marine Park grew up around Gerritsen Creek, the westernmost inlet of Jamaica Bay. A Native American village recorded in sources as Keshawchqueren hunted and fished here before Dutch settlers arrived in the seventeenth century, reportedly drawn to marshland that resembled their homeland. The Gerritsen family built a tide mill on the creek in that century, described as the first tide mill built in North America; it worked for roughly 250 years, until 1890, and an arsonist burned the abandoned structure in 1935. The park came afterwards and gave the neighborhood its name. Frederic B. Pratt and Alfred Tredway White jointly donated about 150 acres of land in 1917, the Whitney family added more from around 1920, New York City accepted the parkland offer in 1924, and the Brooklyn Board of Aldermen formally named it Brooklyn Marine Park in 1937.",
+    "sections": [
+      {
+        "heading": "The creek, the park and the airfield",
+        "body": "Gerritsen Creek once ran about eight blocks further north, into what is now Midwood; that stretch was converted to an underground storm drain north of Avenue U around 1920, and the creek's mouth and remaining open length lie inside the park. The pilings that carried the tide mill's dam are still visible in the water, reachable on the park's trails near the Salt Marsh Nature Center.\n\nThe park itself was designed by the landscape architect Charles Downing Lay, who won an Olympic silver medal for it in the town-planning and architecture category of the 1936 Summer Olympics art competitions. The land did not stay pristine. Through the middle of the twentieth century it was used as an illegal dumping ground for trash and abandoned cars, restoration work began in the 1990s, and a U.S. Army Corps of Engineers project budgeted $8.3 million in 2012 to restore salt-marsh habitat near the creek's mouth.\n\nAt the neighborhood's edge on Flatbush Avenue, Floyd Bennett Field was built between 1928 and 1930 as New York City's first municipal airport and dedicated in June 1930. It later served as Naval Air Station New York during and after the Second World War; the Navy left in 1970, and the site joined the National Park Service's Gateway National Recreation Area in 1972. Four of its historic hangars were refurbished into the Aviator Sports and Events Center, which opened in 2006."
+      },
+      {
+        "heading": "Getting there",
+        "body": "No subway station sits inside Marine Park, and buses do the work.\n\nThe subway station most commonly cited for the neighborhood is Kings Highway, at Kings Highway and East 16th Street, served by the Q at all times and the B on weekdays as an express; its own source places it on the Midwood and Homecrest border rather than in Marine Park. Flatbush Avenue–Brooklyn College, at Flatbush and Nostrand Avenues in the area called The Junction, is served by the 2 at all times and the 5 on weekdays and sits in Flatbush, bordering Flatlands and Midwood.\n\nThe B3 runs between Bergen Beach, at East 71st Street and Avenue U, and Bath Beach along Avenue U, the corridor that runs directly through Marine Park. The B41 comes south from Downtown Brooklyn at Cadman Plaza West along Flatbush Avenue and splits at Avenue P, one branch ending at Kings Plaza and the other going to Bergen Beach. The Q35 starts at the Flatbush Avenue–Brooklyn College station and runs down Flatbush Avenue past the Marine Park Golf Course and Floyd Bennett Field before crossing the Marine Parkway–Gil Hodges Memorial Bridge to Rockaway Park in Queens."
+      }
+    ],
+    "faq": [
+      {
+        "question": "How do I get to Marine Park?",
+        "answer": "By bus, mainly. No subway station is in the neighborhood; Kings Highway on the Q, with weekday B express service, is the station usually cited for it, and its own source places it on the Midwood-Homecrest border. The B3 runs along Avenue U through Marine Park, the B41 comes down Flatbush Avenue from Downtown Brooklyn, and the Q35 runs down Flatbush Avenue past the golf course and Floyd Bennett Field."
+      },
+      {
+        "question": "What is the Gerritsen tide mill?",
+        "answer": "A seventeenth-century Dutch tide mill built by the Gerritsen family on the shore of Gerritsen Creek, described as the first tide mill built in North America. It operated for roughly 250 years until 1890, and an arsonist burned the abandoned building in 1935. The wooden pilings that supported its dam remain visible in the creek and can be reached on the park's trails."
+      },
+      {
+        "question": "What is Floyd Bennett Field?",
+        "answer": "New York City's first municipal airport, built between 1928 and 1930 and dedicated in June 1930, later Naval Air Station New York. The Navy departed in 1970 and the field became part of Gateway National Recreation Area in 1972. It is open to the public, with historic hangars, trails and community gardens, and four hangars now house the Aviator Sports and Events Center."
+      },
+      {
+        "question": "Can I visit the Hendrick I. Lott House?",
+        "answer": "Not at present. The 1720 farmhouse, expanded in 1800 and designated a New York City Landmark on October 3, 1989 and listed on the National Register on March 3, 1994, is closed to the public while its interiors are restored, with structural work reported as scheduled to begin in 2026 ahead of a planned reopening as a historic house museum."
+      },
+      {
+        "question": "Are there hotels in Marine Park?",
+        "answer": "No hotel located in Marine Park was found in any source consulted for this guide, and no verified lodging surfaced in the other neighborhoods of Brooklyn Community District 18 covered alongside it. Plan on staying elsewhere in the city."
+      }
+    ],
+    "photos": []
+  },
+  "places": [
+    {
+      "slug": "marine-park-brooklyn",
+      "name": "Marine Park",
+      "kind": "park",
+      "town": "Marine Park",
+      "state": "New York",
+      "county": "Brooklyn",
+      "address": "Generally between Avenue U, Fillmore Avenue, Stuart Street and Flatbush Avenue, Brooklyn, NY",
+      "official_url": "https://www.nycgovparks.org/parks/marine-park-brooklyn",
+      "summary": "The neighborhood's namesake park, running along Gerritsen Creek and Jamaica Bay, with athletic fields and courts, walking paths, a golf course and the Salt Marsh Nature Center. NYC Parks lists it as open from 6 a.m. to 1 a.m.",
+      "history": "Frederic B. Pratt and Alfred Tredway White jointly donated about 150 acres for parkland in 1917, and the Whitney family donated more from around 1920; New York City accepted the offer in 1924, which spurred residential development around it. The Brooklyn Board of Aldermen named it Brooklyn Marine Park in 1937. Its designer, the landscape architect Charles Downing Lay, won an Olympic silver medal for the design in the town-planning category of the 1936 Summer Olympics art competitions.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "salt-marsh-nature-center",
+      "name": "Salt Marsh Nature Center at Marine Park",
+      "kind": "attraction",
+      "town": "Marine Park",
+      "state": "New York",
+      "county": "Brooklyn",
+      "address": "Within Marine Park, near the head of Gerritsen Creek, Brooklyn, NY 11234",
+      "official_url": "https://www.saltmarshalliance.org",
+      "summary": "A nature center and trailhead run by the Salt Marsh Alliance, offering nature walks, Urban Park Ranger programs and wildlife encounters. The center opens on weekends, and the outdoor trails are open year-round.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "floyd-bennett-field",
+      "name": "Floyd Bennett Field",
+      "kind": "attraction",
+      "town": "Marine Park",
+      "state": "New York",
+      "county": "Brooklyn",
+      "address": "Flatbush Avenue, Brooklyn, NY 11234",
+      "official_url": "https://www.nps.gov/gate/",
+      "summary": "New York City's first municipal airport, opened in 1930 and later Naval Air Station New York, now part of the National Park Service's Gateway National Recreation Area. It is open to the public, with historic hangars, trails and community gardens.",
+      "history": "Built between 1928 and 1930 and dedicated in June 1930. It served as Naval Air Station New York during and after the Second World War; the Navy departed in 1970, and the site became part of Gateway National Recreation Area in 1972.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "aviator-sports-and-events-center",
+      "name": "Aviator Sports and Events Center",
+      "kind": "attraction",
+      "town": "Marine Park",
+      "state": "New York",
+      "county": "Brooklyn",
+      "address": "3159 Flatbush Avenue, Brooklyn, NY 11234",
+      "official_url": "https://www.aviatorsports.com",
+      "summary": "A sports complex built into four refurbished historic aircraft hangars at Floyd Bennett Field, opened in 2006 through a partnership with the National Park Service. It holds two ice rinks, a field house, a gymnastics center, a fitness center, turf fields and a golf driving range.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "marine-park-golf-course",
+      "name": "Marine Park Golf Course",
+      "kind": "attraction",
+      "town": "Marine Park",
+      "state": "New York",
+      "county": "Brooklyn",
+      "address": "2880 Flatbush Avenue, Brooklyn, NY 11234",
+      "official_url": "http://golfmarinepark.com/",
+      "summary": "A 210-acre public golf course inside Marine Park, opened in 1963.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "gerritsen-tide-mill-site",
+      "name": "Gerritsen's tide mill site",
+      "kind": "historic-site",
+      "town": "Marine Park",
+      "state": "New York",
+      "county": "Brooklyn",
+      "address": "Within Marine Park, along Gerritsen Creek near the Salt Marsh Nature Center, Brooklyn, NY",
+      "summary": "The site of a seventeenth-century Dutch tide mill said to be the first built in North America. The mill burned in 1935, but the wooden pilings that supported its dam remain visible in the creek and are reachable on the park's trails.",
+      "status": "open",
+      "photos": []
+    }
+  ],
+  "entries": [
+    {
+      "kind": "walk",
+      "name": "Marine Park",
+      "place_slug": "marine-park-brooklyn",
+      "note": "Fields, courts and shoreline paths along Gerritsen Creek, on land donated from 1917 and named in 1937."
+    },
+    {
+      "kind": "walk",
+      "name": "Salt Marsh Nature Center at Marine Park",
+      "place_slug": "salt-marsh-nature-center",
+      "note": "The trailhead for the creek, with weekend hours and Urban Park Ranger programs run by the Salt Marsh Alliance."
+    },
+    {
+      "kind": "sight",
+      "name": "Gerritsen's tide mill site",
+      "place_slug": "gerritsen-tide-mill-site",
+      "note": "Pilings from a seventeenth-century tide mill dam, still standing in the creek after the mill burned in 1935."
+    },
+    {
+      "kind": "sight",
+      "name": "Floyd Bennett Field",
+      "place_slug": "floyd-bennett-field",
+      "note": "The city's first municipal airport, dedicated in 1930 and part of Gateway National Recreation Area since 1972."
+    },
+    {
+      "kind": "sight",
+      "name": "Aviator Sports and Events Center",
+      "place_slug": "aviator-sports-and-events-center",
+      "note": "Two ice rinks, turf fields and a driving range inside four refurbished Floyd Bennett Field hangars."
+    },
+    {
+      "kind": "sight",
+      "name": "Marine Park Golf Course",
+      "place_slug": "marine-park-golf-course",
+      "note": "A 210-acre public course on Flatbush Avenue, open since 1963."
+    }
+  ],
+  "links": [
+    {
+      "target": "guide:mill-basin-brooklyn-guide",
+      "kind": "same-region",
+      "note": "Both sit in Brooklyn Community District 18, which groups Marine Park with Mill Basin, Canarsie, Bergen Beach, Georgetown and southern Flatlands."
+    },
+    {
+      "target": "guide:bergen-beach-brooklyn-guide",
+      "kind": "same-region",
+      "note": "The B3 bus runs along Avenue U between Bergen Beach and Bath Beach, through Marine Park."
+    },
+    {
+      "target": "guide:georgetown-brooklyn-guide",
+      "kind": "same-region",
+      "note": "Both sit in Brooklyn Community District 18, which groups Georgetown with Marine Park, Canarsie, Bergen Beach, Mill Basin and southern Flatlands."
+    }
+  ]
+}
