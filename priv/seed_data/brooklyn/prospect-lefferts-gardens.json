@@ -14,13 +14,13 @@
       },
       {
         "heading": "Getting there",
-        "body": "Two subway lines reach the neighborhood from opposite sides.\n\nOn the IRT Nostrand Avenue Line, along the eastern commercial spine, Sterling Street at Sterling Street and Nostrand Avenue and Winthrop Street at Winthrop Street and Nostrand Avenue are both in Prospect Lefferts Gardens, and both are served by the 2 at all times and the 5 on weekdays.\n\nOn the BMT Brighton Line to the west, Parkside Avenue at Parkside and Ocean Avenues serves Prospect Lefferts Gardens and Flatbush, and is served by the Q. Prospect Park station, at Empire Boulevard and Flatbush Avenue, is served by the B, the Q and the Franklin Avenue Shuttle; its source describes it as serving Flatbush, Prospect Lefferts Gardens and Crown Heights, and places it near the border of Crown Heights.\n\nBuses run along both commercial spines: the B41 on Flatbush Avenue to the west and the B44, local and Select Bus Service, on Nostrand Avenue to the east."
+        "body": "Two subway lines reach the neighborhood from opposite sides.\n\nOn the IRT Nostrand Avenue Line, along the eastern commercial spine, Sterling Street at Sterling Street and Nostrand Avenue and Winthrop Street at Winthrop Street and Nostrand Avenue are both in Prospect Lefferts Gardens, and both are served by the 2 at all times and the 5 on weekdays.\n\nOn the BMT Brighton Line to the west, Parkside Avenue at Parkside and Ocean Avenues serves Prospect Lefferts Gardens and Flatbush, and is served by the Q. Prospect Park station, at Empire Boulevard and Flatbush Avenue, is served by the B, the Q and the Franklin Avenue Shuttle; its source describes it as serving Flatbush, Prospect Lefferts Gardens and Crown Heights, and places it near the border of Crown Heights."
       }
     ],
     "faq": [
       {
         "question": "How do I get to Prospect Lefferts Gardens?",
-        "answer": "Sterling Street and Winthrop Street, both on Nostrand Avenue and both in the neighborhood, are served by the 2 at all times and the 5 on weekdays. On the Brighton Line, Parkside Avenue at Parkside and Ocean Avenues has the Q, and Prospect Park station at Empire Boulevard and Flatbush Avenue has the B, the Q and the Franklin Avenue Shuttle. The B41 runs on Flatbush Avenue and the B44 on Nostrand Avenue."
+        "answer": "Sterling Street and Winthrop Street, both on Nostrand Avenue and both in the neighborhood, are served by the 2 at all times and the 5 on weekdays. On the Brighton Line, Parkside Avenue at Parkside and Ocean Avenues has the Q, and Prospect Park station at Empire Boulevard and Flatbush Avenue has the B, the Q and the Franklin Avenue Shuttle."
       },
       {
         "question": "Where does the name come from?",
@@ -157,8 +157,8 @@
     },
     {
       "target": "guide:prospect-heights-brooklyn-guide",
-      "kind": "shared-history",
-      "note": "The neighborhood's name was coined in 1968 from Prospect Park, Lefferts Manor and the Brooklyn Botanic Garden."
+      "kind": "same-region",
+      "note": "The name was coined in 1968 from Prospect Park, Lefferts Manor and the Brooklyn Botanic Garden, which these guides cover under Prospect Heights."
     }
   ]
 }

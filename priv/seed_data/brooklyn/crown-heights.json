@@ -36,7 +36,7 @@
       },
       {
         "question": "When is the West Indian Day Parade?",
-        "answer": "It is the Labor Day Carnival, and it has been held along Eastern Parkway since approximately 1968. Estimates put attendance between one and three million participants a year, which makes it the largest single event centred on the neighborhood."
+        "answer": "It is the Labor Day Carnival, and it has been held along Eastern Parkway since approximately 1968. Estimates put attendance between one and three million participants a year."
       },
       {
         "question": "Which Utica Avenue station is the Crown Heights one?",
@@ -69,8 +69,8 @@
       {
         "src": "/photos/ny/brooklyn/crown-heights/kings-county-savings-bank-crown-heights.jpg",
         "thumb": "/photos/ny/brooklyn/crown-heights/kings-county-savings-bank-crown-heights_thumb.jpg",
-        "title": "Kings County Savings Bank on Eastern Parkway",
-        "description": "A limestone bank building with tall arched windows, its name carved along the cornice, at Eastern Parkway and Nostrand Avenue.",
+        "title": "Bank building with carved cornice lettering",
+        "description": "A limestone bank building with tall arched windows, its name carved along the cornice.",
         "author": "Tdorante10",
         "license": "CC BY-SA 4.0",
         "source_url": "https://commons.wikimedia.org/wiki/File:Eastern_Pkwy_Nostrand_Av_td_(2019-09-23)_01_-_Kings_County_Savings_Bank.jpg"
@@ -257,7 +257,7 @@
     {
       "target": "guide:prospect-heights-brooklyn-guide",
       "kind": "nearby",
-      "note": "The Brooklyn Museum and Brooklyn Botanic Garden sit on Eastern Parkway at Crown Heights' western edge, in adjacent Prospect Heights."
+      "note": "The Brooklyn Museum and Botanic Garden sit at Crown Heights' traditional western edge, more commonly classified as being in adjacent Prospect Heights."
     },
     {
       "target": "guide:weeksville-brooklyn-guide",
