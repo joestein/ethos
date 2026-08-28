@@ -1,0 +1,117 @@
+{
+  "guide": {
+    "slug": "weeksville-brooklyn-guide",
+    "title": "Weeksville, Brooklyn: A Free Black Village and Four Houses",
+    "destination": "Weeksville, New York",
+    "state": "New York",
+    "county": "Brooklyn",
+    "tier": "town-page",
+    "intro": "Weeksville was founded in 1838, when James Weeks, a free African American stevedore from Virginia, bought land in central Brooklyn from Henry C. Thompson, another free Black landowner. The settlement that grew on it took his name. The Landmarks Preservation Commission's 1970 designation report calls Weeksville the first major free Black settlement in the area now known as Bedford-Stuyvesant, begun about the time slavery ended in New York State in 1827 and lasting as an all-Black or predominantly Black community until after the Civil War. It is no longer a neighborhood in the ordinary sense. After the Brooklyn Bridge opened in 1883 the surrounding blocks urbanised, Weeksville merged into Crown Heights and Bedford-Stuyvesant, and its history was largely forgotten until 1968.",
+    "sections": [
+      {
+        "heading": "Five hundred residents, seven institutions, and a rediscovery",
+        "body": "By the 1850s Weeksville had more than 500 residents, and Wikipedia describes it as the second-largest free Black community in the United States in pre-Civil War America. About 40 percent of residents were southern-born, and nearly a third of the men over 21 owned property, which was then the qualification required for Black men to vote in New York State.\n\nAt its height the community supported seven Black institutions: Colored School No. 2, the Zion Home for Colored Aged People, the Howard Colored Orphan Asylum, Berean Baptist Church, Bethel A.M.E. Church, Citizens Union Cemetery and the African Civilization Society. It also published the Freedman's Torchlight, one of the first African American newspapers. During the Draft Riots of July 1863, the Landmarks Preservation Commission's report records, Weeksville was one of the principal refuges for Black families fleeing the terror of the Manhattan streets. Its residents included the first female African-American physician in New York State and the first African-American police officer in New York City, neither of whom the sources name.\n\nWeeksville sat on the edge of Hunterfly Road, documented as far back as March 1662 under the name Old Path to the Bay, an Anglicisation of the Dutch Aander Vly, meaning to the low, or swampy, place. It may have followed an earlier Native American trail toward wampum-gathering grounds on Jamaica Bay, was used by the Dutch chiefly as a hay path, and later served as a route from the Jamaica Turnpike near Bedford to Canarsie.\n\nFour wood-frame houses built around 1830 survived, standing mid-block along the old road's line. In 1968 the historian James Hurley and the pilot Joseph Haynes rediscovered them through archival research combined with an aerial survey, which led to the founding of the Society for the Preservation of Weeksville and Bedford-Stuyvesant History. The Landmarks Preservation Commission designated the houses individual New York City Landmarks on August 18, 1970, under calendar number LP-0729; more than fifteen people spoke in favour at the public hearing, including students from P.S. 243, and nobody spoke against. The National Register listed them in 1972.\n\nThe preservation society bought the houses in 1973. After a restoration costing roughly $3 million the site reopened to the public in 2005 as the Weeksville Heritage Center, and a 19,000-square-foot education and exhibition building was completed on the same campus in 2014. In 2019 the centre joined New York City's Cultural Institutions Group, the first Black cultural centre in Brooklyn to receive that designation."
+      },
+      {
+        "heading": "Getting there",
+        "body": "No subway station sits inside Weeksville, and the Weeksville Heritage Center's own visitor directions do not mention the Long Island Rail Road. Three stations nearby are the practical ones, and the centre routes walkers from each of them.\n\nUtica Avenue on the IND Fulton Street Line, at Utica Avenue and Fulton Street in Bedford-Stuyvesant, is served by the A at all times and the C at all times except late nights. Ralph Avenue, on the same line at Ralph Avenue and Fulton Street, is served by the C at all times except late nights and the A late nights, and sits on the border of Bedford-Stuyvesant and Ocean Hill. Crown Heights-Utica Avenue on the IRT Eastern Parkway Line, under Eastern Parkway between Schenectady and Utica Avenues in Crown Heights, is served by the 4 at all times and the 3 at all times except late nights.\n\nThe centre's own directions list four bus routes: the B46 Local to Bergen Street, the B15 and B65 to Bergen Street and Buffalo Avenue, and the B47 to Bergen Street."
+      }
+    ],
+    "faq": [
+      {
+        "question": "How do I get to Weeksville?",
+        "answer": "There is no station in Weeksville itself. Utica Avenue on the A and C, and Ralph Avenue on the C with the A late nights, are both on Fulton Street; Crown Heights-Utica Avenue on the 4 and 3 is under Eastern Parkway in Crown Heights. The Weeksville Heritage Center's own directions also list the B46 Local to Bergen Street, the B15 and B65 to Bergen Street and Buffalo Avenue, and the B47 to Bergen Street."
+      },
+      {
+        "question": "Is Weeksville in Crown Heights or Bedford-Stuyvesant?",
+        "answer": "The sources disagree, and none of them settles it. The Landmarks Preservation Commission's 1970 report situates Weeksville in what is now the Bedford-Stuyvesant section of Brooklyn; the Weeksville Heritage Center's own site and several subway station sources describe its immediate block, at Bergen Street and Buffalo Avenue, as Crown Heights. The historic village and the present-day blocks are not the same footprint."
+      },
+      {
+        "question": "What can you actually visit?",
+        "answer": "The Weeksville Heritage Center at 158 Buffalo Avenue, which preserves and interprets the four surviving Hunterfly Road Houses alongside a newer education and exhibition building. Its own site gives opening hours of Tuesday to Friday, 10am to 5pm, and Saturday, 11am to 5pm, closed Sundays and Mondays."
+      }
+    ],
+    "photos": [
+      {
+        "src": "/photos/ny/brooklyn/weeksville/hunterfly-road-houses-weeksville.jpg",
+        "thumb": "/photos/ny/brooklyn/weeksville/hunterfly-road-houses-weeksville_thumb.jpg",
+        "title": "The Hunterfly Road Houses",
+        "description": "Three of the surviving wood-frame Hunterfly Road Houses standing in a row behind a fence on a mown lawn.",
+        "author": "Anonitect",
+        "license": "Public domain",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Hunterfly_road_houses.jpg"
+      }
+    ]
+  },
+  "places": [
+    {
+      "slug": "weeksville-heritage-center",
+      "name": "Weeksville Heritage Center",
+      "kind": "museum",
+      "town": "Weeksville",
+      "state": "New York",
+      "county": "Brooklyn",
+      "address": "158 Buffalo Avenue, also addressed as Joan Maynard Way, between Bergen Street and St. Marks Avenue, Brooklyn, NY 11213",
+      "official_url": "https://www.weeksvillesociety.org",
+      "summary": "A historic site and cultural centre on the block where the free Black community of Weeksville stood, preserving and interpreting the surviving Hunterfly Road Houses alongside a newer education and exhibition building, with public programmes on Black history, art and culture. Its own site gives hours of Tuesday to Friday, 10am to 5pm, and Saturday, 11am to 5pm, closed Sundays and Mondays.",
+      "history": "The preservation society bought the Hunterfly Road Houses in 1973. After a restoration costing roughly $3 million the site reopened publicly in 2005 as the Weeksville Heritage Center, and a 19,000-square-foot education and exhibition building was completed on the same campus in 2014. In 2019 the centre joined New York City's Cultural Institutions Group, the first Black cultural centre in Brooklyn to receive that designation.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "hunterfly-road-houses",
+      "name": "Hunterfly Road Houses",
+      "kind": "historic-site",
+      "town": "Weeksville",
+      "state": "New York",
+      "county": "Brooklyn",
+      "address": "1698, 1700, 1702-04 and 1706-08 Bergen Street, Brooklyn, NY 11213",
+      "official_url": "https://www.weeksvillesociety.org",
+      "summary": "Four wood-frame houses built around 1830, standing mid-block along the former line of the colonial-era Hunterfly Road, and now the historic core of the Weeksville Heritage Center campus.",
+      "history": "The houses were rediscovered in 1968 by the historian James Hurley and the pilot Joseph Haynes through archival research and an aerial survey. The Landmarks Preservation Commission designated them individual New York City Landmarks on August 18, 1970, under calendar number LP-0729, after a hearing at which more than fifteen people spoke in favour, including students from P.S. 243, and nobody spoke against. They were listed on the National Register of Historic Places in 1972.",
+      "status": "open",
+      "photos": [
+        {
+          "src": "/photos/ny/brooklyn/weeksville/hunterfly-road-houses-weeksville.jpg",
+          "thumb": "/photos/ny/brooklyn/weeksville/hunterfly-road-houses-weeksville_thumb.jpg",
+          "title": "The Hunterfly Road Houses",
+          "description": "Three of the surviving wood-frame Hunterfly Road Houses standing in a row behind a fence on a mown lawn.",
+          "author": "Anonitect",
+          "license": "Public domain",
+          "source_url": "https://commons.wikimedia.org/wiki/File:Hunterfly_road_houses.jpg"
+        }
+      ]
+    }
+  ],
+  "entries": [
+    {
+      "kind": "sight",
+      "name": "Weeksville Heritage Center",
+      "place_slug": "weeksville-heritage-center",
+      "note": "The centre at 158 Buffalo Avenue, open Tuesday to Saturday, interpreting the village that stood on this block."
+    },
+    {
+      "kind": "sight",
+      "name": "Hunterfly Road Houses",
+      "place_slug": "hunterfly-road-houses",
+      "note": "Four wood-frame houses of around 1830, landmarked in 1970 and listed on the National Register in 1972."
+    }
+  ],
+  "links": [
+    {
+      "target": "guide:crown-heights-brooklyn-guide",
+      "kind": "shared-history",
+      "note": "After the Brooklyn Bridge was completed in 1883, urbanisation caused Weeksville to merge into Crown Heights and its history to be obscured."
+    },
+    {
+      "target": "guide:bedford-stuyvesant-brooklyn-guide",
+      "kind": "shared-history",
+      "note": "The LPC's 1970 report calls Weeksville the first major free Black settlement in the area now known as Bedford-Stuyvesant."
+    },
+    {
+      "target": "guide:ocean-hill-brooklyn-guide",
+      "kind": "same-region",
+      "note": "The Heritage Center routes visitors from Ralph Avenue, a station on the border of Bedford-Stuyvesant and Ocean Hill."
+    }
+  ]
+}

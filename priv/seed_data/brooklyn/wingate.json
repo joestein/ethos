@@ -1,0 +1,86 @@
+{
+  "guide": {
+    "slug": "wingate-brooklyn-guide",
+    "title": "Wingate, Brooklyn: From Pigtown to the Banjo School",
+    "destination": "Wingate, New York",
+    "state": "New York",
+    "county": "Brooklyn",
+    "tier": "town-page",
+    "intro": "Wingate has had two names and neither was chosen by the people who lived here. It was originally Pigtown, called that for the several major pig farms that supplied Brooklyn, and it sat on the southern periphery of the City of Brooklyn, bordering the Town of Flatbush. Among the Pigtown-era residents were the future drag racer Frederick DiNome and his brother Richard; Rudy Giuliani spent his first seven years in the neighborhood. In the 2000s real estate developers renamed the area Wingate, after the adjacent Wingate Park and George W. Wingate High School. Its commonly cited boundaries are Empire Boulevard, Winthrop Street, Troy Avenue and New York Avenue, though as with all Brooklyn neighborhood lines these are neither official nor universally agreed.",
+    "sections": [
+      {
+        "heading": "The school the neighborhood was named for",
+        "body": "George W. Wingate High School took its name from George Wood Wingate, a Union Army officer who founded the Public School Athletic League of New York City. The Wikipedia article on the school states that it was established in 1956; a separate source attributes the building's construction to 1954, and the discrepancy is not resolved.\n\nStudents called it the Banjo School, for the shape of its building. It closed in June 2006 for insufficient academic performance, and the building was subsequently divided among four smaller schools under the New York City Department of Education's New Visions for Public Schools initiative: the International Arts Business School, The School for Human Rights, The School for Democracy and Leadership, and the High School for Public Service: Heroes of Tomorrow. It remains a working public school campus rather than a site to visit.\n\nWhat carries the name for visitors is the park next door. Wingate Park is a 5.888-acre city property at 600 Kingston Avenue, bounded by Winthrop Street, Brooklyn Avenue and Rutland Road, jointly operated with the Department of Education and adjoining the former high school campus.\n\nAdministratively, Wingate belongs with its neighbours: Brooklyn Community Board 9 covers Crown Heights, Prospect Lefferts Gardens and Wingate together."
+      },
+      {
+        "heading": "Getting there",
+        "body": "No subway station is recorded inside Wingate. The two closest are on the IRT Nostrand Avenue Line and their sources place both in Prospect Lefferts Gardens: Winthrop Street, at Winthrop Street and Nostrand Avenue, and Sterling Street, at Sterling Street and Nostrand Avenue. Each is served by the 2 at all times and the 5 on weekdays.\n\nBuses do most of the work. The B44, local and Select Bus Service, runs along Nostrand Avenue, and its Select Bus Service stop at Winthrop Street connects directly to the 2 and 5 at Winthrop Street station. The B46, local and Select Bus Service, runs along Utica Avenue, crossing Empire Boulevard at the northern edge, with connections there to the B12 and, at Eastern Parkway and Union Street, to the B17."
+      }
+    ],
+    "faq": [
+      {
+        "question": "How do I get to Wingate?",
+        "answer": "There is no station in Wingate itself. Winthrop Street and Sterling Street, both on the IRT Nostrand Avenue Line and both placed by their sources in Prospect Lefferts Gardens, are served by the 2 at all times and the 5 on weekdays. The B44 and B44 Select Bus Service run along Nostrand Avenue, with a Select Bus Service stop at Winthrop Street connecting to the 2 and 5, and the B46 runs along Utica Avenue."
+      },
+      {
+        "question": "Why is it called Wingate?",
+        "answer": "Real estate developers renamed the area in the 2000s after the adjacent Wingate Park and George W. Wingate High School. Before that it was known as Pigtown, for the several major pig farms that supplied Brooklyn from here."
+      },
+      {
+        "question": "Can you visit George W. Wingate High School?",
+        "answer": "Not as a visitor site. The school closed in June 2006 for insufficient academic performance, and its building now houses four smaller public schools under the Department of Education's New Visions for Public Schools initiative. Wingate Park, the neighborhood's other namesake, adjoins the campus and is open."
+      }
+    ],
+    "photos": [
+      {
+        "src": "/photos/ny/brooklyn/wingate/wingate-high-school-wingate.jpg",
+        "thumb": "/photos/ny/brooklyn/wingate/wingate-high-school-wingate_thumb.jpg",
+        "title": "George W. Wingate High School on Kingston Avenue",
+        "description": "A black-and-white view of the mid-century Wingate High School building on Kingston Avenue, with a sculpture and flagpole in the forecourt.",
+        "author": "Gottscho-Schleisner Collection",
+        "license": "Public domain",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Wingate_High_School,_Kingston_Ave.,_Brooklyn,_New_York._LOC_gsc.5a23382.jpg"
+      }
+    ]
+  },
+  "places": [
+    {
+      "slug": "wingate-park",
+      "name": "Wingate Park",
+      "kind": "park",
+      "town": "Wingate",
+      "state": "New York",
+      "county": "Brooklyn",
+      "address": "600 Kingston Avenue, Brooklyn, NY 11203, bounded by Winthrop Street, Brooklyn Avenue and Rutland Road",
+      "official_url": "https://www.nycgovparks.org/parks/wingate-park",
+      "summary": "The neighborhood's namesake, a 5.888-acre city parks property jointly operated with the Department of Education, adjoining the former George W. Wingate High School campus.",
+      "status": "open",
+      "photos": []
+    }
+  ],
+  "entries": [
+    {
+      "kind": "walk",
+      "name": "Wingate Park",
+      "place_slug": "wingate-park",
+      "note": "The 5.888-acre park at 600 Kingston Avenue that gave the renamed neighborhood its name."
+    }
+  ],
+  "links": [
+    {
+      "target": "guide:prospect-lefferts-gardens-brooklyn-guide",
+      "kind": "nearby",
+      "note": "Winthrop Street and Sterling Street, the nearest subway stations to Wingate, are both placed by their sources in Prospect Lefferts Gardens."
+    },
+    {
+      "target": "guide:crown-heights-brooklyn-guide",
+      "kind": "same-region",
+      "note": "Brooklyn Community Board 9 covers Crown Heights, Prospect Lefferts Gardens and Wingate together."
+    },
+    {
+      "target": "guide:weeksville-brooklyn-guide",
+      "kind": "same-region",
+      "note": "The B46 on Utica Avenue crosses Empire Boulevard here and stops at Bergen Street for the Weeksville Heritage Center."
+    }
+  ]
+}

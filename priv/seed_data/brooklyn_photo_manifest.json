@@ -3,6 +3,10 @@
     "sha256": "2f5bda6100c7367830c22a9fb7e124cec2932a2b783ee099cb4b5518e503e7a3",
     "source_url": "https://commons.wikimedia.org/wiki/File:Pennsylvania_Av_Hornell_Loop_td_(2018-08-15)_01_-_1530_Pennsylvania_Avenue.jpg"
   },
+  "770-eastern-parkway-crown-heights": {
+    "sha256": "ed499ac70912dcb15fbf0c1a3e37ce3b763b8145180af966d93b1bebd5aa8c8d",
+    "source_url": "https://commons.wikimedia.org/wiki/File:770_Eastern_Parkway.jpg"
+  },
   "bam-peter-jay-sharp-building-fort-greene": {
     "sha256": "a452e972abbc5516b6eae35a9b467b0f5301c974b935ee8282c86642ef911c5e",
     "source_url": "https://commons.wikimedia.org/wiki/File:2013_BAM_Peter_Jay_Sharp_Building_from_east.jpg"
@@ -14,6 +18,10 @@
   "blessed-sacrament-church-cypress-hills": {
     "sha256": "72fe613557419d67af2a7b4f9b4118416486351343623d16b3118ababd9e6116",
     "source_url": "https://commons.wikimedia.org/wiki/File:Blessed_Sacrament_Church_from_Crescent_Street_Jamaica_El-1.jpg"
+  },
+  "brooklyn-childrens-museum-crown-heights": {
+    "sha256": "4fc25323e1c96c29b37f9646c8bdfd832db2a0b58816bc836c824a0dfd64190c",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Brooklyn_Children%27s_Museum.JPG"
   },
   "brooklyn-navy-yard-panorama-navy-yard": {
     "sha256": "897c400db440c6b2868c2ff24bc4413ef46b4c6ff1bd566bd1e39e4caaf3d5ea",
@@ -30,6 +38,10 @@
   "clinton-hill-historic-district-clinton-hill": {
     "sha256": "b772534ffeb7f3174b1e6c91df5208ec1da57c30fadb6b1622ac395aee012551",
     "source_url": "https://commons.wikimedia.org/wiki/File:Clinton_Hill_Historic_District.JPG"
+  },
+  "co-cathedral-st-joseph-prospect-heights": {
+    "sha256": "efaf287a75abb896823f1176cdda67d1898383da25d082c1b6f4601d8e4b2f42",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Joseph_RCC_856_Pacific_St_jeh.jpg"
   },
   "coignet-stone-company-building-gowanus": {
     "sha256": "39b6293f34f3a82666958a7fa6485f3bf2edd9b8f001ecde5385a8b499d3af3a",
@@ -89,6 +101,10 @@
     "sha256": "f11aee4a05c8d6702b2ec3ac02e4f67d02177b8cf94876200bfb459e56398822",
     "source_url": "https://commons.wikimedia.org/wiki/File:Hotel_Bossert_Hicks_Montague_jeh.jpg"
   },
+  "hunterfly-road-houses-weeksville": {
+    "sha256": "339a8a5383d1144617bc0fb526aa158e502a648d1314e06479c8a904c7eb440d",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Hunterfly_road_houses.jpg"
+  },
   "john-rankin-house-carroll-gardens": {
     "sha256": "d8f63c272ecce1edda6239a72c205a46a371fd41d5849c96efae1257801e0a46",
     "source_url": "https://commons.wikimedia.org/wiki/File:John_Rankin_House_440_Clinton_Street_Brooklyn.jpg"
@@ -97,6 +113,10 @@
     "sha256": "2b528715a68c9ea99ff3b66685e1eedac58e36cb5e831eb6a9dc12c453733bcf",
     "source_url": "https://commons.wikimedia.org/wiki/File:Kane_Street_synagogue_exterior.jpg"
   },
+  "kings-county-savings-bank-crown-heights": {
+    "sha256": "288fd5f44f69d2e99197616d7bdce1700f46c271ac003104332e526fe787c9f5",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Eastern_Pkwy_Nostrand_Av_td_(2019-09-23)_01_-_Kings_County_Savings_Bank.jpg"
+  },
   "kings-county-savings-bank-south-williamsburg": {
     "sha256": "7e535d6bcb16814b596dbb1b012c02a6b4ac930a19e43a36e8eeaefc154f477c",
     "source_url": "https://commons.wikimedia.org/wiki/File:Kings_County_Savings_shady_135_Bwy_jeh.jpg"
@@ -104,6 +124,10 @@
   "loews-pitkin-theatre-brownsville": {
     "sha256": "0b5d85d04c4efbfb4188bbdce6561f126518572ed28749424ad627b1510c6f38",
     "source_url": "https://commons.wikimedia.org/wiki/File:Loew%27s_Pitkin_Theatre_HDR_2021_jeh.jpg"
+  },
+  "macdonough-street-stuyvesant-heights": {
+    "sha256": "6453ff599f8bf845704f3c8abfd6694ee8e31d3dfae8bd201891e92186be5033",
+    "source_url": "https://commons.wikimedia.org/wiki/File:MacDonoughStreetSH.jpg"
   },
   "manhattan-bridge-arch-dumbo": {
     "sha256": "230db1ad53d4b1d9a1978fbfeafcce11d6765c9804e7dc3f7fdc4179b32f9810",
@@ -130,6 +154,10 @@
     "sha256": "1493e5996471903568b3d0350bab986eae8ff3e5cc7f560adcb13dd0e9ce0b5a",
     "source_url": "https://commons.wikimedia.org/wiki/File:19950701_35_Montauk_Club,_Park_Slope,_Brooklyn,_NY.jpg",
     "fetched_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/19950701_35_Montauk_Club%2C_Park_Slope%2C_Brooklyn%2C_NY.jpg/1280px-19950701_35_Montauk_Club%2C_Park_Slope%2C_Brooklyn%2C_NY.jpg"
+  },
+  "mount-prospect-park-prospect-heights": {
+    "sha256": "43168e52770d5623a6e1cec9db05c744b51ffe266cd84ffdae4de0478eedec99",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Mount_Prospect_Park,_Prospect_Heights,_Brooklyn_-_20200911.jpg"
   },
   "new-lots-community-church-new-lots": {
     "sha256": "d4e825a3c2e17d125b5baac853b808619fb540c96f37e19b68013eaa9dc747af",
@@ -168,6 +196,10 @@
     "sha256": "a988a5cc42e6a02ab98c5c111027f9e7becb382389f5e6b653bdf1f644675810",
     "source_url": "https://commons.wikimedia.org/wiki/File:Red_Hook_Memorial_Doughboy_1.jpg"
   },
+  "restoration-plaza-bedford-stuyvesant": {
+    "sha256": "f37d80692fb5eb0d99723ab92f2cb9dcf138f16eb9cd471d4fbe0f721d6374b2",
+    "source_url": "https://commons.wikimedia.org/wiki/File:RestoPlaza.jpg"
+  },
   "smith-ninth-streets-station-gowanus": {
     "sha256": "9c2c1f3ef04e5dee581ae0444e18e3e4d7d4f1662b4206bf646efe38d73fe50f",
     "source_url": "https://commons.wikimedia.org/wiki/File:Gowanus_Exy_Smith-Ninth_06.jpg"
@@ -205,6 +237,14 @@
     "sha256": "42091e42582227149f0cf4453c6e7f3d2bd4fde5d48708ddf002805238978707",
     "source_url": "https://commons.wikimedia.org/wiki/File:Sunny%27s_Bar.jpg"
   },
+  "tudor-row-house-prospect-lefferts-gardens": {
+    "sha256": "570c01d606d9e919598e3b99647c999dcef0c92ea49589620736c255178be7c1",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Tudor_row_house_in_Prospect_Lefferts_Gardens.jpg"
+  },
+  "union-temple-prospect-heights": {
+    "sha256": "0a6e9c68aa191759c561c2ca7243ea3c08c3799c52ce7fca427eee8b62081229",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Union_Temple_of_Brooklyn.jpg"
+  },
   "vinegar-hill-historic-district-vinegar-hill": {
     "sha256": "e050f75f990dcbaba1333cb717a50ad04ca3f3ab2207dfac1c673afc91958d0d",
     "source_url": "https://commons.wikimedia.org/wiki/File:Vinegar_Hill_Historic_District,_Brooklyn,_New_York,_US.jpg"
@@ -225,6 +265,10 @@
     "sha256": "b28253ad4d12e24b1e070904e10f99f27f02865dc961661d68a43a05c80dd415",
     "source_url": "https://commons.wikimedia.org/wiki/File:Windsor_Terrace_BPL_jeh.jpg",
     "fetched_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/19/Windsor_Terrace_BPL_jeh.jpg/1280px-Windsor_Terrace_BPL_jeh.jpg"
+  },
+  "wingate-high-school-wingate": {
+    "sha256": "084e6b2f9a0042534a16ee8a99e9f7ce7d520406d8b15b8681cd5b3ec9756f7b",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Wingate_High_School,_Kingston_Ave.,_Brooklyn,_New_York._LOC_gsc.5a23382.jpg"
   },
   "winthrop-shelter-pavilion-greenpoint": {
     "sha256": "8de2ffd02a2abefd4a3447320a8392c47bec1b9d14f1a50e65625394ad3a8c7f",

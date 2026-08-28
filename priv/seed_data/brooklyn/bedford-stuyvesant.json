@@ -1,0 +1,183 @@
+{
+  "guide": {
+    "slug": "bedford-stuyvesant-brooklyn-guide",
+    "title": "Bedford-Stuyvesant, Brooklyn: Victorian Blocks and Restoration Plaza",
+    "destination": "Bedford-Stuyvesant, New York",
+    "state": "New York",
+    "county": "Brooklyn",
+    "tier": "town-page",
+    "intro": "Bedford-Stuyvesant's name joins two formerly separate areas. Bedford was a 17th-century hamlet, itself named for the market town of Bedford in England; Stuyvesant Heights was named for Peter Stuyvesant, the last Director-General of the colony of New Netherland. The two grew together into the unified area now called Bed-Stuy. After the IND Fulton Street Line opened in 1936, African Americans left an overcrowded Harlem for the greater housing availability here, and by 1950 the number of Black residents had risen to about 155,000, roughly 55 percent of the population. Wikipedia describes the neighborhood's roughly 8,800 buildings built before 1900 as the largest intact collection of Victorian architecture in the United States. Since the early 2000s gentrification has shifted the population again and pushed rents upward.",
+    "sections": [
+      {
+        "heading": "Restoration, and the years around it",
+        "body": "A riot took place in Bedford-Stuyvesant in 1964, and further unrest followed in 1967 and 1968, driven by perceptions of the NYPD as oppressive and racially biased.\n\nThe response took an institutional form that outlasted the decade. The Bedford Stuyvesant Restoration Corporation was established in the late 1960s under the leadership of Senator Robert F. Kennedy, and is described as the United States' first community development corporation. Its headquarters campus, Restoration Plaza at 1360 Fulton Street, states on its own site that for more than 57 years Restoration has worked to advance community development and racial equity, and reports roughly 1.5 million plaza visits and more than 60,000 individuals served each year through programs in financial inclusion, small business support, housing, jobs, health, arts and culture.\n\nRestoration Plaza houses the Billie Holiday Theatre, founded in 1972, an AUDELCO and Obie Award-winning Black theater and the first Black theater to transfer a Broadway hit with 50 percent community financing. It reopened in May 2017 with 218 seats after a renovation carried out between 2015 and 2017 by MBB Architects, and received the National Medal of the Arts in 2023.\n\nMuch of the neighborhood's 19th-century fabric is now locally designated. Beyond the Stuyvesant Heights Historic District, the Landmarks Preservation Commission designated the Alice and Agate Courts Historic District on February 10, 2009, the Bedford Historic District on December 8, 2015, and the Willoughby-Hart Historic District on June 25, 2024."
+      },
+      {
+        "heading": "Getting there",
+        "body": "The IND Fulton Street Line runs beneath Fulton Street, and its sources place four of its stations here in Bedford-Stuyvesant. Utica Avenue, at Utica Avenue and Fulton Street, is served by the A at all times, running express by day and local late nights, and by the C at all times except late nights. Nostrand Avenue, at Nostrand Avenue and Fulton Street, has the same pairing: A at all times, C at all times except late nights. Kingston-Throop Avenues, on Fulton Street between Kingston and Throop Avenues, is served by the C at all times except late nights and by the A late nights only. Ralph Avenue, at Ralph Avenue and Fulton Street, carries the same pattern and its source states that the station serves both Bedford-Stuyvesant and Ocean Hill.\n\nFranklin Avenue-Fulton Street, at Franklin Avenue and Fulton Street, is the transfer point between the elevated BMT Franklin Avenue Line and the underground IND Fulton Street Line. The Franklin Avenue Shuttle calls there at all times, along with the C at all times except late nights and the A late nights only.\n\nThe G runs at all times through Bedford-Nostrand Avenues on the IND Crosstown Line, at Lafayette Avenue between Bedford and Nostrand Avenues.\n\nOn the BMT Jamaica Line, Halsey Street at Halsey Street and Broadway is served by the J at all times, and Gates Avenue at Gates Avenue and Broadway by the J at all times except peak-direction rush hours and the Z during peak-direction rush hours only. Both are described by their sources as sitting at the border of Bedford-Stuyvesant and Bushwick rather than definitively inside either.\n\nThe Long Island Rail Road's Nostrand Avenue station, on the Atlantic Branch at Nostrand and Atlantic Avenues, is in Bedford-Stuyvesant."
+      }
+    ],
+    "faq": [
+      {
+        "question": "How do I get to Bedford-Stuyvesant?",
+        "answer": "By subway, most easily on the IND Fulton Street Line under Fulton Street: the A and C stop at Utica Avenue and at Nostrand Avenue, and the C, with the A late nights, stops at Kingston-Throop Avenues and at Ralph Avenue. The G stops at Bedford-Nostrand Avenues, and the J, with the Z at peak-direction rush hours, stops at Halsey Street and Gates Avenue on the Bushwick border. The Long Island Rail Road's Atlantic Branch stops at Nostrand Avenue, at Nostrand and Atlantic Avenues."
+      },
+      {
+        "question": "Where does the name Bedford-Stuyvesant come from?",
+        "answer": "From two formerly separate areas that grew together. Bedford was a 17th-century hamlet named after the market town of Bedford in England. Stuyvesant Heights was named for Peter Stuyvesant, the last Director-General of the colony of New Netherland."
+      },
+      {
+        "question": "Where can I stay in Bedford-Stuyvesant?",
+        "answer": "No hotel was verified in the neighborhood. The nearest verified lodging is Akwaaba Mansion, a bed-and-breakfast in a restored 1860s brownstone at 347 MacDonough Street, which the research places in the Stuyvesant Heights section of Bedford-Stuyvesant."
+      }
+    ],
+    "photos": [
+      {
+        "src": "/photos/ny/brooklyn/bedford-stuyvesant/restoration-plaza-bedford-stuyvesant.jpg",
+        "thumb": "/photos/ny/brooklyn/bedford-stuyvesant/restoration-plaza-bedford-stuyvesant_thumb.jpg",
+        "title": "Restoration Plaza on Fulton Street",
+        "description": "The Restoration Plaza complex on Fulton Street, its stepped forecourt and glazed upper floors seen from across the street.",
+        "author": "Meelar",
+        "license": "CC BY-SA 4.0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:RestoPlaza.jpg"
+      }
+    ]
+  },
+  "places": [
+    {
+      "slug": "restoration-plaza",
+      "name": "Restoration Plaza",
+      "kind": "attraction",
+      "town": "Bedford-Stuyvesant",
+      "state": "New York",
+      "county": "Brooklyn",
+      "address": "1360 Fulton Street, Brooklyn, NY",
+      "official_url": "https://www.restorationplaza.org/",
+      "summary": "The headquarters campus of the Bedford Stuyvesant Restoration Corporation, described as the first community development corporation in the United States. It reports roughly 1.5 million plaza visits a year and more than 60,000 individuals served through programs in financial inclusion, small business support, housing, jobs, health, arts and culture, and it houses the Billie Holiday Theatre.",
+      "history": "The Bedford Stuyvesant Restoration Corporation was established in the late 1960s under the leadership of Senator Robert F. Kennedy. Its own site states that for more than 57 years Restoration has worked to advance community development and racial equity.",
+      "status": "open",
+      "photos": [
+        {
+          "src": "/photos/ny/brooklyn/bedford-stuyvesant/restoration-plaza-bedford-stuyvesant.jpg",
+          "thumb": "/photos/ny/brooklyn/bedford-stuyvesant/restoration-plaza-bedford-stuyvesant_thumb.jpg",
+          "title": "Restoration Plaza on Fulton Street",
+          "description": "The Restoration Plaza complex on Fulton Street, its stepped forecourt and glazed upper floors seen from across the street.",
+          "author": "Meelar",
+          "license": "CC BY-SA 4.0",
+          "source_url": "https://commons.wikimedia.org/wiki/File:RestoPlaza.jpg"
+        }
+      ]
+    },
+    {
+      "slug": "billie-holiday-theatre",
+      "name": "Billie Holiday Theatre",
+      "kind": "theater",
+      "town": "Bedford-Stuyvesant",
+      "state": "New York",
+      "county": "Brooklyn",
+      "address": "1368 Fulton Street, Brooklyn, NY",
+      "summary": "An AUDELCO and Obie Award-winning Black theater inside Restoration Plaza, founded in 1972 and the first Black theater to transfer a Broadway hit with 50 percent community financing.",
+      "history": "The theater reopened in May 2017 with 218 seats after a renovation carried out between 2015 and 2017 by MBB Architects, and received the National Medal of the Arts in 2023.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "herbert-von-king-park",
+      "name": "Herbert Von King Park",
+      "kind": "park",
+      "town": "Bedford-Stuyvesant",
+      "state": "New York",
+      "county": "Brooklyn",
+      "address": "Bounded by Lafayette Avenue, Tompkins Avenue, Greene Avenue and Marcy Avenue, Brooklyn, NY",
+      "summary": "A 7.819-acre park with a baseball diamond, basketball courts, a playground, a dog run and barbecue areas, plus the Herbert Von King Cultural Arts Center and the Almira Kennedy Coursey Amphitheatre.",
+      "history": "The park was established in June 1857 as Tompkins Park, one of Brooklyn's earliest and arguably its first; Calvert Vaux and Frederick Law Olmsted were commissioned to design it in 1871. It was renamed in 1985 for Herbert Von King, a longtime local community organizer. The Cultural Arts Center reopened in 2022 after a $7 million renovation.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "fulton-park-bedford-stuyvesant",
+      "name": "Fulton Park",
+      "kind": "park",
+      "town": "Bedford-Stuyvesant",
+      "state": "New York",
+      "county": "Brooklyn",
+      "address": "Chauncey Street, Brooklyn, NY",
+      "summary": "A small public park on Chauncey Street, named for Robert Fulton, developer of the first commercially viable steamboat.",
+      "history": "The city acquired the land in 1904 for just over $300,000.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "peaches-kitchen-and-bar",
+      "name": "Peaches Kitchen & Bar",
+      "kind": "restaurant",
+      "town": "Bedford-Stuyvesant",
+      "state": "New York",
+      "county": "Brooklyn",
+      "address": "393 Lewis Avenue, Brooklyn, NY 11233",
+      "official_url": "http://bcrestaurantgroup.getbento.com/location/peaches-kitchen-bar/",
+      "summary": "A neighborhood restaurant from B+C Restaurant Group serving dishes drawn from the American South, founded by Marietta 'Peaches' Cade.",
+      "status": "open",
+      "photos": []
+    }
+  ],
+  "entries": [
+    {
+      "kind": "sight",
+      "name": "Restoration Plaza",
+      "place_slug": "restoration-plaza",
+      "note": "The campus of the corporation described as the first community development corporation in the United States, on Fulton Street."
+    },
+    {
+      "kind": "sight",
+      "name": "Billie Holiday Theatre",
+      "place_slug": "billie-holiday-theatre",
+      "note": "Founded in 1972 inside Restoration Plaza, and awarded the National Medal of the Arts in 2023."
+    },
+    {
+      "kind": "walk",
+      "name": "Herbert Von King Park",
+      "place_slug": "herbert-von-king-park",
+      "note": "Laid out in 1857 as Tompkins Park; Vaux and Olmsted were commissioned to design it in 1871."
+    },
+    {
+      "kind": "walk",
+      "name": "Fulton Park",
+      "place_slug": "fulton-park-bedford-stuyvesant",
+      "note": "A Chauncey Street park the city bought in 1904, named for the steamboat developer Robert Fulton."
+    },
+    {
+      "kind": "food",
+      "name": "Peaches Kitchen & Bar",
+      "place_slug": "peaches-kitchen-and-bar",
+      "note": "Southern cooking on Lewis Avenue, from the group founded by Marietta 'Peaches' Cade."
+    }
+  ],
+  "links": [
+    {
+      "target": "guide:clinton-hill-brooklyn-guide",
+      "kind": "nearby",
+      "note": "Classon Avenue on the G sits on the border of Bedford-Stuyvesant and Clinton Hill, at Classon and Lafayette Avenues."
+    },
+    {
+      "target": "guide:ocean-hill-brooklyn-guide",
+      "kind": "nearby",
+      "note": "The Ralph Avenue station, at Ralph Avenue and Fulton Street, is described as serving both Bedford-Stuyvesant and Ocean Hill."
+    },
+    {
+      "target": "guide:bushwick-brooklyn-guide",
+      "kind": "nearby",
+      "note": "Halsey Street and Gates Avenue on the Jamaica Line both sit at the border of Bedford-Stuyvesant and Bushwick."
+    },
+    {
+      "target": "guide:stuyvesant-heights-brooklyn-guide",
+      "kind": "same-region",
+      "note": "Akwaaba Mansion, the nearest verified lodging, is at 347 MacDonough Street in the Stuyvesant Heights section of Bed-Stuy."
+    },
+    {
+      "target": "guide:weeksville-brooklyn-guide",
+      "kind": "shared-history",
+      "note": "The LPC's 1970 report calls Weeksville the first major free Black settlement in the area now known as Bedford-Stuyvesant."
+    }
+  ]
+}
