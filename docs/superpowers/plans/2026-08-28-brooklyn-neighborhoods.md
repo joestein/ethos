@@ -607,7 +607,7 @@ Create these four files under `test/support/fixtures/seed_data/brooklyn_fixtures
 }
 ```
 
-`below_floor.json` — an orientation page violating both floor rules (a 17-word intro and one outbound link):
+`below_floor.json` — an orientation page violating both floor rules, with an intro far under 90 words and only one outbound link:
 
 ```json
 {
