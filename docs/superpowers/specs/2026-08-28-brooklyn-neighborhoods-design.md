@@ -205,14 +205,21 @@ No migration. No schema change. No new routes.
 The Connecticut gate ported, plus one fix and one new ban.
 
 **Fix — global place-slug ownership.** `places` carries
-`unique_index(:places, [:slug])`, so slugs are unique across the entire site.
-But `manhattan_seed_data_test.exs` and `connecticut_seed_data_test.exs` each
-check ownership only *within their own directory*. A Brooklyn place slug
-colliding with an existing Manhattan or Connecticut slug would pass every test
-and then fail at seed time in production, partway through a run that is not
-transactional. The Brooklyn gate checks slug ownership across `brooklyn/`,
-`manhattan/` and `connecticut/` together. Real collision candidates exist:
-Brooklyn has a Sunset Park, a Marine Park and a Washington Park.
+`unique_index(:places, [:slug])`, so slugs are unique across the entire site,
+but the tests check ownership against a hardcoded list of directories.
+`connecticut_seed_data_test.exs` globs `connecticut/` and `manhattan/` plus the
+CT code module; `manhattan_seed_data_test.exs` globs only `manhattan/`. Neither
+would see a Brooklyn collision, and the pattern does not scale — every new
+destination requires remembering to amend every sibling test.
+
+The check moves into one shared helper that walks `priv/seed_data/*/*.json`
+plus `Ethos.Seeds.ConnecticutPlaces.places/0`, asserting every place slug has
+exactly one owner across the whole corpus. Each destination's test calls it;
+adding a destination directory extends the coverage automatically. Without
+this, a colliding slug passes every test and then fails at seed time in
+production, partway through a run that is not transactional. Real collision
+candidates exist: Brooklyn has a Sunset Park, a Marine Park and a Washington
+Park, and Manhattan Beach is in Brooklyn.
 
 **New — trip-duration ban.** A scan over the Brooklyn seed JSON and the Elixir
 seed modules rejecting minute- and hour-based transit duration claims, keyed on
