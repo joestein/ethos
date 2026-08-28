@@ -15,13 +15,23 @@ from either, this file wins.
 Two things are worth knowing before you start. First, the Connecticut
 program proved that a prose rule restated in every dispatch and checked in
 every review is **not** enough: 58 unverifiable drive-time claims reached the
-live site across 28 committed files anyway. Everything mechanically
-checkable here is therefore also a gate in
-`test/ethos/seeds/brooklyn_seed_data_test.exs`, and section 16 maps every
-gate assertion to the rule it enforces. Second, the rules that a machine
-cannot check are written to be checkable by a **reviewer without a judgment
-call**. If you find yourself deciding whether something "feels" compliant,
-you have found a defect in this document — say so in your wave report.
+live site across 28 committed files anyway. The rules here that catch
+**drift** — a fixed string quietly reverting to Manhattan's, a required
+element going missing, an unverifiable claim creeping in — are therefore
+also gates in `test/ethos/seeds/brooklyn_seed_data_test.exs`.
+
+But not every rule is gated, deliberately. Rules that describe an
+**editorial range** — intro word ceilings, place and entry counts, photo
+counts — are left to the wave review. A gate that fails a build over a
+165-word intro is a gate somebody eventually weakens, and a weakened suite
+is worse than an ungated range. **Section 16 tells you exactly which rules
+the machine catches and which the reviewer catches. Read it before you
+assume a green gate means a compliant file.**
+
+Second, the rules a machine does not check are written to be checkable by a
+**reviewer without a judgment call**. If you find yourself deciding whether
+something "feels" compliant, you have found a defect in this document — say
+so in your wave report.
 
 ---
 
@@ -206,11 +216,17 @@ python3 -c "import json,sys; print(len(json.load(open(sys.argv[1]))['guide']['in
    waterfront, an industrial legacy, a "Where to stay" note per rule 7).
    Do not invent a third section to reach three.
 
-**FAQ** — four to six entries. One must be exactly
+**FAQ** — four to six entries. One must be
 **`How do I get to {Neighborhood}?`** — not "by subway", since Brooklyn's
 answer is not always a subway. Every other question is answered from
 verified material only: name origins, whether a named place is still open,
 where to stay, which park is which.
+
+**The transit question is gated** on both tiers: every file's FAQ must carry
+a question matching `how do i get to` (case-insensitive). The match is loose
+on purpose — "How do I get to Red Hook without a subway?" satisfies it — so
+the gate catches the entry *going missing*, not its wording. The count (4-6,
+or 2-3 on an orientation page) is not gated; that is the wave review's.
 
 **Places** — six to twelve, each with a `kind` from rule 10, `town` set to
 the neighborhood display name, address and `official_url` taken only from
@@ -251,8 +267,14 @@ unverifiable claim in this program.
 
 The heading is exactly `Getting there` — lowercase `t` in "there", no
 trailing mode. Not `Getting There`, not `Getting there by subway`, not
-`Getting around`. Same string on full guides and orientation pages. A
-reviewer checks this by string equality.
+`Getting around`. Same string on full guides and orientation pages.
+
+**This is gated.** Every committed file must carry a section whose heading
+is byte-for-byte `Getting there`; the gate fails with the offending file and
+the headings it actually has. The assertion exists because this is the most
+likely drift in the whole program: you will have read Manhattan guides that
+all say `Getting there by subway`, and the heading does not drift alone — it
+takes the entire multi-modal rule in 6.2 and 6.3 with it.
 
 ### 6.2 What to name, in this order
 
@@ -459,8 +481,9 @@ The honest format for a neighborhood with fewer than 6 surviving places.
   verified history facts only. Same voice as a full guide, same word-count
   method (rule 5).
 - **Sections** — a `Getting there` section, per rule 6, on the same terms as
-  a full guide. An optional second section only where the research genuinely
-  supports one.
+  a full guide. **Both of rule 6's gates apply to orientation pages too**:
+  the exact heading, and the trip-duration ban. An optional second section
+  only where the research genuinely supports one.
 - **"What's here"** — list every verified place, however few. If the
   neighborhood yields **zero** verified places, ship `"places": []` and
   `"entries": []`; the template omits the section rather than rendering it
@@ -468,7 +491,7 @@ The honest format for a neighborhood with fewer than 6 surviving places.
 - **A Nearby block** — the `links` array (rule 11), rendered as the page's
   onward navigation.
 - **FAQ** — two to three entries, one of which is
-  `How do I get to {Neighborhood}?`.
+  `How do I get to {Neighborhood}?` (gated, per rule 5).
 - **Photos** — at most one, and only if a free-licensed candidate for *that
   neighborhood* exists. Otherwise `"photos": []`. Do not reach for a loosely
   related image from a neighbouring neighborhood.
@@ -824,6 +847,8 @@ Use this when a gate goes red, and when reviewing a wave.
 | `tier_violations` — guide with < 4 places; town-page with ≥ 6 | 3 |
 | `floor_violations` — town-page intro < 90 words | 8 |
 | `floor_violations` — town-page with < 3 links | 8, 7 |
+| `getting_there_violations` — every file has a section headed exactly `Getting there` (both tiers) | 6.1 |
+| `transit_faq_violations` — every file's FAQ has a question matching `/how do i get to/i` (both tiers) | 5, 8 |
 | `trip_duration_violations` — ten patterns over every string in every file | 6.4, 6.6, 6.7 |
 | `@trip_duration_allowlist` — `{file, path, phrase}` tuples | 6.8 |
 | `label_dups` — one label may not carry two `source_url`s | 12 |
@@ -841,21 +866,24 @@ Use this when a gate goes red, and when reviewing a wave.
 | published Brooklyn guides == committed file count (`county == "Brooklyn"`) | 4 |
 
 **Rules with no gate behind them.** These leak unless a human checks them,
-and the per-wave fact-fidelity reviewer is that human:
+and the per-wave fact-fidelity reviewer is that human. **A green gate does
+not mean a compliant file** — it means nothing in this table was checked.
 
 | Rule | Unenforced part |
 | --- | --- |
 | 2 | All verdict filtering — nothing mechanical can tell a verified fact from an invented one |
 | 3 | The 6-place threshold itself (the gate only fails clear mislabels: guide < 4, town-page ≥ 6) |
-| 5 | Intro 100-160 words; 2-3 sections; FAQ 4-6; places 6-12; entries 6-12 |
-| 6 | The heading string `Getting there`; the proximity rule; mode coverage; service caveats |
+| 5 | **Intro 100-160 words**; 2-3 sections; **FAQ count 4-6**; **places 6-12**; **entries 6-12** |
+| 6 | The proximity rule (6.3); mode coverage (6.2); service caveats (6.5); the regexes' known gaps (6.6) |
 | 7 | Hotel-in-neighborhood requirement and the "Where to stay" note |
-| 8 | Intro ≤ 130 words; FAQ 2-3; at most one photo; the omission decision |
+| 8 | **Intro 90-130 words** (only the 90 floor is gated, never the ceiling); **FAQ count 2-3**; **at most one photo**; the omission decision |
 | 11 | `nearby` meaning a shared border; notes tracing to research |
-| 12 | Photo counts (2-4 / at most 1); attribution copied verbatim |
+| 12 | **Photo counts (2-4 on guides, ≤ 1 on orientation pages)**; attribution copied verbatim |
 | 13 | Boundary language |
 | 15 | The whole copy bar |
 
-The full-guide intro **ceiling** (160 words) and the orientation ceiling
-(130) have no gate — only the town-page 90-word floor does. Count them
-yourself with the command in rule 5.
+The **bolded** entries are the ranges and counts left ungated on purpose.
+They are mechanizable, and were considered and declined: a build that fails
+over a 165-word intro or a thirteenth place is a build somebody eventually
+weakens, and a weakened suite protects nothing. Drift gets a gate; range
+gets a reviewer. Count them yourself with the command in rule 5.

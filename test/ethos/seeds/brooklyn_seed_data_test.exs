@@ -129,6 +129,37 @@ defmodule Ethos.Seeds.BrooklynSeedDataTest do
         do: {Path.basename(f), p["license"]}
   end
 
+  # Brooklyn heads this section "Getting there", not Manhattan's uniform
+  # "Getting there by subway" — because in Brooklyn the subway is often not
+  # the answer. Red Hook has no station at all; Greenpoint and the
+  # Williamsburg waterfront are ferry-first; East New York has an LIRR stop.
+  # Eight waves of authors will have read 38 Manhattan guides that all use
+  # the subway heading, so drifting back to it is the single most likely
+  # regression in this program — and the heading does not drift alone, it
+  # takes the whole multi-modal transit rule with it. Both tiers carry the
+  # section: an orientation page has one too.
+  defp getting_there_violations(paths) do
+    for f <- paths,
+        data = DataGuide.load!(f),
+        headings = Enum.map(data["guide"]["sections"] || [], & &1["heading"]),
+        "Getting there" not in headings,
+        do: {Path.basename(f), headings}
+  end
+
+  # The one FAQ entry the content rules make mandatory, on both tiers.
+  # Matched loosely on purpose: the rules fix the question as "How do I get
+  # to {Neighborhood}?", but a wave that writes "How do I get to Red Hook
+  # without a subway?" has still answered it, and pinning the exact string
+  # would fail that file for no reason. This catches the entry going missing,
+  # not its wording.
+  defp transit_faq_violations(paths) do
+    for f <- paths,
+        data = DataGuide.load!(f),
+        questions = Enum.map(data["guide"]["faq"] || [], & &1["question"]),
+        not Enum.any?(questions, &(is_binary(&1) and Regex.match?(~r/how do i get to/i, &1))),
+        do: {Path.basename(f), questions}
+  end
+
   # --- The assertions fire (proven against fixtures) ----------------------
 
   test "the trip-duration ban catches a duration claim" do
@@ -166,6 +197,13 @@ defmodule Ethos.Seeds.BrooklynSeedDataTest do
     assert license_violations(files) == []
     assert tier_violations(files) == [], "tier does not match place count"
     assert floor_violations(files) == [], "orientation pages below the floor"
+
+    assert getting_there_violations(files) == [],
+           "guides with no section headed exactly \"Getting there\" (Brooklyn does not use " <>
+             "Manhattan's \"Getting there by subway\" — the heading is the whole multi-modal rule)"
+
+    assert transit_faq_violations(files) == [],
+           "guides whose FAQ has no \"How do I get to ...?\" question"
 
     assert trip_duration_violations(files) == [],
            "trip-duration phrasing found (banned — name the line, station or ferry landing " <>
