@@ -23,9 +23,21 @@
     "sha256": "968cc60d4c244e493300a6b2c863442f0befaaafd31eddd973df871f897977ca",
     "source_url": "https://commons.wikimedia.org/wiki/File:BLDG_92_BNY_jeh.jpg"
   },
+  "carroll-park-carroll-gardens": {
+    "sha256": "dbf2d6df5504a86cc39144ef4902357c9113670143879d496ba5cab688f2def4",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Carroll_Park_jeh.JPG"
+  },
   "clinton-hill-historic-district-clinton-hill": {
     "sha256": "b772534ffeb7f3174b1e6c91df5208ec1da57c30fadb6b1622ac395aee012551",
     "source_url": "https://commons.wikimedia.org/wiki/File:Clinton_Hill_Historic_District.JPG"
+  },
+  "coignet-stone-company-building-gowanus": {
+    "sha256": "39b6293f34f3a82666958a7fa6485f3bf2edd9b8f001ecde5385a8b499d3af3a",
+    "source_url": "https://commons.wikimedia.org/wiki/File:NY_n_LI_Coignet_Stone_jeh.jpg"
+  },
+  "columbia-street-waterfront-district-streetscape": {
+    "sha256": "7c1f8dcd95c78a4607cb57239e98d408e93c67de3a066c83ba5ece917e8902f1",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Columbia_Street_Waterfront_District.jpg"
   },
   "court-street-downtown-brooklyn": {
     "sha256": "986ea0baa18e843d14b689346f487c5e012c0e3036f84123660a0981d2d14390",
@@ -43,6 +55,10 @@
     "sha256": "c7d3770ae36ce08070cfcf0d4783e04983cbe030b14257c3ca33c7538547d473",
     "source_url": "https://commons.wikimedia.org/wiki/File:Emmanuel_Baptist_Church.jpg"
   },
+  "erie-basin-piers-red-hook": {
+    "sha256": "c35946c895a954934f65d5d07d0cee4309e08e3a1e85fe91ec0018515e62fe62",
+    "source_url": "https://commons.wikimedia.org/wiki/File:RedHookByLuigiNovi_P1.jpg"
+  },
   "fort-greene-park-fort-greene": {
     "sha256": "7b957f4edc78cb786690b829c486192d41135436d935998592a856ad2a49cde3",
     "source_url": "https://commons.wikimedia.org/wiki/File:Fort_Greene_Park_in_Autumn.jpg"
@@ -55,6 +71,14 @@
     "sha256": "617063a7c3d8857ccd0717e866a0d05540920df53738817bd741ff2b334271c5",
     "source_url": "https://commons.wikimedia.org/wiki/File:Fulton_Mall_Brooklyn.jpg"
   },
+  "green-wood-cemetery-gate-greenwood": {
+    "sha256": "dded3ee22e600bcd3ef7cec827816ef9d76d08a2ab5e926b3619cc5f614543c7",
+    "source_url": "https://commons.wikimedia.org/wiki/File:2015_Green-Wood_Cemetery_Gate_from_outside.jpg"
+  },
+  "green-wood-chapel-greenwood": {
+    "sha256": "e0fb660ca2ffe09a6ac4ab41649aa6b74556daace6a60dc3556c611ad24a49aa",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Green-Wood_Cemetery_Chapel.jpg"
+  },
   "highland-park-entrance-highland-park": {
     "sha256": "724cb74913a228c3b903800445ba78357d33cf1c4a75f81f1b23e3dd14627c12",
     "source_url": "https://commons.wikimedia.org/wiki/File:HighlandparkBrooklyn.jpg"
@@ -62,6 +86,10 @@
   "hotel-bossert-brooklyn-heights": {
     "sha256": "f11aee4a05c8d6702b2ec3ac02e4f67d02177b8cf94876200bfb459e56398822",
     "source_url": "https://commons.wikimedia.org/wiki/File:Hotel_Bossert_Hicks_Montague_jeh.jpg"
+  },
+  "john-rankin-house-carroll-gardens": {
+    "sha256": "d8f63c272ecce1edda6239a72c205a46a371fd41d5849c96efae1257801e0a46",
+    "source_url": "https://commons.wikimedia.org/wiki/File:John_Rankin_House_440_Clinton_Street_Brooklyn.jpg"
   },
   "kane-street-synagogue-cobble-hill": {
     "sha256": "2b528715a68c9ea99ff3b66685e1eedac58e36cb5e831eb6a9dc12c453733bcf",
@@ -91,9 +119,21 @@
     "sha256": "b5275d59fda206d6cdf4ae8545d7f34c6ce0ddb6d591424b3af56c42758ea8a9",
     "source_url": "https://commons.wikimedia.org/wiki/File:Maria_Hernandez_Park_June_2021_center_plaza.jpg"
   },
+  "minerva-battle-hill-greenwood": {
+    "sha256": "128699b9f73e8f54215b778dd263aeb42e90ebb5c15748973d209b42a7a82d50",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Minerva_in_Green-wood_Cemetery_waving_to_Lady_Liberty.JPG"
+  },
+  "montauk-club-park-slope": {
+    "sha256": "1493e5996471903568b3d0350bab986eae8ff3e5cc7f560adcb13dd0e9ce0b5a",
+    "source_url": "https://commons.wikimedia.org/wiki/File:19950701_35_Montauk_Club,_Park_Slope,_Brooklyn,_NY.jpg"
+  },
   "new-lots-community-church-new-lots": {
     "sha256": "d4e825a3c2e17d125b5baac853b808619fb540c96f37e19b68013eaa9dc747af",
     "source_url": "https://commons.wikimedia.org/wiki/File:New_Lots_Community_Church_jeh.jpg"
+  },
+  "old-stone-house-park-slope": {
+    "sha256": "e0ad94c94d815ee896291e7e59e340aa698a3e2c31219a6991f265064922a7f6",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Old_Stone_House_Brooklyn_NY.jpg"
   },
   "pacific-branch-library-boerum-hill": {
     "sha256": "f548f174e081e400e9b6f37c9c4d38c634f81418b006e19ba987dae548e79856",
@@ -119,9 +159,29 @@
     "sha256": "2ac4397eaec73c7ccd1b5411d96f5f88ea7b5de01f7a1f19a046f874b28ab993",
     "source_url": "https://commons.wikimedia.org/wiki/File:Pulaski_Bridge_from_west_jeh.JPG"
   },
+  "red-hook-war-memorial-red-hook": {
+    "sha256": "a988a5cc42e6a02ab98c5c111027f9e7becb382389f5e6b653bdf1f644675810",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Red_Hook_Memorial_Doughboy_1.jpg"
+  },
+  "smith-ninth-streets-station-gowanus": {
+    "sha256": "9c2c1f3ef04e5dee581ae0444e18e3e4d7d4f1662b4206bf646efe38d73fe50f",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Gowanus_Exy_Smith-Ninth_06.jpg"
+  },
+  "soldiers-and-sailors-arch-park-slope": {
+    "sha256": "b742a7e4d95c0bb90402f79bf987b1528cea172cc80bd5c2aa7a1fed34527b33",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Soldiers_and_Sailors_Memorial_Arch_December_2006.jpg"
+  },
+  "soldiers-and-sailors-arch-quadriga-park-slope": {
+    "sha256": "d3ab4270c10a818576c8547a93ce2c0eab3d5d32e9d24d97f3e4ac897172dcd8",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Brooklyn_Grand_Army_Plaza_Arch_Quadriga.JPG"
+  },
   "st-barbaras-church-bushwick": {
     "sha256": "ed7603423a32685859c768922c4176c420fc19e5c6e4ea7639b9d48137220b5f",
     "source_url": "https://commons.wikimedia.org/wiki/File:Saint_Barbara's_Church_(Brooklyn)_2.jpg"
+  },
+  "st-mary-star-of-the-sea-carroll-gardens": {
+    "sha256": "25550153241464a335d0c0e9f4f71468697277be761d8faf4ac7d6342fd3d6ce",
+    "source_url": "https://commons.wikimedia.org/wiki/File:St._Mary_Star_of_the_Sea_Brooklyn.jpg"
   },
   "st-marys-episcopal-church-clinton-hill": {
     "sha256": "4a70ea571f3a1678829743edbb1f17ab36d74304d100dea6ea139a019d734986",
@@ -134,6 +194,10 @@
   "st-sylvester-church-city-line": {
     "sha256": "d1d73d17996380b0a9c7a9c0df14c8130abf8d67cede4ac0bc1f690ff25eb24b",
     "source_url": "https://commons.wikimedia.org/wiki/File:St_Sylvester_Church_in_City_Line,Brooklyn.jpg"
+  },
+  "sunnys-bar-red-hook": {
+    "sha256": "42091e42582227149f0cf4453c6e7f3d2bd4fde5d48708ddf002805238978707",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Sunny%27s_Bar.jpg"
   },
   "vinegar-hill-historic-district-vinegar-hill": {
     "sha256": "e050f75f990dcbaba1333cb717a50ad04ca3f3ab2207dfac1c673afc91958d0d",
@@ -150,6 +214,10 @@
   "williamsburgh-savings-bank-williamsburg": {
     "sha256": "dc45e11b3fdc920a4f9505a5ea65f395d31553e4c0132b935488551825be075e",
     "source_url": "https://commons.wikimedia.org/wiki/File:Billyb_Sav_Bank_dome_bright_jeh.JPG"
+  },
+  "windsor-terrace-library-windsor-terrace": {
+    "sha256": "b28253ad4d12e24b1e070904e10f99f27f02865dc961661d68a43a05c80dd415",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Windsor_Terrace_BPL_jeh.jpg"
   },
   "winthrop-shelter-pavilion-greenpoint": {
     "sha256": "8de2ffd02a2abefd4a3447320a8392c47bec1b9d14f1a50e65625394ad3a8c7f",

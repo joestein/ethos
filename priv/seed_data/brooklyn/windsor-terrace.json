@@ -1,0 +1,130 @@
+{
+  "guide": {
+    "slug": "windsor-terrace-brooklyn-guide",
+    "title": "Windsor Terrace, Brooklyn: Forty-Nine Pleasant Cottage Lots",
+    "destination": "Windsor Terrace, New York",
+    "state": "New York",
+    "county": "Brooklyn",
+    "tier": "town-page",
+    "intro": "Windsor Terrace began as a speculative suburban development. In 1849 the real estate developer Robert Bell purchased the Vanderbilt farm and gave the tract the name Windsor Terrace. Bell sold the site to Edward Belknap in 1851, and Belknap opened four new streets, Seeley Street, Vanderbilt Street, Adams Street, now Reeve Place, and Short Street, now Prospect Avenue, then had the property divided into 49 building lots he called Pleasant Cottage sites. The Brooklyn Daily Eagle first referred to the area as Windsor Terrace in March 1854. Belknap and his business associates lost interest in 1856, and by 1860 there were only about a dozen houses and 30 people living in the neighborhood. The construction of Prospect Park in the 1860s changed that.",
+    "sections": [
+      {
+        "heading": "Irish blocks, trolley lines, and an expressway",
+        "body": "After the Civil War, large numbers of Irish immigrants, mostly from County Longford and County Cavan, settled here. Holy Name Church was erected on Prospect Park West, then called Ninth Avenue, in 1878, and its school opened in 1885; a public school had opened in 1876 and a Protestant chapel and Sunday school in 1874. By 1890 there were about 150 houses.\n\nTrolley lines on Ninth Avenue and 15th Street spurred building in the early 1900s. The developer William M. Calder built and sold roughly 700 houses in Windsor Terrace between 1902 and 1919, and factories including the Pilgrim Laundry, which opened in 1894 at Prospect and 11th Avenues, worked the southern end near Green-Wood Cemetery.\n\nFire protection changed hands in the same decade. The volunteer Windsor Hose Company No. 3 was organised in January 1888 and quartered at 1286 Prospect Avenue; it was mustered out when the new Engine Company 40 was completed, and the last public event at the old firehouse was a reception on January 2, 1896.\n\nThe 1950s took a great deal back. Construction of the Prospect Expressway led to the demolition of many houses, churches, and commercial and industrial buildings. The community had greater success fighting development pressure in the 1980s and 1990s. Isaac Asimov and the journalists Pete and Denis Hamill lived here, and Dog Day Afternoon, As Good As It Gets, Angie, Pollock and Smoke were all filmed in the neighborhood."
+      },
+      {
+        "heading": "Getting there",
+        "body": "Two IND Culver Line stations carry the F and G. Fort Hamilton Parkway is located in Windsor Terrace. 15th Street-Prospect Park has its locale given as Windsor Terrace and Park Slope, straddling both neighborhoods.\n\nBoth opened in 1933, and the arrival of the two stations led to the replacement of many older houses with apartment buildings, a shift that continued after the Second World War."
+      }
+    ],
+    "faq": [
+      {
+        "question": "How do I get to Windsor Terrace?",
+        "answer": "Take the F or G. Fort Hamilton Parkway is located in Windsor Terrace, and 15th Street-Prospect Park straddles Windsor Terrace and Park Slope. Both stations opened in 1933."
+      },
+      {
+        "question": "Where does the name Windsor Terrace come from?",
+        "answer": "From the developer Robert Bell, who purchased the Vanderbilt farm in 1849 and named it Windsor Terrace. The Brooklyn Daily Eagle first used the name in print in March 1854. Sources differ on the developer's first name: Wikipedia gives William Bell, while the Landmarks Preservation Commission's designation report gives Robert."
+      },
+      {
+        "question": "Which park borders Windsor Terrace?",
+        "answer": "Prospect Park, along Prospect Park West and Prospect Park Southwest. The Landmarks Preservation Commission's history of the neighborhood describes Windsor Terrace as set between Prospect Park and Green-Wood Cemetery."
+      }
+    ],
+    "photos": [
+      {
+        "src": "/photos/ny/brooklyn/windsor-terrace/windsor-terrace-library-windsor-terrace.jpg",
+        "thumb": "/photos/ny/brooklyn/windsor-terrace/windsor-terrace-library-windsor-terrace_thumb.jpg",
+        "title": "Windsor Terrace branch, Brooklyn Public Library",
+        "description": "The low brick and stone front of a Brooklyn Public Library branch, its glazed entrance set behind an iron fence.",
+        "author": "Jim.henderson",
+        "license": "CC0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Windsor_Terrace_BPL_jeh.jpg"
+      }
+    ]
+  },
+  "places": [
+    {
+      "slug": "bartel-pritchard-square",
+      "name": "Bartel-Pritchard Square",
+      "kind": "park",
+      "town": "Windsor Terrace",
+      "state": "New York",
+      "county": "Brooklyn",
+      "address": "Junction of Prospect Park West, Prospect Park Southwest and 15th Street, Brooklyn, NY",
+      "official_url": "https://www.nycgovparks.org/parks/bartel-pritchard-square",
+      "summary": "A traffic circle at the southwest entrance to Prospect Park, holding a war memorial.",
+      "history": "Named for Emil Bartel and William Pritchard, two friends from the community who were killed in combat in France during the First World War. A black granite tablet inscribed 'For Valor and Sacrifice' was dedicated here in 1965.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "engine-company-240-firehouse",
+      "name": "Engine Company 240 Firehouse",
+      "kind": "historic-site",
+      "town": "Windsor Terrace",
+      "state": "New York",
+      "county": "Brooklyn",
+      "address": "1307-1309 Prospect Avenue, Brooklyn, NY",
+      "official_url": "http://www.nyc.gov/html/lpc/downloads/pdf/reports/2526.pdf",
+      "summary": "An active FDNY firehouse, viewable from the exterior. Built for Engine Company 40 and Hook & Ladder Company 21, it houses Engine Company 240 today and has also housed Battalion 48 since 1978.",
+      "history": "Built in 1895 to designs by Peter J. Lauritzen, who was born in Jutland, Denmark, in the Romanesque Revival style, as part of Fire Commissioner Frederick W. Wurster's campaign. It was designated an individual New York City Landmark on February 12, 2013 as LP-2526.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "farrells-bar-and-grill",
+      "name": "Farrell's Bar & Grill",
+      "kind": "cafe",
+      "town": "Windsor Terrace",
+      "state": "New York",
+      "county": "Brooklyn",
+      "address": "215 Prospect Park West at 16th Street, Brooklyn, NY",
+      "summary": "A neighborhood bar that opened in 1933, known for its pressed-tin ceiling and for serving beer in 32-ounce containers. It remains an active neighborhood institution.",
+      "status": "open",
+      "photos": []
+    }
+  ],
+  "entries": [
+    {
+      "kind": "walk",
+      "name": "Bartel-Pritchard Square",
+      "place_slug": "bartel-pritchard-square",
+      "note": "The circle at Prospect Park's southwest entrance, named for two neighborhood friends killed in France, with a 1965 granite tablet."
+    },
+    {
+      "kind": "sight",
+      "name": "Engine Company 240 Firehouse",
+      "place_slug": "engine-company-240-firehouse",
+      "note": "Peter J. Lauritzen's 1895 firehouse on Prospect Avenue, landmarked in 2013 and still answering calls."
+    },
+    {
+      "kind": "food",
+      "name": "Farrell's Bar & Grill",
+      "place_slug": "farrells-bar-and-grill",
+      "note": "Open on Prospect Park West since 1933, with a pressed-tin ceiling overhead and beer served in 32-ounce containers."
+    }
+  ],
+  "links": [
+    {
+      "target": "place:prospect-park",
+      "kind": "nearby",
+      "note": "Prospect Park borders Windsor Terrace along Prospect Park West and Prospect Park Southwest."
+    },
+    {
+      "target": "guide:greenwood-brooklyn-guide",
+      "kind": "nearby",
+      "note": "The Landmarks Preservation Commission's history describes Windsor Terrace as set between Prospect Park and Green-Wood Cemetery."
+    },
+    {
+      "target": "guide:gowanus-brooklyn-guide",
+      "kind": "same-region",
+      "note": "The B61 serves Windsor Terrace, Park Slope, Gowanus, Red Hook, Cobble Hill, Boerum Hill and Downtown Brooklyn."
+    },
+    {
+      "target": "guide:cobble-hill-brooklyn-guide",
+      "kind": "same-region",
+      "note": "Cobble Hill is one of the neighborhoods the B61 links to Windsor Terrace on its way into Downtown Brooklyn."
+    }
+  ]
+}
