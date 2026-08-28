@@ -1,16 +1,26 @@
 defmodule Ethos.PhotoOptimizer do
   @moduledoc """
   Resizes a source image into a web-optimized JPEG pair: a full-size image
-  bounded to `#{1600}`px on its long edge, and a thumbnail bounded to
-  `#{480}`px, both re-encoded as JPEG at quality 82.
+  whose long edge is capped at `#{1600}`px, and a thumbnail whose long edge
+  is capped at `#{480}`px, both re-encoded as JPEG at quality 82. A source
+  already smaller than the cap is left at its native size — it is never
+  enlarged to fill the bound.
 
   Uses `Vix.Vips.Operation.thumbnail/3`, which — when given both `width`
-  and the `height` option (and the default `size: :VIPS_SIZE_BOTH`) —
-  shrinks the source to fit within that `width x height` box while
-  preserving aspect ratio. Passing the same value for both width and the
-  `height` option therefore caps the long edge, whichever dimension that
-  is. Output is written with `Vix.Vips.Image.write_to_file/3`, which
-  accepts saver options (`Q: 82`) directly since Vix 0.32.0.
+  and the `height` option — fits the source to that `width x height` box
+  while preserving aspect ratio. Passing the same value for both width and
+  the `height` option therefore caps the long edge, whichever dimension
+  that is.
+
+  `size: :VIPS_SIZE_DOWN` is essential and must not be dropped. Under the
+  default `size: :VIPS_SIZE_BOTH`, vips *enlarges* a source smaller than
+  the box as readily as it shrinks a larger one, so a 500px source would be
+  upscaled to 1600px and served visibly soft. `:VIPS_SIZE_DOWN` shrinks but
+  never enlarges. Consequently the output long edge is `min(source long
+  edge, bound)`, not always the bound.
+
+  Output is written with `Vix.Vips.Image.write_to_file/3`, which accepts
+  saver options (`Q: 82`) directly since Vix 0.32.0.
   """
 
   @full_edge 1600
@@ -38,7 +48,11 @@ defmodule Ethos.PhotoOptimizer do
     # Note: vips thumbnail auto-rotates by EXIF orientation. Sources must
     # either carry a correct tag or none — a stale tag on already-upright
     # pixels double-rotates the output (strip such tags from sources).
-    with {:ok, image} <- Vix.Vips.Operation.thumbnail(src_path, max_edge, height: max_edge),
+    with {:ok, image} <-
+           Vix.Vips.Operation.thumbnail(src_path, max_edge,
+             height: max_edge,
+             size: :VIPS_SIZE_DOWN
+           ),
          :ok <- Vix.Vips.Image.write_to_file(image, out_path, Q: @quality) do
       {:ok, out_path}
     end
