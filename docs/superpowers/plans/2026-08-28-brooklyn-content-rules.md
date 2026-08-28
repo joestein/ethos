@@ -116,7 +116,7 @@ Apply this to every item before you write a single line of copy.
   check the clause, not the sentence. And where a verifier quotes its
   source verbatim, **where the quotation stops is the edge of what is
   confirmed** — a finder sentence that runs on past the closing quotation
-  mark runs on past the evidence. Wave 3 checked twelve style clauses this
+  mark runs on past the evidence. Wave 3 checked thirteen style clauses this
   way: four survived because a verdict genuinely restated them (Vinegar
   Hill's Federal/Greek Revival, quoted verbatim from the LPC report in the
   verdict's own reason; Clinton Hill's Gothic Revival, in two verdicts),
