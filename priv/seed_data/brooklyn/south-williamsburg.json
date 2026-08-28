@@ -14,7 +14,7 @@
       },
       {
         "heading": "Getting there",
-        "body": "The neighborhood's subway service runs along Broadway, on the elevated BMT Jamaica Line, and the sources consulted describe these stations broadly rather than as South Williamsburg's own.\n\nMarcy Avenue, at Marcy Avenue and Broadway, is served by the J at all times, the M at all times except late nights, and the Z in the rush-hour peak direction; its source describes the station as being in Williamsburg rather than specifically South Williamsburg. Hewes Street, at Hewes Street and Broadway, is served by the J at all times except the weekday peak direction and by the M at all times except late nights, and the Z skips it; its source likewise says Williamsburg. Flushing Avenue, at Flushing Avenue and Broadway on the neighborhood's stated southern boundary, is served by the same J and M pattern with the Z skipping it, and its source labels the station's neighborhood as Bedford-Stuyvesant while noting it also serves adjacent parts of Williamsburg and Bushwick.\n\nThe bus is a real answer here rather than a footnote. The B44 runs Lee Avenue southbound and Bedford Avenue northbound through the core of the neighborhood, stops at Hewes Street, and uses Roebling Street to reach its northbound terminus at the Williamsburg Bridge Plaza Bus Terminal, which is the area's bus hub. At Flushing Avenue, Lee Avenue becomes Nostrand Avenue.\n\nNYC Ferry's East River route calls at a South Williamsburg landing. No source consulted for this guide gave a precise street address or pier location for it.\n\nOn foot or by bicycle, the Williamsburg Bridge walkway leaves from the Broadway side of the neighborhood and crosses the East River to Manhattan's Lower East Side. It opened on April 23, 1904, closed for renovation in June 1991, and reopened in March 1992 rebuilt with 12-foot-wide pedestrian and bicycle paths."
+        "body": "The neighborhood's subway service runs along Broadway, on the elevated BMT Jamaica Line, and the sources consulted describe these stations broadly rather than as South Williamsburg's own.\n\nMarcy Avenue, at Marcy Avenue and Broadway, is served by the J at all times, the M at all times except late nights, and the Z in the rush-hour peak direction; its source describes the station as being in Williamsburg rather than specifically South Williamsburg. Hewes Street, at Hewes Street and Broadway, is served by the J at all times except the weekday peak direction and by the M at all times except late nights, and the Z skips it; its source likewise says Williamsburg. Flushing Avenue, at Flushing Avenue and Broadway on the neighborhood's stated southern boundary, is served by the same J and M pattern with the Z skipping it, and its source labels the station's neighborhood as Bedford-Stuyvesant while noting it also serves adjacent parts of Williamsburg and Bushwick.\n\nThe bus is a real answer here rather than a footnote. The B44 runs Lee Avenue southbound and Bedford Avenue northbound through the core of the neighborhood, stops at Hewes Street, and uses Roebling Street to reach its northbound terminus at the Williamsburg Bridge Plaza Bus Terminal. At Flushing Avenue, Lee Avenue becomes Nostrand Avenue.\n\nNYC Ferry's East River route calls at a South Williamsburg landing. No source consulted for this guide gave a precise street address or pier location for it.\n\nOn foot or by bicycle, the Williamsburg Bridge walkway leaves from the Broadway side of the neighborhood and crosses the East River to Manhattan's Lower East Side. It opened on April 23, 1904, closed for renovation in June 1991, and reopened in March 1992 rebuilt with 12-foot-wide pedestrian and bicycle paths."
       }
     ],
     "faq": [
@@ -83,19 +83,6 @@
       "photos": []
     },
     {
-      "slug": "moore-street-retail-market",
-      "name": "Moore Street Retail Market",
-      "kind": "attraction",
-      "town": "South Williamsburg",
-      "state": "New York",
-      "county": "Brooklyn",
-      "address": "110 Moore Street, Brooklyn, NY 11206",
-      "summary": "An indoor public market, also known as La Marqueta de Williamsburg, whose vendors from Spanish-speaking Caribbean and Latin American countries sell fruit, vegetables, seafood, crafts, herbs, candles and prepared food. It hosts community events and is still open. Sources differ on which neighborhood the market belongs to; its own article says Williamsburg, and it is placed here on its coordinates.",
-      "history": "The market building was put up in 1941 under Mayor Fiorello La Guardia, one of several public markets meant to get pushcarts off crowded streets. It faced closure in 2007, which community and merchant advocacy overcame; management passed to the Brooklyn Economic Development Corporation in December 2008 and back to NYC EDC in December 2014, and a $2.7 million renovation was announced in 2019.",
-      "status": "open",
-      "photos": []
-    },
-    {
       "slug": "congregation-yetev-lev-dsatmar",
       "name": "Congregation Yetev Lev D'Satmar Synagogues",
       "kind": "historic-site",
@@ -136,12 +123,6 @@
       "note": "Serving at the foot of the Williamsburg Bridge since 1887, when it opened as Carl Luger's Cafe, Billiards and Bowling Alley."
     },
     {
-      "kind": "food",
-      "name": "Moore Street Retail Market",
-      "place_slug": "moore-street-retail-market",
-      "note": "La Marqueta de Williamsburg: produce, seafood, crafts and prepared Caribbean and Latin American food under one 1941 roof."
-    },
-    {
       "kind": "sight",
       "name": "Congregation Yetev Lev D'Satmar Synagogues",
       "place_slug": "congregation-yetev-lev-dsatmar",
@@ -159,11 +140,6 @@
       "target": "guide:greenpoint-brooklyn-guide",
       "kind": "same-region",
       "note": "South Williamsburg and Greenpoint are both in Brooklyn Community District 1."
-    },
-    {
-      "target": "guide:canarsie-brooklyn-guide",
-      "kind": "same-region",
-      "note": "The B60 is recorded as running between the Williamsburg Bridge Plaza Bus Terminal, this neighborhood's bus hub, and Canarsie."
     },
     {
       "target": "guide:bushwick-brooklyn-guide",
