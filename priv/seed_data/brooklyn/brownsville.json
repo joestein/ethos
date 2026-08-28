@@ -50,15 +50,6 @@
         "source_url": "https://commons.wikimedia.org/wiki/File:Loew%27s_Pitkin_Theatre_HDR_2021_jeh.jpg"
       },
       {
-        "src": "/photos/ny/brooklyn/brownsville/betsy-head-play-center-brownsville.jpg",
-        "thumb": "/photos/ny/brooklyn/brownsville/betsy-head-play-center-brownsville_thumb.jpg",
-        "title": "Betsy Head Play Center",
-        "description": "An archival black-and-white photograph looking up at people on the brick terraces of the play center.",
-        "author": "Gottscho-Schleisner Collection",
-        "license": "Public domain",
-        "source_url": "https://commons.wikimedia.org/wiki/File:Betsy_Head_Play_Center._LOC_gsc.5a30636.jpg"
-      },
-      {
         "src": "/photos/ny/brooklyn/brownsville/zion-triangle-memorial-brownsville.jpg",
         "thumb": "/photos/ny/brooklyn/brownsville/zion-triangle-memorial-brownsville_thumb.jpg",
         "title": "Zion Triangle World War I Memorial",
@@ -81,17 +72,7 @@
       "summary": "A 10.55-acre city park with an outdoor swimming complex whose main pool measures 330 by 165 feet, set beside an Art Moderne bathhouse. It also holds ball fields, tennis and basketball courts, a running track, a synthetic turf field added in 2021, a playground, a skate park and a parkour course, and was renovated between 2019 and 2022 under the city's Anchor Parks initiative. It is listed as open from 6 a.m. to 1 a.m. daily.",
       "history": "Betsy Head, a wealthy British resident, died in 1907 and left $190,000 for New York City park facilities. Brownsville residents petitioned for the money, the city approved the land acquisition in July 1913, the architect Henry Beaumont Herts completed plans in May 1914, and the park opened on September 30, 1915. The Works Progress Administration rebuilt the pool in 1935-1936; fire destroyed the original bathhouse on August 17, 1937, and the current Art Moderne bathhouse opened on May 27, 1939.",
       "status": "open",
-      "photos": [
-        {
-          "src": "/photos/ny/brooklyn/brownsville/betsy-head-play-center-brownsville.jpg",
-          "thumb": "/photos/ny/brooklyn/brownsville/betsy-head-play-center-brownsville_thumb.jpg",
-          "title": "Betsy Head Play Center",
-          "description": "An archival black-and-white photograph looking up at people on the brick terraces of the play center.",
-          "author": "Gottscho-Schleisner Collection",
-          "license": "Public domain",
-          "source_url": "https://commons.wikimedia.org/wiki/File:Betsy_Head_Play_Center._LOC_gsc.5a30636.jpg"
-        }
-      ]
+      "photos": []
     },
     {
       "slug": "lincoln-terrace-park",
