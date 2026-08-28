@@ -47,7 +47,44 @@
         "answer": "Yes. The Museum of Contemporary African Diasporan Arts closed its previous Fort Greene space on March 31, 2024 and opened at 10 Lafayette Avenue, second floor, in Culture Lab II, in January 2025. Its posted hours are Wednesday to Saturday, 12 to 8pm, and Sunday, 12 to 5pm."
       }
     ],
-    "photos": []
+    "photos": [
+      {
+        "src": "/photos/ny/brooklyn/fort-greene/fort-greene-park-fort-greene.jpg",
+        "thumb": "/photos/ny/brooklyn/fort-greene/fort-greene-park-fort-greene_thumb.jpg",
+        "title": "Fort Greene Park in autumn",
+        "description": "Yellow ginkgo leaves over the paved paths of Fort Greene Park, with a tall tower rising beyond the trees.",
+        "author": "Kylan04",
+        "license": "CC BY-SA 4.0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Fort_Greene_Park_in_Autumn.jpg"
+      },
+      {
+        "src": "/photos/ny/brooklyn/fort-greene/prison-ship-martyrs-monument-fort-greene.jpg",
+        "thumb": "/photos/ny/brooklyn/fort-greene/prison-ship-martyrs-monument-fort-greene_thumb.jpg",
+        "title": "The Prison Ship Martyrs' Monument",
+        "description": "The granite Doric column and its bronze urn, seen from the foot of the monument's stepped plaza in Fort Greene Park.",
+        "author": "aismallard",
+        "license": "CC BY-SA 3.0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Prison_Ship_Martyrs%27_Monument_(2022-04-24)_-_landscape.jpg"
+      },
+      {
+        "src": "/photos/ny/brooklyn/fort-greene/bam-peter-jay-sharp-building-fort-greene.jpg",
+        "thumb": "/photos/ny/brooklyn/fort-greene/bam-peter-jay-sharp-building-fort-greene_thumb.jpg",
+        "title": "BAM's Peter Jay Sharp Building",
+        "description": "The arcaded facade of the Brooklyn Academy of Music's Peter Jay Sharp Building, its name lettered along the upper wall.",
+        "author": "Beyond My Ken",
+        "license": "CC BY-SA 4.0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:2013_BAM_Peter_Jay_Sharp_Building_from_east.jpg"
+      },
+      {
+        "src": "/photos/ny/brooklyn/fort-greene/williamsburgh-savings-bank-tower-fort-greene.jpg",
+        "thumb": "/photos/ny/brooklyn/fort-greene/williamsburgh-savings-bank-tower-fort-greene_thumb.jpg",
+        "title": "The Williamsburgh Savings Bank Tower",
+        "description": "The clock tower at 1 Hanson Place seen from the crossing below, its setbacks rising above the surrounding streets.",
+        "author": "Tdorante10",
+        "license": "CC BY-SA 4.0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Atlantic_Terminal_td_(2019-03-30)_003_-_Williamsburgh_Savings_Bank_Tower.jpg"
+      }
+    ]
   },
   "places": [
     {
@@ -61,7 +98,17 @@
       "summary": "A 30-acre New York City parkland unit holding the Prison Ship Martyrs' Monument, open from 6 a.m. to 1 a.m.",
       "history": "The City of Brooklyn acquired the land from the Cowenhoven family by 1842 and opened it in 1847 as Washington Park, the city's second public park. Frederick Law Olmsted and Calvert Vaux redesigned it in 1867, and it was renamed for General Nathanael Greene.",
       "status": "open",
-      "photos": []
+      "photos": [
+        {
+          "src": "/photos/ny/brooklyn/fort-greene/fort-greene-park-fort-greene.jpg",
+          "thumb": "/photos/ny/brooklyn/fort-greene/fort-greene-park-fort-greene_thumb.jpg",
+          "title": "Fort Greene Park in autumn",
+          "description": "Yellow ginkgo leaves over the paved paths of Fort Greene Park, with a tall tower rising beyond the trees.",
+          "author": "Kylan04",
+          "license": "CC BY-SA 4.0",
+          "source_url": "https://commons.wikimedia.org/wiki/File:Fort_Greene_Park_in_Autumn.jpg"
+        }
+      ]
     },
     {
       "slug": "prison-ship-martyrs-monument",
@@ -74,7 +121,17 @@
       "summary": "A 149-foot granite Doric column by Stanford White of McKim, Mead & White, with a bronze urn by the sculptor Adolph Weinman. It marks a crypt holding the remains of more than 11,500 American prisoners of war who died aboard British prison ships in Wallabout Bay.",
       "history": "Dedicated on November 14, 1908 by President-elect William Howard Taft.",
       "status": "open",
-      "photos": []
+      "photos": [
+        {
+          "src": "/photos/ny/brooklyn/fort-greene/prison-ship-martyrs-monument-fort-greene.jpg",
+          "thumb": "/photos/ny/brooklyn/fort-greene/prison-ship-martyrs-monument-fort-greene_thumb.jpg",
+          "title": "The Prison Ship Martyrs' Monument",
+          "description": "The granite Doric column and its bronze urn, seen from the foot of the monument's stepped plaza in Fort Greene Park.",
+          "author": "aismallard",
+          "license": "CC BY-SA 3.0",
+          "source_url": "https://commons.wikimedia.org/wiki/File:Prison_Ship_Martyrs%27_Monument_(2022-04-24)_-_landscape.jpg"
+        }
+      ]
     },
     {
       "slug": "fort-greene-historic-district",
@@ -101,7 +158,17 @@
       "summary": "A performing arts institution occupying three buildings: the Peter Jay Sharp Building at 30 Lafayette Avenue, BAM Strong at 651 Fulton Street and the Fisher at 321 Ashland Place.",
       "history": "Incorporated by the New York State Legislature in 1859 and first opened in Brooklyn Heights in 1861. After that building burned in 1903, BAM moved to Fort Greene, laying the cornerstone in 1907 and opening the Herts & Tallant-designed Peter Jay Sharp Building in November 1908. It was added to the National Register of Historic Places on May 2, 2006.",
       "status": "open",
-      "photos": []
+      "photos": [
+        {
+          "src": "/photos/ny/brooklyn/fort-greene/bam-peter-jay-sharp-building-fort-greene.jpg",
+          "thumb": "/photos/ny/brooklyn/fort-greene/bam-peter-jay-sharp-building-fort-greene_thumb.jpg",
+          "title": "BAM's Peter Jay Sharp Building",
+          "description": "The arcaded facade of the Brooklyn Academy of Music's Peter Jay Sharp Building, its name lettered along the upper wall.",
+          "author": "Beyond My Ken",
+          "license": "CC BY-SA 4.0",
+          "source_url": "https://commons.wikimedia.org/wiki/File:2013_BAM_Peter_Jay_Sharp_Building_from_east.jpg"
+        }
+      ]
     },
     {
       "slug": "bam-historic-district",
@@ -127,7 +194,17 @@
       "summary": "A tower built between 1927 and 1929, which held the title of Brooklyn's tallest building until 2009. It is now residential condominiums and not a general public visitor site, though the exterior and the former banking hall can be seen from the street and the ground-floor commercial space.",
       "history": "Opened on April 1, 1929. The exterior was designated a New York City landmark on November 15, 1977 and the banking-room interior on June 25, 1996. The building was converted to residential condominiums between 2005 and 2007.",
       "status": "open",
-      "photos": []
+      "photos": [
+        {
+          "src": "/photos/ny/brooklyn/fort-greene/williamsburgh-savings-bank-tower-fort-greene.jpg",
+          "thumb": "/photos/ny/brooklyn/fort-greene/williamsburgh-savings-bank-tower-fort-greene_thumb.jpg",
+          "title": "The Williamsburgh Savings Bank Tower",
+          "description": "The clock tower at 1 Hanson Place seen from the crossing below, its setbacks rising above the surrounding streets.",
+          "author": "Tdorante10",
+          "license": "CC BY-SA 4.0",
+          "source_url": "https://commons.wikimedia.org/wiki/File:Atlantic_Terminal_td_(2019-03-30)_003_-_Williamsburgh_Savings_Bank_Tower.jpg"
+        }
+      ]
     },
     {
       "slug": "mark-morris-dance-center",

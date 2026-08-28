@@ -31,7 +31,17 @@
         "answer": "No hotel inside Boerum Hill appears in the research behind this page. The nearest verified option is the New York Marriott at the Brooklyn Bridge, a 32-story tower on Adams Street in Downtown Brooklyn, the neighborhood across the Hoyt–Schermerhorn Streets border."
       }
     ],
-    "photos": []
+    "photos": [
+      {
+        "src": "/photos/ny/brooklyn/boerum-hill/pacific-branch-library-boerum-hill.jpg",
+        "thumb": "/photos/ny/brooklyn/boerum-hill/pacific-branch-library-boerum-hill_thumb.jpg",
+        "title": "The Pacific Branch library",
+        "description": "The brick and limestone Carnegie library building of the Brooklyn Public Library's Pacific Branch, behind its iron railings.",
+        "author": "Jim.henderson",
+        "license": "CC BY-SA 4.0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Pacific_Branch_BPL_2025_jeh.jpg"
+      }
+    ]
   },
   "places": [
     {
@@ -57,7 +67,17 @@
       "address": "25 Fourth Avenue, near Pacific Street, Brooklyn, NY",
       "summary": "Brooklyn's oldest Carnegie library, opened in 1905.",
       "status": "open",
-      "photos": []
+      "photos": [
+        {
+          "src": "/photos/ny/brooklyn/boerum-hill/pacific-branch-library-boerum-hill.jpg",
+          "thumb": "/photos/ny/brooklyn/boerum-hill/pacific-branch-library-boerum-hill_thumb.jpg",
+          "title": "The Pacific Branch library",
+          "description": "The brick and limestone Carnegie library building of the Brooklyn Public Library's Pacific Branch, behind its iron railings.",
+          "author": "Jim.henderson",
+          "license": "CC BY-SA 4.0",
+          "source_url": "https://commons.wikimedia.org/wiki/File:Pacific_Branch_BPL_2025_jeh.jpg"
+        }
+      ]
     },
     {
       "slug": "roulette-boerum-hill",

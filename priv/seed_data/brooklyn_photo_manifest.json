@@ -3,6 +3,10 @@
     "sha256": "2f5bda6100c7367830c22a9fb7e124cec2932a2b783ee099cb4b5518e503e7a3",
     "source_url": "https://commons.wikimedia.org/wiki/File:Pennsylvania_Av_Hornell_Loop_td_(2018-08-15)_01_-_1530_Pennsylvania_Avenue.jpg"
   },
+  "bam-peter-jay-sharp-building-fort-greene": {
+    "sha256": "a452e972abbc5516b6eae35a9b467b0f5301c974b935ee8282c86642ef911c5e",
+    "source_url": "https://commons.wikimedia.org/wiki/File:2013_BAM_Peter_Jay_Sharp_Building_from_east.jpg"
+  },
   "betsy-head-play-center-brownsville": {
     "sha256": "bd5d53579c929086ace49a9edf0035604f01280e680b20ed2d3dfdcac8f3f237",
     "source_url": "https://commons.wikimedia.org/wiki/File:Betsy_Head_Play_Center._LOC_gsc.5a30636.jpg"
@@ -19,6 +23,10 @@
     "sha256": "968cc60d4c244e493300a6b2c863442f0befaaafd31eddd973df871f897977ca",
     "source_url": "https://commons.wikimedia.org/wiki/File:BLDG_92_BNY_jeh.jpg"
   },
+  "clinton-hill-historic-district-clinton-hill": {
+    "sha256": "b772534ffeb7f3174b1e6c91df5208ec1da57c30fadb6b1622ac395aee012551",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Clinton_Hill_Historic_District.JPG"
+  },
   "court-street-downtown-brooklyn": {
     "sha256": "986ea0baa18e843d14b689346f487c5e012c0e3036f84123660a0981d2d14390",
     "source_url": "https://commons.wikimedia.org/wiki/File:Brooklyn_Court_St_from_Borough_Hall.JPG"
@@ -30,6 +38,14 @@
   "dry-dock-navy-yard": {
     "sha256": "c080dab0f8646328f6906b9a6808b6a05094ffb001f135082e8312e671fb2a07",
     "source_url": "https://commons.wikimedia.org/wiki/File:Dry_Dock_at_Brooklyn_Navy_Yard.jpg"
+  },
+  "emmanuel-baptist-church-clinton-hill": {
+    "sha256": "c7d3770ae36ce08070cfcf0d4783e04983cbe030b14257c3ca33c7538547d473",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Emmanuel_Baptist_Church.jpg"
+  },
+  "fort-greene-park-fort-greene": {
+    "sha256": "7b957f4edc78cb786690b829c486192d41135436d935998592a856ad2a49cde3",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Fort_Greene_Park_in_Autumn.jpg"
   },
   "franklin-k-lane-high-school-cypress-hills": {
     "sha256": "b9381f8f633baafd20814c99453ce2206097efc3e216cbd44b45131d0752a533",
@@ -46,6 +62,10 @@
   "hotel-bossert-brooklyn-heights": {
     "sha256": "f11aee4a05c8d6702b2ec3ac02e4f67d02177b8cf94876200bfb459e56398822",
     "source_url": "https://commons.wikimedia.org/wiki/File:Hotel_Bossert_Hicks_Montague_jeh.jpg"
+  },
+  "kane-street-synagogue-cobble-hill": {
+    "sha256": "2b528715a68c9ea99ff3b66685e1eedac58e36cb5e831eb6a9dc12c453733bcf",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Kane_Street_synagogue_exterior.jpg"
   },
   "kings-county-savings-bank-south-williamsburg": {
     "sha256": "7e535d6bcb16814b596dbb1b012c02a6b4ac930a19e43a36e8eeaefc154f477c",
@@ -75,9 +95,21 @@
     "sha256": "d4e825a3c2e17d125b5baac853b808619fb540c96f37e19b68013eaa9dc747af",
     "source_url": "https://commons.wikimedia.org/wiki/File:New_Lots_Community_Church_jeh.jpg"
   },
+  "pacific-branch-library-boerum-hill": {
+    "sha256": "f548f174e081e400e9b6f37c9c4d38c634f81418b006e19ba987dae548e79856",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Pacific_Branch_BPL_2025_jeh.jpg"
+  },
   "plymouth-church-brooklyn-heights": {
     "sha256": "88767e7068d74bb2f0a6f1c1c30383bd4e61292941107ae9215370d048437f7d",
     "source_url": "https://commons.wikimedia.org/wiki/File:Plymouth_Church_-_Brooklyn_(55268323821).jpg"
+  },
+  "pratt-higgins-hall-clinton-hill": {
+    "sha256": "5c82e13e87c7ae7243653c082173296bf4795592c6401598c664034527d65ac3",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Pratt_institute_school_of_architecture_facade.jpg"
+  },
+  "prison-ship-martyrs-monument-fort-greene": {
+    "sha256": "0b9718abbb5b6a50831bcdfd0d2ccbfbb36f35ff379eb142a3f6725e6291cda8",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Prison_Ship_Martyrs%27_Monument_(2022-04-24)_-_landscape.jpg"
   },
   "promenade-brooklyn-heights": {
     "sha256": "4d96ef28ed677113aa4c9fdfeef38f46484ca7ec670a9f3ba082d456322922bd",
@@ -90,6 +122,10 @@
   "st-barbaras-church-bushwick": {
     "sha256": "ed7603423a32685859c768922c4176c420fc19e5c6e4ea7639b9d48137220b5f",
     "source_url": "https://commons.wikimedia.org/wiki/File:Saint_Barbara's_Church_(Brooklyn)_2.jpg"
+  },
+  "st-marys-episcopal-church-clinton-hill": {
+    "sha256": "4a70ea571f3a1678829743edbb1f17ab36d74304d100dea6ea139a019d734986",
+    "source_url": "https://commons.wikimedia.org/wiki/File:St._Mary_Episcopal_Church_jeh.jpg"
   },
   "st-nicholas-church-east-williamsburg": {
     "sha256": "6524bce595b3b11b4d26f502897b734ef1410db698e730033039a1ff5abaf001",
@@ -106,6 +142,10 @@
   "williamsburg-bridge-williamsburg": {
     "sha256": "abc1d9b8eb1ca320c2c8c9e5dce8be5a97dbeb604d2ea5e05dea6491a492c697",
     "source_url": "https://commons.wikimedia.org/wiki/File:Williamsburg_Bridge_NY2.jpg"
+  },
+  "williamsburgh-savings-bank-tower-fort-greene": {
+    "sha256": "fef2ab4b02ec8a465e34f2eb783f613663c690a8d2d978a035afb068b6fccce1",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Atlantic_Terminal_td_(2019-03-30)_003_-_Williamsburgh_Savings_Bank_Tower.jpg"
   },
   "williamsburgh-savings-bank-williamsburg": {
     "sha256": "dc45e11b3fdc920a4f9505a5ea65f395d31553e4c0132b935488551825be075e",

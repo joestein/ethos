@@ -39,7 +39,44 @@
         "answer": "No hotel inside Clinton Hill could be found from the sources available for this guide, which is consistent with the neighborhood's largely residential and institutional character. The nearest verified option is the New York Marriott at the Brooklyn Bridge, a 32-story tower on Adams Street in Downtown Brooklyn."
       }
     ],
-    "photos": []
+    "photos": [
+      {
+        "src": "/photos/ny/brooklyn/clinton-hill/clinton-hill-historic-district-clinton-hill.jpg",
+        "thumb": "/photos/ny/brooklyn/clinton-hill/clinton-hill-historic-district-clinton-hill_thumb.jpg",
+        "title": "A mansion on Clinton Avenue",
+        "description": "A large brick mansion set back behind an iron fence on Clinton Avenue, within the Clinton Hill Historic District.",
+        "author": "Michelb101",
+        "license": "CC BY-SA 3.0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Clinton_Hill_Historic_District.JPG"
+      },
+      {
+        "src": "/photos/ny/brooklyn/clinton-hill/emmanuel-baptist-church-clinton-hill.jpg",
+        "thumb": "/photos/ny/brooklyn/clinton-hill/emmanuel-baptist-church-clinton-hill_thumb.jpg",
+        "title": "Emmanuel Baptist Church",
+        "description": "The Gothic Revival stone front of Emmanuel Baptist Church, with its traceried window and flanking towers.",
+        "author": "Etta DeMartino",
+        "license": "CC BY-SA 4.0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Emmanuel_Baptist_Church.jpg"
+      },
+      {
+        "src": "/photos/ny/brooklyn/clinton-hill/st-marys-episcopal-church-clinton-hill.jpg",
+        "thumb": "/photos/ny/brooklyn/clinton-hill/st-marys-episcopal-church-clinton-hill_thumb.jpg",
+        "title": "St. Mary's Episcopal Church",
+        "description": "The stone church of St. Mary's Episcopal and its green copper spire, seen through bare winter trees.",
+        "author": "Jim.henderson",
+        "license": "CC0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:St._Mary_Episcopal_Church_jeh.jpg"
+      },
+      {
+        "src": "/photos/ny/brooklyn/clinton-hill/pratt-higgins-hall-clinton-hill.jpg",
+        "thumb": "/photos/ny/brooklyn/clinton-hill/pratt-higgins-hall-clinton-hill_thumb.jpg",
+        "title": "Higgins Hall at Pratt Institute",
+        "description": "The modern facade of Pratt Institute's school of architecture building, its irregular windows framed in red against metal panelling.",
+        "author": "Shuo Yan",
+        "license": "CC BY-SA 4.0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Pratt_institute_school_of_architecture_facade.jpg"
+      }
+    ]
   },
   "places": [
     {
@@ -67,7 +104,17 @@
       "summary": "Roughly 100 acres and 1,063 largely residential contributing buildings dating from the 1840s to 1930, including the Charles Pratt-era mansions on Clinton Avenue and Italianate and Beaux-Arts rowhouses.",
       "history": "Listed on the National Register of Historic Places on June 19, 1985, reference number 85001335. Merrill Hesch wrote the nomination in September 1984.",
       "status": "open",
-      "photos": []
+      "photos": [
+        {
+          "src": "/photos/ny/brooklyn/clinton-hill/clinton-hill-historic-district-clinton-hill.jpg",
+          "thumb": "/photos/ny/brooklyn/clinton-hill/clinton-hill-historic-district-clinton-hill_thumb.jpg",
+          "title": "A mansion on Clinton Avenue",
+          "description": "A large brick mansion set back behind an iron fence on Clinton Avenue, within the Clinton Hill Historic District.",
+          "author": "Michelb101",
+          "license": "CC BY-SA 3.0",
+          "source_url": "https://commons.wikimedia.org/wiki/File:Clinton_Hill_Historic_District.JPG"
+        }
+      ]
     },
     {
       "slug": "emmanuel-baptist-church",
@@ -80,7 +127,17 @@
       "summary": "A Gothic Revival church funded by Charles Pratt and designed by Francis H. Kimball, with an active congregation in the American Baptist Churches USA.",
       "history": "The congregation formed around 1882, when about 194 members split from Washington Avenue Baptist Church. The building opened on April 17, 1887 and was listed on the National Register of Historic Places in 1977.",
       "status": "open",
-      "photos": []
+      "photos": [
+        {
+          "src": "/photos/ny/brooklyn/clinton-hill/emmanuel-baptist-church-clinton-hill.jpg",
+          "thumb": "/photos/ny/brooklyn/clinton-hill/emmanuel-baptist-church-clinton-hill_thumb.jpg",
+          "title": "Emmanuel Baptist Church",
+          "description": "The Gothic Revival stone front of Emmanuel Baptist Church, with its traceried window and flanking towers.",
+          "author": "Etta DeMartino",
+          "license": "CC BY-SA 4.0",
+          "source_url": "https://commons.wikimedia.org/wiki/File:Emmanuel_Baptist_Church.jpg"
+        }
+      ]
     },
     {
       "slug": "st-marys-episcopal-church",
@@ -94,7 +151,17 @@
       "summary": "An active parish holding Sunday and Wednesday services, with community programs including a clothing pantry.",
       "history": "The congregation traces to 1836; the church building dates to about 1859.",
       "status": "open",
-      "photos": []
+      "photos": [
+        {
+          "src": "/photos/ny/brooklyn/clinton-hill/st-marys-episcopal-church-clinton-hill.jpg",
+          "thumb": "/photos/ny/brooklyn/clinton-hill/st-marys-episcopal-church-clinton-hill_thumb.jpg",
+          "title": "St. Mary's Episcopal Church",
+          "description": "The stone church of St. Mary's Episcopal and its green copper spire, seen through bare winter trees.",
+          "author": "Jim.henderson",
+          "license": "CC0",
+          "source_url": "https://commons.wikimedia.org/wiki/File:St._Mary_Episcopal_Church_jeh.jpg"
+        }
+      ]
     },
     {
       "slug": "church-of-st-luke-and-st-matthew",

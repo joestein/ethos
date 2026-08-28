@@ -31,7 +31,7 @@
     {"slug": "fort-greene", "name": "Fort Greene", "community_district": 2, "wave": 3},
     {"slug": "clinton-hill", "name": "Clinton Hill", "community_district": 2, "wave": 3},
     {"slug": "boerum-hill", "name": "Boerum Hill", "community_district": 2, "wave": 3},
-    {"slug": "cobble-hill", "name": "Cobble Hill", "community_district": 2, "wave": 3},
+    {"slug": "cobble-hill", "name": "Cobble Hill", "community_district": 6, "wave": 3},
 
     {"slug": "carroll-gardens", "name": "Carroll Gardens", "community_district": 6, "wave": 4},
     {"slug": "columbia-street-waterfront-district", "name": "Columbia Street Waterfront District", "community_district": 6, "wave": 4},
