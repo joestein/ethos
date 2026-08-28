@@ -175,9 +175,18 @@ Fixed values, identical in every Brooklyn file, no variation:
 | `places[].town` | the neighborhood's display name from the roster |
 | `places[].status` | `open` |
 
-`county` is `"Brooklyn"`, not `"Kings County"` and not `"Kings"`. The gate
-counts published guides whose `county == "Brooklyn"` and asserts the count
-equals the number of committed files, so a typo here fails the build.
+`county` is `"Brooklyn"`, not `"Kings County"` and not `"Kings"`, everywhere
+it appears.
+
+**Only `guide.county` is gated.** The gate counts published guides whose
+`county == "Brooklyn"` and asserts the count equals the number of committed
+files, so a typo *there* fails the build. Nothing checks the rest of this
+table: `Place.changeset` requires `county` to be present but not to hold any
+particular value, so a place carrying `"Kings County"` — or the wrong
+`state`, or a `town` that is not the neighborhood, or a `guide.destination`
+or `guide.slug` that does not follow the pattern — publishes cleanly and
+wrong. Copy the table exactly and let the reviewer check it against section
+16's ungated list.
 
 Shape rules the loader (`Ethos.Seeds.DataGuide.load!/1`) enforces on read,
 before anything else runs:
@@ -192,7 +201,13 @@ before anything else runs:
   raises.
 - Omit `official_url` entirely when the research gives none. Do not write
   `null`, `""`, or a guessed URL. The same applies to `history`.
+- `official_url` must be an `http`/`https` URL; anything else fails the
+  changeset at seed time.
 - `places[].photos` is `[]` when the place has no photo of its own.
+- **Do not use `booking_url`.** The `places` schema accepts it (validated as
+  a safe http(s) URL like `official_url`), but Brooklyn authors no booking
+  links — there is no verified booking source in the research artifacts, and
+  a guessed one would violate rule 2. Omit the key.
 
 ---
 
@@ -286,7 +301,9 @@ research artifact's transit material.
 > can see what a compliant sentence looks like. The actual names in your
 > file come from your neighborhood's research artifact and nowhere else —
 > including the Red Hook example in 6.3, which must still be re-derived from
-> the wave-4 artifact before it ships.
+> the wave-4 artifact before it ships. **The one exception is the LIRR list
+> in item 3, which is a closed set** — Brooklyn has exactly those three
+> stations, and naming a fourth is always an error.
 
 1. **Subway.** Name the line designations and the station names, spelled as
    the MTA spells them (`Broadway Junction`, `Smith–Ninth Streets`,
@@ -310,8 +327,15 @@ research artifact's transit material.
 **A station, landing or stop may be presented as serving the neighborhood
 only when the research places it inside the neighborhood or on its edge.**
 
-When the nearest station is in an adjoining neighborhood, say so by naming
-that neighborhood:
+There are three cases, and the artifact tells you which one you are in.
+
+**Case A — the artifact places the station in or on the edge of the
+neighborhood.** Write it as serving the neighborhood:
+
+> Carroll Street on the F and G is the neighborhood's station.
+
+**Case B — the artifact places the station in a different neighborhood.**
+Name that neighborhood:
 
 > The nearest subway is Carroll Street on the F and G, in Carroll Gardens.
 
@@ -319,9 +343,29 @@ not
 
 > ~~Carroll Street on the F and G serves the neighborhood.~~
 
-This is checkable: for every station you name, a reviewer asks "does the
-research place this in or on the edge of this neighborhood?" If no, the
-sentence must name where it actually is.
+**Case C — the artifact lists the station for the neighborhood but does not
+say where it sits.** This is the common case, and the two rules above would
+otherwise deadlock: you may not claim it serves the neighborhood, and you
+cannot name the neighborhood it is in without supplying outside knowledge,
+which rule 2 forbids outright. **Do neither.** Name the station and its
+lines, and assert nothing about location:
+
+> Carroll Street is served by the F and G.
+
+not
+
+> ~~Carroll Street on the F and G serves the neighborhood.~~ (unsupported)
+> ~~The nearest subway is Carroll Street, in Carroll Gardens.~~ (invented)
+
+Then **record the gap in your wave report** — "artifact lists Carroll Street
+for this neighborhood but does not locate it" — so the reviewer knows the
+flat phrasing is deliberate rather than careless, and so a later research
+pass can close it.
+
+This is checkable without judgment: for every station you name, a reviewer
+asks which case the artifact puts you in, then checks the sentence matches
+that case. A location claim in Case C is a fabrication; a flat sentence in
+Case A is merely thin, and is never wrong.
 
 **Where there is no subway, write that plainly and move on to the real
 answer.** Red Hook is the canonical case:
@@ -374,12 +418,12 @@ a duration that decays.
 ### 6.6 What the gate actually catches
 
 `test/ethos/seeds/brooklyn_seed_data_test.exs` walks **every string value in
-every committed Brooklyn seed file** and fails the build if any of ten
+every committed Brooklyn seed file** and fails the build if any of **eleven**
 patterns matches. Read this list so a red gate is never a surprise:
 
 | # | Catches |
 | --- | --- |
-| 1 | A digit run immediately followed by `minute`, with optional spaces or a hyphen/en-dash between — `10-minute`, `10 minute`, `45 minute`. Note this fires on walks, tours and ride run times too. |
+| 1 | **Any digit run followed by `minute` or `minutes`**, with optional spaces or a hyphen/en-dash between — `10-minute`, `10 minute`, `25 minutes`, `45 minutes`. Unconditional: no mode word, hedge or direction needed anywhere near it. Fires on walks, tours and ride run times too — see the note below. |
 | 2 | A number plus `min` / `mins` / `minute` / `minutes` followed by one of: `south` `north` `east` `west` `away` `drive` `ride` `from` `by car` `by subway` `by train` `by ferry` `uptown` `downtown` `up` `down` `along`. |
 | 3 | A hedge — `roughly` `about` `around` `approximately` `just` `only` `under` `over` `some` — then a number then `min`. |
 | 4 | `half an hour` / `half-hour` / `quarter hour` / `an hour` / `an hour and a half`, followed within 40 characters (same sentence) by `drive` `ride` `away`, a compass direction, `by car` `by subway` `by train` `by ferry` `to Manhattan` `to Midtown`. |
@@ -389,17 +433,41 @@ patterns matches. Read this list so a red gate is never a surprise:
 | 8 | `short` / `quick` / `easy` / `brief` + `drive` / `ride` / `hop` / `trip` / `commute`. |
 | 9 | `within a short/quick/easy drive/ride/trip`. |
 | 10 | `reaches` / `gets you to` / `puts you in` / `takes you to`, followed within 40 characters by `in` and a number. |
+| 11 | `in` + optional hedge (`about` `roughly` `around` `under` `over` `just` `only`) + a number + `hour` / `hours` — `in 2 hours`, `in about 2 hours`. |
 
 Matching is case-insensitive. The patterns deliberately overlap: one bad
 sentence commonly trips three of them, and that is the detector working.
 
+**Patterns 1 and 11 close the plainest hole.** Until review, the single most
+natural way to write the banned claim escaped all of the others:
+
+> ~~The F train runs to Midtown in 25 minutes.~~
+
+Pattern 1 was singular-only; 2 needs a direction or mode word *after* the
+duration; 3 needs a hedge *before* it; 7 covers spelled-out numbers only; 10
+needs one of its four verbs, and "runs to" is not among them. Pattern 1 is
+now plural-tolerant and pattern 11 closes the same hole for hours, which 6
+catches only when a mode word follows. **Pattern 11 is anchored on a
+preceding `in` on purpose**: a bare "N hours" would fire on "open 24 hours",
+which is a legitimate thing to say about a diner.
+
+**Pattern 1's widening is deliberate, and it catches innocents.** "The
+Wonder Wheel ride lasts 10 minutes" and "the 45-minute tour" now fail the
+gate. That is the intended trade — a categorical ban with a hole is worse
+than an over-broad net — and the phrase-keyed allowlist in 6.8 is exactly
+how a genuine non-travel duration gets through. Reword first; allowlist if
+the duration is real and not a travel claim.
+
 **Known gaps you must respect anyway.** Pattern 7's spelled-out number list
-is not exhaustive (`twelve`, `thirty-five`, `ninety-five` are not on it).
-Pattern 8's mode list omits `walk`, so "a short walk" passes the gate. "A
+is not exhaustive (`twelve`, `thirty-five`, `ninety-five` are not on it),
+and a spelled-out number with `hours` (`two hours`) is not covered at all.
+Pattern 8's mode list omits `walk`, so "a short walk" passes the gate; "a
 few minutes' walk" passes. None of these are permitted — rule 6.4 is the
-rule; the ten patterns are a net under it, not its definition. Writing into
-a known gap is the specific behaviour that put 58 claims on the Connecticut
-site, and a reviewer who finds one will treat it as a deliberate evasion.
+rule; the eleven patterns are a net under it, not its definition. Writing
+into a known gap is the specific behaviour that put 58 claims on the
+Connecticut site, and a reviewer who finds one will treat it as a deliberate
+evasion. If you find a *new* gap, report it so the pattern list grows —
+that is what happened to produce patterns 1 and 11.
 
 ### 6.7 Where durations hide
 
@@ -686,7 +754,10 @@ verbatim from the artifact. `source_url` is the **file page** URL
 All seven keys — `src`, `thumb`, `title`, `description`, `author`,
 `license`, `source_url` — must be present and non-null strings on every
 photo, on guides and places alike. Write your own `title` and `description`:
-short, factual, describing what is in the frame.
+**`title` at most 8 words, `description` one sentence of at most 25 words**,
+both factual and describing what is actually in the frame. Neither is a
+place to add a fact the research does not carry, and both are walked by the
+trip-duration gate (6.7).
 
 **Paths.**
 
@@ -734,8 +805,12 @@ Two independent things depend on it:
 exist under `priv/`. Run the optimizer before the gate, or every photo you
 added fails.
 
-**Report** the `{label} → direct_image_url}` pairs you used, so the pairing
-is auditable after the fact.
+**You fetch the images yourself.** Nothing downstream does it: the optimizer
+reads from disk and fails if the file is not already there. Download each
+chosen `direct_image_url` to `images/brooklyn/{label}.{ext}` (rule 14, step
+2), then **record the `{label} → direct_image_url}` pairs in your report** —
+that is what lets the wave's photo step fetch them, and what makes the
+pairing auditable afterwards.
 
 ---
 
@@ -774,18 +849,32 @@ neighborhood boundary, and must not be presented as one.
 
 ## 14. Validation before commit
 
-Run in this order. Steps 1-3 must happen before step 4, or the photo
+Run in this order. Steps 1-4 must all happen before step 5, or the photo
 assertions fail on files you did add correctly.
 
 1. **Write the seed files.**
-2. **Update `priv/seed_data/brooklyn_photo_manifest.json`** with a
-   `{"source_url", "sha256"}` entry for every new label.
-3. **`mix ethos.optimize_brooklyn_photos`** — writes
-   `priv/photos/ny/brooklyn/{slug}/{label}.jpg` and `_thumb.jpg`, verifying
-   manifest provenance first.
-4. **`mix test test/ethos/seeds/brooklyn_seed_data_test.exs`** — the gate,
+2. **Download every chosen image to `images/brooklyn/{label}.{ext}`**, where
+   `{label}` is the label in that photo's `src` path and `{ext}` is the
+   Commons original's extension (`jpg` `jpeg` `png` `tif` `tiff`, upper or
+   lower case). This directory is flat and git-ignored, and it is where
+   `find_source!/1` looks — the optimizer in step 4 raises
+   `no source image for {label} under images/brooklyn/` if the file is not
+   there. **Validate magic bytes, not just file size**: Commons serves HTML
+   error pages that a size check happily accepts, and 41 of them were once
+   saved as `.jpg` in the Connecticut program. Re-fetch anything that fails.
+3. **Update `priv/seed_data/brooklyn_photo_manifest.json`** with a
+   `{"source_url", "sha256"}` entry for every new label — the sha256 being
+   the digest of the file you just downloaded in step 2.
+4. **`mix ethos.optimize_brooklyn_photos`** — reads
+   `images/brooklyn/{label}.*`, verifies its sha256 against the manifest,
+   and writes `priv/photos/ny/brooklyn/{slug}/{label}.jpg` and `_thumb.jpg`.
+5. **`mix test test/ethos/seeds/brooklyn_seed_data_test.exs`** — the gate,
    over every committed Brooklyn file including earlier waves'.
-5. **`mix test`** — the full suite.
+6. **`mix test`** — the full suite.
+
+Steps 2 and 3 are the two the gate cannot remind you about until it is too
+late: skip 2 and the optimizer raises; skip 3 and the `unpinned` assertion
+fails on every photo you added.
 
 Both test runs green, **with your wave's files added**, before you commit.
 A gate failure is never fixed by editing the gate: not by weakening a
@@ -832,9 +921,13 @@ to reuse.
 
 ## 16. Rule ↔ gate map
 
-Every mechanical assertion in
-`test/ethos/seeds/brooklyn_seed_data_test.exs`, and the rule it enforces.
-Use this when a gate goes red, and when reviewing a wave.
+Every mechanical assertion that can fail a Brooklyn seed file, and the rule
+it enforces. This covers both the assertions written in
+`test/ethos/seeds/brooklyn_seed_data_test.exs` and the schema validations it
+reaches transitively through `DataGuide.load!/1`, `Place.changeset/2`,
+`Guide.photos_changeset/2`, `Entry.changeset/2`, `Link.changeset/2` and
+`GuideRunner.upsert!/2` during the load-twice pass. Use it when a gate goes
+red, and when reviewing a wave.
 
 | Gate assertion | Rule |
 | --- | --- |
@@ -849,7 +942,7 @@ Use this when a gate goes red, and when reviewing a wave.
 | `floor_violations` — town-page with < 3 links | 8, 7 |
 | `getting_there_violations` — every file has a section headed exactly `Getting there` (both tiers) | 6.1 |
 | `transit_faq_violations` — every file's FAQ has a question matching `/how do i get to/i` (both tiers) | 5, 8 |
-| `trip_duration_violations` — ten patterns over every string in every file | 6.4, 6.6, 6.7 |
+| `trip_duration_violations` — **eleven** patterns over every string in every file | 6.4, 6.6, 6.7 |
 | `@trip_duration_allowlist` — `{file, path, phrase}` tuples | 6.8 |
 | `label_dups` — one label may not carry two `source_url`s | 12 |
 | `missing` — `src` and `thumb` exist under `priv/` | 12, 14 |
@@ -858,6 +951,9 @@ Use this when a gate goes red, and when reviewing a wave.
 | Three-pass load, twice — idempotency | 14 |
 | `Places.get_place_by_slug!` during the guide pass — `entries[].place_slug` resolves | 5 |
 | `Place.changeset` — `kind` in the closed set | 10 |
+| `Place.changeset` — `status` ∈ `{open, closed}` | 4 |
+| `Place.changeset` — `official_url` and `booking_url` are safe http(s) URLs when present | 4 |
+| `Entry.changeset` — entry `kind` ∈ `{food, tour, walk, sight, stay, tip}` (this contract narrows it to four) | 5 |
 | `Place.changeset` — slug matches `^[a-z0-9-]+$` | 9 |
 | `Place.changeset` — all 7 photo keys are strings, path regex, safe `source_url` | 12 |
 | `Guide.photos_changeset` — `src`/`thumb`/`title`/`description` are strings, path regex, safe `source_url` | 12 |
@@ -873,6 +969,7 @@ not mean a compliant file** — it means nothing in this table was checked.
 | --- | --- |
 | 2 | All verdict filtering — nothing mechanical can tell a verified fact from an invented one |
 | 3 | The 6-place threshold itself (the gate only fails clear mislabels: guide < 4, town-page ≥ 6) |
+| 4 | **Every fixed value except `guide.county`**: `places[].county`, `places[].state`, `places[].town`, `places[].status` beyond `{open,closed}`, `guide.destination`, and the `{slug}-brooklyn-guide` slug pattern. `Place.changeset` requires `county` and `state` to be *present*, never to hold a particular value — a place carrying `"Kings County"` publishes cleanly and wrong |
 | 5 | **Intro 100-160 words**; 2-3 sections; **FAQ count 4-6**; **places 6-12**; **entries 6-12** |
 | 6 | The proximity rule (6.3); mode coverage (6.2); service caveats (6.5); the regexes' known gaps (6.6) |
 | 7 | Hotel-in-neighborhood requirement and the "Where to stay" note |
@@ -882,8 +979,10 @@ not mean a compliant file** — it means nothing in this table was checked.
 | 13 | Boundary language |
 | 15 | The whole copy bar |
 
-The **bolded** entries are the ranges and counts left ungated on purpose.
-They are mechanizable, and were considered and declined: a build that fails
-over a 165-word intro or a thirteenth place is a build somebody eventually
-weakens, and a weakened suite protects nothing. Drift gets a gate; range
+The **bolded** entries are mechanizable and were considered and declined —
+the ranges and counts because a build that fails over a 165-word intro or a
+thirteenth place is a build somebody eventually weakens, and a weakened
+suite protects nothing; rule 4's fixed values because they are copy-paste
+constants that a reviewer checks in seconds against the table in rule 4.
+Drift gets a gate; range
 gets a reviewer. Count them yourself with the command in rule 5.

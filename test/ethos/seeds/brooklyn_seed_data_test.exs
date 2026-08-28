@@ -37,7 +37,7 @@ defmodule Ethos.Seeds.BrooklynSeedDataTest do
   # walks every string value in every seed file rather than the transit
   # section alone.
   @trip_duration_patterns [
-    ~r/\b\d+\s*[-–]?\s*minute\b/i,
+    ~r/\b\d+\s*[-–]?\s*minutes?\b/i,
     ~r/\b\d+\s*min(?:ute)?s?\b\s*(?:south|north|east|west|away|drive|ride|from|by car|by subway|by train|by ferry|uptown|downtown|up|down|along)/i,
     ~r/\b(?:roughly|about|around|approximately|just|only|under|over|some)\s+\d+\s*min/i,
     ~r/\b(?:half[-\s]?(?:an\s+)?hour|quarter[-\s]?hour|an hour(?:\s+and\s+a\s+half)?)\b[^.]{0,40}\b(?:drive|ride|away|south|north|east|west|by car|by subway|by train|by ferry|to manhattan|to midtown)/i,
@@ -46,7 +46,19 @@ defmodule Ethos.Seeds.BrooklynSeedDataTest do
     ~r/\b(?:five|ten|fifteen|twenty|twenty[-\s]five|thirty|forty|forty[-\s]five|fifty|sixty|ninety)\s*[-–]?\s*minutes?\b/i,
     ~r/\b(?:short|quick|easy|brief)\s+(?:drive|ride|hop|trip|commute)\b/i,
     ~r/\bwithin\s+(?:a\s+)?(?:short|quick|easy)\s+(?:drive|ride|trip)\b/i,
-    ~r/\b(?:reaches|gets you to|puts you in|takes you to)\b[^.]{0,40}\bin\s+(?:about\s+)?\d+/i
+    ~r/\b(?:reaches|gets you to|puts you in|takes you to)\b[^.]{0,40}\bin\s+(?:about\s+)?\d+/i,
+    # "...in 25 minutes" / "...in about 2 hours" — the plainest way to state
+    # the banned claim, and it escaped all ten of the patterns above: 1 was
+    # singular-only, 2 needs a direction or mode word AFTER the duration,
+    # 3 needs a hedge BEFORE it, 7 is spelled-out numbers only, and 10 needs
+    # one of its four specific verbs ("runs to" is not among them). Pattern 1
+    # is now plural-tolerant, which closes the minutes half; this closes the
+    # hours half, which 6 catches only when a mode word follows.
+    #
+    # Deliberately anchored on a preceding "in" rather than a bare
+    # \b\d+\s*hours?\b, because the bare form fires on "open 24 hours" — a
+    # legitimate and common thing to say about a diner.
+    ~r/\bin\s+(?:about|roughly|around|under|over|just|only)?\s*\d+\s*hours?\b/i
   ]
 
   # Confirmed false positives, keyed on {file, json path, matched phrase} and
@@ -138,10 +150,19 @@ defmodule Ethos.Seeds.BrooklynSeedDataTest do
   # regression in this program — and the heading does not drift alone, it
   # takes the whole multi-modal transit rule with it. Both tiers carry the
   # section: an orientation page has one too.
+  # Pulls `key` from a list of maps, tolerating a nil list and skipping any
+  # entry that is not a map. Both structural assertions below go through this
+  # so a malformed section or FAQ entry fails its assertion with a readable
+  # message instead of raising an Access error from inside the comprehension.
+  defp field_values(list, key) when is_list(list),
+    do: for(item <- list, is_map(item), do: item[key])
+
+  defp field_values(_not_a_list, _key), do: []
+
   defp getting_there_violations(paths) do
     for f <- paths,
         data = DataGuide.load!(f),
-        headings = Enum.map(data["guide"]["sections"] || [], & &1["heading"]),
+        headings = field_values(data["guide"]["sections"], "heading"),
         "Getting there" not in headings,
         do: {Path.basename(f), headings}
   end
@@ -155,7 +176,7 @@ defmodule Ethos.Seeds.BrooklynSeedDataTest do
   defp transit_faq_violations(paths) do
     for f <- paths,
         data = DataGuide.load!(f),
-        questions = Enum.map(data["guide"]["faq"] || [], & &1["question"]),
+        questions = field_values(data["guide"]["faq"], "question"),
         not Enum.any?(questions, &(is_binary(&1) and Regex.match?(~r/how do i get to/i, &1))),
         do: {Path.basename(f), questions}
   end
@@ -163,7 +184,7 @@ defmodule Ethos.Seeds.BrooklynSeedDataTest do
   # --- The assertions fire (proven against fixtures) ----------------------
 
   test "the trip-duration ban catches a duration claim" do
-    # Several of the ten patterns legitimately fire on the same sentence
+    # Several of the eleven patterns legitimately fire on the same sentence
     # ("...reaches Midtown in about 25 minutes from here." trips the digit+
     # direction-word pattern, the roughly/about+min pattern, and the
     # reaches-you-to-in-N pattern all at once) — that overlap is the detector
