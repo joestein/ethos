@@ -44,25 +44,7 @@ defmodule Ethos.Release do
     end
   end
 
-  def seed_manhattan(email) do
-    load_app()
-    Application.ensure_all_started(@app)
-
-    files =
-      [:code.priv_dir(@app) |> to_string(), "seed_data", "manhattan", "*.json"]
-      |> Path.join()
-      |> Path.wildcard()
-      |> Enum.sort()
-
-    Enum.each(files, &Ethos.Seeds.DataGuide.upsert_places!/1)
-
-    for file <- files do
-      guide = Ethos.Seeds.DataGuide.upsert_guide!(file, email)
-      IO.puts("Seeded: /g/#{guide.slug}")
-    end
-
-    Enum.each(files, &Ethos.Seeds.DataGuide.upsert_links!/1)
-  end
+  def seed_manhattan(email), do: seed_directory("manhattan", email)
 
   def seed_links do
     load_app()
@@ -78,12 +60,19 @@ defmodule Ethos.Release do
     IO.puts("Seeded collection: /c/#{collection.slug}")
   end
 
-  def seed_connecticut_expansion(email) do
+  def seed_connecticut_expansion(email), do: seed_directory("connecticut", email)
+
+  def seed_brooklyn(email), do: seed_directory("brooklyn", email)
+
+  # Three passes over the whole directory — all places, then all guides, then
+  # all links — so an entry may reference a place, and a link may reference a
+  # guide, defined in any file of the run regardless of processing order.
+  defp seed_directory(dir, email) do
     load_app()
     Application.ensure_all_started(@app)
 
     files =
-      [:code.priv_dir(@app) |> to_string(), "seed_data", "connecticut", "*.json"]
+      [:code.priv_dir(@app) |> to_string(), "seed_data", dir, "*.json"]
       |> Path.join()
       |> Path.wildcard()
       |> Enum.sort()
@@ -96,6 +85,7 @@ defmodule Ethos.Release do
     end
 
     Enum.each(files, &Ethos.Seeds.DataGuide.upsert_links!/1)
+    IO.puts("Seeded #{length(files)} files from priv/seed_data/#{dir}")
   end
 
   defp repos do

@@ -43,7 +43,7 @@ npm-debug.log
 
 /priv/uploads/
 
-# Raw source photos (not committed; optimized output goes to priv/static/photos/)
+# Raw source photos (not committed; optimized output goes to priv/photos/)
 /images/
 
 
