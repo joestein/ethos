@@ -73,11 +73,13 @@
   },
   "green-wood-cemetery-gate-greenwood": {
     "sha256": "dded3ee22e600bcd3ef7cec827816ef9d76d08a2ab5e926b3619cc5f614543c7",
-    "source_url": "https://commons.wikimedia.org/wiki/File:2015_Green-Wood_Cemetery_Gate_from_outside.jpg"
+    "source_url": "https://commons.wikimedia.org/wiki/File:2015_Green-Wood_Cemetery_Gate_from_outside.jpg",
+    "fetched_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e2/2015_Green-Wood_Cemetery_Gate_from_outside.jpg/1280px-2015_Green-Wood_Cemetery_Gate_from_outside.jpg"
   },
   "green-wood-chapel-greenwood": {
     "sha256": "e0fb660ca2ffe09a6ac4ab41649aa6b74556daace6a60dc3556c611ad24a49aa",
-    "source_url": "https://commons.wikimedia.org/wiki/File:Green-Wood_Cemetery_Chapel.jpg"
+    "source_url": "https://commons.wikimedia.org/wiki/File:Green-Wood_Cemetery_Chapel.jpg",
+    "fetched_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8f/Green-Wood_Cemetery_Chapel.jpg/1280px-Green-Wood_Cemetery_Chapel.jpg"
   },
   "highland-park-entrance-highland-park": {
     "sha256": "724cb74913a228c3b903800445ba78357d33cf1c4a75f81f1b23e3dd14627c12",
@@ -121,11 +123,13 @@
   },
   "minerva-battle-hill-greenwood": {
     "sha256": "128699b9f73e8f54215b778dd263aeb42e90ebb5c15748973d209b42a7a82d50",
-    "source_url": "https://commons.wikimedia.org/wiki/File:Minerva_in_Green-wood_Cemetery_waving_to_Lady_Liberty.JPG"
+    "source_url": "https://commons.wikimedia.org/wiki/File:Minerva_in_Green-wood_Cemetery_waving_to_Lady_Liberty.JPG",
+    "fetched_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/56/Minerva_in_Green-wood_Cemetery_waving_to_Lady_Liberty.JPG/1280px-Minerva_in_Green-wood_Cemetery_waving_to_Lady_Liberty.JPG"
   },
   "montauk-club-park-slope": {
     "sha256": "1493e5996471903568b3d0350bab986eae8ff3e5cc7f560adcb13dd0e9ce0b5a",
-    "source_url": "https://commons.wikimedia.org/wiki/File:19950701_35_Montauk_Club,_Park_Slope,_Brooklyn,_NY.jpg"
+    "source_url": "https://commons.wikimedia.org/wiki/File:19950701_35_Montauk_Club,_Park_Slope,_Brooklyn,_NY.jpg",
+    "fetched_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/19950701_35_Montauk_Club%2C_Park_Slope%2C_Brooklyn%2C_NY.jpg/1280px-19950701_35_Montauk_Club%2C_Park_Slope%2C_Brooklyn%2C_NY.jpg"
   },
   "new-lots-community-church-new-lots": {
     "sha256": "d4e825a3c2e17d125b5baac853b808619fb540c96f37e19b68013eaa9dc747af",
@@ -133,7 +137,8 @@
   },
   "old-stone-house-park-slope": {
     "sha256": "e0ad94c94d815ee896291e7e59e340aa698a3e2c31219a6991f265064922a7f6",
-    "source_url": "https://commons.wikimedia.org/wiki/File:Old_Stone_House_Brooklyn_NY.jpg"
+    "source_url": "https://commons.wikimedia.org/wiki/File:Old_Stone_House_Brooklyn_NY.jpg",
+    "fetched_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b1/Old_Stone_House_Brooklyn_NY.jpg/1280px-Old_Stone_House_Brooklyn_NY.jpg"
   },
   "pacific-branch-library-boerum-hill": {
     "sha256": "f548f174e081e400e9b6f37c9c4d38c634f81418b006e19ba987dae548e79856",
@@ -173,7 +178,8 @@
   },
   "soldiers-and-sailors-arch-quadriga-park-slope": {
     "sha256": "d3ab4270c10a818576c8547a93ce2c0eab3d5d32e9d24d97f3e4ac897172dcd8",
-    "source_url": "https://commons.wikimedia.org/wiki/File:Brooklyn_Grand_Army_Plaza_Arch_Quadriga.JPG"
+    "source_url": "https://commons.wikimedia.org/wiki/File:Brooklyn_Grand_Army_Plaza_Arch_Quadriga.JPG",
+    "fetched_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f3/Brooklyn_Grand_Army_Plaza_Arch_Quadriga.JPG/1280px-Brooklyn_Grand_Army_Plaza_Arch_Quadriga.JPG"
   },
   "st-barbaras-church-bushwick": {
     "sha256": "ed7603423a32685859c768922c4176c420fc19e5c6e4ea7639b9d48137220b5f",
@@ -217,7 +223,8 @@
   },
   "windsor-terrace-library-windsor-terrace": {
     "sha256": "b28253ad4d12e24b1e070904e10f99f27f02865dc961661d68a43a05c80dd415",
-    "source_url": "https://commons.wikimedia.org/wiki/File:Windsor_Terrace_BPL_jeh.jpg"
+    "source_url": "https://commons.wikimedia.org/wiki/File:Windsor_Terrace_BPL_jeh.jpg",
+    "fetched_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/19/Windsor_Terrace_BPL_jeh.jpg/1280px-Windsor_Terrace_BPL_jeh.jpg"
   },
   "winthrop-shelter-pavilion-greenpoint": {
     "sha256": "8de2ffd02a2abefd4a3447320a8392c47bec1b9d14f1a50e65625394ad3a8c7f",
