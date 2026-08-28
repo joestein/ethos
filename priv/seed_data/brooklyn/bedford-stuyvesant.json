@@ -5,12 +5,16 @@
     "destination": "Bedford-Stuyvesant, New York",
     "state": "New York",
     "county": "Brooklyn",
-    "tier": "town-page",
-    "intro": "Bedford-Stuyvesant's name joins two formerly separate areas. Bedford was a 17th-century hamlet, itself named for the market town of Bedford in England; Stuyvesant Heights was named for Peter Stuyvesant, the last Director-General of the colony of New Netherland. The two grew together into the unified area now called Bed-Stuy. After the IND Fulton Street Line opened in 1936, African Americans left an overcrowded Harlem for the greater housing availability here, and by 1950 the number of Black residents had risen to about 155,000, roughly 55 percent of the population. Wikipedia describes the neighborhood's roughly 8,800 buildings built before 1900 as the largest intact collection of Victorian architecture in the United States. Since the early 2000s gentrification has shifted the population again and pushed rents upward.",
+    "tier": "guide",
+    "intro": "Bedford-Stuyvesant's name joins two formerly separate areas. Bedford was a 17th-century hamlet, itself named for the market town of Bedford in England; Stuyvesant Heights was named for Peter Stuyvesant, the last Director-General of the colony of New Netherland. The two grew together into the unified area now called Bed-Stuy, and Stuyvesant Heights remains a section within it rather than a neighborhood beside it. After the IND Fulton Street Line opened in 1936, African Americans left an overcrowded Harlem for the greater housing availability here, and by 1950 the number of Black residents had risen to about 155,000, roughly 55 percent of the population. Wikipedia describes the neighborhood's roughly 8,800 buildings built before 1900 as the largest intact collection of Victorian architecture in the United States. Since the early 2000s gentrification has shifted the population again and pushed rents upward.",
     "sections": [
       {
         "heading": "Restoration, and the years around it",
-        "body": "A riot took place in Bedford-Stuyvesant in 1964, and further unrest followed in 1967 and 1968, driven by perceptions of the NYPD as oppressive and racially biased.\n\nThe response took an institutional form that outlasted the decade. The Bedford Stuyvesant Restoration Corporation was established in the late 1960s under the leadership of Senator Robert F. Kennedy, and is described as the United States' first community development corporation. Its headquarters campus, Restoration Plaza at 1360 Fulton Street, states on its own site that for more than 57 years Restoration has worked to advance community development and racial equity, and reports roughly 1.5 million plaza visits and more than 60,000 individuals served each year through programs in financial inclusion, small business support, housing, jobs, health, arts and culture.\n\nRestoration Plaza houses the Billie Holiday Theatre, founded in 1972, an AUDELCO and Obie Award-winning Black theater and the first Black theater to transfer a Broadway hit with 50 percent community financing. It reopened in May 2017 with 218 seats after a renovation carried out between 2015 and 2017 by MBB Architects, and received the National Medal of the Arts in 2023.\n\nMuch of the neighborhood's 19th-century fabric is now locally designated. Beyond the Stuyvesant Heights Historic District, the Landmarks Preservation Commission designated the Alice and Agate Courts Historic District on February 10, 2009, the Bedford Historic District on December 8, 2015, and the Willoughby-Hart Historic District on June 25, 2024."
+        "body": "A riot took place in Bedford-Stuyvesant in 1964, and further unrest followed in 1967 and 1968, driven by perceptions of the NYPD as oppressive and racially biased.\n\nThe response took an institutional form that outlasted the decade. The Bedford Stuyvesant Restoration Corporation was established in the late 1960s under the leadership of Senator Robert F. Kennedy, and is described as the United States' first community development corporation. Its headquarters campus, Restoration Plaza at 1360 Fulton Street, states on its own site that for more than 57 years Restoration has worked to advance community development and racial equity, and reports roughly 1.5 million plaza visits and more than 60,000 individuals served each year through programs in financial inclusion, small business support, housing, jobs, health, arts and culture.\n\nRestoration Plaza houses the Billie Holiday Theatre, founded in 1972, an AUDELCO and Obie Award-winning Black theater and the first Black theater to transfer a Broadway hit with 50 percent community financing. It reopened in May 2017 with 218 seats after a renovation carried out between 2015 and 2017 by MBB Architects, and received the National Medal of the Arts in 2023.\n\nMuch of the neighborhood's 19th-century fabric is now locally designated. On April 16, 2013 the Landmarks Preservation Commission designated the Bedford Stuyvesant/Expanded Stuyvesant Heights Historic District, extending the landmarked area north to Jefferson Avenue, east to Malcolm X Boulevard and west to Tompkins Avenue. The same commission designated the Alice and Agate Courts Historic District on February 10, 2009, the Bedford Historic District on December 8, 2015, and the Willoughby-Hart Historic District on June 25, 2024."
+      },
+      {
+        "heading": "Schools, libraries and a park with a memorial",
+        "body": "At 475 Nostrand Avenue stands Girls' High School, completed in 1886 to a design by James W. Naughton. Girls' High School operated in the building until 1975, when it merged with Boys High School to form Boys and Girls High School; the building was designated an individual New York City landmark on June 28, 1983.\n\nTwo Carnegie libraries still operate as Brooklyn Public Library branches here. Macon Library, at 361 Lewis Avenue, opened in 1907 and holds a heritage collection on African American culture. The Saratoga Branch Library, at 8 Thomas S. Boyland Street, is a Carnegie library in the Classical Revival style.\n\nSaratoga Park, 3.21 acres bounded by Halsey Street, Saratoga Avenue, Macon Street and Howard Avenue, was established in 1896 on former circus grounds. It holds a First World War memorial with a sculpture by James Novelli, dedicated in 1921. The memorial's plaques were stolen in 1970 and its sculpture in 2000; it was restored and rededicated in 2014."
       },
       {
         "heading": "Getting there",
@@ -27,6 +31,14 @@
         "answer": "From two formerly separate areas that grew together. Bedford was a 17th-century hamlet named after the market town of Bedford in England. Stuyvesant Heights was named for Peter Stuyvesant, the last Director-General of the colony of New Netherland."
       },
       {
+        "question": "Is Stuyvesant Heights a separate neighborhood from Bedford-Stuyvesant?",
+        "answer": "It is a section within Bedford-Stuyvesant rather than a neighborhood beside it: Stuyvesant Heights is one of the two halves that grew together into Bed-Stuy. The Landmarks Preservation Commission's April 16, 2013 designation carries both names, as the Bedford Stuyvesant/Expanded Stuyvesant Heights Historic District."
+      },
+      {
+        "question": "Which park is Saratoga Square Park?",
+        "answer": "Saratoga Park, bounded by Halsey Street, Saratoga Avenue, Macon Street and Howard Avenue. The research records 'Saratoga Square Park' as a colloquial name for the same park, whose official name is Saratoga Park."
+      },
+      {
         "question": "Where can I stay in Bedford-Stuyvesant?",
         "answer": "No hotel was verified in the neighborhood. The nearest verified lodging is Akwaaba Mansion, a bed-and-breakfast in a restored 1860s brownstone at 347 MacDonough Street, which the research places in the Stuyvesant Heights section of Bedford-Stuyvesant."
       }
@@ -40,6 +52,15 @@
         "author": "Meelar",
         "license": "CC BY-SA 4.0",
         "source_url": "https://commons.wikimedia.org/wiki/File:RestoPlaza.jpg"
+      },
+      {
+        "src": "/photos/ny/brooklyn/bedford-stuyvesant/herbert-von-king-park-bedford-stuyvesant.jpg",
+        "thumb": "/photos/ny/brooklyn/bedford-stuyvesant/herbert-von-king-park-bedford-stuyvesant_thumb.jpg",
+        "title": "Lawn and trees at Herbert Von King Park",
+        "description": "An open lawn under mature trees in the park, with benches, a paved path and fenced ball courts beyond.",
+        "author": "Jim.henderson",
+        "license": "CC BY-SA 3.0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Herbert_Von_King_Park_via_WSM_jeh.jpg"
       }
     ]
   },
@@ -82,6 +103,43 @@
       "photos": []
     },
     {
+      "slug": "girls-high-school-bedford-stuyvesant",
+      "name": "Girls' High School",
+      "kind": "historic-site",
+      "town": "Bedford-Stuyvesant",
+      "state": "New York",
+      "county": "Brooklyn",
+      "address": "475 Nostrand Avenue, Brooklyn, NY",
+      "summary": "A school building completed in 1886 to a design by James W. Naughton, and designated an individual New York City landmark on June 28, 1983.",
+      "history": "Girls' High School operated in the building until 1975, when it merged with Boys High School to form Boys and Girls High School.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "macon-library-bedford-stuyvesant",
+      "name": "Macon Library",
+      "kind": "historic-site",
+      "town": "Bedford-Stuyvesant",
+      "state": "New York",
+      "county": "Brooklyn",
+      "address": "361 Lewis Avenue, Brooklyn, NY",
+      "summary": "An active Brooklyn Public Library branch that opened in 1907 as a Carnegie library. It holds a heritage collection on African American culture.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "saratoga-branch-library-bedford-stuyvesant",
+      "name": "Saratoga Branch Library",
+      "kind": "historic-site",
+      "town": "Bedford-Stuyvesant",
+      "state": "New York",
+      "county": "Brooklyn",
+      "address": "8 Thomas S. Boyland Street, Brooklyn, NY",
+      "summary": "An active Brooklyn Public Library branch, built as a Carnegie library in the Classical Revival style.",
+      "status": "open",
+      "photos": []
+    },
+    {
       "slug": "herbert-von-king-park",
       "name": "Herbert Von King Park",
       "kind": "park",
@@ -92,7 +150,17 @@
       "summary": "A 7.819-acre park with a baseball diamond, basketball courts, a playground, a dog run and barbecue areas, plus the Herbert Von King Cultural Arts Center and the Almira Kennedy Coursey Amphitheatre.",
       "history": "The park was established in June 1857 as Tompkins Park, one of Brooklyn's earliest and arguably its first; Calvert Vaux and Frederick Law Olmsted were commissioned to design it in 1871. It was renamed in 1985 for Herbert Von King, a longtime local community organizer. The Cultural Arts Center reopened in 2022 after a $7 million renovation.",
       "status": "open",
-      "photos": []
+      "photos": [
+        {
+          "src": "/photos/ny/brooklyn/bedford-stuyvesant/herbert-von-king-park-bedford-stuyvesant.jpg",
+          "thumb": "/photos/ny/brooklyn/bedford-stuyvesant/herbert-von-king-park-bedford-stuyvesant_thumb.jpg",
+          "title": "Lawn and trees at Herbert Von King Park",
+          "description": "An open lawn under mature trees in the park, with benches, a paved path and fenced ball courts beyond.",
+          "author": "Jim.henderson",
+          "license": "CC BY-SA 3.0",
+          "source_url": "https://commons.wikimedia.org/wiki/File:Herbert_Von_King_Park_via_WSM_jeh.jpg"
+        }
+      ]
     },
     {
       "slug": "fulton-park-bedford-stuyvesant",
@@ -108,6 +176,19 @@
       "photos": []
     },
     {
+      "slug": "saratoga-park-bedford-stuyvesant",
+      "name": "Saratoga Park",
+      "kind": "park",
+      "town": "Bedford-Stuyvesant",
+      "state": "New York",
+      "county": "Brooklyn",
+      "address": "Bounded by Halsey Street, Saratoga Avenue, Macon Street and Howard Avenue, Brooklyn, NY",
+      "summary": "A 3.21-acre park established in 1896 on former circus grounds, holding a First World War memorial with a sculpture by James Novelli that was dedicated in 1921. The research records 'Saratoga Square Park' as a colloquial name for the same park.",
+      "history": "The memorial's plaques were stolen in 1970 and its sculpture in 2000; the memorial was restored and rededicated in 2014.",
+      "status": "open",
+      "photos": []
+    },
+    {
       "slug": "peaches-kitchen-and-bar",
       "name": "Peaches Kitchen & Bar",
       "kind": "restaurant",
@@ -117,6 +198,19 @@
       "address": "393 Lewis Avenue, Brooklyn, NY 11233",
       "official_url": "http://bcrestaurantgroup.getbento.com/location/peaches-kitchen-bar/",
       "summary": "A neighborhood restaurant from B+C Restaurant Group serving dishes drawn from the American South, founded by Marietta 'Peaches' Cade.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "peaches-hothouse",
+      "name": "Peaches HotHouse",
+      "kind": "restaurant",
+      "town": "Bedford-Stuyvesant",
+      "state": "New York",
+      "county": "Brooklyn",
+      "address": "415 Tompkins Avenue, Brooklyn, NY 11216",
+      "official_url": "http://bcrestaurantgroup.getbento.com/location/peaches-hot-house-bed-stuy/",
+      "summary": "A restaurant on Tompkins Avenue from B+C Restaurant Group, the same group behind Peaches Kitchen & Bar; its own location page identifies this as the group's Bed-Stuy location.",
       "status": "open",
       "photos": []
     }
@@ -135,6 +229,24 @@
       "note": "Founded in 1972 inside Restoration Plaza, and awarded the National Medal of the Arts in 2023."
     },
     {
+      "kind": "sight",
+      "name": "Girls' High School",
+      "place_slug": "girls-high-school-bedford-stuyvesant",
+      "note": "An 1886 school building by James W. Naughton on Nostrand Avenue, designated an individual New York City landmark in 1983."
+    },
+    {
+      "kind": "sight",
+      "name": "Macon Library",
+      "place_slug": "macon-library-bedford-stuyvesant",
+      "note": "A Carnegie library of 1907 on Lewis Avenue, still an active branch, with a heritage collection on African American culture."
+    },
+    {
+      "kind": "sight",
+      "name": "Saratoga Branch Library",
+      "place_slug": "saratoga-branch-library-bedford-stuyvesant",
+      "note": "A Classical Revival Carnegie library on Thomas S. Boyland Street, still an active Brooklyn Public Library branch."
+    },
+    {
       "kind": "walk",
       "name": "Herbert Von King Park",
       "place_slug": "herbert-von-king-park",
@@ -147,10 +259,22 @@
       "note": "A Chauncey Street park the city bought in 1904, named for the steamboat developer Robert Fulton."
     },
     {
+      "kind": "walk",
+      "name": "Saratoga Park",
+      "place_slug": "saratoga-park-bedford-stuyvesant",
+      "note": "Laid out in 1896 on former circus grounds, with a First World War memorial dedicated in 1921."
+    },
+    {
       "kind": "food",
       "name": "Peaches Kitchen & Bar",
       "place_slug": "peaches-kitchen-and-bar",
       "note": "Southern cooking on Lewis Avenue, from the group founded by Marietta 'Peaches' Cade."
+    },
+    {
+      "kind": "food",
+      "name": "Peaches HotHouse",
+      "place_slug": "peaches-hothouse",
+      "note": "The B+C Restaurant Group's Bed-Stuy location, on Tompkins Avenue."
     }
   ],
   "links": [
