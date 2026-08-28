@@ -1,0 +1,20 @@
+{
+  "guide": {
+    "slug": "fixture-trip-duration-brooklyn-guide",
+    "title": "Fixture: Trip Duration",
+    "destination": "Fixture, New York",
+    "state": "New York",
+    "county": "Brooklyn",
+    "intro": "A fixture guide used only to prove the trip-duration assertion fires.",
+    "sections": [],
+    "faq": [
+      {
+        "question": "How far is Manhattan?",
+        "answer": "The Q train reaches Midtown in about 25 minutes from here."
+      }
+    ],
+    "photos": []
+  },
+  "places": [],
+  "entries": []
+}
