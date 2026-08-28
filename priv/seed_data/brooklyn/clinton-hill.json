@@ -43,8 +43,8 @@
       {
         "src": "/photos/ny/brooklyn/clinton-hill/clinton-hill-historic-district-clinton-hill.jpg",
         "thumb": "/photos/ny/brooklyn/clinton-hill/clinton-hill-historic-district-clinton-hill_thumb.jpg",
-        "title": "A mansion on Clinton Avenue",
-        "description": "A large brick mansion set back behind an iron fence on Clinton Avenue, within the Clinton Hill Historic District.",
+        "title": "A mansion in the Clinton Hill Historic District",
+        "description": "A large brick mansion set back behind an iron fence, within the Clinton Hill Historic District.",
         "author": "Michelb101",
         "license": "CC BY-SA 3.0",
         "source_url": "https://commons.wikimedia.org/wiki/File:Clinton_Hill_Historic_District.JPG"
@@ -108,8 +108,8 @@
         {
           "src": "/photos/ny/brooklyn/clinton-hill/clinton-hill-historic-district-clinton-hill.jpg",
           "thumb": "/photos/ny/brooklyn/clinton-hill/clinton-hill-historic-district-clinton-hill_thumb.jpg",
-          "title": "A mansion on Clinton Avenue",
-          "description": "A large brick mansion set back behind an iron fence on Clinton Avenue, within the Clinton Hill Historic District.",
+          "title": "A mansion in the Clinton Hill Historic District",
+          "description": "A large brick mansion set back behind an iron fence, within the Clinton Hill Historic District.",
           "author": "Michelb101",
           "license": "CC BY-SA 3.0",
           "source_url": "https://commons.wikimedia.org/wiki/File:Clinton_Hill_Historic_District.JPG"
@@ -179,7 +179,7 @@
     {
       "slug": "st-josephs-university-brooklyn",
       "name": "St. Joseph's University, Brooklyn Campus",
-      "kind": "historic-site",
+      "kind": "attraction",
       "town": "Clinton Hill",
       "state": "New York",
       "county": "Brooklyn",
@@ -192,7 +192,7 @@
     {
       "slug": "brooklyn-public-library-clinton-hill-branch",
       "name": "Brooklyn Public Library, Clinton Hill Branch",
-      "kind": "historic-site",
+      "kind": "attraction",
       "town": "Clinton Hill",
       "state": "New York",
       "county": "Brooklyn",

@@ -14,7 +14,7 @@
       },
       {
         "heading": "Getting there",
-        "body": "The Brooklyn Navy Yard has no subway station. The Yard's own directions page names none within walking distance, and offers instead a free shuttle, weekdays only, connecting to the Dumbo station cluster on the A, C and F and to Atlantic Terminal, where the 2, 3, 4, 5, B, D, N, Q, R and G lines and the Long Island Rail Road meet.\n\nBuses are the direct public route. The Yard's directions page lists the B67, B48, B57, B62 and B69 as stopping within or near it.\n\nNYC Ferry's Astoria route calls at the Brooklyn Navy Yard landing at Dock 72, which sits inside the Yard itself."
+        "body": "The Brooklyn Navy Yard has no subway station. The Yard's own directions page names none within walking distance, and offers instead a free shuttle, weekdays only, connecting to the Dumbo station cluster on the A, C and F and to Atlantic Terminal, where the Long Island Rail Road meets the Atlantic Avenue\u2013Barclays Center subway complex: the 2, 4, D, N, Q and R serve it at all times, the 3 at all times except late nights, the 5 and B on weekdays during the day, and the W at rush hours only.\n\nBuses are the direct public route. The Yard's directions page lists the B67, B48, B57, B62 and B69 as stopping within or near it.\n\nNYC Ferry's Astoria route calls at the Brooklyn Navy Yard landing at Dock 72, which sits inside the Yard itself."
       },
       {
         "heading": "What is open to the public",
@@ -24,7 +24,7 @@
     "faq": [
       {
         "question": "How do I get to the Navy Yard?",
-        "answer": "Not by subway: the Yard's own directions page names no station within walking distance. It runs a free shuttle on weekdays connecting to the Dumbo station cluster on the A, C and F and to Atlantic Terminal, which has the 2, 3, 4, 5, B, D, N, Q, R and G lines and the Long Island Rail Road. Five bus routes — the B67, B48, B57, B62 and B69 — stop within or near the Yard, and NYC Ferry's Astoria route calls at the Brooklyn Navy Yard landing at Dock 72 inside the grounds."
+        "answer": "Not by subway: the Yard's own directions page names no station within walking distance. It runs a free shuttle on weekdays connecting to the Dumbo station cluster on the A, C and F and to Atlantic Terminal, where the Long Island Rail Road meets the Atlantic Avenue\u2013Barclays Center subway complex, served by the 2, 4, D, N, Q and R at all times, the 3 at all times except late nights, the 5 and B on weekdays during the day, and the W at rush hours only. Five bus routes — the B67, B48, B57, B62 and B69 — stop within or near the Yard, and NYC Ferry's Astoria route calls at the Brooklyn Navy Yard landing at Dock 72 inside the grounds."
       },
       {
         "question": "Can the public go inside the Brooklyn Navy Yard?",
@@ -194,18 +194,6 @@
       "summary": "A salsa maker at Market @ 77 serving Austin-style breakfast tacos, taco bowls and fresh guacamole.",
       "status": "open",
       "photos": []
-    },
-    {
-      "slug": "wegmans-brooklyn",
-      "name": "Wegmans",
-      "kind": "attraction",
-      "town": "Navy Yard",
-      "state": "New York",
-      "county": "Brooklyn",
-      "address": "Admiral's Row, Brooklyn Navy Yard, Brooklyn, NY",
-      "summary": "Wegmans' first store in New York City, opened at Admiral's Row inside the Navy Yard on October 27, 2019.",
-      "status": "open",
-      "photos": []
     }
   ],
   "entries": [
@@ -262,12 +250,6 @@
       "name": "Jalapa Jar",
       "place_slug": "jalapa-jar",
       "note": "Austin-style breakfast tacos, taco bowls and guacamole from a Brooklyn salsa maker."
-    },
-    {
-      "kind": "sight",
-      "name": "Wegmans",
-      "place_slug": "wegmans-brooklyn",
-      "note": "The chain's first New York City store, opened at Admiral's Row on October 27, 2019."
     }
   ],
   "links": [
