@@ -59,40 +59,12 @@ defmodule Mix.Tasks.Ethos.OptimizeBrooklynPhotos do
         if File.exists?(path), do: path
       end) || Mix.raise("no source image for #{label} under images/brooklyn/")
 
-    verify_provenance!(label, path)
+    try do
+      Ethos.PhotoManifest.verify!(@manifest_path, label, path)
+    rescue
+      e -> Mix.raise(Exception.message(e))
+    end
+
     path
-  end
-
-  # Source images resolve by bare label, so the wrong file under that name would
-  # publish a real photo carrying another image's author and licence credit. The
-  # manifest pins each label to the Commons file it was downloaded from.
-  defp verify_provenance!(label, path) do
-    case manifest()[label] do
-      nil ->
-        Mix.raise("#{label} is not in #{@manifest_path} — regenerate the manifest")
-
-      %{"sha256" => expected} ->
-        actual = :crypto.hash(:sha256, File.read!(path)) |> Base.encode16(case: :lower)
-
-        if actual != expected do
-          Mix.raise(
-            "#{path} does not match the image recorded for #{label} " <>
-              "(expected #{String.slice(expected, 0, 12)}…, got #{String.slice(actual, 0, 12)}…). " <>
-              "The published author and licence would credit the wrong photo."
-          )
-        end
-    end
-  end
-
-  defp manifest do
-    case :persistent_term.get({__MODULE__, :manifest}, nil) do
-      nil ->
-        data = @manifest_path |> File.read!() |> Jason.decode!()
-        :persistent_term.put({__MODULE__, :manifest}, data)
-        data
-
-      data ->
-        data
-    end
   end
 end
