@@ -6,15 +6,15 @@
     "state": "New York",
     "county": "Brooklyn",
     "tier": "guide",
-    "intro": "The Lenape knew this ground as Rinnegokonk. Dutch settlers named the wider settlement Breuckelen, and the waterfront was sold to Joris Jansen Rapelje, who farmed it. Robert Fulton's steam ferry began crossing to Manhattan in 1814, making Brooklyn Heights Manhattan's first suburb and pushing the ground behind it into service as a commercial and civic center. Its defining building went up in 1848: a Greek Revival city hall in Tuckahoe marble by Calvin Pollard and Gamaliel King, which became Brooklyn Borough Hall when Brooklyn consolidated into New York City in 1898. A 1983 Regional Plan Association report argued the district could become the city's third-largest business center, and a 2004 rezoning drew roughly $9 billion in private investment and $300 million in public improvements. By 2008 residents were moving into new towers, turning an office-and-courthouse quarter into a mixed-use one.",
+    "intro": "The Lenape knew this ground as Rinnegokonk. Dutch settlers named the wider settlement Breuckelen, and the waterfront was sold to Joris Jansen Rapelje, who farmed it. Robert Fulton's steam ferry began crossing to Manhattan in 1814, making Brooklyn Heights Manhattan's first suburb and pushing the ground behind it into service as a commercial and civic center. Its defining building went up in 1848: a city hall in Tuckahoe marble by Calvin Pollard and Gamaliel King, which became Brooklyn Borough Hall when Brooklyn consolidated into New York City in 1898. A 1983 Regional Plan Association report argued the district could become the city's third-largest business center, and a 2004 rezoning drew roughly $9 billion in private investment and $300 million in public improvements. By 2008 residents were moving into new towers, turning an office-and-courthouse quarter into a mixed-use one.",
     "sections": [
       {
         "heading": "City hall, department stores, and one surviving rowhouse",
-        "body": "Borough Hall lost its original cupola and its statue of Justice to a fire in 1895; a Victorian cast-iron cupola replaced them by 1898, and a restoration of the building was completed in 1989. It was designated a New York City landmark on April 19, 1966 and listed on the National Register of Historic Places on January 10, 1980. Across Joralemon Street, the Brooklyn Municipal Building of 1924, by McKenzie, Voorhees & Gmelin, still houses the Department of Buildings, the Department of Environmental Protection, the Department of Finance, Probation and the Marriage Bureau; it was renamed in March 2021 for the Brooklyn-born Justice Ruth Bader Ginsburg.\n\nFulton Street was the borough's department-store address, anchored by Abraham & Straus, Frederick Loeser & Co. and A.I. Namm & Son. A merchant-led revitalization in the 1970s narrowed the roadway and widened the sidewalks into a bus-and-pedestrian corridor, and a $24 million redesign by the architect Lee Harris Pomeroy was completed in 1984. A further $8 million streetscape renovation began in 2024.\n\nMetroTech Center was proposed in the 1970s by the Polytechnic Institute professor George Bugliarello as an academic-industrial research park. Building the 16-acre pedestrian superblock in 1992 required demolishing more than 100 homes and 50 businesses. Brookfield Properties acquired it in 2018 and rebranded it Brooklyn Commons in 2022, with a $50 million renovation announced."
+        "body": "Borough Hall lost its original cupola and its statue of Justice to a fire in 1895; a cast-iron cupola replaced them by 1898, and a restoration of the building was completed in 1989. It was designated a New York City landmark on April 19, 1966 and listed on the National Register of Historic Places on January 10, 1980. Across Joralemon Street, the Brooklyn Municipal Building of 1924, by McKenzie, Voorhees & Gmelin, still houses the Department of Buildings, the Department of Environmental Protection, the Department of Finance, Probation and the Marriage Bureau; it was renamed in March 2021 for the Brooklyn-born Justice Ruth Bader Ginsburg.\n\nFulton Street was the borough's department-store address, anchored by Abraham & Straus, Frederick Loeser & Co. and A.I. Namm & Son. A merchant-led revitalization in the 1970s narrowed the roadway and widened the sidewalks into a bus-and-pedestrian corridor, and a $24 million redesign by the architect Lee Harris Pomeroy was completed in 1984. A further $8 million streetscape renovation began in 2024.\n\nMetroTech Center was proposed in the 1970s by the Polytechnic Institute professor George Bugliarello as an academic-industrial research park. Building the 16-acre pedestrian superblock in 1992 required demolishing more than 100 homes and 50 businesses. Brookfield Properties acquired it in 2018 and rebranded it Brooklyn Commons in 2022, with a $50 million renovation announced."
       },
       {
         "heading": "Duffield Street and the Truesdells",
-        "body": "Duffield Street, named for the Revolutionary War surgeon John Duffield, was a documented hub of nineteenth-century abolitionist activity. Harriet and Thomas Truesdell lived at 227 Duffield Street, a Greek Revival rowhouse, from 1851 to 1863, and the house is tied to Underground Railroad activity.\n\nThe city proposed demolishing it in 2004. After roughly a decade of community advocacy the building was designated a landmark as the Truesdell House in February 2021, and the city bought it for $3.2 million the following month. By 2019 it was the only historic rowhouse still standing on that stretch of the block. Whether it is open to visitors could not be confirmed."
+        "body": "Duffield Street, named for the Revolutionary War surgeon John Duffield, was a documented hub of nineteenth-century abolitionist activity. Harriet and Thomas Truesdell lived at 227 Duffield Street from 1851 to 1863, and the house is tied to Underground Railroad activity.\n\nThe city proposed demolishing it in 2004. After roughly a decade of community advocacy the building was designated a landmark as the Truesdell House in February 2021, and the city bought it for $3.2 million the following month. By 2019 it was the only historic rowhouse still standing on that stretch of the block. Whether it is open to visitors could not be confirmed."
       },
       {
         "heading": "Getting there",
@@ -140,7 +140,7 @@
       "county": "Brooklyn",
       "address": "99 Schermerhorn Street, Brooklyn, NY 11201",
       "official_url": "https://www.nytransitmuseum.org/",
-      "summary": "A transportation history museum at 99 Schermerhorn Street, housed in a decommissioned subway station. The museum's own site notes that its back mezzanine galleries and Education Center are not climate-controlled because of an air-conditioning outage.",
+      "summary": "A transportation history museum at 99 Schermerhorn Street. The museum's own site notes that its back mezzanine galleries and Education Center are not climate-controlled because of an air-conditioning outage.",
       "status": "open",
       "photos": []
     },
@@ -152,8 +152,8 @@
       "state": "New York",
       "county": "Brooklyn",
       "address": "209 Joralemon Street, Brooklyn, NY 11201",
-      "summary": "Brooklyn's Greek Revival city hall of 1848, built in Tuckahoe marble to designs by Calvin Pollard and Gamaliel King, and the borough's seat of government since 1898.",
-      "history": "A fire in 1895 destroyed the original cupola and its statue of Justice; a Victorian cast-iron cupola replaced them by 1898. Designated a New York City landmark on April 19, 1966 and listed on the National Register of Historic Places on January 10, 1980. A restoration was completed in 1989.",
+      "summary": "Brooklyn's city hall of 1848, built in Tuckahoe marble to designs by Calvin Pollard and Gamaliel King, and the borough's seat of government since 1898.",
+      "history": "A fire in 1895 destroyed the original cupola and its statue of Justice; a cast-iron cupola replaced them by 1898. Designated a New York City landmark on April 19, 1966 and listed on the National Register of Historic Places on January 10, 1980. A restoration was completed in 1989.",
       "status": "open",
       "photos": []
     },
@@ -178,7 +178,7 @@
       "state": "New York",
       "county": "Brooklyn",
       "address": "227 Duffield Street, Brooklyn, NY 11201",
-      "summary": "A Greek Revival rowhouse tied to the abolitionists Harriet and Thomas Truesdell, who lived here from 1851 to 1863, and to Underground Railroad activity. Whether it is open to visitors could not be confirmed; it is visible from the street.",
+      "summary": "A rowhouse tied to the abolitionists Harriet and Thomas Truesdell, who lived here from 1851 to 1863, and to Underground Railroad activity. Whether it is open to visitors could not be confirmed; it is visible from the street.",
       "history": "The city proposed demolishing the house in 2004. After about a decade of community advocacy it was designated a landmark as the Truesdell House in February 2021, and the city purchased it for $3.2 million in March 2021. By 2019 it was the only historic rowhouse left standing on that stretch of Duffield Street.",
       "status": "open",
       "photos": []
@@ -252,13 +252,13 @@
       "kind": "sight",
       "name": "New York Transit Museum",
       "place_slug": "new-york-transit-museum",
-      "note": "Transit history in a decommissioned subway station on Schermerhorn Street."
+      "note": "Transit history at 99 Schermerhorn Street; the back mezzanine galleries are currently without air conditioning."
     },
     {
       "kind": "sight",
       "name": "Brooklyn Borough Hall",
       "place_slug": "brooklyn-borough-hall",
-      "note": "The 1848 Greek Revival city hall in Tuckahoe marble, a city landmark since 1966."
+      "note": "The 1848 city hall in Tuckahoe marble, a city landmark since 1966."
     },
     {
       "kind": "sight",
