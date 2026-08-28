@@ -15,6 +15,16 @@ defmodule Ethos.ReleaseTest do
     user = user_fixture()
     expected = length(SeedDataHelpers.seed_files("brooklyn"))
 
+    # The runbook order is seed_manhattan -> seed_connecticut ->
+    # seed_connecticut_expansion -> seed_brooklyn, so Manhattan's guides always
+    # exist by the time Brooklyn is seeded. Wave 2 is the first wave to author
+    # the cross-borough see-also edges rule 11 of the content rules provides
+    # for (Williamsburg and South Williamsburg both link to the Lower East Side
+    # over the Williamsburg Bridge), and Links.resolve!/1 raises on an unknown
+    # target rather than skipping the edge. Reproduce the documented
+    # precondition here; the assertions below still count Brooklyn guides only.
+    Ethos.Release.seed_manhattan(user.email)
+
     Ethos.Release.seed_brooklyn(user.email)
 
     brooklyn = fn ->

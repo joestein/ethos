@@ -1,38 +1,78 @@
 {
   "1530-pennsylvania-avenue-starrett-city": {
-    "source_url": "https://commons.wikimedia.org/wiki/File:Pennsylvania_Av_Hornell_Loop_td_(2018-08-15)_01_-_1530_Pennsylvania_Avenue.jpg",
-    "sha256": "2f5bda6100c7367830c22a9fb7e124cec2932a2b783ee099cb4b5518e503e7a3"
+    "sha256": "2f5bda6100c7367830c22a9fb7e124cec2932a2b783ee099cb4b5518e503e7a3",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Pennsylvania_Av_Hornell_Loop_td_(2018-08-15)_01_-_1530_Pennsylvania_Avenue.jpg"
   },
   "betsy-head-play-center-brownsville": {
-    "source_url": "https://commons.wikimedia.org/wiki/File:Betsy_Head_Play_Center._LOC_gsc.5a30636.jpg",
-    "sha256": "bd5d53579c929086ace49a9edf0035604f01280e680b20ed2d3dfdcac8f3f237"
+    "sha256": "bd5d53579c929086ace49a9edf0035604f01280e680b20ed2d3dfdcac8f3f237",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Betsy_Head_Play_Center._LOC_gsc.5a30636.jpg"
   },
   "blessed-sacrament-church-cypress-hills": {
-    "source_url": "https://commons.wikimedia.org/wiki/File:Blessed_Sacrament_Church_from_Crescent_Street_Jamaica_El-1.jpg",
-    "sha256": "72fe613557419d67af2a7b4f9b4118416486351343623d16b3118ababd9e6116"
+    "sha256": "72fe613557419d67af2a7b4f9b4118416486351343623d16b3118ababd9e6116",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Blessed_Sacrament_Church_from_Crescent_Street_Jamaica_El-1.jpg"
+  },
+  "domino-sugar-refinery-williamsburg": {
+    "sha256": "b90507b03760241a6ee2e69dd47ac797afbe8727d7c088593dcd6b305ec14e48",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Domino_Refinery_in_2023.jpg"
   },
   "franklin-k-lane-high-school-cypress-hills": {
-    "source_url": "https://commons.wikimedia.org/wiki/File:75th_St-Elderts_Ln_04_-_FK_Lane_HS.jpg",
-    "sha256": "b9381f8f633baafd20814c99453ce2206097efc3e216cbd44b45131d0752a533"
+    "sha256": "b9381f8f633baafd20814c99453ce2206097efc3e216cbd44b45131d0752a533",
+    "source_url": "https://commons.wikimedia.org/wiki/File:75th_St-Elderts_Ln_04_-_FK_Lane_HS.jpg"
   },
   "highland-park-entrance-highland-park": {
-    "source_url": "https://commons.wikimedia.org/wiki/File:HighlandparkBrooklyn.jpg",
-    "sha256": "724cb74913a228c3b903800445ba78357d33cf1c4a75f81f1b23e3dd14627c12"
+    "sha256": "724cb74913a228c3b903800445ba78357d33cf1c4a75f81f1b23e3dd14627c12",
+    "source_url": "https://commons.wikimedia.org/wiki/File:HighlandparkBrooklyn.jpg"
+  },
+  "kings-county-savings-bank-south-williamsburg": {
+    "sha256": "7e535d6bcb16814b596dbb1b012c02a6b4ac930a19e43a36e8eeaefc154f477c",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Kings_County_Savings_shady_135_Bwy_jeh.jpg"
   },
   "loews-pitkin-theatre-brownsville": {
-    "source_url": "https://commons.wikimedia.org/wiki/File:Loew%27s_Pitkin_Theatre_HDR_2021_jeh.jpg",
-    "sha256": "0b5d85d04c4efbfb4188bbdce6561f126518572ed28749424ad627b1510c6f38"
+    "sha256": "0b5d85d04c4efbfb4188bbdce6561f126518572ed28749424ad627b1510c6f38",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Loew%27s_Pitkin_Theatre_HDR_2021_jeh.jpg"
+  },
+  "maria-hernandez-park-entrance-bushwick": {
+    "sha256": "6add691b922a062b678cb409e0e3977e0025622d98dbbe6ed3bc8fadc7d4d012",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Maria_Hernandez_Park_entrance.jpg"
+  },
+  "maria-hernandez-park-plaza-bushwick": {
+    "sha256": "b5275d59fda206d6cdf4ae8545d7f34c6ce0ddb6d591424b3af56c42758ea8a9",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Maria_Hernandez_Park_June_2021_center_plaza.jpg"
   },
   "new-lots-community-church-new-lots": {
-    "source_url": "https://commons.wikimedia.org/wiki/File:New_Lots_Community_Church_jeh.jpg",
-    "sha256": "d4e825a3c2e17d125b5baac853b808619fb540c96f37e19b68013eaa9dc747af"
+    "sha256": "d4e825a3c2e17d125b5baac853b808619fb540c96f37e19b68013eaa9dc747af",
+    "source_url": "https://commons.wikimedia.org/wiki/File:New_Lots_Community_Church_jeh.jpg"
+  },
+  "pulaski-bridge-greenpoint": {
+    "sha256": "2ac4397eaec73c7ccd1b5411d96f5f88ea7b5de01f7a1f19a046f874b28ab993",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Pulaski_Bridge_from_west_jeh.JPG"
+  },
+  "st-barbaras-church-bushwick": {
+    "sha256": "ed7603423a32685859c768922c4176c420fc19e5c6e4ea7639b9d48137220b5f",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Saint_Barbara's_Church_(Brooklyn)_2.jpg"
+  },
+  "st-nicholas-church-east-williamsburg": {
+    "sha256": "6524bce595b3b11b4d26f502897b734ef1410db698e730033039a1ff5abaf001",
+    "source_url": "https://commons.wikimedia.org/wiki/File:St_Nicholas_Roman_Catholic_Church.jpg"
   },
   "st-sylvester-church-city-line": {
-    "source_url": "https://commons.wikimedia.org/wiki/File:St_Sylvester_Church_in_City_Line,Brooklyn.jpg",
-    "sha256": "d1d73d17996380b0a9c7a9c0df14c8130abf8d67cede4ac0bc1f690ff25eb24b"
+    "sha256": "d1d73d17996380b0a9c7a9c0df14c8130abf8d67cede4ac0bc1f690ff25eb24b",
+    "source_url": "https://commons.wikimedia.org/wiki/File:St_Sylvester_Church_in_City_Line,Brooklyn.jpg"
+  },
+  "williamsburg-bridge-williamsburg": {
+    "sha256": "abc1d9b8eb1ca320c2c8c9e5dce8be5a97dbeb604d2ea5e05dea6491a492c697",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Williamsburg_Bridge_NY2.jpg"
+  },
+  "williamsburgh-savings-bank-williamsburg": {
+    "sha256": "dc45e11b3fdc920a4f9505a5ea65f395d31553e4c0132b935488551825be075e",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Billyb_Sav_Bank_dome_bright_jeh.JPG"
+  },
+  "winthrop-shelter-pavilion-greenpoint": {
+    "sha256": "8de2ffd02a2abefd4a3447320a8392c47bec1b9d14f1a50e65625394ad3a8c7f",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Winthrop_Shelter_Pavilion_jeh.JPG"
   },
   "zion-triangle-memorial-brownsville": {
-    "source_url": "https://commons.wikimedia.org/wiki/File:Zion_Triangle_park_jeh.JPG",
-    "sha256": "fc8b8471bdf8cb30bae307aabd4f990f38c55ddbea5c46e52bded04297033001"
+    "sha256": "fc8b8471bdf8cb30bae307aabd4f990f38c55ddbea5c46e52bded04297033001",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Zion_Triangle_park_jeh.JPG"
   }
 }

@@ -1,0 +1,106 @@
+{
+  "guide": {
+    "slug": "east-williamsburg-brooklyn-guide",
+    "title": "East Williamsburg, Brooklyn: Cripplebush and the Third District",
+    "destination": "East Williamsburg, New York",
+    "state": "New York",
+    "county": "Brooklyn",
+    "tier": "town-page",
+    "intro": "Before development the area was known as Cripplebush, a tract of scrub bush between the Bushwick shore and the town of Bushwick; British forces occupying it during the Revolutionary War cleared the thickets for fuel. In 1800 Richard M. Woodhull bought waterfront land and named it Williamsburgh after the surveyor Colonel Jonathan Williams, and the village was incorporated in 1827 as part of the town of Bushwick. On April 18, 1835 Williamsburg's territory expanded eastward, creating a Third District — the area now called East Williamsburg — laid out with Union Avenue on the west, Broadway on the south and Bushwick Avenue on the east. When the city of Williamsburg merged into the City of Brooklyn in 1854, that Third District became Brooklyn's 15th and 16th Wards.",
+    "sections": [
+      {
+        "heading": "Glue, gas, and a polluted creek",
+        "body": "For all that it carries the Williamsburg name, East Williamsburg was historically organized as part of Brooklyn's 18th Ward, created from the annexation of Bushwick, and it was never part of the separately incorporated city of Williamsburg. Where it ends and Bushwick begins is not settled: the sources consulted for this guide place the L's Morgan Avenue station in Bushwick, describe Roberta's on Moore Street as sitting near the line between the two, and disagree over which neighborhood the Moore Street Market belongs to. The blocks generally considered East Williamsburg sit in Community District 1.\n\nIndustry shaped the ground here. In 1838 the industrialist Peter Cooper relocated his glue business from Manhattan to a site on Maspeth Avenue; his family sold that site to the City of Brooklyn for $55,000 in 1895, and it opened as Cooper Park the same year. A shelter house was added in a 1906 construction campaign. A pair of cylindrical gas holders on Maspeth Avenue, built in 1927 and 1948, stood as a landmark of the neighborhood's gas-manufacturing history until they were demolished in 2001; they are gone, and visitors sometimes still come looking for them.\n\nEnglish Kills, a heavily polluted tributary of Newtown Creek, originates from a combined sewer overflow pipe at 465 Johnson Avenue and drains roughly 344 million gallons of sewage into the creek annually. Its present straightened path dates to the late nineteenth century, and the wider Newtown Creek system was designated a federal Superfund site in 2010.\n\nItalian immigration dominated the neighborhood from the late 1800s through the 1970s, with Italian families established along Graham Avenue by the late 1880s. Since the 1990s the area has drawn young artists, professionals and students."
+      },
+      {
+        "heading": "Getting there",
+        "body": "The L is the neighborhood's line. Montrose Avenue sits on the border of East Williamsburg and Williamsburg. Grand Street's own locale is recorded as Williamsburg and East Williamsburg together.\n\nTwo other L stations are often mentioned in connection with the neighborhood but are not placed in it by the sources consulted here. Morgan Avenue is recorded as being in Bushwick, at Morgan Avenue and Harrison Place. Graham Avenue is recorded as being in Williamsburg, at Graham and Metropolitan Avenues.\n\nThere is no NYC Ferry landing and no Long Island Rail Road station in East Williamsburg."
+      }
+    ],
+    "faq": [
+      {
+        "question": "How do I get to East Williamsburg?",
+        "answer": "The L is the answer. Montrose Avenue sits on the border of East Williamsburg and Williamsburg, and Grand Street's locale is recorded as Williamsburg and East Williamsburg together. Morgan Avenue and Graham Avenue, both on the L, are recorded as being in Bushwick and Williamsburg respectively."
+      },
+      {
+        "question": "Where does East Williamsburg end and Bushwick begin?",
+        "answer": "No source settles it. The 1835 Third District that became East Williamsburg was drawn with Bushwick Avenue on its east, but the area was historically part of Brooklyn's 18th Ward, created from the annexation of Bushwick, and sources still disagree over which side of the line particular addresses on Moore Street fall."
+      },
+      {
+        "question": "What was on the site of Cooper Park?",
+        "answer": "A glue factory. Peter Cooper relocated the business from Manhattan to Maspeth Avenue in 1838, and his family sold the site to the City of Brooklyn for $55,000 in 1895. It opened as a public park that same year."
+      }
+    ],
+    "photos": [
+      {
+        "src": "/photos/ny/brooklyn/east-williamsburg/st-nicholas-church-east-williamsburg.jpg",
+        "thumb": "/photos/ny/brooklyn/east-williamsburg/st-nicholas-church-east-williamsburg_thumb.jpg",
+        "title": "St. Nicholas Roman Catholic Church",
+        "description": "The red brick facade of St. Nicholas Roman Catholic Church, with pointed-arch stained glass windows and stone-tipped gables.",
+        "author": "Kidfly182",
+        "license": "CC BY-SA 4.0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:St_Nicholas_Roman_Catholic_Church.jpg"
+      }
+    ]
+  },
+  "places": [
+    {
+      "slug": "cooper-park",
+      "name": "Cooper Park",
+      "kind": "park",
+      "town": "East Williamsburg",
+      "state": "New York",
+      "county": "Brooklyn",
+      "address": "Between Maspeth Avenue, Sharon Street, Olive Street, and Morgan Avenue, Brooklyn, NY 11206",
+      "official_url": "https://www.nycgovparks.org/parks/cooper-park",
+      "summary": "A 6.40-acre city park in East Williamsburg, built in 1895 on the former site of a Peter Cooper glue factory. A shelter house on the grounds dates from a 1906 construction campaign.",
+      "history": "Peter Cooper relocated his glue business from Manhattan to Maspeth Avenue in 1838. His family sold the factory site to the City of Brooklyn for $55,000 in 1895, and it opened as a public park that year. The shelter house was built in 1906 by the contractor L.E. Brown to designs by the architects Dodge & Morrison.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "pine-box-rock-shop",
+      "name": "Pine Box Rock Shop",
+      "kind": "cafe",
+      "town": "East Williamsburg",
+      "state": "New York",
+      "county": "Brooklyn",
+      "address": "12 Grattan Street, Brooklyn, NY 11206",
+      "official_url": "https://pineboxrockshop.com/",
+      "summary": "A bar in a former casket factory on Grattan Street, serving craft beer and cocktails and operating as a neighborhood gathering spot since October 2010. It sits near the Morgan Avenue L station.",
+      "status": "open",
+      "photos": []
+    }
+  ],
+  "entries": [
+    {
+      "kind": "walk",
+      "name": "Cooper Park",
+      "place_slug": "cooper-park",
+      "note": "Six and a half acres on the site of Peter Cooper's glue works, a public park since 1895, with a shelter house from 1906."
+    },
+    {
+      "kind": "food",
+      "name": "Pine Box Rock Shop",
+      "place_slug": "pine-box-rock-shop",
+      "note": "Craft beer and cocktails inside a former casket factory on Grattan Street, open since October 2010."
+    }
+  ],
+  "links": [
+    {
+      "target": "guide:bushwick-brooklyn-guide",
+      "kind": "nearby",
+      "note": "Where East Williamsburg ends and Bushwick begins is genuinely contested; the L's Morgan Avenue station is recorded as being in Bushwick."
+    },
+    {
+      "target": "guide:williamsburg-brooklyn-guide",
+      "kind": "nearby",
+      "note": "The L's Montrose Avenue station is recorded as sitting on the border of East Williamsburg and Williamsburg."
+    },
+    {
+      "target": "guide:south-williamsburg-brooklyn-guide",
+      "kind": "shared-history",
+      "note": "The 1835 annexation of Bushwick land into Williamsburgh created three districts: the first became the South Side, the third East Williamsburg."
+    }
+  ]
+}
