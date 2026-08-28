@@ -90,6 +90,22 @@ Apply this to every item before you write a single line of copy.
   Brooklyn is not a source. Fewer verified items beat more padded ones, and
   the tier system in rule 3 exists precisely so that a thin neighborhood can
   ship honestly instead of being inflated.
+- **A `confirmed` verdict vouches for what the verdict's own `item` text
+  restates, not for every clause in the finder's original sentence.** When a
+  finder sentence carries a clause the verdict's restatement omits — a
+  superlative, a ranking, an "one of the first/earliest/largest", an
+  attribution — that clause is **unverified** and does not ship, even though
+  the item as a whole is confirmed. The check: before publishing a sentence
+  built from a confirmed item, compare it against the verdict's `item` text
+  and drop anything the verdict did not restate. Wave 1's
+  `priv/seed_data/brooklyn/new-lots.json` shipped a clause calling the New
+  Lots Reformed Church "one of the Landmarks Preservation Commission's
+  earliest individual designations." The verdict on that item was
+  `confirmed`, but its `item` text restated only the designation and its
+  July 19, 1966 date — not the "earliest" ranking — and a separate verifier
+  note called that ranking "not independently verified beyond being
+  plausible." Confirming the designation did not confirm the superlative
+  riding along with it.
 
 There is no mechanical gate behind this rule. It is enforced by the wave's
 fact-fidelity review, which traces every claim in every file back to the
@@ -968,6 +984,7 @@ not mean a compliant file** — it means nothing in this table was checked.
 | Rule | Unenforced part |
 | --- | --- |
 | 2 | All verdict filtering — nothing mechanical can tell a verified fact from an invented one |
+| 2 | A `confirmed` verdict's scope — whether a shipped clause was actually restated in the verdict's `item` text, or only present in the finder's original sentence (the New Lots case) |
 | 3 | The 6-place threshold itself (the gate only fails clear mislabels: guide < 4, town-page ≥ 6) |
 | 4 | **Every fixed value except `guide.county`**: `places[].county`, `places[].state`, `places[].town`, `places[].status` beyond `{open,closed}`, `guide.destination`, and the `{slug}-brooklyn-guide` slug pattern. `Place.changeset` requires `county` and `state` to be *present*, never to hold a particular value — a place carrying `"Kings County"` publishes cleanly and wrong |
 | 5 | **Intro 100-160 words**; 2-3 sections; **FAQ count 4-6**; **places 6-12**; **entries 6-12** |
