@@ -96,24 +96,7 @@ defmodule Ethos.Seeds.ConnecticutSeedDataTest do
     assert length(files) == 165,
            "expected 165 connecticut seed files, found #{length(files)}"
 
-    # place-slug ownership across connecticut + manhattan + CT-5 code module
-    json_owned =
-      for f <- files ++ Path.wildcard(@manhattan_glob),
-          p <- DataGuide.load!(f)["places"],
-          # Directory-qualified: connecticut/ and manhattan/ may hold the same
-          # basename, which would hide a genuine cross-destination collision.
-          do: {p["slug"], Path.join(Path.basename(Path.dirname(f)), Path.basename(f))}
-
-    code_owned =
-      for p <- Ethos.Seeds.ConnecticutPlaces.places(), do: {p.slug, "connecticut_places.ex"}
-
-    dups =
-      (json_owned ++ code_owned)
-      |> Enum.group_by(&elem(&1, 0), &elem(&1, 1))
-      # length/1, not uniq — two places sharing a slug inside ONE file collide too.
-      |> Enum.filter(fn {_slug, owners} -> length(owners) > 1 end)
-
-    assert dups == [], "place slugs with multiple owners: #{inspect(dups)}"
+    Ethos.SeedDataHelpers.assert_place_slugs_globally_unique!()
 
     # licenses
     for f <- files, p <- all_photos(DataGuide.load!(f)) do

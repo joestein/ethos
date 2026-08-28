@@ -20,16 +20,7 @@ defmodule Ethos.Seeds.ManhattanSeedDataTest do
     files = files()
     assert files != []
 
-    # global place-slug ownership: a slug is defined in exactly one file
-    owned =
-      for f <- files, p <- DataGuide.load!(f)["places"], do: {p["slug"], Path.basename(f)}
-
-    dups =
-      owned
-      |> Enum.group_by(&elem(&1, 0), &elem(&1, 1))
-      |> Enum.filter(fn {_slug, fs} -> length(fs) > 1 end)
-
-    assert dups == [], "place slugs defined in multiple files: #{inspect(dups)}"
+    Ethos.SeedDataHelpers.assert_place_slugs_globally_unique!()
 
     # licenses + photo existence
     # Photos are served from priv/photos by their own Plug.Static, not from
