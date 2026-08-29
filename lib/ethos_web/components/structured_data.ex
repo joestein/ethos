@@ -17,6 +17,60 @@ defmodule EthosWeb.StructuredData do
   use Phoenix.VerifiedRoutes, endpoint: EthosWeb.Endpoint, router: EthosWeb.Router
 
   @context "https://schema.org"
+  @site_name "Ethos"
+
+  @doc """
+  The site's `Organization`, for top-level emission on the home page.
+
+  `publisher/0` is the same node without `@context`, for nesting.
+  """
+  def organization, do: with_context(publisher())
+
+  @doc """
+  The site's `Organization` as a **nested** node — no `@context`.
+
+  This is the node other pages hang off `publisher`. JSON-LD only needs
+  `@context` once, at the top of the document it is declared in, so a nested
+  copy would be redundant noise; `organization/0` adds it back for the one
+  place that emits the Organization in its own right.
+
+  `logo` is an SVG. That is valid schema.org, but Google's logo rich result
+  documents JPG/PNG/GIF — an SVG may simply not earn that treatment. The site
+  has no raster logo to point at yet, and producing one is a design task, not
+  a metadata one.
+  """
+  def publisher do
+    %{
+      "@type" => "Organization",
+      "name" => @site_name,
+      "url" => url(~p"/"),
+      "logo" => static_url(EthosWeb.Endpoint, "/images/logo.svg")
+    }
+  end
+
+  @doc """
+  The site's `WebSite`, carrying the `SearchAction` for sitelinks search.
+
+  The `urlTemplate` is built from `~p"/search"` and the `q` parameter that
+  `EthosWeb.SearchController.index/2` actually reads, so a rename on either
+  side breaks the build or the test rather than silently publishing a search
+  endpoint that answers nothing.
+  """
+  def website do
+    with_context(%{
+      "@type" => "WebSite",
+      "name" => @site_name,
+      "url" => url(~p"/"),
+      "potentialAction" => %{
+        "@type" => "SearchAction",
+        "target" => %{
+          "@type" => "EntryPoint",
+          "urlTemplate" => url(~p"/search") <> "?q={search_term_string}"
+        },
+        "query-input" => "required name=search_term_string"
+      }
+    })
+  end
 
   @doc "A BreadcrumbList from an ordered trail of `%{name:, url:}`."
   def breadcrumb(crumbs) when is_list(crumbs) do
@@ -104,4 +158,6 @@ defmodule EthosWeb.StructuredData do
   """
   def maybe_put(map, _key, nil), do: map
   def maybe_put(map, key, value), do: Map.put(map, key, value)
+
+  defp with_context(node), do: Map.put(node, "@context", @context)
 end
