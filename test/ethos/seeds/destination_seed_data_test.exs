@@ -130,7 +130,7 @@ defmodule Ethos.Seeds.DestinationSeedDataTest do
   defp collect_strings(s, path) when is_binary(s), do: [{path, s}]
   defp collect_strings(_other, _path), do: []
 
-  # --- The eight assertions, each a helper over a list of file paths ------
+  # --- The nine assertions, each a helper over a list of file paths -------
 
   # 1. A destination intro is the whole body of the page: too short and the
   #    page is thinner than the county listing it sits above, too long and it
@@ -273,6 +273,50 @@ defmodule Ethos.Seeds.DestinationSeedDataTest do
   end
 
   defp photo_dir(_src), do: nil
+
+  # 9. The corpus must be exactly the thirteen destination pages shipped for
+  #    this rollout — no fewer (an accidental deletion) and no more (an
+  #    unreviewed extra page landing silently, or a fourteenth appearing
+  #    without anyone deciding it should). This is a literal list of the
+  #    thirteen paths, not a count and not a set derived from the files this
+  #    test happens to find on disk: a derived expectation passes no matter
+  #    which files exist, which is exactly the vacuity this assertion exists
+  #    to prevent. Sourced from each file's own "path" field rather than its
+  #    filename, since the filename-to-path mapping ("/" replaced by "-") is
+  #    lossy to reverse in general and the field is what the app actually
+  #    serves.
+  @destination_roster ~w(
+    connecticut
+    connecticut/fairfield-county
+    connecticut/hartford-county
+    connecticut/litchfield-county
+    connecticut/middlesex-county
+    connecticut/new-haven-county
+    connecticut/new-london-county
+    connecticut/tolland-county
+    connecticut/windham-county
+    new-york
+    new-york/brooklyn
+    new-york/manhattan
+    rome
+  )
+
+  defp roster_violations(paths) do
+    paths |> Enum.map(&DataDestination.load!(&1)["path"]) |> roster_diff(@destination_roster)
+  end
+
+  # Pure set comparison, split out of roster_violations/1 so both directions
+  # of the check can be pinned by a unit test below without standing up (or
+  # temporarily breaking) real seed files.
+  defp roster_diff(actual_paths, expected_paths) do
+    actual = MapSet.new(actual_paths)
+    expected = MapSet.new(expected_paths)
+
+    missing = expected |> MapSet.difference(actual) |> Enum.sort()
+    unexpected = actual |> MapSet.difference(expected) |> Enum.sort()
+
+    {missing, unexpected}
+  end
 
   # --- Seeding the guide corpus ------------------------------------------
   #
@@ -469,15 +513,28 @@ defmodule Ethos.Seeds.DestinationSeedDataTest do
            ] = photo_dir_violations([fixture("bad_photo_dir.json")])
   end
 
+  # Pinned against synthetic path lists rather than real seed files, so both
+  # directions of the roster check are proven permanently without standing up
+  # a fourteenth fixture file or temporarily deleting a committed one.
+  test "the roster diff names a missing path and an unexpected path independently" do
+    assert roster_diff(~w(connecticut new-york atlantis), ~w(connecticut new-york rome)) ==
+             {["rome"], ["atlantis"]}
+  end
+
+  test "the roster diff is empty when the two lists match, regardless of order" do
+    assert roster_diff(~w(rome connecticut new-york), ~w(connecticut new-york rome)) == {[], []}
+  end
+
   # --- The committed corpus obeys all of them ----------------------------
 
   test "every committed destination seed file is valid and resolves to a real page" do
     files = files()
 
-    # The roster-count assertion is deliberately absent here — it lands with
-    # the content, in the task that ships the thirteen files. Until then this
-    # test passes vacuously over an empty directory, which is correct: the
-    # fixture tests above are what prove each helper actually fires.
+    {missing, unexpected} = roster_violations(files)
+
+    assert missing == [] and unexpected == [],
+           "destination roster mismatch — missing: #{inspect(missing)}, " <>
+             "unexpected: #{inspect(unexpected)}"
 
     intros = intro_length_violations(files)
     assert intros == [], "destination intros outside 120-180 words: #{inspect(intros)}"

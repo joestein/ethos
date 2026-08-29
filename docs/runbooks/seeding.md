@@ -28,7 +28,9 @@ Locally, the same functions run under `mix run -e '...'` with ordinary quotes.
 
 ## Seed order
 
-Run in this exact order. Every step depends on the ones above it.
+Run in this exact order. Every step depends on the ones above it, except
+`seed_destinations` (step 5), which depends on nothing and nothing depends on
+it — see its entry below.
 
 1. `Ethos.Release.seed_manhattan(email)` — 38 JSON files, `priv/seed_data/manhattan/`
 2. `Ethos.Release.seed_connecticut(email)` — the CT-5 **code-module** guides
@@ -37,11 +39,22 @@ Run in this exact order. Every step depends on the ones above it.
 3. `Ethos.Release.seed_connecticut_expansion(email)` — 165 JSON town/guide
    files, `priv/seed_data/connecticut/`
 4. `Ethos.Release.seed_brooklyn(email)` — 69 JSON files, `priv/seed_data/brooklyn/`
-5. `Ethos.Release.seed_collections()`
-6. `Ethos.Release.seed_links()`
+5. `Ethos.Release.seed_destinations()` — 13 JSON files, `priv/seed_data/destinations/`.
+   **Takes no email argument** — unlike every seeder above it, a destination
+   page has no author. It is listed here, after `seed_brooklyn` and before
+   `seed_collections`, for consistency with the rest of this list rather than
+   because it must run at this point: it writes only its own `destinations`
+   table, references no place and resolves no link, so it is safe to run
+   before, after, or between any of the other steps.
+6. `Ethos.Release.seed_collections()`
+7. `Ethos.Release.seed_links()`
 
 Verify the published count after each content step before moving on — see
-"Expected published counts" below.
+"Expected published counts" below. `seed_destinations` writes to a separate
+`destinations` table rather than `guides`, so it has no row in that table;
+verify it instead with
+`Ethos.Destinations.list_destinations() |> Enum.count()`, which should read
+**13** after a fresh run.
 
 `Ethos.Release.seed_rome(email)` seeds one standalone guide
 (`three-days-in-rome-real-trip-guide`). It has no dependencies and nothing
