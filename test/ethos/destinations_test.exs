@@ -1,0 +1,54 @@
+defmodule Ethos.DestinationsTest do
+  use Ethos.DataCase, async: true
+
+  alias Ethos.Destinations
+
+  @valid %{
+    path: "connecticut/litchfield-county",
+    name: "Litchfield County",
+    intro: "A county in the northwest corner of the state.",
+    photos: []
+  }
+
+  test "upsert_destination!/1 creates then updates by path" do
+    d = Destinations.upsert_destination!(@valid)
+    assert d.path == "connecticut/litchfield-county"
+    assert d.name == "Litchfield County"
+
+    updated = Destinations.upsert_destination!(%{@valid | intro: "Revised."})
+    assert updated.id == d.id
+    assert updated.intro == "Revised."
+    assert length(Destinations.list_destinations()) == 1
+  end
+
+  test "get_by_path/1 finds a destination and returns nil for an unknown path" do
+    Destinations.upsert_destination!(@valid)
+
+    assert %{name: "Litchfield County"} =
+             Destinations.get_by_path("connecticut/litchfield-county")
+
+    assert Destinations.get_by_path("connecticut/nope-county") == nil
+  end
+
+  test "path, name and intro are required" do
+    for missing <- [:path, :name, :intro] do
+      attrs = Map.delete(@valid, missing)
+
+      assert_raise Ecto.InvalidChangesetError, fn ->
+        Destinations.upsert_destination!(attrs)
+      end
+    end
+  end
+
+  test "path must be lowercase slug segments separated by single slashes" do
+    for bad <- ["Connecticut", "new york", "new-york/", "/connecticut", "a//b"] do
+      assert_raise Ecto.InvalidChangesetError, fn ->
+        Destinations.upsert_destination!(%{@valid | path: bad})
+      end
+    end
+
+    for good <- ["connecticut", "new-york/brooklyn", "rome"] do
+      assert %{path: ^good} = Destinations.upsert_destination!(%{@valid | path: good})
+    end
+  end
+end
