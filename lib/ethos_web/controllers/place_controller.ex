@@ -2,6 +2,7 @@ defmodule EthosWeb.PlaceController do
   use EthosWeb, :controller
 
   alias Ethos.{Links, Places}
+  alias EthosWeb.StructuredData
 
   def show(conn, %{"slug" => slug}) do
     case Places.get_place_by_slug(slug) do
@@ -16,7 +17,7 @@ defmodule EthosWeb.PlaceController do
         og = %{
           title: "#{place.name} — #{place.town}, #{place.state}",
           description: meta_description,
-          image: first_photo && url(~p"/") <> String.trim_leading(first_photo["src"], "/"),
+          image: StructuredData.absolute_url(first_photo["src"]),
           type: "website",
           url: url(~p"/p/#{place.slug}")
         }
@@ -79,14 +80,11 @@ defmodule EthosWeb.PlaceController do
     }
 
     base
-    |> maybe_put(
+    |> StructuredData.maybe_put(
       "image",
-      case List.first(place.photos) do
-        nil -> nil
-        p -> url(~p"/") <> String.trim_leading(p["src"], "/")
-      end
+      StructuredData.absolute_url(List.first(place.photos)["src"])
     )
-    |> maybe_put(
+    |> StructuredData.maybe_put(
       "address",
       place.address &&
         %{
@@ -99,40 +97,17 @@ defmodule EthosWeb.PlaceController do
     )
   end
 
-  defp maybe_put(map, _key, nil), do: map
-  defp maybe_put(map, key, value), do: Map.put(map, key, value)
-
   defp breadcrumb_ld(place) do
-    %{
-      "@context" => "https://schema.org",
-      "@type" => "BreadcrumbList",
-      "itemListElement" => [
-        %{"@type" => "ListItem", "position" => 1, "name" => "Ethos", "item" => url(~p"/")},
-        %{
-          "@type" => "ListItem",
-          "position" => 2,
-          "name" => "Destinations",
-          "item" => url(~p"/destinations")
-        },
-        %{
-          "@type" => "ListItem",
-          "position" => 3,
-          "name" => place.state,
-          "item" => url(~p"/destinations/#{place.state_slug}")
-        },
-        %{
-          "@type" => "ListItem",
-          "position" => 4,
-          "name" => place.county,
-          "item" => url(~p"/destinations/#{place.state_slug}/#{place.county_slug}")
-        },
-        %{
-          "@type" => "ListItem",
-          "position" => 5,
-          "name" => place.name,
-          "item" => url(~p"/p/#{place.slug}")
-        }
-      ]
-    }
+    StructuredData.breadcrumb(
+      StructuredData.root_crumbs() ++
+        [
+          %{name: place.state, url: url(~p"/destinations/#{place.state_slug}")},
+          %{
+            name: place.county,
+            url: url(~p"/destinations/#{place.state_slug}/#{place.county_slug}")
+          },
+          %{name: place.name, url: url(~p"/p/#{place.slug}")}
+        ]
+    )
   end
 end

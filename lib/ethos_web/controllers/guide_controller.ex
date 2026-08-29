@@ -3,6 +3,7 @@ defmodule EthosWeb.GuideController do
 
   alias Ethos.{Collections, Guides, Links, Research}
   alias Ethos.Guides.Guide
+  alias EthosWeb.StructuredData
 
   def show(conn, %{"slug" => slug}) do
     guide = Guides.get_published_guide_by_slug!(slug) |> ensure_og_image()
@@ -83,31 +84,14 @@ defmodule EthosWeb.GuideController do
   # Mirrors the visible breadcrumb on the guide page — same segments, same
   # order — by walking the same trail. Guides without a county (or without any
   # geography) simply produce a shorter list rather than a nil-slug link.
-  defp breadcrumb_ld(guide) do
-    trail =
-      [
-        %{name: "Ethos", url: url(~p"/")},
-        %{name: "Destinations", url: url(~p"/destinations")}
-      ] ++
-        Enum.map(EthosWeb.GuideBreadcrumb.trail(guide), fn crumb ->
-          %{name: crumb.name, url: unverified_url(EthosWeb.Endpoint, crumb.path)}
-        end) ++
-        [%{name: guide.title, url: url(~p"/g/#{guide.slug}")}]
+  defp breadcrumb_ld(guide), do: StructuredData.breadcrumb(guide_trail(guide))
 
-    %{
-      "@context" => "https://schema.org",
-      "@type" => "BreadcrumbList",
-      "itemListElement" =>
-        Enum.with_index(trail, 1)
-        |> Enum.map(fn {crumb, position} ->
-          %{
-            "@type" => "ListItem",
-            "position" => position,
-            "name" => crumb.name,
-            "item" => crumb.url
-          }
-        end)
-    }
+  defp guide_trail(guide) do
+    StructuredData.root_crumbs() ++
+      Enum.map(EthosWeb.GuideBreadcrumb.trail(guide), fn crumb ->
+        %{name: crumb.name, url: unverified_url(EthosWeb.Endpoint, crumb.path)}
+      end) ++
+      [%{name: guide.title, url: url(~p"/g/#{guide.slug}")}]
   end
 
   # Fly machines (and any other ephemeral filesystem) can lose the generated
@@ -144,7 +128,7 @@ defmodule EthosWeb.GuideController do
         og = %{
           title: page_title,
           description: page_meta_description,
-          image: first_photo && url(~p"/") <> String.trim_leading(first_photo["src"], "/"),
+          image: StructuredData.absolute_url(first_photo["src"]),
           type: "website",
           url: url(~p"/g/#{guide.slug}/photos")
         }
@@ -170,22 +154,10 @@ defmodule EthosWeb.GuideController do
   defp destination_name(guide), do: guide.destination |> String.split(",") |> List.first()
 
   defp photos_breadcrumb_ld(guide) do
-    breadcrumb = breadcrumb_ld(guide)
-
-    parents = breadcrumb["itemListElement"]
-
-    items =
-      parents ++
-        [
-          %{
-            "@type" => "ListItem",
-            "position" => length(parents) + 1,
-            "name" => "Photos",
-            "item" => url(~p"/g/#{guide.slug}/photos")
-          }
-        ]
-
-    %{breadcrumb | "itemListElement" => items}
+    StructuredData.breadcrumb(
+      guide_trail(guide) ++
+        [%{name: "Photos", url: url(~p"/g/#{guide.slug}/photos")}]
+    )
   end
 
   defp gallery_ld(guide) do
@@ -200,8 +172,8 @@ defmodule EthosWeb.GuideController do
             "@type" => "ImageObject",
             "name" => p["title"],
             "description" => p["description"],
-            "contentUrl" => url(~p"/") <> String.trim_leading(p["src"], "/"),
-            "thumbnailUrl" => url(~p"/") <> String.trim_leading(p["thumb"], "/")
+            "contentUrl" => StructuredData.absolute_url(p["src"]),
+            "thumbnailUrl" => StructuredData.absolute_url(p["thumb"])
           }
         end)
     }

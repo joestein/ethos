@@ -2,6 +2,7 @@ defmodule EthosWeb.DestinationController do
   use EthosWeb, :controller
 
   alias Ethos.{Destinations, Guides}
+  alias EthosWeb.StructuredData
 
   def index(conn, _params) do
     destinations = Guides.list_destinations_without_state()
@@ -37,10 +38,7 @@ defmodule EthosWeb.DestinationController do
   defp destination_image(nil), do: nil
 
   defp destination_image(%Destinations.Destination{photos: photos}) do
-    case List.first(photos) do
-      nil -> nil
-      photo -> url(~p"/") <> String.trim_leading(photo["src"], "/")
-    end
+    StructuredData.absolute_url(List.first(photos)["src"])
   end
 
   def show(conn, %{"slug" => slug}) do
@@ -160,90 +158,31 @@ defmodule EthosWeb.DestinationController do
     end
   end
 
-  defp collection_ld(name, url) do
-    %{
-      "@context" => "https://schema.org",
-      "@type" => "CollectionPage",
-      "name" => name,
-      "url" => url
-    }
-  end
+  defp collection_ld(name, page_url), do: StructuredData.collection_page(name, page_url)
 
-  defp state_breadcrumb(state, slug) do
-    %{
-      "@context" => "https://schema.org",
-      "@type" => "BreadcrumbList",
-      "itemListElement" => [
-        %{"@type" => "ListItem", "position" => 1, "name" => "Ethos", "item" => url(~p"/")},
-        %{
-          "@type" => "ListItem",
-          "position" => 2,
-          "name" => "Destinations",
-          "item" => url(~p"/destinations")
-        },
-        %{
-          "@type" => "ListItem",
-          "position" => 3,
-          "name" => state,
-          "item" => url(~p"/destinations/#{slug}")
-        }
-      ]
-    }
-  end
+  # A state hub and a town hub live at the same `/destinations/:slug` shape and
+  # so produce the same three-crumb trail; they stay separate functions because
+  # their callers name the third crumb differently.
+  defp state_breadcrumb(state, slug), do: state_trail(state, slug) |> StructuredData.breadcrumb()
 
   defp county_breadcrumb(state, state_slug, county, county_slug) do
-    crumb = state_breadcrumb(state, state_slug)
-
-    %{
-      crumb
-      | "itemListElement" =>
-          crumb["itemListElement"] ++
-            [
-              %{
-                "@type" => "ListItem",
-                "position" => 4,
-                "name" => county,
-                "item" => url(~p"/destinations/#{state_slug}/#{county_slug}")
-              }
-            ]
-    }
+    StructuredData.breadcrumb(
+      state_trail(state, state_slug) ++
+        [
+          %{
+            name: county,
+            url: url(~p"/destinations/#{state_slug}/#{county_slug}")
+          }
+        ]
+    )
   end
 
-  defp destinations_breadcrumb do
-    %{
-      "@context" => "https://schema.org",
-      "@type" => "BreadcrumbList",
-      "itemListElement" => [
-        %{"@type" => "ListItem", "position" => 1, "name" => "Ethos", "item" => url(~p"/")},
-        %{
-          "@type" => "ListItem",
-          "position" => 2,
-          "name" => "Destinations",
-          "item" => url(~p"/destinations")
-        }
-      ]
-    }
-  end
+  defp destinations_breadcrumb, do: StructuredData.breadcrumb(StructuredData.root_crumbs())
 
-  defp destination_breadcrumb(name, slug) do
-    %{
-      "@context" => "https://schema.org",
-      "@type" => "BreadcrumbList",
-      "itemListElement" => [
-        %{"@type" => "ListItem", "position" => 1, "name" => "Ethos", "item" => url(~p"/")},
-        %{
-          "@type" => "ListItem",
-          "position" => 2,
-          "name" => "Destinations",
-          "item" => url(~p"/destinations")
-        },
-        %{
-          "@type" => "ListItem",
-          "position" => 3,
-          "name" => name,
-          "item" => url(~p"/destinations/#{slug}")
-        }
-      ]
-    }
+  defp destination_breadcrumb(name, slug),
+    do: state_trail(name, slug) |> StructuredData.breadcrumb()
+
+  defp state_trail(name, slug) do
+    StructuredData.root_crumbs() ++ [%{name: name, url: url(~p"/destinations/#{slug}")}]
   end
 end

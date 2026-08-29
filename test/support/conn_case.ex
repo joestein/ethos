@@ -37,17 +37,28 @@ defmodule EthosWeb.ConnCase do
   end
 
   @doc """
-  Decodes the page's `BreadcrumbList` JSON-LD block, or nil if there isn't one.
+  Decodes every `application/ld+json` block on the page, in document order.
 
-  Shared so breadcrumb assertions decode and inspect the structured data rather
+  Shared so structured-data assertions decode and inspect the JSON-LD rather
   than substring-matching it.
   """
-  def breadcrumb_json_ld(html) do
-    ~r{<script type="application/ld\+json">\s*(.*?)\s*</script>}s
+  def json_ld_blocks(html) do
+    ~r{<script type="application/ld\+json">(.*?)</script>}s
     |> Regex.scan(html, capture: :all_but_first)
     |> Enum.map(fn [json] -> Jason.decode!(json) end)
-    |> Enum.find(&(&1["@type"] == "BreadcrumbList"))
   end
+
+  @doc """
+  The first decoded JSON-LD block whose `"@type"` is `type`, or nil.
+  """
+  def json_ld_of_type(html, type) do
+    html |> json_ld_blocks() |> Enum.find(&(&1["@type"] == type))
+  end
+
+  @doc """
+  Decodes the page's `BreadcrumbList` JSON-LD block, or nil if there isn't one.
+  """
+  def breadcrumb_json_ld(html), do: json_ld_of_type(html, "BreadcrumbList")
 
   @doc """
   Setup helper that registers and logs in users.
