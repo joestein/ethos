@@ -86,14 +86,32 @@ Thirteen seed files under `priv/seed_data/destinations/`, loaded by
 `Ethos.Seeds.DataDestination` mirroring `Ethos.Seeds.DataGuide`, seeded by
 `Ethos.Release.seed_destinations/1`.
 
-Each intro is **120-180 words, synthesized from the research artifacts already on disk**.
-Litchfield County's page is written from the 25 Litchfield town artifacts; Brooklyn's from
-the 69 neighborhood artifacts. Every one of those was produced by a finder and checked by an
-adversarial verifier during the Connecticut and Brooklyn programs.
+Each intro is **120-180 words, synthesized from the committed seed files of its constituent
+guides**. Litchfield County's page is written from the 25 files in
+`priv/seed_data/connecticut/` whose guide carries `county: "Litchfield County"`; Brooklyn's
+from the 69 in `priv/seed_data/brooklyn/`.
 
-This is the central design decision and it buys two things. No new research, and a county
-page that is **provably consistent with its own town pages**, because it is built from the
-same verdicts they were.
+**Not from the research artifacts.** Those were deleted with their SDD workspaces at the end
+of the Connecticut and Brooklyn programs, as that process prescribes. The seed files are the
+better source regardless:
+
+- They are **the published record**, so a destination page cannot contradict its own guides —
+  it is written from their text.
+- The verdict-restatement rule has **already been applied to them**. Artifacts hold refuted
+  and uncertain items; seed files hold only what survived a verifier and a fact-fidelity
+  review.
+- They are **checkable without a deleted directory**: a reviewer verifies a claim by reading
+  the constituent files, which are in the repository.
+
+The rule this produces is sharper than "trace to an artifact": **nothing appears in a
+destination intro that is not in its constituent guides.**
+
+The cost, accepted: seed files carry no `closed_or_unverified` record, so what the original
+research considered and rejected is not visible. For a 150-word summary built only from what
+shipped, that does not bite.
+
+This is the central design decision and it buys two things. No new research, and a
+destination page **provably consistent with its own guides**, because it is built from them.
 
 The authoring contract carries over unchanged
 (`docs/superpowers/plans/2026-08-28-brooklyn-content-rules.md`):
@@ -112,8 +130,8 @@ The authoring contract carries over unchanged
 
 **A synthesis-specific rule, new to this spec:** a claim true of one town is not thereby true
 of its county. "Litchfield County's towns were shaped by the iron industry" requires evidence
-about the county, not about Salisbury. Where the artifacts support only a per-town claim,
-attribute it to that town by name or leave it out.
+about the county, not about Salisbury. Where the constituent guides support only a per-town
+claim, attribute it to that town by name or leave it out.
 
 ### Photos
 
@@ -172,8 +190,9 @@ consistency rather than necessity.
 
 **Synthesis drifts from its sources.** The failure mode is a county page asserting something
 none of its town pages support. Mitigated by the per-town attribution rule above and by a
-fact-fidelity review that traces each intro back to the artifacts it was built from — the
-same review every content wave has had.
+fact-fidelity review that traces each intro back to the constituent seed files it was built
+from — the same review every content wave has had, and cheaper here because the sources are
+in the repository rather than in a workspace.
 
 **County-level photos are thin.** Expect several pages with none. Accepted.
 
@@ -186,7 +205,8 @@ the program is short.
 
 - All thirteen destination pages carry a 120-180 word intro; the roster assertion passes
   with strict equality.
-- Every published claim traces to a research artifact that already survived verification.
+- Every published claim traces to text in a constituent seed file — content that already
+  survived verification when its guide shipped.
 - No destination record names a path the guides table does not produce.
 - Photo credits byte-identical to their Commons source; manifest reconciles with disk.
 - Full suite green.
