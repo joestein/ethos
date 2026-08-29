@@ -1,0 +1,132 @@
+{
+  "guide": {
+    "slug": "borough-park-brooklyn-guide",
+    "title": "Borough Park, Brooklyn: Blythebourne, Reynolds and Thirteenth Avenue",
+    "destination": "Borough Park, New York",
+    "state": "New York",
+    "county": "Brooklyn",
+    "tier": "town-page",
+    "intro": "In 1887 the developer Electus Litchfield laid out the hamlet of Blythebourne on ground that is now part of Borough Park. The name that stuck arrived in 1902, when State Senator William H. Reynolds bought the land northeast of Blythebourne and called his development Borough Park. Jewish immigrants began settling here at the turn of the twentieth century, beginning in 1904 and 1905; by 1914 a Young Men's Hebrew Association had formed and bought a lot at 58th Street and 14th Avenue to build on. Yemenite Jews arriving in the late 1920s and early 1930s made their own small enclave and founded the synagogue Ohel Shalom. The 1980s brought a further shift toward Hasidic families, and by 1983 an estimated 85 percent of residents were Jewish.",
+    "sections": [
+      {
+        "heading": "An orientation, not an itinerary",
+        "body": "Borough Park is a residential neighborhood, and this page is an orientation rather than a tour.\n\nThirteenth Avenue is the spine. It runs roughly a mile from 39th to 55th Streets, lined with storefronts supplying Jewish households, and the New York Times has described it as a shopping destination that draws customers from beyond the neighborhood.\n\nThe New York Post gave the neighborhood the title of baby boom capital of New York City; 4,523 births were recorded here in 2004, the highest in the city. Maimonides Medical Center at 4802 Tenth Avenue is the neighborhood's hospital, and its Stella and Joseph Payson Birthing Center has been described as handling more births than any other hospital in New York State.\n\nThe designated building here is the synagogue at 4802 15th Avenue, listed on the National Register of Historic Places on April 27, 2010 under the congregation's pre-merger name, Temple Beth El of Borough Park."
+      },
+      {
+        "heading": "Getting there",
+        "body": "The D is Borough Park's train. On the BMT West End Line it calls at three stations in the neighborhood: 50th Street, at the meeting of 50th Street, 12th Avenue and New Utrecht Avenue; 55th Street, at 55th Street, 13th Avenue and New Utrecht Avenue; and Fort Hamilton Parkway.\n\nThe 62nd Street and New Utrecht Avenue complex sits in Borough Park and Bensonhurst and is served by the D and N at all times, with W trains on selected rush-hour trips and one southbound R terminating there in the morning rush.\n\nThe BMT Sea Beach Line has a second station named Fort Hamilton Parkway, also in Borough Park, served by the N at all times and by the W on selected rush-hour trips."
+      }
+    ],
+    "faq": [
+      {
+        "question": "How do I get to Borough Park?",
+        "answer": "By D train. It calls at 50th Street, 55th Street and Fort Hamilton Parkway on the BMT West End Line, all in Borough Park, and at the 62nd Street and New Utrecht Avenue complex on the Borough Park and Bensonhurst border, which the N also serves at all times. A second station named Fort Hamilton Parkway, on the Sea Beach Line, is also in Borough Park and is served by the N."
+      },
+      {
+        "question": "Where does the name come from?",
+        "answer": "From William H. Reynolds, the state senator and developer who bought land northeast of Blythebourne in 1902 and named the new development Borough Park. Blythebourne itself had been laid out by Electus Litchfield in 1887."
+      },
+      {
+        "question": "What is there to see?",
+        "answer": "Thirteenth Avenue between 39th and 55th Streets is the commercial spine; the synagogue at 4802 15th Avenue is on the National Register of Historic Places; and Maimonides Medical Center is the neighborhood's hospital rather than a sight. This is a place to walk through and read rather than a place with a list of attractions."
+      }
+    ],
+    "photos": [
+      {
+        "src": "/photos/ny/brooklyn/borough-park/temple-beth-el-borough-park.jpg",
+        "thumb": "/photos/ny/brooklyn/borough-park/temple-beth-el-borough-park_thumb.jpg",
+        "title": "Temple Beth El of Borough Park",
+        "description": "The stone front of the synagogue at 15th Avenue, with a deep arched entrance porch above a broad flight of steps.",
+        "author": "User:Bkcrabby",
+        "license": "CC BY-SA 3.0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Temple_Beth_El_of_Borough_Park.jpg"
+      }
+    ]
+  },
+  "places": [
+    {
+      "slug": "thirteenth-avenue-borough-park",
+      "name": "Thirteenth Avenue shopping corridor",
+      "kind": "attraction",
+      "town": "Borough Park",
+      "state": "New York",
+      "county": "Brooklyn",
+      "address": "13th Avenue between 39th and 55th Streets, Brooklyn, NY",
+      "summary": "A commercial strip roughly a mile long, from 39th to 55th Streets, lined with storefronts supplying Jewish households. The New York Times has described it as a shopping destination that draws customers from beyond the neighborhood.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "young-israel-beth-el-borough-park",
+      "name": "Young Israel Beth El of Borough Park",
+      "kind": "historic-site",
+      "town": "Borough Park",
+      "state": "New York",
+      "county": "Brooklyn",
+      "address": "4802 15th Avenue, Brooklyn, NY",
+      "summary": "A synagogue listed on the National Register of Historic Places on April 27, 2010 under the congregation's pre-merger name, Temple Beth El of Borough Park. The National Park Service record names Shampan & Shampan as its architects.",
+      "status": "open",
+      "photos": [
+        {
+          "src": "/photos/ny/brooklyn/borough-park/temple-beth-el-borough-park.jpg",
+          "thumb": "/photos/ny/brooklyn/borough-park/temple-beth-el-borough-park_thumb.jpg",
+          "title": "Temple Beth El of Borough Park",
+          "description": "The stone front of the synagogue at 15th Avenue, with a deep arched entrance porch above a broad flight of steps.",
+          "author": "User:Bkcrabby",
+          "license": "CC BY-SA 3.0",
+          "source_url": "https://commons.wikimedia.org/wiki/File:Temple_Beth_El_of_Borough_Park.jpg"
+        }
+      ]
+    },
+    {
+      "slug": "maimonides-medical-center",
+      "name": "Maimonides Medical Center",
+      "kind": "attraction",
+      "town": "Borough Park",
+      "state": "New York",
+      "county": "Brooklyn",
+      "address": "4802 Tenth Avenue, Brooklyn, NY 11219",
+      "official_url": "https://www.maimo.org/",
+      "summary": "The neighborhood's hospital and academic medical center, at 4802 Tenth Avenue in the western, Sunset Park-facing part of Borough Park. Its Stella and Joseph Payson Birthing Center has been described as handling more births than any other hospital in New York State. It is a working hospital, not a visitor site.",
+      "status": "open",
+      "photos": []
+    }
+  ],
+  "entries": [
+    {
+      "kind": "walk",
+      "name": "Thirteenth Avenue",
+      "place_slug": "thirteenth-avenue-borough-park",
+      "note": "A mile of storefronts from 39th to 55th Streets, supplying Jewish households."
+    },
+    {
+      "kind": "sight",
+      "name": "Young Israel Beth El of Borough Park",
+      "place_slug": "young-israel-beth-el-borough-park",
+      "note": "The synagogue at 4802 15th Avenue, on the National Register of Historic Places since 2010."
+    },
+    {
+      "kind": "sight",
+      "name": "Maimonides Medical Center",
+      "place_slug": "maimonides-medical-center",
+      "note": "The neighborhood's hospital on Tenth Avenue, and a landmark of local orientation rather than a sight."
+    }
+  ],
+  "links": [
+    {
+      "target": "guide:sunset-park-brooklyn-guide",
+      "kind": "nearby",
+      "note": "The city's 2020 neighborhood tabulation area covering Maimonides Medical Center is named Sunset Park (East)-Borough Park (West)."
+    },
+    {
+      "target": "guide:bensonhurst-brooklyn-guide",
+      "kind": "nearby",
+      "note": "The 62nd Street and New Utrecht Avenue station complex is recorded as being in Borough Park and Bensonhurst."
+    },
+    {
+      "target": "guide:kensington-brooklyn-guide",
+      "kind": "same-region",
+      "note": "The B35 lists Sunset Park, Borough Park, Kensington, Flatbush, East Flatbush, Remsen Village and Brownsville among the communities it serves."
+    }
+  ]
+}

@@ -1,0 +1,152 @@
+{
+  "guide": {
+    "slug": "dyker-heights-brooklyn-guide",
+    "title": "Dyker Heights, Brooklyn: Deed Restrictions and December Lights",
+    "destination": "Dyker Heights, New York",
+    "state": "New York",
+    "county": "Brooklyn",
+    "tier": "town-page",
+    "intro": "Dyker Heights was part of the Dutch town of New Utrecht, settled in 1657, and stayed wooded and unfarmed into the nineteenth century. Its first house went up in the late 1820s, built by Brigadier General Rene Edward De Russy, a US Army engineer, at what became 11th Avenue and 82nd Street. The modern neighborhood dates from October 1895, when the developer Walter Loveridge Johnson bought the De Russy estate and began building; deed restrictions in force until 1915 required plots of at least 60 by 100 feet and houses costing at least $4,000, producing the large freestanding houses that still define it. Johnson named the place after the Dyker Meadow and Beach it overlooked, named either for the Van Dyke family, who built drainage dykes, or for the dykes.",
+    "sections": [
+      {
+        "heading": "The Christmas lights, and the rest of the year",
+        "body": "The residential light displays took shape in the 1980s and were popularised from 1985 by Lou Singer's bus tours through the lit blocks. National attention followed, including a remote segment for Late Night with Conan O'Brien in 2000 and a PBS documentary called Dyker Lights in 2001.\n\nThis is a seasonal sight, not a permanent one. The displays go up the weekend after Thanksgiving, peak from mid-December through New Year's, and are down by early January. The footprint runs roughly along 11th to 13th Avenues between 83rd and 86th Streets. Come in April and there is nothing to see but the houses themselves.\n\nThe rest of the year the neighborhood's public ground is Dyker Beach Park, in its southwestern corner, and its landmark building is the Shrine Church of Saint Bernadette on 13th Avenue, a parish since about 1935. New Utrecht was annexed to the City of Brooklyn on July 1, 1894, and Brooklyn was consolidated into New York City on January 1, 1898. The International Sunshine Society opened the Dyker Heights Home for Blind Babies here on November 1, 1906 and established the first public kindergarten for blind children in 1907."
+      },
+      {
+        "heading": "Getting there",
+        "body": "No subway station sits inside Dyker Heights; the lines run around it. On the BMT Fourth Avenue Line the R calls at Bay Ridge Avenue, in Bay Ridge, and at 86th Street, on the border of Bay Ridge and Fort Hamilton, and its southern terminal, Bay Ridge-95th Street, is in Fort Hamilton. On the BMT Sea Beach Line the N calls at Fort Hamilton Parkway, in Borough Park, and at 62 Street-New Utrecht Avenue, in Borough Park and Bensonhurst. On the BMT West End Line the D calls at 71st Street and 79th Street, both in Bensonhurst.\n\nBuses do reach the neighborhood. The B1 runs the 86th Street corridor along the southern edge of Dyker Heights, past Dyker Beach Park and its golf course. The B8 has a branch to the Brooklyn VA Hospital in Dyker Heights, limited to select weekday rush-hour trips and alternating Saturday afternoon trips."
+      }
+    ],
+    "faq": [
+      {
+        "question": "How do I get to Dyker Heights?",
+        "answer": "There is no subway station in Dyker Heights. The nearest stations are 86th Street on the R, on the border of Bay Ridge and Fort Hamilton, and 71st Street and 79th Street on the D, both in Bensonhurst. The B1 runs along 86th Street on the neighborhood's southern edge, and the B8 has a branch to the Brooklyn VA Hospital here on select rush-hour and Saturday afternoon trips."
+      },
+      {
+        "question": "When are the Dyker Heights Christmas lights up?",
+        "answer": "They go up the weekend after Thanksgiving, peak from mid-December through New Year's, and are down by early January. Outside that window there is nothing lit to see. The displays cover roughly 11th to 13th Avenues between 83rd and 86th Streets."
+      },
+      {
+        "question": "Where does the name come from?",
+        "answer": "Walter Loveridge Johnson named his 1895 development after the Dyker Meadow and Beach it overlooked. Those in turn take their name either from the Van Dyke family, an original New Utrecht Dutch family who built drainage dykes, or from the dykes themselves."
+      }
+    ],
+    "photos": [
+      {
+        "src": "/photos/ny/brooklyn/dyker-heights/dyker-beach-golf-clubhouse-dyker-heights.jpg",
+        "thumb": "/photos/ny/brooklyn/dyker-heights/dyker-beach-golf-clubhouse-dyker-heights_thumb.jpg",
+        "title": "Dyker Beach Golf Course clubhouse",
+        "description": "The brick clubhouse of the Dyker Beach Golf Course behind stone gateposts, under a steep slate roof and bare trees.",
+        "author": "cjz208",
+        "license": "CC BY-SA 3.0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Dyker_Beach_Golf_Course_Club_House.JPG"
+      }
+    ]
+  },
+  "places": [
+    {
+      "slug": "dyker-beach-park",
+      "name": "Dyker Beach Park and Golf Course",
+      "kind": "park",
+      "town": "Dyker Heights",
+      "state": "New York",
+      "county": "Brooklyn",
+      "address": "86th Street and 7th Avenue, Brooklyn, NY 11228",
+      "official_url": "https://www.dykerbeachgc.com/",
+      "summary": "City-owned parkland in southwestern Dyker Heights whose main feature is an eighteen-hole public golf course, with a clubhouse holding dining and event space. The course operator dates the original layout to 1897 and a redesign to 1935.",
+      "status": "open",
+      "photos": [
+        {
+          "src": "/photos/ny/brooklyn/dyker-heights/dyker-beach-golf-clubhouse-dyker-heights.jpg",
+          "thumb": "/photos/ny/brooklyn/dyker-heights/dyker-beach-golf-clubhouse-dyker-heights_thumb.jpg",
+          "title": "Dyker Beach Golf Course clubhouse",
+          "description": "The brick clubhouse of the Dyker Beach Golf Course behind stone gateposts, under a steep slate roof and bare trees.",
+          "author": "cjz208",
+          "license": "CC BY-SA 3.0",
+          "source_url": "https://commons.wikimedia.org/wiki/File:Dyker_Beach_Golf_Course_Club_House.JPG"
+        }
+      ]
+    },
+    {
+      "slug": "dyker-heights-christmas-lights",
+      "name": "Dyker Heights Christmas Lights",
+      "kind": "attraction",
+      "town": "Dyker Heights",
+      "state": "New York",
+      "county": "Brooklyn",
+      "address": "Residential blocks roughly along 11th to 13th Avenues, 83rd to 86th Streets, Brooklyn, NY",
+      "summary": "A seasonal tradition of elaborate home light and figure displays on private houses. The displays go up the weekend after Thanksgiving, peak from mid-December through New Year's, and are down by early January; there is nothing to see outside that window.",
+      "history": "The tradition took shape in the 1980s and was popularised from 1985 by Lou Singer's bus tours. A remote segment for Late Night with Conan O'Brien followed in 2000, and a PBS documentary, Dyker Lights, in 2001.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "shrine-church-of-saint-bernadette",
+      "name": "Shrine Church of Saint Bernadette",
+      "kind": "historic-site",
+      "town": "Dyker Heights",
+      "state": "New York",
+      "county": "Brooklyn",
+      "address": "13th Avenue between 82nd and 83rd Streets, Brooklyn, NY",
+      "summary": "A Roman Catholic parish church built around 1935 and still an active parish; the Diocese of Brooklyn marked its ninetieth anniversary.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "dyker-beach-golf-course-clubhouse",
+      "name": "Dyker Beach Golf Course clubhouse restaurant",
+      "kind": "restaurant",
+      "town": "Dyker Heights",
+      "state": "New York",
+      "county": "Brooklyn",
+      "address": "86th Street and 7th Avenue, Brooklyn, NY 11228",
+      "official_url": "https://www.dykerbeachgc.com/",
+      "summary": "A casual restaurant and bar in the golf course clubhouse, open seasonally from April to October; the clubhouse also hosts weddings and events. Whether walk-in dining is open to non-golfers is not stated on the operator's site, so check before turning up.",
+      "status": "open",
+      "photos": []
+    }
+  ],
+  "entries": [
+    {
+      "kind": "walk",
+      "name": "Dyker Beach Park and Golf Course",
+      "place_slug": "dyker-beach-park",
+      "note": "The neighborhood's public ground in its southwestern corner, built around an eighteen-hole course."
+    },
+    {
+      "kind": "sight",
+      "name": "Dyker Heights Christmas Lights",
+      "place_slug": "dyker-heights-christmas-lights",
+      "note": "Seasonal only: up the weekend after Thanksgiving, down by early January."
+    },
+    {
+      "kind": "sight",
+      "name": "Shrine Church of Saint Bernadette",
+      "place_slug": "shrine-church-of-saint-bernadette",
+      "note": "The 13th Avenue parish church, built around 1935 and still in use."
+    },
+    {
+      "kind": "food",
+      "name": "Dyker Beach Golf Course clubhouse restaurant",
+      "place_slug": "dyker-beach-golf-course-clubhouse",
+      "note": "A seasonal restaurant and bar in the clubhouse, open April to October."
+    }
+  ],
+  "links": [
+    {
+      "target": "guide:bay-ridge-brooklyn-guide",
+      "kind": "same-region",
+      "note": "The B1 runs the 86th Street corridor along the southern edge of Dyker Heights and is also a Bay Ridge local route."
+    },
+    {
+      "target": "guide:bensonhurst-brooklyn-guide",
+      "kind": "same-region",
+      "note": "The D stations at 71st Street and 79th Street, both in Bensonhurst, are among the stops closest to Dyker Heights."
+    },
+    {
+      "target": "guide:bath-beach-brooklyn-guide",
+      "kind": "shared-history",
+      "note": "In the early 1900s many Italian immigrants settled in Bath Beach, Bensonhurst, Dyker Heights and Gravesend."
+    }
+  ]
+}

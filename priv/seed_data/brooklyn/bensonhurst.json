@@ -1,0 +1,151 @@
+{
+  "guide": {
+    "slug": "bensonhurst-brooklyn-guide",
+    "title": "Bensonhurst, Brooklyn: The 1677 Church and Bensonhurst-by-the-Sea",
+    "destination": "Bensonhurst, New York",
+    "state": "New York",
+    "county": "Brooklyn",
+    "tier": "town-page",
+    "intro": "Bensonhurst stands on the land of New Utrecht. Cornelius van Werckhoven took over that land in 1652; after his death in 1655 Jacques Cortelyou, guardian of his children, named the settlement Nieuw Utrecht after Werckhoven's hometown, and Governor Peter Stuyvesant granted it a charter in 1661. The Reformed Church congregation was established here in 1677 and its present sanctuary was built in 1828. The modern name comes from Egbert Benson, whose descendants sold his farmland to the developer James D. Lynch; Lynch marketed the ground as Bensonhurst-by-the-Sea, advertising his first lot sale in the Brooklyn Daily Eagle on July 24, 1888. The neighborhood grew Italian and Jewish through the middle of the twentieth century.",
+    "sections": [
+      {
+        "heading": "What is here",
+        "body": "The New Utrecht Reformed Church stands on 18th Avenue between 83rd and 84th Streets. The congregation dates from 1677 and the present sanctuary from 1828; the building was designated a New York City landmark on March 15, 1966, with the designation extended on January 13, 1998 to cover the parish house and cemetery, and it was listed on the National Register of Historic Places on April 9, 1980, with a boundary increase in 2001.\n\nCongregation Magen David, at 2017 67th Street, was erected in 1920 and 1921 to designs by Maurice Courland. It was designated a New York City landmark on April 24, 2001 and added to the National Register on April 15, 2004, and it remains in use for daily and Shabbat prayers.\n\nSeth Low Playground covers five acres bounded by Stillwell Avenue, Bay Parkway, West 12th Street and Avenue P, on the former site of Indian Pond, which was filled with incinerator ash in 1896. The city acquired the ground in 1924 and named it for the former mayor in 1987; Bealin Square within it was dedicated on July 5, 1927, and a renovation between 2013 and 2017 replaced asphalt ball fields with turf.\n\nOnce a year, in late August or early September, the Festa di Santa Rosalia fills 18th Avenue between Bay Ridge Parkway and 66th Street.\n\nBeginning around 1989, Chinese and Russian and Ukrainian immigrants arrived in large numbers, and by 2000, according to the city's Department of City Planning, just over half of Bensonhurst's residents had been born in another country."
+      },
+      {
+        "heading": "Getting there",
+        "body": "Bensonhurst is well supplied with stations. On the BMT West End Line the D calls at 71st Street, 79th Street and 18th Avenue, all in Bensonhurst; at 20th Avenue, on the border of Bensonhurst and Bath Beach; and at Bay Parkway, recorded in Bensonhurst, Bath Beach and Gravesend, where one southbound R and two southbound W trains also terminate on weekday mornings.\n\nOn the BMT Sea Beach Line, the N serves Bay Parkway at West 7th Street in Bensonhurst at all times, with the W on selected rush-hour trips. The 62nd Street and New Utrecht Avenue complex, on the border of Borough Park and Bensonhurst, is served by the D and N at all times, with the W on rush-hour trips and one southbound R terminating there in the rush.\n\nOn the IND Culver Line, Avenue N sits at the junction of Bensonhurst, Mapleton and Midwood and is served by the F at all times, with express service in the peak direction during rush hours."
+      }
+    ],
+    "faq": [
+      {
+        "question": "How do I get to Bensonhurst?",
+        "answer": "The D serves 71st Street, 79th Street and 18th Avenue inside the neighborhood, plus 20th Avenue on the Bath Beach border and Bay Parkway. The N serves Bay Parkway on the Sea Beach Line and the 62nd Street and New Utrecht Avenue complex on the Borough Park border, and the F calls at Avenue N, at the junction of Bensonhurst, Mapleton and Midwood."
+      },
+      {
+        "question": "How old is the New Utrecht Reformed Church?",
+        "answer": "The congregation was established in 1677 and the present sanctuary was built in 1828. It was designated a New York City landmark in 1966, extended in 1998, and listed on the National Register of Historic Places in 1980."
+      },
+      {
+        "question": "When is the Feast of Santa Rosalia?",
+        "answer": "The Festa di Santa Rosalia is held in late August or early September, on 18th Avenue between Bay Ridge Parkway and 66th Street. It is an annual street feast rather than a permanent attraction."
+      }
+    ],
+    "photos": [
+      {
+        "src": "/photos/ny/brooklyn/bensonhurst/new-utrecht-reformed-church-bensonhurst.jpg",
+        "thumb": "/photos/ny/brooklyn/bensonhurst/new-utrecht-reformed-church-bensonhurst_thumb.jpg",
+        "title": "Tower of the New Utrecht Reformed Church",
+        "description": "The stone tower of the New Utrecht Reformed Church, with tall louvred openings, catching low light above the treetops.",
+        "author": "Jim.henderson",
+        "license": "Public domain",
+        "source_url": "https://commons.wikimedia.org/wiki/File:New_Utrecht_Reformed_Church_jeh.JPG"
+      }
+    ]
+  },
+  "places": [
+    {
+      "slug": "new-utrecht-reformed-church",
+      "name": "New Utrecht Reformed Church",
+      "kind": "historic-site",
+      "town": "Bensonhurst",
+      "state": "New York",
+      "county": "Brooklyn",
+      "address": "18th Avenue between 83rd and 84th Streets, Brooklyn, NY",
+      "summary": "A congregation established in 1677 whose present sanctuary was built in 1828.",
+      "history": "The church was designated a New York City landmark on March 15, 1966, and the designation was extended on January 13, 1998 to cover the parish house and cemetery. It was listed on the National Register of Historic Places on April 9, 1980, with a boundary increase in 2001.",
+      "status": "open",
+      "photos": [
+        {
+          "src": "/photos/ny/brooklyn/bensonhurst/new-utrecht-reformed-church-bensonhurst.jpg",
+          "thumb": "/photos/ny/brooklyn/bensonhurst/new-utrecht-reformed-church-bensonhurst_thumb.jpg",
+          "title": "Tower of the New Utrecht Reformed Church",
+          "description": "The stone tower of the New Utrecht Reformed Church, with tall louvred openings, catching low light above the treetops.",
+          "author": "Jim.henderson",
+          "license": "Public domain",
+          "source_url": "https://commons.wikimedia.org/wiki/File:New_Utrecht_Reformed_Church_jeh.JPG"
+        }
+      ]
+    },
+    {
+      "slug": "magen-david-synagogue-bensonhurst",
+      "name": "Congregation Magen David",
+      "kind": "historic-site",
+      "town": "Bensonhurst",
+      "state": "New York",
+      "county": "Brooklyn",
+      "address": "2017 67th Street, Brooklyn, NY",
+      "summary": "A synagogue erected in 1920 and 1921 to designs by Maurice Courland, designated a New York City landmark on April 24, 2001 and added to the National Register of Historic Places on April 15, 2004. It remains in use for daily and Shabbat prayers.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "seth-low-playground",
+      "name": "Seth Low Playground",
+      "kind": "park",
+      "town": "Bensonhurst",
+      "state": "New York",
+      "county": "Brooklyn",
+      "address": "Bounded by Stillwell Avenue, Bay Parkway, West 12th Street and Avenue P, Brooklyn, NY",
+      "summary": "Five acres named for the former New York City mayor Seth Low, on the former site of Indian Pond, which was filled with incinerator ash in 1896.",
+      "history": "The city acquired the ground in 1924 and named it Seth Low Playground in 1987. Bealin Square within it was dedicated on July 5, 1927. A renovation between 2013 and 2017 replaced the asphalt ball fields with turf soccer and multipurpose fields.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "feast-of-santa-rosalia",
+      "name": "Feast of Santa Rosalia",
+      "kind": "attraction",
+      "town": "Bensonhurst",
+      "state": "New York",
+      "county": "Brooklyn",
+      "address": "18th Avenue between Bay Ridge Parkway and 66th Street, Brooklyn, NY",
+      "summary": "An annual Italian-American street feast held in late August or early September along 18th Avenue. It is a dated event rather than a year-round sight.",
+      "status": "open",
+      "photos": []
+    }
+  ],
+  "entries": [
+    {
+      "kind": "sight",
+      "name": "New Utrecht Reformed Church",
+      "place_slug": "new-utrecht-reformed-church",
+      "note": "An 1828 sanctuary on 18th Avenue for a congregation established in 1677."
+    },
+    {
+      "kind": "sight",
+      "name": "Congregation Magen David",
+      "place_slug": "magen-david-synagogue-bensonhurst",
+      "note": "Maurice Courland's 1920-1921 synagogue on 67th Street, landmarked in 2001."
+    },
+    {
+      "kind": "walk",
+      "name": "Seth Low Playground",
+      "place_slug": "seth-low-playground",
+      "note": "Five acres over the filled bed of Indian Pond, with Bealin Square inside it."
+    },
+    {
+      "kind": "sight",
+      "name": "Feast of Santa Rosalia",
+      "place_slug": "feast-of-santa-rosalia",
+      "note": "Late August or early September only, on 18th Avenue between Bay Ridge Parkway and 66th Street."
+    }
+  ],
+  "links": [
+    {
+      "target": "guide:bath-beach-brooklyn-guide",
+      "kind": "nearby",
+      "note": "The 20th Avenue station on the BMT West End Line sits on the border of Bensonhurst and Bath Beach."
+    },
+    {
+      "target": "guide:mapleton-brooklyn-guide",
+      "kind": "nearby",
+      "note": "The 18th Avenue station on the BMT Sea Beach Line is recorded in both Bensonhurst and Mapleton."
+    },
+    {
+      "target": "guide:midwood-brooklyn-guide",
+      "kind": "same-region",
+      "note": "The Avenue N station on the IND Culver Line sits at the junction of Bensonhurst, Mapleton and Midwood."
+    }
+  ]
+}

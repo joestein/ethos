@@ -1,0 +1,133 @@
+{
+  "guide": {
+    "slug": "mapleton-brooklyn-guide",
+    "title": "Mapleton, Brooklyn: Farmland Subdivided for the Sea Beach Line",
+    "destination": "Mapleton, New York",
+    "state": "New York",
+    "county": "Brooklyn",
+    "tier": "town-page",
+    "intro": "Mapleton was built out of former farmland beginning in the early 1910s, its blocks subdivided into 30-by-100-foot plots and timed to the construction of the BMT Sea Beach subway line. The line opened in June 1915 and generated $1 million worth of real estate sales. What went up stayed low-rise: a 2012 neighborhood profile counted roughly 27,000 residents, among them Chinese and other Asians, Orthodox Jews, Italian Americans, Poles, Latinos, Pakistanis and Russians, living mostly in one- and two-family brick and clapboard houses. Mapleton sits in New York City Community District 11 alongside Bath Beach, Gravesend and Bensonhurst. Its edges are loosely drawn: when the Maple Lanes bowling alley at 16th Avenue and 60th Street was sold in 2012, press coverage placed it in Borough Park.",
+    "sections": [
+      {
+        "heading": "What is here",
+        "body": "Washington Cemetery is the landmark. Established in 1850 under the state's 1847 Rural Cemetery Act, it first served German Jewish immigrants and later became a burial ground for Russian and Eastern European Jewish immigrants, with many hometown-association plots laid out by landsmannschaft burial societies. Burials still take place in Cemetery number one, and the office stands at Bay Parkway and McDonald Avenue.\n\nThe open ground is modest. Gravesend Park runs along 18th Avenue between 55th and 58th Streets, about 6.3 acres, reopened in 2016 after a $7.25 million renovation. Dahill Triangle, at the neighborhood's eastern edge, is a small piece of ground designated as a park from undevelopable properties.\n\nMaple Lanes, the bowling alley that ran at 16th Avenue and 60th Street from 1960, was sold in 2012 to a developer who planned to demolish it for condominiums and a synagogue."
+      },
+      {
+        "heading": "Getting there",
+        "body": "The N is Mapleton's train. On the BMT Sea Beach Line, the 18th Avenue station stands at 18th Avenue and 64th Street in Mapleton, with its locale recorded as both Bensonhurst and Mapleton, and the 20th Avenue station is on 20th Avenue between 63rd and 64th Streets in Mapleton.\n\nOn the IND Culver Line, the Bay Parkway station sits on the border of Mapleton and Midwood, at Bay Parkway and McDonald Avenue above Washington Cemetery, and is served by the F.\n\nOne name to watch: the Sea Beach Line also has a Bay Parkway station, and that one is in Bensonhurst, at Bay Parkway and West Seventh Street."
+      }
+    ],
+    "faq": [
+      {
+        "question": "How do I get to Mapleton?",
+        "answer": "The N calls at 18th Avenue, at 64th Street, and at 20th Avenue between 63rd and 64th Streets, both on the BMT Sea Beach Line in Mapleton. The F calls at Bay Parkway on the IND Culver Line, on the border of Mapleton and Midwood. Note that the Sea Beach Line has its own Bay Parkway station, and that one is in Bensonhurst."
+      },
+      {
+        "question": "Where does Mapleton end and Borough Park begin?",
+        "answer": "The line is not settled. Press coverage has placed both Gravesend Park and the former Maple Lanes bowling alley in Borough Park, while other sources place them in Mapleton. The two neighborhoods run into one another here."
+      },
+      {
+        "question": "What is Washington Cemetery?",
+        "answer": "A Jewish cemetery established in 1850 under the 1847 Rural Cemetery Act, at 5400 Bay Parkway. It began as a burial ground for German Jewish immigrants and later served Russian and Eastern European Jewish immigrants, with many landsmannschaft hometown-association plots. Burials still take place in Cemetery number one."
+      }
+    ],
+    "photos": [
+      {
+        "src": "/photos/ny/brooklyn/mapleton/washington-cemetery-mapleton.jpg",
+        "thumb": "/photos/ny/brooklyn/mapleton/washington-cemetery-mapleton_thumb.jpg",
+        "title": "Washington Cemetery office and grave rows",
+        "description": "The ornamented brick and stone cemetery office building stands behind dense rows of dark headstones at Washington Cemetery.",
+        "author": "-jkb-",
+        "license": "CC BY-SA 3.0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Brooklyn_Washington_Cemetery_1.jpg"
+      }
+    ]
+  },
+  "places": [
+    {
+      "slug": "washington-cemetery",
+      "name": "Washington Cemetery",
+      "kind": "historic-site",
+      "town": "Mapleton",
+      "state": "New York",
+      "county": "Brooklyn",
+      "address": "5400 Bay Parkway, Brooklyn, NY 11219",
+      "summary": "A Jewish cemetery established in 1850 under the 1847 Rural Cemetery Act. It first served German Jewish immigrants and later became a burial ground for Russian and Eastern European Jewish immigrants, with many hometown-association plots laid out by landsmannschaft burial societies.",
+      "history": "The cemetery office stands at Bay Parkway and McDonald Avenue, near the Bay Parkway station on the IND Culver Line. Burials still take place in Cemetery number one.",
+      "status": "open",
+      "photos": [
+        {
+          "src": "/photos/ny/brooklyn/mapleton/washington-cemetery-mapleton.jpg",
+          "thumb": "/photos/ny/brooklyn/mapleton/washington-cemetery-mapleton_thumb.jpg",
+          "title": "Washington Cemetery office and grave rows",
+          "description": "The ornamented brick and stone cemetery office building stands behind dense rows of dark headstones at Washington Cemetery.",
+          "author": "-jkb-",
+          "license": "CC BY-SA 3.0",
+          "source_url": "https://commons.wikimedia.org/wiki/File:Brooklyn_Washington_Cemetery_1.jpg"
+        }
+      ]
+    },
+    {
+      "slug": "gravesend-park-mapleton",
+      "name": "Gravesend Park",
+      "kind": "park",
+      "town": "Mapleton",
+      "state": "New York",
+      "county": "Brooklyn",
+      "address": "18th Avenue between 55th and 58th Streets, Brooklyn, NY 11204",
+      "official_url": "https://www.nycgovparks.org/parks/gravesend-park",
+      "summary": "About 6.3 acres of city parkland along 18th Avenue, reopened in 2016 after a $7.25 million renovation. It sits on ground that press coverage has described as Borough Park and other sources as Mapleton.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "dahill-triangle",
+      "name": "Dahill Triangle",
+      "kind": "park",
+      "town": "Mapleton",
+      "state": "New York",
+      "county": "Brooklyn",
+      "address": "Dahill Road, Brooklyn, NY",
+      "summary": "A small triangle of city parkland along Dahill Road at Mapleton's eastern edge, designated as a park from undevelopable properties and largely left undeveloped.",
+      "status": "open",
+      "photos": []
+    }
+  ],
+  "entries": [
+    {
+      "kind": "sight",
+      "name": "Washington Cemetery",
+      "place_slug": "washington-cemetery",
+      "note": "Established in 1850, with landsmannschaft hometown-association plots and burials still taking place."
+    },
+    {
+      "kind": "walk",
+      "name": "Gravesend Park",
+      "place_slug": "gravesend-park-mapleton",
+      "note": "Six acres on 18th Avenue, reopened in 2016 after a $7.25 million renovation."
+    },
+    {
+      "kind": "walk",
+      "name": "Dahill Triangle",
+      "place_slug": "dahill-triangle",
+      "note": "A sliver of parkland on Dahill Road, made from ground nobody could build on."
+    }
+  ],
+  "links": [
+    {
+      "target": "guide:midwood-brooklyn-guide",
+      "kind": "nearby",
+      "note": "The Bay Parkway station on the IND Culver Line sits on the border of Mapleton and Midwood, above Washington Cemetery."
+    },
+    {
+      "target": "guide:bath-beach-brooklyn-guide",
+      "kind": "same-region",
+      "note": "Brooklyn Community Board 11 covers Bath Beach, Gravesend, Mapleton and Bensonhurst together."
+    },
+    {
+      "target": "guide:borough-park-brooklyn-guide",
+      "kind": "same-region",
+      "note": "Press coverage placed Gravesend Park and the former Maple Lanes bowling alley in Borough Park; other sources place both in Mapleton."
+    }
+  ]
+}

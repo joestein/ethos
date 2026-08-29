@@ -1,0 +1,172 @@
+{
+  "guide": {
+    "slug": "fort-hamilton-brooklyn-guide",
+    "title": "Fort Hamilton, Brooklyn: The Army Post at the Narrows",
+    "destination": "Fort Hamilton, New York",
+    "state": "New York",
+    "county": "Brooklyn",
+    "tier": "town-page",
+    "intro": "A small American battery on this point at the Narrows fired on the British warship HMS Asia on July 4, 1776. The permanent fort followed: its designer, the French military engineer Simon Bernard, set the cornerstone on June 11, 1825, and six years and half a million dollars later the works received Battery F of the 4th US Artillery in 1831. References to the name Fort Hamilton appear as early as 1826, though the post was not officially named for Alexander Hamilton until the twentieth century. Robert E. Lee served as post engineer from 1841 to 1846 and Abner Doubleday commanded here in 1861. The name is also used for the residential blocks around the base, sometimes counted as a sub-neighborhood of Bay Ridge.",
+    "sections": [
+      {
+        "heading": "An active post, and what a visitor can see",
+        "body": "Fort Hamilton is the only active-duty Department of Defense military post remaining in New York City. It hosts the North Atlantic Division headquarters of the United States Army Corps of Engineers, recruiting operations and reserve units. It is a working installation, not an open historic site: the Casemate Fort and the Robert E. Lee House both stand inside the perimeter.\n\nThe way in is the Harbor Defense Museum, housed in a nineteenth-century outwork called the Caponier. Admission is free and the museum is open Monday to Friday, 10am to 4pm, closed weekends and federal holidays. Every adult visitor must show a state or federally issued photo ID to enter the installation through the 101st Street gate. The museum states that it may close on short notice and asks visitors to call ahead.\n\nOutside the gate, John Paul Jones Park is open parkland. In 1839 the federal government let New York State's 27th Regiment drill at the fort, an arrangement later cited as qualifying it as the nation's first National Guard training camp. During the Civil War the post served as a prisoner-of-war camp and provided troops to help put down the New York Draft Riots of 1863. From 1885 more than half the old fort was demolished for concrete gun batteries built between 1898 and 1905, and in 1948 the last coast defense gun was removed."
+      },
+      {
+        "heading": "Getting there",
+        "body": "The R train's southern terminal, Bay Ridge-95th Street, is in Fort Hamilton at Fourth Avenue and 95th Street. It opened on October 31, 1925 as 95th Street-Fort Hamilton and is the westernmost station in the New York City Subway.\n\nTwo other stations carry the name Fort Hamilton Parkway, one on the D and one on the N, and both of those are in Borough Park rather than here. No NYC Ferry landing serves this neighborhood."
+      }
+    ],
+    "faq": [
+      {
+        "question": "How do I get to Fort Hamilton?",
+        "answer": "Take the R to its southern terminal, Bay Ridge-95th Street, at Fourth Avenue and 95th Street in Fort Hamilton. Do not aim for the stations named Fort Hamilton Parkway on the D or N lines; both of those are in Borough Park."
+      },
+      {
+        "question": "Can the public go inside Fort Hamilton?",
+        "answer": "Only through the Harbor Defense Museum, and only with identification. The post is an active Army installation. The museum is free and open Monday to Friday, 10am to 4pm, closed weekends and federal holidays; every adult must show a state or federally issued photo ID at the 101st Street gate, and the museum may close on short notice, so call before setting out."
+      },
+      {
+        "question": "What is there to see outside the gate?",
+        "answer": "John Paul Jones Park, which the city acquired from Brooklyn in 1897. It holds a twenty-inch Rodman gun given by the US Military in 1900, a 1916 Revolutionary War memorial tablet from the Daughters of the American Revolution, the 1931 Dover Patrol Naval War Memorial given by Sir Aston Webb, and a flagpole made from a naval destroyer's mast, added in 1980."
+      }
+    ],
+    "photos": [
+      {
+        "src": "/photos/ny/brooklyn/fort-hamilton/dover-patrol-monument-fort-hamilton.jpg",
+        "thumb": "/photos/ny/brooklyn/fort-hamilton/dover-patrol-monument-fort-hamilton_thumb.jpg",
+        "title": "Dover Patrol Naval War Memorial",
+        "description": "The pale stone obelisk of the Dover Patrol Naval War Memorial rises above autumn trees in John Paul Jones Park.",
+        "author": "Vanessa Sang",
+        "license": "CC BY-SA 4.0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Dover_Patrol_Naval_War_Memorial.jpg"
+      }
+    ]
+  },
+  "places": [
+    {
+      "slug": "fort-hamilton-army-post",
+      "name": "Fort Hamilton",
+      "kind": "historic-site",
+      "town": "Fort Hamilton",
+      "state": "New York",
+      "county": "Brooklyn",
+      "address": "Fort Hamilton Parkway at the Narrows, Brooklyn, NY",
+      "summary": "The only active-duty Department of Defense military post remaining in New York City, built between 1825 and 1831. It is a working installation rather than a public historic site: access is through the 101st Street gate to the Harbor Defense Museum, with photo identification.",
+      "history": "The cornerstone was set by the fort's designer, Simon Bernard, on June 11, 1825. Robert E. Lee was post engineer from 1841 to 1846 and Abner Doubleday commanded the post in 1861. Several structures on the post, including the Robert E. Lee House and Colonels' Row, are on the National Register of Historic Places. When the Verrazzano-Narrows Bridge was built, the Triborough Bridge and Tunnel Authority acquired 36 of the fort's 138 acres for the Brooklyn anchorage, in return for paying for a $12 million renovation of the installation and giving up 10.8 acres of land in Dyker Beach Park.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "harbor-defense-museum",
+      "name": "Harbor Defense Museum",
+      "kind": "museum",
+      "town": "Fort Hamilton",
+      "state": "New York",
+      "county": "Brooklyn",
+      "address": "Fort Hamilton, entrance at the 101st Street gate, Fort Hamilton Parkway and 101st Street, Brooklyn, NY",
+      "official_url": "http://www.harbordefensemuseum.com/",
+      "summary": "A museum in the nineteenth-century outwork known as the Caponier, inside the active Fort Hamilton Army base. It is described as New York City's only military museum and as one of about seventy US museums funded and operated by the Department of Defense.",
+      "history": "Established in 1980, it holds Revolutionary War relics, uniforms, maps, Confederate mines and First World War anti-submarine netting. Admission is free and it is open Monday to Friday, 10am to 4pm, closed weekends and federal holidays. All adult visitors must show a state or federally issued photo ID to enter the installation through the 101st Street gate. The museum states that it may close on short notice and recommends calling ahead.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "casemate-fort-whiting-quadrangle",
+      "name": "Casemate Fort, Whiting Quadrangle",
+      "kind": "historic-site",
+      "town": "Fort Hamilton",
+      "state": "New York",
+      "county": "Brooklyn",
+      "address": "Fort Hamilton, off Fort Hamilton Parkway, Brooklyn, NY",
+      "summary": "The original 1830s masonry fort at Fort Hamilton, listed on the National Register of Historic Places on August 7, 1974 under reference number 74001249. It stands inside the active military installation.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "robert-e-lee-house",
+      "name": "Robert E. Lee House",
+      "kind": "historic-site",
+      "town": "Fort Hamilton",
+      "state": "New York",
+      "county": "Brooklyn",
+      "address": "Fort Hamilton, Brooklyn, NY (within the active military installation)",
+      "summary": "The residence Robert E. Lee used, then a captain, while he served as Fort Hamilton's post engineer from 1841 to 1846. It stands inside the installation.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "john-paul-jones-park",
+      "name": "John Paul Jones Park",
+      "kind": "park",
+      "town": "Fort Hamilton",
+      "state": "New York",
+      "county": "Brooklyn",
+      "address": "Bounded by Shore Road, Fourth Avenue, 101st Street and Fort Hamilton Parkway, Brooklyn, NY",
+      "official_url": "https://www.nycgovparks.org/parks/john-paul-jones-park",
+      "summary": "City parkland acquired from the City of Brooklyn in 1897 and named for the Revolutionary War naval commander John Paul Jones. It sits at the foot of the Army post and is open to anyone.",
+      "history": "The park holds a twenty-inch Civil War-era Rodman gun, given by the US Military in 1900, as part of a Civil War memorial; a 1916 Revolutionary War memorial tablet donated by the Daughters of the American Revolution; the 1931 Dover Patrol Naval War Memorial, a gift from England's Sir Aston Webb; and a flagpole made from a naval destroyer's mast, added in 1980.",
+      "status": "open",
+      "photos": [
+        {
+          "src": "/photos/ny/brooklyn/fort-hamilton/dover-patrol-monument-fort-hamilton.jpg",
+          "thumb": "/photos/ny/brooklyn/fort-hamilton/dover-patrol-monument-fort-hamilton_thumb.jpg",
+          "title": "Dover Patrol Naval War Memorial",
+          "description": "The pale stone obelisk of the Dover Patrol Naval War Memorial rises above autumn trees in John Paul Jones Park.",
+          "author": "Vanessa Sang",
+          "license": "CC BY-SA 4.0",
+          "source_url": "https://commons.wikimedia.org/wiki/File:Dover_Patrol_Naval_War_Memorial.jpg"
+        }
+      ]
+    }
+  ],
+  "entries": [
+    {
+      "kind": "sight",
+      "name": "Fort Hamilton",
+      "place_slug": "fort-hamilton-army-post",
+      "note": "An active Army post, entered only through the 101st Street gate with photo identification."
+    },
+    {
+      "kind": "sight",
+      "name": "Harbor Defense Museum",
+      "place_slug": "harbor-defense-museum",
+      "note": "Free, in the Caponier, open weekdays; bring photo ID and call ahead, as it can close on short notice."
+    },
+    {
+      "kind": "sight",
+      "name": "Casemate Fort, Whiting Quadrangle",
+      "place_slug": "casemate-fort-whiting-quadrangle",
+      "note": "The 1830s masonry fort, on the National Register since August 7, 1974, inside the installation."
+    },
+    {
+      "kind": "sight",
+      "name": "Robert E. Lee House",
+      "place_slug": "robert-e-lee-house",
+      "note": "Lee's residence as post engineer between 1841 and 1846, also inside the installation."
+    },
+    {
+      "kind": "walk",
+      "name": "John Paul Jones Park",
+      "place_slug": "john-paul-jones-park",
+      "note": "Open parkland at the foot of the post, with a Rodman gun and the Dover Patrol obelisk."
+    }
+  ],
+  "links": [
+    {
+      "target": "guide:bay-ridge-brooklyn-guide",
+      "kind": "nearby",
+      "note": "The section of Bay Ridge south of 86th Street is sometimes considered part of a sub-neighborhood called Fort Hamilton."
+    },
+    {
+      "target": "guide:dyker-heights-brooklyn-guide",
+      "kind": "shared-history",
+      "note": "The bridge authority took 36 of the fort's 138 acres for the Brooklyn anchorage, giving up 10.8 acres in Dyker Beach Park in return."
+    },
+    {
+      "target": "guide:borough-park-brooklyn-guide",
+      "kind": "same-region",
+      "note": "The B16 runs the length of Fort Hamilton Parkway, from this area through the core of Borough Park."
+    }
+  ]
+}

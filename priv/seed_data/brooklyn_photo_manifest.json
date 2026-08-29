@@ -11,9 +11,25 @@
     "sha256": "a452e972abbc5516b6eae35a9b467b0f5301c974b935ee8282c86642ef911c5e",
     "source_url": "https://commons.wikimedia.org/wiki/File:2013_BAM_Peter_Jay_Sharp_Building_from_east.jpg"
   },
+  "bath-beach-post-office-bath-beach": {
+    "sha256": "8ff8637870b13bb89926daec61bc17857d41c2a902de6be6faf13f0bcbd1f6e9",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Bath_Beach_USPS_1865_Benson_Av_11214_jeh.jpg"
+  },
+  "bay-ridge-united-church-bay-ridge": {
+    "sha256": "172e0a545eb38d894ce59656e2e92dba6746b6c086d514b1d53c46f95f34456c",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Bay_Ridge_United_Church.jpg"
+  },
   "blessed-sacrament-church-cypress-hills": {
     "sha256": "72fe613557419d67af2a7b4f9b4118416486351343623d16b3118ababd9e6116",
     "source_url": "https://commons.wikimedia.org/wiki/File:Blessed_Sacrament_Church_from_Crescent_Street_Jamaica_El-1.jpg"
+  },
+  "brooklyn-army-terminal-atrium-sunset-park": {
+    "sha256": "d5b77de1b0c0e8ffa7672b5964f33257b2fb3b7e4bdf1c564259e4a661a899b3",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Atrium_at_Brooklyn_Army_Terminal.jpg"
+  },
+  "brooklyn-army-terminal-sunset-park": {
+    "sha256": "3b9fa52466ed25b8ff895d66d609bf9f06ce0269b53df933b0f169fb0e391db3",
+    "source_url": "https://commons.wikimedia.org/wiki/File:The_Brooklyn_Army_Terminal.jpg"
   },
   "brooklyn-childrens-museum-crown-heights": {
     "sha256": "4fc25323e1c96c29b37f9646c8bdfd832db2a0b58816bc836c824a0dfd64190c",
@@ -63,9 +79,17 @@
     "sha256": "b90507b03760241a6ee2e69dd47ac797afbe8727d7c088593dcd6b305ec14e48",
     "source_url": "https://commons.wikimedia.org/wiki/File:Domino_Refinery_in_2023.jpg"
   },
+  "dover-patrol-monument-fort-hamilton": {
+    "sha256": "5bfd20621711d7340eafaff45fe110fb5584a797959728958c3b0e21f12cccda",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Dover_Patrol_Naval_War_Memorial.jpg"
+  },
   "dry-dock-navy-yard": {
     "sha256": "c080dab0f8646328f6906b9a6808b6a05094ffb001f135082e8312e671fb2a07",
     "source_url": "https://commons.wikimedia.org/wiki/File:Dry_Dock_at_Brooklyn_Navy_Yard.jpg"
+  },
+  "dyker-beach-golf-clubhouse-dyker-heights": {
+    "sha256": "93878d979cabf1211534b12ba40e247195d8175f47c56d8d2d8d7fa05de260ce",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Dyker_Beach_Golf_Course_Club_House.JPG"
   },
   "east-flatbush-library-east-flatbush": {
     "sha256": "628c0adc87e8e4fb2a774fc7f745a672eba3e650639f713e7dd6339e78a948fd",
@@ -124,6 +148,10 @@
   "hunterfly-road-houses-weeksville": {
     "sha256": "339a8a5383d1144617bc0fb526aa158e502a648d1314e06479c8a904c7eb440d",
     "source_url": "https://commons.wikimedia.org/wiki/File:Hunterfly_road_houses.jpg"
+  },
+  "john-paul-jones-park-bay-ridge": {
+    "sha256": "830af28e8a0a9c4ad421212619211c895326e03d487cfc53642af16de1f0564f",
+    "source_url": "https://commons.wikimedia.org/wiki/File:John_Paul_Jones_Park,_Brooklyn,_New_York,_US.jpg"
   },
   "john-rankin-house-carroll-gardens": {
     "sha256": "d8f63c272ecce1edda6239a72c205a46a371fd41d5849c96efae1257801e0a46",
@@ -203,10 +231,18 @@
     "sha256": "d4e825a3c2e17d125b5baac853b808619fb540c96f37e19b68013eaa9dc747af",
     "source_url": "https://commons.wikimedia.org/wiki/File:New_Lots_Community_Church_jeh.jpg"
   },
+  "new-utrecht-reformed-church-bensonhurst": {
+    "sha256": "c9652497d6b1d0d42e80bdb025fba719696e88e382105957dffbb2b8d10f0522",
+    "source_url": "https://commons.wikimedia.org/wiki/File:New_Utrecht_Reformed_Church_jeh.JPG"
+  },
   "old-stone-house-park-slope": {
     "fetched_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b1/Old_Stone_House_Brooklyn_NY.jpg/1280px-Old_Stone_House_Brooklyn_NY.jpg",
     "sha256": "e0ad94c94d815ee896291e7e59e340aa698a3e2c31219a6991f265064922a7f6",
     "source_url": "https://commons.wikimedia.org/wiki/File:Old_Stone_House_Brooklyn_NY.jpg"
+  },
+  "olph-basilica-bay-ridge": {
+    "sha256": "9fbca309edc1a3f36f10dd6ddfe154d4e4240cd64a1788beaa5b054dfb8190d3",
+    "source_url": "https://commons.wikimedia.org/wiki/File:OLPH_front_sun_jeh.jpg"
   },
   "pacific-branch-library-boerum-hill": {
     "sha256": "f548f174e081e400e9b6f37c9c4d38c634f81418b006e19ba987dae548e79856",
@@ -289,9 +325,25 @@
     "sha256": "42091e42582227149f0cf4453c6e7f3d2bd4fde5d48708ddf002805238978707",
     "source_url": "https://commons.wikimedia.org/wiki/File:Sunny%27s_Bar.jpg"
   },
+  "sunset-park-harbor-view-sunset-park": {
+    "sha256": "c1eb81a182747b7c35abf9fdb13908de948acf1f84bcb417e5f5767e8ce9762d",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Looking_on_Manhattan_from_Sunset_Park_in_Brooklyn.jpg"
+  },
+  "sunset-play-center-sunset-park": {
+    "sha256": "8386b1878ac8ededc40c30586fc59fcbdd29ab4e267f43e1c7497e4cf18f82fe",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Sunset_Play_Center_ext_jeh.jpg"
+  },
+  "temple-beth-el-borough-park": {
+    "sha256": "fc974512b4071fcdcbadf01d5881939668dca58dcfc0420f03d2b801674d91eb",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Temple_Beth_El_of_Borough_Park.jpg"
+  },
   "tudor-row-house-prospect-lefferts-gardens": {
     "sha256": "570c01d606d9e919598e3b99647c999dcef0c92ea49589620736c255178be7c1",
     "source_url": "https://commons.wikimedia.org/wiki/File:Tudor_row_house_in_Prospect_Lefferts_Gardens.jpg"
+  },
+  "ulmer-park-library-bath-beach": {
+    "sha256": "3ac130bb1f4253d2442a96208e2acda0bec7b84ba7f2d0f8fa3c748059f5c929",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Brooklyn_Public_Library_Ulmer_Park_Branch.jpg"
   },
   "union-temple-prospect-heights": {
     "sha256": "0a6e9c68aa191759c561c2ca7243ea3c08c3799c52ce7fca427eee8b62081229",
@@ -300,6 +352,10 @@
   "vinegar-hill-historic-district-vinegar-hill": {
     "sha256": "e050f75f990dcbaba1333cb717a50ad04ca3f3ab2207dfac1c673afc91958d0d",
     "source_url": "https://commons.wikimedia.org/wiki/File:Vinegar_Hill_Historic_District,_Brooklyn,_New_York,_US.jpg"
+  },
+  "washington-cemetery-mapleton": {
+    "sha256": "2b1db4d28b61c7a23cf17a88f36575ce548b8646de351bd665d0b831c1152937",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Brooklyn_Washington_Cemetery_1.jpg"
   },
   "williamsburg-bridge-williamsburg": {
     "sha256": "abc1d9b8eb1ca320c2c8c9e5dce8be5a97dbeb604d2ea5e05dea6491a492c697",
