@@ -145,6 +145,28 @@ defmodule EthosWeb.GuideSeoTest do
       assert publisher == EthosWeb.StructuredData.publisher()
     end
 
+    # `~p` percent-encodes an interpolated segment, so the og:image tag once
+    # published `/uploads%2Fog%2F<slug>.png` — a path `Plug.Static` at
+    # `/uploads` does not match — while the Article named the same file
+    # correctly beside it. Both properties must name one fetchable file.
+    test "og:image names the same un-encoded, fetchable file the Article does", %{conn: conn} do
+      guide = guide_with_og_card()
+
+      html = conn |> get(~p"/g/#{guide.slug}") |> html_response(200)
+
+      assert [og_image] =
+               Regex.run(~r{<meta property="og:image" content="([^"]+)"}, html,
+                 capture: :all_but_first
+               )
+
+      assert og_image == url(~p"/") <> "uploads/og/#{guide.slug}.png"
+      refute og_image =~ "%2F"
+      assert og_image == json_ld_of_type(html, "Article")["image"]
+
+      # the tag is only worth emitting if it resolves
+      assert conn |> get(URI.parse(og_image).path) |> response(200)
+    end
+
     test "a guide with a card advertises a large-image Twitter card", %{conn: conn} do
       guide = guide_with_og_card()
 

@@ -15,7 +15,12 @@ defmodule EthosWeb.GuideController do
     og = %{
       title: "#{guide.title} — an Ethos guide",
       description: "#{guide.destination} · #{length(entries)} places and tips from a real trip",
-      image: guide.og_image_path && url(~p"/#{guide.og_image_path}"),
+      # `~p` percent-encodes an interpolated segment, so building this tag from
+      # `~p"/#{guide.og_image_path}"` published `/uploads%2Fog%2F<slug>.png` —
+      # a path the static plug does not serve. `absolute_url/1` joins the same
+      # way the Article node does, and is nil-safe, so the two properties now
+      # name the same file and a guide without a card omits the tag as before.
+      image: StructuredData.absolute_url(guide.og_image_path),
       type: "article",
       url: url(~p"/g/#{guide.slug}")
     }
