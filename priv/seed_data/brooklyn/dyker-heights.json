@@ -10,7 +10,7 @@
     "sections": [
       {
         "heading": "The Christmas lights, and the rest of the year",
-        "body": "The residential light displays took shape in the 1980s and were popularised from 1985 by Lou Singer's bus tours through the lit blocks. National attention followed, including a remote segment for Late Night with Conan O'Brien in 2000 and a PBS documentary called Dyker Lights in 2001.\n\nThis is a seasonal sight, not a permanent one. The displays go up the weekend after Thanksgiving, peak from mid-December through New Year's, and are down by early January. The footprint runs roughly along 11th to 13th Avenues between 83rd and 86th Streets. Come in April and there is nothing to see but the houses themselves.\n\nThe rest of the year the neighborhood's public ground is Dyker Beach Park, in its southwestern corner, and its landmark building is the Shrine Church of Saint Bernadette on 13th Avenue, a parish since about 1935. New Utrecht was annexed to the City of Brooklyn on July 1, 1894, and Brooklyn was consolidated into New York City on January 1, 1898. The International Sunshine Society opened the Dyker Heights Home for Blind Babies here on November 1, 1906 and established the first public kindergarten for blind children in 1907."
+        "body": "The residential light displays took shape in the 1980s and were popularised from 1985 by Lou Singer's bus tours through the lit blocks. National attention followed, including a remote segment for Late Night with Conan O'Brien in 2000 and a PBS documentary called Dyker Lights in 2001.\n\nThis is a seasonal sight, not a permanent one. The displays go up the weekend after Thanksgiving, peak from mid-December through New Year's, and are down by early January. The footprint runs roughly along 11th to 13th Avenues between 83rd and 86th Streets. Come in April and there is nothing to see but the houses themselves.\n\nThe rest of the year the neighborhood's public ground is Dyker Beach Park, in its southwestern corner, and its landmark buildings are the Shrine Church of Saint Bernadette on 13th Avenue, a parish since about 1935, and the Basilica of Regina Pacis at 1230 65th Street, for which ground was broken on October 3, 1948 and which was completed in 1950. New Utrecht was annexed to the City of Brooklyn on July 1, 1894, and Brooklyn was consolidated into New York City on January 1, 1898. The International Sunshine Society opened the Dyker Heights Home for Blind Babies here on November 1, 1906 and established the first public kindergarten for blind children in 1907."
       },
       {
         "heading": "Getting there",
@@ -93,6 +93,19 @@
       "photos": []
     },
     {
+      "slug": "basilica-of-regina-pacis",
+      "name": "Basilica of Regina Pacis",
+      "kind": "historic-site",
+      "town": "Dyker Heights",
+      "state": "New York",
+      "county": "Brooklyn",
+      "address": "1230 65th Street, Brooklyn, NY",
+      "summary": "A church designed by Anthony J. DePace, for which ground was broken on October 3, 1948 and which was completed in 1950 under its founding pastor, Angelo R. Cioffi. Pope Benedict XVI raised it to minor basilica in November 2012.",
+      "history": "Ignacio LaRussa painted its ceiling mural, and the building was air-conditioned early. Its crowns have been stolen twice.",
+      "status": "open",
+      "photos": []
+    },
+    {
       "slug": "dyker-beach-golf-course-clubhouse",
       "name": "Dyker Beach Golf Course clubhouse restaurant",
       "kind": "restaurant",
@@ -124,6 +137,12 @@
       "name": "Shrine Church of Saint Bernadette",
       "place_slug": "shrine-church-of-saint-bernadette",
       "note": "The 13th Avenue parish church, built around 1935 and still in use."
+    },
+    {
+      "kind": "sight",
+      "name": "Basilica of Regina Pacis",
+      "place_slug": "basilica-of-regina-pacis",
+      "note": "Anthony J. DePace's church on 65th Street, completed in 1950 and made a minor basilica in 2012."
     },
     {
       "kind": "food",
