@@ -14,7 +14,7 @@
       },
       {
         "heading": "Getting there",
-        "body": "The R train's southern terminal, Bay Ridge-95th Street, is in Fort Hamilton at Fourth Avenue and 95th Street. It opened on October 31, 1925 as 95th Street-Fort Hamilton and is the westernmost station in the New York City Subway.\n\nTwo other stations carry the name Fort Hamilton Parkway, one on the D and one on the N, and both of those are in Borough Park rather than here. No NYC Ferry landing serves this neighborhood."
+        "body": "The R train's southern terminal, Bay Ridge-95th Street, is in Fort Hamilton at Fourth Avenue and 95th Street. It opened on October 31, 1925 as 95th Street-Fort Hamilton and is the westernmost station in the New York City Subway.\n\nOther stations carry the name Fort Hamilton Parkway without being here: the one on the D and the one on the N are both in Borough Park. No NYC Ferry landing serves this neighborhood."
       }
     ],
     "faq": [
@@ -166,7 +166,7 @@
     {
       "target": "guide:borough-park-brooklyn-guide",
       "kind": "same-region",
-      "note": "The B16 runs the length of Fort Hamilton Parkway, from this area through the core of Borough Park."
+      "note": "The B16 runs along Fort Hamilton Parkway, from this area through the core of Borough Park."
     }
   ]
 }
