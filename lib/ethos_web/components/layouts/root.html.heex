@@ -32,7 +32,14 @@
       <%= if @page_og.image do %>
         <meta property="og:image" content={@page_og.image} />
       <% end %>
-      <meta name="twitter:card" content="summary_large_image" />
+      <%!-- A large-image card with no image is a promise the page cannot keep:
+            every page whose page_og carries no image (the home page, the
+            destinations index, a hub with no Destination photo, a guide with no
+            generated OG card, a place with no photos) declared one anyway. --%>
+      <meta
+        name="twitter:card"
+        content={if @page_og.image, do: "summary_large_image", else: "summary"}
+      />
     <% end %>
     <%= if assigns[:page_meta_description] do %>
       <meta name="description" content={@page_meta_description} />

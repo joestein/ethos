@@ -64,6 +64,16 @@ defmodule EthosWeb.PageControllerTest do
       refute html =~ ~s(<meta property="og:image")
     end
 
+    # The home page has no share image, so it must not ask a card renderer for
+    # a layout built around one. Every page whose page_og carries no image is
+    # in the same position; this is the one that has no image by construction.
+    test "advertises a summary Twitter card, not a large image it does not have", %{conn: conn} do
+      html = conn |> get(~p"/") |> html_response(200)
+
+      assert html =~ ~s(<meta name="twitter:card" content="summary")
+      refute html =~ "summary_large_image"
+    end
+
     test "emits exactly the Organization and WebSite site-level nodes", %{conn: conn} do
       html = conn |> get(~p"/") |> html_response(200)
 
