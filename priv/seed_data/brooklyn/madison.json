@@ -44,7 +44,7 @@
       },
       {
         "question": "Are there hotels in Madison?",
-        "answer": "No. A query of the city's property dataset for ZIP code 11229, which covers these blocks, returned no property carrying a hotel building class, and no lodging appears in the research behind this page. The neighboring guides linked from this page cover the surrounding area."
+        "answer": "No. A query of the city's property dataset for ZIP code 11229, which covers these blocks, returned no property carrying a hotel building class. The neighboring guides linked from this page cover the surrounding area."
       }
     ],
     "photos": []
@@ -265,7 +265,7 @@
     {
       "target": "guide:midwood-brooklyn-guide",
       "kind": "same-region",
-      "note": "Madison sits just south of Midwood, and the Kings Highway station on its northern edge is on the Midwood and Homecrest border."
+      "note": "The Kings Highway station on Madison's northern edge is on the Midwood and Homecrest border."
     }
   ]
 }

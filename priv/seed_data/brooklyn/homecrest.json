@@ -44,7 +44,7 @@
       },
       {
         "question": "Are there hotels in Homecrest?",
-        "answer": "No. A query of the city's property dataset for ZIP code 11229, Homecrest's primary ZIP, returned no property carrying a hotel building class, and no lodging appears in the research behind this page. The neighboring guides linked from this page cover the surrounding area."
+        "answer": "No. A query of the city's property dataset for ZIP code 11229, Homecrest's primary ZIP, returned no property carrying a hotel building class. The neighboring guides linked from this page cover the surrounding area."
       }
     ],
     "photos": [
@@ -88,7 +88,7 @@
       "address": "2525 Coney Island Avenue at Avenue V, Brooklyn, NY 11223",
       "official_url": "https://www.bklynlibrary.org/locations/homecrest",
       "summary": "The neighborhood branch library on Coney Island Avenue, serving a large local immigrant population from Russia, China, Pakistan, India and Mexico.",
-      "history": "It was used as a filming location for A Bronx Tale in 1993 and Brooklyn's Finest in 2009. The branch's address carries the 11223 ZIP code, a Gravesend-area code, reflecting its position on Homecrest's contested western edge.",
+      "history": "It was used as a filming location for A Bronx Tale in 1993 and Brooklyn's Finest in 2009. The branch's address carries the 11223 ZIP code, a Gravesend-area code; its position on Coney Island Avenue, Homecrest's contested western edge, likely explains the mismatch.",
       "status": "open",
       "photos": [
         {
@@ -213,7 +213,7 @@
       "county": "Brooklyn",
       "address": "1310 Avenue U, Brooklyn, NY 11229",
       "summary": "A bakery on Avenue U, carried in the city's restaurant inspection records at this address with an inspection dated March 17, 2026.",
-      "history": "A separate write-up of the avenue's Chinese businesses names a Long Wong Bakery II without giving an address; whether that is this bakery under a different trading name has not been resolved.",
+      "history": "A separate write-up of the avenue's Chinese businesses names a Long Wong Bakery II without giving an address. The city's inspection records carry only Long Wong Bakery, without the II, at this address.",
       "status": "open",
       "photos": []
     },
