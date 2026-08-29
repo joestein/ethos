@@ -18,7 +18,6 @@ defmodule EthosWeb.JsonLdParityTest do
     address: "100 E. Main St., Waterbury, CT 06702",
     official_url: "https://palacetheaterct.org",
     status: "open",
-    booking_url: nil,
     photos: [
       %{
         "src" => "/photos/ct/waterbury/palace-theater.jpg",

@@ -25,7 +25,6 @@ defmodule Ethos.Places.Place do
     field :history, :string
     field :address, :string
     field :official_url, :string
-    field :booking_url, :string
     field :photos, {:array, :map}, default: []
     field :status, :string, default: "open"
     timestamps(type: :utc_datetime)
@@ -44,7 +43,6 @@ defmodule Ethos.Places.Place do
       :history,
       :address,
       :official_url,
-      :booking_url,
       :photos,
       :status
     ])
@@ -53,7 +51,6 @@ defmodule Ethos.Places.Place do
     |> validate_inclusion(:status, @statuses)
     |> validate_format(:slug, ~r/^[a-z0-9-]+$/)
     |> validate_safe_url(:official_url)
-    |> validate_safe_url(:booking_url)
     |> validate_photos()
     |> derive_geo_slugs()
     |> unique_constraint(:slug)

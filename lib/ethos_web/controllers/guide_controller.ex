@@ -29,8 +29,6 @@ defmodule EthosWeb.GuideController do
       EthosWeb.Markdown.excerpt(guide.intro, 160) ||
         "#{guide.destination} · #{length(entries)} places and tips from a real trip"
 
-    has_booking = Enum.any?(entries, &EthosWeb.Url.safe_http?(&1.booking_url))
-
     json_ld =
       [article_ld(guide, meta_description), breadcrumb_ld(guide)] ++
         if(guide.faq not in [nil, []], do: [faq_ld(guide)], else: [])
@@ -47,8 +45,7 @@ defmodule EthosWeb.GuideController do
       page_og: og,
       page_meta_description: meta_description,
       page_canonical: url(~p"/g/#{guide.slug}"),
-      json_ld: json_ld,
-      has_booking: has_booking
+      json_ld: json_ld
     )
   end
 

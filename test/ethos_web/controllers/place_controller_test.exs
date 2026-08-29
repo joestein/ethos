@@ -15,7 +15,6 @@ defmodule EthosWeb.PlaceControllerTest do
     address: "100 E. Main St., Waterbury, CT 06702",
     official_url: "https://palacetheaterct.org",
     status: "open",
-    booking_url: nil,
     photos: [
       %{
         "src" => "/photos/ct/waterbury/palace-theater.jpg",
@@ -43,11 +42,10 @@ defmodule EthosWeb.PlaceControllerTest do
     assert html =~ "og:image"
   end
 
-  test "closed place shows banner, no booking CTA", %{conn: conn} do
-    Places.upsert_place!(%{@attrs | status: "closed", booking_url: "https://example.com/book"})
+  test "closed place shows the banner", %{conn: conn} do
+    Places.upsert_place!(%{@attrs | status: "closed"})
     html = conn |> get(~p"/p/palace-theater-waterbury") |> html_response(200)
     assert html =~ "Permanently closed"
-    refute html =~ "https://example.com/book"
   end
 
   test "unknown slug 404s", %{conn: conn} do
