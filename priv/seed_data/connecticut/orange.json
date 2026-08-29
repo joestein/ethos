@@ -5,7 +5,7 @@
     "destination": "Orange, Connecticut",
     "state": "Connecticut",
     "county": "New Haven County",
-    "intro": "Orange was farmed as part of Milford — the area known as \"Bryan's Farms\" — before residents separated and incorporated their own town in 1822. The name honors King William III of England, who was Prince of Orange from birth. Orange was once much larger: West Haven separated from Orange and became its own city in 1921. During the Cold War, Orange hosted a Nike missile site defending Greater New Haven; the property is now home to the 103rd Air Control Squadron of the Connecticut Air National Guard, one of the oldest units of its kind. Rail once ran through town on the New Haven and Derby Railroad, whose passenger trains operated from 1871 until 1925. Today Orange is the North American home of PEZ Candy, whose plant and visitor center sit on Prindle Hill Road and are the town's best-known industry.",
+    "intro": "Orange was farmed as part of Milford — the area known as \"Bryan's Farms\" — before residents separated and incorporated their own town in 1822. The name honors King William III of England, who was Prince of Orange from birth. Orange was once much larger: West Haven split from Orange to become a separate town in 1921 and was incorporated as a city in 1961. During the Cold War, Orange hosted a Nike missile site defending Greater New Haven; the property is now home to the 103rd Air Control Squadron of the Connecticut Air National Guard, one of the oldest units of its kind. Rail once ran through town on the New Haven and Derby Railroad, whose passenger trains operated from 1871 until 1925. Today Orange is the North American home of PEZ Candy, whose plant and visitor center sit on Prindle Hill Road and are the town's best-known industry.",
     "sections": [
       {
         "heading": "A colonial green and a candy landmark",
@@ -286,7 +286,7 @@
     {
       "target": "guide:west-haven-ct-travel-guide",
       "kind": "nearby",
-      "note": "West Haven separated from Orange and became its own city in 1921."
+      "note": "West Haven split from Orange to become a separate town in 1921 and was incorporated as a city in 1961."
     },
     {
       "target": "guide:new-haven-ct-travel-guide",
