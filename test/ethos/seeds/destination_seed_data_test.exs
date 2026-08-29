@@ -16,7 +16,15 @@ defmodule Ethos.Seeds.DestinationSeedDataTest do
   defp fixture(name), do: Path.join(@fixture_dir, name)
 
   defp photos(data), do: data["photos"] || []
-  defp label(photo), do: photo["src"] |> Path.basename() |> Path.rootname()
+
+  # Total on purpose, like photo_dir/1 below: a photo with no src has no label,
+  # and label_violations/1 runs before the helper that reports the missing src
+  # cleanly (photo_dir_violations/1). Without this an author gets a
+  # FunctionClauseError from inside Path.basename/1 instead of a file name.
+  defp label(%{"src" => src}) when is_binary(src),
+    do: src |> Path.basename() |> Path.rootname()
+
+  defp label(_photo), do: nil
 
   defp manifest, do: @manifest_path |> File.read!() |> Jason.decode!()
 
@@ -76,6 +84,33 @@ defmodule Ethos.Seeds.DestinationSeedDataTest do
   # with justification in their reports.
   @trip_duration_allowlist []
 
+  # One specimen per pattern, in the order the patterns are listed above.
+  #
+  # Without this the eleven are load-bearing only in aggregate: the
+  # trip_duration.json fixture fires patterns 1, 2 and 3, so 4 through 11 could
+  # be deleted wholesale, or quietly weakened, and this suite would stay green.
+  # The Brooklyn gate has the same gap. An unenforced rule is what put 58 decaying
+  # travel-time claims on the live site, so "byte-identical to Brooklyn's" is
+  # asserted here rather than left as a promise made at review time.
+  #
+  # Each specimen is a phrasing that ONLY its own pattern was written to catch —
+  # other patterns may also fire on it, which is the detector overlapping by
+  # design, but the assertion is indexed so deleting or weakening any single
+  # pattern fails on that pattern's own line.
+  @trip_duration_specimens [
+    {1, "the museum is a 15-minute walk from the green"},
+    {2, "the shoreline sits 20 mins south of the state line"},
+    {3, "the ferry landing is about 40 min from the village"},
+    {4, "the county seat is half an hour by car from the coast"},
+    {5, "a drive of about 25 min separates the two greens"},
+    {6, "the northwest hills are 3 hours away by car"},
+    {7, "the depot stands twenty minutes north of downtown"},
+    {8, "the falls are a short drive from the village center"},
+    {9, "the museum is within a short drive of the campus"},
+    {10, "the branch line reaches New Haven in about 45"},
+    {11, "the coastal road covers the same ground in about 2 hours"}
+  ]
+
   # Copied verbatim from the Brooklyn gate.
   defp collect_strings(term, path \\ "")
 
@@ -120,15 +155,22 @@ defmodule Ethos.Seeds.DestinationSeedDataTest do
   #    ethos.optimize_destination_photos resolves every
   #    /photos/destinations/{dir}/{label}.jpg from images/destinations/{label}.*,
   #    a flat namespace, so one label may never stand for two different source
-  #    images. Asserted as global uniqueness rather than only "no label with
-  #    two source_urls", because a label reused for the same image still writes
-  #    the same bytes into two output directories for no reason — if a content
-  #    task genuinely wants one image on two pages, it should give the second
-  #    its own label rather than weaken this.
+  #    images — a thing the namespace genuinely cannot express, and the page
+  #    would print one image's credit beside another image's pixels.
+  #
+  #    One label standing for the SAME image in two files is not flagged.
+  #    Assertion 8 forces each file's src directory to be its own path, so a
+  #    shared label yields two distinct srcs from one source image and one
+  #    manifest entry: the optimizer writes the same bytes into both directories
+  #    and everything reconciles. Flagging it would make a state page reusing its
+  #    county's photo cost a duplicated source file and a duplicated manifest
+  #    entry — and a gate a content task discovers it must weaken mid-flight is a
+  #    gate that gets weakened. Hence Enum.uniq/1, matching the Brooklyn and
+  #    Connecticut gates. Both directions are pinned by tests below.
   defp label_violations(paths) do
     for(f <- paths, p <- photos(DataDestination.load!(f)), do: {label(p), p["source_url"]})
     |> Enum.group_by(&elem(&1, 0), &elem(&1, 1))
-    |> Enum.filter(fn {_label, sources} -> length(sources) > 1 end)
+    |> Enum.filter(fn {_label, sources} -> length(Enum.uniq(sources)) > 1 end)
   end
 
   # 4. Every referenced photo must be on disk, full size and thumb, or the page
@@ -146,8 +188,7 @@ defmodule Ethos.Seeds.DestinationSeedDataTest do
   #    author and licence a page prints always belong to the image beside it.
   defp provenance_violations(paths, manifest) do
     for f <- paths,
-        p <- photos(DataDestination.load!(f)),
-        label = label(p),
+        {p, label} <- Enum.map(photos(DataDestination.load!(f)), &{&1, label(&1)}),
         manifest[label]["source_url"] != p["source_url"],
         do: {Path.basename(f), label, manifest[label]["source_url"], p["source_url"]}
   end
@@ -209,12 +250,17 @@ defmodule Ethos.Seeds.DestinationSeedDataTest do
   #    typo'd src silently writes the optimized output to another destination's
   #    directory and the photo 404s on the page that published it. The optimizer
   #    is an authoring-time tool; this is where that mistake should fail.
+  #
+  #    `actual` is bound by the generator rather than by an `actual = ...`
+  #    filter: an assignment used as a comprehension filter is ALSO a
+  #    truthiness test, so binding nil there would silently drop the
+  #    src-less photo this is meant to report. Same for the label binding in
+  #    provenance_violations/2 above.
   defp photo_dir_violations(paths) do
     for f <- paths,
         data = DataDestination.load!(f),
         expected = String.replace(data["path"], "/", "-"),
-        p <- photos(data),
-        actual = photo_dir(p["src"]),
+        {p, actual} <- Enum.map(photos(data), &{&1, photo_dir(&1["src"])}),
         actual != expected,
         do: {Path.basename(f), p["src"], expected, actual}
   end
@@ -287,11 +333,50 @@ defmodule Ethos.Seeds.DestinationSeedDataTest do
              license_violations([fixture("bad_license.json")])
   end
 
-  test "label uniqueness catches one label standing for two images" do
+  # Both directions of the label rule are pinned, so neither the strict form
+  # (any repeated label) nor a weaker one can be substituted for it without a
+  # test failing. Only the first of these two tests exists in the Brooklyn gate.
+
+  test "the label rule catches one label standing for two different images" do
     assert [{"duplicate-label-destinations", sources}] =
              label_violations([fixture("dup_label.json")])
 
     assert length(Enum.uniq(sources)) == 2
+  end
+
+  test "the label rule allows one label standing for the same image twice" do
+    pair = Enum.map(~w(shared_label_a.json shared_label_b.json), &fixture/1)
+
+    assert label_violations(pair) == []
+
+    # The reason that is safe: assertion 8 gives each file its own src
+    # directory, so the shared label resolves to one source image and one
+    # manifest entry, written into two output directories.
+    assert photo_dir_violations(pair) == []
+
+    assert [
+             "/photos/destinations/connecticut-windham-county/shared-label-destinations.jpg",
+             "/photos/destinations/new-york-manhattan/shared-label-destinations.jpg"
+           ] =
+             pair
+             |> Enum.flat_map(&photos(DataDestination.load!(&1)))
+             |> Enum.map(& &1["src"])
+             |> Enum.sort()
+  end
+
+  test "a photo with no src is reported, not raised on" do
+    srcless = [fixture("no_photo_src.json")]
+
+    # label/1 is total, so the label rule — which runs first — does not die
+    # before assertion 8 can name the file.
+    assert label_violations(srcless) == []
+
+    assert [{"no_photo_src.json", nil, "new-york-brooklyn", nil}] =
+             photo_dir_violations(srcless)
+
+    # And it is not silently skipped by the provenance check either.
+    assert [{"no_photo_src.json", nil, nil, _published}] =
+             provenance_violations(srcless, %{})
   end
 
   test "the on-disk check catches a photo that was never optimized" do
@@ -323,6 +408,21 @@ defmodule Ethos.Seeds.DestinationSeedDataTest do
                [fixture("bad_license.json")],
                %{label => %{"source_url" => "https://example.invalid/other"}}
              )
+  end
+
+  test "each of the eleven trip-duration patterns is individually load-bearing" do
+    assert length(@trip_duration_patterns) == 11
+    assert length(@trip_duration_specimens) == length(@trip_duration_patterns)
+
+    for {n, specimen} <- @trip_duration_specimens do
+      pattern = Enum.at(@trip_duration_patterns, n - 1)
+
+      assert Regex.match?(pattern, specimen),
+             "trip-duration pattern #{n} no longer catches #{inspect(specimen)} — " <>
+               "the pattern at that position is now #{inspect(pattern)}. These are copied " <>
+               "verbatim from the Brooklyn gate and must not be re-derived, condensed or " <>
+               "reordered."
+    end
   end
 
   test "the trip-duration ban catches a duration claim, and only there" do
