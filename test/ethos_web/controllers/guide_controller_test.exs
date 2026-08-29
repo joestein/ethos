@@ -163,6 +163,36 @@ defmodule EthosWeb.GuideControllerTest do
     assert Enum.map(ld["itemListElement"], & &1["position"]) == [1, 2, 3, 4]
   end
 
+  test "an orientation page renders the same breadcrumb as a full guide", %{conn: conn} do
+    user = user_fixture()
+
+    guide =
+      Ethos.Seeds.DataGuide.upsert_from_file!(
+        Path.expand("../../support/fixtures/seed_data/townville.json", __DIR__),
+        user.email
+      )
+
+    assert guide.tier == "town-page"
+
+    html = conn |> get(~p"/g/#{guide.slug}") |> html_response(200)
+
+    nav = breadcrumb_nav(html)
+    assert nav =~ ~s(href="/destinations")
+    assert nav =~ ~s(href="/destinations/connecticut")
+    assert nav =~ ~s(href="/destinations/connecticut/windham-county")
+    assert nav =~ "Windham County"
+
+    ld = breadcrumb_json_ld(html)
+
+    assert Enum.map(ld["itemListElement"], & &1["name"]) == [
+             "Ethos",
+             "Destinations",
+             "Connecticut",
+             "Windham County",
+             guide.title
+           ]
+  end
+
   test "a guide with a state but no county stops the breadcrumb at the state", %{conn: conn} do
     guide =
       published_guide_fixture(%{

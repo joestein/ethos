@@ -89,7 +89,7 @@ defmodule EthosWeb.GuideController do
         %{name: "Ethos", url: url(~p"/")},
         %{name: "Destinations", url: url(~p"/destinations")}
       ] ++
-        Enum.map(EthosWeb.GuideHTML.breadcrumb_trail(guide), fn crumb ->
+        Enum.map(EthosWeb.GuideBreadcrumb.trail(guide), fn crumb ->
           %{name: crumb.name, url: unverified_url(EthosWeb.Endpoint, crumb.path)}
         end) ++
         [%{name: guide.title, url: url(~p"/g/#{guide.slug}")}]
