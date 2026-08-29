@@ -104,9 +104,21 @@ Those records emit `addressLocality`, `addressRegion` and `postalCode` and omit
 the street line. Expected split: ~1,541 places with a street line, ~575 without.
 
 The 131 addresses that do not decompose at all — trailing parentheticals,
-multi-parcel descriptions, cross-street clauses — **fall back to today's whole-
-string behaviour** rather than losing their address entirely. Degrading is
-acceptable; disappearing is not.
+multi-parcel descriptions, cross-street clauses — **omit `streetAddress`
+entirely.**
+
+*Amended 2026-08-29, after Task 2.* This section originally said those addresses
+should "fall back to today's whole-string behaviour rather than losing their
+address entirely." That was wrong, and it took building the parser to see why:
+today's whole-string behaviour **is the bug this spec exists to fix**. Falling
+back to it would reintroduce the defect for 131 places, and would do it inside
+the change advertised as the repair — the worst place to hide a regression.
+
+"Losing their address entirely" was also an overstatement. An unparsed address
+still emits `addressLocality`, `addressRegion` and, in most cases,
+`postalCode` — the postal scan runs independently of the full-address match. It
+loses only the street line, and the full address string remains visible on the
+page itself, which is where a human reads it.
 
 `postalCode` is emitted whenever a five-digit code is found, independent of
 whether the street line qualifies.
@@ -173,8 +185,20 @@ is generalised to `json_ld_of_type(html, type)`, and the new tests assert
 - `PostalAddress` field-by-field, including the house-number rule in both
   directions and the unparseable fallback.
 - `Address.parse/1` exercised against the whole corpus offline: every place's
-  address parses or falls back, and no emitted `streetAddress` contains its own
-  `addressLocality`.
+  address parses or is omitted, and no emitted `streetAddress` carries its own
+  `addressLocality` **in a comma segment after the first**.
+
+  *Amended 2026-08-29, after Task 2.* The literal form — "no `streetAddress`
+  contains its own `addressLocality`" — is unsatisfiable, and the corpus says so
+  51 times. Connecticut and Brooklyn are full of roads named after their own
+  town: `"145 Brooklyn Avenue, Brooklyn, NY"`, `"279 Avon Mountain Road, Avon,
+  CT"`, `"130 Chaplin Street, Chaplin, CT"`. The town name is part of the
+  street's real name, and suppressing those 51 would be worse output than the
+  bug. But the exception applies only to the **leading** segment, which is where
+  a street name lives. A locality appearing in a later segment is the greedy
+  capture pulling non-street text in — `"65 Water Street, Brooklyn Bridge Park"`
+  beside `addressLocality: "Brooklyn"` — and is a real defect. Asserting
+  segment-wise after the first keeps all 51 and catches that one.
 - The home page's `Organization`, `WebSite` and `SearchAction`.
 - `Article.image` present when the guide has one, absent when it does not.
 
