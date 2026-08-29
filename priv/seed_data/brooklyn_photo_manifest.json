@@ -163,6 +163,10 @@
     "source_url": "https://commons.wikimedia.org/wiki/File:Brooklyn_Public_Library_Homecrest_Branch.jpg",
     "sha256": "de0363314259e81e8b13d4f8c058e56566163bb3d240f8bf8185b25ab03e57fe"
   },
+  "homecrest-presbyterian-church": {
+    "source_url": "https://commons.wikimedia.org/wiki/File:Homecrest_Presb_Church_jeh.jpg",
+    "sha256": "4b0dcc0300e859792266ead029a9a9d35aafa34faba60c75400ad13a458fde3f"
+  },
   "hotel-bossert-brooklyn-heights": {
     "sha256": "f11aee4a05c8d6702b2ec3ac02e4f67d02177b8cf94876200bfb459e56398822",
     "source_url": "https://commons.wikimedia.org/wiki/File:Hotel_Bossert_Hicks_Montague_jeh.jpg"
@@ -394,6 +398,10 @@
   "sunset-play-center-sunset-park": {
     "sha256": "8386b1878ac8ededc40c30586fc59fcbdd29ab4e267f43e1c7497e4cf18f82fe",
     "source_url": "https://commons.wikimedia.org/wiki/File:Sunset_Play_Center_ext_jeh.jpg"
+  },
+  "tayba-islamic-center-homecrest": {
+    "source_url": "https://commons.wikimedia.org/wiki/File:Tayba_Islamic_Center_2165_CIA_jeh.jpg",
+    "sha256": "5bc123d0d244c5abc710a3bbca8faab25f84580331c8ccaa68fbae3ed9a24cc0"
   },
   "temple-beth-el-borough-park": {
     "sha256": "fc974512b4071fcdcbadf01d5881939668dca58dcfc0420f03d2b801674d91eb",

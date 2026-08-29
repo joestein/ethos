@@ -14,7 +14,7 @@
       },
       {
         "heading": "The Avenue U storefronts",
-        "body": "Avenue U is one of the informal lines different sources use in describing Madison's edges, and it is also a working commercial street. The Avenue U addresses on this page run from 1412 to 2319: Ming Bakery at 1412, Kung Fu Tea at 1422, June's Bakery & Cafe at 1505, Vivi Bubble Tea at 1616, Pho Hoai Restaurant at 1906, Gulchatay at 1915, Sherdor at 1917, Padishah Restaurant at 1920, Little Istanbul at 2007 and No. 1 Chinese Restaurant at 2319. Each is carried in the city's restaurant inspection records at its address, with an inspection dated 2025 or 2026.\n\nThe same commercial strip carries on into blocks commonly grouped with Homecrest, and where one neighborhood gives way to the other is not fixed by any authority. The sources that describe the two neighborhoods' edges disagree with one another, and none should be treated as definitive.\n\nTwo sites stand away from the avenue. St. Edmund Preparatory High School is at 2474 Ocean Avenue, one of the streets used in describing Madison's edges. Corporal Wiltshire Square, a small NYC Parks triangle of 0.051 acres, sits where Avenue P, Kings Highway and Ocean Avenue meet."
+        "body": "Avenue U is one of the informal lines different sources use in describing Madison's edges, and it is also a working commercial street. The Avenue U addresses on this page run from 1412 to 2319: Ming Bakery at 1412, Kung Fu Tea at 1422, June's Bakery & Cafe at 1505, Vivi Bubble Tea at 1616, Pho Hoai Restaurant at 1906, Gulchatay at 1915, Sherdor at 1917, Padishah Restaurant at 1920, Little Istanbul at 2007 and No. 1 Chinese Restaurant at 2319. Each is carried in the city's restaurant inspection records at its address, with an inspection dated 2025 or 2026.\n\nThe same commercial strip carries on into blocks commonly grouped with Homecrest, and where one neighborhood gives way to the other is not fixed by any authority. The sources that describe the two neighborhoods' edges disagree with one another, and none should be treated as definitive.\n\nOne site on this page stands away from the avenue: Corporal Wiltshire Square, a small NYC Parks triangle of 0.051 acres, which sits where Avenue P, Kings Highway and Ocean Avenue meet."
       },
       {
         "heading": "Getting there",
@@ -50,19 +50,6 @@
     "photos": []
   },
   "places": [
-    {
-      "slug": "st-edmund-preparatory-high-school",
-      "name": "St. Edmund Preparatory High School",
-      "kind": "attraction",
-      "town": "Madison",
-      "state": "New York",
-      "county": "Brooklyn",
-      "address": "2474 Ocean Avenue, Brooklyn, NY 11229",
-      "official_url": "https://stedmundprep.org",
-      "summary": "A preparatory high school on Ocean Avenue. The school's own site gives 2474 Ocean Avenue, Brooklyn, NY 11229 as its current address.",
-      "status": "open",
-      "photos": []
-    },
     {
       "slug": "corporal-wiltshire-square",
       "name": "Corporal Wiltshire Square",
@@ -197,12 +184,6 @@
     }
   ],
   "entries": [
-    {
-      "kind": "sight",
-      "name": "St. Edmund Preparatory High School",
-      "place_slug": "st-edmund-preparatory-high-school",
-      "note": "A preparatory high school at 2474 Ocean Avenue, on one of the streets used to describe Madison's edge."
-    },
     {
       "kind": "sight",
       "name": "Corporal Wiltshire Square",

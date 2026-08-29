@@ -56,6 +56,24 @@
         "author": "QuasyBoy",
         "license": "CC BY-SA 4.0",
         "source_url": "https://commons.wikimedia.org/wiki/File:Brooklyn_Public_Library_Homecrest_Branch.jpg"
+      },
+      {
+        "src": "/photos/ny/brooklyn/homecrest/homecrest-presbyterian-church.jpg",
+        "thumb": "/photos/ny/brooklyn/homecrest/homecrest-presbyterian-church_thumb.jpg",
+        "title": "Homecrest Presbyterian Church",
+        "description": "A white clapboard church with a square louvered belfry under a cross finial, dormer windows along the roof and a lawn.",
+        "author": "Jim.henderson",
+        "license": "CC0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Homecrest_Presb_Church_jeh.jpg"
+      },
+      {
+        "src": "/photos/ny/brooklyn/homecrest/tayba-islamic-center-homecrest.jpg",
+        "thumb": "/photos/ny/brooklyn/homecrest/tayba-islamic-center-homecrest_thumb.jpg",
+        "title": "Tayba Islamic Center awning",
+        "description": "A green awning lettered Tayba Islamic Center over turquoise doors in a brick storefront row, fire escapes on the upper floors.",
+        "author": "Jim.henderson",
+        "license": "CC0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Tayba_Islamic_Center_2165_CIA_jeh.jpg"
       }
     ]
   },
