@@ -114,7 +114,8 @@
       "county": "Manhattan",
       "address": "35 Wooster Street, New York, NY 10013",
       "official_url": "https://drawingcenter.org/",
-      "summary": "A museum devoted exclusively to drawing and works on paper, with rotating exhibitions plus artist talks and life-drawing sessions.",
+      "summary": "A museum devoted to drawing and works on paper, at 35 Wooster Street in a 19th-century cast-iron building. Its stated mission is to present drawing as \"primary, dynamic, and relevant to contemporary culture,\" and its exhibitions have featured drawings by tattoo artists, chefs, novelists and prisoners alongside visual artists.",
+      "history": "Founded in 1977 by Martha Beck, a former assistant curator of drawings at the Museum of Modern Art, in a ground-floor warehouse space at 137 Greene Street; it moved to 35 Wooster Street in 1987. A $10 million renovation designed by Claire Weisz of WXY Architecture & Urban Design was completed in 2012, expanding the museum to two and a half floors and roughly 50% more exhibition space. Laura Hoptman, a former MoMA curator, was appointed executive director in 2018, when stated annual attendance was about 55,000; first-year attendance in 1977 was reported at 125,000.",
       "status": "open",
       "photos": []
     },
@@ -127,7 +128,8 @@
       "county": "Manhattan",
       "address": "26 Wooster Street, New York, NY 10013",
       "official_url": "https://www.leslielohman.org/",
-      "summary": "A museum dedicated to LGBTQIA+ artists and the discourse on art and queerness, with a suggested $10 donation for entry.",
+      "summary": "A museum dedicated to the collection, stewardship, and presentation of art by queer artists, at 26 Wooster Street. Its permanent collection holds more than 1,300 pieces among over 22,000 objects owned, including works by David Hockney, Andy Warhol and Robert Mapplethorpe. Open Wednesday to Sunday, noon to 6 p.m., with a suggested $10 donation.",
+      "history": "The museum grew out of the Leslie-Lohman Gay Art Foundation, established by J. Frederic \"Fritz\" Lohman and Charles W. Leslie, who mounted their first gay art exhibition in 1969 at their Prince Street loft. Their commercial gallery closed in the early 1980s during the AIDS epidemic; the foundation applied for nonprofit status in 1987 and was granted it in 1990, a process during which the IRS objected to the word \"gay\" in its name. From a first permanent home in a basement at 127B Prince Street it moved to a ground-floor gallery at 26 Wooster Street in 2006, and expanded in 2016-17. The New York State Board of Regents granted it museum status in 2011, it was accredited as a museum in 2016, and it is a member of the American Alliance of Museums.",
       "status": "open",
       "photos": []
     },
@@ -180,7 +182,8 @@
       "county": "Manhattan",
       "address": "80 Spring Street, New York, NY 10012",
       "official_url": "https://balthazarny.com/",
-      "summary": "A bustling French brasserie that opened in SoHo in spring 1997, serving traditional French fare from breakfast through supper daily with weekend brunch.",
+      "summary": "A French brasserie in a former tannery building at 80 Spring Street, serving traditional French fare from breakfast through supper every day, with brunch at weekends and bread and pastries baked at Balthazar Bakery. Steak frites is the most popular dish, at about 200 portions a day, alongside steak au poivre, short ribs, duck confit and French onion soup — the soup the New York Daily News rated the city's second-best in 2013.",
+      "history": "Opened on April 21, 1997 by restaurateur Keith McNally. A London sibling followed in Covent Garden in 2012, and Morandi and Minetta Tavern are its New York sister restaurants.",
       "status": "open",
       "photos": []
     },
@@ -193,7 +196,8 @@
       "county": "Manhattan",
       "address": "189 Spring Street (between Sullivan & Thompson), New York, NY 10012",
       "official_url": "https://www.dominiqueanselny.com/",
-      "summary": "Home of the original Cronut (a croissant-donut hybrid), plus signatures like the DKA (Dominique's Kouign Amann) and canneles.",
+      "summary": "The Spring Street bakery where the Cronut, a croissant-donut hybrid, was created in 2013 — a pastry Time named one of the best inventions of that year. Other signatures are the DKA (Dominique's Kouign Amann), cannelés, cookie shots and rotating tarts. It sells in person and by pre-order pickup, and offers nationwide shipping, delivery and catering.",
+      "history": "Chef Dominique Ansel opened the bakery at 189 Spring Street in 2011. Born in Beauvais, France in 1978, he spent roughly eight years at Fauchon in Paris, moved to the United States in 2006, and worked six years as executive pastry chef at Daniel Boulud's restaurant Daniel. He won the James Beard Award for Best Pastry Chef in the U.S. in 2014, was named World's Best Pastry Chef by The World's 50 Best Restaurants in 2017 — reportedly the first American to take that award — and holds France's Ordre du Mérite Agricole. Later ventures include Dominique Ansel Workshop (2021), a Las Vegas location, and Papa d'Amour (2025).",
       "status": "open",
       "photos": []
     },
@@ -206,7 +210,8 @@
       "county": "Manhattan",
       "address": "142 Mercer Street (at Prince Street), New York, NY",
       "official_url": "https://www.lurefishbar.com/",
-      "summary": "A long-running seafood and sushi restaurant with a raw bar, serving lunch, dinner, and brunch.",
+      "summary": "A basement-level seafood restaurant at 142 Mercer Street, fitted out on a retro yacht theme. The menu runs from a raw bar and market-fresh sushi through crispy rice dishes, Asian red snapper, crab uni bucatini, prime steaks and a signature burger; Preston Clark is the chef. Time Out lists hours as Monday to Thursday 11:30 a.m. to 11 p.m., Friday and Saturday 11:30 a.m. to midnight, and Sunday 11:30 a.m. to 10 p.m., with an average main course around $26.",
+      "history": "The restaurant opened in 2004. It is operated by Mercer Street Hospitality, the group entrepreneur John McDonald founded in 1993, which also runs a Lure Fishbar in Chicago at 616 North Rush Street.",
       "status": "open",
       "photos": []
     },
@@ -219,7 +224,8 @@
       "county": "Manhattan",
       "address": "147 Mercer Street (at Prince Street), New York, NY 10012",
       "official_url": "https://www.mercerhotel.com/",
-      "summary": "SoHo's original five-star luxury hotel: seventy-three rooms and suites in a landmark Romanesque Revival building, with Sartiano's restaurant on site.",
+      "summary": "A hotel of 73 guest rooms across six floors, roughly 84,000 square feet in all, with interiors by the Parisian designer Christian Liaigre. Sartiano's is the restaurant on site, with an open kitchen, a Carrara marble bar and Hollywood-style banquettes, and Alfred Portale as culinary lead. Its sister property is The Greenwich Hotel.",
+      "history": "The building went up in 1890 as office space for the Astor family holdings of John Jacob Astor III, designed by William Schickel, an architect known for his extensive work on behalf of the Archdiocese of New York, and was later used as artists' lofts and studios. BD Hotels and André Balazs acquired it in 1988 and opened the hotel in 1997. Mercer Kitchen held the restaurant space from 1998 to 2022; Sartiano's opened in June 2023 under Scott Sartiano with chef Alfred Portale, and the Submercer lounge reopened in 2024.",
       "status": "open",
       "photos": []
     },
@@ -232,7 +238,8 @@
       "county": "Manhattan",
       "address": "310 West Broadway, New York, NY 10013",
       "official_url": "https://www.sohogrand.com/",
-      "summary": "A large SoHo hotel with renovated guest rooms and live programming, including DJs at the Grand Bar & Salon Wednesday through Saturday nights.",
+      "summary": "A West Broadway hotel whose venues include the Grand Bar & Salon, with DJs spinning vinyl Wednesday through Saturday; the Club Room, for live music; the Soho Diner; Gilligan's; and The Gallery. Guest bike rentals are complimentary. Interiors are by William Sofield, and the architecture incorporates bottle glass and cast-iron molding of the kind prominent in SoHo's industrial-era buildings.",
+      "history": "The hotel opened on August 4, 1996 on the former site of the Church of St. Alphonsus Liguori, after eight earlier attempts to build a hotel there had failed over the preceding decade. David Helpern was the architect. It is owned and operated by Leonard N. Stern of Hartz Mountain Industries through GrandLife Hotels, which also operates the Roxy Hotel, and it has been featured in The Sopranos and Sex and the City.",
       "status": "open",
       "photos": []
     },
@@ -245,7 +252,8 @@
       "county": "Manhattan",
       "address": "79 Crosby Street, New York, NY",
       "official_url": "https://www.firmdalehotels.com/hotels/new-york/crosby-street-hotel/",
-      "summary": "A Firmdale luxury hotel with 86 rooms and suites over 11 floors, awarded Three Michelin Keys in 2025.",
+      "summary": "A Firmdale hotel at 79 Crosby Street with 86 rooms and suites spread over 11 floors, each individually designed, with interiors by Kit Kemp in what the hotel calls a playful English aesthetic. On site are the Crosby Bar, serving a relaxed brasserie menu and opening onto an ivy-laden terrace, a Sculpture Garden, a Drawing Room, a screening room and a gym.",
+      "history": "The hotel was open and covered in the press by March 2011, when The Independent ran a piece on it. It is one of three New York properties run by Firmdale Hotels, alongside The Whitby Hotel and Warren Street Hotel; Firmdale's Kit and Tim Kemp were jointly awarded an MBE in 2012 for services to the hotel industry and charity.",
       "status": "open",
       "photos": []
     }

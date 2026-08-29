@@ -676,7 +676,7 @@ defmodule Ethos.Seeds.ConnecticutPlaces do
         address: "596 Flanders Road, Woodbury, CT 06798",
         official_url: "https://flandersnaturecenter.org",
         summary:
-          "A roughly 60-year-old nature center and land trust protecting more than 2,400 acres of conserved open space, laced with public hiking trails.",
+          "A nature center and land trust that manages more than 2,400 acres of preserved land in Woodbury and neighboring towns.",
         photos: []
       }),
       Map.merge(@woodbury, %{
@@ -685,7 +685,7 @@ defmodule Ethos.Seeds.ConnecticutPlaces do
         kind: "park",
         address: "43 Hollow Road, Woodbury, CT 06798",
         summary:
-          "Woodbury's town park on Hollow Road — covered pavilion, athletic fields, basketball, and sand volleyball — right next door to the Glebe House.",
+          "A Town of Woodbury Parks & Recreation park at 43 Hollow Road, with a basketball court, a covered pavilion, sand volleyball courts, an upper field, and an upper parking lot. The town's recreation site says the park now has Wi-Fi, and dogs must be leashed at all times in town parks.",
         photos: []
       }),
       Map.merge(@woodbury, %{
@@ -693,7 +693,7 @@ defmodule Ethos.Seeds.ConnecticutPlaces do
         name: "Orenaug Park",
         kind: "park",
         address: "Park Road, Woodbury, CT 06798",
-        summary: "A wooded town park off Park Road with a disc golf course.",
+        summary: "A Town of Woodbury park with a disc golf course.",
         photos: []
       }),
       Map.merge(@woodbury, %{
@@ -703,7 +703,7 @@ defmodule Ethos.Seeds.ConnecticutPlaces do
         address: "693 Main Street South, Woodbury, CT 06798",
         official_url: "https://www.johnscafe.com",
         summary:
-          "Bistro-style New American with Mediterranean leanings in the heart of the antiques district — steaks, house-made pasta, and pizza; Mondays are BYOB with no corkage fee.",
+          "A neighborhood New American bistro with a strong Italian influence, serving daily house-made pasta, fresh seafood, steaks, and pizza, with gluten-free options and desserts made in house. Open Monday to Wednesday 4:30 to 8:30 p.m. and Thursday to Saturday 11:30 a.m. to 9 p.m., closed Sunday; Mondays are BYOB with no corkage fee.",
         photos: []
       }),
       Map.merge(@woodbury, %{
@@ -723,7 +723,7 @@ defmodule Ethos.Seeds.ConnecticutPlaces do
         address: "129 Main Street North, Woodbury, CT 06798",
         official_url: "https://newmorningmarket.com/",
         summary:
-          "A natural-and-organic market founded in 1971 — wholesome prepared foods, artisanal cheeses, and specialty goods, open daily 8 to 8.",
+          "An independent, family-owned natural foods store on Main Street North, carrying organic produce, prepared foods, specialty-diet items, antibiotic- and hormone-free meat, artisanal cheeses, and supplements. Open daily 8 a.m. to 8 p.m. The building's second floor houses the Vitality Center, a spa and wellness facility.",
         photos: []
       }),
       Map.merge(@woodbury, %{
@@ -732,7 +732,7 @@ defmodule Ethos.Seeds.ConnecticutPlaces do
         kind: "restaurant",
         address: "694 Main Street South, Woodbury, CT 06798",
         summary:
-          "The Main Street dining room carrying on Woodbury's best-known restaurant name — the address made famous by chef Carole Peck's Good News Cafe.",
+          "An American restaurant at 694 Main Street South, with vegetarian, vegan, and gluten-free options; the menu runs to Thai red curry, lobster mac and cheese, chicken tikka masala, pork schnitzel, and a walnut-crusted tofu dish. Open Sunday to Thursday 11:30 a.m. to 9:30 p.m. and Friday and Saturday 11:30 a.m. to 10 p.m. Some menu aggregators still list the address under the older name Good News Cafe.",
         photos: []
       }),
       Map.merge(@woodbury, %{
