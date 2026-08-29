@@ -1,0 +1,136 @@
+defmodule Ethos.Places.AddressTest do
+  use ExUnit.Case, async: true
+  alias Ethos.Places.Address
+
+  test "decomposes a standard address" do
+    assert Address.parse("9 Main Street North, Bethlehem, CT 06751") ==
+             %{
+               street: "9 Main Street North",
+               locality: "Bethlehem",
+               region: "CT",
+               postal_code: "06751",
+               parsed?: true
+             }
+  end
+
+  test "parses without a postal code" do
+    assert %{street: "1 Elm Street", locality: "Hartford", region: "CT", postal_code: nil} =
+             Address.parse("1 Elm Street, Hartford, CT")
+  end
+
+  test "a descriptive location yields no street but keeps the rest" do
+    parsed =
+      Address.parse("Cropsey Avenue between 21st Avenue and Bay Parkway, Brooklyn, NY 11214")
+
+    assert parsed.street == nil
+    assert parsed.locality == "Brooklyn"
+    assert parsed.region == "NY"
+    assert parsed.postal_code == "11214"
+    assert parsed.parsed?
+  end
+
+  test "an unparseable address reports parsed? false and invents nothing" do
+    parsed =
+      Address.parse(
+        "Irving Ave. and Knickerbocker Ave., between Starr St. and Suydam St., Brooklyn"
+      )
+
+    refute parsed.parsed?
+    assert parsed.street == nil
+    assert parsed.locality == nil
+  end
+
+  test "finds a postal code even when the whole address does not parse" do
+    parsed =
+      Address.parse("2 Wyckoff Avenue, Brooklyn, NY 11237, entrance at 408 Jefferson Street")
+
+    assert parsed.postal_code == "11237"
+  end
+
+  test "nil in, empty out" do
+    assert %{parsed?: false, street: nil, postal_code: nil} = Address.parse(nil)
+  end
+
+  test "a ZIP+4 keeps only the five-digit code" do
+    assert Address.parse("1 Elm Street, Hartford, CT 06103-1234").postal_code == "06103"
+  end
+
+  test "a street named after its own town keeps its street line" do
+    # 52 addresses in the corpus sit on a road named for the town it serves.
+    # The town name inside the street is part of the street's real name, not a
+    # leaked locality, and the street line is correct as it stands.
+    assert Address.parse("145 Brooklyn Avenue, Brooklyn, NY 11213").street ==
+             "145 Brooklyn Avenue"
+
+    assert Address.parse("279 Avon Mountain Road, Avon, CT 06001").street ==
+             "279 Avon Mountain Road"
+  end
+
+  test "a leading ordinal is a street name, not a house number" do
+    assert Address.parse("18th Avenue between 55th and 58th Streets, Brooklyn, NY 11204").street ==
+             nil
+
+    assert Address.parse("86th Street and 7th Avenue, Brooklyn, NY 11228").street == nil
+
+    # A real building number on an ordinal street is untouched.
+    assert Address.parse("1523 18th Avenue, Brooklyn, NY 11204").street == "1523 18th Avenue"
+  end
+
+  test "every address in the corpus either decomposes or falls back cleanly" do
+    addresses =
+      Ethos.SeedDataHelpers.all_seed_files()
+      |> Enum.flat_map(fn file ->
+        file |> File.read!() |> Jason.decode!() |> Map.get("places", [])
+      end)
+      |> Enum.map(& &1["address"])
+      |> Enum.reject(&is_nil/1)
+
+    parsed = Enum.map(addresses, &Address.parse/1)
+
+    # No emitted street line may have re-absorbed the locality that is emitted
+    # beside it — this is the bug the whole task exists to fix. It is asserted
+    # structurally rather than with String.contains?/2, because a plain
+    # substring test convicts 52 correct parses: roads named after their own
+    # town ("145 Brooklyn Avenue, Brooklyn, NY", "279 Avon Mountain Road, Avon,
+    # CT"), where the town name is part of the street's actual name. What must
+    # never happen is the locality surviving as a component of the street —
+    # caught here in both shapes it can take.
+    for {p, original} <- Enum.zip(parsed, addresses), p.street && p.locality do
+      segments = p.street |> String.split(",") |> Enum.map(&String.trim/1)
+
+      refute p.locality in segments,
+             "streetAddress still carries its own locality: #{inspect(original)}"
+
+      refute String.ends_with?(strip_region_and_postal(p.street), p.locality),
+             "streetAddress still ends with its own locality: #{inspect(original)}"
+
+      refute p.street == String.trim(original),
+             "streetAddress is the entire address string: #{inspect(original)}"
+    end
+
+    # A street line is never returned without a house number.
+    for p <- parsed, p.street do
+      assert Regex.match?(~r/^\d/, p.street)
+      refute Regex.match?(~r/^\d+(?:st|nd|rd|th)\b/i, p.street)
+    end
+
+    parsed_count = Enum.count(parsed, & &1.parsed?)
+    street_count = Enum.count(parsed, & &1.street)
+
+    # Recorded so a regression is visible as a number, not a vibe. Update these
+    # deliberately when the corpus grows; never to make a failing test pass.
+    # Measured 2026-08-29: 2066 addresses, 1935 parsed, 1532 with a street line.
+    assert parsed_count > 1900,
+           "only #{parsed_count} of #{length(addresses)} addresses decomposed"
+
+    assert street_count > 1500, "only #{street_count} addresses yielded a street line"
+  end
+
+  defp strip_region_and_postal(street) do
+    street
+    |> String.replace(~r/,?\s+[A-Z]{2}(?:\s+\d{5}(?:-\d{4})?)?\s*$/, "")
+    |> String.trim()
+    |> String.trim_trailing(",")
+    |> String.trim()
+  end
+end
