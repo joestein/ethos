@@ -28,7 +28,7 @@
       },
       {
         "question": "Where can I stay near Boerum Hill?",
-        "answer": "No hotel inside Boerum Hill appears in the research behind this page. The nearest verified option is the New York Marriott at the Brooklyn Bridge, a 32-story tower on Adams Street in Downtown Brooklyn, the neighborhood across the Hoyt–Schermerhorn Streets border."
+        "answer": "No hotel is listed here. The New York Marriott at the Brooklyn Bridge, a 32-story tower on Adams Street, is in Downtown Brooklyn, the neighborhood across the Hoyt–Schermerhorn Streets border."
       }
     ],
     "photos": [
@@ -141,7 +141,7 @@
     {
       "target": "guide:downtown-brooklyn-brooklyn-guide",
       "kind": "nearby",
-      "note": "Hoyt–Schermerhorn Streets sits on the Downtown Brooklyn and Boerum Hill border, and the nearest verified hotel is in Downtown Brooklyn."
+      "note": "Hoyt–Schermerhorn Streets sits on the Downtown Brooklyn and Boerum Hill border, and the New York Marriott at the Brooklyn Bridge is in Downtown Brooklyn."
     },
     {
       "target": "guide:fort-greene-brooklyn-guide",
