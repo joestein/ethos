@@ -40,6 +40,12 @@ defmodule Ethos.SeedDataHelpersTest do
     # guide/places/entries, so DataGuide.load!/1 raises on it and every caller
     # of all_seed_files/0 dies. Vacuous until the destination content ships,
     # and the reason three existing corpus tests do not break when it does.
+    #
+    # Enum.all?/2 over an empty list is true, so pin that there is in fact
+    # destination content to exclude — otherwise this passes whether or not
+    # the exclusion works.
+    assert SeedDataHelpers.seed_files("destinations") != []
+
     assert Enum.all?(
              SeedDataHelpers.all_seed_files(),
              &(&1 |> Path.dirname() |> Path.basename() != "destinations")

@@ -15,9 +15,14 @@ defmodule Ethos.Destinations do
   def upsert_destination!(attrs) do
     attrs = Map.new(attrs, fn {k, v} -> {to_string(k), v} end)
 
-    case attrs["path"] && Repo.get_by(Destination, path: attrs["path"]) do
-      nil -> %Destination{}
-      existing -> existing
+    # is_binary/1, not truthiness: a non-string path (`"path": false` in a seed
+    # file) would otherwise reach Destination.changeset/2 as the struct
+    # argument and raise something opaque instead of a changeset error.
+    # The lookup short-circuits to `false`, not `nil`, so match the struct
+    # rather than testing for nil.
+    case is_binary(attrs["path"]) && Repo.get_by(Destination, path: attrs["path"]) do
+      %Destination{} = existing -> existing
+      _ -> %Destination{}
     end
     |> Destination.changeset(attrs)
     |> Repo.insert_or_update!()

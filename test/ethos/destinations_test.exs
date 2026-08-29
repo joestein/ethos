@@ -40,6 +40,17 @@ defmodule Ethos.DestinationsTest do
     end
   end
 
+  test "a non-string path fails as a changeset error, not an opaque raise" do
+    # The lookup guard is is_binary/1 rather than truthiness, so a JSON
+    # `"path": false` cannot short-circuit into the existing-record branch and
+    # reach Destination.changeset/2 as the struct argument.
+    for bad <- [false, 42, %{}] do
+      assert_raise Ecto.InvalidChangesetError, fn ->
+        Destinations.upsert_destination!(%{@valid | path: bad})
+      end
+    end
+  end
+
   test "path must be lowercase slug segments separated by single slashes" do
     for bad <- ["Connecticut", "new york", "new-york/", "/connecticut", "a//b"] do
       assert_raise Ecto.InvalidChangesetError, fn ->
