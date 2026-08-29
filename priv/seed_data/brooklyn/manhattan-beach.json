@@ -1,0 +1,114 @@
+{
+  "guide": {
+    "slug": "manhattan-beach-brooklyn-guide",
+    "title": "Manhattan Beach, Brooklyn: Alphabetical Streets and a Vanished Resort",
+    "destination": "Manhattan Beach, New York",
+    "state": "New York",
+    "county": "Brooklyn",
+    "tier": "town-page",
+    "intro": "Manhattan Beach is in Brooklyn, at the eastern end of the Coney Island peninsula. The banker Austin Corbin created it in the last quarter of the nineteenth century: his New York and Manhattan Beach Railway, incorporated on October 24, 1876, bought the eastern half of Coney Island from the town of Gravesend and renamed it. The Manhattan Beach Hotel opened on July 18, 1877, the same day as the rail line, and the Oriental Hotel followed in 1880. Corbin was an antisemite who barred Jews from the resort, served as secretary of the American Society for the Suppression of Jews, and wrote restrictive covenants into local real estate. After his death the policy was cancelled, and the neighborhood drew a large number of Jewish residents.",
+    "sections": [
+      {
+        "heading": "After the hotels",
+        "body": "Both hotels hosted concerts and fireworks, and John Philip Sousa wrote a march called Manhattan Beach in 1893.\n\nThe rail line outlived the resort by a little. The New York and Manhattan Beach Railway, which Corbin controlled from 1880 and which the Long Island Rail Road later absorbed, ran a dedicated Manhattan Beach Branch with eight stations from Fresh Pond in Queens down to a Manhattan Beach terminal. Passenger service ended on May 14, 1924, freight in 1935, and the tracks came up between 1938 and 1941.\n\nThe hotel sites were rebuilt as housing and as Manhattan Beach Park, which the Parks Department opened to the public in 1955 to relieve crowding at the neighboring beaches of Coney Island and Brighton Beach. The eastern tip went a different way: it held the Sheepshead Bay Maritime Training Center for Merchant Marine, Coast Guard and Navy personnel, then Manhattan Beach Air Force Station from 1954 to 1959, and the 71-acre site was redeveloped as Kingsborough Community College, established in 1963. The college's beach is open to its own community rather than to the general public.\n\nThe streets are named alphabetically from Amherst to Pembroke, A to P, after English places. One of them still carries Corbin's name: on September 26, 2017 Community Board 15 voted unanimously to co-name Corbin Place as M. Corbin Place, for the Revolutionary War figure Margaret Corbin, putting distance between the street and Austin Corbin's record without making residents change their deeds and identification."
+      },
+      {
+        "heading": "Getting there",
+        "body": "There is no subway station in Manhattan Beach. The nearest are Brighton Beach station, in Brighton Beach, and Sheepshead Bay station at Sheepshead Bay Road and East 16th Street, in Sheepshead Bay; the B and Q serve both.\n\nBuses carry the last part. The B1 runs between Bay Ridge, at 4th Avenue and 87th Street, and Manhattan Beach, terminating at Mackenzie Street and Oriental Boulevard at Kingsborough Community College, by way of 86th Street, Avenue X, Ocean Parkway and Brighton Beach Avenue, passing the Brighton Beach station on the way. The B49 runs along Oriental Boulevard to the college and is reachable from Sheepshead Bay station. The BM3 express bus runs between Manhattan — State Street and Battery Place, and East 57th Street at 2nd Avenue — and a terminus at Emmons Avenue and Shore Boulevard in Sheepshead Bay, immediately adjacent to Manhattan Beach.\n\nNo rail service reaches Manhattan Beach. The Long Island Rail Road's Manhattan Beach Branch ended passenger service in 1924. No NYC Ferry route serves it either."
+      }
+    ],
+    "faq": [
+      {
+        "question": "How do I get to Manhattan Beach?",
+        "answer": "By B or Q train to Brighton Beach station or to Sheepshead Bay station, then by bus. The B1 terminates at Mackenzie Street and Oriental Boulevard, at Kingsborough Community College, and passes Brighton Beach station on its way from Bay Ridge. The B49 runs along Oriental Boulevard to the college from Sheepshead Bay station. There is no subway station and no rail service in Manhattan Beach itself."
+      },
+      {
+        "question": "Is Manhattan Beach in Manhattan?",
+        "answer": "No. Manhattan Beach is a Brooklyn neighborhood at the eastern end of the Coney Island peninsula. It got the name from Austin Corbin's railway company, which bought the eastern half of Coney Island from the town of Gravesend and renamed the resort it built there."
+      },
+      {
+        "question": "Can I visit the Manhattan Beach Hotel or the Oriental Hotel?",
+        "answer": "No. Both of Corbin's resort hotels are long gone. Their sites became housing and Manhattan Beach Park, which the Parks Department opened to the public in 1955 to relieve crowding at Coney Island and Brighton Beach."
+      }
+    ],
+    "photos": [
+      {
+        "src": "/photos/ny/brooklyn/manhattan-beach/manhattan-beach-jewish-center.jpg",
+        "thumb": "/photos/ny/brooklyn/manhattan-beach/manhattan-beach-jewish-center_thumb.jpg",
+        "title": "Manhattan Beach Jewish Center",
+        "description": "The limestone corner of the synagogue on West End Avenue, with a carved menorah panel and a noticeboard by the door.",
+        "author": "Azhassan",
+        "license": "CC BY-SA 4.0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Manhattan_Beach_Jewish_Center.jpg"
+      }
+    ]
+  },
+  "places": [
+    {
+      "slug": "manhattan-beach-park",
+      "name": "Manhattan Beach Park",
+      "kind": "park",
+      "town": "Manhattan Beach",
+      "state": "New York",
+      "county": "Brooklyn",
+      "summary": "An NYC Parks property on the site of the former Manhattan Beach Hotel, taking in the neighborhood's Atlantic shorefront. The Parks Department opened it to the public in 1955 to relieve crowding at the neighboring beaches of Coney Island and Brighton Beach.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "manhattan-beach-jewish-center",
+      "name": "Manhattan Beach Jewish Center",
+      "kind": "historic-site",
+      "town": "Manhattan Beach",
+      "state": "New York",
+      "county": "Brooklyn",
+      "address": "60 West End Avenue, Brooklyn, NY",
+      "official_url": "https://mbjc.org",
+      "summary": "An active Orthodox synagogue and community centre founded in 1922 as Congregation B'nai Israel of Manhattan Beach and renamed in 1962. Its 1952 Bauhaus-modernist building was designed by Jacob W. Sherman.",
+      "history": "Listed on the National Register of Historic Places on May 26, 2015 under reference number 15000266. The congregation's own site carried scheduled events for August and September 2026.",
+      "status": "open",
+      "photos": [
+        {
+          "src": "/photos/ny/brooklyn/manhattan-beach/manhattan-beach-jewish-center.jpg",
+          "thumb": "/photos/ny/brooklyn/manhattan-beach/manhattan-beach-jewish-center_thumb.jpg",
+          "title": "Manhattan Beach Jewish Center",
+          "description": "The limestone corner of the synagogue on West End Avenue, with a carved menorah panel and a noticeboard by the door.",
+          "author": "Azhassan",
+          "license": "CC BY-SA 4.0",
+          "source_url": "https://commons.wikimedia.org/wiki/File:Manhattan_Beach_Jewish_Center.jpg"
+        }
+      ]
+    }
+  ],
+  "entries": [
+    {
+      "kind": "walk",
+      "name": "Manhattan Beach Park",
+      "place_slug": "manhattan-beach-park",
+      "note": "The shorefront park on the old hotel site, open to the public since 1955."
+    },
+    {
+      "kind": "sight",
+      "name": "Manhattan Beach Jewish Center",
+      "place_slug": "manhattan-beach-jewish-center",
+      "note": "A congregation founded in 1922, in a 1952 building listed on the National Register in 2015."
+    }
+  ],
+  "links": [
+    {
+      "target": "guide:coney-island-brooklyn-guide",
+      "kind": "shared-history",
+      "note": "Austin Corbin's railway company bought the eastern half of Coney Island from the town of Gravesend and renamed it Manhattan Beach."
+    },
+    {
+      "target": "guide:brighton-beach-brooklyn-guide",
+      "kind": "nearby",
+      "note": "A 2016 community report describes Brighton Beach as bordered by Manhattan Beach to the east, at Corbin Place."
+    },
+    {
+      "target": "guide:sheepshead-bay-brooklyn-guide",
+      "kind": "shared-history",
+      "note": "Ocean Avenue, opened 1876, and the New York & Manhattan Beach Railroad of 1877-78 both ran from Sheepshead Bay to terminals in Manhattan Beach."
+    }
+  ]
+}

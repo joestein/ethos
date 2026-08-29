@@ -1,0 +1,55 @@
+{
+  "guide": {
+    "slug": "madison-brooklyn-guide",
+    "title": "Madison, Brooklyn: The Blocks Named for a High School",
+    "destination": "Madison, New York",
+    "state": "New York",
+    "county": "Brooklyn",
+    "tier": "town-page",
+    "intro": "Madison is a residential subsection of Sheepshead Bay, named after the James Madison High School that stands inside it. The school was established in 1925 at 3787 Bedford Avenue, and its alumni include Supreme Court Justice Ruth Bader Ginsburg, class of 1950, and United States Senators Bernie Sanders and Chuck Schumer. The blocks around it are commonly described as running between Kings Highway to the north, Avenue U to the south, Ocean Avenue to the west and Nostrand Avenue to the east — informal lines, not a legal border. The wider Sheepshead Bay area Madison sits within began as part of the Town of Gravesend, and the housing stock that fills Madison today went up after the Shore Parkway section of the Belt Parkway opened in 1941.",
+    "sections": [
+      {
+        "heading": "Kings Highway along the northern edge",
+        "body": "Madison uses ZIP code 11229. The road that runs along its northern edge has colonial roots. Kings Highway traces to a pre-colonial Native trail recorded in a 1652 deed as Mechawanienck, was formalised into a colonial-era highway connecting local roads and cow paths across Kings County, and takes its name from the county — which was itself named for King Charles II in 1683. General Lord Cornwallis marched troops along it on August 26, 1776 on the way to the Battle of Long Island, and George Washington travelled it in 1792 while surveying farmland in Brooklyn, Queens and Suffolk County.\n\nThe stretch east of Ocean Avenue — Madison's own northern edge — was widened in 1922 and given landscaped park malls in the manner of Frederick Law Olmsted's parkway designs, though narrower than Olmsted's own Eastern and Ocean Parkways.\n\nThe area's resort era belonged to Sheepshead Bay rather than to these blocks: Ocean Avenue opened in 1876, the Long Island Rail Road's Manhattan Beach Branch arrived in 1877 and 1878, and the Sheepshead Bay Race Track ran from 1880 until the 1910 betting ban. That LIRR branch once ran through this part of Brooklyn parallel to today's BMT Brighton Line, near the present Neck Road station, and was discontinued in the mid-1920s. No LIRR service reaches the Madison area today.\n\nBrennan & Carr, the roast beef restaurant at 3432 Nostrand Avenue, stands at the corner where Madison's stated boundary meets Sheepshead Bay proper. Both Wikipedia and the New York Times file it under Sheepshead Bay, and this guide follows them."
+      },
+      {
+        "heading": "Getting there",
+        "body": "No subway station is credited to Madison by name. Three BMT Brighton Line stations ring the blocks, and each is recorded in a neighboring area.\n\nKings Highway station, at Kings Highway between East 15th and East 16th Streets, sits on the Midwood and Homecrest border; the B stops there on weekdays as an express and the Q at all times, running local. Avenue U station, at Avenue U and East 16th Street, is recorded as serving Homecrest and Sheepshead Bay, with the Q at all times. Neck Road station, at Gravesend Neck Road between East 15th and East 16th Streets, is in Homecrest, with the Q at all times.\n\nThe buses recorded as serving the Madison subsection specifically are the B2, B7, B31, B82, B82 Select Bus Service, B100 and BM4 — a different set from the routes listed for the wider Sheepshead Bay neighborhood."
+      }
+    ],
+    "faq": [
+      {
+        "question": "How do I get to Madison?",
+        "answer": "By Q train at all times to Kings Highway, Avenue U or Neck Road on the BMT Brighton Line, or by B on weekdays to Kings Highway. None of the three stations is credited to Madison by name — Kings Highway sits on the Midwood and Homecrest border, Avenue U serves Homecrest and Sheepshead Bay, and Neck Road is in Homecrest. The buses recorded for Madison specifically are the B2, B7, B31, B82, B82 SBS, B100 and BM4."
+      },
+      {
+        "question": "Why is it called Madison?",
+        "answer": "After James Madison High School, established in 1925 at 3787 Bedford Avenue, which sits within the blocks the name covers. Ruth Bader Ginsburg graduated from it in 1950, and Bernie Sanders and Chuck Schumer are also alumni."
+      },
+      {
+        "question": "Can I visit James Madison High School?",
+        "answer": "It is a large active public high school rather than a museum or a site open to outside visitors, with an enrollment of roughly 3,630 as of 2022-23. It is worth knowing as the source of the neighborhood's name, not as a stop."
+      }
+    ],
+    "photos": []
+  },
+  "places": [],
+  "entries": [],
+  "links": [
+    {
+      "target": "guide:sheepshead-bay-brooklyn-guide",
+      "kind": "shared-history",
+      "note": "Madison is a residential subsection of Sheepshead Bay, named after the James Madison High School that stands within it."
+    },
+    {
+      "target": "guide:homecrest-brooklyn-guide",
+      "kind": "same-region",
+      "note": "Neck Road station is in Homecrest and Avenue U station serves Homecrest and Sheepshead Bay; both ring the Madison blocks."
+    },
+    {
+      "target": "guide:midwood-brooklyn-guide",
+      "kind": "same-region",
+      "note": "Madison sits just south of Midwood, and the Kings Highway station on its northern edge is on the Midwood and Homecrest border."
+    }
+  ]
+}

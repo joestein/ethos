@@ -1,0 +1,156 @@
+{
+  "guide": {
+    "slug": "homecrest-brooklyn-guide",
+    "title": "Homecrest, Brooklyn: Homecrest-by-the-Sea and the Avenue U Strip",
+    "destination": "Homecrest, New York",
+    "state": "New York",
+    "county": "Brooklyn",
+    "tier": "town-page",
+    "intro": "Homecrest began as an early-twentieth-century real estate subdivision. Developers put up large single-family homes in the east end of the town of Gravesend and marketed the district as Homecrest-by-the-Sea. The timing is legible in the transit record: the original at-grade station at Avenue U opened on the surface Brighton Beach Railroad near East 15th Street around 1902, described as coincident with the building of the community of Homecrest, and was replaced by the present elevated station around 1908. The neighborhood's boundaries have never settled — a 2010 walking tour placed it between about Kings Highway, Avenue X, Coney Island Avenue and Ocean Avenue, while other sources draw the lines differently — and the same tour noted that a few Victorian-style houses can still be found among the later blocks.",
+    "sections": [
+      {
+        "heading": "Old roads and small lanes",
+        "body": "Kings Highway, which most descriptions put along Homecrest's northern side, has colonial roots. It was a Native American trail recorded as Mechawanienck in a 1652 deed, a wagon path in a 1682 deed, and was connected out of local roads and trails into a highway by the early eighteenth century, named for Kings County — which had itself been named for King Charles II in 1683. Gravesend Neck Road, which gives the Neck Road station its name, is described as a very old colonial-era road that predates the street grid, once running to a peninsula east of today's Nostrand Avenue called Gravesend Neck that landfill has since eliminated.\n\nNeck Road station was also once a terminus of the Long Island Rail Road's Manhattan Beach Branch, with a separate spur branching off just south of it toward the now-razed Sheepshead Bay Race Track. No LIRR line serves Homecrest today.\n\nTwo small lanes are worth knowing about. Margaret Court is an easy-to-miss pedestrian walkway on East 13th Street between Avenues Y and Z, lined with small houses numbered 1 to 21; a 1929 Belcher Hyde atlas shows it already existed before the surrounding blocks were built out. Homecrest Court held one of the last 1950s-era porcelain street signs in New York City when it was documented in 2013; that sign has since been removed and the lane carries no street sign now.\n\nHomecrest has long had a large Italian population, joined later by immigration from Latin America, China, Israel, Syria, Russia and South Asia. A Chinese enclave grew up right by the Avenue U subway station; the framing of it as Brooklyn's second Chinatown comes from a bklynr piece about Richard Yee's, a Chinese-American restaurant on the avenue that closed in 2007."
+      },
+      {
+        "heading": "Getting there",
+        "body": "Three stations on the BMT Brighton Line serve Homecrest, all of them on or inside its edges.\n\nKings Highway station, at Kings Highway between East 15th and East 16th Streets, sits on the border of Midwood and Homecrest. The Q stops there at all times and the B stops there on weekdays — rush hours, middays and early evenings — as an express.\n\nAvenue U station, at Avenue U between East 15th and East 16th Streets, sits on the Homecrest and Sheepshead Bay border, served by the Q at all times.\n\nNeck Road station, at Gravesend Neck Road between East 15th and East 16th Streets, is in Homecrest and is served by the Q at all times."
+      }
+    ],
+    "faq": [
+      {
+        "question": "How do I get to Homecrest?",
+        "answer": "By Q train, which stops at all times at Kings Highway, Avenue U and Neck Road on the BMT Brighton Line. Neck Road is in Homecrest; Kings Highway sits on the Midwood border and Avenue U on the Sheepshead Bay border. The B also stops at Kings Highway on weekdays during rush hours, middays and early evenings."
+      },
+      {
+        "question": "Where are Homecrest's boundaries?",
+        "answer": "Sources disagree and none should be treated as settled. A 2010 walking-tour account places the neighborhood between about Kings Highway, Avenue X, Coney Island Avenue and Ocean Avenue; other accounts use Avenue V or Avenue U as the southern edge, East 16th Street or Ocean Parkway on the sides, and Avenue P on the north."
+      },
+      {
+        "question": "Where does the name come from?",
+        "answer": "From Homecrest-by-the-Sea, the early-twentieth-century real estate development that put up large single-family homes in the east end of the town of Gravesend."
+      }
+    ],
+    "photos": [
+      {
+        "src": "/photos/ny/brooklyn/homecrest/homecrest-library-homecrest.jpg",
+        "thumb": "/photos/ny/brooklyn/homecrest/homecrest-library-homecrest_thumb.jpg",
+        "title": "Homecrest branch library, Coney Island Avenue",
+        "description": "The low glass-and-brick front of the Brooklyn Public Library's Homecrest branch, with book-return bins beside the door.",
+        "author": "QuasyBoy",
+        "license": "CC BY-SA 4.0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Brooklyn_Public_Library_Homecrest_Branch.jpg"
+      }
+    ]
+  },
+  "places": [
+    {
+      "slug": "brooklyn-public-library-homecrest-branch",
+      "name": "Brooklyn Public Library, Homecrest Branch",
+      "kind": "attraction",
+      "town": "Homecrest",
+      "state": "New York",
+      "county": "Brooklyn",
+      "address": "2525 Coney Island Avenue at Avenue V, Brooklyn, NY 11223",
+      "official_url": "https://www.bklynlibrary.org/locations/homecrest",
+      "summary": "The neighborhood branch library on Coney Island Avenue, serving a large local immigrant population from Russia, China, Pakistan, India and Mexico.",
+      "history": "It was used as a filming location for A Bronx Tale in 1993 and Brooklyn's Finest in 2009. The branch's address carries the 11223 zip code, a Gravesend-area code, reflecting its position on Homecrest's contested western edge.",
+      "status": "open",
+      "photos": [
+        {
+          "src": "/photos/ny/brooklyn/homecrest/homecrest-library-homecrest.jpg",
+          "thumb": "/photos/ny/brooklyn/homecrest/homecrest-library-homecrest_thumb.jpg",
+          "title": "Homecrest branch library, Coney Island Avenue",
+          "description": "The low glass-and-brick front of the Brooklyn Public Library's Homecrest branch, with book-return bins beside the door.",
+          "author": "QuasyBoy",
+          "license": "CC BY-SA 4.0",
+          "source_url": "https://commons.wikimedia.org/wiki/File:Brooklyn_Public_Library_Homecrest_Branch.jpg"
+        }
+      ]
+    },
+    {
+      "slug": "kelly-park-playground",
+      "name": "Kelly Park Playground",
+      "kind": "park",
+      "town": "Homecrest",
+      "state": "New York",
+      "county": "Brooklyn",
+      "address": "Avenue S at Moore Place, between East 16th and East 17th Streets, Brooklyn, NY",
+      "official_url": "https://www.nycgovparks.org/parks/kelly-park",
+      "summary": "An NYC Parks playground with basketball courts, fitness equipment, a play area, spray showers and tennis courts. The city's open-data list carries a second, larger Kelly property in the same zip code, at 1301 Avenue S.",
+      "history": "NYC Parks' historical sign names it for William E. Kelly, 1872 to 1929, a Brooklyn-born Kings County postmaster who later served as Clerk of Kings County until his death.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "mellett-playground",
+      "name": "Mellett Playground",
+      "kind": "park",
+      "town": "Homecrest",
+      "state": "New York",
+      "county": "Brooklyn",
+      "address": "1301 Avenue V, Brooklyn, NY 11229 (between East 13th and East 14th Streets)",
+      "official_url": "https://www.nycgovparks.org/parks/mellett-playground",
+      "summary": "A 1.056-acre neighborhood park with basketball and handball courts, a playground, public restrooms, soccer fields and spray showers.",
+      "history": "Named for Corporal Francis J. and Private John Mellett, brothers from the Sheepshead Bay area who died serving in the Second World War.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "homecrest-playground",
+      "name": "Homecrest Playground",
+      "kind": "park",
+      "town": "Homecrest",
+      "state": "New York",
+      "county": "Brooklyn",
+      "address": "Belt Parkway and Williams Court, between East 12th Street and Homecrest Avenue, Brooklyn, NY 11235",
+      "official_url": "https://www.nycgovparks.org/parks/B166B",
+      "summary": "A playground with basketball and handball courts, a play area, soccer fields and spray showers. NYC Parks records it in zip code 11235, a Sheepshead Bay-area code, so it sits near Homecrest's southern edge and its neighborhood affiliation is approximate.",
+      "status": "open",
+      "photos": []
+    }
+  ],
+  "entries": [
+    {
+      "kind": "sight",
+      "name": "Brooklyn Public Library, Homecrest Branch",
+      "place_slug": "brooklyn-public-library-homecrest-branch",
+      "note": "The Coney Island Avenue branch, seen on screen in A Bronx Tale and Brooklyn's Finest."
+    },
+    {
+      "kind": "walk",
+      "name": "Kelly Park Playground",
+      "place_slug": "kelly-park-playground",
+      "note": "Courts and tennis on Avenue S, named for a Kings County postmaster and county clerk."
+    },
+    {
+      "kind": "walk",
+      "name": "Mellett Playground",
+      "place_slug": "mellett-playground",
+      "note": "An acre on Avenue V named for two brothers who died in the Second World War."
+    },
+    {
+      "kind": "walk",
+      "name": "Homecrest Playground",
+      "place_slug": "homecrest-playground",
+      "note": "Ballfields and courts by the Belt Parkway at the neighborhood's southern edge."
+    }
+  ],
+  "links": [
+    {
+      "target": "guide:gravesend-brooklyn-guide",
+      "kind": "shared-history",
+      "note": "Homecrest began as Homecrest-by-the-Sea, a development of large single-family homes in the east end of the town of Gravesend."
+    },
+    {
+      "target": "guide:sheepshead-bay-brooklyn-guide",
+      "kind": "nearby",
+      "note": "Avenue U station sits on the Homecrest and Sheepshead Bay border, and Neck Road station is in Homecrest immediately adjacent to Sheepshead Bay."
+    },
+    {
+      "target": "guide:midwood-brooklyn-guide",
+      "kind": "nearby",
+      "note": "Kings Highway station, at Kings Highway between East 15th and East 16th Streets, sits on the border of Midwood and Homecrest."
+    }
+  ]
+}

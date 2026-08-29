@@ -1,0 +1,97 @@
+{
+  "guide": {
+    "slug": "plumb-beach-brooklyn-guide",
+    "title": "Plumb Beach, Brooklyn: Dunes, Horseshoe Crabs and a Filled Creek",
+    "destination": "Plumb Beach, New York",
+    "state": "New York",
+    "county": "Brooklyn",
+    "tier": "town-page",
+    "intro": "Plumb Beach takes its name from the beach plums that once grew on what was an island — Plumb Island — and sailors are recorded visiting it as early as the 1800s. In the 1890s the federal government bought roughly a third of the island's 150 acres, meaning to build a coastal mortar battery on the eastern end, and abandoned the plan when the soil proved quicksand-like. New York City acquired the former reservation for parkland in 1924 but for decades leased parts of it to a contracting company that parcelled and rented the land out. Hog Creek, which had separated the island from the rest of Brooklyn, was filled in during the late 1930s as the Belt Parkway went through, joining Plumb Beach to the mainland for good.",
+    "sections": [
+      {
+        "heading": "Prizefights, squatters and a hurricane",
+        "body": "In May 1907 the War Department, under Secretary of War William Howard Taft, leased the vacant reservation to Winfield S. Overton on a five-year term. Overton ran illegal prizefights on it. The bouts of August 15 and August 22, 1908 drew a crowd of over 400 on the second week, more than double the roughly 200 of the first. The War Department revoked the lease in January 1909, and when Overton tried to return that May the 12th Infantry was sent to keep him out.\n\nThe island had a civilian life alongside that. Reid's Ferry served a stop here by 1900, George Ayen built a hotel in 1907, and by the First World War most of the people living on the island were squatters. The 1938 New England hurricane destroyed most of the shanties they had built, and Belt Parkway construction forced out those who remained.\n\nThe National Park Service took control in 1972, when Plumb Beach was incorporated into the newly created Gateway National Recreation Area; it is co-managed with NYC Parks today. The site takes in shoreline, tidal mudflat, low saltmarsh, a tidal lagoon, a dune system and woodland thickets at the entrance to Gerritsen Creek, and is important habitat for horseshoe crabs, which come ashore to mate in May and June. Storm surge pushing through Rockaway Inlet into Jamaica Bay makes the shoreline prone to heavy erosion."
+      },
+      {
+        "heading": "Getting there",
+        "body": "There is no subway station at Plumb Beach, and no source records a subway line as a way to reach it. The National Park Service names two ways in.\n\nBy road, the entrance is off the eastbound lane of the Belt Parkway, after Exit 9 and before Exit 11 — there is no Exit 10. There is a parking lot on site.\n\nBy bus, the NPS directs visitors to the B4 or the B44 to Knapp Street and Shore Parkway, the service-road stop beside the Belt Parkway, and to walk in from there."
+      }
+    ],
+    "faq": [
+      {
+        "question": "How do I get to Plumb Beach?",
+        "answer": "By the B4 or B44 bus to Knapp Street and Shore Parkway, the service-road stop beside the Belt Parkway, and then on foot. By car, the entrance is off the eastbound lane of the Belt Parkway after Exit 9 and before Exit 11, with no Exit 10 in between, and there is a parking lot. No subway line serves Plumb Beach."
+      },
+      {
+        "question": "Can you swim at Plumb Beach?",
+        "answer": "It is not a designated swimming beach. The National Park Service lists only three lifeguarded swimming beaches in Gateway National Recreation Area — Jacob Riis Park, Sandy Hook and Great Kills Park — and Plumb Beach is not among them. It is documented for windsurfing, kiteboarding and kayak launching."
+      },
+      {
+        "question": "When do the horseshoe crabs come ashore?",
+        "answer": "In May and June. Plumb Beach is important horseshoe-crab mating habitat, and the site's shoreline, tidal mudflat, saltmarsh, lagoon and dune system sit at the entrance to Gerritsen Creek."
+      }
+    ],
+    "photos": [
+      {
+        "src": "/photos/ny/brooklyn/plumb-beach/plumb-beach-dunes.jpg",
+        "thumb": "/photos/ny/brooklyn/plumb-beach/plumb-beach-dunes_thumb.jpg",
+        "title": "Dunes at Plumb Beach",
+        "description": "A low sand dune held together by tufts of beach grass and scrub, with shell fragments scattered across the sand.",
+        "author": "GK tramrunner229",
+        "license": "CC BY-SA 3.0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Dunes_at_Plumb_Beach,_Brooklyn.jpg"
+      }
+    ]
+  },
+  "places": [
+    {
+      "slug": "plumb-beach-gateway",
+      "name": "Plumb Beach",
+      "kind": "park",
+      "town": "Plumb Beach",
+      "state": "New York",
+      "county": "Brooklyn",
+      "address": "Belt Parkway eastbound, after Exit 9 and before Exit 11, Brooklyn, NY",
+      "official_url": "https://www.nps.gov/gate/learn/historyculture/plumb-beach.htm",
+      "summary": "A federally managed shoreline unit of Gateway National Recreation Area's Jamaica Bay Unit, co-managed by the National Park Service and NYC Parks. It has a parking lot, restrooms and a kayak launch, is used for windsurfing and kiteboarding, and is open daily from 6 a.m. to 9 p.m. It is not a designated swimming beach.",
+      "history": "The National Park Service assumed control in 1972, when the site was incorporated into the newly created Gateway National Recreation Area. Its shoreline, tidal mudflat, low saltmarsh, tidal lagoon, dune system and woodland thickets at the entrance to Gerritsen Creek make it important horseshoe-crab habitat, with the crabs coming ashore in May and June.",
+      "status": "open",
+      "photos": [
+        {
+          "src": "/photos/ny/brooklyn/plumb-beach/plumb-beach-dunes.jpg",
+          "thumb": "/photos/ny/brooklyn/plumb-beach/plumb-beach-dunes_thumb.jpg",
+          "title": "Dunes at Plumb Beach",
+          "description": "A low sand dune held together by tufts of beach grass and scrub, with shell fragments scattered across the sand.",
+          "author": "GK tramrunner229",
+          "license": "CC BY-SA 3.0",
+          "source_url": "https://commons.wikimedia.org/wiki/File:Dunes_at_Plumb_Beach,_Brooklyn.jpg"
+        }
+      ]
+    }
+  ],
+  "entries": [
+    {
+      "kind": "walk",
+      "name": "Plumb Beach",
+      "place_slug": "plumb-beach-gateway",
+      "note": "The Gateway National Recreation Area shoreline off the Belt Parkway, with a kayak launch and a dune system."
+    }
+  ],
+  "links": [
+    {
+      "target": "guide:sheepshead-bay-brooklyn-guide",
+      "kind": "same-region",
+      "note": "The B4, which the National Park Service names as bus access to Plumb Beach, terminates at Knapp Street and Voorhies Avenue in Sheepshead Bay."
+    },
+    {
+      "target": "guide:gerritsen-beach-brooklyn-guide",
+      "kind": "same-region",
+      "note": "Plumb Beach sits at the entrance to Gerritsen Creek, the tidal creek that gave Gerritsen Beach its name."
+    },
+    {
+      "target": "guide:marine-park-brooklyn-guide",
+      "kind": "same-region",
+      "note": "Plumb Beach and Floyd Bennett Field both became part of Gateway National Recreation Area, created in 1972."
+    }
+  ]
+}

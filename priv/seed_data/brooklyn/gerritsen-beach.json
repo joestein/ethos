@@ -1,0 +1,132 @@
+{
+  "guide": {
+    "slug": "gerritsen-beach-brooklyn-guide",
+    "title": "Gerritsen Beach, Brooklyn: Bungalows, Vollies and the Point",
+    "destination": "Gerritsen Beach, New York",
+    "state": "New York",
+    "county": "Brooklyn",
+    "tier": "town-page",
+    "intro": "The neighborhood takes its name from Wolphert Gerretse, a seventeenth-century Dutch settler who built a house and mill on the creek that also carries his name. The ground stayed mostly undeveloped marshland with a few squatters' bungalows. In 1920 Realty Associates, a speculative builder, began putting up a middle-class summer bungalow resort, and within a decade about fifteen hundred houses stood here. The Whitney family had property near the old mill — a mansion with stables, servant quarters, a carriage house and a private racetrack — and the mansion was knocked down in 1936 for Marine Park development, though the carriage house survives as a private residence. Gerritsen Beach sits on a peninsula in southeastern Brooklyn, and its 2020 census population was 4,797.",
+    "sections": [
+      {
+        "heading": "A peninsula that looks after itself",
+        "body": "A damaging fire on Abbey Court in 1921 showed the community that the city's regular apparatus could not reach the peninsula in time, and the Gerritsen Beach Volunteer Fire Department — the Vollies — was organized the following year. The city did not build FDNY Engine Company 321's firehouse at Gerritsen Avenue and Avenue U until October 4, 1930. The volunteer department is the last remaining one in Brooklyn and still runs alongside Engine 321.\n\nThat geography cuts the other way in a storm. On October 29, 2012 Hurricane Sandy damaged or affected almost every home in Gerritsen Beach with seawater, and the peninsula's shape drove flood waters to a record ten to twelve feet in some parts. Mayor Michael Bloomberg reclassified the neighborhood as a Zone A flood zone afterwards.\n\nAfter the Second World War, apartments for returning veterans and their families went up on the far side of Gerritsen Avenue on what is now parkland; they came down around 1955 once residents had moved on. Streets inside the neighborhood run in alphabetical order — Aster, Bevy, Celeste, Dictum. The neighborhood is served by Brooklyn Community Board 15.\n\nMarine Park borders Gerritsen Beach along Gerritsen Avenue, and Gerritsen Creek supplies its salt marsh with fresh water."
+      },
+      {
+        "heading": "Getting there",
+        "body": "There is no subway station in Gerritsen Beach. The recorded subway access is Kings Highway station on the BMT Brighton Line, which sits on the border of Midwood and Homecrest and is served by the Q at all times and by the B as a weekday express.\n\nThe bus is the link. The B31 runs between Midwood, at Quentin Road and East 16th Street by the Kings Highway station, and Gerritsen Beach, at Gerritsen Avenue and Lois Avenue, by way of Avenue R and Gerritsen Avenue. It is the route that physically terminates inside the neighborhood.\n\nNo NYC Ferry landing serves Gerritsen Beach or this stretch of the Jamaica Bay shoreline."
+      }
+    ],
+    "faq": [
+      {
+        "question": "How do I get to Gerritsen Beach?",
+        "answer": "By B31 bus, which runs from Midwood at Quentin Road and East 16th Street, beside the Kings Highway station, along Avenue R and Gerritsen Avenue to Gerritsen Avenue and Lois Avenue inside the neighborhood. There is no subway station in Gerritsen Beach; Kings Highway station, served by the Q at all times and the B on weekdays, sits on the border of Midwood and Homecrest."
+      },
+      {
+        "question": "Who or what is Gerritsen Beach named for?",
+        "answer": "Wolphert Gerretse, a seventeenth-century Dutch settler who built a house and mill on what is now Gerritsen Creek."
+      },
+      {
+        "question": "What are the Vollies?",
+        "answer": "The Gerritsen Beach Volunteer Fire Department, organized in 1922 after a damaging 1921 fire on Abbey Court showed that the city's regular fire apparatus could not reach the peninsula fast enough. It is the last remaining volunteer fire department in Brooklyn and operates alongside FDNY Engine Company 321."
+      }
+    ],
+    "photos": [
+      {
+        "src": "/photos/ny/brooklyn/gerritsen-beach/gerritsen-beach-fire-department.jpg",
+        "thumb": "/photos/ny/brooklyn/gerritsen-beach/gerritsen-beach-fire-department_thumb.jpg",
+        "title": "Gerritsen Beach Fire Department",
+        "description": "A red fire engine and an ambulance pulled up outside a low brick firehouse with a Gerritsen Beach Fire Dept. sign.",
+        "author": "Daniel Cavanagh",
+        "license": "CC BY-SA 3.0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Gerrittsen_Beach_Fire_Department.jpg"
+      }
+    ]
+  },
+  "places": [
+    {
+      "slug": "gerritsen-beach-volunteer-fire-department",
+      "name": "Gerritsen Beach Volunteer Fire Department",
+      "kind": "historic-site",
+      "town": "Gerritsen Beach",
+      "state": "New York",
+      "county": "Brooklyn",
+      "address": "52 Seba Avenue, Brooklyn, NY",
+      "summary": "The Vollies, organized in 1922 after a damaging fire on Abbey Court the year before showed that the city's apparatus could not reach the peninsula fast enough. It is the last remaining volunteer fire department in Brooklyn and operates alongside FDNY Engine Company 321.",
+      "status": "open",
+      "photos": [
+        {
+          "src": "/photos/ny/brooklyn/gerritsen-beach/gerritsen-beach-fire-department.jpg",
+          "thumb": "/photos/ny/brooklyn/gerritsen-beach/gerritsen-beach-fire-department_thumb.jpg",
+          "title": "Gerritsen Beach Fire Department",
+          "description": "A red fire engine and an ambulance pulled up outside a low brick firehouse with a Gerritsen Beach Fire Dept. sign.",
+          "author": "Daniel Cavanagh",
+          "license": "CC BY-SA 3.0",
+          "source_url": "https://commons.wikimedia.org/wiki/File:Gerrittsen_Beach_Fire_Department.jpg"
+        }
+      ]
+    },
+    {
+      "slug": "gerritsen-beach-veterans-memorial",
+      "name": "Gerritsen Beach Veterans Memorial",
+      "kind": "historic-site",
+      "town": "Gerritsen Beach",
+      "state": "New York",
+      "county": "Brooklyn",
+      "address": "Corner of Whitney Avenue and Burnett Street, Brooklyn, NY",
+      "summary": "A community war memorial maintained with VFW Post 107.",
+      "history": "A $100,000 renovation — a concrete flag ring and cobblestone repair — was announced in 2016, funded with $50,000 each from Councilman Alan Maisel and State Senator Marty Golden.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "the-point-gerritsen-beach",
+      "name": "The Point",
+      "kind": "attraction",
+      "town": "Gerritsen Beach",
+      "state": "New York",
+      "county": "Brooklyn",
+      "address": "Foot of Gerritsen Avenue, Brooklyn, NY",
+      "summary": "The beach just past the end of Gerritsen Avenue, called the Point by local residents and used informally for fishing and shoreline access. It is not an official park.",
+      "status": "open",
+      "photos": []
+    }
+  ],
+  "entries": [
+    {
+      "kind": "sight",
+      "name": "Gerritsen Beach Volunteer Fire Department",
+      "place_slug": "gerritsen-beach-volunteer-fire-department",
+      "note": "The Vollies, organized in 1922 and the last volunteer fire department left in Brooklyn."
+    },
+    {
+      "kind": "sight",
+      "name": "Gerritsen Beach Veterans Memorial",
+      "place_slug": "gerritsen-beach-veterans-memorial",
+      "note": "A community war memorial at Whitney Avenue and Burnett Street, maintained with VFW Post 107."
+    },
+    {
+      "kind": "walk",
+      "name": "The Point",
+      "place_slug": "the-point-gerritsen-beach",
+      "note": "The shoreline at the foot of Gerritsen Avenue, where residents fish."
+    }
+  ],
+  "links": [
+    {
+      "target": "guide:marine-park-brooklyn-guide",
+      "kind": "nearby",
+      "note": "Marine Park borders Gerritsen Beach directly along Gerritsen Avenue, and Gerritsen Creek supplies its salt marsh with fresh water."
+    },
+    {
+      "target": "guide:midwood-brooklyn-guide",
+      "kind": "same-region",
+      "note": "The B31 runs between Midwood, at Quentin Road and East 16th Street, and Gerritsen Avenue and Lois Avenue in Gerritsen Beach."
+    },
+    {
+      "target": "guide:homecrest-brooklyn-guide",
+      "kind": "same-region",
+      "note": "Gerritsen Beach's recorded subway access is Kings Highway station, on the border of Midwood and Homecrest."
+    }
+  ]
+}

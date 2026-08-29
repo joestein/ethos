@@ -23,6 +23,14 @@
     "sha256": "72fe613557419d67af2a7b4f9b4118416486351343623d16b3118ababd9e6116",
     "source_url": "https://commons.wikimedia.org/wiki/File:Blessed_Sacrament_Church_from_Crescent_Street_Jamaica_El-1.jpg"
   },
+  "brighton-beach-boardwalk": {
+    "source_url": "https://commons.wikimedia.org/wiki/File:Brighton_Beach_Riegelman_Boardwalk_-_at_Brighton_4th_Street.jpg",
+    "sha256": "27f88095a91e6fe68930966af4e26042f664edd4fd5db911adee817e564f6363"
+  },
+  "brighton-beach-hotel-brighton-beach": {
+    "source_url": "https://commons.wikimedia.org/wiki/File:Brooklyn_Museum_-_Brighton_Beach_Hotel_-_Edgar_S._Thomson.jpg",
+    "sha256": "31eafb610b5f530d29a9fbbd492df76a2571237677a9b08bbf9c8004963776b4"
+  },
   "brooklyn-army-terminal-atrium-sunset-park": {
     "sha256": "d5b77de1b0c0e8ffa7672b5964f33257b2fb3b7e4bdf1c564259e4a661a899b3",
     "source_url": "https://commons.wikimedia.org/wiki/File:Atrium_at_Brooklyn_Army_Terminal.jpg"
@@ -62,6 +70,14 @@
   "columbia-street-waterfront-district-streetscape": {
     "sha256": "7c1f8dcd95c78a4607cb57239e98d408e93c67de3a066c83ba5ece917e8902f1",
     "source_url": "https://commons.wikimedia.org/wiki/File:Columbia_Street_Waterfront_District.jpg"
+  },
+  "coney-island-boardwalk": {
+    "source_url": "https://commons.wikimedia.org/wiki/File:Coney_Island_Boardwalk-2.jpg",
+    "sha256": "c976e4c20121bcdeb86cc2cc428d092ae196e6508e255e1ac9d9260290970a24"
+  },
+  "coney-island-cyclone": {
+    "source_url": "https://commons.wikimedia.org/wiki/File:Cyclone_Roller_Coaster_(Coney_Island,_New_York)_001.jpg",
+    "sha256": "5edb6718bd343c4a90e8b250f1bb2b58e2ce98506f077676d91ce3b76f699721"
   },
   "congregation-beth-israel-east-flatbush": {
     "sha256": "dbb904a4a537fb7982aa2ceb80c65c0d73bcebbb69ef630070462b3120ca71a1",
@@ -119,6 +135,10 @@
     "sha256": "617063a7c3d8857ccd0717e866a0d05540920df53738817bd741ff2b334271c5",
     "source_url": "https://commons.wikimedia.org/wiki/File:Fulton_Mall_Brooklyn.jpg"
   },
+  "gerritsen-beach-fire-department": {
+    "source_url": "https://commons.wikimedia.org/wiki/File:Gerrittsen_Beach_Fire_Department.jpg",
+    "sha256": "a950ffb3adbeac1385b21d4c52beb05324ea033ddad34929ede00c1239818315"
+  },
   "green-wood-cemetery-gate-greenwood": {
     "sha256": "dded3ee22e600bcd3ef7cec827816ef9d76d08a2ab5e926b3619cc5f614543c7",
     "source_url": "https://commons.wikimedia.org/wiki/File:2015_Green-Wood_Cemetery_Gate_from_outside.jpg"
@@ -139,9 +159,17 @@
     "sha256": "89908fb7fe914735ee44bb4820009be3abb811111965beca419577719dd08402",
     "source_url": "https://commons.wikimedia.org/wiki/File:Holy_Cross_Cemetery_gate_jeh.jpg"
   },
+  "homecrest-library-homecrest": {
+    "source_url": "https://commons.wikimedia.org/wiki/File:Brooklyn_Public_Library_Homecrest_Branch.jpg",
+    "sha256": "de0363314259e81e8b13d4f8c058e56566163bb3d240f8bf8185b25ab03e57fe"
+  },
   "hotel-bossert-brooklyn-heights": {
     "sha256": "f11aee4a05c8d6702b2ec3ac02e4f67d02177b8cf94876200bfb459e56398822",
     "source_url": "https://commons.wikimedia.org/wiki/File:Hotel_Bossert_Hicks_Montague_jeh.jpg"
+  },
+  "hubbard-house-gravesend": {
+    "source_url": "https://commons.wikimedia.org/wiki/File:Hubbard_House_Brooklyn_1.JPG",
+    "sha256": "2d9607c61effe0e3c7f6f1db833fcff9f42235ae9f9acc1cc4f0cce99e9c0d57"
   },
   "hunterfly-road-houses-weeksville": {
     "sha256": "339a8a5383d1144617bc0fb526aa158e502a648d1314e06479c8a904c7eb440d",
@@ -183,13 +211,29 @@
     "sha256": "bb0f5b6029964a5c264285c2d11f41f2ee1601728862f032daf341ec545ccb38",
     "source_url": "https://commons.wikimedia.org/wiki/File:Kings_Theatre_Flatbush_finished_jeh.jpg"
   },
+  "lady-moody-monument-gravesend": {
+    "source_url": "https://commons.wikimedia.org/wiki/File:Lady_Moody_Monument_PM_sunny_jeh.jpg",
+    "sha256": "6757e12c3e48eafe8f8fa27cb5a9fb527b673bbe32c4845e1ad7e04236e1c8ff"
+  },
   "loews-pitkin-theatre-brownsville": {
     "sha256": "0b5d85d04c4efbfb4188bbdce6561f126518572ed28749424ad627b1510c6f38",
     "source_url": "https://commons.wikimedia.org/wiki/File:Loew%27s_Pitkin_Theatre_HDR_2021_jeh.jpg"
   },
+  "lundys-across-the-bay-sheepshead-bay": {
+    "source_url": "https://commons.wikimedia.org/wiki/File:Lundys_far_jeh.jpg",
+    "sha256": "b5a651dec9b5b607ea9778acecb0a6dd38204f2638ed560c3881a125c43b64af"
+  },
+  "lundys-restaurant-sheepshead-bay": {
+    "source_url": "https://commons.wikimedia.org/wiki/File:Lundys_near_jeh.jpg",
+    "sha256": "0e83fa3b148d635ae99187db6a4672ccf77560f4cc35783eb1d1c100c418f414"
+  },
   "macdonough-street-stuyvesant-heights": {
     "sha256": "6453ff599f8bf845704f3c8abfd6694ee8e31d3dfae8bd201891e92186be5033",
     "source_url": "https://commons.wikimedia.org/wiki/File:MacDonoughStreetSH.jpg"
+  },
+  "manhattan-beach-jewish-center": {
+    "source_url": "https://commons.wikimedia.org/wiki/File:Manhattan_Beach_Jewish_Center.jpg",
+    "sha256": "968525c8a97aed1b00f3b42193508734025c706a27af44a294fffe4fdac5a1a8"
   },
   "manhattan-bridge-arch-dumbo": {
     "sha256": "230db1ad53d4b1d9a1978fbfeafcce11d6765c9804e7dc3f7fdc4179b32f9810",
@@ -223,6 +267,10 @@
     "sha256": "43168e52770d5623a6e1cec9db05c744b51ffe266cd84ffdae4de0478eedec99",
     "source_url": "https://commons.wikimedia.org/wiki/File:Mount_Prospect_Park,_Prospect_Heights,_Brooklyn_-_20200911.jpg"
   },
+  "nathans-famous-coney-island": {
+    "source_url": "https://commons.wikimedia.org/wiki/File:Nathans,_Day_Shot,_Coney_Island_(History,_Part_1_of_2)_(3893371518).jpg",
+    "sha256": "4e9fe8f5e25bca05ba2035b99a47ecb96d29fd062c1da2fdb7a1ebdf65a2471d"
+  },
   "new-lots-community-church-new-lots": {
     "sha256": "d4e825a3c2e17d125b5baac853b808619fb540c96f37e19b68013eaa9dc747af",
     "source_url": "https://commons.wikimedia.org/wiki/File:New_Lots_Community_Church_jeh.jpg"
@@ -235,6 +283,10 @@
     "sha256": "1dc478f9254a6c09876c9f19fa4e819fdfc33765fd2c5f826eefd85d3d73a6da",
     "source_url": "https://commons.wikimedia.org/wiki/File:NEW_UTRECHT_REFORMED_CHURCH,_KINGS_COUNTY_NY.jpg"
   },
+  "old-gravesend-cemetery-gravesend": {
+    "source_url": "https://commons.wikimedia.org/wiki/File:Old_Gravesend_Cem_fall_jeh.jpg",
+    "sha256": "835e642cd78fb6cbb3b7db25a362795f05b0dcc694b53c78328fbbdad1567c7f"
+  },
   "old-stone-house-park-slope": {
     "sha256": "e0ad94c94d815ee896291e7e59e340aa698a3e2c31219a6991f265064922a7f6",
     "source_url": "https://commons.wikimedia.org/wiki/File:Old_Stone_House_Brooklyn_NY.jpg"
@@ -242,6 +294,10 @@
   "pacific-branch-library-boerum-hill": {
     "sha256": "f548f174e081e400e9b6f37c9c4d38c634f81418b006e19ba987dae548e79856",
     "source_url": "https://commons.wikimedia.org/wiki/File:Pacific_Branch_BPL_2025_jeh.jpg"
+  },
+  "plumb-beach-dunes": {
+    "source_url": "https://commons.wikimedia.org/wiki/File:Dunes_at_Plumb_Beach,_Brooklyn.jpg",
+    "sha256": "1f638f7c8df44514365a6a23355f7771e609d692f73d6689939341cb98909ffa"
   },
   "plymouth-church-brooklyn-heights": {
     "sha256": "88767e7068d74bb2f0a6f1c1c30383bd4e61292941107ae9215370d048437f7d",
@@ -282,6 +338,14 @@
   "rugby-library-rugby": {
     "sha256": "7547aca93046c95cd9ea6b82e266be0bc0d3c13d0e93159a921ab9a76624f3d4",
     "source_url": "https://commons.wikimedia.org/wiki/File:Brooklyn_Public_Library_Rugby_Branch.jpg"
+  },
+  "sea-gate-entrance-gate": {
+    "source_url": "https://commons.wikimedia.org/wiki/File:Sea_Gate_gate_jeh.JPG",
+    "sha256": "c3fd1df87c15f4cb04a57f3062c33732ef52c0706ad6cbbfc55e65a4c86e31e1"
+  },
+  "sheepshead-bay-footbridge": {
+    "source_url": "https://commons.wikimedia.org/wiki/File:Sheepshead_Bay_footbridge_North_jeh.JPG",
+    "sha256": "12802d543d980184c990d03a11d1680cba826d5c103f3fe2919c230d39e9253f"
   },
   "smith-ninth-streets-station-gowanus": {
     "sha256": "9c2c1f3ef04e5dee581ae0444e18e3e4d7d4f1662b4206bf646efe38d73fe50f",
@@ -370,6 +434,10 @@
   "winthrop-shelter-pavilion-greenpoint": {
     "sha256": "8de2ffd02a2abefd4a3447320a8392c47bec1b9d14f1a50e65625394ad3a8c7f",
     "source_url": "https://commons.wikimedia.org/wiki/File:Winthrop_Shelter_Pavilion_jeh.JPG"
+  },
+  "wonder-wheel-coney-island": {
+    "source_url": "https://commons.wikimedia.org/wiki/File:Astroland_Wonder_Wheel.jpg",
+    "sha256": "24dcbc522d09b1d74525795a16bab22c72a36a40763374cd0c9db129a5047d0e"
   },
   "zion-triangle-memorial-brownsville": {
     "sha256": "fc8b8471bdf8cb30bae307aabd4f990f38c55ddbea5c46e52bded04297033001",
