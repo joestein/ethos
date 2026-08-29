@@ -64,6 +64,24 @@ defmodule Ethos.Release do
 
   def seed_brooklyn(email), do: seed_directory("brooklyn", email)
 
+  @doc """
+  Applies the deletion manifest, removing every place it names.
+
+  Prints two numbers, not one: a manifest of 30 that prunes 0 means either the
+  prune has already run or the slugs never existed, and a single count cannot
+  tell either of those apart from success.
+  """
+  def prune_deleted_places do
+    load_app()
+    Application.ensure_all_started(@app)
+
+    slugs = Ethos.Places.DeletedPlaces.slugs() |> MapSet.to_list()
+    {count, _} = Ethos.Places.delete_by_slugs!(slugs)
+
+    IO.puts("Pruned #{count} deleted places (manifest lists #{length(slugs)})")
+    count
+  end
+
   def seed_destinations do
     load_app()
     Application.ensure_all_started(@app)

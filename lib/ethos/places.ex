@@ -18,6 +18,22 @@ defmodule Ethos.Places do
     |> Repo.insert_or_update!()
   end
 
+  @doc """
+  Deletes places by slug, returning `{count_deleted, nil}`.
+
+  Used only by the deletion manifest (`Ethos.Places.DeletedPlaces`) — never by
+  an inferred diff against the seed corpus, because a loader that silently
+  skipped a seed directory would then read as hundreds of closures.
+
+  Slugs with no row are not an error: the prune is idempotent, so re-running it
+  after the rows are gone deletes nothing and says so.
+  """
+  def delete_by_slugs!([]), do: {0, nil}
+
+  def delete_by_slugs!(slugs) when is_list(slugs) do
+    Repo.delete_all(from p in Place, where: p.slug in ^slugs)
+  end
+
   def list_places(opts \\ []) do
     base = from p in Place, order_by: [asc: p.name]
 
