@@ -213,6 +213,32 @@ defmodule Ethos.Seeds.BrooklynSeedDataTest do
   test "every committed brooklyn seed file is valid, globally unique, and loads twice" do
     files = files()
 
+    # Roster coverage. Without this, deleting a seed file passes every other
+    # check in this test — each one only inspects the files that happen to be
+    # present. The roster is the program's definition of "all of Brooklyn", so
+    # it is the only thing that can tell a shipped corpus from a truncated one.
+    #
+    # Asserted as equality, not a floor. The plan allowed for omissions — a
+    # neighborhood that cannot clear the orientation floor (90-word intro, 3
+    # outbound links) is omitted rather than stubbed — but all 69 roster
+    # neighborhoods shipped, so the stronger form holds. If a future roster
+    # entry is deliberately omitted, relax this to a difference check in one
+    # direction and record the omission and its reason in the wave report.
+    roster =
+      Path.expand("../../../priv/seed_data/brooklyn_roster.json", __DIR__)
+      |> File.read!()
+      |> Jason.decode!()
+
+    expected = roster["neighborhoods"] |> Enum.map(& &1["slug"]) |> MapSet.new()
+    shipped = files |> Enum.map(&Path.rootname(Path.basename(&1))) |> MapSet.new()
+
+    assert MapSet.equal?(shipped, expected),
+           "brooklyn seed corpus does not match the roster — " <>
+             "on the roster with no seed file: " <>
+             inspect(MapSet.difference(expected, shipped) |> Enum.sort()) <>
+             "; seed files with no roster entry: " <>
+             inspect(MapSet.difference(shipped, expected) |> Enum.sort())
+
     SeedDataHelpers.assert_place_slugs_globally_unique!()
 
     assert license_violations(files) == []
