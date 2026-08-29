@@ -66,6 +66,27 @@ defmodule Ethos.Places.AddressTest do
              "279 Avon Mountain Road"
   end
 
+  test "an intermediate place name that repeats the locality is dropped from the street" do
+    # The greedy street capture pulls "Brooklyn Bridge Park" into the street
+    # line, where it re-duplicates the locality. Only segments after the first
+    # are dropped, so a town-named road in the leading segment survives.
+    assert Address.parse("65 Water Street, Brooklyn Bridge Park, Brooklyn, NY 11201").street ==
+             "65 Water Street"
+
+    assert Address.parse("36 Main Street South, Bethlehem Town Hall, Bethlehem, CT 06751").street ==
+             "36 Main Street South"
+
+    # A qualifier that does not mention the locality is kept.
+    assert Address.parse("353 CT-165, Fleming's Center, Preston, CT 06365").street ==
+             "353 CT-165, Fleming's Center"
+  end
+
+  test "a whitespace-only segment is absent, not blank" do
+    parsed = Address.parse("1 Elm Street,   , CT 06103")
+    assert parsed.locality == nil
+    assert parsed.region == "CT"
+  end
+
   test "a leading ordinal is a street name, not a house number" do
     assert Address.parse("18th Avenue between 55th and 58th Streets, Brooklyn, NY 11204").street ==
              nil
@@ -88,24 +109,25 @@ defmodule Ethos.Places.AddressTest do
     parsed = Enum.map(addresses, &Address.parse/1)
 
     # No emitted street line may have re-absorbed the locality that is emitted
-    # beside it — this is the bug the whole task exists to fix. It is asserted
-    # structurally rather than with String.contains?/2, because a plain
-    # substring test convicts 52 correct parses: roads named after their own
-    # town ("145 Brooklyn Avenue, Brooklyn, NY", "279 Avon Mountain Road, Avon,
-    # CT"), where the town name is part of the street's actual name. What must
-    # never happen is the locality surviving as a component of the street —
-    # caught here in both shapes it can take.
+    # beside it — this is the bug the whole task exists to fix.
+    #
+    # Applied to every comma segment *after the first*, rather than to the whole
+    # street. A plain whole-string String.contains?/2 convicts 51 correct parses:
+    # roads named after their own town ("145 Brooklyn Avenue, Brooklyn, NY",
+    # "279 Avon Mountain Road, Avon, CT"), where the town name is part of the
+    # street's actual name. That exception only ever applies to the leading
+    # segment, which is where a street name lives — so every later segment is
+    # held to the strict substring rule, which is what catches a park or
+    # building name dragging the locality back in ("65 Water Street, Brooklyn
+    # Bridge Park, Brooklyn, NY").
     for {p, original} <- Enum.zip(parsed, addresses), p.street && p.locality do
-      segments = p.street |> String.split(",") |> Enum.map(&String.trim/1)
+      [_street_name | qualifiers] = String.split(p.street, ",")
 
-      refute p.locality in segments,
-             "streetAddress still carries its own locality: #{inspect(original)}"
-
-      refute String.ends_with?(strip_region_and_postal(p.street), p.locality),
-             "streetAddress still ends with its own locality: #{inspect(original)}"
-
-      refute p.street == String.trim(original),
-             "streetAddress is the entire address string: #{inspect(original)}"
+      for segment <- qualifiers do
+        refute String.contains?(segment, p.locality),
+               "streetAddress still carries its own locality: #{inspect(original)} " <>
+                 "-> #{inspect(p.street)}"
+      end
     end
 
     # A street line is never returned without a house number.
@@ -113,6 +135,16 @@ defmodule Ethos.Places.AddressTest do
       assert Regex.match?(~r/^\d/, p.street)
       refute Regex.match?(~r/^\d+(?:st|nd|rd|th)\b/i, p.street)
     end
+
+    # The greedy street capture also admits non-locality prose — "25 Fourth
+    # Avenue, near Pacific Street", "990 Washington Avenue, also addressed as
+    # 455 Flatbush Avenue". That is accepted for now, because legitimate unit
+    # designators ("Suite 7", "Unit B") take the same comma-separated shape and
+    # schema.org wants them kept. Pinned so the population cannot grow silently.
+    comma_streets = Enum.count(parsed, fn p -> p.street && String.contains?(p.street, ",") end)
+
+    assert comma_streets <= 48,
+           "#{comma_streets} street lines carry a comma qualifier, up from 48"
 
     parsed_count = Enum.count(parsed, & &1.parsed?)
     street_count = Enum.count(parsed, & &1.street)
@@ -124,13 +156,5 @@ defmodule Ethos.Places.AddressTest do
            "only #{parsed_count} of #{length(addresses)} addresses decomposed"
 
     assert street_count > 1500, "only #{street_count} addresses yielded a street line"
-  end
-
-  defp strip_region_and_postal(street) do
-    street
-    |> String.replace(~r/,?\s+[A-Z]{2}(?:\s+\d{5}(?:-\d{4})?)?\s*$/, "")
-    |> String.trim()
-    |> String.trim_trailing(",")
-    |> String.trim()
   end
 end

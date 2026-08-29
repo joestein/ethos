@@ -24,6 +24,36 @@ defmodule Ethos.Places.Address do
 
   @empty %{street: nil, locality: nil, region: nil, postal_code: nil, parsed?: false}
 
+  @typedoc "Every key is always present; any of the four strings may be nil."
+  @type t :: %{
+          street: String.t() | nil,
+          locality: String.t() | nil,
+          region: String.t() | nil,
+          postal_code: String.t() | nil,
+          parsed?: boolean()
+        }
+
+  @doc """
+  Decomposes a free-text address into its PostalAddress parts.
+
+  Always returns all five keys, so callers may read them unguarded. `parsed?`
+  reports whether the address matched the street/locality/region shape; when it
+  did not, every field is nil except `postal_code`, which is still scanned out
+  of the raw text if a five-digit code appears anywhere in it.
+
+  `street` is non-nil only when the street segment begins with a house number,
+  and never carries the locality that is returned beside it.
+
+      iex> Ethos.Places.Address.parse("9 Main Street North, Bethlehem, CT 06751")
+      %{
+        street: "9 Main Street North",
+        locality: "Bethlehem",
+        region: "CT",
+        postal_code: "06751",
+        parsed?: true
+      }
+  """
+  @spec parse(String.t() | nil) :: t()
   def parse(nil), do: @empty
   def parse(""), do: @empty
 
@@ -35,9 +65,11 @@ defmodule Ethos.Places.Address do
         %{@empty | postal_code: scan_postal(trimmed)}
 
       caps ->
+        locality = presence(caps["locality"])
+
         %{
-          street: street_or_nil(caps["street"]),
-          locality: presence(caps["locality"]),
+          street: street_or_nil(caps["street"], locality),
+          locality: locality,
           region: presence(caps["region"]),
           postal_code: presence(caps["postal"]) || scan_postal(trimmed),
           parsed?: true
@@ -45,12 +77,33 @@ defmodule Ethos.Places.Address do
     end
   end
 
-  defp street_or_nil(street) do
+  defp street_or_nil(street, locality) do
     street = String.trim(street)
 
-    if Regex.match?(@house_number, street) and not Regex.match?(@ordinal_street, street),
-      do: presence(street),
-      else: nil
+    cond do
+      not Regex.match?(@house_number, street) -> nil
+      Regex.match?(@ordinal_street, street) -> nil
+      true -> street |> drop_locality_segments(locality) |> presence()
+    end
+  end
+
+  # `@full`'s street capture is greedy, so an address that names an intermediate
+  # place — "65 Water Street, Brooklyn Bridge Park, Brooklyn, NY 11201" — pulls
+  # that name into the street line, where it re-duplicates the locality this
+  # module exists to separate out. Truncate at the first following segment that
+  # mentions the locality: everything past it is address tail, not street.
+  #
+  # Only segments *after* the first are considered. A street name may legitimately
+  # contain its own town ("145 Brooklyn Avenue, Brooklyn"), and that always lives
+  # in the leading segment.
+  defp drop_locality_segments(street, nil), do: street
+
+  defp drop_locality_segments(street, locality) do
+    [first | rest] = String.split(street, ",")
+
+    kept = Enum.take_while(rest, fn segment -> not String.contains?(segment, locality) end)
+
+    [first | kept] |> Enum.join(",") |> String.trim()
   end
 
   defp scan_postal(text) do
@@ -60,7 +113,14 @@ defmodule Ethos.Places.Address do
     end
   end
 
+  # Trims before testing for emptiness: an all-whitespace segment is absent, not
+  # present-and-blank. "1 Elm Street,   , CT 06103" must yield a nil locality.
   defp presence(nil), do: nil
-  defp presence(""), do: nil
-  defp presence(s), do: String.trim(s)
+
+  defp presence(s) when is_binary(s) do
+    case String.trim(s) do
+      "" -> nil
+      trimmed -> trimmed
+    end
+  end
 end
