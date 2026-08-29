@@ -44,7 +44,7 @@
       },
       {
         "question": "Where can I stay in Carroll Gardens?",
-        "answer": "No hotel, inn or bed-and-breakfast is listed here, which is consistent with the neighborhood's low-rise rowhouse character. The research points instead to Downtown Brooklyn and Boerum Hill for nearby options."
+        "answer": "No hotel, inn or bed-and-breakfast is listed here, which is consistent with the neighborhood's low-rise rowhouse character. Lodging is listed nearby in Downtown Brooklyn."
       }
     ],
     "photos": [
@@ -282,14 +282,9 @@
       "note": "Smith-Ninth Streets, the F and G station over the Gowanus Canal, is in Gowanus rather than in Carroll Gardens."
     },
     {
-      "target": "guide:boerum-hill-brooklyn-guide",
-      "kind": "same-region",
-      "note": "Boerum Hill is one of the two neighborhoods this guide's research points to for lodging near Carroll Gardens."
-    },
-    {
       "target": "guide:downtown-brooklyn-brooklyn-guide",
       "kind": "same-region",
-      "note": "Downtown Brooklyn is the other neighborhood this guide's research points to for lodging near Carroll Gardens."
+      "note": "Downtown Brooklyn is where this guide lists lodging near Carroll Gardens."
     }
   ]
 }
