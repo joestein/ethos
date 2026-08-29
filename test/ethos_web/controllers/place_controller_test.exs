@@ -113,11 +113,49 @@ defmodule EthosWeb.PlaceControllerTest do
     html = conn |> get(~p"/p/#{place.slug}") |> html_response(200)
     address = place_ld(html, place)["address"]
 
+    # Without these two the block is an untyped object of unknown country to
+    # every consumer, and nothing else in the suite pins them.
+    assert address["@type"] == "PostalAddress"
+    assert address["addressCountry"] == "US"
+
     assert address["streetAddress"] == "9 Main Street North"
     assert address["addressLocality"] == "Bethlehem"
     assert address["addressRegion"] == "CT"
     assert address["postalCode"] == "06751"
     refute String.contains?(address["streetAddress"], "Bethlehem")
+  end
+
+  test "locality and region come from the columns even when the address disagrees",
+       %{conn: conn} do
+    # The corpus's real divergence shape, and by far its most common: 840 of
+    # 2,066 addressed places parse a locality that differs from their town
+    # column. A neighbourhood place carries the borough in its address. Both
+    # values are present and they disagree — which is the case that tells the
+    # column rule apart from "the parse happened to be nil".
+    place =
+      Places.upsert_place!(%{
+        @attrs
+        | slug: "bushwick-inlet",
+          name: "Bushwick Inlet Park",
+          kind: "park",
+          address: "86 Kent Avenue, Brooklyn, NY 11249",
+          town: "Bushwick",
+          state: "New York",
+          county: "Kings County",
+          photos: []
+      })
+
+    html = conn |> get(~p"/p/#{place.slug}") |> html_response(200)
+    address = place_ld(html, place)["address"]
+
+    assert address["addressLocality"] == "Bushwick"
+    assert address["addressRegion"] == "New York"
+    # Not the parse's "Brooklyn"/"NY", which is what the address itself says.
+    refute address["addressLocality"] == "Brooklyn"
+    refute address["addressRegion"] == "NY"
+    # The street line is still decomposed correctly alongside the disagreement.
+    assert address["streetAddress"] == "86 Kent Avenue"
+    assert address["postalCode"] == "11249"
   end
 
   test "a descriptive location omits streetAddress rather than publishing a false one",

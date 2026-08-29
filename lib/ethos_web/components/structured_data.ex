@@ -57,6 +57,41 @@ defmodule EthosWeb.StructuredData do
     |> maybe_put("hasPart", opts[:has_part])
   end
 
+  @doc """
+  A `PostalAddress` for a place, decomposed from its free-text address.
+
+  `nil` when there is no address at all, so callers can pipe it through
+  `maybe_put/3`.
+
+  `streetAddress` is emitted only when `Ethos.Places.Address.parse/1` recovers a
+  street line beginning with a house number. Everything else — a descriptive
+  location ("Along Shore Road"), a cross-street clause, a multi-parcel note — is
+  a true statement of where the place is and a false street address, so it ships
+  locality, region and whatever postal code the text contains, and no street
+  line. There is deliberately **no fallback to the raw address string**: that
+  fallback was the bug this builder replaced, which published the locality and
+  region twice, once inside the street line and once beside it. The whole
+  address stays rendered on the page, which is where a human reads it.
+
+  `locality` and `region` are passed in from the caller's `town` and `state`
+  columns rather than taken from the parse, because the columns are
+  authoritative and the parse is not — 840 of the corpus's 2,066 addressed
+  places have a parsed locality that differs from their town (a place in
+  Bushwick whose address says "Brooklyn"). Only `postalCode` comes from the
+  parse, because no column holds it.
+  """
+  def postal_address(nil, _locality, _region), do: nil
+
+  def postal_address(address, locality, region) do
+    parsed = Ethos.Places.Address.parse(address)
+
+    %{"@type" => "PostalAddress", "addressCountry" => "US"}
+    |> maybe_put("streetAddress", parsed.street)
+    |> maybe_put("addressLocality", locality)
+    |> maybe_put("addressRegion", region)
+    |> maybe_put("postalCode", parsed.postal_code)
+  end
+
   @doc "Absolutises a stored photo `src` such as `/photos/foo/bar.jpg`."
   def absolute_url(nil), do: nil
   def absolute_url(src), do: url(~p"/") <> String.trim_leading(src, "/")
