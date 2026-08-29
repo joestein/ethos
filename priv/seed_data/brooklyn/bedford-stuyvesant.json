@@ -36,11 +36,11 @@
       },
       {
         "question": "Which park is Saratoga Square Park?",
-        "answer": "Saratoga Park, bounded by Halsey Street, Saratoga Avenue, Macon Street and Howard Avenue. The research records 'Saratoga Square Park' as a colloquial name for the same park, whose official name is Saratoga Park."
+        "answer": "Saratoga Park, bounded by Halsey Street, Saratoga Avenue, Macon Street and Howard Avenue. 'Saratoga Square Park' is a colloquial name for the same park; its official name is Saratoga Park."
       },
       {
         "question": "Where can I stay in Bedford-Stuyvesant?",
-        "answer": "No hotel was verified in the neighborhood. The nearest verified lodging is Akwaaba Mansion, a bed-and-breakfast in a restored 1860s Italianate villa at 347 MacDonough Street, which the research places in the Stuyvesant Heights section of Bedford-Stuyvesant."
+        "answer": "No hotel is listed here. The nearest verified lodging is Akwaaba Mansion, a bed-and-breakfast in a restored 1860s Italianate villa at 347 MacDonough Street, in the Stuyvesant Heights section of Bedford-Stuyvesant."
       }
     ],
     "photos": [
@@ -183,7 +183,7 @@
       "state": "New York",
       "county": "Brooklyn",
       "address": "Bounded by Halsey Street, Saratoga Avenue, Macon Street and Howard Avenue, Brooklyn, NY",
-      "summary": "A 3.21-acre park established in 1896 on former circus grounds, holding a First World War memorial with a sculpture by James Novelli that was dedicated in 1921. The research records 'Saratoga Square Park' as a colloquial name for the same park.",
+      "summary": "A 3.21-acre park established in 1896 on former circus grounds, holding a First World War memorial with a sculpture by James Novelli that was dedicated in 1921. It is colloquially called 'Saratoga Square Park.'",
       "history": "The memorial's plaques were stolen in 1970 and its sculpture in 2000; the memorial was restored and rededicated in 2014.",
       "status": "open",
       "photos": []

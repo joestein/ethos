@@ -14,7 +14,7 @@
       },
       {
         "heading": "Getting there",
-        "body": "The BMT Brighton Line runs through the area. Cortelyou Road, which the research places across Ditmas Park and Flatbush, is served by the Q at all times, as is Beverley Road. Newkirk Plaza, also described as sitting across Flatbush and Ditmas Park, is served by the Q and the B.\n\nAvenue H, further south on the same line and served by the Q, sits near the border of Midwood and Flatbush and also serves Fiske Terrace; it is not inside Ditmas Park."
+        "body": "The BMT Brighton Line runs through the area. Cortelyou Road, which serves both Ditmas Park and Flatbush, has the Q at all times, as does Beverley Road. Newkirk Plaza, also described as sitting across Flatbush and Ditmas Park, is served by the Q and the B.\n\nAvenue H, further south on the same line and served by the Q, sits near the border of Midwood and Flatbush and also serves Fiske Terrace; it is not inside Ditmas Park."
       }
     ],
     "faq": [
@@ -94,7 +94,7 @@
     {
       "slug": "sycamore-ditmas-park",
       "name": "Sycamore",
-      "kind": "cafe",
+      "kind": "restaurant",
       "town": "Ditmas Park",
       "state": "New York",
       "county": "Brooklyn",

@@ -28,6 +28,13 @@ defmodule Ethos.SeedDataHelpersTest do
     assert SeedDataHelpers.seed_files("no-such-destination") == []
   end
 
+  test "all_seed_files/0 walks the whole committed corpus" do
+    # Every corpus-wide slug assertion passes vacuously if this ever returns [],
+    # and that check is the only thing standing between a cross-destination slug
+    # collision and a failure partway through a non-transactional production seed.
+    assert length(SeedDataHelpers.all_seed_files()) > 200
+  end
+
   test "the committed corpus has no place-slug collisions" do
     SeedDataHelpers.assert_place_slugs_globally_unique!()
   end

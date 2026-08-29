@@ -36,7 +36,7 @@
       },
       {
         "question": "Where can I stay in Fort Greene?",
-        "answer": "No operating hotel with an address inside Fort Greene could be verified for this guide. The nearest confirmed option is the New York Marriott at the Brooklyn Bridge, a 32-story tower on Adams Street in Downtown Brooklyn, the neighborhood on the other side of the DeKalb Avenue station border."
+        "answer": "No hotel is listed here. The nearest confirmed option is the New York Marriott at the Brooklyn Bridge, a 32-story tower on Adams Street in Downtown Brooklyn, the neighborhood on the other side of the DeKalb Avenue station border."
       },
       {
         "question": "What is the Prison Ship Martyrs' Monument?",
@@ -371,7 +371,7 @@
     {
       "target": "guide:downtown-brooklyn-brooklyn-guide",
       "kind": "nearby",
-      "note": "No hotel is verified inside Fort Greene; the nearest is in Downtown Brooklyn, across the Fort Greene border at the DeKalb Avenue station."
+      "note": "No hotel is listed for Fort Greene; the nearest is in Downtown Brooklyn, across the Fort Greene border at the DeKalb Avenue station."
     },
     {
       "target": "guide:navy-yard-brooklyn-guide",
