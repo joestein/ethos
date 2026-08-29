@@ -44,7 +44,52 @@ defmodule Ethos.Seeds.PlaceContentGateTest do
   # Inspection records may support a `status` verdict. They may never appear in
   # prose — 20 summaries in this corpus read as boilerplate precisely because
   # that rule did not exist when they were written.
-  @inspection ~r/inspection record|restaurant inspection|inspection dated/i
+  #
+  # This bans the **practice**, not one phrasing of it. The first version of
+  # this pattern listed three phrasings and missed "inspected by the city in
+  # August 2025", "City health records show...", "City health department records
+  # show it inspected...", "restaurant-inspection data" and a bare "graded A in
+  # July 2026" — 33 fields across nine files, most of the actual problem. Every
+  # alternative below was derived by surveying what the corpus really says, not
+  # by guessing; a phrasing nobody has written yet is cheap to add, but a
+  # phrasing already in the corpus and not listed here is a hole.
+  #
+  # ## The grade letter is case-sensitive on purpose
+  #
+  # `(?-i:[A-C])` inside an otherwise case-insensitive pattern is the whole
+  # reason this does not cry wolf. A case-insensitive `[a-c]\s+grade` matches
+  # the indefinite article in "a grade-separated right-of-way" (Cobble Hill,
+  # Berlin) and "the original at-grade station" (Homecrest) — five hits in this
+  # corpus, all legitimate railway and roadway prose, none of them an inspection
+  # grade. A bare `grade` is worse still: it fires inside "accessibility
+  # upgrades". Requiring a capital A-C keeps "graded A in July 2026" caught and
+  # every one of those clean. A gate that cries wolf gets excluded, and this one
+  # is already excluded once.
+  #
+  # Deliberately NOT included, having been considered and rejected:
+  #   * bare `grade` / case-insensitive grade letters — see above.
+  #   * `hygiene` — its only two occurrences are Bridgeport's "first dental
+  #     hygiene school in 1949". Zero true positives.
+  #   * bare `inspected` — too close to legitimate prose about inspecting
+  #     anything else; the date-anchored alternative below covers the real
+  #     phrasings without reaching that far.
+  #   * `DOHMH` — appears nowhere in the corpus prose. Harmless to add, but a
+  #     bare agency acronym could legitimately be cited in a note about the
+  #     agency itself rather than about a place's record.
+  @inspection ~r/
+      inspection[-\s]records?
+    | restaurant[-\s]inspection
+    | inspections?\s+dated
+    | inspected\s+by\s+the\s+city
+    | health[-\s]department\s+(?:records?|inspection)
+    | city(?:'s)?\s+health\s+records?
+    | health\s+inspection
+    | inspection\s+history
+    | (?:re-)?inspect(?:ed|ion)s?\b[^.]{0,25}\b(?:on|in)\s+(?:\d|Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec)
+    | (?:shows?|showing)\s+it\s+inspected
+    | \bgrade[ds]?\s+(?-i:[A-C])\b
+    | \b(?-i:[A-C])\s+grade\b
+  /ix
 
   # "A restaurant on Bath Avenue, at number 1806." — a stub wearing a sentence.
   @stub ~r/^A [a-z][a-z -]* (?:on|at) [^,]+,\s*at number \d+\.?$/
