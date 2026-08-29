@@ -62,17 +62,21 @@ defmodule Mix.Tasks.Ethos.BarePlaces do
 
   @impl Mix.Task
   def run(args) do
-    entries = roster()
+    # Read once and threaded through both paths. `--stats` reports on exactly
+    # the places the roster is built from, and does not re-glob and re-decode
+    # all 272 seed files to do it.
+    json = load_json_places()
+    code = ConnecticutPlaces.places()
 
     case args do
-      ["--stats"] -> IO.puts(stats(entries))
-      [] -> IO.puts(encode(entries))
+      [] -> IO.puts(encode(bare_entries(json, code)))
+      ["--stats"] -> IO.puts(stats(json, code))
       other -> Mix.raise("unexpected arguments #{inspect(other)} (want none, or --stats)")
     end
   end
 
   @doc "Every bare place, JSON sources first, then the code-defined ones."
-  def roster, do: json_entries() ++ code_entries()
+  def roster, do: bare_entries(load_json_places(), ConnecticutPlaces.places())
 
   @doc "Sorted repo-relative paths of every guide seed file."
   def seed_files do
@@ -87,33 +91,36 @@ defmodule Mix.Tasks.Ethos.BarePlaces do
   # roster shows which places moved rather than one 400-place line.
   defp encode(entries), do: "[\n" <> Enum.map_join(entries, ",\n", &Jason.encode!/1) <> "\n]"
 
-  defp json_entries do
-    for file <- seed_files(),
-        place <- DataGuide.load!(file)["places"],
-        bare?(place["summary"], place["photos"], place["history"]) do
-      %{
-        "slug" => place["slug"],
-        "name" => place["name"],
-        "kind" => place["kind"],
-        "town" => place["town"],
-        "region" => Path.basename(Path.dirname(file)),
-        "seed_file" => file
-      }
-    end
+  @doc "Every JSON place paired with the seed file that defines it."
+  def load_json_places do
+    for file <- seed_files(), place <- DataGuide.load!(file)["places"], do: {file, place}
   end
 
-  defp code_entries do
-    for place <- ConnecticutPlaces.places(),
-        bare?(place[:summary], place[:photos], place[:history]) do
-      %{
-        "slug" => place.slug,
-        "name" => place.name,
-        "kind" => place.kind,
-        "town" => place.town,
-        "region" => @code_region,
-        "seed_file" => @code_seed_file
-      }
-    end
+  defp bare_entries(json, code) do
+    for({f, p} <- json, bare?(p["summary"], p["photos"], p["history"]), do: json_entry(f, p)) ++
+      for(p <- code, bare?(p[:summary], p[:photos], p[:history]), do: code_entry(p))
+  end
+
+  defp json_entry(file, place) do
+    %{
+      "slug" => place["slug"],
+      "name" => place["name"],
+      "kind" => place["kind"],
+      "town" => place["town"],
+      "region" => Path.basename(Path.dirname(file)),
+      "seed_file" => file
+    }
+  end
+
+  defp code_entry(place) do
+    %{
+      "slug" => place.slug,
+      "name" => place.name,
+      "kind" => place.kind,
+      "town" => place.town,
+      "region" => @code_region,
+      "seed_file" => @code_seed_file
+    }
   end
 
   defp bare?(summary, photos, history),
@@ -129,10 +136,12 @@ defmodule Mix.Tasks.Ethos.BarePlaces do
   defp blank?([]), do: true
   defp blank?(_), do: false
 
-  defp stats(entries) do
+  defp stats(json, code) do
+    entries = bare_entries(json, code)
+
     thin =
-      Enum.count(json_places(), &thin?(&1["summary"])) +
-        Enum.count(ConnecticutPlaces.places(), &thin?(&1[:summary]))
+      Enum.count(json, fn {_file, place} -> thin?(place["summary"]) end) +
+        Enum.count(code, &thin?(&1[:summary]))
 
     """
     summaries under #{@max_summary_words} words: #{thin}
@@ -146,8 +155,6 @@ defmodule Mix.Tasks.Ethos.BarePlaces do
     #{tally(entries, "kind")}\
     """
   end
-
-  defp json_places, do: Enum.flat_map(seed_files(), &DataGuide.load!(&1)["places"])
 
   defp source_bucket(@code_seed_file), do: "code-defined"
   defp source_bucket(file), do: Path.basename(Path.dirname(file))
