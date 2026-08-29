@@ -260,8 +260,11 @@ defmodule Ethos.Seeds.BrooklynSeedDataTest do
     # resolves every /photos/ny/brooklyn/{hood}/{label}.jpg from images/brooklyn/{label}.*,
     # so one label may never stand for two different source images.
     label_dups =
-      (for f <- files, p <- all_photos(DataGuide.load!(f)),
-           do: {Path.rootname(Path.basename(p["src"])), p["source_url"]})
+      for(
+        f <- files,
+        p <- all_photos(DataGuide.load!(f)),
+        do: {Path.rootname(Path.basename(p["src"])), p["source_url"]}
+      )
       |> Enum.group_by(&elem(&1, 0), &elem(&1, 1))
       |> Enum.filter(fn {_label, sources} -> length(Enum.uniq(sources)) > 1 end)
 
