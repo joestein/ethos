@@ -42,6 +42,33 @@ verifier. Not a copy edit.
 **Blast radius.** Two guide pages, visible only to a reader who opens both.
 No destination page cites the merger.
 
+### Two addresses publish a postal code that is contested or belongs to the neighbouring town
+
+Newly relevant as of 2026-08-29: place JSON-LD now emits `postalCode`, so a ZIP
+that used to sit inertly inside a display string is a published claim.
+
+- `priv/seed_data/connecticut/manchester.json` — `"121 Pavilions Drive,
+  Manchester, CT (ZIP contested between sources, either 06040 or 06074)"`. The
+  address field **says in its own text that the value is contested**, and the
+  parser takes the first five-digit run, so `06040` publishes. One of the two is
+  wrong and the file does not know which.
+- A small number of town-straddling addresses pair a `town` column with the
+  other town's ZIP — e.g. `"735 Nod Hill Road, Wilton, CT 06897"` on a record
+  whose `town` is Ridgefield. `addressLocality` comes from the column and
+  `postalCode` from the string, so the emitted pair is internally inconsistent
+  even though each half is individually defensible.
+
+**Checked, 2026-08-29.** Audited across all 2,066 committed seed addresses: no
+street line contains a stray five-digit run, no emitted block is type-and-country
+only, and only two postal codes come from outside a `", XX ZIP"` slot — both
+listed above. Every other one of the 1,669 emitted codes is state-plausible
+(CT `06xxx`, NY `10xxx`/`11xxx`).
+
+**Why still open.** Both need a postal-service lookup, which is the kind of
+external check the rest of this corpus went through a verifier for. Neither is
+worth guessing: a wrong ZIP published as structured data is a worse claim than a
+ZIP that merely sits in a display string, which is exactly what changed.
+
 ## Resolved
 
 ### East Lyme's separation from Lyme is *not* a contradiction
