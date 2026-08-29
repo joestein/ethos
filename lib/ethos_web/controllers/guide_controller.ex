@@ -50,6 +50,14 @@ defmodule EthosWeb.GuideController do
   defp template_for(%Guide{tier: "town-page"}), do: :town_page
   defp template_for(%Guide{}), do: :show
 
+  # `image` comes from the `og_image_path` that `ensure_og_image/1` already
+  # resolved above — so a guide whose stored PNG went missing publishes the
+  # regenerated card rather than a dead link, and a guide that has no card at
+  # all omits the property instead of shipping a null. `absolute_url/1` is
+  # nil-safe, so the omission needs no branch of its own.
+  #
+  # `publisher` is the shared Organization node, nested without its own
+  # `@context` — see `StructuredData.publisher/0`.
   defp article_ld(guide, fallback_description) do
     %{
       "@context" => "https://schema.org",
@@ -59,8 +67,10 @@ defmodule EthosWeb.GuideController do
       "datePublished" => DateTime.to_iso8601(guide.inserted_at),
       "dateModified" => DateTime.to_iso8601(guide.updated_at),
       "author" => %{"@type" => "Person", "name" => "An Ethos traveler"},
+      "publisher" => StructuredData.publisher(),
       "mainEntityOfPage" => url(~p"/g/#{guide.slug}")
     }
+    |> StructuredData.maybe_put("image", StructuredData.absolute_url(guide.og_image_path))
   end
 
   defp faq_ld(guide) do

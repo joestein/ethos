@@ -22,7 +22,10 @@ defmodule EthosWeb.DestinationController do
       page_og: og(title, description, url(~p"/destinations")),
       page_meta_description: description,
       page_canonical: url(~p"/destinations"),
-      json_ld: [destinations_breadcrumb()]
+      json_ld: [
+        collection_ld(title, url(~p"/destinations")),
+        destinations_breadcrumb()
+      ]
     )
   end
 
@@ -79,7 +82,10 @@ defmodule EthosWeb.DestinationController do
           page_og: page_og,
           page_meta_description: description,
           page_canonical: url(~p"/destinations/#{slug}"),
-          json_ld: [destination_breadcrumb(name, slug)]
+          json_ld: [
+            collection_ld(title, url(~p"/destinations/#{slug}"), destination),
+            destination_breadcrumb(name, slug)
+          ]
         )
     end
   end
@@ -110,7 +116,7 @@ defmodule EthosWeb.DestinationController do
       page_meta_description: description,
       page_canonical: url(~p"/destinations/#{slug}"),
       json_ld: [
-        collection_ld("#{state} travel guides", url(~p"/destinations/#{slug}")),
+        collection_ld("#{state} travel guides", url(~p"/destinations/#{slug}"), destination),
         state_breadcrumb(state, slug)
       ]
     )
@@ -150,7 +156,8 @@ defmodule EthosWeb.DestinationController do
           json_ld: [
             collection_ld(
               "#{g.county} travel guides",
-              url(~p"/destinations/#{state_slug}/#{county_slug}")
+              url(~p"/destinations/#{state_slug}/#{county_slug}"),
+              destination
             ),
             county_breadcrumb(g.state, state_slug, g.county, county_slug)
           ]
@@ -158,7 +165,18 @@ defmodule EthosWeb.DestinationController do
     end
   end
 
-  defp collection_ld(name, page_url), do: StructuredData.collection_page(name, page_url)
+  # Every one of the four hubs is a CollectionPage — a page whose subject is the
+  # list of pages on it — so all four emit one, index and town included.
+  #
+  # `description` is the Destination record's `intro`, which is the prose the
+  # hub already renders above its list; schema.org asks that a description
+  # describe the page's visible content, and this is that content. Hubs with no
+  # record (the index always, a state or county the corpus has no record for)
+  # pass nil, and `collection_page/3` drops the key rather than publishing an
+  # empty string — so a recordless hub emits exactly what it emitted before.
+  defp collection_ld(name, page_url, destination \\ nil) do
+    StructuredData.collection_page(name, page_url, description: destination && destination.intro)
+  end
 
   # A state hub and a town hub live at the same `/destinations/:slug` shape and
   # so produce the same three-crumb trail; they stay separate functions because
