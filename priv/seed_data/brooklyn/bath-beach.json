@@ -10,7 +10,7 @@
     "sections": [
       {
         "heading": "Where the beach went",
-        "body": "The shoreline that gave the neighborhood its name is gone. It was paved over during the mid-twentieth century to create the Shore Parkway. On the northwestern half a promenade was built to give residents access to a sea wall; the southwestern half was filled in the early 1940s with land excavated during construction of the Shore Parkway, which extended Bensonhurst Park with ballfields and, later, the Caesar's Bay shopping center.\n\nA NYC Parks historical sign in Bath Playground explains where the name came from: the town of Bath in England, founded by the Romans in the first century A.D., whose Roman bath complex was discovered largely intact in 1755.\n\nBased on the 2020 Census the neighborhood's population was 33,070, about 41 percent Asian American and 40 percent White."
+        "body": "The shoreline that gave the neighborhood its name is gone. It was paved over during the mid-twentieth century to create the Shore Parkway. On the northwestern half a promenade was built to give residents access to a sea wall; the southwestern half was filled in the early 1940s with land excavated during construction of the Shore Parkway, which extended Bensonhurst Park with ballfields and, later, the Caesar's Bay shopping center.\n\nA NYC Parks historical sign in Bath Playground explains where the name came from: the town of Bath in England, founded by the Romans in the first century A.D., whose Roman bath complex was discovered largely intact in 1755.\n\nSt. Finbar's parish was founded in 1880 and its present church at 138 Bay 20th Street was dedicated in 1912. Based on the 2020 Census the neighborhood's population was 33,070, about 41 percent Asian American and 40 percent White."
       },
       {
         "heading": "Getting there",
@@ -18,7 +18,7 @@
       },
       {
         "heading": "The 86th Street strip on film",
-        "body": "During the 1970s Bath Beach's commercial strip along 86th Street was used for scenes in The French Connection (1971), in the opening credits of Welcome Back, Kotter, and most famously in the opening scene of Saturday Night Fever (1977), in which Tony Manero buys two stacked slices at Lenny's Pizza. Lenny's Pizza, at 1969 86th Street, closed permanently on February 19, 2023 after some seventy years, so the pizzeria is no longer there to visit. The strip was used again in 2016 for the filming of the Red Hot Chili Peppers video for Go Robot."
+        "body": "During the 1970s Bath Beach's commercial strip along 86th Street was used for scenes in The French Connection (1971), in the opening credits of Welcome Back, Kotter, and most famously in the opening scene of Saturday Night Fever (1977), in which Tony Manero buys two stacked slices at Lenny's Pizza. Lenny's Pizza, at 1969 86th Street, closed permanently on February 19, 2023 after some seventy years, so the pizzeria is no longer there to visit. The strip was used again in 2016 for the filming of the Red Hot Chili Peppers video for Go Robot.\n\nSamurai Sushi, at 1709 86th Street, is near the Bath Avenue end of that strip. Three more places to eat stand on Bath Avenue itself: La Chapincita at 1806, Cairo RX Cafe at 1932 and Gyro Mania at 2151."
       }
     ],
     "faq": [
@@ -41,6 +41,10 @@
       {
         "question": "Which parks are in Bath Beach?",
         "answer": "Bath Beach Park on the Shore Parkway, Bath Playground on Bath Avenue, and Bensonhurst Park on Cropsey Avenue, which NYC Parks describes as serving both the Bensonhurst and Bath Beach neighborhoods. The Shore Parkway Greenway runs along the waterfront and is reachable from Bensonhurst Park's Bay Parkway side."
+      },
+      {
+        "question": "Where can I eat in Bath Beach?",
+        "answer": "On Bath Avenue: La Chapincita at 1806, Cairo RX Cafe at 1932 and Gyro Mania at 2151. Samurai Sushi is at 1709 86th Street, near the Bath Avenue end of that strip."
       }
     ],
     "photos": [
@@ -155,6 +159,18 @@
       "photos": []
     },
     {
+      "slug": "st-finbar-church-bath-beach",
+      "name": "St. Finbar Roman Catholic Church",
+      "kind": "historic-site",
+      "town": "Bath Beach",
+      "state": "New York",
+      "county": "Brooklyn",
+      "address": "138 Bay 20th Street, Brooklyn, NY 11214",
+      "summary": "A parish founded in 1880 whose present church building was dedicated in 1912.",
+      "status": "open",
+      "photos": []
+    },
+    {
       "slug": "anthony-catanzaro-square",
       "name": "Anthony Catanzaro Square",
       "kind": "historic-site",
@@ -164,6 +180,54 @@
       "address": "Traffic triangle at West 16th Street, Avenue Y and Bay 50th Street, Brooklyn, NY",
       "summary": "A small Greenstreets memorial triangle that the New York City Council designated in 1963 to honor Private First Class Anthony Catanzaro, 1916 to 1943, killed in the Second World War.",
       "history": "Catanzaro's ship was torpedoed on November 26, 1943 en route to the Italian front, and he was posthumously awarded the Purple Heart. His younger brother Joseph, who survived the June 6, 1944 landings in Normandy, had a flagpole installed and shrubs planted here.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "la-chapincita-bath-beach",
+      "name": "La Chapincita",
+      "kind": "restaurant",
+      "town": "Bath Beach",
+      "state": "New York",
+      "county": "Brooklyn",
+      "address": "1806 Bath Avenue, Brooklyn, NY 11214",
+      "summary": "A restaurant on Bath Avenue, at number 1806.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "cairo-rx-cafe-bath-beach",
+      "name": "Cairo RX Cafe",
+      "kind": "cafe",
+      "town": "Bath Beach",
+      "state": "New York",
+      "county": "Brooklyn",
+      "address": "1932 Bath Avenue, Brooklyn, NY 11214",
+      "summary": "A cafe on Bath Avenue, at number 1932.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "gyro-mania-bath-beach",
+      "name": "Gyro Mania",
+      "kind": "restaurant",
+      "town": "Bath Beach",
+      "state": "New York",
+      "county": "Brooklyn",
+      "address": "2151 Bath Avenue, Brooklyn, NY 11214",
+      "summary": "A restaurant on Bath Avenue, at number 2151.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "samurai-sushi-bath-beach",
+      "name": "Samurai Sushi",
+      "kind": "restaurant",
+      "town": "Bath Beach",
+      "state": "New York",
+      "county": "Brooklyn",
+      "address": "1709 86th Street, Brooklyn, NY 11214",
+      "summary": "A restaurant at 1709 86th Street, near the Bath Avenue end of the 86th Street strip.",
       "status": "open",
       "photos": []
     }
@@ -207,9 +271,39 @@
     },
     {
       "kind": "sight",
+      "name": "St. Finbar Roman Catholic Church",
+      "place_slug": "st-finbar-church-bath-beach",
+      "note": "An 1880 parish whose present church on Bay 20th Street was dedicated in 1912."
+    },
+    {
+      "kind": "sight",
       "name": "Anthony Catanzaro Square",
       "place_slug": "anthony-catanzaro-square",
       "note": "A memorial triangle designated by the City Council in 1963 for a soldier killed in 1943."
+    },
+    {
+      "kind": "food",
+      "name": "La Chapincita",
+      "place_slug": "la-chapincita-bath-beach",
+      "note": "A restaurant at 1806 Bath Avenue."
+    },
+    {
+      "kind": "food",
+      "name": "Cairo RX Cafe",
+      "place_slug": "cairo-rx-cafe-bath-beach",
+      "note": "A cafe at 1932 Bath Avenue."
+    },
+    {
+      "kind": "food",
+      "name": "Gyro Mania",
+      "place_slug": "gyro-mania-bath-beach",
+      "note": "A restaurant at 2151 Bath Avenue."
+    },
+    {
+      "kind": "food",
+      "name": "Samurai Sushi",
+      "place_slug": "samurai-sushi-bath-beach",
+      "note": "A restaurant at 1709 86th Street, near the Bath Avenue end of the strip."
     }
   ],
   "links": [

@@ -120,12 +120,10 @@
     "source_url": "https://commons.wikimedia.org/wiki/File:Fulton_Mall_Brooklyn.jpg"
   },
   "green-wood-cemetery-gate-greenwood": {
-    "fetched_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e2/2015_Green-Wood_Cemetery_Gate_from_outside.jpg/1280px-2015_Green-Wood_Cemetery_Gate_from_outside.jpg",
     "sha256": "dded3ee22e600bcd3ef7cec827816ef9d76d08a2ab5e926b3619cc5f614543c7",
     "source_url": "https://commons.wikimedia.org/wiki/File:2015_Green-Wood_Cemetery_Gate_from_outside.jpg"
   },
   "green-wood-chapel-greenwood": {
-    "fetched_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8f/Green-Wood_Cemetery_Chapel.jpg/1280px-Green-Wood_Cemetery_Chapel.jpg",
     "sha256": "e0fb660ca2ffe09a6ac4ab41649aa6b74556daace6a60dc3556c611ad24a49aa",
     "source_url": "https://commons.wikimedia.org/wiki/File:Green-Wood_Cemetery_Chapel.jpg"
   },
@@ -214,12 +212,10 @@
     "source_url": "https://commons.wikimedia.org/wiki/File:Midwood_HS_td_(2019-03-30)_01.jpg"
   },
   "minerva-battle-hill-greenwood": {
-    "fetched_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/56/Minerva_in_Green-wood_Cemetery_waving_to_Lady_Liberty.JPG/1280px-Minerva_in_Green-wood_Cemetery_waving_to_Lady_Liberty.JPG",
     "sha256": "128699b9f73e8f54215b778dd263aeb42e90ebb5c15748973d209b42a7a82d50",
     "source_url": "https://commons.wikimedia.org/wiki/File:Minerva_in_Green-wood_Cemetery_waving_to_Lady_Liberty.JPG"
   },
   "montauk-club-park-slope": {
-    "fetched_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/19950701_35_Montauk_Club%2C_Park_Slope%2C_Brooklyn%2C_NY.jpg/1280px-19950701_35_Montauk_Club%2C_Park_Slope%2C_Brooklyn%2C_NY.jpg",
     "sha256": "1493e5996471903568b3d0350bab986eae8ff3e5cc7f560adcb13dd0e9ce0b5a",
     "source_url": "https://commons.wikimedia.org/wiki/File:19950701_35_Montauk_Club,_Park_Slope,_Brooklyn,_NY.jpg"
   },
@@ -235,8 +231,11 @@
     "sha256": "c9652497d6b1d0d42e80bdb025fba719696e88e382105957dffbb2b8d10f0522",
     "source_url": "https://commons.wikimedia.org/wiki/File:New_Utrecht_Reformed_Church_jeh.JPG"
   },
+  "new-utrecht-reformed-church-front-bensonhurst": {
+    "sha256": "1dc478f9254a6c09876c9f19fa4e819fdfc33765fd2c5f826eefd85d3d73a6da",
+    "source_url": "https://commons.wikimedia.org/wiki/File:NEW_UTRECHT_REFORMED_CHURCH,_KINGS_COUNTY_NY.jpg"
+  },
   "old-stone-house-park-slope": {
-    "fetched_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b1/Old_Stone_House_Brooklyn_NY.jpg/1280px-Old_Stone_House_Brooklyn_NY.jpg",
     "sha256": "e0ad94c94d815ee896291e7e59e340aa698a3e2c31219a6991f265064922a7f6",
     "source_url": "https://commons.wikimedia.org/wiki/File:Old_Stone_House_Brooklyn_NY.jpg"
   },
@@ -297,7 +296,6 @@
     "source_url": "https://commons.wikimedia.org/wiki/File:Soldiers_and_Sailors_Memorial_Arch_December_2006.jpg"
   },
   "soldiers-and-sailors-arch-quadriga-park-slope": {
-    "fetched_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f3/Brooklyn_Grand_Army_Plaza_Arch_Quadriga.JPG/1280px-Brooklyn_Grand_Army_Plaza_Arch_Quadriga.JPG",
     "sha256": "d3ab4270c10a818576c8547a93ce2c0eab3d5d32e9d24d97f3e4ac897172dcd8",
     "source_url": "https://commons.wikimedia.org/wiki/File:Brooklyn_Grand_Army_Plaza_Arch_Quadriga.JPG"
   },
@@ -370,7 +368,6 @@
     "source_url": "https://commons.wikimedia.org/wiki/File:Billyb_Sav_Bank_dome_bright_jeh.JPG"
   },
   "windsor-terrace-library-windsor-terrace": {
-    "fetched_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/19/Windsor_Terrace_BPL_jeh.jpg/1280px-Windsor_Terrace_BPL_jeh.jpg",
     "sha256": "b28253ad4d12e24b1e070904e10f99f27f02865dc961661d68a43a05c80dd415",
     "source_url": "https://commons.wikimedia.org/wiki/File:Windsor_Terrace_BPL_jeh.jpg"
   },
