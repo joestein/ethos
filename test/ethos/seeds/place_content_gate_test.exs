@@ -11,6 +11,13 @@ defmodule Ethos.Seeds.PlaceContentGateTest do
   **patterns**, not brevity. A seven-word summary that says the one true thing
   is a pass.
 
+  ## The content assertions cover every string, not just `summary`
+
+  Both patterns are checked against every string in every seed source — place
+  `summary` and `history`, guide `intro`, section `body`, FAQ `question` and
+  `answer`, entry `note`, link `note`, and anything a later format adds. See
+  `collect_strings/2` below for why the fields are walked rather than named.
+
   ## Why two of these are excluded by default
 
   The two content assertions carry `@tag :pending_wave`, excluded in
@@ -50,47 +57,103 @@ defmodule Ethos.Seeds.PlaceContentGateTest do
   # those 50 records silently yields nil for every field, which would make this
   # gate pass over them in silence. Following the precedent set by
   # `Mix.Tasks.Ethos.BarePlaces`, each source is read through its own accessor
-  # rather than through one normalising pass, and both are flattened here to the
-  # only two fields the gate needs.
+  # rather than through one normalising pass.
   #
   # Note also that this comprehension has no filters. In Elixir a comprehension
   # binding is *also* a truthiness test, so `summary = p["summary"]` would
   # silently drop every place with a nil summary — the elements an assertion
-  # about summaries most needs to see. Both branches default explicitly instead,
-  # and every filter lives in the tests below where it reads as a filter.
-  defp corpus do
+  # about slugs most needs to see. Every filter lives in the tests below where
+  # it reads as a filter.
+  defp corpus_slugs do
     json =
       for f <- SeedDataHelpers.all_seed_files(),
           p <- DataGuide.load!(f)["places"],
-          do: {p["slug"], p["summary"] || "", Path.basename(f)}
+          do: p["slug"]
 
+    code = for p <- ConnecticutPlaces.places(), do: p[:slug]
+
+    MapSet.new(json ++ code)
+  end
+
+  # --- Every prose field, not just `summary` ------------------------------
+  #
+  # A ban on a phrase that covers only `summary` is not a ban, it is a
+  # preference. `madison.json` proved it: eight summaries were rewritten to
+  # drop the DOHMH boilerplate while the section body one field away still
+  # read "Each is carried in the city's restaurant inspection records at its
+  # address, with an inspection dated 2025 or 2026." Same file, same banned
+  # phrase, invisible to a summary-only gate.
+  #
+  # So this walks the decoded structure and gathers every string, exactly as
+  # `Ethos.Seeds.BrooklynSeedDataTest` does for the trip-duration ban, rather
+  # than enumerating field paths. An enumerated list — summary, history, intro,
+  # body, question, answer, note — is a list someone forgets to extend the day
+  # a new prose field is added to the seed format, and the gate goes quiet
+  # about it. The walk cannot go quiet; a new field is covered the moment it
+  # holds a string.
+  #
+  # This also sweeps fields that are not prose at all (slug, address,
+  # official_url, photo source_url). That is deliberate: both patterns are
+  # narrow enough that a URL or a slug cannot match one, so the cost of the
+  # over-broad sweep is nil and the cost of guessing wrong about which fields
+  # are "prose" is a hole.
+  defp collect_strings(term, path \\ "")
+
+  defp collect_strings(map, path) when is_map(map) do
+    Enum.flat_map(map, fn {k, v} ->
+      sep = if path == "", do: "", else: "."
+      collect_strings(v, "#{path}#{sep}#{k}")
+    end)
+  end
+
+  defp collect_strings(list, path) when is_list(list) do
+    list
+    |> Enum.with_index()
+    |> Enum.flat_map(fn {v, i} -> collect_strings(v, "#{path}[#{i}]") end)
+  end
+
+  defp collect_strings(s, path) when is_binary(s), do: [{path, s}]
+  defp collect_strings(_other, _path), do: []
+
+  # `DataGuide.load!/1` is called inside the generator rather than bound as
+  # `data = DataGuide.load!(f)`, because a binding in a comprehension is also a
+  # truthiness test — the hazard this project has shipped twice. A generator
+  # cannot silently drop an element the way a falsy binding can.
+  defp prose do
+    json =
+      for f <- SeedDataHelpers.all_seed_files(),
+          {path, text} <- collect_strings(DataGuide.load!(f)),
+          do: {Path.basename(f), path, text}
+
+    # Keyed on the record's own slug rather than a list index, so a failure
+    # message names the place a reader can go and find.
     code =
       for p <- ConnecticutPlaces.places(),
-          do: {p[:slug], p[:summary] || "", @code_seed_file}
+          {path, text} <- collect_strings(p, to_string(p[:slug])),
+          do: {@code_seed_file, path, text}
 
     json ++ code
   end
 
-  defp corpus_slugs, do: MapSet.new(for {slug, _summary, _f} <- corpus(), do: slug)
-
   @tag :pending_wave
-  test "no summary repeats inspection-record boilerplate" do
+  test "no seed prose repeats inspection-record boilerplate" do
     hits =
-      for {slug, summary, file} <- corpus(),
-          Regex.match?(@inspection, summary),
-          do: {slug, file}
+      for {file, path, text} <- prose(),
+          Regex.match?(@inspection, text),
+          do: {file, path}
 
-    assert hits == [], "inspection-record prose in: #{inspect(hits)}"
+    assert hits == [],
+           "inspection-record prose in #{length(hits)} fields: #{inspect(hits)}"
   end
 
   @tag :pending_wave
-  test "no summary is a bare address stub" do
+  test "no seed prose is a bare address stub" do
     hits =
-      for {slug, summary, file} <- corpus(),
-          Regex.match?(@stub, String.trim(summary)),
-          do: {slug, file}
+      for {file, path, text} <- prose(),
+          Regex.match?(@stub, String.trim(text)),
+          do: {file, path}
 
-    assert hits == [], "bare address stubs in: #{inspect(hits)}"
+    assert hits == [], "bare address stubs in #{length(hits)} fields: #{inspect(hits)}"
   end
 
   test "every guide entry points at a place that exists" do

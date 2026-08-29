@@ -269,13 +269,13 @@
       "kind": "sight",
       "name": "The Drawing Center",
       "place_slug": "the-drawing-center",
-      "note": "A museum devoted solely to drawing, with rotating exhibitions and artist talks."
+      "note": "A museum devoted to drawing and works on paper, on Wooster Street."
     },
     {
       "kind": "sight",
       "name": "Leslie-Lohman Museum of Art",
       "place_slug": "leslie-lohman-museum-of-art",
-      "note": "The city's museum for LGBTQIA+ art and queer discourse, open Wednesday through Sunday."
+      "note": "A museum of art by queer artists, open Wednesday to Sunday, noon to 6 p.m."
     },
     {
       "kind": "walk",
@@ -287,37 +287,37 @@
       "kind": "food",
       "name": "Balthazar",
       "place_slug": "balthazar",
-      "note": "The bustling French brasserie that's anchored Spring Street since 1997."
+      "note": "A French brasserie on Spring Street, open since April 1997."
     },
     {
       "kind": "food",
       "name": "Dominique Ansel Bakery",
       "place_slug": "dominique-ansel-bakery",
-      "note": "Birthplace of the Cronut, still turning out DKAs and canneles daily."
+      "note": "Where the Cronut was created in 2013; the DKA and cannelés are signatures too."
     },
     {
       "kind": "food",
       "name": "Lure Fishbar",
       "place_slug": "lure-fishbar",
-      "note": "A Mercer Street seafood and raw bar institution for lunch, dinner, and brunch."
+      "note": "A basement-level seafood restaurant on Mercer Street, with a raw bar and sushi."
     },
     {
       "kind": "stay",
       "name": "The Mercer",
       "place_slug": "the-mercer",
-      "note": "SoHo's original five-star hotel, in a landmark Romanesque Revival building on Mercer Street."
+      "note": "A 73-room hotel on Mercer Street, with Sartiano's restaurant on site."
     },
     {
       "kind": "stay",
       "name": "Soho Grand Hotel",
       "place_slug": "soho-grand-hotel",
-      "note": "A West Broadway hotel with live weekend DJ sets at its Grand Bar & Salon."
+      "note": "A West Broadway hotel with DJ sets at its Grand Bar & Salon, Wednesday to Saturday."
     },
     {
       "kind": "stay",
       "name": "Crosby Street Hotel",
       "place_slug": "crosby-street-hotel",
-      "note": "A Firmdale property on Crosby Street awarded Three Michelin Keys in 2025."
+      "note": "A Firmdale hotel on Crosby Street, with 86 individually designed rooms and suites."
     }
   ]
 }

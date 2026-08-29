@@ -17,7 +17,7 @@
       },
       {
         "heading": "Museums, parks, and a downtown stage",
-        "body": "The Stamford Museum & Nature Center spans 80-plus acres with the Bendel Mansion's art galleries, the working Heckscher Farm, nature trails, and a new Planetarium & Astronomy Center. The Palace Theatre on Atlantic Street hosts touring concerts, comedy, and tribute acts. Bartlett Arboretum & Gardens in North Stamford is free and open year-round, dawn to dusk, and downtown's Mill River Park offers a carousel, an ice-skating center, and a fountain. The Stamford History Center preserves the city's story, including stewardship of the Hoyt Barnum House."
+        "body": "The Stamford Museum & Nature Center spans 80-plus acres with the Bendel Mansion's art galleries, the working Heckscher Farm, nature trails, and a new Planetarium & Astronomy Center. The Palace Theatre on Atlantic Street stages live theatre, opera, dance, and concerts. Bartlett Arboretum & Gardens in North Stamford is free and open year-round, dawn to dusk, and downtown's Mill River Park offers a carousel, an ice-skating center, and a fountain. The Stamford History Center preserves the city's story, including stewardship of the Hoyt Barnum House."
       }
     ],
     "faq": [
@@ -35,7 +35,7 @@
       },
       {
         "question": "Where can I stay in Stamford?",
-        "answer": "The Stamford Hotel on East Main Street is a boutique option with a heated indoor pool, a 24/7 fitness center, and pet-friendly rooms."
+        "answer": "The Stamford Hotel on East Main Street is an independent property, not a chain brand, with a heated indoor pool, a 24/7 fitness center, and pet-friendly rooms."
       },
       {
         "question": "Is Stamford really Connecticut's second-largest city?",
@@ -171,7 +171,7 @@
       "state": "Connecticut",
       "county": "Fairfield County",
       "official_url": "https://www.pelliccis.com/",
-      "summary": "A family-owned Italian-American institution on Stamford's Italian West Side since 1947, still serving a secret family recipe for baked chicken.",
+      "summary": "A Stamford restaurant. No accessible source could confirm its current details, and none showed a closure either; the entry stands pending a further check.",
       "status": "open",
       "photos": []
     },
@@ -226,7 +226,7 @@
       "kind": "sight",
       "name": "The Palace Theatre",
       "place_slug": "palace-theatre-stamford",
-      "note": "Downtown's flagship stage for touring concerts, comedy, and tribute acts."
+      "note": "An Atlantic Street theatre staging live theatre, opera, dance, and concerts."
     },
     {
       "kind": "sight",
@@ -256,25 +256,25 @@
       "kind": "food",
       "name": "Pellicci's Ristorante",
       "place_slug": "pelliccis-ristorante",
-      "note": "Family-owned since 1947, on Stamford's Italian West Side — famous for baked chicken."
+      "note": "A Stamford restaurant whose current details this guide has not been able to confirm."
     },
     {
       "kind": "food",
       "name": "ZAZA Italian Gastrobar",
       "place_slug": "zaza-italian-gastrobar",
-      "note": "Italian tapas, house-made pasta, and a signature Vodka Pizza."
+      "note": "Italian tapas, house-made pasta, and pizzas including the Vodka Pizza."
     },
     {
       "kind": "food",
       "name": "Half Full Brewery",
       "place_slug": "half-full-brewery",
-      "note": "Stamford's hometown brewery, with a taproom and a coffee-and-coworking side."
+      "note": "A Stamford brewery running Third Place, a coffeehouse and coworking space with a tasting room."
     },
     {
       "kind": "stay",
       "name": "The Stamford Hotel",
       "place_slug": "stamford-hotel",
-      "note": "A boutique pick on East Main Street, with a heated indoor pool and 24/7 gym."
+      "note": "An independent hotel on East Main Street, with a heated indoor pool and a 24/7 fitness center."
     }
   ],
   "links": [

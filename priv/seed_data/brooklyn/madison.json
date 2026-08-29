@@ -14,7 +14,7 @@
       },
       {
         "heading": "The Avenue U storefronts",
-        "body": "Avenue U is one of the informal lines different sources use in describing Madison's edges, and it is also a working commercial street. The Avenue U addresses on this page run from 1412 to 2319: Ming Bakery at 1412, Kung Fu Tea at 1422, June's Bakery & Cafe at 1505, Vivi Bubble Tea at 1616, Pho Hoai Restaurant at 1906, Gulchatay at 1915, Sherdor at 1917, Padishah Restaurant at 1920, Little Istanbul at 2007 and No. 1 Chinese Restaurant at 2319. Each is carried in the city's restaurant inspection records at its address, with an inspection dated 2025 or 2026.\n\nThe same commercial strip carries on into blocks commonly grouped with Homecrest, and where one neighborhood gives way to the other is not fixed by any authority. The sources that describe the two neighborhoods' edges disagree with one another, and none should be treated as definitive.\n\nOne site on this page stands away from the avenue: Corporal Wiltshire Square, a small NYC Parks triangle of 0.051 acres, which sits where Avenue P, Kings Highway and Ocean Avenue meet."
+        "body": "Avenue U is one of the informal lines different sources use in describing Madison's edges, and it is also a working commercial street. The Avenue U addresses on this page run from 1412 to 2319: Ming Bakery at 1412, Kung Fu Tea at 1422, June's Bakery & Cafe at 1505, Vivi Bubble Tea at 1616, Pho Hoai Restaurant at 1906, Gulchatay at 1915, Sherdor at 1917, Padishah Restaurant at 1920, Little Istanbul at 2007 and No. 1 Chinese Restaurant at 2319.\n\nThe same commercial strip carries on into blocks commonly grouped with Homecrest, and where one neighborhood gives way to the other is not fixed by any authority. The sources that describe the two neighborhoods' edges disagree with one another, and none should be treated as definitive.\n\nOne site on this page stands away from the avenue: Corporal Wiltshire Square, a small NYC Parks triangle of 0.051 acres, which sits where Avenue P, Kings Highway and Ocean Avenue meet."
       },
       {
         "heading": "Getting there",
@@ -194,13 +194,13 @@
       "kind": "food",
       "name": "Ming Bakery",
       "place_slug": "ming-bakery-madison",
-      "note": "A bakery at 1412 Avenue U, inspected by the city in August 2025."
+      "note": "A Chinese bakery at 1412 Avenue U, open daily 9 a.m. to 7:30 p.m."
     },
     {
       "kind": "food",
       "name": "Kung Fu Tea",
       "place_slug": "kung-fu-tea-madison",
-      "note": "A tea shop at 1422 Avenue U, inspected by the city in October 2025."
+      "note": "A branch of Kung Fu Tea at 1422 Avenue U, a chain that dates its first store to Queens in 2010."
     },
     {
       "kind": "food",
@@ -212,7 +212,7 @@
       "kind": "food",
       "name": "Vivi Bubble Tea",
       "place_slug": "vivi-bubble-tea-madison",
-      "note": "A bubble tea shop at 1616 Avenue U, inspected by the city in December 2025."
+      "note": "A branch of Vivi Bubble Tea, listed at 1616 Avenue U on the chain's own locations page."
     },
     {
       "kind": "food",
@@ -224,31 +224,31 @@
       "kind": "food",
       "name": "Gulchatay",
       "place_slug": "gulchatay",
-      "note": "A restaurant at 1915 Avenue U, inspected by the city in April 2026."
+      "note": "A small family restaurant at 1915 Avenue U serving Central Asian food, its plov cooked in a kazan."
     },
     {
       "kind": "food",
       "name": "Sherdor",
       "place_slug": "sherdor",
-      "note": "A restaurant at 1917 Avenue U, inspected by the city in June 2026."
+      "note": "An Uzbek restaurant at 1917 Avenue U, halal, with pilaf, kebabs and samsa on the menu."
     },
     {
       "kind": "food",
       "name": "Padishah Restaurant",
       "place_slug": "padishah-restaurant",
-      "note": "A restaurant at 1920 Avenue U, inspected by the city in March 2026."
+      "note": "An Uzbek restaurant at 1920 Avenue U, listed as serving Uzbek and Russian cuisines."
     },
     {
       "kind": "food",
       "name": "Little Istanbul",
       "place_slug": "little-istanbul-madison",
-      "note": "A restaurant at 2007 Avenue U, inspected by the city in August 2026."
+      "note": "A Turkish restaurant at 2007 Avenue U for dine-in and takeout, open daily 11 a.m. to 11 p.m."
     },
     {
       "kind": "food",
       "name": "No. 1 Chinese Restaurant",
       "place_slug": "no-1-chinese-restaurant-madison",
-      "note": "A restaurant at 2319 Avenue U, inspected by the city in December 2025."
+      "note": "A Chinese restaurant at 2319 Avenue U, with dishes such as egg foo young on the menu."
     }
   ],
   "links": [
