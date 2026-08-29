@@ -94,6 +94,135 @@ defmodule EthosWeb.PlaceControllerTest do
     refute html =~ "More in "
   end
 
+  defp place_ld(html, place) do
+    json_ld_of_type(html, EthosWeb.PlaceHTML.schema_type(place.kind))
+  end
+
+  test "PostalAddress is decomposed, not stuffed", %{conn: conn} do
+    place =
+      Places.upsert_place!(%{
+        @attrs
+        | slug: "bethlehem-green",
+          name: "Bethlehem Green",
+          address: "9 Main Street North, Bethlehem, CT 06751",
+          town: "Bethlehem",
+          state: "CT",
+          photos: []
+      })
+
+    html = conn |> get(~p"/p/#{place.slug}") |> html_response(200)
+    address = place_ld(html, place)["address"]
+
+    assert address["streetAddress"] == "9 Main Street North"
+    assert address["addressLocality"] == "Bethlehem"
+    assert address["addressRegion"] == "CT"
+    assert address["postalCode"] == "06751"
+    refute String.contains?(address["streetAddress"], "Bethlehem")
+  end
+
+  test "a descriptive location omits streetAddress rather than publishing a false one",
+       %{conn: conn} do
+    place =
+      Places.upsert_place!(%{
+        @attrs
+        | slug: "greenwich-shore",
+          name: "Greenwich Shore",
+          address: "Along Shore Road, Greenwich, CT 06830",
+          town: "Greenwich",
+          state: "CT",
+          photos: []
+      })
+
+    html = conn |> get(~p"/p/#{place.slug}") |> html_response(200)
+    address = place_ld(html, place)["address"]
+
+    refute Map.has_key?(address, "streetAddress")
+    assert address["addressLocality"] == "Greenwich"
+    assert address["addressRegion"] == "CT"
+    assert address["postalCode"] == "06830"
+  end
+
+  test "an address that does not decompose omits streetAddress rather than republishing itself",
+       %{conn: conn} do
+    raw = "Irving Ave. and Knickerbocker Ave., between Starr St. and Suydam St., Brooklyn"
+
+    place =
+      Places.upsert_place!(%{
+        @attrs
+        | slug: "irving-square",
+          name: "Irving Square",
+          address: raw,
+          town: "Brooklyn",
+          state: "NY",
+          photos: []
+      })
+
+    html = conn |> get(~p"/p/#{place.slug}") |> html_response(200)
+    address = place_ld(html, place)["address"]
+
+    refute Map.has_key?(address, "streetAddress")
+    assert address["addressLocality"] == "Brooklyn"
+    assert address["addressRegion"] == "NY"
+    # This string carries no five-digit code, so there is no postal code to
+    # recover from it either. See the sibling test below for the corpus's more
+    # common case, where the postal scan still succeeds on an address the
+    # full-address match rejects.
+    refute Map.has_key?(address, "postalCode")
+
+    # The whole address string is still on the page, where a human reads it.
+    assert html =~ "Irving Ave. and Knickerbocker Ave."
+  end
+
+  test "an undecomposable address still publishes the postal code found inside it",
+       %{conn: conn} do
+    place =
+      Places.upsert_place!(%{
+        @attrs
+        | slug: "burnap-brook",
+          name: "Burnap Brook Preserve",
+          address:
+            "Trailhead parking on Burnap Brook Road, Andover, CT 06232; " <>
+              "additional access on Wales Road and Lake Road",
+          town: "Andover",
+          state: "CT",
+          photos: []
+      })
+
+    html = conn |> get(~p"/p/#{place.slug}") |> html_response(200)
+    address = place_ld(html, place)["address"]
+
+    refute Map.has_key?(address, "streetAddress")
+    assert address["addressLocality"] == "Andover"
+    assert address["postalCode"] == "06232"
+  end
+
+  test "a place with no address emits no PostalAddress at all", %{conn: conn} do
+    place =
+      Places.upsert_place!(%{@attrs | slug: "no-address", address: nil, photos: []})
+
+    html = conn |> get(~p"/p/#{place.slug}") |> html_response(200)
+
+    refute Map.has_key?(place_ld(html, place), "address")
+  end
+
+  test "official_url is published as sameAs", %{conn: conn} do
+    place = Places.upsert_place!(@attrs)
+    html = conn |> get(~p"/p/#{place.slug}") |> html_response(200)
+    ld = place_ld(html, place)
+
+    assert ld["sameAs"] == ["https://palacetheaterct.org"]
+    # `url` stays on our own canonical page: repointing it at the business's
+    # site would make it ambiguous which page represents the entity.
+    assert ld["url"] =~ "/p/#{place.slug}"
+  end
+
+  test "a place with no official_url emits no sameAs", %{conn: conn} do
+    place = Places.upsert_place!(%{@attrs | slug: "no-site", official_url: nil, photos: []})
+    html = conn |> get(~p"/p/#{place.slug}") |> html_response(200)
+
+    refute Map.has_key?(place_ld(html, place), "sameAs")
+  end
+
   test "sitemap includes place urls", %{conn: conn} do
     Places.upsert_place!(@attrs)
     xml = conn |> get(~p"/sitemap.xml") |> response(200)

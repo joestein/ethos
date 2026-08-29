@@ -84,17 +84,31 @@ defmodule EthosWeb.PlaceController do
       "image",
       StructuredData.absolute_url(List.first(place.photos)["src"])
     )
-    |> StructuredData.maybe_put(
-      "address",
-      place.address &&
-        %{
-          "@type" => "PostalAddress",
-          "streetAddress" => place.address,
-          "addressLocality" => place.town,
-          "addressRegion" => place.state,
-          "addressCountry" => "US"
-        }
-    )
+    |> StructuredData.maybe_put("address", address_ld(place))
+    |> StructuredData.maybe_put("sameAs", place.official_url && [place.official_url])
+  end
+
+  # `streetAddress` is emitted only when the address decomposes to a street line
+  # that begins with a house number. Everything else — a descriptive location
+  # ("Along Shore Road"), a cross-street clause, a multi-parcel note — is a true
+  # statement of where the place is and a false street address, so it ships
+  # locality, region and whatever postal code the text contains, and no street
+  # line. The whole address string stays rendered on the page, which is where a
+  # human reads it.
+  #
+  # `addressLocality` and `addressRegion` come from the `town` and `state`
+  # columns, not from the parse: the columns are authoritative and the parse is
+  # not. `postalCode` is the parser's, because no column holds it.
+  defp address_ld(%{address: nil}), do: nil
+
+  defp address_ld(place) do
+    parsed = Places.Address.parse(place.address)
+
+    %{"@type" => "PostalAddress", "addressCountry" => "US"}
+    |> StructuredData.maybe_put("streetAddress", parsed.street)
+    |> StructuredData.maybe_put("addressLocality", place.town)
+    |> StructuredData.maybe_put("addressRegion", place.state)
+    |> StructuredData.maybe_put("postalCode", parsed.postal_code)
   end
 
   defp breadcrumb_ld(place) do
