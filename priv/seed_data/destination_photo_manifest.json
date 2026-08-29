@@ -1,1 +1,50 @@
-{}
+{
+  "beckley-furnace-destinations": {
+    "source_url": "https://commons.wikimedia.org/wiki/File:Beckley_Furnace_Industrial_Monument_-_North_Canaan,_Connecticut.jpg",
+    "sha256": "cc00e819a3ac3370befa51a1560fce9ee544ef53187ffbd02366dfc610e18610"
+  },
+  "colosseum-at-dusk-destinations": {
+    "source_url": "https://commons.wikimedia.org/wiki/File:Colosseum_in_Rome,_Italy_-_April_2007.jpg",
+    "sha256": "26a01fe516963531c5d57390b55bbef1ebda82e0a53d3ed583eaab35d1850f92"
+  },
+  "fairfield-town-green-destinations": {
+    "source_url": "https://commons.wikimedia.org/wiki/File:MMDA-Photos_-_2025-01-22_-_Sun_Tavern_-4.jpg",
+    "sha256": "9693c765030aa3ee52f658d5bb34e0a9abfa818077d7f2fdafb2454c438ed5c1"
+  },
+  "fort-griswold-monument-destinations": {
+    "source_url": "https://commons.wikimedia.org/wiki/File:2013-04-24_Groton_Fort_Griswold_Monument.jpg",
+    "sha256": "d00306eb660c5a2f5b9266ec3065bc04178160ce06546fd21e70a5d13be3a099"
+  },
+  "grand-central-concourse-destinations": {
+    "source_url": "https://commons.wikimedia.org/wiki/File:Grand_Central_Terminal_Main_Concourse_2019-10-03_20-02.jpg",
+    "sha256": "d5ddea3e0f3fb7fd7379c7a4c5f8abcbe2f120e585dc4cfd5d1683996e48892a"
+  },
+  "manhattan-bridge-arch-destinations": {
+    "source_url": "https://commons.wikimedia.org/wiki/File:Empire_State_Building_through_the_Manhattan_Bridge_arch,_Dumbo,_Brooklyn,_New_York.jpg",
+    "sha256": "230db1ad53d4b1d9a1978fbfeafcce11d6765c9804e7dc3f7fdc4179b32f9810"
+  },
+  "new-haven-green-destinations": {
+    "source_url": "https://commons.wikimedia.org/wiki/File:New_Haven_skyline_from_the_New_Haven_Green,_Connecticut.jpg",
+    "sha256": "6557498319512e032e0521097f9be794a18fa98c9c49aae895e2d584fbb39fe4"
+  },
+  "new-utrecht-reformed-church-destinations": {
+    "source_url": "https://commons.wikimedia.org/wiki/File:NEW_UTRECHT_REFORMED_CHURCH,_KINGS_COUNTY_NY.jpg",
+    "sha256": "1dc478f9254a6c09876c9f19fa4e819fdfc33765fd2c5f826eefd85d3d73a6da"
+  },
+  "old-state-house-destinations": {
+    "source_url": "https://commons.wikimedia.org/wiki/File:Old_State_House,_Hartford_CT_-_front_facade.JPG",
+    "sha256": "4babed6e5a6e2ae55dcef59e325a00f42d16224c4a4da24e44c8489c44d2e0a4"
+  },
+  "old-tolland-county-courthouse-destinations": {
+    "source_url": "https://commons.wikimedia.org/wiki/File:TollandCT_FormerCountyCourthouse.jpg",
+    "sha256": "55c91f05ea6a837d4c192aa252a91dd7630cb2435abab0ce1fd8c23ca3971474"
+  },
+  "portland-brownstone-quarries-destinations": {
+    "source_url": "https://commons.wikimedia.org/wiki/File:Connecticut_-_Portland_Brownstone_Quarries_-_20200720162027.jpg",
+    "sha256": "e694489348c20fb1f460a1e1be9bb78a791f72699b5fce78980e46646ede42aa"
+  },
+  "prudence-crandall-house-destinations": {
+    "source_url": "https://commons.wikimedia.org/wiki/File:Prudence_Crandall_House_7-11.jpg",
+    "sha256": "82cae3a9148e2c427649847973f4ed01a05d8cfd2de951ae14f9eda585e199b3"
+  }
+}

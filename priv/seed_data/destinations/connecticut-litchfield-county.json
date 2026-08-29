@@ -1,0 +1,16 @@
+{
+  "path": "connecticut/litchfield-county",
+  "name": "Litchfield County",
+  "intro": "Iron runs through Litchfield County. Surveyors found ore at Salisbury in 1728 when their compasses swung over the deposits, Thomas Lamb built the district's first forge there in 1734, and the region's first blast furnace followed at Lakeville in 1762; during the Revolution roughly eighty percent of the colonies' cannon were cast in that district. Colebrook's woods made the charcoal that fed furnaces smelting Salisbury ore, Beckley Furnace at East Canaan in North Canaan survives as Connecticut's only State Industrial Monument, and Cornwall, Kent, Sharon, Roxbury and Washington all mined ore or built furnaces of their own. Much of the county was sold rather than granted: Canaan went at auction in New London in 1738 as “Town C,” Sharon's home lots were auctioned at New Haven the same year, and Norfolk's land was divided into fifty-three rights of four hundred acres. Litchfield became the northwest's commercial and cultural centre, where Tapping Reeve opened the first law school in the United States in 1784.",
+  "photos": [
+    {
+      "src": "/photos/destinations/connecticut-litchfield-county/beckley-furnace-destinations.jpg",
+      "thumb": "/photos/destinations/connecticut-litchfield-county/beckley-furnace-destinations_thumb.jpg",
+      "title": "Beckley Furnace, East Canaan",
+      "description": "The stone arch at the base of the Beckley Furnace stack, its firebrick lining visible inside.",
+      "author": "Doug Kerr",
+      "license": "CC BY-SA 2.0",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Beckley_Furnace_Industrial_Monument_-_North_Canaan,_Connecticut.jpg"
+    }
+  ]
+}

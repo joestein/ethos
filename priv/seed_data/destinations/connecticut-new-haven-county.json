@@ -1,0 +1,16 @@
+{
+  "path": "connecticut/new-haven-county",
+  "name": "New Haven County",
+  "intro": "New Haven Colony was founded in 1638 and laid out on the nine-square grid still at the centre of the city, and land that had been New Haven's became towns of its own: Woodbridge, carved from New Haven and Milford, in 1784; East Haven in 1785; Hamden and North Haven in 1786; and West Haven, which reached the town of Orange in 1822, split away in 1921 and became a city in 1961. Along the Naugatuck River the county industrialised hard. Waterbury concentrated the brass trade, Ansonia grew as the Copper City around Anson Greene Phelps's 1844 canal, Charles Goodyear's vulcanization patent of the same year made Naugatuck a rubber town, and Derby's rise ran on water power at the confluence of the Housatonic and the Naugatuck. Meriden made silverware as the Silver City, and Wallingford made it too. On the shore, granite from Branford's Stony Creek and from Guilford's Leete's Island went into the Brooklyn Bridge and the Statue of Liberty, and Guilford keeps the 1639 Henry Whitfield House, Connecticut's oldest.",
+  "photos": [
+    {
+      "src": "/photos/destinations/connecticut-new-haven-county/new-haven-green-destinations.jpg",
+      "thumb": "/photos/destinations/connecticut-new-haven-county/new-haven-green-destinations_thumb.jpg",
+      "title": "New Haven Green and downtown",
+      "description": "Lawn and spring trees on the New Haven Green, with downtown towers and a columned facade behind.",
+      "author": "Christian David",
+      "license": "CC BY-SA 4.0",
+      "source_url": "https://commons.wikimedia.org/wiki/File:New_Haven_skyline_from_the_New_Haven_Green,_Connecticut.jpg"
+    }
+  ]
+}

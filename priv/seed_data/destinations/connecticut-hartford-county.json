@@ -1,0 +1,16 @@
+{
+  "path": "connecticut/hartford-county",
+  "name": "Hartford County",
+  "intro": "Windsor, Wethersfield and Hartford all sit in Hartford County. A Plymouth Colony party landed at Windsor on September 26, 1633; Wethersfield was settled in 1634 and still contests Windsor's claim to be first; Hartford followed in 1636 under Thomas Hooker and roughly a hundred followers. On January 14, 1639, the General Court adopted the Fundamental Orders as a frame of government for those three towns. Towns around them were set off later, from Hartford, Windsor, Wethersfield, Farmington and Simsbury alike: East Hartford in 1783, Granby in 1786, Canton and Burlington in 1806, Avon in 1830, Bloomfield in 1835, Rocky Hill in 1843, West Hartford in 1854, East Granby in 1858, and Newington in 1871. Industry then made the county's names — Bristol clocks, the Cheney silk mills at Manchester, New Britain hardware, the Collins axe works at Collinsville in Canton, Berlin tinware, Southington's machine-made nuts and bolts — while tobacco held the valley floor at Windsor, East Windsor, Suffield and Bloomfield.",
+  "photos": [
+    {
+      "src": "/photos/destinations/connecticut-hartford-county/old-state-house-destinations.jpg",
+      "thumb": "/photos/destinations/connecticut-hartford-county/old-state-house-destinations_thumb.jpg",
+      "title": "Connecticut's Old State House",
+      "description": "The brick and brownstone Old State House in Hartford, its cupola and columned portico framed by modern towers.",
+      "author": "Daderot",
+      "license": "Public domain",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Old_State_House,_Hartford_CT_-_front_facade.JPG"
+    }
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "path": "connecticut",
+  "name": "Connecticut",
+  "intro": "Most Connecticut towns began as parts of other towns. The colony's first English settlement was Windsor, where a Plymouth Colony party landed in 1633, followed by Wethersfield and by Hartford, where the General Court adopted the Fundamental Orders in 1639; New Haven Colony was founded separately in 1638 on a nine-square grid and joined Connecticut Colony in 1664. On the northern border, Somers, Suffield, Enfield and Woodstock belonged to Massachusetts until 1749. What the eighteenth and nineteenth centuries added was water power and what it made: brass at Waterbury, hats at Danbury, thread at Willimantic, silk at Manchester, silver at Meriden and Wallingford, clocks at Bristol and Thomaston, rubber at Naugatuck, iron in the Salisbury district, brownstone at Portland, whaleships and submarines on the Thames. Schools and trials here outgrew their towns as well — Tapping Reeve's law school at Litchfield in 1784, Prudence Crandall's academy at Canterbury in 1833, the Amistad trials at New Haven and the Mende captives' schooling at Farmington.",
+  "photos": [
+    {
+      "src": "/photos/destinations/connecticut/old-state-house-destinations.jpg",
+      "thumb": "/photos/destinations/connecticut/old-state-house-destinations_thumb.jpg",
+      "title": "Connecticut's Old State House",
+      "description": "The brick and brownstone Old State House in Hartford, its cupola and columned portico framed by modern towers.",
+      "author": "Daderot",
+      "license": "Public domain",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Old_State_House,_Hartford_CT_-_front_facade.JPG"
+    }
+  ]
+}
