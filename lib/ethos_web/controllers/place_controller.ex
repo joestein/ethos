@@ -2,12 +2,13 @@ defmodule EthosWeb.PlaceController do
   use EthosWeb, :controller
 
   alias Ethos.{Links, Places}
+  alias Ethos.Places.DeletedPlaces
   alias EthosWeb.StructuredData
 
   def show(conn, %{"slug" => slug}) do
     case Places.get_place_by_slug(slug) do
       nil ->
-        conn |> put_status(:not_found) |> put_view(EthosWeb.ErrorHTML) |> render(:"404")
+        render_absence(conn, absence_reason(slug))
 
       place ->
         featured = Places.guides_featuring(place)
@@ -68,6 +69,29 @@ defmodule EthosWeb.PlaceController do
       end
 
     redirect(conn, to: ~p"/p/#{place.slug}")
+  end
+
+  # A slug the deletion manifest names was taken down deliberately, with a
+  # recorded reason and source. One it does not name is just a URL we have
+  # nothing for — a typo, or a page that never existed.
+  defp absence_reason(slug) do
+    if DeletedPlaces.deleted?(slug), do: :deleted, else: :unknown
+  end
+
+  # 410 tells a crawler the URL is intentionally dead, so it drops the page;
+  # 404 invites months of retries. Each clause names its own status and its own
+  # template, rather than deriving the template from `conn.status`, so what is
+  # rendered never depends on a field some earlier plug may have set.
+  #
+  # Neither template exists on disk: EthosWeb.ErrorHTML.render/2 falls through
+  # to Phoenix.Controller.status_message_from_template/1, which turns
+  # "410.html" into "Gone" and "404.html" into "Not Found".
+  defp render_absence(conn, :deleted) do
+    conn |> put_status(:gone) |> put_view(EthosWeb.ErrorHTML) |> render(:"410")
+  end
+
+  defp render_absence(conn, :unknown) do
+    conn |> put_status(:not_found) |> put_view(EthosWeb.ErrorHTML) |> render(:"404")
   end
 
   defp place_ld(place, description) do

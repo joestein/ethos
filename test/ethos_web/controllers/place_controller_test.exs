@@ -2,6 +2,7 @@ defmodule EthosWeb.PlaceControllerTest do
   use EthosWeb.ConnCase, async: true
 
   alias Ethos.Places
+  alias Ethos.Places.DeletedPlaces
 
   @attrs %{
     slug: "palace-theater-waterbury",
@@ -50,6 +51,37 @@ defmodule EthosWeb.PlaceControllerTest do
 
   test "unknown slug 404s", %{conn: conn} do
     assert conn |> get(~p"/p/nope") |> html_response(404)
+  end
+
+  describe "a slug with no place row" do
+    # The manifest ships empty and waves append to it, so this pair must not
+    # assume a size. The 404 half runs at every size; the 410 half runs on
+    # whatever the manifest names, which is nothing until a wave finds a
+    # closure. Verified against a temporary one-entry probe manifest — without
+    # that, the 410 branch is never entered and the task is untested. Do not
+    # stub DeletedPlaces to fill the gap: it compiles its list at build time,
+    # so a stub would test the stub.
+    test "one the manifest does not name still 404s", %{conn: conn} do
+      refute DeletedPlaces.deleted?("a-place-the-manifest-never-mentions")
+
+      body =
+        conn |> get(~p"/p/a-place-the-manifest-never-mentions") |> response(404)
+
+      assert body =~ "Not Found"
+    end
+
+    test "one the manifest names is 410 Gone, not 404", %{conn: conn} do
+      for entry <- DeletedPlaces.all() do
+        slug = entry["slug"]
+        refute Places.get_place_by_slug(slug)
+
+        body = conn |> get(~p"/p/#{slug}") |> response(410)
+
+        # The body distinguishes a correct branch from one that sets status 410
+        # but renders the 404 template anyway.
+        assert body =~ "Gone", "#{slug} answered 410 with the wrong body: #{inspect(body)}"
+      end
+    end
   end
 
   test "restaurant kind maps to Restaurant JSON-LD", %{conn: conn} do
