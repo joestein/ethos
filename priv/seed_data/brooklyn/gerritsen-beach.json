@@ -5,7 +5,7 @@
     "destination": "Gerritsen Beach, New York",
     "state": "New York",
     "county": "Brooklyn",
-    "tier": "town-page",
+    "tier": "guide",
     "intro": "The neighborhood takes its name from Wolphert Gerretse, a seventeenth-century Dutch settler who built a house and mill on the creek that also carries his name. The ground stayed mostly undeveloped marshland with a few squatters' bungalows. In 1920 Realty Associates, a speculative builder, began putting up a middle-class summer bungalow resort, and within a decade about fifteen hundred houses stood here. The Whitney family had property near the old mill — a mansion with stables, servant quarters, a carriage house and a private racetrack — and the mansion was knocked down in 1936 for Marine Park development, though the carriage house survives as a private residence. Gerritsen Beach sits on a peninsula in southeastern Brooklyn, and its 2020 census population was 4,797.",
     "sections": [
       {
@@ -13,8 +13,12 @@
         "body": "A damaging fire on Abbey Court in 1921 showed the community that the city's regular apparatus could not reach the peninsula in time, and the Gerritsen Beach Volunteer Fire Department — the Vollies — was organized the following year. The city did not build FDNY Engine Company 321's firehouse at Gerritsen Avenue and Avenue U until October 4, 1930. The volunteer department is the last remaining one in Brooklyn and still runs alongside Engine 321.\n\nThat geography cuts the other way in a storm. On October 29, 2012 Hurricane Sandy damaged or affected almost every home in Gerritsen Beach with seawater, and the peninsula's shape drove flood waters to a record ten to twelve feet in some parts. Mayor Michael Bloomberg reclassified the neighborhood as a Zone A flood zone afterwards.\n\nAfter the Second World War, apartments for returning veterans and their families went up on the far side of Gerritsen Avenue on what is now parkland; they came down around 1955 once residents had moved on. Streets inside the neighborhood run in alphabetical order — Aster, Bevy, Celeste, Dictum. The neighborhood is served by Brooklyn Community Board 15.\n\nMarine Park borders Gerritsen Beach along Gerritsen Avenue, and Gerritsen Creek supplies its salt marsh with fresh water."
       },
       {
+        "heading": "Along Gerritsen Avenue",
+        "body": "Gerritsen Avenue carries most of the addresses on this page. FDNY Engine Company 321's firehouse is at 2165, the address the city's current firehouse listing still gives for the company. St. James United Evangelical Lutheran Church has been at 2776 Gerritsen Avenue since 1927, and a survey of Brooklyn organs records its original Geo. Kilgen & Son instrument, Opus 3973, built the same year.\n\nVictoria Pizzeria is at 2716 and advertises itself as a Gerritsen Beach institution since 1962; the city's restaurant inspection records carry it at that address with an inspection dated May 4, 2026. The bar at 2722 Gerritsen Avenue now operates as New Beach Bar, with an inspection dated February 19, 2026.\n\nOne address sits off the avenue. The waterfront business at 84 Ebony Court now operates as Marina Bar & Grill, with an inspection dated July 18, 2026. The Tamaqua name it carried in a 2015 article does not appear anywhere in the city's inspection history for that address, and the tamaquamarina.com domain is now parked."
+      },
+      {
         "heading": "Getting there",
-        "body": "There is no subway station in Gerritsen Beach. The recorded subway access is Kings Highway station on the BMT Brighton Line, which sits on the border of Midwood and Homecrest and is served by the Q at all times and by the B as a weekday express.\n\nThe bus is the link. The B31 runs between Midwood, at Quentin Road and East 16th Street by the Kings Highway station, and Gerritsen Beach, at Gerritsen Avenue and Lois Avenue, by way of Avenue R and Gerritsen Avenue. It is the route that physically terminates inside the neighborhood.\n\nNo NYC Ferry landing serves Gerritsen Beach or this stretch of the Jamaica Bay shoreline."
+        "body": "There is no subway station in Gerritsen Beach. Kings Highway station on the BMT Brighton Line sits on the border of Midwood and Homecrest, served by the Q at all times and by the B as a weekday express.\n\nThe B31 runs between Midwood, at Quentin Road and East 16th Street by the Kings Highway station, and Gerritsen Beach, at Gerritsen Avenue and Lois Avenue, by way of Avenue R and Gerritsen Avenue. Its Gerritsen Beach end is inside the neighborhood.\n\nNo NYC Ferry landing serves Gerritsen Beach or this stretch of the Jamaica Bay shoreline."
       }
     ],
     "faq": [
@@ -29,6 +33,14 @@
       {
         "question": "What are the Vollies?",
         "answer": "The Gerritsen Beach Volunteer Fire Department, organized in 1922 after a damaging 1921 fire on Abbey Court showed that the city's regular fire apparatus could not reach the peninsula fast enough. It is the last remaining volunteer fire department in Brooklyn and operates alongside FDNY Engine Company 321."
+      },
+      {
+        "question": "Where can I eat in Gerritsen Beach?",
+        "answer": "Victoria Pizzeria at 2716 Gerritsen Avenue, New Beach Bar at 2722 Gerritsen Avenue, and Marina Bar & Grill at 84 Ebony Court. All three appear in the city's restaurant inspection records with inspections dated 2026."
+      },
+      {
+        "question": "Is the Tamaqua Bar & Marina still there?",
+        "answer": "The waterfront business at 84 Ebony Court operates as Marina Bar & Grill today. That is the only name the city's restaurant inspection history carries for the address, most recently on July 18, 2026; the Tamaqua name comes from a 2015 article, and the tamaquamarina.com domain is now parked. The bar at 2722 Gerritsen Avenue has had a similar change — the city's records there carry New Beach Bar, not Beach Bar."
       }
     ],
     "photos": [
@@ -40,6 +52,15 @@
         "author": "Daniel Cavanagh",
         "license": "CC BY-SA 3.0",
         "source_url": "https://commons.wikimedia.org/wiki/File:Gerrittsen_Beach_Fire_Department.jpg"
+      },
+      {
+        "src": "/photos/ny/brooklyn/gerritsen-beach/st-james-gerritsen-beach.jpg",
+        "thumb": "/photos/ny/brooklyn/gerritsen-beach/st-james-gerritsen-beach_thumb.jpg",
+        "title": "St. James Lutheran Church on Gerritsen Avenue",
+        "description": "A dark timber-and-shingle church with a bell tower and cross, joined to a lower hall behind an iron fence.",
+        "author": "Multiplicitous",
+        "license": "CC BY-SA 3.0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Церковь_Св._Якова.jpg"
       }
     ]
   },
@@ -67,6 +88,19 @@
       ]
     },
     {
+      "slug": "fdny-engine-company-321",
+      "name": "FDNY Engine Company 321",
+      "kind": "historic-site",
+      "town": "Gerritsen Beach",
+      "state": "New York",
+      "county": "Brooklyn",
+      "address": "2165 Gerritsen Avenue, Brooklyn, NY 11229",
+      "summary": "The city firehouse on Gerritsen Avenue. The FDNY's own firehouse listing gives Engine 321 at this address, and the company still runs alongside the neighborhood's volunteer department.",
+      "history": "The city did not build the firehouse at Gerritsen Avenue and Avenue U until October 4, 1930; residents had organized their own volunteer department in 1922.",
+      "status": "open",
+      "photos": []
+    },
+    {
       "slug": "gerritsen-beach-veterans-memorial",
       "name": "Gerritsen Beach Veterans Memorial",
       "kind": "historic-site",
@@ -80,6 +114,29 @@
       "photos": []
     },
     {
+      "slug": "st-james-lutheran-church-gerritsen-beach",
+      "name": "St. James United Evangelical Lutheran Church",
+      "kind": "historic-site",
+      "town": "Gerritsen Beach",
+      "state": "New York",
+      "county": "Brooklyn",
+      "address": "2776 Gerritsen Avenue, Brooklyn, NY",
+      "summary": "A Lutheran congregation that has been at this Gerritsen Avenue address since 1927.",
+      "history": "The New York City chapter of the American Guild of Organists' survey of Brooklyn organs lists the church with its original Geo. Kilgen & Son instrument, Opus 3973, built in 1927.",
+      "status": "open",
+      "photos": [
+        {
+          "src": "/photos/ny/brooklyn/gerritsen-beach/st-james-gerritsen-beach.jpg",
+          "thumb": "/photos/ny/brooklyn/gerritsen-beach/st-james-gerritsen-beach_thumb.jpg",
+          "title": "St. James Lutheran Church on Gerritsen Avenue",
+          "description": "A dark timber-and-shingle church with a bell tower and cross, joined to a lower hall behind an iron fence.",
+          "author": "Multiplicitous",
+          "license": "CC BY-SA 3.0",
+          "source_url": "https://commons.wikimedia.org/wiki/File:Церковь_Св._Якова.jpg"
+        }
+      ]
+    },
+    {
       "slug": "the-point-gerritsen-beach",
       "name": "The Point",
       "kind": "attraction",
@@ -88,6 +145,43 @@
       "county": "Brooklyn",
       "address": "Foot of Gerritsen Avenue, Brooklyn, NY",
       "summary": "The beach just past the end of Gerritsen Avenue, called the Point by local residents and used informally for fishing and shoreline access. It is not an official park.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "victoria-pizzeria-gerritsen-beach",
+      "name": "Victoria Pizzeria",
+      "kind": "cafe",
+      "town": "Gerritsen Beach",
+      "state": "New York",
+      "county": "Brooklyn",
+      "address": "2716 Gerritsen Avenue, Brooklyn, NY 11229",
+      "official_url": "https://www.victoriapizzanyc.com/",
+      "summary": "A pizzeria on Gerritsen Avenue that advertises itself as a Gerritsen Beach institution since 1962. The city's restaurant inspection records carry it at this address with an inspection dated May 4, 2026.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "new-beach-bar-gerritsen-beach",
+      "name": "New Beach Bar",
+      "kind": "cafe",
+      "town": "Gerritsen Beach",
+      "state": "New York",
+      "county": "Brooklyn",
+      "address": "2722 Gerritsen Avenue, Brooklyn, NY 11229",
+      "summary": "The bar at 2722 Gerritsen Avenue, which the city's restaurant inspection records carry as New Beach Bar rather than Beach Bar, with an inspection dated February 19, 2026.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "marina-bar-and-grill-gerritsen-beach",
+      "name": "Marina Bar & Grill",
+      "kind": "cafe",
+      "town": "Gerritsen Beach",
+      "state": "New York",
+      "county": "Brooklyn",
+      "address": "84 Ebony Court, Brooklyn, NY 11229",
+      "summary": "The waterfront business at 84 Ebony Court, which now operates as Marina Bar & Grill rather than under the Tamaqua name a 2015 article gave it. The city's restaurant inspection records carry only this name for the address, most recently on July 18, 2026.",
       "status": "open",
       "photos": []
     }
@@ -101,15 +195,45 @@
     },
     {
       "kind": "sight",
+      "name": "FDNY Engine Company 321",
+      "place_slug": "fdny-engine-company-321",
+      "note": "The city firehouse at 2165 Gerritsen Avenue, opened on October 4, 1930."
+    },
+    {
+      "kind": "sight",
       "name": "Gerritsen Beach Veterans Memorial",
       "place_slug": "gerritsen-beach-veterans-memorial",
       "note": "A community war memorial at Whitney Avenue and Burnett Street, maintained with VFW Post 107."
+    },
+    {
+      "kind": "sight",
+      "name": "St. James United Evangelical Lutheran Church",
+      "place_slug": "st-james-lutheran-church-gerritsen-beach",
+      "note": "On Gerritsen Avenue since 1927, with a Kilgen organ of the same year."
     },
     {
       "kind": "walk",
       "name": "The Point",
       "place_slug": "the-point-gerritsen-beach",
       "note": "The shoreline at the foot of Gerritsen Avenue, where residents fish."
+    },
+    {
+      "kind": "food",
+      "name": "Victoria Pizzeria",
+      "place_slug": "victoria-pizzeria-gerritsen-beach",
+      "note": "A pizzeria at 2716 Gerritsen Avenue, advertising itself as a Gerritsen Beach institution since 1962."
+    },
+    {
+      "kind": "food",
+      "name": "New Beach Bar",
+      "place_slug": "new-beach-bar-gerritsen-beach",
+      "note": "The bar at 2722 Gerritsen Avenue, inspected by the city in February 2026."
+    },
+    {
+      "kind": "food",
+      "name": "Marina Bar & Grill",
+      "place_slug": "marina-bar-and-grill-gerritsen-beach",
+      "note": "The waterfront bar and grill at 84 Ebony Court, inspected by the city in July 2026."
     }
   ],
   "links": [
@@ -126,7 +250,7 @@
     {
       "target": "guide:homecrest-brooklyn-guide",
       "kind": "same-region",
-      "note": "Gerritsen Beach's recorded subway access is Kings Highway station, on the border of Midwood and Homecrest."
+      "note": "Kings Highway station, the subway connection recorded for Gerritsen Beach, sits on the border of Midwood and Homecrest."
     }
   ]
 }
