@@ -4,6 +4,8 @@ defmodule EthosWeb.DestinationControllerTest do
   import Ethos.AccountsFixtures
   import Ethos.GuidesFixtures
 
+  alias Ethos.Destinations
+
   test "index lists destinations with published guides", %{conn: conn} do
     published_guide_fixture(%{title: "Roman Holiday", destination: "Rome, Italy"})
     guide_fixture(%{destination: "Oslo, Norway"})
@@ -63,5 +65,96 @@ defmodule EthosWeb.DestinationControllerTest do
 
   test "404 for unknown destination", %{conn: conn} do
     assert conn |> get(~p"/destinations/nowhere") |> response(404)
+  end
+
+  test "a state page with a destination record renders its intro", %{conn: conn} do
+    user = user_fixture()
+    fixtures = Path.expand("../../support/fixtures/seed_data", __DIR__)
+    Ethos.Seeds.DataGuide.upsert_from_file!(Path.join(fixtures, "townville.json"), user.email)
+
+    Destinations.upsert_destination!(%{
+      path: "connecticut",
+      name: "Connecticut",
+      intro: "The land of steady habits.",
+      photos: []
+    })
+
+    html = conn |> get(~p"/destinations/connecticut") |> html_response(200)
+    assert html =~ "The land of steady habits."
+  end
+
+  test "a state page without a record renders successfully and shows no intro block", %{
+    conn: conn
+  } do
+    user = user_fixture()
+    fixtures = Path.expand("../../support/fixtures/seed_data", __DIR__)
+    Ethos.Seeds.DataGuide.upsert_from_file!(Path.join(fixtures, "townville.json"), user.email)
+
+    html = conn |> get(~p"/destinations/connecticut") |> html_response(200)
+    refute html =~ "<section"
+  end
+
+  test "a county page with a record renders its intro", %{conn: conn} do
+    user = user_fixture()
+    fixtures = Path.expand("../../support/fixtures/seed_data", __DIR__)
+    Ethos.Seeds.DataGuide.upsert_from_file!(Path.join(fixtures, "townville.json"), user.email)
+
+    Destinations.upsert_destination!(%{
+      path: "connecticut/windham-county",
+      name: "Windham County",
+      intro: "Quiet hills in the northeast corner of the state.",
+      photos: []
+    })
+
+    html = conn |> get(~p"/destinations/connecticut/windham-county") |> html_response(200)
+    assert html =~ "Quiet hills in the northeast corner of the state."
+  end
+
+  test "a record with a photo supplies the og:image meta tag", %{conn: conn} do
+    user = user_fixture()
+    fixtures = Path.expand("../../support/fixtures/seed_data", __DIR__)
+    Ethos.Seeds.DataGuide.upsert_from_file!(Path.join(fixtures, "townville.json"), user.email)
+
+    Destinations.upsert_destination!(%{
+      path: "connecticut/windham-county",
+      name: "Windham County",
+      intro: "Quiet hills in the state's northeast corner.",
+      photos: [
+        %{
+          "src" => "/photos/destinations/connecticut-windham-county/hero.jpg",
+          "thumb" => "/photos/destinations/connecticut-windham-county/hero_thumb.jpg",
+          "title" => "Windham County hills",
+          "description" => "Rolling hills.",
+          "author" => "Fixture Author",
+          "license" => "CC BY-SA 4.0",
+          "source_url" => "https://commons.wikimedia.org/wiki/File:Fixture.jpg"
+        }
+      ]
+    })
+
+    html = conn |> get(~p"/destinations/connecticut/windham-county") |> html_response(200)
+
+    assert html =~ ~s(property="og:image")
+
+    assert html =~
+             ~s(content="http://localhost:4002/photos/destinations/connecticut-windham-county/hero.jpg")
+
+    assert html =~ "Fixture Author"
+    assert html =~ "CC BY-SA 4.0"
+    assert html =~ "https://commons.wikimedia.org/wiki/File:Fixture.jpg"
+  end
+
+  test "a town page with a destination record renders its intro", %{conn: conn} do
+    published_guide_fixture(%{title: "Roman Holiday", destination: "Rome, Italy"})
+
+    Destinations.upsert_destination!(%{
+      path: "rome",
+      name: "Rome",
+      intro: "The Eternal City rewards slow mornings and long walks.",
+      photos: []
+    })
+
+    html = conn |> get(~p"/destinations/rome") |> html_response(200)
+    assert html =~ "The Eternal City rewards slow mornings and long walks."
   end
 end

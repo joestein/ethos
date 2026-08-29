@@ -1,7 +1,7 @@
 defmodule EthosWeb.DestinationController do
   use EthosWeb, :controller
 
-  alias Ethos.Guides
+  alias Ethos.{Destinations, Guides}
 
   def index(conn, _params) do
     destinations = Guides.list_destinations_without_state()
@@ -26,9 +26,21 @@ defmodule EthosWeb.DestinationController do
   end
 
   # Destination hubs have no single representative photo, so they ship without
-  # an og:image — the layout omits the tag when it's nil.
+  # an og:image — the layout omits the tag when it's nil. Where a Destination
+  # record has a photo, callers override :image with `destination_image/1`.
   defp og(title, description, url) do
     %{title: title, description: description, type: "website", url: url, image: nil}
+  end
+
+  # Joins a destination's first photo the same way place_controller.ex does
+  # for place photos, so og:image points at an absolute, site-rooted URL.
+  defp destination_image(nil), do: nil
+
+  defp destination_image(%Destinations.Destination{photos: photos}) do
+    case List.first(photos) do
+      nil -> nil
+      photo -> url(~p"/") <> String.trim_leading(photo["src"], "/")
+    end
   end
 
   def show(conn, %{"slug" => slug}) do
@@ -53,12 +65,20 @@ defmodule EthosWeb.DestinationController do
         description =
           "Real trip guides for #{name} — places, verdicts, and tips from travelers who went."
 
+        destination = Destinations.get_by_path(slug)
+
+        page_og = %{
+          og(title, description, url(~p"/destinations/#{slug}"))
+          | image: destination_image(destination)
+        }
+
         render(conn, :show,
           name: name,
           slug: slug,
           guides: guides,
+          destination: destination,
           page_title: title,
-          page_og: og(title, description, url(~p"/destinations/#{slug}")),
+          page_og: page_og,
           page_meta_description: description,
           page_canonical: url(~p"/destinations/#{slug}"),
           json_ld: [destination_breadcrumb(name, slug)]
@@ -74,13 +94,21 @@ defmodule EthosWeb.DestinationController do
     description =
       "Travel guides for #{state} — history, sites, restaurants, and places to stay, county by county."
 
+    destination = Destinations.get_by_path(slug)
+
+    page_og = %{
+      og(title, description, url(~p"/destinations/#{slug}"))
+      | image: destination_image(destination)
+    }
+
     render(conn, :state,
       state: state,
       slug: slug,
       counties: counties,
       guides: guides,
+      destination: destination,
       page_title: title,
-      page_og: og(title, description, url(~p"/destinations/#{slug}")),
+      page_og: page_og,
       page_meta_description: description,
       page_canonical: url(~p"/destinations/#{slug}"),
       json_ld: [
@@ -102,6 +130,13 @@ defmodule EthosWeb.DestinationController do
         description =
           "Travel guides for #{g.county}, #{g.state} — towns, history, sites, restaurants, and places to stay."
 
+        destination = Destinations.get_by_path("#{state_slug}/#{county_slug}")
+
+        page_og = %{
+          og(title, description, url(~p"/destinations/#{state_slug}/#{county_slug}"))
+          | image: destination_image(destination)
+        }
+
         render(conn, :county,
           state: g.state,
           state_slug: state_slug,
@@ -109,8 +144,9 @@ defmodule EthosWeb.DestinationController do
           county_slug: county_slug,
           guides: Enum.filter(guides, &(&1.tier == "guide")),
           town_pages: Enum.filter(guides, &(&1.tier == "town-page")),
+          destination: destination,
           page_title: title,
-          page_og: og(title, description, url(~p"/destinations/#{state_slug}/#{county_slug}")),
+          page_og: page_og,
           page_meta_description: description,
           page_canonical: url(~p"/destinations/#{state_slug}/#{county_slug}"),
           json_ld: [

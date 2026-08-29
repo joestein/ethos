@@ -3,7 +3,23 @@
     <.link navigate={~p"/destinations"} class="underline">Destinations</.link> / {@state}
   </nav>
   <h1 class="mt-2 text-3xl font-bold">{@state} travel guides</h1>
-
+  <section :if={@destination} class="mt-6">
+    <% photo = List.first(@destination.photos) %>
+    <img
+      :if={photo}
+      src={photo["src"]}
+      alt={photo["title"]}
+      class="w-full rounded-xl"
+      loading="lazy"
+    />
+    <p :if={photo} class="mt-2 text-xs text-zinc-400">
+      Photo "{photo["title"]}": {photo["author"]}, {photo["license"]}, via
+      <a href={photo["source_url"]} class="underline" rel="nofollow noopener">
+        Wikimedia Commons
+      </a>
+    </p>
+    <div class="prose mt-4">{EthosWeb.Markdown.render(@destination.intro)}</div>
+  </section>
   <h2 class="mt-8 font-semibold">By county</h2>
   <ul class="mt-3 space-y-2">
     <li :for={c <- @counties}>
