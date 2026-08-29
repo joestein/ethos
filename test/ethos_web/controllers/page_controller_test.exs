@@ -88,9 +88,17 @@ defmodule EthosWeb.PageControllerTest do
       assert org["@context"] == "https://schema.org"
       assert org["name"] == "Ethos"
       assert org["url"] == url(~p"/")
-      assert org["logo"] == static_url(EthosWeb.Endpoint, "/images/logo.svg")
+      # Deliberately *not* `== static_url(Endpoint, "/images/logo.svg")`: both
+      # sides would call the same function, so the assertion held whatever that
+      # function returned. `static_url/2` verifies nothing at compile time — it
+      # concatenates two endpoint calls — and only `~p` verifies, and only
+      # router routes, which a static asset has none of. So the logo is pinned
+      # to a literal and then actually fetched. Delete or rename the file and
+      # this fails, where before the suite stayed green while the home page and
+      # every guide's Article.publisher.logo pointed at a 404.
       assert org["logo"] =~ ~r{^https?://}
-      assert org["logo"] =~ "/images/logo.svg"
+      assert org["logo"] =~ "images/logo"
+      assert conn |> get(URI.parse(org["logo"]).path) |> response(200)
     end
 
     test "the WebSite node carries a SearchAction the search route actually answers", %{
