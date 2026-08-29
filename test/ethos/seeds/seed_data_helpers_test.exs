@@ -35,6 +35,17 @@ defmodule Ethos.SeedDataHelpersTest do
     assert length(SeedDataHelpers.all_seed_files()) > 200
   end
 
+  test "all_seed_files/0 excludes destination-page content, which is not a guide file" do
+    # priv/seed_data/destinations/*.json matches the wildcard glob but has no
+    # guide/places/entries, so DataGuide.load!/1 raises on it and every caller
+    # of all_seed_files/0 dies. Vacuous until the destination content ships,
+    # and the reason three existing corpus tests do not break when it does.
+    assert Enum.all?(
+             SeedDataHelpers.all_seed_files(),
+             &(&1 |> Path.dirname() |> Path.basename() != "destinations")
+           )
+  end
+
   test "the committed corpus has no place-slug collisions" do
     SeedDataHelpers.assert_place_slugs_globally_unique!()
   end

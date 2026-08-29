@@ -24,11 +24,21 @@ defmodule Ethos.SeedDataHelpers do
     |> Enum.sort()
   end
 
-  @doc "Every seed file in every destination directory."
+  # priv/seed_data/destinations/ holds destination-page records — a path, a
+  # name, an intro and photos, with no guide, places or entries — so
+  # DataGuide.load!/1 raises "missing guide/places/entries keys" on them. They
+  # define no place slugs and have nothing to contribute to the checks below;
+  # they are validated by test/ethos/seeds/destination_seed_data_test.exs.
+  # Excluded by directory rather than by shape, so that a future non-guide
+  # directory fails loudly here instead of being silently skipped.
+  @non_guide_dirs ["destinations"]
+
+  @doc "Every guide seed file in every guide-corpus directory."
   def all_seed_files do
     @seed_data_root
     |> Path.join("*/*.json")
     |> Path.wildcard()
+    |> Enum.reject(fn f -> Path.basename(Path.dirname(f)) in @non_guide_dirs end)
     |> Enum.sort()
   end
 

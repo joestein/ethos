@@ -1,0 +1,16 @@
+{
+  "path": "connecticut/new-london-county",
+  "name": "New London County",
+  "intro": "This fixture stands in for a shipped destination page and exists only to drive one assertion in the seed-data gate. It carries the same shape a real file does: a URL path, a display name, an introduction of the length the gate requires, and sometimes a photo with its credit. The prose is deliberately plain and asserts nothing a reader could check against the world, because no file in this directory is ever seeded, rendered, or served to anybody. It names no roads, no rail lines, no distances, and above all it makes no claim about how long a journey between two places takes, which is the rule this gate cares about most and the one a stray sentence is likeliest to break. An author looking for a model to copy should read the committed files under the destinations seed directory instead of this one.",
+  "photos": [
+    {
+      "src": "/photos/destinations/connecticut-new-london-county/nowhere.jpg",
+      "thumb": "/photos/destinations/connecticut-new-london-county/nowhere_thumb.jpg",
+      "title": "A fixture photograph that stands in for a real one",
+      "description": "A placeholder credit block with the same keys a shipped destination photo carries.",
+      "author": "Fixture Author",
+      "license": "CC BY-SA 4.0",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Fixture_destination_photo.jpg"
+    }
+  ]
+}
