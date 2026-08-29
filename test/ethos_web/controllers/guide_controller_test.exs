@@ -89,6 +89,117 @@ defmodule EthosWeb.GuideControllerTest do
     assert html =~ ~p"/g/#{guide.slug}/photos"
   end
 
+  test "a guide with a state and county renders the full breadcrumb hierarchy", %{conn: conn} do
+    guide =
+      published_guide_fixture(%{
+        title: "A Day in Waterbury",
+        destination: "Waterbury, Connecticut",
+        state: "Connecticut",
+        county: "New Haven County"
+      })
+
+    html = conn |> get(~p"/g/#{guide.slug}") |> html_response(200)
+
+    nav = breadcrumb_nav(html)
+
+    assert nav =~ ~s(href="/destinations")
+    assert nav =~ ~s(href="/destinations/connecticut")
+    assert nav =~ ~s(href="/destinations/connecticut/new-haven-county")
+    assert nav =~ "Destinations"
+    assert nav =~ "Connecticut"
+    assert nav =~ "New Haven County"
+
+    # and the machine-readable version matches the visible one
+    ld = breadcrumb_json_ld(html)
+
+    assert Enum.map(ld["itemListElement"], & &1["name"]) == [
+             "Ethos",
+             "Destinations",
+             "Connecticut",
+             "New Haven County",
+             "A Day in Waterbury"
+           ]
+
+    assert Enum.map(ld["itemListElement"], & &1["position"]) == [1, 2, 3, 4, 5]
+
+    assert Enum.map(ld["itemListElement"], & &1["item"]) == [
+             url(~p"/"),
+             url(~p"/destinations"),
+             url(~p"/destinations/connecticut"),
+             url(~p"/destinations/connecticut/new-haven-county"),
+             url(~p"/g/#{guide.slug}")
+           ]
+  end
+
+  test "a guide with no state or county falls back to its destination, with no nil-slug links", %{
+    conn: conn
+  } do
+    guide = published_guide_fixture(%{title: "Roman Holiday", destination: "Rome, Italy"})
+
+    assert guide.state == nil
+    assert guide.county == nil
+
+    html = conn |> get(~p"/g/#{guide.slug}") |> html_response(200)
+
+    # no empty or nil slug ever reaches an href
+    refute html =~ "/destinations//"
+    refute html =~ ~s(href="/destinations/")
+
+    nav = breadcrumb_nav(html)
+    assert nav =~ ~s(href="/destinations")
+    assert nav =~ ~s(href="/destinations/rome")
+    assert nav =~ "Rome"
+    refute nav =~ "New Haven"
+
+    ld = breadcrumb_json_ld(html)
+
+    assert Enum.map(ld["itemListElement"], & &1["name"]) == [
+             "Ethos",
+             "Destinations",
+             "Rome",
+             "Roman Holiday"
+           ]
+
+    assert Enum.map(ld["itemListElement"], & &1["position"]) == [1, 2, 3, 4]
+  end
+
+  test "a guide with a state but no county stops the breadcrumb at the state", %{conn: conn} do
+    guide =
+      published_guide_fixture(%{
+        title: "Statewide Roundup",
+        destination: "Connecticut",
+        state: "Connecticut"
+      })
+
+    html = conn |> get(~p"/g/#{guide.slug}") |> html_response(200)
+
+    nav = breadcrumb_nav(html)
+    assert nav =~ ~s(href="/destinations/connecticut")
+    refute nav =~ ~s(href="/destinations/connecticut/)
+
+    ld = breadcrumb_json_ld(html)
+
+    assert Enum.map(ld["itemListElement"], & &1["name"]) == [
+             "Ethos",
+             "Destinations",
+             "Connecticut",
+             "Statewide Roundup"
+           ]
+  end
+
+  # The site header also has a <nav>; the breadcrumb is the one inside <article>.
+  defp breadcrumb_nav(html) do
+    [nav] = Regex.run(~r{<article.*?(<nav.*?</nav>)}s, html, capture: :all_but_first)
+    nav
+  end
+
+  defp breadcrumb_json_ld(html) do
+    ~r{<script type="application/ld\+json">\s*(.*?)\s*</script>}s
+    |> Regex.scan(html, capture: :all_but_first)
+    |> Enum.map(fn [json] -> Jason.decode!(json) end)
+    |> Enum.find(&(&1["@type"] == "BreadcrumbList"))
+  end
+
   test "404s for drafts", %{conn: conn} do
     guide = guide_fixture()
 

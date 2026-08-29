@@ -29,6 +29,7 @@ defmodule EthosWeb.PlaceController do
         render(conn, :show,
           place: place,
           featured_guides: featured,
+          siblings: Places.list_siblings(place),
           visited?: visited?,
           connected: Links.links_for("place", place.id),
           page_title: "#{place.name} — #{place.town}, #{place.state}",

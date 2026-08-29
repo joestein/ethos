@@ -34,6 +34,33 @@ defmodule EthosWeb.DestinationControllerTest do
     assert html =~ "Townville"
   end
 
+  test "destination pages emit OpenGraph tags", %{conn: conn} do
+    published_guide_fixture(%{title: "Roman Holiday", destination: "Rome, Italy"})
+
+    index = conn |> get(~p"/destinations") |> html_response(200)
+    assert index =~ ~s(property="og:title")
+    assert index =~ ~s(<meta property="og:title" content="Destinations")
+
+    town = conn |> get(~p"/destinations/rome") |> html_response(200)
+    assert town =~ ~s(<meta property="og:title" content="Rome travel guides")
+    assert town =~ ~s(property="og:url")
+    assert town =~ ~s(property="og:description")
+    refute town =~ ~s(property="og:image")
+  end
+
+  test "state and county destination pages emit OpenGraph tags", %{conn: conn} do
+    user = user_fixture()
+    fixtures = Path.expand("../../support/fixtures/seed_data", __DIR__)
+    Ethos.Seeds.DataGuide.upsert_from_file!(Path.join(fixtures, "townville.json"), user.email)
+
+    state = conn |> get(~p"/destinations/connecticut") |> html_response(200)
+    assert state =~ ~s(<meta property="og:title" content="Connecticut travel guides")
+
+    county = conn |> get(~p"/destinations/connecticut/windham-county") |> html_response(200)
+    assert county =~ ~s(property="og:title")
+    assert county =~ "Windham County"
+  end
+
   test "404 for unknown destination", %{conn: conn} do
     assert conn |> get(~p"/destinations/nowhere") |> response(404)
   end

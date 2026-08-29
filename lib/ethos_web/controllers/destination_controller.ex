@@ -8,16 +8,27 @@ defmodule EthosWeb.DestinationController do
     states = Guides.list_states()
     collections = Ethos.Collections.list_published()
 
+    title = "Destinations"
+
+    description =
+      "Real trip guides by destination — places, verdicts, and tips from travelers who went."
+
     render(conn, :index,
       destinations: destinations,
       states: states,
       collections: collections,
-      page_title: "Destinations",
-      page_meta_description:
-        "Real trip guides by destination — places, verdicts, and tips from travelers who went.",
+      page_title: title,
+      page_og: og(title, description, url(~p"/destinations")),
+      page_meta_description: description,
       page_canonical: url(~p"/destinations"),
       json_ld: [destinations_breadcrumb()]
     )
+  end
+
+  # Destination hubs have no single representative photo, so they ship without
+  # an og:image — the layout omits the tag when it's nil.
+  defp og(title, description, url) do
+    %{title: title, description: description, type: "website", url: url, image: nil}
   end
 
   def show(conn, %{"slug" => slug}) do
@@ -37,14 +48,18 @@ defmodule EthosWeb.DestinationController do
 
       guides ->
         name = guides |> hd() |> Map.get(:destination) |> String.split(",") |> List.first()
+        title = "#{name} travel guides"
+
+        description =
+          "Real trip guides for #{name} — places, verdicts, and tips from travelers who went."
 
         render(conn, :show,
           name: name,
           slug: slug,
           guides: guides,
-          page_title: "#{name} travel guides",
-          page_meta_description:
-            "Real trip guides for #{name} — places, verdicts, and tips from travelers who went.",
+          page_title: title,
+          page_og: og(title, description, url(~p"/destinations/#{slug}")),
+          page_meta_description: description,
           page_canonical: url(~p"/destinations/#{slug}"),
           json_ld: [destination_breadcrumb(name, slug)]
         )
@@ -54,15 +69,19 @@ defmodule EthosWeb.DestinationController do
   defp state_show(conn, slug, guides) do
     state = hd(guides).state
     counties = Guides.list_counties_for_state(slug)
+    title = "#{state} travel guides"
+
+    description =
+      "Travel guides for #{state} — history, sites, restaurants, and places to stay, county by county."
 
     render(conn, :state,
       state: state,
       slug: slug,
       counties: counties,
       guides: guides,
-      page_title: "#{state} travel guides",
-      page_meta_description:
-        "Travel guides for #{state} — history, sites, restaurants, and places to stay, county by county.",
+      page_title: title,
+      page_og: og(title, description, url(~p"/destinations/#{slug}")),
+      page_meta_description: description,
       page_canonical: url(~p"/destinations/#{slug}"),
       json_ld: [
         collection_ld("#{state} travel guides", url(~p"/destinations/#{slug}")),
@@ -78,6 +97,10 @@ defmodule EthosWeb.DestinationController do
 
       guides ->
         g = hd(guides)
+        title = "#{g.county}, #{g.state} travel guides"
+
+        description =
+          "Travel guides for #{g.county}, #{g.state} — towns, history, sites, restaurants, and places to stay."
 
         render(conn, :county,
           state: g.state,
@@ -86,9 +109,9 @@ defmodule EthosWeb.DestinationController do
           county_slug: county_slug,
           guides: Enum.filter(guides, &(&1.tier == "guide")),
           town_pages: Enum.filter(guides, &(&1.tier == "town-page")),
-          page_title: "#{g.county}, #{g.state} travel guides",
-          page_meta_description:
-            "Travel guides for #{g.county}, #{g.state} — towns, history, sites, restaurants, and places to stay.",
+          page_title: title,
+          page_og: og(title, description, url(~p"/destinations/#{state_slug}/#{county_slug}")),
+          page_meta_description: description,
           page_canonical: url(~p"/destinations/#{state_slug}/#{county_slug}"),
           json_ld: [
             collection_ld(

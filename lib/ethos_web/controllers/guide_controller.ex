@@ -80,31 +80,33 @@ defmodule EthosWeb.GuideController do
     }
   end
 
+  # Mirrors the visible breadcrumb on the guide page — same segments, same
+  # order — by walking the same trail. Guides without a county (or without any
+  # geography) simply produce a shorter list rather than a nil-slug link.
   defp breadcrumb_ld(guide) do
+    trail =
+      [
+        %{name: "Ethos", url: url(~p"/")},
+        %{name: "Destinations", url: url(~p"/destinations")}
+      ] ++
+        Enum.map(EthosWeb.GuideHTML.breadcrumb_trail(guide), fn crumb ->
+          %{name: crumb.name, url: unverified_url(EthosWeb.Endpoint, crumb.path)}
+        end) ++
+        [%{name: guide.title, url: url(~p"/g/#{guide.slug}")}]
+
     %{
       "@context" => "https://schema.org",
       "@type" => "BreadcrumbList",
-      "itemListElement" => [
-        %{"@type" => "ListItem", "position" => 1, "name" => "Ethos", "item" => url(~p"/")},
-        %{
-          "@type" => "ListItem",
-          "position" => 2,
-          "name" => "Destinations",
-          "item" => url(~p"/destinations")
-        },
-        %{
-          "@type" => "ListItem",
-          "position" => 3,
-          "name" => guide.destination |> String.split(",") |> List.first(),
-          "item" => url(~p"/destinations/#{guide.destination_slug}")
-        },
-        %{
-          "@type" => "ListItem",
-          "position" => 4,
-          "name" => guide.title,
-          "item" => url(~p"/g/#{guide.slug}")
-        }
-      ]
+      "itemListElement" =>
+        Enum.with_index(trail, 1)
+        |> Enum.map(fn {crumb, position} ->
+          %{
+            "@type" => "ListItem",
+            "position" => position,
+            "name" => crumb.name,
+            "item" => crumb.url
+          }
+        end)
     }
   end
 
@@ -170,12 +172,14 @@ defmodule EthosWeb.GuideController do
   defp photos_breadcrumb_ld(guide) do
     breadcrumb = breadcrumb_ld(guide)
 
+    parents = breadcrumb["itemListElement"]
+
     items =
-      breadcrumb["itemListElement"] ++
+      parents ++
         [
           %{
             "@type" => "ListItem",
-            "position" => 5,
+            "position" => length(parents) + 1,
             "name" => "Photos",
             "item" => url(~p"/g/#{guide.slug}/photos")
           }

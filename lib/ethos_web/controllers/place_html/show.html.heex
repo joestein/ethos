@@ -115,5 +115,15 @@
     </ul>
   </section>
 
+  <section :if={@siblings != []} class="mt-8">
+    <h2 class="text-xl font-semibold">More in {@place.town}</h2>
+    <ul class="mt-3 space-y-2">
+      <li :for={s <- @siblings}>
+        <.link navigate={~p"/p/#{s.slug}"} class="underline">{s.name}</.link>
+        <span class="text-sm text-zinc-500">· {kind_label(s.kind)}</span>
+      </li>
+    </ul>
+  </section>
+
   <EthosWeb.ConnectedPages.connected_pages connected={@connected} />
 </article>

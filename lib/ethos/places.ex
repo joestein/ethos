@@ -43,6 +43,29 @@ defmodule Ethos.Places do
     )
   end
 
+  @sibling_limit 8
+
+  @doc """
+  Other open places in the same town, excluding the place itself.
+
+  Ordered by name and capped (`:limit`, default #{@sibling_limit}) so a place
+  page can offer a way sideways into its town without turning into a directory.
+  """
+  def list_siblings(place, opts \\ [])
+
+  def list_siblings(%Place{town_slug: nil}, _opts), do: []
+
+  def list_siblings(%Place{id: id, town_slug: town_slug}, opts) do
+    limit = Keyword.get(opts, :limit, @sibling_limit)
+
+    Repo.all(
+      from p in Place,
+        where: p.town_slug == ^town_slug and p.id != ^id and p.status == "open",
+        order_by: [asc: p.name],
+        limit: ^limit
+    )
+  end
+
   def guides_featuring(%Place{id: place_id}) do
     Repo.all(
       from g in Ethos.Guides.Guide,

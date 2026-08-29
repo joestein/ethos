@@ -67,6 +67,33 @@ defmodule EthosWeb.PlaceControllerTest do
     assert html =~ ~s("@type":"Restaurant")
   end
 
+  test "renders a 'More in this town' section listing sibling places", %{conn: conn} do
+    Places.upsert_place!(@attrs)
+
+    Places.upsert_place!(%{
+      @attrs
+      | slug: "mattatuck-museum",
+        name: "Mattatuck Museum",
+        kind: "museum",
+        photos: []
+    })
+
+    html = conn |> get(~p"/p/palace-theater-waterbury") |> html_response(200)
+
+    assert html =~ "More in Waterbury"
+    assert html =~ "Mattatuck Museum"
+    assert html =~ ~s(href="/p/mattatuck-museum")
+  end
+
+  test "a place with no siblings renders no 'More in' heading", %{conn: conn} do
+    Places.upsert_place!(@attrs)
+
+    html = conn |> get(~p"/p/palace-theater-waterbury") |> html_response(200)
+
+    refute html =~ "More in Waterbury"
+    refute html =~ "More in "
+  end
+
   test "sitemap includes place urls", %{conn: conn} do
     Places.upsert_place!(@attrs)
     xml = conn |> get(~p"/sitemap.xml") |> response(200)

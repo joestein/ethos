@@ -93,4 +93,63 @@ defmodule Ethos.PlacesTest do
     assert Places.count_open_places_in_county("connecticut", "new-haven-county") == 2
     assert Places.count_open_places_in_county("connecticut", "litchfield-county") == 0
   end
+
+  describe "list_siblings/2" do
+    test "returns other open places in the same town, by name, excluding itself" do
+      palace = Places.upsert_place!(@valid)
+
+      mattatuck =
+        Places.upsert_place!(%{
+          @valid
+          | slug: "mattatuck-museum",
+            name: "Mattatuck Museum",
+            kind: "museum"
+        })
+
+      _other_town =
+        Places.upsert_place!(%{
+          @valid
+          | slug: "glebe-house",
+            name: "Glebe House",
+            kind: "museum",
+            town: "Woodbury",
+            county: "Litchfield County"
+        })
+
+      _closed =
+        Places.upsert_place!(%{
+          @valid
+          | slug: "abbots-frozen-custard",
+            name: "Abbots",
+            kind: "restaurant",
+            status: "closed"
+        })
+
+      assert [%{slug: "mattatuck-museum"}] = Places.list_siblings(palace)
+      assert [%{slug: "palace-theater-waterbury"}] = Places.list_siblings(mattatuck)
+    end
+
+    test "returns [] for a town with only one place" do
+      only = Places.upsert_place!(@valid)
+      assert Places.list_siblings(only) == []
+    end
+
+    test "caps the number of siblings returned" do
+      for n <- 1..12 do
+        Places.upsert_place!(%{
+          @valid
+          | slug: "waterbury-place-#{n}",
+            name: "Waterbury Place #{String.pad_leading(to_string(n), 2, "0")}"
+        })
+      end
+
+      anchor = Places.get_place_by_slug!("waterbury-place-1")
+
+      siblings = Places.list_siblings(anchor)
+      assert length(siblings) == 8
+      refute Enum.any?(siblings, &(&1.id == anchor.id))
+
+      assert Places.list_siblings(anchor, limit: 3) |> length() == 3
+    end
+  end
 end
