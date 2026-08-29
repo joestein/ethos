@@ -144,6 +144,61 @@ defmodule EthosWeb.DestinationControllerTest do
     assert html =~ "https://commons.wikimedia.org/wiki/File:Fixture.jpg"
   end
 
+  test "a record with two photos renders both, each with its own credit line", %{conn: conn} do
+    user = user_fixture()
+    fixtures = Path.expand("../../support/fixtures/seed_data", __DIR__)
+    Ethos.Seeds.DataGuide.upsert_from_file!(Path.join(fixtures, "townville.json"), user.email)
+
+    Destinations.upsert_destination!(%{
+      path: "connecticut/windham-county",
+      name: "Windham County",
+      intro: "Quiet hills in the state's northeast corner.",
+      photos: [
+        %{
+          "src" => "/photos/destinations/connecticut-windham-county/first.jpg",
+          "thumb" => "/photos/destinations/connecticut-windham-county/first_thumb.jpg",
+          "title" => "First photo",
+          "description" => "The first one.",
+          "author" => "First Author",
+          "license" => "CC BY-SA 4.0",
+          "source_url" => "https://commons.wikimedia.org/wiki/File:First.jpg"
+        },
+        %{
+          "src" => "/photos/destinations/connecticut-windham-county/second.jpg",
+          "thumb" => "/photos/destinations/connecticut-windham-county/second_thumb.jpg",
+          "title" => "Second photo",
+          "description" => "The second one.",
+          "author" => "Second Author",
+          "license" => "CC BY 3.0",
+          "source_url" => "https://commons.wikimedia.org/wiki/File:Second.jpg"
+        }
+      ]
+    })
+
+    html = conn |> get(~p"/destinations/connecticut/windham-county") |> html_response(200)
+
+    # Both images reach the page, in the order the record lists them.
+    assert html =~ ~s(src="/photos/destinations/connecticut-windham-county/first.jpg")
+    assert html =~ ~s(src="/photos/destinations/connecticut-windham-county/second.jpg")
+
+    assert :binary.match(html, "first.jpg") < :binary.match(html, "second.jpg")
+
+    # Each photo carries its own credit — the second is the one that used to
+    # ship with its Commons attribution appearing nowhere a visitor could see.
+    assert html =~ "First Author"
+    assert html =~ "Second Author"
+    assert html =~ "CC BY 3.0"
+    assert html =~ "https://commons.wikimedia.org/wiki/File:First.jpg"
+    assert html =~ "https://commons.wikimedia.org/wiki/File:Second.jpg"
+
+    # A social card still takes exactly one image: the first.
+    assert html =~
+             ~s(content="http://localhost:4002/photos/destinations/connecticut-windham-county/first.jpg")
+
+    refute html =~
+             ~s(property="og:image" content="http://localhost:4002/photos/destinations/connecticut-windham-county/second.jpg")
+  end
+
   test "a town page with a destination record renders its intro", %{conn: conn} do
     published_guide_fixture(%{title: "Roman Holiday", destination: "Rome, Italy"})
 
