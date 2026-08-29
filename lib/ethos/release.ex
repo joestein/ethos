@@ -64,6 +64,24 @@ defmodule Ethos.Release do
 
   def seed_brooklyn(email), do: seed_directory("brooklyn", email)
 
+  def seed_destinations do
+    load_app()
+    Application.ensure_all_started(@app)
+
+    files =
+      [:code.priv_dir(@app) |> to_string(), "seed_data", "destinations", "*.json"]
+      |> Path.join()
+      |> Path.wildcard()
+      |> Enum.sort()
+
+    for file <- files do
+      d = Ethos.Seeds.DataDestination.upsert!(file)
+      IO.puts("Seeded destination: /destinations/#{d.path}")
+    end
+
+    IO.puts("Seeded #{length(files)} destinations")
+  end
+
   # Three passes over the whole directory — all places, then all guides, then
   # all links — so an entry may reference a place, and a link may reference a
   # guide, defined in any file of the run regardless of processing order.
