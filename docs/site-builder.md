@@ -44,9 +44,11 @@ Instances:
 | NFL stadiums | the stadium | the same, plus more parking-dominated approaches | one entry per club |
 | National parks | the park | gateway towns, trailheads, lodges — see §10 | one entry per park unit |
 
-The platform already owns everything a set needs. Guides own entries,
-breadcrumbs, FAQs, photo galleries, collections and the link graph
-(`lib/ethos/seeds/guide_runner.ex`). Places own pages, addresses, structured data
+The platform already owns everything a set needs. Guides own entries, FAQs and
+photo galleries (`lib/ethos/seeds/guide_runner.ex` upserts all three), plus
+breadcrumbs (`EthosWeb.GuideBreadcrumb`), collections (`Ethos.Collections` and
+the seed modules) and the link graph (`DataGuide.upsert_links!/1`,
+`Ethos.Seeds.BackfillLinks`). Places own pages, addresses, structured data
 and the badge system. **Nothing is built to make a set work.** If you find
 yourself designing a schema, stop and check §3 and §11 first — one of them
 probably already covers what you are about to build, or explains why it is
@@ -64,16 +66,60 @@ each one is explained in the section named.
    every kind maps to a real schema.org type.
 3. **Commit the roster.** N entries, identity fields only, everything researched
    left null. (§2)
-4. **Run one site end to end and stop.** Research, author, seed, render, review,
+4. **Write the set's own `<set>_seed_data_test.exs`**, modelled on
+   `test/ethos/seeds/brooklyn_seed_data_test.exs`. **Half the gates in this
+   document are per-directory and you do not inherit them** — see below. Write
+   it before the checkpoint, so the checkpoint site is the first thing it
+   checks.
+5. **Run one site end to end and stop.** Research, author, seed, render, review,
    amend this document. (§6)
-5. **Run the rest in waves**, sized to search budget, not to concurrency. (§4)
-6. **Assert the roster is exhausted** mechanically. (§2)
-7. **Ship the collection and the runbook entry.** (§8, and
+6. **Run the rest in waves**, sized to search budget, not to concurrency. (§4)
+7. **Assert the roster is exhausted** mechanically. (§2)
+8. **Ship the collection and the runbook entry.** (§8, and
    `docs/runbooks/seeding.md`)
 
-Step 4 before step 5 is the single ordering constraint that exists for a reason
+Step 5 before step 6 is the single ordering constraint that exists for a reason
 other than mechanics, and it is the one most likely to be parallelised away by
 someone in a hurry. §6 is about why.
+
+### Which gates you inherit, and which you must write
+
+Get this wrong and you will believe a rule is enforced when nothing is checking
+it. The split is mechanical: **a gate that walks the whole corpus is free; a gate
+scoped to one directory is not.**
+
+**Free for a new directory** — these glob `priv/seed_data/*/*.json` through
+`SeedDataHelpers.all_seed_files/0`, so a new `priv/seed_data/<set>/` is covered
+the moment the first file lands:
+
+- `test/ethos/seeds/place_content_gate_test.exs` — the banned-prose patterns
+  across every string, orphaned entries, and manifest/corpus disjointness.
+- `Ethos.SeedDataHelpers.assert_place_slugs_globally_unique!/0`, which every
+  destination test calls and which
+  `test/ethos/seeds/seed_data_helpers_test.exs:55-57` also runs unscoped — so a
+  new directory's slugs are checked against the whole corpus with no work.
+- `test/ethos/seeds/bare_places_roster_test.exs` builds its corpus the same way.
+
+**Not free — you must write these yourself.** Every destination test scopes
+itself to **one directory**: Brooklyn through
+`SeedDataHelpers.seed_files("brooklyn")`
+(`test/ethos/seeds/brooklyn_seed_data_test.exs:14`, helper at
+`test/support/seed_data_helpers.ex:20-25`), Connecticut and Manhattan through
+their own hardcoded globs (`connecticut_seed_data_test.exs:7`,
+`manhattan_seed_data_test.exs:7`). Everything they assert applies to that
+directory alone:
+
+- the `Getting there` heading assertion (§8),
+- **the trip-duration ban** (§8) — the single most important one to port,
+- photo licence validation, tier/place-count agreement, orientation-page floors,
+- roster-to-corpus agreement for that directory,
+- the transit FAQ requirement.
+
+A set publishing into `priv/seed_data/nfl-stadiums/` with no test of its own gets
+**none** of that list. Copy `brooklyn_seed_data_test.exs`, change the directory,
+keep the duration ban and the heading assertion verbatim, and drop the
+Brooklyn-specific parts (the borough roster, the photo manifest) rather than
+adapting them if the set has no equivalent.
 
 ---
 
@@ -158,7 +204,7 @@ queries over the guides table:
 
 You set two string fields on the guide — `state` and `county`. `Guide.changeset/2`
 derives `state_slug` and `county_slug` from them
-(`lib/ethos/guides/guide.ex:113-123`, via `derive_destination_slug/1`), and both
+(`lib/ethos/guides/guide.ex:113-124`, via `derive_destination_slug/1`), and both
 hub pages exist on the next seed. Adding twenty-seven states to the site is a
 property of the content, not a migration.
 
@@ -289,9 +335,29 @@ These bind every wave. Restate the list in each dispatch; do not paraphrase it.
    place records.** §8.
 
 8. **Nothing about identity — which team plays where, what a venue is currently
-   called — is taken from recollection.** A verdict establishes it or it does not
-   ship. This is the likeliest way a set publishes a confidently wrong fact,
-   because it is the class of fact everybody feels sure about.
+   called, which town a business is in — is taken from recollection or from an
+   unchecked list.** A verdict establishes it or it does not ship.
+
+   **This is the one rule of the nine stated partly from anticipation, and it is
+   marked as such deliberately.** No shipped file in this corpus has yet been
+   caught carrying a stale venue name, because no set has been built before this
+   one. What the corpus *does* hold are two instances of the same failure with a
+   source in place of a memory, both recorded in
+   `lib/ethos/seeds/antique_trail_guide.ex:17-22`: a dealer excluded because a
+   directory **mislocated a Southbury business into Woodbury**, and another
+   excluded because it rested on one line of a trade association's courtesy list
+   — **the same list still carrying a company Connecticut revoked in 2013.** A
+   list that looks authoritative and is years stale is exactly what recollection
+   feels like from the inside, and both were caught only because identity was
+   verified rather than assumed. That guide ships sixteen dealers, not the
+   seventeen researched.
+
+   Nearest instance of the pure form, one domain over: during the same
+   programme an agent wrote a module docstring asserting that a controller
+   already served 410 Gone for deleted slugs. Nothing in `lib/` matched 410 —
+   the feature was two tasks away from existing. It was confident, checkable,
+   wrong, and it was caught by an implementer reading the code rather than by a
+   reviewer reading the prose. Treat "which team plays where" the same way.
 
 A ninth rule sits inside the authoring contract and is worth surfacing, because
 it is the subtlest: **a `confirmed` verdict vouches for what the verdict's own
@@ -322,8 +388,9 @@ the reason surfaced only in a verifier's prose ("search access had been
 rate-limited during the original research for those two specifically"). **It was
 written for two places and it caught sixty**: the next wave came back 60 of 73
 rate-limited or blocked, and without the flag those 60 partial results would have
-been indistinguishable from 60 finished ones. The wave would have reported ~394
-places "complete" while genuinely researching a fraction.
+been indistinguishable from 60 finished ones. Extrapolated to the wave's full
+remit — the ~394 places left on the roster after the checkpoint — the programme
+would have reported the lot "complete" while genuinely researching a fraction.
 
 ### Search access is the binding constraint, and it is not concurrency
 
@@ -429,14 +496,16 @@ body* one field away still read "Each is carried in the city's restaurant
 inspection records at its address, with an inspection dated 2025 or 2026." Same
 file, same banned phrase, invisible. Extending the gate to every prose field
 moved the known-defect count **from 14 to 23** — nine fields nobody was looking
-at, including boilerplate sitting in the same record as a summary the old gate
-*did* read, and two whole files invisible to every prior version of the gate.
+at, spread across five files, including boilerplate sitting in the same record as
+a summary the old gate *did* read.
 
 **Rule 6 — the practice, not the phrasing.** The pattern matched "restaurant
 inspection records" but not "inspected by the city in August 2025", which was the
 phrasing the entry notes actually used — 20 occurrences across five files.
-Widening it to the practice moved the count **from 23 to 55**. The real footprint
-was four times the number the programme started from.
+Widening it to the practice moved the count **from 23 to 55**, in nine files —
+five of which were not on anyone's list, and two of which had been invisible to
+*every* prior version of the gate. The real footprint was four times the number
+the programme started from.
 
 So: 14 → 23 → 55, from two rule changes, on a corpus everyone believed was
 measured. That is what a checkpoint buys.
@@ -563,10 +632,17 @@ The rules are in `docs/superpowers/plans/2026-08-28-brooklyn-content-rules.md`
 §6, and they generalise. The important ones:
 
 **The heading is exactly `Getting there`** — lowercase `t`, no trailing mode.
-Not `Getting There`, not `Getting there by subway`. This is gated, because it is
-the most likely drift in a set: an author who has read the previous programme's
-guides will reproduce its heading, **and the heading does not drift alone — it
-takes the multi-modal rule with it.**
+Not `Getting There`, not `Getting there by subway`. This is the most likely drift
+in a set: an author who has read the previous programme's guides will reproduce
+its heading, **and the heading does not drift alone — it takes the multi-modal
+rule below with it.**
+
+**It is gated for Brooklyn only** —
+`test/ethos/seeds/brooklyn_seed_data_test.exs:248-250`, over
+`seed_files("brooklyn")`. Your directory has no such assertion until you write
+one. This is step 4 of §1's sequence, and the reason it is a step rather than a
+note is the paragraph four down: a prose rule restated in every dispatch and
+checked in every review demonstrably does not hold.
 
 **Name only the modes that actually apply.** Manhattan used a single uniform
 heading because in Manhattan the subway is always the answer. In Brooklyn it is
@@ -594,12 +670,53 @@ edge of the site's area. Three cases:
 A location claim in Case C is a fabrication; a flat sentence in Case A is merely
 thin, and thin is never wrong.
 
-**Why this is gated rather than trusted.** A prose rule restated in every dispatch
-and checked in every review is *not* enough: the Connecticut programme did
-exactly that and **58 unverifiable drive-time claims reached the live site across
-28 committed files anyway.** Rules that catch drift — a fixed string quietly
-reverting, a required element going missing, an unverifiable claim creeping in —
-belong in a test. Rules describing an editorial *range* — word ceilings, entry
+**Never publish a trip duration or a drive time. This is categorical.** No "a
+twenty-minute walk from the station", no "forty minutes from the gateway town",
+no "a short drive", no "about an hour by car". Station names, line designations,
+road numbers, directions, distances in miles and bordering relationships are
+published and stable; a duration is not — it varies by time of day, changes with
+every service revision or roadworks, and **no research artifact supports one**,
+which means every duration in the corpus was supplied by an author rather than
+by a verdict.
+
+It is the rule this document's own §10 makes it easiest to break: the moment you
+write "a park's entries are a drive rather than a walk", the next sentence wants
+to be "a forty-minute drive." Do not write it. State the road, the direction and
+the mileage instead.
+
+**Why this is gated rather than trusted, and what it cost when it was not.** A
+prose rule restated in every dispatch and checked in every review is *not*
+enough. The drive-time ban was written into every Connecticut wave's dispatch and
+checked in every review, and it still leaked: one audit found **58 occurrences
+across 28 committed files**, some already live on the public site, that reviewers
+had read past. A duration claim can hide in any of six places a reviewer reads
+separately — the intro, a section body, an FAQ answer, a place summary, a photo
+description, or a link note — and across several waves at least one of the six
+was missed every time.
+
+Two of the three existing directories now gate it mechanically over **every
+string in every seed file**, not just the transit section:
+`test/ethos/seeds/connecticut_seed_data_test.exs:25-58` (nine patterns, ported
+from the detector script used to find the 58) and
+`test/ethos/seeds/brooklyn_seed_data_test.exs:25-73` (eleven patterns, an
+**empty** allowlist, and each pattern's rationale in the comment above it). Port
+the Brooklyn version — it is the later and wider of the two, and its eleventh
+pattern exists because the plainest phrasing of all, "…in 25 minutes", escaped
+all ten of the others. Manhattan has no duration gate at all, which is the point
+of the previous section: the ban is a rule of this document, and whether it is
+enforced in your directory is a thing you decide by writing a test or not.
+
+Two things to keep when you port it. The **allowlist starts empty** and is keyed
+on `{file, json path, matched phrase}` so that pardoning one phrase does not
+excuse the rest of the string; every entry needs a manual read and a stated
+reason in a wave report. And the hour pattern is anchored on a preceding "in"
+rather than a bare `\d+\s*hours?`, because the bare form fires on "open 24
+hours" — a legitimate and common thing to say about a diner. That is the
+cry-wolf discipline of §6 applied here.
+
+**Which rules belong in a test, and which belong to a reviewer.** Rules that
+catch drift — a fixed string quietly reverting, a required element going missing,
+an unverifiable claim creeping in — belong in a test. Rules describing an editorial *range* — word ceilings, entry
 counts, photo counts — belong to the reviewer, because a gate that fails a build
 over a 165-word intro is a gate somebody eventually weakens, and a weakened suite
 is worse than an ungated range.
@@ -691,7 +808,11 @@ things change:
 
 - **The radius is much larger.** A ballpark's entries are a walk; a park's are a
   drive. The entry set is **gateway towns, trailheads, visitor centres and
-  lodges**, not bars within four blocks.
+  lodges**, not bars within four blocks. **This is the sentence that makes the
+  duration ban hardest to keep** — "a drive" invites "a forty-minute drive", and
+  a parks directory with no seed-data test of its own has nothing to stop it.
+  State the road, the direction and the mileage. See §8, and write the test at
+  step 4 before you author anything.
 - **Gateway towns matter more than blocks.** A gateway town may deserve its own
   guide, which raises a genuine design question: is the town an entry on the
   park's guide, or its own guide linked from it? Prefer the entry until a town
@@ -750,7 +871,7 @@ five-part cost before starting.
 
 | what | where |
 |---|---|
-| Geographic hubs, derived | `lib/ethos/guides.ex:88-108`, `lib/ethos/guides/guide.ex:113-123` |
+| Geographic hubs, derived | `lib/ethos/guides.ex:88-108`, `lib/ethos/guides/guide.ex:113-124` |
 | Destination routing | `lib/ethos_web/router.ex:26-28`, `lib/ethos_web/controllers/destination_controller.ex:47-51` |
 | Place kinds and schema types | `lib/ethos/places/place.ex:7`, `lib/ethos_web/controllers/place_html.ex` |
 | Guide upsert | `lib/ethos/seeds/guide_runner.ex` |
@@ -761,6 +882,8 @@ five-part cost before starting.
 | Roster precedent and its test | `priv/seed_data/bare_places_roster.json`, `test/ethos/seeds/bare_places_roster_test.exs` |
 | Content gate | `test/ethos/seeds/place_content_gate_test.exs`, `test/test_helper.exs` |
 | Global slug uniqueness | `test/support/seed_data_helpers.ex:49` |
+| **Per-directory gate to copy** (heading, duration ban, licences, tiers) | `test/ethos/seeds/brooklyn_seed_data_test.exs` — also `connecticut_seed_data_test.exs`, `manhattan_seed_data_test.exs` |
+| Trip-duration / drive-time bans | `brooklyn_seed_data_test.exs:25-73`, `connecticut_seed_data_test.exs:25-58` |
 | Deletion manifest | `priv/seed_data/deleted_places.json` |
 | Authoring contract | `docs/superpowers/plans/2026-08-28-brooklyn-content-rules.md` |
 | Borough-as-county example | `priv/seed_data/brooklyn/dumbo.json` |
