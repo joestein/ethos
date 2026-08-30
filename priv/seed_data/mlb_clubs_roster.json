@@ -9,7 +9,7 @@
 {"city":"Cincinnati","club":"Cincinnati Reds","county":"Hamilton County","slug":"cincinnati-reds","state":"Ohio","venue":"Great American Ball Park","verified":true},
 {"city":"Cleveland","club":"Cleveland Guardians","county":"Cuyahoga County","slug":"cleveland-guardians","state":"Ohio","venue":"Progressive Field","verified":true},
 {"city":null,"club":"Colorado Rockies","county":null,"slug":"colorado-rockies","state":null,"venue":null,"verified":false},
-{"city":null,"club":"Detroit Tigers","county":null,"slug":"detroit-tigers","state":null,"venue":null,"verified":false},
+{"city":"Detroit","club":"Detroit Tigers","county":"Wayne County","slug":"detroit-tigers","state":"Michigan","venue":"Comerica Park","verified":true},
 {"city":null,"club":"Houston Astros","county":null,"slug":"houston-astros","state":null,"venue":null,"verified":false},
 {"city":null,"club":"Kansas City Royals","county":null,"slug":"kansas-city-royals","state":null,"venue":null,"verified":false},
 {"city":null,"club":"Los Angeles Angels","county":null,"slug":"los-angeles-angels","state":null,"venue":null,"verified":false},
