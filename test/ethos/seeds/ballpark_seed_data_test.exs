@@ -319,6 +319,7 @@ defmodule Ethos.Seeds.BallparkSeedDataTest do
   # things a ballpark must ship, which are also the two things a wave can
   # forget to register independently of one another.
   @ballpark_roster [
+    {"chase-field", "chase-field-guide"},
     {"globe-life-field", "globe-life-field-guide"},
     {"tropicana-field", "tropicana-field-guide"},
     {"daikin-park", "daikin-park-guide"},

@@ -1,5 +1,5 @@
 [
-{"city":null,"club":"Arizona Diamondbacks","county":null,"slug":"arizona-diamondbacks","state":null,"venue":null,"verified":false},
+{"city":"Phoenix","club":"Arizona Diamondbacks","county":"Maricopa County","slug":"arizona-diamondbacks","state":"Arizona","venue":"Chase Field","verified":true},
 {"city":"West Sacramento","club":"Athletics","county":"Yolo County","slug":"athletics","state":"California","venue":"Sutter Health Park","verified":true},
 {"city":"Cumberland","club":"Atlanta Braves","county":"Cobb County","slug":"atlanta-braves","state":"Georgia","venue":"Truist Park","verified":true},
 {"city":"Baltimore","club":"Baltimore Orioles","county":"Baltimore City","slug":"baltimore-orioles","state":"Maryland","venue":"Oriole Park at Camden Yards","verified":true},
