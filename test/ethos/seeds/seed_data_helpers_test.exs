@@ -81,6 +81,7 @@ defmodule Ethos.SeedDataHelpersTest do
              "lib/ethos/seeds/oracle_park_places.ex",
              "lib/ethos/seeds/oriole_park_at_camden_yards_places.ex",
              "lib/ethos/seeds/pnc_park_places.ex",
+             "lib/ethos/seeds/progressive_field_places.ex",
              "lib/ethos/seeds/rogers_centre_places.ex",
              "lib/ethos/seeds/sutter_health_park_places.ex",
              "lib/ethos/seeds/wrigley_field_places.ex",
