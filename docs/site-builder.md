@@ -67,10 +67,12 @@ each one is explained in the section named.
 3. **Commit the roster.** N entries, identity fields only, everything researched
    left null. (§2)
 4. **Write the set's own `<set>_seed_data_test.exs`**, modelled on
-   `test/ethos/seeds/brooklyn_seed_data_test.exs`. **Half the gates in this
-   document are per-directory and you do not inherit them** — see below. Write
-   it before the checkpoint, so the checkpoint site is the first thing it
-   checks.
+   `test/ethos/seeds/brooklyn_seed_data_test.exs`, and — if the set keeps places
+   in an Elixir module rather than JSON — **add that module to the three
+   corpus-gate call sites**. Most of the gates in this document are
+   per-directory, and the corpus-wide ones name the code half of the corpus
+   explicitly; you inherit less than it looks like. See below. Write it before
+   the checkpoint, so the checkpoint site is the first thing it checks.
 5. **Run one site end to end and stop.** Research, author, seed, render, review,
    amend this document. (§6)
 6. **Run the rest in waves**, sized to search budget, not to concurrency. (§4)
@@ -85,41 +87,118 @@ someone in a hurry. §6 is about why.
 ### Which gates you inherit, and which you must write
 
 Get this wrong and you will believe a rule is enforced when nothing is checking
-it. The split is mechanical: **a gate that walks the whole corpus is free; a gate
-scoped to one directory is not.**
+it. There are **two** axes, not one, and missing the second is how this section
+was wrong in its first draft:
 
-**Free for a new directory** — these glob `priv/seed_data/*/*.json` through
-`SeedDataHelpers.all_seed_files/0`, so a new `priv/seed_data/<set>/` is covered
+1. **Corpus-wide or per-directory.** A gate that walks
+   `SeedDataHelpers.all_seed_files/0` covers your new directory; one scoped to a
+   named directory does not.
+2. **JSON or code module.** Every corpus-wide gate enumerates the code-module
+   half of the corpus **by name**, and the only name on the list is
+   `Ethos.Seeds.ConnecticutPlaces`.
+
+There are four seed directories today — `brooklyn`, `connecticut`, `manhattan`
+and `destinations` — and four destination tests, one per directory.
+
+#### Free, if your places live in JSON
+
+These walk `priv/seed_data/*/*.json`, so a new `priv/seed_data/<set>/` is covered
 the moment the first file lands:
 
-- `test/ethos/seeds/place_content_gate_test.exs` — the banned-prose patterns
-  across every string, orphaned entries, and manifest/corpus disjointness.
+- `test/ethos/seeds/place_content_gate_test.exs` — the banned-prose patterns over
+  every string, orphaned entries, and manifest/corpus disjointness.
 - `Ethos.SeedDataHelpers.assert_place_slugs_globally_unique!/0`, which every
-  destination test calls and which
-  `test/ethos/seeds/seed_data_helpers_test.exs:55-57` also runs unscoped — so a
-  new directory's slugs are checked against the whole corpus with no work.
-- `test/ethos/seeds/bare_places_roster_test.exs` builds its corpus the same way.
+  destination test calls and which `seed_data_helpers_test.exs:55-57` also runs
+  unscoped.
+- **Loader and changeset validation, through the production path.**
+  `destination_seed_data_test.exs:340-357` seeds *every* file from
+  `all_seed_files/0` through `DataGuide.upsert_places!/1` and
+  `upsert_guide!/2` — the same functions `Ethos.Release` drives — so a malformed
+  file, an invalid `kind`, a non-http `official_url`, an unknown tier or an entry
+  naming a place that does not exist raises there without you writing anything.
+  **Links are deliberately not applied** in that pass, so your `links` array is
+  *not* covered; Brooklyn and Connecticut call `upsert_links!/1` only over their
+  own directories.
 
-**Not free — you must write these yourself.** Every destination test scopes
-itself to **one directory**: Brooklyn through
+#### Not free: anything scoped to a directory
+
+Every destination test scopes itself to one directory — Brooklyn through
 `SeedDataHelpers.seed_files("brooklyn")`
-(`test/ethos/seeds/brooklyn_seed_data_test.exs:14`, helper at
-`test/support/seed_data_helpers.ex:20-25`), Connecticut and Manhattan through
-their own hardcoded globs (`connecticut_seed_data_test.exs:7`,
-`manhattan_seed_data_test.exs:7`). Everything they assert applies to that
-directory alone:
+(`brooklyn_seed_data_test.exs:14`, helper at
+`test/support/seed_data_helpers.ex:20-25`), destination pages through
+`seed_files("destinations")` (`destination_seed_data_test.exs:15`), Connecticut
+and Manhattan through their own hardcoded globs
+(`connecticut_seed_data_test.exs:7`, `manhattan_seed_data_test.exs:7`).
+Everything they assert applies to that directory alone:
 
 - the `Getting there` heading assertion (§8),
 - **the trip-duration ban** (§8) — the single most important one to port,
-- photo licence validation, tier/place-count agreement, orientation-page floors,
+- photo licence validation, label uniqueness, on-disk photo checks and manifest
+  provenance,
+- tier/place-count agreement, orientation-page floors, intro length,
 - roster-to-corpus agreement for that directory,
-- the transit FAQ requirement.
+- the transit FAQ requirement,
+- link resolution over your own files.
 
 A set publishing into `priv/seed_data/nfl-stadiums/` with no test of its own gets
-**none** of that list. Copy `brooklyn_seed_data_test.exs`, change the directory,
-keep the duration ban and the heading assertion verbatim, and drop the
-Brooklyn-specific parts (the borough roster, the photo manifest) rather than
-adapting them if the set has no equivalent.
+**none** of that list.
+
+#### Not free, and easy to miss: a code module is invisible to the corpus gates
+
+This one is sharp, and it applies to the ballpark shape directly, because a set
+holding its places in `lib/ethos/seeds/<set>_places.ex` rather than in JSON is a
+supported and sometimes correct choice.
+
+All three corpus-wide gates read the code half of the corpus as one hardcoded
+call: `place_content_gate_test.exs:118` and `:176`,
+`bare_places_roster_test.exs:66`, and
+`test/support/seed_data_helpers.ex:58` each say
+`Ethos.Seeds.ConnecticutPlaces.places()` and nothing else. **A new places module
+is scanned by none of them.** Concretely, `ballpark_places.ex` would get:
+
+- no banned-prose scan and no address-stub check,
+- no orphaned-entry check,
+- and **no global slug-uniqueness assertion** — so a ballpark place slug
+  colliding with a Brooklyn one is not caught at test time at all. It surfaces as
+  the production unique index firing partway through a seed run that is not
+  transactional, "leaving earlier files published and later ones unseeded", which
+  is the failure `seed_data_helpers.ex`'s own moduledoc opens by describing.
+
+So if your set uses a code module, **extend those three call sites to name it**
+as part of step 4. It is three one-line changes and it is the difference between
+§7's dedup ladder having a bottom rung and not.
+
+#### One gate you inherit without being told, and it names the wrong state
+
+`connecticut_seed_data_test.exs:266-281` globs **every** `lib/ethos/seeds/*.ex`,
+excludes `rome_guide.ex` by name, and runs Connecticut's nine drive-time patterns
+over the raw source text. Your guide module is not on the exclusion list, so a
+new set's module containing "a 20-minute walk" fails a test called *"connecticut
+prose in lib/ethos/seeds/\*.ex is free of banned drive-time phrasing"*.
+
+That is the correct outcome reached by a confusing route, and it is worth knowing
+in advance rather than debugging at 2am: **the failure is real, the rule is one
+you should be following anyway (§8), and the test name points at the wrong
+state.**
+
+It exists because the gap was live. `burys_collection.ex` and
+`middlebury_guide.ex` shipped "within a short drive", "ten minutes east", "ten
+minutes southwest" and "about ten minutes away" **to production**, because the
+JSON-only glob never read code-module source. If your set adds a places module or
+guide modules, that scan is the only duration coverage they have.
+
+#### What you do not inherit, despite appearances
+
+`bare_places_roster_test.exs` reads through `all_seed_files/0`, but it **gates
+nothing of yours**. It asserts a fixed count of 424 entries and *one-way*
+membership — every roster row must match a corpus place. Adding a directory only
+enlarges the corpus, so a new set can never fail it. It is a precedent to copy
+(§2), not coverage you receive.
+
+Copy `test/ethos/seeds/brooklyn_seed_data_test.exs` for the per-directory shape,
+change the directory, take the duration gate from `destination_seed_data_test.exs`
+(§8 says why), and drop the parts your set has no equivalent of rather than
+adapting them.
 
 ---
 
@@ -349,13 +428,20 @@ These bind every wave. Restate the list in each dispatch; do not paraphrase it.
    — **the same list still carrying a company Connecticut revoked in 2013.** A
    list that looks authoritative and is years stale is exactly what recollection
    feels like from the inside, and both were caught only because identity was
-   verified rather than assumed. That guide ships sixteen dealers, not the
-   seventeen researched.
+   verified rather than assumed. That guide ships sixteen dealers, two researched
+   ones having been excluded.
+
+   Both exclusions are **gated, not merely documented** —
+   `connecticut_places_test.exs:54-74` asserts neither slug nor the mislocated
+   business's address ever reappears, and `antique_trail_test.exs:81-89` asserts
+   the guide names neither. That is the pattern to copy when research excludes
+   something: a test, so a later wave cannot quietly restore it.
 
    Nearest instance of the pure form, one domain over: during the same
    programme an agent wrote a module docstring asserting that a controller
-   already served 410 Gone for deleted slugs. Nothing in `lib/` matched 410 —
-   the feature was two tasks away from existing. It was confident, checkable,
+   already served 410 Gone for deleted slugs. Nothing in `lib/` matched 410 at
+   the time — the feature was two tasks away from existing, and only shipped
+   later (`place_controller.ex:90`). It was confident, checkable,
    wrong, and it was caught by an implementer reading the code rather than by a
    reviewer reading the prose. Treat "which team plays where" the same way.
 
@@ -575,8 +661,15 @@ Place slugs carry a database unique index, and
 slug. It is directory-qualified, because two destinations may hold the same
 basename and a basename comparison would hide a genuine cross-destination
 collision; and it groups on `length(owners) > 1` rather than uniqueness, because
-two places sharing a slug *inside one file* collide too. You get this for
-nothing. It catches exactly one thing: the same slug twice.
+two places sharing a slug *inside one file* collide too. It catches exactly one
+thing: the same slug twice.
+
+**You get it for nothing only if your places are in JSON.** Its code-module half
+is the single hardcoded line `Ethos.Seeds.ConnecticutPlaces.places()`
+(`test/support/seed_data_helpers.ex:58`), so a set holding places in its own
+module has **no rung (a) at all** until that line names it too — the collision
+then surfaces as the production unique index firing mid-seed rather than as a red
+test. §1 has the three call sites to extend.
 
 **(b) Address matching before minting a slug — a contract step, not a tool.**
 Before creating any place, the finder checks the existing corpus for that street
@@ -694,30 +787,60 @@ separately — the intro, a section body, an FAQ answer, a place summary, a phot
 description, or a link note — and across several waves at least one of the six
 was missed every time.
 
-Two of the three existing directories now gate it mechanically over **every
-string in every seed file**, not just the transit section:
-`test/ethos/seeds/connecticut_seed_data_test.exs:25-58` (nine patterns, ported
-from the detector script used to find the 58) and
-`test/ethos/seeds/brooklyn_seed_data_test.exs:25-73` (eleven patterns, an
-**empty** allowlist, and each pattern's rationale in the comment above it). Port
-the Brooklyn version — it is the later and wider of the two, and its eleventh
-pattern exists because the plainest phrasing of all, "…in 25 minutes", escaped
-all ten of the others. Manhattan has no duration gate at all, which is the point
-of the previous section: the ban is a rule of this document, and whether it is
-enforced in your directory is a thing you decide by writing a test or not.
+Three of the four existing directories now gate it mechanically over **every
+string in every seed file**, not just the transit section. There are three copies
+and **they are not equivalent** — take the last one:
 
-Two things to keep when you port it. The **allowlist starts empty** and is keyed
-on `{file, json path, matched phrase}` so that pardoning one phrase does not
-excuse the rest of the string; every entry needs a manual read and a stated
+| copy | patterns | has specimen assertions? |
+|---|---:|---|
+| `connecticut_seed_data_test.exs:25-58` | 9, ported from the detector script used to find the 58 | no |
+| `brooklyn_seed_data_test.exs:25-73` | 11 | no |
+| **`destination_seed_data_test.exs:36-112`** | **11, byte-identical to Brooklyn's** | **yes — `:100-112`, asserted at `:457`** |
+
+**Port the destination copy, and carry `@trip_duration_specimens` with it.**
+The eleventh pattern in all three exists because the plainest phrasing of all,
+"…in 25 minutes", escaped the other ten. But eleven patterns are load-bearing
+only *in aggregate*: the `trip_duration.json` fixture fires patterns 1, 2 and 3,
+so **4 through 11 could be deleted wholesale, or quietly weakened, and the suite
+would stay green.** The destination copy closes that with one specimen per
+pattern — a phrasing only that pattern was written to catch — and a test
+asserting each fires on its own indexed line. Its comment at `:87-94` names the
+hole and says outright: *"The Brooklyn gate has the same gap."*
+
+Porting the copy that cannot tell you when it has been weakened, into a document
+whose §6 is about gates that get weakened, would be the same mistake twice. Take
+the specimens.
+
+Carry its comment at `:36-41` too — **"Do not re-derive, condense or 'improve'
+one of these: a subtly weaker pattern is exactly the failure the gate exists to
+prevent, and it does not show up as a test failure."** That is the rule about
+copies generally, and it is why the table above ranks by *what each copy can
+prove about itself* rather than by pattern count.
+
+Manhattan has no duration gate at all, which is the point of the previous
+section: the ban is a rule of this document, and whether it is enforced in your
+directory is something you decide by writing a test or not.
+
+Two more things to keep when you port. The **allowlist starts empty** and is
+keyed on `{file, json path, matched phrase}` so that pardoning one phrase does
+not excuse the rest of the string; every entry needs a manual read and a stated
 reason in a wave report. And the hour pattern is anchored on a preceding "in"
 rather than a bare `\d+\s*hours?`, because the bare form fires on "open 24
 hours" — a legitimate and common thing to say about a diner. That is the
 cry-wolf discipline of §6 applied here.
 
+**And if your set authors any prose in Elixir**, the JSON gate does not see it.
+`burys_collection.ex` and `middlebury_guide.ex` shipped "within a short drive",
+"ten minutes east", "ten minutes southwest" and "about ten minutes away" **to
+production** for exactly that reason. `connecticut_seed_data_test.exs:266-281`
+now scans every `lib/ethos/seeds/*.ex` as raw text — see §1, including why it
+will fail your module under a Connecticut-sounding test name.
+
 **Which rules belong in a test, and which belong to a reviewer.** Rules that
 catch drift — a fixed string quietly reverting, a required element going missing,
-an unverifiable claim creeping in — belong in a test. Rules describing an editorial *range* — word ceilings, entry
-counts, photo counts — belong to the reviewer, because a gate that fails a build
+an unverifiable claim creeping in — belong in a test. Rules describing an
+editorial *range* — word ceilings, entry counts, photo counts — belong to the
+reviewer, because a gate that fails a build
 over a 165-word intro is a gate somebody eventually weakens, and a weakened suite
 is worse than an ungated range.
 
@@ -882,8 +1005,12 @@ five-part cost before starting.
 | Roster precedent and its test | `priv/seed_data/bare_places_roster.json`, `test/ethos/seeds/bare_places_roster_test.exs` |
 | Content gate | `test/ethos/seeds/place_content_gate_test.exs`, `test/test_helper.exs` |
 | Global slug uniqueness | `test/support/seed_data_helpers.ex:49` |
-| **Per-directory gate to copy** (heading, duration ban, licences, tiers) | `test/ethos/seeds/brooklyn_seed_data_test.exs` — also `connecticut_seed_data_test.exs`, `manhattan_seed_data_test.exs` |
-| Trip-duration / drive-time bans | `brooklyn_seed_data_test.exs:25-73`, `connecticut_seed_data_test.exs:25-58` |
+| **Per-directory gate to copy** (heading, licences, tiers, links) | `test/ethos/seeds/brooklyn_seed_data_test.exs` — also `connecticut_`, `manhattan_`, `destination_seed_data_test.exs` |
+| **Duration gate to copy** — the only copy that proves its own patterns | `destination_seed_data_test.exs:36-112`, specimens at `:100-112`, asserted at `:457` |
+| Other duration/drive-time copies (no specimen assertions) | `brooklyn_seed_data_test.exs:25-73`, `connecticut_seed_data_test.exs:25-58` |
+| Duration scan over **code modules** — will fail your module under a Connecticut name | `connecticut_seed_data_test.exs:266-281` |
+| Corpus-wide loader/changeset validation, free for JSON | `destination_seed_data_test.exs:340-357` |
+| The three call sites to extend for a **code-module** places file | `place_content_gate_test.exs:118`, `:176`; `bare_places_roster_test.exs:66`; `test/support/seed_data_helpers.ex:58` |
 | Deletion manifest | `priv/seed_data/deleted_places.json` |
 | Authoring contract | `docs/superpowers/plans/2026-08-28-brooklyn-content-rules.md` |
 | Borough-as-county example | `priv/seed_data/brooklyn/dumbo.json` |
