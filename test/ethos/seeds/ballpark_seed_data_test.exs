@@ -307,6 +307,99 @@ defmodule Ethos.Seeds.BallparkSeedDataTest do
     assert "wrigley_field_guide.ex" in names
   end
 
+  # --- The set's roster, and its structure ---------------------------------
+  #
+  # A literal list, not a count and not a set derived from what the catalog
+  # happens to hold, for the reason destination_seed_data_test.exs states about
+  # its own thirteen destination pages: a derived expectation passes no matter
+  # which modules exist, which is exactly the vacuity it exists to prevent.
+  #
+  # An accidental deletion fails here; so does an unreviewed twelfth ballpark
+  # landing silently. Each row is `{venue place slug, guide slug}` — the two
+  # things a ballpark must ship, which are also the two things a wave can
+  # forget to register independently of one another.
+  @ballpark_roster [
+    {"busch-stadium", "busch-stadium-guide"},
+    {"citi-field", "citi-field-guide"},
+    {"dodger-stadium", "dodger-stadium-guide"},
+    {"fenway-park", "fenway-park-guide"},
+    {"nationals-park", "nationals-park-guide"},
+    {"oracle-park", "oracle-park-guide"},
+    {"oriole-park-at-camden-yards", "oriole-park-at-camden-yards-guide"},
+    {"rogers-centre", "rogers-centre-guide"},
+    {"sutter-health-park", "sutter-health-park-guide"},
+    {"wrigley-field", "wrigley-field-guide"},
+    {"yankee-stadium-bronx", "yankee-stadium-guide"}
+  ]
+
+  test "the set ships exactly the rostered ballparks, each as a stadium place" do
+    stadium_slugs =
+      for {p, o} <- Catalog.places_owned(),
+          o.region == "ballparks",
+          p.kind == "stadium",
+          do: to_string(p.slug)
+
+    expected = Enum.map(@ballpark_roster, &elem(&1, 0))
+
+    assert Enum.sort(stadium_slugs) == Enum.sort(expected),
+           "the ballpark set's `stadium` places disagree with the roster — missing: " <>
+             inspect(Enum.sort(expected -- stadium_slugs)) <>
+             ", unexpected: " <> inspect(Enum.sort(stadium_slugs -- expected))
+
+    guide_slugs =
+      for {mod, _r} <- Catalog.guide_modules("ballparks"), do: mod.data().slug
+
+    assert Enum.sort(guide_slugs) == Enum.sort(Enum.map(@ballpark_roster, &elem(&1, 1))),
+           "the ballpark guides disagree with the roster: #{inspect(Enum.sort(guide_slugs))}"
+  end
+
+  # docs/site-builder.md and the set's dispatch: every ballpark guide carries at
+  # least these three sections. A guide that quietly ships two of them still
+  # renders, still seeds, and fails nothing else — which is why this is
+  # mechanical rather than left to review.
+  @required_headings ["Getting there", "Around the ballpark", "The ballpark and the team"]
+
+  test "every ballpark guide carries the three required sections, and names a county" do
+    guides = Catalog.guide_modules("ballparks")
+
+    # Non-vacuous: an empty catalog region would pass every assertion below.
+    assert length(guides) >= 2
+
+    for {mod, _r} <- guides do
+      data = mod.data()
+      headings = Enum.map(data.sections, & &1["heading"])
+
+      for required <- @required_headings do
+        assert required in headings,
+               "#{inspect(mod)} has no #{inspect(required)} section; it has #{inspect(headings)}"
+      end
+
+      # county is what derives /destinations/{state}/{county}, and a place
+      # breadcrumb 404s without it. Two sites in this set carry a county that
+      # repeats the city or the state on purpose — Baltimore City, St. Louis,
+      # Toronto, District of Columbia — so the assertion is that the field is
+      # populated, not that it differs from its neighbours.
+      assert is_binary(data.state) and data.state != ""
+      assert is_binary(data.county) and data.county != ""
+      assert is_binary(data.destination) and data.destination != ""
+    end
+  end
+
+  # Every ballpark place is fully addressed for the destination hubs, which
+  # group by town, state and county. A nil county on one record breaks that
+  # record's breadcrumb and nothing else, so nothing else would report it.
+  test "every ballpark place carries a town, a state and a county" do
+    bare =
+      for {p, o} <- Catalog.places_owned(),
+          o.region == "ballparks",
+          field <- [:town, :state, :county],
+          value = Map.get(p, field),
+          not (is_binary(value) and value != ""),
+          do: {to_string(p.slug), field}
+
+    assert bare == [], "ballpark places missing hub fields: #{inspect(bare)}"
+  end
+
   test "no ballpark seed prose states a trip duration" do
     violations =
       for {file, text} <- ballpark_sources(),
