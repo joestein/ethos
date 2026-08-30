@@ -71,7 +71,9 @@ each one is explained in the section named.
    your set are written in Elixir to the corpus-gate call sites** — the two
    triggers are independent, so check each:
    - **places in an Elixir module** → four call sites, plus a seed call so the
-     places exist before any guide's entries resolve.
+     places exist before any guide's entries resolve. (The seed call is needed
+     only if some guide names those places — count four if none does. The
+     checklist says five because that is the safe way to be wrong.)
    - **guides in Elixir modules** → one call site, the guide list.
    - **both** → six edits. **Neither** (all JSON) → none.
 
@@ -106,8 +108,9 @@ was wrong in its first draft:
 2. **JSON or code module.** No corpus-wide gate discovers Elixir seed modules;
    each one enumerates them **by name**, and this is true of **both halves** —
    places modules *and* guide modules. The places lists hold exactly one name,
-   `Ethos.Seeds.ConnecticutPlaces`. The guide list holds seven, and is a
-   different list in a different file.
+   `Ethos.Seeds.ConnecticutPlaces`. The guide side holds six more, in a
+   different list in a different file — plus a seventh name standing outside
+   that list.
 
 There are four seed directories today — `brooklyn`, `connecticut`, `manhattan`
 and `destinations` — and four destination tests, one per directory.
@@ -183,7 +186,7 @@ destination page is actually served from. **A set adding
 `illinois/cook-county` fails that test until the roster is extended by hand** —
 and if the set's guides are Elixir modules, extending the roster is not enough,
 because the path never enters `legitimate_paths/0` in the first place. See the
-guide-module table below.
+code-module call sites below.
 
 And know that you may not need the file at all. Destination pages are optional:
 the hubs are `GROUP BY`-derived (§3), and `DestinationController` handles a
@@ -814,7 +817,8 @@ is the single hardcoded line `Ethos.Seeds.ConnecticutPlaces.places()`
 (`test/support/seed_data_helpers.ex:58`), so a set holding places in its own
 module has **no rung (a) at all** until that line names it too — the collision
 then surfaces as the production unique index firing mid-seed rather than as a red
-test. §1 has the call sites to extend — four for places, plus one for guides.
+test. §1 has the call sites to extend — four for places, one for guides, and a
+seed call so a module's places exist before entries resolve.
 
 **(b) Address matching before minting a slug — a contract step, not a tool.**
 Before creating any place, the finder checks the existing corpus for that street
