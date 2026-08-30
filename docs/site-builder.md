@@ -68,8 +68,8 @@ each one is explained in the section named.
    left null. (§2)
 4. **Write the set's own `<set>_seed_data_test.exs`**, modelled on
    `test/ethos/seeds/brooklyn_seed_data_test.exs`, and — if the set keeps places
-   in an Elixir module rather than JSON — **add that module to the four
-   corpus-gate call sites**. Most of the gates in this document are
+   in Elixir modules rather than JSON — **add them to the five corpus-gate call
+   sites** (four for places, one for guides). Most of the gates in this document are
    per-directory, and the corpus-wide ones name the code half of the corpus
    explicitly; you inherit less than it looks like. See below. Write it before
    the checkpoint, so the checkpoint site is the first thing it checks.
@@ -97,9 +97,11 @@ was wrong in its first draft:
    (`test/support/seed_data_helpers.ex:27-43`), and that exclusion is pinned by
    its own test at `seed_data_helpers_test.exs:38-53`. See the note on
    `destinations/` below.
-2. **JSON or code module.** Every corpus-wide gate enumerates the code-module
-   half of the corpus **by name**, and the only name on the list is
-   `Ethos.Seeds.ConnecticutPlaces`.
+2. **JSON or code module.** No corpus-wide gate discovers Elixir seed modules;
+   each one enumerates them **by name**, and this is true of **both halves** —
+   places modules *and* guide modules. The places lists hold exactly one name,
+   `Ethos.Seeds.ConnecticutPlaces`. The guide list holds seven, and is a
+   different list in a different file.
 
 There are four seed directories today — `brooklyn`, `connecticut`, `manhattan`
 and `destinations` — and four destination tests, one per directory.
@@ -116,12 +118,14 @@ the note below:
   destination tests call it (`brooklyn:242`, `manhattan:23`, `connecticut:99`;
   the destination-page test does not), and `seed_data_helpers_test.exs:55-57`
   runs it unscoped — which is the run that covers you.
-- **Loader and changeset validation, through the production path.**
-  `destination_seed_data_test.exs:340-357` seeds *every* file from
+- **Loader and changeset validation, through the production path — for JSON
+  files only.** `destination_seed_data_test.exs:340-357` seeds *every* file from
   `all_seed_files/0` through `DataGuide.upsert_places!/1` and
   `upsert_guide!/2` — the same functions `Ethos.Release` drives — so a malformed
   file, an invalid `kind`, a non-http `official_url`, an unknown tier or an entry
   naming a place that does not exist raises there without you writing anything.
+  **A guide written as an Elixir module gets none of this**; see the guide-module
+  row below.
   **Links are deliberately not applied** in that pass, so your `links` array is
   *not* covered; `upsert_links!/1` runs only where each directory's own test
   calls it (`brooklyn:314`, `connecticut:231`, `manhattan:44` — with Brooklyn and
@@ -170,33 +174,62 @@ What you must do by hand is get the file admitted. `@destination_roster`
 (`destination_seed_data_test.exs:288-302`) is a **literal thirteen-path list**,
 and `unresolvable_path_violations` additionally requires the path to be one a
 destination page is actually served from. **A set adding
-`illinois/cook-county` fails that test until the roster is extended by hand.**
+`illinois/cook-county` fails that test until the roster is extended by hand** —
+and if the set's guides are Elixir modules, extending the roster is not enough,
+because the path never enters `legitimate_paths/0` in the first place. See the
+guide-module table below.
 
 And know that you may not need the file at all. Destination pages are optional:
 the hubs are `GROUP BY`-derived (§3), and `DestinationController` handles a
-missing record — `destination_controller.ex:69` passes `nil` through. A
-destination record adds an intro and photos to a hub that already exists without
-one. Add them where a set's hubs deserve editorial copy, not as a step you owe.
+missing record on every branch — town at `destination_controller.ex:69`, state at
+`:101`, county at `:137`, each passing `nil` through to a template that gates on
+it. A destination record adds an intro and photos to a hub that already exists
+without one. Add them where a set's hubs deserve editorial copy, not as a step
+you owe.
+
+**The general case behind this, for any non-guide directory.** `@non_guide_dirs`
+is a literal list holding one entry. A *second* non-guide directory under
+`priv/seed_data/` is therefore picked up by `all_seed_files/0`, handed to
+`DataGuide.load!/1`, and raises through `validate_shape!` on the missing
+`guide`/`places`/`entries` keys — taking **every** corpus-wide gate down with it,
+not just its own. That failure is loud and immediate, so the risk is low; but if
+your set needs a directory that is not a guide corpus, add it to `@non_guide_dirs`
+in the same change that creates it.
 
 #### Not free, and easy to miss: a code module is invisible to the corpus gates
 
 This one is sharp, and it applies to the ballpark shape directly, because a set
-holding its places in `lib/ethos/seeds/<set>_places.ex` rather than in JSON is a
-supported and sometimes correct choice.
+holding its places in `lib/ethos/seeds/<set>_places.ex` and its guides in
+`lib/ethos/seeds/<set>_guide.ex` rather than in JSON is a supported and sometimes
+correct choice — it is the shape `connecticut_places.ex` and the five town guide
+modules already use.
 
-The corpus-wide gates read the code half of the corpus as a hardcoded call to
-`Ethos.Seeds.ConnecticutPlaces.places()`, and nothing else. **There are four such
-call sites, in three files — count the lines, not the files:**
+**There are two lists, not one, and fixing the places half fixes half the
+problem.** Read both tables below before concluding you are covered.
+
+##### The places half — four call sites, in three files
+
+The corpus-wide gates read the places half of the code corpus as a hardcoded call
+to `Ethos.Seeds.ConnecticutPlaces.places()`, and nothing else. **Count the lines,
+not the files:**
 
 | file | line | what it feeds |
 |---|---|---|
 | `place_content_gate_test.exs` | `:118` | `corpus_slugs/0` — the orphaned-entry and deleted-place checks |
-| `place_content_gate_test.exs` | **`:176`** | `prose/0` — **the banned-prose scan itself** |
+| `place_content_gate_test.exs` | **`:176`** | `prose/0` — **the banned-prose scan itself** (§6: excluded today) |
 | `bare_places_roster_test.exs` | `:66` | the roster's corpus tuple |
 | `test/support/seed_data_helpers.ex` | `:58` | `assert_place_slugs_globally_unique!/0` |
 
 The second row is the one an implementer who counts files instead of lines drops,
-and it is the banned-prose scan — the entire reason this subsection exists.
+and it is the banned-prose scan — the reason this subsection exists at all.
+
+One honest caveat on that row: both tests `prose/0` feeds carry
+`@tag :pending_wave` and are excluded by default — they are the "2 excluded" in
+every `mix test` line. **Extending `:176` buys you nothing until that exclusion
+lifts**, which is §6's own rule ("an excluded gate is not a gate") pointing at
+this document. Extend it anyway: the exclusion is a deferral with a numbered
+re-enabling step attached, and a call site that was never extended is how a gate
+comes back on and silently skips your set.
 
 **A new places module is scanned by none of the four.** Concretely,
 `ballpark_places.ex` would get:
@@ -209,14 +242,41 @@ and it is the banned-prose scan — the entire reason this subsection exists.
   transactional, "leaving earlier files published and later ones unseeded", which
   is the failure `seed_data_helpers.ex`'s own moduledoc opens by describing.
 
-So if your set uses a code module, **extend all four call sites to name it** as
-part of step 4. It is four one-line changes and it is the difference between §7's
-dedup ladder having a bottom rung and not.
+So if your places live in a module, **extend all four call sites above to name
+it** as part of step 4. It is four one-line changes and it is the difference
+between §7's dedup ladder having a bottom rung and not. It is not, on its own,
+the whole fix — read the guide half below.
 
 Extend `lib/mix/tasks/ethos.bare_places.ex:69` and `:79` with them. That task is
 not a gate, so nothing breaks if you skip it — but it is the generator behind
 §2's roster precedent, and a code-module set is invisible to it too, which means
 the roster it produces would silently omit every place in your module.
+
+##### The guide half — one list of seven, in one function
+
+`seed_guide_corpus!` (`destination_seed_data_test.exs:340-352`) is the
+corpus-wide loader gate listed as free above. It takes its **JSON** files from
+`all_seed_files/0`, which discovers them, but its **Elixir** guides from a
+hardcoded list of seven: `ConnecticutPlaces.upsert_all!()` plus
+`WaterburyGuide`, `MiddleburyGuide`, `DanburyGuide`, `SouthburyGuide`,
+`WoodburyGuide` and `RomeGuide`.
+
+Two consequences, both distinct from the places half:
+
+- **A set whose guides are Elixir modules gets no free loader or changeset
+  validation at all.** Everything the free list promises — shape, `kind`
+  inclusion, `official_url` scheme, entry resolution — is reached by seeding, and
+  your modules are never seeded there. The places half was only half the blind
+  spot.
+- **Your destination slugs never enter `legitimate_paths/0`.** That set is built
+  from the corpus this function seeds, so a `destinations/` file your set ships
+  fails `unresolvable_path_violations` — and it fails for a reason the roster
+  paragraph below does not predict, because the path is missing from the
+  *universe*, not from the *roster*. Extending `@destination_roster` alone will
+  not fix it.
+
+So a code-module set has **five** places to extend, not four: the four in the
+table above, plus the guide list at `destination_seed_data_test.exs:343-350`.
 
 #### One gate you inherit without being told, and it names the wrong state
 
@@ -719,7 +779,7 @@ is the single hardcoded line `Ethos.Seeds.ConnecticutPlaces.places()`
 (`test/support/seed_data_helpers.ex:58`), so a set holding places in its own
 module has **no rung (a) at all** until that line names it too — the collision
 then surfaces as the production unique index firing mid-seed rather than as a red
-test. §1 has the four call sites to extend.
+test. §1 has the call sites to extend — four for places, plus one for guides.
 
 **(b) Address matching before minting a slug — a contract step, not a tool.**
 Before creating any place, the finder checks the existing corpus for that street
@@ -1060,7 +1120,8 @@ five-part cost before starting.
 | Other duration/drive-time copies (no specimen assertions) | `brooklyn_seed_data_test.exs:25-73`, `connecticut_seed_data_test.exs:25-58` |
 | Duration scan over **code modules** — will fail your module under a Connecticut name | `connecticut_seed_data_test.exs:266-281` |
 | Corpus-wide loader/changeset validation, free for JSON | `destination_seed_data_test.exs:340-357` |
-| The **four** call sites to extend for a code-module places file | `place_content_gate_test.exs:118` **and `:176`**; `bare_places_roster_test.exs:66`; `test/support/seed_data_helpers.ex:58` |
+| The **four** call sites to extend for a code-module **places** file | `place_content_gate_test.exs:118` **and `:176`**; `bare_places_roster_test.exs:66`; `test/support/seed_data_helpers.ex:58` |
+| The **fifth**, for code-module **guides** — also feeds `legitimate_paths/0` | `destination_seed_data_test.exs:343-350` (`seed_guide_corpus!`, seven hardcoded names) |
 | Roster generator, same blind spot (not a gate) | `lib/mix/tasks/ethos.bare_places.ex:69`, `:79` |
 | Deletion manifest | `priv/seed_data/deleted_places.json` |
 | Authoring contract | `docs/superpowers/plans/2026-08-28-brooklyn-content-rules.md` |
