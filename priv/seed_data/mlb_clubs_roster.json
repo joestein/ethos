@@ -13,7 +13,7 @@
 {"city":null,"club":"Houston Astros","county":null,"slug":"houston-astros","state":null,"venue":null,"verified":false},
 {"city":null,"club":"Kansas City Royals","county":null,"slug":"kansas-city-royals","state":null,"venue":null,"verified":false},
 {"city":null,"club":"Los Angeles Angels","county":null,"slug":"los-angeles-angels","state":null,"venue":null,"verified":false},
-{"city":null,"club":"Los Angeles Dodgers","county":null,"slug":"los-angeles-dodgers","state":null,"venue":null,"verified":false},
+{"city":"Los Angeles","club":"Los Angeles Dodgers","county":"Los Angeles County","slug":"los-angeles-dodgers","state":"California","venue":"Dodger Stadium","verified":true},
 {"city":null,"club":"Miami Marlins","county":null,"slug":"miami-marlins","state":null,"venue":null,"verified":false},
 {"city":null,"club":"Milwaukee Brewers","county":null,"slug":"milwaukee-brewers","state":null,"venue":null,"verified":false},
 {"city":null,"club":"Minnesota Twins","county":null,"slug":"minnesota-twins","state":null,"venue":null,"verified":false},
