@@ -6,7 +6,7 @@
 {"city":"Boston","club":"Boston Red Sox","county":"Suffolk County","slug":"boston-red-sox","state":"Massachusetts","venue":"Fenway Park","verified":true},
 {"city":"Chicago","club":"Chicago Cubs","county":"Cook County","slug":"chicago-cubs","state":"Illinois","venue":"Wrigley Field","verified":true},
 {"city":null,"club":"Chicago White Sox","county":null,"slug":"chicago-white-sox","state":null,"venue":null,"verified":false},
-{"city":null,"club":"Cincinnati Reds","county":null,"slug":"cincinnati-reds","state":null,"venue":null,"verified":false},
+{"city":"Cincinnati","club":"Cincinnati Reds","county":"Hamilton County","slug":"cincinnati-reds","state":"Ohio","venue":"Great American Ball Park","verified":true},
 {"city":null,"club":"Cleveland Guardians","county":null,"slug":"cleveland-guardians","state":null,"venue":null,"verified":false},
 {"city":null,"club":"Colorado Rockies","county":null,"slug":"colorado-rockies","state":null,"venue":null,"verified":false},
 {"city":null,"club":"Detroit Tigers","county":null,"slug":"detroit-tigers","state":null,"venue":null,"verified":false},
