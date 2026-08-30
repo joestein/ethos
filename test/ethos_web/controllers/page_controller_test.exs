@@ -11,6 +11,27 @@ defmodule EthosWeb.PageControllerTest do
     assert html =~ "Make your guide"
   end
 
+  # The home page renders with `layout: false`, so it does not inherit the app
+  # layout's header. It had none at all, which meant a logged-out visitor
+  # landing on the front door got no search box and no way into the
+  # destinations — while every other page on the site gave them both.
+  test "GET / carries the header's search and Destinations link while logged out", %{conn: conn} do
+    html = conn |> get(~p"/") |> html_response(200)
+
+    refute html =~ "Log out"
+    assert html =~ ~s(action="/search")
+    assert html =~ ~s(name="q")
+    assert html =~ ~s(href="/destinations")
+  end
+
+  test "GET / does not offer signed-in navigation to a logged-out visitor", %{conn: conn} do
+    html = conn |> get(~p"/") |> html_response(200)
+
+    refute html =~ "Your guides"
+    refute html =~ "Badges"
+    refute html =~ "Admin"
+  end
+
   test "GET / features a published guide when one exists", %{conn: conn} do
     guide = published_guide_fixture(%{title: "Featured Lisbon"})
     Guides.increment_view_count(guide)
