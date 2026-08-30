@@ -106,7 +106,7 @@ defmodule Ethos.Seeds.ConnecticutPlaces do
         address: "1 Plank Road, Waterbury, CT 06705",
         official_url: "https://sevenangelstheatre.org/",
         summary:
-          "Greater Waterbury's professional regional theatre, staging musical theatre, comedy, concerts, and educational programs with local and national talent.",
+          "A Waterbury theatre staging musical theatre, comedy, and concert tributes, and running education programs, among them the in-house Halo Awards.",
         photos: []
       }),
       Map.merge(@waterbury, %{
@@ -182,7 +182,7 @@ defmodule Ethos.Seeds.ConnecticutPlaces do
         address: "2066 Thomaston Avenue, Waterbury, CT 06704",
         official_url: "https://www.brassworksbrewing.com/",
         summary:
-          "Waterbury's brewery, named for the city's brass heritage, pouring nine-plus house beers in a Thomaston Avenue taproom with rotating food trucks.",
+          "A Thomaston Avenue brewery and taproom whose beers include Abel Porter, Blood Orange Farmhouse Ale, Brass Nail Session NEIPA, Filthy Bird, Fowl'd Up NEIPA, Mango Habanero NEIPA, Naugy Light, Sasso's American Boxer Ale, and Sweaty Sisters Blonde Ale, on tap and in 4-packs, alongside food trucks and an in-house menu.",
         photos: []
       }),
       Map.merge(@waterbury, %{
@@ -192,7 +192,7 @@ defmodule Ethos.Seeds.ConnecticutPlaces do
         address: "159 Manor Avenue, Waterbury, CT 06705",
         official_url: "https://sweet-marias.com/",
         summary:
-          "A beloved Waterbury bakery on Manor Avenue known for cakes, cookies, cupcakes, and biscotti — the owner has published a shelf of branded cookbooks.",
+          "A Manor Avenue bakery selling cakes, cookies, cupcakes, biscotti, and pignoli, plus cookbooks and branded merchandise. Open Tuesday to Friday 10am-6pm, Saturday 8am-2pm, and Sunday 8am-12pm.",
         photos: []
       }),
       Map.merge(@waterbury, %{
@@ -202,7 +202,7 @@ defmodule Ethos.Seeds.ConnecticutPlaces do
         address: "540 Plank Road, Waterbury, CT 06705",
         official_url: "https://www.nardellis.com/",
         summary:
-          "A Waterbury institution founded in 1922 and family-owned for three generations — repeatedly voted among Connecticut's best grinders, with two locations in the city.",
+          "A grinder shop with two Waterbury locations, on Watertown Avenue and Plank Road, and further branches across Connecticut. The menu runs to cold grinders such as an Italian Combo, hot grinders such as a baked stuffed pastrami, green salads, Italian wedding soup, and cannoli.",
         photos: []
       }),
       Map.merge(@waterbury, %{
@@ -212,7 +212,7 @@ defmodule Ethos.Seeds.ConnecticutPlaces do
         address: "700 Watertown Avenue, Waterbury, CT 06708",
         official_url: "https://www.frankieshotdogs.com/",
         summary:
-          "A drive-in hot dog institution born in Waterbury in 1937 and still family-owned, with three locations around the city.",
+          "A hot dog restaurant with three Waterbury locations — 700 Watertown Avenue, 464 Reidville Drive, and 348 Chase Avenue — and others in Naugatuck, Meriden, Plainville, and West Haven. The menu covers hot dogs, including sauerkraut dogs, burgers, seafood, and sides such as curly fries, and a separate arm, Frankie's Catering, runs alongside it.",
         photos: []
       }),
       Map.merge(@waterbury, %{
@@ -289,7 +289,7 @@ defmodule Ethos.Seeds.ConnecticutPlaces do
         address: "1365 Whittemore Road, Middlebury, CT 06762",
         official_url: "https://www.vynerestaurant.com/",
         summary:
-          "Middlebury's fine-dining room: contemporary American with locally sourced ingredients, built on a family restaurant legacy on this site dating to the 1940s.",
+          "A Middlebury dining room serving organic half chicken, a dry-aged burger, jumbo lump crab cakes, and seared scallops, with separate dinner, lunch, brunch, and catering menus.",
         photos: []
       }),
       Map.merge(@middlebury, %{
@@ -309,7 +309,7 @@ defmodule Ethos.Seeds.ConnecticutPlaces do
         address: "1 Store Road, Middlebury, CT 06762",
         official_url: "https://www.piesandpub.com/",
         summary:
-          "Hand-tossed pizza and wings with 26 rotating craft drafts — a casual local anchor just off the Green.",
+          "Hand-tossed artisan pizza, slow-cooked wings, fresh salads, and burgers, with 26 rotating craft beers on draft, at One Store Road in Middlebury.",
         photos: []
       }),
       Map.merge(@middlebury, %{
@@ -319,7 +319,7 @@ defmodule Ethos.Seeds.ConnecticutPlaces do
         address: "590 Middlebury Road, Middlebury, CT 06762",
         official_url: "https://thekitchen64.com/",
         summary:
-          "The town's breakfast-and-brunch spot, open daily from 6:30 AM — eggs Benedict, French toast, and the Caprese panini are the local favorites.",
+          "A breakfast, brunch, and lunch room on Middlebury Road: eggs, omelets, pancakes, French toast, paninis, crepes, breakfast tacos, benedicts, sandwiches, salads, coffee, and fresh-squeezed juice. Open daily 6:30 AM to 3:00 PM.",
         photos: []
       }),
       Map.merge(@middlebury, %{
@@ -329,7 +329,7 @@ defmodule Ethos.Seeds.ConnecticutPlaces do
         address: "6 Woodside Avenue, Middlebury, CT 06762",
         official_url: "https://maggiemcflys.com/middlebury/",
         summary:
-          "A Connecticut-grown American restaurant and bar known for one of the most extensive menus around.",
+          "A Connecticut-grown American restaurant and bar; the Middlebury location is at 6 Woodside Avenue.",
         photos: []
       }),
       Map.merge(@middlebury, %{
@@ -339,7 +339,7 @@ defmodule Ethos.Seeds.ConnecticutPlaces do
         address: "530 Middlebury Road, Middlebury, CT 06762",
         official_url: "https://senorpanchos.com/",
         summary:
-          "Family-run Mexican — one of five locations of one of Connecticut's oldest family Mexican restaurant groups.",
+          "One of five locations of a Mexican restaurant group — Middlebury, Prospect, Southbury, Southington, and Plainville — offering dine-in, online ordering, and catering. The Middlebury restaurant is at 530 Middlebury Road.",
         photos: []
       })
     ]
@@ -433,7 +433,7 @@ defmodule Ethos.Seeds.ConnecticutPlaces do
         address: "165 Main Street, Danbury, CT 06810",
         official_url: "https://thepalacedanbury.com",
         summary:
-          "Downtown Danbury's historic Main Street theater, presenting music, comedy, theater, and film — including the Manhattan Short Film Festival and touring acts.",
+          "A performing arts venue at 165 Main Street hosting music, comedy, theater, and film. Its 2026 listings include the Manhattan Short Film Festival on October 2, tribute concerts, and comedy, and it offers theatrical rentals for private events.",
         photos: []
       }),
       Map.merge(@danbury, %{
@@ -443,7 +443,7 @@ defmodule Ethos.Seeds.ConnecticutPlaces do
         address: "35 Lake Avenue Ext, Danbury, CT 06811",
         official_url: "https://www.stanziatos.com/",
         summary:
-          "Artisanal 12-inch pizzas out of an Italian wood-fired oven running 800-plus degrees, sourced from nine regional farms and producers.",
+          "Twelve-inch wood-fired pizzas from an Italian-made oven running over 800 degrees, with ingredients sourced from local growers and artisans in Connecticut and New York. Open Monday to Thursday 11:30am-9:30pm, Friday and Saturday to 10pm, and Sunday to 9pm.",
         photos: []
       }),
       Map.merge(@danbury, %{
@@ -453,7 +453,7 @@ defmodule Ethos.Seeds.ConnecticutPlaces do
         address: "255 White Street, Danbury, CT 06810",
         official_url: "https://www.tksamericancafe.com/",
         summary:
-          "A White Street fixture since 1990 — 76 wing flavors (ranked among Connecticut's best), 50 beers, and the area's favorite sports-bar crown.",
+          "A White Street sports bar built around 76 wing flavors and roughly 50 beers, eleven of them craft and import taps. It is an official chapter bar for soccer supporter groups. Open 11am to midnight daily, with grill hours to 11pm Monday to Thursday and to midnight Friday to Sunday.",
         photos: []
       }),
       Map.merge(@danbury, %{
@@ -463,7 +463,7 @@ defmodule Ethos.Seeds.ConnecticutPlaces do
         address: "20 Segar Street, Danbury, CT 06810",
         official_url: "https://www.chucksdanbury.com/",
         summary:
-          "Hand-cut Midwestern steaks and an extensive salad bar; the Danbury location has been serving since 1973, with live music Tuesdays and Thursdays.",
+          "Hand-cut Midwestern steaks, fresh seafood, steak burgers, and a salad bar included with meals, with handmade truffles for dessert. Live music runs Tuesdays and Thursdays. Open Monday to Thursday 11am-10pm, Friday and Saturday 11am-2am, and Sunday 11am-9pm.",
         photos: []
       }),
       Map.merge(@danbury, %{
@@ -473,7 +473,7 @@ defmodule Ethos.Seeds.ConnecticutPlaces do
         address: "39B Shelter Rock Road, Danbury, CT 06810",
         official_url: "https://charteroakbrewing.com/",
         summary:
-          "Named Best Brewery and Taproom in Connecticut by Connecticut Magazine two years running, with ten rotating draft lines on Shelter Rock Road.",
+          "A Shelter Rock Road taproom with ten rotating draft lines, a gift shop, live local music at weekends, rotating food trucks, and a biergarten with shaded seating.",
         photos: []
       }),
       Map.merge(@danbury, %{

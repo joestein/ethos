@@ -40,11 +40,11 @@
       },
       {
         "question": "Where can I eat in Bay Ridge?",
-        "answer": "Tanoreen, at 7523 3rd Avenue, was founded in 1998 by chef Rawia Bishara and has held a Michelin Bib Gourmand every year since 2011."
+        "answer": "Tanoreen, at 7523 3rd Avenue, serves Palestinian home cooking and other dishes of the Levant. Its chef, Rawia Bishara, grew up in Nazareth."
       },
       {
         "question": "Is there a cinema in Bay Ridge?",
-        "answer": "Alpine Cinemas at 6817 5th Avenue is a working multiplex with stadium seating and RealD 3D screens."
+        "answer": "Alpine Cinemas at 6817 5th Avenue is a working multiplex with RealD 3D screens and open-caption screenings of selected titles; Screen 8 has stadium reclining seating."
       }
     ],
     "photos": [
@@ -91,7 +91,7 @@
       "county": "Brooklyn",
       "address": "Shore Road between Bay Ridge Avenue and 72nd Street, Brooklyn, NY 11209",
       "official_url": "https://narrowsbg.org/",
-      "summary": "A garden operating since 1995, with a turtle and wildlife sanctuary, a native plant garden and a pollinator garden.",
+      "summary": "A volunteer-run nonprofit garden on Shore Road, operating since 1995, holding a Turtle & Wildlife Sanctuary, a Native Plant Garden and Betty's Pollinator Garden. It runs plant sales, an Earth Day celebration, a lavender harvest and tree-pit restoration projects.",
       "status": "open",
       "photos": []
     },
@@ -127,7 +127,7 @@
       "state": "New York",
       "county": "Brooklyn",
       "address": "Between 66th and 67th Streets along Fort Hamilton Parkway, Brooklyn, NY",
-      "summary": "The park where Bay Ridge's Norwegian Constitution Day celebration is held. About 40 percent of its trees were lost in the 2007 tornado.",
+      "summary": "The park where Bay Ridge's Norwegian Constitution Day celebration is held, holding a Leif Ericson statue donated by Crown Prince Olav of Norway and installed in 1939. About 40 percent of its trees were lost in the 2007 tornado.",
       "status": "open",
       "photos": []
     },
@@ -152,7 +152,7 @@
       "county": "Brooklyn",
       "address": "6817 5th Avenue, Brooklyn, NY 11220",
       "official_url": "https://www.alpinecinemas.com/",
-      "summary": "A working multiplex cinema with stadium seating and RealD 3D screens.",
+      "summary": "A working multiplex cinema with RealD 3D projection and kid-sized 3D glasses for children aged 8 and under, and open-caption screenings of selected titles. Screen 8 has stadium reclining seating. Wednesday tickets are $6.00 all day, with a $2 surcharge for 3D.",
       "status": "open",
       "photos": []
     },
@@ -176,7 +176,7 @@
       "state": "New York",
       "county": "Brooklyn",
       "address": "119 95th Street, Brooklyn, NY",
-      "summary": "Built in 1847 and designated a New York City landmark.",
+      "summary": "Built in 1847 at 119 95th Street and designated a New York City individual landmark on August 3, 1999. An accompanying outbuilding, thought to have been used as a barn, could not be saved and was demolished. Local legend holds that the house was rotated so its widow's walk would no longer face the Narrows.",
       "status": "open",
       "photos": []
     },
@@ -200,7 +200,7 @@
       "state": "New York",
       "county": "Brooklyn",
       "address": "216-264 Ovington Avenue, Brooklyn, NY",
-      "summary": "A rowhouse group listed on the National Register of Historic Places in 2007.",
+      "summary": "The rowhouses at 216-264 Ovington Avenue, listed on the National Register of Historic Places on June 5, 2007 under reference number 07000488.",
       "status": "open",
       "photos": []
     },
@@ -213,7 +213,7 @@
       "county": "Brooklyn",
       "address": "7523 3rd Avenue, Brooklyn, NY 11209",
       "official_url": "https://www.tanoreen.com/",
-      "summary": "A restaurant founded in 1998 by chef Rawia Bishara. It has held a Michelin Bib Gourmand every year since 2011.",
+      "summary": "A restaurant serving Palestinian home cooking and other dishes of the Levant — Syria, Jordan and Lebanon. Its chef, Rawia Bishara, grew up in Nazareth. Dishes named in an independent review include fetti, musakhan, knafeh and baba ghanoush.",
       "status": "open",
       "photos": []
     }
@@ -235,7 +235,7 @@
       "kind": "sight",
       "name": "Narrows Botanical Gardens",
       "place_slug": "narrows-botanical-gardens",
-      "note": "A garden on Shore Road running since 1995, with a turtle and wildlife sanctuary."
+      "note": "A volunteer-run garden on Shore Road, running since 1995, with a turtle and wildlife sanctuary."
     },
     {
       "kind": "sight",
@@ -265,7 +265,7 @@
       "kind": "walk",
       "name": "Houses at 216-264 Ovington Avenue",
       "place_slug": "ovington-avenue-houses-bay-ridge",
-      "note": "A rowhouse group listed on the National Register of Historic Places in 2007."
+      "note": "The rowhouses at 216-264 Ovington Avenue, listed on the National Register of Historic Places on June 5, 2007."
     },
     {
       "kind": "sight",
@@ -277,19 +277,19 @@
       "kind": "sight",
       "name": "Bennett-Farrell-Feldman House",
       "place_slug": "bennett-farrell-feldman-house",
-      "note": "An 1847 house on 95th Street, designated a New York City landmark."
+      "note": "An 1847 house at 119 95th Street, designated a New York City individual landmark on August 3, 1999."
     },
     {
       "kind": "food",
       "name": "Tanoreen",
       "place_slug": "tanoreen",
-      "note": "Rawia Bishara's Third Avenue restaurant, open since 1998 and a Bib Gourmand holder since 2011."
+      "note": "Rawia Bishara's Third Avenue restaurant, serving Palestinian home cooking and other dishes of the Levant."
     },
     {
       "kind": "sight",
       "name": "Alpine Cinemas",
       "place_slug": "alpine-cinemas",
-      "note": "A Fifth Avenue multiplex with stadium seating and RealD 3D screens."
+      "note": "A Fifth Avenue multiplex with RealD 3D screens; Screen 8 has stadium reclining seating."
     }
   ],
   "links": [

@@ -48,7 +48,7 @@ defmodule Ethos.Seeds.MiddleburyGuide do
           name: "Vyne Restaurant & Bar",
           place_slug: "vyne-restaurant",
           note:
-            "The fine-dining pick: contemporary American on a site with a family restaurant legacy back to the 1940s."
+            "Organic half chicken, a dry-aged burger, crab cakes, and seared scallops, with dinner, lunch, and brunch menus."
         },
         %{
           kind: "food",
@@ -60,26 +60,25 @@ defmodule Ethos.Seeds.MiddleburyGuide do
           kind: "food",
           name: "Pies & Pub",
           place_slug: "pies-and-pub",
-          note: "Hand-tossed pizza and 26 rotating drafts."
+          note: "Hand-tossed pizza, wings, and 26 rotating craft drafts."
         },
         %{
           kind: "food",
           name: "Kitchen 64",
           place_slug: "kitchen-64",
-          note: "Breakfast from 6:30 AM daily — eggs Benedict and French toast are the moves."
+          note: "Breakfast, brunch, and lunch daily, 6:30 AM to 3:00 PM."
         },
         %{
           kind: "food",
           name: "Maggie McFly's",
           place_slug: "maggie-mcflys-middlebury",
-          note: "The famously enormous menu; there is something for every person in the car."
+          note: "The Middlebury location of the Maggie McFly's group, at 6 Woodside Avenue."
         },
         %{
           kind: "food",
           name: "Señor Pancho's",
           place_slug: "senor-panchos-middlebury",
-          note:
-            "Family-run Mexican from one of Connecticut's oldest family Mexican restaurant groups."
+          note: "One of five Connecticut locations of this Mexican restaurant group."
         }
       ],
       sections: [

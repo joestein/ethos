@@ -62,8 +62,7 @@ defmodule Ethos.Seeds.WaterburyGuide do
           kind: "sight",
           name: "Seven Angels Theatre",
           place_slug: "seven-angels-theatre",
-          note:
-            "Greater Waterbury's professional regional theatre — check the calendar for musicals, comedy, and concerts."
+          note: "A Waterbury theatre staging musical theatre, comedy, and concert tributes."
         },
         %{
           kind: "food",
@@ -77,27 +76,26 @@ defmodule Ethos.Seeds.WaterburyGuide do
           name: "Nardelli's Grinder Shoppe",
           place_slug: "nardellis-grinder-shoppe",
           note:
-            "Founded 1922 and still family-owned — repeatedly voted among Connecticut's best grinders. Order the grinder; that's the point."
+            "Cold and hot grinders, Italian wedding soup, and cannoli, with two locations in the city."
         },
         %{
           kind: "food",
           name: "Frankie's Hot Dogs",
           place_slug: "frankies-hot-dogs-waterbury",
-          note: "A drive-in institution since 1937 with three locations around the city."
+          note: "Hot dogs, burgers, and curly fries, with three locations around the city."
         },
         %{
           kind: "food",
           name: "Sweet Maria's",
           place_slug: "sweet-marias-waterbury",
-          note:
-            "The bakery Waterbury swears by — cakes, biscotti, and cookies worth the detour to Manor Avenue."
+          note: "A Manor Avenue bakery: cakes, cookies, cupcakes, biscotti, and pignoli."
         },
         %{
           kind: "food",
           name: "Brass Works Brewing",
           place_slug: "brass-works-brewing",
           note:
-            "The city's brewery, named for its brass heritage — taproom pours plus rotating food trucks."
+            "A Thomaston Avenue taproom pouring nine house beers, with food trucks and an in-house menu."
         },
         %{
           kind: "stay",

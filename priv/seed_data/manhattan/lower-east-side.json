@@ -39,7 +39,7 @@
       },
       {
         "question": "Where can I stay on the Lower East Side?",
-        "answer": "The Ludlow Hotel (180 Ludlow St) and Hotel on Rivington (107 Rivington St) are both verified boutique hotels in the core of the neighborhood."
+        "answer": "The Ludlow Hotel (180 Ludlow St) and Hotel on Rivington (107 Rivington St) are both in the core of the neighborhood."
       }
     ],
     "photos": [
@@ -196,9 +196,10 @@
       "county": "Manhattan",
       "address": "179 E. Houston St., New York, NY 10002",
       "official_url": "https://www.russanddaughters.com/",
-      "summary": "An appetizing shop selling 'bagels & lox since 1914,' a fourth-generation family institution of the Jewish Lower East Side.",
+      "summary": "An appetizing store founded in 1914 by Joel Russ, a Jewish immigrant from Poland who had sold pickled herring and mushrooms from a pushcart before taking a storefront. It specializes in Jewish delicacies, particularly pickled herring and smoked fish such as lox and sturgeon. Russ renamed it Russ & Daughters in 1933 after making his three daughters, Hattie, Anne and Ida, partners; it is now run by the fourth generation.",
       "status": "open",
-      "photos": []
+      "photos": [],
+      "history": "It received the Jewish Cultural Achievement Award in 2013, reported as the first restaurant to receive it, and the Financial Times named it among the '50 greatest food stores in the world' in 2021. It appeared in the 2008 PBS documentary 'The Jews of New York,' and the family's history was the subject of the 2014 documentary 'The Sturgeon Queens.' Beyond the Houston Street shop it has opened on Orchard Street, at the Brooklyn Navy Yard, and at Hudson Yards in July 2023."
     },
     {
       "slug": "yonah-schimmel-knish-bakery",
@@ -209,9 +210,10 @@
       "county": "Manhattan",
       "address": "137 E. Houston Street, New York, NY 10002",
       "official_url": "https://www.knishery.com/",
-      "summary": "A knish bakery founded in 1910, one of the last old-world Jewish bakeries on Houston Street.",
+      "summary": "A knish bakery established in 1890 by Yonah Schimmel, an immigrant from Galicia; the Houston Street storefront opened in 1910. It remains family-owned, currently run by Schimmel's great-nephew Alex Wolfman, and sells potato and kasha knishes, dessert varieties such as cherry-cheese and blueberry-cheese, and other Eastern European food such as borscht from a takeout counter. It is certified CupK Kosher and ships through Goldbelly.",
       "status": "open",
-      "photos": []
+      "photos": [],
+      "history": "A portrait of the bakery by the artist Hedy Pagremanski is held in the Museum of the City of New York's permanent collection, and the shop appeared in Woody Allen's 2009 film 'Whatever Works.'"
     },
     {
       "slug": "clinton-st-baking-company",
@@ -222,9 +224,10 @@
       "county": "Manhattan",
       "address": "4 Clinton Street (btw. East Houston & Stanton), New York, NY 10002",
       "official_url": "https://clintonstreetbaking.com/",
-      "summary": "A neighborhood restaurant famous for its pancakes (blueberry, banana walnut), celebrated annually with a 'Pancake Month.'",
+      "summary": "A restaurant opened in 2001 by Neil Kleinberg and DeDe Lahman, seating 32. New York magazine called its blueberry pancakes 'the best pancakes in town,' Time cited it for New York City's best pancakes in 2005 and 2008, and the New York Times called it a 'brunch magnet.' It runs an annual Pancake Month.",
       "status": "open",
-      "photos": []
+      "photos": [],
+      "history": "It was rated first in Poor Taste Magazine's '100 Best Brunch Spots in America' in 2011 and second among traditional American restaurants in New York by Zagat the same year. The restaurant was featured on 'Throwdown! with Bobby Flay' in 2009, and Neil Kleinberg won Godiva Chocolatier's SWEETest Challenge Award in 2010."
     },
     {
       "slug": "the-ludlow-hotel",
@@ -235,7 +238,7 @@
       "county": "Manhattan",
       "address": "180 Ludlow St (between Houston and Stanton), New York, NY 10002",
       "official_url": "https://ludlowhotel.com/",
-      "summary": "A boutique hotel in the core of the Lower East Side, with on-site dining and drinking venues and event spaces.",
+      "summary": "A hotel in the core of the Lower East Side, with on-site dining and drinking venues and event spaces. Its restaurant and bar is Dirty French, which the hotel lists as open and bookable.",
       "status": "open",
       "photos": []
     },
@@ -248,7 +251,7 @@
       "county": "Manhattan",
       "address": "107 Rivington Street, New York, NY 10002",
       "official_url": "https://www.hotelonrivington.com/",
-      "summary": "A glass-tower luxury hotel known for floor-to-ceiling glass walls, skyline views, balconies, and soaking tubs, with concierge services and neighborhood walking tours.",
+      "summary": "A hotel whose rooms have floor-to-ceiling windows. A November 2016 review recorded a Mediterranean restaurant, Cafe Medi, and a cocktail bar, Jia Lounge, and a 15-foot tiled shower with three showerheads that doubles as a personal steam room; the same review noted the hotel had recently finished a multi-year renovation, with new dining venues that summer.",
       "status": "open",
       "photos": []
     }
@@ -294,25 +297,25 @@
       "kind": "food",
       "name": "Yonah Schimmel Knish Bakery",
       "place_slug": "yonah-schimmel-knish-bakery",
-      "note": "A knish bakery since 1910, one of the last old-world Jewish bakeries left on Houston Street."
+      "note": "A knish bakery established in 1890, in its Houston Street storefront since 1910."
     },
     {
       "kind": "food",
       "name": "Clinton St. Baking Company",
       "place_slug": "clinton-st-baking-company",
-      "note": "The neighborhood's pancake destination, with its own annual Pancake Month."
+      "note": "Opened in 2001 by Neil Kleinberg and DeDe Lahman; New York magazine called its blueberry pancakes the best in town."
     },
     {
       "kind": "stay",
       "name": "The Ludlow Hotel",
       "place_slug": "the-ludlow-hotel",
-      "note": "A boutique hotel right in the core of the Lower East Side."
+      "note": "A hotel in the core of the Lower East Side; its restaurant and bar is Dirty French."
     },
     {
       "kind": "stay",
       "name": "Hotel on Rivington",
       "place_slug": "hotel-on-rivington",
-      "note": "A glass-tower hotel with skyline views over the neighborhood's low-rise streets."
+      "note": "A Rivington Street hotel whose rooms have floor-to-ceiling windows."
     }
   ]
 }

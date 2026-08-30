@@ -106,7 +106,7 @@
       "county": "Brooklyn",
       "address": "Building 77, 141 Flushing Avenue, Brooklyn, NY 11205",
       "official_url": "https://www.brooklynnavyyard.org/marketat77/",
-      "summary": "A public food hall inside the Yard's Building 77, open to visitors without a tour reservation and housing several Brooklyn-based vendors.",
+      "summary": "A public food hall inside the Yard's Building 77 at 141 Flushing Avenue, open to visitors without a tour reservation, daily from 8am to 8pm. The operator presents it as an homage to the original Wallabout Market, a meat, produce and fish market active from the 1890s into the Second World War. Its vendors are Jalapa Jar, Pizza Yard, Russ & Daughters, Rustik Tavern, Transmitter Brewing and She Wolf Bakery.",
       "status": "open",
       "photos": []
     },
@@ -131,7 +131,7 @@
       "state": "New York",
       "county": "Brooklyn",
       "address": "Building 77, 141 Flushing Avenue, Brooklyn, NY 11205",
-      "summary": "An outpost of the New York appetizing shop, serving bagels and lox, babka, challah and other traditional Jewish baked goods.",
+      "summary": "An outpost of the appetizing shop Joel Russ established in 1914 and moved to 179 East Houston Street in 1920. The 18,000-square-foot Navy Yard location opened in 2018 or early 2019, sources differing on the year. Its Market @ 77 counter serves bagels and lox, babka, challah and other baked goods, the bakery is on display for visitors, and the company ships nationwide from here.",
       "status": "open",
       "photos": []
     },
@@ -143,7 +143,7 @@
       "state": "New York",
       "county": "Brooklyn",
       "address": "Building 77, 141 Flushing Avenue, Brooklyn, NY 11205",
-      "summary": "An artisan bakery making naturally leavened breads from organic regional grains, open Monday to Friday, 8am to 2pm.",
+      "summary": "An artisan bakery making naturally leavened bread from organic regional grains, supplying restaurants and selling at retail and at farmers markets. By its own account it began baking in 2009 in a wood oven at the restaurant Roman's, took its own production space in Greenpoint in 2012 and moved to the Navy Yard in 2024; the baker Austin Hall is named in connection with that original wood-oven bread. Its Market @ 77 hours are Monday to Friday, 8am to 2pm.",
       "status": "open",
       "photos": []
     },
@@ -155,7 +155,7 @@
       "state": "New York",
       "county": "Brooklyn",
       "address": "Building 77, 141 Flushing Avenue, Brooklyn, NY 11205",
-      "summary": "An on-site craft brewery producing farmhouse-style beers, with rotating retail availability.",
+      "summary": "A brewery whose taproom sits in Building 77 at 141 Flushing Avenue and which describes itself as an 'Urban Farmhouse Brewery.' It displays a 'Tiny Brewery in New York' designation and the Brewers Association's Independent Craft Brewer Seal. The taproom allows dogs, permits outside food and hosts private events.",
       "status": "open",
       "photos": []
     },
@@ -167,7 +167,7 @@
       "state": "New York",
       "county": "Brooklyn",
       "address": "Building 77, 141 Flushing Avenue, Brooklyn, NY 11205",
-      "summary": "A Neapolitan-style pizzeria at Market @ 77, also serving breakfast pastries and coffee.",
+      "summary": "A pizzeria at Market @ 77 making Neapolitan-style pizza with imported flour and traditional technique, and also serving breakfast pastries and coffee.",
       "status": "open",
       "photos": []
     },
@@ -179,7 +179,7 @@
       "state": "New York",
       "county": "Brooklyn",
       "address": "Building 77, 141 Flushing Avenue, Brooklyn, NY 11205",
-      "summary": "An American comfort-food counter at Market @ 77 serving wings, sliders, and mac and cheese.",
+      "summary": "The Market @ 77 counter of a tavern that has operated since 2008, originally on DeKalb Avenue, serving American comfort food alongside craft cocktails and vegetarian options. Unlike the DeKalb Avenue room, which does a weekend brunch, this counter serves breakfast 8am to noon and lunch noon to 8pm daily.",
       "status": "open",
       "photos": []
     },
@@ -191,7 +191,7 @@
       "state": "New York",
       "county": "Brooklyn",
       "address": "Building 77, 141 Flushing Avenue, Brooklyn, NY 11205",
-      "summary": "A salsa maker at Market @ 77 serving Austin-style breakfast tacos, taco bowls and fresh guacamole.",
+      "summary": "A Brooklyn salsa maker with a salsa kitchen at the Navy Yard, where it also runs salsa-making classes. Its salsas come in Original Blend, Brooklyn Blend, Austin Blend, Sweet & Heat and Tomatillo Blend, with seasonal offerings for subscribers.",
       "status": "open",
       "photos": []
     }
@@ -213,43 +213,43 @@
       "kind": "food",
       "name": "Market @ 77",
       "place_slug": "market-at-77",
-      "note": "The Building 77 food hall, open to visitors without a tour reservation."
+      "note": "The Building 77 food hall, open daily 8am to 8pm and without a tour reservation."
     },
     {
       "kind": "food",
       "name": "Russ & Daughters",
       "place_slug": "russ-and-daughters-navy-yard",
-      "note": "Bagels and lox, babka and challah at the appetizing shop's Market @ 77 counter."
+      "note": "Bagels and lox, babka and challah at the appetizing shop's Market @ 77 counter, with the bakery on display."
     },
     {
       "kind": "food",
       "name": "She Wolf Bakery",
       "place_slug": "she-wolf-bakery",
-      "note": "Naturally leavened breads from organic regional grains, weekdays only."
+      "note": "Naturally leavened bread from organic regional grains, Monday to Friday, 8am to 2pm."
     },
     {
       "kind": "food",
       "name": "Transmitter Brewing",
       "place_slug": "transmitter-brewing",
-      "note": "Farmhouse-style beers brewed on site at Market @ 77."
+      "note": "The taproom of a self-described 'Urban Farmhouse Brewery' in Building 77; dogs and outside food are allowed."
     },
     {
       "kind": "food",
       "name": "Pizza Yard",
       "place_slug": "pizza-yard",
-      "note": "Neapolitan-style pizza, plus breakfast pastries and coffee."
+      "note": "Neapolitan-style pizza made with imported flour, plus breakfast pastries and coffee."
     },
     {
       "kind": "food",
       "name": "Rustik Tavern",
       "place_slug": "rustik-tavern",
-      "note": "Wings, sliders and mac and cheese at the Market @ 77 counter."
+      "note": "American comfort food at the Market @ 77 counter; breakfast 8am to noon, lunch noon to 8pm, daily."
     },
     {
       "kind": "food",
       "name": "Jalapa Jar",
       "place_slug": "jalapa-jar",
-      "note": "Austin-style breakfast tacos, taco bowls and guacamole from a Brooklyn salsa maker."
+      "note": "A Brooklyn salsa maker whose salsa kitchen is in the Yard; it runs salsa-making classes there."
     }
   ],
   "links": [

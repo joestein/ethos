@@ -128,9 +128,10 @@
       "county": "Fairfield County",
       "address": "910 Fairfield Avenue, Bridgeport, CT 06605",
       "official_url": "https://theklein.org/",
-      "summary": "A performing-arts hall hosting the Greater Bridgeport Symphony and more than a dozen dance companies each year.",
+      "summary": "A 1,447-seat performing-arts hall, described as one of only seven Broadway-sized stages remaining in Connecticut. Its resident organizations include the Greater Bridgeport Symphony Orchestra, in residence about 60 years, the New England Ballet Company, the Greater Bridgeport Youth Orchestras, ConnectUs and the Fairfield County Children's Choir, and it now hosts more than 150 events a year. It runs Klein Theatre Arts, a tuition-free arts-education program in music, dance and drama for Bridgeport students.",
       "status": "open",
-      "photos": []
+      "photos": [],
+      "history": "The auditorium opened in 1940, funded by a bequest from Jacob Klein (1862-1932), a Bridgeport lawyer and community advocate, and designed by the architect Leonard Asheim. Performers who have appeared here include Leonard Bernstein, Martin Luther King Jr., B.B. King, Alice Cooper and George Carlin. Use had fallen to 65 days of rentals in 2010, and the hall has been through a revitalization since 2013."
     },
     {
       "slug": "housatonic-museum-of-art",
@@ -167,9 +168,10 @@
       "county": "Fairfield County",
       "address": "1 Ferry Access Road, Bridgeport, CT 06604",
       "official_url": "https://www.88844ferry.com/",
-      "summary": "A car-and-passenger ferry crossing Long Island Sound to Port Jefferson, New York.",
+      "summary": "A car-and-passenger ferry crossing roughly 18 miles of Long Island Sound to Port Jefferson, New York, run by the Bridgeport & Port Jefferson Steamboat Company. The fleet is the MV Park City (1986), the MV P.T. Barnum (1999), the MV Grand Republic (2003) and the MV Long Island, which entered service in December 2024.",
       "status": "open",
-      "photos": []
+      "photos": [],
+      "history": "The service was founded in 1883 by P. T. Barnum and the seaman Charles E. Tooker. The fleet moved from steamships to motor vessels in 1968, and year-round service began in the 1980s. In 2009 the company won a lawsuit against the Bridgeport Port Authority over what the company described as unconstitutional tax collection, recovering $1.1 million in damages."
     },
     {
       "slug": "ralph-n-richs",
@@ -193,7 +195,7 @@
       "county": "Fairfield County",
       "address": "225 South Frontage Road, Bridgeport, CT 06604",
       "official_url": "https://www.brewportct.com/",
-      "summary": "A brewpub specializing in Connecticut-style beers brewed on site alongside thin-crust pizza, with Wednesday trivia and Thursday salsa nights.",
+      "summary": "A brewpub serving thin-crust pizza and gourmet salad alongside Connecticut-style beers brewed on site, with a guest tap list.",
       "status": "open",
       "photos": []
     },
@@ -206,9 +208,10 @@
       "county": "Fairfield County",
       "address": "360 Fairfield Ave, Bridgeport, CT 06604",
       "official_url": "https://www.josephssteakhouse.com/",
-      "summary": "An old-fashioned American steakhouse specializing in USDA Prime dry-aged beef; dinner served seven nights a week, lunch weekdays only.",
+      "summary": "A steakhouse specializing in USDA Prime dry-aged beef, with private dining facilities. Lunch runs daily noon to 3 p.m.; dinner Monday to Thursday 5 to 9:30 p.m., Friday and Saturday 5 to 10:30 p.m., and Sunday 5 to 9 p.m.",
       "status": "open",
-      "photos": []
+      "photos": [],
+      "history": "The restaurant opened in 2000, founded by Joseph Kustra, who was born in Croatia in 1942 and emigrated to the United States in 1968. He had worked fifteen years at Peter Luger's in Brooklyn and as captain at the Helmsley Palace in Manhattan, and had opened the Tollgate Steakhouse in Mamaroneck, New York, in 1995. Kustra retired in 2019 and sold the restaurant to Frederick 'Fritz' Blasius, an automobile dealer from Waterbury."
     },
     {
       "slug": "sound-coffee-bridgeport",
@@ -219,7 +222,7 @@
       "county": "Fairfield County",
       "address": "2889 Fairfield Avenue, Bridgeport, CT 06605 (Black Rock)",
       "official_url": "https://soundcoffees.com",
-      "summary": "A cafe and in-house coffee roastery founded by home-roasters Jeff and Sarah, in the Black Rock neighborhood. Open daily, 7 a.m.-4 p.m.",
+      "summary": "A cafe and coffee roastery founded by Jeff and Sarah, who began home-roasting more than a decade ago on an eBay popcorn popper after Jeff was given green coffee beans as a Christmas present, and took the operation from garage roasting through Connecticut farmers markets into a specialty coffee company. The Black Rock cafe at 2889 Fairfield Avenue is open daily 7 a.m. to 4 p.m.; the roastery is separate, at 2040 Main Street. The business also sells wholesale, runs an online subscription and does mobile coffee-cart catering.",
       "status": "open",
       "photos": []
     }
@@ -241,7 +244,7 @@
       "kind": "sight",
       "name": "The Klein Memorial Auditorium",
       "place_slug": "klein-memorial-auditorium",
-      "note": "Home of the Greater Bridgeport Symphony and a dozen-plus dance companies a year."
+      "note": "A 1,447-seat hall, home to the Greater Bridgeport Symphony Orchestra and other resident companies."
     },
     {
       "kind": "sight",
@@ -271,19 +274,19 @@
       "kind": "food",
       "name": "Brewport Brewing Co.",
       "place_slug": "brewport-brewing-co",
-      "note": "Connecticut-style beers and thin-crust pizza, with trivia and salsa nights."
+      "note": "Connecticut-style beers brewed on site, thin-crust pizza and a guest tap list."
     },
     {
       "kind": "food",
       "name": "Joseph's Steakhouse",
       "place_slug": "josephs-steakhouse",
-      "note": "USDA Prime dry-aged beef, dinner nightly, lunch on weekdays."
+      "note": "USDA Prime dry-aged beef; lunch daily, dinner nightly."
     },
     {
       "kind": "food",
       "name": "Sound Coffee",
       "place_slug": "sound-coffee-bridgeport",
-      "note": "A cafe and in-house roastery in Black Rock, open daily 7-4."
+      "note": "A Black Rock cafe, open daily 7-4, with a separate roastery on Main Street."
     }
   ],
   "links": [

@@ -17,7 +17,7 @@
       },
       {
         "heading": "Where to eat and stay",
-        "body": "Downtown Putnam's Main Street carries the town's dining, from 85 Main's fusion menu and raw bar to Blackstone Putnam's steakhouse plates, Courthouse Bar & Grille's pub fare, and Bear Hands Brewing's taproom of house beers and ciders. Putnam has no hotel, inn, or B&B of its own; the closest confirmed options are the Inn at Woodstock Hill, about seven miles west in neighboring Woodstock, and the Quiet Corner Inn in Brooklyn."
+        "body": "Downtown Putnam's Main Street carries the town's dining, from 85 Main's lunch and dinner specials to Blackstone Putnam's land-and-sea flights, Courthouse Bar & Grille's burgers and steaks, and Bear Hands Brewing's taproom of house beers and ciders. Putnam has no hotel, inn, or B&B of its own; the closest confirmed options are the Inn at Woodstock Hill, about seven miles west in neighboring Woodstock, and the Quiet Corner Inn in Brooklyn."
       }
     ],
     "faq": [
@@ -118,7 +118,7 @@
       "county": "Windham County",
       "address": "135 Main St., Putnam, CT 06260",
       "official_url": "https://www.thecpac.org/",
-      "summary": "A Main Street community arts school and conservatory-style training program in dance, theatre, music, and creative arts, which stages its own seasonal productions.",
+      "summary": "A Main Street arts school offering dance, theatre, music and creative arts through an interdisciplinary curriculum, organized into age bands of roughly 3-6, 6-8, 8-10, 11-15 and 15-18 and five development levels from Emerging Artists to Advanced Artists. It runs a Conservatory Program, arts education programs and artist residencies, and its student companies are The Complex Dance Company, The Performance Company and NECT Ballet Company, alongside a chapter of the National Honor Society for Dance Arts.",
       "status": "open",
       "photos": []
     },
@@ -144,7 +144,7 @@
       "county": "Windham County",
       "address": "85 Main Street, Putnam, CT 06260",
       "official_url": "https://www.85main.com/",
-      "summary": "Downtown Putnam's best-known dining room, open since 2005, serving American fusion cuisine with a raw bar and sushi alongside New American plates.",
+      "summary": "A Main Street restaurant with a private event space called The Cellar, taking reservations and online orders and running lunch and dinner specials.",
       "status": "open",
       "photos": []
     },
@@ -157,7 +157,7 @@
       "county": "Windham County",
       "address": "35 Main Street, Putnam, CT 06260",
       "official_url": "https://blackstoneputnam.com/",
-      "summary": "A steakhouse-leaning restaurant on Main Street, open since 2024, known for food flights, land-and-sea plates, and a seasonal outdoor bar and patio.",
+      "summary": "A restaurant at 35 Main Street built around a 'flight' concept: shareable sets of three, including land-and-sea flights of filet, wagyu, ribeye, lobster and scallops, food flights of egg rolls, sliders, bruschetta, truffle fries and mac and cheese, and espresso martini and cocktail flights. Open daily 11am to 9pm, and to 11pm on Friday and Saturday.",
       "status": "open",
       "photos": []
     },
@@ -170,7 +170,7 @@
       "county": "Windham County",
       "address": "121 Main Street, Putnam, CT 06260",
       "official_url": "https://www.courthousebarandgrille.com/",
-      "summary": "A long-running Main Street pub-restaurant serving burgers, wraps, steaks, and pasta, with rotating draft beers and weekly promotions.",
+      "summary": "A Main Street pub-restaurant serving burgers, wraps and sandwiches, steaks, seafood and pasta, with sixteen rotating draft taps, seasonal and signature cocktails and a wine list. It runs a weekly 'Tito's Tuesdays' promotion, and posts hours of Sunday to Thursday 11:30am to 10pm and Friday and Saturday 11:30am to midnight.",
       "status": "open",
       "photos": []
     },
@@ -183,7 +183,7 @@
       "county": "Windham County",
       "address": "75 Main Street, Suite 1, Putnam, CT 06260",
       "official_url": "https://bearhandsbrewing.com/",
-      "summary": "Putnam's downtown production brewery and taproom, pouring roughly a dozen house beers and ciders, with weekly trivia in the lounge.",
+      "summary": "A downtown brewery and taproom at 75 Main Street, pouring around eleven house beers plus hard cider and spirits — Key Lime Pie gose, SMPLFD hefeweizen, Show Me Sabro and Mango Habanero New England IPAs, Sanity Pils, Pillow Fighting With Chairs double IPA, Mind Fack golden mocha stout, Brown Bag'n It American porter and a rose cider among them. By its own account the brewery took about three years of work to open.",
       "status": "open",
       "photos": []
     }
@@ -205,7 +205,7 @@
       "kind": "sight",
       "name": "The Complex Performing & Creative Arts Centre",
       "place_slug": "the-complex-performing-creative-arts-centre",
-      "note": "A community arts school staging its own seasonal productions."
+      "note": "An arts school in dance, theatre, music and creative arts, with its own student companies."
     },
     {
       "kind": "sight",
@@ -217,25 +217,25 @@
       "kind": "food",
       "name": "85 Main",
       "place_slug": "85-main",
-      "note": "American fusion cuisine with a raw bar, open since 2005."
+      "note": "A Main Street restaurant with a private event space, The Cellar."
     },
     {
       "kind": "food",
       "name": "Blackstone Putnam",
       "place_slug": "blackstone-putnam",
-      "note": "Steakhouse-leaning Main Street newcomer with a seasonal patio."
+      "note": "A Main Street restaurant built around shareable 'flights' of food, drink and land-and-sea plates."
     },
     {
       "kind": "food",
       "name": "Courthouse Bar & Grille",
       "place_slug": "courthouse-bar-grille",
-      "note": "Long-running Main Street pub-restaurant."
+      "note": "A Main Street pub-restaurant with sixteen rotating draft taps."
     },
     {
       "kind": "food",
       "name": "Bear Hands Brewing Company",
       "place_slug": "bear-hands-brewing-company",
-      "note": "Downtown production brewery and taproom."
+      "note": "A Main Street brewery and taproom pouring about eleven house beers plus cider."
     }
   ],
   "links": [

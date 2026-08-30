@@ -5,11 +5,11 @@
     "destination": "East Harlem, New York",
     "state": "New York",
     "county": "Manhattan",
-    "intro": "East Harlem stayed largely rural until an elevated line reached it in 1879-1880 and the Lexington Avenue subway followed in 1918, opening the land to development. Southern Italian and Sicilian immigrants arrived from the 1870s on, and by the 1930s more than 110,000 Italian Americans lived here as Italian Harlem, a community whose remnants survive around Pleasant Avenue and institutions like Patsy's Pizzeria, open since 1933, and Rao's. After World War I, Puerto Rican and Latin American migrants built an enclave around 110th Street and Lexington Avenue; the Puerto Rican population reached about 63,000 by 1950, and the neighborhood became known as Spanish Harlem and, to residents, El Barrio. La Marqueta, the market beneath the Park Avenue railroad viaduct, was officially sanctioned by the city in 1936 and held over 500 vendors at its 1950s-60s peak. El Museo del Barrio, a community museum of Puerto Rican, Latin American, and Caribbean art, was founded here in 1969.",
+    "intro": "East Harlem stayed largely rural until an elevated line reached it in 1879-1880 and the Lexington Avenue subway followed in 1918, opening the land to development. Southern Italian and Sicilian immigrants arrived from the 1870s on, and by the 1930s more than 110,000 Italian Americans lived here as Italian Harlem, a community whose remnants survive around Pleasant Avenue and institutions like Patsy's Pizzeria, which opened in 1933, and Rao's. After World War I, Puerto Rican and Latin American migrants built an enclave around 110th Street and Lexington Avenue; the Puerto Rican population reached about 63,000 by 1950, and the neighborhood became known as Spanish Harlem and, to residents, El Barrio. La Marqueta, the market beneath the Park Avenue railroad viaduct, was officially sanctioned by the city in 1936 and held over 500 vendors at its 1950s-60s peak. El Museo del Barrio, a community museum of Puerto Rican, Latin American, and Caribbean art, was founded here in 1969.",
     "sections": [
       {
         "heading": "Italian Harlem to El Barrio",
-        "body": "East Harlem's two great immigrant chapters left their mark on the same blocks. Italian workers arrived from the 1870s, and Italian Harlem peaked in the 1930s with more than 110,000 Italian Americans, remembered today around Pleasant Avenue and the Church of Our Lady of Mount Carmel, and still tasted at Patsy's Pizzeria (1933) and Rao's, founded 1896. After World War I, Puerto Rican and Latin American migrants settled around 110th Street and Lexington Avenue; by 1950 the Puerto Rican population had reached about 63,000, and the neighborhood became known as Spanish Harlem and, to residents, El Barrio, later noted for its contributions to salsa and Latin freestyle music. La Marqueta, sanctioned by the city in 1936 beneath the Park Avenue viaduct, held over 500 vendors at its 1950s-60s peak as a central social and economic hub for Hispanic New York; in 2026 the city announced plans for a city-owned grocery store on the site. El Museo del Barrio, founded in 1969 by artist-educator Rafael Montañez Ortíz as a community alternative to orthodox museums, remains devoted to Puerto Rican, Latin American, and Caribbean art."
+        "body": "East Harlem's two great immigrant chapters left their mark on the same blocks. Italian workers arrived from the 1870s, and Italian Harlem peaked in the 1930s with more than 110,000 Italian Americans, remembered today around Pleasant Avenue and the Church of Our Lady of Mount Carmel, and in Patsy's Pizzeria (1933) and Rao's, founded 1896. After World War I, Puerto Rican and Latin American migrants settled around 110th Street and Lexington Avenue; by 1950 the Puerto Rican population had reached about 63,000, and the neighborhood became known as Spanish Harlem and, to residents, El Barrio, later noted for its contributions to salsa and Latin freestyle music. La Marqueta, sanctioned by the city in 1936 beneath the Park Avenue viaduct, held over 500 vendors at its 1950s-60s peak as a central social and economic hub for Hispanic New York; in 2026 the city announced plans for a city-owned grocery store on the site. El Museo del Barrio, founded in 1969 by artist-educator Rafael Montañez Ortíz as a community alternative to orthodox museums, remains devoted to Puerto Rican, Latin American, and Caribbean art."
       },
       {
         "heading": "Getting there by subway",
@@ -149,9 +149,10 @@
       "county": "Manhattan",
       "address": "455 E 114th Street, New York, NY",
       "official_url": "https://raos.com/",
-      "summary": "Southern Italian institution founded in 1896 by Charles Rao, famous for reservations that are essentially impossible to get, with tables informally 'owned' by regulars.",
+      "summary": "A restaurant established in 1896. Wikipedia names the founder as Joshua Anthony Rao, who ran it until his death in 1909; the restaurant's own site names Charles Rao. Wikipedia quotes the New York Post calling it 'one of the hardest places to get into in the city.'",
       "status": "open",
-      "photos": []
+      "photos": [],
+      "history": "Vincent and Louis Rao took the restaurant on after their father's death in 1909. Patrons named by Wikipedia include John Gotti, Rudy Giuliani, Robert De Niro and Bo Dietl, with Woody Allen and Mia Farrow regulars in the 1980s. A spinoff at Caesars Palace in Las Vegas opened in 2006 and closed in 2021; a Hollywood spinoff opened in 2013 and closed on February 28, 2026; a Miami Beach location opened at a Loews hotel in 2023. The Rao's brand also sells packaged sauces, pasta, soups and frozen meals, and is owned by The Campbell's Company."
     },
     {
       "slug": "patsys-pizzeria",
@@ -161,9 +162,10 @@
       "state": "New York",
       "county": "Manhattan",
       "address": "2287 First Avenue (at E 118th Street), New York, NY",
-      "summary": "Historic coal-oven pizzeria operating since 1933, a survivor of the Italian Harlem era and one of New York's original slice institutions.",
+      "summary": "A pizzeria that opened in 1933 in Italian Harlem, founded by Pasquale 'Patsy' Lancieri at 2287 First Avenue near East 117th Street. Lancieri is said to have learned his craft at Lombardi's coal oven, and the business claims to have originated selling pizza by the slice.",
       "status": "open",
-      "photos": []
+      "photos": [],
+      "history": "Lancieri died in the 1970s, and in 1991 his widow sold the pizzeria to Frank Brija, an Albanian immigrant from Kosovo, who trademarked the name and expanded it to more than twelve locations in New York. In 2019 a waiter returned a customer's lost cashier's check for $423,987.55. The pizzeria appeared on the Cooking Channel's 'Man v. Food' in 2020, and in 2024 its storefront facade was recreated as a film set in England for 'A Quiet Place: Day One.'"
     },
     {
       "slug": "ollin",
@@ -173,7 +175,7 @@
       "state": "New York",
       "county": "Manhattan",
       "address": "339 E 108th Street, New York, NY",
-      "summary": "Family-run Mexican restaurant known for chorizo burritos, cemitas, and a bottomless brunch.",
+      "summary": "Family-run Mexican restaurant serving chorizo burritos, cemitas, and a bottomless brunch.",
       "status": "open",
       "photos": []
     },
@@ -197,7 +199,7 @@
       "state": "New York",
       "county": "Manhattan",
       "address": "156 E 117th Street, New York, NY",
-      "summary": "Neighborhood takeout-window coffee shop and bakery known for specialty donuts such as glazed loganberry.",
+      "summary": "Neighborhood takeout-window coffee shop and bakery selling specialty donuts such as glazed loganberry.",
       "status": "open",
       "photos": []
     }
@@ -231,19 +233,19 @@
       "kind": "food",
       "name": "Rao's",
       "place_slug": "raos",
-      "note": "A Southern Italian institution since 1896, with tables nearly impossible to book."
+      "note": "A restaurant established in 1896, which the New York Post has called one of the hardest places to get into in the city."
     },
     {
       "kind": "food",
       "name": "Patsy's Pizzeria",
       "place_slug": "patsys-pizzeria",
-      "note": "A coal-oven pizzeria operating since 1933, a survivor of Italian Harlem."
+      "note": "A pizzeria opened in Italian Harlem in 1933 by Pasquale 'Patsy' Lancieri."
     },
     {
       "kind": "food",
       "name": "Ollin (Cafe Ollin)",
       "place_slug": "ollin",
-      "note": "A family-run Mexican restaurant known for chorizo burritos and cemitas."
+      "note": "A family-run Mexican restaurant serving chorizo burritos and cemitas."
     },
     {
       "kind": "food",
@@ -255,7 +257,7 @@
       "kind": "food",
       "name": "Super Nice Coffee and Bakery",
       "place_slug": "super-nice-coffee-and-bakery",
-      "note": "A takeout-window coffee shop known for specialty donuts."
+      "note": "A takeout-window coffee shop selling specialty donuts."
     }
   ]
 }

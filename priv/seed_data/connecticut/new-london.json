@@ -110,9 +110,10 @@
       "county": "New London County",
       "address": "625 Williams Street, New London, CT 06320",
       "official_url": "https://www.lymanallyn.org/",
-      "summary": "Founded in 1932, the museum is known for strong collections of American paintings and decorative arts. Open Tuesday-Saturday 10-5, Sunday 1-5.",
+      "summary": "A museum established by a 1926 bequest from Harriet Upson Allyn in memory of her father, Lyman Allyn, a shipping merchant, and opened to the public in 1932. It is affiliated with Connecticut College. Wikipedia puts the permanent collection at about 10,000 objects — European art, American painting from the Hudson River School through Impressionism, and decorative arts, with works by Rembrandt Peale, Gilbert Stuart and Thomas Cole — while the museum's own site gives more than 20,000 works spanning 2,600 years; the two figures have not been reconciled. Open Tuesday-Saturday 10-5, Sunday 1-5.",
       "status": "open",
-      "photos": []
+      "photos": [],
+      "history": "Land was bought in 1927, and the 32,000-square-foot granite building was designed by Charles A. Platt, with grounds by the landscape architect Ferruccio Vitale and facade bas-relief medallions of 1930 by the sculptor Joseph Kiselewski. Winslow Ames was appointed the museum's first director in May 1930, at the age of 22. The museum was dedicated on May 2, 1932, with Connecticut's governor Wilbur Lucius Cross as principal speaker, and opened to the public the following day. Its permanent installations include 'Louis Comfort Tiffany in New London' and 'American Perspectives.'"
     },
     {
       "slug": "garde-arts-center",
@@ -123,9 +124,10 @@
       "county": "New London County",
       "address": "325 State Street, New London, CT 06320",
       "official_url": "https://gardearts.org/",
-      "summary": "A downtown theater that opened in 1926, celebrating its centennial in 2026. Box office hours Tuesday-Friday 10-5.",
+      "summary": "A downtown theater that opened on September 22, 1926, seating about 1,500 and now run as a nonprofit performing arts center and cinema; it is marking its centennial in 2026. Connecticut's state tourism listing gives its programming as Broadway musicals, opera, dance, concerts, theater and film festivals, box office hours of Monday to Friday 10-5, and ADA-compliant facilities.",
       "status": "open",
-      "photos": []
+      "photos": [],
+      "history": "The theater was designed by the architect Arland W. Johnson, with a Moroccan-style interior including wall murals by Vera Leeper, and built as a vaudeville house and movie theater; construction was directed by Arthur S. Friend, a New York attorney and partner in Famous Players-Lasky, which became Paramount Pictures. In September 1929 Warner Bros. bought the theater and its office building for $1 million, one of eighteen New England theaters the studio acquired to show its talking pictures. It closed in 1977 under RKO-Stanley-Warner ownership and faced demolition until the nonprofit Garde Arts Center was formed in 1985 to preserve and revitalize the building."
     },
     {
       "slug": "custom-house-maritime-museum",
@@ -149,7 +151,7 @@
       "county": "New London County",
       "address": "98 Neptune Ave, New London, CT 06320",
       "official_url": "https://ocean-beach-park.com/",
-      "summary": "A city-owned beach and boardwalk park with dining, attractions, and live entertainment on Long Island Sound.",
+      "summary": "A city-owned beach and boardwalk park on Long Island Sound, open daily from Memorial Day to Labor Day. It has rides, waterslides, a mini golf course, an arcade, an Olympic-sized pool, a cafe and a food court, a nature walk, picnic areas, a health club and event spaces, and it hosts concerts, classic car cruise nights and fireworks. Guided kayak tours of Alewife Cove run through New England Science and Sailing. Parking is $30 on weekdays and $40 at weekends, $20 for entry after 6 p.m. and $10 for pedestrians.",
       "status": "open",
       "photos": []
     },
@@ -197,7 +199,7 @@
       "county": "New London County",
       "address": "262 & 272 Pequot Ave, New London, CT 06320",
       "official_url": "https://fredsshanty.com/",
-      "summary": "A Pequot Avenue seafood-and-ice-cream stand and local institution since 1972, serving fried seafood, pizza, subs, and Hershey's ice cream. Daily hours 11 a.m.-8/9 p.m.",
+      "summary": "A waterfront take-out stand operating since 1972 and spanning two addresses, 262 and 272 Pequot Avenue. The menu runs to fried seafood, build-your-own and gourmet pizza, subs, calzones, stromboli, salads, wraps, quesadillas, sandwiches, burgers, hot dogs, wings and Hershey's hand-dipped ice cream. Open Monday to Thursday and Sunday 11 a.m. to 8 p.m., Friday and Saturday 11 a.m. to 9 p.m.",
       "status": "open",
       "photos": []
     },
@@ -210,7 +212,7 @@
       "county": "New London County",
       "address": "250 Pequot Avenue, New London, CT 06320",
       "official_url": "https://onthewaterfrontnl.com/",
-      "summary": "A seafood and Italian restaurant with harbor views, run by Stash Schiavone and Chef Anthony Schiavone.",
+      "summary": "A family-run seafood and Italian restaurant, run by Stash Schiavone and Chef Anthony Schiavone. Menu highlights include scallops, shrimp, fish tacos, lobster tacos and Italian pasta dishes. The large dining room looks over the Thames River, and there is a full bar, an outdoor patio in warmer months, live music, catering and private-event space.",
       "status": "open",
       "photos": []
     }
@@ -244,7 +246,7 @@
       "kind": "sight",
       "name": "Ocean Beach Park",
       "place_slug": "ocean-beach-park-new-london",
-      "note": "A city-owned boardwalk beach on Long Island Sound."
+      "note": "A city-owned boardwalk beach on Long Island Sound, open Memorial Day to Labor Day."
     },
     {
       "kind": "sight",
@@ -262,7 +264,7 @@
       "kind": "food",
       "name": "Fred's Shanty",
       "place_slug": "freds-shanty",
-      "note": "A Pequot Avenue seafood stand and local institution since 1972."
+      "note": "A Pequot Avenue waterfront take-out stand, operating since 1972."
     },
     {
       "kind": "food",

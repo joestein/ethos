@@ -164,7 +164,7 @@
       "state": "New York",
       "county": "Brooklyn",
       "address": "1217 Avenue U, Brooklyn, NY 11229",
-      "summary": "A restaurant on Avenue U.",
+      "summary": "A Chinese seafood restaurant with a wall of tanks near the entrance for choosing live seafood. The menu runs to ginger scallion lobster and crab, clams with black bean sauce, razor clams, and a bone-in Peking-style pork chop fried crisp with sweet and sour sauce. Full dim sum service runs at weekends, with a smaller to-go selection during the week.",
       "status": "open",
       "photos": []
     },
@@ -176,7 +176,7 @@
       "state": "New York",
       "county": "Brooklyn",
       "address": "1223 Avenue U, Brooklyn, NY 11229",
-      "summary": "A restaurant on Avenue U.",
+      "summary": "A restaurant serving lunch, dinner, banquets and delivery, with live music, and listed on a venue-rental marketplace as bookable for private dining and parties. Its own description of the food is 'authentic cuisine with modern flair.' Open Wednesday to Friday noon to 10pm and Saturday and Sunday noon to 11pm.",
       "status": "open",
       "photos": []
     },
@@ -188,7 +188,7 @@
       "state": "New York",
       "county": "Brooklyn",
       "address": "1243 Avenue U, Brooklyn, NY 11229",
-      "summary": "A restaurant on Avenue U.",
+      "summary": "A Vietnamese restaurant, which trades on its own site as Pho Viet Nam. Its bowls include an Extra Big Bowl Combination (Xe Lua), a Special Big Bowl with Beef Ball Combination, a Small Rice Noodle Soup Combination and a crab, pork and tomato vermicelli noodle soup. Closed Monday; Tuesday to Sunday, 9:30am to 9pm.",
       "status": "open",
       "photos": []
     },
@@ -200,7 +200,7 @@
       "state": "New York",
       "county": "Brooklyn",
       "address": "1305 Avenue U, Brooklyn, NY 11229",
-      "summary": "A restaurant on Avenue U.",
+      "summary": "A restaurant whose name is rendered in Chinese as 汶村圓仔炳 五味鵝. The last three characters translate as 'five spice goose,' indicating a specialty dish.",
       "status": "open",
       "photos": []
     },
@@ -225,7 +225,7 @@
       "state": "New York",
       "county": "Brooklyn",
       "address": "1311 Avenue U, Brooklyn, NY 11229",
-      "summary": "A restaurant on Avenue U.",
+      "summary": "A halal restaurant serving Middle Eastern and Mediterranean food with Tajik and Russian influences, Qurutob and Plov among the dishes, with live music on selected nights. It states that it holds to 'strict Halal standards in every part of our kitchen,' and its operating entity is Karavan Kebab LLC, the name it carries on some listings. Its own site gives hours of 11am to 11pm daily; a second listing for the same address posts different hours.",
       "status": "open",
       "photos": []
     },
@@ -237,7 +237,7 @@
       "state": "New York",
       "county": "Brooklyn",
       "address": "1321 Avenue U, Brooklyn, NY 11229",
-      "summary": "A restaurant on Avenue U.",
+      "summary": "A Cantonese restaurant, known in Chinese as 三喜酒家, serving dim sum daily alongside roasted meats; reviewers single out a crispy roasted pork. It carries a large tea selection.",
       "status": "open",
       "photos": []
     }
@@ -277,25 +277,25 @@
       "kind": "food",
       "name": "Wing Hing Seafood Restaurant",
       "place_slug": "wing-hing-seafood-restaurant",
-      "note": "A restaurant at 1217 Avenue U."
+      "note": "A Chinese seafood restaurant at 1217 Avenue U, with tanks of live seafood by the entrance and full dim sum at weekends."
     },
     {
       "kind": "food",
       "name": "Sheep by Barashka",
       "place_slug": "sheep-by-barashka",
-      "note": "A restaurant at 1223 Avenue U."
+      "note": "A restaurant at 1223 Avenue U with live music, open Wednesday to Sunday from noon."
     },
     {
       "kind": "food",
       "name": "Pho Vietnam Restaurant",
       "place_slug": "pho-vietnam-restaurant-homecrest",
-      "note": "A restaurant at 1243 Avenue U."
+      "note": "A Vietnamese restaurant at 1243 Avenue U, trading on its own site as Pho Viet Nam. Closed Mondays."
     },
     {
       "kind": "food",
       "name": "Yuanzaibing",
       "place_slug": "yuanzaibing",
-      "note": "A restaurant at 1305 Avenue U."
+      "note": "A restaurant at 1305 Avenue U whose Chinese name ends in 五味鵝, 'five spice goose.'"
     },
     {
       "kind": "food",
@@ -307,13 +307,13 @@
       "kind": "food",
       "name": "Karavan Grill",
       "place_slug": "karavan-grill",
-      "note": "A restaurant at 1311 Avenue U."
+      "note": "A halal Middle Eastern and Mediterranean kitchen at 1311 Avenue U, also listed as Karavan Kebab."
     },
     {
       "kind": "food",
       "name": "Season Restaurant",
       "place_slug": "season-restaurant-homecrest",
-      "note": "A restaurant at 1321 Avenue U."
+      "note": "A Cantonese restaurant at 1321 Avenue U, with dim sum daily and roasted meats."
     }
   ],
   "links": [

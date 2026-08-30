@@ -140,7 +140,7 @@
       "county": "Manhattan",
       "address": "156 Tenth Ave, New York, NY 10011",
       "official_url": "https://cookshopny.com/",
-      "summary": "A long-running Tenth Avenue restaurant across from the High Line's 23rd Street stretch, serving seasonal American fare.",
+      "summary": "A restaurant at 156 Tenth Avenue, across from the High Line's 23rd Street stretch. By its own account its menus change frequently, based on the freshest ingredients available in the market and from purveyors in the Northeast.",
       "status": "open",
       "photos": []
     },
@@ -153,7 +153,7 @@
       "county": "Manhattan",
       "address": "75 9th Avenue, New York, NY 10011",
       "official_url": "https://www.buddakannyc.com/",
-      "summary": "A Pan-Asian restaurant inside Chelsea Market blending ornate decor with shareable dim sum, noodles, and whole Peking duck.",
+      "summary": "The New York branch of Stephen Starr's Pan-Asian chain, inside Chelsea Market at 75 Ninth Avenue; the first Buddakan opened in Philadelphia in 1998, at 325 Chestnut Street. The menu is built to share — dim sum, noodle soups, seafood and whole Peking duck. A Meatpacking District neighborhood site describes it as a 260-seat modern Chinese restaurant.",
       "status": "open",
       "photos": []
     },
@@ -166,7 +166,7 @@
       "county": "Manhattan",
       "address": "184 Ninth Avenue (at 21st St), New York, NY",
       "official_url": "https://www.billysbakerynyc.com/",
-      "summary": "An old-fashioned American bakery whose Chelsea storefront, open since 2003, is its original location, known for cupcakes and layer cakes.",
+      "summary": "A bakery that dates its own beginnings to 2003 and 'two friends from business school,' without naming them or saying which storefront came first. It sells cakes, cupcakes, cookies, cheesecakes, pies, bars and breakfast items, and its Chelsea storefront is one of three Manhattan locations.",
       "status": "open",
       "photos": []
     },
@@ -178,7 +178,7 @@
       "state": "New York",
       "county": "Manhattan",
       "address": "Inside Chelsea Market, 75 9th Avenue, New York, NY 10011",
-      "summary": "A Korean kitchen inside Chelsea Market known for Korean-style hand-cut ramen noodle dishes.",
+      "summary": "A Korean kitchen inside Chelsea Market specializing in Korean street-food noodles and 'Anju,' shareable small plates, with the everyday food culture of Korea given as its inspiration. Chef Esther Choi is associated with it. Beyond Chelsea Market it has locations in Midtown, on Lexington Avenue, and in Brooklyn at 212 Flatbush Avenue near Barclays Center.",
       "status": "open",
       "photos": []
     },
@@ -214,9 +214,10 @@
       "county": "Manhattan",
       "address": "363 West 16th Street, New York, NY 10011",
       "official_url": "https://www.themaritimehotel.com/",
-      "summary": "A 121-room boutique hotel on West 16th Street, open since 2003, participating in the iPrefer loyalty program.",
+      "summary": "A hotel that opened in 2003 with 121 rooms and 5 suites decorated on a nautical theme, in the West 16th Street building nicknamed the 'pizza box,' which has porthole-style window openings. It participates in the Lifestyle Preferred and iPrefer loyalty programs.",
       "status": "open",
-      "photos": []
+      "photos": [],
+      "history": "The Ninth Avenue and 17th Street buildings were sold in 1987 to Covenant House, which ran them as a shelter for runaways; in 1994 the Chinese government acquired them and ran them as housing and services for Chinese artists, students and businessmen. In 2001 Sean K. MacPherson and Eric Goode bought the Ninth Avenue building for $19 million with the developers Richard Born and Ira Drukier. The adjacent 17th Street building was separately converted into the Dream Downtown Hotel in 2011, to designs by Frank Fusaro."
     }
   ],
   "entries": [
@@ -242,25 +243,25 @@
       "kind": "food",
       "name": "Cookshop",
       "place_slug": "cookshop",
-      "note": "Seasonal American cooking on Tenth Avenue, across from the High Line."
+      "note": "A Tenth Avenue restaurant across from the High Line, with menus that change frequently."
     },
     {
       "kind": "food",
       "name": "Buddakan",
       "place_slug": "buddakan",
-      "note": "Ornate Pan-Asian dining inside Chelsea Market."
+      "note": "Stephen Starr's Pan-Asian dining room inside Chelsea Market."
     },
     {
       "kind": "food",
       "name": "Billy's Bakery (Chelsea)",
       "place_slug": "billys-bakery-chelsea",
-      "note": "The original 2003 location of this old-fashioned American bakery."
+      "note": "One of the bakery's three Manhattan storefronts; it dates its own beginnings to 2003."
     },
     {
       "kind": "food",
       "name": "Mokbar (Chelsea Market)",
       "place_slug": "mokbar-chelsea-market",
-      "note": "Korean-style ramen inside Chelsea Market's food hall."
+      "note": "Korean street-food noodles and shareable 'Anju' plates inside Chelsea Market's food hall."
     },
     {
       "kind": "stay",
@@ -272,7 +273,7 @@
       "kind": "stay",
       "name": "The Maritime Hotel",
       "place_slug": "the-maritime-hotel",
-      "note": "A 121-room boutique hotel on West 16th Street."
+      "note": "A hotel of 121 rooms and 5 suites in the West 16th Street 'pizza box' building, open since 2003."
     }
   ]
 }

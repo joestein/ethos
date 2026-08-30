@@ -47,32 +47,33 @@ defmodule Ethos.Seeds.DanburyGuide do
           kind: "sight",
           name: "The Palace Danbury",
           place_slug: "palace-danbury",
-          note: "The historic Main Street theater — music, comedy, film, and touring acts."
+          note: "The Main Street venue hosting music, comedy, theater, and film."
         },
         %{
           kind: "food",
           name: "Stanziato's Wood Fired Pizza",
           place_slug: "stanziatos-wood-fired-pizza",
           note:
-            "Artisanal pies from an 800-degree Italian oven, sourced from nine regional farms."
+            "Twelve-inch pies from an 800-degree Italian oven, sourced from Connecticut and New York growers."
         },
         %{
           kind: "food",
           name: "TK's American Cafe",
           place_slug: "tks-american-cafe",
-          note: "76 wing flavors since 1990 — the area's sports bar of record."
+          note: "76 wing flavors and roughly 50 beers, and an official soccer chapter bar."
         },
         %{
           kind: "food",
           name: "Chuck's Steak House & Margarita Grill",
           place_slug: "chucks-steak-house-danbury",
-          note: "Hand-cut steaks and a famous salad bar, serving Danbury since 1973."
+          note:
+            "Hand-cut Midwestern steaks and a salad bar included with meals; live music Tuesdays and Thursdays."
         },
         %{
           kind: "food",
           name: "Charter Oak Brewing",
           place_slug: "charter-oak-brewing",
-          note: "Connecticut Magazine's best brewery and taproom in the state, two years running."
+          note: "Ten rotating draft lines, food trucks, and a biergarten on Shelter Rock Road."
         },
         %{
           kind: "stay",
