@@ -28,5 +28,5 @@
 {"city":null,"club":"Tampa Bay Rays","county":null,"slug":"tampa-bay-rays","state":null,"venue":null,"verified":false},
 {"city":null,"club":"Texas Rangers","county":null,"slug":"texas-rangers","state":null,"venue":null,"verified":false},
 {"city":null,"club":"Toronto Blue Jays","county":null,"slug":"toronto-blue-jays","state":null,"venue":null,"verified":false},
-{"city":null,"club":"Washington Nationals","county":null,"slug":"washington-nationals","state":null,"venue":null,"verified":false}
+{"city":"Washington","club":"Washington Nationals","county":"District of Columbia","slug":"washington-nationals","state":"District of Columbia","venue":"Nationals Park","verified":true}
 ]
