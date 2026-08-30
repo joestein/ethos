@@ -67,10 +67,28 @@ defmodule Ethos.Seeds.MlbClubsRosterTest do
     # unresolved, so without this the check would have shipped green and empty.
     assert resolved != [], "no resolved roster rows — this assertion is checking nothing"
 
-    corpus =
-      for {place, _owner} <- Ethos.Seeds.Catalog.places_owned(),
-          into: %{},
-          do: {place.name, {place.town, place.state, place.county}}
+    # Scoped to the ballparks region, and asserted collision-free before it is
+    # built into a map.
+    #
+    # `into: %{}` keeps the last write silently, and place NAMES are not
+    # unique: there is a global slug-uniqueness gate and no name gate, and the
+    # code corpus already holds "Maggie McFly's" twice — connecticut_places.ex
+    # :328 and :598, two different towns. Across thirty venues and a growing
+    # code corpus, an unscoped name-keyed map would validate a roster row
+    # against the wrong record: green on a wrong row, or red with a message
+    # naming a place in another state. Every roster row passes through here.
+    ballpark_places =
+      for {place, owner} <- Ethos.Seeds.Catalog.places_owned(),
+          owner.region == "ballparks",
+          do: place
+
+    names = Enum.map(ballpark_places, & &1.name)
+
+    assert length(names) == length(Enum.uniq(names)),
+           "two ballpark places share a name, so the map below would silently drop one: " <>
+             inspect(names -- Enum.uniq(names))
+
+    corpus = Map.new(ballpark_places, &{&1.name, {&1.town, &1.state, &1.county}})
 
     for entry <- resolved do
       slug = entry["slug"]
