@@ -321,9 +321,23 @@ places nothing seeded, and `GuideRunner.replace_entries!` calls
 raises.
 
 **So this task makes six edits, not five:** four places call sites, the guide
-list, and `:341`. That count is specific to a set holding *both* halves in
-Elixir, which is what this one does. A set with JSON places and Elixir guides
-needs only the guide list.
+list, and `:341`.
+
+Each site has its own trigger, and the triggers are not the same shape — which
+is why counting by set shape gets it wrong:
+
+| site | trigger |
+|---|---|
+| the four places call sites | your places are in an Elixir module |
+| the guide list at `:343-350` | your guides are in Elixir modules |
+| `:341` | your places are in an Elixir module **and any guide in the corpus has entries naming them** |
+
+`:341`'s trigger is not "both halves in Elixir", which is how I first wrote it.
+`replace_entries!` lives in `GuideRunner` (`lib/ethos/seeds/guide_runner.ex:98-102`),
+and **both** code modules and the JSON loader route through it — so a JSON guide
+whose entries name a module-declared place raises exactly the same
+`get_place_by_slug!` error. The trigger is about where the *places* live and
+whether anything points at them, not about the guide's file format.
 
 Also hardcoded, and worth fixing while you are there:
 `lib/mix/tasks/ethos.bare_places.ex:69` and `:79`. Not a gate, but it is the
