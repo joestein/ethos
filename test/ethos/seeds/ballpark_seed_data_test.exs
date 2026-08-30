@@ -607,6 +607,79 @@ defmodule Ethos.Seeds.BallparkSeedDataTest do
     end
   end
 
+  # --- The audit trail, which is otherwise silent if skipped ----------------
+  #
+  # Every ballpark ships `docs/ballparks/<venue-slug>.md`, a sentence-to-verdict
+  # trace, and both of its moduledocs cite that file by path. The file is
+  # committed rather than left in `.superpowers/` because that directory is
+  # git-ignored — a moduledoc citing a path that will not survive a clone is not
+  # an audit trail, which is the arrangement that lost the Brooklyn research
+  # artifacts.
+  #
+  # Nothing else notices when one is missing. A ballpark with no trace file
+  # seeds fine, renders fine, and passes every other gate in this file; its two
+  # moduledocs simply point at nothing. Across thirty ballparks that is thirty
+  # chances to skip the trace silently, which is the same argument
+  # `Ethos.Seeds.Catalog` makes for mechanical module registration.
+  #
+  # Derived from the guide slug rather than listed separately, because a second
+  # literal list is a second thing to forget: every ballpark guide slug in this
+  # set is `<venue-slug>-guide`, and the assertion below pins that shape so the
+  # derivation cannot drift silently either.
+  test "every ballpark ships a committed audit trail naming both its modules" do
+    guides = Catalog.guide_modules("ballparks")
+
+    # Non-vacuous: an empty region passes every assertion below.
+    assert length(guides) >= 2
+
+    for {mod, _r} <- guides do
+      slug = mod.data().slug
+
+      assert String.ends_with?(slug, "-guide"),
+             "#{inspect(mod)} has slug #{inspect(slug)}; the doc path is derived from it " <>
+               "by stripping the suffix, so a slug of another shape breaks this gate silently"
+
+      venue = String.replace_suffix(slug, "-guide", "")
+      path = Path.join([@repo_root, "docs", "ballparks", "#{venue}.md"])
+
+      assert File.exists?(path),
+             "#{inspect(mod)} has no audit trail at docs/ballparks/#{venue}.md — the " <>
+               "research artifact is git-ignored, so this file is the only trace that " <>
+               "survives a clone"
+
+      body = File.read!(path)
+
+      # A stub file passes File.exists?/1 and traces nothing.
+      assert byte_size(body) > 1_000,
+             "docs/ballparks/#{venue}.md is #{byte_size(body)} bytes — too short to be a " <>
+               "sentence-to-verdict trace"
+
+      # The two things the trace exists to connect. Both moduledocs cite the
+      # file; the file must name the modules back, or the pairing is one-way and
+      # a reader arriving at the doc cannot tell what it covers.
+      places_mod =
+        Enum.find(Catalog.place_modules("ballparks"), fn {m, _r} -> covers?(m, mod) end)
+
+      assert places_mod,
+             "no places module in the ballparks region shares a prefix with #{inspect(mod)}"
+
+      {places_mod, _r} = places_mod
+
+      for source <- [Catalog.source_path(places_mod), Catalog.source_path(mod)] do
+        assert String.contains?(body, source),
+               "docs/ballparks/#{venue}.md does not name #{source}"
+      end
+    end
+  end
+
+  # A ballpark's two modules share everything but the trailing word, which is
+  # what pairs them: `Ethos.Seeds.CoorsFieldPlaces` with
+  # `Ethos.Seeds.CoorsFieldGuide`.
+  defp covers?(places_mod, guide_mod) do
+    strip = fn m, suffix -> m |> inspect() |> String.replace_suffix(suffix, "") end
+    strip.(places_mod, "Places") == strip.(guide_mod, "Guide")
+  end
+
   # A slug is published text: it is the URL, and the corpus gates scan it as a
   # string. The research artifact proposes a slug; only a verdict decides a
   # name. `sluggers-world-class-sports-bar` reached a first draft straight from
