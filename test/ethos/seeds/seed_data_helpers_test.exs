@@ -95,6 +95,7 @@ defmodule Ethos.SeedDataHelpersTest do
              "lib/ethos/seeds/rate_field_places.ex",
              "lib/ethos/seeds/rogers_centre_places.ex",
              "lib/ethos/seeds/sutter_health_park_places.ex",
+             "lib/ethos/seeds/t_mobile_park_places.ex",
              "lib/ethos/seeds/target_field_places.ex",
              "lib/ethos/seeds/tropicana_field_places.ex",
              "lib/ethos/seeds/truist_park_places.ex",

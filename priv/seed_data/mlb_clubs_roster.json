@@ -23,7 +23,7 @@
 {"city":"Pittsburgh","club":"Pittsburgh Pirates","county":"Allegheny County","slug":"pittsburgh-pirates","state":"Pennsylvania","venue":"PNC Park","verified":true},
 {"city":"San Diego","club":"San Diego Padres","county":"San Diego County","slug":"san-diego-padres","state":"California","venue":"Petco Park","verified":true},
 {"city":"San Francisco","club":"San Francisco Giants","county":"San Francisco","slug":"san-francisco-giants","state":"California","venue":"Oracle Park","verified":true},
-{"city":null,"club":"Seattle Mariners","county":null,"slug":"seattle-mariners","state":null,"venue":null,"verified":false},
+{"city":"Seattle","club":"Seattle Mariners","county":"King County","slug":"seattle-mariners","state":"Washington","venue":"T-Mobile Park","verified":true},
 {"city":"St. Louis","club":"St. Louis Cardinals","county":"St. Louis","slug":"st-louis-cardinals","state":"Missouri","venue":"Busch Stadium","verified":true},
 {"city":"St. Petersburg","club":"Tampa Bay Rays","county":"Pinellas County","slug":"tampa-bay-rays","state":"Florida","venue":"Tropicana Field","verified":true},
 {"city":"Arlington","club":"Texas Rangers","county":"Tarrant County","slug":"texas-rangers","state":"Texas","venue":"Globe Life Field","verified":true},
