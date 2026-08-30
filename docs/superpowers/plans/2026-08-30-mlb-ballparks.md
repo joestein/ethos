@@ -288,6 +288,29 @@ came from — a collision report naming the wrong file is worse than none.
 Then adding a third places module later is one edit in one place rather than
 four in four.
 
+**The guide half is blind the same way, and this task creates guide modules
+too.** `seed_guide_corpus!` (`test/ethos/seeds/destination_seed_data_test.exs:340-352`)
+is a corpus-wide gate that seeds every committed seed file through the
+production loaders — free load-shape, `Place.changeset` and `Guide.changeset`
+validation for any new JSON directory. But it enumerates the *code* half by
+name, and there are **seven** names: `ConnecticutPlaces.upsert_all!()` plus
+`WaterburyGuide`, `MiddleburyGuide`, `DanburyGuide`, `SouthburyGuide`,
+`WoodburyGuide` and `RomeGuide`.
+
+Two consequences, both live here:
+
+- A guide module absent from that list gets **none** of the loader and changeset
+  validation. `WrigleyFieldGuide` must be added or it is unvalidated.
+- Its destination slugs never enter `legitimate_paths/0`, so any
+  `priv/seed_data/destinations/` file naming the new state or county would fail
+  `unresolvable_path_violations`. This task ships no destination file, so it does
+  not bite yet — but Task 5 or a later editorial pass adding an Illinois
+  destination page would hit it, and the failure names a path rather than the
+  missing registration.
+
+Register `WrigleyFieldGuide` in `seed_guide_corpus!` in this step, and add each
+later ballpark guide as Task 5 creates it.
+
 Also hardcoded, and worth fixing while you are there:
 `lib/mix/tasks/ethos.bare_places.ex:69` and `:79`. Not a gate, but it is the
 generator behind the roster precedent, so a code-module set is invisible to it
