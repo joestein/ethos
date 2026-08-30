@@ -66,7 +66,7 @@ defmodule Ethos.Seeds.AngelStadiumGuide do
       is nicknamed "The Big A".
 
       This guide takes the ballpark first, then the arena and the music venue
-      beside it, and then the ballpark's own record. Research for it was
+      on East Katella Avenue, and then the ballpark's own record. Research for it was
       carried out with the session's search budget already exhausted, from
       named sources fetched directly: English Wikipedia, MLB.com's Angels
       pages, Metrolink's own station page and the Orange County

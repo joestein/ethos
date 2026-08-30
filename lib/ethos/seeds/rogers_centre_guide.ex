@@ -59,7 +59,8 @@ defmodule Ethos.Seeds.RogersCentreGuide do
       for baseball after a renovation in 2023 and 2024.
 
       This guide takes the ballpark, the hotel inside it, the tower and
-      aquarium beside it, the three tenants of a 1929 railway roundhouse, a
+      aquarium east of it on Bremner Boulevard, the three tenants of a 1929
+      railway roundhouse, a
       sports bar on York Street, a fort from 1793 and a tavern in an 1849
       building. Research was carried out with web search unavailable from the
       first query onward, and several vendor domains blocked every fetch
