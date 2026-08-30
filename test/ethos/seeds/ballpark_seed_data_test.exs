@@ -577,15 +577,16 @@ defmodule Ethos.Seeds.BallparkSeedDataTest do
   @not_transit_infrastructure ["st-louis-union-station", "tattered-cover-union-station"]
 
   test "no ballpark place record is a station, a garage or a bus route" do
-    names = Enum.map(Catalog.places_owned(), fn {p, _o} -> p.name end)
-
     ballparks =
       for {p, o} <- Catalog.places_owned(),
           o.region == "ballparks",
           do: {to_string(p.slug), p.name}
 
+    # Non-vacuous: an empty catalog region would pass every assertion below.
+    # (`length(all_place_names) >= length(ballparks)` used to stand here too —
+    # a subset compared against the corpus it is drawn from, true whatever the
+    # catalog holds, and no floor at all.)
     assert ballparks != []
-    assert length(names) >= length(ballparks)
 
     offenders =
       for {slug, name} <- ballparks,
@@ -698,8 +699,13 @@ defmodule Ethos.Seeds.BallparkSeedDataTest do
   @superlative_in_slug ~r/\b(world-?class|world-?famous|premier|premiere|best|finest|greatest|ultimate|number-?one|top-?rated|award-?winning)\b/i
 
   test "no place slug or name carries a superlative" do
+    places = Catalog.places_owned()
+
+    # Non-vacuous: an empty catalog would pass the assertion below.
+    assert length(places) >= 2
+
     offenders =
-      for {place, owner} <- Catalog.places_owned(),
+      for {place, owner} <- places,
           field <- [place.slug, place.name],
           Regex.match?(@superlative_in_slug, field),
           do: {Path.basename(owner.seed_file), field}
