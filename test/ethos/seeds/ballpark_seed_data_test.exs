@@ -324,6 +324,7 @@ defmodule Ethos.Seeds.BallparkSeedDataTest do
     {"citi-field", "citi-field-guide"},
     {"citizens-bank-park", "citizens-bank-park-guide"},
     {"comerica-park", "comerica-park-guide"},
+    {"coors-field", "coors-field-guide"},
     {"dodger-stadium", "dodger-stadium-guide"},
     {"fenway-park", "fenway-park-guide"},
     {"great-american-ball-park", "great-american-ball-park-guide"},
@@ -542,9 +543,29 @@ defmodule Ethos.Seeds.BallparkSeedDataTest do
   # `union-station` platform record, or any other place whose name contains
   # "station", still fails here.
   #
+  # A SECOND exemption, added in wave 2 and keyed the same way.
+  #
+  # `tattered-cover-union-station` is a bookstore. Confirmed verdicts in the
+  # 2026-08-30 Colorado Rockies artifact establish that Tattered Cover was
+  # founded in Denver's Cherry Creek district in 1971, grew into one of the
+  # largest independent bookstores in the United States, filed for Chapter 11 in
+  # October 2023 and was acquired by Barnes & Noble in July 2024, and that its
+  # own store locator lists a branch at 1701 Wynkoop Street inside the Union
+  # Station building alongside the Crawford Hotel. "Union Station" is the
+  # branch's location qualifier, not the record's subject — the record is a
+  # shop, with a paragraph of sourced content and an unresolved question about
+  # the bankruptcy published on its face.
+  #
+  # Denver Union Station itself IS transit, mints no record, and is prose in the
+  # Coors Field guide's "Getting there", where it is described by the RTD lines
+  # that call there — which is the rule working, not being bent. Renaming the
+  # record to dodge the pattern was considered and rejected: the verdict names
+  # the branch by its location, and a slug-keyed pardon with the two guard
+  # assertions below is safer than a name chosen to satisfy a regex.
+  #
   # Do not add an entry without a manual read and a stated reason in a wave
   # report — and consider whether the place belongs in prose first.
-  @not_transit_infrastructure ["st-louis-union-station"]
+  @not_transit_infrastructure ["st-louis-union-station", "tattered-cover-union-station"]
 
   test "no ballpark place record is a station, a garage or a bus route" do
     names = Enum.map(Catalog.places_owned(), fn {p, _o} -> p.name end)
