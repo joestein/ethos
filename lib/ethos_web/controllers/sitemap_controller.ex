@@ -47,6 +47,13 @@ defmodule EthosWeb.SitemapController do
           %{loc: url(~p"/c/#{c.slug}"), lastmod: DateTime.to_date(c.updated_at)}
         end)
 
+    # A guide whose destination is a bare state name derives the same slug as
+    # the state hub, so its URL arrives from two builders at once — the Antique
+    # Trail guide, destination "Connecticut", is what surfaced this. Deduping
+    # here rather than teaching each builder about the others: the invariant is
+    # about the finished list, and that is where it should be enforced.
+    urls = Enum.uniq_by(urls, & &1.loc)
+
     xml =
       [
         ~s(<?xml version="1.0" encoding="UTF-8"?>),

@@ -54,6 +54,22 @@ defmodule EthosWeb.SitemapControllerTest do
     assert body =~ "<loc>#{url(~p"/destinations/lisbon")}</loc></url>"
   end
 
+  # A guide whose destination is a bare state name derives the same slug as the
+  # state hub, so the URL was emitted twice — once from the guide-derived
+  # destinations and once from the states. The Antique Trail guide, whose
+  # destination is "Connecticut", is what surfaced it, but any such guide would.
+  test "no URL is listed twice", %{conn: conn} do
+    published_guide_fixture(%{destination: "Connecticut", state: "Connecticut"})
+    published_guide_fixture(%{destination: "Woodbury, Connecticut", state: "Connecticut"})
+
+    body = conn |> get("/sitemap.xml") |> response(200)
+
+    locs = Regex.scan(~r{<loc>([^<]+)</loc>}, body, capture: :all_but_first) |> List.flatten()
+    dupes = locs -- Enum.uniq(locs)
+
+    assert dupes == [], "sitemap lists these URLs more than once: #{inspect(Enum.uniq(dupes))}"
+  end
+
   test "includes /photos for photo-bearing published guides only", %{conn: conn} do
     with_photos = published_guide_fixture(%{destination: "Rome, Italy"})
 
