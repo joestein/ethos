@@ -27,7 +27,7 @@ defmodule Ethos.Seeds.AntiqueTrailCollection do
         %{
           guide_slug: "antique-trail-of-connecticut",
           blurb:
-            "Sixteen dealers on Woodbury's Main Street and a Saturday flea market at Route 64 — address, stock, and where the published hours disagree."
+            "Fifteen dealers on Woodbury's Main Street and a Saturday flea market at Route 64 — address, stock, and where the published hours disagree."
         },
         %{
           guide_slug: "woodbury-ct-travel-guide",

@@ -8,10 +8,18 @@ defmodule Ethos.Seeds.AntiqueTrailGuide do
   confirm them.
 
   Every clause here restates the text of a `confirmed` verdict from the
-  2026-08-29 place-research wave's independent verification. What the wave
-  ruled `refuted` or `uncertain` is absent, and the report at
+  2026-08-29 place-research wave's independent verification, or of a verdict
+  reason that expressly authorises publishing a named clause. What the wave
+  ruled `refuted` or `uncertain` is otherwise absent, and the report at
   .superpowers/sdd/2026-08-29-place-research-wave/antique-trail-report.md
   records each omission against its verdict.
+
+  Sixteen dealers, not the seventeen researched. Adorn Vintage and Restoration
+  is a Southbury business one directory mislocated here, and George Champion
+  Modern rested entirely on a single unverified line in the association's
+  courtesy list — the same list still carrying a company Connecticut revoked in
+  2013 — with no source stating what it deals in. Both are recorded in the
+  report; George Champion is a candidate for re-research.
   """
 
   def upsert!(email), do: Ethos.Seeds.GuideRunner.upsert!(data(), email)
@@ -24,7 +32,7 @@ defmodule Ethos.Seeds.AntiqueTrailGuide do
       state: "Connecticut",
       county: nil,
       intro: """
-      Woodbury's antiques dealers share one address book. Sixteen shops and
+      Woodbury's antiques dealers share one address book. Fifteen shops and
       galleries stand on Main Street North or Main Street South, and a
       Saturday flea market sits where Route 6 meets Route 64. The Woodbury
       Antiques Dealers Association — a Connecticut nonprofit registered at 40
@@ -101,7 +109,7 @@ defmodule Ethos.Seeds.AntiqueTrailGuide do
           name: "G. Sergeant Antiques",
           place_slug: "g-sergeant-antiques-woodbury",
           note:
-            "289 Main Street South, a member of the dealers' association, with Gary Sergeant as the named dealer."
+            "289 Main Street South: English, American, and Continental furniture. A member of the dealers' association, with Gary Sergeant as the named dealer."
         },
         %{
           kind: "sight",
@@ -116,13 +124,6 @@ defmodule Ethos.Seeds.AntiqueTrailGuide do
           place_slug: "madeline-west-antiques-woodbury",
           note:
             "373 Main Street South: European, American, and Asian antique art, paintings, porcelain, and furniture of the 18th to early 20th century, across five decorated rooms. Owner Cynthia Pollock is Madeline West's daughter."
-        },
-        %{
-          kind: "sight",
-          name: "George Champion Modern",
-          place_slug: "george-champion-modern-woodbury",
-          note:
-            "442 Main Street South, on the dealers' association address list with George Champion as dealer. No source states what it deals in."
         },
         %{
           kind: "sight",

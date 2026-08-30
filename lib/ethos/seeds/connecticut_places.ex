@@ -872,7 +872,7 @@ defmodule Ethos.Seeds.ConnecticutPlaces do
         kind: "shop",
         address: "289 Main Street South, Woodbury, CT 06798",
         summary:
-          "An antiques dealer at 289 Main Street South and a member of the Woodbury Antiques Dealers Association, with Gary Sergeant as the named dealer. Telephone (203) 266-4177; email gary@gsergeant.com. No access or hours guidance is published here: the only source for it was a website the verification pass could not open.",
+          "A dealer in English, American, and Continental furniture at 289 Main Street South, and a member of the Woodbury Antiques Dealers Association, with Gary Sergeant as the named dealer. Telephone (203) 266-4177; email gary@gsergeant.com. No access or hours guidance is published here: the only source for it was a website the verification pass could not open.",
         photos: []
       }),
       Map.merge(@woodbury, %{
@@ -895,15 +895,13 @@ defmodule Ethos.Seeds.ConnecticutPlaces do
           "A dealer in European, American, and Asian antique art, paintings, porcelain, and furniture of the 18th to the early 20th century, shown across five decorated rooms at 373 Main Street South and listed by the Connecticut Office of Tourism at that address on Route 6. Cynthia Pollock, daughter of Madeline West, is the current owner, and the shop is a member of the Woodbury Antiques Dealers Association. The tourism listing and the shop's own site disagree over whether it opens on Monday, so telephone 203-263-4604.",
         photos: []
       }),
-      Map.merge(@woodbury, %{
-        slug: "george-champion-modern-woodbury",
-        name: "George Champion Modern",
-        kind: "shop",
-        address: "442 Main Street South, Woodbury, CT 06798",
-        summary:
-          "The Woodbury Antiques Dealers Association's address list gives George Champion Modern Shop at 442 Main Street South, with George Champion as dealer and telephone 203-263-8442, among other Woodbury antiques dealers rather than among members. No source states what the shop deals in, and none beyond that one listing describes it at all.",
-        photos: []
-      }),
+      # George Champion Modern, 442 Main Street South, is deliberately absent.
+      # Its whole record was one line in the association's courtesy list — no
+      # website, no state tourism listing, no source stating what it deals in,
+      # and no corroboration of any kind. That is the same unpruned list still
+      # carrying a company Connecticut revoked in 2013, so one unverified line
+      # in it cannot put a business on a map. Left for re-research if keyword
+      # search recovers.
       Map.merge(@woodbury, %{
         slug: "kocian-depasqua-antiques-woodbury",
         name: "Kocian DePasqua Antiques",

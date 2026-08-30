@@ -27,7 +27,7 @@ defmodule Ethos.Seeds.AntiqueTrailTest do
     assert guide.county_slug == nil
 
     entries = Guides.list_entries(guide)
-    assert length(entries) == 17
+    assert length(entries) == 16
     assert Enum.all?(entries, & &1.place_id), "every trail entry links a place"
 
     # Idempotent: a second run replaces the entries rather than doubling them.
@@ -76,12 +76,15 @@ defmodule Ethos.Seeds.AntiqueTrailTest do
   end
 
   # Adorn Vintage and Restoration is a Southbury business that one directory
-  # listed at a Woodbury address. It is not on this trail.
+  # listed at a Woodbury address. George Champion Modern had nothing behind it
+  # but a line in that same directory's courtesy list. Neither is on this trail.
   test "the trail names no shop the verification excluded" do
     data = Seeds.AntiqueTrailGuide.data()
     text = inspect(data)
 
     refute text =~ "Adorn"
     refute text =~ "319 Main Street South"
+    refute text =~ "George Champion"
+    refute text =~ "442 Main Street South"
   end
 end

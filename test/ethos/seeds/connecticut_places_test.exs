@@ -4,9 +4,9 @@ defmodule Ethos.Seeds.ConnecticutPlacesTest do
   alias Ethos.Places
   alias Ethos.Seeds.ConnecticutPlaces
 
-  # 50 places for the five town guides, plus the 17 Woodbury antiques dealers
+  # 50 places for the five town guides, plus the 16 Woodbury antiques dealers
   # the Antique Trail guide walks.
-  @expected 67
+  @expected 66
 
   test "upsert_all! is idempotent and seeds all towns" do
     first = ConnecticutPlaces.upsert_all!()
@@ -30,19 +30,30 @@ defmodule Ethos.Seeds.ConnecticutPlacesTest do
     ConnecticutPlaces.upsert_all!()
 
     shops = Enum.filter(ConnecticutPlaces.places(), &(&1.kind == "shop"))
-    assert length(shops) == 17
+    assert length(shops) == 16
 
     for shop <- shops do
       place = Places.get_place_by_slug!(shop.slug)
       assert place.town == "Woodbury"
       assert place.county_slug == "litchfield-county"
 
-      # No dealer in this batch was found closed, and eight of the seventeen
+      # No dealer in this batch was found closed, and nine of the sixteen
       # could not be shown to be trading at all. "open" is the schema default
       # and renders nothing; a "closed" here would publish a claim the
       # research does not carry.
       assert place.status == "open"
     end
+  end
+
+  # Two of the eighteen researched dealers do not ship. Adorn Vintage and
+  # Restoration is a Southbury business one directory mislocated in Woodbury
+  # (see below). George Champion Modern rested entirely on one unverified line
+  # in the association's courtesy list — no website, no state tourism listing,
+  # nothing stating what it deals in — and that list is the same one still
+  # carrying a company the state revoked in 2013.
+  test "George Champion Modern is not in the corpus" do
+    slugs = Enum.map(ConnecticutPlaces.places(), & &1.slug)
+    refute "george-champion-modern-woodbury" in slugs
   end
 
   # Adorn Vintage and Restoration was listed at 319 Main Street South by the
