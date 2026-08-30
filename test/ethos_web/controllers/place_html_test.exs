@@ -17,6 +17,15 @@ defmodule EthosWeb.PlaceHTMLTest do
     assert "shop" in Place.kinds()
   end
 
+  test "a stadium is a StadiumOrArena, not the TouristAttraction fallback" do
+    assert PlaceHTML.schema_type("stadium") == "StadiumOrArena"
+    refute PlaceHTML.schema_type("stadium") == PlaceHTML.schema_type("unmapped-kind")
+  end
+
+  test "stadium is an accepted kind" do
+    assert "stadium" in Place.kinds()
+  end
+
   test "every accepted kind maps to a schema.org type that is not the fallback" do
     fallback = PlaceHTML.schema_type("definitely-not-a-kind")
 

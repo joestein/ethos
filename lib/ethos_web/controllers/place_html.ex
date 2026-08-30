@@ -14,7 +14,8 @@ defmodule EthosWeb.PlaceHTML do
     "park" => "Park",
     "historic-site" => "LandmarksOrHistoricalBuildings",
     "amusement-park" => "AmusementPark",
-    "shop" => "Store"
+    "shop" => "Store",
+    "stadium" => "StadiumOrArena"
   }
 
   def schema_type(kind), do: Map.get(@schema_types, kind, "TouristAttraction")
