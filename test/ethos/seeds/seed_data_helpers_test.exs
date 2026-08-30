@@ -70,16 +70,16 @@ defmodule Ethos.SeedDataHelpersTest do
       |> Enum.group_by(fn {_p, owner} -> owner.seed_file end, fn {p, _o} -> p.slug end)
 
     assert Map.keys(by_file) |> Enum.sort() == [
-             "lib/ethos/seeds/ballpark_places.ex",
-             "lib/ethos/seeds/connecticut_places.ex"
+             "lib/ethos/seeds/connecticut_places.ex",
+             "lib/ethos/seeds/wrigley_field_places.ex"
            ]
 
     # Attribution, not just membership: each module's own slugs come back under
     # its own file, so a swapped or shared owner label fails here.
-    assert "wrigley-field" in by_file["lib/ethos/seeds/ballpark_places.ex"]
+    assert "wrigley-field" in by_file["lib/ethos/seeds/wrigley_field_places.ex"]
     refute "wrigley-field" in by_file["lib/ethos/seeds/connecticut_places.ex"]
     assert "palace-theater-waterbury" in by_file["lib/ethos/seeds/connecticut_places.ex"]
-    refute "palace-theater-waterbury" in by_file["lib/ethos/seeds/ballpark_places.ex"]
+    refute "palace-theater-waterbury" in by_file["lib/ethos/seeds/wrigley_field_places.ex"]
 
     # Atom keys, not string keys. A string-key read here yields nil for every
     # field and every gate downstream passes over the code corpus in silence.

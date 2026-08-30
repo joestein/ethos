@@ -31,20 +31,33 @@ defmodule Mix.Tasks.Ethos.BarePlaces do
   them has bitten this project before:
 
     * the `"places"` array of each guide seed file — **string** keys,
-    * `Ethos.Seeds.ConnecticutPlaces.places/0` — **atom** keys.
+    * `Ethos.Seeds.Catalog.places_owned/0` — **atom** keys.
 
   Both are read through their own accessor below rather than through one
   normalising pass, so a shape change fails loudly on the side that changed.
 
-  `test/support/seed_data_helpers.ex` has the same glob as `seed_files/0` here,
-  but it is compiled only in `:test`, so it cannot be called from a Mix task.
-  The exclusion list is duplicated rather than shared; `seed_data_helpers_test`
-  and the roster test between them keep the two honest.
+  ## Where the module list lives, and why it moved
+
+  This task used to name `Ethos.Seeds.ConnecticutPlaces` directly and hardcode
+  its region and file, because `test/support/seed_data_helpers.ex` is compiled
+  only in `:test` and a Mix task cannot call it. That made this the fifth copy
+  of a four-copy list — and the one no gate covers, since a Mix task is not a
+  test. A second places module would have been silently omitted from every
+  roster this task generates.
+
+  It now reads `Ethos.Seeds.Catalog`, which lives in `lib/` precisely so that
+  both this task and test support can reach it. Region and seed file come from
+  the owning module rather than from constants here.
+
+  `test/support/seed_data_helpers.ex` still has its own copy of the same glob
+  as `seed_files/0` here, for the same compile-environment reason;
+  `seed_data_helpers_test` and the roster test between them keep the two
+  honest.
   """
 
   use Mix.Task
 
-  alias Ethos.Seeds.ConnecticutPlaces
+  alias Ethos.Seeds.Catalog
   alias Ethos.Seeds.DataGuide
 
   @seed_data_root "priv/seed_data"
@@ -57,16 +70,13 @@ defmodule Mix.Tasks.Ethos.BarePlaces do
 
   @max_summary_words 25
 
-  @code_seed_file "lib/ethos/seeds/connecticut_places.ex"
-  @code_region "connecticut"
-
   @impl Mix.Task
   def run(args) do
     # Read once and threaded through both paths. `--stats` reports on exactly
     # the places the roster is built from, and does not re-glob and re-decode
     # all 272 seed files to do it.
     json = load_json_places()
-    code = ConnecticutPlaces.places()
+    code = Catalog.places_owned()
 
     case args do
       [] -> IO.puts(encode(bare_entries(json, code)))
@@ -76,7 +86,7 @@ defmodule Mix.Tasks.Ethos.BarePlaces do
   end
 
   @doc "Every bare place, JSON sources first, then the code-defined ones."
-  def roster, do: bare_entries(load_json_places(), ConnecticutPlaces.places())
+  def roster, do: bare_entries(load_json_places(), Catalog.places_owned())
 
   @doc "Sorted repo-relative paths of every guide seed file."
   def seed_files do
@@ -98,7 +108,11 @@ defmodule Mix.Tasks.Ethos.BarePlaces do
 
   defp bare_entries(json, code) do
     for({f, p} <- json, bare?(p["summary"], p["photos"], p["history"]), do: json_entry(f, p)) ++
-      for(p <- code, bare?(p[:summary], p[:photos], p[:history]), do: code_entry(p))
+      for(
+        {p, owner} <- code,
+        bare?(p[:summary], p[:photos], p[:history]),
+        do: code_entry(p, owner)
+      )
   end
 
   defp json_entry(file, place) do
@@ -112,14 +126,14 @@ defmodule Mix.Tasks.Ethos.BarePlaces do
     }
   end
 
-  defp code_entry(place) do
+  defp code_entry(place, owner) do
     %{
       "slug" => place.slug,
       "name" => place.name,
       "kind" => place.kind,
       "town" => place.town,
-      "region" => @code_region,
-      "seed_file" => @code_seed_file
+      "region" => owner.region,
+      "seed_file" => owner.seed_file
     }
   end
 
@@ -141,7 +155,7 @@ defmodule Mix.Tasks.Ethos.BarePlaces do
 
     thin =
       Enum.count(json, fn {_file, place} -> thin?(place["summary"]) end) +
-        Enum.count(code, &thin?(&1[:summary]))
+        Enum.count(code, fn {place, _owner} -> thin?(place[:summary]) end)
 
     """
     summaries under #{@max_summary_words} words: #{thin}
@@ -156,7 +170,10 @@ defmodule Mix.Tasks.Ethos.BarePlaces do
     """
   end
 
-  defp source_bucket(@code_seed_file), do: "code-defined"
+  # Every code-defined module buckets together, matched by directory rather
+  # than against one hardcoded filename — that literal silently stopped
+  # matching the moment a second places module existed.
+  defp source_bucket("lib/" <> _ = _file), do: "code-defined"
   defp source_bucket(file), do: Path.basename(Path.dirname(file))
 
   defp tally(entries, key, bucket \\ & &1) do

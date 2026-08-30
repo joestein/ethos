@@ -4,9 +4,9 @@ defmodule Ethos.Seeds.WrigleyFieldTest do
   import Ethos.AccountsFixtures
   alias Ethos.{Guides, Places}
   alias Ethos.Seeds
-  alias Ethos.Seeds.BallparkPlaces
+  alias Ethos.Seeds.WrigleyFieldPlaces
 
-  defp place(slug), do: Enum.find(BallparkPlaces.places(), &(&1.slug == slug))
+  defp place(slug), do: Enum.find(WrigleyFieldPlaces.places(), &(&1.slug == slug))
 
   # Section bodies are wrapped heredocs, so a phrase a reader sees as one line
   # can carry a newline in the middle of it. Every prose assertion below reads
@@ -15,7 +15,7 @@ defmodule Ethos.Seeds.WrigleyFieldTest do
 
   test "the guide seeds idempotently with every entry linked to a place" do
     user = user_fixture()
-    BallparkPlaces.upsert_all!()
+    WrigleyFieldPlaces.upsert_all!()
     Seeds.WrigleyFieldGuide.upsert!(user.email)
     guide = Seeds.WrigleyFieldGuide.upsert!(user.email)
 
@@ -32,7 +32,7 @@ defmodule Ethos.Seeds.WrigleyFieldTest do
     assert guide.county_slug == "cook-county"
 
     entries = Guides.list_entries(guide)
-    assert length(entries) == length(BallparkPlaces.places())
+    assert length(entries) == length(WrigleyFieldPlaces.places())
     assert Enum.all?(entries, & &1.place_id), "every entry links a place"
 
     # Idempotent: a second run replaces the entries rather than doubling them.
@@ -41,7 +41,7 @@ defmodule Ethos.Seeds.WrigleyFieldTest do
   end
 
   test "every entry place_slug resolves to a seeded Cook County place" do
-    BallparkPlaces.upsert_all!()
+    WrigleyFieldPlaces.upsert_all!()
 
     for entry <- Seeds.WrigleyFieldGuide.data().entries do
       place = Places.get_place_by_slug(entry.place_slug)
@@ -53,7 +53,7 @@ defmodule Ethos.Seeds.WrigleyFieldTest do
   end
 
   test "the ballpark itself is a stadium, so its page emits StadiumOrArena" do
-    BallparkPlaces.upsert_all!()
+    WrigleyFieldPlaces.upsert_all!()
     wrigley = Places.get_place_by_slug!("wrigley-field")
 
     assert wrigley.kind == "stadium"
@@ -74,7 +74,7 @@ defmodule Ethos.Seeds.WrigleyFieldTest do
   # Cubs Store's licensee is Levy Premium Foodservice, not the club, so the
   # record could not say what it sells or who runs it.
   test "the corpus names nothing the verification excluded" do
-    text = inspect(BallparkPlaces.places()) <> inspect(Seeds.WrigleyFieldGuide.data())
+    text = inspect(WrigleyFieldPlaces.places()) <> inspect(Seeds.WrigleyFieldGuide.data())
 
     refute text =~ "Strange Cargo"
     refute text =~ "3448 N Clark"
@@ -135,7 +135,7 @@ defmodule Ethos.Seeds.WrigleyFieldTest do
     assert getting_there =~ "Addison station"
     assert getting_there =~ "Red Top Parking"
 
-    names = Enum.map(BallparkPlaces.places(), & &1.name)
+    names = Enum.map(WrigleyFieldPlaces.places(), & &1.name)
     refute Enum.any?(names, &(&1 =~ ~r/station|parking|garage/i))
 
     # No parking price was reachable and none may be published; nor may any

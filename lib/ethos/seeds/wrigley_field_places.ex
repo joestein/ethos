@@ -1,23 +1,24 @@
-defmodule Ethos.Seeds.BallparkPlaces do
+defmodule Ethos.Seeds.WrigleyFieldPlaces do
   @moduledoc """
-  Seeds the places for the MLB ballpark guides. Idempotent: `upsert_all!/0`
+  Seeds the places for the Wrigley Field guide. Idempotent: `upsert_all!/0`
   upserts by slug.
 
-  One private function per ballpark, each returning its own list, with a
-  locality map of its own; `places/0` concatenates them. Adding the next
-  ballpark is a new function and one more term in that concatenation, and
-  nothing else in this file moves.
-
-  ## Wrigley Field
+  **One module per ballpark.** `Ethos.Seeds.Catalog` lists them, and every gate
+  and seed path reads that list, so a new ballpark costs one line there and
+  touches nothing here. The alternative — one `ballpark_places.ex` holding all
+  thirty — was rejected once the catalog existed: it would put ~10,000 lines
+  and every concurrent research wave into one `places/0` expression, which
+  serialises work the set design wants parallel.
 
   Every clause published here restates the text of a `confirmed` verdict from
   the 2026-08-30 Wrigley Field research artifact, as adjudicated by an
   independent adversarial verifier (157 confirmed, 4 refuted, 7 uncertain).
   A verdict vouches only for what its own `item` text restates, not for every
-  clause of the sentence the finder wrote around it. The report at
-  .superpowers/sdd/2026-08-30-mlb-ballparks/task-4-report.md quotes each
-  published sentence against the verdict it rests on, and records every
-  omission.
+  clause of the sentence the finder wrote around it.
+  `docs/ballparks/wrigley-field.md` quotes each published sentence against the
+  verdict it rests on, and records every omission — it is committed, rather
+  than left in the research workspace, because that workspace is git-ignored
+  and is how the Brooklyn research artifacts were lost.
 
   What the verification changed, and what is therefore absent here:
 
@@ -56,17 +57,27 @@ defmodule Ethos.Seeds.BallparkPlaces do
       schema offers is "closed", which would be a claim the research refutes.
 
     * **Three ZIP codes are the verifier's, not the finder's**: Sluggers,
-      Merkle's and Nisei Lounge are 60657. The Music Box is 60613 while
-      Southport Grocery, ten blocks south on the same street, is 60657; that
-      is not an error and must not be normalised.
+      Merkle's and Nisei Lounge are 60657. The Music Box at 3733 N Southport
+      is 60613 while Southport Grocery at 3552 on the same street is 60657;
+      that is not an error and must not be normalised.
 
     * No trip duration or drive time appears anywhere. Distances are given as
-      the source gives them — a mileage, a street, a direction.
+      the source gives them — a mileage, a street, a direction. **No distance
+      between two places is published at all**, in blocks or otherwise: the
+      artifact carries none, and the one block-count that reached a first
+      draft was contradicted by the artifact's own grid data.
 
   Boundary language is hedged wherever the research hedged it. Wrigleyville's
   sourced borders run Grace Street (3800 N) to Cornelia Avenue (3500 N) north
   to south; Alta Vista Terrace sits at that northern edge and Graceland
   Cemetery beyond it, and neither is placed inside the neighbourhood here.
+  No community area is named for Graceland Cemetery, because no verdict gives
+  it one — only that 4001 N is north of Grace Street.
+
+  `official_url` is set only where a verdict establishes that the domain
+  belongs to the business. Four records carry `nil` for it despite a plausible
+  domain existing, three of them because the site refused every fetch by both
+  the finder and the verifier: an unreachable domain is not a verified one.
   """
 
   alias Ethos.Places
@@ -78,10 +89,6 @@ defmodule Ethos.Seeds.BallparkPlaces do
   end
 
   def places do
-    wrigley_field()
-  end
-
-  defp wrigley_field do
     [
       Map.merge(@chicago, %{
         slug: "wrigley-field",
@@ -126,7 +133,7 @@ defmodule Ethos.Seeds.BallparkPlaces do
         address: "3740 North Clark Street, Chicago, IL 60613",
         official_url: "https://www.gmantavern.com/",
         summary:
-          "A bar at 3740 N Clark St. with a rotating draft list and a vinyl collection. Its stated hours are Monday to Friday from 3pm and Saturday and Sunday from noon, and it states that it opens two hours before every Cubs home game start and during all Metro shows. Its happy hour — stated as weekdays 3pm to 6pm, and excluded on Cubs home games — lists discounted draft and well drinks, Malort shots and a \"Chicago Handshake\". Its own site carries no founding year and states no ownership relationship to Metro next door.",
+          "A bar at 3740 N Clark St. with a rotating draft list and a vinyl collection. Its stated hours are Monday to Friday from 3pm and Saturday and Sunday from noon, and it states that it opens two hours before every Cubs home game start and during all Metro shows. Its happy hour — stated as weekdays 3pm to 6pm, and excluded on Cubs home games — lists discounted draft and well drinks, Malort shots and a \"Chicago Handshake\". Its own site carries no founding year and states no ownership relationship to Metro.",
         history: nil,
         photos: []
       }),
@@ -146,9 +153,12 @@ defmodule Ethos.Seeds.BallparkPlaces do
         name: "The Cubby Bear",
         kind: "restaurant",
         address: "1059-1065 West Addison Street, Chicago, IL 60613",
-        official_url: "https://www.cubbybear.com/",
+        # No official_url: cubbybear.com returned HTTP 403 to both the finder
+        # and the verifier, so nothing establishes that the domain belongs to
+        # this business. An unreachable domain is not a verified one.
+        official_url: nil,
         summary:
-          "A bar at 1059-1065 West Addison Street. Wikipedia's Lake View article names it among the establishments near the Clark and Addison intersection that host the Cubs crowds, alongside Sluggers, Murphy's Bleachers, Casey Moran's, Merkle's and Sports Corner. The licensed entity of record is Cubby Bear Lounge Ltd, holding Tavern, Public Place of Amusement, Retail Food Establishment and Food - Shared Kitchen - Supplemental licences. Those are the two facts the research reached: cubbybear.com refused every fetch, so nothing about the bar's founding, menu, music programming or hours is published here.",
+          "A bar at 1059-1065 West Addison Street. Wikipedia's Lake View article names it among the establishments near the Clark and Addison intersection that host the Cubs crowds, alongside Sluggers, Murphy's Bleachers, Casey Moran's, Merkle's and Sports Corner. The licensed entity of record is Cubby Bear Lounge Ltd, holding Tavern, Public Place of Amusement, Retail Food Establishment and Food - Shared Kitchen - Supplemental licences. Those are the two facts the research reached: no reachable source gives the bar's founding, menu, music programming or hours.",
         history: nil,
         photos: []
       }),
@@ -201,7 +211,10 @@ defmodule Ethos.Seeds.BallparkPlaces do
         name: "Hotel Zachary",
         kind: "hotel",
         address: "3630 North Clark Street, Chicago, IL 60613",
-        official_url: "https://www.hotelzachary.com/",
+        # No official_url: hotelzachary.com returned HTTP 403 to both agents,
+        # and there is no Wikipedia article, so nothing ties the domain to the
+        # hotel.
+        official_url: nil,
         summary:
           "A hotel at 3630 North Clark Street, just across Clark Street from Wrigley Field, constructed along the west side of the street as part of the Wrigley Field renovation project. It was open for business in time for the Cubs' first home game on April 9, 2018. No source reached gives its room count, its architect, who it is named after, its brand affiliation, or which restaurants and bars it houses.",
         history: nil,
@@ -281,7 +294,7 @@ defmodule Ethos.Seeds.BallparkPlaces do
         address: "3552 North Southport Avenue, Chicago, IL 60657",
         official_url: "https://www.southportgrocery.com/",
         summary:
-          "A cafe and specialty grocery at 3552 N Southport, serving breakfast and lunch alongside house-made preserves, pickles and mustards and artisanal local products. Stated hours are every day 8 AM to 3 PM, with the kitchen closing 30 minutes prior. Its own site gives no founding year. Its ZIP is 60657, ten blocks south of the Music Box on the same street, which is 60613.",
+          "A cafe and specialty grocery at 3552 N Southport, serving breakfast and lunch alongside house-made preserves, pickles and mustards and artisanal local products. Stated hours are every day 8 AM to 3 PM, with the kitchen closing before that. Its own site gives no founding year. Its ZIP is 60657, while the Music Box further north on the same street is 60613; both are the City register's, and neither is a typo for the other.",
         history: nil,
         photos: []
       }),
@@ -292,7 +305,7 @@ defmodule Ethos.Seeds.BallparkPlaces do
         address: "3145 North Sheffield Avenue, Chicago, IL 60657",
         official_url: nil,
         summary:
-          "A theatre at 3145 N. Sheffield Ave, opened in 1912 as the Victoria Theatre and designed by the architect John Eberson, who built it as what Wikipedia calls \"a luxurious five-story Vaudeville house\". The article records it as a music venue owned by Jam Productions that can accommodate 1,400 people, or 1,000 seated. No source reached places the theatre relative to Wrigley Field, and none is claimed here: Wrigleyville's sourced southern boundary is Cornelia Avenue, which is north of 3145 N.",
+          "A theatre at 3145 N. Sheffield Ave, opened in 1912 as the Victoria Theatre and designed by John Eberson. Wikipedia describes it as \"a luxurious five-story Vaudeville house\" and records it as a music venue owned by Jam Productions that can accommodate 1,400 people, or 1,000 seated. No source reached places the theatre relative to Wrigley Field, and none is claimed here: Wrigleyville's sourced southern boundary is Cornelia Avenue, which is north of 3145 N.",
         history:
           "In the mid-1990s, Brew & View was established at the Vic, offering movies and drinks on non-concert nights. The source for that is past tense and dated to the mid-1990s, and no source reached states whether it still runs.",
         photos: []
@@ -305,7 +318,7 @@ defmodule Ethos.Seeds.BallparkPlaces do
           "North Alta Vista Terrace, between Grace Street and Byron Street, Chicago, IL 60613",
         official_url: nil,
         summary:
-          "A one-block street in Lake View at 1050 West on the Chicago street grid, running north from Grace Street (3800 North) to Byron Street (3900 North). It contains 40 small, single-family rowhouses. Grace Street is Wrigleyville's sourced northern boundary, which puts the district at or just beyond that edge. The houses are private residences and no source states that any of them is open to visitors.",
+          "A one-block street in Lake View at 1050 West on the Chicago street grid, running north from Grace Street (3800 North) to Byron Street (3900 North). It contains 40 small, single-family rowhouses. Grace Street is Wrigleyville's sourced northern boundary, which puts the district at or just beyond that edge. No source reached states whether any of the houses is open to visitors.",
         history:
           "The rowhouses were built in 1904 by the real estate developer Samuel Gross, who was inspired by the row houses of London after a trip to Europe. There are twenty exterior designs, arranged so that matching houses face diagonally across the street. The district's style is given as \"Late 19th And 20th Century Revivals\", and the record names Doric and Ionic wood pilasters, Gothic arches, Palladian windows, stained and leaded-glass fanlights, and bay and bow windows. It was designated a Chicago Landmark on September 15, 1971 and added to the National Register of Historic Places on March 16, 1972, reference number 72000448.",
         photos: []

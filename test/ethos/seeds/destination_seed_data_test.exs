@@ -4,7 +4,7 @@ defmodule Ethos.Seeds.DestinationSeedDataTest do
   import Ethos.AccountsFixtures
   alias Ethos.Guides
   alias Ethos.SeedDataHelpers
-  alias Ethos.Seeds.{DataDestination, DataGuide}
+  alias Ethos.Seeds.{Catalog, DataDestination, DataGuide}
 
   # Photo srcs are "/photos/...", served from priv/photos by its own Plug.Static
   # rather than from priv/static — see EthosWeb.Endpoint for why.
@@ -57,8 +57,15 @@ defmodule Ethos.Seeds.DestinationSeedDataTest do
     ~r/\b(?:drive|ride|trip|commute)\s+of\s+(?:about|roughly|around)?\s*\d+\s*min/i,
     ~r/\b\d+\s*hours?\s+(?:drive|ride|away|south|north|east|west|by car|by subway|by train)/i,
     ~r/\b(?:five|ten|fifteen|twenty|twenty[-\s]five|thirty|forty|forty[-\s]five|fifty|sixty|ninety)\s*[-–]?\s*minutes?\b/i,
-    ~r/\b(?:short|quick|easy|brief)\s+(?:drive|ride|hop|trip|commute)\b/i,
-    ~r/\bwithin\s+(?:a\s+)?(?:short|quick|easy)\s+(?:drive|ride|trip)\b/i,
+    # `walk` and `stroll` were missing from 8 and 9 in all three copies, so
+    # "a short walk from the station" — the plainest vague-duration phrasing
+    # there is, and the likeliest one for a walkable neighbourhood — escaped
+    # every duration gate in the repo. Measured before widening: 0 hits in
+    # destinations/, 0 in brooklyn/, 0 in lib/ethos/seeds/, 11 in
+    # connecticut/ (all fixed in the same change), 17 in manhattan/, which
+    # has no duration gate at all.
+    ~r/\b(?:short|quick|easy|brief)\s+(?:drive|ride|hop|trip|commute|walk|stroll)\b/i,
+    ~r/\bwithin\s+(?:a\s+)?(?:short|quick|easy)\s+(?:drive|ride|trip|walk|stroll)\b/i,
     ~r/\b(?:reaches|gets you to|puts you in|takes you to)\b[^.]{0,40}\bin\s+(?:about\s+)?\d+/i,
     # "...in 25 minutes" / "...in about 2 hours" — the plainest way to state
     # the banned claim, and it escaped all ten of the patterns above: 1 was
@@ -338,29 +345,104 @@ defmodule Ethos.Seeds.DestinationSeedDataTest do
   # Links are deliberately not applied: they resolve cross-guide references
   # and contribute nothing to state, county or destination slugs.
   # Two kinds of call here, and they are not interchangeable. The `upsert_all!`
-  # lines are **places** modules; the list below is **guide** modules. A guide
-  # added to the list without its places module seeded above raises inside
+  # pass is **places** modules; the pass below it is **guide** modules. A guide
+  # seeded without its places module raises inside
   # GuideRunner.replace_entries!/2, which resolves every entry through
   # Places.get_place_by_slug!/1.
+  #
+  # Both lists come from Ethos.Seeds.Catalog rather than being written out
+  # here, so there is one place to register a module and one test — the
+  # reflection test below — that fails when a module is registered nowhere.
   defp seed_guide_corpus!(email) do
-    Ethos.Seeds.ConnecticutPlaces.upsert_all!()
-    Ethos.Seeds.BallparkPlaces.upsert_all!()
-
-    for mod <- [
-          Ethos.Seeds.WaterburyGuide,
-          Ethos.Seeds.MiddleburyGuide,
-          Ethos.Seeds.DanburyGuide,
-          Ethos.Seeds.SouthburyGuide,
-          Ethos.Seeds.WoodburyGuide,
-          Ethos.Seeds.RomeGuide,
-          Ethos.Seeds.WrigleyFieldGuide
-        ],
-        do: mod.upsert!(email)
+    for {mod, _region} <- Ethos.Seeds.Catalog.place_modules(), do: mod.upsert_all!()
+    for {mod, _region} <- Ethos.Seeds.Catalog.guide_modules(), do: mod.upsert!(email)
 
     guide_files = SeedDataHelpers.all_seed_files()
 
     Enum.each(guide_files, &DataGuide.upsert_places!/1)
     Enum.each(guide_files, &DataGuide.upsert_guide!(&1, email))
+  end
+
+  # --- Registration is mechanical, not remembered -------------------------
+  #
+  # Everything above seeds from Ethos.Seeds.Catalog, so an unregistered guide
+  # module is simply absent from this gate: it gets no loader or changeset
+  # validation, and its state and county never enter legitimate_paths/0. That
+  # failure is silent — nothing errors, a test just quietly covers less.
+  #
+  # Across a thirty-site set that is thirty chances to skip a registration and
+  # never know. So the catalog is checked against the application's actual
+  # modules by reflection rather than trusted: adding a guide module and
+  # forgetting to register it now fails here, loudly, naming the module.
+  #
+  # This assertion earned itself immediately — it found AntiqueTrailGuide,
+  # which had been missing from this gate since it shipped.
+  #
+  # Discovery is by module name, `Ethos.Seeds.<Something>Guide`, because it
+  # catches RomeGuide, which hand-rolls upsert!/1 and exports no data/0 and so
+  # is invisible to a behaviour-based scan. The exceptions are named
+  # individually and each says why it is not a seed guide.
+  @not_seed_guides [
+    # The JSON loader, not a guide: it seeds priv/seed_data/*/*.json files,
+    # which this gate already discovers through all_seed_files/0.
+    Ethos.Seeds.DataGuide
+  ]
+
+  test "every guide module in the application is registered in the catalog" do
+    {:ok, modules} = :application.get_key(:ethos, :modules)
+
+    discovered =
+      modules
+      |> Enum.filter(&(inspect(&1) =~ ~r/^Ethos\.Seeds\.\w+Guide$/))
+      |> Kernel.--(@not_seed_guides)
+      |> MapSet.new()
+
+    # Non-vacuous: a regex or an app-key change that matched nothing would
+    # otherwise let this pass green while checking nothing at all.
+    assert MapSet.size(discovered) >= 8
+
+    registered = Catalog.guide_modules() |> Enum.map(&elem(&1, 0)) |> MapSet.new()
+    unregistered = discovered |> MapSet.difference(registered) |> Enum.sort()
+
+    assert unregistered == [],
+           "guide modules not in Ethos.Seeds.Catalog.guide_modules/0, so they are seeded by " <>
+             "no gate and their destination paths never become legitimate: " <>
+             inspect(unregistered)
+
+    # And the other direction, so the catalog cannot name a module that no
+    # longer exists — that would raise at seed time rather than here.
+    stale = registered |> MapSet.difference(discovered) |> Enum.sort()
+    assert stale == [], "catalog names guide modules that do not exist: #{inspect(stale)}"
+  end
+
+  test "every places module in the application is registered in the catalog" do
+    {:ok, modules} = :application.get_key(:ethos, :modules)
+
+    discovered =
+      modules
+      |> Enum.filter(&(inspect(&1) =~ ~r/^Ethos\.Seeds\.\w+Places$/))
+      |> MapSet.new()
+
+    assert MapSet.size(discovered) >= 2
+
+    registered = Catalog.place_modules() |> Enum.map(&elem(&1, 0)) |> MapSet.new()
+
+    assert MapSet.equal?(discovered, registered),
+           "places modules and catalog disagree — unregistered: " <>
+             inspect(MapSet.difference(discovered, registered) |> Enum.sort()) <>
+             ", stale: " <> inspect(MapSet.difference(registered, discovered) |> Enum.sort())
+  end
+
+  # The catalog derives each module's source path from its name rather than
+  # carrying a literal beside it, because a literal drifts from the module it
+  # labels and nothing notices. This is what makes the derivation safe.
+  test "every catalog module's derived source path exists on disk" do
+    for {mod, _region} <- Catalog.place_modules() ++ Catalog.guide_modules() do
+      path = Catalog.source_path(mod)
+
+      assert File.exists?(Path.expand("../../../#{path}", __DIR__)),
+             "#{inspect(mod)} derives source path #{path}, which does not exist"
+    end
   end
 
   # --- The assertions fire (proven against fixtures) ----------------------

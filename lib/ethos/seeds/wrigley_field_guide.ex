@@ -15,9 +15,10 @@ defmodule Ethos.Seeds.WrigleyFieldGuide do
   adversarial verifier (157 confirmed, 4 refuted, 7 uncertain). A verdict
   vouches only for what its own `item` text restates, not for every clause of
   the sentence the finder wrote around it. What the verification ruled
-  `refuted` or `uncertain` is absent, and the report at
-  .superpowers/sdd/2026-08-30-mlb-ballparks/task-4-report.md quotes every
-  published sentence against the verdict it rests on and records each omission.
+  `refuted` or `uncertain` is absent, and `docs/ballparks/wrigley-field.md`
+  quotes every published sentence against the verdict it rests on and records
+  each omission. That trace is committed rather than left in the research
+  workspace, which is git-ignored and is how the Brooklyn artifacts were lost.
 
   What was dropped, and why:
 
@@ -49,6 +50,19 @@ defmodule Ethos.Seeds.WrigleyFieldGuide do
       docs/site-builder.md §8. Distances are given as the sources give them:
       "less than a mile", "about one-half mile to the west on Irving Park
       Road", street numbers on the Chicago grid.
+
+    * **No distance between two places is published, in blocks or otherwise.**
+      A first draft carried "nine blocks south" and "ten blocks south"; no
+      verdict carries either, and the artifact's own grid data refutes them
+      (Grace Street at 3800 N and Byron at 3900 N are one block apart, so
+      3655 to 3439 is about two). Relative position is given as a direction
+      between two published street numbers and nothing more.
+
+    * **No community area is named for Graceland Cemetery.** Alta Vista
+      Terrace's placement in Lake View is confirmed; Graceland's is not. A
+      first draft put "Both are in Lake View" in an FAQ answer — one sentence
+      confirming one half and carrying the other along, which is §9's failure
+      exactly.
 
     * **No parking price and no official Cubs lot.** No published rate was
       reachable, and a City commercial-garage licence records that a garage
@@ -183,7 +197,7 @@ defmodule Ethos.Seeds.WrigleyFieldGuide do
           name: "Gman Tavern",
           place_slug: "gman-tavern",
           note:
-            "3740 North Clark Street: a rotating draft list and a vinyl collection, next door to Metro. It states that it opens two hours before every Cubs home game start and during all Metro shows. It states no ownership relationship to Metro, and no source establishes one."
+            "3740 North Clark Street: a rotating draft list and a vinyl collection. It states that it opens two hours before every Cubs home game start and during all Metro shows. It states no ownership relationship to Metro, and no source establishes one."
         },
         %{
           kind: "food",
@@ -218,7 +232,7 @@ defmodule Ethos.Seeds.WrigleyFieldGuide do
           name: "Southport Grocery & Cafe",
           place_slug: "southport-grocery-and-cafe",
           note:
-            "3552 North Southport Avenue, ZIP 60657: breakfast and lunch alongside a specialty grocery of house-made preserves, pickles and mustards and artisanal local products. Stated hours every day 8 AM to 3 PM, with the kitchen closing 30 minutes prior."
+            "3552 North Southport Avenue, ZIP 60657: breakfast and lunch alongside a specialty grocery of house-made preserves, pickles and mustards and artisanal local products. Stated hours every day 8 AM to 3 PM, with the kitchen closing before that."
         },
         %{
           kind: "sight",
@@ -232,7 +246,7 @@ defmodule Ethos.Seeds.WrigleyFieldGuide do
           name: "Alta Vista Terrace District",
           place_slug: "alta-vista-terrace-district",
           note:
-            "North Alta Vista Terrace, one block at 1050 West running north from Grace Street to Byron Street: 40 single-family rowhouses built in 1904 by Samuel Gross, in twenty exterior designs arranged so that matching houses face diagonally across the street. A Chicago Landmark since 1971 and on the National Register since 1972. The houses are private residences."
+            "North Alta Vista Terrace, one block at 1050 West running north from Grace Street to Byron Street: 40 single-family rowhouses built in 1904 by Samuel Gross, in twenty exterior designs arranged so that matching houses face diagonally across the street. A Chicago Landmark since 1971 and on the National Register since 1972. No source reached states whether any of the houses is open to visitors."
         },
         %{
           kind: "sight",
@@ -273,7 +287,10 @@ defmodule Ethos.Seeds.WrigleyFieldGuide do
           Sdralis Parking at 3745 N Clark St, all licensed to 2028; Red Top
           again at 3716 and at 3701-3707 N Sheffield Ave, to the same date;
           Wrigleyville Parking, Inc. at 1109 W Addison St, to 2028, and ABM
-          Industry Groups at 1025 W Addison St, to 2027. Standard Parking
+          Industry Groups at 1025 W Addison St, to 2027. Operators here are
+          named by the legal name the register carries, not its trading-name
+          field, which for that Addison Street garage reads "Wrigleyville Park
+          Inc". Standard Parking
           holds both a commercial garage licence and a valet operator licence
           at 3630 N Clark St, the Hotel Zachary address.
 
@@ -301,18 +318,16 @@ defmodule Ethos.Seeds.WrigleyFieldGuide do
           Merkle's at 3516 and Sluggers at 3540; Hotel Zachary at 3630,
           Mordecai at 3632, Smoke Daddy at 3636, Clark Street Sports at 3650
           and Bernie's at 3664; Yakzie's at 3710, the Billy Goat Tavern's
-          Wrigleyville branch at 3724-3726, Metro at 3730 and Gman Tavern
-          next door at 3740. West Addison Street holds The Cubby Bear at
-          1059-1065 and Guthries Tavern at 1300 West. On North Sheffield
-          Avenue, Murphy's Bleachers is at 3655 and Nisei Lounge nine blocks
-          south at 3439.
+          Wrigleyville branch at 3724-3726, Metro at 3730 and Gman Tavern at
+          3740. West Addison Street holds The Cubby Bear at 1059-1065 and
+          Guthries Tavern at 1300 West. On North Sheffield Avenue, Murphy's
+          Bleachers is at 3655 and Nisei Lounge south of it at 3439.
 
-          Two more sit west of the ballpark on North Southport Avenue: the
-          Music Box Theatre at 3733, a cinema since 1929, and Southport
-          Grocery & Cafe at 3552. Their ZIP codes differ — 60613 for the
-          Music Box and 60657 for the grocery, ten blocks south on the same
-          street — and that is what the City register carries for each, not
-          an error to be tidied. The Vic Theatre is at 3145 North Sheffield
+          Two more stand on North Southport Avenue: the Music Box Theatre at
+          3733, a cinema since 1929, and Southport Grocery & Cafe south of it
+          at 3552. Their ZIP codes differ — 60613 for the Music Box and 60657
+          for the grocery — and that is what the City register carries for
+          each, not an error to be tidied. The Vic Theatre is at 3145 North Sheffield
           Avenue; no source reached places it relative to the ballpark, and
           Wrigleyville's sourced southern boundary is Cornelia Avenue, which
           is north of that address.
@@ -433,7 +448,7 @@ defmodule Ethos.Seeds.WrigleyFieldGuide do
         %{
           "question" => "Are Alta Vista Terrace and Graceland Cemetery in Wrigleyville?",
           "answer" =>
-            "No source reached says so, and this guide does not claim it. Wrigleyville's sourced borders run from Grace Street to Cornelia Avenue north to south. Alta Vista Terrace runs north from Grace Street, which puts it at or just beyond that edge, and Graceland Cemetery is at 4001 North Clark Street, north of Grace Street. Both are in Lake View."
+            "No source reached says so, and this guide does not claim it. Wrigleyville's sourced borders run from Grace Street to Cornelia Avenue north to south. Alta Vista Terrace, which the source places in Lake View, runs north from Grace Street, putting it at or just beyond that edge. Graceland Cemetery is at 4001 North Clark Street, north of Grace Street; no source reached names a community area for it."
         }
       ],
       photos: []
