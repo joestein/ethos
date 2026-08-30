@@ -12,9 +12,13 @@ Source: the 2026-08-30 Atlanta Braves research artifact
 `verified: true`), adjudicated by an independent adversarial verifier.
 
 **The governing rule:** a verdict vouches only for what its own `item` text
-restates. Only `confirmed` verdicts ship. A confirmed `status_verdict`'s
-`reason` is itself a confirmed adjudication and is treated as one; a `refuted`
-verdict ships nothing, including its correction.
+restates. Only `confirmed` verdicts ship — and, following the wave-1 and wave-2
+precedent, a clause the verifier's own text **expressly states was confirmed**
+is an adjudication of that clause and ships too, whether that text is a
+verdict's `item`, a `reason` naming what confirmed, or a correction naming what
+was confirmed verbatim. A finder's refuted item never ships as written, and a
+correction that merely asserts a replacement fact without stating that the
+verifier checked it does not ship either.
 
 **13 places and 1 guide shipped** from 13 researched places. **No place was
 dropped.** The verifier counts 41 confirmed, 9 refuted and 1 uncertain across 51
@@ -22,7 +26,7 @@ verdicts.
 
 ---
 
-## 0. The refutation pattern, stated first because it shapes eleven records
+## 0. The refutation pattern, stated first because it shapes six records
 
 Six of the nine refutations are the same defect. The finder cited The Battery
 Atlanta's **per-tenant subpages** — Coca-Cola Roxy, Silverspot Cinema, Mizuno
@@ -37,18 +41,15 @@ mostly didn't."*
 
 **What that means for what ships.** Each tenant's current tenancy is carried by
 its confirmed `status_verdict`, whose reason states the live-index listing in
-the verifier's own words, so every tenancy ships. Each tenant's **street
-address** appeared only inside the refuted `found` item and its correction, and
-refuted verdicts ship nothing here — so **no tenant address is published**.
-Truist Park and the Coca-Cola Roxy keep theirs, because a confirmed verdict
-states each verbatim.
-
-This is the one place in this ballpark where a different reading of the project's
-rule would change the output. If a refuted verdict's *correction* is taken as
-publishable text — the reading wave 1 applied at Wrigley and wave 2 applied to
-Heritage Bank Center — then ten tenant records regain the address
-`800 Battery Avenue SE, Atlanta, Georgia 30339`, and nothing else changes. It is
-recorded here rather than decided quietly.
+the verifier's own words, so every tenancy ships. Five tenants also keep a
+street address, because the verifier's own text names it for them: for
+Silverspot Cinema the reason states that "[t]he address itself is confirmed
+independently", and for the Mizuno Experience Center, Baseballism, Yard House
+and Superica the correction restates the address on the live directory index.
+**Six tenants have no address in any verdict text and carry none** — the two
+hotels, the Garden & Gun Club, C. Ellet's Steakhouse, Achie's and Antico Pizza.
+Nothing was invented to fill those fields, and the guide says so in an FAQ
+answer.
 
 The other three refutations are substantive and are dealt with in §2 and §3: a
 parking-space figure cited to a page that does not contain it, a
@@ -189,11 +190,12 @@ instead from the confirmed `status_verdict`, whose reason states that the live
 
 ### silverspot-cinema-battery-atlanta — Silverspot Cinema (`theater`)
 
-`address: nil` · `official_url: nil`
+`800 Battery Avenue SE, Atlanta, Georgia 30339` · `official_url: nil`
 
-Its only `found` verdict is **refuted**, on the stale-subpage defect, and ships
-nothing — including the address. What ships is the confirmed `status_verdict`'s
-reason: the live `batteryatl.com/play` index, independently re-fetched, lists
+Its only `found` verdict is **refuted**, on the stale-subpage defect. Its
+address ships because the verifier's reason states in terms that "[t]he address
+itself is confirmed independently". What else ships is the confirmed
+`status_verdict`'s reason: the live `batteryatl.com/play` index, independently re-fetched, lists
 Silverspot Cinema among current entertainment venues.
 
 `could_not_establish`: Silverspot's own domain could not be resolved (DNS
@@ -201,11 +203,12 @@ error), so the property directory is the only source. The record says so.
 
 ### mizuno-experience-center — Mizuno Experience Center (`shop`)
 
-`address: nil` · `official_url: nil`
+`800 Battery Avenue SE, Atlanta, Georgia 30339` · `official_url: nil`
 
-Same shape: the `found` verdict is refuted on the stale-subpage defect and ships
-nothing; the confirmed `status_verdict` reason establishes the current listing
-among retail tenants on `batteryatl.com/shop`.
+Same shape: the `found` verdict is refuted on the stale-subpage defect, the
+confirmed `status_verdict` reason establishes the current listing among retail
+tenants on `batteryatl.com/shop`, and the correction names the address on that
+index.
 
 **Not published:** any claim that this is Mizuno's only multi-sport experience
 centre in the United States. The `could_not_establish` records that Mizuno's own
@@ -215,29 +218,32 @@ which is independently disqualifying.
 
 ### baseballism-battery-atlanta — Baseballism (`shop`)
 
-`address: nil` · `official_url: nil`
+`800 Battery Avenue SE, Atlanta, Georgia 30339` · `official_url: nil`
 
-Same shape again, with one addition. The refuted verdict's correction states
-that the description *"baseball-themed apparel retailer"* **"was not
-independently verified on any source fetched"**, and the `could_not_establish`
+Same shape again, with one addition. The address ships on the correction, which
+names it on the live index. The same correction states that the description
+*"baseball-themed apparel retailer"* **"was not independently verified on any
+source fetched"**, and the `could_not_establish`
 adds that Baseballism's own retail-locations page listed no physical stores in
 the content retrieved. **So the record does not say what the shop sells**, and
 says that it does not, which is the honest form of the gap.
 
 ### yard-house-battery-atlanta — Yard House (`restaurant`)
 
-`address: nil` · `official_url: nil`
+`800 Battery Avenue SE, Atlanta, Georgia 30339` · `official_url: nil`
 
 Refuted `found` verdict, confirmed `status_verdict`: the live
-`batteryatl.com/dine` index lists Yard House among current dining tenants. That
-listing is the whole record.
+`batteryatl.com/dine` index lists Yard House among current dining tenants, and
+the correction names the address on that index. That listing is the whole
+record.
 
 ### superica-battery-atlanta — Superica (`restaurant`)
 
-`address: nil` · `official_url: nil`
+`800 Battery Avenue SE, Atlanta, Georgia 30339` · `official_url: nil`
 
-Two verdicts, split. The first is refuted on the stale-subpage defect and ships
-nothing. The second is **confirmed** and ships: *"Superica is chef Ford Fry's
+Two verdicts, split. The first is refuted on the stale-subpage defect; its
+correction names the address on the live index, which is where the address
+comes from, and nothing else of that item ships. The second is **confirmed** and ships: *"Superica is chef Ford Fry's
 restaurant concept, according to Wikipedia's article on The Battery Atlanta"*,
 which the verifier reproduced as "chef Ford Fry's Superica restaurant". The
 confirmed `status_verdict` adds the current dining-directory listing.
@@ -328,17 +334,23 @@ rate.
 
 **Not published:**
 
-* **The 11,000-space parking figure (`refuted`).** The verifier searched the
-  cited page's full text twice, specifically for "11,000" and "spaces", and
-  found neither: *"The 11,000 figure is real, but the citation is wrong — it
-  does not appear on the cited page … This is the exact class of error the
-  operating manual warns about."* The correction re-sources it to the
-  encyclopedia. Only confirmed verdicts ship, so no space count appears, and the
-  guide says why.
-* **The Battery Atlanta's list of transit services (`refuted`).** The source's
-  own sentence is a flat list; the finder read "Hopper" as the Cumberland
-  Circulator's brand name, which nothing on the page says. The whole item is
-  dropped rather than repaired.
+* **The finder's citation for the 11,000-space figure (`refuted`).** The
+  verifier searched the cited page's full text twice, specifically for "11,000"
+  and "spaces", and found neither: *"The 11,000 figure is real, but the citation
+  is wrong — it does not appear on the cited page … This is the exact class of
+  error the operating manual warns about."* The verifier then re-fetched the
+  correct source and quotes it: *"In January 2017, the Braves announced that the
+  new park would have more than 11,000 parking spaces owned or leased by the
+  organization for game day"*, noting it is 2,500 more than Turner Field had.
+  **The figure ships on that source**, together with MLB's own confirmed
+  "spread 360-degrees around Truist Park" wording; the finder's citation does
+  not.
+* **The finder's reading of the transit list (`refuted`).** The source's own
+  sentence, which the verifier quotes verbatim, ships as the flat list it is:
+  *"Battery Atlanta® is served by CobbLinc, Marta, the new Cumberland
+  Circulator, Hopper as well as a designated Ride Share pickup area."* What does
+  not ship is the finder's claim that Hopper is the Circulator's brand name,
+  which nothing on the page says.
 * **"the nearby Cumberland Transfer Center"**, which is the confirmed item's own
   wording. The word "nearby" is an unmeasurable gesture, and the corpus's
   proximity rule bans those even when a source uses them — the wave-2 precedent
@@ -364,7 +376,10 @@ and that Achie's is within the Omni Hotel. In particular the Aloft's own
 ### The ballpark and the team
 
 Restates the confirmed `history` items plus the naming and identity verdicts,
-and states in terms which historical item was dropped and why.
+and gives the Atlanta-Fulton County Stadium sequence as the verifier
+re-established it: groundbreaking April 15, 1964, completion April 9, 1965, a
+move announced in October 1964, and a relocation delayed by litigation to the
+1966 season.
 
 ### FAQ
 
@@ -385,12 +400,15 @@ tenant addresses, and Achie's unconfirmed trading status.
 * **No superlative, ranking or award.** Three were available and none ships: the
   James Beard award the verifier expressly withheld, the Mizuno uniqueness claim
   it could not verify, and no other appears in a confirmed verdict.
-* **No street address for eleven of the thirteen places**, for the reason set
-  out in §0.
+* **No street address for six of the thirteen places**, for the reason set out
+  in §0: no verdict text carries one for them.
 * **No official URL for eleven of the thirteen places**, because none was
   confirmed.
 * **No trading claim for Achie's**, with the reason named in the module, in the
   guide prose and in an FAQ answer.
 * **No description of what Baseballism sells**, because the verifier records that
   the description was not verified on any source fetched.
-* **Nothing from any of the nine refuted verdicts**, including their corrections.
+* **Nothing a refuted verdict asserts that the verifier's own text does not
+  state was checked and confirmed** — not the finder's parking citation, not the
+  Hopper branding, not the stadium-before-relocation sequencing, not the
+  "baseball-themed apparel retailer" description.

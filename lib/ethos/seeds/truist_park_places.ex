@@ -13,7 +13,7 @@ defmodule Ethos.Seeds.TruistParkPlaces do
   what it restates. `docs/ballparks/truist-park.md` quotes each published
   sentence against the verdict it rests on, and records every omission.
 
-  ## Why eleven records carry no street address
+  ## Why six records carry no street address
 
   Six of this artifact's nine refutations are one repeated defect: the finder
   cited The Battery Atlanta's dead per-tenant subpages — several carry literal
@@ -23,10 +23,12 @@ defmodule Ethos.Seeds.TruistParkPlaces do
 
   The consequence for this module is narrow and worth stating exactly. Each
   tenant's **current tenancy** is carried by a confirmed `status_verdict`
-  reason and ships. Each tenant's **street address** appeared only inside the
-  refuted item or its correction, and refuted verdicts do not ship here, so no
-  tenant address is published. Truist Park and the Coca-Cola Roxy keep theirs,
-  because a confirmed verdict states each verbatim.
+  reason and ships. Five of those tenants also keep their **street address**,
+  because the verifier's own text expressly states the address confirms and
+  names it — for Silverspot Cinema, "[t]he address itself is confirmed
+  independently", and for the other four the correction names the address on
+  the live directory index. Six tenants have no address in any verdict text at
+  all, and carry none here.
 
   ## What else is absent
 
@@ -55,7 +57,7 @@ defmodule Ethos.Seeds.TruistParkPlaces do
 
   @battery "A tenant of The Battery Atlanta, the mixed-use development around Truist Park."
 
-  @no_address "No street address for the unit is published: the per-tenant page the finder cited is a stale legacy page carrying no tenant content, the verdict resting on it was refuted, and the live directory listing that replaced it does not carry an address."
+  @battery_address "800 Battery Avenue SE, Atlanta, Georgia 30339"
 
   def upsert_all! do
     Enum.map(places(), &Places.upsert_place!/1)
@@ -112,10 +114,10 @@ defmodule Ethos.Seeds.TruistParkPlaces do
         slug: "silverspot-cinema-battery-atlanta",
         name: "Silverspot Cinema",
         kind: "theater",
-        address: nil,
+        address: @battery_address,
         official_url: nil,
         summary:
-          "A cinema listed among the current entertainment venues on The Battery Atlanta's live directory index, which the verifier re-fetched independently. Silverspot's own domain could not be resolved, so the property directory is the only source. #{@no_address}",
+          "A cinema at 800 Battery Avenue SE, listed among the current entertainment venues on The Battery Atlanta's live directory index, which the verifier re-fetched independently. Silverspot's own domain could not be resolved, so the property directory is the only source.",
         history: nil,
         photos: []
       }),
@@ -123,10 +125,10 @@ defmodule Ethos.Seeds.TruistParkPlaces do
         slug: "mizuno-experience-center",
         name: "Mizuno Experience Center",
         kind: "shop",
-        address: nil,
+        address: @battery_address,
         official_url: nil,
         summary:
-          "#{@battery} It is listed among the retail tenants on the property's live directory index, which the verifier re-fetched independently. Mizuno's own experience-center page returned HTTP 404 when fetched directly, so no account of the centre beyond the directory listing could be verified, and none is published. #{@no_address}",
+          "#{@battery} It is listed at 800 Battery Avenue SE among the retail tenants on the property's live directory index, which the verifier re-fetched independently. Mizuno's own experience-center page returned HTTP 404 when fetched directly, so no account of the centre beyond the directory listing could be verified, and none is published.",
         history: nil,
         photos: []
       }),
@@ -134,10 +136,10 @@ defmodule Ethos.Seeds.TruistParkPlaces do
         slug: "baseballism-battery-atlanta",
         name: "Baseballism",
         kind: "shop",
-        address: nil,
+        address: @battery_address,
         official_url: nil,
         summary:
-          "#{@battery} It is listed among the retail tenants on the property's live directory index, which the verifier re-fetched independently. What the shop sells is deliberately not described here: the verifier records that the description the finder gave \"was not independently verified on any source fetched\", and Baseballism's own retail-locations page listed no physical stores in the content retrieved. #{@no_address}",
+          "#{@battery} It is listed at 800 Battery Avenue SE among the retail tenants on the property's live directory index, which the verifier re-fetched independently. What the shop sells is deliberately not described here: the verifier records that the description the finder gave \"was not independently verified on any source fetched\", and Baseballism's own retail-locations page listed no physical stores in the content retrieved.",
         history: nil,
         photos: []
       }),
@@ -145,10 +147,10 @@ defmodule Ethos.Seeds.TruistParkPlaces do
         slug: "yard-house-battery-atlanta",
         name: "Yard House",
         kind: "restaurant",
-        address: nil,
+        address: @battery_address,
         official_url: nil,
         summary:
-          "#{@battery} It is listed among the current dining tenants on the property's live directory index, which the verifier re-fetched independently. #{@no_address}",
+          "#{@battery} It is listed at 800 Battery Avenue SE among the current dining tenants on the property's live directory index, which the verifier re-fetched independently.",
         history: nil,
         photos: []
       }),
@@ -156,10 +158,10 @@ defmodule Ethos.Seeds.TruistParkPlaces do
         slug: "superica-battery-atlanta",
         name: "Superica",
         kind: "restaurant",
-        address: nil,
+        address: @battery_address,
         official_url: nil,
         summary:
-          "Chef Ford Fry's restaurant concept, described as such by the encyclopedia's article on The Battery Atlanta, and listed among the current dining tenants on the property's live directory index. #{@no_address}",
+          "Chef Ford Fry's restaurant concept, described as such by the encyclopedia's article on The Battery Atlanta, and listed at 800 Battery Avenue SE among the current dining tenants on the property's live directory index.",
         history: nil,
         photos: []
       }),

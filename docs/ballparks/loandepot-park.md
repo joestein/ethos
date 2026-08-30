@@ -13,8 +13,13 @@ Source: the 2026-08-30 Miami Marlins research artifact
 `verified: true`), adjudicated by an independent adversarial verifier.
 
 **The governing rule:** a verdict vouches only for what its own `item` text
-restates. Only `confirmed` verdicts ship; a `refuted` verdict ships nothing,
-including its correction.
+restates. Only `confirmed` verdicts ship — and, following the wave-1 and wave-2
+precedent, a clause the verifier's own text **expressly states was confirmed**
+is an adjudication of that clause and ships too, whether that text is a
+verdict's `item`, a `reason` naming what confirmed, or a correction naming what
+was confirmed verbatim. A finder's refuted item never ships as written, and a
+correction that merely asserts a replacement fact without stating that the
+verifier checked it does not ship either.
 
 **6 places and 1 guide shipped** from 5 researched places plus the ballpark,
 which this artifact does not carry as a place. **No place was dropped.**
@@ -64,12 +69,18 @@ consolidated-city rendering applies.
 **The venue name comes from the verdict.** `loanDepot park` is published with
 the source's own capitalisation, lowercase `l` and lowercase `park` included.
 
-### The zip code, and why no address carries one
+### The zip code
 
-The zip is confirmed only inside the **refuted** identity verdict and its
-correction. Only confirmed verdicts ship, so no address in this ballpark carries
-a zip — not the ballpark's, not Versailles's. The confirmed ballpark verdict
-gives *"501 Marlins Way, Miami, Florida"* and that is what is published.
+The ballpark's zip appears inside the **refuted** identity verdict, and the
+verifier's own reason states plainly that it confirmed: *"the name, street
+address and ZIP are confirmed there"*. That is an adjudication of those clauses,
+and only the county clause appended after them was refuted, so the ballpark
+address ships as `501 Marlins Way, Miami, Florida 33125`.
+
+**No other address in this ballpark carries a zip**, because no verdict text
+carries one. Versailles Restaurant's confirmed verdict gives *"3555 SW 8th
+Street"* and the zip on the finder's place header is not restated anywhere, so
+it is not published.
 
 `official_url` for the ballpark is MLB.com's Marlins ballpark page — the page
 both passes fetched, and which the verifier reports displays the venue name and
@@ -82,7 +93,7 @@ world, and the claim the finder attached to it is the one that was dropped.
 
 ### loandepot-park — loanDepot park (`stadium`)
 
-`501 Marlins Way, Miami, Florida` · `https://www.mlb.com/marlins/ballpark`
+`501 Marlins Way, Miami, Florida 33125` · `https://www.mlb.com/marlins/ballpark`
 
 **Minted from the identity and history verdicts.** The artifact's `places` array
 holds the five places around the ballpark and not the ballpark itself, so this
@@ -108,26 +119,26 @@ verdict vouches for, and the standing rule is that a ranking needs a confirmed
 verdict that carries it. The certification and its date ship; the ranking does
 not.
 
-**Two `history` items were refuted and ship nothing.**
+**Two `history` items were refuted, and each ships what the verifier states was confirmed and nothing more.**
 
-* **The roof.** *"[T]he timing clause conflates two different figures the source
-  gives separately: the cited article states the roof takes approximately [one
-  interval] to open, and [another] to close — not the same duration 'to open or
-  close' as the item claims."* The 8,300-ton figure in the same sentence is
-  confirmed in the verifier's reason and is dropped with the item. It would have
-  survived under a reading in which corrections ship; it does not under this
-  one. The timing figures could not have been published in any case: the corpus
-  bans duration-shaped strings, the ban scans module source, and its allowlist
-  is keyed over a whole module and cannot be narrowed — so the figures are not
-  quoted in this file's prose either where a module would read them.
-* **The artwork.** The Red Grooms home-run sculpture and the Carlos Cruz-Diez
-  tiled walkway are both confirmed in the verifier's reason. The item was
-  refuted because the finder turned the source's *"four bright primary colors"*
-  from Joan Miro's palette into "pastel colors", which the source uses elsewhere
-  for something else entirely. **This is the wave's most substantive loss to the
-  refuted-ships-nothing rule**, and it is recorded here so the remedy is
-  obvious: if a correction is publishable text, the sculpture and the walkway
-  come back, with the colours described as the source describes them.
+* **The roof.** The verifier's reason opens *"The 8,300-tons figure is
+  confirmed exactly"* and refutes only the timing clause, which *"conflates two
+  different figures the source gives separately"* — the article gives one
+  interval to open and a different one to close, not a single figure for both.
+  **The tonnage ships; the timings do not.** The timings could not have been
+  published in any case: the corpus bans duration-shaped strings, the ban scans
+  module source, and its allowlist is keyed over a whole module and cannot be
+  narrowed — which is why neither moduledoc quotes them, and why this file does
+  not either.
+* **The artwork.** The verifier's reason states that the Red Grooms sculpture
+  and the Carlos Cruz-Diez tiled walkway, *"titled 'Chromatic Induction in a
+  Double Frequency'"*, *"are both confirmed in the cited article"*, and refutes
+  only the colour clause: the source says the designer *"took the four bright
+  primary colors off the palette of the late Catalan surrealist, Joan Miro"* to
+  colour-code the park's zones green, red, yellow and blue, and *"[p]astels
+  appears elsewhere in the same article as a separate, unrelated design
+  adjective."* **The sculpture, the walkway and the four primary colours ship;
+  the pastels do not.**
 
 ### maximo-gomez-park-miami — Maximo Gomez Park (`park`)
 
@@ -263,11 +274,16 @@ capacity and pre-purchased parking tickets.
 
 **Not published:**
 
-* **Both items naming the Metrorail station nearest the ballpark**, and the
-  lines serving it, both `refuted`. The guide states that the omission is
-  deliberate and describes the adjudication — a superseded name in both cited
-  sources, and line detail absent from the cited pages — without restating the
-  facts the corrections carry.
+* **The superseded station name**, which both cited sources still carry. Two
+  `getting_there` items are `refuted` over it. The verifier's reasons establish
+  the replacement facts against the station's own article, quoted: *"The station
+  opened for service on December 17, 1984, as Civic Center. It was changed to
+  its current name on July 12, 2024,"* and the article is now titled
+  *"UHealth–Jackson station"*; the Orange and Green line service *"is confirmed
+  only via the station's own article, under its current name."* The current
+  name, the renaming date and the two lines therefore ship, on that article. The
+  finder's items, which name the station by the superseded name and cite the
+  line service to pages that do not state it, do not.
 * **"a nearby train station"**, the confirmed trolley item's own wording. The
   word "nearby" is an unmeasurable gesture, and this corpus drops those even
   when a source uses one. The gate does not catch it — `nearby` was rejected as
@@ -300,17 +316,20 @@ building items.
 ## 3. What is absent from the whole site
 
 * **No trip duration of any kind**, per docs/site-builder.md §8. The roof
-  timings would have been the only candidates and their item was refuted
-  anyway.
+  timings were the only candidates, and they are dropped twice over — refuted as
+  the finder wrote them, and duration-shaped even as the verifier states them.
 * **No vague proximity.** The source's own "nearby" is dropped.
 * **One superlative ships** — the 1997 wild-card first, inside a confirmed
   item — and **two do not**: the LEED "first retractable-roof stadium" claim,
   which lives only in a verifier reason, and nothing else.
-* **No zip code on any address**, because the only verdict carrying one was
-  refuted.
+* **No zip code on any address except the ballpark's**, because no other
+  verdict text carries one.
 * **No trading claim for four of the six places**, each with its own reason
   named in the record and in the guide.
 * **No parking price**, which no source established.
-* **Nothing from any of the five refuted verdicts, including their
-  corrections** — the two Metrorail items, the roof, the artwork and the
-  anniversary campaign.
+* **Nothing a refuted verdict asserts that the verifier's own text does not
+  state was checked and confirmed** — not the superseded station name, not a
+  single figure for the roof opening and closing, not pastels, not the county on
+  MLB.com's page, and nothing at all of the anniversary campaign, whose
+  refutation names no confirmed replacement and whose framing the verifier calls
+  *"the finder's own unsupported inference"*.

@@ -13,7 +13,13 @@ Source: the 2026-08-30 Los Angeles Angels research artifact
 
 **The governing rule:** a verdict vouches only for what its own `item` text
 restates, not for every clause of the sentence the finder wrote around it. Only
-`confirmed` verdicts ship.
+`confirmed` verdicts ship — and, following the wave-1 and wave-2 precedent, a
+clause the verifier's own text **expressly states was confirmed** is an
+adjudication of that clause and ships too, whether that text is a verdict's
+`item`, a `reason` naming what confirmed, or a correction naming what was
+confirmed verbatim. A finder's refuted item never ships as written, and a
+correction that merely asserts a replacement fact without stating that the
+verifier checked it does not ship either.
 
 **3 places and 1 guide shipped** from 3 researched places. **No place was
 dropped.** One `getting_there` item is refuted and one is uncertain; neither
@@ -213,13 +219,16 @@ generally, with the source's own statement that none is tied to the ballpark.
   on re-fetch; a likely subpage gave a different route set; and one designation
   the finder wrote, "I-91", is not a valid route number at all. Nothing in the
   verifier's reason authorises any clause of it, so nothing ships.
-* **The parking entrances and the Lexus Lot perk (`refuted`).** The verifier's
-  reason states that the entrances, the oversized-vehicle detail, the Express
-  Entry Lane and the free Lexus Lot all confirm, and that the item is refuted
-  because the finder widened "the first 100 Lexus vehicles" to "the first 100
-  vehicles". **Only confirmed verdicts ship, so none of it does** — not the
-  entrance names, and not the correction's own restatement of the perk. The
-  guide says the item was refuted and why.
+* **One clause of the parking-entrances item (`refuted`), and only that
+  clause.** The verifier's reason states that "[t]he entrances, the
+  oversized-vehicle and Express Entry Lane details, and the existence of a free
+  Lexus Lot all confirm", and refutes the item because the finder widened "the
+  first 100 Lexus vehicles" to "the first 100 vehicles". The clauses the
+  verifier states were confirmed are published; the widened clause is not, and
+  the correction's narrower form — the perk restricted to Lexus vehicles — is
+  published in its place. The Lexus Lot's position relative to the Home Plate
+  Gate is **not** published: the verifier's reason confirms the lot's existence
+  and says nothing about where it sits.
 * **The lot's opening time relative to first pitch (`confirmed`).** Dropped for
   the duration ban, following the wave-1 and wave-2 precedent: the ban scans
   module source, its allowlist is keyed on `{file, phrase}` over a whole module
@@ -248,9 +257,8 @@ Restates the six confirmed `history` items — four `about: "ballpark"`, two
 ### FAQ
 
 Five questions. Four of them state a limit: the unresolved formal-name
-question, the unestablished bus route, the refuted parking item, the Grove's
-unestablished trading status, and the search-budget limit behind the site's
-size.
+question, the unestablished bus route, the Grove's unestablished trading
+status, and the search-budget limit behind the site's size.
 
 ---
 
@@ -273,5 +281,8 @@ size.
 * **No name for the rock-and-water feature** behind the left-center-field fence,
   because the verifier's own reason withholds that clause while confirming the
   feature.
-* **Nothing from the refuted parking item, and nothing from the uncertain
-  freeway item.**
+* **Nothing from the uncertain freeway item**, whose reason states in terms
+  that the verifier "could not establish the artifact's specific route list on
+  the cited page" — the case where a reason authorises nothing.
+* **Nothing the refuted parking item added beyond what the verifier's reason
+  states was confirmed** — in particular, no perk for vehicles generally.

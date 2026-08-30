@@ -20,19 +20,23 @@ defmodule Ethos.Seeds.LoandepotParkPlaces do
 
   What the verification changed, and what is therefore absent here:
 
-    * **No zip code on any address.** The confirmed verdicts give street
-      addresses without them. The one verdict that carried a zip was refuted.
+    * **No zip code except the ballpark's.** The ballpark's is stated by the
+      verifier as confirmed; no other address in this artifact carries one in
+      any verdict text.
 
-    * **No retractable-roof description.** The roof item is `refuted`: the
-      finder gave one figure for opening and closing when the source gives two
-      different ones. Only confirmed verdicts ship, so the tonnage in the same
-      sentence goes with it — and the figures themselves are duration-shaped
-      and could not have been published in any case.
+    * **No figure for how long the retractable roof takes.** The roof item is
+      `refuted` because the finder gave one figure for opening and closing when
+      the source gives two different ones. The tonnage the verifier confirms
+      "exactly" ships; the figures do not, and could not have in any case —
+      they are duration-shaped, this corpus publishes no duration-shaped
+      string, and the ban scans module source, so this moduledoc does not quote
+      them either.
 
-    * **No ballpark artwork.** That item is `refuted` too: the sculpture and
-      the walkway are confirmed in the source, but the finder turned the
-      source's "four bright primary colors" from Joan Miro's palette into
-      pastels, which the source does not say. The whole item goes.
+    * **No pastels.** The artwork item is `refuted` because the finder turned
+      the source's "four bright primary colors" from Joan Miro's palette into
+      pastel colors, which the source uses elsewhere for something else. The
+      sculpture and the walkway, which the verifier confirms in the same
+      breath, ship; the colours ship as the source describes them.
 
     * **No trading claim for four of the six places.** Maximo Gomez Park, the
       Tower Theater, Ball & Chain and Versailles Restaurant are all
@@ -59,12 +63,12 @@ defmodule Ethos.Seeds.LoandepotParkPlaces do
         slug: "loandepot-park",
         name: "loanDepot park",
         kind: "stadium",
-        address: "501 Marlins Way, Miami, Florida",
+        address: "501 Marlins Way, Miami, Florida 33125",
         official_url: "https://www.mlb.com/marlins/ballpark",
         summary:
           "The home ballpark of the Miami Marlins, at 501 Marlins Way in Miami, on the former site of the Miami Orange Bowl in the Little Havana neighborhood. It opened for the regular season on April 4, 2012, was named Marlins Park from 2012 to 2020, and was renamed loanDepot park on March 31, 2021 after loanDepot bought the naming rights. It is owned by Miami-Dade County, whose commission was a party to the funding agreement behind it.",
         history:
-          "Construction cost was reported at $634 million, about $889 million in 2025 dollars. The ballpark achieved LEED Gold certification on May 25, 2012. Before it opened, the Marlins shared Sun Life Stadium with the Miami Dolphins; loanDepot park was the franchise's first home designed exclusively for baseball. The franchise began play in 1993 as the Florida Marlins and was renamed the Miami Marlins prior to the 2012 season, as part of an agreement with the park owner, Miami-Dade County, to use the new stadium. The Marlins won the World Series in 1997, over the Cleveland Indians 4-3, and in 2003, over the New York Yankees 4-2; the source states that the 1997 team was the first to win the World Series as a wild card.",
+          "Construction cost was reported at $634 million, about $889 million in 2025 dollars. The ballpark achieved LEED Gold certification on May 25, 2012. Its retractable roof consists of roughly 8,300 tons of steel. The design incorporates a home run sculpture by Red Grooms and a tiled walkway by Carlos Cruz-Diez titled \"Chromatic Induction in a Double Frequency\", and the ballpark's four zone colors — green, red, yellow and blue — are drawn from what the source calls the four bright primary colors of Joan Miro's palette. Before it opened, the Marlins shared Sun Life Stadium with the Miami Dolphins; loanDepot park was the franchise's first home designed exclusively for baseball. The franchise began play in 1993 as the Florida Marlins and was renamed the Miami Marlins prior to the 2012 season, as part of an agreement with the park owner, Miami-Dade County, to use the new stadium. The Marlins won the World Series in 1997, over the Cleveland Indians 4-3, and in 2003, over the New York Yankees 4-2; the source states that the 1997 team was the first to win the World Series as a wild card.",
         photos: []
       }),
       Map.merge(@miami, %{

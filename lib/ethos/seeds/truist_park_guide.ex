@@ -27,23 +27,22 @@ defmodule Ethos.Seeds.TruistParkGuide do
 
   What was dropped, and why:
 
-    * **The 11,000-space parking figure**, which is `refuted`. The verifier
-      searched the cited page's full text twice and found no space count on it
-      at all, and calls this "the exact class of error the operating manual
-      warns about: a fact cited to a page that does not contain it". The
-      correction re-sources the figure, but only confirmed verdicts ship here,
-      so no space count appears.
+    * **The finder's citation for the 11,000-space parking figure.** That item
+      is `refuted`: the verifier searched the cited page's full text twice and
+      found no space count on it at all, and calls this "the exact class of
+      error the operating manual warns about: a fact cited to a page that does
+      not contain it". The figure itself is published, on the source the
+      verifier re-fetched and quotes.
 
-    * **The Battery Atlanta's own list of ways to reach the development**, also
-      `refuted`: the finder read one item on a flat list as another item's
-      brand name, which the source does not say.
+    * **The finder's reading of one transit service as another's brand name**,
+      which the source does not support. The source's own sentence, which the
+      verifier quotes verbatim, is published instead — as the flat list it is.
 
-    * **The account of Atlanta-Fulton County Stadium**, also `refuted`, and for
-      a substantive reason rather than a citation one — the finder had the
+    * **The finder's sequencing of Atlanta-Fulton County Stadium**, refuted for
+      a substantive reason rather than a citation one: the finder had the
       stadium built after the franchise's relocation when it was built before
-      it, while the move was still being litigated. The playing span the
-      finder gave was right and the sequencing was backwards; the whole item
-      goes.
+      it, while the move was still being litigated. The dates the verifier
+      re-fetched are published in its place.
 
   Transit and parking are prose in "Getting there" and mint no place records,
   per docs/site-builder.md §8: the Cumberland Transfer Center is prose, and so
@@ -83,8 +82,9 @@ defmodule Ethos.Seeds.TruistParkGuide do
       finder cited The Battery Atlanta's per-tenant subpages, several of which
       are stale pages carrying a January 2019 byline and no tenant text, rather
       than the property's live directory indexes, which do list every one of
-      those tenants. The tenancies survived on the corrected evidence. The
-      street addresses did not, and this guide publishes none of them.
+      those tenants. Every tenancy survived on the corrected evidence, and so
+      did five of the street addresses, which the verifier's own text names.
+      Six tenants have no address in any verdict text, and carry none here.
       """,
       entries: [
         %{
@@ -198,21 +198,28 @@ defmodule Ethos.Seeds.TruistParkGuide do
           encyclopedia calls a "circulator" bus system to shuttle fans to and
           from the stadium.
 
-          The Battery Atlanta's own site lists the services that reach the
-          development. That item is not published: it was refuted, because the
-          finder read one entry on a flat list as another entry's brand name,
-          which the source does not say. Only confirmed verdicts ship here, so
-          the list is left to the property's own page rather than paraphrased
-          wrongly.
+          The Battery Atlanta's own site states that the development "is
+          served by CobbLinc, Marta, the new Cumberland Circulator, Hopper as
+          well as a designated Ride Share pickup area". That is a flat list of
+          distinct services, and it is published as one: nothing on the page
+          says that Hopper is the Cumberland Circulator's brand name, and the
+          finder's item saying so was refuted.
 
-          On parking, the published rates that survived verification are the
-          oversized ones. Fifteen-passenger vans are $50 per vehicle and RVs up
-          to 35 feet are $75 per vehicle, both in Lot 29, and bus parking
-          permits range from $50 to $75 per vehicle depending on size. No
-          standard single-vehicle rate appears on that page, and none is
-          published here. A count of the ballpark's parking spaces is also
-          absent: the figure the finder gave was cited to a page that, on two
-          full-text re-fetches, does not contain it.
+          On parking, the ballpark is surrounded by more than 11,000 parking
+          spaces owned or leased by the organization, announced by the Braves
+          in January 2017 — 2,500 more than Turner Field had — with parking, in
+          MLB's own words, "spread 360-degrees around Truist Park". Fans are
+          advised to buy in advance. That figure is published on the source the
+          verifier re-fetched and quoted, not the one the finder cited: the
+          cited page contains no space count at all, on two full-text
+          re-fetches.
+
+          The published rates that survived verification are the oversized
+          ones. Fifteen-passenger vans are $50 per vehicle and RVs up to 35
+          feet are $75 per vehicle, both in Lot 29, and bus parking permits
+          range from $50 to $75 per vehicle depending on size. No standard
+          single-vehicle rate appears on that page, and none is published
+          here.
           """
         },
         %{
@@ -277,11 +284,13 @@ defmodule Ethos.Seeds.TruistParkGuide do
           expressly declines to confirm for publication — so it is not
           published.
 
-          No street address is published for any tenant. The reason is the
-          sourcing defect described in the introduction: the addresses lived
-          only inside refuted verdicts, and refuted verdicts ship nothing here.
-          The tenancies themselves rest on the live directory indexes the
-          verifier re-fetched.
+          Six of the tenants carry no street address, and the reason is the
+          sourcing defect described in the introduction. Silverspot Cinema, the
+          Mizuno Experience Center, Baseballism, Yard House and Superica are
+          published at 800 Battery Avenue SE, because the verifier's own text
+          names that address for each of them. For the two hotels, the Garden &
+          Gun Club, C. Ellet's Steakhouse, Achie's and Antico Pizza, no verdict
+          text carries an address at all, and none is invented.
           """
         },
         %{
@@ -307,11 +316,14 @@ defmodule Ethos.Seeds.TruistParkGuide do
           2016. That stadium was built as the 85,000-seat Centennial Olympic
           Stadium for the 1996 Summer Olympics and converted afterward into a
           49,000-seat baseball-only park. The stadium before it is not
-          described here: the item covering it was refuted, because the finder
-          had the building put up after the franchise's move from Milwaukee
-          when it went up before the move, which court battles had delayed.
-          Getting the sequence wrong is not a citation slip, and the whole item
-          was dropped rather than repaired from the correction.
+          described here as the finder described it. Ground was broken on that
+          stadium on April 15, 1964 and construction was completed on April 9,
+          1965, in anticipation of a move announced in October 1964; court
+          battles then delayed the franchise's actual relocation from Milwaukee
+          until the 1966 season, a year after the stadium was finished. The
+          Braves played there from 1966 to 1996. The finder had the building
+          put up after the move rather than before it, and the verifier
+          re-fetched the stadium's own article to establish the order.
 
           The ballpark did not arrive alone. The Battery Atlanta was proposed
           on November 20, 2013, broke ground on September 16, 2014, opened in
@@ -338,12 +350,12 @@ defmodule Ethos.Seeds.TruistParkGuide do
         %{
           "question" => "What does parking cost?",
           "answer" =>
-            "For ordinary cars, no source that survived verification says. The rates that did survive are the oversized ones: $50 per vehicle for fifteen-passenger vans and $75 per vehicle for RVs up to 35 feet, both in Lot 29, and bus permits from $50 to $75 depending on size. The club's own parking page carries no standard single-vehicle rate. A parking-space count is also absent: the figure the finder reported was cited to a page that does not contain it, on two full-text re-fetches, and only confirmed verdicts ship here."
+            "For ordinary cars, no source that survived verification says. The rates that did survive are the oversized ones: $50 per vehicle for fifteen-passenger vans and $75 per vehicle for RVs up to 35 feet, both in Lot 29, and bus permits from $50 to $75 depending on size. The club's own parking page carries no standard single-vehicle rate. There are more than 11,000 spaces owned or leased by the organization, announced by the Braves in January 2017 and 2,500 more than Turner Field had, and fans are advised to buy in advance."
         },
         %{
-          "question" => "Why do these places have no street addresses?",
+          "question" => "Why do six of these places have no street address?",
           "answer" =>
-            "Because the addresses rested on refuted verdicts. Six of the nine refutations in this research are one repeated defect: the finder cited The Battery Atlanta's per-tenant subpages — several carrying a January 2019 byline and no tenant text — instead of the property's live directory indexes. The verifier re-fetched those indexes and re-established every tenancy on them, so the tenancies ship. The street addresses appeared only in the refuted items and their corrections, and refuted verdicts ship nothing here. Truist Park and the Coca-Cola Roxy keep their addresses, because a confirmed verdict states each one."
+            "Because no verdict carries one for them. Six of the nine refutations in this research are one repeated defect: the finder cited The Battery Atlanta's per-tenant subpages — several carrying a January 2019 byline and no tenant text — instead of the property's live directory indexes. The verifier re-fetched those indexes, re-established every tenancy on them, and named the address for five of the tenants, which is why those five have one. For the two hotels, the Garden & Gun Club, C. Ellet's Steakhouse, Achie's and Antico Pizza, no verdict text states an address, so none is published."
         },
         %{
           "question" => "Which of these places is confirmed to be operating?",

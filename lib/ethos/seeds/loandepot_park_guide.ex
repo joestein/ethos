@@ -30,23 +30,26 @@ defmodule Ethos.Seeds.LoandepotParkGuide do
 
   What was dropped, and why:
 
-    * **Both items naming the Metrorail station nearest the ballpark**, and the
-      lines serving it. Both are `refuted`: the verifier found the station name
-      in both cited sources to be superseded, and the line detail unsupported
-      by the pages cited. Only confirmed verdicts ship, so no station is named
-      for that connection.
+    * **The station name both cited sources still carry.** Two `getting_there`
+      items named the Metrorail station nearest the ballpark by a name the
+      verifier established has been superseded, and attributed the line service
+      to pages that do not state it. The station's current name and its line
+      service are published from the station's own article, which the verifier
+      fetched and quotes; the superseded name is not.
 
-    * **The roof item**, `refuted` for conflating two different figures the
-      source gives separately. Its figures are duration-shaped besides, and
-      this corpus publishes no duration-shaped string — the ban scans module
-      source and its allowlist cannot be narrowed below a whole module, so a
-      clause like that goes rather than the gate. This moduledoc cannot quote
-      what it records dropping, for the same reason.
+    * **The figures for how long the roof takes to open and to close.** The
+      roof item is `refuted` for giving one figure where the source gives two.
+      The figures are duration-shaped besides, and this corpus publishes no
+      duration-shaped string — the ban scans module source and its allowlist
+      cannot be narrowed below a whole module, so a clause like that goes
+      rather than the gate, and this moduledoc cannot quote what it records
+      dropping. The roof's tonnage, which the verifier confirms exactly, does
+      ship.
 
-    * **The ballpark artwork item**, `refuted`, and the loss is real: the
-      sculpture and the walkway are confirmed in the source, but the finder
-      rewrote the source's own colour description into something it does not
-      say, and the item is one item.
+    * **Pastels.** The artwork item is `refuted` because the finder rewrote the
+      source's own description of the colours the ballpark's zones take from a
+      painter's palette. The sculpture, the walkway and the colours as the
+      source describes them all ship; the finder's version does not.
 
     * **"a nearby train station"**, which is a confirmed item's own wording.
       "Nearby" is an unmeasurable gesture, and this corpus drops those even
@@ -140,13 +143,14 @@ defmodule Ethos.Seeds.LoandepotParkGuide do
           places of interest, and the station has carried the same name since
           it opened in 1984.
 
-          No Metrorail station is named here as the nearest to the ballpark,
-          and the omission is deliberate rather than an oversight. Two items
-          did name one, along with the lines serving it, and both were refuted:
-          the verifier found the station's name in both cited sources to be
-          superseded, and found that neither cited page states which lines call
-          there. Only confirmed verdicts ship, so neither the name nor the line
-          detail appears.
+          The Metrorail station nearest the ballpark is UHealth-Jackson, served
+          by the Green Line toward Dadeland South and the Orange Line toward
+          Miami International Airport. The station opened on December 17, 1984
+          as Civic Center and was renamed on July 12, 2024. Both sources the
+          research first cited for it still carry the superseded name, and
+          neither states which lines call there; the name and the line service
+          published here come from the station's own article, which the
+          verifier fetched and quoted.
 
           On parking, the ballpark has four main parking garages and six
           surface lots on site, with a combined capacity of approximately 5,600
@@ -238,15 +242,19 @@ defmodule Ethos.Seeds.LoandepotParkGuide do
           million in 2025 dollars, and the ballpark achieved LEED Gold
           certification on May 25, 2012.
 
-          Two things about the building are not described here. The retractable
-          roof is one: the item covering it was refuted, because the finder
-          gave a single figure for opening and closing where the source gives
-          two different ones, and the tonnage in the same sentence went with
-          it. The artwork is the other, and that one is a genuine loss — a
-          sculpture and a tiled walkway are both confirmed in the source, but
-          the item that carried them also rewrote the source's description of
-          the colours the ballpark's zones are drawn from, and the item is one
-          item.
+          The retractable roof consists of roughly 8,300 tons of steel. How
+          long it takes to open and to close is not published: the item
+          carrying those figures was refuted for giving one number where the
+          source gives two, and the numbers are duration-shaped besides, which
+          this corpus does not publish at all.
+
+          The design incorporates a home run sculpture by Red Grooms and a
+          tiled walkway by Carlos Cruz-Diez titled "Chromatic Induction in a
+          Double Frequency". The ballpark's four zone colors — green, red,
+          yellow and blue — are drawn from what the source calls the four
+          bright primary colors of Joan Miro's palette. The finder's item
+          called them pastels, which is a word the same article uses elsewhere
+          for something else entirely, and that reading was refuted.
 
           The franchise began play in 1993 as the Florida Marlins and was
           renamed the Miami Marlins prior to the 2012 season, as part of an
@@ -269,9 +277,9 @@ defmodule Ethos.Seeds.LoandepotParkGuide do
             "Miami-Dade County — and the source for that is not the one the research first cited. The finder appended the county to MLB.com's ballpark page, which the verifier re-fetched and found to contain neither the word \"Miami-Dade\" nor the word \"county\" anywhere. The county ships instead on two confirmed verdicts: the encyclopedia's ballpark article, which names Miami-Dade County as the stadium's owner and the county commission as a party to its funding agreement, and the club's article, which states that the franchise renamed itself as part of an agreement with the park owner, Miami-Dade County."
         },
         %{
-          "question" => "Which Metrorail station serves the ballpark?",
+          "question" => "Which Metrorail stations serve the ballpark?",
           "answer" =>
-            "This guide names one connection and not the other. A \"Marlins Shuttle\" operates from Culmer Metrorail station on game days, and Culmer's own article lists loanDepot Park among its places of interest. The station usually described as the nearest is not named here: two items covering it were refuted, because the name both cited sources use has been superseded and neither page states which lines call there. Only confirmed verdicts ship, so the guide leaves that connection unnamed rather than repeating a stale name."
+            "Two of them. The nearest is UHealth-Jackson, served by the Green Line toward Dadeland South and the Orange Line toward Miami International Airport; it opened on December 17, 1984 as Civic Center and was renamed on July 12, 2024, and both sources the research first cited still carry the old name, so the name and lines here come from the station's own article instead. Separately, a \"Marlins Shuttle\" operates from Culmer Metrorail station on game days, and Culmer's own article lists loanDepot Park among its places of interest."
         },
         %{
           "question" => "Is there parking at the ballpark?",
@@ -284,9 +292,9 @@ defmodule Ethos.Seeds.LoandepotParkGuide do
             "The ballpark. Of the five places around it, one is a historic district, for which the question does not arise, and the other four carry no trading claim: Maximo Gomez Park has no dated source, the Tower Theater's own site shows a \"Returns Soon\" placeholder, Ball & Chain rests on its own live site alone, and Versailles Restaurant has independent dated evidence — a documented presidential visit on June 13, 2023 — that is three years old. Absence of evidence is not evidence of closure, and no closure is asserted for any of them."
         },
         %{
-          "question" => "Why does the guide not describe the roof or the artwork?",
+          "question" => "What does the guide say about the roof and the artwork?",
           "answer" =>
-            "Because both items were refuted, for different reasons. The roof item gave one figure where the source gives two different ones; its figures are duration-shaped besides, and this corpus publishes no duration-shaped string. The artwork item names a sculpture and a walkway the source does carry, but it also rewrote the source's own description of the colours the ballpark's zones take from a painter's palette into something the source does not say. Only confirmed verdicts ship here, and a refuted item ships nothing, so both go whole."
+            "It describes both, minus the two clauses the verifier refuted. The roof's tonnage is published and the figures for how long it takes to open and to close are not: the finder gave one number where the source gives two, and the numbers are duration-shaped besides, which this corpus does not publish at all. The sculpture, the tiled walkway and the four zone colors are published as the source describes them — bright primary colors from Joan Miro's palette, not the pastels the finder wrote."
         }
       ],
       photos: []

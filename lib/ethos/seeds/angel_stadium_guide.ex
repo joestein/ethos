@@ -15,9 +15,13 @@ defmodule Ethos.Seeds.AngelStadiumGuide do
 
   What was dropped, and why:
 
-    * **The whole parking-entrances item**, which is `refuted`. Only confirmed
-      verdicts ship, so neither the entrance names nor the corrected form of
-      the Lexus Lot perk appears here.
+    * **One clause of the parking-entrances item**, which is `refuted`. The
+      verifier's reason states that the entrances, the oversized-vehicle
+      detail, the Express Entry Lane and the free Lexus Lot all confirm, and
+      refutes only the finder's widening of a perk the source limits to one
+      make of car. What the verifier states was confirmed is published; the
+      widened clause is not, and the correction's narrower form is published in
+      its place.
 
     * **The freeway routes**, which are `uncertain`: the cited page carried no
       freeway detail on re-fetch, a likely subpage gave a different set of
@@ -129,10 +133,17 @@ defmodule Ethos.Seeds.AngelStadiumGuide do
           is duration-shaped, this corpus publishes no duration-shaped string,
           and it is dropped rather than the gate weakened.
 
-          The parking entrances, and a promotion attached to one of them, are
-          not published at all. That item was refuted — the finder generalised
-          a perk the source restricts to one make of car — and only confirmed
-          verdicts ship here.
+          Three named entrances serve the parking lot: Douglass Road, State
+          College Boulevard and Orangewood Avenue. Oversized vehicles and buses
+          use the Orangewood Avenue entrance, and season ticket holders have an
+          Express Entry Lane also on Orangewood Avenue. A separate Lexus Lot
+          offers free parking for Lexus vehicles, and the first 100 Lexus
+          vehicles entering by the State College Boulevard entrance receive a
+          complimentary upgrade to that lot's premium spaces. The last clause
+          is the one the research got wrong: the finder wrote it as a perk for
+          the first 100 vehicles generally, the verifier refuted that reading
+          against the source, and the narrower form the verifier states is what
+          appears here.
           """
         },
         %{
@@ -236,7 +247,7 @@ defmodule Ethos.Seeds.AngelStadiumGuide do
         %{
           "question" => "What does parking cost at Angel Stadium?",
           "answer" =>
-            "Published day-of-game rates for the regular season are $25 in person or $27 online for general parking, and $35 in person or $37 online for preferred parking, subject to availability. Oversized vehicles and buses of 20 feet or more are $100, in person only. Payment is by debit or credit card or by Apple Pay or Android Pay, and postseason and special-event rates vary. The entrances and a promotion attached to one of them are not published here: that item was refuted, because the finder widened a perk the source limits to one make of car, and only confirmed verdicts ship."
+            "Published day-of-game rates for the regular season are $25 in person or $27 online for general parking, and $35 in person or $37 online for preferred parking, subject to availability. Oversized vehicles and buses of 20 feet or more are $100, in person only. Payment is by debit or credit card or by Apple Pay or Android Pay, and postseason and special-event rates vary. The lot has three named entrances — Douglass Road, State College Boulevard and Orangewood Avenue — with oversized vehicles and buses using Orangewood Avenue, where season ticket holders also have an Express Entry Lane."
         },
         %{
           "question" => "Is the DigAlert Grove of Anaheim open?",

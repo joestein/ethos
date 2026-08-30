@@ -28,10 +28,13 @@ defmodule Ethos.Seeds.AngelStadiumPlaces do
       tried does not resolve. Uncertain is not closed, and no closure is
       asserted.
 
-    * **No parking entrances, and no Lexus Lot perk.** That whole item is
-      `refuted`. Only confirmed verdicts ship here, so nothing from it does —
-      not the entrance names the verifier's reason says reproduce, and not the
-      corrected form of the perk.
+    * **No parking perk for vehicles generally.** The parking-entrances item is
+      `refuted`, and the refutation is narrow: the verifier's reason states
+      that the entrances, the oversized-vehicle detail, the Express Entry Lane
+      and the free Lexus Lot all confirm, and that the finder widened a perk
+      the source restricts to one make of car. The guide publishes what the
+      verifier states was confirmed and the correction's narrower form of the
+      perk; nothing else from the item ships.
 
   **The venue name is "Angel Stadium", and the fuller form is published as what
   the verdict says it is.** A confirmed verdict quotes the December 29, 2003
