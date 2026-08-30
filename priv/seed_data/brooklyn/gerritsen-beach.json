@@ -14,7 +14,7 @@
       },
       {
         "heading": "Along Gerritsen Avenue",
-        "body": "Gerritsen Avenue carries most of the addresses on this page. FDNY Engine Company 321's firehouse is at 2165, the address the city's current firehouse listing still gives for the company. St. James United Evangelical Lutheran Church has been at 2776 Gerritsen Avenue since 1927, and a survey of Brooklyn organs records its original Geo. Kilgen & Son instrument, Opus 3973, built the same year.\n\nVictoria Pizzeria is at 2716 and advertises itself as a Gerritsen Beach institution since 1962; the city's restaurant inspection records carry it at that address with an inspection dated May 4, 2026. The bar at 2722 Gerritsen Avenue now operates as New Beach Bar, with an inspection dated February 19, 2026.\n\nOne address sits off the avenue. The waterfront business at 84 Ebony Court now operates as Marina Bar & Grill, with an inspection dated July 18, 2026. The Tamaqua name it carried in a 2015 article does not appear anywhere in the city's inspection history for that address, and the tamaquamarina.com domain is now parked."
+        "body": "Gerritsen Avenue carries most of the addresses on this page. FDNY Engine Company 321's firehouse is at 2165, the address the city's current firehouse listing still gives for the company. St. James United Evangelical Lutheran Church has been at 2776 Gerritsen Avenue since 1927, and a survey of Brooklyn organs records its original Geo. Kilgen & Son instrument, Opus 3973, built the same year.\n\nVictoria Pizzeria is at 2716 and advertises itself as a Gerritsen Beach institution since 1962. The bar at 2722 Gerritsen Avenue now operates as New Beach Bar.\n\nOne address sits off the avenue. The waterfront business at 84 Ebony Court now operates as Marina Bar & Grill. The Tamaqua name it carried in a 2015 article is no longer in use there, and the tamaquamarina.com domain is now parked."
       },
       {
         "heading": "Getting there",
@@ -36,11 +36,11 @@
       },
       {
         "question": "Where can I eat in Gerritsen Beach?",
-        "answer": "Victoria Pizzeria at 2716 Gerritsen Avenue, New Beach Bar at 2722 Gerritsen Avenue, and Marina Bar & Grill at 84 Ebony Court. All three appear in the city's restaurant inspection records with inspections dated 2026."
+        "answer": "Victoria Pizzeria at 2716 Gerritsen Avenue, New Beach Bar at 2722 Gerritsen Avenue, and Marina Bar & Grill at 84 Ebony Court."
       },
       {
         "question": "Is the Tamaqua Bar & Marina still there?",
-        "answer": "The waterfront business at 84 Ebony Court operates as Marina Bar & Grill today. That is the only name the city's restaurant inspection history carries for the address, most recently on July 18, 2026; the Tamaqua name comes from a 2015 article, and the tamaquamarina.com domain is now parked. The bar at 2722 Gerritsen Avenue has had a similar change — the city's records there carry New Beach Bar, not Beach Bar."
+        "answer": "The waterfront business at 84 Ebony Court operates as Marina Bar & Grill today. The Tamaqua name comes from a 2015 article, and the tamaquamarina.com domain is now parked. The bar at 2722 Gerritsen Avenue has had a similar change: it now operates as New Beach Bar, not Beach Bar."
       }
     ],
     "photos": [
@@ -157,7 +157,7 @@
       "county": "Brooklyn",
       "address": "2716 Gerritsen Avenue, Brooklyn, NY 11229",
       "official_url": "https://www.victoriapizzanyc.com/",
-      "summary": "A pizzeria on Gerritsen Avenue that advertises itself as a Gerritsen Beach institution since 1962. The city's restaurant inspection records carry it at this address with an inspection dated May 4, 2026.",
+      "summary": "A pizzeria on Gerritsen Avenue that advertises itself as a Gerritsen Beach institution since 1962.",
       "status": "open",
       "photos": []
     },
@@ -169,7 +169,7 @@
       "state": "New York",
       "county": "Brooklyn",
       "address": "2722 Gerritsen Avenue, Brooklyn, NY 11229",
-      "summary": "The bar at 2722 Gerritsen Avenue, which the city's restaurant inspection records carry as New Beach Bar rather than Beach Bar, with an inspection dated February 19, 2026.",
+      "summary": "The bar at 2722 Gerritsen Avenue, which now operates as New Beach Bar rather than Beach Bar.",
       "status": "open",
       "photos": []
     },
@@ -181,7 +181,7 @@
       "state": "New York",
       "county": "Brooklyn",
       "address": "84 Ebony Court, Brooklyn, NY 11229",
-      "summary": "The waterfront business at 84 Ebony Court, which now operates as Marina Bar & Grill rather than under the Tamaqua name a 2015 article gave it. The city's restaurant inspection records carry only this name for the address, most recently on July 18, 2026.",
+      "summary": "The waterfront business at 84 Ebony Court, which now operates as Marina Bar & Grill rather than under the Tamaqua name a 2015 article gave it.",
       "status": "open",
       "photos": []
     }
@@ -227,13 +227,13 @@
       "kind": "food",
       "name": "New Beach Bar",
       "place_slug": "new-beach-bar-gerritsen-beach",
-      "note": "The bar at 2722 Gerritsen Avenue, inspected by the city in February 2026."
+      "note": "The bar at 2722 Gerritsen Avenue, which now operates as New Beach Bar rather than Beach Bar."
     },
     {
       "kind": "food",
       "name": "Marina Bar & Grill",
       "place_slug": "marina-bar-and-grill-gerritsen-beach",
-      "note": "The waterfront bar and grill at 84 Ebony Court, inspected by the city in July 2026."
+      "note": "The waterfront bar and grill at 84 Ebony Court, formerly carrying the Tamaqua name."
     }
   ],
   "links": [

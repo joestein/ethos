@@ -10,7 +10,7 @@
     "sections": [
       {
         "heading": "Bob Marley Boulevard",
-        "body": "In summer 2006 the New York City Department of Transportation co-named the stretch of Church Avenue from Remsen Avenue to East 98th Street as Bob Marley Boulevard, in recognition of the large Caribbean, and particularly Jamaican, population of this part of East Flatbush. It is a co-naming on an ordinary commercial street rather than a site with an entrance or opening hours, and walking it is most of the visit.\n\nThe cooking along it matches the co-naming. WB Caribbean Restaurant stands at 9407 Church Avenue and Island Flavor Jerk Cuisine at 9529, both inside the co-named span, the second among a block of storefronts that also holds Teriyaki & Sushi and China No. 1. Neither appears in the press coverage this guide could reach; both were located through the city's restaurant-inspection records, and each held an A grade at its most recent inspection.\n\nThe Rugby name has not disappeared either. It survives on a street name and on the Brooklyn Public Library's Rugby branch at 1000 Utica Avenue, which opened in 1957; that branch is covered on the Rugby page. Sources describe Remsen Village only loosely, as the eastern section of East Flatbush extending to approximately East 98th Street, and the population figures in circulation are drawn from zip codes that themselves overlap neighbouring East Flatbush, Brownsville, Crown Heights and Canarsie. No source gives a definitive boundary, and none is asserted here."
+        "body": "In summer 2006 the New York City Department of Transportation co-named the stretch of Church Avenue from Remsen Avenue to East 98th Street as Bob Marley Boulevard, in recognition of the large Caribbean, and particularly Jamaican, population of this part of East Flatbush. It is a co-naming on an ordinary commercial street rather than a site with an entrance or opening hours, and walking it is most of the visit.\n\nThe cooking along it matches the co-naming. WB Caribbean Restaurant stands at 9407 Church Avenue and Island Flavor Jerk Cuisine at 9529, both inside the co-named span, the second among a block of storefronts that also holds Teriyaki & Sushi and China No. 1.\n\nThe Rugby name has not disappeared either. It survives on a street name and on the Brooklyn Public Library's Rugby branch at 1000 Utica Avenue, which opened in 1957; that branch is covered on the Rugby page. Sources describe Remsen Village only loosely, as the eastern section of East Flatbush extending to approximately East 98th Street, and the population figures in circulation are drawn from zip codes that themselves overlap neighbouring East Flatbush, Brownsville, Crown Heights and Canarsie. No source gives a definitive boundary, and none is asserted here."
       },
       {
         "heading": "Getting there",
@@ -54,7 +54,7 @@
       "state": "New York",
       "county": "Brooklyn",
       "address": "9407 Church Avenue, Brooklyn, NY 11212",
-      "summary": "A Caribbean restaurant on Church Avenue, inside the stretch between Remsen Avenue and East 98th Street co-named Bob Marley Boulevard in 2006. It was graded A at its most recent city health inspection, on July 22, 2026.",
+      "summary": "A Caribbean restaurant on Church Avenue, inside the stretch between Remsen Avenue and East 98th Street co-named Bob Marley Boulevard in 2006.",
       "status": "open",
       "photos": []
     },
@@ -66,7 +66,7 @@
       "state": "New York",
       "county": "Brooklyn",
       "address": "9529 Church Avenue, Brooklyn, NY 11212",
-      "summary": "A Caribbean jerk restaurant on Church Avenue, within the Remsen Avenue to East 98th Street span co-named Bob Marley Boulevard, on a block of storefronts that also holds Teriyaki & Sushi and China No. 1. It was graded A at its most recent city health inspection, on April 9, 2026.",
+      "summary": "A Caribbean jerk restaurant on Church Avenue, within the Remsen Avenue to East 98th Street span co-named Bob Marley Boulevard, on a block of storefronts that also holds Teriyaki & Sushi and China No. 1.",
       "status": "open",
       "photos": []
     }
@@ -82,13 +82,13 @@
       "kind": "food",
       "name": "WB Caribbean Restaurant",
       "place_slug": "wb-caribbean-restaurant",
-      "note": "Caribbean cooking at 9407 Church Avenue, inside the co-named stretch; graded A in July 2026."
+      "note": "Caribbean cooking at 9407 Church Avenue, inside the co-named stretch."
     },
     {
       "kind": "food",
       "name": "Island Flavor Jerk Cuisine",
       "place_slug": "island-flavor-jerk-cuisine",
-      "note": "Jerk cooking further along the same stretch at 9529 Church Avenue; graded A in April 2026."
+      "note": "Jerk cooking further along the same stretch at 9529 Church Avenue."
     }
   ],
   "links": [

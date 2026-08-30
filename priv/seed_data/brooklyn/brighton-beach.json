@@ -40,7 +40,7 @@
       },
       {
         "question": "Is Cafe at Your Mother-in-Law's still open?",
-        "answer": "No. City health records show 3071 Brighton 4th Street is now occupied by Geo Khinkali, a different Eastern European restaurant, with inspections in June and July 2026. Georgian House has also moved: it now operates as Berikoni / Georgian House at 125 Brighton Beach Avenue rather than at its former Brighton 1st Street address."
+        "answer": "No. 3071 Brighton 4th Street is now occupied by Geo Khinkali, a different Eastern European restaurant. Georgian House has also moved: it now operates as Berikoni / Georgian House at 125 Brighton Beach Avenue rather than at its former Brighton 1st Street address."
       },
       {
         "question": "Where can I stay in Brighton Beach?",
@@ -126,7 +126,7 @@
       "state": "New York",
       "county": "Brooklyn",
       "address": "239 Brighton Beach Avenue, Brooklyn, NY 11235",
-      "summary": "A Turkish baklava and pastry cafe on the main commercial strip under the elevated tracks. City health records show it operating, with a re-inspection on September 17, 2025 graded A.",
+      "summary": "A Turkish baklava and pastry cafe on the main commercial strip under the elevated tracks.",
       "status": "open",
       "photos": []
     },
@@ -138,7 +138,7 @@
       "state": "New York",
       "county": "Brooklyn",
       "address": "1141 Brighton Beach Avenue, Brooklyn, NY 11235",
-      "summary": "A Uyghur restaurant on Brighton Beach Avenue, listed in city health records as Kashkar Cafe, with an inspection on February 5, 2025 graded A.",
+      "summary": "A Uyghur restaurant on Brighton Beach Avenue.",
       "status": "open",
       "photos": []
     },
@@ -150,7 +150,7 @@
       "state": "New York",
       "county": "Brooklyn",
       "address": "125 Brighton Beach Avenue, Brooklyn, NY 11235",
-      "summary": "A Georgian restaurant on Brighton Beach Avenue. It is the same name that once traded as Georgian House at 129 Brighton 1st Street, an address where city health records now show no restaurant at all; it was inspected here on March 5, 2026.",
+      "summary": "A Georgian restaurant on Brighton Beach Avenue. It carries the same name that once traded as Georgian House at 129 Brighton 1st Street.",
       "status": "open",
       "photos": []
     },
@@ -162,7 +162,7 @@
       "state": "New York",
       "county": "Brooklyn",
       "address": "3071 Brighton 4 Street, Brooklyn, NY 11235",
-      "summary": "An Eastern European restaurant at the Brighton 4th Street address that was previously Cafe at Your Mother-in-Law's. City health records show inspections in June and July 2026, including a temporary closure and reopening.",
+      "summary": "An Eastern European restaurant at the Brighton 4th Street address that was previously Cafe at Your Mother-in-Law's.",
       "status": "open",
       "photos": []
     },
@@ -174,7 +174,7 @@
       "state": "New York",
       "county": "Brooklyn",
       "address": "3152 Brighton 6 Street, Brooklyn, NY 11235",
-      "summary": "A Russian-cuisine restaurant near the boardwalk, often listed as Tatiana Grill at Brighton 4th Street; city health records give its official address as Brighton 6 Street. It was inspected on June 24, 2026 and graded A.",
+      "summary": "A Russian-cuisine restaurant near the boardwalk, at 3152 Brighton 6 Street, though often listed as Tatiana Grill at a Brighton 4th Street address.",
       "status": "open",
       "photos": []
     },
@@ -186,7 +186,7 @@
       "state": "New York",
       "county": "Brooklyn",
       "address": "290 Brighton Beach Avenue, Brooklyn, NY 11235",
-      "summary": "An Eastern European cafe on Brighton Beach Avenue, inspected by the city on January 7, 2026 and graded A.",
+      "summary": "An Eastern European cafe on Brighton Beach Avenue.",
       "status": "open",
       "photos": []
     }

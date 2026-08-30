@@ -78,7 +78,7 @@
       "state": "New York",
       "county": "Brooklyn",
       "address": "1109 Nostrand Avenue, Brooklyn, NY",
-      "summary": "A Caribbean bakery on the Nostrand Avenue Little Caribbean corridor, known for rolls, patties and desserts. City health department records show it inspected at this address in June 2026 with a Grade A.",
+      "summary": "A Caribbean bakery on the Nostrand Avenue Little Caribbean corridor, known for rolls, patties and desserts.",
       "status": "open",
       "photos": []
     },
@@ -102,7 +102,7 @@
       "state": "New York",
       "county": "Brooklyn",
       "address": "1436 Nostrand Avenue, Brooklyn, NY",
-      "summary": "A Caribbean restaurant and bakery on Nostrand Avenue serving oxtail, fish and curry dishes. City health department records show it inspected at this address in July 2026 with a Grade A.",
+      "summary": "A Caribbean restaurant and bakery on Nostrand Avenue serving oxtail, fish and curry dishes.",
       "status": "open",
       "photos": []
     }

@@ -157,7 +157,7 @@
       "state": "New York",
       "county": "Brooklyn",
       "address": "483 McDonald Avenue, Brooklyn, NY 11218",
-      "summary": "A Bangladeshi restaurant on McDonald Avenue just off Church Avenue, in the corridor co-named Little Bangladesh. City restaurant-inspection records list it at this address with an inspection dated January 7, 2026.",
+      "summary": "A Bangladeshi restaurant on McDonald Avenue just off Church Avenue, in the corridor co-named Little Bangladesh.",
       "status": "open",
       "photos": []
     },
@@ -169,7 +169,7 @@
       "state": "New York",
       "county": "Brooklyn",
       "address": "91 Church Avenue, Brooklyn, NY 11218",
-      "summary": "A Bangladeshi sweets shop in the Little Bangladesh corridor. City restaurant-inspection data lists it at this address as an active establishment.",
+      "summary": "A Bangladeshi sweets shop in the Little Bangladesh corridor.",
       "status": "open",
       "photos": []
     }

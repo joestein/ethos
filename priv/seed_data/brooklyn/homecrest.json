@@ -14,7 +14,7 @@
       },
       {
         "heading": "The Avenue U storefronts",
-        "body": "Homecrest has long had a large Italian population, joined later by immigration from Latin America, China, Israel, Syria, Russia and South Asia. A Chinese enclave grew up right by the Avenue U subway station; the framing of it as Brooklyn's second Chinatown traces to bklynr rather than to Wikipedia, which describes the enclave without using that phrase.\n\nThe Avenue U storefronts on this page include Wing Hing Seafood Restaurant at 1217, Sheep by Barashka at 1223, Pho Vietnam Restaurant at 1243, Yuanzaibing at 1305, Long Wong Bakery at 1310, Karavan Grill at 1311 and Season Restaurant at 1321. Each is carried in the city's restaurant inspection records at its address, with an inspection dated 2025 or 2026.\n\nWhere Homecrest gives way to Madison along Avenue U is not settled. The sources that describe Homecrest's edges disagree with one another and none should be treated as definitive, and the commercial strip carries on past these addresses into blocks commonly grouped with Madison."
+        "body": "Homecrest has long had a large Italian population, joined later by immigration from Latin America, China, Israel, Syria, Russia and South Asia. A Chinese enclave grew up right by the Avenue U subway station; the framing of it as Brooklyn's second Chinatown traces to bklynr rather than to Wikipedia, which describes the enclave without using that phrase.\n\nThe Avenue U storefronts on this page include Wing Hing Seafood Restaurant at 1217, Sheep by Barashka at 1223, Pho Vietnam Restaurant at 1243, Yuanzaibing at 1305, Long Wong Bakery at 1310, Karavan Grill at 1311 and Season Restaurant at 1321.\n\nWhere Homecrest gives way to Madison along Avenue U is not settled. The sources that describe Homecrest's edges disagree with one another and none should be treated as definitive, and the commercial strip carries on past these addresses into blocks commonly grouped with Madison."
       },
       {
         "heading": "Getting there",
@@ -36,7 +36,7 @@
       },
       {
         "question": "Where can I eat on Avenue U?",
-        "answer": "The addresses on this page run from 1217 to 1321: Wing Hing Seafood Restaurant, Sheep by Barashka, Pho Vietnam Restaurant, Yuanzaibing, Long Wong Bakery, Karavan Grill and Season Restaurant. All seven appear in the city's restaurant inspection records with inspections dated 2025 or 2026."
+        "answer": "The addresses on this page run from 1217 to 1321: Wing Hing Seafood Restaurant, Sheep by Barashka, Pho Vietnam Restaurant, Yuanzaibing, Long Wong Bakery, Karavan Grill and Season Restaurant."
       },
       {
         "question": "Why are there two Kelly parks?",
@@ -164,7 +164,7 @@
       "state": "New York",
       "county": "Brooklyn",
       "address": "1217 Avenue U, Brooklyn, NY 11229",
-      "summary": "A restaurant on Avenue U, carried in the city's restaurant inspection records at this address with an inspection dated October 24, 2025.",
+      "summary": "A restaurant on Avenue U.",
       "status": "open",
       "photos": []
     },
@@ -176,7 +176,7 @@
       "state": "New York",
       "county": "Brooklyn",
       "address": "1223 Avenue U, Brooklyn, NY 11229",
-      "summary": "A restaurant on Avenue U, carried in the city's restaurant inspection records at this address with an inspection dated June 12, 2025.",
+      "summary": "A restaurant on Avenue U.",
       "status": "open",
       "photos": []
     },
@@ -188,7 +188,7 @@
       "state": "New York",
       "county": "Brooklyn",
       "address": "1243 Avenue U, Brooklyn, NY 11229",
-      "summary": "A restaurant on Avenue U, carried in the city's restaurant inspection records at this address with an inspection dated April 15, 2026.",
+      "summary": "A restaurant on Avenue U.",
       "status": "open",
       "photos": []
     },
@@ -200,7 +200,7 @@
       "state": "New York",
       "county": "Brooklyn",
       "address": "1305 Avenue U, Brooklyn, NY 11229",
-      "summary": "A restaurant on Avenue U, carried in the city's restaurant inspection records at this address with an inspection dated June 4, 2026.",
+      "summary": "A restaurant on Avenue U.",
       "status": "open",
       "photos": []
     },
@@ -212,8 +212,8 @@
       "state": "New York",
       "county": "Brooklyn",
       "address": "1310 Avenue U, Brooklyn, NY 11229",
-      "summary": "A bakery on Avenue U, carried in the city's restaurant inspection records at this address with an inspection dated March 17, 2026.",
-      "history": "A separate write-up of the avenue's Chinese businesses names a Long Wong Bakery II without giving an address. The city's inspection records carry only Long Wong Bakery, without the II, at this address.",
+      "summary": "A bakery on Avenue U.",
+      "history": "A separate write-up of the avenue's Chinese businesses names a Long Wong Bakery II without giving an address.",
       "status": "open",
       "photos": []
     },
@@ -225,7 +225,7 @@
       "state": "New York",
       "county": "Brooklyn",
       "address": "1311 Avenue U, Brooklyn, NY 11229",
-      "summary": "A restaurant on Avenue U, carried in the city's restaurant inspection records at this address with an inspection dated November 3, 2025.",
+      "summary": "A restaurant on Avenue U.",
       "status": "open",
       "photos": []
     },
@@ -237,7 +237,7 @@
       "state": "New York",
       "county": "Brooklyn",
       "address": "1321 Avenue U, Brooklyn, NY 11229",
-      "summary": "A restaurant on Avenue U, carried in the city's restaurant inspection records at this address with an inspection dated June 9, 2026.",
+      "summary": "A restaurant on Avenue U.",
       "status": "open",
       "photos": []
     }
@@ -277,25 +277,25 @@
       "kind": "food",
       "name": "Wing Hing Seafood Restaurant",
       "place_slug": "wing-hing-seafood-restaurant",
-      "note": "A restaurant at 1217 Avenue U, inspected by the city in October 2025."
+      "note": "A restaurant at 1217 Avenue U."
     },
     {
       "kind": "food",
       "name": "Sheep by Barashka",
       "place_slug": "sheep-by-barashka",
-      "note": "A restaurant at 1223 Avenue U, inspected by the city in June 2025."
+      "note": "A restaurant at 1223 Avenue U."
     },
     {
       "kind": "food",
       "name": "Pho Vietnam Restaurant",
       "place_slug": "pho-vietnam-restaurant-homecrest",
-      "note": "A restaurant at 1243 Avenue U, inspected by the city in April 2026."
+      "note": "A restaurant at 1243 Avenue U."
     },
     {
       "kind": "food",
       "name": "Yuanzaibing",
       "place_slug": "yuanzaibing",
-      "note": "A restaurant at 1305 Avenue U, inspected by the city in June 2026."
+      "note": "A restaurant at 1305 Avenue U."
     },
     {
       "kind": "food",
@@ -307,13 +307,13 @@
       "kind": "food",
       "name": "Karavan Grill",
       "place_slug": "karavan-grill",
-      "note": "A restaurant at 1311 Avenue U, inspected by the city in November 2025."
+      "note": "A restaurant at 1311 Avenue U."
     },
     {
       "kind": "food",
       "name": "Season Restaurant",
       "place_slug": "season-restaurant-homecrest",
-      "note": "A restaurant at 1321 Avenue U, inspected by the city in June 2026."
+      "note": "A restaurant at 1321 Avenue U."
     }
   ],
   "links": [
