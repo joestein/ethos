@@ -42,7 +42,10 @@ defmodule Ethos.Seeds.BronxSeedDataTest do
     spatial claims. That last list is half the tuning: a gate that bans the
     checkable form pushes an author toward vagueness, which is the opposite of
     the rule.
-  * Everything else is Brooklyn's, which is the right template for it.
+  * Everything else is Brooklyn's, which is the right template for it —
+    including the two transit rules, whose heading this gate *fixes* rather
+    than inherits from a content-rules document, because the Bronx has none.
+    See `getting_there_violations/1` for what that does and does not decide.
   """
   use Ethos.DataCase, async: false
 
@@ -403,6 +406,62 @@ defmodule Ethos.Seeds.BronxSeedDataTest do
         do: {Path.basename(f), data["guide"]["county"]}
   end
 
+  # --- The unified transit section ----------------------------------------
+  #
+  # docs/superpowers/specs/2026-08-30-bronx-neighborhoods-design.md §"Getting
+  # there": "One unified section per neighborhood covering subway, Metro-North,
+  # bus and ferry, as Brooklyn's did." That is a requirement, and sixty-six
+  # guides will be written by many agents across many waves — a rule that
+  # survives only as long as each dispatch remembers to restate it is a rule
+  # that does not survive. Both tiers carry the section: an orientation page
+  # has one too.
+  #
+  # THE HEADING IS FIXED BY THIS GATE, not by a content-rules document. There
+  # is no Bronx equivalent of docs/superpowers/plans/2026-08-28-brooklyn-
+  # content-rules.md, so without this assertion Task 3 would be choosing the
+  # heading and every later wave would be guessing at it. It is exactly
+  # "Getting there" — not Manhattan's "Getting there by subway", which 38
+  # committed Manhattan guides will have taught every author to reach for.
+  #
+  # WHAT THIS GATE DOES NOT SAY, stated plainly because the Manhattan heading
+  # carries an assumption with it: the section is not subway-first. The Bronx's
+  # weighting genuinely differs — Metro-North's Harlem and Hudson lines matter
+  # more than the subway for the northern and western neighborhoods, and NYC
+  # Ferry serves Soundview. A section leading with the subway everywhere is
+  # accurate for the South Bronx and wrong for Riverdale. This fixes the
+  # heading and the section's existence; what leads inside it is the wave's
+  # judgement, and no gate can check it.
+  #
+  # Pulls `key` from a list of maps, tolerating a nil list and skipping any
+  # entry that is not a map, so a malformed section or FAQ entry fails its
+  # assertion with a readable message instead of raising an Access error from
+  # inside the comprehension.
+  defp field_values(list, key) when is_list(list),
+    do: for(item <- list, is_map(item), do: item[key])
+
+  defp field_values(_not_a_list, _key), do: []
+
+  defp getting_there_violations(paths) do
+    for f <- paths,
+        data = DataGuide.load!(f),
+        headings = field_values(data["guide"]["sections"], "heading"),
+        "Getting there" not in headings,
+        do: {Path.basename(f), headings}
+  end
+
+  # The one FAQ entry the transit rule makes mandatory, on both tiers.
+  # Matched loosely on purpose: the requirement is that the question is
+  # answered, so a wave that writes "How do I get to City Island without a
+  # subway?" has satisfied it, and pinning the exact string would fail that
+  # file for no reason. This catches the entry going missing, not its wording.
+  defp transit_faq_violations(paths) do
+    for f <- paths,
+        data = DataGuide.load!(f),
+        questions = field_values(data["guide"]["faq"], "question"),
+        not Enum.any?(questions, &(is_binary(&1) and Regex.match?(~r/how do i get to/i, &1))),
+        do: {Path.basename(f), questions}
+  end
+
   defp marquee_occurrences(paths, pattern) do
     for f <- paths,
         p <- DataGuide.load!(f)["places"],
@@ -451,6 +510,26 @@ defmodule Ethos.Seeds.BronxSeedDataTest do
   test "the licence allowlist catches a non-free licence" do
     assert [{"bad_license.json", "All rights reserved"}] =
              license_violations([fixture("bad_license.json")])
+  end
+
+  # The two transit fixtures are complementary on purpose: each satisfies the
+  # rule the other breaks. missing_getting_there.json carries the mandatory FAQ
+  # entry and Manhattan's heading; missing_transit_faq.json carries the correct
+  # heading and no transit question. So neither assertion can be passing because
+  # of the other, and a future edit that collapses them into one rule fails here.
+
+  test "the transit-heading assertion catches Manhattan's heading" do
+    assert [{"missing_getting_there.json", ["Getting there by subway"]}] =
+             getting_there_violations([fixture("missing_getting_there.json")])
+
+    assert getting_there_violations([fixture("missing_transit_faq.json")]) == []
+  end
+
+  test "the transit-FAQ assertion catches a guide with no way-in question" do
+    assert [{"missing_transit_faq.json", ["Where should I eat?"]}] =
+             transit_faq_violations([fixture("missing_transit_faq.json")])
+
+    assert transit_faq_violations([fixture("missing_getting_there.json")]) == []
   end
 
   test "the county assertion catches the legal name" do
@@ -551,6 +630,15 @@ defmodule Ethos.Seeds.BronxSeedDataTest do
     assert county_violations(files) == [],
            "guides not filed under county \"Bronx\" (the legal name \"Bronx County\" would " <>
              "derive bronx-county and split the borough hub away from Brooklyn and Manhattan)"
+
+    assert getting_there_violations(files) == [],
+           "guides with no section headed exactly \"Getting there\" (the spec requires one " <>
+             "unified section covering subway, Metro-North, bus and ferry — not Manhattan's " <>
+             "\"Getting there by subway\", which presumes the mode the Bronx often answers " <>
+             "differently)"
+
+    assert transit_faq_violations(files) == [],
+           "guides whose FAQ has no \"How do I get to ...?\" question"
 
     photos = for f <- files, p <- all_photos(DataGuide.load!(f)), do: {Path.basename(f), p}
 

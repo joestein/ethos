@@ -1,0 +1,25 @@
+{
+  "guide": {
+    "slug": "fixture-missing-getting-there-bronx-guide",
+    "title": "Fixture: Missing Getting There",
+    "destination": "Fixture, New York",
+    "state": "New York",
+    "county": "Bronx",
+    "intro": "A fixture guide used only to prove the transit-heading assertion fires.",
+    "sections": [
+      {
+        "heading": "Getting there by subway",
+        "body": "Manhattan's heading, which is the drift this assertion exists to catch."
+      }
+    ],
+    "faq": [
+      {
+        "question": "How do I get to Fixture?",
+        "answer": "The FAQ entry is present, so this fixture violates the heading rule alone."
+      }
+    ],
+    "photos": []
+  },
+  "places": [],
+  "entries": []
+}
