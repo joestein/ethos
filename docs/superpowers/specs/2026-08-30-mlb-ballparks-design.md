@@ -20,7 +20,8 @@ instance and its proof.
 `/destinations/illinois` and `/destinations/illinois/cook-county` are `GROUP BY`
 queries over the guides table (`lib/ethos/guides.ex:88-107`). A guide carrying
 `state: "Illinois", county: "Cook County"` produces both hubs on its next seed.
-Adding twenty-seven states is a property of the content, not a migration.
+Adding eighteen hubs — the set spans nineteen jurisdictions, and New York
+already had one — is a property of the content, not a migration.
 
 **Duplicate protection is already mechanical, but only halfway.** Place slugs
 carry a global unique index *and* a gate assertion (`assert_place_slugs_globally_unique!/0`)
@@ -36,7 +37,8 @@ that, a 394-place wave came back **82% rate-limited**, and re-running at a
 quarter of the concurrency did not help — the limit is session-cumulative or
 source-side, not concurrency-scaled.
 
-Thirty ballparks is roughly three hundred new places in twenty-seven states where
+Thirty ballparks is roughly three hundred new places across nineteen
+jurisdictions — seventeen US states, the District of Columbia and Ontario — where
 we have no local open-data fallback of the kind Connecticut's business registry
 provided. **This spec is therefore written to be executed in waves over time**,
 and the pattern document exists partly so that a later session can resume without

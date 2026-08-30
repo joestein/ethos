@@ -465,8 +465,11 @@ queries over the guides table:
 You set two string fields on the guide — `state` and `county`. `Guide.changeset/2`
 derives `state_slug` and `county_slug` from them
 (`lib/ethos/guides/guide.ex:113-124`, via `derive_destination_slug/1`), and both
-hub pages exist on the next seed. Adding twenty-seven states to the site is a
-property of the content, not a migration.
+hub pages exist on the next seed. The thirty ballparks span nineteen
+jurisdictions — seventeen US states plus the District of Columbia and Ontario —
+and eighteen of those hubs are new, New York having had one already from the
+Brooklyn corpus. Adding eighteen hubs to the site is a property of the content,
+not a migration.
 
 **If you are about to write a migration to add a geographic hierarchy, you have
 misread this section.** The hierarchy is a projection of the guides.
