@@ -66,17 +66,32 @@ defmodule Ethos.Places do
 
   Ordered by name and capped (`:limit`, default #{@sibling_limit}) so a place
   page can offer a way sideways into its town without turning into a directory.
+
+  Scoped by state as well as town, because `town_slug` alone is not a town.
+  Washington, Connecticut and Washington, District of Columbia both derive
+  `town_slug: "washington"`, as do Madison, Connecticut and Madison, Brooklyn —
+  so a town-only filter puts Nationals Park in a Litchfield County town's
+  "More in Washington" and four Connecticut museums and taverns in Nationals
+  Park's. Nothing raises: the query is valid and the geography is wrong.
+
+  A place with no `town_slug` or no `state_slug` has no town to be a sibling of.
+  `Place.changeset/2` requires both `town` and `state`, so neither clause is
+  reachable through the seed loaders; they are here so a partial record returns
+  nothing rather than every place that happens to share one of its two halves.
   """
   def list_siblings(place, opts \\ [])
 
   def list_siblings(%Place{town_slug: nil}, _opts), do: []
+  def list_siblings(%Place{state_slug: nil}, _opts), do: []
 
-  def list_siblings(%Place{id: id, town_slug: town_slug}, opts) do
+  def list_siblings(%Place{id: id, town_slug: town_slug, state_slug: state_slug}, opts) do
     limit = Keyword.get(opts, :limit, @sibling_limit)
 
     Repo.all(
       from p in Place,
-        where: p.town_slug == ^town_slug and p.id != ^id and p.status == "open",
+        where:
+          p.town_slug == ^town_slug and p.state_slug == ^state_slug and
+            p.id != ^id and p.status == "open",
         order_by: [asc: p.name],
         limit: ^limit
     )

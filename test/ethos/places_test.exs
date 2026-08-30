@@ -129,6 +129,54 @@ defmodule Ethos.PlacesTest do
       assert [%{slug: "palace-theater-waterbury"}] = Places.list_siblings(mattatuck)
     end
 
+    # `town_slug` is not a town. Washington, Connecticut and Washington,
+    # District of Columbia both derive `town_slug: "washington"`, as do Madison,
+    # Connecticut and Madison, Brooklyn — so a town-only filter put Nationals
+    # Park in a Litchfield County town's "More in Washington", and Connecticut
+    # museums in Nationals Park's. Twelve pages of wrong geography, no error.
+    test "two towns of the same name in different states are not siblings" do
+      ct =
+        Places.upsert_place!(%{
+          @valid
+          | slug: "gunn-historical-museum",
+            name: "Gunn Historical Museum",
+            kind: "museum",
+            town: "Washington",
+            state: "Connecticut",
+            county: "Litchfield County"
+        })
+
+      dc =
+        Places.upsert_place!(%{
+          @valid
+          | slug: "nationals-park",
+            name: "Nationals Park",
+            kind: "stadium",
+            town: "Washington",
+            state: "District of Columbia",
+            county: "District of Columbia"
+        })
+
+      assert ct.town_slug == dc.town_slug
+      assert Places.list_siblings(ct) == []
+      assert Places.list_siblings(dc) == []
+
+      same_town =
+        Places.upsert_place!(%{
+          @valid
+          | slug: "gw-tavern",
+            name: "G.W. Tavern",
+            kind: "restaurant",
+            town: "Washington",
+            state: "Connecticut",
+            county: "Litchfield County"
+        })
+
+      assert [%{slug: "gw-tavern"}] = Places.list_siblings(ct)
+      assert [%{slug: "gunn-historical-museum"}] = Places.list_siblings(same_town)
+      assert Places.list_siblings(dc) == []
+    end
+
     test "returns [] for a town with only one place" do
       only = Places.upsert_place!(@valid)
       assert Places.list_siblings(only) == []
