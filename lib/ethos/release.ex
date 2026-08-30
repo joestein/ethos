@@ -49,6 +49,21 @@ defmodule Ethos.Release do
     end
   end
 
+  def seed_ballparks(email) do
+    load_app()
+    Application.ensure_all_started(@app)
+
+    Ethos.Seeds.BallparkPlaces.upsert_all!()
+
+    # Places before guides, as seed_connecticut/1 above does: each guide's
+    # entries resolve through Places.get_place_by_slug!/1, which raises on a
+    # place nothing has seeded. Upserting by slug, so a repeat run is a no-op.
+    for mod <- [Ethos.Seeds.WrigleyFieldGuide] do
+      guide = mod.upsert!(email)
+      IO.puts("Seeded: /g/#{guide.slug}")
+    end
+  end
+
   def seed_manhattan(email), do: seed_directory("manhattan", email)
 
   def seed_links do

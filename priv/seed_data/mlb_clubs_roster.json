@@ -4,7 +4,7 @@
 {"city":null,"club":"Atlanta Braves","county":null,"slug":"atlanta-braves","state":null,"venue":null,"verified":false},
 {"city":null,"club":"Baltimore Orioles","county":null,"slug":"baltimore-orioles","state":null,"venue":null,"verified":false},
 {"city":null,"club":"Boston Red Sox","county":null,"slug":"boston-red-sox","state":null,"venue":null,"verified":false},
-{"city":null,"club":"Chicago Cubs","county":null,"slug":"chicago-cubs","state":null,"venue":null,"verified":false},
+{"city":"Chicago","club":"Chicago Cubs","county":"Cook County","slug":"chicago-cubs","state":"Illinois","venue":"Wrigley Field","verified":true},
 {"city":null,"club":"Chicago White Sox","county":null,"slug":"chicago-white-sox","state":null,"venue":null,"verified":false},
 {"city":null,"club":"Cincinnati Reds","county":null,"slug":"cincinnati-reds","state":null,"venue":null,"verified":false},
 {"city":null,"club":"Cleveland Guardians","county":null,"slug":"cleveland-guardians","state":null,"venue":null,"verified":false},

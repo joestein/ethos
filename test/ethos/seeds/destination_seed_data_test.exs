@@ -337,8 +337,14 @@ defmodule Ethos.Seeds.DestinationSeedDataTest do
   #
   # Links are deliberately not applied: they resolve cross-guide references
   # and contribute nothing to state, county or destination slugs.
+  # Two kinds of call here, and they are not interchangeable. The `upsert_all!`
+  # lines are **places** modules; the list below is **guide** modules. A guide
+  # added to the list without its places module seeded above raises inside
+  # GuideRunner.replace_entries!/2, which resolves every entry through
+  # Places.get_place_by_slug!/1.
   defp seed_guide_corpus!(email) do
     Ethos.Seeds.ConnecticutPlaces.upsert_all!()
+    Ethos.Seeds.BallparkPlaces.upsert_all!()
 
     for mod <- [
           Ethos.Seeds.WaterburyGuide,
@@ -346,7 +352,8 @@ defmodule Ethos.Seeds.DestinationSeedDataTest do
           Ethos.Seeds.DanburyGuide,
           Ethos.Seeds.SouthburyGuide,
           Ethos.Seeds.WoodburyGuide,
-          Ethos.Seeds.RomeGuide
+          Ethos.Seeds.RomeGuide,
+          Ethos.Seeds.WrigleyFieldGuide
         ],
         do: mod.upsert!(email)
 
