@@ -97,6 +97,35 @@ uses.
 **Blast radius.** None published. Both numbers live in a moduledoc and a test
 comment; no page renders either.
 
+### Wikipedia gives two reasons for the 1945 Wrigley Field goat ejection
+
+The source disagrees with itself, so the corpus publishes the incident and no
+reason for it.
+
+| Reason | Where |
+|---|---|
+| The pair "were bothering other fans" | `https://en.wikipedia.org/wiki/Curse_of_the_Billy_Goat` |
+| Philip K. Wrigley "allegedly ejected Sianis and goat due to the latter's odor" | `https://en.wikipedia.org/wiki/Billy_Goat_Tavern` |
+
+**Checked, 2026-08-30.** The research finder flagged the contradiction and the
+independent verifier fetched both articles and reproduced both readings. Both
+are stated flatly, in the same register, with no hedge on either side, and
+neither article acknowledges the other's account.
+
+**Why it is still open.** No third source was reachable — the research ran with
+web search exhausted, on direct URL fetches only — so there is nothing to break
+the tie with. Picking one would publish a coin-flip as a fact.
+
+**How the corpus handles it.** `lib/ethos/seeds/wrigley_field_guide.ex`
+publishes the ejection with no reason, and says in the prose that two sources
+give two reasons and this guide gives neither. `ballpark_places.ex` carries the
+incident on the Billy Goat Tavern record on the same terms. An FAQ answer
+states the position explicitly, so a reader does not read the omission as an
+oversight.
+
+**Blast radius.** Two published surfaces — the guide's "The ballpark and the
+team" section and its FAQ — both of which name the gap rather than filling it.
+
 ## Resolved
 
 ### East Lyme's separation from Lyme is *not* a contradiction

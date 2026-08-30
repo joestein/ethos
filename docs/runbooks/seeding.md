@@ -46,8 +46,16 @@ it — see its entry below.
    because it must run at this point: it writes only its own `destinations`
    table, references no place and resolves no link, so it is safe to run
    before, after, or between any of the other steps.
-6. `Ethos.Release.seed_collections()`
-7. `Ethos.Release.seed_links()`
+6. `Ethos.Release.seed_ballparks(email)` — the MLB ballpark **code-module**
+   guides plus `Ethos.Seeds.BallparkPlaces`. Places before guides, inside the
+   function: each guide's entries resolve through
+   `Ethos.Places.get_place_by_slug!/1`, which raises on a place nothing has
+   seeded. Like `seed_rome`, it has no dependency on the steps above it and
+   nothing above depends on it — it is self-contained, so it may run at any
+   point. It is listed here because it must run before `seed_collections` if a
+   ballpark collection ever ships.
+7. `Ethos.Release.seed_collections()`
+8. `Ethos.Release.seed_links()`
 
 Verify the published count after each content step before moving on — see
 "Expected published counts" below. `seed_destinations` writes to a separate
