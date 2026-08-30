@@ -181,6 +181,28 @@ establishes it or it does not ship.
 **Twenty-seven new states arrive with one guide each.** A state hub with a single
 guide is a thin page. Accepted: it is honest, and it is how Connecticut started.
 
+**Washington shadows Washington, and this set contains both.**
+`DestinationController.show/2` (`lib/ethos_web/controllers/destination_controller.ex:47-51`)
+tries the **state** branch first and falls back to the town hub, and both serve
+`/destinations/:slug`. So a guide carrying `state: "Washington"` shadows any
+guide whose `destination_slug` is `washington`.
+
+This set hits it squarely: one club plays in Washington, DC — whose natural
+destination string derives `destination_slug: "washington"` — and another plays
+in Washington **state**. The DC ballpark's hub would silently render the state
+page instead.
+
+**Decided: the DC ballpark carries `destination: "Washington DC, District of
+Columbia"`,** deriving `destination_slug: "washington-dc"` and avoiding the
+shadow. Recorded here rather than in a workspace ledger because the ledger is
+git-ignored and this decision has to survive the programme.
+
+A second instance of the same class has no live collision but is worth naming:
+`derive_destination_slug/1` (`lib/ethos/guides/guide.ex:74-81`) takes the text
+before the first comma, so `"Kansas City, Missouri"` and `"Kansas City, Kansas"`
+would merge into one hub. Only one club plays in a Kansas City, so nothing
+collides today.
+
 **The research is large and the budget is not.** Stated above; the waves are
 sized to it, and the pattern document is written so a later session can resume.
 
