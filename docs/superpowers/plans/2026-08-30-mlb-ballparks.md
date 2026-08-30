@@ -257,6 +257,46 @@ Finder, then an **independent** verifier, following `docs/site-builder.md`. The 
 
 Fill `venue`, `city`, `state`, `county` and set `verified: true` — only from confirmed verdicts. The Task 3 test enforces that these move together.
 
+- [ ] **Step 2b: Teach the corpus-wide gates that a second places module exists**
+
+**Do this before creating `ballpark_places.ex`, not after.** Discovered during
+Task 1's sweep and verified independently.
+
+Three corpus-wide gates read the *code* half of the place corpus as a single
+hardcoded `Ethos.Seeds.ConnecticutPlaces.places()`. A second places module is
+invisible to all of them, which guts rung (a) of the dedup ladder for exactly the
+shape this task introduces — a slug collision would not fail the gate; it would
+surface as the production unique index firing mid-seed, part-way through a
+non-transactional run, leaving earlier files published and later ones unseeded.
+That is the failure `test/support/seed_data_helpers.ex` opens its moduledoc by
+describing.
+
+**Four call sites, not three** — the count matters because someone who stops at
+three most plausibly drops the second one, which is the banned-prose scan:
+
+- `test/ethos/seeds/place_content_gate_test.exs:118`
+- `test/ethos/seeds/place_content_gate_test.exs:176`
+- `test/ethos/seeds/bare_places_roster_test.exs:66`
+- `test/support/seed_data_helpers.ex:58`
+
+Add `Ethos.SeedDataHelpers.code_places/0`, returning every code-defined places
+module's entries, and route all four through it. Note `seed_data_helpers.ex:58`
+pairs each place with an owner label (`"connecticut_places.ex"`) for its
+duplicate-reporting message, so the helper must preserve which module a place
+came from — a collision report naming the wrong file is worse than none.
+
+Then adding a third places module later is one edit in one place rather than
+four in four.
+
+Also hardcoded, and worth fixing while you are there:
+`lib/mix/tasks/ethos.bare_places.ex:69` and `:79`. Not a gate, but it is the
+generator behind the roster precedent, so a code-module set is invisible to it
+too.
+
+Prove the fix bites: add a place to `ballpark_places.ex` whose slug already
+exists in `connecticut_places.ex`, confirm the uniqueness assertion fails and
+names both owners, then remove it.
+
 - [ ] **Step 3: Write the places module**
 
 `lib/ethos/seeds/ballpark_places.ex`, following `lib/ethos/seeds/connecticut_places.ex` — **atom keys**, `upsert_all!/0` mapping `Ethos.Places.upsert_place!/1`. It holds the ballpark itself (`kind: "stadium"`) and every surrounding place. A separate module from the Connecticut one because they grow independently and neither should be opened to edit the other.

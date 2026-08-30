@@ -69,6 +69,34 @@ external check the rest of this corpus went through a verifier for. Neither is
 worth guessing: a wrong ZIP published as structured data is a worse claim than a
 ZIP that merely sits in a display string, which is exactly what changed.
 
+### The Antique Trail disagrees with itself about how many dealers were researched
+
+Both files agree on what ships — sixteen dealers — and disagree on the
+denominator.
+
+- `lib/ethos/seeds/antique_trail_guide.ex:17` — "Sixteen dealers, not the
+  **seventeen** researched." The same paragraph then names **two** exclusions,
+  Adorn Vintage and George Champion Modern, so the moduledoc contradicts itself
+  as well as the test.
+- `test/ethos/seeds/connecticut_places_test.exs:48` — **eighteen**, and asserts
+  sixteen shops at `:33`. 16 + 2 = 18 is internally consistent.
+
+**Checked, 2026-08-30.** The likely history is that eighteen were researched,
+Adorn was removed for being in Southbury, and "seventeen" was written of the
+Woodbury batch that remained — then George Champion's removal left the figure
+stale by one. That is a reconstruction, not a finding: the research artifact
+lived in a git-ignored SDD workspace and is gone.
+
+**Why it is still open.** The denominator cannot be recovered from the
+repository, and guessing between seventeen and eighteen in a moduledoc that
+exists to make the content auditable would defeat the moduledoc. Prose that
+names neither number — "sixteen dealers, two researched ones having been
+excluded" — is supported by both files and is what `docs/site-builder.md` now
+uses.
+
+**Blast radius.** None published. Both numbers live in a moduledoc and a test
+comment; no page renders either.
+
 ## Resolved
 
 ### East Lyme's separation from Lyme is *not* a contradiction
