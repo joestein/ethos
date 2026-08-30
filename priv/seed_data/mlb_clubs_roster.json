@@ -19,7 +19,7 @@
 {"city":null,"club":"Minnesota Twins","county":null,"slug":"minnesota-twins","state":null,"venue":null,"verified":false},
 {"city":"Flushing","club":"New York Mets","county":"Queens","slug":"new-york-mets","state":"New York","venue":"Citi Field","verified":true},
 {"city":"Bronx","club":"New York Yankees","county":"Bronx","slug":"new-york-yankees","state":"New York","venue":"Yankee Stadium","verified":true},
-{"city":null,"club":"Philadelphia Phillies","county":null,"slug":"philadelphia-phillies","state":null,"venue":null,"verified":false},
+{"city":"Philadelphia","club":"Philadelphia Phillies","county":"Philadelphia","slug":"philadelphia-phillies","state":"Pennsylvania","venue":"Citizens Bank Park","verified":true},
 {"city":null,"club":"Pittsburgh Pirates","county":null,"slug":"pittsburgh-pirates","state":null,"venue":null,"verified":false},
 {"city":null,"club":"San Diego Padres","county":null,"slug":"san-diego-padres","state":null,"venue":null,"verified":false},
 {"city":"San Francisco","club":"San Francisco Giants","county":"San Francisco","slug":"san-francisco-giants","state":"California","venue":"Oracle Park","verified":true},

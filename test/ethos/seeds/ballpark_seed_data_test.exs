@@ -321,6 +321,7 @@ defmodule Ethos.Seeds.BallparkSeedDataTest do
   @ballpark_roster [
     {"busch-stadium", "busch-stadium-guide"},
     {"citi-field", "citi-field-guide"},
+    {"citizens-bank-park", "citizens-bank-park-guide"},
     {"dodger-stadium", "dodger-stadium-guide"},
     {"fenway-park", "fenway-park-guide"},
     {"nationals-park", "nationals-park-guide"},
