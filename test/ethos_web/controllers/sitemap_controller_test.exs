@@ -20,6 +20,40 @@ defmodule EthosWeb.SitemapControllerTest do
     assert body =~ "<lastmod>"
   end
 
+  # Every destination URL used to ship without a lastmod, so a crawler holding
+  # those URLs got no signal when their prose changed — which is precisely what
+  # happened when all thirteen gained an intro and a photograph. Guides, places
+  # and collections all carried one; destinations were the gap.
+  test "a destination with a record carries its record's lastmod", %{conn: conn} do
+    published_guide_fixture(%{destination: "Rome, Italy"})
+
+    {:ok, destination} =
+      Ethos.Destinations.upsert_destination!(%{
+        "path" => "rome",
+        "name" => "Rome",
+        "intro" => "A destination with a record, and therefore a modification date."
+      })
+      |> then(&{:ok, &1})
+
+    body = conn |> get("/sitemap.xml") |> response(200)
+
+    expected = Date.to_iso8601(DateTime.to_date(destination.updated_at))
+
+    assert body =~
+             "<loc>#{url(~p"/destinations/rome")}</loc><lastmod>#{expected}</lastmod>",
+           "the destination URL should carry its record's lastmod"
+  end
+
+  test "a destination with no record still lists, without a lastmod", %{conn: conn} do
+    published_guide_fixture(%{destination: "Lisbon, Portugal"})
+
+    body = conn |> get("/sitemap.xml") |> response(200)
+
+    # Present, because the guide produces it; no lastmod, because nothing owns
+    # a modification date for it. Listing it without a date beats omitting it.
+    assert body =~ "<loc>#{url(~p"/destinations/lisbon")}</loc></url>"
+  end
+
   test "includes /photos for photo-bearing published guides only", %{conn: conn} do
     with_photos = published_guide_fixture(%{destination: "Rome, Italy"})
 

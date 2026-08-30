@@ -1,20 +1,33 @@
 defmodule EthosWeb.SitemapController do
   use EthosWeb, :controller
 
-  alias Ethos.{Guides, Places}
+  alias Ethos.{Destinations, Guides, Places}
 
   def index(conn, _params) do
+    # Destination pages are assembled from the guides table at request time, so
+    # nothing about the page itself has a modification date — every destination
+    # URL used to ship without a lastmod. A `Destination` record supplies the
+    # prose and the photograph, and it does have one, so the pages whose content
+    # can actually change are the ones that now carry a date. Loaded once as a
+    # map rather than queried per URL: there are 291 destination URLs and 13
+    # records.
+    dest_lastmod =
+      Map.new(Destinations.list_destinations(), fn d ->
+        {d.path, DateTime.to_date(d.updated_at)}
+      end)
+
     urls =
       [%{loc: url(~p"/"), lastmod: nil}, %{loc: url(~p"/destinations"), lastmod: nil}] ++
         Enum.map(Guides.list_destinations(), fn d ->
-          %{loc: url(~p"/destinations/#{d.slug}"), lastmod: nil}
+          %{loc: url(~p"/destinations/#{d.slug}"), lastmod: dest_lastmod[d.slug]}
         end) ++
         Enum.map(Guides.list_states(), fn s ->
-          %{loc: url(~p"/destinations/#{s.slug}"), lastmod: nil}
+          %{loc: url(~p"/destinations/#{s.slug}"), lastmod: dest_lastmod[s.slug]}
         end) ++
         Enum.flat_map(Guides.list_states(), fn s ->
           Enum.map(Guides.list_counties_for_state(s.slug), fn c ->
-            %{loc: url(~p"/destinations/#{s.slug}/#{c.slug}"), lastmod: nil}
+            path = "#{s.slug}/#{c.slug}"
+            %{loc: url(~p"/destinations/#{s.slug}/#{c.slug}"), lastmod: dest_lastmod[path]}
           end)
         end) ++
         Enum.flat_map(Guides.list_published_guides(), fn g ->
