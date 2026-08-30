@@ -67,12 +67,18 @@ each one is explained in the section named.
 3. **Commit the roster.** N entries, identity fields only, everything researched
    left null. (§2)
 4. **Write the set's own `<set>_seed_data_test.exs`**, modelled on
-   `test/ethos/seeds/brooklyn_seed_data_test.exs`, and — if the set keeps places
-   in Elixir modules rather than JSON — **add them to the five corpus-gate call
-   sites** (four for places, one for guides). Most of the gates in this document are
-   per-directory, and the corpus-wide ones name the code half of the corpus
-   explicitly; you inherit less than it looks like. See below. Write it before
-   the checkpoint, so the checkpoint site is the first thing it checks.
+   `test/ethos/seeds/brooklyn_seed_data_test.exs`. Then **add whichever halves of
+   your set are written in Elixir to the corpus-gate call sites** — the two
+   triggers are independent, so check each:
+   - **places in an Elixir module** → four call sites, plus a seed call so the
+     places exist before any guide's entries resolve.
+   - **guides in Elixir modules** → one call site, the guide list.
+   - **both** → six edits. **Neither** (all JSON) → none.
+
+   Most of the gates in this document are per-directory, and the corpus-wide ones
+   name the code half of the corpus explicitly; you inherit less than it looks
+   like. See below. Write it before the checkpoint, so the checkpoint site is the
+   first thing it checks.
 5. **Run one site end to end and stop.** Research, author, seed, render, review,
    amend this document. (§6)
 6. **Run the rest in waves**, sized to search budget, not to concurrency. (§4)
@@ -252,14 +258,20 @@ not a gate, so nothing breaks if you skip it — but it is the generator behind
 §2's roster precedent, and a code-module set is invisible to it too, which means
 the roster it produces would silently omit every place in your module.
 
-##### The guide half — one list of seven, in one function
+##### The guide half — seven names on two lines, in one function
 
-`seed_guide_corpus!` (`destination_seed_data_test.exs:340-352`) is the
+`seed_guide_corpus!` (`destination_seed_data_test.exs:340-357`) is the
 corpus-wide loader gate listed as free above. It takes its **JSON** files from
-`all_seed_files/0`, which discovers them, but its **Elixir** guides from a
-hardcoded list of seven: `ConnecticutPlaces.upsert_all!()` plus
-`WaterburyGuide`, `MiddleburyGuide`, `DanburyGuide`, `SouthburyGuide`,
-`WoodburyGuide` and `RomeGuide`.
+`all_seed_files/0`, which discovers them, but its **Elixir** seeds from seven
+hardcoded names in **two separate places**, and this matters for what you edit:
+
+- `:341` — `ConnecticutPlaces.upsert_all!()`, a standalone **places** call.
+- `:343-350` — the `for mod <- [...]` **guide** list of six: `WaterburyGuide`,
+  `MiddleburyGuide`, `DanburyGuide`, `SouthburyGuide`, `WoodburyGuide` and
+  `RomeGuide`.
+
+Seven names, one list of six. Adding a guide module to `:343-350` does not seed
+its places.
 
 Two consequences, both distinct from the places half:
 
@@ -271,12 +283,35 @@ Two consequences, both distinct from the places half:
 - **Your destination slugs never enter `legitimate_paths/0`.** That set is built
   from the corpus this function seeds, so a `destinations/` file your set ships
   fails `unresolvable_path_violations` — and it fails for a reason the roster
-  paragraph below does not predict, because the path is missing from the
+  paragraph above does not predict, because the path is missing from the
   *universe*, not from the *roster*. Extending `@destination_roster` alone will
   not fix it.
 
-So a code-module set has **five** places to extend, not four: the four in the
-table above, plus the guide list at `destination_seed_data_test.exs:343-350`.
+**Count by which halves you wrote in Elixir, not by "is this a code-module
+set".** Each of the three sites has its own independent trigger:
+
+| site | you need it when |
+|---|---|
+| the four in the table above | your **places** are in an Elixir module |
+| the guide list, `:343-350` | your **guides** are Elixir modules |
+| a seed call beside `:341` | your **places** are in an Elixir module **and any guide in the corpus has entries naming them** |
+
+So: all-JSON needs nothing; Elixir guides over JSON places needs one; and **the
+ballpark shape — both halves in Elixir — needs six.**
+
+The third row is the one a reader who sees only "add it to the guide list" will
+miss, and it is worth stating by mechanism rather than by set shape, because the
+mechanism is what decides it. `:341` exists so that places declared in a module
+are in the database before any guide's entries are resolved;
+`GuideRunner.replace_entries!` resolves each entry through
+`Places.get_place_by_slug!/1` (`guide_runner.ex:102`), which raises on a place
+that was never seeded. **Whether the guide holding those entries is JSON or
+Elixir does not change that** — what matters is that the places came from a
+module nothing seeds.
+
+The failure is loud and immediate rather than silent, so this is a low-risk
+omission. But it surfaces inside a test named for destination pages, which is
+not where anyone will look first.
 
 #### One gate you inherit without being told, and it names the wrong state
 
@@ -1121,7 +1156,8 @@ five-part cost before starting.
 | Duration scan over **code modules** — will fail your module under a Connecticut name | `connecticut_seed_data_test.exs:266-281` |
 | Corpus-wide loader/changeset validation, free for JSON | `destination_seed_data_test.exs:340-357` |
 | The **four** call sites to extend for a code-module **places** file | `place_content_gate_test.exs:118` **and `:176`**; `bare_places_roster_test.exs:66`; `test/support/seed_data_helpers.ex:58` |
-| The **fifth**, for code-module **guides** — also feeds `legitimate_paths/0` | `destination_seed_data_test.exs:343-350` (`seed_guide_corpus!`, seven hardcoded names) |
+| Code-module **guides** — one more site, also feeds `legitimate_paths/0` | `destination_seed_data_test.exs:343-350` (the `for mod` list of six) |
+| Code-module **places**, seeding half — so entries can resolve | `destination_seed_data_test.exs:341` (`ConnecticutPlaces.upsert_all!()`) |
 | Roster generator, same blind spot (not a gate) | `lib/mix/tasks/ethos.bare_places.ex:69`, `:79` |
 | Deletion manifest | `priv/seed_data/deleted_places.json` |
 | Authoring contract | `docs/superpowers/plans/2026-08-28-brooklyn-content-rules.md` |
