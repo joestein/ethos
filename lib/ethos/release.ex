@@ -26,43 +26,9 @@ defmodule Ethos.Release do
     IO.puts("Seeded Rome guide: /g/#{guide.slug}")
   end
 
-  def seed_connecticut(email) do
-    load_app()
-    Application.ensure_all_started(@app)
+  def seed_connecticut(email), do: seed_region("connecticut", email)
 
-    Ethos.Seeds.ConnecticutPlaces.upsert_all!()
-
-    # The Antique Trail guide's entries point at the Woodbury antiques dealers,
-    # which ConnecticutPlaces.upsert_all!/0 above has already seeded — the same
-    # places-then-guides order the JSON directories use. Upserting by slug, so
-    # a repeat run is a no-op.
-    for mod <- [
-          Ethos.Seeds.WaterburyGuide,
-          Ethos.Seeds.MiddleburyGuide,
-          Ethos.Seeds.DanburyGuide,
-          Ethos.Seeds.SouthburyGuide,
-          Ethos.Seeds.WoodburyGuide,
-          Ethos.Seeds.AntiqueTrailGuide
-        ] do
-      guide = mod.upsert!(email)
-      IO.puts("Seeded: /g/#{guide.slug}")
-    end
-  end
-
-  def seed_ballparks(email) do
-    load_app()
-    Application.ensure_all_started(@app)
-
-    Ethos.Seeds.BallparkPlaces.upsert_all!()
-
-    # Places before guides, as seed_connecticut/1 above does: each guide's
-    # entries resolve through Places.get_place_by_slug!/1, which raises on a
-    # place nothing has seeded. Upserting by slug, so a repeat run is a no-op.
-    for mod <- [Ethos.Seeds.WrigleyFieldGuide] do
-      guide = mod.upsert!(email)
-      IO.puts("Seeded: /g/#{guide.slug}")
-    end
-  end
+  def seed_ballparks(email), do: seed_region("ballparks", email)
 
   def seed_manhattan(email), do: seed_directory("manhattan", email)
 
@@ -123,6 +89,24 @@ defmodule Ethos.Release do
     end
 
     IO.puts("Seeded #{length(files)} destinations")
+  end
+
+  # Places before guides, always: a guide's entries resolve through
+  # Places.get_place_by_slug!/1 (guide_runner.ex), which raises on a place
+  # nothing has seeded. Both lists come from Ethos.Seeds.Catalog rather than
+  # being written out here, so a module registered once is wired everywhere —
+  # and the corpus gate's reflection test fails if it is registered nowhere.
+  # Everything upserts by slug, so a repeat run is a no-op.
+  defp seed_region(region, email) do
+    load_app()
+    Application.ensure_all_started(@app)
+
+    for {mod, _region} <- Ethos.Seeds.Catalog.place_modules(region), do: mod.upsert_all!()
+
+    for {mod, _region} <- Ethos.Seeds.Catalog.guide_modules(region) do
+      guide = mod.upsert!(email)
+      IO.puts("Seeded: /g/#{guide.slug}")
+    end
   end
 
   # Three passes over the whole directory — all places, then all guides, then
