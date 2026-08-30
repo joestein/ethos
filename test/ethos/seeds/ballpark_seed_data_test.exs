@@ -320,6 +320,7 @@ defmodule Ethos.Seeds.BallparkSeedDataTest do
   # forget to register independently of one another.
   @ballpark_roster [
     {"american-family-field", "american-family-field-guide"},
+    {"angel-stadium-anaheim", "angel-stadium-guide"},
     {"busch-stadium", "busch-stadium-guide"},
     {"citi-field", "citi-field-guide"},
     {"citizens-bank-park", "citizens-bank-park-guide"},
