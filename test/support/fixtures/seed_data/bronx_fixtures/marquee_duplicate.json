@@ -1,0 +1,17 @@
+{
+  "guide": {
+    "slug": "fixture-marquee-duplicate-bronx-guide",
+    "title": "Fixture: Marquee Duplicate",
+    "destination": "Fixture, New York",
+    "state": "New York",
+    "county": "Bronx",
+    "intro": "A second fixture guide writing up the same marquee institution, which is the cross-wave duplicate the exactly-once rule exists to catch.",
+    "sections": [],
+    "faq": [],
+    "photos": []
+  },
+  "places": [
+    {"slug": "bronx-zoo", "name": "Bronx Zoo", "kind": "attraction", "town": "Fixture", "state": "New York", "county": "Bronx", "summary": "A fixture place.", "status": "open", "photos": []}
+  ],
+  "entries": []
+}

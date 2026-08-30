@@ -68,12 +68,31 @@ defmodule Ethos.ReleaseTest do
 
     output = capture_io(fn -> Ethos.Release.seed_bronx(user.email) end)
 
-    # The directory literal is the thing under test. The count comes from the
-    # release module's own report; the existence check is what a typo fails.
-    assert output =~ "Seeded #{expected} files from priv/seed_data/bronx"
+    # The directory literal is the thing under test, and the only place it is
+    # observable is what the module prints — so parse it back OUT of the report
+    # rather than asserting a substring of it.
+    #
+    # `=~` is containment, which is the wrong tool here and failed the way
+    # containment always does: "Seeded 0 files from priv/seed_data/bronxs\n"
+    # CONTAINS "…/bronx". Transposition typos (brnox) were caught; every
+    # prefix-extension typo — bronxs, bronx2, bronx_guides, "bronx/" — was not.
+    # An earlier version of this test also asserted File.dir? on a "bronx"
+    # hardcoded here, which never consulted what seed_bronx/1 passes and so
+    # could not fail for the reason its own message gave.
+    #
+    # Captured to the newline and compared for equality, then resolved on disk
+    # through the SAME captured value, so both the name and its existence are
+    # checked against what the module actually did.
+    assert [_, dir] =
+             Regex.run(~r{Seeded #{expected} files from priv/seed_data/(\S+)\n}, output),
+           "seed_bronx/1 printed no seed-directory report: #{inspect(output)}"
 
-    assert File.dir?(Path.join([to_string(:code.priv_dir(:ethos)), "seed_data", "bronx"])),
-           "seed_bronx/1 names a directory that does not exist — it would be a silent no-op"
+    assert dir == "bronx",
+           "seed_bronx/1 seeds priv/seed_data/#{dir}, not priv/seed_data/bronx — a directory " <>
+             "literal that matches nothing seeds nothing, raises nothing, and reports success"
+
+    assert File.dir?(Path.join([to_string(:code.priv_dir(:ethos)), "seed_data", dir])),
+           "seed_bronx/1 names priv/seed_data/#{dir}, which does not exist — a silent no-op"
 
     bronx = fn ->
       Ethos.Guides.list_published_guides() |> Enum.filter(&(&1.county == "Bronx"))

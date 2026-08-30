@@ -1,0 +1,18 @@
+{
+  "guide": {
+    "slug": "fixture-marquee-with-sub-place-bronx-guide",
+    "title": "Fixture: Marquee With Sub-Place",
+    "destination": "Fixture, New York",
+    "state": "New York",
+    "county": "Bronx",
+    "intro": "A fixture guide holding a marquee institution and one of its separately notable structures, which is legitimate content in a single guide.",
+    "sections": [],
+    "faq": [],
+    "photos": []
+  },
+  "places": [
+    {"slug": "bronx-zoo", "name": "Bronx Zoo", "kind": "attraction", "town": "Fixture", "state": "New York", "county": "Bronx", "summary": "A fixture place.", "status": "open", "photos": []},
+    {"slug": "bronx-zoo-congo-gorilla-forest", "name": "Congo Gorilla Forest", "kind": "attraction", "town": "Fixture", "state": "New York", "county": "Bronx", "summary": "A fixture place.", "status": "open", "photos": []}
+  ],
+  "entries": []
+}

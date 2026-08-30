@@ -887,16 +887,45 @@ defmodule Ethos.Seeds.BronxSeedDataTest do
     end
   end
 
-  # The counting rule proven directly, because the corpus that would exercise
-  # it does not exist yet and will not until Task 5 — by which time getting
-  # this wrong means a false "two neighborhoods wrote it up" on a row a wave is
-  # being asked to trust.
-  test "a marquee institution's sub-place in one guide is one occurrence, two guides are two" do
-    one_guide = [{"bronx-park.json", "bronx-zoo"}, {"bronx-park.json", "bronx-zoo-congo-gorilla"}]
+  # The counting rule proven twice, on literals and through the real walk,
+  # because the corpus that would exercise it does not exist until Task 5 — by
+  # which time getting it wrong means a false "two neighborhoods wrote it up"
+  # on a row a wave is being asked to trust.
+  #
+  # The literals pin the SEMANTICS a later simplifier would collapse. On their
+  # own they are thin: they hand-build the {file, slug} tuple shape rather than
+  # obtaining it, so if marquee_occurrences/2 ever emitted {slug, file} or a
+  # third element, this test would keep passing while the corpus assertion
+  # silently counted distinct slugs — putting `bronx-zoo` plus
+  # `bronx-zoo-congo-gorilla-forest` back at 2, the exact false failure the
+  # file-counting rule exists to prevent. Hence the fixture test below, which
+  # runs the whole pipeline and would catch that.
+  test "marquee_file_count/1 counts distinct files, not matching places" do
+    one_guide = [{"bronx-park.json", "bronx-zoo"}, {"bronx-park.json", "bronx-zoo-congo"}]
     two_guides = [{"bronx-park.json", "bronx-zoo"}, {"belmont.json", "bronx-zoo"}]
 
     assert marquee_file_count(one_guide) == 1
     assert marquee_file_count(two_guides) == 2
     assert marquee_file_count([]) == 0
+  end
+
+  # Driven through marquee_occurrences/2 with the SHIPPED pattern, so the tuple
+  # shape, the front anchor and the counting rule are all exercised together.
+  test "the marquee walk counts a sub-place in one guide once and a duplicate twice" do
+    {_name, zoo} = Enum.find(@marquee_institutions, fn {name, _} -> name == "Bronx Zoo" end)
+
+    with_sub_place = [fixture("marquee_with_sub_place.json")]
+    two_guides = with_sub_place ++ [fixture("marquee_duplicate.json")]
+
+    # The front anchor matches both the institution and its sub-place, which is
+    # the over-match — legitimate content, two places, ONE guide.
+    assert length(marquee_occurrences(with_sub_place, zoo)) == 2
+    assert marquee_file_count(marquee_occurrences(with_sub_place, zoo)) == 1
+
+    # The same slug in a second guide is the cross-wave duplicate, and it must
+    # still count as two.
+    assert marquee_file_count(marquee_occurrences(two_guides, zoo)) == 2
+
+    assert marquee_file_count(marquee_occurrences([fixture("bad_tier.json")], zoo)) == 0
   end
 end
