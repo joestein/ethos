@@ -103,4 +103,44 @@ defmodule Ethos.Seeds.MlbClubsRosterTest do
                inspect(corpus[entry["venue"]])
     end
   end
+
+  # The set is finished, and this is what makes "finished" a fact rather than a
+  # claim in a wave report.
+  #
+  # Every assertion above is satisfied by a roster that is half unresolved: the
+  # shape check passes on a `null` row, the together-or-not-at-all check passes
+  # on a row with nothing in it, and the attribution check only walks the rows
+  # that happen to be resolved. That was correct while the waves were in flight
+  # — a partially researched roster had to stay green — and it is exactly wrong
+  # now. Three waves resolved thirty rows; without this, a thirty-first change
+  # could blank one and nothing would say so.
+  #
+  # The second half is the part a count alone would miss. The roster is one
+  # list of thirty venue names and `Ethos.Seeds.Catalog` is another, built from
+  # the `stadium` places the ballparks region actually seeds, and nothing
+  # previously asserted that the two name the same thirty venues. A roster row
+  # pointing at a venue the corpus does not seed is caught by the attribution
+  # test above; a *seeded* ballpark that no roster row names is not, and that
+  # is the direction a thirty-first ballpark would fail in.
+  test "all thirty clubs are resolved, against the thirty stadiums the corpus seeds" do
+    unresolved = for entry <- @roster, not entry["verified"], do: entry["slug"]
+
+    assert unresolved == [],
+           "the MLB set is complete; these club rows are unresolved: #{inspect(unresolved)}"
+
+    roster_venues = @roster |> Enum.map(& &1["venue"]) |> Enum.sort()
+
+    seeded_venues =
+      for {place, owner} <- Ethos.Seeds.Catalog.places_owned(),
+          owner.region == "ballparks",
+          place.kind == "stadium",
+          do: place.name
+
+    assert length(roster_venues) == 30
+
+    assert roster_venues == Enum.sort(seeded_venues),
+           "the roster and the seeded ballparks disagree — in the roster only: " <>
+             inspect(roster_venues -- seeded_venues) <>
+             ", seeded only: " <> inspect(seeded_venues -- roster_venues)
+  end
 end
