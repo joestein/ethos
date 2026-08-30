@@ -40,12 +40,21 @@ defmodule Ethos.Release do
   end
 
   # Runs after the guide seeds, not before: Collections.upsert_collection!/1
-  # raises on an item whose guide slug has no row yet.
+  # raises on an item whose guide slug has no row yet. That now includes
+  # seed_ballparks/1 — MlbBallparksCollection names all thirty ballpark guides,
+  # so seed_collections/0 is no longer satisfiable by the Connecticut steps
+  # alone.
   def seed_collections do
     load_app()
     Application.ensure_all_started(@app)
 
-    for mod <- [Ethos.Seeds.BurysCollection, Ethos.Seeds.AntiqueTrailCollection] do
+    collections = [
+      Ethos.Seeds.BurysCollection,
+      Ethos.Seeds.AntiqueTrailCollection,
+      Ethos.Seeds.MlbBallparksCollection
+    ]
+
+    for mod <- collections do
       collection = mod.upsert!()
       IO.puts("Seeded collection: /c/#{collection.slug}")
     end
