@@ -70,6 +70,7 @@ defmodule Ethos.SeedDataHelpersTest do
       |> Enum.group_by(fn {_p, owner} -> owner.seed_file end, fn {p, _o} -> p.slug end)
 
     assert Map.keys(by_file) |> Enum.sort() == [
+             "lib/ethos/seeds/busch_stadium_places.ex",
              "lib/ethos/seeds/citi_field_places.ex",
              "lib/ethos/seeds/connecticut_places.ex",
              "lib/ethos/seeds/dodger_stadium_places.ex",

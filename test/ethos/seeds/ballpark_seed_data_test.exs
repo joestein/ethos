@@ -422,18 +422,66 @@ defmodule Ethos.Seeds.BallparkSeedDataTest do
   # would otherwise mint thirty parking-garage and subway-platform records that
   # can never be more than an address, which is the exact thinness the
   # place-research backlog exists to remove.
+  #
+  # ONE exemption, keyed on the exact place slug so it pardons nothing else.
+  #
+  # `st-louis-union-station` is not transit infrastructure. Confirmed verdicts
+  # in the 2026-08-30 St. Louis Cardinals artifact establish that the building
+  # has carried no Amtrak service since October 31, 1978, that it has been a
+  # National Historic Landmark since 1970, and that an adaptive-reuse
+  # renovation begun in 1985 turned it into a 567-room hotel, an aquarium and a
+  # 200-foot Ferris wheel. It is a destination in the sense this corpus
+  # publishes destinations, and it has a paragraph of sourced content rather
+  # than an address and nothing.
+  #
+  # The MetroLink station of the same name IS transit, mints no record, and is
+  # prose in the guide's "Getting there" — which is the rule working, not being
+  # bent. The exemption is on the slug and not on the pattern, so a future
+  # `union-station` platform record, or any other place whose name contains
+  # "station", still fails here.
+  #
+  # Do not add an entry without a manual read and a stated reason in a wave
+  # report — and consider whether the place belongs in prose first.
+  @not_transit_infrastructure ["st-louis-union-station"]
+
   test "no ballpark place record is a station, a garage or a bus route" do
     names = Enum.map(Catalog.places_owned(), fn {p, _o} -> p.name end)
-    ballparks = for {p, o} <- Catalog.places_owned(), o.region == "ballparks", do: p.name
+
+    ballparks =
+      for {p, o} <- Catalog.places_owned(),
+          o.region == "ballparks",
+          do: {to_string(p.slug), p.name}
 
     assert ballparks != []
     assert length(names) >= length(ballparks)
 
     offenders =
-      Enum.filter(ballparks, &Regex.match?(~r/\b(station|parking|garage|bus route|lot)\b/i, &1))
+      for {slug, name} <- ballparks,
+          slug not in @not_transit_infrastructure,
+          Regex.match?(~r/\b(station|parking|garage|bus route|lot)\b/i, name),
+          do: name
 
     assert offenders == [],
            "transit and parking are prose, never place records: #{inspect(offenders)}"
+
+    # The exemption list must name places that exist, or it is a stale pardon
+    # nobody notices — and a stale pardon is how an allowlist quietly widens.
+    slugs = MapSet.new(ballparks, &elem(&1, 0))
+    stale = Enum.reject(@not_transit_infrastructure, &MapSet.member?(slugs, &1))
+
+    assert stale == [],
+           "@not_transit_infrastructure names slugs no ballpark place has: #{inspect(stale)}"
+
+    # And the pattern must still fire on the pardoned name, or the exemption is
+    # doing nothing and the reader of this file is being misled about why it
+    # exists.
+    for slug <- @not_transit_infrastructure do
+      {^slug, name} = Enum.find(ballparks, &(elem(&1, 0) == slug))
+
+      assert Regex.match?(~r/\b(station|parking|garage|bus route|lot)\b/i, name),
+             "#{slug} is exempted from a pattern that no longer matches its name " <>
+               "(#{inspect(name)}) — drop the exemption"
+    end
   end
 
   # A slug is published text: it is the URL, and the corpus gates scan it as a
