@@ -311,6 +311,20 @@ Two consequences, both live here:
 Register `WrigleyFieldGuide` in `seed_guide_corpus!` in this step, and add each
 later ballpark guide as Task 5 creates it.
 
+**And register `BallparkPlaces.upsert_all!()` there too — it is a sixth edit,
+not part of the guide list.** `seed_guide_corpus!` calls
+`ConnecticutPlaces.upsert_all!()` at `destination_seed_data_test.exs:341`, one
+line *above* the `for mod <- [...]` guide list at `:343-350`. A reader who adds
+only the guide module gets a gate that seeds guides whose entries point at
+places nothing seeded, and `GuideRunner.replace_entries!` calls
+`Places.get_place_by_slug!/1` (`lib/ethos/seeds/guide_runner.ex:102`), which
+raises.
+
+**So this task makes six edits, not five:** four places call sites, the guide
+list, and `:341`. That count is specific to a set holding *both* halves in
+Elixir, which is what this one does. A set with JSON places and Elixir guides
+needs only the guide list.
+
 Also hardcoded, and worth fixing while you are there:
 `lib/mix/tasks/ethos.bare_places.ex:69` and `:79`. Not a gate, but it is the
 generator behind the roster precedent, so a code-module set is invisible to it
