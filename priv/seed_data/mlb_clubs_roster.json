@@ -21,7 +21,7 @@
 {"city":"Bronx","club":"New York Yankees","county":"Bronx","slug":"new-york-yankees","state":"New York","venue":"Yankee Stadium","verified":true},
 {"city":"Philadelphia","club":"Philadelphia Phillies","county":"Philadelphia","slug":"philadelphia-phillies","state":"Pennsylvania","venue":"Citizens Bank Park","verified":true},
 {"city":"Pittsburgh","club":"Pittsburgh Pirates","county":"Allegheny County","slug":"pittsburgh-pirates","state":"Pennsylvania","venue":"PNC Park","verified":true},
-{"city":null,"club":"San Diego Padres","county":null,"slug":"san-diego-padres","state":null,"venue":null,"verified":false},
+{"city":"San Diego","club":"San Diego Padres","county":"San Diego County","slug":"san-diego-padres","state":"California","venue":"Petco Park","verified":true},
 {"city":"San Francisco","club":"San Francisco Giants","county":"San Francisco","slug":"san-francisco-giants","state":"California","venue":"Oracle Park","verified":true},
 {"city":null,"club":"Seattle Mariners","county":null,"slug":"seattle-mariners","state":null,"venue":null,"verified":false},
 {"city":"St. Louis","club":"St. Louis Cardinals","county":"St. Louis","slug":"st-louis-cardinals","state":"Missouri","venue":"Busch Stadium","verified":true},
