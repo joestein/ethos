@@ -1,0 +1,19 @@
+{
+  "guide": {
+    "slug": "fixture-below-floor-bronx-guide",
+    "title": "Fixture: Below Floor",
+    "destination": "Fixture, New York",
+    "state": "New York",
+    "county": "Bronx",
+    "tier": "town-page",
+    "intro": "This intro is deliberately far too short to clear the ninety word floor an orientation page must reach.",
+    "sections": [],
+    "faq": [],
+    "photos": []
+  },
+  "places": [],
+  "entries": [],
+  "links": [
+    {"target": "guide:midtown-manhattan-guide", "kind": "see-also", "note": null}
+  ]
+}
