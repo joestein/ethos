@@ -74,6 +74,7 @@ defmodule Ethos.SeedDataHelpersTest do
              "lib/ethos/seeds/connecticut_places.ex",
              "lib/ethos/seeds/dodger_stadium_places.ex",
              "lib/ethos/seeds/fenway_park_places.ex",
+             "lib/ethos/seeds/oracle_park_places.ex",
              "lib/ethos/seeds/wrigley_field_places.ex",
              "lib/ethos/seeds/yankee_stadium_places.ex"
            ]

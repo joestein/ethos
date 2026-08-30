@@ -22,7 +22,7 @@
 {"city":null,"club":"Philadelphia Phillies","county":null,"slug":"philadelphia-phillies","state":null,"venue":null,"verified":false},
 {"city":null,"club":"Pittsburgh Pirates","county":null,"slug":"pittsburgh-pirates","state":null,"venue":null,"verified":false},
 {"city":null,"club":"San Diego Padres","county":null,"slug":"san-diego-padres","state":null,"venue":null,"verified":false},
-{"city":null,"club":"San Francisco Giants","county":null,"slug":"san-francisco-giants","state":null,"venue":null,"verified":false},
+{"city":"San Francisco","club":"San Francisco Giants","county":"San Francisco","slug":"san-francisco-giants","state":"California","venue":"Oracle Park","verified":true},
 {"city":null,"club":"Seattle Mariners","county":null,"slug":"seattle-mariners","state":null,"venue":null,"verified":false},
 {"city":null,"club":"St. Louis Cardinals","county":null,"slug":"st-louis-cardinals","state":null,"venue":null,"verified":false},
 {"city":null,"club":"Tampa Bay Rays","county":null,"slug":"tampa-bay-rays","state":null,"venue":null,"verified":false},
