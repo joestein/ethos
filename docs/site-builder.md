@@ -216,6 +216,30 @@ modules already use.
 **There are two lists, not one, and fixing the places half fixes half the
 problem.** Read both tables below before concluding you are covered.
 
+> **Superseded as of the Wrigley Field checkpoint, and kept for the reasoning.**
+> The six call sites below are now **one**: `Ethos.Seeds.Catalog`
+> (`lib/ethos/seeds/catalog.ex`) holds the list of places modules and the list
+> of guide modules, and every gate, seed function and Mix task reads it.
+> Registering a module is one line there.
+>
+> Three things about that change generalise:
+>
+> - **It lives in `lib/`, not `test/support/`.** `Mix.Tasks.Ethos.BarePlaces`
+>   is not a test and cannot reach test support, which is why it kept a
+>   *fifth* private copy of a four-copy list — the one no gate covered.
+> - **Owner is carried with each place**, not discarded, because the callers
+>   report ownership and not just membership. A collision report naming the
+>   wrong file is worse than no report.
+> - **One list still needs a gate.** Collapsing six call sites into one
+>   removes six chances to forget and leaves one — and that one is silent when
+>   skipped. `destination_seed_data_test.exs` now enumerates the application's
+>   `Ethos.Seeds.*Guide` and `*Places` modules by reflection and asserts each
+>   appears in the catalog, with exceptions named individually. It found
+>   `AntiqueTrailGuide`, missing from the corpus loader gate since it shipped.
+>
+> Read the rest of this subsection for *why* each site mattered; it is what the
+> catalog has to keep satisfying.
+
 ##### The places half — four call sites, in three files
 
 The corpus-wide gates read the places half of the code corpus as a hardcoded call
@@ -407,6 +431,15 @@ asserting them would fail the test for the programme doing its job. The rule
 generalises: **put in the tuple the fields that identify which record this is;
 leave out the fields the work is allowed to improve.**
 
+**This applies to a resolved roster row too, and it is cheapest to add at one
+row rather than at N.** A roster whose entries carry researched geography is a
+second copy of a fact the corpus already holds. Assert the copy agrees:
+`{venue, city, state, county}` against the venue's place record. The shape
+assertions above all pass while a resolved row names the wrong county — the
+same mutation, one level along. `test/ethos/seeds/mlb_clubs_roster_test.exs`
+does this, and guards against the vacuous case where no row is resolved yet and
+the check silently examines nothing.
+
 ### Exhaustion is a mechanical check, not a feeling
 
 At the end, assert against the roster that every entry is resolved. N sites
@@ -452,6 +485,34 @@ a set that introduces `"Kings County"` alongside the existing `"Brooklyn"` split
 one borough into two hubs, and nothing in the schema will complain —
 `Place.changeset` requires `county` to be present but not to hold any particular
 value.
+
+### What `county` holds when there is no county
+
+`county` is `validate_required` on both `Place` and the guide, so every record
+needs one — and four of the thirty MLB clubs have no US county to give. Toronto
+is in Ontario, which is not a US state. Washington DC has no county at all.
+St. Louis and Baltimore are independent cities, outside the same-named counties
+next to them, and writing "St. Louis County" would place a ballpark in a
+jurisdiction that does not administer it.
+
+**The rule: `county` takes the jurisdiction that actually administers the
+address, named as that jurisdiction names itself — and it is verified like any
+other identity fact, never assumed.** For an independent city that is the city
+itself. This is the same principle the borough convention above already
+follows: Brooklyn is what administers a Brooklyn address in every sense a
+visitor cares about, so `county: "Brooklyn"` is correct and `"Kings County"` is
+not.
+
+Two consequences worth stating, because both are easy to get wrong:
+
+- **A county is not derivable from a state and a city.** It is researched. The
+  Wrigley Field checkpoint's finder cited Cook County to an article that does
+  not contain the words "Cook County"; the verifier caught it and re-sourced it
+  before confirming. This field decides a hub URL, so a wrong one publishes a
+  wrong page rather than failing.
+- **Do not normalise across a set.** Two ballparks in the same state may
+  legitimately take differently-shaped counties, exactly as two addresses on
+  one Chicago street legitimately take different ZIP codes.
 
 ### Three things that will bite you
 
@@ -687,6 +748,56 @@ gate on the outcome.
 Cost if this is wrong in the other direction: some sites are published from
 partial research. They were already published from *no* research, and every
 published clause still needs a confirmed verdict.
+
+### `uncertain` on trading status publishes; `uncertain` on identity does not
+
+These are not the same verdict wearing different labels, and the Wrigley Field
+checkpoint needed the distinction on its first site.
+
+**Uncertain trading status does not block publication.** A licence register
+shows a licence active until its term expires or is affirmatively cancelled, so
+a business that shut mid-term still reads as licensed — which means a stale
+dated act proves nothing either way. That is *absence of evidence of operation*,
+never evidence of closure, and closure requires positive evidence. Publish what
+the record is and where it is; say nothing about whether it trades today; do not
+delete it and do not mark it closed. Five of Wrigley Field's places sit here.
+
+**Uncertain identity does block it.** If the `uncertain` verdict is on the
+place's own **name** or its **address**, the two things the rule above tells you
+to publish are the two things you do not have. The Park at Wrigley carried an
+`uncertain` verdict on its current name *and* a confirmed verdict that its street
+address was inferred from a licence row that does not name it — leaving one
+past-tense clause. It was dropped, and that was the right call.
+
+State it as a question rather than a category: **after removing every unconfirmed
+clause, does the record still say what this is and where it is?** If yes, publish
+it however thin. If no, drop it. A place page under a name no source can confirm,
+at an address nobody sourced, launders two identity facts into the corpus at the
+one point a reader trusts most.
+
+### A slug is published text, and a verdict — not the finder — decides the name
+
+The research artifact **proposes** a slug and a name. Only a verdict **decides**
+one. Where the finder's proposed name is not carried by any confirmed verdict,
+take the name a source carries; where only a municipal register carries one, that
+is the name.
+
+This is not pedantry about display strings. A slug is the URL, it is the `<h1>`'s
+neighbour, and every corpus prose gate scans it as a string. Wrigley Field's
+artifact proposed `sluggers-world-class-sports-bar` for a business the City
+register calls "Sluggers" — so taking the artifact at face value would have
+published an unsourced self-superlative in a heading and a permanent URL, on the
+same record where the verifier had already struck four other self-superlatives
+from the prose. It proposed `bernies-tap-and-grill` where the verifier's
+correction says in terms: *"name it 'Bernie's' — the name the register carries.
+Do not publish 'Tap & Grill'."*
+
+**Gate it rather than trusting it**, for the same reason §8 gates the duration
+ban: a rule restated in a dispatch and checked in a review demonstrably does not
+hold. `test/ethos/seeds/ballpark_seed_data_test.exs` asserts no place slug or
+name carries a superlative token, and names the owning file when one does. An
+implementer who takes artifact slugs at face value now fails a test instead of
+shipping a URL nobody can change later.
 
 ---
 
@@ -969,6 +1080,46 @@ prove about itself* rather than by pattern count.
 Manhattan has no duration gate at all, which is the point of the previous
 section: the ban is a rule of this document, and whether it is enforced in your
 directory is something you decide by writing a test or not.
+
+**The hole all three copies shared: `walk`.** Patterns 8 and 9 read
+`(?:short|quick|easy|brief)\s+(?:drive|ride|hop|…)` — no `walk`, no `stroll`. So
+"a short walk from the station", the plainest vague-duration phrasing there is
+and the likeliest one for any walkable neighbourhood, escaped **every** duration
+gate in the repository while "a short drive" was caught by all three.
+
+Measured before widening, then widened, then measured again, per §6:
+
+| scope | hits | outcome |
+|---|---:|---|
+| `priv/seed_data/destinations/` | 0 | widened, still green |
+| `priv/seed_data/brooklyn/` | 0 | widened, still green |
+| `lib/ethos/seeds/` | 0 | widened, still green |
+| `priv/seed_data/connecticut/` | **11** | widened; all 11 rewritten in the same change |
+| `priv/seed_data/manhattan/` | **17** | **still uncaught — Manhattan has no gate** |
+
+The eleven Connecticut strings were genuine violations, not false positives, and
+were rewritten to state the relationship without a duration ("a short walk from
+the village center" → "near the village center"). They were *not* added to the
+allowlist: that list is for durations which are not travel claims, and using it
+to hide real ones destroys the only signal it carries.
+
+Manhattan's seventeen are the standing demonstration that an ungated directory
+accumulates exactly what the gate would have caught.
+
+**If your set authors prose in Elixir, do not rely on the Connecticut scan.** It
+is the copy ranked last in the table above, and against ballpark-shaped prose it
+lets through "the Red Line reaches the ballpark in 25 minutes", "puts you at the
+gate in about 2 hours" and "the shuttle takes 40 minutes" — its pattern 1 is
+singular-only and it has neither pattern 10 nor 11.
+`test/ethos/seeds/ballpark_seed_data_test.exs` ports the destination copy with
+its specimens over module **source text**, scoped by the catalog rather than by a
+glob, and pins those three phrasings as ones the Connecticut copy misses.
+
+One more thing that transfers. An allowlist keyed on `{file, json path, phrase}`
+can pardon one field; over Elixir source there is no path, so `{file, phrase}`
+pardons that phrase **anywhere in the module**. When the only way to keep a minor
+sourced clause is to widen a pardon you cannot narrow, **drop the clause**. The
+ballpark gate's allowlist is empty for that reason.
 
 Two more things to keep when you port. The **allowlist starts empty** and is
 keyed on `{file, json path, matched phrase}` so that pardoning one phrase does
