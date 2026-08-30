@@ -44,8 +44,11 @@ defmodule Ethos.Seeds.BrooklynSeedDataTest do
     ~r/\b(?:drive|ride|trip|commute)\s+of\s+(?:about|roughly|around)?\s*\d+\s*min/i,
     ~r/\b\d+\s*hours?\s+(?:drive|ride|away|south|north|east|west|by car|by subway|by train)/i,
     ~r/\b(?:five|ten|fifteen|twenty|twenty[-\s]five|thirty|forty|forty[-\s]five|fifty|sixty|ninety)\s*[-–]?\s*minutes?\b/i,
-    ~r/\b(?:short|quick|easy|brief)\s+(?:drive|ride|hop|trip|commute)\b/i,
-    ~r/\bwithin\s+(?:a\s+)?(?:short|quick|easy)\s+(?:drive|ride|trip)\b/i,
+    # `walk`/`stroll` added to 8 and 9 across all three copies: "a short walk
+    # from the station" escaped every duration gate in the repo. 0 hits in
+    # brooklyn/ when it was added.
+    ~r/\b(?:short|quick|easy|brief)\s+(?:drive|ride|hop|trip|commute|walk|stroll)\b/i,
+    ~r/\bwithin\s+(?:a\s+)?(?:short|quick|easy)\s+(?:drive|ride|trip|walk|stroll)\b/i,
     ~r/\b(?:reaches|gets you to|puts you in|takes you to)\b[^.]{0,40}\bin\s+(?:about\s+)?\d+/i,
     # "...in 25 minutes" / "...in about 2 hours" — the plainest way to state
     # the banned claim, and it escaped all ten of the patterns above: 1 was

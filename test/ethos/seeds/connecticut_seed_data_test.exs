@@ -53,8 +53,14 @@ defmodule Ethos.Seeds.ConnecticutSeedDataTest do
     ~r/\b(?:drive|ride)\s+of\s+(?:about|roughly|around)?\s*\d+\s*min/i,
     ~r/\b\d+\s*hours?\s+(?:drive|away|south|north|east|west|by car)/i,
     ~r/\b(?:five|ten|fifteen|twenty|twenty[-\s]five|thirty|forty|forty[-\s]five|fifty|sixty|ninety)\s*[-–]?\s*minutes?\b/i,
-    ~r/\b(?:short|quick|easy|brief)\s+(?:drive|ride|hop)\b/i,
-    ~r/\bwithin\s+(?:a\s+)?(?:short|quick|easy)\s+(?:drive|ride)\b/i
+    # `walk`/`stroll` added to 8 and 9 across all three copies: "a short walk
+    # from the station" is the plainest vague-duration phrasing there is and
+    # it escaped every duration gate in the repo. Measured before widening:
+    # 11 hits in connecticut/, all rewritten in the same change to state the
+    # relationship without a duration; 0 in brooklyn/, destinations/ and
+    # lib/ethos/seeds/. Manhattan has 17 and no duration gate to catch them.
+    ~r/\b(?:short|quick|easy|brief)\s+(?:drive|ride|hop|walk|stroll)\b/i,
+    ~r/\bwithin\s+(?:a\s+)?(?:short|quick|easy)\s+(?:drive|ride|walk|stroll)\b/i
   ]
 
   # The one confirmed false positive the patterns above can't tell apart from
