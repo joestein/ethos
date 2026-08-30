@@ -428,13 +428,21 @@ The artifact's own grid data refutes both: Grace Street at 3800 N and Byron at
 Relative position is now given as a direction between two published street
 numbers and nothing more.
 
-### `official_url` — four records carry nil
+### `official_url` — 11 of the 21 records carry nil
 
-Set only where a verdict establishes the domain belongs to the business. The
-Cubby Bear and Hotel Zachary were published as official in a first draft while
-both domains had returned HTTP 403 to both agents; an unreachable domain is not a
-verified one. Wrigley Field itself has none (mlb.com HTTP 406), and Bernie's
-domain does not resolve.
+Set only where a verdict establishes that the domain belongs to the business.
+
+**Four of the eleven had a plausible domain and still carry nil**, because the
+domain could not be verified: The Cubby Bear (cubbybear.com, HTTP 403 to both
+agents), Hotel Zachary (hotelzachary.com, HTTP 403, and no Wikipedia article),
+Wrigley Field (mlb.com, HTTP 406) and Bernie's (berniestap.com, does not resolve
+in DNS). The Cubby Bear and Hotel Zachary were published as official in a first
+draft while their own records said the site refused every fetch; an unreachable
+domain is not a verified one.
+
+The other seven — Metro, Nisei Lounge, Merkle's, the Music Box, the Vic, Alta
+Vista Terrace and Graceland Cemetery — simply have no official URL in the
+research at all.
 
 ### The rooftop revenue share — written as history
 

@@ -399,7 +399,13 @@ defmodule Ethos.Seeds.DestinationSeedDataTest do
 
     # Non-vacuous: a regex or an app-key change that matched nothing would
     # otherwise let this pass green while checking nothing at all.
-    assert MapSet.size(discovered) >= 8
+    #
+    # Floored at 2 and anchored on a known member rather than on today's count.
+    # A floor equal to the current number of modules fails on a legitimate
+    # consolidation — it would assert that guides may never be merged, which is
+    # not this test's business.
+    assert MapSet.size(discovered) >= 2
+    assert Ethos.Seeds.WrigleyFieldGuide in discovered
 
     registered = Catalog.guide_modules() |> Enum.map(&elem(&1, 0)) |> MapSet.new()
     unregistered = discovered |> MapSet.difference(registered) |> Enum.sort()
@@ -423,7 +429,9 @@ defmodule Ethos.Seeds.DestinationSeedDataTest do
       |> Enum.filter(&(inspect(&1) =~ ~r/^Ethos\.Seeds\.\w+Places$/))
       |> MapSet.new()
 
+    # Anchored on a known member, not on today's count — see the guide test.
     assert MapSet.size(discovered) >= 2
+    assert Ethos.Seeds.WrigleyFieldPlaces in discovered
 
     registered = Catalog.place_modules() |> Enum.map(&elem(&1, 0)) |> MapSet.new()
 

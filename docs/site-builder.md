@@ -1117,9 +1117,62 @@ glob, and pins those three phrasings as ones the Connecticut copy misses.
 
 One more thing that transfers. An allowlist keyed on `{file, json path, phrase}`
 can pardon one field; over Elixir source there is no path, so `{file, phrase}`
-pardons that phrase **anywhere in the module**. When the only way to keep a minor
+pardons that phrase **anywhere in the module**. `Regex.run` returns only the
+first match per unit, so with a file-level unit a single pardon silently covers
+that pattern's entire report for the file. When the only way to keep a minor
 sourced clause is to widen a pardon you cannot narrow, **drop the clause**. The
-ballpark gate's allowlist is empty for that reason.
+ballpark duration gate's allowlist is empty for that reason.
+
+### The sibling ban: vague proximity
+
+A duration is not the only unmeasurable thing an author reaches for. The Wrigley
+Field checkpoint's four Critical content defects were **all** unsourced spatial
+claims — "nine blocks south", "next door", "west of the ballpark", "Both are in
+Lake View" — and the first three were caught by a reviewer, not by a gate, on a
+programme whose §8 already says a reviewed rule does not hold.
+
+**The rule: a spatial relationship publishes when it is checkable.** A street
+name, a road number, a compass direction, a distance in miles, a street number
+on a grid, a bordering relationship. Not an unmeasurable gesture. "about
+one-half mile to the west on Irving Park Road" publishes; "west of the ballpark"
+does not.
+
+`test/ethos/seeds/ballpark_seed_data_test.exs` gates nine patterns with indexed
+specimens and an empty allowlist. Three things about how it was built are the
+transferable part:
+
+**Tune against the corpus, not against imagination.** Every candidate was
+measured over all 272 JSON files and every `lib/ethos/seeds/*.ex` before being
+kept. Four were rejected on measurement and are recorded *in the test file* with
+their numbers: bare `\d+ blocks` (49 hits — "a state forest in five blocks", "the
+nine-block Historic District"); `across from` (16 — it fires on a **confirmed
+verdict's own wording**); `just north/south/east/west of` (18 — a direction
+relative to a *named* place is a bordering relationship, which this document
+publishes); and `nearby|close by` (**474** — `nearby` is a link `kind` in the seed
+schema). Two more were narrowed rather than dropped: bare `across the street`
+fires on Alta Vista Terrace's sourced "houses face diagonally across the street",
+so it became `across the street from`; and `<direction> of the <word>` fires on
+"east of the Connecticut River", so its noun list was closed to generic ones.
+
+**Assert the publishable form too.** The gate carries a list of sourced spatial
+claims that must keep passing. A gate that bans the checkable form along with the
+vague one pushes authors toward vagueness, which is the opposite of the rule, and
+nothing else would notice.
+
+**Read the published structure, not the source text.** The duration gate scans
+raw module source, which is a superset and catches a duration in a comment. The
+proximity gate must not: a moduledoc that records *what was dropped* — "a first
+draft carried 'nine blocks south'" — is exactly the documentation this pattern
+asks authors to write, and a source scan cannot tell it from the defect. Walking
+the published data also yields a `{file, path, phrase}` allowlist key instead of
+`{file, phrase}`, which is the narrowing the paragraph above says source text
+cannot give you.
+
+**And say what it does not catch.** "Both are in Lake View" is an unsourced
+*containment* claim in ordinary prose, grammatically identical to the sourced
+sentence beside it. No pattern separates them; it needs a reader tracing the
+claim to a verdict. That is §7's rung (c), and the defence is the committed
+per-site verdict trace, not the gate.
 
 Two more things to keep when you port. The **allowlist starts empty** and is
 keyed on `{file, json path, matched phrase}` so that pardoning one phrase does

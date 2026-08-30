@@ -98,9 +98,202 @@ defmodule Ethos.Seeds.BallparkSeedDataTest do
     "the shuttle takes 40 minutes"
   ]
 
+  # --- Vague-proximity ban ------------------------------------------------
+  #
+  # All four Critical content defects the checkpoint review found were
+  # unsourced spatial claims in guide prose: "nine blocks south", "next door",
+  # "west of the ballpark", and "Both are in Lake View". Three of the four
+  # defect classes this checkpoint surfaced got a gate — slug superlatives,
+  # durations, module registration — and this one, the class that triggered
+  # the checkpoint, was left to human review. §8's own doctrine says a rule
+  # restated in a dispatch and checked in a review demonstrably does not hold,
+  # and twenty-nine more guides carry the same prose surfaces.
+  #
+  # The rule: a spatial relationship is publishable when it is checkable — a
+  # street name, a road number, a compass direction, a distance in miles, a
+  # street number on a grid, a bordering relationship. It is not publishable
+  # as an unmeasurable gesture. "about one-half mile to the west on Irving
+  # Park Road" passes; "west of the ballpark" does not.
+  #
+  # TUNED AGAINST THE CORPUS, NOT AGAINST IMAGINATION. Every candidate below
+  # was measured over all 272 JSON seed files and every lib/ethos/seeds/*.ex
+  # before being kept or dropped, because an over-broad gate gets excluded and
+  # an excluded gate is not a gate. Repo-wide hits at the time of writing, and
+  # ballpark hits, are recorded per pattern.
+  #
+  # REJECTED CANDIDATES, recorded here with their measurements so nobody
+  # re-proposes them:
+  #
+  #   * bare `\d+ blocks` — 49 repo-wide, and it cannot tell a proximity claim
+  #     from a dimension or a name: "a 4,153-acre state forest in five blocks",
+  #     "the nine-block Two Bridges Historic District", "at over 50 blocks, its
+  #     largest historic district", "one block of woods". Kept only in the
+  #     direction-bearing form, pattern 1.
+  #   * `across from` — 16 repo-wide, and it fires on a CONFIRMED verdict's own
+  #     wording: Mordecai's authorised text is "an American bistro across from
+  #     the ballpark". Banning it would ban a sourced clause.
+  #   * `just across` — 11 repo-wide, same problem: Hotel Zachary's verdict
+  #     reads verbatim "The Hotel Zachary, just across Clark Street".
+  #   * bare `across the street` — fires on Alta Vista Terrace's sourced line,
+  #     "matching houses face diagonally across the street", which describes an
+  #     arrangement within one street rather than a distance between two
+  #     places. Narrowed to `across the street from`, which separates them: 0
+  #     repo-wide, still catches the canonical defect.
+  #   * `just (north|south|east|west) of` — 18 repo-wide, all legitimate: "just
+  #     south of Hartford", "just west of Hartford". A direction relative to a
+  #     NAMED place is a bordering relationship, which §8 explicitly publishes.
+  #   * `(north|south|east|west) of the \w+` — 27 repo-wide, all legitimate,
+  #     because "the" is part of the proper name: "east of the Connecticut
+  #     River", "north of the Pappenheimer Preserve", "south of the UConn
+  #     campus". Narrowed to a closed list of generic nouns, pattern 5.
+  #   * `nearby|close by|not far` — 474 repo-wide. `nearby` is a link `kind` in
+  #     the seed schema. The archetypal cry-wolf pattern; measuring it is what
+  #     kept it out.
+  #
+  # Patterns 3, 4 and 5 have zero repo-wide hits. That is not a reason to drop
+  # them — they are the phrasings this corpus has not reached for yet, and each
+  # is pinned by an indexed specimen below so it cannot be silently weakened.
+  #
+  # WHAT THIS GATE DOES NOT CATCH, stated plainly so nobody reads it as
+  # complete. Three of the checkpoint's four Critical content defects are
+  # covered — "nine blocks south", "next door", "west of the ballpark", each
+  # verified by probe. The fourth, **"Both are in Lake View"**, is not, and
+  # cannot be by this method: it is an unsourced *containment* claim in
+  # ordinary prose, naming a real community area in a grammatical form
+  # indistinguishable from the sourced sentence one clause earlier. Catching it
+  # needs the claim checked against the artifact, not the sentence matched
+  # against a pattern.
+  #
+  # That is the §7 rung-(c) boundary showing up again: some things are caught
+  # by a reader tracing a claim to a verdict, or they are not caught. The
+  # corpus's defence there is `docs/ballparks/<site>.md`, which pins every
+  # published sentence to the verdict it rests on. Say so in the dispatch
+  # rather than implying the gate covers it.
+  @proximity_patterns [
+    # 11 repo-wide. Direction-bearing block counts only; see rejected list.
+    ~r/\b(?:\d+|one|two|three|four|five|six|seven|eight|nine|ten|eleven|twelve)[-\s]blocks?\s+(?:north|south|east|west|away|up|down|over)\b/i,
+    # 18 repo-wide, 0 in ballparks. Adjacency nothing sources.
+    ~r/\bnext door\b/i,
+    # 0 repo-wide in this narrowed form.
+    ~r/\bacross the street from\b/i,
+    # 0 repo-wide.
+    ~r/\ba few doors\s+(?:down|away|up)\b/i,
+    # 0 repo-wide. A closed list of generic nouns, so a direction relative to a
+    # named feature ("north of Grace Street") still publishes.
+    ~r/\b(?:north|south|east|west)\s+of\s+the\s+(?:ballpark|stadium|arena|venue|site|station)\b/i,
+    # 18 repo-wide, 0 in ballparks. An unmeasurable distance by construction.
+    ~r/\b(?:steps|a stone's throw|moments)\s+(?:from|away)\b/i,
+    # 1 repo-wide. Case-SENSITIVE and lowercase on purpose: the two other
+    # matches are a proper name, Manhattan's "Little Church Around the Corner".
+    # This is the cry-wolf discipline the DOHMH grade-letter pattern uses. It
+    # costs a capitalised sentence-initial instance, which is the cheaper miss.
+    ~r/(?-i:around the corner)/,
+    # 1 repo-wide.
+    ~r/\b(?:down|up)\s+the\s+(?:street|road|block)\b/i,
+    # 9 repo-wide, 0 in ballparks. A duration wearing a distance's clothes.
+    ~r/\bwithin walking distance\b/i
+  ]
+
+  # Starts empty and is empty. Keyed {file, path, phrase} — the narrow form the
+  # destination gate uses — because this gate walks to a field rather than
+  # reading a whole file. Pardoning a phrase in one summary must not pardon it
+  # in the intro.
+  #
+  # Before adding an entry, check whether the clause is sourced at all. Every
+  # candidate so far was either unsourced (delete it) or already excluded by a
+  # narrowed pattern above.
+  @proximity_allowlist []
+
+  # One specimen per pattern, in order. Without these the nine are load-bearing
+  # only in aggregate: the ballpark corpus fires none of them, so any subset
+  # could be deleted or weakened and this suite would stay green — which is the
+  # exact hole the destination gate's specimens exist to close.
+  @proximity_specimens [
+    {1, "the lounge is nine blocks south of the marquee"},
+    {2, "the tavern is next door to the music venue"},
+    {3, "the grill is across the street from the bleachers"},
+    {4, "the shop is a few doors down from the gate"},
+    {5, "the cinema is west of the ballpark"},
+    {6, "the hotel is steps from the entrance"},
+    {7, "the bar is around the corner"},
+    {8, "the diner is down the street"},
+    {9, "the museum is within walking distance"}
+  ]
+
+  # Sourced spatial claims that MUST keep publishing. A gate that fails these
+  # is banning the checkable form along with the vague one, which would push an
+  # author toward vagueness — the opposite of the rule.
+  @sourced_spatial_claims [
+    "about one-half mile to the west on Irving Park Road",
+    "just across Clark Street from Wrigley Field",
+    "an American bistro across from the ballpark, serving classic dishes",
+    "It stands north of Grace Street (3800 North)",
+    "A one-block street in Lake View at 1050 West on the Chicago street grid",
+    "The street is one block long and contains 40 small, single-family rowhouses",
+    "Wrigley Field is less than a mile from it",
+    "Cornelia Avenue, which is north of 3145 N",
+    "matching houses face diagonally across the street"
+  ]
+
   defp ballpark_sources do
     for path <- Catalog.source_paths("ballparks"),
         do: {Path.basename(path), File.read!(Path.join(@repo_root, path))}
+  end
+
+  # --- Published strings, walked rather than enumerated --------------------
+  #
+  # The duration gate above reads raw module **source**, following the
+  # Connecticut precedent: it is a superset of what ships, so it catches a
+  # duration in a comment too.
+  #
+  # The proximity gate below reads the **published data structure** instead,
+  # and the difference is load-bearing. Both moduledocs quote the phrases this
+  # checkpoint removed ("a first draft carried 'nine blocks south'"), because
+  # recording what was dropped is what makes the content auditable. A source
+  # scan fires on that documentation — it cannot tell a banned phrase from a
+  # note saying the phrase was banned. Reading the structure sees only what
+  # reaches a reader.
+  #
+  # It also buys a narrower allowlist key. `Regex.run` returns one match per
+  # unit, so a file-level unit means a pardon covers that pattern's entire
+  # report for the file. Walking to a field gives {file, path, phrase}, the
+  # key the destination gate uses, and `Regex.scan` below reports every match
+  # rather than the first.
+  #
+  # Fields are walked, not named. An enumerated list — summary, history,
+  # intro, body, question, answer, note — is a list someone forgets to extend
+  # the day a new prose field appears, and the gate goes quiet about it.
+  defp collect_strings(term, path \\ "")
+
+  defp collect_strings(map, path) when is_map(map) do
+    Enum.flat_map(map, fn {k, v} ->
+      sep = if path == "", do: "", else: "."
+      collect_strings(v, "#{path}#{sep}#{k}")
+    end)
+  end
+
+  defp collect_strings(list, path) when is_list(list) do
+    list
+    |> Enum.with_index()
+    |> Enum.flat_map(fn {v, i} -> collect_strings(v, "#{path}[#{i}]") end)
+  end
+
+  defp collect_strings(s, path) when is_binary(s), do: [{path, s}]
+  defp collect_strings(_other, _path), do: []
+
+  defp published_strings do
+    places =
+      for {place, owner} <- Catalog.places_owned(),
+          owner.region == "ballparks",
+          {path, text} <- collect_strings(place, to_string(place.slug)),
+          do: {Path.basename(owner.seed_file), path, text}
+
+    guides =
+      for {mod, _region} <- Catalog.guide_modules("ballparks"),
+          {path, text} <- collect_strings(mod.data()),
+          do: {Path.basename(Catalog.source_path(mod)), path, text}
+
+    places ++ guides
   end
 
   test "the set owns source files, and they are the ones the catalog names" do
@@ -170,6 +363,58 @@ defmodule Ethos.Seeds.BallparkSeedDataTest do
 
       assert Enum.any?(@trip_duration_patterns, &Regex.match?(&1, phrase)),
              "this gate must catch #{inspect(phrase)}"
+    end
+  end
+
+  test "no ballpark published prose states a vague proximity" do
+    strings = published_strings()
+
+    # Non-vacuous: every assertion here passes trivially against an empty walk,
+    # and a walk that silently returns nothing is the failure §6 records.
+    assert length(strings) > 100
+
+    violations =
+      for {file, path, text} <- strings,
+          pattern <- @proximity_patterns,
+          [matched | _] <- Regex.scan(pattern, text),
+          {file, path, matched} not in @proximity_allowlist,
+          uniq: true,
+          do: {file, path, matched}
+
+    assert violations == [],
+           "vague-proximity phrasing in published ballpark prose (banned — state the " <>
+             "relationship as a street name, a road number, a direction, a distance in " <>
+             "miles, or a bordering relationship instead): " <> inspect(violations)
+  end
+
+  test "each of the nine proximity patterns is individually load-bearing" do
+    assert length(@proximity_specimens) == length(@proximity_patterns)
+
+    for {n, specimen} <- @proximity_specimens do
+      pattern = Enum.at(@proximity_patterns, n - 1)
+
+      assert Regex.match?(pattern, specimen),
+             "proximity pattern #{n} no longer catches #{inspect(specimen)} — the pattern " <>
+               "at that position is now #{inspect(pattern)}. Each was tuned against the " <>
+               "whole corpus; see the rejected-candidate list above before changing one."
+    end
+  end
+
+  # The other half of tuning, and the half that is usually left implicit. A
+  # gate is only useful if it separates the banned form from the publishable
+  # one, so the publishable ones are asserted too — including Alta Vista's
+  # "diagonally across the street", which is why pattern 3 is narrowed.
+  test "sourced spatial claims still publish" do
+    for claim <- @sourced_spatial_claims do
+      firing =
+        for {pattern, n} <- Enum.with_index(@proximity_patterns, 1),
+            Regex.match?(pattern, claim),
+            do: n
+
+      assert firing == [],
+             "proximity pattern(s) #{inspect(firing)} fire on a sourced, checkable spatial " <>
+               "claim: #{inspect(claim)}. A gate that bans the checkable form pushes authors " <>
+               "toward vagueness."
     end
   end
 
