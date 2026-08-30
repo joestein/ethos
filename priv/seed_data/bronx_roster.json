@@ -1,6 +1,6 @@
 {
   "borough": "Bronx",
-  "source": "NYC Department of City Planning Neighborhood Tabulation Areas, cross-checked against Community District profiles",
+  "source": "NYC Department of City Planning Neighborhood Tabulation Areas, cross-checked against Community District profiles, plus the park NTAs carrying major visitable institutions",
   "neighborhoods": [
     {"slug": "mott-haven", "name": "Mott Haven", "community_district": 1, "wave": 1},
     {"slug": "port-morris", "name": "Port Morris", "community_district": 1, "wave": 1},
@@ -23,6 +23,7 @@
     {"slug": "belmont", "name": "Belmont", "community_district": 6, "wave": 2},
     {"slug": "east-tremont", "name": "East Tremont", "community_district": 6, "wave": 2},
     {"slug": "west-farms", "name": "West Farms", "community_district": 6, "wave": 2},
+    {"slug": "bronx-park", "name": "Bronx Park", "community_district": 6, "wave": 2},
 
     {"slug": "bedford-park", "name": "Bedford Park", "community_district": 7, "wave": 3},
     {"slug": "norwood", "name": "Norwood", "community_district": 7, "wave": 3},
@@ -34,6 +35,7 @@
     {"slug": "riverdale", "name": "Riverdale", "community_district": 8, "wave": 3},
     {"slug": "fieldston", "name": "Fieldston", "community_district": 8, "wave": 3},
     {"slug": "north-riverdale", "name": "North Riverdale", "community_district": 8, "wave": 3},
+    {"slug": "van-cortlandt-park", "name": "Van Cortlandt Park", "community_district": 8, "wave": 3},
 
     {"slug": "parkchester", "name": "Parkchester", "community_district": 9, "wave": 4},
     {"slug": "soundview", "name": "Soundview", "community_district": 9, "wave": 4},
@@ -53,6 +55,7 @@
     {"slug": "pelham-bay", "name": "Pelham Bay", "community_district": 10, "wave": 5},
     {"slug": "city-island", "name": "City Island", "community_district": 10, "wave": 5},
     {"slug": "co-op-city", "name": "Co-op City", "community_district": 10, "wave": 5},
+    {"slug": "pelham-bay-park", "name": "Pelham Bay Park", "community_district": 10, "wave": 5},
 
     {"slug": "morris-park", "name": "Morris Park", "community_district": 11, "wave": 6},
     {"slug": "van-nest", "name": "Van Nest", "community_district": 11, "wave": 6},
