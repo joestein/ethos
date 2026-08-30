@@ -38,7 +38,6 @@ defmodule Ethos.Seeds.PlaceContentGateTest do
 
   alias Ethos.Places.DeletedPlaces
   alias Ethos.SeedDataHelpers
-  alias Ethos.Seeds.ConnecticutPlaces
   alias Ethos.Seeds.DataGuide
 
   # Inspection records may support a `status` verdict. They may never appear in
@@ -94,13 +93,11 @@ defmodule Ethos.Seeds.PlaceContentGateTest do
   # "A restaurant on Bath Avenue, at number 1806." — a stub wearing a sentence.
   @stub ~r/^A [a-z][a-z -]* (?:on|at) [^,]+,\s*at number \d+\.?$/
 
-  @code_seed_file "connecticut_places.ex"
-
   # Places arrive in two key shapes, and conflating them has bitten this project
   # before: the `"places"` array of each guide seed file has **string** keys,
-  # while `ConnecticutPlaces.places/0` has **atom** keys. A string-key read of
-  # those 50 records silently yields nil for every field, which would make this
-  # gate pass over them in silence. Following the precedent set by
+  # while `SeedDataHelpers.code_places/0` yields **atom**-keyed maps. A
+  # string-key read of those records silently yields nil for every field, which
+  # would make this gate pass over them in silence. Following the precedent of
   # `Mix.Tasks.Ethos.BarePlaces`, each source is read through its own accessor
   # rather than through one normalising pass.
   #
@@ -115,7 +112,7 @@ defmodule Ethos.Seeds.PlaceContentGateTest do
           p <- DataGuide.load!(f)["places"],
           do: p["slug"]
 
-    code = for p <- ConnecticutPlaces.places(), do: p[:slug]
+    code = for {p, _owner} <- SeedDataHelpers.code_places(), do: p[:slug]
 
     MapSet.new(json ++ code)
   end
@@ -171,11 +168,13 @@ defmodule Ethos.Seeds.PlaceContentGateTest do
           do: {Path.basename(f), path, text}
 
     # Keyed on the record's own slug rather than a list index, so a failure
-    # message names the place a reader can go and find.
+    # message names the place a reader can go and find — and on its owning
+    # module's file, so a hit in a second places module does not read as a hit
+    # in the first.
     code =
-      for p <- ConnecticutPlaces.places(),
+      for {p, owner} <- SeedDataHelpers.code_places(),
           {path, text} <- collect_strings(p, to_string(p[:slug])),
-          do: {@code_seed_file, path, text}
+          do: {Path.basename(owner.seed_file), path, text}
 
     json ++ code
   end

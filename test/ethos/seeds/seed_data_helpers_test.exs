@@ -55,4 +55,35 @@ defmodule Ethos.SeedDataHelpersTest do
   test "the committed corpus has no place-slug collisions" do
     SeedDataHelpers.assert_place_slugs_globally_unique!()
   end
+
+  # code_places/0 is what four corpus-wide gates read instead of naming
+  # `ConnecticutPlaces` four times by hand. Two things can go wrong with it and
+  # neither shows up as a failure anywhere else: it can silently stop covering
+  # a module, and it can attribute a place to the wrong file — which is worse
+  # than no attribution, because a collision report naming the wrong file sends
+  # the reader to a file that does not contain the slug.
+  test "code_places/0 covers every code-defined places module, each owning its own" do
+    owned = SeedDataHelpers.code_places()
+
+    by_file =
+      owned
+      |> Enum.group_by(fn {_p, owner} -> owner.seed_file end, fn {p, _o} -> p.slug end)
+
+    assert Map.keys(by_file) |> Enum.sort() == [
+             "lib/ethos/seeds/ballpark_places.ex",
+             "lib/ethos/seeds/connecticut_places.ex"
+           ]
+
+    # Attribution, not just membership: each module's own slugs come back under
+    # its own file, so a swapped or shared owner label fails here.
+    assert "wrigley-field" in by_file["lib/ethos/seeds/ballpark_places.ex"]
+    refute "wrigley-field" in by_file["lib/ethos/seeds/connecticut_places.ex"]
+    assert "palace-theater-waterbury" in by_file["lib/ethos/seeds/connecticut_places.ex"]
+    refute "palace-theater-waterbury" in by_file["lib/ethos/seeds/ballpark_places.ex"]
+
+    # Atom keys, not string keys. A string-key read here yields nil for every
+    # field and every gate downstream passes over the code corpus in silence.
+    assert Enum.all?(owned, fn {p, _o} -> is_binary(p[:slug]) and is_binary(p[:name]) end)
+    assert Enum.all?(owned, fn {_p, o} -> is_binary(o.region) and o.region != "" end)
+  end
 end

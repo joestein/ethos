@@ -42,9 +42,43 @@ defmodule Ethos.SeedDataHelpers do
     |> Enum.sort()
   end
 
+  # The code half of the place corpus.
+  #
+  # No corpus-wide gate discovers an Elixir seed module; each one used to name
+  # `Ethos.Seeds.ConnecticutPlaces` by hand, in four separate places across
+  # three files (docs/site-builder.md §1). Four hardcoded lists drift apart,
+  # and a module named by three of them is scanned by three of them — which
+  # reads exactly like being covered. They all read this list now, so adding a
+  # places module is one edit.
+  #
+  # Each entry carries its own region and file because the callers report
+  # ownership, not just membership: the duplicate report below names the file
+  # a colliding slug came from, and the bare-places roster is checked on the
+  # whole {slug, name, region, seed_file} tuple. A report that names the wrong
+  # file is worse than no report — it sends the reader to a file that does not
+  # contain the slug.
+  @code_place_modules [
+    {Ethos.Seeds.ConnecticutPlaces, "connecticut", "lib/ethos/seeds/connecticut_places.ex"},
+    {Ethos.Seeds.BallparkPlaces, "ballparks", "lib/ethos/seeds/ballpark_places.ex"}
+  ]
+
+  @doc """
+  Every place defined in an Elixir seed module, paired with its owner.
+
+  Yields `{place, owner}` tuples. `place` carries **atom** keys — the code half
+  of the corpus is atom-keyed and the JSON half is string-keyed, and each half
+  is read through its own accessor rather than one normalising pass. `owner` is
+  `%{region: binary, seed_file: binary}`, the seed file being repo-relative.
+  """
+  def code_places do
+    for {mod, region, seed_file} <- @code_place_modules,
+        place <- mod.places(),
+        do: {place, %{region: region, seed_file: seed_file}}
+  end
+
   @doc """
   Asserts each place slug is defined exactly once across the whole corpus:
-  every `priv/seed_data/*/*.json` file plus the Connecticut code module.
+  every `priv/seed_data/*/*.json` file plus every code-defined places module.
   """
   def assert_place_slugs_globally_unique! do
     json_owned =
@@ -55,7 +89,7 @@ defmodule Ethos.SeedDataHelpers do
           do: {p["slug"], Path.join(Path.basename(Path.dirname(f)), Path.basename(f))}
 
     code_owned =
-      for p <- Ethos.Seeds.ConnecticutPlaces.places(), do: {p.slug, "connecticut_places.ex"}
+      for {p, owner} <- code_places(), do: {p.slug, Path.basename(owner.seed_file)}
 
     dups =
       (json_owned ++ code_owned)

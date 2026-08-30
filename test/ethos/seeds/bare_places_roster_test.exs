@@ -2,7 +2,6 @@ defmodule Ethos.Seeds.BarePlacesRosterTest do
   use ExUnit.Case, async: true
 
   alias Ethos.SeedDataHelpers
-  alias Ethos.Seeds.ConnecticutPlaces
   alias Ethos.Seeds.DataGuide
 
   # `mix test` re-requires every test file on each run, so @roster is re-read
@@ -63,10 +62,12 @@ defmodule Ethos.Seeds.BarePlacesRosterTest do
       end
 
     code =
-      for place <- ConnecticutPlaces.places() do
+      for {place, owner} <- SeedDataHelpers.code_places() do
         # Atom keys here, string keys above — the corpus has two shapes and each
         # is read through its own accessor rather than one normalising pass.
-        {place.slug, place.name, "connecticut", "lib/ethos/seeds/connecticut_places.ex"}
+        # The region and seed_file come from the owning module rather than being
+        # hardcoded, so a second places module is attributed to its own file.
+        {place.slug, place.name, owner.region, owner.seed_file}
       end
 
     json ++ code
