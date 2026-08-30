@@ -1219,10 +1219,27 @@ run **after** guides, for the same reason in reverse. Add the new seed function 
 `docs/runbooks/seeding.md` with its ordering constraint spelled out.
 
 A set gets a **collection** — `lib/ethos/seeds/antique_trail_collection.ex` is
-the model. Every member guide then shows *"Part of <Collection>"* under its title
-from the existing template line
+the model, and `lib/ethos/seeds/mlb_ballparks_collection.ex` is the same model at
+thirty items. Every member guide then shows *"Part of <Collection>"* under its
+title from the existing template line
 (`lib/ethos_web/controllers/guide_html/show.html.heex:7-9`), with no template
 change.
+
+**Gate the membership.** A collection missing one guide is silent in both
+directions: the collection page is simply short, and the guide it dropped simply
+stops rendering its *"Part of"* line. Nothing raises and no count disagrees.
+Assert set equality between the collection's items and the catalog's guide
+modules for the region, failing in **both** directions and naming the slugs —
+`test/ethos/seeds/mlb_ballparks_collection_test.exs` is the copy. This is the
+same class as the reflection assertion that found `AntiqueTrailGuide`
+unregistered, except that a set of N gives N chances to make the omission.
+
+**The blurbs are content and the content rules bind them.** They are prose in an
+Elixir module, so §8's "if your set authors any prose in Elixir" applies exactly:
+`burys_collection.ex` is one of the two files that shipped banned drive-time
+phrasing to production. Draw each blurb only from what its guide already
+publishes, so it inherits that guide's verdict trace. Some sites will have less
+to say than others; publish the plainer blurb rather than padding it.
 
 ---
 
@@ -1272,9 +1289,12 @@ resolved entries so nobody re-opens them.
 
 ## 10. What changes for a different set
 
-**NFL stadiums: nothing structural.** Same shape, different roster. One entry per
-club, venues null until verified — sponsorship renaming is if anything more
-frequent than in baseball, so rule 8 of §4 matters more, not less. Expect the
+**NFL stadiums: nothing structural.** Same shape, different roster. **Read §12
+first** — it is the measured cost and defect profile of the one full run this
+pattern has had, and the three classes it names are the ones to write the
+dispatch against. One entry per club, venues null until verified — sponsorship
+renaming is if anything more frequent than in baseball, so rule 8 of §4 matters
+more, not less. Expect the
 "around it" set to skew slightly toward parking-dominated approaches and away
 from walkable blocks; that changes what the *Getting there* prose emphasises, not
 what a place record is.
@@ -1343,6 +1363,139 @@ five-part cost before starting.
 
 ---
 
+## 12. Close-out: what the first full run actually cost and yielded
+
+This document was written before a set had been run end to end. **MLB ballparks
+was the first**, completed 2026-08-30, and this section records what it
+produced and what it found. The numbers here are the ones to plan an NFL run
+against — not the encouraging ones.
+
+Like everything else in this file, these figures are restated rather than cited
+to `.superpowers/`, which is git-ignored and will not survive a clone. The wave
+reports they come from are already unrecoverable to anyone but the person who
+ran it.
+
+### What shipped
+
+| | |
+|---|---|
+| Sites | **30** ballparks |
+| Places | **236**, of which 30 are the ballparks themselves (`kind: "stadium"`) |
+| Guides | **30**, one per ballpark, all Elixir modules |
+| Audit trail | **30** files in `docs/ballparks/`, one per venue |
+| Collection | one, `mlb-ballparks`, with all thirty as items |
+| Suite | **477 → 509 tests**, 0 failures throughout |
+
+Places per ballpark ranged from **1 to 21** — Kauffman Stadium published a
+single place because no source fetched established a walkable district around
+it, and the guide says so. **Expect that spread.** A set of thirty is not thirty
+comparable guides, and a plan that assumes a uniform yield will read the thin
+ones as failures and pad them, which is the one outcome §4 exists to prevent.
+
+### The wave structure
+
+Four passes, not three:
+
+1. **Checkpoint — Wrigley Field alone** (§6). 21 places, 1 guide, 168 verdicts
+   (157 confirmed, 4 refuted, 7 uncertain). Its review found **four Critical
+   content defects, all unsourced spatial claims**, which is where §8's sibling
+   ban and `ballpark_seed_data_test.exs`'s nine proximity patterns come from.
+   Everything the later waves were gated on was learned here, from one site.
+2. **Wave 1 — ten clubs**, 20 research agents (a finder and a verifier each),
+   0 errors, 81 places, 10 guides.
+3. **Wave 2 — ten clubs**, 20 agents, 0 errors, 69 places, 10 guides.
+4. **Wave 3 — the final nine**, 18 agents, 0 errors, 65 places, 9 guides.
+
+**Waves were sized to search budget, not to concurrency**, exactly as §4 says —
+and the constraint bit at the very first attempt: the checkpoint's finder and
+verifier both opened with **zero** search quota (WebSearch 200/200 exhausted
+before the first query). Plan for a run to be parked and resumed, not for a run
+to be fast.
+
+### The defect classes the waves found
+
+These are what a two-agent research contract with an independent verifier buys.
+None of them is caught by a gate, and none by a reviewer spot-checking facts.
+
+**1. County miscitation, in every single wave.** The fact was true and the
+citation was to a plausible-looking page that does not contain it. Wrigley cited
+a page containing no "Cook County". Wave 2's Pittsburgh cited the Pirates
+article for "Allegheny County", which mentions no county at all — and the same
+shape recurred three more times inside that one batch. Wave 3 hit it three more
+times: Miami (MLB.com's ballpark page contains neither "Miami-Dade" nor
+"county"), Houston (a Wikipedia infobox whose Location line reads only "Houston,
+Texas, U.S."), Phoenix (where "Maricopa" appears only as a stadium district's
+name and in a funding sentence).
+
+**This is the single most transferable finding of the run.** It is invisible to
+anyone who does not re-fetch the cited page, because the claim itself checks
+out — a reviewer verifying facts sees nothing wrong. It is also the strongest
+argument for the finder/verifier split in §4: a self-verifying finder confirms
+every one of these, because it already believes the fact. **A verifier must
+re-fetch the cited page and confirm the fact is in it, not merely that the fact
+is true.** Budget for that; it is most of the verifier's cost.
+
+**2. Fabricated evidence quotes.** Wave 3's report puts it as *"in two
+artifacts, not one"* — Tampa Bay (*"remains operational and actively hosts…"*
+and *"active and operating"*, neither in the article cited) and Arizona, where
+it occurred **three times over** (*"remains active"* for a theater whose article
+contains the word "active" zero times; *"states the restaurant remains
+operational"* for a past-tense article; and a quoted phrase for the Rosson House
+that is not in the source, though a genuine sentence there says the same thing).
+Wave 1 had already caught one, a Kasten *"will never be for sale"* line absent
+from the CBS article it was attributed to.
+
+The handling matters as much as the count: each affected place was **downgraded
+to uncertain and ships with no trading claim**, except where the status stands
+on a real sentence found by the verifier. Nothing was dropped in silence and
+nothing was published on the invented quote.
+
+**3. Sponsorship renames, caught in three waves.** Rule 8 of §4 earned its place
+every time. Wave 1: Dodger Stadium's name is **unchanged** despite a 2026 Uniqlo
+deal, which is field-only branding — checked rather than assumed, and the check
+is what produced the right answer. Wave 2: Cincinnati's streetcar renamed
+"Connector" in 2022 with the finder carrying the old name, and a Fifth Third
+Bank rebrand of Comerica Park independently confirmed. Wave 3: Daikin Park (from
+Minute Maid, January 1 2025), the Mortgage Matchup Center (from Footprint
+Center, 2025), the DigAlert Grove of Anaheim, Choctaw Stadium and T-Mobile Park.
+
+Houston is the case to remember, because the residual is *published*: Harris
+County's own site still lists the venue as Minute Maid Park while Houston
+METRO's route guide lists the stop as Daikin Park. **A rename does not
+propagate; it leaves a corpus of disagreeing official sources.** For NFL
+stadiums, where §10 already notes renaming is more frequent, expect that to be
+the normal state rather than the exception.
+
+**A fourth, smaller class worth naming: superlative accretion.** Cleveland's
+finder wrote that the 1954 club's 111-43 record was "at the time the best in
+Major League Baseball history"; its own cited source says it "remains the best
+since the 1909 Pirates" — second best all time. The source was read as stronger
+than it is. That is a different failure from a wrong fact or a wrong citation,
+and only a verifier reading the source against the claim finds it.
+
+### What this cost the corpus, honestly
+
+Two sourced facts were **dropped rather than published**, because the duration
+gate matches their string and widening its allowlist would have pardoned a
+whole module: the Dodger Stadium Express headways at Union Station and South
+Bay. The guide says the frequencies exist, are not published here, and are
+available from the transit agency. Three more instances cost less (a zoo's
+last-entry interval, a roof operating interval, a shop's closing interval).
+
+One place could not be published at all — Mill Street Pier, whose artifact
+address reads `could not be established` — and is named in prose and an FAQ with
+the reason, rather than dropped silently.
+
+And a consequence nobody predicted: **because the duration ban is enforced by a
+scan over module source, a moduledoc cannot quote the clause it records
+dropping.** Three ballpark moduledocs describe the omission in words instead —
+and so does the collection module, whose first draft quoted one of
+`burys_collection.ex`'s production defects while explaining why the gate exists,
+and failed the gate for it. If your set adds a source-scanning gate, the audit
+trail it makes impossible is part of its price.
+
+---
+
 ## Reference: the files this pattern touches
 
 | what | where |
@@ -1352,7 +1505,8 @@ five-part cost before starting.
 | Place kinds and schema types | `lib/ethos/places/place.ex:7`, `lib/ethos_web/controllers/place_html.ex` |
 | Guide upsert | `lib/ethos/seeds/guide_runner.ex` |
 | Guide module model | `lib/ethos/seeds/antique_trail_guide.ex` |
-| Collection model | `lib/ethos/seeds/antique_trail_collection.ex` |
+| Collection model | `lib/ethos/seeds/antique_trail_collection.ex`, and at thirty items `lib/ethos/seeds/mlb_ballparks_collection.ex` |
+| Collection membership gate to copy | `test/ethos/seeds/mlb_ballparks_collection_test.exs` |
 | Code-module places | `lib/ethos/seeds/connecticut_places.ex` |
 | Seed wiring and ordering | `lib/ethos/release.ex`, `docs/runbooks/seeding.md` |
 | Roster precedent and its test | `priv/seed_data/bare_places_roster.json`, `test/ethos/seeds/bare_places_roster_test.exs` |

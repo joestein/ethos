@@ -46,16 +46,26 @@ it — see its entry below.
    because it must run at this point: it writes only its own `destinations`
    table, references no place and resolves no link, so it is safe to run
    before, after, or between any of the other steps.
-6. `Ethos.Release.seed_ballparks(email)` — the MLB ballpark **code-module**
-   places and guides, one module per ballpark. It takes both lists from
-   `Ethos.Seeds.Catalog` (region `"ballparks"`) and seeds places before guides:
-   each guide's entries resolve through `Ethos.Places.get_place_by_slug!/1`,
-   which raises on a place nothing has seeded. Adding a ballpark is one line in
-   the catalog and no change here. Like `seed_rome`, it has no dependency on the
-   steps above it and nothing above depends on it — it is self-contained, so it
-   may run at any point. It is listed here because it must run before
-   `seed_collections` if a ballpark collection ever ships.
-7. `Ethos.Release.seed_collections()`
+6. `Ethos.Release.seed_ballparks(email)` — 236 places and **30 guides**, the
+   whole MLB set, as **code modules** rather than JSON: one places module and
+   one guide module per ballpark. It takes both lists from `Ethos.Seeds.Catalog`
+   (region `"ballparks"`) and seeds **places before guides**, which is the one
+   ordering constraint inside the step. Each guide's entries resolve by
+   `place_slug` through `Ethos.Places.get_place_by_slug!/1`
+   (`lib/ethos/seeds/guide_runner.ex`), which **raises** on a place nothing has
+   seeded — so the reverse order does not produce a thin guide, it aborts the
+   run partway through and leaves the state described in "Seeding is not
+   transactional across a run" below. Adding a ballpark is one line in the
+   catalog and no change here.
+
+   It has no dependency on steps 1-5 and none of them depends on it, so it may
+   run at any point before step 7. It is listed here because step 7 **does**
+   depend on it: `Ethos.Seeds.MlbBallparksCollection` names all thirty ballpark
+   guides, and `seed_collections` run before this step raises
+   `collection mlb-ballparks references unknown guide <slug>`.
+7. `Ethos.Release.seed_collections()` — three collections: The Burys of
+   Connecticut (steps 2 and 3), Antique Trail of CT (step 2) and Major League
+   Ballparks (step 6). After **every** guide step, never between them.
 8. `Ethos.Release.seed_links()`
 
 Verify the published count after each content step before moving on — see
@@ -126,7 +136,9 @@ corpus — 7 files link to `danbury`, 6 to `waterbury`, 5 to `woodbury`, 3 to
 unknown guide slug, which is why `seed_collections` comes after all the guide
 steps: "The Burys of Connecticut" pulls five guides from the CT-5 code modules
 and five (Salisbury, Roxbury, Simsbury, Glastonbury, Canterbury) from the
-Connecticut JSON corpus.
+Connecticut JSON corpus, and "Major League Ballparks" pulls all thirty ballpark
+guides from step 6. Between them the collections now depend on three separate
+guide steps, so `seed_collections` is not satisfiable by any subset of them.
 
 On the current production database Manhattan and the CT-5 guides are already
 live, so a re-deploy of an existing branch is unaffected. These dependencies
@@ -172,8 +184,9 @@ countable independently:
 | 2 | Connecticut (CT-5 only) | **5** | `Ethos.Guides.list_published_guides() \|> Enum.count(&(&1.state == ~s(Connecticut)))` |
 | 3 | Connecticut (full) | **170** | same as above |
 | 4 | Brooklyn | **69** | `Ethos.Guides.list_published_guides() \|> Enum.count(&(&1.county == ~s(Brooklyn)))` |
+| 6 | MLB ballparks | **30** | `Ethos.Seeds.Catalog.guide_modules(~s(ballparks)) \|> Enum.count(fn {m, _} -> Ethos.Guides.get_published_guide_by_slug(m.data().slug) end)` |
 
-Full rebuild total, excluding Rome: **277**.
+Full rebuild total, excluding Rome: **307**.
 
 Where the numbers come from:
 
@@ -199,8 +212,23 @@ Where the numbers come from:
   first (`EthosWeb.DestinationController`), and the two tiers render from
   different templates (`EthosWeb.GuideController.template_for/1`).
 
+- **MLB ballparks 30** — one guide module per ballpark in
+  `Ethos.Seeds.Catalog.guide_modules("ballparks")`, which is also where the
+  count in the check comes from, so it cannot drift from the catalog. That the
+  catalog holds exactly thirty, matching the thirty clubs on the roster and the
+  thirty `stadium` places, is asserted in
+  `test/ethos/seeds/mlb_clubs_roster_test.exs`; that all thirty are items of the
+  `mlb-ballparks` collection is asserted in
+  `test/ethos/seeds/mlb_ballparks_collection_test.exs`. Re-derive this number
+  from the catalog rather than editing it to match a live database.
+
 If a count is short, **do not proceed to the next step.** Re-run the same
 seeder (see below) and re-check.
+
+After step 7, `/c/mlb-ballparks` should list thirty guides, and each ballpark
+guide page should carry a *"Part of Major League Ballparks"* line under its
+title. If the collection page is short, the guide it dropped shows no such
+line and nothing else reports it — re-run steps 6 and 7 in that order.
 
 ## Seeding is not transactional across a run
 
