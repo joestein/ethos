@@ -15,7 +15,7 @@
 {"city":null,"club":"Los Angeles Angels","county":null,"slug":"los-angeles-angels","state":null,"venue":null,"verified":false},
 {"city":"Los Angeles","club":"Los Angeles Dodgers","county":"Los Angeles County","slug":"los-angeles-dodgers","state":"California","venue":"Dodger Stadium","verified":true},
 {"city":null,"club":"Miami Marlins","county":null,"slug":"miami-marlins","state":null,"venue":null,"verified":false},
-{"city":null,"club":"Milwaukee Brewers","county":null,"slug":"milwaukee-brewers","state":null,"venue":null,"verified":false},
+{"city":"Milwaukee","club":"Milwaukee Brewers","county":"Milwaukee County","slug":"milwaukee-brewers","state":"Wisconsin","venue":"American Family Field","verified":true},
 {"city":null,"club":"Minnesota Twins","county":null,"slug":"minnesota-twins","state":null,"venue":null,"verified":false},
 {"city":"Flushing","club":"New York Mets","county":"Queens","slug":"new-york-mets","state":"New York","venue":"Citi Field","verified":true},
 {"city":"Bronx","club":"New York Yankees","county":"Bronx","slug":"new-york-yankees","state":"New York","venue":"Yankee Stadium","verified":true},
