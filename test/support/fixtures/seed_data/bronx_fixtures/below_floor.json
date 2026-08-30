@@ -14,6 +14,8 @@
   "places": [],
   "entries": [],
   "links": [
-    {"target": "guide:midtown-manhattan-guide", "kind": "see-also", "note": null}
+    {"target": "guide:midtown-manhattan-guide", "kind": "see-also", "note": null},
+    {"target": "guide:harlem-manhattan-guide", "kind": "see-also", "note": null},
+    {"target": "guide:washington-heights-manhattan-guide", "kind": "see-also", "note": null}
   ]
 }

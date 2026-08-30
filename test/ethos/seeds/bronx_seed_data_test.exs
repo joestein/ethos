@@ -399,11 +399,28 @@ defmodule Ethos.Seeds.BronxSeedDataTest do
   # legal name would derive `bronx-county` — splitting the borough hub away
   # from Brooklyn's and Manhattan's. The value is one word and it is wrong in
   # exactly one plausible way, so it is asserted rather than reviewed.
+  #
+  # PLACES ARE CHECKED TOO, not just the guide. `Ethos.Places.Place` derives
+  # `county_slug` from a place's own `county` by the identical mechanism
+  # (place.ex:89), and `count_open_places_in_county/2` filters on it. A guide
+  # filed under "Bronx" whose places carry "Bronx County" passes every other
+  # assertion in this file and silently splits the borough's place counts on
+  # the hub — sixty-six guides times a dozen places each. The two fields are
+  # written in different parts of a seed file by the same author, so the guide
+  # being right is no evidence at all about the places.
+  #
+  # Each violation names WHERE it was found, so a place-level miss is not
+  # reported as a guide-level one.
   defp county_violations(paths) do
     for f <- paths,
         data = DataGuide.load!(f),
-        data["guide"]["county"] != "Bronx",
-        do: {Path.basename(f), data["guide"]["county"]}
+        {where, county} <-
+          [
+            {"guide", data["guide"]["county"]}
+            | for(p <- data["places"], do: {"place #{p["slug"]}", p["county"]})
+          ],
+        county != "Bronx",
+        do: {Path.basename(f), where, county}
   end
 
   # --- The unified transit section ----------------------------------------
@@ -470,6 +487,20 @@ defmodule Ethos.Seeds.BronxSeedDataTest do
         do: {Path.basename(f), p["slug"]}
   end
 
+  # Counted as DISTINCT FILES, not as matching places, and the difference is
+  # the difference between a gate that survives and one that gets deleted.
+  #
+  # The patterns are front-anchored, so `^orchard-beach` also matches
+  # `orchard-beach-pavilion` — a real, separately notable structure — and
+  # `^bronx-zoo` matches any sub-attraction a wave writes up. Both are
+  # legitimate content in ONE guide. Counting matching places would take those
+  # to 2 and fail at Task 5 saying "two neighborhoods wrote it up", which would
+  # be untrue, on the row most likely to be the one someone deletes. Counting
+  # files keeps the failure honest: the cross-wave duplicate is still two
+  # files, the sub-place is one.
+  defp marquee_file_count(occurrences),
+    do: occurrences |> Enum.map(&elem(&1, 0)) |> Enum.uniq() |> length()
+
   # --- The assertions fire (proven against fixtures) ----------------------
   #
   # The fixtures live outside priv/seed_data/bronx/ so they are never seeded,
@@ -499,12 +530,45 @@ defmodule Ethos.Seeds.BronxSeedDataTest do
            "fixtures other than vague_proximity.json contain proximity phrasing: #{inspect(violations)}"
   end
 
+  # Both branches of the tier invariant are proven, and both messages are
+  # pinned. With one fixture and a wildcard message, deleting the thin-guide
+  # branch left the suite green: `bad_tier.json` exercises the town-page branch
+  # only, and a `cond` reports whichever branch matched first.
+  #
+  # Pinning the message is the cheap half of the fix — a wildcard `_` also
+  # accepts the OTHER branch's message, so the test cannot tell which rule
+  # fired.
+
   test "the tier invariant catches a town-page carrying six places" do
-    assert [{"bad_tier.json", _}] = tier_violations([fixture("bad_tier.json")])
+    assert [{"bad_tier.json", "town-page with 6 places — should be a guide"}] =
+             tier_violations([fixture("bad_tier.json")])
   end
 
+  test "the tier invariant catches a full guide with too few places" do
+    assert [{"thin_guide.json", "full guide with only 3 places"}] =
+             tier_violations([fixture("thin_guide.json")])
+  end
+
+  # The same hole, and the one that mattered most: `below_floor.json` violated
+  # BOTH floor rules (an 18-word intro and 1 outbound link), `floor_violations/1`
+  # is a `cond` that reports only the first violated branch, and the assertion
+  # wildcarded the message. Probed: deleting `words < 90` left the suite green
+  # because the link rule then fired instead; deleting `links < 3` left it green
+  # because the word rule was firing already. Each rule was covered only by the
+  # other one failing first.
+  #
+  # The spec expects the Bronx to skew toward orientation pages, so this floor
+  # is the quality gate on the majority of sixty-six guides. Two fixtures now,
+  # each violating one rule, each message pinned.
+
   test "the orientation floor catches a short intro" do
-    assert [{"below_floor.json", _}] = floor_violations([fixture("below_floor.json")])
+    assert [{"below_floor.json", "intro is 18 words, floor is 90"}] =
+             floor_violations([fixture("below_floor.json")])
+  end
+
+  test "the orientation floor catches too few outbound links" do
+    assert [{"below_link_floor.json", "only 2 outbound links, floor is 3"}] =
+             floor_violations([fixture("below_link_floor.json")])
   end
 
   test "the licence allowlist catches a non-free licence" do
@@ -532,9 +596,19 @@ defmodule Ethos.Seeds.BronxSeedDataTest do
     assert transit_faq_violations([fixture("missing_getting_there.json")]) == []
   end
 
-  test "the county assertion catches the legal name" do
-    assert [{"bad_county.json", "Bronx County"}] =
+  # Both arms of the county rule, each with its own fixture and each naming
+  # where the bad value was found. The place arm is the one that matters more:
+  # a guide filed under "Bronx" whose places carry the legal name passes every
+  # other assertion here and splits the borough's place counts on the hub.
+
+  test "the county assertion catches the legal name on a guide" do
+    assert [{"bad_county.json", "guide", "Bronx County"}] =
              county_violations([fixture("bad_county.json")])
+  end
+
+  test "the county assertion catches the legal name on a place" do
+    assert [{"bad_place_county.json", "place fixture-bronx-bad-place-county", "Bronx County"}] =
+             county_violations([fixture("bad_place_county.json")])
   end
 
   # --- Each pattern is individually load-bearing --------------------------
@@ -542,6 +616,13 @@ defmodule Ethos.Seeds.BronxSeedDataTest do
   test "each of the eleven trip-duration patterns is individually load-bearing" do
     assert length(@trip_duration_patterns) == 11
     assert length(@trip_duration_specimens) == length(@trip_duration_patterns)
+
+    # A hole in the specimen mechanism itself, closed here: matching lengths
+    # alone allow a duplicated index. Replacing {5, ...} with a second {1, ...}
+    # keeps the count at eleven, checks pattern 1 twice, and leaves pattern 5
+    # unguarded with the suite green. The indices must be exactly 1..11, once
+    # each, in order.
+    assert Enum.map(@trip_duration_specimens, &elem(&1, 0)) == Enum.to_list(1..11)
 
     for {n, specimen} <- @trip_duration_specimens do
       pattern = Enum.at(@trip_duration_patterns, n - 1)
@@ -557,6 +638,7 @@ defmodule Ethos.Seeds.BronxSeedDataTest do
   test "each of the nine proximity patterns is individually load-bearing" do
     assert length(@proximity_patterns) == 9
     assert length(@proximity_specimens) == length(@proximity_patterns)
+    assert Enum.map(@proximity_specimens, &elem(&1, 0)) == Enum.to_list(1..9)
 
     for {n, specimen} <- @proximity_specimens do
       pattern = Enum.at(@proximity_patterns, n - 1)
@@ -583,6 +665,38 @@ defmodule Ethos.Seeds.BronxSeedDataTest do
                "claim: #{inspect(claim)}. A gate that bans the checkable form pushes authors " <>
                "toward vagueness."
     end
+  end
+
+  # The same both-directions discipline applied to the licence allowlist, which
+  # otherwise had only its negative half. Narrowing `allowed_license?/1` to
+  # `l in ["Public domain", "CC0"]` — dropping every Creative Commons
+  # attribution licence, which is what most Commons photos actually carry —
+  # left the suite green: bad_license.json still fails, because a narrower rule
+  # rejects strictly more. It would surface at the first CC BY photo rather
+  # than silently, so this is the cheapest of the closures, but it costs three
+  # lines and it mirrors "sourced spatial claims still publish".
+  @publishable_licenses [
+    "Public domain",
+    "CC0",
+    "CC BY 2.0",
+    "CC BY 3.0",
+    "CC BY 4.0",
+    "CC BY-SA 2.0",
+    "CC BY-SA 3.0",
+    "CC BY-SA 4.0"
+  ]
+
+  test "publishable licences still pass the allowlist" do
+    for l <- @publishable_licenses do
+      assert allowed_license?(l),
+             "#{inspect(l)} is a licence this corpus publishes under and the allowlist now " <>
+               "rejects it — a gate that rejects the free forms makes the licence field " <>
+               "unusable, and most Commons photos carry one of these."
+    end
+
+    refute allowed_license?("All rights reserved")
+    refute allowed_license?("CC BY-NC 4.0"), "non-commercial is not publishable on this site"
+    refute allowed_license?("CC BY-ND 4.0"), "no-derivatives forbids the optimizer's resize"
   end
 
   # --- The committed corpus obeys all of them -----------------------------
@@ -760,13 +874,29 @@ defmodule Ethos.Seeds.BronxSeedDataTest do
 
     for {name, pattern} <- @marquee_institutions do
       found = marquee_occurrences(files, pattern)
+      n = marquee_file_count(found)
 
-      assert length(found) == 1,
-             "#{name} appears in #{length(found)} bronx seed files, want exactly 1: " <>
+      assert n == 1,
+             "#{name} appears in #{n} bronx seed files, want exactly 1: " <>
                inspect(found) <>
                ". Zero means it fell between two waves — the park rows span community " <>
                "districts, so each wave can assume the other covered it. More than one " <>
-               "means two neighborhoods wrote it up, and the two records will drift."
+               "means two neighborhoods wrote it up, and the two records will drift. " <>
+               "A sub-place in the same file (orchard-beach-pavilion) is one file and " <>
+               "passes; widen the pattern if a verdict's slug misses it, never delete the row."
     end
+  end
+
+  # The counting rule proven directly, because the corpus that would exercise
+  # it does not exist yet and will not until Task 5 — by which time getting
+  # this wrong means a false "two neighborhoods wrote it up" on a row a wave is
+  # being asked to trust.
+  test "a marquee institution's sub-place in one guide is one occurrence, two guides are two" do
+    one_guide = [{"bronx-park.json", "bronx-zoo"}, {"bronx-park.json", "bronx-zoo-congo-gorilla"}]
+    two_guides = [{"bronx-park.json", "bronx-zoo"}, {"belmont.json", "bronx-zoo"}]
+
+    assert marquee_file_count(one_guide) == 1
+    assert marquee_file_count(two_guides) == 2
+    assert marquee_file_count([]) == 0
   end
 end

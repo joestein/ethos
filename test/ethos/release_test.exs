@@ -41,6 +41,51 @@ defmodule Ethos.ReleaseTest do
     assert length(brooklyn.()) == expected
   end
 
+  # The Bronx equivalent, written at the stage Brooklyn's was: the directory
+  # holds only .gitkeep. What needs proving now is not that guides publish —
+  # none exist — but that the release hook points at a directory that is really
+  # there. `seed_directory/2` takes the directory as a string literal and globs
+  # it, so `seed_directory("brnox", email)` seeds nothing, raises nothing, and
+  # prints a cheerful "Seeded 0 files": a silent production no-op that
+  # bronx_seed_data_test.exs cannot see, because the gate reads the filesystem
+  # and never calls the release module.
+  #
+  # Written against `seed_files("bronx")` rather than against the literal 0, so
+  # it does not expire the way Brooklyn's did. When wave 1 lands this becomes
+  # the same publishes-exactly-the-committed-files assertion Brooklyn's is now,
+  # with no edit.
+  test "seed_bronx/1 publishes exactly the committed Bronx seed files, idempotently" do
+    user = user_fixture()
+    expected = length(SeedDataHelpers.seed_files("bronx"))
+
+    # The runbook order is seed_manhattan -> seed_connecticut ->
+    # seed_connecticut_expansion -> seed_brooklyn -> seed_bronx. Manhattan is
+    # reproduced here because Links.resolve!/1 raises on an unknown target
+    # rather than skipping the edge, and the Bronx's cross-borough see-also
+    # edges point across the Harlem River. If a wave authors an edge to a
+    # Brooklyn guide, seed_brooklyn/1 belongs here too.
+    Ethos.Release.seed_manhattan(user.email)
+
+    output = capture_io(fn -> Ethos.Release.seed_bronx(user.email) end)
+
+    # The directory literal is the thing under test. The count comes from the
+    # release module's own report; the existence check is what a typo fails.
+    assert output =~ "Seeded #{expected} files from priv/seed_data/bronx"
+
+    assert File.dir?(Path.join([to_string(:code.priv_dir(:ethos)), "seed_data", "bronx"])),
+           "seed_bronx/1 names a directory that does not exist — it would be a silent no-op"
+
+    bronx = fn ->
+      Ethos.Guides.list_published_guides() |> Enum.filter(&(&1.county == "Bronx"))
+    end
+
+    assert length(bronx.()) == expected
+
+    capture_io(fn -> Ethos.Release.seed_bronx(user.email) end)
+
+    assert length(bronx.()) == expected
+  end
+
   # The manifest ships empty and waves append to it, so none of these may
   # assume a size. The load-bearing one while it is still empty is the last:
   # prune deletes only what the manifest names, so a place absent from the

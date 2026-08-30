@@ -1,0 +1,20 @@
+{
+  "guide": {
+    "slug": "fixture-thin-guide-bronx-guide",
+    "title": "Fixture: Thin Guide",
+    "destination": "Fixture, New York",
+    "state": "New York",
+    "county": "Bronx",
+    "tier": "guide",
+    "intro": "A fixture guide used only to prove the thin-guide branch of the tier invariant fires.",
+    "sections": [],
+    "faq": [],
+    "photos": []
+  },
+  "places": [
+    {"slug": "fixture-bronx-thin-guide-one", "name": "One", "kind": "park", "town": "Fixture", "state": "New York", "county": "Bronx", "summary": "A fixture place.", "status": "open", "photos": []},
+    {"slug": "fixture-bronx-thin-guide-two", "name": "Two", "kind": "park", "town": "Fixture", "state": "New York", "county": "Bronx", "summary": "A fixture place.", "status": "open", "photos": []},
+    {"slug": "fixture-bronx-thin-guide-three", "name": "Three", "kind": "park", "town": "Fixture", "state": "New York", "county": "Bronx", "summary": "A fixture place.", "status": "open", "photos": []}
+  ],
+  "entries": []
+}
