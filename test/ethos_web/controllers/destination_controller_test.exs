@@ -361,4 +361,75 @@ defmodule EthosWeb.DestinationControllerTest do
     html = conn |> get(~p"/destinations/rome") |> html_response(200)
     assert html =~ "The Eternal City rewards slow mornings and long walks."
   end
+
+  # `show/2` tries the state branch first and falls back to the town hub only on
+  # an empty result, so a state named like an existing town takes that town's
+  # URL. The live pair is Washington: seeding T-Mobile Park minted a Washington
+  # state hub at `/destinations/washington`, which is the URL Washington,
+  # Connecticut had and which is in the sitemap. Nothing 404s and nothing logs —
+  # the page simply stops listing the guide it used to list.
+  describe "a state hub that shadows a town of the same slug" do
+    test "surfaces the shadowed town's guides on the state page", %{conn: conn} do
+      state_guide =
+        published_guide_fixture(%{
+          title: "Ballpark by the Sound",
+          destination: "Seattle, Washington",
+          state: "Washington",
+          county: "King County"
+        })
+
+      town_guide =
+        published_guide_fixture(%{
+          title: "Washington, Connecticut: The Gunnery and Five Villages",
+          destination: "Washington, Connecticut",
+          state: "Connecticut",
+          county: "Litchfield County"
+        })
+
+      html = conn |> get(~p"/destinations/washington") |> html_response(200)
+
+      # Still the state hub: same title, same URL, no redirect.
+      assert html =~ "Washington travel guides"
+      assert html =~ "/g/#{state_guide.slug}"
+
+      # And the town it displaced is reachable from it.
+      assert html =~ "Washington, Connecticut"
+      assert html =~ "/g/#{town_guide.slug}"
+    end
+
+    test "a state hub with no colliding town renders exactly as before", %{conn: conn} do
+      guide =
+        published_guide_fixture(%{
+          title: "Ballpark by the Sound",
+          destination: "Seattle, Washington",
+          state: "Washington",
+          county: "King County"
+        })
+
+      html = conn |> get(~p"/destinations/washington") |> html_response(200)
+
+      assert html =~ "Washington travel guides"
+      assert html =~ "/g/#{guide.slug}"
+      refute html =~ "Looking for"
+    end
+
+    # A guide whose destination *is* the state — `destination: "Connecticut"`,
+    # `state: "Connecticut"` — slugifies both fields to `connecticut`. It is not
+    # shadowed: it already lists among the hub's own guides, and advertising it
+    # as something the hub is hiding would point a reader at the page they are on.
+    test "a state-wide guide is not advertised as a shadowed town", %{conn: conn} do
+      published_guide_fixture(%{
+        title: "The Antique Trail of Connecticut",
+        destination: "Connecticut",
+        state: "Connecticut",
+        county: "Litchfield County"
+      })
+
+      html = conn |> get(~p"/destinations/connecticut") |> html_response(200)
+
+      assert html =~ "Connecticut travel guides"
+      assert html =~ "The Antique Trail of Connecticut"
+      refute html =~ "Looking for"
+    end
+  end
 end

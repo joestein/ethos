@@ -20,6 +20,20 @@
     </p>
     <div class="prose mt-4">{EthosWeb.Markdown.render(@destination.intro)}</div>
   </section>
+  <div
+    :for={{destination, shadowed_guides} <- @shadowed}
+    class="mt-6 rounded-xl border border-zinc-200 bg-zinc-50 p-4 text-sm text-zinc-600"
+  >
+    Looking for {destination}? This page is the {@state} hub. Its guides are
+    <.link
+      :for={g <- shadowed_guides}
+      navigate={~p"/g/#{g.slug}"}
+      class="ml-1 underline first:ml-0"
+    >
+      {g.title}
+    </.link>
+  </div>
+
   <h2 class="mt-8 font-semibold">By county</h2>
   <ul class="mt-3 space-y-2">
     <li :for={c <- @counties}>

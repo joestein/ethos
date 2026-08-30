@@ -57,6 +57,41 @@ defmodule Ethos.Guides do
     )
   end
 
+  @doc """
+  Published guides a state hub of the same slug hides.
+
+  `/destinations/:slug` tries the state branch first and only falls back to the
+  town hub on an empty result (`DestinationController.show/2`), so a state whose
+  slug matches an existing town's takes the URL and that town's guides drop off
+  the site's navigation entirely — no error, no redirect, just a page that used
+  to list them and no longer does. The corpus has exactly one such pair: the
+  Washington state hub, minted by the T-Mobile Park guide, over
+  `washington-ct-travel-guide`.
+
+  The remedy is additive rather than a rename: the URL and the route stay as they
+  are, and `state.html.heex` renders a line pointing at whatever this returns.
+  Renaming the Connecticut guide's `destination` would move an indexed page, which
+  trades a content regression for a link regression.
+
+  A guide whose own `state_slug` is the slug is not hidden — it already lists on
+  the hub as one of its own guides. `antique-trail-of-connecticut` is that case:
+  `destination: "Connecticut"` and `state: "Connecticut"` both slugify to
+  `connecticut`, and it must not be advertised as something the hub is hiding.
+
+  `list_destinations_without_state/0` does not answer this question. It selects on
+  a nil `state_slug`, and a hidden town guide carries its own state — Washington,
+  Connecticut is in Connecticut.
+  """
+  def list_guides_shadowed_by_state(slug) do
+    Repo.all(
+      from g in Guide,
+        where:
+          g.status == "published" and g.destination_slug == ^slug and
+            (is_nil(g.state_slug) or g.state_slug != ^slug),
+        order_by: [asc: g.destination, desc: g.view_count, desc: g.id]
+    )
+  end
+
   def list_destinations do
     Repo.all(
       from g in Guide,

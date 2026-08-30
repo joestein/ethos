@@ -95,6 +95,15 @@ defmodule EthosWeb.DestinationController do
     counties = Guides.list_counties_for_state(slug)
     title = "#{state} travel guides"
 
+    # A state hub wins this URL from any town of the same name, so the town it
+    # displaced is surfaced here rather than lost. Grouped by destination
+    # because the line names the town, and one town may hold several guides.
+    shadowed =
+      slug
+      |> Guides.list_guides_shadowed_by_state()
+      |> Enum.group_by(& &1.destination)
+      |> Enum.sort_by(&elem(&1, 0))
+
     description =
       "Travel guides for #{state} — history, sites, restaurants, and places to stay, county by county."
 
@@ -110,6 +119,7 @@ defmodule EthosWeb.DestinationController do
       slug: slug,
       counties: counties,
       guides: guides,
+      shadowed: shadowed,
       destination: destination,
       page_title: title,
       page_og: page_og,
