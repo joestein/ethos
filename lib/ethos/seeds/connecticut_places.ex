@@ -1,10 +1,11 @@
 defmodule Ethos.Seeds.ConnecticutPlaces do
   @moduledoc """
-  Seeds the 50 verified Connecticut places for the five-town guides
-  (Waterbury, Middlebury, Danbury, Southbury, Woodbury). Idempotent:
-  `upsert_all!/0` upserts by slug. All facts verified against official
-  sources in the 2026-08 research passes; photos are Wikimedia Commons
-  free-license images with attribution.
+  Seeds the verified Connecticut places for the five-town guides
+  (Waterbury, Middlebury, Danbury, Southbury, Woodbury) plus the Woodbury
+  antiques dealers that the Antique Trail of Connecticut guide walks.
+  Idempotent: `upsert_all!/0` upserts by slug. All facts verified against
+  official sources in the 2026-08 research passes; photos are Wikimedia
+  Commons free-license images with attribution.
   """
 
   alias Ethos.Places
@@ -20,7 +21,7 @@ defmodule Ethos.Seeds.ConnecticutPlaces do
   end
 
   def places do
-    waterbury() ++ middlebury() ++ danbury() ++ southbury() ++ woodbury()
+    waterbury() ++ middlebury() ++ danbury() ++ southbury() ++ woodbury() ++ woodbury_antiques()
   end
 
   defp photo(town, label, title, description, author, license, source_url) do
@@ -755,5 +756,205 @@ defmodule Ethos.Seeds.ConnecticutPlaces do
         ]
       })
     ]
+  end
+
+  # The Woodbury antiques dealers, from the 2026-08-29 place-research wave and
+  # its independent adversarial verification. Every clause below restates the
+  # text of a `confirmed` verdict; the wave's `refuted` and `uncertain` items —
+  # founding dates, building ages, award claims, showroom counts, association
+  # memberships the association's own page does not assert — are deliberately
+  # absent, and the report at
+  # .superpowers/sdd/2026-08-29-place-research-wave/antique-trail-report.md
+  # records each omission against its verdict.
+  #
+  # None of these records carries a `status`, so all take the schema default of
+  # "open", which renders nothing: the template shows a banner only for
+  # "closed". Eight of the seventeen are open on Connecticut Secretary of State
+  # registry evidence and nine are unestablished either way; none is closed, and
+  # no record here makes a positive claim about current trading.
+  #
+  # "Member of the Woodbury Antiques Dealers Association" appears only where a
+  # verdict places the shop in the association's "Members Include" group. Eight
+  # dealers sit in a separate "Other Woodbury Antiques Dealers Include" courtesy
+  # list and are described that way or not at all.
+  defp woodbury_antiques do
+    main_street_north() ++ main_street_south() ++ [flea_market()]
+  end
+
+  # Listed by street number, as the Antique Trail guide walks them.
+  defp main_street_north do
+    [
+      Map.merge(@woodbury, %{
+        slug: "villa-vintiques-woodbury",
+        name: "Villa Vintiques",
+        kind: "shop",
+        address: "12 Main Street North, Woodbury, CT 06798",
+        official_url: "https://www.villavintiques.com/",
+        summary:
+          "A shop at 12 Main Street North selling antique and vintage furniture, mirrors, artwork, lighting, collectibles, ceramics, glassware, and decorative pieces, alongside goods from local artisans. Upstairs is The Silver Spur, a separate equestrian consignment operation. The shop publishes its hours as Wednesday to Saturday 11 a.m. to 5 p.m. and Sunday noon to 5 p.m., and accepts card, Apple Pay, Venmo, and cash. Telephone (203) 364-4042.",
+        photos: []
+      }),
+      Map.merge(@woodbury, %{
+        slug: "abrash-galleries-woodbury",
+        name: "Abrash Galleries Rugs & Antiquities",
+        kind: "shop",
+        address: "40 Main Street North, Woodbury, CT 06798",
+        official_url: "https://abrashgalleries.com/",
+        summary:
+          "A rug gallery at 40 Main Street North dealing in one-of-a-kind antique and semi-antique rugs — Persian, Chinese, Turkish, Indian, American Indian, hooked, and Pakistani — along with art, pottery, lighting, and nomadic jewelry. Services include appraisals, rug cushions, rug washing, and rug restoration. Karen Reddington-Hughes is the named dealer. The Connecticut Office of Tourism gives hours as Tuesday to Saturday 10 a.m. to 5 p.m. and Sunday noon to 5 p.m., year-round; that listing carries no date, so telephone 203-263-7847 first.",
+        photos: []
+      }),
+      Map.merge(@woodbury, %{
+        slug: "schwenke-group-woodbury",
+        name: "Schwenke Group LLC",
+        kind: "shop",
+        address: "50 Main Street North, Woodbury, CT 06798",
+        official_url: "http://schwenke.com/",
+        summary:
+          "A dealer in original American Federal period furniture at 50 Main Street North — dining tables and chairs, sideboards, desks, easy chairs, sofas, tables, dressing tables, and mirrors — sold with a written guarantee of authenticity. The business also offers design services, appraisals, restorations, custom furniture, and a replica line trademarked American Federal Classics. Tom Schwenke is the named dealer. The Woodbury Antiques Dealers Association lists the business as Schwenke Group LLC; the Connecticut Office of Tourism still lists it under the earlier company name Thomas Schwenke, Inc. Hours are given as Saturday 10 a.m. to 5 p.m. or by appointment; telephone (203) 266-0303.",
+        photos: []
+      }),
+      Map.merge(@woodbury, %{
+        slug: "wayne-mattox-antiques-woodbury",
+        name: "Wayne Mattox Antiques",
+        kind: "shop",
+        address: "82 Main Street North, Woodbury, CT 06798",
+        summary:
+          "An antiques dealer at 82 Main Street North and a member of the Woodbury Antiques Dealers Association, which gives its stock as folk art, furniture, art pottery, primitives, collectibles, and ephemera, and adds appraisals. Wayne and Kathleen Mattox are the named dealers. The Connecticut Office of Tourism gives hours as daily 10 a.m. to 5 p.m. year-round and instructs visitors to call ahead: telephone (203) 263-2899.",
+        photos: []
+      }),
+      Map.merge(@woodbury, %{
+        slug: "the-coop-antiques-woodbury",
+        name: "The Coop Antiques and Collectibles",
+        kind: "shop",
+        address: "245 Main Street North, Woodbury, CT 06798",
+        summary:
+          "An antiques and collectibles dealer at 245 Main Street North, registered with the Connecticut Secretary of State as The Coop-Antiques LLC at that address. The Woodbury Antiques Dealers Association carries it among other Woodbury antiques dealers, with Richard Albano as dealer and telephone 646-209-8923. No source states a specialism beyond antiques and collectibles.",
+        photos: []
+      }),
+      Map.merge(@woodbury, %{
+        slug: "mill-house-antiques-woodbury",
+        name: "Mill House Antiques & Gardens",
+        kind: "shop",
+        address: "1068 Main Street North, Woodbury, CT 06798",
+        official_url: "https://www.millhouseantiquesandgardens.com/",
+        summary:
+          "A dealer in antique furniture and decorative arts at 1068 Main Street North, listed by the Connecticut Office of Tourism at that address on Route 6. Its own site catalogues stock by category — armoires and linen presses, buffets, chests, clocks, coffers and trunks, consoles and demilunes, cupboards, desks and writing tables, dining and farm tables, sideboards, lighting, mirrors, paintings, Pembroke and drop-leaf tables, seating, secretaries, and Welsh dressers — and it also offers custom furniture and restoration. Two pages of that site publish conflicting opening hours, so telephone (203) 263-3446 before visiting.",
+        photos: []
+      })
+    ]
+  end
+
+  defp main_street_south do
+    [
+      Map.merge(@woodbury, %{
+        slug: "main-street-antiques-center-woodbury",
+        name: "Main Street Antiques Center",
+        kind: "shop",
+        address: "113 Main Street South, Woodbury, CT 06798",
+        summary:
+          "An antiques center at 113 Main Street South. The Woodbury Antiques Dealers Association gives that address and names Peggy Heminway as proprietor, carrying it among other Woodbury antiques dealers rather than among members; the Connecticut Secretary of State's principals file records Margaret Heminway at the same address as a principal of two companies. Telephone 203-263-0046.",
+        photos: []
+      }),
+      Map.merge(@woodbury, %{
+        slug: "art-pappas-antiques-woodbury",
+        name: "Art Pappas Antiques",
+        kind: "shop",
+        address: "161 Main Street South, Woodbury, CT 06798",
+        official_url: "https://www.artpappas.com/",
+        summary:
+          "A dealer at 161 Main Street South, which describes itself as trading at the Main Street Antiques Center, in American furniture and accessories from the Pilgrim Century through mid-century modern, plus architectural antiques, fireplace equipment, paintings, pottery, and stoneware. Its own navigation runs to furniture, mantels, architectural elements, folk art and accessories, hardware, flooring, and paneling. Architectural salvage and antique building materials — wide board flooring, mantels, doors, windows, hardware, beams, and barnsiding — are shown by appointment only, and the shop describes itself as open by chance or appointment.",
+        photos: []
+      }),
+      Map.merge(@woodbury, %{
+        slug: "g-sergeant-antiques-woodbury",
+        name: "G. Sergeant Antiques",
+        kind: "shop",
+        address: "289 Main Street South, Woodbury, CT 06798",
+        summary:
+          "An antiques dealer at 289 Main Street South and a member of the Woodbury Antiques Dealers Association, with Gary Sergeant as the named dealer. Telephone (203) 266-4177; email gary@gsergeant.com. No access or hours guidance is published here: the only source for it was a website the verification pass could not open.",
+        photos: []
+      }),
+      Map.merge(@woodbury, %{
+        slug: "david-schorsch-eileen-smiles-antiques-woodbury",
+        name: "David A. Schorsch and Eileen M. Smiles American Antiques",
+        kind: "shop",
+        address: "358 Main Street South, Woodbury, CT 06798",
+        official_url: "https://americanantiqueart.com/",
+        summary:
+          "A gallery of American antiques and folk art at 358 Main Street South, open by appointment: weathervanes, folk paintings, folk sculpture, formal and country furniture, Shaker design, boxes and baskets, decoys, Pennsylvania German work, painted furniture, and Windsor chairs. The business publishes scholarship alongside stock — Americana Insights, articles, books, and catalogues. The Connecticut Secretary of State's principals file records David Schorsch and Eileen Smiles as principals of companies at the address, and the Woodbury Antiques Dealers Association names David Schorsch as dealer among its members. Telephone (203) 263-3131.",
+        photos: []
+      }),
+      Map.merge(@woodbury, %{
+        slug: "madeline-west-antiques-woodbury",
+        name: "Madeline West Antiques",
+        kind: "shop",
+        address: "373 Main Street South, Woodbury, CT 06798",
+        official_url: "https://madelinewestantiques.com/",
+        summary:
+          "A dealer in European, American, and Asian antique art, paintings, porcelain, and furniture of the 18th to the early 20th century, shown across five decorated rooms at 373 Main Street South and listed by the Connecticut Office of Tourism at that address on Route 6. Cynthia Pollock, daughter of Madeline West, is the current owner, and the shop is a member of the Woodbury Antiques Dealers Association. The tourism listing and the shop's own site disagree over whether it opens on Monday, so telephone 203-263-4604.",
+        photos: []
+      }),
+      Map.merge(@woodbury, %{
+        slug: "george-champion-modern-woodbury",
+        name: "George Champion Modern",
+        kind: "shop",
+        address: "442 Main Street South, Woodbury, CT 06798",
+        summary:
+          "The Woodbury Antiques Dealers Association's address list gives George Champion Modern Shop at 442 Main Street South, with George Champion as dealer and telephone 203-263-8442, among other Woodbury antiques dealers rather than among members. No source states what the shop deals in, and none beyond that one listing describes it at all.",
+        photos: []
+      }),
+      Map.merge(@woodbury, %{
+        slug: "kocian-depasqua-antiques-woodbury",
+        name: "Kocian DePasqua Antiques",
+        kind: "shop",
+        address: "451 Main Street South, Woodbury, CT 06798",
+        official_url: "http://www.kocian-depasqua.com/",
+        summary:
+          "A dealer in antiques and folk art of the 17th to 19th centuries at 451 Main Street South, listed by the Connecticut Office of Tourism at that address on Route 6, with an emphasis on early furniture and on form, condition, and surface. Frank DePasqua is the named dealer and the shop is a member of the Woodbury Antiques Dealers Association. Three sources give three different sets of opening hours, so no hours are published here; telephone 203-394-8196.",
+        photos: []
+      }),
+      Map.merge(@woodbury, %{
+        slug: "farmhouse-antiques-woodbury",
+        name: "Farmhouse Antiques",
+        kind: "shop",
+        address: "495 Main Street South, Woodbury, CT 06798",
+        summary:
+          "A dealer in primitive and country furniture and accessories at 495 Main Street South, registered with the Connecticut Secretary of State as Farmhouse Antiques LLC at that address. Julie and Martin Overton are the named dealers on the Woodbury Antiques Dealers Association's list of other Woodbury antiques dealers. The Connecticut Office of Tourism listing contradicts itself on opening hours, so telephone (203) 263-6400 before visiting.",
+        photos: []
+      }),
+      Map.merge(@woodbury, %{
+        slug: "clapp-and-tuttle-woodbury",
+        name: "Clapp & Tuttle Custom Framing & Fine Art",
+        kind: "shop",
+        address: "742 Main Street South, Middle Quarter, Woodbury, CT 06798",
+        official_url: "https://www.clappandtuttle.com/",
+        summary:
+          "A picture framer, conservator, and fine art gallery at 742 Main Street South in the Middle Quarter on Route 6 — not primarily an antiques retailer, which is worth knowing before walking in. The Woodbury Antiques Dealers Association profile describes works of art on paper for sale — lithograph, engraving, etching, woodblock, and watercolor — along with textile conservation and receptions for local artists. Mieke Schuyler is the named dealer and the business is a member of the association. Hours are Tuesday to Friday 9:30 a.m. to 5:30 p.m. and Saturday 9:30 a.m. to 4 p.m., with walk-ins welcome. Telephone 203-263-2207.",
+        photos: []
+      }),
+      Map.merge(@woodbury, %{
+        slug: "pantry-and-hearth-antiques-woodbury",
+        name: "Pantry & Hearth Antiques",
+        kind: "shop",
+        address: "994 Main Street South, Woodbury, CT 06798",
+        official_url: "https://pantryandhearth.com/",
+        summary:
+          "A dealer in Pilgrim-era American furniture — Jacobean, William & Mary, Queen Anne — with period accessories, at 994 Main Street South. The Woodbury Antiques Dealers Association, which carries the shop among its members with Gail Lettick as proprietor, adds treen, original-surface and painted high country furniture, and folk art; the shop's own site is organized as inventory, furniture, needlework, artwork, lighting, metalware, mirrors, and historical items. The Connecticut Office of Tourism gives it as daily by appointment with an April to December season, so telephone (203) 263-8555 first.",
+        photos: []
+      })
+    ]
+  end
+
+  defp flea_market do
+    Map.merge(@woodbury, %{
+      slug: "woodbury-antiques-and-flea-market",
+      name: "Woodbury Antiques and Flea Market",
+      kind: "shop",
+      address: "Junction of Route 6 and Route 64, Woodbury, CT 06798",
+      summary:
+        "A flea market where Route 6 meets Route 64. The Woodbury Antiques Dealers Association's address list gives it at Route 6 and 64, run by the Kaloidis family, telephone 203-263-6217; the Connecticut Office of Tourism's Woodbury Antiques Trail entry tells visitors to see the Antiques Flea Market on Saturdays where the trail crosses Route 64. Neither source carries a date.",
+      photos: []
+    })
   end
 end

@@ -106,6 +106,12 @@ defmodule Ethos.Seeds.WoodburyGuide do
           streetscape doesn't. Park once and walk Main Street South — the shops,
           John's Cafe, and Good News are all on the same stretch, with the Glebe
           House a turn away on Hollow Road.
+
+          Sixteen of those dealers, plus the Saturday flea market where Route 6
+          meets Route 64, are set out shop by shop in the
+          [Antique Trail of Connecticut](/g/antique-trail-of-connecticut) —
+          each one's address, what it deals in, and which of them open only by
+          appointment or by chance.
           """
         }
       ],

@@ -32,12 +32,17 @@ defmodule Ethos.Release do
 
     Ethos.Seeds.ConnecticutPlaces.upsert_all!()
 
+    # The Antique Trail guide's entries point at the Woodbury antiques dealers,
+    # which ConnecticutPlaces.upsert_all!/0 above has already seeded — the same
+    # places-then-guides order the JSON directories use. Upserting by slug, so
+    # a repeat run is a no-op.
     for mod <- [
           Ethos.Seeds.WaterburyGuide,
           Ethos.Seeds.MiddleburyGuide,
           Ethos.Seeds.DanburyGuide,
           Ethos.Seeds.SouthburyGuide,
-          Ethos.Seeds.WoodburyGuide
+          Ethos.Seeds.WoodburyGuide,
+          Ethos.Seeds.AntiqueTrailGuide
         ] do
       guide = mod.upsert!(email)
       IO.puts("Seeded: /g/#{guide.slug}")
@@ -53,11 +58,16 @@ defmodule Ethos.Release do
     IO.puts("Upserted #{count} page links")
   end
 
+  # Runs after the guide seeds, not before: Collections.upsert_collection!/1
+  # raises on an item whose guide slug has no row yet.
   def seed_collections do
     load_app()
     Application.ensure_all_started(@app)
-    collection = Ethos.Seeds.BurysCollection.upsert!()
-    IO.puts("Seeded collection: /c/#{collection.slug}")
+
+    for mod <- [Ethos.Seeds.BurysCollection, Ethos.Seeds.AntiqueTrailCollection] do
+      collection = mod.upsert!()
+      IO.puts("Seeded collection: /c/#{collection.slug}")
+    end
   end
 
   def seed_connecticut_expansion(email), do: seed_directory("connecticut", email)
