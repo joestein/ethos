@@ -327,6 +327,7 @@ defmodule Ethos.Seeds.BallparkSeedDataTest do
     {"dodger-stadium", "dodger-stadium-guide"},
     {"fenway-park", "fenway-park-guide"},
     {"great-american-ball-park", "great-american-ball-park-guide"},
+    {"kauffman-stadium", "kauffman-stadium-guide"},
     {"nationals-park", "nationals-park-guide"},
     {"oracle-park", "oracle-park-guide"},
     {"oriole-park-at-camden-yards", "oriole-park-at-camden-yards-guide"},
