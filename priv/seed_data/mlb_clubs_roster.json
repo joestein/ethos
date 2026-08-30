@@ -26,7 +26,7 @@
 {"city":null,"club":"Seattle Mariners","county":null,"slug":"seattle-mariners","state":null,"venue":null,"verified":false},
 {"city":"St. Louis","club":"St. Louis Cardinals","county":"St. Louis","slug":"st-louis-cardinals","state":"Missouri","venue":"Busch Stadium","verified":true},
 {"city":"St. Petersburg","club":"Tampa Bay Rays","county":"Pinellas County","slug":"tampa-bay-rays","state":"Florida","venue":"Tropicana Field","verified":true},
-{"city":null,"club":"Texas Rangers","county":null,"slug":"texas-rangers","state":null,"venue":null,"verified":false},
+{"city":"Arlington","club":"Texas Rangers","county":"Tarrant County","slug":"texas-rangers","state":"Texas","venue":"Globe Life Field","verified":true},
 {"city":"Toronto","club":"Toronto Blue Jays","county":"Toronto","slug":"toronto-blue-jays","state":"Ontario","venue":"Rogers Centre","verified":true},
 {"city":"Washington","club":"Washington Nationals","county":"District of Columbia","slug":"washington-nationals","state":"District of Columbia","venue":"Nationals Park","verified":true}
 ]
