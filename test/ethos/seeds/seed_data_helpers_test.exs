@@ -78,6 +78,7 @@ defmodule Ethos.SeedDataHelpersTest do
              "lib/ethos/seeds/nationals_park_places.ex",
              "lib/ethos/seeds/oracle_park_places.ex",
              "lib/ethos/seeds/oriole_park_at_camden_yards_places.ex",
+             "lib/ethos/seeds/rogers_centre_places.ex",
              "lib/ethos/seeds/wrigley_field_places.ex",
              "lib/ethos/seeds/yankee_stadium_places.ex"
            ]
