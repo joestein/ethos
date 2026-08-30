@@ -289,13 +289,18 @@ Then adding a third places module later is one edit in one place rather than
 four in four.
 
 **The guide half is blind the same way, and this task creates guide modules
-too.** `seed_guide_corpus!` (`test/ethos/seeds/destination_seed_data_test.exs:340-352`)
+too.** `seed_guide_corpus!` (`test/ethos/seeds/destination_seed_data_test.exs:340-357`)
 is a corpus-wide gate that seeds every committed seed file through the
 production loaders — free load-shape, `Place.changeset` and `Guide.changeset`
 validation for any new JSON directory. But it enumerates the *code* half by
-name, and there are **seven** names: `ConnecticutPlaces.upsert_all!()` plus
+name, in **two separate places**: `ConnecticutPlaces.upsert_all!()` standing
+alone at `:341`, and a list of six guide modules at `:343-350` —
 `WaterburyGuide`, `MiddleburyGuide`, `DanburyGuide`, `SouthburyGuide`,
 `WoodburyGuide` and `RomeGuide`.
+
+Seven names, one list of six. The distinction is the whole point: a reader who
+sees "seven" and goes looking for one list will add their guide module and miss
+`:341`.
 
 Two consequences, both live here:
 
@@ -334,10 +339,18 @@ is why counting by set shape gets it wrong:
 
 `:341`'s trigger is not "both halves in Elixir", which is how I first wrote it.
 `replace_entries!` lives in `GuideRunner` (`lib/ethos/seeds/guide_runner.ex:98-102`),
-and **both** code modules and the JSON loader route through it — so a JSON guide
-whose entries name a module-declared place raises exactly the same
+and the JSON loader routes through it — `DataGuide.upsert_guide!/2` ends in
+`GuideRunner.upsert!/2` and has no entry path of its own. So a JSON guide whose
+entries name a module-declared place raises exactly the same
 `get_place_by_slug!` error. The trigger is about where the *places* live and
 whether anything points at them, not about the guide's file format.
+
+One exception, so the rule is not stated as a universal: **`RomeGuide` does not
+route through `GuideRunner`.** It has its own `upsert!/1` and its own
+`replace_entries!/1`, and its entries carry no `place_slug` at all. Five of the
+six code guide modules use the runner; Rome hand-rolls. Harmless for this
+trigger — a guide with no place-linked entries cannot produce the raise — but
+worth knowing before generalising about how guides resolve entries.
 
 Also hardcoded, and worth fixing while you are there:
 `lib/mix/tasks/ethos.bare_places.ex:69` and `:79`. Not a gate, but it is the
