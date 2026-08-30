@@ -4,7 +4,7 @@ defmodule Ethos.Places.Place do
 
   alias Ethos.Guides.Guide
 
-  @kinds ~w(museum theater restaurant cafe brewery hotel bnb park historic-site amusement-park attraction)
+  @kinds ~w(museum theater restaurant cafe brewery hotel bnb park historic-site amusement-park shop attraction)
   @statuses ~w(open closed)
   @photo_path_re ~r{^/photos/[a-z0-9/_-]+\.(jpg|jpeg|png|webp)$}
   @photo_keys ~w(src thumb title description author license source_url)
