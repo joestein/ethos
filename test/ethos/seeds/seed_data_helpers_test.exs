@@ -71,6 +71,7 @@ defmodule Ethos.SeedDataHelpersTest do
 
     assert Map.keys(by_file) |> Enum.sort() == [
              "lib/ethos/seeds/american_family_field_places.ex",
+             "lib/ethos/seeds/angel_stadium_places.ex",
              "lib/ethos/seeds/busch_stadium_places.ex",
              "lib/ethos/seeds/citi_field_places.ex",
              "lib/ethos/seeds/citizens_bank_park_places.ex",
@@ -90,6 +91,7 @@ defmodule Ethos.SeedDataHelpersTest do
              "lib/ethos/seeds/rogers_centre_places.ex",
              "lib/ethos/seeds/sutter_health_park_places.ex",
              "lib/ethos/seeds/target_field_places.ex",
+             "lib/ethos/seeds/truist_park_places.ex",
              "lib/ethos/seeds/wrigley_field_places.ex",
              "lib/ethos/seeds/yankee_stadium_places.ex"
            ]

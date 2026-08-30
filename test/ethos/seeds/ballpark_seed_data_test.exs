@@ -339,6 +339,7 @@ defmodule Ethos.Seeds.BallparkSeedDataTest do
     {"rogers-centre", "rogers-centre-guide"},
     {"sutter-health-park", "sutter-health-park-guide"},
     {"target-field", "target-field-guide"},
+    {"truist-park", "truist-park-guide"},
     {"wrigley-field", "wrigley-field-guide"},
     {"yankee-stadium-bronx", "yankee-stadium-guide"}
   ]

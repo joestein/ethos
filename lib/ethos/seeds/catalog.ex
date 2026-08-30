@@ -57,7 +57,8 @@ defmodule Ethos.Seeds.Catalog do
     {Ethos.Seeds.TargetFieldPlaces, "ballparks"},
     {Ethos.Seeds.KauffmanStadiumPlaces, "ballparks"},
     {Ethos.Seeds.CoorsFieldPlaces, "ballparks"},
-    {Ethos.Seeds.AngelStadiumPlaces, "ballparks"}
+    {Ethos.Seeds.AngelStadiumPlaces, "ballparks"},
+    {Ethos.Seeds.TruistParkPlaces, "ballparks"}
   ]
 
   # Order is seed order and is load-bearing for Connecticut: the Antique Trail
@@ -92,7 +93,8 @@ defmodule Ethos.Seeds.Catalog do
     {Ethos.Seeds.TargetFieldGuide, "ballparks"},
     {Ethos.Seeds.KauffmanStadiumGuide, "ballparks"},
     {Ethos.Seeds.CoorsFieldGuide, "ballparks"},
-    {Ethos.Seeds.AngelStadiumGuide, "ballparks"}
+    {Ethos.Seeds.AngelStadiumGuide, "ballparks"},
+    {Ethos.Seeds.TruistParkGuide, "ballparks"}
   ]
 
   @doc "Every places module, as `{module, region}`."
