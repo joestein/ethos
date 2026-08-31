@@ -197,3 +197,35 @@ The exclusion was correct. Re-fetched https://en.wikipedia.org/wiki/Bronx_Opera_
 Note on item 10's row: of its 4 claims, 2 are confirmed straightforwardly (address, designation date), 1 is refuted with correction (tenant roster), and 1 is "confirmed-as-absence" (no further detail found, counted as confirmed since it accurately reports a negative result rather than asserting something needing correction) — giving 3 confirmed, 1 refuted. The single corpus-wide "uncertain" is the Star of Munster Ballroom's "center of Irish music for decades" gloss under the orientation section; the 149th Street boundary question (flagged item 3) is a location caveat attached to an otherwise-confirmed station list, not counted as a separate uncertain claim.
 
 **Places with 6 or more surviving (confirmed) claims: 6** — St. Mary's Park (13), Bronx General Post Office (8, after correction), Mott Haven Historic District (7), Mott Haven Library (7), St. Ann's Church and Graveyard (6), and the neighborhood-level orientation material (27, not a "place" but substantial). Counting only the 10 place blocks: **5 places clear the 6-confirmed threshold** (St. Mary's Park, Bronx General Post Office, Mott Haven Historic District, Mott Haven Library, St. Ann's Church and Graveyard). Mott Haven East Historic District (3), Bertine Block (3), La Morada (3), The Bronx Brewery (4), and the Firehouse (2–3) fall short and would sit on the orientation-page tier rather than the guide tier unless supplemented.
+
+---
+
+## Addendum — added at authoring time, 2026-08-31
+
+**Not part of the original adjudication.** The block above was written by the
+independent verifier; this one was appended by the author of
+`priv/seed_data/bronx/mott-haven.json` while writing that file, and it is
+recorded here so that every fact on the published page traces to a tracked
+artifact rather than to the authoring session's scrollback. It is marked
+separately because an authoring-time fetch is not an independent adjudication
+and must not be read as one.
+
+**St. Ann's Church and Graveyard — street address.** Item 4 above closes without
+a street address; the finder's own note at `mott-haven-finder.md:121` records
+that two direct-URL guesses for a dedicated article 404'd or resolved to an
+unrelated Norwood parish, and that "No street address for this church was found
+in this pass." The gap was closed at authoring time:
+
+- **Address: 295 St. Ann's Avenue, Bronx, New York.**
+- Source: `https://en.wikipedia.org/wiki/St._Ann's_Episcopal_Church_(Bronx)` —
+  the church's own Wikipedia article, reached via Wikipedia's search index
+  rather than a URL guess. Fetched 2026-08-31.
+- The same page places the church in "the Mott Haven neighborhood of the South
+  Bronx" and gives the NYC Landmark designation as June 9, 1967, which matches
+  the boroughwide landmarks list and the verdict at item 4. That agreement is
+  the only cross-check performed; the address itself rests on this one source.
+- **Two facts on that page were deliberately NOT imported.** It gives the build
+  year as **1840**; the adjudicated value at item 4 is **1841**, and the
+  verdicts are the authority, so 1841 ships. It also gives an NRHP listing of
+  April 16, 1980, which no verdict carries and which therefore does not ship.
+- The page carries no ZIP code, so the place ships without one.

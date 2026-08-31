@@ -88,7 +88,11 @@ northeast corner of Willis Avenue and East 138th Street."
   appears in any prose string: no inspection date, no grade, no dataset, no
   cuisine, and neither 308 Willis Avenue nor 856 East 136th Street inside a
   sentence. Both addresses remain in the `address` field, which is the
-  permitted use.
+  permitted use. **That last sentence was still wrong, and round 2 fixed it
+  properly: coarsening "Mexican" to "restaurant" did not launder the
+  provenance, because the source is the NYC *restaurant* inspection dataset and
+  membership is what establishes the category. La Morada is withdrawn
+  entirely. See "Fix round 2".**
 
 ## Judgment calls honored
 
@@ -175,7 +179,10 @@ carries no ZIP. No assertion was loosened and no threshold was widened.
 
 # Fix round 1 (of 5) — fact-fidelity review
 
-One Critical, three Important, one class of Minor. All five fixed. **Deletion
+One Critical, three Important, one class of Minor. **Four of the five were
+fixed here; the fifth — the DOHMH finding — was only partly fixed and round 2
+completes it. The "All five fixed" this section originally claimed was an
+overstatement and is withdrawn.** **Deletion
 was preferred over rewording in every case where the confirmed material stood on
 its own**, which was all but two. The `address` fields, the place count, the
 slugs and the structured-data census are unchanged, so the numbers in the table
@@ -241,6 +248,149 @@ above still hold.
 - Swept the file for `this research`, `was reached`, `could not be opened`,
   `Mexican`, `brownstone`, `expired-domain`, `prints no street`, `308 Willis`,
   `856 East 136th`, `reportedly`, `said to have been`, `center of Irish music` —
-  zero hits outside the two `address` fields.
+  zero hits outside the two `address` fields. **The sweep's term list was itself
+  incomplete: it did not include `restaurant`, which is the word that still
+  carried DOHMH provenance. A sweep is only as good as its terms, and this one
+  was built from the phrases already deleted rather than from the rule.**
 - Intro is now 144 words, still inside 100-160. Nine places, nine entries, five
-  FAQ entries, three sections; none of those counts moved.
+  FAQ entries, three sections; none of those counts moved. (Round 2 takes the
+  places and entries to eight.)
+
+---
+
+# Fix round 2 (of 5) — re-review
+
+Four of round 1's five findings came back ADDRESSED. The fifth was deeper than a
+sentence, and four new findings came with it. All done.
+
+## La Morada Restaurant — withdrawn entirely
+
+The coordinator's ruling, and it is right. Every publishable fact about the
+place is DOHMH-derived: `mott-haven-finder.md:175` says the pass produced "only
+the DOHMH identity/address record above", and `mott-haven-verdicts.md:137-141`
+lists exactly three claims, all marked existence/identity evidence and never
+prose. There is no fourth claim a summary could be drawn from.
+
+Round 1 tried to satisfy `Place.changeset`'s non-empty `summary` requirement
+(`place.ex:49`) by coarsening "Mexican" to "restaurant". **That does not work,
+and the reason is worth writing down: the DOHMH rule is a provenance rule, not a
+specificity rule.** The source is the NYC *restaurant inspection* dataset;
+membership in it is what establishes the category, so "restaurant" carries the
+same provenance "Mexican" did, only vaguer. And on the merits, "A restaurant in
+Mott Haven." is exactly the inspection-record boilerplate the rule exists to
+prevent — it tells a reader nothing. This is the same call that cut the
+firehouse: strip what cannot be published and what is left is a stub.
+
+Deleted: the `places` entry `la-morada-restaurant` and its matching `entries`
+entry. **8 places remain**, still clear of rule 3's six-place threshold, so
+`"tier": "guide"` is unaffected and `tier_violations` (which fails a guide under
+4 places) is nowhere near firing.
+
+## The Bronx Brewery — kept, "tap room" out of prose
+
+Unlike La Morada it has non-DOHMH sourcing: `verdicts.md:148` confirms the
+business name and the two locations from the brewery's own site. But "tap room"
+comes from the DOHMH DBA `THE BRONX BREWERY-TAP ROOM` (`verdicts.md:145`), so it
+is out of the prose. `places[7].summary` now reads "The Bronx Brewery's Bronx
+location. Its own site gives the business name as The Bronx Brewery and states
+that it runs this Bronx location and a second at Hudson Yards in Manhattan."
+`entries[7].note` never carried the phrase.
+
+**One thing I did not change, flagged rather than decided unilaterally** — see
+"Disagreement / open question" below: the `name` and `slug` fields still read
+`The Bronx Brewery Tap Room` / `the-bronx-brewery-tap-room`.
+
+## The four other findings
+
+1. **Two scoped absences had become unscoped denials.** Round 1 turned "No
+   source reached by this research names an NYC Ferry landing for Mott Haven"
+   into "No NYC Ferry landing is named for Mott Haven" — trading research-process
+   prose for an agentless passive that reads as a flat denial of NYC Ferry
+   service. Nothing supports that; neither artifact mentions ferries at all.
+   Both now use the page-voice shape: `sections[2].body` reads "This page does
+   not name an NYC Ferry landing for Mott Haven." and `faq[0].answer` ends "This
+   page does not name a ferry landing for Mott Haven." Same construction as
+   `faq[3]`'s "This page does not say what the building holds today."
+2. **A dangling reference left by a round-1 deletion.** Cutting the date range
+   left "East 138th Street is the primary east–west thoroughfare through Mott
+   Haven. **This** was a mixed German-American and Irish-American
+   neighborhood…", where "This" pointed at the street. Now: "The neighborhood
+   was a mixed German-American and Irish-American one, the German households
+   north of East 145th Street and the Irish south of it."
+3. **St. Ann's address provenance is now in a tracked artifact.**
+   `docs/bronx/mott-haven-verdicts.md` gains an addendum at the end, headed and
+   dated, stating plainly that it was appended at authoring time and is not part
+   of the independent adjudication. It records the address, the source URL
+   (`en.wikipedia.org/wiki/St._Ann's_Episcopal_Church_(Bronx)`), the fetch date,
+   the one cross-check that agreed (the June 9, 1967 designation), and the two
+   facts on that page deliberately not imported — its "1840" build year, which
+   the verdicts contradict with 1841, and an NRHP date no verdict carries. Every
+   fact on the page now traces to an artifact rather than to session scrollback.
+4. **The report's own headline claim, corrected above.** "No DOHMH-derived
+   content appears in any prose string" was false under the very principle the
+   same bullet stated. The Fix-round-1 preamble's "All five fixed" and the
+   closing sweep's term list carried the same overstatement; both are annotated
+   in place rather than silently rewritten, since a report that quietly repairs
+   itself teaches the next reader nothing.
+
+## Census
+
+`test/ethos_web/components/structured_data_test.exs` moves again, because
+La Morada carried a street address with a house number and a ZIP. Every
+assertion stays an exact `==`; the comment accounts for each digit.
+
+| assertion | round 1 | round 2 | delta |
+| --- | ---: | ---: | ---: |
+| total emitted | 2114 | 2113 | -1 |
+| with `streetAddress` | 1576 | 1575 | -1 |
+| without `streetAddress` | 538 | 538 | 0 |
+| with `postalCode` | 1713 | 1712 | -1 |
+| locality-only | 248 | 248 | 0 |
+
+The two street-less counts holding still is the check that the row removed was
+the shape claimed — a place with both a house number and a ZIP ("308 Willis
+Avenue, Bronx, NY 10454"), not one of the district rows.
+
+## Untouched, as instructed
+
+No `address` field was edited. The ballroom corner, the firehouse roster, the
+September 14, 1976 designation and "row houses" are all as the re-review
+confirmed them. Slugs, tier, section headings, FAQ count and the `Getting there`
+heading are unchanged. Intro is 144 words.
+
+## Disagreement / open question
+
+**One, and it is a question rather than a disagreement.** The instruction was to
+strip "tap room" from the brewery's *prose*, which I read as `summary` and
+`note`, leaving `places[7].name` (`The Bronx Brewery Tap Room`) and
+`places[7].slug` (`the-bronx-brewery-tap-room`) alone as identity fields, in the
+same class as `address`. Two things argue for leaving them, and one against:
+
+- *For:* the phrase is not raw DOHMH here. The verifier's own section heading at
+  `verdicts.md:143` is "The Bronx Brewery — Tap Room", and §2's Wave 3 corollary
+  says text the verifier itself wrote counts as restated "even when it appears
+  in a field other than `item` or `reason`". The design spec's "a verdict decides
+  the name, and the slug follows the name" then points at exactly this string.
+- *For:* the slug is globally unique across every seed directory and the
+  Connecticut module; changing it is a wider edit than this round authorises and
+  would need a fresh uniqueness check.
+- *Against:* `name` renders to the reader as a heading, so it is prose in every
+  sense that matters to someone reading the page, and the identity/prose line I
+  drew is the same kind of line round 1 drew wrongly around "citation versus
+  provenance".
+
+I have left it and am flagging it rather than deciding it. If round 3 wants it
+gone, the change is `name` → "The Bronx Brewery", `slug` →
+`the-bronx-brewery-mott-haven` (bare `the-bronx-brewery` risks colliding with a
+later Port Morris or Melrose wave), plus the matching `entries[7].name` and
+`place_slug`, and a re-run of the global slug-uniqueness assertion.
+
+## Verification after the fix
+
+- `mix format --check-formatted` — clean.
+- `mix test` — **650 tests, 0 failures, 32 excluded**.
+- Swept every string in the file, excluding `address` and `name`, for `tap
+  room`, `La Morada`, `Mexican`, `308 Willis`, `856 East 136th`, `this
+  research`, `brownstone`, `center of Irish music` — zero hits.
+- 8 places, 8 entries, no dangling `place_slug`, three sections with `Getting
+  there` intact, five FAQ entries including `How do I get to Mott Haven?`.

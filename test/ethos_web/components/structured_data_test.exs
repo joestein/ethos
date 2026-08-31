@@ -133,12 +133,24 @@ defmodule EthosWeb.StructuredDataTest do
       # church's own Wikipedia article without one. Locality-only is +3, the
       # three districts, which is again the check that the street-less rows went
       # where they should.
+      #
+      # Corrected in the same wave, before mott-haven.json was reviewed: the
+      # La Morada Restaurant place was withdrawn. Every publishable fact about
+      # it — name, address, cuisine — came from the DOHMH inspection dataset,
+      # which this corpus admits as identity evidence and never as prose, so
+      # once its summary was stripped there was no sentence left to write and
+      # the place was a stub. That is -1 from each of the counts its address
+      # contributed to: total 2114 -> 2113 and streetAddress 1576 -> 1575 (it
+      # carried "308 Willis Avenue"), postalCode 1713 -> 1712 (it carried
+      # 10454). The two street-less counts are unmoved at 538 and 248, which is
+      # the check that the row removed was the shape claimed: a place with both
+      # a house number and a ZIP, not one of the district rows.
       count = fn f -> Enum.count(emitted, fn {_, ld} -> f.(ld) end) end
 
-      assert length(emitted) == 2114
-      assert count.(& &1["streetAddress"]) == 1576
+      assert length(emitted) == 2113
+      assert count.(& &1["streetAddress"]) == 1575
       assert count.(&is_nil(&1["streetAddress"])) == 538
-      assert count.(& &1["postalCode"]) == 1713
+      assert count.(& &1["postalCode"]) == 1712
 
       # The largest behavioural delta this change ships: 245 places emit a
       # PostalAddress carrying only locality, region and country. Their full
