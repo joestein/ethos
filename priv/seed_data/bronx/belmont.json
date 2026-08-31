@@ -44,7 +44,7 @@
       },
       {
         "question": "Are the Arthur Avenue food shops still open?",
-        "answer": "For most of them this research could not establish that, and it says so rather than guessing. Twelve of the forty places on this page rest on independent evidence dated inside 2026. For the other twenty-eight — Teitel Brothers, Borgatti's, Madonia Bakery, Addeo Bakers, Calabria Pork Store, Vincent's Meat Market, Casa Della Mozzarella, Mount Carmel Wine & Spirits and the rest — nothing independent and current enough was reached to say they are trading now, and for a grocer, a butcher or a cheese shop the absence of such evidence is expected rather than ominous. None is recorded as closed and none is written up here as open. Where a page says only what a place is and where it is, that is the reason. Call ahead."
+        "answer": "For most of them this research could not establish that, and it says so rather than guessing. Forty Belmont places came through this research, and twelve of them rest on independent evidence dated inside 2026. For the other twenty-eight — Teitel Brothers, Borgatti's, Madonia Bakery, Addeo Bakers, Calabria Pork Store, Vincent's Meat Market, Casa Della Mozzarella, Mount Carmel Wine & Spirits and the rest — nothing independent and current enough was reached to say they are trading now, and for a grocer, a butcher or a cheese shop the absence of such evidence is expected rather than ominous. None is recorded as closed and none is written up here as open. Where a page says only what a place is and where it is, that is the reason. Call ahead."
       }
     ],
     "photos": []
@@ -583,10 +583,16 @@
       "note": "An indoor market at 2344 Arthur Avenue, which the Belmont BID dates to October 1940 and lists as open Monday to Sunday, 8AM-8PM."
     },
     {
-      "kind": "walk",
-      "name": "Ciccarone Park",
-      "place_slug": "ciccarone-park",
-      "note": "0.553 acres on East 188th Street between Arthur and Hughes Avenues, one of nine playgrounds opened on July 15, 1934."
+      "kind": "sight",
+      "name": "Our Lady of Mount Carmel Church",
+      "place_slug": "our-lady-of-mount-carmel-church-belmont",
+      "note": "627 East 187th Street. The parish began early in 1906, in answer to a petition from the Italians living around 183rd Street and Pelham Avenue."
+    },
+    {
+      "kind": "sight",
+      "name": "Belmont Library and Enrico Fermi Cultural Center",
+      "place_slug": "belmont-library-enrico-fermi-cultural-center",
+      "note": "610 East 186th Street. The branch opened in 1981; Wikipedia records a collection of Italian-language material and of Italian-American work."
     },
     {
       "kind": "walk",
@@ -596,27 +602,9 @@
     },
     {
       "kind": "walk",
-      "name": "Belmont Playground",
-      "place_slug": "belmont-playground-bronx",
-      "note": "2.213 acres at 670 East 182nd Street. NYC Parks publishes no history page for it."
-    },
-    {
-      "kind": "food",
-      "name": "Ann & Tony's",
-      "place_slug": "ann-and-tonys",
-      "note": "2407 Arthur Avenue. The restaurant's own account is five generations of one family since 1927."
-    },
-    {
-      "kind": "food",
-      "name": "Pasquale's Rigoletto Restaurant",
-      "place_slug": "pasquales-rigoletto",
-      "note": "2311 Arthur Avenue, a street number the restaurant's own site does not publish."
-    },
-    {
-      "kind": "food",
-      "name": "Antonio's Trattoria",
-      "place_slug": "antonios-trattoria-belmont",
-      "note": "2370 Belmont Avenue, off the Arthur Avenue blocks and listed there by the Belmont BID."
+      "name": "Ciccarone Park",
+      "place_slug": "ciccarone-park",
+      "note": "0.553 acres on East 188th Street between Arthur and Hughes Avenues, one of nine playgrounds opened on July 15, 1934."
     },
     {
       "kind": "food",
@@ -626,27 +614,39 @@
     },
     {
       "kind": "food",
-      "name": "Artuso Pastry Shop",
-      "place_slug": "artuso-pastry-shop",
-      "note": "670 East 187th Street. Its own site gives no address and no founding year."
+      "name": "Teitel Brothers",
+      "place_slug": "teitel-brothers",
+      "note": "2372 Arthur Avenue. The brothers' own account has them arriving through Ellis Island in 1912 as tailors and opening the grocery in 1915."
+    },
+    {
+      "kind": "food",
+      "name": "Borgatti's Ravioli & Egg Noodles",
+      "place_slug": "borgattis-ravioli-and-egg-noodles",
+      "note": "632 East 187th Street. Handmade ravioli and egg noodles; the shop dates itself to 1935, which is its own claim and names no founder."
+    },
+    {
+      "kind": "food",
+      "name": "Madonia Bakery",
+      "place_slug": "madonia-bakery",
+      "note": "2348 Arthur Avenue. Its own site has Mario Madonia opening the bakery over a century ago and his great-grandson carrying it on."
+    },
+    {
+      "kind": "food",
+      "name": "Vincent's Meat Market",
+      "place_slug": "vincents-meat-market",
+      "note": "2374 Arthur Avenue. The butcher's own site gives 1954 and calls the business family-owned; it names no family member."
+    },
+    {
+      "kind": "food",
+      "name": "Mario's",
+      "place_slug": "marios-arthur-avenue",
+      "note": "2342 Arthur Avenue. Wikipedia says a Sopranos scene was shot here, and that the owner turned down The Godfather's planned mob hit in 1972."
     },
     {
       "kind": "food",
       "name": "Egidio Pastry Shop",
       "place_slug": "egidio-pastry-shop",
       "note": "Italian pastries, cakes and coffee at 622 East 187th Street, a building number it shares with Trattoria Tra Di Noi."
-    },
-    {
-      "kind": "food",
-      "name": "De Lillo Pastry Shop",
-      "place_slug": "de-lillo-pastry-shop",
-      "note": "610 East 187th Street. Its own site rendered as a bare title, so nothing beyond name and address is published."
-    },
-    {
-      "kind": "food",
-      "name": "The Bronx Beer Hall",
-      "place_slug": "the-bronx-beer-hall",
-      "note": "New York State craft beer inside the Arthur Avenue Retail Market. It pours rather than brews."
     }
   ],
   "links": [
