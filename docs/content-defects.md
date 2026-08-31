@@ -97,6 +97,48 @@ uses.
 **Blast radius.** None published. Both numbers live in a moduledoc and a test
 comment; no page renders either.
 
+### Madison, New York and Madison, Connecticut share one destination page
+
+Two guides in two states publish under one destination, because the derivation
+throws the state away.
+
+| Destination string | Where |
+|---|---|
+| "Madison, New York" | `priv/seed_data/brooklyn/madison.json` |
+| "Madison, Connecticut" | `priv/seed_data/connecticut/madison.json` |
+
+`Ethos.Guides.Guide.derive_destination_slug/1` (`lib/ethos/guides/guide.ex:74`)
+splits the destination on a comma and keeps **only the first part**, so both
+derive `madison` and `/destinations/madison` lists a Brooklyn neighborhood
+alongside a Connecticut shore town.
+
+**Checked, 2026-08-31.** Found by re-running the Queens spec's collision scan
+against derived *slugs* rather than destination strings — the original scan
+compared full strings, which is precisely the comparison that cannot see this.
+All 273 destination strings across `priv/seed_data/` were re-derived and
+compared: `madison` is the only such pair in the shipped corpus today.
+
+**Why it is still open.** Both files are correct about their own subject and
+neither is wrong on its face; the defect is in the derivation, which is shared
+by every guide on the site. The fixes available are to change one town's
+destination string — which changes a published URL for content that has a
+legitimate claim to it — or to include the state in the derived slug, which
+re-slugs every destination page in the corpus and is a migration, not an edit.
+Neither belongs in a content pass.
+
+**Blast radius.** One destination page, `/destinations/madison`, listing two
+unrelated towns. Both guide pages themselves are correct.
+
+**Queens will add three more unless they are caught.** The Queens roster carries
+`murray-hill` (colliding with `priv/seed_data/manhattan/murray-hill.json`,
+"Murray Hill, New York" — same state, so it merges the way Flushing does),
+`newtown` (`priv/seed_data/connecticut/newtown.json`) and `roxbury`
+(`priv/seed_data/connecticut/roxbury.json`). The last two are **cross-state**,
+the same shape as this entry. None has landed: `priv/seed_data/queens/` is
+empty. `test/ethos/seeds/queens_seed_data_test.exs` carries a Queens-scoped
+assertion that fails when any of them ships, deliberately scoped to Queens
+rather than corpus-wide so it does not go red on this pre-existing entry.
+
 ### Wikipedia gives two reasons for the 1945 Wrigley Field goat ejection
 
 The source disagrees with itself, so the corpus publishes the incident and no

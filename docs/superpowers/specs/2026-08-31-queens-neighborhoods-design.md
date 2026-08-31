@@ -56,18 +56,60 @@ the correct outcome — a destination page exists to group the guides that share
 it.
 
 This is worth stating precisely because it resembles a defect that has already
-bitten this project once and is **not** the same thing. The
-`/destinations/washington` collision was a *state hub* silently shadowed by a
-*town* of the same name, across two different states; `Guides.list_guides_shadowed_by_state/1`
-exists because of it. Two town-level destinations in the same state do not
-shadow — they merge. Correct-today and asserted are different states, so the
-gate asserts it.
+bitten this project once. The `/destinations/washington` collision was a *state
+hub* silently shadowed by a *town* of the same name, across two different
+states; `Guides.list_guides_shadowed_by_state/1` exists because of it. **For
+Flushing specifically, that shape is not in play**: two town-level destinations
+in the same state do not shadow — they merge, and merging is the outcome we
+want. Correct-today and asserted are different states, so the gate asserts it.
 
-**No other collision exists.** A scan of all 273 destination strings across
-`priv/seed_data/` found zero matches against the Queens neighborhood name set —
-including the names most likely to collide nationally (Corona, Astoria, Glendale,
-Ridgewood, Elmhurst, Richmond Hill, St. Albans, Springfield Gardens, Floral
-Park). The only overlap in the whole corpus is the code-defined Flushing guide.
+An earlier draft of this paragraph went further and claimed the
+`/destinations/washington` shape "cannot recur here". **That claim was wrong and
+is withdrawn.** It held only for Flushing, and only because Flushing's twin is
+in the same state. Queens carries three cross-corpus name matches, two of them
+cross-state, and those are exactly the shape that bit Washington. See the
+corrected collision scan below.
+
+**Correction: other collisions do exist, and the original scan could not see
+them.** This spec previously read "No other collision exists", on the strength
+of a scan of all 273 destination *strings* across `priv/seed_data/` that found
+zero matches against the Queens neighborhood name set — including the names most
+likely to collide nationally (Corona, Astoria, Glendale, Ridgewood, Elmhurst,
+Richmond Hill, St. Albans, Springfield Gardens, Floral Park).
+
+**That scan compared the wrong thing.** It compared full destination strings,
+when what determines co-listing is the *derived slug*.
+`Ethos.Guides.Guide.derive_destination_slug/1` (`lib/ethos/guides/guide.ex:74`)
+splits the destination on a comma and keeps only the first part — **the state is
+discarded**. So `"Newtown, New York"` and `"Newtown, Connecticut"` are two
+distinct strings that both derive `newtown` and land on one destination page. A
+string comparison reports them as no match; a slug comparison reports the
+collision that will actually happen.
+
+Re-run comparing derived slugs against all 273 seed destinations, the Queens
+roster carries three:
+
+| Roster row | Derived slug | Collides with |
+| --- | --- | --- |
+| Murray Hill | `murray-hill` | `priv/seed_data/manhattan/murray-hill.json` — "Murray Hill, New York" |
+| Newtown | `newtown` | `priv/seed_data/connecticut/newtown.json` — "Newtown, Connecticut" |
+| Roxbury | `roxbury` | `priv/seed_data/connecticut/roxbury.json` — "Roxbury, Connecticut" |
+
+Murray Hill is the same-state merge shape, and the roster task already flagged
+it as a naming concern. Newtown and Roxbury are **cross-state**, which is the
+shape this spec wrongly said could not recur.
+
+The same scan found a live instance nobody had caught, unrelated to Queens:
+`priv/seed_data/brooklyn/madison.json` ("Madison, New York") and
+`priv/seed_data/connecticut/madison.json` ("Madison, Connecticut") derive the
+same `madison` slug and co-list on one destination page today. It is recorded in
+`docs/content-defects.md`.
+
+The gate carries a **Queens-scoped** derived-slug collision assertion — each
+Queens seed file's derived destination slug against every non-Queens seed file's.
+It is deliberately not corpus-wide: a corpus-wide check fails immediately on the
+pre-existing `madison` collision, which this programme never touched, and a gate
+that is red on someone else's defect gets excluded.
 
 **A new seed directory inherits the corpus-wide gates for free.**
 `SeedDataHelpers.all_seed_files/0` globs `priv/seed_data/*/*.json` excluding
@@ -105,6 +147,88 @@ Its test asserts membership, uniqueness, **and the attribution fields** — that
 each entry names the right community district and wave, not merely that entries
 exist. The field a wave dispatches on is the field that must not drift; the
 bare-places roster cost a mutation test to learn that.
+
+### Known roster uncertainties
+
+The roster was built on 2026-08-31 from Wikipedia's fourteen Queens Community
+Board articles — each board's own coverage list — reconciled against Wikipedia's
+List of Queens neighborhoods. **Web search was unavailable for that pass**, so
+the NYC Department of City Planning Neighborhood Tabulation Areas and community
+district profiles, which are the underlying authority those pages cite, were
+**not consulted directly**. The roster's `source` string says exactly that.
+
+**A later editor must not "upgrade" that `source` string to claim NYC DCP
+without actually re-verifying every assignment against DCP.** The string is
+currently an honest account of what was read; making it claim an authority
+nobody consulted would convert a known-approximate roster into a
+falsely-authoritative one, and nothing downstream would report the change.
+
+The assignments below **ship as they are**. Nothing reads `community_district`
+except wave grouping: a wrong value batches a neighborhood into the wrong
+research wave, but it never reaches the site and never drops the neighborhood
+from the programme. They are itemized here — rather than left in a git-ignored
+SDD workspace, which is how the Brooklyn research artifacts were lost — so the
+re-check has a list to work from.
+
+**Genuinely split across two districts — the assignment is a choice, not a
+fact:**
+
+- `long-island-city` (**1**) — split at Queens Plaza; CB1 and CB2 both list it.
+- `dutch-kills` (**1**) — sits on the Queens Plaza boundary itself. NTA groups
+  it with Queensbridge–Ravenswood (CD 1); the LIC article could support CD 2.
+- `maspeth` (**5**) — CB2's coverage list also names Maspeth. The bulk is CD 5.
+- `ozone-park` (**9**) and `south-richmond-hill` (**10**) — both names appear on
+  CB9's *and* CB10's lists. The 9/10 split is a reading, not a citation.
+- `springfield-gardens` (**12**) — on CB12's list, but extends into CD 13.
+- `fresh-meadows` (**8**) — on CB8's list; part of the area is served by CD 11
+  in practice.
+- `wyckoff-heights` (**5**) — straddles the Brooklyn line into Bushwick
+  (Brooklyn CD 4).
+- `the-hole` (**10**) — straddles the Brooklyn line into East New York; on no
+  board's list.
+
+(`flushing-meadows-corona-park` was in this bucket, assigned **4** with CB4
+claiming the park and CD 7 and CD 6 taking its ends. That row has since been
+removed for the reason recorded under "The overlap rule".)
+
+**Two sources disagree, and the community board's own list was taken:**
+
+- `bay-terrace` (**7**) — CB7 claims it; the neighborhood list files it under
+  Bayside, which is CD 11. **The single most contested entry in the roster.**
+- `east-flushing` (**11**) — on CB11's list despite the name pointing at CD 7.
+- `holliswood` (**8**) and `hollis-hills` (**11**) — CB8 and CB11 respectively
+  claim them; the neighborhood list files both under Hollis, CD 12.
+- `pomonok` (**8**) and `utopia` (**8**) — the neighborhood list files Pomonok
+  under Flushing (CD 7) as well as Kew Gardens Hills (CD 8). CB8 was taken.
+- `astoria-heights` (**1**) — filed under *both* Astoria (CD 1) and East
+  Elmhurst (CD 3).
+- `willets-point` (**7**) — on CB7's list; the neighborhood list groups it with
+  northwestern Queens.
+
+**Named on no board list — the CD was inferred from a parent neighborhood.**
+Almost certainly right, but nothing read asserts them:
+
+`court-square` (**2**, from Hunters Point), `old-astoria` and `hallets-point`
+(**1**, from Astoria), `north-beach` (**3**, from East Elmhurst),
+`downtown-flushing` and `broadway-flushing` (**7**, from Flushing),
+`parkway-village` (**8**, from Kew Gardens Hills), `addisleigh-park` (**12**,
+from St. Albans), `bellaire` (**13**, from Queens Village), `north-shore-towers`
+(**13**, from Glen Oaks), `douglas-manor` (**11**, from Douglaston),
+`bayside-hills` (**11**, from Bayside), `corona-heights` (**4**, from Corona),
+and the Howard Beach sub-areas `old-howard-beach`, `hamilton-beach` and
+`rockwood-park` (**10** — only `lindenwood` and `tudor-village` are on CB10's
+own list).
+
+**Confident, for contrast:** all of CD 14 (the Rockaway article states the whole
+peninsula is CD 14), the CD 5 core (Ridgewood, Glendale, Middle Village, Fresh
+Pond, Liberty Park), CD 6, CD 12's core, and CD 13's `meadowmere` and
+`brookville` — each named explicitly on its own board's coverage list.
+
+**Not a district concern, but flagged for the naming wave:** `murray-hill`
+(**7**). The district is not in doubt; the *slug* collides with Manhattan's
+Murray Hill. See the corrected collision scan above — this is one of the three
+derived-slug collisions, and the roster task flagged it before that scan was
+re-run.
 
 ### Two tiers, decided after research
 
@@ -165,7 +289,7 @@ Carried over unchanged: licence allowlist, photo labels globally unique, every
 referenced photo present on disk, manifest provenance matching the published
 credit, roster equality failing in both directions, and the non-vacuity floors.
 
-Two additions specific to Queens:
+Three additions specific to Queens:
 
 - **A no-re-creation assertion** naming the eight Citi Field place slugs
   literally: `citi-field`, `unisphere`, `queens-museum`,
@@ -183,7 +307,20 @@ Two additions specific to Queens:
   `Ethos.Seeds.CitiFieldGuide.data().destination` — `"Flushing, New York"`.
   Identical strings derive identical `destination_slug`s, which is what makes the
   two guides co-list rather than compete. This assertion carries
-  `@tag :pending_queens`; it cannot pass before Flushing is researched.
+  `@tag :pending_queens`; it cannot pass before Flushing is researched. **Its
+  tag comes off in the wave that lands `flushing.json` — wave 5 of 12, not the
+  final wave.** The co-listing invariant is this spec's stated reason for
+  writing the scaffolding early, and leaving it unverified for seven waves after
+  its subject has shipped would defeat that.
+- **A derived-slug collision assertion, scoped to Queens.** For each Queens seed
+  file, derive its guide's destination slug through the real
+  `Guide.derive_destination_slug/1` and assert no *non-Queens* seed file derives
+  the same one. This is the assertion the corrected collision scan above
+  requires; it fires on `murray-hill`, `newtown` and `roxbury` when those waves
+  land. Queens-scoped deliberately — corpus-wide it would go red immediately on
+  the pre-existing `madison` collision, which is recorded in
+  `docs/content-defects.md` and which this programme did not introduce. It
+  carries no `@tag` of its own and activates with the moduletag.
 
 #### Staging: what runs when
 
@@ -199,17 +336,28 @@ an empty directory**. So:
 - **The first Queens research wave** lands the first seed file and deletes the
   `@moduletag` line. Every corpus-scanning test becomes meaningful at that
   moment.
+- **The wave that lands `flushing.json`** — wave 5 of 12 on the current roster —
+  deletes the `@tag :pending_queens` on the Flushing destination-string
+  assertion. Not the final wave. The test self-guards on `File.exists?`, so it
+  cannot pass before that wave and has nothing left to wait for after it, and
+  the co-listing invariant is the reason this scaffolding was written early.
 - **The final wave** deletes the remaining `@tag :pending_queens` lines — on
-  roster equality, marquee, and the Flushing destination-string assertion — and
-  the `:pending_queens` entry in `test/test_helper.exs`. The tags go; the tests
-  stay and start running.
+  roster equality and marquee, both of which genuinely need the whole corpus —
+  and the `:pending_queens` entry in `test/test_helper.exs`. The tags go; the
+  tests stay and start running.
 
 Be honest about what this buys: **the gate is written and reviewed, not
 enforcing.** Its value is that the decisions are captured while the evidence is
 fresh. It is not coverage, and nothing should be described as gated until the
 moduletag comes off. The trip-duration specimens remain live throughout via the
 existing `destination_seed_data_test.exs` and `bronx_seed_data_test.exs` copies,
-which run today; the Queens copy adds no liveness while dormant.
+which run today; the Queens copy adds no liveness while dormant — with one
+exception worth naming, since "adds nothing" is the kind of claim that stops
+being true quietly. The Citi Field place-list accuracy test has no seed-directory
+dependency and would pass today; the whole-module tag switches it off along with
+everything else. That is a real, if small, cost of the blanket tag, accepted
+because splitting one test into its own file to buy it back is not worth the
+second file.
 
 #### The tag, and the ExUnit hazard
 
@@ -237,6 +385,25 @@ only in places: both cover Flushing Meadows–Corona Park. The neighborhood guid
 covers the neighborhood and points at the ballpark guide for the park and the
 World's Fair remnants; it does not restate them. Two guides on one destination
 are useful only if they are about different things.
+
+**The `flushing-meadows-corona-park` roster row is removed, and the Bronx
+precedent does not transfer.** The roster originally carried a row for the park
+itself, on the precedent of the Bronx roster's `bronx-park`,
+`van-cortlandt-park` and `pelham-bay-park`. That precedent does not hold here,
+and the difference is ownership: **the Bronx's park institutions are
+seed-owned**, so a Bronx park row commissions a file that can hold real place
+records. **Queens' are code-owned.** Every visitable institution in Flushing
+Meadows–Corona Park is one of the eight `Ethos.Seeds.CitiFieldPlaces` slugs, the
+gate forbids any Queens seed file from containing them, and the overlap rule
+above assigns the park's subject matter to the Citi Field guide outright. The
+row therefore commissioned a file that could only be an empty shell about a
+subject it was not allowed to restate. Removing it loses no coverage —
+`/g/citi-field-guide` already covers the park.
+
+`willets-point` is **kept**. It has the same shape in milder form: it is a real
+neighborhood with residents and streets, its own content does not reduce to the
+eight code-owned places, and a wave can write it without restating the ballpark
+guide.
 
 ### Seeder, release test, runbook
 

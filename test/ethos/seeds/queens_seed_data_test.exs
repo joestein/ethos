@@ -24,16 +24,36 @@ defmodule Ethos.Seeds.QueensSeedDataTest do
   `bronx_seed_data_test.exs`, which run. This copy adds no coverage while
   dormant; it adds a reviewed record of the Queens-specific decisions.
 
+  That "no coverage" is true with exactly one exception, named here because a
+  blanket claim of dormancy is the kind that stops being true quietly: **"the
+  Citi Field place list this gate guards is still accurate" has no
+  seed-directory dependency and would pass today.** It reads
+  `Ethos.Seeds.CitiFieldPlaces` and a literal list, and the whole-module tag
+  switches it off along with everything that genuinely cannot run — so this
+  module is, for the duration, one live assertion short of what it could be.
+  The same now goes for its sibling on `@code_owned_queens_guides`. Accepted:
+  splitting two tests into their own file to buy back that coverage costs a
+  second file and a second place to look, for a list that changes when
+  `citi_field_places.ex` changes and at no other time. Do not describe the
+  no-re-creation rule as guarded until the moduletag comes off.
+
   ## Which tag comes off when
 
   * **The first Queens research wave** lands the first seed file and deletes
     the `@moduletag` line above. Every corpus-scanning test here becomes
     meaningful at that moment, and the floors become checks rather than
     tripwires.
-  * **The final wave** deletes the three tests' own `@tag :pending_queens`
-    lines — roster equality, marquee institutions, and the Flushing
-    destination-string assertion — and the `:pending_queens` entry in
-    `test/test_helper.exs`. The tags go; the tests stay and start running.
+  * **The wave that lands `flushing.json`** — wave 5 of 12 on the current
+    roster, NOT the final wave — deletes the `@tag :pending_queens` on the
+    Flushing destination-string assertion. That test self-guards on
+    `File.exists?`, so it cannot pass before its subject ships and has nothing
+    left to wait for after; and the co-listing invariant it checks is the
+    stated reason this scaffolding was written ahead of the research. Holding
+    it for seven further waves would defeat that reason.
+  * **The final wave** deletes the two remaining `@tag :pending_queens` lines —
+    roster equality and marquee institutions, both of which genuinely need the
+    whole corpus — and the `:pending_queens` entry in `test/test_helper.exs`.
+    The tags go; the tests stay and start running.
 
   `:pending_queens` is deliberately a THIRD tag, not shared with
   `:pending_bronx` or `:pending_wave`. `:pending_wave` belongs to the
@@ -363,6 +383,24 @@ defmodule Ethos.Seeds.QueensSeedDataTest do
   # pointing at the seed directory rather than at the guide it did not expect.
   # Named and subtracted instead, in the corpus test near the end of the file.
   @code_owned_queens_guides MapSet.new(["citi-field-guide"])
+
+  # The same staleness guard the place list gets, and it exists because the
+  # asymmetry was the defect: @code_owned_queens_places had an accuracy test
+  # against CitiFieldPlaces.places() with an explicit "guards a stale list"
+  # rationale, and the guide slug two lines above it had nothing. A rename in
+  # citi_field_guide.ex would leave the set below subtracting a slug that no
+  # longer exists, so the real guide would show up as "unexpected" in the corpus
+  # test's set difference — a failure pointing at the seed directory, which is
+  # exactly the confusion @code_owned_queens_guides was introduced to avoid.
+  test "the Citi Field guide slug this gate subtracts is still accurate" do
+    assert MapSet.equal?(
+             @code_owned_queens_guides,
+             MapSet.new([Ethos.Seeds.CitiFieldGuide.data().slug])
+           ),
+           "@code_owned_queens_guides has drifted from Ethos.Seeds.CitiFieldGuide — the " <>
+             "corpus test subtracts a stale slug and will report the real code guide as an " <>
+             "unexpected seed guide"
+  end
 
   test "the Citi Field place list this gate guards is still accurate" do
     actual =
@@ -1006,6 +1044,16 @@ defmodule Ethos.Seeds.QueensSeedDataTest do
   #
   # Kept a pure data assertion — it reads the seed file and the code module —
   # so it needs no database.
+  #
+  # WHEN DOES THIS TAG COME OFF: in the wave that lands
+  # priv/seed_data/queens/flushing.json — wave 5 of 12 on the current roster,
+  # NOT the final wave, which is what an earlier draft of the moduledoc and the
+  # spec both said. The test self-guards on File.exists? above, so it fails by
+  # construction before that wave and has nothing left to wait for after it.
+  # The two tags above genuinely need the whole corpus; this one needs one file.
+  # The co-listing invariant is the stated reason this scaffolding was written
+  # ahead of the research, so holding it dormant for seven waves after its
+  # subject shipped would defeat the reason it exists.
   @tag :pending_queens
   test "the Flushing guide shares the Citi Field guide's destination string" do
     path = Path.join(@seed_dir, "flushing.json")
@@ -1019,6 +1067,70 @@ defmodule Ethos.Seeds.QueensSeedDataTest do
            "flushing.json declares destination #{inspect(seeded)} but citi-field-guide " <>
              "declares #{inspect(code)} — differing strings derive differing " <>
              "destination_slugs, and the two guides stop co-listing"
+  end
+
+  # --- Derived-slug collisions with the rest of the corpus -----------------
+  #
+  # Flushing merging with citi-field-guide is the intended case above. This is
+  # the unintended one, and the spec got it wrong on the first pass.
+  #
+  # Ethos.Guides.Guide.derive_destination_slug/1 (guide.ex:74) splits the
+  # destination on a comma and keeps ONLY THE FIRST PART — the state is thrown
+  # away. So "Newtown, New York" and "Newtown, Connecticut" are two different
+  # strings that derive one slug and co-list on one destination page, across two
+  # states. That is the /destinations/washington shape.
+  #
+  # The spec's original scan compared full destination STRINGS and reported no
+  # collisions, which is what a string comparison must report for exactly the
+  # pairs that matter. Comparing derived slugs instead, the roster carries three:
+  # murray-hill (Manhattan's, same state), newtown and roxbury (both
+  # Connecticut's, cross-state).
+  #
+  # WHY THIS IS QUEENS-SCOPED AND NOT CORPUS-WIDE, which is the obvious
+  # "improvement" and must not be made: the corpus ALREADY has one of these.
+  # priv/seed_data/brooklyn/madison.json ("Madison, New York") and
+  # priv/seed_data/connecticut/madison.json ("Madison, Connecticut") both derive
+  # `madison` and co-list today. A corpus-wide assertion here would go red at
+  # the first Queens wave on a defect this programme never touched, on a file it
+  # does not own, and a gate that fails on somebody else's defect is a gate that
+  # gets excluded. The madison collision is recorded in docs/content-defects.md
+  # instead. Widen this to corpus-wide in the same commit that fixes madison,
+  # not before.
+  #
+  # Calls the real derive_destination_slug/1 rather than reimplementing the
+  # comma-split: a local copy would keep passing on the day the derivation
+  # changes, which is the one day this assertion has anything to say.
+  defp destination_slug_collisions(queens_paths) do
+    others =
+      for f <- SeedDataHelpers.all_seed_files() -- queens_paths,
+          dest = DataGuide.load!(f)["guide"]["destination"],
+          is_binary(dest),
+          into: %{},
+          do: {Ethos.Guides.Guide.derive_destination_slug(dest), {Path.relative_to_cwd(f), dest}}
+
+    for f <- queens_paths,
+        dest = DataGuide.load!(f)["guide"]["destination"],
+        is_binary(dest),
+        slug = Ethos.Guides.Guide.derive_destination_slug(dest),
+        # citi-field-guide is code-defined, not a seed file, so it is not in
+        # `others` and Flushing's intended merge cannot trip this.
+        other = others[slug],
+        do: {Path.basename(f), dest, slug, other}
+  end
+
+  test "no queens destination derives a slug already used outside queens" do
+    files = files()
+    assert files != [], "no queens seed files — every assertion below would pass vacuously"
+
+    assert destination_slug_collisions(files) == [],
+           "queens destinations deriving a destination_slug that a non-queens seed file " <>
+             "already derives. The state is discarded by derive_destination_slug/1, so these " <>
+             "guides co-list on ONE destination page — cross-state, that is the " <>
+             "/destinations/washington shape. Known roster candidates: murray-hill " <>
+             "(Manhattan), newtown and roxbury (Connecticut). Resolve by changing the " <>
+             "destination string, not by deleting this assertion. Deliberately scoped to " <>
+             "Queens: the pre-existing brooklyn/connecticut `madison` collision is a corpus " <>
+             "defect this programme did not introduce (docs/content-defects.md)."
   end
 
   # The counting rule proven twice, on literals and through the real walk,
