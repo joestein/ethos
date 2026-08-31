@@ -192,7 +192,7 @@ countable independently:
 | 2 | Connecticut (CT-5 only) | **5** | `Ethos.Guides.list_published_guides() \|> Enum.count(&(&1.state == ~s(Connecticut)))` |
 | 3 | Connecticut (full) | **170** | same as above |
 | 4 | Brooklyn | **69** | `Ethos.Guides.list_published_guides() \|> Enum.count(&(&1.county == ~s(Brooklyn)))` |
-| 6 | MLB ballparks | **30** | `Ethos.Seeds.Catalog.guide_modules(~s(ballparks)) \|> Enum.count(fn {m, _} -> Ethos.Guides.get_published_guide_by_slug(m.data().slug) end)` |
+| 8 | MLB ballparks | **30** | `Ethos.Seeds.Catalog.guide_modules(~s(ballparks)) \|> Enum.count(fn {m, _} -> Ethos.Guides.get_published_guide_by_slug(m.data().slug) end)` |
 
 Full rebuild total, excluding Rome: **307**.
 
