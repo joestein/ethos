@@ -460,6 +460,41 @@ defmodule EthosWeb.AffiliatePlacementTest do
              "expected the :bottom unit after the <h1>, got widget at #{widget_at}, h1 at #{title_at}"
     end
 
+    # The CLS reservation is worth its cost only at :top, where the widget's
+    # arrival would otherwise shove the page's <h1> itself down the viewport.
+    # At :bottom the unit is the last thing before the footer, so reserving
+    # the same 400px buys nothing and, when GetYourGuide's host is blocked,
+    # leaves a page-load's worth of blank space sitting above the footer.
+    test "a :top locale's unit reserves the min-height", %{conn: conn} do
+      with_locale("testonia", %{
+        network: :getyourguide,
+        partner_id: "ZA4AIMF",
+        cmp: "testonia",
+        placement: :top
+      })
+
+      g = guide_in("Testonia", nil)
+      html = conn |> get(~p"/g/#{g.slug}") |> html_response(200)
+
+      assert html =~ "min-h-[400px]"
+    end
+
+    # The other direction. Either alone passes trivially against a template
+    # that always reserves the height or never does.
+    test "a :bottom locale's unit does not reserve the min-height", %{conn: conn} do
+      with_locale("testonia", %{
+        network: :getyourguide,
+        partner_id: "ZA4AIMF",
+        cmp: "testonia",
+        placement: :bottom
+      })
+
+      g = guide_in("Testonia", nil)
+      html = conn |> get(~p"/g/#{g.slug}") |> html_response(200)
+
+      refute html =~ "min-h-[400px]"
+    end
+
     # Pins the default. This is what keeps New York unchanged without editing
     # its registry entry, and what makes an entry that forgets the field behave
     # like New York rather than like Rome.

@@ -188,6 +188,12 @@ defmodule EthosWeb.Affiliate do
   defp wrapper_margin(:top), do: "mb-10"
   defp wrapper_margin(:bottom), do: "mt-10"
 
+  # Only :top needs a reserved floor. See the comment on the reserved div
+  # below for why the two placements pay a different price for the same
+  # blank space.
+  defp reserved_height(:top), do: "min-h-[400px]"
+  defp reserved_height(:bottom), do: nil
+
   attr :locale, :map, default: nil
 
   @doc "The partner analytics and widget script. Renders nothing without a locale."
@@ -236,12 +242,17 @@ defmodule EthosWeb.Affiliate do
 
             The script is `async defer`, so without a reserved floor the div
             paints at zero height and the widget's arrival shoves everything
-            below it down. At :bottom that was invisible below the fold; at
-            :top the div sits above the page's <h1>, so the shift moves the
-            title itself at the top of the viewport, on pages whose whole value
-            is organic search. --%>
+            below it down. Reserved only at :top: there the div sits above the
+            page's <h1>, so the shift moves the title itself at the top of the
+            viewport, on pages whose whole value is organic search — worth
+            paying 400px for. At :bottom the unit is the last thing before the
+            footer, so its arrival displaces only the footer, below the fold —
+            invisible either way. Reserving there buys nothing and costs a full
+            400px of blank space on every page whose visitor blocks
+            GetYourGuide's host, with the "shown above" disclosure rendering
+            right below the void. --%>
       <div
-        class="min-h-[400px]"
+        class={reserved_height(@position)}
         data-gyg-widget="auto"
         data-gyg-partner-id={@locale.partner_id}
         data-gyg-cmp={@locale.cmp}
