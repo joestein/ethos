@@ -107,12 +107,23 @@ defmodule EthosWeb.StructuredDataTest do
       # the release-note figures below stay honest. Measured 2026-08-29 across
       # priv/seed_data/{connecticut,manhattan,brooklyn}. Update deliberately
       # when the corpus grows; never to make a failing test pass.
+      #
+      # Re-measured 2026-08-30 after priv/seed_data/bronx/belmont.json landed
+      # twelve places, every one with an address. The whole delta is those
+      # twelve and each digit of it is accounted for: +12 total, +12 postal
+      # (all carry a ZIP), +11 with a street address, and +1 without —
+      # ciccarone-park, whose sourced address is a pair of cross streets
+      # ("East 188th Street between Arthur Avenue and Hughes Avenue") and so
+      # correctly emits locality and postal code with no streetAddress. The
+      # locality-only count is unmoved at 245, which is the check that the +1
+      # went where it should: a place with a ZIP but no house number is a
+      # different shape from a place with neither.
       count = fn f -> Enum.count(emitted, fn {_, ld} -> f.(ld) end) end
 
-      assert length(emitted) == 2066
-      assert count.(& &1["streetAddress"]) == 1532
-      assert count.(&is_nil(&1["streetAddress"])) == 534
-      assert count.(& &1["postalCode"]) == 1669
+      assert length(emitted) == 2078
+      assert count.(& &1["streetAddress"]) == 1543
+      assert count.(&is_nil(&1["streetAddress"])) == 535
+      assert count.(& &1["postalCode"]) == 1681
 
       # The largest behavioural delta this change ships: 245 places emit a
       # PostalAddress carrying only locality, region and country. Their full

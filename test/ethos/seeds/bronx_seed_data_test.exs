@@ -8,17 +8,17 @@ defmodule Ethos.Seeds.BronxSeedDataTest do
 
   ## Which tag comes off when
 
-  * **Task 2 (this file's own task)** — the whole module carries `@moduletag
-    :pending_bronx` and `priv/seed_data/bronx/` holds only `.gitkeep`. Nothing
-    here runs. The non-vacuity floors below (`assert files != []` and friends)
+  * **Task 2 (this file's own task)** — the whole module carried `@moduletag
+    :pending_bronx` and `priv/seed_data/bronx/` held only `.gitkeep`. Nothing
+    here ran. The non-vacuity floors below (`assert files != []` and friends)
     fail by construction over an empty directory, and so does the roster
     equality; a gate that is red because there is nothing to check yet is noise
     a later implementer cannot tell from their own regression.
-  * **Task 3**, which lands the first neighborhood end to end, deletes the
-    `@moduletag` line. Every test here then runs, and the floors become
-    meaningful for the first time — a collection now exists to be non-empty.
-    The two tests carrying their own `@tag :pending_bronx` stay excluded:
-    neither can pass until the last wave has landed.
+  * **Task 3 — done.** It landed `belmont.json`, the first neighborhood end to
+    end, and deleted the `@moduletag` line. Every test here now runs, and the
+    floors are meaningful for the first time — a collection exists to be
+    non-empty. The two tests carrying their own `@tag :pending_bronx` stay
+    excluded: neither can pass until the last wave has landed.
   * **Task 5**, which completes the last wave, deletes those two `@tag` lines
     and the `:pending_bronx` entry in `test/test_helper.exs`.
 
@@ -48,9 +48,6 @@ defmodule Ethos.Seeds.BronxSeedDataTest do
     See `getting_there_violations/1` for what that does and does not decide.
   """
   use Ethos.DataCase, async: false
-
-  # Delete this line in Task 3. See the moduledoc.
-  @moduletag :pending_bronx
 
   import Ethos.AccountsFixtures
   alias Ethos.SeedDataHelpers
