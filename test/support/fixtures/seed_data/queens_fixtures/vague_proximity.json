@@ -1,0 +1,20 @@
+{
+  "guide": {
+    "slug": "fixture-vague-proximity-queens-guide",
+    "title": "Fixture: Vague Proximity",
+    "destination": "Fixture, New York",
+    "state": "New York",
+    "county": "Queens",
+    "intro": "A fixture guide used only to prove the vague-proximity assertion fires.",
+    "sections": [
+      {
+        "heading": "Around the market",
+        "body": "The market hall stands nine blocks south of the elevated line, and the bakery is next door."
+      }
+    ],
+    "faq": [],
+    "photos": []
+  },
+  "places": [],
+  "entries": []
+}

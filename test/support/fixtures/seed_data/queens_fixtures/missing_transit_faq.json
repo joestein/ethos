@@ -1,0 +1,25 @@
+{
+  "guide": {
+    "slug": "fixture-missing-transit-faq-queens-guide",
+    "title": "Fixture: Missing Transit FAQ",
+    "destination": "Fixture, New York",
+    "state": "New York",
+    "county": "Queens",
+    "intro": "A fixture guide used only to prove the transit-FAQ assertion fires.",
+    "sections": [
+      {
+        "heading": "Getting there",
+        "body": "The heading is correct, so this fixture violates the FAQ rule alone."
+      }
+    ],
+    "faq": [
+      {
+        "question": "Where should I eat?",
+        "answer": "No question asks how to reach the neighborhood."
+      }
+    ],
+    "photos": []
+  },
+  "places": [],
+  "entries": []
+}

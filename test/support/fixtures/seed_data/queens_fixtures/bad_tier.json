@@ -1,0 +1,23 @@
+{
+  "guide": {
+    "slug": "fixture-bad-tier-queens-guide",
+    "title": "Fixture: Bad Tier",
+    "destination": "Fixture, New York",
+    "state": "New York",
+    "county": "Queens",
+    "tier": "town-page",
+    "intro": "A fixture guide used only to prove the tier invariant fires.",
+    "sections": [],
+    "faq": [],
+    "photos": []
+  },
+  "places": [
+    {"slug": "fixture-queens-bad-tier-one", "name": "One", "kind": "park", "town": "Fixture", "state": "New York", "county": "Queens", "summary": "A fixture place.", "status": "open", "photos": []},
+    {"slug": "fixture-queens-bad-tier-two", "name": "Two", "kind": "park", "town": "Fixture", "state": "New York", "county": "Queens", "summary": "A fixture place.", "status": "open", "photos": []},
+    {"slug": "fixture-queens-bad-tier-three", "name": "Three", "kind": "park", "town": "Fixture", "state": "New York", "county": "Queens", "summary": "A fixture place.", "status": "open", "photos": []},
+    {"slug": "fixture-queens-bad-tier-four", "name": "Four", "kind": "park", "town": "Fixture", "state": "New York", "county": "Queens", "summary": "A fixture place.", "status": "open", "photos": []},
+    {"slug": "fixture-queens-bad-tier-five", "name": "Five", "kind": "park", "town": "Fixture", "state": "New York", "county": "Queens", "summary": "A fixture place.", "status": "open", "photos": []},
+    {"slug": "fixture-queens-bad-tier-six", "name": "Six", "kind": "park", "town": "Fixture", "state": "New York", "county": "Queens", "summary": "A fixture place.", "status": "open", "photos": []}
+  ],
+  "entries": []
+}

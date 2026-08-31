@@ -29,7 +29,7 @@ Locally, the same functions run under `mix run -e '...'` with ordinary quotes.
 ## Seed order
 
 Run in this exact order. Every step depends on the ones above it, except
-`seed_destinations` (step 5), which depends on nothing and nothing depends on
+`seed_destinations` (step 7), which depends on nothing and nothing depends on
 it — see its entry below.
 
 1. `Ethos.Release.seed_manhattan(email)` — 38 JSON files, `priv/seed_data/manhattan/`
@@ -39,14 +39,22 @@ it — see its entry below.
 3. `Ethos.Release.seed_connecticut_expansion(email)` — 165 JSON town/guide
    files, `priv/seed_data/connecticut/`
 4. `Ethos.Release.seed_brooklyn(email)` — 69 JSON files, `priv/seed_data/brooklyn/`
-5. `Ethos.Release.seed_destinations()` — 13 JSON files, `priv/seed_data/destinations/`.
+5. `Ethos.Release.seed_bronx(email)` — JSON files in `priv/seed_data/bronx/`.
+   One neighborhood has shipped so far; the remaining 65 are in progress.
+6. `Ethos.Release.seed_queens(email)` — JSON files in `priv/seed_data/queens/`.
+   **The directory is empty.** The scaffolding shipped ahead of the research,
+   so this call currently seeds nothing and reports `Seeded 0 files`. That is
+   the expected output, not a failure. Run it anyway: it is in the order so
+   that the day the first wave lands, nobody has to remember to add it.
+7. `Ethos.Release.seed_destinations()` — 13 JSON files, `priv/seed_data/destinations/`.
    **Takes no email argument** — unlike every seeder above it, a destination
-   page has no author. It is listed here, after `seed_brooklyn` and before
-   `seed_collections`, for consistency with the rest of this list rather than
-   because it must run at this point: it writes only its own `destinations`
-   table, references no place and resolves no link, so it is safe to run
-   before, after, or between any of the other steps.
-6. `Ethos.Release.seed_ballparks(email)` — 236 places and **30 guides**, the
+   page has no author. It is listed here, after `seed_brooklyn` and the Bronx
+   and Queens seeders, and before `seed_collections`, for consistency with the
+   rest of this list rather than because it must run at this point: it writes
+   only its own `destinations` table, references no place and resolves no
+   link, so it is safe to run before, after, or between any of the other
+   steps.
+8. `Ethos.Release.seed_ballparks(email)` — 236 places and **30 guides**, the
    whole MLB set, as **code modules** rather than JSON: one places module and
    one guide module per ballpark. It takes both lists from `Ethos.Seeds.Catalog`
    (region `"ballparks"`) and seeds **places before guides**, which is the one
@@ -58,15 +66,15 @@ it — see its entry below.
    transactional across a run" below. Adding a ballpark is one line in the
    catalog and no change here.
 
-   It has no dependency on steps 1-5 and none of them depends on it, so it may
-   run at any point before step 7. It is listed here because step 7 **does**
+   It has no dependency on steps 1-7 and none of them depends on it, so it may
+   run at any point before step 9. It is listed here because step 9 **does**
    depend on it: `Ethos.Seeds.MlbBallparksCollection` names all thirty ballpark
    guides, and `seed_collections` run before this step raises
    `collection mlb-ballparks references unknown guide <slug>`.
-7. `Ethos.Release.seed_collections()` — three collections: The Burys of
+9. `Ethos.Release.seed_collections()` — three collections: The Burys of
    Connecticut (steps 2 and 3), Antique Trail of CT (step 2) and Major League
-   Ballparks (step 6). After **every** guide step, never between them.
-8. `Ethos.Release.seed_links()`
+   Ballparks (step 8). After **every** guide step, never between them.
+10. `Ethos.Release.seed_links()`
 
 Verify the published count after each content step before moving on — see
 "Expected published counts" below. `seed_destinations` writes to a separate
@@ -137,7 +145,7 @@ unknown guide slug, which is why `seed_collections` comes after all the guide
 steps: "The Burys of Connecticut" pulls five guides from the CT-5 code modules
 and five (Salisbury, Roxbury, Simsbury, Glastonbury, Canterbury) from the
 Connecticut JSON corpus, and "Major League Ballparks" pulls all thirty ballpark
-guides from step 6. Between them the collections now depend on three separate
+guides from step 8. Between them the collections now depend on three separate
 guide steps, so `seed_collections` is not satisfiable by any subset of them.
 
 On the current production database Manhattan and the CT-5 guides are already
@@ -184,9 +192,14 @@ countable independently:
 | 2 | Connecticut (CT-5 only) | **5** | `Ethos.Guides.list_published_guides() \|> Enum.count(&(&1.state == ~s(Connecticut)))` |
 | 3 | Connecticut (full) | **170** | same as above |
 | 4 | Brooklyn | **69** | `Ethos.Guides.list_published_guides() \|> Enum.count(&(&1.county == ~s(Brooklyn)))` |
-| 6 | MLB ballparks | **30** | `Ethos.Seeds.Catalog.guide_modules(~s(ballparks)) \|> Enum.count(fn {m, _} -> Ethos.Guides.get_published_guide_by_slug(m.data().slug) end)` |
+| 8 | MLB ballparks | **30** | `Ethos.Seeds.Catalog.guide_modules(~s(ballparks)) \|> Enum.count(fn {m, _} -> Ethos.Guides.get_published_guide_by_slug(m.data().slug) end)` |
 
-Full rebuild total, excluding Rome: **307**.
+Full rebuild total, excluding Rome: **308** — the four rows above (38 + 170 +
+69 + 30 = 307) plus the one Bronx guide that has shipped so far,
+`priv/seed_data/bronx/belmont.json`. The Bronx and Queens seeders have no row of
+their own here because one is mid-programme and the other's directory is empty,
+so a stated "expected count" for either would be stale within a wave; the total
+still has to add up, so the Bronx guide is counted in it.
 
 Where the numbers come from:
 
@@ -225,10 +238,10 @@ Where the numbers come from:
 If a count is short, **do not proceed to the next step.** Re-run the same
 seeder (see below) and re-check.
 
-After step 7, `/c/mlb-ballparks` should list thirty guides, and each ballpark
+After step 9, `/c/mlb-ballparks` should list thirty guides, and each ballpark
 guide page should carry a *"Part of Major League Ballparks"* line under its
 title. If the collection page is short, the guide it dropped shows no such
-line and nothing else reports it — re-run steps 6 and 7 in that order.
+line and nothing else reports it — re-run steps 8 and 9 in that order.
 
 ## Seeding is not transactional across a run
 

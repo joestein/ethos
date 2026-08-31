@@ -105,6 +105,64 @@ defmodule Ethos.ReleaseTest do
     assert length(bronx.()) == expected
   end
 
+  # Queens ships before its research does, so `expected` is 0 for now and the
+  # publishes-exactly-the-committed-files half of this test is vacuous. The
+  # directory-literal half is NOT — it is fully load-bearing at zero files,
+  # because seed_directory/2 prints its report whether or not it matched
+  # anything. That is the exact inversion of the gate's situation, and it is
+  # why this test ships running rather than tagged.
+  test "seed_queens/1 names the Queens seed directory and publishes its files, idempotently" do
+    user = user_fixture()
+    expected = length(SeedDataHelpers.seed_files("queens"))
+
+    # Manhattan is reproduced because Links.resolve!/1 raises on an unknown
+    # target rather than skipping the edge. When a wave authors see-also edges
+    # to Brooklyn or Bronx guides, add those seeders here too.
+    Ethos.Release.seed_manhattan(user.email)
+
+    before =
+      Ethos.Guides.list_published_guides()
+      |> Enum.count(&(&1.county == "Queens"))
+
+    output = capture_io(fn -> Ethos.Release.seed_queens(user.email) end)
+
+    # The directory literal is the thing under test, and the only place it is
+    # observable is what the module prints — so parse it back OUT of the report
+    # rather than asserting a substring of it. `=~` is containment, which is the
+    # wrong tool here: "Seeded 0 files from priv/seed_data/queenss\n" CONTAINS
+    # "…/queens". Every prefix-extension typo — queenss, queens2, queens_guides,
+    # "queens/" — survives containment. Captured to the newline and compared for
+    # equality, then resolved on disk through the SAME captured value.
+    assert [_, dir] =
+             Regex.run(~r{Seeded #{expected} files from priv/seed_data/(\S+)\n}, output),
+           "seed_queens/1 printed no seed-directory report: #{inspect(output)}"
+
+    assert dir == "queens",
+           "seed_queens/1 seeds priv/seed_data/#{dir}, not priv/seed_data/queens — a directory " <>
+             "literal that matches nothing seeds nothing, raises nothing, and reports success"
+
+    assert File.dir?(Path.join([to_string(:code.priv_dir(:ethos)), "seed_data", dir])),
+           "seed_queens/1 names priv/seed_data/#{dir}, which does not exist — a silent no-op"
+
+    # A DELTA, not an absolute count. citi-field-guide is code-defined and
+    # carries county "Queens"; an absolute count would be correct only for as
+    # long as this test never seeds code guides, and would then fail pointing
+    # at the seed directory rather than at the guide it did not expect.
+    after_first =
+      Ethos.Guides.list_published_guides()
+      |> Enum.count(&(&1.county == "Queens"))
+
+    assert after_first - before == expected
+
+    capture_io(fn -> Ethos.Release.seed_queens(user.email) end)
+
+    after_second =
+      Ethos.Guides.list_published_guides()
+      |> Enum.count(&(&1.county == "Queens"))
+
+    assert after_second == after_first, "seed_queens/1 is not idempotent"
+  end
+
   # The manifest ships empty and waves append to it, so none of these may
   # assume a size. The load-bearing one while it is still empty is the last:
   # prune deletes only what the manifest names, so a place absent from the
