@@ -143,8 +143,8 @@
       "photos": []
     },
     {
-      "slug": "the-bronx-brewery-tap-room",
-      "name": "The Bronx Brewery Tap Room",
+      "slug": "the-bronx-brewery-mott-haven",
+      "name": "The Bronx Brewery",
       "kind": "brewery",
       "town": "Mott Haven",
       "state": "New York",
@@ -201,8 +201,8 @@
     },
     {
       "kind": "food",
-      "name": "The Bronx Brewery Tap Room",
-      "place_slug": "the-bronx-brewery-tap-room",
+      "name": "The Bronx Brewery",
+      "place_slug": "the-bronx-brewery-mott-haven",
       "note": "The brewery's own site names a Bronx location and a second at Hudson Yards in Manhattan."
     }
   ],

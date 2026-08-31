@@ -394,3 +394,116 @@ later Port Morris or Melrose wave), plus the matching `entries[7].name` and
   research`, `brownstone`, `center of Irish music` — zero hits.
 - 8 places, 8 entries, no dangling `place_slug`, three sections with `Getting
   there` intact, five FAQ entries including `How do I get to Mott Haven?`.
+
+---
+
+# Fix round 3 (of 5) — the flagged naming question, ruled
+
+Round 3 was only the open question round 2 raised. **Ruling: rename.** The name
+is **The Bronx Brewery** and the slug is **`the-bronx-brewery-mott-haven`**.
+
+## Why the argument I made for keeping it was wrong
+
+I had leaned on §2's Wave 3 corollary — verifier-authored text counts as
+restated even outside `item` and `reason` — to treat `verdicts.md:143`'s heading
+"The Bronx Brewery — Tap Room" as a restatement. **That reads the corollary too
+widely.** The corollary applies when the verifier is *restating a claim*. A
+section heading naming its own subject is not an adjudication; it identifies
+*which DOHMH row is under review*. What the verifier actually adjudicated is at
+`verdicts.md:148`, and that confirms the business name "The Bronx Brewery" and
+the two locations from the brewery's own site. "Tap Room" is not in it.
+
+And the project already has a rule that disposes of this without needing the
+identity-versus-prose distinction I was weighing at all — from the ballpark
+programme, carried into every wave since and restated at
+`2026-08-30-bronx-neighborhoods-design.md:140-141`:
+
+> A verdict decides the name, and the slug follows the name. Nothing enters a
+> URL that a verdict does not carry.
+
+Verdict:148 carries "The Bronx Brewery". So that is the name, and the slug
+follows from it. The observation that `name` renders as a heading and is
+therefore prose to a reader was correct but unnecessary — the naming rule gets
+there on its own, and it binds `name` regardless of how it renders. Worth
+recording, because the instinct to reason from *how a field renders* rather than
+*which rule governs it* is what produced the round-1 DOHMH mistake too.
+
+## The slug qualifier
+
+`the-bronx-brewery-mott-haven`, not bare `the-bronx-brewery`. Verdict:148 itself
+confirms two locations, and Port Morris and Melrose are both rostered, so the
+bare form is a collision waiting for a later wave. A location qualifier is a
+disambiguator rather than a name claim, and the corpus already does this —
+`antonios-trattoria-belmont`, `mikes-deli-arthur-avenue`, `belmont-playground-bronx`.
+Satisfies both rules at once.
+
+## Every place the old slug or name appeared, before the change
+
+Exhaustive, from a repo-wide grep of `the-bronx-brewery-tap-room`,
+`The Bronx Brewery Tap Room` and `Bronx Brewery` across `priv/`, `lib/`, `test/`
+and `docs/`:
+
+| Location | Old value | Action |
+| --- | --- | --- |
+| `priv/seed_data/bronx/mott-haven.json:146` — `places[7].slug` | `the-bronx-brewery-tap-room` | changed to `the-bronx-brewery-mott-haven` |
+| `priv/seed_data/bronx/mott-haven.json:147` — `places[7].name` | `The Bronx Brewery Tap Room` | changed to `The Bronx Brewery` |
+| `priv/seed_data/bronx/mott-haven.json:204` — `entries[7].name` | `The Bronx Brewery Tap Room` | changed to `The Bronx Brewery` |
+| `priv/seed_data/bronx/mott-haven.json:205` — `entries[7].place_slug` | `the-bronx-brewery-tap-room` | changed to `the-bronx-brewery-mott-haven` |
+
+**Four occurrences, all in the seed file, all changed.** Nothing else in `priv/`
+or `lib/` referenced either string — the old slug had never been committed
+anywhere else, which is what makes this a clean rename rather than a migration.
+
+**No prose change was needed.** Round 2 had already taken "tap room" out of
+`places[7].summary` and `entries[7].note`, so the page never called it one thing
+and linked another; this round only brings the identity fields into line with
+the prose that was already correct. `official_url` is untouched.
+
+Two stale mentions were left deliberately rather than silently corrected:
+
+- `test/ethos_web/components/structured_data_test.exs:128` says "the Bronx
+  Brewery tap room" inside the round-1 census comment. That comment is a dated
+  record of what the census delta was at the time, and this round was told not
+  to touch the census. Correcting it would falsify a historical note; noting it
+  here is the honest alternative.
+- The place table near the top of this report lists the old name. Left as-is for
+  the same reason the round-1 and round-2 overstatements were annotated rather
+  than rewritten: a report that quietly repairs itself teaches the next reader
+  nothing. **The shipped name and slug are the ones in this section.**
+
+## Global slug uniqueness — ran and passed
+
+`Ethos.SeedDataHelpers.assert_place_slugs_globally_unique!/0` is the corpus-wide
+check: it walks every `priv/seed_data/*/*.json` — Connecticut, Manhattan,
+Brooklyn, Queens and the Bronx — plus the Connecticut code module, and counts
+owners with `length` rather than `uniq`, so an in-file duplicate collides too.
+It is invoked from five per-directory gates plus its own helper test. **All six
+were run explicitly, not just the Bronx one**, since a new slug is exactly what a
+corpus-wide check exists for and `the-bronx-brewery-mott-haven` has never
+existed before:
+
+```
+mix test test/ethos/seeds/seed_data_helpers_test.exs \
+         test/ethos/seeds/bronx_seed_data_test.exs \
+         test/ethos/seeds/brooklyn_seed_data_test.exs \
+         test/ethos/seeds/manhattan_seed_data_test.exs \
+         test/ethos/seeds/connecticut_seed_data_test.exs \
+         test/ethos/seeds/queens_seed_data_test.exs \
+         test/ethos/seeds/bare_places_roster_test.exs
+→ 67 tests, 0 failures, 30 excluded
+```
+
+## Untouched, as instructed
+
+The census and its four `==` assertions, every `address` field, the ferry
+sentences, the verdicts addendum, the ballroom corner, the firehouse roster, the
+September 14, 1976 designation and "row houses" — all unchanged. Still 8 places,
+8 entries, `"tier": "guide"`, intro 144 words, `Getting there` heading intact.
+
+## Verification after the fix
+
+- `mix format --check-formatted` — clean.
+- Global slug-uniqueness gate — ran, passed (above).
+- `mix test` — **650 tests, 0 failures, 32 excluded**.
+- Repo-wide grep for `the-bronx-brewery-tap-room` and `The Bronx Brewery Tap
+  Room` across `priv/` and `lib/` — zero hits.
