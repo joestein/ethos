@@ -162,40 +162,12 @@ defmodule EthosWeb.StructuredDataTest do
       # code was. It is a real assertion about a real property of the corpus —
       # see the note below it — but it is not evidence for this delta, and the
       # `postalCode` assertion above is not redundant with it.
-      # Re-measured 2026-08-31 after priv/seed_data/bronx/bronx-park.json and
-      # priv/seed_data/bronx/fordham-heights.json landed together — nine places
-      # across the two files, five of which ship `"address": null` and are
-      # rejected by the setup before they are counted (bronx-park and
-      # bronx-river-forest, whose sourced locations are boundary streets and a
-      # river corridor; grand-concourse and the Fordham Road business
-      # improvement district, both of which are linear rather than addressed;
-      # and monroe-university, for which no source gives a street address).
-      #
-      # The whole delta is therefore the four addressed places, and each digit
-      # is accounted for:
-      #
-      #   * +4 total: 2113 -> 2117.
-      #   * +2 streetAddress, 1575 -> 1577: bronx-zoo ("2300 Southern
-      #     Boulevard, Bronx, NY 10460") and paradise-theater-bronx ("2403
-      #     Grand Concourse, Bronx, NY"). Both carry a house number.
-      #   * +2 is_nil(streetAddress), 538 -> 540: new-york-botanical-garden
-      #     ("Southern and Bedford Park Boulevards, Bronx, NY") and
-      #     lorillard-snuff-mill ("Snuff Mill Road, Bronx, NY"). Both name a
-      #     street with no building number, the ciccarone-park shape above.
-      #     Taken with the pair above, this proves each of the four went into
-      #     exactly one of the two buckets.
-      #   * +1 postalCode, 1712 -> 1713, and by nothing else here: only
-      #     bronx-zoo carries a ZIP. The Paradise Theater's address is sourced
-      #     without one, and so are the two street-only rows.
-      #   * +2 locality-only, 248 -> 250: the same two street-less rows, which
-      #     carry no ZIP either. The Paradise Theater cannot appear in this
-      #     bucket despite having no ZIP, because it has a streetAddress.
       count = fn f -> Enum.count(emitted, fn {_, ld} -> f.(ld) end) end
 
-      assert length(emitted) == 2117
-      assert count.(& &1["streetAddress"]) == 1577
-      assert count.(&is_nil(&1["streetAddress"])) == 540
-      assert count.(& &1["postalCode"]) == 1713
+      assert length(emitted) == 2113
+      assert count.(& &1["streetAddress"]) == 1575
+      assert count.(&is_nil(&1["streetAddress"])) == 538
+      assert count.(& &1["postalCode"]) == 1712
 
       # The largest behavioural delta this change ships: 248 places emit a
       # PostalAddress carrying only locality, region and country. Their full
@@ -206,10 +178,8 @@ defmodule EthosWeb.StructuredDataTest do
       # whose sourced addresses are street ranges. The comment was not updated
       # with the assertion and spent two commits contradicting a number three
       # lines below it, which is worse than either being wrong alone. Keep the
-      # two in step. It went to 250 with bronx-park.json's New York Botanical
-      # Garden and Lorillard Snuff Mill, both addressed to a street with no
-      # building number and no ZIP.
-      assert count.(fn ld -> is_nil(ld["streetAddress"]) and is_nil(ld["postalCode"]) end) == 250
+      # two in step.
+      assert count.(fn ld -> is_nil(ld["streetAddress"]) and is_nil(ld["postalCode"]) end) == 248
     end
   end
 end
