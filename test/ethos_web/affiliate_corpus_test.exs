@@ -107,6 +107,17 @@ defmodule EthosWeb.AffiliateCorpusTest do
                      "expected a non-empty string"
           end
       end
+
+      case Map.fetch(locale, :placement) do
+        :error ->
+          :ok
+
+        {:ok, placement} ->
+          assert placement in [:top, :bottom],
+                 "affiliate locale #{inspect(slug)}: :placement is #{inspect(placement)}, " <>
+                   "expected :top or :bottom — a value matching neither layout slot renders " <>
+                   "no unit at all, silently, on every page in #{inspect(slug)}"
+      end
     end
   end
 

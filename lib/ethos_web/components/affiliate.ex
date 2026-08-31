@@ -142,6 +142,27 @@ defmodule EthosWeb.Affiliate do
   """
   def unit_renders?(assigns), do: assigns |> locale_from_assigns() |> renders?()
 
+  @default_placement :bottom
+
+  @doc """
+  Where a locale's unit renders: `:top` (above the page content) or `:bottom`.
+
+  Defaults to `:bottom`, and the default is load-bearing. New York's registry
+  entry does not carry the field, and any future entry that forgets it behaves
+  like New York rather than like Rome — the conservative direction, since a
+  top-placed unit renders above the page's `<h1>`.
+  """
+  def placement(locale) when is_map(locale), do: Map.get(locale, :placement, @default_placement)
+  def placement(_), do: @default_placement
+
+  # The two layout slots are mutually exclusive on one locale: exactly one
+  # position can match, so exactly one unit renders. `renders?/1` is checked
+  # first and short-circuits, so a nil locale never reaches placement/1.
+  defp render_here?(locale, position), do: renders?(locale) and placement(locale) == position
+
+  defp wrapper_margin(:top), do: "mb-10"
+  defp wrapper_margin(:bottom), do: "mt-10"
+
   attr :locale, :map, default: nil
 
   @doc "The partner analytics and widget script. Renders nothing without a locale."
@@ -159,6 +180,7 @@ defmodule EthosWeb.Affiliate do
   end
 
   attr :locale, :map, default: nil
+  attr :position, :atom, required: true
 
   @doc """
   The auto widget. Renders nothing without a locale `renders?/1` accepts.
@@ -175,14 +197,12 @@ defmodule EthosWeb.Affiliate do
     <%!-- px-4 matches the horizontal padding every page template applies to its
           own content wrapper (`mx-auto max-w-2xl px-4 py-10`). The layout's
           column has no padding of its own, so without this the unit sits 16px
-          wider than the article it follows. --%>
-    <div :if={renders?(@locale)} class="px-4">
-      <div
-        class="mt-10"
-        data-gyg-widget="auto"
-        data-gyg-partner-id={@locale.partner_id}
-        data-gyg-cmp={@locale.cmp}
-      >
+          wider than the article beside it.
+
+          The vertical margin flips with position: a bottom-placed unit needs
+          space above it, a top-placed one needs space below. --%>
+    <div :if={render_here?(@locale, @position)} class={["px-4", wrapper_margin(@position)]}>
+      <div data-gyg-widget="auto" data-gyg-partner-id={@locale.partner_id} data-gyg-cmp={@locale.cmp}>
       </div>
       <p class="mt-2 text-xs text-zinc-400">
         Tours and activities shown above earn Ethos a commission at no extra cost to you.

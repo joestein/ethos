@@ -384,6 +384,117 @@ defmodule EthosWeb.AffiliatePlacementTest do
       refute html =~ @widget
     end
   end
+
+  describe "per-locale placement" do
+    # These use a synthetic locale via config override rather than real data,
+    # so the mechanism is tested before any destination adopts it. `on_exit`
+    # restores the real registry — without it every later test in the run sees
+    # the synthetic one.
+    #
+    # IMPORTANT: this synthetic locale must stay well-formed (a valid
+    # :network, non-empty :partner_id/:cmp, and a :placement of :top or
+    # :bottom when present). `affiliate_corpus_test.exs`'s "every configured
+    # affiliate locale is well-formed" test is ALSO `async: true` and reads
+    # this same `:ethos, :affiliate_locales` global while these tests are
+    # running concurrently. A deliberately-malformed locale added here to
+    # exercise a negative case would make that unrelated test intermittently
+    # fail, depending on ExUnit's scheduling — a failure that would look like
+    # it belongs to affiliate_corpus_test.exs, not to whatever change added
+    # the malformed entry here. Test malformed-registry cases with
+    # `async: false`, the way `AffiliateUnsupportedNetworkTest` below does.
+    defp with_locale(slug, locale) do
+      original = Application.get_env(:ethos, :affiliate_locales, %{})
+      Application.put_env(:ethos, :affiliate_locales, Map.put(original, slug, locale))
+
+      ExUnit.Callbacks.on_exit(fn ->
+        Application.put_env(:ethos, :affiliate_locales, original)
+      end)
+    end
+
+    defp guide_in(state, county) do
+      published_guide_fixture(%{
+        "title" => "Placement Probe",
+        "destination" => "Placement Probe, #{state}",
+        "state" => state,
+        "county" => county
+      })
+    end
+
+    # The load-bearing assertion for the whole feature. Both placements render
+    # byte-identical markup, so asserting the widget is PRESENT passes the same
+    # either way and proves nothing. Position relative to the page's <h1>
+    # (guide_html/show.html.heex:5) is what distinguishes them.
+    test "a :top locale renders the unit before the page title", %{conn: conn} do
+      with_locale("testonia", %{
+        network: :getyourguide,
+        partner_id: "ZA4AIMF",
+        cmp: "testonia",
+        placement: :top
+      })
+
+      g = guide_in("Testonia", nil)
+      html = conn |> get(~p"/g/#{g.slug}") |> html_response(200)
+
+      widget_at = :binary.match(html, "data-gyg-widget") |> elem(0)
+      title_at = :binary.match(html, "<h1") |> elem(0)
+
+      assert widget_at < title_at,
+             "expected the :top unit before the <h1>, got widget at #{widget_at}, h1 at #{title_at}"
+    end
+
+    test "a :bottom locale renders the unit after the page title", %{conn: conn} do
+      with_locale("testonia", %{
+        network: :getyourguide,
+        partner_id: "ZA4AIMF",
+        cmp: "testonia",
+        placement: :bottom
+      })
+
+      g = guide_in("Testonia", nil)
+      html = conn |> get(~p"/g/#{g.slug}") |> html_response(200)
+
+      widget_at = :binary.match(html, "data-gyg-widget") |> elem(0)
+      title_at = :binary.match(html, "<h1") |> elem(0)
+
+      assert widget_at > title_at,
+             "expected the :bottom unit after the <h1>, got widget at #{widget_at}, h1 at #{title_at}"
+    end
+
+    # Pins the default. This is what keeps New York unchanged without editing
+    # its registry entry, and what makes an entry that forgets the field behave
+    # like New York rather than like Rome.
+    test "a locale omitting :placement renders at the bottom", %{conn: conn} do
+      with_locale("testonia", %{
+        network: :getyourguide,
+        partner_id: "ZA4AIMF",
+        cmp: "testonia"
+      })
+
+      g = guide_in("Testonia", nil)
+      html = conn |> get(~p"/g/#{g.slug}") |> html_response(200)
+
+      widget_at = :binary.match(html, "data-gyg-widget") |> elem(0)
+      title_at = :binary.match(html, "<h1") |> elem(0)
+
+      assert widget_at > title_at, "a locale with no :placement did not default to the bottom"
+    end
+
+    # Two slots exist now. This is the assertion that catches both firing.
+    test "a :top locale still renders exactly one widget div", %{conn: conn} do
+      with_locale("testonia", %{
+        network: :getyourguide,
+        partner_id: "ZA4AIMF",
+        cmp: "testonia",
+        placement: :top
+      })
+
+      g = guide_in("Testonia", nil)
+      html = conn |> get(~p"/g/#{g.slug}") |> html_response(200)
+
+      count = html |> String.split(~s(data-gyg-widget="auto")) |> length() |> Kernel.-(1)
+      assert count == 1, "expected exactly one widget div, got #{count}"
+    end
+  end
 end
 
 defmodule EthosWeb.AffiliateUnsupportedNetworkTest do
