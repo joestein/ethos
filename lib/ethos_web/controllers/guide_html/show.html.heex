@@ -32,7 +32,16 @@
 
   <div :if={@guide.intro} class="prose mt-6">{EthosWeb.Markdown.render(@guide.intro)}</div>
 
-  <aside class="mt-8 flex flex-wrap items-center justify-between gap-4 rounded-xl border border-amber-200 bg-amber-50 p-5">
+  <%!-- The generic GetYourGuide CTA is the FALLBACK. A page whose geography
+        resolves to a configured affiliate locale gets the widget from the app
+        layout instead — one unit per page, below the content. This condition
+        is the locale's presence, not a hardcoded state check, so Rome's aside
+        becomes Rome's widget the day a Rome entry lands in the registry, with
+        no edit here. --%>
+  <aside
+    :if={is_nil(EthosWeb.Affiliate.locale_from_assigns(assigns))}
+    class="mt-8 flex flex-wrap items-center justify-between gap-4 rounded-xl border border-amber-200 bg-amber-50 p-5"
+  >
     <div>
       <p class="font-semibold">Planning your own trip?</p>
       <p class="text-sm text-zinc-600">

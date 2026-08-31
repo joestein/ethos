@@ -3,5 +3,6 @@
   <div class="mx-auto max-w-2xl">
     <.flash_group flash={@flash} />
     {@inner_content}
+    <EthosWeb.Affiliate.affiliate_unit locale={EthosWeb.Affiliate.locale_from_assigns(assigns)} />
   </div>
 </main>
