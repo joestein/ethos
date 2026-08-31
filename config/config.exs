@@ -80,6 +80,20 @@ config :ethos, :affiliate_locales, %{
     partner_id: "ZA4AIMF",
     cmp: "new-york",
     counties: ["Manhattan", "Brooklyn", "Bronx", "Queens", "Staten Island"]
+  },
+  # Country-level scope with a city campaign code, and those are not in tension:
+  # GetYourGuide issues city-scoped codes and there is no "italy" code to use.
+  # No :counties key, so every Italian page resolves.
+  #
+  # The consequence, recorded rather than guarded: when Florence or Venice ship
+  # they inherit cmp=rome unless this entry is split first. The fix is the same
+  # allowlist mechanism "new-york" uses. It is deliberately not built now — a
+  # guard over a one-city corpus guards nothing.
+  "italy" => %{
+    network: :getyourguide,
+    partner_id: "ZA4AIMF",
+    cmp: "rome",
+    placement: :top
   }
 }
 

@@ -43,7 +43,7 @@ defmodule Ethos.AffiliatesTest do
 
     test "states with no registry entry resolve to nil" do
       refute Affiliates.locale_for("connecticut", "Litchfield County")
-      refute Affiliates.locale_for("italy", nil)
+      refute Affiliates.locale_for("atlantis", nil)
       refute Affiliates.locale_for(nil, nil)
     end
   end

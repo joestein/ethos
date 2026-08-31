@@ -12,6 +12,11 @@ defmodule Ethos.Seeds.RomeGuideTest do
     assert guide.status == "published"
     assert guide.slug == "three-days-in-rome-real-trip-guide"
     assert guide.destination_slug == "rome"
+
+    # The affiliate registry is keyed on state_slug. Without this the Rome
+    # locale silently never fires, and every affiliate test still passes
+    # because they exercise fixtures rather than the seeder.
+    assert guide.state_slug == "italy"
     assert length(guide.sections) == 4
     assert length(guide.faq) == 6
     assert length(guide.photos) == 13

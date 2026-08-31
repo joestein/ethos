@@ -18,6 +18,7 @@ defmodule Ethos.Seeds.RomeGuide do
   @slug "three-days-in-rome-real-trip-guide"
   @title "3 Days in Rome: Colosseum Arena Floor, the Vatican, and the Back Streets of Monti"
   @destination "Rome, Italy"
+  @state "Italy"
 
   @intro """
   Three days in Rome, exactly as we did them — no filler, real verdicts. We based
@@ -295,6 +296,12 @@ defmodule Ethos.Seeds.RomeGuide do
       slug: @slug,
       title: @title,
       destination: @destination,
+      # Rome's state is what lets the affiliate registry — keyed on state slug —
+      # reach it at all. Without it state_slug is nil and locale_for/2 returns
+      # nil on its first clause, so no config entry could ever fire. It also
+      # makes /destinations/italy serve as a state hub, which is how every other
+      # guide's state behaves.
+      state: @state,
       intro: @intro,
       sections: @sections,
       faq: @faq,
@@ -317,7 +324,7 @@ defmodule Ethos.Seeds.RomeGuide do
       Repo.transaction(fn ->
         guide =
           guide
-          |> Guide.changeset(%{title: d.title, destination: d.destination})
+          |> Guide.changeset(%{title: d.title, destination: d.destination, state: d.state})
           |> Guide.seo_changeset(%{intro: d.intro, sections: d.sections, faq: d.faq})
           |> Ecto.Changeset.put_change(:slug, d.slug)
           |> Repo.update!()
@@ -369,7 +376,7 @@ defmodule Ethos.Seeds.RomeGuide do
 
       nil ->
         %Guide{user_id: user.id}
-        |> Guide.changeset(%{title: d.title, destination: d.destination})
+        |> Guide.changeset(%{title: d.title, destination: d.destination, state: d.state})
         |> Ecto.Changeset.put_change(:slug, d.slug)
         |> Repo.insert!()
     end

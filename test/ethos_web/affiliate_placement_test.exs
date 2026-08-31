@@ -495,6 +495,67 @@ defmodule EthosWeb.AffiliatePlacementTest do
       assert count == 1, "expected exactly one widget div, got #{count}"
     end
   end
+
+  describe "the Rome locale" do
+    setup do
+      user = Ethos.AccountsFixtures.user_fixture()
+      Ethos.Seeds.RomeGuide.upsert!(user.email)
+      :ok
+    end
+
+    test "the Rome guide carries the rome campaign above its title", %{conn: conn} do
+      html = conn |> get(~p"/g/three-days-in-rome-real-trip-guide") |> html_response(200)
+
+      assert html =~ @script_src
+      assert html =~ ~s(data-gyg-cmp="rome")
+      assert html =~ ~s(data-gyg-partner-id="ZA4AIMF")
+
+      widget_at = :binary.match(html, "data-gyg-widget") |> elem(0)
+      title_at = :binary.match(html, "<h1") |> elem(0)
+      assert widget_at < title_at, "Rome's unit did not render above the page title"
+
+      count = html |> String.split(~s(data-gyg-widget="auto")) |> length() |> Kernel.-(1)
+      assert count == 1, "expected exactly one widget div on the Rome guide, got #{count}"
+    end
+
+    # Rome is the ONLY guide in the corpus carrying both an affiliate locale and
+    # a sponsored per-entry booking link, so it is the only page where this
+    # interaction is observable at all.
+    test "Rome's amber CTA is gone but its booking link and disclosure survive", %{conn: conn} do
+      html = conn |> get(~p"/g/three-days-in-rome-real-trip-guide") |> html_response(200)
+
+      refute html =~ @amber
+      assert html =~ ~s(rel="sponsored nofollow noopener")
+      assert html =~ @old_disclosure
+    end
+
+    test "the Italy state hub serves and carries the widget", %{conn: conn} do
+      html = conn |> get(~p"/destinations/italy") |> html_response(200)
+
+      assert html =~ ~s(data-gyg-cmp="rome")
+    end
+
+    # New York must not have moved. Asserted on the same run as Rome so a
+    # shared-campaign or shared-placement regression cannot hide.
+    test "New York is unchanged on the same deploy", %{conn: conn} do
+      g =
+        published_guide_fixture(%{
+          "title" => "Belmont",
+          "destination" => "Belmont, New York",
+          "state" => "New York",
+          "county" => "Bronx"
+        })
+
+      html = conn |> get(~p"/g/#{g.slug}") |> html_response(200)
+
+      assert html =~ ~s(data-gyg-cmp="new-york")
+      refute html =~ ~s(data-gyg-cmp="rome")
+
+      widget_at = :binary.match(html, "data-gyg-widget") |> elem(0)
+      title_at = :binary.match(html, "<h1") |> elem(0)
+      assert widget_at > title_at, "New York's unit moved above the title"
+    end
+  end
 end
 
 defmodule EthosWeb.AffiliateUnsupportedNetworkTest do
