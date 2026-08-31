@@ -94,6 +94,16 @@ defmodule Ethos.PlacesTest do
     assert Places.count_open_places_in_county("connecticut", "litchfield-county") == 0
   end
 
+  defp seed_town(count) do
+    for n <- 1..count do
+      Places.upsert_place!(%{
+        @valid
+        | slug: "waterbury-place-#{n}",
+          name: "Waterbury Place #{String.pad_leading(to_string(n), 2, "0")}"
+      })
+    end
+  end
+
   describe "list_siblings/2" do
     test "returns other open places in the same town, by name, excluding itself" do
       palace = Places.upsert_place!(@valid)
@@ -183,13 +193,7 @@ defmodule Ethos.PlacesTest do
     end
 
     test "caps the number of siblings returned" do
-      for n <- 1..12 do
-        Places.upsert_place!(%{
-          @valid
-          | slug: "waterbury-place-#{n}",
-            name: "Waterbury Place #{String.pad_leading(to_string(n), 2, "0")}"
-        })
-      end
+      seed_town(12)
 
       anchor = Places.get_place_by_slug!("waterbury-place-1")
 
@@ -198,6 +202,124 @@ defmodule Ethos.PlacesTest do
       refute Enum.any?(siblings, &(&1.id == anchor.id))
 
       assert Places.list_siblings(anchor, limit: 3) |> length() == 3
+    end
+
+    # A window that always starts at the alphabetical top of the town renders
+    # the same eight names on every place page in it, so in a town of more than
+    # nine places the rest have no inbound in-site link at all. Belmont, the
+    # Bronx has 40 places; 22 of them were unreachable by navigation. The window
+    # rotates instead: each place shows the eight that follow it, wrapping.
+    test "the union of every place's siblings covers the whole town" do
+      places = seed_town(20)
+      all_slugs = places |> Enum.map(& &1.slug) |> MapSet.new()
+
+      covered =
+        places
+        |> Enum.flat_map(&Places.list_siblings/1)
+        |> Enum.map(& &1.slug)
+        |> MapSet.new()
+
+      assert MapSet.equal?(covered, all_slugs)
+      assert Enum.all?(places, &(length(Places.list_siblings(&1)) == 8))
+    end
+
+    test "every place in the town has at least one inbound sibling link" do
+      places = seed_town(20)
+
+      inbound =
+        Map.new(places, fn place ->
+          linkers =
+            places
+            |> Enum.reject(&(&1.id == place.id))
+            |> Enum.filter(fn other ->
+              Enum.any?(Places.list_siblings(other), &(&1.id == place.id))
+            end)
+
+          {place.slug, length(linkers)}
+        end)
+
+      orphans = for {slug, 0} <- inbound, do: slug
+      assert orphans == []
+      assert Enum.all?(inbound, fn {_slug, n} -> n == 8 end)
+    end
+
+    test "the window rotates: siblings are the eight successors by name, wrapping" do
+      seed_town(20)
+
+      anchor = Places.get_place_by_slug!("waterbury-place-15")
+
+      assert Enum.map(Places.list_siblings(anchor), & &1.name) == [
+               "Waterbury Place 16",
+               "Waterbury Place 17",
+               "Waterbury Place 18",
+               "Waterbury Place 19",
+               "Waterbury Place 20",
+               "Waterbury Place 01",
+               "Waterbury Place 02",
+               "Waterbury Place 03"
+             ]
+
+      last = Places.get_place_by_slug!("waterbury-place-20")
+
+      assert Enum.map(Places.list_siblings(last), & &1.name) == [
+               "Waterbury Place 01",
+               "Waterbury Place 02",
+               "Waterbury Place 03",
+               "Waterbury Place 04",
+               "Waterbury Place 05",
+               "Waterbury Place 06",
+               "Waterbury Place 07",
+               "Waterbury Place 08"
+             ]
+    end
+
+    test "a town smaller than the cap still shows every other place" do
+      places = seed_town(5)
+
+      for place <- places do
+        siblings = Places.list_siblings(place)
+        assert length(siblings) == 4
+
+        assert MapSet.new(siblings, & &1.slug) ==
+                 places
+                 |> Enum.reject(&(&1.id == place.id))
+                 |> MapSet.new(& &1.slug)
+      end
+    end
+
+    test "two places sharing a name in one town order deterministically" do
+      twin_a =
+        Places.upsert_place!(%{
+          @valid
+          | slug: "sacred-heart-church-waterbury",
+            name: "Sacred Heart",
+            kind: "historic-site"
+        })
+
+      twin_b =
+        Places.upsert_place!(%{
+          @valid
+          | slug: "sacred-heart-school-waterbury",
+            name: "Sacred Heart",
+            kind: "museum"
+        })
+
+      seed_town(6)
+
+      anchor = Places.get_place_by_slug!("waterbury-place-1")
+
+      first = Places.list_siblings(anchor) |> Enum.map(& &1.id)
+      assert first == Places.list_siblings(anchor) |> Enum.map(& &1.id)
+      assert first == Places.list_siblings(anchor) |> Enum.map(& &1.id)
+
+      assert twin_a.id in first
+      assert twin_b.id in first
+
+      # Equal names never collapse into one another: each twin still sees the
+      # other, and neither sees itself.
+      a_siblings = Places.list_siblings(twin_a)
+      assert twin_b.id in Enum.map(a_siblings, & &1.id)
+      refute twin_a.id in Enum.map(a_siblings, & &1.id)
     end
   end
 end

@@ -64,8 +64,26 @@ defmodule Ethos.Places do
   @doc """
   Other open places in the same town, excluding the place itself.
 
-  Ordered by name and capped (`:limit`, default #{@sibling_limit}) so a place
-  page can offer a way sideways into its town without turning into a directory.
+  Capped (`:limit`, default #{@sibling_limit}) so a place page can offer a way
+  sideways into its town without turning into a directory.
+
+  The window into the town *rotates*: each place shows the #{@sibling_limit}
+  places that follow it alphabetically, wrapping around to the top of the town
+  when it runs out. A fixed `order_by: [asc: p.name]` with the same cap put the
+  same eight alphabetically-first names on every place page in the town, so in a
+  town of more than nine places the rest had no inbound in-site link at all —
+  in the sitemap, resolvable by URL, unreachable by navigation. Belmont, the
+  Bronx is the first town where it showed: of its 40 places, 12 are linked from
+  the guide's entries and only 6 more were sibling-reachable.
+
+  Rotating instead of raising the cap keeps the page density and the intent
+  above, and makes the union of the town's sibling lists cover the whole town —
+  every place gains inbound links from the #{@sibling_limit} that precede it.
+  It also stops "More in {town}" from being the same duplicated block on every
+  place page in the town.
+
+  `p.id` breaks name ties so the ordering is total and stable across calls; two
+  places in one town can share a name (parish church and parish school).
 
   Scoped by state as well as town, because `town_slug` alone is not a town.
   Washington, Connecticut and Washington, District of Columbia both derive
@@ -84,7 +102,10 @@ defmodule Ethos.Places do
   def list_siblings(%Place{town_slug: nil}, _opts), do: []
   def list_siblings(%Place{state_slug: nil}, _opts), do: []
 
-  def list_siblings(%Place{id: id, town_slug: town_slug, state_slug: state_slug}, opts) do
+  def list_siblings(
+        %Place{id: id, name: name, town_slug: town_slug, state_slug: state_slug},
+        opts
+      ) do
     limit = Keyword.get(opts, :limit, @sibling_limit)
 
     Repo.all(
@@ -92,7 +113,7 @@ defmodule Ethos.Places do
         where:
           p.town_slug == ^town_slug and p.state_slug == ^state_slug and
             p.id != ^id and p.status == "open",
-        order_by: [asc: p.name],
+        order_by: [desc: fragment("? > ?", p.name, ^name), asc: p.name, asc: p.id],
         limit: ^limit
     )
   end
