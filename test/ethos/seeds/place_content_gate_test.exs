@@ -13,10 +13,21 @@ defmodule Ethos.Seeds.PlaceContentGateTest do
 
   ## The content assertions cover every string, not just `summary`
 
-  Both patterns are checked against every string in every seed source — place
-  `summary` and `history`, guide `intro`, section `body`, FAQ `question` and
-  `answer`, entry `note`, link `note`, and anything a later format adds. See
+  Both patterns are checked against every string in every **JSON** seed file —
+  place `summary` and `history`, guide `intro`, section `body`, FAQ `question`
+  and `answer`, entry `note`, link `note`, and anything a later format adds —
+  and against every string in every code-defined **places** module. See
   `collect_strings/2` below for why the fields are walked rather than named.
+
+  **What it does not reach, stated plainly rather than left to be discovered:**
+  code-defined *guides*. `prose/0` walks `SeedDataHelpers.all_seed_files/0`
+  and `SeedDataHelpers.code_places/0`; there is no `code_guides/0`, so the
+  intros, section bodies and FAQ answers of `Ethos.Seeds.*Guide` — every
+  Connecticut town guide and every ballpark guide — are outside this gate.
+  A banned phrase in `yankee_stadium_places.ex` fails here; the same sentence
+  in `yankee_stadium_guide.ex` does not. Closing that needs a catalog entry
+  point those modules do not currently expose, which is why it is recorded
+  here instead of quietly assumed away.
 
   ## Why two of these are excluded by default
 
@@ -31,8 +42,26 @@ defmodule Ethos.Seeds.PlaceContentGateTest do
 
       mix test test/ethos/seeds/place_content_gate_test.exs --include pending_wave
 
-  The other two assertions pass today and run by default. They protect the
-  deletion machinery while the waves are in flight.
+  The other four assertions pass today and run by default: two protect the
+  deletion machinery while the waves are in flight, and two hold the
+  inspection pattern set itself in place — one specimen per alternative, plus
+  the corpus sentences a rejected candidate would have broken. Those two
+  inspect the patterns rather than the corpus, so they are green today and
+  must never be tagged.
+
+  ## A pattern set tuned to the corpus is a pattern set with the corpus's
+  ## blind spots
+
+  The comment on `@inspection` says every alternative was derived by surveying
+  what the corpus really says. That is the right method and it has one failure
+  mode, which this file has already been bitten by: it cannot see a phrasing
+  nobody had written yet. Three summaries in
+  `lib/ethos/seeds/yankee_stadium_places.ex` published a food-inspection record
+  in prose with the word "inspection" and the grade letter deliberately
+  removed, and no alternative here matched them. Widening the set is therefore
+  not a tidy-up — it is the maintenance this method requires. Measure any new
+  alternative over the whole corpus before adding it, record the count, and
+  give it a specimen.
   """
   use ExUnit.Case, async: true
 
@@ -65,16 +94,67 @@ defmodule Ethos.Seeds.PlaceContentGateTest do
   # every one of those clean. A gate that cries wolf gets excluded, and this one
   # is already excluded once.
   #
+  # ## The four alternatives that name the record without naming inspection
+  #
+  # The first eleven alternatives all contain the word "inspection", a grade
+  # letter, or "health". An author who strips those three things can publish
+  # the whole record anyway, and one did: `yankee_stadium_places.ex` shipped
+  # three summaries reading "carried under American cuisine on New York City's
+  # public restaurant dataset, in a row dated October 29, 2025", and the same
+  # file's moduledoc claimed the records "stop there". A grep for "inspection"
+  # found nothing. Every pattern above passed over it.
+  #
+  # So the last four alternatives ban the record's other three identifying
+  # marks — the dataset it came from, the row's date, and the cuisine field —
+  # rather than the word for the act. Each was measured over every string in
+  # `priv/seed_data/*/*.json` plus every string literal in
+  # `lib/ethos/seeds/*.ex` before being kept; counts are per alternative,
+  # corpus-visible fields first:
+  #
+  #   * `restaurant[-\s]data(?:set|base)?` — 3 fields, all three the defect.
+  #   * `\brows?\s+dated\b` — 3 fields, all three the defect. Adjacency is the
+  #     whole narrowing: bare `\brow\b` is 73 fields of rowhouses, row of
+  #     brownstones and Chinatown's Mott Street row, and "a row of brownstones
+  #     dated to 1890" still passes because "row" and "dated" are not adjacent.
+  #   * `carried\s+under…cuisine` — 2 fields, both the defect.
+  #   * `\bcuisine\s+category\b` — 0 fields. Prophylactic, and cheap by the
+  #     rule above: it is the dataset's own field name written out in plain
+  #     words, which is where an author goes once the three phrasings that do
+  #     exist are closed.
+  #
   # Deliberately NOT included, having been considered and rejected:
   #   * bare `grade` / case-insensitive grade letters — see above.
   #   * `hygiene` — its only two occurrences are Bridgeport's "first dental
   #     hygiene school in 1949". Zero true positives.
   #   * bare `inspected` — too close to legitimate prose about inspecting
   #     anything else; the date-anchored alternative below covers the real
-  #     phrasings without reaching that far.
+  #     phrasings without reaching that far. Shelton's farmers-market summary
+  #     ("Vendors are inspected to confirm they are growers") is the live
+  #     false positive it would take.
   #   * `DOHMH` — appears nowhere in the corpus prose. Harmless to add, but a
   #     bare agency acronym could legitimately be cited in a note about the
   #     agency itself rather than about a place's record.
+  #   * bare `\bdataset\b` — 8 fields, and 5 of them legitimate: Homecrest's
+  #     and Madison's "query of the city's property dataset for ZIP code
+  #     11229", and three Fenway summaries citing "the City of Boston's Active
+  #     Food Establishment Licenses dataset". A licence register is not an
+  #     inspection record, and citing one is how a third of the ballpark
+  #     corpus establishes an address.
+  #   * `public\s+restaurant` — 4 fields, and Bloomfield's "The public
+  #     restaurant at Wintonbury Hills Golf Course" is one of them. The word
+  #     "public" is doing no work; `restaurant data` catches the same three
+  #     without it.
+  #   * `open\s+data` — 4 fields, every one legitimate NYC open data
+  #     provenance for a park or a property (Gravesend x3, Homecrest x1).
+  #   * `\bregistry\b` — 5 fields, every one Oracle Park citing the San
+  #     Francisco business registry.
+  #   * `\bdatabase\b` — 1 field, the James Beard entry for Versailles.
+  #   * widening the cuisine alternative to `carried\s+under…(cuisine|category)`
+  #     — 3 fields today and no false positive, but `category` is a word this
+  #     corpus uses for NYC Parks' `typecategory` ("carried under the
+  #     Neighborhood Park category"), and a gate one plausible sentence away
+  #     from an allowlist is a gate that gets one. `cuisine` is food-specific
+  #     and the third summary is caught by the two alternatives above anyway.
   @inspection ~r/
       inspection[-\s]records?
     | restaurant[-\s]inspection
@@ -88,7 +168,79 @@ defmodule Ethos.Seeds.PlaceContentGateTest do
     | (?:shows?|showing)\s+it\s+inspected
     | \bgrade[ds]?\s+(?-i:[A-C])\b
     | \b(?-i:[A-C])\s+grade\b
+    | restaurant[-\s]data(?:set|base)?\b
+    | \brows?\s+dated\b
+    | carried\s+under\b[^.]{0,40}\bcuisine\b
+    | \bcuisine\s+category\b
   /ix
+
+  # One specimen per alternative, labelled rather than indexed because
+  # `@inspection` is one regex and not a list.
+  #
+  # It still makes each alternative individually load-bearing, by the same
+  # mechanism the Bronx gate's indexed specimens use: every specimen below was
+  # checked to fire **exactly one** alternative and no other, so deleting or
+  # weakening that alternative makes `Regex.match?/2` return false on its own
+  # line. Without this the fifteen are load-bearing only in aggregate — today's
+  # corpus fires five of them, so ten could be deleted wholesale and this suite
+  # would stay green. That is the state this gate was in when the Yankee
+  # Stadium summaries were written, and it is why they were written.
+  #
+  # `(?:shows?|showing)\s+it\s+inspected` has no specimen and no label of its
+  # own: it is wholly contained by the date-anchored alternative below it for
+  # every phrasing that carries a date, and the two are listed separately for
+  # readability. If it is given a specimen it must be one no other alternative
+  # catches, or the specimen proves nothing.
+  @inspection_specimens [
+    {"inspection-records", "the shop appears in the city's inspection records"},
+    {"restaurant-inspection", "a restaurant inspection is evidence, not a sentence"},
+    {"inspection-dated", "the address carries an inspection dated July 9"},
+    {"inspected-by-the-city", "a bakery inspected by the city, and nothing else"},
+    {"health-department", "health department records show the same address"},
+    {"city-health-records", "the city's health records carry this address"},
+    {"health-inspection", "a health inspection supports a status, not a summary"},
+    {"inspection-history", "its inspection history is not published here"},
+    {"inspected-on-a-date", "the stall was inspected in August 2025"},
+    {"graded-letter", "the counter was graded A in July 2026"},
+    {"letter-grade", "the diner holds an A grade"},
+    {"restaurant-dataset", "carried on the city's public restaurant dataset"},
+    {"row-dated", "in a row dated October 29, 2025"},
+    {"carried-under-cuisine", "carried under American cuisine at that address"},
+    {"cuisine-category", "the record gives only its cuisine category"}
+  ]
+
+  # The other half of the tuning, and the half that decides whether this gate
+  # survives: a pattern that fires on legitimate prose gets excluded, and an
+  # excluded gate is not a gate — this one is already excluded once.
+  #
+  # Every string here is a real or near-real corpus sentence that a rejected
+  # candidate above WOULD have failed. They are asserted so that re-proposing
+  # one of those candidates fails here with the sentence it would break,
+  # instead of failing three waves later as a mystery in someone else's file.
+  @publishable_prose [
+    # `\bdataset\b` — Homecrest's and Madison's hotel FAQ.
+    "A query of the city's property dataset for ZIP code 11229 returned no property carrying a hotel building class.",
+    # `\bdataset\b` — Fenway's licence-register provenance, three summaries.
+    "the City of Boston's Active Food Establishment Licenses dataset carries a Food Service licence for \"Cask N Flagon\"",
+    # `public\s+restaurant` — Bloomfield.
+    "The public restaurant at Wintonbury Hills Golf Course, serving breakfast, lunch, dinner and snacks.",
+    # `open\s+data` — Gravesend.
+    "NYC open data files it under Community Board 13 and sources associate it with Bath Beach.",
+    # `\bregistry\b` — Oracle Park.
+    "Red's Java House Inc has been on the San Francisco business registry at Pier 40 since 1997.",
+    # Case-insensitive grade letters — Cobble Hill and Homecrest.
+    "a grade-separated right-of-way to South Ferry",
+    "the original at-grade station at Avenue U opened on the surface Brighton Beach Railroad",
+    # Bare `grade` — it hides inside this word.
+    "NYC Parks opened $5.4 million of accessibility upgrades to the playground.",
+    # Bare `inspected` — Shelton's farmers market.
+    "Vendors are inspected to confirm they are growers selling their own produce, not resellers.",
+    # Bare `\brow\b`, and the adjacency narrowing on `rows? dated`.
+    "a row of brownstones dated by the landmarks commission to 1890",
+    # The rejected `category` widening, and a parks-dataset attribution.
+    "the park is carried under the Neighborhood Park category by NYC Parks",
+    "It is a Neighborhood Park in the parks properties dataset, 0.553 acres."
+  ]
 
   # "A restaurant on Bath Avenue, at number 1806." — a stub wearing a sentence.
   @stub ~r/^A [a-z][a-z -]* (?:on|at) [^,]+,\s*at number \d+\.?$/
@@ -177,6 +329,41 @@ defmodule Ethos.Seeds.PlaceContentGateTest do
           do: {Path.basename(owner.seed_file), path, text}
 
     json ++ code
+  end
+
+  # --- Each alternative is individually load-bearing ----------------------
+  #
+  # These two run by default. They inspect the patterns, not the corpus, so
+  # they are unaffected by the waves still owed and must never carry
+  # `:pending_wave` — the whole point is that they stay green while the
+  # corpus assertions below are excluded, and fail the moment the pattern set
+  # is weakened.
+
+  test "each inspection alternative is individually load-bearing" do
+    labels = Enum.map(@inspection_specimens, &elem(&1, 0))
+
+    assert labels == Enum.uniq(labels),
+           "duplicate specimen labels leave an alternative unguarded: #{inspect(labels)}"
+
+    for {label, specimen} <- @inspection_specimens do
+      assert Regex.match?(@inspection, specimen),
+             "the #{label} alternative no longer catches #{inspect(specimen)}. Each specimen " <>
+               "fires exactly one alternative, so this failure names the alternative that was " <>
+               "deleted or narrowed. Do not fix it by editing the specimen — measure the " <>
+               "replacement pattern over priv/seed_data/*/*.json and lib/ethos/seeds/*.ex first, " <>
+               "as the rejected-candidate list above records for every pattern not here."
+    end
+  end
+
+  test "legitimate prose still publishes" do
+    for text <- @publishable_prose do
+      refute Regex.match?(@inspection, text),
+             "the inspection ban fires on prose this corpus legitimately publishes: " <>
+               "#{inspect(text)}. A licence register, an open-data property query, a railway " <>
+               "grade separation and a farmers market inspecting its growers are none of them " <>
+               "an inspection record in a place's summary. A gate that cries wolf gets " <>
+               "excluded, and this one is already excluded once."
+    end
   end
 
   @tag :pending_wave

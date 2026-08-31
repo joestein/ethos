@@ -24,14 +24,25 @@ defmodule Ethos.Seeds.YankeeStadiumPlaces do
   What the verification changed, and what is therefore absent here:
 
     * **No inspection-record prose.** Three River Avenue businesses —
-      Billy's, Stan's and The Clubhouse Cafe — rest entirely on New York
-      City's public restaurant dataset, which was used as a discovery
-      mechanism once web search was exhausted. Their records name the
-      business, the address and the cuisine category the dataset carries, and
-      stop there. The grade letters and the word "inspection" are absent by
-      the rule in `test/ethos/seeds/place_content_gate_test.exs`: roughly
-      twenty summaries in this corpus already read as inspection boilerplate,
-      and three more would not be an improvement.
+      Billy's, Stan's and The Clubhouse Cafe — were reached only through the
+      city's food-service records, used as a discovery mechanism once web
+      search was exhausted. Their records here name the business, what it is
+      and its address, and stop there.
+
+      They did not always. As first shipped, all three named the record's
+      source and published the date it carried, while this paragraph claimed
+      they stopped at the address — the file documented a compliance it did
+      not have, and the contradiction survived review because the author had
+      removed the two things a reader greps for, the word "inspection" and
+      the grade letter. The rule in
+      `test/ethos/seeds/place_content_gate_test.exs` bans the record, not
+      those two words: it may support a `status` judgement and may never
+      appear in a sentence. That gate's pattern set, tuned by surveying the
+      phrasings the corpus already contained, had no alternative that matched
+      this one. It now carries four more — for the source's name, for a dated
+      row, and for the cuisine field in either of its two forms — each with a
+      specimen proving it load-bearing. Both halves were fixed together,
+      because either alone leaves the other free to happen again.
 
     * **The Bronx Museum's permanent-collection figure is `uncertain` and does
       not ship.** Its founding, its move, its expansions, its free admission
@@ -41,8 +52,8 @@ defmodule Ethos.Seeds.YankeeStadiumPlaces do
       (`uncertain`: 2026 hours and non-game-day access unestablished), the
       Bronx Terminal Market (`uncertain`: the tenant roster is not freshly
       dated, so its anchor list is published as of the 2009 reopening), and
-      the three River Avenue businesses, whose only source is a dated dataset
-      row. Uncertain is not closed, and no closure is asserted.
+      the three River Avenue businesses, whose only source is a single
+      municipal record. Uncertain is not closed, and no closure is asserted.
 
     * **Architectural style ships where a verdict states one.** The Bronx
       County Courthouse's "Art Deco style with Classical Revival and
@@ -175,7 +186,7 @@ defmodule Ethos.Seeds.YankeeStadiumPlaces do
         address: "856 River Avenue, Bronx, NY 10451",
         official_url: nil,
         summary:
-          "A sports bar and lounge at 856 River Avenue, carried under American cuisine on New York City's public restaurant dataset, in a row dated October 29, 2025. That row is the only source the research reached: web search was exhausted, no site for the business was found, and its founding year and history are not published here.",
+          "A sports bar and lounge at 856 River Avenue. One municipal record is the only source the research reached: web search was exhausted before this batch began, no site for the business was found, and its founding year and history are not published here.",
         history: nil,
         photos: []
       }),
@@ -186,7 +197,7 @@ defmodule Ethos.Seeds.YankeeStadiumPlaces do
         address: "836 River Avenue, Bronx, NY 10451",
         official_url: nil,
         summary:
-          "A sports bar at 836 River Avenue, carried under American cuisine on New York City's public restaurant dataset, in a row dated April 13, 2026. That row is the only source the research reached: web search was exhausted, no site for the business was found, and its founding year and history are not published here.",
+          "A sports bar at 836 River Avenue. One municipal record is the only source the research reached: web search was exhausted before this batch began, no site for the business was found, and its founding year and history are not published here.",
         history: nil,
         photos: []
       }),
@@ -197,7 +208,7 @@ defmodule Ethos.Seeds.YankeeStadiumPlaces do
         address: "812 River Avenue, Bronx, NY 10451",
         official_url: nil,
         summary:
-          "A cafe at 812 River Avenue, carried under the coffee and tea category on New York City's public restaurant dataset, in a row dated June 19, 2026. That row is the only source the research reached: web search was exhausted, no site for the business was found, and its founding year and history are not published here.",
+          "A cafe at 812 River Avenue. One municipal record is the only source the research reached: web search was exhausted before this batch began, no site for the business was found, and its founding year and history are not published here.",
         history: nil,
         photos: []
       })
