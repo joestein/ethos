@@ -76,11 +76,26 @@ defmodule EthosWeb.AffiliateCorpusTest do
   # The future mistake this catches: someone adds <.affiliate_unit> to a page
   # template, not realising it already comes from the app layout, and the page
   # ships with two. Two units render fine and look like an ad farm.
+  #
+  # Markup lives in two file shapes in this codebase: `.heex` template files
+  # and inline `~H"""..."""` sigils inside `.ex` modules (every LiveView under
+  # lib/ethos_web/live/**, plus shared components like core_components.ex).
+  # A walk that only globbed `.heex` would report zero offenders for a unit
+  # added inside an `.ex` file's inline template while the bug shipped on
+  # every page that renders that component — so both extensions are scanned
+  # here.
   test "no page template contains the widget markup — it comes from the layout only" do
     offenders =
-      "lib/ethos_web/**/*.heex"
-      |> Path.wildcard()
+      (Path.wildcard("lib/ethos_web/**/*.heex") ++ Path.wildcard("lib/ethos_web/**/*.ex"))
+      # The layout is the one legitimate caller — it's what puts the unit on
+      # every page in the first place (see affiliate.ex's moduledoc).
       |> Enum.reject(&(Path.basename(&1) == "app.html.heex"))
+      # The module that *defines* affiliate_unit/1 necessarily contains the
+      # string "affiliate_unit" in its own source (the def, the doc, the
+      # moduledoc) and would otherwise be a permanent false positive. Excluded
+      # by exact path, not by directory, so sibling files in components/ —
+      # core_components.ex above all — stay covered.
+      |> Enum.reject(&(&1 == "lib/ethos_web/components/affiliate.ex"))
       |> Enum.filter(fn f -> File.read!(f) =~ "affiliate_unit" end)
 
     assert offenders == [],
