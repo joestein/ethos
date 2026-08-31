@@ -118,17 +118,32 @@ defmodule EthosWeb.StructuredDataTest do
       # is unmoved at 245, which is the check that the +1 went where it should:
       # a place with a ZIP but no house number is a different shape from a
       # place with neither.
+      #
+      # Re-measured 2026-08-31 after priv/seed_data/bronx/mott-haven.json landed
+      # nine places, eight of them with an address (St. Mary's Park ships with
+      # `"address": null` — the research established no street address for it,
+      # and guessing one is not an option). The whole delta is those eight and
+      # each digit is accounted for: +8 total, +5 with a street address
+      # (St. Ann's Church and Graveyard, Mott Haven Library, the Bronx General
+      # Post Office, La Morada and the Bronx Brewery tap room) and +3 without —
+      # the three historic districts, whose sourced addresses are street ranges
+      # ("Alexander Avenue between East 138th and East 141st Streets"), the same
+      # shape as ciccarone-park above. Postal is +4, not +5: the districts carry
+      # no ZIP and neither does St. Ann's, whose address was resolved from the
+      # church's own Wikipedia article without one. Locality-only is +3, the
+      # three districts, which is again the check that the street-less rows went
+      # where they should.
       count = fn f -> Enum.count(emitted, fn {_, ld} -> f.(ld) end) end
 
-      assert length(emitted) == 2106
-      assert count.(& &1["streetAddress"]) == 1571
-      assert count.(&is_nil(&1["streetAddress"])) == 535
-      assert count.(& &1["postalCode"]) == 1709
+      assert length(emitted) == 2114
+      assert count.(& &1["streetAddress"]) == 1576
+      assert count.(&is_nil(&1["streetAddress"])) == 538
+      assert count.(& &1["postalCode"]) == 1713
 
       # The largest behavioural delta this change ships: 245 places emit a
       # PostalAddress carrying only locality, region and country. Their full
       # address is still rendered on the page.
-      assert count.(fn ld -> is_nil(ld["streetAddress"]) and is_nil(ld["postalCode"]) end) == 245
+      assert count.(fn ld -> is_nil(ld["streetAddress"]) and is_nil(ld["postalCode"]) end) == 248
     end
   end
 end
