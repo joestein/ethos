@@ -3,12 +3,34 @@
 Committed on purpose, on the `docs/ballparks/<site>.md` precedent: this was
 produced under `.superpowers/sdd/2026-08-30-bronx-neighborhoods/research/`,
 which `.gitignore` excludes wholesale, so a `git clean -xdf`, a worktree removal
-or a fresh clone would have destroyed it silently. Moved unedited; its companion
-is `mott-haven-finder.md` in this directory.
+or a fresh clone would have destroyed it silently. ~~Moved unedited;~~ its
+companion is `mott-haven-finder.md` in this directory.
 
-`priv/seed_data/bronx/mott-haven.json` has not been authored yet. These two
+~~`priv/seed_data/bronx/mott-haven.json` has not been authored yet.~~ These two
 files are its input, and this one is the authority: nothing may be published
 that is not `confirmed` below.
+
+> **Two sentences above were true when the verifier wrote them and have been
+> false since commit `9d799bb` (2026-08-31). Struck through rather than
+> deleted, so the change is visible to a reader coming top-down.**
+>
+> 1. **This file is no longer unedited.** Everything from the header down to
+>    "Overall summary" is still the verifier's own text, byte for byte, and
+>    nothing in it has been altered — but **an addendum has been appended at the
+>    end of the file** by the author of the seed file, recording the street
+>    address for St. Ann's Church and Graveyard (item 4 closes without one).
+>    That addendum is an authoring-time addition, **not** part of the
+>    independent adjudication, and it says so in its own heading. Read it before
+>    treating item 4 as complete.
+> 2. **The seed file has been authored.** `priv/seed_data/bronx/mott-haven.json`
+>    exists and is committed. What it ships, what it cut and why is in
+>    `docs/bronx/mott-haven-authoring-report.md` — including the places that did
+>    not survive this file's own filtering.
+>
+> Nothing else about the sentences' force changes: this file remains the
+> authority, and the addendum is subordinate to it. Where the addendum's source
+> and a verdict disagree, the verdict wins — which is exactly what happened with
+> St. Ann's build year, recorded there.
 
 Adjudicated against the finder's cited URLs, all re-fetched 2026-08-31. Per
 site-builder.md §4: DOHMH rows are identity/existence evidence only and never

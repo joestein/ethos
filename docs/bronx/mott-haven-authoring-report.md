@@ -347,9 +347,25 @@ assertion stays an exact `==`; the comment accounts for each digit.
 | with `postalCode` | 1713 | 1712 | -1 |
 | locality-only | 248 | 248 | 0 |
 
-The two street-less counts holding still is the check that the row removed was
+~~The two street-less counts holding still is the check that the row removed was
 the shape claimed — a place with both a house number and a ZIP ("308 Willis
-Avenue, Bronx, NY 10454"), not one of the district rows.
+Avenue, Bronx, NY 10454"), not one of the district rows.~~
+
+**Corrected in round 4 — the numbers were right, the reasoning was not.** The
+claim is that the removed row carried both a house number and a ZIP. What
+proves each half:
+
+- **House number:** `streetAddress` 1576 → 1575 *together with*
+  `is_nil(streetAddress)` unmoved at 538. The row left the street-bearing
+  bucket and did not turn up in the street-less one.
+- **ZIP:** `postalCode` 1713 → 1712, and nothing else here.
+
+**Locality-only holding at 248 proves nothing additional.** A row with a
+non-nil `streetAddress` is definitionally outside that bucket, so 248 could not
+have moved whatever its postal code was. Citing it as evidence for the ZIP
+invites a maintainer to weaken the `postalCode` assertion as redundant with it,
+which is the concrete risk. Both the test comment and this section now credit
+`postalCode`.
 
 ## Untouched, as instructed
 
@@ -416,7 +432,7 @@ the two locations from the brewery's own site. "Tap Room" is not in it.
 And the project already has a rule that disposes of this without needing the
 identity-versus-prose distinction I was weighing at all — from the ballpark
 programme, carried into every wave since and restated at
-`2026-08-30-bronx-neighborhoods-design.md:140-141`:
+`docs/superpowers/specs/2026-08-30-bronx-neighborhoods-design.md:140-141`:
 
 > A verdict decides the name, and the slug follows the name. Nothing enters a
 > URL that a verdict does not carry.
@@ -507,3 +523,92 @@ September 14, 1976 designation and "row houses" — all unchanged. Still 8 place
 - `mix test` — **650 tests, 0 failures, 32 excluded**.
 - Repo-wide grep for `the-bronx-brewery-tap-room` and `The Bronx Brewery Tap
   Room` across `priv/` and `lib/` — zero hits.
+
+---
+
+# Fix round 4 (of 5) — reasoning and staleness, not facts
+
+Four items, none of which changes a fact on the page. **No assertion operator
+changed; every `==` in `structured_data_test.exs` is still `==`, and every
+number in it is still the number round 3 left there.** The only edits to that
+file are comments.
+
+## 1. The census comment credited the wrong assertion — corrected
+
+The round-2 dispatch said "The two street-less counts holding is the check that
+the removed row carried both a house number and a ZIP", and I wrote that into
+`structured_data_test.exs` as given. **The numbers were right and the reasoning
+was wrong**, and the coordinator caught its own instruction.
+
+`538` holding does prove the removed row had a street address. **`248` holding
+proves nothing additional**, because a row with a non-nil `streetAddress` is
+definitionally outside the locality-only bucket — 248 could not have moved
+whatever its postal code was. What actually proves the ZIP is `postalCode`
+dropping 1713 → 1712, which the old comment did not credit at all.
+
+The test comment now splits the claim explicitly: house number proven by
+`streetAddress` 1576 → 1575 *with* `is_nil(streetAddress)` unmoved at 538; ZIP
+proven by `postalCode` 1713 → 1712 and by nothing else. It states in terms that
+248 is not evidence for this delta and that the `postalCode` assertion is not
+redundant with it. The Census section above carries the same correction, struck
+through rather than overwritten.
+
+**Why this was worth a round.** The failure mode is concrete and one-directional:
+a maintainer who believes 248 carries the ZIP claim deletes or weakens the
+`postalCode` assertion as duplicated coverage, and the suite stays green while
+losing the only check on that half. A comment that misattributes proof is more
+dangerous than one that says nothing, because it reads as having been thought
+about.
+
+## 2. `mott-haven-verdicts.md`'s header annotated in place
+
+Two sentences in the header — "Moved unedited" and "`priv/seed_data/bronx/mott-haven.json`
+has not been authored yet" — were true when the verifier wrote them and have
+been false since `9d799bb`. The round-2 addendum is clearly marked but sits at
+the end of a 231-line file, so a reader entering top-down was told the file was
+unedited roughly 190 lines before learning otherwise.
+
+Both sentences are now struck through in place, with a block quote immediately
+below stating what changed, when, and in which commit: that the verifier's own
+text is still byte-for-byte intact and only an appended addendum was added, that
+the seed file now exists, and that the addendum remains subordinate — where its
+source and a verdict disagree, the verdict wins, which is what happened with St.
+Ann's build year. Struck through rather than deleted, which is the same standard
+this report applies to its own errors.
+
+## 3. A pre-existing contradiction fixed while in the file
+
+`structured_data_test.exs` said "245 places emit a PostalAddress carrying only
+locality, region and country" three lines above `assert ... == 248`. It predates
+this wave's edits — it arrived with the belmont measurement and was never
+updated when mott-haven's three street-range districts moved the figure. Now 248,
+with a note recording that it drifted and that the two must be kept in step. A
+comment contradicting an assertion three lines away is worse than either being
+wrong alone, because a reader cannot tell which one to trust.
+
+## 4. Two small ones
+
+- **`places[7].summary`: "this Bronx location" → "a Bronx location".**
+  Verdict:148 confirms the brewery's site names *a* Bronx location; identifying
+  that location with 856 East 136th Street rests on the DOHMH row. Using it in
+  the `address` field is legitimate identity use, but "this" asserted the
+  equivalence in prose more firmly than the verdict does. Restored to the
+  verdict's own indefinite article.
+- **Report citation path.** The naming rule was cited as
+  `2026-08-30-bronx-neighborhoods-design.md:140-141`; line number and quotation
+  were right, the path was missing `docs/superpowers/specs/`. Fixed in place —
+  a citation a reader cannot follow is not a citation.
+
+## Untouched, as instructed
+
+Every fact on the page, the addendum's substance, the round-3 rename, the ferry
+sentences, all four `==` operators and all five census figures. Still 8 places,
+8 entries, `"tier": "guide"`, intro 144 words, `Getting there` heading intact.
+
+## Verification after the fix
+
+- `mix format --check-formatted` — clean.
+- `mix test` — **650 tests, 0 failures, 32 excluded**.
+- `git diff` on `structured_data_test.exs` filtered to lines containing `assert`
+  or `==` returns only added comment lines — no assertion was added, removed,
+  reworded or had its operator changed.

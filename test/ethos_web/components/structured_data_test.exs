@@ -142,9 +142,26 @@ defmodule EthosWeb.StructuredDataTest do
       # the place was a stub. That is -1 from each of the counts its address
       # contributed to: total 2114 -> 2113 and streetAddress 1576 -> 1575 (it
       # carried "308 Willis Avenue"), postalCode 1713 -> 1712 (it carried
-      # 10454). The two street-less counts are unmoved at 538 and 248, which is
-      # the check that the row removed was the shape claimed: a place with both
-      # a house number and a ZIP, not one of the district rows.
+      # 10454).
+      #
+      # WHICH ASSERTION PROVES WHICH HALF, corrected 2026-08-31 because the
+      # first version of this paragraph got it wrong and the error was the kind
+      # that invites a later maintainer to delete a live assertion as
+      # redundant. The claim is that the row removed carried BOTH a house
+      # number and a ZIP.
+      #
+      #   * The house number is proven by the pair `streetAddress` 1576 -> 1575
+      #     together with `is_nil(streetAddress)` unmoved at 538: the row left
+      #     the street-bearing bucket and did not appear in the street-less one.
+      #   * The ZIP is proven by `postalCode` 1713 -> 1712, and by nothing else
+      #     here.
+      #
+      # The locality-only count holding at 248 proves NOTHING additional about
+      # the ZIP. A row carrying a non-nil streetAddress is definitionally
+      # outside that bucket, so 248 could not have moved whatever its postal
+      # code was. It is a real assertion about a real property of the corpus —
+      # see the note below it — but it is not evidence for this delta, and the
+      # `postalCode` assertion above is not redundant with it.
       count = fn f -> Enum.count(emitted, fn {_, ld} -> f.(ld) end) end
 
       assert length(emitted) == 2113
@@ -152,9 +169,16 @@ defmodule EthosWeb.StructuredDataTest do
       assert count.(&is_nil(&1["streetAddress"])) == 538
       assert count.(& &1["postalCode"]) == 1712
 
-      # The largest behavioural delta this change ships: 245 places emit a
+      # The largest behavioural delta this change ships: 248 places emit a
       # PostalAddress carrying only locality, region and country. Their full
       # address is still rendered on the page.
+      #
+      # The figure was 245 when this comment was written and went to 248 when
+      # priv/seed_data/bronx/mott-haven.json landed three historic districts
+      # whose sourced addresses are street ranges. The comment was not updated
+      # with the assertion and spent two commits contradicting a number three
+      # lines below it, which is worse than either being wrong alone. Keep the
+      # two in step.
       assert count.(fn ld -> is_nil(ld["streetAddress"]) and is_nil(ld["postalCode"]) end) == 248
     end
   end
