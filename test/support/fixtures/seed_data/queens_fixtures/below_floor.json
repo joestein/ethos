@@ -1,0 +1,21 @@
+{
+  "guide": {
+    "slug": "fixture-below-floor-queens-guide",
+    "title": "Fixture: Below Floor",
+    "destination": "Fixture, New York",
+    "state": "New York",
+    "county": "Queens",
+    "tier": "town-page",
+    "intro": "This intro is deliberately far too short to clear the ninety word floor an orientation page must reach.",
+    "sections": [],
+    "faq": [],
+    "photos": []
+  },
+  "places": [],
+  "entries": [],
+  "links": [
+    {"target": "guide:midtown-manhattan-guide", "kind": "see-also", "note": null},
+    {"target": "guide:harlem-manhattan-guide", "kind": "see-also", "note": null},
+    {"target": "guide:washington-heights-manhattan-guide", "kind": "see-also", "note": null}
+  ]
+}

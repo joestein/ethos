@@ -1,0 +1,15 @@
+{
+  "guide": {
+    "slug": "fixture-bad-county-queens-guide",
+    "title": "Fixture: Bad County",
+    "destination": "Fixture, New York",
+    "state": "New York",
+    "county": "Queens County",
+    "intro": "A fixture guide used only to prove the county assertion fires on the legal name.",
+    "sections": [],
+    "faq": [],
+    "photos": []
+  },
+  "places": [],
+  "entries": []
+}

@@ -1,0 +1,25 @@
+{
+  "guide": {
+    "slug": "fixture-bad-license-queens-guide",
+    "title": "Fixture: Bad Licence",
+    "destination": "Fixture, New York",
+    "state": "New York",
+    "county": "Queens",
+    "intro": "A fixture guide used only to prove the licence allowlist fires.",
+    "sections": [],
+    "faq": [],
+    "photos": [
+      {
+        "src": "/photos/ny/queens/fixture/nope.jpg",
+        "thumb": "/photos/ny/queens/fixture/nope_thumb.jpg",
+        "title": "Nope",
+        "description": "A fixture photo.",
+        "author": "Nobody",
+        "license": "All rights reserved",
+        "source_url": "https://example.com/nope"
+      }
+    ]
+  },
+  "places": [],
+  "entries": []
+}
