@@ -4,7 +4,7 @@ defmodule EthosWeb.AffiliatePlacementTest do
   import Phoenix.LiveViewTest
   import Ethos.{AccountsFixtures, GuidesFixtures}
 
-  alias Ethos.Places
+  alias Ethos.{Guides, Places}
 
   @script_src "https://widget.getyourguide.com/dist/pa.umd.production.min.js"
   @widget ~s(data-gyg-widget="auto")
@@ -274,6 +274,64 @@ defmodule EthosWeb.AffiliatePlacementTest do
 
       assert html =~ @old_disclosure
       refute html =~ @unit_disclosure
+    end
+
+    # THE REGRESSION: a New York guide with a sponsored entry booking_url gets
+    # the widget's disclosure (which scopes itself to the widget only — "Tours
+    # and activities shown above") AND sponsored entry links the widget's line
+    # says nothing about. Suppressing the page's own disclosure whenever the
+    # unit renders, with no regard for whether the page ALSO has entry
+    # booking_url links, leaves those sponsored links with no disclosure at
+    # all. The page-level line must survive here even though the unit renders.
+    test "a New York guide with a sponsored entry booking_url still renders the page-level disclosure",
+         %{conn: conn} do
+      g = ny_guide("Belmont", "Bronx")
+
+      {:ok, _} =
+        Guides.create_entry(g, %{
+          kind: "tour",
+          name: "Bronx Zoo",
+          booking_url: "https://example.com/book-bronx-zoo",
+          booking_label: "Book it"
+        })
+
+      html = conn |> get(~p"/g/#{g.slug}") |> html_response(200)
+
+      assert html =~ ~s(rel="sponsored nofollow noopener")
+      assert html =~ @old_disclosure
+    end
+
+    # The double-disclosure case the previous wave fixed, still holding: a New
+    # York guide with NO entry booking_url renders only the widget's own line.
+    test "a New York guide with no entry booking_url renders only the widget's disclosure",
+         %{conn: conn} do
+      g = ny_guide("Belmont", "Bronx")
+      html = conn |> get(~p"/g/#{g.slug}") |> html_response(200)
+
+      refute html =~ @old_disclosure
+      count = html |> String.split(@unit_disclosure) |> length() |> Kernel.-(1)
+      assert count == 1, "expected exactly one widget disclosure, got #{count}"
+    end
+
+    # A non-New-York guide with a sponsored booking_url: no unit ever renders
+    # here, so the page-level disclosure must keep covering it, as it always
+    # did.
+    test "a non-New-York guide with a sponsored booking_url still renders the page-level disclosure",
+         %{conn: conn} do
+      g = ct_guide("Woodbury")
+
+      {:ok, _} =
+        Guides.create_entry(g, %{
+          kind: "tour",
+          name: "Woodbury Outlets",
+          booking_url: "https://example.com/book-woodbury",
+          booking_label: "Book it"
+        })
+
+      html = conn |> get(~p"/g/#{g.slug}") |> html_response(200)
+
+      assert html =~ ~s(rel="sponsored nofollow noopener")
+      assert html =~ @old_disclosure
     end
   end
 

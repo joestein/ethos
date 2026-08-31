@@ -155,15 +155,24 @@
     </dl>
   </section>
 
-  <%!-- This page's original disclosure, and the FALLBACK half of a pair: when
-        the layout renders an affiliate unit, that unit carries its own
-        disclosure and this one would be the second on the page. It can also be
-        false there — with the amber CTA suppressed and no entry booking_url,
-        a New York guide has no booking links at all, only the widget.
-
-        Same predicate as the amber aside above, deliberately: the two are the
-        page's fallback affiliate content and appear and disappear together. --%>
-  <p :if={not EthosWeb.Affiliate.unit_renders?(assigns)} class="mt-8 text-xs text-zinc-400">
+  <%!-- This page's original disclosure. Unlike the amber aside above, this
+        line is not purely the unit's fallback: it also covers the entries'
+        own sponsored `booking_url` links (rel="sponsored nofollow noopener",
+        above), which the widget's disclosure never mentions — that one
+        scopes itself to "tours and activities shown above", i.e. the widget
+        alone. So this line stands whenever there is something on the page it
+        uniquely covers: either the unit doesn't render (its disclosure isn't
+        here to share the load), or the page has a sponsored entry link the
+        unit's disclosure says nothing about. Only when neither is true —
+        the unit renders AND no entry has a booking_url — would this be a
+        second disclosure for the same thing, and only then is it suppressed. --%>
+  <p
+    :if={
+      not EthosWeb.Affiliate.unit_renders?(assigns) or
+        Enum.any?(@entries, &EthosWeb.Url.safe_http?(&1.booking_url))
+    }
+    class="mt-8 text-xs text-zinc-400"
+  >
     Some booking links on this page earn Ethos a commission at no extra cost to you.
   </p>
 
