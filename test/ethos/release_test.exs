@@ -64,7 +64,15 @@ defmodule Ethos.ReleaseTest do
     # rather than skipping the edge, and the Bronx's cross-borough see-also
     # edges point across the Harlem River. If a wave authors an edge to a
     # Brooklyn guide, seed_brooklyn/1 belongs here too.
+    #
+    # It does now. bronx-park.json links to `place:new-york-aquarium`, defined
+    # in priv/seed_data/brooklyn/coney-island.json, and fordham-heights.json to
+    # `guide:brownsville-brooklyn-guide` — so Brooklyn is a precondition of the
+    # Bronx link pass exactly as Manhattan already was, and the runbook order
+    # above already satisfies it in production. Note it is Brooklyn's *places*
+    # pass that the aquarium edge needs, which seed_brooklyn/1 runs first.
     Ethos.Release.seed_manhattan(user.email)
+    capture_io(fn -> Ethos.Release.seed_brooklyn(user.email) end)
 
     output = capture_io(fn -> Ethos.Release.seed_bronx(user.email) end)
 
