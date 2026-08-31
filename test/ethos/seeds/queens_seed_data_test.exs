@@ -1122,7 +1122,9 @@ defmodule Ethos.Seeds.QueensSeedDataTest do
     files = files()
     assert files != [], "no queens seed files — every assertion below would pass vacuously"
 
-    assert destination_slug_collisions(files) == [],
+    collisions = destination_slug_collisions(files)
+
+    assert collisions == [],
            "queens destinations deriving a destination_slug that a non-queens seed file " <>
              "already derives. The state is discarded by derive_destination_slug/1, so these " <>
              "guides co-list on ONE destination page — cross-state, that is the " <>
@@ -1130,7 +1132,8 @@ defmodule Ethos.Seeds.QueensSeedDataTest do
              "(Manhattan), newtown and roxbury (Connecticut). Resolve by changing the " <>
              "destination string, not by deleting this assertion. Deliberately scoped to " <>
              "Queens: the pre-existing brooklyn/connecticut `madison` collision is a corpus " <>
-             "defect this programme did not introduce (docs/content-defects.md)."
+             "defect this programme did not introduce (docs/content-defects.md): " <>
+             "#{inspect(collisions)}"
   end
 
   # The counting rule proven twice, on literals and through the real walk,

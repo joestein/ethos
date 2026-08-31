@@ -194,8 +194,8 @@ countable independently:
 | 4 | Brooklyn | **69** | `Ethos.Guides.list_published_guides() \|> Enum.count(&(&1.county == ~s(Brooklyn)))` |
 | 8 | MLB ballparks | **30** | `Ethos.Seeds.Catalog.guide_modules(~s(ballparks)) \|> Enum.count(fn {m, _} -> Ethos.Guides.get_published_guide_by_slug(m.data().slug) end)` |
 
-Full rebuild total, excluding Rome: **308** — the four rows above (38 + 170 + 69
-+ 30 = 307) plus the one Bronx guide that has shipped so far,
+Full rebuild total, excluding Rome: **308** — the four rows above (38 + 170 +
+69 + 30 = 307) plus the one Bronx guide that has shipped so far,
 `priv/seed_data/bronx/belmont.json`. The Bronx and Queens seeders have no row of
 their own here because one is mid-programme and the other's directory is empty,
 so a stated "expected count" for either would be stale within a wave; the total
