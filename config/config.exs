@@ -63,6 +63,26 @@ config :logger, :console,
 # Use Jason for JSON parsing in Phoenix
 config :phoenix, :json_library, Jason
 
+# Affiliate placement, keyed by state slug. See
+# docs/superpowers/specs/2026-08-31-affiliate-placement-design.md
+#
+# `counties` is a GUARD, not decoration. GetYourGuide's "new-york" campaign is
+# New York CITY. Every New York page in the corpus today is a borough, so
+# keying on state alone is correct today and silently wrong the day a Hudson
+# Valley or Niagara guide ships and inherits a campaign for a city 300 miles
+# away. Remove this list only when a separate upstate campaign exists.
+#
+# Staten Island is listed although no Staten Island content exists yet: it is a
+# borough and the campaign covers it. It is the one forward-looking entry.
+config :ethos, :affiliate_locales, %{
+  "new-york" => %{
+    network: :getyourguide,
+    partner_id: "ZA4AIMF",
+    cmp: "new-york",
+    counties: ["Manhattan", "Brooklyn", "Bronx", "Queens", "Staten Island"]
+  }
+}
+
 # Import environment specific config. This must remain at the bottom
 # of this file so it overrides the configuration defined above.
 import_config "#{config_env()}.exs"
