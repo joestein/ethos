@@ -34,7 +34,8 @@
 
   <%!-- The generic GetYourGuide CTA is the FALLBACK. A page whose geography
         resolves to a configured affiliate locale gets the widget from the app
-        layout instead — one unit per page, below the content. This condition
+        layout instead — one unit per page, above or below the content
+        depending on the locale's :placement (Rome is :top). This condition
         is not a hardcoded state check, so Rome's aside becomes Rome's widget
         the day a Rome entry lands in the registry, with no edit here.
 

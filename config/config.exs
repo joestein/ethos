@@ -86,9 +86,19 @@ config :ethos, :affiliate_locales, %{
   # No :counties key, so every Italian page resolves.
   #
   # The consequence, recorded rather than guarded: when Florence or Venice ship
-  # they inherit cmp=rome unless this entry is split first. The fix is the same
-  # allowlist mechanism "new-york" uses. It is deliberately not built now — a
-  # guard over a one-city corpus guards nothing.
+  # they inherit cmp=rome unless this entry is split first. It is deliberately
+  # not guarded now — a guard over a one-city corpus guards nothing.
+  #
+  # But the fix is NOT just "add :counties the way new-york does". Adding
+  # `counties: ["Rome"]` here on its own is inert: `county_allowed?/2` in
+  # lib/ethos/affiliates.ex matches `{_counties, nil} -> true` first, and every
+  # Italian guide seeded the way Rome was carries NO county, so Florence would
+  # hit that clause and still resolve to cmp=rome — silently, with the guard
+  # sitting right here looking like it works. (That nil-county clause is
+  # load-bearing for the New York state hub, so it cannot simply be dropped.)
+  #
+  # Whoever ships the second Italian city must therefore do BOTH: backfill a
+  # county on the Italian guides (Rome included) and then add the allowlist.
   "italy" => %{
     network: :getyourguide,
     partner_id: "ZA4AIMF",

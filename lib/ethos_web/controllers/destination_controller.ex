@@ -104,8 +104,7 @@ defmodule EthosWeb.DestinationController do
       |> Enum.group_by(& &1.destination)
       |> Enum.sort_by(&elem(&1, 0))
 
-    description =
-      "Travel guides for #{state} — history, sites, restaurants, and places to stay, county by county."
+    description = state_description(state, counties)
 
     destination = Destinations.get_by_path(slug)
 
@@ -130,6 +129,20 @@ defmodule EthosWeb.DestinationController do
         state_breadcrumb(state, slug)
       ]
     )
+  end
+
+  # "county by county" is a promise about the page's own contents — the "By
+  # county" section, which `state.html.heex` renders only when there are
+  # counties. Italy is the first state in the corpus with none (its guides
+  # carry a state and no county), and the unconditional wording described a
+  # section that page does not have. States that do have counties keep the
+  # shipped sentence verbatim, so Connecticut and New York are untouched.
+  defp state_description(state, []) do
+    "Travel guides for #{state} — history, sites, restaurants, and places to stay."
+  end
+
+  defp state_description(state, _counties) do
+    "Travel guides for #{state} — history, sites, restaurants, and places to stay, county by county."
   end
 
   def county(conn, %{"state_slug" => state_slug, "county_slug" => county_slug}) do

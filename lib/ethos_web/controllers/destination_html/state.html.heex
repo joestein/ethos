@@ -34,17 +34,29 @@
     </.link>
   </div>
 
-  <h2 class="mt-8 font-semibold">By county</h2>
-  <ul class="mt-3 space-y-2">
-    <li :for={c <- @counties}>
-      <.link navigate={~p"/destinations/#{@slug}/#{c.slug}"} class="underline">
-        {c.county}
-      </.link>
-      <span class="text-sm text-zinc-500">
-        · {c.count} {if c.count == 1, do: "guide", else: "guides"}
-      </span>
-    </li>
-  </ul>
+  <%!-- Guarded, because a state hub with no counties is now possible: Italy is
+        the first state in the corpus whose guides carry none, and the heading
+        with an empty <ul> under it reads as a broken page. The controller's
+        meta description drops its "county by county" clause on the same
+        condition, so the promise and the section appear together.
+
+        A <div>, not a <section>: the intro block above is the page's only
+        <section>, and "a state page without a record renders successfully and
+        shows no intro block" (destination_controller_test.exs) tests for its
+        absence by asserting the page has no <section> at all. --%>
+  <div :if={@counties != []}>
+    <h2 class="mt-8 font-semibold">By county</h2>
+    <ul class="mt-3 space-y-2">
+      <li :for={c <- @counties}>
+        <.link navigate={~p"/destinations/#{@slug}/#{c.slug}"} class="underline">
+          {c.county}
+        </.link>
+        <span class="text-sm text-zinc-500">
+          · {c.count} {if c.count == 1, do: "guide", else: "guides"}
+        </span>
+      </li>
+    </ul>
+  </div>
 
   <h2 class="mt-8 font-semibold">All {@state} guides</h2>
   <ul class="mt-3 space-y-3">

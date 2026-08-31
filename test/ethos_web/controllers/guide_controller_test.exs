@@ -217,6 +217,91 @@ defmodule EthosWeb.GuideControllerTest do
            ]
   end
 
+  # The two halves of the curated-destination rule. Each alone passes against a
+  # component that always prefers one source: the first would pass if the
+  # destination hub were ALWAYS the crumb, the second if the state hub always
+  # were. Only together do they pin "curated record wins, otherwise geography".
+  test "a guide whose destination has a curated record links to it, not to its state hub", %{
+    conn: conn
+  } do
+    Ethos.Destinations.upsert_destination!(%{
+      "path" => "rome",
+      "name" => "Rome",
+      "intro" => "Three full days covers the Vatican, ancient Rome and the historic centre."
+    })
+
+    guide =
+      published_guide_fixture(%{
+        title: "Three Days in Rome",
+        destination: "Rome, Italy",
+        state: "Italy"
+      })
+
+    # Non-vacuity: the guide really does have a state hub to lose to. Without
+    # this the test would pass for a guide with no state, which is the case the
+    # old fallback already handled.
+    assert guide.state_slug == "italy"
+
+    html = conn |> get(~p"/g/#{guide.slug}") |> html_response(200)
+
+    nav = breadcrumb_nav(html)
+    assert nav =~ ~s(href="/destinations/rome")
+    refute nav =~ ~s(href="/destinations/italy")
+    assert nav =~ "Rome"
+    refute nav =~ "Italy"
+
+    # The JSON-LD is the half that search engines read, and it is generated
+    # from the same trail/1 — so it must have moved too.
+    ld = breadcrumb_json_ld(html)
+
+    assert Enum.map(ld["itemListElement"], & &1["name"]) == [
+             "Ethos",
+             "Destinations",
+             "Rome",
+             "Three Days in Rome"
+           ]
+
+    assert Enum.map(ld["itemListElement"], & &1["item"]) == [
+             url(~p"/"),
+             url(~p"/destinations"),
+             url(~p"/destinations/rome"),
+             url(~p"/g/#{guide.slug}")
+           ]
+  end
+
+  test "a guide whose destination has no curated record still points at its state hub", %{
+    conn: conn
+  } do
+    guide =
+      published_guide_fixture(%{
+        title: "A Day in Waterbury",
+        destination: "Waterbury, Connecticut",
+        state: "Connecticut",
+        county: "New Haven County"
+      })
+
+    # Non-vacuity: no curated record exists at this destination slug, so the
+    # fallback is what is under test rather than a lookup that happened to hit.
+    refute Ethos.Destinations.get_by_path(guide.destination_slug)
+
+    html = conn |> get(~p"/g/#{guide.slug}") |> html_response(200)
+
+    nav = breadcrumb_nav(html)
+    assert nav =~ ~s(href="/destinations/connecticut")
+    assert nav =~ ~s(href="/destinations/connecticut/new-haven-county")
+    refute nav =~ ~s(href="/destinations/waterbury")
+
+    ld = breadcrumb_json_ld(html)
+
+    assert Enum.map(ld["itemListElement"], & &1["name"]) == [
+             "Ethos",
+             "Destinations",
+             "Connecticut",
+             "New Haven County",
+             "A Day in Waterbury"
+           ]
+  end
+
   # The site header also has a <nav>; the breadcrumb is the one inside <article>.
   defp breadcrumb_nav(html) do
     [nav] = Regex.run(~r{<article.*?(<nav.*?</nav>)}s, html, capture: :all_but_first)

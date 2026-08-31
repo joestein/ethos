@@ -339,8 +339,12 @@ defmodule Ethos.Seeds.DestinationSeedDataTest do
   # than a hardcoded directory list, so a corpus added later is seeded here
   # too and its states and counties become legitimate destination paths
   # automatically. The code-module guides have no such enumeration and are
-  # listed; RomeGuide is the one that carries no state, and so is the only
-  # source of a bare destination slug such as "rome".
+  # listed. RomeGuide used to be the one that carried no state; this branch
+  # gave it `state: "Italy"` so the affiliate registry — keyed on state slug —
+  # could reach it at all. That does not cost this gate the "rome" path:
+  # legitimate_paths/0 takes its bare destination slugs from
+  # `Guides.list_destinations/0`, which groups every published guide regardless
+  # of state, so "rome" stays legitimate and "italy" joins the state slugs.
   #
   # Links are deliberately not applied: they resolve cross-guide references
   # and contribute nothing to state, county or destination slugs.

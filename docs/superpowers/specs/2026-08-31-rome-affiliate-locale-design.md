@@ -49,10 +49,33 @@ Those are not in tension. GetYourGuide issues city-scoped campaign codes;
 covers `italy` and reports under `rome`.
 
 **The consequence, recorded so it is not a surprise:** when Florence or Venice
-ship, they inherit `cmp=rome` unless the entry is split first. That is the same
-shape as the `counties` guard on New York, one level up, and the fix is the same
-— add the guard when the second Italian city arrives. It is deliberately not
-built now, because a guard over a one-city corpus guards nothing.
+ship, they inherit `cmp=rome` unless the entry is split first. Deferring the
+guard is deliberate — a guard over a one-city corpus guards nothing.
+
+**Correction to the fix path recorded here originally.** It said the remedy was
+"the same allowlist mechanism `new-york` uses". On its own, it is not — it is
+inert. `county_allowed?/2` (`lib/ethos/affiliates.ex:64-70`) reads:
+
+```elixir
+case {Map.get(locale, :counties), county} do
+  {nil, _} -> true
+  {_counties, nil} -> true
+  {counties, county} -> county in counties
+end
+```
+
+Rome carries no county, and every Italian guide seeded the way Rome was will
+carry none either. So a future `counties: ["Rome"]` on the `italy` entry is
+matched by the **second** clause, not the third, and Florence resolves anyway —
+still reporting `cmp=rome`, silently, with the guard in place and looking
+correct.
+
+That nil-county clause is load-bearing for the New York state hub
+(`/destinations/new-york` resolves with a nil county) and must not be removed.
+
+**So the real fix path, for whoever ships the second Italian city:** backfill a
+`county` on the Italian guides — Rome's included — *and then* add the
+`:counties` allowlist. Either half alone changes nothing.
 
 ## Design
 
@@ -179,8 +202,9 @@ deploy.
 sub-project B fills it. Not a defect, but it will appear in the sitemap and in
 Search Console before it has content to justify it.
 
-**`cmp=rome` on any future Italian page.** Recorded above; the fix is a guard
-added when the second city ships, not now.
+**`cmp=rome` on any future Italian page.** Recorded above; the fix is a county
+backfill **plus** a guard, added when the second city ships, not now. The guard
+alone does nothing — see the correction above.
 
 **Two placement slots is a shape that invites a third.** The field is
 deliberately two-valued. A future "top and bottom" or "inline" request should

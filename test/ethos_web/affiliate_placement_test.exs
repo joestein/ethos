@@ -623,3 +623,80 @@ defmodule EthosWeb.AffiliateUnsupportedNetworkTest do
     assert html =~ @old_disclosure
   end
 end
+
+defmodule EthosWeb.AffiliateMalformedPlacementTest do
+  @moduledoc """
+  `async: false`, for the same reason as `AffiliateUnsupportedNetworkTest`: the
+  entry this installs is deliberately malformed, and the registry-shape guard
+  in `affiliate_corpus_test.exs` runs `async: true` against the same global
+  registry. Synchronous modules run after every async one has finished, so that
+  guard never observes this entry.
+  """
+  use EthosWeb.ConnCase, async: false
+
+  import Ethos.GuidesFixtures
+
+  @script_src "https://widget.getyourguide.com/dist/pa.umd.production.min.js"
+  @widget ~s(data-gyg-widget="auto")
+  @amber "Planning your own trip?"
+  @unit_disclosure "Tours and activities shown above"
+
+  # The failure this closes, along the placement axis rather than the network
+  # axis: `unit_renders?/1` is placement-agnostic, so an unrecognised placement
+  # still answered "yes, a unit renders" and suppressed the amber CTA and the
+  # page-level disclosure, while `affiliate_head/1` (gated on renders?/1 alone)
+  # still loaded the third-party script — and neither layout slot matched, so
+  # nothing rendered. Script loaded, no widget, no fallback, green suite.
+  #
+  # `placement/1` now degrades an unknown value to the :bottom default, so the
+  # page is New York's page. The loud failure lives in CI instead:
+  # `affiliate_corpus_test.exs`'s registry-shape guard still rejects :above.
+  test "an unrecognised :placement degrades to the bottom instead of rendering nothing", %{
+    conn: conn
+  } do
+    previous = Application.get_env(:ethos, :affiliate_locales, %{})
+
+    Application.put_env(
+      :ethos,
+      :affiliate_locales,
+      Map.put(previous, "connecticut", %{
+        network: :getyourguide,
+        partner_id: "ZA4AIMF",
+        cmp: "connecticut",
+        placement: :above
+      })
+    )
+
+    on_exit(fn -> Application.put_env(:ethos, :affiliate_locales, previous) end)
+
+    # The unit under the HTML: the resolver still returns the locale, and the
+    # component reads a valid position off it.
+    assert EthosWeb.Affiliate.placement(%{placement: :above}) == :bottom
+
+    g =
+      published_guide_fixture(%{
+        "title" => "Woodbury",
+        "destination" => "Woodbury, Connecticut",
+        "state" => "Connecticut",
+        "county" => "Litchfield County"
+      })
+
+    html = conn |> get(~p"/g/#{g.slug}") |> html_response(200)
+
+    count = html |> String.split(@widget) |> length() |> Kernel.-(1)
+    assert count == 1, "expected exactly one widget div, got #{count}"
+
+    assert html =~ @script_src
+
+    widget_at = :binary.match(html, "data-gyg-widget") |> elem(0)
+    title_at = :binary.match(html, "<h1") |> elem(0)
+
+    assert widget_at > title_at,
+           "an unrecognised placement must fall back to :bottom, not render above the title"
+
+    # And the suppression it drives is now honest: the unit really is on the
+    # page, so the amber CTA staying away is correct rather than a silent hole.
+    refute html =~ @amber
+    assert html =~ @unit_disclosure
+  end
+end

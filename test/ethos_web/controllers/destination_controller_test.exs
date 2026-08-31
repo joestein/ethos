@@ -63,6 +63,42 @@ defmodule EthosWeb.DestinationControllerTest do
     assert county =~ "Windham County"
   end
 
+  # Italy is the first state in the corpus whose guides carry no county, so
+  # this is the first hub where the "By county" heading rendered above an empty
+  # <ul> and the meta description promised a breakdown the page did not have.
+  # Both halves are asserted here and the Connecticut direction below, because
+  # either alone passes against a template that always renders the section or
+  # never does.
+  test "a state hub with no counties omits the county section and the county promise", %{
+    conn: conn
+  } do
+    published_guide_fixture(%{
+      title: "Three Days in Rome",
+      destination: "Rome, Italy",
+      state: "Italy"
+    })
+
+    html = conn |> get(~p"/destinations/italy") |> html_response(200)
+
+    # Non-vacuity: this really is the state hub, not a 404 or a town page.
+    assert html =~ "All Italy guides"
+
+    refute html =~ "By county"
+    refute html =~ "county by county"
+  end
+
+  test "a state hub with counties keeps the county section and the county promise", %{conn: conn} do
+    user = user_fixture()
+    fixtures = Path.expand("../../support/fixtures/seed_data", __DIR__)
+    Ethos.Seeds.DataGuide.upsert_from_file!(Path.join(fixtures, "townville.json"), user.email)
+
+    html = conn |> get(~p"/destinations/connecticut") |> html_response(200)
+
+    assert html =~ "By county"
+    assert html =~ "Windham County"
+    assert html =~ "county by county"
+  end
+
   test "404 for unknown destination", %{conn: conn} do
     assert conn |> get(~p"/destinations/nowhere") |> response(404)
   end

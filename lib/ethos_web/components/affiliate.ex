@@ -5,8 +5,11 @@ defmodule EthosWeb.Affiliate do
   ## Both tags live in the layouts
 
   `affiliate_head/1` renders in `root.html.heex`'s `<head>`; `affiliate_unit/1`
-  renders in `app.html.heex` immediately after `{@inner_content}`, which puts
-  it at the bottom of the content column on every page.
+  renders in `app.html.heex`, which calls it **twice** — once before
+  `{@inner_content}` and once after — passing each call a `position`. A locale
+  has exactly one `placement/1`, so exactly one of the two slots renders and
+  every page still carries at most one unit, at the top or the bottom of the
+  content column.
 
   That placement is the point. A new controller, a new page type, a new borough
   inherits both tags with no work — nothing to remember, so nothing to forget.
@@ -143,6 +146,7 @@ defmodule EthosWeb.Affiliate do
   def unit_renders?(assigns), do: assigns |> locale_from_assigns() |> renders?()
 
   @default_placement :bottom
+  @placements [:top, :bottom]
 
   @doc """
   Where a locale's unit renders: `:top` (above the page content) or `:bottom`.
@@ -151,8 +155,29 @@ defmodule EthosWeb.Affiliate do
   entry does not carry the field, and any future entry that forgets it behaves
   like New York rather than like Rome — the conservative direction, since a
   top-placed unit renders above the page's `<h1>`.
+
+  An **unrecognised** value (`:above`, `"top"`) falls back to the same default
+  rather than matching neither slot. It has to: `renders?/1` and therefore
+  `unit_renders?/1` are placement-agnostic by design — they answer "will this
+  page carry a unit at all", which is the question the show page's amber CTA
+  and disclosure ask. A typo that matched no slot would suppress the fallback
+  CTA *and* the page's disclosure while `affiliate_head/1` still loaded the
+  third-party script, leaving a page with no affiliate unit of any kind and a
+  green suite. That is exactly the failure documented above `renders?/1`,
+  reintroduced along the placement axis.
+
+  This is a production safety net, not a licence to misconfigure:
+  `affiliate_corpus_test.exs`'s registry-shape guard still fails loudly on any
+  `:placement` outside #{inspect(@placements)}, so a typo is caught in CI and
+  merely degrades to New York's behaviour if it ever reaches a deploy.
   """
-  def placement(locale) when is_map(locale), do: Map.get(locale, :placement, @default_placement)
+  def placement(locale) when is_map(locale) do
+    case Map.get(locale, :placement, @default_placement) do
+      placement when placement in @placements -> placement
+      _unrecognised -> @default_placement
+    end
+  end
+
   def placement(_), do: @default_placement
 
   # The two layout slots are mutually exclusive on one locale: exactly one
@@ -202,7 +227,25 @@ defmodule EthosWeb.Affiliate do
           The vertical margin flips with position: a bottom-placed unit needs
           space above it, a top-placed one needs space below. --%>
     <div :if={render_here?(@locale, @position)} class={["px-4", wrapper_margin(@position)]}>
-      <div data-gyg-widget="auto" data-gyg-partner-id={@locale.partner_id} data-gyg-cmp={@locale.cmp}>
+      <%!-- min-h, not h: the widget's real height varies with how many activity
+            cards GetYourGuide returns and how they wrap, so a fixed height
+            would either clip it or leave a gap. The floor is one row of
+            activity cards — a 16:9 thumbnail at this column's 672px max width
+            (~180px) plus title, rating and price lines and the widget's own
+            heading and padding — which lands just under 400px.
+
+            The script is `async defer`, so without a reserved floor the div
+            paints at zero height and the widget's arrival shoves everything
+            below it down. At :bottom that was invisible below the fold; at
+            :top the div sits above the page's <h1>, so the shift moves the
+            title itself at the top of the viewport, on pages whose whole value
+            is organic search. --%>
+      <div
+        class="min-h-[400px]"
+        data-gyg-widget="auto"
+        data-gyg-partner-id={@locale.partner_id}
+        data-gyg-cmp={@locale.cmp}
+      >
       </div>
       <p class="mt-2 text-xs text-zinc-400">
         Tours and activities shown above earn Ethos a commission at no extra cost to you.
