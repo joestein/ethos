@@ -129,14 +129,24 @@ Neither belongs in a content pass.
 **Blast radius.** One destination page, `/destinations/madison`, listing two
 unrelated towns. Both guide pages themselves are correct.
 
-**Queens will add three more unless they are caught.** The Queens roster carries
-`murray-hill` (colliding with `priv/seed_data/manhattan/murray-hill.json`,
-"Murray Hill, New York" — same state, so it merges the way Flushing does),
-`newtown` (`priv/seed_data/connecticut/newtown.json`) and `roxbury`
+**Queens holds three more in reserve, and the tripwire for them stays.** The
+Queens roster carries `murray-hill` (colliding with
+`priv/seed_data/manhattan/murray-hill.json`, "Murray Hill, New York" — same
+state, so it merges the way Flushing does), `newtown`
+(`priv/seed_data/connecticut/newtown.json`) and `roxbury`
 (`priv/seed_data/connecticut/roxbury.json`). The last two are **cross-state**,
-the same shape as this entry. None has landed: `priv/seed_data/queens/` is
-empty. `test/ethos/seeds/queens_seed_data_test.exs` carries a Queens-scoped
-assertion that fails when any of them ships, deliberately scoped to Queens
+the same shape as this entry.
+
+All three are **deferred, not imminent**: the programme narrowed on 2026-08-31
+and each of the three is `in_scope: false`, so no committed wave will ship them
+and none can land under the current scope. They keep their roster rows, so they
+come back the day one is flipped in scope — see
+`docs/superpowers/specs/2026-08-31-narrowed-nyc-scope-design.md`.
+
+**Keep the assertion.** `test/ethos/seeds/queens_seed_data_test.exs` carries a
+Queens-scoped assertion that fails when any of the three ships. Deferral is a
+scope decision and can be reversed by editing one boolean; the collision is a
+property of the slugs and cannot. The assertion is deliberately scoped to Queens
 rather than corpus-wide so it does not go red on this pre-existing entry.
 
 ### Wikipedia gives two reasons for the 1945 Wrigley Field goat ejection

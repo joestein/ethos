@@ -10,7 +10,7 @@ defmodule Ethos.Seeds.BronxRosterTest do
     assert is_binary(@roster["source"]) and @roster["source"] != ""
   end
 
-  test "every neighborhood carries the four dispatch keys, and no others" do
+  test "every neighborhood carries the five dispatch keys, and no others" do
     for n <- @roster["neighborhoods"] do
       assert Enum.sort(Map.keys(n)) == ~w(community_district in_scope name slug wave)
 

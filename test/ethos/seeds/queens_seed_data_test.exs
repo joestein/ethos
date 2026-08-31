@@ -60,7 +60,8 @@ defmodule Ethos.Seeds.QueensSeedDataTest do
   `:pending_queens` is deliberately a THIRD tag, not shared with
   `:pending_bronx` or `:pending_wave`. `:pending_wave` belongs to the
   place-research backlog, which still owes 320 places; `:pending_bronx`
-  belongs to a programme that is mid-flight with 65 neighborhoods left.
+  belongs to a programme that is mid-flight with 13 in-scope neighborhoods
+  left.
   Sharing a tag across programmes means whichever finishes first either
   cannot delete it or, deleting it, un-excludes an unrelated gate that fails
   on defects it never touched.
@@ -102,6 +103,16 @@ defmodule Ethos.Seeds.QueensSeedDataTest do
   defp files, do: SeedDataHelpers.seed_files("queens")
   defp fixture(name), do: Path.join(@fixture_dir, name)
   defp fixtures, do: @fixture_dir |> Path.join("*.json") |> Path.wildcard() |> Enum.sort()
+
+  defp roster_rows,
+    do: @roster_path |> File.read!() |> Jason.decode!() |> Map.fetch!("neighborhoods")
+
+  # The reference set the roster-equality gate measures the corpus against.
+  # Extracted so that the untagged guard below and the tagged gate share ONE
+  # definition: a guard reading the roster itself would stay green after the
+  # filter here was deleted, which is the exact revert it exists to catch.
+  defp in_scope_slugs,
+    do: roster_rows() |> Enum.filter(& &1["in_scope"]) |> MapSet.new(& &1["slug"])
 
   defp all_photos(data) do
     (get_in(data, ["guide", "photos"]) || []) ++
@@ -344,8 +355,15 @@ defmodule Ethos.Seeds.QueensSeedDataTest do
   # They are guarded by @code_owned_queens_places below instead.
   #
   # Candidates a later wave may add once their slugs are fixed by a verdict:
-  # Rockaway Beach (spans the whole peninsula) and Jamaica Bay Wildlife Refuge
-  # (Broad Channel and Howard Beach).
+  # Rockaway Beach (spans the whole peninsula) — `rockaway-beach` is in scope,
+  # so a row for it is safe to add.
+  #
+  # Jamaica Bay Wildlife Refuge is NOT such a candidate today. It sits in
+  # `broad-channel` and `howard-beach`, both `in_scope: false`, so no seed file
+  # will ever carry it and a row for it would report the refuge missing
+  # forever — the same failure mode as the Citi Field places above. It becomes
+  # addable only if one of those two neighborhoods is flipped in scope and
+  # ships. See docs/superpowers/specs/2026-08-31-narrowed-nyc-scope-design.md.
   @marquee_institutions [
     {"Forest Park", ~r/^forest-park/},
     {"Alley Pond Park", ~r/^alley-pond-park/},
@@ -974,39 +992,52 @@ defmodule Ethos.Seeds.QueensSeedDataTest do
              "unexpected: #{inspect(MapSet.difference(published, expected_slugs))}"
   end
 
-  # The narrowed-scope gate's own guard. The roster-equality test below is
-  # tagged and dark until the last in-scope neighborhood ships, so nothing
-  # would otherwise notice if `expected` silently reverted to the full roster
-  # — every in-scope file would still be present and the set would just be
-  # bigger. This asserts the subset is what the gate measures, today.
-  test "roster equality is scoped to in-scope neighborhoods, not the whole roster" do
-    roster = @roster_path |> File.read!() |> Jason.decode!()
+  # The narrowed-scope gate's own guard. The roster-equality test below carries
+  # its own `@tag :pending_queens` on top of the module tag and stays dark
+  # until the last in-scope wave lands, so nothing there would notice if its
+  # reference set silently reverted to the full roster — every in-scope file
+  # would still be present and the set would just be bigger.
+  #
+  # This calls `in_scope_slugs/0`, THE SAME function the tagged gate calls, and
+  # asserts it returns strictly fewer slugs than the roster holds. Deleting the
+  # `in_scope` filter from that function makes the two sizes equal and fails
+  # this test. It does not re-derive the subset from the roster, because a test
+  # that did would only be checking the JSON file and would survive that
+  # deletion untouched.
+  #
+  # It carries no tag of its own and becomes live the moment the `@moduletag`
+  # above comes off — one wave earlier than the gate it guards. Per this
+  # module's own rule, it is NOT enforced until then; the Bronx copy of this
+  # guard runs today and is where the property is actually held.
+  test "the roster-equality reference set is the in-scope subset, not the whole roster" do
+    all = roster_rows() |> MapSet.new(& &1["slug"])
+    scoped = in_scope_slugs()
 
-    all = roster["neighborhoods"] |> Enum.map(& &1["slug"]) |> MapSet.new()
+    assert MapSet.size(scoped) > 0, "no queens neighborhood is in scope"
 
-    scoped =
-      roster["neighborhoods"]
-      |> Enum.filter(& &1["in_scope"])
-      |> Enum.map(& &1["slug"])
-      |> MapSet.new()
-
-    assert MapSet.size(scoped) > 0, "no neighborhood is in scope"
+    assert MapSet.subset?(scoped, all),
+           "in_scope_slugs/0 returned slugs the roster does not carry: " <>
+             inspect(MapSet.difference(scoped, all) |> Enum.sort())
 
     assert MapSet.size(scoped) < MapSet.size(all),
-           "the in-scope set is the whole roster — either the narrowing was reverted " <>
-             "or the flag is not being read"
+           "in_scope_slugs/0 returned the whole roster (#{MapSet.size(all)} slugs) — " <>
+             "either it stopped applying the `in_scope` filter or the narrowing was reverted"
   end
 
-  # Delete this @tag at the final wave, not before: until the last wave has
-  # landed the corpus is a prefix of the roster and this fails by construction.
+  # Delete this @tag when the last IN-SCOPE wave lands — 21 neighborhoods, not
+  # the full 111 — and not before: until then the corpus is a prefix of the
+  # in-scope set and this fails by construction.
   @tag :pending_queens
   test "the shipped queens corpus matches the in-scope roster exactly" do
     files = files()
 
     # Roster coverage. Without this, deleting a seed file passes every other
     # check in this file — each one only inspects the files that happen to be
-    # present. The roster is the programme's definition of "all of Queens", so
-    # it is the only thing that can tell a shipped corpus from a truncated one.
+    # present. The in-scope subset of the roster is the programme's definition
+    # of what the Queens corpus owes, so it is the only thing that can tell a
+    # shipped corpus from a truncated one. (The roster itself remains the
+    # record of what the borough contains; the flag records what was committed
+    # to.)
     #
     # Asserted as equality, and it fails in both directions: a rostered
     # neighborhood with no seed file, and a seed file no roster row claims.
@@ -1030,14 +1061,15 @@ defmodule Ethos.Seeds.QueensSeedDataTest do
     assert MapSet.size(expected) > 0, "no queens neighborhood is in scope"
 
     assert MapSet.equal?(shipped, expected),
-           "queens seed corpus does not match the roster — " <>
+           "queens seed corpus does not match the in-scope roster — " <>
              "on the roster with no seed file: " <>
              inspect(MapSet.difference(expected, shipped) |> Enum.sort()) <>
              "; seed files with no roster entry: " <>
              inspect(MapSet.difference(shipped, expected) |> Enum.sort())
   end
 
-  # Delete this @tag at the final wave, with the one above. An institution can
+  # Delete this @tag when the last in-scope wave lands — 21 neighborhoods, not
+  # the full 111 — with the one above. An institution can
   # only be counted once the wave that owns it has landed, and which wave that
   # is, is exactly what this assertion refuses to take on trust.
   @tag :pending_queens

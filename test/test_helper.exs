@@ -43,8 +43,8 @@ ExUnit.start()
 #
 # It is a THIRD tag rather than a reuse of :pending_bronx, for the reason that
 # separated :pending_bronx from :pending_wave: the Bronx programme is mid-flight
-# with 65 neighborhoods left, and whichever of the two finishes first would
-# either be unable to delete the shared tag or, deleting it, un-exclude the
+# with 13 in-scope neighborhoods left, and whichever of the two finishes first
+# would either be unable to delete the shared tag or, deleting it, un-exclude the
 # other borough's gate and turn the suite red on a corpus it never touched.
 #
 # Removed in two stages, both inside the future Queens research plan:

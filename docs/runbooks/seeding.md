@@ -40,7 +40,10 @@ it — see its entry below.
    files, `priv/seed_data/connecticut/`
 4. `Ethos.Release.seed_brooklyn(email)` — 69 JSON files, `priv/seed_data/brooklyn/`
 5. `Ethos.Release.seed_bronx(email)` — JSON files in `priv/seed_data/bronx/`.
-   One neighborhood has shipped so far; the remaining 65 are in progress.
+   The programme narrowed on 2026-08-31 to **14 in-scope neighborhoods**, not
+   the full 66-row roster. One has shipped so far; the remaining 13 are in
+   progress. The other 52 roster rows are deferred, not abandoned — see
+   `docs/superpowers/specs/2026-08-31-narrowed-nyc-scope-design.md`.
 6. `Ethos.Release.seed_queens(email)` — JSON files in `priv/seed_data/queens/`.
    **The directory is empty.** The scaffolding shipped ahead of the research,
    so this call currently seeds nothing and reports `Seeded 0 files`. That is
@@ -196,10 +199,29 @@ countable independently:
 
 Full rebuild total, excluding Rome: **308** — the four rows above (38 + 170 +
 69 + 30 = 307) plus the one Bronx guide that has shipped so far,
-`priv/seed_data/bronx/belmont.json`. The Bronx and Queens seeders have no row of
-their own here because one is mid-programme and the other's directory is empty,
-so a stated "expected count" for either would be stale within a wave; the total
-still has to add up, so the Bronx guide is counted in it.
+`priv/seed_data/bronx/belmont.json`.
+
+The Bronx and Queens seeders have no row of their own here because both are
+still in flight: the count moves with every wave, so any number written in this
+table would be stale before the next one lands. The total still has to add up,
+so the one shipped Bronx guide is counted in it — re-derive that addend from
+`ls priv/seed_data/bronx/*.json | wc -l` rather than trusting this paragraph.
+
+Their **terminal** counts are now knowable, which they were not when this
+paragraph was first written. Both programmes narrowed on 2026-08-31 from their
+full rosters to an in-scope core: **14 Bronx** guides (of 66 rostered) and
+**21 Queens** (of 111). When each programme's last in-scope wave lands, add its
+row here and the full rebuild total becomes 307 + 14 + 21 = **342**.
+
+Count those two by **seed file**, not by county:
+`Ethos.Guides.list_published_guides() |> Enum.count(&(&1.county == ~s(Bronx)))`
+also picks up the code-module Yankee Stadium guide, and the `~s(Queens)` form
+picks up Citi Field — both already counted in the MLB ballparks row of 30. The
+neighborhood corpus is `priv/seed_data/bronx/*.json` and
+`priv/seed_data/queens/*.json`, one guide per file, and
+`test/ethos/seeds/bronx_seed_data_test.exs` asserts that set equals the in-scope
+roster exactly once its `:pending_bronx` tag comes off. See
+`docs/superpowers/specs/2026-08-31-narrowed-nyc-scope-design.md`.
 
 Where the numbers come from:
 

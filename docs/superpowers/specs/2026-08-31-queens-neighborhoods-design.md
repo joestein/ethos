@@ -524,6 +524,7 @@ Queens wave is expected to be long.
 **For the deferred research phase:**
 
 - Every roster neighborhood has a page, tiered by what research found.
+  *Superseded 2026-08-31 by `docs/superpowers/specs/2026-08-31-narrowed-nyc-scope-design.md`: 21 in-scope neighborhoods, not all 111.*
 - Every published claim traces to a verifier's verdict.
 - No place slug collides with the existing corpus, and no Citi Field place is
   duplicated under a new name.

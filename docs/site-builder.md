@@ -1499,6 +1499,102 @@ trail it makes impossible is part of its price.
 
 ---
 
+## 13. Close-out: the NYC boroughs narrowed mid-programme, and waves went empty
+
+The second and third sets run under this pattern were the Bronx (66 rostered
+neighborhoods) and Queens (111). **Neither will be completed as rostered.** On
+2026-08-31 the owner narrowed both to a deep core of **35 neighborhoods — 14
+Bronx and 21 Queens** — and this section records the outcome, because the
+programme documents are dated records of what was decided at the time and do not
+describe where it landed. The reasoning is in
+`docs/superpowers/specs/2026-08-31-narrowed-nyc-scope-design.md`.
+
+### Why
+
+§4's warning about search access is the whole story, measured on two
+neighborhoods of the same borough:
+
+| | Belmont (search available) | Mott Haven (search exhausted) |
+|---|---|---|
+| Places shipped | **40** | **9** |
+| Claims verified | 208 | 88 |
+| Research cost | — | ~240k tokens, ~16 min |
+
+Nothing unverified shipped in either case — the discipline held, and the loss is
+coverage rather than accuracy. But at Mott Haven's density the remaining 176
+neighborhoods produce a corpus roughly a quarter as deep as Belmont's for
+something like 42M tokens. **Depth was chosen over completeness.**
+
+The mechanism was a boolean `in_scope` on every roster row, **not a trim**: all
+177 rows stay. The roster remains the record of what the borough contains; the
+flag records what the programme committed to. Trimming would have destroyed the
+only written account of what was deferred and forced a later expansion to
+re-derive the neighborhood list from scratch — the work §2 exists to do once.
+
+### What that does to waves, and the trap it sets
+
+Waves are the dispatch unit: someone is told "run Bronx wave 4". Narrowing was
+applied per neighborhood, so it fell unevenly across waves, and **four waves now
+carry zero committed work**:
+
+| Borough | In-scope neighborhoods, by wave | Empty waves |
+|---|---|---|
+| Bronx, 7 waves | 2, 4, 3, **0**, 3, 1, 1 | wave 4 |
+| Queens, 12 waves | 3, 3, 4, 3, 1, **0**, **0**, 2, 1, **0**, 2, 2 | waves 6, 7, 10 |
+
+Bronx totals 14, Queens 21. Derive these from the rosters rather than trusting
+the table:
+
+```
+jq '[.neighborhoods[] | select(.in_scope) | .wave] | group_by(.) | map({wave: .[0], n: length})' \
+  priv/seed_data/bronx_roster.json
+```
+
+An operator who runs an empty wave finds nothing and cannot tell "narrowed out"
+from "roster is broken", so it is written down here. **An empty wave is not a
+skipped wave** — do not renumber to close the gaps, because the wave numbers are
+in the roster rows of the 142 deferred neighborhoods and renumbering silently
+re-plans work that was only deferred.
+
+This is the one design rule the narrowing invalidated. §2's roster rules, as
+restated in `docs/superpowers/plans/2026-08-31-queens-scaffolding.md`, say
+**"waves run 1..n contiguously, none empty."** That is still true of the roster,
+which is what it was written about. It is no longer true of the programme.
+**Keep it as a roster rule for a new set**, where it stops a wave being defined
+and never dispatched; do not read it as a promise that every wave has work.
+
+### What this means for the gates
+
+The two roster-equality gates (`bronx_seed_data_test.exs`,
+`queens_seed_data_test.exs`) now assert equality against the **in-scope subset**,
+still in both directions. A one-directional difference check was available and
+was rejected: one direction loses truncated-corpus detection, which is the only
+reason those gates exist. **Narrow the reference set, never the assertion.**
+
+Two consequences worth carrying to another set:
+
+- **A tag whose removal condition is unreachable never comes off.**
+  `:pending_bronx` and `:pending_queens` were scheduled against 66 and 111
+  neighborhoods. They now come off at 14 and 21, and every comment naming the
+  condition — moduledocs, `test/test_helper.exs`, and the inline comments on the
+  tags themselves — had to be corrected together. The inline ones are what an
+  implementer reads at the moment they delete the tag, and they were the ones
+  missed.
+- **Check marquee lists against the narrowed set before narrowing.** Both gates
+  assert each named institution appears in exactly one seed file; an institution
+  sitting in a neighborhood that will never ship is reported missing forever. All
+  ten were checked and all ten are covered — `van-cortlandt-park` was added to
+  the scope *because* Van Cortlandt House Museum sits there. Fixing the scope was
+  the right move; narrowing the coverage gate to fit a scope error is not.
+
+### What is deferred, not abandoned
+
+The 142 out-of-scope neighborhoods keep their roster rows, community districts
+and wave numbers. If search budget recovers, the work is: flip `in_scope`, run
+the waves. The rosters, gates, seeders and photo manifests already cover them.
+
+---
+
 ## Reference: the files this pattern touches
 
 | what | where |

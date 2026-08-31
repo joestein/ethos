@@ -18,7 +18,7 @@ defmodule Ethos.Seeds.BronxSeedDataTest do
     end, and deleted the `@moduletag` line. Every test here now runs, and the
     floors are meaningful for the first time — a collection exists to be
     non-empty. The two tests carrying their own `@tag :pending_bronx` stay
-    excluded: neither can pass until the last wave has landed.
+    excluded: neither can pass until the last in-scope wave has landed.
   * **The last in-scope wave** — 14 neighborhoods, not the full 66 — deletes
     those two `@tag` lines and the `:pending_bronx` entry in
     `test/test_helper.exs`. The programme narrowed on 2026-08-31; see
@@ -26,9 +26,10 @@ defmodule Ethos.Seeds.BronxSeedDataTest do
 
   `:pending_bronx` is deliberately NOT `:pending_wave`. That tag belongs to the
   place-research backlog, which still owes 320 places and gates two assertions
-  in `Ethos.Seeds.PlaceContentGateTest`. Sharing it would mean Task 5 either
-  cannot delete the tag or, deleting it, un-excludes an unrelated gate that
-  fails on pre-existing defects this programme never touched.
+  in `Ethos.Seeds.PlaceContentGateTest`. Sharing it would mean the last
+  in-scope wave either cannot delete the tag or, deleting it, un-excludes an
+  unrelated gate that fails on pre-existing defects this programme never
+  touched.
 
   ## Where each part came from
 
@@ -72,6 +73,16 @@ defmodule Ethos.Seeds.BronxSeedDataTest do
   defp files, do: SeedDataHelpers.seed_files("bronx")
   defp fixture(name), do: Path.join(@fixture_dir, name)
   defp fixtures, do: @fixture_dir |> Path.join("*.json") |> Path.wildcard() |> Enum.sort()
+
+  defp roster_rows,
+    do: @roster_path |> File.read!() |> Jason.decode!() |> Map.fetch!("neighborhoods")
+
+  # The reference set the roster-equality gate measures the corpus against.
+  # Extracted so that the untagged guard below and the tagged gate share ONE
+  # definition: a guard reading the roster itself would stay green after the
+  # filter here was deleted, which is the exact revert it exists to catch.
+  defp in_scope_slugs,
+    do: roster_rows() |> Enum.filter(& &1["in_scope"]) |> MapSet.new(& &1["slug"])
 
   defp all_photos(data) do
     (get_in(data, ["guide", "photos"]) || []) ++
@@ -835,40 +846,47 @@ defmodule Ethos.Seeds.BronxSeedDataTest do
     assert length(bronx_guides) == length(files)
   end
 
-  # The narrowed-scope gate's own guard. The roster-equality test below is
-  # tagged and dark until the last in-scope neighborhood ships, so nothing
-  # would otherwise notice if `expected` silently reverted to the full roster
-  # — every in-scope file would still be present and the set would just be
-  # bigger. This asserts the subset is what the gate measures, today.
-  test "roster equality is scoped to in-scope neighborhoods, not the whole roster" do
-    roster = @roster_path |> File.read!() |> Jason.decode!()
+  # The narrowed-scope gate's own guard, and it runs today. The roster-equality
+  # test below is tagged and dark until the last in-scope wave lands, so
+  # nothing there would notice if its reference set silently reverted to the
+  # full roster — every in-scope file would still be present and the set would
+  # just be bigger.
+  #
+  # This calls `in_scope_slugs/0`, THE SAME function the tagged gate calls, and
+  # asserts it returns strictly fewer slugs than the roster holds. Deleting the
+  # `in_scope` filter from that function makes the two sizes equal and fails
+  # this test — an untagged test — immediately. It does not re-derive the
+  # subset from the roster, because a test that did would only be checking the
+  # JSON file and would survive that deletion untouched.
+  test "the roster-equality reference set is the in-scope subset, not the whole roster" do
+    all = roster_rows() |> MapSet.new(& &1["slug"])
+    scoped = in_scope_slugs()
 
-    all = roster["neighborhoods"] |> Enum.map(& &1["slug"]) |> MapSet.new()
+    assert MapSet.size(scoped) > 0, "no bronx neighborhood is in scope"
 
-    scoped =
-      roster["neighborhoods"]
-      |> Enum.filter(& &1["in_scope"])
-      |> Enum.map(& &1["slug"])
-      |> MapSet.new()
-
-    assert MapSet.size(scoped) > 0, "no neighborhood is in scope"
+    assert MapSet.subset?(scoped, all),
+           "in_scope_slugs/0 returned slugs the roster does not carry: " <>
+             inspect(MapSet.difference(scoped, all) |> Enum.sort())
 
     assert MapSet.size(scoped) < MapSet.size(all),
-           "the in-scope set is the whole roster — either the narrowing was reverted " <>
-             "or the flag is not being read"
+           "in_scope_slugs/0 returned the whole roster (#{MapSet.size(all)} slugs) — " <>
+             "either it stopped applying the `in_scope` filter or the narrowing was reverted"
   end
 
-  # Delete this @tag in Task 5, not before: until the last wave has landed the
-  # corpus is a prefix of the roster and this fails by construction.
+  # Delete this @tag when the last IN-SCOPE wave lands — 14 neighborhoods, not
+  # the full 66 — and not before: until then the corpus is a prefix of the
+  # in-scope set and this fails by construction.
   @tag :pending_bronx
   test "the shipped bronx corpus matches the in-scope roster exactly" do
     files = files()
 
     # Roster coverage. Without this, deleting a seed file passes every other
     # check in this file — each one only inspects the files that happen to be
-    # present. The roster is the programme's definition of "all of the Bronx",
-    # so it is the only thing that can tell a shipped corpus from a truncated
-    # one.
+    # present. The in-scope subset of the roster is the programme's definition
+    # of what the Bronx corpus owes, so it is the only thing that can tell a
+    # shipped corpus from a truncated one. (The roster itself remains the
+    # record of what the borough contains; the flag records what was
+    # committed to.)
     #
     # Asserted as equality, and it fails in both directions: a rostered
     # neighborhood with no seed file, and a seed file no roster row claims.
@@ -885,13 +903,10 @@ defmodule Ethos.Seeds.BronxSeedDataTest do
     # check in this file". Equality against the in-scope subset keeps both
     # directions over the set actually committed to, which is strictly
     # stronger than the relaxation.
-    roster = @roster_path |> File.read!() |> Jason.decode!()
-
-    expected =
-      roster["neighborhoods"]
-      |> Enum.filter(& &1["in_scope"])
-      |> Enum.map(& &1["slug"])
-      |> MapSet.new()
+    #
+    # `in_scope_slugs/0` is shared with the untagged guard above, which is what
+    # keeps this scoping honest while this test is dark.
+    expected = in_scope_slugs()
 
     shipped = files |> Enum.map(&Path.rootname(Path.basename(&1))) |> MapSet.new()
 
@@ -900,14 +915,15 @@ defmodule Ethos.Seeds.BronxSeedDataTest do
     assert MapSet.size(expected) > 0, "no bronx neighborhood is in scope"
 
     assert MapSet.equal?(shipped, expected),
-           "bronx seed corpus does not match the roster — " <>
+           "bronx seed corpus does not match the in-scope roster — " <>
              "on the roster with no seed file: " <>
              inspect(MapSet.difference(expected, shipped) |> Enum.sort()) <>
              "; seed files with no roster entry: " <>
              inspect(MapSet.difference(shipped, expected) |> Enum.sort())
   end
 
-  # Delete this @tag in Task 5, with the one above. An institution can only be
+  # Delete this @tag when the last in-scope wave lands — 14 neighborhoods, not
+  # the full 66 — with the one above. An institution can only be
   # counted once the wave that owns it has landed, and which wave that is, is
   # exactly what this assertion refuses to take on trust.
   @tag :pending_bronx

@@ -247,6 +247,8 @@ Same protocol per neighborhood: finder → independent verifier → tier from ve
 
 Mechanically, against the roster. A borough across many waves is exactly the shape where one neighborhood is skipped silently.
 
+*Superseded 2026-08-31 by `docs/superpowers/specs/2026-08-31-narrowed-nyc-scope-design.md`: the gate asserts equality against the in-scope subset (14 rows), not the full 66-row roster.*
+
 ---
 
 ### Task 5: Close-out
