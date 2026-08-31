@@ -9,6 +9,29 @@ defmodule Ethos.Seeds.DataGuide do
   places, and links may reference guides, defined in any file of the same run
   regardless of the order the files are processed in.
 
+  ## `status: "open"` is not a trading claim, and uncertain places still ship
+
+  `Ethos.Places.Place` validates `status` into `open|closed` and defaults it to
+  `"open"`. Read as a claim, that would mean a place whose current trading a
+  verification left *uncertain* could never be published — and a wave that
+  believes it would discard the majority of what it researched. Belmont came
+  within one commit of shipping 12 of 40 verified places for exactly that
+  reason.
+
+  It is not a claim. `place_html/show.html.heex` renders a banner only when
+  `status == "closed"`; `"open"` renders nothing at all. "Open" is the
+  **absence of a closed claim**, not an assertion of trading. A record
+  therefore makes no claim about whether a place trades today unless its own
+  prose does.
+
+  So the rule, and it applies to every wave: **uncertain trading does not block
+  publication — it forbids writing that the place is open.** Publish what the
+  verification confirmed, which is what a place is and where it is. Write
+  nothing that says it trades today, currently operates, is still going, or
+  serves anything at this moment. Uncertain *identity* is the thing that blocks
+  publication, because a record whose name or address is unestablished has
+  nothing left to say.
+
   A seed file may optionally declare a top-level `"links"` array — edges
   from that file's guide to other guides or places, in the form
   `{"target": "guide:<slug>"|"place:<slug>", "kind": "...", "note": "..."}`.

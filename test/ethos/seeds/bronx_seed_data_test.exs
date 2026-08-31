@@ -42,6 +42,13 @@ defmodule Ethos.Seeds.BronxSeedDataTest do
     spatial claims. That last list is half the tuning: a gate that bans the
     checkable form pushes an author toward vagueness, which is the opposite of
     the rule.
+  * **Uncertain trading does not reduce the place count.** No assertion here
+    checks it, and a wave that assumes otherwise ships a fraction of what it
+    researched — Belmont nearly shipped 12 of 40. `Ethos.Seeds.DataGuide`'s
+    moduledoc has the rule: `status: "open"` is the schema default and renders
+    nothing, so it is the absence of a closed claim rather than an assertion
+    of trading. Publish the uncertain places; write no sentence saying they
+    are open.
   * Everything else is Brooklyn's, which is the right template for it —
     including the two transit rules, whose heading this gate *fixes* rather
     than inherits from a content-rules document, because the Bronx has none.

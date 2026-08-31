@@ -441,6 +441,34 @@ defmodule Ethos.Seeds.DestinationSeedDataTest do
              ", stale: " <> inspect(MapSet.difference(registered, discovered) |> Enum.sort())
   end
 
+  # `Ethos.Seeds.Catalog.guides_owned/0` calls `mod.data()` on every registered
+  # guide module, and the banned-prose gate reads it. A module that does not
+  # export `data/0` would raise there — or, if `guides_owned/0` were ever
+  # softened to skip it, would be silently unscanned, which is the exact hole
+  # that function was added to close reappearing one level up.
+  #
+  # `Ethos.Seeds.RomeGuide` was that module: it seeds through its own path
+  # rather than through `GuideRunner`, so it had no `data/0` and nothing could
+  # read what it publishes without knowing its internals.
+  test "every registered guide module exports data/0 with the fields the gates read" do
+    for {mod, _region} <- Catalog.guide_modules() do
+      assert function_exported?(mod, :data, 0),
+             "#{inspect(mod)} has no data/0, so Catalog.guides_owned/0 cannot read what it " <>
+               "publishes and the banned-prose gate cannot scan it"
+
+      data = mod.data()
+
+      assert is_map(data), "#{inspect(mod)}.data/0 did not return a map"
+
+      assert is_binary(data[:slug]) and data[:slug] != "",
+             "#{inspect(mod)}.data/0 has no slug, which the gates key their failures on"
+
+      assert is_binary(data[:intro]) and data[:intro] != "",
+             "#{inspect(mod)}.data/0 has no intro — the longest published string on the page " <>
+               "and the one a prose ban most needs to see"
+    end
+  end
+
   # The catalog derives each module's source path from its name rather than
   # carrying a literal beside it, because a literal drifts from the module it
   # labels and nothing notices. This is what makes the derivation safe.

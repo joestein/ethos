@@ -13,21 +13,22 @@ defmodule Ethos.Seeds.PlaceContentGateTest do
 
   ## The content assertions cover every string, not just `summary`
 
-  Both patterns are checked against every string in every **JSON** seed file —
-  place `summary` and `history`, guide `intro`, section `body`, FAQ `question`
-  and `answer`, entry `note`, link `note`, and anything a later format adds —
-  and against every string in every code-defined **places** module. See
-  `collect_strings/2` below for why the fields are walked rather than named.
+  Both patterns are checked against every string in all three halves of the
+  corpus — every JSON seed file, every code-defined places module, and every
+  code-defined guide module. Place `summary` and `history`, guide `intro`,
+  section `body`, FAQ `question` and `answer`, entry `note`, link `note`, and
+  anything a later format adds. See `collect_strings/2` below for why the
+  fields are walked rather than named, and `prose/0` for the three sources.
 
-  **What it does not reach, stated plainly rather than left to be discovered:**
-  code-defined *guides*. `prose/0` walks `SeedDataHelpers.all_seed_files/0`
-  and `SeedDataHelpers.code_places/0`; there is no `code_guides/0`, so the
-  intros, section bodies and FAQ answers of `Ethos.Seeds.*Guide` — every
-  Connecticut town guide and every ballpark guide — are outside this gate.
-  A banned phrase in `yankee_stadium_places.ex` fails here; the same sentence
-  in `yankee_stadium_guide.ex` does not. Closing that needs a catalog entry
-  point those modules do not currently expose, which is why it is recorded
-  here instead of quietly assumed away.
+  **The third of those was missing until a defect found it.** `prose/0` walked
+  the JSON files and `code_places/0` and stopped, so thirty-seven guide
+  modules — every Connecticut town guide, the Antique Trail, Rome and thirty
+  ballparks — were outside this gate entirely. A banned phrase in
+  `yankee_stadium_places.ex` failed here while six strings carrying the
+  identical sentence in `yankee_stadium_guide.ex` passed. The fix is
+  `Ethos.Seeds.Catalog.guides_owned/0`, driven from the catalog rather than
+  from a list in this file, so a guide module added tomorrow is scanned
+  without anyone remembering this gate exists.
 
   ## Why two of these are excluded by default
 
@@ -328,7 +329,24 @@ defmodule Ethos.Seeds.PlaceContentGateTest do
           {path, text} <- collect_strings(p, to_string(p[:slug])),
           do: {Path.basename(owner.seed_file), path, text}
 
-    json ++ code
+    # Code-defined guides. Added late, and the reason is the whole point of
+    # this gate: a phrase banned in `yankee_stadium_places.ex` and caught there
+    # sat in six strings of `yankee_stadium_guide.ex` with the suite green,
+    # because the two walks above are the only two that existed. Thirty-seven
+    # guide modules — every Connecticut town guide, the Antique Trail, Rome and
+    # thirty ballparks — published intros, section bodies, FAQ answers and
+    # entry notes no corpus gate had ever read.
+    #
+    # Keyed on the guide's own slug for the same reason the places walk is
+    # keyed on a place's, and driven from `Ethos.Seeds.Catalog` rather than a
+    # list here, so a guide module added tomorrow is scanned without anyone
+    # remembering this file exists.
+    guides =
+      for {data, owner} <- SeedDataHelpers.code_guides(),
+          {path, text} <- collect_strings(data, to_string(data[:slug])),
+          do: {Path.basename(owner.seed_file), path, text}
+
+    json ++ code ++ guides
   end
 
   # --- Each alternative is individually load-bearing ----------------------

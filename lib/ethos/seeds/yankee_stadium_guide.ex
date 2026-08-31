@@ -30,6 +30,19 @@ defmodule Ethos.Seeds.YankeeStadiumGuide do
     * **No trading claim for four places**, and the "Around the ballpark"
       section says which and why rather than leaving a reader to assume.
 
+    * **No inspection-record prose.** Six strings here — the intro, a section
+      body, three entry notes and an FAQ answer — named the municipal record
+      the three River Avenue businesses were discovered through and published
+      the date it carried. An inspection record may support a `status`
+      judgement and may never appear in a sentence, and the word "inspection"
+      being absent never made it compliant. It survived because
+      `test/ethos/seeds/place_content_gate_test.exs` walked JSON seed files
+      and code *places* modules only: the identical sentence in
+      `Ethos.Seeds.YankeeStadiumPlaces` failed that gate while these six
+      passed. `Ethos.Seeds.Catalog.guides_owned/0` now puts every guide module
+      inside it, and a scan of all thirty-seven found these six and nothing
+      else.
+
   Transit and parking are prose in "Getting there" and mint no place records,
   per docs/site-builder.md §8: no station, no garage and no bus route becomes a
   page.
@@ -55,9 +68,9 @@ defmodule Ethos.Seeds.YankeeStadiumGuide do
       museum inside it, then the Grand Concourse buildings and the River
       Avenue bars around it. Research for it was carried out with web search
       unavailable, from named sources fetched directly: English Wikipedia, the
-      club's and the businesses' own sites, and New York City's public
-      restaurant dataset, which stood in for discovery on River Avenue. Where
-      a claim rests on a business's own account of itself, this guide says so.
+      club's and the businesses' own sites, and the city's municipal records,
+      which stood in for discovery on River Avenue. Where a claim rests on a
+      business's own account of itself, this guide says so.
       Where the research could not establish something — a founding year,
       current hours, whether a tenant list still holds — this guide leaves it
       out and names the gap.
@@ -103,21 +116,21 @@ defmodule Ethos.Seeds.YankeeStadiumGuide do
           name: "Stan's Sports Bar",
           place_slug: "stans-sports-bar-bronx",
           note:
-            "836 River Avenue: carried under American cuisine on the city's public restaurant dataset in a row dated April 13, 2026. No site for the bar was found and nothing further was reachable."
+            "836 River Avenue. No site for the bar was found and nothing further was reachable."
         },
         %{
           kind: "food",
           name: "Billy's Sport Bar Restaurant & Lounge",
           place_slug: "billys-sports-bar-bronx",
           note:
-            "856 River Avenue: carried under American cuisine on the city's public restaurant dataset in a row dated October 29, 2025. No site for the bar was found and nothing further was reachable."
+            "856 River Avenue. No site for the bar was found and nothing further was reachable."
         },
         %{
           kind: "food",
           name: "The Clubhouse Cafe",
           place_slug: "the-clubhouse-cafe-bronx",
           note:
-            "812 River Avenue: carried under the coffee and tea category on the city's public restaurant dataset in a row dated June 19, 2026. No site for the cafe was found and nothing further was reachable."
+            "812 River Avenue. No site for the cafe was found and nothing further was reachable."
         },
         %{
           kind: "sight",
@@ -195,11 +208,11 @@ defmodule Ethos.Seeds.YankeeStadiumGuide do
 
           River Avenue carries three more, in street-number order: The
           Clubhouse Cafe at 812, Stan's Sports Bar at 836 and Billy's Sport
-          Bar Restaurant & Lounge at 856. Each rests on a single source — a
-          row in New York City's public restaurant dataset, giving the name,
-          the address and the cuisine category and nothing else. Web search
-          was exhausted before this batch began and no site was found for any
-          of the three, so no founding year, menu or hours appears here.
+          Bar Restaurant & Lounge at 856. Each rests on a single municipal
+          record, which establishes a name and an address and nothing else.
+          Web search was exhausted before this batch began and no site was
+          found for any of the three, so no founding year, menu or hours
+          appears here.
 
           Heritage Field is at East 161st Street and River Avenue, on the
           ground the 1923 stadium stood on. Its blue outline in the grass
@@ -273,7 +286,7 @@ defmodule Ethos.Seeds.YankeeStadiumGuide do
         %{
           "question" => "Why do the River Avenue bars have such short entries?",
           "answer" =>
-            "Because one source is all there was. Web search was exhausted before this batch began, and New York City's public restaurant dataset did the work of discovery on that street. A dataset row gives a business name, an address and a cuisine category. It does not give a founding year, a menu or a set of hours, and none of the three — Billy's, Stan's or The Clubhouse Cafe — had a site the research could find. Rather than pad those records, this guide publishes what the row establishes and says so."
+            "Because one source is all there was. Web search was exhausted before this batch began, and the city's municipal records did the work of discovery on that street. They establish a business name and an address. They do not give a founding year, a menu or a set of hours, and none of the three — Billy's, Stan's or The Clubhouse Cafe — had a site the research could find. Rather than pad those records, this guide publishes the little that is established and says so."
         },
         %{
           "question" => "Is the Bronx Terminal Market's shop list current?",

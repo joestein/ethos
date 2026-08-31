@@ -53,6 +53,17 @@ defmodule Ethos.SeedDataHelpers do
   defdelegate code_places, to: Ethos.Seeds.Catalog, as: :places_owned
 
   @doc """
+  Every code-defined guide's published data, paired with its owner.
+
+  The counterpart to `code_places/0`, and it did not exist until a banned
+  phrase was found in `Ethos.Seeds.YankeeStadiumGuide` that every corpus gate
+  had passed over: the walks read JSON seed files and code *places* modules,
+  so thirty-seven guide modules' intros, section bodies, FAQ answers and entry
+  notes were outside every one of them.
+  """
+  defdelegate code_guides, to: Ethos.Seeds.Catalog, as: :guides_owned
+
+  @doc """
   Asserts each place slug is defined exactly once across the whole corpus:
   every `priv/seed_data/*/*.json` file plus every code-defined places module.
   """

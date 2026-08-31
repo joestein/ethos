@@ -274,11 +274,42 @@ defmodule Ethos.Seeds.RomeGuide do
   ]
 
   @doc """
+  Everything this module publishes, in the shape every other guide module
+  returns from `data/0`.
+
+  This guide does not seed through `Ethos.Seeds.GuideRunner` — its entries
+  carry `day`, `verdict` and booking fields the runner does not pass — so it
+  had no `data/0` and was the one guide module a caller could not read
+  without knowing its internals. That made it invisible to
+  `Ethos.SeedDataHelpers.code_guides/0` and so to the banned-prose gate,
+  which is the same shape of hole as a module missing from
+  `Ethos.Seeds.Catalog`: covered by every gate but one, which reads exactly
+  like being covered.
+
+  `upsert!/1` reads through this rather than the attributes directly, so
+  there is one source and a gate cannot be scanning something the seeder does
+  not publish.
+  """
+  def data do
+    %{
+      slug: @slug,
+      title: @title,
+      destination: @destination,
+      intro: @intro,
+      sections: @sections,
+      faq: @faq,
+      entries: @entries,
+      photos: photo_attrs()
+    }
+  end
+
+  @doc """
   Creates or updates the Rome flagship guide under the user with the given
   email (creating that user, with a random password, if they don't exist
   yet). Idempotent by slug — safe to run repeatedly.
   """
   def upsert!(owner_email) when is_binary(owner_email) do
+    d = data()
     user = find_or_create_user!(owner_email)
     guide = find_or_insert_guide!(user)
 
@@ -286,12 +317,12 @@ defmodule Ethos.Seeds.RomeGuide do
       Repo.transaction(fn ->
         guide =
           guide
-          |> Guide.changeset(%{title: @title, destination: @destination})
-          |> Guide.seo_changeset(%{intro: @intro, sections: @sections, faq: @faq})
-          |> Ecto.Changeset.put_change(:slug, @slug)
+          |> Guide.changeset(%{title: d.title, destination: d.destination})
+          |> Guide.seo_changeset(%{intro: d.intro, sections: d.sections, faq: d.faq})
+          |> Ecto.Changeset.put_change(:slug, d.slug)
           |> Repo.update!()
 
-        {:ok, guide} = Guides.update_guide_photos(guide, photo_attrs())
+        {:ok, guide} = Guides.update_guide_photos(guide, d.photos)
 
         replace_entries!(guide)
 
@@ -330,14 +361,16 @@ defmodule Ethos.Seeds.RomeGuide do
   end
 
   defp find_or_insert_guide!(user) do
-    case Repo.get_by(Guide, slug: @slug) do
+    d = data()
+
+    case Repo.get_by(Guide, slug: d.slug) do
       %Guide{} = guide ->
         guide
 
       nil ->
         %Guide{user_id: user.id}
-        |> Guide.changeset(%{title: @title, destination: @destination})
-        |> Ecto.Changeset.put_change(:slug, @slug)
+        |> Guide.changeset(%{title: d.title, destination: d.destination})
+        |> Ecto.Changeset.put_change(:slug, d.slug)
         |> Repo.insert!()
     end
   end
@@ -357,7 +390,7 @@ defmodule Ethos.Seeds.RomeGuide do
   defp replace_entries!(guide) do
     Repo.delete_all(from e in Entry, where: e.guide_id == ^guide.id)
 
-    Enum.each(@entries, fn attrs ->
+    Enum.each(data().entries, fn attrs ->
       {:ok, entry} =
         Guides.create_entry(guide, Map.put(attrs, :source, "import"), :privileged)
 

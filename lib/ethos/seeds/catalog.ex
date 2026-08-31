@@ -7,8 +7,10 @@ defmodule Ethos.Seeds.Catalog do
   gates is scanned by three of four, which reads exactly like being covered.
   Everything that needs to know what the code corpus contains reads this:
   the four place gates (through `Ethos.SeedDataHelpers.code_places/0`), the
-  corpus loader gate, `Ethos.Release`, `Mix.Tasks.Ethos.BarePlaces`, and the
-  duration scan over module source.
+  banned-prose gate over code guides (through
+  `Ethos.SeedDataHelpers.code_guides/0`), the corpus loader gate,
+  `Ethos.Release`, `Mix.Tasks.Ethos.BarePlaces`, and the duration scan over
+  module source.
 
   It lives in `lib/` rather than `test/support/` because
   `Mix.Tasks.Ethos.BarePlaces` is not a test and cannot reach test support —
@@ -140,6 +142,36 @@ defmodule Ethos.Seeds.Catalog do
     for {mod, region} <- @place_modules,
         place <- mod.places(),
         do: {place, %{region: region, seed_file: source_path(mod)}}
+  end
+
+  @doc """
+  Every code-defined guide's published data, paired with its owner.
+
+  Yields `{data, owner}` where `data` is the module's own `data/0` map — the
+  same shape `Ethos.Seeds.GuideRunner.upsert!/2` consumes, with **atom** keys —
+  and `owner` is `%{region: binary, seed_file: binary}`, exactly as
+  `places_owned/0` does it.
+
+  ## Why this exists
+
+  `places_owned/0` had no counterpart, so every corpus-wide prose gate walked
+  the JSON seed files and the code *places* modules and stopped. Thirty-seven
+  guide modules — every Connecticut town guide, the Antique Trail, Rome and
+  thirty ballparks — published intros, section bodies, FAQ answers and entry
+  notes that no gate had ever read. That is how six strings carrying banned
+  inspection-record prose sat in `Ethos.Seeds.YankeeStadiumGuide` with a fully
+  green suite while the identical sentence in
+  `Ethos.Seeds.YankeeStadiumPlaces` was caught.
+
+  Every module in `@guide_modules` must export `data/0`. That is asserted
+  rather than assumed, by `destination_seed_data_test.exs` — a module that did
+  not would otherwise be silently skipped here, which is the failure this
+  function was added to end, reappearing one level up. `Ethos.Seeds.RomeGuide`
+  was that module until this landed.
+  """
+  def guides_owned do
+    for {mod, region} <- @guide_modules,
+        do: {mod.data(), %{region: region, seed_file: source_path(mod)}}
   end
 
   @doc """
