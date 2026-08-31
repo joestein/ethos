@@ -1006,9 +1006,11 @@ defmodule Ethos.Seeds.QueensSeedDataTest do
   # deletion untouched.
   #
   # It carries no tag of its own and becomes live the moment the `@moduletag`
-  # above comes off — one wave earlier than the gate it guards. Per this
-  # module's own rule, it is NOT enforced until then; the Bronx copy of this
-  # guard runs today and is where the property is actually held.
+  # above comes off, at the first Queens wave — eleven waves earlier than the
+  # gate it guards, whose own `@tag :pending_queens` does not come off until
+  # the twelfth and last in-scope wave. Per this module's own rule, it is NOT
+  # enforced until then; the Bronx copy of this guard runs today and is where
+  # the property is actually held.
   test "the roster-equality reference set is the in-scope subset, not the whole roster" do
     all = roster_rows() |> MapSet.new(& &1["slug"])
     scoped = in_scope_slugs()
@@ -1046,13 +1048,7 @@ defmodule Ethos.Seeds.QueensSeedDataTest do
     # neighborhoods on 2026-08-31 when search exhaustion dropped per-
     # neighborhood yield from 40 places to 9; the other 90 keep their roster
     # rows and their `in_scope: false`.
-    roster = @roster_path |> File.read!() |> Jason.decode!()
-
-    expected =
-      roster["neighborhoods"]
-      |> Enum.filter(& &1["in_scope"])
-      |> Enum.map(& &1["slug"])
-      |> MapSet.new()
+    expected = in_scope_slugs()
 
     shipped = files |> Enum.map(&Path.rootname(Path.basename(&1))) |> MapSet.new()
 

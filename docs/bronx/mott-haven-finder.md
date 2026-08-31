@@ -3,8 +3,11 @@
 Committed on purpose, on the `docs/ballparks/<site>.md` precedent: this was
 produced under `.superpowers/sdd/2026-08-30-bronx-neighborhoods/research/`,
 which `.gitignore` excludes wholesale, so a `git clean -xdf`, a worktree removal
-or a fresh clone would have destroyed it silently. It holds 9 verified places
-and roughly 240k tokens of completed research — the Mott Haven half of the
+or a fresh clone would have destroyed it silently. It holds 10 researched
+places with citations (see "Summary counts" below), of which 9 survive as
+shippable places — an active firehouse was cut for being non-visitable, and
+once a refuted tenant claim was stripped, an address and a date — and roughly
+240k tokens of completed research — the Mott Haven half of the
 measurement that narrowed both NYC programmes
 (`docs/superpowers/specs/2026-08-31-narrowed-nyc-scope-design.md`). Moved
 unedited; its companion is `mott-haven-verdicts.md` in this directory.
