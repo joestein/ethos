@@ -1,13 +1,15 @@
 defmodule EthosWeb.AffiliatePlacementTest do
   use EthosWeb.ConnCase, async: true
 
-  import Ethos.GuidesFixtures
+  import Phoenix.LiveViewTest
+  import Ethos.{AccountsFixtures, GuidesFixtures}
 
   alias Ethos.Places
 
   @script_src "https://widget.getyourguide.com/dist/pa.umd.production.min.js"
   @widget ~s(data-gyg-widget="auto")
   @amber "Planning your own trip?"
+  @disclosure "earn Ethos a commission at no extra cost to you"
 
   defp ny_guide(title, county) do
     published_guide_fixture(%{
@@ -172,6 +174,88 @@ defmodule EthosWeb.AffiliatePlacementTest do
 
       assert tag =~ "async"
       assert tag =~ "defer"
+    end
+  end
+
+  describe "the disclosure travels with the unit" do
+    # A place page has never carried any affiliate disclosure — the site's
+    # only prior disclosure line lived on guide show pages. This proves the
+    # disclosure comes from affiliate_unit/1 itself, not from that old line.
+    test "a New York place page carries the widget's own disclosure", %{conn: conn} do
+      Places.upsert_place!(%{
+        slug: "teitel-brothers",
+        name: "Teitel Brothers",
+        kind: "shop",
+        town: "Belmont",
+        state: "New York",
+        county: "Bronx",
+        summary: "An Arthur Avenue grocery.",
+        status: "open"
+      })
+
+      html = conn |> get(~p"/p/teitel-brothers") |> html_response(200)
+
+      assert html =~ @widget
+      assert html =~ @disclosure
+    end
+
+    test "a New York county hub carries the widget's own disclosure", %{conn: conn} do
+      ny_guide("Belmont", "Bronx")
+
+      html = conn |> get(~p"/destinations/new-york/bronx") |> html_response(200)
+
+      assert html =~ @widget
+      assert html =~ @disclosure
+    end
+  end
+
+  describe "authoring LiveViews never carry the widget, even for New York guides" do
+    setup %{conn: conn} do
+      user = user_fixture()
+      %{conn: log_in_user(conn, user), user: user}
+    end
+
+    # The guide editor assigns :guide just like the public show page does,
+    # and is reachable for an unpublished draft. An impression here is not
+    # visitor intent and must never render, over either the disconnected
+    # (plain GET) or the connected (LiveView socket) render.
+    test "the guide editor renders neither tag, on both the static and connected render", %{
+      conn: conn,
+      user: user
+    } do
+      guide =
+        guide_fixture(%{
+          user: user,
+          title: "Belmont",
+          destination: "Belmont, New York",
+          state: "New York",
+          county: "Bronx"
+        })
+
+      static_html = conn |> get(~p"/guides/#{guide.id}/edit") |> html_response(200)
+      refute static_html =~ @script_src
+      refute static_html =~ @widget
+
+      {:ok, _lv, connected_html} = live(conn, ~p"/guides/#{guide.id}/edit")
+      refute connected_html =~ @script_src
+      refute connected_html =~ @widget
+    end
+
+    # The author's dashboard assigns :guides — the same shape a destination
+    # hub uses — but lists the author's own guides, drafts included, not what
+    # a visitor is browsing.
+    test "the author's guide dashboard renders neither tag", %{conn: conn, user: user} do
+      guide_fixture(%{
+        user: user,
+        title: "Belmont",
+        destination: "Belmont, New York",
+        state: "New York",
+        county: "Bronx"
+      })
+
+      html = conn |> get(~p"/guides") |> html_response(200)
+      refute html =~ @script_src
+      refute html =~ @widget
     end
   end
 end
