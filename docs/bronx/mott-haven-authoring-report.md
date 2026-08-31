@@ -45,23 +45,26 @@ and the research carried no candidates). All nine slugs checked against every
 
 ## The one uncertain
 
-The Star of Munster Ballroom's "center of Irish music for decades" gloss is
-**removed, not hedged**. What survives is the confirmed location: "The Star of
-Munster Ballroom was at the northeast corner of Willis Avenue and East 138th
-Street." The section then says in plain terms that the music claim was not
-independently verified and is therefore not repeated as fact. No "reportedly",
-"said to have been" or "around" appears anywhere in the file.
+**This section was wrong as first written and is corrected here; see "Fix round
+1" at the end for what actually shipped.** As of that fix, the Star of Munster
+Ballroom's "center of Irish music for decades" gloss is **deleted**. What
+survives is the confirmed location: "The Star of Munster Ballroom was at the
+northeast corner of Willis Avenue and East 138th Street."
 
 ## Cut, and why
 
-- **Firehouse, Engine Company 60 / Ladder Company 17** — cut as a place. An
-  active working firehouse with no public access, and once the refuted tenant
-  roster is stripped what remains is an address and a designation date: the stub
-  shape this corpus removed on purpose. Its landmark fact is folded into the
-  "Alexander Avenue and the landmarked blocks" section as one sentence naming
-  341 East 143rd Street, its actual tenants (Engine 60, Ladder 17, Battalion 14
-  — Squad 41 does **not** appear), the June 20, 2000 designation, and the plain
-  statement that it is not written up here as a place to go.
+- **Firehouse, Engine Company 60 / Ladder Company 17** — cut as a *place*, but
+  **not cut from the page**, and the distinction matters. An active working
+  firehouse with no public access, and once the refuted tenant roster is
+  stripped what remains is an address and a designation date: the stub shape
+  this corpus removed on purpose. So no place record. Its landmark fact survives
+  in `guide.sections[1].body` as one sentence naming 341 East 143rd Street, the
+  **corrected** roster exactly as `mott-haven-verdicts.md:157` gives it — Engine
+  Company 60, Ladder Company 17 and Battalion 14, with Squad 41 correctly absent
+  because it is a different, unlandmarked firehouse at 330 East 150th Street —
+  the June 20, 2000 designation, and the plain statement that it is not written
+  up here as a place to go. That is §2's "keep the item using the correction
+  exactly as given" doing its job, not a deletion.
 - **"Swedish sea captain"** (Jonas Bronck) — the verdict restated only "Bronx
   named after Jonas Bronck". The occupation and nationality rode along in the
   finder's sentence and were not restated, so they are cut under §2's New Lots
@@ -76,10 +79,16 @@ independently verified and is therefore not repeated as fact. No "reportedly",
   houses" and the Gothic/Queen Anne/Romanesque list survive **only** for the
   Mott Haven Historic District, where the verdict restates them verbatim; the
   library's "neo-renaissance" survives on the same basis.
-- **Every DOHMH and licence reference** — no inspection date, grade, dataset or
-  the phrase "inspection record" appears in any published string. La Morada's
-  and the brewery's addresses and La Morada's cuisine ship as plain facts about
-  the place, with no citation to the record that established them.
+- **Every DOHMH and licence reference.** *The original wording of this bullet
+  was wrong and is replaced.* It claimed the addresses and the cuisine could
+  ship "as plain facts about the place, with no citation to the record that
+  established them." **Removing the citation does not change the provenance.**
+  DOHMH is permitted as identity evidence — which is the structured `address`
+  field — and never as prose. As of fix round 1, no DOHMH-derived content
+  appears in any prose string: no inspection date, no grade, no dataset, no
+  cuisine, and neither 308 Willis Avenue nor 856 East 136th Street inside a
+  sentence. Both addresses remain in the `address` field, which is the
+  permitted use.
 
 ## Judgment calls honored
 
@@ -161,3 +170,77 @@ carries no ZIP. No assertion was loosened and no threshold was widened.
   `ct_guides_test.exs:21`.
 - No allowlist entry was added to either the trip-duration or the proximity
   allowlist; both remain empty.
+
+---
+
+# Fix round 1 (of 5) — fact-fidelity review
+
+One Critical, three Important, one class of Minor. All five fixed. **Deletion
+was preferred over rewording in every case where the confirmed material stood on
+its own**, which was all but two. The `address` fields, the place count, the
+slugs and the structured-data census are unchanged, so the numbers in the table
+above still hold.
+
+### Deleted outright
+
+| What | Where | Why |
+| --- | --- | --- |
+| "What Wikipedia says about the ballroom beyond its corner — that it was a center of Irish music for decades — was not independently verified…" | `guide.sections[0].body` | **The Critical.** This reproduced the `uncertain` specific verbatim and then licensed the reader to keep it — a hedge in a novel form, worse than "reportedly" because the claim is on the page in full. §2's remedy is deletion. The confirmed corner survives in the preceding sentence. |
+| "and much of what the neighborhood is known for stands on or near it" | `guide.sections[0].body` | In neither the verdicts nor the finder. Verdict:30 restates only "E. 138th St as primary east–west thoroughfare". |
+| "From the end of the nineteenth century through the 1940s" | `guide.sections[0].body` | New Lots rider. Verdict:31 restates only the German/Irish split at E.145th; the date range is finder:58. §2 names dates as the paradigm case. |
+| "between the Dutch authorities and the Wecquaesgeek chiefs" | `guide.intro` | New Lots rider. Verdict:24 restates the chiefs and the house, not the parties. Now reads "the peace treaty with the chiefs Ranaqua and Tackamuck was signed in his house." |
+| "Neither of those two has an article of its own that this research reached; both rest on Wikipedia's Mott Haven article and the boroughwide landmarks list." | `guide.sections[1].body` | Research-process prose. |
+| "and was not cross-checked against a second source" / "and no second source was checked against it here" | `guide.sections[1].body`, `places[3].summary` | Research-process prose. The required attribution — "Wikipedia's Mott Haven article calls it the Bronx's oldest church; that is the article's own characterization" — is kept in both. |
+| "That gap is recorded rather than papered over." | `guide.sections[2].body` | Research-process prose. The Case C statement itself stands. |
+| "No article devoted to the district was reached by this research; both facts rest on…" (and its Bertine twin) | `places[1].summary`, `places[2].summary` | Research-process prose. |
+| "The research this page was built from carried no street address for the church, so the one published here comes from Wikipedia's article on the building." | `places[3].summary` | Research-process prose. The provenance is recorded in this report instead, which is where it belongs. |
+| "and is carried by nothing else this research reached" | `places[4].summary` | Research-process prose. The attribution "which is the library's claim about itself" is kept. |
+| "The city's own park page could not be opened by this research, so no official link is published here." | `places[6].summary` | Research-process prose. `official_url` stays `null`, which says it silently. |
+| "Nothing about its founding, its family or its cooking was established by this research… The domain that looks like the restaurant's own resolves to an unrelated expired-domain page, so no official link is given." | `places[7].summary` | Research-process prose, and the second clause is also a present-tense claim about a third party, banned by rule 15. |
+| "That site states no founding year and prints no street address." | `places[8].summary` | Research-process prose. |
+| "Wikipedia's article does not spell out that the purchase is the act that named the place…" | `guide.faq[1].answer` | Research-process prose. The verifier ruled the naming confirmed; the meta-commentary was mine. |
+| "because nothing reached establishes what the building does now" and "Wikipedia's account of that 2025 lease is the freshest source this research reached…" | `guide.faq[3].answer` | Research-process prose. Now opens "This page does not say what the building holds today." |
+| "The one lodging candidate this research examined" → "The"; "No hotel inside Mott Haven was established by this research." | `guide.faq[4].answer` | Research-process prose. The gap statement that opens the answer already carries the point. |
+
+### Reworded, not deleted — two, and only because a bare deletion left a gap
+
+1. **"brownstones" → "row houses"**, in `guide.sections[1].body` and
+   `places[0].summary`. Verdict:60 restates only the two nicknames; verdict:59
+   restates **row houses**, not brownstones. The sentence needs a noun for the
+   nicknames to attach to, so the unrestated word is replaced with the restated
+   one rather than dropped. (In `places[0].summary` the second mention became
+   "some of them", since "row houses" already appears earlier in that sentence.)
+2. **La Morada and the Bronx Brewery summaries and notes**, stripped of every
+   DOHMH-derived element. `places[7].summary` is now the single sentence "A
+   restaurant in Mott Haven." — the cuisine ("Mexican", Socrata's cuisine field,
+   verdicts:138) and the prose address (verdicts:137) are both gone, and
+   `entries[7].note` matches. `places[8].summary` drops 856 East 136th Street
+   (verdicts:145) and keeps only what the brewery's own site states;
+   `entries[8].note` likewise. `Place.changeset` requires a non-empty `summary`,
+   so a one-sentence summary is the floor here rather than an empty one — and
+   there is no minimum word count in this corpus, so one true sentence is a
+   pass. Both `address` fields are untouched.
+
+### Two corrections to this report itself
+
+- **"The one uncertain" section** claimed the gloss was "removed, not hedged."
+  Half of that was false — no "reportedly" or "said to have been" appeared, but
+  the specific itself was on the page verbatim. The section is corrected above
+  and points here.
+- **The DOHMH bullet under "Cut, and why"** framed dropping the citation as
+  sufficient. It is not: provenance is not a function of whether it is cited.
+  The bullet is rewritten above.
+- **The firehouse bullet** described the firehouse as simply "cut", which
+  undersold it. It is cut as a *place*; its landmark fact and the corrected
+  tenant roster survive in prose. Rewritten above.
+
+### Verification after the fix
+
+- `mix format --check-formatted` — clean.
+- `mix test` — **650 tests, 0 failures, 32 excluded**.
+- Swept the file for `this research`, `was reached`, `could not be opened`,
+  `Mexican`, `brownstone`, `expired-domain`, `prints no street`, `308 Willis`,
+  `856 East 136th`, `reportedly`, `said to have been`, `center of Irish music` —
+  zero hits outside the two `address` fields.
+- Intro is now 144 words, still inside 100-160. Nine places, nine entries, five
+  FAQ entries, three sections; none of those counts moved.
