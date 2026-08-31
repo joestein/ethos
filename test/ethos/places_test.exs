@@ -287,7 +287,11 @@ defmodule Ethos.PlacesTest do
       end
     end
 
-    test "two places sharing a name in one town order deterministically" do
+    # The tiebreak is `id`, so the twins' order is theirs alone — and asserting
+    # it by id is what makes this test discriminate. Three identical queries
+    # returning the same rows proves nothing: Postgres does that anyway for an
+    # unchanged table, so that assertion passes with the tiebreak deleted.
+    test "two places sharing a name in one town order by id, deterministically" do
       twin_a =
         Places.upsert_place!(%{
           @valid
@@ -307,19 +311,52 @@ defmodule Ethos.PlacesTest do
       seed_town(6)
 
       anchor = Places.get_place_by_slug!("waterbury-place-1")
+      [lower, higher] = Enum.sort_by([twin_a, twin_b], & &1.id)
 
-      first = Places.list_siblings(anchor) |> Enum.map(& &1.id)
-      assert first == Places.list_siblings(anchor) |> Enum.map(& &1.id)
-      assert first == Places.list_siblings(anchor) |> Enum.map(& &1.id)
+      siblings = Places.list_siblings(anchor) |> Enum.map(& &1.id)
+      assert siblings == Places.list_siblings(anchor) |> Enum.map(& &1.id)
 
-      assert twin_a.id in first
-      assert twin_b.id in first
+      assert Enum.filter(siblings, &(&1 in [twin_a.id, twin_b.id])) == [lower.id, higher.id]
 
-      # Equal names never collapse into one another: each twin still sees the
-      # other, and neither sees itself.
-      a_siblings = Places.list_siblings(twin_a)
-      assert twin_b.id in Enum.map(a_siblings, & &1.id)
-      refute twin_a.id in Enum.map(a_siblings, & &1.id)
+      # The window is row-wise over `(name, id)`, not over `name` alone, so an
+      # equal-name block is entered rather than jumped: the lower twin's window
+      # opens on the higher one, and neither twin ever sees itself.
+      a_siblings = Places.list_siblings(lower) |> Enum.map(& &1.id)
+      assert List.first(a_siblings) == higher.id
+      refute lower.id in a_siblings
+    end
+
+    # A predicate over `name` alone against a sort key of `(name, id)` starts
+    # the rotation past the anchor's *whole* equal-name block, so a block larger
+    # than the window is jumped over by its own members and only partly reached
+    # from outside — 9 identical names orphan 1, twelve orphan 4. Unreachable
+    # with real data, but it is one character of asymmetry between the predicate
+    # and the sort key, and the row-wise form makes coverage unconditional
+    # rather than contingent on the corpus not containing something.
+    for block <- [2, 5, 9, 12, 20] do
+      test "a town containing an equal-name block of #{block} is fully covered" do
+        block =
+          for n <- 1..unquote(block) do
+            Places.upsert_place!(%{
+              @valid
+              | slug: "sacred-heart-#{n}-waterbury",
+                name: "Sacred Heart"
+            })
+          end
+
+        # Three places outside the block, so the block's members compete for
+        # window slots. Without them a block of exactly nine hides the defect:
+        # each anchor excludes itself, leaving exactly eight, and the cap never
+        # bites. With them, the name-only predicate orphans one.
+        places = block ++ seed_town(3)
+
+        covered =
+          places
+          |> Enum.flat_map(&Places.list_siblings/1)
+          |> MapSet.new(& &1.id)
+
+        assert MapSet.equal?(covered, MapSet.new(places, & &1.id))
+      end
     end
   end
 end

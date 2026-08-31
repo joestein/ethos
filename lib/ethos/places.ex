@@ -82,8 +82,36 @@ defmodule Ethos.Places do
   It also stops "More in {town}" from being the same duplicated block on every
   place page in the town.
 
-  `p.id` breaks name ties so the ordering is total and stable across calls; two
-  places in one town can share a name (parish church and parish school).
+  The sort key is `(name, id)` and the partition predicate compares the *same*
+  row-wise pair, not `name` alone. Two places in one town can share a name — a
+  parish church and its parish school — and a predicate over `name` alone would
+  start the rotation past the anchor's entire equal-name block, so a block
+  larger than the window would be jumped over by its own members and reached
+  only partly from outside. Nine identically-named places in one town orphan
+  one; twelve orphan four. No real town has that, but the guarantee should not
+  be contingent on the corpus not containing something, and the asymmetry is one
+  character wide. Row-wise, the window opens on the next row in the total order
+  whatever its name, so coverage holds at every block size.
+
+  The ordering is therefore total and stable across calls, and `id` is the
+  visible tiebreak between equal names rather than an unspecified one.
+
+  ## Collation
+
+  `p.name > $1` binds a parameter, and a bound parameter carries no collation of
+  its own, so the comparison derives the column's implicit collation — the same
+  one `ORDER BY p.name` uses. Predicate and sort therefore cannot disagree, by
+  construction rather than by luck, and the boolean they produce has no
+  collation at all.
+
+  What the collation *does* decide is which eight names a page shows. The local
+  Postgres runs on musl, whose `strcoll` is byte comparison, so its `en_US.utf8`
+  label is effectively binary ordering; a production Postgres on glibc with the
+  identical label collates dictionary-style, filing `Çka Ka Qëllu` under C
+  rather than after Z and `Joe's Italian Deli` as `Joes`. The two environments
+  show different windows for the same place. Coverage is unaffected — the
+  rotation is over whatever total order the database produces — but a reader
+  diffing local against production will otherwise think something is broken.
 
   Scoped by state as well as town, because `town_slug` alone is not a town.
   Washington, Connecticut and Washington, District of Columbia both derive
@@ -113,7 +141,11 @@ defmodule Ethos.Places do
         where:
           p.town_slug == ^town_slug and p.state_slug == ^state_slug and
             p.id != ^id and p.status == "open",
-        order_by: [desc: fragment("? > ?", p.name, ^name), asc: p.name, asc: p.id],
+        order_by: [
+          desc: fragment("(?, ?) > (?, ?)", p.name, p.id, ^name, ^id),
+          asc: p.name,
+          asc: p.id
+        ],
         limit: ^limit
     )
   end
