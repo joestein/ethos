@@ -14,8 +14,13 @@ defmodule EthosWeb.Affiliate do
   away from silently skipping every page added after this shipped, and nothing
   would fail.
 
-  The home page renders with `layout: false` (`page_controller.ex:39`) and so
-  receives neither tag. It is not a New York page; this is correct.
+  The home page receives neither tag, which is correct — it is not a New York
+  page. The reason is *not* its `layout: false` (`page_controller.ex:39`): that
+  suppresses only the app layout, so `affiliate_unit/1` never runs, but
+  `root.html.heex` still renders and `affiliate_head/1` **is** invoked. It
+  renders nothing because the home page's assigns (`:featured`, `:latest`)
+  match no clause of `locale_from_assigns/1`, which therefore returns `nil`.
+  The protection is the resolver's default, not the layout option.
 
   ## Reading assigns
 
@@ -83,11 +88,19 @@ defmodule EthosWeb.Affiliate do
         |> Affiliates.unanimous_locale()
 
       # Every destination hub shape — town, state, county — assigns :guides.
+      #
+      # The county hub splits its rows in two (`destination_controller.ex`:
+      # `guides` is tier "guide", `town_pages` is the rest), so a borough hub
+      # seeded entirely with town-pages has an EMPTY :guides list and all its
+      # geography in :town_pages. Resolving over :guides alone would return nil
+      # for a page full of New York content. Both lists describe the same hub,
+      # so both feed the vote.
+      #
       # :shadowed is deliberately NOT consulted: those are guides from other
       # states that merely share a destination slug, and they are not what the
       # page is about.
       is_list(assigns[:guides]) ->
-        Affiliates.unanimous_locale(assigns[:guides])
+        Affiliates.unanimous_locale(assigns[:guides] ++ hub_town_pages(assigns))
 
       true ->
         nil
@@ -96,13 +109,46 @@ defmodule EthosWeb.Affiliate do
 
   def locale_from_assigns(_), do: nil
 
+  defp hub_town_pages(assigns) do
+    case assigns[:town_pages] do
+      rows when is_list(rows) -> rows
+      _ -> []
+    end
+  end
+
+  # The networks the components know how to render. A locale naming anything
+  # else — a typo, or a network added to the registry before its component
+  # clause lands — resolves fine and renders nothing.
+  @supported_networks [:getyourguide]
+
+  @doc """
+  Whether an affiliate unit will actually render for this locale.
+
+  The ONE predicate behind all three decisions: `affiliate_head/1`'s script,
+  `affiliate_unit/1`'s widget, and the guide show page's fallback amber CTA and
+  disclosure, which render precisely when this returns `false`. Splitting them
+  is how a locale with an unrecognised `:network` came to render *neither* the
+  widget nor the fallback — a page in that geography with no affiliate unit at
+  all, and a green suite.
+  """
+  def renders?(locale) when is_map(locale), do: Map.get(locale, :network) in @supported_networks
+  def renders?(_), do: false
+
+  @doc """
+  Whether the layout's affiliate unit will render for this page's assigns.
+
+  Defined in terms of `renders?/1` so a template's condition and the
+  component's condition cannot drift apart.
+  """
+  def unit_renders?(assigns), do: assigns |> locale_from_assigns() |> renders?()
+
   attr :locale, :map, default: nil
 
   @doc "The partner analytics and widget script. Renders nothing without a locale."
   def affiliate_head(assigns) do
     ~H"""
     <script
-      :if={@locale && @locale.network == :getyourguide}
+      :if={renders?(@locale)}
       async
       defer
       src="https://widget.getyourguide.com/dist/pa.umd.production.min.js"
@@ -115,16 +161,22 @@ defmodule EthosWeb.Affiliate do
   attr :locale, :map, default: nil
 
   @doc """
-  The auto widget. Renders nothing without a locale.
+  The auto widget. Renders nothing without a locale `renders?/1` accepts.
 
-  Carries its own disclosure line rather than relying on the guide show
-  page's (`guide_html/show.html.heex:153-155`): the unit now also reaches
-  place pages and destination hubs, which never had one, and a disclosure
-  that only lived on one page type would silently miss the others.
+  Carries its own disclosure line rather than relying on the guide show page's
+  ("Some booking links on this page…"): the unit now also reaches place pages
+  and destination hubs, which never had one, and a disclosure that only lived
+  on one page type would silently miss the others. The show page's line is
+  suppressed exactly when this one renders, so a New York guide carries one
+  disclosure, not two.
   """
   def affiliate_unit(assigns) do
     ~H"""
-    <div :if={@locale && @locale.network == :getyourguide}>
+    <%!-- px-4 matches the horizontal padding every page template applies to its
+          own content wrapper (`mx-auto max-w-2xl px-4 py-10`). The layout's
+          column has no padding of its own, so without this the unit sits 16px
+          wider than the article it follows. --%>
+    <div :if={renders?(@locale)} class="px-4">
       <div
         class="mt-10"
         data-gyg-widget="auto"

@@ -35,11 +35,16 @@
   <%!-- The generic GetYourGuide CTA is the FALLBACK. A page whose geography
         resolves to a configured affiliate locale gets the widget from the app
         layout instead — one unit per page, below the content. This condition
-        is the locale's presence, not a hardcoded state check, so Rome's aside
-        becomes Rome's widget the day a Rome entry lands in the registry, with
-        no edit here. --%>
+        is not a hardcoded state check, so Rome's aside becomes Rome's widget
+        the day a Rome entry lands in the registry, with no edit here.
+
+        It asks "will a unit render?", NOT "did a locale resolve?" — the two
+        differ for a locale whose :network has no component clause yet, and
+        asking the weaker question suppressed this fallback on pages that then
+        rendered no widget either. `unit_renders?/1` is the same predicate the
+        components use. --%>
   <aside
-    :if={is_nil(EthosWeb.Affiliate.locale_from_assigns(assigns))}
+    :if={not EthosWeb.Affiliate.unit_renders?(assigns)}
     class="mt-8 flex flex-wrap items-center justify-between gap-4 rounded-xl border border-amber-200 bg-amber-50 p-5"
   >
     <div>
@@ -150,7 +155,15 @@
     </dl>
   </section>
 
-  <p class="mt-8 text-xs text-zinc-400">
+  <%!-- This page's original disclosure, and the FALLBACK half of a pair: when
+        the layout renders an affiliate unit, that unit carries its own
+        disclosure and this one would be the second on the page. It can also be
+        false there — with the amber CTA suppressed and no entry booking_url,
+        a New York guide has no booking links at all, only the widget.
+
+        Same predicate as the amber aside above, deliberately: the two are the
+        page's fallback affiliate content and appear and disappear together. --%>
+  <p :if={not EthosWeb.Affiliate.unit_renders?(assigns)} class="mt-8 text-xs text-zinc-400">
     Some booking links on this page earn Ethos a commission at no extra cost to you.
   </p>
 

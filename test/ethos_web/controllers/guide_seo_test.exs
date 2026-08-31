@@ -41,7 +41,12 @@ defmodule EthosWeb.GuideSeoTest do
     assert html =~ "earn Ethos a commission"
   end
 
-  test "GetYourGuide house ad and disclosure render on every guide page", %{conn: conn} do
+  # Not "every guide page" any more: a guide whose geography resolves to a
+  # configured affiliate locale gets the layout's widget instead, and both the
+  # house ad and this disclosure are suppressed. The default fixture has no
+  # state, so it is the no-locale case — which is what this now claims.
+  test "GetYourGuide house ad and disclosure render on a guide with no configured affiliate locale",
+       %{conn: conn} do
     guide = published_guide_fixture()
     {:ok, _} = Guides.create_entry(guide, %{kind: "food", name: "Ramiro", verdict: "loved"})
     html = conn |> get(~p"/g/#{guide.slug}") |> html_response(200)

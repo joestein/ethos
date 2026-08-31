@@ -725,7 +725,7 @@ per page and it sits below the content."
 Two real cases exist:
 
 1. **`/destinations/madison`** serves `priv/seed_data/brooklyn/madison.json` ("Madison, New York") and `priv/seed_data/connecticut/madison.json` ("Madison, Connecticut"). A live collision, recorded in `docs/content-defects.md`. Both files exist today; read them rather than hardcoding their states.
-2. **The MLB ballparks collection** spans 30 states. Its member modules come from `Ethos.Seeds.Catalog.guide_modules("ballparks")`, and each module's `data()` returns a map carrying `:state`.
+2. **The MLB ballparks collection** is 30 ballparks across 19 distinct state values — 17 US states plus District of Columbia and Ontario. Its member modules come from `Ethos.Seeds.Catalog.guide_modules("ballparks")`, and each module's `data()` returns a map carrying `:state`.
 
 Code-defined guide data maps carry `state` but **not** `state_slug` — that is derived at changeset time. Derive it in the test with `Ethos.Guides.Guide.derive_destination_slug/1`.
 
@@ -793,7 +793,7 @@ defmodule EthosWeb.AffiliateCorpusTest do
            "the ballpark guides no longer span multiple states — premise gone"
 
     refute Affiliates.unanimous_locale(rows),
-           "a collection spanning 30 states resolved to a locale"
+           "a collection spanning 19 distinct state values resolved to a locale"
   end
 
   test "locale_from_assigns returns nil for assigns carrying no geography" do

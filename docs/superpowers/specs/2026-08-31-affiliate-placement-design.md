@@ -128,7 +128,8 @@ right answer: it is half a New York page. A rule that took the first guide, or a
 majority, would have put a New York City tours widget on a page that is also
 about a Connecticut shoreline town.
 
-The same rule excludes the MLB ballparks collection, which spans 30 states. A
+The same rule excludes the MLB ballparks collection: 30 ballparks across 19
+distinct state values — 17 US states plus District of Columbia and Ontario. A
 New York widget on a page about Dodger Stadium and Fenway is wrong in a way that
 costs trust rather than merely conversion. Today unanimity means no collection
 carries a widget; it turns on by itself the day a single-geography collection

@@ -9,7 +9,17 @@ defmodule EthosWeb.AffiliatePlacementTest do
   @script_src "https://widget.getyourguide.com/dist/pa.umd.production.min.js"
   @widget ~s(data-gyg-widget="auto")
   @amber "Planning your own trip?"
+
+  # CAREFUL: this is the substring the two disclosure lines SHARE — the guide
+  # show page's old "Some booking links on this page…" and the unit's own
+  # "Tours and activities shown above…". It cannot tell them apart. The tests
+  # below that assert on it are non-vacuous only because they point at place
+  # pages and county hubs, which never had the old line. On a guide show page
+  # this constant proves only that *a* disclosure exists, which is why the
+  # "exactly once" test counts occurrences rather than asserting presence.
   @disclosure "earn Ethos a commission at no extra cost to you"
+  @unit_disclosure "Tours and activities shown above"
+  @old_disclosure "Some booking links on this page"
 
   defp ny_guide(title, county) do
     published_guide_fixture(%{
@@ -102,7 +112,12 @@ defmodule EthosWeb.AffiliatePlacementTest do
   end
 
   describe "destination hubs" do
-    test "the New York state hub carries the widget — the nil-county case", %{conn: conn} do
+    # Named for what it covers. The state hub does NOT exercise
+    # `locale_for/2`'s nil-county branch: it routes through
+    # `unanimous_locale/1` over guides that each carry a real county. No layout
+    # path calls `locale_for/2` with a nil county at all — that branch is
+    # covered by the resolver's own unit test, not from here.
+    test "the New York state hub carries the widget", %{conn: conn} do
       ny_guide("Belmont", "Bronx")
 
       html = conn |> get(~p"/destinations/new-york") |> html_response(200)
@@ -114,6 +129,33 @@ defmodule EthosWeb.AffiliatePlacementTest do
       ny_guide("Belmont", "Bronx")
 
       html = conn |> get(~p"/destinations/new-york/bronx") |> html_response(200)
+
+      assert html =~ @widget
+    end
+
+    # The county hub splits its rows: `:guides` is tier "guide" and everything
+    # else goes to `:town_pages`. A borough seeded entirely with town-pages
+    # therefore hands the layout an EMPTY :guides list — and a page full of New
+    # York content rendered no widget. Brooklyn shipped 32 town-pages and the
+    # Queens roster is staged, so this is reachable, and silently.
+    test "a county hub whose guides are all town-pages still carries the widget", %{conn: conn} do
+      for title <- ["Astoria", "Flushing"] do
+        title
+        |> ny_guide("Queens")
+        |> Ecto.Changeset.change(tier: "town-page")
+        |> Ethos.Repo.update!()
+      end
+
+      html = conn |> get(~p"/destinations/new-york/queens") |> html_response(200)
+
+      # Non-vacuity: the controller must really be handing the layout an empty
+      # :guides list. If tier stops splitting the rows, this stops describing
+      # the town-page-only case and the assertion below is ceremony.
+      rows = Ethos.Guides.list_published_guides_for_county("new-york", "queens")
+      assert rows != []
+
+      assert Enum.all?(rows, &(&1.tier == "town-page")),
+             "this hub is no longer town-pages only — the test's premise is gone"
 
       assert html =~ @widget
     end
@@ -207,6 +249,32 @@ defmodule EthosWeb.AffiliatePlacementTest do
       assert html =~ @widget
       assert html =~ @disclosure
     end
+
+    # A guide show page is the one page type carrying BOTH candidate lines, and
+    # @disclosure — the substring they share — cannot tell them apart, so a
+    # presence assertion here passes with one disclosure or with two. Count.
+    test "a New York guide page renders the disclosure exactly once", %{conn: conn} do
+      g = ny_guide("Belmont", "Bronx")
+      html = conn |> get(~p"/g/#{g.slug}") |> html_response(200)
+
+      count = html |> String.split(@disclosure) |> length() |> Kernel.-(1)
+      assert count == 1, "expected exactly one disclosure line, got #{count}"
+
+      # And it is the unit's, not the show page's — which would now be false
+      # anyway: the amber CTA is suppressed and this guide has no entry
+      # booking_url, so there are no booking links on the page at all.
+      assert html =~ @unit_disclosure
+      refute html =~ @old_disclosure
+    end
+
+    # The other direction: a page with no unit keeps the line it always had.
+    test "a Connecticut guide page keeps the show page's own disclosure", %{conn: conn} do
+      g = ct_guide("Woodbury")
+      html = conn |> get(~p"/g/#{g.slug}") |> html_response(200)
+
+      assert html =~ @old_disclosure
+      refute html =~ @unit_disclosure
+    end
   end
 
   describe "authoring LiveViews never carry the widget, even for New York guides" do
@@ -257,5 +325,71 @@ defmodule EthosWeb.AffiliatePlacementTest do
       refute html =~ @script_src
       refute html =~ @widget
     end
+  end
+end
+
+defmodule EthosWeb.AffiliateUnsupportedNetworkTest do
+  @moduledoc """
+  `async: false`, deliberately: this overrides `:ethos, :affiliate_locales`,
+  which is global application state. ExUnit runs synchronous modules after
+  every async module has finished, so the registry-shape guard in
+  `affiliate_corpus_test.exs` never observes the deliberately-bogus entry.
+  """
+  use EthosWeb.ConnCase, async: false
+
+  import Ethos.GuidesFixtures
+
+  @script_src "https://widget.getyourguide.com/dist/pa.umd.production.min.js"
+  @widget ~s(data-gyg-widget="auto")
+  @amber "Planning your own trip?"
+  @old_disclosure "Some booking links on this page"
+
+  # The gap this closes: the guide show page suppressed its fallback on "a
+  # locale resolved", while the components rendered on "the locale's network is
+  # one we support". A locale whose :network is a typo — or a network added to
+  # the registry before its component clause lands — satisfies the first and
+  # not the second, so every page in that geography carried NO affiliate unit
+  # of any kind: no widget, no amber CTA, and a green suite. Both sides now ask
+  # the same question, `EthosWeb.Affiliate.renders?/1`.
+  test "a locale on an unsupported network falls back cleanly instead of rendering nothing", %{
+    conn: conn
+  } do
+    previous = Application.get_env(:ethos, :affiliate_locales, %{})
+
+    Application.put_env(
+      :ethos,
+      :affiliate_locales,
+      Map.put(previous, "connecticut", %{
+        network: :network_with_no_component_clause,
+        partner_id: "CT0000",
+        cmp: "connecticut"
+      })
+    )
+
+    on_exit(fn -> Application.put_env(:ethos, :affiliate_locales, previous) end)
+
+    # Non-vacuity: the entry really resolves. This is the "resolves but renders
+    # nothing" case, not merely an unconfigured state.
+    assert Ethos.Affiliates.locale_for("connecticut", "Litchfield County")
+    refute EthosWeb.Affiliate.renders?(Ethos.Affiliates.locale_for("connecticut", nil))
+
+    g =
+      published_guide_fixture(%{
+        "title" => "Woodbury",
+        "destination" => "Woodbury, Connecticut",
+        "state" => "Connecticut",
+        "county" => "Litchfield County"
+      })
+
+    html = conn |> get(~p"/g/#{g.slug}") |> html_response(200)
+
+    refute html =~ @widget
+    refute html =~ @script_src
+
+    assert html =~ @amber,
+           "a locale that renders no unit must not suppress the fallback CTA — " <>
+             "the page would otherwise carry no affiliate unit at all"
+
+    assert html =~ @old_disclosure
   end
 end
