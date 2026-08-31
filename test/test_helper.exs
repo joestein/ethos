@@ -28,8 +28,10 @@ ExUnit.start()
 #   * Task 3, which lands the first neighborhood, deletes the `@moduletag
 #     :pending_bronx` from the test file. Everything then runs except the two
 #     tests carrying their own `@tag :pending_bronx`.
-#   * Task 5, which completes the last wave, deletes those two tags and the
-#     :pending_bronx entry below.
+#   * The last in-scope wave — 14 neighborhoods, not the full 66 — deletes
+#     those two tags and the :pending_bronx entry below. The programme
+#     narrowed on 2026-08-31; see
+#     docs/superpowers/specs/2026-08-31-narrowed-nyc-scope-design.md.
 #
 #     mix test --include pending_bronx
 #
@@ -50,8 +52,10 @@ ExUnit.start()
 #   * The first research wave, which lands the first seed file, deletes the
 #     `@moduletag :pending_queens` from the test file. Everything then runs
 #     except the three tests carrying their own `@tag :pending_queens`.
-#   * The final wave deletes those three tags and the :pending_queens entry
-#     below.
+#   * The last in-scope wave — 21 neighborhoods, not the full 111 — deletes
+#     those three tags and the :pending_queens entry below. The programme
+#     narrowed on 2026-08-31; see
+#     docs/superpowers/specs/2026-08-31-narrowed-nyc-scope-design.md.
 #
 #     mix test --include pending_queens
 #

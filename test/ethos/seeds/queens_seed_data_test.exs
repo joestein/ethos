@@ -50,10 +50,12 @@ defmodule Ethos.Seeds.QueensSeedDataTest do
     left to wait for after; and the co-listing invariant it checks is the
     stated reason this scaffolding was written ahead of the research. Holding
     it for seven further waves would defeat that reason.
-  * **The final wave** deletes the two remaining `@tag :pending_queens` lines —
-    roster equality and marquee institutions, both of which genuinely need the
-    whole corpus — and the `:pending_queens` entry in `test/test_helper.exs`.
-    The tags go; the tests stay and start running.
+  * **The last in-scope wave** — 21 neighborhoods, not the full 111 — deletes
+    the two remaining `@tag :pending_queens` lines — roster equality and
+    marquee institutions, both of which genuinely need the whole corpus — and
+    the `:pending_queens` entry in `test/test_helper.exs`. The tags go; the
+    tests stay and start running. The programme narrowed on 2026-08-31; see
+    docs/superpowers/specs/2026-08-31-narrowed-nyc-scope-design.md.
 
   `:pending_queens` is deliberately a THIRD tag, not shared with
   `:pending_bronx` or `:pending_wave`. `:pending_wave` belongs to the
@@ -972,10 +974,33 @@ defmodule Ethos.Seeds.QueensSeedDataTest do
              "unexpected: #{inspect(MapSet.difference(published, expected_slugs))}"
   end
 
+  # The narrowed-scope gate's own guard. The roster-equality test below is
+  # tagged and dark until the last in-scope neighborhood ships, so nothing
+  # would otherwise notice if `expected` silently reverted to the full roster
+  # — every in-scope file would still be present and the set would just be
+  # bigger. This asserts the subset is what the gate measures, today.
+  test "roster equality is scoped to in-scope neighborhoods, not the whole roster" do
+    roster = @roster_path |> File.read!() |> Jason.decode!()
+
+    all = roster["neighborhoods"] |> Enum.map(& &1["slug"]) |> MapSet.new()
+
+    scoped =
+      roster["neighborhoods"]
+      |> Enum.filter(& &1["in_scope"])
+      |> Enum.map(& &1["slug"])
+      |> MapSet.new()
+
+    assert MapSet.size(scoped) > 0, "no neighborhood is in scope"
+
+    assert MapSet.size(scoped) < MapSet.size(all),
+           "the in-scope set is the whole roster — either the narrowing was reverted " <>
+             "or the flag is not being read"
+  end
+
   # Delete this @tag at the final wave, not before: until the last wave has
   # landed the corpus is a prefix of the roster and this fails by construction.
   @tag :pending_queens
-  test "the shipped queens corpus matches the roster exactly" do
+  test "the shipped queens corpus matches the in-scope roster exactly" do
     files = files()
 
     # Roster coverage. Without this, deleting a seed file passes every other
@@ -984,19 +1009,25 @@ defmodule Ethos.Seeds.QueensSeedDataTest do
     # it is the only thing that can tell a shipped corpus from a truncated one.
     #
     # Asserted as equality, and it fails in both directions: a rostered
-    # neighborhood with no seed file, and a seed file no roster row claims. If
-    # a future roster entry is deliberately omitted — a neighborhood that
-    # cannot clear the orientation floor is omitted rather than stubbed —
-    # relax this to a one-directional difference check and record the omission
-    # and its reason in the wave report.
+    # neighborhood with no seed file, and a seed file no roster row claims.
+    #
+    # Scoped to in-scope rows. The programme narrowed to 21 Queens
+    # neighborhoods on 2026-08-31 when search exhaustion dropped per-
+    # neighborhood yield from 40 places to 9; the other 90 keep their roster
+    # rows and their `in_scope: false`.
     roster = @roster_path |> File.read!() |> Jason.decode!()
 
-    expected = roster["neighborhoods"] |> Enum.map(& &1["slug"]) |> MapSet.new()
+    expected =
+      roster["neighborhoods"]
+      |> Enum.filter(& &1["in_scope"])
+      |> Enum.map(& &1["slug"])
+      |> MapSet.new()
+
     shipped = files |> Enum.map(&Path.rootname(Path.basename(&1))) |> MapSet.new()
 
     # Non-vacuity: MapSet.equal?/2 on two empty sets is true, so an empty
     # roster and an empty corpus would agree perfectly and prove nothing.
-    assert MapSet.size(expected) > 0, "the queens roster names no neighborhoods"
+    assert MapSet.size(expected) > 0, "no queens neighborhood is in scope"
 
     assert MapSet.equal?(shipped, expected),
            "queens seed corpus does not match the roster — " <>
