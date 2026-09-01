@@ -14,7 +14,10 @@ Output: `priv/seed_data/bronx/bronx-park.json`.
 **5 surviving places** — Bronx Park, New York Botanical Garden, Bronx Zoo,
 Lorillard Snuff Mill, Bronx River Forest. Below six, so `"tier": "town-page"`.
 
-- Intro: **126 words**, floor 90, ceiling (ungated) 130.
+- Intro: **121 words**, floor 90, ceiling (ungated) 130. (126 before the
+  Fordham Road restoration; the boundary-street list was shortened to its five
+  streets to make room, and the full compass form is kept verbatim in the
+  Bronx Park place summary.)
 - Outbound links: **2**, floor 2 — lowered from 3 for the Bronx in
   `af86ba2`/`481248c`, and Bronx Park is the page the gate comment names as
   the reason: its verified neighbours are Pelham Parkway, West Farms and
@@ -57,9 +60,32 @@ boundaries put Belmont between it and Bronx Park — and it is not shipping.
   paragraph, which is what the source supports.
 - **Rose garden** — Farrand's 1916 design and the 2007 renovation ship; NYBG's
   own "hundreds of unique rose varieties" is cut.
-- **Fordham Road** — the refuted "runs between the Zoo and the Garden" does not
-  appear anywhere. The Garden is described as being "at the eastern terminus of
-  Fordham Road in Bronx Park", the corrected wording.
+- **Fordham Road** — **corrected after review; the first version of this page
+  got it wrong, and the framing that caused it came from the dispatch, not from
+  the verdicts.** The dispatch stated a flat "REFUTED: Fordham Road runs between
+  the Zoo and the Garden." The actual refutation, at
+  `docs/bronx/fordham-heights-verdicts.md:532`, is explicitly narrow — "REFUTED
+  as Fordham-side corroboration … The 'bisects' fact remains separately
+  confirmed on Bronx Park's own article (`bronx-park-verdicts.md:22`) and **may
+  still be published there**." And in this page's own authority the fact is
+  affirmative twice: `bronx-park-verdicts.md:22` ("Fordham Road bisects the park
+  between zoo and garden — **confirmed**") and line 45 ("Contains NYBG (north)
+  and Bronx Zoo (south), divided by Fordham Rd | confirmed"). That file's
+  summary lists exactly two refutations and this is not one of them. Following
+  the dispatch dropped a confirmed fact — and the most useful orienting fact
+  about the place.
+
+  **Restored.** The page now states that Fordham Road divides the park between
+  the Zoo and the Garden, in the intro, the history section, the "why are they
+  in the same park" FAQ and the Bronx Park place summary; the Garden and the
+  Zoo place summaries are sited north and south of the road.
+
+  The "eastern terminus" wording is separately confirmed and is kept — with its
+  **attribution fixed**. The source sentence is "The Bronx Zoo and New York
+  Botanical Garden are at the eastern terminus of Fordham Road in Bronx Park":
+  it names *both* institutions. The first version attributed the terminus to
+  the Garden alone, in three places. It now reads "both the Bronx Zoo and the
+  New York Botanical Garden stand at the road's eastern terminus in the park."
 - **"On the condition it be used as a zoo and botanical garden"** — cut, not in
   the source.
 
@@ -99,7 +125,29 @@ page, per rule 6.2(4):
   Bx9/Bx19 to 183rd & Southern and Bx12/Bx22 to Fordham & Southern → Gate C;
   Q44 to 180th & Boston Road → Gate A; BxM11 express → Gate B.
 - Ferry: one sentence, "Neither institution's own directions page names an NYC
-  Ferry landing" — the verifier confirmed this as a genuine gap.
+  Ferry landing" — the verifier confirmed this as a genuine gap. It shipped
+  **twice** in the first version, in the section and again in the FAQ; the FAQ
+  copy is cut.
+
+**Voice, corrected after review.** The first version framed every transit fact
+as what a page says — nine attribution constructions in `Getting there` alone
+("the Garden's page gives", "the Zoo's page gives", "The same page separately
+lists"). That was a defensible reflex after the revert and the wrong call:
+these facts are confirmed on official sources, and a confirmed fact can be
+stated as a fact. Attribution belongs on a source's *characterization*, not on
+its *information* — "The Bx19 serves the Main Entrance" needs no preamble. The
+scaffolding is stripped; two attributions survive in the section, for the
+reasons given below.
+
+**The FAQ's bus enumeration is cut.** The first version restated **eleven**
+routes — Bx19, Bx12, Bx22, Bx9, Bx17, Bx25, Bx26, Bx41, Bx34, Q44, BxM11 — as a
+near-verbatim compression of the section above it. Entrance-tying satisfies the
+verifier's ruling but not §6.2(4), which permits route numbers only where no
+subway station serves the neighborhood or the research records buses as a
+primary means of access; subway stations do serve here. The page was carrying
+one route more than the draft pulled for exactly this defect, and carrying it
+twice. The FAQ now names **zero** bus routes and points to the section, where
+the entrance-by-entrance detail belongs.
 - Gates and entrances: Main, Mosholu, Everett Garden Gate, East Gate; Gates A,
   B, C and the Southern Boulevard car-service drop-off.
 
@@ -139,13 +187,31 @@ lost anything a reader needs.
 1. **DOHMH/DCWP:** zero DOHMH-only places here (the finder reports 0 and the
    verifier confirmed it). No inspection-derived date, grade, cuisine or
    category noun appears in any string.
-2. **Research-process prose:** used once, in the page-negative form — "Neither
-   institution's own directions page names an NYC Ferry landing". The verdict
+2. **Research-process prose:** the first version of this report claimed this
+   was "used once". That was wrong, and the review was right to say so: the
+   ferry sentence shipped twice and `Getting there` carried nine
+   source-attribution constructions besides. After the rewrite **eight
+   attributions remain in the whole file**, two of them in `Getting there`, and
+   each survives because the claim under it is a characterization, a
+   quotation, or a self-reported or decaying figure — never a plain direction:
+
+   | # | Where | Why it survives |
+   | --- | --- | --- |
+   | 1 | `Getting there` — the Zoo's untied "2 or 5 to West Farms Square–East Tremont, East 180th Street or Pelham Parkway" | The verifier ruled this enumeration must stay flagged as unresolved rather than presented as settled. Stating it flatly would claim a gate tie the source does not make. |
+   | 2 | `Getting there` — the ferry sentence | A page-level negative. "No ferry serves Bronx Park" would be a claim about the world; what is confirmed is that neither official page names a landing. |
+   | 3 | NYBG summary — "on a 2016 figure" | A vintage qualifier on a decaying number, not a source preamble. Without it the visitor count reads as current. |
+   | 4 | NYBG history — the 2002 *New York Times* "75 percent / 70 percent" line | A direct quotation; attribution is required by construction. |
+   | 5 | Zoo history — World of Darkness as "the world's first major exhibit designed specifically for nocturnal animals" | An unverifiable superlative. §15 requires the source to be named or the claim dropped. |
+   | 6 | Snuff Mill summary — "the oldest existing tobacco manufacturing building in the United States" | Same. Confirmed as the article's own claim, so it ships attributed — but **once**, not twice; the trailing "which is that article's characterization" is cut. |
+   | 7 | Bronx River Forest summary — "a remnant of the original forests and floodplains" | A characterization by the managing organization, not a measurement. |
+   | 8 | Bronx River Forest history — "more than a hundred partner organizations" | An organization's self-reported count of itself. |
+
+   The verdict
    on the Forever Wild / Thain Family Forest / Bronx River Forest relationship
    is "do not merge or imply a relationship", and the way that is honoured is
    silence: the three are described separately and no sentence anywhere in the
-   file discusses whether they relate. Saying so in prose would have been a
-   fourth research-process sentence for no reader benefit.
+   file discusses whether they relate. Saying so in prose would have added
+   another research-process sentence for no reader benefit.
 3. **Verdict decides the name, slug follows:** `bronx-park`,
    `new-york-botanical-garden`, `bronx-zoo`, `lorillard-snuff-mill`,
    `bronx-river-forest`. The two marquee slugs match the gate's front-anchored
