@@ -30,7 +30,9 @@ unlinked. The Pelham Bay page can carry the edge when it lands.
 | 21 Tier Street | `21-tier-street` | historic-site | 21 Tier Street |
 | City Island Yacht Club | `city-island-yacht-club` | attraction | 63 Pilot Street |
 
-Twelve entries, one per place. Five FAQ entries. Three sections. Intro 159 words. No photos —
+Twelve entries, one per place. Five FAQ entries. Three sections — a consolidated history
+deep-dive, "City Island Avenue and the waterfront", and `Getting there`. Intro 159 words. No
+photos —
 the three shipped Bronx pages carry none and no candidate artifact exists for this one.
 
 Places 7–11 ship on two confirmed claims each (name-with-address and designation date) and
@@ -143,15 +145,24 @@ they belong to Pelham Bay Park, and `@marquee_institutions` in the Bronx gate as
   no Metro-North station and no NYC Ferry landing serving City Island." It appears in the
   Getting there section and is *not* repeated in the transit FAQ. The NYC Ferry advocacy fact
   (D10) is published beside it as a positive claim, which is what it is.
-- **Attribution used only where a claim rests on a source's characterization.** This was *not*
-  true of the first commit — see "Fact-fidelity review, round 1" below, where nine
-  constructions wrapping a source's *information* were stripped and this bullet's original
-  claim that transit facts were "stated flat, with no preamble" is corrected. As shipped, the
-  sixteen remaining constructions are: B14's source-carried superlative, B10's "described at
-  the time as", eleven own-site wrappers (the museum, the three restaurants and their entry
-  notes), the Temple Beth El characterization, and two boroughwide-landmarks-list
-  attributions. Every confirmed bus route, subway line, terminal and bridge fact is now stated
-  flat.
+- **Attribution is used for two distinct reasons, and this bullet has been wrong twice about
+  which.** The first commit claimed transit facts were "stated flat, with no preamble" while
+  nine constructions wrapped a source's information; round 1 stripped those. The round-1
+  rewrite then said attribution is used "only where a claim rests on a source's
+  characterization", which is also not true of the file. The accurate statement:
+
+  1. **Characterization** — required because the claim *is* the source's judgement: B14's
+     "third oldest continuously functioning yacht club in the City of New York", and the
+     Temple Beth El description (2.4). Two.
+  2. **Provenance under rule 4** — required because the fact comes from a business's own site
+     or from a single boroughwide list, and presenting it unattributed would launder its
+     source. This covers the own-site wrappers on the museum, the three restaurants and their
+     entry notes, and the two boroughwide-landmarks-list attributions. **Several of these wrap
+     a bare year or a service format** — Sammy's 1966, the Crab Shanty's 1977, Johnny's
+     ordering sections — which rule 4.2 expressly permits as own-site description. They are
+     not characterizations, and the wrapper is there for provenance, not judgement.
+
+  Every confirmed bus route, subway line, terminal, address and bridge fact is stated flat.
 - No trip duration and no vague proximity anywhere; "24 hours a day" is a published service
   fact from D4 and trips no pattern (pattern 11 is anchored on a preceding "in", pattern 6
   requires a mode word). No allowlist entry was added to either ban.
@@ -239,6 +250,84 @@ station entrance crosses the Bruckner Expressway and leads to Pelham Bay Park. T
 itself is reached by road: the City Island Bridge, landing on Rodman's Neck at its western end,
 is its only connection to the mainland." The refutation is closed by a positive statement, with
 no research-process negative.
+
+## Fact-fidelity re-review — the fourth section, and the consolidation it forced
+
+All five round-1 findings were judged addressed, with no Critical and no Important. One
+editorial verdict remained: *"It is now, precisely, a chronology with a much better first
+line."* The gain from A21 was real and confined to the top — 118 of the intro's 159 words were
+still the 1654/1761/1819/1895/1898 chain, and below the intro nothing had changed in kind. Two
+of three headings were history and the third was logistics, so **the three restaurants, this
+page's precedent-setting achievement, appeared in no section body at all.** A reader met them
+only in place records, after roughly 330 words of Nevins and Consolidated corporate history.
+
+**A fourth section was the fix, and rule 5 does not allow one.** Rule 5 permits two to three
+sections, one of which must be `Getting there`. Four would have broken it, and the rule's own
+instruction is to consolidate rather than drop the new section. So:
+
+**Consolidated.** "Shipbuilding, yacht clubs and the America's Cup" and "The bridge, and the
+ways across before it" are now one history section, **"Shipbuilding, the yacht clubs and the
+bridge"** (779 words). The compression fell on the corporate shipbuilding detail, which the
+re-review named as the page's weakest material. Cut from Consolidated Shipbuilding: the 1896
+merger constituents (the Charles L. Seabury Company and the Gas Engine & Power Company with
+their founding dates and locations), the steam yacht *Kanahwa* with its owner and 1917
+conversion, and the July 16, 1908 launch with its 111-foot length, 21-foot beam and 260
+horsepower. Kept: the June 1896 formation, the wartime tugboats and 51 of the 343 PC-461-class
+submarine chasers, the postwar move to the former Robert Jacobs shipyard on City Island, and
+the 1958 exit from shipbuilding. Nothing about the bridge, the Nevins yard or the Harlem Yacht
+Club was touched. Cutting B10's "described at the time as" wrapper removed one attribution
+construction with it.
+
+**Added: "City Island Avenue and the waterfront"** (316 words), the third section, placed
+between the history and `Getting there`.
+
+**It adds no claims.** Every element was already licensed and already on the page, scattered
+across the two history sections and the twelve place records; gathering them under a heading is
+organization, not assertion. Its four paragraphs:
+
+1. **The avenue as the address spine** — assembled from confirmed addresses already in the
+   place records: Johnny's Reef at 2, Sammy's at 41, Grace Episcopal at 116, the Crab Shanty at
+   361, the Samuel Pell House at 586, the Bx29's western terminal at the avenue and Rochelle
+   Street (D4), the Nautical Museum at 190 Fordham Street, and the other individual landmarks
+   on Belden Street, Schofield Street, Pell Place, Centre Street and Tier Street.
+2. **The three restaurants**, each from its own site with the wrapper intact — Johnny's Fried,
+   Steam, Clam and Soda sections, its bar and its picnic tables indoors and out overlooking the
+   water (5.2); Sammy's fresh seafood, lobster feasts and waterfront dining and its 1966 date
+   (4.2, 4.3); the Crab Shanty's 1977 takeover and the building's life as a silent movie
+   theater and then the City Island Post Office (6.3–6.5).
+3. **The water and the resort era** — Stepping Stones Light off the southern tip marking the
+   main shipping channel into New York, Hart Island east across City Island Harbor, High Island
+   northeast (A14); Belden Point and William Belden's 1887 amusement park and resort, and Astor,
+   Morgan and Hearst (A16, A17), all moved here from the history section rather than duplicated.
+4. **Orientation figures** — 0.395 square miles, Community District 10, ZIP 10464, the 2020
+   census count of 4,417, and The Island Current's October 1971 first printing, also moved
+   rather than duplicated.
+
+Two constraints checked explicitly: **no trip duration and no vague proximity** — the section
+names streets, house numbers and compass bearings and never how long anything takes or "a
+morning" of anything; and **the attribution discipline holds** — the own-site wrappers are
+present because rule 4 requires them, while the flat statements of where things sit carry none.
+One sentence was cut in drafting because it was not true: "the water is in all three
+descriptions" would have claimed a waterfront reference the Crab Shanty's own site does not
+carry. "Landmarked houses" became "individual landmarks", because 21 Tier Street is confirmed
+as a designated landmark and not as a house.
+
+**Section count: 3.** Inside rule 5's two-to-three range, with the required `Getting there`
+heading byte-exact and last.
+
+**Two Minors fixed.**
+
+- `sections[0].body`: "Two small land berms … **carry** the island's only connecting road" →
+  "**consist of** the island's only connecting road", E5's confirmed verbatim. The source says
+  the berms *are* the road, and §2 says prefer the artifact's own phrasing for a specific.
+- `sections[2].body`: "The island's other public transit link **is** two rush-hour extended
+  round-trips of the BxM8…" → "Two rush-hour extended round-trips of the BxM8 express route run
+  to Manhattan." The definite singular asserted that Bx29 plus BxM8 is the complete set; D5
+  confirms only that the main article presents those two. The FAQ already carried the
+  non-exhaustive form and both now match.
+
+Untouched per instruction: the intro, the restaurants' own-site sourcing, every address, the
+census figures, `"links": []`, the twelve-place list.
 
 ## Census move
 
