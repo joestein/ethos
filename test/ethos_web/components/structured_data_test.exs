@@ -162,24 +162,53 @@ defmodule EthosWeb.StructuredDataTest do
       # code was. It is a real assertion about a real property of the corpus —
       # see the note below it — but it is not evidence for this delta, and the
       # `postalCode` assertion above is not redundant with it.
+      # Re-measured 2026-08-31 after priv/seed_data/bronx/bronx-park.json landed
+      # five places, four of them with an address. Bronx River Forest ships with
+      # `"address": null` — the Bronx River Alliance's page gives no acreage,
+      # boundary or street, and guessing one is not an option — so it never
+      # reaches this setup, which rejects nil addresses. The whole delta is the
+      # other four and each digit is accounted for:
+      #
+      #   * total 2113 -> 2117, the four addressed places.
+      #   * `streetAddress` 1575 -> 1576 together with `is_nil(streetAddress)`
+      #     538 -> 541 proves which of the four carry a house number: exactly
+      #     one, the Bronx Zoo at "2300 Southern Boulevard". The other three
+      #     went to the street-less bucket — Bronx Park, whose sourced address
+      #     is a boundary list ("Bounded by Southern Boulevard, Webster
+      #     Avenue..."); the New York Botanical Garden, whose NRHP-sourced
+      #     address is a street intersection ("Southern Boulevard and Bedford
+      #     Park Boulevard"); and the Lorillard Snuff Mill, sourced to a road
+      #     within the Garden's grounds ("Snuff Mill Road"). +1 and +3 sum to
+      #     the +4 above, so no row is unaccounted for and none is double
+      #     counted.
+      #   * `postalCode` 1712 -> 1713 proves the ZIP, and nothing else here
+      #     does: the zoo's address carries 10460 and the other three carry no
+      #     five-digit code at all.
+      #   * locality-only 248 -> 251, the same three street-less rows. As the
+      #     note above says, this proves neither half of the zoo's delta — a
+      #     row with a non-nil streetAddress is definitionally outside that
+      #     bucket. It is the check that the street-less rows went where they
+      #     should, and it moves by exactly the same 3.
       count = fn f -> Enum.count(emitted, fn {_, ld} -> f.(ld) end) end
 
-      assert length(emitted) == 2113
-      assert count.(& &1["streetAddress"]) == 1575
-      assert count.(&is_nil(&1["streetAddress"])) == 538
-      assert count.(& &1["postalCode"]) == 1712
+      assert length(emitted) == 2117
+      assert count.(& &1["streetAddress"]) == 1576
+      assert count.(&is_nil(&1["streetAddress"])) == 541
+      assert count.(& &1["postalCode"]) == 1713
 
-      # The largest behavioural delta this change ships: 248 places emit a
+      # The largest behavioural delta this change ships: 251 places emit a
       # PostalAddress carrying only locality, region and country. Their full
       # address is still rendered on the page.
       #
-      # The figure was 245 when this comment was written and went to 248 when
+      # The figure was 245 when this comment was written, went to 248 when
       # priv/seed_data/bronx/mott-haven.json landed three historic districts
-      # whose sourced addresses are street ranges. The comment was not updated
+      # whose sourced addresses are street ranges, and to 251 when
+      # priv/seed_data/bronx/bronx-park.json landed a boundary list, a street
+      # intersection and a road-within-a-garden. The comment was not updated
       # with the assertion and spent two commits contradicting a number three
       # lines below it, which is worse than either being wrong alone. Keep the
       # two in step.
-      assert count.(fn ld -> is_nil(ld["streetAddress"]) and is_nil(ld["postalCode"]) end) == 248
+      assert count.(fn ld -> is_nil(ld["streetAddress"]) and is_nil(ld["postalCode"]) end) == 251
     end
   end
 end

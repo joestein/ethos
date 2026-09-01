@@ -1,220 +1,217 @@
 # Bronx Park — authoring report
 
-**Status: not shipped.** `priv/seed_data/bronx/bronx-park.json` was not
-authored. Bronx Park cannot clear the orientation-page link floor with honest
-links, and the dispatch's own instruction on that point is explicit: *"If you
-cannot reach three honest links, stop and report that rather than padding. A
-manufactured link is worse than a failed floor."* This report is that ruling.
+Replaces the report written for the reverted attempt. That attempt shipped an
+entire transit section and a Wildlife Conservation Society headquarters claim
+that no verdict backed; the top-up has since been adjudicated
+(`docs/bronx/bronx-park-verdicts.md`, `## TOP-UP VERDICTS`) and this file is
+authored against both the original 90-claim pass and the top-up, with nothing
+taken from the finder's prose that a verdict does not restate.
 
-Nothing was committed to `priv/seed_data/bronx/`. The corpus is unchanged at
-two files, `belmont.json` and `mott-haven.json`.
+Output: `priv/seed_data/bronx/bronx-park.json`.
 
----
+## Tier and floors
 
-## 1. The tier call, which is not in dispute
+**5 surviving places** — Bronx Park, New York Botanical Garden, Bronx Zoo,
+Lorillard Snuff Mill, Bronx River Forest. Below six, so `"tier": "town-page"`.
 
-Five places survive verdict filtering: Bronx Park, the New York Botanical
-Garden, the Bronx Zoo, the Lorillard Snuff Mill, and Bronx River Forest. Five
-is below the six-place threshold, so the file is a `"tier": "town-page"`
-orientation page. The verifier reached the same count independently.
+- Intro: **126 words**, floor 90, ceiling (ungated) 130.
+- Outbound links: **2**, floor 2 — lowered from 3 for the Bronx in
+  `af86ba2`/`481248c`, and Bronx Park is the page the gate comment names as
+  the reason: its verified neighbours are Pelham Parkway, West Farms and
+  Belmont, and the narrowing to 14 in-scope neighborhoods put two of the three
+  out of scope. One adjacency plus one honest thematic tie is the structural
+  ceiling here, not a thin page.
+- Sections: 2 — `A park, a garden and a zoo`, and `Getting there` (byte-exact).
+- FAQ: 3, one of them `How do I get to Bronx Park?`.
+- Photos: `[]` on the guide and on every place, matching the two shipped Bronx
+  pages. No candidate artifact exists for this neighborhood and none was
+  invented.
 
-An orientation page must clear two floors, both mechanically enforced by
-`floor_violations/1` in `test/ethos/seeds/bronx_seed_data_test.exs`:
+## The two links
 
-* an intro of at least 90 words, and
-* **at least 3 outbound links.**
-
-The intro floor is comfortably reachable — the neighborhood-level verdicts
-carry 718 acres, the boundary streets, the 1884 New Parks Act, the Fordham and
-Lorillard land, the 1891 Garden, the 1899 Zoo, Fordham Road bisecting the two,
-and the Bronx River's two miles through the park. That is more than enough
-verified history for 90 to 130 words.
-
-The link floor is the one that fails.
-
-## 2. Exactly one honest outbound link exists
-
-Every link note is a factual claim and must trace to a verdict. Working
-through the four permitted link kinds against the verdicts:
-
-**`nearby` — a shared border.** The verdicts confirm, verbatim, exactly three
-adjacent neighborhoods: *"Adjacent neighborhoods include Pelham Parkway to the
-east, West Farms to the south, and Belmont to the west."* Of those three, the
-roster marks only Belmont `in_scope: true`, and only Belmont has shipped:
-
-| Adjacent neighborhood | Roster `in_scope` | Seed file |
+| Target | `kind` | Why that kind |
 | --- | --- | --- |
-| Belmont | true | shipped |
-| West Farms | **false** | never |
-| Pelham Parkway | **false** | never |
+| `guide:belmont-bronx-guide` | `nearby` | Rule 11's `nearby` means a shared border and nothing weaker. Belmont's own article gives its boundary as "Bronx Park to the east" (confirmed, original pass), and the verifier's flagged item 2 sides with the Belmont/West Farms/Bronx Park consensus. A genuine shared line. |
+| `place:new-york-aquarium` | `see-also` | Rule 11 reserves `see-also` for cross-borough edges with a real named connection. This is Bronx → Coney Island, Brooklyn, on the shared Wildlife Conservation Society operator tie. Not `nearby` (no border), not `shared-history` (the tie is a present operator relationship, not a stated historical one). |
 
-A `guide:` target that no file defines raises `ArgumentError` out of
-`Ethos.Links.resolve!/1`, which aborts the whole link-upsert pass rather than
-skipping the edge. West Farms and Pelham Parkway are not merely unshipped —
-they are out of scope, so they will not arrive later either.
+The aquarium note uses the verifier's leaner recommended wording verbatim:
+"The Bronx Zoo is managed by the Wildlife Conservation Society, which also
+operates the New York Aquarium in Coney Island." The headquarters clause is
+now confirmed on `wcs.org/about-us`, but the verifier notes the link does not
+need it, and the shorter sentence carries the tie without it — so the fuller
+one did not earn its place. Both notes are under the 160-character limit (144
+and 121).
 
-**That yields one link: `guide:belmont-bronx-guide`.** It is a strong one. The
-border is confirmed from both sides (Bronx Park's own article gives "Belmont to
-the west"; Belmont's gives Bronx Park as its "definitive eastern border" and
-places the Zoo and Garden "at the northeastern edge of Belmont"), and
-`belmont.json`'s shipped intro already carries the shared history — the
-construction of the Bronx Zoo and the New York Botanical Garden from 1898 gave
-work to Italian immigrants. The note writes itself and traces cleanly.
+**No third link.** Fordham Heights is not `nearby` — the corpus's own
+boundaries put Belmont between it and Bronx Park — and it is not shipping.
 
-**`same-region`.** The only other shipped Bronx guide is Mott Haven. The
-verdicts do not mention Mott Haven, or Community District 1, or the South
-Bronx, in any form. There is no clause to trace, so any note would be authored
-from outside the research. Rejected as padding.
+## Corrections applied
 
-**`shared-history`.** Only Belmont, which is already the `nearby` edge. Two
-edges to one target would render Belmont twice in the Nearby block and would
-not be a second connection — it would be one connection counted twice to clear
-a floor. Rejected.
+- **Enid A. Haupt Conservatory** — designated a New York City landmark
+  **October 16, 1973**. The 1976 date (a secondary guidebook) does not appear.
+- **Mertz Library** — completed **1900**. No "1900 vs 1901 conflict" is
+  described, because the verifier established it does not exist.
+- **American Bison Society** — "founded in 1905" and the 1913 shipment of
+  fourteen bison to the National Bison Range and Wind Cave. "Founded at the
+  zoo" is not published; the sentence sits in the zoo's conservation
+  paragraph, which is what the source supports.
+- **Rose garden** — Farrand's 1916 design and the 2007 renovation ship; NYBG's
+  own "hundreds of unique rose varieties" is cut.
+- **Fordham Road** — the refuted "runs between the Zoo and the Garden" does not
+  appear anywhere. The Garden is described as being "at the eastern terminus of
+  Fordham Road in Bronx Park", the corrected wording.
+- **"On the condition it be used as a zoo and botanical garden"** — cut, not in
+  the source.
 
-**`see-also` — cross-borough, and only for a real named connection.** I checked
-the whole shipped corpus rather than reasoning about it: no file in
-`priv/seed_data/manhattan/` (38 guides) or `priv/seed_data/brooklyn/` (69
-guides) mentions Bronx Park, the Bronx Zoo, the New York Botanical Garden, the
-Bronx River, the Lorillards, a herbarium or Torrey. The one hit was Bay Ridge's
-Narrows Botanical Gardens, an unrelated Brooklyn park.
+### The Lorillard acquisition date, made consciously
 
-Two candidate ties surfaced from the verdicts and both were rejected on
-inspection:
+Three confirmed and irreconcilable dates exist (1870, 1884, 1888–89). The page
+publishes neither an assertion of one nor a list of three. It ships the
+sentence confirmed verbatim — "Much of the land came to the city under the 1884
+New Parks Act, from Fordham University and from the Lorillard family" — in the
+intro and in the Bronx Park place `history`. **This implies 1884 to a reader,
+and that is a deliberate choice, not an oversight:** the 1884 New Parks Act is
+the legal instrument the source names, it is confirmed independently of the
+acquisition-date dispute, and the alternative — dropping the mechanism
+entirely — would leave the park's origin unexplained on a page whose whole
+subject is how two institutions came to share it. The 1888–89 and 1870 dates
+are simply absent; no acquisition *year* is asserted.
 
-* **Columbia College herbarium → Morningside Heights.** The verdicts confirm
-  NYBG's acquisition of the Columbia College herbarium in 1895 (~600,000
-  specimens). But Morningside Heights' own shipped guide records that Columbia's
-  new campus opened in 1897 — so in 1895 the herbarium was not in the
-  neighborhood the link would point at. The note would be false at its own date.
-* **Andrew Carnegie → Carnegie Hill.** Carnegie is a confirmed NYBG principal
-  officer, alongside Cornelius Vanderbilt II and J.P. Morgan. A person being an
-  officer of an institution in one neighborhood is not a documented tie between
-  two neighborhoods; it is the "these are both interesting places" edge the
-  rules name specifically. Rejected.
+## Transit — what shipped and what did not
 
-**Honest total: 1. Floor: 3.** The gate would report
-`{"bronx-park.json", "only 1 outbound links, floor is 3"}` and fail the suite.
+Every transit claim traces to a top-up verdict.
 
-## 3. Why this is structural, not a sequencing problem
+**Shipped**, all tied to a named entrance or gate by NYBG's or the Zoo's own
+page, per rule 6.2(4):
 
-Two of Bronx Park's three confirmed neighbors are permanently out of scope.
-Shipping the rest of wave 2 does not fix it:
+- Subway: B/D/4 to Bedford Park Boulevard → Bx25 or Bx26 east, or on foot, for
+  the Mosholu Entrance; 2 to Allerton Avenue → Allerton, Bronx Park East,
+  Waring Avenue for the East Gate (pedestrian, daytime only); 2 to Pelham
+  Parkway → west on foot for the Zoo's Gate B. The Zoo's own untied
+  enumeration (2 or 5 to West Farms Square–East Tremont, East 180th Street or
+  Pelham Parkway) is presented as the page's own list with no gate attached,
+  which is how the verifier ruled it should stay.
+- Metro-North: the Harlem Line station named **Botanical Garden**, and that
+  the Garden's own page says it serves the Mosholu Entrance. Both halves are
+  the confirmed elements.
+- Bus, by entrance: Bx19/Bx12/Bx22/Bx9/Bx17 → Main Entrance (2900 Southern
+  Blvd); Bx25/Bx26/Bx41/Bx34 → Mosholu Entrance (2950 Southern Blvd);
+  Bx9/Bx19 to 183rd & Southern and Bx12/Bx22 to Fordham & Southern → Gate C;
+  Q44 to 180th & Boston Road → Gate A; BxM11 express → Gate B.
+- Ferry: one sentence, "Neither institution's own directions page names an NYC
+  Ferry landing" — the verifier confirmed this as a genuine gap.
+- Gates and entrances: Main, Mosholu, Everett Garden Gate, East Gate; Gates A,
+  B, C and the Southern Boulevard car-service drop-off.
 
-* `fordham-heights` (in scope, wave 2, unshipped) is the only remaining
-  candidate, and it is a *different neighborhood* from the "Fordham" whose
-  article the verdicts adjudicate. Verdict flagged item 2 rules on Fordham's
-  boundary — Southern Boulevard, meeting Bronx Park at a line — but nothing in
-  the research establishes that Fordham Heights, as the roster names it, borders
-  Bronx Park. Treating the two as the same neighborhood is exactly the outside
-  knowledge rule 2 forbids.
-* Even granting that edge, the ceiling is 2, still below the floor.
+**Excluded, the top-up's six uncertains:** the Metro-North station's street
+address (2999 Southern Boulevard), its Bedford Park siting, its two
+high-level side platforms, the Bx41 SBS connection, and the WCS
+five-facility / 4-million-visitor / AZA-for-all-five cluster. Per §2 an
+uncertain is excluded outright; none of them is hedged, and — the specific
+defect that produced the Critical finding on an earlier page — **none is
+reproduced inside a disclaimer sentence that then disowns it.** They simply
+are not in the file.
 
-So Bronx Park is a park neighborhood whose only in-scope neighbor is Belmont,
-and the 3-link floor — which was written for residential pockets that can reach
-sideways to three neighbors — has no honest solution here. Three ways out, all
-of them decisions for the programme rather than for an authoring task:
+**Also excluded, and worth flagging:** the Zoo's own page names the Harlem Line
+to **Fordham** station plus the Bx9 east as a second Metro-North route. It is
+in the finder's top-up but **no verdict row adjudicates it** — the top-up's
+Metro-North table covers the Botanical Garden station only. Under "every
+transit claim must trace to a top-up verdict" it does not ship. A later pass
+should adjudicate it; it is likely fine, and its absence makes the Zoo's rail
+answer thinner than the source allows.
 
-1. **Commission adjacency research.** The finder never pulled transit or
-   adjacency material beyond the Wikipedia boundary line (see §5). A pass that
-   establishes Bronx Park's border with Bedford Park, Norwood or Fordham Manor
-   would still need those files to ship, and all three are `in_scope: false`.
-2. **Flip `west-farms` and/or `pelham-parkway` to `in_scope: true`** and author
-   them. Both are confirmed borders; two of them would take Bronx Park to three.
-   This is the cleanest fix and it makes the existing verdicts sufficient.
-3. **Flip `bronx-park` to `in_scope: false`** and record the omission.
+**Two sourced specifics dropped to clear the gates**, both by removing the
+specific rather than rewording around the ban:
 
-## 4. The cost of option 3, which the caller should weigh
+- The Zoo's "walk five blocks south" from Fordham & Southern to Gate C —
+  proximity pattern 1 (`\d+ blocks (south|…)`). Published as "then south on
+  foot".
+- NYBG's phrase "directly across the street from the Garden's Mosholu
+  Entrance" — proximity pattern 3 (`across the street from`). Published as the
+  Garden's page naming the station and stating that it serves the Mosholu
+  Entrance, which is the same confirmed fact without the banned phrasing.
 
-Omitting Bronx Park breaks the marquee-institution gate, currently dark behind
-`@tag :pending_bronx`:
+Neither is a new gap in the gate; both are the gate working, and neither claim
+lost anything a reader needs.
 
-```elixir
-@marquee_institutions [
-  {"New York Botanical Garden", ~r/^new-york-botanical-garden/},
-  {"Bronx Zoo", ~r/^bronx-zoo/},
-  ...
-]
-```
+## The four rules earlier pages paid for
 
-Both must appear in **exactly one** Bronx seed file, and the gate's own comment
-names Bronx Park as their home. Zero is the failure it was written to catch —
-"it fell between two waves". So option 3 does not close the question; it defers
-a red gate to whichever wave un-tags it. Options 1 and 2 do close it.
+1. **DOHMH/DCWP:** zero DOHMH-only places here (the finder reports 0 and the
+   verifier confirmed it). No inspection-derived date, grade, cuisine or
+   category noun appears in any string.
+2. **Research-process prose:** used once, in the page-negative form — "Neither
+   institution's own directions page names an NYC Ferry landing". The verdict
+   on the Forever Wild / Thain Family Forest / Bronx River Forest relationship
+   is "do not merge or imply a relationship", and the way that is honoured is
+   silence: the three are described separately and no sentence anywhere in the
+   file discusses whether they relate. Saying so in prose would have been a
+   fourth research-process sentence for no reader benefit.
+3. **Verdict decides the name, slug follows:** `bronx-park`,
+   `new-york-botanical-garden`, `bronx-zoo`, `lorillard-snuff-mill`,
+   `bronx-river-forest`. The two marquee slugs match the gate's front-anchored
+   patterns. All five verified globally unique.
+4. **No minimum word count** was applied to any field but the intro's 90.
 
-I verified the duplication half myself rather than taking the verifier's word:
-`belmont.json` defines 40 places and none of them is the Zoo or the Garden.
-Both appear there only inside two `links[].note` strings. Nothing in the corpus
-claims either institution today, so whichever file eventually ships them is
-uncontested.
+## Marquee rule
 
-## 5. Two research gaps that would have bound the file anyway
+Confirmed by grep over `priv/seed_data/` and
+`lib/ethos/seeds/connecticut_places.ex` and by running the gate's own
+`marquee_occurrences/2` walk with the shipped patterns: the New York Botanical
+Garden and the Bronx Zoo each appear as a place in **exactly one** file, this
+one. Belmont mentions both only inside `links[].note` prose, which is not a
+place record.
 
-Recorded so the next pass does not start cold.
+## Place kinds and addresses
 
-* **No transit research exists for Bronx Park.** The finder states plainly:
-  *"Not researched in this pass — no subway/bus/train material was pulled for
-  Bronx Park itself,"* and marks the subsection `searched: incomplete`. The
-  verdicts carry no station, line, Metro-North stop, bus route or ferry landing.
-  The `Getting there` heading is gated on both tiers, so the section is
-  mandatory — but with zero sourced transit facts it could only have been
-  written as a page-level statement that no station is named here, which is a
-  thin section and four such constructions on the previous page already read
-  like a memo. The finder's own recommendation stands: pull the Bronx Zoo's and
-  NYBG's visitor-information pages, which carry subway and bus directions.
-* **Bronx River Forest has no acreage, boundary or designation date.**
-  Confirmed as a real gap, not an error. Its identity and description are
-  complete, so it ships as a place; it just cannot carry a dimension.
+| Place | `kind` | `address` |
+| --- | --- | --- |
+| Bronx Park | `park` | boundary list (no house number) |
+| New York Botanical Garden | `park` | "Southern Boulevard and Bedford Park Boulevard" — the NRHP-sourced intersection |
+| Bronx Zoo | `attraction` | "2300 Southern Boulevard, Bronx, NY 10460" |
+| Lorillard Snuff Mill | `historic-site` | "Snuff Mill Road, New York Botanical Garden, Bronx, NY" |
+| Bronx River Forest | `park` | `null` — no acreage, boundary or street is sourced |
 
-## 6. Editorial rulings already made, so a later pass reuses them
+`park` for the Botanical Garden follows `brooklyn-botanic-garden` in
+`prospect-heights.json`. There is no `zoo` in the closed set, so the Bronx Zoo
+is `attraction`.
 
-The content work is done and traceable; only the links block it. Applying it:
+## Census
 
-* **Five places, and the Snuff Mill is one of them.** Verdict item 6 rules it
-  standalone on a distinct road address (Snuff Mill Road), a pre-Garden
-  institutional history, and two landmark designations (NYC 1966, NHL/NRHP
-  1977) that predate every NYBG-specific designation.
-* **Sub-attractions stay features of their parents.** Astor Court, Congo
-  Gorilla Forest, JungleWorld, the Enid A. Haupt Conservatory, the Thain Family
-  Forest, the Mertz Library and the Rose Garden all belong inside their
-  institution's entry, per verdict item 7 — a dedicated Wikipedia article is not
-  an independent address.
-* **Conservatory landmark date: October 16, 1973.** Not 1976. The correction is
-  supplied by the verdict and is used exactly as given; 1976 is footnoted to a
-  secondary guidebook, 1973 to the LPC designation report itself.
-* **Mertz Library: completed 1900, and no conflict is mentioned.** The verifier
-  refuted the "1900 vs 1901" framing outright — the article never states 1901,
-  and its only 1901 mentions are unrelated fountain and road contracts. Writing
-  about the conflict would publish a dispute that does not exist.
-* **American Bison Society: the 1905 year ships, "founded at the zoo" does
-  not.** The year and the 1913 shipment of fourteen bison are confirmed
-  verbatim; the source never places the founding meeting at the zoo. The
-  specific is removed, not hedged.
-* **"Hundreds of unique rose varieties" is cut entirely.** Accurately quoted,
-  but it is NYBG describing itself, which its own site cannot establish. The
-  Rose Garden keeps Beatrix Jones Farrand and 1916 and the 2007 renovation. Cut,
-  not framed as unverified — §2's remedy is removal, and the previous
-  neighborhood's mistake was reproducing a specific in full and then disclaiming
-  it.
-* **The Lorillard acquisition date is written without a date.** Three sources
-  give 1870, 1884 and 1888–89, and all three are confirmed to their own
-  sources — a genuine disagreement, not an unverified claim. Asserting one year
-  claims more than the research supports and listing all three reads as a
-  footnote, so the fact is written in a form true under all of them.
-* **Forever Wild, the Thain Family Forest and Bronx River Forest are three
-  separate claims.** Verdict item 5 confirms no source relates them; prose must
-  not imply a relationship.
-* **No photos.** Belmont and Mott Haven both ship without them and no photo
-  artifact exists for this neighborhood.
-* **No DOHMH or DCWP material anywhere.** The finder reports zero DOHMH-only
-  places and the verifier confirmed no such citation appears in either
-  artifact, so the rule never bound here.
+`test/ethos_web/components/structured_data_test.exs` moved by four rows, not
+five: Bronx River Forest ships `"address": null` and the setup rejects nil
+addresses, so it never reaches the emitter.
 
-## 7. Verification
+| Assertion | Before | After |
+| --- | --- | --- |
+| `length(emitted)` | 2113 | **2117** |
+| `streetAddress` | 1575 | **1576** |
+| `is_nil(streetAddress)` | 538 | **541** |
+| `postalCode` | 1712 | **1713** |
+| locality-only | 248 | **251** |
 
-* `mix format --check-formatted` — clean.
-* `mix test` — baseline, unchanged, since no file was added.
-* Structured-data census in `test/ethos_web/components/structured_data_test.exs`
-  — **unmoved**, and deliberately so. It stands at 2113 total, 1575 with a
-  `streetAddress`, 538 with none, 1712 with a `postalCode`, 248 locality-only.
-  Shipping Bronx Park's five places would have moved it; shipping nothing does
-  not, so the assertions are left exactly as they are.
+Each digit is accounted for in the test's own comment, following the corrected
+pattern: `streetAddress` +1 with `is_nil(streetAddress)` +3 proves exactly one
+of the four carries a house number (the zoo's 2300 Southern Boulevard) and the
+other three went to the street-less bucket; `postalCode` +1 proves the ZIP
+(10460) and nothing else does; locality-only +3 proves neither half, and is
+the check that the street-less rows landed where they should.
+
+## One test precondition changed, and why it is not a weakened gate
+
+`test/ethos/release_test.exs`'s `seed_bronx/1` test seeded Manhattan only.
+`Ethos.Links.resolve!/1` raises on an unknown target and aborts the whole link
+pass, so the new `place:new-york-aquarium` edge — defined in
+`priv/seed_data/brooklyn/coney-island.json` — made it fail. The fix is
+`Ethos.Release.seed_brooklyn(user.email)` added in runbook order, which is
+exactly what that test's own comment anticipated ("If a wave authors an edge to
+a Brooklyn guide, seed_brooklyn/1 belongs here too") and what the production
+runbook already does. No assertion was relaxed; the guide count still filters
+on `county == "Bronx"`, so the extra seed calls cannot inflate it.
+
+## Validation
+
+- `mix format --check-formatted` — clean.
+- `mix test` — **650 tests, 0 failures, 32 excluded**, matching baseline.
+- Only tolerated warning observed: `lib/ethos_web/gettext.ex:23`.
+- No `@trip_duration_allowlist` or `@proximity_allowlist` entry was added, and
+  no pattern was touched.

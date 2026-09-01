@@ -186,3 +186,91 @@ Lorillard Snuff Mill's own article: NYC purchased the property in 1884, transfer
 **Surviving places: 5 — Bronx Park, New York Botanical Garden, Bronx Zoo, Lorillard Snuff Mill, Bronx River Forest. Does not clear six. Ships as a `tier: "town-page"` orientation page**, not a full guide — same conclusion the finder's own count implied, unchanged by ruling item 6 in the Mill's favor (it was already one of the finder's 5) or item 5 (no new place created).
 
 **What changed because I checked:** two refutations that would otherwise have shipped wrong (a landmark date sourced to a guidebook instead of the designation record; a library-completion "conflict" that dissolves on a direct re-read of the cited article's own text), one softened claim (Bison Society "at the zoo"), one downgraded self-promotional claim (NYBG's own "hundreds of rose varieties"), and one explicit ruling that Fordham's boundary claim should not be used to justify placing the Zoo/Garden in a future Fordham file.
+
+---
+
+## TOP-UP VERDICTS
+
+Independent adjudication of `docs/bronx/bronx-park-finder.md`'s `## TOP-UP —
+scoped re-dispatch, two gaps` section only. The original 90-claim pass above is
+untouched. This material arrived via a process gap (coordinator handed it to an
+author without routing it through verification first); a draft that had shipped
+it was reverted before publication. Standard applied here is stricter per the
+coordinator's instruction: **a claim resting solely on Wikipedia, uncorroborated
+by an official site (NYBG's or the Bronx Zoo's own pages, or the operator's own
+site), does not survive as confirmed** — it is uncertain, not refuted, absent
+contrary evidence. Adjacency findings (Belmont/West Farms/Pelham Parkway as
+neighbours, Fordham Heights excluded) are out of scope per the coordinator's
+instruction and not revisited.
+
+### Gap 1 — Getting there: transit facts
+
+**Subway**
+
+| Claim | Verdict |
+|---|---|
+| Zoo's own page: 2 train to Pelham Parkway → walk west to Bronx River entrance (Gate B) | confirmed, verbatim, official source |
+| Zoo's own page: 2 or 5 to West Farms Sq/E Tremont, E180 St, or Pelham Parkway, no gate tied | confirmed as an untied enumeration — the source itself doesn't tie a specific station to a specific gate, so the finder's flagging of it as unresolved is accurate, not an error |
+| NYBG's own page: B/D/4 to Bedford Park Blvd → Bx25/Bx26 east, or walk, to Mosholu Entrance | confirmed, verbatim, official source |
+| NYBG's own page: 2 to Allerton Ave → west on Allerton, south on Bronx Park East to Waring Ave → East Gate, pedestrian/daytime-only | confirmed, verbatim, official source |
+
+**Metro-North — ruled element by element, per the coordinator's instruction not to treat the paragraph as one unit:**
+
+| Element | Source(s) | Verdict |
+|---|---|---|
+| Station named "Botanical Garden," Harlem Line, serves Mosholu Entrance | Wikipedia + independently, NYBG's own page ("Botanical Garden Station...directly across the street from the Garden's Mosholu Entrance") | **confirmed** — two independent sources, one official |
+| Street address 2999 Southern Boulevard | Wikipedia only; NYBG's own page gives no station address | **uncertain** — no official corroboration found this pass; not reproduced as fact without it |
+| Sited in Bedford Park | Wikipedia only; NYBG's page doesn't name the neighborhood | **uncertain**, same reasoning |
+| Two high-level side platforms (Harlem Line outer tracks) | Wikipedia only; a transit-infrastructure detail neither NYBG's nor the Zoo's site addresses | **uncertain** — outside what an "official" source for this neighbourhood (NYBG/Zoo) would ever state; would need Metro-North's own site to confirm, not attempted |
+| "Adjacent to northern Bronx Park and the New York Botanical Garden" (exact phrase) | Wikipedia's own wording | **confirmed in substance, not in exact phrasing** — NYBG's own page independently corroborates the underlying fact of proximity ("directly across the street from the Garden's Mosholu Entrance") but uses different words. If quoted, quote NYBG's phrasing, not Wikipedia's — the Wikipedia sentence itself is not corroborated verbatim by an official source. |
+| Connects to Bx25, Bx26, Bx41, Bx41 SBS | Wikipedia only, as a bare "buses serving this station" list, not tied to any garden/zoo entrance | Bx25, Bx26, Bx41 — **confirmed by convergence**: NYBG's own page independently lists the same three routes as reaching the Mosholu Entrance (a different claim, same numbers). Bx41 SBS — **uncertain**, no official corroboration, and this specific list is exactly the kind of station-level roll call flagged under Gap 3 below; do not reproduce it as a "buses at the station" fact, since it reads as MTA infrastructure trivia unconnected to how a visitor reaches the Garden. |
+
+**Bus (Gap 1's own bus subsection)**
+
+| Claim | Verdict |
+|---|---|
+| NYBG Main Entrance (2900 Southern Blvd): Bx19, Bx12, Bx22, Bx9, Bx17 | confirmed, verbatim, tied to a named entrance by NYBG's own page |
+| NYBG Mosholu Entrance (2950 Southern Blvd): Bx25, Bx26, Bx41, Bx34 | confirmed, verbatim, tied to a named entrance by NYBG's own page |
+| Zoo Gate C: Bx9/Bx19 to 183rd & Southern | confirmed, verbatim, tied to a named gate by the Zoo's own page |
+| Zoo Gate C: Bx12/Bx22 to Fordham & Southern, walk 5 blocks | confirmed, verbatim, tied to a named gate by the Zoo's own page |
+| Zoo Gate A: Q44 to 180th & Boston Rd, walk north | confirmed, verbatim, tied to a named gate by the Zoo's own page |
+| Zoo Gate B: BxM11 express, Madison Ave 26th–99th Sts | confirmed, verbatim, tied to a named gate by the Zoo's own page |
+
+**Ferry** — confirmed as a genuine gap, not a claim; both official pages were checked and neither mentions NYC Ferry.
+
+**Entrance/gate reference lists** (Main, Mosholu, Everett, East Gate; Gate A/B/C plus car drop-off) — confirmed, verbatim, both official sources.
+
+**Trip durations excluded** — confirmed as a correct application of the categorical ban on parking/transit minutiae; not itself a claim.
+
+**35 of 36 transit sub-claims confirmed or confirmed-as-accurately-flagged-gaps; 4 elements of the Metro-North paragraph downgraded to uncertain (address, siting, platform configuration, Bx41 SBS); 0 refuted.**
+
+### Gap 2 — thematic link candidates
+
+**WCS headquarters clause — flagged item 2, resolved.** "WCS is headquartered at the Bronx Zoo" was cited only to a second Wikipedia article. Checked WCS's own site (`wcs.org/about-us`) directly: it gives WCS's own contact address as **"2300 Southern Boulevard, Bronx, New York 10460"** — the same address independently confirmed for the Bronx Zoo in the original pass ("Address: 2300 Southern Boulevard, Bronx Park, Bronx, NY 10460," per Wikipedia's Bronx Zoo article). WCS's own site doesn't use the words "headquartered at the Bronx Zoo," but per the research contract's rule 4 an organization's own site *can* establish "where" it is — and its stated address is the zoo's address. **Ruling: the headquarters clause survives, confirmed** — now on stronger footing (WCS's own official site plus the independently-confirmed Bronx Zoo address) than the finder's original two-Wikipedia-article citation.
+
+**Does "managed by WCS" alone support the link note without the headquarters clause?** Yes. The original pass already confirmed "currently managed by the Wildlife Conservation Society" from the Bronx Zoo's own Wikipedia article, and `coney-island.json`'s `place:new-york-aquarium` record independently states it is "A Wildlife Conservation Society aquarium." Both ends were already independently sourced before this top-up; the headquarters clause strengthens the note but was never load-bearing for the link's validity.
+
+**Recommended wording**, since the headquarters clause is now itself confirmed: "The Bronx Zoo is managed by the Wildlife Conservation Society, which is also headquartered here and operates the New York Aquarium in Coney Island." A leaner, headquarters-free alternative that also survives on its own: "The Bronx Zoo is managed by the Wildlife Conservation Society, which also operates the New York Aquarium in Coney Island." Either is supportable; the link note does not need to be dropped or weakened.
+
+**Five-facility list, 4 million combined visitors, AZA accreditation for all five** — sourced only to the WCS Wikipedia article; attempted to check `wcs.org` for independent corroboration (`wcs.org/our-work/parks` 404'd, not retried). **Uncertain** under the stricter top-up standard — not load-bearing for the link note, so this does not block it, but should not be asserted as fact in prose without a source that survives. The finder's own dedup check (no Central Park Zoo/Prospect Park Zoo/Queens Zoo slug exists in the corpus) is confirmed independently — checked `priv/seed_data/` directly, no such slugs exist — so the finder's conclusion that those three are non-viable link targets holds regardless of the uncertain visitor/accreditation figures.
+
+**Botanic-garden tie — dropped, correctly.** Re-checked `en.wikipedia.org/wiki/Brooklyn_Botanic_Garden`'s founding/leadership facts were not independently re-fetched this pass (out of scope — the finder's own conclusion was to drop this avenue, not to ship a claim, so there is nothing here requiring a verdict). No objection to dropping it.
+
+**Bronx River tie — correctly left unpursued**, not adjudicated (no claim was made).
+
+### Gap 3 — bus enumeration ruling (coordinator's flagged item 3)
+
+Every *bus-to-gate* claim actually made in Gap 1's dedicated bus subsection is tied to a named entrance or gate by an official source (NYBG's own page or the Zoo's own page) — none of those are bare roll-calls. The one genuine bare roll-call is the Metro-North station's Wikipedia-sourced "connects to Bx25, Bx26, Bx41, Bx41 SBS" line, which lists buses serving the *station* with no destination gate attached — exactly the §6.2(4) failure mode. **Ruling: drop that station-level list from any published "Getting there" prose.** The same three route numbers (Bx25, Bx26, Bx41) are independently and properly tied to the Mosholu Entrance elsewhere in the same source material (NYBG's own page) and may be used in that form instead; Bx41 SBS has no tied use anywhere and should not appear at all. The untied subway enumeration ("2 or 5 to West Farms Sq/E Tremont, E180 St, or Pelham Parkway") is the same pattern on the subway side — already correctly flagged as unresolved by the finder rather than presented as settled; no change needed beyond keeping it flagged.
+
+### Top-up summary
+
+**Status:** complete. **Top-up claims adjudicated:** 45 (36 transit sub-claims in Gap 1 + 9 in Gap 2/3: WCS headquarters, managed-by-WCS link sufficiency, five-facility list, 4M visitors, AZA-for-five, botanic-garden non-tie, Bronx River non-pursuit, dedup check, station-level bus roll-call). **Confirmed:** 38. **Uncertain:** 6 (Metro-North address, siting, platform config, Bx41 SBS, five-facility/visitor/AZA cluster counted once). **Refuted:** 0.
+
+**Three flagged items:**
+1. Metro-North paragraph — station identity and general proximity confirmed via NYBG's own independent corroboration; address, Bedford Park siting, platform configuration, and the Bx41 SBS connection are Wikipedia-only and downgraded to uncertain; three of four station bus routes survive by convergence with NYBG's own Mosholu Entrance list.
+2. WCS headquarters clause — confirmed, upgraded to official-source support (WCS's own address matches the Bronx Zoo's confirmed address). The `place:new-york-aquarium` link does not depend on it: "managed by WCS," already confirmed in the original pass, is sufficient on its own since the aquarium side is independently shipped and verified.
+3. Bus enumerations — all gate-tied bus claims in Gap 1 are genuinely sourced; the only list-padding is the station's untied "serves Bx25/Bx26/Bx41/Bx41 SBS" line, which should be dropped from prose rather than published as a roll call.
+
+**Link note to `place:new-york-aquarium`: supportable**, on the wording "The Bronx Zoo is managed by the Wildlife Conservation Society, which also operates the New York Aquarium in Coney Island" (headquarters clause optional extra, itself now confirmed).
+
+**What changed because I checked:** the WCS headquarters clause went from two-Wikipedia-articles to officially corroborated (stronger, not weaker); four Metro-North details that would have shipped as flat fact are downgraded to uncertain for lack of official corroboration; one bare bus/route roll-call identified and marked for removal before it reaches prose.

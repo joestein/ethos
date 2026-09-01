@@ -64,7 +64,18 @@ defmodule Ethos.ReleaseTest do
     # rather than skipping the edge, and the Bronx's cross-borough see-also
     # edges point across the Harlem River. If a wave authors an edge to a
     # Brooklyn guide, seed_brooklyn/1 belongs here too.
+    #
+    # A wave now has: priv/seed_data/bronx/bronx-park.json carries a see-also
+    # edge to `place:new-york-aquarium`, which priv/seed_data/brooklyn/
+    # coney-island.json defines — the shared Wildlife Conservation Society
+    # operator tie. So seed_brooklyn/1 is reproduced here as well, in runbook
+    # order. Without it Links.resolve!/1 raises on that target and aborts the
+    # whole Bronx link pass, which is exactly the production failure the
+    # runbook order exists to prevent — the precondition is real, not a
+    # convenience for this test. The assertions below still count Bronx guides
+    # only, so the two extra seed calls cannot inflate them.
     Ethos.Release.seed_manhattan(user.email)
+    Ethos.Release.seed_brooklyn(user.email)
 
     output = capture_io(fn -> Ethos.Release.seed_bronx(user.email) end)
 
