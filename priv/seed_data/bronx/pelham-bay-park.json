@@ -35,7 +35,17 @@
         "answer": "A gray-stone mansion at 895 Shore Road with a Greek Revival facade and federal interiors, built for Robert Bartow between 1836 and 1842 on a site that had held two earlier Pell houses, one circa 1675 and another around 1790. The Bartow and Pell families alternately owned it through 1888, when New York City acquired it for Pelham Bay Park, and the International Garden Club leased it from 1914. It reopened as a house museum in May 1946. It was designated a New York City Landmark on February 15, 1966, listed on the National Register of Historic Places on December 30, 1974, and made a National Historic Landmark on December 8, 1976."
       }
     ],
-    "photos": []
+    "photos": [
+      {
+        "src": "/photos/ny/bronx/pelham-bay-park/park-aerial-hero-pelham-bay-park.jpg",
+        "thumb": "/photos/ny/bronx/pelham-bay-park/park-aerial-hero-pelham-bay-park_thumb.jpg",
+        "title": "Pelham Bay Park and the Pelham Islands from the air",
+        "description": "High aerial view over the park and the water around it: fairways and mown greens cut into brown woodland across the top, a crescent of pale sand backed by a large paved lot at the center, wooded peninsulas and inlets reaching into dark blue water, a densely built island crowded with houses and marina slips at lower left, and a bare sandy island at lower right.",
+        "author": "Doc Searls from Santa Barbara, USA",
+        "license": "CC BY 2.0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Pelham_Bay_Park_aerial_view.jpg"
+      }
+    ]
   },
   "places": [
     {

@@ -284,14 +284,48 @@ defmodule EthosWeb.StructuredDataTest do
       #     street-less bucket. The two moving together is the check that none
       #     of those seven carries a ZIP — a street-less row that did would sit
       #     outside this bucket and break the equality.
+      #
+      # Re-measured 2026-09-01 again, after hunts-point.json and concourse.json
+      # completed the in-scope Bronx roster at thirteen of fourteen. They carry
+      # sixteen places, of which one — Boogie Down Grind Cafe — ships with
+      # `"address": null`, because its own site gives 868 Hunts Point Avenue
+      # while the DOHMH row gives 1200 Seneca Avenue and nothing resolves the
+      # conflict, so no address could be published for it. The remaining
+      # fifteen reach this setup:
+      #
+      #   * total 2164 -> 2179, the fifteen addressed places.
+      #   * `streetAddress` 1616 -> 1622 together with `is_nil(streetAddress)`
+      #     548 -> 557 splits them 6 / 9, and +6 and +9 sum to the +15 above.
+      #     The nine street-less rows are almost all NYC Parks properties,
+      #     whose official addresses are cross-street ranges in the Parks
+      #     department's own house style — "Oak Pt. Ave. bet. Hunts Pt. Ave.
+      #     and Longfellow Ave." — the same shape as ciccarone-park and
+      #     Riverdale Park before them. The other two are the Hunts Point
+      #     Avenue station and the Concourse Plaza Hotel, both sited at
+      #     intersections.
+      #   * `postalCode` 1737 -> 1741 proves the ZIPs, and nothing else here
+      #     does: four of the fifteen carry a five-digit code, all 10474 and
+      #     all in Hunts Point — Corpus Christi Monastery, THE POINT CDC, THE
+      #     POINT Riverside Campus and Bronxlandia. Concourse contributes none.
+      #     Note the American Bank Note plant at "1201 Lafayette Avenue" is
+      #     street-bearing but ZIP-less, which is why streetAddress moves by
+      #     six while postalCode moves by four.
+      #   * locality-only 258 -> 267, moving by exactly the same nine as the
+      #     street-less bucket — the check that none of those nine carries a
+      #     ZIP, since a street-less row that did would fall outside it.
+      #
+      # The `comma_streets <= 48` pin in test/ethos/places/address_test.exs is
+      # unmoved by this wave: none of the six street-bearing rows carries a
+      # comma qualifier. It was checked rather than assumed, because the
+      # previous wave tripped that pin.
       count = fn f -> Enum.count(emitted, fn {_, ld} -> f.(ld) end) end
 
-      assert length(emitted) == 2164
-      assert count.(& &1["streetAddress"]) == 1616
-      assert count.(&is_nil(&1["streetAddress"])) == 548
-      assert count.(& &1["postalCode"]) == 1737
+      assert length(emitted) == 2179
+      assert count.(& &1["streetAddress"]) == 1622
+      assert count.(&is_nil(&1["streetAddress"])) == 557
+      assert count.(& &1["postalCode"]) == 1741
 
-      # The largest behavioural delta this change ships: 258 places emit a
+      # The largest behavioural delta this change ships: 267 places emit a
       # PostalAddress carrying only locality, region and country. Their full
       # address is still rendered on the page.
       #
@@ -306,11 +340,13 @@ defmodule EthosWeb.StructuredDataTest do
       # addressed places both carry a house number, and its two street-less
       # places carry no address at all. It went to 258 when the six-file wave
       # above landed seven street-less rows, four in Riverdale and three in
-      # Kingsbridge, none of them carrying a ZIP. The comment was not updated
+      # Kingsbridge, none of them carrying a ZIP. It went to 267 when
+      # hunts-point.json and concourse.json landed nine more, seven of them
+      # NYC Parks cross-street ranges. The comment was not updated
       # with the assertion and spent two commits contradicting a number three
       # lines below it, which is worse than either being wrong alone. Keep the
       # two in step.
-      assert count.(fn ld -> is_nil(ld["streetAddress"]) and is_nil(ld["postalCode"]) end) == 258
+      assert count.(fn ld -> is_nil(ld["streetAddress"]) and is_nil(ld["postalCode"]) end) == 267
     end
   end
 end

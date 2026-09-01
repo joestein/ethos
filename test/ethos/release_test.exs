@@ -73,9 +73,22 @@ defmodule Ethos.ReleaseTest do
     # whole Bronx link pass, which is exactly the production failure the
     # runbook order exists to prevent — the precondition is real, not a
     # convenience for this test. The assertions below still count Bronx guides
-    # only, so the two extra seed calls cannot inflate them.
+    # only, so the extra seed calls cannot inflate them.
+    #
+    # A later wave adds a third, and this one is NOT a sibling directory:
+    # priv/seed_data/bronx/concourse.json links to `guide:yankee-stadium-guide`,
+    # a code seed in the "ballparks" region. That edge is load-bearing rather
+    # than decorative — the Yankee Stadium guide owns twelve places that sit
+    # inside Concourse's boundaries, since a marquee institution belongs to
+    # exactly one seed file, and Concourse links to them instead of restating
+    # them. So seed_ballparks/1 is now a genuine precondition of seed_bronx/1
+    # and belongs in the runbook order before it. It is called through the
+    # release function rather than the two modules directly, because what this
+    # test exists to catch is a production seed that silently does the wrong
+    # thing, and shortcutting the real call is how that check goes soft.
     Ethos.Release.seed_manhattan(user.email)
     Ethos.Release.seed_brooklyn(user.email)
+    Ethos.Release.seed_ballparks(user.email)
 
     output = capture_io(fn -> Ethos.Release.seed_bronx(user.email) end)
 
@@ -105,8 +118,15 @@ defmodule Ethos.ReleaseTest do
     assert File.dir?(Path.join([to_string(:code.priv_dir(:ethos)), "seed_data", dir])),
            "seed_bronx/1 names priv/seed_data/#{dir}, which does not exist — a silent no-op"
 
+    # seed_ballparks/1 above published the Yankee Stadium guide, whose county is
+    # "Bronx", so it has to come back out of this count — it is a code seed, not
+    # one of the files seed_bronx/1 is being measured on. Rejected by slug
+    # rather than by bumping `expected`, so a committed file that stopped
+    # publishing still fails here instead of being masked by the extra guide.
     bronx = fn ->
-      Ethos.Guides.list_published_guides() |> Enum.filter(&(&1.county == "Bronx"))
+      Ethos.Guides.list_published_guides()
+      |> Enum.filter(&(&1.county == "Bronx"))
+      |> Enum.reject(&(&1.slug == "yankee-stadium-guide"))
     end
 
     assert length(bronx.()) == expected

@@ -873,6 +873,22 @@ defmodule Ethos.Seeds.BronxSeedDataTest do
       Enum.each(sibling_files, &DataGuide.upsert_links!/1)
     end
 
+    # Not every link target is a JSON seed. concourse.json links to
+    # `guide:yankee-stadium-guide`, which is a CODE seed in the "ballparks"
+    # region, and it has to be: that guide owns twelve places sitting inside
+    # Concourse's own boundaries — Yankee Stadium, the Bronx County Courthouse,
+    # Joyce Kilmer Park, the Bronx Museum of the Arts among them — because a
+    # marquee institution belongs to exactly one seed file. Concourse links to
+    # them rather than restating them, so this edge is the whole mechanism by
+    # which that ruling stays honest, and it cannot be dropped to keep the test
+    # self-contained.
+    #
+    # Only the two Yankee Stadium modules are seeded, not the whole ballparks
+    # region: the other twenty-nine parks are irrelevant here and would cost
+    # seconds on every run of this gate.
+    Ethos.Seeds.YankeeStadiumPlaces.upsert_all!()
+    Ethos.Seeds.YankeeStadiumGuide.upsert!(user.email)
+
     # three-pass load, twice (idempotency)
     for _pass <- 1..2 do
       Enum.each(files, &DataGuide.upsert_places!/1)
@@ -880,9 +896,17 @@ defmodule Ethos.Seeds.BronxSeedDataTest do
       Enum.each(files, &DataGuide.upsert_links!/1)
     end
 
+    # The Yankee Stadium guide is a Bronx guide too — its county really is
+    # "Bronx" — but it is a code seed rather than one of these files, and it is
+    # only in this database because the link-target block above put it there.
+    # It is excluded by slug, not by relaxing the comparison to `>=` or by
+    # adding one to the expected count: both of those would keep passing if a
+    # committed file silently stopped publishing, which is the single thing
+    # this assertion exists to catch.
     bronx_guides =
       Ethos.Guides.list_published_guides()
       |> Enum.filter(&(&1.county == "Bronx"))
+      |> Enum.reject(&(&1.slug == "yankee-stadium-guide"))
 
     assert length(bronx_guides) == length(files)
   end

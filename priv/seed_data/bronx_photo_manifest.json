@@ -23,9 +23,17 @@
     "sha256": "83d277b375a6cafaa57e8248be319b6d4974a21b69c06e02eaa80413e32ec5cb",
     "source_url": "https://commons.wikimedia.org/wiki/File:Bartow-Pell_Mansion_2007.jpg"
   },
+  "broadway-under-the-el-hero-kingsbridge": {
+    "sha256": "c5805f836305926dcfe6981cbd5912761aa418c082c7095120291f045e20f6dc",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Broadway_under_1_subway.jpg"
+  },
   "bronx-general-post-office-mott-haven": {
     "sha256": "a2ab8a8fbdc1c8ab808d6734e52da1e64d09c37e05b70819b553238fe2292085",
     "source_url": "https://commons.wikimedia.org/wiki/File:Bronx_GPO_GC_rain_jeh.jpg"
+  },
+  "bronx-river-waterfall-hero-bronx-park": {
+    "sha256": "08afd187a54101ae007e6f398d3f4d96fd1ef69b63faa0cb7f112c2e4f5f7a10",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Bronx_River_Waterfall_in_Mar_2019.jpg"
   },
   "bronx-zoo-entrance-bronx-park": {
     "sha256": "f5e3797c5cb7cbca1f4ebf0cf830064ef13e54b9461531c778721b50d47aa585",
@@ -46,6 +54,10 @@
   "city-island-nautical-museum-city-island": {
     "sha256": "7a3b289e40b6540618733f225ded0990de81fca9bdd66a05eff2e6831ea1f82a",
     "source_url": "https://commons.wikimedia.org/wiki/File:City_Island_Nautical_Museum.JPG"
+  },
+  "east-139th-street-row-houses-hero-mott-haven": {
+    "sha256": "046e0885f518e689e8ab96f13036adb48106fa9a38fbc00b975d37e2d7c6e849",
+    "source_url": "https://commons.wikimedia.org/wiki/File:East_139.jpg"
   },
   "fort-schuyler-bastion-throgs-neck": {
     "sha256": "03d59e6c9733533d5749d88304d5789ccac8a7f86cd17747abb1850a73b38e97",
@@ -79,6 +91,10 @@
     "sha256": "ceb6dc0ae1a2e0fa3aa9d30209ba28e7683a805774bf47121b9d242c6bad8d25",
     "source_url": "https://commons.wikimedia.org/wiki/File:Morris_Park_Library_HDR_2022_jeh.jpg"
   },
+  "morris-park-station-hero-morris-park": {
+    "sha256": "1eab6ce2b25e46fd09dbeed75aac916fa98f58799d8bacb1362cb951211629d6",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Morris_Park_2_vc.jpg"
+  },
   "orchard-beach-pelham-bay-park": {
     "sha256": "52eaa6e81ed6d8c29b32d505453a35bf5cfd6194ba952de3912fafee4f3b22fc",
     "source_url": "https://commons.wikimedia.org/wiki/File:Orchard_Beach_-_Pelham_Bay_Park_-_The_Bronx.jpg"
@@ -86,6 +102,14 @@
   "our-lady-of-mount-carmel-church-belmont": {
     "sha256": "54c9e1edc2a24ba882e947f4239cfc31f60b0c0654faeff88fadcb36c8859486",
     "source_url": "https://commons.wikimedia.org/wiki/File:Our_Lady_of_Mount_Carmel%27s_Church_Belmont_Bronx_IMG_2922_HLG.jpg"
+  },
+  "parade-ground-hero-van-cortlandt-park": {
+    "sha256": "d9f624e8800e427b6354988eb6d46a12ad6d9f3cf5c3caf06ba5f72445ff4684",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Van-cortland-park.JPG"
+  },
+  "park-aerial-hero-pelham-bay-park": {
+    "sha256": "2d1d4fbe57243134d3e8b5c4cae9112eed13cb2b1597eaae975f1e23774b1432",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Pelham_Bay_Park_aerial_view.jpg"
   },
   "pelham-bay-salt-marsh-pelham-bay-park": {
     "sha256": "a5dff4c478c41800f6eb44085f0542a3d0e4e3b4308db47774d2df5f02f3924a",
@@ -102,6 +126,10 @@
   "riverdale-monument-riverdale": {
     "sha256": "40f117acba84315d1cab4916b5b7b5bffc3a0d7e58f7dd3d76160ce192fae10d",
     "source_url": "https://commons.wikimedia.org/wiki/File:Riverdale_Bell_Tower_jeh.JPG"
+  },
+  "riverdale-station-hudson-hero-riverdale": {
+    "sha256": "535c6d0983e04dc78505dc0231d719c39a94858cd2d0912111e01a838a5916af",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Riverdale_Metro_North_Station,_Bronx,_NY.jpg"
   },
   "st-anns-church-mott-haven": {
     "sha256": "ed7e5acbb4f599e6dfc03c11ea2b6162d39ce9ff558889df87d8892cc1d7c487",

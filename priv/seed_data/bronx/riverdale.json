@@ -43,7 +43,17 @@
         "answer": "The Riverdale Historic District, 15 acres in the northwest of the neighborhood, was designated on October 16, 1990. Wave Hill House was designated a New York City Landmark on June 21, 1966 and Wave Hill was added to the National Register of Historic Places in 1983. Fonthill Castle was designated on March 15, 1966 and National Register-listed on July 11, 1980. Riverdale Presbyterian Church was designated on April 19, 1966 and listed on October 14, 1982; Christ Church on January 11, 1967 and listed on September 8, 1983. The William E. Dodge House was listed on August 28, 1977, the Robert Colgate House on September 8, 1983, and the Riverdale Monument on January 3, 2012."
       }
     ],
-    "photos": []
+    "photos": [
+      {
+        "src": "/photos/ny/bronx/riverdale/riverdale-station-hudson-hero-riverdale.jpg",
+        "thumb": "/photos/ny/bronx/riverdale/riverdale-station-hudson-hero-riverdale_thumb.jpg",
+        "title": "Riverdale station and the Hudson River",
+        "description": "A wide view north over the Riverdale railroad station, where two low platforms flank several sets of track running through a cut. A glass-walled enclosed footbridge spans the tracks, ending in a green steel elevator tower with a spire on the left. A rough stone retaining wall and dense green trees rise along the right side, while the Hudson River and the low wooded ridge on the far shore fill the left background under a pale, hazy sky.",
+        "author": "RoySmith",
+        "license": "CC BY-SA 4.0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Riverdale_Metro_North_Station,_Bronx,_NY.jpg"
+      }
+    ]
   },
   "places": [
     {
