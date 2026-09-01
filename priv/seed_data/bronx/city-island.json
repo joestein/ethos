@@ -312,5 +312,16 @@
       "note": "63 Pilot Street, one of several yacht clubs on City Island."
     }
   ],
-  "links": []
+  "links": [
+    {
+      "target": "guide:pelham-bay-park-bronx-guide",
+      "kind": "see-also",
+      "note": "City Island lies south of Pelham Bay Park, and the City Island Bridge lands on the mainland at Rodman's Neck, inside the park."
+    },
+    {
+      "target": "guide:throgs-neck-bronx-guide",
+      "kind": "same-region",
+      "note": "Another Bronx neighborhood covered in this series."
+    }
+  ]
 }

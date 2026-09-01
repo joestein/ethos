@@ -39,7 +39,17 @@
         "answer": "East 169th Street to the north, Webster Avenue to the east, East 149th Street to the south, and Jerome Avenue and the Harlem River to the west. It is bordered to the west by Highbridge and the Harlem River; to the north by Mount Eden; to the east by Claremont Village, Melrose and Morrisania; and to the south by Mott Haven. The neighborhood is divided into three subsections: West Concourse, East Concourse and Concourse Village."
       }
     ],
-    "photos": []
+    "photos": [
+      {
+        "src": "/photos/ny/bronx/concourse/grand-concourse-at-165th-street-hero-concourse.jpg",
+        "thumb": "/photos/ny/bronx/concourse/grand-concourse-at-165th-street-hero-concourse_thumb.jpg",
+        "title": "The Grand Concourse looking south at 165th Street",
+        "description": "A very wide roadway under a flat grey sky, seen from the middle of the street. A narrow concrete island runs away from the camera down the centre, paved with metal subway grating and carrying a single ornamental lamppost with scrolled ironwork and two lanterns on curved arms. To the left of the island a broad asphalt carriageway with a double yellow line runs south; to the right, a planted median of low shrubs and bare earth separates it from a second roadway with cars parked along the kerb. Apartment blocks line both sides, mostly five to eight storeys in pale buff and red brick, with a taller white tower with balconies at the far left and a broad light-coloured slab building in the distance. The trees along the kerbs are leafless, traffic lights and a Speed Limit 30 sign stand at the crossing ahead, and a few cars and a bus are stopped in the middle distance.",
+        "author": "Jim.henderson",
+        "license": "Public domain",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Grand_Conc_165_jeh.JPG"
+      }
+    ]
   },
   "places": [
     {
@@ -53,7 +63,17 @@
       "summary": "A four-story building at 1125 Grand Concourse, in the Concourse neighborhood, in the French and Italian Renaissance style with soft gray and yellow limestone. Joseph H. Friedlander and Harry Allan Jacobs filed plans in 1922; construction started in 1924 and the home opened that year, with two wings added between 1928 and 1931. It was designated a New York City Landmark on June 2, 1992.",
       "history": "Andrew Freedman was a self-made millionaire who feared losing his fortune in the Panic of 1907. He died in 1915 leaving a $4 million estate, which funded a home for aged and indigent persons of both sexes who had formerly been in good circumstances. Residents originally lived rent-free and with free servants.\n\nThe trust was depleted by the 1960s. The Mid Bronx Senior Citizens Council purchased the home in 1982 and relocated the remaining 30 residents, then reopened it in 1983 as a residence for the elderly and the poor. The building functions as a daycare center, an event space, and an artists' hub with residency programs, workshops and exhibitions.",
       "status": "open",
-      "photos": []
+      "photos": [
+        {
+          "src": "/photos/ny/bronx/concourse/andrew-freedman-home-concourse.jpg",
+          "thumb": "/photos/ny/bronx/concourse/andrew-freedman-home-concourse_thumb.jpg",
+          "title": "The Andrew Freedman Home from its front lawn",
+          "description": "A long pale limestone building seen across a lawn, its facade running the full width of the frame behind bare winter trees. The ground floor is a row of tall round-arched windows with small-paned glazing and hanging lanterns between them, set behind a stone balustrade; broad stone steps lead down from that terrace to the grass, flanked by carved stone urns on pedestals. Above the arches the wall is smooth ashlar with rectangular windows in moulded surrounds, and incised lettering runs along the frieze near the roofline, partly hidden by branches. A green wooden bench stands on the right beside a white lamppost, and ivy and low shrubs fill the foreground.",
+          "author": "Jim.henderson",
+          "license": "CC0",
+          "source_url": "https://commons.wikimedia.org/wiki/File:Andrew_Freedman_Home_1125_GC_jeh.jpg"
+        }
+      ]
     },
     {
       "slug": "concourse-plaza-hotel",
@@ -66,7 +86,17 @@
       "summary": "A building at the Grand Concourse and East 161st Street, in the Concourse neighborhood. Ground was broken in 1922 and it opened on October 22, 1923, as a 12-story luxury hotel, with a grand ballroom, four banquet halls, two meeting and dinner rooms, two kitchens — one banquet, one kosher — and a rifle range in the sub-basement.",
       "history": "Al Smith said at the opening: \"After seeing this new structure, I am convinced that anything can go in the Bronx.\"\n\nBabe Ruth, Mickey Mantle, Roger Maris and Frank Gifford were among its guests, and Horace Clarke, the last Yankees player to live there, did so in the early 1970s. It hosted presidential campaign stops, including a John F. Kennedy event on November 5, 1960, where a sign read \"The home of the knishes thinks Jack is delicious.\" Tito Puente's band played New Year's Eve dances there.\n\nThe New York City government purchased the building in 1974 and converted it to senior citizens' housing, its current use. It appeared in the films Marty (1955), The Catered Affair (1957) and Gloria (1980).",
       "status": "open",
-      "photos": []
+      "photos": [
+        {
+          "src": "/photos/ny/bronx/concourse/concourse-plaza-hotel-concourse.jpg",
+          "thumb": "/photos/ny/bronx/concourse/concourse-plaza-hotel-concourse_thumb.jpg",
+          "title": "Postcard view of the Concourse Plaza Hotel",
+          "description": "A sepia-toned postcard showing a large brick hotel from across a wide street corner, printed with the caption \"CONCOURSE PLAZA HOTEL - Grand Concourse at 161st Street, New York, N. Y.\" along the bottom. The building is a tall block with a taller central tower and two flanking wings, each capped by a setback upper storey with a domed roof feature and stone finials at the corners. Rows of regularly spaced windows cover the brick walls. The lighter stone base carries a marquee lettered \"CONCOURSE PLAZA\" over an arcade of arched windows on the left, an awning over a corner entrance in the middle, and a curved shopfront with a lettered sign and a canopy of small lights wrapping the right-hand corner. Period automobiles are parked along the kerb at both ends, and the sky above is plain and pale.",
+          "author": "Lumitone Photoprint",
+          "license": "Public domain",
+          "source_url": "https://commons.wikimedia.org/wiki/File:Lumitone_Photoprint_-_Concourse_Plaza_Hotel.jpg"
+        }
+      ]
     }
   ],
   "entries": [

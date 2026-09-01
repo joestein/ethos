@@ -11,6 +11,14 @@
     "sha256": "719fc2c2509b6995515c6cf00bc0050f3648dd08b154f7694937d403f02cc70b",
     "source_url": "https://commons.wikimedia.org/wiki/File:Albert_Einstein_College_evening_view.png"
   },
+  "american-bank-note-plant-hero-hunts-point": {
+    "sha256": "3f145bc779aa69bd6ffec6caae8865431efa1ec5276b4878a5dfd41470e3d7e6",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Amer_Bank_Note_Lafayette_Av_%26_Baretto_St_sun_jeh.jpg"
+  },
+  "andrew-freedman-home-concourse": {
+    "sha256": "2e08adff1a49997491323aa2d08fbbce4ee885a9dbcc599445b7d7ce41749c58",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Andrew_Freedman_Home_1125_GC_jeh.jpg"
+  },
   "arthur-avenue-belmont": {
     "sha256": "7ed2b5dfb487f7319e18271230fb10576c03969ef25b4bb8856523a6f6164063",
     "source_url": "https://commons.wikimedia.org/wiki/File:Arthur_Avenue_between_184th_and_186th_Street_in_the_Bronx,_New_York_City_001.jpg"
@@ -18,6 +26,10 @@
   "arthur-avenue-retail-market-belmont": {
     "sha256": "3fd5555040aae01676da9f48586f46c96a0b619cc1621113da6f696e90421610",
     "source_url": "https://commons.wikimedia.org/wiki/File:Arthur_Avenue_Retail_Market_(Bronx,_New_York)_001.jpg"
+  },
+  "barretto-point-park-lawn-hunts-point": {
+    "sha256": "ca028259400e04304e4d2296e4b2547d645d8fe104dffb448e0f57867df598f1",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Barretto_Point_Park_central_lawn.jpg"
   },
   "bartow-pell-mansion-pelham-bay-park": {
     "sha256": "83d277b375a6cafaa57e8248be319b6d4974a21b69c06e02eaa80413e32ec5cb",
@@ -55,6 +67,10 @@
     "sha256": "7a3b289e40b6540618733f225ded0990de81fca9bdd66a05eff2e6831ea1f82a",
     "source_url": "https://commons.wikimedia.org/wiki/File:City_Island_Nautical_Museum.JPG"
   },
+  "concourse-plaza-hotel-concourse": {
+    "sha256": "68e9cff13d9abfd6f94675e77e46773c80d12ef7e5121dc58858281183dd4451",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Lumitone_Photoprint_-_Concourse_Plaza_Hotel.jpg"
+  },
   "east-139th-street-row-houses-hero-mott-haven": {
     "sha256": "046e0885f518e689e8ab96f13036adb48106fa9a38fbc00b975d37e2d7c6e849",
     "source_url": "https://commons.wikimedia.org/wiki/File:East_139.jpg"
@@ -67,9 +83,17 @@
     "sha256": "0cd5f173ce31b7ad64ef3ef9212788b478284d8ac9b0182f7573074a5d8ae10b",
     "source_url": "https://commons.wikimedia.org/wiki/File:Grace_Episcopal_Church,_City_Island,_Bronx_-_20220616.jpg"
   },
+  "grand-concourse-at-165th-street-hero-concourse": {
+    "sha256": "2b57e75af0ea864ebf6ed75f48563205100b3ccdc7a1a91437750d08b995bfa4",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Grand_Conc_165_jeh.JPG"
+  },
   "haupt-conservatory-bronx-park": {
     "sha256": "260ad44cc460e1d011903faf8ba78f9ae6c8e9a61feffeb6d8f7856ed84d6025",
     "source_url": "https://commons.wikimedia.org/wiki/File:Haupt_Conservatory_NYBG_jeh.jpg"
+  },
+  "hunts-point-riverside-park-boats-hunts-point": {
+    "sha256": "01439a0a7c66896946a845b4f2ef087668ec9a489311f895844b0cba67584bb2",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Hunts_Point_Riverside_Park_Boat_Sculptures.jpg"
   },
   "jacobi-medical-center-morris-park": {
     "sha256": "e447936a9ad3198dc96d6464f995d5e52bfcb93bc94dd98208bcfb2e7299389b",

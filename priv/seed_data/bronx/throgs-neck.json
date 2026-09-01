@@ -205,5 +205,16 @@
       "note": "21 Longstreet Avenue, on the outermost block before Eastchester Bay in Locust Point."
     }
   ],
-  "links": []
+  "links": [
+    {
+      "target": "guide:city-island-bronx-guide",
+      "kind": "same-region",
+      "note": "City Island and Throgs Neck are both part of Bronx Community District 10, along with Country Club, Pelham Bay, Schuylerville and Westchester Square."
+    },
+    {
+      "target": "guide:pelham-bay-park-bronx-guide",
+      "kind": "same-region",
+      "note": "Repulsed at Throgs Neck in October 1776, Howe's troops landed six days later at Rodman's Neck, to the north across Eastchester Bay."
+    }
+  ]
 }

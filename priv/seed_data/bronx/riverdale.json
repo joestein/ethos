@@ -257,5 +257,16 @@
       "note": "5225 Sycamore Ave. in Hudson Hill, listed on the National Register of Historic Places on September 8, 1983."
     }
   ],
-  "links": []
+  "links": [
+    {
+      "target": "guide:kingsbridge-bronx-guide",
+      "kind": "shared-history",
+      "note": "Riverdale and Kingsbridge were both part of the Town of Yonkers until the later 19th century, and Kingsbridge adjoins Riverdale on the southeast."
+    },
+    {
+      "target": "guide:van-cortlandt-park-bronx-guide",
+      "kind": "same-region",
+      "note": "Van Cortlandt Park and Broadway form the eastern boundary of Riverdale."
+    }
+  ]
 }

@@ -221,5 +221,16 @@
       "note": "291 West 231st Street. Its 1905 Carnegie building at 3041 Kingsbridge Avenue, by McKim, Mead & White, is now the Spuyten Duyvil Preschool."
     }
   ],
-  "links": []
+  "links": [
+    {
+      "target": "guide:riverdale-bronx-guide",
+      "kind": "same-region",
+      "note": "Step streets, some with up to 160 steps, climb between Kingsbridge and Riverdale. Kingsbridge's northern boundary is Manhattan College Parkway."
+    },
+    {
+      "target": "guide:mott-haven-bronx-guide",
+      "kind": "same-region",
+      "note": "The Bx1 bus runs between Mott Haven and Kingsbridge's 231st Street station, by way of the Grand Concourse and Sedgwick Avenue."
+    }
+  ]
 }

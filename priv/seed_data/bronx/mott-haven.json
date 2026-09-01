@@ -246,5 +246,16 @@
       "note": "The brewery's own site names a Bronx location and a second at Hudson Yards in Manhattan."
     }
   ],
-  "links": []
+  "links": [
+    {
+      "target": "guide:concourse-bronx-guide",
+      "kind": "same-region",
+      "note": "The Bronx General Post Office, built in 1935 and opened in 1937, stands at 558 Grand Concourse."
+    },
+    {
+      "target": "guide:hunts-point-bronx-guide",
+      "kind": "same-region",
+      "note": "Another Bronx neighborhood covered in this series."
+    }
+  ]
 }

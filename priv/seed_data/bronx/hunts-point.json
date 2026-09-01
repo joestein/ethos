@@ -43,7 +43,17 @@
         "answer": "THE POINT CDC is a community development corporation at 940 Garrison Ave., whose strapline reads \"Developing Leadership in Hunts Point Since 1994.\" Its posted hours are Monday to Friday, 10:00 am to 6:00 pm, with Saturday and Sunday closed, and it has a second address, the Riverside Campus for Arts and The Environment, at 1391 Lafayette Ave. It runs the Hunts Point Fish Parade & Arts Festival. Its neighborhood history names the Hunts Point Palace among the clubs and dance halls where jazz musicians played, recalls casitas and community gardens and the graffiti \"Que Viva Puerto Rico Libre\" in the 1970s, and calls the Spofford Juvenile Center \"a symbol of pain, abuse, corruption, and neglect.\""
       }
     ],
-    "photos": []
+    "photos": [
+      {
+        "src": "/photos/ny/bronx/hunts-point/american-bank-note-plant-hero-hunts-point.jpg",
+        "thumb": "/photos/ny/bronx/hunts-point/american-bank-note-plant-hero-hunts-point_thumb.jpg",
+        "title": "The brick front of the American Bank Note Company Printing Plant",
+        "description": "A long red-brick industrial building running away along a street corner under a blue sky with thin cloud. The nearest bay is a tall blank-sided block of dark brick; along the front, brick piers divide the bays, and each of the upper floors carries a wide arched window filled with many-paned steel sash, with rectangular banks of the same glazing on the floors below. Further along the block a square brick tower with a crenellated top and a tall arched opening rises above the roofline, and two white antenna panels stand on the roof nearer the camera. A row of cars is parked along the kerb, a white van and a grey sedan are on the roadway, and young street trees, a red parking sign and a black steel door reached by concrete steps stand along the sidewalk.",
+        "author": "Jim.henderson",
+        "license": "CC0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Amer_Bank_Note_Lafayette_Av_%26_Baretto_St_sun_jeh.jpg"
+      }
+    ]
   },
   "places": [
     {
@@ -70,7 +80,17 @@
       "official_url": "https://www.nycgovparks.org/parks/barretto-point-park",
       "summary": "An NYC Parks property on Viele Ave. between Tiffany St. and Barretto St., carried as X307 and 12.22 acres, opened in 2006. North and South Brother Islands are visible from it; the islands themselves are closed to the public.",
       "status": "open",
-      "photos": []
+      "photos": [
+        {
+          "src": "/photos/ny/bronx/hunts-point/barretto-point-park-lawn-hunts-point.jpg",
+          "thumb": "/photos/ny/bronx/hunts-point/barretto-point-park-lawn-hunts-point_thumb.jpg",
+          "title": "The central lawn at Barretto Point Park, looking towards the water",
+          "description": "A broad mown lawn, flecked with small white clover flowers and mower stripes, sloping gently away from the camera on a bright summer day. Leafy trees and shrubs close in along the left edge, and a branch in full green leaf hangs across the top right of the frame. A line of trees runs along the far side of the grass, with a footpath, a bin and pale seating visible beneath them at the left, and a metal railing along the right. Beyond the trees the ground opens onto flat water, with a low far shoreline of buildings on the horizon under a blue sky streaked with thin white cloud.",
+          "author": "Peter Greenberg",
+          "license": "CC BY-SA 3.0",
+          "source_url": "https://commons.wikimedia.org/wiki/File:Barretto_Point_Park_central_lawn.jpg"
+        }
+      ]
     },
     {
       "slug": "tiffany-street-pier",
@@ -97,7 +117,17 @@
       "summary": "An NYC Parks property on Lafayette Av between Edgewater Rd and the Bronx River, carried as X336 and 0.43 acres. NYC Parks lists barbecuing areas, fishing, kayak/canoe launch sites and Wi-Fi hot spots here, and describes the park as a gateway to the revitalized Bronx River, a major connector to the Bronx River Greenway, and a home to kayakers, canoers, and paddlers from across the city — a site once an illegal dumping ground, since transformed into a waterfront oasis, with a pier for fishing, a kayak and canoe launch, and a spray shower and playground that take the shape of built-in canoes. Its Parks Vital Signs give a Park Condition Score of 91, recent investment of $754K and 98 mapped trees.",
       "history": "Construction began in 2004 and was completed in May 2007, making this the first section of the South Bronx Greenway to be built. Majora Carter spearheaded the park, and first envisioned the greenway in the late 1990s as part of a $1.25 million federal transportation grant application. The park is the 2009 Silver Medalist of the Rudy Bruner Award for Urban Excellence, whose award page says the park is now a riverfront oasis with safe access to the river for the first time in over 60 years.",
       "status": "open",
-      "photos": []
+      "photos": [
+        {
+          "src": "/photos/ny/bronx/hunts-point/hunts-point-riverside-park-boats-hunts-point.jpg",
+          "thumb": "/photos/ny/bronx/hunts-point/hunts-point-riverside-park-boats-hunts-point_thumb.jpg",
+          "title": "Boat-shaped forms around the spray fountain at Hunts Point Riverside Park",
+          "description": "Three boat shapes moulded in concrete sit on a pale concrete pad under heavy tree shade. On the left is a rowboat with a faded pale blue hull, in the centre a smaller cream-coloured rowboat with bench seats, and on the right a long white canoe. They face a squat carved stone column in the middle of the pad, from whose base a fine spray of water is rising; the concrete around it is stained rust-orange. Low curving walls in ochre and grey stone, set with round studs, ring the space, with planting beds behind them. Black metal benches stand in the shade at either side, a lamppost rises at the back, and an iron picket fence closes off the far edge, with a street, parked cars and low buildings beyond it.",
+          "author": "RoySmith",
+          "license": "CC BY-SA 4.0",
+          "source_url": "https://commons.wikimedia.org/wiki/File:Hunts_Point_Riverside_Park_Boat_Sculptures.jpg"
+        }
+      ]
     },
     {
       "slug": "hunts-point-playground",

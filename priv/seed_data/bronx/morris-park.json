@@ -280,5 +280,16 @@
       "note": "1024 Morris Park Avenue. An American Restaurant by its own description, with online ordering, catering and event hosting."
     }
   ],
-  "links": []
+  "links": [
+    {
+      "target": "guide:mott-haven-bronx-guide",
+      "kind": "see-also",
+      "note": "The Bx21 bus runs from Mott Haven to Westchester Square, with Morris Park Avenue among its primary streets."
+    },
+    {
+      "target": "guide:hunts-point-bronx-guide",
+      "kind": "see-also",
+      "note": "Penn Station Access plans new Metro-North stations on the New Haven Line at both Morris Park and Hunts Point."
+    }
+  ]
 }

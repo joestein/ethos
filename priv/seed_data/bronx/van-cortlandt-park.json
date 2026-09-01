@@ -375,6 +375,11 @@
       "target": "guide:pelham-bay-park-bronx-guide",
       "kind": "same-region",
       "note": "Van Cortlandt Park's 1,146 acres rank third in New York City, behind the Staten Island Greenbelt and Pelham Bay Park's 2,772 acres."
+    },
+    {
+      "target": "guide:riverdale-bronx-guide",
+      "kind": "same-region",
+      "note": "Van Cortlandt Park and Broadway form Riverdale's eastern border, and the Van Cortlandt House stands in the park's southwestern corner, near Riverdale."
     }
   ]
 }
