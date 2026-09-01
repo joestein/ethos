@@ -30,7 +30,7 @@ unlinked. The Pelham Bay page can carry the edge when it lands.
 | 21 Tier Street | `21-tier-street` | historic-site | 21 Tier Street |
 | City Island Yacht Club | `city-island-yacht-club` | attraction | 63 Pilot Street |
 
-Twelve entries, one per place. Five FAQ entries. Three sections. Intro 155 words. No photos —
+Twelve entries, one per place. Five FAQ entries. Three sections. Intro 159 words. No photos —
 the three shipped Bronx pages carry none and no candidate artifact exists for this one.
 
 Places 7–11 ship on two confirmed claims each (name-with-address and designation date) and
@@ -143,17 +143,102 @@ they belong to Pelham Bay Park, and `@marquee_institutions` in the Bronx gate as
   no Metro-North station and no NYC Ferry landing serving City Island." It appears in the
   Getting there section and is *not* repeated in the transit FAQ. The NYC Ferry advocacy fact
   (D10) is published beside it as a positive claim, which is what it is.
-- **Attribution used only where a claim rests on a source's characterization**: the Harlem
-  Yacht Club's "third oldest continuously functioning" (B14, a source-carried superlative), the
-  1908 "largest yacht in the world" (B10), the restaurants' own-site descriptions, the museum's
-  own-site exhibit description, and the Pelham Bay Park article's framing of the bridge. The
-  confirmed bus routes, subway lines and terminals are stated flat, with no preamble.
+- **Attribution used only where a claim rests on a source's characterization.** This was *not*
+  true of the first commit — see "Fact-fidelity review, round 1" below, where nine
+  constructions wrapping a source's *information* were stripped and this bullet's original
+  claim that transit facts were "stated flat, with no preamble" is corrected. As shipped, the
+  sixteen remaining constructions are: B14's source-carried superlative, B10's "described at
+  the time as", eleven own-site wrappers (the museum, the three restaurants and their entry
+  notes), the Temple Beth El characterization, and two boroughwide-landmarks-list
+  attributions. Every confirmed bus route, subway line, terminal and bridge fact is now stated
+  flat.
 - No trip duration and no vague proximity anywhere; "24 hours a day" is a published service
   fact from D4 and trips no pattern (pattern 11 is anchored on a preceding "in", pattern 6
   requires a mode word). No allowlist entry was added to either ban.
 - `county` is `"Bronx"` on the guide and on all twelve places.
 - Section heading is byte-exact `Getting there`, covering subway, bus, Metro-North and ferry.
 - FAQ carries `How do I get to City Island?`.
+
+## Fact-fidelity review, round 1 — what changed
+
+No Critical. The review re-fetched all three restaurant sites and confirmed every barred item
+is absent. Three Important, two Minor, and one editorial finding that mattered more than the
+three. All addressed; nothing in the "do not touch" list was touched — the restaurants'
+own-site sourcing, every address, the census figures, `"links": []` and the twelve-place list
+are unchanged.
+
+**1. "Seafood" cut from The Original Crab Shanty.** `places[5].summary` now reads "A restaurant
+at 361 City Island Avenue." Verdicts 6.1–6.6 license the name, address, phone, 1977, the
+theater, the Post Office and Crab Lane; the only category evidence was **6.2, the DOHMH row**,
+which is barred from prose. "Restaurant" survives on 6.1's own-site name. "Seafood" came from
+the finder's unadjudicated "What it is:" line and had no verdict behind it. Sammy's keeps it
+(4.3 licenses "Fresh Seafood" from the own site) and Johnny's keeps it (5.2 restates a "Clam
+Section"); the title's hook is licensed by the same 4.3.
+
+**2. Two unrestated clauses cut — the New Lots pattern.** "the 475-ton **luxury** steam yacht
+Kanahwa" → "the 475-ton steam yacht Kanahwa": B11 restates tonnage, year, owner and the 1917
+conversion, not the adjective. "The Island Current, a local **monthly** newspaper" → "a local
+newspaper": A20 restates only the October 1971 first printing, and frequency is a volatile
+specific nobody pinned.
+
+**3. Nine attribution constructions stripped**, each wrapping a source's information rather
+than its characterization:
+
+| Where | Was | Now |
+| --- | --- | --- |
+| `sections[2].body` | "The main City Island article gives the island's public transit as…" | "The island's other public transit link is two rush-hour extended round-trips of the BxM8…" |
+| `faq[0].answer` | "The main City Island article adds two rush-hour…" | "Two rush-hour extended round-trips of the BxM8 express route run to Manhattan." |
+| `sections[1].body` | "The Pelham Bay Park article describes the two small land berms … as the island's only connecting road" | "Two small land berms between Rodman's Neck and City Island carry the island's only connecting road to the mainland." |
+| `faq[2].answer` | "The Pelham Bay Park article describes the crossing … as" | "The crossing between Rodman's Neck and City Island is the island's only connecting road to the mainland" |
+| `sections[2].body` | "Wikipedia's NYC Ferry article records that City Island residents advocated…" | "City Island residents advocated for a ferry stop there." |
+| `faq[1].answer` | "Wikipedia's article on Rodman's Neck calls the island by an earlier name, Minneford Island, in describing…" | "The island was earlier known as Minneford Island, and Samuel Rodman ran a ferry from it across to Anne's Hoeck…" |
+| `sections[0].body` | "The main City Island article names the Harlem Yacht Club, the City Island Yacht Club and the Morris Yacht and Beach Club among the island's clubs" | "The Harlem Yacht Club, the City Island Yacht Club and the Morris Yacht and Beach Club are among the clubs on the island" |
+| `entries[11].note` | "one of several yacht clubs the main City Island article names on the island" | "one of several yacht clubs on City Island" |
+| `places[1].history` | "The main City Island article names four houses of worship on the island:" | "Four houses of worship stand on the island:" |
+
+The `faq[1]` case was the worst of the nine: `sections[1].body` already stated the Minneford
+name flat, so the file contradicted itself on the same fact. Both now state it flat, and
+neither asserts it as one sentence with the 1761 renaming (A7b).
+
+The Temple Beth El clause keeps its attribution — "which the main City Island article describes
+as a non-denominational liberal synagogue" is a characterization, and 2.4 pins it to those
+words. B22's non-exhaustive framing survives the rewrite: "are among the clubs on the island"
+still refuses the count.
+
+**4. A21 used; the intro now opens on what the place is.** The first commit ran a chronology —
+1654 → 1761 → 1819 → 1895 → 1898 — accurate but a sequence rather than a portrait, and it left
+A21 on the table. cityisland.com's confirmed self-description is publishable as a paraphrase
+(the source page carries a typo, "in th Bronx", so it must not be quoted verbatim), and it is
+the sentence that carries the village feeling. The new opening:
+
+> City Island is a small community at the edge of New York City, just beyond Pelham Bay Park in
+> the Bronx and surrounded by the waters of Long Island Sound: an island roughly 1.5 miles long
+> by half a mile wide at the Sound's extreme western end, east of Eastchester Bay.
+
+The shipbuilding-to-daytrippers arc (A11) now follows immediately, before the chronology, so
+the intro says what the island *is* before what happened to it. Intro is 159 words, inside the
+100–160 range; the trims to make room removed detail ("English physician", "of New York") and
+added nothing.
+
+**The 1901 New York Times line now opens the yacht club paragraph** rather than sitting buried
+mid-paragraph: "In 1901 the New York Times observed that in place of the fishing smacks and
+oyster boats that once anchored in East Chester Bay is the fleet of the Harlem Yacht Club." It
+is the most evocative confirmed sentence on the page and it now lands. The paragraph's
+remaining facts are unchanged and in the same order.
+
+**Minor — causation cut from the Crab Shanty building.** "put up in the early 1900s as a silent
+movie theater, which is where its tall ceilings come from" → "the building, with its tall
+ceilings, was a silent movie theater in the early 1900s". The site gives the ceilings as a
+feature of the building, not as an inheritance from the theater; 6.4 restates only the detail.
+
+**Minor — the D8 correction reordered so it cannot be read past.** The pedestrian-bridge
+sentence used to close a paragraph, with "By road, the City Island Bridge is the island's only
+connection" opening the next — leaving the walk-from-the-station inference alive across the
+break. Both sentences now sit adjacent in the same paragraph: "A pedestrian bridge from the
+station entrance crosses the Bruckner Expressway and leads to Pelham Bay Park. The island
+itself is reached by road: the City Island Bridge, landing on Rodman's Neck at its western end,
+is its only connection to the mainland." The refutation is closed by a positive statement, with
+no research-process negative.
 
 ## Census move
 
