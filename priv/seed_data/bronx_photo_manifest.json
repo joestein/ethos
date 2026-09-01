@@ -1,1 +1,142 @@
-{}
+{
+  "231st-street-station-kingsbridge": {
+    "sha256": "9526c8322d4c74b6ccc2c0aeb7e1868e4070dcd86d772ec972ab7317eec624b0",
+    "source_url": "https://commons.wikimedia.org/wiki/File:231st_Street_Station_001.jpg"
+  },
+  "40th-precinct-alexander-avenue-mott-haven": {
+    "sha256": "84ed2e4a3fc501bf4645869f511b39b43b20827472aa401941dd065cdf7afa71",
+    "source_url": "https://commons.wikimedia.org/wiki/File:40_Pct_Alexander_Av_jeh.jpg"
+  },
+  "albert-einstein-college-of-medicine-morris-park": {
+    "sha256": "719fc2c2509b6995515c6cf00bc0050f3648dd08b154f7694937d403f02cc70b",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Albert_Einstein_College_evening_view.png"
+  },
+  "arthur-avenue-belmont": {
+    "sha256": "7ed2b5dfb487f7319e18271230fb10576c03969ef25b4bb8856523a6f6164063",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Arthur_Avenue_between_184th_and_186th_Street_in_the_Bronx,_New_York_City_001.jpg"
+  },
+  "arthur-avenue-retail-market-belmont": {
+    "sha256": "3fd5555040aae01676da9f48586f46c96a0b619cc1621113da6f696e90421610",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Arthur_Avenue_Retail_Market_(Bronx,_New_York)_001.jpg"
+  },
+  "bartow-pell-mansion-pelham-bay-park": {
+    "sha256": "83d277b375a6cafaa57e8248be319b6d4974a21b69c06e02eaa80413e32ec5cb",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Bartow-Pell_Mansion_2007.jpg"
+  },
+  "bronx-general-post-office-mott-haven": {
+    "sha256": "a2ab8a8fbdc1c8ab808d6734e52da1e64d09c37e05b70819b553238fe2292085",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Bronx_GPO_GC_rain_jeh.jpg"
+  },
+  "bronx-zoo-entrance-bronx-park": {
+    "sha256": "f5e3797c5cb7cbca1f4ebf0cf830064ef13e54b9461531c778721b50d47aa585",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Entrance_to_Bronx_Zoo_2008.jpg"
+  },
+  "christ-church-riverdale": {
+    "sha256": "75f48afdb5d87c4c4be04bed9d39ac0e6ff129c9e46e6459ab70be3517d9b958",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Christ_Church,_Riverdale,_Bronx_-_20220616.jpg"
+  },
+  "church-of-st-john-kingsbridge": {
+    "sha256": "c21eb23da09ec9cd2b87fd4d8d928eb92338faada204f325ee2f047f361a951f",
+    "source_url": "https://commons.wikimedia.org/wiki/File:John_RCC_3021_Kingsbridge_Av_jeh.JPG"
+  },
+  "city-island-bridge-city-island": {
+    "sha256": "0e93360f9f5de501d77f4c144f81ea8f356f2285f9fe3a562227db73e5def4ed",
+    "source_url": "https://commons.wikimedia.org/wiki/File:New_City_Island_Causeway_Bridge_Bronx_20180530-jag9889.jpg"
+  },
+  "city-island-nautical-museum-city-island": {
+    "sha256": "7a3b289e40b6540618733f225ded0990de81fca9bdd66a05eff2e6831ea1f82a",
+    "source_url": "https://commons.wikimedia.org/wiki/File:City_Island_Nautical_Museum.JPG"
+  },
+  "fort-schuyler-bastion-throgs-neck": {
+    "sha256": "03d59e6c9733533d5749d88304d5789ccac8a7f86cd17747abb1850a73b38e97",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Fort_Schuyler_Bastion.jpg"
+  },
+  "grace-episcopal-church-city-island": {
+    "sha256": "0cd5f173ce31b7ad64ef3ef9212788b478284d8ac9b0182f7573074a5d8ae10b",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Grace_Episcopal_Church,_City_Island,_Bronx_-_20220616.jpg"
+  },
+  "haupt-conservatory-bronx-park": {
+    "sha256": "260ad44cc460e1d011903faf8ba78f9ae6c8e9a61feffeb6d8f7856ed84d6025",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Haupt_Conservatory_NYBG_jeh.jpg"
+  },
+  "jacobi-medical-center-morris-park": {
+    "sha256": "e447936a9ad3198dc96d6464f995d5e52bfcb93bc94dd98208bcfb2e7299389b",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Jacobi_Medical_Center,_The_Bronx_(aerial_view,_2007).jpg"
+  },
+  "kingsbridge-library-kingsbridge": {
+    "sha256": "0f69a8a52a92a6e9fe261d9af04ce1182656c27d2344142b4721fd41b797135d",
+    "source_url": "https://commons.wikimedia.org/wiki/File:NYPL_Bronx_Kingsbridge_Library_IMG_2589_HLG.jpg"
+  },
+  "lorillard-snuff-mill-bronx-park": {
+    "sha256": "ecec3822de7c0d4772f56ed510cc7b7885e4483f75c25080a65c3199968f2271",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Lorillard_mill_river_jeh.jpg"
+  },
+  "marios-restaurant-belmont": {
+    "sha256": "8c354b4b90a3a54aeaaf4986a80188d2fbb0dc1ea6adad484343870d63e733a0",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Mario%27s_Restaurant_on_Arthur_Avenue_(Bronx,_New_York)_001.jpg"
+  },
+  "morris-park-library-morris-park": {
+    "sha256": "ceb6dc0ae1a2e0fa3aa9d30209ba28e7683a805774bf47121b9d242c6bad8d25",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Morris_Park_Library_HDR_2022_jeh.jpg"
+  },
+  "orchard-beach-pelham-bay-park": {
+    "sha256": "52eaa6e81ed6d8c29b32d505453a35bf5cfd6194ba952de3912fafee4f3b22fc",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Orchard_Beach_-_Pelham_Bay_Park_-_The_Bronx.jpg"
+  },
+  "our-lady-of-mount-carmel-church-belmont": {
+    "sha256": "54c9e1edc2a24ba882e947f4239cfc31f60b0c0654faeff88fadcb36c8859486",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Our_Lady_of_Mount_Carmel%27s_Church_Belmont_Bronx_IMG_2922_HLG.jpg"
+  },
+  "pelham-bay-salt-marsh-pelham-bay-park": {
+    "sha256": "a5dff4c478c41800f6eb44085f0542a3d0e4e3b4308db47774d2df5f02f3924a",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Pelham_Bay_salt_marsh_and_Pelham_Islands.jpg"
+  },
+  "peninsula-aerial-throgs-neck": {
+    "sha256": "94d8ffe782efc7ef0bc32e0a392d8e37d52defd5f93a5e4ae989f478ffe407f5",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Throggs_Neck.jpg"
+  },
+  "preston-high-school-throgs-neck": {
+    "sha256": "2582114a011471eba54363ea28e06261787b072e051bfcd1e96c5d71938a60b6",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Preston_High_School_Bronx_NY.jpeg"
+  },
+  "riverdale-monument-riverdale": {
+    "sha256": "40f117acba84315d1cab4916b5b7b5bffc3a0d7e58f7dd3d76160ce192fae10d",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Riverdale_Bell_Tower_jeh.JPG"
+  },
+  "st-anns-church-mott-haven": {
+    "sha256": "ed7e5acbb4f599e6dfc03c11ea2b6162d39ce9ff558889df87d8892cc1d7c487",
+    "source_url": "https://commons.wikimedia.org/wiki/File:St_Anns_COE_jeh.JPG"
+  },
+  "st-barnabas-church-woodlawn": {
+    "sha256": "d930bcde3a0d966f26686d0b6501b146484b7122edc91d5193c2d8334a82e192",
+    "source_url": "https://commons.wikimedia.org/wiki/File:St._Barnabas_Church,_The_Bronx_IMG_6741_HLG.jpg"
+  },
+  "suny-maritime-college-throgs-neck": {
+    "sha256": "4f3d4286dbf41ce0933580b7ee97c4a6eaafb253fa2e073b6fc0abe072977f9d",
+    "source_url": "https://commons.wikimedia.org/wiki/File:SUNY_Maritime_College_from_the_water.jpg"
+  },
+  "van-cortlandt-golf-course-van-cortlandt-park": {
+    "sha256": "2662375ca92a5ad2aa628f08bab10803748c786378e753c2c706cd863b1cac19",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Van_Cortlandt_Golf_Course_-_Flickr.jpg"
+  },
+  "van-cortlandt-house-museum-van-cortlandt-park": {
+    "sha256": "7ea053694c28ba025d95f4de804513036f1d816b06fc997732f5ef0282c1f604",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Van-cortland-house-bronx.JPG"
+  },
+  "van-cortlandt-lake-van-cortlandt-park": {
+    "sha256": "f7cb59acebe598f51b98218440a66abfc7cd3af71070ef68713b6afd79a64806",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Van_Cortlandt_Lake,_The_Bronx.jpg"
+  },
+  "wave-hill-house-riverdale": {
+    "sha256": "18949b12e59d477c08dab88ea324c991583e90e2f68521b5bee39ec58b95c95b",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Wave_Hill_-_20220616_-_58_-_Wave_Hill_House.jpg"
+  },
+  "woodlawn-cemetery-north-gate-woodlawn": {
+    "sha256": "b5b550640333bedd7a6f7fc70eb0b8ab69128b87a1875ebf430172baf5f89c1c",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Woodlawn_north_gate_jeh.JPG"
+  },
+  "woodlawn-heights-view-woodlawn": {
+    "sha256": "158b33d54cfd81a5b597c3b4f54a20a92b4f987d321ac5a4c67b39ae4b8a33fd",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Woodlawn_Heights,_The_Bronx_IMG_6711_HLG.jpg"
+  }
+}

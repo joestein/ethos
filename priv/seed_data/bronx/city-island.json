@@ -18,7 +18,7 @@
       },
       {
         "heading": "Getting there",
-        "body": "No subway line runs onto City Island. The nearest station is Pelham Bay Park, at the Bruckner Expressway and Westchester Avenue, the northern terminus of the IRT Pelham Line; the 6 serves it at all times, and the <6> runs express during weekday peak hours in the peak direction.\n\nThe Bx29 is the route that joins the island to that station. Its western terminal is City Island Avenue and Rochelle Street, on the island, and its eastern terminal is Bruckner Boulevard at Pelham Bay Park station, where it connects to the 6; the route runs 24 hours a day. Two rush-hour extended round-trips of the BxM8 express route run to Manhattan.\n\nPelham Bay Park station is served by the Bx5, Bx12, Bx12 SBS, Bx24 and Bx29 among NYCT bus routes, by the Bx23, Q50 and BxM8 among MTA Bus routes, and by Bee-Line Route 45, a Westchester County route. Its elevators were installed in December 1989, making it one of the earliest to comply with the Americans with Disabilities Act of 1990. A pedestrian bridge from the station entrance crosses the Bruckner Expressway and leads to Pelham Bay Park. The island itself is reached by road: the City Island Bridge, landing on Rodman's Neck at its western end, is its only connection to the mainland.\n\nThis page names no Metro-North station and no NYC Ferry landing serving City Island. City Island residents advocated for a ferry stop there."
+        "body": "No subway line runs onto City Island. The nearest station is Pelham Bay Park, at the Bruckner Expressway and Westchester Avenue, the northern terminus of the IRT Pelham Line; the 6 serves it at all times, and the <6> runs express during weekday peak hours in the peak direction.\n\nThe Bx29 is the route that joins the island to that station. Its western terminal is City Island Avenue and Rochelle Street, on the island, and its eastern terminal is Bruckner Boulevard at Pelham Bay Park station, where it connects to the 6; the route runs 24 hours a day. Two rush-hour extended round-trips of the BxM8 express route run to Manhattan.\n\nPelham Bay Park station is served by the Bx5, Bx12, Bx12 SBS, Bx24 and Bx29 among NYCT bus routes, by the Bx23, Q50 and BxM8 among MTA Bus routes, and by Bee-Line Route 45, a Westchester County route. Its elevators were installed in December 1989, making it one of the earliest to comply with the Americans with Disabilities Act of 1990. A pedestrian bridge from the station entrance crosses the Bruckner Expressway and leads to Pelham Bay Park. The island itself is reached by road: the City Island Bridge, landing on Rodman's Neck at its western end, is its only connection to the mainland.\n\nCity Island residents advocated for a ferry stop on the island."
       }
     ],
     "faq": [
@@ -43,7 +43,17 @@
         "answer": "The House at 175 Belden Street was designated a New York City Landmark on July 28, 1981 and listed on the National Register of Historic Places on June 3, 1982. Five more hold individual New York City landmark designations: 21 Tier Street, on June 20, 2000; the Samuel Pell House at 586 City Island Avenue, on October 29, 2002; the William H. Schofield House at 65 Schofield Street, on April 12, 2012; and the Captain John H. Stafford House at 95 Pell Place with the Samuel H. and Mary T. Booth House at 30 Centre Street, both on November 28, 2017. Grace Episcopal Church at 116 City Island Avenue and the former Public School 17 building at 190 Fordham Street, which houses the City Island Nautical Museum, are both on the National Register."
       }
     ],
-    "photos": []
+    "photos": [
+      {
+        "src": "/photos/ny/bronx/city-island/city-island-bridge-city-island.jpg",
+        "thumb": "/photos/ny/bronx/city-island/city-island-bridge-city-island_thumb.jpg",
+        "title": "The City Island Bridge from the shore",
+        "description": "The low causeway bridge crossing the water between Rodman's Neck and City Island, photographed from a rocky shoreline in May 2018. Green-painted steel girders and a green railing carry the deck on concrete piers, with green lampposts along the parapet. Behind it at right stands the temporary truss bridge, and an excavator and a yellow floating boom mark work still under way at the abutment.",
+        "author": "Jag9889",
+        "license": "CC BY-SA 4.0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:New_City_Island_Causeway_Bridge_Bronx_20180530-jag9889.jpg"
+      }
+    ]
   },
   "places": [
     {
@@ -58,7 +68,17 @@
       "summary": "A maritime museum in the former Public School 17 building at 190 Fordham Street, a two-story, five-bay brick building on a high basement with a shallow wooden entrance porch carrying Doric order columns, built in 1897 to a design by C. B. J. Snyder in Gothic, Neo-Georgian style. The museum opened in 1976 and is operated by the City Island Historical Society. Its own site describes permanent collection galleries, including the Community and Nautical Rooms, an exhibit on America's Cup winners, many of which were built on City Island, and holdings of maritime artifacts, photographs and navigational instruments spanning a century of boat building and sail making.",
       "history": "The building served as a school until 1975; a rear addition was added in 1930. It was listed on the National Register of Historic Places on September 27, 1984, reference number 84002065. The city sold it to the developer Haim Joseph in the 1980s for $500,000 for condominium conversion, after which the museum and a community center received a 99-year rent-free lease and reopened in 1995 after renovations. A fire allegedly set by vandals on July 13, 2007 damaged the building's façade.",
       "status": "open",
-      "photos": []
+      "photos": [
+        {
+          "src": "/photos/ny/bronx/city-island/city-island-nautical-museum-city-island.jpg",
+          "thumb": "/photos/ny/bronx/city-island/city-island-nautical-museum-city-island_thumb.jpg",
+          "title": "City Island Nautical Museum",
+          "description": "The museum building seen from its front lawn: a two-storey pale-painted facade with a broad pedimented gable, a dentilled cornice and a round window in the pediment, and a shallow entrance porch on four columns over a brick-faced stoop. Strings of nautical signal flags hang from the porch, and a sign on the grass reads City Island Nautical Museum beneath a painted schooner.",
+          "author": "Bigtimepeace",
+          "license": "Public domain",
+          "source_url": "https://commons.wikimedia.org/wiki/File:City_Island_Nautical_Museum.JPG"
+        }
+      ]
     },
     {
       "slug": "grace-episcopal-church-city-island",
@@ -72,7 +92,17 @@
       "summary": "An Episcopal church at 116 City Island Avenue, founded and built in 1862. The church is Carpenter Gothic and the rectory, also of about 1862, is Italianate. It was listed on the National Register of Historic Places on September 13, 2006, reference number 06000820.",
       "history": "Four houses of worship stand on the island: Saint Mary Star of the Sea Holy Roman Catholic Church, Trinity United Methodist Church, Grace Episcopal Church, and Temple Beth El, founded in 1934, which the main City Island article describes as a non-denominational liberal synagogue.",
       "status": "open",
-      "photos": []
+      "photos": [
+        {
+          "src": "/photos/ny/bronx/city-island/grace-episcopal-church-city-island.jpg",
+          "thumb": "/photos/ny/bronx/city-island/grace-episcopal-church-city-island_thumb.jpg",
+          "title": "Grace Episcopal Church at dusk",
+          "description": "The church from the street corner under a deep blue evening sky: white shingled walls, a steep gable end holding a pointed-arch stained-glass window above three narrow lancet windows, and a square corner tower carrying a tall dark spire and a weathervane. A hedge runs along the sidewalk, and a utility pole with a lit streetlight, an American flag and a Dead End sign stands in the foreground.",
+          "author": "Andre Carrotflower",
+          "license": "CC BY-SA 4.0",
+          "source_url": "https://commons.wikimedia.org/wiki/File:Grace_Episcopal_Church,_City_Island,_Bronx_-_20220616.jpg"
+        }
+      ]
     },
     {
       "slug": "house-at-175-belden-street",

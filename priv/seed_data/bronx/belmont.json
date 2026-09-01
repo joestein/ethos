@@ -47,7 +47,17 @@
         "answer": "For most of them this research could not establish that, and it says so rather than guessing. Forty Belmont places came through this research, and twelve of them rest on independent evidence dated inside 2026. For the other twenty-eight — Teitel Brothers, Borgatti's, Madonia Bakery, Addeo Bakers, Calabria Pork Store, Vincent's Meat Market, Casa Della Mozzarella, Mount Carmel Wine & Spirits and the rest — nothing independent and current enough was reached to say they are trading now, and for a grocer, a butcher or a cheese shop the absence of such evidence is expected rather than ominous. None is recorded as closed and none is written up here as open. Where a page says only what a place is and where it is, that is the reason. Call ahead."
       }
     ],
-    "photos": []
+    "photos": [
+      {
+        "src": "/photos/ny/bronx/belmont/arthur-avenue-belmont.jpg",
+        "thumb": "/photos/ny/bronx/belmont/arthur-avenue-belmont_thumb.jpg",
+        "title": "Arthur Avenue in Belmont",
+        "description": "A view along Arthur Avenue between East 184th and East 186th Streets, lined with low-rise brick buildings, awnings over the storefronts, street trees and cars parked along both kerbs.",
+        "author": "Leonard J. DeFrancisci",
+        "license": "CC BY-SA 3.0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Arthur_Avenue_between_184th_and_186th_Street_in_the_Bronx,_New_York_City_001.jpg"
+      }
+    ]
   },
   "places": [
     {
@@ -61,7 +71,17 @@
       "official_url": null,
       "summary": "An indoor market on Arthur Avenue. The Belmont Business Improvement District's page for it says it has been a fixture along Bronx Little Italy's main thoroughfare since October 1940, and gives its hours as Monday to Sunday, 8AM-8PM, with each vendor keeping its own. The vendors it names include Mike's Deli, Peter's Meat Market, Mount Carmel Gourmet Food Shop, Boiano's Food, Cafe Nocciola, LA Casa Grande Cigars and The Bronx Beer Hall.",
       "status": "open",
-      "photos": []
+      "photos": [
+        {
+          "src": "/photos/ny/bronx/belmont/arthur-avenue-retail-market-belmont.jpg",
+          "thumb": "/photos/ny/bronx/belmont/arthur-avenue-retail-market-belmont_thumb.jpg",
+          "title": "Arthur Avenue Retail Market",
+          "description": "The Arthur Avenue Retail Market seen from the sidewalk, its facade lettered “Arthur Avenue Retail Market — City of New York” above tall arched windows, with an Italian flag hanging beside the entrance and produce racks set out by the door.",
+          "author": "Leonard J. DeFrancisci",
+          "license": "CC BY-SA 3.0",
+          "source_url": "https://commons.wikimedia.org/wiki/File:Arthur_Avenue_Retail_Market_(Bronx,_New_York)_001.jpg"
+        }
+      ]
     },
     {
       "slug": "ciccarone-park",
@@ -220,7 +240,17 @@
       "summary": "A church at 627 East 187th Street, an address carried both by Wikipedia's article on it and by the Belmont Business Improvement District's institutions directory. No architect is named on any source this research reached and no landmark designation is stated in either direction. A style, Romanesque Revival, appears in an uncited Wikipedia infobox field with no supporting reference, which is not enough to publish.",
       "history": "Wikipedia says the parish was begun early in 1906 by Rev. Daniel Burke, in answer to the petition of the Italians living in the neighborhood of 183rd Street and Pelham Avenue, and was formally established around June 1906 when a store was remodeled as a chapel. Its article on the church gives a 750-seat basement church opened on December 25, 1907, a 500-seat upper church opened on December 8, 1912, and the upper church dedicated in 1917; its article on the neighborhood says the building was constructed in 1906. The two disagree, and neither account is published here as the settled one.",
       "status": "open",
-      "photos": []
+      "photos": [
+        {
+          "src": "/photos/ny/bronx/belmont/our-lady-of-mount-carmel-church-belmont.jpg",
+          "thumb": "/photos/ny/bronx/belmont/our-lady-of-mount-carmel-church-belmont_thumb.jpg",
+          "title": "Our Lady of Mount Carmel Church",
+          "description": "The brick exterior of Our Lady of Mount Carmel Church seen from the street corner, showing its square bell tower, rows of arched windows and crosses above the roofline, with an Italian flag and red, white and green streamers strung over the street below.",
+          "author": "Hugo L. González",
+          "license": "CC BY-SA 4.0",
+          "source_url": "https://commons.wikimedia.org/wiki/File:Our_Lady_of_Mount_Carmel%27s_Church_Belmont_Bronx_IMG_2922_HLG.jpg"
+        }
+      ]
     },
     {
       "slug": "belmont-library-enrico-fermi-cultural-center",
@@ -259,7 +289,17 @@
       "official_url": "https://mariosarthurave.org/",
       "summary": "A restaurant at 2342 Arthur Avenue. Wikipedia's article on Arthur Avenue says a scene from The Sopranos was shot in Mario's restaurant, which had been the planned site of a mob hit in The Godfather (1972) until the owner turned it down. Its own site refused every attempt this research made, so no founding year and no family is published here. A different business, Mario's Pizzeria & Italian Cuisine, is at 699 East 187th Street.",
       "status": "open",
-      "photos": []
+      "photos": [
+        {
+          "src": "/photos/ny/bronx/belmont/marios-restaurant-belmont.jpg",
+          "thumb": "/photos/ny/bronx/belmont/marios-restaurant-belmont_thumb.jpg",
+          "title": "Mario's on Arthur Avenue",
+          "description": "The Arthur Avenue frontage of Mario's, with a vertical “Mario’s” sign, dark red awnings over the ground-floor windows, arched second-storey windows and a tiled roof overhang.",
+          "author": "Leonard J. DeFrancisci",
+          "license": "CC BY-SA 3.0",
+          "source_url": "https://commons.wikimedia.org/wiki/File:Mario%27s_Restaurant_on_Arthur_Avenue_(Bronx,_New_York)_001.jpg"
+        }
+      ]
     },
     {
       "slug": "robertos-bronx",

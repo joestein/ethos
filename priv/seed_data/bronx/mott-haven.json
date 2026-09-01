@@ -58,7 +58,17 @@
       "summary": "An 11-acre historic district on Alexander Avenue between East 138th and East 141st Streets. Its four- and five-story row houses date to the last half of the nineteenth century, in Gothic, Queen Anne and Romanesque styles, and some of them were known historically as \"Doctors' Row\" and \"Irish Fifth Avenue.\"",
       "history": "Designated a New York City Landmark on July 29, 1969 and listed on the National Register of Historic Places on March 25, 1980, reference number 80002586. The district takes in the 1905 Mott Haven Branch of the New York Public Library and Saint Jerome's Roman Catholic Church, and the 40th Precinct police station stands within it.",
       "status": "open",
-      "photos": []
+      "photos": [
+        {
+          "src": "/photos/ny/bronx/mott-haven/40th-precinct-alexander-avenue-mott-haven.jpg",
+          "thumb": "/photos/ny/bronx/mott-haven/40th-precinct-alexander-avenue-mott-haven_thumb.jpg",
+          "title": "The 40th Precinct station house on Alexander Avenue",
+          "description": "The corner station house on Alexander Avenue seen looking east across East 138th Street on a cloudy morning: three storeys of red brick over a rusticated stone base, with round-arched ground-floor windows, small pediments over the windows above, green-painted sashes and a pair of green lamps at the entrance. Cars line the kerb and a subway entrance stands at the corner.",
+          "author": "Jim.henderson",
+          "license": "CC0",
+          "source_url": "https://commons.wikimedia.org/wiki/File:40_Pct_Alexander_Av_jeh.jpg"
+        }
+      ]
     },
     {
       "slug": "mott-haven-east-historic-district",
@@ -98,7 +108,17 @@
       "summary": "A church built in 1841 and dedicated to Gouverneur Morris's mother, Ann, designated a New York City individual Landmark on June 9, 1967. Wikipedia's Mott Haven article calls it the Bronx's oldest church; that is the article's own characterization.",
       "history": "Lewis Morris, a signer of the Declaration of Independence, is buried here, as is Gouverneur Morris.",
       "status": "open",
-      "photos": []
+      "photos": [
+        {
+          "src": "/photos/ny/bronx/mott-haven/st-anns-church-mott-haven.jpg",
+          "thumb": "/photos/ny/bronx/mott-haven/st-anns-church-mott-haven_thumb.jpg",
+          "title": "St. Ann's Episcopal Church from St. Ann's Avenue",
+          "description": "The fieldstone church seen looking northwest across St. Ann's Avenue on an overcast day, a slender spire rising over its pointed-arch windows and a green sloping lawn in front of it behind a chain-link fence, photographed through bare winter branches.",
+          "author": "Jim.henderson",
+          "license": "Public domain",
+          "source_url": "https://commons.wikimedia.org/wiki/File:St_Anns_COE_jeh.JPG"
+        }
+      ]
     },
     {
       "slug": "mott-haven-library",
@@ -126,7 +146,17 @@
       "summary": "A post office building at 558 Grand Concourse, which Wikipedia's Mott Haven article lists among the neighborhood's own post offices as \"Bronx Station.\" The architect was Thomas Harlan Ellett; Wikipedia gives 1935 as the build date, June 13, 1936 as the groundbreaking and May 15, 1937 as the opening. Two sculptures stand on the facade, The Letter by Henry Kreis and Noah by Charles Rudy.",
       "history": "Thirteen mural panels by Ben Shahn and Bernarda Bryson were completed inside in August 1939. The exterior was designated a New York City Landmark on September 14, 1976 — a November 25, 1975 date attached to this building elsewhere is a newspaper report of the pending designation rather than the designating act — and the interior was designated on December 17, 2013. The building was listed on the National Register of Historic Places on May 6, 1980 and on the New York State Register on June 23, 1980. Mail processing operations relocated in 2011; the building was sold to Youngwoo & Associates in September 2014 for $19 million, resold to Maddd Equities in July 2025 for $44 million, and a CUNY lease was signed in September 2025.",
       "status": "open",
-      "photos": []
+      "photos": [
+        {
+          "src": "/photos/ny/bronx/mott-haven/bronx-general-post-office-mott-haven.jpg",
+          "thumb": "/photos/ny/bronx/mott-haven/bronx-general-post-office-mott-haven_thumb.jpg",
+          "title": "The Bronx General Post Office from the Grand Concourse",
+          "description": "The grey brick facade seen looking northeast across the Grand Concourse on a wet day, with a row of tall round-arched multi-pane windows, a carved stone relief of a standing figure holding a child set into the wall, a flagpole flying the United States flag, and a doorway signed \"Bronx General Post Office, Bronx, NY.\" Pedestrians pass a bus shelter on the sidewalk below.",
+          "author": "Jim.henderson",
+          "license": "CC0",
+          "source_url": "https://commons.wikimedia.org/wiki/File:Bronx_GPO_GC_rain_jeh.jpg"
+        }
+      ]
     },
     {
       "slug": "st-marys-park-bronx",

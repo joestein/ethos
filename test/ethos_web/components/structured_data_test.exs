@@ -245,14 +245,53 @@ defmodule EthosWeb.StructuredDataTest do
       #     non-nil streetAddress is definitionally outside that bucket, so both
       #     are, and this bucket could not have moved. It holding still is the
       #     check that neither Pelham Bay Park row went to the street-less side.
+      #
+      # Re-measured 2026-09-01 after six files landed in one wave —
+      # priv/seed_data/bronx/{van-cortlandt-park,morris-park,riverdale,
+      # kingsbridge,throgs-neck,woodlawn}.json — carrying fifty-one places
+      # between them, of which eighteen ship with `"address": null` and so
+      # never reach this setup. Fifteen of those eighteen are the whole of
+      # van-cortlandt-park.json, whose subjects are trails, a lake, a hill, a
+      # parade ground, a stadium and a filtration plant; the research gave a
+      # street line for none of them and guessing one is not an option. That
+      # file therefore contributes nothing to any count below. The other three
+      # nil addresses are Loreto Park, the Riverdale Historic District and the
+      # King's Bridge itself. 51 - 18 = 33 rows reach this setup, and each
+      # digit is accounted for:
+      #
+      #   * total 2131 -> 2164, the thirty-three addressed places.
+      #   * `streetAddress` 1590 -> 1616 together with `is_nil(streetAddress)`
+      #     541 -> 548 splits those thirty-three 26 / 7. +26 and +7 sum to the
+      #     +33 above, so no row is unaccounted for and none is double counted.
+      #     The seven street-less rows are four in Riverdale — Wave Hill and
+      #     the University of Mount Saint Vincent at intersections, Riverdale
+      #     Park at a street range, the Riverdale Monument at a three-way
+      #     junction — and three in Kingsbridge: Fort Independence Park at an
+      #     intersection, and the Church of the Visitation and the Broadway
+      #     corridor on bare streets. Riverdale Presbyterian Church is worth
+      #     naming on the other side of the split: its "4761-4765 Henry Hudson
+      #     Parkway" is a hyphenated house-number range, which the parser
+      #     correctly keeps in the street-bearing bucket.
+      #   * `postalCode` 1720 -> 1737 proves the ZIPs, and nothing else here
+      #     does: seventeen of the thirty-three carry a five-digit code — six
+      #     in Morris Park, six in Throgs Neck, four in Woodlawn and one in
+      #     Kingsbridge, the library at 10463. Riverdale contributes none: its
+      #     addresses are sourced to Wikipedia's NRHP and landmark lists, which
+      #     give a street line and no code, so none was invented for them. The
+      #     Jack D. Weiler Hospital's "NY 10461-2301" is a ZIP+4 and still
+      #     counts once.
+      #   * locality-only 251 -> 258, moving by exactly the same seven as the
+      #     street-less bucket. The two moving together is the check that none
+      #     of those seven carries a ZIP — a street-less row that did would sit
+      #     outside this bucket and break the equality.
       count = fn f -> Enum.count(emitted, fn {_, ld} -> f.(ld) end) end
 
-      assert length(emitted) == 2131
-      assert count.(& &1["streetAddress"]) == 1590
-      assert count.(&is_nil(&1["streetAddress"])) == 541
-      assert count.(& &1["postalCode"]) == 1720
+      assert length(emitted) == 2164
+      assert count.(& &1["streetAddress"]) == 1616
+      assert count.(&is_nil(&1["streetAddress"])) == 548
+      assert count.(& &1["postalCode"]) == 1737
 
-      # The largest behavioural delta this change ships: 251 places emit a
+      # The largest behavioural delta this change ships: 258 places emit a
       # PostalAddress carrying only locality, region and country. Their full
       # address is still rendered on the page.
       #
@@ -265,11 +304,13 @@ defmodule EthosWeb.StructuredDataTest do
       # file's addresses carry a house number, and it did not move when
       # priv/seed_data/bronx/pelham-bay-park.json landed either: that file's two
       # addressed places both carry a house number, and its two street-less
-      # places carry no address at all. The comment was not updated
+      # places carry no address at all. It went to 258 when the six-file wave
+      # above landed seven street-less rows, four in Riverdale and three in
+      # Kingsbridge, none of them carrying a ZIP. The comment was not updated
       # with the assertion and spent two commits contradicting a number three
       # lines below it, which is worse than either being wrong alone. Keep the
       # two in step.
-      assert count.(fn ld -> is_nil(ld["streetAddress"]) and is_nil(ld["postalCode"]) end) == 251
+      assert count.(fn ld -> is_nil(ld["streetAddress"]) and is_nil(ld["postalCode"]) end) == 258
     end
   end
 end
