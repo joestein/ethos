@@ -13,14 +13,16 @@ Gate: `test/ethos/seeds/bronx_seed_data_test.exs`
 |---|---|
 | Surviving places | **4** — below six |
 | Tier | **`town-page`** |
-| Intro | **129 words** (floor 90; rule 8 range 90-130) |
+| Intro | **130 words** (floor 90; rule 8 range 90-130) |
 | Outbound links | **2** (Bronx floor is 2, lowered from 3 for this borough) |
 | Sections | `What's here` · `The Siwanoy, the Pell purchase and the Battle of Pell's Point` · `Getting there` |
 | FAQ | 3, including `How do I get to Pelham Bay Park?` |
 | Photos | `[]` — the four shipped Bronx pages carry none and no photo artifact exists |
 
 **Written as a place, not a chronology.** The intro opens on acreage, shoreline,
-the beach, the mansion and the golf courses. `What's here` — the whole of
+the beach, the mansion and the golf courses, and dates the beach only to the
+1930s — an earlier draft wrote "from 1934", which is item 80's announcement
+date, not a construction start. `What's here` — the whole of
 section 1 — is what a visitor finds: the beach and its landmarked bathhouse, the
 mansion, the golf facility, the sanctuaries, the islands, the lagoon. The
 Siwanoy, the Pell purchase, the battle and the Hunter estate are section 2,
@@ -75,7 +77,7 @@ parents — one designation, one listing, no separate address or ticketing.
 | target | kind | why this kind |
 |---|---|---|
 | `guide:city-island-bronx-guide` | **`shared-history`** | Rule 11 reserves `nearby` for two places that **share a border, nothing weaker**. City Island is "south of Pelham Bay Park" and reaches the mainland over Rodman's Neck; that is a crossing, not a shared border in the sense rule 11 means, and the verdict's own "nearby or shared-history" is resolved against `nearby` on exactly that reading. What the tie actually rests on is a **stated historical relationship**, which is `shared-history`'s definition: the shared 1654 root of title through Rodman's Neck (verdict 160) and Samuel Rodman's ferry running from that neck to Minneford Island on the site of today's crossing (161). The note quotes both, per rule 11's requirement that a `shared-history` note quote the relationship. |
-| `guide:coney-island-brooklyn-guide` | **`see-also`** | Rule 11: **"`see-also` — cross-borough edges only."** This is Bronx → Brooklyn, so it is a cross-borough edge, and `see-also` is the kind the whole corpus uses for one — all twenty existing cross-borough/cross-region edges in `priv/seed_data/` are `see-also`, including `belmont.json` → `little-italy-manhattan-guide` on this borough's own side. The verdict proposed `shared-history` before applying rule 11's cross-borough clause; the *substance* it proposed it on is unchanged and is what the note carries. |
+| `guide:coney-island-brooklyn-guide` | **`see-also`** | Rule 11's **"`see-also` — cross-borough edges only"** restricts where `see-also` may be *used*; it does **not** require every cross-borough edge to be one. **An earlier draft of this report claimed it did, and claimed all twenty cross-borough edges in the corpus are `see-also`. That is false**: `belmont.json` carries two, and `guide:east-harlem-manhattan-guide` is `shared-history`. The corpus reads rule 11 as a restriction, not a mandate, and a later author must not rely on the stronger claim. The kind stands on its own terms: this edge is a **pointer between two shorefronts a reader may want next**, licensed by rule 11 to be `see-also` because it is cross-borough and because a real named connection exists. `shared-history`, the verdict's suggestion, would also be defensible; `see-also` is the choice, made explicitly and not by a corpus rule that does not exist. |
 
 The Coney Island connection is **institutional and dated on both sides**, not
 "both are beaches": Parks Commissioner Robert Moses announced Orchard Beach's
@@ -89,7 +91,11 @@ written from the verdict's sources and not from that file.
 article's only City Island sentence says "nearby". That strand is not leaned on
 at all — the link rests on 160, 161, 163 and 165.
 
-Link-note lengths: 132 and 143 characters (limit 160). Both resolve — the gate
+The Coney Island note gives each of those a date of its own — the 1937 report
+and the boardwalk move from 1949 — rather than putting one span across two
+events, which an earlier draft's "from 1937 he reported on, then rebuilt" did.
+
+Link-note lengths: 132 and 157 characters (limit 160). Both resolve — the gate
 seeds Manhattan and Brooklyn before the Bronx pass, and
 `coney-island-brooklyn-guide` is shipped.
 
@@ -132,6 +138,16 @@ seeds Manhattan and Brooklyn before the Bronx pass, and
    page-level and does not need to be — verdict 155 confirms as a fact about the
    world that no NYC Ferry route or landing serves the park or Orchard Beach, so
    it is stated flatly.
+
+   **Three instances got past the first draft and were cut on review**, recorded
+   here because the earlier version of this section claimed there were none:
+   *"the source names no designer for the Pelham Bay course"* appeared **twice**,
+   in `sections[0].body` and `places[3].history`, and *"Orchard Beach's own
+   article describes it as running year-round nearby"* named a Wikipedia article
+   inside visitor prose. Item 134's correct handling is to write what van Kleek
+   designed and stop; item 97's is to state the service and stop. Telling a
+   reader what the research failed to find is the banned shape whether it is
+   phrased about the page or about the source, and it repeated.
 3. **Attribution only where a claim rests on characterization.** Bus routes,
    subway service patterns, designation dates and dimensions carry no preamble.
    Attribution appears exactly three times, each on a *characterization*: two
@@ -143,6 +159,14 @@ seeds Manhattan and Brooklyn before the Bronx pass, and
    Split Rock Golf Courses) **and the slugs follow it.**
 5. **No minimum word count** was applied to any field except the 90-word intro
    floor.
+
+**One unrestated quantifier, caught on review.** `sections[0].body` opened its
+sanctuary paragraph "the park is **largely** marsh, water and old forest". No
+verdict restates "largely" — 489 acres of sanctuary and 195 of salt marsh
+against 2,772 total do not license it — and it is the New Lots class exactly:
+a ranking word riding inside a sentence whose figures are all confirmed. It now
+reads "the park **holds** marsh, water and old forest", which claims only what
+items 42-52 restate.
 
 ---
 
@@ -157,7 +181,7 @@ seeds Manhattan and Brooklyn before the Bronx pass, and
 | `county` | `"Bronx"` on the guide and on all four places |
 | Section headed exactly `Getting there` | present, covering subway, Metro-North, bus and ferry |
 | `How do I get to …?` FAQ | present |
-| town-page floors | 129-word intro, 2 links |
+| town-page floors | 130-word intro, 2 links |
 | Place slugs globally unique | pass |
 | Marquee rule | `^orchard-beach` and `^bartow-pell-mansion` each appear in **exactly one** file in `priv/seed_data/` — this one. Verified by grep across `priv/seed_data/` and `lib/ethos/seeds/connecticut_places.ex` before writing |
 
@@ -257,7 +281,7 @@ numbers are the verdicts file's. **Every one of the 169 is in a row.**
 | 59 | FBI, Fire Marshals, Correction, ICE — **and the National Guard, 1960s riot training** | **Kept** — §2, including the agency the finder omitted |
 | 60 | Seven rifle ranges, 230 firing points | **Kept** — §2 |
 | 61 | Northern side joined to form Orchard Beach and a parking lot | **Kept** — §2 |
-| 62 | Battle fought Friday, October 18, 1776, Manor of Pelham | **Kept** — §2 |
+| 62 | Battle fought Friday, October 18, 1776, Manor of Pelham | **Kept** — §2 and the park's `history`, both giving the Manor of Pelham as the location. A first draft's "fought **across it**" placed the battle on the park's own ground, which item 62 does not say; corrected on review |
 | 63 | Clinton led the landing; Howe was C-in-C | **Kept as corrected**, **not framed as a conflict** — §2 |
 | 64 | 750 Americans under Colonel John Glover | **Kept** — §2 |
 | 65 | Stone walls, prepared positions, Washington's withdrawal to White Plains | **Kept** — §2 |
@@ -297,7 +321,7 @@ numbers are the verdicts file's. **Every one of the 169 is in a row.**
 | 94 | Today's inventory, plus the lead's playgrounds, picnic areas, parking and 26 courts | **Kept** — §1, summary |
 | 95 | 1980s renovation: shops and fast food; nature center and museum **planned** | **Kept** — §1, history, with "planned" intact and no implication either exists |
 | 96 | Bathhouse and promenade landmarked **June 20, 2006** | **Kept** — §1, history, FAQ 2, entry — the designation list's date, not the article's bare "2006" |
-| 97 | Bx12 seasonal, Bx29 year-round nearby, 6 and `<6>` | **Kept** — §3 |
+| 97 | Bx12 seasonal, Bx29 year-round nearby, 6 and `<6>` | **Kept** — §3, stated flatly ("runs 24 hours a day and year-round"). A first draft attributed it to "Orchard Beach's own article"; cut on review as research-process prose |
 | 98 | No named concession, vendor or eatery in the material | Honoured — none invented, none proposed as a place |
 | 99 | Bathhouse/promenade fold upheld | Honoured — no separate place record |
 
@@ -344,7 +368,7 @@ numbers are the verdicts file's. **Every one of the 169 is in a row.**
 | 131 | Independent tee-time booking and rate card | **Kept** — summary names the single booking system; no rate, fee or price ships |
 | 132 | Operated by American Golf Corporation | **Kept** — summary, attributed to its own site and **no prose built on it beyond naming the operator** |
 | 133 | Two courses, Pelham Bay and Split Rock | **Kept** — summary, §1 |
-| 134 | van Kleek designed **Split Rock only** | **Kept** — §1, history, both stating the source names no designer for Pelham Bay |
+| 134 | van Kleek designed **Split Rock only** | **Kept** — §1 and history, both reading "John van Kleek designed Split Rock" and stopping there, so the attribution is never extended to the Pelham Bay course. A first draft added "the source names no designer for the Pelham Bay course" in both places; cut on review as research-process prose |
 | 135 | Reopened June 1935, sixteen months after construction commenced | **Kept** — §1, history, verbatim |
 | 136 | Created through the efforts of park commissioner Robert Moses | **Kept** — §1, history, link note |
 | 137 | Which section of the park they are in | **Cut** — `uncertain`; the article contradicts itself. The address ships instead |
@@ -402,7 +426,7 @@ numbers are the verdicts file's. **Every one of the 169 is in a row.**
 | Fold 8 | Rodman's Neck — fold upheld, restricted NYPD range | Honoured — §2 prose, no place record |
 | 168 | Zero DOHMH-only candidates; zero named eatery anywhere | Honoured — **no DOHMH or DCWP record appears in prose in any form** |
 | — | 4 surviving places → `town-page`, 90-word intro, two links | Honoured |
-| 169 | Coney Island link, Moses at both, dated on both sides | **Kept** — link note; `kind` set to `see-also` per rule 11's cross-borough clause, see §2 above |
+| 169 | Coney Island link, Moses at both, dated on both sides | **Kept** — link note; `kind` is `see-also`, which rule 11 licenses for a cross-borough edge without mandating it — see §2 above for the corrected reasoning |
 
 **Totals reconciled.** 169 adjudicated: 138 confirmed, 12 refuted, 19 uncertain.
 All 19 uncertains are excluded (7, 16-gloss, 19, 20, 24-gloss, 31-incomplete, 84,
@@ -410,9 +434,15 @@ All 19 uncertains are excluded (7, 16-gloss, 19, 20, 24-gloss, 31-incomplete, 84
 source-shape flags at 147). The three uncertain **history** facts that could have
 been kept by removing the unverified specific were: 19 (kept, acreage removed),
 20 (kept, date reduced to the year), 148 (kept, termini reduced to neighbourhood
-names). None is hedged and none carries a disclaimer sentence. Confirmed claims
-deliberately cut, with reasons, are exactly seven: 79, 103-partial, 122, 138,
-162, 164 and 166.
+names). None is hedged and none carries a disclaimer sentence.
+
+**Genuinely `confirmed` claims deliberately cut are exactly three: 103-partial,
+138 and 166.** An earlier version of this line said seven and miscategorised
+four of them — 79, 122 and 162 are on the **refuted** list and are excluded by
+rule 2 rather than cut by choice, and 164 is on the **uncertain** list. Every
+row of the table above was right; only this summary miscounted, and the summary
+is what a next reviewer checks the table against, so it is corrected here rather
+than softened.
 
 ---
 
