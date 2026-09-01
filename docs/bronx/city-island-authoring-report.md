@@ -267,29 +267,58 @@ instruction is to consolidate rather than drop the new section. So:
 
 **Consolidated.** "Shipbuilding, yacht clubs and the America's Cup" and "The bridge, and the
 ways across before it" are now one history section, **"Shipbuilding, the yacht clubs and the
-bridge"** (779 words). The compression fell on the corporate shipbuilding detail, which the
-re-review named as the page's weakest material. Cut from Consolidated Shipbuilding: the 1896
-merger constituents (the Charles L. Seabury Company and the Gas Engine & Power Company with
-their founding dates and locations), the steam yacht *Kanahwa* with its owner and 1917
-conversion, and the July 16, 1908 launch with its 111-foot length, 21-foot beam and 260
-horsepower. Kept: the June 1896 formation, the wartime tugboats and 51 of the 343 PC-461-class
-submarine chasers, the postwar move to the former Robert Jacobs shipyard on City Island, and
-the 1958 exit from shipbuilding. Nothing about the bridge, the Nevins yard or the Harlem Yacht
-Club was touched. Cutting B10's "described at the time as" wrapper removed one attribution
-construction with it.
+bridge"** (786 words). The compression fell on the corporate shipbuilding detail, which the
+re-review named as the page's weakest material.
 
-**Added: "City Island Avenue and the waterfront"** (316 words), the third section, placed
+**Cut from Consolidated Shipbuilding**, all three sanctioned in advance: the 1896 merger
+constituents (the Charles L. Seabury Company and the Gas Engine & Power Company with their
+founding dates and locations); the steam yacht *Kanahwa* with its owner and 1917 conversion;
+and the July 16, 1908 launch with its 111-foot length, 21-foot beam and 260 horsepower. Cutting
+the last of those removed B10's "described at the time as" wrapper with it.
+
+**Kept:** the June 1896 formation, the wartime tugboats, 51 of the 343 PC-461-class submarine
+chasers, **the 3,000 skilled tradespeople**, the postwar move to the former Robert Jacobs
+shipyard on City Island, and the 1958 exit from shipbuilding. Nothing about the bridge, the
+Nevins yard or the Harlem Yacht Club was touched.
+
+> **Correction, made at the final check rather than in the consolidating commit.** The 3,000
+> workers went out with the corporate detail in that commit, and this accounting listed it in
+> neither column — a confirmed fact (B12) removed silently, and one that adjudication 5 names
+> explicitly among what ships intact: "Consolidated (1896–1958, 51 of 343 submarine chasers,
+> 3,000 workers)". It was not among the three cuts sanctioned. It is restored:
+>
+> > Consolidated Shipbuilding Corporation, also known as Consolidated Yachts, was formed in
+> > June 1896 and built tugboats and 51 of the 343 PC-461-class submarine chasers during the
+> > Second World War, employing as many as 3,000 skilled tradespeople.
+>
+> The reviewer's reason for caring is the right one to record: it is the human fact in a
+> paragraph that is otherwise corporate dates, and three thousand people at work for a yard
+> that would move onto an island a mile and a half long is what makes the shipbuilding history
+> mean anything. Losing it while compressing corporate detail was the opposite of what the
+> compression was for. The workforce figure attaches to the company's wartime output, which
+> predates its move to City Island — the sentence keeps that order so the work is not implied
+> to have happened on the island.
+
+**Added: "City Island Avenue and the waterfront"** (310 words), the third section, placed
 between the history and `Getting there`.
 
 **It adds no claims.** Every element was already licensed and already on the page, scattered
 across the two history sections and the twelve place records; gathering them under a heading is
 organization, not assertion. Its four paragraphs:
 
-1. **The avenue as the address spine** — assembled from confirmed addresses already in the
-   place records: Johnny's Reef at 2, Sammy's at 41, Grace Episcopal at 116, the Crab Shanty at
-   361, the Samuel Pell House at 586, the Bx29's western terminal at the avenue and Rochelle
-   Street (D4), the Nautical Museum at 190 Fordham Street, and the other individual landmarks
-   on Belden Street, Schofield Street, Pell Place, Centre Street and Tier Street.
+1. **The addresses on the avenue**, assembled from the place records: Johnny's Reef at 2,
+   Sammy's at 41, Grace Episcopal at 116, the Crab Shanty at 361, the Samuel Pell House at 586,
+   the Bx29's western terminal at the avenue and Rochelle Street (D4), the Nautical Museum at
+   190 Fordham Street, and the other individual landmarks on Belden Street, Schofield Street,
+   Pell Place, Centre Street and Tier Street. **The paragraph has no thesis sentence, by
+   decision.** It opened with "City Island Avenue is the island's address spine" until the
+   final check. No verdict characterizes the avenue — the exclusions table treats it as a
+   street and not a place record — so the clause was an unsourced characterization, defensible
+   as organization and true on the page's own data, but exactly the kind of clause four earlier
+   pages established does not ship however true it is. An aggregation over addresses already
+   published would have been ours to make; a metaphor about a spine is not. It is cut, the
+   enumeration opens the section, and the first address is written in full ("2 City Island
+   Avenue") so the avenue is named before the later entries shorten to bare numbers.
 2. **The three restaurants**, each from its own site with the wrapper intact — Johnny's Fried,
    Steam, Clam and Soda sections, its bar and its picnic tables indoors and out overlooking the
    water (5.2); Sammy's fresh seafood, lobster feasts and waterfront dining and its 1966 date
