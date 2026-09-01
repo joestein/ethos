@@ -358,14 +358,56 @@ defmodule EthosWeb.StructuredDataTest do
       # taking the count to 49. The parenthetical was dropped from the seed
       # rather than the pin raised — the same call made for Bartow-Pell's park
       # line and Calvary Hospital's neighborhood line before it.
+      #
+      # Re-measured 2026-09-01, and this is the first entry here caused by a
+      # CODE change rather than by new content. The corpus did not grow: total
+      # stays at 2214 and no seed file gained or lost a place.
+      #
+      # Ethos.Places.Address.parse/1 anchored its match at the end of the
+      # string, so an otherwise perfect address followed by any trailing remark
+      # failed outright — street, locality and region all nil. An audit found
+      # 133 rows in that state, 38 of which began with a real house number and
+      # so were publishing no streetAddress at all despite plainly having one:
+      # "126 Brightwater Court, Brooklyn, NY 11235 (Brighton 2nd Street …)",
+      # "2 Wyckoff Avenue, Brooklyn, NY 11237, entrance at 408 Jefferson Street",
+      # "899-925 Flatbush Avenue, Brooklyn, NY (between Church and Snyder
+      # Avenues)". The parser now retries once against the address head when the
+      # anchored match fails, discarding the trailing remark.
+      #
+      #   * total 2214 -> 2214. No content moved; this is the control.
+      #   * `streetAddress` 1646 -> 1684 and `is_nil(streetAddress)` 568 -> 530,
+      #     +38 and -38 exactly. They must move as an equal and opposite pair
+      #     here — unlike a content wave, where they sum to the new rows — and
+      #     that they do is the check that the change only reclassified rows
+      #     rather than inventing or dropping any.
+      #   * `postalCode` 1759 -> 1759, UNMOVED, and that is the second real
+      #     check. `scan_postal/1` already recovered a five-digit code from the
+      #     raw text even when the structured parse failed, so if this number
+      #     had moved, the retry would be finding codes the old path already
+      #     had — meaning it had changed how an address parses, not merely
+      #     whether it parses. It is unmoved, so it has not.
+      #   * locality-only 275 -> 266, -9. Nine of the 38 recovered rows carried
+      #     no ZIP and so were sitting in this bucket; the other 29 had one and
+      #     were already outside it. 9 + 29 = 38, so every recovered row is
+      #     accounted for on this axis too.
+      #
+      # Three addresses were corrected in the same pass, being the only ones the
+      # retry could not reach: two spelled the state out ("…, Harlem, New York
+      # 10026"), which the region pattern requires as two letters, and one named
+      # no region at all. Those are data defects, not parser ones.
+      #
+      # The `comma_streets <= 48` pin in test/ethos/places/address_test.exs sits
+      # exactly at 48 after this change and was checked, not assumed: 38 newly
+      # parsing street lines is precisely the shape of change that could push it
+      # over, and none of them carries a comma.
       count = fn f -> Enum.count(emitted, fn {_, ld} -> f.(ld) end) end
 
       assert length(emitted) == 2214
-      assert count.(& &1["streetAddress"]) == 1646
-      assert count.(&is_nil(&1["streetAddress"])) == 568
+      assert count.(& &1["streetAddress"]) == 1684
+      assert count.(&is_nil(&1["streetAddress"])) == 530
       assert count.(& &1["postalCode"]) == 1759
 
-      # The largest behavioural delta this change ships: 275 places emit a
+      # The largest behavioural delta this change ships: 266 places emit a
       # PostalAddress carrying only locality, region and country. Their full
       # address is still rendered on the page.
       #
@@ -384,11 +426,13 @@ defmodule EthosWeb.StructuredDataTest do
       # hunts-point.json and concourse.json landed nine more, seven of them
       # NYC Parks cross-street ranges. It went to 275 with Queens wave 1, which
       # added eleven street-less rows but only eight locality-only ones — three
-      # Astoria rows are street-less yet carry a ZIP. The comment was not updated
+      # Astoria rows are street-less yet carry a ZIP. It fell to 266 when the
+      # address parser learned to retry past a trailing remark, which gave nine
+      # of these rows back their street line. The comment was not updated
       # with the assertion and spent two commits contradicting a number three
       # lines below it, which is worse than either being wrong alone. Keep the
       # two in step.
-      assert count.(fn ld -> is_nil(ld["streetAddress"]) and is_nil(ld["postalCode"]) end) == 275
+      assert count.(fn ld -> is_nil(ld["streetAddress"]) and is_nil(ld["postalCode"]) end) == 266
     end
   end
 end

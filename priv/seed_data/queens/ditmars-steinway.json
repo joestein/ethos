@@ -6,11 +6,11 @@
     "state": "New York",
     "county": "Queens",
     "tier": "town-page",
-    "intro": "Ditmars-Steinway is a neighborhood name in the New York City borough of Queens. It is recorded in Wikipedia's article on Astoria, which writes of a convergence point \"bearing the neighborhood name 'Ditmars-Steinway'.\" The Riker–Lent–Smith Homestead and Cemetery is a historic house and cemetery that the same encyclopedia places \"in the Steinway and East Elmhurst neighborhoods of Queens in New York City,\" and its published address is 78-03 19th Rd., East Elmhurst, New York. The Steinway Mansion, also known as the Benjamin T. Pike House, was built in 1858 at 18-33 41st Street, in ZIP 11105. Steinway Street, which that Astoria article calls \"Little Egypt,\" runs 2.4 miles (3.9 km) between Berrian Boulevard in Astoria and Northern Boulevard in Long Island City.",
+    "intro": "Ditmars-Steinway is a neighborhood name in the New York City borough of Queens. It is recorded in Wikipedia's article on Astoria, which writes of a convergence point \"bearing the neighborhood name 'Ditmars-Steinway'.\" The Riker–Lent–Smith Homestead and Cemetery is a historic house and cemetery that the same encyclopedia places \"in the Steinway and East Elmhurst neighborhoods of Queens in New York City,\" and its published address is 78-03 19th Rd., East Elmhurst, NY. The Steinway Mansion, also known as the Benjamin T. Pike House, was built in 1858 at 18-33 41st Street, in ZIP 11105. Steinway Street, which that Astoria article calls \"Little Egypt,\" runs 2.4 miles (3.9 km) between Berrian Boulevard in Astoria and Northern Boulevard in Long Island City.",
     "sections": [
       {
         "heading": "The landmark houses",
-        "body": "The Riker–Lent–Smith Homestead and Cemetery is described by its Wikipedia article as \"a historic house and cemetery in the Steinway and East Elmhurst neighborhoods of Queens in New York City.\" Its published address is 78-03 19th Rd., East Elmhurst, New York. The earliest part of the house was built by Abraham Riker in the mid-1650s, under a patent from Nieuw Nederland's last governor, Peter Stuyvesant, and the building carries additions of 1729. It is also recorded as the Lent Homestead and Cemetery, and as the Abraham Lent House. Of its age, the same article says the house \"is believed to be the oldest remaining dwelling in New York City still used as a residence,\" and elsewhere that \"the house is the oldest known existing residential structure in Queens.\"\n\nThe Steinway Mansion, also known as the Benjamin T. Pike House, stands at 18-33 41st Street, in ZIP 11105, and was built in 1858. Its Landmarks Preservation Commission designation report gives the address as \"18-33 41st Street, Steinway, Borough of Queens\" — a designation-report address line. The house has \"original pocket doors with cut glass depicting many of Benjamin Pike Jr.'s scientific instruments.\""
+        "body": "The Riker–Lent–Smith Homestead and Cemetery is described by its Wikipedia article as \"a historic house and cemetery in the Steinway and East Elmhurst neighborhoods of Queens in New York City.\" Its published address is 78-03 19th Rd., East Elmhurst, NY. The earliest part of the house was built by Abraham Riker in the mid-1650s, under a patent from Nieuw Nederland's last governor, Peter Stuyvesant, and the building carries additions of 1729. It is also recorded as the Lent Homestead and Cemetery, and as the Abraham Lent House. Of its age, the same article says the house \"is believed to be the oldest remaining dwelling in New York City still used as a residence,\" and elsewhere that \"the house is the oldest known existing residential structure in Queens.\"\n\nThe Steinway Mansion, also known as the Benjamin T. Pike House, stands at 18-33 41st Street, in ZIP 11105, and was built in 1858. Its Landmarks Preservation Commission designation report gives the address as \"18-33 41st Street, Steinway, Borough of Queens\" — a designation-report address line. The house has \"original pocket doors with cut glass depicting many of Benjamin Pike Jr.'s scientific instruments.\""
       },
       {
         "heading": "The name and Steinway Street",
@@ -18,13 +18,13 @@
       },
       {
         "heading": "Getting there",
-        "body": "The Steinway Mansion stands at 18-33 41st Street, in ZIP 11105.\n\nThe Riker–Lent–Smith Homestead and Cemetery is addressed 78-03 19th Rd., East Elmhurst, New York — the address published for it, even though Wikipedia describes the house and cemetery as being \"in the Steinway and East Elmhurst neighborhoods of Queens in New York City.\""
+        "body": "The Steinway Mansion stands at 18-33 41st Street, in ZIP 11105.\n\nThe Riker–Lent–Smith Homestead and Cemetery is addressed 78-03 19th Rd., East Elmhurst, NY — the address published for it, even though Wikipedia describes the house and cemetery as being \"in the Steinway and East Elmhurst neighborhoods of Queens in New York City.\""
       }
     ],
     "faq": [
       {
         "question": "How do I get to Ditmars-Steinway?",
-        "answer": "The Steinway Mansion is at 18-33 41st Street, in ZIP 11105. The Riker–Lent–Smith Homestead and Cemetery is addressed 78-03 19th Rd., East Elmhurst, New York, though Wikipedia describes it as being \"in the Steinway and East Elmhurst neighborhoods of Queens in New York City.\""
+        "answer": "The Steinway Mansion is at 18-33 41st Street, in ZIP 11105. The Riker–Lent–Smith Homestead and Cemetery is addressed 78-03 19th Rd., East Elmhurst, NY, though Wikipedia describes it as being \"in the Steinway and East Elmhurst neighborhoods of Queens in New York City.\""
       },
       {
         "question": "Where does the name Ditmars-Steinway come from?",
@@ -82,8 +82,8 @@
       "town": "Ditmars-Steinway",
       "state": "New York",
       "county": "Queens",
-      "address": "78-03 19th Rd., East Elmhurst, New York",
-      "summary": "A house and cemetery that Wikipedia describes as \"a historic house and cemetery in the Steinway and East Elmhurst neighborhoods of Queens in New York City,\" published under the address 78-03 19th Rd., East Elmhurst, New York. It is also recorded as the Lent Homestead and Cemetery, and as the Abraham Lent House.",
+      "address": "78-03 19th Rd., East Elmhurst, NY",
+      "summary": "A house and cemetery that Wikipedia describes as \"a historic house and cemetery in the Steinway and East Elmhurst neighborhoods of Queens in New York City,\" published under the address 78-03 19th Rd., East Elmhurst, NY. It is also recorded as the Lent Homestead and Cemetery, and as the Abraham Lent House.",
       "history": "The earliest part of the house was built by Abraham Riker in the mid-1650s, under a patent from Nieuw Nederland's last governor, Peter Stuyvesant, and the building carries additions of 1729. Wikipedia says the house \"is believed to be the oldest remaining dwelling in New York City still used as a residence,\" and elsewhere that \"the house is the oldest known existing residential structure in Queens.\"",
       "status": "open",
       "photos": [

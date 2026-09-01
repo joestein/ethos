@@ -97,6 +97,80 @@ defmodule Ethos.Places.AddressTest do
     assert Address.parse("1523 18th Avenue, Brooklyn, NY 11204").street == "1523 18th Avenue"
   end
 
+  test "a trailing remark after the region or ZIP does not sink the whole address" do
+    # The anchored match fails on every one of these, and before the retry path
+    # existed each returned street, locality and region all nil — publishing no
+    # streetAddress for an address that plainly has one. 38 corpus rows were in
+    # that state. The four shapes, one per delimiter the retry recognises:
+    #
+    # parenthetical after the ZIP
+    assert Address.parse(
+             "126 Brightwater Court, Brooklyn, NY 11235 (Brighton 2nd Street between Brightwater Court and the Boardwalk)"
+           ) == %{
+             street: "126 Brightwater Court",
+             locality: "Brooklyn",
+             region: "NY",
+             postal_code: "11235",
+             parsed?: true
+           }
+
+    # comma-led clause after the ZIP
+    assert Address.parse("2 Wyckoff Avenue, Brooklyn, NY 11237, entrance at 408 Jefferson Street").street ==
+             "2 Wyckoff Avenue"
+
+    # parenthetical after a region with no ZIP
+    assert Address.parse("899-925 Flatbush Avenue, Brooklyn, NY (between Church and Snyder Avenues)") ==
+             %{
+               street: "899-925 Flatbush Avenue",
+               locality: "Brooklyn",
+               region: "NY",
+               postal_code: nil,
+               parsed?: true
+             }
+
+    # semicolon clause
+    assert Address.parse("223 North Burnham Highway, Lisbon, CT 06351; trailhead at 62 Kimball Road").street ==
+             "223 North Burnham Highway"
+  end
+
+  test "the trailing-remark retry does not weaken the rules it recovers into" do
+    # The retry re-runs the SAME anchored regex against the head, so a recovered
+    # address is held to every rule a first-pass one is. Without this, the retry
+    # would be a second, laxer parser sitting behind the first.
+
+    # Still no street line without a house number.
+    assert Address.parse("Bounded by Court and Smith Streets, Brooklyn, NY 11201 (see map)").street ==
+             nil
+
+    # Still rejects a leading ordinal as a street name rather than a number.
+    assert Address.parse("18th Avenue between 55th and 58th, Brooklyn, NY 11204 (at the park)").street ==
+             nil
+
+    # Still drops an intermediate segment that repeats the locality.
+    assert Address.parse("65 Water Street, Brooklyn Bridge Park, Brooklyn, NY 11201, pier 1").street ==
+             "65 Water Street"
+  end
+
+  test "the retry never costs an address a postal code it already had" do
+    # The tail must begin with "(", ";" or a comma-and-space. A looser rule that
+    # allowed any whitespace would let "5 Route 44, Ashford, CT 06278" backtrack
+    # into head "…, CT" with " 06278" discarded as tail — turning a complete
+    # parse into a worse one. This address must be untouched by the retry, which
+    # it never reaches, and must keep its ZIP.
+    assert Address.parse("5 Route 44, Ashford, CT 06278") == %{
+             street: "5 Route 44",
+             locality: "Ashford",
+             region: "CT",
+             postal_code: "06278",
+             parsed?: true
+           }
+
+    # And where a code sits in the discarded tail, scan_postal still finds it:
+    # the caller scans the FULL original string, not the truncated head.
+    assert Address.parse("10 Elm Street, Hartford, CT (mailing address 06103)").postal_code ==
+             "06103"
+  end
+
   test "every address in the corpus either decomposes or falls back cleanly" do
     addresses =
       Ethos.SeedDataHelpers.all_seed_files()

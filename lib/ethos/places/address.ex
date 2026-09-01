@@ -14,6 +14,40 @@ defmodule Ethos.Places.Address do
   @postal ~r/\b(\d{5})(?:-\d{4})?\b/
   @house_number ~r/^\d/
 
+  # `@full` is anchored, so an otherwise perfect address followed by ANY trailing
+  # remark fails outright — every field comes back nil and only the postal code
+  # is scanned back out. An audit of the corpus found 133 addresses in that
+  # state, 38 of which begin with a genuine house number and were therefore
+  # publishing no `streetAddress` at all:
+  #
+  #     "126 Brightwater Court, Brooklyn, NY 11235 (Brighton 2nd Street ...)"
+  #     "2 Wyckoff Avenue, Brooklyn, NY 11237, entrance at 408 Jefferson Street"
+  #     "899-925 Flatbush Avenue, Brooklyn, NY (between Church and Snyder Avenues)"
+  #     "625 Jamaica Avenue, Brooklyn, NY, with two additional parcels ..."
+  #
+  # This captures the address HEAD — everything up to and including the region
+  # and its optional ZIP — when what follows is a parenthetical, a semicolon
+  # clause, or a comma-led clause. The remainder is discarded rather than
+  # published: it is real information, but it belongs in the page's prose, and
+  # emitting it inside a PostalAddress is the defect this module exists to stop.
+  #
+  # Three deliberate properties:
+  #
+  #   * The street part is LAZY here, unlike `@full`'s greedy capture, so the
+  #     head ends at the FIRST complete address rather than the last. On the
+  #     recovery path that is the conservative choice — a string holding two
+  #     addresses truncates to the first one instead of silently publishing the
+  #     second.
+  #   * The tail must begin with `(`, `;`, or a comma followed by whitespace.
+  #     A bare `\s` would let "5 Route 44, Ashford, CT 06278" backtrack into
+  #     head "…, CT" with " 06278" as tail, throwing away a postal code it had.
+  #   * It is only ever consulted AFTER `@full` fails. Anything that parses
+  #     today parses identically tomorrow; this can only turn a nil into a
+  #     value, never change one value into another.
+  @head ~r/^(?<head>.+?,\s*[^,]+,\s*[A-Z]{2}(?:\s+\d{5}(?:-\d{4})?)?)\s*(?:[(;]|,\s).*$/s
+
+  @house_number ~r/^\d/
+
   # A leading ordinal is a street *name*, not a house number: "18th Avenue
   # between 55th and 58th Streets" and "86th Street and 7th Avenue" begin with
   # a digit but carry no building number, so they are descriptive locations of
@@ -60,7 +94,7 @@ defmodule Ethos.Places.Address do
   def parse(address) when is_binary(address) do
     trimmed = String.trim(address)
 
-    case Regex.named_captures(@full, trimmed) do
+    case Regex.named_captures(@full, trimmed) || retry_without_tail(trimmed) do
       nil ->
         %{@empty | postal_code: scan_postal(trimmed)}
 
@@ -74,6 +108,21 @@ defmodule Ethos.Places.Address do
           postal_code: presence(caps["postal"]) || scan_postal(trimmed),
           parsed?: true
         }
+    end
+  end
+
+  # Second and last attempt, reached only when the anchored match failed. Cuts
+  # the trailing remark off and re-runs the SAME anchored regex against the head,
+  # so a recovered address is held to exactly the rules a first-pass one is —
+  # house number, ordinal-street rejection and locality de-duplication all still
+  # apply. Returning nil leaves the caller on its original nil-with-postal path.
+  #
+  # `postal_code` is still scanned from the FULL original string by the caller,
+  # not from the head, so a code sitting in the discarded tail is not lost.
+  defp retry_without_tail(trimmed) do
+    case Regex.named_captures(@head, trimmed) do
+      %{"head" => head} -> Regex.named_captures(@full, String.trim(head))
+      nil -> nil
     end
   end
 
