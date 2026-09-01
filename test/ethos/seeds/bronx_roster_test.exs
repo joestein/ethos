@@ -52,7 +52,7 @@ defmodule Ethos.Seeds.BronxRosterTest do
   # Source: docs/superpowers/specs/2026-08-31-narrowed-nyc-scope-design.md
   @in_scope ~w(
     belmont mott-haven riverdale city-island fordham-heights kingsbridge
-    pelham-bay throgs-neck concourse woodlawn morris-park bronx-park
+    pelham-bay-park throgs-neck concourse woodlawn morris-park bronx-park
     hunts-point van-cortlandt-park
   )
 

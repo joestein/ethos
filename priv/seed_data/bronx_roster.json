@@ -52,10 +52,10 @@
     {"slug": "locust-point", "name": "Locust Point", "community_district": 10, "wave": 5, "in_scope": false},
     {"slug": "country-club", "name": "Country Club", "community_district": 10, "wave": 5, "in_scope": false},
     {"slug": "schuylerville", "name": "Schuylerville", "community_district": 10, "wave": 5, "in_scope": false},
-    {"slug": "pelham-bay", "name": "Pelham Bay", "community_district": 10, "wave": 5, "in_scope": true},
+    {"slug": "pelham-bay", "name": "Pelham Bay", "community_district": 10, "wave": 5, "in_scope": false},
     {"slug": "city-island", "name": "City Island", "community_district": 10, "wave": 5, "in_scope": true},
     {"slug": "co-op-city", "name": "Co-op City", "community_district": 10, "wave": 5, "in_scope": false},
-    {"slug": "pelham-bay-park", "name": "Pelham Bay Park", "community_district": 10, "wave": 5, "in_scope": false},
+    {"slug": "pelham-bay-park", "name": "Pelham Bay Park", "community_district": 10, "wave": 5, "in_scope": true},
 
     {"slug": "morris-park", "name": "Morris Park", "community_district": 11, "wave": 6, "in_scope": true},
     {"slug": "van-nest", "name": "Van Nest", "community_district": 11, "wave": 6, "in_scope": false},
