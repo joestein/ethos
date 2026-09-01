@@ -391,33 +391,36 @@ defmodule Ethos.Seeds.BronxSeedDataTest do
 
   # The link floor was lowered from 3 to 2 for the Bronx (only) once the
   # narrowing in docs/superpowers/specs/2026-08-31-narrowed-nyc-scope-design.md
-  # cut this borough to 14 in-scope neighborhoods. Two reasons, the first
-  # stronger than the second:
+  # cut this borough to 14 in-scope neighborhoods.
   #
-  # 1. The floor was never coherent as an isolation measure. It fires only for
-  #    tier: "town-page" — a guide has no link floor at all, and
-  #    priv/seed_data/bronx/mott-haven.json ships as a guide with "links": [],
-  #    zero. A floor that lets a nine-place page ship with no links while
-  #    demanding three from a five-place page is measuring tier, not
-  #    isolation, and was never really enforcing the thing its message claims.
+  # THE REASON: the floor was written when all 66 Bronx neighborhoods were in
+  # scope, so every page had at least three in-scope neighbours to link to.
+  # The cut to 14 removed that guarantee — edge pages now have one or two
+  # in-scope neighbours at most. Bronx Park is the concrete case: its verified
+  # neighbours are Pelham Parkway, West Farms and Belmont, and the narrowing
+  # put two of those out of scope, leaving a structural ceiling of one
+  # adjacency plus one honest thematic tie — two, not three, and not a defect
+  # of the page. This is the same defect class as the roster-equality gate
+  # below (see "the roster-equality reference set is the in-scope subset, not
+  # the whole roster"), which asserted the shipped corpus against the whole
+  # roster until the same narrowing re-pointed it at the in-scope subset — a
+  # gate whose assumption a later decision invalidated.
   #
-  # 2. The narrowing invalidated the floor's own assumption. It was written
-  #    when all 66 Bronx neighborhoods were in scope, so every page had at
-  #    least three in-scope neighbours to link to. The cut to 14 leaves edge
-  #    pages with one or two in-scope neighbours at most. Bronx Park is the
-  #    concrete case: its verified neighbours are Pelham Parkway, West Farms
-  #    and Belmont, and the narrowing put two of those out of scope — a
-  #    ceiling of one adjacency plus one honest thematic tie, i.e. two, not
-  #    three. This is the same defect class as the roster-equality gate below
-  #    (see "the roster-equality reference set is the in-scope subset, not the
-  #    whole roster"), which asserted the shipped corpus against the whole
-  #    roster until the same narrowing re-pointed it at the in-scope subset —
-  #    a gate whose assumption a later decision invalidated.
+  # WHAT THIS IS NOT: an argument that the guide/town-page asymmetry itself is
+  # incoherent. Guides carry no link floor at all, so the corpus's protection
+  # here has always been uneven across tiers — worth knowing, but that
+  # unevenness is not what justifies this edit, and an earlier draft of this
+  # comment overreached by leaning on it. If the asymmetry itself were the
+  # problem, the fix would be symmetric — a floor for guides too, or none for
+  # either — not a lower number for one tier. The asymmetry is in fact
+  # defensible on its own terms: a thin orientation page needs connection to
+  # justify itself; a nine-place guide earns its keep on content.
   #
   # Said plainly: this change exists to admit one specific page. Bronx Park
   # could reach two links and not three, and that is the circumstance this
-  # reasoning was written in — weigh it accordingly rather than trusting it
-  # as an abstract argument.
+  # reasoning was written in. A rule adjusted with a known beneficiary
+  # already in view deserves more suspicion than one derived in the
+  # abstract — weigh it accordingly rather than trusting it at face value.
   #
   # At 2, the floor still does its job: a town-page with one link, or none, is
   # still caught. That is the isolated-stub case it was written for.
