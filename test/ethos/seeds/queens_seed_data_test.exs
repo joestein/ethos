@@ -83,10 +83,19 @@ defmodule Ethos.Seeds.QueensSeedDataTest do
   """
   use Ethos.DataCase, async: false
 
-  # Deleted by the first Queens research wave, which lands the first seed file.
-  # Until then every assertion below either passes vacuously or fails by
-  # construction over an empty priv/seed_data/queens/, and neither is a signal.
-  @moduletag :pending_queens
+  # The module tag that stood here is gone, deleted 2026-09-01 by the first
+  # Queens research wave exactly as the moduledoc above specifies: astoria.json,
+  # ditmars-steinway.json and long-island-city.json landed together, so
+  # priv/seed_data/queens/ is no longer empty and every corpus-scanning
+  # assertion below is now a real check rather than a tripwire over nothing.
+  #
+  # Three `@tag :pending_queens` lines remain further down and are NOT touched
+  # here — they come off on their own schedule, which the moduledoc records:
+  # the Flushing destination-string assertion when wave 5 lands flushing.json,
+  # and roster equality and marquee institutions when the last in-scope wave
+  # lands, since both genuinely need the whole corpus. The `:pending_queens`
+  # entry in test/test_helper.exs stays until then too, which is what keeps
+  # those three excluded now that the module itself runs.
 
   import Ethos.AccountsFixtures
   alias Ethos.SeedDataHelpers
@@ -520,6 +529,28 @@ defmodule Ethos.Seeds.QueensSeedDataTest do
         do: {Path.basename(f), violation}
   end
 
+  # The Bronx lowered this floor from 3 to 2 and its comment left Queens open:
+  # "its narrowing to 21 neighborhoods may or may not produce the same edge-page
+  # shortage, but that hasn't been checked, so the two boroughs are inconsistent
+  # by omission rather than by a decision. Fold Queens in only after someone
+  # looks." Looked, 2026-09-01, and the answer is no change.
+  #
+  # What forced the Bronx change was one specific page: bronx-park could reach
+  # two honest links and not three, because the narrowing put both of its
+  # non-Belmont neighbours out of scope. That structural condition — an in-scope
+  # page whose neighbours are all out-of-scope — does not appear in the Queens
+  # in-scope set, which narrowed by community district and so kept its clusters
+  # intact: CD1 keeps astoria, ditmars-steinway and long-island-city together,
+  # CD5 keeps glendale, maspeth and ridgewood, and CD2/4/6/9/11/14 each keep a
+  # pair. Every in-scope Queens neighborhood has at least one in-scope
+  # neighbour, and most have two or three. Twenty-one pages also offer more
+  # interconnection than the Bronx's thirteen, not less.
+  #
+  # So the floor stays at 3 here — not because 3 is principled where 2 was not,
+  # but because the circumstance that justified lowering it does not exist in
+  # this borough, and lowering a floor without that circumstance is just
+  # weakening it. If a later wave hits a genuine wall, revisit it then, with the
+  # concrete page in view — which is the standard the Bronx change was held to.
   defp floor_violations(paths) do
     for f <- paths,
         data = DataGuide.load!(f),
@@ -958,6 +989,33 @@ defmodule Ethos.Seeds.QueensSeedDataTest do
     # an unknown target rather than skipping the edge, aborting the whole link
     # pass.
     user = user_fixture()
+
+    # Two link targets in this universe are CODE seeds, not JSON directories,
+    # and the sibling loop below cannot reach either.
+    #
+    # Citi Field is Queens' own: this borough's guides link to
+    # /g/citi-field-guide because Ethos.Seeds.CitiFieldPlaces already owns eight
+    # places in county "Queens" — the Unisphere, the Queens Museum, the Hall of
+    # Science, the Queens Zoo, the Tennis Center, the State Pavilion and the
+    # Queens Theatre, alongside the ballpark. A neighborhood guide references
+    # them and never re-creates them, so the link is the mechanism that keeps
+    # that rule honest, and it has to resolve.
+    #
+    # Yankee Stadium arrives with the Bronx, not with Queens: seeding "bronx"
+    # below pulls in concourse.json, whose link to /g/yankee-stadium-guide is
+    # load-bearing for the same reason. Without this the Bronx link pass raises
+    # here and takes the whole Queens gate down with it — which is exactly what
+    # happened the first two times this module ran.
+    #
+    # These four calls MUST come BEFORE the sibling loop, not after. The loop
+    # resolves each sibling's links as it seeds it, so by the time it reaches
+    # concourse.json the Yankee Stadium guide has to exist already. Putting the
+    # block after the loop reads more naturally and fails identically to having
+    # no block at all — which was the second failure.
+    Ethos.Seeds.CitiFieldPlaces.upsert_all!()
+    Ethos.Seeds.CitiFieldGuide.upsert!(user.email)
+    Ethos.Seeds.YankeeStadiumPlaces.upsert_all!()
+    Ethos.Seeds.YankeeStadiumGuide.upsert!(user.email)
 
     for sibling <- ["manhattan", "brooklyn", "bronx"] do
       sibling_files = SeedDataHelpers.seed_files(sibling)

@@ -151,6 +151,21 @@ defmodule Ethos.ReleaseTest do
     # to Brooklyn or Bronx guides, add those seeders here too.
     Ethos.Release.seed_manhattan(user.email)
 
+    # Wave 1 made seed_ballparks/1 a real precondition of seed_queens/1, the
+    # same way concourse.json made it one for seed_bronx/1. Both Queens guides
+    # that link outside the borough link to /g/citi-field-guide, and they link
+    # there because Ethos.Seeds.CitiFieldPlaces already owns eight places in
+    # county "Queens" — the Unisphere, the Queens Museum, the Hall of Science,
+    # the Queens Zoo, the Tennis Center, the State Pavilion and the Queens
+    # Theatre, alongside the ballpark. Neighborhood guides reference those and
+    # never re-create them, so the link is what keeps that rule honest and it
+    # has to resolve. Without this line the Queens link pass raises here.
+    #
+    # It runs BEFORE `before` is measured, which is what keeps the delta below
+    # correct: the Citi Field guide's county is "Queens", so it must be inside
+    # the baseline rather than arriving between the two counts.
+    Ethos.Release.seed_ballparks(user.email)
+
     before =
       Ethos.Guides.list_published_guides()
       |> Enum.count(&(&1.county == "Queens"))

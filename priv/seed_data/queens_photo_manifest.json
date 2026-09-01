@@ -1,1 +1,38 @@
-{}
+{
+  "astoria-park-pool-astoria": {
+    "sha256": "a1fd0c3d3432db128020dcdc336a585c7fdd6554eba0288fe236e09b34d78eb5",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Astoria_Pool_jeh.jpg"
+  },
+  "gantry-plaza-state-park-long-island-city": {
+    "sha256": "40d3761fb879a53351efb9dae6400d2c254748bf7e7feb615c32533b72d6b054",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Gantry_Plaza_td_(2019-05-11)_020_-_LIC_Gantries.jpg"
+  },
+  "hell-gate-bridge-from-astoria-park-astoria": {
+    "sha256": "9986d188f769acecb145d17fccc24c928b7e7b63cffe31f7e0b1672709e6ad07",
+    "source_url": "https://commons.wikimedia.org/wiki/File:View_of_Hell_Gate_Bridge_from_Astoria_Park,_Queens_New_York.jpg"
+  },
+  "moma-ps1-long-island-city": {
+    "sha256": "a648e72ae75fa160c8aa1e82328672684499c720f1fa3e2bec9b6859f2dfa7ca",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Moma_PS1_exterior_in_Queens.jpg"
+  },
+  "paramount-studios-building-no-1-astoria": {
+    "sha256": "3a36615007590943b75b04573583015d63899ad0d31e993609699faab3d8190a",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Kaufman_Studio_35_Av_35_St_sun_jeh.jpg"
+  },
+  "pepsi-cola-sign-long-island-city": {
+    "sha256": "bf695750617959e6a4ae0c5961adef020c676d0abc4e66dc13b8be55794cf449",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Pepsi_cola_sign_LIC.jpg"
+  },
+  "riker-lent-smith-homestead-ditmars-steinway": {
+    "sha256": "c1ee274aba0e846c58bd638eae2875166d6c0752b947ad98aaf1e1b10ac42e62",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Lent_Homestead_01.JPG"
+  },
+  "steinway-mansion-41st-street-ditmars-steinway": {
+    "sha256": "e01ef726bc351f81a9d660b9affa6d9e2dff01244534a30c9f6d5c359dcdcdde",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Steinway_mansion_41st_sunny_jeh.jpg"
+  },
+  "steinway-mansion-front-ditmars-steinway": {
+    "sha256": "873255e16c100a6db6a7927077c0b3e360409b2b0e9d2b5fb43f06c24ba1623f",
+    "source_url": "https://commons.wikimedia.org/wiki/File:The_Steinway_Mansion.jpg"
+  }
+}

@@ -318,14 +318,54 @@ defmodule EthosWeb.StructuredDataTest do
       # unmoved by this wave: none of the six street-bearing rows carries a
       # comma qualifier. It was checked rather than assumed, because the
       # previous wave tripped that pin.
+      #
+      # Re-measured 2026-09-01 after Queens wave 1 — astoria.json,
+      # ditmars-steinway.json and long-island-city.json — opened a fourth
+      # borough. Thirty-nine places, of which four ship with `"address": null`
+      # (Queensbridge Park, Rainey Park, Ravenswood Playground and Dutch Kills
+      # Playground: NYC Parks records them by park ID, ZIP and acreage and gives
+      # no street line, and inventing one was the Critical this wave's review
+      # caught). The remaining thirty-five reach this setup:
+      #
+      #   * total 2179 -> 2214, the thirty-five addressed places.
+      #   * `streetAddress` 1622 -> 1646 with `is_nil(streetAddress)` 557 -> 568
+      #     splits them 24 / 11, and +24 and +11 sum to the +35 above.
+      #   * `postalCode` 1741 -> 1759: eighteen of the thirty-five carry a code.
+      #   * locality-only 267 -> 275, +8 — and note this does NOT equal the +11
+      #     street-less rows, which is the first wave in this corpus where the
+      #     two diverge. Three street-less Astoria rows carry a ZIP and so sit
+      #     outside the locality-only bucket: Astoria Park, Athens Square and
+      #     Hallets Cove Playground, all addressed by NYC Parks as
+      #     "Astoria, Queens, NY 11102" with no street at all. 11 - 3 = 8.
+      #
+      # Four addresses were normalized before this measurement, and the reason
+      # is worth recording because it will recur in every Queens wave.
+      # Ethos.Places.Address.parse/1 requires the two-letter region: given
+      # "…, Astoria, New York 11102" it returns nil for street, locality AND
+      # region and keeps only the ZIP, so a perfectly good house number emits no
+      # streetAddress at all. Three Queens sources spell the state out, and
+      # Steinway Mansion's arbitrated string carried no city or state whatever.
+      # Those four were rewritten to the "NY" form the rest of the corpus uses —
+      # a formatting change, not a fact change — which is the whole of the
+      # streetAddress move from 20 to 24 in this wave. The parser's narrowness
+      # is a real limitation and is left alone here deliberately: widening it
+      # would shift every borough's counts at once.
+      #
+      # The `comma_streets <= 48` pin in test/ethos/places/address_test.exs is
+      # unmoved. It nearly was: the Bank of the Manhattan Company Building
+      # shipped as "29-27 Queens Plaza North (aka 29-27 41st Avenue, 29-39
+      # Northern Blvd)", whose parenthetical the greedy street capture keeps,
+      # taking the count to 49. The parenthetical was dropped from the seed
+      # rather than the pin raised — the same call made for Bartow-Pell's park
+      # line and Calvary Hospital's neighborhood line before it.
       count = fn f -> Enum.count(emitted, fn {_, ld} -> f.(ld) end) end
 
-      assert length(emitted) == 2179
-      assert count.(& &1["streetAddress"]) == 1622
-      assert count.(&is_nil(&1["streetAddress"])) == 557
-      assert count.(& &1["postalCode"]) == 1741
+      assert length(emitted) == 2214
+      assert count.(& &1["streetAddress"]) == 1646
+      assert count.(&is_nil(&1["streetAddress"])) == 568
+      assert count.(& &1["postalCode"]) == 1759
 
-      # The largest behavioural delta this change ships: 267 places emit a
+      # The largest behavioural delta this change ships: 275 places emit a
       # PostalAddress carrying only locality, region and country. Their full
       # address is still rendered on the page.
       #
@@ -342,11 +382,13 @@ defmodule EthosWeb.StructuredDataTest do
       # above landed seven street-less rows, four in Riverdale and three in
       # Kingsbridge, none of them carrying a ZIP. It went to 267 when
       # hunts-point.json and concourse.json landed nine more, seven of them
-      # NYC Parks cross-street ranges. The comment was not updated
+      # NYC Parks cross-street ranges. It went to 275 with Queens wave 1, which
+      # added eleven street-less rows but only eight locality-only ones — three
+      # Astoria rows are street-less yet carry a ZIP. The comment was not updated
       # with the assertion and spent two commits contradicting a number three
       # lines below it, which is worse than either being wrong alone. Keep the
       # two in step.
-      assert count.(fn ld -> is_nil(ld["streetAddress"]) and is_nil(ld["postalCode"]) end) == 267
+      assert count.(fn ld -> is_nil(ld["streetAddress"]) and is_nil(ld["postalCode"]) end) == 275
     end
   end
 end

@@ -1,0 +1,133 @@
+{
+  "guide": {
+    "slug": "ditmars-steinway-queens-guide",
+    "title": "Ditmars-Steinway, Queens: The Steinway Mansion and the Riker–Lent–Smith Homestead",
+    "destination": "Ditmars-Steinway, New York",
+    "state": "New York",
+    "county": "Queens",
+    "tier": "town-page",
+    "intro": "Ditmars-Steinway is a neighborhood name in the New York City borough of Queens. It is recorded in Wikipedia's article on Astoria, which writes of a convergence point \"bearing the neighborhood name 'Ditmars-Steinway'.\" The Riker–Lent–Smith Homestead and Cemetery is a historic house and cemetery that the same encyclopedia places \"in the Steinway and East Elmhurst neighborhoods of Queens in New York City,\" and its published address is 78-03 19th Rd., East Elmhurst, New York. The Steinway Mansion, also known as the Benjamin T. Pike House, was built in 1858 at 18-33 41st Street, in ZIP 11105. Steinway Street, which that Astoria article calls \"Little Egypt,\" runs 2.4 miles (3.9 km) between Berrian Boulevard in Astoria and Northern Boulevard in Long Island City.",
+    "sections": [
+      {
+        "heading": "The landmark houses",
+        "body": "The Riker–Lent–Smith Homestead and Cemetery is described by its Wikipedia article as \"a historic house and cemetery in the Steinway and East Elmhurst neighborhoods of Queens in New York City.\" Its published address is 78-03 19th Rd., East Elmhurst, New York. The earliest part of the house was built by Abraham Riker in the mid-1650s, under a patent from Nieuw Nederland's last governor, Peter Stuyvesant, and the building carries additions of 1729. It is also recorded as the Lent Homestead and Cemetery, and as the Abraham Lent House. Of its age, the same article says the house \"is believed to be the oldest remaining dwelling in New York City still used as a residence,\" and elsewhere that \"the house is the oldest known existing residential structure in Queens.\"\n\nThe Steinway Mansion, also known as the Benjamin T. Pike House, stands at 18-33 41st Street, in ZIP 11105, and was built in 1858. Its Landmarks Preservation Commission designation report gives the address as \"18-33 41st Street, Steinway, Borough of Queens\" — a designation-report address line. The house has \"original pocket doors with cut glass depicting many of Benjamin Pike Jr.'s scientific instruments.\""
+      },
+      {
+        "heading": "The name and Steinway Street",
+        "body": "Wikipedia's article on Astoria uses the name \"Little Egypt\" for Steinway Street. Steinway Street itself is a two-way street of 2.4 miles (3.9 km) in the borough of Queens, running between Berrian Boulevard in Astoria and Northern Boulevard in Long Island City.\n\nBowery Bay lies near the Ditmars Steinway area, in the neighborhood of Astoria.\n\nWriting about Astoria, the neighbouring neighborhood, the same article records a Greek population there of 22,579 in 1980 and of 18,127 in 1990."
+      },
+      {
+        "heading": "Getting there",
+        "body": "The Steinway Mansion stands at 18-33 41st Street, in ZIP 11105.\n\nThe Riker–Lent–Smith Homestead and Cemetery is addressed 78-03 19th Rd., East Elmhurst, New York — the address published for it, even though Wikipedia describes the house and cemetery as being \"in the Steinway and East Elmhurst neighborhoods of Queens in New York City.\""
+      }
+    ],
+    "faq": [
+      {
+        "question": "How do I get to Ditmars-Steinway?",
+        "answer": "The Steinway Mansion is at 18-33 41st Street, in ZIP 11105. The Riker–Lent–Smith Homestead and Cemetery is addressed 78-03 19th Rd., East Elmhurst, New York, though Wikipedia describes it as being \"in the Steinway and East Elmhurst neighborhoods of Queens in New York City.\""
+      },
+      {
+        "question": "Where does the name Ditmars-Steinway come from?",
+        "answer": "It is recorded in Wikipedia's article on Astoria, which writes of a convergence point \"bearing the neighborhood name 'Ditmars-Steinway'.\" The Steinway half of the name also appears in the city's landmark record, in the Steinway address line the Landmarks Preservation Commission designation report gives the Steinway Mansion, and Wikipedia places the Riker–Lent–Smith Homestead and Cemetery \"in the Steinway and East Elmhurst neighborhoods of Queens.\""
+      },
+      {
+        "question": "How old is the Riker–Lent–Smith Homestead?",
+        "answer": "The earliest part of the house was built by Abraham Riker in the mid-1650s, under a patent from Nieuw Nederland's last governor, Peter Stuyvesant, and it carries additions of 1729. Wikipedia says the house \"is believed to be the oldest remaining dwelling in New York City still used as a residence,\" and elsewhere that \"the house is the oldest known existing residential structure in Queens.\""
+      },
+      {
+        "question": "What is the Steinway Mansion?",
+        "answer": "A house at 18-33 41st Street, in ZIP 11105, built in 1858 and also known as the Benjamin T. Pike House. It has \"original pocket doors with cut glass depicting many of Benjamin Pike Jr.'s scientific instruments.\""
+      }
+    ],
+    "photos": [
+      {
+        "src": "/photos/ny/queens/ditmars-steinway/steinway-mansion-front-ditmars-steinway.jpg",
+        "thumb": "/photos/ny/queens/ditmars-steinway/steinway-mansion-front-ditmars-steinway_thumb.jpg",
+        "title": "Steinway Mansion from its front lawn",
+        "description": "The grey granite house at 18-33 41st Street seen across its lawn, with a white columned porch at the left, a curved balustraded bay window at the centre, and a square tower under a green copper cornice at the right. A low arcaded wing runs off beyond the main block, roses and clipped shrubs line the foundation, and flat stone slabs are set into the grass leading to the entrance.",
+        "author": "AML KING",
+        "license": "CC BY-SA 4.0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:The_Steinway_Mansion.jpg"
+      }
+    ]
+  },
+  "places": [
+    {
+      "slug": "steinway-mansion",
+      "name": "Steinway Mansion",
+      "kind": "historic-site",
+      "town": "Ditmars-Steinway",
+      "state": "New York",
+      "county": "Queens",
+      "address": "18-33 41st Street, Queens, NY 11105",
+      "summary": "A house at 18-33 41st Street, in ZIP 11105, built in 1858 and also known as the Benjamin T. Pike House.",
+      "history": "The house has \"original pocket doors with cut glass depicting many of Benjamin Pike Jr.'s scientific instruments.\"",
+      "status": "open",
+      "photos": [
+        {
+          "src": "/photos/ny/queens/ditmars-steinway/steinway-mansion-41st-street-ditmars-steinway.jpg",
+          "thumb": "/photos/ny/queens/ditmars-steinway/steinway-mansion-41st-street-ditmars-steinway_thumb.jpg",
+          "title": "Steinway Mansion seen from 41st Street",
+          "description": "The stone house viewed from the sidewalk on a bright winter afternoon, its square tower and arched upper windows framed by bare branches. Brick chimneys rise above a green copper roof edge, a wrought-iron fence encloses the frontage, and the number 18-33 is fixed to the stonework beside the entrance.",
+          "author": "Jim.henderson",
+          "license": "CC0",
+          "source_url": "https://commons.wikimedia.org/wiki/File:Steinway_mansion_41st_sunny_jeh.jpg"
+        }
+      ]
+    },
+    {
+      "slug": "riker-lent-smith-homestead",
+      "name": "Riker–Lent–Smith Homestead and Cemetery",
+      "kind": "historic-site",
+      "town": "Ditmars-Steinway",
+      "state": "New York",
+      "county": "Queens",
+      "address": "78-03 19th Rd., East Elmhurst, New York",
+      "summary": "A house and cemetery that Wikipedia describes as \"a historic house and cemetery in the Steinway and East Elmhurst neighborhoods of Queens in New York City,\" published under the address 78-03 19th Rd., East Elmhurst, New York. It is also recorded as the Lent Homestead and Cemetery, and as the Abraham Lent House.",
+      "history": "The earliest part of the house was built by Abraham Riker in the mid-1650s, under a patent from Nieuw Nederland's last governor, Peter Stuyvesant, and the building carries additions of 1729. Wikipedia says the house \"is believed to be the oldest remaining dwelling in New York City still used as a residence,\" and elsewhere that \"the house is the oldest known existing residential structure in Queens.\"",
+      "status": "open",
+      "photos": [
+        {
+          "src": "/photos/ny/queens/ditmars-steinway/riker-lent-smith-homestead-ditmars-steinway.jpg",
+          "thumb": "/photos/ny/queens/ditmars-steinway/riker-lent-smith-homestead-ditmars-steinway_thumb.jpg",
+          "title": "Riker–Lent–Smith Homestead behind its picket fence",
+          "description": "A low shingled farmhouse with a gambrel roof, three dormers set under curved metal hoods, and a brick chimney at the ridge. A deep eave shades the ground floor and its shuttered windows, bare vines climb across the front, and a white picket fence with a latticed gate and a black mailbox closes the yard. Overhead wires cross the frame and bare trees stand behind the roof.",
+          "author": "Peter Greenberg",
+          "license": "CC BY-SA 3.0",
+          "source_url": "https://commons.wikimedia.org/wiki/File:Lent_Homestead_01.JPG"
+        }
+      ]
+    }
+  ],
+  "entries": [
+    {
+      "kind": "sight",
+      "name": "Steinway Mansion",
+      "place_slug": "steinway-mansion",
+      "note": "18-33 41st Street, ZIP 11105. Built in 1858, and also known as the Benjamin T. Pike House."
+    },
+    {
+      "kind": "sight",
+      "name": "Riker–Lent–Smith Homestead and Cemetery",
+      "place_slug": "riker-lent-smith-homestead",
+      "note": "78-03 19th Rd., East Elmhurst. Wikipedia places the house and cemetery \"in the Steinway and East Elmhurst neighborhoods of Queens,\" and dates its earliest part to the mid-1650s."
+    }
+  ],
+  "links": [
+    {
+      "target": "guide:astoria-queens-guide",
+      "kind": "same-region",
+      "note": "Bowery Bay lies near the Ditmars Steinway area, in the neighborhood of Astoria, and Berrian Boulevard in Astoria is one end of Steinway Street."
+    },
+    {
+      "target": "guide:long-island-city-queens-guide",
+      "kind": "same-region",
+      "note": "Steinway Street runs 2.4 miles (3.9 km) between Berrian Boulevard in Astoria and Northern Boulevard in Long Island City."
+    },
+    {
+      "target": "guide:citi-field-guide",
+      "kind": "same-region",
+      "note": "Citi Field, elsewhere in the New York City borough of Queens."
+    }
+  ]
+}
