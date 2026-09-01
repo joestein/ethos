@@ -389,6 +389,44 @@ defmodule Ethos.Seeds.BronxSeedDataTest do
         do: {Path.basename(f), violation}
   end
 
+  # The link floor was lowered from 3 to 2 for the Bronx (only) once the
+  # narrowing in docs/superpowers/specs/2026-08-31-narrowed-nyc-scope-design.md
+  # cut this borough to 14 in-scope neighborhoods. Two reasons, the first
+  # stronger than the second:
+  #
+  # 1. The floor was never coherent as an isolation measure. It fires only for
+  #    tier: "town-page" — a guide has no link floor at all, and
+  #    priv/seed_data/bronx/mott-haven.json ships as a guide with "links": [],
+  #    zero. A floor that lets a nine-place page ship with no links while
+  #    demanding three from a five-place page is measuring tier, not
+  #    isolation, and was never really enforcing the thing its message claims.
+  #
+  # 2. The narrowing invalidated the floor's own assumption. It was written
+  #    when all 66 Bronx neighborhoods were in scope, so every page had at
+  #    least three in-scope neighbours to link to. The cut to 14 leaves edge
+  #    pages with one or two in-scope neighbours at most. Bronx Park is the
+  #    concrete case: its verified neighbours are Pelham Parkway, West Farms
+  #    and Belmont, and the narrowing put two of those out of scope — a
+  #    ceiling of one adjacency plus one honest thematic tie, i.e. two, not
+  #    three. This is the same defect class as the roster-equality gate below
+  #    (see "the roster-equality reference set is the in-scope subset, not the
+  #    whole roster"), which asserted the shipped corpus against the whole
+  #    roster until the same narrowing re-pointed it at the in-scope subset —
+  #    a gate whose assumption a later decision invalidated.
+  #
+  # Said plainly: this change exists to admit one specific page. Bronx Park
+  # could reach two links and not three, and that is the circumstance this
+  # reasoning was written in — weigh it accordingly rather than trusting it
+  # as an abstract argument.
+  #
+  # At 2, the floor still does its job: a town-page with one link, or none, is
+  # still caught. That is the isolated-stub case it was written for.
+  #
+  # Queens carries the same `links < 3` floor (queens_seed_data_test.exs) and
+  # was deliberately left untouched here — its narrowing to 21 neighborhoods
+  # (same design doc) may or may not produce the same edge-page shortage, but
+  # that hasn't been checked, so the two boroughs are inconsistent by omission
+  # rather than by a decision. Fold Queens in only after someone looks.
   defp floor_violations(paths) do
     for f <- paths,
         data = DataGuide.load!(f),
@@ -398,7 +436,7 @@ defmodule Ethos.Seeds.BronxSeedDataTest do
         violation =
           (cond do
              words < 90 -> "intro is #{words} words, floor is 90"
-             links < 3 -> "only #{links} outbound links, floor is 3"
+             links < 2 -> "only #{links} outbound links, floor is 2"
              true -> nil
            end),
         not is_nil(violation),
@@ -584,7 +622,7 @@ defmodule Ethos.Seeds.BronxSeedDataTest do
   end
 
   test "the orientation floor catches too few outbound links" do
-    assert [{"below_link_floor.json", "only 2 outbound links, floor is 3"}] =
+    assert [{"below_link_floor.json", "only 1 outbound links, floor is 2"}] =
              floor_violations([fixture("below_link_floor.json")])
   end
 
