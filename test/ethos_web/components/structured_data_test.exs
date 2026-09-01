@@ -189,12 +189,39 @@ defmodule EthosWeb.StructuredDataTest do
       #     row with a non-nil streetAddress is definitionally outside that
       #     bucket. It is the check that the street-less rows went where they
       #     should, and it moves by exactly the same 3.
+      # Re-measured 2026-09-01 after priv/seed_data/bronx/city-island.json landed
+      # twelve places, every one of them addressed, so the whole delta is +12
+      # and no row is filtered out of this setup by a nil address. Each digit is
+      # accounted for:
+      #
+      #   * total 2117 -> 2129, the twelve addressed places.
+      #   * `streetAddress` 1576 -> 1588 together with `is_nil(streetAddress)`
+      #     UNMOVED at 541 proves all twelve carry a leading house number:
+      #     190 Fordham Street, 116 City Island Avenue, 175 Belden Street,
+      #     41 City Island Avenue, 2 City Island Avenue, 361 City Island Avenue,
+      #     586 City Island Avenue, 65 Schofield Street, 95 Pell Place,
+      #     30 Centre Street, 21 Tier Street and 63 Pilot Street. +12 and +0 sum
+      #     to the +12 above. "21 Tier Street" is the one worth naming twice: it
+      #     is a house number on a non-ordinal street, so the @ordinal_street
+      #     guard in Ethos.Places.Address correctly leaves it in the
+      #     street-bearing bucket.
+      #   * `postalCode` 1713 -> 1718 proves the ZIPs, and nothing else here
+      #     does: five of the twelve carry 10464 — the Nautical Museum (from the
+      #     museum's own site), Sammy's Fish Box, Johnny's Reef and the Original
+      #     Crab Shanty (each from its own site) and the City Island Yacht Club
+      #     (from the DOHMH row that supplies its address). The other seven are
+      #     sourced to Wikipedia's landmark and NRHP lists, which give a street
+      #     address and no five-digit code, so none was invented for them.
+      #   * locality-only UNMOVED at 251. As the note above says, a row with a
+      #     non-nil streetAddress is definitionally outside that bucket, so all
+      #     twelve are, and this bucket could not have moved. It holding still
+      #     is the check that no City Island row went to the street-less side.
       count = fn f -> Enum.count(emitted, fn {_, ld} -> f.(ld) end) end
 
-      assert length(emitted) == 2117
-      assert count.(& &1["streetAddress"]) == 1576
+      assert length(emitted) == 2129
+      assert count.(& &1["streetAddress"]) == 1588
       assert count.(&is_nil(&1["streetAddress"])) == 541
-      assert count.(& &1["postalCode"]) == 1713
+      assert count.(& &1["postalCode"]) == 1718
 
       # The largest behavioural delta this change ships: 251 places emit a
       # PostalAddress carrying only locality, region and country. Their full
@@ -204,7 +231,9 @@ defmodule EthosWeb.StructuredDataTest do
       # priv/seed_data/bronx/mott-haven.json landed three historic districts
       # whose sourced addresses are street ranges, and to 251 when
       # priv/seed_data/bronx/bronx-park.json landed a boundary list, a street
-      # intersection and a road-within-a-garden. The comment was not updated
+      # intersection and a road-within-a-garden. It did not move when
+      # priv/seed_data/bronx/city-island.json landed, because all twelve of that
+      # file's addresses carry a house number. The comment was not updated
       # with the assertion and spent two commits contradicting a number three
       # lines below it, which is worse than either being wrong alone. Keep the
       # two in step.
