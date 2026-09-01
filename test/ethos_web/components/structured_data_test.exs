@@ -216,12 +216,41 @@ defmodule EthosWeb.StructuredDataTest do
       #     non-nil streetAddress is definitionally outside that bucket, so all
       #     twelve are, and this bucket could not have moved. It holding still
       #     is the check that no City Island row went to the street-less side.
+      # Re-measured 2026-09-01 after priv/seed_data/bronx/pelham-bay-park.json
+      # landed four places, two of them addressed. Pelham Bay Park itself and
+      # Orchard Beach both ship with `"address": null` — the research
+      # established no street address or boundary list for either, and guessing
+      # one is not an option — so neither reaches this setup, which rejects nil
+      # addresses. The whole delta is the other two and each digit is accounted
+      # for:
+      #
+      #   * total 2129 -> 2131, the two addressed places.
+      #   * `streetAddress` 1588 -> 1590 together with `is_nil(streetAddress)`
+      #     UNMOVED at 541 proves both carry a leading house number: the
+      #     Bartow-Pell Mansion Museum at "895 Shore Road, Bronx, NY 10464" and
+      #     the Pelham Bay & Split Rock Golf Courses at "870 Shore Road, Bronx,
+      #     NY 10464". +2 and +0 sum to the +2 above. The mansion's row is worth
+      #     naming twice: the research gives its address with a park line,
+      #     "895 Shore Road, Pelham Bay Park, Bronx, NY 10464", which the
+      #     greedy street capture in Ethos.Places.Address emits as the comma-
+      #     qualified street line "895 Shore Road, Pelham Bay Park" — the shape
+      #     `comma_streets <= 48` in test/ethos/places/address_test.exs pins so
+      #     it cannot grow silently. The park line carries no information the
+      #     page does not state in prose, so it was dropped from the seed rather
+      #     than the pin raised.
+      #   * `postalCode` 1718 -> 1720 proves the ZIPs, and nothing else here
+      #     does: both addresses carry 10464, the same ZIP City Island's five
+      #     addressed rows carry.
+      #   * locality-only UNMOVED at 251. As the note above says, a row with a
+      #     non-nil streetAddress is definitionally outside that bucket, so both
+      #     are, and this bucket could not have moved. It holding still is the
+      #     check that neither Pelham Bay Park row went to the street-less side.
       count = fn f -> Enum.count(emitted, fn {_, ld} -> f.(ld) end) end
 
-      assert length(emitted) == 2129
-      assert count.(& &1["streetAddress"]) == 1588
+      assert length(emitted) == 2131
+      assert count.(& &1["streetAddress"]) == 1590
       assert count.(&is_nil(&1["streetAddress"])) == 541
-      assert count.(& &1["postalCode"]) == 1718
+      assert count.(& &1["postalCode"]) == 1720
 
       # The largest behavioural delta this change ships: 251 places emit a
       # PostalAddress carrying only locality, region and country. Their full
@@ -233,7 +262,10 @@ defmodule EthosWeb.StructuredDataTest do
       # priv/seed_data/bronx/bronx-park.json landed a boundary list, a street
       # intersection and a road-within-a-garden. It did not move when
       # priv/seed_data/bronx/city-island.json landed, because all twelve of that
-      # file's addresses carry a house number. The comment was not updated
+      # file's addresses carry a house number, and it did not move when
+      # priv/seed_data/bronx/pelham-bay-park.json landed either: that file's two
+      # addressed places both carry a house number, and its two street-less
+      # places carry no address at all. The comment was not updated
       # with the assertion and spent two commits contradicting a number three
       # lines below it, which is worse than either being wrong alone. Keep the
       # two in step.
