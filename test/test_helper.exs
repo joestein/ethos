@@ -63,6 +63,12 @@ ExUnit.start()
 # `exclude:` replaces the list rather than appending to it — which would
 # silently re-enable the two :pending_wave tests and the Bronx gate, and turn
 # the suite red on pre-existing defects neither programme owns.
-ExUnit.configure(exclude: [:pending_wave, :pending_bronx, :pending_queens])
+# :pending_queens removed 2026-09-02 by the last in-scope wave, which landed the
+# twenty-first Queens seed file. Both remaining `@tag :pending_queens` lines came
+# off with it — roster equality and marquee institutions — so the tag now names
+# nothing and excluding it would only hide a future typo. The single-call rule
+# above still binds: this list is edited in place, never by adding a second
+# ExUnit.configure/1.
+ExUnit.configure(exclude: [:pending_wave, :pending_bronx])
 
 Ecto.Adapters.SQL.Sandbox.mode(Ethos.Repo, :manual)

@@ -1087,7 +1087,8 @@ defmodule Ethos.Seeds.QueensSeedDataTest do
   # Delete this @tag when the last IN-SCOPE wave lands — 21 neighborhoods, not
   # the full 111 — and not before: until then the corpus is a prefix of the
   # in-scope set and this fails by construction.
-  @tag :pending_queens
+  # Tag removed 2026-09-02 by the last in-scope wave. All 21 in-scope Queens
+  # neighborhoods now have seed files and the equality holds in both directions.
   test "the shipped queens corpus matches the in-scope roster exactly" do
     files = files()
 
@@ -1126,7 +1127,28 @@ defmodule Ethos.Seeds.QueensSeedDataTest do
   # the full 111 — with the one above. An institution can
   # only be counted once the wave that owns it has landed, and which wave that
   # is, is exactly what this assertion refuses to take on trust.
-  @tag :pending_queens
+  # Tag removed 2026-09-02 with the one above, by the last in-scope wave.
+  #
+  # Four of the five rows were satisfied by the wave that owned each institution.
+  # The fifth needed a ruling, and it is worth recording here because the
+  # assertion's own failure message did not anticipate the case. Forest Park and
+  # Alley Pond Park were both ruled to belong to NO neighborhood — the first
+  # because its tabulation area is a Jointly Interested Area, the second because
+  # no instrument places it anywhere. That is a claim about CONTAINMENT. This
+  # assertion is about HOSTING, and the two are separable: a file may carry a
+  # place record without asserting the place is inside it. Forest Park has been
+  # hosted in forest-hills.json since wave 4 on exactly that basis, with
+  # `town: "Queens"` and history opening "The park is not administratively part
+  # of any neighborhood".
+  #
+  # Alley Pond Park was at zero and now sits in bayside.json on the same terms.
+  # All five wave-6 verifiers independently chose hosting over the alternatives:
+  # deleting Forest Park's record would fail this gate on two rows instead of
+  # one while 404-ing a live page, and relaxing `n == 1` would make each ruling
+  # its own escape hatch and reopen the between-waves gap this assertion was
+  # written from outside the corpus to close. The file was 3-2; Bayside won on
+  # the Forest Park precedent being a hosting precedent made AGAINST its own
+  # polygon evidence.
   test "each marquee queens institution appears in exactly one neighborhood" do
     files = files()
     assert files != [], "no queens seed files — this would report every institution as missing"

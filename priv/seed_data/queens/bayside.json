@@ -252,6 +252,19 @@
       "history": "The Bell family donated the land for the station. Abraham Bell had acquired land in Bayside in 1824 and worked a farm of 246 acres.",
       "status": "open",
       "photos": []
+    },
+    {
+      "slug": "alley-pond-park",
+      "name": "Alley Pond Park",
+      "kind": "park",
+      "town": "Queens",
+      "state": "New York",
+      "county": "Queens",
+      "address": null,
+      "summary": "NYC Parks carries Alley Pond Park as a Flagship Park of 635.514 acres, acquired on August 16, 1934, and gives its location as Little Neck Bay to Springfield Blvd, Union Tpke. Its park ID is Q001 and it spans ZIP codes 11361, 11362, 11363, 11364 and 11426.",
+      "history": "The park is not administratively part of any neighborhood: the Department of City Planning gives it its own 2020 tabulation area, QN1191. It borders Bayside, Douglaston-Little Neck and Oakland Gardens-Hollis Hills.",
+      "status": "open",
+      "photos": []
     }
   ],
   "entries": [

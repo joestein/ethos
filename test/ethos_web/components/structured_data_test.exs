@@ -511,14 +511,50 @@ defmodule EthosWeb.StructuredDataTest do
       # the Society's own printed form survives verbatim in that place's
       # summary, attributed to the Society, which is where a qualifier that is
       # not part of the postal address belongs.
+      #
+      # Re-measured 2026-09-02 after Queens wave 6, which COMPLETES the borough:
+      # jamaica, kew-gardens, richmond-hill, far-rockaway and rockaway-beach
+      # bring priv/seed_data/queens/ to all twenty-one in-scope neighborhoods.
+      # Ninety-two places, sixteen with `"address": null`, so seventy-six reach
+      # this setup:
+      #
+      #   jamaica         23 places, 3 null, 20 addressed, 16 street,  4 not,  5 zip, 4 loc-only
+      #   kew-gardens     14 places, 3 null, 11 addressed,  9 street,  2 not,  4 zip, 2 loc-only
+      #   richmond-hill   23 places, 8 null, 15 addressed, 15 street,  0 not, 15 zip, 0 loc-only
+      #   far-rockaway    21 places, 2 null, 19 addressed,  9 street, 10 not,  7 zip, 4 loc-only
+      #   rockaway-beach  11 places, 0 null, 11 addressed,  6 street,  5 not, 10 zip, 1 loc-only
+      #
+      #   * total 2441 -> 2517, the seventy-six addressed places.
+      #   * `streetAddress` 1857 -> 1912 and `is_nil(streetAddress)` 584 -> 605,
+      #     splitting them 55 / 21, which sums to the +76 above.
+      #   * `postalCode` 1918 -> 1959, +41.
+      #   * locality-only 291 -> 302, +11.
+      #
+      # A seventeenth place landed in this wave and moves NONE of these counts:
+      # `alley-pond-park` was added to bayside.json, which shipped in wave 5. It
+      # carries `"address": null` deliberately — NYC Parks' Q001 record has no
+      # address field at all, and borrowing the Alley Pond Environmental
+      # Center's would have manufactured a marquee address that does not exist.
+      # It is hosted, not claimed: `town: "Queens"`, and history stating the park
+      # is administratively part of no neighborhood. That record exists so the
+      # marquee gate in queens_seed_data_test.exs can hold at exactly one file
+      # per institution; see the note there for why hosting and containment are
+      # separable.
+      #
+      # Far Rockaway is the shape worth naming: nineteen addressed places and
+      # ten of them street-less, the highest such ratio in the corpus. Its
+      # research leaned on NYC Parks properties and NRHP entries along Mott
+      # Avenue, which give a location string rather than a house number.
+      #
+      # The `comma_streets <= 48` pin holds at 48.
       count = fn f -> Enum.count(emitted, fn {_, ld} -> f.(ld) end) end
 
-      assert length(emitted) == 2441
-      assert count.(& &1["streetAddress"]) == 1857
-      assert count.(&is_nil(&1["streetAddress"])) == 584
-      assert count.(& &1["postalCode"]) == 1918
+      assert length(emitted) == 2517
+      assert count.(& &1["streetAddress"]) == 1912
+      assert count.(&is_nil(&1["streetAddress"])) == 605
+      assert count.(& &1["postalCode"]) == 1959
 
-      # The largest behavioural delta this change ships: 291 places emit a
+      # The largest behavioural delta this change ships: 302 places emit a
       # PostalAddress carrying only locality, region and country. Their full
       # address is still rendered on the page.
       #
@@ -542,12 +578,12 @@ defmodule EthosWeb.StructuredDataTest do
       # of these rows back their street line. It rose to 273 with Queens wave 2,
       # which added four such rows in Jackson Heights and three in Woodside, and to
       # 288 with wave 3, and to 289 with wave 4, whose street-less rows nearly all
-      # carry a ZIP and so sit outside this bucket, and to 291 with wave 5. The
-      # comment was not updated
+      # carry a ZIP and so sit outside this bucket, and to 291 with wave 5 and 302
+      # with wave 6, which completed the borough. The comment was not updated
       # with the assertion and spent two commits contradicting a number three
       # lines below it, which is worse than either being wrong alone. Keep the
       # two in step.
-      assert count.(fn ld -> is_nil(ld["streetAddress"]) and is_nil(ld["postalCode"]) end) == 291
+      assert count.(fn ld -> is_nil(ld["streetAddress"]) and is_nil(ld["postalCode"]) end) == 302
     end
   end
 end

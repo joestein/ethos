@@ -1,4 +1,8 @@
 {
+  "101st-precinct-station-house-far-rockaway": {
+    "sha256": "4d6747a295815eaa7a98951d7d6b2a4721dddca5cfc169beb4f0b3003fbea963",
+    "source_url": "https://commons.wikimedia.org/wiki/File:53rd_(now_101st)_Precient_20190214_140137_01.jpg"
+  },
   "63rd-drive-rego-park": {
     "sha256": "177bae88f736039626344c604a5271ca760bf5a2f309b2aca33dae585c6b5c14",
     "source_url": "https://commons.wikimedia.org/wiki/File:Rego_park_63rd_drive-1.jpg"
@@ -15,6 +19,10 @@
     "sha256": "a1fd0c3d3432db128020dcdc336a585c7fdd6554eba0288fe236e09b34d78eb5",
     "source_url": "https://commons.wikimedia.org/wiki/File:Astoria_Pool_jeh.jpg"
   },
+  "beach-bungalow-historic-district-far-rockaway": {
+    "sha256": "34aac4cf00b11e2c628fff780e633634c0e8c26f8a90cbc6028d9ad07d8e4a79",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Rockaway_Bungalows_065.JPG"
+  },
   "bowne-house-flushing": {
     "sha256": "69248db68f75978c8ebccb28ba4b92967f09dce3dbfa8917dd9e33f9ebbbdb36",
     "source_url": "https://commons.wikimedia.org/wiki/File:Bowne_House_2018.JPG"
@@ -22,6 +30,10 @@
   "bqe-and-rooftops-from-7-train-woodside": {
     "sha256": "ef107e62f1926de10cc2ab785d51b4380379b01762116e57e397c1756c4199db",
     "source_url": "https://commons.wikimedia.org/wiki/File:Woodside_and_BQE_from_7_train.jpg"
+  },
+  "church-of-the-resurrection-richmond-hill": {
+    "sha256": "c4a67ec3c846ee1e52fe0e055ff1ca9c29e3998821c89f878f7fab6f8ad80a1b",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Church_of_the_Resurrection_(Queens,_New_York)_1.jpg"
   },
   "congregation-tifereth-israel-corona": {
     "sha256": "35d186b1683934394e2f215f428cf61dc3d9aee8e07f3e065ae1a485858e08c6",
@@ -71,9 +83,25 @@
     "sha256": "9986d188f769acecb145d17fccc24c928b7e7b63cffe31f7e0b1672709e6ad07",
     "source_url": "https://commons.wikimedia.org/wiki/File:View_of_Hell_Gate_Bridge_from_Astoria_Park,_Queens_New_York.jpg"
   },
+  "jamaica-avenue-el-richmond-hill": {
+    "sha256": "bb83d415c3bc4aa10ec19c02602aa9868d2b605561518cc862414f6202c599fc",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Jamaica_Av_West_07_-_121st_St_BMT.jpg"
+  },
+  "kew-gardens-cinema-kew-gardens": {
+    "sha256": "6accc7a5980e4dfb73d0081872fe31251759c6957874b2083aebb19f19190a5b",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Lefferts_Bl_Qns_td_(2020-10-17)_004_-_Kew_Gardens_Cinemas.jpg"
+  },
+  "king-manor-jamaica": {
+    "sha256": "7472257279c1a10bc5e6e854563b6897df817ce8cd152b723a1825fb3e798e9a",
+    "source_url": "https://commons.wikimedia.org/wiki/File:King_Manor_NW_jeh.jpg"
+  },
   "knockdown-center-maspeth": {
     "sha256": "8c41087559c9f1b36aad017bc34be15d844eff1afb553945b7d880dfc6ab25e6",
     "source_url": "https://commons.wikimedia.org/wiki/File:Knockdown_Center_-_Oct_2023.jpg"
+  },
+  "lefferts-boulevard-bridge-shops-kew-gardens": {
+    "sha256": "9df5320aec2133a978ffeb211a5ee354e54211a0eded7e5ca538f54f3b7dca9e",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Kew_Gardens_shops_jeh.jpg"
   },
   "lemon-ice-king-corona": {
     "sha256": "79b5c4637557d6c7809941f5f7fe72b443e10e27e8e53ec5114b7de864afb876",
@@ -82,6 +110,10 @@
   "little-manila-roosevelt-avenue-woodside": {
     "sha256": "b3af352021e0f04e44e70fb1684e9c0d3e808989091d0e1c15bf34ac81fa968a",
     "source_url": "https://commons.wikimedia.org/wiki/File:69th_St_Fisk_Av_08_-_Rosario%27s_Ihawan.jpg"
+  },
+  "loews-valencia-theatre-jamaica": {
+    "sha256": "3b86cd56bf810a9c355e8e02bebaac38508cdd98542293255d330341951d697a",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Jamaica_Av_165th_St_td_(2018-10-26)_03_-_Tabernacle_of_Prayer_(Loew%27s_Valencia_Theatre).jpg"
   },
   "louis-armstrong-house-corona": {
     "sha256": "82c61347c15817f147c3c88125804acae543782803e75c4ef7f53c149f3b82ce",
@@ -119,6 +151,14 @@
     "sha256": "0ed6ab12ce67d3ec5cf967203754dda86f460184b8a78bfaf79318949dc614ca",
     "source_url": "https://commons.wikimedia.org/wiki/File:Phipps_Garden_Apartments_5101_39_Ave_jeh.jpg"
   },
+  "prospect-cemetery-jamaica": {
+    "sha256": "d542d5c56b99b7081cee5fecf560e3d37c8a512fa358007a5597b7327734cbfb",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Prospect_Cemetery_Jamaica_01.JPG"
+  },
+  "queens-borough-hall-kew-gardens": {
+    "sha256": "46d4e5a98508a5435d874108f79c2b20f98551c7d63b19af8316539f45f45c7e",
+    "source_url": "https://commons.wikimedia.org/wiki/File:QueensBoroughHall.jpg"
+  },
   "reformed-dutch-church-of-newtown-elmhurst": {
     "sha256": "0dd777ac37b24fe01ae7d54b0086ce30af343c236a99368702709f7196c22e70",
     "source_url": "https://commons.wikimedia.org/wiki/File:RDC_Newtown_Bwy_Elmhurst_jeh.JPG"
@@ -130,6 +170,10 @@
   "remsen-family-cemetery-rego-park": {
     "sha256": "08f249c771d79d273582bcb4319a3e17074be68d95ee2eced7440a571ee8f1dc",
     "source_url": "https://commons.wikimedia.org/wiki/File:Remsen_Cem_east_jeh.JPG"
+  },
+  "republican-club-richmond-hill": {
+    "sha256": "0af53304736024898a79357d54329ca0310aaf874c0fa3e5eaf3603990e8cae5",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Richmond_Hill_Republican_Club_01.JPG"
   },
   "residential-street-jackson-heights": {
     "sha256": "8208f1346027bf26b92f55e089fc27101204f91c753eb42a27672c74b3fd7612",
@@ -143,6 +187,10 @@
     "sha256": "c1ee274aba0e846c58bd638eae2875166d6c0752b947ad98aaf1e1b10ac42e62",
     "source_url": "https://commons.wikimedia.org/wiki/File:Lent_Homestead_01.JPG"
   },
+  "rockaway-beach-shore-rockaway-beach": {
+    "sha256": "0157332be8c802cff341b52e68f25a00dfad7ba5427faf17016ed4f72554cf96",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Rockaway_Beach_Queens.JPG"
+  },
   "shops-at-atlas-park-glendale": {
     "sha256": "6470c598714dabe334ef7c3a28d94a45ad9e84c564e4971a392db06fe9180f52",
     "source_url": "https://commons.wikimedia.org/wiki/File:Atlas_Shops_Glendale_hi_jeh.jpg"
@@ -150,6 +198,10 @@
   "st-matthias-church-ridgewood": {
     "sha256": "0f326d9b341977b0860929b4ce0ee5bef16b5ef09f711b6c2949bf40209e32e5",
     "source_url": "https://commons.wikimedia.org/wiki/File:RIDGEWOOD-GLENDALE-FRESH_POND_170.JPG"
+  },
+  "st-rose-of-lima-church-rockaway-beach": {
+    "sha256": "d219bfed3225ef139932051cae97d9f0258607b90f4a337da053c0dcf2e75746",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Rose_of_Lima_RCC_B84_jeh.jpg"
   },
   "station-square-forest-hills": {
     "sha256": "f637eb9fffaadcefd6ec44f99c2747b7c6131bc294e0fb8a666ed200a4cf97e3",
@@ -171,9 +223,17 @@
     "sha256": "87e7e7e6d35f4ff11f4813351efeb7762bf55e7e2071b59fe74fade09f3068a9",
     "source_url": "https://commons.wikimedia.org/wiki/File:Sunnyside_Gardens_Historic_District.JPG"
   },
+  "temple-of-israel-synagogue-rockaway-beach": {
+    "sha256": "fe5eb97559f69ea19ea99275cb72ffe8c90ee869b110640e354c82cfd9cf0238",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Temple_of_Israel_-_Rockaway_Beach_-_02_-_Front_and_South_Side.JPG"
+  },
   "transfiguration-church-maspeth": {
     "sha256": "df9d0deadd35a0c440fe0b4baacb0252de214d33f499cb93db7bbdf6d9f13213",
     "source_url": "https://commons.wikimedia.org/wiki/File:Front_view_of_Church_of_the_Transfiguration_Maspeth_NY.JPG"
+  },
+  "us-post-office-far-rockaway": {
+    "sha256": "b4c108c9b19981ae65974db1bbe9442ece48366ef3216d57de27efdd849dfff5",
+    "source_url": "https://commons.wikimedia.org/wiki/File:US_Post_Office_11691_20190214_135604.jpg"
   },
   "us-post-office-forest-hills": {
     "sha256": "9fb370dc6fdd950a4d6505a2f3dae83ca700c4a5799cf0477a3534353497c8ec",
