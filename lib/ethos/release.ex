@@ -69,6 +69,24 @@ defmodule Ethos.Release do
   def seed_queens(email), do: seed_directory("queens", email)
 
   @doc """
+  Seeds the rione and quartiere corpus under `priv/seed_data/rome/`.
+
+  Distinct from `seed_rome/1`, which seeds only the "3 Days in Rome" flagship
+  guide from `Ethos.Seeds.RomeGuide`. The two are separate because the flagship
+  predates the neighbourhood programme by months and creates no place records
+  at all, so neither is a precondition of the other.
+
+  Rome zone files link to `three-days-in-rome-real-trip-guide`, though, and
+  `Links.resolve!/1` raises on an unknown target — aborting the run partway
+  through, since seeding is not transactional. So `seed_rome/1` must have run
+  at least once against this database before this does.
+  """
+  def seed_rome_zones(email) do
+    seed_rome(email)
+    seed_directory("rome", email)
+  end
+
+  @doc """
   Applies the deletion manifest, removing every place it names.
 
   Prints two numbers, not one: a manifest of 30 that prunes 0 means either the

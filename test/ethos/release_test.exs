@@ -209,6 +209,67 @@ defmodule Ethos.ReleaseTest do
     assert after_second == after_first, "seed_queens/1 is not idempotent"
   end
 
+  # Rome ships before its research does, so `expected` is 0 for now and the
+  # publishes-exactly-the-committed-files half is vacuous — the same position
+  # seed_queens/1 was in when it landed. The directory-literal half is fully
+  # load-bearing at zero files, because seed_directory/2 prints its report
+  # whether or not it matched anything, and that is why this ships running
+  # rather than tagged.
+  #
+  # Rome is the first destination outside the United States, so this is also
+  # the first place the county/state pair is checked for a non-US corpus:
+  # "Italy"/"Rome" rather than a state name and a county name.
+  test "seed_rome_zones/1 names the Rome seed directory and publishes its files, idempotently" do
+    user = user_fixture()
+    expected = length(SeedDataHelpers.seed_files("rome"))
+
+    before =
+      Ethos.Guides.list_published_guides()
+      |> Enum.count(&(&1.county == "Rome"))
+
+    output = capture_io(fn -> Ethos.Release.seed_rome_zones(user.email) end)
+
+    # Parsed back OUT of the report and compared for equality, not containment —
+    # "Seeded 0 files from priv/seed_data/romes\n" CONTAINS "…/rome", so every
+    # prefix-extension typo survives `=~`.
+    assert [_, dir] =
+             Regex.run(~r{Seeded #{expected} files from priv/seed_data/(\S+)\n}, output),
+           "seed_rome_zones/1 printed no seed-directory report: #{inspect(output)}"
+
+    assert dir == "rome",
+           "seed_rome_zones/1 seeds priv/seed_data/#{dir}, not priv/seed_data/rome — a directory " <>
+             "literal that matches nothing seeds nothing, raises nothing, and reports success"
+
+    assert File.dir?(Path.join([to_string(:code.priv_dir(:ethos)), "seed_data", dir])),
+           "seed_rome_zones/1 names priv/seed_data/#{dir}, which does not exist — a silent no-op"
+
+    # seed_rome_zones/1 calls seed_rome/1 first, on purpose: zone files link to
+    # three-days-in-rome-real-trip-guide and Links.resolve!/1 raises on an
+    # unknown target, aborting a run that is not transactional and leaving
+    # earlier files published. Asserting the flagship is present after the call
+    # is what keeps that ordering from being quietly removed as redundant.
+    assert Enum.any?(
+             Ethos.Guides.list_published_guides(),
+             &(&1.slug == "three-days-in-rome-real-trip-guide")
+           ),
+           "seed_rome_zones/1 did not publish the flagship Rome guide, so any zone file " <>
+             "linking to it will abort the run at Links.resolve!/1"
+
+    after_first =
+      Ethos.Guides.list_published_guides()
+      |> Enum.count(&(&1.county == "Rome"))
+
+    assert after_first - before == expected
+
+    capture_io(fn -> Ethos.Release.seed_rome_zones(user.email) end)
+
+    after_second =
+      Ethos.Guides.list_published_guides()
+      |> Enum.count(&(&1.county == "Rome"))
+
+    assert after_second == after_first, "seed_rome_zones/1 is not idempotent"
+  end
+
   # The manifest ships empty and waves append to it, so none of these may
   # assume a size. The load-bearing one while it is still empty is the last:
   # prune deletes only what the manifest names, so a place absent from the
