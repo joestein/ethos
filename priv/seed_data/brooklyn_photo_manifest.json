@@ -11,6 +11,10 @@
     "sha256": "a452e972abbc5516b6eae35a9b467b0f5301c974b935ee8282c86642ef911c5e",
     "source_url": "https://commons.wikimedia.org/wiki/File:2013_BAM_Peter_Jay_Sharp_Building_from_east.jpg"
   },
+  "basin-waterfront-mill-basin": {
+    "sha256": "a524bc2c70daea175158bba131c06e45d7eb2243b294e08842046a10f35e5e30",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Mill_Basin_jeh.JPG"
+  },
   "bath-beach-post-office-bath-beach": {
     "sha256": "8ff8637870b13bb89926daec61bc17857d41c2a902de6be6faf13f0bcbd1f6e9",
     "source_url": "https://commons.wikimedia.org/wiki/File:Bath_Beach_USPS_1865_Benson_Av_11214_jeh.jpg"
@@ -50,6 +54,10 @@
   "building-92-navy-yard": {
     "sha256": "968cc60d4c244e493300a6b2c863442f0befaaafd31eddd973df871f897977ca",
     "source_url": "https://commons.wikimedia.org/wiki/File:BLDG_92_BNY_jeh.jpg"
+  },
+  "canarsie-pier-canarsie": {
+    "sha256": "433ea1f2591b14a6aa197ffb1c7a1aa0456049c9fb5ad0226c154e548d689dd4",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Canarsie_Pier_jeh.JPG"
   },
   "carroll-park-carroll-gardens": {
     "sha256": "dbf2d6df5504a86cc39144ef4902357c9113670143879d496ba5cab688f2def4",
@@ -103,6 +111,10 @@
     "sha256": "c080dab0f8646328f6906b9a6808b6a05094ffb001f135082e8312e671fb2a07",
     "source_url": "https://commons.wikimedia.org/wiki/File:Dry_Dock_at_Brooklyn_Navy_Yard.jpg"
   },
+  "dutch-reformed-church-flatlands": {
+    "sha256": "4a8a77d7d86b520bdfc8a328a6d229887dff7664b4d61c8c6d804494a73d7a02",
+    "source_url": "https://commons.wikimedia.org/wiki/File:DRC_Flatlands_downsun_jeh.JPG"
+  },
   "dyker-beach-golf-clubhouse-dyker-heights": {
     "sha256": "93878d979cabf1211534b12ba40e247195d8175f47c56d8d2d8d7fa05de260ce",
     "source_url": "https://commons.wikimedia.org/wiki/File:Dyker_Beach_Golf_Course_Club_House.JPG"
@@ -138,6 +150,14 @@
   "gerritsen-beach-fire-department": {
     "source_url": "https://commons.wikimedia.org/wiki/File:Gerrittsen_Beach_Fire_Department.jpg",
     "sha256": "a950ffb3adbeac1385b21d4c52beb05324ea033ddad34929ede00c1239818315"
+  },
+  "gerritsen-creek-salt-marsh-marine-park": {
+    "sha256": "f430d30ff4f81b96a088ac3c77712e5a655cb8ab4cb661973e52b63efc5aa938",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Marine_Park_Salt_Marsh,_Brooklyn,_NY.jpg"
+  },
+  "gil-hodges-lanes-georgetown": {
+    "sha256": "e191d03f6ecd36dfdc26d774e85cbe0e80d03f5f3901126a9aeb5d841363ec0e",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Gil_Hodges_Lanes,_2231_Ralph_Ave.,_Brooklyn._LOC_gsc.5a27956.jpg"
   },
   "green-wood-cemetery-gate-greenwood": {
     "sha256": "dded3ee22e600bcd3ef7cec827816ef9d76d08a2ab5e926b3619cc5f614543c7",
@@ -178,6 +198,10 @@
   "hunterfly-road-houses-weeksville": {
     "sha256": "339a8a5383d1144617bc0fb526aa158e502a648d1314e06479c8a904c7eb440d",
     "source_url": "https://commons.wikimedia.org/wiki/File:Hunterfly_road_houses.jpg"
+  },
+  "james-madison-high-school-madison": {
+    "sha256": "0974c677d21b488841bee227895c6634cd0f4d32075736adea7e028183294645",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Madison_High_Bklyn_jeh.jpg"
   },
   "john-paul-jones-park-bay-ridge": {
     "sha256": "830af28e8a0a9c4ad421212619211c895326e03d487cfc53642af16de1f0564f",
@@ -291,6 +315,10 @@
     "source_url": "https://commons.wikimedia.org/wiki/File:Old_Gravesend_Cem_fall_jeh.jpg",
     "sha256": "835e642cd78fb6cbb3b7db25a362795f05b0dcc694b53c78328fbbdad1567c7f"
   },
+  "old-municipal-courthouse-east-new-york": {
+    "sha256": "062efbead7a44f1f818a85b40455966d16da9b2b37534c9e3aa49309c8b66eab",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Brooklyn_Municipal_Court_Liberty_n_Penn_Avs_IND_jeh.jpg"
+  },
   "old-stone-house-park-slope": {
     "sha256": "e0ad94c94d815ee896291e7e59e340aa698a3e2c31219a6991f265064922a7f6",
     "source_url": "https://commons.wikimedia.org/wiki/File:Old_Stone_House_Brooklyn_NY.jpg"
@@ -335,6 +363,10 @@
     "sha256": "f37d80692fb5eb0d99723ab92f2cb9dcf138f16eb9cd471d4fbe0f721d6374b2",
     "source_url": "https://commons.wikimedia.org/wiki/File:RestoPlaza.jpg"
   },
+  "rockaway-avenue-station-ocean-hill": {
+    "sha256": "11c9cccd43d89a368cd7fcf91a199d61d13fdf487aae5e2a84d084b3e416820f",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Rockaway_Av_Fulton_IND_jeh.JPG"
+  },
   "roosevelt-hall-brooklyn-college-flatbush": {
     "sha256": "969f793345d2cc8cedced434e9d1ffb811b1c0bb05c6726754c1b27c06e66075",
     "source_url": "https://commons.wikimedia.org/wiki/File:Roosevelt_Hall,_Brooklyn_College_(2013).jpg"
@@ -367,6 +399,10 @@
     "sha256": "ed7603423a32685859c768922c4176c420fc19e5c6e4ea7639b9d48137220b5f",
     "source_url": "https://commons.wikimedia.org/wiki/File:Saint_Barbara's_Church_(Brooklyn)_2.jpg"
   },
+  "st-bernard-church-bergen-beach": {
+    "sha256": "751d2efd8d54de1dc3ba80fc65ec7ada969c20a14f14f8ad6a811b21ab8840cd",
+    "source_url": "https://commons.wikimedia.org/wiki/File:St_Bernard_RCC_2055_E_69_St_jeh.jpg"
+  },
   "st-james-gerritsen-beach": {
     "source_url": "https://commons.wikimedia.org/wiki/File:Церковь_Св._Якова.jpg",
     "sha256": "d2ab754fc4e89b49c28d1f7345c4d9c57c57dc8b2475c4f891510e0e01a93ed5"
@@ -386,6 +422,10 @@
   "st-sylvester-church-city-line": {
     "sha256": "d1d73d17996380b0a9c7a9c0df14c8130abf8d67cede4ac0bc1f690ff25eb24b",
     "source_url": "https://commons.wikimedia.org/wiki/File:St_Sylvester_Church_in_City_Line,Brooklyn.jpg"
+  },
+  "st-vincent-ferrer-church-farragut": {
+    "sha256": "ba860756325521c806a55180f66ebcd4b7b94f709dfea9b9dd81b46f65826498",
+    "source_url": "https://commons.wikimedia.org/wiki/File:St_Vincent_Ferrer_RCC_925_E_37th_St_Flatbush_jeh.jpg"
   },
   "sunnys-bar-red-hook": {
     "sha256": "42091e42582227149f0cf4453c6e7f3d2bd4fde5d48708ddf002805238978707",
@@ -442,6 +482,10 @@
   "windsor-terrace-library-windsor-terrace": {
     "sha256": "b28253ad4d12e24b1e070904e10f99f27f02865dc961661d68a43a05c80dd415",
     "source_url": "https://commons.wikimedia.org/wiki/File:Windsor_Terrace_BPL_jeh.jpg"
+  },
+  "wingate-high-school-kingston-avenue-wingate": {
+    "sha256": "08a54eb5f79fb17d193fee9cef6c89fa2481623cfc6ffa75130c448ae3e40675",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Wingate_High_School,_Kingston_Ave.,_Brooklyn,_New_York._LOC_gsc.5a23383.tif"
   },
   "winthrop-shelter-pavilion-greenpoint": {
     "sha256": "8de2ffd02a2abefd4a3447320a8392c47bec1b9d14f1a50e65625394ad3a8c7f",

@@ -39,7 +39,17 @@
         "answer": "No hotel or other lodging is listed here, which fits a low-rise residential neighborhood with essentially no visitor-lodging infrastructure. The neighbouring East Brooklyn pages list none either."
       }
     ],
-    "photos": []
+    "photos": [
+      {
+        "src": "/photos/ny/brooklyn/flatlands/dutch-reformed-church-flatlands.jpg",
+        "thumb": "/photos/ny/brooklyn/flatlands/dutch-reformed-church-flatlands_thumb.jpg",
+        "title": "Flatlands Dutch Reformed Church",
+        "description": "A white clapboard church with a pedimented gable end and a fanlight below the peak, its tall shingled spire topped by a weathervane. Tall multi-pane windows run along the flank, a whitewashed brick chimney rises at the near corner, and clipped shrubs line the base. An asphalt parking lot with painted stall lines fills the foreground under leafy trees and a clear blue sky.",
+        "author": "Jim.henderson",
+        "license": "Public domain",
+        "source_url": "https://commons.wikimedia.org/wiki/File:DRC_Flatlands_downsun_jeh.JPG"
+      }
+    ]
   },
   "places": [
     {

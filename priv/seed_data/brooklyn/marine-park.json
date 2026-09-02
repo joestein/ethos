@@ -39,7 +39,17 @@
         "answer": "No hotel is listed here, and the other Brooklyn Community District 18 pages list none either. Plan on staying elsewhere in the city."
       }
     ],
-    "photos": []
+    "photos": [
+      {
+        "src": "/photos/ny/brooklyn/marine-park/gerritsen-creek-salt-marsh-marine-park.jpg",
+        "thumb": "/photos/ny/brooklyn/marine-park/gerritsen-creek-salt-marsh-marine-park_thumb.jpg",
+        "title": "Gerritsen Creek and the Marine Park salt marsh",
+        "description": "Gerritsen Creek widens between low banks of salt-marsh grass, with a grassy spit reaching into the water on the left and a treeline along the far shore. Tall weeds fill the foreground and scattered cumulus clouds sit over the open water.",
+        "author": "GK tramrunner RU",
+        "license": "CC BY-SA 4.0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Marine_Park_Salt_Marsh,_Brooklyn,_NY.jpg"
+      }
+    ]
   },
   "places": [
     {

@@ -47,7 +47,17 @@
         "answer": "No. A query of the city's property dataset for ZIP code 11229, which covers these blocks, returned no property carrying a hotel building class. The neighboring guides linked from this page cover the surrounding area."
       }
     ],
-    "photos": []
+    "photos": [
+      {
+        "src": "/photos/ny/brooklyn/madison/james-madison-high-school-madison.jpg",
+        "thumb": "/photos/ny/brooklyn/madison/james-madison-high-school-madison_thumb.jpg",
+        "title": "James Madison High School on Bedford Avenue",
+        "description": "A long red brick school building with pale stone trim, JAMES MADISON HIGH SCHOOL carved into the band above the upper windows. A columned stone portico shelters the central entrance, banners hang from poles along the facade, and screened chain-link fencing runs in front of it under an overcast sky.",
+        "author": "Jim.henderson",
+        "license": "CC0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Madison_High_Bklyn_jeh.jpg"
+      }
+    ]
   },
   "places": [
     {

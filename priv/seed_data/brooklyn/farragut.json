@@ -31,7 +31,17 @@
         "answer": "Nothing is listed here. Holy Cross Cemetery, on the stated northern edge, is covered on the East Flatbush page, and Flatbush Gardens is a private residential complex rather than a visitor site. The research pass ran out of search access before it could check for restaurants or cafes here, so that gap is unresearched rather than empty."
       }
     ],
-    "photos": []
+    "photos": [
+      {
+        "src": "/photos/ny/brooklyn/farragut/st-vincent-ferrer-church-farragut.jpg",
+        "thumb": "/photos/ny/brooklyn/farragut/st-vincent-ferrer-church-farragut_thumb.jpg",
+        "title": "St. Vincent Ferrer Church on East 37th Street",
+        "description": "A flat brick church front rises to a stepped parapet topped by a dark metal cross on a stone finial. Carved stone frames the entrance, lettered ST. VINCENT FERRER CHURCH above red doors and wall lanterns. Narrow rectangular windows are set into the orange and tan brickwork. A bare tree and a pale green wood-frame house stand at the left edge, and a car is parked at the curb under a clear blue sky.",
+        "author": "Jim.henderson",
+        "license": "CC BY 4.0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:St_Vincent_Ferrer_RCC_925_E_37th_St_Flatbush_jeh.jpg"
+      }
+    ]
   },
   "places": [],
   "entries": [],

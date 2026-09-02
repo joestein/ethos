@@ -31,7 +31,17 @@
         "answer": "Not in Mill Basin. Schenck acquired the land in 1675 and built a house believed to be among the oldest in New York City, but it was dismantled in 1952 and is preserved as a period-room exhibit inside the Brooklyn Museum. Nothing stands on the original site."
       }
     ],
-    "photos": []
+    "photos": [
+      {
+        "src": "/photos/ny/brooklyn/mill-basin/basin-waterfront-mill-basin.jpg",
+        "thumb": "/photos/ny/brooklyn/mill-basin/basin-waterfront-mill-basin_thumb.jpg",
+        "title": "The Mill Basin waterfront from the bridge",
+        "description": "Open water seen over a bridge railing, with a marina of moored boats along the shore at left and a line of private docks and waterfront houses at right, among them a white flat-roofed house set above a bulkhead. A personal watercraft and a small motorboat cross the channel, and the towers of a suspension bridge stand on the horizon at the right.",
+        "author": "Jim.henderson",
+        "license": "Public domain",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Mill_Basin_jeh.JPG"
+      }
+    ]
   },
   "places": [
     {

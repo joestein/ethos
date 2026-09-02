@@ -31,7 +31,17 @@
         "answer": "Sources treat it that way. Georgetown is generally described as the northern section of the larger Bergen Beach area rather than as a historically independent neighborhood, and most of the material about the area's origins is written about Bergen Beach as a whole. Both fall within Brooklyn Community District 18."
       }
     ],
-    "photos": []
+    "photos": [
+      {
+        "src": "/photos/ny/brooklyn/georgetown/gil-hodges-lanes-georgetown.jpg",
+        "thumb": "/photos/ny/brooklyn/georgetown/gil-hodges-lanes-georgetown_thumb.jpg",
+        "title": "Gil Hodges Lanes, Ralph Avenue",
+        "description": "A low, flat-roofed bowling alley on Ralph Avenue. A plain rectangular tower carries BOWL in block capitals and Gil Hodges Lanes in script lettering, and a flat canopy runs over the glass entrance to the right. Cars are parked in front of a dark wall marked with pale diamonds, a clipped hedge lines the frontage, and utility wires cross a clear sky above the roadway.",
+        "author": "Gottscho, Samuel H.",
+        "license": "Public domain",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Gil_Hodges_Lanes,_2231_Ralph_Ave.,_Brooklyn._LOC_gsc.5a27956.jpg"
+      }
+    ]
   },
   "places": [],
   "entries": [],
