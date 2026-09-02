@@ -457,14 +457,40 @@ defmodule EthosWeb.StructuredDataTest do
       # with no number in it.
       #
       # The `comma_streets <= 48` pin holds at 48, checked rather than assumed.
+      #
+      # Re-measured 2026-09-02 after Queens wave 4 — glendale.json, maspeth.json
+      # and ridgewood.json, the Community District 5 group. Sixty places, seven
+      # with `"address": null`, so fifty-three reach this setup:
+      #
+      #   glendale   18 places, 1 null, 17 addressed, 14 street, 3 not, 17 zip, 0 loc-only
+      #   maspeth    19 places, 2 null, 17 addressed, 10 street, 7 not, 17 zip, 0 loc-only
+      #   ridgewood  23 places, 4 null, 19 addressed, 16 street, 3 not, 18 zip, 1 loc-only
+      #
+      #   * total 2344 -> 2397, the fifty-three addressed places.
+      #   * `streetAddress` 1778 -> 1818 and `is_nil(streetAddress)` 566 -> 579,
+      #     splitting them 40 / 13, which sums to the +53 above.
+      #   * `postalCode` 1831 -> 1883, +52 — fifty-two of the fifty-three.
+      #   * locality-only 288 -> 289, +1.
+      #
+      # That last pair is the wave's signature and it is not an error. Almost
+      # every street-less row here still carries a ZIP, so the thirteen
+      # street-less places add only one row to the locality-only bucket. The
+      # reason is in how CD 5 was researched: with almost nothing landmarked in
+      # Maspeth or Glendale, the verifiers leaned on NYC Parks property records
+      # and other agency datasets, which carry a ZIP for every property even
+      # when they give a cross-street rather than a house number. Compare wave 3,
+      # where Elmhurst's twelve religious institutions had street lines and no
+      # ZIPs at all — the opposite shape, from the opposite kind of source.
+      #
+      # The `comma_streets <= 48` pin holds at 48, checked rather than assumed.
       count = fn f -> Enum.count(emitted, fn {_, ld} -> f.(ld) end) end
 
-      assert length(emitted) == 2344
-      assert count.(& &1["streetAddress"]) == 1778
-      assert count.(&is_nil(&1["streetAddress"])) == 566
-      assert count.(& &1["postalCode"]) == 1831
+      assert length(emitted) == 2397
+      assert count.(& &1["streetAddress"]) == 1818
+      assert count.(&is_nil(&1["streetAddress"])) == 579
+      assert count.(& &1["postalCode"]) == 1883
 
-      # The largest behavioural delta this change ships: 288 places emit a
+      # The largest behavioural delta this change ships: 289 places emit a
       # PostalAddress carrying only locality, region and country. Their full
       # address is still rendered on the page.
       #
@@ -487,11 +513,12 @@ defmodule EthosWeb.StructuredDataTest do
       # address parser learned to retry past a trailing remark, which gave nine
       # of these rows back their street line. It rose to 273 with Queens wave 2,
       # which added four such rows in Jackson Heights and three in Woodside, and to
-      # 288 with wave 3. The comment was not updated
+      # 288 with wave 3, and to 289 with wave 4, whose street-less rows nearly all
+      # carry a ZIP and so sit outside this bucket. The comment was not updated
       # with the assertion and spent two commits contradicting a number three
       # lines below it, which is worse than either being wrong alone. Keep the
       # two in step.
-      assert count.(fn ld -> is_nil(ld["streetAddress"]) and is_nil(ld["postalCode"]) end) == 288
+      assert count.(fn ld -> is_nil(ld["streetAddress"]) and is_nil(ld["postalCode"]) end) == 289
     end
   end
 end

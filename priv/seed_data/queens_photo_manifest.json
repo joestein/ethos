@@ -3,6 +3,10 @@
     "sha256": "177bae88f736039626344c604a5271ca760bf5a2f309b2aca33dae585c6b5c14",
     "source_url": "https://commons.wikimedia.org/wiki/File:Rego_park_63rd_drive-1.jpg"
   },
+  "89-70-cooper-avenue-glendale": {
+    "sha256": "068cc818001797bc828c63fd1db7fa0d9866d457f4e0fe92d197eb8920066fb6",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Archie_Bunker_House_01.JPG"
+  },
   "astoria-park-pool-astoria": {
     "sha256": "a1fd0c3d3432db128020dcdc336a585c7fdd6554eba0288fe236e09b34d78eb5",
     "source_url": "https://commons.wikimedia.org/wiki/File:Astoria_Pool_jeh.jpg"
@@ -35,6 +39,10 @@
     "sha256": "9986d188f769acecb145d17fccc24c928b7e7b63cffe31f7e0b1672709e6ad07",
     "source_url": "https://commons.wikimedia.org/wiki/File:View_of_Hell_Gate_Bridge_from_Astoria_Park,_Queens_New_York.jpg"
   },
+  "knockdown-center-maspeth": {
+    "sha256": "8c41087559c9f1b36aad017bc34be15d844eff1afb553945b7d880dfc6ab25e6",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Knockdown_Center_-_Oct_2023.jpg"
+  },
   "lemon-ice-king-corona": {
     "sha256": "79b5c4637557d6c7809941f5f7fe72b443e10e27e8e53ec5114b7de864afb876",
     "source_url": "https://commons.wikimedia.org/wiki/File:Lemon_Ice_King_of_Corona_52_Av_108_St_jeh.jpg"
@@ -47,9 +55,17 @@
     "sha256": "82c61347c15817f147c3c88125804acae543782803e75c4ef7f53c149f3b82ce",
     "source_url": "https://commons.wikimedia.org/wiki/File:Armstrong_Museum_34-56_107_St_Corona_jeh.jpg"
   },
+  "metropolitan-oval-maspeth": {
+    "sha256": "f5f1c9cf3579a7b221a0ec15a714465e199235eba7e605be2c187dc26d0583fd",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Met_Oval_field.jpg"
+  },
   "moma-ps1-long-island-city": {
     "sha256": "a648e72ae75fa160c8aa1e82328672684499c720f1fa3e2bec9b6859f2dfa7ca",
     "source_url": "https://commons.wikimedia.org/wiki/File:Moma_PS1_exterior_in_Queens.jpg"
+  },
+  "myrtle-avenue-80th-street-glendale": {
+    "sha256": "0c427b17e9122dc9d817aebed314c0317f918d1b8a0f4ebd9ced4118355bbefc",
+    "source_url": "https://commons.wikimedia.org/wiki/File:MyrtleAveGdale.jpg"
   },
   "newtown-high-school-elmhurst": {
     "sha256": "f50f9fb1c6e7b05dfa3f617ad9ec97fe005eccd9960457921c535bab876970bd",
@@ -87,9 +103,21 @@
     "sha256": "8208f1346027bf26b92f55e089fc27101204f91c753eb42a27672c74b3fd7612",
     "source_url": "https://commons.wikimedia.org/wiki/File:NYC_Jackson_Heights_3.jpg"
   },
+  "ridgewood-savings-bank-ridgewood": {
+    "sha256": "44adce888a894eeaaf97ae9eb4aff7e15a43b1f95ee3a648ad9cfd34003e3da4",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Ridgewood_Savings_Bank_jeh.JPG"
+  },
   "riker-lent-smith-homestead-ditmars-steinway": {
     "sha256": "c1ee274aba0e846c58bd638eae2875166d6c0752b947ad98aaf1e1b10ac42e62",
     "source_url": "https://commons.wikimedia.org/wiki/File:Lent_Homestead_01.JPG"
+  },
+  "shops-at-atlas-park-glendale": {
+    "sha256": "6470c598714dabe334ef7c3a28d94a45ad9e84c564e4971a392db06fe9180f52",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Atlas_Shops_Glendale_hi_jeh.jpg"
+  },
+  "st-matthias-church-ridgewood": {
+    "sha256": "0f326d9b341977b0860929b4ce0ee5bef16b5ef09f711b6c2949bf40209e32e5",
+    "source_url": "https://commons.wikimedia.org/wiki/File:RIDGEWOOD-GLENDALE-FRESH_POND_170.JPG"
   },
   "station-square-forest-hills": {
     "sha256": "f637eb9fffaadcefd6ec44f99c2747b7c6131bc294e0fb8a666ed200a4cf97e3",
@@ -111,6 +139,10 @@
     "sha256": "87e7e7e6d35f4ff11f4813351efeb7762bf55e7e2071b59fe74fade09f3068a9",
     "source_url": "https://commons.wikimedia.org/wiki/File:Sunnyside_Gardens_Historic_District.JPG"
   },
+  "transfiguration-church-maspeth": {
+    "sha256": "df9d0deadd35a0c440fe0b4baacb0252de214d33f499cb93db7bbdf6d9f13213",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Front_view_of_Church_of_the_Transfiguration_Maspeth_NY.JPG"
+  },
   "us-post-office-forest-hills": {
     "sha256": "9fb370dc6fdd950a4d6505a2f3dae83ca700c4a5799cf0477a3534353497c8ec",
     "source_url": "https://commons.wikimedia.org/wiki/File:Forest_Hills_USPS_11375_jeh.jpg"
@@ -118,5 +150,9 @@
   "us-post-office-station-jackson-heights": {
     "sha256": "d3b4a7946549058e1bdf15236142d67c2cf4a39b1c98e2a12d980ab0a24e4b7a",
     "source_url": "https://commons.wikimedia.org/wiki/File:USPS_JH_11372_at_78-02_37_Av_jeh.jpg"
+  },
+  "vander-ende-onderdonk-house-ridgewood": {
+    "sha256": "af5f8f321ff45cea191bf169d414d1589cdc90200a74030b54506cdf3488209c",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Vander_Ende-Onderdonk_House_Exterior_2022.jpg"
   }
 }
