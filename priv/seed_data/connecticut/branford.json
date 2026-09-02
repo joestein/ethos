@@ -219,5 +219,21 @@
       "note": "A beachfront inn and beach club welcoming guests since 1847."
     }
   ],
-  "links": []
+  "links": [
+    {
+      "target": "guide:east-haven-ct-travel-guide",
+      "kind": "nearby",
+      "note": "The Branford Electric Railway, preserved as the Shore Line Trolley Museum at 17 River Street in East Haven, runs cars toward Branford's Short Beach."
+    },
+    {
+      "target": "guide:north-branford-ct-travel-guide",
+      "kind": "shared-history",
+      "note": "North Branford separated from Branford and incorporated in 1831; both sit on land its Indigenous inhabitants knew as Totoket."
+    },
+    {
+      "target": "guide:new-haven-ct-travel-guide",
+      "kind": "same-region",
+      "note": "New Haven is about 8 miles west of Branford on I-95, and Branford's Shore Line East trains connect there at Union Station."
+    }
+  ]
 }

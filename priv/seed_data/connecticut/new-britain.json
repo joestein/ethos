@@ -258,5 +258,21 @@
       "note": "Craft brewery and coffee roastery in industrial New Britain."
     }
   ],
-  "links": []
+  "links": [
+    {
+      "target": "guide:berlin-ct-travel-guide",
+      "kind": "shared-history",
+      "note": "New Britain separated from Berlin in 1850; Berlin station, one town east, is its nearest Amtrak and CTrail Hartford Line stop."
+    },
+    {
+      "target": "guide:plainville-ct-travel-guide",
+      "kind": "nearby",
+      "note": "The Route 72 freeway runs west from Route 9 in New Britain and ends at Route 372 in Plainville."
+    },
+    {
+      "target": "guide:hartford-ct-travel-guide",
+      "kind": "same-region",
+      "note": "CTfastrak's dedicated 9.1-mile busway links New Britain to downtown Hartford, with peak service every 7-8 minutes."
+    }
+  ]
 }

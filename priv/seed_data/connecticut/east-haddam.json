@@ -269,5 +269,21 @@
       "note": "River-view guest rooms next to the Goodspeed Opera House."
     }
   ],
-  "links": []
+  "links": [
+    {
+      "target": "guide:haddam-ct-travel-guide",
+      "kind": "shared-history",
+      "note": "East Haddam incorporated in 1734, breaking from Haddam; the land for both was bought from its Native inhabitants in 1662 for 30 coats."
+    },
+    {
+      "target": "guide:chester-ct-travel-guide",
+      "kind": "nearby",
+      "note": "The seasonal Chester-Hadlyme Ferry, running since 1769, crosses the Connecticut River on Route 148 between East Haddam and Chester."
+    },
+    {
+      "target": "guide:old-saybrook-ct-travel-guide",
+      "kind": "same-region",
+      "note": "East Haddam has no rail station of its own; the nearest is Old Saybrook, on Shore Line East."
+    }
+  ]
 }

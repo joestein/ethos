@@ -240,5 +240,21 @@
       "note": "Craft beer gastropub in the old depot area, with Sunday brunch."
     }
   ],
-  "links": []
+  "links": [
+    {
+      "target": "guide:new-haven-ct-travel-guide",
+      "kind": "nearby",
+      "note": "Hamden was settled as part of the New Haven Colony and separated in 1786; its Sleeping Giant ridge rises six miles north of New Haven."
+    },
+    {
+      "target": "guide:north-haven-ct-travel-guide",
+      "kind": "nearby",
+      "note": "A CTrail Hartford Line station is planned at the Hamden-North Haven border, near the Route 40 Connector."
+    },
+    {
+      "target": "guide:cheshire-ct-travel-guide",
+      "kind": "nearby",
+      "note": "The Farmington Canal Heritage Trail runs through Hamden into Cheshire, where Lock 12 Historical Park preserves a restored canal lock."
+    }
+  ]
 }

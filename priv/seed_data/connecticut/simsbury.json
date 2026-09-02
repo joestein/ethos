@@ -273,5 +273,21 @@
       "note": "An 1820 country inn with on-site restaurant Soma Grille."
     }
   ],
-  "links": []
+  "links": [
+    {
+      "target": "guide:avon-ct-travel-guide",
+      "kind": "nearby",
+      "note": "Simsbury borders Avon to the south, linked by Route 10/US 202 (Simsbury Road) through the Farmington Valley."
+    },
+    {
+      "target": "guide:windsor-ct-travel-guide",
+      "kind": "shared-history",
+      "note": "Simsbury was settled as the Windsor plantation at Massacoe; its residents sheltered in Windsor after King Philip's War burned the town in 1676."
+    },
+    {
+      "target": "guide:granby-ct-travel-guide",
+      "kind": "shared-history",
+      "note": "Granby was incorporated in 1786 from a section of Simsbury; the 4,400-acre McLean Game Refuge still spans both towns."
+    }
+  ]
 }
