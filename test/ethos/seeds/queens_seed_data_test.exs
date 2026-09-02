@@ -1171,7 +1171,13 @@ defmodule Ethos.Seeds.QueensSeedDataTest do
   # The co-listing invariant is the stated reason this scaffolding was written
   # ahead of the research, so holding it dormant for seven waves after its
   # subject shipped would defeat the reason it exists.
-  @tag :pending_queens
+  # Tag removed 2026-09-02 by the wave that landed priv/seed_data/queens/
+  # flushing.json — wave 5, exactly as the comment above specifies. The
+  # File.exists? guard below is now satisfied, so this assertion runs and the
+  # co-listing invariant is enforced rather than merely documented. Two
+  # `@tag :pending_queens` lines remain in this file (roster equality and
+  # marquee institutions); both genuinely need the whole corpus and come off
+  # with the last in-scope wave, along with the entry in test_helper.exs.
   test "the Flushing guide shares the Citi Field guide's destination string" do
     path = Path.join(@seed_dir, "flushing.json")
 

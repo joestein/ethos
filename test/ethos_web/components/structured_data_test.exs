@@ -483,14 +483,42 @@ defmodule EthosWeb.StructuredDataTest do
       # ZIPs at all — the opposite shape, from the opposite kind of source.
       #
       # The `comma_streets <= 48` pin holds at 48, checked rather than assumed.
+      #
+      # Re-measured 2026-09-02 after Queens wave 5 — flushing.json, bayside.json
+      # and douglaston.json. Fifty-four places, ten with `"address": null`, so
+      # forty-four reach this setup:
+      #
+      #   flushing    20 places, 2 null, 18 addressed, 16 street, 2 not, 17 zip, 1 loc-only
+      #   bayside     14 places, 4 null, 10 addressed,  8 street, 2 not,  3 zip, 1 loc-only
+      #   douglaston  20 places, 4 null, 16 addressed, 15 street, 1 not, 15 zip, 0 loc-only
+      #
+      #   * total 2397 -> 2441, the forty-four addressed places.
+      #   * `streetAddress` 1818 -> 1857 and `is_nil(streetAddress)` 579 -> 584,
+      #     splitting them 39 / 5, which sums to the +44 above.
+      #   * `postalCode` 1883 -> 1918, +35. Bayside supplies only three of those
+      #     across ten addressed places: its landmark quartet is sourced from LPC
+      #     designation reports, which print a street line and no ZIP.
+      #   * locality-only 289 -> 291, +2.
+      #
+      # The `comma_streets <= 48` pin was TRIPPED by this wave and then fixed,
+      # for the third time in the programme and by the same remedy. The Bayside
+      # Historical Society ships at the address it prints for itself,
+      # "208 Totten Avenue, Fort Totten, Bayside, NY 11359", whose campus line
+      # the greedy street capture keeps as "208 Totten Avenue, Fort Totten" —
+      # taking the count to 49. The campus line was dropped from the `address`
+      # field rather than the pin raised, exactly as Bartow-Pell's park line and
+      # Calvary Hospital's neighborhood line were before it. Nothing is lost:
+      # the Society's own printed form survives verbatim in that place's
+      # summary, attributed to the Society, which is where a qualifier that is
+      # not part of the postal address belongs.
       count = fn f -> Enum.count(emitted, fn {_, ld} -> f.(ld) end) end
 
-      assert length(emitted) == 2397
-      assert count.(& &1["streetAddress"]) == 1818
-      assert count.(&is_nil(&1["streetAddress"])) == 579
-      assert count.(& &1["postalCode"]) == 1883
+      assert length(emitted) == 2441
+      assert count.(& &1["streetAddress"]) == 1857
+      assert count.(&is_nil(&1["streetAddress"])) == 584
+      assert count.(& &1["postalCode"]) == 1918
 
-      # The largest behavioural delta this change ships: 289 places emit a
+      # The largest behavioural delta this change ships: 291 places emit a
       # PostalAddress carrying only locality, region and country. Their full
       # address is still rendered on the page.
       #
@@ -514,11 +542,12 @@ defmodule EthosWeb.StructuredDataTest do
       # of these rows back their street line. It rose to 273 with Queens wave 2,
       # which added four such rows in Jackson Heights and three in Woodside, and to
       # 288 with wave 3, and to 289 with wave 4, whose street-less rows nearly all
-      # carry a ZIP and so sit outside this bucket. The comment was not updated
+      # carry a ZIP and so sit outside this bucket, and to 291 with wave 5. The
+      # comment was not updated
       # with the assertion and spent two commits contradicting a number three
       # lines below it, which is worse than either being wrong alone. Keep the
       # two in step.
-      assert count.(fn ld -> is_nil(ld["streetAddress"]) and is_nil(ld["postalCode"]) end) == 289
+      assert count.(fn ld -> is_nil(ld["streetAddress"]) and is_nil(ld["postalCode"]) end) == 291
     end
   end
 end

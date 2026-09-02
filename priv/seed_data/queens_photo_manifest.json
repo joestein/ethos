@@ -7,9 +7,17 @@
     "sha256": "068cc818001797bc828c63fd1db7fa0d9866d457f4e0fe92d197eb8920066fb6",
     "source_url": "https://commons.wikimedia.org/wiki/File:Archie_Bunker_House_01.JPG"
   },
+  "ahles-house-bayside": {
+    "sha256": "f0cb17298a612f677a46555f644aa747eb12cb2fcab32731b9e84bb2e44bff87",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Lydia_Ann_Bell_and_John_William_Ahles_House.jpg"
+  },
   "astoria-park-pool-astoria": {
     "sha256": "a1fd0c3d3432db128020dcdc336a585c7fdd6554eba0288fe236e09b34d78eb5",
     "source_url": "https://commons.wikimedia.org/wiki/File:Astoria_Pool_jeh.jpg"
+  },
+  "bowne-house-flushing": {
+    "sha256": "69248db68f75978c8ebccb28ba4b92967f09dce3dbfa8917dd9e33f9ebbbdb36",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Bowne_House_2018.JPG"
   },
   "bqe-and-rooftops-from-7-train-woodside": {
     "sha256": "ef107e62f1926de10cc2ab785d51b4380379b01762116e57e397c1756c4199db",
@@ -19,13 +27,33 @@
     "sha256": "35d186b1683934394e2f215f428cf61dc3d9aee8e07f3e065ae1a485858e08c6",
     "source_url": "https://commons.wikimedia.org/wiki/File:Congregation_Tifereth_Israel,_Corona,_Queens,_New_York.JPG"
   },
+  "crocheron-park-gazebo-bayside": {
+    "sha256": "d3a0477cf4e3bd09520f2222d2f74035e0fbab2f3add711641274b3d157ff000",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Crocheron6.jpg"
+  },
   "doughboy-monument-woodside": {
     "sha256": "9e200976c5e1b50f4f6758533a572168277cc75aaa4189960cc4b7aeb7dbc6e0",
     "source_url": "https://commons.wikimedia.org/wiki/File:Woodside_doughboy_statue.jpg"
   },
+  "douglaston-club-douglaston": {
+    "sha256": "523b4389eafe482dd331aa902c0304a8c035586f7ae8cb2868b12c1d6368be16",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Douglaston_Club.JPG"
+  },
+  "douglaston-lirr-station-douglaston": {
+    "sha256": "c86da4bc1d4c6a9747f664e6f7c8b947a3eca294422330c5b7f7f7d8bb3d53de",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Douglaston_LIRR_jeh.JPG"
+  },
+  "flushing-town-hall-flushing": {
+    "sha256": "a49b7529e253e77a984c6a475aafcde747acd486a223b3a5f3d739abf4662713",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Flushing_Town_Hall_March_2022.jpg"
+  },
   "forest-hills-stadium-forest-hills": {
     "sha256": "e52a1097b1791301364123bdb9280501904c7a6cece1ce915ae498025870fd17",
     "source_url": "https://commons.wikimedia.org/wiki/File:Forest_Hills_Stadium_Dartmouth_St_jeh.jpg"
+  },
+  "friends-meeting-house-flushing": {
+    "sha256": "5251b58698267b4360afcc5718402d0b7f2d5350149e994404c8a28af9b79b25",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Quaker_Meeting_house_20181010_104104.jpg"
   },
   "gantry-plaza-state-park-long-island-city": {
     "sha256": "40d3761fb879a53351efb9dae6400d2c254748bf7e7feb615c32533b72d6b054",
@@ -34,6 +62,10 @@
   "greystone-apartments-jackson-heights": {
     "sha256": "9703740728e699a815d40971fa0bd19fb4db6bd82cf570d76952eae670afff3f",
     "source_url": "https://commons.wikimedia.org/wiki/File:35-55_80_St,_Queens,_NY.jpg"
+  },
+  "hawthorne-court-apartments-bayside": {
+    "sha256": "1416232ab747f7aeebde83d99a2022d31682f1aad032ee0d388b7eddf75195bc",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Hawthorne_Court_Apartments;_Bayside,_Queens-1.jpg"
   },
   "hell-gate-bridge-from-astoria-park-astoria": {
     "sha256": "9986d188f769acecb145d17fccc24c928b7e7b63cffe31f7e0b1672709e6ad07",
@@ -154,5 +186,9 @@
   "vander-ende-onderdonk-house-ridgewood": {
     "sha256": "af5f8f321ff45cea191bf169d414d1589cdc90200a74030b54506cdf3488209c",
     "source_url": "https://commons.wikimedia.org/wiki/File:Vander_Ende-Onderdonk_House_Exterior_2022.jpg"
+  },
+  "zion-episcopal-church-douglaston": {
+    "sha256": "d758c8c603d3332778fd8dc107a8ac3ddcd359ec88c4ec72d70ed0ee9162edfd",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Zion_Episcopal_Church_Douglaston_01.JPG"
   }
 }
