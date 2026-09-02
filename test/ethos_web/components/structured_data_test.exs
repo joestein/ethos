@@ -400,14 +400,43 @@ defmodule EthosWeb.StructuredDataTest do
       # exactly at 48 after this change and was checked, not assumed: 38 newly
       # parsing street lines is precisely the shape of change that could push it
       # over, and none of them carries a comma.
+      #
+      # Re-measured 2026-09-01 after Queens wave 2 — jackson-heights.json,
+      # sunnyside.json and woodside.json. Sixty-three places, eight of them
+      # shipping with `"address": null`, so fifty-five reach this setup:
+      #
+      #   jackson-heights  16 places,  2 null, 14 addressed,  9 street,  5 not, 10 zip, 4 loc-only
+      #   sunnyside        16 places,  5 null, 11 addressed, 11 street,  0 not,  7 zip, 0 loc-only
+      #   woodside         31 places,  1 null, 30 addressed, 19 street, 11 not, 24 zip, 3 loc-only
+      #
+      #   * total 2214 -> 2269, the fifty-five addressed places.
+      #   * `streetAddress` 1684 -> 1723 and `is_nil(streetAddress)` 530 -> 546,
+      #     splitting them 39 / 16, which sums to the +55 above.
+      #   * `postalCode` 1759 -> 1800, +41.
+      #   * locality-only 266 -> 273, +7 — four in Jackson Heights and three in
+      #     Woodside. Sunnyside contributes none, because every one of its
+      #     eleven addressed places carries a house number.
+      #
+      # Sunnyside's five nulls are worth naming, because four of them were
+      # CREATED by this wave's review rather than by the research. The author
+      # had written cross-street strings into `address` for Phipps Garden
+      # Apartments, Celtic Park Apartments and the Sunnyside Arch — "39th
+      # Avenue at 50th Street, Sunnyside, NY" and the like — where the verdicts
+      # state plainly that no single street address is confirmed for any of
+      # them. Sabba Park had already been nulled on identical grounds, which is
+      # what made the other three visible as the exception. A constructed
+      # cross-street in an address field is a false `streetAddress` waiting to
+      # be emitted; the detail belongs in prose, and that is where it now is.
+      #
+      # The `comma_streets <= 48` pin holds at 48, checked rather than assumed.
       count = fn f -> Enum.count(emitted, fn {_, ld} -> f.(ld) end) end
 
-      assert length(emitted) == 2214
-      assert count.(& &1["streetAddress"]) == 1684
-      assert count.(&is_nil(&1["streetAddress"])) == 530
-      assert count.(& &1["postalCode"]) == 1759
+      assert length(emitted) == 2269
+      assert count.(& &1["streetAddress"]) == 1723
+      assert count.(&is_nil(&1["streetAddress"])) == 546
+      assert count.(& &1["postalCode"]) == 1800
 
-      # The largest behavioural delta this change ships: 266 places emit a
+      # The largest behavioural delta this change ships: 273 places emit a
       # PostalAddress carrying only locality, region and country. Their full
       # address is still rendered on the page.
       #
@@ -428,11 +457,13 @@ defmodule EthosWeb.StructuredDataTest do
       # added eleven street-less rows but only eight locality-only ones — three
       # Astoria rows are street-less yet carry a ZIP. It fell to 266 when the
       # address parser learned to retry past a trailing remark, which gave nine
-      # of these rows back their street line. The comment was not updated
+      # of these rows back their street line. It rose to 273 with Queens wave 2,
+      # which added four such rows in Jackson Heights and three in Woodside.
+      # The comment was not updated
       # with the assertion and spent two commits contradicting a number three
       # lines below it, which is worse than either being wrong alone. Keep the
       # two in step.
-      assert count.(fn ld -> is_nil(ld["streetAddress"]) and is_nil(ld["postalCode"]) end) == 266
+      assert count.(fn ld -> is_nil(ld["streetAddress"]) and is_nil(ld["postalCode"]) end) == 273
     end
   end
 end

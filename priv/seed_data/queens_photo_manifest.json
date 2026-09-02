@@ -3,13 +3,29 @@
     "sha256": "a1fd0c3d3432db128020dcdc336a585c7fdd6554eba0288fe236e09b34d78eb5",
     "source_url": "https://commons.wikimedia.org/wiki/File:Astoria_Pool_jeh.jpg"
   },
+  "bqe-and-rooftops-from-7-train-woodside": {
+    "sha256": "ef107e62f1926de10cc2ab785d51b4380379b01762116e57e397c1756c4199db",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Woodside_and_BQE_from_7_train.jpg"
+  },
+  "doughboy-monument-woodside": {
+    "sha256": "9e200976c5e1b50f4f6758533a572168277cc75aaa4189960cc4b7aeb7dbc6e0",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Woodside_doughboy_statue.jpg"
+  },
   "gantry-plaza-state-park-long-island-city": {
     "sha256": "40d3761fb879a53351efb9dae6400d2c254748bf7e7feb615c32533b72d6b054",
     "source_url": "https://commons.wikimedia.org/wiki/File:Gantry_Plaza_td_(2019-05-11)_020_-_LIC_Gantries.jpg"
   },
+  "greystone-apartments-jackson-heights": {
+    "sha256": "9703740728e699a815d40971fa0bd19fb4db6bd82cf570d76952eae670afff3f",
+    "source_url": "https://commons.wikimedia.org/wiki/File:35-55_80_St,_Queens,_NY.jpg"
+  },
   "hell-gate-bridge-from-astoria-park-astoria": {
     "sha256": "9986d188f769acecb145d17fccc24c928b7e7b63cffe31f7e0b1672709e6ad07",
     "source_url": "https://commons.wikimedia.org/wiki/File:View_of_Hell_Gate_Bridge_from_Astoria_Park,_Queens_New_York.jpg"
+  },
+  "little-manila-roosevelt-avenue-woodside": {
+    "sha256": "b3af352021e0f04e44e70fb1684e9c0d3e808989091d0e1c15bf34ac81fa968a",
+    "source_url": "https://commons.wikimedia.org/wiki/File:69th_St_Fisk_Av_08_-_Rosario%27s_Ihawan.jpg"
   },
   "moma-ps1-long-island-city": {
     "sha256": "a648e72ae75fa160c8aa1e82328672684499c720f1fa3e2bec9b6859f2dfa7ca",
@@ -23,6 +39,14 @@
     "sha256": "bf695750617959e6a4ae0c5961adef020c676d0abc4e66dc13b8be55794cf449",
     "source_url": "https://commons.wikimedia.org/wiki/File:Pepsi_cola_sign_LIC.jpg"
   },
+  "phipps-garden-apartments-sunnyside": {
+    "sha256": "0ed6ab12ce67d3ec5cf967203754dda86f460184b8a78bfaf79318949dc614ca",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Phipps_Garden_Apartments_5101_39_Ave_jeh.jpg"
+  },
+  "residential-street-jackson-heights": {
+    "sha256": "8208f1346027bf26b92f55e089fc27101204f91c753eb42a27672c74b3fd7612",
+    "source_url": "https://commons.wikimedia.org/wiki/File:NYC_Jackson_Heights_3.jpg"
+  },
   "riker-lent-smith-homestead-ditmars-steinway": {
     "sha256": "c1ee274aba0e846c58bd638eae2875166d6c0752b947ad98aaf1e1b10ac42e62",
     "source_url": "https://commons.wikimedia.org/wiki/File:Lent_Homestead_01.JPG"
@@ -34,5 +58,17 @@
   "steinway-mansion-front-ditmars-steinway": {
     "sha256": "873255e16c100a6db6a7927077c0b3e360409b2b0e9d2b5fb43f06c24ba1623f",
     "source_url": "https://commons.wikimedia.org/wiki/File:The_Steinway_Mansion.jpg"
+  },
+  "sunnyside-arch-sunnyside": {
+    "sha256": "13ee5547bbb7df675e345a6f3905f7d5434a5962a7e5e740e2d8046c073d1557",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Queens_Bl_46th_St_td_(2021-06-23)_01_-_Sunnyside_Arch.jpg"
+  },
+  "sunnyside-gardens-historic-district-sunnyside": {
+    "sha256": "87e7e7e6d35f4ff11f4813351efeb7762bf55e7e2071b59fe74fade09f3068a9",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Sunnyside_Gardens_Historic_District.JPG"
+  },
+  "us-post-office-station-jackson-heights": {
+    "sha256": "d3b4a7946549058e1bdf15236142d67c2cf4a39b1c98e2a12d980ab0a24e4b7a",
+    "source_url": "https://commons.wikimedia.org/wiki/File:USPS_JH_11372_at_78-02_37_Av_jeh.jpg"
   }
 }
