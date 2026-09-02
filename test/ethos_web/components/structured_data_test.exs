@@ -429,14 +429,42 @@ defmodule EthosWeb.StructuredDataTest do
       # be emitted; the detail belongs in prose, and that is where it now is.
       #
       # The `comma_streets <= 48` pin holds at 48, checked rather than assumed.
+      #
+      # Re-measured 2026-09-01 after Queens wave 3 — corona.json, elmhurst.json,
+      # forest-hills.json and rego-park.json. Eighty-nine places, fourteen with
+      # `"address": null`, so seventy-five reach this setup:
+      #
+      #   corona        17 places,  1 null, 16 addressed, 12 street,  4 not,  7 zip,  4 loc-only
+      #   elmhurst      32 places,  3 null, 29 addressed, 23 street,  6 not,  1 zip,  6 loc-only
+      #   forest-hills  28 places,  8 null, 20 addressed, 16 street,  4 not, 15 zip,  4 loc-only
+      #   rego-park     12 places,  2 null, 10 addressed,  4 street,  6 not,  8 zip,  1 loc-only
+      #
+      #   * total 2269 -> 2344, the seventy-five addressed places.
+      #   * `streetAddress` 1723 -> 1778 and `is_nil(streetAddress)` 546 -> 566,
+      #     splitting them 55 / 20, which sums to the +75 above.
+      #   * `postalCode` 1800 -> 1831, +31.
+      #   * locality-only 273 -> 288, +15.
+      #
+      # Two rows in that table look wrong and are not. Elmhurst has twenty-nine
+      # addressed places and exactly ONE postal code, because twelve of its
+      # places are religious institutions whose verdicts (F105) confirm the
+      # street address and nothing else — no ZIP was invented to round them out.
+      # Forest Hills has the most nulls of any page in the corpus at eight, and
+      # they are the right eight: Forest Hills Gardens, Arbor and Forest Close,
+      # three playgrounds, Austin Street and the LIRR station are all sited by
+      # cross-street or by agency record, never by house number. Austin Street's
+      # was set to null during the review pass, having shipped as a street name
+      # with no number in it.
+      #
+      # The `comma_streets <= 48` pin holds at 48, checked rather than assumed.
       count = fn f -> Enum.count(emitted, fn {_, ld} -> f.(ld) end) end
 
-      assert length(emitted) == 2269
-      assert count.(& &1["streetAddress"]) == 1723
-      assert count.(&is_nil(&1["streetAddress"])) == 546
-      assert count.(& &1["postalCode"]) == 1800
+      assert length(emitted) == 2344
+      assert count.(& &1["streetAddress"]) == 1778
+      assert count.(&is_nil(&1["streetAddress"])) == 566
+      assert count.(& &1["postalCode"]) == 1831
 
-      # The largest behavioural delta this change ships: 273 places emit a
+      # The largest behavioural delta this change ships: 288 places emit a
       # PostalAddress carrying only locality, region and country. Their full
       # address is still rendered on the page.
       #
@@ -458,12 +486,12 @@ defmodule EthosWeb.StructuredDataTest do
       # Astoria rows are street-less yet carry a ZIP. It fell to 266 when the
       # address parser learned to retry past a trailing remark, which gave nine
       # of these rows back their street line. It rose to 273 with Queens wave 2,
-      # which added four such rows in Jackson Heights and three in Woodside.
-      # The comment was not updated
+      # which added four such rows in Jackson Heights and three in Woodside, and to
+      # 288 with wave 3. The comment was not updated
       # with the assertion and spent two commits contradicting a number three
       # lines below it, which is worse than either being wrong alone. Keep the
       # two in step.
-      assert count.(fn ld -> is_nil(ld["streetAddress"]) and is_nil(ld["postalCode"]) end) == 273
+      assert count.(fn ld -> is_nil(ld["streetAddress"]) and is_nil(ld["postalCode"]) end) == 288
     end
   end
 end

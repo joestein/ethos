@@ -1,4 +1,8 @@
 {
+  "63rd-drive-rego-park": {
+    "sha256": "177bae88f736039626344c604a5271ca760bf5a2f309b2aca33dae585c6b5c14",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Rego_park_63rd_drive-1.jpg"
+  },
   "astoria-park-pool-astoria": {
     "sha256": "a1fd0c3d3432db128020dcdc336a585c7fdd6554eba0288fe236e09b34d78eb5",
     "source_url": "https://commons.wikimedia.org/wiki/File:Astoria_Pool_jeh.jpg"
@@ -7,9 +11,17 @@
     "sha256": "ef107e62f1926de10cc2ab785d51b4380379b01762116e57e397c1756c4199db",
     "source_url": "https://commons.wikimedia.org/wiki/File:Woodside_and_BQE_from_7_train.jpg"
   },
+  "congregation-tifereth-israel-corona": {
+    "sha256": "35d186b1683934394e2f215f428cf61dc3d9aee8e07f3e065ae1a485858e08c6",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Congregation_Tifereth_Israel,_Corona,_Queens,_New_York.JPG"
+  },
   "doughboy-monument-woodside": {
     "sha256": "9e200976c5e1b50f4f6758533a572168277cc75aaa4189960cc4b7aeb7dbc6e0",
     "source_url": "https://commons.wikimedia.org/wiki/File:Woodside_doughboy_statue.jpg"
+  },
+  "forest-hills-stadium-forest-hills": {
+    "sha256": "e52a1097b1791301364123bdb9280501904c7a6cece1ce915ae498025870fd17",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Forest_Hills_Stadium_Dartmouth_St_jeh.jpg"
   },
   "gantry-plaza-state-park-long-island-city": {
     "sha256": "40d3761fb879a53351efb9dae6400d2c254748bf7e7feb615c32533b72d6b054",
@@ -23,13 +35,29 @@
     "sha256": "9986d188f769acecb145d17fccc24c928b7e7b63cffe31f7e0b1672709e6ad07",
     "source_url": "https://commons.wikimedia.org/wiki/File:View_of_Hell_Gate_Bridge_from_Astoria_Park,_Queens_New_York.jpg"
   },
+  "lemon-ice-king-corona": {
+    "sha256": "79b5c4637557d6c7809941f5f7fe72b443e10e27e8e53ec5114b7de864afb876",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Lemon_Ice_King_of_Corona_52_Av_108_St_jeh.jpg"
+  },
   "little-manila-roosevelt-avenue-woodside": {
     "sha256": "b3af352021e0f04e44e70fb1684e9c0d3e808989091d0e1c15bf34ac81fa968a",
     "source_url": "https://commons.wikimedia.org/wiki/File:69th_St_Fisk_Av_08_-_Rosario%27s_Ihawan.jpg"
   },
+  "louis-armstrong-house-corona": {
+    "sha256": "82c61347c15817f147c3c88125804acae543782803e75c4ef7f53c149f3b82ce",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Armstrong_Museum_34-56_107_St_Corona_jeh.jpg"
+  },
   "moma-ps1-long-island-city": {
     "sha256": "a648e72ae75fa160c8aa1e82328672684499c720f1fa3e2bec9b6859f2dfa7ca",
     "source_url": "https://commons.wikimedia.org/wiki/File:Moma_PS1_exterior_in_Queens.jpg"
+  },
+  "newtown-high-school-elmhurst": {
+    "sha256": "f50f9fb1c6e7b05dfa3f617ad9ec97fe005eccd9960457921c535bab876970bd",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Newtown_HS_Elmhurst_jeh.jpg"
+  },
+  "old-saint-james-episcopal-church-elmhurst": {
+    "sha256": "29b6514f563a3901a1ec777b78053e67c21eaa035e42b335a36a93962d232645",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Old_Saint_James_Episcopal_Church_20190424_121800_2.jpg"
   },
   "paramount-studios-building-no-1-astoria": {
     "sha256": "3a36615007590943b75b04573583015d63899ad0d31e993609699faab3d8190a",
@@ -43,6 +71,18 @@
     "sha256": "0ed6ab12ce67d3ec5cf967203754dda86f460184b8a78bfaf79318949dc614ca",
     "source_url": "https://commons.wikimedia.org/wiki/File:Phipps_Garden_Apartments_5101_39_Ave_jeh.jpg"
   },
+  "reformed-dutch-church-of-newtown-elmhurst": {
+    "sha256": "0dd777ac37b24fe01ae7d54b0086ce30af343c236a99368702709f7196c22e70",
+    "source_url": "https://commons.wikimedia.org/wiki/File:RDC_Newtown_Bwy_Elmhurst_jeh.JPG"
+  },
+  "rego-park-jewish-center-rego-park": {
+    "sha256": "b93f5df1f0720171ae046570d17720450a9c00294a7c456bc8833bec951b6b8c",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Rego_Park_Jewish_Center-1.jpg"
+  },
+  "remsen-family-cemetery-rego-park": {
+    "sha256": "08f249c771d79d273582bcb4319a3e17074be68d95ee2eced7440a571ee8f1dc",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Remsen_Cem_east_jeh.JPG"
+  },
   "residential-street-jackson-heights": {
     "sha256": "8208f1346027bf26b92f55e089fc27101204f91c753eb42a27672c74b3fd7612",
     "source_url": "https://commons.wikimedia.org/wiki/File:NYC_Jackson_Heights_3.jpg"
@@ -50,6 +90,10 @@
   "riker-lent-smith-homestead-ditmars-steinway": {
     "sha256": "c1ee274aba0e846c58bd638eae2875166d6c0752b947ad98aaf1e1b10ac42e62",
     "source_url": "https://commons.wikimedia.org/wiki/File:Lent_Homestead_01.JPG"
+  },
+  "station-square-forest-hills": {
+    "sha256": "f637eb9fffaadcefd6ec44f99c2747b7c6131bc294e0fb8a666ed200a4cf97e3",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Station_Square-1.jpg"
   },
   "steinway-mansion-41st-street-ditmars-steinway": {
     "sha256": "e01ef726bc351f81a9d660b9affa6d9e2dff01244534a30c9f6d5c359dcdcdde",
@@ -66,6 +110,10 @@
   "sunnyside-gardens-historic-district-sunnyside": {
     "sha256": "87e7e7e6d35f4ff11f4813351efeb7762bf55e7e2071b59fe74fade09f3068a9",
     "source_url": "https://commons.wikimedia.org/wiki/File:Sunnyside_Gardens_Historic_District.JPG"
+  },
+  "us-post-office-forest-hills": {
+    "sha256": "9fb370dc6fdd950a4d6505a2f3dae83ca700c4a5799cf0477a3534353497c8ec",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Forest_Hills_USPS_11375_jeh.jpg"
   },
   "us-post-office-station-jackson-heights": {
     "sha256": "d3b4a7946549058e1bdf15236142d67c2cf4a39b1c98e2a12d980ab0a24e4b7a",
