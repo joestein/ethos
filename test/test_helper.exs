@@ -69,6 +69,30 @@ ExUnit.start()
 # nothing and excluding it would only hide a future typo. The single-call rule
 # above still binds: this list is edited in place, never by adding a second
 # ExUnit.configure/1.
-ExUnit.configure(exclude: [:pending_wave, :pending_bronx])
+#
+# Ethos.Seeds.RomeSeedDataTest is the same construction one city later, and it
+# is at the stage the Queens gate was at before its first wave: the WHOLE
+# module carries `@moduletag :pending_rome` and priv/seed_data/rome/ holds only
+# .gitkeep, so nothing in it runs.
+#
+# It is a fourth tag rather than a reuse of :pending_bronx for the reason that
+# separated the others: the Bronx programme still has Fordham Heights
+# outstanding, and whichever of the two finishes first would either be unable
+# to delete the shared tag or, deleting it, un-exclude the other's gate and
+# turn the suite red on a corpus it never touched.
+#
+# Removed in two stages, both inside the Rome research programme:
+#
+#   * The first research wave, which lands the first seed file, deletes the
+#     `@moduletag :pending_rome` from the test file. Everything then runs
+#     except the one test carrying its own `@tag :pending_rome`.
+#   * The last in-scope wave — 31 zones: 22 rioni, 8 tier-1 quartieri and
+#     Vatican City — deletes that tag and the :pending_rome entry below. The
+#     scope was ruled on 2026-09-02; see priv/seed_data/rome_roster.json,
+#     whose scope_ruling and vatican_ruling fields are the record.
+#
+#     mix test --include pending_rome
+#
+ExUnit.configure(exclude: [:pending_wave, :pending_bronx, :pending_rome])
 
 Ecto.Adapters.SQL.Sandbox.mode(Ethos.Repo, :manual)
