@@ -271,5 +271,17 @@
       "place_slug": "renaissance-new-york-harlem-hotel",
       "note": "A 2023-opened Marriott hotel inside the redeveloped Victoria Theater."
     }
+  ],
+  "links": [
+    {
+      "target": "guide:east-harlem-manhattan-guide",
+      "kind": "same-region",
+      "note": "Another Manhattan neighborhood covered in this series."
+    },
+    {
+      "target": "guide:morningside-heights-manhattan-guide",
+      "kind": "same-region",
+      "note": "Another Manhattan neighborhood covered in this series."
+    }
   ]
 }

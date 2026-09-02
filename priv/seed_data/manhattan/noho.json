@@ -259,5 +259,17 @@
       "place_slug": "lafayette-grand-cafe-bakery",
       "note": "Andrew Carmellini's French grand cafe and bakery on Lafayette Street."
     }
+  ],
+  "links": [
+    {
+      "target": "guide:soho-manhattan-guide",
+      "kind": "see-also",
+      "note": "NoHo's name, coined in the 1970s, was meant to set the area apart from SoHo to its south."
+    },
+    {
+      "target": "guide:east-village-manhattan-guide",
+      "kind": "see-also",
+      "note": "The Bowery Hotel at 335 Bowery is just across NoHo's eastern edge in the East Village."
+    }
   ]
 }

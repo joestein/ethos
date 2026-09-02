@@ -1,4 +1,16 @@
 {
+  "links": [
+    {
+      "target": "guide:greenwich-village-manhattan-guide",
+      "kind": "shared-history",
+      "note": "The name emerged in the 1950s and '60s to distinguish the area west of Seventh Avenue from the part of Greenwich Village around Washington Square."
+    },
+    {
+      "target": "guide:meatpacking-district-manhattan-guide",
+      "kind": "see-also",
+      "note": "The Whitney Museum, on Gansevoort Street, sits at the Hudson River edge of the West Village/Meatpacking border."
+    }
+  ],
   "guide": {
     "slug": "west-village-manhattan-guide",
     "title": "West Village, Manhattan: Crooked Streets, Stonewall's Legacy",

@@ -270,5 +270,17 @@
       "place_slug": "the-shelburne-sonesta-new-york",
       "note": "A boutique hotel with a rooftop garden bar and Empire State Building views."
     }
+  ],
+  "links":   [
+    {
+      "target": "guide:kips-bay-manhattan-guide",
+      "kind": "shared-history",
+      "note": "This guide's founding story turns on the British landing at nearby Kip's Bay on September 15, 1776, before Mary Lindley Murray's tea."
+    },
+    {
+      "target": "guide:east-village-manhattan-guide",
+      "kind": "see-also",
+      "note": "The 2nd Ave Deli listed here, serving NY since 1954, relocated from its original East Village home."
+    }
   ]
 }

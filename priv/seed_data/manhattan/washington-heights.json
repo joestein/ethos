@@ -1,4 +1,16 @@
 {
+  "links": [
+    {
+      "target": "guide:inwood-manhattan-guide",
+      "kind": "shared-history",
+      "note": "This guide notes Washington Heights is, together with Inwood, the cultural heart of Dominican New York."
+    },
+    {
+      "target": "guide:hamilton-heights-manhattan-guide",
+      "kind": "same-region",
+      "note": "Another Manhattan neighborhood covered in this series."
+    }
+  ],
   "guide": {
     "slug": "washington-heights-manhattan-guide",
     "title": "Washington Heights, Manhattan: Fort Washington to Frankfurt-on-the-Hudson",

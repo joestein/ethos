@@ -208,5 +208,17 @@
       "place_slug": "banc-cafe",
       "note": "A neighborhood bar-restaurant fixture since 2004."
     }
+  ],
+  "links": [
+    {
+      "target": "guide:murray-hill-manhattan-guide",
+      "kind": "see-also",
+      "note": "The nearest verified hotel to Kips Bay is The Shelburne Sonesta at 303 Lexington Avenue, just west in Murray Hill; Banc Cafe sits on the line."
+    },
+    {
+      "target": "guide:gramercy-manhattan-guide",
+      "kind": "same-region",
+      "note": "Another Manhattan neighborhood covered in this series."
+    }
   ]
 }

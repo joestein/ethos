@@ -266,5 +266,17 @@
       "place_slug": "library-hotel",
       "note": "A Dewey-Decimal-themed boutique hotel near Grand Central."
     }
+  ],
+  "links":   [
+    {
+      "target": "guide:theater-district-manhattan-guide",
+      "kind": "see-also",
+      "note": "This guide describes Times Square as Midtown's brightly illuminated hub of the Broadway Theater District."
+    },
+    {
+      "target": "guide:garment-district-manhattan-guide",
+      "kind": "same-region",
+      "note": "Another Manhattan neighborhood covered in this series."
+    }
   ]
 }

@@ -210,5 +210,17 @@
       "place_slug": "gansevoort-meatpacking-nyc",
       "note": "A luxury hotel with a heated rooftop pool at the district's center."
     }
+  ],
+  "links":   [
+    {
+      "target": "guide:west-village-manhattan-guide",
+      "kind": "see-also",
+      "note": "This guide notes the Whitney, at the foot of the High Line, is covered under the series' West Village entry."
+    },
+    {
+      "target": "guide:chelsea-manhattan-guide",
+      "kind": "same-region",
+      "note": "Another Manhattan neighborhood covered in this series."
+    }
   ]
 }

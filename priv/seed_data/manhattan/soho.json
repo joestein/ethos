@@ -319,5 +319,17 @@
       "place_slug": "crosby-street-hotel",
       "note": "A Firmdale hotel on Crosby Street, with 86 individually designed rooms and suites."
     }
+  ],
+  "links": [
+    {
+      "target": "guide:tribeca-manhattan-guide",
+      "kind": "same-region",
+      "note": "Another Manhattan neighborhood covered in this series."
+    },
+    {
+      "target": "guide:greenwich-village-manhattan-guide",
+      "kind": "same-region",
+      "note": "Another Manhattan neighborhood covered in this series."
+    }
   ]
 }

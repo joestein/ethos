@@ -290,5 +290,17 @@
       "place_slug": "the-marlton-hotel",
       "note": "A boutique hotel on West 8th Street with a 2025 Cecily Brown mural in its lobby."
     }
+  ],
+  "links": [
+    {
+      "target": "guide:west-village-manhattan-guide",
+      "kind": "same-region",
+      "note": "Another Manhattan neighborhood covered in this series."
+    },
+    {
+      "target": "guide:noho-manhattan-guide",
+      "kind": "same-region",
+      "note": "Another Manhattan neighborhood covered in this series."
+    }
   ]
 }

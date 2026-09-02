@@ -247,5 +247,17 @@
       "place_slug": "rolfs-german-restaurant",
       "note": "Bavarian fare under a ceiling of Christmas lights kept up nearly all year."
     }
+  ],
+  "links": [
+    {
+      "target": "guide:flatiron-district-manhattan-guide",
+      "kind": "shared-history",
+      "note": "Theodore Roosevelt's birthplace on East 20th Street is cataloged under the neighboring Flatiron District, but is part of Gramercy's own story."
+    },
+    {
+      "target": "guide:union-square-manhattan-guide",
+      "kind": "see-also",
+      "note": "The 14th St-Union Square hub is a short walk from Gramercy's southern edge."
+    }
   ]
 }

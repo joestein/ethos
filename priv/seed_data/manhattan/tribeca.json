@@ -322,5 +322,17 @@
       "place_slug": "the-roxy-hotel",
       "note": "201 mid-century-styled rooms over a cinema, a jazz club, and an oyster bar."
     }
+  ],
+  "links": [
+    {
+      "target": "guide:soho-manhattan-guide",
+      "kind": "shared-history",
+      "note": "Tribeca's artists moved into emptied warehouse lofts following the live/work model pioneered in neighboring SoHo."
+    },
+    {
+      "target": "guide:financial-district-manhattan-guide",
+      "kind": "same-region",
+      "note": "Another Manhattan neighborhood covered in this series."
+    }
   ]
 }

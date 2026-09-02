@@ -259,5 +259,17 @@
       "place_slug": "super-nice-coffee-and-bakery",
       "note": "A takeout-window coffee shop selling specialty donuts."
     }
+  ],
+  "links": [
+    {
+      "target": "guide:harlem-manhattan-guide",
+      "kind": "see-also",
+      "note": "This guide notes travelers often stay in Central Harlem, a short ride away on the 4/5/6."
+    },
+    {
+      "target": "guide:upper-east-side-manhattan-guide",
+      "kind": "see-also",
+      "note": "This guide suggests staying on the Upper East Side, a short ride away on the 4/5/6 or Q."
+    }
   ]
 }

@@ -223,5 +223,17 @@
       "place_slug": "hotel-stanford",
       "note": "A hotel directly on Korea Way, within walking distance of Midtown landmarks."
     }
+  ],
+  "links": [
+    {
+      "target": "guide:garment-district-manhattan-guide",
+      "kind": "shared-history",
+      "note": "Koreatown grew in the 1980s on what had been part of the Garment District, when Korean businesses opened on West 32nd Street."
+    },
+    {
+      "target": "guide:kips-bay-manhattan-guide",
+      "kind": "see-also",
+      "note": "Since around 2015 Koreatown has been expanding eastward toward Madison Avenue into Murray Hill, Kips Bay, and Rose Hill."
+    }
   ]
 }

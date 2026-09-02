@@ -275,5 +275,17 @@
       "place_slug": "the-maritime-hotel",
       "note": "A hotel of 121 rooms and 5 suites in the West 16th Street 'pizza box' building, open since 2003."
     }
+  ],
+  "links": [
+    {
+      "target": "guide:soho-manhattan-guide",
+      "kind": "shared-history",
+      "note": "From the late 1990s, galleries priced out of SoHo turned West Chelsea into the city's contemporary-art hub."
+    },
+    {
+      "target": "guide:meatpacking-district-manhattan-guide",
+      "kind": "see-also",
+      "note": "The High Line's Gansevoort Street terminus and the Whitney sit over the Meatpacking District line, just south."
+    }
   ]
 }

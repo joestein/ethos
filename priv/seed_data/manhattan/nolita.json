@@ -224,5 +224,17 @@
       "place_slug": "the-nolitan-hotel",
       "note": "A boutique hotel inside the neighborhood, with a pet-friendly policy and Piccolo Morini downstairs."
     }
+  ],
+  "links": [
+    {
+      "target": "guide:little-italy-manhattan-guide",
+      "kind": "shared-history",
+      "note": "Nolita was historically part of Little Italy and still keeps traditions like the Feast of San Gennaro on Mulberry Street."
+    },
+    {
+      "target": "guide:chinatown-manhattan-guide",
+      "kind": "see-also",
+      "note": "Nolita sits north of Little Italy and Chinatown, with Broome Street as its southern boundary."
+    }
   ]
 }

@@ -270,5 +270,17 @@
       "place_slug": "the-carlyle",
       "note": "Home to Bemelmans Bar and Cafe Carlyle's 70th-anniversary season."
     }
+  ],
+  "links": [
+    {
+      "target": "guide:yorkville-manhattan-guide",
+      "kind": "shared-history",
+      "note": "Yorkville, the eastern section of the Upper East Side, became a predominantly German enclave from 1880 onward."
+    },
+    {
+      "target": "guide:upper-west-side-manhattan-guide",
+      "kind": "see-also",
+      "note": "Central Park borders the Upper East Side to the west and is documented as a place in the neighboring Upper West Side guide."
+    }
   ]
 }

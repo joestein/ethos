@@ -279,5 +279,17 @@
       "place_slug": "equinox-hotel-hudson-yards",
       "note": "A wellness-focused luxury hotel with a rooftop pool and Hudson River views."
     }
+  ],
+  "links": [
+    {
+      "target": "guide:meatpacking-district-manhattan-guide",
+      "kind": "see-also",
+      "note": "The High Line's northern section wraps the Hudson Yards site; this series covers the park itself under its Meatpacking District entry."
+    },
+    {
+      "target": "guide:hell-s-kitchen-manhattan-guide",
+      "kind": "same-region",
+      "note": "Another Manhattan neighborhood covered in this series."
+    }
   ]
 }

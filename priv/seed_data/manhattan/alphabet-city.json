@@ -212,5 +212,17 @@
       "place_slug": "kafana-alphabet-city",
       "note": "Manhattan's first Serbian restaurant, with a prix fixe menu and natural-wine events."
     }
+  ],
+  "links": [
+    {
+      "target": "guide:east-village-manhattan-guide",
+      "kind": "see-also",
+      "note": "This guide's lodging note points just outside the neighborhood to the adjacent East Village."
+    },
+    {
+      "target": "guide:lower-east-side-manhattan-guide",
+      "kind": "shared-history",
+      "note": "\"Loisaida,\" coined in Bimbo Rivas's 1974 poem, renders \"Lower East Side\" in Nuyorican pronunciation."
+    }
   ]
 }

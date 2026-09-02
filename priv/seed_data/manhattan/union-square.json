@@ -243,5 +243,17 @@
       "place_slug": "w-new-york-union-square",
       "note": "A renovated hotel in the 1911 Beaux-Arts former Germania Life Insurance building on the square's corner."
     }
+  ],
+  "links": [
+    {
+      "target": "guide:gramercy-manhattan-guide",
+      "kind": "same-region",
+      "note": "Another Manhattan neighborhood covered in this series."
+    },
+    {
+      "target": "guide:east-village-manhattan-guide",
+      "kind": "same-region",
+      "note": "Another Manhattan neighborhood covered in this series."
+    }
   ]
 }

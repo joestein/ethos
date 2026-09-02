@@ -260,5 +260,17 @@
       "place_slug": "bacaro",
       "note": "Candlelit Venetian cooking and wine on Division Street."
     }
+  ],
+  "links": [
+    {
+      "target": "guide:lower-east-side-manhattan-guide",
+      "kind": "shared-history",
+      "note": "Two Bridges sits at the southern end of the Lower East Side and has long been an immigrant gateway."
+    },
+    {
+      "target": "guide:chinatown-manhattan-guide",
+      "kind": "see-also",
+      "note": "The nearest hotel to Two Bridges is the Leon Hotel at 125 Canal Street in adjacent Chinatown."
+    }
   ]
 }

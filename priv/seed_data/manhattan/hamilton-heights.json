@@ -251,5 +251,17 @@
       "place_slug": "the-edge-harlem",
       "note": "A restaurant-bar with UK, Jamaican, and NYC influences and Wednesday live music."
     }
+  ],
+  "links": [
+    {
+      "target": "guide:harlem-manhattan-guide",
+      "kind": "see-also",
+      "note": "With no verified hotel in Hamilton Heights, this guide points travelers to nearby Central Harlem as a base."
+    },
+    {
+      "target": "guide:washington-heights-manhattan-guide",
+      "kind": "same-region",
+      "note": "Another Manhattan neighborhood covered in this series."
+    }
   ]
 }

@@ -323,5 +323,17 @@
       "place_slug": "paramount-times-square",
       "note": "A Generator-operated hotel with a Broadway Tuesdays live series in the lobby."
     }
+  ],
+  "links": [
+    {
+      "target": "guide:hell-s-kitchen-manhattan-guide",
+      "kind": "same-region",
+      "note": "Another Manhattan neighborhood covered in this series."
+    },
+    {
+      "target": "guide:garment-district-manhattan-guide",
+      "kind": "same-region",
+      "note": "Another Manhattan neighborhood covered in this series."
+    }
   ]
 }

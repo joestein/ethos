@@ -247,5 +247,17 @@
       "place_slug": "archer-hotel-new-york",
       "note": "An industrial-chic hotel with rooftop Empire State Building views."
     }
+  ],
+  "links": [
+    {
+      "target": "guide:koreatown-manhattan-guide",
+      "kind": "see-also",
+      "note": "Greeley Square Park, a block south of Herald Square, is covered under this series' Koreatown entry."
+    },
+    {
+      "target": "guide:theater-district-manhattan-guide",
+      "kind": "same-region",
+      "note": "Another Manhattan neighborhood covered in this series."
+    }
   ]
 }

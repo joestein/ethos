@@ -198,5 +198,17 @@
       "place_slug": "umbertos-clam-house",
       "note": "A storied seafood spot with clam dishes at the center of its Little Italy lore."
     }
+  ],
+  "links": [
+    {
+      "target": "guide:chinatown-manhattan-guide",
+      "kind": "shared-history",
+      "note": "Chinatown's northward expansion after 1965 shrank Little Italy to five blocks; in 2010 the two were jointly listed as one historic district."
+    },
+    {
+      "target": "guide:nolita-manhattan-guide",
+      "kind": "see-also",
+      "note": "No hotel operates in Little Italy's Mulberry Street core; The Nolitan Hotel, one block north in adjacent Nolita, is the nearest option."
+    }
   ]
 }

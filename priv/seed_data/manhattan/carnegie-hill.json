@@ -267,5 +267,17 @@
       "place_slug": "bluestone-lane-church-of-the-heavenly-rest",
       "note": "Coffee inside a historic Museum Mile church, opposite Central Park's Engineers' Gate."
     }
+  ],
+  "links": [
+    {
+      "target": "guide:upper-east-side-manhattan-guide",
+      "kind": "see-also",
+      "note": "The Guggenheim, on the neighborhood's western edge, is documented in the neighboring Upper East Side guide."
+    },
+    {
+      "target": "guide:yorkville-manhattan-guide",
+      "kind": "same-region",
+      "note": "Another Manhattan neighborhood covered in this series."
+    }
   ]
 }

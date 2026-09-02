@@ -256,5 +256,17 @@
       "place_slug": "the-beekman",
       "note": "The district's verified in-neighborhood hotel, set inside the landmarked 1883 Temple Court building."
     }
+  ],
+  "links": [
+    {
+      "target": "guide:battery-park-city-manhattan-guide",
+      "kind": "same-region",
+      "note": "Another Manhattan neighborhood covered in this series."
+    },
+    {
+      "target": "guide:tribeca-manhattan-guide",
+      "kind": "same-region",
+      "note": "Another Manhattan neighborhood covered in this series."
+    }
   ]
 }

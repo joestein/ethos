@@ -247,5 +247,17 @@
       "place_slug": "the-evelyn-hotel",
       "note": "A 160-room boutique hotel nodding to NoMad's Tin Pan Alley music heritage."
     }
+  ],
+  "links": [
+    {
+      "target": "guide:flatiron-district-manhattan-guide",
+      "kind": "see-also",
+      "note": "From Madison Square at NoMad's southern edge, the view across the park takes in the Flatiron Building beyond."
+    },
+    {
+      "target": "guide:murray-hill-manhattan-guide",
+      "kind": "same-region",
+      "note": "Another Manhattan neighborhood covered in this series."
+    }
   ]
 }

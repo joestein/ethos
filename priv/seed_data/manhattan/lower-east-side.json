@@ -317,5 +317,17 @@
       "place_slug": "hotel-on-rivington",
       "note": "A Rivington Street hotel whose rooms have floor-to-ceiling windows."
     }
+  ],
+  "links":   [
+    {
+      "target": "guide:chinatown-manhattan-guide",
+      "kind": "see-also",
+      "note": "This guide's subway section places the B/D at Grand St on the neighborhood's Chinatown border."
+    },
+    {
+      "target": "guide:two-bridges-manhattan-guide",
+      "kind": "same-region",
+      "note": "Another Manhattan neighborhood covered in this series."
+    }
   ]
 }

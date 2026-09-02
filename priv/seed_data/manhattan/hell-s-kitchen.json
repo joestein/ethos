@@ -247,5 +247,17 @@
       "place_slug": "pod-times-square",
       "note": "Compact pod rooms and apartment-style units near 42nd Street and Ninth Avenue."
     }
+  ],
+  "links": [
+    {
+      "target": "guide:hudson-yards-manhattan-guide",
+      "kind": "see-also",
+      "note": "The 7 train's southern terminal at 34 St-Hudson Yards, opened in 2015, serves Hell's Kitchen's southern end."
+    },
+    {
+      "target": "guide:theater-district-manhattan-guide",
+      "kind": "same-region",
+      "note": "Another Manhattan neighborhood covered in this series."
+    }
   ]
 }

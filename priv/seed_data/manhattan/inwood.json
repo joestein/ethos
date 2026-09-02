@@ -231,5 +231,17 @@
       "place_slug": "809-restaurant-lounge",
       "note": "A Dominican and Caribbean institution on Dyckman Street since 2004."
     }
+  ],
+  "links": [
+    {
+      "target": "guide:washington-heights-manhattan-guide",
+      "kind": "see-also",
+      "note": "No hotel could be verified in Inwood; the nearest verified option is the Radio Hotel in Washington Heights, about two miles south."
+    },
+    {
+      "target": "guide:hamilton-heights-manhattan-guide",
+      "kind": "same-region",
+      "note": "Another Manhattan neighborhood covered in this series."
+    }
   ]
 }

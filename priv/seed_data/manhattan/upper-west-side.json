@@ -1,4 +1,16 @@
 {
+  "links": [
+    {
+      "target": "guide:morningside-heights-manhattan-guide",
+      "kind": "same-region",
+      "note": "Another Manhattan neighborhood covered in this series."
+    },
+    {
+      "target": "guide:hell-s-kitchen-manhattan-guide",
+      "kind": "same-region",
+      "note": "Another Manhattan neighborhood covered in this series."
+    }
+  ],
   "guide": {
     "slug": "upper-west-side-manhattan-guide",
     "title": "Upper West Side, Manhattan: Bloomingdale to Lincoln Center",

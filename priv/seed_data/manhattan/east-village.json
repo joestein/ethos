@@ -271,5 +271,17 @@
       "place_slug": "the-bowery-hotel",
       "note": "The verified in-neighborhood hotel, open since 2007 with Gemma restaurant on site."
     }
+  ],
+  "links": [
+    {
+      "target": "guide:lower-east-side-manhattan-guide",
+      "kind": "shared-history",
+      "note": "The area was simply part of the Lower East Side until brokers and Village transplants coined \"East Village\" in the 1950s-60s."
+    },
+    {
+      "target": "guide:alphabet-city-manhattan-guide",
+      "kind": "see-also",
+      "note": "The First Avenue L entrances on Avenue A are the best way into the Alphabet City side of this neighborhood."
+    }
   ]
 }

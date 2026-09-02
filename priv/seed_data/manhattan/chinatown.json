@@ -214,5 +214,17 @@
       "place_slug": "leon-hotel",
       "note": "A 46-room boutique hotel with Manhattan Bridge views, right in the neighborhood."
     }
+  ],
+  "links": [
+    {
+      "target": "guide:little-italy-manhattan-guide",
+      "kind": "same-region",
+      "note": "Another Manhattan neighborhood covered in this series."
+    },
+    {
+      "target": "guide:two-bridges-manhattan-guide",
+      "kind": "same-region",
+      "note": "Another Manhattan neighborhood covered in this series."
+    }
   ]
 }

@@ -289,5 +289,17 @@
       "place_slug": "the-new-york-edition",
       "note": "A 271-room hotel inside the 1909 Met Life clock tower on Madison Square Park."
     }
+  ],
+  "links": [
+    {
+      "target": "guide:nomad-manhattan-guide",
+      "kind": "same-region",
+      "note": "Another Manhattan neighborhood covered in this series."
+    },
+    {
+      "target": "guide:gramercy-manhattan-guide",
+      "kind": "same-region",
+      "note": "Another Manhattan neighborhood covered in this series."
+    }
   ]
 }

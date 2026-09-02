@@ -285,5 +285,17 @@
       "place_slug": "conrad-new-york-downtown",
       "note": "The neighborhood's flagship hotel, with all-suite rooms and a rooftop bar looking toward the Statue of Liberty."
     }
+  ],
+  "links": [
+    {
+      "target": "guide:financial-district-manhattan-guide",
+      "kind": "see-also",
+      "note": "No subway station of its own: the nearest ones are all across West Street in the adjoining Financial District."
+    },
+    {
+      "target": "guide:tribeca-manhattan-guide",
+      "kind": "same-region",
+      "note": "Another Manhattan neighborhood covered in this series."
+    }
   ]
 }

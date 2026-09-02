@@ -1,4 +1,16 @@
 {
+  "links": [
+    {
+      "target": "guide:lower-east-side-manhattan-guide",
+      "kind": "shared-history",
+      "note": "The 1904 General Slocum fire killed mostly German immigrants from the Lower East Side and accelerated the community's move uptown to Yorkville."
+    },
+    {
+      "target": "guide:upper-east-side-manhattan-guide",
+      "kind": "see-also",
+      "note": "This guide's nearest verified place to stay is the Courtyard by Marriott Manhattan/Upper East Side, on East 92nd Street."
+    }
+  ],
   "guide": {
     "slug": "yorkville-manhattan-guide",
     "title": "Yorkville, Manhattan: Manhattan's Old Germantown",
