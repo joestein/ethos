@@ -87,6 +87,23 @@ defmodule Ethos.Release do
   end
 
   @doc """
+  Seeds the San Francisco neighborhood corpus under `priv/seed_data/san_francisco/`.
+
+  `seed_ballparks/1` runs first and is a genuine precondition rather than a
+  convenience. `Ethos.Seeds.OracleParkPlaces` already owns seven places with
+  town "San Francisco" — the ballpark, Red's Java House, Momo's, China Basin
+  Park and three Mission Rock cafés — so the Mission Bay guide links to
+  `guide:oracle-park-guide` instead of restating them, the way Concourse links
+  to Yankee Stadium and Flushing to Citi Field. `Links.resolve!/1` raises on an
+  unknown target and seeding is not transactional, so without this the San
+  Francisco link pass aborts partway, leaving earlier files published.
+  """
+  def seed_san_francisco(email) do
+    seed_ballparks(email)
+    seed_directory("san_francisco", email)
+  end
+
+  @doc """
   Applies the deletion manifest, removing every place it names.
 
   Prints two numbers, not one: a manifest of 30 that prunes 0 means either the

@@ -98,6 +98,24 @@ ExUnit.start()
 # off with it, so the tag now names nothing and excluding it would only hide a
 # future typo. The single-call rule above still binds: this list is edited in
 # place, never by adding a second ExUnit.configure/1.
-ExUnit.configure(exclude: [:pending_wave, :pending_bronx])
+#
+# Ethos.Seeds.SanFranciscoSeedDataTest is the same construction one city later,
+# at the stage the Rome gate was at before its first wave: the WHOLE module
+# carries `@moduletag :pending_san_francisco` and priv/seed_data/san_francisco/
+# holds only .gitkeep, so nothing in it runs.
+#
+# Removed in two stages, both inside the San Francisco programme:
+#
+#   * The first research wave, which lands the first seed file, deletes the
+#     `@moduletag :pending_san_francisco` from the test file. Everything then
+#     runs except the one test carrying its own `@tag`.
+#   * The last wave — 23 zones: 20 neighborhoods and 3 park pages — deletes
+#     that tag and the entry below. The scope was ruled on 2026-09-03; see
+#     docs/superpowers/specs/2026-09-03-san-francisco-neighborhoods-design.md
+#     and priv/seed_data/san_francisco_roster.json.
+#
+#     mix test --include pending_san_francisco
+#
+ExUnit.configure(exclude: [:pending_wave, :pending_bronx, :pending_san_francisco])
 
 Ecto.Adapters.SQL.Sandbox.mode(Ethos.Repo, :manual)

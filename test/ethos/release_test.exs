@@ -219,6 +219,68 @@ defmodule Ethos.ReleaseTest do
   # Rome is the first destination outside the United States, so this is also
   # the first place the county/state pair is checked for a non-US corpus:
   # "Italy"/"Rome" rather than a state name and a county name.
+  # San Francisco ships before its research does, so `expected` is 0 for now and
+  # the publishes-what-was-committed half is vacuous. The directory-literal half
+  # is fully load-bearing at zero files, because seed_directory/2 prints its
+  # report whether or not it matched anything — which is the exact inversion of
+  # the gate's situation and why this ships running rather than tagged.
+  test "seed_san_francisco/1 names its seed directory and publishes its files, idempotently" do
+    user = user_fixture()
+    expected = length(SeedDataHelpers.seed_files("san_francisco"))
+
+    # oracle-park-guide is a CODE seed and carries county "San Francisco", so it
+    # has to come out of this count — seed_san_francisco/1 calls
+    # seed_ballparks/1 internally, which would otherwise inflate the delta by
+    # one. Rejected by slug rather than by bumping `expected`, so a committed
+    # file that stopped publishing still fails here instead of being masked by
+    # the extra guide. This is the shape the Bronx test uses for Yankee Stadium.
+    sf = fn ->
+      Ethos.Guides.list_published_guides()
+      |> Enum.filter(&(&1.county == "San Francisco"))
+      |> Enum.reject(&(&1.slug == "oracle-park-guide"))
+      |> length()
+    end
+
+    before = sf.()
+
+    output = capture_io(fn -> Ethos.Release.seed_san_francisco(user.email) end)
+
+    # Parsed back OUT of the report and compared for equality, not containment —
+    # "Seeded 0 files from priv/seed_data/san_franciscos\n" CONTAINS the right
+    # path, so every prefix-extension typo survives `=~`.
+    assert [_, dir] =
+             Regex.run(~r{Seeded #{expected} files from priv/seed_data/(\S+)\n}, output),
+           "seed_san_francisco/1 printed no seed-directory report: #{inspect(output)}"
+
+    assert dir == "san_francisco",
+           "seed_san_francisco/1 seeds priv/seed_data/#{dir} — a directory literal that " <>
+             "matches nothing seeds nothing, raises nothing, and reports success"
+
+    assert File.dir?(Path.join([to_string(:code.priv_dir(:ethos)), "seed_data", dir])),
+           "seed_san_francisco/1 names priv/seed_data/#{dir}, which does not exist"
+
+    # seed_ballparks/1 is called inside seed_san_francisco/1 because Oracle Park
+    # owns seven Mission Bay places that the Mission Bay guide links to rather
+    # than restates. Asserting the ballpark guide is present afterwards is what
+    # stops that ordering being removed later as redundant.
+    assert Enum.any?(
+             Ethos.Guides.list_published_guides(),
+             &(&1.slug == "oracle-park-guide")
+           ),
+           "seed_san_francisco/1 did not publish the Oracle Park guide, so any Mission Bay " <>
+             "link to it will abort the run at Links.resolve!/1"
+
+    after_first = sf.()
+
+    assert after_first - before == expected
+
+    capture_io(fn -> Ethos.Release.seed_san_francisco(user.email) end)
+
+    after_second = sf.()
+
+    assert after_second == after_first, "seed_san_francisco/1 is not idempotent"
+  end
+
   test "seed_rome_zones/1 names the Rome seed directory and publishes its files, idempotently" do
     user = user_fixture()
     expected = length(SeedDataHelpers.seed_files("rome"))

@@ -1,0 +1,553 @@
+defmodule Ethos.Seeds.SanFranciscoSeedDataTest do
+  @moduledoc """
+  The gate every San Francisco research wave must pass.
+
+  Written before the corpus it guards, exactly as the Bronx, Queens and Rome
+  gates were, so it lands excluded: over a `priv/seed_data/san_francisco/`
+  holding only `.gitkeep`, roster equality and every non-vacuity floor fail by
+  construction, and a gate that fails because there is nothing to check yet is
+  noise rather than information. See `test/test_helper.exs` for the removal
+  stages.
+
+  ## What this gate inherits, and what it does differently
+
+  The five prose bans are carried from Rome essentially unchanged, because they
+  were learned the hard way there: three rounds of agents reading prose found
+  most instances of each and never all of them, and only regexes converged.
+  Each ban ships with a self-test proving the pattern can fail and a specimen
+  list proving it does not fire on prose that must publish — the specimens
+  matter more than the patterns, because every Rome ban produced false
+  positives and each narrowing is recorded as one of these.
+
+  Two things differ from Rome, and both are consequences of San Francisco being
+  in the United States rather than Italy.
+
+  **Designation claims publish here, with a citation.** Rome banned every
+  protection claim outright because Vincoli in Rete and the Catalogo generale
+  were unreachable from that network, so no claim could be checked against
+  anything. San Francisco's registers answered during scoping on 2026-09-03 —
+  the DataSF Socrata API, SF Planning and the National Register all returned
+  200 — so the ban inverts into a citation requirement. That inversion is only
+  coherent because the Rome ban was written as provenance-conditional rather
+  than as a matter of taste; see `priv/seed_data/rome_roster.json`.
+
+  **The photo rule relaxes for buildings and holds for artworks.** Italy has no
+  freedom of panorama, which forced Rome's four-gate rule and a blocklist of
+  modern buildings. 17 USC 120(a) gives it back for architectural works, so the
+  simpler Bronx and Queens rule applies again. It does NOT cover sculptures,
+  murals or other public artworks, which keep full copyright, and San Francisco
+  is dense with them — so the subject check survives in narrowed form and this
+  gate carries an artwork blocklist rather than a building one.
+  """
+  use Ethos.DataCase, async: false
+
+  @moduletag :pending_san_francisco
+
+  alias Ethos.SeedDataHelpers
+
+  @roster_path Path.expand("../../../priv/seed_data/san_francisco_roster.json", __DIR__)
+  @seed_dir Path.expand("../../../priv/seed_data/san_francisco", __DIR__)
+
+  # ------------------------------------------------------------------
+  # The five prose bans, carried from Rome
+  # ------------------------------------------------------------------
+
+  # Research method must not reach the reader. The provenance argument belongs
+  # in docs/san-francisco/; the page carries the fact it supports. A reader who
+  # wants to know why a page gives no opening hours is served by "no source
+  # states them", not by a status code.
+  @method_patterns [
+    ~r/\bcould not be (?:reached|re-?read|certified|confirmed)\b/i,
+    ~r/\b(?:did not|does not|failed to) (?:resolve|answer)\b/i,
+    ~r/\bHTTP\s*\d{3}\b/i,
+    ~r/\bself-signed certificate\b/i,
+    ~r/\bfootprint (?:test|score|lies|falls)\b/i,
+    ~r/\btests? (?:wholly|cleanly|inside|into)\b/i,
+    ~r/\bno vertex\b|\bvertices\b/i,
+    ~r/\b(?:during|for|in) (?:this |the )?research\b(?!\s+for\b)/i,
+    ~r/\bthis research\b/i,
+    ~r/\bindependent (?:checks?|geometric methods?|geocoding methods?)\b/i,
+    ~r/\bre-?fetched on\b/i,
+    ~r/\bfor this guide\b/i,
+    ~r/\bis published here\b/i,
+    ~r/\b(?:was|were) obtained for (?:this|the) (?:guide|record|entry)\b/i,
+    ~r/\b(?:was|were) reached\b/i,
+    ~r/\bboundary (?:research|geometry|method)\b/i,
+    ~r/\breturn(?:s|ed) (?:an?\s+)?(?:error|\d{3})\b/i
+  ]
+
+  @method_specimens [
+    "No source states its opening hours, so none are given here.",
+    "SF Planning and the National Register disagree about the construction date.",
+    "The Landmarks Preservation Advisory Board recommended designation in 1977."
+  ]
+
+  # The page must not narrate its own editorial decisions. Rome's worst ban by
+  # volume — 218 instances across 29 of 30 files. A page with no restaurants
+  # does not list restaurants; it does not announce that it has none.
+  #
+  # The distinction from the permitted refusal is the SUBJECT of the sentence:
+  # "No source states its hours" is about the FACT and publishes; "No hours are
+  # named here" is about the PAGE and does not.
+  @self_reference_patterns [
+    ~r/\b(?:is|are|was|were)\s+(?:not\s+)?written\s+(?:here|there|on this page|as a place|in\b)/i,
+    ~r/\bon this page\b/i,
+    ~r/\bthis page (?:carries|holds|cannot|does not|gives|says|stops|publishes)\b/i,
+    ~r/\bthis guide (?:carries|holds|writes|does not pretend|gives none|establishes)\b/i,
+    ~r/\bthis record (?:claims|carries|states|holds)\b/i,
+    ~r/\bbelongs? to \w+(?:'s)? (?:page|guide)\b/i,
+    ~r/\b(?:is|are) (?:recorded|reported|gathered|named) here\b/i,
+    ~r/\bnothing here should be read as\b/i,
+    ~r/\ba gap in this guide\b/i
+  ]
+
+  @self_reference_specimens [
+    "No source states its opening hours, so none are given here.",
+    "The mural stands here, on the Balmy Alley side of the building.",
+    "SF Planning records the landmark designation as Article 10 number 72."
+  ]
+
+  # No ranking claims, from any source, attributed or not. A ranking is
+  # identifiable by its comparison class — the thing it ranks against. "The
+  # oldest bar in the Mission" ranks; "the first church on the site, in 1776"
+  # is a sequence of events and publishes.
+  @superlative_patterns [
+    ~r/(?<![-\w])(?:only|first|oldest|largest|smallest|finest|grandest|greatest|best|tallest|richest|most\s+\w+)\s+(?:\w+\s+){0,2}(?:in|of|on)\s+(?:the\s+)?(?:city|neighborhood|neighbourhood|San Francisco|California|the Bay Area|the Mission|the district)\b/i,
+    ~r/\bone of the (?:most|best|finest|largest|oldest|greatest)\b/i,
+    ~r/\b(?:the (?:city|neighborhood|district)'s|San Francisco's|California's)\s+(?:only|oldest|largest|smallest|finest|greatest|best)\b/i,
+    ~r/\b[A-Z][a-z]+(?:'s|s')\s+only\b/,
+    ~r/\b(?:southern|northern|eastern|western)most\b/i,
+    ~r/\bthe one (?:genuinely|thing|source|entry)\b/i,
+    ~r/\bmost (?:travellers|travelers|visitors|guidebooks|guides|people)\b/i,
+    ~r/\bthe only (?:one|stretch|example|work|surviving)\b/i
+  ]
+
+  @superlative_specimens [
+    "The Ferry Building opened in 1898.",
+    "Mission Dolores is the sixth of the twenty-one Alta California missions.",
+    "The cable car climbs a grade of 21 percent.",
+    "Last admission is 4.30pm."
+  ]
+
+  # No orientation by impression. A sourced measurement publishes; two
+  # structures that physically adjoin may be said to adjoin; the side of a
+  # named square or street is a usable locator. What is banned is orientation
+  # at NEIGHBORHOOD scale, which a reader cannot act on.
+  @proximity_patterns [
+    ~r/\bat the (?:north|south|east|west|northern|southern|eastern|western|far|top|bottom) end of (?:the )?(?:neighborhood|neighbourhood|district|quarter|city)\b/i,
+    ~r/\ba (?:short|ten-minute|five-minute|brief) walk\b/i,
+    ~r/\bjust (?:around the corner|off|beyond)\b/i,
+    ~r/\ba stone's throw\b/i,
+    ~r/\bsteps (?:from|away)\b/i,
+    ~r/\bnot far from\b/i,
+    ~r/\bworth the walk\b/i,
+    ~r/\bup the hill from\b/i
+  ]
+
+  @proximity_specimens [
+    "The Conservatory of Flowers stands beside John F. Kennedy Drive.",
+    "Coit Tower is at 1 Telegraph Hill Boulevard.",
+    "SF Planning gives the distance as 400 feet.",
+    "The cottage adjoins the shipyard wall."
+  ]
+
+  # ------------------------------------------------------------------
+  # The designation rule — a CITATION requirement, not a ban
+  # ------------------------------------------------------------------
+  #
+  # A sentence claiming protection status must name the register and carry an
+  # identifier. "A designated landmark" does not publish; "San Francisco
+  # Landmark No. 72, designated 1975" does, and so does an NRHP reference
+  # number. This is the opposite of the Rome rule and the reason is
+  # reachability, recorded in san_francisco_roster.json.
+  @designation_claim ~r/\b(?:designated|listed|landmark(?:ed)?|registered|nominated)\b/i
+
+  @designation_citation ~r/(?:San Francisco Landmark(?:\s+District)?\s*(?:No\.?|number)?\s*\d+|Article\s*10\b|National Register(?: of Historic Places)?|NRHP|NR reference|reference number\s*\d{6,})/i
+
+  # ------------------------------------------------------------------
+  # The photo rule — buildings are free, artworks are not
+  # ------------------------------------------------------------------
+  #
+  # 17 USC 120(a) permits pictorial representation of an ARCHITECTURAL WORK
+  # visible from a public place. It says nothing about sculptures, murals or
+  # other public artworks, which keep full copyright for life plus seventy
+  # years. So a photograph whose framing features one of these needs its
+  # artist established; a photograph of a building does not.
+  @live_artwork_subjects [
+    {"cupids-span", "Claes Oldenburg d. 2022 and Coosje van Bruggen d. 2009"},
+    {"cupid's span", "Claes Oldenburg d. 2022 and Coosje van Bruggen d. 2009"},
+    {"vaillancourt", "Armand Vaillancourt is living"},
+    {"balmy-alley", "Mission murals, many artists living"},
+    {"balmy alley", "Mission murals, many artists living"},
+    {"clarion-alley", "Mission murals, many artists living"},
+    {"clarion alley", "Mission murals, many artists living"},
+    {"goldsworthy", "Andy Goldsworthy is living — Spire, Wood Line, Earth Wall"},
+    {"spire-presidio", "Andy Goldsworthy is living"}
+  ]
+
+  @publishable_licenses [
+    "CC0",
+    "CC BY 2.0",
+    "CC BY 3.0",
+    "CC BY 4.0",
+    "CC BY-SA 2.0",
+    "CC BY-SA 3.0",
+    "CC BY-SA 4.0",
+    "Public domain"
+  ]
+
+  # ------------------------------------------------------------------
+  # Helpers
+  # ------------------------------------------------------------------
+
+  defp roster, do: @roster_path |> File.read!() |> Jason.decode!()
+
+  defp in_scope_slugs do
+    roster()["zones"] |> Enum.filter(& &1["in_scope"]) |> MapSet.new(& &1["slug"])
+  end
+
+  defp files, do: SeedDataHelpers.seed_files("san_francisco")
+
+  defp decoded_files do
+    Enum.map(files(), fn path ->
+      {Path.basename(path), path |> File.read!() |> Jason.decode!()}
+    end)
+  end
+
+  # Every string a reader can see. Slugs and source URLs are excluded — a
+  # Commons URL legitimately contains a subject's name. ENTRY NOTES ARE
+  # INCLUDED: Rome shipped 153 of them unchecked because this function was
+  # written before entries existed and nobody widened it.
+  defp prose(doc) do
+    guide = doc["guide"] || %{}
+
+    [
+      guide["title"],
+      guide["intro"],
+      guide["sections"] |> List.wrap() |> Enum.flat_map(&[&1["heading"], &1["body"]]),
+      guide["faq"] |> List.wrap() |> Enum.flat_map(&[&1["question"], &1["answer"]]),
+      (doc["places"] || []) |> Enum.flat_map(&[&1["name"], &1["summary"], &1["history"]]),
+      (doc["links"] || []) |> Enum.map(& &1["note"]),
+      (doc["entries"] || []) |> Enum.flat_map(&[&1["name"], &1["note"]])
+    ]
+    |> List.flatten()
+    |> Enum.filter(&is_binary/1)
+  end
+
+  defp photos(doc) do
+    ((doc["guide"] || %{})["photos"] || []) ++
+      ((doc["places"] || []) |> Enum.flat_map(&(&1["photos"] || [])))
+  end
+
+  defp hit?(patterns, text), do: Enum.any?(patterns, &Regex.match?(&1, text))
+
+  # ------------------------------------------------------------------
+  # Self-tests. These run against fixtures rather than the corpus, so they
+  # hold from the day this file lands and prove each ban can actually fail.
+  # A ban that cannot fail is decoration.
+  # ------------------------------------------------------------------
+
+  test "the research-method ban catches leaked provenance, and only there" do
+    assert hit?(@method_patterns, "The museum's own site returned HTTP 403.")
+    assert hit?(@method_patterns, "The parcel tests wholly inside the Mission.")
+
+    for s <- @method_specimens do
+      refute hit?(@method_patterns, s), "rejected prose that must publish: #{s}"
+    end
+  end
+
+  test "the self-reference ban separates the page from the fact" do
+    assert hit?(@self_reference_patterns, "The square is not written as a place here.")
+    assert hit?(@self_reference_patterns, "This page carries no restaurants.")
+
+    for s <- @self_reference_specimens do
+      refute hit?(@self_reference_patterns, s), "rejected prose that must publish: #{s}"
+    end
+  end
+
+  test "the superlative ban catches a ranking, and spares a date" do
+    assert hit?(@superlative_patterns, "The oldest bar in the Mission.")
+    assert hit?(@superlative_patterns, "It is one of the most important examples of the style.")
+    assert hit?(@superlative_patterns, "Maybeck's only surviving rotunda.")
+
+    for s <- @superlative_specimens do
+      refute hit?(@superlative_patterns, s), "rejected prose that must publish: #{s}"
+    end
+  end
+
+  test "the proximity ban separates wayfinding from adjacency" do
+    assert hit?(@proximity_patterns, "It sits at the north end of the neighborhood.")
+    assert hit?(@proximity_patterns, "It is a short walk from the station.")
+
+    for s <- @proximity_specimens do
+      refute hit?(@proximity_patterns, s), "rejected an adjacency that must publish: #{s}"
+    end
+  end
+
+  test "a designation claim needs a register and an identifier" do
+    # The inversion of Rome's rule. The claim is welcome; the bare claim is not.
+    refute designation_ok?("The building is a designated landmark.")
+    refute designation_ok?("The house is listed.")
+
+    assert designation_ok?("San Francisco Landmark No. 72, designated in 1975.")
+    assert designation_ok?("Listed on the National Register of Historic Places in 1972.")
+    assert designation_ok?("Designated under Article 10 of the Planning Code.")
+
+    # A sentence making no designation claim at all is not required to cite one.
+    assert designation_ok?("The Conservatory of Flowers opened in 1879.")
+  end
+
+  defp designation_ok?(text) do
+    not Regex.match?(@designation_claim, text) or Regex.match?(@designation_citation, text)
+  end
+
+  test "the artwork blocklist catches a live-copyright subject, and spares a building" do
+    assert blocked_artwork(%{"title" => "Cupid's Span on the Embarcadero"})
+    assert blocked_artwork(%{"title" => "Balmy Alley murals, Mission District"})
+
+    refute blocked_artwork(%{"title" => "The Ferry Building from Market Street"}),
+           "a building is covered by 17 USC 120(a) and must publish"
+
+    refute blocked_artwork(%{"title" => "Coit Tower from Washington Square"}),
+           "a building is covered by 17 USC 120(a) and must publish"
+  end
+
+  defp blocked_artwork(photo) do
+    haystack =
+      [photo["title"], photo["description"], photo["src"]]
+      |> Enum.filter(&is_binary/1)
+      |> Enum.join(" ")
+      |> String.downcase()
+
+    Enum.find(@live_artwork_subjects, fn {needle, _} -> String.contains?(haystack, needle) end)
+  end
+
+  # ------------------------------------------------------------------
+  # Corpus assertions
+  # ------------------------------------------------------------------
+
+  test "the roster-equality reference set is the in-scope subset" do
+    all = MapSet.new(roster()["zones"], & &1["slug"])
+    scoped = in_scope_slugs()
+
+    assert MapSet.size(scoped) > 0, "no san francisco zone is in scope"
+    assert MapSet.subset?(scoped, all)
+
+    # The declined candidates are a separate list, so a future wave promoting
+    # one has to move it deliberately rather than flipping a flag nobody reads.
+    assert is_list(roster()["declined"]), "the roster records no declined candidates"
+  end
+
+  for {name, patterns_fun, label} <- [
+        {"narrates the research", :method, "research method"},
+        {"adjudicates its own coverage", :self_reference, "editorial self-reference"},
+        {"states a superlative", :superlative, "a ranking claim"},
+        {"orients by impression", :proximity, "orientation no source states"}
+      ] do
+    @patterns_fun patterns_fun
+    @label label
+    test "no committed san francisco prose #{name}" do
+      patterns =
+        case @patterns_fun do
+          :method -> @method_patterns
+          :self_reference -> @self_reference_patterns
+          :superlative -> @superlative_patterns
+          :proximity -> @proximity_patterns
+        end
+
+      offenders =
+        for {file, doc} <- decoded_files(),
+            text <- prose(doc),
+            hit?(patterns, text),
+            do: {file, String.slice(text, 0, 140)}
+
+      assert offenders == [],
+             "san francisco prose carries #{@label}:\n" <>
+               Enum.map_join(offenders, "\n", fn {f, t} -> "  #{f}: #{t}" end)
+    end
+  end
+
+  test "every designation claim names its register and identifier" do
+    offenders =
+      for {file, doc} <- decoded_files(),
+          text <- prose(doc),
+          not designation_ok?(text),
+          do: {file, String.slice(text, 0, 140)}
+
+    assert offenders == [],
+           "a designation claim publishes without a register and identifier. Unlike Rome, " <>
+             "San Francisco's registers are reachable, so the claim is welcome — but it must " <>
+             "cite an Article 10 landmark number or an NRHP reference:\n" <>
+             Enum.map_join(offenders, "\n", fn {f, t} -> "  #{f}: #{t}" end)
+  end
+
+  test "no photograph features a live-copyright artwork" do
+    offenders =
+      for {file, doc} <- decoded_files(),
+          photo <- photos(doc),
+          hit = blocked_artwork(photo),
+          hit != nil do
+        {needle, why} = hit
+        {file, needle, why}
+      end
+
+    assert offenders == [],
+           "a photograph features a public artwork still in copyright. 17 USC 120(a) covers " <>
+             "BUILDINGS and not sculptures or murals, so a public vantage is no defence here:\n" <>
+             Enum.map_join(offenders, "\n", fn {f, s, w} -> "  #{f}: #{s} — #{w}" end)
+  end
+
+  test "every photograph carries a publishable licence and its attribution" do
+    offenders =
+      for {file, doc} <- decoded_files(),
+          photo <- photos(doc),
+          reason = licence_fault(photo),
+          reason != nil,
+          do: {file, photo["title"] || photo["src"], reason}
+
+    assert offenders == [],
+           "photographs fail the licence gate:\n" <>
+             Enum.map_join(offenders, "\n", fn {f, t, r} -> "  #{f}: #{t} — #{r}" end)
+  end
+
+  defp licence_fault(photo) do
+    cond do
+      photo["license"] not in @publishable_licenses ->
+        "licence #{inspect(photo["license"])} is not on the allowlist"
+
+      not is_binary(photo["author"]) or photo["author"] == "" ->
+        "no photographer credited"
+
+      not is_binary(photo["source_url"]) or photo["source_url"] == "" ->
+        "no source URL, so the licence claim cannot be re-checked"
+
+      true ->
+        nil
+    end
+  end
+
+  test "every place carries a kind the schema accepts" do
+    # Read off the schema rather than copied. Rome shipped three places with an
+    # invented "church" kind because the brief listed kinds that do not exist,
+    # and the changeset rejected them at seed time — surfacing as two
+    # unrelated-looking failures in other suites rather than here.
+    valid = MapSet.new(Ethos.Places.Place.kinds())
+
+    offenders =
+      for {file, doc} <- decoded_files(),
+          place <- doc["places"] || [],
+          not MapSet.member?(valid, place["kind"]),
+          do: {file, place["slug"], place["kind"]}
+
+    assert offenders == [],
+           "places carry a kind the schema will reject at seed time. Valid: " <>
+             inspect(Enum.sort(valid)) <>
+             "\n" <> Enum.map_join(offenders, "\n", fn {f, s, k} -> "  #{f}: #{s} — #{k}" end)
+  end
+
+  test "every guide carries entries that resolve to its own places" do
+    # Rome shipped twelve rioni to production with "entries": [] and 450 places
+    # unreachable from their own guides. The place pages resolved, so an
+    # HTTP-and-image check passed completely.
+    valid_kinds = MapSet.new(~w(food tour walk sight stay tip))
+
+    offenders =
+      for {file, doc} <- decoded_files() do
+        entries = doc["entries"] || []
+        slugs = MapSet.new(doc["places"] || [], & &1["slug"])
+
+        cond do
+          entries == [] ->
+            {file, "entries is empty — every place would be unreachable from the guide"}
+
+          Enum.any?(entries, &(not MapSet.member?(slugs, &1["place_slug"]))) ->
+            {file, "an entry place_slug does not resolve, which aborts the seed run"}
+
+          Enum.any?(entries, &(not MapSet.member?(valid_kinds, &1["kind"]))) ->
+            {file, "an entry kind is not one of food/tour/walk/sight/stay/tip"}
+
+          true ->
+            nil
+        end
+      end
+      |> Enum.reject(&is_nil/1)
+
+    assert offenders == [],
+           Enum.map_join(offenders, "\n", fn {f, r} -> "  #{f}: #{r}" end)
+  end
+
+  test "every committed file is valid, globally unique, and routes correctly" do
+    files = files()
+    assert files != [], "no san francisco seed file has been committed yet"
+
+    for path <- files do
+      doc = path |> File.read!() |> Jason.decode!()
+      name = Path.basename(path)
+
+      assert is_map(doc["guide"]), "#{name} has no guide object"
+
+      assert doc["guide"]["state"] == "California",
+             "#{name} does not carry state \"California\", so it will not route under " <>
+               "/destinations/california/san-francisco"
+
+      assert doc["guide"]["county"] == "San Francisco",
+             "#{name} does not carry county \"San Francisco\""
+    end
+
+    SeedDataHelpers.assert_place_slugs_globally_unique!()
+  end
+
+  test "no san francisco destination derives a slug already used elsewhere" do
+    # derive_destination_slug/1 takes only the FIRST comma-segment and discards
+    # the state, so "Chinatown, California" and "Chinatown, New York" would
+    # co-list on one page. Three of the twenty-three collide with Manhattan and
+    # the roster resolves each by changing the destination STRING.
+    #
+    # Co-listing is sometimes WANTED — Flushing and Citi Field share one
+    # destination page deliberately — so this compares against seed files only,
+    # never against code seeds.
+    ours =
+      for {name, doc} <- decoded_files(),
+          into: %{},
+          do: {Ethos.Guides.Guide.derive_destination_slug(doc["guide"]["destination"]), name}
+
+    others =
+      for path <- SeedDataHelpers.all_seed_files(),
+          not String.contains?(path, "/san_francisco/"),
+          doc = path |> File.read!() |> Jason.decode!(),
+          dest = get_in(doc, ["guide", "destination"]),
+          is_binary(dest),
+          into: %{},
+          do: {Ethos.Guides.Guide.derive_destination_slug(dest), Path.basename(path)}
+
+    collisions =
+      for {slug, name} <- ours, other = others[slug], do: {name, slug, other}
+
+    assert collisions == [],
+           "a san francisco destination derives a slug another seed file already derives, " <>
+             "which co-lists two cities' neighborhoods on one page. Resolve by changing the " <>
+             "destination string, never by deleting this assertion: #{inspect(collisions)}"
+  end
+
+  # Delete this @tag when the last in-scope wave lands — 23 zones — and not
+  # before: until then the corpus is a prefix of the in-scope set and this
+  # fails by construction.
+  @tag :pending_san_francisco
+  test "the shipped corpus matches the in-scope roster exactly" do
+    expected = in_scope_slugs()
+    shipped = files() |> Enum.map(&Path.rootname(Path.basename(&1))) |> MapSet.new()
+
+    assert MapSet.size(expected) > 0, "no san francisco zone is in scope"
+
+    assert MapSet.equal?(shipped, expected),
+           "corpus does not match the in-scope roster.\n" <>
+             "  rostered but not shipped: " <>
+             inspect(expected |> MapSet.difference(shipped) |> Enum.sort()) <>
+             "\n  shipped but not rostered: " <>
+             inspect(shipped |> MapSet.difference(expected) |> Enum.sort())
+  end
+
+  test "the seed directory the gate reads is the one the corpus lives in" do
+    assert File.dir?(@seed_dir), "priv/seed_data/san_francisco does not exist"
+  end
+end
