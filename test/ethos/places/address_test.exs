@@ -275,8 +275,12 @@ defmodule Ethos.Places.AddressTest do
     comma_streets =
       Enum.count(american, fn p -> p.street && String.contains?(p.street, ",") end)
 
-    assert comma_streets <= 48,
-           "#{comma_streets} American street lines carry a comma qualifier, up from 48"
+    # 49 after San Francisco wave 1. The one addition is
+    # "2 Marina Blvd, Landmark Building C, Suite 260" — a genuine unit
+    # designator, which is the case this pin's own note says schema.org wants
+    # kept, rather than the non-locality prose it exists to catch.
+    assert comma_streets <= 49,
+           "#{comma_streets} American street lines carry a comma qualifier, up from 49"
 
     for p <- italian, p.street, String.contains?(p.street, ",") do
       # A civico may be a range ("5-7") or carry a letter or a slashed suffix

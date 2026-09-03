@@ -41,7 +41,10 @@ defmodule Ethos.Seeds.SanFranciscoSeedDataTest do
   """
   use Ethos.DataCase, async: false
 
-  @moduletag :pending_san_francisco
+  # @moduletag :pending_san_francisco removed 2026-09-03 by wave 1, which landed
+  # the first twelve seed files — 468 places between them. Everything in this
+  # module now runs except the roster-equality test, which keeps its own `@tag`
+  # until all 23 zones ship.
 
   alias Ethos.SeedDataHelpers
 
@@ -96,7 +99,15 @@ defmodule Ethos.Seeds.SanFranciscoSeedDataTest do
     ~r/\bthis guide (?:carries|holds|writes|does not pretend|gives none|establishes)\b/i,
     ~r/\bthis record (?:claims|carries|states|holds)\b/i,
     ~r/\bbelongs? to \w+(?:'s)? (?:page|guide)\b/i,
-    ~r/\b(?:is|are) (?:recorded|reported|gathered|named) here\b/i,
+    # "named" is deliberately NOT in this alternation. The gate contradicted
+    # itself on wave 1: it blessed "so none are given here" as the permitted
+    # refusal in its own specimen list, then flagged SoMa's "no source
+    # establishes which occupies which address, so none is named here" —
+    # the identical construction with a different verb. The refusal is about
+    # the FACT and publishes; the Rome case this pattern was written for is
+    # the page describing its own choices, which the next line still catches.
+    ~r/\b(?:is|are) (?:recorded|reported|gathered) here\b/i,
+    ~r/\bis named here rather than\b/i,
     ~r/\bnothing here should be read as\b/i,
     ~r/\ba gap in this guide\b/i
   ]
@@ -104,7 +115,8 @@ defmodule Ethos.Seeds.SanFranciscoSeedDataTest do
   @self_reference_specimens [
     "No source states its opening hours, so none are given here.",
     "The mural stands here, on the Balmy Alley side of the building.",
-    "SF Planning records the landmark designation as Article 10 number 72."
+    "SF Planning records the landmark designation as Article 10 number 72.",
+    "No source establishes which business occupies which address, so none is named here."
   ]
 
   # No ranking claims, from any source, attributed or not. A ranking is
@@ -134,7 +146,12 @@ defmodule Ethos.Seeds.SanFranciscoSeedDataTest do
   # named square or street is a usable locator. What is banned is orientation
   # at NEIGHBORHOOD scale, which a reader cannot act on.
   @proximity_patterns [
-    ~r/\bat the (?:north|south|east|west|northern|southern|eastern|western|far|top|bottom) end of (?:the )?(?:neighborhood|neighbourhood|district|quarter|city)\b/i,
+    # "edge" as well as "end". A wave-1 reviewer found "on the northern edge of
+    # the neighbourhood" evading this because the pattern was written around one
+    # word, and quoted the arbitration's own principle back at it: the ban is on
+    # the practice, not on what the regex happens to catch.
+    ~r/\bat the (?:north|south|east|west|northern|southern|eastern|western|far|top|bottom) (?:end|edge) of (?:the )?(?:neighborhood|neighbourhood|district|quarter|city)\b/i,
+    ~r/\bon the (?:northern|southern|eastern|western) edge of (?:the )?(?:neighborhood|neighbourhood|district|quarter)\b/i,
     ~r/\ba (?:short|ten-minute|five-minute|brief) walk\b/i,
     ~r/\bjust (?:around the corner|off|beyond)\b/i,
     ~r/\ba stone's throw\b/i,
@@ -149,6 +166,33 @@ defmodule Ethos.Seeds.SanFranciscoSeedDataTest do
     "Coit Tower is at 1 Telegraph Hill Boulevard.",
     "SF Planning gives the distance as 400 feet.",
     "The cottage adjoins the shipyard wall."
+  ]
+
+  # ------------------------------------------------------------------
+  # The photo policy is not the reader's business
+  # ------------------------------------------------------------------
+  #
+  # Wave 1 published the corpus's own copyright reasoning as prose: "The murals
+  # are artworks rather than architecture", "The flag is a designed work and is
+  # not an architectural one", "The pylons are sculpture rather than
+  # architecture." All four are the page explaining to a traveller WHY it has
+  # no photograph — which is a rule about us, not a fact about the place.
+  #
+  # The distinction is real and worth keeping: "the pylons are steel" is a
+  # description and publishes. "The pylons are sculpture RATHER THAN
+  # architecture" is 17 USC 120(a) reasoning wearing a description's clothes.
+  @photo_policy_patterns [
+    ~r/\b(?:artworks?|sculpture|a designed work)s? rather than (?:architecture|an? architectural)/i,
+    ~r/\bis not an architectural (?:one|work)\b/i,
+    ~r/\barchitectural work under\b/i,
+    ~r/\bfreedom of panorama\b/i,
+    ~r/\b17 USC\b/i
+  ]
+
+  @photo_policy_specimens [
+    "The pylons are steel and stand fifteen feet high.",
+    "The mural was painted in 1984 by a collective of Mission artists.",
+    "The flag flies from a pole at the plaza's centre."
   ]
 
   # ------------------------------------------------------------------
@@ -284,6 +328,28 @@ defmodule Ethos.Seeds.SanFranciscoSeedDataTest do
     end
   end
 
+  test "the photo-policy ban keeps copyright reasoning off the page" do
+    assert hit?(@photo_policy_patterns, "The murals are artworks rather than architecture.")
+    assert hit?(@photo_policy_patterns, "The flag is a designed work and is not an architectural one.")
+
+    for s <- @photo_policy_specimens do
+      refute hit?(@photo_policy_patterns, s), "rejected a description that must publish: #{s}"
+    end
+  end
+
+  test "no committed prose explains the photo policy to the reader" do
+    offenders =
+      for {file, doc} <- decoded_files(),
+          text <- prose(doc),
+          hit?(@photo_policy_patterns, text),
+          do: {file, String.slice(text, 0, 140)}
+
+    assert offenders == [],
+           "prose carries the corpus's own copyright reasoning. Why a page has no photograph " <>
+             "is a rule about us, not a fact about the place:\n" <>
+             Enum.map_join(offenders, "\n", fn {f, t} -> "  #{f}: #{t}" end)
+  end
+
   test "a designation claim needs a register and an identifier" do
     # The inversion of Rome's rule. The claim is welcome; the bare claim is not.
     refute designation_ok?("The building is a designated landmark.")
@@ -367,10 +433,38 @@ defmodule Ethos.Seeds.SanFranciscoSeedDataTest do
     end
   end
 
+  # A FAQ is a question and its answer, and a reader sees both. Checking the
+  # two strings separately flagged Hayes Valley's "were designated together in
+  # 1977" as uncited when its own question reads "Which buildings does San
+  # Francisco Landmark No. 84 cover?" — the citation was there, one string
+  # away. So the designation check joins each pair; every other ban still
+  # reads strings individually, because none of them is answered by context.
+  defp designation_texts(doc) do
+    guide = doc["guide"] || %{}
+
+    faq_pairs =
+      (guide["faq"] || [])
+      |> Enum.map(fn f -> "#{f["question"]} #{f["answer"]}" end)
+
+    non_faq =
+      [
+        guide["title"],
+        guide["intro"],
+        (guide["sections"] || []) |> Enum.flat_map(&[&1["heading"], &1["body"]]),
+        (doc["places"] || []) |> Enum.flat_map(&[&1["name"], &1["summary"], &1["history"]]),
+        (doc["links"] || []) |> Enum.map(& &1["note"]),
+        (doc["entries"] || []) |> Enum.flat_map(&[&1["name"], &1["note"]])
+      ]
+      |> List.flatten()
+      |> Enum.filter(&is_binary/1)
+
+    non_faq ++ faq_pairs
+  end
+
   test "every designation claim names its register and identifier" do
     offenders =
       for {file, doc} <- decoded_files(),
-          text <- prose(doc),
+          text <- designation_texts(doc),
           not designation_ok?(text),
           do: {file, String.slice(text, 0, 140)}
 
@@ -545,6 +639,125 @@ defmodule Ethos.Seeds.SanFranciscoSeedDataTest do
              inspect(expected |> MapSet.difference(shipped) |> Enum.sort()) <>
              "\n  shipped but not rostered: " <>
              inspect(shipped |> MapSet.difference(expected) |> Enum.sort())
+  end
+
+  test "a tier matches the file it labels" do
+    # The gate shipped without this and wave 1 immediately produced two files
+    # marked "town-page" carrying 41 and 26 places. A town-page is the SHORT
+    # form — under six places, a 90-word intro floor and two outbound links —
+    # and labelling a 41-place guide as one misdescribes it to every later
+    # assertion that keys off tier.
+    offenders =
+      for {file, doc} <- decoded_files() do
+        guide = doc["guide"] || %{}
+        places = length(doc["places"] || [])
+        intro_words = guide["intro"] |> to_string() |> String.split(~r/\s+/, trim: true) |> length()
+        headings = Enum.map(guide["sections"] || [], & &1["heading"])
+        faq = length(guide["faq"] || [])
+        links = length(doc["links"] || [])
+
+        cond do
+          guide["tier"] == "town-page" and places >= 6 ->
+            {file, "tier town-page carries #{places} places; the form is for fewer than six"}
+
+          guide["tier"] == "town-page" and intro_words < 90 ->
+            {file, "town-page intro is #{intro_words} words, floor is 90"}
+
+          guide["tier"] == "town-page" and links < 2 ->
+            {file, "town-page has #{links} outbound links, floor is 2"}
+
+          guide["tier"] == "town-page" ->
+            nil
+
+          guide["tier"] == "guide" and places < 4 ->
+            {file, "tier guide carries #{places} places; the form needs at least four"}
+
+          guide["tier"] == "guide" and (intro_words < 100 or intro_words > 160) ->
+            {file, "guide intro is #{intro_words} words, want 100-160"}
+
+          guide["tier"] == "guide" and (faq < 4 or faq > 6) ->
+            {file, "guide has #{faq} FAQ entries, want 4-6"}
+
+          guide["tier"] == "guide" and "Getting there" not in headings ->
+            {file, "guide has no section headed exactly Getting there: #{inspect(headings)}"}
+
+          guide["tier"] == "guide" ->
+            nil
+
+          true ->
+            {file, "unknown tier #{inspect(guide["tier"])}"}
+        end
+      end
+      |> Enum.reject(&is_nil/1)
+
+    assert offenders == [],
+           "tier does not match the file:\n" <>
+             Enum.map_join(offenders, "\n", fn {f, r} -> "  #{f}: #{r}" end)
+  end
+
+  test "a guide title fits the column the schema gives it" do
+    # Ethos.Guides.Guide validates title at 120 characters. The gate shipped
+    # without this and wave 1 produced one title of 121, which surfaced as an
+    # Ecto.InvalidChangesetError in the release and destination suites rather
+    # than here — two unrelated-looking failures for a defect that belongs to
+    # this file.
+    #
+    # 120 is duplicated from the schema rather than read, because
+    # validate_length/3 exposes no accessor. If the schema loosens, this fails
+    # loudly and gets updated, which is the safe direction.
+    offenders =
+      for {file, doc} <- decoded_files(),
+          title = get_in(doc, ["guide", "title"]),
+          is_binary(title),
+          String.length(title) > 120,
+          do: {file, String.length(title)}
+
+    assert offenders == [],
+           "a guide title is longer than the 120 characters the schema allows, so the " <>
+             "changeset rejects it at seed time:\n" <>
+             Enum.map_join(offenders, "\n", fn {f, n} -> "  #{f}: #{n} characters" end)
+  end
+
+  test "every link carries a valid kind and a note the column accepts" do
+    # `kind` was missing from the shape brief this wave's authors were given,
+    # so one file shipped three links with none and the changeset rejected them
+    # at seed time — surfacing as an ArgumentError about nil comparison in the
+    # release suite rather than as a finding here.
+    #
+    # The 160-character note limit is a database constraint: a longer note
+    # aborts the whole run, and seeding is not transactional, so earlier files
+    # stay published while later ones do not.
+    #
+    # Dangling TARGETS are deliberately not asserted here. This file cannot
+    # cheaply know which code-seed guides exist — oracle-park-guide is defined
+    # inline in lib/ethos/seeds/ rather than as a module attribute — and the
+    # release test already catches them by actually seeding, which is the
+    # honest check.
+    valid = MapSet.new(Ethos.Links.Link.kinds())
+
+    offenders =
+      for {file, doc} <- decoded_files(),
+          link <- doc["links"] || [],
+          reason = link_fault(link, valid),
+          reason != nil,
+          do: {file, link["target"], reason}
+
+    assert offenders == [],
+           "links will be rejected at seed time:\n" <>
+             Enum.map_join(offenders, "\n", fn {f, t, r} -> "  #{f}: #{t} — #{r}" end)
+  end
+
+  defp link_fault(link, valid) do
+    cond do
+      not MapSet.member?(valid, link["kind"]) ->
+        "kind #{inspect(link["kind"])} is not one of #{inspect(Enum.sort(valid))}"
+
+      String.length(link["note"] || "") > 160 ->
+        "note is #{String.length(link["note"])} characters, limit is 160"
+
+      true ->
+        nil
+    end
   end
 
   test "the seed directory the gate reads is the one the corpus lives in" do

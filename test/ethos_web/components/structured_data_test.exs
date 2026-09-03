@@ -712,10 +712,41 @@ defmodule EthosWeb.StructuredDataTest do
       # Italian one, so the Vatican form has to be recognised deliberately
       # rather than fallen into.
 
-      assert length(emitted) == 3535
-      assert count.(& &1["streetAddress"]) == 2927
-      assert count.(&is_nil(&1["streetAddress"])) == 608
-      assert count.(& &1["postalCode"]) == 2550
+      #
+      # Re-measured 2026-09-03 after San Francisco wave 1, which lands twelve
+      # neighborhoods — Mission, North Beach, Chinatown, Haight-Ashbury, Castro,
+      # Marina, SoMa, Fisherman's Wharf, Nob Hill, Russian Hill, Pacific Heights
+      # and Hayes Valley — 468 places, 405 of them addressed.
+      #
+      # California needed NO parser work. It is the corpus's fifth region and
+      # the first since Connecticut and New York to be plain American, so the
+      # branch built for "9 Main Street North, Bethlehem, CT 06751" handled
+      # "3321 16th Street, San Francisco, CA 94114" unchanged. That is the
+      # check this line records: Rome cost three rounds of thoroughfare types
+      # and a whole Vatican pattern, and San Francisco cost none.
+      #
+      #   * total 3535 -> 3939, the 404 addressed San Francisco places. The fix pass
+      #     took one away: Chinatown's Ping Yuen carried "895 Pacific Avenue" when
+      #     its verdict gives four buildings on Pacific Avenue and NO street number,
+      #     so the address is now null. A removed invention is the right direction
+      #     for this figure to move.
+      #   * `streetAddress` 2927 -> 3325, +398.
+      #   * `is_nil(streetAddress)` 608 -> 614, +6. All six are correctly
+      #     rejected descriptive locations rather than parser gaps: two
+      #     intersections at Pier 39 ("Beach Street and The Embarcadero"),
+      #     Washington Square's "Filbert and Stockton", SoMa's "South Park
+      #     Street" with no number, and two Fort Mason addresses that lead with
+      #     the campus name before reaching 2 Marina Boulevard. A false
+      #     streetAddress on any of them would be worse than none.
+      #   * `postalCode` 2550 -> 2707, +157. Not +404: many San Francisco
+      #     records carry a street with no ZIP.
+      #   * locality-only 302 -> 303, +1 — South Park Street, which has neither
+      #     a house number nor a postal code.
+
+      assert length(emitted) == 3939
+      assert count.(& &1["streetAddress"]) == 3325
+      assert count.(&is_nil(&1["streetAddress"])) == 614
+      assert count.(& &1["postalCode"]) == 2707
 
       # The largest behavioural delta this change ships: 302 places emit a
       # PostalAddress carrying only locality, region and country. Their full
@@ -746,7 +777,11 @@ defmodule EthosWeb.StructuredDataTest do
       # with the assertion and spent two commits contradicting a number three
       # lines below it, which is worse than either being wrong alone. Keep the
       # two in step.
-      assert count.(fn ld -> is_nil(ld["streetAddress"]) and is_nil(ld["postalCode"]) end) == 302
+      # 303 after San Francisco wave 1. The one addition is SoMa's South Park,
+      # whose sourced address is "South Park Street, San Francisco, CA" — no
+      # house number and no ZIP, so it correctly emits locality, region and
+      # country alone. Its full address is still rendered on the page.
+      assert count.(fn ld -> is_nil(ld["streetAddress"]) and is_nil(ld["postalCode"]) end) == 303
     end
   end
 end
