@@ -481,7 +481,86 @@
       "photos": []
     }
   ],
-  "entries": [],
+  "entries": [
+    {
+      "kind": "sight",
+      "name": "Castel Sant'Angelo",
+      "place_slug": "castel-sant-angelo-borgo-rome",
+      "note": "Hadrian's mausoleum, later a fortress and a papal refuge, a museum site since 1925 and open Tuesday to Sunday 9.00–19.30, last admission 18.30."
+    },
+    {
+      "kind": "walk",
+      "name": "Via della Conciliazione",
+      "place_slug": "via-della-conciliazione-borgo-rome",
+      "note": "About 420 metres of sampietrini between two rows of obelisk lampposts, cut from 1936 across the demolished spina and completed for the Jubilee of 1950."
+    },
+    {
+      "kind": "sight",
+      "name": "Passetto di Borgo",
+      "place_slug": "passetto-di-borgo-rome",
+      "note": "The fortified corridor formed in 1277 under Nicholas III, used as an escape route by Alexander VI in 1494 and Clement VII in 1527."
+    },
+    {
+      "kind": "sight",
+      "name": "Arcispedale di Santo Spirito in Saxia",
+      "place_slug": "arcispedale-di-santo-spirito-in-saxia-rome",
+      "note": "Made a hospital by Innocent III in 1198 on the site of the Schola Saxonum; the Corsia Sistina built for Sixtus IV runs 120 metres by 12 under an octagonal tiburio."
+    },
+    {
+      "kind": "sight",
+      "name": "Palazzo del Commendatore",
+      "place_slug": "palazzo-del-commendatore-borgo-rome",
+      "note": "Built 1566–1572 under Pius V; only the arcaded courtyard is visitable, Monday to Friday 7.30–18.00 and Saturday 7.30–12.00, and it holds a six-hour clock whose single hand is shaped like a lizard."
+    },
+    {
+      "kind": "sight",
+      "name": "Museo storico nazionale dell'arte sanitaria",
+      "place_slug": "museo-storico-nazionale-arte-sanitaria-rome",
+      "note": "Opened in 1933 inside the hospital complex, with wax models in the sala Flajani and Paolo Mascagni's anatomical plates; no source states its hours."
+    },
+    {
+      "kind": "sight",
+      "name": "Chiesa di Santo Spirito in Sassia (Santuario della Divina Misericordia)",
+      "place_slug": "chiesa-di-santo-spirito-in-sassia-rome",
+      "note": "Built 1538–1590 and consecrated on 17 May 1571, with a bell tower of about 1471–1475 given to Baccio Pontelli."
+    },
+    {
+      "kind": "sight",
+      "name": "Basilica di Santa Maria in Traspontina",
+      "place_slug": "basilica-di-santa-maria-in-traspontina-rome",
+      "note": "The Carmelite parish church, its dome kept flat and drumless to clear the field of fire of Castel Sant'Angelo's guns; visitor entrance at via della Conciliazione 14."
+    },
+    {
+      "kind": "sight",
+      "name": "Palazzo dei Penitenzieri (Palazzo della Rovere)",
+      "place_slug": "palazzo-dei-penitenzieri-borgo-rome",
+      "note": "Begun about 1480 for cardinal Domenico Della Rovere; the right wing, holding Pinturicchio's Soffitto dei Semidei of 1490, is visitable on request to the Equestrian Order."
+    },
+    {
+      "kind": "sight",
+      "name": "Palazzo Castellesi (Giraud, Torlonia)",
+      "place_slug": "palazzo-castellesi-torlonia-borgo-rome",
+      "note": "Built 1499–1517 for cardinal Adriano Castellesi and faced piazza Scossacavalli until the spina came down; a private residence now, so the façade is what you see."
+    },
+    {
+      "kind": "sight",
+      "name": "Porta Santo Spirito",
+      "place_slug": "porta-santo-spirito-borgo-rome",
+      "note": "Rebuilt by Antonio da Sangallo il Giovane for Paul III after the Sack of 1527 and left unfinished; the Mura Gianicolensi of 1642 enclosed it and it lost its function."
+    },
+    {
+      "kind": "walk",
+      "name": "Borgo Pio",
+      "place_slug": "borgo-pio-street-rome",
+      "note": "Laid out from 1565 under Pius IV's bull of 5 December, running from via di Porta Castello to via di Porta Angelica."
+    },
+    {
+      "kind": "walk",
+      "name": "Borgo Santo Spirito",
+      "place_slug": "borgo-santo-spirito-street-rome",
+      "note": "A medieval street in sampietrini along the front of the hospital, known in turn as Burgus Saxonum, Burgus Frisonum, Borgo San Michele and Borgo San Martino."
+    }
+  ],
   "links": [
     {
       "target": "guide:trastevere-rome-guide",

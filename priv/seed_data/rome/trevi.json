@@ -373,7 +373,86 @@
       "photos": []
     }
   ],
-  "entries": [],
+  "entries": [
+    {
+      "kind": "sight",
+      "name": "Fontana di Trevi",
+      "place_slug": "trevi-fontana-di-trevi",
+      "note": "Built 1732-1762 by Nicola Salvi and Giuseppe Pannini against the façade of Palazzo Poli; €2.00 to stand inside the perimeter from 09:00 to 22:00, and free to everyone after the 22:00 closure."
+    },
+    {
+      "kind": "sight",
+      "name": "Acquedotto Vergine (Aqua Virgo)",
+      "place_slug": "trevi-acquedotto-vergine",
+      "note": "Inaugurated 19 BC by Agrippa and running over 20 kilometres from Salone, predominantly underground; three travertine arches survive at via del Nazareno, under the inscription recording Claudius's rebuilding in AD 46."
+    },
+    {
+      "kind": "sight",
+      "name": "Vicus Caprarius - La Città dell'Acqua",
+      "place_slug": "trevi-vicus-caprarius-citta-dell-acqua",
+      "note": "Excavation at the end of the 1990s uncovered a Neronian insula, a 4th-century domus and a cistern that collected the Acqua Vergine, under the side of the square facing the fountain."
+    },
+    {
+      "kind": "sight",
+      "name": "Chiesa dei Santi Vincenzo e Anastasio a Trevi",
+      "place_slug": "trevi-santi-vincenzo-e-anastasio-a-trevi",
+      "note": "The 18 columns on its façade earned it the name il canneto; inside, urns hold the precordia of 22 popes, from Sixtus V to Leo XIII, and they are not displayed."
+    },
+    {
+      "kind": "sight",
+      "name": "Palazzo del Quirinale",
+      "place_slug": "trevi-palazzo-del-quirinale",
+      "note": "Papal residence from 1605 to 1870, royal residence from 1871 to 1946, and the President of the Republic's since; sources disagree on who built it and in which years."
+    },
+    {
+      "kind": "walk",
+      "name": "Piazza del Quirinale",
+      "place_slug": "trevi-piazza-del-quirinale",
+      "note": "Known as Piazza di Monte Cavallo from the Middle Ages into the 19th century, and laid out from 1586 by Domenico Fontana for Sixtus V; Monti holds part of it and Trevi the rest."
+    },
+    {
+      "kind": "sight",
+      "name": "Fontana dei Dioscuri (Fontana di Monte Cavallo)",
+      "place_slug": "trevi-fontana-dei-dioscuri-monte-cavallo",
+      "note": "A fountain fed by the Acqua Felice stood at the foot of the statues from 1589 until 1783; the present one dates from 1818 and reuses a grey granite basin that had been in the Roman Forum."
+    },
+    {
+      "kind": "sight",
+      "name": "Obelisco del Quirinale",
+      "place_slug": "trevi-obelisco-del-quirinale",
+      "note": "Red Aswan granite, 14.63 m high and 28.94 m with its base and carrying no hieroglyphic inscriptions; Pius VI had it brought from the Mausoleum of Augustus in 1786."
+    },
+    {
+      "kind": "sight",
+      "name": "Scuderie del Quirinale",
+      "place_slug": "trevi-scuderie-del-quirinale",
+      "note": "An 18th-century building by Alessandro Specchi and Ferdinando Fuga, restored between 1997 and 1999 and now used for art exhibitions that change; the venue publishes what is on at scuderiequirinale.it."
+    },
+    {
+      "kind": "sight",
+      "name": "Accademia Nazionale di San Luca, Palazzo Carpegna",
+      "place_slug": "trevi-accademia-nazionale-di-san-luca",
+      "note": "Palazzo Carpegna was enlarged and remodelled by Francesco Borromini for Count Ambrogio di Carpegna after 1630 and completed under Francesco Ferrari between 1732 and 1736; the academy and its gallery have been here since 1934."
+    },
+    {
+      "kind": "walk",
+      "name": "Galleria Sciarra",
+      "place_slug": "trevi-galleria-sciarra",
+      "note": "A covered passage built 1886-1888 to Giulio De Angelis's design for Prince Maffeo Sciarra; it is a private courtyard in office use, open to the public during office hours."
+    },
+    {
+      "kind": "sight",
+      "name": "Palazzo Colonna and the Galleria Colonna",
+      "place_slug": "trevi-palazzo-colonna-galleria-colonna",
+      "note": "The Colonna family's palace on Via della Pilotta, with a picture gallery inside it that opens on a limited schedule published at galleriacolonna.it."
+    },
+    {
+      "kind": "sight",
+      "name": "Palazzo Barberini and the Gallerie Nazionali d'Arte Antica",
+      "place_slug": "trevi-palazzo-barberini-gallerie-nazionali",
+      "note": "The palace and its garden on Via delle Quattro Fontane house the Gallerie Nazionali d'Arte Antica, which publish opening and ticketing at barberinicorsini.org; the Mitreo Barberini is here too."
+    }
+  ],
   "links": [
     {
       "target": "guide:colonna-rome-guide",

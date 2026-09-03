@@ -783,7 +783,92 @@
       "photos": []
     }
   ],
-  "entries": [],
+  "entries": [
+    {
+      "kind": "sight",
+      "name": "Basilica di Santa Maria in Trastevere",
+      "place_slug": "santa-maria-in-trastevere-basilica-rome",
+      "note": "Tradition founds it under Callistus I (217-222) and has it completed under Julius I (337-352), with a renewal in the twelfth century under Innocent II."
+    },
+    {
+      "kind": "sight",
+      "name": "Fontana in piazza di Santa Maria in Trastevere",
+      "place_slug": "fontana-piazza-santa-maria-in-trastevere-rome",
+      "note": "It appears on Pietro il Massaio's plan of 1471, was reworked by Bernini under Alexander VII, and was rebuilt by the Comune in 1873 to Carlo Fontana's model of 1692."
+    },
+    {
+      "kind": "sight",
+      "name": "Basilica di Santa Cecilia in Trastevere",
+      "place_slug": "santa-cecilia-in-trastevere-basilica-rome",
+      "note": "A late-Palaeochristian structure, apse and narthex stand behind the Baroque interior, with Ferdinando Fuga's forebuilding and courtyard in front."
+    },
+    {
+      "kind": "sight",
+      "name": "Chiesa di San Pietro in Montorio",
+      "place_slug": "san-pietro-in-montorio-trastevere-rome",
+      "note": "A Renaissance rectory church of the Friars Minor, badly damaged in the siege of Rome of 1849, the fighting that ran along this ridge."
+    },
+    {
+      "kind": "sight",
+      "name": "Tempietto di San Pietro in Montorio",
+      "place_slug": "tempietto-di-san-pietro-in-montorio-rome",
+      "note": "A small circular High Renaissance building attributed to Bramante, standing in a cloister of the convent beside the church."
+    },
+    {
+      "kind": "sight",
+      "name": "Mostra dell'Acqua Paola al Gianicolo (Fontanone)",
+      "place_slug": "mostra-dell-acqua-paola-al-gianicolo-rome",
+      "note": "Built in 1610-1614 for Paul V by Giovanni Fontana with Flaminio Ponzio, using marbles from the Roman Forum and granite columns from the Constantinian St Peter's; the front is always accessible, the garden behind only by booking on 060608."
+    },
+    {
+      "kind": "walk",
+      "name": "Passeggiata del Gianicolo",
+      "place_slug": "passeggiata-del-gianicolo-rome",
+      "note": "Two plane-lined avenues laid out from October 1883 and finished in 1896 on the ground of the 1849 defence, now carrying eighty-four busts of Garibaldians."
+    },
+    {
+      "kind": "sight",
+      "name": "Mausoleo Ossario Garibaldino",
+      "place_slug": "mausoleo-ossario-garibaldino-rome",
+      "note": "Thirty-six loculi carry slabs naming more than 1,600 of the fallen of 1849-1870, and the porphyry sarcophagus holds Goffredo Mameli; open Tuesday to Saturday 09:30-13:30, with a free guided visit every Saturday at 11:00."
+    },
+    {
+      "kind": "sight",
+      "name": "Monumento a Giuseppe Garibaldi",
+      "place_slug": "monumento-a-giuseppe-garibaldi-gianicolo-rome",
+      "note": "Emilio Gallori's equestrian statue, begun 1886 and inaugurated on 20 September 1895, stands on the site of the Corsini casino at the top of the Passeggiata."
+    },
+    {
+      "kind": "tip",
+      "name": "Cannone di Mezzogiorno",
+      "place_slug": "cannone-di-mezzogiorno-gianicolo-rome",
+      "note": "Since 1904 a howitzer has been fired with a blank charge at exactly noon each day below the Janiculum Belvedere, a signal Pius IX instituted to stop confusion over the hour."
+    },
+    {
+      "kind": "sight",
+      "name": "Museo della Repubblica Romana e della memoria garibaldina",
+      "place_slug": "museo-della-repubblica-romana-e-memoria-garibaldina-rome",
+      "note": "Housed in Porta San Pancrazio, its route covers the Roman Republic through documents, artworks and multimedia, and entry is free."
+    },
+    {
+      "kind": "sight",
+      "name": "Villa Farnesina",
+      "place_slug": "villa-farnesina-trastevere-rome",
+      "note": "Agostino Chigi commissioned Baldassarre Peruzzi in May 1505 and moved in in 1511; Raphael, Sebastiano del Piombo and Sodoma painted the rooms, open to the public as a museum since 2009."
+    },
+    {
+      "kind": "sight",
+      "name": "Museo di Roma in Trastevere",
+      "place_slug": "museo-di-roma-in-trastevere-rome",
+      "note": "Its subject is Roman popular life of the late eighteenth and nineteenth centuries as the artists and folklorists of the day represented it; information and booking on 060608, 09:00-19:00."
+    },
+    {
+      "kind": "walk",
+      "name": "Ponte Sisto",
+      "place_slug": "ponte-sisto-rome",
+      "note": "Sixtus IV built it for the Jubilee of 1475 to link the rione directly to the rest of the city, when only the Tiber Island bridges and Ponte Sant'Angelo were working; a restoration completed in 1998 removed the nineteenth-century metal walkways."
+    }
+  ],
   "links": [
     {
       "target": "guide:borgo-rome-guide",

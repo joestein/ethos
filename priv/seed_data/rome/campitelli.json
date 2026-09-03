@@ -1072,7 +1072,92 @@
       "photos": []
     }
   ],
-  "entries": [],
+  "entries": [
+    {
+      "kind": "walk",
+      "name": "Cordonata Capitolina",
+      "place_slug": "cordonata-capitolina",
+      "note": "The ramped stair up from via del Teatro di Marcello, designed 1534-38 by Michelangelo for Paul III and partly modified by Giacomo Della Porta, with the Dioscuri set on the balustrade in 1583 and the Trofei di Mario in 1590."
+    },
+    {
+      "kind": "sight",
+      "name": "Piazza del Campidoglio",
+      "place_slug": "piazza-del-campidoglio-campitelli",
+      "note": "The paving, palaces and sculpture were carried out over centuries to a design of about the middle of the sixteenth century; the square sits in the valley between the hill's two ancient summits, whose level was some eight metres lower."
+    },
+    {
+      "kind": "sight",
+      "name": "Musei Capitolini",
+      "place_slug": "musei-capitolini-campidoglio",
+      "note": "The museum dates its birth to 1471, when Sixtus IV gave a group of bronze statues to the Roman people; the Lupa Capitolina is held here, and opening is daily 09.30-19.30 with last admission an hour before closing."
+    },
+    {
+      "kind": "sight",
+      "name": "Basilica di Santa Maria in Aracoeli",
+      "place_slug": "santa-maria-in-aracoeli-campitelli",
+      "note": "Reached by the Scalinata dell'Ara Coeli on the Arx, the hill's northern summit; Gothic then Baroque, built from the thirteenth century to the eighteenth, and called Santa Maria in Capitolio before the present name appears in 1323."
+    },
+    {
+      "kind": "sight",
+      "name": "Vittoriano (Monumento Nazionale a Vittorio Emanuele II)",
+      "place_slug": "vittoriano-campitelli",
+      "note": "Giuseppe Sacconi built it from 1885 to 1905 and it opened on 4 June 1911, the fiftieth anniversary of unification; the burial of the Unknown Soldier turned it into a shrine, and its basements sheltered Roman civilians late in the Second World War."
+    },
+    {
+      "kind": "sight",
+      "name": "Terrazza Panoramica del Vittoriano",
+      "place_slug": "terrazza-panoramica-vittoriano",
+      "note": "Lifts reach the roof at seventy metres for a 360-degree view, with two bronze quadrigas at the lift exit standing for the Unity and the Liberty of Italy."
+    },
+    {
+      "kind": "sight",
+      "name": "Foro Romano",
+      "place_slug": "foro-romano-campitelli",
+      "note": "One ticketed enclosure rather than thirty separate sites, run by the Parco archeologico del Colosseo; the EUR 18,00 Forum Pass Super covers it with the Fori Imperiali and the Palatino for the day, and named tickets have been required since 18 October 2023."
+    },
+    {
+      "kind": "sight",
+      "name": "Curia Iulia",
+      "place_slug": "curia-iulia-foro-romano",
+      "note": "Seat of the Senate from 29 BC to AD 526, and standing today because Honorius I built the church of Sant'Adriano inside it in 630; it was stripped back to the Curia in the 1930s."
+    },
+    {
+      "kind": "sight",
+      "name": "Arco di Settimio Severo",
+      "place_slug": "arco-di-settimio-severo-foro-romano",
+      "note": "Erected in 202-203 at the Forum's north-west corner and dedicated by the Senate for the Parthian victories of 195 and 197-198; 23 m high, with steps under the bays that barred wheeled traffic."
+    },
+    {
+      "kind": "sight",
+      "name": "Arco di Tito",
+      "place_slug": "arco-di-tito-foro-romano",
+      "note": "A single bay 19.15 m high at the Forum's eastern end, dedicated to Titus as divus and so raised after his death in 81, complete by 90."
+    },
+    {
+      "kind": "sight",
+      "name": "Basilica di Massenzio",
+      "place_slug": "basilica-di-massenzio-foro-romano",
+      "note": "Built on the Velia between 308 and 312 and rededicated to Constantine, who replaced Maxentius's head on the colossal statue in the west apse; the vaults stand 35 m."
+    },
+    {
+      "kind": "sight",
+      "name": "Palatino",
+      "place_slug": "palatino-campitelli",
+      "note": "The hill between the Velabrum and the Forum, with two summits, Palatium and Germalus, and the sixteenth-century Farnese gardens on its north side; the same Forum Pass Super admits you."
+    },
+    {
+      "kind": "sight",
+      "name": "Foro di Cesare",
+      "place_slug": "foro-di-cesare-campitelli",
+      "note": "Caesar inaugurated it still incomplete on 26 September 46 BC, the last day of his four triumphs, and it was finished under Augustus; the Imperial Fora walkway comes out here on via Bonella."
+    },
+    {
+      "kind": "sight",
+      "name": "Carcere Mamertino (Tullianum)",
+      "place_slug": "carcere-mamertino-campitelli",
+      "note": "Two superimposed chambers cut into the Capitoline's south slope beside the Scale Gemonie, the deeper dated to the eighth to seventh century BC and the upper to the Republic."
+    }
+  ],
   "links": [
     {
       "target": "guide:monti-rome-guide",

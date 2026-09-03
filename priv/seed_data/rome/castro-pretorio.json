@@ -581,7 +581,92 @@
       "photos": []
     }
   ],
-  "entries": [],
+  "entries": [
+    {
+      "kind": "sight",
+      "name": "Terme di Diocleziano",
+      "place_slug": "terme-di-diocleziano-castro-pretorio-rome",
+      "note": "Begun under Maximian in 298 AD and inaugurated between 305 and 306, covering 13 hectares and holding up to 3,000 people, in use until the Gothic war interrupted the water supply in the mid-6th century."
+    },
+    {
+      "kind": "sight",
+      "name": "Basilica di Santa Maria degli Angeli e dei Martiri",
+      "place_slug": "basilica-di-santa-maria-degli-angeli-e-dei-martiri-rome",
+      "note": "Michelangelo, then 86, worked the church into the frigidarium's Roman hall of over 90 metres without altering it and used the natatio for the apse; the bronze Linea Clementina in the floor was inaugurated in October 1702."
+    },
+    {
+      "kind": "sight",
+      "name": "Museo Nazionale Romano - Terme di Diocleziano",
+      "place_slug": "museo-nazionale-romano-terme-di-diocleziano-rome",
+      "note": "The Roman antiquities section has occupied part of the baths since 1889, arranged by topographic criterion, with funerary epigraphy and architecture in the garden."
+    },
+    {
+      "kind": "sight",
+      "name": "Museo Nazionale Romano - Palazzo Massimo alle Terme",
+      "place_slug": "museo-nazionale-romano-palazzo-massimo-alle-terme-rome",
+      "note": "Camillo Pistrucci's neo-Cinquecento palace of the 1880s holds the Discobolus Lancellotti, the Fanciulla di Anzio and, on the second floor, the frescoes from the Villa of Livia at Prima Porta."
+    },
+    {
+      "kind": "sight",
+      "name": "Museo Nazionale Romano - Museo dell'Arte Salvata (Aula Ottagona)",
+      "place_slug": "museo-dell-arte-salvata-aula-ottagona-rome",
+      "note": "Recovered antiquities shown in the octagonal hall in the western corner of the baths, at the junction with Via Parigi; the entrance is at Via Giuseppe Romita 8."
+    },
+    {
+      "kind": "sight",
+      "name": "Piazza della Repubblica",
+      "place_slug": "piazza-della-repubblica-castro-pretorio-rome",
+      "note": "Gaetano Koch's semicircular colonnade and its two porticoed palaces retrace the perimeter of the baths' great exedra, which gave the square its old name, Piazza Esedra."
+    },
+    {
+      "kind": "sight",
+      "name": "Fontana delle Naiadi",
+      "place_slug": "fontana-delle-naiadi-castro-pretorio-rome",
+      "note": "The terminal display of the Acqua Pia Antica Marcia: Guerrieri's architecture of 1885, Mario Rutelli's four bronze nymphs inaugurated in 1901 and the Glauco clasping a dolphin added in 1914."
+    },
+    {
+      "kind": "sight",
+      "name": "Chiesa di San Bernardo alle Terme",
+      "place_slug": "chiesa-di-san-bernardo-alle-terme-rome",
+      "note": "A circular tower of the baths turned into a church in 1598 by Caterina Sforza Cesarini, 22 metres across inside, windowless and lit through the opening at the centre of its coffered dome, with eight stucco saints by Camillo Mariani."
+    },
+    {
+      "kind": "sight",
+      "name": "Fontana del Mose",
+      "place_slug": "fontana-del-mose-castro-pretorio-rome",
+      "note": "Erected between 1585 and 1589 for Sixtus V as the terminal display of the Acquedotto Felice, a travertine arch of three bays carrying Prospero Antichi's colossal Moses and reliefs of Aaron and Gideon."
+    },
+    {
+      "kind": "sight",
+      "name": "Porta Pia",
+      "place_slug": "porta-pia-castro-pretorio-rome",
+      "note": "Built between 1561 and 1565 to replace Porta Nomentana, one of the eighteen gates of the Aurelian Walls, with the design given by Pius IV to Michelangelo; marks of the fighting of 20 September 1870 are still visible on the walls and the gate."
+    },
+    {
+      "kind": "sight",
+      "name": "Castra Praetoria",
+      "place_slug": "castra-praetoria-castro-pretorio-rome",
+      "note": "The Praetorian camp of 21-23 AD under Tiberius measured 440 by 380 metres; Aurelian absorbed its walls, so its northern and eastern sides stand today as city wall while the interior is a working barracks."
+    },
+    {
+      "kind": "walk",
+      "name": "Mura Serviane (Servian Wall)",
+      "place_slug": "mura-serviane-castro-pretorio-rome",
+      "note": "Large blocks of yellow tufa from the rebuilding of the early 4th century BC survive in one stretch near Via Gaeta and Via Volturno."
+    },
+    {
+      "kind": "sight",
+      "name": "Teatro dell'Opera di Roma (Teatro Costanzi)",
+      "place_slug": "teatro-dell-opera-di-roma-teatro-costanzi-rome",
+      "note": "Achille Sfondrini built it in eighteen months for Domenico Costanzi as a sounding box with a horseshoe auditorium, inaugurated on 27 November 1880 with Rossini's Semiramide; Cavalleria rusticana and Tosca had their world premieres here."
+    },
+    {
+      "kind": "sight",
+      "name": "Basilica del Sacro Cuore di Gesu a Castro Pretorio",
+      "place_slug": "basilica-del-sacro-cuore-di-gesu-castro-pretorio-rome",
+      "note": "First stone laid by Pius IX in 1870, work resumed in 1880 through St John Bosco and completed in 1887; behind the choir are the rooms where he stayed from 30 April to 18 May 1887."
+    }
+  ],
   "links": [
     {
       "target": "guide:sallustiano-rome-guide",

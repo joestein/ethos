@@ -529,7 +529,86 @@
       "photos": []
     }
   ],
-  "entries": [],
+  "entries": [
+    {
+      "kind": "walk",
+      "name": "Piazza Colonna",
+      "place_slug": "piazza-colonna-colonna",
+      "note": "Palazzo Chigi, Palazzo Ferrajoli and Palazzo Wedekind stand around it, with the fountain and the column at the centre."
+    },
+    {
+      "kind": "sight",
+      "name": "Colonna di Marco Aurelio",
+      "place_slug": "colonna-di-marco-aurelio-colonna",
+      "note": "Dated 180 to 193 and completed under Commodus, its marble reliefs narrate the Danube crossing and the campaigns against the Germani and the Sarmatians."
+    },
+    {
+      "kind": "sight",
+      "name": "Fontana di Piazza Colonna",
+      "place_slug": "fontana-di-piazza-colonna-colonna",
+      "note": "Made 1575 to 1577 to Giacomo della Porta's design and sculpted by Leonardo Sormani; Achille Stocchi put in the paired dolphins in 1830."
+    },
+    {
+      "kind": "sight",
+      "name": "Palazzo Chigi",
+      "place_slug": "palazzo-chigi-colonna",
+      "note": "Seat of the Italian government since 1961; guided visits run by prior booking, one Saturday a month from October to June, in groups of 35."
+    },
+    {
+      "kind": "sight",
+      "name": "Palazzo Montecitorio",
+      "place_slug": "palazzo-montecitorio-colonna",
+      "note": "Begun 1653 to Bernini's design and finished by Carlo Fontana; the Camera dei deputati has sat here since 1871 and visits go through the Chamber's own site."
+    },
+    {
+      "kind": "sight",
+      "name": "Obelisco di Montecitorio",
+      "place_slug": "obelisco-di-montecitorio-colonna",
+      "note": "Raised at Heliopolis under Psammetichus II, found broken in five pieces in 1748 and re-erected here in 1792; the 1998 repaving restored its zodiac and meridian lines."
+    },
+    {
+      "kind": "sight",
+      "name": "Palazzo di Propaganda Fide",
+      "place_slug": "palazzo-di-propaganda-fide-colonna",
+      "note": "Bernini built the front towards the piazza between 1642 and 1644 and Borromini the one on Via di Propaganda; the building stands on Italian soil, not Vatican territory."
+    },
+    {
+      "kind": "sight",
+      "name": "Galleria Alberto Sordi",
+      "place_slug": "galleria-alberto-sordi-colonna",
+      "note": "Dario Carbone's Liberty arcade, inaugurated in October 1922 and reopened in 2024 after a restoration that removed the external glazing."
+    },
+    {
+      "kind": "sight",
+      "name": "Palazzo Wedekind",
+      "place_slug": "palazzo-wedekind-colonna",
+      "note": "Its portico carries sixteen columns, twelve of them brought from the excavations of Veio, as the Latin frieze inscription states."
+    },
+    {
+      "kind": "sight",
+      "name": "Basilica di Sant'Andrea delle Fratte",
+      "place_slug": "basilica-di-santandrea-delle-fratte-colonna",
+      "note": "Borromini designed the apse, the dome drum and the campanile nicknamed «ballerino», which sways when the great bell rings; contact the church for hours."
+    },
+    {
+      "kind": "sight",
+      "name": "Tempio di Adriano (Hadrianeum)",
+      "place_slug": "tempio-di-adriano-colonna",
+      "note": "Eleven Roman columns stand embedded in the later building on Piazza di Pietra, which afterwards served as the city's stock exchange."
+    },
+    {
+      "kind": "sight",
+      "name": "Galleria d'Arte Moderna di Roma Capitale",
+      "place_slug": "galleria-darte-moderna-di-roma-capitale-colonna",
+      "note": "The civic collection formed in 1925, covering Roman art from the later nineteenth century to the years after the Second World War; free with the MIC card."
+    },
+    {
+      "kind": "sight",
+      "name": "Teatro Sistina",
+      "place_slug": "teatro-sistina-colonna",
+      "note": "Inaugurated in 1949 as a cinema-theatre to Marcello Piacentini's design, and tied to the musicals of Garinei e Giovannini; contact the venue for what is on."
+    }
+  ],
   "links": [
     {
       "target": "guide:trevi-rome-guide",

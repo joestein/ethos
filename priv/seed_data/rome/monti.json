@@ -776,7 +776,92 @@
       "photos": []
     }
   ],
-  "entries": [],
+  "entries": [
+    {
+      "kind": "sight",
+      "name": "Colonna Traiana",
+      "place_slug": "colonna-traiana-rome",
+      "note": "Seventeen monolithic drums around an internal spiral stair of 185 steps, with Trajan's ashes in the base and a figure of St Peter put on top by Sixtus V in 1587."
+    },
+    {
+      "kind": "sight",
+      "name": "Mercati di Traiano — Museo dei Fori Imperiali",
+      "place_slug": "mercati-di-traiano-museo-dei-fori-imperiali-rome",
+      "note": "Six levels of Roman building stepped up the Quirinal slope; the museum inside was inaugurated in the autumn of 2007, and the Torre delle Milizie is entered through it."
+    },
+    {
+      "kind": "sight",
+      "name": "Foro di Augusto",
+      "place_slug": "foro-di-augusto-rome",
+      "note": "Inaugurated in 2 BC around the temple of Mars Ultor, three of whose Carrara marble columns still stand, with a firewall of peperino and travertine up to thirty-three metres behind it."
+    },
+    {
+      "kind": "walk",
+      "name": "Via dei Fori Imperiali",
+      "place_slug": "via-dei-fori-imperiali-rome",
+      "note": "Opened in 1932 as via dell'Impero over a demolished sixteenth-century quarter, and the line that puts the fora of Trajan and Augustus on the Monti side and the rest in Campitelli."
+    },
+    {
+      "kind": "sight",
+      "name": "Torre delle Milizie",
+      "place_slug": "torre-delle-milizie-rome",
+      "note": "About fifty metres of brick, attributed to the Conti di Segni at the start of the thirteenth century; a mid-fourteenth-century earthquake brought down the third storey and started the lean."
+    },
+    {
+      "kind": "sight",
+      "name": "Torre dei Conti",
+      "place_slug": "torre-dei-conti-rome",
+      "note": "Built around 1203 by Innocent III for his brother Riccardo and once about 60 metres high; its cellars incorporate a squared-tufa exedra of the Forum of Peace."
+    },
+    {
+      "kind": "sight",
+      "name": "Torre del Grillo",
+      "place_slug": "torre-del-grillo-rome",
+      "note": "Built in 1223 on Trajanic remains; the del Grillo bought it in 1675 and added the corner eagles and the inscription EX MARCHIONE DE GRILLIS, and Renato Guttuso later painted in it."
+    },
+    {
+      "kind": "sight",
+      "name": "Torre dei Capocci",
+      "place_slug": "torre-dei-capocci-rome",
+      "note": "Thirty-six metres of brick taken from the Terme di Traiano, its colour changing at third-floor level where the surrounding houses were pulled down; not visitable inside."
+    },
+    {
+      "kind": "sight",
+      "name": "Basilica di San Giovanni in Laterano",
+      "place_slug": "basilica-di-san-giovanni-in-laterano-rome",
+      "note": "Roma Capitale names it among the rione's monuments; under the Lateran Treaty of 1929 the Holy See owns it, but the ground is Italian and Italian law applies to visitors."
+    },
+    {
+      "kind": "sight",
+      "name": "Battistero lateranense",
+      "place_slug": "battistero-lateranense-rome",
+      "note": "An octagon on eight porphyry columns beside the basilica, with Borromini's external frieze of 1657 and a green basalt font under a bronze cover by Ciro Ferri."
+    },
+    {
+      "kind": "sight",
+      "name": "Palazzo del Laterano",
+      "place_slug": "palazzo-del-laterano-rome",
+      "note": "The Lateran Pacts were signed inside on 11 February 1929 and took their name from it; the Museo storico vaticano stands within, on Italian soil."
+    },
+    {
+      "kind": "sight",
+      "name": "Basilica di Santa Maria Maggiore",
+      "place_slug": "basilica-di-santa-maria-maggiore-rome",
+      "note": "Nave mosaics of the fifth century, the Sistina and Paolina chapels of Sixtus V and Paul V, and the snow miracle commemorated on 5 August."
+    },
+    {
+      "kind": "sight",
+      "name": "Basilica di San Clemente al Laterano",
+      "place_slug": "basilica-di-san-clemente-al-laterano-rome",
+      "note": "Two churches stacked over Republican-era buildings and a Mithraeum: the lower wrecked in Robert Guiscard's sack of 1084, the upper built in 1108 by Paschal II."
+    },
+    {
+      "kind": "tip",
+      "name": "Chiesa di Sant'Andrea al Quirinale",
+      "place_slug": "chiesa-di-santandrea-al-quirinale-rome",
+      "note": "Publishes its hours on its own site: Tuesday to Sunday 9.00–12.00 and 15.00–18.00, closed Monday."
+    }
+  ],
   "links": [
     {
       "target": "guide:campitelli-rome-guide",

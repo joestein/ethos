@@ -302,7 +302,14 @@ defmodule Ethos.Seeds.RomeSeedDataTest do
 
     link_text = (doc["links"] || []) |> Enum.map(& &1["note"])
 
-    (guide_text ++ place_text ++ link_text)
+    # Entry notes were absent from this list until they existed, and then went
+    # on being absent for a full suite run after 153 of them landed — the bans
+    # all passed because nothing was reading the newest reader-facing text in
+    # the corpus. An entry note sits on the guide page beside the place's name,
+    # so it is exactly as public as the intro and is held to the same rules.
+    entry_text = (doc["entries"] || []) |> Enum.flat_map(&[&1["name"], &1["note"]])
+
+    (guide_text ++ place_text ++ link_text ++ entry_text)
     |> List.flatten()
     |> Enum.filter(&is_binary/1)
   end

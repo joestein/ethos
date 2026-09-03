@@ -191,7 +191,62 @@
       "photos": []
     }
   ],
-  "entries": [],
+  "entries": [
+    {
+      "kind": "sight",
+      "name": "Chiesa di Santa Maria della Concezione dei Cappuccini",
+      "place_slug": "santa-maria-della-concezione-cappuccini-ludovisi-rome",
+      "note": "Cardinal Antonio Barberini blessed the first stone on 4 October 1626; one nave and five chapels a side, with paintings by Guido Reni, Pietro da Cortona and Domenichino."
+    },
+    {
+      "kind": "sight",
+      "name": "Museo e Cripta dei Cappuccini",
+      "place_slug": "museo-e-cripta-dei-cappuccini-ludovisi-rome",
+      "note": "Five chapels decorated with the skulls and bones of about 4,000 friars, gathered between 1528 and 1870, on a ticket of their own; hours change, so check the museum's site."
+    },
+    {
+      "kind": "sight",
+      "name": "Palazzo Margherita",
+      "place_slug": "palazzo-margherita-ludovisi-rome",
+      "note": "Gaetano Koch built it on the ground of the villa the Boncompagni Ludovisi were subdividing; it housed the Queen Mother Margherita until 1926 and is now the United States Embassy, closed to the public and seen only from outside."
+    },
+    {
+      "kind": "sight",
+      "name": "Casino dell'Aurora",
+      "place_slug": "casino-dell-aurora-ludovisi-rome",
+      "note": "The building of Villa Ludovisi that survives intact, with Guercino's Aurora on the salone vault; it is private, and no source establishes whether it can be entered."
+    },
+    {
+      "kind": "tour",
+      "name": "Villa Maraini (Istituto Svizzero)",
+      "place_slug": "villa-maraini-istituto-svizzero-ludovisi-rome",
+      "note": "Raised 1903-1905 on an artificial hill of spoil from the digging of via Ludovisi, with a 26-metre Torre Belvedere; the Swiss Institute runs guided visits inside, by booking only."
+    },
+    {
+      "kind": "tour",
+      "name": "Palazzo Piacentini",
+      "place_slug": "palazzo-piacentini-ludovisi-rome",
+      "note": "Inaugurated 1932 as the Palazzo delle Corporazioni, with Sironi's Carta del Lavoro window and Prini's bronze doors on via Veneto; visits are by appointment, arranged at least fifteen days ahead."
+    },
+    {
+      "kind": "sight",
+      "name": "Chiesa di Sant'Isidoro a Capo le Case",
+      "place_slug": "sant-isidoro-a-capo-le-case-ludovisi-rome",
+      "note": "Irish Franciscans took it two years after the 1622 foundation and own it still; Bizzaccheri built the façade, portico and double stair in 1704-1705, and the De Sylva chapel was remodelled to Bernini's design."
+    },
+    {
+      "kind": "sight",
+      "name": "Chiesa di San Patrizio a Villa Ludovisi",
+      "place_slug": "san-patrizio-a-villa-ludovisi-rome",
+      "note": "Aristide Leonori's church of 1908, with Villani's 1929 apse mosaic; the Paulist Fathers arrived on 1 August 2017 and all Masses are in English."
+    },
+    {
+      "kind": "sight",
+      "name": "Chiesa evangelica luterana (Christuskirche)",
+      "place_slug": "chiesa-evangelica-luterana-christuskirche-ludovisi-rome",
+      "note": "Opened in 1922 to a design by Wilhelm II's court architect, with an apse mosaic of the Tree of Life, a font modelled on Reykjavík's and a Steinmeyer organ of 1930."
+    }
+  ],
   "links": [
     {
       "target": "guide:sallustiano-rome-guide",

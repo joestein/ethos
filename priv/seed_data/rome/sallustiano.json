@@ -178,7 +178,56 @@
       "photos": []
     }
   ],
-  "entries": [],
+  "entries": [
+    {
+      "kind": "sight",
+      "name": "Chiesa di Santa Maria della Vittoria",
+      "place_slug": "sallustiano-chiesa-santa-maria-della-vittoria-rome",
+      "note": "Carlo Maderno built it 1608–1620; the Cornaro Chapel holds Bernini's marble and gilt-bronze Ecstasy of Saint Teresa of Ávila, executed 1647–1652, watched by the Cornaro family from what read as theatre boxes."
+    },
+    {
+      "kind": "sight",
+      "name": "Horti Sallustiani — Aula Adrianea",
+      "place_slug": "sallustiano-horti-sallustiani-aula-adrianea-rome",
+      "note": "A domed circular hall and a semicircular frescoed residential block survive 14 metres below piazza Sallustio, on ground Sallust bought in 44 BC and Tiberius took into imperial hands; the Aula itself is hired out for events rather than opened to callers."
+    },
+    {
+      "kind": "sight",
+      "name": "Museo Boncompagni Ludovisi per le arti decorative",
+      "place_slug": "sallustiano-museo-boncompagni-ludovisi-rome",
+      "note": "Five rooms of the villino's own furniture, tapestries and ceramics alongside Italian fashion and costume — Capucci, Valentino, Mila Schön, Gattinoni — left to the State in 1972 by Princess Blanceflor de Bildt Boncompagni and opened in 1995."
+    },
+    {
+      "kind": "sight",
+      "name": "Basilica di San Camillo de Lellis",
+      "place_slug": "sallustiano-basilica-san-camillo-de-lellis-rome",
+      "note": "Begun 1906 to Tullio Passarelli's design and consecrated in 1910, brick outside and travertine block within, with a 30-metre campanile and a Vegezzi-Bossi organ of 1910–11 donated by Margherita of Savoy."
+    },
+    {
+      "kind": "sight",
+      "name": "Chiesa del Sacro Cuore di Gesù",
+      "place_slug": "sallustiano-chiesa-del-sacro-cuore-di-gesu-rome",
+      "note": "Aristide Leonori built it 1914–1916 behind a wrought-iron railing on via Piave; the windows above the matroneum are Munich glass, and the body of the congregation's foundress, Rafaela Porras y Ayllón, lies in a chapel on the left."
+    },
+    {
+      "kind": "sight",
+      "name": "Villa Paolina Bonaparte",
+      "place_slug": "sallustiano-villa-paolina-bonaparte-rome",
+      "note": "Raised in 1750 for Cardinal Silvio Valenti Gonzaga and bought by Napoleon's sister in 1816, it is now the French embassy to the Holy See and shut to callers; the orange trees along via XX Settembre are a memento of its orangery."
+    },
+    {
+      "kind": "sight",
+      "name": "Palazzo dell'Agricoltura",
+      "place_slug": "sallustiano-palazzo-dell-agricoltura-rome",
+      "note": "Built 1908–1914 at the wish of Francesco Cocco-Ortu, with three Latin inscriptions in the frieze and an atrium of twenty-two red Baveno granite columns; it is a working ministry, so what you see is the exterior and the gates by Alberto Gerardi."
+    },
+    {
+      "kind": "sight",
+      "name": "Villino Rudinì",
+      "place_slug": "sallustiano-villino-rudini-rome",
+      "note": "Ernesto Basile built it 1904–1906 for the family of Antonio Starabba di Rudinì: a severe block set back from the street, with Liberty ornament in the frieze, window frames and Antonio Ronconi's wrought iron; it holds a diplomatic chancery and does not admit visitors."
+    }
+  ],
   "links": [
     {
       "target": "guide:ludovisi-rome-guide",

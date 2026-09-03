@@ -516,7 +516,92 @@
       "photos": []
     }
   ],
-  "entries": [],
+  "entries": [
+    {
+      "kind": "sight",
+      "name": "Pantheon",
+      "place_slug": "pantheon-pigna-rome",
+      "note": "Agrippa's temple of 27 BC, rebuilt by Hadrian between 118 and 125 AD, now the basilica of Santa Maria ad Martyres and the burial place Raphael chose."
+    },
+    {
+      "kind": "sight",
+      "name": "Area Sacra di Largo Argentina",
+      "place_slug": "area-sacra-di-largo-argentina-pigna-rome",
+      "note": "Four Republican temples in a sunken enclosure, reopened to the public on 20 June 2023 with a walkway; entry is timed every twenty minutes and closed on Mondays."
+    },
+    {
+      "kind": "sight",
+      "name": "Curia di Pompeo",
+      "place_slug": "curia-di-pompeo-largo-argentina-rome",
+      "note": "The ruined hall at the west of the enclosure, where it.wikipedia records the tradition that Julius Caesar was killed in 44 BC."
+    },
+    {
+      "kind": "sight",
+      "name": "Torre del Papito",
+      "place_slug": "torre-del-papito-largo-argentina-rome",
+      "note": "The fourteenth-century tower on piazza dei Calcarari holds the archaeological site's ticket office and bookshop, and its portico serves as a display area."
+    },
+    {
+      "kind": "sight",
+      "name": "Basilica di Santa Maria sopra Minerva",
+      "place_slug": "santa-maria-sopra-minerva-pigna-rome",
+      "note": "It holds the remains of Catherine of Siena and of Fra Angelico, and a fresco by Melozzo da Forli; mass is at 18.00 Monday to Saturday."
+    },
+    {
+      "kind": "sight",
+      "name": "Obelisco della Minerva",
+      "place_slug": "obelisco-della-minerva-pigna-rome",
+      "note": "An Egyptian obelisk from the Iseo Campense, riding a marble elephant that Ercole Ferrata carved to a 1667 design by Gian Lorenzo Bernini."
+    },
+    {
+      "kind": "sight",
+      "name": "Chiesa del Gesu",
+      "place_slug": "chiesa-del-gesu-pigna-rome",
+      "note": "Begun 1568 to Vignola's plan and finished by Giacomo della Porta, who designed the facade, in 1575; dedicated 1584, with Baciccia's painted decoration added later."
+    },
+    {
+      "kind": "sight",
+      "name": "Camere di Sant'Ignazio",
+      "place_slug": "camere-di-sant-ignazio-pigna-rome",
+      "note": "The rooms in the Casa professa where Ignatius of Loyola lived and died, keeping their decoration by Andrea Pozzo and Borgognone."
+    },
+    {
+      "kind": "sight",
+      "name": "Chiesa di Sant'Ignazio di Loyola",
+      "place_slug": "chiesa-di-sant-ignazio-di-loyola-pigna-rome",
+      "note": "Andrea Pozzo painted the false dome, the vault and the presbytery in 1685; the church was consecrated in 1722 and opens daily from 09.00 to 23.30."
+    },
+    {
+      "kind": "sight",
+      "name": "Galleria Doria Pamphilj",
+      "place_slug": "galleria-doria-pamphilj-pigna-rome",
+      "note": "The pictures still hang to the late eighteenth-century arrangement recorded in a 1767 manuscript; closed every Wednesday, and the Appartamenti Segreti are ticketed separately."
+    },
+    {
+      "kind": "sight",
+      "name": "Palazzo Venezia",
+      "place_slug": "palazzo-venezia-pigna-rome",
+      "note": "A fifteenth-century residence of popes, cardinals and ambassadors, begun by Cardinal Pietro Barbo, who became Paul II in 1464; VIVE gives its Sale Storiche as closed for restoration into 2026."
+    },
+    {
+      "kind": "sight",
+      "name": "Basilica di San Marco Evangelista al Campidoglio",
+      "place_slug": "basilica-di-san-marco-evangelista-pigna-rome",
+      "note": "Founded in 336 by Pope Mark and recorded as Titulus Marci in the synod acts of 499, with a benediction loggia added under Paul II in 1465 to 1470."
+    },
+    {
+      "kind": "sight",
+      "name": "Fontana del Facchino",
+      "place_slug": "fontana-del-facchino-via-lata-rome",
+      "note": "A wall fountain of a porter with a barrel, made for Jacopino del Conte's house between 1580 and 1598 and moved to via Lata in 1872 to 1873 for reasons of traffic."
+    },
+    {
+      "kind": "tip",
+      "name": "Ditta Annibale Gammarelli",
+      "place_slug": "ditta-annibale-gammarelli-pigna-rome",
+      "note": "Sacred vestments and episcopal insignia, one of the ecclesiastical outfitters clustered around via dei Cestari and via di Santa Caterina da Siena."
+    }
+  ],
   "links": [
     {
       "target": "guide:colonna-rome-guide",

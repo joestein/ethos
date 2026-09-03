@@ -516,7 +516,86 @@
       "photos": []
     }
   ],
-  "entries": [],
+  "entries": [
+    {
+      "kind": "sight",
+      "name": "Piazza Navona",
+      "place_slug": "piazza-navona-parione-rome",
+      "note": "The square keeps the outline of the ancient stadium beneath it, and lies wholly inside the rione, which is not true of most of Parione's edges."
+    },
+    {
+      "kind": "sight",
+      "name": "Fontana dei Quattro Fiumi",
+      "place_slug": "fontana-dei-quattro-fiumi-parione-rome",
+      "note": "The Sovrintendenza Capitolina gives it to Gian Lorenzo Bernini and dates it 1648-1651, in travertine, marble, granite and bronze, on the site of a trough from the 1570s."
+    },
+    {
+      "kind": "sight",
+      "name": "Sant'Agnese in Agone",
+      "place_slug": "santagnese-in-agone-parione-rome",
+      "note": "The church on the west side of the square, on the traditional site of St Agnes's martyrdom; the parish publishes its own opening times and a restoration programme in the crypt."
+    },
+    {
+      "kind": "tip",
+      "name": "Stadio di Domiziano",
+      "place_slug": "stadio-di-domiziano-parione-rome",
+      "note": "The archaeological area is closed to the public, so plan to read the stadium from the piazza above rather than from inside; the walls re-emerged in 1936 and were built into the Palazzo dell'INA."
+    },
+    {
+      "kind": "sight",
+      "name": "Pasquino",
+      "place_slug": "pasquino-statue-parione-rome",
+      "note": "The Sovrintendenza Capitolina reads the battered group as Patroclus and Menelaus, found at the corner of Piazza Navona and Via della Cuccagna, and refers it to the Stadium's decoration."
+    },
+    {
+      "kind": "sight",
+      "name": "Museo di Roma",
+      "place_slug": "museo-di-roma-palazzo-braschi-rome",
+      "note": "Collections covering the social history and artistic activity of Rome from the Middle Ages to the early 20th century, with entrances at Piazza San Pantaleo 10 and Piazza Navona 2."
+    },
+    {
+      "kind": "sight",
+      "name": "Museo Barracco",
+      "place_slug": "museo-barracco-parione-rome",
+      "note": "Classical and Ancient Near Eastern sculpture, given to the Comune by Giovanni Barracco in 1904, at corso Vittorio Emanuele 166/A."
+    },
+    {
+      "kind": "sight",
+      "name": "Palazzo della Cancelleria",
+      "place_slug": "palazzo-della-cancelleria-parione-rome",
+      "note": "Article 15 of the Lateran Treaty of 1929 grants it the immunities international law recognises for the seats of foreign diplomatic agents, on Italian soil; it houses the Apostolic Penitentiary, the Apostolic Signatura and the Roman Rota."
+    },
+    {
+      "kind": "sight",
+      "name": "Campo de' Fiori",
+      "place_slug": "campo-de-fiori-parione-rome",
+      "note": "The Sovrintendenza Capitolina describes it as the seat of a city market; it runs between via dei Giubbonari and piazza della Cancelleria, on the Parione-Regola boundary."
+    },
+    {
+      "kind": "sight",
+      "name": "Monumento a Giordano Bruno",
+      "place_slug": "monumento-a-giordano-bruno-campo-de-fiori-rome",
+      "note": "Ettore Ferrari's bronze and Baveno granite figure, raised on 9 June 1889 on the site of the burning of 17 February 1600, with the philosopher drawn into himself and his hands crossed on his book."
+    },
+    {
+      "kind": "walk",
+      "name": "Teatro di Pompeo",
+      "place_slug": "teatro-di-pompeo-parione-rome",
+      "note": "There is nothing to go inside; walk Via di Grotta Pinta and the bend of the houses is the line of the seating."
+    },
+    {
+      "kind": "walk",
+      "name": "Arco degli Acetari",
+      "place_slug": "arco-degli-acetari-parione-rome",
+      "note": "An opening off Via del Pellegrino leading to an inner courtyard ringed by buildings of medieval origin."
+    },
+    {
+      "kind": "sight",
+      "name": "Oratorio dei Filippini",
+      "place_slug": "oratorio-dei-filippini-parione-rome",
+      "note": "it.wikipedia gives it to Francesco Borromini, 1637-1667, for the Congregation of the Oratory; his Torre dell'Orologio stands on the same complex, and the Biblioteca Vallicelliana and the Archivio Storico Capitolino are inside it."
+    }
+  ],
   "links": [
     {
       "target": "guide:pigna-rome-guide",

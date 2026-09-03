@@ -594,7 +594,92 @@
       "photos": []
     }
   ],
-  "entries": [],
+  "entries": [
+    {
+      "kind": "sight",
+      "name": "Palazzo di Giustizia (il Palazzaccio)",
+      "place_slug": "palazzo-di-giustizia-prati-rome",
+      "note": "Guglielmo Calderini's travertine-faced block for the Corte suprema di cassazione: first stone laid 14 March 1889, inaugurated 11 January 1911, with Ettore Ximenes's bronze quadriga on the Tiber front."
+    },
+    {
+      "kind": "sight",
+      "name": "Piazza Cavour",
+      "place_slug": "piazza-cavour-prati-rome",
+      "note": "Nicodemo Severi laid out the central garden between 1895 and 1911; the Waldensian temple and the Teatro Adriano both stand on the square."
+    },
+    {
+      "kind": "sight",
+      "name": "Monumento a Camillo Cavour",
+      "place_slug": "monumento-a-camillo-cavour-prati-rome",
+      "note": "Stefano Galletti executed it between 1885 and 1895, with four colossal bronze groups at the foot of the pedestal, and it was unveiled on 24 September 1895 for the twenty-fifth anniversary of 20 September 1870."
+    },
+    {
+      "kind": "sight",
+      "name": "Tempio valdese di piazza Cavour",
+      "place_slug": "tempio-valdese-piazza-cavour-prati-rome",
+      "note": "Built from June 1911 to 1913 by Emanuele Rutelli with Paolo Bonci, decorated inside by Paolo Paschetto and inaugurated on 8 February 1914; Sunday worship is at 11.00."
+    },
+    {
+      "kind": "sight",
+      "name": "Chiesa del Sacro Cuore del Suffragio",
+      "place_slug": "chiesa-del-sacro-cuore-del-suffragio-prati-rome",
+      "note": "The engineer Giuseppe Gualandi took northern Gothic as his model on the embankment; the foundation stone was blessed in 1894 and the church consecrated on 17 May 1921."
+    },
+    {
+      "kind": "sight",
+      "name": "Museo delle anime del Purgatorio",
+      "place_slug": "museo-delle-anime-del-purgatorio-prati-rome",
+      "note": "One room off the sacristy holding what Victor Jouët gathered across Italy, France, Belgium and Germany after a fire in the building on 15 September 1897, including burn-marked garments of 1731 and 1789."
+    },
+    {
+      "kind": "sight",
+      "name": "Fontana in piazza dei Quiriti",
+      "place_slug": "fontana-in-piazza-dei-quiriti-prati-rome",
+      "note": "Attilio Selva's marble and travertine work of 1928: four kneeling nude figures hold a quatrefoil catino crowned by a pine cone, and the argument over them delayed the unveiling set for 21 April 1928."
+    },
+    {
+      "kind": "sight",
+      "name": "Chiesa di San Gioacchino in Prati",
+      "place_slug": "chiesa-di-san-gioacchino-in-prati-rome",
+      "note": "Built at the wish of Leo XIII for his priestly jubilee, with works carried out between 1891 and 1898 and a mosaic of the five continents of 1898 across the façade."
+    },
+    {
+      "kind": "sight",
+      "name": "Chiesa di Santa Maria del Rosario in Prati",
+      "place_slug": "chiesa-di-santa-maria-del-rosario-in-prati-rome",
+      "note": "The rione's second neo-Gothic church, entrusted to the Dominicans, a parish since 1912 and completed 1912-16 to Giuseppe Ribaldi's design, with a mosaic rose window behind its iron street gate."
+    },
+    {
+      "kind": "walk",
+      "name": "Via Cola di Rienzo",
+      "place_slug": "via-cola-di-rienzo-prati-rome",
+      "note": "The shopping street crosses the whole rione from piazza della Libertà to piazza del Risorgimento, carrying 272 conforming street numbers on the national address register, certified 16 December 2022."
+    },
+    {
+      "kind": "sight",
+      "name": "Palazzo Blumenstihl",
+      "place_slug": "palazzo-blumenstihl-prati-rome",
+      "note": "Luca Carimini built it in 1890 for a family of Alsatian origin; its lungotevere dei Mellini front carries an attic loggia of three serliane over a balustraded balcony on four composite columns, with the Gran Caffè Esperia beneath."
+    },
+    {
+      "kind": "sight",
+      "name": "Casa Madre dei Mutilati ed Invalidi di Guerra",
+      "place_slug": "casa-madre-dei-mutilati-prati-rome",
+      "note": "Marcello Piacentini's rough tufa and travertine building for Carlo Delcroix's association, first block 1925 to 1928 and a second added in 1936, inaugurated unfinished on 4 November 1928."
+    },
+    {
+      "kind": "sight",
+      "name": "Museo Storico dell'Arma dei Carabinieri",
+      "place_slug": "museo-storico-arma-dei-carabinieri-prati-rome",
+      "note": "Free admission, Tuesday to Sunday 09.00 to 13.00, on a route through 26 rooms that begins with the Regie Patenti of 13 July 1814 and runs to the Resistance and the Liberation."
+    },
+    {
+      "kind": "food",
+      "name": "Forno pasticceria Angelo Colapicchioni",
+      "place_slug": "forno-colapicchioni-prati-rome",
+      "note": "A bakery and pastry shop at via Tacito 76/78, listed by Roma Capitale's tourism service among the members of the Associazione dei Negozi Storici di Eccellenza."
+    }
+  ],
   "links": [
     {
       "target": "guide:castro-pretorio-rome-guide",
