@@ -1,9 +1,0 @@
-2 SUPERLATIVE hits in priv/seed_data/rome/colonna.json
-
-AT .guide.sections[0].body
-  MATCHED: most guidebooks
-  CONTEXT: ...i Spagna, which the Palazzo di Propaganda Fide faces, is in the rione Campo Marzio and is not claimed here either.  Finally, the name trap. The Galleria Colonna and the Palazzo Colonna that appear in most guidebooks are the Colonna family's palace and picture gallery, and they are in the rione Trevi, not in the rione Colonna. What Colonna has is the shopping arcade on piazza Colonna, which carried the name Galle...
-
-AT .guide.sections[1].body
-  MATCHED: most nothing in this rione
-  CONTEXT: ...so 189; Santa Maria Odigitria at Via del Tritone 82; and the Orologio di Augusto at Via In Lucina 16/a, which is the Colonna one of the two addresses Roma Capitale gives it.  A warning about hours. Almost nothing in this rione publishes them from a source that could be reached. Roma Capitale's pages for Sant'Andrea delle Fratte, the Teatro Sistina and the Teatro Sala Umberto all say only to contact the church or the venue,...

@@ -1,5 +1,0 @@
-1 METHOD hits in priv/seed_data/rome/trastevere.json
-
-AT .places[39].summary
-  MATCHED: returned 404
-  CONTEXT: ...A state gallery inside Palazzo Corsini. No hours, admission or booking information is given here: the gallery's own site and the municipal museum site both returned 404 when this guide was researched, and nothing operational could be fetched....

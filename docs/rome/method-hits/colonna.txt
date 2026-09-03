@@ -1,5 +1,0 @@
-1 METHOD hits in priv/seed_data/rome/colonna.json
-
-AT .guide.sections[1].body
-  MATCHED: from a source that could be reached
-  CONTEXT: ...ritone 82; and the Orologio di Augusto at Via In Lucina 16/a, which is the Colonna one of the two addresses Roma Capitale gives it.  A warning about hours. Almost nothing in this rione publishes them from a source that could be reached. Roma Capitale's pages for Sant'Andrea delle Fratte, the Teatro Sistina and the Teatro Sala Umberto all say only to contact the church or the venue, so no opening times appear on those records here. ...

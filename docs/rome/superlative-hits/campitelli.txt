@@ -1,9 +1,0 @@
-2 SUPERLATIVE hits in priv/seed_data/rome/campitelli.json
-
-AT .guide.intro
-  MATCHED: most every edge of the rione
-  CONTEXT: ...helangelo, and on its northern slope the Vittoriano. The rest is a small inhabited quarter of a few squares, some Mannerist and Baroque palaces, a working theatre and a short list of places to eat. Almost every edge of the rione is a street or a square that is itself the boundary, so several things visitors assume are in Campitelli, including the Theatre of Marcellus, are not....
-
-AT .places[13].summary
-  MATCHED: Italy's first
-  CONTEXT: ...VIVE, the Ministry of Culture institute that runs the complex, states that it was conceived in January 1878, in the days after the death of Italy's first king, and inaugurated in 1911; VIVE's history gives Giuseppe Sacconi as its architect, building from 1885 to 1905. it.wikipedia's infobox gives the inauguration as 4 June 1911, a construction period ...

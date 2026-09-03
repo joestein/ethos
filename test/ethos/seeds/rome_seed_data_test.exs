@@ -118,8 +118,13 @@ defmodule Ethos.Seeds.RomeSeedDataTest do
   # pattern below requires either an explicit comparison class, a possessive
   # that supplies one, or a word that can only be a ranking.
   @superlative_patterns [
-    # "the largest square of the rione", "the oldest church in Rome"
-    ~r/\b(?:only|first|oldest|largest|smallest|finest|grandest|greatest|best|tallest|richest|most\s+\w+)\s+(?:\w+\s+){0,2}(?:in|of|on)\s+(?:the\s+)?(?:rione|Rome|Italy|the city|the street|the quarter|that street|this rione|this page)\b/i,
+    # "the largest square of the rione", "the oldest church in Rome".
+    #
+    # The lookbehind rejects a HYPHENATED ordinal rather than a bare `\b`: a
+    # hyphen is a non-word character, so `\bfirst` matched inside
+    # "the twenty-first of Rome's rioni by toponymic code" — a position in an
+    # official series, which is the carve-out this ban exists not to touch.
+    ~r/(?<![-\w])(?:only|first|oldest|largest|smallest|finest|grandest|greatest|best|tallest|richest|most\s+\w+)\s+(?:\w+\s+){0,2}(?:in|of|on)\s+(?:the\s+)?(?:rione|Rome|Italy|the city|the street|the quarter|that street|this rione|this page)\b/i,
     # "one of the most important examples of the Baroque"
     ~r/\bone of the (?:most|best|finest|largest|oldest|greatest|richest)\b/i,
     # "the rione's only true square", "Rome's finest".
@@ -208,7 +213,74 @@ defmodule Ethos.Seeds.RomeSeedDataTest do
     ~r/\breturned nothing usable\b/i,
     ~r/\bfrom a source that could be reached\b/i,
     ~r/\bpoint testing\b/i,
-    ~r/\btested \w+ points\b/i
+    ~r/\btested \w+ points\b/i,
+    # Added after wave 4. The nine new files leaked in a family the earlier
+    # patterns walked past entirely: not a failed fetch, but the SOURCING RULE
+    # itself recited to the reader — "no institutional page was obtained for
+    # this guide", "nothing further about how long the business has traded is
+    # published here". The rule is correct and it is why the fact is absent;
+    # the reader wants the absence, not the policy behind it.
+    ~r/\b(?:was|were) obtained for (?:this|the) (?:guide|record|entry)\b/i,
+    ~r/\bis published here\b/i,
+    ~r/\b(?:available|consulted|sourced) here\b/i,
+    ~r/\bfor this guide\b/i,
+    ~r/\bthis (?:guide|record|entry) (?:can|could) source\b/i,
+    # Reported by the sweep agents from inside their own files, as the same
+    # family in phrasings these patterns walked past: "no other source for it
+    # was reached", "all this guide establishes".
+    #
+    # Note what is NOT banned. "This guide does not say the rione lies inside
+    # the property, because the record does not" is a refusal grounded in the
+    # SOURCE and it publishes — it is one of the specimens below. What is
+    # banned is a sentence grounded in OUR FETCHING.
+    ~r/\b(?:was|were) reached\b/i,
+    ~r/\ball this guide establishes\b/i,
+    ~r/\bthis guide (?:establishes|obtained|fetched|reached)\b/i
+  ]
+
+  # ------------------------------------------------------------------
+  # The vague-proximity ban
+  # ------------------------------------------------------------------
+  #
+  # Carried from the New York corpus, where it was enforced by reviewers, and
+  # moved here for the reason the other three moved: three waves of reviewers
+  # found most of these and never all of them.
+  #
+  # The distinction that matters, and the one an earlier draft got wrong: two
+  # buildings that PHYSICALLY ADJOIN may be described as adjoining. "The
+  # baptistery beside the basilica" is architectural fact — the Lateran
+  # baptistery touches it. What is banned is orientation a reader cannot act
+  # on and no source states: "at the north end of the rione", "the top of the
+  # hill above the square", "a visitor would take them for one block".
+  @proximity_patterns [
+    ~r/\bat the (?:north|south|east|west|northern|southern|eastern|western|far|top|bottom) end\b/i,
+    ~r/\bat the (?:northern|southern|eastern|western|far) edge\b/i,
+    # "on the <direction> side of X" is NOT banned, and an earlier draft that
+    # banned it was wrong. Sant'Agnese really is on the west side of Piazza
+    # Navona and Santa Maria del Popolo on the north side of its square; both
+    # are specific, checkable, and how every source describes them. That is an
+    # address in all but form.
+    #
+    # The scale is what separates orientation from wayfinding. A square has
+    # distinguishable sides. A RIONE does not have a usable "north end" — it is
+    # an impression a reader cannot act on and no source states — which is why
+    # the patterns here are all rione-scale or distance-based.
+    ~r/\babove the square\b|\bup the hill from\b/i,
+    ~r/\ba (?:short|ten-minute|five-minute|brief) walk\b/i,
+    ~r/\bjust (?:around the corner|off|beyond)\b/i,
+    ~r/\ba stone's throw\b/i,
+    ~r/\bsteps (?:from|away)\b/i,
+    ~r/\bwould take (?:it|them) for\b/i,
+    ~r/\bnot far from\b/i
+  ]
+
+  # Adjacency that must keep publishing: a physical relationship between two
+  # structures, which is description rather than wayfinding.
+  @proximity_specimens [
+    "The baptistery beside the basilica was built in the fourth century.",
+    "A small circular building standing in a cloister attached to the church.",
+    "Via Scossacavalli separates it from Palazzo dei Penitenzieri.",
+    "The Sovrintendenza gives the distance as 300 metres."
   ]
 
   # Prose that mentions sources or absence of them WITHOUT narrating the
@@ -475,6 +547,34 @@ defmodule Ethos.Seeds.RomeSeedDataTest do
              Enum.map_join(offenders, "\n", fn {n, t} -> "  #{n}: #{t}" end)
   end
 
+  defp proximity_hit?(text), do: Enum.any?(@proximity_patterns, &Regex.match?(&1, text))
+
+  test "the proximity ban separates wayfinding from adjacency" do
+    assert proximity_hit?("Porta del Popolo stands at the north end of the rione."),
+           "unsourced orientation slipped through"
+
+    assert proximity_hit?("It is a short walk from the station."), "a duration slipped through"
+
+    for specimen <- @proximity_specimens do
+      refute proximity_hit?(specimen),
+             "the proximity ban rejected an adjacency that must publish: #{specimen}"
+    end
+  end
+
+  test "no committed rome prose orients by impression" do
+    offenders =
+      for {name, doc} <- decoded_files(),
+          text <- prose(doc),
+          proximity_hit?(text) do
+        {name, String.slice(text, 0, 140)}
+      end
+
+    assert offenders == [],
+           "rome prose orients a reader by an impression no source states. A sourced " <>
+             "measurement publishes; two structures that adjoin may be said to adjoin:\n" <>
+             Enum.map_join(offenders, "\n", fn {n, t} -> "  #{n}: #{t}" end)
+  end
+
   test "no committed rome prose narrates the research" do
     offenders =
       for {name, doc} <- decoded_files(),
@@ -516,15 +616,36 @@ defmodule Ethos.Seeds.RomeSeedDataTest do
   # should get, and it is stated as a rule rather than as four exceptions.
   @sub_part ~r/\b(?:room|rooms|interior|outlet|box office|ticket|wing|crypt|cloister|basement|sale storiche|upper floor|garden)\b/i
 
+  # A closure followed by "from ..." is a ROUTE restriction, not a closure:
+  # "the Pyramid cannot be entered from the garden" says which way in does not
+  # work, and appears on a page whose place is open. A closure with no such
+  # qualifier is a closure.
+  @route_qualifier ~r/^\s+from\b/i
+
   defp place_shut_to_visitors?(text) do
     case Regex.run(closed_to_visitors(), text, return: :index) do
       nil ->
         false
 
-      [{start, _} | _] ->
-        preceding = String.slice(text, max(start - 90, 0), min(start, 90))
-        not Regex.match?(@sub_part, preceding)
+      [{start, len} | _] ->
+        # BYTE offsets, not character offsets. `Regex.run/3` with
+        # `return: :index` reports bytes, and Rome's prose is full of à, é and
+        # «»  — so String.slice/3, which counts characters, reads the wrong
+        # window and silently never matched. That is why an earlier version of
+        # this guard did nothing at all.
+        preceding = byte_window(text, max(start - 90, 0), min(start, 90))
+        following = byte_window(text, start + len, 20)
+
+        not Regex.match?(@sub_part, preceding) and
+          not Regex.match?(@route_qualifier, following)
     end
+  end
+
+  # binary_part/3 raises when the requested range runs past the end, which a
+  # closure phrase near the end of a summary does routinely.
+  defp byte_window(bin, start, len) do
+    available = max(byte_size(bin) - start, 0)
+    binary_part(bin, start, min(len, available))
   end
 
   test "the closure test ignores past and partial closures" do
@@ -534,7 +655,8 @@ defmodule Ethos.Seeds.RomeSeedDataTest do
           "After the war it was closed to the public and tried for offesa estetica, and it was relaunched under President Ciampi.",
           "It is closed every Wednesday and on 1 January, Easter and 25 December.",
           "The box office outlet is closed until further notice; tickets are available online.",
-          "One small interior room survives and, as of 2023, is not open to the public."
+          "One small interior room survives and, as of 2023, is not open to the public.",
+          "The Pyramid is seen well from the old cemetery but cannot be entered from the garden."
         ] do
       refute place_shut_to_visitors?(open_prose),
              "the closure test flagged a place that is open: #{open_prose}"

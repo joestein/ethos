@@ -18,7 +18,7 @@
       },
       {
         "heading": "Getting there",
-        "body": "This guide publishes no walking times and no distance it has not taken from a source, so steer by street numbers rather than by an impression of how far apart things are. Its southern edge is Corso Vittorio Emanuele II, which carries the addresses of two of the rione's institutions. The addresses worth having, each taken from the institution's own website: the Museo di Roma in Palazzo Braschi gives two entrances, Piazza San Pantaleo 10 and Piazza Navona 2; the Museo Barracco gives corso Vittorio Emanuele 166/A; the Archivio Storico Capitolino gives Piazza dell'Orologio 4. All three are 00186 Roma. To orient yourself on the eastern side, the church of Nostra Signora del Sacro Cuore has its front on corso del Rinascimento and its rear façade on Piazza Navona, so the two run parallel with the church between them. No source fetched for this guide names a metro station inside Parione, so this guide names none."
+        "body": "This guide publishes no walking times and no distance it has not taken from a source, so steer by street numbers rather than by an impression of how far apart things are. Its southern edge is Corso Vittorio Emanuele II, which carries the addresses of two of the rione's institutions. The addresses worth having, each taken from the institution's own website: the Museo di Roma in Palazzo Braschi gives two entrances, Piazza San Pantaleo 10 and Piazza Navona 2; the Museo Barracco gives corso Vittorio Emanuele 166/A; the Archivio Storico Capitolino gives Piazza dell'Orologio 4. All three are 00186 Roma. To orient yourself on the eastern side, the church of Nostra Signora del Sacro Cuore has its front on corso del Rinascimento and its rear façade on Piazza Navona, so the two run parallel with the church between them. No source names a metro station inside Parione, so none is given."
       }
     ],
     "faq": [
@@ -32,7 +32,7 @@
       },
       {
         "question": "Can I go into the Stadium of Domitian under Piazza Navona?",
-        "answer": "Not at present. The whole of what the archaeological area's own website served when it was fetched for this guide was a notice, in four languages, that the area is currently closed to the public, and directing enquiries to the Sovrintendenza Capitolina ai Beni Culturali. It gave no hours, no address and no ticket, so this guide publishes none."
+        "answer": "Not at present. The whole of what the archaeological area's own website carries is a notice, in four languages, that the area is currently closed to the public, directing enquiries to the Sovrintendenza Capitolina ai Beni Culturali. It gives no hours, no address and no ticket, so none are given."
       },
       {
         "question": "Is the Palazzo della Cancelleria part of the Vatican?",
@@ -69,7 +69,7 @@
       "county": "Rome",
       "address": "Piazza Navona, 00186 Roma RM",
       "summary": "Piazza Navona takes the shape of the ancient stadium beneath it, and was given its monumental form for Innocent X (Giovanni Battista Pamphilj). UNESCO names Piazza Navona among the Renaissance and Baroque urban developments of the Historic Centre of Rome (World Heritage site 91).",
-      "history": "Three fountains stand along the length of the square — the Fontana dei Quattro Fiumi at the centre, the Fontana del Moro, and the basin at the north end — together with the church of Sant'Agnese in Agone and the Palazzo Pamphilj. The square is wholly inside rione Parione, which is not true of most of Parione's edges.",
+      "history": "Three fountains stand along the length of the square — the Fontana dei Quattro Fiumi at the centre, the Fontana del Moro, and the Fontana del Nettuno — together with the church of Sant'Agnese in Agone and the Palazzo Pamphilj. The square is wholly inside rione Parione, which is not true of most of Parione's edges.",
       "status": "open",
       "photos": []
     },
@@ -120,7 +120,7 @@
       "state": "Italy",
       "county": "Rome",
       "address": "Piazza Navona, 00186 Roma RM",
-      "summary": "The basin at the north end of the square is attributed to Giacomo della Porta. The Neptune group standing above it is a much later addition, so this guide gives the basin an attribution and the group none.",
+      "summary": "The basin of this fountain, in Piazza Navona, is attributed to Giacomo della Porta. The Neptune group standing above it is a much later addition, so this guide gives the basin an attribution and the group none.",
       "history": null,
       "status": "open",
       "photos": []
@@ -134,7 +134,7 @@
       "county": "Rome",
       "address": "Piazza Navona, 00186 Roma RM",
       "summary": "The church on the west side of Piazza Navona, dedicated to St Agnes on the traditional site of her martyrdom. it.wikipedia attributes the building to Carlo Rainaldi and Francesco Borromini; this guide attributes rather than states it.",
-      "history": "The parish keeps a live website of its own, which is what establishes the church's identity, its location and the functions held in it, and which publishes its opening times. The parish also sets out a restoration programme in the crypt — that is the parish's own statement about its own building, and it is published here as such.",
+      "history": "The parish keeps a live website of its own, which is what establishes the church's identity, its location and the functions held in it, and which publishes its opening times. The parish also sets out a restoration programme in the crypt — that is the parish's own statement about its own building.",
       "status": "open",
       "photos": []
     },
@@ -199,7 +199,7 @@
       "county": "Rome",
       "address": "Largo Febo, 00186 Roma RM",
       "summary": "The church stands in Largo Febo. it.wikipedia records that after the annexation of Lorraine to France in 1766 it was integrated into the Pieux Établissements de la France à Rome et Lorette, and that it is one of the five French Catholic churches in Rome, named alongside San Luigi dei Francesi, Trinità dei Monti, Sant'Ivo dei Bretoni and Santi Claudio e Andrea dei Borgognoni.",
-      "history": "No architect is published here. The only aggregator field available for one resolves to a person who could not have built it, which is a good reason to resolve every such field to a name before trusting it.",
+      "history": "No source states the architect. The only aggregator field offering one resolves to a person who could not have built it, which is a good reason to resolve every such field to a name before trusting it.",
       "status": "open",
       "photos": []
     },
@@ -329,7 +329,7 @@
       "county": "Rome",
       "address": "Campo de' Fiori, 00186 Roma RM",
       "summary": "The palace on the south side of Campo de' Fiori, also known as Palazzo Pio. It stands over the substructures of the Theatre of Pompey.",
-      "history": "it.wikipedia's article on Campo de' Fiori carries the ownership chain, which is published here attributed to it: the Orsini, then the Pio di Savoia, who rebuilt the palace entirely, then the Righetti. No single construction year is published here.",
+      "history": "it.wikipedia's article on Campo de' Fiori carries the ownership chain, attributed to it rather than asserted: the Orsini, then the Pio di Savoia, who rebuilt the palace entirely, then the Righetti. No source gives a single construction year.",
       "status": "open",
       "photos": []
     },
@@ -355,7 +355,7 @@
       "county": "Rome",
       "address": null,
       "summary": "A deconsecrated church in rione Parione, facing the piazza of the same name. it.wikipedia records that it was built on the foundations of the inner corridor of the Theatre of Pompey.",
-      "history": "No foundation date is published here: the source says outright that the date is not known.",
+      "history": "No foundation date is given: the source says outright that the date is not known.",
       "status": "open",
       "photos": []
     },
@@ -533,7 +533,7 @@
       "kind": "sight",
       "name": "Sant'Agnese in Agone",
       "place_slug": "santagnese-in-agone-parione-rome",
-      "note": "The church on the west side of the square, on the traditional site of St Agnes's martyrdom; the parish publishes its own opening times and a restoration programme in the crypt."
+      "note": "The church on Piazza Navona, on the traditional site of St Agnes's martyrdom; the parish publishes its own opening times and a restoration programme in the crypt."
     },
     {
       "kind": "tip",

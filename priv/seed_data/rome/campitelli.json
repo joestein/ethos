@@ -715,7 +715,7 @@
       "county": "Rome",
       "address": null,
       "summary": "The Palatine is one of Rome's seven hills, between the Velabrum and the Forum. it.wikipedia describes two summits, the higher called Palatium and the other Germalus or Cermalus. It is covered by the same Forum Pass Super the Sovrintendenza Capitolina gives as EUR 18,00 full, valid for the day across the Foro Romano, the Fori Imperiali and the Palatino.",
-      "history": "As with the Forum, the hill is one visit rather than a list. Besides the buildings with entries of their own here, Overpass returns further named features on it with no per-place source: the Domus Severiana, the Terme Severiane, the Arcate severiane and the Terme di Massenzio on the southern extension, and the Capanne Romulee, the Auguratorium, the Tempio di Apollo, the Pedagogio, the Schola Praeconum, the Bagni di Livia, the Loggia Mattei, the Ninfeo degli Specchi, the Ninfeo della Pioggia, the cisterns, the central hypogean cryptoporticus and a chamber mapped only as \"Ambiente 4\". The Criptoportico Neroniano is mapped as an accessible footway. The sixteenth-century Horti Farnesiani, the Farnese gardens on the north side of the hill, have no article of their own on it.wikipedia - the name redirects to the article on the Palatine, so this guide carries them as a named part of the hill rather than a separate site. No height is published here: it.wikipedia's article body and its own infobox give different figures.",
+      "history": "As with the Forum, the hill is one visit rather than a list. Besides the buildings with entries of their own here, Overpass returns further named features on it with no per-place source: the Domus Severiana, the Terme Severiane, the Arcate severiane and the Terme di Massenzio on the southern extension, and the Capanne Romulee, the Auguratorium, the Tempio di Apollo, the Pedagogio, the Schola Praeconum, the Bagni di Livia, the Loggia Mattei, the Ninfeo degli Specchi, the Ninfeo della Pioggia, the cisterns, the central hypogean cryptoporticus and a chamber mapped only as \"Ambiente 4\". The Criptoportico Neroniano is mapped as an accessible footway. The sixteenth-century Horti Farnesiani, the Farnese gardens on the north side of the hill, have no article of their own on it.wikipedia - the name redirects to the article on the Palatine, which treats them as part of the hill rather than a separate site. No height is given: it.wikipedia's article body and its own infobox give different figures.",
       "status": "open",
       "photos": []
     },
@@ -779,7 +779,7 @@
       "state": "Italy",
       "county": "Rome",
       "address": null,
-      "summary": "Augustus's private house on the south-west slope of the Palatine. it.wikipedia repeats Suetonius: Augustus first lived above the scalae anulariae near the Velia, then moved to the Palatine into Hortensius's modest house. It is one of the ticketed Super sites within the archaeological area; no operator source giving its price could be reached for this guide.",
+      "summary": "Augustus's private house on the south-west slope of the Palatine. it.wikipedia repeats Suetonius: Augustus first lived above the scalae anulariae near the Velia, then moved to the Palatine into Hortensius's modest house. It is one of the ticketed Super sites within the archaeological area; no source states its price.",
       "history": null,
       "status": "open",
       "photos": []
@@ -910,7 +910,7 @@
       "county": "Rome",
       "address": null,
       "summary": "The fountain in piazza d'Aracoeli. The Sovrintendenza Capitolina gives the author as Giacomo della Porta (1533-1602), dates it 1589, describes it in marble and travertine originally fed by the Acqua Felice, and names the sculptors Andrea Brasca, Pietro Gucci and Pace Naldini.",
-      "history": "The same page records that the wide circular basin at the base was added around 1860, and that the fountain was restored in 2025 under the PNRR Caput Mundi programme; the page was checked for this guide on 2 September 2026.",
+      "history": "The same page records that the wide circular basin at the base was added around 1860, and that the fountain was restored in 2025 under the PNRR Caput Mundi programme.",
       "status": "open",
       "photos": []
     },
@@ -1014,7 +1014,7 @@
       "state": "Italy",
       "county": "Rome",
       "address": "Vicolo Margana 14, Roma RM",
-      "summary": "A restaurant at Vicolo Margana 14. Name and address are all this guide establishes.",
+      "summary": "A restaurant at Vicolo Margana 14. No source states more than the name and the address.",
       "history": null,
       "status": "open",
       "photos": []
@@ -1027,7 +1027,7 @@
       "state": "Italy",
       "county": "Rome",
       "address": "Piazza d'Aracoeli 4, Roma RM",
-      "summary": "A restaurant at Piazza d'Aracoeli 4. Name and address are all this guide establishes.",
+      "summary": "A restaurant at Piazza d'Aracoeli 4. No source states more than the name and the address.",
       "history": null,
       "status": "open",
       "photos": []
@@ -1053,7 +1053,7 @@
       "state": "Italy",
       "county": "Rome",
       "address": "Piazza d'Aracoeli 11, Roma RM",
-      "summary": "A cafe at Piazza d'Aracoeli 11. Name and address are all this guide establishes.",
+      "summary": "A cafe at Piazza d'Aracoeli 11. No source states more than the name and the address.",
       "history": null,
       "status": "open",
       "photos": []
@@ -1066,7 +1066,7 @@
       "state": "Italy",
       "county": "Rome",
       "address": "Piazza d'Aracoeli 15, Roma RM",
-      "summary": "A cafe at Piazza d'Aracoeli 15. Name and address are all this guide establishes.",
+      "summary": "A cafe at Piazza d'Aracoeli 15. No source states more than the name and the address.",
       "history": null,
       "status": "open",
       "photos": []

@@ -234,7 +234,7 @@ defmodule Ethos.Places.AddressTest do
     # house-number rule no longer applies.
     for p <- italian, p.street do
       assert Regex.match?(
-               ~r/^(?:via|viale|vicolo|piazza|piazzale|largo|corso|borgo|lungotevere|salita|clivo|circonvallazione|ponte|passeggiata|galleria|portico|strada|foro|campo|arco|scalinata|molo)\b/i,
+               ~r/^(?:via|viale|vicolo|vico|piazza|piazzale|piazzetta|largo|corso|borgo|lungotevere|salita|clivo|circonvallazione|ponte|passeggiata|galleria|portico|strada|foro|campo|arco|scalinata|molo|monte)\b/i,
                p.street
              ),
              "Italian street line naming no thoroughfare type: #{inspect(p.street)}"
@@ -245,10 +245,35 @@ defmodule Ethos.Places.AddressTest do
     # 455 Flatbush Avenue". That is accepted for now, because legitimate unit
     # designators ("Suite 7", "Unit B") take the same comma-separated shape and
     # schema.org wants them kept. Pinned so the population cannot grow silently.
-    comma_streets = Enum.count(parsed, fn p -> p.street && String.contains?(p.street, ",") end)
+    # Pinned per region, because the two populations are different things.
+    #
+    # The American comma is a QUALIFIER the greedy capture swept in — "Suite 7",
+    # "Building B", "near Pacific Street" — and the pin exists so that
+    # population cannot grow silently. It stays at 48.
+    #
+    # The Italian comma is part of the address. "Via di Sant'Apollinare, 46"
+    # is standard Italian postal form, with the comma before the house number
+    # rather than after a qualifier, and the street line is correct as parsed.
+    # Wave 4 brought 18 of them and would have pushed the shared pin to 66,
+    # which would have meant either raising a guard that was doing its job or
+    # rewriting correct addresses. Neither; they are counted separately and
+    # held to their own shape.
+    {italian, american} = Enum.split_with(parsed, &(&1.region in @italian_provinces))
+
+    comma_streets =
+      Enum.count(american, fn p -> p.street && String.contains?(p.street, ",") end)
 
     assert comma_streets <= 48,
-           "#{comma_streets} street lines carry a comma qualifier, up from 48"
+           "#{comma_streets} American street lines carry a comma qualifier, up from 48"
+
+    for p <- italian, p.street, String.contains?(p.street, ",") do
+      # A civico may be a range ("5-7") or carry a letter or a slashed suffix
+      # ("14/C"), all of which are ordinary Italian house numbers.
+      assert Regex.match?(~r/,\s*\d+[A-Za-z]?(?:\s*[-–\/]\s*[A-Za-z0-9]+)?$/, p.street),
+             "Italian street line carries a comma that is not a house-number " <>
+               "separator: #{inspect(p.street)} — that is a qualifier or prose, " <>
+               "which is what the American pin exists to catch"
+    end
 
     parsed_count = Enum.count(parsed, & &1.parsed?)
     street_count = Enum.count(parsed, & &1.street)

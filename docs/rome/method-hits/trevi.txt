@@ -1,5 +1,0 @@
-1 METHOD hits in priv/seed_data/rome/trevi.json
-
-AT .guide.sections[2].body
-  MATCHED: footprint falls
-  CONTEXT: ...inale, piazza del Quirinale, via Ventiquattro Maggio and largo Magnanapoli. Via del Corso is crossed by four rioni and belongs to none of them; the buildings along it sit in whichever rione their own footprint falls in, which is why San Marcello al Corso and Palazzo Mancini are in Trevi while the Galleria Alberto Sordi, on the same street, is in Colonna.  Two of the rione's set pieces stand on ground shared with...

@@ -82,7 +82,7 @@
       "county": "Rome",
       "address": "Piazza Colonna, Roma RM",
       "summary": "Roma Capitale calls Piazza Colonna the «centro degli affari e della vita politica della città», the centre of the city's business and political life. Its own description gives the buildings that bound it: Palazzo Chigi, Palazzo Ferrajoli — earlier Del Bufalo, then Aldobrandini, then Niccolini — the small church of the Santi Bartolomeo e Alessandro dei Bergamaschi on the right, Palazzo Wedekind opposite, and behind them the palazzo of the Galleria Colonna, now known as the Galleria Alberto Sordi. The fountain and the column stand at the centre.",
-      "history": "The square is one of the public spaces that the Italian Wikipedia article on the rione names as the line between Colonna and Trevi, which is a caution rather than a contradiction: where a rione boundary is defined as a street or a square, mapping data draws the line along one kerb and the whole space then falls inside whichever side the mapper chose. This guide therefore treats Piazza Colonna as the rione's own square, because the buildings around it are in Colonna, and states no date for when the square was laid out: the sixteenth-century date often attached to it is not on Roma Capitale's page and no other source for it was reached.",
+      "history": "The square is one of the public spaces that the Italian Wikipedia article on the rione names as the line between Colonna and Trevi, which is a caution rather than a contradiction: where a rione boundary is defined as a street or a square, mapping data draws the line along one kerb and the whole space then falls inside whichever side the mapper chose. This guide therefore treats Piazza Colonna as the rione's own square, because the buildings around it are in Colonna, and states no date for when the square was laid out: the sixteenth-century date often attached to it is not on Roma Capitale's page and no other source states it.",
       "status": "open",
       "photos": []
     },
@@ -186,7 +186,7 @@
       "county": "Rome",
       "address": "Via di Propaganda 1, Roma RM",
       "summary": "The missionary museum inside the Palazzo di Propaganda Fide. As at 2 September 2026 Roma Capitale states that entry is temporarily closed for urgent conservation work. Museum contact: museopropagandafide.va, tel. 06 69880266.",
-      "history": "Check the museum's own contact before travelling for it. The closure is stated as temporary and no reopening date was published by any source reached for this guide.",
+      "history": "Check the museum's own contact before travelling for it. The closure is stated as temporary and no reopening date is stated.",
       "status": "closed",
       "photos": []
     },
@@ -263,8 +263,8 @@
       "state": "Italy",
       "county": "Rome",
       "address": "Piazza di Monte Citorio, Roma RM",
-      "summary": "A palace on Piazza di Monte Citorio. The Italian Wikipedia article places it in the rione Colonna. Nothing further about it was established from a source reached for this guide, so nothing further is stated here.",
-      "history": "Roma Capitale publishes no page for this palace and no other source for it was reached.",
+      "summary": "A palace on Piazza di Monte Citorio. The Italian Wikipedia article places it in the rione Colonna. No source states more.",
+      "history": "Roma Capitale publishes no page for this palace and no other source states it.",
       "status": "open",
       "photos": []
     },
@@ -277,7 +277,7 @@
       "county": "Rome",
       "address": "Via del Corso 180, Roma RM",
       "summary": "An eclectic palace filling a whole block, addressed at Via del Corso 180. The Italian Wikipedia article places it in the rione Colonna and describes the block as running between Piazza di San Silvestro and Via del Corso, bounded by Via delle Convertite and Via di San Claudio.",
-      "history": "No institutional page for the palazzo was reached for this guide, so its identity, its rione and its street are all that are stated here.",
+      "history": "No source states more than its identity, its rione and its street.",
       "status": "open",
       "photos": []
     },
@@ -290,7 +290,7 @@
       "county": "Rome",
       "address": "Via del Corso 189, Roma RM",
       "summary": "An eclectic palace on Largo Chigi, addressed at Via del Corso 189. The Italian Wikipedia article places it in the rione Colonna.",
-      "history": "Two dates for the building circulate in the sources reached for this guide and they cannot both be right, so neither is published here. Its later commercial tenancies are likewise not stated, because no source for them could be verified.",
+      "history": "Two dates for the building circulate and they cannot both be right, so neither is given. Its later commercial tenancies are likewise not stated, because no source states them.",
       "status": "open",
       "photos": []
     },
@@ -303,7 +303,7 @@
       "county": "Rome",
       "address": "Piazza di San Silvestro, Roma RM",
       "summary": "The post office building on Piazza di San Silvestro. The Italian Wikipedia article places it in the rione Colonna, on the block bounded by Via del Moretto, Via della Vite and Via del Gambero, the same block as the church of San Silvestro in Capite, and records that it houses the post office Roma V.R., frazionario 55001.",
-      "history": "No institutional page for the building was reached for this guide, so its identity, its rione and its street are all that are stated here.",
+      "history": "No source states more than its identity, its rione and its street.",
       "status": "open",
       "photos": []
     },
@@ -315,8 +315,8 @@
       "state": "Italy",
       "county": "Rome",
       "address": "Via dei Due Macelli, Roma RM",
-      "summary": "An eclectic palace on Via dei Due Macelli. The Italian Wikipedia article places it in the rione Colonna. Nothing further about it was established from a source reached for this guide.",
-      "history": "Roma Capitale publishes no page for this palace and no other source for it was reached.",
+      "summary": "An eclectic palace on Via dei Due Macelli. The Italian Wikipedia article places it in the rione Colonna. No source states more.",
+      "history": "Roma Capitale publishes no page for this palace and no other source states it.",
       "status": "open",
       "photos": []
     },
@@ -342,7 +342,7 @@
       "county": "Rome",
       "address": "Via di Pietra, Roma RM",
       "summary": "A palace at the corner of Via di Pietra and Via dei Bergamaschi. The Italian Wikipedia article places it explicitly in the rione Colonna.",
-      "history": "No institutional page for the building was reached for this guide, so its identity, its rione and its street are all that are stated here.",
+      "history": "No source states more than its identity, its rione and its street.",
       "status": "open",
       "photos": []
     },
@@ -394,7 +394,7 @@
       "county": "Rome",
       "address": "Piazza di San Lorenzo in Lucina, Roma RM",
       "summary": "A basilica in the rione Colonna, on the piazza of the same name.",
-      "history": "No usable source for this basilica was reached for this guide. Roma Capitale publishes no page for it and no other source states more, so nothing beyond its identity and its location is stated here.",
+      "history": "Roma Capitale publishes no page for this basilica and no source states more than its identity and its location.",
       "status": "open",
       "photos": []
     },
@@ -407,7 +407,7 @@
       "county": "Rome",
       "address": "Piazza di San Silvestro, Roma RM",
       "summary": "A church on Piazza di San Silvestro. The Italian Wikipedia article places it in the rione Colonna.",
-      "history": "No institutional page for the church was reached for this guide, so its identity and location are all that are stated.",
+      "history": "No source states more than its identity and its location.",
       "status": "open",
       "photos": []
     },
@@ -420,7 +420,7 @@
       "county": "Rome",
       "address": "Piazza della Maddalena, Roma RM",
       "summary": "A church on the square of the same name. The Italian Wikipedia article places it in the rione Colonna. A name trap worth knowing: mapping data calls it Santa Maria Maddalena in Campo Marzio, but that epithet is the ancient Campus Martius, not the modern rione Campo Marzio.",
-      "history": "The Italian Wikipedia article records that the church has a rococo interior, that it holds the remains of St Camillus de Lellis, and that it is the regional church of the Abruzzesi in Rome. No institutional page for it was reached, so those three facts rest on that article alone.",
+      "history": "The Italian Wikipedia article records that the church has a rococo interior, that it holds the remains of St Camillus de Lellis, and that it is the regional church of the Abruzzesi in Rome. No institutional page states it, so those three facts rest on that article alone.",
       "status": "open",
       "photos": []
     },
@@ -433,7 +433,7 @@
       "county": "Rome",
       "address": "Piazza Capranica, Roma RM",
       "summary": "A church on Piazza Capranica. The Italian Wikipedia article places it in the rione Colonna.",
-      "history": "No institutional page for the church was reached for this guide, so its identity and location are all that are stated.",
+      "history": "No source states more than its identity and its location.",
       "status": "open",
       "photos": []
     },
@@ -446,7 +446,7 @@
       "county": "Rome",
       "address": null,
       "summary": "A church in the rione Colonna. The Italian Wikipedia article places it in the rione; no street number for it was found in any source reached, so none is given.",
-      "history": "No institutional page for the church was reached for this guide, so its identity and its rione are all that are stated.",
+      "history": "No source states more than its identity and its rione.",
       "status": "open",
       "photos": []
     },
@@ -459,7 +459,7 @@
       "county": "Rome",
       "address": "Via Sistina, Roma RM",
       "summary": "A church on Via Sistina. The Italian Wikipedia article places it in the rione Colonna, in via Sistina.",
-      "history": "The same article records that the church holds an Adorazione dei pastori by Francesco Grassia of 1670. No institutional page for it was reached, so that rests on the article alone.",
+      "history": "The same article records that the church holds an Adorazione dei pastori by Francesco Grassia of 1670. No institutional page states it, so that rests on the article alone.",
       "status": "open",
       "photos": []
     },

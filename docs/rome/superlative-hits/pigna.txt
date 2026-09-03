@@ -1,5 +1,0 @@
-1 SUPERLATIVE hits in priv/seed_data/rome/pigna.json
-
-AT .guide.intro
-  MATCHED: most every edge of the rione
-  CONTEXT: ...tional museum and a national research library; a family palace with its own picture gallery on via del Corso; and the sixteenth-century Jesuit college that today houses the Ministero della Cultura. Almost every edge of the rione is a street or a square shared with one of five neighbours, which is why several things visitors file under Pigna, the square in front of the Pantheon among them, are not written on this page. Via de...

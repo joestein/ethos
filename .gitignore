@@ -49,3 +49,6 @@ npm-debug.log
 
 # Local environment variables (copy .env.example)
 .env
+
+# Regenerable scan output from the Rome gate sweeps, not research artifacts.
+docs/rome/*-hits/

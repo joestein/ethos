@@ -1,5 +1,0 @@
-1 METHOD hits in priv/seed_data/rome/parione.json
-
-AT .places[27].summary
-  MATCHED: footprint lies
-  CONTEXT: ...The palace stands on corso Vittorio Emanuele II. Its own footprint lies inside Parione, which is the reason it is written here: the corso itself is shared between four rioni and this corpus assigns buildings by the building, not by the street they address from....

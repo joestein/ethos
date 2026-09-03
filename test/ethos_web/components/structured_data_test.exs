@@ -155,7 +155,7 @@ defmodule EthosWeb.StructuredDataTest do
       # unguarded. Without this, a descriptive location would publish as a
       # street the moment the house-number rule stopped applying to it.
       thoroughfare =
-        ~r/^(?:via|viale|vicolo|piazza|piazzale|largo|corso|borgo|lungotevere|salita|clivo|circonvallazione|ponte|passeggiata|galleria|portico|strada|foro|campo|arco|scalinata|molo)\b/i
+        ~r/^(?:via|viale|vicolo|vico|piazza|piazzale|piazzetta|largo|corso|borgo|lungotevere|salita|clivo|circonvallazione|ponte|passeggiata|galleria|portico|strada|foro|campo|arco|scalinata|molo|monte)\b/i
 
       italian = Enum.filter(with_region, fn {_, region, _} -> region == "Italy" end)
 
@@ -650,10 +650,38 @@ defmodule EthosWeb.StructuredDataTest do
 
       count = fn f -> Enum.count(emitted, fn {_, ld} -> f.(ld) end) end
 
-      assert length(emitted) == 2830
-      assert count.(& &1["streetAddress"]) == 2225
+      #
+      # Re-measured 2026-09-03 after Rome wave 4, which lands the last nine
+      # rioni — Celio, Campo Marzio, Ponte, Regola, Sant'Eustachio,
+      # Sant'Angelo, Ripa, Testaccio, San Saba — bringing the city to 21 of its
+      # 22 and the corpus to 704 addressed Roman places.
+      #
+      #   * total 2830 -> 3221, the 391 newly addressed Roman places.
+      #   * `streetAddress` 2225 -> 2616, +391: every Roman address yields a
+      #     street. Reaching that took three thoroughfare types the first pass
+      #     did not know — piazzetta, vico and monte, from Piazzetta di San
+      #     Simeone, Vico Jugario and Monte de' Cenci. All three are ordinary
+      #     Roman street names.
+      #   * `is_nil(streetAddress)` UNCHANGED at 605 and locality-only
+      #     UNCHANGED at 302. Those two are the check that the Italian branch
+      #     still only ever turns a nil into a value.
+      #   * `postalCode` 2076 -> 2355, +279. Not +391: 112 of the new Roman
+      #     addresses carry no CAP, taking the form "Vico Jugario, Roma RM".
+      #
+      # The `comma_streets` pin is now per region, in
+      # test/ethos/places/address_test.exs. Wave 4 brought 18 Italian street
+      # lines carrying a comma and would have pushed the shared pin from 48 to
+      # 66 — but the Italian comma is part of the address ("Via di
+      # Sant'Apollinare, 46" is standard postal form, comma before the house
+      # number), where the American comma is a qualifier the greedy capture
+      # swept in. Raising one number would have hidden the difference; the
+      # American pin holds at 48 and the Italian lines are held to their own
+      # shape.
+
+      assert length(emitted) == 3221
+      assert count.(& &1["streetAddress"]) == 2616
       assert count.(&is_nil(&1["streetAddress"])) == 605
-      assert count.(& &1["postalCode"]) == 2076
+      assert count.(& &1["postalCode"]) == 2355
 
       # The largest behavioural delta this change ships: 302 places emit a
       # PostalAddress carrying only locality, region and country. Their full

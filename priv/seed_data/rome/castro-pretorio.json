@@ -6,7 +6,7 @@
     "state": "Italy",
     "county": "Rome",
     "tier": "guide",
-    "intro": "Castro Pretorio is rione XVIII in Roma Capitale's list of Rome's 22 rioni, toponymic code 118. It is named for the Castra Praetoria, the camp of the Praetorian Guard, whose walls Aurelian built into his city wall and whose interior is an army barracks today. The Historic Centre of Rome was inscribed on the UNESCO World Heritage List in 1980. What a visitor comes for is Roman or nineteenth-century, often both at once: the Baths of Diocletian, with Michelangelo's basilica inside their frigidarium and three sites of the Museo Nazionale Romano in and beside them; Piazza della Repubblica, laid out on the curve of the baths' great exedra; Michelangelo's Porta Pia at the far end of Via XX Settembre; and a planned quarter of ministries, palazzi and theatres built after 1870. Termini station itself is in the neighbouring rione of Esquilino. This is the rione you come out of its Via Marsala side into.",
+    "intro": "Castro Pretorio is rione XVIII in Roma Capitale's list of Rome's 22 rioni, toponymic code 118. It is named for the Castra Praetoria, the camp of the Praetorian Guard, whose walls Aurelian built into his city wall and whose interior is an army barracks today. The Historic Centre of Rome was inscribed on the UNESCO World Heritage List in 1980. What a visitor comes for is Roman or nineteenth-century, often both at once: the Baths of Diocletian, with Michelangelo's basilica inside their frigidarium and three sites of the Museo Nazionale Romano in and beside them; Piazza della Repubblica, laid out on the curve of the baths' great exedra; Michelangelo's Porta Pia on Via XX Settembre; and a planned quarter of ministries, palazzi and theatres built after 1870. Termini station itself is in the neighbouring rione of Esquilino. This is the rione you come out of its Via Marsala side into.",
     "sections": [
       {
         "heading": "The Baths of Diocletian and what was built into them",
@@ -52,7 +52,7 @@
         "src": "/photos/it/rome/castro-pretorio/castro-pretorio-porta-pia.jpg",
         "thumb": "/photos/it/rome/castro-pretorio/castro-pretorio-porta-pia_thumb.jpg",
         "title": "Porta Pia",
-        "description": "The city-side front of Porta Pia, the gate in the Aurelian Walls built between 1561 and 1565 to Michelangelo's design, at the far end of Via XX Settembre.",
+        "description": "The city-side front of Porta Pia, the gate in the Aurelian Walls built between 1561 and 1565 to Michelangelo's design, on Via XX Settembre.",
         "author": "Dietmar Rabich",
         "license": "CC BY-SA 4.0",
         "source_url": "https://commons.wikimedia.org/wiki/File:Rome_(IT),_Porta_Pia_--_2013_--_3342.jpg"
@@ -277,7 +277,7 @@
       "county": "Rome",
       "address": "Via Cernaia 16, Roma RM",
       "summary": "A neoclassical church of 1889-1898 in Via Cernaia, with the Marist Fathers' provincial curia attached.",
-      "history": "Italian Wikipedia's article on the rione gives the church's name as Chiesa del Santissimo Rosario di Pompei; OpenStreetMap carries the double dedication Santa Maria del Rosario e San Pietro Chanel as an alternative. Italian Wikipedia says it was built between 1889 and 1898 to a neoclassical design by Pio Piacentini, with the provincial curia of the Marist Fathers and an international student hostel attached. Both statements are an aggregator's and are attributed as such; no first-party source for the church was reached.",
+      "history": "Italian Wikipedia's article on the rione gives the church's name as Chiesa del Santissimo Rosario di Pompei; OpenStreetMap carries the double dedication Santa Maria del Rosario e San Pietro Chanel as an alternative. Italian Wikipedia says it was built between 1889 and 1898 to a neoclassical design by Pio Piacentini, with the provincial curia of the Marist Fathers and an international student hostel attached. Both statements are an aggregator's and are attributed as such; no first-party source states it.",
       "status": "open",
       "photos": []
     },
@@ -303,7 +303,7 @@
       "county": "Rome",
       "address": "Via XX Settembre 123, Roma RM",
       "summary": "The Methodist church of Rome, at the corner of Via XX Settembre and Via Firenze, consecrated in 1895.",
-      "history": "Turismo Roma gives the address as Via XX Settembre 123; the church stands at the corner of Via Firenze. Italian Wikipedia says it was built between 1893 and 1895 and consecrated on 20 September 1895, on ground cleared by the master plan of 1881 and on the site of the demolished church of San Caio. The rione article's own list of vanished churches independently names San Caio, Santa Teresa alle Quattro Fontane and the Santissima Incarnazione del Verbo Divino, which is the same clearance seen from the other side. No coordinate is published here: Turismo Roma gives the identical point for this church and for Palazzo Esercito, so at most one of the two can be right.",
+      "history": "Turismo Roma gives the address as Via XX Settembre 123; the church stands at the corner of Via Firenze. Italian Wikipedia says it was built between 1893 and 1895 and consecrated on 20 September 1895, on ground cleared by the master plan of 1881 and on the site of the demolished church of San Caio. The rione article's own list of vanished churches independently names San Caio, Santa Teresa alle Quattro Fontane and the Santissima Incarnazione del Verbo Divino, which is the same clearance seen from the other side. No coordinate is given: Turismo Roma gives the identical point for this church and for Palazzo Esercito, so at most one of the two can be right.",
       "status": "open",
       "photos": []
     },
@@ -394,7 +394,7 @@
       "county": "Rome",
       "address": "Via Cernaia, Roma RM",
       "summary": "A bronze of the finance minister Quintino Sella in Via Cernaia, by Emilio Gallori, 1893.",
-      "history": "Italian Wikipedia's article on the rione records the monument as a bronze by Emilio Gallori of 1893, in Via Cernaia. No dedicated article and no first-party source for it was reached, so the entry rests on that single aggregator and is attributed accordingly.",
+      "history": "Italian Wikipedia's article on the rione records the monument as a bronze by Emilio Gallori of 1893, in Via Cernaia. No dedicated article and no first-party source states it, so the entry rests on that single aggregator and is attributed accordingly.",
       "status": "open",
       "photos": []
     },
@@ -407,7 +407,7 @@
       "county": "Rome",
       "address": "Via Cernaia, Roma RM",
       "summary": "A bronze of the statesman Silvio Spaventa in Via Cernaia, by Giulio Tadolini, 1898.",
-      "history": "Italian Wikipedia's article on the rione records the monument as a bronze by Giulio Tadolini of 1898, in Via Cernaia. As with the Sella bronze on the same street, no dedicated article and no first-party source was reached, and the entry is attributed to that one aggregator.",
+      "history": "Italian Wikipedia's article on the rione records the monument as a bronze by Giulio Tadolini of 1898, in Via Cernaia. As with the Sella bronze on the same street, no dedicated article and no first-party source states it, and the entry is attributed to that one aggregator.",
       "status": "open",
       "photos": []
     },
@@ -563,7 +563,7 @@
       "county": "Rome",
       "address": "Via Torino, Roma RM",
       "summary": "An eclectic apartment palace of 1889 on Via Torino by Cesare Janz.",
-      "history": "Italian Wikipedia's article on the rione records Palazzo Nathan, on Via Torino, as eclectic, 19th-century, dated 1889 and built by Cesare Janz. Nothing further is published here: the account connecting the building to Ernesto Nathan, and the description of its storeys, its caryatid window frames and its corner loggia, was found only on a blog, and a claim about who lived and died in a building needs better than that.",
+      "history": "Italian Wikipedia's article on the rione records Palazzo Nathan, on Via Torino, as eclectic, 19th-century, dated 1889 and built by Cesare Janz. Nothing further is given: the account connecting the building to Ernesto Nathan, and the description of its storeys, its caryatid window frames and its corner loggia, was found only on a blog, and a claim about who lived and died in a building needs better than that.",
       "status": "open",
       "photos": []
     },

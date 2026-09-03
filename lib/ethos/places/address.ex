@@ -90,7 +90,11 @@ defmodule Ethos.Places.Address do
   # address, and Campo de' Fiori is a street as well as a square. An earlier
   # version of this list omitted both; Foro Traiano was the single Roman address
   # in wave 1 that still published no street.
-  @italian_thoroughfare ~r/^(?:via|viale|vicolo|piazza|piazzale|largo|corso|borgo|lungotevere|salita|clivo|circonvallazione|ponte|passeggiata|galleria|portico|strada|foro|campo|arco|scalinata|molo)\b/i
+  # `piazzetta`, `vico` and `monte` were added after wave 4, which brought the
+  # first addresses using them: Piazzetta di San Simeone, Vico Jugario, Monte
+  # de' Cenci. All three are ordinary Roman thoroughfare names — `vico` is a
+  # variant of `vicolo`, and `monte` names a street here rather than a hill.
+  @italian_thoroughfare ~r/^(?:via|viale|vicolo|vico|piazza|piazzale|piazzetta|largo|corso|borgo|lungotevere|salita|clivo|circonvallazione|ponte|passeggiata|galleria|portico|strada|foro|campo|arco|scalinata|molo|monte)\b/i
 
   @empty %{street: nil, locality: nil, region: nil, postal_code: nil, parsed?: false}
 
