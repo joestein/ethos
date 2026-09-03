@@ -1,0 +1,17 @@
+4 METHOD hits in priv/seed_data/rome/castro-pretorio.json
+
+AT .guide.faq[0].answer
+  MATCHED: Boundary research
+  CONTEXT: ...No. Termini is in the neighbouring rione of Esquilino. Boundary research for this guide tested ten points - the station building, the forecourt, Piazza dei Cinquecento at four points, the Ala Mazzoniana, the metro entrances and the Servian wall fragment in the forecourt -...
+
+AT .guide.faq[0].answer
+  MATCHED: tested ten points
+  CONTEXT: ...No. Termini is in the neighbouring rione of Esquilino. Boundary research for this guide tested ten points - the station building, the forecourt, Piazza dei Cinquecento at four points, the Ala Mazzoniana, the metro entrances and the Servian wall fragment in the forecourt - and every one returned Esquilino...
+
+AT .places[33].history
+  MATCHED: returned an error
+  CONTEXT: ...dates the Palazzo dei Marescialli to 1930, credits Gennaro de Matteis, and records it as the seat of the Consiglio Superiore della Magistratura, on Piazza dell'Indipendenza. The Council's own website returned an error when this entry was written, so the entry rests on that one aggregator and is attributed to it....
+
+AT .places[33].history
+  MATCHED: when this entry was written
+  CONTEXT: ...dei Marescialli to 1930, credits Gennaro de Matteis, and records it as the seat of the Consiglio Superiore della Magistratura, on Piazza dell'Indipendenza. The Council's own website returned an error when this entry was written, so the entry rests on that one aggregator and is attributed to it....

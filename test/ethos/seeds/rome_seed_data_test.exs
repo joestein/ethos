@@ -54,7 +54,10 @@ defmodule Ethos.Seeds.RomeSeedDataTest do
   """
   use Ethos.DataCase, async: false
 
-  @moduletag :pending_rome
+  # @moduletag :pending_rome removed 2026-09-02 by wave 1, which landed the
+  # first four seed files — Campitelli, Monti, Trastevere and Borgo, 220 places
+  # between them. Everything in this module now runs except the roster-equality
+  # test, which keeps its own `@tag :pending_rome` until all 31 zones ship.
 
   alias Ethos.SeedDataHelpers
 
@@ -87,6 +90,135 @@ defmodule Ethos.Seeds.RomeSeedDataTest do
     # carries only `tutelato`, which is not.
     ~r/\bbene\s+culturale\s+tutelato\b/i,
     ~r/\bdichiarazione\s+di\s+(?:interesse\s+culturale|notevole\s+interesse)/i
+  ]
+
+  # ------------------------------------------------------------------
+  # The superlative ban
+  # ------------------------------------------------------------------
+  #
+  # All three wave arbitrators reached this independently and each stated it
+  # more strictly than its own verifiers had: no priority or ranking claim
+  # publishes, FROM ANY SOURCE, attributed or not. Wave 1 put it plainest —
+  # attribution does not save a priority claim, because attributing "the oldest
+  # fountain in the rione" to Roma Capitale still asserts a ranking the corpus
+  # cannot check against any other candidate.
+  #
+  # That is a stricter line than the New York corpus runs, and it is deliberate.
+  # New York had LPC designation reports to check a superlative against. Rome
+  # has no reachable per-property register at all, so a ranking claim here is
+  # unfalsifiable in a way it was not there.
+  #
+  # Held mechanically for the same reason as the method ban: three rounds of
+  # agents reading prose found most of these and never all of them.
+  # A first attempt at these banned the WORDS, and flagged "the first church was
+  # built in 1150" and "last admission 18.30" — a date and an opening time. The
+  # ban is on the CLAIM, and a ranking claim is identifiable by its comparison
+  # class: the thing it ranks against. "The oldest fountain IN THE RIONE" ranks;
+  # "the first church on the site, in 1150" is a sequence of events. So every
+  # pattern below requires either an explicit comparison class, a possessive
+  # that supplies one, or a word that can only be a ranking.
+  @superlative_patterns [
+    # "the largest square of the rione", "the oldest church in Rome"
+    ~r/\b(?:only|first|oldest|largest|smallest|finest|grandest|greatest|best|tallest|richest|most\s+\w+)\s+(?:\w+\s+){0,2}(?:in|of|on)\s+(?:the\s+)?(?:rione|Rome|Italy|the city|the street|the quarter|that street|this rione|this page)\b/i,
+    # "one of the most important examples of the Baroque"
+    ~r/\bone of the (?:most|best|finest|largest|oldest|greatest|richest)\b/i,
+    # "the rione's only true square", "Rome's finest".
+    #
+    # "first" is deliberately NOT in this alternation. It caught "Italy's first
+    # king" — Vittorio Emanuele II, a position in a succession and precisely the
+    # sequence carve-out this ban is not meant to touch. A genuine "Rome's first
+    # X" ranking is still caught by the comparison-class pattern above, which
+    # requires the "in Rome" / "of the rione" tail.
+    ~r/\b(?:the (?:rione|city|quarter|street|guide)'s|Rome's|Italy's|Europe's)\s+(?:only|oldest|largest|smallest|finest|grandest|greatest|best|one\b)/i,
+    # "Caravaggio's only wall painting", "Palladio's only Roman work"
+    ~r/\b[A-Z][a-z]+(?:'s|s')\s+only\b/,
+    # geographic rankings
+    ~r/\b(?:southern|northern|eastern|western)most\b/i,
+    # "the one genuinely enterable museum", "the one building of X to survive"
+    ~r/\bthe one (?:genuinely|building|place|thing|source|entry)\b/i,
+    # claims about what visitors or guidebooks generally do
+    ~r/\bmost (?:travellers|visitors|guidebooks|guides|people)\b/i,
+    ~r/\bthe (?:single )?most likely\b/i,
+    # "the only one of the twenty-two", "the only stretch of that line"
+    ~r/\bthe only (?:one|stretch|example|work|surviving)\b/i,
+    # bare evaluative superlatives with no possible source
+    ~r/\bthe (?:easiest|cleanest|simplest|best) \w+ (?:in|of|on|to)\b/i
+  ]
+
+  # Formulations that survive the ban and must keep publishing. A count, a
+  # date, and an ordinal that names a position in an official series are all
+  # facts rather than rankings.
+  @superlative_specimens [
+    "Roma Capitale gives the rione 0,2 km2 and 2.191 residents.",
+    "Parione is the sixth of Rome's rioni by toponymic code.",
+    "The church was begun in 1634 and finished in 1664.",
+    "The Sovrintendenza Capitolina records a restoration carried out in 2025."
+  ]
+
+  # ------------------------------------------------------------------
+  # The research-method ban
+  # ------------------------------------------------------------------
+  #
+  # Added after three rounds of fix agents kept finding the same category by
+  # eye and never converging. Every wave leaked how the research was DONE into
+  # what a reader sees: which host returned a 403, which domain did not
+  # resolve, how many OpenStreetMap vertices fell inside a boundary, that "every
+  # independent check made for this series" agreed.
+  #
+  # None of it is false. All of it is addressed to the wrong audience — it is
+  # the provenance argument, not the fact the argument supports, and the
+  # corpus's convention is that the argument lives in docs/rome/ and the fact
+  # lives on the page. A reader who wants to know why a page gives no opening
+  # hours is served by "no source states them"; they are not served by the
+  # status code.
+  #
+  # This is a MECHANICAL rule, which is why it belongs here rather than in a
+  # reviewer's instructions. An agent reading prose finds most of them; a regex
+  # finds all of them, and finds them again next wave.
+  @method_patterns [
+    ~r/\bcould not be (?:reached|re-?read|certified|confirmed)\b/i,
+    ~r/\b(?:did not|does not|failed to) (?:resolve|answer)\b/i,
+    ~r/\bHTTP\s*\d{3}\b/i,
+    ~r/\bself-signed certificate\b/i,
+    ~r/\breset the connection\b/i,
+    ~r/\bfootprint (?:test|score)s?\b/i,
+    ~r/\btests? (?:wholly|cleanly|inside|into)\b/i,
+    ~r/\bno vertex\b|\bvertices\b/i,
+    ~r/\b(?:during|for|in) (?:this |the )?research\b/i,
+    ~r/\bthis research\b/i,
+    ~r/\bindependent (?:checks?|research waves?|geometric methods?|geocoding methods?)\b/i,
+    ~r/\b(?:was|were) probed\b/i,
+    ~r/\bthe network this\b/i,
+    ~r/\bre-?fetched on\b/i,
+    ~r/\bresearch software\b/i,
+    ~r/\bno source we can reach\b/i,
+    # Added after the first sweep. The agents doing the rewriting reported these
+    # from inside their own files — each is the same leak in a phrasing the
+    # first pattern set walked past. Recording that here because it is the
+    # argument for a mechanical gate in miniature: a regex that misses a case
+    # misses it identically every time, and is fixed once.
+    ~r/\bboundary (?:research|geometry)\b/i,
+    ~r/\breturn(?:s|ed) (?:an?\s+)?(?:error|\d{3})\b/i,
+    ~r/\bwhen this entry was written\b/i,
+    ~r/\bfootprint (?:lies|falls|is)\b/i,
+    ~r/\btests? to (?:Trevi|Colonna|Pigna|Monti|Campitelli|Borgo|Prati)\b/i,
+    ~r/\brests? its location on\b/i,
+    ~r/\b(?:was|were) reachable\b/i,
+    ~r/\bnot obtainable\b/i,
+    ~r/\breturned nothing usable\b/i,
+    ~r/\bfrom a source that could be reached\b/i,
+    ~r/\bpoint testing\b/i,
+    ~r/\btested \w+ points\b/i
+  ]
+
+  # Prose that mentions sources or absence of them WITHOUT narrating the
+  # fetch. Each must keep publishing: refusing to state something, and saying
+  # why in the reader's terms, is a thing this corpus does deliberately.
+  @method_specimens [
+    "No source states its opening hours, so none are given here.",
+    "Roma Capitale's tourism service and it.wikipedia disagree about its date.",
+    "This guide does not say the rione lies inside the property, because the record does not.",
+    "The Sovrintendenza Capitolina records a restoration carried out in 2025."
   ]
 
   # Sentences that read like a designation claim but are not, and must keep
@@ -288,6 +420,148 @@ defmodule Ethos.Seeds.RomeSeedDataTest do
              inspect(scoped |> MapSet.difference(all) |> Enum.sort())
   end
 
+  defp superlative_hit?(text), do: Enum.any?(@superlative_patterns, &Regex.match?(&1, text))
+  defp method_hit?(text), do: Enum.any?(@method_patterns, &Regex.match?(&1, text))
+
+  test "the superlative ban catches a ranking claim, and only there" do
+    assert superlative_hit?("The largest square of the rione."),
+           "a bare ranking slipped through"
+
+    assert superlative_hit?("It is one of the most important examples of the Baroque in Rome."),
+           "an attributed ranking slipped through — attribution does not save a priority claim"
+
+    assert superlative_hit?("Caravaggio's only wall painting."), "a uniqueness claim slipped through"
+
+    for specimen <- @superlative_specimens do
+      refute superlative_hit?(specimen),
+             "the superlative ban rejected a sentence that must publish: #{specimen}"
+    end
+  end
+
+  test "the research-method ban catches leaked provenance, and only there" do
+    assert method_hit?("The sanctuary's own site returned HTTP 403."), "a status code slipped through"
+
+    assert method_hit?("The palazzo's outline tests wholly inside Colonna."),
+           "a footprint result slipped through"
+
+    assert method_hit?("Every independent check made for this series agreed."),
+           "a method summary slipped through"
+
+    for specimen <- @method_specimens do
+      refute method_hit?(specimen),
+             "the research-method ban rejected a sentence that must publish: #{specimen}"
+    end
+  end
+
+  test "no committed rome prose states a superlative" do
+    offenders =
+      for {name, doc} <- decoded_files(),
+          text <- prose(doc),
+          superlative_hit?(text) do
+        {name, String.slice(text, 0, 140)}
+      end
+
+    assert offenders == [],
+           "rome prose states a ranking claim. All three wave arbitrators ruled these out " <>
+             "from any source, attributed or not — Rome has no reachable per-property register " <>
+             "to check a ranking against:\n" <>
+             Enum.map_join(offenders, "\n", fn {n, t} -> "  #{n}: #{t}" end)
+  end
+
+  test "no committed rome prose narrates the research" do
+    offenders =
+      for {name, doc} <- decoded_files(),
+          text <- prose(doc),
+          method_hit?(text) do
+        {name, String.slice(text, 0, 140)}
+      end
+
+    assert offenders == [],
+           "rome prose tells the reader how the research was done. The provenance argument " <>
+             "belongs in docs/rome/; the page carries the fact it supports:\n" <>
+             Enum.map_join(offenders, "\n", fn {n, t} -> "  #{n}: #{t}" end)
+  end
+
+  # What "closed" has to mean for a status field to be wrong: the PLACE cannot
+  # be visited at all, now. This was three attempts getting narrower, and the
+  # two things it had to learn to ignore are worth naming, because both look
+  # like closures and neither is one.
+  #
+  #   * A PAST closure. The Vittoriano's history records that it was closed
+  #     after the Second World War and later relaunched. The monument is open;
+  #     the sentence is about 1945.
+  #   * A PARTIAL closure. "it is closed every Wednesday" is a weekly closing
+  #     day, and "the ticket outlet is closed until further notice" is a box
+  #     office, not the venue. Both belong on a page whose place is open.
+  #
+  # So a bare "is closed" is not enough — the phrase has to say the place is
+  # shut to visitors indefinitely. The check found five genuine contradictions
+  # before this narrowing and three false ones; the five all survive it.
+  defp closed_to_visitors do
+    ~r/\b(?:(?:is|are|remains?|stays?)\s+(?:currently\s+|permanently\s+|temporarily\s+)?closed to the public|(?:is|are)\s+not open to the public|cannot be (?:entered|visited)|no walk-in|not on a walk-in basis|closed since \d{4}|not a building (?:a visitor )?can walk into)\b/i
+  end
+
+  # Every false positive this check produced had the same shape: the thing that
+  # is closed is not the place, it is a PART of the place. A box office, a
+  # weekly closing day, one interior room of a surviving facade. So the closure
+  # phrase is only believed when nothing in the words just before it names a
+  # sub-part — which is as close to reading the sentence's subject as a regex
+  # should get, and it is stated as a rule rather than as four exceptions.
+  @sub_part ~r/\b(?:room|rooms|interior|outlet|box office|ticket|wing|crypt|cloister|basement|sale storiche|upper floor|garden)\b/i
+
+  defp place_shut_to_visitors?(text) do
+    case Regex.run(closed_to_visitors(), text, return: :index) do
+      nil ->
+        false
+
+      [{start, _} | _] ->
+        preceding = String.slice(text, max(start - 90, 0), min(start, 90))
+        not Regex.match?(@sub_part, preceding)
+    end
+  end
+
+  test "the closure test ignores past and partial closures" do
+    # Regression for all three false positives, each of which shipped in a file
+    # whose place is genuinely open.
+    for open_prose <- [
+          "After the war it was closed to the public and tried for offesa estetica, and it was relaunched under President Ciampi.",
+          "It is closed every Wednesday and on 1 January, Easter and 25 December.",
+          "The box office outlet is closed until further notice; tickets are available online.",
+          "One small interior room survives and, as of 2023, is not open to the public."
+        ] do
+      refute place_shut_to_visitors?(open_prose),
+             "the closure test flagged a place that is open: #{open_prose}"
+    end
+
+    for shut_prose <- [
+          "The casino is closed to the public.",
+          "The palace is not open to the public.",
+          "It cannot be visited.",
+          "The museum has been closed since 1995."
+        ] do
+      assert place_shut_to_visitors?(shut_prose),
+             "the closure test missed a genuinely shut place: #{shut_prose}"
+    end
+  end
+
+  test "a status field agrees with its own prose" do
+    # Four files shipped a place marked open whose own summary says you cannot
+    # go in. Cheap to check, and it is the one contradiction a reader would
+    # actually act on.
+    offenders =
+      for {name, doc} <- decoded_files(),
+          place <- doc["places"] || [],
+          place["status"] == "open",
+          text = "#{place["summary"]} #{place["history"]}",
+          place_shut_to_visitors?(text) do
+        {name, place["slug"]}
+      end
+
+    assert offenders == [],
+           "a place is marked open while its own prose says it is not:\n" <>
+             Enum.map_join(offenders, "\n", fn {n, s} -> "  #{n}: #{s}" end)
+  end
+
   test "no committed rome prose claims a heritage designation" do
     offenders =
       for {name, doc} <- decoded_files(),
@@ -368,13 +642,65 @@ defmodule Ethos.Seeds.RomeSeedDataTest do
              Enum.map_join(offenders, "\n", fn {n, s} -> "  #{n}: #{s}" end)
   end
 
+  # Rome has a great many churches called San Pietro and only one of them is in
+  # the Vatican. Wave 1 shipped three that are not — San Pietro in Montorio and
+  # its Tempietto in Trastevere, San Pietro in Borgo — and an earlier version of
+  # this function flagged all three, because it matched the bare dedication.
+  #
+  # So the needles name the Vatican building, not the saint. `in-vaticano` is
+  # the disambiguator Italian itself uses, and every false positive above
+  # carries its own `in-<somewhere-else>` qualifier for the same reason.
+  @vatican_needles [
+    "st-peters-basilica",
+    "st-peter-s-basilica",
+    "st peters basilica",
+    "st peter's basilica",
+    "basilica-di-san-pietro",
+    "san-pietro-in-vaticano",
+    "st-peters-square",
+    "st peter's square",
+    "piazza-san-pietro",
+    "vatican-museum",
+    "vatican museum",
+    "musei-vaticani",
+    "sistine-chapel",
+    "sistine chapel",
+    "cappella-sistina"
+  ]
+
+  # A slug carrying one of these is somewhere else in Rome, whatever else it
+  # says. Piazza San Pietro in Montorio is a real square in Trastevere and would
+  # otherwise trip `piazza-san-pietro`.
+  @not_vatican_qualifiers ["montorio", "in-borgo", "in-vincoli", "in-carcere"]
+
   defp vatican_place?(place) do
     haystack = String.downcase("#{place["slug"]} #{place["name"]}")
 
-    Enum.any?(
-      ["st-peter", "st peter", "san-pietro", "vatican-museum", "vatican museum", "sistine"],
-      &String.contains?(haystack, &1)
-    )
+    Enum.any?(@vatican_needles, &String.contains?(haystack, &1)) and
+      not Enum.any?(@not_vatican_qualifiers, &String.contains?(haystack, &1))
+  end
+
+  test "the vatican check names the building, not the saint" do
+    # Regression for the over-broad needle. All three shipped in wave 1 and all
+    # three are on Italian soil.
+    for slug <- [
+          "san-pietro-in-montorio-trastevere-rome",
+          "tempietto-di-san-pietro-in-montorio-rome",
+          "chiesa-di-san-pietro-in-borgo-rome"
+        ] do
+      refute vatican_place?(%{"slug" => slug, "name" => slug}),
+             "#{slug} is in Rome, not the Vatican — the check is matching the dedication"
+    end
+
+    for slug <- [
+          "st-peters-basilica",
+          "piazza-san-pietro",
+          "vatican-museums",
+          "sistine-chapel"
+        ] do
+      assert vatican_place?(%{"slug" => slug, "name" => slug}),
+             "#{slug} is inside Vatican City and must not be claimed by a rione"
+    end
   end
 
   test "every committed rome seed file is valid, globally unique, and loads twice" do
@@ -418,6 +744,31 @@ defmodule Ethos.Seeds.RomeSeedDataTest do
              inspect(expected |> MapSet.difference(shipped) |> Enum.sort()) <>
              "\n  shipped but not rostered: " <>
              inspect(shipped |> MapSet.difference(expected) |> Enum.sort())
+  end
+
+  test "every rome place carries a kind the schema accepts" do
+    # Waves 1 to 3 were briefed with an INVENTED kind list — church, monument,
+    # square, bridge — none of which the schema has. Three Sallustiano churches
+    # shipped as kind "church" and the changeset rejected them at seed time,
+    # which surfaced as two unrelated-looking failures in the release and
+    # destination suites rather than here, where it belonged.
+    #
+    # Read off `Ethos.Places.Place` rather than copied into this file: a
+    # hardcoded list here would be a second place for the allowlist to live and
+    # would go stale the first time the schema gained a kind.
+    valid = MapSet.new(Ethos.Places.Place.kinds())
+
+    offenders =
+      for {name, doc} <- decoded_files(),
+          place <- doc["places"] || [],
+          not MapSet.member?(valid, place["kind"]) do
+        {name, place["slug"], place["kind"]}
+      end
+
+    assert offenders == [],
+           "rome places carry a kind the schema will reject at seed time. Valid kinds are " <>
+             inspect(Enum.sort(valid)) <>
+             ":\n" <> Enum.map_join(offenders, "\n", fn {n, s, k} -> "  #{n}: #{s} — #{k}" end)
   end
 
   test "the seed directory the gate reads is the one the corpus lives in" do

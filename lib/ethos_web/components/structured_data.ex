@@ -136,10 +136,27 @@ defmodule EthosWeb.StructuredData do
   """
   def postal_address(nil, _locality, _region), do: nil
 
+  # A place's `state` holds a US state name for American destinations and the
+  # country name for everywhere else. Until Rome landed, every destination was
+  # American and `addressCountry` was the literal "US" — which meant the first
+  # 122 addressed Roman places would have told search engines the Pantheon is
+  # in the United States.
+  #
+  # A country name is not a region, so when one is matched here the region is
+  # dropped rather than emitted: Italy is the country, and the corpus does not
+  # carry Lazio. `addressLocality` still ships the rione.
+  @country_by_region %{"Italy" => "IT"}
+
   def postal_address(address, locality, region) do
     parsed = Ethos.Places.Address.parse(address)
 
-    %{"@type" => "PostalAddress", "addressCountry" => "US"}
+    {country, region} =
+      case Map.fetch(@country_by_region, region) do
+        {:ok, code} -> {code, nil}
+        :error -> {"US", region}
+      end
+
+    %{"@type" => "PostalAddress", "addressCountry" => country}
     |> maybe_put("streetAddress", parsed.street)
     |> maybe_put("addressLocality", locality)
     |> maybe_put("addressRegion", region)

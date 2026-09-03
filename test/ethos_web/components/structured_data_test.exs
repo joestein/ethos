@@ -55,13 +55,50 @@ defmodule EthosWeb.StructuredDataTest do
           {p["address"], StructuredData.postal_address(p["address"], p["town"], p["state"])}
         end)
 
-      %{emitted: emitted}
+      # Carried alongside `emitted` rather than folded into it: every other
+      # test in this block patterns on `{raw, ld}`, and the region is only
+      # needed by the country assertion below.
+      with_region =
+        Enum.map(places, fn p ->
+          {p["address"], p["state"],
+           StructuredData.postal_address(p["address"], p["town"], p["state"])}
+        end)
+
+      %{emitted: emitted, with_region: with_region}
     end
 
-    test "every block is a typed, countried PostalAddress", %{emitted: emitted} do
-      for {raw, ld} <- emitted do
+    test "every block is a typed PostalAddress in the right country", %{with_region: with_region} do
+      # This assertion read `== "US"` until Rome landed, and passed, because
+      # postal_address/3 hardcoded the country. The corpus was American for its
+      # whole life, so nothing distinguished "every place is in the US" from
+      # "the emitter says US regardless" — and the first 122 addressed Roman
+      # places inherited the wrong one, publishing the Pantheon as American.
+      #
+      # Asserted per place against its own region, so a future destination that
+      # is neither American nor Italian fails here rather than being quietly
+      # labelled US.
+      expected = fn
+        "Italy" -> "IT"
+        _ -> "US"
+      end
+
+      for {raw, region, ld} <- with_region do
         assert ld["@type"] == "PostalAddress", "untyped address block for #{inspect(raw)}"
-        assert ld["addressCountry"] == "US", "no country for #{inspect(raw)}"
+
+        assert ld["addressCountry"] == expected.(region),
+               "#{inspect(raw)} in region #{inspect(region)} emitted country " <>
+                 "#{inspect(ld["addressCountry"])}, expected #{inspect(expected.(region))}"
+      end
+    end
+
+    test "a country name is not emitted as a region", %{with_region: with_region} do
+      # Italy is the country, not the region, and the corpus does not carry
+      # Lazio. Emitting addressRegion "Italy" beside addressCountry "IT" would
+      # be a schema.org contradiction rather than a missing field.
+      for {raw, region, ld} <- with_region, region == "Italy" do
+        assert is_nil(ld["addressRegion"]),
+               "#{inspect(raw)} emitted addressRegion #{inspect(ld["addressRegion"])} " <>
+                 "for a country name"
       end
     end
 
@@ -91,13 +128,42 @@ defmodule EthosWeb.StructuredDataTest do
       end
     end
 
-    test "no streetAddress is published without a leading house number", %{emitted: emitted} do
-      for {raw, ld} <- emitted, street = ld["streetAddress"] do
+    test "no American streetAddress is published without a leading house number",
+         %{with_region: with_region} do
+      # Scoped to American addresses rather than relaxed. The leading house
+      # number is what separates "126 Brightwater Court" from a descriptive
+      # location, and it held for the corpus's whole American life.
+      #
+      # Italian addresses put the number last and often carry none at all:
+      # "Lungotevere Castello 50" ends with its number, and the Pantheon's
+      # postal address is "Piazza della Rotonda, 00186 Roma RM" with no number
+      # anywhere. The parser holds those to a thoroughfare-type test instead,
+      # which is asserted in test/ethos/places/address_test.exs; what matters
+      # here is that the American rule did not quietly loosen when Rome landed.
+      for {raw, region, ld} <- with_region, region != "Italy", street = ld["streetAddress"] do
         assert Regex.match?(~r/^\d/, street),
                "streetAddress without a house number: #{inspect(street)} (from #{inspect(raw)})"
 
         refute Regex.match?(~r/^\d+(?:st|nd|rd|th)\b/i, street),
                "ordinal street name mistaken for a house number: #{inspect(street)} " <>
+                 "(from #{inspect(raw)})"
+      end
+    end
+
+    test "an Italian streetAddress names a thoroughfare type", %{with_region: with_region} do
+      # The Italian counterpart, so scoping the rule above does not leave Rome
+      # unguarded. Without this, a descriptive location would publish as a
+      # street the moment the house-number rule stopped applying to it.
+      thoroughfare =
+        ~r/^(?:via|viale|vicolo|piazza|piazzale|largo|corso|borgo|lungotevere|salita|clivo|circonvallazione|ponte|passeggiata|galleria|portico|strada|foro|campo|arco|scalinata|molo)\b/i
+
+      italian = Enum.filter(with_region, fn {_, region, _} -> region == "Italy" end)
+
+      assert italian != [], "no Italian address reached the emitter — the scope guard is vacuous"
+
+      for {raw, _region, ld} <- italian, street = ld["streetAddress"] do
+        assert Regex.match?(thoroughfare, street),
+               "Italian streetAddress naming no thoroughfare type: #{inspect(street)} " <>
                  "(from #{inspect(raw)})"
       end
     end
@@ -547,12 +613,47 @@ defmodule EthosWeb.StructuredDataTest do
       # Avenue, which give a location string rather than a house number.
       #
       # The `comma_streets <= 48` pin holds at 48.
+      # Re-measured 2026-09-02 after Rome waves 1-3, which land the first twelve
+      # rioni — Campitelli, Monti, Trastevere, Borgo, Pigna, Parione, Colonna,
+      # Trevi, Prati, Ludovisi, Sallustiano and Castro Pretorio — 450 places,
+      # 313 of them addressed.
+      #
+      # Rome moves these counts differently from any borough, because it is the
+      # first destination whose addresses are not American, and two defects had
+      # to be fixed before the figures meant anything.
+      #
+      #   * `addressCountry` was the literal "US". Every Roman place would have
+      #     published the Pantheon as American. It is now derived from the
+      #     region, and asserted per place rather than as a constant.
+      #   * `Ethos.Places.Address.parse/1` returned NO street line for any Roman
+      #     address. The Italian shape inverts both axes it reads — the house
+      #     number trails, the CAP leads — and carries one comma where `@full`
+      #     and `@head` both need two, so all 313 fell to the nil-with-scanned-
+      #     postal path. Forty-four still showed a postal code, because a CAP is
+      #     five digits and `scan_postal/1` finds any five-digit run, which is
+      #     why the gap read as a missing street rather than as nothing at all.
+      #
+      #   * total 2517 -> 2830, the 313 addressed Roman places.
+      #   * `streetAddress` 1912 -> 2225, +313: every Roman address yields a
+      #     street line. `is_nil(streetAddress)` is UNCHANGED at 605, which is
+      #     the check that the Italian branch took nothing away from the
+      #     American corpus — it only ever turns a nil into a value.
+      #   * `postalCode` 1959 -> 2076, +117. Not +313: 196 of the Roman
+      #     addresses carry no CAP at all, taking the form "Lungotevere Castello
+      #     50, Roma RM".
+      #   * locality-only is UNCHANGED at 302. No Roman place lands there, since
+      #     every one of them now emits a street.
+      #
+      # The `comma_streets <= 48` pin holds at 48: no Italian street line
+      # carries a comma, because the Italian shape puts nothing after the
+      # thoroughfare and its number.
+
       count = fn f -> Enum.count(emitted, fn {_, ld} -> f.(ld) end) end
 
-      assert length(emitted) == 2517
-      assert count.(& &1["streetAddress"]) == 1912
+      assert length(emitted) == 2830
+      assert count.(& &1["streetAddress"]) == 2225
       assert count.(&is_nil(&1["streetAddress"])) == 605
-      assert count.(& &1["postalCode"]) == 1959
+      assert count.(& &1["postalCode"]) == 2076
 
       # The largest behavioural delta this change ships: 302 places emit a
       # PostalAddress carrying only locality, region and country. Their full

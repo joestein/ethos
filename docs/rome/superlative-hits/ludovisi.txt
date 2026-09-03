@@ -1,0 +1,21 @@
+5 SUPERLATIVE hits in priv/seed_data/rome/ludovisi.json
+
+AT .guide.faq[3].answer
+  MATCHED: the single most likely
+  CONTEXT: ...agni 18, in the Villino Boncompagni Ludovisi, and via Boncompagni is the boundary street: the even numbers are in Sallustiano. Italian Wikipedia files the museum under its Sallustiano category. It is the single most likely mistake a source will hand you about this rione....
+
+AT .places[0].summary
+  MATCHED: first church in Rome
+  CONTEXT: ...; Italian Wikipedia dates the construction 1626-1631. One nave, five chapels to a side, reached by a scissor stair, behind a brick façade with white stone pilasters. Roma Capitale describes it as the first church in Rome dedicated to the Immaculate Conception....
+
+AT .places[2].summary
+  MATCHED: the only work
+  CONTEXT: ... that it is closed to the public and can be seen only from outside. Roma Capitale names one work inside it, a Venus by Giambologna carved in 1583 and known as the Venere Cesarini, and describes it as the only work by that sculptor in Rome; that superlative is Roma Capitale's and this guide does not restate it as its own....
+
+AT .places[3].summary
+  MATCHED: Caravaggio's only
+  CONTEXT: ... the vault of the ground-floor salone. Italian Wikipedia also records that the building holds Caravaggio's Giove, Nettuno e Plutone, painted for Del Monte between 1597 and 1600, which it describes as Caravaggio's only wall painting, and a triptych by Guercino and Tassi on the piano nobile....
+
+AT .places[3].summary
+  MATCHED: the one building
+  CONTEXT: ...The Casino dell'Aurora, also called Casino Ludovisi or Villa Aurora, on via Aurora, is the one building of Villa Ludovisi to survive intact. Italian Wikipedia records that it was built for Cardinal Francesco Maria Del Monte in the sixteenth century and remodelled for Ludovico Ludovisi between 1621 and ...

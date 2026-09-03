@@ -56,6 +56,42 @@ defmodule Ethos.Places.Address do
   # suffix must follow the leading digits immediately.
   @ordinal_street ~r/^\d+(?:st|nd|rd|th)\b/i
 
+  # Italian addresses invert the US shape: the house number TRAILS the street
+  # name, the postal code PRECEDES the locality, and there is one comma rather
+  # than two.
+  #
+  #     "Borgo Santo Spirito 78, 00193 Roma RM"
+  #     "Piazza del Campidoglio, 00186 Roma RM"      (no house number)
+  #     "Lungotevere Castello 50, Roma RM"           (no CAP)
+  #     "Via della Conciliazione 14/C, 00193 Roma RM"
+  #
+  # Every one of them failed `@full` and `@head`, which both require two commas,
+  # so before this branch existed all 122 addressed Roman places published no
+  # `streetAddress` at all. Forty-four still got a postal code, because
+  # `scan_postal/1` finds any five-digit run and an Italian CAP is five digits —
+  # which is why the gap showed up as a missing street rather than as nothing.
+  #
+  # The CAP is optional and the province is required: "Roma RM" is what every
+  # address in the corpus ends with, and requiring the two-letter province is
+  # what keeps this from matching loose text.
+  @italian ~r/^(?<street>.+),\s*(?:(?<postal>\d{5})\s+)?(?<locality>[^,\d]+?)\s+(?<region>[A-Z]{2})\s*$/
+
+  # The Italian counterpart to `@house_number`, and it exists for the same
+  # reason: to distinguish a postal address from a description of where
+  # something is. It cannot be a house-number test, because a Roman address
+  # legitimately carries none — the Pantheon's is "Piazza della Rotonda, 00186
+  # Roma RM", where the square itself is the thoroughfare.
+  #
+  # So this is a positive test on the thoroughfare type instead. "Bounded by
+  # via A and via B" does not begin with one and is rejected, which is the
+  # property the house-number rule buys in the US corpus.
+  # `foro` and `campo` are here because Rome uses both as thoroughfare names in
+  # postal addresses — "Foro Traiano, 00187 Roma RM" is Trajan's Column's
+  # address, and Campo de' Fiori is a street as well as a square. An earlier
+  # version of this list omitted both; Foro Traiano was the single Roman address
+  # in wave 1 that still published no street.
+  @italian_thoroughfare ~r/^(?:via|viale|vicolo|piazza|piazzale|largo|corso|borgo|lungotevere|salita|clivo|circonvallazione|ponte|passeggiata|galleria|portico|strada|foro|campo|arco|scalinata|molo)\b/i
+
   @empty %{street: nil, locality: nil, region: nil, postal_code: nil, parsed?: false}
 
   @typedoc "Every key is always present; any of the four strings may be nil."
@@ -96,7 +132,7 @@ defmodule Ethos.Places.Address do
 
     case Regex.named_captures(@full, trimmed) || retry_without_tail(trimmed) do
       nil ->
-        %{@empty | postal_code: scan_postal(trimmed)}
+        parse_italian(trimmed)
 
       caps ->
         locality = presence(caps["locality"])
@@ -109,6 +145,32 @@ defmodule Ethos.Places.Address do
           parsed?: true
         }
     end
+  end
+
+  # Third and last attempt, reached only when both US-shaped passes fail. A US
+  # address cannot arrive here — `@full` matches it — so this can only turn a
+  # nil into a value, never change one. The nil-with-scanned-postal path below
+  # is unchanged and is still where a descriptive location lands.
+  defp parse_italian(trimmed) do
+    case Regex.named_captures(@italian, trimmed) do
+      nil ->
+        %{@empty | postal_code: scan_postal(trimmed)}
+
+      caps ->
+        %{
+          street: italian_street_or_nil(caps["street"]),
+          locality: presence(caps["locality"]),
+          region: presence(caps["region"]),
+          postal_code: presence(caps["postal"]) || scan_postal(trimmed),
+          parsed?: true
+        }
+    end
+  end
+
+  defp italian_street_or_nil(street) do
+    street = String.trim(street)
+
+    if Regex.match?(@italian_thoroughfare, street), do: presence(street), else: nil
   end
 
   # Second and last attempt, reached only when the anchored match failed. Cuts

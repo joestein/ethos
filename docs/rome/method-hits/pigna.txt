@@ -1,0 +1,25 @@
+6 METHOD hits in priv/seed_data/rome/pigna.json
+
+AT .guide.sections[1].body
+  MATCHED: footprint is
+  CONTEXT: ...arriageway of the Corso is itself a boundary and tests to Trevi or to Colonna in OpenStreetMap's rione data. A street address is not a claim about which rione a building stands in; the building's own footprint is. The streets that lie wholly inside Pigna, and that this guide uses for orientation rather than as records, are via del Plebiscito, via dei Cestari, via del Gesu, via del Pie di Marmo, via della Gatt...
+
+AT .guide.sections[1].body
+  MATCHED: tests to Trevi
+  CONTEXT: ...ftware as well as visitors. Several Pigna buildings, Palazzo Doria Pamphilj and Palazzo De Carolis among them, carry via del Corso addresses, but the carriageway of the Corso is itself a boundary and tests to Trevi or to Colonna in OpenStreetMap's rione data. A street address is not a claim about which rione a building stands in; the building's own footprint is. The streets that lie wholly inside Pigna, and tha...
+
+AT .places[10].history
+  MATCHED: boundary geometry
+  CONTEXT: ...site published at the basilica's own domain reproduces it.wikipedia's text word for word, so this guide does not treat the basilica as having attested anything about itself, and rests its location on boundary geometry....
+
+AT .places[10].history
+  MATCHED: rests its location on
+  CONTEXT: ...note on sourcing: the site published at the basilica's own domain reproduces it.wikipedia's text word for word, so this guide does not treat the basilica as having attested anything about itself, and rests its location on boundary geometry....
+
+AT .places[18].summary
+  MATCHED: footprint lies
+  CONTEXT: ...g most of a block between via del Corso and the streets behind it, still in family administration and open as a house museum through its picture gallery. Its address is on the Corso, but its building footprint lies wholly inside Pigna....
+
+AT .places[22].summary
+  MATCHED: footprint lies
+  CONTEXT: ...An eighteenth-century palace on via del Corso, and one of the Pigna buildings whose Corso address misleads: the carriageway of the Corso is a rione boundary, while the palace's own footprint lies inside Pigna....

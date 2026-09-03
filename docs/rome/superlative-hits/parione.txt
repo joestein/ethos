@@ -1,0 +1,13 @@
+3 SUPERLATIVE hits in priv/seed_data/rome/parione.json
+
+AT .guide.sections[1].body
+  MATCHED: the one building
+  CONTEXT: ...The Palazzo della Cancelleria is the one building in Parione with an unusual legal position, and it is easy to get wrong. Article 15 of the Lateran Treaty of 11 February 1929 names it among buildings which, in the treaty's own words, although formin...
+
+AT .guide.faq[0].answer
+  MATCHED: the one place
+  CONTEXT: ...nd wholly so — the square lies entirely inside the rione. UNESCO's description of the Historic Centre of Rome names Piazza Navona among the site's Renaissance and Baroque urban developments, which is the one place-specific sentence about a Parione place in the UNESCO record....
+
+AT .places[30].history
+  MATCHED: most of which lies in rione
+  CONTEXT: ...The building is a case of an address pointing one way and the building standing another. It addresses from Piazza dell'Orologio, most of which lies in rione Ponte, while the building itself is wholly inside Parione. This corpus assigns by the building, so the Oratory, the Biblioteca Vallicelliana on its second floor and the Archivio Storico Capitolino in...

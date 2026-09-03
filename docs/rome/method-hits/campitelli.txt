@@ -1,0 +1,5 @@
+1 METHOD hits in priv/seed_data/rome/campitelli.json
+
+AT .places[30].summary
+  MATCHED: returned a 404
+  CONTEXT: ...A church and convent on the south side of the Vigna Barberini, which it.wikipedia places "nel rione Campitelli". The convent's website returned a 404, so this guide publishes no opening hours....

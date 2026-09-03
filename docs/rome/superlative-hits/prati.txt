@@ -1,0 +1,33 @@
+8 SUPERLATIVE hits in priv/seed_data/rome/prati.json
+
+AT .guide.intro
+  MATCHED: the only one
+  CONTEXT: ...Prati is the twenty-second and last of Rome's rioni, and the only one of the twenty-two that lies outside the city walls - outside the Aurelian, the Gianicolensi and the Leonine circuits alike. Roma Capitale's Annuario statistico 2022 gives it the toponymic code 122; I...
+
+AT .guide.sections[2].body
+  MATCHED: the simplest line to
+  CONTEXT: ... than one unit of the city, so none of them is Prati's alone. Via Cola di Rienzo runs the width of the rione from piazza della Libertà at the river to piazza del Risorgimento at the other end, and is the simplest line to navigate by on foot....
+
+AT .guide.faq[5].answer
+  MATCHED: the only stretch
+  CONTEXT: ...A, both on viale Giulio Cesare, and both opened on 16 February 1980. Ottaviano was the line's north-western terminus until 29 May 1999. Line A reaches the rione over ponte Pietro Nenni, which carries the only stretch of that line above ground....
+
+AT .places[10].summary
+  MATCHED: most guides
+  CONTEXT: ...The commercial spine of the rione. Roma Capitale's register states its limits as running from piazza della Libertà to piazza del Risorgimento, which is the reverse of the direction most guides give, and records 272 conforming street numbers on the national address register, certified 16 December 2022....
+
+AT .places[32].summary
+  MATCHED: southernmost
+  CONTEXT: ...The southernmost of the three embankment roads wholly inside the rione, running from via Ulpiano to via Vittoria Colonna and carrying the Sacro Cuore del Suffragio at no. 12....
+
+AT .places[34].summary
+  MATCHED: most embankment road of the rione
+  CONTEXT: ...The northernmost embankment road of the rione, from piazza della Libertà to piazza delle Cinque Giornate....
+
+AT .places[34].summary
+  MATCHED: northernmost
+  CONTEXT: ...The northernmost embankment road of the rione, from piazza della Libertà to piazza delle Cinque Giornate....
+
+AT .places[36].summary
+  MATCHED: the only stretch
+  CONTEXT: ...A bridge of three reinforced-concrete spans, 25.4 metres wide, carrying line A of the Rome metro across the Tiber - the only stretch of that line at the surface. The far bank is in Q. I Flaminio, and this guide does not present the crossing as Prati's alone....
