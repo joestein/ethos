@@ -47,7 +47,17 @@
         "answer": "No. The palace on Via della Pilotta and the Galleria Colonna inside it stand in rione Trevi, and the research done for rione Colonna positively confirms that neither is in that rione. A second name trap works the same way: Palazzo Chigi-Odescalchi, on Piazza dei Santi Apostoli, is in Trevi and is not the Palazzo Chigi on Piazza Colonna."
       }
     ],
-    "photos": []
+    "photos": [
+      {
+        "src": "/photos/it/rome/trevi/trevi-fontana-di-trevi.jpg",
+        "thumb": "/photos/it/rome/trevi/trevi-fontana-di-trevi_thumb.jpg",
+        "title": "Fontana di Trevi",
+        "description": "The Fontana di Trevi seen from the square, built against the facade of Palazzo Poli as the terminal mostra of the Acqua Vergine aqueduct.",
+        "author": "Diego Delso",
+        "license": "CC BY-SA 4.0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Fuente_de_Trevi,_Roma,_Italia,_2022-09-15,_DD_01.jpg"
+      }
+    ]
   },
   "places": [
     {

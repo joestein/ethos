@@ -47,7 +47,17 @@
         "answer": "No. Santa Maria della Vittoria is in Sallustiano — boundary tests put both the church building and Roma Capitale's own published point for it inside the rione, and it stands on the north side of via XX Settembre. Santa Susanna is not in Sallustiano, and this guide does not state which rione it is in, because the sources that were checked do not agree. Largo di Santa Susanna itself is not claimed here either: Italian Wikipedia says the square lies partly in Sallustiano and partly in Trevi."
       }
     ],
-    "photos": []
+    "photos": [
+      {
+        "src": "/photos/it/rome/sallustiano/sallustiano-santa-maria-della-vittoria-facade.jpg",
+        "thumb": "/photos/it/rome/sallustiano/sallustiano-santa-maria-della-vittoria-facade_thumb.jpg",
+        "title": "Santa Maria della Vittoria",
+        "description": "The travertine facade of Santa Maria della Vittoria on via XX Settembre, built in 1626 to Giovan Battista Soria's design at the expense of Cardinal Scipione Borghese, whose dedication is cut into the entablature.",
+        "author": "Diego Delso",
+        "license": "CC BY-SA 4.0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Iglesia_de_Santa_Mar%C3%ADa_de_la_Victoria,_Roma,_Italia,_2022-09-16,_DD_31.jpg"
+      }
+    ]
   },
   "places": [
     {

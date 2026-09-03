@@ -47,7 +47,17 @@
         "answer": "Roma Capitale ties the street's international fame to the Dolce Vita, and states that Fellini rebuilt via Veneto in the studios at Cinecittà rather than filming on the street itself. Italian Wikipedia records the Cafe de Paris, one of the cafes the film made famous, as closed in 2008."
       }
     ],
-    "photos": []
+    "photos": [
+      {
+        "src": "/photos/it/rome/ludovisi/ludovisi-santa-maria-concezione-cappuccini.jpg",
+        "thumb": "/photos/it/rome/ludovisi/ludovisi-santa-maria-concezione-cappuccini_thumb.jpg",
+        "title": "Santa Maria della Concezione dei Cappuccini",
+        "description": "The brick facade of the Capuchin church at Via Vittorio Veneto 27, reached by the double scissor stair that carries visitors up from the street to the church and the ossuary crypt beneath it.",
+        "author": "José Luiz",
+        "license": "CC BY-SA 4.0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Facade_-_Santa_Maria_Immacolata_a_via_Veneto_-_Rome_2016.jpg"
+      }
+    ]
   },
   "places": [
     {

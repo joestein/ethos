@@ -47,7 +47,17 @@
         "answer": "Because the evidence does not settle them. Several of Colonna's borders are themselves squares and streets, and mapping data draws a boundary along one kerb, so a square that is the border tests as lying wholly inside one side. Where a text source and the geometry disagree, this guide states nothing rather than guessing: piazza della Rotonda is left unresolved. Buildings are assigned by their own outline, so nothing is lost."
       }
     ],
-    "photos": []
+    "photos": [
+      {
+        "src": "/photos/it/rome/colonna/colonna-piazza-colonna-column-of-marcus-aurelius.jpg",
+        "thumb": "/photos/it/rome/colonna/colonna-piazza-colonna-column-of-marcus-aurelius_thumb.jpg",
+        "title": "Piazza Colonna and the Column of Marcus Aurelius",
+        "description": "The Column of Marcus Aurelius standing at the centre of Piazza Colonna, with Palazzo Wedekind and its portico across the square and Palazzo Chigi, the seat of the Italian government, along the right-hand side.",
+        "author": "Diego Delso",
+        "license": "CC BY-SA 4.0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Columna_de_Marco_Aurelio,_plaza_Colonna,_Roma,_Italia,_2022-09-14,_DD_24-26_HDR.jpg"
+      }
+    ]
   },
   "places": [
     {

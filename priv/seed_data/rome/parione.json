@@ -47,7 +47,17 @@
         "answer": "The museum occupies Palazzo Braschi and has two entrances, at Piazza San Pantaleo 10 and Piazza Navona 2. Entry is free for MIC-card holders, with separate ticketing for the exhibition space; the museum gives 060608, 9.00-19.00, for information and booking. Its collections cover the social history and artistic activity of Rome from the Middle Ages to the early 20th century."
       }
     ],
-    "photos": []
+    "photos": [
+      {
+        "src": "/photos/it/rome/parione/parione-piazza-navona-sant-agnese.jpg",
+        "thumb": "/photos/it/rome/parione/parione-piazza-navona-sant-agnese_thumb.jpg",
+        "title": "Piazza Navona",
+        "description": "The west side of Piazza Navona, with the facade of Sant'Agnese in Agone, the Palazzo Pamphilj alongside it, and the Obelisco Agonale rising over the Fontana dei Quattro Fiumi at right.",
+        "author": "Wolfgang Moroder",
+        "license": "CC BY-SA 3.0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Piazza_Navona_Sant%27Agnese_in_Agone_fontana_dei_Fiumi_Roma.jpg"
+      }
+    ]
   },
   "places": [
     {

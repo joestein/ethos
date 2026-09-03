@@ -47,7 +47,17 @@
         "answer": "One. Sant'Andrea al Quirinale, Via del Quirinale 30, 00187, gives its hours on its own website: Tuesday to Sunday 9.00–12.00 and 15.00–18.00, closed Monday. Nothing else here carries hours, tickets or opening information, because no source states them — including Santa Maria Maggiore and the Domus Aurea. Treat every other entry as a description of what a place is and where it stands, not a statement that it is open today."
       }
     ],
-    "photos": []
+    "photos": [
+      {
+        "src": "/photos/it/rome/monti/monti-colonna-traiana.jpg",
+        "thumb": "/photos/it/rome/monti/monti-colonna-traiana_thumb.jpg",
+        "title": "Colonna Traiana",
+        "description": "Trajan's Column in the Forum of Trajan, on the Monti side of via dei Fori Imperiali, erected in 113 AD and carrying a spiral relief up seventeen monolithic marble drums.",
+        "author": "Alvesgaspar",
+        "license": "CC BY-SA 4.0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Trajan_column_(Rome)_September_2015-1.jpg"
+      }
+    ]
   },
   "places": [
     {

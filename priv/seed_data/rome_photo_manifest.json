@@ -1,0 +1,50 @@
+{
+  "borgo-ponte-sant-angelo": {
+    "sha256": "d2a239526649aa068df31ffb2d55ad3bf8388693773d5b93021b23e411d98765",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Ponte_Sant%27Angelo_in_Rome_(16).jpg"
+  },
+  "campitelli-piazza-del-campidoglio": {
+    "sha256": "3405f584012a776658ca50af1eb4a53a6d7e7832d818878c72657f8dfd0ab0da",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Piazza_del_Campidoglio,_Rome_(25918340096).jpg"
+  },
+  "castro-pretorio-porta-pia": {
+    "sha256": "45ff73138232fcc960d7d0ca8416a29c4ba024dc17516b8e2f4349c358a040ea",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Rome_(IT),_Porta_Pia_--_2013_--_3342.jpg"
+  },
+  "colonna-piazza-colonna-column-of-marcus-aurelius": {
+    "sha256": "d108cd75a8261296f78d990ee9eb912d1699d78f7a54e01084b6ffb0ae17d83a",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Columna_de_Marco_Aurelio,_plaza_Colonna,_Roma,_Italia,_2022-09-14,_DD_24-26_HDR.jpg"
+  },
+  "ludovisi-santa-maria-concezione-cappuccini": {
+    "sha256": "c34926c6a4f33fa012c81d5c25a60129fb5ab748b2f29a1344e92191839f8c83",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Facade_-_Santa_Maria_Immacolata_a_via_Veneto_-_Rome_2016.jpg"
+  },
+  "monti-colonna-traiana": {
+    "sha256": "93f8aa1233cd2091e4e7206d50b53fce1784987474749af8c23c89ce37265db2",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Trajan_column_(Rome)_September_2015-1.jpg"
+  },
+  "parione-piazza-navona-sant-agnese": {
+    "sha256": "8e61f3d5b64aaa509c5fb28e6725bfd261ab2b989cff92a56e51420deb20104b",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Piazza_Navona_Sant%27Agnese_in_Agone_fontana_dei_Fiumi_Roma.jpg"
+  },
+  "pigna-elefantino-santa-maria-sopra-minerva": {
+    "sha256": "bb95cf8662883b4663b4ad4ab6cbc2499285c0adf3848c43119ce10ecb261908",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Bernini%27s_elephant_in_front_of_Santa_Maria_sopra_Minerva.jpg"
+  },
+  "prati-palazzo-di-giustizia": {
+    "sha256": "a8b2935b49263b0b25a57c98e5e334ff66c6adc73565c88d58a90f2717e4a04f",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Rome_(IT),_Corte_Suprema_di_Cassazione_--_2013_--_3787.jpg"
+  },
+  "sallustiano-santa-maria-della-vittoria-facade": {
+    "sha256": "1c6adc112b2a997b45b030d92c2230c69d734675db47cda70fe641233022dfec",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Iglesia_de_Santa_Mar%C3%ADa_de_la_Victoria,_Roma,_Italia,_2022-09-16,_DD_31.jpg"
+  },
+  "trastevere-fontana-acqua-paola": {
+    "sha256": "6bbfe204912987dc3c1ba9f3516663d1b8a752549ffd4fcc83d519153d81b717",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Roma,_Fontanone_dell%27Acqua_Paola_(1).jpg"
+  },
+  "trevi-fontana-di-trevi": {
+    "sha256": "9757304f217f88ec5f41c7c7b494637b3f11e8f4fd1c04529efcd54e889ed5e1",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Fuente_de_Trevi,_Roma,_Italia,_2022-09-15,_DD_01.jpg"
+  }
+}

@@ -47,7 +47,17 @@
         "answer": "Because nothing about them could be sourced. The research for this wave gathered no address, no hours and no fetched fact for the bakeries, pastry shops, market stalls or cinemas of the rione, and the Porta Portese flea market is not even a mapped object - only the gate and a kiosk are. A name in a list is not a record, so they are left out rather than written up from impression. The gate itself is here."
       }
     ],
-    "photos": []
+    "photos": [
+      {
+        "src": "/photos/it/rome/trastevere/trastevere-fontana-acqua-paola.jpg",
+        "thumb": "/photos/it/rome/trastevere/trastevere-fontana-acqua-paola_thumb.jpg",
+        "title": "Mostra dell'Acqua Paola al Gianicolo (Fontanone)",
+        "description": "The terminal display of the Acqua Paola aqueduct on the Janiculum, seen head-on from the road, with the attic inscription dated MDCXII and water falling into the basin added in the later remodelling.",
+        "author": "Palickap",
+        "license": "CC BY-SA 4.0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Roma,_Fontanone_dell%27Acqua_Paola_(1).jpg"
+      }
+    ]
   },
   "places": [
     {

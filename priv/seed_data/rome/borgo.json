@@ -51,7 +51,17 @@
         "answer": "Santa Maria in Traspontina does: its own site lists weekday Eucharistic celebration as 9.00 - 19.00, Sunday and feast-day celebrations at 9.00, 10.30, a 12.30 international Mass and 19.00, and the Rosary daily at 18.15. Roma Capitale gives the Palazzo del Commendatore's courtyard as visitable Monday to Friday 7.30–18.00 and Saturday 7.30–12.00, during the hospital's hours. Santo Spirito in Sassia and the Museo storico nazionale dell'arte sanitaria have no hours here: no source states them, so none are given."
       }
     ],
-    "photos": []
+    "photos": [
+      {
+        "src": "/photos/it/rome/borgo/borgo-ponte-sant-angelo.jpg",
+        "thumb": "/photos/it/rome/borgo/borgo-ponte-sant-angelo_thumb.jpg",
+        "title": "Ponte Sant'Angelo and Castel Sant'Angelo",
+        "description": "Ponte Sant'Angelo crossing the Tiber to Castel Sant'Angelo, whose drum is Hadrian's mausoleum and whose address Roma Capitale gives as Lungotevere Castello 50.",
+        "author": "Krzysztof Golik",
+        "license": "CC BY-SA 4.0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Ponte_Sant%27Angelo_in_Rome_(16).jpg"
+      }
+    ]
   },
   "places": [
     {
