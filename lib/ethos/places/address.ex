@@ -90,11 +90,27 @@ defmodule Ethos.Places.Address do
   # address, and Campo de' Fiori is a street as well as a square. An earlier
   # version of this list omitted both; Foro Traiano was the single Roman address
   # in wave 1 that still published no street.
+  # `lungomare`, `quadrato` and `parco` were added after wave 5, from Ostia's
+  # seafront roads (Lungomare Duca degli Abruzzi), EUR's grid (Quadrato della
+  # Concordia) and Villa Borghese (Parco dei Daini). Each is the ordinary
+  # street-name form in the zone that brought it.
+  #
   # `piazzetta`, `vico` and `monte` were added after wave 4, which brought the
   # first addresses using them: Piazzetta di San Simeone, Vico Jugario, Monte
   # de' Cenci. All three are ordinary Roman thoroughfare names — `vico` is a
   # variant of `vicolo`, and `monte` names a street here rather than a hill.
-  @italian_thoroughfare ~r/^(?:via|viale|vicolo|vico|piazza|piazzale|piazzetta|largo|corso|borgo|lungotevere|salita|clivo|circonvallazione|ponte|passeggiata|galleria|portico|strada|foro|campo|arco|scalinata|molo|monte)\b/i
+  @italian_thoroughfare ~r/^(?:via|viale|vicolo|vico|piazza|piazzale|piazzetta|largo|corso|borgo|lungotevere|salita|clivo|circonvallazione|ponte|passeggiata|galleria|portico|strada|foro|campo|arco|scalinata|molo|monte|lungomare|quadrato|parco)\b/i
+
+  # Vatican City addresses carry no province code — "Piazza San Pietro, 00120
+  # Citta del Vaticano" — so `@italian`, which requires a two-letter province,
+  # matched none of them and St Peter's published no street line at all.
+  #
+  # Held as its own pattern rather than by making the province optional in
+  # `@italian`: optional there would let "Lungotevere Castello 50, Roma RM"
+  # backtrack into a worse parse, and this way the Vatican form has to be
+  # recognised deliberately rather than fallen into. It captures no region,
+  # because a sovereign state has no Italian province.
+  @vatican ~r/^(?<street>.+),\s*(?<postal>\d{5})\s+(?<locality>Citt[a\x{00E0}]\s+del\s+Vaticano)\s*$/iu
 
   @empty %{street: nil, locality: nil, region: nil, postal_code: nil, parsed?: false}
 
@@ -156,7 +172,8 @@ defmodule Ethos.Places.Address do
   # nil into a value, never change one. The nil-with-scanned-postal path below
   # is unchanged and is still where a descriptive location lands.
   defp parse_italian(trimmed) do
-    case Regex.named_captures(@italian, trimmed) do
+    case Regex.named_captures(@italian, trimmed) ||
+           Regex.named_captures(@vatican, trimmed) do
       nil ->
         %{@empty | postal_code: scan_postal(trimmed)}
 

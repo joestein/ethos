@@ -6,11 +6,11 @@
     "state": "Italy",
     "county": "Rome",
     "tier": "guide",
-    "intro": "Celio is the nineteenth of Rome's rioni by toponymic code, and it is two pieces of ground rather than one. The northern piece is the Caelian hill, which Roma Capitale records was anciently called Mons Querquetulanus because it was covered in oaks. The Colosseum stands on its western edge, and so do a free archaeological park with two museums in it, a group of early basilicas, and the walled Mattei garden that is now the public park of Villa Celimontana. The southern piece is a long tongue of ground running inside the Aurelian Walls down via di Porta San Sebastiano, carrying the tomb of the Scipios, a painted columbarium, two churches at the Porta Latina and the city nursery that grows the azaleas for the Spanish Steps. Almost every edge of the rione is a street shared with a neighbour, which is why several things a visitor would reasonably file under Celio are not written on this page.",
+    "intro": "Celio is the nineteenth of Rome's rioni by toponymic code, and it is two pieces of ground rather than one. The northern piece is the Caelian hill, which Roma Capitale records was anciently called Mons Querquetulanus because it was covered in oaks. The Colosseum stands on its western edge, and so do a free archaeological park with two museums in it, a group of early basilicas, and the walled Mattei garden that is now the public park of Villa Celimontana. The southern piece is a long tongue of ground running inside the Aurelian Walls down via di Porta San Sebastiano, carrying the tomb of the Scipios, a painted columbarium, two churches at the Porta Latina and the city nursery that grows the azaleas for the Spanish Steps. Nearly every edge of the rione is a street shared with a neighbour.",
     "sections": [
       {
-        "heading": "What is in Celio, and what is not",
-        "body": "it.wikipedia's article on the rione reproduces Celio's delimitation, and reading it is the fastest way to understand why this page carries what it carries. The line with Monti runs along piazza del Colosseo, via di San Giovanni in Laterano, via Santo Stefano Rotondo and via della Navicella to piazza di Porta Metronia. The south-east side is the Aurelian Walls themselves, from Porta Metronia to Porta San Sebastiano, with the quartiere of Appio-Latino beyond them. The line with San Saba runs along via di Porta San Sebastiano, piazzale Numa Pompilio, a short stretch of viale delle Terme di Caracalla, via di Valle delle Camene and piazza di Porta Capena. To the west are Ripa, at piazza di Porta Capena, and Campitelli, along via di San Gregorio and piazza del Colosseo. A street named as a boundary tells you where a line runs; it does not tell you what stands on either side of it.\n\nThe Colosseum is in Celio and is written here. Two churches whose names point at the Caelian are not: the basilica of Santo Stefano Rotondo al Celio carries the hill in its title, but via di Santo Stefano Rotondo is the line with Monti, and both Santo Stefano Rotondo and San Clemente are written under Monti in this series, along with San Giovanni in Laterano and the park of Colle Oppio.\n\nFour more things a visitor may expect here are deliberately absent. Roma Capitale addresses the Arch of Constantine to via di San Gregorio, which the delimitation names as the line with Campitelli, and neither the arch nor the ruins of the Meta Sudans are written on this page. it.wikipedia's article on the rione states that the start of the Appia Antica at Porta San Sebastiano is shared to the east between rione Celio and rione San Saba, so neither the gate nor the Museo delle Mura inside it is written here; note in any case that the museum's own site carries a notice that the museum is not accessible. The Porta Latina stands on the same wall line and is likewise not written here, though the basilica and the oratory that take their names from it are. And the Terme di Caracalla, whose viale clips the rione's southern boundary, stand in San Saba."
+        "heading": "The rione's boundaries and its neighbours",
+        "body": "it.wikipedia's article on the rione reproduces Celio's delimitation. The line with Monti runs along piazza del Colosseo, via di San Giovanni in Laterano, via Santo Stefano Rotondo and via della Navicella to piazza di Porta Metronia. The south-east side is the Aurelian Walls themselves, from Porta Metronia to Porta San Sebastiano, with the quartiere of Appio-Latino beyond them. The line with San Saba runs along via di Porta San Sebastiano, piazzale Numa Pompilio, a short stretch of viale delle Terme di Caracalla, via di Valle delle Camene and piazza di Porta Capena. To the west are Ripa, at piazza di Porta Capena, and Campitelli, along via di San Gregorio and piazza del Colosseo. A street named as a boundary tells you where a line runs; it does not tell you what stands on either side of it.\n\nThe Colosseum is in Celio. Two churches whose names point at the Caelian stand outside it: the basilica of Santo Stefano Rotondo al Celio carries the hill in its title, but via di Santo Stefano Rotondo is the line with Monti, and both Santo Stefano Rotondo and San Clemente stand in Monti, along with San Giovanni in Laterano and the park of Colle Oppio.\n\nRoma Capitale addresses the Arch of Constantine to via di San Gregorio, which the delimitation names as the line with Campitelli. it.wikipedia's article on the rione states that the start of the Appia Antica at Porta San Sebastiano is shared to the east between rione Celio and rione San Saba; the Museo delle Mura is inside the gate, and the museum's own site carries a notice that the museum is not accessible. The Porta Latina stands on the same wall line, and the basilica and the oratory that take their names from it stand in Celio. The Terme di Caracalla, whose viale clips the rione's southern boundary, stand in San Saba."
       },
       {
         "heading": "Getting there",
@@ -24,7 +24,7 @@
     "faq": [
       {
         "question": "Is the Colosseum in Celio?",
-        "answer": "Yes. The amphitheatre stands in Celio, and it is written on this page and on no other page in this series. Its address is Piazza del Colosseo, 00184 Roma. The Arch of Constantine and the ruins of the Meta Sudans are a separate question: Roma Capitale addresses the arch to via di San Gregorio, which the rione's delimitation names as the line with Campitelli, and neither is written here."
+        "answer": "Yes. The amphitheatre stands in Celio. Its address is Piazza del Colosseo, 00184 Roma. Roma Capitale addresses the Arch of Constantine to via di San Gregorio, which the rione's delimitation names as the line with Campitelli."
       },
       {
         "question": "What are the Colosseum's opening hours, and where do I buy a ticket?",
@@ -43,11 +43,21 @@
         "answer": "Yes. The Sovrintendenza Capitolina gives free entry to the Parco archeologico del Celio, with its garden of epigraphic and architectural finds arranged in thematic groups. Villa Celimontana is a public park of 110,000 square metres, open from dawn to sunset, approximately 7.00 to 18.00 from 1 May to 31 October and 7.00 to 17.00 from 1 November to 30 April, and the obelisk of Ramesses II and the Fontana del Fiume stand inside it. The Parco degli Scipioni opens 7.00 to sunset. The fountain of the Navicella on piazza della Navicella, the Fontana di via di San Gregorio and the Arco di Dolabella e Silano all stand in the open street."
       },
       {
-        "question": "Why isn't Santo Stefano Rotondo al Celio on this page?",
-        "answer": "Because a dedication is not an address. Via di Santo Stefano Rotondo is named in the rione's own delimitation as part of the line with Monti, and the basilica is written under Monti in this series, as are San Clemente al Laterano, San Giovanni in Laterano and the park of Colle Oppio. The same caution applies at the other end of the rione: viale delle Terme di Caracalla clips Celio's southern boundary, but the Baths of Caracalla stand in San Saba."
+        "question": "Is Santo Stefano Rotondo al Celio in the rione of Celio?",
+        "answer": "No. A dedication is not an address. Via di Santo Stefano Rotondo is named in the rione's own delimitation as part of the line with Monti, and the basilica stands in Monti, as do San Clemente al Laterano, San Giovanni in Laterano and the park of Colle Oppio. The same caution applies at the other end of the rione: viale delle Terme di Caracalla clips Celio's southern boundary, but the Baths of Caracalla stand in San Saba."
       }
     ],
-    "photos": []
+    "photos": [
+      {
+        "src": "/photos/it/rome/celio/celio-colosseo.jpg",
+        "thumb": "/photos/it/rome/celio/celio-colosseo_thumb.jpg",
+        "title": "Colosseo (Anfiteatro Flavio)",
+        "description": "The exterior of the Flavian amphitheatre on piazza del Colosseo, with the surviving stretch of the four-order outer wall on the left and the inner wall standing exposed on the right.",
+        "author": "Diego Delso",
+        "license": "CC BY-SA 4.0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Coliseo,_Roma,_Italia,_2022-09-15,_DD_96.jpg"
+      }
+    ]
   },
   "places": [
     {
@@ -591,7 +601,7 @@
       "state": "Italy",
       "county": "Rome",
       "address": "Via di San Giovanni in Laterano 106, Roma RM",
-      "summary": "A hostaria at Via di San Giovanni in Laterano 106, serving Roman cooking. This guide has its name, its address and its kind of cooking and nothing further.",
+      "summary": "A hostaria at Via di San Giovanni in Laterano 106, serving Roman cooking.",
       "history": null,
       "status": "open",
       "photos": []

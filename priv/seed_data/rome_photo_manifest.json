@@ -7,9 +7,17 @@
     "sha256": "3405f584012a776658ca50af1eb4a53a6d7e7832d818878c72657f8dfd0ab0da",
     "source_url": "https://commons.wikimedia.org/wiki/File:Piazza_del_Campidoglio,_Rome_(25918340096).jpg"
   },
+  "campo-marzio-piazza-del-popolo": {
+    "sha256": "c6a5aec09217883725ddda33f5914da20afd4f16620e20dbe2c769612967bfee",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Plaza_del_Pueblo,_Roma,_Italia,_2022-09-14,_DD_03.jpg"
+  },
   "castro-pretorio-porta-pia": {
     "sha256": "45ff73138232fcc960d7d0ca8416a29c4ba024dc17516b8e2f4349c358a040ea",
     "source_url": "https://commons.wikimedia.org/wiki/File:Rome_(IT),_Porta_Pia_--_2013_--_3342.jpg"
+  },
+  "celio-colosseo": {
+    "sha256": "bed746007eee3b0c61b8b649d5689e4f940e0b56487a4cc29e7c942395197d9a",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Coliseo,_Roma,_Italia,_2022-09-15,_DD_96.jpg"
   },
   "colonna-piazza-colonna-column-of-marcus-aurelius": {
     "sha256": "d108cd75a8261296f78d990ee9eb912d1699d78f7a54e01084b6ffb0ae17d83a",
@@ -31,13 +39,41 @@
     "sha256": "bb95cf8662883b4663b4ad4ab6cbc2499285c0adf3848c43119ce10ecb261908",
     "source_url": "https://commons.wikimedia.org/wiki/File:Bernini%27s_elephant_in_front_of_Santa_Maria_sopra_Minerva.jpg"
   },
+  "ponte-sant-angelo": {
+    "sha256": "9c4cc8d3ff5f57ea3441bd95d3e9a1b264bee0bda8a32fe63c1e7d29543f6ff8",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Ponte_Sant%27Angelo_(Rome)_01.jpg"
+  },
   "prati-palazzo-di-giustizia": {
     "sha256": "a8b2935b49263b0b25a57c98e5e334ff66c6adc73565c88d58a90f2717e4a04f",
     "source_url": "https://commons.wikimedia.org/wiki/File:Rome_(IT),_Corte_Suprema_di_Cassazione_--_2013_--_3787.jpg"
   },
+  "regola-palazzo-farnese": {
+    "sha256": "ea044a028c01152ecdb25cfe67c868320367eba3b84c6c42a1538e7ae0593ef4",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Palazzo_Farnese_in_Rome.jpg"
+  },
+  "ripa-tempio-di-ercole-vincitore": {
+    "sha256": "5f11405bc73ea3fe7016fec6ea6ee6915cf4b41a56123a2b2b4cc2ea6991d53d",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Temple_of_Hercules_Victor_Rome_April_2019.jpg"
+  },
   "sallustiano-santa-maria-della-vittoria-facade": {
     "sha256": "1c6adc112b2a997b45b030d92c2230c69d734675db47cda70fe641233022dfec",
     "source_url": "https://commons.wikimedia.org/wiki/File:Iglesia_de_Santa_Mar%C3%ADa_de_la_Victoria,_Roma,_Italia,_2022-09-16,_DD_31.jpg"
+  },
+  "san-saba-porta-san-paolo": {
+    "sha256": "a7cd6eae30db8af69932e7144bffd7f4b9f43a2a3813f31ba7dbe659d77f95aa",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Rome_(IT),_Porta_San_Paolo_--_2013_--_4064.jpg"
+  },
+  "sant-angelo-portico-d-ottavia": {
+    "sha256": "9a1894dab37b0768ec07cd769995674a69c5af348be04248ace5254e6ac5c8ba",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Roma-_Portico_d%27Ottavia_-_52350512476.jpg"
+  },
+  "sant-eustachio-santivo-alla-sapienza": {
+    "sha256": "a3b8e95b8a18cc3e2cd69a723e99badb6b3a168afd80de4447dcfa2b01ddfd4e",
+    "source_url": "https://commons.wikimedia.org/wiki/File:10_2023_Sant%27Ivo_alla_Sapienza,_Piazza_di_Sant%27Eustachio,_Roma,_Lazio,_00186,_Italia_(cupola_lanterna_facciata,_dorico_ionico_corinzio,_spirale)_-_Francesco_Borromini_-_Arte_Barocca_-_Photo_Paolo_FO232068.jpg"
+  },
+  "testaccio-piramide-cestia": {
+    "sha256": "072c91cb0ac524cc0f4c2c43ed744f67838b008f47d9001e2e488181d759eec4",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Pyramide_564.jpg"
   },
   "trastevere-fontana-acqua-paola": {
     "sha256": "6bbfe204912987dc3c1ba9f3516663d1b8a752549ffd4fcc83d519153d81b717",

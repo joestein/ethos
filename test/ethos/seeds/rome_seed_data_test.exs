@@ -140,7 +140,10 @@ defmodule Ethos.Seeds.RomeSeedDataTest do
     # geographic rankings
     ~r/\b(?:southern|northern|eastern|western)most\b/i,
     # "the one genuinely enterable museum", "the one building of X to survive"
-    ~r/\bthe one (?:genuinely|building|place|thing|source|entry)\b/i,
+    # "building" and "place" are NOT in this alternation. "the Oratory, the
+    # Biblioteca Vallicelliana and the Archivio share the one building" is a
+    # count of buildings, not a claim about which is best.
+    ~r/\bthe one (?:genuinely|thing|source|entry)\b/i,
     # claims about what visitors or guidebooks generally do
     ~r/\bmost (?:travellers|visitors|guidebooks|guides|people)\b/i,
     ~r/\bthe (?:single )?most likely\b/i,
@@ -189,7 +192,10 @@ defmodule Ethos.Seeds.RomeSeedDataTest do
     ~r/\bfootprint (?:test|score)s?\b/i,
     ~r/\btests? (?:wholly|cleanly|inside|into)\b/i,
     ~r/\bno vertex\b|\bvertices\b/i,
-    ~r/\b(?:during|for|in) (?:this |the )?research\b/i,
+    # The negative lookahead spares "identified in 2001, in research for the
+    # Clement XI exhibition" — somebody else's research, reported as a fact
+    # about the object. Ours is what this ban is about.
+    ~r/\b(?:during|for|in) (?:this |the )?research\b(?!\s+for\b)/i,
     ~r/\bthis research\b/i,
     ~r/\bindependent (?:checks?|research waves?|geometric methods?|geocoding methods?)\b/i,
     ~r/\b(?:was|were) probed\b/i,
@@ -253,7 +259,11 @@ defmodule Ethos.Seeds.RomeSeedDataTest do
   # on and no source states: "at the north end of the rione", "the top of the
   # hill above the square", "a visitor would take them for one block".
   @proximity_patterns [
-    ~r/\bat the (?:north|south|east|west|northern|southern|eastern|western|far|top|bottom) end\b/i,
+    # Requires a ZONE as the object. Without it this caught "the Capitolium at
+    # the north end" of a forum and "the bimah at the far end" of a prayer
+    # hall — positions inside a single structure, which is architectural
+    # description and exactly what a reader wants.
+    ~r/\bat the (?:north|south|east|west|northern|southern|eastern|western|far|top|bottom) end of (?:the )?(?:rione|quartiere|zone|town|city)\b/i,
     ~r/\bat the (?:northern|southern|eastern|western|far) edge\b/i,
     # "on the <direction> side of X" is NOT banned, and an earlier draft that
     # banned it was wrong. Sant'Agnese really is on the west side of Piazza
@@ -271,7 +281,11 @@ defmodule Ethos.Seeds.RomeSeedDataTest do
     ~r/\ba stone's throw\b/i,
     ~r/\bsteps (?:from|away)\b/i,
     ~r/\bwould take (?:it|them) for\b/i,
-    ~r/\bnot far from\b/i
+    ~r/\bnot far from\b/i,
+    # Flagged by a sweep agent: an explicitly banned shape that no pattern
+    # caught, because the ban had been written around distance and direction
+    # rather than around the invitation.
+    ~r/\bworth the walk\b/i
   ]
 
   # Adjacency that must keep publishing: a physical relationship between two
@@ -281,6 +295,65 @@ defmodule Ethos.Seeds.RomeSeedDataTest do
     "A small circular building standing in a cloister attached to the church.",
     "Via Scossacavalli separates it from Palazzo dei Penitenzieri.",
     "The Sovrintendenza gives the distance as 300 metres."
+  ]
+
+  # ------------------------------------------------------------------
+  # The self-reference ban
+  # ------------------------------------------------------------------
+  #
+  # A sibling of the method ban and, by volume, worse. Where that one leaked
+  # HOW THE RESEARCH WAS DONE, this leaks HOW THE CORPUS ADJUDICATED — the page
+  # explaining to a traveller which rione won an ownership argument, what it has
+  # decided not to carry, and which of its sibling pages holds the thing you
+  # were looking for:
+  #
+  #   "all stand on it and are written here"
+  #   "the square is not written as a place by either rione"
+  #   "belongs to Castro Pretorio and is written there"
+  #   "This page cannot tell you. No restaurant is written here, and the
+  #    absence is a gap in this guide"
+  #   "an honest guide to a residential quartiere rather than a complete
+  #    portrait of it"
+  #
+  # Wave 5's reviewers found fifteen in one file and a whole section of it in
+  # another. All of it is true, and none of it is addressed to the reader: a
+  # page with no restaurants simply does not list restaurants. It does not
+  # announce that it has none, and it certainly does not explain why.
+  #
+  # The distinction from the permitted refusal is the SUBJECT. "No source states
+  # its opening hours, so none are given here" is about the FACT and publishes.
+  # "It is not written here" is about the PAGE and does not.
+  @self_reference_patterns [
+    ~r/\b(?:is|are|was|were)\s+(?:not\s+)?written\s+(?:here|there|on this page|as a place|in\b)/i,
+    ~r/\bwritten (?:under|by) (?:the\s+)?(?:rione|quartiere|[A-Z])/,
+    ~r/\bon this page\b/i,
+    ~r/\bthis page (?:carries|holds|cannot|does not|gives|says|stops|publishes)\b/i,
+    ~r/\bthis guide (?:carries|holds|writes|does not pretend|gives none)\b/i,
+    ~r/\bbelongs? to [A-Z][\w']+(?:'s)? (?:page|guide)\b/,
+    ~r/\bin that (?:rione|quartiere)'s guide\b/i,
+    ~r/\ba gap in this guide\b/i,
+    ~r/\b(?:is|are) (?:recorded|reported|gathered|named) here\b/i,
+    ~r/\bnothing is claimed for (?:them|it) here\b/i,
+    ~r/\bneither (?:guide|rione) writes\b/i,
+    ~r/\brather than a complete portrait\b/i,
+    ~r/\bis a separate record\b/i,
+    # Reported by the sweep agents from inside their own files as the same
+    # defect in a phrasing the pattern set walked past. "This record claims
+    # nothing on the right bank" is the page describing the limits of its own
+    # assertion, which is exactly what this ban is for.
+    ~r/\bthis record (?:claims|carries|states|holds)\b/i,
+    ~r/\bnothing here should be read as\b/i,
+    ~r/\b(?:deliberately )?absent from this page\b/i
+  ]
+
+  # The permitted refusal and the ordinary uses of "here" that must keep
+  # publishing. Every one of these is about a fact or a place; none is about
+  # the page.
+  @self_reference_specimens [
+    "No source states its opening hours, so none are given here.",
+    "No admission price is stated.",
+    "The church stands here, at the corner of via Merulana.",
+    "Roma Capitale records a restoration carried out in 2025."
   ]
 
   # Prose that mentions sources or absence of them WITHOUT narrating the
@@ -575,6 +648,39 @@ defmodule Ethos.Seeds.RomeSeedDataTest do
              Enum.map_join(offenders, "\n", fn {n, t} -> "  #{n}: #{t}" end)
   end
 
+  defp self_reference_hit?(text) do
+    Enum.any?(@self_reference_patterns, &Regex.match?(&1, text))
+  end
+
+  test "the self-reference ban separates the page from the fact" do
+    assert self_reference_hit?("The square is not written as a place by either rione."),
+           "an ownership adjudication slipped through"
+
+    assert self_reference_hit?("The monument belongs to Castro Pretorio and is written there."),
+           "a pointer to a sibling page slipped through"
+
+    assert self_reference_hit?("This page cannot tell you."), "a page self-reference slipped through"
+
+    for specimen <- @self_reference_specimens do
+      refute self_reference_hit?(specimen),
+             "the self-reference ban rejected prose that must publish: #{specimen}"
+    end
+  end
+
+  test "no committed rome prose adjudicates its own coverage" do
+    offenders =
+      for {name, doc} <- decoded_files(),
+          text <- prose(doc),
+          self_reference_hit?(text) do
+        {name, String.slice(text, 0, 140)}
+      end
+
+    assert offenders == [],
+           "rome prose explains its own editorial decisions to the reader. A page with no " <>
+             "restaurants does not list restaurants; it does not announce that it has none:\n" <>
+             Enum.map_join(offenders, "\n", fn {n, t} -> "  #{n}: #{t}" end)
+  end
+
   test "no committed rome prose narrates the research" do
     offenders =
       for {name, doc} <- decoded_files(),
@@ -605,7 +711,7 @@ defmodule Ethos.Seeds.RomeSeedDataTest do
   # shut to visitors indefinitely. The check found five genuine contradictions
   # before this narrowing and three false ones; the five all survive it.
   defp closed_to_visitors do
-    ~r/\b(?:(?:is|are|remains?|stays?)\s+(?:currently\s+|permanently\s+|temporarily\s+)?closed to the public|(?:is|are)\s+not open to the public|cannot be (?:entered|visited)|no walk-in|not on a walk-in basis|closed since \d{4}|not a building (?:a visitor )?can walk into)\b/i
+    ~r/\b(?:(?:is|are|remains?|stays?)\s+(?:currently\s+|permanently\s+|temporarily\s+)?closed to the public|(?:is|are)\s+not open to the public|cannot be (?:entered|visited)|no walk-in|not on a walk-in basis|closed since \d{4}|not a building (?:a visitor )?can walk into|does not offer (?:regular )?public visits)\b/i
   end
 
   # Every false positive this check produced had the same shape: the thing that
@@ -842,21 +948,37 @@ defmodule Ethos.Seeds.RomeSeedDataTest do
 
       assert is_map(doc["guide"]), "#{Path.basename(path)} has no guide object"
 
-      assert doc["guide"]["state"] == "Italy",
-             "#{Path.basename(path)} does not carry state \"Italy\", so it will not " <>
-               "route under /destinations/italy/rome"
+      # Vatican City is the one file in this directory that is NOT in Italy and
+      # NOT in Rome. It sits here because a traveller planning Rome needs it and
+      # because the rione files link to it, but it is a sovereign state: giving
+      # it state "Italy" would publish a false claim, and would make
+      # StructuredData emit addressCountry IT for St Peter's.
+      #
+      # So it carries its own state and routes to its own destination rather
+      # than under /destinations/italy/rome. That is not an exception grudgingly
+      # made; it is the vatican_ruling applied to the two fields that encode
+      # where a thing is.
+      {expected_state, expected_county} =
+        if Path.basename(path) == "vatican-city.json",
+          do: {"Vatican City", "Vatican City"},
+          else: {"Italy", "Rome"}
 
-      assert doc["guide"]["county"] == "Rome",
-             "#{Path.basename(path)} does not carry county \"Rome\""
+      assert doc["guide"]["state"] == expected_state,
+             "#{Path.basename(path)} carries state #{inspect(doc["guide"]["state"])}, " <>
+               "expected #{inspect(expected_state)}"
+
+      assert doc["guide"]["county"] == expected_county,
+             "#{Path.basename(path)} carries county #{inspect(doc["guide"]["county"])}, " <>
+               "expected #{inspect(expected_county)}"
     end
 
     SeedDataHelpers.assert_place_slugs_globally_unique!()
   end
 
-  # Delete this @tag when the last in-scope wave lands — 31 zones — and not
-  # before: until then the corpus is a prefix of the in-scope set and this
-  # fails by construction.
-  @tag :pending_rome
+  # Tag removed 2026-09-03 by the last in-scope wave, which landed Vatican City
+  # and brought the corpus to all thirty-one zones: 22 rioni, 8 tier-1
+  # quartieri and the sovereign state. Roster equality now holds in both
+  # directions and this runs on every suite.
   test "the shipped rome corpus matches the in-scope roster exactly" do
     expected = in_scope_slugs()
 

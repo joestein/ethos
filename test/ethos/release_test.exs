@@ -223,9 +223,16 @@ defmodule Ethos.ReleaseTest do
     user = user_fixture()
     expected = length(SeedDataHelpers.seed_files("rome"))
 
+    # Counts BOTH counties the directory publishes. Thirty of its thirty-one
+    # files carry county "Rome"; vatican-city.json carries "Vatican City",
+    # because a sovereign state is not in the Metropolitan City of Rome and
+    # saying so would be false. Counting only "Rome" asserts 30 against a
+    # directory of 31.
+    rome_counties = ["Rome", "Vatican City"]
+
     before =
       Ethos.Guides.list_published_guides()
-      |> Enum.count(&(&1.county == "Rome"))
+      |> Enum.count(&(&1.county in rome_counties))
 
     output = capture_io(fn -> Ethos.Release.seed_rome_zones(user.email) end)
 
@@ -257,7 +264,7 @@ defmodule Ethos.ReleaseTest do
 
     after_first =
       Ethos.Guides.list_published_guides()
-      |> Enum.count(&(&1.county == "Rome"))
+      |> Enum.count(&(&1.county in rome_counties))
 
     assert after_first - before == expected
 
@@ -265,7 +272,7 @@ defmodule Ethos.ReleaseTest do
 
     after_second =
       Ethos.Guides.list_published_guides()
-      |> Enum.count(&(&1.county == "Rome"))
+      |> Enum.count(&(&1.county in rome_counties))
 
     assert after_second == after_first, "seed_rome_zones/1 is not idempotent"
   end

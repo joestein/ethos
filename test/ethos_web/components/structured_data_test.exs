@@ -79,6 +79,7 @@ defmodule EthosWeb.StructuredDataTest do
       # labelled US.
       expected = fn
         "Italy" -> "IT"
+        "Vatican City" -> "VA"
         _ -> "US"
       end
 
@@ -140,7 +141,11 @@ defmodule EthosWeb.StructuredDataTest do
       # anywhere. The parser holds those to a thoroughfare-type test instead,
       # which is asserted in test/ethos/places/address_test.exs; what matters
       # here is that the American rule did not quietly loosen when Rome landed.
-      for {raw, region, ld} <- with_region, region != "Italy", street = ld["streetAddress"] do
+      # Vatican City joins Italy here rather than defaulting into the American
+      # rule: "Piazza San Pietro" carries no house number and never will.
+      for {raw, region, ld} <- with_region,
+          region not in ["Italy", "Vatican City"],
+          street = ld["streetAddress"] do
         assert Regex.match?(~r/^\d/, street),
                "streetAddress without a house number: #{inspect(street)} (from #{inspect(raw)})"
 
@@ -155,9 +160,12 @@ defmodule EthosWeb.StructuredDataTest do
       # unguarded. Without this, a descriptive location would publish as a
       # street the moment the house-number rule stopped applying to it.
       thoroughfare =
-        ~r/^(?:via|viale|vicolo|vico|piazza|piazzale|piazzetta|largo|corso|borgo|lungotevere|salita|clivo|circonvallazione|ponte|passeggiata|galleria|portico|strada|foro|campo|arco|scalinata|molo|monte)\b/i
+        ~r/^(?:via|viale|vicolo|vico|piazza|piazzale|piazzetta|largo|corso|borgo|lungotevere|salita|clivo|circonvallazione|ponte|passeggiata|galleria|portico|strada|foro|campo|arco|scalinata|molo|monte|lungomare|quadrato|parco)\b/i
 
-      italian = Enum.filter(with_region, fn {_, region, _} -> region == "Italy" end)
+      italian =
+        Enum.filter(with_region, fn {_, region, _} ->
+          region in ["Italy", "Vatican City"]
+        end)
 
       assert italian != [], "no Italian address reached the emitter — the scope guard is vacuous"
 
@@ -678,10 +686,36 @@ defmodule EthosWeb.StructuredDataTest do
       # American pin holds at 48 and the Italian lines are held to their own
       # shape.
 
-      assert length(emitted) == 3221
-      assert count.(& &1["streetAddress"]) == 2616
-      assert count.(&is_nil(&1["streetAddress"])) == 605
-      assert count.(& &1["postalCode"]) == 2355
+      #
+      # Re-measured 2026-09-03 after Rome wave 5 and Vatican City, which COMPLETE
+      # the city at all thirty-one zones: 22 rioni, 8 tier-1 quartieri and the
+      # sovereign state. 1,012 addressed Roman places and 6 Vatican ones.
+      #
+      #   * total 3221 -> 3535.
+      #   * `streetAddress` 2616 -> 2927. Every one of the 1,012 Roman addresses
+      #     yields a street line. Getting there took three more thoroughfare
+      #     types — lungomare, quadrato and parco, from Ostia's seafront, EUR's
+      #     grid and Villa Borghese — and one address in Ardeatino that had lost
+      #     its ", Roma RM" tail.
+      #   * `is_nil(streetAddress)` 605 -> 608. The three are VATICAN, not
+      #     Roman: the Necropolis publishes "00120 Citta del Vaticano" with no
+      #     street at all, and the Museums publish "Viale Vaticano, 00165 Rome"
+      #     in English with no province. Both are faithful to what those
+      #     institutions publish, and neither is worth rewriting to satisfy a
+      #     parser.
+      #   * `postalCode` 2355 -> 2550. locality-only UNCHANGED at 302, which is
+      #     the check that nothing regressed into the worst shape.
+      #
+      # St Peter's parses because `@vatican` was added: Vatican addresses carry
+      # no province code, so the Italian pattern — which requires one — matched
+      # none of them. It is a separate pattern rather than a loosening of the
+      # Italian one, so the Vatican form has to be recognised deliberately
+      # rather than fallen into.
+
+      assert length(emitted) == 3535
+      assert count.(& &1["streetAddress"]) == 2927
+      assert count.(&is_nil(&1["streetAddress"])) == 608
+      assert count.(& &1["postalCode"]) == 2550
 
       # The largest behavioural delta this change ships: 302 places emit a
       # PostalAddress carrying only locality, region and country. Their full

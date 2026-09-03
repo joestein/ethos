@@ -145,7 +145,13 @@ defmodule EthosWeb.StructuredData do
   # A country name is not a region, so when one is matched here the region is
   # dropped rather than emitted: Italy is the country, and the corpus does not
   # carry Lazio. `addressLocality` still ships the rione.
-  @country_by_region %{"Italy" => "IT"}
+  # "Vatican City" is here for the same reason the whole map is: a place inside
+  # it is not in Italy, and emitting IT for St Peter's would be the same class
+  # of error as the hardcoded "US" this replaced. The corpus carries it as its
+  # own state because it is a sovereign one — it routes to its own destination
+  # rather than under Rome, which is correct and is why the Rome seed gate
+  # exempts that one file from its Italy/Rome assertion.
+  @country_by_region %{"Italy" => "IT", "Vatican City" => "VA"}
 
   def postal_address(address, locality, region) do
     parsed = Ethos.Places.Address.parse(address)

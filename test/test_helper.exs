@@ -93,6 +93,11 @@ ExUnit.start()
 #
 #     mix test --include pending_rome
 #
-ExUnit.configure(exclude: [:pending_wave, :pending_bronx, :pending_rome])
+# :pending_rome removed 2026-09-03 by the last in-scope wave, which landed
+# Vatican City and brought Rome to all thirty-one zones. Its own `@tag` came
+# off with it, so the tag now names nothing and excluding it would only hide a
+# future typo. The single-call rule above still binds: this list is edited in
+# place, never by adding a second ExUnit.configure/1.
+ExUnit.configure(exclude: [:pending_wave, :pending_bronx])
 
 Ecto.Adapters.SQL.Sandbox.mode(Ethos.Repo, :manual)

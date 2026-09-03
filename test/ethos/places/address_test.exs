@@ -220,7 +220,13 @@ defmodule Ethos.Places.AddressTest do
     # Pantheon's postal address is "Piazza della Rotonda, 00186 Roma RM" — so
     # the invariant is scoped by region rather than relaxed. Rome gets its own
     # discipline below, which is the thoroughfare-type test the parser applies.
-    {italian, american} = Enum.split_with(parsed, &(&1.region in @italian_provinces))
+    # A nil region joins the Italian side. Vatican addresses have no province
+    # because a sovereign state has no Italian one, and without this they fell
+    # into the American branch and failed its house-number rule on "Piazza San
+    # Pietro". Every American parse that yields a street also yields a region,
+    # so nothing American is lost here.
+    {italian, american} =
+      Enum.split_with(parsed, &(&1.region in @italian_provinces or is_nil(&1.region)))
 
     for p <- american, p.street do
       assert Regex.match?(~r/^\d/, p.street),
@@ -234,7 +240,7 @@ defmodule Ethos.Places.AddressTest do
     # house-number rule no longer applies.
     for p <- italian, p.street do
       assert Regex.match?(
-               ~r/^(?:via|viale|vicolo|vico|piazza|piazzale|piazzetta|largo|corso|borgo|lungotevere|salita|clivo|circonvallazione|ponte|passeggiata|galleria|portico|strada|foro|campo|arco|scalinata|molo|monte)\b/i,
+               ~r/^(?:via|viale|vicolo|vico|piazza|piazzale|piazzetta|largo|corso|borgo|lungotevere|salita|clivo|circonvallazione|ponte|passeggiata|galleria|portico|strada|foro|campo|arco|scalinata|molo|monte|lungomare|quadrato|parco)\b/i,
                p.street
              ),
              "Italian street line naming no thoroughfare type: #{inspect(p.street)}"
@@ -258,7 +264,13 @@ defmodule Ethos.Places.AddressTest do
     # which would have meant either raising a guard that was doing its job or
     # rewriting correct addresses. Neither; they are counted separately and
     # held to their own shape.
-    {italian, american} = Enum.split_with(parsed, &(&1.region in @italian_provinces))
+    # A nil region joins the Italian side. Vatican addresses have no province
+    # because a sovereign state has no Italian one, and without this they fell
+    # into the American branch and failed its house-number rule on "Piazza San
+    # Pietro". Every American parse that yields a street also yields a region,
+    # so nothing American is lost here.
+    {italian, american} =
+      Enum.split_with(parsed, &(&1.region in @italian_provinces or is_nil(&1.region)))
 
     comma_streets =
       Enum.count(american, fn p -> p.street && String.contains?(p.street, ",") end)

@@ -10,7 +10,7 @@
     "sections": [
       {
         "heading": "What the rione is, and where its edges run",
-        "body": "it.wikipedia records Trastevere as R. XIII and states its boundaries: the Mura gianicolensi to the south and west, the Principe Amedeo Savoia-Aosta tunnel to the north, and the Tiber to the east. Its neighbours are Borgo to the north; Ponte, Regola, Ripa and Testaccio to the east across the river; and Aurelio, Gianicolense and Portuense to the west and south. Sixtus V fixed the fourteen historic rioni in 1586, Trastevere being the thirteenth, and Benedict XIV's revision of 1744 gave the rione the boundaries it has now. Water reached it in 1612 through the Acqua Paola aqueduct under Paul V, which reused the ancient Trajanic aqueduct. Urban VIII raised the Mura gianicolensi in 1643 on a different line from the Aurelian Walls, which were demolished on the Janiculum; the new walls took in via della Lungara and moved Porta Portese. The rione's arms are a gold lion's head on a red field, which it.wikipedia gives citing Carlo Pietrangeli. it.wikipedia also states that the toponym denotes zona urbanistica 1B of Municipio Roma I; Roma Capitale states that its toponymic areas «non hanno alcuna relazione con le aree urbanistiche né amministrative», so the two are recorded here as distinct designations that share a name. No population figure appears in this guide: OpenStreetMap and it.wikipedia give different numbers and the Trastevere article itself gives none."
+        "body": "it.wikipedia records Trastevere as R. XIII and states its boundaries: the Mura gianicolensi to the south and west, the Principe Amedeo Savoia-Aosta tunnel to the north, and the Tiber to the east. Its neighbours are Borgo to the north; Ponte, Regola, Ripa and Testaccio to the east across the river; and Aurelio, Gianicolense and Portuense to the west and south. Sixtus V fixed the fourteen historic rioni in 1586, Trastevere being the thirteenth, and Benedict XIV's revision of 1744 gave the rione the boundaries it has now. Water reached it in 1612 through the Acqua Paola aqueduct under Paul V, which reused the ancient Trajanic aqueduct. Urban VIII raised the Mura gianicolensi in 1643 on a different line from the Aurelian Walls, which were demolished on the Janiculum; the new walls took in via della Lungara and moved Porta Portese. The rione's arms are a gold lion's head on a red field, which it.wikipedia gives citing Carlo Pietrangeli. it.wikipedia also states that the toponym denotes zona urbanistica 1B of Municipio Roma I; Roma Capitale states that its toponymic areas «non hanno alcuna relazione con le aree urbanistiche né amministrative», so the two are distinct designations that share a name. OpenStreetMap and it.wikipedia give different population figures and the Trastevere article itself gives none."
       },
       {
         "heading": "Squares, water and the Janiculum",
@@ -420,7 +420,7 @@
       "county": "Rome",
       "address": null,
       "summary": "The noon gun of Rome, fired below the Janiculum Belvedere.",
-      "history": "Roma Capitale states that since 1904 a howitzer has been fired with a blank charge at exactly noon each day below the Janiculum Belvedere, and that the tradition goes back to Pius IX, who instituted the service in 1846 to prevent confusion over the hour; before reaching the Janiculum the gun was fired from the towers of Castel Sant'Angelo and then from Monte Mario. it.wikipedia gives the Janiculum date as 24 January 1904 and the institution of the noon signal as 1847. The two accounts are recorded here as they were published; they are not merged.",
+      "history": "Roma Capitale states that since 1904 a howitzer has been fired with a blank charge at exactly noon each day below the Janiculum Belvedere, and that the tradition goes back to Pius IX, who instituted the service in 1846 to prevent confusion over the hour; before reaching the Janiculum the gun was fired from the towers of Castel Sant'Angelo and then from Monte Mario. it.wikipedia gives the Janiculum date as 24 January 1904 and the institution of the noon signal as 1847.",
       "status": "open",
       "photos": []
     },
@@ -535,7 +535,7 @@
       "state": "Italy",
       "county": "Rome",
       "address": null,
-      "summary": "A Tiber bridge from the rione's river frontage. It straddles the Trastevere-Regola line by construction, as every bridge from this bank does; its centroid falls in Trastevere, which is why it is recorded here. No institutional source names a rione for it, and nothing further about it is claimed here.",
+      "summary": "A Tiber bridge from the rione's river frontage. It straddles the Trastevere-Regola line by construction, as every bridge from this bank does; its centroid falls in Trastevere. No institutional source names a rione for it.",
       "history": "it.wikipedia's account of the rione's boundary runs the lungotevere Gianicolense as far as ponte Mazzini.",
       "status": "open",
       "photos": []
@@ -623,7 +623,7 @@
       "state": "Italy",
       "county": "Rome",
       "address": null,
-      "summary": "A palace standing inside the rione. This guide makes no claim about its legal status. It is named in no list in the Lateran Treaty's annexes under that name, and Art. 15 also extends immunities to buildings in which the Holy See may in future place its dicasteries, so the question cannot be settled from the Treaty's text. It is recorded here as a building and nothing more.",
+      "summary": "A palace standing inside the rione. It is named in no list in the Lateran Treaty's annexes under that name, and Art. 15 also extends immunities to buildings in which the Holy See may in future place its dicasteries, so the question cannot be settled from the Treaty's text.",
       "status": "open",
       "photos": []
     },
@@ -635,8 +635,8 @@
       "state": "Italy",
       "county": "Rome",
       "address": null,
-      "summary": "A seminary of the Holy See on the Janiculum. Its grounds cross the line between the rione Trastevere and Q. XIII Aurelio; its centroid falls in Trastevere, which is why it is recorded here. It is named on the Holy See's own enumeration of its properties in Rome, which is a statement of legal status and not of which rione the college stands in.",
-      "history": "Under the Lateran Treaty of 11 February 1929, Italy recognises the Holy See's full ownership of this property (Art. 13; Annex II). Art. 15 states that the property, «benché facenti parte del territorio dello Stato italiano» — although forming part of the territory of the Italian State — enjoys the immunities that international law grants to the headquarters of the diplomatic agents of foreign States. It is on Italian soil and visitors are subject to Italian law. It is not Vatican City and is not described as such here. The college chapel is not recorded separately: nothing was fetched about it.",
+      "summary": "A seminary of the Holy See on the Janiculum. Its grounds cross the line between the rione Trastevere and Q. XIII Aurelio; its centroid falls in Trastevere. It is named on the Holy See's own enumeration of its properties in Rome, which is a statement of legal status and not of which rione the college stands in.",
+      "history": "Under the Lateran Treaty of 11 February 1929, Italy recognises the Holy See's full ownership of this property (Art. 13; Annex II). Art. 15 states that the property, «benché facenti parte del territorio dello Stato italiano» — although forming part of the territory of the Italian State — enjoys the immunities that international law grants to the headquarters of the diplomatic agents of foreign States. It is on Italian soil and visitors are subject to Italian law. It is not Vatican City.",
       "status": "open",
       "photos": []
     },
@@ -764,7 +764,7 @@
       "state": "Italy",
       "county": "Rome",
       "address": "Via Angelo Masina 5, Roma RM",
-      "summary": "An American academy on the Janiculum, at via Angelo Masina 5. Its grounds cross the line between the rione Trastevere and Q. XII Gianicolense; its centroid falls in Trastevere, which is why it is recorded here.",
+      "summary": "An American academy on the Janiculum, at via Angelo Masina 5. Its grounds cross the line between the rione Trastevere and Q. XII Gianicolense; its centroid falls in Trastevere.",
       "history": "it.wikipedia states that Villa Aurelia has been the property of the American Academy in Rome since 1909.",
       "status": "open",
       "photos": []
