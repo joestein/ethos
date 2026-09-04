@@ -47,7 +47,17 @@
         "answer": "Piccino is at 1001 Minnesota Street, serving dinner Wednesday to Sunday from 5pm to 9pm, lunch Wednesday to Friday from 11am to 2pm, and brunch Saturday and Sunday from 11am to 2pm, closed Mondays and Tuesdays. Giuliana's Just For You Cafe at 732 22nd Street opens Monday to Friday from 7:30 and Saturday and Sunday from 8:00. Wolfsbane at 2495 Third Street opens Tuesday to Saturday from 17:30. Butter& at 690 Indiana Street opens Sunday from 10:00 and Tuesday to Saturday from 10:00, closed Monday, and Kin Khao Eatery shares the same address. Olivier's Butchery at 1192 Illinois Street opens Wednesday from 11:00 and Thursday to Sunday from 10:00."
       }
     ],
-    "photos": []
+    "photos": [
+      {
+        "src": "/photos/us/ca/san-francisco/dogpatch/dogpatch-union-iron-works-machine-shop.jpg",
+        "thumb": "/photos/us/ca/san-francisco/dogpatch/dogpatch-union-iron-works-machine-shop_thumb.jpg",
+        "title": "The Union Iron Works machine shop, Building 113, at Pier 70",
+        "description": "The brick machine shop known as Building 113 in the Union Iron Works Historic District at Pier 70, seen from the street in September 2018.",
+        "author": "Pi.1415926535",
+        "license": "CC BY-SA 3.0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Union_Iron_Works_building_on_Pier_70,_September_2018.JPG"
+      }
+    ]
   },
   "places": [
     {

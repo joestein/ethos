@@ -43,7 +43,17 @@
         "answer": "Douglass Playground, 1098 Douglass Street, covers 7.89 acres or 343,572.33 square feet. The Upper Noe Recreation Center, 295 Day Street, covers 2.92 acres or 127,111.67 square feet. Noe Valley Courts, 780 Douglass Street, covers 1.10 acres. 29th & Diamond Open Space, 1701 Diamond Street, covers 0.93 acres. Duncan & Castro Open Space, 592 Duncan Street, covers 0.65 acres. The Clipper Terrace Community Garden, 855 Clipper Terrace, covers 0.47 acres and is owned by San Francisco Public Works. Billy Goat Hill, 294 Beacon Street, covers 3.67 acres, and Portola Open Space covers 0.81 acres and has no street address."
       }
     ],
-    "photos": []
+    "photos": [
+      {
+        "src": "/photos/us/ca/san-francisco/noe-valley/noe-valley-axford-house.jpg",
+        "thumb": "/photos/us/ca/san-francisco/noe-valley/noe-valley-axford-house_thumb.jpg",
+        "title": "The Axford House at 1190 Noe Street",
+        "description": "The Axford House, San Francisco Landmark No. 133, stands at the corner of Noe and 25th Streets in Noe Valley.",
+        "author": "BriefEdits",
+        "license": "CC BY-SA 4.0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:1190_Noe_Street,_exterior,_San_Francisco_(April_2024)_01.jpg"
+      }
+    ]
   },
   "places": [
     {

@@ -43,7 +43,17 @@
         "answer": "Ghirardelli Square, at 900 North Point Street, is San Francisco Landmark No. 30, designated in 1970, and was listed on the National Register of Historic Places on 29 April 1982 as Pioneer Woolen Mills and D. Ghirardelli Company, reference number 82002249. The Haslett Warehouse at 680 Beach Street, which now holds the Argonaut Hotel and the national park's visitor center, is San Francisco Landmark No. 59, designated in 1974, and was listed on the National Register on 28 March 1975, reference number 75000172. Neither Pier 39 nor Pier 43, Pier 45 or the Musee Mecanique appears on the Article 10 list."
       }
     ],
-    "photos": []
+    "photos": [
+      {
+        "src": "/photos/us/ca/san-francisco/fishermans-wharf/wharf-ghirardelli-square.jpg",
+        "thumb": "/photos/us/ca/san-francisco/fishermans-wharf/wharf-ghirardelli-square_thumb.jpg",
+        "title": "Ghirardelli Square from North Point Street",
+        "description": "The brick buildings of Ghirardelli Square at 900 North Point Street, with the rooftop Ghirardelli sign above them, seen from street level in daylight.",
+        "author": "The wub",
+        "license": "CC BY-SA 4.0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Ghirardelli_Square,_San_Francisco_2023-07-20.jpg"
+      }
+    ]
   },
   "places": [
     {

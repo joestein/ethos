@@ -51,7 +51,17 @@
         "answer": "Mariposa Street is the line between them, and the city's neighbourhood polygons put Mission Bay's southern edge on that street. Dogpatch runs south from Mariposa Street to Cesar Chavez Street and holds the Pier 70 yard, the Museum of Craft and Design, the Minnesota Street Project and Esprit Park."
       }
     ],
-    "photos": []
+    "photos": [
+      {
+        "src": "/photos/us/ca/san-francisco/mission-bay/mission-bay-chase-center.jpg",
+        "thumb": "/photos/us/ca/san-francisco/mission-bay/mission-bay-chase-center_thumb.jpg",
+        "title": "Chase Center and the Thrive City west plaza",
+        "description": "The west facade of Chase Center at 1 Warriors Way, seen across the Thrive City plaza from the Third Street side.",
+        "author": "9yz",
+        "license": "CC BY 4.0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Chase_Center_Thrive_City_%26_West_Plaza_-_May_2025.jpg"
+      }
+    ]
   },
   "places": [
     {

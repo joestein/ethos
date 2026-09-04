@@ -47,7 +47,17 @@
         "answer": "The Old San Francisco Mint at 88 Fifth Street was listed on the National Register of Historic Places in 1966, reference number 66000231, and designated a National Historic Landmark in 1961; it is also California Historical Landmark No. 875. The James R. Browning United States Court of Appeals Building at 95 Seventh Street was listed on the National Register of Historic Places in 1971, reference number 71000188, and designated a National Historic Landmark. James Knox Taylor, Supervising Architect of the Treasury, designed the courthouse and it was built between 1897 and 1905."
       }
     ],
-    "photos": []
+    "photos": [
+      {
+        "src": "/photos/us/ca/san-francisco/soma/soma-old-mint.jpg",
+        "thumb": "/photos/us/ca/san-francisco/soma/soma-old-mint_thumb.jpg",
+        "title": "The Fifth Street portico of the Old San Francisco Mint",
+        "description": "The columned portico and pediment of the Old San Francisco Mint at 88 Fifth Street, designed by Alfred B. Mullett and built between 1869 and 1874.",
+        "author": "Beyond My Ken",
+        "license": "CC BY-SA 4.0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:2017_Old_San_Francisco_Mint_Building_main_entrance.jpg"
+      }
+    ]
   },
   "places": [
     {

@@ -47,7 +47,17 @@
         "answer": "No. San Francisco's historic-districts dataset carries a group of districts in and around the neighbourhood — the Marina Historic District, the Marina Corporation Residential Historic District and its Extension, the Baker Street Historic District, the Baker Street Period Revival Bungalows Historic District, the Cow Hollow First Bay Tradition Historic District and the Lombard Street Historic District — and every one of them has the status eligible, under a planning case number rather than a register identifier. Eligible is not a designation and carries no protection, so none of those districts has any."
       }
     ],
-    "photos": []
+    "photos": [
+      {
+        "src": "/photos/us/ca/san-francisco/marina/marina-palace-of-fine-arts.jpg",
+        "thumb": "/photos/us/ca/san-francisco/marina/marina-palace-of-fine-arts_thumb.jpg",
+        "title": "The Palace of Fine Arts rotunda and colonnade across the lagoon",
+        "description": "The domed rotunda of the Palace of Fine Arts at 3301 Lyon Street, with the curved colonnade running away on either side and reflected in the lagoon in front of it.",
+        "author": "Carol M. Highsmith",
+        "license": "Public domain",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Palace_of_Fine_Arts,_San_Francisco,_California.jpg"
+      }
+    ]
   },
   "places": [
     {

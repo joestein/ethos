@@ -47,7 +47,17 @@
         "answer": "The Golden Gate Bridge Welcome Center stands at the south end of the bridge plaza and opens 9 a.m. to 6 p.m. seven days a week, except Thanksgiving and Christmas. It holds construction artefacts, among them rivets and workers' hard hats, and a 12-foot stainless steel test tower of 1933. The bridge itself measures 8,981 feet in total length, with a main span of 4,200 feet, towers standing 746 feet above the water and a roadway 62 feet wide."
       }
     ],
-    "photos": []
+    "photos": [
+      {
+        "src": "/photos/us/ca/san-francisco/presidio/presidio-fort-point.jpg",
+        "thumb": "/photos/us/ca/san-francisco/presidio/presidio-fort-point_thumb.jpg",
+        "title": "Fort Point beneath the Golden Gate Bridge",
+        "description": "Fort Point, the masonry seacoast fort built between 1853 and 1861, stands beneath the steel arch that carries the Golden Gate Bridge over it, with Marine Drive along the shore and the Marin Headlands across the strait.",
+        "author": "ThomasLendt",
+        "license": "CC BY-SA 4.0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Golden_Gate_Bridge_with_Fort_Point.jpg"
+      }
+    ]
   },
   "places": [
     {

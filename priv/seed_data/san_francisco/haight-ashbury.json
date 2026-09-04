@@ -43,7 +43,17 @@
         "answer": "The clinic operated from 7 June 1967 until July 2019. It merged with Walden House in 2011, and in 2012 the combined organisation took the name HealthRIGHT 360. No source states a street address for the clinic, so none is given here."
       }
     ],
-    "photos": []
+    "photos": [
+      {
+        "src": "/photos/us/ca/san-francisco/haight-ashbury/haight-ashbury-haight-and-ashbury-corner.jpg",
+        "thumb": "/photos/us/ca/san-francisco/haight-ashbury/haight-ashbury-haight-and-ashbury-corner_thumb.jpg",
+        "title": "The corner of Haight Street and Ashbury Street",
+        "description": "The three-storey Victorian commercial block on the corner of Haight Street and Ashbury Street, with shops at pavement level and the Haight and Ashbury street-sign blades on the pole in front of it.",
+        "author": "Mike McBey",
+        "license": "CC BY 2.0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Haight-Ashbury_(45611872144).jpg"
+      }
+    ]
   },
   "places": [
     {

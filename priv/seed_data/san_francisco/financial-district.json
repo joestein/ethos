@@ -43,7 +43,17 @@
         "answer": "Tadich Grill at 240 California Street opens Monday to Friday from 11:00am to 9:00pm and Saturday from 4:00pm to 9:00pm, and closes on Sunday; the telephone number is (415) 391-1849. Sam's Grill & Seafood at 374 Bush Street opens Monday to Friday from 11:00 AM to 9:00 PM and Saturday from 5:30 PM to 9:00 PM, closing on Sundays and major holidays; Sam's Tavern next door at 368 Bush Street runs its kitchen Monday to Friday from 9:30 AM to 9:00 PM with the bar until 10pm, and Saturday and Sunday from 10:00 AM to 5:00 PM. Perbacco at 230 California Street opens Tuesday to Friday from 11:30 am to 9:00 pm and Saturday from 5:30 pm to 9:00 pm, and closes on Sunday. Wayfare Tavern at 201 Pine Street opens Sunday to Wednesday from 11:30 am to 9:00 pm and Thursday to Saturday from 11:30 am to 10:00 pm. For Schroeder's at 240 Front Street, no source states opening hours, so none are given here."
       }
     ],
-    "photos": []
+    "photos": [
+      {
+        "src": "/photos/us/ca/san-francisco/financial-district/financial-district-ferry-building.jpg",
+        "thumb": "/photos/us/ca/san-francisco/financial-district/financial-district-ferry-building_thumb.jpg",
+        "title": "The Ferry Building and its clock tower from the Embarcadero",
+        "description": "The Ferry Building's arcaded Embarcadero front and clock tower seen from the south, with F Market streetcar 496, an ex-Melbourne car signed for Ferries, passing in the foreground.",
+        "author": "DXR",
+        "license": "CC BY-SA 4.0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Ferry_building,_San_Francisco,_South_view_20110804_1.jpg"
+      }
+    ]
   },
   "places": [
     {
