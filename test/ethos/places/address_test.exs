@@ -279,8 +279,12 @@ defmodule Ethos.Places.AddressTest do
     # "2 Marina Blvd, Landmark Building C, Suite 260" — a genuine unit
     # designator, which is the case this pin's own note says schema.org wants
     # kept, rather than the non-locality prose it exists to catch.
-    assert comma_streets <= 49,
-           "#{comma_streets} American street lines carry a comma qualifier, up from 49"
+    # 50 after San Francisco wave 2. Both additions are unit designators, which
+    # is the case this pin's own note says schema.org wants kept rather than the
+    # non-locality prose it exists to catch: "2 Marina Blvd, Landmark Building
+    # C, Suite 260" and "2325 Third Street, Floor 4R".
+    assert comma_streets <= 50,
+           "#{comma_streets} American street lines carry a comma qualifier, up from 50"
 
     for p <- italian, p.street, String.contains?(p.street, ",") do
       # A civico may be a range ("5-7") or carry a letter or a slashed suffix

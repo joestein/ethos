@@ -1,0 +1,247 @@
+{
+  "guide": {
+    "slug": "mission-bay-san-francisco-guide",
+    "title": "Mission Bay, San Francisco: Chase Center, the UCSF campus and the Third Street Bridge",
+    "destination": "Mission Bay, California",
+    "state": "California",
+    "county": "San Francisco",
+    "tier": "guide",
+    "intro": "Mission Bay is the San Francisco district that runs from Mission Creek Channel south to Mariposa Street, with San Francisco Bay along its eastern edge. Chase Center stands at 1 Warriors Way, and the arena's own site gives its opening as 2019 and names it the home of the Golden State Warriors and the Golden State Valkyries, with the surrounding district called Thrive City. The UCSF Mission Bay campus occupies blocks addressed on Owens Street, Illinois Street, Gene Friend Way, Nelson Rising Lane, 16th Street and Third Street. Third Street crosses Mission Creek Channel on the Third Street Bridge, also called the Lefty O'Doul Bridge, which is San Francisco Landmark No. 194, designated in 1989. The Garcia and Maggini Warehouse stands at 128 King Street and is San Francisco Landmark No. 229, designated in 2002.",
+    "sections": [
+      {
+        "heading": "Chase Center and Thrive City",
+        "body": "Chase Center is the arena at 1 Warriors Way, San Francisco, CA 94158. Its own site describes it as a sports and entertainment arena in San Francisco's Mission Bay neighbourhood, gives its opening as 2019, and names it the home of the Golden State Warriors and the Golden State Valkyries. The site also names the district around the arena Thrive City.\n\nNo source states general opening hours or ticket prices for the arena, so none are given here; the schedule is by event.\n\nThe Muni Metro T Third Street line serves the arena. Its stop list carries UCSF/Chase Center and UCSF/Chase Center (16th St)."
+      },
+      {
+        "heading": "The UCSF Mission Bay campus",
+        "body": "UCSF describes Mission Bay as a teaching, research and clinical care campus with a daily population of about 3,500 faculty, staff, students, patients and other visitors, more than one million square feet of research space, and an integrated hospital that serves women, children and cancer patients.\n\nThe campus covers several blocks and its departments carry separate street addresses. City business records place UCSF departments on Owens Street, Illinois Street, Gene Friend Way, Nelson Rising Lane, 16th Street, Third Street and Berry Street.\n\nNo source states visitor hours or a public entrance for the campus, so none are given here."
+      },
+      {
+        "heading": "Mission Creek, the parks and the houseboats",
+        "body": "Mission Creek Park runs along the channel at 290 Channel Street. San Francisco Recreation and Park holds it as a neighbourhood park and records it at 17.2 acres.\n\nHouseboats are moored on the creek along Channel Street. San Francisco's register of business locations records the Mission Creek Harbor Association at 300 Channel Street, with a registration date of 22 December 1978. No source states visiting arrangements or a berth address for the moorings, so none are given here.\n\nRecreation and Park also holds Mission Bay Park, recorded at 11.6 acres in the 94158 ZIP code, and Mariposa Park, recorded at 2.7 acres on the Mariposa Street line."
+      },
+      {
+        "heading": "The Third Street Bridge and the Garcia and Maggini Warehouse",
+        "body": "The Third Street Bridge carries Third Street over Mission Creek Channel and is also called the Lefty O'Doul Bridge. It is San Francisco Landmark No. 194, designated in 1989. The Strauss Engineering Corporation designed the bascule span, which opened in 1933; the earlier crossing on the site closed to traffic in 1931. The main span is a 143-foot single-leaf bascule truss over a 104-foot channel, and the Operator's and Watchman's Houses stand on the piers.\n\nThe Garcia and Maggini Warehouse stands at 128 King Street. It is San Francisco Landmark No. 229, designated in 2002."
+      },
+      {
+        "heading": "Getting there",
+        "body": "The Muni Metro T Third Street line runs up Third Street through the district, and its stops here are UCSF/Chase Center and UCSF/Chase Center (16th St). Northbound, the line leaves Third Street at Channel Street and runs by way of Fourth Street into the Central Subway.\n\nBy street: Chase Center is at 1 Warriors Way, 94158. Mission Creek Park is at 290 Channel Street, 94158. The Garcia and Maggini Warehouse is at 128 King Street. The Third Street Bridge carries Third Street over Mission Creek Channel.\n\nMariposa Street is the line between Mission Bay and Dogpatch, and Dogpatch runs south from that street to Cesar Chavez Street."
+      }
+    ],
+    "faq": [
+      {
+        "question": "Which buildings and structures in Mission Bay carry a designation, and what are the numbers?",
+        "answer": "The Third Street Bridge, which carries Third Street over Mission Creek Channel and is also called the Lefty O'Doul Bridge, is San Francisco Landmark No. 194, designated in 1989. The Garcia and Maggini Warehouse at 128 King Street is San Francisco Landmark No. 229, designated in 2002."
+      },
+      {
+        "question": "Where is Chase Center and when did it open?",
+        "answer": "Chase Center is at 1 Warriors Way, San Francisco, CA 94158. The arena's own site gives its opening as 2019 and names it the home of the Golden State Warriors and the Golden State Valkyries, with the surrounding district called Thrive City. No source states general opening hours or ticket prices for the arena, so none are given here; the schedule is by event."
+      },
+      {
+        "question": "How do I reach Mission Bay on Muni?",
+        "answer": "The Muni Metro T Third Street line runs up Third Street through the district, and its stops here are UCSF/Chase Center and UCSF/Chase Center (16th St). Northbound, the line leaves Third Street at Channel Street and runs by way of Fourth Street into the Central Subway."
+      },
+      {
+        "question": "Can I walk along Mission Creek and see the houseboats?",
+        "answer": "Mission Creek Park runs along the channel at 290 Channel Street, and San Francisco Recreation and Park holds it as a neighbourhood park of 17.2 acres. The houseboats are moored on the creek along the same street. No source states visiting arrangements or a berth address for the moorings, so none are given here."
+      },
+      {
+        "question": "Where does Mission Bay stop and Dogpatch begin?",
+        "answer": "Mariposa Street is the line between them, and the city's neighbourhood polygons put Mission Bay's southern edge on that street. Dogpatch runs south from Mariposa Street to Cesar Chavez Street and holds the Pier 70 yard, the Museum of Craft and Design, the Minnesota Street Project and Esprit Park."
+      }
+    ],
+    "photos": []
+  },
+  "places": [
+    {
+      "slug": "chase-center-mission-bay",
+      "name": "Chase Center",
+      "kind": "stadium",
+      "town": "Mission Bay",
+      "state": "California",
+      "county": "San Francisco",
+      "address": "1 Warriors Way, San Francisco, CA 94158",
+      "summary": "The arena at 1 Warriors Way. No source states general opening hours or ticket prices for it, so none are given here; the schedule is by event.",
+      "history": "The arena's own site gives its opening as 2019 and names it the home of the Golden State Warriors and the Golden State Valkyries. It also names the district around the arena Thrive City. The Muni Metro T Third Street line stops at UCSF/Chase Center.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "ucsf-mission-bay-campus",
+      "name": "UCSF Mission Bay campus",
+      "kind": "attraction",
+      "town": "Mission Bay",
+      "state": "California",
+      "county": "San Francisco",
+      "address": null,
+      "summary": "The UCSF campus spread across the blocks between Owens Street, Illinois Street and 16th Street. No source states visitor hours or a public entrance for it, so none are given here.",
+      "history": "UCSF describes it as a teaching, research and clinical care campus with a daily population of about 3,500 faculty, staff, students, patients and other visitors, more than one million square feet of research space, and an integrated hospital that serves women, children and cancer patients.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "mission-creek-park-mission-bay",
+      "name": "Mission Creek Park",
+      "kind": "park",
+      "town": "Mission Bay",
+      "state": "California",
+      "county": "San Francisco",
+      "address": "290 Channel Street, San Francisco, CA 94158",
+      "summary": "The park along Mission Creek Channel at 290 Channel Street, with the houseboat moorings on the same stretch of water.",
+      "history": "San Francisco Recreation and Park holds it as a neighbourhood park in the 94158 ZIP code and records it at 17.2 acres.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "mission-bay-park",
+      "name": "Mission Bay Park",
+      "kind": "park",
+      "town": "Mission Bay",
+      "state": "California",
+      "county": "San Francisco",
+      "address": null,
+      "summary": "A San Francisco Recreation and Park neighbourhood park in the 94158 ZIP code, in the blocks between Mission Creek Channel and Owens Street.",
+      "history": "Recreation and Park records it at 11.6 acres and groups it with Mission Creek Park and Mariposa Park in its Mission Bay operating complex.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "mariposa-park-mission-bay",
+      "name": "Mariposa Park",
+      "kind": "park",
+      "town": "Mission Bay",
+      "state": "California",
+      "county": "San Francisco",
+      "address": null,
+      "summary": "A San Francisco Recreation and Park neighbourhood park on the Mariposa Street line, in the 94158 ZIP code.",
+      "history": "Recreation and Park records it at 2.7 acres. Its neighbourhood fields in the city's park register read Mission Bay, and it sits on Mariposa Street, which is the line between Mission Bay and Dogpatch.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "mission-creek-houseboats-mission-bay",
+      "name": "Mission Creek houseboats",
+      "kind": "attraction",
+      "town": "Mission Bay",
+      "state": "California",
+      "county": "San Francisco",
+      "address": null,
+      "summary": "Houseboats moored on Mission Creek along Channel Street. No source states visiting arrangements or a berth address for the moorings, so none are given here.",
+      "history": "San Francisco's register of business locations records the Mission Creek Harbor Association at 300 Channel Street, with a registration date of 22 December 1978.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "third-street-bridge-mission-bay",
+      "name": "Third Street Bridge",
+      "kind": "historic-site",
+      "town": "Mission Bay",
+      "state": "California",
+      "county": "San Francisco",
+      "address": null,
+      "summary": "The bascule bridge that carries Third Street over Mission Creek Channel, also called the Lefty O'Doul Bridge. San Francisco Landmark No. 194, designated in 1989.",
+      "history": "The Strauss Engineering Corporation designed the span, which opened in 1933; the earlier crossing on the site closed to traffic in 1931. The main span is a 143-foot single-leaf bascule truss over a 104-foot channel, and the Operator's and Watchman's Houses stand on the piers.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "garcia-and-maggini-warehouse-mission-bay",
+      "name": "Garcia and Maggini Warehouse",
+      "kind": "historic-site",
+      "town": "Mission Bay",
+      "state": "California",
+      "county": "San Francisco",
+      "address": "128 King Street, San Francisco, CA",
+      "summary": "The warehouse at 128 King Street. San Francisco Landmark No. 229, designated in 2002.",
+      "history": "San Francisco's Article 10 landmark register records the warehouse at 128 King Street as San Francisco Landmark No. 229, designated in 2002.",
+      "status": "open",
+      "photos": []
+    }
+  ],
+  "entries": [
+    {
+      "kind": "sight",
+      "name": "Chase Center",
+      "place_slug": "chase-center-mission-bay",
+      "note": "The arena at 1 Warriors Way, opened in 2019 and named by its own site as the home of the Golden State Warriors and the Golden State Valkyries."
+    },
+    {
+      "kind": "tip",
+      "name": "Chase Center hours and tickets",
+      "place_slug": "chase-center-mission-bay",
+      "note": "No source states general opening hours or ticket prices for the arena, so none are given here; the schedule is by event."
+    },
+    {
+      "kind": "tip",
+      "name": "The T Third Street line",
+      "place_slug": "chase-center-mission-bay",
+      "note": "The Muni Metro T Third Street line runs up Third Street and stops at UCSF/Chase Center and UCSF/Chase Center (16th St)."
+    },
+    {
+      "kind": "sight",
+      "name": "UCSF Mission Bay campus",
+      "place_slug": "ucsf-mission-bay-campus",
+      "note": "A teaching, research and clinical care campus with an integrated hospital serving women, children and cancer patients."
+    },
+    {
+      "kind": "tip",
+      "name": "Visiting the UCSF campus",
+      "place_slug": "ucsf-mission-bay-campus",
+      "note": "No source states visitor hours or a public entrance for the campus, so none are given here."
+    },
+    {
+      "kind": "walk",
+      "name": "Mission Creek Park",
+      "place_slug": "mission-creek-park-mission-bay",
+      "note": "Recreation and Park's 17.2-acre neighbourhood park along the channel at 290 Channel Street."
+    },
+    {
+      "kind": "sight",
+      "name": "Mission Creek houseboats",
+      "place_slug": "mission-creek-houseboats-mission-bay",
+      "note": "Houseboats moored on the creek along Channel Street; the Mission Creek Harbor Association is recorded at 300 Channel Street."
+    },
+    {
+      "kind": "walk",
+      "name": "Mission Bay Park",
+      "place_slug": "mission-bay-park",
+      "note": "A Recreation and Park neighbourhood park of 11.6 acres in the 94158 ZIP code."
+    },
+    {
+      "kind": "walk",
+      "name": "Mariposa Park",
+      "place_slug": "mariposa-park-mission-bay",
+      "note": "A Recreation and Park neighbourhood park of 2.7 acres on Mariposa Street, the line between Mission Bay and Dogpatch."
+    },
+    {
+      "kind": "walk",
+      "name": "Third Street Bridge",
+      "place_slug": "third-street-bridge-mission-bay",
+      "note": "The Strauss Engineering Corporation designed the bascule span, which opened in 1933; San Francisco Landmark No. 194, designated in 1989."
+    },
+    {
+      "kind": "sight",
+      "name": "Garcia and Maggini Warehouse",
+      "place_slug": "garcia-and-maggini-warehouse-mission-bay",
+      "note": "The warehouse at 128 King Street: San Francisco Landmark No. 229, designated in 2002."
+    }
+  ],
+  "links": [
+    {
+      "target": "guide:oracle-park-guide",
+      "kind": "nearby",
+      "note": "The ballpark guide, on King Street at Third Street."
+    },
+    {
+      "target": "guide:dogpatch-san-francisco-guide",
+      "kind": "nearby",
+      "note": "South of Mariposa Street to Cesar Chavez Street: the Pier 70 yard, the Museum of Craft and Design, the Minnesota Street Project and Esprit Park."
+    },
+    {
+      "target": "guide:soma-san-francisco-guide",
+      "kind": "same-region",
+      "note": "Holds the San Francisco Museum of Modern Art, Yerba Buena Gardens, Moscone Center and the Old San Francisco Mint."
+    }
+  ]
+}

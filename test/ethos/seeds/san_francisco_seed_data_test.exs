@@ -112,6 +112,21 @@ defmodule Ethos.Seeds.SanFranciscoSeedDataTest do
     ~r/\ba gap in this guide\b/i
   ]
 
+  # RULING, 2026-09-03. Three wave-2 fix agents independently flagged the
+  # trailing "so none are given here" as self-reference and — correctly —
+  # escalated it rather than diverging one file from the other twenty-two.
+  # The answer is that it stays, and the reason is worth recording because the
+  # question will be asked again.
+  #
+  # The subject test applies to the MAIN clause. "No source states its opening
+  # hours" is about the fact and carries the sentence; the trailing consequence
+  # is what makes the refusal legible to a reader, who would otherwise see a
+  # bare absence and wonder whether the hours are somewhere else on the page.
+  #
+  # It is also 676 instances across San Francisco and Rome. A house style
+  # applied consistently is worth more than a marginal gain from changing it
+  # everywhere, and inconsistency between two cities would be worse than
+  # either choice.
   @self_reference_specimens [
     "No source states its opening hours, so none are given here.",
     "The mural stands here, on the Balmy Alley side of the building.",
@@ -193,6 +208,32 @@ defmodule Ethos.Seeds.SanFranciscoSeedDataTest do
     "The pylons are steel and stand fifteen feet high.",
     "The mural was painted in 1984 by a collective of Mission artists.",
     "The flag flies from a pole at the plaza's centre."
+  ]
+
+  # ------------------------------------------------------------------
+  # The transit negative
+  # ------------------------------------------------------------------
+  #
+  # Five wave-2 files wrote some form of "No source states a bus route or a
+  # rail station for the neighbourhood, so none is given here." It is never
+  # true. Muni, Caltrain and SFMTA publish routes for every square foot of this
+  # city, and the Presidio's own sources describe its shuttle — its reviewer
+  # found the finder had recorded exactly that.
+  #
+  # This is a FETCH FAILURE WRITTEN AS A FACT ABOUT THE WORLD, which is the
+  # most damaging shape in the corpus: it is unfalsifiable-looking, it sits in
+  # the one section a reader acts on, and it is false. Saying nothing about
+  # transit is fine. Asserting that nobody publishes it is not.
+  @transit_negative_patterns [
+    ~r/\bno source (?:states|names|gives)\s+(?:a\s+)?(?:bus route|rail station|transit|metro|streetcar)/i,
+    ~r/\bno source (?:states|names|gives)[^.]{0,60}(?:bus route|rail station|transit line|shuttle)/i
+  ]
+
+  @transit_negative_specimens [
+    "The N Judah runs on Judah Street.",
+    "No source states its opening hours, so none are given here.",
+    "Steer by the addresses.",
+    "Caltrain publishes 4th and King as the nearest station."
   ]
 
   # ------------------------------------------------------------------
@@ -347,6 +388,32 @@ defmodule Ethos.Seeds.SanFranciscoSeedDataTest do
     assert offenders == [],
            "prose carries the corpus's own copyright reasoning. Why a page has no photograph " <>
              "is a rule about us, not a fact about the place:\n" <>
+             Enum.map_join(offenders, "\n", fn {f, t} -> "  #{f}: #{t}" end)
+  end
+
+  test "the transit-negative ban catches a fetch failure dressed as a fact" do
+    assert hit?(@transit_negative_patterns,
+                "No source states a bus route or a rail station for the neighbourhood.")
+
+    assert hit?(@transit_negative_patterns,
+                "No source states the routes or timetable of a shuttle between the districts.")
+
+    for s <- @transit_negative_specimens do
+      refute hit?(@transit_negative_patterns, s), "rejected prose that must publish: #{s}"
+    end
+  end
+
+  test "no committed prose claims transit is unpublished" do
+    offenders =
+      for {file, doc} <- decoded_files(),
+          text <- prose(doc),
+          hit?(@transit_negative_patterns, text),
+          do: {file, String.slice(text, 0, 140)}
+
+    assert offenders == [],
+           "prose asserts that no source publishes transit. Muni, Caltrain and SFMTA publish " <>
+             "routes for the whole city; this is a failed fetch written as a fact, in the one " <>
+             "section a reader acts on. Say nothing, or find the route:\n" <>
              Enum.map_join(offenders, "\n", fn {f, t} -> "  #{f}: #{t}" end)
   end
 
@@ -623,10 +690,10 @@ defmodule Ethos.Seeds.SanFranciscoSeedDataTest do
              "destination string, never by deleting this assertion: #{inspect(collisions)}"
   end
 
-  # Delete this @tag when the last in-scope wave lands — 23 zones — and not
-  # before: until then the corpus is a prefix of the in-scope set and this
-  # fails by construction.
-  @tag :pending_san_francisco
+  # Tag removed 2026-09-03 by wave 2, which landed the last eleven zones and
+  # brought the corpus to all twenty-three: twenty neighborhoods plus the
+  # Presidio, Golden Gate Park and Ocean Beach. Roster equality now holds in
+  # both directions and this runs on every suite.
   test "the shipped corpus matches the in-scope roster exactly" do
     expected = in_scope_slugs()
     shipped = files() |> Enum.map(&Path.rootname(Path.basename(&1))) |> MapSet.new()

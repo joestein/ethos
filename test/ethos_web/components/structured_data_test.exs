@@ -743,10 +743,30 @@ defmodule EthosWeb.StructuredDataTest do
       #   * locality-only 302 -> 303, +1 — South Park Street, which has neither
       #     a house number nor a postal code.
 
-      assert length(emitted) == 3939
-      assert count.(& &1["streetAddress"]) == 3325
-      assert count.(&is_nil(&1["streetAddress"])) == 614
-      assert count.(& &1["postalCode"]) == 2707
+      #
+      # Re-measured 2026-09-03 after San Francisco wave 2, which COMPLETES the
+      # city at all twenty-three zones: the twenty neighborhoods plus the
+      # Presidio, Golden Gate Park and Ocean Beach, which are claimed by no
+      # neighborhood because folding them in would assert a containment that is
+      # false. 855 places, 669 of them addressed.
+      #
+      #   * total 3939 -> 4204, the 265 newly addressed places.
+      #   * `streetAddress` 3325 -> 3582, +257.
+      #   * `is_nil(streetAddress)` 614 -> 622, +8 — descriptive locations the
+      #     American house-number rule correctly rejects, as in wave 1.
+      #   * `postalCode` 2707 -> 2833, +126.
+      #   * locality-only 303 -> 307, +4.
+      #
+      # California still needed no parser work across either wave. It is the
+      # corpus's fifth region and the first since Connecticut to be plain
+      # American, so the branch built for "9 Main Street North, Bethlehem, CT
+      # 06751" carried all 669 San Francisco addresses unchanged. Rome cost
+      # three rounds of thoroughfare types and a Vatican pattern of its own.
+
+      assert length(emitted) == 4204
+      assert count.(& &1["streetAddress"]) == 3582
+      assert count.(&is_nil(&1["streetAddress"])) == 622
+      assert count.(& &1["postalCode"]) == 2833
 
       # The largest behavioural delta this change ships: 302 places emit a
       # PostalAddress carrying only locality, region and country. Their full
@@ -781,7 +801,7 @@ defmodule EthosWeb.StructuredDataTest do
       # whose sourced address is "South Park Street, San Francisco, CA" — no
       # house number and no ZIP, so it correctly emits locality, region and
       # country alone. Its full address is still rendered on the page.
-      assert count.(fn ld -> is_nil(ld["streetAddress"]) and is_nil(ld["postalCode"]) end) == 303
+      assert count.(fn ld -> is_nil(ld["streetAddress"]) and is_nil(ld["postalCode"]) end) == 307
     end
   end
 end

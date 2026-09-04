@@ -116,6 +116,10 @@ ExUnit.start()
 #
 #     mix test --include pending_san_francisco
 #
-ExUnit.configure(exclude: [:pending_wave, :pending_bronx, :pending_san_francisco])
+# :pending_san_francisco removed 2026-09-03 by wave 2, which landed the last
+# eleven zones and brought San Francisco to all twenty-three. Its own `@tag`
+# came off with it, so the tag names nothing and excluding it would only hide a
+# future typo. The single-call rule above still binds.
+ExUnit.configure(exclude: [:pending_wave, :pending_bronx])
 
 Ecto.Adapters.SQL.Sandbox.mode(Ethos.Repo, :manual)
