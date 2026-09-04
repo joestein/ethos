@@ -246,6 +246,42 @@ defmodule Ethos.Places.AddressTest do
     assert parsed.postal_code == "W1K 7TN"
   end
 
+  test "an outward code recovers the street and is never published as a postcode" do
+    # "London W12" names a postal DISTRICT, not a delivery point. Publishing it
+    # as postalCode would be a half-right value, so this branch returns nil for
+    # it and discards the code — but it still establishes that what precedes it
+    # was written as an address, which is the clause that recovers the street.
+    #
+    # London wave 1 is why this exists. Ten of its 178 addresses carry an
+    # outward code and no unit, and all ten lost their street line: the full
+    # postcode pattern could not match, and @uk_no_postcode allows exactly two
+    # segments where these have three. One of the ten opens with its own house
+    # number, which is what showed the loss was a pattern that never reached
+    # the judgement rather than a judgement about descriptiveness.
+    assert Address.parse("81 Fulham Road, Chelsea, London SW3") == %{
+             street: "81 Fulham Road",
+             locality: "Chelsea",
+             region: nil,
+             postal_code: nil,
+             parsed?: true
+           }
+
+    # The locality is still the LAST segment before the London tail.
+    assert Address.parse("Scrubs Lane, White City, London W12").locality == "White City"
+
+    # No house number and no thoroughfare word, recovered on the outward code
+    # alone — the same third clause the full postcode buys for Bankside.
+    assert Address.parse("Exmouth Market, Clerkenwell, London EC1R").street == "Exmouth Market"
+
+    # The descriptive guard survives the weaker signal, as it must.
+    assert Address.parse("Opposite the station, Forest Hill, London SE23").street == nil
+
+    # And a full postcode still beats the outward branch to it, so nothing that
+    # parsed before parses differently now.
+    assert Address.parse("100 London Road, Forest Hill, London SE23 3PQ").postal_code ==
+             "SE23 3PQ"
+  end
+
   test "the UK branch cannot alter an address the earlier passes already parse" do
     # Ordering held as a property rather than as a comment. @uk is consulted
     # only after both American passes, the Italian one and the Vatican one have
@@ -314,15 +350,38 @@ defmodule Ethos.Places.AddressTest do
     # Pantheon's postal address is "Piazza della Rotonda, 00186 Roma RM" — so
     # the invariant is scoped by region rather than relaxed. Rome gets its own
     # discipline below, which is the thoroughfare-type test the parser applies.
-    # A nil region joins the Italian side. Vatican addresses have no province
-    # because a sovereign state has no Italian one, and without this they fell
-    # into the American branch and failed its house-number rule on "Piazza San
-    # Pietro". Every American parse that yields a street also yields a region,
-    # so nothing American is lost here.
-    {italian, american} =
-      Enum.split_with(parsed, &(&1.region in @italian_provinces or is_nil(&1.region)))
+    #
+    # THREE BUCKETS, NOT TWO, AND THE SPLIT IS ON THE RAW ADDRESS RATHER THAN
+    # THE PARSE. It was two, split on `region in @italian_provinces or
+    # is_nil(region)`, and that comment said "a nil region joins the Italian
+    # side" — true while the Vatican's province-less addresses were the only
+    # nil-region parses there were. The UK branch sets region to nil too,
+    # because England is not a province of anywhere, so the first London wave
+    # sent 178 British addresses into the Italian bucket and "Great Russell
+    # Street" was convicted of naming no Italian thoroughfare type. It does
+    # not, and it should never have been asked.
+    #
+    # Splitting on the raw string rather than the parse is what keeps the three
+    # buckets from depending on the very fields under test.
+    # Three British forms, matching the three the parser recognises: a full
+    # postcode, a bare "…, London", and a London outward code with no unit.
+    uk_postcode =
+      ~r/(?:GIR ?0AA|(?:[A-PR-UWYZ][0-9]{1,2}|[A-PR-UWYZ][A-HK-Y][0-9]{1,2}|[A-PR-UWYZ][0-9][A-HJKPSTUW]|[A-PR-UWYZ][A-HK-Y][0-9][ABEHMNPRVWXY]) ?[0-9][ABD-HJLNP-UW-Z]{2})\s*$/
 
-    for p <- american, p.street do
+    uk_tail =
+      ~r/,\s*(?:City of )?London(?:\s+(?:[A-PR-UWYZ][0-9]{1,2}|[A-PR-UWYZ][A-HK-Y][0-9]{1,2}|[A-PR-UWYZ][0-9][A-HJKPSTUW]|[A-PR-UWYZ][A-HK-Y][0-9][ABEHMNPRVWXY]))?\s*$/i
+
+    {uk, rest} =
+      Enum.split_with(Enum.zip(addresses, parsed), fn {raw, _p} ->
+        Regex.match?(uk_postcode, raw) or Regex.match?(uk_tail, raw)
+      end)
+
+    {italian, american} =
+      Enum.split_with(rest, fn {_raw, p} ->
+        p.region in @italian_provinces or is_nil(p.region)
+      end)
+
+    for {_raw, p} <- american, p.street do
       assert Regex.match?(~r/^\d/, p.street),
              "American street line without a house number: #{inspect(p.street)}"
 
@@ -332,12 +391,30 @@ defmodule Ethos.Places.AddressTest do
     # The Italian counterpart: every street line names a thoroughfare type. This
     # is what stops a descriptive location publishing as a street once the
     # house-number rule no longer applies.
-    for p <- italian, p.street do
+    for {_raw, p} <- italian, p.street do
       assert Regex.match?(
                ~r/^(?:via|viale|vicolo|vico|piazza|piazzale|piazzetta|largo|corso|borgo|lungotevere|salita|clivo|circonvallazione|ponte|passeggiata|galleria|portico|strada|foro|campo|arco|scalinata|molo|monte|lungomare|quadrato|parco)\b/i,
                p.street
              ),
              "Italian street line naming no thoroughfare type: #{inspect(p.street)}"
+    end
+
+    # The British counterpart, and it cannot be either of the other two. 62% of
+    # real London addresses carry no house number, so the American rule would
+    # suppress the street line on nearly two in three; and Bankside, Smithfield,
+    # The Cut and Upper Ground are real street names carrying no thoroughfare
+    # word, so an Italian-style positive test would reject them.
+    #
+    # What is asserted instead is the guard that actually matters: a British
+    # street line is never a DESCRIPTIVE location. That is the same judgement
+    # the American house-number rule makes about "Bounded by Lafayette Avenue
+    # and Greene Avenue", stated in the one form all three corpora share.
+    assert uk != [], "no British address reached the parser — this scope guard is vacuous"
+
+    for {raw, p} <- uk, p.street do
+      refute Regex.match?(~r/\b(?:bounded by|between|corner of|junction of|opposite)\b/i, p.street),
+             "British street line publishing a descriptive location: #{inspect(p.street)} " <>
+               "(from #{inspect(raw)})"
     end
 
     # The greedy street capture also admits non-locality prose — "25 Fourth

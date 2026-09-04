@@ -147,8 +147,15 @@ defmodule EthosWeb.StructuredDataTest do
       # here is that the American rule did not quietly loosen when Rome landed.
       # Vatican City joins Italy here rather than defaulting into the American
       # rule: "Piazza San Pietro" carries no house number and never will.
+      #
+      # England is excluded for the same reason and a stronger one. 62% of real
+      # London addresses carry no house number at all — "Bankside, London SE1
+      # 9DT" and "Great Russell Street, London WC1B 3DG" are both complete
+      # postal addresses — so this rule would suppress the street line on
+      # nearly two in three British places if it were not scoped. It is checked
+      # by its own discipline below rather than relaxed.
       for {raw, region, ld} <- with_region,
-          region not in ["Italy", "Vatican City"],
+          region not in ["Italy", "Vatican City", "England"],
           street = ld["streetAddress"] do
         assert Regex.match?(~r/^\d/, street),
                "streetAddress without a house number: #{inspect(street)} (from #{inspect(raw)})"
@@ -176,6 +183,31 @@ defmodule EthosWeb.StructuredDataTest do
       for {raw, _region, ld} <- italian, street = ld["streetAddress"] do
         assert Regex.match?(thoroughfare, street),
                "Italian streetAddress naming no thoroughfare type: #{inspect(street)} " <>
+                 "(from #{inspect(raw)})"
+      end
+    end
+
+    test "a British streetAddress is never a descriptive location", %{with_region: with_region} do
+      # The third discipline, so scoping the house-number rule does not leave
+      # London unguarded. It can be neither of the other two: 62% of real London
+      # addresses carry no house number, and Bankside, Smithfield, The Cut and
+      # Upper Ground are real street names carrying no thoroughfare word either,
+      # so an Italian-style positive test would reject them.
+      #
+      # What survives is the judgement all three corpora share — the one the
+      # American house-number rule makes about "Bounded by Lafayette Avenue and
+      # Greene Avenue". "Bounded by Park Lane and Oxford Street, London W1K 7TN"
+      # is a true statement of where Speakers' Corner is and a false street
+      # address, and the parser returns nil for it.
+      descriptive = ~r/\b(?:bounded by|between|corner of|junction of|opposite)\b/i
+
+      british = Enum.filter(with_region, fn {_, region, _} -> region == "England" end)
+
+      assert british != [], "no British address reached the emitter — the scope guard is vacuous"
+
+      for {raw, _region, ld} <- british, street = ld["streetAddress"] do
+        refute Regex.match?(descriptive, street),
+               "British streetAddress publishing a descriptive location: #{inspect(street)} " <>
                  "(from #{inspect(raw)})"
       end
     end
@@ -767,10 +799,35 @@ defmodule EthosWeb.StructuredDataTest do
       # 06751" carried all 669 San Francisco addresses unchanged. Rome cost
       # three rounds of thoroughfare types and a Vatican pattern of its own.
 
-      assert length(emitted) == 4204
-      assert count.(& &1["streetAddress"]) == 3582
+      #
+      # Re-measured 2026-09-04 after London wave 1, which lands the City and ten
+      # inner boroughs — 178 addressed places, every one of them British.
+      #
+      #   * total 4204 -> 4382, the 178 addressed London places.
+      #   * `streetAddress` 3582 -> 3760, +178. ALL of them. That is the figure
+      #     worth pausing on: no previous region has emitted a street line for
+      #     every single address, and London reached it only after the parser
+      #     learned an eleventh form.
+      #   * `is_nil(streetAddress)` 622 -> 622, +0, which is the same fact from
+      #     the other side. It was +10 before that form landed: ten addresses
+      #     carry an outward code and no unit ("81 Fulham Road, Chelsea, London
+      #     SW3"), which the full-postcode pattern cannot match and which
+      #     `@uk_no_postcode` rejects for having three segments where it allows
+      #     two. One of the ten opens with its own house number, so the loss was
+      #     a pattern that never reached the judgement rather than a judgement
+      #     about descriptiveness, and `@uk_outward` now recovers all ten.
+      #   * `postalCode` 2833 -> 3000, +167, NOT +178. The eleven that carry
+      #     none are the ten outward-code rows plus "Tower Hill, London", which
+      #     names no code at all. AN OUTWARD CODE IS NOT A POSTCODE — it is a
+      #     postal district rather than a delivery point — so the parser
+      #     discards it rather than publishing it half-right, and these eleven
+      #     correctly emit a street with no postal code beside it.
+      #   * locality-only 307 -> 307, +0. Every London row carries a street, so
+      #     none of them can be in this bucket whatever its postal code.
+      assert length(emitted) == 4382
+      assert count.(& &1["streetAddress"]) == 3760
       assert count.(&is_nil(&1["streetAddress"])) == 622
-      assert count.(& &1["postalCode"]) == 2833
+      assert count.(& &1["postalCode"]) == 3000
 
       # The largest behavioural delta this change ships: 302 places emit a
       # PostalAddress carrying only locality, region and country. Their full

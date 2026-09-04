@@ -142,6 +142,21 @@ defmodule Ethos.Places.Address do
   # distinguishable from a descriptive location, and is left alone.
   @uk_no_postcode ~r/^(?<street>[^,]+),\s*(?<locality>London|City of London)\s*$/i
 
+  # AN OUTWARD CODE IS NOT A POSTCODE. "London W12" and "London SE23" name a
+  # postal district rather than a delivery point, so the outward code must
+  # NEVER be emitted as postalCode — this branch deliberately returns nil for
+  # it, and the outward code is discarded rather than published half-right.
+  #
+  # But it is exactly as strong a signal as the full postcode that what
+  # precedes it was WRITTEN AS AN ADDRESS, which is the third clause
+  # `uk_street_or_nil/2` turns on. Without this branch the first London wave
+  # lost the street line on ten rows including "81 Fulham Road, Chelsea, London
+  # SW3" — an address that opens with its own house number, so the loss was not
+  # a judgement about descriptiveness but a pattern that simply did not reach
+  # it. The head is split on commas afterwards for the same reason `@uk` splits
+  # its own: "Scrubs Lane, White City, London W12" carries a middle locality.
+  @uk_outward ~r/^(?<head>.+?),\s*(?:City of )?London\s+(?:[A-PR-UWYZ][0-9]{1,2}|[A-PR-UWYZ][A-HK-Y][0-9]{1,2}|[A-PR-UWYZ][0-9][A-HJKPSTUW]|[A-PR-UWYZ][A-HK-Y][0-9][ABEHMNPRVWXY])\s*$/
+
   # The British counterpart to `@house_number` and `@italian_thoroughfare`, and
   # it needs BOTH of theirs plus a third clause.
   #
@@ -259,18 +274,41 @@ defmodule Ethos.Places.Address do
         }
 
       nil ->
-        case Regex.named_captures(@uk_no_postcode, trimmed) do
-          nil ->
-            %{@empty | postal_code: scan_postal(trimmed)}
+        parse_uk_without_postcode(trimmed)
+    end
+  end
 
-          caps ->
+  # The two weaker British forms, tried in order of how much they establish.
+  # Neither yields a postal code: the first has none at all, and the second has
+  # only an outward code, which is a postal district rather than a delivery
+  # point and is discarded rather than published as if it were a postcode.
+  defp parse_uk_without_postcode(trimmed) do
+    case Regex.named_captures(@uk_no_postcode, trimmed) do
+      %{"street" => street, "locality" => locality} ->
+        %{
+          street: uk_street_or_nil(street, false),
+          locality: presence(locality),
+          region: nil,
+          postal_code: nil,
+          parsed?: true
+        }
+
+      nil ->
+        case Regex.named_captures(@uk_outward, trimmed) do
+          %{"head" => head} ->
+            segments =
+              head |> String.split(",") |> Enum.map(&String.trim/1) |> Enum.reject(&(&1 == ""))
+
             %{
-              street: uk_street_or_nil(caps["street"], false),
-              locality: presence(caps["locality"]),
+              street: uk_street_or_nil(List.first(segments), true),
+              locality: uk_locality(segments),
               region: nil,
               postal_code: nil,
               parsed?: true
             }
+
+          nil ->
+            %{@empty | postal_code: scan_postal(trimmed)}
         end
     end
   end

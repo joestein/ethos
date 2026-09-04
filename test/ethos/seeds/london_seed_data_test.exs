@@ -49,7 +49,10 @@ defmodule Ethos.Seeds.LondonSeedDataTest do
   """
   use Ethos.DataCase, async: false
 
-  @moduletag :pending_london
+  # @moduletag :pending_london removed 2026-09-04 by wave 1, which landed the
+  # City and ten inner boroughs. Everything in this module now runs except the
+  # roster-equality test, which keeps its own `@tag` until the corpus reaches
+  # all thirty-three.
 
   alias Ethos.SeedDataHelpers
 
@@ -535,13 +538,13 @@ defmodule Ethos.Seeds.LondonSeedDataTest do
     assert offenders == [], Enum.map_join(offenders, "\n", fn {f, r} -> "  #{f}: #{r}" end)
   end
 
-  test "every link carries a valid kind, a full slug and a note the column accepts" do
+  test "every link carries a valid kind, a note the column accepts, and a target that exists" do
     valid = MapSet.new(Ethos.Links.Link.kinds())
 
     offenders =
       for {file, doc} <- decoded_files(),
           link <- doc["links"] || [],
-          reason = link_fault(link, valid),
+          reason = link_fault(link, valid, known_guide_slugs()),
           reason != nil,
           do: {file, link["target"], reason}
 
@@ -550,15 +553,38 @@ defmodule Ethos.Seeds.LondonSeedDataTest do
              Enum.map_join(offenders, "\n", fn {f, t, r} -> "  #{f}: #{t} — #{r}" end)
   end
 
-  defp link_fault(link, valid) do
+  # Every guide slug the corpus can resolve: the JSON files and the code seeds
+  # both, because a London file may legitimately link to either.
+  #
+  # This test asserted only that a target ENDED IN "-guide" until London wave 1
+  # shipped "guide:southwark-guide", which ends in "-guide", is not a slug that
+  # exists, passed this gate cleanly and aborted the seed run at
+  # `Links.resolve!/1` — partway through, since seeding is not transactional, so
+  # earlier files were published and later ones were not. A shape check cannot
+  # catch a wrong name. Only the real set can.
+  defp known_guide_slugs do
+    from_files =
+      for path <- SeedDataHelpers.all_seed_files(),
+          slug = path |> File.read!() |> Jason.decode!() |> get_in(["guide", "slug"]),
+          is_binary(slug),
+          do: slug
+
+    from_code = for {guide, _owner} <- SeedDataHelpers.code_guides(), do: guide.slug
+
+    MapSet.new(from_files ++ from_code)
+  end
+
+  defp link_fault(link, valid, known) do
     target = link["target"] || ""
 
     cond do
       not MapSet.member?(valid, link["kind"]) ->
         "kind #{inspect(link["kind"])} is not one of #{inspect(Enum.sort(valid))}"
 
-      String.starts_with?(target, "guide:") and not String.ends_with?(target, "-guide") ->
-        "target #{inspect(target)} is not a full guide slug"
+      String.starts_with?(target, "guide:") and
+          not MapSet.member?(known, String.replace_prefix(target, "guide:", "")) ->
+        "target #{inspect(target)} names no guide that exists — Links.resolve!/1 raises on it " <>
+          "and aborts the seed run partway through"
 
       String.length(link["note"] || "") > 160 ->
         "note is #{String.length(link["note"])} characters, limit is 160"
@@ -642,6 +668,19 @@ defmodule Ethos.Seeds.LondonSeedDataTest do
                "/destinations/england/london"
 
       assert doc["guide"]["county"] == "London", "#{name} does not carry county \"London\""
+
+      # The guide slug follows the FILE, not the destination string. Greenwich
+      # shipped as "royal-borough-of-greenwich-guide" in wave 1, derived from
+      # its destination — and the formal name genuinely does belong in the
+      # destination, where it resolves a collision with Greenwich, Connecticut.
+      # It does not belong in the slug: two sibling files linked to
+      # "greenwich-london-guide", the name the file predicts, and both were
+      # wrong in a way no reader of either file could see.
+      expected = Path.rootname(name) <> "-london-guide"
+
+      assert doc["guide"]["slug"] == expected,
+             "#{name} carries guide slug #{inspect(doc["guide"]["slug"])}, but every sibling " <>
+               "linking to it will write #{inspect(expected)}"
     end
 
     SeedDataHelpers.assert_place_slugs_globally_unique!()
