@@ -246,3 +246,181 @@ already parse.
   and a short honest page beats a padded one.
 - **The FoP reading may be wrong.** It is flagged as unverified throughout and
   the scoping wave settles it before any photograph is sourced.
+
+
+---
+
+# Scoping findings, 2026-09-04 — what they changed
+
+Five agents settled the questions this spec left open. Six of their findings
+AMEND it, and they are recorded here rather than folded silently into the text
+above, so that the change and its reason stay visible.
+
+## 1. Freedom of panorama: the belief held, and one exclusion was missed
+
+VERIFIED against legislation.gov.uk. s.62 CDPA 1988 applies to buildings, and
+to sculptures, models for buildings and works of artistic craftsmanship "if
+permanently situated in a public place or in premises open to the public";
+s.62(2)(b) permits making a photograph and s.62(3) permits **issuing copies to
+the public**, which is commercial publication with no attribution condition and
+no non-commercial limit.
+
+Three consequences the spec did not state:
+
+- **s.4(2) defines "building" as including any FIXED STRUCTURE, and a part of
+  one.** London's cover is therefore wider than 17 USC 120(a), not merely
+  equal to it.
+- **The architect's or sculptor's death date is irrelevant and must not be
+  researched.** There is no modern-buildings blocklist for London. The Shard
+  publishes.
+- **"Premises open to the public" reaches ticketed premises**, so sculpture in
+  a museum or a lobby is inside s.62.
+
+THE EXCLUSION THIS SPEC MISSED: **"permanently situated"**. The Fourth Plinth
+commissions are sculptures in a public place and are still OUT, because they
+are temporary — Commons has deleted Hahn/Cock, Gift Horse, Alison Lapper
+Pregnant, Ecce Homo and The End on exactly that ground. Shonibare's Nelson's
+Ship in a Bottle publishes at the National Maritime Museum, where it is
+permanent, and not on the plinth, where it was not.
+
+Graphic works are excluded as predicted: s.4(2) defines them, s.62(1) does not
+name them, so murals and street art are out however permanent. Banksy is a
+reject twice over — graphic work, and living. Commons deleted Category:Banksy
+in London on 31 December 2025. The EUIPO "flower bomber" decision is a TRADE
+MARK bad-faith finding and must not be cited as copyright.
+
+A NON-COPYRIGHT RESTRICTION APPLIES, of the same shape as Italy's Codice:
+**Royal Parks and Other Open Spaces Regulations 1997, reg. 4(18)** requires
+written permission for commercial photography in Hyde Park, Regent's Park,
+Greenwich Park and Richmond Park among others. It is noted in the photo brief
+and NOT gated — as with Italy, the corpus records the restriction and takes a
+risk posture rather than pretending it does not exist.
+
+## 2. The gate's section rule was wrong for this unit, and is amended
+
+Assertion 7 above allows 2–3 sections including one headed exactly "Getting
+there", which leaves one or two area sections. **Southwark cannot be navigated
+in two.** The borough agent proposed, and this spec adopts:
+
+    Bankside and Borough · Bermondsey and Rotherhithe ·
+    Walworth, Peckham and Dulwich · Getting there
+
+**Assertion 7 is amended: a London guide carries 2 to 5 sections, one headed
+exactly "Getting there".** The upper bound moves because the unit is a borough
+rather than a neighbourhood, which is the cost this spec accepted openly and
+must now pay in the gate rather than in the prose.
+
+## 3. The thoroughfare test is necessary but NOT sufficient
+
+62% of the fifty real London addresses collected carry no house number, which
+confirms the positive test is needed. But four real street names carry no
+thoroughfare word either: **Bankside, The Cut, Smithfield, Upper Ground** — and
+Kew. A positive test alone would reject them.
+
+So the UK street rule is: accept a leading house number, OR a recognised
+thoroughfare word, OR a segment that the postcode pattern confirms was
+immediately followed by a valid postcode. The third clause is what rescues
+"Bankside, London SE1 9DT", and it is safe because a postcode is a strong
+signal that the preceding segment is an address rather than a description.
+
+The postcode regex is VERIFIED: zero rejections over 100 real postcodes from
+postcodes.io and all 50 London codes, and zero false positives over the 4,204
+addresses already in the corpus. Note that the gov.uk BS 7666 regex requires a
+space and therefore rejects "W1F7LW", a real printed address; ours makes the
+space optional.
+
+## 4. The NHLE exceeds San Francisco, but not through its website
+
+**Use the ArcGIS FeatureServer, not historicengland.org.uk.** The website is
+Cloudflare-protected and returns 403 intermittently to every user agent tried,
+including a browser one — "a single 403 is a false negative, not unreachable".
+The open-data API never 403'd across dozens of calls:
+
+    services-eu1.arcgis.com/ZOdPfBS3aqqDYPUQ/.../National_Heritage_List_for_England_NHLE_v02_VIEW
+
+Eleven layers under the Open Government Licence, fields ListEntry, Name, Grade,
+ListDate and hyperlink. Verified worked examples: Westminster Abbey 1291494
+(Grade I, 24 Feb 1958), Battersea Power Station 1357620 (II*, 14 Oct 1980),
+Abbey Road Studios 1393688 (II, 23 Feb 2010). Measured grade counts reproduce
+Historic England's published percentages exactly by two independent methods.
+
+THREE TRAPS, all of which must reach the research briefs:
+
+- **Curtilage.** A search for "Royal Albert Hall" returns three Grade II lamp
+  standards beside the Grade I hall; "Tower of London" returns bollards. A
+  finder that takes the first row gets a lamp post.
+- **Grade on the wrong type.** Scheduled monuments, battlefields, wrecks and
+  World Heritage Sites have NO Grade field. "Grade II scheduled monument" is a
+  category error.
+- **No borough field on the listed-building layers.** Attribution needs a
+  spatial join or the per-entry page, so a wave cannot simply filter by
+  borough.
+
+Conservation areas carry a UID with values like 280 and 7143. **That is not a
+list entry number and must never be published as one.** Blue plaques are
+commemorative, carry no statutory protection and no re-fetchable identifier;
+they may be mentioned as plaques and never as designations.
+
+## 5. The finder brief must not ask for museums and markets
+
+The borough agent measured yield two ways and found the axes disagree
+SYSTEMATICALLY: inner boroughs carry their content as institutions, outer
+boroughs as listed buildings. Hounslow returns 14 on one axis and 61 on the
+other; Lewisham 7 and 30.
+
+**A finder briefed on "museums, galleries and markets" will report the outer
+boroughs as empty and be wrong.** Every outer-borough brief must lead with the
+NHLE and treat institutions as secondary.
+
+Measured Grade I + II* counts against visitor-category counts: Westminster
+205/192, Southwark 33/67, Hackney 38/21, Bromley 31/15, Havering 21/12,
+Barking and Dagenham 7/7.
+
+**No borough fails to reach four places.** Barking and Dagenham clears eight to
+ten, Havering fourteen. The town-page tier may end up with no occupants, which
+is a fine outcome; the tier stays in the gate because a wave that produces a
+thin page must have somewhere honest to put it.
+
+## 6. Two definitional points the spec must fix
+
+**The City of London is not a borough.** It is sui generis, a ceremonial county
+with three authorities — the Corporation, the Inner Temple and the Middle
+Temple. The roster carries 33 units and should say so; "the 32 boroughs and the
+City" is the accurate phrasing.
+
+**Inner and Outer London have two defensible definitions** and three boroughs
+fall differently under them: Greenwich is Inner statutorily but Outer for ONS;
+Haringey and Newham the reverse. **The roster uses the statutory definition
+(London Government Act 1963) and records that it is doing so**, so that a page
+never asserts a classification the source it cites does not support.
+
+## 7. Sources, ranked by what actually answered
+
+    NHLE ArcGIS FeatureServer   200 always      the designation spine
+    TfL unified API             200, no key     nearest stop, modes, named lines
+    OSM / Nominatim / Overpass  200             borough via city_district, GSS codes
+    Wikidata                    200             P1216 = NHLE number, 401,458 statements
+    London Datastore            200 but broken  package_search IGNORES its query
+    Operator sites              6 of 8          britishmuseum.org and hrp.org.uk 403
+    Borough websites            weakest tier    Westminster 404, Bromley 404
+
+**London out-sources every previous destination: London > San Francisco > New
+York > Rome.** A statutory national register published as a live OGL geospatial
+API is something neither DataSF nor the National Register offered.
+
+TWO TRAPS IN THIS TIER:
+
+- **Southwark council returns 202 to everything, including its homepage.** Bot
+  mitigation that passes a naive "status < 400" check while returning nothing.
+  Any reachability check in this programme must inspect the body, not the code.
+- **The London Datastore's package_search ignores its q parameter** — a
+  nonsense query returns the same count and the same first result as a real
+  one. It manufactures false negatives. Use /api/v3/datasets/export.json and
+  filter locally.
+
+**TfL changes what is possible.** /StopPoint with a lat, lon and radius returns
+naptanId, modes and named lines. Every previous programme has failed on
+transit — San Francisco produced fifteen instances of "No source states a bus
+route or a rail station", false in every case and now a banned pattern. London
+is the first destination that can state the nearest station and the lines
+serving it from a first-party source, and the finder briefs will require it.
