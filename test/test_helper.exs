@@ -120,6 +120,27 @@ ExUnit.start()
 # eleven zones and brought San Francisco to all twenty-three. Its own `@tag`
 # came off with it, so the tag names nothing and excluding it would only hide a
 # future typo. The single-call rule above still binds.
-ExUnit.configure(exclude: [:pending_wave, :pending_bronx])
+#
+# Ethos.Seeds.LondonSeedDataTest is the same construction one city later, at
+# the stage the San Francisco gate was at before its first wave: the WHOLE
+# module carries `@moduletag :pending_london` and priv/seed_data/london/ holds
+# only .gitkeep, so nothing in it runs. Its self-tests — the ones proving each
+# ban can fail and does not fire on prose that must publish — are the reason
+# the gate is worth landing before the corpus, and they are also excluded
+# until the first wave, which is the cost of one tag for the whole module.
+#
+# Removed in two stages, both inside the London programme:
+#
+#   * The first research wave, which lands the first seed file, deletes the
+#     `@moduletag :pending_london` from the test file. Everything then runs
+#     except the one test carrying its own `@tag`.
+#   * The last wave — 33 boroughs, the GLA's complete set — deletes that tag
+#     and the entry below. The scope was ruled on 2026-09-04; see
+#     docs/superpowers/specs/2026-09-04-london-boroughs-design.md and
+#     priv/seed_data/london_roster.json, whose unit_ruling and scope_ruling
+#     fields are the record of why the unit is the borough.
+#
+#     mix test --include pending_london
+ExUnit.configure(exclude: [:pending_wave, :pending_bronx, :pending_london])
 
 Ecto.Adapters.SQL.Sandbox.mode(Ethos.Repo, :manual)
