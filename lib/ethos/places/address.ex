@@ -112,6 +112,59 @@ defmodule Ethos.Places.Address do
   # because a sovereign state has no Italian province.
   @vatican ~r/^(?<street>.+),\s*(?<postal>\d{5})\s+(?<locality>Citt[a\x{00E0}]\s+del\s+Vaticano)\s*$/iu
 
+  # UK addresses defeat every branch above. They carry ONE comma where `@full`
+  # needs two, no two-letter region, no Italian province, and a postcode that is
+  # alphanumeric — so `scan_postal/1`, which looks for five digits, finds
+  # nothing at all in "SW1A 2AA". Before this branch a London place published
+  # with NO street AND NO postcode, which is worse than Rome's starting state,
+  # where the digit scan at least recovered 44 CAPs.
+  #
+  # The pattern was verified by the 2026-09-04 scoping wave against 100 real
+  # postcodes from postcodes.io and all 50 London district codes: zero
+  # rejections, and zero false positives across the 4,204 addresses already in
+  # the corpus. Note the two interior letter classes differ and MUST NOT be
+  # merged — merging them rejects EC3N 4AB, WC2R 1LA, WC1X 0DA and EC2Y 8DS,
+  # all real. The space is optional because "W1F7LW" is a real printed address;
+  # the gov.uk BS 7666 regex requires the space and so rejects it.
+  # Held as a STRING so the branch regex below can interpolate it. One
+  # definition, so the two cannot drift.
+  @uk_postcode "(?:GIR ?0AA|(?:[A-PR-UWYZ][0-9]{1,2}|[A-PR-UWYZ][A-HK-Y][0-9]{1,2}|[A-PR-UWYZ][0-9][A-HJKPSTUW]|[A-PR-UWYZ][A-HK-Y][0-9][ABEHMNPRVWXY]) ?[0-9][ABD-HJLNP-UW-Z]{2})"
+
+  # Everything before the postcode, and the postcode. The head is split on
+  # commas afterwards rather than in the regex, because 44% of real London
+  # addresses carry a middle locality — "100 London Road, Forest Hill, London
+  # SE23 3PQ" has an American comma count and a different meaning in every
+  # field — and the count of those middles varies from zero to three.
+  @uk ~r/^(?<head>.+?)[,\s]+(?<postal>#{@uk_postcode})\s*$/
+
+  # A postcode-less UK address still yields a locality: "Trafalgar Square,
+  # London". Two segments only — more than that with no postcode is not
+  # distinguishable from a descriptive location, and is left alone.
+  @uk_no_postcode ~r/^(?<street>[^,]+),\s*(?<locality>London|City of London)\s*$/i
+
+  # The British counterpart to `@house_number` and `@italian_thoroughfare`, and
+  # it needs BOTH of theirs plus a third clause.
+  #
+  # 62% of fifty real London addresses carry no house number, so the American
+  # rule alone would suppress the street line on nearly two in three. A
+  # positive thoroughfare test is therefore necessary — but it is NOT
+  # sufficient, because Bankside, Smithfield, The Cut and Upper Ground are real
+  # street names carrying no thoroughfare word either.
+  #
+  # So the third clause: a segment IMMEDIATELY FOLLOWED BY A VALID POSTCODE is
+  # an address line. A postcode is a strong signal that what precedes it was
+  # written as an address rather than as a description of where something is.
+  @uk_thoroughfare ~r/^(?:.*\b(?:street|st|road|rd|lane|ln|place|pl|square|sq|gardens|gdns|terrace|crescent|mews|row|hill|walk|way|close|court|avenue|ave|embankment|bridge|wharf|yard|parade|rise|vale|grove|park|quay|passage|steps|strand|circus|broadway|green|common|fields|market|arcade|approach|drive)\b)$/i
+
+  # "No. 1 Warehouse, West India Quay" puts the number INSIDE the building
+  # name, so a bare `^\d` misses it though a digit is plainly there.
+  @uk_house_number ~r/^(?:No\.?\s*)?\d/i
+
+  # Even with a postcode present, these are descriptions rather than addresses,
+  # and the same judgement the American house-number rule makes about "Bounded
+  # by Lafayette Avenue and Greene Avenue" applies here.
+  @uk_descriptive ~r/\b(?:bounded by|between|corner of|junction of|opposite)\b/i
+
   @empty %{street: nil, locality: nil, region: nil, postal_code: nil, parsed?: false}
 
   @typedoc "Every key is always present; any of the four strings may be nil."
@@ -175,7 +228,7 @@ defmodule Ethos.Places.Address do
     case Regex.named_captures(@italian, trimmed) ||
            Regex.named_captures(@vatican, trimmed) do
       nil ->
-        %{@empty | postal_code: scan_postal(trimmed)}
+        parse_uk(trimmed)
 
       caps ->
         %{
@@ -185,6 +238,63 @@ defmodule Ethos.Places.Address do
           postal_code: presence(caps["postal"]) || scan_postal(trimmed),
           parsed?: true
         }
+    end
+  end
+
+  # Fourth and last attempt, reached only when the two American passes, the
+  # Italian one and the Vatican one have all failed. Nothing that parses today
+  # can arrive here, so this can only turn a nil into a value and never one
+  # value into another — asserted in address_test.exs, not merely intended.
+  defp parse_uk(trimmed) do
+    case Regex.named_captures(@uk, trimmed) do
+      %{"head" => head, "postal" => postal} ->
+        segments = head |> String.split(",") |> Enum.map(&String.trim/1) |> Enum.reject(&(&1 == ""))
+
+        %{
+          street: uk_street_or_nil(List.first(segments), true),
+          locality: uk_locality(segments),
+          region: nil,
+          postal_code: presence(postal),
+          parsed?: true
+        }
+
+      nil ->
+        case Regex.named_captures(@uk_no_postcode, trimmed) do
+          nil ->
+            %{@empty | postal_code: scan_postal(trimmed)}
+
+          caps ->
+            %{
+              street: uk_street_or_nil(caps["street"], false),
+              locality: presence(caps["locality"]),
+              region: nil,
+              postal_code: nil,
+              parsed?: true
+            }
+        end
+    end
+  end
+
+  # The locality is the LAST segment before the postcode, not the second: 44%
+  # of real London addresses carry one or more middles, and "100 London Road,
+  # Forest Hill, London SE23 3PQ" means Forest Hill is not the locality the
+  # postcode belongs to. Where there is only one segment, the address named no
+  # locality and none is invented.
+  defp uk_locality([_only]), do: nil
+  defp uk_locality(segments) when is_list(segments), do: segments |> List.last() |> presence()
+  defp uk_locality(_), do: nil
+
+  defp uk_street_or_nil(nil, _postcode?), do: nil
+
+  defp uk_street_or_nil(street, postcode?) do
+    street = String.trim(street)
+
+    cond do
+      Regex.match?(@uk_descriptive, street) -> nil
+      Regex.match?(@uk_house_number, street) -> presence(street)
+      Regex.match?(@uk_thoroughfare, street) -> presence(street)
+      postcode? -> presence(street)
+      true -> nil
     end
   end
 

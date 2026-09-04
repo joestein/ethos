@@ -1,0 +1,315 @@
+{
+  "city": "London",
+  "state": "England",
+  "county": "London",
+  "source": "The Greater London Authority's own list: the 32 London boroughs plus the City of London, 33 units. Unlike the San Francisco roster, whose source field had to say 'editorial selection', this is a real administrative authority and covers London completely with no arbitrary exclusions.",
+  "unit_ruling": "THE CITY OF LONDON IS NOT A BOROUGH. It is sui generis — a ceremonial county with three authorities, the Corporation, the Inner Temple and the Middle Temple. The accurate phrasing is 'the 32 boroughs and the City', never 'the 33 boroughs'.",
+  "inner_outer_ruling": "Inner and Outer London have TWO defensible definitions and three boroughs fall differently under them: Greenwich is Inner statutorily but Outer for ONS; Haringey and Newham the reverse. This roster uses the STATUTORY definition (London Government Act 1963) and records that it does, so no page asserts a classification its cited source does not support. A page may state a borough's Inner or Outer status only by naming the definition.",
+  "scope_ruling": "The borough is the WRONG UNIT for a traveller and the programme chose it knowingly. Nobody says they are going to Southwark, and a Southwark page must hold Borough Market, Tate Modern, the Shard and Dulwich Village. The mitigation is structural: a London guide carries TWO TO FIVE sections, one headed exactly 'Getting there', and a borough page is expected to use area sections a reader can navigate by. A page that lists thirty places in one undifferentiated run has failed even if every fact in it is sourced. The gate's section rule was widened from 2-3 to 2-5 for exactly this reason, after the scoping wave reported that Southwark cannot be navigated in two.",
+  "designation_ruling": "Designation claims PUBLISH with a citation, as in San Francisco but from a stronger register. Historic England's National Heritage List gives every listed building a seven-digit list entry number and a grade. 'Grade I listed, NHLE 1291494' publishes; 'a listed building' and 'Grade I listed' alone do not. USE THE ArcGIS FeatureServer AT services-eu1.arcgis.com/ZOdPfBS3aqqDYPUQ, NOT historicengland.org.uk — the website is Cloudflare-protected and returns 403 intermittently to every user agent, and a single 403 is a FALSE NEGATIVE rather than evidence of unreachability. THREE TRAPS: curtilage, where a Royal Albert Hall search returns three Grade II lamp standards beside the Grade I hall and a Tower of London search returns bollards; grade on the wrong type, since scheduled monuments, battlefields, wrecks and World Heritage Sites have NO Grade field and 'Grade II scheduled monument' is a category error; and no borough field on the listed-building layers, so borough attribution needs a spatial join or the per-entry page. Conservation areas are borough-designated, carry a UID with values like 280 and 7143, and that UID MUST NEVER be published as a list entry number — they may be named as conservation areas with no number at all. Blue plaques are commemorative, carry no statutory protection and no re-fetchable identifier; they may be mentioned as plaques and never as designations.",
+  "photo_ruling": "THE UNITED KINGDOM HAS THE BROADEST FREEDOM OF PANORAMA THIS CORPUS HAS MET. Section 62 CDPA 1988, verified against legislation.gov.uk, applies to buildings AND to sculptures, models for buildings and works of artistic craftsmanship if permanently situated in a public place or in premises open to the public; s.62(2)(b) permits making a photograph and s.62(3) permits issuing copies to the public — commercial publication, no attribution condition, no non-commercial limit. s.4(2) defines a building as including ANY FIXED STRUCTURE and a part of one, so this is WIDER than 17 USC 120(a). THE ARCHITECT'S OR SCULPTOR'S DEATH DATE IS IRRELEVANT AND MUST NOT BE RESEARCHED: there is no modern-buildings blocklist for London and the Shard publishes. 'Premises open to the public' reaches ticketed premises, so sculpture in a museum or a lobby is inside s.62. TWO EXCLUSIONS. First, GRAPHIC WORKS: s.4(2) defines them, s.62(1) does not name them, so murals and street art are out however permanent — Banksy is a reject twice over, being a graphic work and living, and Commons deleted Category:Banksy in London on 31 December 2025. The EUIPO 'flower bomber' decision is a TRADE MARK bad-faith finding and must never be cited as copyright. Second, PERMANENTLY SITUATED: the Fourth Plinth commissions are sculptures in a public place and are still OUT because they are temporary, and Commons deleted Hahn/Cock, Gift Horse, Alison Lapper Pregnant, Ecce Homo and The End on exactly that ground. Shonibare's Nelson's Ship in a Bottle publishes at the National Maritime Museum, where it is permanent, and did not on the plinth, where it was not. A NON-COPYRIGHT RESTRICTION applies of the same shape as Italy's Codice: the Royal Parks and Other Open Spaces Regulations 1997, reg. 4(18), require written permission for commercial photography in Hyde Park, Regent's Park, Greenwich Park and Richmond Park among others. It is recorded and NOT gated — the corpus takes a risk posture rather than pretending it does not exist.",
+  "transit_ruling": "TfL's unified API answers with no key and returns the nearest stop, its modes and its named lines: /StopPoint with a lat, lon and radius gives naptanId, modes and lines. EVERY previous programme has failed on transit — San Francisco produced fifteen instances of 'No source states a bus route or a rail station', false in every case and now a banned pattern in the gates. London is the first destination that can state the nearest station and the lines serving it from a first-party source, and the finder briefs REQUIRE it rather than permitting it.",
+  "yield_ruling": "YIELD MUST BE MEASURED TWO WAYS AND THE AXES DISAGREE SYSTEMATICALLY. Inner boroughs carry their content as institutions; outer boroughs carry it as listed buildings. Hounslow measures 14 institutions against 61 listed buildings, Lewisham 7 against 30. A FINDER BRIEFED ON 'MUSEUMS, GALLERIES AND MARKETS' WILL REPORT THE OUTER BOROUGHS AS EMPTY AND BE WRONG. Every outer-borough brief leads with the NHLE and treats institutions as secondary. No borough fails to reach four places: Barking and Dagenham clears eight to ten, Havering fourteen. The town-page tier may end up with no occupants, which is a fine outcome; it stays in the gate because a wave that produces a thin page must have somewhere honest to put it.",
+  "source_traps": "TWO SOURCES MANUFACTURE FALSE NEGATIVES AND BOTH PASS A NAIVE CHECK. Southwark council returns HTTP 202 to everything including its own homepage — bot mitigation that satisfies a 'status < 400' test while returning nothing, so any reachability check in this programme must inspect the body rather than the code. And the London Datastore's package_search IGNORES its q parameter: a nonsense query returns the same count and the same first result as a real one. Use /api/v3/datasets/export.json and filter locally. Ranked by what actually answered: NHLE ArcGIS 200 always; TfL 200 no key; OSM/Nominatim/Overpass 200; Wikidata 200 with P1216 carrying NHLE numbers across 401,458 statements; London Datastore 200 but broken search; operator sites 6 of 8, with britishmuseum.org and hrp.org.uk returning 403; borough websites the weakest tier.",
+  "destination_slug_ruling": "Guide.derive_destination_slug/1 keeps only the FIRST comma-segment and discards the state, so 'Greenwich, England' and 'Greenwich, Connecticut' both derive `greenwich`. Measured against the 359 destination slugs already committed, exactly two of the thirty-three collide, both with Connecticut towns. Each is resolved by using the borough's FORMAL name in the destination string, which is factually correct rather than a workaround: Royal Borough of Greenwich, and London Borough of Enfield.",
+  "kind_note": "A place's kind must be one of the thirteen the schema allows: museum, theater, restaurant, cafe, brewery, hotel, bnb, park, historic-site, amusement-park, shop, stadium, attraction. There is NO church, monument, square, palace or bridge kind. A working church a visitor can enter is 'attraction'; one they cannot is 'historic-site'. Ethos.Seeds.LondonSeedDataTest reads the list off Ethos.Places.Place.kinds/0 rather than a copy, so the two cannot drift.",
+  "zones": [
+    {
+      "slug": "city-of-london",
+      "name": "City of London",
+      "formal_name": "The City of London",
+      "destination": "City of London, England",
+      "london": "sui-generis",
+      "in_scope": true,
+      "draw": "St Paul's Cathedral, the Tower of London (a World Heritage Site, and NOT in Tower Hamlets despite the name), the Monument, the Barbican, Guildhall, Leadenhall Market, the Museum of London site, the Temple churches. Sui generis: a ceremonial county with three authorities."
+    },
+    {
+      "slug": "camden",
+      "name": "Camden",
+      "formal_name": "London Borough of Camden",
+      "destination": "Camden, England",
+      "london": "inner",
+      "in_scope": true,
+      "draw": "The British Museum, the British Library, Camden Market, Regent's Park and London Zoo, Hampstead Heath, Kenwood House, the Wellcome Collection, St Pancras. 1,982 Wikidata NHLE statements — the second-densest unit."
+    },
+    {
+      "slug": "greenwich",
+      "name": "Greenwich",
+      "formal_name": "Royal Borough of Greenwich",
+      "destination": "Royal Borough of Greenwich, England",
+      "london": "inner",
+      "in_scope": true,
+      "draw": "The Old Royal Naval College and the Maritime Greenwich World Heritage Site, the Cutty Sark, the National Maritime Museum, the Royal Observatory, Greenwich Park, the O2. Shonibare's Nelson's Ship in a Bottle is PERMANENT here and publishes; the same work on the Fourth Plinth did not."
+    },
+    {
+      "slug": "hackney",
+      "name": "Hackney",
+      "formal_name": "London Borough of Hackney",
+      "destination": "Hackney, England",
+      "london": "inner",
+      "in_scope": true,
+      "draw": "Hackney Empire, Sutton House, the Geffrye/Museum of the Home, Broadway Market, Victoria Park's western edge, the Olympic Park's Hackney Wick share. Measured 38 Grade I+II* against 21 institutions."
+    },
+    {
+      "slug": "hammersmith-and-fulham",
+      "name": "Hammersmith and Fulham",
+      "formal_name": "London Borough of Hammersmith and Fulham",
+      "destination": "Hammersmith and Fulham, England",
+      "london": "inner",
+      "in_scope": true,
+      "draw": "Fulham Palace, the Lyric Hammersmith, Craven Cottage, the Riverside Studios, Bishops Park."
+    },
+    {
+      "slug": "islington",
+      "name": "Islington",
+      "formal_name": "London Borough of Islington",
+      "destination": "Islington, England",
+      "london": "inner",
+      "in_scope": true,
+      "draw": "Sadler's Wells, the Estorick Collection, the Almeida, Upper Street, Chapel Market, the Emirates Stadium, the Regent's Canal."
+    },
+    {
+      "slug": "kensington-and-chelsea",
+      "name": "Kensington and Chelsea",
+      "formal_name": "Royal Borough of Kensington and Chelsea",
+      "destination": "Kensington and Chelsea, England",
+      "london": "inner",
+      "in_scope": true,
+      "draw": "The V&A, the Natural History Museum, the Science Museum, the Royal Albert Hall (NHLE 1217742, Grade I), Kensington Palace, Portobello Road, Holland Park. NOTE the curtilage trap: a Royal Albert Hall search returns three Grade II lamp standards beside the Grade I hall."
+    },
+    {
+      "slug": "lambeth",
+      "name": "Lambeth",
+      "formal_name": "London Borough of Lambeth",
+      "destination": "Lambeth, England",
+      "london": "inner",
+      "in_scope": true,
+      "draw": "The South Bank: the Royal Festival Hall, the National Theatre, the London Eye, the Southbank Centre. Also Lambeth Palace, the Garden Museum, Brixton, Vauxhall."
+    },
+    {
+      "slug": "lewisham",
+      "name": "Lewisham",
+      "formal_name": "London Borough of Lewisham",
+      "destination": "Lewisham, England",
+      "london": "inner",
+      "in_scope": true,
+      "draw": "The Horniman Museum (100 London Road, Forest Hill), Deptford, the Laban Building, Blackheath's southern edge. Measured 7 institutions against 30 listed buildings — the inner/outer axis crossing over."
+    },
+    {
+      "slug": "southwark",
+      "name": "Southwark",
+      "formal_name": "London Borough of Southwark",
+      "destination": "Southwark, England",
+      "london": "inner",
+      "in_scope": true,
+      "draw": "Bankside and Borough: Tate Modern, Shakespeare's Globe, Borough Market, the Shard, Southwark Cathedral. Bermondsey and Rotherhithe: the Brunel Museum, Bermondsey Street. Walworth, Peckham and Dulwich: the Imperial War Museum, Dulwich Picture Gallery. THIS IS THE HETEROGENEITY TEST CASE — four sections, not two."
+    },
+    {
+      "slug": "tower-hamlets",
+      "name": "Tower Hamlets",
+      "formal_name": "London Borough of Tower Hamlets",
+      "destination": "Tower Hamlets, England",
+      "london": "inner",
+      "in_scope": true,
+      "draw": "The Tower Bridge exhibition, Spitalfields, Brick Lane, Whitechapel Gallery, Canary Wharf, the Museum of London Docklands, Victoria Park. NOTE the Tower of London is the CITY OF LONDON's, not this borough's."
+    },
+    {
+      "slug": "wandsworth",
+      "name": "Wandsworth",
+      "formal_name": "London Borough of Wandsworth",
+      "destination": "Wandsworth, England",
+      "london": "inner",
+      "in_scope": true,
+      "draw": "Battersea Power Station (NHLE 1357620, Grade II*), Battersea Park, the Wandsworth Museum site, Putney and its riverside, Clapham Junction."
+    },
+    {
+      "slug": "westminster",
+      "name": "Westminster",
+      "formal_name": "City of Westminster",
+      "destination": "Westminster, England",
+      "london": "inner",
+      "in_scope": true,
+      "draw": "Westminster Abbey (NHLE 1291494, Grade I), the Houses of Parliament, Buckingham Palace, the National Gallery, Trafalgar Square, Soho, Covent Garden, Mayfair, the Royal Parks. Measured yield 205 Grade I+II* entries, 192 visitor institutions — the richest unit in the roster by both axes."
+    },
+    {
+      "slug": "barking-and-dagenham",
+      "name": "Barking and Dagenham",
+      "formal_name": "London Borough of Barking and Dagenham",
+      "destination": "Barking and Dagenham, England",
+      "london": "outer",
+      "in_scope": true,
+      "draw": "Eastbury Manor House and Valence House. THE THINNEST UNIT: seven NHLE entries, seven visitor places. Clears four honestly and does not need padding. Note the garden walls of Eastbury Manor are a SEPARATE list entry but not a separate place."
+    },
+    {
+      "slug": "barnet",
+      "name": "Barnet",
+      "formal_name": "London Borough of Barnet",
+      "destination": "Barnet, England",
+      "london": "outer",
+      "in_scope": true,
+      "draw": "The RAF Museum London, Hampstead Garden Suburb, Barnet Museum, Totteridge."
+    },
+    {
+      "slug": "bexley",
+      "name": "Bexley",
+      "formal_name": "London Borough of Bexley",
+      "destination": "Bexley, England",
+      "london": "outer",
+      "in_scope": true,
+      "draw": "Danson House, Hall Place, Red House (William Morris's, National Trust), Crossness Pumping Station."
+    },
+    {
+      "slug": "brent",
+      "name": "Brent",
+      "formal_name": "London Borough of Brent",
+      "destination": "Brent, England",
+      "london": "outer",
+      "in_scope": true,
+      "draw": "Wembley Stadium and the Wembley Arena, Neasden Temple (BAPS Shri Swaminarayan Mandir), Kilburn."
+    },
+    {
+      "slug": "bromley",
+      "name": "Bromley",
+      "formal_name": "London Borough of Bromley",
+      "destination": "Bromley, England",
+      "london": "outer",
+      "in_scope": true,
+      "draw": "Down House (Darwin's home), the Crystal Palace Park dinosaurs, Chislehurst Caves, Biggin Hill. Measured 31 against 15."
+    },
+    {
+      "slug": "croydon",
+      "name": "Croydon",
+      "formal_name": "London Borough of Croydon",
+      "destination": "Croydon, England",
+      "london": "outer",
+      "in_scope": true,
+      "draw": "The Museum of Croydon, Addington Palace, Shirley Windmill, the Whitgift almshouses."
+    },
+    {
+      "slug": "ealing",
+      "name": "Ealing",
+      "formal_name": "London Borough of Ealing",
+      "destination": "Ealing, England",
+      "london": "outer",
+      "in_scope": true,
+      "draw": "Pitzhanger Manor, Walpole Park, Ealing Studios, Gunnersbury Park and its museum."
+    },
+    {
+      "slug": "enfield",
+      "name": "Enfield",
+      "formal_name": "London Borough of Enfield",
+      "destination": "London Borough of Enfield, England",
+      "london": "outer",
+      "in_scope": true,
+      "draw": "Forty Hall, Trent Park, Myddelton House Gardens, the Lee Valley."
+    },
+    {
+      "slug": "haringey",
+      "name": "Haringey",
+      "formal_name": "London Borough of Haringey",
+      "destination": "Haringey, England",
+      "london": "outer",
+      "in_scope": true,
+      "draw": "Alexandra Palace, Bruce Castle Museum, Highgate Wood, Tottenham Hotspur Stadium."
+    },
+    {
+      "slug": "harrow",
+      "name": "Harrow",
+      "formal_name": "London Borough of Harrow",
+      "destination": "Harrow, England",
+      "london": "outer",
+      "in_scope": true,
+      "draw": "Harrow School and its hill, Headstone Manor, Bentley Priory Museum."
+    },
+    {
+      "slug": "havering",
+      "name": "Havering",
+      "formal_name": "London Borough of Havering",
+      "destination": "Havering, England",
+      "london": "outer",
+      "in_scope": true,
+      "draw": "Rainham Hall, Upminster Windmill, Havering Country Park, Bedfords Park. Measured 21 Grade I+II* against 12 institutions — an outer borough that carries its content as listed buildings."
+    },
+    {
+      "slug": "hillingdon",
+      "name": "Hillingdon",
+      "formal_name": "London Borough of Hillingdon",
+      "destination": "Hillingdon, England",
+      "london": "outer",
+      "in_scope": true,
+      "draw": "Uxbridge's Battle of Britain Bunker, Manor Farm Ruislip, the Grand Union Canal, Harmondsworth Great Barn."
+    },
+    {
+      "slug": "hounslow",
+      "name": "Hounslow",
+      "formal_name": "London Borough of Hounslow",
+      "destination": "Hounslow, England",
+      "london": "outer",
+      "in_scope": true,
+      "draw": "Syon House, Osterley Park, Chiswick House, Hogarth's House, Boston Manor. Measured 14 institutions against 61 listed buildings — the sharpest illustration that outer boroughs carry content as NHLE entries."
+    },
+    {
+      "slug": "kingston-upon-thames",
+      "name": "Kingston upon Thames",
+      "formal_name": "Royal Borough of Kingston upon Thames",
+      "destination": "Kingston upon Thames, England",
+      "london": "outer",
+      "in_scope": true,
+      "draw": "The ancient market place and the coronation stone, Hampton Court Palace's Kingston side, Canbury Gardens. A Royal Borough by ancient prescriptive right, confirmed 1927."
+    },
+    {
+      "slug": "merton",
+      "name": "Merton",
+      "formal_name": "London Borough of Merton",
+      "destination": "Merton, England",
+      "london": "outer",
+      "in_scope": true,
+      "draw": "The All England Lawn Tennis Club and its museum, Wimbledon Common, Merton Abbey Mills, Morden Hall Park."
+    },
+    {
+      "slug": "newham",
+      "name": "Newham",
+      "formal_name": "London Borough of Newham",
+      "destination": "Newham, England",
+      "london": "outer",
+      "in_scope": true,
+      "draw": "The Queen Elizabeth Olympic Park's largest share, the ArcelorMittal Orbit, West Ham's London Stadium, the Royal Docks, Green Street."
+    },
+    {
+      "slug": "redbridge",
+      "name": "Redbridge",
+      "formal_name": "London Borough of Redbridge",
+      "destination": "Redbridge, England",
+      "london": "outer",
+      "in_scope": true,
+      "draw": "Valentines Mansion, Wanstead Park, Hainault Forest. The scoping wave found EMPTY Wikipedia categories but real content — do not read the empty category as an empty borough."
+    },
+    {
+      "slug": "richmond-upon-thames",
+      "name": "Richmond upon Thames",
+      "formal_name": "London Borough of Richmond upon Thames",
+      "destination": "Richmond upon Thames, England",
+      "london": "outer",
+      "in_scope": true,
+      "draw": "Kew Gardens (a World Heritage Site), Richmond Park, Ham House, Marble Hill, Hampton Court's Thames frontage, Twickenham. NOTE Royal Parks Regs 1997 reg. 4(18) covers Richmond Park."
+    },
+    {
+      "slug": "sutton",
+      "name": "Sutton",
+      "formal_name": "London Borough of Sutton",
+      "destination": "Sutton, England",
+      "london": "outer",
+      "in_scope": true,
+      "draw": "Whitehall Cheam, Honeywood Museum, Carshalton's ponds, Nonsuch Park. GENUINELY UNMEASURED by the scoping wave — the finder must establish its yield rather than assume it."
+    },
+    {
+      "slug": "waltham-forest",
+      "name": "Waltham Forest",
+      "formal_name": "London Borough of Waltham Forest",
+      "destination": "Waltham Forest, England",
+      "london": "outer",
+      "in_scope": true,
+      "draw": "The William Morris Gallery, Walthamstow Wetlands, Epping Forest's southern reach, God's Own Junkyard."
+    }
+  ]
+}

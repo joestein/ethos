@@ -151,7 +151,11 @@ defmodule EthosWeb.StructuredData do
   # own state because it is a sovereign one — it routes to its own destination
   # rather than under Rome, which is correct and is why the Rome seed gate
   # exempts that one file from its Italy/Rome assertion.
-  @country_by_region %{"Italy" => "IT", "Vatican City" => "VA"}
+  # "England" carries GB, the ISO code for the United Kingdom. England is the
+  # jurisdiction of the National Heritage List, which is why the corpus uses it
+  # as the region — but it is not a country in ISO terms, and emitting "EN"
+  # would be a code no consumer recognises.
+  @country_by_region %{"Italy" => "IT", "Vatican City" => "VA", "England" => "GB"}
 
   def postal_address(address, locality, region) do
     parsed = Ethos.Places.Address.parse(address)

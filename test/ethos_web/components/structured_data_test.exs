@@ -80,6 +80,7 @@ defmodule EthosWeb.StructuredDataTest do
       expected = fn
         "Italy" -> "IT"
         "Vatican City" -> "VA"
+        "England" -> "GB"
         _ -> "US"
       end
 
@@ -96,7 +97,10 @@ defmodule EthosWeb.StructuredDataTest do
       # Italy is the country, not the region, and the corpus does not carry
       # Lazio. Emitting addressRegion "Italy" beside addressCountry "IT" would
       # be a schema.org contradiction rather than a missing field.
-      for {raw, region, ld} <- with_region, region == "Italy" do
+      # England joins Italy here: it is a country name in the corpus's region
+      # field, and emitting addressRegion "England" beside addressCountry "GB"
+      # would be a schema.org contradiction rather than a missing field.
+      for {raw, region, ld} <- with_region, region in ["Italy", "England"] do
         assert is_nil(ld["addressRegion"]),
                "#{inspect(raw)} emitted addressRegion #{inspect(ld["addressRegion"])} " <>
                  "for a country name"

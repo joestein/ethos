@@ -177,6 +177,100 @@ defmodule Ethos.Places.AddressTest do
              "06103"
   end
 
+  test "a UK address decomposes, postcode last and alphanumeric" do
+    # The UK shape defeats every earlier branch: one comma where @full needs
+    # two, no two-letter region, no Italian province, and a postcode that is
+    # alphanumeric — so scan_postal/1, which looks for five digits, found
+    # nothing at all. Before this branch a London place published with NO
+    # street AND NO postcode.
+    assert Address.parse("10 Downing Street, London SW1A 2AA") == %{
+             street: "10 Downing Street",
+             locality: "London",
+             region: nil,
+             postal_code: "SW1A 2AA",
+             parsed?: true
+           }
+
+    # The space is optional. "W1F7LW" is a real printed address, and the gov.uk
+    # BS 7666 regex requires the space and so rejects it.
+    assert Address.parse("16-18 Ramillies Street, London W1F7LW").postal_code == "W1F7LW"
+
+    # region stays nil: a UK address carries no two-letter state, and inventing
+    # one would put a false addressRegion in the structured data.
+    assert Address.parse("Great Russell Street, London WC1B 3DG").region == nil
+  end
+
+  test "the UK locality is the last segment before the postcode, not the second" do
+    # 44% of real London addresses carry one or more middle localities, and
+    # they have the same comma count as an American address with a different
+    # meaning in every field. Forest Hill is not the locality the postcode
+    # belongs to.
+    parsed = Address.parse("100 London Road, Forest Hill, London SE23 3PQ")
+
+    assert parsed.street == "100 London Road"
+    assert parsed.locality == "London"
+    assert parsed.postal_code == "SE23 3PQ"
+
+    assert Address.parse("Court Yard, Eltham, Greenwich, London, SE9 5NP").locality == "London"
+  end
+
+  test "a UK street line survives having no house number and no thoroughfare word" do
+    # 62% of fifty real London addresses carry no house number, so the American
+    # rule alone would suppress nearly two street lines in three. A positive
+    # thoroughfare test is necessary but NOT sufficient: Bankside, Smithfield,
+    # The Cut and Upper Ground are real street names with no thoroughfare word
+    # either. What rescues them is the postcode — a strong signal that what
+    # precedes it was written as an address rather than as a description.
+    assert Address.parse("Bankside, London SE1 9DT").street == "Bankside"
+    assert Address.parse("The Cut, London SE1 8LZ").street == "The Cut"
+
+    # A building name with no number at all.
+    assert Address.parse("Somerset House, Strand, London, WC2R 1LA").street == "Somerset House"
+
+    # A number INSIDE the building name, which a bare ^\\d misses.
+    assert Address.parse("No. 1 Warehouse, West India Quay, London E14 4AL").street ==
+             "No. 1 Warehouse"
+
+    # And with no postcode at all, the thoroughfare word carries it alone.
+    assert Address.parse("Trafalgar Square, London").street == "Trafalgar Square"
+  end
+
+  test "a UK descriptive location yields no street even when a postcode follows" do
+    # The property the American house-number rule buys, kept here. Without it,
+    # the postcode clause above would accept any description that happens to
+    # end in a valid postcode.
+    parsed = Address.parse("Bounded by Park Lane and Oxford Street, London W1K 7TN")
+
+    assert parsed.street == nil
+    assert parsed.locality == "London"
+    assert parsed.postal_code == "W1K 7TN"
+  end
+
+  test "the UK branch cannot alter an address the earlier passes already parse" do
+    # Ordering held as a property rather than as a comment. @uk is consulted
+    # only after both American passes, the Italian one and the Vatican one have
+    # failed, so it can turn a nil into a value and never one value into
+    # another.
+    assert Address.parse("9 Main Street North, Bethlehem, CT 06751") == %{
+             street: "9 Main Street North",
+             locality: "Bethlehem",
+             region: "CT",
+             postal_code: "06751",
+             parsed?: true
+           }
+
+    assert Address.parse("Piazza del Campidoglio, 00186 Roma RM") == %{
+             street: "Piazza del Campidoglio",
+             locality: "Roma",
+             region: "RM",
+             postal_code: "00186",
+             parsed?: true
+           }
+
+    assert Address.parse("Piazza San Pietro, 00120 Citta del Vaticano").street ==
+             "Piazza San Pietro"
+  end
+
   test "every address in the corpus either decomposes or falls back cleanly" do
     addresses =
       Ethos.SeedDataHelpers.all_seed_files()
