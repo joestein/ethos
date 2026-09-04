@@ -138,9 +138,18 @@ defmodule Ethos.Places.Address do
   @uk ~r/^(?<head>.+?)[,\s]+(?<postal>#{@uk_postcode})\s*$/
 
   # A postcode-less UK address still yields a locality: "Trafalgar Square,
-  # London". Two segments only — more than that with no postcode is not
-  # distinguishable from a descriptive location, and is left alone.
-  @uk_no_postcode ~r/^(?<street>[^,]+),\s*(?<locality>London|City of London)\s*$/i
+  # London".
+  #
+  # It allowed TWO SEGMENTS ONLY until wave 2, on the reasoning that more than
+  # that with no postcode is not distinguishable from a descriptive location.
+  # That reasoning was wrong about which guard does the work. "Abbey Green, The
+  # Broadway, Barking, London" and "Crown Street, Dagenham, London" are plainly
+  # addresses, and what keeps a DESCRIPTION out is not the comma count — it is
+  # `uk_street_or_nil/2` being called with `postcode?` false, which accepts a
+  # segment only if it carries a house number or names a thoroughfare. The
+  # comma count was suppressing real streets while the real guard did its job
+  # regardless of how many commas preceded it.
+  @uk_no_postcode ~r/^(?<head>.+?),\s*(?:City of )?London\s*$/i
 
   # AN OUTWARD CODE IS NOT A POSTCODE. "London W12" and "London SE23" name a
   # postal district rather than a delivery point, so the outward code must
@@ -169,7 +178,18 @@ defmodule Ethos.Places.Address do
   # So the third clause: a segment IMMEDIATELY FOLLOWED BY A VALID POSTCODE is
   # an address line. A postcode is a strong signal that what precedes it was
   # written as an address rather than as a description of where something is.
-  @uk_thoroughfare ~r/^(?:.*\b(?:street|st|road|rd|lane|ln|place|pl|square|sq|gardens|gdns|terrace|crescent|mews|row|hill|walk|way|close|court|avenue|ave|embankment|bridge|wharf|yard|parade|rise|vale|grove|park|quay|passage|steps|strand|circus|broadway|green|common|fields|market|arcade|approach|drive)\b)$/i
+  #
+  # The list grows from real addresses, the way the Italian one did across three
+  # Rome waves. "circle" arrived with wave 2 and Regent's Park — "Outer Circle"
+  # and "Inner Circle" are the park's two ring roads, and "circus" being present
+  # without it was an accident of which address happened to land first.
+  #
+  # The optional trailing compass point arrived at the same time, for "Whalebone
+  # Lane North". The type stays anchored at the END, because dropping the anchor
+  # would admit any sentence containing a thoroughfare word — and the corpus is
+  # full of them — but a directional suffix is part of the street's own name
+  # rather than prose after it. It is a single optional word, not a relaxation.
+  @uk_thoroughfare ~r/^(?:.*\b(?:street|st|road|rd|lane|ln|place|pl|square|sq|gardens|gdns|terrace|crescent|mews|row|hill|walk|way|close|court|avenue|ave|embankment|bridge|wharf|yard|parade|rise|vale|grove|park|quay|passage|steps|strand|circus|circle|broadway|green|common|fields|market|arcade|approach|drive)\b)(?:\s+(?:North|South|East|West))?$/i
 
   # "No. 1 Warehouse, West India Quay" puts the number INSIDE the building
   # name, so a bare `^\d` misses it though a digit is plainly there.
@@ -284,10 +304,16 @@ defmodule Ethos.Places.Address do
   # point and is discarded rather than published as if it were a postcode.
   defp parse_uk_without_postcode(trimmed) do
     case Regex.named_captures(@uk_no_postcode, trimmed) do
-      %{"street" => street, "locality" => locality} ->
+      %{"head" => head} ->
+        segments =
+          head |> String.split(",") |> Enum.map(&String.trim/1) |> Enum.reject(&(&1 == ""))
+
         %{
-          street: uk_street_or_nil(street, false),
-          locality: presence(locality),
+          # `postcode?` is false, which is the whole guard: with no code of any
+          # kind, a segment is accepted as a street only if it carries a house
+          # number or names a thoroughfare.
+          street: uk_street_or_nil(List.first(segments), false),
+          locality: uk_no_postcode_locality(segments),
           region: nil,
           postal_code: nil,
           parsed?: true
@@ -318,6 +344,14 @@ defmodule Ethos.Places.Address do
   # Forest Hill, London SE23 3PQ" means Forest Hill is not the locality the
   # postcode belongs to. Where there is only one segment, the address named no
   # locality and none is invented.
+  # The postcode-less counterpart, and it differs in the one-segment case.
+  # "Trafalgar Square, London" named London as its locality and must keep doing
+  # so — there is nothing else it could mean. Where a middle exists, the middle
+  # is the locality and London is the city: "Crown Street, Dagenham, London"
+  # means Dagenham, exactly as the postcode forms mean Forest Hill.
+  defp uk_no_postcode_locality([_only]), do: "London"
+  defp uk_no_postcode_locality(segments), do: segments |> List.last() |> presence()
+
   defp uk_locality([_only]), do: nil
   defp uk_locality(segments) when is_list(segments), do: segments |> List.last() |> presence()
   defp uk_locality(_), do: nil

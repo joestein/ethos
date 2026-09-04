@@ -282,6 +282,43 @@ defmodule Ethos.Places.AddressTest do
              "SE23 3PQ"
   end
 
+  test "a postcode-less UK address is not limited to two segments" do
+    # This form allowed TWO SEGMENTS ONLY until London wave 2, on the reasoning
+    # that more than that with no postcode is indistinguishable from a
+    # description. That was wrong about which guard does the work: what keeps a
+    # description out is `uk_street_or_nil/2` being called with `postcode?`
+    # false, which demands a house number or a thoroughfare type. The comma
+    # count was suppressing real streets while the real guard ran regardless.
+    assert Address.parse("Crown Street, Dagenham, London") == %{
+             street: "Crown Street",
+             locality: "Dagenham",
+             region: nil,
+             postal_code: nil,
+             parsed?: true
+           }
+
+    # The middle is the locality and London is the city, exactly as in the
+    # postcode forms. With no middle there is nothing else London could be.
+    assert Address.parse("Trafalgar Square, London").locality == "London"
+
+    # The guard the comma count was mistaken for. No number, no thoroughfare
+    # type, no postcode of any kind: no street line.
+    assert Address.parse("Kensington Gore, London").street == nil
+
+    # A directional suffix is part of the street's own name, so the thoroughfare
+    # type stays anchored at the end and takes one optional word after it.
+    assert Address.parse("Whalebone Lane North, Chadwell Heath, London").street ==
+             "Whalebone Lane North"
+
+    # "circus" was on the list and "circle" was not, which was an accident of
+    # which address landed first. Regent's Park has both ring roads.
+    assert Address.parse("Outer Circle, The Regent's Park, London").street == "Outer Circle"
+
+    # The descriptive guard still runs first, and it must: this form has the
+    # weakest signal of the three and would otherwise be the easiest to fool.
+    assert Address.parse("Opposite the abbey, Barking, London").street == nil
+  end
+
   test "the UK branch cannot alter an address the earlier passes already parse" do
     # Ordering held as a property rather than as a comment. @uk is consulted
     # only after both American passes, the Italian one and the Vatican one have

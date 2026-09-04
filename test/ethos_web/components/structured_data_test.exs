@@ -824,10 +824,37 @@ defmodule EthosWeb.StructuredDataTest do
       #     correctly emit a street with no postal code beside it.
       #   * locality-only 307 -> 307, +0. Every London row carries a street, so
       #     none of them can be in this bucket whatever its postal code.
-      assert length(emitted) == 4382
-      assert count.(& &1["streetAddress"]) == 3760
-      assert count.(&is_nil(&1["streetAddress"])) == 622
-      assert count.(& &1["postalCode"]) == 3000
+      #
+      # Re-measured 2026-09-04 after London wave 2, which lands Westminster,
+      # Wandsworth and nine outer boroughs — 195 more addressed places.
+      #
+      #   * total 4382 -> 4577, +195.
+      #   * `streetAddress` 3760 -> 3954, +194.
+      #   * `is_nil(streetAddress)` 622 -> 623, +1, and 194 + 1 accounts for
+      #     every row. The one is "Kensington Gore, London": no house number, no
+      #     thoroughfare type, and no postal code of any kind, so nothing
+      #     distinguishes it from a description and the parser correctly
+      #     declines to guess. Its full address is still rendered on the page.
+      #   * `postalCode` 3000 -> 3190, +190. The five without are postcode-less
+      #     "…, London" forms.
+      #   * locality-only 307 -> 308, +1 — Kensington Gore again, which has
+      #     neither a street line nor a postal code.
+      #
+      # The +194 needed a parser change and the change was a NARROWING of a
+      # guard rather than a loosening. `@uk_no_postcode` allowed two segments
+      # only, on the reasoning that more than that with no postcode could not be
+      # told from a description — but the guard that actually does that work is
+      # `uk_street_or_nil/2` with `postcode?` false, which demands a house
+      # number or a thoroughfare type whatever the comma count. The comma limit
+      # was suppressing "Crown Street, Dagenham, London" while the real guard
+      # ran anyway. Two thoroughfare additions came with it, both from real
+      # addresses the way Rome's Italian list grew: "circle", for Regent's
+      # Park's two ring roads, and an optional trailing compass point, for
+      # "Whalebone Lane North".
+      assert length(emitted) == 4577
+      assert count.(& &1["streetAddress"]) == 3954
+      assert count.(&is_nil(&1["streetAddress"])) == 623
+      assert count.(& &1["postalCode"]) == 3190
 
       # The largest behavioural delta this change ships: 302 places emit a
       # PostalAddress carrying only locality, region and country. Their full
@@ -862,7 +889,11 @@ defmodule EthosWeb.StructuredDataTest do
       # whose sourced address is "South Park Street, San Francisco, CA" — no
       # house number and no ZIP, so it correctly emits locality, region and
       # country alone. Its full address is still rendered on the page.
-      assert count.(fn ld -> is_nil(ld["streetAddress"]) and is_nil(ld["postalCode"]) end) == 307
+      # 307 held through London wave 1, whose every address yielded a street. It
+      # went to 308 with wave 2, and the one addition is "Kensington Gore,
+      # London" — no house number, no thoroughfare type and no postal code, so
+      # it correctly emits locality, region and country alone.
+      assert count.(fn ld -> is_nil(ld["streetAddress"]) and is_nil(ld["postalCode"]) end) == 308
     end
   end
 end
