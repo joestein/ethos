@@ -104,6 +104,22 @@ defmodule Ethos.Release do
   end
 
   @doc """
+  Seeds the London borough corpus under `priv/seed_data/london/`.
+
+  Plain, with no precondition, and that is worth stating because the two
+  seeders above it both have one. Rome's zone files link to a flagship guide
+  that a code seed owns; San Francisco's Mission Bay file links to Oracle
+  Park's. Nothing in `lib/ethos/seeds/` owns a London place or guide, so every
+  target a London file can name is either inside the same directory or inside
+  the same file, and `Links.resolve!/1` has nothing to raise on.
+
+  The day that changes — a flagship "3 Days in London" the way Rome has one —
+  this gains a call the way `seed_rome_zones/1` did, and the release test's
+  published-guide assertion is where the omission would surface.
+  """
+  def seed_london(email), do: seed_directory("london", email)
+
+  @doc """
   Applies the deletion manifest, removing every place it names.
 
   Prints two numbers, not one: a manifest of 30 that prunes 0 means either the
