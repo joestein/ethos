@@ -1128,6 +1128,19 @@ git commit -m "refactor: rewrite the seed corpora onto destination paths"
 > `Places.upsert_place!/1` shim and the `GuideRunner` path resolution that
 > Task 7 introduces; without them, removing `town:`/`state:`/`county:` from
 > these modules fails `Place.changeset/2`'s `validate_required`.
+>
+> **Delete the safety clause you are standing on.** Task 7 added a third,
+> nil-returning clause to `GuideRunner.destination_node/1` so that the 37
+> code-seed guide modules — which had no `destination_path` yet — would not
+> raise `FunctionClauseError` before this task ran. That clause is a silent
+> catch-all: paired with `Map.get(data, :state)`, a guide module that misspells
+> `destination_pth:` writes a nil state instead of failing loudly, and every
+> module you touch in this task is a chance to misspell it.
+>
+> Once every code module carries a real `destination_path`, **remove that nil
+> clause** so an unresolvable guide raises again, and confirm the suite is still
+> green without it. Inheriting it would leave a permanent hole exactly where
+> this task's typos would land.
 
 **Files:**
 - Modify: `lib/ethos/seeds/*_places.ex` (31 modules), `lib/ethos/seeds/*_guide.ex` ballpark and Connecticut guide modules, `lib/ethos/seeds/connecticut_places.ex`
@@ -1895,6 +1908,8 @@ Derive both from the node instead:
 Add tests asserting a Rome place's JSON-LD carries `addressCountry: "IT"` and `addressLocality` set to its rione, a London place's carries `"GB"`, and **a Vatican place's carries `"VA"`** — the Vatican is a root country node in the tree, so St Peter's must not inherit Italy's code. Those three assertions are the regression guard for the whole class of bug.
 
 Verify by hand before committing that a Roman place's rendered JSON-LD does **not** say `"US"`. Between Task 7 and this step it does: the shim writes `state: "Lazio"`, which `@country_by_region` does not know. That is the live defect this step closes, and it is why no production re-seed may happen before this task lands.
+
+**These tests must be production-faithful, and today's are not.** Task 7's `structured_data_test` helper `region_for/1` hands `postal_address/3` the string `"Italy"` for Roman places, while production hands it `place.state` — which the shim now sets to `"Lazio"`. So the suite passes on an input production never produces, and actively conceals the regression. When you rewrite these tests, drive them from **a seeded place row read back from the database**, not from a literal or from the seed JSON. A test that constructs its own input is testing itself; the whole point of this step is that the value production supplies is the one that used to be wrong.
 
 - [ ] **Step 6: Run the web suite**
 
