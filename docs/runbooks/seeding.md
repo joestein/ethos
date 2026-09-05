@@ -70,14 +70,32 @@ it — see its entry below.
    catalog and no change here.
 
    It has no dependency on steps 1-7 and none of them depends on it, so it may
-   run at any point before step 9. It is listed here because step 9 **does**
+   run at any point before step 10. It is listed here because step 10 **does**
    depend on it: `Ethos.Seeds.MlbBallparksCollection` names all thirty ballpark
    guides, and `seed_collections` run before this step raises
    `collection mlb-ballparks references unknown guide <slug>`.
-9. `Ethos.Release.seed_collections()` — three collections: The Burys of
-   Connecticut (steps 2 and 3), Antique Trail of CT (step 2) and Major League
-   Ballparks (step 8). After **every** guide step, never between them.
-10. `Ethos.Release.seed_links()`
+9. `Ethos.Release.seed_golf(email)` — JSON files in `priv/seed_data/golf/`.
+   **The directory is empty.** The roster and its gate shipped ahead of the
+   research, so this call currently seeds nothing and reports `Seeded 0
+   files`. That is the expected output, not a failure. Run it anyway, for the
+   same reason as step 6: it is in the order so that the day the first wave
+   lands, nobody has to remember to add it. `seed_directory/2` seeds **places
+   before guides** inside this step, the same ordering constraint as step 8,
+   and for the same reason — a guide's entries resolve by `place_slug` through
+   `Ethos.Places.get_place_by_slug!/1`, which raises on a place nothing has
+   seeded yet.
+
+   It is listed here, before `seed_collections`, for the same reason ballparks
+   is: `Ethos.Seeds.GolfCollection` will name all fifty golf guides once it
+   exists (Task 12), and `seed_collections` run before that module is
+   registered — or before this step, once it is — raises `collection
+   public-course-every-state references unknown guide <slug>`.
+10. `Ethos.Release.seed_collections()` — three collections: The Burys of
+    Connecticut (steps 2 and 3), Antique Trail of CT (step 2) and Major League
+    Ballparks (step 8). After **every** guide step, never between them —
+    which is why it runs after step 9 as well as step 8, even while step 9
+    seeds nothing.
+11. `Ethos.Release.seed_links()`
 
 Verify the published count after each content step before moving on — see
 "Expected published counts" below. `seed_destinations` writes to a separate
@@ -207,6 +225,12 @@ table would be stale before the next one lands. The total still has to add up,
 so the one shipped Bronx guide is counted in it — re-derive that addend from
 `ls priv/seed_data/bronx/*.json | wc -l` rather than trusting this paragraph.
 
+Golf has no row for the same reason, but starker: `priv/seed_data/golf/` holds
+only `.gitkeep` (step 9's own note above says so), so its published count is
+**0**, not merely stale — there is nothing yet for a wave to have landed. Add
+its row, and fold its addend into the full rebuild total, only once
+`priv/seed_data/golf/*.json` exists.
+
 Their **terminal** counts are now knowable, which they were not when this
 paragraph was first written. Both programmes narrowed on 2026-08-31 from their
 full rosters to an in-scope core: **14 Bronx** guides (of 66 rostered) and
@@ -260,10 +284,10 @@ Where the numbers come from:
 If a count is short, **do not proceed to the next step.** Re-run the same
 seeder (see below) and re-check.
 
-After step 9, `/c/mlb-ballparks` should list thirty guides, and each ballpark
+After step 10, `/c/mlb-ballparks` should list thirty guides, and each ballpark
 guide page should carry a *"Part of Major League Ballparks"* line under its
 title. If the collection page is short, the guide it dropped shows no such
-line and nothing else reports it — re-run steps 8 and 9 in that order.
+line and nothing else reports it — re-run steps 8 and 10 in that order.
 
 ## Seeding is not transactional across a run
 

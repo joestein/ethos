@@ -456,9 +456,9 @@ one row no batch claimed.
 `/destinations/illinois` and `/destinations/illinois/cook-county` are `GROUP BY`
 queries over the guides table:
 
-- `Ethos.Guides.list_states/0` — `lib/ethos/guides.ex:88-96`. Groups published
+- `Ethos.Guides.list_states/0` — `lib/ethos/guides.ex:123-131`. Groups published
   guides by `state`/`state_slug` where `state_slug` is not null.
-- `Ethos.Guides.list_counties_for_state/1` — `lib/ethos/guides.ex:98-108`. Groups
+- `Ethos.Guides.list_counties_for_state/1` — `lib/ethos/guides.ex:133-143`. Groups
   by `county`/`county_slug` within one state.
 - Routes: `lib/ethos_web/router.ex:26-28`.
 
@@ -1321,6 +1321,49 @@ things change:
   take the county its main visitor centre sits in, or `nil` (see §3), and the
   moduledoc should say which was chosen and why. Do not invent a hyphenated
   compound; it produces a hub nobody links to.
+
+**Golf courses: a third radius, and two facts no previous set handled.** Fifty
+sites, one per US state, anchored on the top-ranked publicly accessible course
+per a named ranking at a named edition — because "the best course in Nebraska"
+is a judgment no verifier can adjudicate, and §4 rule 8 forbids shipping one.
+Six things change:
+
+- **The radius is the basecamp: wherever a visitor sleeps.** Not a walk, not a
+  park boundary, and — this is what makes golf new — **not consistent across
+  the set.** Three shapes recur: resort (lodging on the property), municipal or
+  daily-fee inside a city (the surrounding neighbourhood, which the corpus may
+  already publish), and remote (a gateway town on a named road). Each guide
+  records which shape it is and why, as a national park's county choice is
+  recorded.
+- **A second course is an entry, not a guide.** The first set whose entries
+  include another instance of the site type. It takes a `golf-course` place
+  record and no guide — unless it is another state's ranked course, in which
+  case it is a `see-also` link and no second record is minted. Some states have
+  no second course worth naming; publish without one, as Kauffman Stadium
+  published a single place and said so.
+- **Airports are prose**, extending §8 past transit and parking. Golf is flown
+  to, so *Getting there* carries more load here than it did for ballparks. A
+  terminal is still not somewhere a visitor spends the day.
+- **Tee-time access is an identity fact.** Resort-guest priority, municipal
+  resident lotteries, advance-booking windows, and whether a course is publicly
+  accessible at all. Verified, never assumed. **This is the worst failure the
+  set can ship** — a page telling someone they can play a course they cannot is
+  worse than a wrong date, because it is acted on. `golf_seed_data_test.exs`
+  requires every guide to answer it.
+- **Green fees are priced facts that go stale seasonally.** Publish only with
+  the source's own dated qualifier, or omit and name the gap — the discipline
+  that left Fenway's parking price unpublished and the Dodger Stadium Express
+  headways out entirely.
+- **The duration ban is at maximum strain.** "A thirty-minute drive from the
+  airport" is the most natural sentence about a golf resort, and §12 records
+  this corpus shipping "within a short drive" and "about ten minutes away" to
+  production. State the road, the direction and the mileage.
+
+Golf's places live in JSON, so it inherits the corpus-wide gates and writes only
+the per-directory ones — the inverse of the ballpark set, and the reason the
+choice went that way: a source-scanning gate cannot tell a defect from a
+moduledoc recording one, and golf is the set most likely to reach for a drive
+time.
 
 **For any set, the questions to answer before starting:**
 
