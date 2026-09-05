@@ -32,7 +32,7 @@ defmodule EthosWeb.AdminSuggestionControllerTest do
       html = conn |> get(~p"/admin/suggestions") |> html_response(200)
       assert html =~ "New Spot"
       assert html =~ guide.title
-      assert html =~ author.email
+      assert html =~ author.username
     end
 
     test "accept creates credited entry; decline resolves; double-accept flashes error", %{

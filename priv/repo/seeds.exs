@@ -12,6 +12,7 @@
 
 alias Ethos.{Accounts, Guides, Repo}
 alias Ethos.Accounts.User
+alias Ethos.Accounts.Username
 
 demo_email = "demo@ethos.example"
 
@@ -21,8 +22,15 @@ else
   # Random per-run password — nobody is meant to log in as the demo user.
   demo_password = :crypto.strong_rand_bytes(24) |> Base.encode64()
 
-  {:ok, demo} =
-    Accounts.register_user(%{email: demo_email, password: demo_password})
+  demo =
+    case Accounts.register_user(%{
+           email: demo_email,
+           password: demo_password,
+           username: Username.derive_from_email(demo_email)
+         }) do
+      {:ok, user} -> user
+      {:error, changeset} -> raise "could not create demo account: #{inspect(changeset.errors)}"
+    end
 
   {:ok, guide} =
     Guides.create_guide(demo, %{title: "Lisbon in 5 days", destination: "Lisbon, Portugal"})

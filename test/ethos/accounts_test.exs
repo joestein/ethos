@@ -97,7 +97,7 @@ defmodule Ethos.AccountsTest do
   describe "change_user_registration/2" do
     test "returns a changeset" do
       assert %Ecto.Changeset{} = changeset = Accounts.change_user_registration(%User{})
-      assert changeset.required == [:password, :email]
+      assert changeset.required == [:password, :username, :email]
     end
 
     test "allows fields to be set" do
@@ -524,6 +524,133 @@ defmodule Ethos.AccountsTest do
   describe "inspect/2 for the User module" do
     test "does not include password" do
       refute inspect(%User{password: "123456"}) =~ "password: \"123456\""
+    end
+  end
+
+  describe "register_user/1 username validation" do
+    import Ethos.AccountsFixtures
+
+    test "requires a username" do
+      {:error, changeset} =
+        Ethos.Accounts.register_user(%{
+          email: unique_user_email(),
+          password: valid_user_password()
+        })
+
+      assert %{username: ["can't be blank"]} = errors_on(changeset)
+    end
+
+    test "rejects a username that is too short or too long" do
+      {:error, short} =
+        Ethos.Accounts.register_user(valid_user_attributes(username: "ab"))
+
+      {:error, long} =
+        Ethos.Accounts.register_user(valid_user_attributes(username: String.duplicate("a", 21)))
+
+      assert %{username: ["should be at least 3 character(s)"]} = errors_on(short)
+      assert %{username: ["should be at most 20 character(s)"]} = errors_on(long)
+    end
+
+    test "rejects characters outside a-z, 0-9 and underscore" do
+      {:error, changeset} =
+        Ethos.Accounts.register_user(valid_user_attributes(username: "joe stein"))
+
+      assert %{username: ["can only contain lowercase letters, numbers and underscores"]} =
+               errors_on(changeset)
+    end
+
+    test "rejects a reserved username" do
+      {:error, changeset} =
+        Ethos.Accounts.register_user(valid_user_attributes(username: "admin"))
+
+      assert %{username: ["is reserved"]} = errors_on(changeset)
+    end
+
+    test "rejects the admin's public username — an ordinary user cannot register as the admin" do
+      {:error, changeset} =
+        Ethos.Accounts.register_user(valid_user_attributes(username: "buoewe"))
+
+      assert %{username: ["is reserved"]} = errors_on(changeset)
+    end
+
+    test "downcases and trims before storing" do
+      {:ok, user} =
+        Ethos.Accounts.register_user(valid_user_attributes(username: "  Voyager  "))
+
+      assert user.username == "voyager"
+    end
+
+    test "rejects a username already taken in a different case" do
+      taken = user_fixture(username: "voyager")
+
+      {:error, changeset} =
+        Ethos.Accounts.register_user(valid_user_attributes(username: "VOYAGER"))
+
+      assert %{username: ["has already been taken"]} = errors_on(changeset)
+      assert taken.username == "voyager"
+    end
+
+    test "a newly registered user is not provisional" do
+      {:ok, user} = Ethos.Accounts.register_user(valid_user_attributes())
+      refute user.username_provisional
+    end
+  end
+
+  describe "update_user_username/2" do
+    import Ethos.AccountsFixtures
+
+    test "sets the username and clears the provisional flag" do
+      user = user_fixture()
+      {:ok, updated} = Ethos.Accounts.update_user_username(user, %{"username" => "voyager"})
+
+      assert updated.username == "voyager"
+      refute updated.username_provisional
+    end
+
+    test "applies the same rules as registration" do
+      user = user_fixture()
+
+      assert {:error, changeset} =
+               Ethos.Accounts.update_user_username(user, %{"username" => "admin"})
+
+      assert %{username: ["is reserved"]} = errors_on(changeset)
+    end
+
+    test "rejects the admin's public username" do
+      user = user_fixture()
+
+      assert {:error, changeset} =
+               Ethos.Accounts.update_user_username(user, %{"username" => "buoewe"})
+
+      assert %{username: ["is reserved"]} = errors_on(changeset)
+    end
+
+    test "rejects a username someone else already holds" do
+      user_fixture(username: "voyager")
+      other = user_fixture()
+
+      assert {:error, changeset} =
+               Ethos.Accounts.update_user_username(other, %{"username" => "voyager"})
+
+      assert %{username: ["has already been taken"]} = errors_on(changeset)
+    end
+  end
+
+  describe "needs_username?/1" do
+    import Ethos.AccountsFixtures
+
+    test "is false for a user who chose their own name" do
+      refute Ethos.Accounts.needs_username?(user_fixture())
+    end
+
+    test "is true for a backfilled user" do
+      user = user_fixture()
+      provisional = %{user | username_provisional: true}
+      assert Ethos.Accounts.needs_username?(provisional)
+    end
+
+    test "is false for nobody" do
+      refute Ethos.Accounts.needs_username?(nil)
     end
   end
 end

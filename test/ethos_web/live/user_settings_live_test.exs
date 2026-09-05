@@ -16,6 +16,17 @@ defmodule EthosWeb.UserSettingsLiveTest do
       assert html =~ "Change Password"
     end
 
+    test "links to the username picker so a user can change a name they already chose", %{
+      conn: conn
+    } do
+      {:ok, _lv, html} =
+        conn
+        |> log_in_user(user_fixture())
+        |> live(~p"/users/settings")
+
+      assert html =~ ~s(href="/users/username")
+    end
+
     test "redirects if user is not logged in", %{conn: conn} do
       assert {:error, redirect} = live(conn, ~p"/users/settings")
 

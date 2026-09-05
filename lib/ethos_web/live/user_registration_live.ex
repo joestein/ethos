@@ -31,6 +31,17 @@ defmodule EthosWeb.UserRegistrationLive do
           Oops, something went wrong! Please check the errors below.
         </.error>
 
+        <.input
+          field={@form[:username]}
+          type="text"
+          label="Username"
+          required
+          autocomplete="username"
+        />
+        <p class="-mt-4 text-sm text-zinc-500">
+          Shown on everything you post. Your email address is never public.
+        </p>
+
         <.input field={@form[:email]} type="email" label="Email" required />
         <.input field={@form[:password]} type="password" label="Password" required />
 
