@@ -94,5 +94,23 @@ defmodule Ethos.Accounts.UsernameTest do
       assert String.length(result) == 20
       assert String.ends_with?(result, "2")
     end
+
+    test "stays within the maximum length when the counter needs two or three digits" do
+      base = String.duplicate("a", 20)
+
+      taken_10 = MapSet.new([base | for(n <- 2..10, do: String.slice(base, 0, 19) <> "#{n}")])
+      two_digit = Username.uniquify(base, taken_10)
+      assert String.length(two_digit) == 20
+
+      taken_100 =
+        MapSet.new([
+          base
+          | for(n <- 2..9, do: String.slice(base, 0, 19) <> "#{n}") ++
+              for(n <- 10..100, do: String.slice(base, 0, 18) <> "#{n}")
+        ])
+
+      three_digit = Username.uniquify(base, taken_100)
+      assert String.length(three_digit) == 20
+    end
   end
 end
