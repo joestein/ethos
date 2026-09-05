@@ -893,10 +893,25 @@ defmodule EthosWeb.StructuredDataTest do
       #   * `is_nil(streetAddress)` unmoved at 623 and locality-only unmoved at
       #     308, which is the same fact from the other side: not one of the 72
       #     is a descriptive location.
-      assert length(emitted) == 4846
-      assert count.(& &1["streetAddress"]) == 4223
+      #
+      # Re-measured again the same day: Han Sung BBQ (South Bay) was withdrawn
+      # for want of tabletop evidence. Its own site and the diner account it
+      # quoted established only a charcoal grill, never a grill at the table,
+      # and the gate that is supposed to catch that had a hole — a bare
+      # "charcoal grill" substring — that this entry had cleared through. With
+      # the hole closed and the place gone, the 72 addressed Korean BBQ places
+      # become 71:
+      #
+      #   * total 4846 -> 4845, -1.
+      #   * `streetAddress` 4223 -> 4222, -1. It carried one.
+      #   * `postalCode` 3459 -> 3458, -1. It carried one of those too.
+      #   * `is_nil(streetAddress)` unmoved at 623 and locality-only unmoved at
+      #     308: the withdrawn place was never counted on either of those
+      #     sides to begin with.
+      assert length(emitted) == 4845
+      assert count.(& &1["streetAddress"]) == 4222
       assert count.(&is_nil(&1["streetAddress"])) == 623
-      assert count.(& &1["postalCode"]) == 3459
+      assert count.(& &1["postalCode"]) == 3458
 
       # The largest behavioural delta this change ships: 302 places emit a
       # PostalAddress carrying only locality, region and country. Their full

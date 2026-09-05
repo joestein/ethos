@@ -160,7 +160,7 @@ defmodule Ethos.Seeds.KoreanBbqSeedDataTest do
 
   @grill_evidence ~r/\b(?:grill(?:s|ed|ing)?|grille)\b/i
 
-  @tabletop_evidence ~r/(?:set into the table|built into the table|in the table|at the table|tabletop|table-top|table grill|smokeless grill|charcoal grill|gas grill|grill at each table|grills? (?:are )?set into)/i
+  @tabletop_evidence ~r/(?:set into the table|built into the table|in the table|at (?:the|each|every) table|tabletop|table-top|table grill|smokeless grill|grills? (?:is |are )?set into)/i
 
   # ------------------------------------------------------------------
   # Helpers
@@ -313,6 +313,21 @@ defmodule Ethos.Seeds.KoreanBbqSeedDataTest do
 
     refute grill_at_the_table?("The kitchen grills the short rib and brings it out.")
     refute grill_at_the_table?("A soondubu house with no grill.")
+  end
+
+  test "a bare charcoal or gas grill is not evidence of a grill at the table" do
+    # A kitchen can have a charcoal grill. This is the hole a South Bay summary
+    # came through: "the option to grill their meat over a charcoal grill" cleared
+    # the gate while never establishing that the grill was at the table.
+    refute grill_at_the_table?("The option to grill their meat over a charcoal grill burning mesquite.")
+    refute grill_at_the_table?("A gas grill runs the length of the kitchen.")
+
+    # Still evidence, because these bind the grill to the table:
+    assert grill_at_the_table?("A charcoal grill is set into each table.")
+    assert grill_at_the_table?("Gas grills at the table.")
+
+    # "smokeless" stays: a downdraft smokeless grill is tabletop by construction.
+    assert grill_at_the_table?("Every table has a smokeless grill.")
   end
 
   # ------------------------------------------------------------------
