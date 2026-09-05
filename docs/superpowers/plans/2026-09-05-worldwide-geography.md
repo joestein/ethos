@@ -445,7 +445,7 @@ Create `priv/seed_data/destinations/tree.json`. Every node the eight JSON corpor
   {"path": "italy", "kind": "country", "name": "Italy", "intro": "Italy."},
   {"path": "italy/lazio", "kind": "region", "name": "Lazio", "intro": "Lazio."},
   {"path": "italy/lazio/rome", "kind": "city", "name": "Rome", "intro": "Rome.",
-   "legacy_paths": ["rome", "italy", "italy/rome"]},
+   "legacy_paths": ["rome", "italy/rome"]},
 
   {"path": "united-kingdom", "kind": "country", "name": "United Kingdom",
    "intro": "The United Kingdom."},
@@ -1105,6 +1105,11 @@ git commit -m "refactor: rewrite the seed corpora onto destination paths"
 
 ### Task 6: The code-module corpora
 
+> **Execution order:** run this task AFTER Task 7. It depends on the
+> `Places.upsert_place!/1` shim and the `GuideRunner` path resolution that
+> Task 7 introduces; without them, removing `town:`/`state:`/`county:` from
+> these modules fails `Place.changeset/2`'s `validate_required`.
+
 **Files:**
 - Modify: `lib/ethos/seeds/*_places.ex` (31 modules), `lib/ethos/seeds/*_guide.ex` ballpark and Connecticut guide modules, `lib/ethos/seeds/connecticut_places.ex`
 - Modify: `priv/seed_data/destinations/tree.json`
@@ -1292,7 +1297,6 @@ In `upsert_places!/1`, map each place through the resolver:
 
       p
       |> Map.put("destination_id", node.id)
-      |> Map.merge(Ethos.Destinations.legacy_geo(node))
       |> Map.delete("destination_path")
       |> Places.upsert_place!()
     end)
@@ -1309,11 +1313,72 @@ In `upsert_places!/1`, map each place through the resolver:
   end
 ```
 
-In `lib/ethos/seeds/guide_runner.ex`, `upsert!/2` currently passes `"state"` and `"county"` into `Guide.changeset/2` in both `find_or_insert_guide!/2` and the transaction body. Replace both with `"destination_id" => data.destination_id` merged with `Ethos.Destinations.legacy_geo/1` for the node, exactly as above.
+In `lib/ethos/seeds/guide_runner.ex`, `upsert!/2` currently passes `"state"` and `"county"` into `Guide.changeset/2` in both `find_or_insert_guide!/2` and the transaction body. Replace both with `"destination_id" => destination_id(data)`, where:
+
+```elixir
+  # Code-module guides (the ballparks, the Connecticut five) carry a
+  # :destination_path; JSON guides arrive already resolved to an id. Accept
+  # either, so both seeding routes share one runner.
+  defp destination_id(%{destination_id: id}) when is_integer(id), do: id
+
+  defp destination_id(%{destination_path: path}) when is_binary(path) do
+    case Ethos.Destinations.get_by_path(path) do
+      nil -> raise ArgumentError, "unknown destination node #{path}"
+      node -> node.id
+    end
+  end
+```
 
 - [ ] **Step 3b: Add the transitional legacy-geo shim**
 
-`Place.changeset/2` requires `town`, `state` and `county`, and Tasks 8-11 still query the legacy columns. Until Task 12 removes both, the loader derives those values from the node so re-seeding keeps the columns truthful rather than nulling them.
+`Place.changeset/2` requires `town`, `state` and `county`, and Tasks 8-11 still query the legacy columns. Until Task 12 removes both, they are derived from the node so re-seeding keeps them truthful rather than nulling them.
+
+**The derivation lives in `Places.upsert_place!/1`, not in the JSON loader** — the 31 code modules (`ConnecticutPlaces`, the ballpark `*_places.ex`) call `upsert_place!/1` directly and would otherwise fail `validate_required` the moment Task 6 removes their `town:`/`state:`/`county:` keys. One shim at the single insertion point covers every caller.
+
+In `lib/ethos/places.ex`:
+
+```elixir
+  def upsert_place!(attrs) do
+    attrs = attrs |> normalize_keys() |> put_legacy_geo()
+    slug = attrs["slug"]
+
+    case Repo.get_by(Place, slug: slug) do
+      nil -> %Place{}
+      place -> place
+    end
+    |> Place.changeset(attrs)
+    |> Repo.insert_or_update!()
+  end
+
+  defp normalize_keys(attrs), do: Map.new(attrs, fn {k, v} -> {to_string(k), v} end)
+
+  # Transitional: derives town/state/county from the destination node while
+  # those columns still have readers. Removed with the columns in Task 12.
+  # A caller that already supplied them (none, after Task 6) keeps its values.
+  defp put_legacy_geo(%{"destination_id" => id} = attrs) when not is_nil(id) do
+    if Map.has_key?(attrs, "town") do
+      attrs
+    else
+      node = Repo.get!(Ethos.Destinations.Destination, id)
+      Map.merge(attrs, Ethos.Destinations.legacy_geo(node))
+    end
+  end
+
+  defp put_legacy_geo(%{"destination_path" => path} = attrs) when is_binary(path) do
+    node =
+      Ethos.Destinations.get_by_path(path) ||
+        raise ArgumentError, "unknown destination node #{path}"
+
+    attrs
+    |> Map.delete("destination_path")
+    |> Map.put("destination_id", node.id)
+    |> Map.merge(Ethos.Destinations.legacy_geo(node))
+  end
+
+  defp put_legacy_geo(attrs), do: attrs
+```
+
+Accepting `destination_path` here is what lets the code modules in Task 6 name a node without resolving it themselves.
 
 Add to `lib/ethos/destinations.ex`:
 
@@ -1631,9 +1696,17 @@ defmodule EthosWeb.DestinationRedirectTest do
     {"/destinations/new-york/brooklyn",
      "/destinations/united-states/new-york/new-york-city/brooklyn"},
     {"/destinations/rome", "/destinations/italy/lazio/rome"},
-    {"/destinations/italy", "/destinations/italy/lazio/rome"},
+    {"/destinations/italy/rome", "/destinations/italy/lazio/rome"},
     {"/destinations/england/london", "/destinations/united-kingdom/england/london"}
   ]
+
+  # `/destinations/italy` is deliberately NOT in that table: "italy" is a real
+  # node now, so it renders the country hub listing Lazio. Exact-node
+  # resolution runs before the legacy lookup, which is the correct order.
+  test "a legacy path that is now a real node renders instead of redirecting", %{conn: conn} do
+    conn = get(conn, ~p"/destinations/italy")
+    assert html_response(conn, 200) =~ "Lazio"
+  end
 
   test "every legacy path 301s to its new home", %{conn: conn} do
     for {from, to} <- @redirects do
@@ -1914,7 +1987,7 @@ Expected: no hits outside this migration. Any hit is a call site Task 8-11 misse
 
 Delete from `lib/ethos/guides.ex`: `list_destinations_without_state/0`, `list_states/0`, `list_counties_for_state/1`, `list_published_guides_for_state/1`, `list_published_guides_for_county/2`, `list_guides_shadowed_by_state/1`. Keep `list_destinations/0` only if the search index still uses it — check `lib/ethos/search.ex` first.
 
-Delete `Ethos.Destinations.legacy_geo/1` and its private `nearest/2` (added in Task 7 Step 3b), the `Map.merge(Ethos.Destinations.legacy_geo(node))` call in `lib/ethos/seeds/data_guide.ex`, the equivalent merge in `lib/ethos/seeds/guide_runner.ex`, and the `legacy_geo/1` test in `test/ethos/destinations_test.exs`. The shim exists only to keep the legacy columns truthful while they still have readers; this step is where it stops having a purpose.
+Delete `Ethos.Destinations.legacy_geo/1` and its private `nearest/2` (added in Task 7 Step 3b), and `put_legacy_geo/1` and its three clauses from `lib/ethos/places.ex` — keeping `normalize_keys/1` and the `destination_path` → `destination_id` resolution, which the code modules from Task 6 still rely on. Delete the `legacy_geo/1` test in `test/ethos/destinations_test.exs`. The shim exists only to keep the legacy columns truthful while they still have readers; this step is where it stops having a purpose.
 
 - [ ] **Step 3: Write the migration**
 
