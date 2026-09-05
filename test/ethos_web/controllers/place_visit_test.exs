@@ -7,9 +7,6 @@ defmodule EthosWeb.PlaceVisitTest do
     slug: "mattatuck-museum",
     name: "Mattatuck Museum",
     kind: "museum",
-    town: "Waterbury",
-    state: "Connecticut",
-    county: "New Haven County",
     summary: "x"
   }
 

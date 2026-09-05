@@ -12,9 +12,6 @@ defmodule EthosWeb.ConnectedPagesTest do
         slug: "glebe-house-x",
         name: "Glebe House X",
         kind: "museum",
-        town: "Woodbury",
-        state: "Connecticut",
-        county: "Litchfield County",
         summary: "x"
       })
 
@@ -50,9 +47,6 @@ defmodule EthosWeb.ConnectedPagesTest do
       slug: "nearby-place",
       name: "Nearby Place",
       kind: "museum",
-      town: "TestTown",
-      state: "TestState",
-      county: "TestCounty",
       summary: "nearby"
     })
 
@@ -60,9 +54,6 @@ defmodule EthosWeb.ConnectedPagesTest do
       slug: "shared-place",
       name: "Shared Place",
       kind: "restaurant",
-      town: "TestTown",
-      state: "TestState",
-      county: "TestCounty",
       summary: "shared"
     })
 
@@ -70,9 +61,6 @@ defmodule EthosWeb.ConnectedPagesTest do
       slug: "region-place",
       name: "Region Place",
       kind: "historic-site",
-      town: "TestTown",
-      state: "TestState",
-      county: "TestCounty",
       summary: "region"
     })
 

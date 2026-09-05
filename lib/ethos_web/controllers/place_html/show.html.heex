@@ -4,8 +4,9 @@
     `@geo_trail` is the same list `PlaceController` builds the BreadcrumbList
     from, so the visible trail and the JSON-LD cannot drift apart, and each
     link is the URL the hub actually serves rather than the single-slug form
-    that 301s. Empty for a place with no node — nothing in the seeded corpus —
-    which falls back to the state/county columns Task 12 removes.
+    that 301s. Empty for a place with no node — nothing in the seeded corpus
+    has one, since every loader resolves a `destination_path` and raises on a
+    miss — and then the page simply carries no geography trail.
   --%>
   <nav :if={@geo_trail != []} class="text-sm text-zinc-500">
     <span :for={{d, i} <- Enum.with_index(@geo_trail)}>
@@ -16,24 +17,10 @@
     </span>
   </nav>
 
-  <nav :if={@geo_trail == []} class="text-sm text-zinc-500">
-    <.link navigate={~p"/destinations/#{@place.state_slug}"} class="underline">
-      {@place.state}
-    </.link>
-    /
-    <.link
-      navigate={~p"/destinations/#{@place.state_slug}/#{@place.county_slug}"}
-      class="underline"
-    >
-      {@place.county}
-    </.link>
-    / {@place.town}
-  </nav>
-
   <header class="mt-2 flex flex-wrap items-start justify-between gap-3">
     <div>
       <h1 class="text-3xl font-bold">{@place.name}</h1>
-      <p class="mt-1 text-zinc-500">{kind_label(@place.kind)} · {@place.town}, {@place.state}</p>
+      <p class="mt-1 text-zinc-500">{kind_label(@place.kind)} · {geo_label(@geo_trail)}</p>
     </div>
     <div class="flex items-center gap-2">
       <div :if={@place.status == "open"}>
@@ -124,7 +111,7 @@
   </section>
 
   <section :if={@siblings != []} class="mt-8">
-    <h2 class="text-xl font-semibold">More in {@place.town}</h2>
+    <h2 class="text-xl font-semibold">More in {locality(@geo_trail)}</h2>
     <ul class="mt-3 space-y-2">
       <li :for={s <- @siblings}>
         <.link navigate={~p"/p/#{s.slug}"} class="underline">{s.name}</.link>

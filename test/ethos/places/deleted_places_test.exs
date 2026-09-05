@@ -142,9 +142,6 @@ defmodule Ethos.Places.DeletedPlacesTest do
       slug: slug,
       name: "Test Place",
       kind: "park",
-      town: "Woodbury",
-      state: "Connecticut",
-      county: "Litchfield County",
       summary: "A park.",
       destination_id: node && node.id
     }

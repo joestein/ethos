@@ -15,7 +15,7 @@ defmodule Ethos.Destinations do
 
   For a caller holding a `destination_id` off a guide or place row that was
   fetched without the association preloaded — `nil` rather than a raise, since
-  the column is nullable until the legacy geography columns are dropped.
+  a guide authored through the web UI names no node.
   """
   def get(id) when is_integer(id), do: Repo.get(Destination, id)
 
@@ -90,56 +90,5 @@ defmodule Ethos.Destinations do
 
   def get_by_legacy_path(path) when is_binary(path) do
     Repo.one(from d in Destination, where: ^path in d.legacy_paths)
-  end
-
-  @doc """
-  The legacy `town`/`state`/`county` triple for a node, derived from its
-  ancestry.
-
-  Transitional. Tasks 8-11 move each reader onto `destination_id`, and the
-  final migration drops the columns and this function with them. It exists so
-  that re-seeding during the transition writes the same values the corpora
-  used to carry, rather than nulls that would fail `Place.changeset/2`.
-
-  The tiers map by position from the leaf: the node itself is the town, its
-  nearest `county`-or-`borough`-or-`city` ancestor is the county, and its
-  nearest `region` ancestor is the state.
-
-  A `region` node has no county and gets none. Every other kind falls back to
-  its own name when no county-ish ancestor exists — that fallback is what gives
-  Vatican City, a root `country` with nothing below it, a county to hang a
-  breadcrumb on. A region is the one kind that is never a leaf jurisdiction, and
-  fabricating `county: "Connecticut"` for the state node would file a
-  state-level guide under a county hub repeating the state's own name.
-  """
-  def legacy_geo(%Destination{} = node), do: legacy_geo_from_trail(ancestors(node) ++ [node])
-
-  @doc """
-  `legacy_geo/1` over an ancestry trail instead of a stored node.
-
-  Root-first, the node itself last, each entry anything answering to `.kind`
-  and `.name`. The seam exists for the corpus gates, which read
-  `priv/seed_data/destination_tree.json` off disk with no repo in sight
-  (`ExUnit.Case`, not `DataCase`) and would otherwise need a second copy of the
-  tier rules to check what the loaders write. One derivation, two entry points,
-  so the gates and the shim cannot drift.
-  """
-  def legacy_geo_from_trail([_ | _] = trail) do
-    node = List.last(trail)
-
-    %{
-      "town" => node.name,
-      "county" => nearest(trail, ~w(county borough city)) || own_county(node),
-      "state" => nearest(trail, ~w(region)) || nearest(trail, ~w(country)) || node.name
-    }
-  end
-
-  defp own_county(%{kind: "region"}), do: nil
-  defp own_county(node), do: node.name
-
-  defp nearest(trail, kinds) do
-    trail
-    |> Enum.reverse()
-    |> Enum.find_value(fn d -> if d.kind in kinds, do: d.name end)
   end
 end

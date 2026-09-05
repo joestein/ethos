@@ -5,6 +5,10 @@ defmodule Ethos.Seeds.RomeGuideTest do
   import Ethos.AccountsFixtures
 
   test "upsert! creates the published guide idempotently under the owner" do
+    # The guide names `italy/lazio/rome` and the seeder raises on a node the
+    # table does not hold, so the chain is written first — the same order
+    # `Ethos.Release.seed_rome/1` uses.
+    Ethos.SeedDataHelpers.seed_destination_paths!(["italy/lazio/rome"])
     user = user_fixture()
 
     guide = RomeGuide.upsert!(user.email)
@@ -13,10 +17,14 @@ defmodule Ethos.Seeds.RomeGuideTest do
     assert guide.slug == "three-days-in-rome-real-trip-guide"
     assert guide.destination_slug == "rome"
 
-    # The affiliate registry is keyed on state_slug. Without this the Rome
-    # locale silently never fires, and every affiliate test still passes
-    # because they exercise fixtures rather than the seeder.
-    assert guide.state_slug == "italy"
+    # The affiliate registry is keyed on the destination node's path, so a Rome
+    # guide filed on no node — which is what this seeder used to do, writing a
+    # bare `state: "Italy"` into a column instead — makes the Rome locale
+    # silently never fire while every affiliate test still passes, because they
+    # exercise fixtures rather than the seeder.
+    assert Ethos.Repo.preload(guide, :destination_node).destination_node.path ==
+             "italy/lazio/rome"
+
     assert length(guide.sections) == 4
     assert length(guide.faq) == 6
     assert length(guide.photos) == 13
@@ -53,6 +61,8 @@ defmodule Ethos.Seeds.RomeGuideTest do
   test "raises instead of auto-creating the owner account outside dev/test" do
     Application.put_env(:ethos, :env, :prod)
     on_exit(fn -> Application.put_env(:ethos, :env, :test) end)
+
+    Ethos.SeedDataHelpers.seed_destination_paths!(["italy/lazio/rome"])
 
     assert_raise RuntimeError, ~r/owner account .* not found/, fn ->
       RomeGuide.upsert!("no-such-owner@example.com")

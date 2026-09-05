@@ -52,9 +52,8 @@ defmodule Ethos.Search do
       from p in Place,
         where:
           fragment(
-            "to_tsvector('english', coalesce(?,'') || ' ' || coalesce(?,'') || ' ' || coalesce(?,'') || ' ' || coalesce(?,'')) @@ websearch_to_tsquery('english', ?)",
+            "to_tsvector('english', coalesce(?,'') || ' ' || coalesce(?,'') || ' ' || coalesce(?,'')) @@ websearch_to_tsquery('english', ?)",
             p.name,
-            p.town,
             p.summary,
             p.history,
             ^q
@@ -62,16 +61,16 @@ defmodule Ethos.Search do
         order_by: [
           desc:
             fragment(
-              "ts_rank(to_tsvector('english', coalesce(?,'') || ' ' || coalesce(?,'') || ' ' || coalesce(?,'') || ' ' || coalesce(?,'')), websearch_to_tsquery('english', ?))",
+              "ts_rank(to_tsvector('english', coalesce(?,'') || ' ' || coalesce(?,'') || ' ' || coalesce(?,'')), websearch_to_tsquery('english', ?))",
               p.name,
-              p.town,
               p.summary,
               p.history,
               ^q
             ),
           asc: p.name
         ],
-        limit: ^limit
+        limit: ^limit,
+        preload: [:destination_node]
     )
   end
 end

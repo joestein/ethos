@@ -21,6 +21,11 @@ defmodule Ethos.Release do
   def seed_rome(email) do
     load_app()
     Application.ensure_all_started(@app)
+    # The flagship guide names `italy/lazio/rome` like every other guide in the
+    # corpus and raises on a node the table does not hold, so the roster is
+    # written first — the same order, and the same idempotent call,
+    # `seed_directory/2` uses.
+    Ethos.Seeds.DestinationTree.upsert_all!()
 
     guide = Ethos.Seeds.RomeGuide.upsert!(email)
     IO.puts("Seeded Rome guide: /g/#{guide.slug}")

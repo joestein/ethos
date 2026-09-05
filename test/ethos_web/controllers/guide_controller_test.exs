@@ -91,13 +91,14 @@ defmodule EthosWeb.GuideControllerTest do
     assert html =~ ~p"/g/#{guide.slug}/photos"
   end
 
-  test "a guide with a state and county renders the full breadcrumb hierarchy", %{conn: conn} do
+  test "a guide filed on a node renders that node's full ancestry as its breadcrumb", %{
+    conn: conn
+  } do
     guide =
       published_guide_fixture(%{
         title: "A Day in Waterbury",
         destination: "Waterbury, Connecticut",
-        state: "Connecticut",
-        county: "New Haven County"
+        destination_path: "united-states/connecticut/new-haven-county/waterbury"
       })
 
     html = conn |> get(~p"/g/#{guide.slug}") |> html_response(200)
@@ -105,8 +106,9 @@ defmodule EthosWeb.GuideControllerTest do
     nav = breadcrumb_nav(html)
 
     assert nav =~ ~s(href="/destinations")
-    assert nav =~ ~s(href="/destinations/connecticut")
-    assert nav =~ ~s(href="/destinations/connecticut/new-haven-county")
+    assert nav =~ ~s(href="/destinations/united-states/connecticut")
+    assert nav =~ ~s(href="/destinations/united-states/connecticut/new-haven-county")
+    assert nav =~ ~s(href="/destinations/united-states/connecticut/new-haven-county/waterbury")
     assert nav =~ "Destinations"
     assert nav =~ "Connecticut"
     assert nav =~ "New Haven County"
@@ -117,29 +119,34 @@ defmodule EthosWeb.GuideControllerTest do
     assert Enum.map(ld["itemListElement"], & &1["name"]) == [
              "Ethos",
              "Destinations",
+             "United States",
              "Connecticut",
              "New Haven County",
+             "Waterbury",
              "A Day in Waterbury"
            ]
 
-    assert Enum.map(ld["itemListElement"], & &1["position"]) == [1, 2, 3, 4, 5]
+    assert Enum.map(ld["itemListElement"], & &1["position"]) == [1, 2, 3, 4, 5, 6, 7]
 
     assert Enum.map(ld["itemListElement"], & &1["item"]) == [
              url(~p"/"),
              url(~p"/destinations"),
-             url(~p"/destinations/connecticut"),
-             url(~p"/destinations/connecticut/new-haven-county"),
+             url(~p"/destinations/united-states"),
+             url(~p"/destinations/united-states/connecticut"),
+             url(~p"/destinations/united-states/connecticut/new-haven-county"),
+             url(~p"/destinations/united-states/connecticut/new-haven-county/waterbury"),
              url(~p"/g/#{guide.slug}")
            ]
   end
 
-  test "a guide with no state or county falls back to its destination, with no nil-slug links", %{
+  test "a guide on no node falls back to its destination, with no nil-slug links", %{
     conn: conn
   } do
     guide = published_guide_fixture(%{title: "Roman Holiday", destination: "Rome, Italy"})
 
-    assert guide.state == nil
-    assert guide.county == nil
+    # A guide authored through the web UI, which names no destination node —
+    # the one shape the fallback below exists for.
+    refute guide.destination_id
 
     html = conn |> get(~p"/g/#{guide.slug}") |> html_response(200)
 
@@ -208,8 +215,7 @@ defmodule EthosWeb.GuideControllerTest do
     guide =
       published_guide_fixture(%{
         title: "Statewide Roundup",
-        destination: "Connecticut",
-        state: "Connecticut"
+        destination: "Connecticut"
       })
 
     html = conn |> get(~p"/g/#{guide.slug}") |> html_response(200)
@@ -251,14 +257,14 @@ defmodule EthosWeb.GuideControllerTest do
       published_guide_fixture(%{
         title: "Three Days in Rome",
         destination: "Rome, Italy",
-        state: "Italy",
         destination_id: node.id
       })
 
-    # Non-vacuity: the guide really does carry the legacy columns the node
-    # ancestry has to beat. Without this the test would pass for a guide with
-    # no state, which is the case the fallback already handled.
-    assert guide.state_slug == "italy"
+    # Non-vacuity: the guide's own `destination` still slugifies to "rome", so
+    # the single-slug fallback below has something to emit and the node ancestry
+    # has something to beat. Without this the test would pass for a guide whose
+    # fallback would have produced nothing either way.
+    assert guide.destination_slug == "rome"
 
     html = conn |> get(~p"/g/#{guide.slug}") |> html_response(200)
 
@@ -300,36 +306,38 @@ defmodule EthosWeb.GuideControllerTest do
            ]
   end
 
-  test "a guide with no node still points at its state hub", %{
+  # THE GUARD ON A DELETION. A guide on no node used to get a state and a county
+  # crumb built from the `state_slug`/`county_slug` columns — two crumbs the
+  # guide's author never wrote and the tree never confirmed, pointing at
+  # single-slug hub URLs that 301. The columns are gone and so is that branch:
+  # a nodeless guide gets exactly one crumb, its own destination hub, and no
+  # invented ancestry. Re-adding a derived trail would fail here.
+  test "a guide with no node invents no ancestry above its own destination", %{
     conn: conn
   } do
     guide =
       published_guide_fixture(%{
         title: "A Day in Waterbury",
-        destination: "Waterbury, Connecticut",
-        state: "Connecticut",
-        county: "New Haven County"
+        destination: "Waterbury, Connecticut"
       })
 
-    # Non-vacuity: the guide is on no node, so the legacy fallback is what is
-    # under test rather than an ancestry walk that happened to produce the same
-    # two crumbs.
+    # Non-vacuity: the guide is on no node, so what is under test is the
+    # fallback rather than an ancestry walk.
     refute guide.destination_id
 
     html = conn |> get(~p"/g/#{guide.slug}") |> html_response(200)
 
     nav = breadcrumb_nav(html)
-    assert nav =~ ~s(href="/destinations/connecticut")
-    assert nav =~ ~s(href="/destinations/connecticut/new-haven-county")
-    refute nav =~ ~s(href="/destinations/waterbury")
+    assert nav =~ ~s(href="/destinations/waterbury")
+    refute nav =~ ~s(href="/destinations/connecticut")
+    refute nav =~ "New Haven County"
 
     ld = breadcrumb_json_ld(html)
 
     assert Enum.map(ld["itemListElement"], & &1["name"]) == [
              "Ethos",
              "Destinations",
-             "Connecticut",
-             "New Haven County",
+             "Waterbury",
              "A Day in Waterbury"
            ]
   end

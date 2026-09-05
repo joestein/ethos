@@ -8,9 +8,6 @@ defmodule EthosWeb.PlaceControllerTest do
     slug: "palace-theater-waterbury",
     name: "Palace Theater",
     kind: "theater",
-    town: "Waterbury",
-    state: "Connecticut",
-    county: "New Haven County",
     summary: "A 1922 Thomas Lamb movie palace.",
     history: "Designed by **Thomas Lamb**.",
     address: "100 E. Main St., Waterbury, CT 06702",
@@ -157,15 +154,24 @@ defmodule EthosWeb.PlaceControllerTest do
     json_ld_of_type(html, EthosWeb.PlaceHTML.schema_type(place.kind))
   end
 
+  # `addressLocality` and `addressRegion` come from the place's node and its
+  # nearest `region` ancestor, so every address fixture below names a real
+  # roster node instead of writing a town and a state of its own. That is the
+  # point rather than an inconvenience: a fixture that constructs its own
+  # geography tests itself, which is exactly how a Roman place came within one
+  # deploy of publishing as American.
+  defp place_at!(node_path, attrs) do
+    Ethos.SeedDataHelpers.seed_destination_paths!([node_path])
+    Places.upsert_place!(Map.put(attrs, :destination_path, node_path))
+  end
+
   test "PostalAddress is decomposed, not stuffed", %{conn: conn} do
     place =
-      Places.upsert_place!(%{
+      place_at!("united-states/connecticut/litchfield-county/bethlehem", %{
         @attrs
         | slug: "bethlehem-green",
           name: "Bethlehem Green",
           address: "9 Main Street North, Bethlehem, CT 06751",
-          town: "Bethlehem",
-          state: "CT",
           photos: []
       })
 
@@ -179,28 +185,25 @@ defmodule EthosWeb.PlaceControllerTest do
 
     assert address["streetAddress"] == "9 Main Street North"
     assert address["addressLocality"] == "Bethlehem"
-    assert address["addressRegion"] == "CT"
+    assert address["addressRegion"] == "Connecticut"
     assert address["postalCode"] == "06751"
     refute String.contains?(address["streetAddress"], "Bethlehem")
   end
 
-  test "locality and region come from the columns even when the address disagrees",
+  test "locality and region come from the node even when the address disagrees",
        %{conn: conn} do
     # The corpus's real divergence shape, and by far its most common: 840 of
-    # 2,066 addressed places parse a locality that differs from their town
-    # column. A neighbourhood place carries the borough in its address. Both
-    # values are present and they disagree — which is the case that tells the
-    # column rule apart from "the parse happened to be nil".
+    # 2,066 addressed places parse a locality that differs from the node they
+    # are filed under. A neighbourhood place carries the borough in its address.
+    # Both values are present and they disagree — which is the case that tells
+    # the tree rule apart from "the parse happened to be nil".
     place =
-      Places.upsert_place!(%{
+      place_at!("united-states/new-york/new-york-city/brooklyn/bushwick", %{
         @attrs
         | slug: "bushwick-inlet",
           name: "Bushwick Inlet Park",
           kind: "park",
           address: "86 Kent Avenue, Brooklyn, NY 11249",
-          town: "Bushwick",
-          state: "New York",
-          county: "Kings County",
           photos: []
       })
 
@@ -220,13 +223,11 @@ defmodule EthosWeb.PlaceControllerTest do
   test "a descriptive location omits streetAddress rather than publishing a false one",
        %{conn: conn} do
     place =
-      Places.upsert_place!(%{
+      place_at!("united-states/connecticut/fairfield-county/greenwich", %{
         @attrs
         | slug: "greenwich-shore",
           name: "Greenwich Shore",
           address: "Along Shore Road, Greenwich, CT 06830",
-          town: "Greenwich",
-          state: "CT",
           photos: []
       })
 
@@ -235,7 +236,7 @@ defmodule EthosWeb.PlaceControllerTest do
 
     refute Map.has_key?(address, "streetAddress")
     assert address["addressLocality"] == "Greenwich"
-    assert address["addressRegion"] == "CT"
+    assert address["addressRegion"] == "Connecticut"
     assert address["postalCode"] == "06830"
   end
 
@@ -244,13 +245,11 @@ defmodule EthosWeb.PlaceControllerTest do
     raw = "Irving Ave. and Knickerbocker Ave., between Starr St. and Suydam St., Brooklyn"
 
     place =
-      Places.upsert_place!(%{
+      place_at!("united-states/new-york/new-york-city/brooklyn", %{
         @attrs
         | slug: "irving-square",
           name: "Irving Square",
           address: raw,
-          town: "Brooklyn",
-          state: "NY",
           photos: []
       })
 
@@ -259,7 +258,7 @@ defmodule EthosWeb.PlaceControllerTest do
 
     refute Map.has_key?(address, "streetAddress")
     assert address["addressLocality"] == "Brooklyn"
-    assert address["addressRegion"] == "NY"
+    assert address["addressRegion"] == "New York"
     # This string carries no five-digit code, so there is no postal code to
     # recover from it either. See the sibling test below for the corpus's more
     # common case, where the postal scan still succeeds on an address the
@@ -273,15 +272,13 @@ defmodule EthosWeb.PlaceControllerTest do
   test "an undecomposable address still publishes the postal code found inside it",
        %{conn: conn} do
     place =
-      Places.upsert_place!(%{
+      place_at!("united-states/connecticut/tolland-county/andover", %{
         @attrs
         | slug: "burnap-brook",
           name: "Burnap Brook Preserve",
           address:
             "Trailhead parking on Burnap Brook Road, Andover, CT 06232; " <>
               "additional access on Wales Road and Lake Road",
-          town: "Andover",
-          state: "CT",
           photos: []
       })
 
@@ -372,13 +369,15 @@ defmodule EthosWeb.PlaceControllerTest do
     test "a Roman place emits IT, its rione and Lazio — not the US default", %{conn: conn} do
       place = seed_place!("rome", "pigna.json", "pantheon-pigna-rome")
 
-      # The value production actually supplies, asserted before the assertion
-      # that depends on it. If the shim ever stops writing "Lazio" here, this
-      # line fails and says so, rather than the country assertion passing for a
+      # The input production actually supplies, asserted before the assertion
+      # that depends on it. If the corpus ever refiles the Pantheon, this line
+      # fails and says so, rather than the country assertion passing for a
       # reason that has moved.
-      assert place.state == "Lazio",
-             "the loader no longer derives Lazio for a Roman place, so the input this test " <>
-               "was built to cover has changed: #{inspect(place.state)}"
+      node = Ethos.Repo.preload(place, :destination_node).destination_node
+
+      assert node.path == "italy/lazio/rome/pigna",
+             "the loader no longer files the Pantheon under Rome's rione, so the input this " <>
+               "test was built to cover has changed: #{inspect(node.path)}"
 
       address = rendered_address(conn, place)
 

@@ -69,9 +69,8 @@ defmodule Ethos.SeedDataHelpers do
 
   Read from `priv/seed_data/destination_tree.json`, not from the database, so
   the corpus gates that are `ExUnit.Case` rather than `DataCase` can resolve
-  the `destination_path` a seed file now carries in place of the town/state
-  pair it used to. Feed a trail to `Ethos.Destinations.legacy_geo_from_trail/1`
-  to get the triple the loaders derive from the same ancestry.
+  the `destination_path` a seed file carries — the whole of its geography now
+  that the town/state/county columns are gone — without a repo.
   """
   def destination_trails do
     by_path =
@@ -89,6 +88,23 @@ defmodule Ethos.SeedDataHelpers do
         |> Enum.reject(&is_nil/1)
 
       {path, trail}
+    end)
+  end
+
+  @doc """
+  Published guides filed anywhere beneath a destination node path.
+
+  What `Enum.filter(&(&1.county == "Brooklyn"))` used to say. A guide's
+  geography is now the node it names and nothing else, so "in Brooklyn" is
+  "under the Brooklyn node's path" — which also stops the filter from matching a
+  same-named county in another state, the way a bare string compare could.
+  """
+  def published_guides_under(path) when is_binary(path) do
+    Ethos.Guides.list_published_guides()
+    |> Ethos.Repo.preload(:destination_node)
+    |> Enum.filter(fn
+      %{destination_node: %{path: p}} -> p == path or String.starts_with?(p, path <> "/")
+      _ -> false
     end)
   end
 
@@ -146,9 +162,22 @@ defmodule Ethos.SeedDataHelpers do
   locks in one consistent global order and can only wait on each other, never
   deadlock; seeding these six in a private order of their own produced exactly
   that deadlock.
+
+  `extra_paths` is how a test that needs a roster node OUTSIDE the fixture set
+  gets it in the SAME ordered pass. Calling `seed_destination_paths!/1`
+  afterwards would be a second pass, and a second pass is a second lock
+  sequence: whichever rows it adds are taken after rows this one already holds,
+  regardless of where they sit in the global order. That is a deadlock with any
+  test that wants the two sets the other way round, and it is the one thing the
+  ordering rule above cannot protect against.
   """
-  def seed_fixture_destinations! do
-    wanted = MapSet.new(@fixture_ancestors)
+  def seed_fixture_destinations!(extra_paths \\ []) do
+    wanted =
+      for path <- extra_paths,
+          segments = String.split(path, "/"),
+          n <- 1..length(segments),
+          into: MapSet.new(@fixture_ancestors),
+          do: segments |> Enum.take(n) |> Enum.join("/")
 
     ancestors =
       Ethos.Seeds.DestinationTree.load!()

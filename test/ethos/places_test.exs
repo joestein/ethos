@@ -8,9 +8,6 @@ defmodule Ethos.PlacesTest do
     slug: "palace-theater-waterbury",
     name: "Palace Theater",
     kind: "theater",
-    town: "Waterbury",
-    state: "Connecticut",
-    county: "New Haven County",
     summary: "A 1922 Thomas Lamb theater on East Main Street.",
     address: "100 E. Main St., Waterbury, CT 06702",
     official_url: "https://palacetheaterct.org",
@@ -27,8 +24,8 @@ defmodule Ethos.PlacesTest do
     })
   end
 
-  # Attaches a place to `node` by `destination_id`, leaving `Places.upsert_place!/1`
-  # to derive the legacy `town`/`state`/`county` triple from the node's ancestry.
+  # Attaches a place to `node` by `destination_id`, which is the whole of a
+  # place's geography.
   defp place_in(node, slug, name, overrides \\ %{}) do
     Places.upsert_place!(
       Map.merge(
@@ -54,11 +51,14 @@ defmodule Ethos.PlacesTest do
     end
   end
 
-  test "upsert_place! inserts, derives slugs, and is idempotent" do
-    place = Places.upsert_place!(@valid)
-    assert place.town_slug == "waterbury"
-    assert place.state_slug == "connecticut"
-    assert place.county_slug == "new-haven-county"
+  test "upsert_place! resolves a destination_path and is idempotent" do
+    node = node!("connecticut/waterbury", "Waterbury")
+
+    place = Places.upsert_place!(Map.put(@valid, :destination_path, "connecticut/waterbury"))
+
+    # `destination_path` is what a seed file writes; `destination_id` is what
+    # the column holds, and the resolution raises rather than writing a nil.
+    assert place.destination_id == node.id
     assert place.status == "open"
 
     again = Places.upsert_place!(%{@valid | summary: "Updated."})
@@ -127,8 +127,6 @@ defmodule Ethos.PlacesTest do
         | slug: "glebe-house",
           name: "Glebe House",
           kind: "museum",
-          town: "Woodbury",
-          county: "Litchfield County",
           status: "closed"
       }
       |> Map.put(:destination_id, litchfield.id)

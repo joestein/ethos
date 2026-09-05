@@ -51,7 +51,9 @@ defmodule Ethos.Seeds.ManhattanSeedDataTest do
     end
 
     manhattan_guides =
-      Ethos.Guides.list_published_guides() |> Enum.filter(&(&1.county == "Manhattan"))
+      Ethos.SeedDataHelpers.published_guides_under(
+        "united-states/new-york/new-york-city/manhattan"
+      )
 
     assert length(manhattan_guides) == length(files)
   end

@@ -21,12 +21,17 @@ defmodule EthosWeb.AffiliatePlacementTest do
   @unit_disclosure "Tours and activities shown above"
   @old_disclosure "Some booking links on this page"
 
-  defp ny_guide(title, county) do
+  # Real roster paths, not invented ones. A page's whole geography is the node
+  # it names, so a fixture that named a node the roster does not hold would be
+  # asserting against geography production cannot produce.
+  @bronx_node "united-states/new-york/new-york-city/bronx/belmont"
+  @ct_node "united-states/connecticut/litchfield-county/woodbury"
+
+  defp ny_guide(title) do
     published_guide_fixture(%{
       "title" => title,
       "destination" => "#{title}, New York",
-      "state" => "New York",
-      "county" => county
+      "destination_path" => @bronx_node
     })
   end
 
@@ -34,8 +39,7 @@ defmodule EthosWeb.AffiliatePlacementTest do
     published_guide_fixture(%{
       "title" => title,
       "destination" => "#{title}, Connecticut",
-      "state" => "Connecticut",
-      "county" => "Litchfield County"
+      "destination_path" => @ct_node
     })
   end
 
@@ -43,7 +47,7 @@ defmodule EthosWeb.AffiliatePlacementTest do
     test "a New York guide carries the script and the widget, and NOT the amber CTA", %{
       conn: conn
     } do
-      g = ny_guide("Belmont", "The Bronx")
+      g = ny_guide("Belmont")
       html = conn |> get(~p"/g/#{g.slug}") |> html_response(200)
 
       assert html =~ @script_src
@@ -64,8 +68,20 @@ defmodule EthosWeb.AffiliatePlacementTest do
       refute html =~ @widget
     end
 
+    # GetYourGuide's "new-york" campaign is New York CITY. A guide outside the
+    # city must not inherit it, and "outside the city" is now a structural fact
+    # about the tree rather than a list of borough names kept in step by hand:
+    # this guide hangs from the state node, which is not under the campaign's
+    # key. The roster holds no upstate node yet, so the state node is the
+    # nearest real thing to file one on.
     test "an upstate New York guide is treated as non-New-York", %{conn: conn} do
-      g = ny_guide("Rhinebeck", "Dutchess")
+      g =
+        published_guide_fixture(%{
+          "title" => "Rhinebeck",
+          "destination" => "Rhinebeck, New York",
+          "destination_path" => "united-states/new-york"
+        })
+
       html = conn |> get(~p"/g/#{g.slug}") |> html_response(200)
 
       assert html =~ @amber
@@ -75,13 +91,13 @@ defmodule EthosWeb.AffiliatePlacementTest do
 
   describe "place pages" do
     test "a New York place carries the widget", %{conn: conn} do
+      Ethos.SeedDataHelpers.seed_destination_paths!([@bronx_node])
+
       Places.upsert_place!(%{
         slug: "teitel-brothers",
         name: "Teitel Brothers",
         kind: "shop",
-        town: "Belmont",
-        state: "New York",
-        county: "The Bronx",
+        destination_path: @bronx_node,
         summary: "An Arthur Avenue grocery.",
         status: "open"
       })
@@ -102,9 +118,9 @@ defmodule EthosWeb.AffiliatePlacementTest do
     #
     # This one writes nothing. It runs a committed Bronx seed file through the
     # ordinary loader, reads back a place the loader created, and asserts the
-    # page it serves carries the unit. The county it checks is whatever
-    # `Destinations.legacy_geo/1` derived from the roster — so config, roster
-    # and loader must agree, which is the only combination that pays.
+    # page it serves carries the unit. The path it checks is whatever the file
+    # names and the loader resolved — so config, roster and loader must agree,
+    # which is the only combination that pays.
     test "a Bronx place seeded through the loader carries the widget", %{conn: conn} do
       file = "priv/seed_data/bronx/belmont.json"
 
@@ -126,18 +142,18 @@ defmodule EthosWeb.AffiliatePlacementTest do
         |> hd()
         |> Map.fetch!("slug")
 
-      place = Places.get_place_by_slug!(slug)
+      place = Places.get_place_by_slug(slug)
 
-      # Non-vacuous: the premise is that the loader derives the borough name
-      # from the roster rather than from anything written in this file. If the
-      # corpus moves Belmont out of the Bronx, this stops being a Bronx test
-      # and the assertions below would pass for the wrong reason.
-      assert place.state == "New York"
-      assert place.county == "The Bronx"
+      # Non-vacuous: the premise is that the loader filed this place under the
+      # Bronx subtree, from the path written in the seed file and resolved
+      # against the roster. If the corpus moves Belmont out of the Bronx, this
+      # stops being a Bronx test and the assertions below would pass for the
+      # wrong reason.
+      assert place.destination_node.path == @bronx_node
 
-      assert Ethos.Affiliates.locale_for(place.state_slug, place.county),
+      assert Ethos.Affiliates.locale_for(place.destination_node.path),
              "a real Bronx place resolved to no affiliate locale — :affiliate_locales " <>
-               "and the destination tree disagree about the borough's name"
+               "and the destination tree disagree about where the borough sits"
 
       html = conn |> get(~p"/p/#{place.slug}") |> html_response(200)
 
@@ -147,13 +163,13 @@ defmodule EthosWeb.AffiliatePlacementTest do
     end
 
     test "a Connecticut place carries neither", %{conn: conn} do
+      Ethos.SeedDataHelpers.seed_destination_paths!([@ct_node])
+
       Places.upsert_place!(%{
         slug: "palace-theater-waterbury",
         name: "Palace Theater",
         kind: "theater",
-        town: "Waterbury",
-        state: "Connecticut",
-        county: "New Haven County",
+        destination_path: @ct_node,
         summary: "A 1922 movie palace.",
         status: "open"
       })
@@ -175,33 +191,51 @@ defmodule EthosWeb.AffiliatePlacementTest do
       Ethos.Destinations.get_by_path(path)
     end
 
-    defp guide_on(node, title, state, county) do
+    defp guide_on(node, title, where) do
       published_guide_fixture(%{
         "title" => title,
-        "destination" => "#{title}, #{state}",
-        "state" => state,
-        "county" => county,
+        "destination" => "#{title}, #{where}",
         "destination_id" => node.id
       })
     end
 
-    # Named for what it covers. The region hub does NOT exercise
-    # `locale_for/2`'s nil-county branch: it routes through
-    # `unanimous_locale/1` over guides that each carry a real county. No layout
-    # path calls `locale_for/2` with a nil county at all — that branch is
-    # covered by the resolver's own unit test, not from here.
-    test "the New York region hub carries the widget", %{conn: conn} do
-      "united-states/new-york" |> hub_node!() |> guide_on("Belmont", "New York", "The Bronx")
+    # THE CITY hub, which is the campaign's own node. It used to be the STATE
+    # hub here, because the registry was keyed on a state slug and
+    # `locale_for/2`'s nil-county branch let a state hub through. The campaign
+    # is New York CITY, the registry now says so in its key, and the pair below
+    # asserts both halves of that narrowing on the same run.
+    test "the New York City hub carries the widget", %{conn: conn} do
+      "united-states/new-york/new-york-city"
+      |> hub_node!()
+      |> guide_on("New York City", "New York")
+
+      html =
+        conn
+        |> get(~p"/destinations/united-states/new-york/new-york-city")
+        |> html_response(200)
+
+      assert html =~ @widget
+    end
+
+    # The state above the city is a different geography — Hudson Valley,
+    # Niagara — and it must not inherit a campaign for a city 300 miles away.
+    # That used to be the `:counties` allowlist's job, by way of a list of
+    # borough names that fell out of step with the roster and switched every
+    # Bronx page's widget off. The key is the city's node now, so an upstate
+    # page is simply not under it.
+    test "the New York state hub above the campaign carries neither", %{conn: conn} do
+      "united-states/new-york" |> hub_node!() |> guide_on("Rhinebeck", "New York")
 
       html = conn |> get(~p"/destinations/united-states/new-york") |> html_response(200)
 
-      assert html =~ @widget
+      refute html =~ @script_src
+      refute html =~ @widget
     end
 
     test "a New York borough hub carries the widget", %{conn: conn} do
       "united-states/new-york/new-york-city/bronx"
       |> hub_node!()
-      |> guide_on("Belmont", "New York", "The Bronx")
+      |> guide_on("Belmont", "New York")
 
       html =
         conn
@@ -220,7 +254,7 @@ defmodule EthosWeb.AffiliatePlacementTest do
 
       for title <- ["Astoria", "Flushing"] do
         node
-        |> guide_on(title, "New York", "Queens")
+        |> guide_on(title, "New York")
         |> Ecto.Changeset.change(tier: "town-page")
         |> Ethos.Repo.update!()
       end
@@ -244,7 +278,7 @@ defmodule EthosWeb.AffiliatePlacementTest do
     test "the Connecticut region hub carries neither", %{conn: conn} do
       "united-states/connecticut"
       |> hub_node!()
-      |> guide_on("Woodbury", "Connecticut", "Litchfield County")
+      |> guide_on("Woodbury", "Connecticut")
 
       html = conn |> get(~p"/destinations/united-states/connecticut") |> html_response(200)
 
@@ -252,28 +286,65 @@ defmodule EthosWeb.AffiliatePlacementTest do
       refute html =~ @widget
     end
 
-    # The tree ended the URL collision that used to serve Madison, New York and
-    # Madison, Connecticut from one hub, but not the rule the collision
-    # exercised: a hub whose guides do not agree on a locale resolves to none.
-    # Two guides of different geography filed on one node is that case.
-    test "a hub whose guides disagree about geography carries neither", %{conn: conn} do
-      node = hub_node!("united-states/connecticut/new-haven-county/madison")
+    # The rule that collision exercised — a page whose rows do not agree on a
+    # locale resolves to none — moved rather than went away. A HUB can no longer
+    # disagree with itself: its rows are the guides filed on its node, and a
+    # guide's geography IS that node, so the two Madisons are now two hubs.
+    # `unanimous_locale/1` still governs the one page type that spans
+    # geographies on purpose, which is a collection, so the rule is asserted
+    # where it is still reachable.
+    test "a collection spanning two geographies carries neither", %{conn: conn} do
+      # Both chains in one ordered call, before either fixture asks for its own:
+      # two calls would take Connecticut after New York here and the other way
+      # round elsewhere, which is a deadlock rather than a wait.
+      Ethos.SeedDataHelpers.seed_destination_paths!([@bronx_node, @ct_node])
 
-      guide_on(node, "Madison", "New York", "Brooklyn")
-      guide_on(node, "Madison", "Connecticut", "New Haven County")
+      ny = ny_guide("Madison Brooklyn")
+      ct = ct_guide("Madison Connecticut")
 
-      html =
-        conn
-        |> get(~p"/destinations/united-states/connecticut/new-haven-county/madison")
-        |> html_response(200)
+      Ethos.Collections.upsert_collection!(%{
+        slug: "two-madisons",
+        title: "Two Madisons",
+        intro: "One name, two states.",
+        published: true,
+        items: [%{guide_slug: ny.slug}, %{guide_slug: ct.slug}]
+      })
+
+      html = conn |> get(~p"/c/two-madisons") |> html_response(200)
+
+      # Non-vacuity: the collection really lists both, so the refute is about
+      # the vote and not about an empty page.
+      assert html =~ "Madison Brooklyn"
+      assert html =~ "Madison Connecticut"
 
       refute html =~ @widget
+    end
+
+    # The other direction, and the one that pays: a collection whose guides all
+    # sit in one campaign still carries the unit. Without it the refute above
+    # passes against a collection page that never renders a unit at all.
+    test "a collection wholly inside one campaign carries the widget", %{conn: conn} do
+      a = ny_guide("Belmont One")
+      b = ny_guide("Belmont Two")
+
+      Ethos.Collections.upsert_collection!(%{
+        slug: "two-belmonts",
+        title: "Two Belmonts",
+        intro: "Both in the Bronx.",
+        published: true,
+        items: [%{guide_slug: a.slug}, %{guide_slug: b.slug}]
+      })
+
+      html = conn |> get(~p"/c/two-belmonts") |> html_response(200)
+
+      assert html =~ @widget
+      assert html =~ ~s(data-gyg-cmp="new-york")
     end
   end
 
   describe "the unit appears once" do
     test "a New York guide page renders exactly one widget div", %{conn: conn} do
-      g = ny_guide("Belmont", "The Bronx")
+      g = ny_guide("Belmont")
       html = conn |> get(~p"/g/#{g.slug}") |> html_response(200)
 
       count = html |> String.split(@widget) |> length() |> Kernel.-(1)
@@ -284,7 +355,7 @@ defmodule EthosWeb.AffiliatePlacementTest do
     # missing them renders identically in a test and badly in a browser, so
     # they are asserted on the tag itself rather than on the page.
     test "the script tag carries async and defer so it never blocks render", %{conn: conn} do
-      g = ny_guide("Belmont", "The Bronx")
+      g = ny_guide("Belmont")
       html = conn |> get(~p"/g/#{g.slug}") |> html_response(200)
 
       tag =
@@ -304,13 +375,13 @@ defmodule EthosWeb.AffiliatePlacementTest do
     # only prior disclosure line lived on guide show pages. This proves the
     # disclosure comes from affiliate_unit/1 itself, not from that old line.
     test "a New York place page carries the widget's own disclosure", %{conn: conn} do
+      Ethos.SeedDataHelpers.seed_destination_paths!([@bronx_node])
+
       Places.upsert_place!(%{
         slug: "teitel-brothers",
         name: "Teitel Brothers",
         kind: "shop",
-        town: "Belmont",
-        state: "New York",
-        county: "The Bronx",
+        destination_path: @bronx_node,
         summary: "An Arthur Avenue grocery.",
         status: "open"
       })
@@ -324,7 +395,7 @@ defmodule EthosWeb.AffiliatePlacementTest do
     test "a New York borough hub carries the widget's own disclosure", %{conn: conn} do
       "united-states/new-york/new-york-city/bronx"
       |> hub_node!()
-      |> guide_on("Belmont", "New York", "The Bronx")
+      |> guide_on("Belmont", "New York")
 
       html =
         conn
@@ -339,7 +410,7 @@ defmodule EthosWeb.AffiliatePlacementTest do
     # @disclosure — the substring they share — cannot tell them apart, so a
     # presence assertion here passes with one disclosure or with two. Count.
     test "a New York guide page renders the disclosure exactly once", %{conn: conn} do
-      g = ny_guide("Belmont", "The Bronx")
+      g = ny_guide("Belmont")
       html = conn |> get(~p"/g/#{g.slug}") |> html_response(200)
 
       count = html |> String.split(@disclosure) |> length() |> Kernel.-(1)
@@ -370,7 +441,7 @@ defmodule EthosWeb.AffiliatePlacementTest do
     # all. The page-level line must survive here even though the unit renders.
     test "a New York guide with a sponsored entry booking_url still renders the page-level disclosure",
          %{conn: conn} do
-      g = ny_guide("Belmont", "The Bronx")
+      g = ny_guide("Belmont")
 
       {:ok, _} =
         Guides.create_entry(g, %{
@@ -390,7 +461,7 @@ defmodule EthosWeb.AffiliatePlacementTest do
     # York guide with NO entry booking_url renders only the widget's own line.
     test "a New York guide with no entry booking_url renders only the widget's disclosure",
          %{conn: conn} do
-      g = ny_guide("Belmont", "The Bronx")
+      g = ny_guide("Belmont")
       html = conn |> get(~p"/g/#{g.slug}") |> html_response(200)
 
       refute html =~ @old_disclosure
@@ -439,8 +510,7 @@ defmodule EthosWeb.AffiliatePlacementTest do
           user: user,
           title: "Belmont",
           destination: "Belmont, New York",
-          state: "New York",
-          county: "The Bronx"
+          destination_path: @bronx_node
         })
 
       static_html = conn |> get(~p"/guides/#{guide.id}/edit") |> html_response(200)
@@ -460,8 +530,7 @@ defmodule EthosWeb.AffiliatePlacementTest do
         user: user,
         title: "Belmont",
         destination: "Belmont, New York",
-        state: "New York",
-        county: "The Bronx"
+        destination_path: @bronx_node
       })
 
       html = conn |> get(~p"/guides") |> html_response(200)
@@ -496,12 +565,17 @@ defmodule EthosWeb.AffiliatePlacementTest do
       end)
     end
 
-    defp guide_in(state, county) do
+    # The synthetic locale is keyed on a node path like every real one, so the
+    # probe guide has to be filed on a node under it. `united-states/washington`
+    # is a real roster node holding no committed page, which is what makes it
+    # safe to hand a fictional campaign.
+    @probe_node "united-states/washington"
+
+    defp guide_in do
       published_guide_fixture(%{
         "title" => "Placement Probe",
-        "destination" => "Placement Probe, #{state}",
-        "state" => state,
-        "county" => county
+        "destination" => "Placement Probe, Testonia",
+        "destination_path" => @probe_node
       })
     end
 
@@ -510,14 +584,14 @@ defmodule EthosWeb.AffiliatePlacementTest do
     # either way and proves nothing. Position relative to the page's <h1>
     # (guide_html/show.html.heex:5) is what distinguishes them.
     test "a :top locale renders the unit before the page title", %{conn: conn} do
-      with_locale("testonia", %{
+      with_locale(@probe_node, %{
         network: :getyourguide,
         partner_id: "ZA4AIMF",
         cmp: "testonia",
         placement: :top
       })
 
-      g = guide_in("Testonia", nil)
+      g = guide_in()
       html = conn |> get(~p"/g/#{g.slug}") |> html_response(200)
 
       widget_at = :binary.match(html, "data-gyg-widget") |> elem(0)
@@ -528,14 +602,14 @@ defmodule EthosWeb.AffiliatePlacementTest do
     end
 
     test "a :bottom locale renders the unit after the page title", %{conn: conn} do
-      with_locale("testonia", %{
+      with_locale(@probe_node, %{
         network: :getyourguide,
         partner_id: "ZA4AIMF",
         cmp: "testonia",
         placement: :bottom
       })
 
-      g = guide_in("Testonia", nil)
+      g = guide_in()
       html = conn |> get(~p"/g/#{g.slug}") |> html_response(200)
 
       widget_at = :binary.match(html, "data-gyg-widget") |> elem(0)
@@ -551,14 +625,14 @@ defmodule EthosWeb.AffiliatePlacementTest do
     # the same 400px buys nothing and, when GetYourGuide's host is blocked,
     # leaves a page-load's worth of blank space sitting above the footer.
     test "a :top locale's unit reserves the min-height", %{conn: conn} do
-      with_locale("testonia", %{
+      with_locale(@probe_node, %{
         network: :getyourguide,
         partner_id: "ZA4AIMF",
         cmp: "testonia",
         placement: :top
       })
 
-      g = guide_in("Testonia", nil)
+      g = guide_in()
       html = conn |> get(~p"/g/#{g.slug}") |> html_response(200)
 
       assert html =~ "min-h-[400px]"
@@ -567,14 +641,14 @@ defmodule EthosWeb.AffiliatePlacementTest do
     # The other direction. Either alone passes trivially against a template
     # that always reserves the height or never does.
     test "a :bottom locale's unit does not reserve the min-height", %{conn: conn} do
-      with_locale("testonia", %{
+      with_locale(@probe_node, %{
         network: :getyourguide,
         partner_id: "ZA4AIMF",
         cmp: "testonia",
         placement: :bottom
       })
 
-      g = guide_in("Testonia", nil)
+      g = guide_in()
       html = conn |> get(~p"/g/#{g.slug}") |> html_response(200)
 
       refute html =~ "min-h-[400px]"
@@ -584,13 +658,13 @@ defmodule EthosWeb.AffiliatePlacementTest do
     # its registry entry, and what makes an entry that forgets the field behave
     # like New York rather than like Rome.
     test "a locale omitting :placement renders at the bottom", %{conn: conn} do
-      with_locale("testonia", %{
+      with_locale(@probe_node, %{
         network: :getyourguide,
         partner_id: "ZA4AIMF",
         cmp: "testonia"
       })
 
-      g = guide_in("Testonia", nil)
+      g = guide_in()
       html = conn |> get(~p"/g/#{g.slug}") |> html_response(200)
 
       widget_at = :binary.match(html, "data-gyg-widget") |> elem(0)
@@ -601,14 +675,14 @@ defmodule EthosWeb.AffiliatePlacementTest do
 
     # Two slots exist now. This is the assertion that catches both firing.
     test "a :top locale still renders exactly one widget div", %{conn: conn} do
-      with_locale("testonia", %{
+      with_locale(@probe_node, %{
         network: :getyourguide,
         partner_id: "ZA4AIMF",
         cmp: "testonia",
         placement: :top
       })
 
-      g = guide_in("Testonia", nil)
+      g = guide_in()
       html = conn |> get(~p"/g/#{g.slug}") |> html_response(200)
 
       count = html |> String.split(~s(data-gyg-widget="auto")) |> length() |> Kernel.-(1)
@@ -618,6 +692,16 @@ defmodule EthosWeb.AffiliatePlacementTest do
 
   describe "the Rome locale" do
     setup do
+      # The Rome flagship guide names `italy/lazio/rome` like every other guide
+      # in the corpus, and the loader raises on a node the table does not hold,
+      # so the chain is seeded first.
+      #
+      # The Bronx chain goes in through the SAME call although only the last
+      # test in this block needs it. `seed_destination_paths!/1` orders one
+      # call's nodes globally; a second call from inside the test body would
+      # take `united-states` AFTER `italy`, which is the reverse of the order
+      # every other test takes them in — a deadlock roughly one run in five.
+      Ethos.SeedDataHelpers.seed_destination_paths!(["italy/lazio/rome", @bronx_node])
       user = Ethos.AccountsFixtures.user_fixture()
       Ethos.Seeds.RomeGuide.upsert!(user.email)
       :ok
@@ -641,16 +725,18 @@ defmodule EthosWeb.AffiliatePlacementTest do
     # THE SECOND POSITIVE END-TO-END CASE, and the one the setup above hides.
     #
     # Every other assertion in this block runs `Ethos.Seeds.RomeGuide`, which
-    # hand-rolls its own upsert and writes a bare `state: "Italy"` — so it
-    # resolves through the "italy" locale key and always did. The thirty Rome
-    # NEIGHBOURHOOD guides are JSON seeds hanging from `italy/lazio/rome/*`, and
-    # a page's state is its node's nearest `region` ancestor, so they derive
-    # "Lazio". When the destination tree landed they stopped resolving and went
-    # blank — thirty live pages, no failing test, because the only Rome page
-    # under test was the one that does not use the tree.
+    # hand-rolls its own upsert and used to write a bare `state: "Italy"` — so
+    # it resolved through an "italy" locale key that existed for it alone. The
+    # thirty Rome NEIGHBOURHOOD guides are JSON seeds hanging from
+    # `italy/lazio/rome/*`, and a page's state was its node's nearest `region`
+    # ancestor, so they derived "Lazio". When the destination tree landed they
+    # stopped resolving and went blank — thirty live pages, no failing test,
+    # because the only Rome page under test was the one that did not use the
+    # tree. Both now name a node and both resolve through the same key.
     #
-    # This one seeds a neighbourhood guide the ordinary way and asserts what the
-    # loader derived, so the registry and the tree have to agree about Lazio.
+    # This one seeds a neighbourhood guide the ordinary way and asserts the node
+    # the loader resolved, so the registry and the tree have to agree about
+    # where Rome's neighbourhoods hang.
     test "a Rome neighbourhood guide seeded through the loader carries the widget", %{
       conn: conn
     } do
@@ -665,13 +751,14 @@ defmodule EthosWeb.AffiliatePlacementTest do
       Ethos.Seeds.DataGuide.upsert_places!(file)
       guide = Ethos.Seeds.DataGuide.upsert_guide!(file, email)
 
-      # Non-vacuous: the premise is that this guide derives the REGION, not the
-      # country. If it ever derives "Italy" again it resolves through the other
-      # key and stops covering the case this test exists for.
-      assert guide.state == "Lazio"
-      assert guide.state_slug == "lazio"
+      # Non-vacuous: the premise is that this guide hangs three levels below the
+      # key the campaign is configured on, so it resolves by prefix rather than
+      # by naming the campaign's node itself. A guide refiled onto `italy/lazio`
+      # would still pass the assertions below while covering nothing.
+      guide = Ethos.Repo.preload(guide, :destination_node)
+      assert guide.destination_node.path == "italy/lazio/rome/ardeatino"
 
-      assert Ethos.Affiliates.locale_for(guide.state_slug, guide.county),
+      assert Ethos.Affiliates.locale_for(guide.destination_node.path),
              "a real Rome neighbourhood guide resolved to no affiliate locale — " <>
                ":affiliate_locales and the destination tree disagree about the region"
 
@@ -693,19 +780,30 @@ defmodule EthosWeb.AffiliatePlacementTest do
       assert html =~ @old_disclosure
     end
 
-    test "the Italy country hub serves and carries the widget", %{conn: conn} do
-      # The Rome guide hand-rolls its own upsert and names no node, so file it
-      # on the country hub the way a loader-seeded guide would be.
-      Ethos.SeedDataHelpers.seed_destination_paths!(["italy"])
+    # The hub half of the Rome campaign. The guide names `italy/lazio/rome`
+    # now, so the hub that lists it is Rome's own, and the campaign reaches it
+    # by prefix from `italy/lazio`.
+    test "the Rome city hub serves and carries the widget", %{conn: conn} do
+      html = conn |> get(~p"/destinations/italy/lazio/rome") |> html_response(200)
+
+      assert html =~ ~s(data-gyg-cmp="rome")
+    end
+
+    # The country above the campaign's region is a different geography, and a
+    # hub there must not inherit it — this is the Florence hazard, asserted on
+    # the one country hub that exists.
+    test "the Italy country hub carries no unit", %{conn: conn} do
       italy = Ethos.Destinations.get_by_path("italy")
 
-      Ethos.Guides.get_published_guide_by_slug!("three-days-in-rome-real-trip-guide")
-      |> Ecto.Changeset.change(destination_id: italy.id)
-      |> Ethos.Repo.update!()
+      published_guide_fixture(%{
+        "title" => "Italy Overview",
+        "destination" => "Italy",
+        "destination_id" => italy.id
+      })
 
       html = conn |> get(~p"/destinations/italy") |> html_response(200)
 
-      assert html =~ ~s(data-gyg-cmp="rome")
+      refute html =~ @widget
     end
 
     # New York must not have moved. Asserted on the same run as Rome so a
@@ -715,8 +813,7 @@ defmodule EthosWeb.AffiliatePlacementTest do
         published_guide_fixture(%{
           "title" => "Belmont",
           "destination" => "Belmont, New York",
-          "state" => "New York",
-          "county" => "The Bronx"
+          "destination_path" => @bronx_node
         })
 
       html = conn |> get(~p"/g/#{g.slug}") |> html_response(200)
@@ -747,6 +844,10 @@ defmodule EthosWeb.AffiliateUnsupportedNetworkTest do
   @amber "Planning your own trip?"
   @old_disclosure "Some booking links on this page"
 
+  # The registry is keyed on node paths, so the injected locale must be too.
+  @ct_hub "united-states/connecticut"
+  @ct_node "united-states/connecticut/litchfield-county/woodbury"
+
   # The gap this closes: the guide show page suppressed its fallback on "a
   # locale resolved", while the components rendered on "the locale's network is
   # one we support". A locale whose :network is a typo — or a network added to
@@ -762,7 +863,7 @@ defmodule EthosWeb.AffiliateUnsupportedNetworkTest do
     Application.put_env(
       :ethos,
       :affiliate_locales,
-      Map.put(previous, "connecticut", %{
+      Map.put(previous, @ct_hub, %{
         network: :network_with_no_component_clause,
         partner_id: "CT0000",
         cmp: "connecticut"
@@ -773,15 +874,14 @@ defmodule EthosWeb.AffiliateUnsupportedNetworkTest do
 
     # Non-vacuity: the entry really resolves. This is the "resolves but renders
     # nothing" case, not merely an unconfigured state.
-    assert Ethos.Affiliates.locale_for("connecticut", "Litchfield County")
-    refute EthosWeb.Affiliate.renders?(Ethos.Affiliates.locale_for("connecticut", nil))
+    assert Ethos.Affiliates.locale_for(@ct_node)
+    refute EthosWeb.Affiliate.renders?(Ethos.Affiliates.locale_for(@ct_node))
 
     g =
       published_guide_fixture(%{
         "title" => "Woodbury",
         "destination" => "Woodbury, Connecticut",
-        "state" => "Connecticut",
-        "county" => "Litchfield County"
+        "destination_path" => @ct_node
       })
 
     html = conn |> get(~p"/g/#{g.slug}") |> html_response(200)
@@ -814,6 +914,10 @@ defmodule EthosWeb.AffiliateMalformedPlacementTest do
   @amber "Planning your own trip?"
   @unit_disclosure "Tours and activities shown above"
 
+  # The registry is keyed on node paths, so the injected locale must be too.
+  @ct_hub "united-states/connecticut"
+  @ct_node "united-states/connecticut/litchfield-county/woodbury"
+
   # The failure this closes, along the placement axis rather than the network
   # axis: `unit_renders?/1` is placement-agnostic, so an unrecognised placement
   # still answered "yes, a unit renders" and suppressed the amber CTA and the
@@ -832,7 +936,7 @@ defmodule EthosWeb.AffiliateMalformedPlacementTest do
     Application.put_env(
       :ethos,
       :affiliate_locales,
-      Map.put(previous, "connecticut", %{
+      Map.put(previous, @ct_hub, %{
         network: :getyourguide,
         partner_id: "ZA4AIMF",
         cmp: "connecticut",
@@ -850,8 +954,7 @@ defmodule EthosWeb.AffiliateMalformedPlacementTest do
       published_guide_fixture(%{
         "title" => "Woodbury",
         "destination" => "Woodbury, Connecticut",
-        "state" => "Connecticut",
-        "county" => "Litchfield County"
+        "destination_path" => @ct_node
       })
 
     html = conn |> get(~p"/g/#{g.slug}") |> html_response(200)

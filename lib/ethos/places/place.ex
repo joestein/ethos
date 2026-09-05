@@ -2,8 +2,6 @@ defmodule Ethos.Places.Place do
   use Ecto.Schema
   import Ecto.Changeset
 
-  alias Ethos.Guides.Guide
-
   @kinds ~w(museum theater restaurant cafe brewery hotel bnb park historic-site amusement-park shop stadium attraction)
   @statuses ~w(open closed)
   @photo_path_re ~r{^/photos/[a-z0-9/_-]+\.(jpg|jpeg|png|webp)$}
@@ -15,12 +13,6 @@ defmodule Ethos.Places.Place do
     field :slug, :string
     field :name, :string
     field :kind, :string
-    field :town, :string
-    field :town_slug, :string
-    field :state, :string
-    field :state_slug, :string
-    field :county, :string
-    field :county_slug, :string
     field :summary, :string
     field :history, :string
     field :address, :string
@@ -37,9 +29,6 @@ defmodule Ethos.Places.Place do
       :slug,
       :name,
       :kind,
-      :town,
-      :state,
-      :county,
       :summary,
       :history,
       :address,
@@ -48,13 +37,12 @@ defmodule Ethos.Places.Place do
       :status,
       :destination_id
     ])
-    |> validate_required([:slug, :name, :kind, :town, :state, :county, :summary])
+    |> validate_required([:slug, :name, :kind, :summary])
     |> validate_inclusion(:kind, @kinds)
     |> validate_inclusion(:status, @statuses)
     |> validate_format(:slug, ~r/^[a-z0-9-]+$/)
     |> validate_safe_url(:official_url)
     |> validate_photos()
-    |> derive_geo_slugs()
     |> unique_constraint(:slug)
   end
 
@@ -84,16 +72,6 @@ defmodule Ethos.Places.Place do
           photos:
             "each photo needs src/thumb under /photos/ plus title, description, author, license, source_url"
         ]
-    end)
-  end
-
-  defp derive_geo_slugs(changeset) do
-    Enum.reduce([town: :town_slug, state: :state_slug, county: :county_slug], changeset, fn
-      {src, dst}, cs ->
-        case get_field(cs, src) do
-          nil -> cs
-          value -> put_change(cs, dst, Guide.derive_destination_slug(value))
-        end
     end)
   end
 end

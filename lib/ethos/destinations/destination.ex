@@ -41,7 +41,10 @@ defmodule Ethos.Destinations.Destination do
   def changeset(destination, attrs) do
     destination
     |> cast(attrs, [:path, :name, :intro, :photos, :kind, :parent_id, :position, :legacy_paths])
-    |> validate_required([:path, :name, :intro])
+    # `kind` is NOT NULL in the table, so requiring it here is what turns a node
+    # seeded without one into a changeset error instead of a Postgrex raise that
+    # aborts the surrounding seeding transaction.
+    |> validate_required([:path, :name, :intro, :kind])
     |> validate_format(:path, @path_format)
     |> validate_inclusion(:kind, @kinds)
     |> put_slug()

@@ -57,11 +57,12 @@ defmodule EthosWeb.GuideBreadcrumb do
 
   ## Guides with no node
 
-  `guides.destination_id` is nullable until Task 12 drops the legacy columns, so
-  a guide with no node falls back to the state/county pair it carries. Nothing
-  in the seeded corpus takes that branch — every loader resolves a
-  `destination_path` and raises on a miss — but a guide created through the web
-  UI has no node at all, and a breadcrumb is not the place to raise.
+  `guides.destination_id` is nullable, because a guide created through the web
+  UI names no destination node — it has only the free-text `destination` a
+  traveller typed. Nothing in the seeded corpus takes that branch (every loader
+  resolves a `destination_path` and raises on a miss), and a breadcrumb is not
+  the place to raise, so such a guide gets one crumb built from its
+  `destination_slug` and no ancestry.
   """
   def trail(guide) do
     case destination_node(guide) do
@@ -82,24 +83,12 @@ defmodule EthosWeb.GuideBreadcrumb do
   defp destination_node(%{destination_id: id}) when is_integer(id), do: Destinations.get(id)
   defp destination_node(_guide), do: nil
 
-  # Transitional, for a guide with no node: the pre-tree single-slug hub forms,
-  # which 301 to their nodes. `PlaceController.geo_crumbs/2` carries the same
-  # fallback for the same reason, and Task 12 removes both with the columns they
-  # read.
+  # A guide with no node has no ancestry to walk, only the destination string its
+  # author typed. `/destinations/:slug` is a single-segment path the glob route
+  # still serves — as a node, or as a 301 to one, or as a 404 — so the crumb is
+  # a real link rather than an invented deeper trail.
   defp legacy_trail(guide) do
     cond do
-      guide.state_slug && guide.county_slug ->
-        [
-          %{name: guide.state, path: ~p"/destinations/#{guide.state_slug}"},
-          %{
-            name: guide.county,
-            path: ~p"/destinations/#{guide.state_slug}/#{guide.county_slug}"
-          }
-        ]
-
-      guide.state_slug ->
-        [%{name: guide.state, path: ~p"/destinations/#{guide.state_slug}"}]
-
       guide.destination_slug ->
         [
           %{

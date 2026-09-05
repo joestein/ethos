@@ -25,7 +25,7 @@ defmodule Ethos.Places do
   end
 
   def upsert_place!(attrs) do
-    attrs = attrs |> normalize_keys() |> put_legacy_geo()
+    attrs = attrs |> normalize_keys() |> put_destination_id()
     slug = attrs["slug"]
 
     case Repo.get_by(Place, slug: slug) do
@@ -38,19 +38,12 @@ defmodule Ethos.Places do
 
   defp normalize_keys(attrs), do: Map.new(attrs, fn {k, v} -> {to_string(k), v} end)
 
-  # Transitional: derives town/state/county from the destination node while
-  # those columns still have readers. Removed with the columns in Task 12.
-  # A caller that already supplied them (none, after Task 6) keeps its values.
-  defp put_legacy_geo(%{"destination_id" => id} = attrs) when not is_nil(id) do
-    if Map.has_key?(attrs, "town") do
-      attrs
-    else
-      node = Repo.get!(Ethos.Destinations.Destination, id)
-      Map.merge(attrs, Ethos.Destinations.legacy_geo(node))
-    end
-  end
-
-  defp put_legacy_geo(%{"destination_path" => path} = attrs) when is_binary(path) do
+  # A seed file names its destination node by path; the column stores the id.
+  # Resolution lives here rather than in `Place.changeset/2` because a changeset
+  # cannot query, and because a path that names no node must raise at seed time
+  # rather than write a nil `destination_id` — a place with no node has no
+  # geography at all now that the town/state/county columns are gone.
+  defp put_destination_id(%{"destination_path" => path} = attrs) when is_binary(path) do
     node =
       Ethos.Destinations.get_by_path(path) ||
         raise ArgumentError, "unknown destination node #{path}"
@@ -58,10 +51,9 @@ defmodule Ethos.Places do
     attrs
     |> Map.delete("destination_path")
     |> Map.put("destination_id", node.id)
-    |> Map.merge(Ethos.Destinations.legacy_geo(node))
   end
 
-  defp put_legacy_geo(attrs), do: attrs
+  defp put_destination_id(attrs), do: attrs
 
   @doc """
   Deletes places by slug, returning `{count_deleted, nil}`.
@@ -190,11 +182,10 @@ defmodule Ethos.Places do
   unrelated places to collide across.
 
   A place with no `destination_id` has no node to be a sibling of. Unlike the
-  old `town_slug`/`state_slug` pair, `destination_id` is nullable — it is
-  still being backfilled onto places that carry only the legacy `town`/
-  `state`/`county` columns until Task 12 retires them — so this guard is
-  reachable in practice, and it returns nothing rather than every place that
-  happens to share the same `nil`.
+  old `town_slug`/`state_slug` pair, `destination_id` is nullable, so the guard
+  is reachable in principle — and it returns nothing rather than every place
+  that happens to share the same `nil`. Nothing in the seeded corpus reaches it:
+  every loader resolves a `destination_path` and raises on a miss.
   """
   def list_siblings(place, opts \\ [])
 

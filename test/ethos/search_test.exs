@@ -16,9 +16,6 @@ defmodule Ethos.SearchTest do
       slug: "brass-works",
       name: "Brass Works Brewing",
       kind: "brewery",
-      town: "Waterbury",
-      state: "Connecticut",
-      county: "New Haven County",
       summary: "Named for the brass heritage."
     })
 
@@ -26,9 +23,6 @@ defmodule Ethos.SearchTest do
       slug: "other-museum",
       name: "History Museum",
       kind: "museum",
-      town: "Elsewhere",
-      state: "Connecticut",
-      county: "New Haven County",
       summary: "A museum that mentions brass once."
     })
 

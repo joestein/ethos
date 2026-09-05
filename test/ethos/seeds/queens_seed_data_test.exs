@@ -1060,8 +1060,7 @@ defmodule Ethos.Seeds.QueensSeedDataTest do
       for f <- files, into: MapSet.new(), do: DataGuide.load!(f)["guide"]["slug"]
 
     published =
-      Ethos.Guides.list_published_guides()
-      |> Enum.filter(&(&1.county == "Queens"))
+      Ethos.SeedDataHelpers.published_guides_under("united-states/new-york/new-york-city/queens")
       |> MapSet.new(& &1.slug)
       |> MapSet.difference(@code_owned_queens_guides)
 

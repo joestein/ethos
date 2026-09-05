@@ -19,7 +19,7 @@ defmodule EthosWeb.PlaceController do
         trail = destination_trail(place)
 
         og = %{
-          title: "#{place.name} — #{place.town}, #{place.state}",
+          title: page_title(place, trail),
           description: meta_description,
           image: StructuredData.absolute_url(first_photo["src"]),
           type: "website",
@@ -38,7 +38,7 @@ defmodule EthosWeb.PlaceController do
           siblings: Places.list_siblings(place),
           visited?: visited?,
           connected: Links.links_for("place", place.id),
-          page_title: "#{place.name} — #{place.town}, #{place.state}",
+          page_title: page_title(place, trail),
           page_og: og,
           page_meta_description: meta_description,
           page_canonical: url(~p"/p/#{place.slug}"),
@@ -55,12 +55,22 @@ defmodule EthosWeb.PlaceController do
   #
   # `[]` for a place with no node. Unreachable from the seeded corpus — every
   # loader resolves a `destination_path` and raises on a miss — but
-  # `places.destination_id` is nullable until Task 12, and the legacy
-  # town/state/county columns are what the empty trail falls back to.
+  # `places.destination_id` is nullable, so the page degrades to a place with no
+  # printed geography rather than raising out of a controller.
   defp destination_trail(%Place{destination_node: %Destination{} = node}),
     do: Destinations.ancestors(node) ++ [node]
 
   defp destination_trail(%Place{}), do: []
+
+  # "Palace Theater — Waterbury, Connecticut". Both the <title> and og:title, so
+  # they cannot drift; `EthosWeb.PlaceHTML.geo_label/1` is the same function the
+  # page's own subtitle renders through.
+  defp page_title(place, trail) do
+    case EthosWeb.PlaceHTML.geo_label(trail) do
+      nil -> place.name
+      label -> "#{place.name} — #{label}"
+    end
+  end
 
   def visit(conn, %{"slug" => slug}) do
     place = Places.get_place_by_slug!(slug)
@@ -136,8 +146,11 @@ defmodule EthosWeb.PlaceController do
   defp postal_address(place, [_ | _] = trail),
     do: StructuredData.postal_address(place.address, trail)
 
-  defp postal_address(place, []),
-    do: StructuredData.postal_address(place.address, place.town, place.state)
+  # A place with no node has no geography to publish, so it publishes none
+  # rather than an invented one. The pair-based emitter that stood here was
+  # keyed on a region *string* and defaulted to "US" on a miss, which is how the
+  # Pantheon came within one deploy of being published as American.
+  defp postal_address(_place, []), do: nil
 
   defp breadcrumb_ld(place, trail) do
     StructuredData.breadcrumb(
@@ -156,18 +169,9 @@ defmodule EthosWeb.PlaceController do
     Enum.map(trail, fn d -> %{name: d.name, url: node_url(d.path)} end)
   end
 
-  # Transitional, for a place with no node. These URLs are the pre-tree
-  # single-slug hub forms, which 301 to their nodes; Task 12 removes the columns
-  # they are built from and this clause with them.
-  defp geo_crumbs(place, []) do
-    [
-      %{name: place.state, url: url(~p"/destinations/#{place.state_slug}")},
-      %{
-        name: place.county,
-        url: url(~p"/destinations/#{place.state_slug}/#{place.county_slug}")
-      }
-    ]
-  end
+  # A place with no node contributes no geography crumbs: the trail runs
+  # Ethos / Destinations / the place itself.
+  defp geo_crumbs(_place, []), do: []
 
   # A node path is many segments, and `~p` percent-encodes a `/` inside a single
   # interpolated string; interpolating the segment LIST is what expands to the

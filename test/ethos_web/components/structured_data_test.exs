@@ -28,10 +28,6 @@ defmodule EthosWeb.StructuredDataTest do
     assert StructuredData.collection_page("N", "u", description: "d")["description"] == "d"
   end
 
-  test "postal_address/3 returns nil for a place with no address" do
-    assert StructuredData.postal_address(nil, "Waterbury", "Connecticut") == nil
-  end
-
   test "postal_address/2 returns nil for a place with no address" do
     trail = [%{path: "italy", kind: "country", name: "Italy"}]
     assert StructuredData.postal_address(nil, trail) == nil
@@ -86,12 +82,13 @@ defmodule EthosWeb.StructuredDataTest do
   # emitter's own table read back at it — a renamed country node fails here
   # instead of quietly agreeing with itself.
   #
-  # This replaced a `region_for/1` helper that handed `postal_address/3` the
+  # This replaced a `region_for/1` helper that handed a pair-based emitter the
   # literal "Italy" for Roman places while production handed it `place.state`,
-  # which the tree shim now sets to "Lazio". The suite was green on a value
-  # production never produced, and the "Lazio" one fell through to the "US"
-  # default — the emitter is now driven by the same trail production drives it
-  # with, so there is no seam left to be wrong in.
+  # which the tree derived as "Lazio". The suite was green on a value production
+  # never produced, and the "Lazio" one fell through to that emitter's "US"
+  # default. The emitter is driven by the same trail production drives it with
+  # now, and the pair-based one is gone, so there is no seam left to be wrong
+  # in.
   @country_by_root_path %{
     "united-states" => "US",
     "italy" => "IT",

@@ -1,55 +1,82 @@
 defmodule Ethos.Affiliates do
   @moduledoc """
-  Resolves a page's affiliate locale from its geography.
+  Resolves a page's affiliate locale from its place in the destination tree.
 
-  Pure domain logic: no assigns, no HTML, no Phoenix. The web layer
-  (`EthosWeb.Affiliate`) extracts a state slug and county from whatever the
-  page assigned and calls in here.
+  Pure domain logic: no assigns, no HTML, no Phoenix, no repo. The web layer
+  (`EthosWeb.Affiliate`) reads the destination node off whatever the page
+  assigned and passes its **path** in here.
 
   ## The failure mode is deliberate
 
   Everything that does not resolve returns `nil`, and `nil` renders no widget.
-  An unknown state, an unrecognised county, a mixed-geography list — all yield
-  a missing widget, never a wrong one. That asymmetry is why the resolver is
-  permissive about what it accepts and strict about what it confirms.
+  An unknown geography, a mixed-geography list — both yield a missing widget,
+  never a wrong one. That asymmetry is why the resolver is permissive about
+  what it accepts and strict about what it confirms.
 
-  ## Configuration
+  ## Keyed on node paths, and that is the point
 
-  `config :ethos, :affiliate_locales` maps a **state slug** to a locale. Adding
-  Rome or Amsterdam is a config entry; adding a second affiliate network is a
-  new `:network` value plus one component clause in `EthosWeb.Affiliate`.
+  `config :ethos, :affiliate_locales` maps a **destination node path** to a
+  locale, and a page resolves to the locale whose key is its node's path or a
+  prefix of it. Deeper keys win, so `italy/lazio/rome` would override
+  `italy/lazio` for Roman pages without touching the rest of the region.
+
+  This replaced a registry keyed on a page's derived `state_slug` and guarded
+  by a list of county **names**, and it retires two live bugs by construction
+  rather than by fixing them:
+
+    * `:counties` listed `"Bronx"` while the borough node is named
+      `"The Bronx"`, so thirteen Bronx seed files and both Yankee Stadium
+      modules rendered no unit — HTTP 200, a correct-looking page, no unit.
+      No display name is matched any more; `united-states/new-york/new-york-city`
+      is a path, and a path is what the URL, the tree and the loaders all agree
+      on already.
+
+    * The Italian locale was keyed `"italy"`, a page's state was its nearest
+      `region` ancestor, and the thirty Rome neighbourhood guides hang from
+      `italy/lazio/*` — so they derived `"Lazio"` and silently stopped
+      resolving. There is nothing left to derive: a node's path is stored on
+      the node.
+
+  The `:counties` guard is gone with them, and nothing replaced it. It existed
+  because GetYourGuide's `new-york` campaign is New York *City* while the key
+  named the whole state, so an upstate guide would have inherited a campaign
+  for a city 300 miles away. Keyed on `united-states/new-york/new-york-city`,
+  an upstate node is simply not under the key — the case the guard defended
+  against cannot be expressed.
   """
 
   @doc """
-  The locale for a state slug and county, or `nil`.
+  The locale for a destination node path, or `nil`.
 
-  A `nil` county is the destination-hub case (`/destinations/new-york`) and
-  resolves to the locale. A present county must appear in the entry's
-  `:counties` list when it has one.
+  Matches the longest configured key that is the path itself or one of its
+  ancestors, so a page always takes the most specific campaign covering it.
   """
-  def locale_for(state_slug, county)
+  def locale_for(nil), do: nil
 
-  def locale_for(nil, _county), do: nil
+  def locale_for(path) when is_binary(path) do
+    locales = locales()
 
-  def locale_for(state_slug, county) when is_binary(state_slug) do
-    case Map.get(locales(), state_slug) do
-      nil -> nil
-      locale -> if county_allowed?(locale, county), do: locale, else: nil
-    end
+    path
+    |> ancestor_paths()
+    |> Enum.reverse()
+    |> Enum.find_value(&Map.get(locales, &1))
   end
 
-  @doc """
-  The locale shared by every row in the list, or `nil`.
+  def locale_for(_), do: nil
 
-  Each row must carry `:state_slug` and `:county` — `Ethos.Guides.Guide` and
-  `Ethos.Places.Place` both do. Returns `nil` for an empty list, for any row
-  that does not resolve, and for two rows that resolve differently.
+  @doc """
+  The locale shared by every path in the list, or `nil`.
+
+  Returns `nil` for an empty list, for any path that does not resolve, and for
+  two paths that resolve differently. A hub or a collection votes over the
+  nodes of the rows it lists, so a page spanning two geographies carries no
+  unit rather than the wrong one.
   """
   def unanimous_locale([]), do: nil
 
-  def unanimous_locale(rows) when is_list(rows) do
-    rows
-    |> Enum.map(&locale_for(&1.state_slug, &1.county))
+  def unanimous_locale(paths) when is_list(paths) do
+    paths
+    |> Enum.map(&locale_for/1)
     |> Enum.uniq()
     |> case do
       [locale] -> locale
@@ -59,14 +86,18 @@ defmodule Ethos.Affiliates do
 
   def unanimous_locale(_not_a_list), do: nil
 
-  # A locale with no :counties key accepts any county. A nil county is the
-  # hub case and is always accepted — see the moduledoc.
-  defp county_allowed?(locale, county) do
-    case {Map.get(locale, :counties), county} do
-      {nil, _} -> true
-      {_counties, nil} -> true
-      {counties, county} -> county in counties
-    end
+  @doc """
+  A path and every ancestor path above it, root-first.
+
+  `"italy/lazio/rome"` gives `["italy", "italy/lazio", "italy/lazio/rome"]`.
+  Public because the corpus gate asks the same question of a roster path that
+  the resolver asks of a page's.
+  """
+  def ancestor_paths(path) when is_binary(path) do
+    path
+    |> String.split("/")
+    |> Enum.scan([], fn seg, acc -> acc ++ [seg] end)
+    |> Enum.map(&Enum.join(&1, "/"))
   end
 
   defp locales, do: Application.get_env(:ethos, :affiliate_locales, %{})

@@ -152,7 +152,7 @@ defmodule EthosWeb.StructuredData do
 
   `trail` is root-first with the node itself last — `Destinations.ancestors/1`
   plus the node — each entry anything answering to `.kind` and `.name`, which is
-  the same shape `Ethos.Destinations.legacy_geo_from_trail/1` takes and lets the
+  the same shape `PlaceController.destination_trail/1` builds, which lets the
   corpus gates feed it trails read straight off the roster JSON.
 
   Raises on a trail with no country node, and on a country the map does not
@@ -231,57 +231,12 @@ defmodule EthosWeb.StructuredData do
     |> maybe_put("postalCode", parsed.postal_code)
   end
 
-  # Nearest-first, matching `Ethos.Destinations.legacy_geo_from_trail/1`. No
-  # trail in the roster carries two region nodes, but reading from the leaf is
-  # the rule everywhere else that walks one.
+  # Nearest-first. No trail in the roster carries two region nodes, but reading
+  # from the leaf is the rule everywhere else that walks one.
   defp region_name(trail) do
     trail
     |> Enum.reverse()
     |> Enum.find_value(fn d -> if d.kind == "region", do: d.name end)
-  end
-
-  @doc """
-  `postal_address/2` for a place with no destination node.
-
-  Transitional, and unreachable from the seeded corpus: every loader resolves a
-  `destination_path` to a node and raises on a miss, so every place in
-  production has one. `places.destination_id` is nullable, though, and test
-  fixtures exercise the nodeless shape, so the legacy `town`/`state` columns
-  remain the fallback until Task 12 drops them and this clause with them.
-
-  Left exactly as it was, `@country_by_region` included, so nothing about the
-  nodeless shape changes while it still exists. That map is why the defect above
-  was possible: it is keyed on a *region* string, and the value the tree now
-  derives for a Roman place is "Lazio", which it does not hold. Keyed on a
-  country node, `country_code/1` cannot miss that way.
-  """
-  # A place's `state` holds a US state name for American destinations and the
-  # country name for everywhere else. Until Rome landed, every destination was
-  # American and `addressCountry` was the literal "US" — which meant the first
-  # 122 addressed Roman places would have told search engines the Pantheon is
-  # in the United States.
-  #
-  # A country name is not a region, so when one is matched here the region is
-  # dropped rather than emitted: Italy is the country, and this column pair does
-  # not carry Lazio. `addressLocality` still ships the rione.
-  @country_by_region %{"Italy" => "IT", "Vatican City" => "VA", "England" => "GB"}
-
-  def postal_address(nil, _locality, _region), do: nil
-
-  def postal_address(address, locality, region) do
-    parsed = Ethos.Places.Address.parse(address)
-
-    {country, region} =
-      case Map.fetch(@country_by_region, region) do
-        {:ok, code} -> {code, nil}
-        :error -> {"US", region}
-      end
-
-    %{"@type" => "PostalAddress", "addressCountry" => country}
-    |> maybe_put("streetAddress", parsed.street)
-    |> maybe_put("addressLocality", locality)
-    |> maybe_put("addressRegion", region)
-    |> maybe_put("postalCode", parsed.postal_code)
   end
 
   @doc "Absolutises a stored photo `src` such as `/photos/foo/bar.jpg`."

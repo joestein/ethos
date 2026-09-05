@@ -8,11 +8,11 @@ defmodule Ethos.ReleaseTest do
   alias Ethos.Places.DeletedPlaces
   alias Ethos.SeedDataHelpers
 
-  # Counts published guides by the destination node they name rather than by the
-  # transitional `county` column, which is derived from that node and goes away
-  # with it. Two of the counts below need it: the Bronx borough node is named
-  # "The Bronx", and a London file is filed under its own borough rather than
-  # under London, so neither subtree is a single county string any more.
+  # Counts published guides by the destination node they name. There is nothing
+  # else left to count them by — a guide's geography IS its node — and the
+  # subtree form is what a county-string compare could never express: the Bronx
+  # borough node is named "The Bronx", and a London file is filed under its own
+  # borough rather than under London.
   defp published_guides_under(node_path) do
     ids =
       from(d in Ethos.Destinations.Destination,
@@ -48,9 +48,7 @@ defmodule Ethos.ReleaseTest do
 
     Ethos.Release.seed_brooklyn(user.email)
 
-    brooklyn = fn ->
-      Ethos.Guides.list_published_guides() |> Enum.filter(&(&1.county == "Brooklyn"))
-    end
+    brooklyn = fn -> published_guides_under("united-states/new-york/new-york-city/brooklyn") end
 
     assert length(brooklyn.()) == expected
 
@@ -187,8 +185,7 @@ defmodule Ethos.ReleaseTest do
     Ethos.Release.seed_ballparks(user.email)
 
     before =
-      Ethos.Guides.list_published_guides()
-      |> Enum.count(&(&1.county == "Queens"))
+      "united-states/new-york/new-york-city/queens" |> published_guides_under() |> length()
 
     output = capture_io(fn -> Ethos.Release.seed_queens(user.email) end)
 
@@ -215,16 +212,14 @@ defmodule Ethos.ReleaseTest do
     # long as this test never seeds code guides, and would then fail pointing
     # at the seed directory rather than at the guide it did not expect.
     after_first =
-      Ethos.Guides.list_published_guides()
-      |> Enum.count(&(&1.county == "Queens"))
+      "united-states/new-york/new-york-city/queens" |> published_guides_under() |> length()
 
     assert after_first - before == expected
 
     capture_io(fn -> Ethos.Release.seed_queens(user.email) end)
 
     after_second =
-      Ethos.Guides.list_published_guides()
-      |> Enum.count(&(&1.county == "Queens"))
+      "united-states/new-york/new-york-city/queens" |> published_guides_under() |> length()
 
     assert after_second == after_first, "seed_queens/1 is not idempotent"
   end
@@ -255,8 +250,8 @@ defmodule Ethos.ReleaseTest do
     # file that stopped publishing still fails here instead of being masked by
     # the extra guide. This is the shape the Bronx test uses for Yankee Stadium.
     sf = fn ->
-      Ethos.Guides.list_published_guides()
-      |> Enum.filter(&(&1.county == "San Francisco"))
+      "united-states/california/san-francisco"
+      |> published_guides_under()
       |> Enum.reject(&(&1.slug == "oracle-park-guide"))
       |> length()
     end
@@ -305,16 +300,29 @@ defmodule Ethos.ReleaseTest do
     user = user_fixture()
     expected = length(SeedDataHelpers.seed_files("rome"))
 
-    # Counts BOTH counties the directory publishes. Thirty of its thirty-one
-    # files carry county "Rome"; vatican-city.json carries "Vatican City",
-    # because a sovereign state is not in the Metropolitan City of Rome and
-    # saying so would be false. Counting only "Rome" asserts 30 against a
-    # directory of 31.
-    rome_counties = ["Rome", "Vatican City"]
+    # Counts BOTH subtrees the directory publishes. Thirty of its thirty-one
+    # files hang from the Rome city node; vatican-city.json hangs from the
+    # Vatican, because a sovereign state is not in the Metropolitan City of
+    # Rome and filing it there would be false. Counting only Rome asserts 30
+    # against a directory of 31.
+    #
+    # The Rome corpus hangs from two roots: the city node and the Vatican, which
+    # is a sovereign country node of its own rather than a Roman rione.
+    rome_roots = ["italy/lazio/rome", "vatican-city"]
+
+    # `seed_rome_zones/1` runs `seed_rome/1` first, and the flagship guide is
+    # itself filed on `italy/lazio/rome` — so it now falls inside the subtree
+    # being counted, where the `county` compare this replaced never saw it. The
+    # directory's own files are what this counts, so the flagship is excluded
+    # by slug. Same shape as the Oracle Park exclusion below.
+    flagship = "three-days-in-rome-real-trip-guide"
 
     before =
-      Ethos.Guides.list_published_guides()
-      |> Enum.count(&(&1.county in rome_counties))
+      rome_roots
+      |> Enum.flat_map(&published_guides_under/1)
+      |> Enum.uniq_by(& &1.id)
+      |> Enum.reject(&(&1.slug == flagship))
+      |> length()
 
     output = capture_io(fn -> Ethos.Release.seed_rome_zones(user.email) end)
 
@@ -345,16 +353,22 @@ defmodule Ethos.ReleaseTest do
              "linking to it will abort the run at Links.resolve!/1"
 
     after_first =
-      Ethos.Guides.list_published_guides()
-      |> Enum.count(&(&1.county in rome_counties))
+      rome_roots
+      |> Enum.flat_map(&published_guides_under/1)
+      |> Enum.uniq_by(& &1.id)
+      |> Enum.reject(&(&1.slug == flagship))
+      |> length()
 
     assert after_first - before == expected
 
     capture_io(fn -> Ethos.Release.seed_rome_zones(user.email) end)
 
     after_second =
-      Ethos.Guides.list_published_guides()
-      |> Enum.count(&(&1.county in rome_counties))
+      rome_roots
+      |> Enum.flat_map(&published_guides_under/1)
+      |> Enum.uniq_by(& &1.id)
+      |> Enum.reject(&(&1.slug == flagship))
+      |> length()
 
     assert after_second == after_first, "seed_rome_zones/1 is not idempotent"
   end
@@ -467,9 +481,6 @@ defmodule Ethos.ReleaseTest do
       slug: slug,
       name: "Test Place",
       kind: "park",
-      town: "Woodbury",
-      state: "Connecticut",
-      county: "Litchfield County",
       summary: "A park."
     }
   end

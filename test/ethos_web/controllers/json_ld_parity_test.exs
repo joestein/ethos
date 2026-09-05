@@ -10,9 +10,7 @@ defmodule EthosWeb.JsonLdParityTest do
     slug: "palace-theater-waterbury",
     name: "Palace Theater",
     kind: "theater",
-    town: "Waterbury",
-    state: "Connecticut",
-    county: "New Haven County",
+    destination_path: "united-states/connecticut/new-haven-county/waterbury",
     summary: "A 1922 Thomas Lamb movie palace.",
     history: "Designed by **Thomas Lamb**.",
     address: "100 E. Main St., Waterbury, CT 06702",
@@ -89,8 +87,8 @@ defmodule EthosWeb.JsonLdParityTest do
   defp parity_cases do
     # Destinations FIRST, before any place or guide row.
     #
-    # This is a lock-order rule, not a data dependency: the place below does not
-    # need a node. `palace-theater-waterbury` is also a slug
+    # This is a lock-order rule as well as a data dependency:
+    # `palace-theater-waterbury` is also a slug
     # `Ethos.Seeds.ConnecticutPlaces` seeds, and that module's tests now insert
     # destination rows before their places. Inserting the place here first left
     # two async transactions taking the `places` slug lock and the `destinations`
@@ -102,7 +100,12 @@ defmodule EthosWeb.JsonLdParityTest do
     #
     # An orientation page (tier "town-page") plus the Connecticut state and
     # Windham County hubs it populates.
-    Ethos.SeedDataHelpers.seed_fixture_destinations!()
+    # Waterbury goes in through the SAME call, not a second one: two passes are
+    # two lock sequences, and the second takes its rows after rows the first
+    # already holds however they sort globally.
+    Ethos.SeedDataHelpers.seed_fixture_destinations!([
+      "united-states/connecticut/new-haven-county/waterbury"
+    ])
 
     Places.upsert_place!(@place_attrs)
 
@@ -131,12 +134,22 @@ defmodule EthosWeb.JsonLdParityTest do
     [
       %{
         path: ~p"/p/palace-theater-waterbury",
-        names: ["Ethos", "Destinations", "Connecticut", "New Haven County", "Palace Theater"],
+        names: [
+          "Ethos",
+          "Destinations",
+          "United States",
+          "Connecticut",
+          "New Haven County",
+          "Waterbury",
+          "Palace Theater"
+        ],
         urls: [
           url(~p"/"),
           url(~p"/destinations"),
-          url(~p"/destinations/connecticut"),
-          url(~p"/destinations/connecticut/new-haven-county"),
+          url(~p"/destinations/united-states"),
+          url(~p"/destinations/united-states/connecticut"),
+          url(~p"/destinations/united-states/connecticut/new-haven-county"),
+          url(~p"/destinations/united-states/connecticut/new-haven-county/waterbury"),
           url(~p"/p/palace-theater-waterbury")
         ]
       },
@@ -151,9 +164,8 @@ defmodule EthosWeb.JsonLdParityTest do
         ]
       },
       # A seeded guide is filed on a node, so its trail is that node's ancestry
-      # — the same walk the hub rows below make, and the same one the place row
-      # above will make when Task 12 drops the legacy columns. Four crumbs deep
-      # where the state/county pair could only ever emit two.
+      # — the same walk the place row above and the hub rows below make. Four
+      # crumbs deep where the state/county pair could only ever emit two.
       %{
         path: ~p"/g/#{town_page.slug}",
         names: [
@@ -206,12 +218,11 @@ defmodule EthosWeb.JsonLdParityTest do
       # or stops short of the node fails here. Each URL is the node's own path,
       # not the legacy single-slug form that 301s.
       #
-      # The `/g/`, `/p/` and `/c/` rows above are still legacy-derived: those
-      # builders read the guides' and places' state/county columns and emit the
-      # pre-tree hub URLs. Task 11 moves them. (A place that HAS a node already
-      # takes the tree path — see place_controller.ex — but the fixture above
-      # deliberately has none, which is what keeps this row measuring the
-      # legacy builder that is still live.)
+      # The `/g/` and `/c/` rows for `Roman Holiday` are the one remaining
+      # non-tree shape: a guide authored through the web UI names no node, so
+      # its single crumb comes from its `destination_slug`. Every row that names
+      # a node — the place above, the town page, the hubs below — walks the
+      # tree.
       %{
         path: ~p"/destinations/united-states/connecticut",
         names: ["Ethos", "Destinations", "United States", "Connecticut"],

@@ -64,6 +64,7 @@ defmodule EthosWeb.Affiliate do
   use Phoenix.Component
 
   alias Ethos.Affiliates
+  alias Ethos.Destinations.Destination
 
   @doc """
   The page's affiliate locale, or `nil`.
@@ -80,30 +81,24 @@ defmodule EthosWeb.Affiliate do
         nil
 
       guide = assigns[:guide] ->
-        Affiliates.locale_for(guide.state_slug, guide.county)
+        Affiliates.locale_for(destination_path(guide))
 
       place = assigns[:place] ->
-        Affiliates.locale_for(place.state_slug, place.county)
+        Affiliates.locale_for(destination_path(place))
 
       collection = assigns[:collection] ->
         collection.items
-        |> Enum.map(& &1.guide)
+        |> Enum.map(&destination_path(&1.guide))
         |> Affiliates.unanimous_locale()
 
-      # Every destination hub shape — town, state, county — assigns :guides.
-      #
-      # The county hub splits its rows in two (`destination_controller.ex`:
-      # `guides` is tier "guide", `town_pages` is the rest), so a borough hub
-      # seeded entirely with town-pages has an EMPTY :guides list and all its
-      # geography in :town_pages. Resolving over :guides alone would return nil
-      # for a page full of New York content. Both lists describe the same hub,
-      # so both feed the vote.
-      #
-      # :shadowed is deliberately NOT consulted: those are guides from other
-      # states that merely share a destination slug, and they are not what the
-      # page is about.
+      # Every destination hub assigns :guides — the guides filed on that node,
+      # at whatever depth the node sits. A hub cannot disagree with itself any
+      # more (its rows all name the node it serves), so the vote here is really
+      # about the collection clause above and about a hub that lists nothing.
       is_list(assigns[:guides]) ->
-        Affiliates.unanimous_locale(assigns[:guides] ++ hub_town_pages(assigns))
+        assigns[:guides]
+        |> Enum.map(&destination_path/1)
+        |> Affiliates.unanimous_locale()
 
       true ->
         nil
@@ -112,12 +107,23 @@ defmodule EthosWeb.Affiliate do
 
   def locale_from_assigns(_), do: nil
 
-  defp hub_town_pages(assigns) do
-    case assigns[:town_pages] do
-      rows when is_list(rows) -> rows
-      _ -> []
-    end
-  end
+  # A row's place in the destination tree: the node's path when the association
+  # is loaded, nil when the row genuinely has no node (a guide authored through
+  # the web UI).
+  #
+  # THERE IS DELIBERATELY NO CLAUSE FOR `%Ecto.Association.NotLoaded{}`, and no
+  # catch-all. This function runs over whole lists on hub and collection pages,
+  # so resolving an unloaded node here would be one query per row per request;
+  # the contexts that feed public pages preload `:destination_node` instead
+  # (`Guides.get_published_guide_by_slug!/1`,
+  # `Guides.list_published_guides_for_node/1`, `Places.get_place_by_slug/1`,
+  # `Collections.get_published_by_slug/1`). A page that forgets is meant to
+  # raise a FunctionClauseError out of the layout, in the controller test that
+  # covers it, rather than quietly resolve to `nil` — a silently missing
+  # affiliate unit is the exact failure this whole module is shaped around, and
+  # it renders as a correct-looking page with a 200.
+  defp destination_path(%{destination_node: %Destination{path: path}}), do: path
+  defp destination_path(%{destination_node: nil}), do: nil
 
   # The networks the components know how to render. A locale naming anything
   # else — a typo, or a network added to the registry before its component

@@ -24,17 +24,13 @@ defmodule Ethos.Seeds.WrigleyFieldTest do
     assert guide.status == "published"
     assert guide.destination == "Chicago, Illinois"
 
-    # The guide hangs from the Chicago node, and its state/county pair is
-    # derived from that node's ancestry rather than authored. The ballparks
-    # model no county tier, so `county` is the city's own name — which is what
-    # `Destinations.legacy_geo/1` returns for a `city` node with no county
-    # above it, the same shape San Francisco and Toronto have.
+    # The guide hangs from the Chicago node, which is the whole of its
+    # geography: the breadcrumb walks that node's ancestry and the hub lists
+    # what is filed against it. The ballparks model no county tier, so the
+    # city node sits directly under the region, the same shape San Francisco
+    # and Toronto have.
     chicago = Ethos.Destinations.get_by_path("united-states/illinois/chicago")
     assert guide.destination_id == chicago.id
-    assert guide.state == "Illinois"
-    assert guide.state_slug == "illinois"
-    assert guide.county == "Chicago"
-    assert guide.county_slug == "chicago"
 
     entries = Guides.list_entries(guide)
     assert length(entries) == length(WrigleyFieldPlaces.places())
@@ -55,9 +51,6 @@ defmodule Ethos.Seeds.WrigleyFieldTest do
       place = Places.get_place_by_slug(entry.place_slug)
       assert place, "missing place #{entry.place_slug}"
       assert place.destination_id == chicago.id
-      assert place.town == "Chicago"
-      assert place.state == "Illinois"
-      assert place.county == "Chicago"
     end
   end
 
@@ -68,8 +61,9 @@ defmodule Ethos.Seeds.WrigleyFieldTest do
 
     assert wrigley.kind == "stadium"
     assert EthosWeb.PlaceHTML.schema_type(wrigley.kind) == "StadiumOrArena"
-    assert wrigley.state_slug == "illinois"
-    assert wrigley.county_slug == "chicago"
+
+    assert wrigley.destination_id ==
+             Ethos.Destinations.get_by_path("united-states/illinois/chicago").id
   end
 
   # Strange Cargo was a candidate on the assumption it sits at 3448 N Clark St.

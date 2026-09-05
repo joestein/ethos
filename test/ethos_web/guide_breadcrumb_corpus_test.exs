@@ -28,7 +28,7 @@ defmodule EthosWeb.GuideBreadcrumbCorpusTest do
   For every guide in the corpus, JSON-authored or code-authored:
 
   1. its `destination_path` names a node the roster owns, so the trail resolves
-     at all rather than falling back to the legacy columns Task 12 deletes;
+     at all, rather than falling back to its bare `destination_slug`;
   2. the trail is root-first and ends at that node, so the last crumb is the
      guide's own place and the first is a country; and
   3. when the guide's derived county is non-empty, a node bearing that county's
@@ -56,11 +56,11 @@ defmodule EthosWeb.GuideBreadcrumbCorpusTest do
     json ++ code
   end
 
-  # `Ethos.Seeds.RomeGuide` hand-rolls its own upsert and names no node, so it
-  # contributes a nil path. It is the one guide in the corpus with no node and
-  # is named here rather than filtered silently: the day it gains one, this list
-  # shrinks and nothing else has to change.
-  @nodeless_guides ["rome_guide.ex"]
+  # Empty, and kept rather than deleted: it used to hold `rome_guide.ex`, the one
+  # guide that hand-rolled its own upsert and named no node. It names
+  # `italy/lazio/rome` now like every other guide, so the exemption is gone —
+  # and an exemption list that is empty is the statement that nothing is exempt.
+  @nodeless_guides []
 
   setup_all do
     trails = SeedDataHelpers.destination_trails()
@@ -112,30 +112,34 @@ defmodule EthosWeb.GuideBreadcrumbCorpusTest do
     end
   end
 
+  # The county tier — a `county`, `borough` or `city` node — is what the old
+  # `county` column held, and a breadcrumb that skipped it dropped a whole level
+  # of navigation out of the trail.
+  @county_kinds ~w(county borough city)
+
   test "a guide filed under a county carries that county in its trail", %{
     trails: trails,
     guides: guides
   } do
-    # The county is derived from the node's ancestry through
-    # `legacy_geo_from_trail/1` — the same derivation the loaders write into the
-    # legacy columns — rather than read from an authored `county` key, which no
-    # seed file carries any more and which would pass this gate vacuously.
+    # Read off the ancestry, not off an authored `county` key: no seed file
+    # carries one any more, and a gate reading what a file wrote would pass
+    # vacuously on a corpus that writes nothing.
     with_county =
       for {owner, path} <- guides,
           owner not in @nodeless_guides,
           trail = Map.fetch!(trails, path),
-          county = Destinations.legacy_geo_from_trail(trail)["county"],
-          is_binary(county) and county != "",
-          do: {owner, path, trail, county}
+          node = Enum.find(Enum.reverse(trail), &(&1.kind in @county_kinds)),
+          not is_nil(node),
+          do: {owner, path, trail, node}
 
     assert length(with_county) > 100,
-           "only #{length(with_county)} guides in the corpus resolve a county, so this gate " <>
-             "has stopped proving anything"
+           "only #{length(with_county)} guides in the corpus sit under a county tier, so this " <>
+             "gate has stopped proving anything"
 
     missing =
-      for {owner, path, trail, county} <- with_county,
-          county not in Enum.map(trail, & &1.name),
-          do: {owner, path, county}
+      for {owner, path, trail, node} <- with_county,
+          node.path not in Enum.map(trail, & &1.path),
+          do: {owner, path, node.name}
 
     assert missing == [],
            "these guides are filed under a county that appears nowhere in their node's " <>

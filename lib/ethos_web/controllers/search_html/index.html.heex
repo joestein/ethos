@@ -31,7 +31,7 @@
     <ul class="mt-3 space-y-2">
       <li :for={p <- @results.places}>
         <.link navigate={~p"/p/#{p.slug}"} class="underline">{p.name}</.link>
-        <span class="text-sm text-zinc-500">· {p.kind} · {p.town}, {p.state}</span>
+        <span class="text-sm text-zinc-500">· {p.kind} · {place_geo(p)}</span>
       </li>
     </ul>
   </section>

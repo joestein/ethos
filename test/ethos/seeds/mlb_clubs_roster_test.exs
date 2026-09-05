@@ -74,6 +74,17 @@ defmodule Ethos.Seeds.MlbClubsRosterTest do
   #     a county against — but the county is still a verified research fact, and
   #     a roster row claiming one the corpus never mentions is the same
   #     mis-dispatch this test was written to catch. Nothing else would say so.
+  # A roster row's "state" is the node's nearest `region` ancestor — Illinois for
+  # Wrigley, Ontario for the Rogers Centre. Read nearest-first off the trail,
+  # the same rule `StructuredData.postal_address/2` follows for addressRegion,
+  # rather than from a column: there is no column left, and there was never a
+  # second place for the two to disagree.
+  defp region_name(trail) do
+    trail
+    |> Enum.reverse()
+    |> Enum.find_value(fn d -> if d.kind == "region", do: d.name end)
+  end
+
   test "a resolved roster row agrees with the node the corpus actually seeds" do
     resolved = Enum.filter(@roster, & &1["verified"])
 
@@ -115,11 +126,11 @@ defmodule Ethos.Seeds.MlbClubsRosterTest do
              "#{slug} names venue #{inspect(entry["venue"])}, which no seeded place matches"
 
       {path, places_file} = corpus[entry["venue"]]
-      geo = Ethos.Destinations.legacy_geo_from_trail(Map.fetch!(trails, path))
+      region = region_name(Map.fetch!(trails, path))
 
-      assert geo["state"] == entry["state"],
+      assert region == entry["state"],
              "#{slug} disagrees with the corpus: roster has state " <>
-               inspect(entry["state"]) <> ", node #{path} derives " <> inspect(geo["state"])
+               inspect(entry["state"]) <> ", node #{path} sits in " <> inspect(region)
 
       city_segment = path |> String.split("/") |> List.last()
 

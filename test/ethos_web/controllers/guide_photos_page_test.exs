@@ -50,8 +50,9 @@ defmodule EthosWeb.GuidePhotosPageTest do
   } do
     guide = photo_guide()
 
-    assert guide.state_slug == nil
-    assert guide.county_slug == nil
+    # Non-vacuity: this guide is on no node, so the short trail under test is
+    # the `destination_slug` fallback and not an ancestry walk.
+    refute guide.destination_id
 
     html = conn |> get(~p"/g/#{guide.slug}/photos") |> html_response(200)
     items = breadcrumb_json_ld(html)["itemListElement"]
@@ -75,8 +76,7 @@ defmodule EthosWeb.GuidePhotosPageTest do
       published_guide_fixture(%{
         title: "A Day in Waterbury",
         destination: "Waterbury, Connecticut",
-        state: "Connecticut",
-        county: "New Haven County"
+        destination_path: "united-states/connecticut/new-haven-county/waterbury"
       })
 
     {:ok, guide} = Guides.update_guide_photos(guide, @photos)
@@ -87,15 +87,18 @@ defmodule EthosWeb.GuidePhotosPageTest do
     assert Enum.map(items, & &1["name"]) == [
              "Ethos",
              "Destinations",
+             "United States",
              "Connecticut",
              "New Haven County",
+             "Waterbury",
              "A Day in Waterbury",
              "Photos"
            ]
 
-    # The county crumb makes this trail one longer than the old hardcoded
-    # `"position" => 5`, which would collide with the guide's own crumb.
-    assert Enum.map(items, & &1["position"]) == [1, 2, 3, 4, 5, 6]
+    # Four ancestry crumbs where the state/county pair could emit two, so this
+    # trail is two longer than the old hardcoded `"position" => 5` — which would
+    # now collide with an ancestor rather than only with the guide's own crumb.
+    assert Enum.map(items, & &1["position"]) == [1, 2, 3, 4, 5, 6, 7, 8]
     assert List.last(items)["item"] == url(~p"/g/#{guide.slug}/photos")
   end
 

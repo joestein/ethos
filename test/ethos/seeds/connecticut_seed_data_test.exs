@@ -244,10 +244,8 @@ defmodule Ethos.Seeds.ConnecticutSeedDataTest do
     end
 
     ct_guides =
-      Ethos.Guides.list_published_guides()
-      |> Enum.filter(
-        &(&1.state == "Connecticut" and String.ends_with?(&1.slug, "-ct-travel-guide"))
-      )
+      Ethos.SeedDataHelpers.published_guides_under("united-states/connecticut")
+      |> Enum.filter(&String.ends_with?(&1.slug, "-ct-travel-guide"))
 
     assert length(ct_guides) == length(files) + 5
   end

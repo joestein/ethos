@@ -80,19 +80,11 @@ defmodule Ethos.Seeds.GuideRunner do
     )
   end
 
-  # Transitional counterpart of the shim in `Ethos.Places.upsert_place!/1`.
-  # `guides.state` and `guides.county` still drive /destinations routing and the
-  # breadcrumbs, so they are derived from the node rather than nulled; Tasks
-  # 8-11 move those readers onto `destination_id` and Task 12 drops the columns
-  # and this derivation with them.
-  defp destination_attrs(data) do
-    node = destination_node(data)
-
-    node
-    |> Ethos.Destinations.legacy_geo()
-    |> Map.take(["state", "county"])
-    |> Map.put("destination_id", node.id)
-  end
+  # A guide's geography is the node it names and nothing else. The state and
+  # county this used to derive alongside the id were columns, and the columns
+  # are gone; every reader — the breadcrumb, the hub, the affiliate resolver —
+  # walks the node's ancestry instead.
+  defp destination_attrs(data), do: %{"destination_id" => destination_node(data).id}
 
   # Code-module guides (the ballparks, the Connecticut six) carry a
   # :destination_path; JSON guides arrive already resolved to an id. Accept

@@ -27,15 +27,19 @@ defmodule Ethos.Seeds.DataGuideTest do
 
     assert guide.slug == "testville-manhattan-guide"
     assert guide.status == "published"
-    assert guide.state == "New York"
-    assert guide.county == "Manhattan"
+
+    assert Ethos.Repo.preload(guide, :destination_node).destination_node.path ==
+             "united-states/new-york/new-york-city/manhattan/testville"
+
     assert guide.intro =~ "fixture neighborhood"
 
     entries = Guides.list_entries(guide)
     assert length(entries) == 2
     assert Enum.all?(entries, & &1.place_id)
 
-    assert %{kind: "park", town_slug: "testville"} = Places.get_place_by_slug!("test-square-park")
+    assert %{kind: "park", destination_node: %{slug: "testville"}} =
+             Places.get_place_by_slug("test-square-park")
+
     assert Repo.aggregate(Places.Place, :count) == 2
   end
 

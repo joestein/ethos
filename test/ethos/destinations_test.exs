@@ -6,6 +6,7 @@ defmodule Ethos.DestinationsTest do
   @valid %{
     path: "connecticut/litchfield-county",
     name: "Litchfield County",
+    kind: "county",
     intro: "A county in the northwest corner of the state.",
     photos: []
   }
@@ -30,8 +31,8 @@ defmodule Ethos.DestinationsTest do
     assert Destinations.get_by_path("connecticut/nope-county") == nil
   end
 
-  test "path, name and intro are required" do
-    for missing <- [:path, :name, :intro] do
+  test "path, name, kind and intro are required" do
+    for missing <- [:path, :name, :intro, :kind] do
       attrs = Map.delete(@valid, missing)
 
       assert_raise Ecto.InvalidChangesetError, fn ->
@@ -168,72 +169,6 @@ defmodule Ethos.DestinationsTest do
                Destinations.get_by_legacy_path("new-york/manhattan")
 
       assert Destinations.get_by_legacy_path("new-york/nowhere") == nil
-    end
-  end
-
-  describe "legacy_geo/1" do
-    test "reproduces the triple a corpus used to carry" do
-      # Rome's chain and nothing else. The whole roster would be 724 rows of
-      # concurrent writes for three nodes' worth of ancestry — see
-      # `seed_destination_paths!/1`'s docs for why that costs the suite.
-      Ethos.SeedDataHelpers.seed_destination_paths!(["italy/lazio/rome"])
-
-      monti =
-        Destinations.upsert_destination!(%{
-          path: "italy/lazio/rome/monti",
-          name: "Monti",
-          kind: "neighborhood",
-          intro: "Monti."
-        })
-
-      # "Lazio", not "Italy", which is what the Rome corpus carried before the
-      # tree landed. Italy is the country and Lazio the region; a single
-      # `state` column could hold only one of them, and holding the country was
-      # the defect this refactor exists to fix. Anything still asserting
-      # state == "Italy" for a Roman place is asserting that defect.
-      assert Destinations.legacy_geo(monti) == %{
-               "town" => "Monti",
-               "county" => "Rome",
-               "state" => "Lazio"
-             }
-    end
-
-    test "falls back to the country when a node has no region ancestor" do
-      # Vatican City is a root country node with no region above or below it,
-      # so every tier of the triple resolves to the node itself. Without the
-      # country fallback the state would be nil and Place.changeset/2 would
-      # reject every Vatican place at seed time.
-      vatican =
-        Destinations.upsert_destination!(%{
-          path: "vatican-city",
-          name: "Vatican City",
-          kind: "country",
-          intro: "Vatican City."
-        })
-
-      assert Destinations.legacy_geo(vatican) == %{
-               "town" => "Vatican City",
-               "county" => "Vatican City",
-               "state" => "Vatican City"
-             }
-    end
-
-    test "a region node gets no county, unlike the country fallback above" do
-      # The Antique Trail guide hangs from the Connecticut region node on
-      # purpose: it takes in dealers across towns, so it lists on the state page
-      # and under no county. The county fallback that gives Vatican City a
-      # county must not fire here, or that guide would be filed under a
-      # /destinations/connecticut/connecticut hub repeating the state's name.
-      Ethos.SeedDataHelpers.seed_destination_paths!(["united-states/connecticut"])
-      connecticut = Destinations.get_by_path("united-states/connecticut")
-
-      assert connecticut.kind == "region"
-
-      assert Destinations.legacy_geo(connecticut) == %{
-               "town" => "Connecticut",
-               "county" => nil,
-               "state" => "Connecticut"
-             }
     end
   end
 end
