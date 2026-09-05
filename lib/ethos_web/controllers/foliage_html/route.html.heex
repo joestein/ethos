@@ -1,0 +1,55 @@
+<article class="mx-auto max-w-3xl px-4 py-10">
+  <p class="text-sm text-zinc-500">
+    <.link navigate={~p"/foliage"} class="hover:underline">Connecticut Foliage Forecast</.link>
+  </p>
+
+  <h1 class="mt-1 text-3xl font-bold">{@route.name}</h1>
+
+  <p class="mt-2 text-zinc-600">
+    One of seven foliage driving routes published by the State of Connecticut.
+    It passes through {length(@stops)} towns.
+  </p>
+
+  <.week_selector weeks={@weeks} current={@week} base={~p"/foliage/#{@route.slug}"} />
+
+  <figure class="mt-4">
+    {Ethos.Foliage.Svg.map(@week, route: @route)}
+    <figcaption class="sr-only">
+      The {@route.name} route across Connecticut, with foliage stage by town for {Ethos.Foliage.week(
+        @week
+      ).label}.
+    </figcaption>
+  </figure>
+
+  <.stage_key />
+
+  <p class="mt-4 text-xs text-zinc-500">{Ethos.Foliage.attribution()}</p>
+
+  <.field_note note={@note} />
+
+  <section class="mt-10">
+    <h2 class="font-semibold">Towns along the route</h2>
+    <ol class="mt-3 space-y-3">
+      <li :for={%{stop: stop, town: town} <- @stops} class="rounded-xl border p-4">
+        <div class="flex items-baseline justify-between gap-3">
+          <.link href={~p"/g/#{stop.guide_slug}"} class="font-semibold hover:underline">
+            {town.name}
+          </.link>
+          <span class="text-sm text-zinc-500">{town.county} County</span>
+        </div>
+        <p class="mt-1 text-sm text-zinc-600">
+          {Ethos.Foliage.stage_label(Ethos.Foliage.stage_at(town, @week))} this week ·
+          estimated peak {Ethos.Foliage.peak_label(town)}
+        </p>
+      </li>
+    </ol>
+  </section>
+
+  <p class="mt-8 text-sm text-zinc-500">
+    The state's own description of this route: <.link
+      href={@route.deep_url}
+      class="underline"
+      rel="noopener"
+    >CT DEEP</.link>.
+  </p>
+</article>

@@ -33,6 +33,71 @@ defmodule EthosWeb.FoliageController do
     )
   end
 
+  def route(conn, %{"route_slug" => slug} = params) do
+    case Foliage.route(slug) do
+      nil ->
+        conn
+        |> put_status(:not_found)
+        |> put_view(EthosWeb.ErrorHTML)
+        |> render(:"404")
+
+      route ->
+        week = week_param(params)
+        stops = Enum.map(route.stops, &%{stop: &1, town: Foliage.town(&1.town_slug)})
+        title = "#{route.name} — Connecticut foliage route"
+
+        description =
+          "The #{route.name} foliage route passes through #{length(stops)} Connecticut towns. When each one turns, and what is in it."
+
+        render(conn, :route,
+          route: route,
+          stops: stops,
+          week: week,
+          weeks: Foliage.weeks(),
+          note: Foliage.latest_note("route", route.slug),
+          page_title: title,
+          page_meta_description: description,
+          page_canonical: url(~p"/foliage/#{route.slug}"),
+          page_og: %{
+            title: title,
+            description: description,
+            type: "website",
+            url: url(~p"/foliage/#{route.slug}"),
+            image: StructuredData.absolute_url("uploads/og/foliage.png")
+          },
+          json_ld: [trip_ld(route, stops)]
+        )
+    end
+  end
+
+  defp trip_ld(route, stops) do
+    %{
+      "@context" => "https://schema.org",
+      "@type" => "TouristTrip",
+      "name" => route.name,
+      "description" => Foliage.attribution(),
+      "url" => url(~p"/foliage/#{route.slug}"),
+      "itinerary" => %{
+        "@type" => "ItemList",
+        "numberOfItems" => length(stops),
+        "itemListElement" =>
+          stops
+          |> Enum.with_index(1)
+          |> Enum.map(fn {%{stop: stop, town: town}, position} ->
+            %{
+              "@type" => "ListItem",
+              "position" => position,
+              "item" => %{
+                "@type" => "TouristDestination",
+                "name" => town.name,
+                "url" => url(~p"/g/#{stop.guide_slug}")
+              }
+            }
+          end)
+      }
+    }
+  end
+
   @doc false
   def week_param(%{"week" => raw}) do
     case Integer.parse(to_string(raw)) do
