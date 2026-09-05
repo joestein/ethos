@@ -73,6 +73,92 @@ defmodule EthosWeb.AffiliateCorpusTest do
            "a collection spanning 19 distinct state values resolved to a locale"
   end
 
+  # --- The positive case, which nothing checked ------------------------------
+  #
+  # Every assertion above this line is a REFUTE: it proves a mixed-geography
+  # page resolves to nothing. Not one of them notices the day a page that
+  # SHOULD resolve stops resolving, and that is the direction money flows in.
+  #
+  # It had already happened. `:counties` listed "Bronx"; the destination node
+  # is named "The Bronx", `Destinations.legacy_geo/1` copies the node's name
+  # into a page's `county` verbatim, and the membership test in
+  # `Ethos.Affiliates` is exact. So every Bronx guide and place — thirteen seed
+  # files plus the Yankee Stadium modules — served HTTP 200, rendered
+  # correctly, and carried no affiliate unit. No test failed, because no test
+  # asked.
+  #
+  # This asks. It walks the committed corpus, derives each row's pair the way
+  # the loaders do, and asserts that any row landing in a state that HAS a
+  # guarded locale is allowed by that locale's list. A row in an unmonetized
+  # state is not this gate's business; a row inside a campaign's own geography
+  # that the campaign's own allowlist rejects is exactly what it is for.
+  test "every corpus row in a guarded locale's state resolves to that locale" do
+    guarded =
+      for {slug, locale} <- Application.get_env(:ethos, :affiliate_locales, %{}),
+          Map.has_key?(locale, :counties),
+          into: %{},
+          do: {slug, locale}
+
+    # Non-vacuous twice over: with no guarded locale, or with no corpus row in
+    # one, every assertion below is skipped and this passes having checked
+    # nothing at all.
+    assert map_size(guarded) > 0,
+           "no affiliate locale carries a :counties guard, so this gate checks nothing"
+
+    in_scope = for row <- corpus_rows(), Map.has_key?(guarded, row.state_slug), do: row
+
+    assert length(in_scope) > 0,
+           "no committed corpus row lands in #{inspect(Map.keys(guarded))}, so this gate " <>
+             "checks nothing"
+
+    unresolved =
+      for row <- in_scope,
+          is_nil(Affiliates.locale_for(row.state_slug, row.county)),
+          uniq: true,
+          do: {row.state_slug, row.county, row.owner}
+
+    assert unresolved == [],
+           "these committed pages sit inside a campaign's geography but fall outside its " <>
+             ":counties allowlist, so they render no affiliate unit — silently, with a 200 " <>
+             "and a correct-looking page: #{inspect(unresolved)}"
+  end
+
+  # Every guide and place in the committed corpus, JSON and code alike, as the
+  # {state_slug, county} pair the loaders derive from its destination node.
+  defp corpus_rows do
+    trails = Ethos.SeedDataHelpers.destination_trails()
+
+    json =
+      for f <- Ethos.SeedDataHelpers.all_seed_files(),
+          data = DataGuide.load!(f),
+          node_path <- [data["guide"]["destination_path"] | place_paths(data)],
+          do: row_from_node(node_path, Path.basename(f), trails)
+
+    code_guides =
+      for {d, owner} <- Ethos.SeedDataHelpers.code_guides(),
+          path = Map.get(d, :destination_path),
+          do: row_from_node(path, Path.basename(owner.seed_file), trails)
+
+    code_places =
+      for {p, owner} <- Ethos.SeedDataHelpers.code_places(),
+          path = p[:destination_path],
+          do: row_from_node(path, Path.basename(owner.seed_file), trails)
+
+    json ++ code_guides ++ code_places
+  end
+
+  defp place_paths(data), do: for(p <- data["places"], do: p["destination_path"])
+
+  defp row_from_node(node_path, owner, trails) do
+    geo = Ethos.Destinations.legacy_geo_from_trail(Map.fetch!(trails, node_path))
+
+    %{
+      state_slug: Guide.derive_destination_slug(geo["state"]),
+      county: geo["county"],
+      owner: owner
+    }
+  end
+
   # Every locale the components touch by dot access — @locale.partner_id in
   # root.html.heex, @locale.cmp in app.html.heex — so a missing key is not a
   # missing widget but a KeyError out of a layout: 500 on every page in that

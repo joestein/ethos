@@ -12,12 +12,36 @@ defmodule Ethos.AffiliatesTest do
 
   defp row(state_slug, county), do: %Row{state_slug: state_slug, county: county}
 
+  # The borough names are READ FROM THE ROSTER, not written out here.
+  #
+  # `Destinations.legacy_geo/1` puts the destination node's name in a page's
+  # `county` verbatim, so the only county strings production ever produces for
+  # New York City are these four. Hardcoding them is what let this file assert
+  # that "Bronx" resolved for a year after the tree started deriving
+  # "The Bronx" — a green test over a config entry that matched no page.
+  @nyc_boroughs for node <- Ethos.Seeds.DestinationTree.load!(),
+                    String.starts_with?(
+                      node["path"],
+                      "united-states/new-york/new-york-city/"
+                    ),
+                    node["kind"] == "borough",
+                    do: node["name"]
+
   describe "locale_for/2" do
     test "each New York borough resolves to the New York locale" do
-      for county <- ~w(Manhattan Brooklyn Bronx Queens) do
+      # Non-vacuous: an empty list passes the loop below without checking a
+      # thing, which is exactly what a moved or renamed borough subtree would
+      # produce.
+      assert length(@nyc_boroughs) == 4,
+             "expected four boroughs in the roster, got #{inspect(@nyc_boroughs)}"
+
+      for county <- @nyc_boroughs do
         locale = Affiliates.locale_for("new-york", county)
 
-        assert locale, "#{county} did not resolve"
+        assert locale,
+               "#{county} did not resolve — the roster derives this name for a New York " <>
+                 "City page, so :affiliate_locales must list it verbatim"
+
         assert locale.network == :getyourguide
         assert locale.partner_id == "ZA4AIMF"
         assert locale.cmp == "new-york"
@@ -50,7 +74,10 @@ defmodule Ethos.AffiliatesTest do
 
   describe "unanimous_locale/1" do
     test "a list of New York rows resolves to the New York locale" do
-      assert Affiliates.unanimous_locale([row("new-york", "Brooklyn"), row("new-york", "Bronx")])
+      assert Affiliates.unanimous_locale([
+               row("new-york", "Brooklyn"),
+               row("new-york", "The Bronx")
+             ])
     end
 
     test "an empty list resolves to nil" do

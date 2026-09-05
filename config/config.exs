@@ -79,7 +79,19 @@ config :ethos, :affiliate_locales, %{
     network: :getyourguide,
     partner_id: "ZA4AIMF",
     cmp: "new-york",
-    counties: ["Manhattan", "Brooklyn", "Bronx", "Queens", "Staten Island"]
+    # These are DERIVED names, not editorial ones. A page's county comes from
+    # `Destinations.legacy_geo/1`, which returns the destination node's name
+    # verbatim — and the borough node is named "The Bronx", so "Bronx" here
+    # matched nothing and every Bronx page silently lost its widget: HTTP 200,
+    # a correct-looking page, no unit. `affiliate_corpus_test.exs` now asserts
+    # that every New York row in the committed corpus resolves through this
+    # list, so a rename in `priv/seed_data/destination_tree.json` fails CI
+    # instead of turning off a revenue path.
+    #
+    # Staten Island has no node yet and no content; it is the one
+    # forward-looking entry, and the corpus gate does not require an entry to
+    # match anything.
+    counties: ["Manhattan", "Brooklyn", "The Bronx", "Queens", "Staten Island"]
   },
   # Country-level scope with a city campaign code, and those are not in tension:
   # GetYourGuide issues city-scoped codes and there is no "italy" code to use.

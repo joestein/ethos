@@ -43,7 +43,7 @@ defmodule EthosWeb.AffiliatePlacementTest do
     test "a New York guide carries the script and the widget, and NOT the amber CTA", %{
       conn: conn
     } do
-      g = ny_guide("Belmont", "Bronx")
+      g = ny_guide("Belmont", "The Bronx")
       html = conn |> get(~p"/g/#{g.slug}") |> html_response(200)
 
       assert html =~ @script_src
@@ -81,7 +81,7 @@ defmodule EthosWeb.AffiliatePlacementTest do
         kind: "shop",
         town: "Belmont",
         state: "New York",
-        county: "Bronx",
+        county: "The Bronx",
         summary: "An Arthur Avenue grocery.",
         status: "open"
       })
@@ -90,6 +90,55 @@ defmodule EthosWeb.AffiliatePlacementTest do
 
       assert html =~ @script_src
       assert html =~ @widget
+    end
+
+    # THE POSITIVE END-TO-END CASE, and the one that was missing.
+    #
+    # Every other New York assertion in this file builds its row by hand — a
+    # fixture with `"county" => "The Bronx"` written into it. A hand-written
+    # county cannot disagree with the config, so those tests stayed green
+    # through the whole period in which `:counties` listed "Bronx", the tree
+    # derived "The Bronx", and every real Bronx page rendered no widget.
+    #
+    # This one writes nothing. It runs a committed Bronx seed file through the
+    # ordinary loader, reads back a place the loader created, and asserts the
+    # page it serves carries the unit. The county it checks is whatever
+    # `Destinations.legacy_geo/1` derived from the roster — so config, roster
+    # and loader must agree, which is the only combination that pays.
+    test "a Bronx place seeded through the loader carries the widget", %{conn: conn} do
+      # Destinations before places: the loader resolves every destination_path
+      # against this table, and writing them in this order keeps async tests
+      # from taking the two tables' row locks in opposite orders.
+      Ethos.Seeds.DestinationTree.upsert_all!()
+
+      file = "priv/seed_data/bronx/belmont.json"
+      Ethos.Seeds.DataGuide.upsert_places!(file)
+
+      slug =
+        file
+        |> Ethos.Seeds.DataGuide.load!()
+        |> Map.fetch!("places")
+        |> hd()
+        |> Map.fetch!("slug")
+
+      place = Places.get_place_by_slug!(slug)
+
+      # Non-vacuous: the premise is that the loader derives the borough name
+      # from the roster rather than from anything written in this file. If the
+      # corpus moves Belmont out of the Bronx, this stops being a Bronx test
+      # and the assertions below would pass for the wrong reason.
+      assert place.state == "New York"
+      assert place.county == "The Bronx"
+
+      assert Ethos.Affiliates.locale_for(place.state_slug, place.county),
+             "a real Bronx place resolved to no affiliate locale — :affiliate_locales " <>
+               "and the destination tree disagree about the borough's name"
+
+      html = conn |> get(~p"/p/#{place.slug}") |> html_response(200)
+
+      assert html =~ @script_src
+      assert html =~ @widget
+      assert html =~ ~s(data-gyg-cmp="new-york")
     end
 
     test "a Connecticut place carries neither", %{conn: conn} do
@@ -118,7 +167,7 @@ defmodule EthosWeb.AffiliatePlacementTest do
     # path calls `locale_for/2` with a nil county at all — that branch is
     # covered by the resolver's own unit test, not from here.
     test "the New York state hub carries the widget", %{conn: conn} do
-      ny_guide("Belmont", "Bronx")
+      ny_guide("Belmont", "The Bronx")
 
       html = conn |> get(~p"/destinations/new-york") |> html_response(200)
 
@@ -126,9 +175,9 @@ defmodule EthosWeb.AffiliatePlacementTest do
     end
 
     test "a New York county hub carries the widget", %{conn: conn} do
-      ny_guide("Belmont", "Bronx")
+      ny_guide("Belmont", "The Bronx")
 
-      html = conn |> get(~p"/destinations/new-york/bronx") |> html_response(200)
+      html = conn |> get(~p"/destinations/new-york/the-bronx") |> html_response(200)
 
       assert html =~ @widget
     end
@@ -193,7 +242,7 @@ defmodule EthosWeb.AffiliatePlacementTest do
 
   describe "the unit appears once" do
     test "a New York guide page renders exactly one widget div", %{conn: conn} do
-      g = ny_guide("Belmont", "Bronx")
+      g = ny_guide("Belmont", "The Bronx")
       html = conn |> get(~p"/g/#{g.slug}") |> html_response(200)
 
       count = html |> String.split(@widget) |> length() |> Kernel.-(1)
@@ -204,7 +253,7 @@ defmodule EthosWeb.AffiliatePlacementTest do
     # missing them renders identically in a test and badly in a browser, so
     # they are asserted on the tag itself rather than on the page.
     test "the script tag carries async and defer so it never blocks render", %{conn: conn} do
-      g = ny_guide("Belmont", "Bronx")
+      g = ny_guide("Belmont", "The Bronx")
       html = conn |> get(~p"/g/#{g.slug}") |> html_response(200)
 
       tag =
@@ -230,7 +279,7 @@ defmodule EthosWeb.AffiliatePlacementTest do
         kind: "shop",
         town: "Belmont",
         state: "New York",
-        county: "Bronx",
+        county: "The Bronx",
         summary: "An Arthur Avenue grocery.",
         status: "open"
       })
@@ -242,9 +291,9 @@ defmodule EthosWeb.AffiliatePlacementTest do
     end
 
     test "a New York county hub carries the widget's own disclosure", %{conn: conn} do
-      ny_guide("Belmont", "Bronx")
+      ny_guide("Belmont", "The Bronx")
 
-      html = conn |> get(~p"/destinations/new-york/bronx") |> html_response(200)
+      html = conn |> get(~p"/destinations/new-york/the-bronx") |> html_response(200)
 
       assert html =~ @widget
       assert html =~ @disclosure
@@ -254,7 +303,7 @@ defmodule EthosWeb.AffiliatePlacementTest do
     # @disclosure — the substring they share — cannot tell them apart, so a
     # presence assertion here passes with one disclosure or with two. Count.
     test "a New York guide page renders the disclosure exactly once", %{conn: conn} do
-      g = ny_guide("Belmont", "Bronx")
+      g = ny_guide("Belmont", "The Bronx")
       html = conn |> get(~p"/g/#{g.slug}") |> html_response(200)
 
       count = html |> String.split(@disclosure) |> length() |> Kernel.-(1)
@@ -285,7 +334,7 @@ defmodule EthosWeb.AffiliatePlacementTest do
     # all. The page-level line must survive here even though the unit renders.
     test "a New York guide with a sponsored entry booking_url still renders the page-level disclosure",
          %{conn: conn} do
-      g = ny_guide("Belmont", "Bronx")
+      g = ny_guide("Belmont", "The Bronx")
 
       {:ok, _} =
         Guides.create_entry(g, %{
@@ -305,7 +354,7 @@ defmodule EthosWeb.AffiliatePlacementTest do
     # York guide with NO entry booking_url renders only the widget's own line.
     test "a New York guide with no entry booking_url renders only the widget's disclosure",
          %{conn: conn} do
-      g = ny_guide("Belmont", "Bronx")
+      g = ny_guide("Belmont", "The Bronx")
       html = conn |> get(~p"/g/#{g.slug}") |> html_response(200)
 
       refute html =~ @old_disclosure
@@ -355,7 +404,7 @@ defmodule EthosWeb.AffiliatePlacementTest do
           title: "Belmont",
           destination: "Belmont, New York",
           state: "New York",
-          county: "Bronx"
+          county: "The Bronx"
         })
 
       static_html = conn |> get(~p"/guides/#{guide.id}/edit") |> html_response(200)
@@ -376,7 +425,7 @@ defmodule EthosWeb.AffiliatePlacementTest do
         title: "Belmont",
         destination: "Belmont, New York",
         state: "New York",
-        county: "Bronx"
+        county: "The Bronx"
       })
 
       html = conn |> get(~p"/guides") |> html_response(200)
@@ -578,7 +627,7 @@ defmodule EthosWeb.AffiliatePlacementTest do
           "title" => "Belmont",
           "destination" => "Belmont, New York",
           "state" => "New York",
-          "county" => "Bronx"
+          "county" => "The Bronx"
         })
 
       html = conn |> get(~p"/g/#{g.slug}") |> html_response(200)
