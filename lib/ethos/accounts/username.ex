@@ -32,4 +32,45 @@ defmodule Ethos.Accounts.Username do
   """
   def normalize(value) when is_binary(value), do: value |> String.trim() |> String.downcase()
   def normalize(value), do: value
+
+  @doc """
+  A valid username derived from an email address.
+
+  Used only by the backfill migration, for accounts that predate usernames.
+  The result is provisional — the user is asked to pick a real one — but it
+  must still satisfy every rule above, because it is written straight to the
+  column without passing through a changeset.
+  """
+  def derive_from_email(email) when is_binary(email) do
+    email
+    |> String.split("@")
+    |> List.first()
+    |> String.downcase()
+    |> String.replace(~r/[^a-z0-9_]/, "")
+    |> String.slice(0, @max_length)
+    |> pad()
+  end
+
+  defp pad(candidate) when byte_size(candidate) >= @min_length, do: candidate
+  defp pad(candidate), do: String.pad_trailing(candidate, @min_length, "0")
+
+  @doc """
+  `base` if it is free, otherwise `base` with a counter appended.
+
+  `taken` is a `MapSet` of names already spoken for. The counter is appended
+  within the length limit rather than beyond it, so the result is always a
+  legal username.
+  """
+  def uniquify(base, %MapSet{} = taken) do
+    if MapSet.member?(taken, base), do: uniquify(base, taken, 2), else: base
+  end
+
+  defp uniquify(base, taken, counter) do
+    suffix = Integer.to_string(counter)
+    candidate = String.slice(base, 0, @max_length - String.length(suffix)) <> suffix
+
+    if MapSet.member?(taken, candidate),
+      do: uniquify(base, taken, counter + 1),
+      else: candidate
+  end
 end

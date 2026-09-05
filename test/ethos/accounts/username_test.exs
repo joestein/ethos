@@ -36,4 +36,63 @@ defmodule Ethos.Accounts.UsernameTest do
       end
     end
   end
+
+  describe "derive_from_email/1" do
+    test "uses the local part" do
+      assert Username.derive_from_email("cryptcom@gmail.com") == "cryptcom"
+    end
+
+    test "downcases" do
+      assert Username.derive_from_email("JoeStein@example.com") == "joestein"
+    end
+
+    test "strips characters a username may not contain" do
+      assert Username.derive_from_email("joe.stein+travel@example.com") == "joesteintravel"
+    end
+
+    test "truncates to the maximum length" do
+      result = Username.derive_from_email("averyveryverylongnameindeed@example.com")
+      assert String.length(result) == 20
+      assert result == "averyveryverylongnam"
+    end
+
+    test "pads a local part that is too short" do
+      assert Username.derive_from_email("jo@example.com") == "jo0"
+    end
+
+    test "pads a local part that strips down to nothing" do
+      assert Username.derive_from_email("...@example.com") == "000"
+    end
+
+    test "always produces something the format accepts" do
+      for email <- ["A@b.com", "j.o.e@x.io", "UPPER+tag@y.net", "..@z.org"] do
+        derived = Username.derive_from_email(email)
+        assert Regex.match?(Username.format(), derived)
+        assert String.length(derived) >= Username.min_length()
+        assert String.length(derived) <= Username.max_length()
+      end
+    end
+  end
+
+  describe "uniquify/2" do
+    test "returns the base when it is free" do
+      assert Username.uniquify("buoewe", MapSet.new()) == "buoewe"
+    end
+
+    test "appends a counter when the base is taken" do
+      assert Username.uniquify("buoewe", MapSet.new(["buoewe"])) == "buoewe2"
+    end
+
+    test "keeps counting past the first collision" do
+      taken = MapSet.new(["buoewe", "buoewe2", "buoewe3"])
+      assert Username.uniquify("buoewe", taken) == "buoewe4"
+    end
+
+    test "keeps the result within the maximum length" do
+      base = String.duplicate("a", 20)
+      result = Username.uniquify(base, MapSet.new([base]))
+      assert String.length(result) == 20
+      assert String.ends_with?(result, "2")
+    end
+  end
 end
