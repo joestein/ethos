@@ -50,4 +50,119 @@ defmodule Mix.Tasks.Ethos.MigrateGeoTest do
       MigrateGeo.path_for("atlantis", "Atlantis", "Deep", "Trench")
     end
   end
+
+  test "swap_geo puts destination_path where the first legacy key stood" do
+    place =
+      Jason.OrderedObject.new([
+        {"slug", "andover-rail-trail"},
+        {"name", "Hop River State Park Trail"},
+        {"kind", "park"},
+        {"town", "Andover"},
+        {"state", "Connecticut"},
+        {"county", "Tolland County"},
+        {"address", "Burnap Brook Road"},
+        {"status", "open"}
+      ])
+
+    swapped = MigrateGeo.swap_geo(place, ~w(state county town), "x/y/z/andover")
+
+    # At index 3, where "town" was — not appended after "status", which would
+    # move the comma onto the last line and churn the file.
+    assert swapped.values == [
+             {"slug", "andover-rail-trail"},
+             {"name", "Hop River State Park Trail"},
+             {"kind", "park"},
+             {"destination_path", "x/y/z/andover"},
+             {"address", "Burnap Brook Road"},
+             {"status", "open"}
+           ]
+  end
+
+  test "swap_geo on a guide, which carries no town, inserts where state stood" do
+    guide =
+      Jason.OrderedObject.new([
+        {"slug", "andover-guide"},
+        {"destination", "Andover, Connecticut"},
+        {"state", "Connecticut"},
+        {"county", "Tolland County"},
+        {"tier", "town-page"}
+      ])
+
+    assert MigrateGeo.swap_geo(guide, ~w(state county), "x/y/z/andover").values == [
+             {"slug", "andover-guide"},
+             {"destination", "Andover, Connecticut"},
+             {"destination_path", "x/y/z/andover"},
+             {"tier", "town-page"}
+           ]
+  end
+
+  test "the roster splice appends parseable JSON without disturbing what was there" do
+    raw = """
+    [
+      {"path": "italy", "kind": "country", "name": "Italy",
+       "intro": "Italy."},
+      {"path": "italy/lazio", "kind": "region", "name": "Lazio",
+       "intro": "Lazio.", "legacy_paths": ["lazio"]}
+    ]
+    """
+
+    node =
+      Jason.OrderedObject.new([
+        {"path", "italy/lazio/rome"},
+        {"kind", "city"},
+        {"name", "Rome"},
+        {"intro", "Rome."}
+      ])
+
+    spliced = MigrateGeo.splice_nodes(raw, [node])
+
+    assert Jason.decode!(spliced) ==
+             Jason.decode!(raw) ++
+               [
+                 %{
+                   "path" => "italy/lazio/rome",
+                   "kind" => "city",
+                   "name" => "Rome",
+                   "intro" => "Rome."
+                 }
+               ]
+
+    # Byte-for-byte: the hand-authored two-keys-to-a-line layout survives,
+    # which is the whole reason the splice exists rather than a re-encode.
+    assert String.contains?(
+             spliced,
+             ~s({"path": "italy", "kind": "country", "name": "Italy",\n   "intro": "Italy."},)
+           )
+
+    assert String.contains?(
+             spliced,
+             ~s({"path":"italy/lazio/rome","kind":"city","name":"Rome","intro":"Rome."})
+           )
+  end
+
+  test "splicing nothing leaves the roster untouched" do
+    raw = ~s([\n  {"path": "italy", "kind": "country", "name": "Italy", "intro": "Italy."}\n]\n)
+    assert MigrateGeo.splice_nodes(raw, []) == raw
+  end
+
+  test "the CLI refuses a corpus it has no rule for, before reading anything" do
+    assert_raise Mix.Error, ~r/no mapping rule for corpus "atlantis"/, fn ->
+      MigrateGeo.run(["atlantis"])
+    end
+  end
+
+  @corpus_files Path.wildcard(
+                  "priv/seed_data/{connecticut,manhattan,brooklyn,queens,bronx,san_francisco,rome,london}/*.json"
+                ) ++ ["priv/seed_data/destination_tree.json"]
+
+  test "re-running over the migrated corpus is a no-op, on disk and in the roster" do
+    before = digest(@corpus_files)
+
+    output = ExUnit.CaptureIO.capture_io(fn -> MigrateGeo.run([]) end)
+
+    assert output =~ "0 leaf nodes"
+    assert digest(@corpus_files) == before
+  end
+
+  defp digest(files), do: Map.new(files, &{&1, :erlang.md5(File.read!(&1))})
 end

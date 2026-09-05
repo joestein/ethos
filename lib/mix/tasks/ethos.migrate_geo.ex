@@ -33,12 +33,52 @@ defmodule Mix.Tasks.Ethos.MigrateGeo do
     "london" => "borough"
   }
 
+  @roster_path ["priv", "seed_data", "destination_tree.json"]
+
+  @doc """
+  Plans the whole run before writing anything, then writes the roster before
+  the corpora.
+
+  Both halves of that order are load-bearing, because this rewrite destroys its
+  own inputs. A leaf node's display name exists in exactly one place — the
+  `town` key the rewrite deletes — so a file that already carries a
+  `destination_path` can contribute nothing to the roster ever again. Writing
+  the corpora first would therefore make a crash between the two unrecoverable:
+  the files would be migrated, their nodes never declared, and a re-run would
+  skip them as already done. Planning first (no writes at all until every
+  corpus has been read and mapped without raising) and appending the roster
+  first leaves only two reachable states, both benign — nothing done, or a
+  roster holding nodes whose files have yet to be rewritten, which the next run
+  finishes and which `append_leaves!/1` deduplicates by path.
+  """
   @impl Mix.Task
   def run(args) do
-    corpora = if args == [], do: @corpora, else: args
-    leaves = Enum.flat_map(corpora, &rewrite_corpus!/1)
-    appended = append_leaves!(leaves)
+    corpora = corpora!(args)
+
+    plans = Enum.flat_map(corpora, &plan_corpus!/1)
+    appended = append_leaves!(Enum.flat_map(plans, & &1.leaves))
+    Enum.each(plans, fn plan -> File.write!(plan.file, plan.content) end)
+
     Mix.shell().info("Rewrote #{length(corpora)} corpora, #{appended} leaf nodes")
+  end
+
+  # An unknown corpus wildcards to zero files, so without this the CLI would
+  # report "Rewrote 1 corpora, 0 leaf nodes" for a typo and exit 0 — the same
+  # output as a corpus that was already migrated. Checked before anything is
+  # read, so the guarantee `path_for/4` makes is the one the command makes.
+  defp corpora!([]), do: @corpora
+
+  defp corpora!(args) do
+    case Enum.reject(args, &(&1 in @corpora)) do
+      [] ->
+        args
+
+      unknown ->
+        Mix.raise(
+          "no mapping rule for corpus #{Enum.map_join(unknown, ", ", &inspect/1)} " <>
+            "(known: #{Enum.join(@corpora, " ")})"
+        )
+    end
   end
 
   @doc "The node path for one corpus's (state, county, town) triple."
@@ -80,18 +120,70 @@ defmodule Mix.Tasks.Ethos.MigrateGeo do
 
   def place_path_for(_corpus, guide_path, _town), do: guide_path
 
+  @doc """
+  Drops the legacy geo keys from an object and inserts `destination_path` at
+  the index the first of them occupied.
+
+  Appending instead would put the new key after the object's last one, moving
+  the comma onto the previously-final line and churning 84 extra lines per file
+  for no reason. Public because that index is one of the three things keeping
+  this rewrite's diff to geo keys alone, and an argued guarantee is worth less
+  than a tested one.
+  """
+  def swap_geo(%Jason.OrderedObject{values: vs} = obj, drop_keys, path) do
+    idx = Enum.find_index(vs, fn {k, _} -> k in drop_keys end)
+    kept = Enum.reject(vs, fn {k, _} -> k in drop_keys end)
+    %{obj | values: List.insert_at(kept, idx || length(kept), {"destination_path", path})}
+  end
+
+  @doc """
+  Appends `nodes` to the JSON array in `raw` as text, leaving every byte that
+  was already there exactly where it was.
+
+  Re-encoding the roster instead would reflow all 27 hand-authored nodes — they
+  are laid out two keys to a line and grouped by country — so a reviewer could
+  no longer see at a glance that nothing existing changed.
+
+  Splicing text into JSON is only safe if the result is checked, so it is: the
+  spliced text is parsed and must equal the old array followed by the new
+  nodes, or nothing is returned to be written.
+  """
+  def splice_nodes(raw, []), do: raw
+
+  def splice_nodes(raw, nodes) do
+    body = raw |> String.trim_trailing() |> String.trim_trailing("]") |> String.trim_trailing()
+    appended = Enum.map_join(nodes, ",\n", &("  " <> Jason.encode!(&1)))
+    spliced = body <> ",\n\n" <> appended <> "\n]\n"
+    expected = Jason.decode!(raw) ++ Jason.decode!(Jason.encode!(nodes))
+
+    case Jason.decode(spliced) do
+      {:ok, ^expected} ->
+        spliced
+
+      {:ok, _other} ->
+        raise ArgumentError, "roster splice changed the array it was appending to"
+
+      {:error, err} ->
+        raise ArgumentError, "roster splice produced invalid JSON — #{Exception.message(err)}"
+    end
+  end
+
   defp slug(value), do: Guide.derive_destination_slug(value)
 
   defp depth(path), do: path |> String.split("/") |> length()
 
-  defp rewrite_corpus!(corpus) do
+  defp plan_corpus!(corpus) do
     Path.join(["priv", "seed_data", corpus, "*.json"])
     |> Path.wildcard()
     |> Enum.sort()
-    |> Enum.flat_map(&rewrite_file!(corpus, &1))
+    |> Enum.map(&plan_file!(corpus, &1))
+    |> Enum.reject(&is_nil/1)
   end
 
-  # Idempotent: a file that already carries destination_path is left alone.
+  # Reads and maps one file, returning the bytes it should be rewritten to and
+  # the roster nodes it references. Writes nothing: see `run/1` for why.
+  #
+  # Idempotent: a file that already carries destination_path plans nothing.
   # Re-running after a partial rewrite, or over a corpus a concurrent worktree
   # already migrated, is a no-op rather than a crash on the missing triple.
   #
@@ -101,15 +193,11 @@ defmodule Mix.Tasks.Ethos.MigrateGeo do
   # rome/ardeatino.json. Across 393 files that makes the diff unreviewable and
   # the "no prose was touched" guarantee unverifiable. With ordered objects the
   # round-trip is byte-identical, and this rewrite touches ZERO non-geo lines.
-  defp rewrite_file!(corpus, file) do
+  defp plan_file!(corpus, file) do
     data = file |> File.read!() |> Jason.decode!(objects: :ordered_objects)
     guide = data["guide"]
 
-    if is_binary(guide["destination_path"]) do
-      # Already migrated. The roster already holds its nodes, and the names
-      # needed to rebuild them (`town`) are gone, so contribute nothing.
-      []
-    else
+    unless is_binary(guide["destination_path"]) do
       guide_town = guide["destination"] |> String.split(",") |> List.first() |> String.trim()
       guide_path = path_for(corpus, guide["state"], guide["county"], guide_town)
 
@@ -128,19 +216,13 @@ defmodule Mix.Tasks.Ethos.MigrateGeo do
         |> Enum.map(fn {p, {path, _name}} -> swap_geo(p, ~w(state county town), path) end)
 
       rewritten = data |> oput("guide", new_guide) |> oput("places", new_places)
-      File.write!(file, Jason.encode!(rewritten, pretty: true) <> "\n")
 
-      leaves_from(corpus, guide_path, guide_town, place_leaves)
+      %{
+        file: file,
+        content: Jason.encode!(rewritten, pretty: true) <> "\n",
+        leaves: leaves_from(corpus, guide_path, guide_town, place_leaves)
+      }
     end
-  end
-
-  # Drops the legacy geo keys and inserts `destination_path` at the index the
-  # first of them occupied. Appending instead would add a trailing comma to the
-  # preceding key, churning 84 extra lines per file for no reason.
-  defp swap_geo(%Jason.OrderedObject{values: vs} = obj, drop_keys, path) do
-    idx = Enum.find_index(vs, fn {k, _} -> k in drop_keys end)
-    kept = Enum.reject(vs, fn {k, _} -> k in drop_keys end)
-    %{obj | values: List.insert_at(kept, idx || length(kept), {"destination_path", path})}
   end
 
   defp oput(%Jason.OrderedObject{values: vs} = obj, key, value) do
@@ -178,16 +260,10 @@ defmodule Mix.Tasks.Ethos.MigrateGeo do
     end)
   end
 
-  # Appends by splicing text before the roster's closing bracket rather than
-  # re-encoding the file. The 27 hand-authored nodes are laid out two keys to a
-  # line and grouped by country; `Jason.encode!(pretty: true)` would reflow all
-  # of them, so a reviewer of this commit could no longer see at a glance that
-  # nothing existing changed. Returns the number of nodes actually added.
   defp append_leaves!(leaves) do
-    roster_file = Path.join(["priv", "seed_data", "destination_tree.json"])
+    roster_file = Path.join(@roster_path)
     raw = File.read!(roster_file)
-    existing = Jason.decode!(raw, objects: :ordered_objects)
-    have = MapSet.new(existing, & &1["path"])
+    have = raw |> Jason.decode!(objects: :ordered_objects) |> MapSet.new(& &1["path"])
 
     new =
       leaves
@@ -195,11 +271,7 @@ defmodule Mix.Tasks.Ethos.MigrateGeo do
       |> Enum.reject(&MapSet.member?(have, &1["path"]))
       |> Enum.sort_by(& &1["path"])
 
-    unless new == [] do
-      body = raw |> String.trim_trailing() |> String.trim_trailing("]") |> String.trim_trailing()
-      appended = Enum.map_join(new, ",\n", &("  " <> Jason.encode!(&1)))
-      File.write!(roster_file, body <> ",\n\n" <> appended <> "\n]\n")
-    end
+    unless new == [], do: File.write!(roster_file, splice_nodes(raw, new))
 
     length(new)
   end
