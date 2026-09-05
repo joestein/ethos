@@ -384,6 +384,47 @@ defmodule Ethos.ReleaseTest do
     assert london.() == after_first, "seed_london/1 is not idempotent"
   end
 
+  # Korean BBQ ships before its research does, so `expected` is 0 for now and
+  # the publishes-what-was-committed half is vacuous. The directory-literal
+  # half is fully load-bearing at zero files, because seed_directory/2 prints
+  # its report whether or not it matched anything: a seeder pointed at
+  # priv/seed_data/korean_bbqs would seed nothing, raise nothing, and report
+  # success, and the corpus gate cannot catch that because the gate reads the
+  # directory rather than the seeder.
+  test "seed_korean_bbq/1 names its seed directory and publishes its files, idempotently" do
+    user = user_fixture()
+    expected = length(SeedDataHelpers.seed_files("korean_bbq"))
+
+    kbbq = fn ->
+      Ethos.Guides.list_published_guides()
+      |> Enum.count(&String.ends_with?(&1.slug, "-korean-bbq-guide"))
+    end
+
+    before = kbbq.()
+
+    output = capture_io(fn -> Ethos.Release.seed_korean_bbq(user.email) end)
+
+    # Parsed back OUT of the report and compared for equality, not containment —
+    # "Seeded 0 files from priv/seed_data/korean_bbqs\n" CONTAINS the right
+    # path, so every prefix-extension typo survives `=~`.
+    assert [_, dir] =
+             Regex.run(~r{Seeded #{expected} files from priv/seed_data/(\S+)\n}, output),
+           "seed_korean_bbq/1 printed no seed-directory report: #{inspect(output)}"
+
+    assert dir == "korean_bbq",
+           "seed_korean_bbq/1 seeds priv/seed_data/#{dir} — a directory literal that " <>
+             "matches nothing seeds nothing, raises nothing, and reports success"
+
+    assert File.dir?(Path.join([to_string(:code.priv_dir(:ethos)), "seed_data", dir])),
+           "seed_korean_bbq/1 names priv/seed_data/#{dir}, which does not exist"
+
+    after_first = kbbq.()
+    assert after_first - before == expected
+
+    capture_io(fn -> Ethos.Release.seed_korean_bbq(user.email) end)
+    assert kbbq.() == after_first, "seed_korean_bbq/1 is not idempotent"
+  end
+
   # The manifest ships empty and waves append to it, so none of these may
   # assume a size. The load-bearing one while it is still empty is the last:
   # prune deletes only what the manifest names, so a place absent from the

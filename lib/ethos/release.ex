@@ -120,6 +120,23 @@ defmodule Ethos.Release do
   def seed_london(email), do: seed_directory("london", email)
 
   @doc """
+  Seeds the Korean BBQ collection's guides under `priv/seed_data/korean_bbq/`.
+
+  MUST RUN AFTER every destination whose neighborhood files own places these
+  guides reach by entry — Manhattan, Queens, Brooklyn, San Francisco and
+  London. `GuideRunner.replace_entries!/2` resolves each entry through
+  `Places.get_place_by_slug!/1`, which raises rather than skipping, and seeding
+  is not transactional, so a missing place aborts the run partway and leaves
+  earlier guides published.
+
+  That ordering is not enforceable from here — these files reference places in
+  five other directories, and calling all five would re-seed a thousand guides
+  on every run. It is stated instead, and the release test that follows the
+  corpus asserts the entries resolve.
+  """
+  def seed_korean_bbq(email), do: seed_directory("korean_bbq", email)
+
+  @doc """
   Applies the deletion manifest, removing every place it names.
 
   Prints two numbers, not one: a manifest of 30 that prunes 0 means either the
