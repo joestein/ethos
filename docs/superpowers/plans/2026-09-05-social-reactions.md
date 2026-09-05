@@ -842,7 +842,19 @@ defmodule EthosWeb.SocialLiveTest do
   alias Ethos.Social
 
   setup do
-    %{guide: guide_fixture(%{status: "published"})}
+    # published_guide_fixture/0, not guide_fixture/1 — guide_fixture builds a DRAFT,
+    # and these tests fetch the guide's public page.
+    %{guide: published_guide_fixture()}
+  end
+
+  # Reads the count rendered beneath one thumb. Scoped to the element rather than
+  # asserting `html =~ "1"`, which would pass on any stray digit anywhere on the page.
+  defp rendered_count(html, value) do
+    html
+    |> Floki.parse_document!()
+    |> Floki.find(~s([data-reaction-count="#{value}"]))
+    |> Floki.text()
+    |> String.trim()
   end
 
   describe "rendering inside the guide page" do
@@ -852,7 +864,8 @@ defmodule EthosWeb.SocialLiveTest do
       html = conn |> get(~p"/g/#{guide.slug}") |> html_response(200)
 
       assert html =~ "Log in to react"
-      assert html =~ "1"
+      assert rendered_count(html, "up") == "1"
+      assert rendered_count(html, "down") == "0"
     end
 
     test "a logged-in user gets working buttons", %{conn: conn, guide: guide} do
@@ -876,7 +889,7 @@ defmodule EthosWeb.SocialLiveTest do
 
       html = view |> element("button[phx-value-value=up]") |> render_click()
 
-      assert html =~ "1"
+      assert rendered_count(html, "up") == "1"
       assert Social.counts(guide) == %{up: 1, down: 0}
     end
 
@@ -1029,7 +1042,11 @@ defmodule EthosWeb.SocialLive do
       <span :if={!@interactive} class="rounded-lg border px-4 py-2 text-xl opacity-60">
         {@label}
       </span>
-      <span class="text-sm font-medium text-zinc-600">{@count}</span>
+      <%!-- data-reaction-count is the hook the tests read. Without it they would have
+            to assert on bare text, which passes on any stray digit on the page. --%>
+      <span data-reaction-count={@value} class="text-sm font-medium text-zinc-600">
+        {@count}
+      </span>
     </div>
     """
   end
