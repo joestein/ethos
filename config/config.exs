@@ -111,7 +111,36 @@ config :ethos, :affiliate_locales, %{
   #
   # Whoever ships the second Italian city must therefore do BOTH: backfill a
   # county on the Italian guides (Rome included) and then add the allowlist.
+  #
+  # That hazard has since narrowed on its own: the "lazio" entry below is keyed
+  # on the region, and a Florence guide would hang from `italy/tuscany/florence`
+  # and derive `tuscany` — no locale, no widget, rather than the wrong campaign.
+  # It survives only for `Ethos.Seeds.RomeGuide`, which still writes a bare
+  # `state: "Italy"` and would take cmp=rome whatever the city.
   "italy" => %{
+    network: :getyourguide,
+    partner_id: "ZA4AIMF",
+    cmp: "rome",
+    placement: :top
+  },
+  # TWO KEYS, ONE CAMPAIGN, and the duplication is temporary.
+  #
+  # A page's state is derived from its destination node's nearest `region`
+  # ancestor, so the thirty Rome neighbourhood guides — which hang from
+  # `italy/lazio/rome/*` — derive "Lazio", not "Italy". They resolved through
+  # the "italy" key until the destination tree landed and then stopped: thirty
+  # live pages that had carried this unit went blank, silently, with no test
+  # failing. This key restores them.
+  #
+  # "italy" stays because `Ethos.Seeds.RomeGuide` hand-rolls its own upsert,
+  # names no destination node, and still writes `state: "Italy"` directly. It
+  # is the only row left reaching that key.
+  #
+  # WHOEVER MOVES RomeGuide ONTO THE TREE: delete the "italy" entry in the same
+  # change, and not before. Deleting it first blanks the one Rome guide the
+  # suite actually exercises; leaving it after is a dead key that outlives the
+  # geography it described.
+  "lazio" => %{
     network: :getyourguide,
     partner_id: "ZA4AIMF",
     cmp: "rome",

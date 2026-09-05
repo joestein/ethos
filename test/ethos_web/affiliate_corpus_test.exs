@@ -79,52 +79,76 @@ defmodule EthosWeb.AffiliateCorpusTest do
   # page resolves to nothing. Not one of them notices the day a page that
   # SHOULD resolve stops resolving, and that is the direction money flows in.
   #
-  # It had already happened. `:counties` listed "Bronx"; the destination node
-  # is named "The Bronx", `Destinations.legacy_geo/1` copies the node's name
-  # into a page's `county` verbatim, and the membership test in
-  # `Ethos.Affiliates` is exact. So every Bronx guide and place — thirteen seed
-  # files plus the Yankee Stadium modules — served HTTP 200, rendered
-  # correctly, and carried no affiliate unit. No test failed, because no test
-  # asked.
+  # It had happened twice, both times as a side effect of moving the corpus onto
+  # the destination tree, and neither time did a test go red:
   #
-  # This asks. It walks the committed corpus, derives each row's pair the way
-  # the loaders do, and asserts that any row landing in a state that HAS a
-  # guarded locale is allowed by that locale's list. A row in an unmonetized
-  # state is not this gate's business; a row inside a campaign's own geography
-  # that the campaign's own allowlist rejects is exactly what it is for.
-  test "every corpus row in a guarded locale's state resolves to that locale" do
-    guarded =
-      for {slug, locale} <- Application.get_env(:ethos, :affiliate_locales, %{}),
-          Map.has_key?(locale, :counties),
-          into: %{},
-          do: {slug, locale}
+  #   * `:counties` listed "Bronx". The borough node is named "The Bronx",
+  #     `Destinations.legacy_geo/1` copies a node's name into a page's `county`
+  #     verbatim, and the membership test in `Ethos.Affiliates` is exact — so
+  #     thirteen Bronx seed files and the two Yankee Stadium modules rendered no
+  #     unit.
+  #
+  #   * The Italian locale is keyed `"italy"`. A page's state is its node's
+  #     nearest `region` ancestor, and the thirty Rome neighbourhood guides hang
+  #     from `italy/lazio/rome/*` — so they began deriving "Lazio" and stopped
+  #     resolving at all. A locale key can rot exactly like a county name.
+  #
+  # So the scope is the TREE, not the config's own vocabulary. Each locale is
+  # keyed on a state slug; the roster node whose name slugifies to that key is
+  # the geography the campaign covers, and every corpus row in that node's
+  # subtree must resolve. That catches a county name the tree renders
+  # differently AND a key that no longer names the state its pages derive.
+  #
+  # Locale keys matching no roster node contribute no scope rather than failing:
+  # `affiliate_placement_test.exs` injects a fictional locale through
+  # `Application.put_env/3`, which is global, and this file is async.
+  test "every corpus row inside a locale's geography resolves to that locale" do
+    locales = Application.get_env(:ethos, :affiliate_locales, %{})
 
-    # Non-vacuous twice over: with no guarded locale, or with no corpus row in
-    # one, every assertion below is skipped and this passes having checked
-    # nothing at all.
-    assert map_size(guarded) > 0,
-           "no affiliate locale carries a :counties guard, so this gate checks nothing"
+    # {locale key, node path} for every roster node a locale is keyed on.
+    scopes =
+      for node <- Ethos.Seeds.DestinationTree.load!(),
+          key = Guide.derive_destination_slug(node["name"]),
+          Map.has_key?(locales, key),
+          do: {key, node["path"]}
 
-    in_scope = for row <- corpus_rows(), Map.has_key?(guarded, row.state_slug), do: row
+    rows = corpus_rows()
 
-    assert length(in_scope) > 0,
-           "no committed corpus row lands in #{inspect(Map.keys(guarded))}, so this gate " <>
-             "checks nothing"
+    in_scope =
+      for row <- rows,
+          {key, node_path} <- scopes,
+          row.path == node_path or String.starts_with?(row.path, node_path <> "/"),
+          uniq: true,
+          do: {key, row}
+
+    # Non-vacuous, and specific about what would make it vacuous. One locale
+    # geography is not enough: the Bronx bug lived inside New York, so a gate
+    # that only ever saw New York would still have found it — but the Rome bug
+    # was a whole geography dropping out of scope, which a one-locale gate
+    # cannot see at all.
+    covered = in_scope |> Enum.map(&elem(&1, 0)) |> Enum.uniq() |> Enum.sort()
+
+    assert length(covered) >= 2,
+           "only #{inspect(covered)} of the configured locales covers any committed page — " <>
+             "a locale whose geography holds no corpus row is either dead config or a key " <>
+             "that stopped matching the state its pages derive, which is the second bug " <>
+             "this gate exists for"
 
     unresolved =
-      for row <- in_scope,
+      for {key, row} <- in_scope,
           is_nil(Affiliates.locale_for(row.state_slug, row.county)),
           uniq: true,
-          do: {row.state_slug, row.county, row.owner}
+          do: {key, row.state_slug, row.county, row.owner}
 
     assert unresolved == [],
-           "these committed pages sit inside a campaign's geography but fall outside its " <>
-             ":counties allowlist, so they render no affiliate unit — silently, with a 200 " <>
-             "and a correct-looking page: #{inspect(unresolved)}"
+           "these committed pages sit inside a campaign's own geography and resolve to no " <>
+             "locale, so they render no affiliate unit — silently, with a 200 and a " <>
+             "correct-looking page: #{inspect(unresolved)}"
   end
 
   # Every guide and place in the committed corpus, JSON and code alike, as the
-  # {state_slug, county} pair the loaders derive from its destination node.
+  # {state_slug, county} pair the loaders derive from its destination node,
+  # alongside the node path the pair came from.
   defp corpus_rows do
     trails = Ethos.SeedDataHelpers.destination_trails()
 
@@ -153,6 +177,7 @@ defmodule EthosWeb.AffiliateCorpusTest do
     geo = Ethos.Destinations.legacy_geo_from_trail(Map.fetch!(trails, node_path))
 
     %{
+      path: node_path,
       state_slug: Guide.derive_destination_slug(geo["state"]),
       county: geo["county"],
       owner: owner

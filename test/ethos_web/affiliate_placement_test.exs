@@ -602,6 +602,49 @@ defmodule EthosWeb.AffiliatePlacementTest do
       assert count == 1, "expected exactly one widget div on the Rome guide, got #{count}"
     end
 
+    # THE SECOND POSITIVE END-TO-END CASE, and the one the setup above hides.
+    #
+    # Every other assertion in this block runs `Ethos.Seeds.RomeGuide`, which
+    # hand-rolls its own upsert and writes a bare `state: "Italy"` — so it
+    # resolves through the "italy" locale key and always did. The thirty Rome
+    # NEIGHBOURHOOD guides are JSON seeds hanging from `italy/lazio/rome/*`, and
+    # a page's state is its node's nearest `region` ancestor, so they derive
+    # "Lazio". When the destination tree landed they stopped resolving and went
+    # blank — thirty live pages, no failing test, because the only Rome page
+    # under test was the one that does not use the tree.
+    #
+    # This one seeds a neighbourhood guide the ordinary way and asserts what the
+    # loader derived, so the registry and the tree have to agree about Lazio.
+    test "a Rome neighbourhood guide seeded through the loader carries the widget", %{
+      conn: conn
+    } do
+      # Destinations before guides — the loader resolves destination_path
+      # against that table, and the order keeps async tests off each other's
+      # row locks.
+      Ethos.Seeds.DestinationTree.upsert_all!()
+
+      file = "priv/seed_data/rome/ardeatino.json"
+      email = Ethos.AccountsFixtures.user_fixture().email
+      Ethos.Seeds.DataGuide.upsert_places!(file)
+      guide = Ethos.Seeds.DataGuide.upsert_guide!(file, email)
+
+      # Non-vacuous: the premise is that this guide derives the REGION, not the
+      # country. If it ever derives "Italy" again it resolves through the other
+      # key and stops covering the case this test exists for.
+      assert guide.state == "Lazio"
+      assert guide.state_slug == "lazio"
+
+      assert Ethos.Affiliates.locale_for(guide.state_slug, guide.county),
+             "a real Rome neighbourhood guide resolved to no affiliate locale — " <>
+               ":affiliate_locales and the destination tree disagree about the region"
+
+      html = conn |> get(~p"/g/#{guide.slug}") |> html_response(200)
+
+      assert html =~ @script_src
+      assert html =~ @widget
+      assert html =~ ~s(data-gyg-cmp="rome")
+    end
+
     # Rome is the ONLY guide in the corpus carrying both an affiliate locale and
     # a sponsored per-entry booking link, so it is the only page where this
     # interaction is observable at all.
