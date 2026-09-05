@@ -468,7 +468,7 @@ defmodule Ethos.Seeds.KoreanBbqSeedDataTest do
         end
 
       # The guide's own prose, plus the prose of every place it presents —
-      # including the 52 whose records live in a neighborhood file.
+      # including the 53 whose records live in a neighborhood file.
       resolved_prose =
         for {file, _slug, place} <- resolve_entries(),
             place != nil,

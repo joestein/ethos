@@ -942,7 +942,7 @@ defmodule EthosWeb.StructuredDataTest do
       # Lynnwood), one in Los Angeles (Moon BBQ #2), and four in Chicago's
       # north suburbs (Mr. Kimchi, Hwang Soh Grill, Gopchang Story in Glenview,
       # Pro Samgyubsal). In every one of the eight the "at the table" was the
-      # researcher's conclusion and not the source's sentence — five had a
+      # researcher's conclusion and not the source's sentence — four had a
       # source that never mentions a table at all, and four cited a
       # search-results URL, which is not a citation because it is not
       # re-checkable. Two of the ten re-examined survived on new evidence and

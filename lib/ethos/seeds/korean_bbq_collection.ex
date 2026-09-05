@@ -39,7 +39,7 @@ defmodule Ethos.Seeds.KoreanBbqCollection do
 
       Ten guides, drawn where the grills actually are rather than where the city
       limits fall. Los Angeles is Koreatown and needs no apology. Manhattan is
-      five blocks of West 32nd Street. Queens is a five-mile belt along Northern
+      six blocks around West 32nd Street. Queens is a five-mile belt along Northern
       Boulevard. Seattle turned out to be Puget Sound, Chicago turned out to be
       two pages, and San Francisco turned out to be smaller than its reputation.
       """,
@@ -47,7 +47,7 @@ defmodule Ethos.Seeds.KoreanBbqCollection do
         %{
           guide_slug: "los-angeles-korean-bbq-guide",
           blurb:
-            "Koreatown, inside the City of Los Angeles: twenty-four tabletop grills citywide, eighteen of them in and around Koreatown on West 6th Street, Wilshire, West 8th, Olympic, Vermont and Western, and three twenty miles north in the San Fernando Valley."
+            "Koreatown, inside the City of Los Angeles: twenty-four tabletop grills, eighteen on West 6th, West 3rd, Wilshire, West 8th, Olympic, Vermont and Western, and three twenty miles north in the San Fernando Valley."
         },
         %{
           guide_slug: "manhattan-korean-bbq-guide",
