@@ -1,7 +1,7 @@
 defmodule Ethos.Repo.Migrations.AddUsernamesAndModerationFieldsToUsers do
   use Ecto.Migration
 
-  alias Ethos.Accounts.Username
+  alias Ethos.Accounts.UsernameBackfill
 
   @admin_username "buoewe"
 
@@ -37,41 +37,38 @@ defmodule Ethos.Repo.Migrations.AddUsernamesAndModerationFieldsToUsers do
     end
   end
 
-  # Calls into Ethos.Accounts.Username rather than freezing a copy of its
+  # Delegates the naming logic to Ethos.Accounts.UsernameBackfill (which in
+  # turn calls Ethos.Accounts.Username) rather than freezing a copy of the
   # rules here.
   #
   # That breaks the usual "a migration must not depend on application code"
-  # rule, and the exception is deliberate: every call below happens inside a
-  # loop over rows that already exist. A fresh database has no users, so the
-  # loop body never runs and the module is never reached — Elixir resolves
-  # remote calls at runtime, so even deleting the module later would not
-  # break `mix ecto.setup`. Any database that does reach these calls runs
-  # this migration exactly once, so the rules cannot drift underneath it.
+  # rule, and the exception is deliberate: the call into UsernameBackfill
+  # below is guarded by `rows == []`. A fresh database has no users, so that
+  # branch is never taken — and since Elixir resolves remote calls only at
+  # the point they are dispatched, neither UsernameBackfill nor Username is
+  # ever reached on a fresh database. Deleting or renaming either module
+  # later would not break `mix ecto.setup`. Any database that does reach
+  # this branch runs this migration exactly once, so the rules cannot drift
+  # underneath it.
   defp backfill_usernames do
     %{rows: rows} = repo().query!("SELECT id, email FROM users ORDER BY id")
 
-    admin_email = String.downcase(Application.get_env(:ethos, :admin_email) || "")
+    case rows do
+      [] ->
+        :ok
 
-    # Seeded with the reserved names so that an account like
-    # admin@example.com backfills to "admin2" rather than to a name the
-    # changeset would later refuse.
-    initial_taken = MapSet.new(Username.reserved())
+      rows ->
+        admin_email = Application.get_env(:ethos, :admin_email)
 
-    {updates, _taken} =
-      Enum.map_reduce(rows, initial_taken, fn [id, email], taken ->
-        admin? = String.downcase(email) == admin_email
-
-        base = if admin?, do: @admin_username, else: Username.derive_from_email(email)
-        username = Username.uniquify(base, taken)
-
-        {{id, username, not admin?}, MapSet.put(taken, username)}
-      end)
-
-    Enum.each(updates, fn {id, username, provisional} ->
-      repo().query!(
-        "UPDATE users SET username = $1, username_provisional = $2 WHERE id = $3",
-        [username, provisional, id]
-      )
-    end)
+        rows
+        |> Enum.map(fn [id, email] -> {id, email} end)
+        |> UsernameBackfill.backfill(admin_email, @admin_username)
+        |> Enum.each(fn {id, username, provisional} ->
+          repo().query!(
+            "UPDATE users SET username = $1, username_provisional = $2 WHERE id = $3",
+            [username, provisional, id]
+          )
+        end)
+    end
   end
 end

@@ -2,7 +2,8 @@ defmodule Ethos.Seeds.CtGuidesTest do
   use Ethos.DataCase, async: true
 
   import Ethos.AccountsFixtures
-  alias Ethos.{Guides, Places}
+  alias Ethos.{Accounts, Guides, Places}
+  alias Ethos.Accounts.Username
   alias Ethos.Seeds
 
   @towns [
@@ -36,6 +37,20 @@ defmodule Ethos.Seeds.CtGuidesTest do
 
     # idempotency: no duplicate guides or entries
     assert Guides.list_published_guides() |> Enum.count(&(&1.state == "Connecticut")) == 5
+  end
+
+  test "GuideRunner auto-creates the owner account with a derived username when it does not exist yet" do
+    Seeds.ConnecticutPlaces.upsert_all!()
+    fresh_email = "fresh-ct-owner-#{System.unique_integer([:positive])}@example.com"
+    refute Accounts.get_user_by_email(fresh_email)
+
+    guide = Seeds.WaterburyGuide.upsert!(fresh_email)
+
+    user = Accounts.get_user_by_email(fresh_email)
+    assert user
+    assert guide.user_id == user.id
+    assert user.username == Username.derive_from_email(fresh_email)
+    assert Regex.match?(Username.format(), user.username)
   end
 
   test "every entry place_slug resolves to a seeded place" do
