@@ -3,6 +3,8 @@ defmodule Mix.Tasks.Ethos.MigrateGeoTest do
 
   alias Mix.Tasks.Ethos.MigrateGeo
 
+  @corpora ~w(connecticut manhattan brooklyn queens bronx san_francisco rome london)
+
   test "maps each corpus to its full ancestry path" do
     assert MigrateGeo.path_for("connecticut", "Connecticut", "Litchfield County", "Woodbury") ==
              "united-states/connecticut/litchfield-county/woodbury"
@@ -27,6 +29,51 @@ defmodule Mix.Tasks.Ethos.MigrateGeoTest do
 
     assert MigrateGeo.path_for("london", "England", "London", "Barking and Dagenham") ==
              "united-kingdom/england/london/barking-and-dagenham"
+  end
+
+  test "the Vatican is sovereign: a Rome-corpus row whose state says so leaves Italy" do
+    # The one clause that reads `state`. Every other Roman row says "Italy";
+    # these 30 say "Vatican City", and mapping them under italy/ would make
+    # Task 10 derive addressCountry "IT" for St Peter's.
+    assert MigrateGeo.path_for("rome", "Vatican City", "Rome", "Vatican City") ==
+             "vatican-city"
+
+    assert MigrateGeo.path_for("rome", "Italy", "Rome", "Borgo") == "italy/lazio/rome/borgo"
+  end
+
+  test "no committed seed file resolves a Vatican node inside Italy" do
+    rows =
+      for corpus <- @corpora,
+          file <- Path.wildcard(Path.join(["priv", "seed_data", corpus, "*.json"])),
+          data = Jason.decode!(File.read!(file)),
+          row <- [data["guide"] | data["places"]] do
+        {file, row["destination_path"]}
+      end
+
+    for {file, path} <- rows do
+      refute String.starts_with?(path, "italy/") and String.contains?(path, "vatican"),
+             "#{file} puts a Vatican node inside Italy: #{path}"
+    end
+
+    vatican = for {file, path} <- rows, Path.basename(file) == "vatican-city.json", do: path
+
+    # One guide and 29 places, all on the sovereign root.
+    assert length(vatican) == 30
+    assert Enum.uniq(vatican) == ["vatican-city"]
+  end
+
+  test "the roster declares Vatican City as a root country and holds no orphan under Rome" do
+    nodes = Jason.decode!(File.read!("priv/seed_data/destination_tree.json"))
+    vatican = Enum.filter(nodes, &String.contains?(&1["path"], "vatican"))
+
+    assert vatican == [
+             %{
+               "path" => "vatican-city",
+               "kind" => "country",
+               "name" => "Vatican City",
+               "intro" => "Vatican City."
+             }
+           ]
   end
 
   test "London places nest their town under the guide's borough" do

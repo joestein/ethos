@@ -53,6 +53,9 @@
   {"path": "italy/lazio/rome", "kind": "city", "name": "Rome", "intro": "Rome.",
    "legacy_paths": ["rome", "italy/rome"]},
 
+  {"path": "vatican-city", "kind": "country", "name": "Vatican City",
+   "intro": "Vatican City."},
+
   {"path": "united-kingdom", "kind": "country", "name": "United Kingdom",
    "intro": "The United Kingdom."},
   {"path": "united-kingdom/england", "kind": "region", "name": "England",
@@ -96,7 +99,6 @@
   {"path":"italy/lazio/rome/testaccio","kind":"neighborhood","name":"Testaccio","intro":"Testaccio."},
   {"path":"italy/lazio/rome/trastevere","kind":"neighborhood","name":"Trastevere","intro":"Trastevere."},
   {"path":"italy/lazio/rome/trevi","kind":"neighborhood","name":"Trevi","intro":"Trevi."},
-  {"path":"italy/lazio/rome/vatican-city","kind":"neighborhood","name":"Vatican City","intro":"Vatican City."},
   {"path":"united-kingdom/england/london/barking-and-dagenham","kind":"borough","name":"Barking and Dagenham","intro":"Barking and Dagenham."},
   {"path":"united-kingdom/england/london/barking-and-dagenham/barking","kind":"town","name":"Barking","intro":"Barking."},
   {"path":"united-kingdom/england/london/barking-and-dagenham/chadwell-heath","kind":"town","name":"Chadwell Heath","intro":"Chadwell Heath."},

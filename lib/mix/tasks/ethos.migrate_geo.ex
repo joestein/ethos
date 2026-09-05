@@ -94,6 +94,19 @@ defmodule Mix.Tasks.Ethos.MigrateGeo do
   def path_for("san_francisco", _state, _county, town),
     do: "united-states/california/san-francisco/#{slug(town)}"
 
+  # The Vatican is a sovereign state that Rome surrounds, not a quarter of it,
+  # and `state` is the only thing that says so: the corpus authored these 30
+  # rows as "Vatican City" where every other Roman row says "Italy". This is
+  # the case that argument exists for. Mapping them under italy/ would put St
+  # Peter's in Italy, and Task 10 derives addressCountry from the country
+  # ancestor — so the basilica would ship "IT", the defect
+  # `EthosWeb.StructuredData`'s @country_by_region comment records as having
+  # been made once already and fixed.
+  #
+  # Ordered before the general clause so it wins; the node it names is a root,
+  # sibling to `italy`, not a child of anything.
+  def path_for("rome", "Vatican City", _county, _town), do: "vatican-city"
+
   def path_for("rome", _state, _county, town), do: "italy/lazio/rome/#{slug(town)}"
 
   def path_for("london", _state, _county, town),
