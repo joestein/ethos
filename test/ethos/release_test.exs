@@ -2,6 +2,7 @@ defmodule Ethos.ReleaseTest do
   use Ethos.DataCase, async: false
 
   import ExUnit.CaptureIO
+  import ExUnit.CaptureLog
   import Ethos.AccountsFixtures
 
   alias Ethos.Places
@@ -458,6 +459,48 @@ defmodule Ethos.ReleaseTest do
 
     capture_io(fn -> Ethos.Release.seed_korean_bbq(user.email) end)
     assert kbbq.() == after_first, "seed_korean_bbq/1 is not idempotent"
+  end
+
+  # Production runs a release, not Mix, so Ethos.Release.foliage_links/0 is
+  # the only way to run Ethos.Foliage.LinkBuilder.build!/0 and
+  # Ethos.Foliage.Dataset.warn_dangling_guides/1 after a deploy. Before this
+  # existed, both were reachable only from test code — this proves the
+  # release path actually calls them, rather than trusting that it would.
+  describe "foliage_links/0" do
+    # Avon and Canton are consecutive stops on the committed `hartford-west`
+    # route (priv/foliage/routes.json). Every other route's guides are
+    # deliberately left unseeded, so this run also exercises
+    # warn_dangling_guides/1 against dozens of really-missing guides.
+    @avon Path.expand("../../priv/seed_data/connecticut/avon.json", __DIR__)
+    @canton Path.expand("../../priv/seed_data/connecticut/canton.json", __DIR__)
+
+    test "writes route link edges and logs dangling route guides" do
+      user = user_fixture()
+
+      for path <- [@avon, @canton] do
+        Ethos.Seeds.DataGuide.upsert_places!(path)
+        Ethos.Seeds.DataGuide.upsert_guide!(path, user.email)
+      end
+
+      avon = Ethos.Guides.get_published_guide_by_slug!("avon-ct-travel-guide")
+
+      log =
+        capture_log(fn ->
+          assert :ok = Ethos.Release.foliage_links()
+        end)
+
+      connected = Ethos.Links.links_for("guide", avon.id)
+
+      assert Enum.any?(
+               connected,
+               &(&1.other.slug == "canton-ct-travel-guide" and &1.kind == "same-region")
+             )
+
+      # Every stop outside Avon/Canton resolves to a guide this test never
+      # seeded, so the dangling-guide check has real orphans to report.
+      assert log =~ "foliage: route"
+      assert log =~ "links missing guide"
+    end
   end
 
   # The manifest ships empty and waves append to it, so none of these may

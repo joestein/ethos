@@ -3,6 +3,8 @@ defmodule Ethos.Release do
   Used for executing DB release tasks when run in production without Mix
   installed.
   """
+  import Ecto.Query, warn: false
+
   @app :ethos
 
   def migrate do
@@ -153,6 +155,28 @@ defmodule Ethos.Release do
 
     IO.puts("Pruned #{count} deleted places (manifest lists #{length(slugs)})")
     count
+  end
+
+  @doc """
+  Writes the foliage route link edges and reports any route stop whose guide
+  has been unpublished or renamed.
+
+  Production runs a release, not Mix, so this is the only way to invoke either
+  of these after a deploy.
+  """
+  def foliage_links do
+    load_app()
+    Application.ensure_all_started(@app)
+
+    :ok = Ethos.Foliage.LinkBuilder.build!()
+
+    published =
+      Ethos.Repo.all(
+        from(g in Ethos.Guides.Guide, where: g.status == "published", select: g.slug)
+      )
+      |> MapSet.new()
+
+    Ethos.Foliage.Dataset.warn_dangling_guides(published)
   end
 
   def seed_destinations do
