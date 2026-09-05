@@ -87,13 +87,13 @@ defmodule EthosWeb.UserRegistrationLiveTest do
     test "renders an error for a duplicated username", %{conn: conn} do
       {:ok, lv, _html} = live(conn, ~p"/users/register")
 
-      user_fixture(%{username: "buoewe"})
+      user_fixture(%{username: "voyager"})
 
       result =
         lv
         |> form("#registration_form",
           user: %{
-            "username" => "buoewe",
+            "username" => "voyager",
             "email" => unique_user_email(),
             "password" => "valid_password_here"
           }

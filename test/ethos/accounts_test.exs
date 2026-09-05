@@ -566,21 +566,28 @@ defmodule Ethos.AccountsTest do
       assert %{username: ["is reserved"]} = errors_on(changeset)
     end
 
+    test "rejects the admin's public username — an ordinary user cannot register as the admin" do
+      {:error, changeset} =
+        Ethos.Accounts.register_user(valid_user_attributes(username: "buoewe"))
+
+      assert %{username: ["is reserved"]} = errors_on(changeset)
+    end
+
     test "downcases and trims before storing" do
       {:ok, user} =
-        Ethos.Accounts.register_user(valid_user_attributes(username: "  BuoEwe  "))
+        Ethos.Accounts.register_user(valid_user_attributes(username: "  Voyager  "))
 
-      assert user.username == "buoewe"
+      assert user.username == "voyager"
     end
 
     test "rejects a username already taken in a different case" do
-      taken = user_fixture(username: "buoewe")
+      taken = user_fixture(username: "voyager")
 
       {:error, changeset} =
-        Ethos.Accounts.register_user(valid_user_attributes(username: "BUOEWE"))
+        Ethos.Accounts.register_user(valid_user_attributes(username: "VOYAGER"))
 
       assert %{username: ["has already been taken"]} = errors_on(changeset)
-      assert taken.username == "buoewe"
+      assert taken.username == "voyager"
     end
 
     test "a newly registered user is not provisional" do
@@ -594,9 +601,9 @@ defmodule Ethos.AccountsTest do
 
     test "sets the username and clears the provisional flag" do
       user = user_fixture()
-      {:ok, updated} = Ethos.Accounts.update_user_username(user, %{"username" => "buoewe"})
+      {:ok, updated} = Ethos.Accounts.update_user_username(user, %{"username" => "voyager"})
 
-      assert updated.username == "buoewe"
+      assert updated.username == "voyager"
       refute updated.username_provisional
     end
 
@@ -609,12 +616,21 @@ defmodule Ethos.AccountsTest do
       assert %{username: ["is reserved"]} = errors_on(changeset)
     end
 
+    test "rejects the admin's public username" do
+      user = user_fixture()
+
+      assert {:error, changeset} =
+               Ethos.Accounts.update_user_username(user, %{"username" => "buoewe"})
+
+      assert %{username: ["is reserved"]} = errors_on(changeset)
+    end
+
     test "rejects a username someone else already holds" do
-      user_fixture(username: "buoewe")
+      user_fixture(username: "voyager")
       other = user_fixture()
 
       assert {:error, changeset} =
-               Ethos.Accounts.update_user_username(other, %{"username" => "buoewe"})
+               Ethos.Accounts.update_user_username(other, %{"username" => "voyager"})
 
       assert %{username: ["has already been taken"]} = errors_on(changeset)
     end

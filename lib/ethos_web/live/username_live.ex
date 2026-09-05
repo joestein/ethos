@@ -35,7 +35,13 @@ defmodule EthosWeb.UsernameLive do
 
   def mount(_params, _session, socket) do
     user = socket.assigns.current_user
-    changeset = Accounts.change_user_username(user, %{"username" => user.username})
+    # Starts empty rather than prefilled with the current (possibly
+    # backfill-derived) name: prefilling would make "keep the name derived
+    # from my email address" the one-click default. Passing an explicit
+    # empty string (rather than %{}) is what makes the field empty — an
+    # empty attrs map casts no change, and the form would fall back to
+    # displaying the underlying (unwanted) current value.
+    changeset = Accounts.change_user_username(user, %{"username" => ""})
 
     {:ok, assign_form(socket, changeset)}
   end

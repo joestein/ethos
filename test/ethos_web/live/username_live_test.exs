@@ -9,12 +9,12 @@ defmodule EthosWeb.UsernameLiveTest do
       assert {:error, {:redirect, %{to: "/users/log_in"}}} = live(conn, ~p"/users/username")
     end
 
-    test "renders the picker prefilled with the current name", %{conn: conn} do
+    test "renders the picker empty, not prefilled with the current name", %{conn: conn} do
       user = user_fixture(%{username: "user123"})
       {:ok, _lv, html} = conn |> log_in_user(user) |> live(~p"/users/username")
 
       assert html =~ "Pick your username"
-      assert html =~ "user123"
+      refute html =~ ~s(value="user123")
     end
 
     test "saves a valid username and clears the provisional flag", %{conn: conn} do
@@ -30,13 +30,13 @@ defmodule EthosWeb.UsernameLiveTest do
 
       result =
         lv
-        |> form("#username_form", user: %{"username" => "buoewe"})
+        |> form("#username_form", user: %{"username" => "voyager"})
         |> render_submit()
 
       assert {:error, {:redirect, %{to: "/"}}} = result
 
       reloaded = Ethos.Accounts.get_user!(user.id)
-      assert reloaded.username == "buoewe"
+      assert reloaded.username == "voyager"
       refute reloaded.username_provisional
     end
 
@@ -53,7 +53,19 @@ defmodule EthosWeb.UsernameLiveTest do
     end
 
     test "shows an error for a username someone else holds", %{conn: conn} do
-      user_fixture(%{username: "buoewe"})
+      user_fixture(%{username: "voyager"})
+      user = user_fixture()
+      {:ok, lv, _html} = conn |> log_in_user(user) |> live(~p"/users/username")
+
+      html =
+        lv
+        |> form("#username_form", user: %{"username" => "voyager"})
+        |> render_submit()
+
+      assert html =~ "has already been taken"
+    end
+
+    test "shows an error for the admin's public username", %{conn: conn} do
       user = user_fixture()
       {:ok, lv, _html} = conn |> log_in_user(user) |> live(~p"/users/username")
 
@@ -62,7 +74,7 @@ defmodule EthosWeb.UsernameLiveTest do
         |> form("#username_form", user: %{"username" => "buoewe"})
         |> render_submit()
 
-      assert html =~ "has already been taken"
+      assert html =~ "is reserved"
     end
   end
 end

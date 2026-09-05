@@ -128,12 +128,30 @@ defmodule Ethos.Accounts do
   end
 
   @doc """
-  True when the user still carries a username invented by the backfill.
-
-  These users must pick a real name before they can post anything public.
+  True when the user still carries a username invented by the backfill,
+  rather than one the user chose.
   """
   def needs_username?(%User{username_provisional: true}), do: true
   def needs_username?(_), do: false
+
+  @provisional_display_name "a traveler"
+
+  @doc """
+  The name a THIRD PARTY should see for `user` — on a suggestion queue, a
+  guide byline, anywhere someone other than the account owner is shown who
+  did something.
+
+  Returns the username once the owner has chosen it. While the username is
+  still the backfill's provisional guess, derived deterministically from
+  the owner's email address, publishing it would let anyone work backward
+  toward that address — exactly the leak this feature exists to close — so
+  this returns a neutral label instead. Never use `user.username` directly
+  on a page a third party can view; call this instead. Not for the
+  account's own settings page or the "Pick a username" header prompt, both
+  of which the owner is entitled to see as themselves.
+  """
+  def display_name(%User{username_provisional: true}), do: @provisional_display_name
+  def display_name(%User{username: username}), do: username
 
   ## Settings
 

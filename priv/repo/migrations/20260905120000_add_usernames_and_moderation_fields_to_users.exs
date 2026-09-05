@@ -1,10 +1,19 @@
 defmodule Ethos.Repo.Migrations.AddUsernamesAndModerationFieldsToUsers do
   use Ecto.Migration
 
-  alias Ethos.Accounts.UsernameBackfill
+  alias Ethos.Accounts.{Username, UsernameBackfill}
 
-  @admin_username "buoewe"
-
+  # This migration is one transaction: the ALTER TABLE below takes ACCESS
+  # EXCLUSIVE on `users` and holds it to COMMIT, and inside that window
+  # come one round trip per user (backfill_usernames/0), a SET NOT NULL
+  # full table scan, and a non-concurrent unique index build. `fly.toml`
+  # runs migrations as `release_command` against the live database while
+  # the previous release still serves traffic, so every authenticated
+  # request blocks for the duration. backfill_usernames/0 is O(N) round
+  # trips with an O(N^2)-in-memory `Username.uniquify/2` on a shared base
+  # (each new name is checked against every name assigned so far). That is
+  # acceptable only because this table is small; do not copy this shape as
+  # a template for a migration against a large table.
   def up do
     alter table(:users) do
       add :username, :citext
@@ -25,6 +34,13 @@ defmodule Ethos.Repo.Migrations.AddUsernamesAndModerationFieldsToUsers do
     create unique_index(:users, [:username])
   end
 
+  # This down is not the inverse of up in the way a `down` usually implies.
+  # It drops `username` — including every name a user deliberately chose —
+  # plus `trusted_at`, `banned_at`, and `ban_reason` (bans, once a later
+  # plan uses them). It neither fails nor corrupts data, but a
+  # down-then-up cycle re-derives email-based provisional names for users
+  # who had already picked their own, silently republishing their email
+  # local-part and resetting `username_provisional` back to `true`.
   def down do
     drop unique_index(:users, [:username])
 
@@ -62,7 +78,7 @@ defmodule Ethos.Repo.Migrations.AddUsernamesAndModerationFieldsToUsers do
 
         rows
         |> Enum.map(fn [id, email] -> {id, email} end)
-        |> UsernameBackfill.backfill(admin_email, @admin_username)
+        |> UsernameBackfill.backfill(admin_email, Username.admin_username())
         |> Enum.each(fn {id, username, provisional} ->
           repo().query!(
             "UPDATE users SET username = $1, username_provisional = $2 WHERE id = $3",

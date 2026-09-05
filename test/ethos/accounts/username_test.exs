@@ -30,10 +30,19 @@ defmodule Ethos.Accounts.UsernameTest do
       refute Regex.match?(Username.format(), "buo.ewe")
     end
 
-    test "reserved list includes the names that must never be claimed" do
-      for name <- ~w(admin ethos root support moderator staff system anonymous deleted) do
+    test "format rejects a trailing newline" do
+      refute Regex.match?(Username.format(), "buoewe\n")
+    end
+
+    test "reserved list includes every name that must never be claimed" do
+      for name <-
+            ~w(admin ethos root support help about api moderator staff system anonymous deleted buoewe) do
         assert name in Username.reserved()
       end
+    end
+
+    test "the admin's public byline is reserved" do
+      assert Username.admin_username() in Username.reserved()
     end
   end
 

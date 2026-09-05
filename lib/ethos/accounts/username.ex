@@ -11,17 +11,23 @@ defmodule Ethos.Accounts.Username do
 
   @min_length 3
   @max_length 20
-  @format ~r/^[a-z0-9_]+$/
+  @format ~r/\A[a-z0-9_]+\z/
+
+  # The admin's public byline. Defined here — not in the migration or the
+  # backfill, both of which read it from this one place — so the reserved
+  # list and the name the backfill actually assigns can never drift apart.
+  @admin_username "buoewe"
 
   @reserved ~w(
     admin ethos root support help about api
     moderator staff system anonymous deleted
-  )
+  ) ++ [@admin_username]
 
   def min_length, do: @min_length
   def max_length, do: @max_length
   def format, do: @format
   def reserved, do: @reserved
+  def admin_username, do: @admin_username
 
   @doc """
   Canonical form: trimmed and downcased.
@@ -40,6 +46,14 @@ defmodule Ethos.Accounts.Username do
   The result is provisional — the user is asked to pick a real one — but it
   must still satisfy every rule above, because it is written straight to the
   column without passing through a changeset.
+
+  This does NOT check the reserved list. `admin@example.com` derives to
+  `"admin"`, which `reserved/0` forbids a human from choosing. Safety comes
+  entirely from the caller seeding `taken` (the argument to `uniquify/2`)
+  with `reserved/0` before calling this — `UsernameBackfill.backfill/3` does
+  exactly that. A caller that skips seeding `taken` and derives a name that
+  happens to be reserved gets that reserved name back, unchanged and
+  unfiltered.
   """
   def derive_from_email(email) when is_binary(email) do
     email
