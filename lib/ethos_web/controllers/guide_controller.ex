@@ -61,7 +61,7 @@ defmodule EthosWeb.GuideController do
   """
   def foliage_assign(guide, today \\ Date.utc_today())
 
-  def foliage_assign(%Guide{tier: "town-page", state_slug: "connecticut"} = guide, today) do
+  def foliage_assign(%Guide{state_slug: "connecticut"} = guide, today) do
     with true <- Ethos.Foliage.in_season?(today),
          town when not is_nil(town) <- Ethos.Foliage.town(guide.destination_slug) do
       week = Ethos.Foliage.current_week_index(today)

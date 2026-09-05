@@ -24,14 +24,16 @@ defmodule EthosWeb.FoliageGuidePanelTest do
       assert GuideController.foliage_assign(guide, ~D[2026-10-15]) == nil
     end
 
-    test "returns nil for a guide that is not a town page" do
+    test "returns the town for a Connecticut town guide regardless of tier" do
+      # Only 10 of the 169 CT town guides carry tier "town-page"; the rest are
+      # plain "guide". Presence in the foliage dataset is the real gate.
       guide = %Ethos.Guides.Guide{
         tier: "guide",
         state_slug: "connecticut",
         destination_slug: "avon"
       }
 
-      assert GuideController.foliage_assign(guide, ~D[2026-10-15]) == nil
+      assert %{town: %{name: "Avon"}} = GuideController.foliage_assign(guide, ~D[2026-10-15])
     end
 
     test "returns nil for a Connecticut town with no foliage record" do
