@@ -1862,6 +1862,12 @@ In `lib/ethos_web/controllers/sitemap_controller.ex`, replace the three `Guides.
         end) ++
 ```
 
+- [ ] **Step 3b: Restore the breadcrumb assertions Task 8 had to weaken**
+
+Task 8 stubbed `node_breadcrumb/2` (this task owns the real one), and to keep the suite green it downgraded **three hub rows in `test/ethos_web/controllers/json_ld_parity_test.exs`** from asserting a full breadcrumb trail to asserting the 2-crumb stub. That is the only place in this project where assertion strength was deliberately reduced, and it was reduced on the exact thing this task implements.
+
+Restore them. Each of the three must assert the complete trail for its node — every ancestor in order, plus the node itself — not merely that a breadcrumb exists. Verify by reverting `node_breadcrumb/2` to the stub and confirming all three go red; a restored assertion you have not watched fail is not restored.
+
 - [ ] **Step 4: Implement breadcrumbs over ancestry**
 
 In `lib/ethos_web/controllers/destination_controller.ex`, replace the stubbed `node_breadcrumb/2`:
@@ -2173,7 +2179,18 @@ git commit -m "refactor: drop the state/county/town columns"
 
 ## Deployment
 
-> **HARD ORDERING CONSTRAINT — Task 10 must land before any production re-seed.**
+> **HARD ORDERING CONSTRAINT — Tasks 9 AND 10 must land before any deploy, and Task 10 before any production re-seed.**
+>
+> Task 8 moved hub URLs onto tree paths, but `sitemap_controller.ex`,
+> `guide_breadcrumb.ex` and `place_controller.ex` still emit the pre-tree URLs
+> derived from the legacy columns. Those URLs 404 until Task 9's redirects land.
+> Deploying between Task 8 and Task 9 would publish a sitemap of 404s to Google
+> — worse than the state before this project started, because the old URLs at
+> least resolved.
+>
+> Task 10 then re-points those emitters at node paths. Neither task is optional
+> before a deploy, and their order is fixed: 9 (redirects catch the old URLs),
+> then 10 (emitters stop producing them).
 >
 > Task 7's shim derives a place's legacy `state` from its **region** node, so a
 > Roman place now carries `"Lazio"` where it used to carry `"Italy"`.
