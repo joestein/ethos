@@ -81,6 +81,15 @@ defmodule Ethos.HouseAdTest do
   end
 
   describe "pool/0 after load!/0" do
+    setup do
+      # `load!/0` writes to :persistent_term, which is global and outside the
+      # Ecto sandbox — the DB transaction rolls back but the pool does not.
+      # Restore it so later test files see the boot-time value.
+      previous = Ethos.HouseAd.pool()
+      on_exit(fn -> :persistent_term.put({Ethos.HouseAd, :pool}, previous) end)
+      :ok
+    end
+
     test "resolves a seeded pool town to its photograph" do
       # The pool loads at boot, before any test data exists, so asserting over
       # pool/0 as-loaded would be vacuously true. Seed a real pool town and

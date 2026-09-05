@@ -78,7 +78,7 @@ defmodule Ethos.HouseAd do
   end
 
   defp build_pool do
-    photos =
+    rows =
       Repo.all(
         from g in Guide,
           where:
@@ -87,7 +87,15 @@ defmodule Ethos.HouseAd do
           select: {g.destination_slug, g.photos}
       )
       |> Enum.sort_by(&elem(&1, 0))
-      |> Enum.flat_map(fn {slug, photos} ->
+
+    missing = @pool_slugs -- Enum.map(rows, &elem(&1, 0))
+
+    if missing != [] do
+      Logger.warning("house ad: no published guide for #{Enum.join(missing, ", ")}")
+    end
+
+    photos =
+      Enum.flat_map(rows, fn {slug, photos} ->
         case Enum.find(photos || [], &usable?/1) do
           nil ->
             Logger.warning("house ad: #{slug} has no usable photograph, skipped")
