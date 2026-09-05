@@ -96,9 +96,26 @@ defmodule EthosWeb.DestinationController do
     end
   end
 
-  # Task 10 builds the real trail out of `ancestors`. Until then every hub
-  # emits the index's own two crumbs, which is what the index emits today.
-  defp node_breadcrumb(_node, _ancestors), do: destinations_breadcrumb()
+  # The hub's own ancestry, root-first, with the node itself last.
+  #
+  # `ancestors` is the same list the template renders above the title, so the
+  # visible trail and the `BreadcrumbList` cannot disagree — the page derives
+  # both from one query. Depth is whatever the node's depth is: a country hub
+  # emits three crumbs and a London town hub emits seven, where the three fixed
+  # builders this replaced could only ever emit a state, a state+county or a
+  # single curated destination.
+  #
+  # Positions are not written here. `StructuredData.breadcrumb/1` derives them
+  # from list order, which is the invariant that module exists to hold — a
+  # hardcoded position surviving a trail growing a crumb is the exact bug its
+  # moduledoc records.
+  defp node_breadcrumb(node, ancestors) do
+    crumbs =
+      StructuredData.root_crumbs() ++
+        Enum.map(ancestors ++ [node], fn d -> %{name: d.name, url: node_url(d.path)} end)
+
+    StructuredData.breadcrumb(crumbs)
+  end
 
   # Destination hubs have no single representative photo, so they ship without
   # an og:image — the layout omits the tag when it's nil. A node carrying

@@ -82,10 +82,13 @@ defmodule EthosWeb.HubPagesTest do
     refute html =~ ~s(href="/destinations/italy/lazio/rome")
   end
 
-  # The sitemap is still built from the guides' legacy state/county columns, so
-  # it still emits the pre-tree hub URLs. Task 10 moves it onto the tree; this
-  # asserts what it emits until then.
-  test "sitemap includes state, county hubs", %{conn: conn} do
+  # The sitemap used to be built from the guides' legacy state/county columns
+  # and so emitted the pre-tree hub URLs. It is now one pass over the tree, and
+  # the hubs it lists are the same hubs this file serves — at their node paths,
+  # which is where they render, rather than at the legacy paths that 301.
+  test "sitemap includes state and county hubs at their node paths", %{conn: conn} do
+    node!("united-states/connecticut/new-haven-county")
+
     published_guide_fixture(%{
       "title" => "Waterbury",
       "destination" => "Waterbury, Connecticut",
@@ -94,7 +97,10 @@ defmodule EthosWeb.HubPagesTest do
     })
 
     xml = conn |> get(~p"/sitemap.xml") |> response(200)
-    assert xml =~ "/destinations/connecticut</loc>"
-    assert xml =~ "/destinations/connecticut/new-haven-county</loc>"
+    assert xml =~ "/destinations/united-states/connecticut</loc>"
+    assert xml =~ "/destinations/united-states/connecticut/new-haven-county</loc>"
+
+    refute xml =~ "/destinations/connecticut</loc>"
+    refute xml =~ "/destinations/connecticut/new-haven-county</loc>"
   end
 end

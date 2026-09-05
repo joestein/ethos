@@ -183,32 +183,66 @@ defmodule EthosWeb.JsonLdParityTest do
         names: ["Ethos", "Destinations"],
         urls: [url(~p"/"), url(~p"/destinations")]
       },
-      # THE THREE HUB ROWS BELOW ARE PINNED TO A STUB, AND TASK 10 UNPINS THEM.
+      # THE THREE HUB ROWS BELOW WERE PINNED TO A STUB. TASK 10 UNPINNED THEM.
       #
-      # Every hub is now one node in the destination tree served at that node's
-      # own path, and `DestinationController.node_breadcrumb/2` is deliberately
-      # stubbed to the index's own two crumbs until Task 10 builds the real
-      # trail out of `Destinations.ancestors/1`. These rows record what the stub
-      # emits — not what a hub should emit — so the parity net still runs over
-      # all three depths, and so Task 10 has to come back here and restate them.
+      # Task 8 served every hub from the tree but left
+      # `DestinationController.node_breadcrumb/2` stubbed to the index's own two
+      # crumbs, and downgraded these three rows to record what the stub emitted
+      # rather than what a hub should emit. That was the only place in this
+      # project where assertion strength was deliberately reduced, and it was
+      # reduced on the exact thing Task 10 implements.
       #
-      # The `/g/`, `/p/` and `/c/` rows above are NOT stubbed: those builders
-      # still read the guides' and places' legacy state/county columns and emit
-      # the pre-tree hub URLs. Task 11 moves them.
+      # They now assert the COMPLETE trail for each node: the two root crumbs,
+      # then every ancestor root-first, then the node itself — at three
+      # different depths, so a trail that drops an ancestor, reverses the order
+      # or stops short of the node fails here. Each URL is the node's own path,
+      # not the legacy single-slug form that 301s.
+      #
+      # The `/g/`, `/p/` and `/c/` rows above are still legacy-derived: those
+      # builders read the guides' and places' state/county columns and emit the
+      # pre-tree hub URLs. Task 11 moves them. (A place that HAS a node already
+      # takes the tree path — see place_controller.ex — but the fixture above
+      # deliberately has none, which is what keeps this row measuring the
+      # legacy builder that is still live.)
       %{
         path: ~p"/destinations/united-states/connecticut",
-        names: ["Ethos", "Destinations"],
-        urls: [url(~p"/"), url(~p"/destinations")]
+        names: ["Ethos", "Destinations", "United States", "Connecticut"],
+        urls: [
+          url(~p"/"),
+          url(~p"/destinations"),
+          url(~p"/destinations/united-states"),
+          url(~p"/destinations/united-states/connecticut")
+        ]
       },
       %{
         path: ~p"/destinations/united-states/connecticut/windham-county",
-        names: ["Ethos", "Destinations"],
-        urls: [url(~p"/"), url(~p"/destinations")]
+        names: ["Ethos", "Destinations", "United States", "Connecticut", "Windham County"],
+        urls: [
+          url(~p"/"),
+          url(~p"/destinations"),
+          url(~p"/destinations/united-states"),
+          url(~p"/destinations/united-states/connecticut"),
+          url(~p"/destinations/united-states/connecticut/windham-county")
+        ]
       },
       %{
         path: ~p"/destinations/united-states/connecticut/windham-county/townville",
-        names: ["Ethos", "Destinations"],
-        urls: [url(~p"/"), url(~p"/destinations")]
+        names: [
+          "Ethos",
+          "Destinations",
+          "United States",
+          "Connecticut",
+          "Windham County",
+          "Townville"
+        ],
+        urls: [
+          url(~p"/"),
+          url(~p"/destinations"),
+          url(~p"/destinations/united-states"),
+          url(~p"/destinations/united-states/connecticut"),
+          url(~p"/destinations/united-states/connecticut/windham-county"),
+          url(~p"/destinations/united-states/connecticut/windham-county/townville")
+        ]
       },
       %{
         path: ~p"/c/burys-test",

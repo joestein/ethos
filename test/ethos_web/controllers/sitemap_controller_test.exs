@@ -2,9 +2,15 @@ defmodule EthosWeb.SitemapControllerTest do
   use EthosWeb.ConnCase, async: true
 
   import Ethos.GuidesFixtures
+
   alias Ethos.Guides
+  alias Ethos.SeedDataHelpers
 
   test "lists landing, destinations, hubs, and published guides", %{conn: conn} do
+    # Destinations before guides, always — every test that writes both tables
+    # takes its row locks in that order, so two async tests can only wait on
+    # each other rather than deadlock.
+    SeedDataHelpers.seed_destination_paths!(["italy/lazio/rome"])
     g = published_guide_fixture(%{destination: "Rome, Italy"})
     _draft = guide_fixture(%{destination: "Oslo, Norway"})
 
@@ -14,7 +20,7 @@ defmodule EthosWeb.SitemapControllerTest do
     assert response_content_type(conn, :xml) =~ "xml"
     assert body =~ url(~p"/")
     assert body =~ url(~p"/destinations")
-    assert body =~ url(~p"/destinations/rome")
+    assert body =~ url(~p"/destinations/italy/lazio/rome")
     assert body =~ url(~p"/g/#{g.slug}")
     refute body =~ "oslo"
     assert body =~ "<lastmod>"
@@ -23,35 +29,78 @@ defmodule EthosWeb.SitemapControllerTest do
   # Every destination URL used to ship without a lastmod, so a crawler holding
   # those URLs got no signal when their prose changed — which is precisely what
   # happened when all thirteen gained an intro and a photograph. Guides, places
-  # and collections all carried one; destinations were the gap.
-  test "a destination with a record carries its record's lastmod", %{conn: conn} do
+  # and collections all carried one; destinations were the gap. Now that every
+  # hub is a node and every node has an `updated_at`, the gap closes for all of
+  # them rather than for the thirteen that had a curated record.
+  test "a destination node carries its own lastmod", %{conn: conn} do
+    SeedDataHelpers.seed_destination_paths!(["italy/lazio/rome"])
     published_guide_fixture(%{destination: "Rome, Italy"})
 
-    {:ok, destination} =
-      Ethos.Destinations.upsert_destination!(%{
-        "path" => "rome",
-        "name" => "Rome",
-        "intro" => "A destination with a record, and therefore a modification date."
-      })
-      |> then(&{:ok, &1})
+    node = Ethos.Destinations.get_by_path("italy/lazio/rome")
 
     body = conn |> get("/sitemap.xml") |> response(200)
 
-    expected = Date.to_iso8601(DateTime.to_date(destination.updated_at))
+    expected = Date.to_iso8601(DateTime.to_date(node.updated_at))
 
     assert body =~
-             "<loc>#{url(~p"/destinations/rome")}</loc><lastmod>#{expected}</lastmod>",
-           "the destination URL should carry its record's lastmod"
+             "<loc>#{url(~p"/destinations/italy/lazio/rome")}</loc><lastmod>#{expected}</lastmod>",
+           "the destination URL should carry its node's lastmod"
   end
 
-  test "a destination with no record still lists, without a lastmod", %{conn: conn} do
+  # The inverse of the rule above, and why the guide-derived destination
+  # builders were removed rather than translated. A guide's `destination` is
+  # free text: "Lisbon, Portugal" derived `/destinations/lisbon`, which the
+  # sitemap advertised even though nothing in the tree answers to it. That URL
+  # 404s now, and a sitemap full of 404s is what makes Search Console stop
+  # trusting the file.
+  test "a guide destination with no node is not advertised", %{conn: conn} do
+    SeedDataHelpers.seed_destination_paths!(["italy/lazio/rome"])
     published_guide_fixture(%{destination: "Lisbon, Portugal"})
 
     body = conn |> get("/sitemap.xml") |> response(200)
 
-    # Present, because the guide produces it; no lastmod, because nothing owns
-    # a modification date for it. Listing it without a date beats omitting it.
-    assert body =~ "<loc>#{url(~p"/destinations/lisbon")}</loc></url>"
+    refute body =~ "<loc>#{url(~p"/destinations/lisbon")}</loc>"
+    assert body =~ "<loc>#{url(~p"/destinations/italy/lazio/rome")}</loc><lastmod>"
+  end
+
+  # The whole roster, so this measures the real tree rather than a hand-built
+  # pair of nodes: every node is listed at its own path, and no node's legacy
+  # path — the URL it used to live at, which now 301s — is listed anywhere.
+  # Advertising a redirect source to Google is worse than omitting it: the
+  # crawler spends a hop, and the canonical URL is the one we want indexed.
+  test "the sitemap lists every destination node and no legacy paths", %{conn: conn} do
+    Ethos.Seeds.DestinationTree.upsert_all!()
+    xml = conn |> get(~p"/sitemap.xml") |> response(200)
+
+    assert xml =~ "/destinations/united-states/connecticut/litchfield-county"
+    refute xml =~ "<loc>http://localhost:4002/destinations/connecticut</loc>"
+
+    locs =
+      Regex.scan(~r{<loc>([^<]+)</loc>}, xml, capture: :all_but_first)
+      |> List.flatten()
+      |> MapSet.new()
+
+    nodes = Ethos.Destinations.list_destinations()
+
+    missing =
+      for n <- nodes,
+          loc = url(~p"/destinations/#{String.split(n.path, "/")}"),
+          not MapSet.member?(locs, loc),
+          do: n.path
+
+    assert missing == [],
+           "these destination nodes are missing from the sitemap: #{inspect(missing)}"
+
+    advertised_legacy =
+      for n <- nodes,
+          legacy <- n.legacy_paths,
+          loc = url(~p"/destinations/#{String.split(legacy, "/")}"),
+          MapSet.member?(locs, loc),
+          do: legacy
+
+    assert advertised_legacy == [],
+           "the sitemap advertises these legacy paths, every one of which 301s: " <>
+             inspect(advertised_legacy)
   end
 
   # A guide whose destination is a bare state name derives the same slug as the
