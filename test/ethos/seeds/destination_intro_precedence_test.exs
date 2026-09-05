@@ -65,17 +65,34 @@ defmodule Ethos.Seeds.DestinationIntroPrecedenceTest do
     assert Enum.map(Destinations.ancestors(node), & &1.path) == ["united-states"]
   end
 
-  test "the destinations first, then the tree, on a database that has never seen the roster" do
-    # The reverse order, which is what a fresh production database gets if
-    # `seed_destinations/0` is run before any other seeder. The curated intro
-    # must win here too — precedence is resolved at the point the roster's intro
-    # is read, not by whoever ran last.
+  test "the destinations step first, then the tree, on a database that has never seen the roster" do
+    # The reverse order, which is what a fresh production database gets when
+    # `seed_destinations/0` runs before any other seeder. The curated intro must
+    # win here too — precedence is resolved at the point the roster's intro is
+    # read, not by whoever ran last.
+    #
+    # Through `Ethos.Release.seed_destinations/0` rather than the loader
+    # directly, because that is the only representable form of this order:
+    # `DataDestination.upsert!/1` raises on a path no node owns, so the step
+    # seeds the roster itself first. The output is captured because the release
+    # function reports each file it seeds.
     curated = DataDestination.load!(curated_file())
 
-    DataDestination.upsert!(curated_file())
+    ExUnit.CaptureIO.capture_io(&Ethos.Release.seed_destinations/0)
     DestinationTree.upsert_all!()
 
     assert Destinations.get_by_path(@curated_path).intro == curated["intro"]
+  end
+
+  test "the overlay refuses to run before the roster, rather than inventing a row" do
+    # What makes the order above unrepresentable, and the defect with it: a
+    # curated file cannot create the parentless, kindless row that shadowed a
+    # node's URL and listed itself on /destinations as a country.
+    assert_raise ArgumentError, ~r/connecticut\.json.*united-states\/connecticut/s, fn ->
+      DataDestination.upsert!(curated_file())
+    end
+
+    assert Destinations.list_destinations() == []
   end
 
   test "a node with no curated file keeps the roster's own intro" do
