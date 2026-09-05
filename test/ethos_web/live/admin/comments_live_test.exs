@@ -1,5 +1,11 @@
 defmodule EthosWeb.Admin.CommentsLiveTest do
-  use EthosWeb.ConnCase, async: true
+  # async: false — every test here builds an admin via `admin_fixture/1`,
+  # whose email is fixed (it must match the configured :admin_email).
+  # Running alongside other async modules that do the same caused
+  # intermittent Postgres deadlocks on the concurrent same-email inserts;
+  # do not flip this back without giving admin fixtures distinct emails
+  # instead.
+  use EthosWeb.ConnCase, async: false
 
   import Phoenix.LiveViewTest
   import Ethos.AccountsFixtures
@@ -8,14 +14,12 @@ defmodule EthosWeb.Admin.CommentsLiveTest do
   alias Ethos.Moderation
   alias Ethos.Social
 
-  @admin_email "cryptcom@gmail.com"
-
   setup do
     # Admin-ness is keyed off the EMAIL matching :admin_email config, not the
     # username. Do not try to give this fixture the username "buoewe" — Plan 1
     # put that name on the reserved list, so `register_user/1` refuses it and
     # the fixture would fail.
-    admin = user_fixture(%{email: @admin_email, username: "adminuser"})
+    admin = admin_fixture(%{username: "adminuser"})
     author = user_fixture(%{username: "voyager"})
     guide = published_guide_fixture()
 

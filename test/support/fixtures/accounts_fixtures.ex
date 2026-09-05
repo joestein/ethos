@@ -25,6 +25,27 @@ defmodule Ethos.AccountsFixtures do
     user
   end
 
+  @doc """
+  Builds a user whose email matches the configured `:admin_email`, which is
+  what makes `Ethos.Accounts.admin?/1` return true for them.
+
+  The email is load-bearing — do not randomise it or generate it per call.
+  Every test that needs an admin should go through this single helper
+  (reading the real config rather than a hardcoded literal) so there is
+  exactly one place inserting that email, instead of several async test
+  files racing each other to insert the same unique value. Modules that
+  call this must run `async: false`; concurrent inserts of the same email
+  across separate async test processes is what caused the flaky
+  `Postgrex.Error 40P01 deadlock_detected` failures this fixes.
+  """
+  def admin_fixture(attrs \\ %{}) do
+    admin_email = Application.fetch_env!(:ethos, :admin_email)
+
+    attrs
+    |> Enum.into(%{email: admin_email})
+    |> user_fixture()
+  end
+
   def extract_user_token(fun) do
     {:ok, captured_email} = fun.(&"[TOKEN]#{&1}[TOKEN]")
     [_, token | _] = String.split(captured_email.text_body, "[TOKEN]")

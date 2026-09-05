@@ -1,12 +1,18 @@
 defmodule EthosWeb.AdminSuggestionControllerTest do
-  use EthosWeb.ConnCase, async: true
+  # async: false — `admin_conn/1` builds an admin via `admin_fixture/1`,
+  # whose email is fixed (it must match the configured :admin_email).
+  # Running alongside other async modules that do the same caused
+  # intermittent Postgres deadlocks on the concurrent same-email inserts;
+  # do not flip this back without giving admin fixtures distinct emails
+  # instead.
+  use EthosWeb.ConnCase, async: false
 
   import Ethos.AccountsFixtures
   import Ethos.GuidesFixtures
   alias Ethos.Contributions
 
   defp admin_conn(_) do
-    admin = user_fixture(%{email: "cryptcom@gmail.com"})
+    admin = admin_fixture()
     %{conn: log_in_user(build_conn(), admin), admin: admin}
   end
 
