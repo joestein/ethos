@@ -55,4 +55,25 @@ defmodule Ethos.GuideGeoTest do
     assert [%{title: "Woodbury"}] =
              Guides.list_published_guides_for_county("connecticut", "litchfield-county")
   end
+
+  test "a guide can be attached to a destination node" do
+    node =
+      Ethos.Destinations.upsert_destination!(%{
+        path: "united-states/connecticut/litchfield-county/woodbury",
+        name: "Woodbury",
+        kind: "town",
+        intro: "Woodbury."
+      })
+
+    user = Ethos.AccountsFixtures.user_fixture()
+
+    {:ok, guide} =
+      Ethos.Guides.create_guide(user, %{
+        title: "Woodbury",
+        destination: "Woodbury, Connecticut",
+        destination_id: node.id
+      })
+
+    assert guide.destination_id == node.id
+  end
 end

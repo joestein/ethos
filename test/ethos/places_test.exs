@@ -359,4 +359,28 @@ defmodule Ethos.PlacesTest do
       end
     end
   end
+
+  test "a place can be attached to a destination node" do
+    node =
+      Ethos.Destinations.upsert_destination!(%{
+        path: "italy/lazio/rome/monti",
+        name: "Monti",
+        kind: "neighborhood",
+        intro: "Monti."
+      })
+
+    place =
+      Places.upsert_place!(%{
+        "slug" => "test-monti-place",
+        "name" => "A place in Monti",
+        "kind" => "restaurant",
+        "town" => "Monti",
+        "state" => "Italy",
+        "county" => "Rome",
+        "summary" => "A place.",
+        "destination_id" => node.id
+      })
+
+    assert place.destination_id == node.id
+  end
 end

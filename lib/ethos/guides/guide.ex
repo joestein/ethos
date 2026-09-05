@@ -23,6 +23,7 @@ defmodule Ethos.Guides.Guide do
     field :state_slug, :string
     field :county, :string
     field :county_slug, :string
+    belongs_to :destination_node, Ethos.Destinations.Destination, foreign_key: :destination_id
     belongs_to :user, Ethos.Accounts.User
     has_many :entries, Ethos.Guides.Entry, preload_order: [asc: :position]
     timestamps(type: :utc_datetime)
@@ -30,7 +31,7 @@ defmodule Ethos.Guides.Guide do
 
   def changeset(guide, attrs) do
     guide
-    |> cast(attrs, [:title, :destination, :starts_on, :ends_on, :state, :county])
+    |> cast(attrs, [:title, :destination, :starts_on, :ends_on, :state, :county, :destination_id])
     |> validate_required([:title, :destination])
     |> validate_length(:title, max: 120)
     |> maybe_put_slug()

@@ -27,6 +27,7 @@ defmodule Ethos.Places.Place do
     field :official_url, :string
     field :photos, {:array, :map}, default: []
     field :status, :string, default: "open"
+    belongs_to :destination_node, Ethos.Destinations.Destination, foreign_key: :destination_id
     timestamps(type: :utc_datetime)
   end
 
@@ -44,7 +45,8 @@ defmodule Ethos.Places.Place do
       :address,
       :official_url,
       :photos,
-      :status
+      :status,
+      :destination_id
     ])
     |> validate_required([:slug, :name, :kind, :town, :state, :county, :summary])
     |> validate_inclusion(:kind, @kinds)
