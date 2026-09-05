@@ -1135,6 +1135,10 @@ git commit -m "feat: thumbs up and down on places, guides and collections"
 - Modify: `lib/ethos/badges.ex` (the three `rule_met?/3` clauses and the `Visits` alias)
 - Modify: `lib/ethos/social.ex` (award badges from `react/3`)
 - Test: `test/ethos/badges_test.exs`
+- Test: `test/ethos_web/controllers/badge_controller_test.exs` — records a visit and then
+  calls `Badges.check_and_award/2`, asserting "Earned" renders. Once badges count
+  reactions, a visit awards nothing and that assertion fails. This file breaks in THIS
+  task, not in Task 7.
 
 **Interfaces:**
 - Consumes: `Social.reacted_place_count*` (Task 4), `Social.react/3` (Task 3).
@@ -1294,16 +1298,45 @@ Elixir — both are plain remote calls, no macros or structs cross the boundary,
 there is no compile-time cycle. The spec puts awarding in `react/3` deliberately:
 it is the one place every reaction passes through.
 
-- [ ] **Step 6: Run tests**
+- [ ] **Step 6: Fix the badge controller test**
 
-Run: `mix test test/ethos/badges_test.exs test/ethos/social_test.exs` then `mix test`
+`test/ethos_web/controllers/badge_controller_test.exs` records a visit with
+`Visits.toggle_visit/2`, calls `Badges.check_and_award/2`, and asserts the page
+renders "Earned". After Step 4 a visit awards nothing, so that assertion fails.
+
+Replace the alias line:
+
+```elixir
+  alias Ethos.{Badges, Places, Social}
+```
+
+and replace these two lines:
+
+```elixir
+    {:ok, :visited} = Visits.toggle_visit(user, place)
+    Badges.check_and_award(user, place)
+```
+
+with a single reaction, which now awards badges itself:
+
+```elixir
+    {:ok, :added} = Social.react(user, place, "up")
+```
+
+Leave the three `assert html =~ ...` lines exactly as they are. They are what proves the
+badges page still works end to end.
+
+- [ ] **Step 7: Run tests**
+
+Run: `mix test test/ethos/badges_test.exs test/ethos_web/controllers/badge_controller_test.exs test/ethos/social_test.exs`
+then `mix test`
 Expected: both pass, 0 failures.
 
-- [ ] **Step 7: Commit**
+- [ ] **Step 8: Commit**
 
 ```bash
-mix format lib/ethos/badges.ex lib/ethos/social.ex test/ethos/badges_test.exs
-git add lib/ethos/badges.ex lib/ethos/social.ex test/ethos/badges_test.exs
+mix format lib/ethos/badges.ex lib/ethos/social.ex test/ethos/badges_test.exs test/ethos_web/controllers/badge_controller_test.exs
+git add lib/ethos/badges.ex lib/ethos/social.ex test/ethos/badges_test.exs test/ethos_web/controllers/badge_controller_test.exs
 git commit -m "feat: badges count reactions instead of visits"
 ```
 
@@ -1366,7 +1399,11 @@ defmodule Ethos.Repo.Migrations.MigrateVisitsToReactions do
       timestamps(type: :utc_datetime)
     end
 
+    # Both indexes, matching 20260822123000_create_place_visits.exs exactly — that
+    # migration creates a unique index AND a plain index on :place_id. A `down` that
+    # restores only one of them leaves the schema subtly different from what it dropped.
     create unique_index(:place_visits, [:user_id, :place_id])
+    create index(:place_visits, [:place_id])
 
     execute """
     INSERT INTO place_visits (user_id, place_id, inserted_at, updated_at)
@@ -1377,10 +1414,6 @@ defmodule Ethos.Repo.Migrations.MigrateVisitsToReactions do
   end
 end
 ```
-
-Before running it, open `priv/repo/migrations/20260822123000_create_place_visits.exs`
-and confirm the `down` block above recreates the same columns and indexes. If the
-original differs, match the original.
 
 - [ ] **Step 2: Write the continuity test**
 
