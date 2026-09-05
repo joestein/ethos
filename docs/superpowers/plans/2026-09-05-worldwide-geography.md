@@ -376,7 +376,7 @@ git commit -m "feat: ancestry queries for the destination tree"
 ### Task 3: The tree roster and its loader
 
 **Files:**
-- Create: `priv/seed_data/destinations/tree.json`
+- Create: `priv/seed_data/destination_tree.json`
 - Create: `lib/ethos/seeds/destination_tree.ex`
 - Create: `test/ethos/seeds/destination_tree_test.exs`
 - Modify: `lib/ethos/release.ex`
@@ -389,7 +389,7 @@ git commit -m "feat: ancestry queries for the destination tree"
 
 - [ ] **Step 1: Write the roster**
 
-Create `priv/seed_data/destinations/tree.json`. Every node the eight JSON corpora and the ballpark modules need. Interior nodes get a one-line `intro` (the loader requires one); leaf prose comes from the existing destination files.
+Create `priv/seed_data/destination_tree.json`. Every node the eight JSON corpora and the ballpark modules need. Interior nodes get a one-line `intro` (the loader requires one); leaf prose comes from the existing destination files.
 
 ```json
 [
@@ -547,7 +547,7 @@ Create `lib/ethos/seeds/destination_tree.ex`:
 ```elixir
 defmodule Ethos.Seeds.DestinationTree do
   @moduledoc """
-  Loads `priv/seed_data/destinations/tree.json` — the single declaration of the
+  Loads `priv/seed_data/destination_tree.json` — the single declaration of the
   geographic hierarchy — into the `destinations` table.
 
   Parentage is derived from `path`, never authored, so the file cannot declare a
@@ -560,7 +560,7 @@ defmodule Ethos.Seeds.DestinationTree do
 
   alias Ethos.Destinations
 
-  @roster "destinations/tree.json"
+  @roster "destination_tree.json"
 
   def path do
     Path.join([:code.priv_dir(:ethos) |> to_string(), "seed_data", @roster])
@@ -642,7 +642,7 @@ In `lib/ethos/release.ex`, add above `seed_destinations/0`:
 ```bash
 MIX_TEST_PARTITION=wwgeo mix test
 mix format
-git add priv/seed_data/destinations/tree.json lib/ethos/seeds/destination_tree.ex test/ethos/seeds/destination_tree_test.exs lib/ethos/release.ex
+git add priv/seed_data/destination_tree.json lib/ethos/seeds/destination_tree.ex test/ethos/seeds/destination_tree_test.exs lib/ethos/release.ex
 git commit -m "feat: declare the destination tree as data and seed it"
 ```
 
@@ -788,7 +788,7 @@ git commit -m "feat: let guides and places point at a destination node"
 **Files:**
 - Create: `lib/mix/tasks/ethos.migrate_geo.ex`
 - Create: `test/mix/tasks/ethos_migrate_geo_test.exs`
-- Modify: `priv/seed_data/destinations/tree.json` (leaf nodes appended by the task)
+- Modify: `priv/seed_data/destination_tree.json` (leaf nodes appended by the task)
 - Modify: all 393 files under `priv/seed_data/{connecticut,manhattan,brooklyn,queens,bronx,san_francisco,rome,london}/`
 
 **Interfaces:**
@@ -902,7 +902,7 @@ defmodule Mix.Tasks.Ethos.MigrateGeo do
   For every guide and place it computes the node path from the corpus and the
   existing `(state, county, town)` triple, writes `destination_path`, and drops
   the three legacy keys. Leaf nodes are appended to
-  `priv/seed_data/destinations/tree.json` so the roster and the corpora cannot
+  `priv/seed_data/destination_tree.json` so the roster and the corpora cannot
   disagree.
 
   A file whose triple matches no rule raises with its path. Guessing here would
@@ -1056,7 +1056,7 @@ defmodule Mix.Tasks.Ethos.MigrateGeo do
   end
 
   defp append_leaves!(leaves) do
-    roster_file = Path.join(["priv", "seed_data", "destinations", "tree.json"])
+    roster_file = Path.join(["priv", "seed_data", "destination_tree.json"])
     existing = roster_file |> File.read!() |> Jason.decode!()
     have = MapSet.new(existing, & &1["path"])
 
@@ -1112,7 +1112,7 @@ git commit -m "refactor: rewrite the seed corpora onto destination paths"
 
 **Files:**
 - Modify: `lib/ethos/seeds/*_places.ex` (31 modules), `lib/ethos/seeds/*_guide.ex` ballpark and Connecticut guide modules, `lib/ethos/seeds/connecticut_places.ex`
-- Modify: `priv/seed_data/destinations/tree.json`
+- Modify: `priv/seed_data/destination_tree.json`
 - Test: `test/ethos/seeds/ballpark_seed_data_test.exs`, `test/ethos/seeds/connecticut_places_test.exs`
 
 **Interfaces:**
@@ -1199,7 +1199,7 @@ Expected: PASS.
 
 ```bash
 mix format
-git add lib/ethos/seeds/ priv/seed_data/destinations/tree.json test/ethos/seeds/
+git add lib/ethos/seeds/ priv/seed_data/destination_tree.json test/ethos/seeds/
 git commit -m "refactor: move the ballpark and Connecticut modules onto destination paths"
 ```
 
