@@ -307,7 +307,6 @@ defmodule Ethos.Social do
 
     case Repo.one(from r in query, select: {avg(r.rating), count(r.id)}) do
       {nil, _} -> %{average: nil, count: 0}
-      {_avg, 0} -> %{average: nil, count: 0}
       {avg, count} -> %{average: avg |> Decimal.to_float() |> Float.round(1), count: count}
     end
   end
@@ -326,10 +325,30 @@ defmodule Ethos.Social do
   # The form posts strings; the tests and the console pass atoms or strings
   # interchangeably. Normalising here keeps `Review.changeset/2` from having to
   # care which it got.
+  #
+  # Restricted to the fields a caller is ever allowed to set. `user_id`,
+  # `subject_type` and `subject_id` are supplied by `create_review/3` itself
+  # and never come from caller attrs, and `status` is pinned by
+  # `create_review/3`/`update_review/2` after this runs — see the merge/put
+  # calls above. Using a known allowlist rather than
+  # `String.to_existing_atom/1` on whatever keys show up also means an
+  # unrecognised key (typo, stray form field, or a deliberate probe) is
+  # dropped silently instead of raising `ArgumentError` and turning into a
+  # 500: the changeset reports a missing required field the normal way.
+  @castable_review_keys ~w(rating body status)a
+
   defp normalize_review_attrs(attrs) do
-    Map.new(attrs, fn
-      {k, v} when is_binary(k) -> {String.to_existing_atom(k), v}
-      {k, v} -> {k, v}
+    Enum.reduce(@castable_review_keys, %{}, fn key, acc ->
+      case Map.fetch(attrs, key) do
+        {:ok, value} ->
+          Map.put(acc, key, value)
+
+        :error ->
+          case Map.fetch(attrs, Atom.to_string(key)) do
+            {:ok, value} -> Map.put(acc, key, value)
+            :error -> acc
+          end
+      end
     end)
   end
 end

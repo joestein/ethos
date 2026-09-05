@@ -59,6 +59,36 @@ defmodule Ethos.SocialReviewsTest do
 
       assert review.status == "pending"
     end
+
+    test "an unrecognised key does not raise and the review is created from the recognised keys",
+         %{user: user, guide: guide} do
+      assert {:ok, review} =
+               Social.create_review(user, guide, %{
+                 "rating" => "8",
+                 "body" => "Still fine.",
+                 "nonsense_key_that_never_existed" => "whatever"
+               })
+
+      assert review.rating == 8
+      assert review.body == "Still fine."
+      assert review.status == "pending"
+    end
+
+    test "an unrecognised key cannot smuggle a value into a cast field", %{
+      user: user,
+      guide: guide
+    } do
+      other = user_fixture()
+
+      assert {:ok, review} =
+               Social.create_review(user, guide, %{
+                 "rating" => "8",
+                 "body" => "Mine, not theirs.",
+                 "user_id" => other.id
+               })
+
+      assert review.user_id == user.id
+    end
   end
 
   describe "update_review/2" do
