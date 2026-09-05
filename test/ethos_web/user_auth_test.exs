@@ -1,5 +1,10 @@
 defmodule EthosWeb.UserAuthTest do
-  use EthosWeb.ConnCase, async: true
+  # async: false — the `:ensure_admin` tests build an admin via
+  # `admin_fixture/1`, whose email is fixed (it must match the configured
+  # :admin_email). See the fixture's own moduledoc: running alongside other
+  # async modules that do the same has caused intermittent Postgres
+  # deadlocks on the concurrent same-email inserts.
+  use EthosWeb.ConnCase, async: false
 
   alias Phoenix.LiveView
   alias Ethos.Accounts
@@ -181,6 +186,43 @@ defmodule EthosWeb.UserAuthTest do
       }
 
       {:halt, updated_socket} = UserAuth.on_mount(:ensure_authenticated, %{}, session, socket)
+      assert updated_socket.assigns.current_user == nil
+    end
+  end
+
+  describe "on_mount :ensure_admin" do
+    test "continues for the configured admin", %{conn: conn} do
+      admin = admin_fixture()
+      user_token = Accounts.generate_user_session_token(admin)
+      session = conn |> put_session(:user_token, user_token) |> get_session()
+
+      {:cont, updated_socket} = UserAuth.on_mount(:ensure_admin, %{}, session, %LiveView.Socket{})
+
+      assert updated_socket.assigns.current_user.id == admin.id
+    end
+
+    test "halts and redirects to login for a logged-in non-admin", %{conn: conn, user: user} do
+      user_token = Accounts.generate_user_session_token(user)
+      session = conn |> put_session(:user_token, user_token) |> get_session()
+
+      socket = %LiveView.Socket{
+        endpoint: EthosWeb.Endpoint,
+        assigns: %{__changed__: %{}, flash: %{}}
+      }
+
+      {:halt, updated_socket} = UserAuth.on_mount(:ensure_admin, %{}, session, socket)
+      assert updated_socket.assigns.current_user.id == user.id
+    end
+
+    test "halts and redirects to login for a logged-out visitor", %{conn: conn} do
+      session = conn |> get_session()
+
+      socket = %LiveView.Socket{
+        endpoint: EthosWeb.Endpoint,
+        assigns: %{__changed__: %{}, flash: %{}}
+      }
+
+      {:halt, updated_socket} = UserAuth.on_mount(:ensure_admin, %{}, session, socket)
       assert updated_socket.assigns.current_user == nil
     end
   end

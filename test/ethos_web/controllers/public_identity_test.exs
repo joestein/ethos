@@ -146,14 +146,18 @@ defmodule EthosWeb.PublicIdentityTest do
 
   describe "review bylines" do
     setup do
-      %{admin: user_fixture(), guide: Ethos.GuidesFixtures.published_guide_fixture()}
+      %{guide: Ethos.GuidesFixtures.published_guide_fixture()}
     end
 
     test "an approved review shows the username and never the email", %{
       conn: conn,
-      admin: admin,
       guide: guide
     } do
+      # A real admin, not `user_fixture()` — `Ethos.Moderation.approve_review/2`
+      # now refuses to publish for anyone else, so this fixture also stands
+      # in as the regression guard for that check.
+      admin = admin_fixture()
+
       # username is "reviewvoyager", not "voyager" — the module-level setup
       # above already creates an unrelated user with username "voyager" in
       # this same test's transaction, so reusing that name would collide on

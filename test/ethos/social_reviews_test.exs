@@ -43,7 +43,7 @@ defmodule Ethos.SocialReviewsTest do
       assert {:error, changeset} =
                Social.create_review(user, guide, %{"rating" => "2", "body" => "Second."})
 
-      assert %{user_id: ["has already reviewed this"]} = errors_on(changeset)
+      assert %{body: ["has already reviewed this"]} = errors_on(changeset)
     end
 
     test "ignores a caller-supplied status and always stores pending", %{

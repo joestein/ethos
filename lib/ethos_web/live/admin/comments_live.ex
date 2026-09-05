@@ -9,7 +9,11 @@ defmodule EthosWeb.Admin.CommentsLive do
   use EthosWeb, :live_view
 
   alias Ethos.Accounts
+  alias Ethos.Collections.Collection
+  alias Ethos.Guides.Guide
   alias Ethos.Moderation
+  alias Ethos.Places.Place
+  alias Ethos.Social.Subject
 
   def mount(_params, _session, socket) do
     {:ok, load(socket)}
@@ -62,17 +66,45 @@ defmodule EthosWeb.Admin.CommentsLive do
 
   attr :review, :map, required: true
 
+  # A moderator deciding whether a comment is on-topic, spam, or about the
+  # wrong business needs to see what it's about — the bare `subject_type`
+  # string ("place") told them nothing. `reviews.subject_id` carries no
+  # foreign key (it is polymorphic across three tables), so the place,
+  # guide or collection a pending review points at can have been deleted
+  # since — `subject_info/1` renders that honestly instead of crashing the
+  # queue.
   defp review_row(assigns) do
+    assigns = assign(assigns, :subject, subject_info(assigns.review))
+
     ~H"""
     <div>
       <p class="text-sm text-zinc-500">
         <span class="font-semibold text-zinc-900">{Accounts.display_name(@review.user)}</span>
-        · {@review.rating}/10 · {@review.subject_type}
+        · {@review.rating}/10 ·
+        <.link :if={@subject.path} navigate={@subject.path} class="underline">
+          {@subject.name}
+        </.link>
+        <span :if={is_nil(@subject.path)} class="italic">{@subject.name}</span>
       </p>
       <p class="mt-1 whitespace-pre-line">{@review.body}</p>
     </div>
     """
   end
+
+  defp subject_info(%{subject_type: type, subject_id: id}) do
+    case Subject.fetch(type, id) do
+      {:ok, subject} -> %{name: subject_name(subject), path: subject_path(subject)}
+      :error -> %{name: "a deleted #{type}", path: nil}
+    end
+  end
+
+  defp subject_name(%Place{name: name}), do: name
+  defp subject_name(%Guide{title: title}), do: title
+  defp subject_name(%Collection{title: title}), do: title
+
+  defp subject_path(%Place{slug: slug}), do: ~p"/p/#{slug}"
+  defp subject_path(%Guide{slug: slug}), do: ~p"/g/#{slug}"
+  defp subject_path(%Collection{slug: slug}), do: ~p"/c/#{slug}"
 
   def handle_event("approve", %{"id" => id}, socket) do
     {:noreply, decide(socket, id, &Moderation.approve_review/2, "Approved.")}

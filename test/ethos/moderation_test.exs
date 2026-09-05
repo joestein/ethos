@@ -1,5 +1,10 @@
 defmodule Ethos.ModerationTest do
-  use Ethos.DataCase, async: true
+  # async: false — `admin_fixture/1` inserts a user with the fixed admin
+  # email required by `Ethos.Accounts.admin?/1`. Running alongside other
+  # async modules that do the same has caused intermittent Postgres
+  # deadlocks on the concurrent same-email inserts; see the fixture's
+  # moduledoc.
+  use Ethos.DataCase, async: false
 
   import Ethos.AccountsFixtures
   import Ethos.GuidesFixtures
@@ -8,7 +13,7 @@ defmodule Ethos.ModerationTest do
   alias Ethos.Social
 
   setup do
-    admin = user_fixture()
+    admin = admin_fixture()
     guide = guide_fixture()
 
     {:ok, review} =
@@ -61,6 +66,13 @@ defmodule Ethos.ModerationTest do
       assert [visible] = Social.approved_reviews(guide)
       assert visible.id == review.id
     end
+
+    test "refuses a non-admin user and leaves the review pending", %{review: review} do
+      not_admin = user_fixture()
+
+      assert Moderation.approve_review(review, not_admin) == {:error, :unauthorized}
+      assert Moderation.get_review!(review.id).status == "pending"
+    end
   end
 
   describe "revoke_review/2" do
@@ -95,6 +107,14 @@ defmodule Ethos.ModerationTest do
       {:ok, _} = Moderation.revoke_review(approved, admin)
       assert Social.rating_summary(guide) == %{average: nil, count: 0}
     end
+
+    test "refuses a non-admin user and leaves it published", %{review: review, admin: admin} do
+      {:ok, approved} = Moderation.approve_review(review, admin)
+      not_admin = user_fixture()
+
+      assert Moderation.revoke_review(approved, not_admin) == {:error, :unauthorized}
+      assert Moderation.get_review!(approved.id).status == "approved"
+    end
   end
 
   describe "list_approved_reviews/0" do
@@ -103,6 +123,51 @@ defmodule Ethos.ModerationTest do
 
       assert [found] = Moderation.list_approved_reviews()
       assert found.id == review.id
+    end
+
+    # Postgres sorts NULLs first on a plain `DESC`, and a review approved
+    # straight through `Ecto.Changeset.change/2` here (bypassing `decide/3`,
+    # the way Plan 3b's trusted fast lane bypasses it in production) never
+    # gets a `moderated_at`. Without `desc_nulls_last` that review would sit
+    # pinned above one genuinely decided moments ago.
+    test "orders by moderated_at, most recently decided first", %{guide: guide} do
+      {:ok, earlier} =
+        Social.create_review(user_fixture(), guide, %{"rating" => "3", "body" => "Earlier."})
+
+      {:ok, earlier} =
+        earlier
+        |> Ecto.Changeset.change(status: "approved", moderated_at: ~U[2026-01-01 00:00:00Z])
+        |> Repo.update()
+
+      {:ok, later} =
+        Social.create_review(user_fixture(), guide, %{"rating" => "9", "body" => "Later."})
+
+      {:ok, later} =
+        later
+        |> Ecto.Changeset.change(status: "approved", moderated_at: ~U[2026-02-01 00:00:00Z])
+        |> Repo.update()
+
+      assert Enum.map(Moderation.list_approved_reviews(), & &1.id) == [later.id, earlier.id]
+    end
+
+    test "a review approved with no moderated_at sorts after one that has it", %{guide: guide} do
+      {:ok, decided} =
+        Social.create_review(user_fixture(), guide, %{"rating" => "8", "body" => "Decided."})
+
+      {:ok, decided} =
+        decided
+        |> Ecto.Changeset.change(status: "approved", moderated_at: ~U[2026-01-01 00:00:00Z])
+        |> Repo.update()
+
+      {:ok, fast_laned} =
+        Social.create_review(user_fixture(), guide, %{"rating" => "6", "body" => "Fast-laned."})
+
+      {:ok, fast_laned} =
+        fast_laned
+        |> Ecto.Changeset.change(status: "approved")
+        |> Repo.update()
+
+      assert Enum.map(Moderation.list_approved_reviews(), & &1.id) == [decided.id, fast_laned.id]
     end
   end
 

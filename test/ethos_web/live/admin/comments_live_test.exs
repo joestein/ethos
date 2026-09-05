@@ -10,8 +10,10 @@ defmodule EthosWeb.Admin.CommentsLiveTest do
   import Phoenix.LiveViewTest
   import Ethos.AccountsFixtures
   import Ethos.GuidesFixtures
+  import Ethos.PlacesFixtures
 
   alias Ethos.Moderation
+  alias Ethos.Repo
   alias Ethos.Social
 
   setup do
@@ -130,5 +132,40 @@ defmodule EthosWeb.Admin.CommentsLiveTest do
     {:ok, _view, html} = conn |> log_in_user(admin) |> live(~p"/admin/comments")
 
     assert html =~ ~s(href="/admin/suggestions")
+  end
+
+  # The console's core job is letting a moderator judge whether a comment is
+  # on-topic, spam, or about the wrong business — impossible if all it shows
+  # is the literal string "guide".
+  test "the queue shows the subject's name linked to its public page", %{
+    conn: conn,
+    admin: admin,
+    guide: guide
+  } do
+    {:ok, _view, html} = conn |> log_in_user(admin) |> live(~p"/admin/comments")
+
+    assert html =~ guide.title
+    assert html =~ ~s(href="#{~p"/g/#{guide.slug}"}")
+  end
+
+  # `reviews.subject_id` is polymorphic with no foreign key, so the place,
+  # guide or collection a review points at can be deleted out from under
+  # it. The queue must say so honestly rather than crash.
+  test "a review whose subject no longer exists still renders without crashing", %{
+    conn: conn,
+    admin: admin
+  } do
+    place = place_fixture()
+    author = user_fixture(%{username: "ghostwriter"})
+
+    {:ok, _review} =
+      Social.create_review(author, place, %{"rating" => "7", "body" => "Nice while it lasted."})
+
+    Repo.delete!(place)
+
+    {:ok, _view, html} = conn |> log_in_user(admin) |> live(~p"/admin/comments")
+
+    assert html =~ "Nice while it lasted."
+    assert html =~ "deleted place"
   end
 end

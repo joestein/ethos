@@ -89,7 +89,11 @@ defmodule Ethos.Social.ReviewTest do
     assert {:error, changeset} =
              %Review{} |> Review.changeset(valid_attrs(user)) |> Repo.insert()
 
-    assert %{user_id: ["has already reviewed this"]} = errors_on(changeset)
+    # Attached to :body, not :user_id — :body is the only one of these
+    # fields the review form actually binds, so this is the field whose
+    # error a duplicate-review race (two tabs, both submit) needs to reach
+    # the page. See the comment on the `unique_constraint` call.
+    assert %{body: ["has already reviewed this"]} = errors_on(changeset)
   end
 
   test "the rating check constraint holds even when the changeset is bypassed" do

@@ -134,6 +134,56 @@ defmodule EthosWeb.SocialLiveTest do
 
       assert Social.counts(place) == %{up: 0, down: 0}
     end
+
+    # Reviews used to share the reactions' `interactive?/2` predicate, which
+    # answers false for a closed place — so the review form vanished right
+    # alongside the thumbs. That silently trapped a closed place's pending
+    # reviews forever: their author could never edit one back into an
+    # approvable shape. A closed place is exactly the kind of thing people
+    # want to leave a considered review about, so the form has its own
+    # predicate now and stays up regardless.
+    test "a closed place still offers the review form to a logged-in user with a username",
+         %{conn: conn} do
+      place = place_fixture(%{status: "closed"})
+
+      {:ok, view, _html} =
+        live_isolated(log_in_user(conn, user_fixture()), EthosWeb.SocialLive,
+          session: %{"subject_type" => "place", "subject_id" => place.id}
+        )
+
+      assert has_element?(view, "#review-form")
+    end
+
+    test "an author with a pending review can still edit it after the place closes",
+         %{conn: conn} do
+      user = user_fixture()
+      place = place_fixture()
+
+      {:ok, _review} =
+        Social.create_review(user, place, %{"rating" => "6", "body" => "Nice spot."})
+
+      place |> Ecto.Changeset.change(status: "closed") |> Ethos.Repo.update!()
+
+      {:ok, view, _html} =
+        live_isolated(log_in_user(conn, user), EthosWeb.SocialLive,
+          session: %{"subject_type" => "place", "subject_id" => place.id}
+        )
+
+      assert has_element?(view, "#review-form")
+
+      view |> element("button[phx-value-rating=9]") |> render_click()
+
+      html =
+        view
+        |> form("#review-form", review: %{body: "Updated after closing."})
+        |> render_submit()
+
+      assert html =~ "Updated after closing."
+
+      updated = Social.user_review(user, place)
+      assert updated.body == "Updated after closing."
+      assert updated.status == "pending"
+    end
   end
 
   describe "badge flash" do

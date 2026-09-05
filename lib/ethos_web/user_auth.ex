@@ -127,6 +127,16 @@ defmodule EthosWeb.UserAuth do
     * `:redirect_if_user_is_authenticated` - Authenticates the user from the session.
       Redirects to signed_in_path if there's a logged user.
 
+    * `:ensure_admin` - Authenticates the user from the session, and assigns
+      the current_user to socket assigns, same as `:ensure_authenticated`.
+      Additionally requires the user to be THE configured admin (see
+      `Ethos.Accounts.admin?/1`). Redirects to the login page otherwise.
+      This exists because a `pipe_through :require_admin_user` plug only
+      covers the initial HTTP request — an in-socket `push_navigate` between
+      two LiveViews in the same `live_session` never runs the router
+      pipeline again, so a live_session with more than one admin route needs
+      this in its own `on_mount` list too.
+
   ## Examples
 
   Use the `on_mount` lifecycle macro in LiveViews to mount or authenticate
@@ -153,6 +163,21 @@ defmodule EthosWeb.UserAuth do
     socket = mount_current_user(socket, session)
 
     if socket.assigns.current_user do
+      {:cont, socket}
+    else
+      socket =
+        socket
+        |> Phoenix.LiveView.put_flash(:error, "You must log in to access this page.")
+        |> Phoenix.LiveView.redirect(to: ~p"/users/log_in")
+
+      {:halt, socket}
+    end
+  end
+
+  def on_mount(:ensure_admin, _params, session, socket) do
+    socket = mount_current_user(socket, session)
+
+    if Accounts.admin?(socket.assigns.current_user) do
       {:cont, socket}
     else
       socket =

@@ -1,5 +1,9 @@
 defmodule EthosWeb.SocialReviewsLiveTest do
-  use EthosWeb.ConnCase, async: true
+  # async: false — several tests here build an admin via `admin_fixture/1`,
+  # whose email is fixed (it must match the configured :admin_email).
+  # Running alongside other async modules that do the same has caused
+  # intermittent Postgres deadlocks on the concurrent same-email inserts.
+  use EthosWeb.ConnCase, async: false
 
   import Phoenix.LiveViewTest
   import Ethos.AccountsFixtures
@@ -86,7 +90,7 @@ defmodule EthosWeb.SocialReviewsLiveTest do
   describe "the approved list" do
     test "shows an approved review with the author's username", %{conn: conn, guide: guide} do
       author = user_fixture(%{username: "voyager"})
-      admin = user_fixture()
+      admin = admin_fixture()
       {:ok, review} = Social.create_review(author, guide, %{"rating" => "9", "body" => "Superb."})
       {:ok, _} = Moderation.approve_review(review, admin)
 
@@ -98,7 +102,7 @@ defmodule EthosWeb.SocialReviewsLiveTest do
     end
 
     test "shows the average out of ten", %{conn: conn, guide: guide} do
-      admin = user_fixture()
+      admin = admin_fixture()
 
       for rating <- [7, 8, 10] do
         {:ok, review} =
@@ -128,7 +132,7 @@ defmodule EthosWeb.SocialReviewsLiveTest do
       guide: guide
     } do
       author = user_fixture()
-      admin = user_fixture()
+      admin = admin_fixture()
       {:ok, review} = Social.create_review(author, guide, %{"rating" => "9", "body" => "First."})
       {:ok, _} = Moderation.approve_review(review, admin)
 
@@ -199,6 +203,44 @@ defmodule EthosWeb.SocialReviewsLiveTest do
       render_click(view, "submit_review", %{"review" => %{"body" => "Sneaky."}})
 
       assert Social.approved_reviews(guide) == []
+    end
+
+    # LiveView decodes form events with `Plug.Conn.Query.decode/1`. A frame
+    # carrying `review=hello` (rather than `review[body]=hello`) still
+    # matches `%{"review" => params}` in `handle_event/3`, but binds
+    # `params` to the binary `"hello"` instead of a map — and the handler's
+    # `params["body"]` used to raise `FunctionClauseError` on that, killing
+    # the island for any logged-in user who sent it.
+    test "a non-map review payload does not crash the island", %{conn: conn, guide: guide} do
+      {:ok, view, _html} = live_island(conn, guide)
+
+      view |> element("button[phx-value-rating=8]") |> render_click()
+      render_click(view, "submit_review", %{"review" => "hello"})
+
+      assert Process.alive?(view.pid)
+      assert render(view) =~ "review-form"
+    end
+  end
+
+  describe "duplicate review race" do
+    test "a late second submit surfaces the duplicate error instead of vanishing", %{
+      conn: conn,
+      guide: guide
+    } do
+      user = user_fixture()
+      {:ok, view, _html} = live_island(log_in_user(conn, user), guide)
+
+      # Simulates the other tab winning the race: its review lands in the
+      # database after this view mounted, so `own_review` here is still
+      # nil and the submit below takes the create path straight into the
+      # unique-constraint collision.
+      {:ok, _} =
+        Social.create_review(user, guide, %{"rating" => "5", "body" => "From elsewhere."})
+
+      view |> element("button[phx-value-rating=8]") |> render_click()
+      html = view |> form("#review-form", review: %{body: "From this tab."}) |> render_submit()
+
+      assert html =~ "has already reviewed this"
     end
   end
 end

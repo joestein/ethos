@@ -37,7 +37,14 @@ defmodule Ethos.Social.Review do
     |> validate_inclusion(:status, @statuses)
     |> validate_inclusion(:rating, 1..10)
     |> validate_length(:body, min: 2, max: 2000)
-    |> unique_constraint([:user_id, :subject_type, :subject_id],
+    # `:body` listed first on purpose: Ecto attaches a `unique_constraint`
+    # error to the first field in the list, and `:body` is the only one of
+    # these four the form actually binds a field to (`review_form` in
+    # `EthosWeb.SocialLive` renders `@form[:body]`, nothing else). Attaching
+    # it to `:user_id` — invisible to the form — made a duplicate-review
+    # race (two tabs open, both submit) a silent no-op: the second submit's
+    # changeset carried an error nothing on the page ever rendered.
+    |> unique_constraint([:body, :user_id, :subject_type, :subject_id],
       name: :reviews_user_id_subject_type_subject_id_index,
       message: "has already reviewed this"
     )

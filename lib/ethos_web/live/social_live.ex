@@ -73,7 +73,7 @@ defmodule EthosWeb.SocialLive do
         </div>
 
         <.review_form
-          :if={@interactive}
+          :if={@review_interactive}
           form={@review_form}
           rating={@rating}
           rating_error={@rating_error}
@@ -253,9 +253,16 @@ defmodule EthosWeb.SocialLive do
     end
   end
 
-  def handle_event("submit_review", %{"review" => params}, socket) do
+  # `when is_map(params)` matters: LiveView decodes form events with
+  # `Plug.Conn.Query.decode/1`, so a crafted frame carrying `review=hello`
+  # (rather than `review[body]=hello`) still matches `%{"review" => params}`
+  # above, but binds `params` to the binary `"hello"` instead of a map. The
+  # `params["body"]` access below would then raise `FunctionClauseError` —
+  # `Access.get/3` has no clause for a binary — and kill the island. The
+  # guard sends anything non-map to the catch-all instead.
+  def handle_event("submit_review", %{"review" => params}, socket) when is_map(params) do
     cond do
-      not socket.assigns.interactive ->
+      not socket.assigns.review_interactive ->
         {:noreply, socket}
 
       is_nil(socket.assigns.rating) ->
@@ -376,12 +383,25 @@ defmodule EthosWeb.SocialLive do
       counts: Social.counts(subject),
       mine: Social.user_reaction(user, subject),
       interactive: interactive?(user, subject),
+      review_interactive: review_interactive?(user),
       prompt: prompt_for(user, subject)
     )
   end
 
   defp interactive?(user, subject) do
     not is_nil(user) and not Accounts.needs_username?(user) and Subject.reactable?(subject)
+  end
+
+  # Deliberately NOT `Subject.reactable?/1`: that predicate exists to stop a
+  # closed place's reactions from moving (and inflating badge progress — see
+  # its moduledoc), but a review is a considered write, not a tally. Gating
+  # it on reactable? meant closing a place made the review form vanish too —
+  # including for the author of an already-pending review, who could then
+  # never edit it back into an approvable shape. A closed place is exactly
+  # the kind of thing people want to leave a review about, so only the
+  # logged-in/has-a-username conditions apply here.
+  defp review_interactive?(user) do
+    not is_nil(user) and not Accounts.needs_username?(user)
   end
 
   defp prompt_for(user, subject) do
