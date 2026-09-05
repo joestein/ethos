@@ -920,14 +920,19 @@ defmodule EthosWeb.StructuredDataTest do
       #   * total 4845 -> 4910, +65.
       #   * `streetAddress` 4222 -> 4287, +65 — all of them. Every one of the
       #     sixty-five carries a house number.
-      #   * `postalCode` 3458 -> 3523, +65 — all of them. Every one also
-      #     carries a five-digit code.
+      #   * `postalCode` 3458 -> 3523, +65 — all of them. Not every one is a
+      #     five-digit ZIP: fifty-one are American and carry one, and the
+      #     fourteen London restaurants carry an alphanumeric UK postcode
+      #     instead (N1C 4AG, SE13 5NS). What this bucket proves is that a
+      #     postal code of SOME shape was parsed for all sixty-five, not that
+      #     they share a format.
       #   * `is_nil(streetAddress)` unmoved at 623 and locality-only unmoved
       #     at 308, which is the same fact from the other side: not one of
       #     the 65 is a descriptive location. A row with a house number and a
-      #     ZIP cannot be street-less or locality-only, so both buckets were
-      #     always going to hold still; the +65/+65 above and the two
-      #     unmoved counts here are the same claim seen from opposite sides.
+      #     postal code cannot be street-less or locality-only, so both
+      #     buckets were always going to hold still; the +65/+65 above and the
+      #     two unmoved counts here are the same claim seen from opposite
+      #     sides.
       assert length(emitted) == 4910
       assert count.(& &1["streetAddress"]) == 4287
       assert count.(&is_nil(&1["streetAddress"])) == 623

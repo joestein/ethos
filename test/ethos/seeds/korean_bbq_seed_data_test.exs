@@ -206,6 +206,44 @@ defmodule Ethos.Seeds.KoreanBbqSeedDataTest do
     end)
   end
 
+  # ------------------------------------------------------------------
+  # Resolving an entry to its place, wherever the record lives
+  # ------------------------------------------------------------------
+
+  # WHY this reads the whole seed corpus and not just priv/seed_data/korean_bbq.
+  #
+  # The promise this collection makes is about what a guide PRESENTS. A reader
+  # on /g/manhattan-korean-bbq-guide sees eighteen restaurants and is owed the
+  # grill definition on all eighteen; which JSON file happens to own each place
+  # record is an implementation detail of three-pass directory seeding, invisible
+  # from the page. But every corpus assertion below used to read `doc["places"]`,
+  # which is only the records a korean_bbq file owns — and 52 of the collection's
+  # 137 restaurants have their record in a neighborhood file this gate never
+  # opened. Manhattan owns none of its eighteen. Those 52 were clean, but clean
+  # by authorship rather than by enforcement, which is exactly the state this
+  # gate exists to end.
+  #
+  # So: scan `all_seed_files/0` once, build slug -> place, and follow every
+  # entry's `place_slug` to the record itself. `resolve_entries/0` returns one
+  # row per presented restaurant, `{file, slug, place_or_nil}`, where the file is
+  # the GUIDE that presents it — the page a failure has to be fixed on — rather
+  # than the file that stores it.
+  defp place_index do
+    for path <- SeedDataHelpers.all_seed_files(),
+        place <- (path |> File.read!() |> Jason.decode!())["places"] || [],
+        is_binary(place["slug"]),
+        into: %{},
+        do: {place["slug"], place}
+  end
+
+  defp resolve_entries do
+    index = place_index()
+
+    for {file, doc} <- decoded_files(),
+        entry <- doc["entries"] || [],
+        do: {file, entry["place_slug"], index[entry["place_slug"]]}
+  end
+
   defp photos(doc) do
     ((doc["guide"] || %{})["photos"] || []) ++
       ((doc["places"] || []) |> Enum.flat_map(&(&1["photos"] || [])))
@@ -353,11 +391,22 @@ defmodule Ethos.Seeds.KoreanBbqSeedDataTest do
           :photo_policy -> @photo_policy_patterns
         end
 
+      # The guide's own prose, plus the prose of every place it presents —
+      # including the 52 whose records live in a neighborhood file.
+      resolved_prose =
+        for {file, _slug, place} <- resolve_entries(),
+            place != nil,
+            text <- [place["name"], place["summary"], place["history"]],
+            is_binary(text),
+            do: {file, text}
+
+      guide_prose = for {file, doc} <- decoded_files(), text <- prose(doc), do: {file, text}
+
       offenders =
-        for {file, doc} <- decoded_files(),
-            text <- prose(doc),
-            hit?(patterns, text),
-            do: {file, String.slice(text, 0, 140)}
+        (guide_prose ++ resolved_prose)
+        |> Enum.filter(fn {_file, text} -> hit?(patterns, text) end)
+        |> Enum.map(fn {file, text} -> {file, String.slice(text, 0, 140)} end)
+        |> Enum.uniq()
 
       assert offenders == [],
              "korean bbq prose carries #{@label}:\n" <>
@@ -365,13 +414,29 @@ defmodule Ethos.Seeds.KoreanBbqSeedDataTest do
     end
   end
 
-  test "every place's prose names a grill at the table" do
+  test "every entry's place_slug resolves to a place record somewhere in the corpus" do
+    # An entry naming a slug no seed file defines does not fail quietly: the
+    # seeder calls Places.get_place_by_slug!/1, which raises, and a
+    # non-transactional seed run aborts partway with the guide half-written.
+    # It is also the precondition for every assertion below — an unresolvable
+    # slug would silently drop that restaurant out of the checks rather than
+    # fail them.
     offenders =
-      for {file, doc} <- decoded_files(),
-          place <- doc["places"] || [],
+      for {file, slug, nil} <- resolve_entries(), do: {file, slug}
+
+    assert offenders == [],
+           "an entry names a place_slug no seed file defines. Places.get_place_by_slug!/1 " <>
+             "raises on these and aborts the seed run partway:\n" <>
+             Enum.map_join(offenders, "\n", fn {f, s} -> "  #{f}: #{inspect(s)}" end)
+  end
+
+  test "every presented restaurant's prose names a grill at the table" do
+    offenders =
+      for {file, slug, place} <- resolve_entries(),
+          place != nil,
           text = "#{place["summary"]} #{place["history"]}",
           not grill_at_the_table?(text),
-          do: {file, place["slug"]}
+          do: {file, slug}
 
     assert offenders == [],
            "places whose prose does not establish a grill at the table. This collection " <>
@@ -380,15 +445,15 @@ defmodule Ethos.Seeds.KoreanBbqSeedDataTest do
              Enum.map_join(offenders, "\n", fn {f, s} -> "  #{f}: #{s}" end)
   end
 
-  test "every place is a restaurant, with a status the schema accepts" do
+  test "every presented restaurant is a restaurant, with a status the schema accepts" do
     valid = MapSet.new(Ethos.Places.Place.kinds())
     assert MapSet.member?(valid, "restaurant"), "the schema no longer has a restaurant kind"
 
     offenders =
-      for {file, doc} <- decoded_files(),
-          place <- doc["places"] || [],
+      for {file, slug, place} <- resolve_entries(),
+          place != nil,
           place["kind"] != "restaurant" or place["status"] not in ["open", "closed"],
-          do: {file, place["slug"], place["kind"], place["status"]}
+          do: {file, slug, place["kind"], place["status"]}
 
     assert offenders == [],
            "every place in this collection is a restaurant with status open or closed:\n" <>
