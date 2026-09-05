@@ -66,10 +66,14 @@ defmodule EthosWeb.Admin.CommentsLiveTest do
   test "an approved comment leaves the pending queue", %{conn: conn, admin: admin, review: review} do
     {:ok, view, _html} = conn |> log_in_user(admin) |> live(~p"/admin/comments")
 
-    html =
-      view |> element("button[phx-value-id=#{review.id}][phx-click=approve]") |> render_click()
+    view |> element("button[phx-value-id=#{review.id}][phx-click=approve]") |> render_click()
 
-    refute html =~ "Pending words."
+    # The body legitimately still appears once the comment is published — an
+    # admin can't judge what to revoke without reading it. What this test
+    # actually checks is that the comment MOVED: gone from the pending
+    # section, present in the published one.
+    refute view |> element("#pending-comments") |> render() =~ "Pending words."
+    assert view |> element("#published-comments") |> render() =~ "Pending words."
   end
 
   test "revoking hides a published comment", %{

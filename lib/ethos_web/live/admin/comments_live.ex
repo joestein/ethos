@@ -27,7 +27,7 @@ defmodule EthosWeb.Admin.CommentsLive do
 
         <p :if={@pending == []} class="mt-3 text-zinc-500">Nothing waiting. 🎉</p>
 
-        <ul class="mt-3 space-y-3">
+        <ul id="pending-comments" class="mt-3 space-y-3">
           <li :for={review <- @pending} class="rounded-lg border p-4">
             <.review_row review={review} />
             <div class="mt-3 flex gap-2">
@@ -45,9 +45,9 @@ defmodule EthosWeb.Admin.CommentsLive do
 
         <p :if={@approved == []} class="mt-3 text-zinc-500">Nothing published yet.</p>
 
-        <ul class="mt-3 space-y-3">
+        <ul id="published-comments" class="mt-3 space-y-3">
           <li :for={review <- @approved} class="rounded-lg border p-4">
-            <.review_row review={review} show_body={false} />
+            <.review_row review={review} />
             <div class="mt-3">
               <.button phx-click="revoke" phx-value-id={review.id} class="bg-red-600">
                 Revoke
@@ -61,7 +61,6 @@ defmodule EthosWeb.Admin.CommentsLive do
   end
 
   attr :review, :map, required: true
-  attr :show_body, :boolean, default: true
 
   defp review_row(assigns) do
     ~H"""
@@ -70,7 +69,7 @@ defmodule EthosWeb.Admin.CommentsLive do
         <span class="font-semibold text-zinc-900">{Accounts.display_name(@review.user)}</span>
         · {@review.rating}/10 · {@review.subject_type}
       </p>
-      <p :if={@show_body} class="mt-1 whitespace-pre-line">{@review.body}</p>
+      <p class="mt-1 whitespace-pre-line">{@review.body}</p>
     </div>
     """
   end
