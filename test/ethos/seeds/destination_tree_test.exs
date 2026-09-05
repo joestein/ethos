@@ -31,6 +31,41 @@ defmodule Ethos.Seeds.DestinationTreeTest do
     assert length(legacy) == length(Enum.uniq(legacy))
   end
 
+  # The structural guard behind the 301s, and it names its offenders because
+  # the roster now carries hundreds of legacy paths and "485 != 484" locates
+  # nothing.
+  #
+  # Repeated: `Destinations.get_by_legacy_path/1` is a `Repo.one`, which
+  # *raises* on a second match rather than picking one. A duplicate would not
+  # be a wrong redirect, it would be a 500 on one unlucky indexed URL and a
+  # green suite everywhere else.
+  #
+  # Shadowing: a legacy path equal to some node's own path is a URL two nodes
+  # claim. `DestinationController.show/2` resolves the exact node first, so the
+  # real node wins and the legacy entry is dead weight that reads like a live
+  # redirect — `vatican-city` is the case this caught, a country node and a
+  # guide's town slug at once. The rule is that the roster cannot express one.
+  test "no legacy path repeats, and none shadows a real node path" do
+    nodes = DestinationTree.load!()
+
+    owners =
+      for node <- nodes, legacy <- node["legacy_paths"] || [], reduce: %{} do
+        acc -> Map.update(acc, legacy, [node["path"]], &[node["path"] | &1])
+      end
+
+    repeated = for {legacy, [_, _ | _] = claimants} <- owners, do: {legacy, Enum.sort(claimants)}
+
+    assert repeated == [],
+           "legacy paths claimed by more than one node: #{inspect(repeated)}"
+
+    paths = MapSet.new(nodes, & &1["path"])
+    shadowing = for {legacy, _} <- owners, MapSet.member?(paths, legacy), do: legacy
+
+    assert shadowing == [],
+           "legacy paths that are also real node paths, so the redirect is dead: " <>
+             inspect(Enum.sort(shadowing))
+  end
+
   test "upsert_all!/0 wires parent_id to match every path, idempotently" do
     count = DestinationTree.upsert_all!()
     assert count == length(DestinationTree.load!())
