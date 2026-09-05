@@ -104,6 +104,9 @@ defmodule EthosWeb.Router do
     get "/suggestions", AdminSuggestionController, :index
     post "/suggestions/:id/accept", AdminSuggestionController, :accept
     post "/suggestions/:id/decline", AdminSuggestionController, :decline
+
+    get "/foliage/notes", AdminFoliageController, :index
+    post "/foliage/notes", AdminFoliageController, :create
   end
 
   scope "/", EthosWeb do

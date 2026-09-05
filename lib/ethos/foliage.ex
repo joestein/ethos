@@ -14,7 +14,6 @@ defmodule Ethos.Foliage do
   in Postgres and is not part of this module.
   """
 
-  # `Note` is aliased here for Task 11; until then only `Dataset` is used.
   alias Ethos.Foliage.{Dataset, Note}
 
   @attribution "Derived from the Connecticut DEEP fall foliage map. DEEP's map is a climatological estimate last published in 2023; it describes a normal year, not this one. Stage names are ours."
@@ -82,10 +81,8 @@ defmodule Ethos.Foliage do
     md >= @season_start and md <= @season_end
   end
 
-  # Replaced in Task 11 with `Note.latest(scope, ref)`. Task 8's controller
-  # calls this, so it has to exist and return nil until the table does.
   @doc "The most recent published field note for a scope, or nil."
-  def latest_note(_scope, _ref \\ nil), do: nil
+  def latest_note(scope, ref \\ nil), do: Note.latest(scope, ref)
 
   defp within?(_md, %{starts: nil}), do: false
   defp within?(md, %{starts: s, ends: e}), do: md >= s and md <= e
