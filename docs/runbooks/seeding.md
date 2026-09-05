@@ -51,12 +51,13 @@ it — see its entry below.
    that the day the first wave lands, nobody has to remember to add it.
 7. `Ethos.Release.seed_destinations()` — 13 JSON files, `priv/seed_data/destinations/`.
    **Takes no email argument** — unlike every seeder above it, a destination
-   page has no author. It is listed here, after `seed_brooklyn` and the Bronx
-   and Queens seeders, and before `seed_collections`, for consistency with the
-   rest of this list rather than because it must run at this point: it writes
-   only its own `destinations` table, references no place and resolves no
-   link, so it is safe to run before, after, or between any of the other
-   steps.
+   page has no author. Each file is an overlay: it is keyed on a destination
+   node's path and adds that hub's intro and photos to the row the roster
+   already owns. It seeds the roster itself first, the way every other seeder
+   does, so it still runs safely before, after or between any other step — it
+   references no place and resolves no link. It is listed here, after
+   `seed_brooklyn` and the Bronx and Queens seeders and before
+   `seed_collections`, for consistency with the rest of this list.
 8. `Ethos.Release.seed_ballparks(email)` — 236 places and **30 guides**, the
    whole MLB set, as **code modules** rather than JSON: one places module and
    one guide module per ballpark. It takes both lists from `Ethos.Seeds.Catalog`
@@ -80,11 +81,20 @@ it — see its entry below.
 10. `Ethos.Release.seed_links()`
 
 Verify the published count after each content step before moving on — see
-"Expected published counts" below. `seed_destinations` writes to a separate
-`destinations` table rather than `guides`, so it has no row in that table;
-verify it instead with
-`Ethos.Destinations.list_destinations() |> Enum.count()`, which should read
-**13** after a fresh run.
+"Expected published counts" below. `seed_destinations` writes to the
+`destinations` table rather than `guides`, so it has no row in that table.
+It creates no rows at all now: each of the thirteen files is keyed on a node
+path and overlays an intro and photos onto a row the roster already owns, so
+`Ethos.Destinations.list_destinations() |> Enum.count()` reads the roster's
+size (**724**) both before and after it, not 13. What confirms it ran is the
+prose: `Ethos.Destinations.get_by_path("united-states/connecticut").intro`
+should be the long Connecticut history, not the stub "Connecticut, county by
+county."
+
+A count of 737 — the roster plus thirteen — means the pre-Task-13 keys are
+back. Those extra rows have no `kind` and no `parent_id`; they shadow thirteen
+hubs, disable their redirects, enter the sitemap, and list Connecticut, New
+York and Rome on `/destinations` beside the countries.
 
 `Ethos.Release.seed_rome(email)` seeds one standalone guide
 (`three-days-in-rome-real-trip-guide`). It has no dependencies and nothing

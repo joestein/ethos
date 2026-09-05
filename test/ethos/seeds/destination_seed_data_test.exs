@@ -214,35 +214,28 @@ defmodule Ethos.Seeds.DestinationSeedDataTest do
         do: {Path.basename(f), path, matched}
   end
 
-  # 7. A destination record is keyed by the URL path of a page that already
-  #    exists — the record adds an intro and photos to a listing page, it does
-  #    not create one. A record at a path nothing routes to is content nobody
-  #    can navigate to, and nothing else in this gate would notice.
+  # 7. A destination record is keyed by the path of a node that already exists —
+  #    the record adds an intro and photos to a hub, it does not create one. A
+  #    record at a path no node owns is content nobody can navigate to, and
+  #    nothing else in this gate would notice.
   #
-  #    The legitimate set is exactly what EthosWeb.DestinationController can
-  #    serve, built from the same queries the controller uses:
+  #    The legitimate set is the roster, read straight off
+  #    `priv/seed_data/destination_tree.json`, because the roster is now the
+  #    single declaration of which hubs exist:
+  #    `DestinationController.show/2` resolves a path against `destinations`
+  #    and 404s on a miss, and `DestinationTree.upsert_all!/0` is what puts
+  #    rows in that table.
   #
-  #      - `show/2` renders a state page when list_published_guides_for_state/1
-  #        is non-empty — the state slugs are Guides.list_states/0.
-  #      - `county/2` renders "{state}/{county}" — the county slugs for a state
-  #        are Guides.list_counties_for_state/1.
-  #      - `show/2` otherwise falls through to town_show/2, which renders when
-  #        list_published_guides_for_destination/1 is non-empty — those slugs
-  #        are Guides.list_destinations/0. This is how /destinations/rome works.
-  #
-  #    Two-segment paths can only ever match the county set (a destination slug
-  #    never contains a "/"), so a single flat MapSet is unambiguous.
+  #    This replaced a set built from `Guides.list_states/0`,
+  #    `list_counties_for_state/1` and `list_destinations/0` — the queries the
+  #    three pre-tree routes served hubs from. Those queries return the *legacy*
+  #    single-slug forms ("connecticut", "rome"), which is exactly the set of
+  #    paths a curated file must no longer key on: every one of them 301s now.
+  #    A file keyed there is the defect this task fixed — thirteen parentless
+  #    rows that disabled thirteen redirects, entered the sitemap, and listed
+  #    Connecticut, New York and Rome on `/destinations` as countries.
   defp legitimate_paths do
-    state_slugs = Guides.list_states() |> Enum.map(& &1.slug)
-
-    county_paths =
-      for slug <- state_slugs,
-          county <- Guides.list_counties_for_state(slug),
-          do: "#{slug}/#{county.slug}"
-
-    destination_slugs = Guides.list_destinations() |> Enum.map(& &1.slug)
-
-    MapSet.new(state_slugs ++ county_paths ++ destination_slugs)
+    MapSet.new(Ethos.Seeds.DestinationTree.load!(), & &1["path"])
   end
 
   defp unresolvable_path_violations(paths, legitimate) do
@@ -263,13 +256,35 @@ defmodule Ethos.Seeds.DestinationSeedDataTest do
   #    truthiness test, so binding nil there would silently drop the
   #    src-less photo this is meant to report. Same for the label binding in
   #    provenance_violations/2 above.
+  #
+  #    The directory is the hub's path with "/" replaced by "-", and after the
+  #    re-key that is a hub's path at *either* of its names: the images sit in
+  #    priv/photos/destinations/connecticut/ because that is what the record's
+  #    path was when they were written. Re-keying moved the URL onto the tree
+  #    ("united-states/connecticut"); it did not move a byte on disk, and there
+  #    is no reason it should — a photo directory is an authoring namespace, not
+  #    a URL. So a legacy dir is accepted alongside the node's own, and the one
+  #    reported as `expected` is the legacy form when there is one, since that
+  #    is where the files actually are.
   defp photo_dir_violations(paths) do
     for f <- paths,
         data = DataDestination.load!(f),
-        expected = String.replace(data["path"], "/", "-"),
+        acceptable = acceptable_photo_dirs(data["path"]),
         {p, actual} <- Enum.map(photos(data), &{&1, photo_dir(&1["src"])}),
-        actual != expected,
-        do: {Path.basename(f), p["src"], expected, actual}
+        actual not in acceptable,
+        do: {Path.basename(f), p["src"], hd(acceptable), actual}
+  end
+
+  # Legacy dirs first, the node's own last: a curated page's images are where
+  # its pre-tree path put them, and a page authored after the tree has no legacy
+  # path at all and lands under its node path.
+  defp acceptable_photo_dirs(path) do
+    legacy =
+      Ethos.Seeds.DestinationTree.load!()
+      |> Enum.find(%{}, &(&1["path"] == path))
+      |> Map.get("legacy_paths", [])
+
+    Enum.map(legacy ++ [path], &String.replace(&1, "/", "-"))
   end
 
   defp photo_dir(src) when is_binary(src) do
@@ -289,24 +304,50 @@ defmodule Ethos.Seeds.DestinationSeedDataTest do
   #    test happens to find on disk: a derived expectation passes no matter
   #    which files exist, which is exactly the vacuity this assertion exists
   #    to prevent. Sourced from each file's own "path" field rather than its
-  #    filename, since the filename-to-path mapping ("/" replaced by "-") is
-  #    lossy to reverse in general and the field is what the app actually
-  #    serves.
+  #    filename, since the filename-to-path mapping is not reversible at all
+  #    any more — new-york-manhattan.json is keyed on
+  #    "united-states/new-york/new-york-city/manhattan" — and the field is what
+  #    the app actually serves.
+  #
+  #    These are node paths, not the pre-tree single-slug forms the files
+  #    carried until Task 13. Each was taken from the node whose `legacy_paths`
+  #    held the old key, so the curated prose and photos land on the hub the old
+  #    URL now 301s to.
   @destination_roster ~w(
-    connecticut
-    connecticut/fairfield-county
-    connecticut/hartford-county
-    connecticut/litchfield-county
-    connecticut/middlesex-county
-    connecticut/new-haven-county
-    connecticut/new-london-county
-    connecticut/tolland-county
-    connecticut/windham-county
-    new-york
-    new-york/brooklyn
-    new-york/manhattan
-    rome
+    united-states/connecticut
+    united-states/connecticut/fairfield-county
+    united-states/connecticut/hartford-county
+    united-states/connecticut/litchfield-county
+    united-states/connecticut/middlesex-county
+    united-states/connecticut/new-haven-county
+    united-states/connecticut/new-london-county
+    united-states/connecticut/tolland-county
+    united-states/connecticut/windham-county
+    united-states/new-york
+    united-states/new-york/new-york-city/brooklyn
+    united-states/new-york/new-york-city/manhattan
+    italy/lazio/rome
   )
+
+  # Each curated file paired with the path it was keyed on before Task 13 — the
+  # path its hub is still reachable at, as a 301. Used by the mapping test
+  # below, which resolves each of these through the roster's `legacy_paths` and
+  # checks the file landed on the node that owns it.
+  @old_key_by_file %{
+    "connecticut.json" => "connecticut",
+    "connecticut-fairfield-county.json" => "connecticut/fairfield-county",
+    "connecticut-hartford-county.json" => "connecticut/hartford-county",
+    "connecticut-litchfield-county.json" => "connecticut/litchfield-county",
+    "connecticut-middlesex-county.json" => "connecticut/middlesex-county",
+    "connecticut-new-haven-county.json" => "connecticut/new-haven-county",
+    "connecticut-new-london-county.json" => "connecticut/new-london-county",
+    "connecticut-tolland-county.json" => "connecticut/tolland-county",
+    "connecticut-windham-county.json" => "connecticut/windham-county",
+    "new-york.json" => "new-york",
+    "new-york-brooklyn.json" => "new-york/brooklyn",
+    "new-york-manhattan.json" => "new-york/manhattan",
+    "rome.json" => "rome"
+  }
 
   defp roster_violations(paths) do
     paths |> Enum.map(&DataDestination.load!(&1)["path"]) |> roster_diff(@destination_roster)
@@ -614,25 +655,23 @@ defmodule Ethos.Seeds.DestinationSeedDataTest do
            "fixtures other than trip_duration.json contain duration phrasing: #{inspect(violations)}"
   end
 
-  test "the path check accepts state, county and town paths and rejects an unrouted one" do
-    # A deliberately small universe rather than the whole corpus: one
-    # Connecticut town file gives a state and a county, and the Rome guide —
-    # which has no state — gives a destination slug, so all three branches of
-    # legitimate_paths/0 are exercised for well under a second.
-    user = user_fixture()
-    avon = Path.expand("../../../priv/seed_data/connecticut/avon.json", __DIR__)
-
-    Ethos.Seeds.DestinationTree.upsert_all!()
-
-    DataGuide.upsert_places!(avon)
-    DataGuide.upsert_guide!(avon, user.email)
-    Ethos.Seeds.RomeGuide.upsert!(user.email)
-
+  test "the path check accepts node paths at three depths and rejects one no node owns" do
+    # Reads the roster off disk, so no seeding and no repo: the legitimate set
+    # is the tree's own declaration of which hubs exist, and the depths below
+    # are a region, a county and a city — the three shapes the thirteen curated
+    # files come in.
     legitimate = legitimate_paths()
 
-    assert "connecticut" in legitimate
-    assert "connecticut/hartford-county" in legitimate
-    assert "rome" in legitimate
+    assert "united-states/connecticut" in legitimate
+    assert "united-states/connecticut/hartford-county" in legitimate
+    assert "italy/lazio/rome" in legitimate
+
+    # The pre-tree forms the files used to be keyed on are NOT legitimate — each
+    # is a legacy path that 301s, and a curated record sitting on one is what
+    # disabled those thirteen redirects.
+    refute "connecticut" in legitimate
+    refute "connecticut/hartford-county" in legitimate
+    refute "rome" in legitimate
 
     good = ~w(trip_duration.json short_intro.json town_path.json) |> Enum.map(&fixture/1)
     assert unresolvable_path_violations(good, legitimate) == []
@@ -654,6 +693,37 @@ defmodule Ethos.Seeds.DestinationSeedDataTest do
   test "the roster diff names a missing path and an unexpected path independently" do
     assert roster_diff(~w(connecticut new-york atlantis), ~w(connecticut new-york rome)) ==
              {["rome"], ["atlantis"]}
+  end
+
+  # The mapping this task derived, pinned. Each curated file's key must be the
+  # node whose `legacy_paths` holds the path the file used to be keyed on —
+  # derived from the roster here rather than restated, so it stays right if a
+  # node moves.
+  #
+  # Without this the re-key is only asserted as a list of thirteen strings in
+  # @destination_roster, which anyone could edit to match a file they moved to
+  # the wrong node. This says *why* each path is the one it is.
+  test "each curated file sits on the node its old path redirects to" do
+    legacy_owner =
+      for node <- Ethos.Seeds.DestinationTree.load!(),
+          legacy <- node["legacy_paths"] || [],
+          into: %{},
+          do: {legacy, node["path"]}
+
+    assert map_size(@old_key_by_file) == length(files()),
+           "every committed destination file needs an entry here, or the one that is missing " <>
+             "is re-keyed by nobody"
+
+    for {file, old_key} <- @old_key_by_file do
+      seed_file = Enum.find(files(), &(Path.basename(&1) == file))
+      assert seed_file, "#{file} is no longer a committed destination seed file"
+      data = DataDestination.load!(seed_file)
+
+      assert data["path"] == Map.get(legacy_owner, old_key),
+             "#{file} is keyed on #{inspect(data["path"])}, but #{inspect(old_key)} is a " <>
+               "legacy path of #{inspect(Map.get(legacy_owner, old_key))} — the curated prose " <>
+               "and photos would land on a different hub than the one the old URL 301s to"
+    end
   end
 
   test "the roster diff is empty when the two lists match, regardless of order" do
@@ -707,26 +777,38 @@ defmodule Ethos.Seeds.DestinationSeedDataTest do
     dirs = photo_dir_violations(files)
 
     assert dirs == [],
-           "photo srcs whose directory is not the destination's own path with \"/\" replaced " <>
-             "by \"-\" (the optimizer trusts this segment literally and would write the file " <>
-             "into another destination's directory): " <> inspect(dirs)
+           "photo srcs whose directory is neither the destination's node path nor a legacy " <>
+             "path of it, with \"/\" replaced by \"-\" (the optimizer trusts this segment " <>
+             "literally and would write the file into another destination's directory): " <>
+             inspect(dirs)
 
-    user = user_fixture()
-    seed_guide_corpus!(user.email)
     unrouted = unresolvable_path_violations(files, legitimate_paths())
 
     assert unrouted == [],
-           "destination seed files at a path no destination page is served from — want a " <>
-             "state slug, \"{state}/{county}\", or a published guide's destination slug: " <>
-             inspect(unrouted)
+           "destination seed files at a path no node in the roster owns — a curated page is " <>
+             "an overlay on a hub, so its key must be that hub's node path, not a legacy " <>
+             "path that 301s: " <> inspect(unrouted)
 
-    # The records themselves must load and upsert idempotently. Counted as a
-    # delta across two passes rather than as the table's whole size:
-    # seed_guide_corpus!/1 above seeds the destination roster as well, since the
-    # loaders resolve each seed file's destination_path against it, so an
-    # absolute count would be asserting the roster's size rather than this
-    # loader's idempotency. The two passes are separated so the second one
-    # adding a row fails here rather than being folded into the first.
+    # The records themselves must load and upsert onto nodes that already exist,
+    # creating nothing. The row count is asserted to be *unchanged* across both
+    # passes, which is the inverse of what this assertion said before the
+    # re-key: it used to demand thirteen new rows, and those thirteen rows were
+    # the defect — parentless, kindless duplicates of hubs the roster already
+    # owned. The two passes stay separate so a second pass adding a row fails
+    # here rather than being folded into the first.
+    #
+    # Seeded through seed_guide_corpus!/1 — the whole shipped corpus, the way
+    # production seeds it — rather than through the roster alone. The path check
+    # above no longer needs it (the roster is read off disk), but it is the only
+    # place in the suite where every JSON corpus and every code seed module runs
+    # end to end, and dropping it would have quietly retired that.
+    user = user_fixture()
+    seed_guide_corpus!(user.email)
+
+    assert Guides.list_published_guides() != [],
+           "seed_guide_corpus!/1 published nothing, so the passes below are seeding into an " <>
+             "empty universe"
+
     before = length(Ethos.Destinations.list_destinations())
 
     Enum.each(files, &DataDestination.upsert!/1)
@@ -735,10 +817,26 @@ defmodule Ethos.Seeds.DestinationSeedDataTest do
     Enum.each(files, &DataDestination.upsert!/1)
     after_second = length(Ethos.Destinations.list_destinations())
 
-    assert after_first - before == length(files),
-           "the destination records did not all upsert: #{after_first - before} rows " <>
-             "for #{length(files)} files"
+    assert after_first == before,
+           "seeding the curated records created #{after_first - before} rows — every one of " <>
+             "them is keyed on a node path, so all thirteen must land on rows the roster " <>
+             "already owns"
 
     assert after_second == after_first, "re-upserting the destination records added rows"
+
+    # Landing on the node means keeping the node's place in the tree. A record
+    # that created its own row would have kind and parent_id nil, which is what
+    # put Connecticut, New York and Rome on /destinations beside the countries.
+    for file <- files do
+      data = DataDestination.load!(file)
+      node = Ethos.Destinations.get_by_path(data["path"])
+
+      assert node.kind != nil, "#{Path.basename(file)} left #{node.path} with no kind"
+      assert node.parent_id != nil, "#{Path.basename(file)} left #{node.path} a root"
+      assert node.intro == data["intro"], "#{Path.basename(file)}'s intro did not reach its node"
+
+      assert node.photos == data["photos"],
+             "#{Path.basename(file)}'s photos did not reach its node"
+    end
   end
 end

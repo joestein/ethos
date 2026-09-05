@@ -7,7 +7,7 @@ defmodule Ethos.Seeds.DataDestinationTest do
 
   test "loads a seed file and upserts it idempotently" do
     d = DataDestination.upsert!(@fixture)
-    assert d.path == "connecticut/litchfield-county"
+    assert d.path == "united-states/connecticut/litchfield-county"
     assert d.name == "Litchfield County"
     assert String.contains?(d.intro, "northwest")
 

@@ -1,5 +1,5 @@
 {
-  "path": "connecticut",
+  "path": "united-states/connecticut",
   "name": "Connecticut",
   "intro": "This fixture stands in for a shipped destination page and exists only to drive one assertion in the seed-data gate. It carries the same shape a real file does: a URL path, a display name, an introduction of the length the gate requires, and sometimes a photo with its credit. The prose is deliberately plain and asserts nothing a reader could check against the world, because no file in this directory is ever seeded, rendered, or served to anybody. It names no roads, no rail lines, no distances, and above all it makes no claim about how long a journey between two places takes, which is the rule this gate cares about most and the one a stray sentence is likeliest to break. An author looking for a model to copy should read the committed files under the destinations seed directory instead of this one. The shoreline towns are about 40 minutes from Hartford.",
   "photos": []

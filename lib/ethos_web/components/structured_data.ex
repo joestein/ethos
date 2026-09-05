@@ -137,6 +137,17 @@ defmodule EthosWeb.StructuredData do
   }
 
   @doc """
+  Every country name `country_code/1` knows a code for.
+
+  Exposed for the corpus gate that asserts this set is exactly the set of
+  `kind: "country"` nodes in the roster. Without that gate a sixth country node
+  raises on its first request — a 500 on a live page — rather than failing CI,
+  because nothing else reads this map until a place under that country is
+  rendered.
+  """
+  def known_countries, do: Map.keys(@iso_alpha2)
+
+  @doc """
   The ISO 3166-1 alpha-2 code for the country a destination trail sits in.
 
   `trail` is root-first with the node itself last — `Destinations.ancestors/1`

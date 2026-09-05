@@ -12,6 +12,8 @@ defmodule EthosWeb.GuideBreadcrumb do
   use EthosWeb, :verified_routes
 
   alias Ethos.Destinations
+  alias Ethos.Destinations.Destination
+  alias EthosWeb.DestinationHTML
 
   attr :guide, :map, required: true
 
@@ -31,36 +33,61 @@ defmodule EthosWeb.GuideBreadcrumb do
   @doc """
   The crumbs between "Destinations" and the guide itself, as `%{name:, path:}`.
 
-  Guides carry `state` and `county` independently and both can be nil (Lisbon
-  has neither), so the trail is only as deep as the data allows and never links
-  a nil slug. Guides with no geography at all fall back to their destination
-  hub, which is a real page.
+  A guide's trail is its destination node's ancestry, root-first with the node
+  itself last — the same trail a hub page renders above its own title, and the
+  same one `PlaceController` builds for a place. Depth is whatever the node's
+  depth is: a Waterbury guide gets United States / Connecticut / New Haven
+  County / Waterbury where the pair-based builder this replaced could only ever
+  emit a state and a county.
 
-  ## A curated destination outranks the derived state hub
+  ## Why this is no longer a lookup on a curated record
 
-  A `Destination` record is hand-written editorial content — an intro, photos,
-  an og:image — sitting at `/destinations/<destination_slug>`. A state hub is a
-  `GROUP BY` over the guides table: a title, a list of links, nothing else.
-  When both exist for one guide, the curated page is the better crumb.
+  It used to prefer a hand-written `Destination` record whose `path` equalled
+  the guide's `destination_slug`, on the reasoning that editorial content beat a
+  derived state hub. That reasoning belonged to a world where a hub was a
+  `GROUP BY` over the guides table and a curated record was a separate row
+  sitting beside it. The tree collapsed the two: a node **is** the hub, and the
+  thirteen curated pages are now overlays on nodes rather than rows of their
+  own. There is nothing left to prefer — `/destinations/italy/lazio/rome` is
+  both the node and the curated page.
 
-  This is not hypothetical. Giving the Rome guide `state: "Italy"` (so the
-  affiliate registry, keyed on state slug, could reach it) moved its crumb from
-  `/destinations/rome` — a curated record with an intro and a Colosseum photo —
-  to `/destinations/italy`, which has neither. Since `list_destinations_without_state/0`
-  had already dropped Rome from the `/destinations` index for having a state,
-  those were its only two inbound internal links and the richer page went dark
-  while the thin one took them.
+  The lookup was also the last thing keeping those thirteen rows keyed on their
+  pre-tree paths, which is what made `/destinations/connecticut` render a
+  parentless row instead of 301ing to Connecticut's node.
 
-  So the lookup runs first and, when it hits, is the whole trail. Nothing in
-  the corpus has both a curated destination record and a county — county
-  records are keyed `"<state>/<county>"`, never a bare destination slug — so
-  this does not truncate any hierarchy that exists today.
+  ## Guides with no node
+
+  `guides.destination_id` is nullable until Task 12 drops the legacy columns, so
+  a guide with no node falls back to the state/county pair it carries. Nothing
+  in the seeded corpus takes that branch — every loader resolves a
+  `destination_path` and raises on a miss — but a guide created through the web
+  UI has no node at all, and a breadcrumb is not the place to raise.
   """
   def trail(guide) do
-    cond do
-      crumb = curated_destination_crumb(guide) ->
-        [crumb]
+    case destination_node(guide) do
+      %Destination{} = node ->
+        (Destinations.ancestors(node) ++ [node])
+        |> Enum.map(&%{name: &1.name, path: DestinationHTML.node_path(&1.path)})
 
+      nil ->
+        legacy_trail(guide)
+    end
+  end
+
+  # The association when it is loaded, the row when it is not. A guide reaches
+  # this from a controller that fetched it without a preload as readily as from
+  # one that did, and `%Ecto.Association.NotLoaded{}` renders as a crash rather
+  # than as a missing crumb.
+  defp destination_node(%{destination_node: %Destination{} = node}), do: node
+  defp destination_node(%{destination_id: id}) when is_integer(id), do: Destinations.get(id)
+  defp destination_node(_guide), do: nil
+
+  # Transitional, for a guide with no node: the pre-tree single-slug hub forms,
+  # which 301 to their nodes. `PlaceController.geo_crumbs/2` carries the same
+  # fallback for the same reason, and Task 12 removes both with the columns they
+  # read.
+  defp legacy_trail(guide) do
+    cond do
       guide.state_slug && guide.county_slug ->
         [
           %{name: guide.state, path: ~p"/destinations/#{guide.state_slug}"},
@@ -74,26 +101,15 @@ defmodule EthosWeb.GuideBreadcrumb do
         [%{name: guide.state, path: ~p"/destinations/#{guide.state_slug}"}]
 
       guide.destination_slug ->
-        [destination_crumb(guide)]
+        [
+          %{
+            name: guide.destination |> String.split(",") |> List.first(),
+            path: ~p"/destinations/#{guide.destination_slug}"
+          }
+        ]
 
       true ->
         []
     end
-  end
-
-  # `Destinations.get_by_path/1` is the same lookup `destination_controller.ex`
-  # uses to decide whether a hub has editorial content, so "curated" means
-  # exactly what it means there — one definition, not two.
-  defp curated_destination_crumb(%{destination_slug: slug} = guide) when is_binary(slug) do
-    if Destinations.get_by_path(slug), do: destination_crumb(guide)
-  end
-
-  defp curated_destination_crumb(_guide), do: nil
-
-  defp destination_crumb(guide) do
-    %{
-      name: guide.destination |> String.split(",") |> List.first(),
-      path: ~p"/destinations/#{guide.destination_slug}"
-    }
   end
 end

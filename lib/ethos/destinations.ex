@@ -10,6 +10,15 @@ defmodule Ethos.Destinations do
 
   def get_by_path(path) when is_binary(path), do: Repo.get_by(Destination, path: path)
 
+  @doc """
+  A node by id, or nil.
+
+  For a caller holding a `destination_id` off a guide or place row that was
+  fetched without the association preloaded — `nil` rather than a raise, since
+  the column is nullable until the legacy geography columns are dropped.
+  """
+  def get(id) when is_integer(id), do: Repo.get(Destination, id)
+
   def list_destinations, do: Repo.all(from d in Destination, order_by: [asc: d.path])
 
   def upsert_destination!(attrs) do

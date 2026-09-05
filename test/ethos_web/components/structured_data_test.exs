@@ -100,6 +100,48 @@ defmodule EthosWeb.StructuredDataTest do
     "canada" => "CA"
   }
 
+  # The gate Task 10's review asked for, and the reason it is here rather than
+  # in a roster test: `country_code/1` has no default and raises on a country it
+  # does not know, so a sixth `kind: "country"` node in the roster is a 500 on
+  # the first request for any place beneath it — a live page, in production,
+  # with a green suite behind it. Nothing else compares the two sets.
+  #
+  # Asserted in both directions. A missing entry is the 500 above; a stale
+  # entry, for a country the roster has dropped or renamed, is a lookup keyed on
+  # a name no node carries any more, which is how the old region-keyed lookup
+  # came to publish Roman places as American.
+  test "every country node in the roster has an ISO code, and the table names no other" do
+    roster =
+      for n <- Ethos.Seeds.DestinationTree.load!(),
+          n["kind"] == "country",
+          into: MapSet.new(),
+          do: n["name"]
+
+    known = MapSet.new(StructuredData.known_countries())
+
+    assert MapSet.equal?(roster, known),
+           "country nodes with no @iso_alpha2 entry (each a 500 at request time): " <>
+             inspect(MapSet.difference(roster, known) |> Enum.sort()) <>
+             "; @iso_alpha2 entries with no country node: " <>
+             inspect(MapSet.difference(known, roster) |> Enum.sort())
+
+    # This test file's own table is the independent, path-keyed statement of
+    # the same fact (see @country_by_root_path). It has to track the roster too,
+    # or the per-place assertions below start skipping a country silently.
+    roster_paths =
+      for n <- Ethos.Seeds.DestinationTree.load!(),
+          n["kind"] == "country",
+          into: MapSet.new(),
+          do: n["path"]
+
+    assert MapSet.equal?(roster_paths, MapSet.new(Map.keys(@country_by_root_path))),
+           "@country_by_root_path disagrees with the roster's country nodes: " <>
+             inspect(
+               MapSet.difference(roster_paths, MapSet.new(Map.keys(@country_by_root_path)))
+               |> Enum.sort()
+             )
+  end
+
   defp expected_country(trail) do
     %{path: path} = Enum.find(trail, &(&1.kind == "country"))
     Map.fetch!(@country_by_root_path, path)

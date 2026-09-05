@@ -144,9 +144,25 @@ defmodule Ethos.Release do
     IO.puts("Seeded #{count} destination nodes")
   end
 
+  @doc """
+  Overlays the thirteen curated hub pages onto the nodes they belong to.
+
+  Each file is keyed on a real node path, so this adds an intro and photos to a
+  row the roster already owns rather than creating one. That is the whole point
+  of the keys being what they are: when they were the pre-tree single-slug forms
+  ("connecticut", "rome") this created thirteen *extra* rows with no `kind` and
+  no `parent_id`, which surfaced as thirteen dead redirects, thirteen bogus
+  sitemap entries and Connecticut, New York and Rome listed as countries on
+  `/destinations`.
+
+  Seeds the roster first, the way every other seeder does, so it stays true that
+  this step can run at any point in the order — including against a database
+  that has never seen the tree.
+  """
   def seed_destinations do
     load_app()
     Application.ensure_all_started(@app)
+    Ethos.Seeds.DestinationTree.upsert_all!()
 
     files =
       [:code.priv_dir(@app) |> to_string(), "seed_data", "destinations", "*.json"]

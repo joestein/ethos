@@ -150,20 +150,28 @@ defmodule EthosWeb.JsonLdParityTest do
           url(~p"/g/#{guide.slug}")
         ]
       },
+      # A seeded guide is filed on a node, so its trail is that node's ancestry
+      # — the same walk the hub rows below make, and the same one the place row
+      # above will make when Task 12 drops the legacy columns. Four crumbs deep
+      # where the state/county pair could only ever emit two.
       %{
         path: ~p"/g/#{town_page.slug}",
         names: [
           "Ethos",
           "Destinations",
+          "United States",
           "Connecticut",
           "Windham County",
+          "Townville",
           "Townville, Connecticut: A Fixture Town"
         ],
         urls: [
           url(~p"/"),
           url(~p"/destinations"),
-          url(~p"/destinations/connecticut"),
-          url(~p"/destinations/connecticut/windham-county"),
+          url(~p"/destinations/united-states"),
+          url(~p"/destinations/united-states/connecticut"),
+          url(~p"/destinations/united-states/connecticut/windham-county"),
+          url(~p"/destinations/united-states/connecticut/windham-county/townville"),
           url(~p"/g/townville-ct-travel-guide")
         ]
       },

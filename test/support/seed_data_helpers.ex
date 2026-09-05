@@ -159,12 +159,14 @@ defmodule Ethos.SeedDataHelpers do
            "the roster no longer holds every ancestor the seed-data fixtures hang from: " <>
              inspect(MapSet.difference(wanted, MapSet.new(ancestors, & &1["path"])))
 
+    curated = Ethos.Seeds.DestinationTree.curated_intros()
+
     for node <- ancestors do
       upsert_node!(%{
         path: node["path"],
         name: node["name"],
         kind: node["kind"],
-        intro: node["intro"]
+        intro: Ethos.Seeds.DestinationTree.intro_for(node, curated)
       })
     end
 
@@ -260,12 +262,16 @@ defmodule Ethos.SeedDataHelpers do
            "the roster is missing nodes the code seed modules name: " <>
              inspect(MapSet.difference(wanted, MapSet.new(nodes, & &1["path"])))
 
+    # Same intro precedence production seeds with — a curated hub's prose, not
+    # the roster stub it overlays. See `DestinationTree.intro_for/2`.
+    curated = Ethos.Seeds.DestinationTree.curated_intros()
+
     for node <- nodes do
       upsert_node!(%{
         path: node["path"],
         name: node["name"],
         kind: node["kind"],
-        intro: node["intro"]
+        intro: Ethos.Seeds.DestinationTree.intro_for(node, curated)
       })
     end
 

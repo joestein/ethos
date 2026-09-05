@@ -180,19 +180,26 @@ defmodule EthosWeb.GuideControllerTest do
 
     html = conn |> get(~p"/g/#{guide.slug}") |> html_response(200)
 
+    # A seeded guide is filed on a node, so its trail is that node's ancestry —
+    # four crumbs deep, where the state/county pair could only ever emit two.
     nav = breadcrumb_nav(html)
     assert nav =~ ~s(href="/destinations")
-    assert nav =~ ~s(href="/destinations/connecticut")
-    assert nav =~ ~s(href="/destinations/connecticut/windham-county")
+    assert nav =~ ~s(href="/destinations/united-states")
+    assert nav =~ ~s(href="/destinations/united-states/connecticut")
+    assert nav =~ ~s(href="/destinations/united-states/connecticut/windham-county")
+    assert nav =~ ~s(href="/destinations/united-states/connecticut/windham-county/townville")
     assert nav =~ "Windham County"
+    refute nav =~ "%2F"
 
     ld = breadcrumb_json_ld(html)
 
     assert Enum.map(ld["itemListElement"], & &1["name"]) == [
              "Ethos",
              "Destinations",
+             "United States",
              "Connecticut",
              "Windham County",
+             "Townville",
              guide.title
            ]
   end
@@ -221,38 +228,54 @@ defmodule EthosWeb.GuideControllerTest do
            ]
   end
 
-  # The two halves of the curated-destination rule. Each alone passes against a
-  # component that always prefers one source: the first would pass if the
-  # destination hub were ALWAYS the crumb, the second if the state hub always
-  # were. Only together do they pin "curated record wins, otherwise geography".
-  test "a guide whose destination has a curated record links to it, not to its state hub", %{
+  # The two halves of the node rule. Each alone passes against a component that
+  # always prefers one source: the first would pass if the node's ancestry were
+  # ALWAYS the crumb, the second if the legacy pair always were. Only together
+  # do they pin "the node's ancestry, and the legacy columns only when there is
+  # no node".
+  #
+  # This pair replaced the curated-destination rule, which preferred a
+  # `Destination` row whose path equalled the guide's `destination_slug`. That
+  # rule's whole reason for existing was that a hub was a `GROUP BY` and a
+  # curated record was a separate row beside it; the tree merged the two, and
+  # the thirteen curated pages are overlays on nodes now. The rule was also the
+  # last reader keeping those records keyed on bare paths, which is what left
+  # `/destinations/connecticut` rendering a parentless row instead of 301ing.
+  test "a guide filed on a node gets its node's ancestry, not the legacy state hub", %{
     conn: conn
   } do
-    Ethos.Destinations.upsert_destination!(%{
-      "path" => "rome",
-      "name" => "Rome",
-      "intro" => "Three full days covers the Vatican, ancient Rome and the historic centre."
-    })
+    Ethos.SeedDataHelpers.seed_destination_paths!(["italy/lazio/rome"])
+    node = Ethos.Destinations.get_by_path("italy/lazio/rome")
 
     guide =
       published_guide_fixture(%{
         title: "Three Days in Rome",
         destination: "Rome, Italy",
-        state: "Italy"
+        state: "Italy",
+        destination_id: node.id
       })
 
-    # Non-vacuity: the guide really does have a state hub to lose to. Without
-    # this the test would pass for a guide with no state, which is the case the
-    # old fallback already handled.
+    # Non-vacuity: the guide really does carry the legacy columns the node
+    # ancestry has to beat. Without this the test would pass for a guide with
+    # no state, which is the case the fallback already handled.
     assert guide.state_slug == "italy"
 
     html = conn |> get(~p"/g/#{guide.slug}") |> html_response(200)
 
     nav = breadcrumb_nav(html)
-    assert nav =~ ~s(href="/destinations/rome")
-    refute nav =~ ~s(href="/destinations/italy")
+    assert nav =~ ~s(href="/destinations/italy")
+    assert nav =~ ~s(href="/destinations/italy/lazio")
+    assert nav =~ ~s(href="/destinations/italy/lazio/rome")
     assert nav =~ "Rome"
-    refute nav =~ "Italy"
+
+    # The legacy single-slug hub the retired rule pointed at. It 301s now, and
+    # a breadcrumb must name the canonical URL rather than a redirect source.
+    refute nav =~ ~s(href="/destinations/rome")
+
+    # A "/" inside a single `~p` interpolation percent-encodes, and
+    # `/destinations/italy%2Flazio%2Frome` is a 404 that renders as an ordinary
+    # link. Every crumb goes through `DestinationHTML.node_path/1` instead.
+    refute html =~ "%2F"
 
     # The JSON-LD is the half that search engines read, and it is generated
     # from the same trail/1 — so it must have moved too.
@@ -261,6 +284,8 @@ defmodule EthosWeb.GuideControllerTest do
     assert Enum.map(ld["itemListElement"], & &1["name"]) == [
              "Ethos",
              "Destinations",
+             "Italy",
+             "Lazio",
              "Rome",
              "Three Days in Rome"
            ]
@@ -268,12 +293,14 @@ defmodule EthosWeb.GuideControllerTest do
     assert Enum.map(ld["itemListElement"], & &1["item"]) == [
              url(~p"/"),
              url(~p"/destinations"),
-             url(~p"/destinations/rome"),
+             url(~p"/destinations/italy"),
+             url(~p"/destinations/italy/lazio"),
+             url(~p"/destinations/italy/lazio/rome"),
              url(~p"/g/#{guide.slug}")
            ]
   end
 
-  test "a guide whose destination has no curated record still points at its state hub", %{
+  test "a guide with no node still points at its state hub", %{
     conn: conn
   } do
     guide =
@@ -284,9 +311,10 @@ defmodule EthosWeb.GuideControllerTest do
         county: "New Haven County"
       })
 
-    # Non-vacuity: no curated record exists at this destination slug, so the
-    # fallback is what is under test rather than a lookup that happened to hit.
-    refute Ethos.Destinations.get_by_path(guide.destination_slug)
+    # Non-vacuity: the guide is on no node, so the legacy fallback is what is
+    # under test rather than an ancestry walk that happened to produce the same
+    # two crumbs.
+    refute guide.destination_id
 
     html = conn |> get(~p"/g/#{guide.slug}") |> html_response(200)
 
