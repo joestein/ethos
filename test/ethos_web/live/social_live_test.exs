@@ -105,6 +105,65 @@ defmodule EthosWeb.SocialLiveTest do
     end
   end
 
+  describe "closed places" do
+    import Ethos.PlacesFixtures
+
+    test "a closed place renders read-only with an explanatory line, even for a logged-in user",
+         %{conn: conn} do
+      place = place_fixture(%{status: "closed"})
+
+      {:ok, view, html} =
+        live_isolated(log_in_user(conn, user_fixture()), EthosWeb.SocialLive,
+          session: %{"subject_type" => "place", "subject_id" => place.id}
+        )
+
+      refute has_element?(view, "button[phx-value-value=up]")
+      refute has_element?(view, "button[phx-value-value=down]")
+      assert html =~ "permanently closed"
+    end
+
+    test "a forged react event against a closed place is refused", %{conn: conn} do
+      place = place_fixture(%{status: "closed"})
+
+      {:ok, view, _html} =
+        live_isolated(log_in_user(conn, user_fixture()), EthosWeb.SocialLive,
+          session: %{"subject_type" => "place", "subject_id" => place.id}
+        )
+
+      render_click(view, "react", %{"value" => "up"})
+
+      assert Social.counts(place) == %{up: 0, down: 0}
+    end
+  end
+
+  describe "badge flash" do
+    import Ethos.PlacesFixtures
+
+    test "a newly earned badge appears in the flash", %{conn: conn} do
+      user = user_fixture()
+      place = place_fixture()
+
+      {:ok, view, _html} =
+        live_isolated(log_in_user(conn, user), EthosWeb.SocialLive,
+          session: %{"subject_type" => "place", "subject_id" => place.id}
+        )
+
+      view |> element("button[phx-value-value=up]") |> render_click()
+
+      # Scoped to the flash element itself: the site nav has its own "Badges"
+      # link, so a bare `html =~ "Badge"` would pass even with no flash at all.
+      assert view |> element("#social-badge-flash") |> render() =~ "First Steps"
+    end
+
+    test "reacting to a guide never queries or flashes badges", %{conn: conn, guide: guide} do
+      {:ok, view, _html} = live_isolated_social(log_in_user(conn, user_fixture()), guide)
+
+      view |> element("button[phx-value-value=up]") |> render_click()
+
+      refute has_element?(view, "#social-badge-flash")
+    end
+  end
+
   defp live_isolated_social(conn, guide) do
     live_isolated(conn, EthosWeb.SocialLive,
       session: %{"subject_type" => "guide", "subject_id" => guide.id}

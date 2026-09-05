@@ -17,6 +17,8 @@ defmodule EthosWeb.SocialLive do
   on_mount {EthosWeb.UserAuth, :mount_current_user}
 
   alias Ethos.Accounts
+  alias Ethos.Badges
+  alias Ethos.Places.Place
   alias Ethos.Social
   alias Ethos.Social.Subject
 
@@ -29,6 +31,11 @@ defmodule EthosWeb.SocialLive do
   def render(assigns) do
     ~H"""
     <section class="mt-10 rounded-xl border p-5">
+      <%!-- This island runs as its own isolated LiveView (see the moduledoc), so
+            the page's own flash group never sees flashes set in here — this is
+            the only place a newly earned badge can be shown. --%>
+      <.flash kind={:info} flash={@flash} id="social-badge-flash" />
+
       <h2 class="text-sm font-semibold uppercase tracking-wide text-zinc-500">
         What travelers think
       </h2>
@@ -50,8 +57,38 @@ defmodule EthosWeb.SocialLive do
         />
       </div>
 
-      <p :if={@prompt} class="mt-4 text-sm text-zinc-500">{@prompt}</p>
+      <.prompt :if={@prompt} kind={@prompt} />
     </section>
+    """
+  end
+
+  attr :kind, :atom, required: true
+
+  # One clause per prompt kind rather than a plain string assign: the
+  # logged-out and needs-username prompts are the site's only call to action
+  # to log in or pick a username on this page, so they have to be real links,
+  # not inert text a visitor can't act on.
+  defp prompt(%{kind: :closed} = assigns) do
+    ~H"""
+    <p class="mt-4 text-sm text-zinc-500">
+      This place is permanently closed. Reactions are kept for reference and can no longer change.
+    </p>
+    """
+  end
+
+  defp prompt(%{kind: :logged_out} = assigns) do
+    ~H"""
+    <p class="mt-4 text-sm text-zinc-500">
+      <.link navigate={~p"/users/log_in"} class="underline">Log in to react.</.link>
+    </p>
+    """
+  end
+
+  defp prompt(%{kind: :needs_username} = assigns) do
+    ~H"""
+    <p class="mt-4 text-sm text-zinc-500">
+      <.link navigate={~p"/users/username"} class="underline">Pick a username to join in.</.link>
+    </p>
     """
   end
 
@@ -94,14 +131,64 @@ defmodule EthosWeb.SocialLive do
 
   def handle_event("react", %{"value" => value}, socket) do
     # Checked here and not only in the template: the buttons are absent for a
-    # visitor who may not react, but a crafted socket message does not care
-    # what the template rendered.
+    # visitor who may not react (logged out, no username yet, or the subject
+    # is a closed place), but a crafted socket message does not care what the
+    # template rendered.
     if socket.assigns.interactive do
-      Social.react(socket.assigns.current_user, socket.assigns.subject, value)
-      {:noreply, load_reactions(socket)}
+      user = socket.assigns.current_user
+      subject = socket.assigns.subject
+      before_keys = earned_badge_keys(subject, user)
+
+      case Social.react(user, subject, value) do
+        {:ok, _outcome} ->
+          {:noreply, socket |> flash_new_badges(subject, user, before_keys) |> load_reactions()}
+
+        {:error, _reason} ->
+          {:noreply, socket}
+      end
     else
       {:noreply, socket}
     end
+  end
+
+  # A crafted socket frame with a missing or differently-shaped payload must
+  # not raise and kill the island process.
+  def handle_event(_event, _params, socket), do: {:noreply, socket}
+
+  # Read before the react call, only for places — guides and collections
+  # never award badges, so there is no reason to pay for the query there.
+  defp earned_badge_keys(%Place{}, user),
+    do: MapSet.new(Badges.earned_badges(user), & &1.badge_key)
+
+  defp earned_badge_keys(_subject, _user), do: nil
+
+  defp flash_new_badges(socket, %Place{}, user, %MapSet{} = before_keys) do
+    newly_earned =
+      Badges.earned_badges(user)
+      |> Enum.reject(&MapSet.member?(before_keys, &1.badge_key))
+
+    case newly_earned do
+      [] ->
+        socket
+
+      earned ->
+        definitions = Map.new(Badges.definitions(), &{&1.key, &1})
+
+        earned
+        |> Enum.map(&Map.fetch!(definitions, &1.badge_key))
+        |> badge_flash_message()
+        |> then(&put_flash(socket, :info, &1))
+    end
+  end
+
+  defp flash_new_badges(socket, _subject, _user, _before_keys), do: socket
+
+  defp badge_flash_message([definition]),
+    do: "Badge earned: #{definition.emoji} #{definition.name}"
+
+  defp badge_flash_message(definitions) do
+    names = Enum.map_join(definitions, ", ", &"#{&1.emoji} #{&1.name}")
+    "Badges earned: #{names}"
   end
 
   defp load_reactions(socket) do
@@ -111,17 +198,21 @@ defmodule EthosWeb.SocialLive do
     assign(socket,
       counts: Social.counts(subject),
       mine: Social.user_reaction(user, subject),
-      interactive: interactive?(user),
-      prompt: prompt_for(user)
+      interactive: interactive?(user, subject),
+      prompt: prompt_for(user, subject)
     )
   end
 
-  defp interactive?(nil), do: false
-  defp interactive?(user), do: not Accounts.needs_username?(user)
+  defp interactive?(user, subject) do
+    not is_nil(user) and not Accounts.needs_username?(user) and Subject.reactable?(subject)
+  end
 
-  defp prompt_for(nil), do: "Log in to react."
-
-  defp prompt_for(user) do
-    if Accounts.needs_username?(user), do: "Pick a username to join in.", else: nil
+  defp prompt_for(user, subject) do
+    cond do
+      not Subject.reactable?(subject) -> :closed
+      is_nil(user) -> :logged_out
+      Accounts.needs_username?(user) -> :needs_username
+      true -> nil
+    end
   end
 end

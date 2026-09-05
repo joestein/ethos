@@ -34,6 +34,13 @@ defmodule Ethos.Repo.Migrations.MigrateVisitsToReactions do
     # is not reinstated — and that is deliberate, not a gap: the reaction is
     # the user's later, considered choice, and resurrecting the visit would
     # contradict it. That row is gone for good once this table is recreated.
+    #
+    # It also skips any reaction whose place has since been deleted (release
+    # tasks prune places by slug without cleaning up their reactions), because
+    # `place_id` carries a real foreign key here just as it did before. Without
+    # the EXISTS guard below, one orphaned reaction after a prune would abort
+    # this INSERT with a foreign key violation and make the rollback
+    # impossible rather than merely lossy.
     create table(:place_visits) do
       add :user_id, references(:users, on_delete: :delete_all), null: false
       add :place_id, references(:places, on_delete: :delete_all), null: false
@@ -49,9 +56,10 @@ defmodule Ethos.Repo.Migrations.MigrateVisitsToReactions do
 
     execute """
     INSERT INTO place_visits (user_id, place_id, inserted_at, updated_at)
-    SELECT user_id, subject_id, inserted_at, updated_at
-    FROM reactions
-    WHERE subject_type = 'place' AND value = 'up'
+    SELECT r.user_id, r.subject_id, r.inserted_at, r.updated_at
+    FROM reactions r
+    WHERE r.subject_type = 'place' AND r.value = 'up'
+      AND EXISTS (SELECT 1 FROM places p WHERE p.id = r.subject_id)
     """
   end
 end

@@ -33,12 +33,25 @@ defmodule Ethos.Social do
 
   The same-value case is what makes the button un-clickable: a second
   click on thumbs-up takes it back rather than doing nothing.
+
+  A permanently closed place refuses every reaction, mirroring the guard
+  the old `Visits.toggle_visit/2` had for the same reason: a closed place
+  cannot gain new visitors, so its badge-relevant counts must not move.
+  This is deliberately a hard refusal rather than a query-side filter —
+  see `Subject.reactable?/1` and the county-complete note on
+  `reacted_places_query/1` below for why a reaction that already exists
+  is never retroactively excluded.
   """
+  def react(%User{}, %Place{status: "closed"}, _value), do: {:error, :closed}
+
   def react(%User{} = user, subject, value) do
     case do_react(user, subject, value) do
-      {:ok, outcome} ->
+      {:ok, :added} = result ->
         maybe_award_badges(user, subject)
-        {:ok, outcome}
+        result
+
+      {:ok, _outcome} = result ->
+        result
 
       {:error, changeset} ->
         {:error, changeset}
@@ -48,6 +61,11 @@ defmodule Ethos.Social do
   # Badges are awarded for reacting to a place at all — see the badge count
   # functions below for why a thumbs-down counts. Never awarded for guides or
   # collections, which have no badge rules.
+  #
+  # Only called for the `:added` outcome: a switch leaves the set of reacted
+  # places unchanged and a clear only shrinks it, so neither can newly satisfy
+  # a badge rule. Running the full evaluation on those outcomes anyway would
+  # be dozens of wasted queries per click for no possible award.
   #
   # `check_and_award/2` has its own rescue clause, so a badge failure cannot
   # break the reaction. That property is load-bearing: reacting must never
@@ -202,6 +220,13 @@ defmodule Ethos.Social do
   # reactions: a reaction on a guide whose id happens to match a place id
   # would satisfy `p.id == r.subject_id` too. Pinning subject_type == "place"
   # is what actually excludes it.
+  #
+  # Deliberately NOT filtering on `p.status == "open"` here. `react/3` already
+  # refuses new reactions to a closed place, so this query only ever includes
+  # a closed place for a reaction that was made while it was still open —
+  # progress the user legitimately earned. Adding an open-only filter here
+  # would silently take that progress away the moment a place closes, which
+  # is not what the old check-off system did either.
   defp reacted_places_query(%User{} = user) do
     from r in Reaction,
       join: p in Ethos.Places.Place,

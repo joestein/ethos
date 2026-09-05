@@ -1,7 +1,7 @@
 defmodule EthosWeb.BadgeControllerTest do
   use EthosWeb.ConnCase, async: true
 
-  alias Ethos.{Badges, Places, Social}
+  alias Ethos.{Places, Social}
 
   setup :register_and_log_in_user
 

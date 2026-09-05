@@ -32,6 +32,16 @@ defmodule Ethos.Social.Subject do
   @doc "The `{subject_type, subject_id}` pair for a subject struct."
   def ref(subject), do: {type(subject), subject.id}
 
+  @doc """
+  Whether a subject may still be reacted to.
+
+  A permanently closed place is the only subject that answers `false` — its
+  status can no longer change, so freezing its reactions is safe. Guides and
+  collections have no such state and are always reactable.
+  """
+  def reactable?(%Place{status: "closed"}), do: false
+  def reactable?(_subject), do: true
+
   @doc "Loads a subject by its stored type and id. Raises if absent."
   def get!("place", id), do: Repo.get!(Place, id)
   def get!("guide", id), do: Repo.get!(Guide, id)

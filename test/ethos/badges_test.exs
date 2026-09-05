@@ -90,6 +90,42 @@ defmodule Ethos.BadgesTest do
     assert "county-complete-litchfield-county" in Enum.map(awarded, & &1.key)
   end
 
+  # Regression for the deleted closed-place guard: `reacted_place_count_in_county/3`
+  # counts all reacted places while `Places.count_open_places_in_county/2` counts
+  # open ones only. Before `Social.react/3` refused closed places, a user could
+  # react to every closed place plus fewer than all the open ones and still trip
+  # `reacted_count >= open_count`, awarding "County Complete" with open places
+  # never touched — permanently, since badges are never revoked.
+  test "county-complete is not awarded early via reactions to closed places" do
+    user = user_fixture()
+    open_a = place!("open-a", %{town: "Bethlehem", county: "Litchfield County"})
+    open_b = place!("open-b", %{town: "Bethlehem", county: "Litchfield County"})
+    open_c = place!("open-c", %{town: "Bethlehem", county: "Litchfield County"})
+
+    closed_a =
+      place!("closed-a", %{town: "Bethlehem", county: "Litchfield County", status: "closed"})
+
+    closed_b =
+      place!("closed-b", %{town: "Bethlehem", county: "Litchfield County", status: "closed"})
+
+    # Reacting to a closed place must be refused outright, not just excluded
+    # from the county-complete count.
+    assert {:error, :closed} = Social.react(user, closed_a, "up")
+    assert {:error, :closed} = Social.react(user, closed_b, "up")
+
+    # Only 1 of the 3 open places reacted to — county is not complete.
+    visit!(user, open_a)
+
+    refute Badges.earned_badges(user)
+           |> Enum.any?(&(&1.badge_key == "county-complete-litchfield-county"))
+
+    # Completing the remaining open places does award it — proves the badge
+    # rule itself, and the fixtures above, still work.
+    visit!(user, open_b)
+    awarded = visit!(user, open_c)
+    assert "county-complete-litchfield-county" in Enum.map(awarded, & &1.key)
+  end
+
   test "un-visiting does not revoke badges" do
     user = user_fixture()
     p = place!("keep")
