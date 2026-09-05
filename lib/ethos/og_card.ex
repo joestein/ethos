@@ -39,11 +39,18 @@ defmodule Ethos.OGCard do
     File.mkdir_p!(dir)
     path = Path.join(dir, "foliage.png")
 
-    # In season the card shows the current week. Out of season it shows week 5
-    # (Oct 14-20), the most visually representative week in the dataset — 63
-    # towns turning, 41 near peak, 60 at peak. A card generated in September
-    # would otherwise be uniformly green, which says nothing about foliage.
-    week = if Ethos.Foliage.in_season?(), do: Ethos.Foliage.current_week_index(), else: 5
+    # Weeks 1 and 9 are structurally flat — week 1 is pre-season green
+    # statewide, and week 9 is DEEP's blanket past-peak fill — so a card
+    # generated then would be a single colour and say nothing about foliage.
+    # Weeks 2..8 all carry real spatial variation, so show the current week
+    # whenever it is one of those, and week 5 (Oct 14-20, the most varied)
+    # otherwise.
+    week =
+      case Ethos.Foliage.current_week_index() do
+        current when current in 2..8 -> current
+        _ -> 5
+      end
+
     map = Ethos.Foliage.Svg.map(week, width: 520, height: 340) |> Phoenix.HTML.safe_to_string()
     inner = map |> String.replace(~r/^<svg[^>]*>/, "") |> String.replace(~r{</svg>$}, "")
 
