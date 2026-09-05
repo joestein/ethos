@@ -652,13 +652,18 @@ Append to `test/ethos/social_test.exs`, inside the `defmodule`:
     setup do
       user = user_fixture()
 
+      # `Place.changeset/2` does NOT cast town_slug/county_slug/state_slug — it
+      # DERIVES them from town/state/county. Passing a slug key here would be
+      # silently dropped and every place would land in the same town, making the
+      # by-town and by-county assertions below pass while proving nothing.
+      # Always set the human-readable name; assert against the derived slug.
       open = fn attrs ->
         place_fixture(
           Enum.into(attrs, %{
             status: "open",
-            state_slug: "connecticut",
-            county_slug: "new-haven",
-            town_slug: "waterbury",
+            state: "Connecticut",
+            county: "New Haven County",
+            town: "Waterbury",
             kind: "museum"
           })
         )
@@ -701,8 +706,8 @@ Append to `test/ethos/social_test.exs`, inside the `defmodule`:
     end
 
     test "by town", %{user: user, open: open} do
-      Social.react(user, open.(%{town_slug: "waterbury"}), "up")
-      Social.react(user, open.(%{town_slug: "danbury"}), "up")
+      Social.react(user, open.(%{town: "Waterbury"}), "up")
+      Social.react(user, open.(%{town: "Danbury"}), "up")
 
       assert Social.reacted_place_count_by_town(user, "waterbury") == 1
     end
@@ -716,10 +721,13 @@ Append to `test/ethos/social_test.exs`, inside the `defmodule`:
     end
 
     test "in county", %{user: user, open: open} do
-      Social.react(user, open.(%{county_slug: "new-haven"}), "up")
-      Social.react(user, open.(%{county_slug: "fairfield"}), "up")
+      Social.react(user, open.(%{county: "New Haven County"}), "up")
+      Social.react(user, open.(%{county: "Fairfield County"}), "up")
 
-      assert Social.reacted_place_count_in_county(user, "connecticut", "new-haven") == 1
+      # "New Haven County" derives to "new-haven-county" — the -county suffix is
+      # part of the slug, as the existing badge key county-complete-new-haven-county
+      # already shows.
+      assert Social.reacted_place_count_in_county(user, "connecticut", "new-haven-county") == 1
     end
   end
 ```
@@ -1391,8 +1399,10 @@ defmodule Ethos.Social.VisitMigrationTest do
   test "a user with five Waterbury reactions holds Brass City Explorer" do
     user = user_fixture()
 
+    # `town`, not `town_slug` — the changeset derives the slug and silently
+    # ignores a slug key.
     for _ <- 1..5 do
-      place = place_fixture(%{status: "open", town_slug: "waterbury"})
+      place = place_fixture(%{status: "open", town: "Waterbury"})
       Ethos.Social.react(user, place, "up")
     end
 
