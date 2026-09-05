@@ -1,7 +1,7 @@
 defmodule EthosWeb.GuideLive.Suggestions do
   use EthosWeb, :live_view
 
-  alias Ethos.{Contributions, Guides}
+  alias Ethos.{Accounts, Contributions, Guides}
 
   @impl true
   def mount(%{"id" => id}, _session, socket) do
@@ -56,7 +56,7 @@ defmodule EthosWeb.GuideLive.Suggestions do
             <p class="text-sm text-zinc-500">
               {s.kind_hint || "tip"} · {if s.origin == "gap_fill",
                 do: "nearby idea (auto)",
-                else: "suggested by #{s.author && s.author.email}"}
+                else: "suggested by #{s.author && Accounts.display_name(s.author)}"}
             </p>
             <p :if={s.body} class="text-sm mt-1">{s.body}</p>
             <a

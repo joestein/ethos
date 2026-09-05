@@ -8,7 +8,7 @@
     <li :for={s <- @suggestions} class="rounded-xl border p-5">
       <p class="text-sm text-zinc-500">
         For <.link navigate={~p"/g/#{s.guide.slug}"} class="underline">{s.guide.title}</.link>
-        <span :if={s.author}>· from {s.author.email}</span>
+        <span :if={s.author}>· from {Ethos.Accounts.display_name(s.author)}</span>
         <span :if={is_nil(s.author)}>· via {s.origin}</span>
       </p>
       <p class="mt-1 font-semibold">{s.place_name}</p>

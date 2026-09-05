@@ -31,4 +31,9 @@
       </div>
     </li>
   </ol>
+
+  {live_render(@conn, EthosWeb.SocialLive,
+    id: "social-collection-#{@collection.id}",
+    session: %{"subject_type" => "collection", "subject_id" => @collection.id}
+  )}
 </article>
