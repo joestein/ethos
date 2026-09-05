@@ -2061,6 +2061,87 @@ git commit -m "refactor: place queries key on the destination node"
 
 ---
 
+### Task 13: Move the curated hub content onto the tree
+
+> **Added after Task 10's review. Critical — this blocks deploy.** Run it after
+> Task 11 and before Task 12.
+
+**Files:**
+- Modify: all 13 files in `priv/seed_data/destinations/*.json`
+- Modify: `lib/ethos_web/components/guide_breadcrumb.ex`
+- Modify: `lib/ethos/seeds/destination_tree.ex` or `priv/seed_data/destination_tree.json`
+- Test: `test/ethos_web/guide_breadcrumb_corpus_test.exs`, `test/ethos/seeds/destination_seed_data_test.exs`, `test/ethos_web/controllers/sitemap_controller_test.exs`
+
+**The defect.** All 13 curated hub files are keyed on paths that are now *legacy
+paths*: `connecticut.json` has `"path": "connecticut"`, which is a legacy path on
+`united-states/connecticut`; likewise `rome` → `italy/lazio/rome`,
+`new-york/brooklyn` → `united-states/new-york/new-york-city/brooklyn`.
+`Ethos.Release.seed_destinations/0` upserts them as real `Destination` rows, and
+`DataDestination` requires only `path`/`name`/`intro`, so they insert with
+`kind: nil` and `parent_id: nil`. Four consequences, all verified:
+
+1. `show/2` resolves the exact path first, so `/destinations/connecticut` renders
+   the bare row instead of 301ing — **13 redirects silently disabled**.
+2. `list_destinations/0` is unfiltered, so all 13 enter the sitemap. The sitemap
+   builder is correct; this is a data defect, which is why the Task 10 sitemap
+   test cannot see it — that test seeds only the tree.
+3. `parent_id: nil` puts all 13 into `Destinations.roots/0`, so the
+   `/destinations` index lists Connecticut, New York and Rome as **countries**,
+   beside United States and Italy.
+4. The curated prose (~1KB and a photo per hub) never reaches the real nodes,
+   which carry the roster's one-line stubs ("Connecticut, county by county.").
+
+**Three coupled changes. Landing any one alone leaves the tree broken.**
+
+- [ ] **Step 1: Re-key the 13 files to their tree paths**
+
+`"connecticut"` → `"united-states/connecticut"`, `"rome"` → `"italy/lazio/rome"`,
+`"new-york/manhattan"` → `"united-states/new-york/new-york-city/manhattan"`, and
+so on for all 13. Take each target from the node whose `legacy_paths` currently
+contains the old key — that mapping already exists and is authoritative, so read
+it rather than retyping paths by hand.
+
+- [ ] **Step 2: Settle intro precedence, or the re-key is undone on next seed**
+
+`DestinationTree.upsert_all!/0` writes `intro` for every node and
+`Release.seed_region/1` calls it, so once the files are re-keyed a tree re-seed
+**clobbers the curated prose back to the roster stub**. Photos survive — they are
+not in the tree upsert's attrs — intros do not.
+
+Pick one and say which in your report: fold the curated prose into the roster so
+there is one source, or make the tree upsert leave a non-stub `intro` alone. Add
+a test that seeds the tree, then the destinations, then the tree **again**, and
+asserts the curated intro is still there. Seed order is the thing that breaks
+here, so the test has to exercise the order.
+
+- [ ] **Step 3: Retire the curated-destination breadcrumb rule**
+
+`GuideBreadcrumb.curated_destination_crumb/1` calls
+`Destinations.get_by_path(bare_slug)` and only ever matches *because* those 13
+bare-path rows exist. Re-keying kills it, and
+`guide_breadcrumb_corpus_test.exs:80` asserts `bare_paths != []`, so it fails.
+
+Re-point `guide_breadcrumb.ex` at the tree — a guide's crumbs come from its
+node's ancestry, the same as a hub's — and rewrite that corpus test to assert the
+new invariant rather than deleting it. It exists to guard that guide pages carry
+a real geographic trail; that requirement has not gone away, only its mechanism.
+Use `DestinationHTML.node_path/1` for the URLs, never `~p` interpolation.
+
+- [ ] **Step 4: Add the country-code gate Task 10's review asked for**
+
+Nothing asserts that every roster node with `kind: "country"` has an
+`@iso_alpha2` entry, so a sixth country raises at request time — a 500 — rather
+than failing CI. Add a corpus test asserting the two sets match exactly.
+
+- [ ] **Step 5: Verify, then commit**
+
+Run the full suite. Then confirm by hand that `/destinations/connecticut` 301s
+rather than rendering, that `/destinations` lists only real countries, that the
+sitemap contains no legacy path, and that a re-seed leaves the curated intros
+intact.
+
+---
+
 ### Task 12: Drop the legacy columns
 
 **Files:**
