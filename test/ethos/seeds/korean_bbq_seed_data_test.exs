@@ -29,7 +29,12 @@ defmodule Ethos.Seeds.KoreanBbqSeedDataTest do
   """
   use Ethos.DataCase, async: false
 
-  @moduletag :pending_korean_bbq
+  # @moduletag :pending_korean_bbq removed by the wave that landed the first
+  # five guides — Los Angeles, Chicago, Chicago's north suburbs, the South Bay
+  # and Puget Sound, the five metros with no neighborhood corpus of their own.
+  # Everything now runs except the two assertions carrying their own `@tag`:
+  # the ten-guide/100-restaurant one and the collection one, both of which
+  # wait on later tasks.
 
   alias Ethos.SeedDataHelpers
 
@@ -85,7 +90,7 @@ defmodule Ethos.Seeds.KoreanBbqSeedDataTest do
   ]
 
   @superlative_patterns [
-    ~r/(?<![-\w])(?:only|first|oldest|largest|best|finest|greatest|most\s+\w+)\s+(?:\w+\s+){0,2}(?:in|of|on)\s+(?:the\s+)?(?:city|borough|neighborhood|neighbourhood|country|county|area|region|Los Angeles|Manhattan|Queens|Brooklyn|London|Chicago|San Francisco|Seattle)\b/i,
+    ~r/(?<![-\w])(?:densest|busiest|biggest|newest|priciest|cheapest|rarest|only|first|oldest|largest|best|finest|greatest|most\s+\w+)\s+(?:\w+\s+){0,3}(?:in|of|on)\s+(?:the\s+)?(?:nation|country|state|world|US|U\.S\.|America|city|borough|neighborhood|neighbourhood|county|area|region|Los Angeles|Manhattan|Queens|Brooklyn|London|Chicago|San Francisco|Seattle)\b/i,
     ~r/\bone of the (?:most|best|finest|largest|oldest|greatest)\b/i,
     ~r/\b(?:the city's|LA's|London's|Chicago's|Manhattan's)\s+(?:only|oldest|largest|finest|greatest|best)\b/i,
     ~r/\bbest Korean\b/i,
@@ -252,6 +257,21 @@ defmodule Ethos.Seeds.KoreanBbqSeedDataTest do
     for s <- @superlative_specimens do
       refute hit?(@superlative_patterns, s), "rejected prose that must publish: #{s}"
     end
+  end
+
+  test "the superlative ban catches a comparative ranking against a nation or a region" do
+    # These are the shapes restaurant writing reaches for, and every one of them
+    # slipped past the first version of this ban. "densest in the nation" was
+    # written into a link note and published a ranking claim the corpus does not
+    # make.
+    assert hit?(@superlative_patterns, "It remains the densest in the nation.")
+    assert hit?(@superlative_patterns, "the busiest Korean restaurant row in the country")
+    assert hit?(@superlative_patterns, "the biggest Koreatown in America")
+
+    # Still not rankings: a count, a measurement, a date and an award all publish.
+    refute hit?(@superlative_patterns, "Korean businesses on Lawrence Avenue fell from 158 in 1997 to 50 by 2017.")
+    refute hit?(@superlative_patterns, "Twenty-five restaurants sit inside the city limits.")
+    refute hit?(@superlative_patterns, "It holds one Michelin star, awarded in 2019.")
   end
 
   test "the proximity ban separates wayfinding from a named location" do

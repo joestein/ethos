@@ -491,8 +491,16 @@ defmodule Ethos.Places.AddressTest do
     # is the case this pin's own note says schema.org wants kept rather than the
     # non-locality prose it exists to catch: "2 Marina Blvd, Landmark Building
     # C, Suite 260" and "2325 Third Street, Floor 4R".
-    assert comma_streets <= 50,
-           "#{comma_streets} American street lines carry a comma qualifier, up from 50"
+    # 51 after Korean BBQ wave 1. The addition is Daebak Korean BBQ
+    # (daebak-korean-bbq-chicago-chinatown), whose raw address "2017 S Wells
+    # St, Fl 2, Chicago, IL 60616" parses to the street line "2017 S Wells St,
+    # Fl 2". "Fl 2" is a floor designator — the same class as "Suite 260" and
+    # "Floor 4R" above, which this pin's own note already names as the
+    # acceptable case schema.org wants kept — rather than the non-locality
+    # prose ("near Pacific Street", "also addressed as 455 Flatbush Avenue")
+    # the pin exists to catch. The ratchet moves to 51 legitimately.
+    assert comma_streets <= 51,
+           "#{comma_streets} American street lines carry a comma qualifier, up from 51"
 
     for p <- italian, p.street, String.contains?(p.street, ",") do
       # A civico may be a range ("5-7") or carry a letter or a slashed suffix
