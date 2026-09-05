@@ -160,6 +160,22 @@ defmodule Ethos.Guides do
     )
   end
 
+  @doc """
+  Published guides attached to one destination node.
+
+  Filed by `destination_id`, so a hub lists exactly the guides that name it —
+  no slug matching, and no ambiguity between a state and a town of the same
+  name. A node's descendants are NOT rolled up: the tree gives every one of
+  them its own hub.
+  """
+  def list_published_guides_for_node(node_id) do
+    Repo.all(
+      from g in Guide,
+        where: g.status == "published" and g.destination_id == ^node_id,
+        order_by: [desc: g.view_count, desc: g.id]
+    )
+  end
+
   def increment_view_count(%Guide{id: id}) do
     from(g in Guide, where: g.id == ^id)
     |> Repo.update_all(inc: [view_count: 1])

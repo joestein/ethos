@@ -161,46 +161,73 @@ defmodule EthosWeb.AffiliatePlacementTest do
   end
 
   describe "destination hubs" do
-    # Named for what it covers. The state hub does NOT exercise
+    # A hub is now one node in the destination tree, served at that node's own
+    # path, and its guides are the ones filed against it. The geography a hub
+    # resolves through is still the guides' — `unanimous_locale/1` over
+    # assigns[:guides] — so these seed the node and file the guide on it.
+    defp hub_node!(path) do
+      Ethos.SeedDataHelpers.seed_destination_paths!([path])
+      Ethos.Destinations.get_by_path(path)
+    end
+
+    defp guide_on(node, title, state, county) do
+      published_guide_fixture(%{
+        "title" => title,
+        "destination" => "#{title}, #{state}",
+        "state" => state,
+        "county" => county,
+        "destination_id" => node.id
+      })
+    end
+
+    # Named for what it covers. The region hub does NOT exercise
     # `locale_for/2`'s nil-county branch: it routes through
     # `unanimous_locale/1` over guides that each carry a real county. No layout
     # path calls `locale_for/2` with a nil county at all — that branch is
     # covered by the resolver's own unit test, not from here.
-    test "the New York state hub carries the widget", %{conn: conn} do
-      ny_guide("Belmont", "The Bronx")
+    test "the New York region hub carries the widget", %{conn: conn} do
+      "united-states/new-york" |> hub_node!() |> guide_on("Belmont", "New York", "The Bronx")
 
-      html = conn |> get(~p"/destinations/new-york") |> html_response(200)
-
-      assert html =~ @widget
-    end
-
-    test "a New York county hub carries the widget", %{conn: conn} do
-      ny_guide("Belmont", "The Bronx")
-
-      html = conn |> get(~p"/destinations/new-york/the-bronx") |> html_response(200)
+      html = conn |> get(~p"/destinations/united-states/new-york") |> html_response(200)
 
       assert html =~ @widget
     end
 
-    # The county hub splits its rows: `:guides` is tier "guide" and everything
-    # else goes to `:town_pages`. A borough seeded entirely with town-pages
-    # therefore hands the layout an EMPTY :guides list — and a page full of New
-    # York content rendered no widget. Brooklyn shipped 32 town-pages and the
-    # Queens roster is staged, so this is reachable, and silently.
-    test "a county hub whose guides are all town-pages still carries the widget", %{conn: conn} do
+    test "a New York borough hub carries the widget", %{conn: conn} do
+      "united-states/new-york/new-york-city/bronx"
+      |> hub_node!()
+      |> guide_on("Belmont", "New York", "The Bronx")
+
+      html =
+        conn
+        |> get(~p"/destinations/united-states/new-york/new-york-city/bronx")
+        |> html_response(200)
+
+      assert html =~ @widget
+    end
+
+    # A borough hub whose every guide is an orientation page used to render no
+    # widget: the old county hub split its rows by tier and handed the layout an
+    # EMPTY :guides list. The node hub lists guides regardless of tier, which is
+    # what closes that hole — asserted here so it cannot reopen.
+    test "a borough hub whose guides are all town-pages still carries the widget", %{conn: conn} do
+      node = hub_node!("united-states/new-york/new-york-city/queens")
+
       for title <- ["Astoria", "Flushing"] do
-        title
-        |> ny_guide("Queens")
+        node
+        |> guide_on(title, "New York", "Queens")
         |> Ecto.Changeset.change(tier: "town-page")
         |> Ethos.Repo.update!()
       end
 
-      html = conn |> get(~p"/destinations/new-york/queens") |> html_response(200)
+      html =
+        conn
+        |> get(~p"/destinations/united-states/new-york/new-york-city/queens")
+        |> html_response(200)
 
-      # Non-vacuity: the controller must really be handing the layout an empty
-      # :guides list. If tier stops splitting the rows, this stops describing
-      # the town-page-only case and the assertion below is ceremony.
-      rows = Ethos.Guides.list_published_guides_for_county("new-york", "queens")
+      # Non-vacuity: the hub really is town-pages only. If tier stops being the
+      # thing that used to split these rows, this stops describing the case.
+      rows = Ethos.Guides.list_published_guides_for_node(node.id)
       assert rows != []
 
       assert Enum.all?(rows, &(&1.tier == "town-page")),
@@ -209,32 +236,31 @@ defmodule EthosWeb.AffiliatePlacementTest do
       assert html =~ @widget
     end
 
-    test "the Connecticut state hub carries neither", %{conn: conn} do
-      ct_guide("Woodbury")
+    test "the Connecticut region hub carries neither", %{conn: conn} do
+      "united-states/connecticut"
+      |> hub_node!()
+      |> guide_on("Woodbury", "Connecticut", "Litchfield County")
 
-      html = conn |> get(~p"/destinations/connecticut") |> html_response(200)
+      html = conn |> get(~p"/destinations/united-states/connecticut") |> html_response(200)
 
       refute html =~ @script_src
       refute html =~ @widget
     end
 
-    # A town hub serving guides from two states is half a New York page.
-    test "a mixed-state town hub carries neither", %{conn: conn} do
-      published_guide_fixture(%{
-        "title" => "Madison",
-        "destination" => "Madison, New York",
-        "state" => "New York",
-        "county" => "Brooklyn"
-      })
+    # The tree ended the URL collision that used to serve Madison, New York and
+    # Madison, Connecticut from one hub, but not the rule the collision
+    # exercised: a hub whose guides do not agree on a locale resolves to none.
+    # Two guides of different geography filed on one node is that case.
+    test "a hub whose guides disagree about geography carries neither", %{conn: conn} do
+      node = hub_node!("united-states/connecticut/new-haven-county/madison")
 
-      published_guide_fixture(%{
-        "title" => "Madison",
-        "destination" => "Madison, Connecticut",
-        "state" => "Connecticut",
-        "county" => "New Haven County"
-      })
+      guide_on(node, "Madison", "New York", "Brooklyn")
+      guide_on(node, "Madison", "Connecticut", "New Haven County")
 
-      html = conn |> get(~p"/destinations/madison") |> html_response(200)
+      html =
+        conn
+        |> get(~p"/destinations/united-states/connecticut/new-haven-county/madison")
+        |> html_response(200)
 
       refute html =~ @widget
     end
@@ -290,10 +316,15 @@ defmodule EthosWeb.AffiliatePlacementTest do
       assert html =~ @disclosure
     end
 
-    test "a New York county hub carries the widget's own disclosure", %{conn: conn} do
-      ny_guide("Belmont", "The Bronx")
+    test "a New York borough hub carries the widget's own disclosure", %{conn: conn} do
+      "united-states/new-york/new-york-city/bronx"
+      |> hub_node!()
+      |> guide_on("Belmont", "New York", "The Bronx")
 
-      html = conn |> get(~p"/destinations/new-york/the-bronx") |> html_response(200)
+      html =
+        conn
+        |> get(~p"/destinations/united-states/new-york/new-york-city/bronx")
+        |> html_response(200)
 
       assert html =~ @widget
       assert html =~ @disclosure
@@ -656,7 +687,16 @@ defmodule EthosWeb.AffiliatePlacementTest do
       assert html =~ @old_disclosure
     end
 
-    test "the Italy state hub serves and carries the widget", %{conn: conn} do
+    test "the Italy country hub serves and carries the widget", %{conn: conn} do
+      # The Rome guide hand-rolls its own upsert and names no node, so file it
+      # on the country hub the way a loader-seeded guide would be.
+      Ethos.SeedDataHelpers.seed_destination_paths!(["italy"])
+      italy = Ethos.Destinations.get_by_path("italy")
+
+      Ethos.Guides.get_published_guide_by_slug!("three-days-in-rome-real-trip-guide")
+      |> Ecto.Changeset.change(destination_id: italy.id)
+      |> Ethos.Repo.update!()
+
       html = conn |> get(~p"/destinations/italy") |> html_response(200)
 
       assert html =~ ~s(data-gyg-cmp="rome")

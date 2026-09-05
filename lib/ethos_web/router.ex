@@ -24,8 +24,10 @@ defmodule EthosWeb.Router do
     get "/g/:slug", GuideController, :show
     get "/g/:slug/photos", GuideController, :photos
     get "/destinations", DestinationController, :index
-    get "/destinations/:slug", DestinationController, :show
-    get "/destinations/:state_slug/:county_slug", DestinationController, :county
+    # The glob is declared after the bare index so `/destinations` keeps
+    # resolving to :index; a node's own path supplies every segment after it,
+    # at any depth from a country to a neighborhood.
+    get "/destinations/*path", DestinationController, :show
     get "/p/:slug", PlaceController, :show
     get "/c/:slug", CollectionController, :show
     get "/search", SearchController, :index

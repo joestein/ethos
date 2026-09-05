@@ -233,7 +233,17 @@ defmodule Ethos.SeedDataHelpers do
     end
   end
 
-  defp seed_destination_paths!(paths) do
+  @doc """
+  Seeds the roster nodes at these paths, plus every ancestor of each.
+
+  The general form behind `seed_code_destinations!/0` and
+  `seed_destinations_for!/1`, for a test that names a node directly rather than
+  through a seed module — a controller test exercising one destination hub, say.
+  Nodes are written shallowest first, the order
+  `DestinationTree.upsert_all!/0` writes in, so two async tests take their row
+  locks in one consistent global order and can only wait on each other.
+  """
+  def seed_destination_paths!(paths) when is_list(paths) do
     wanted =
       for path <- paths,
           segments = String.split(path, "/"),

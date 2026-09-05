@@ -34,6 +34,68 @@ defmodule Ethos.GuidesTest do
     end
   end
 
+  describe "list_published_guides_for_node/1" do
+    setup do
+      Ethos.SeedDataHelpers.seed_destination_paths!([
+        "united-states/connecticut/litchfield-county",
+        "united-states/connecticut/new-haven-county"
+      ])
+
+      %{
+        litchfield: Ethos.Destinations.get_by_path("united-states/connecticut/litchfield-county"),
+        new_haven: Ethos.Destinations.get_by_path("united-states/connecticut/new-haven-county")
+      }
+    end
+
+    defp guide_on(node, title, attrs \\ %{}) do
+      user = user_fixture()
+
+      {:ok, guide} =
+        Guides.create_guide(
+          user,
+          Map.merge(%{title: title, destination: title, destination_id: node.id}, attrs)
+        )
+
+      guide
+    end
+
+    test "returns only that node's published guides", %{litchfield: lf, new_haven: nh} do
+      {:ok, mine} = guide_on(lf, "Woodbury") |> Guides.publish_guide()
+      draft = guide_on(lf, "Bethlehem")
+      {:ok, sibling} = guide_on(nh, "Waterbury") |> Guides.publish_guide()
+
+      ids = Guides.list_published_guides_for_node(lf.id) |> Enum.map(& &1.id)
+
+      assert ids == [mine.id]
+      refute draft.id in ids
+      refute sibling.id in ids
+    end
+
+    # A node's descendants each get their own hub, so a county hub does not roll
+    # up the towns beneath it. Recorded here because "list guides for a node"
+    # reads like it might.
+    test "does not roll up a child node's guides", %{litchfield: lf} do
+      Ethos.SeedDataHelpers.seed_destination_paths!([
+        "united-states/connecticut/litchfield-county/kent"
+      ])
+
+      kent = Ethos.Destinations.get_by_path("united-states/connecticut/litchfield-county/kent")
+      {:ok, _} = guide_on(kent, "Kent") |> Guides.publish_guide()
+
+      assert Guides.list_published_guides_for_node(lf.id) == []
+    end
+
+    test "orders by view count, then by id descending", %{litchfield: lf} do
+      {:ok, quiet} = guide_on(lf, "Quiet") |> Guides.publish_guide()
+      {:ok, popular} = guide_on(lf, "Popular") |> Guides.publish_guide()
+
+      Guides.increment_view_count(popular)
+
+      assert Guides.list_published_guides_for_node(lf.id) |> Enum.map(& &1.id) ==
+               [popular.id, quiet.id]
+    end
+  end
+
   describe "increment_view_count/1" do
     test "bumps view_count" do
       user = user_fixture()

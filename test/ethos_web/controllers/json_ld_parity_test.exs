@@ -183,33 +183,32 @@ defmodule EthosWeb.JsonLdParityTest do
         names: ["Ethos", "Destinations"],
         urls: [url(~p"/"), url(~p"/destinations")]
       },
+      # THE THREE HUB ROWS BELOW ARE PINNED TO A STUB, AND TASK 10 UNPINS THEM.
+      #
+      # Every hub is now one node in the destination tree served at that node's
+      # own path, and `DestinationController.node_breadcrumb/2` is deliberately
+      # stubbed to the index's own two crumbs until Task 10 builds the real
+      # trail out of `Destinations.ancestors/1`. These rows record what the stub
+      # emits — not what a hub should emit — so the parity net still runs over
+      # all three depths, and so Task 10 has to come back here and restate them.
+      #
+      # The `/g/`, `/p/` and `/c/` rows above are NOT stubbed: those builders
+      # still read the guides' and places' legacy state/county columns and emit
+      # the pre-tree hub URLs. Task 11 moves them.
       %{
-        path: ~p"/destinations/connecticut",
-        names: ["Ethos", "Destinations", "Connecticut"],
-        urls: [
-          url(~p"/"),
-          url(~p"/destinations"),
-          url(~p"/destinations/connecticut")
-        ]
+        path: ~p"/destinations/united-states/connecticut",
+        names: ["Ethos", "Destinations"],
+        urls: [url(~p"/"), url(~p"/destinations")]
       },
       %{
-        path: ~p"/destinations/connecticut/windham-county",
-        names: ["Ethos", "Destinations", "Connecticut", "Windham County"],
-        urls: [
-          url(~p"/"),
-          url(~p"/destinations"),
-          url(~p"/destinations/connecticut"),
-          url(~p"/destinations/connecticut/windham-county")
-        ]
+        path: ~p"/destinations/united-states/connecticut/windham-county",
+        names: ["Ethos", "Destinations"],
+        urls: [url(~p"/"), url(~p"/destinations")]
       },
       %{
-        path: ~p"/destinations/rome",
-        names: ["Ethos", "Destinations", "Rome"],
-        urls: [
-          url(~p"/"),
-          url(~p"/destinations"),
-          url(~p"/destinations/rome")
-        ]
+        path: ~p"/destinations/united-states/connecticut/windham-county/townville",
+        names: ["Ethos", "Destinations"],
+        urls: [url(~p"/"), url(~p"/destinations")]
       },
       %{
         path: ~p"/c/burys-test",
