@@ -281,18 +281,20 @@ defmodule Ethos.Seeds.DestinationSeedDataTest do
 
   defp photo_dir(_src), do: nil
 
-  # 9. The corpus must be exactly the thirteen destination pages shipped for
-  #    this rollout — no fewer (an accidental deletion) and no more (an
-  #    unreviewed extra page landing silently, or a fourteenth appearing
-  #    without anyone deciding it should). This is a literal list of the
-  #    thirteen paths, not a count and not a set derived from the files this
-  #    test happens to find on disk: a derived expectation passes no matter
-  #    which files exist, which is exactly the vacuity this assertion exists
-  #    to prevent. Sourced from each file's own "path" field rather than its
-  #    filename, since the filename-to-path mapping ("/" replaced by "-") is
-  #    lossy to reverse in general and the field is what the app actually
-  #    serves.
+  # 9. The corpus must be exactly the destination pages shipped so far — no
+  #    fewer (an accidental deletion) and no more (an unreviewed extra page
+  #    landing silently, or one appearing without anyone deciding it should).
+  #    This is a literal list of the paths, not a count and not a set derived
+  #    from the files this test happens to find on disk: a derived expectation
+  #    passes no matter which files exist, which is exactly the vacuity this
+  #    assertion exists to prevent. Sourced from each file's own "path" field
+  #    rather than its filename, since the filename-to-path mapping ("/"
+  #    replaced by "-") is lossy to reverse in general and the field is what
+  #    the app actually serves. California and Illinois joined here alongside
+  #    the Korean BBQ collection; Washington was withheld — see the report for
+  #    why.
   @destination_roster ~w(
+    california
     connecticut
     connecticut/fairfield-county
     connecticut/hartford-county
@@ -302,6 +304,7 @@ defmodule Ethos.Seeds.DestinationSeedDataTest do
     connecticut/new-london-county
     connecticut/tolland-county
     connecticut/windham-county
+    illinois
     new-york
     new-york/brooklyn
     new-york/manhattan

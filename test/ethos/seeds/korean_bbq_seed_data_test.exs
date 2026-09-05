@@ -29,6 +29,9 @@ defmodule Ethos.Seeds.KoreanBbqSeedDataTest do
   """
   use Ethos.DataCase, async: false
 
+  import ExUnit.CaptureIO
+  import Ethos.AccountsFixtures
+
   # @moduletag :pending_korean_bbq removed by the wave that landed the first
   # five guides — Los Angeles, Chicago, Chicago's north suburbs, the South Bay
   # and Puget Sound, the five metros with no neighborhood corpus of their own.
@@ -595,9 +598,9 @@ defmodule Ethos.Seeds.KoreanBbqSeedDataTest do
     assert File.dir?(@seed_dir), "priv/seed_data/korean_bbq does not exist"
   end
 
-  # Delete this @tag when the last wave lands, and not before: until then the
-  # corpus is a prefix of the ten and both assertions fail by construction.
-  @tag :pending_korean_bbq
+  # @tag :pending_korean_bbq removed by the wave that landed the collection.
+  # This assertion now runs for real, and from here it is what stops a guide
+  # being deleted or the collection quietly falling below its promise.
   test "all ten guides ship and the collection holds at least 100 restaurants" do
     shipped = files() |> Enum.map(&Path.rootname(Path.basename(&1))) |> MapSet.new()
     expected = MapSet.new(@zones)
@@ -625,11 +628,38 @@ defmodule Ethos.Seeds.KoreanBbqSeedDataTest do
              "(Duluth/Gwinnett) and northern Virginia (Annandale), or lower the promise."
   end
 
-  # Tagged for the same reason as the assertion above: the collection is
-  # created by the task that lands the tenth guide, so until then this fails
-  # because nothing has created it yet, not because anything is wrong.
-  @tag :pending_korean_bbq
+  # @tag :pending_korean_bbq removed by the wave that landed the collection.
+  # This assertion now runs for real, and from here it is what stops the
+  # collection falling below its promise to hold every Korean BBQ guide.
+  #
+  # Ethos.DataCase runs each test in a sandboxed transaction, so nothing is
+  # seeded unless this test seeds it. The ten guides here reach places owned
+  # by the manhattan, queens, brooklyn, san_francisco and london directories
+  # (GuideRunner.replace_entries!/2 resolves every entry through
+  # Places.get_place_by_slug!/1, which raises rather than skipping), so those
+  # must be seeded before seed_korean_bbq/1, and the guides must exist before
+  # Collections.upsert_collection!/1 — which also raises on an item whose
+  # guide slug has no row — can seed the collection itself.
+  #
+  # seed_ballparks/1 runs first for the same reason release_test.exs runs it
+  # before seed_queens/1 and seed_san_francisco/1: Queens' Corona file links to
+  # citi-field-guide and San Francisco's Mission Bay file links to
+  # oracle-park-guide, and Links.resolve!/1 raises on an unresolved target.
   test "the collection exists, is published, and holds every korean bbq guide" do
+    user = user_fixture()
+
+    capture_io(fn ->
+      Ethos.Release.seed_ballparks(user.email)
+      Ethos.Release.seed_manhattan(user.email)
+      Ethos.Release.seed_queens(user.email)
+      Ethos.Release.seed_brooklyn(user.email)
+      Ethos.Release.seed_san_francisco(user.email)
+      Ethos.Release.seed_london(user.email)
+      Ethos.Release.seed_korean_bbq(user.email)
+    end)
+
+    Ethos.Seeds.KoreanBbqCollection.upsert!()
+
     collection = Ethos.Collections.get_published_by_slug(@collection_slug)
 
     assert collection, "no published collection at /c/#{@collection_slug}"

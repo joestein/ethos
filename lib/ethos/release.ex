@@ -51,7 +51,8 @@ defmodule Ethos.Release do
     collections = [
       Ethos.Seeds.BurysCollection,
       Ethos.Seeds.AntiqueTrailCollection,
-      Ethos.Seeds.MlbBallparksCollection
+      Ethos.Seeds.MlbBallparksCollection,
+      Ethos.Seeds.KoreanBbqCollection
     ]
 
     for mod <- collections do

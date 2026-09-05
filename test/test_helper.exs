@@ -160,6 +160,12 @@ ExUnit.start()
 #     `@tag` and this entry.
 #
 #     mix test --include pending_korean_bbq
-ExUnit.configure(exclude: [:pending_wave, :pending_bronx, :pending_korean_bbq])
+#
+# :pending_korean_bbq removed by Task 8, which landed the collection and
+# brought the corpus to all ten guides. Both `@tag :pending_korean_bbq` lines
+# came off with it, so the tag now names nothing and excluding it would only
+# hide a future typo. The single-call rule above still binds: this list is
+# edited in place, never by adding a second ExUnit.configure/1.
+ExUnit.configure(exclude: [:pending_wave, :pending_bronx])
 
 Ecto.Adapters.SQL.Sandbox.mode(Ethos.Repo, :manual)
