@@ -28,6 +28,9 @@ defmodule EthosWeb.Router do
     get "/destinations/:state_slug/:county_slug", DestinationController, :county
     get "/p/:slug", PlaceController, :show
     get "/c/:slug", CollectionController, :show
+    get "/foliage", FoliageController, :index
+    get "/foliage/embed", FoliageController, :embed
+    get "/foliage/:route_slug", FoliageController, :route
     get "/search", SearchController, :index
     get "/sitemap.xml", SitemapController, :index
     get "/robots.txt", RobotsController, :index

@@ -1,0 +1,58 @@
+<article class="mx-auto max-w-3xl px-4 py-10">
+  <h1 class="text-3xl font-bold">Connecticut Foliage Forecast</h1>
+
+  <p class="mt-2 text-zinc-600">
+    When the leaves turn in each of Connecticut's 169 towns, and which of the state's
+    seven official driving routes runs through them.
+  </p>
+
+  <.week_selector weeks={@weeks} current={@week} base="/foliage" />
+
+  <figure class="mt-4">
+    {Ethos.Foliage.Svg.map(@week)}
+    <figcaption class="sr-only">
+      Connecticut foliage stage by town for {Ethos.Foliage.week(@week).label}.
+    </figcaption>
+  </figure>
+
+  <.stage_key />
+
+  <p class="mt-4 text-xs text-zinc-500">{Ethos.Foliage.attribution()}</p>
+
+  <.field_note note={@note} />
+
+  <section class="mt-10">
+    <h2 class="font-semibold">Driving routes</h2>
+    <p class="mt-1 text-sm text-zinc-600">
+      Seven routes published by the state. Each page lists the towns it passes through.
+    </p>
+    <ul class="mt-3 grid gap-3 sm:grid-cols-2">
+      <li :for={route <- @routes} class="rounded-xl border p-4">
+        <.link navigate={~p"/foliage/#{route.slug}"} class="font-semibold hover:underline">
+          {raw(route.name)}
+        </.link>
+        <p class="mt-1 text-sm text-zinc-600">{length(route.stops)} towns</p>
+      </li>
+    </ul>
+  </section>
+
+  <section class="mt-10">
+    <h2 class="font-semibold">By county</h2>
+    <table class="mt-3 w-full text-sm">
+      <thead class="text-left text-zinc-500">
+        <tr>
+          <th class="py-1">County</th>
+          <th class="py-1">Towns</th>
+          <th class="py-1">Typical peak</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr :for={county <- @counties} class="border-t">
+          <td class="py-1">{county.name}</td>
+          <td class="py-1">{county.town_count}</td>
+          <td class="py-1">{county.peak}</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+</article>
