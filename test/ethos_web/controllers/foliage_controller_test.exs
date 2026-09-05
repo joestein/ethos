@@ -19,7 +19,12 @@ defmodule EthosWeb.FoliageControllerTest do
       html = conn |> get(~p"/foliage") |> html_response(200)
 
       for route <- Ethos.Foliage.routes() do
-        assert html =~ route.name
+        # HEEx escapes route names, and one of the seven is
+        # "New Haven & Neighborhood" — so compare against what the page
+        # actually contains, rather than turning escaping off to match.
+        escaped = route.name |> Phoenix.HTML.html_escape() |> Phoenix.HTML.safe_to_string()
+
+        assert html =~ escaped
         assert html =~ ~p"/foliage/#{route.slug}"
       end
     end
