@@ -1,7 +1,7 @@
 defmodule Ethos.Seeds.ConnecticutPlacesTest do
   use Ethos.DataCase, async: true
 
-  alias Ethos.Places
+  alias Ethos.{Destinations, Places}
   alias Ethos.Seeds.ConnecticutPlaces
 
   # 50 places for the five town guides, plus the 16 Woodbury antiques dealers
@@ -22,8 +22,16 @@ defmodule Ethos.Seeds.ConnecticutPlacesTest do
     assert %{kind: "bnb", county_slug: "litchfield-county"} =
              Places.get_place_by_slug!("1754-house-woodbury")
 
-    for town <- ~w(waterbury middlebury danbury southbury woodbury) do
-      assert Places.list_places(town_slug: town) != []
+    for path <- [
+          "united-states/connecticut/new-haven-county/waterbury",
+          "united-states/connecticut/new-haven-county/middlebury",
+          "united-states/connecticut/fairfield-county/danbury",
+          "united-states/connecticut/new-haven-county/southbury",
+          "united-states/connecticut/litchfield-county/woodbury"
+        ] do
+      node = Destinations.get_by_path(path)
+      assert node, "expected a destination node at #{path}"
+      assert Places.list_places(destination_id: node.id) != []
     end
   end
 

@@ -8,6 +8,8 @@ defmodule Ethos.Badges do
   import Ecto.Query, warn: false
   require Logger
 
+  alias Ethos.Destinations
+  alias Ethos.Destinations.Destination
   alias Ethos.Repo
   alias Ethos.Badges.UserBadge
   alias Ethos.Places
@@ -56,41 +58,69 @@ defmodule Ethos.Badges do
   defp town_defs do
     Repo.all(
       from p in Place,
+        join: d in assoc(p, :destination_node),
         where: p.status == "open",
-        group_by: [p.town, p.town_slug],
+        group_by: [p.destination_id, d.slug, d.name],
         having: count(p.id) >= 3,
-        select: %{town: p.town, town_slug: p.town_slug, count: count(p.id)}
+        select: %{
+          destination_id: p.destination_id,
+          slug: d.slug,
+          name: d.name,
+          count: count(p.id)
+        }
     )
     |> Enum.map(fn t ->
-      o = Map.get(@town_overrides, t.town_slug, %{})
+      o = Map.get(@town_overrides, t.slug, %{})
       threshold = Map.get(o, :threshold, min(5, t.count))
 
       %{
-        key: "explorer-#{t.town_slug}",
-        name: Map.get(o, :name, "#{t.town} Explorer"),
+        key: "explorer-#{t.slug}",
+        name: Map.get(o, :name, "#{t.name} Explorer"),
         emoji: Map.get(o, :emoji, "🧭"),
-        description: "Check off #{threshold} places in #{t.town}.",
-        rule: {:town, t.town_slug, threshold}
+        description: "Check off #{threshold} places in #{t.name}.",
+        rule: {:town, t.destination_id, threshold}
       }
     end)
   end
 
+  # A "county" in the old triple was a `(state_slug, county_slug)` pair that a
+  # place carried directly, so the badge fell out of one `group_by` over
+  # `places`. A node has no such shortcut: a county-tier destination (kind
+  # "county", "borough" or "city") is an *ancestor* of the town nodes places
+  # actually attach to, so completing it means every open place under every
+  # node in its subtree, not just places attached to the county node itself.
+  # `Destinations.descendant_paths/1` is what makes that subtree visible —
+  # without it a five-town county would only ever see the one town, if any,
+  # whose places happened to hang directly off the county node.
   defp county_defs do
-    Repo.all(
-      from p in Place,
-        where: p.status == "open",
-        group_by: [p.state_slug, p.county_slug, p.county],
-        select: %{state_slug: p.state_slug, county_slug: p.county_slug, county: p.county}
-    )
-    |> Enum.map(fn c ->
+    Repo.all(from d in Destination, where: d.kind in ~w(county borough city))
+    |> Enum.map(fn node -> {node, node_ids(node)} end)
+    |> Enum.map(fn {node, ids} -> {node, ids, Places.count_open_places_in_nodes(ids)} end)
+    |> Enum.filter(fn {_node, _ids, count} -> count > 0 end)
+    |> Enum.map(fn {node, ids, _count} ->
       %{
-        key: "county-complete-#{c.county_slug}",
-        name: "#{c.county} Complete",
+        key: "county-complete-#{node.slug}",
+        name: "#{node.name} Complete",
         emoji: "🗺️",
-        description: "Check off every open place in #{c.county}.",
-        rule: {:county_complete, c.state_slug, c.county_slug}
+        description: "Check off every open place in #{node.name}.",
+        rule: {:county_complete, ids}
       }
     end)
+  end
+
+  # A county-tier node plus every node beneath it, as ids. `descendant_paths/1`
+  # returns paths rather than ids or records, because that is what lets it be
+  # one `LIKE` query regardless of subtree depth; resolving each path back to a
+  # node is the price of that.
+  defp node_ids(%Destination{id: id} = node) do
+    ids =
+      node
+      |> Destinations.descendant_paths()
+      |> Enum.map(&Destinations.get_by_path/1)
+      |> Enum.reject(&is_nil/1)
+      |> Enum.map(& &1.id)
+
+    [id | ids]
   end
 
   @doc """
@@ -117,18 +147,17 @@ defmodule Ethos.Badges do
 
   defp rule_met?({:total, n}, user, _place), do: Visits.count_for_user(user) >= n
 
-  defp rule_met?({:town, town_slug, n}, user, _place),
-    do: Visits.count_for_user_by_town(user, town_slug) >= n
+  defp rule_met?({:town, node_id, n}, user, _place),
+    do: Visits.count_for_user_by_node(user, node_id) >= n
 
   defp rule_met?({:kinds, kinds, n}, user, _place),
     do: Visits.count_for_user_by_kinds(user, kinds) >= n
 
-  defp rule_met?({:county_complete, state_slug, county_slug}, user, place) do
-    # Only worth evaluating for the county just visited.
-    place.state_slug == state_slug and place.county_slug == county_slug and
-      Places.count_open_places_in_county(state_slug, county_slug) > 0 and
-      Visits.count_for_user_in_county(user, state_slug, county_slug) >=
-        Places.count_open_places_in_county(state_slug, county_slug)
+  defp rule_met?({:county_complete, ids}, user, place) do
+    # Only worth evaluating for the county the place just visited belongs to.
+    place.destination_id in ids and
+      Places.count_open_places_in_nodes(ids) > 0 and
+      Visits.count_for_user_in_nodes(user, ids) >= Places.count_open_places_in_nodes(ids)
   end
 
   defp insert_badge(user, def) do

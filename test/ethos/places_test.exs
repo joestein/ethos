@@ -1,6 +1,7 @@
 defmodule Ethos.PlacesTest do
   use Ethos.DataCase, async: true
 
+  alias Ethos.Destinations
   alias Ethos.Places
 
   @valid %{
@@ -15,6 +16,43 @@ defmodule Ethos.PlacesTest do
     official_url: "https://palacetheaterct.org",
     status: "open"
   }
+
+  defp node!(path, name, kind \\ "town", parent \\ nil) do
+    Destinations.upsert_destination!(%{
+      path: path,
+      name: name,
+      kind: kind,
+      intro: "#{name}.",
+      parent_id: parent && parent.id
+    })
+  end
+
+  # Attaches a place to `node` by `destination_id`, leaving `Places.upsert_place!/1`
+  # to derive the legacy `town`/`state`/`county` triple from the node's ancestry.
+  defp place_in(node, slug, name, overrides \\ %{}) do
+    Places.upsert_place!(
+      Map.merge(
+        %{
+          slug: slug,
+          name: name,
+          kind: "museum",
+          summary: "x",
+          destination_id: node.id
+        },
+        overrides
+      )
+    )
+  end
+
+  defp seed_town(node, count) do
+    for n <- 1..count do
+      place_in(
+        node,
+        "waterbury-place-#{n}",
+        "Waterbury Place #{String.pad_leading(to_string(n), 2, "0")}"
+      )
+    end
+  end
 
   test "upsert_place! inserts, derives slugs, and is idempotent" do
     place = Places.upsert_place!(@valid)
@@ -67,133 +105,136 @@ defmodule Ethos.PlacesTest do
     end
   end
 
-  test "list_places filters and count_open_places_in_county" do
-    Places.upsert_place!(@valid)
+  test "list_places filters and count_open_places_in_node" do
+    waterbury = node!("connecticut/waterbury", "Waterbury")
+    litchfield = node!("connecticut/litchfield-county", "Litchfield County", "county")
 
-    Places.upsert_place!(%{
-      @valid
-      | slug: "mattatuck-museum",
-        name: "Mattatuck Museum",
-        kind: "museum"
-    })
+    Places.upsert_place!(Map.put(@valid, :destination_id, waterbury.id))
 
-    Places.upsert_place!(%{
-      @valid
-      | slug: "glebe-house",
-        name: "Glebe House",
-        kind: "museum",
-        town: "Woodbury",
-        county: "Litchfield County",
-        status: "closed"
-    })
+    Places.upsert_place!(
+      %{
+        @valid
+        | slug: "mattatuck-museum",
+          name: "Mattatuck Museum",
+          kind: "museum"
+      }
+      |> Map.put(:destination_id, waterbury.id)
+    )
 
-    assert length(Places.list_places(town_slug: "waterbury")) == 2
+    Places.upsert_place!(
+      %{
+        @valid
+        | slug: "glebe-house",
+          name: "Glebe House",
+          kind: "museum",
+          town: "Woodbury",
+          county: "Litchfield County",
+          status: "closed"
+      }
+      |> Map.put(:destination_id, litchfield.id)
+    )
+
+    assert length(Places.list_places(destination_id: waterbury.id)) == 2
     assert [%{name: "Mattatuck Museum"}] = Places.list_places(kind: "museum", status: "open")
     assert length(Places.list_places(kinds: ["museum", "theater"])) == 3
-    assert Places.count_open_places_in_county("connecticut", "new-haven-county") == 2
-    assert Places.count_open_places_in_county("connecticut", "litchfield-county") == 0
+    assert Places.count_open_places_in_node(waterbury.id) == 2
+    assert Places.count_open_places_in_node(litchfield.id) == 0
   end
 
-  defp seed_town(count) do
-    for n <- 1..count do
-      Places.upsert_place!(%{
-        @valid
-        | slug: "waterbury-place-#{n}",
-          name: "Waterbury Place #{String.pad_leading(to_string(n), 2, "0")}"
-      })
-    end
+  test "count_open_places_in_nodes sums across a set of nodes" do
+    waterbury = node!("connecticut/waterbury", "Waterbury")
+    woodbury = node!("connecticut/woodbury", "Woodbury")
+    elsewhere = node!("connecticut/danbury", "Danbury")
+
+    place_in(waterbury, "wtby-a", "A")
+    place_in(woodbury, "wdby-a", "B")
+    place_in(woodbury, "wdby-b", "C", %{status: "closed"})
+    place_in(elsewhere, "danbury-a", "D")
+
+    assert Places.count_open_places_in_nodes([waterbury.id, woodbury.id]) == 2
   end
 
   describe "list_siblings/2" do
+    test "siblings are places sharing a destination node" do
+      node =
+        Destinations.upsert_destination!(%{
+          path: "italy/lazio/rome/monti",
+          name: "Monti",
+          kind: "neighborhood",
+          intro: "Monti."
+        })
+
+      other =
+        Destinations.upsert_destination!(%{
+          path: "italy/lazio/rome/trastevere",
+          name: "Trastevere",
+          kind: "neighborhood",
+          intro: "Trastevere."
+        })
+
+      a = place_in(node, "sibling-a", "A")
+      b = place_in(node, "sibling-b", "B")
+      _elsewhere = place_in(other, "sibling-c", "C")
+
+      assert Enum.map(Places.list_siblings(a), & &1.slug) == [b.slug]
+    end
+
     test "returns other open places in the same town, by name, excluding itself" do
-      palace = Places.upsert_place!(@valid)
+      waterbury = node!("connecticut/waterbury", "Waterbury")
+      woodbury = node!("connecticut/woodbury", "Woodbury")
 
-      mattatuck =
-        Places.upsert_place!(%{
-          @valid
-          | slug: "mattatuck-museum",
-            name: "Mattatuck Museum",
-            kind: "museum"
-        })
+      palace =
+        place_in(waterbury, "palace-theater-waterbury", "Palace Theater", %{kind: "theater"})
 
-      _other_town =
-        Places.upsert_place!(%{
-          @valid
-          | slug: "glebe-house",
-            name: "Glebe House",
-            kind: "museum",
-            town: "Woodbury",
-            county: "Litchfield County"
-        })
-
-      _closed =
-        Places.upsert_place!(%{
-          @valid
-          | slug: "abbots-frozen-custard",
-            name: "Abbots",
-            kind: "restaurant",
-            status: "closed"
-        })
+      mattatuck = place_in(waterbury, "mattatuck-museum", "Mattatuck Museum")
+      _other_town = place_in(woodbury, "glebe-house", "Glebe House")
+      _closed = place_in(waterbury, "abbots-frozen-custard", "Abbots", %{status: "closed"})
 
       assert [%{slug: "mattatuck-museum"}] = Places.list_siblings(palace)
       assert [%{slug: "palace-theater-waterbury"}] = Places.list_siblings(mattatuck)
     end
 
-    # `town_slug` is not a town. Washington, Connecticut and Washington,
-    # District of Columbia both derive `town_slug: "washington"`, as do Madison,
-    # Connecticut and Madison, Brooklyn — so a town-only filter put Nationals
-    # Park in a Litchfield County town's "More in Washington", and Connecticut
+    # A destination node is one point in the tree, not a pair of strings that
+    # can collide across regions — two nodes named "Washington" are two
+    # distinct rows with two distinct ids, whatever their names print as. The
+    # old slug-pair design let Washington, Connecticut and Washington, D.C.
+    # collide on `town_slug: "washington"`, putting Nationals Park in a
+    # Litchfield County town's "More in Washington" and four Connecticut
     # museums in Nationals Park's. Twelve pages of wrong geography, no error.
-    test "two towns of the same name in different states are not siblings" do
+    test "two nodes of the same name are not siblings" do
+      ct_washington = node!("connecticut/washington", "Washington")
+      dc_washington = node!("district-of-columbia/washington", "Washington")
+
       ct =
-        Places.upsert_place!(%{
-          @valid
-          | slug: "gunn-historical-museum",
-            name: "Gunn Historical Museum",
-            kind: "museum",
-            town: "Washington",
-            state: "Connecticut",
-            county: "Litchfield County"
+        place_in(ct_washington, "gunn-historical-museum", "Gunn Historical Museum", %{
+          kind: "museum"
         })
 
       dc =
-        Places.upsert_place!(%{
-          @valid
-          | slug: "nationals-park",
-            name: "Nationals Park",
-            kind: "stadium",
-            town: "Washington",
-            state: "District of Columbia",
-            county: "District of Columbia"
-        })
+        place_in(dc_washington, "nationals-park", "Nationals Park", %{kind: "stadium"})
 
-      assert ct.town_slug == dc.town_slug
+      assert ct_washington.name == dc_washington.name
+      refute ct.destination_id == dc.destination_id
       assert Places.list_siblings(ct) == []
       assert Places.list_siblings(dc) == []
 
       same_town =
-        Places.upsert_place!(%{
-          @valid
-          | slug: "gw-tavern",
-            name: "G.W. Tavern",
-            kind: "restaurant",
-            town: "Washington",
-            state: "Connecticut",
-            county: "Litchfield County"
-        })
+        place_in(ct_washington, "gw-tavern", "G.W. Tavern", %{kind: "restaurant"})
 
       assert [%{slug: "gw-tavern"}] = Places.list_siblings(ct)
       assert [%{slug: "gunn-historical-museum"}] = Places.list_siblings(same_town)
       assert Places.list_siblings(dc) == []
     end
 
-    test "returns [] for a town with only one place" do
+    test "returns [] for a place with no destination node" do
       only = Places.upsert_place!(@valid)
+      assert only.destination_id == nil
       assert Places.list_siblings(only) == []
     end
 
     test "caps the number of siblings returned" do
-      seed_town(12)
+      waterbury = node!("connecticut/waterbury", "Waterbury")
+      seed_town(waterbury, 12)
 
       anchor = Places.get_place_by_slug!("waterbury-place-1")
 
@@ -210,7 +251,8 @@ defmodule Ethos.PlacesTest do
     # Bronx has 40 places; 22 of them were unreachable by navigation. The window
     # rotates instead: each place shows the eight that follow it, wrapping.
     test "the union of every place's siblings covers the whole town" do
-      places = seed_town(20)
+      waterbury = node!("connecticut/waterbury", "Waterbury")
+      places = seed_town(waterbury, 20)
       all_slugs = places |> Enum.map(& &1.slug) |> MapSet.new()
 
       covered =
@@ -224,7 +266,8 @@ defmodule Ethos.PlacesTest do
     end
 
     test "every place in the town has at least one inbound sibling link" do
-      places = seed_town(20)
+      waterbury = node!("connecticut/waterbury", "Waterbury")
+      places = seed_town(waterbury, 20)
 
       inbound =
         Map.new(places, fn place ->
@@ -244,7 +287,8 @@ defmodule Ethos.PlacesTest do
     end
 
     test "the window rotates: siblings are the eight successors by name, wrapping" do
-      seed_town(20)
+      waterbury = node!("connecticut/waterbury", "Waterbury")
+      seed_town(waterbury, 20)
 
       anchor = Places.get_place_by_slug!("waterbury-place-15")
 
@@ -274,7 +318,8 @@ defmodule Ethos.PlacesTest do
     end
 
     test "a town smaller than the cap still shows every other place" do
-      places = seed_town(5)
+      waterbury = node!("connecticut/waterbury", "Waterbury")
+      places = seed_town(waterbury, 5)
 
       for place <- places do
         siblings = Places.list_siblings(place)
@@ -292,23 +337,16 @@ defmodule Ethos.PlacesTest do
     # returning the same rows proves nothing: Postgres does that anyway for an
     # unchanged table, so that assertion passes with the tiebreak deleted.
     test "two places sharing a name in one town order by id, deterministically" do
+      waterbury = node!("connecticut/waterbury", "Waterbury")
+
       twin_a =
-        Places.upsert_place!(%{
-          @valid
-          | slug: "sacred-heart-church-waterbury",
-            name: "Sacred Heart",
-            kind: "historic-site"
+        place_in(waterbury, "sacred-heart-church-waterbury", "Sacred Heart", %{
+          kind: "historic-site"
         })
 
-      twin_b =
-        Places.upsert_place!(%{
-          @valid
-          | slug: "sacred-heart-school-waterbury",
-            name: "Sacred Heart",
-            kind: "museum"
-        })
+      twin_b = place_in(waterbury, "sacred-heart-school-waterbury", "Sacred Heart")
 
-      seed_town(6)
+      seed_town(waterbury, 6)
 
       anchor = Places.get_place_by_slug!("waterbury-place-1")
       [lower, higher] = Enum.sort_by([twin_a, twin_b], & &1.id)
@@ -335,20 +373,18 @@ defmodule Ethos.PlacesTest do
     # rather than contingent on the corpus not containing something.
     for block <- [2, 5, 9, 12, 20] do
       test "a town containing an equal-name block of #{block} is fully covered" do
+        waterbury = node!("connecticut/waterbury", "Waterbury")
+
         block =
           for n <- 1..unquote(block) do
-            Places.upsert_place!(%{
-              @valid
-              | slug: "sacred-heart-#{n}-waterbury",
-                name: "Sacred Heart"
-            })
+            place_in(waterbury, "sacred-heart-#{n}-waterbury", "Sacred Heart")
           end
 
         # Three places outside the block, so the block's members compete for
         # window slots. Without them a block of exactly nine hides the defect:
         # each anchor excludes itself, leaving exactly eight, and the cap never
         # bites. With them, the name-only predicate orphans one.
-        places = block ++ seed_town(3)
+        places = block ++ seed_town(waterbury, 3)
 
         covered =
           places

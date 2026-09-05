@@ -29,12 +29,12 @@ defmodule Ethos.Visits do
     Repo.one(from v in PlaceVisit, where: v.user_id == ^user.id, select: count(v.id))
   end
 
-  def count_for_user_by_town(user, town_slug) do
+  def count_for_user_by_node(user, destination_id) do
     Repo.one(
       from v in PlaceVisit,
         join: p in Place,
         on: v.place_id == p.id,
-        where: v.user_id == ^user.id and p.town_slug == ^town_slug,
+        where: v.user_id == ^user.id and p.destination_id == ^destination_id,
         select: count(v.id)
     )
   end
@@ -49,14 +49,17 @@ defmodule Ethos.Visits do
     )
   end
 
-  def count_for_user_in_county(user, state_slug, county_slug) do
+  @doc """
+  A user's visit count across every place whose `destination_id` is in
+  `node_ids` — the multi-node counterpart to `count_for_user_by_node/2`, for a
+  caller (a county-tier badge) whose subject spans more than one node.
+  """
+  def count_for_user_in_nodes(user, node_ids) do
     Repo.one(
       from v in PlaceVisit,
         join: p in Place,
         on: v.place_id == p.id,
-        where:
-          v.user_id == ^user.id and p.state_slug == ^state_slug and
-            p.county_slug == ^county_slug,
+        where: v.user_id == ^user.id and p.destination_id in ^node_ids,
         select: count(v.id)
     )
   end

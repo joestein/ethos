@@ -2,19 +2,73 @@ defmodule Ethos.BadgesTest do
   use Ethos.DataCase, async: true
 
   import Ethos.AccountsFixtures
-  alias Ethos.{Badges, Places, Visits}
+  alias Ethos.{Badges, Destinations, Places, Visits}
 
-  defp place!(slug, overrides \\ %{}) do
+  defp node!(path, name, kind, parent) do
+    Destinations.upsert_destination!(%{
+      path: path,
+      name: name,
+      kind: kind,
+      intro: "#{name}.",
+      parent_id: parent && parent.id
+    })
+  end
+
+  setup do
+    connecticut = node!("connecticut", "Connecticut", "region", nil)
+
+    new_haven_county =
+      node!("connecticut/new-haven-county", "New Haven County", "county", connecticut)
+
+    litchfield_county =
+      node!("connecticut/litchfield-county", "Litchfield County", "county", connecticut)
+
+    waterbury =
+      node!("connecticut/new-haven-county/waterbury", "Waterbury", "town", new_haven_county)
+
+    middlebury =
+      node!("connecticut/new-haven-county/middlebury", "Middlebury", "town", new_haven_county)
+
+    woodbury =
+      node!("connecticut/litchfield-county/woodbury", "Woodbury", "town", litchfield_county)
+
+    bethlehem =
+      node!("connecticut/litchfield-county/bethlehem", "Bethlehem", "town", litchfield_county)
+
+    xtown = node!("connecticut/litchfield-county/xtown", "Xtown", "town", litchfield_county)
+
+    new_york = node!("new-york", "New York", "region", nil)
+    manhattan = node!("new-york/manhattan", "Manhattan", "borough", new_york)
+    soho = node!("new-york/manhattan/soho", "SoHo", "neighborhood", manhattan)
+    harlem = node!("new-york/manhattan/harlem", "Harlem", "neighborhood", manhattan)
+
+    two_bridges =
+      node!("new-york/manhattan/two-bridges", "Two Bridges", "neighborhood", manhattan)
+
+    %{
+      new_haven_county: new_haven_county,
+      litchfield_county: litchfield_county,
+      waterbury: waterbury,
+      middlebury: middlebury,
+      woodbury: woodbury,
+      bethlehem: bethlehem,
+      xtown: xtown,
+      manhattan: manhattan,
+      soho: soho,
+      harlem: harlem,
+      two_bridges: two_bridges
+    }
+  end
+
+  defp place!(node, slug, overrides \\ %{}) do
     Places.upsert_place!(
       Map.merge(
         %{
           slug: slug,
           name: slug,
           kind: "museum",
-          town: "Waterbury",
-          state: "Connecticut",
-          county: "New Haven County",
-          summary: "x"
+          summary: "x",
+          destination_id: node.id
         },
         overrides
       )
@@ -26,19 +80,21 @@ defmodule Ethos.BadgesTest do
     Badges.check_and_award(user, place)
   end
 
-  test "first visit awards first-steps only (with county not yet complete)" do
+  test "first visit awards first-steps only (with county not yet complete)", %{
+    waterbury: waterbury
+  } do
     user = user_fixture()
-    place!("p1")
-    place!("p2")
+    place!(waterbury, "p1")
+    place!(waterbury, "p2")
 
     awarded = visit!(user, Places.get_place_by_slug!("p1"))
     assert Enum.map(awarded, & &1.key) == ["first-steps"]
   end
 
-  test "5th Waterbury place awards explorer-waterbury at the boundary" do
+  test "5th Waterbury place awards explorer-waterbury at the boundary", %{waterbury: waterbury} do
     user = user_fixture()
-    places = for i <- 1..5, do: place!("wtby-#{i}")
-    extra = place!("wtby-6")
+    places = for i <- 1..5, do: place!(waterbury, "wtby-#{i}")
+    extra = place!(waterbury, "wtby-6")
 
     [p1, p2, p3, p4, p5] = places
     visit!(user, p1)
@@ -54,7 +110,7 @@ defmodule Ethos.BadgesTest do
              false
   end
 
-  test "foodie counts restaurant/cafe/brewery kinds" do
+  test "foodie counts restaurant/cafe/brewery kinds", %{waterbury: waterbury} do
     user = user_fixture()
 
     for {slug, kind} <- [
@@ -63,27 +119,51 @@ defmodule Ethos.BadgesTest do
           {"r3", "brewery"},
           {"r4", "restaurant"}
         ] do
-      visit!(user, place!(slug, %{kind: kind}))
+      visit!(user, place!(waterbury, slug, %{kind: kind}))
     end
 
-    awarded = visit!(user, place!("r5", %{kind: "restaurant"}))
+    awarded = visit!(user, place!(waterbury, "r5", %{kind: "restaurant"}))
     assert "foodie" in Enum.map(awarded, & &1.key)
   end
 
-  test "county-complete awards when every open place in the county is visited" do
+  test "county-complete awards when every open place in the county is visited", %{
+    woodbury: woodbury
+  } do
     user = user_fixture()
-    a = place!("only-a", %{town: "Woodbury", county: "Litchfield County"})
-    b = place!("only-b", %{town: "Woodbury", county: "Litchfield County"})
-    place!("closed-c", %{town: "Woodbury", county: "Litchfield County", status: "closed"})
+    a = place!(woodbury, "only-a")
+    b = place!(woodbury, "only-b")
+    place!(woodbury, "closed-c", %{status: "closed"})
 
     visit!(user, a)
     awarded = visit!(user, b)
     assert "county-complete-litchfield-county" in Enum.map(awarded, & &1.key)
   end
 
-  test "un-visiting does not revoke badges" do
+  # The county-tier badge spans every town beneath it, not just the town the
+  # place happens to be attached to — this is the behavior
+  # `Destinations.descendant_paths/1` makes possible: Woodbury and Bethlehem
+  # are different destination nodes, both under Litchfield County, and neither
+  # alone completes it.
+  test "county-complete aggregates open places across every town in the county", %{
+    woodbury: woodbury,
+    bethlehem: bethlehem
+  } do
     user = user_fixture()
-    p = place!("keep")
+    a = place!(woodbury, "woodbury-a")
+    b = place!(bethlehem, "bethlehem-a")
+
+    assert visit!(user, a)
+           |> Enum.map(& &1.key)
+           |> Enum.member?("county-complete-litchfield-county") ==
+             false
+
+    awarded = visit!(user, b)
+    assert "county-complete-litchfield-county" in Enum.map(awarded, & &1.key)
+  end
+
+  test "un-visiting does not revoke badges", %{waterbury: waterbury} do
+    user = user_fixture()
+    p = place!(waterbury, "keep")
     awarded_keys = visit!(user, p) |> Enum.map(& &1.key) |> Enum.sort()
     # sole open place in its county: both badges land on the first visit
     assert awarded_keys == ["county-complete-new-haven-county", "first-steps"]
@@ -94,48 +174,61 @@ defmodule Ethos.BadgesTest do
              awarded_keys
   end
 
-  test "definitions include dynamic county badges for counties with open places" do
-    place!("x1")
+  test "definitions include dynamic county badges for counties with open places", %{
+    waterbury: waterbury
+  } do
+    place!(waterbury, "x1")
     keys = Badges.definitions() |> Enum.map(& &1.key)
     assert "county-complete-new-haven-county" in keys
     assert "first-steps" in keys
   end
 
   describe "dynamic town explorer badges" do
-    test "CT towns keep their historical names and thresholds" do
+    test "CT towns keep their historical names and thresholds", %{
+      waterbury: waterbury,
+      middlebury: middlebury
+    } do
       # a town needs >=3 open places for its dynamic badge to exist at all
-      for i <- 1..3, do: place!("w-#{i}")
+      for i <- 1..3, do: place!(waterbury, "w-#{i}")
       # Middlebury: give it 5+ open places, threshold must still be 3
-      for i <- 1..5, do: place!("mid-#{i}", %{town: "Middlebury"})
+      for i <- 1..5, do: place!(middlebury, "mid-#{i}")
 
       defs = Map.new(Badges.definitions(), &{&1.key, &1})
 
-      assert %{name: "Brass City Explorer", rule: {:town, "waterbury", 5}} =
+      assert %{name: "Brass City Explorer", rule: {:town, town_id, 5}} =
                defs["explorer-waterbury"]
 
-      assert %{name: "Middlebury Explorer", rule: {:town, "middlebury", 3}} =
+      assert town_id == waterbury.id
+
+      assert %{name: "Middlebury Explorer", rule: {:town, town_id2, 3}} =
                defs["explorer-middlebury"]
+
+      assert town_id2 == middlebury.id
     end
 
-    test "new towns get default names and min(5, count) thresholds; <3 places emit none" do
-      for i <- 1..3,
-          do: place!("soho-#{i}", %{town: "SoHo", state: "New York", county: "Manhattan"})
-
-      for i <- 1..7,
-          do: place!("harlem-#{i}", %{town: "Harlem", state: "New York", county: "Manhattan"})
-
-      place!("tiny-1", %{town: "Two Bridges", state: "New York", county: "Manhattan"})
+    test "new towns get default names and min(5, count) thresholds; <3 places emit none", %{
+      soho: soho,
+      harlem: harlem,
+      two_bridges: two_bridges
+    } do
+      for i <- 1..3, do: place!(soho, "soho-#{i}")
+      for i <- 1..7, do: place!(harlem, "harlem-#{i}")
+      place!(two_bridges, "tiny-1")
 
       defs = Map.new(Badges.definitions(), &{&1.key, &1})
 
-      assert %{name: "SoHo Explorer", rule: {:town, "soho", 3}} = defs["explorer-soho"]
-      assert %{name: "Harlem Explorer", rule: {:town, "harlem", 5}} = defs["explorer-harlem"]
+      assert %{name: "SoHo Explorer", rule: {:town, soho_id, 3}} = defs["explorer-soho"]
+      assert soho_id == soho.id
+
+      assert %{name: "Harlem Explorer", rule: {:town, harlem_id, 5}} = defs["explorer-harlem"]
+      assert harlem_id == harlem.id
+
       refute Map.has_key?(defs, "explorer-two-bridges")
     end
 
-    test "closed places don't count toward the dynamic threshold basis" do
-      for i <- 1..2, do: place!("x-#{i}", %{town: "Xtown"})
-      place!("x-closed", %{town: "Xtown", status: "closed"})
+    test "closed places don't count toward the dynamic threshold basis", %{xtown: xtown} do
+      for i <- 1..2, do: place!(xtown, "x-#{i}")
+      place!(xtown, "x-closed", %{status: "closed"})
 
       refute Enum.any?(Badges.definitions(), &(&1.key == "explorer-xtown"))
     end

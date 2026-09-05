@@ -98,15 +98,44 @@ defmodule EthosWeb.PlaceControllerTest do
   end
 
   test "renders a 'More in this town' section listing sibling places", %{conn: conn} do
-    Places.upsert_place!(@attrs)
+    country =
+      Ethos.Destinations.upsert_destination!(%{
+        path: "united-states",
+        name: "United States",
+        kind: "country",
+        intro: "United States."
+      })
 
-    Places.upsert_place!(%{
-      @attrs
-      | slug: "mattatuck-museum",
-        name: "Mattatuck Museum",
-        kind: "museum",
-        photos: []
-    })
+    region =
+      Ethos.Destinations.upsert_destination!(%{
+        path: "united-states/connecticut",
+        name: "Connecticut",
+        kind: "region",
+        intro: "Connecticut.",
+        parent_id: country.id
+      })
+
+    waterbury =
+      Ethos.Destinations.upsert_destination!(%{
+        path: "united-states/connecticut/waterbury",
+        name: "Waterbury",
+        kind: "town",
+        intro: "Waterbury.",
+        parent_id: region.id
+      })
+
+    Places.upsert_place!(Map.put(@attrs, :destination_id, waterbury.id))
+
+    Places.upsert_place!(
+      %{
+        @attrs
+        | slug: "mattatuck-museum",
+          name: "Mattatuck Museum",
+          kind: "museum",
+          photos: []
+      }
+      |> Map.put(:destination_id, waterbury.id)
+    )
 
     html = conn |> get(~p"/p/palace-theater-waterbury") |> html_response(200)
 
