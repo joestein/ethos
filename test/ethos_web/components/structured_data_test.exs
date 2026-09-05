@@ -871,10 +871,47 @@ defmodule EthosWeb.StructuredDataTest do
       # postcode-less ones — and by wave 3 the branch built for those carried
       # all 197 unchanged. Rome took three waves to reach the same point and
       # San Francisco needed none at all, being plain American.
-      assert length(emitted) == 4774
-      assert count.(& &1["streetAddress"]) == 4151
+      #
+      # Re-measured 2026-09-05 after golf wave 1, the first ten states of the
+      # fifty-state golf set — Washington, California, Nevada, Arizona, Idaho,
+      # Montana, Wyoming, Colorado, Utah and Alaska — which land 10 addressed
+      # places. That is 10, not 56: the ten files seed 56 places between them,
+      # but only ten carry an `address` field at all. The set's rule is that a
+      # street address publishes only where a source states one, and most of
+      # these courses are described by their own operators without a postal
+      # address — Chambers Bay, Pebble Beach Golf Links, Quintero, Shadow Creek
+      # and Black Desert all state their street in prose in the summary and
+      # leave the field unset, and Circling Raven has no address of its own
+      # separate from the resort's. This is the first region whose addressed
+      # count is a minority of its places.
+      #
+      #   * total 4774 -> 4784, +10.
+      #   * `streetAddress` 4151 -> 4161, +10. All of them.
+      #   * `postalCode` 3387 -> 3397, +10. All of them too — every one of the
+      #     ten is a plain American house-number-and-ZIP line, including
+      #     "27000 Arctic Valley Rd., JBER, AK 99505", whose locality is a
+      #     military installation's initialism and parses like any other.
+      #   * `is_nil(streetAddress)` unmoved at 623 and locality-only unmoved at
+      #     308, which is the same fact from the other two sides.
+      #
+      # GOLF WAVE 1 NEEDED NO PARSER WORK, but it needed two seed corrections to
+      # get there, and they are the reason to re-measure rather than to patch
+      # the number. Idaho's two addresses spelled the state out — "Hayden, Idaho
+      # 83835" — where every other American row in the corpus, all 2,249 of
+      # them, uses the two-letter code.
+      # `Ethos.Places.Address.parse/1` recovered no street line
+      # from either AND took the house number for the postal code, so Avondale
+      # Golf Club would have shipped `postalCode` "10745" and the Coeur d'Alene
+      # resort "37914". Both were normalised to "ID" in the seed rather than
+      # taught to the parser: the code is the corpus convention, and a parser
+      # that guesses at a five-digit run wherever it appears is not made safer
+      # by giving it more shapes to guess from. The failure mode is worth
+      # naming — a wrong street line is visibly wrong, a house number in a
+      # postal-code slot is not.
+      assert length(emitted) == 4784
+      assert count.(& &1["streetAddress"]) == 4161
       assert count.(&is_nil(&1["streetAddress"])) == 623
-      assert count.(& &1["postalCode"]) == 3387
+      assert count.(& &1["postalCode"]) == 3397
 
       # The largest behavioural delta this change ships: 302 places emit a
       # PostalAddress carrying only locality, region and country. Their full

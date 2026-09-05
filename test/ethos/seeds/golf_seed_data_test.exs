@@ -126,6 +126,27 @@ defmodule Ethos.Seeds.GolfSeedDataTest do
     "a 2.5 hours drive"
   ]
 
+  # The spelled-number gap in pattern 7. An author hit pattern 1 on
+  # "12-minute tee times", respelled it as "twelve-minute tee times" and
+  # published — the identical content in a form the gate could not see,
+  # because pattern 7's alternation enumerated eleven numbers and "twelve"
+  # was not one of them. The clause was DELETED from `golf/utah.json`, not
+  # rephrased and not allowlisted, and the alternation now runs one to
+  # ninety-nine. These are pinned as strings rather than as `@specimens`
+  # entries because the specimen list is one-per-pattern by construction and
+  # pattern 7 already has its specimen; a second entry would break the
+  # length assertion this file makes.
+  @spelled_minute_gap [
+    "twelve-minute tee times",
+    "an eleven minute walk to the range",
+    "a three-minute ride to the second course",
+    "two minutes south of the clubhouse",
+    "a seven-minute walk from the lodge",
+    "the shuttle runs every ninety minutes",
+    "a twenty-two minute drive",
+    "one minute from the first tee"
+  ]
+
   test "every banned pattern fires on its own specimen" do
     assert length(@specimens) == length(Ethos.GolfProse.patterns()),
            "one specimen per pattern, in order — #{length(@specimens)} specimens " <>
@@ -143,6 +164,13 @@ defmodule Ethos.Seeds.GolfSeedDataTest do
       assert Ethos.GolfProse.banned_phrases(text) != [],
              "hour-duration phrasing escaped the gate again: #{inspect(text)}. " <>
                "Patterns 21 and 22 exist because every one of these published clean."
+    end
+
+    for text <- @spelled_minute_gap do
+      assert Ethos.GolfProse.banned_phrases(text) != [],
+             "a spelled-out minute count escaped the gate again: #{inspect(text)}. " <>
+               "Pattern 7 covers one to ninety-nine because an author respelled " <>
+               "\"12-minute\" as \"twelve-minute\" and walked through the gap."
     end
   end
 
@@ -168,7 +196,17 @@ defmodule Ethos.Seeds.GolfSeedDataTest do
     "the Seaport Association runs 3-hour cruises to the lighthouse",
     "a 3-hour rain delay",
     "last ticket one hour before closing",
-    "a nineteenth-century six-hour clock"
+    "a nineteenth-century six-hour clock",
+    # Widening pattern 7 to spelled numbers must not spill onto the other
+    # things a number word attaches to. Measured: 0 non-journey minute
+    # strings in 492 corpus units, so minutes stay banned outright in BOTH
+    # numeral and word form, exactly as pattern 1 has always banned them.
+    "carts capable of fifteen miles per hour",
+    "a twelve-hole loop and a nine-hole short course",
+    "twelve months of the year",
+    "at least 48 hours in advance",
+    "book within 48 hours by calling the Pro Shop",
+    "180 days in advance"
   ]
 
   test "sourced, checkable spatial and time claims still publish" do

@@ -18,7 +18,42 @@ defmodule Ethos.GolfProse do
     ~r/\b(?:half[-\s]?(?:an\s+)?hour|quarter[-\s]?hour|an hour(?:\s+and\s+a\s+half)?)\b[^.]{0,40}\b(?:drive|ride|away|south|north|east|west|by car|by subway|by train|by ferry|to manhattan|to midtown)/i,
     ~r/\b(?:drive|ride|trip|commute)\s+of\s+(?:about|roughly|around)?\s*\d+\s*min/i,
     ~r/\b\d+\s*hours?\s+(?:drive|ride|away|south|north|east|west|by car|by subway|by train)/i,
-    ~r/\b(?:five|ten|fifteen|twenty|twenty[-\s]five|thirty|forty|forty[-\s]five|fifty|sixty|ninety)\s*[-–]?\s*minutes?\b/i,
+    # WIDENED. The alternation used to enumerate eleven spelled numbers and an
+    # author walked straight through the gap: "12-minute tee times" fired
+    # pattern 1, was respelled as "twelve-minute tee times", and published —
+    # identical content in a form the gate could not see. A gate that teaches
+    # authors to spell numbers out is worse than no gate, so the alternation
+    # now covers one through ninety-nine, and the Utah clause was DELETED
+    # rather than allowlisted (docs/site-builder.md §12's Dodger Stadium
+    # Express precedent: drop a minor sourced detail before widening a hole).
+    #
+    # MEASURED over all 492 corpus units — every `priv/seed_data/*/*.json` and
+    # every `lib/ethos/seeds/*.ex` — before being kept. The old alternation
+    # scored 31; the widened one scored 40 on the corpus as it stood, and 39
+    # after the Utah deletion below. All 9 newly-caught strings were read one
+    # by one and every one is a journey duration, the class this bans:
+    #
+    #   * hammersmith-and-fulham "two minutes south of the traffic"      (1)
+    #   * haringey "a seven-minute walk up Bruce Grove"                  (1)
+    #   * havering "the market bus stops as two minutes away",
+    #     "St George's Park two minutes away"                            (4)
+    #   * sutton "a three-minute walk" (Little Holland House)            (2)
+    #   * golf/utah "twelve-minute tee times"                            (1)
+    #
+    # Zero false positives: no "one minute of silence", no non-journey
+    # interval. Only the golf files are gated by this module, and after the
+    # Utah deletion the golf corpus is at 0 hits. The eight London strings are
+    # a real finding for the destination set, not a reason to narrow this.
+    #
+    # REJECTED on the same measurement: making spelled minutes conditional on
+    # a travel word, the way patterns 21/22 anchor hours. Minutes are banned
+    # unconditionally in numeral form by pattern 1 and always have been; making
+    # the word form conditional would leave "twelve-minute tee times" legal
+    # while "12-minute tee times" stayed banned — the exact asymmetry that
+    # produced this evasion. Hours are anchored because "open 24 hours" and "a
+    # 4-hour round" are ordinary facts; there is no comparable minutes idiom in
+    # this corpus (0 non-journey minute strings in 492 units).
+    ~r/\b(?:(?:twenty|thirty|forty|fifty|sixty|seventy|eighty|ninety)(?:[-\s](?:one|two|three|four|five|six|seven|eight|nine))?|ten|eleven|twelve|thirteen|fourteen|fifteen|sixteen|seventeen|eighteen|nineteen|one|two|three|four|five|six|seven|eight|nine)\s*[-–]?\s*minutes?\b/i,
     ~r/\b(?:short|quick|easy|brief)\s+(?:drive|ride|hop|trip|commute|walk|stroll)\b/i,
     ~r/\bwithin\s+(?:a\s+)?(?:short|quick|easy)\s+(?:drive|ride|trip|walk|stroll)\b/i,
     ~r/\b(?:reaches|gets you to|puts you in|takes you to)\b[^.]{0,40}\bin\s+(?:about\s+)?\d+/i,
