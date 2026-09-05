@@ -28,11 +28,14 @@ defmodule EthosWeb.UserRegistrationLiveTest do
       result =
         lv
         |> element("#registration_form")
-        |> render_change(user: %{"email" => "with spaces", "password" => "too short"})
+        |> render_change(
+          user: %{"username" => "no", "email" => "with spaces", "password" => "too short"}
+        )
 
       assert result =~ "Register"
       assert result =~ "must have the @ sign and no spaces"
       assert result =~ "should be at least 12 character"
+      assert result =~ "should be at least 3 character"
     end
   end
 
@@ -63,7 +66,30 @@ defmodule EthosWeb.UserRegistrationLiveTest do
       result =
         lv
         |> form("#registration_form",
-          user: %{"email" => user.email, "password" => "valid_password"}
+          user: %{
+            "username" => unique_username(),
+            "email" => user.email,
+            "password" => "valid_password"
+          }
+        )
+        |> render_submit()
+
+      assert result =~ "has already been taken"
+    end
+
+    test "renders an error for a duplicated username", %{conn: conn} do
+      {:ok, lv, _html} = live(conn, ~p"/users/register")
+
+      user_fixture(%{username: "buoewe"})
+
+      result =
+        lv
+        |> form("#registration_form",
+          user: %{
+            "username" => "buoewe",
+            "email" => unique_user_email(),
+            "password" => "valid_password_here"
+          }
         )
         |> render_submit()
 
