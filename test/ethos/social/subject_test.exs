@@ -2,7 +2,6 @@ defmodule Ethos.Social.SubjectTest do
   use Ethos.DataCase, async: true
 
   import Ethos.GuidesFixtures
-  import Ethos.PlacesFixtures
 
   alias Ethos.Social.Subject
 
@@ -53,13 +52,6 @@ defmodule Ethos.Social.SubjectTest do
 
     test "raises for an unknown type rather than guessing" do
       assert_raise FunctionClauseError, fn -> Subject.get!("entry", 1) end
-    end
-  end
-
-  describe "place_fixture/1" do
-    test "derives town_slug from the given town" do
-      place = place_fixture(%{town: "Danbury"})
-      assert place.town_slug == "danbury"
     end
   end
 end

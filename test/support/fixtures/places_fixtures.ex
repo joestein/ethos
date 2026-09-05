@@ -1,4 +1,6 @@
 defmodule Ethos.PlacesFixtures do
+  # upsert_place!/1 UPDATES on a matching slug rather than raising, so the slug below
+  # must be unique per call to guarantee a fresh place each time.
   def place_fixture(attrs \\ %{}) do
     n = System.unique_integer([:positive])
 
