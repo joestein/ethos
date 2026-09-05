@@ -2,7 +2,7 @@ defmodule EthosWeb.DestinationController do
   use EthosWeb, :controller
 
   alias Ethos.{Destinations, Guides}
-  alias EthosWeb.StructuredData
+  alias EthosWeb.{DestinationHTML, StructuredData}
 
   def index(conn, _params) do
     title = "Destinations"
@@ -69,15 +69,31 @@ defmodule EthosWeb.DestinationController do
 
   # A node path is many segments, and `~p` percent-encodes a `/` inside a single
   # interpolated string. Interpolating the segment LIST is what expands to the
-  # glob route's real URL.
+  # glob route's real URL. (`url/1` demands a literal `~p`, so this cannot
+  # route through `DestinationHTML.node_path/1` the way the 301 below does.)
   defp node_url(path) when is_binary(path),
     do: url(~p"/destinations/#{String.split(path, "/")}")
 
-  # Task 9 turns this into a legacy-path lookup and a 301. Until then an
-  # unknown path is a plain 404 — exactly what the three routes this replaces
-  # served for a slug they did not recognise.
-  defp redirect_or_404(conn, _path) do
-    conn |> put_status(:not_found) |> put_view(EthosWeb.ErrorHTML) |> render(:"404")
+  # Resolution order: an exact node renders — `show/2` has already tried that
+  # and come back nil — a path a node used to live at 301s, and anything else
+  # is a 404. `/destinations/italy` is the case that ordering protects: "italy"
+  # is a real country node and a legacy path of nothing, so it renders its own
+  # hub rather than following Rome.
+  #
+  # Permanent, not temporary: these URLs are indexed and the move is one-way.
+  # `Location` is built through `node_path/1` for the same reason links are —
+  # `/destinations/united-states%2Fillinois%2Fchicago` would 301 every indexed
+  # URL onto a 404.
+  defp redirect_or_404(conn, path) do
+    case Destinations.get_by_legacy_path(path) do
+      nil ->
+        conn |> put_status(:not_found) |> put_view(EthosWeb.ErrorHTML) |> render(:"404")
+
+      node ->
+        conn
+        |> put_status(:moved_permanently)
+        |> redirect(to: DestinationHTML.node_path(node.path))
+    end
   end
 
   # Task 10 builds the real trail out of `ancestors`. Until then every hub
