@@ -15,7 +15,8 @@
 ## Global Constraints
 
 - **`MIX_TEST_PARTITION=_golf` is required for every `mix test` in this worktree.** The shared `ethos_test` database belongs to another branch (its `users` table has `username`, `username_provisional`, `trusted_at`, `banned_at`, `ban_reason`, none of which exist in any migration here). Without the partition, 333 of 746 tests fail on a not-null violation unrelated to this work.
-- Baseline before Task 1: **746 tests, 0 failures, 4 excluded.** Every task ends with the full suite green and `mix format` clean.
+- Baseline before Task 1: **746 tests, 0 failures, 4 excluded.** Every task ends with the full suite green.
+- **Formatting binds the files a task touches, not the repo.** `origin/main` is not `mix format --check-formatted` clean at base — there is pre-existing drift in the Rome, London and San Francisco seed-data tests and the London photo task, none of which this plan touches. Run `mix format <the files you changed>` and verify with `mix format --check-formatted <those same files>`. **Never run a bare repo-wide `mix format`**: it reformats six unrelated files and pulls their churn into your commit.
 - Guide slugs: `{state-slug}-golf-guide`. Guide `destination`: `"{Basecamp City}, {State}"`. Guide `state`: the state's full name. Guide `county`: researched, never derived.
 - Seed files: `priv/seed_data/golf/{state-slug}.json`, exactly the shape of `priv/seed_data/manhattan/*.json`.
 - Photos: Wikimedia Commons **Public domain / CC0 / CC BY x.y / CC BY-SA x.y only**, attributed, never hotlinked, under `/photos/us/golf/{state-slug}/`.
