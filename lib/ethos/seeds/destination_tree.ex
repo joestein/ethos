@@ -1,6 +1,6 @@
 defmodule Ethos.Seeds.DestinationTree do
   @moduledoc """
-  Loads `priv/seed_data/destinations/tree.json` — the single declaration of the
+  Loads `priv/seed_data/destination_tree.json` — the single declaration of the
   geographic hierarchy — into the `destinations` table.
 
   Parentage is derived from `path`, never authored, so the file cannot declare a
@@ -13,7 +13,7 @@ defmodule Ethos.Seeds.DestinationTree do
 
   alias Ethos.Destinations
 
-  @roster "destinations/tree.json"
+  @roster "destination_tree.json"
 
   def path do
     Path.join([:code.priv_dir(:ethos) |> to_string(), "seed_data", @roster])

@@ -152,10 +152,6 @@ defmodule Ethos.Release do
       [:code.priv_dir(@app) |> to_string(), "seed_data", "destinations", "*.json"]
       |> Path.join()
       |> Path.wildcard()
-      # tree.json declares the hierarchy as a flat array of nodes — a
-      # different shape from the {path, name, intro, photos} hub-content
-      # files this glob otherwise loads. Ethos.Seeds.DestinationTree owns it.
-      |> Enum.reject(&(Path.basename(&1) == "tree.json"))
       |> Enum.sort()
 
     for file <- files do
