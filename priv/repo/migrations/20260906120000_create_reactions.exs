@@ -5,7 +5,9 @@ defmodule Ethos.Repo.Migrations.CreateReactions do
     create table(:reactions) do
       add :user_id, references(:users, on_delete: :delete_all), null: false
       add :subject_type, :string, null: false
-      add :subject_id, :integer, null: false
+      # bigint: places/guides/collections all have bigserial primary keys,
+      # and widening a populated int4 column later would be a data migration.
+      add :subject_id, :bigint, null: false
       add :value, :string, null: false
 
       timestamps(type: :utc_datetime)
