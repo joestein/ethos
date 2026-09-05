@@ -206,8 +206,16 @@ defmodule Ethos.Seeds.GolfCoursesRosterTest do
   @external_resource @path
   @roster @path |> File.read!() |> Jason.decode!()
 
-  @researched ~w(course facility city county access ranking_source
-                 ranking_edition ranking_position criterion)
+  # Always required on a verified row.
+  @always ~w(course facility city county access criterion)
+
+  # Required only when `criterion` is "ranking", and required to be NULL
+  # otherwise. Task 5's contingency lets a state fall back to the
+  # championship-venue criterion when the ranking is unreachable or does not
+  # reach that state, and a fallback row has no ranking to cite. Making the
+  # triple merely optional would let a half-cited row through; making the two
+  # shapes mutually exclusive keeps "which rule decided this row" answerable.
+  @ranking ~w(ranking_source ranking_edition ranking_position)
 
   test "one row per state, no duplicates" do
     slugs = Enum.map(@roster, & &1["slug"])
@@ -242,18 +250,40 @@ defmodule Ethos.Seeds.GolfCoursesRosterTest do
   # without one is a legitimate outcome (§4 rule 2 — there is no floor).
   test "a row is resolved together or not at all" do
     for entry <- @roster do
-      required = for k <- @researched, do: entry[k]
+      slug = entry["slug"]
 
       if entry["verified"] do
-        assert Enum.all?(required, &(is_binary(&1) and &1 != "")),
-               "#{entry["slug"]} is marked verified with a missing field: " <>
-                 inspect(for k <- @researched, is_nil(entry[k]) or entry[k] == "", do: k)
-      else
-        assert Enum.all?(required, &is_nil/1),
-               "#{entry["slug"]} carries researched data without being verified"
+        blank = for k <- @always, is_nil(entry[k]) or entry[k] == "", do: k
 
-        assert is_nil(entry["second_course"]),
-               "#{entry["slug"]} names a second course without being verified"
+        assert blank == [],
+               "#{slug} is marked verified with missing fields: #{inspect(blank)}"
+
+        case entry["criterion"] do
+          "ranking" ->
+            missing = for k <- @ranking, is_nil(entry[k]) or entry[k] == "", do: k
+
+            assert missing == [],
+                   "#{slug} selects on the ranking criterion but cites no ranking: " <>
+                     inspect(missing)
+
+          "championship" ->
+            present = for k <- @ranking, not is_nil(entry[k]), do: k
+
+            assert present == [],
+                   "#{slug} fell back to the championship criterion but carries ranking " <>
+                     "fields — the two shapes are mutually exclusive so that which rule " <>
+                     "decided a row stays answerable: " <> inspect(present)
+
+          other ->
+            flunk(
+              "#{slug} has criterion #{inspect(other)}; expected \"ranking\" or \"championship\""
+            )
+        end
+      else
+        set = for k <- @always ++ @ranking ++ ["second_course"], not is_nil(entry[k]), do: k
+
+        assert set == [],
+               "#{slug} carries researched data without being verified: #{inspect(set)}"
       end
     end
   end
@@ -328,26 +358,31 @@ defmodule Ethos.Seeds.GolfCoursesRosterTest do
   # claim in a wave report. It FAILS until wave 5 lands. That is intended: a
   # red exhaustion check is the visible remainder of the work.
   @tag :pending_golf
-  test "all fifty states are resolved, against the courses the corpus seeds" do
+  test "all fifty states are resolved, and every ranked course is seeded" do
     unresolved = for entry <- @roster, not entry["verified"], do: entry["slug"]
 
     assert unresolved == [],
            "these state rows are unresolved: #{inspect(unresolved)}"
 
-    roster_courses = @roster |> Enum.map(& &1["course"]) |> Enum.sort()
-
-    seeded_courses =
-      for f <- SeedDataHelpers.seed_files("golf"),
-          p <- DataGuide.load!(f)["places"],
-          p["kind"] == "golf-course",
-          do: p["name"]
-
+    roster_courses = Enum.map(@roster, & &1["course"])
     assert length(roster_courses) == 50
 
-    assert roster_courses == Enum.sort(seeded_courses) |> Enum.uniq(),
-           "the roster and the seeded courses disagree — in the roster only: " <>
-             inspect(roster_courses -- seeded_courses) <>
-             ", seeded only: " <> inspect(seeded_courses -- roster_courses)
+    seeded =
+      MapSet.new(
+        for f <- SeedDataHelpers.seed_files("golf"),
+            p <- DataGuide.load!(f)["places"],
+            p["kind"] == "golf-course",
+            do: p["name"]
+      )
+
+    # Subset, not equality: a state's file may also define its second public
+    # course as a golf-course place, and the roster deliberately does not
+    # enumerate those. Per-row geography is checked by the attribution test
+    # above; what remains here is that no ranked course went unseeded.
+    missing = Enum.reject(roster_courses, &MapSet.member?(seeded, &1))
+
+    assert missing == [],
+           "roster rows naming a course the corpus does not seed: " <> inspect(missing)
   end
 end
 ```
@@ -420,18 +455,87 @@ resolve rows; a red exhaustion check is the visible remainder."
 
 §1 step 4, and the ordering is the point: *"Write it before the checkpoint, so the checkpoint site is the first thing it checks."* §8's own doctrine is that a prose rule restated in every dispatch and checked in every review **demonstrably does not hold** — the Wrigley checkpoint's four Critical defects were all unsourced spatial claims that a reviewer caught and no gate did.
 
-The gate is built around a pure `banned_phrases/1` so every pattern is pinned by a specimen from day one, with no golf content in the repo yet. Without specimens the patterns are load-bearing only in aggregate: nothing in an empty corpus fires them, so any subset could be deleted and the suite would stay green.
+The gate is built around a pure `Ethos.GolfProse.banned_phrases/1` so every pattern is pinned by a specimen from day one, with no golf content in the repo yet. Without specimens the patterns are load-bearing only in aggregate: nothing in an empty corpus fires them, so any subset could be deleted and the suite would stay green.
 
 **Files:**
+- Create: `test/support/golf_prose.ex`
 - Create: `test/ethos/seeds/golf_seed_data_test.exs`
 
 **Interfaces:**
 - Consumes: `Ethos.SeedDataHelpers.seed_files("golf")`, `Ethos.Seeds.DataGuide.load!/1`, `Ethos.SeedDataHelpers.assert_place_slugs_globally_unique!/0`.
-- Produces: nothing other tasks call. Waves 1-5 and the checkpoint must keep it green.
+- Produces: `Ethos.GolfProse.banned_phrases(binary) :: [binary]` — every banned phrase found in one string, `[]` when clean — and `Ethos.GolfProse.patterns/0 :: [Regex.t()]`, in declaration order, which the specimen test indexes into. **Task 12's collection gate calls `banned_phrases/1`**, which is why it lives in `test/support/` rather than on the gate's own test module.
 
-- [ ] **Step 1: Write the gate**
+- [ ] **Step 1: Write the shared prose definition**
 
-Create `test/ethos/seeds/golf_seed_data_test.exs`:
+Create `test/support/golf_prose.ex`. This holds the patterns because **two** gates need them — the JSON corpus gate below, and Task 12's gate over the collection module's blurbs, which are prose in Elixir that no JSON gate sees. Two copies is how one drifts weaker than the other; `burys_collection.ex` shipped `"within a short drive"` to production for exactly that reason.
+
+`mix.exs:27` puts `test/support` in `elixirc_paths` for the test env, so this is genuinely compiled. Defining it on the gate's own test module instead would make Task 12 depend on `.exs` load order — `golf_collection_test.exs` sorts before `golf_seed_data_test.exs`.
+
+```elixir
+defmodule Ethos.GolfProse do
+  @moduledoc """
+  The one definition of "banned phrasing" for the golf set.
+
+  Read by `Ethos.Seeds.GolfSeedDataTest`, which walks the JSON corpus, and by
+  `Ethos.Seeds.GolfCollectionTest`, which walks the collection module's blurbs.
+  The second is not optional coverage: §8 records that a collection module's
+  prose is invisible to every JSON gate, and that `burys_collection.ex` and
+  `middlebury_guide.ex` shipped four banned drive-time phrasings to production
+  because of it.
+  """
+
+  # --- Trip-duration ban, verbatim from destination_seed_data_test.exs -----
+  @trip_duration_patterns [
+    ~r/\b\d+\s*[-–]?\s*minutes?\b/i,
+    ~r/\b\d+\s*min(?:ute)?s?\b\s*(?:south|north|east|west|away|drive|ride|from|by car|by subway|by train|by ferry|uptown|downtown|up|down|along)/i,
+    ~r/\b(?:roughly|about|around|approximately|just|only|under|over|some)\s+\d+\s*min/i,
+    ~r/\b(?:half[-\s]?(?:an\s+)?hour|quarter[-\s]?hour|an hour(?:\s+and\s+a\s+half)?)\b[^.]{0,40}\b(?:drive|ride|away|south|north|east|west|by car|by subway|by train|by ferry|to manhattan|to midtown)/i,
+    ~r/\b(?:drive|ride|trip|commute)\s+of\s+(?:about|roughly|around)?\s*\d+\s*min/i,
+    ~r/\b\d+\s*hours?\s+(?:drive|ride|away|south|north|east|west|by car|by subway|by train)/i,
+    ~r/\b(?:five|ten|fifteen|twenty|twenty[-\s]five|thirty|forty|forty[-\s]five|fifty|sixty|ninety)\s*[-–]?\s*minutes?\b/i,
+    ~r/\b(?:short|quick|easy|brief)\s+(?:drive|ride|hop|trip|commute|walk|stroll)\b/i,
+    ~r/\bwithin\s+(?:a\s+)?(?:short|quick|easy)\s+(?:drive|ride|trip|walk|stroll)\b/i,
+    ~r/\b(?:reaches|gets you to|puts you in|takes you to)\b[^.]{0,40}\bin\s+(?:about\s+)?\d+/i,
+    ~r/\bin\s+(?:about|roughly|around|under|over|just|only)?\s*\d+\s*hours?\b/i
+  ]
+
+  # --- Vague-proximity ban, ported from ballpark_seed_data_test.exs --------
+  @proximity_patterns [
+    ~r/\b(?:\d+|one|two|three|four|five|six|seven|eight|nine|ten|eleven|twelve)[-\s]blocks?\s+(?:north|south|east|west|away|up|down|over)\b/i,
+    ~r/\bnext door\b/i,
+    ~r/\bacross the street from\b/i,
+    ~r/\ba few doors\s+(?:down|away|up)\b/i,
+    # Noun list re-pointed at golf. A direction relative to a NAMED feature
+    # ("north of Highway 101") still publishes; §8 explicitly allows a
+    # bordering relationship.
+    ~r/\b(?:north|south|east|west)\s+of\s+the\s+(?:course|clubhouse|resort|links|property|site|first tee)\b/i,
+    ~r/\b(?:steps|a stone's throw|moments)\s+(?:from|away)\b/i,
+    # Case-SENSITIVE and lowercase on purpose, following the ballpark copy:
+    # the capitalised form appears in a proper name in the Manhattan corpus.
+    ~r/(?-i:around the corner)/,
+    ~r/\b(?:down|up)\s+the\s+(?:street|road|block)\b/i,
+    ~r/\bwithin walking distance\b/i
+  ]
+
+  @patterns @trip_duration_patterns ++ @proximity_patterns
+
+  # Starts empty and must stay empty without a manual read and a stated reason
+  # in a wave report. Keyed {file, json path, matched phrase} — the narrow form
+  # — so pardoning a phrase in one summary does not pardon it in the intro.
+  @allowlist []
+
+  def banned_phrases(text) when is_binary(text) do
+    for p <- @patterns, m = Regex.run(p, text), not is_nil(m), uniq: true, do: hd(m)
+  end
+  def patterns, do: @patterns
+
+  def allowlist, do: @allowlist
+end
+```
+
+- [ ] **Step 2: Write the gate**
+
+Create `test/ethos/seeds/golf_seed_data_test.exs`. It calls `Ethos.GolfProse.banned_phrases/1` and `Ethos.GolfProse.patterns/0` rather than defining patterns of its own:
 
 ```elixir
 defmodule Ethos.Seeds.GolfSeedDataTest do
@@ -484,51 +588,6 @@ defmodule Ethos.Seeds.GolfSeedDataTest do
 
   defp files, do: SeedDataHelpers.seed_files("golf")
 
-  # --- Trip-duration ban, verbatim from destination_seed_data_test.exs -----
-  @trip_duration_patterns [
-    ~r/\b\d+\s*[-–]?\s*minutes?\b/i,
-    ~r/\b\d+\s*min(?:ute)?s?\b\s*(?:south|north|east|west|away|drive|ride|from|by car|by subway|by train|by ferry|uptown|downtown|up|down|along)/i,
-    ~r/\b(?:roughly|about|around|approximately|just|only|under|over|some)\s+\d+\s*min/i,
-    ~r/\b(?:half[-\s]?(?:an\s+)?hour|quarter[-\s]?hour|an hour(?:\s+and\s+a\s+half)?)\b[^.]{0,40}\b(?:drive|ride|away|south|north|east|west|by car|by subway|by train|by ferry|to manhattan|to midtown)/i,
-    ~r/\b(?:drive|ride|trip|commute)\s+of\s+(?:about|roughly|around)?\s*\d+\s*min/i,
-    ~r/\b\d+\s*hours?\s+(?:drive|ride|away|south|north|east|west|by car|by subway|by train)/i,
-    ~r/\b(?:five|ten|fifteen|twenty|twenty[-\s]five|thirty|forty|forty[-\s]five|fifty|sixty|ninety)\s*[-–]?\s*minutes?\b/i,
-    ~r/\b(?:short|quick|easy|brief)\s+(?:drive|ride|hop|trip|commute|walk|stroll)\b/i,
-    ~r/\bwithin\s+(?:a\s+)?(?:short|quick|easy)\s+(?:drive|ride|trip|walk|stroll)\b/i,
-    ~r/\b(?:reaches|gets you to|puts you in|takes you to)\b[^.]{0,40}\bin\s+(?:about\s+)?\d+/i,
-    ~r/\bin\s+(?:about|roughly|around|under|over|just|only)?\s*\d+\s*hours?\b/i
-  ]
-
-  # --- Vague-proximity ban, ported from ballpark_seed_data_test.exs --------
-  @proximity_patterns [
-    ~r/\b(?:\d+|one|two|three|four|five|six|seven|eight|nine|ten|eleven|twelve)[-\s]blocks?\s+(?:north|south|east|west|away|up|down|over)\b/i,
-    ~r/\bnext door\b/i,
-    ~r/\bacross the street from\b/i,
-    ~r/\ba few doors\s+(?:down|away|up)\b/i,
-    # Noun list re-pointed at golf. A direction relative to a NAMED feature
-    # ("north of Highway 101") still publishes; §8 explicitly allows a
-    # bordering relationship.
-    ~r/\b(?:north|south|east|west)\s+of\s+the\s+(?:course|clubhouse|resort|links|property|site|first tee)\b/i,
-    ~r/\b(?:steps|a stone's throw|moments)\s+(?:from|away)\b/i,
-    # Case-SENSITIVE and lowercase on purpose, following the ballpark copy:
-    # the capitalised form appears in a proper name in the Manhattan corpus.
-    ~r/(?-i:around the corner)/,
-    ~r/\b(?:down|up)\s+the\s+(?:street|road|block)\b/i,
-    ~r/\bwithin walking distance\b/i
-  ]
-
-  @patterns @trip_duration_patterns ++ @proximity_patterns
-
-  # Starts empty and must stay empty without a manual read and a stated reason
-  # in a wave report. Keyed {file, json path, matched phrase} — the narrow form
-  # — so pardoning a phrase in one summary does not pardon it in the intro.
-  @allowlist []
-
-  @doc false
-  def banned_phrases(text) when is_binary(text) do
-    for p <- @patterns, m = Regex.run(p, text), not is_nil(m), uniq: true, do: hd(m)
-  end
-
   # Walks the PUBLISHED structure, not raw file text. §8: a source scan cannot
   # tell a defect from a moduledoc recording one, and walking the data yields a
   # {file, path, phrase} allowlist key instead of {file, phrase}.
@@ -546,8 +605,8 @@ defmodule Ethos.Seeds.GolfSeedDataTest do
   defp violations do
     for f <- files(),
         {path, text} <- collect_strings(DataGuide.load!(f)),
-        phrase <- banned_phrases(text),
-        {Path.basename(f), path, phrase} not in @allowlist,
+        phrase <- Ethos.GolfProse.banned_phrases(text),
+        {Path.basename(f), path, phrase} not in Ethos.GolfProse.allowlist(),
         uniq: true,
         do: {Path.basename(f), Enum.join(path, "."), phrase}
   end
@@ -582,12 +641,12 @@ defmodule Ethos.Seeds.GolfSeedDataTest do
   ]
 
   test "every banned pattern fires on its own specimen" do
-    assert length(@specimens) == length(@patterns),
+    assert length(@specimens) == length(Ethos.GolfProse.patterns()),
            "one specimen per pattern, in order — #{length(@specimens)} specimens " <>
-             "for #{length(@patterns)} patterns"
+             "for #{length(Ethos.GolfProse.patterns())} patterns"
 
     for {index, text} <- @specimens do
-      pattern = Enum.at(@patterns, index - 1)
+      pattern = Enum.at(Ethos.GolfProse.patterns(), index - 1)
 
       assert Regex.match?(pattern, text),
              "pattern #{index} (#{inspect(pattern)}) no longer fires on its specimen " <>
@@ -609,9 +668,9 @@ defmodule Ethos.Seeds.GolfSeedDataTest do
 
   test "sourced, checkable spatial and time claims still publish" do
     for text <- @publishable do
-      assert banned_phrases(text) == [],
+      assert Ethos.GolfProse.banned_phrases(text) == [],
              "a publishable claim was caught: #{inspect(text)} matched " <>
-               inspect(banned_phrases(text))
+               inspect(Ethos.GolfProse.banned_phrases(text))
     end
   end
 
@@ -1410,7 +1469,7 @@ defmodule Ethos.Seeds.GolfCollectionTest do
   test "every blurb is free of banned phrasing" do
     offenders =
       for item <- GolfCollection.data().items,
-          phrase <- Ethos.Seeds.GolfSeedDataTest.banned_phrases(item.blurb),
+          phrase <- Ethos.GolfProse.banned_phrases(item.blurb),
           do: {item.guide_slug, phrase}
 
     assert offenders == [],
@@ -1420,7 +1479,7 @@ defmodule Ethos.Seeds.GolfCollectionTest do
   end
 
   test "the intro is free of banned phrasing" do
-    assert Ethos.Seeds.GolfSeedDataTest.banned_phrases(GolfCollection.data().intro) == []
+    assert Ethos.GolfProse.banned_phrases(GolfCollection.data().intro) == []
   end
 end
 ```
@@ -1551,4 +1610,6 @@ of places per state and everything the corpus could not publish."
 
 **One house rule the plan nearly broke.** An earlier draft told the engineer to add a second `ExUnit.configure(exclude: ...)` call to `test/test_helper.exs`. That file warns three separate times that a second call **replaces** the exclusion list rather than appending — it would have silently re-enabled `:pending_wave` and the Bronx gate and turned the suite red on defects this programme does not own. Task 2 Step 3 now edits the single call in place, and uses the house `:pending_<set>` tag name.
 
-**Known cross-task coupling.** Task 12's collection gate calls `Ethos.Seeds.GolfSeedDataTest.banned_phrases/1`, a public function on a test module. Test modules are compiled in the test environment and are reachable from other test files, and this is deliberate: one definition of "banned", used by both the JSON gate and the Elixir-prose gate, is the whole point — two copies is how one drifts weaker. If the compiler objects to the cross-module call, extract `banned_phrases/1` and the pattern lists into `test/support/golf_prose.ex` and have both call it, rather than duplicating the patterns.
+**Known cross-task coupling, resolved at pre-flight.** Task 12's collection gate needs the same definition of "banned phrasing" that Task 3's JSON gate uses. It lives in `test/support/golf_prose.ex` (`mix.exs:27` compiles that path in the test env) rather than on either test module, so neither gate depends on `.exs` load order — `golf_collection_test.exs` sorts before `golf_seed_data_test.exs`, so the reverse arrangement would have been fragile. One definition, two readers: two copies is how one drifts weaker, which is how `burys_collection.ex` shipped banned drive-time phrasing to production.
+
+**Renumbering note.** Task 3 gained a step (the support module is now Step 1), so its later steps shift by one. Step numbers inside a task are sequential, not referenced from elsewhere in the plan.
