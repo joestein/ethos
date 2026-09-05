@@ -141,4 +141,64 @@ defmodule EthosWeb.SocialReviewsLiveTest do
       assert Social.user_review(author, guide).status == "pending"
     end
   end
+
+  # These bypass the rendered DOM on purpose. Every test above drives buttons
+  # and forms that the template controls, so none of them can ever send a
+  # frame the DOM itself would refuse to produce. `render_click/3` fires the
+  # named event with arbitrary params directly against the LiveView process,
+  # the same way a crafted socket message would — which is exactly what
+  # caught `handle_event("rate", ...)` calling `String.to_integer/1` on
+  # unchecked client input and crashing the island.
+  describe "adversarial input" do
+    setup %{conn: conn} do
+      user = user_fixture()
+      %{conn: log_in_user(conn, user), user: user}
+    end
+
+    test "a non-numeric rating does not crash the island", %{
+      conn: conn,
+      guide: guide,
+      user: user
+    } do
+      {:ok, view, _html} = live_island(conn, guide)
+
+      render_click(view, "rate", %{"rating" => "abc"})
+
+      html = render(view)
+      assert html =~ "review-form"
+      assert Social.user_review(user, guide) == nil
+    end
+
+    test "an out-of-range rating is not accepted, including trailing garbage", %{
+      conn: conn,
+      guide: guide,
+      user: user
+    } do
+      {:ok, view, _html} = live_island(conn, guide)
+
+      render_click(view, "rate", %{"rating" => "99"})
+      render_click(view, "rate", %{"rating" => "5x"})
+
+      view |> form("#review-form", review: %{body: "Trying to cheat."}) |> render_submit()
+
+      assert Social.user_review(user, guide) == nil
+    end
+
+    test "a missing rating key does not crash", %{conn: conn, guide: guide} do
+      {:ok, view, _html} = live_island(conn, guide)
+
+      render_click(view, "rate", %{})
+
+      html = render(view)
+      assert html =~ "review-form"
+    end
+
+    test "a logged-out session cannot submit a review directly", %{guide: guide} do
+      {:ok, view, _html} = live_island(build_conn(), guide)
+
+      render_click(view, "submit_review", %{"review" => %{"body" => "Sneaky."}})
+
+      assert Social.approved_reviews(guide) == []
+    end
+  end
 end

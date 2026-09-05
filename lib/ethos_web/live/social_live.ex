@@ -233,8 +233,24 @@ defmodule EthosWeb.SocialLive do
     end
   end
 
+  # Guarded on `interactive` like `react`, and parsed defensively like the
+  # comment on the catch-all below demands: `phx-value-rating` is a plain
+  # client-supplied string, so a crafted frame can send anything at all —
+  # non-numeric, negative, out of range, or trailing garbage like "5x"
+  # (`Integer.parse/1` alone would accept that: it returns `{5, "x"}`, not
+  # `:error`). None of that may raise or silently set a bogus rating.
   def handle_event("rate", %{"rating" => rating}, socket) do
-    {:noreply, assign(socket, rating: String.to_integer(rating), rating_error: nil)}
+    if socket.assigns.interactive do
+      case parse_rating(rating) do
+        {:ok, value} ->
+          {:noreply, assign(socket, rating: value, rating_error: nil)}
+
+        :error ->
+          {:noreply, assign(socket, rating_error: "Pick a rating from 1 to 10.")}
+      end
+    else
+      {:noreply, socket}
+    end
   end
 
   def handle_event("submit_review", %{"review" => params}, socket) do
@@ -306,9 +322,37 @@ defmodule EthosWeb.SocialLive do
         {:noreply, socket |> assign(rating_error: nil) |> load_reviews()}
 
       {:error, changeset} ->
-        {:noreply, assign(socket, review_form: to_form(changeset, as: "review"))}
+        # `review_form` is bound to `:body` only, so a `:rating` error on the
+        # changeset (defense in depth — `parse_rating/1` above already keeps
+        # `@rating` in 1..10) would otherwise render nothing and make the
+        # submit look like a silent no-op, with every button still shown
+        # highlighted by the stale `@rating`. Surface it through the same
+        # `rating_error` assign the picker already renders.
+        socket = assign(socket, review_form: to_form(changeset, as: "review"))
+
+        socket =
+          if Keyword.has_key?(changeset.errors, :rating) do
+            assign(socket, rating_error: "Pick a rating from 1 to 10.")
+          else
+            socket
+          end
+
+        {:noreply, socket}
     end
   end
+
+  # `Integer.parse/1` alone is not enough: it returns `{5, "x"}` for `"5x"`
+  # rather than `:error`, so the remainder must be checked too. Accepts only
+  # a whole number in 1..10 — anything else, including non-binary input from
+  # a malformed frame, is `:error`.
+  defp parse_rating(value) when is_binary(value) do
+    case Integer.parse(value) do
+      {int, ""} when int in 1..10 -> {:ok, int}
+      _ -> :error
+    end
+  end
+
+  defp parse_rating(_value), do: :error
 
   defp load_reviews(socket) do
     user = socket.assigns[:current_user]
