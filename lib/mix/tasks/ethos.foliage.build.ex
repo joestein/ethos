@@ -31,6 +31,21 @@ defmodule Mix.Tasks.Ethos.Foliage.Build do
   @simplify_tolerance 0.0008
   @sample_count 25
 
+  @sample_floor 0.6
+  @tile_host "https://tiles.arcgis.com/tiles/FjPcSmEFuDYlIdKC/arcgis/rest/services"
+  @tile_cache "tmp/foliage_tiles"
+
+  # Verified against the live tile services on 2026-09-05. If a change to the
+  # anchors or the sampling breaks these, the derivation has drifted away from
+  # what DEEP publishes and the build must not produce a dataset.
+  @regional_expectations [
+    {"salisbury", 4..5},
+    {"norfolk", 4..5},
+    {"hartford", 5..6},
+    {"old-saybrook", 7..8},
+    {"greenwich", 8..8}
+  ]
+
   @impl Mix.Task
   def run(args) do
     Application.ensure_all_started(:req)
@@ -41,6 +56,7 @@ defmodule Mix.Tasks.Ethos.Foliage.Build do
       )
 
     if opts[:towns] || opts[:all], do: build_towns()
+    if opts[:stages] || opts[:all], do: build_stages()
   end
 
   defp build_towns do
@@ -87,6 +103,103 @@ defmodule Mix.Tasks.Ethos.Foliage.Build do
 
     write!("towns.json", payload)
     Mix.shell().info("Wrote #{length(payload)} towns.")
+  end
+
+  defp build_stages do
+    towns = read!("towns.json")
+    weeks = Ethos.Foliage.Sampler.weeks()
+
+    stages =
+      Enum.map(towns, fn town ->
+        samples = Enum.map(town["samples"], fn [x, y] -> {x, y} end)
+
+        sequence =
+          Enum.map(weeks, fn week ->
+            samples
+            |> Enum.map(&sample_pixel(week.service, &1))
+            |> Ethos.Foliage.Sampler.modal_stage(@sample_floor)
+            |> case do
+              {:ok, stage} ->
+                stage
+
+              {:error, :insufficient_samples} ->
+                Mix.raise("#{town["name"]} week #{week.index}: too few pixels on the ramp.")
+            end
+          end)
+
+        unless Ethos.Foliage.Sampler.monotonic?(sequence) do
+          Mix.raise("#{town["name"]} regresses: #{inspect(sequence)}")
+        end
+
+        peak = Ethos.Foliage.Sampler.peak_week(sequence)
+
+        unless peak && peak <= 8 do
+          Mix.raise("#{town["name"]} has no usable peak week: #{inspect(sequence)}")
+        end
+
+        Map.merge(town, %{"stages" => Enum.map(sequence, &to_string/1), "peak_week" => peak})
+      end)
+
+    verify_regions!(stages)
+    write!("towns.json", stages)
+    write!("weeks.json", Enum.map(weeks, &encode_week/1))
+    Mix.shell().info("Sampled #{length(stages)} towns across #{length(weeks)} weeks.")
+  end
+
+  defp verify_regions!(towns) do
+    by_slug = Map.new(towns, &{&1["slug"], &1})
+
+    for {slug, expected} <- @regional_expectations do
+      town = Map.fetch!(by_slug, slug)
+
+      unless town["peak_week"] in expected do
+        Mix.raise("""
+        #{town["name"]} peaks in week #{town["peak_week"]}, expected #{inspect(expected)}.
+        The sampling has drifted from DEEP's published regional windows.
+        """)
+      end
+    end
+
+    Mix.shell().info("Regional windows reproduce DEEP's published dates.")
+  end
+
+  defp sample_pixel(service, point) do
+    {tx, ty, px, py} = Ethos.Foliage.Tiles.address(point)
+    image = tile_image(service, tx, ty)
+
+    case Vix.Vips.Operation.getpoint(image, px, py) do
+      {:ok, [r, g, b | _]} -> Ethos.Foliage.Tiles.classify({round(r), round(g), round(b)})
+      _ -> :unknown
+    end
+  end
+
+  defp tile_image(service, x, y) do
+    path = Path.join([@tile_cache, service, "#{x}_#{y}.jpg"])
+
+    unless File.exists?(path) do
+      File.mkdir_p!(Path.dirname(path))
+      url = "#{@tile_host}/#{service}/MapServer/tile/#{Ethos.Foliage.Tiles.zoom()}/#{y}/#{x}"
+      %{status: 200, body: body} = Req.get!(url, receive_timeout: 60_000, retry: :transient)
+      File.write!(path, body)
+    end
+
+    {:ok, image} = Vix.Vips.Image.new_from_file(path)
+    image
+  end
+
+  defp encode_week(week) do
+    %{
+      "index" => week.index,
+      "label" => week.label,
+      "starts" => week.starts && Tuple.to_list(week.starts),
+      "ends" => week.ends && Tuple.to_list(week.ends)
+    }
+  end
+
+  defp read!(name) do
+    Path.join([:code.priv_dir(:ethos) |> to_string(), "foliage", name])
+    |> File.read!()
+    |> Jason.decode!()
   end
 
   defp write!(name, payload) do

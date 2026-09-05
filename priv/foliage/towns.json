@@ -1,8 +1,11 @@
 [
   {
-    "name": "Andover",
-    "slug": "andover",
     "county": "Tolland",
+    "fips": "09013",
+    "lat": 41.73314,
+    "lng": -72.37611,
+    "name": "Andover",
+    "peak_week": 6,
     "ring": [
       [
         -72.41053,
@@ -49,9 +52,6 @@
         41.76566
       ]
     ],
-    "lat": 41.73314,
-    "fips": "09013",
-    "lng": -72.37611,
     "samples": [
       [
         -72.390286,
@@ -153,12 +153,27 @@
         -72.39622,
         41.723638
       ]
+    ],
+    "slug": "andover",
+    "stages": [
+      "green",
+      "green",
+      "turning",
+      "turning",
+      "near_peak",
+      "peak",
+      "past_peak",
+      "past_peak",
+      "past_peak"
     ]
   },
   {
-    "name": "Ansonia",
-    "slug": "ansonia",
     "county": "New Haven",
+    "fips": "09009",
+    "lat": 41.34428,
+    "lng": -73.06889,
+    "name": "Ansonia",
+    "peak_week": 7,
     "ring": [
       [
         -73.09538,
@@ -217,9 +232,6 @@
         41.35995
       ]
     ],
-    "lat": 41.34428,
-    "fips": "09009",
-    "lng": -73.06889,
     "samples": [
       [
         -73.073902,
@@ -321,12 +333,27 @@
         -73.060304,
         41.352713
       ]
+    ],
+    "slug": "ansonia",
+    "stages": [
+      "green",
+      "green",
+      "green",
+      "turning",
+      "turning",
+      "near_peak",
+      "peak",
+      "peak",
+      "past_peak"
     ]
   },
   {
-    "name": "Ashford",
-    "slug": "ashford",
     "county": "Windham",
+    "fips": "09015",
+    "lat": 41.89112,
+    "lng": -72.17099,
+    "name": "Ashford",
+    "peak_week": 5,
     "ring": [
       [
         -72.21693,
@@ -397,9 +424,6 @@
         41.95823
       ]
     ],
-    "lat": 41.89112,
-    "fips": "09015",
-    "lng": -72.17099,
     "samples": [
       [
         -72.189548,
@@ -501,12 +525,27 @@
         -72.137882,
         41.909392
       ]
+    ],
+    "slug": "ashford",
+    "stages": [
+      "green",
+      "turning",
+      "near_peak",
+      "near_peak",
+      "peak",
+      "past_peak",
+      "past_peak",
+      "past_peak",
+      "past_peak"
     ]
   },
   {
-    "name": "Avon",
-    "slug": "avon",
     "county": "Hartford",
+    "fips": "09003",
+    "lat": 41.79071,
+    "lng": -72.85402,
+    "name": "Avon",
+    "peak_week": 6,
     "ring": [
       [
         -72.79856,
@@ -597,9 +636,6 @@
         41.82497
       ]
     ],
-    "lat": 41.79071,
-    "fips": "09003",
-    "lng": -72.85402,
     "samples": [
       [
         -72.865037,
@@ -701,12 +737,27 @@
         -72.871748,
         41.798255
       ]
+    ],
+    "slug": "avon",
+    "stages": [
+      "green",
+      "green",
+      "turning",
+      "turning",
+      "near_peak",
+      "peak",
+      "past_peak",
+      "past_peak",
+      "past_peak"
     ]
   },
   {
-    "name": "Barkhamsted",
-    "slug": "barkhamsted",
     "county": "Litchfield",
+    "fips": "09005",
+    "lat": 41.93159,
+    "lng": -72.97295,
+    "name": "Barkhamsted",
+    "peak_week": 5,
     "ring": [
       [
         -73.02948,
@@ -733,9 +784,6 @@
         41.96662
       ]
     ],
-    "lat": 41.93159,
-    "fips": "09005",
-    "lng": -72.97295,
     "samples": [
       [
         -72.93767,
@@ -837,12 +885,27 @@
         -72.959541,
         41.938776
       ]
+    ],
+    "slug": "barkhamsted",
+    "stages": [
+      "green",
+      "turning",
+      "turning",
+      "near_peak",
+      "peak",
+      "past_peak",
+      "past_peak",
+      "past_peak",
+      "past_peak"
     ]
   },
   {
-    "name": "Beacon Falls",
-    "slug": "beacon-falls",
     "county": "New Haven",
+    "fips": "09009",
+    "lat": 41.43893,
+    "lng": -73.05684,
+    "name": "Beacon Falls",
+    "peak_week": 7,
     "ring": [
       [
         -73.07693,
@@ -921,9 +984,6 @@
         41.46478
       ]
     ],
-    "lat": 41.43893,
-    "fips": "09009",
-    "lng": -73.05684,
     "samples": [
       [
         -73.038698,
@@ -1025,12 +1085,27 @@
         -73.07876,
         41.453182
       ]
+    ],
+    "slug": "beacon-falls",
+    "stages": [
+      "green",
+      "green",
+      "green",
+      "turning",
+      "turning",
+      "near_peak",
+      "peak",
+      "peak",
+      "past_peak"
     ]
   },
   {
-    "name": "Berlin",
-    "slug": "berlin",
     "county": "Hartford",
+    "fips": "09003",
+    "lat": 41.61116,
+    "lng": -72.77604,
+    "name": "Berlin",
+    "peak_week": 5,
     "ring": [
       [
         -72.71543,
@@ -1197,9 +1272,6 @@
         41.65255
       ]
     ],
-    "lat": 41.61116,
-    "fips": "09003",
-    "lng": -72.77604,
     "samples": [
       [
         -72.730665,
@@ -1301,12 +1373,27 @@
         -72.748292,
         41.645035
       ]
+    ],
+    "slug": "berlin",
+    "stages": [
+      "green",
+      "green",
+      "turning",
+      "turning",
+      "near_peak",
+      "near_peak",
+      "past_peak",
+      "past_peak",
+      "past_peak"
     ]
   },
   {
-    "name": "Bethany",
-    "slug": "bethany",
     "county": "New Haven",
+    "fips": "09009",
+    "lat": 41.42601,
+    "lng": -72.99288,
+    "name": "Bethany",
+    "peak_week": 7,
     "ring": [
       [
         -73.00099,
@@ -1425,9 +1512,6 @@
         41.47006
       ]
     ],
-    "lat": 41.42601,
-    "fips": "09009",
-    "lng": -72.99288,
     "samples": [
       [
         -72.957547,
@@ -1529,12 +1613,27 @@
         -73.005042,
         41.401663
       ]
+    ],
+    "slug": "bethany",
+    "stages": [
+      "green",
+      "green",
+      "green",
+      "turning",
+      "turning",
+      "near_peak",
+      "peak",
+      "peak",
+      "past_peak"
     ]
   },
   {
-    "name": "Bethel",
-    "slug": "bethel",
     "county": "Fairfield",
+    "fips": "09001",
+    "lat": 41.37481,
+    "lng": -73.39265,
+    "name": "Bethel",
+    "peak_week": 6,
     "ring": [
       [
         -73.40691,
@@ -1593,9 +1692,6 @@
         41.42872
       ]
     ],
-    "lat": 41.37481,
-    "fips": "09001",
-    "lng": -73.39265,
     "samples": [
       [
         -73.407126,
@@ -1697,12 +1793,27 @@
         -73.361113,
         41.37619
       ]
+    ],
+    "slug": "bethel",
+    "stages": [
+      "green",
+      "green",
+      "green",
+      "turning",
+      "turning",
+      "near_peak",
+      "past_peak",
+      "past_peak",
+      "past_peak"
     ]
   },
   {
-    "name": "Bethlehem",
-    "slug": "bethlehem",
     "county": "Litchfield",
+    "fips": "09005",
+    "lat": 41.6375,
+    "lng": -73.2114,
+    "name": "Bethlehem",
+    "peak_week": 5,
     "ring": [
       [
         -73.26149,
@@ -1725,9 +1836,6 @@
         41.66463
       ]
     ],
-    "lat": 41.6375,
-    "fips": "09005",
-    "lng": -73.2114,
     "samples": [
       [
         -73.206783,
@@ -1829,12 +1937,27 @@
         -73.222535,
         41.623339
       ]
+    ],
+    "slug": "bethlehem",
+    "stages": [
+      "green",
+      "green",
+      "turning",
+      "turning",
+      "peak",
+      "peak",
+      "past_peak",
+      "past_peak",
+      "past_peak"
     ]
   },
   {
-    "name": "Bloomfield",
-    "slug": "bloomfield",
     "county": "Hartford",
+    "fips": "09003",
+    "lat": 41.84263,
+    "lng": -72.74074,
+    "name": "Bloomfield",
+    "peak_week": 6,
     "ring": [
       [
         -72.75899,
@@ -1933,9 +2056,6 @@
         41.90692
       ]
     ],
-    "lat": 41.84263,
-    "fips": "09003",
-    "lng": -72.74074,
     "samples": [
       [
         -72.776128,
@@ -2037,12 +2157,27 @@
         -72.767073,
         41.871805
       ]
+    ],
+    "slug": "bloomfield",
+    "stages": [
+      "green",
+      "green",
+      "turning",
+      "turning",
+      "near_peak",
+      "peak",
+      "past_peak",
+      "past_peak",
+      "past_peak"
     ]
   },
   {
-    "name": "Bolton",
-    "slug": "bolton",
     "county": "Tolland",
+    "fips": "09013",
+    "lat": 41.76641,
+    "lng": -72.43909,
+    "name": "Bolton",
+    "peak_week": 6,
     "ring": [
       [
         -72.4736,
@@ -2065,9 +2200,6 @@
         41.79841
       ]
     ],
-    "lat": 41.76641,
-    "fips": "09013",
-    "lng": -72.43909,
     "samples": [
       [
         -72.438795,
@@ -2169,12 +2301,27 @@
         -72.408857,
         41.742423
       ]
+    ],
+    "slug": "bolton",
+    "stages": [
+      "green",
+      "green",
+      "turning",
+      "turning",
+      "near_peak",
+      "peak",
+      "past_peak",
+      "past_peak",
+      "past_peak"
     ]
   },
   {
-    "name": "Bozrah",
-    "slug": "bozrah",
     "county": "New London",
+    "fips": "09011",
+    "lat": 41.54536,
+    "lng": -72.17488,
+    "name": "Bozrah",
+    "peak_week": 6,
     "ring": [
       [
         -72.19416,
@@ -2265,9 +2412,6 @@
         41.59031
       ]
     ],
-    "lat": 41.54536,
-    "fips": "09011",
-    "lng": -72.17488,
     "samples": [
       [
         -72.180847,
@@ -2369,12 +2513,27 @@
         -72.209212,
         41.534307
       ]
+    ],
+    "slug": "bozrah",
+    "stages": [
+      "green",
+      "green",
+      "turning",
+      "turning",
+      "near_peak",
+      "peak",
+      "past_peak",
+      "past_peak",
+      "past_peak"
     ]
   },
   {
-    "name": "Branford",
-    "slug": "branford",
     "county": "New Haven",
+    "fips": "09009",
+    "lat": 41.28586,
+    "lng": -72.79866,
+    "name": "Branford",
+    "peak_week": 8,
     "ring": [
       [
         -72.82393,
@@ -3085,9 +3244,6 @@
         41.31809
       ]
     ],
-    "lat": 41.28586,
-    "fips": "09009",
-    "lng": -72.79866,
     "samples": [
       [
         -72.833243,
@@ -3189,12 +3345,27 @@
         -72.743013,
         41.268886
       ]
+    ],
+    "slug": "branford",
+    "stages": [
+      "green",
+      "green",
+      "green",
+      "green",
+      "green",
+      "turning",
+      "turning",
+      "near_peak",
+      "past_peak"
     ]
   },
   {
-    "name": "Bridgeport",
-    "slug": "bridgeport",
     "county": "Fairfield",
+    "fips": "09001",
+    "lat": 41.19323,
+    "lng": -73.19605,
+    "name": "Bridgeport",
+    "peak_week": 6,
     "ring": [
       [
         -73.24424,
@@ -3545,9 +3716,6 @@
         41.22676
       ]
     ],
-    "lat": 41.19323,
-    "fips": "09001",
-    "lng": -73.19605,
     "samples": [
       [
         -73.171528,
@@ -3649,12 +3817,27 @@
         -73.159299,
         41.20419
       ]
+    ],
+    "slug": "bridgeport",
+    "stages": [
+      "green",
+      "green",
+      "green",
+      "green",
+      "turning",
+      "near_peak",
+      "near_peak",
+      "near_peak",
+      "past_peak"
     ]
   },
   {
-    "name": "Bridgewater",
-    "slug": "bridgewater",
     "county": "Litchfield",
+    "fips": "09005",
+    "lat": 41.52085,
+    "lng": -73.3601,
+    "name": "Bridgewater",
+    "peak_week": 5,
     "ring": [
       [
         -73.34309,
@@ -3825,9 +4008,6 @@
         41.56588
       ]
     ],
-    "lat": 41.52085,
-    "fips": "09005",
-    "lng": -73.3601,
     "samples": [
       [
         -73.367513,
@@ -3929,12 +4109,27 @@
         -73.363804,
         41.532901
       ]
+    ],
+    "slug": "bridgewater",
+    "stages": [
+      "green",
+      "green",
+      "turning",
+      "turning",
+      "peak",
+      "peak",
+      "past_peak",
+      "past_peak",
+      "past_peak"
     ]
   },
   {
-    "name": "Bristol",
-    "slug": "bristol",
     "county": "Hartford",
+    "fips": "09003",
+    "lat": 41.68109,
+    "lng": -72.94063,
+    "name": "Bristol",
+    "peak_week": 6,
     "ring": [
       [
         -72.99833,
@@ -3973,9 +4168,6 @@
         41.71259
       ]
     ],
-    "lat": 41.68109,
-    "fips": "09003",
-    "lng": -72.94063,
     "samples": [
       [
         -72.943417,
@@ -4077,12 +4269,27 @@
         -72.908285,
         41.655096
       ]
+    ],
+    "slug": "bristol",
+    "stages": [
+      "green",
+      "green",
+      "turning",
+      "turning",
+      "near_peak",
+      "peak",
+      "past_peak",
+      "past_peak",
+      "past_peak"
     ]
   },
   {
-    "name": "Brookfield",
-    "slug": "brookfield",
     "county": "Fairfield",
+    "fips": "09001",
+    "lat": 41.46754,
+    "lng": -73.39235,
+    "name": "Brookfield",
+    "peak_week": 5,
     "ring": [
       [
         -73.44167,
@@ -4221,9 +4428,6 @@
         41.49126
       ]
     ],
-    "lat": 41.46754,
-    "fips": "09001",
-    "lng": -73.39235,
     "samples": [
       [
         -73.398527,
@@ -4325,12 +4529,27 @@
         -73.400687,
         41.502819
       ]
+    ],
+    "slug": "brookfield",
+    "stages": [
+      "green",
+      "green",
+      "turning",
+      "turning",
+      "near_peak",
+      "near_peak",
+      "past_peak",
+      "past_peak",
+      "past_peak"
     ]
   },
   {
-    "name": "Brooklyn",
-    "slug": "brooklyn",
     "county": "Windham",
+    "fips": "09015",
+    "lat": 41.78699,
+    "lng": -71.9545,
+    "name": "Brooklyn",
+    "peak_week": 5,
     "ring": [
       [
         -71.9767,
@@ -4465,9 +4684,6 @@
         41.82678
       ]
     ],
-    "lat": 41.78699,
-    "fips": "09015",
-    "lng": -71.9545,
     "samples": [
       [
         -71.992985,
@@ -4569,12 +4785,27 @@
         -71.98137,
         41.784842
       ]
+    ],
+    "slug": "brooklyn",
+    "stages": [
+      "green",
+      "turning",
+      "turning",
+      "near_peak",
+      "peak",
+      "past_peak",
+      "past_peak",
+      "past_peak",
+      "past_peak"
     ]
   },
   {
-    "name": "Burlington",
-    "slug": "burlington",
     "county": "Hartford",
+    "fips": "09003",
+    "lat": 41.75988,
+    "lng": -72.95909,
+    "name": "Burlington",
+    "peak_week": 5,
     "ring": [
       [
         -72.9221,
@@ -4629,9 +4860,6 @@
         41.8074
       ]
     ],
-    "lat": 41.75988,
-    "fips": "09003",
-    "lng": -72.95909,
     "samples": [
       [
         -72.960452,
@@ -4733,12 +4961,27 @@
         -72.956465,
         41.787348
       ]
+    ],
+    "slug": "burlington",
+    "stages": [
+      "green",
+      "turning",
+      "turning",
+      "turning",
+      "peak",
+      "peak",
+      "past_peak",
+      "past_peak",
+      "past_peak"
     ]
   },
   {
-    "name": "Canaan",
-    "slug": "canaan",
     "county": "Litchfield",
+    "fips": "09005",
+    "lat": 41.95989,
+    "lng": -73.31005,
+    "name": "Canaan",
+    "peak_week": 4,
     "ring": [
       [
         -73.24359,
@@ -4885,9 +5128,6 @@
         41.99406
       ]
     ],
-    "lat": 41.95989,
-    "fips": "09005",
-    "lng": -73.31005,
     "samples": [
       [
         -73.342237,
@@ -4989,12 +5229,27 @@
         -73.307478,
         41.928546
       ]
+    ],
+    "slug": "canaan",
+    "stages": [
+      "green",
+      "turning",
+      "near_peak",
+      "peak",
+      "peak",
+      "past_peak",
+      "past_peak",
+      "past_peak",
+      "past_peak"
     ]
   },
   {
-    "name": "Canterbury",
-    "slug": "canterbury",
     "county": "Windham",
+    "fips": "09015",
+    "lat": 41.69792,
+    "lng": -71.99975,
+    "name": "Canterbury",
+    "peak_week": 5,
     "ring": [
       [
         -71.91384,
@@ -5121,9 +5376,6 @@
         41.74231
       ]
     ],
-    "lat": 41.69792,
-    "fips": "09015",
-    "lng": -71.99975,
     "samples": [
       [
         -72.027443,
@@ -5225,12 +5477,27 @@
         -72.035939,
         41.725545
       ]
+    ],
+    "slug": "canterbury",
+    "stages": [
+      "green",
+      "turning",
+      "turning",
+      "turning",
+      "peak",
+      "peak",
+      "past_peak",
+      "past_peak",
+      "past_peak"
     ]
   },
   {
-    "name": "Canton",
-    "slug": "canton",
     "county": "Hartford",
+    "fips": "09003",
+    "lat": 41.85995,
+    "lng": -72.90855,
+    "name": "Canton",
+    "peak_week": 5,
     "ring": [
       [
         -72.90659,
@@ -5309,9 +5576,6 @@
         41.92169
       ]
     ],
-    "lat": 41.85995,
-    "fips": "09003",
-    "lng": -72.90855,
     "samples": [
       [
         -72.913169,
@@ -5413,12 +5677,27 @@
         -72.912966,
         41.847284
       ]
+    ],
+    "slug": "canton",
+    "stages": [
+      "green",
+      "turning",
+      "turning",
+      "turning",
+      "peak",
+      "peak",
+      "past_peak",
+      "past_peak",
+      "past_peak"
     ]
   },
   {
-    "name": "Chaplin",
-    "slug": "chaplin",
     "county": "Windham",
+    "fips": "09015",
+    "lat": 41.79306,
+    "lng": -72.12773,
+    "name": "Chaplin",
+    "peak_week": 5,
     "ring": [
       [
         -72.09221,
@@ -5457,9 +5736,6 @@
         41.83183
       ]
     ],
-    "lat": 41.79306,
-    "fips": "09015",
-    "lng": -72.12773,
     "samples": [
       [
         -72.127399,
@@ -5561,12 +5837,27 @@
         -72.095062,
         41.821728
       ]
+    ],
+    "slug": "chaplin",
+    "stages": [
+      "green",
+      "turning",
+      "turning",
+      "near_peak",
+      "peak",
+      "past_peak",
+      "past_peak",
+      "past_peak",
+      "past_peak"
     ]
   },
   {
-    "name": "Cheshire",
-    "slug": "cheshire",
     "county": "New Haven",
+    "fips": "09009",
+    "lat": 41.51146,
+    "lng": -72.90399,
+    "name": "Cheshire",
+    "peak_week": 7,
     "ring": [
       [
         -72.95646,
@@ -5705,9 +5996,6 @@
         41.55528
       ]
     ],
-    "lat": 41.51146,
-    "fips": "09009",
-    "lng": -72.90399,
     "samples": [
       [
         -72.896772,
@@ -5809,12 +6097,27 @@
         -72.889887,
         41.485185
       ]
+    ],
+    "slug": "cheshire",
+    "stages": [
+      "green",
+      "green",
+      "green",
+      "turning",
+      "turning",
+      "near_peak",
+      "peak",
+      "past_peak",
+      "past_peak"
     ]
   },
   {
-    "name": "Chester",
-    "slug": "chester",
     "county": "Middlesex",
+    "fips": "09007",
+    "lat": 41.40598,
+    "lng": -72.48308,
+    "name": "Chester",
+    "peak_week": 7,
     "ring": [
       [
         -72.45099,
@@ -5877,9 +6180,6 @@
         41.43371
       ]
     ],
-    "lat": 41.40598,
-    "fips": "09007",
-    "lng": -72.48308,
     "samples": [
       [
         -72.498477,
@@ -5981,12 +6281,27 @@
         -72.453746,
         41.401238
       ]
+    ],
+    "slug": "chester",
+    "stages": [
+      "green",
+      "green",
+      "green",
+      "turning",
+      "turning",
+      "near_peak",
+      "peak",
+      "past_peak",
+      "past_peak"
     ]
   },
   {
-    "name": "Clinton",
-    "slug": "clinton",
     "county": "Middlesex",
+    "fips": "09007",
+    "lat": 41.29943,
+    "lng": -72.52977,
+    "name": "Clinton",
+    "peak_week": 8,
     "ring": [
       [
         -72.58571,
@@ -6329,9 +6644,6 @@
         41.30999
       ]
     ],
-    "lat": 41.29943,
-    "fips": "09007",
-    "lng": -72.52977,
     "samples": [
       [
         -72.519876,
@@ -6433,12 +6745,27 @@
         -72.501684,
         41.300587
       ]
+    ],
+    "slug": "clinton",
+    "stages": [
+      "green",
+      "green",
+      "green",
+      "green",
+      "turning",
+      "turning",
+      "near_peak",
+      "peak",
+      "past_peak"
     ]
   },
   {
-    "name": "Colchester",
-    "slug": "colchester",
     "county": "New London",
+    "fips": "09011",
+    "lat": 41.56204,
+    "lng": -72.34725,
+    "name": "Colchester",
+    "peak_week": 6,
     "ring": [
       [
         -72.35322,
@@ -6533,9 +6860,6 @@
         41.59882
       ]
     ],
-    "lat": 41.56204,
-    "fips": "09011",
-    "lng": -72.34725,
     "samples": [
       [
         -72.339355,
@@ -6637,12 +6961,27 @@
         -72.449841,
         41.559825
       ]
+    ],
+    "slug": "colchester",
+    "stages": [
+      "green",
+      "green",
+      "green",
+      "turning",
+      "near_peak",
+      "peak",
+      "past_peak",
+      "past_peak",
+      "past_peak"
     ]
   },
   {
-    "name": "Colebrook",
-    "slug": "colebrook",
     "county": "Litchfield",
+    "fips": "09005",
+    "lat": 42.00156,
+    "lng": -73.0808,
+    "name": "Colebrook",
+    "peak_week": 4,
     "ring": [
       [
         -73.05308,
@@ -6669,9 +7008,6 @@
         42.03979
       ]
     ],
-    "lat": 42.00156,
-    "fips": "09005",
-    "lng": -73.0808,
     "samples": [
       [
         -73.054154,
@@ -6773,12 +7109,27 @@
         -73.044635,
         41.977968
       ]
+    ],
+    "slug": "colebrook",
+    "stages": [
+      "green",
+      "turning",
+      "near_peak",
+      "peak",
+      "peak",
+      "past_peak",
+      "past_peak",
+      "past_peak",
+      "past_peak"
     ]
   },
   {
-    "name": "Columbia",
-    "slug": "columbia",
     "county": "Tolland",
+    "fips": "09013",
+    "lat": 41.69389,
+    "lng": -72.307,
+    "name": "Columbia",
+    "peak_week": 6,
     "ring": [
       [
         -72.31277,
@@ -7041,9 +7392,6 @@
         41.73109
       ]
     ],
-    "lat": 41.69389,
-    "fips": "09013",
-    "lng": -72.307,
     "samples": [
       [
         -72.293263,
@@ -7145,12 +7493,27 @@
         -72.352756,
         41.706633
       ]
+    ],
+    "slug": "columbia",
+    "stages": [
+      "green",
+      "green",
+      "turning",
+      "turning",
+      "near_peak",
+      "peak",
+      "past_peak",
+      "past_peak",
+      "past_peak"
     ]
   },
   {
-    "name": "Cornwall",
-    "slug": "cornwall",
     "county": "Litchfield",
+    "fips": "09005",
+    "lat": 41.84749,
+    "lng": -73.32985,
+    "name": "Cornwall",
+    "peak_week": 4,
     "ring": [
       [
         -73.36203,
@@ -7281,9 +7644,6 @@
         41.91879
       ]
     ],
-    "lat": 41.84749,
-    "fips": "09005",
-    "lng": -73.32985,
     "samples": [
       [
         -73.349896,
@@ -7385,12 +7745,27 @@
         -73.285115,
         41.846408
       ]
+    ],
+    "slug": "cornwall",
+    "stages": [
+      "green",
+      "turning",
+      "near_peak",
+      "peak",
+      "peak",
+      "past_peak",
+      "past_peak",
+      "past_peak",
+      "past_peak"
     ]
   },
   {
-    "name": "Coventry",
-    "slug": "coventry",
     "county": "Tolland",
+    "fips": "09013",
+    "lat": 41.78289,
+    "lng": -72.33938,
+    "name": "Coventry",
+    "peak_week": 5,
     "ring": [
       [
         -72.31013,
@@ -7689,9 +8064,6 @@
         41.83622
       ]
     ],
-    "lat": 41.78289,
-    "fips": "09013",
-    "lng": -72.33938,
     "samples": [
       [
         -72.294231,
@@ -7793,12 +8165,27 @@
         -72.374247,
         41.811985
       ]
+    ],
+    "slug": "coventry",
+    "stages": [
+      "green",
+      "turning",
+      "turning",
+      "turning",
+      "peak",
+      "peak",
+      "past_peak",
+      "past_peak",
+      "past_peak"
     ]
   },
   {
-    "name": "Cromwell",
-    "slug": "cromwell",
     "county": "Middlesex",
+    "fips": "09007",
+    "lat": 41.61217,
+    "lng": -72.66373,
+    "name": "Cromwell",
+    "peak_week": 6,
     "ring": [
       [
         -72.62782,
@@ -7953,9 +8340,6 @@
         41.64015
       ]
     ],
-    "lat": 41.61217,
-    "fips": "09007",
-    "lng": -72.66373,
     "samples": [
       [
         -72.641838,
@@ -8057,12 +8441,27 @@
         -72.65628,
         41.626682
       ]
+    ],
+    "slug": "cromwell",
+    "stages": [
+      "green",
+      "green",
+      "green",
+      "turning",
+      "turning",
+      "near_peak",
+      "past_peak",
+      "past_peak",
+      "past_peak"
     ]
   },
   {
-    "name": "Danbury",
-    "slug": "danbury",
     "county": "Fairfield",
+    "fips": "09001",
+    "lat": 41.40137,
+    "lng": -73.47053,
+    "name": "Danbury",
+    "peak_week": 6,
     "ring": [
       [
         -73.42669,
@@ -8149,9 +8548,6 @@
         41.46369
       ]
     ],
-    "lat": 41.40137,
-    "fips": "09001",
-    "lng": -73.47053,
     "samples": [
       [
         -73.475048,
@@ -8253,12 +8649,27 @@
         -73.446498,
         41.384022
       ]
+    ],
+    "slug": "danbury",
+    "stages": [
+      "green",
+      "green",
+      "turning",
+      "turning",
+      "turning",
+      "near_peak",
+      "past_peak",
+      "past_peak",
+      "past_peak"
     ]
   },
   {
-    "name": "Darien",
-    "slug": "darien",
     "county": "Fairfield",
+    "fips": "09001",
+    "lat": 41.08105,
+    "lng": -73.48262,
+    "name": "Darien",
+    "peak_week": 8,
     "ring": [
       [
         -73.50244,
@@ -8773,9 +9184,6 @@
         41.11448
       ]
     ],
-    "lat": 41.08105,
-    "fips": "09001",
-    "lng": -73.48262,
     "samples": [
       [
         -73.496357,
@@ -8877,12 +9285,27 @@
         -73.507445,
         41.105018
       ]
+    ],
+    "slug": "darien",
+    "stages": [
+      "green",
+      "green",
+      "green",
+      "green",
+      "green",
+      "turning",
+      "turning",
+      "near_peak",
+      "past_peak"
     ]
   },
   {
-    "name": "Deep River",
-    "slug": "deep-river",
     "county": "Middlesex",
+    "fips": "09007",
+    "lat": 41.36897,
+    "lng": -72.46207,
+    "name": "Deep River",
+    "peak_week": 7,
     "ring": [
       [
         -72.42569,
@@ -8977,9 +9400,6 @@
         41.40084
       ]
     ],
-    "lat": 41.36897,
-    "fips": "09007",
-    "lng": -72.46207,
     "samples": [
       [
         -72.432468,
@@ -9081,12 +9501,27 @@
         -72.475567,
         41.348128
       ]
+    ],
+    "slug": "deep-river",
+    "stages": [
+      "green",
+      "green",
+      "green",
+      "turning",
+      "turning",
+      "near_peak",
+      "peak",
+      "past_peak",
+      "past_peak"
     ]
   },
   {
-    "name": "Derby",
-    "slug": "derby",
     "county": "New Haven",
+    "fips": "09009",
+    "lat": 41.32645,
+    "lng": -73.083,
+    "name": "Derby",
+    "peak_week": 7,
     "ring": [
       [
         -73.10247,
@@ -9181,9 +9616,6 @@
         41.35307
       ]
     ],
-    "lat": 41.32645,
-    "fips": "09009",
-    "lng": -73.083,
     "samples": [
       [
         -73.080309,
@@ -9285,12 +9717,27 @@
         -73.090942,
         41.327124
       ]
+    ],
+    "slug": "derby",
+    "stages": [
+      "green",
+      "green",
+      "green",
+      "turning",
+      "turning",
+      "near_peak",
+      "peak",
+      "peak",
+      "past_peak"
     ]
   },
   {
-    "name": "Durham",
-    "slug": "durham",
     "county": "Middlesex",
+    "fips": "09007",
+    "lat": 41.4623,
+    "lng": -72.68309,
+    "name": "Durham",
+    "peak_week": 7,
     "ring": [
       [
         -72.67766,
@@ -9345,9 +9792,6 @@
         41.4967
       ]
     ],
-    "lat": 41.4623,
-    "fips": "09007",
-    "lng": -72.68309,
     "samples": [
       [
         -72.670519,
@@ -9449,12 +9893,27 @@
         -72.644527,
         41.47968
       ]
+    ],
+    "slug": "durham",
+    "stages": [
+      "green",
+      "green",
+      "green",
+      "turning",
+      "turning",
+      "near_peak",
+      "peak",
+      "past_peak",
+      "past_peak"
     ]
   },
   {
-    "name": "East Granby",
-    "slug": "east-granby",
     "county": "Hartford",
+    "fips": "09003",
+    "lat": 41.94249,
+    "lng": -72.74114,
+    "name": "East Granby",
+    "peak_week": 5,
     "ring": [
       [
         -72.68763,
@@ -9533,9 +9992,6 @@
         41.94821
       ]
     ],
-    "lat": 41.94249,
-    "fips": "09003",
-    "lng": -72.74114,
     "samples": [
       [
         -72.766053,
@@ -9637,12 +10093,27 @@
         -72.755867,
         41.925251
       ]
+    ],
+    "slug": "east-granby",
+    "stages": [
+      "green",
+      "green",
+      "turning",
+      "turning",
+      "peak",
+      "peak",
+      "past_peak",
+      "past_peak",
+      "past_peak"
     ]
   },
   {
-    "name": "East Haddam",
-    "slug": "east-haddam",
     "county": "Middlesex",
+    "fips": "09007",
+    "lat": 41.47981,
+    "lng": -72.39435,
+    "name": "East Haddam",
+    "peak_week": 6,
     "ring": [
       [
         -72.36164,
@@ -9769,9 +10240,6 @@
         41.53096
       ]
     ],
-    "lat": 41.47981,
-    "fips": "09007",
-    "lng": -72.39435,
     "samples": [
       [
         -72.391716,
@@ -9873,12 +10341,27 @@
         -72.471278,
         41.526649
       ]
+    ],
+    "slug": "east-haddam",
+    "stages": [
+      "green",
+      "green",
+      "green",
+      "turning",
+      "turning",
+      "near_peak",
+      "past_peak",
+      "past_peak",
+      "past_peak"
     ]
   },
   {
-    "name": "East Hampton",
-    "slug": "east-hampton",
     "county": "Middlesex",
+    "fips": "09007",
+    "lat": 41.5696,
+    "lng": -72.50741,
+    "name": "East Hampton",
+    "peak_week": 6,
     "ring": [
       [
         -72.54456,
@@ -9993,9 +10476,6 @@
         41.64275
       ]
     ],
-    "lat": 41.5696,
-    "fips": "09007",
-    "lng": -72.50741,
     "samples": [
       [
         -72.541103,
@@ -10097,12 +10577,27 @@
         -72.506906,
         41.562623
       ]
+    ],
+    "slug": "east-hampton",
+    "stages": [
+      "green",
+      "green",
+      "green",
+      "turning",
+      "turning",
+      "near_peak",
+      "past_peak",
+      "past_peak",
+      "past_peak"
     ]
   },
   {
-    "name": "East Hartford",
-    "slug": "east-hartford",
     "county": "Hartford",
+    "fips": "09003",
+    "lat": 41.76347,
+    "lng": -72.61529,
+    "name": "East Hartford",
+    "peak_week": 6,
     "ring": [
       [
         -72.64622,
@@ -10169,9 +10664,6 @@
         41.79802
       ]
     ],
-    "lat": 41.76347,
-    "fips": "09003",
-    "lng": -72.61529,
     "samples": [
       [
         -72.579952,
@@ -10273,12 +10765,27 @@
         -72.6181,
         41.793225
       ]
+    ],
+    "slug": "east-hartford",
+    "stages": [
+      "green",
+      "green",
+      "turning",
+      "turning",
+      "near_peak",
+      "peak",
+      "past_peak",
+      "past_peak",
+      "past_peak"
     ]
   },
   {
-    "name": "East Haven",
-    "slug": "east-haven",
     "county": "New Haven",
+    "fips": "09009",
+    "lat": 41.29908,
+    "lng": -72.85747,
+    "name": "East Haven",
+    "peak_week": 7,
     "ring": [
       [
         -72.86083,
@@ -10521,9 +11028,6 @@
         41.33611
       ]
     ],
-    "lat": 41.29908,
-    "fips": "09009",
-    "lng": -72.85747,
     "samples": [
       [
         -72.850671,
@@ -10625,12 +11129,27 @@
         -72.832295,
         41.341416
       ]
+    ],
+    "slug": "east-haven",
+    "stages": [
+      "green",
+      "green",
+      "green",
+      "green",
+      "turning",
+      "turning",
+      "near_peak",
+      "near_peak",
+      "past_peak"
     ]
   },
   {
-    "name": "East Lyme",
-    "slug": "east-lyme",
     "county": "New London",
+    "fips": "09011",
+    "lat": 41.3677,
+    "lng": -72.23625,
+    "name": "East Lyme",
+    "peak_week": 7,
     "ring": [
       [
         -72.24219,
@@ -11013,9 +11532,6 @@
         41.44351
       ]
     ],
-    "lat": 41.3677,
-    "fips": "09011",
-    "lng": -72.23625,
     "samples": [
       [
         -72.196773,
@@ -11117,12 +11633,27 @@
         -72.210542,
         41.388642
       ]
+    ],
+    "slug": "east-lyme",
+    "stages": [
+      "green",
+      "green",
+      "green",
+      "green",
+      "turning",
+      "near_peak",
+      "peak",
+      "peak",
+      "past_peak"
     ]
   },
   {
-    "name": "East Windsor",
-    "slug": "east-windsor",
     "county": "Hartford",
+    "fips": "09003",
+    "lat": 41.90494,
+    "lng": -72.5673,
+    "name": "East Windsor",
+    "peak_week": 5,
     "ring": [
       [
         -72.62361,
@@ -11153,9 +11684,6 @@
         41.93436
       ]
     ],
-    "lat": 41.90494,
-    "fips": "09003",
-    "lng": -72.5673,
     "samples": [
       [
         -72.56874,
@@ -11257,12 +11785,27 @@
         -72.603091,
         41.888309
       ]
+    ],
+    "slug": "east-windsor",
+    "stages": [
+      "green",
+      "green",
+      "turning",
+      "turning",
+      "peak",
+      "peak",
+      "past_peak",
+      "past_peak",
+      "past_peak"
     ]
   },
   {
-    "name": "Eastford",
-    "slug": "eastford",
     "county": "Windham",
+    "fips": "09015",
+    "lat": 41.8916,
+    "lng": -72.09197,
+    "name": "Eastford",
+    "peak_week": 4,
     "ring": [
       [
         -72.15161,
@@ -11337,9 +11880,6 @@
         41.95933
       ]
     ],
-    "lat": 41.8916,
-    "fips": "09015",
-    "lng": -72.09197,
     "samples": [
       [
         -72.070604,
@@ -11441,12 +11981,27 @@
         -72.115793,
         41.941059
       ]
+    ],
+    "slug": "eastford",
+    "stages": [
+      "green",
+      "turning",
+      "near_peak",
+      "peak",
+      "peak",
+      "past_peak",
+      "past_peak",
+      "past_peak",
+      "past_peak"
     ]
   },
   {
-    "name": "Easton",
-    "slug": "easton",
     "county": "Fairfield",
+    "fips": "09001",
+    "lat": 41.26489,
+    "lng": -73.30008,
+    "name": "Easton",
+    "peak_week": 7,
     "ring": [
       [
         -73.30594,
@@ -11585,9 +12140,6 @@
         41.33227
       ]
     ],
-    "lat": 41.26489,
-    "fips": "09001",
-    "lng": -73.30008,
     "samples": [
       [
         -73.318574,
@@ -11689,12 +12241,27 @@
         -73.290897,
         41.286698
       ]
+    ],
+    "slug": "easton",
+    "stages": [
+      "green",
+      "green",
+      "green",
+      "turning",
+      "turning",
+      "near_peak",
+      "peak",
+      "peak",
+      "past_peak"
     ]
   },
   {
-    "name": "Ellington",
-    "slug": "ellington",
     "county": "Tolland",
+    "fips": "09013",
+    "lat": 41.91514,
+    "lng": -72.44849,
+    "name": "Ellington",
+    "peak_week": 5,
     "ring": [
       [
         -72.40696,
@@ -11745,9 +12312,6 @@
         41.95741
       ]
     ],
-    "lat": 41.91514,
-    "fips": "09013",
-    "lng": -72.44849,
     "samples": [
       [
         -72.448558,
@@ -11849,12 +12413,27 @@
         -72.358993,
         41.9316
       ]
+    ],
+    "slug": "ellington",
+    "stages": [
+      "green",
+      "turning",
+      "turning",
+      "turning",
+      "peak",
+      "peak",
+      "past_peak",
+      "past_peak",
+      "past_peak"
     ]
   },
   {
-    "name": "Enfield",
-    "slug": "enfield",
     "county": "Hartford",
+    "fips": "09003",
+    "lat": 41.98401,
+    "lng": -72.5547,
+    "name": "Enfield",
+    "peak_week": 5,
     "ring": [
       [
         -72.53157,
@@ -11917,9 +12496,6 @@
         42.03451
       ]
     ],
-    "lat": 41.98401,
-    "fips": "09003",
-    "lng": -72.5547,
     "samples": [
       [
         -72.569173,
@@ -12021,12 +12597,27 @@
         -72.589183,
         41.991029
       ]
+    ],
+    "slug": "enfield",
+    "stages": [
+      "green",
+      "turning",
+      "turning",
+      "turning",
+      "peak",
+      "peak",
+      "past_peak",
+      "past_peak",
+      "past_peak"
     ]
   },
   {
-    "name": "Essex",
-    "slug": "essex",
     "county": "Middlesex",
+    "fips": "09007",
+    "lat": 41.35004,
+    "lng": -72.41456,
+    "name": "Essex",
+    "peak_week": 7,
     "ring": [
       [
         -72.38255,
@@ -12109,9 +12700,6 @@
         41.38247
       ]
     ],
-    "lat": 41.35004,
-    "fips": "09007",
-    "lng": -72.41456,
     "samples": [
       [
         -72.39813,
@@ -12213,12 +12801,27 @@
         -72.424124,
         41.34905
       ]
+    ],
+    "slug": "essex",
+    "stages": [
+      "green",
+      "green",
+      "green",
+      "green",
+      "turning",
+      "near_peak",
+      "peak",
+      "peak",
+      "past_peak"
     ]
   },
   {
-    "name": "Fairfield",
-    "slug": "fairfield",
     "county": "Fairfield",
+    "fips": "09001",
+    "lat": 41.17788,
+    "lng": -73.27346,
+    "name": "Fairfield",
+    "peak_week": 7,
     "ring": [
       [
         -73.24852,
@@ -12593,9 +13196,6 @@
         41.232
       ]
     ],
-    "lat": 41.17788,
-    "fips": "09001",
-    "lng": -73.27346,
     "samples": [
       [
         -73.248023,
@@ -12697,12 +13297,27 @@
         -73.297966,
         41.152905
       ]
+    ],
+    "slug": "fairfield",
+    "stages": [
+      "green",
+      "green",
+      "green",
+      "green",
+      "turning",
+      "turning",
+      "near_peak",
+      "near_peak",
+      "past_peak"
     ]
   },
   {
-    "name": "Farmington",
-    "slug": "farmington",
     "county": "Hartford",
+    "fips": "09003",
+    "lat": 41.72885,
+    "lng": -72.84095,
+    "name": "Farmington",
+    "peak_week": 6,
     "ring": [
       [
         -72.90867,
@@ -12781,9 +13396,6 @@
         41.77638
       ]
     ],
-    "lat": 41.72885,
-    "fips": "09003",
-    "lng": -72.84095,
     "samples": [
       [
         -72.822474,
@@ -12885,12 +13497,27 @@
         -72.869101,
         41.738116
       ]
+    ],
+    "slug": "farmington",
+    "stages": [
+      "green",
+      "green",
+      "turning",
+      "turning",
+      "near_peak",
+      "peak",
+      "past_peak",
+      "past_peak",
+      "past_peak"
     ]
   },
   {
-    "name": "Franklin",
-    "slug": "franklin",
     "county": "New London",
+    "fips": "09011",
+    "lat": 41.61533,
+    "lng": -72.14324,
+    "name": "Franklin",
+    "peak_week": 6,
     "ring": [
       [
         -72.12016,
@@ -12929,9 +13556,6 @@
         41.66179
       ]
     ],
-    "lat": 41.61533,
-    "fips": "09011",
-    "lng": -72.14324,
     "samples": [
       [
         -72.11024,
@@ -13033,12 +13657,27 @@
         -72.127345,
         41.66115
       ]
+    ],
+    "slug": "franklin",
+    "stages": [
+      "green",
+      "green",
+      "turning",
+      "turning",
+      "near_peak",
+      "peak",
+      "past_peak",
+      "past_peak",
+      "past_peak"
     ]
   },
   {
-    "name": "Glastonbury",
-    "slug": "glastonbury",
     "county": "Hartford",
+    "fips": "09003",
+    "lat": 41.69206,
+    "lng": -72.54718,
+    "name": "Glastonbury",
+    "peak_week": 6,
     "ring": [
       [
         -72.57131,
@@ -13165,9 +13804,6 @@
         41.73378
       ]
     ],
-    "lat": 41.69206,
-    "fips": "09003",
-    "lng": -72.54718,
     "samples": [
       [
         -72.546525,
@@ -13269,12 +13905,27 @@
         -72.636972,
         41.721087
       ]
+    ],
+    "slug": "glastonbury",
+    "stages": [
+      "green",
+      "green",
+      "turning",
+      "turning",
+      "turning",
+      "near_peak",
+      "past_peak",
+      "past_peak",
+      "past_peak"
     ]
   },
   {
-    "name": "Goshen",
-    "slug": "goshen",
     "county": "Litchfield",
+    "fips": "09005",
+    "lat": 41.85011,
+    "lng": -73.23356,
+    "name": "Goshen",
+    "peak_week": 4,
     "ring": [
       [
         -73.26274,
@@ -13297,9 +13948,6 @@
         41.91648
       ]
     ],
-    "lat": 41.85011,
-    "fips": "09005",
-    "lng": -73.23356,
     "samples": [
       [
         -73.240176,
@@ -13401,12 +14049,27 @@
         -73.285009,
         41.827321
       ]
+    ],
+    "slug": "goshen",
+    "stages": [
+      "green",
+      "turning",
+      "turning",
+      "peak",
+      "peak",
+      "past_peak",
+      "past_peak",
+      "past_peak",
+      "past_peak"
     ]
   },
   {
-    "name": "Granby",
-    "slug": "granby",
     "county": "Hartford",
+    "fips": "09003",
+    "lat": 41.96956,
+    "lng": -72.83485,
+    "name": "Granby",
+    "peak_week": 5,
     "ring": [
       [
         -72.86371,
@@ -13445,9 +14108,6 @@
         42.03759
       ]
     ],
-    "lat": 41.96956,
-    "fips": "09003",
-    "lng": -72.83485,
     "samples": [
       [
         -72.855021,
@@ -13549,12 +14209,27 @@
         -72.808391,
         41.947913
       ]
+    ],
+    "slug": "granby",
+    "stages": [
+      "green",
+      "turning",
+      "turning",
+      "turning",
+      "peak",
+      "past_peak",
+      "past_peak",
+      "past_peak",
+      "past_peak"
     ]
   },
   {
-    "name": "Greenwich",
-    "slug": "greenwich",
     "county": "Fairfield",
+    "fips": "09001",
+    "lat": 41.06924,
+    "lng": -73.63868,
+    "name": "Greenwich",
+    "peak_week": 8,
     "ring": [
       [
         -73.63382,
@@ -14169,9 +14844,6 @@
         41.14412
       ]
     ],
-    "lat": 41.06924,
-    "fips": "09001",
-    "lng": -73.63868,
     "samples": [
       [
         -73.668808,
@@ -14273,12 +14945,27 @@
         -73.603942,
         41.098662
       ]
+    ],
+    "slug": "greenwich",
+    "stages": [
+      "green",
+      "green",
+      "green",
+      "green",
+      "green",
+      "turning",
+      "turning",
+      "near_peak",
+      "past_peak"
     ]
   },
   {
-    "name": "Griswold",
-    "slug": "griswold",
     "county": "New London",
+    "fips": "09011",
+    "lat": 41.58521,
+    "lng": -71.92274,
+    "name": "Griswold",
+    "peak_week": 6,
     "ring": [
       [
         -71.95502,
@@ -14373,9 +15060,6 @@
         41.63446
       ]
     ],
-    "lat": 41.58521,
-    "fips": "09011",
-    "lng": -71.92274,
     "samples": [
       [
         -71.954263,
@@ -14477,12 +15161,27 @@
         -71.888771,
         41.592005
       ]
+    ],
+    "slug": "griswold",
+    "stages": [
+      "green",
+      "green",
+      "turning",
+      "turning",
+      "near_peak",
+      "peak",
+      "past_peak",
+      "past_peak",
+      "past_peak"
     ]
   },
   {
-    "name": "Groton",
-    "slug": "groton",
     "county": "New London",
+    "fips": "09011",
+    "lat": 41.36235,
+    "lng": -72.02849,
+    "name": "Groton",
+    "peak_week": 7,
     "ring": [
       [
         -71.95898,
@@ -15209,9 +15908,6 @@
         41.39758
       ]
     ],
-    "lat": 41.36235,
-    "fips": "09011",
-    "lng": -72.02849,
     "samples": [
       [
         -72.025777,
@@ -15313,12 +16009,27 @@
         -72.029095,
         41.378571
       ]
+    ],
+    "slug": "groton",
+    "stages": [
+      "green",
+      "green",
+      "green",
+      "green",
+      "turning",
+      "near_peak",
+      "peak",
+      "peak",
+      "past_peak"
     ]
   },
   {
-    "name": "Guilford",
-    "slug": "guilford",
     "county": "New Haven",
+    "fips": "09009",
+    "lat": 41.33483,
+    "lng": -72.70046,
+    "name": "Guilford",
+    "peak_week": 8,
     "ring": [
       [
         -72.72047,
@@ -15869,9 +16580,6 @@
         41.4275
       ]
     ],
-    "lat": 41.33483,
-    "fips": "09009",
-    "lng": -72.70046,
     "samples": [
       [
         -72.710629,
@@ -15973,12 +16681,27 @@
         -72.711616,
         41.303549
       ]
+    ],
+    "slug": "guilford",
+    "stages": [
+      "green",
+      "green",
+      "green",
+      "green",
+      "turning",
+      "turning",
+      "near_peak",
+      "peak",
+      "past_peak"
     ]
   },
   {
-    "name": "Haddam",
-    "slug": "haddam",
     "county": "Middlesex",
+    "fips": "09007",
+    "lat": 41.46758,
+    "lng": -72.54595,
+    "name": "Haddam",
+    "peak_week": 7,
     "ring": [
       [
         -72.48025,
@@ -16061,9 +16784,6 @@
         41.51935
       ]
     ],
-    "lat": 41.46758,
-    "fips": "09007",
-    "lng": -72.54595,
     "samples": [
       [
         -72.530873,
@@ -16165,12 +16885,27 @@
         -72.52765,
         41.508315
       ]
+    ],
+    "slug": "haddam",
+    "stages": [
+      "green",
+      "green",
+      "green",
+      "turning",
+      "turning",
+      "near_peak",
+      "peak",
+      "past_peak",
+      "past_peak"
     ]
   },
   {
-    "name": "Hamden",
-    "slug": "hamden",
     "county": "New Haven",
+    "fips": "09009",
+    "lat": 41.396,
+    "lng": -72.92156,
+    "name": "Hamden",
+    "peak_week": 7,
     "ring": [
       [
         -72.9478,
@@ -16437,9 +17172,6 @@
         41.46432
       ]
     ],
-    "lat": 41.396,
-    "fips": "09009",
-    "lng": -72.92156,
     "samples": [
       [
         -72.905734,
@@ -16541,12 +17273,27 @@
         -72.940214,
         41.372938
       ]
+    ],
+    "slug": "hamden",
+    "stages": [
+      "green",
+      "green",
+      "green",
+      "turning",
+      "turning",
+      "near_peak",
+      "peak",
+      "peak",
+      "past_peak"
     ]
   },
   {
-    "name": "Hampton",
-    "slug": "hampton",
     "county": "Windham",
+    "fips": "09015",
+    "lat": 41.78419,
+    "lng": -72.05831,
+    "name": "Hampton",
+    "peak_week": 5,
     "ring": [
       [
         -72.09221,
@@ -16589,9 +17336,6 @@
         41.83183
       ]
     ],
-    "lat": 41.78419,
-    "fips": "09015",
-    "lng": -72.05831,
     "samples": [
       [
         -72.095586,
@@ -16693,12 +17437,27 @@
         -72.080042,
         41.736786
       ]
+    ],
+    "slug": "hampton",
+    "stages": [
+      "green",
+      "turning",
+      "turning",
+      "near_peak",
+      "peak",
+      "past_peak",
+      "past_peak",
+      "past_peak",
+      "past_peak"
     ]
   },
   {
-    "name": "Hartford",
-    "slug": "hartford",
     "county": "Hartford",
+    "fips": "09003",
+    "lat": 41.76601,
+    "lng": -72.68343,
+    "name": "Hartford",
+    "peak_week": 6,
     "ring": [
       [
         -72.68596,
@@ -16825,9 +17584,6 @@
         41.80298
       ]
     ],
-    "lat": 41.76601,
-    "fips": "09003",
-    "lng": -72.68343,
     "samples": [
       [
         -72.658862,
@@ -16929,12 +17685,27 @@
         -72.677633,
         41.778381
       ]
+    ],
+    "slug": "hartford",
+    "stages": [
+      "green",
+      "green",
+      "turning",
+      "turning",
+      "near_peak",
+      "peak",
+      "past_peak",
+      "past_peak",
+      "past_peak"
     ]
   },
   {
-    "name": "Hartland",
-    "slug": "hartland",
     "county": "Hartford",
+    "fips": "09003",
+    "lat": 42.0043,
+    "lng": -72.9489,
+    "name": "Hartland",
+    "peak_week": 5,
     "ring": [
       [
         -72.97902,
@@ -16961,9 +17732,6 @@
         42.03826
       ]
     ],
-    "lat": 42.0043,
-    "fips": "09003",
-    "lng": -72.9489,
     "samples": [
       [
         -72.89855,
@@ -17065,12 +17833,27 @@
         -72.894177,
         41.974046
       ]
+    ],
+    "slug": "hartland",
+    "stages": [
+      "green",
+      "turning",
+      "turning",
+      "near_peak",
+      "peak",
+      "past_peak",
+      "past_peak",
+      "past_peak",
+      "past_peak"
     ]
   },
   {
-    "name": "Harwinton",
-    "slug": "harwinton",
     "county": "Litchfield",
+    "fips": "09005",
+    "lat": 41.75502,
+    "lng": -73.05826,
+    "name": "Harwinton",
+    "peak_week": 5,
     "ring": [
       [
         -73.01701,
@@ -17177,9 +17960,6 @@
         41.79817
       ]
     ],
-    "lat": 41.75502,
-    "fips": "09005",
-    "lng": -73.05826,
     "samples": [
       [
         -73.067813,
@@ -17281,12 +18061,27 @@
         -73.022282,
         41.788497
       ]
+    ],
+    "slug": "harwinton",
+    "stages": [
+      "green",
+      "turning",
+      "turning",
+      "near_peak",
+      "peak",
+      "peak",
+      "past_peak",
+      "past_peak",
+      "past_peak"
     ]
   },
   {
-    "name": "Hebron",
-    "slug": "hebron",
     "county": "Tolland",
+    "fips": "09013",
+    "lat": 41.65938,
+    "lng": -72.39032,
+    "name": "Hebron",
+    "peak_week": 6,
     "ring": [
       [
         -72.423,
@@ -17401,9 +18196,6 @@
         41.7316
       ]
     ],
-    "lat": 41.65938,
-    "fips": "09013",
-    "lng": -72.39032,
     "samples": [
       [
         -72.399509,
@@ -17505,12 +18297,27 @@
         -72.36023,
         41.621322
       ]
+    ],
+    "slug": "hebron",
+    "stages": [
+      "green",
+      "green",
+      "turning",
+      "turning",
+      "near_peak",
+      "peak",
+      "past_peak",
+      "past_peak",
+      "past_peak"
     ]
   },
   {
-    "name": "Kent",
-    "slug": "kent",
     "county": "Litchfield",
+    "fips": "09005",
+    "lat": 41.72991,
+    "lng": -73.45398,
+    "name": "Kent",
+    "peak_week": 5,
     "ring": [
       [
         -73.41014,
@@ -17581,9 +18388,6 @@
         41.7884
       ]
     ],
-    "lat": 41.72991,
-    "fips": "09005",
-    "lng": -73.45398,
     "samples": [
       [
         -73.459116,
@@ -17685,12 +18489,27 @@
         -73.412574,
         41.707262
       ]
+    ],
+    "slug": "kent",
+    "stages": [
+      "green",
+      "turning",
+      "turning",
+      "near_peak",
+      "peak",
+      "peak",
+      "past_peak",
+      "past_peak",
+      "past_peak"
     ]
   },
   {
-    "name": "Killingly",
-    "slug": "killingly",
     "county": "Windham",
+    "fips": "09015",
+    "lat": 41.83104,
+    "lng": -71.84996,
+    "name": "Killingly",
+    "peak_week": 5,
     "ring": [
       [
         -71.79685,
@@ -17861,9 +18680,6 @@
         41.90458
       ]
     ],
-    "lat": 41.83104,
-    "fips": "09015",
-    "lng": -71.84996,
     "samples": [
       [
         -71.799735,
@@ -17965,12 +18781,27 @@
         -71.831458,
         41.848766
       ]
+    ],
+    "slug": "killingly",
+    "stages": [
+      "green",
+      "turning",
+      "near_peak",
+      "near_peak",
+      "peak",
+      "past_peak",
+      "past_peak",
+      "past_peak",
+      "past_peak"
     ]
   },
   {
-    "name": "Killingworth",
-    "slug": "killingworth",
     "county": "Middlesex",
+    "fips": "09007",
+    "lat": 41.37908,
+    "lng": -72.57823,
+    "name": "Killingworth",
+    "peak_week": 7,
     "ring": [
       [
         -72.65391,
@@ -18181,9 +19012,6 @@
         41.43835
       ]
     ],
-    "lat": 41.37908,
-    "fips": "09007",
-    "lng": -72.57823,
     "samples": [
       [
         -72.53108,
@@ -18285,12 +19113,27 @@
         -72.550765,
         41.405158
       ]
+    ],
+    "slug": "killingworth",
+    "stages": [
+      "green",
+      "green",
+      "green",
+      "turning",
+      "turning",
+      "near_peak",
+      "peak",
+      "peak",
+      "past_peak"
     ]
   },
   {
-    "name": "Lebanon",
-    "slug": "lebanon",
     "county": "New London",
+    "fips": "09011",
+    "lat": 41.63141,
+    "lng": -72.24014,
+    "name": "Lebanon",
+    "peak_week": 6,
     "ring": [
       [
         -72.23901,
@@ -18437,9 +19280,6 @@
         41.714
       ]
     ],
-    "lat": 41.63141,
-    "fips": "09011",
-    "lng": -72.24014,
     "samples": [
       [
         -72.178279,
@@ -18541,12 +19381,27 @@
         -72.222913,
         41.658442
       ]
+    ],
+    "slug": "lebanon",
+    "stages": [
+      "green",
+      "green",
+      "turning",
+      "turning",
+      "near_peak",
+      "peak",
+      "past_peak",
+      "past_peak",
+      "past_peak"
     ]
   },
   {
-    "name": "Ledyard",
-    "slug": "ledyard",
     "county": "New London",
+    "fips": "09011",
+    "lat": 41.43998,
+    "lng": -72.01648,
+    "name": "Ledyard",
+    "peak_week": 6,
     "ring": [
       [
         -71.95637,
@@ -18713,9 +19568,6 @@
         41.48728
       ]
     ],
-    "lat": 41.43998,
-    "fips": "09011",
-    "lng": -72.01648,
     "samples": [
       [
         -72.033451,
@@ -18817,12 +19669,27 @@
         -72.034869,
         41.466822
       ]
+    ],
+    "slug": "ledyard",
+    "stages": [
+      "green",
+      "green",
+      "green",
+      "turning",
+      "turning",
+      "near_peak",
+      "past_peak",
+      "past_peak",
+      "past_peak"
     ]
   },
   {
-    "name": "Lisbon",
-    "slug": "lisbon",
     "county": "New London",
+    "fips": "09011",
+    "lat": 41.60145,
+    "lng": -72.01416,
+    "name": "Lisbon",
+    "peak_week": 6,
     "ring": [
       [
         -72.03104,
@@ -18993,9 +19860,6 @@
         41.6472
       ]
     ],
-    "lat": 41.60145,
-    "fips": "09011",
-    "lng": -72.01416,
     "samples": [
       [
         -72.014634,
@@ -19097,12 +19961,27 @@
         -72.013273,
         41.610339
       ]
+    ],
+    "slug": "lisbon",
+    "stages": [
+      "green",
+      "green",
+      "turning",
+      "turning",
+      "near_peak",
+      "peak",
+      "past_peak",
+      "past_peak",
+      "past_peak"
     ]
   },
   {
-    "name": "Litchfield",
-    "slug": "litchfield",
     "county": "Litchfield",
+    "fips": "09005",
+    "lat": 41.74132,
+    "lng": -73.19314,
+    "name": "Litchfield",
+    "peak_week": 5,
     "ring": [
       [
         -73.29856,
@@ -19233,9 +20112,6 @@
         41.77905
       ]
     ],
-    "lat": 41.74132,
-    "fips": "09005",
-    "lng": -73.19314,
     "samples": [
       [
         -73.152906,
@@ -19337,12 +20213,27 @@
         -73.241558,
         41.736411
       ]
+    ],
+    "slug": "litchfield",
+    "stages": [
+      "green",
+      "turning",
+      "turning",
+      "near_peak",
+      "peak",
+      "peak",
+      "past_peak",
+      "past_peak",
+      "past_peak"
     ]
   },
   {
-    "name": "Lyme",
-    "slug": "lyme",
     "county": "New London",
+    "fips": "09011",
+    "lat": 41.3965,
+    "lng": -72.34378,
+    "name": "Lyme",
+    "peak_week": 7,
     "ring": [
       [
         -72.27655,
@@ -19469,9 +20360,6 @@
         41.44039
       ]
     ],
-    "lat": 41.3965,
-    "fips": "09011",
-    "lng": -72.34378,
     "samples": [
       [
         -72.325394,
@@ -19573,12 +20461,27 @@
         -72.28454,
         41.412103
       ]
+    ],
+    "slug": "lyme",
+    "stages": [
+      "green",
+      "green",
+      "green",
+      "turning",
+      "turning",
+      "near_peak",
+      "peak",
+      "past_peak",
+      "past_peak"
     ]
   },
   {
-    "name": "Madison",
-    "slug": "madison",
     "county": "New Haven",
+    "fips": "09009",
+    "lat": 41.34045,
+    "lng": -72.62829,
+    "name": "Madison",
+    "peak_week": 8,
     "ring": [
       [
         -72.67871,
@@ -20341,9 +21244,6 @@
         41.43383
       ]
     ],
-    "lat": 41.34045,
-    "fips": "09009",
-    "lng": -72.62829,
     "samples": [
       [
         -72.637488,
@@ -20445,12 +21345,27 @@
         -72.635093,
         41.354101
       ]
+    ],
+    "slug": "madison",
+    "stages": [
+      "green",
+      "green",
+      "green",
+      "green",
+      "turning",
+      "turning",
+      "near_peak",
+      "peak",
+      "past_peak"
     ]
   },
   {
-    "name": "Manchester",
-    "slug": "manchester",
     "county": "Hartford",
+    "fips": "09003",
+    "lat": 41.77527,
+    "lng": -72.52423,
+    "name": "Manchester",
+    "peak_week": 6,
     "ring": [
       [
         -72.58362,
@@ -20481,9 +21396,6 @@
         41.8008
       ]
     ],
-    "lat": 41.77527,
-    "fips": "09003",
-    "lng": -72.52423,
     "samples": [
       [
         -72.490593,
@@ -20585,12 +21497,27 @@
         -72.53499,
         41.758535
       ]
+    ],
+    "slug": "manchester",
+    "stages": [
+      "green",
+      "green",
+      "turning",
+      "turning",
+      "near_peak",
+      "peak",
+      "past_peak",
+      "past_peak",
+      "past_peak"
     ]
   },
   {
-    "name": "Mansfield",
-    "slug": "mansfield",
     "county": "Tolland",
+    "fips": "09013",
+    "lat": 41.78921,
+    "lng": -72.22873,
+    "name": "Mansfield",
+    "peak_week": 5,
     "ring": [
       [
         -72.21776,
@@ -20853,9 +21780,6 @@
         41.83532
       ]
     ],
-    "lat": 41.78921,
-    "fips": "09013",
-    "lng": -72.22873,
     "samples": [
       [
         -72.215118,
@@ -20957,12 +21881,27 @@
         -72.177136,
         41.774445
       ]
+    ],
+    "slug": "mansfield",
+    "stages": [
+      "green",
+      "turning",
+      "turning",
+      "near_peak",
+      "peak",
+      "peak",
+      "past_peak",
+      "past_peak",
+      "past_peak"
     ]
   },
   {
-    "name": "Marlborough",
-    "slug": "marlborough",
     "county": "Hartford",
+    "fips": "09003",
+    "lat": 41.63269,
+    "lng": -72.4545,
+    "name": "Marlborough",
+    "peak_week": 6,
     "ring": [
       [
         -72.50582,
@@ -21037,9 +21976,6 @@
         41.6472
       ]
     ],
-    "lat": 41.63269,
-    "fips": "09003",
-    "lng": -72.4545,
     "samples": [
       [
         -72.494521,
@@ -21141,12 +22077,27 @@
         -72.420712,
         41.64428
       ]
+    ],
+    "slug": "marlborough",
+    "stages": [
+      "green",
+      "green",
+      "turning",
+      "turning",
+      "near_peak",
+      "peak",
+      "past_peak",
+      "past_peak",
+      "past_peak"
     ]
   },
   {
-    "name": "Meriden",
-    "slug": "meriden",
     "county": "New Haven",
+    "fips": "09009",
+    "lat": 41.53684,
+    "lng": -72.79449,
+    "name": "Meriden",
+    "peak_week": 7,
     "ring": [
       [
         -72.752,
@@ -21245,9 +22196,6 @@
         41.57873
       ]
     ],
-    "lat": 41.53684,
-    "fips": "09009",
-    "lng": -72.79449,
     "samples": [
       [
         -72.799322,
@@ -21349,12 +22297,27 @@
         -72.769831,
         41.555385
       ]
+    ],
+    "slug": "meriden",
+    "stages": [
+      "green",
+      "green",
+      "green",
+      "turning",
+      "turning",
+      "near_peak",
+      "peak",
+      "past_peak",
+      "past_peak"
     ]
   },
   {
-    "name": "Middlebury",
-    "slug": "middlebury",
     "county": "New Haven",
+    "fips": "09009",
+    "lat": 41.52714,
+    "lng": -73.12276,
+    "name": "Middlebury",
+    "peak_week": 6,
     "ring": [
       [
         -73.0937,
@@ -21449,9 +22412,6 @@
         41.57017
       ]
     ],
-    "lat": 41.52714,
-    "fips": "09009",
-    "lng": -73.12276,
     "samples": [
       [
         -73.109438,
@@ -21553,12 +22513,27 @@
         -73.139729,
         41.515737
       ]
+    ],
+    "slug": "middlebury",
+    "stages": [
+      "green",
+      "green",
+      "turning",
+      "turning",
+      "near_peak",
+      "peak",
+      "past_peak",
+      "past_peak",
+      "past_peak"
     ]
   },
   {
-    "name": "Middlefield",
-    "slug": "middlefield",
     "county": "Middlesex",
+    "fips": "09007",
+    "lat": 41.5177,
+    "lng": -72.71493,
+    "name": "Middlefield",
+    "peak_week": 7,
     "ring": [
       [
         -72.74874,
@@ -21617,9 +22592,6 @@
         41.54398
       ]
     ],
-    "lat": 41.5177,
-    "fips": "09007",
-    "lng": -72.71493,
     "samples": [
       [
         -72.729092,
@@ -21721,12 +22693,27 @@
         -72.689577,
         41.49816
       ]
+    ],
+    "slug": "middlefield",
+    "stages": [
+      "green",
+      "green",
+      "green",
+      "turning",
+      "turning",
+      "near_peak",
+      "peak",
+      "past_peak",
+      "past_peak"
     ]
   },
   {
-    "name": "Middletown",
-    "slug": "middletown",
     "county": "Middlesex",
+    "fips": "09007",
+    "lat": 41.54753,
+    "lng": -72.65477,
+    "name": "Middletown",
+    "peak_week": 7,
     "ring": [
       [
         -72.71444,
@@ -21945,9 +22932,6 @@
         41.60426
       ]
     ],
-    "lat": 41.54753,
-    "fips": "09007",
-    "lng": -72.65477,
     "samples": [
       [
         -72.64861,
@@ -22049,12 +23033,27 @@
         -72.627991,
         41.552581
       ]
+    ],
+    "slug": "middletown",
+    "stages": [
+      "green",
+      "green",
+      "green",
+      "turning",
+      "turning",
+      "near_peak",
+      "peak",
+      "past_peak",
+      "past_peak"
     ]
   },
   {
-    "name": "Milford",
-    "slug": "milford",
     "county": "New Haven",
+    "fips": "09009",
+    "lat": 41.22806,
+    "lng": -73.05902,
+    "name": "Milford",
+    "peak_week": 7,
     "ring": [
       [
         -73.0865,
@@ -22537,9 +23536,6 @@
         41.27741
       ]
     ],
-    "lat": 41.22806,
-    "fips": "09009",
-    "lng": -73.05902,
     "samples": [
       [
         -73.068593,
@@ -22641,12 +23637,27 @@
         -73.077517,
         41.261102
       ]
+    ],
+    "slug": "milford",
+    "stages": [
+      "green",
+      "green",
+      "green",
+      "green",
+      "turning",
+      "turning",
+      "near_peak",
+      "near_peak",
+      "past_peak"
     ]
   },
   {
-    "name": "Monroe",
-    "slug": "monroe",
     "county": "Fairfield",
+    "fips": "09001",
+    "lat": 41.33794,
+    "lng": -73.22492,
+    "name": "Monroe",
+    "peak_week": 7,
     "ring": [
       [
         -73.18345,
@@ -22765,9 +23776,6 @@
         41.39161
       ]
     ],
-    "lat": 41.33794,
-    "fips": "09001",
-    "lng": -73.22492,
     "samples": [
       [
         -73.198284,
@@ -22869,12 +23877,27 @@
         -73.189595,
         41.383088
       ]
+    ],
+    "slug": "monroe",
+    "stages": [
+      "green",
+      "green",
+      "green",
+      "turning",
+      "turning",
+      "near_peak",
+      "peak",
+      "peak",
+      "past_peak"
     ]
   },
   {
-    "name": "Montville",
-    "slug": "montville",
     "county": "New London",
+    "fips": "09011",
+    "lat": 41.46381,
+    "lng": -72.15672,
+    "name": "Montville",
+    "peak_week": 6,
     "ring": [
       [
         -72.19313,
@@ -23049,9 +24072,6 @@
         41.51207
       ]
     ],
-    "lat": 41.46381,
-    "fips": "09011",
-    "lng": -72.15672,
     "samples": [
       [
         -72.202871,
@@ -23153,12 +24173,27 @@
         -72.117608,
         41.427649
       ]
+    ],
+    "slug": "montville",
+    "stages": [
+      "green",
+      "green",
+      "green",
+      "turning",
+      "turning",
+      "near_peak",
+      "past_peak",
+      "past_peak",
+      "past_peak"
     ]
   },
   {
-    "name": "Morris",
-    "slug": "morris",
     "county": "Litchfield",
+    "fips": "09005",
+    "lat": 41.68981,
+    "lng": -73.20799,
+    "name": "Morris",
+    "peak_week": 5,
     "ring": [
       [
         -73.27571,
@@ -23197,9 +24232,6 @@
         41.69486
       ]
     ],
-    "lat": 41.68981,
-    "fips": "09005",
-    "lng": -73.20799,
     "samples": [
       [
         -73.243383,
@@ -23301,12 +24333,27 @@
         -73.170174,
         41.702561
       ]
+    ],
+    "slug": "morris",
+    "stages": [
+      "green",
+      "turning",
+      "turning",
+      "near_peak",
+      "peak",
+      "peak",
+      "past_peak",
+      "past_peak",
+      "past_peak"
     ]
   },
   {
-    "name": "Naugatuck",
-    "slug": "naugatuck",
     "county": "New Haven",
+    "fips": "09009",
+    "lat": 41.48898,
+    "lng": -73.05177,
+    "name": "Naugatuck",
+    "peak_week": 5,
     "ring": [
       [
         -73.0695,
@@ -23389,9 +24436,6 @@
         41.51425
       ]
     ],
-    "lat": 41.48898,
-    "fips": "09009",
-    "lng": -73.05177,
     "samples": [
       [
         -73.07414,
@@ -23493,12 +24537,27 @@
         -73.013152,
         41.486874
       ]
+    ],
+    "slug": "naugatuck",
+    "stages": [
+      "green",
+      "green",
+      "turning",
+      "turning",
+      "near_peak",
+      "near_peak",
+      "past_peak",
+      "past_peak",
+      "past_peak"
     ]
   },
   {
-    "name": "New Britain",
-    "slug": "new-britain",
     "county": "Hartford",
+    "fips": "09003",
+    "lat": 41.67601,
+    "lng": -72.78593,
+    "name": "New Britain",
+    "peak_week": 6,
     "ring": [
       [
         -72.76191,
@@ -23529,9 +24588,6 @@
         41.71582
       ]
     ],
-    "lat": 41.67601,
-    "fips": "09003",
-    "lng": -72.78593,
     "samples": [
       [
         -72.797617,
@@ -23633,12 +24689,27 @@
         -72.75907,
         41.653691
       ]
+    ],
+    "slug": "new-britain",
+    "stages": [
+      "green",
+      "green",
+      "turning",
+      "turning",
+      "near_peak",
+      "peak",
+      "past_peak",
+      "past_peak",
+      "past_peak"
     ]
   },
   {
-    "name": "New Canaan",
-    "slug": "new-canaan",
     "county": "Fairfield",
+    "fips": "09001",
+    "lat": 41.15913,
+    "lng": -73.49922,
+    "name": "New Canaan",
+    "peak_week": 8,
     "ring": [
       [
         -73.51244,
@@ -23741,9 +24812,6 @@
         41.19943
       ]
     ],
-    "lat": 41.15913,
-    "fips": "09001",
-    "lng": -73.49922,
     "samples": [
       [
         -73.479417,
@@ -23845,12 +24913,27 @@
         -73.464664,
         41.129343
       ]
+    ],
+    "slug": "new-canaan",
+    "stages": [
+      "green",
+      "green",
+      "green",
+      "green",
+      "turning",
+      "turning",
+      "near_peak",
+      "peak",
+      "past_peak"
     ]
   },
   {
-    "name": "New Fairfield",
-    "slug": "new-fairfield",
     "county": "Fairfield",
+    "fips": "09001",
+    "lat": 41.48782,
+    "lng": -73.4883,
+    "name": "New Fairfield",
+    "peak_week": 5,
     "ring": [
       [
         -73.53139,
@@ -23949,9 +25032,6 @@
         41.52025
       ]
     ],
-    "lat": 41.48782,
-    "fips": "09001",
-    "lng": -73.4883,
     "samples": [
       [
         -73.485968,
@@ -24053,12 +25133,27 @@
         -73.468988,
         41.480956
       ]
+    ],
+    "slug": "new-fairfield",
+    "stages": [
+      "green",
+      "green",
+      "turning",
+      "turning",
+      "near_peak",
+      "near_peak",
+      "past_peak",
+      "past_peak",
+      "past_peak"
     ]
   },
   {
-    "name": "New Hartford",
-    "slug": "new-hartford",
     "county": "Litchfield",
+    "fips": "09005",
+    "lat": 41.84424,
+    "lng": -73.00553,
+    "name": "New Hartford",
+    "peak_week": 5,
     "ring": [
       [
         -73.05356,
@@ -24113,9 +25208,6 @@
         41.88729
       ]
     ],
-    "lat": 41.84424,
-    "fips": "09005",
-    "lng": -73.00553,
     "samples": [
       [
         -72.991382,
@@ -24217,12 +25309,27 @@
         -73.029346,
         41.845915
       ]
+    ],
+    "slug": "new-hartford",
+    "stages": [
+      "green",
+      "turning",
+      "turning",
+      "near_peak",
+      "peak",
+      "past_peak",
+      "past_peak",
+      "past_peak",
+      "past_peak"
     ]
   },
   {
-    "name": "New Haven",
-    "slug": "new-haven",
     "county": "New Haven",
+    "fips": "09009",
+    "lat": 41.31127,
+    "lng": -72.9246,
+    "name": "New Haven",
+    "peak_week": 6,
     "ring": [
       [
         -72.97329,
@@ -24585,9 +25692,6 @@
         41.34745
       ]
     ],
-    "lat": 41.31127,
-    "fips": "09009",
-    "lng": -72.9246,
     "samples": [
       [
         -72.973118,
@@ -24689,12 +25793,27 @@
         -72.876244,
         41.326639
       ]
+    ],
+    "slug": "new-haven",
+    "stages": [
+      "green",
+      "green",
+      "green",
+      "green",
+      "turning",
+      "near_peak",
+      "near_peak",
+      "near_peak",
+      "past_peak"
     ]
   },
   {
-    "name": "New London",
-    "slug": "new-london",
     "county": "New London",
+    "fips": "09011",
+    "lat": 41.35378,
+    "lng": -72.10439,
+    "name": "New London",
+    "peak_week": 7,
     "ring": [
       [
         -72.08769,
@@ -24861,9 +25980,6 @@
         41.36294
       ]
     ],
-    "lat": 41.35378,
-    "fips": "09011",
-    "lng": -72.10439,
     "samples": [
       [
         -72.088487,
@@ -24965,12 +26081,27 @@
         -72.121712,
         41.370864
       ]
+    ],
+    "slug": "new-london",
+    "stages": [
+      "green",
+      "green",
+      "green",
+      "green",
+      "turning",
+      "near_peak",
+      "peak",
+      "peak",
+      "past_peak"
     ]
   },
   {
-    "name": "New Milford",
-    "slug": "new-milford",
     "county": "Litchfield",
+    "fips": "09005",
+    "lat": 41.6041,
+    "lng": -73.42158,
+    "name": "New Milford",
+    "peak_week": 5,
     "ring": [
       [
         -73.5066,
@@ -25125,9 +26256,6 @@
         41.66567
       ]
     ],
-    "lat": 41.6041,
-    "fips": "09005",
-    "lng": -73.42158,
     "samples": [
       [
         -73.445635,
@@ -25229,12 +26357,27 @@
         -73.414513,
         41.549049
       ]
+    ],
+    "slug": "new-milford",
+    "stages": [
+      "green",
+      "green",
+      "turning",
+      "near_peak",
+      "peak",
+      "peak",
+      "past_peak",
+      "past_peak",
+      "past_peak"
     ]
   },
   {
-    "name": "Newington",
-    "slug": "newington",
     "county": "Hartford",
+    "fips": "09003",
+    "lat": 41.687,
+    "lng": -72.73092,
+    "name": "Newington",
+    "peak_week": 5,
     "ring": [
       [
         -72.71447,
@@ -25281,9 +26424,6 @@
         41.72379
       ]
     ],
-    "lat": 41.687,
-    "fips": "09003",
-    "lng": -72.73092,
     "samples": [
       [
         -72.744149,
@@ -25385,12 +26525,27 @@
         -72.712732,
         41.684507
       ]
+    ],
+    "slug": "newington",
+    "stages": [
+      "green",
+      "green",
+      "turning",
+      "turning",
+      "near_peak",
+      "near_peak",
+      "past_peak",
+      "past_peak",
+      "past_peak"
     ]
   },
   {
-    "name": "Newtown",
-    "slug": "newtown",
     "county": "Fairfield",
+    "fips": "09001",
+    "lat": 41.39883,
+    "lng": -73.29283,
+    "name": "Newtown",
+    "peak_week": 5,
     "ring": [
       [
         -73.33163,
@@ -25565,9 +26720,6 @@
         41.47269
       ]
     ],
-    "lat": 41.39883,
-    "fips": "09001",
-    "lng": -73.29283,
     "samples": [
       [
         -73.2923,
@@ -25669,12 +26821,27 @@
         -73.267849,
         41.415429
       ]
+    ],
+    "slug": "newtown",
+    "stages": [
+      "green",
+      "green",
+      "green",
+      "turning",
+      "near_peak",
+      "near_peak",
+      "past_peak",
+      "past_peak",
+      "past_peak"
     ]
   },
   {
-    "name": "Norfolk",
-    "slug": "norfolk",
     "county": "Litchfield",
+    "fips": "09005",
+    "lat": 41.98016,
+    "lng": -73.19622,
+    "name": "Norfolk",
+    "peak_week": 4,
     "ring": [
       [
         -73.17214,
@@ -25705,9 +26872,6 @@
         42.0434
       ]
     ],
-    "lat": 41.98016,
-    "fips": "09005",
-    "lng": -73.19622,
     "samples": [
       [
         -73.149288,
@@ -25809,12 +26973,27 @@
         -73.241977,
         41.95061
       ]
+    ],
+    "slug": "norfolk",
+    "stages": [
+      "green",
+      "turning",
+      "near_peak",
+      "peak",
+      "peak",
+      "past_peak",
+      "past_peak",
+      "past_peak",
+      "past_peak"
     ]
   },
   {
-    "name": "North Branford",
-    "slug": "north-branford",
     "county": "New Haven",
+    "fips": "09009",
+    "lat": 41.36449,
+    "lng": -72.77675,
+    "name": "North Branford",
+    "peak_week": 8,
     "ring": [
       [
         -72.74628,
@@ -25885,9 +27064,6 @@
         41.42326
       ]
     ],
-    "lat": 41.36449,
-    "fips": "09009",
-    "lng": -72.77675,
     "samples": [
       [
         -72.803082,
@@ -25989,12 +27165,27 @@
         -72.806628,
         41.3712
       ]
+    ],
+    "slug": "north-branford",
+    "stages": [
+      "green",
+      "green",
+      "green",
+      "turning",
+      "turning",
+      "near_peak",
+      "near_peak",
+      "peak",
+      "past_peak"
     ]
   },
   {
-    "name": "North Canaan",
-    "slug": "north-canaan",
     "county": "Litchfield",
+    "fips": "09005",
+    "lat": 42.02227,
+    "lng": -73.29357,
+    "name": "North Canaan",
+    "peak_week": 4,
     "ring": [
       [
         -73.29629,
@@ -26053,9 +27244,6 @@
         42.047
       ]
     ],
-    "lat": 42.02227,
-    "fips": "09005",
-    "lng": -73.29357,
     "samples": [
       [
         -73.252357,
@@ -26157,12 +27345,27 @@
         -73.271371,
         42.044878
       ]
+    ],
+    "slug": "north-canaan",
+    "stages": [
+      "green",
+      "turning",
+      "near_peak",
+      "peak",
+      "peak",
+      "past_peak",
+      "past_peak",
+      "past_peak",
+      "past_peak"
     ]
   },
   {
-    "name": "North Haven",
-    "slug": "north-haven",
     "county": "New Haven",
+    "fips": "09009",
+    "lat": 41.38179,
+    "lng": -72.85747,
+    "name": "North Haven",
+    "peak_week": 7,
     "ring": [
       [
         -72.81758,
@@ -26341,9 +27544,6 @@
         41.39937
       ]
     ],
-    "lat": 41.38179,
-    "fips": "09009",
-    "lng": -72.85747,
     "samples": [
       [
         -72.822757,
@@ -26445,12 +27645,27 @@
         -72.879407,
         41.399407
       ]
+    ],
+    "slug": "north-haven",
+    "stages": [
+      "green",
+      "green",
+      "green",
+      "turning",
+      "turning",
+      "near_peak",
+      "peak",
+      "peak",
+      "past_peak"
     ]
   },
   {
-    "name": "North Stonington",
-    "slug": "north-stonington",
     "county": "New London",
+    "fips": "09011",
+    "lat": 41.46966,
+    "lng": -71.87535,
+    "name": "North Stonington",
+    "peak_week": 6,
     "ring": [
       [
         -71.90232,
@@ -26557,9 +27772,6 @@
         41.52016
       ]
     ],
-    "lat": 41.46966,
-    "fips": "09011",
-    "lng": -71.87535,
     "samples": [
       [
         -71.89373,
@@ -26661,12 +27873,27 @@
         -71.875899,
         41.503284
       ]
+    ],
+    "slug": "north-stonington",
+    "stages": [
+      "green",
+      "green",
+      "green",
+      "turning",
+      "turning",
+      "near_peak",
+      "past_peak",
+      "past_peak",
+      "past_peak"
     ]
   },
   {
-    "name": "Norwalk",
-    "slug": "norwalk",
     "county": "Fairfield",
+    "fips": "09001",
+    "lat": 41.11847,
+    "lng": -73.42271,
+    "name": "Norwalk",
+    "peak_week": 7,
     "ring": [
       [
         -73.44865,
@@ -27137,9 +28364,6 @@
         41.15357
       ]
     ],
-    "lat": 41.11847,
-    "fips": "09001",
-    "lng": -73.42271,
     "samples": [
       [
         -73.411202,
@@ -27241,12 +28465,27 @@
         -73.392094,
         41.121241
       ]
+    ],
+    "slug": "norwalk",
+    "stages": [
+      "green",
+      "green",
+      "green",
+      "green",
+      "green",
+      "turning",
+      "near_peak",
+      "near_peak",
+      "past_peak"
     ]
   },
   {
-    "name": "Norwich",
-    "slug": "norwich",
     "county": "New London",
+    "fips": "09011",
+    "lat": 41.5494,
+    "lng": -72.08824,
+    "name": "Norwich",
+    "peak_week": 6,
     "ring": [
       [
         -72.04777,
@@ -27401,9 +28640,6 @@
         41.59466
       ]
     ],
-    "lat": 41.5494,
-    "fips": "09011",
-    "lng": -72.08824,
     "samples": [
       [
         -72.073246,
@@ -27505,12 +28741,27 @@
         -72.052711,
         41.568822
       ]
+    ],
+    "slug": "norwich",
+    "stages": [
+      "green",
+      "green",
+      "turning",
+      "turning",
+      "near_peak",
+      "peak",
+      "past_peak",
+      "past_peak",
+      "past_peak"
     ]
   },
   {
-    "name": "Old Lyme",
-    "slug": "old-lyme",
     "county": "New London",
+    "fips": "09011",
+    "lat": 41.32193,
+    "lng": -72.3016,
+    "name": "Old Lyme",
+    "peak_week": 7,
     "ring": [
       [
         -72.32643,
@@ -27961,9 +29212,6 @@
         41.35697
       ]
     ],
-    "lat": 41.32193,
-    "fips": "09011",
-    "lng": -72.3016,
     "samples": [
       [
         -72.300364,
@@ -28065,12 +29313,27 @@
         -72.361741,
         41.339352
       ]
+    ],
+    "slug": "old-lyme",
+    "stages": [
+      "green",
+      "green",
+      "green",
+      "green",
+      "turning",
+      "near_peak",
+      "peak",
+      "peak",
+      "past_peak"
     ]
   },
   {
-    "name": "Old Saybrook",
-    "slug": "old-saybrook",
     "county": "Middlesex",
+    "fips": "09007",
+    "lat": 41.30343,
+    "lng": -72.38743,
+    "name": "Old Saybrook",
+    "peak_week": 8,
     "ring": [
       [
         -72.37175,
@@ -28681,9 +29944,6 @@
         41.34151
       ]
     ],
-    "lat": 41.30343,
-    "fips": "09007",
-    "lng": -72.38743,
     "samples": [
       [
         -72.394296,
@@ -28785,12 +30045,27 @@
         -72.398247,
         41.284453
       ]
+    ],
+    "slug": "old-saybrook",
+    "stages": [
+      "green",
+      "green",
+      "green",
+      "green",
+      "turning",
+      "turning",
+      "near_peak",
+      "peak",
+      "past_peak"
     ]
   },
   {
-    "name": "Orange",
-    "slug": "orange",
     "county": "New Haven",
+    "fips": "09009",
+    "lat": 41.28263,
+    "lng": -73.02717,
+    "name": "Orange",
+    "peak_week": 6,
     "ring": [
       [
         -72.99774,
@@ -28905,9 +30180,6 @@
         41.31468
       ]
     ],
-    "lat": 41.28263,
-    "fips": "09009",
-    "lng": -73.02717,
     "samples": [
       [
         -73.057315,
@@ -29009,12 +30281,27 @@
         -73.001549,
         41.248044
       ]
+    ],
+    "slug": "orange",
+    "stages": [
+      "green",
+      "green",
+      "green",
+      "green",
+      "turning",
+      "near_peak",
+      "near_peak",
+      "near_peak",
+      "past_peak"
     ]
   },
   {
-    "name": "Oxford",
-    "slug": "oxford",
     "county": "New Haven",
+    "fips": "09009",
+    "lat": 41.43132,
+    "lng": -73.1351,
+    "name": "Oxford",
+    "peak_week": 5,
     "ring": [
       [
         -73.10421,
@@ -29157,9 +30444,6 @@
         41.48926
       ]
     ],
-    "lat": 41.43132,
-    "fips": "09009",
-    "lng": -73.1351,
     "samples": [
       [
         -73.143797,
@@ -29261,12 +30545,27 @@
         -73.164359,
         41.415054
       ]
+    ],
+    "slug": "oxford",
+    "stages": [
+      "green",
+      "green",
+      "green",
+      "turning",
+      "near_peak",
+      "near_peak",
+      "past_peak",
+      "past_peak",
+      "past_peak"
     ]
   },
   {
-    "name": "Plainfield",
-    "slug": "plainfield",
     "county": "Windham",
+    "fips": "09015",
+    "lat": 41.69917,
+    "lng": -71.89872,
+    "name": "Plainfield",
+    "peak_week": 5,
     "ring": [
       [
         -71.91702,
@@ -29397,9 +30696,6 @@
         41.75978
       ]
     ],
-    "lat": 41.69917,
-    "fips": "09015",
-    "lng": -71.89872,
     "samples": [
       [
         -71.891725,
@@ -29501,12 +30797,27 @@
         -71.903821,
         41.723544
       ]
+    ],
+    "slug": "plainfield",
+    "stages": [
+      "green",
+      "turning",
+      "turning",
+      "turning",
+      "peak",
+      "peak",
+      "past_peak",
+      "past_peak",
+      "past_peak"
     ]
   },
   {
-    "name": "Plainville",
-    "slug": "plainville",
     "county": "Hartford",
+    "fips": "09003",
+    "lat": 41.67416,
+    "lng": -72.85712,
+    "name": "Plainville",
+    "peak_week": 6,
     "ring": [
       [
         -72.8929,
@@ -29541,9 +30852,6 @@
         41.69651
       ]
     ],
-    "lat": 41.67416,
-    "fips": "09003",
-    "lng": -72.85712,
     "samples": [
       [
         -72.873175,
@@ -29645,12 +30953,27 @@
         -72.870816,
         41.671393
       ]
+    ],
+    "slug": "plainville",
+    "stages": [
+      "green",
+      "green",
+      "turning",
+      "turning",
+      "near_peak",
+      "peak",
+      "past_peak",
+      "past_peak",
+      "past_peak"
     ]
   },
   {
-    "name": "Plymouth",
-    "slug": "plymouth",
     "county": "Litchfield",
+    "fips": "09005",
+    "lat": 41.66417,
+    "lng": -73.02628,
+    "name": "Plymouth",
+    "peak_week": 5,
     "ring": [
       [
         -72.99833,
@@ -29697,9 +31020,6 @@
         41.71259
       ]
     ],
-    "lat": 41.66417,
-    "fips": "09005",
-    "lng": -73.02628,
     "samples": [
       [
         -73.029219,
@@ -29801,12 +31121,27 @@
         -73.001755,
         41.645545
       ]
+    ],
+    "slug": "plymouth",
+    "stages": [
+      "green",
+      "green",
+      "turning",
+      "turning",
+      "peak",
+      "peak",
+      "past_peak",
+      "past_peak",
+      "past_peak"
     ]
   },
   {
-    "name": "Pomfret",
-    "slug": "pomfret",
     "county": "Windham",
+    "fips": "09015",
+    "lat": 41.86705,
+    "lng": -71.98343,
+    "name": "Pomfret",
+    "peak_week": 4,
     "ring": [
       [
         -71.93396,
@@ -29945,9 +31280,6 @@
         41.91677
       ]
     ],
-    "lat": 41.86705,
-    "fips": "09015",
-    "lng": -71.98343,
     "samples": [
       [
         -71.996443,
@@ -30049,12 +31381,27 @@
         -71.987381,
         41.881717
       ]
+    ],
+    "slug": "pomfret",
+    "stages": [
+      "green",
+      "turning",
+      "near_peak",
+      "peak",
+      "peak",
+      "past_peak",
+      "past_peak",
+      "past_peak",
+      "past_peak"
     ]
   },
   {
-    "name": "Portland",
-    "slug": "portland",
     "county": "Middlesex",
+    "fips": "09007",
+    "lat": 41.59885,
+    "lng": -72.58912,
+    "name": "Portland",
+    "peak_week": 6,
     "ring": [
       [
         -72.54865,
@@ -30177,9 +31524,6 @@
         41.64231
       ]
     ],
-    "lat": 41.59885,
-    "fips": "09007",
-    "lng": -72.58912,
     "samples": [
       [
         -72.599777,
@@ -30281,12 +31625,27 @@
         -72.618091,
         41.618643
       ]
+    ],
+    "slug": "portland",
+    "stages": [
+      "green",
+      "green",
+      "green",
+      "turning",
+      "turning",
+      "near_peak",
+      "past_peak",
+      "past_peak",
+      "past_peak"
     ]
   },
   {
-    "name": "Preston",
-    "slug": "preston",
     "county": "New London",
+    "fips": "09011",
+    "lat": 41.52243,
+    "lng": -72.00076,
+    "name": "Preston",
+    "peak_week": 6,
     "ring": [
       [
         -72.04603,
@@ -30449,9 +31808,6 @@
         41.55583
       ]
     ],
-    "lat": 41.52243,
-    "fips": "09011",
-    "lng": -72.00076,
     "samples": [
       [
         -72.016666,
@@ -30553,12 +31909,27 @@
         -72.021226,
         41.518957
       ]
+    ],
+    "slug": "preston",
+    "stages": [
+      "green",
+      "green",
+      "green",
+      "turning",
+      "near_peak",
+      "peak",
+      "past_peak",
+      "past_peak",
+      "past_peak"
     ]
   },
   {
-    "name": "Prospect",
-    "slug": "prospect",
     "county": "New Haven",
+    "fips": "09009",
+    "lat": 41.49919,
+    "lng": -72.97628,
+    "name": "Prospect",
+    "peak_week": 7,
     "ring": [
       [
         -73.01797,
@@ -30613,9 +31984,6 @@
         41.51936
       ]
     ],
-    "lat": 41.49919,
-    "fips": "09009",
-    "lng": -72.97628,
     "samples": [
       [
         -72.970625,
@@ -30717,12 +32085,27 @@
         -72.945144,
         41.509507
       ]
+    ],
+    "slug": "prospect",
+    "stages": [
+      "green",
+      "green",
+      "green",
+      "turning",
+      "turning",
+      "near_peak",
+      "peak",
+      "past_peak",
+      "past_peak"
     ]
   },
   {
-    "name": "Putnam",
-    "slug": "putnam",
     "county": "Windham",
+    "fips": "09015",
+    "lat": 41.90933,
+    "lng": -71.87121,
+    "name": "Putnam",
+    "peak_week": 4,
     "ring": [
       [
         -71.79801,
@@ -30793,9 +32176,6 @@
         41.93241
       ]
     ],
-    "lat": 41.90933,
-    "fips": "09015",
-    "lng": -71.87121,
     "samples": [
       [
         -71.839536,
@@ -30897,12 +32277,27 @@
         -71.867327,
         41.908126
       ]
+    ],
+    "slug": "putnam",
+    "stages": [
+      "green",
+      "turning",
+      "near_peak",
+      "peak",
+      "peak",
+      "past_peak",
+      "past_peak",
+      "past_peak",
+      "past_peak"
     ]
   },
   {
-    "name": "Redding",
-    "slug": "redding",
     "county": "Fairfield",
+    "fips": "09001",
+    "lat": 41.30503,
+    "lng": -73.3914,
+    "name": "Redding",
+    "peak_week": 7,
     "ring": [
       [
         -73.3468,
@@ -30957,9 +32352,6 @@
         41.3497
       ]
     ],
-    "lat": 41.30503,
-    "fips": "09001",
-    "lng": -73.3914,
     "samples": [
       [
         -73.444719,
@@ -31061,12 +32453,27 @@
         -73.348673,
         41.342076
       ]
+    ],
+    "slug": "redding",
+    "stages": [
+      "green",
+      "green",
+      "green",
+      "turning",
+      "turning",
+      "near_peak",
+      "peak",
+      "peak",
+      "past_peak"
     ]
   },
   {
-    "name": "Ridgefield",
-    "slug": "ridgefield",
     "county": "Fairfield",
+    "fips": "09001",
+    "lat": 41.30616,
+    "lng": -73.50188,
+    "name": "Ridgefield",
+    "peak_week": 7,
     "ring": [
       [
         -73.50469,
@@ -31125,9 +32532,6 @@
         41.37205
       ]
     ],
-    "lat": 41.30616,
-    "fips": "09001",
-    "lng": -73.50188,
     "samples": [
       [
         -73.482172,
@@ -31229,12 +32633,27 @@
         -73.529928,
         41.314103
       ]
+    ],
+    "slug": "ridgefield",
+    "stages": [
+      "green",
+      "green",
+      "green",
+      "turning",
+      "turning",
+      "near_peak",
+      "peak",
+      "peak",
+      "past_peak"
     ]
   },
   {
-    "name": "Rocky Hill",
-    "slug": "rocky-hill",
     "county": "Hartford",
+    "fips": "09003",
+    "lat": 41.65712,
+    "lng": -72.66329,
+    "name": "Rocky Hill",
+    "peak_week": 6,
     "ring": [
       [
         -72.61615,
@@ -31329,9 +32748,6 @@
         41.688
       ]
     ],
-    "lat": 41.65712,
-    "fips": "09003",
-    "lng": -72.66329,
     "samples": [
       [
         -72.663606,
@@ -31433,12 +32849,27 @@
         -72.699013,
         41.667345
       ]
+    ],
+    "slug": "rocky-hill",
+    "stages": [
+      "green",
+      "green",
+      "turning",
+      "turning",
+      "turning",
+      "near_peak",
+      "past_peak",
+      "past_peak",
+      "past_peak"
     ]
   },
   {
-    "name": "Roxbury",
-    "slug": "roxbury",
     "county": "Litchfield",
+    "fips": "09005",
+    "lat": 41.55397,
+    "lng": -73.30057,
+    "name": "Roxbury",
+    "peak_week": 5,
     "ring": [
       [
         -73.26748,
@@ -31469,9 +32900,6 @@
         41.60322
       ]
     ],
-    "lat": 41.55397,
-    "fips": "09005",
-    "lng": -73.30057,
     "samples": [
       [
         -73.299921,
@@ -31573,12 +33001,27 @@
         -73.272881,
         41.533728
       ]
+    ],
+    "slug": "roxbury",
+    "stages": [
+      "green",
+      "green",
+      "turning",
+      "turning",
+      "peak",
+      "peak",
+      "past_peak",
+      "past_peak",
+      "past_peak"
     ]
   },
   {
-    "name": "Salem",
-    "slug": "salem",
     "county": "New London",
+    "fips": "09011",
+    "lat": 41.48539,
+    "lng": -72.26644,
+    "name": "Salem",
+    "peak_week": 5,
     "ring": [
       [
         -72.2192,
@@ -31649,9 +33092,6 @@
         41.53909
       ]
     ],
-    "lat": 41.48539,
-    "fips": "09011",
-    "lng": -72.26644,
     "samples": [
       [
         -72.265052,
@@ -31753,12 +33193,27 @@
         -72.277367,
         41.45784
       ]
+    ],
+    "slug": "salem",
+    "stages": [
+      "green",
+      "green",
+      "green",
+      "turning",
+      "near_peak",
+      "near_peak",
+      "past_peak",
+      "past_peak",
+      "past_peak"
     ]
   },
   {
-    "name": "Salisbury",
-    "slug": "salisbury",
     "county": "Litchfield",
+    "fips": "09005",
+    "lat": 41.98603,
+    "lng": -73.42566,
+    "name": "Salisbury",
+    "peak_week": 4,
     "ring": [
       [
         -73.48739,
@@ -31937,9 +33392,6 @@
         42.04956
       ]
     ],
-    "lat": 41.98603,
-    "fips": "09005",
-    "lng": -73.42566,
     "samples": [
       [
         -73.460645,
@@ -32041,12 +33493,27 @@
         -73.423486,
         41.988864
       ]
+    ],
+    "slug": "salisbury",
+    "stages": [
+      "green",
+      "turning",
+      "near_peak",
+      "peak",
+      "peak",
+      "past_peak",
+      "past_peak",
+      "past_peak",
+      "past_peak"
     ]
   },
   {
-    "name": "Scotland",
-    "slug": "scotland",
     "county": "Windham",
+    "fips": "09015",
+    "lat": 41.69795,
+    "lng": -72.08803,
+    "name": "Scotland",
+    "peak_week": 5,
     "ring": [
       [
         -72.11211,
@@ -32093,9 +33560,6 @@
         41.74599
       ]
     ],
-    "lat": 41.69795,
-    "fips": "09015",
-    "lng": -72.08803,
     "samples": [
       [
         -72.113822,
@@ -32197,12 +33661,27 @@
         -72.062356,
         41.667154
       ]
+    ],
+    "slug": "scotland",
+    "stages": [
+      "green",
+      "green",
+      "turning",
+      "turning",
+      "peak",
+      "peak",
+      "past_peak",
+      "past_peak",
+      "past_peak"
     ]
   },
   {
-    "name": "Seymour",
-    "slug": "seymour",
     "county": "New Haven",
+    "fips": "09009",
+    "lat": 41.38104,
+    "lng": -73.08716,
+    "name": "Seymour",
+    "peak_week": 7,
     "ring": [
       [
         -73.08319,
@@ -32297,9 +33776,6 @@
         41.4038
       ]
     ],
-    "lat": 41.38104,
-    "fips": "09009",
-    "lng": -73.08716,
     "samples": [
       [
         -73.079919,
@@ -32401,12 +33877,27 @@
         -73.070336,
         41.402483
       ]
+    ],
+    "slug": "seymour",
+    "stages": [
+      "green",
+      "green",
+      "green",
+      "turning",
+      "turning",
+      "near_peak",
+      "peak",
+      "peak",
+      "past_peak"
     ]
   },
   {
-    "name": "Sharon",
-    "slug": "sharon",
     "county": "Litchfield",
+    "fips": "09005",
+    "lat": 41.85753,
+    "lng": -73.43763,
+    "name": "Sharon",
+    "peak_week": 4,
     "ring": [
       [
         -73.36203,
@@ -32525,9 +34016,6 @@
         41.91879
       ]
     ],
-    "lat": 41.85753,
-    "fips": "09005",
-    "lng": -73.43763,
     "samples": [
       [
         -73.503628,
@@ -32629,12 +34117,27 @@
         -73.497559,
         41.877091
       ]
+    ],
+    "slug": "sharon",
+    "stages": [
+      "green",
+      "turning",
+      "near_peak",
+      "peak",
+      "peak",
+      "past_peak",
+      "past_peak",
+      "past_peak",
+      "past_peak"
     ]
   },
   {
-    "name": "Shelton",
-    "slug": "shelton",
     "county": "Fairfield",
+    "fips": "09001",
+    "lat": 41.30611,
+    "lng": -73.13822,
+    "name": "Shelton",
+    "peak_week": 7,
     "ring": [
       [
         -73.15754,
@@ -32765,9 +34268,6 @@
         41.37682
       ]
     ],
-    "lat": 41.30611,
-    "fips": "09001",
-    "lng": -73.13822,
     "samples": [
       [
         -73.183119,
@@ -32869,12 +34369,27 @@
         -73.150659,
         41.350048
       ]
+    ],
+    "slug": "shelton",
+    "stages": [
+      "green",
+      "green",
+      "green",
+      "turning",
+      "turning",
+      "near_peak",
+      "peak",
+      "peak",
+      "past_peak"
     ]
   },
   {
-    "name": "Sherman",
-    "slug": "sherman",
     "county": "Fairfield",
+    "fips": "09001",
+    "lat": 41.58006,
+    "lng": -73.49918,
+    "name": "Sherman",
+    "peak_week": 5,
     "ring": [
       [
         -73.5066,
@@ -32949,9 +34464,6 @@
         41.66567
       ]
     ],
-    "lat": 41.58006,
-    "fips": "09001",
-    "lng": -73.49918,
     "samples": [
       [
         -73.479217,
@@ -33053,12 +34565,27 @@
         -73.505072,
         41.589367
       ]
+    ],
+    "slug": "sherman",
+    "stages": [
+      "green",
+      "green",
+      "turning",
+      "near_peak",
+      "peak",
+      "peak",
+      "past_peak",
+      "past_peak",
+      "past_peak"
     ]
   },
   {
-    "name": "Simsbury",
-    "slug": "simsbury",
     "county": "Hartford",
+    "fips": "09003",
+    "lat": 41.87301,
+    "lng": -72.82581,
+    "name": "Simsbury",
+    "peak_week": 5,
     "ring": [
       [
         -72.87727,
@@ -33145,9 +34672,6 @@
         41.92072
       ]
     ],
-    "lat": 41.87301,
-    "fips": "09003",
-    "lng": -72.82581,
     "samples": [
       [
         -72.822152,
@@ -33249,12 +34773,27 @@
         -72.856686,
         41.906614
       ]
+    ],
+    "slug": "simsbury",
+    "stages": [
+      "green",
+      "green",
+      "turning",
+      "turning",
+      "peak",
+      "peak",
+      "past_peak",
+      "past_peak",
+      "past_peak"
     ]
   },
   {
-    "name": "Somers",
-    "slug": "somers",
     "county": "Tolland",
+    "fips": "09013",
+    "lat": 41.9949,
+    "lng": -72.45306,
+    "name": "Somers",
+    "peak_week": 5,
     "ring": [
       [
         -72.50927,
@@ -33277,9 +34816,6 @@
         42.03441
       ]
     ],
-    "lat": 41.9949,
-    "fips": "09013",
-    "lng": -72.45306,
     "samples": [
       [
         -72.489909,
@@ -33381,12 +34917,27 @@
         -72.48582,
         41.954217
       ]
+    ],
+    "slug": "somers",
+    "stages": [
+      "green",
+      "turning",
+      "turning",
+      "turning",
+      "peak",
+      "peak",
+      "past_peak",
+      "past_peak",
+      "past_peak"
     ]
   },
   {
-    "name": "South Windsor",
-    "slug": "south-windsor",
     "county": "Hartford",
+    "fips": "09003",
+    "lat": 41.83523,
+    "lng": -72.57344,
+    "name": "South Windsor",
+    "peak_week": 6,
     "ring": [
       [
         -72.61909,
@@ -33441,9 +34992,6 @@
         41.8686
       ]
     ],
-    "lat": 41.83523,
-    "fips": "09003",
-    "lng": -72.57344,
     "samples": [
       [
         -72.620685,
@@ -33545,12 +35093,27 @@
         -72.597905,
         41.842894
       ]
+    ],
+    "slug": "south-windsor",
+    "stages": [
+      "green",
+      "green",
+      "turning",
+      "turning",
+      "near_peak",
+      "peak",
+      "past_peak",
+      "past_peak",
+      "past_peak"
     ]
   },
   {
-    "name": "Southbury",
-    "slug": "southbury",
     "county": "New Haven",
+    "fips": "09009",
+    "lat": 41.47454,
+    "lng": -73.23274,
+    "name": "Southbury",
+    "peak_week": 5,
     "ring": [
       [
         -73.25462,
@@ -33777,9 +35340,6 @@
         41.51189
       ]
     ],
-    "lat": 41.47454,
-    "fips": "09009",
-    "lng": -73.23274,
     "samples": [
       [
         -73.216615,
@@ -33881,12 +35441,27 @@
         -73.321076,
         41.48435
       ]
+    ],
+    "slug": "southbury",
+    "stages": [
+      "green",
+      "green",
+      "turning",
+      "turning",
+      "near_peak",
+      "near_peak",
+      "past_peak",
+      "past_peak",
+      "past_peak"
     ]
   },
   {
-    "name": "Southington",
-    "slug": "southington",
     "county": "Hartford",
+    "fips": "09003",
+    "lat": 41.6049,
+    "lng": -72.88003,
+    "name": "Southington",
+    "peak_week": 5,
     "ring": [
       [
         -72.88319,
@@ -34045,9 +35620,6 @@
         41.64961
       ]
     ],
-    "lat": 41.6049,
-    "fips": "09003",
-    "lng": -72.88003,
     "samples": [
       [
         -72.847106,
@@ -34149,12 +35721,27 @@
         -72.924717,
         41.613059
       ]
+    ],
+    "slug": "southington",
+    "stages": [
+      "green",
+      "green",
+      "turning",
+      "turning",
+      "near_peak",
+      "near_peak",
+      "past_peak",
+      "past_peak",
+      "past_peak"
     ]
   },
   {
-    "name": "Sprague",
-    "slug": "sprague",
     "county": "New London",
+    "fips": "09011",
+    "lat": 41.63043,
+    "lng": -72.0758,
+    "name": "Sprague",
+    "peak_week": 6,
     "ring": [
       [
         -72.12016,
@@ -34217,9 +35804,6 @@
         41.66179
       ]
     ],
-    "lat": 41.63043,
-    "fips": "09011",
-    "lng": -72.0758,
     "samples": [
       [
         -72.104278,
@@ -34321,12 +35905,27 @@
         -72.056274,
         41.614521
       ]
+    ],
+    "slug": "sprague",
+    "stages": [
+      "green",
+      "green",
+      "turning",
+      "turning",
+      "near_peak",
+      "peak",
+      "past_peak",
+      "past_peak",
+      "past_peak"
     ]
   },
   {
-    "name": "Stafford",
-    "slug": "stafford",
     "county": "Tolland",
+    "fips": "09013",
+    "lat": 41.98754,
+    "lng": -72.31233,
+    "name": "Stafford",
+    "peak_week": 5,
     "ring": [
       [
         -72.39772,
@@ -34365,9 +35964,6 @@
         42.0331
       ]
     ],
-    "lat": 41.98754,
-    "fips": "09013",
-    "lng": -72.31233,
     "samples": [
       [
         -72.329854,
@@ -34469,12 +36065,27 @@
         -72.235303,
         42.007162
       ]
+    ],
+    "slug": "stafford",
+    "stages": [
+      "green",
+      "turning",
+      "near_peak",
+      "near_peak",
+      "peak",
+      "peak",
+      "past_peak",
+      "past_peak",
+      "past_peak"
     ]
   },
   {
-    "name": "Stamford",
-    "slug": "stamford",
     "county": "Fairfield",
+    "fips": "09001",
+    "lat": 41.10494,
+    "lng": -73.55904,
+    "name": "Stamford",
+    "peak_week": 8,
     "ring": [
       [
         -73.55484,
@@ -34873,9 +36484,6 @@
         41.17996
       ]
     ],
-    "lat": 41.10494,
-    "fips": "09001",
-    "lng": -73.55904,
     "samples": [
       [
         -73.610565,
@@ -34977,12 +36585,27 @@
         -73.571491,
         41.119393
       ]
+    ],
+    "slug": "stamford",
+    "stages": [
+      "green",
+      "green",
+      "green",
+      "green",
+      "turning",
+      "turning",
+      "near_peak",
+      "peak",
+      "past_peak"
     ]
   },
   {
-    "name": "Sterling",
-    "slug": "sterling",
     "county": "Windham",
+    "fips": "09015",
+    "lat": 41.70243,
+    "lng": -71.81849,
+    "name": "Sterling",
+    "peak_week": 5,
     "ring": [
       [
         -71.79139,
@@ -35009,9 +36632,6 @@
         41.77455
       ]
     ],
-    "lat": 41.70243,
-    "fips": "09015",
-    "lng": -71.81849,
     "samples": [
       [
         -71.808714,
@@ -35113,12 +36733,27 @@
         -71.804539,
         41.743277
       ]
+    ],
+    "slug": "sterling",
+    "stages": [
+      "green",
+      "turning",
+      "turning",
+      "turning",
+      "peak",
+      "peak",
+      "past_peak",
+      "past_peak",
+      "past_peak"
     ]
   },
   {
-    "name": "Stonington",
-    "slug": "stonington",
     "county": "New London",
+    "fips": "09011",
+    "lat": 41.37763,
+    "lng": -71.90143,
+    "name": "Stonington",
+    "peak_week": 7,
     "ring": [
       [
         -71.84238,
@@ -35965,9 +37600,6 @@
         41.40829
       ]
     ],
-    "lat": 41.37763,
-    "fips": "09011",
-    "lng": -71.90143,
     "samples": [
       [
         -71.853725,
@@ -36069,12 +37701,27 @@
         -71.946466,
         41.415789
       ]
+    ],
+    "slug": "stonington",
+    "stages": [
+      "green",
+      "green",
+      "green",
+      "green",
+      "turning",
+      "near_peak",
+      "peak",
+      "peak",
+      "past_peak"
     ]
   },
   {
-    "name": "Stratford",
-    "slug": "stratford",
     "county": "Fairfield",
+    "fips": "09001",
+    "lat": 41.20966,
+    "lng": -73.13031,
+    "name": "Stratford",
+    "peak_week": 7,
     "ring": [
       [
         -73.08682,
@@ -36733,9 +38380,6 @@
         41.25563
       ]
     ],
-    "lat": 41.20966,
-    "fips": "09001",
-    "lng": -73.13031,
     "samples": [
       [
         -73.110783,
@@ -36837,12 +38481,27 @@
         -73.132161,
         41.196564
       ]
+    ],
+    "slug": "stratford",
+    "stages": [
+      "green",
+      "green",
+      "green",
+      "green",
+      "turning",
+      "turning",
+      "near_peak",
+      "near_peak",
+      "past_peak"
     ]
   },
   {
-    "name": "Suffield",
-    "slug": "suffield",
     "county": "Hartford",
+    "fips": "09003",
+    "lat": 41.99451,
+    "lng": -72.67884,
+    "name": "Suffield",
+    "peak_week": 5,
     "ring": [
       [
         -72.71443,
@@ -36985,9 +38644,6 @@
         42.03695
       ]
     ],
-    "lat": 41.99451,
-    "fips": "09003",
-    "lng": -72.67884,
     "samples": [
       [
         -72.652549,
@@ -37089,12 +38745,27 @@
         -72.747688,
         42.007359
       ]
+    ],
+    "slug": "suffield",
+    "stages": [
+      "green",
+      "turning",
+      "turning",
+      "turning",
+      "peak",
+      "peak",
+      "past_peak",
+      "past_peak",
+      "past_peak"
     ]
   },
   {
-    "name": "Thomaston",
-    "slug": "thomaston",
     "county": "Litchfield",
+    "fips": "09005",
+    "lat": 41.66971,
+    "lng": -73.0859,
+    "name": "Thomaston",
+    "peak_week": 5,
     "ring": [
       [
         -73.0549,
@@ -37237,9 +38908,6 @@
         41.70819
       ]
     ],
-    "lat": 41.66971,
-    "fips": "09005",
-    "lng": -73.0859,
     "samples": [
       [
         -73.064526,
@@ -37341,12 +39009,27 @@
         -73.120695,
         41.670872
       ]
+    ],
+    "slug": "thomaston",
+    "stages": [
+      "green",
+      "green",
+      "turning",
+      "turning",
+      "peak",
+      "peak",
+      "past_peak",
+      "past_peak",
+      "past_peak"
     ]
   },
   {
-    "name": "Thompson",
-    "slug": "thompson",
     "county": "Windham",
+    "fips": "09015",
+    "lat": 41.97978,
+    "lng": -71.87355,
+    "name": "Thompson",
+    "peak_week": 4,
     "ring": [
       [
         -71.96313,
@@ -37377,9 +39060,6 @@
         42.02624
       ]
     ],
-    "lat": 41.97978,
-    "fips": "09015",
-    "lng": -71.87355,
     "samples": [
       [
         -71.915889,
@@ -37481,12 +39161,27 @@
         -71.809367,
         42.012647
       ]
+    ],
+    "slug": "thompson",
+    "stages": [
+      "green",
+      "turning",
+      "near_peak",
+      "peak",
+      "peak",
+      "past_peak",
+      "past_peak",
+      "past_peak",
+      "past_peak"
     ]
   },
   {
-    "name": "Tolland",
-    "slug": "tolland",
     "county": "Tolland",
+    "fips": "09013",
+    "lat": 41.87859,
+    "lng": -72.36493,
+    "name": "Tolland",
+    "peak_week": 5,
     "ring": [
       [
         -72.30682,
@@ -37605,9 +39300,6 @@
         41.92951
       ]
     ],
-    "lat": 41.87859,
-    "fips": "09013",
-    "lng": -72.36493,
     "samples": [
       [
         -72.40752,
@@ -37709,12 +39401,27 @@
         -72.357908,
         41.834414
       ]
+    ],
+    "slug": "tolland",
+    "stages": [
+      "green",
+      "turning",
+      "turning",
+      "turning",
+      "peak",
+      "peak",
+      "past_peak",
+      "past_peak",
+      "past_peak"
     ]
   },
   {
-    "name": "Torrington",
-    "slug": "torrington",
     "county": "Litchfield",
+    "fips": "09005",
+    "lat": 41.83494,
+    "lng": -73.12807,
+    "name": "Torrington",
+    "peak_week": 5,
     "ring": [
       [
         -73.16227,
@@ -37797,9 +39504,6 @@
         41.8928
       ]
     ],
-    "lat": 41.83494,
-    "fips": "09005",
-    "lng": -73.12807,
     "samples": [
       [
         -73.177045,
@@ -37901,12 +39605,27 @@
         -73.133943,
         41.812833
       ]
+    ],
+    "slug": "torrington",
+    "stages": [
+      "green",
+      "turning",
+      "turning",
+      "near_peak",
+      "peak",
+      "past_peak",
+      "past_peak",
+      "past_peak",
+      "past_peak"
     ]
   },
   {
-    "name": "Trumbull",
-    "slug": "trumbull",
     "county": "Fairfield",
+    "fips": "09001",
+    "lat": 41.26018,
+    "lng": -73.20843,
+    "name": "Trumbull",
+    "peak_week": 7,
     "ring": [
       [
         -73.20446,
@@ -38005,9 +39724,6 @@
         41.29914
       ]
     ],
-    "lat": 41.26018,
-    "fips": "09001",
-    "lng": -73.20843,
     "samples": [
       [
         -73.259253,
@@ -38109,12 +39825,27 @@
         -73.249452,
         41.289175
       ]
+    ],
+    "slug": "trumbull",
+    "stages": [
+      "green",
+      "green",
+      "green",
+      "turning",
+      "turning",
+      "near_peak",
+      "peak",
+      "peak",
+      "past_peak"
     ]
   },
   {
-    "name": "Union",
-    "slug": "union",
     "county": "Tolland",
+    "fips": "09013",
+    "lat": 41.99299,
+    "lng": -72.16028,
+    "name": "Union",
+    "peak_week": 4,
     "ring": [
       [
         -72.20502,
@@ -38145,9 +39876,6 @@
         42.03098
       ]
     ],
-    "lat": 41.99299,
-    "fips": "09013",
-    "lng": -72.16028,
     "samples": [
       [
         -72.225236,
@@ -38249,12 +39977,27 @@
         -72.16832,
         42.012288
       ]
+    ],
+    "slug": "union",
+    "stages": [
+      "green",
+      "turning",
+      "near_peak",
+      "peak",
+      "peak",
+      "past_peak",
+      "past_peak",
+      "past_peak",
+      "past_peak"
     ]
   },
   {
-    "name": "Vernon",
-    "slug": "vernon",
     "county": "Tolland",
+    "fips": "09013",
+    "lat": 41.83643,
+    "lng": -72.46074,
+    "name": "Vernon",
+    "peak_week": 6,
     "ring": [
       [
         -72.49701,
@@ -38289,9 +40032,6 @@
         41.8603
       ]
     ],
-    "lat": 41.83643,
-    "fips": "09013",
-    "lng": -72.46074,
     "samples": [
       [
         -72.466389,
@@ -38393,12 +40133,27 @@
         -72.487479,
         41.847007
       ]
+    ],
+    "slug": "vernon",
+    "stages": [
+      "green",
+      "green",
+      "turning",
+      "turning",
+      "near_peak",
+      "peak",
+      "past_peak",
+      "past_peak",
+      "past_peak"
     ]
   },
   {
-    "name": "Voluntown",
-    "slug": "voluntown",
     "county": "New London",
+    "fips": "09011",
+    "lat": 41.5799,
+    "lng": -71.83246,
+    "name": "Voluntown",
+    "peak_week": 6,
     "ring": [
       [
         -71.85781,
@@ -38429,9 +40184,6 @@
         41.64412
       ]
     ],
-    "lat": 41.5799,
-    "fips": "09011",
-    "lng": -71.83246,
     "samples": [
       [
         -71.882994,
@@ -38533,12 +40285,27 @@
         -71.846141,
         41.617586
       ]
+    ],
+    "slug": "voluntown",
+    "stages": [
+      "green",
+      "green",
+      "green",
+      "turning",
+      "near_peak",
+      "peak",
+      "past_peak",
+      "past_peak",
+      "past_peak"
     ]
   },
   {
-    "name": "Wallingford",
-    "slug": "wallingford",
     "county": "New Haven",
+    "fips": "09009",
+    "lat": 41.45906,
+    "lng": -72.80416,
+    "name": "Wallingford",
+    "peak_week": 7,
     "ring": [
       [
         -72.74474,
@@ -38649,9 +40416,6 @@
         41.49827
       ]
     ],
-    "lat": 41.45906,
-    "fips": "09009",
-    "lng": -72.80416,
     "samples": [
       [
         -72.747313,
@@ -38753,12 +40517,27 @@
         -72.849816,
         41.497096
       ]
+    ],
+    "slug": "wallingford",
+    "stages": [
+      "green",
+      "green",
+      "green",
+      "turning",
+      "turning",
+      "near_peak",
+      "peak",
+      "peak",
+      "past_peak"
     ]
   },
   {
-    "name": "Warren",
-    "slug": "warren",
     "county": "Litchfield",
+    "fips": "09005",
+    "lat": 41.74056,
+    "lng": -73.34488,
+    "name": "Warren",
+    "peak_week": 5,
     "ring": [
       [
         -73.30134,
@@ -38841,9 +40620,6 @@
         41.77903
       ]
     ],
-    "lat": 41.74056,
-    "fips": "09005",
-    "lng": -73.34488,
     "samples": [
       [
         -73.31903,
@@ -38945,12 +40721,27 @@
         -73.35831,
         41.720365
       ]
+    ],
+    "slug": "warren",
+    "stages": [
+      "green",
+      "turning",
+      "turning",
+      "near_peak",
+      "peak",
+      "peak",
+      "past_peak",
+      "past_peak",
+      "past_peak"
     ]
   },
   {
-    "name": "Washington",
-    "slug": "washington",
     "county": "Litchfield",
+    "fips": "09005",
+    "lat": 41.6523,
+    "lng": -73.31455,
+    "name": "Washington",
+    "peak_week": 5,
     "ring": [
       [
         -73.37878,
@@ -39001,9 +40792,6 @@
         41.69944
       ]
     ],
-    "lat": 41.6523,
-    "fips": "09005",
-    "lng": -73.31455,
     "samples": [
       [
         -73.319068,
@@ -39105,12 +40893,27 @@
         -73.368924,
         41.660247
       ]
+    ],
+    "slug": "washington",
+    "stages": [
+      "green",
+      "green",
+      "turning",
+      "near_peak",
+      "peak",
+      "peak",
+      "past_peak",
+      "past_peak",
+      "past_peak"
     ]
   },
   {
-    "name": "Waterbury",
-    "slug": "waterbury",
     "county": "New Haven",
+    "fips": "09009",
+    "lat": 41.55827,
+    "lng": -73.03601,
+    "name": "Waterbury",
+    "peak_week": 6,
     "ring": [
       [
         -73.01864,
@@ -39205,9 +41008,6 @@
         41.61427
       ]
     ],
-    "lat": 41.55827,
-    "fips": "09009",
-    "lng": -73.03601,
     "samples": [
       [
         -73.080682,
@@ -39309,12 +41109,27 @@
         -73.012349,
         41.545254
       ]
+    ],
+    "slug": "waterbury",
+    "stages": [
+      "green",
+      "green",
+      "turning",
+      "turning",
+      "near_peak",
+      "peak",
+      "past_peak",
+      "past_peak",
+      "past_peak"
     ]
   },
   {
-    "name": "Waterford",
-    "slug": "waterford",
     "county": "New London",
+    "fips": "09011",
+    "lat": 41.37071,
+    "lng": -72.14757,
+    "name": "Waterford",
+    "peak_week": 7,
     "ring": [
       [
         -72.21929,
@@ -39713,9 +41528,6 @@
         41.41193
       ]
     ],
-    "lat": 41.37071,
-    "fips": "09011",
-    "lng": -72.14757,
     "samples": [
       [
         -72.177694,
@@ -39817,12 +41629,27 @@
         -72.122092,
         41.401494
       ]
+    ],
+    "slug": "waterford",
+    "stages": [
+      "green",
+      "green",
+      "green",
+      "green",
+      "turning",
+      "near_peak",
+      "peak",
+      "peak",
+      "past_peak"
     ]
   },
   {
-    "name": "Watertown",
-    "slug": "watertown",
     "county": "Litchfield",
+    "fips": "09005",
+    "lat": 41.61602,
+    "lng": -73.11773,
+    "name": "Watertown",
+    "peak_week": 5,
     "ring": [
       [
         -73.17097,
@@ -39985,9 +41812,6 @@
         41.66919
       ]
     ],
-    "lat": 41.61602,
-    "fips": "09005",
-    "lng": -73.11773,
     "samples": [
       [
         -73.147691,
@@ -40089,12 +41913,27 @@
         -73.138117,
         41.664648
       ]
+    ],
+    "slug": "watertown",
+    "stages": [
+      "green",
+      "green",
+      "turning",
+      "turning",
+      "peak",
+      "peak",
+      "past_peak",
+      "past_peak",
+      "past_peak"
     ]
   },
   {
-    "name": "West Hartford",
-    "slug": "west-hartford",
     "county": "Hartford",
+    "fips": "09003",
+    "lat": 41.76696,
+    "lng": -72.75388,
+    "name": "West Hartford",
+    "peak_week": 6,
     "ring": [
       [
         -72.71804,
@@ -40169,9 +42008,6 @@
         41.80664
       ]
     ],
-    "lat": 41.76696,
-    "fips": "09003",
-    "lng": -72.75388,
     "samples": [
       [
         -72.748815,
@@ -40273,12 +42109,27 @@
         -72.730897,
         41.727616
       ]
+    ],
+    "slug": "west-hartford",
+    "stages": [
+      "green",
+      "green",
+      "turning",
+      "turning",
+      "near_peak",
+      "peak",
+      "past_peak",
+      "past_peak",
+      "past_peak"
     ]
   },
   {
-    "name": "West Haven",
-    "slug": "west-haven",
     "county": "New Haven",
+    "fips": "09009",
+    "lat": 41.27396,
+    "lng": -72.96698,
+    "name": "West Haven",
+    "peak_week": 7,
     "ring": [
       [
         -72.98921,
@@ -40549,9 +42400,6 @@
         41.31369
       ]
     ],
-    "lat": 41.27396,
-    "fips": "09009",
-    "lng": -72.96698,
     "samples": [
       [
         -72.956412,
@@ -40653,12 +42501,27 @@
         -72.969833,
         41.28075
       ]
+    ],
+    "slug": "west-haven",
+    "stages": [
+      "green",
+      "green",
+      "green",
+      "green",
+      "turning",
+      "turning",
+      "near_peak",
+      "near_peak",
+      "past_peak"
     ]
   },
   {
-    "name": "Westbrook",
-    "slug": "westbrook",
     "county": "Middlesex",
+    "fips": "09007",
+    "lat": 41.30706,
+    "lng": -72.46633,
+    "name": "Westbrook",
+    "peak_week": 8,
     "ring": [
       [
         -72.51341,
@@ -40817,9 +42680,6 @@
         41.34638
       ]
     ],
-    "lat": 41.30706,
-    "fips": "09007",
-    "lng": -72.46633,
     "samples": [
       [
         -72.448716,
@@ -40921,12 +42781,27 @@
         -72.431728,
         41.290607
       ]
+    ],
+    "slug": "westbrook",
+    "stages": [
+      "green",
+      "green",
+      "green",
+      "green",
+      "turning",
+      "turning",
+      "near_peak",
+      "peak",
+      "past_peak"
     ]
   },
   {
-    "name": "Weston",
-    "slug": "weston",
     "county": "Fairfield",
+    "fips": "09001",
+    "lat": 41.22843,
+    "lng": -73.37255,
+    "name": "Weston",
+    "peak_week": 7,
     "ring": [
       [
         -73.36859,
@@ -40989,9 +42864,6 @@
         41.27522
       ]
     ],
-    "lat": 41.22843,
-    "fips": "09001",
-    "lng": -73.37255,
     "samples": [
       [
         -73.370986,
@@ -41093,12 +42965,27 @@
         -73.409112,
         41.257704
       ]
+    ],
+    "slug": "weston",
+    "stages": [
+      "green",
+      "green",
+      "green",
+      "turning",
+      "turning",
+      "near_peak",
+      "peak",
+      "peak",
+      "past_peak"
     ]
   },
   {
-    "name": "Westport",
-    "slug": "westport",
     "county": "Fairfield",
+    "fips": "09001",
+    "lat": 41.14602,
+    "lng": -73.34666,
+    "name": "Westport",
+    "peak_week": 7,
     "ring": [
       [
         -73.37908,
@@ -41537,9 +43424,6 @@
         41.18486
       ]
     ],
-    "lat": 41.14602,
-    "fips": "09001",
-    "lng": -73.34666,
     "samples": [
       [
         -73.340147,
@@ -41641,12 +43525,27 @@
         -73.301155,
         41.123405
       ]
+    ],
+    "slug": "westport",
+    "stages": [
+      "green",
+      "green",
+      "green",
+      "green",
+      "green",
+      "turning",
+      "near_peak",
+      "near_peak",
+      "past_peak"
     ]
   },
   {
-    "name": "Wethersfield",
-    "slug": "wethersfield",
     "county": "Hartford",
+    "fips": "09003",
+    "lat": 41.7012,
+    "lng": -72.67037,
+    "name": "Wethersfield",
+    "peak_week": 6,
     "ring": [
       [
         -72.64792,
@@ -41757,9 +43656,6 @@
         41.72781
       ]
     ],
-    "lat": 41.7012,
-    "fips": "09003",
-    "lng": -72.67037,
     "samples": [
       [
         -72.654165,
@@ -41861,12 +43757,27 @@
         -72.683979,
         41.68742
       ]
+    ],
+    "slug": "wethersfield",
+    "stages": [
+      "green",
+      "green",
+      "turning",
+      "turning",
+      "turning",
+      "near_peak",
+      "past_peak",
+      "past_peak",
+      "past_peak"
     ]
   },
   {
-    "name": "Willington",
-    "slug": "willington",
     "county": "Tolland",
+    "fips": "09013",
+    "lat": 41.88954,
+    "lng": -72.25937,
+    "name": "Willington",
+    "peak_week": 5,
     "ring": [
       [
         -72.21693,
@@ -41997,9 +43908,6 @@
         41.95823
       ]
     ],
-    "lat": 41.88954,
-    "fips": "09013",
-    "lng": -72.25937,
     "samples": [
       [
         -72.292747,
@@ -42101,12 +44009,27 @@
         -72.275084,
         41.910667
       ]
+    ],
+    "slug": "willington",
+    "stages": [
+      "green",
+      "turning",
+      "turning",
+      "near_peak",
+      "peak",
+      "peak",
+      "past_peak",
+      "past_peak",
+      "past_peak"
     ]
   },
   {
-    "name": "Wilton",
-    "slug": "wilton",
     "county": "Fairfield",
+    "fips": "09001",
+    "lat": 41.20695,
+    "lng": -73.43989,
+    "name": "Wilton",
+    "peak_week": 7,
     "ring": [
       [
         -73.42995,
@@ -42185,9 +44108,6 @@
         41.25444
       ]
     ],
-    "lat": 41.20695,
-    "fips": "09001",
-    "lng": -73.43989,
     "samples": [
       [
         -73.467498,
@@ -42289,12 +44209,27 @@
         -73.451053,
         41.257913
       ]
+    ],
+    "slug": "wilton",
+    "stages": [
+      "green",
+      "green",
+      "green",
+      "turning",
+      "turning",
+      "near_peak",
+      "peak",
+      "peak",
+      "past_peak"
     ]
   },
   {
-    "name": "Winchester",
-    "slug": "winchester",
     "county": "Litchfield",
+    "fips": "09005",
+    "lat": 41.92189,
+    "lng": -73.10282,
+    "name": "Winchester",
+    "peak_week": 4,
     "ring": [
       [
         -73.15146,
@@ -42341,9 +44276,6 @@
         41.95977
       ]
     ],
-    "lat": 41.92189,
-    "fips": "09005",
-    "lng": -73.10282,
     "samples": [
       [
         -73.14477,
@@ -42445,12 +44377,27 @@
         -73.132275,
         41.93687
       ]
+    ],
+    "slug": "winchester",
+    "stages": [
+      "green",
+      "turning",
+      "near_peak",
+      "peak",
+      "peak",
+      "past_peak",
+      "past_peak",
+      "past_peak",
+      "past_peak"
     ]
   },
   {
-    "name": "Windham",
-    "slug": "windham",
     "county": "Windham",
+    "fips": "09015",
+    "lat": 41.70982,
+    "lng": -72.16681,
+    "name": "Windham",
+    "peak_week": 5,
     "ring": [
       [
         -72.11211,
@@ -42605,9 +44552,6 @@
         41.74599
       ]
     ],
-    "lat": 41.70982,
-    "fips": "09015",
-    "lng": -72.16681,
     "samples": [
       [
         -72.156134,
@@ -42709,12 +44653,27 @@
         -72.165373,
         41.673921
       ]
+    ],
+    "slug": "windham",
+    "stages": [
+      "green",
+      "green",
+      "turning",
+      "turning",
+      "peak",
+      "peak",
+      "past_peak",
+      "past_peak",
+      "past_peak"
     ]
   },
   {
-    "name": "Windsor",
-    "slug": "windsor",
     "county": "Hartford",
+    "fips": "09003",
+    "lat": 41.8713,
+    "lng": -72.67366,
+    "name": "Windsor",
+    "peak_week": 5,
     "ring": [
       [
         -72.63531,
@@ -42825,9 +44784,6 @@
         41.90355
       ]
     ],
-    "lat": 41.8713,
-    "fips": "09003",
-    "lng": -72.67366,
     "samples": [
       [
         -72.7185,
@@ -42929,12 +44885,27 @@
         -72.646648,
         41.848412
       ]
+    ],
+    "slug": "windsor",
+    "stages": [
+      "green",
+      "green",
+      "turning",
+      "turning",
+      "peak",
+      "peak",
+      "past_peak",
+      "past_peak",
+      "past_peak"
     ]
   },
   {
-    "name": "Windsor Locks",
-    "slug": "windsor-locks",
     "county": "Hartford",
+    "fips": "09003",
+    "lat": 41.9268,
+    "lng": -72.65484,
+    "name": "Windsor Locks",
+    "peak_week": 5,
     "ring": [
       [
         -72.68763,
@@ -42989,9 +44960,6 @@
         41.94821
       ]
     ],
-    "lat": 41.9268,
-    "fips": "09003",
-    "lng": -72.65484,
     "samples": [
       [
         -72.627645,
@@ -43093,12 +45061,27 @@
         -72.6824,
         41.929655
       ]
+    ],
+    "slug": "windsor-locks",
+    "stages": [
+      "green",
+      "green",
+      "turning",
+      "turning",
+      "peak",
+      "peak",
+      "past_peak",
+      "past_peak",
+      "past_peak"
     ]
   },
   {
-    "name": "Wolcott",
-    "slug": "wolcott",
     "county": "New Haven",
+    "fips": "09009",
+    "lat": 41.60068,
+    "lng": -72.97318,
+    "name": "Wolcott",
+    "peak_week": 5,
     "ring": [
       [
         -72.93826,
@@ -43137,9 +45120,6 @@
         41.64412
       ]
     ],
-    "lat": 41.60068,
-    "fips": "09009",
-    "lng": -72.97318,
     "samples": [
       [
         -72.958292,
@@ -43241,12 +45221,27 @@
         -72.97445,
         41.558127
       ]
+    ],
+    "slug": "wolcott",
+    "stages": [
+      "green",
+      "green",
+      "turning",
+      "turning",
+      "near_peak",
+      "near_peak",
+      "past_peak",
+      "past_peak",
+      "past_peak"
     ]
   },
   {
-    "name": "Woodbridge",
-    "slug": "woodbridge",
     "county": "New Haven",
+    "fips": "09009",
+    "lat": 41.35662,
+    "lng": -73.01003,
+    "name": "Woodbridge",
+    "peak_week": 7,
     "ring": [
       [
         -73.0476,
@@ -43345,9 +45340,6 @@
         41.39592
       ]
     ],
-    "lat": 41.35662,
-    "fips": "09009",
-    "lng": -73.01003,
     "samples": [
       [
         -73.019907,
@@ -43449,12 +45441,27 @@
         -73.039225,
         41.379176
       ]
+    ],
+    "slug": "woodbridge",
+    "stages": [
+      "green",
+      "green",
+      "green",
+      "turning",
+      "turning",
+      "near_peak",
+      "peak",
+      "peak",
+      "past_peak"
     ]
   },
   {
-    "name": "Woodbury",
-    "slug": "woodbury",
     "county": "Litchfield",
+    "fips": "09005",
+    "lat": 41.56137,
+    "lng": -73.20721,
+    "name": "Woodbury",
+    "peak_week": 6,
     "ring": [
       [
         -73.25351,
@@ -43497,9 +45504,6 @@
         41.60456
       ]
     ],
-    "lat": 41.56137,
-    "fips": "09005",
-    "lng": -73.20721,
     "samples": [
       [
         -73.173289,
@@ -43601,12 +45605,27 @@
         -73.179859,
         41.524193
       ]
+    ],
+    "slug": "woodbury",
+    "stages": [
+      "green",
+      "green",
+      "turning",
+      "turning",
+      "near_peak",
+      "peak",
+      "past_peak",
+      "past_peak",
+      "past_peak"
     ]
   },
   {
-    "name": "Woodstock",
-    "slug": "woodstock",
     "county": "Windham",
+    "fips": "09015",
+    "lat": 41.96945,
+    "lng": -72.02211,
+    "name": "Woodstock",
+    "peak_week": 4,
     "ring": [
       [
         -72.1021,
@@ -43637,9 +45656,6 @@
         42.02881
       ]
     ],
-    "lat": 41.96945,
-    "fips": "09015",
-    "lng": -72.02211,
     "samples": [
       [
         -71.991576,
@@ -43741,6 +45757,18 @@
         -72.047074,
         41.939622
       ]
+    ],
+    "slug": "woodstock",
+    "stages": [
+      "green",
+      "turning",
+      "near_peak",
+      "peak",
+      "peak",
+      "past_peak",
+      "past_peak",
+      "past_peak",
+      "past_peak"
     ]
   }
 ]
