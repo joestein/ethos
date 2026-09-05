@@ -19,29 +19,6 @@
       <p class="mt-1 text-zinc-500">{kind_label(@place.kind)} · {@place.town}, {@place.state}</p>
     </div>
     <div class="flex items-center gap-2">
-      <div :if={@place.status == "open"}>
-        <%= if @current_user do %>
-          <form action={~p"/p/#{@place.slug}/visit"} method="post">
-            <input type="hidden" name="_csrf_token" value={Plug.CSRFProtection.get_csrf_token()} />
-            <%= if @visited? do %>
-              <button class="rounded-lg bg-emerald-600 px-3 py-1.5 text-sm text-white hover:bg-emerald-700">
-                ✓ Been here
-              </button>
-            <% else %>
-              <button class="rounded-lg border px-3 py-1.5 text-sm hover:bg-zinc-50">
-                I've been here
-              </button>
-            <% end %>
-          </form>
-        <% else %>
-          <.link
-            navigate={~p"/users/log_in"}
-            class="rounded-lg border px-3 py-1.5 text-sm hover:bg-zinc-50"
-          >
-            Log in to track places
-          </.link>
-        <% end %>
-      </div>
       <button
         type="button"
         data-copy-url={url(~p"/p/#{@place.slug}")}
@@ -115,6 +92,11 @@
       </li>
     </ul>
   </section>
+
+  {live_render(@conn, EthosWeb.SocialLive,
+    id: "social-place-#{@place.id}",
+    session: %{"subject_type" => "place", "subject_id" => @place.id}
+  )}
 
   <EthosWeb.ConnectedPages.connected_pages connected={@connected} />
 </article>

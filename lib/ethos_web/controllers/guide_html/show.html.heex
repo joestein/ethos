@@ -177,6 +177,11 @@
     Some booking links on this page earn Ethos a commission at no extra cost to you.
   </p>
 
+  {live_render(@conn, EthosWeb.SocialLive,
+    id: "social-guide-#{@guide.id}",
+    session: %{"subject_type" => "guide", "subject_id" => @guide.id}
+  )}
+
   <EthosWeb.ConnectedPages.connected_pages connected={@connected} />
 
   <footer class="mt-10 flex flex-wrap gap-4 border-t pt-6">
