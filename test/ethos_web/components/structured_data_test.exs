@@ -933,10 +933,35 @@ defmodule EthosWeb.StructuredDataTest do
       #     buckets were always going to hold still; the +65/+65 above and the
       #     two unmoved counts here are the same claim seen from opposite
       #     sides.
-      assert length(emitted) == 4910
-      assert count.(& &1["streetAddress"]) == 4287
+      #
+      # Re-measured after the evidence standard that withdrew Han Sung BBQ was
+      # re-run across the whole collection rather than the four entries it was
+      # first applied to. Eight more restaurants were withdrawn for want of a
+      # source establishing a grill at the table: three in Puget Sound (The
+      # Grill in Lakewood, Palace Korean Bar & Grill in Federal Way, Ka Won in
+      # Lynnwood), one in Los Angeles (Moon BBQ #2), and four in Chicago's
+      # north suburbs (Mr. Kimchi, Hwang Soh Grill, Gopchang Story in Glenview,
+      # Pro Samgyubsal). In every one of the eight the "at the table" was the
+      # researcher's conclusion and not the source's sentence — five had a
+      # source that never mentions a table at all, and four cited a
+      # search-results URL, which is not a citation because it is not
+      # re-checkable. Two of the ten re-examined survived on new evidence and
+      # stay. All eight withdrawn rows lived in priv/seed_data/korean_bbq/ and
+      # every one carried a house number and a five-digit ZIP, so the delta is
+      # -8 three times over:
+      #
+      #   * total 4910 -> 4902, -8.
+      #   * `streetAddress` 4287 -> 4279, -8. All eight carried one.
+      #   * `postalCode` 3523 -> 3515, -8. All eight carried one of those too.
+      #   * `is_nil(streetAddress)` unmoved at 623 and locality-only unmoved at
+      #     308: a row with both a house number and a postal code was never
+      #     counted on either of those sides, so withdrawing eight of them
+      #     cannot move either bucket. That is the same claim as the two -8s
+      #     above, seen from the other side.
+      assert length(emitted) == 4902
+      assert count.(& &1["streetAddress"]) == 4279
       assert count.(&is_nil(&1["streetAddress"])) == 623
-      assert count.(& &1["postalCode"]) == 3523
+      assert count.(& &1["postalCode"]) == 3515
 
       # The largest behavioural delta this change ships: 302 places emit a
       # PostalAddress carrying only locality, region and country. Their full
@@ -985,6 +1010,10 @@ defmodule EthosWeb.StructuredDataTest do
       # rows carry both a street line and a postal code, so none of them can
       # be in this bucket either — the same fact the streetAddress and
       # postalCode assertions above prove from the other side.
+      # 308 held once more when eight Korean BBQ restaurants were withdrawn for
+      # want of a source establishing a grill at the table. All eight carried
+      # both a street line and a postal code, so none of them was ever in this
+      # bucket to be removed from it.
       assert count.(fn ld -> is_nil(ld["streetAddress"]) and is_nil(ld["postalCode"]) end) == 308
     end
   end

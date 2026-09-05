@@ -221,9 +221,9 @@ defmodule Ethos.Seeds.KoreanBbqSeedDataTest do
   # grill definition on all eighteen; which JSON file happens to own each place
   # record is an implementation detail of three-pass directory seeding, invisible
   # from the page. But every corpus assertion below used to read `doc["places"]`,
-  # which is only the records a korean_bbq file owns — and 52 of the collection's
-  # 137 restaurants have their record in a neighborhood file this gate never
-  # opened. Manhattan owns none of its eighteen. Those 52 were clean, but clean
+  # which is only the records a korean_bbq file owns — and 53 of the collection's
+  # 129 restaurants have their record in a neighborhood file this gate never
+  # opened. Manhattan owns none of its eighteen. Those 53 were clean, but clean
   # by authorship rather than by enforcement, which is exactly the state this
   # gate exists to end.
   #
@@ -246,6 +246,47 @@ defmodule Ethos.Seeds.KoreanBbqSeedDataTest do
     for {file, doc} <- decoded_files(),
         entry <- doc["entries"] || [],
         do: {file, entry["place_slug"], index[entry["place_slug"]]}
+  end
+
+  # The same hole one level down, in the notes rather than the records.
+  #
+  # `prose/1` reads `entries[].note` for the ten korean_bbq documents and
+  # nothing else, so the ~30 entry notes this collection added to files under
+  # manhattan/, queens/ and brooklyn/ were checked by NOTHING — those three
+  # cities' own gates do not read entry notes either, and only London's and San
+  # Francisco's do. An entry note is prose a reader meets on the page it is
+  # written into, exactly like a place summary, and the bans have to reach it
+  # wherever it lives.
+  #
+  # So: index every entry note in the corpus by `place_slug`, the same key
+  # `place_index/0` resolves records on, and pull the notes for every slug this
+  # collection presents. Attribution is the file the note LIVES in rather than
+  # the guide that presents it, because that is the file an offending note has
+  # to be edited in.
+  defp note_index do
+    for path <- SeedDataHelpers.all_seed_files(),
+        entry <- (path |> File.read!() |> Jason.decode!())["entries"] || [],
+        is_binary(entry["place_slug"]),
+        is_binary(entry["note"]),
+        reduce: %{} do
+      acc ->
+        Map.update(
+          acc,
+          entry["place_slug"],
+          [{Path.basename(path), entry["note"]}],
+          &[{Path.basename(path), entry["note"]} | &1]
+        )
+    end
+  end
+
+  # One {file, note} row per note attached to a restaurant this collection
+  # presents, wherever in the corpus that note was written.
+  defp resolved_entry_notes do
+    index = note_index()
+
+    for {_file, slug, _place} <- resolve_entries(),
+        {source, note} <- Map.get(index, slug, []),
+        do: {source, note}
   end
 
   defp photos(doc) do
@@ -438,7 +479,7 @@ defmodule Ethos.Seeds.KoreanBbqSeedDataTest do
       guide_prose = for {file, doc} <- decoded_files(), text <- prose(doc), do: {file, text}
 
       offenders =
-        (guide_prose ++ resolved_prose ++ collection_prose())
+        (guide_prose ++ resolved_prose ++ resolved_entry_notes() ++ collection_prose())
         |> Enum.filter(fn {_file, text} -> hit?(patterns, text) end)
         |> Enum.map(fn {file, text} -> {file, String.slice(text, 0, 140)} end)
         |> Enum.uniq()

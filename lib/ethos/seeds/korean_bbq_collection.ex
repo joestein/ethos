@@ -47,12 +47,12 @@ defmodule Ethos.Seeds.KoreanBbqCollection do
         %{
           guide_slug: "los-angeles-korean-bbq-guide",
           blurb:
-            "Koreatown, inside the City of Los Angeles: twenty-five tabletop grills citywide, nineteen of them inside the roughly one-square-mile grid bounded by Vermont and Western Avenues and 3rd Street and Olympic Boulevard."
+            "Koreatown, inside the City of Los Angeles: twenty-four tabletop grills citywide, eighteen of them in and around Koreatown on West 6th Street, Wilshire, West 8th, Olympic, Vermont and Western, and three twenty miles north in the San Fernando Valley."
         },
         %{
           guide_slug: "manhattan-korean-bbq-guide",
           blurb:
-            "West 32nd Street between Fifth and Broadway, where eleven of the borough's grills sit on one block, plus the three that don't."
+            "West 32nd Street between Fifth and Broadway carries six of the borough's eighteen grills, seven more stand a block east and south on Fifth Avenue and the cross streets, and five sit outside Koreatown, from West 22nd Street to East 58th."
         },
         %{
           guide_slug: "queens-korean-bbq-guide",
@@ -67,7 +67,7 @@ defmodule Ethos.Seeds.KoreanBbqCollection do
         %{
           guide_slug: "london-korean-bbq-guide",
           blurb:
-            "Grills across nine boroughs, from Westminster and Camden out to Lewisham, Greenwich, Newham and Merton."
+            "Grills across eight boroughs, from Westminster and Camden out to Lewisham, Greenwich, Newham and Merton."
         },
         %{
           guide_slug: "chicago-korean-bbq-guide",
@@ -77,7 +77,7 @@ defmodule Ethos.Seeds.KoreanBbqCollection do
         %{
           guide_slug: "chicago-north-suburbs-korean-bbq-guide",
           blurb:
-            "Niles, Morton Grove, Glenview and Northbrook, where Chicago's Korean barbecue actually concentrated after Lawrence Avenue thinned out."
+            "Niles and Glenview, where Chicago's Korean barbecue actually concentrated after Lawrence Avenue thinned out."
         },
         %{
           guide_slug: "san-francisco-korean-bbq-guide",
