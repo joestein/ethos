@@ -1761,6 +1761,32 @@ end
 Run: `MIX_TEST_PARTITION=wwgeo mix test test/ethos_web/controllers/destination_redirect_test.exs`
 Expected: FAIL — legacy paths currently 404.
 
+- [ ] **Step 2b: Claim the orphaned ballpark county hubs**
+
+Task 6 moved the 31 ballpark corpora onto `{country}/{region}/{city}` paths and deliberately did not model a county tier — inventing one for 30 stadiums would add geography the corpus does not carry. The consequence is that **thirty `/destinations/{state}/{county}` hub URLs lose their mapping**: `/destinations/illinois/cook-county` listed the Wrigley Field guide and now resolves to nothing, because that guide's county derives from its city node and reads `"Chicago"`.
+
+Letting those 404 would contradict the choice this whole project was built on — a full hierarchy *with* 301s from every indexed URL. A hub that listed exactly one guide should redirect to the page that now lists that guide, which is the city node.
+
+For each of the 30, add the old county-hub path to the **city node's** `legacy_paths` in `priv/seed_data/destination_tree.json`:
+
+```json
+{"path": "united-states/illinois/chicago", "kind": "city", "name": "Chicago",
+ "legacy_paths": ["illinois/cook-county", "illinois/chicago"]}
+```
+
+Derive the list mechanically rather than by hand — read the pre-Task-6 county for each ballpark out of git history so no stadium is missed:
+
+```bash
+git show 0a3fb9a:lib/ethos/seeds/fenway_park_places.ex | grep -n 'town:\|state:\|county:'
+```
+
+Two honesty constraints on this step:
+
+- A county hub is **not** the same place as a city hub, so this is a redirect, not an equivalence. Do not add the county name to the node, do not render it, and do not let the redirect imply the city and the county are one thing.
+- Where a city legitimately has its own county node in the tree already (the Connecticut towns, the NYC boroughs), leave it alone — this step is only for the ballpark cities that have no county tier.
+
+Add a test asserting `/destinations/illinois/cook-county` 301s to `/destinations/united-states/illinois/chicago`, and one more for a second stadium in a different state.
+
 - [ ] **Step 3: Implement the redirect branch**
 
 Replace the stub in `lib/ethos_web/controllers/destination_controller.ex`:
