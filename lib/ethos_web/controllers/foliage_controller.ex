@@ -98,6 +98,17 @@ defmodule EthosWeb.FoliageController do
     }
   end
 
+  def embed(conn, params) do
+    conn
+    # The default secure headers forbid framing, which is the one thing an
+    # embed must permit. Nothing on this page is interactive or authenticated.
+    |> delete_resp_header("x-frame-options")
+    |> put_resp_header("content-security-policy", "frame-ancestors *")
+    |> put_root_layout(false)
+    |> put_layout(false)
+    |> render(:embed, week: week_param(params))
+  end
+
   @doc false
   def week_param(%{"week" => raw}) do
     case Integer.parse(to_string(raw)) do
