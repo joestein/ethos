@@ -32,40 +32,92 @@ defmodule EthosWeb.StructuredDataTest do
     assert StructuredData.postal_address(nil, "Waterbury", "Connecticut") == nil
   end
 
-  # A seed file names a destination node instead of carrying a town/state
-  # pair, so the locality and region the emitter is measured on are read off
-  # priv/seed_data/destination_tree.json.
-  #
-  # Locality is the node's own name. Region is what the corpus calls the
-  # place's country-level jurisdiction: the state for American places, the
-  # country's own name for Italy and Vatican City, and "England" for British
-  # ones — the National Heritage List's jurisdiction, and the key
-  # StructuredData maps to GB (see @country_by_region there).
-  #
-  # Derived that way rather than taken straight off the ancestry because a
-  # region postal_address/3 does not recognise silently means "US". Pass it
-  # nil, or "Lazio", and a Roman address is judged by the American
-  # house-number rule while the Italian, Vatican and British assertions below
-  # match nothing at all and pass while proving nothing. Each of those three
-  # asserts a non-empty set for the same reason.
-  defp region_for(trail) do
-    case Enum.find(trail, &(&1.kind == "country")) do
-      %{path: "italy"} -> "Italy"
-      %{path: "vatican-city"} -> "Vatican City"
-      %{path: "united-kingdom"} -> "England"
-      _ -> Enum.find_value(trail, fn d -> if d.kind == "region", do: d.name end)
+  test "postal_address/2 returns nil for a place with no address" do
+    trail = [%{path: "italy", kind: "country", name: "Italy"}]
+    assert StructuredData.postal_address(nil, trail) == nil
+  end
+
+  describe "country_code/1" do
+    # The whole point of the lookup: it has no default. A default's value would
+    # be "US", and a silent "US" for a foreign place is the defect the tree
+    # derivation exists to close — the shim set a Roman place's state to
+    # "Lazio", the old region-keyed lookup missed, and the Pantheon published as
+    # American. A sixth country must fail on its first request instead.
+    test "raises rather than defaulting on a country it does not know" do
+      trail = [%{path: "portugal", kind: "country", name: "Portugal"}]
+
+      assert_raise ArgumentError, ~r/no ISO 3166-1 alpha-2 code for country "Portugal"/, fn ->
+        StructuredData.country_code(trail)
+      end
+    end
+
+    test "raises on a trail with no country node at all" do
+      trail = [%{path: "lazio", kind: "region", name: "Lazio"}]
+
+      assert_raise ArgumentError, ~r/no country node in destination trail/, fn ->
+        StructuredData.country_code(trail)
+      end
+    end
+
+    test "reads the country from the trail's root, not its leaf" do
+      trail = [
+        %{path: "italy", kind: "country", name: "Italy"},
+        %{path: "italy/lazio", kind: "region", name: "Lazio"},
+        %{path: "italy/lazio/rome", kind: "city", name: "Rome"}
+      ]
+
+      assert StructuredData.country_code(trail) == "IT"
+    end
+
+    # Vatican City is a root country with nothing below it, so its places have
+    # no country *ancestor* — the node itself is the country. Searching the
+    # whole trail rather than the ancestors is what makes St Peter's emit VA
+    # instead of raising.
+    test "a root country node is its own country" do
+      trail = [%{path: "vatican-city", kind: "country", name: "Vatican City"}]
+      assert StructuredData.country_code(trail) == "VA"
     end
   end
 
-  describe "postal_address/3 over the whole seed corpus" do
+  # The expected ISO code for each root country, keyed on the node's PATH.
+  #
+  # Production keys on the node's NAME (see @iso_alpha2 in StructuredData), so
+  # this is a second, independent statement of the same fact rather than the
+  # emitter's own table read back at it — a renamed country node fails here
+  # instead of quietly agreeing with itself.
+  #
+  # This replaced a `region_for/1` helper that handed `postal_address/3` the
+  # literal "Italy" for Roman places while production handed it `place.state`,
+  # which the tree shim now sets to "Lazio". The suite was green on a value
+  # production never produced, and the "Lazio" one fell through to the "US"
+  # default — the emitter is now driven by the same trail production drives it
+  # with, so there is no seam left to be wrong in.
+  @country_by_root_path %{
+    "united-states" => "US",
+    "italy" => "IT",
+    "vatican-city" => "VA",
+    "united-kingdom" => "GB",
+    "canada" => "CA"
+  }
+
+  defp expected_country(trail) do
+    %{path: path} = Enum.find(trail, &(&1.kind == "country"))
+    Map.fetch!(@country_by_root_path, path)
+  end
+
+  defp expected_region(trail) do
+    trail |> Enum.reverse() |> Enum.find_value(fn d -> if d.kind == "region", do: d.name end)
+  end
+
+  describe "postal_address/2 over the whole seed corpus" do
     # The emitter's counterpart to the parser's corpus test in
     # test/ethos/places/address_test.exs. The parser guard cannot catch a
     # regression here: the bug this replaced lived in the *emitter*, which took
     # a correctly-parsed address and published the raw string anyway. Anyone
-    # reintroducing a raw-string fallback in postal_address/3 leaves the parser
+    # reintroducing a raw-string fallback in postal_address/2 leaves the parser
     # tests entirely green, so the defect signatures are asserted against the
-    # real builder, over every committed seed address — Connecticut, Manhattan
-    # and Brooklyn alike.
+    # real builder, over every committed seed address — Connecticut, Manhattan,
+    # Brooklyn, Rome and London alike.
 
     setup do
       trails = Ethos.SeedDataHelpers.destination_trails()
@@ -77,60 +129,78 @@ defmodule EthosWeb.StructuredDataTest do
         end)
         |> Enum.reject(&is_nil(&1["address"]))
 
-      # Carried with the region rather than without it: every other test in
-      # this block patterns on `{raw, ld}`, and the region is only needed by
-      # the country and per-country street assertions.
-      with_region =
+      # Carried with its trail rather than without it: every other test in this
+      # block patterns on `{raw, ld}`, and the trail is only needed by the
+      # country, region and per-country street assertions.
+      with_trail =
         Enum.map(places, fn p ->
           trail = Map.fetch!(trails, p["destination_path"])
-          region = region_for(trail)
-
-          {p["address"], region,
-           StructuredData.postal_address(p["address"], List.last(trail).name, region)}
+          {p["address"], trail, StructuredData.postal_address(p["address"], trail)}
         end)
 
-      emitted = Enum.map(with_region, fn {raw, _region, ld} -> {raw, ld} end)
+      emitted = Enum.map(with_trail, fn {raw, _trail, ld} -> {raw, ld} end)
 
-      %{emitted: emitted, with_region: with_region}
+      %{emitted: emitted, with_trail: with_trail}
     end
 
-    test "every block is a typed PostalAddress in the right country", %{with_region: with_region} do
+    test "every block is a typed PostalAddress in the right country", %{with_trail: with_trail} do
       # This assertion read `== "US"` until Rome landed, and passed, because
       # postal_address/3 hardcoded the country. The corpus was American for its
       # whole life, so nothing distinguished "every place is in the US" from
       # "the emitter says US regardless" — and the first 122 addressed Roman
       # places inherited the wrong one, publishing the Pantheon as American.
       #
-      # Asserted per place against its own region, so a future destination that
-      # is neither American nor Italian fails here rather than being quietly
-      # labelled US.
-      expected = fn
-        "Italy" -> "IT"
-        "Vatican City" -> "VA"
-        "England" -> "GB"
-        _ -> "US"
-      end
-
-      for {raw, region, ld} <- with_region do
+      # Asserted per place against the country its own ancestry names, so a
+      # future destination under a sixth country fails here rather than being
+      # quietly labelled US. (It would in fact raise: country_code/1 has no
+      # default. This is the assertion that says which code is right, not
+      # merely that some code was produced.)
+      for {raw, trail, ld} <- with_trail do
         assert ld["@type"] == "PostalAddress", "untyped address block for #{inspect(raw)}"
 
-        assert ld["addressCountry"] == expected.(region),
-               "#{inspect(raw)} in region #{inspect(region)} emitted country " <>
-                 "#{inspect(ld["addressCountry"])}, expected #{inspect(expected.(region))}"
+        expected = expected_country(trail)
+
+        assert ld["addressCountry"] == expected,
+               "#{inspect(raw)} under #{inspect(List.first(trail).path)} emitted country " <>
+                 "#{inspect(ld["addressCountry"])}, expected #{inspect(expected)}"
       end
     end
 
-    test "a country name is not emitted as a region", %{with_region: with_region} do
-      # Italy is the country, not the region, and the corpus does not carry
-      # Lazio. Emitting addressRegion "Italy" beside addressCountry "IT" would
-      # be a schema.org contradiction rather than a missing field.
-      # England joins Italy here: it is a country name in the corpus's region
-      # field, and emitting addressRegion "England" beside addressCountry "GB"
-      # would be a schema.org contradiction rather than a missing field.
-      for {raw, region, ld} <- with_region, region in ["Italy", "England"] do
-        assert is_nil(ld["addressRegion"]),
-               "#{inspect(raw)} emitted addressRegion #{inspect(ld["addressRegion"])} " <>
-                 "for a country name"
+    test "addressRegion is the place's region node, and nothing else", %{with_trail: with_trail} do
+      # The successor to "a country name is not emitted as a region", and
+      # stronger than it: that rule checked only that two known country names
+      # were suppressed, and could not have caught a region invented from
+      # nowhere. A region can now only be a `region` node's name, so a country
+      # name is structurally unable to appear in the field — Italy and Vatican
+      # City are `country` nodes, and Lazio is what an Italian place's region
+      # actually is.
+      #
+      # Vatican City has no region node at all, so its places emit no
+      # addressRegion, which is the nil half of this assertion.
+      for {raw, trail, ld} <- with_trail do
+        expected = expected_region(trail)
+
+        assert ld["addressRegion"] == expected,
+               "#{inspect(raw)} emitted addressRegion #{inspect(ld["addressRegion"])}, " <>
+                 "expected #{inspect(expected)}"
+      end
+
+      regions = with_trail |> Enum.map(fn {_, _, ld} -> ld["addressRegion"] end) |> Enum.uniq()
+
+      assert "Lazio" in regions and "England" in regions and nil in regions,
+             "the corpus no longer covers a foreign region, a British one and a region-less " <>
+               "country at once, so this assertion has stopped proving anything: " <>
+               inspect(regions)
+    end
+
+    test "addressLocality is the node the place is filed under", %{with_trail: with_trail} do
+      # Locality is the node's own name, never the parse's: 840 of the corpus's
+      # addressed places parse a locality that differs from the node they hang
+      # from — a Bushwick place whose address says "Brooklyn".
+      for {raw, trail, ld} <- with_trail do
+        assert ld["addressLocality"] == List.last(trail).name,
+               "#{inspect(raw)} emitted addressLocality #{inspect(ld["addressLocality"])}, " <>
+                 "expected #{inspect(List.last(trail).name)}"
       end
     end
 
@@ -161,7 +231,7 @@ defmodule EthosWeb.StructuredDataTest do
     end
 
     test "no American streetAddress is published without a leading house number",
-         %{with_region: with_region} do
+         %{with_trail: with_trail} do
       # Scoped to American addresses rather than relaxed. The leading house
       # number is what separates "126 Brightwater Court" from a descriptive
       # location, and it held for the corpus's whole American life.
@@ -181,8 +251,8 @@ defmodule EthosWeb.StructuredDataTest do
       # postal addresses — so this rule would suppress the street line on
       # nearly two in three British places if it were not scoped. It is checked
       # by its own discipline below rather than relaxed.
-      for {raw, region, ld} <- with_region,
-          region not in ["Italy", "Vatican City", "England"],
+      for {raw, trail, ld} <- with_trail,
+          expected_country(trail) not in ["IT", "VA", "GB"],
           street = ld["streetAddress"] do
         assert Regex.match?(~r/^\d/, street),
                "streetAddress without a house number: #{inspect(street)} (from #{inspect(raw)})"
@@ -193,7 +263,7 @@ defmodule EthosWeb.StructuredDataTest do
       end
     end
 
-    test "an Italian streetAddress names a thoroughfare type", %{with_region: with_region} do
+    test "an Italian streetAddress names a thoroughfare type", %{with_trail: with_trail} do
       # The Italian counterpart, so scoping the rule above does not leave Rome
       # unguarded. Without this, a descriptive location would publish as a
       # street the moment the house-number rule stopped applying to it.
@@ -201,20 +271,20 @@ defmodule EthosWeb.StructuredDataTest do
         ~r/^(?:via|viale|vicolo|vico|piazza|piazzale|piazzetta|largo|corso|borgo|lungotevere|salita|clivo|circonvallazione|ponte|passeggiata|galleria|portico|strada|foro|campo|arco|scalinata|molo|monte|lungomare|quadrato|parco)\b/i
 
       italian =
-        Enum.filter(with_region, fn {_, region, _} ->
-          region in ["Italy", "Vatican City"]
+        Enum.filter(with_trail, fn {_, trail, _} ->
+          expected_country(trail) in ["IT", "VA"]
         end)
 
       assert italian != [], "no Italian address reached the emitter — the scope guard is vacuous"
 
-      for {raw, _region, ld} <- italian, street = ld["streetAddress"] do
+      for {raw, _trail, ld} <- italian, street = ld["streetAddress"] do
         assert Regex.match?(thoroughfare, street),
                "Italian streetAddress naming no thoroughfare type: #{inspect(street)} " <>
                  "(from #{inspect(raw)})"
       end
     end
 
-    test "a British streetAddress is never a descriptive location", %{with_region: with_region} do
+    test "a British streetAddress is never a descriptive location", %{with_trail: with_trail} do
       # The third discipline, so scoping the house-number rule does not leave
       # London unguarded. It can be neither of the other two: 62% of real London
       # addresses carry no house number, and Bankside, Smithfield, The Cut and
@@ -228,11 +298,11 @@ defmodule EthosWeb.StructuredDataTest do
       # address, and the parser returns nil for it.
       descriptive = ~r/\b(?:bounded by|between|corner of|junction of|opposite)\b/i
 
-      british = Enum.filter(with_region, fn {_, region, _} -> region == "England" end)
+      british = Enum.filter(with_trail, fn {_, trail, _} -> expected_country(trail) == "GB" end)
 
       assert british != [], "no British address reached the emitter — the scope guard is vacuous"
 
-      for {raw, _region, ld} <- british, street = ld["streetAddress"] do
+      for {raw, _trail, ld} <- british, street = ld["streetAddress"] do
         refute Regex.match?(descriptive, street),
                "British streetAddress publishing a descriptive location: #{inspect(street)} " <>
                  "(from #{inspect(raw)})"

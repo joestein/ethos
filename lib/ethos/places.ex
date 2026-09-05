@@ -5,7 +5,24 @@ defmodule Ethos.Places do
   alias Ethos.Places.Place
 
   def get_place_by_slug!(slug), do: Repo.get_by!(Place, slug: slug)
-  def get_place_by_slug(slug), do: Repo.get_by(Place, slug: slug)
+
+  @doc """
+  A place by slug, with its destination node loaded, or nil.
+
+  The node is preloaded here rather than at the call site because the page this
+  feeds derives its breadcrumb, its visible geography nav and its schema.org
+  `PostalAddress` from the node's ancestry — three readers of one association,
+  and a lazy load would be three queries or a `NotLoaded` crash. `get_place_by_slug!/1`
+  deliberately does not preload: its caller is `Ethos.Seeds.GuideRunner`,
+  resolving one entry per guide row in a seeding loop that never touches the
+  node.
+  """
+  def get_place_by_slug(slug) do
+    case Repo.get_by(Place, slug: slug) do
+      nil -> nil
+      place -> Repo.preload(place, :destination_node)
+    end
+  end
 
   def upsert_place!(attrs) do
     attrs = attrs |> normalize_keys() |> put_legacy_geo()

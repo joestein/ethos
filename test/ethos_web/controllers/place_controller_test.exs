@@ -296,4 +296,121 @@ defmodule EthosWeb.PlaceControllerTest do
     xml = conn |> get(~p"/sitemap.xml") |> response(200)
     assert xml =~ "/p/palace-theater-waterbury</loc>"
   end
+
+  describe "addressCountry comes from the place's country node" do
+    # THESE THREE ARE THE REGRESSION GUARD FOR A WHOLE CLASS OF BUG, and they
+    # are deliberately built the long way round.
+    #
+    # Every fixture above hands the emitter a town and a state written in this
+    # file. Production hands it neither: it hands it a row the seed loader
+    # wrote, whose geography came from the destination tree. Those two inputs
+    # diverged silently. The tree shim sets a Roman place's `state` to "Lazio",
+    # the region-keyed country lookup it replaced had no "Lazio" key, and the
+    # country fell through to the "US" default — while the suite stayed green,
+    # because its own helper handed the emitter the literal "Italy" instead. A
+    # test that constructs its own input tests itself.
+    #
+    # So these seed real rows from the real committed seed files through
+    # `DataGuide.upsert_places!/1` — the same function `Ethos.Release` calls —
+    # read them back out of the database, and assert on what the controller
+    # renders. No town, state, country or locality is written in this file.
+    defp seed_places_from!(file) do
+      paths =
+        for p <- Ethos.Seeds.DataGuide.load!(file)["places"],
+            uniq: true,
+            do: p["destination_path"]
+
+      Ethos.SeedDataHelpers.seed_destination_paths!(paths)
+      Ethos.Seeds.DataGuide.upsert_places!(file)
+    end
+
+    defp seed_place!(destination, basename, slug) do
+      file =
+        Ethos.SeedDataHelpers.seed_files(destination)
+        |> Enum.find(&(Path.basename(&1) == basename))
+
+      assert file, "#{destination}/#{basename} is no longer in the corpus"
+
+      seed_places_from!(file)
+      Places.get_place_by_slug!(slug)
+    end
+
+    defp rendered_address(conn, place) do
+      html = conn |> get(~p"/p/#{place.slug}") |> html_response(200)
+      place_ld(html, place)["address"]
+    end
+
+    test "a Roman place emits IT, its rione and Lazio — not the US default", %{conn: conn} do
+      place = seed_place!("rome", "pigna.json", "pantheon-pigna-rome")
+
+      # The value production actually supplies, asserted before the assertion
+      # that depends on it. If the shim ever stops writing "Lazio" here, this
+      # line fails and says so, rather than the country assertion passing for a
+      # reason that has moved.
+      assert place.state == "Lazio",
+             "the loader no longer derives Lazio for a Roman place, so the input this test " <>
+               "was built to cover has changed: #{inspect(place.state)}"
+
+      address = rendered_address(conn, place)
+
+      refute address["addressCountry"] == "US",
+             "the Pantheon published as American — this is the live defect"
+
+      assert address["addressCountry"] == "IT"
+      assert address["addressLocality"] == "Pigna"
+      assert address["addressRegion"] == "Lazio"
+    end
+
+    test "a London place emits GB and England", %{conn: conn} do
+      place = seed_place!("london", "southwark.json", "tate-modern")
+
+      address = rendered_address(conn, place)
+
+      assert address["addressCountry"] == "GB"
+      assert address["addressLocality"] == "Bankside"
+      assert address["addressRegion"] == "England"
+    end
+
+    test "a Vatican place emits VA, not Italy's IT", %{conn: conn} do
+      # `vatican-city` is a ROOT country node, so St Peter's has no country
+      # ancestor at all — the node it is filed under is itself the country. A
+      # lookup that searched only the ancestors would raise here, and one that
+      # walked up to Rome would publish IT for a sovereign state.
+      place = seed_place!("rome", "vatican-city.json", "st-peters-basilica-vatican-city")
+
+      address = rendered_address(conn, place)
+
+      assert address["addressCountry"] == "VA"
+      assert address["addressLocality"] == "Vatican City"
+
+      # No region node above a root country, so no addressRegion rather than an
+      # invented one.
+      refute Map.has_key?(address, "addressRegion")
+    end
+
+    test "the breadcrumb and the visible nav follow the same node trail", %{conn: conn} do
+      place = seed_place!("rome", "pigna.json", "pantheon-pigna-rome")
+
+      html = conn |> get(~p"/p/#{place.slug}") |> html_response(200)
+      crumb = json_ld_of_type(html, "BreadcrumbList")
+
+      assert Enum.map(crumb["itemListElement"], & &1["name"]) ==
+               ["Ethos", "Destinations", "Italy", "Lazio", "Rome", "Pigna", place.name]
+
+      assert Enum.map(crumb["itemListElement"], & &1["item"]) == [
+               url(~p"/"),
+               url(~p"/destinations"),
+               url(~p"/destinations/italy"),
+               url(~p"/destinations/italy/lazio"),
+               url(~p"/destinations/italy/lazio/rome"),
+               url(~p"/destinations/italy/lazio/rome/pigna"),
+               url(~p"/p/#{place.slug}")
+             ]
+
+      # The visible nav links the same nodes at the same paths — not the
+      # single-slug legacy forms, which 301.
+      assert html =~ ~s(href="/destinations/italy/lazio/rome/pigna")
+      refute html =~ ~s(href="/destinations/pigna")
+    end
+  end
 end

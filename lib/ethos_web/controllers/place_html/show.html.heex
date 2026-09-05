@@ -1,5 +1,22 @@
 <article class="mx-auto max-w-2xl px-4 py-10">
-  <nav class="text-sm text-zinc-500">
+  <%!--
+    The place's own ancestry, root-first, linked at each node's own path.
+    `@geo_trail` is the same list `PlaceController` builds the BreadcrumbList
+    from, so the visible trail and the JSON-LD cannot drift apart, and each
+    link is the URL the hub actually serves rather than the single-slug form
+    that 301s. Empty for a place with no node — nothing in the seeded corpus —
+    which falls back to the state/county columns Task 12 removes.
+  --%>
+  <nav :if={@geo_trail != []} class="text-sm text-zinc-500">
+    <span :for={{d, i} <- Enum.with_index(@geo_trail)}>
+      <span :if={i > 0}>/</span>
+      <.link navigate={EthosWeb.DestinationHTML.node_path(d.path)} class="underline">
+        {d.name}
+      </.link>
+    </span>
+  </nav>
+
+  <nav :if={@geo_trail == []} class="text-sm text-zinc-500">
     <.link navigate={~p"/destinations/#{@place.state_slug}"} class="underline">
       {@place.state}
     </.link>
