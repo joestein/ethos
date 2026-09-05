@@ -82,6 +82,10 @@ defmodule Ethos.Foliage.Dataset do
       raise "foliage: route #{route.slug} references unknown town #{stop.town_slug}"
     end
 
+    for route <- routes, route.stops == [] do
+      raise "foliage: route #{route.slug} has no stops"
+    end
+
     :ok
   end
 
@@ -90,7 +94,8 @@ defmodule Ethos.Foliage.Dataset do
 
   Not a raise: a guide going missing should not take the site down, but it
   silently orphans a link, so it has to be loud in the log. Called from
-  `Ethos.Release` alongside the other corpus checks.
+  `Ethos.Release.foliage_links/0`, the only way to run this after a deploy —
+  production runs a release, not Mix.
   """
   def warn_dangling_guides(published_slugs) do
     for route <- fetch!().routes,

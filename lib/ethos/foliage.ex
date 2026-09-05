@@ -60,6 +60,16 @@ defmodule Ethos.Foliage do
   def peak_label(town), do: week(town.peak_week).label
 
   @doc """
+  Whether a town actually reaches `:peak` in DEEP's data.
+
+  36 of the 169 do not: the shoreline and the south-west corner turn late
+  enough that DEEP's eight real weeks run out before they reach the red band.
+  Their published window names the week they are most advanced, and the pages
+  must say so rather than calling it a peak.
+  """
+  def peak_verified?(town), do: :peak in town.stages
+
+  @doc """
   The week containing `date`, clamped to 1..9.
 
   Weeks are year-agnostic month/day ranges, so this compares `{month, day}`

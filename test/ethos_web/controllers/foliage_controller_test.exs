@@ -36,11 +36,17 @@ defmodule EthosWeb.FoliageControllerTest do
   end
 
   describe "week selection without JavaScript" do
-    test "renders different fills for different weeks", %{conn: conn} do
+    test "renders different map fills for different weeks", %{conn: conn} do
+      green = Ethos.Foliage.stage_color(:green)
       early = conn |> get(~p"/foliage?week=1") |> html_response(200)
-      late = conn |> get(~p"/foliage?week=8") |> html_response(200)
+      late = build_conn() |> get(~p"/foliage?week=8") |> html_response(200)
 
-      refute early == late
+      # Week 1 is green statewide in DEEP's data; week 8 is almost entirely
+      # past peak. Counting fills proves the week parameter reached the
+      # renderer — comparing whole pages only proves the selector highlighted
+      # a different link.
+      assert length(Regex.scan(~r/fill="#{green}"/, early)) == 169
+      assert length(Regex.scan(~r/fill="#{green}"/, late)) == 0
     end
 
     test "the selector is plain links", %{conn: conn} do

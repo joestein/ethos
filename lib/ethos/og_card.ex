@@ -39,6 +39,21 @@ defmodule Ethos.OGCard do
     File.mkdir_p!(dir)
     path = Path.join(dir, "foliage.png")
 
+    with {:ok, {image, _flags}} <- Vix.Vips.Operation.svgload_buffer(foliage_svg()),
+         :ok <- Vix.Vips.Image.write_to_file(image, path) do
+      {:ok, path}
+    end
+  end
+
+  @doc """
+  The foliage card's raw SVG markup, before rasterisation.
+
+  Split out from `generate_foliage/0` so tests can assert on the markup
+  directly — the footer attribution text and the map's stage-fill colours are
+  far easier, and far more precise, to verify as a string than by inspecting
+  rasterised PNG pixels.
+  """
+  def foliage_svg do
     # Weeks 1 and 9 are structurally flat — week 1 is pre-season green
     # statewide, and week 9 is DEEP's blanket past-peak fill — so a card
     # generated then would be a single colour and say nothing about foliage.
@@ -52,9 +67,21 @@ defmodule Ethos.OGCard do
       end
 
     map = Ethos.Foliage.Svg.map(week, width: 520, height: 340) |> Phoenix.HTML.safe_to_string()
-    inner = map |> String.replace(~r/^<svg[^>]*>/, "") |> String.replace(~r{</svg>$}, "")
 
-    svg = """
+    # `String.trim/1` before the closing-tag strip: without it, any trailing
+    # whitespace after `</svg>` makes the `$`-anchored replace silently no-op,
+    # leaving the inner `</svg>` in place. That closes the OUTER card svg
+    # early, so everything after it in the template — the footer bar and the
+    # attribution line — never renders, while the 1200x630 dimensions (set by
+    # the outer <svg> tag itself, which is emitted before this happens) still
+    # check out.
+    inner =
+      map
+      |> String.trim()
+      |> String.replace(~r/^<svg[^>]*>/, "")
+      |> String.replace(~r{</svg>$}, "")
+
+    """
     <svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630">
       <rect width="1200" height="630" fill="#18181b"/>
       <text x="80" y="150" font-family="DejaVu Serif, Georgia, serif" font-size="56" fill="#fafafa" font-weight="bold">Connecticut Foliage Forecast</text>
@@ -64,11 +91,6 @@ defmodule Ethos.OGCard do
       <text x="80" y="605" font-family="DejaVu Serif, Georgia, serif" font-size="24" fill="#18181b">derived from the CT DEEP fall foliage map</text>
     </svg>
     """
-
-    with {:ok, {image, _flags}} <- Vix.Vips.Operation.svgload_buffer(svg),
-         :ok <- Vix.Vips.Image.write_to_file(image, path) do
-      {:ok, path}
-    end
   end
 
   defp escape(text) do

@@ -27,7 +27,7 @@ defmodule EthosWeb.FoliageController do
         description: @description,
         type: "website",
         url: url(~p"/foliage"),
-        image: StructuredData.absolute_url("uploads/og/foliage.png")
+        image: og_image_url()
       },
       json_ld: [dataset_ld()]
     )
@@ -63,11 +63,25 @@ defmodule EthosWeb.FoliageController do
             description: description,
             type: "website",
             url: url(~p"/foliage/#{route.slug}"),
-            image: StructuredData.absolute_url("uploads/og/foliage.png")
+            image: og_image_url()
           },
           json_ld: [trip_ld(route, stops)]
         )
     end
+  end
+
+  # `priv/uploads/` is gitignored and Fly machines lose it between deploys, so
+  # the card is generated on demand rather than by a manual post-deploy step.
+  # Best-effort: on failure the pages render without an og:image rather than
+  # advertising one that 404s.
+  defp og_image_url do
+    path = Path.join([:code.priv_dir(:ethos) |> to_string(), "uploads", "og", "foliage.png"])
+
+    exists? =
+      File.exists?(path) or
+        match?({:ok, _}, Ethos.OGCard.generate_foliage())
+
+    if exists?, do: StructuredData.absolute_url("uploads/og/foliage.png"), else: nil
   end
 
   defp trip_ld(route, stops) do

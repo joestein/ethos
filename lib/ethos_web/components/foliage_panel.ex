@@ -19,7 +19,14 @@ defmodule EthosWeb.FoliagePanel do
       <h2 class="font-semibold">Foliage</h2>
       <p class="mt-2 text-sm">
         {Ethos.Foliage.stage_label(@foliage.stage)} this week ·
-        estimated peak {Ethos.Foliage.peak_label(@foliage.town)}
+        <%= if Ethos.Foliage.peak_verified?(@foliage.town) do %>
+          estimated peak {Ethos.Foliage.peak_label(@foliage.town)}
+        <% else %>
+          most advanced {Ethos.Foliage.peak_label(@foliage.town)}
+        <% end %>
+      </p>
+      <p :if={!Ethos.Foliage.peak_verified?(@foliage.town)} class="mt-1 text-xs text-zinc-500">
+        This town never reaches full colour on the state's map — DEEP's eight weeks run out before it turns.
       </p>
       <p :if={@foliage.route} class="mt-1 text-sm text-zinc-600">
         On the
