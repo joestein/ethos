@@ -20,12 +20,14 @@ defmodule Ethos.Foliage.GeometryTest do
     end
 
     test "is area-weighted, not vertex-averaged" do
-      # An L shape: vertex-averaging would pull the point off-centre differently
-      # than area-weighting. This asserts we did the area-weighted version.
+      # Area-weighted: a 4x1 bar (area 4, centroid {2.0, 0.5}) plus a 1x3 bar
+      # (area 3, centroid {0.5, 2.5}) gives 9.5/7 on both axes. Vertex-averaging
+      # the same six points gives 10/6 = 1.667, so this tolerance is what makes
+      # the test able to tell the two apart.
       l_shape = [{0.0, 0.0}, {4.0, 0.0}, {4.0, 1.0}, {1.0, 1.0}, {1.0, 4.0}, {0.0, 4.0}]
       assert {x, y} = Geometry.centroid(l_shape)
-      assert_in_delta x, 1.0, 0.4
-      assert_in_delta y, 1.0, 0.4
+      assert_in_delta x, 1.3571, 0.001
+      assert_in_delta y, 1.3571, 0.001
     end
   end
 
