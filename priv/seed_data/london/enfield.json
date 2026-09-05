@@ -55,7 +55,17 @@
         "answer": "The National Heritage List for England records 300 listed-building entries inside the borough boundary as mapped by OpenStreetMap relation 51841: 3 at Grade I, 23 at Grade II* and 274 at Grade II, alongside 5 scheduled monuments and 5 registered parks and gardens, 310 designated entries in all. The three Grade I entries are Forty Hall, NHLE 1294469; the screen wall, gateway and north pavilions to the west of it, NHLE 1079565; and Grovelands Park Hospital, original block only, NHLE 1078925. The registered landscapes are Trent Park at 213.02 hectares, Grovelands Park at 48.42, Forty Hall at 31.70, Broomfield House at 21.48 and Myddelton House at 7.35."
       }
     ],
-    "photos": []
+    "photos": [
+      {
+        "src": "/photos/gb/london/enfield/enfield-forty-hall.jpg",
+        "thumb": "/photos/gb/london/enfield/enfield-forty-hall_thumb.jpg",
+        "title": "Forty Hall, Forty Hill, Enfield",
+        "description": "The red brick south front of Forty Hall seen square-on across the lawn, three storeys and six bays under a hipped lead roof with tall brick chimney stacks. A pedimented doorcase and white panelled door sit at the centre beneath a mullioned window and an arched window above, with a cedar overhanging the frame at the left and a low railing across the foreground.",
+        "author": "Stu's Images",
+        "license": "CC BY-SA 4.0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Forty_Hall,_Enfield,_UK.jpg"
+      }
+    ]
   },
   "places": [
     {

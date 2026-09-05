@@ -55,7 +55,17 @@
         "answer": "The National Heritage List records 269 listed-building entries inside the borough boundary: one Grade I, 27 Grade II* and 241 Grade II, which sum to 269. The Grade I is Fulham Palace. Wormwood Scrubs is not on the register of parks and gardens; OpenStreetMap relation 17097363 tags it as a park with a common-land designation sourced to the Defra 2015 common land register, and the polygon measures 67.7 hectares. Little Wormwood Scrubs is a separate, smaller park about 780 metres north east of it."
       }
     ],
-    "photos": []
+    "photos": [
+      {
+        "src": "/photos/gb/london/hammersmith-and-fulham/hammersmith-and-fulham-fulham-palace.jpg",
+        "thumb": "/photos/gb/london/hammersmith-and-fulham/hammersmith-and-fulham-fulham-palace_thumb.jpg",
+        "title": "Fulham Palace from the west, Bishop's Avenue, Fulham",
+        "description": "The diapered red brick west front of Fulham Palace seen head on across the lawn, its long tiled roof broken by two chimney stacks and closed at each end by a gable. A four-centred archway at the centre opens through to the courtyard beyond, with a gravel path curving up to it between grass and a planted border.",
+        "author": "Tilman2007",
+        "license": "CC BY-SA 4.0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:1286903_I_FULHAM_PALACE,_from_W_Hammersmith_and_Fulham_London_20250609_0001.jpg"
+      }
+    ]
   },
   "places": [
     {

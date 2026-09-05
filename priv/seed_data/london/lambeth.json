@@ -55,7 +55,17 @@
         "answer": "No. Its address is on Lambeth Road, but the museum stands inside the London Borough of Southwark, which is where its Grade II listing, NHLE 1385640, falls. Lambeth's own six Grade I entries are three churches, Lambeth Palace, NHLE 1116399, the Royal Festival Hall, NHLE 1249756, and the Statue of Robert Clayton at St Thomas' Hospital, NHLE 1319925."
       }
     ],
-    "photos": []
+    "photos": [
+      {
+        "src": "/photos/gb/london/lambeth/lambeth-palace-gatehouse.jpg",
+        "thumb": "/photos/gb/london/lambeth/lambeth-palace-gatehouse_thumb.jpg",
+        "title": "The Tudor gatehouse of Lambeth Palace, Lambeth Palace Road",
+        "description": "The red-brick gatehouse seen square-on from the forecourt, its two crenellated towers rising five storeys either side of a pointed timber gate and a smaller pedestrian arch, with lanterns flanking the entrance. The stone tower of St Mary-at-Lambeth, now the Garden Museum, stands immediately to the right, and buses and vans pass on the road at the left under a flat white sky.",
+        "author": "Steve Daniels",
+        "license": "CC BY-SA 2.0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:The_Tudor_gatehouse_to_Lambeth_Palace_-_geograph.org.uk_-_7045404.jpg"
+      }
+    ]
   },
   "places": [
     {

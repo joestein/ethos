@@ -55,7 +55,17 @@
         "answer": "Morden Hall Park is 125 acres of National Trust land on the Wandle, a Grade II registered park and garden, NHLE 1001336, with two snuff watermills listed Grade II, NHLE 1080907 and NHLE 1193511, and Morden Hall itself Grade II, NHLE 1080905. Mitcham Cricket Green, in the Mitcham Cricket Green conservation area, has had cricket played on it since 1685 and is ringed by entries including the clock tower, NHLE 1358012, and the Tate Almshouses, NHLE 1193086. The Wandle Industrial Museum in the Vestry Hall Annexe, CR4 3UD, opens Wednesday 1pm to 4pm and Sunday 2pm to 5pm, admission free. The Church of St Lawrence, Morden, is Grade I, NHLE 1080899."
       }
     ],
-    "photos": []
+    "photos": [
+      {
+        "src": "/photos/gb/london/merton/merton-wimbledon-windmill.jpg",
+        "thumb": "/photos/gb/london/merton/merton-wimbledon-windmill_thumb.jpg",
+        "title": "Wimbledon Windmill, Wimbledon Common",
+        "description": "The northwest face of the windmill on Wimbledon Common, its octagonal brick base rising to a weatherboarded smock tower, a white balcony gallery and a domed cap carrying four sails. Mown grass and trees of the common surround it under a bright sky.",
+        "author": "Doyle of London",
+        "license": "CC BY-SA 4.0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Wimbledon_Windmill_(Northwest_Face_-_01).jpg"
+      }
+    ]
   },
   "places": [
     {

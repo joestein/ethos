@@ -55,7 +55,17 @@
         "answer": "Foots Cray Meadows is a Grade II registered park and garden of 95.04 hectares, NHLE 1000288, free at all hours, with the Five Arch Bridge over the River Cray listed Grade II, NHLE 1188471. Lamorbey Park is a Grade II registered park and garden of 46.12 hectares, NHLE 1000289, with a lake fed by the Shuttle. The Church of All Saints, Foots Cray, is Grade II*, NHLE 1064202, and Frognal House is Grade II*, NHLE 1064228, in private use as a care home and events venue with its exterior visible from Frognal Place. Sidcup station is 559 m from Lamorbey House and Albany Park 1.05 km from the Five Arch Bridge."
       }
     ],
-    "photos": []
+    "photos": [
+      {
+        "src": "/photos/gb/london/bexley/bexley-red-house.jpg",
+        "thumb": "/photos/gb/london/bexley/bexley-red-house_thumb.jpg",
+        "title": "Red House, Red House Lane, Bexleyheath",
+        "description": "The garden front of Red House in full sun: two ranges of red brick meeting at a right angle under steep clay-tiled roofs, with tall brick chimneystacks, a slate-capped roof turret carrying a weathervane, sash and pointed-arch windows, and a round-arched brick porch to the right. The tile-roofed well head stands on the lawn in the foreground, with shrubs and climbers banked against the walls.",
+        "author": "Ethan Doyle White",
+        "license": "CC BY-SA 3.0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Philip_Webb%27s_Red_House_in_Upton.jpg"
+      }
+    ]
   },
   "places": [
     {
