@@ -141,6 +141,21 @@ defmodule Ethos.Seeds.GolfCoursesRosterTest do
                inspect({entry["city"], entry["state"], entry["county"]}) <>
                ", the #{inspect(entry["course"])} place record has " <>
                inspect(corpus[entry["course"]])
+
+      # Scoped to criterion == "ranking" on purpose. A row that fell back to
+      # the "championship" criterion (see the mutual-exclusion test above)
+      # legitimately cites a different source, or none at all — asserting
+      # this across every resolved row would fail that case for doing its
+      # job. Oregon's row carried "2025-'26 (25th edition)" and "Golf Digest
+      # Best in State, Oregon" for hours after the descriptor was dropped
+      # everywhere else, and nothing here caught it; this closes that gap.
+      if entry["criterion"] == "ranking" do
+        assert entry["ranking_source"] == "Golf Digest Best in State" and
+                 entry["ranking_edition"] == "2025-'26",
+               "#{slug} disagrees with the rest of the roster about the ranking it cites: " <>
+                 "ranking_source #{inspect(entry["ranking_source"])}, ranking_edition " <>
+                 inspect(entry["ranking_edition"])
+      end
     end
   end
 

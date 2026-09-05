@@ -399,11 +399,19 @@ all-or-nothing:
 | `county` | `Coos County` | B1 |
 | `access` | the C2 correction, condensed | C2, C3, C7 |
 | `criterion` | `ranking` | A1–A5 |
-| `ranking_source` | `Golf Digest Best in State, Oregon` | A1 |
-| `ranking_edition` | `2025-'26 (25th edition)` | A5 — *"making this the 25th edition"* |
+| `ranking_source` | `Golf Digest Best in State` | A1 |
+| `ranking_edition` | `2025-'26` | A2 |
 | `ranking_position` | `1` | A2 |
 | `second_course` | `Bandon Trails` | G1 |
 | `verified` | `true` | |
+
+**Correction:** this row originally recorded `ranking_source` as `Golf Digest
+Best in State, Oregon` and `ranking_edition` as `2025-'26 (25th edition)`. A
+verifier fetching the ranking page directly found "25th edition" does not
+appear on it — an unsourced descriptor riding along with a confirmed fact —
+so it was dropped, and the source name was brought in line with the other
+resolved rows. See `docs/golf/00-ranking.md` §7. The roster JSON has been
+corrected to match; nothing else in this row changed.
 
 `MIX_TEST_PARTITION=_golf mix test test/ethos/seeds/golf_courses_roster_test.exs
 --include pending_golf` — **6 tests, 1 failure.** The attribution test now

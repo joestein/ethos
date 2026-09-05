@@ -19,8 +19,8 @@ git-ignored path has no audit trail a year from now.
 
 ## 1. The selected ranking
 
-**Golf Digest "Best in State," 2025-'26 edition — the 25th edition of a series
-published every other year since 1977.**
+**Golf Digest "Best in State," 2025-'26 edition — part of a series published
+every other year since 1977.**
 
 Landing page: `https://www.golfdigest.com/story/best-in-state-rankings`
 
@@ -59,7 +59,7 @@ For a given state:
    `Public` label.** Do not take the state's #1 overall course if it is
    labelled `Private` — walk down the list until a `Public` label is found.
 4. Record that course's `ranking_source` as `"Golf Digest Best in State"`,
-   `ranking_edition` as `"2025-'26 (25th edition)"`, and `ranking_position`
+   `ranking_edition` as `"2025-'26"`, and `ranking_position`
    as the course's numeric rank in the state's list (not its rank among
    public courses only — the source ranks the full mixed list). Set
    `criterion: "ranking"`.
@@ -295,6 +295,27 @@ inconsistent (e.g., the per-state page disagreeing with the every-state
 summary page) must say so in that state's own research artifact rather than
 guess which entry is really public. That state is blocked pending a second
 source, exactly as if the ranking had no entry for it at all.
+
+---
+
+## 7. Correction: "25th edition" dropped from the citation
+
+The first draft of §1 named the selection "Golf Digest 'Best in State,'
+2025-'26 edition — the 25th edition of a series published every other year
+since 1977," and §2 step 4 instructed recording `ranking_edition` as
+`"2025-'26 (25th edition)"`. A verifier fetching the ranking page directly
+(`https://www.golfdigest.com/story/best-in-state-rankings`) found that "25th
+edition" does not appear on it. The confirmed quote in the §1 table
+("Stable, citable edition," C3.1) traces to a different fetch than the
+ranking page itself, and a confirmed fact from one page does not license
+attaching its wording to the citation for another. That is an unsourced
+descriptor riding along with a confirmed fact — the exact pattern this
+project's operating manual warns against — so it was dropped: the ranking is
+cited as `"Golf Digest Best in State"` / `"2025-'26"`, full stop, with no
+ordinal. Wave 1's ten roster rows were written this way from the start.
+Oregon's row, committed earlier as the checkpoint, still carried
+`"2025-'26 (25th edition)"` and `"Golf Digest Best in State, Oregon"`; both
+have been corrected to match the other ten.
 
 ---
 
