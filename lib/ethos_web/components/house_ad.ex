@@ -5,12 +5,13 @@ defmodule EthosWeb.HouseAd do
 
   ## Why it skips pages that already carry the foliage panel
 
-  In season, the 171 Connecticut town guides render a panel that names the
+  In season, the Connecticut town guides carrying the foliage panel name the
   town and its window. An ad on the same page would promote the same thing
-  twice within about 200 pixels. Skipping them also gets the targeting right
-  without extra logic: in season the ad reaches the roughly 70 pages that are
-  *not* Connecticut guides, introducing the forecast to readers who have not
-  met it; out of season the panel disappears and the ad takes over there too.
+  twice within about 200 pixels. Out of season the panel disappears and, on a
+  `tier: "town-page"` guide, the ad takes over there too — town-page guides
+  are the only guide pages that carry neither the panel nor the amber
+  GetYourGuide fallback CTA (see below), so they are the only guide pages
+  where the ad renders at all.
 
   ## Why LiveViews need their own clause
 
@@ -19,6 +20,24 @@ defmodule EthosWeb.HouseAd do
   account screen. Without the explicit check the ad would appear on the guide
   editor, the import and publish screens, the suggestions inbox and user
   settings.
+
+  ## Other reasons a page opts out
+
+  - `assigns[:house_ad] == false` — an explicit opt-out for a page that is
+    itself about the forecast (`/foliage` and its route pages). Otherwise
+    `/foliage` would end with an advertisement for `/foliage`.
+  - `is_nil(assigns[:page_canonical])` — `page_canonical` is assigned only by
+    the six public HTML controllers (page, guide, destination, place,
+    collection, foliage). A controller that assigns none — every admin
+    screen, `/badges`, `robots.txt`, the sitemap, the session controller —
+    is not "a controller-rendered public page" per the design, whether or
+    not it happens to be a LiveView. `/search` also assigns none, so it
+    carries no ad; that is accepted, not a bug.
+  - a guide whose `tier` is not `"town-page"` — `show.html.heex` (every tier
+    other than `"town-page"`) renders its own GetYourGuide fallback CTA under
+    the same condition this ad renders under (no affiliate widget). Rendering
+    both put two ad-shaped units on one page. `town_page.html.heex` has no
+    such CTA, so town-page guides are unaffected.
   """
 
   use Phoenix.Component
@@ -38,13 +57,25 @@ defmodule EthosWeb.HouseAd do
 
     cond do
       Map.has_key?(assigns, :socket) or Map.has_key?(assigns, :live_module) -> nil
+      assigns[:house_ad] == false -> nil
+      is_nil(assigns[:page_canonical]) -> nil
       assigns[:foliage] -> nil
       EthosWeb.Affiliate.unit_renders?(assigns) -> nil
+      not town_page_or_no_guide?(assigns[:guide]) -> nil
       true -> build(assigns, pool)
     end
   end
 
   def for_page(_assigns, _pool), do: nil
+
+  # `show.html.heex` — every tier other than "town-page" — renders its own
+  # GetYourGuide fallback CTA under exactly the condition this ad renders
+  # under: no affiliate widget on the page. Rendering both put two ad-shaped
+  # units on one page. A page with no `:guide` assign at all (a place, the
+  # home page, a destination hub, a collection) has no such CTA and is
+  # unaffected.
+  defp town_page_or_no_guide?(%{tier: tier}), do: tier == "town-page"
+  defp town_page_or_no_guide?(_), do: true
 
   defp build(assigns, pool) do
     case contextual(assigns) do
@@ -111,11 +142,24 @@ defmodule EthosWeb.HouseAd do
           <span :if={is_nil(@ad.town)} class="block text-sm text-zinc-600">
             169 towns, seven state driving routes
           </span>
-          <span class="mt-1 block text-xs text-zinc-400">
-            {@ad.photo["title"]} — {@ad.photo["author"]}, {@ad.photo["license"]}, via Wikimedia Commons
-          </span>
         </span>
       </.link>
+      <%!-- Outside the link above, not nested inside it: a nested <a> is
+            invalid HTML, and the licence obligation on 23 of the 25 pool
+            photographs is to keep the source URI attached, not merely to
+            name Wikimedia Commons. --%>
+      <p class="mt-1 px-1 text-xs text-zinc-400">
+        {@ad.photo["title"]} — {@ad.photo["author"]}, {@ad.photo["license"]}, via
+        <a
+          :if={EthosWeb.Url.safe_http?(@ad.photo["source_url"])}
+          href={@ad.photo["source_url"]}
+          class="underline"
+          rel="nofollow noopener"
+        >
+          Wikimedia Commons
+        </a>
+        <span :if={!EthosWeb.Url.safe_http?(@ad.photo["source_url"])}>Wikimedia Commons</span>
+      </p>
     </div>
     """
   end

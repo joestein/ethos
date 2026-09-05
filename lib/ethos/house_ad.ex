@@ -78,15 +78,7 @@ defmodule Ethos.HouseAd do
   end
 
   defp build_pool do
-    rows =
-      Repo.all(
-        from g in Guide,
-          where:
-            g.status == "published" and g.state_slug == "connecticut" and
-              g.destination_slug in ^@pool_slugs,
-          select: {g.destination_slug, g.photos}
-      )
-      |> Enum.sort_by(&elem(&1, 0))
+    rows = fetch_rows()
 
     missing = @pool_slugs -- Enum.map(rows, &elem(&1, 0))
 
@@ -128,6 +120,28 @@ defmodule Ethos.HouseAd do
     end
 
     photos
+  rescue
+    error ->
+      # A promotional unit must never prevent the application from booting.
+      # `Ethos.HouseAd` starts before the endpoint, so an unreachable database
+      # here would crash-loop the whole site — including the /foliage pages,
+      # which need no database at all.
+      Logger.error(
+        "house ad: pool could not be loaded, the unit will not render: #{Exception.message(error)}"
+      )
+
+      []
+  end
+
+  defp fetch_rows do
+    Repo.all(
+      from g in Guide,
+        where:
+          g.status == "published" and g.state_slug == "connecticut" and
+            g.destination_slug in ^@pool_slugs,
+        select: {g.destination_slug, g.photos}
+    )
+    |> Enum.sort_by(&elem(&1, 0))
   end
 
   defp present?(value), do: is_binary(value) and String.trim(value) != ""

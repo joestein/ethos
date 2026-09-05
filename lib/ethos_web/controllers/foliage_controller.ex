@@ -22,6 +22,9 @@ defmodule EthosWeb.FoliageController do
       # Every ?week= variant points at the bare URL: nine views of one page,
       # not nine pages.
       page_canonical: url(~p"/foliage"),
+      # The house ad promotes this very page; without the opt-out /foliage
+      # would end with an advertisement for /foliage.
+      house_ad: false,
       page_og: %{
         title: @title,
         description: @description,
@@ -58,6 +61,7 @@ defmodule EthosWeb.FoliageController do
           page_title: title,
           page_meta_description: description,
           page_canonical: url(~p"/foliage/#{route.slug}"),
+          house_ad: false,
           page_og: %{
             title: title,
             description: description,

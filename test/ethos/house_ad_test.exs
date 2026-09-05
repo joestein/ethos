@@ -7,6 +7,8 @@ defmodule Ethos.HouseAdTest do
   # time for the guarantee that nothing else observes a pool mid-mutation.
   use Ethos.DataCase, async: false
 
+  import ExUnit.CaptureLog
+
   alias Ethos.HouseAd
 
   defp photo(attrs \\ %{}) do
@@ -115,12 +117,51 @@ defmodule Ethos.HouseAdTest do
           }
         ])
 
-      :ok = Ethos.HouseAd.load!()
+      log =
+        capture_log(fn ->
+          assert :ok = Ethos.HouseAd.load!()
+        end)
+
+      # Only Litchfield is seeded, so build_pool/0 takes the "some slugs
+      # resolved, some did not" branch and warns by name about the rest. That
+      # is drift worth an operator's attention in production, but it fired on
+      # every `mix test` run when this test seeded only one town — this
+      # assertion turns the noise into coverage of the drift branch instead of
+      # silencing it blind.
+      assert log =~ "house ad: no published guide for"
+      assert log =~ "kent"
 
       pool = Ethos.HouseAd.pool()
       assert pool != []
       assert Enum.all?(pool, &Ethos.HouseAd.usable?/1)
       assert Enum.any?(pool, &(&1["title"] == "Litchfield Green"))
+    end
+  end
+
+  describe "build_pool/0 when the database is unavailable" do
+    setup do
+      previous = Ethos.HouseAd.pool()
+      on_exit(fn -> :persistent_term.put({Ethos.HouseAd, :pool}, previous) end)
+      :ok
+    end
+
+    test "load!/0 still returns :ok and pool/0 degrades to [], rather than crashing boot" do
+      # Ethos.HouseAd starts before EthosWeb.Endpoint in the supervision tree
+      # (lib/ethos/application.ex). A raising query here must not propagate,
+      # or Supervisor.start_link/2 fails and the whole site — including the
+      # database-free /foliage pages — never boots.
+      #
+      # Forcing the sandbox to :manual mode strips this test process of the
+      # connection ownership the case-wide `shared: true` setup granted it, so
+      # `Repo.all` inside `build_pool/0` raises `DBConnection.OwnershipError`
+      # exactly as it would against an unreachable production database — no
+      # mock needed to exercise the real rescue clause.
+      Ecto.Adapters.SQL.Sandbox.mode(Ethos.Repo, :manual)
+
+      log = capture_log(fn -> assert :ok = Ethos.HouseAd.load!() end)
+
+      assert log =~ "house ad: pool could not be loaded"
+      assert Ethos.HouseAd.pool() == []
     end
   end
 end

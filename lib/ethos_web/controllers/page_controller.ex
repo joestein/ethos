@@ -35,11 +35,17 @@ defmodule EthosWeb.PageController do
 
     all_hubs = Ethos.Guides.list_states()
 
+    # /destinations (destination_controller.ex) lists states PLUS
+    # Guides.list_destinations_without_state/0 — the ballpark-only
+    # destinations with no state. The homepage's "All N destinations" count
+    # must match the page it links to, not just the state hubs shown above it.
+    hub_count = length(all_hubs) + length(Ethos.Guides.list_destinations_without_state())
+
     render(conn, :home,
       featured: featured,
       latest: latest,
       hubs: Enum.take(all_hubs, 5),
-      hub_count: length(all_hubs),
+      hub_count: hub_count,
       collections: Ethos.Collections.list_published(),
       layout: false,
       page_title: @page_title,

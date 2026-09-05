@@ -175,6 +175,16 @@ defmodule EthosWeb.PageControllerTest do
         county: "Lazio"
       })
 
+      # Connecticut and Italy both have explicit @hub_nouns entries, so without
+      # a third state the "guides" fallback never executes even though it
+      # fires on real data. Tennessee has no entry.
+      published_guide_fixture(%{
+        title: "Music City Weekend",
+        destination: "Nashville, Tennessee",
+        state: "Tennessee",
+        county: "Davidson"
+      })
+
       html = conn |> get(~p"/") |> html_response(200)
       hubs = Ethos.Guides.list_states() |> Enum.take(5)
 
@@ -202,7 +212,14 @@ defmodule EthosWeb.PageControllerTest do
       })
 
       html = conn |> get(~p"/") |> html_response(200)
-      total = length(Ethos.Guides.list_states())
+
+      # /destinations lists states PLUS Guides.list_destinations_without_state/0
+      # (destination_controller.ex) — the ballpark-only destinations with no
+      # state. The count must match that page's total, not just the state hubs,
+      # or the homepage undercounts the page it links to.
+      total =
+        length(Ethos.Guides.list_states()) +
+          length(Ethos.Guides.list_destinations_without_state())
 
       # The count is computed, not a literal, so it cannot drift from the
       # page it points at.

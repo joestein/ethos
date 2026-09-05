@@ -26,7 +26,11 @@ defmodule EthosWeb.HouseAdTest do
         state_slug: "connecticut",
         destination_slug: "avon",
         county: "Hartford County",
-        tier: "guide",
+        # town-page: the only guide tier that carries neither the foliage
+        # panel's fallback-free rendering nor show.html.heex's amber
+        # GetYourGuide CTA — see the "guide tier" describe block below for the
+        # tier: "guide" case this default deliberately does not cover.
+        tier: "town-page",
         photos: [photo()]
       },
       attrs
@@ -45,13 +49,43 @@ defmodule EthosWeb.HouseAdTest do
     test "returns nil when the foliage panel is on the page" do
       # Otherwise a Connecticut town guide promotes the forecast twice within
       # about 200 pixels.
-      assigns = %{guide: ct_guide(), foliage: %{town: %{name: "Avon"}}}
+      assigns = %{
+        guide: ct_guide(),
+        foliage: %{town: %{name: "Avon"}},
+        page_canonical: "http://x/g/avon"
+      }
+
       assert HouseAd.for_page(assigns) == nil
     end
 
     test "returns nil when an affiliate widget renders" do
       ny = %{ct_guide() | state_slug: "new-york", county: "Brooklyn", destination_slug: "dumbo"}
-      assert HouseAd.for_page(%{guide: ny}) == nil
+      assert HouseAd.for_page(%{guide: ny, page_canonical: "http://x/g/dumbo"}) == nil
+    end
+
+    test "returns nil when the page opts out with house_ad: false" do
+      # /foliage and its route pages: the ad promotes the forecast, so an ad
+      # on the forecast's own page would advertise the page to itself.
+      assigns = %{page_canonical: "http://x/foliage", house_ad: false}
+      assert HouseAd.for_page(assigns) == nil
+    end
+
+    test "returns nil when the page assigns no page_canonical" do
+      # page_canonical is assigned only by the six public HTML controllers.
+      # Its absence — every admin screen, /badges, robots.txt, the sitemap,
+      # the session controller, and /search — means this is not "a
+      # controller-rendered public page" per the design, whether or not the
+      # page happens to be a LiveView.
+      assert HouseAd.for_page(%{guide: ct_guide()}) == nil
+    end
+
+    test "returns nil for a Connecticut guide whose tier is not town-page" do
+      # show.html.heex (every tier other than "town-page") renders its own
+      # GetYourGuide fallback CTA under the same "no affiliate here" condition
+      # this ad renders under. Rendering both put two ad-shaped units on the
+      # ~270 guide pages outside New York and Italy.
+      assigns = %{guide: ct_guide(%{tier: "guide"}), page_canonical: "http://x/g/avon-guide"}
+      assert HouseAd.for_page(assigns) == nil
     end
 
     test "a guide outside Connecticut that shares a town slug gets no Connecticut town" do
@@ -135,8 +169,36 @@ defmodule EthosWeb.HouseAdTest do
       assert html =~ "/photos/ct/avon/church.jpg"
       assert html =~ "Daderot"
       assert html =~ "CC0"
-      assert html =~ "via Wikimedia Commons"
+      # "via" and "Wikimedia Commons" sit either side of an <a> tag in the
+      # markup — a browser collapses that whitespace into "via Wikimedia
+      # Commons" when it renders, but the raw HTML does not.
+      assert html =~ "via"
+      assert html =~ "Wikimedia Commons"
       assert html =~ ~s(href="/foliage")
+    end
+
+    test "links the credit line to the photograph's source when the URL is safe" do
+      html = render_ad(%{photo: photo(), town: nil})
+
+      assert html =~ ~s(href="https://commons.wikimedia.org/wiki/File:Avon.JPG")
+    end
+
+    test "the credit line sits outside the /foliage link, not nested inside it" do
+      # A nested <a> is invalid HTML — the fix for the missing source link had
+      # to move the credit line out of the wrapping <.link href="/foliage">.
+      html = render_ad(%{photo: photo(), town: nil})
+
+      foliage_link_close = :binary.match(html, "</a>") |> elem(0)
+      source_link_open = :binary.match(html, ~s(href="https://commons.wikimedia.org)) |> elem(0)
+
+      assert foliage_link_close < source_link_open
+    end
+
+    test "falls back to unlinked text when the source URL is unsafe" do
+      html = render_ad(%{photo: photo(%{"source_url" => "javascript:alert(1)"}), town: nil})
+
+      assert html =~ "Wikimedia Commons"
+      refute html =~ ~s|href="javascript:alert(1)"|
     end
 
     test "names the town and its window when there is a town" do
@@ -174,34 +236,61 @@ defmodule EthosWeb.HouseAdTest do
 
   describe "through a real request" do
     import Ethos.GuidesFixtures
+    import Ethos.AccountsFixtures
 
-    test "appears on a guide page outside Connecticut", %{conn: conn} do
-      # The layout call site is what puts the advert on ~480 pages. A
-      # helper-only test leaves it unguarded: deleting the line from
-      # app.html.heex would keep the suite green.
-      guide = published_guide_fixture(%{title: "A Guide Somewhere"})
-      html = conn |> get(~p"/g/#{guide.slug}") |> html_response(200)
-
-      if Ethos.HouseAd.pool() != [] do
-        assert html =~ "Connecticut Foliage Forecast"
-        assert html =~ "via Wikimedia Commons"
-      end
-    end
-
-    test "never appears twice on one page", %{conn: conn} do
-      guide = published_guide_fixture(%{title: "Another Guide"})
-      html = conn |> get(~p"/g/#{guide.slug}") |> html_response(200)
-
-      assert length(Regex.scan(~r/Connecticut Foliage Forecast/, html)) <= 1
-    end
-
-    test "appears on a Connecticut place page, deterministically, proving the layout call site is wired",
+    test "does not appear on a tier: guide page, which already carries the GetYourGuide fallback CTA",
          %{conn: conn} do
-      # The two tests above are guarded by `if Ethos.HouseAd.pool() != []`,
-      # because the pool resolves from seeded Connecticut guides that this
-      # test database may not carry (see the task report). That guard can
-      # make both of them pass vacuously even if the layout's call to
-      # `EthosWeb.HouseAd.house_ad/1` were deleted entirely.
+      # Before the tier gate, show.html.heex's amber CTA
+      # (`:if={not EthosWeb.Affiliate.unit_renders?(assigns)}`) and this ad
+      # rendered under the same condition — two ad-shaped units on ~270 guide
+      # pages outside New York and Italy. Only town-page-tier guides render
+      # this ad now; the CTA is unaffected.
+      guide = published_guide_fixture(%{title: "A Guide Somewhere"})
+      assert guide.tier == "guide"
+
+      html = conn |> get(~p"/g/#{guide.slug}") |> html_response(200)
+
+      refute html =~ "Connecticut Foliage Forecast"
+      assert html =~ "Explore tours"
+    end
+
+    test "does not appear on /foliage, which it would otherwise advertise to itself", %{
+      conn: conn
+    } do
+      # /foliage's own <title>, og:title and JSON-LD all legitimately say
+      # "Connecticut Foliage Forecast", so the assertion targets a CSS class
+      # unique to the ad's markup rather than that phrase.
+      html = conn |> get(~p"/foliage") |> html_response(200)
+      refute html =~ "hover:border-zinc-400"
+    end
+
+    test "does not appear on a foliage route page", %{conn: conn} do
+      route = Ethos.Foliage.routes() |> List.first()
+      html = conn |> get(~p"/foliage/#{route.slug}") |> html_response(200)
+      refute html =~ "hover:border-zinc-400"
+    end
+
+    test "does not appear on the admin suggestions inbox", %{conn: conn} do
+      admin = user_fixture(%{email: "cryptcom@gmail.com"})
+      conn = log_in_user(conn, admin)
+
+      html = conn |> get(~p"/admin/suggestions") |> html_response(200)
+      refute html =~ "Connecticut Foliage Forecast"
+    end
+
+    test "does not appear on /badges", %{conn: conn} do
+      user = user_fixture()
+      conn = log_in_user(conn, user)
+
+      html = conn |> get(~p"/badges") |> html_response(200)
+      refute html =~ "Connecticut Foliage Forecast"
+    end
+
+    test "appears exactly once on a Connecticut place page, deterministically, proving the layout call site is wired",
+         %{conn: conn} do
+      # Unlike a guide page, this scenario does not depend on the pool
+      # (which resolves from seeded Connecticut guides this test database
+      # may not carry) or on the tier gate, so it cannot pass vacuously.
       #
       # A Connecticut place page does not have this problem: the foliage
       # panel lives only in the guide templates, so `/p/:slug` never carries
@@ -233,7 +322,10 @@ defmodule EthosWeb.HouseAdTest do
 
       html = conn |> get(~p"/p/#{place.slug}") |> html_response(200)
 
-      assert html =~ "Connecticut Foliage Forecast"
+      # Exactly one, not merely present: this is the non-vacuous replacement
+      # for a prior "never appears twice" assertion of `<= 1`, which a count
+      # of 0 (the ad never rendering at all) also satisfied.
+      assert length(Regex.scan(~r/Connecticut Foliage Forecast/, html)) == 1
       assert html =~ "Avon"
       assert html =~ "Avon Place Photo"
     end
