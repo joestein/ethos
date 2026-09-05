@@ -99,6 +99,29 @@ defmodule EthosWeb.Admin.CommentsLiveTest do
     assert html =~ "Nothing waiting"
   end
 
+  test "approving a comment that no longer exists shows a message instead of crashing",
+       %{conn: conn, admin: admin} do
+    {:ok, view, _html} = conn |> log_in_user(admin) |> live(~p"/admin/comments")
+
+    # A crafted event with an id the DOM would never produce — e.g. a stale
+    # tab clicking a row an admin already decided elsewhere, or a decided
+    # row's id typed by hand.
+    html = render_click(view, "approve", %{"id" => "999999"})
+
+    assert html =~ "That comment no longer exists."
+    assert Process.alive?(view.pid)
+  end
+
+  test "revoking a comment that no longer exists shows a message instead of crashing",
+       %{conn: conn, admin: admin} do
+    {:ok, view, _html} = conn |> log_in_user(admin) |> live(~p"/admin/comments")
+
+    html = render_click(view, "revoke", %{"id" => "999999"})
+
+    assert html =~ "That comment no longer exists."
+    assert Process.alive?(view.pid)
+  end
+
   test "the console links to the suggestions tab", %{conn: conn, admin: admin} do
     {:ok, _view, html} = conn |> log_in_user(admin) |> live(~p"/admin/comments")
 

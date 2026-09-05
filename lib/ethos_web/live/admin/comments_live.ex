@@ -75,21 +75,34 @@ defmodule EthosWeb.Admin.CommentsLive do
   end
 
   def handle_event("approve", %{"id" => id}, socket) do
-    {:ok, _} =
-      id
-      |> Moderation.get_review!()
-      |> Moderation.approve_review(socket.assigns.current_user)
-
-    {:noreply, socket |> put_flash(:info, "Approved.") |> load()}
+    {:noreply, decide(socket, id, &Moderation.approve_review/2, "Approved.")}
   end
 
   def handle_event("revoke", %{"id" => id}, socket) do
-    {:ok, _} =
-      id
-      |> Moderation.get_review!()
-      |> Moderation.revoke_review(socket.assigns.current_user)
+    {:noreply, decide(socket, id, &Moderation.revoke_review/2, "Revoked.")}
+  end
 
-    {:noreply, socket |> put_flash(:info, "Revoked.") |> load()}
+  # `id` comes straight from the client, so it may name a row that was
+  # already decided in another tab (or another admin) since this page was
+  # rendered, or not be a row at all. `get_review!/1` raises on either —
+  # `Ecto.NoResultsError` for a well-formed but missing id, and
+  # `Ecto.Query.CastError` for a non-numeric one — so both are caught here
+  # rather than crashing the LiveView process. `decide_fun`'s `{:error, _}`
+  # is handled too: `Moderation` cannot return it today, but a handler that
+  # only matches `{:ok, _}` would become a `MatchError` the day it can.
+  defp decide(socket, id, decide_fun, success_message) do
+    review = Moderation.get_review!(id)
+
+    case decide_fun.(review, socket.assigns.current_user) do
+      {:ok, _} ->
+        socket |> put_flash(:info, success_message) |> load()
+
+      {:error, _} ->
+        socket |> put_flash(:error, "That decision could not be recorded.") |> load()
+    end
+  rescue
+    _ in [Ecto.NoResultsError, Ecto.Query.CastError] ->
+      socket |> put_flash(:error, "That comment no longer exists.") |> load()
   end
 
   defp load(socket) do
