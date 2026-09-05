@@ -1865,6 +1865,35 @@ Delete the now-unused `state_breadcrumb/2`, `county_breadcrumb/4` and `destinati
 
 `lib/ethos_web/controllers/place_html/show.html.heex` links to `~p"/destinations/#{@place.state_slug}/#{@place.county_slug}"`. Change it to use the place's node path, passing `destination_node` preloaded in `PlaceController.show/2`.
 
+- [ ] **Step 5b: Fix the place page's PostalAddress JSON-LD**
+
+`lib/ethos_web/controllers/place_controller.ex:113` builds schema.org `PostalAddress` from `place.town` and `place.state` — the legacy columns. While the Task 7 shim still writes them the output is correct, but Task 12 drops those columns, at which point `addressCountry` silently falls back to `"US"` for every Rome and London place and `addressLocality` disappears corpus-wide. No existing test catches it.
+
+Derive both from the node instead:
+
+```elixir
+  # addressLocality is the node's own name; addressCountry is its country
+  # ancestor. Deriving them from the tree is what makes Rome resolve to IT and
+  # London to GB rather than the old hardcoded US fallback.
+  defp postal_address(%Place{destination_node: %Destination{} = node} = place) do
+    ancestors = Destinations.ancestors(node)
+    country = Enum.find(ancestors, &(&1.kind == "country"))
+
+    %{
+      "@type" => "PostalAddress",
+      "streetAddress" => place.address,
+      "addressLocality" => node.name,
+      "addressCountry" => country_code(country)
+    }
+    |> Enum.reject(fn {_k, v} -> is_nil(v) end)
+    |> Map.new()
+  end
+```
+
+`country_code/1` maps the country node to its ISO 3166-1 alpha-2 code — `"United States"` → `"US"`, `"Italy"` → `"IT"`, `"United Kingdom"` → `"GB"`, `"Canada"` → `"CA"`. Those are the only four countries in the roster; raise on an unknown one rather than defaulting, so the next country added is a loud failure instead of a silent `"US"`.
+
+Add a test asserting a Rome place's JSON-LD carries `addressCountry: "IT"` and `addressLocality: "Monti"` (or whichever rione the fixture uses), and a London place's carries `"GB"`. Those two assertions are the regression guard for the whole class of bug.
+
 - [ ] **Step 6: Run the web suite**
 
 Run: `MIX_TEST_PARTITION=wwgeo mix test test/ethos_web/`
