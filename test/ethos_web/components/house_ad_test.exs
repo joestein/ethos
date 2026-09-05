@@ -53,6 +53,25 @@ defmodule EthosWeb.HouseAdTest do
       ny = %{ct_guide() | state_slug: "new-york", county: "Brooklyn", destination_slug: "dumbo"}
       assert HouseAd.for_page(%{guide: ny}) == nil
     end
+
+    test "a guide outside Connecticut that shares a town slug gets no Connecticut town" do
+      # Production carries /g/greenwich-london-guide and /g/enfield-london-guide,
+      # both London boroughs whose slug matches a Connecticut town. Matching on
+      # the slug alone would put "Connecticut Foliage Forecast — Greenwich,
+      # estimated peak Nov 4-10" on a page about London.
+      guide = %{
+        __struct__: Ethos.Guides.Guide,
+        state_slug: "england",
+        destination_slug: "greenwich",
+        county: nil,
+        photos: [photo()]
+      }
+
+      case HouseAd.for_page(%{guide: guide, page_canonical: "http://x/g/greenwich-london-guide"}) do
+        nil -> :ok
+        %{town: town} -> assert town == nil
+      end
+    end
   end
 
   describe "for_page/1 — choosing the photograph" do
@@ -176,50 +195,47 @@ defmodule EthosWeb.HouseAdTest do
       assert length(Regex.scan(~r/Connecticut Foliage Forecast/, html)) <= 1
     end
 
-    test "appears via the contextual photo, deterministically, proving the layout call site is wired",
-         %{
-           conn: conn
-         } do
+    test "appears on a Connecticut place page, deterministically, proving the layout call site is wired",
+         %{conn: conn} do
       # The two tests above are guarded by `if Ethos.HouseAd.pool() != []`,
       # because the pool resolves from seeded Connecticut guides that this
       # test database may not carry (see the task report). That guard can
       # make both of them pass vacuously even if the layout's call to
-      # `EthosWeb.HouseAd.house_ad/1` were deleted entirely. This test does
-      # not depend on the pool, so it fails unconditionally if that line is
-      # removed.
+      # `EthosWeb.HouseAd.house_ad/1` were deleted entirely.
       #
-      # destination_slug is derived from the text before the first comma, so
-      # a guide about "Avon, New Jersey" resolves to the slug "avon" — which
-      # is also a Connecticut town in Ethos.Foliage's dataset. New Jersey has
-      # no affiliate locale (config :ethos, :affiliate_locales only lists
-      # "new-york" and "italy") and is not Connecticut, so neither the
-      # affiliate widget nor the in-season foliage panel intervenes, and
-      # HouseAd.for_page/1's contextual-photo branch fires every time.
-      guide =
-        published_guide_fixture(%{
-          title: "Avon Weekend",
-          destination: "Avon, New Jersey",
-          state: "New Jersey",
-          county: "Monmouth County"
+      # A Connecticut place page does not have this problem: the foliage
+      # panel lives only in the guide templates, so `/p/:slug` never carries
+      # one; Connecticut resolves no affiliate locale; and a place in Avon (a
+      # real foliage-dataset town) hits HouseAd.for_page/1's contextual
+      # branch year-round, in or out of season, needing no pool at all. So
+      # this test fails unconditionally if the layout line is removed.
+      place =
+        Ethos.Places.upsert_place!(%{
+          slug: "avon-house-ad-test-place",
+          name: "Avon Test Place",
+          kind: "museum",
+          town: "Avon",
+          state: "Connecticut",
+          county: "Hartford County",
+          summary: "A place in Avon, Connecticut.",
+          photos: [
+            %{
+              "src" => "/photos/ct/avon/place.jpg",
+              "thumb" => "/photos/ct/avon/place.jpg",
+              "title" => "Avon Place Photo",
+              "description" => "A photo of the place.",
+              "author" => "Someone",
+              "license" => "CC BY-SA 4.0",
+              "source_url" => "https://commons.wikimedia.org/wiki/File:AvonPlace.jpg"
+            }
+          ]
         })
 
-      {:ok, guide} =
-        Ethos.Guides.update_guide_photos(guide, [
-          %{
-            "src" => "/photos/nj/avon/boardwalk.jpg",
-            "thumb" => "/photos/nj/avon/boardwalk.jpg",
-            "title" => "Avon Boardwalk",
-            "description" => "The boardwalk.",
-            "author" => "Someone",
-            "license" => "CC BY-SA 4.0",
-            "source_url" => "https://commons.wikimedia.org/wiki/File:AvonNJ.jpg"
-          }
-        ])
-
-      html = conn |> get(~p"/g/#{guide.slug}") |> html_response(200)
+      html = conn |> get(~p"/p/#{place.slug}") |> html_response(200)
 
       assert html =~ "Connecticut Foliage Forecast"
-      assert html =~ "Avon Boardwalk"
+      assert html =~ "Avon"
+      assert html =~ "Avon Place Photo"
     end
   end
 

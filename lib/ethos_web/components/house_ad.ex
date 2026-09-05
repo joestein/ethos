@@ -62,6 +62,14 @@ defmodule EthosWeb.HouseAd do
   # A Guide carries `destination_slug`; a Place carries `town_slug`. They are
   # different fields and both are needed — reading `destination_slug` off a
   # place returns nil and every Connecticut place page would fall through.
+  #
+  # The `state_slug: "connecticut"` guard on both clauses is load-bearing, not
+  # decorative: `Foliage.town/1` resolves on slug alone, and several town
+  # names are shared with places well outside Connecticut — Lisbon (as in
+  # "Lisbon, Portugal"), and Greenwich and Enfield (as in the London
+  # boroughs). Without the state check, a guide about Greenwich, London would
+  # take the contextual branch and claim a Connecticut foliage estimate for
+  # a page about England.
   defp contextual(assigns) do
     with {slug, photos} <- subject(assigns),
          town when not is_nil(town) <- Foliage.town(slug || ""),
@@ -72,8 +80,12 @@ defmodule EthosWeb.HouseAd do
     end
   end
 
-  defp subject(%{guide: %{destination_slug: slug, photos: photos}}), do: {slug, photos}
-  defp subject(%{place: %{town_slug: slug, photos: photos}}), do: {slug, photos}
+  defp subject(%{guide: %{state_slug: "connecticut", destination_slug: slug, photos: photos}}),
+    do: {slug, photos}
+
+  defp subject(%{place: %{state_slug: "connecticut", town_slug: slug, photos: photos}}),
+    do: {slug, photos}
+
   defp subject(_), do: nil
 
   attr :ad, :any, required: true
