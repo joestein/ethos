@@ -10,6 +10,7 @@ defmodule Ethos.Application do
     children = [
       EthosWeb.Telemetry,
       Ethos.Repo,
+      Ethos.Foliage.Dataset,
       {DNSCluster, query: Application.get_env(:ethos, :dns_cluster_query) || :ignore},
       {Phoenix.PubSub, name: Ethos.PubSub},
       # Start the Finch HTTP client for sending emails

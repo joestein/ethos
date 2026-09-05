@@ -226,6 +226,19 @@
       "summary": "A 271-room Ian Schrager-designed luxury hotel inside the 1909 Metropolitan Life clock tower on Madison Square Park, home to The Clocktower restaurant.",
       "status": "open",
       "photos": []
+    },
+    {
+      "slug": "cote-korean-steakhouse-flatiron",
+      "name": "COTE Korean Steakhouse",
+      "kind": "restaurant",
+      "town": "Flatiron District",
+      "state": "New York",
+      "county": "Manhattan",
+      "address": "16 W 22nd St, New York, NY 10010",
+      "summary": "COTE Korean Steakhouse is at 16 West 22nd Street. An integrated cooktop — a grill set into each table, under lighting that is low and precise, a spotlight trained on each one — does the cooking, and the air-filtration system carries the smoke and the smell of searing beef away without an overhead hood.",
+      "history": "",
+      "status": "open",
+      "photos": []
     }
   ],
   "entries": [
@@ -288,6 +301,12 @@
       "name": "The New York EDITION",
       "place_slug": "the-new-york-edition",
       "note": "A 271-room hotel inside the 1909 Met Life clock tower on Madison Square Park."
+    },
+    {
+      "kind": "food",
+      "name": "COTE Korean Steakhouse",
+      "place_slug": "cote-korean-steakhouse-flatiron",
+      "note": "16 West 22nd Street. A grill is set into each table under its own spotlight, with air filtration in place of an overhead hood."
     }
   ],
   "links": [

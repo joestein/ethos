@@ -301,6 +301,19 @@
       "history": "The park was created in November 2000 on reclaimed industrial riverside. Allain Provost and Alain Cousseran of Groupe Signes, with Patel Taylor, won the international competition to design it in 1995. Pontoon Dock DLR, naptanId 940GZZDLPDK, is the nearest station and also serves as a bus interchange for routes 129, 241 and 330. Further east, North Woolwich Station, including its turntable and platform lamp standards, is listed Grade II, NHLE 1376229, on 27 August 1998, and the north entrance to the Woolwich pedestrian tunnel is Grade II, NHLE 1253068, listed 31 July 1989.",
       "status": "open",
       "photos": []
+    },
+    {
+      "slug": "keonbae-royal-wharf-silvertown",
+      "name": "Keonbae Barbeque & Beer — Royal Wharf",
+      "kind": "restaurant",
+      "town": "Silvertown",
+      "state": "England",
+      "county": "London",
+      "address": "20A Royal Crest Avenue, London E16 2PR",
+      "summary": "Keonbae Barbeque & Beer stands at 20A Royal Crest Avenue on the Royal Wharf development in Silvertown. The operator's own strapline for the branch reads 'Authentic Korean cuisine and grill on the table', which puts the grill at the table rather than in the kitchen. No source states its opening hours, so none are given here.",
+      "history": "A second room under the same name trades at 4 Plowden Road in Kidbrooke, in the Royal Borough of Greenwich, and the operator's site carries both branches with a separate booking link for each.",
+      "status": "open",
+      "photos": []
     }
   ],
   "links": [
@@ -433,6 +446,12 @@
       "name": "Thames Barrier Park",
       "place_slug": "thames-barrier-park",
       "note": "Seven hectares of riverside from November 2000 facing the Thames Barrier, with the sunken Green Dock and a Pavilion of Remembrance."
+    },
+    {
+      "kind": "food",
+      "name": "Keonbae Barbeque & Beer — Royal Wharf",
+      "place_slug": "keonbae-royal-wharf-silvertown",
+      "note": "20A Royal Crest Avenue, Royal Wharf. The operator's strapline for the branch is 'Authentic Korean cuisine and grill on the table'."
     }
   ]
 }

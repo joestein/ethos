@@ -28,6 +28,9 @@ defmodule EthosWeb.Router do
     get "/destinations/:state_slug/:county_slug", DestinationController, :county
     get "/p/:slug", PlaceController, :show
     get "/c/:slug", CollectionController, :show
+    get "/foliage", FoliageController, :index
+    get "/foliage/embed", FoliageController, :embed
+    get "/foliage/:route_slug", FoliageController, :route
     get "/search", SearchController, :index
     get "/sitemap.xml", SitemapController, :index
     get "/robots.txt", RobotsController, :index
@@ -101,6 +104,9 @@ defmodule EthosWeb.Router do
     get "/suggestions", AdminSuggestionController, :index
     post "/suggestions/:id/accept", AdminSuggestionController, :accept
     post "/suggestions/:id/decline", AdminSuggestionController, :decline
+
+    get "/foliage/notes", AdminFoliageController, :index
+    post "/foliage/notes", AdminFoliageController, :create
   end
 
   scope "/", EthosWeb do

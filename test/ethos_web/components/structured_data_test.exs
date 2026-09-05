@@ -871,10 +871,97 @@ defmodule EthosWeb.StructuredDataTest do
       # postcode-less ones — and by wave 3 the branch built for those carried
       # all 197 unchanged. Rome took three waves to reach the same point and
       # San Francisco needed none at all, being plain American.
-      assert length(emitted) == 4774
-      assert count.(& &1["streetAddress"]) == 4151
+      #
+      # Re-measured 2026-09-05 after the first five Korean BBQ guides landed —
+      # Los Angeles, Chicago, Chicago's north suburbs, the South Bay and Puget
+      # Sound — 72 places between them. These are the collection's five metros
+      # with no neighborhood corpus of their own, so each guide owns every
+      # place it presents rather than deferring to a neighborhood file. Every
+      # one of the 72 is addressed, and each digit is accounted for:
+      #
+      #   * total 4774 -> 4846, the 72 addressed places.
+      #   * `streetAddress` 4151 -> 4223, +72. ALL of them.
+      #   * `postalCode` 3387 -> 3459, +72. ALL of them, which is the same
+      #     shape as London wave 3 for a different reason: London's outer
+      #     boroughs came off the National Heritage List and operator sites;
+      #     these are American restaurant addresses taken from the
+      #     restaurants' own operator sites, and a house number and a ZIP come
+      #     with that territory as a matter of course. Contrast London wave 1,
+      #     which needed a new parser branch — @uk_outward — before ten of its
+      #     addresses would yield a street line at all; nothing here needed
+      #     one.
+      #   * `is_nil(streetAddress)` unmoved at 623 and locality-only unmoved at
+      #     308, which is the same fact from the other side: not one of the 72
+      #     is a descriptive location.
+      #
+      # Re-measured again the same day: Han Sung BBQ (South Bay) was withdrawn
+      # for want of tabletop evidence. Its own site and the diner account it
+      # quoted established only a charcoal grill, never a grill at the table,
+      # and the gate that is supposed to catch that had a hole — a bare
+      # "charcoal grill" substring — that this entry had cleared through. With
+      # the hole closed and the place gone, the 72 addressed Korean BBQ places
+      # become 71:
+      #
+      #   * total 4846 -> 4845, -1.
+      #   * `streetAddress` 4223 -> 4222, -1. It carried one.
+      #   * `postalCode` 3459 -> 3458, -1. It carried one of those too.
+      #   * `is_nil(streetAddress)` unmoved at 623 and locality-only unmoved at
+      #     308: the withdrawn place was never counted on either of those
+      #     sides to begin with.
+      #
+      # Re-measured after the five Korean BBQ guides for Manhattan, Queens,
+      # Brooklyn, San Francisco and London landed — the five metros this
+      # corpus already covers, so most of their restaurants' place records
+      # were not new rows in priv/seed_data/korean_bbq/ at all: they resolve
+      # by slug into 26 existing neighborhood files across those five
+      # directories, which is the legal cross-file reference three-pass
+      # directory seeding allows. Sixty-five addressed rows landed there:
+      #
+      #   * total 4845 -> 4910, +65.
+      #   * `streetAddress` 4222 -> 4287, +65 — all of them. Every one of the
+      #     sixty-five carries a house number.
+      #   * `postalCode` 3458 -> 3523, +65 — all of them. Not every one is a
+      #     five-digit ZIP: fifty-one are American and carry one, and the
+      #     fourteen London restaurants carry an alphanumeric UK postcode
+      #     instead (N1C 4AG, SE13 5NS). What this bucket proves is that a
+      #     postal code of SOME shape was parsed for all sixty-five, not that
+      #     they share a format.
+      #   * `is_nil(streetAddress)` unmoved at 623 and locality-only unmoved
+      #     at 308, which is the same fact from the other side: not one of
+      #     the 65 is a descriptive location. A row with a house number and a
+      #     postal code cannot be street-less or locality-only, so both
+      #     buckets were always going to hold still; the +65/+65 above and the
+      #     two unmoved counts here are the same claim seen from opposite
+      #     sides.
+      #
+      # Re-measured after the evidence standard that withdrew Han Sung BBQ was
+      # re-run across the whole collection rather than the four entries it was
+      # first applied to. Eight more restaurants were withdrawn for want of a
+      # source establishing a grill at the table: three in Puget Sound (The
+      # Grill in Lakewood, Palace Korean Bar & Grill in Federal Way, Ka Won in
+      # Lynnwood), one in Los Angeles (Moon BBQ #2), and four in Chicago's
+      # north suburbs (Mr. Kimchi, Hwang Soh Grill, Gopchang Story in Glenview,
+      # Pro Samgyubsal). In every one of the eight the "at the table" was the
+      # researcher's conclusion and not the source's sentence — four had a
+      # source that never mentions a table at all, and four cited a
+      # search-results URL, which is not a citation because it is not
+      # re-checkable. Two of the ten re-examined survived on new evidence and
+      # stay. All eight withdrawn rows lived in priv/seed_data/korean_bbq/ and
+      # every one carried a house number and a five-digit ZIP, so the delta is
+      # -8 three times over:
+      #
+      #   * total 4910 -> 4902, -8.
+      #   * `streetAddress` 4287 -> 4279, -8. All eight carried one.
+      #   * `postalCode` 3523 -> 3515, -8. All eight carried one of those too.
+      #   * `is_nil(streetAddress)` unmoved at 623 and locality-only unmoved at
+      #     308: a row with both a house number and a postal code was never
+      #     counted on either of those sides, so withdrawing eight of them
+      #     cannot move either bucket. That is the same claim as the two -8s
+      #     above, seen from the other side.
+      assert length(emitted) == 4902
+      assert count.(& &1["streetAddress"]) == 4279
       assert count.(&is_nil(&1["streetAddress"])) == 623
-      assert count.(& &1["postalCode"]) == 3387
+      assert count.(& &1["postalCode"]) == 3515
 
       # The largest behavioural delta this change ships: 302 places emit a
       # PostalAddress carrying only locality, region and country. Their full
@@ -913,6 +1000,20 @@ defmodule EthosWeb.StructuredDataTest do
       # went to 308 with wave 2, and the one addition is "Kensington Gore,
       # London" — no house number, no thoroughfare type and no postal code, so
       # it correctly emits locality, region and country alone.
+      # 308 held through Korean BBQ wave 1 (Los Angeles, Chicago, Chicago's
+      # north suburbs, the South Bay and Puget Sound). All 72 of that wave's
+      # addresses carry a street line, so none of them can be in this bucket
+      # whatever its postal code — the same fact the streetAddress and
+      # postalCode assertions above prove from the other side.
+      # 308 held again through the five Korean BBQ guides for Manhattan,
+      # Queens, Brooklyn, San Francisco and London. All 65 of those addressed
+      # rows carry both a street line and a postal code, so none of them can
+      # be in this bucket either — the same fact the streetAddress and
+      # postalCode assertions above prove from the other side.
+      # 308 held once more when eight Korean BBQ restaurants were withdrawn for
+      # want of a source establishing a grill at the table. All eight carried
+      # both a street line and a postal code, so none of them was ever in this
+      # bucket to be removed from it.
       assert count.(fn ld -> is_nil(ld["streetAddress"]) and is_nil(ld["postalCode"]) end) == 308
     end
   end

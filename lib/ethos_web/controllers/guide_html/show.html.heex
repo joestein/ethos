@@ -177,6 +177,8 @@
     Some booking links on this page earn Ethos a commission at no extra cost to you.
   </p>
 
+  <EthosWeb.FoliagePanel.foliage_panel foliage={@foliage} />
+
   {live_render(@conn, EthosWeb.SocialLive,
     id: "social-guide-#{@guide.id}",
     session: %{"subject_type" => "guide", "subject_id" => @guide.id}

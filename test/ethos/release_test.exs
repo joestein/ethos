@@ -2,6 +2,7 @@ defmodule Ethos.ReleaseTest do
   use Ethos.DataCase, async: false
 
   import ExUnit.CaptureIO
+  import ExUnit.CaptureLog
   import Ethos.AccountsFixtures
 
   alias Ethos.Places
@@ -382,6 +383,124 @@ defmodule Ethos.ReleaseTest do
     capture_io(fn -> Ethos.Release.seed_london(user.email) end)
 
     assert london.() == after_first, "seed_london/1 is not idempotent"
+  end
+
+  # Korean BBQ ships before its research does, so `expected` is 0 for now and
+  # the publishes-what-was-committed half is vacuous. The directory-literal
+  # half is fully load-bearing at zero files, because seed_directory/2 prints
+  # its report whether or not it matched anything: a seeder pointed at
+  # priv/seed_data/korean_bbqs would seed nothing, raise nothing, and report
+  # success, and the corpus gate cannot catch that because the gate reads the
+  # directory rather than the seeder.
+  test "seed_korean_bbq/1 names its seed directory and publishes its files, idempotently" do
+    user = user_fixture()
+    expected = length(SeedDataHelpers.seed_files("korean_bbq"))
+
+    kbbq = fn ->
+      Ethos.Guides.list_published_guides()
+      |> Enum.count(&String.ends_with?(&1.slug, "-korean-bbq-guide"))
+    end
+
+    before = kbbq.()
+
+    # Ten Korean BBQ guides now exist, and five of them present restaurants
+    # whose place records live in neighborhood files rather than in
+    # priv/seed_data/korean_bbq/ itself — Manhattan, Queens, Brooklyn, San
+    # Francisco and London. `GuideRunner.replace_entries!/2` resolves each
+    # entry through `Places.get_place_by_slug!/1`, which raises rather than
+    # skipping, and seeding is not transactional, so seeding Korean BBQ against
+    # a database where none of those five have been seeded aborts partway
+    # through with an `Ecto.NoResultsError` on the first entry that reaches
+    # outside the directory. That is exactly the precondition
+    # `seed_korean_bbq/1`'s own @doc documents — "MUST RUN AFTER every
+    # destination whose neighborhood files own places these guides reach by
+    # entry" — so this is the production runbook order, not a convenience for
+    # this test. Reproduced here the same way seed_manhattan/1,
+    # seed_brooklyn/1 and seed_ballparks/1 are reproduced above
+    # seed_bronx/1. The counting function below filters on the
+    # "-korean-bbq-guide" slug suffix, so these five extra seed calls —
+    # none of which publish a guide with that suffix — cannot inflate what
+    # is being measured.
+    #
+    # seed_ballparks/1 is included too, ahead of seed_queens/1, for the same
+    # reason the Queens test above reproduces it: Queens' own neighborhood
+    # files link out to /g/citi-field-guide, a code seed `seed_ballparks/1`
+    # owns, and `Links.resolve!/1` raises on that unresolved target rather
+    # than skipping it. That precondition belongs to seed_queens/1 itself,
+    # independent of Korean BBQ, but it still has to be satisfied here for
+    # seed_queens/1 to complete.
+    capture_io(fn ->
+      Ethos.Release.seed_manhattan(user.email)
+      Ethos.Release.seed_ballparks(user.email)
+      Ethos.Release.seed_queens(user.email)
+      Ethos.Release.seed_brooklyn(user.email)
+      Ethos.Release.seed_san_francisco(user.email)
+      Ethos.Release.seed_london(user.email)
+    end)
+
+    output = capture_io(fn -> Ethos.Release.seed_korean_bbq(user.email) end)
+
+    # Parsed back OUT of the report and compared for equality, not containment —
+    # "Seeded 0 files from priv/seed_data/korean_bbqs\n" CONTAINS the right
+    # path, so every prefix-extension typo survives `=~`.
+    assert [_, dir] =
+             Regex.run(~r{Seeded #{expected} files from priv/seed_data/(\S+)\n}, output),
+           "seed_korean_bbq/1 printed no seed-directory report: #{inspect(output)}"
+
+    assert dir == "korean_bbq",
+           "seed_korean_bbq/1 seeds priv/seed_data/#{dir} — a directory literal that " <>
+             "matches nothing seeds nothing, raises nothing, and reports success"
+
+    assert File.dir?(Path.join([to_string(:code.priv_dir(:ethos)), "seed_data", dir])),
+           "seed_korean_bbq/1 names priv/seed_data/#{dir}, which does not exist"
+
+    after_first = kbbq.()
+    assert after_first - before == expected
+
+    capture_io(fn -> Ethos.Release.seed_korean_bbq(user.email) end)
+    assert kbbq.() == after_first, "seed_korean_bbq/1 is not idempotent"
+  end
+
+  # Production runs a release, not Mix, so Ethos.Release.foliage_links/0 is
+  # the only way to run Ethos.Foliage.LinkBuilder.build!/0 and
+  # Ethos.Foliage.Dataset.warn_dangling_guides/1 after a deploy. Before this
+  # existed, both were reachable only from test code — this proves the
+  # release path actually calls them, rather than trusting that it would.
+  describe "foliage_links/0" do
+    # Avon and Canton are consecutive stops on the committed `hartford-west`
+    # route (priv/foliage/routes.json). Every other route's guides are
+    # deliberately left unseeded, so this run also exercises
+    # warn_dangling_guides/1 against dozens of really-missing guides.
+    @avon Path.expand("../../priv/seed_data/connecticut/avon.json", __DIR__)
+    @canton Path.expand("../../priv/seed_data/connecticut/canton.json", __DIR__)
+
+    test "writes route link edges and logs dangling route guides" do
+      user = user_fixture()
+
+      for path <- [@avon, @canton] do
+        Ethos.Seeds.DataGuide.upsert_places!(path)
+        Ethos.Seeds.DataGuide.upsert_guide!(path, user.email)
+      end
+
+      avon = Ethos.Guides.get_published_guide_by_slug!("avon-ct-travel-guide")
+
+      log =
+        capture_log(fn ->
+          assert :ok = Ethos.Release.foliage_links()
+        end)
+
+      connected = Ethos.Links.links_for("guide", avon.id)
+
+      assert Enum.any?(
+               connected,
+               &(&1.other.slug == "canton-ct-travel-guide" and &1.kind == "same-region")
+             )
+
+      # Every stop outside Avon/Canton resolves to a guide this test never
+      # seeded, so the dangling-guide check has real orphans to report.
+      assert log =~ "foliage: route"
+      assert log =~ "links missing guide"
+    end
   end
 
   # The manifest ships empty and waves append to it, so none of these may

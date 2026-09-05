@@ -281,18 +281,35 @@ defmodule Ethos.Seeds.DestinationSeedDataTest do
 
   defp photo_dir(_src), do: nil
 
-  # 9. The corpus must be exactly the thirteen destination pages shipped for
-  #    this rollout — no fewer (an accidental deletion) and no more (an
-  #    unreviewed extra page landing silently, or a fourteenth appearing
-  #    without anyone deciding it should). This is a literal list of the
-  #    thirteen paths, not a count and not a set derived from the files this
-  #    test happens to find on disk: a derived expectation passes no matter
-  #    which files exist, which is exactly the vacuity this assertion exists
-  #    to prevent. Sourced from each file's own "path" field rather than its
-  #    filename, since the filename-to-path mapping ("/" replaced by "-") is
-  #    lossy to reverse in general and the field is what the app actually
-  #    serves.
+  # 9. The corpus must be exactly the destination pages shipped so far — no
+  #    fewer (an accidental deletion) and no more (an unreviewed extra page
+  #    landing silently, or one appearing without anyone deciding it should).
+  #    This is a literal list of the paths, not a count and not a set derived
+  #    from the files this test happens to find on disk: a derived expectation
+  #    passes no matter which files exist, which is exactly the vacuity this
+  #    assertion exists to prevent. Sourced from each file's own "path" field
+  #    rather than its filename, since the filename-to-path mapping ("/"
+  #    replaced by "-") is lossy to reverse in general and the field is what
+  #    the app actually serves. California and Illinois joined here alongside
+  #    the Korean BBQ collection. Washington did not, and the true reason is
+  #    that no page needed one — a destination record is optional decoration on
+  #    a hub, and the Puget Sound guide carries `state: "Washington"` and
+  #    `county: "Puget Sound"`, so it routes on /destinations/washington and
+  #    /destinations/washington/puget-sound with or without a record.
+  #
+  #    An earlier version of this note gave a different reason: that a record at
+  #    path "washington" would collide with the Connecticut town of Washington
+  #    and break its page. That reason is false. /destinations/washington is
+  #    ALREADY a Washington-state hub — t_mobile_park_guide.ex carries
+  #    `state: "Washington"` — and DestinationController.show/2 tries
+  #    Guides.list_published_guides_for_state/1 first, falling through to the
+  #    town branch only when it returns []. The Connecticut town is not
+  #    displaced by a record; it is displaced by the state itself, and the state
+  #    page surfaces it through Guides.list_guides_shadowed_by_state/1. Both
+  #    branches read Destinations.get_by_path/1, so a record at that path would
+  #    simply have attached to the state hub and broken nothing.
   @destination_roster ~w(
+    california
     connecticut
     connecticut/fairfield-county
     connecticut/hartford-county
@@ -302,6 +319,7 @@ defmodule Ethos.Seeds.DestinationSeedDataTest do
     connecticut/new-london-county
     connecticut/tolland-county
     connecticut/windham-county
+    illinois
     new-york
     new-york/brooklyn
     new-york/manhattan

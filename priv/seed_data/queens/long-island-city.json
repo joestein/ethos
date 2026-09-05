@@ -347,6 +347,19 @@
       "summary": "The New York Irish Center, at 1040 Jackson Avenue. Its own directions give the address as one stop from Grand Central on the 7 train.",
       "status": "open",
       "photos": []
+    },
+    {
+      "slug": "wonderpig-kbbq-long-island-city",
+      "name": "Wonderpig KBBQ",
+      "kind": "restaurant",
+      "town": "Long Island City",
+      "state": "New York",
+      "county": "Queens",
+      "address": "37-08 Queens Boulevard, Long Island City, NY 11101",
+      "summary": "Wonderpig KBBQ is at 37-08 Queens Boulevard. The restaurant's own site offers tabletop grilling or chef-prepared dishes, so the meat is cooked at the table whenever the party grills it.",
+      "history": "An all-you-can-eat option is offered. The restaurant lists hours of noon to 10pm Monday through Thursday, noon to midnight on Friday and Saturday, and noon to 11pm on Sunday.",
+      "status": "open",
+      "photos": []
     }
   ],
   "entries": [
@@ -481,6 +494,12 @@
       "name": "New York Irish Center",
       "place_slug": "new-york-irish-center",
       "note": "1040 Jackson Avenue. Its own directions give the address as one stop from Grand Central on the 7 train."
+    },
+    {
+      "kind": "food",
+      "name": "Wonderpig KBBQ",
+      "place_slug": "wonderpig-kbbq-long-island-city",
+      "note": "37-08 Queens Boulevard. Its own site offers tabletop grilling or chef-prepared dishes."
     }
   ],
   "links": [
