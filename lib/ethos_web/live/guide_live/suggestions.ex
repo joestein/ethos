@@ -56,7 +56,7 @@ defmodule EthosWeb.GuideLive.Suggestions do
             <p class="text-sm text-zinc-500">
               {s.kind_hint || "tip"} · {if s.origin == "gap_fill",
                 do: "nearby idea (auto)",
-                else: "suggested by #{s.author && s.author.email}"}
+                else: "suggested by #{s.author && s.author.username}"}
             </p>
             <p :if={s.body} class="text-sm mt-1">{s.body}</p>
             <a
