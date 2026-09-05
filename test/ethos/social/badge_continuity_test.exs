@@ -1,9 +1,11 @@
-defmodule Ethos.Social.VisitMigrationTest do
+defmodule Ethos.Social.BadgeContinuityTest do
   @moduledoc """
-  The migration itself cannot be tested after the fact — the test database is
-  already migrated and `place_visits` is gone. What CAN be tested, and is what
-  actually matters, is that a user holding the reactions the migration produces
-  still earns the badges they had.
+  Proves badge continuity across the visits-to-reactions migration: a user
+  holding the reactions that migration produces still earns the badges they
+  had. It cannot test the migration itself — the test database is already
+  migrated and `place_visits` is gone by the time this runs — so it stands
+  in for that by reproducing the reaction the migration would have written
+  and checking the badge follows it.
   """
   use Ethos.DataCase, async: true
 

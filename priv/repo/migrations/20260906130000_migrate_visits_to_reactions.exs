@@ -28,6 +28,12 @@ defmodule Ethos.Repo.Migrations.MigrateVisitsToReactions do
   end
 
   def down do
+    # This restores only the visits that survived the ON CONFLICT above as
+    # thumbs-up reactions. A visit whose user later reacted thumbs-down to
+    # the same place has no reaction row selected by the query below, so it
+    # is not reinstated — and that is deliberate, not a gap: the reaction is
+    # the user's later, considered choice, and resurrecting the visit would
+    # contradict it. That row is gone for good once this table is recreated.
     create table(:place_visits) do
       add :user_id, references(:users, on_delete: :delete_all), null: false
       add :place_id, references(:places, on_delete: :delete_all), null: false
