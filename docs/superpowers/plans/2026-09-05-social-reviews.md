@@ -1253,14 +1253,20 @@ defmodule EthosWeb.Admin.CommentsLiveTest do
     %{admin: admin, author: author, guide: guide, review: review}
   end
 
-  test "a logged-out visitor cannot reach it", %{conn: conn} do
-    assert {:error, {:redirect, %{to: "/users/log_in"}}} = live(conn, ~p"/admin/comments")
+  # Both of these use get/2 rather than live/2 on purpose. The guards are
+  # PLUGS in the router pipeline, so they act on the HTTP request and halt
+  # before the LiveView ever mounts. `require_admin_user` RENDERS a 404 and
+  # halts — it does not raise — so `assert_error_sent` would never fire.
+  # This matches the existing pattern in
+  # test/ethos_web/controllers/admin_suggestion_controller_test.exs:61-68.
+  test "a logged-out visitor is sent to log in", %{conn: conn} do
+    assert conn |> get(~p"/admin/comments") |> redirected_to() == ~p"/users/log_in"
   end
 
   test "a non-admin gets a 404 rather than a hint the page exists", %{conn: conn} do
-    conn = log_in_user(conn, user_fixture())
+    conn = log_in_user(conn, user_fixture(%{email: "not-admin@example.com"}))
 
-    assert_error_sent 404, fn -> live(conn, ~p"/admin/comments") end
+    assert conn |> get(~p"/admin/comments") |> html_response(404)
   end
 
   test "the admin sees pending comments with author and rating", %{conn: conn, admin: admin} do
