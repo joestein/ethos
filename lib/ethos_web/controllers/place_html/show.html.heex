@@ -116,5 +116,10 @@
     </ul>
   </section>
 
+  {live_render(@conn, EthosWeb.SocialLive,
+    id: "social-place-#{@place.id}",
+    session: %{"subject_type" => "place", "subject_id" => @place.id}
+  )}
+
   <EthosWeb.ConnectedPages.connected_pages connected={@connected} />
 </article>
