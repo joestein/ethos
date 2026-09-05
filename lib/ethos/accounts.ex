@@ -105,6 +105,36 @@ defmodule Ethos.Accounts do
     )
   end
 
+  ## Username
+
+  @doc """
+  Changeset for the username picker.
+
+  Skips the uniqueness query so live validation does not hit the database on
+  every keystroke; `update_user_username/2` still catches a collision through
+  the unique constraint.
+  """
+  def change_user_username(%User{} = user, attrs \\ %{}) do
+    User.username_changeset(user, attrs, validate_username: false)
+  end
+
+  @doc """
+  Sets a user's public username, clearing the provisional flag.
+  """
+  def update_user_username(%User{} = user, attrs) do
+    user
+    |> User.username_changeset(attrs)
+    |> Repo.update()
+  end
+
+  @doc """
+  True when the user still carries a username invented by the backfill.
+
+  These users must pick a real name before they can post anything public.
+  """
+  def needs_username?(%User{username_provisional: true}), do: true
+  def needs_username?(_), do: false
+
   ## Settings
 
   @doc """

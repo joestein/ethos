@@ -588,4 +588,53 @@ defmodule Ethos.AccountsTest do
       refute user.username_provisional
     end
   end
+
+  describe "update_user_username/2" do
+    import Ethos.AccountsFixtures
+
+    test "sets the username and clears the provisional flag" do
+      user = user_fixture()
+      {:ok, updated} = Ethos.Accounts.update_user_username(user, %{"username" => "buoewe"})
+
+      assert updated.username == "buoewe"
+      refute updated.username_provisional
+    end
+
+    test "applies the same rules as registration" do
+      user = user_fixture()
+
+      assert {:error, changeset} =
+               Ethos.Accounts.update_user_username(user, %{"username" => "admin"})
+
+      assert %{username: ["is reserved"]} = errors_on(changeset)
+    end
+
+    test "rejects a username someone else already holds" do
+      user_fixture(username: "buoewe")
+      other = user_fixture()
+
+      assert {:error, changeset} =
+               Ethos.Accounts.update_user_username(other, %{"username" => "buoewe"})
+
+      assert %{username: ["has already been taken"]} = errors_on(changeset)
+    end
+  end
+
+  describe "needs_username?/1" do
+    import Ethos.AccountsFixtures
+
+    test "is false for a user who chose their own name" do
+      refute Ethos.Accounts.needs_username?(user_fixture())
+    end
+
+    test "is true for a backfilled user" do
+      user = user_fixture()
+      provisional = %{user | username_provisional: true}
+      assert Ethos.Accounts.needs_username?(provisional)
+    end
+
+    test "is false for nobody" do
+      refute Ethos.Accounts.needs_username?(nil)
+    end
+  end
 end
