@@ -933,7 +933,7 @@ Sample the nine week services inside every town, classify, and write the stage m
   - `Sampler.weeks() :: [%{index:, label:, starts:, ends:, service:}]`
   - `Sampler.modal_stage([stage_or_unknown], floor :: float) :: {:ok, stage} | {:error, :insufficient_samples}`
   - `Sampler.monotonic?([stage]) :: boolean`
-  - `Sampler.peak_week([stage]) :: pos_integer | nil`
+  - `Sampler.peak_week([stage]) :: pos_integer | nil` — first week holding the maximum non-`past_peak` stage
 
 - [ ] **Step 1: Write the failing test**
 
@@ -992,12 +992,18 @@ defmodule Ethos.Foliage.SamplerTest do
   end
 
   describe "peak_week/1" do
-    test "returns the one-based index of the first peak week" do
+    test "returns the first week at :peak when a town reaches it" do
       assert Sampler.peak_week([:green, :turning, :near_peak, :peak, :peak, :past_peak]) == 4
     end
 
-    test "returns nil when a town never peaks" do
-      assert Sampler.peak_week([:green, :green, :turning]) == nil
+    test "returns the most advanced week when a town never reaches :peak" do
+      # Greenwich's real shape: DEEP's eight real weeks run out before the
+      # south-west corner turns red, so it goes near_peak straight to past_peak.
+      assert Sampler.peak_week([:green, :green, :turning, :near_peak, :past_peak]) == 4
+    end
+
+    test "returns nil when every week is already past peak" do
+      assert Sampler.peak_week([:past_peak, :past_peak]) == nil
     end
   end
 end
@@ -1066,11 +1072,26 @@ defmodule Ethos.Foliage.Sampler do
     ranks == Enum.sort(ranks)
   end
 
-  @doc "One-based index of the first `:peak` week, or nil."
+  @doc """
+  The week a town is most advanced before it goes past peak.
+
+  Not "the first `:peak` week". DEEP's map carries eight real weeks plus a
+  ninth blanket past-peak fill, and the shoreline and south-west corner turn
+  late enough that the real weeks run out before they reach the red band — 36
+  of the 169 towns never show `:peak` at all. For the 133 that do, this returns
+  exactly the first `:peak` week, so the two definitions agree wherever the
+  narrower one was defined.
+  """
   def peak_week(stages) do
-    case Enum.find_index(stages, &(&1 == :peak)) do
-      nil -> nil
-      i -> i + 1
+    order = Enum.with_index(Tiles.stages()) |> Map.new()
+
+    case Enum.reject(stages, &(&1 == :past_peak)) do
+      [] ->
+        nil
+
+      reachable ->
+        top = Enum.max_by(reachable, &Map.fetch!(order, &1))
+        Enum.find_index(stages, &(&1 == top)) + 1
     end
   end
 end
@@ -1128,7 +1149,12 @@ Add to `lib/mix/tasks/ethos.foliage.build.ex` — a `--stages` branch in `run/1`
         end
 
         peak = Ethos.Foliage.Sampler.peak_week(sequence)
-        unless peak, do: Mix.raise("#{town["name"]} never reaches peak: #{inspect(sequence)}")
+
+        # Week 9 is the blanket statewide past-peak layer and can never
+        # legitimately be a town's peak.
+        unless peak && peak <= 8 do
+          Mix.raise("#{town["name"]} has no usable peak week: #{inspect(sequence)}")
+        end
 
         Map.merge(town, %{"stages" => Enum.map(sequence, &to_string/1), "peak_week" => peak})
       end)

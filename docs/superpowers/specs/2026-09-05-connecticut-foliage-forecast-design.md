@@ -171,11 +171,42 @@ and Mansfield via Storrs) have no JSON file to read.
    rather than guessing.
 6. **Bin to stages.** Five Ethos stage names over DEEP's continuous ramp:
    `green`, `turning`, `near_peak`, `peak`, `past_peak`.
-7. **Derive peak week.** First week at `peak`, expressed as its date range.
+7. **Derive peak week.** The first week holding the town's maximum
+   non-`past_peak` stage, expressed as its date range. Not "the first `:peak`
+   week" — see *Peak week, and why it is not the red band* below.
 8. **Join routes.** For each of the seven routes, spatial-intersect the town
    layer, order the towns along the polyline, and resolve each to a published
    guide slug from the `guides` table.
 9. **Validate, then write.** See §10.
+
+### Peak week, and why it is not the red band
+
+The first derivation defined a town's peak as its first `:peak` week and gated
+the build on every town reaching one. Running it against the real tiles proved
+that assumption false: **36 of the 169 towns never show `:peak` at all.**
+
+The cause is in DEEP's data, not in the classification. Their map carries eight
+real weeks plus a ninth blanket "Past Peak" fill that is a uniform statewide
+layer rather than an observation. The shoreline and the south-west corner turn
+late enough that the eight real weeks run out before those towns reach the red
+band — Greenwich goes `near_peak` straight to `past_peak`, with no red between.
+
+So peak week is defined as **the first week holding the town's maximum
+non-`past_peak` stage**. For the 133 towns that do reach `:peak` this returns
+exactly the first `:peak` week, so it is a strict generalisation rather than a
+change of meaning. It reproduces all four of DEEP's published regional windows,
+Greenwich included, and it never lands on week 9.
+
+The honest consequence, and the pages must not obscure it: for those 36
+late-turning towns the published window names **the week the town is most
+advanced**, not a verified red peak. That is the strongest claim DEEP's data
+supports for them.
+
+The rejected alternative was widening the `:peak` colour band to absorb the
+orange-red anchor. It passes the validation towns but still leaves 12 towns
+with no peak week, and it means moving a bin boundary on a continuous ramp to
+make a gate go green — precisely the fake precision this design exists to
+avoid.
 
 ### Why offline
 
@@ -281,7 +312,8 @@ Build-time:
 - Exactly 169 towns, each with a non-empty simplified polygon.
 - Every town's stage sequence is monotonic across the nine weeks — no town goes
   backwards from `peak` to `turning`.
-- Every town reaches `peak` in some week.
+- Every town has a usable peak week, in 1..8. Week 9 is the blanket past-peak
+  layer and can never legitimately be a peak.
 - The four DEEP-published regional windows are reproduced by the towns those
   regions contain. A mismatch means the sampling drifted and the build stops.
 - Every route resolves to at least three towns, and every route town resolves to
