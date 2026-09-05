@@ -18,8 +18,15 @@ defmodule Ethos.Seeds.KoreanBbqCollection do
 
   alias Ethos.Collections
 
-  def upsert! do
-    Collections.upsert_collection!(%{
+  def upsert!, do: Collections.upsert_collection!(attrs())
+
+  @doc """
+  The collection's attrs, exposed separately from `upsert!/0` so the seed
+  data gate can read this module's own prose — intro and every item blurb —
+  without writing to the repo.
+  """
+  def attrs do
+    %{
       slug: "korean-bbq",
       title: "Korean BBQ",
       published: true,
@@ -40,7 +47,7 @@ defmodule Ethos.Seeds.KoreanBbqCollection do
         %{
           guide_slug: "los-angeles-korean-bbq-guide",
           blurb:
-            "Koreatown, inside the City of Los Angeles: the densest concentration of tabletop grills in the country, most of them walkable from one another."
+            "Koreatown, inside the City of Los Angeles: twenty-five tabletop grills citywide, nineteen of them inside the roughly one-square-mile grid bounded by Vermont and Western Avenues and 3rd Street and Olympic Boulevard."
         },
         %{
           guide_slug: "manhattan-korean-bbq-guide",
@@ -80,7 +87,7 @@ defmodule Ethos.Seeds.KoreanBbqCollection do
         %{
           guide_slug: "south-bay-korean-bbq-guide",
           blurb:
-            "Santa Clara, Sunnyvale and Fremont — where the Bay Area's tabletop grilling actually is, down the Peninsula from San Francisco."
+            "Santa Clara, Sunnyvale and Fremont, at the south end of the Bay — Fremont across the water in Alameda County — where the Bay Area's tabletop grilling actually is."
         },
         %{
           guide_slug: "puget-sound-korean-bbq-guide",
@@ -88,6 +95,6 @@ defmodule Ethos.Seeds.KoreanBbqCollection do
             "Four suburban corridors: Pacific Highway S in Federal Way, Highway 99 in Lynnwood, S Tacoma Way in Lakewood, and Aurora Ave N in Shoreline."
         }
       ]
-    })
+    }
   end
 end

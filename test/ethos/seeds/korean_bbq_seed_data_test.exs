@@ -40,6 +40,7 @@ defmodule Ethos.Seeds.KoreanBbqSeedDataTest do
   # wait on later tasks.
 
   alias Ethos.SeedDataHelpers
+  alias Ethos.Seeds.KoreanBbqCollection
 
   @seed_dir Path.expand("../../../priv/seed_data/korean_bbq", __DIR__)
 
@@ -371,6 +372,37 @@ defmodule Ethos.Seeds.KoreanBbqSeedDataTest do
     assert grill_at_the_table?("Every table has a smokeless grill.")
   end
 
+  # Every ban above was written to read priv/seed_data/korean_bbq/*.json —
+  # the corpus. None of them read lib/ethos/seeds/korean_bbq_collection.ex —
+  # the intro and ten blurbs a reader actually meets at /c/korean-bbq. That
+  # gap was live: the Los Angeles blurb called Koreatown "the densest
+  # concentration of tabletop grills in the country," an unsourced ranking
+  # exactly the superlative ban above exists to catch, and it shipped because
+  # nothing pointed any ban at the collection page. A ban that covers the
+  # corpus a guide is built from but not the page that describes that corpus
+  # has a hole precisely where a summary of the whole collection is written —
+  # and prose summarizing everything is where a writer reaches hardest for a
+  # ranking.
+  #
+  # This is not a new kind of gate. The Connecticut drive-time ban already
+  # scans lib/ethos/seeds/*.ex — burys_collection.ex and middlebury_guide.ex
+  # shipped banned drive-time phrasing because nothing but a JSON-only glob
+  # was checking, and the fix there was to read the Elixir source too.
+  # Reading KoreanBbqCollection's prose is the same move for a different
+  # corpus: an Elixir seed module's prose is not exempt from a ban for living
+  # outside priv/seed_data.
+  #
+  # `KoreanBbqCollection.attrs/0` — extracted from `upsert!/0` for exactly
+  # this — returns the same map `Collections.upsert_collection!/1` would
+  # receive, so this reads the intro and every blurb without writing to the
+  # repo.
+  defp collection_prose do
+    attrs = KoreanBbqCollection.attrs()
+
+    [{"korean_bbq_collection.ex", attrs.intro}] ++
+      for %{blurb: blurb} <- attrs.items, do: {"korean_bbq_collection.ex", blurb}
+  end
+
   # ------------------------------------------------------------------
   # Corpus assertions
   # ------------------------------------------------------------------
@@ -406,7 +438,7 @@ defmodule Ethos.Seeds.KoreanBbqSeedDataTest do
       guide_prose = for {file, doc} <- decoded_files(), text <- prose(doc), do: {file, text}
 
       offenders =
-        (guide_prose ++ resolved_prose)
+        (guide_prose ++ resolved_prose ++ collection_prose())
         |> Enum.filter(fn {_file, text} -> hit?(patterns, text) end)
         |> Enum.map(fn {file, text} -> {file, String.slice(text, 0, 140)} end)
         |> Enum.uniq()
