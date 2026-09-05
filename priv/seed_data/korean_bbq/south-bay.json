@@ -153,6 +153,11 @@
   ],
   "links": [
     {
+      "target": "guide:san-francisco-korean-bbq-guide",
+      "note": "San Francisco has 9 rooms scattered across four neighborhoods; South Bay concentrates 8 mainly on El Camino Real in Santa Clara.",
+      "kind": "see-also"
+    },
+    {
       "target": "guide:los-angeles-korean-bbq-guide",
       "note": "Gen Korean BBQ House runs the Boscell Road room in Fremont and one on Reseda Boulevard in Northridge.",
       "kind": "see-also"

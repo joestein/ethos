@@ -178,6 +178,19 @@
       "summary": "A Butler Street venue, closed Mondays and Tuesdays and otherwise running a regular weekly programme.",
       "status": "open",
       "photos": []
+    },
+    {
+      "slug": "insa-gowanus",
+      "name": "Insa",
+      "kind": "restaurant",
+      "town": "Gowanus",
+      "state": "New York",
+      "county": "Brooklyn",
+      "address": "328 Douglass Street, Brooklyn, NY 11217",
+      "summary": "A Korean barbecue and karaoke venue at 328 Douglass Street where the staff do the grilling at the table, and whose own food menu restricts its 구이 barbecue service to the indoor barbecue tables. Indoor dining runs Wednesday 5:30pm to 9:30pm, Thursday to Saturday 5:30pm to 10pm and Sunday 4:30pm to 9pm, with Monday and Tuesday closed.",
+      "history": "The karaoke rooms keep their own hours, running to midnight on Wednesdays and Thursdays and to 2am on Fridays and Saturdays.",
+      "status": "open",
+      "photos": []
     }
   ],
   "entries": [
@@ -228,6 +241,12 @@
       "name": "Public Records",
       "place_slug": "public-records",
       "note": "A Butler Street venue with a standing weekly programme, dark on Mondays and Tuesdays."
+    },
+    {
+      "kind": "food",
+      "name": "Insa",
+      "place_slug": "insa-gowanus",
+      "note": "Korean barbecue and karaoke on Douglass Street, with the staff grilling at the table. Closed Mondays and Tuesdays."
     }
   ],
   "links": [

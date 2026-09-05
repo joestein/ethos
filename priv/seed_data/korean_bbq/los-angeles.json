@@ -378,6 +378,11 @@
   ],
   "links": [
     {
+      "target": "guide:manhattan-korean-bbq-guide",
+      "note": "Manhattan's 18 rooms cluster in six blocks, especially West 32nd Street; Los Angeles's 25 spread across its larger walkable Koreatown.",
+      "kind": "see-also"
+    },
+    {
       "target": "guide:south-bay-korean-bbq-guide",
       "note": "Gen Korean BBQ House runs the Reseda Boulevard room in Northridge and one on Boscell Road in Fremont.",
       "kind": "see-also"

@@ -260,6 +260,19 @@
       "summary": "Bahari Estiatorio, at 31-14 Broadway.",
       "status": "open",
       "photos": []
+    },
+    {
+      "slug": "prime-no-7-astoria",
+      "name": "Prime No. 7",
+      "kind": "restaurant",
+      "town": "Astoria",
+      "state": "New York",
+      "county": "Queens",
+      "address": "34-19 Steinway Street, Astoria, NY 11103",
+      "summary": "Prime No. 7 is at 34-19 Steinway Street. A Korean grill sits at the table for the cooking, and sushi runs alongside the barbecue.",
+      "history": "It opened in September 2025. The all-you-can-eat service tops out at $55, and the restaurant lists hours of 11:40am to midnight Sunday through Thursday, and 11:40am to 1am on Friday and Saturday.",
+      "status": "open",
+      "photos": []
     }
   ],
   "entries": [
@@ -352,6 +365,12 @@
       "name": "Bahari Estiatorio",
       "place_slug": "bahari-estiatorio",
       "note": "31-14 Broadway."
+    },
+    {
+      "kind": "food",
+      "name": "Prime No. 7",
+      "place_slug": "prime-no-7-astoria",
+      "note": "34-19 Steinway Street. A Korean grill sits at the table for the cooking, with sushi alongside the barbecue. Opened September 2025."
     }
   ],
   "links": [

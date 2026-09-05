@@ -288,6 +288,19 @@
       "history": "The woodland is mainly oak and hazel, with bluebells and wood anemones in the ground flora and breeding jays and woodpeckers. Merton College, Oxford owns the land, Kingston Council leases it and the Lower Mole Countryside Management Project manages it. Merton College's ownership here and Walter de Merton's foundation at Old Malden are two survivals of the same medieval endowment inside one borough. The earthwork is one of the six scheduled monuments in the borough, and one of the two that are not part of the Coombe conduit system; Clattern Bridge, NHLE 1002021, is the other.",
       "status": "open",
       "photos": []
+    },
+    {
+      "slug": "imone-bbq-new-malden",
+      "name": "Imone BBQ",
+      "kind": "restaurant",
+      "town": "New Malden",
+      "state": "England",
+      "county": "London",
+      "address": "171 High Street, New Malden KT3 4BH",
+      "summary": "Imone BBQ is at 171 High Street in New Malden. The operator's own picture captions describe meats set on the table for grilling and marinated cuts already on the grill, which places the grilling at the table. No source states its opening hours, so none are given here.",
+      "history": "The Food Standards Agency holds Imone Korean Restaurant at 169 High Street and IMONE BBQ next door at 171 as two separate establishments. The parent restaurant serves in a sizzling stone bowl or plate.",
+      "status": "open",
+      "photos": []
     }
   ],
   "links": [
@@ -409,6 +422,12 @@
       "name": "Castle Hill, Chessington",
       "place_slug": "castle-hill-chessington",
       "note": "Oak and hazel woodland of 3.5 hectares off Filby Road, over earthworks of a probable medieval hunting lodge scheduled as NHLE 1002018."
+    },
+    {
+      "kind": "food",
+      "name": "Imone BBQ",
+      "place_slug": "imone-bbq-new-malden",
+      "note": "171 High Street, New Malden. The operator's own picture captions describe meats set on the table for grilling and marinated cuts on the grill."
     }
   ]
 }

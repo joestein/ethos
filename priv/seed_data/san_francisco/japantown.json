@@ -592,6 +592,32 @@
       "history": "No source states a construction date or an architect for the building, so none is given here.",
       "status": "open",
       "photos": []
+    },
+    {
+      "slug": "yakiniq-japantown",
+      "name": "YakiniQ Korean BBQ",
+      "kind": "restaurant",
+      "town": "Japantown",
+      "state": "California",
+      "county": "San Francisco",
+      "address": "1640 Post Street, 2nd Floor, San Francisco, CA 94115",
+      "summary": "YakiniQ Korean BBQ is on the second floor at 1640 Post Street. Gas grills at the table do the cooking, and servers swap the grill plates between rounds for a cleaner sear when the call bell at the table is pressed.",
+      "history": "DataSF carries a business record for Yakiniq at 1640 Post Street from 1 May 2025, with no end date.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "beque-korean-grill-japantown",
+      "name": "Beque Korean Grill",
+      "kind": "restaurant",
+      "town": "Japantown",
+      "state": "California",
+      "county": "San Francisco",
+      "address": "1825 Post Street, San Francisco, CA 94115",
+      "summary": "Beque Korean Grill is at 1825 Post Street, inside the Japan Center West mall. The operator's own site describes grill-it-yourself tables, and the gas grills sit at the table, with an all-you-can-eat bundle set beside a la carte ordering.",
+      "history": "A second room under the same name trades at 3060 East El Camino Real in Santa Clara.",
+      "status": "open",
+      "photos": []
     }
   ],
   "entries": [
@@ -678,6 +704,18 @@
       "name": "Japan Center Garage",
       "place_slug": "japan-center-garage-japantown",
       "note": "The Geary Boulevard parking garage under the complex, which Recreation and Park's construction update gives as the way to both mall entrances."
+    },
+    {
+      "kind": "food",
+      "name": "YakiniQ Korean BBQ",
+      "place_slug": "yakiniq-japantown",
+      "note": "On the second floor at 1640 Post Street, with gas grills at the table, the grill plates swapped between rounds and a call bell at each table."
+    },
+    {
+      "kind": "food",
+      "name": "Beque Korean Grill",
+      "place_slug": "beque-korean-grill-japantown",
+      "note": "At 1825 Post Street in the Japan Center West mall, where the operator's own site describes grill-it-yourself tables with gas grills at the table."
     }
   ],
   "links": [

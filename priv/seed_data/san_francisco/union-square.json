@@ -605,6 +605,19 @@
       "history": "No source states a history of the garage, so none is given here.",
       "status": "open",
       "photos": []
+    },
+    {
+      "slug": "absteak-union-square-san-francisco",
+      "name": "ABSteak by Akira Back",
+      "kind": "restaurant",
+      "town": "Union Square",
+      "state": "California",
+      "county": "San Francisco",
+      "address": "124 Ellis Street, San Francisco, CA 94102",
+      "summary": "ABSteak by Akira Back is at 124 Ellis Street, in a room below street level. Smokeless grills are set into the tables, so the meat cooks at the table and the dining room stays clear of the smoke an open grate would throw. No source states its opening hours, so none are given here.",
+      "history": "DataSF carries a business record for Absteak at 124 Ellis Street from 1 September 2022, with no end date.",
+      "status": "open",
+      "photos": []
     }
   ],
   "entries": [
@@ -691,6 +704,12 @@
       "name": "Beacon Grand",
       "place_slug": "beacon-grand-union-square",
       "note": "At 450 Powell Street in a building of 1930, with the Starlite Room bar on the twenty-first floor."
+    },
+    {
+      "kind": "food",
+      "name": "ABSteak by Akira Back",
+      "place_slug": "absteak-union-square-san-francisco",
+      "note": "At 124 Ellis Street, below street level, with smokeless grills set into the tables so the meat cooks at the table."
     }
   ],
   "links": [

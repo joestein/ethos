@@ -265,6 +265,32 @@
       "history": "The park is not administratively part of any neighborhood: the Department of City Planning gives it its own 2020 tabulation area, QN1191. It borders Bayside, Douglaston-Little Neck and Oakland Gardens-Hollis Hills.",
       "status": "open",
       "photos": []
+    },
+    {
+      "slug": "won-kbbq-bayside",
+      "name": "Won KBBQ",
+      "kind": "restaurant",
+      "town": "Bayside",
+      "state": "New York",
+      "county": "Queens",
+      "address": "45-53 Bell Boulevard, Bayside, NY 11361",
+      "summary": "Won KBBQ is at 45-53 Bell Boulevard. The dining room is furnished with table grills and television screens, and on the all-you-can-eat service the servers cook the meat at the table.",
+      "history": "The restaurant also trades as O2 BBQ. It lists hours of 11:30am to midnight Sunday through Thursday, and 11:30am to 1am on Friday and Saturday.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "blacksmith-bbq-bayside",
+      "name": "Blacksmith BBQ",
+      "kind": "restaurant",
+      "town": "Bayside",
+      "state": "New York",
+      "county": "Queens",
+      "address": "43-30 Corporal Kennedy Street, Bayside, NY 11361",
+      "summary": "Blacksmith BBQ is at 43-30 Corporal Kennedy Street. The operator's own site describes an all-you-can-eat Korean barbecue built around the grill at each table, where sizzling meats are cooked in front of the party.",
+      "history": "The restaurant lists hours of 11:30am to 1am Sunday through Thursday, and 11:30am to 2am on Friday and Saturday.",
+      "status": "open",
+      "photos": []
     }
   ],
   "entries": [
@@ -339,6 +365,18 @@
       "name": "Bayside station",
       "place_slug": "bayside-lirr-station",
       "note": "The Long Island Rail Road's Port Washington Branch calls here."
+    },
+    {
+      "kind": "food",
+      "name": "Won KBBQ",
+      "place_slug": "won-kbbq-bayside",
+      "note": "45-53 Bell Boulevard. Table grills and television screens, with the servers cooking the meat at the table on an all-you-can-eat service."
+    },
+    {
+      "kind": "food",
+      "name": "Blacksmith BBQ",
+      "place_slug": "blacksmith-bbq-bayside",
+      "note": "43-30 Corporal Kennedy Street. An all-you-can-eat Korean barbecue built around the grill at each table."
     }
   ],
   "links": [

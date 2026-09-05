@@ -402,6 +402,41 @@ defmodule Ethos.ReleaseTest do
 
     before = kbbq.()
 
+    # Ten Korean BBQ guides now exist, and five of them present restaurants
+    # whose place records live in neighborhood files rather than in
+    # priv/seed_data/korean_bbq/ itself — Manhattan, Queens, Brooklyn, San
+    # Francisco and London. `GuideRunner.replace_entries!/2` resolves each
+    # entry through `Places.get_place_by_slug!/1`, which raises rather than
+    # skipping, and seeding is not transactional, so seeding Korean BBQ against
+    # a database where none of those five have been seeded aborts partway
+    # through with an `Ecto.NoResultsError` on the first entry that reaches
+    # outside the directory. That is exactly the precondition
+    # `seed_korean_bbq/1`'s own @doc documents — "MUST RUN AFTER every
+    # destination whose neighborhood files own places these guides reach by
+    # entry" — so this is the production runbook order, not a convenience for
+    # this test. Reproduced here the same way seed_manhattan/1,
+    # seed_brooklyn/1 and seed_ballparks/1 are reproduced above
+    # seed_bronx/1. The counting function below filters on the
+    # "-korean-bbq-guide" slug suffix, so these five extra seed calls —
+    # none of which publish a guide with that suffix — cannot inflate what
+    # is being measured.
+    #
+    # seed_ballparks/1 is included too, ahead of seed_queens/1, for the same
+    # reason the Queens test above reproduces it: Queens' own neighborhood
+    # files link out to /g/citi-field-guide, a code seed `seed_ballparks/1`
+    # owns, and `Links.resolve!/1` raises on that unresolved target rather
+    # than skipping it. That precondition belongs to seed_queens/1 itself,
+    # independent of Korean BBQ, but it still has to be satisfied here for
+    # seed_queens/1 to complete.
+    capture_io(fn ->
+      Ethos.Release.seed_manhattan(user.email)
+      Ethos.Release.seed_ballparks(user.email)
+      Ethos.Release.seed_queens(user.email)
+      Ethos.Release.seed_brooklyn(user.email)
+      Ethos.Release.seed_san_francisco(user.email)
+      Ethos.Release.seed_london(user.email)
+    end)
+
     output = capture_io(fn -> Ethos.Release.seed_korean_bbq(user.email) end)
 
     # Parsed back OUT of the report and compared for equality, not containment —

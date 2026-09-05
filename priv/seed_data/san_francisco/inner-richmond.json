@@ -900,6 +900,45 @@
       "history": "No source states a further history, so none is given here.",
       "status": "open",
       "photos": []
+    },
+    {
+      "slug": "brothers-restaurant-inner-richmond",
+      "name": "Brothers Restaurant",
+      "kind": "restaurant",
+      "town": "Inner Richmond",
+      "state": "California",
+      "county": "San Francisco",
+      "address": "4128 Geary Boulevard, San Francisco, CA 94118",
+      "summary": "Brothers Restaurant is at 4128 Geary Boulevard, at 6th Avenue. The grills at the table burn charcoal rather than gas, and each strip of meat takes on its smoke in the short run between the grate and the plate. It serves lunch from 12pm to 3pm and dinner from 5pm to 9pm every day, with dinner running to 9.30pm on Saturday.",
+      "history": "The restaurant's own site gives 1987 as its starting year and bills the room as authentic Korean barbecue.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "wooden-charcoal-korean-village-inner-richmond",
+      "name": "Wooden Charcoal Korean Village Barbecue House",
+      "kind": "restaurant",
+      "town": "Inner Richmond",
+      "state": "California",
+      "county": "San Francisco",
+      "address": "4611 Geary Boulevard, San Francisco, CA 94118",
+      "summary": "Wooden Charcoal Korean Village Barbecue House is at 4611 Geary Boulevard, at 10th Avenue. Charcoal grills at the table do the cooking, and honeycomb tripe and small intestines go on the grate alongside the beef. No source states its opening hours, so none are given here.",
+      "history": "",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "zajang-grill-inner-richmond",
+      "name": "Zajang Grill",
+      "kind": "restaurant",
+      "town": "Inner Richmond",
+      "state": "California",
+      "county": "San Francisco",
+      "address": "852 Clement Street, San Francisco, CA 94118",
+      "summary": "Zajang Grill is at 852 Clement Street, at 10th Avenue. A party gathers around a tabletop grill for a 90-minute all-you-can-eat seating at $42.99 a head, under extraction hoods painted with mountain ranges. No source states its opening hours, so none are given here.",
+      "history": "The address at 852 Clement Street traded as Carbon Grill before it took the name Zajang Grill.",
+      "status": "open",
+      "photos": []
     }
   ],
   "entries": [
@@ -986,6 +1025,24 @@
       "name": "Clement Street Farmers' Market",
       "place_slug": "clement-street-farmers-market-inner-richmond",
       "note": "At 244 Clement Street, where Rize Up Bakery, Volcano Kimchi, Cap'n Mike's Holy Smoke and Joodooboo hold business records."
+    },
+    {
+      "kind": "food",
+      "name": "Brothers Restaurant",
+      "place_slug": "brothers-restaurant-inner-richmond",
+      "note": "At 4128 Geary Boulevard, at 6th Avenue, where the grills at the table burn charcoal rather than gas. Lunch 12pm to 3pm and dinner 5pm to 9pm daily, to 9.30pm on Saturday."
+    },
+    {
+      "kind": "food",
+      "name": "Wooden Charcoal Korean Village Barbecue House",
+      "place_slug": "wooden-charcoal-korean-village-inner-richmond",
+      "note": "At 4611 Geary Boulevard, at 10th Avenue, with charcoal grills at the table cooking honeycomb tripe and small intestines alongside the beef."
+    },
+    {
+      "kind": "food",
+      "name": "Zajang Grill",
+      "place_slug": "zajang-grill-inner-richmond",
+      "note": "At 852 Clement Street, at 10th Avenue: a tabletop grill to each party, on a 90-minute all-you-can-eat seating at $42.99 a head."
     }
   ],
   "links": [

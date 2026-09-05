@@ -327,6 +327,71 @@
       "history": "Four structures at the zoo are on the National Heritage List for England: the Elephant and Rhinoceros Pavilion, Grade II*, NHLE 1323694; the Snowdon Aviary, Grade II*, NHLE 1323695; the west footbridge, Grade II, NHLE 1119765; and the London Zoo War Memorial, Grade II, NHLE 1434655. The zoo sits within The Regent's Park, itself a Grade I registered park and garden, NHLE 1000246. St John's Wood station, on the Jubilee line, serves the north-west of the park and the zoo.",
       "status": "open",
       "photos": []
+    },
+    {
+      "slug": "gogi-little-venice",
+      "name": "Gogi",
+      "kind": "restaurant",
+      "town": "Little Venice",
+      "state": "England",
+      "county": "London",
+      "address": "451 Edgware Road, London W2 1TH",
+      "summary": "Gogi is at 451 Edgware Road, on the Little Venice stretch of the road. Its own About Us section describes marinated meats and fresh seafood prepared on individual grills at the table, in a meal cooked in front of the party rather than sent out from a kitchen. No source states its opening hours, so none are given here.",
+      "history": "",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "little-korea-chinatown-london",
+      "name": "Little Korea",
+      "kind": "restaurant",
+      "town": "Chinatown",
+      "state": "England",
+      "county": "London",
+      "address": "2-3 Lisle Street, London WC2H 7BG",
+      "summary": "Little Korea is at 2-3 Lisle Street in Chinatown. Its own homepage carries a section headed 'K-BBQ On The Table', which states that the chefs grill the marinated meat at the table. Server-cooked barbecue is the format here, so the party is not working the grate itself. No source states its opening hours, so none are given here.",
+      "history": "",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "bab-n-suul-chinatown-london",
+      "name": "Bab N Suul",
+      "kind": "restaurant",
+      "town": "Chinatown",
+      "state": "England",
+      "county": "London",
+      "address": "1 Gerrard Place, London W1D 5PA",
+      "summary": "Bab N Suul is at 1 Gerrard Place in Chinatown. Its own menu offers premium cuts from marinated bulgogi to A5 wagyu ribeye, cooked on the grill at the table. Its booking form makes the guest choose a table type of either BBQ or Regular Table, which separates the grill-equipped tables from the plain ones.",
+      "history": "",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "zanchi-paddington",
+      "name": "Zanchi",
+      "kind": "restaurant",
+      "town": "Paddington",
+      "state": "England",
+      "county": "London",
+      "address": "113-115 Praed Street, London W2 1RL",
+      "summary": "Zanchi is at 113-115 Praed Street in Paddington. Its own site describes the business as a Korean restaurant and barbecue whose dishes and barbecue tables are built around shared meals, and its Korean BBQ list of raw belly pork, beef sirloin and bulgogi is grilled at the table. A separate Korean BBQ side-dish block carries the lettuce, sliced chilli and garlic that go with the wrap.",
+      "history": "",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "myung-ga-soho-london",
+      "name": "Myung Ga",
+      "kind": "restaurant",
+      "town": "Soho",
+      "state": "England",
+      "county": "London",
+      "address": "Ground Floor, 1 Kingly Street, London W1B 5PA",
+      "summary": "Myung Ga occupies the ground floor of 1 Kingly Street in Soho. Its own menu heads the BBQ section 'You can grill meat or seafood on your table', which puts the grilling at the table, and names Kalbi, Bulgogi, Chicken BBQ, Deungsim, prawn and squid beneath it. No source states its opening hours, so none are given here.",
+      "history": "",
+      "status": "open",
+      "photos": []
     }
   ],
   "links": [
@@ -471,6 +536,36 @@
       "name": "ZSL London Zoo",
       "place_slug": "zsl-london-zoo",
       "note": "Inside The Regent's Park off the Outer Circle, holding the Grade II* Snowdon Aviary, NHLE 1323695, and Elephant and Rhinoceros Pavilion, NHLE 1323694."
+    },
+    {
+      "kind": "food",
+      "name": "Gogi",
+      "place_slug": "gogi-little-venice",
+      "note": "451 Edgware Road, Little Venice. Marinated meats and fresh seafood are prepared on individual grills at the table."
+    },
+    {
+      "kind": "food",
+      "name": "Little Korea",
+      "place_slug": "little-korea-chinatown-london",
+      "note": "2-3 Lisle Street, Chinatown. Under a heading 'K-BBQ On The Table', the chefs grill the marinated meat at the table."
+    },
+    {
+      "kind": "food",
+      "name": "Bab N Suul",
+      "place_slug": "bab-n-suul-chinatown-london",
+      "note": "1 Gerrard Place, Chinatown. Cuts from marinated bulgogi to A5 wagyu ribeye, cooked on the grill at the table; the booking form asks BBQ or Regular Table."
+    },
+    {
+      "kind": "food",
+      "name": "Zanchi",
+      "place_slug": "zanchi-paddington",
+      "note": "113-115 Praed Street, Paddington. Barbecue tables, with raw belly pork, beef sirloin and bulgogi grilled at the table and lettuce, chilli and garlic to wrap it."
+    },
+    {
+      "kind": "food",
+      "name": "Myung Ga",
+      "place_slug": "myung-ga-soho-london",
+      "note": "Ground Floor, 1 Kingly Street, Soho. Its menu heads the BBQ section 'You can grill meat or seafood on your table' and names Kalbi, Bulgogi and Deungsim beneath it."
     }
   ]
 }

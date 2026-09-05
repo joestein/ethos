@@ -330,6 +330,19 @@
       "summary": "The Queens Botanical Garden, at 43-50 Main Street.",
       "status": "open",
       "photos": []
+    },
+    {
+      "slug": "jongro-bbq-flushing",
+      "name": "Jongro BBQ",
+      "kind": "restaurant",
+      "town": "Flushing",
+      "state": "New York",
+      "county": "Queens",
+      "address": "155-14 Roosevelt Avenue, Flushing, NY 11354",
+      "summary": "Jongro BBQ is at 155-14 Roosevelt Avenue. Charcoal is the fuel and the meat is grilled at the table, under overhead smoke lamps and with laser thermometers used to read the heat.",
+      "history": "A room under the same name trades at 22 West 32nd Street in Manhattan's Koreatown, and the Roosevelt Avenue room runs the same charcoal service.",
+      "status": "open",
+      "photos": []
     }
   ],
   "entries": [
@@ -452,6 +465,12 @@
       "name": "Flushing High School",
       "place_slug": "flushing-high-school",
       "note": "35-01 Union Street. Built 1912-15 to a design by C.B.J. Snyder, and designated January 8, 1991 as LP-01798."
+    },
+    {
+      "kind": "food",
+      "name": "Jongro BBQ",
+      "place_slug": "jongro-bbq-flushing",
+      "note": "155-14 Roosevelt Avenue. Charcoal Korean barbecue, with the meat grilled at the table under overhead smoke lamps."
     }
   ],
   "links": [

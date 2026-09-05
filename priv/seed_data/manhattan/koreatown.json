@@ -172,6 +172,169 @@
       "summary": "A long-standing hotel directly on Korea Way, with major Midtown landmarks within walking distance; rooms have smart TVs, climate control, and blackout curtains.",
       "status": "open",
       "photos": []
+    },
+    {
+      "slug": "jongro-bbq-koreatown",
+      "name": "Jongro BBQ",
+      "kind": "restaurant",
+      "town": "Koreatown",
+      "state": "New York",
+      "county": "Manhattan",
+      "address": "22 W 32nd St, 2nd Floor, New York, NY 10001",
+      "summary": "Jongro BBQ takes the second floor at 22 West 32nd Street, on Korea Way. Marinated ribeye, skirt steak, short rib and chuck are grilled tabletop and served with banchan, and the staff work the tongs rather than the party.",
+      "history": "",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "jongro-bbq-market-koreatown",
+      "name": "Jongro BBQ Market",
+      "kind": "restaurant",
+      "town": "Koreatown",
+      "state": "New York",
+      "county": "Manhattan",
+      "address": "39 W 32nd St, 1st Floor, New York, NY 10001",
+      "official_url": "https://www.jongrobbqmarket.com/",
+      "summary": "Jongro BBQ Market is on the first floor at 39 West 32nd Street, a separate room with its own door on Korea Way. Guests do the grilling at the table, on an all-you-can-eat price rather than a la carte, and the operator's own strapline reads \"Grill. Feast, Repeat!\"",
+      "history": "Service runs 11:30 a.m. to midnight Sunday through Thursday, and 11:30 a.m. to 1 a.m. on Friday and Saturday.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "miss-korea-bbq-koreatown",
+      "name": "miss KOREA BBQ",
+      "kind": "restaurant",
+      "town": "Koreatown",
+      "state": "New York",
+      "county": "Manhattan",
+      "address": "10 W 32nd St, New York, NY 10001",
+      "official_url": "https://www.misskoreabbq.com/",
+      "summary": "miss KOREA BBQ runs three floors at 10 West 32nd Street. An extraction hood hangs over the grill at every table across all three of them, and the operator describes the first floor as a barbecue dining area built around shared moments over the grill.",
+      "history": "",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "antoya-koreatown",
+      "name": "Antoya",
+      "kind": "restaurant",
+      "town": "Koreatown",
+      "state": "New York",
+      "county": "Manhattan",
+      "address": "37 W 32nd St, New York, NY 10001",
+      "official_url": "https://www.antoyabbq.com/",
+      "summary": "Antoya is at 37 West 32nd Street, on Korea Way. The Infatuation groups it with the New York rooms where the meat is grilled at the table, and its menu is built as barbecue a la carte and barbecue platters, with the cuts photographed raw on boards and on a round Korean grill pan.",
+      "history": "The storefront sign reads \"Modern Korean Barbecue\". Service runs 11 a.m. to 11 p.m. Sunday through Thursday, and 11 a.m. to 1 a.m. on Friday and Saturday.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "nubiani-koreatown",
+      "name": "Nubiani",
+      "kind": "restaurant",
+      "town": "Koreatown",
+      "state": "New York",
+      "county": "Manhattan",
+      "address": "315 5th Ave, 3rd Floor, New York, NY 10016",
+      "official_url": "https://www.nubianinyc.com/",
+      "summary": "Nubiani takes the third floor at 315 Fifth Avenue. The grill sits in the table here — the operator's own line reads \"The grill is only one part of the table\" — and the staff cook the sliced meat over the fire rather than leaving it to the party.",
+      "history": "A second room under the same name is at 243 East 58th Street. Grills are also stationed between the bar seats.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "love-korean-bbq-koreatown",
+      "name": "LOVE Korean BBQ",
+      "kind": "restaurant",
+      "town": "Koreatown",
+      "state": "New York",
+      "county": "Manhattan",
+      "address": "319 5th Ave, New York, NY 10016",
+      "summary": "LOVE Korean BBQ is at 319 Fifth Avenue. Diners put the meat and a spread of vegetables on the grill at the table themselves, and alongside the combinations there is an all-you-can-eat option at $100 per person.",
+      "history": "",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "lets-meat-koreatown",
+      "name": "Let's Meat",
+      "kind": "restaurant",
+      "town": "Koreatown",
+      "state": "New York",
+      "county": "Manhattan",
+      "address": "307 5th Ave, New York, NY 10016",
+      "official_url": "https://www.letsmeatnyc.com/",
+      "summary": "Let's Meat is at 307 Fifth Avenue. The operator states that it serves table Korean barbecue exclusively, on a Cap-Style grill imported from Korea that drains the fat off as the meat cooks at the table.",
+      "history": "The format is all-you-can-eat.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "gopchang-story-koreatown",
+      "name": "Gopchang Story",
+      "kind": "restaurant",
+      "town": "Koreatown",
+      "state": "New York",
+      "county": "Manhattan",
+      "address": "312 5th Ave, 2nd Floor, New York, NY 10001",
+      "summary": "Gopchang Story takes the second floor at 312 Fifth Avenue, where the house specialty is beef intestine. Staff crisp the gopchang on the grill at the table rather than sending it out from the kitchen, and the room stays packed with groups working through platters of meat.",
+      "history": "",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "ahgassi-gopchang-koreatown",
+      "name": "Ahgassi Gopchang",
+      "kind": "restaurant",
+      "town": "Koreatown",
+      "state": "New York",
+      "county": "Manhattan",
+      "address": "1 E 32nd St, New York, NY 10016",
+      "official_url": "https://ahgassigopchangnyc.com/",
+      "summary": "Ahgassi Gopchang is at 1 East 32nd Street. A slotted circular grill grate is recessed flush into the tabletop, with raw sliced beef laid across it and banchan resting around its rim, and the gopchang and scallions cook on a round pan set into the same ring.",
+      "history": "The address was previously held by Kang Ho Dong Baekjeong. A restaurant of the same name trades at 3744 West 6th Street in Los Angeles.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "howoo-koreatown",
+      "name": "Howoo",
+      "kind": "restaurant",
+      "town": "Koreatown",
+      "state": "New York",
+      "county": "Manhattan",
+      "address": "7 E 31st St, New York, NY 10016",
+      "summary": "Howoo is at 7 East 31st Street. A grill is set into the center of the table, several rounds of food arrive before the beef reaches it, and the staff handle the grilling.",
+      "history": "",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "dons-bogam-koreatown",
+      "name": "Dons Bogam BBQ & Wine",
+      "kind": "restaurant",
+      "town": "Koreatown",
+      "state": "New York",
+      "county": "Manhattan",
+      "address": "17 E 32nd St, New York, NY 10016",
+      "official_url": "https://www.donsbogam.com/",
+      "summary": "Dons Bogam BBQ & Wine is at 17 East 32nd Street. The operator's own account names tabletop grills alongside floor-level seating and an open kitchen, and the barbecue carries a minimum of two orders for grilling at the table.",
+      "history": "Service runs 11:30 a.m. to 11 p.m. Sunday through Thursday, and 11:30 a.m. to midnight on Friday and Saturday.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "gaonnuri-koreatown",
+      "name": "Gaonnuri",
+      "kind": "restaurant",
+      "town": "Koreatown",
+      "state": "New York",
+      "county": "Manhattan",
+      "address": "1250 Broadway, 39th Floor, New York, NY 10001",
+      "summary": "Gaonnuri is on the 39th floor at 1250 Broadway, with its entrance on West 32nd Street. Tabletop grilling is the focus of the room, which Time Out describes as the centerpiece of a Korean night on the town.",
+      "history": "",
+      "status": "open",
+      "photos": []
     }
   ],
   "entries": [
@@ -222,6 +385,78 @@
       "name": "Hotel Stanford",
       "place_slug": "hotel-stanford",
       "note": "A hotel directly on Korea Way, within walking distance of Midtown landmarks."
+    },
+    {
+      "kind": "food",
+      "name": "Jongro BBQ",
+      "place_slug": "jongro-bbq-koreatown",
+      "note": "Second floor, 22 West 32nd Street. Ribeye, skirt steak, short rib and chuck are grilled tabletop, with the staff working the tongs."
+    },
+    {
+      "kind": "food",
+      "name": "Jongro BBQ Market",
+      "place_slug": "jongro-bbq-market-koreatown",
+      "note": "First floor, 39 West 32nd Street. Guests do the grilling at the table on an all-you-can-eat price; open to 1 a.m. Friday and Saturday."
+    },
+    {
+      "kind": "food",
+      "name": "miss KOREA BBQ",
+      "place_slug": "miss-korea-bbq-koreatown",
+      "note": "10 West 32nd Street, across three floors. A hood hangs over the grill at every table."
+    },
+    {
+      "kind": "food",
+      "name": "Antoya",
+      "place_slug": "antoya-koreatown",
+      "note": "37 West 32nd Street. The cuts come out raw and the meat is grilled at the table; the kitchen runs to 1 a.m. Friday and Saturday."
+    },
+    {
+      "kind": "food",
+      "name": "Nubiani",
+      "place_slug": "nubiani-koreatown",
+      "note": "Third floor, 315 Fifth Avenue. The operator's line reads \"The grill is only one part of the table\", and staff cook the sliced meat over the fire."
+    },
+    {
+      "kind": "food",
+      "name": "LOVE Korean BBQ",
+      "place_slug": "love-korean-bbq-koreatown",
+      "note": "319 Fifth Avenue. Meat and vegetables go on the grill at the table, with an all-you-can-eat option at $100 per person."
+    },
+    {
+      "kind": "food",
+      "name": "Let's Meat",
+      "place_slug": "lets-meat-koreatown",
+      "note": "307 Fifth Avenue. A Cap-Style grill imported from Korea drains the fat as the meat cooks at the table."
+    },
+    {
+      "kind": "food",
+      "name": "Gopchang Story",
+      "place_slug": "gopchang-story-koreatown",
+      "note": "Second floor, 312 Fifth Avenue. Staff crisp the beef intestine on the grill at the table."
+    },
+    {
+      "kind": "food",
+      "name": "Ahgassi Gopchang",
+      "place_slug": "ahgassi-gopchang-koreatown",
+      "note": "1 East 32nd Street. A slotted circular grate is recessed flush into the tabletop, with banchan set around its rim."
+    },
+    {
+      "kind": "food",
+      "name": "Howoo",
+      "place_slug": "howoo-koreatown",
+      "note": "7 East 31st Street. A grill is set into the center of the table, and several rounds of food arrive before the beef reaches it."
+    },
+    {
+      "kind": "food",
+      "name": "Dons Bogam BBQ & Wine",
+      "place_slug": "dons-bogam-koreatown",
+      "note": "17 East 32nd Street. Tabletop grills sit beside floor-level seating and an open kitchen, with a two-order minimum on the barbecue."
+    },
+    {
+      "kind": "food",
+      "name": "Gaonnuri",
+      "place_slug": "gaonnuri-koreatown",
+      "note": "39th floor, 1250 Broadway, entrance on West 32nd Street. Tabletop grilling is the focus of the room."
     }
   ],
   "links": [
