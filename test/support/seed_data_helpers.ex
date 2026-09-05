@@ -21,6 +21,11 @@ defmodule Ethos.SeedDataHelpers do
     @seed_data_root
     |> Path.join("#{destination}/*.json")
     |> Path.wildcard()
+    # tree.json (destinations/ only) declares the hierarchy as a flat array of
+    # nodes — a different shape from the {path, name, intro, photos}
+    # hub-content files this is otherwise walking. Ethos.Seeds.DestinationTree
+    # owns it; DataDestination.load!/1 would raise on its shape.
+    |> Enum.reject(&(Path.basename(&1) == "tree.json"))
     |> Enum.sort()
   end
 
