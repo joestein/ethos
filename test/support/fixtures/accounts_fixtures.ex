@@ -39,6 +39,12 @@ defmodule Ethos.AccountsFixtures do
   `Postgrex.Error 40P01 deadlock_detected` failures this fixes.
   """
   def admin_fixture(attrs \\ %{}) do
+    if Map.has_key?(attrs, :email) or Map.has_key?(attrs, "email") do
+      raise ArgumentError,
+            "admin_fixture/1 does not accept :email — the admin's email is fixed by " <>
+              "the :admin_email config, not by the caller"
+    end
+
     admin_email = Application.fetch_env!(:ethos, :admin_email)
 
     attrs
