@@ -44,14 +44,14 @@ defmodule Ethos.Seeds.LoandepotParkPlaces do
       and no closure is asserted. The historic district is `n/a` — it is a
       district, not a business.
 
-  The county on every record is `"Miami-Dade County"`. See
-  `Ethos.Seeds.LoandepotParkGuide` for where it comes from, which is not the
-  source the finder cited for it.
+  Every record hangs from the node `united-states/florida/miami`. Miami-Dade
+  County is not modelled; see `Ethos.Seeds.LoandepotParkGuide` for where the
+  research established it, which is not the source the finder cited for it.
   """
 
   alias Ethos.Places
 
-  @miami %{town: "Miami", state: "Florida", county: "Miami-Dade County"}
+  @miami %{destination_path: "united-states/florida/miami"}
 
   def upsert_all! do
     Enum.map(places(), &Places.upsert_place!/1)

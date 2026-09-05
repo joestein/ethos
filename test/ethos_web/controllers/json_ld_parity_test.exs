@@ -87,16 +87,29 @@ defmodule EthosWeb.JsonLdParityTest do
   # Builds a fixture for every page type that emits a breadcrumb and returns the
   # path each is served at alongside the exact trail it must emit.
   defp parity_cases do
+    # Destinations FIRST, before any place or guide row.
+    #
+    # This is a lock-order rule, not a data dependency: the place below does not
+    # need a node. `palace-theater-waterbury` is also a slug
+    # `Ethos.Seeds.ConnecticutPlaces` seeds, and that module's tests now insert
+    # destination rows before their places. Inserting the place here first left
+    # two async transactions taking the `places` slug lock and the `destinations`
+    # path lock in opposite orders, which Postgres resolves by killing one of
+    # them — an intermittent `deadlock_detected` in whichever test lost.
+    #
+    # Every test that writes both tables writes destinations first, for the same
+    # reason `Ethos.Release` seeds the roster before every corpus.
+    #
+    # An orientation page (tier "town-page") plus the Connecticut state and
+    # Windham County hubs it populates.
+    Ethos.SeedDataHelpers.seed_fixture_destinations!()
+
     Places.upsert_place!(@place_attrs)
 
     guide = published_guide_fixture(%{title: "Roman Holiday", destination: "Rome, Italy"})
 
     photo_guide = published_guide_fixture(%{title: "Three Days", destination: "Rome, Italy"})
     {:ok, photo_guide} = Guides.update_guide_photos(photo_guide, @photos)
-
-    # An orientation page (tier "town-page") plus the Connecticut state and
-    # Windham County hubs it populates.
-    Ethos.SeedDataHelpers.seed_fixture_destinations!()
 
     town_page =
       Ethos.Seeds.DataGuide.upsert_from_file!(

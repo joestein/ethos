@@ -10,11 +10,11 @@ defmodule Ethos.Seeds.ConnecticutPlaces do
 
   alias Ethos.Places
 
-  @waterbury %{town: "Waterbury", state: "Connecticut", county: "New Haven County"}
-  @middlebury %{town: "Middlebury", state: "Connecticut", county: "New Haven County"}
-  @danbury %{town: "Danbury", state: "Connecticut", county: "Fairfield County"}
-  @southbury %{town: "Southbury", state: "Connecticut", county: "New Haven County"}
-  @woodbury %{town: "Woodbury", state: "Connecticut", county: "Litchfield County"}
+  @waterbury %{destination_path: "united-states/connecticut/new-haven-county/waterbury"}
+  @middlebury %{destination_path: "united-states/connecticut/new-haven-county/middlebury"}
+  @danbury %{destination_path: "united-states/connecticut/fairfield-county/danbury"}
+  @southbury %{destination_path: "united-states/connecticut/new-haven-county/southbury"}
+  @woodbury %{destination_path: "united-states/connecticut/litchfield-county/woodbury"}
 
   def upsert_all! do
     Enum.map(places(), &Places.upsert_place!/1)

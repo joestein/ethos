@@ -172,6 +172,112 @@ defmodule Ethos.SeedDataHelpers do
     :ok
   end
 
+  @doc """
+  Seeds every roster node the Elixir seed modules name, plus their ancestors.
+
+  `Places.upsert_place!/1` and `GuideRunner.upsert!/2` resolve a
+  `destination_path` against the `destinations` table and raise on a miss, so a
+  test that calls `SomePlaces.upsert_all!/0` needs rows first. The paths come
+  from `Ethos.Seeds.Catalog` rather than being listed here, so a module that
+  moves to a different node is followed automatically instead of failing in
+  every test that seeds it.
+
+  Roughly fifty nodes rather than the whole roster, because the callers are
+  per-module tests that would otherwise seed every row in it. Written
+  shallowest first, roster order within a tier — the order
+  `DestinationTree.upsert_all!/0` writes in — so two async tests take their row
+  locks in one consistent global order and can only wait on each other, never
+  deadlock. `seed_destinations_for!/1` narrows it further, and is what a
+  single-module test should call.
+  """
+  def seed_code_destinations!, do: seed_destination_paths!(code_destination_paths())
+
+  @doc """
+  `seed_code_destinations!/0` narrowed to the nodes some modules name.
+
+  Takes place modules, guide modules or both. Prefer it over the whole-corpus
+  form in a per-module test: three rows instead of fifty is faster, and it keeps
+  the transaction — and so the window in which another async test can collide on
+  a shared ancestor row — as short as the test's actual precondition.
+  """
+  def seed_destinations_for!(modules) when is_list(modules) do
+    paths = for mod <- modules, path <- module_destination_paths(mod), uniq: true, do: path
+
+    assert paths != [],
+           "#{inspect(modules)} name no destination node, so this seeds nothing and every " <>
+             "loader call after it raises"
+
+    seed_destination_paths!(paths)
+  end
+
+  defp module_destination_paths(mod) do
+    # `function_exported?/3` answers false for a module that has not been loaded
+    # yet, and under lazy loading that is most of them: without this the
+    # `cond` below fell through to `[]`, seeded nothing, and the caller's very
+    # next loader call raised — intermittently, depending on what else in the
+    # run happened to have loaded the module first.
+    {:module, ^mod} = Code.ensure_loaded(mod)
+
+    cond do
+      function_exported?(mod, :places, 0) ->
+        for p <- mod.places(), path = p[:destination_path], do: path
+
+      function_exported?(mod, :data, 0) ->
+        case Map.get(mod.data(), :destination_path) do
+          nil -> []
+          path -> [path]
+        end
+
+      true ->
+        []
+    end
+  end
+
+  defp seed_destination_paths!(paths) do
+    wanted =
+      for path <- paths,
+          segments = String.split(path, "/"),
+          n <- 1..length(segments),
+          into: MapSet.new(),
+          do: segments |> Enum.take(n) |> Enum.join("/")
+
+    nodes =
+      Ethos.Seeds.DestinationTree.load!()
+      |> Enum.filter(&MapSet.member?(wanted, &1["path"]))
+      |> Enum.sort_by(&(&1["path"] |> String.split("/") |> length()))
+
+    assert length(nodes) == MapSet.size(wanted),
+           "the roster is missing nodes the code seed modules name: " <>
+             inspect(MapSet.difference(wanted, MapSet.new(nodes, & &1["path"])))
+
+    for node <- nodes do
+      upsert_node!(%{
+        path: node["path"],
+        name: node["name"],
+        kind: node["kind"],
+        intro: node["intro"]
+      })
+    end
+
+    :ok
+  end
+
+  @doc """
+  Every `destination_path` named by an Elixir place or guide module.
+
+  `Ethos.Seeds.RomeGuide` hand-rolls its own upsert and names no node, so it
+  contributes nothing; every other module must, and a module that named none
+  would simply be absent here — which is why
+  `ballpark_seed_data_test.exs` asserts the paths exist rather than trusting
+  this list to be complete.
+  """
+  def code_destination_paths do
+    places = for {p, _owner} <- code_places(), path = p[:destination_path], do: path
+    guides = for {d, _owner} <- code_guides(), path = Map.get(d, :destination_path), do: path
+
+    (places ++ guides) |> Enum.uniq() |> Enum.sort()
+  end
+
   defp upsert_node!(attrs) do
     parent_path = attrs.path |> String.split("/") |> Enum.drop(-1) |> Enum.join("/")
     parent = parent_path != "" && Ethos.Destinations.get_by_path(parent_path)

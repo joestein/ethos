@@ -57,7 +57,7 @@ defmodule Ethos.Seeds.AmericanFamilyFieldPlaces do
 
   alias Ethos.Places
 
-  @milwaukee %{town: "Milwaukee", state: "Wisconsin", county: "Milwaukee County"}
+  @milwaukee %{destination_path: "united-states/wisconsin/milwaukee"}
 
   def upsert_all! do
     Enum.map(places(), &Places.upsert_place!/1)

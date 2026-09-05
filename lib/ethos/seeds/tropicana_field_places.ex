@@ -62,15 +62,16 @@ defmodule Ethos.Seeds.TropicanaFieldPlaces do
       three of them because the only evidence reachable was the business's own
       site. Uncertain is not closed, and no closure is asserted.
 
-  The county on every record is `"Pinellas County"`, from two confirmed
-  verdicts — one whose cited article states the county in the venue's address
-  line rather than leaving it to be inferred from the city, and one in which
-  the county government's own site names itself.
+  Every record hangs from the node `united-states/florida/st-petersburg`.
+  Pinellas County is not modelled; two confirmed verdicts establish it — one
+  whose cited article states the county in the venue's address line rather than
+  leaving it to be inferred from the city, and one in which the county
+  government's own site names itself.
   """
 
   alias Ethos.Places
 
-  @st_pete %{town: "St. Petersburg", state: "Florida", county: "Pinellas County"}
+  @st_pete %{destination_path: "united-states/florida/st-petersburg"}
 
   @no_address "No street address is published: no verdict in this research carries one for it."
 

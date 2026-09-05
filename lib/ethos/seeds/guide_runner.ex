@@ -86,21 +86,25 @@ defmodule Ethos.Seeds.GuideRunner do
   # 8-11 move those readers onto `destination_id` and Task 12 drops the columns
   # and this derivation with them.
   defp destination_attrs(data) do
-    case destination_node(data) do
-      nil ->
-        %{"state" => Map.get(data, :state), "county" => Map.get(data, :county)}
+    node = destination_node(data)
 
-      node ->
-        node
-        |> Ethos.Destinations.legacy_geo()
-        |> Map.take(["state", "county"])
-        |> Map.put("destination_id", node.id)
-    end
+    node
+    |> Ethos.Destinations.legacy_geo()
+    |> Map.take(["state", "county"])
+    |> Map.put("destination_id", node.id)
   end
 
-  # Code-module guides (the ballparks, the Connecticut five) carry a
+  # Code-module guides (the ballparks, the Connecticut six) carry a
   # :destination_path; JSON guides arrive already resolved to an id. Accept
   # either, so both seeding routes share one runner.
+  #
+  # There is deliberately no catch-all clause. One stood here between Tasks 7
+  # and 6 so the code-seed guides could keep their `state`/`county` pair for a
+  # commit, and it was a silent hole: a guide misspelling `destination_pth:`
+  # fell through to `Map.get(data, :state)` and published a nil state instead of
+  # raising. Every guide now names a node, so a guide that names none — or
+  # misspells the key — raises here, which is the only reliable report of that
+  # typo.
   defp destination_node(%{destination_id: id}) when is_integer(id),
     do: Repo.get!(Ethos.Destinations.Destination, id)
 
@@ -108,10 +112,6 @@ defmodule Ethos.Seeds.GuideRunner do
     Ethos.Destinations.get_by_path(path) ||
       raise ArgumentError, "unknown destination node #{path}"
   end
-
-  # The code seeds still name their geography with the legacy pair. Task 6 moves
-  # them onto :destination_path, after which nothing reaches this clause.
-  defp destination_node(_data), do: nil
 
   defp find_or_insert_guide!(user, data) do
     case Repo.get_by(Guide, slug: data.slug) do

@@ -2,13 +2,13 @@ defmodule Ethos.Seeds.WrigleyFieldGuide do
   @moduledoc """
   Seeds the Wrigley Field guide. Idempotent by slug.
 
-  Carries `state: "Illinois"` and `county: "Cook County"`, so it lists on both
-  the Illinois destination page and the Cook County one. The county was
-  miscited by the research finder — the Wrigley Field article does not contain
-  the words "Cook County" — and was re-sourced by the verifier to the Chicago
-  and Lake View articles before being confirmed. It is the field that decides
-  the /destinations/illinois/cook-county hub URL, so it is recorded against the
-  sources that actually state it.
+  Names the destination node `united-states/illinois/chicago`, so it lists on the
+  Illinois destination page and on Chicago's. The ballparks model no county tier,
+  so Cook County is recorded here as a sourced fact rather than as a field — and
+  the sourcing is the point: the county was miscited by the research finder, the
+  Wrigley Field article does not contain the words "Cook County", and the
+  verifier re-sourced it to the Chicago and Lake View articles before confirming
+  it.
 
   Every clause here restates the text of a `confirmed` verdict from the
   2026-08-30 Wrigley Field research artifact as adjudicated by an independent
@@ -81,8 +81,7 @@ defmodule Ethos.Seeds.WrigleyFieldGuide do
       slug: "wrigley-field-guide",
       title: "Wrigley Field: The Ballpark and the Streets Around It",
       destination: "Chicago, Illinois",
-      state: "Illinois",
-      county: "Cook County",
+      destination_path: "united-states/illinois/chicago",
       intro: """
       Wrigley Field stands at 1060 West Addison Street, in the Wrigleyville
       neighborhood of Chicago's Lake View community area, on the North Side.

@@ -2,10 +2,10 @@ defmodule Ethos.Seeds.RateFieldGuide do
   @moduledoc """
   Seeds the Rate Field guide. Idempotent by slug.
 
-  Carries `state: "Illinois"` and `county: "Cook County"`, so it lists on both
-  the Illinois destination page and the Cook County one — the same county hub
-  the Wrigley Field guide lists on, which is correct: both ballparks are in
-  Chicago.
+  Names the destination node `united-states/illinois/chicago` — the same node the
+  Wrigley Field guide names, which is correct: both ballparks are in Chicago. The
+  ballparks model no county tier, so Cook County is recorded here as a sourced
+  fact rather than as a field.
 
   **The county citation, checked.** The artifact's own `could_not_establish`
   names the weakness before anyone else could: no source fetched states the
@@ -55,8 +55,7 @@ defmodule Ethos.Seeds.RateFieldGuide do
       slug: "rate-field-guide",
       title: "Rate Field: The Ballpark and 35th Street Around It",
       destination: "Chicago, Illinois",
-      state: "Illinois",
-      county: "Cook County",
+      destination_path: "united-states/illinois/chicago",
       intro: """
       Rate Field stands at 333 West 35th Street on Chicago's South Side, in the
       Armour Square community area next to Bridgeport. It opened on April 18,

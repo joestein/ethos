@@ -8,8 +8,7 @@ defmodule Ethos.Seeds.WoodburyGuide do
       slug: "woodbury-ct-travel-guide",
       title: "Woodbury, Connecticut: Antiques Capital, the Glebe House, and Main Street",
       destination: "Woodbury, Connecticut",
-      state: "Connecticut",
-      county: "Litchfield County",
+      destination_path: "united-states/connecticut/litchfield-county/woodbury",
       intro: """
       Woodbury is Connecticut's 23rd town, settled in 1673 by families who
       walked up the rivers from Stratford to claim the Pomperaug plantation and

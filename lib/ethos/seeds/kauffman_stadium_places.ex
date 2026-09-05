@@ -51,7 +51,7 @@ defmodule Ethos.Seeds.KauffmanStadiumPlaces do
 
   alias Ethos.Places
 
-  @kansas_city %{town: "Kansas City", state: "Missouri", county: "Jackson County"}
+  @kansas_city %{destination_path: "united-states/missouri/kansas-city"}
 
   def upsert_all! do
     Enum.map(places(), &Places.upsert_place!/1)

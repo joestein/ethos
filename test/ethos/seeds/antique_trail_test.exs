@@ -6,6 +6,11 @@ defmodule Ethos.Seeds.AntiqueTrailTest do
   alias Ethos.Seeds
 
   defp seed_trail!(email) do
+    Ethos.SeedDataHelpers.seed_destinations_for!([
+      Seeds.ConnecticutPlaces,
+      Seeds.AntiqueTrailGuide
+    ])
+
     Seeds.ConnecticutPlaces.upsert_all!()
     Seeds.WoodburyGuide.upsert!(email)
     Seeds.AntiqueTrailGuide.upsert!(email)
@@ -36,6 +41,11 @@ defmodule Ethos.Seeds.AntiqueTrailTest do
   end
 
   test "every trail entry place_slug resolves to a seeded Woodbury shop" do
+    Ethos.SeedDataHelpers.seed_destinations_for!([
+      Seeds.ConnecticutPlaces,
+      Seeds.AntiqueTrailGuide
+    ])
+
     Seeds.ConnecticutPlaces.upsert_all!()
 
     for entry <- Seeds.AntiqueTrailGuide.data().entries do

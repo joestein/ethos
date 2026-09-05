@@ -56,13 +56,14 @@ defmodule Ethos.Seeds.ChaseFieldPlaces do
   flagging as such given how implausible it reads."* It was the Footprint
   Center before 2025.
 
-  The county on every record is `"Maricopa County"`, and the citation for it was
-  corrected during verification. See `Ethos.Seeds.ChaseFieldGuide`.
+  Every record hangs from the node `united-states/arizona/phoenix`. Maricopa
+  County is not modelled, and the citation for it was corrected during
+  verification. See `Ethos.Seeds.ChaseFieldGuide`.
   """
 
   alias Ethos.Places
 
-  @phoenix %{town: "Phoenix", state: "Arizona", county: "Maricopa County"}
+  @phoenix %{destination_path: "united-states/arizona/phoenix"}
 
   def upsert_all! do
     Enum.map(places(), &Places.upsert_place!/1)

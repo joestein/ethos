@@ -15,6 +15,7 @@ defmodule Ethos.Seeds.CtGuidesTest do
 
   test "all five guides seed idempotently with linked entries" do
     user = user_fixture()
+    Ethos.SeedDataHelpers.seed_destinations_for!([Seeds.ConnecticutPlaces])
     Seeds.ConnecticutPlaces.upsert_all!()
 
     for {mod, slug, county} <- @towns do
@@ -39,6 +40,7 @@ defmodule Ethos.Seeds.CtGuidesTest do
   end
 
   test "every entry place_slug resolves to a seeded place" do
+    Ethos.SeedDataHelpers.seed_destinations_for!([Seeds.ConnecticutPlaces])
     Seeds.ConnecticutPlaces.upsert_all!()
 
     for {mod, _slug, _county} <- @towns,

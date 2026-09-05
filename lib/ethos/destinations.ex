@@ -95,6 +95,13 @@ defmodule Ethos.Destinations do
   The tiers map by position from the leaf: the node itself is the town, its
   nearest `county`-or-`borough`-or-`city` ancestor is the county, and its
   nearest `region` ancestor is the state.
+
+  A `region` node has no county and gets none. Every other kind falls back to
+  its own name when no county-ish ancestor exists — that fallback is what gives
+  Vatican City, a root `country` with nothing below it, a county to hang a
+  breadcrumb on. A region is the one kind that is never a leaf jurisdiction, and
+  fabricating `county: "Connecticut"` for the state node would file a
+  state-level guide under a county hub repeating the state's own name.
   """
   def legacy_geo(%Destination{} = node), do: legacy_geo_from_trail(ancestors(node) ++ [node])
 
@@ -113,10 +120,13 @@ defmodule Ethos.Destinations do
 
     %{
       "town" => node.name,
-      "county" => nearest(trail, ~w(county borough city)) || node.name,
+      "county" => nearest(trail, ~w(county borough city)) || own_county(node),
       "state" => nearest(trail, ~w(region)) || nearest(trail, ~w(country)) || node.name
     }
   end
+
+  defp own_county(%{kind: "region"}), do: nil
+  defp own_county(node), do: node.name
 
   defp nearest(trail, kinds) do
     trail

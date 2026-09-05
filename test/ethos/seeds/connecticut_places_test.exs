@@ -9,6 +9,7 @@ defmodule Ethos.Seeds.ConnecticutPlacesTest do
   @expected 66
 
   test "upsert_all! is idempotent and seeds all towns" do
+    Ethos.SeedDataHelpers.seed_destinations_for!([ConnecticutPlaces])
     first = ConnecticutPlaces.upsert_all!()
     second = ConnecticutPlaces.upsert_all!()
     assert length(first) == length(second)
@@ -27,6 +28,7 @@ defmodule Ethos.Seeds.ConnecticutPlacesTest do
   end
 
   test "the antiques dealers seed as Woodbury shops that make no trading claim" do
+    Ethos.SeedDataHelpers.seed_destinations_for!([ConnecticutPlaces])
     ConnecticutPlaces.upsert_all!()
 
     shops = Enum.filter(ConnecticutPlaces.places(), &(&1.kind == "shop"))

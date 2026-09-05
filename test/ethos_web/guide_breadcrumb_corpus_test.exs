@@ -39,16 +39,33 @@ defmodule EthosWeb.GuideBreadcrumbCorpusTest do
 
   defp has_county?(county), do: is_binary(county) and county != ""
 
+  # No guide authors a county any more: both loaders derive the pair from the
+  # destination node's ancestry, through `Destinations.legacy_geo_from_trail/1`.
+  # So this reads the same derivation the loaders read, off the roster — asking
+  # the corpus for its authored `county` key would now match nothing at all and
+  # pass this gate vacuously.
+  defp derived_county(trails, node_path) do
+    trails
+    |> Map.fetch!(node_path)
+    |> Ethos.Destinations.legacy_geo_from_trail()
+    |> Map.fetch!("county")
+  end
+
   defp county_carrying_guide_slugs do
+    # Built once. `destination_trails/0` walks the whole roster, and calling it
+    # per guide would rebuild 719 trails for each of four hundred files.
+    trails = SeedDataHelpers.destination_trails()
+
     json =
       for f <- SeedDataHelpers.all_seed_files(),
           g = Ethos.Seeds.DataGuide.load!(f)["guide"],
-          has_county?(g["county"]),
+          has_county?(derived_county(trails, g["destination_path"])),
           do: {Guide.derive_destination_slug(g["destination"]), f}
 
     code =
       for {d, owner} <- SeedDataHelpers.code_guides(),
-          has_county?(Map.get(d, :county)),
+          path = Map.get(d, :destination_path),
+          has_county?(derived_county(trails, path)),
           do: {Guide.derive_destination_slug(d.destination), owner.seed_file}
 
     json ++ code

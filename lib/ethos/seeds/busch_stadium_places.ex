@@ -11,13 +11,11 @@ defmodule Ethos.Seeds.BuschStadiumPlaces do
   `refuted` verdict's correction supplies. `docs/ballparks/busch-stadium.md`
   quotes each published sentence against the verdict it rests on.
 
-  **The county is `"St. Louis"`.** A confirmed verdict records that St. Louis
-  is an independent city that separated from St. Louis County in 1877 and is
-  not located within any county. The artifact's `county` field holds a
-  sentence rather than a value — "St. Louis (an independent city, not part of
-  any county)" — and the value the verdict settles on is what the field
-  carries, so `/destinations/missouri/st-louis` resolves and the guide and its
-  places share a hub.
+  **Every record hangs from the node `united-states/missouri/st-louis`.** A
+  confirmed verdict records that St. Louis is an independent city that separated
+  from St. Louis County in 1877 and is not located within any county — which is
+  what the tree says by putting the city straight under the region, with nothing
+  between them.
 
   What the verification changed, and what is therefore absent here:
 
@@ -59,7 +57,7 @@ defmodule Ethos.Seeds.BuschStadiumPlaces do
 
   alias Ethos.Places
 
-  @stl %{town: "St. Louis", state: "Missouri", county: "St. Louis"}
+  @stl %{destination_path: "united-states/missouri/st-louis"}
 
   def upsert_all! do
     Enum.map(places(), &Places.upsert_place!/1)

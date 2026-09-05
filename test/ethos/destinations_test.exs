@@ -214,5 +214,23 @@ defmodule Ethos.DestinationsTest do
                "state" => "Vatican City"
              }
     end
+
+    test "a region node gets no county, unlike the country fallback above" do
+      # The Antique Trail guide hangs from the Connecticut region node on
+      # purpose: it takes in dealers across towns, so it lists on the state page
+      # and under no county. The county fallback that gives Vatican City a
+      # county must not fire here, or that guide would be filed under a
+      # /destinations/connecticut/connecticut hub repeating the state's name.
+      Ethos.Seeds.DestinationTree.upsert_all!()
+      connecticut = Destinations.get_by_path("united-states/connecticut")
+
+      assert connecticut.kind == "region"
+
+      assert Destinations.legacy_geo(connecticut) == %{
+               "town" => "Connecticut",
+               "county" => nil,
+               "state" => "Connecticut"
+             }
+    end
   end
 end

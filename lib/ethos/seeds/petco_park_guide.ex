@@ -2,13 +2,14 @@ defmodule Ethos.Seeds.PetcoParkGuide do
   @moduledoc """
   Seeds the Petco Park guide. Idempotent by slug.
 
-  Carries `state: "California"` and `county: "San Diego County"`, so it lists
-  on both the California destination page and the San Diego County one. Two
-  confirmed verdicts establish it: the encyclopedia's Petco Park infobox names
-  the county directly, and its article on San Diego states verbatim that the
-  city is the county seat of San Diego County. San Diego is not a consolidated
-  city-county, so the plain `"<Name> County"` form ships rather than the
-  bare-city rendering wave 1 and wave 2 used for San Francisco and Denver.
+  Names the destination node `united-states/california/san-diego`, so it lists on
+  the California destination page and on San Diego's. The ballparks model no
+  county tier, so San Diego County is recorded here as a sourced fact rather than
+  as a field. Two confirmed verdicts establish it: the encyclopedia's Petco Park
+  infobox names the county directly, and its article on San Diego states verbatim
+  that the city is the county seat of San Diego County. San Diego is not a
+  consolidated city-county, so the two names are genuinely distinct — the city is
+  what the tree carries.
 
   Every clause here restates text a `confirmed` verdict carries, or that the
   verifier's own reason or correction expressly states was confirmed.
@@ -57,8 +58,7 @@ defmodule Ethos.Seeds.PetcoParkGuide do
       slug: "petco-park-guide",
       title: "Petco Park: The Ballpark and the Gaslamp Quarter",
       destination: "San Diego, California",
-      state: "California",
-      county: "San Diego County",
+      destination_path: "united-states/california/san-diego",
       intro: """
       Petco Park stands at 100 Park Boulevard in downtown San Diego, an address
       the encyclopedia also gives as 19 Tony Gwynn Way. The Padres have played

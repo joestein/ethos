@@ -19,24 +19,22 @@ defmodule EthosWeb.AffiliateCorpusTest do
   # `Destinations.legacy_geo_from_trail/1`, so this gate and the loaders cannot
   # disagree about what a file's state is.
   defp row_from_seed_file(path) do
-    node_path = DataGuide.load!(path)["guide"]["destination_path"]
-    trails = Ethos.SeedDataHelpers.destination_trails()
+    row_from_node(DataGuide.load!(path)["guide"]["destination_path"])
+  end
 
-    geo =
-      Ethos.Destinations.legacy_geo_from_trail(Map.fetch!(trails, node_path))
+  # A code guide names a node too, so it derives its pair exactly as a seed file
+  # does. Reading `d.state` here instead would be reading a field no guide
+  # carries any more — and, before the field went, would have kept this gate
+  # green off authored values while the loaders wrote derived ones.
+  defp row_from_module(mod), do: row_from_node(mod.data().destination_path)
+
+  defp row_from_node(node_path) do
+    trails = Ethos.SeedDataHelpers.destination_trails()
+    geo = Ethos.Destinations.legacy_geo_from_trail(Map.fetch!(trails, node_path))
 
     %{
       state_slug: Guide.derive_destination_slug(geo["state"]),
       county: geo["county"]
-    }
-  end
-
-  defp row_from_module(mod) do
-    d = mod.data()
-
-    %{
-      state_slug: Guide.derive_destination_slug(d.state),
-      county: Map.get(d, :county)
     }
   end
 

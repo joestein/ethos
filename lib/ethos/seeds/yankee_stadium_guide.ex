@@ -2,13 +2,12 @@ defmodule Ethos.Seeds.YankeeStadiumGuide do
   @moduledoc """
   Seeds the Yankee Stadium guide. Idempotent by slug.
 
-  Carries `state: "New York"` and `county: "Bronx"`. The county is the
-  verifier's, not the finder's: the artifact's `identity.county` reads "Bronx
-  County" and was **refuted**, with the correction "Bronx", against this
-  corpus's borough-as-county convention — every Brooklyn seed file carries
-  `"county": "Brooklyn"` and every Manhattan one `"Manhattan"`. Publishing the
-  legal name would derive `/destinations/new-york/bronx-county` and put this
-  guide on a hub of its own rather than on the borough's.
+  Names the destination node `united-states/new-york/new-york-city/bronx` — the
+  borough node the Bronx corpus hangs its neighbourhoods from, not a node of this
+  guide's own. The artifact's `identity.county` reads "Bronx County" and was
+  **refuted**, with the correction "Bronx", against this corpus's borough naming;
+  a `bronx-county` node would have split this guide off from the borough the rest
+  of the corpus shares.
 
   Every clause here restates the text of a `confirmed` verdict from the
   2026-08-30 New York Yankees research artifact, or the text a `refuted`
@@ -55,8 +54,7 @@ defmodule Ethos.Seeds.YankeeStadiumGuide do
       slug: "yankee-stadium-guide",
       title: "Yankee Stadium: The Ballpark and the Streets Around It",
       destination: "Bronx, New York",
-      state: "New York",
-      county: "Bronx",
+      destination_path: "united-states/new-york/new-york-city/bronx",
       intro: """
       Yankee Stadium stands at 1 East 161st Street in the Bronx. It opened in
       2009, cost about $2.3 billion including $1.2 billion in public

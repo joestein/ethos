@@ -2,9 +2,10 @@ defmodule Ethos.Seeds.TMobileParkGuide do
   @moduledoc """
   Seeds the T-Mobile Park guide. Idempotent by slug.
 
-  Carries `state: "Washington"` and `county: "King County"`, so it lists on
-  both the Washington destination page and the King County one. Three confirmed
-  verdicts establish the county on three independent sources — the
+  Names the destination node `united-states/washington/seattle`, so it lists on
+  the Washington destination page and on Seattle's. The ballparks model no county
+  tier, so King County is recorded here as a sourced fact rather than as a field.
+  Three confirmed verdicts establish it on three independent sources — the
   encyclopedia's T-Mobile Park article, an independent ballpark directory, and
   OpenStreetMap's Nominatim geocoder, which returns the ballpark's address with
   King County in it. None of the three infers the county from the city name.
@@ -53,8 +54,7 @@ defmodule Ethos.Seeds.TMobileParkGuide do
       slug: "t-mobile-park-guide",
       title: "T-Mobile Park: The Ballpark, SoDo and Pioneer Square",
       destination: "Seattle, Washington",
-      state: "Washington",
-      county: "King County",
+      destination_path: "united-states/washington/seattle",
       intro: """
       T-Mobile Park stands at 1250 First Avenue South in Seattle's SoDo
       neighborhood, and the Mariners have played there since July 15, 1999,

@@ -51,7 +51,7 @@ defmodule Ethos.Seeds.GreatAmericanBallParkPlaces do
 
   alias Ethos.Places
 
-  @cincinnati %{town: "Cincinnati", state: "Ohio", county: "Hamilton County"}
+  @cincinnati %{destination_path: "united-states/ohio/cincinnati"}
 
   def upsert_all! do
     Enum.map(places(), &Places.upsert_place!/1)

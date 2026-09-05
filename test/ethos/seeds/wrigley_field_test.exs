@@ -15,6 +15,7 @@ defmodule Ethos.Seeds.WrigleyFieldTest do
 
   test "the guide seeds idempotently with every entry linked to a place" do
     user = user_fixture()
+    Ethos.SeedDataHelpers.seed_destinations_for!([WrigleyFieldPlaces])
     WrigleyFieldPlaces.upsert_all!()
     Seeds.WrigleyFieldGuide.upsert!(user.email)
     guide = Seeds.WrigleyFieldGuide.upsert!(user.email)
@@ -23,13 +24,17 @@ defmodule Ethos.Seeds.WrigleyFieldTest do
     assert guide.status == "published"
     assert guide.destination == "Chicago, Illinois"
 
-    # The county is the field that decides the /destinations/illinois/cook-county
-    # hub URL. The research finder cited it to an article that does not contain
-    # the words "Cook County"; the verifier re-sourced it before confirming.
+    # The guide hangs from the Chicago node, and its state/county pair is
+    # derived from that node's ancestry rather than authored. The ballparks
+    # model no county tier, so `county` is the city's own name — which is what
+    # `Destinations.legacy_geo/1` returns for a `city` node with no county
+    # above it, the same shape San Francisco and Toronto have.
+    chicago = Ethos.Destinations.get_by_path("united-states/illinois/chicago")
+    assert guide.destination_id == chicago.id
     assert guide.state == "Illinois"
     assert guide.state_slug == "illinois"
-    assert guide.county == "Cook County"
-    assert guide.county_slug == "cook-county"
+    assert guide.county == "Chicago"
+    assert guide.county_slug == "chicago"
 
     entries = Guides.list_entries(guide)
     assert length(entries) == length(WrigleyFieldPlaces.places())
@@ -40,26 +45,31 @@ defmodule Ethos.Seeds.WrigleyFieldTest do
            |> Enum.count(&(&1.slug == "wrigley-field-guide")) == 1
   end
 
-  test "every entry place_slug resolves to a seeded Cook County place" do
+  test "every entry place_slug resolves to a seeded Chicago place" do
+    Ethos.SeedDataHelpers.seed_destinations_for!([WrigleyFieldPlaces])
     WrigleyFieldPlaces.upsert_all!()
+
+    chicago = Ethos.Destinations.get_by_path("united-states/illinois/chicago")
 
     for entry <- Seeds.WrigleyFieldGuide.data().entries do
       place = Places.get_place_by_slug(entry.place_slug)
       assert place, "missing place #{entry.place_slug}"
+      assert place.destination_id == chicago.id
       assert place.town == "Chicago"
       assert place.state == "Illinois"
-      assert place.county == "Cook County"
+      assert place.county == "Chicago"
     end
   end
 
   test "the ballpark itself is a stadium, so its page emits StadiumOrArena" do
+    Ethos.SeedDataHelpers.seed_destinations_for!([WrigleyFieldPlaces])
     WrigleyFieldPlaces.upsert_all!()
     wrigley = Places.get_place_by_slug!("wrigley-field")
 
     assert wrigley.kind == "stadium"
     assert EthosWeb.PlaceHTML.schema_type(wrigley.kind) == "StadiumOrArena"
     assert wrigley.state_slug == "illinois"
-    assert wrigley.county_slug == "cook-county"
+    assert wrigley.county_slug == "chicago"
   end
 
   # Strange Cargo was a candidate on the assumption it sits at 3448 N Clark St.

@@ -40,17 +40,16 @@ defmodule Ethos.Seeds.CitizensBankParkPlaces do
       Pete's" tenant listed at 1100 Pattison Avenue. Uncertain is not closed,
       and no closure is asserted.
 
-  The county on every record is `"Philadelphia"`. The artifact's `county` field
-  holds an explanatory sentence rather than a value; the confirmed verdict
-  establishes that Philadelphia is coextensive with Philadelphia County under a
-  consolidated city-county government, and its correction directs the corpus's
-  independent-city convention — the one already used for St. Louis and
-  Baltimore City.
+  Every record hangs from the node `united-states/pennsylvania/philadelphia`. The
+  confirmed verdict establishes that Philadelphia is coextensive with
+  Philadelphia County under a consolidated city-county government, so there is no
+  distinct county to model above the city — the same shape St. Louis and
+  Baltimore take.
   """
 
   alias Ethos.Places
 
-  @philadelphia %{town: "Philadelphia", state: "Pennsylvania", county: "Philadelphia"}
+  @philadelphia %{destination_path: "united-states/pennsylvania/philadelphia"}
 
   def upsert_all! do
     Enum.map(places(), &Places.upsert_place!/1)

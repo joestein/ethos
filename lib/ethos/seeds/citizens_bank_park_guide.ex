@@ -2,14 +2,12 @@ defmodule Ethos.Seeds.CitizensBankParkGuide do
   @moduledoc """
   Seeds the Citizens Bank Park guide. Idempotent by slug.
 
-  Carries `state: "Pennsylvania"` and `county: "Philadelphia"`, so it lists on
-  both the Pennsylvania destination page and the Philadelphia county one. The
-  county comes from the verdict rather than from the artifact's `county` field,
-  which holds an explanatory sentence instead of a value: the confirmed verdict
-  establishes that Philadelphia is coextensive with Philadelphia County and is
-  the seat of its own county under a consolidated city-county government, and
-  its correction directs the independent-city convention this corpus already
-  uses for St. Louis and Baltimore City.
+  Names the destination node `united-states/pennsylvania/philadelphia`, so it
+  lists on the Pennsylvania destination page and on Philadelphia's. The confirmed
+  verdict establishes that Philadelphia is coextensive with Philadelphia County
+  and is the seat of its own county under a consolidated city-county government;
+  with no county tier modelled for the ballparks, that is prose here rather than
+  a second node repeating the city's name.
 
   Every clause here restates the text of a `confirmed` verdict from the
   2026-08-30 Philadelphia Phillies research artifact, or the text a `refuted`
@@ -45,8 +43,7 @@ defmodule Ethos.Seeds.CitizensBankParkGuide do
       slug: "citizens-bank-park-guide",
       title: "Citizens Bank Park: The Ballpark and the Sports Complex Around It",
       destination: "Philadelphia, Pennsylvania",
-      state: "Pennsylvania",
-      county: "Philadelphia",
+      destination_path: "united-states/pennsylvania/philadelphia",
       intro: """
       Citizens Bank Park stands at One Citizens Bank Way in South Philadelphia,
       in the South Philadelphia Sports Complex. It opened on April 3, 2004, and

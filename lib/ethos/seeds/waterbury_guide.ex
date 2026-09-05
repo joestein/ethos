@@ -8,8 +8,7 @@ defmodule Ethos.Seeds.WaterburyGuide do
       slug: "waterbury-ct-travel-guide",
       title: "Waterbury, Connecticut: A Brass City Travel Guide",
       destination: "Waterbury, Connecticut",
-      state: "Connecticut",
-      county: "New Haven County",
+      destination_path: "united-states/connecticut/new-haven-county/waterbury",
       intro: """
       Waterbury earned its nickname the honest way: by 1840, America's entire
       brass industry was concentrated in the Naugatuck Valley around this city,

@@ -2,9 +2,10 @@ defmodule Ethos.Seeds.KauffmanStadiumGuide do
   @moduledoc """
   Seeds the Kauffman Stadium guide. Idempotent by slug.
 
-  Carries `state: "Missouri"` and `county: "Jackson County"`, so it lists on
-  both the Missouri destination page and the Jackson County one. The county
-  comes from the verdict, and two confirmed verdicts carry it: *"Kauffman
+  Names the destination node `united-states/missouri/kansas-city`, so it lists on
+  the Missouri destination page and on Kansas City's. The ballparks model no
+  county tier, so Jackson County is recorded here as a sourced fact rather than
+  as a field, and two confirmed verdicts carry it: *"Kauffman
   Stadium is part of the Truman Sports Complex, which is located in Jackson
   County, Missouri"*, cited to an independent ballpark directory, and *"The
   Truman Sports Complex … is 'owned by the government of Jackson County' and
@@ -12,10 +13,11 @@ defmodule Ethos.Seeds.KauffmanStadiumGuide do
   Missouri agency'"*, cited to the Truman Sports Complex article. Both cited
   sources carry the county, which is the check the wave-2 dispatch requires.
 
-  Note that this is the second Missouri ballpark in the set and the counties
-  differ by design: Busch Stadium's county is `"St. Louis"`, an independent city
-  outside its same-named county, while Jackson County is an ordinary county and
-  is named as one.
+  Note that this is the second Missouri ballpark in the set and the two
+  jurisdictions differ: St. Louis is an independent city outside its same-named
+  county, while Jackson County is an ordinary county administering Kansas City's
+  address. Neither distinction reaches the tree, which stops at the city for
+  both.
 
   Every clause here restates the text of a `confirmed` verdict from the
   2026-08-30 Kansas City Royals research artifact, or the text a `refuted`
@@ -41,8 +43,7 @@ defmodule Ethos.Seeds.KauffmanStadiumGuide do
       slug: "kauffman-stadium-guide",
       title: "Kauffman Stadium: The Ballpark and the Truman Sports Complex",
       destination: "Kansas City, Missouri",
-      state: "Missouri",
-      county: "Jackson County",
+      destination_path: "united-states/missouri/kansas-city",
       intro: """
       Kauffman Stadium stands at 1 Royal Way in Kansas City, Missouri, in
       Jackson County, as part of the Truman Sports Complex. It opened as Royals

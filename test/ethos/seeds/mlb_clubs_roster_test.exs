@@ -57,9 +57,24 @@ defmodule Ethos.Seeds.MlbClubsRosterTest do
   # have to be reconciled instead of written.
   #
   # Matched on the venue place record rather than on the guide, because the
-  # roster's four fields are place fields: the venue is a place, and its town,
-  # state and county are the ones the destination hubs group by.
-  test "a resolved roster row agrees with the place the corpus actually seeds" do
+  # roster's four fields describe the venue: it is a place, and the destination
+  # hubs group by what its node derives.
+  #
+  # The corpus no longer stores a town/state/county triple — a place names a
+  # destination node and the loaders derive the triple from that node's
+  # ancestry — so the three checks below read the node instead:
+  #
+  #   * `state` against the node's `region` ancestor, by name;
+  #   * `city` against the node's own path segment, which is what the roster's
+  #     city slugifies to. `Bronx` in the roster and `The Bronx` in the tree are
+  #     the same borough spelled two ways, and the segment `bronx` is what both
+  #     agree on;
+  #   * `county` against the source of the two modules that publish the venue.
+  #     The ballparks model no county tier, so there is no field left to compare
+  #     a county against — but the county is still a verified research fact, and
+  #     a roster row claiming one the corpus never mentions is the same
+  #     mis-dispatch this test was written to catch. Nothing else would say so.
+  test "a resolved roster row agrees with the node the corpus actually seeds" do
     resolved = Enum.filter(@roster, & &1["verified"])
 
     # Non-vacuous: at zero resolved rows every assertion below is skipped and
@@ -80,15 +95,18 @@ defmodule Ethos.Seeds.MlbClubsRosterTest do
     ballpark_places =
       for {place, owner} <- Ethos.Seeds.Catalog.places_owned(),
           owner.region == "ballparks",
-          do: place
+          do: {place, owner}
 
-    names = Enum.map(ballpark_places, & &1.name)
+    names = Enum.map(ballpark_places, fn {p, _o} -> p.name end)
 
     assert length(names) == length(Enum.uniq(names)),
            "two ballpark places share a name, so the map below would silently drop one: " <>
              inspect(names -- Enum.uniq(names))
 
-    corpus = Map.new(ballpark_places, &{&1.name, {&1.town, &1.state, &1.county}})
+    corpus =
+      Map.new(ballpark_places, fn {p, o} -> {p.name, {p[:destination_path], o.seed_file}} end)
+
+    trails = Ethos.SeedDataHelpers.destination_trails()
 
     for entry <- resolved do
       slug = entry["slug"]
@@ -96,11 +114,37 @@ defmodule Ethos.Seeds.MlbClubsRosterTest do
       assert Map.has_key?(corpus, entry["venue"]),
              "#{slug} names venue #{inspect(entry["venue"])}, which no seeded place matches"
 
-      assert corpus[entry["venue"]] == {entry["city"], entry["state"], entry["county"]},
-             "#{slug} disagrees with the corpus: roster has " <>
-               inspect({entry["city"], entry["state"], entry["county"]}) <>
-               ", the #{inspect(entry["venue"])} place record has " <>
-               inspect(corpus[entry["venue"]])
+      {path, places_file} = corpus[entry["venue"]]
+      geo = Ethos.Destinations.legacy_geo_from_trail(Map.fetch!(trails, path))
+
+      assert geo["state"] == entry["state"],
+             "#{slug} disagrees with the corpus: roster has state " <>
+               inspect(entry["state"]) <> ", node #{path} derives " <> inspect(geo["state"])
+
+      city_segment = path |> String.split("/") |> List.last()
+
+      assert city_segment == Ethos.Guides.Guide.derive_destination_slug(entry["city"]),
+             "#{slug} disagrees with the corpus: roster has city " <>
+               inspect(entry["city"]) <>
+               ", the #{inspect(entry["venue"])} place hangs from " <>
+               path
+
+      # Both modules, because the county is documented in whichever of the pair
+      # the research put it in: ten venues name it only in the guide's
+      # moduledoc, the rest in the places module.
+      guide_file = String.replace_suffix(places_file, "_places.ex", "_guide.ex")
+
+      assert File.exists?(guide_file),
+             "#{places_file} has no paired guide module at #{guide_file}, so this check " <>
+               "would silently read half the corpus"
+
+      source = File.read!(places_file) <> File.read!(guide_file)
+
+      assert String.contains?(source, entry["county"]),
+             "#{slug}'s roster county #{inspect(entry["county"])} appears nowhere in " <>
+               "#{Path.basename(places_file)} or #{Path.basename(guide_file)} — the corpus " <>
+               "no longer models a county tier, so those two modules are the only record " <>
+               "the roster can be checked against"
     end
   end
 

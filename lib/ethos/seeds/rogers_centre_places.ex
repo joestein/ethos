@@ -11,12 +11,13 @@ defmodule Ethos.Seeds.RogersCentrePlaces do
   verdict's correction supplies. `docs/ballparks/rogers-centre.md` quotes each
   published sentence against the verdict it rests on.
 
-  **This is the set's one non-US site.** `state` is `"Ontario"`, a Canadian
-  province, and `county` is `"Toronto"` — a confirmed verdict records that
-  Toronto is a single-tier municipality, not part of any county, since the
-  1998 amalgamation. The city's own name goes in the county field so the guide
-  and its ten places share a destination hub, the same treatment St. Louis and
-  Baltimore City get in this wave.
+  **This is the set's one non-US site.** Every record hangs from
+  `canada/ontario/toronto` — the only ballpark whose country node is not
+  `united-states`. Ontario is a Canadian province, carried as a `region` because
+  that is the tier the tree uses for every first-level subdivision, and a
+  confirmed verdict records that Toronto is a single-tier municipality, not part
+  of any county, since the 1998 amalgamation — which is why the city sits
+  directly under the province.
 
   What the verification changed, and what is therefore absent here:
 
@@ -54,7 +55,7 @@ defmodule Ethos.Seeds.RogersCentrePlaces do
 
   alias Ethos.Places
 
-  @toronto %{town: "Toronto", state: "Ontario", county: "Toronto"}
+  @toronto %{destination_path: "canada/ontario/toronto"}
 
   def upsert_all! do
     Enum.map(places(), &Places.upsert_place!/1)

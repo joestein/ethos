@@ -2,8 +2,10 @@ defmodule Ethos.Seeds.AmericanFamilyFieldGuide do
   @moduledoc """
   Seeds the American Family Field guide. Idempotent by slug.
 
-  Carries `state: "Wisconsin"` and `county: "Milwaukee County"`, so it lists on
-  both the Wisconsin destination page and the Milwaukee County one. The county
+  Names the destination node `united-states/wisconsin/milwaukee`, so it lists on
+  the Wisconsin destination page and on Milwaukee's. The ballparks model no
+  county tier, so Milwaukee County is recorded here as a sourced fact and not as
+  a field. It
   comes from the verdict, and two confirmed verdicts carry it: the identity
   verdict placing the ballpark *"at 1 Brewers Way, Milwaukee, Wisconsin, in
   Milwaukee County"*, and *"Milwaukee is the county seat of Milwaukee County,
@@ -47,8 +49,7 @@ defmodule Ethos.Seeds.AmericanFamilyFieldGuide do
       slug: "american-family-field-guide",
       title: "American Family Field: The Ballpark and the Menomonee Valley",
       destination: "Milwaukee, Wisconsin",
-      state: "Wisconsin",
-      county: "Milwaukee County",
+      destination_path: "united-states/wisconsin/milwaukee",
       intro: """
       American Family Field stands at 1 Brewers Way in Milwaukee, in Milwaukee
       County, southwest of the intersection of Interstate 94 and Brewers

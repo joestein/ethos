@@ -2,12 +2,12 @@ defmodule Ethos.Seeds.CitiFieldGuide do
   @moduledoc """
   Seeds the Citi Field guide. Idempotent by slug.
 
-  Carries `state: "New York"` and `county: "Queens"` — the borough-as-county
-  form this corpus uses for New York City, the same convention that puts the
-  Yankee Stadium guide under "Bronx" rather than "Bronx County". A confirmed
-  verdict records that Queens is coextensive with Queens County; that fact is
-  published in the prose, where it is a fact, rather than in the field, where
-  it would derive a hub of its own.
+  Names the destination node
+  `united-states/new-york/new-york-city/queens/flushing` — the Flushing
+  neighbourhood of Queens, under New York City, the same tree the Manhattan,
+  Brooklyn, Queens and Bronx corpora hang from. A confirmed verdict records that
+  Queens is coextensive with Queens County; that fact is published in the prose,
+  where it is a fact, rather than modelled as a tier of its own.
 
   `destination: "Flushing, New York"`. The ballpark's own address is a
   Flushing one, and three of this guide's places carry Corona addresses; the
@@ -46,8 +46,7 @@ defmodule Ethos.Seeds.CitiFieldGuide do
       slug: "citi-field-guide",
       title: "Citi Field: The Ballpark and Flushing Meadows–Corona Park",
       destination: "Flushing, New York",
-      state: "New York",
-      county: "Queens",
+      destination_path: "united-states/new-york/new-york-city/queens/flushing",
       intro: """
       Citi Field stands at 41 Seaver Way in Flushing, inside Flushing
       Meadows–Corona Park in Queens. It opened in 2009 with a seating capacity
