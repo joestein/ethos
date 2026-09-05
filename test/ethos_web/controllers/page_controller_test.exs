@@ -184,7 +184,12 @@ defmodule EthosWeb.PageControllerTest do
       for hub <- hubs do
         assert html =~ hub.state
         assert html =~ ~s(href="/destinations/#{hub.slug}")
-        assert html =~ Integer.to_string(hub.count)
+
+        # The count alone is ambient on the page — Tailwind classes, the
+        # AdSense id, the port all contain small integers, so matching a bare
+        # "2" passes even when the count is not rendered at all. The phrase
+        # is what the reader sees and what the noun map is for.
+        assert html =~ "#{hub.count} #{EthosWeb.PageHTML.hub_noun(hub.slug)}"
       end
     end
 
