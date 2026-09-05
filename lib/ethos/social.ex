@@ -18,6 +18,7 @@ defmodule Ethos.Social do
   alias Ethos.Places.Place
   alias Ethos.Repo
   alias Ethos.Social.Reaction
+  alias Ethos.Social.Review
   alias Ethos.Social.Subject
 
   @reaction_unique_constraint "reactions_user_id_subject_type_subject_id_index"
@@ -232,5 +233,103 @@ defmodule Ethos.Social do
       join: p in Ethos.Places.Place,
       on: p.id == r.subject_id,
       where: r.user_id == ^user.id and r.subject_type == "place"
+  end
+
+  ## Reviews
+  #
+  # A review is a rating out of ten plus the comment that justifies it. The
+  # body is required, so every review carries text and every review is
+  # moderated — which is exactly why reactions are instant and these are not.
+
+  @doc """
+  Records a pending review. Never publishes: an admin has to approve it.
+  """
+  def create_review(%User{} = user, subject, attrs) do
+    {type, id} = Subject.ref(subject)
+
+    %Review{}
+    |> Review.changeset(
+      Map.merge(normalize_review_attrs(attrs), %{
+        user_id: user.id,
+        subject_type: type,
+        subject_id: id,
+        status: "pending"
+      })
+    )
+    |> Repo.insert()
+  end
+
+  @doc """
+  Edits a review, returning it to `pending`.
+
+  The reset is the point: without it, posting something innocuous, waiting
+  for approval, then editing it into something else would publish
+  unmoderated text.
+  """
+  def update_review(%Review{} = review, attrs) do
+    review
+    |> Review.changeset(Map.put(normalize_review_attrs(attrs), :status, "pending"))
+    |> Repo.update()
+  end
+
+  @doc "This user's own review of a subject, at any status, or nil."
+  def user_review(nil, _subject), do: nil
+
+  def user_review(%User{} = user, subject) do
+    {type, id} = Subject.ref(subject)
+
+    Repo.get_by(Review, user_id: user.id, subject_type: type, subject_id: id)
+  end
+
+  @doc """
+  The publicly visible reviews for a subject, newest first, author preloaded.
+
+  Excludes anything not approved and anyone banned. The ban filter lives in
+  the join so a ban takes effect on every page immediately, with no backfill.
+  """
+  def approved_reviews(subject) do
+    subject
+    |> public_reviews_query()
+    |> order_by([r], desc: r.inserted_at, desc: r.id)
+    |> preload(:user)
+    |> Repo.all()
+  end
+
+  @doc """
+  Average rating out of ten and how many reviews it is drawn from.
+
+  `average` is `nil` rather than `0.0` when there is nothing to average —
+  "no rating yet" and "rated zero" must not render the same, and the scale
+  starts at 1 anyway.
+  """
+  def rating_summary(subject) do
+    query = public_reviews_query(subject)
+
+    case Repo.one(from r in query, select: {avg(r.rating), count(r.id)}) do
+      {nil, _} -> %{average: nil, count: 0}
+      {_avg, 0} -> %{average: nil, count: 0}
+      {avg, count} -> %{average: avg |> Decimal.to_float() |> Float.round(1), count: count}
+    end
+  end
+
+  defp public_reviews_query(subject) do
+    {type, id} = Subject.ref(subject)
+
+    from r in Review,
+      join: u in User,
+      on: u.id == r.user_id,
+      where:
+        r.subject_type == ^type and r.subject_id == ^id and
+          r.status == "approved" and is_nil(u.banned_at)
+  end
+
+  # The form posts strings; the tests and the console pass atoms or strings
+  # interchangeably. Normalising here keeps `Review.changeset/2` from having to
+  # care which it got.
+  defp normalize_review_attrs(attrs) do
+    Map.new(attrs, fn
+      {k, v} when is_binary(k) -> {String.to_existing_atom(k), v}
+      {k, v} -> {k, v}
+    end)
   end
 end
