@@ -12,7 +12,7 @@ defmodule Ethos.Badges do
   alias Ethos.Badges.UserBadge
   alias Ethos.Places
   alias Ethos.Places.Place
-  alias Ethos.Visits
+  alias Ethos.Social
 
   @food_kinds ~w(restaurant cafe brewery)
   @history_kinds ~w(museum historic-site theater)
@@ -115,19 +115,19 @@ defmodule Ethos.Badges do
     Repo.all(from b in UserBadge, where: b.user_id == ^user.id, order_by: [asc: b.awarded_at])
   end
 
-  defp rule_met?({:total, n}, user, _place), do: Visits.count_for_user(user) >= n
+  defp rule_met?({:total, n}, user, _place), do: Social.reacted_place_count(user) >= n
 
   defp rule_met?({:town, town_slug, n}, user, _place),
-    do: Visits.count_for_user_by_town(user, town_slug) >= n
+    do: Social.reacted_place_count_by_town(user, town_slug) >= n
 
   defp rule_met?({:kinds, kinds, n}, user, _place),
-    do: Visits.count_for_user_by_kinds(user, kinds) >= n
+    do: Social.reacted_place_count_by_kinds(user, kinds) >= n
 
   defp rule_met?({:county_complete, state_slug, county_slug}, user, place) do
     # Only worth evaluating for the county just visited.
     place.state_slug == state_slug and place.county_slug == county_slug and
       Places.count_open_places_in_county(state_slug, county_slug) > 0 and
-      Visits.count_for_user_in_county(user, state_slug, county_slug) >=
+      Social.reacted_place_count_in_county(user, state_slug, county_slug) >=
         Places.count_open_places_in_county(state_slug, county_slug)
   end
 

@@ -334,6 +334,15 @@ defmodule Ethos.SocialTest do
       Social.react(user, open.(%{county: "New Haven County"}), "up")
       Social.react(user, open.(%{county: "Fairfield County"}), "up")
 
+      # A place in a different state that happens to share the county slug
+      # "new-haven-county". Without the state_slug half of the where clause,
+      # this would inflate the Connecticut count to 2.
+      Social.react(
+        user,
+        open.(%{state: "Vermont", county: "New Haven County"}),
+        "up"
+      )
+
       # "New Haven County" derives to "new-haven-county" — the -county suffix is
       # part of the slug, as the existing badge key county-complete-new-haven-county
       # already shows.

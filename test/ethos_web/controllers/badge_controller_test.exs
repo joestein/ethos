@@ -1,7 +1,7 @@
 defmodule EthosWeb.BadgeControllerTest do
   use EthosWeb.ConnCase, async: true
 
-  alias Ethos.{Badges, Places, Visits}
+  alias Ethos.{Badges, Places, Social}
 
   setup :register_and_log_in_user
 
@@ -17,8 +17,7 @@ defmodule EthosWeb.BadgeControllerTest do
         summary: "x"
       })
 
-    {:ok, :visited} = Visits.toggle_visit(user, place)
-    Badges.check_and_award(user, place)
+    {:ok, :added} = Social.react(user, place, "up")
 
     html = conn |> get(~p"/badges") |> html_response(200)
     assert html =~ "First Steps"

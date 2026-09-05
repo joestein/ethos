@@ -15,6 +15,7 @@ defmodule Ethos.Social do
   import Ecto.Query, warn: false
 
   alias Ethos.Accounts.User
+  alias Ethos.Places.Place
   alias Ethos.Repo
   alias Ethos.Social.Reaction
   alias Ethos.Social.Subject
@@ -34,6 +35,27 @@ defmodule Ethos.Social do
   click on thumbs-up takes it back rather than doing nothing.
   """
   def react(%User{} = user, subject, value) do
+    case do_react(user, subject, value) do
+      {:ok, outcome} ->
+        maybe_award_badges(user, subject)
+        {:ok, outcome}
+
+      {:error, changeset} ->
+        {:error, changeset}
+    end
+  end
+
+  # Badges are awarded for reacting to a place at all — see the badge count
+  # functions below for why a thumbs-down counts. Never awarded for guides or
+  # collections, which have no badge rules.
+  #
+  # `check_and_award/2` has its own rescue clause, so a badge failure cannot
+  # break the reaction. That property is load-bearing: reacting must never
+  # fail because badge evaluation did.
+  defp maybe_award_badges(user, %Place{} = place), do: Ethos.Badges.check_and_award(user, place)
+  defp maybe_award_badges(_user, _subject), do: :ok
+
+  defp do_react(%User{} = user, subject, value) do
     {type, id} = Subject.ref(subject)
     do_react(user, type, id, value, _retry? = true)
   end

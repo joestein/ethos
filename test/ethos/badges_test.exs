@@ -2,7 +2,7 @@ defmodule Ethos.BadgesTest do
   use Ethos.DataCase, async: true
 
   import Ethos.AccountsFixtures
-  alias Ethos.{Badges, Places, Visits}
+  alias Ethos.{Badges, Places, Social}
 
   defp place!(slug, overrides \\ %{}) do
     Places.upsert_place!(
@@ -21,9 +21,18 @@ defmodule Ethos.BadgesTest do
     )
   end
 
+  # Reacting awards badges as a side effect, so this reports the difference
+  # rather than calling check_and_award/2 a second time — a second call always
+  # returns [] because the badges already landed. Shaped as %{key: ...} maps so
+  # every existing assertion below still reads `& &1.key`.
   defp visit!(user, place) do
-    {:ok, :visited} = Visits.toggle_visit(user, place)
-    Badges.check_and_award(user, place)
+    before = MapSet.new(Badges.earned_badges(user), & &1.badge_key)
+
+    {:ok, _outcome} = Social.react(user, place, "up")
+
+    Badges.earned_badges(user)
+    |> Enum.reject(&MapSet.member?(before, &1.badge_key))
+    |> Enum.map(&%{key: &1.badge_key})
   end
 
   test "first visit awards first-steps only (with county not yet complete)" do
@@ -88,7 +97,7 @@ defmodule Ethos.BadgesTest do
     # sole open place in its county: both badges land on the first visit
     assert awarded_keys == ["county-complete-new-haven-county", "first-steps"]
 
-    {:ok, :unvisited} = Visits.toggle_visit(user, p)
+    {:ok, :cleared} = Social.react(user, p, "up")
 
     assert Badges.earned_badges(user) |> Enum.map(& &1.badge_key) |> Enum.sort() ==
              awarded_keys
@@ -138,6 +147,38 @@ defmodule Ethos.BadgesTest do
       place!("x-closed", %{town: "Xtown", status: "closed"})
 
       refute Enum.any?(Badges.definitions(), &(&1.key == "explorer-xtown"))
+    end
+  end
+
+  describe "reactions drive badges" do
+    import Ethos.AccountsFixtures
+    import Ethos.PlacesFixtures
+
+    test "a thumbs-down earns badge progress" do
+      user = user_fixture()
+      place = place_fixture(%{status: "open"})
+
+      Ethos.Social.react(user, place, "down")
+
+      assert Enum.any?(Ethos.Badges.earned_badges(user), &(&1.badge_key == "first-steps"))
+    end
+
+    test "clearing a reaction does not revoke an earned badge" do
+      user = user_fixture()
+      place = place_fixture(%{status: "open"})
+
+      Ethos.Social.react(user, place, "up")
+      Ethos.Social.react(user, place, "up")
+
+      assert Enum.any?(Ethos.Badges.earned_badges(user), &(&1.badge_key == "first-steps"))
+    end
+
+    test "a reaction on a guide awards nothing" do
+      user = user_fixture()
+
+      Ethos.Social.react(user, Ethos.GuidesFixtures.guide_fixture(), "up")
+
+      assert Ethos.Badges.earned_badges(user) == []
     end
   end
 end

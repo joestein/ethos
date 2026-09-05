@@ -33,12 +33,17 @@ defmodule EthosWeb.PlaceVisitTest do
     assert Phoenix.Flash.get(conn.assigns.flash, :error) =~ "permanently closed"
   end
 
-  test "checking off a first place awards the First Steps badge", %{conn: conn} do
+  # Badges are now earned by reacting (see Ethos.Social.react/3), not by this
+  # legacy check-off — checking off a place no longer writes a reaction, so it
+  # cannot satisfy a badge rule on its own. This whole flow is removed in
+  # Task 7 along with this test file.
+  test "checking off a place does not award a badge on its own", %{conn: conn} do
     place = Places.upsert_place!(@attrs)
 
     conn = post(conn, ~p"/p/#{place.slug}/visit")
 
-    assert Phoenix.Flash.get(conn.assigns.flash, :info) =~ "Badge earned:"
+    refute Phoenix.Flash.get(conn.assigns.flash, :info) =~ "Badge earned:"
+    assert Phoenix.Flash.get(conn.assigns.flash, :info) =~ "Checked off #{place.name}!"
   end
 
   test "requires auth" do
