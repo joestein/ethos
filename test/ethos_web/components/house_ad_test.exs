@@ -26,10 +26,8 @@ defmodule EthosWeb.HouseAdTest do
         state_slug: "connecticut",
         destination_slug: "avon",
         county: "Hartford County",
-        # town-page: the only guide tier that carries neither the foliage
-        # panel's fallback-free rendering nor show.html.heex's amber
-        # GetYourGuide CTA — see the "guide tier" describe block below for the
-        # tier: "guide" case this default deliberately does not cover.
+        # Arbitrary default — for_page/2 does not gate on tier. town-page is
+        # used because it is what real Connecticut town guides mostly are.
         tier: "town-page",
         photos: [photo()]
       },
@@ -77,15 +75,6 @@ defmodule EthosWeb.HouseAdTest do
       # controller-rendered public page" per the design, whether or not the
       # page happens to be a LiveView.
       assert HouseAd.for_page(%{guide: ct_guide()}) == nil
-    end
-
-    test "returns nil for a Connecticut guide whose tier is not town-page" do
-      # show.html.heex (every tier other than "town-page") renders its own
-      # GetYourGuide fallback CTA under the same "no affiliate here" condition
-      # this ad renders under. Rendering both put two ad-shaped units on the
-      # ~270 guide pages outside New York and Italy.
-      assigns = %{guide: ct_guide(%{tier: "guide"}), page_canonical: "http://x/g/avon-guide"}
-      assert HouseAd.for_page(assigns) == nil
     end
 
     test "a guide outside Connecticut that shares a town slug gets no Connecticut town" do
@@ -238,15 +227,41 @@ defmodule EthosWeb.HouseAdTest do
     import Ethos.GuidesFixtures
     import Ethos.AccountsFixtures
 
-    test "does not appear on a tier: guide page, which already carries the GetYourGuide fallback CTA",
+    test "appears on a tier: guide page in place of the GetYourGuide fallback CTA",
          %{conn: conn} do
-      # Before the tier gate, show.html.heex's amber CTA
-      # (`:if={not EthosWeb.Affiliate.unit_renders?(assigns)}`) and this ad
-      # rendered under the same condition — two ad-shaped units on ~270 guide
-      # pages outside New York and Italy. Only town-page-tier guides render
-      # this ad now; the CTA is unaffected.
+      # show.html.heex's amber CTA and this ad both render under "no
+      # affiliate widget on the page", so without coordination a guide page
+      # outside New York and Italy carries two ad-shaped units. There is no
+      # tier gate: the ad takes precedence over the CTA regardless of tier.
+      #
+      # The pool is forced non-empty (and restored after) so this does not
+      # depend on the test database happening to carry seeded Connecticut
+      # guides, and Lisbon has no Connecticut context so it exercises the
+      # pool-fallback path rather than the contextual one.
+      previous = Ethos.HouseAd.pool()
+      :persistent_term.put({Ethos.HouseAd, :pool}, [photo()])
+      on_exit(fn -> :persistent_term.put({Ethos.HouseAd, :pool}, previous) end)
+
       guide = published_guide_fixture(%{title: "A Guide Somewhere"})
       assert guide.tier == "guide"
+
+      html = conn |> get(~p"/g/#{guide.slug}") |> html_response(200)
+
+      assert html =~ "Connecticut Foliage Forecast"
+      refute html =~ "Explore tours"
+    end
+
+    test "the GetYourGuide fallback CTA appears instead, when for_page/2 has nothing to show",
+         %{conn: conn} do
+      # The direction the correction must not break: with an empty pool and
+      # no contextual match, for_page/2 returns nil, and show.html.heex's
+      # `:if` must still fall back to the generic CTA rather than rendering
+      # neither unit.
+      previous = Ethos.HouseAd.pool()
+      :persistent_term.put({Ethos.HouseAd, :pool}, [])
+      on_exit(fn -> :persistent_term.put({Ethos.HouseAd, :pool}, previous) end)
+
+      guide = published_guide_fixture(%{title: "A Guide With No Ad To Show"})
 
       html = conn |> get(~p"/g/#{guide.slug}") |> html_response(200)
 
@@ -290,7 +305,7 @@ defmodule EthosWeb.HouseAdTest do
          %{conn: conn} do
       # Unlike a guide page, this scenario does not depend on the pool
       # (which resolves from seeded Connecticut guides this test database
-      # may not carry) or on the tier gate, so it cannot pass vacuously.
+      # may not carry), so it cannot pass vacuously.
       #
       # A Connecticut place page does not have this problem: the foliage
       # panel lives only in the guide templates, so `/p/:slug` never carries

@@ -7,11 +7,10 @@ defmodule EthosWeb.HouseAd do
 
   In season, the Connecticut town guides carrying the foliage panel name the
   town and its window. An ad on the same page would promote the same thing
-  twice within about 200 pixels. Out of season the panel disappears and, on a
-  `tier: "town-page"` guide, the ad takes over there too — town-page guides
-  are the only guide pages that carry neither the panel nor the amber
-  GetYourGuide fallback CTA (see below), so they are the only guide pages
-  where the ad renders at all.
+  twice within about 200 pixels. Out of season the panel disappears and the
+  ad takes over there too, reaching every guide page that has neither an
+  affiliate widget nor the panel — New York, England, Italy, California,
+  ballparks, and Connecticut guides once their window has passed.
 
   ## Why LiveViews need their own clause
 
@@ -33,11 +32,17 @@ defmodule EthosWeb.HouseAd do
     is not "a controller-rendered public page" per the design, whether or
     not it happens to be a LiveView. `/search` also assigns none, so it
     carries no ad; that is accepted, not a bug.
-  - a guide whose `tier` is not `"town-page"` — `show.html.heex` (every tier
-    other than `"town-page"`) renders its own GetYourGuide fallback CTA under
-    the same condition this ad renders under (no affiliate widget). Rendering
-    both put two ad-shaped units on one page. `town_page.html.heex` has no
-    such CTA, so town-page guides are unaffected.
+
+  ## The amber GetYourGuide fallback CTA yields to this ad
+
+  `show.html.heex` renders a generic "Planning your own trip?" CTA under the
+  same condition this ad renders under (no affiliate widget on the page), so
+  without coordination a guide page outside New York and Italy would carry
+  both. The CTA's own `:if` now also requires `for_page/2` to return `nil`
+  for the page — this ad takes precedence when it can render, and the CTA
+  remains the fallback for when there is no ad to show (empty pool, no
+  usable photograph). There is no tier gate here: this module treats every
+  guide the same regardless of `tier`.
   """
 
   use Phoenix.Component
@@ -61,21 +66,11 @@ defmodule EthosWeb.HouseAd do
       is_nil(assigns[:page_canonical]) -> nil
       assigns[:foliage] -> nil
       EthosWeb.Affiliate.unit_renders?(assigns) -> nil
-      not town_page_or_no_guide?(assigns[:guide]) -> nil
       true -> build(assigns, pool)
     end
   end
 
   def for_page(_assigns, _pool), do: nil
-
-  # `show.html.heex` — every tier other than "town-page" — renders its own
-  # GetYourGuide fallback CTA under exactly the condition this ad renders
-  # under: no affiliate widget on the page. Rendering both put two ad-shaped
-  # units on one page. A page with no `:guide` assign at all (a place, the
-  # home page, a destination hub, a collection) has no such CTA and is
-  # unaffected.
-  defp town_page_or_no_guide?(%{tier: tier}), do: tier == "town-page"
-  defp town_page_or_no_guide?(_), do: true
 
   defp build(assigns, pool) do
     case contextual(assigns) do
