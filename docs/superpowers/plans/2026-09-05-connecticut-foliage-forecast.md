@@ -3369,7 +3369,11 @@ Add to `lib/ethos_web/controllers/guide_controller.ex`, and add `foliage: foliag
   """
   def foliage_assign(guide, today \\ Date.utc_today())
 
-  def foliage_assign(%Guide{tier: "town-page", state_slug: "connecticut"} = guide, today) do
+  # Deliberately NOT gated on `tier`: only ten of the 169 Connecticut town
+  # guides carry "town-page"; the rest are plain "guide". Membership of the
+  # foliage dataset is the real gate and excludes exactly the right three
+  # guides (the Antique Trail collection, Mystic, Storrs).
+  def foliage_assign(%Guide{state_slug: "connecticut"} = guide, today) do
     with true <- Ethos.Foliage.in_season?(today),
          town when not is_nil(town) <- Ethos.Foliage.town(guide.destination_slug) do
       week = Ethos.Foliage.current_week_index(today)

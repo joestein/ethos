@@ -249,10 +249,30 @@ the route. These seven pages are the artifact: they say something no other site
 can say, and they are what the outreach points at.
 
 **Town-level content** attaches to the existing guide at `/g/:slug`. For any
-published guide with `state_slug == "connecticut"` and `tier == "town-page"`,
-render a foliage panel: estimated peak window, current stage, the route it sits
+published guide with `state_slug == "connecticut"` whose `destination_slug` is
+one of the 169 towns, render a foliage panel: estimated peak window, current stage, the route it sits
 on if any, and a link to `/foliage`. Seasonal — rendered only between Sept 1 and
 Nov 30 — so the guides are not permanently carrying an out-of-season block.
+
+**Do not gate the panel on `tier`.** The first implementation did, on my
+instruction, and it was wrong: only ten of the 169 Connecticut town guides
+carry `tier: "town-page"` — andover, east-hartford, eastford, enfield,
+hartland, killingworth, oxford, scotland, sterling, weston. The other 158 carry
+plain `"guide"`. Gating on the tier puts this panel on ten pages instead of
+169 and destroys the reason there are no `/foliage/:town` pages at all.
+
+Presence in the foliage dataset is the real gate and the only one needed.
+Measured against the corpus it matches 168 of 169 towns, and the only three
+Connecticut guides it excludes are exactly the three that must not have a
+panel: the Antique Trail guide (`destination_slug` "connecticut"), Mystic, and
+Storrs — village guides, not towns. Mansfield is the one town with no guide of
+its own, so it alone carries no panel; its data still appears on `/foliage` and
+on the Yankee Roots route page.
+
+Because `tier: "guide"` renders through `show.html.heex` and `tier:
+"town-page"` through `town_page.html.heex`, the panel is a shared function
+component in `lib/ethos_web/components/`, called from both, rather than markup
+duplicated across two templates.
 
 **Week selection without JavaScript.** The week is a query parameter —
 `/foliage?week=5`, `/foliage/hartford-west?week=5` — and the selector is a row
