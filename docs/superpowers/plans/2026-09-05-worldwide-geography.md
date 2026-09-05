@@ -2066,6 +2066,27 @@ git commit -m "refactor: place queries key on the destination node"
 - Consumes: everything above.
 - Produces: `guides` and `places` without `state`, `state_slug`, `county`, `county_slug`, `town`, `town_slug`; `destinations.kind` NOT NULL.
 
+> **Affiliate locale matching breaks here, and it fails silently.**
+>
+> `Ethos.Affiliates.locale_for/2` matches on `state_slug` and guards on
+> `county_slug` (`config/config.exs:77-102`). Dropping those columns leaves every
+> affiliate widget unresolved — a 200 response, a correct-looking page, and no
+> unit. This class has already bitten twice in this project: the Bronx locale
+> (`"Bronx"` vs the derived `"The Bronx"`) and the Rome locale (`"italy"` vs the
+> derived `"lazio"`), both found by review rather than by a failing test.
+>
+> Move the matching onto the tree as part of this task. The naive fix — resolving
+> the node per row — is not acceptable: `locale_for/2` runs inside a layout
+> component over whole lists of guides and places on hub pages, so it would cost
+> a database read per row per request. Either preload `destination_node` where the
+> component is rendered, or denormalise a `country_slug` onto `guides`/`places`
+> alongside `destination_id`.
+>
+> Whichever you choose, the positive tests added in Task 6
+> (`affiliate_corpus_test`, `affiliate_placement_test`) must still pass — they
+> seed real rows through the loader and assert the widget resolves, and they are
+> the only reason this class is now visible at all.
+
 - [ ] **Step 1: Prove nothing reads the columns**
 
 ```bash
