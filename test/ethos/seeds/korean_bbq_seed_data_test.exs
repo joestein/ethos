@@ -187,6 +187,20 @@ defmodule Ethos.Seeds.KoreanBbqSeedDataTest do
 
   defp hit?(patterns, text), do: Enum.any?(patterns, &Regex.match?(&1, text))
 
+  # Sentence-scoped, because presence-anywhere is not evidence. Checking the two
+  # patterns independently over the whole blob accepted "The chef grills bulgogi
+  # in an open kitchen. Diners are seated at the table" — a grill in sentence
+  # one, a table in sentence two, and the meat cooked exactly where this
+  # collection says it must not be. "At the table" is ordinary restaurant prose
+  # and appears constantly for reasons that have nothing to do with a grill.
+  defp grill_at_the_table?(text) do
+    text
+    |> String.split(~r/(?<=[.!?])\s+/)
+    |> Enum.any?(fn sentence ->
+      Regex.match?(@grill_evidence, sentence) and Regex.match?(@tabletop_evidence, sentence)
+    end)
+  end
+
   defp photos(doc) do
     ((doc["guide"] || %{})["photos"] || []) ++
       ((doc["places"] || []) |> Enum.flat_map(&(&1["photos"] || [])))
@@ -265,6 +279,22 @@ defmodule Ethos.Seeds.KoreanBbqSeedDataTest do
     refute Regex.match?(@tabletop_evidence, "A soondubu house with no grill.")
   end
 
+  test "grill evidence must appear in one sentence, not merely somewhere in the blob" do
+    assert grill_at_the_table?("A gas grill is set into each table.")
+    assert grill_at_the_table?("Charcoal grills at the table.")
+    assert grill_at_the_table?("Every table has a smokeless grill.")
+
+    # The case that defeated the first version of this check: a grill in one
+    # sentence, a table in the next, and the meat cooked in the kitchen.
+    refute grill_at_the_table?(
+             "The chef grills bulgogi in an open kitchen. " <>
+               "Diners are seated at the table for family-style service."
+           )
+
+    refute grill_at_the_table?("The kitchen grills the short rib and brings it out.")
+    refute grill_at_the_table?("A soondubu house with no grill.")
+  end
+
   # ------------------------------------------------------------------
   # Corpus assertions
   # ------------------------------------------------------------------
@@ -305,7 +335,7 @@ defmodule Ethos.Seeds.KoreanBbqSeedDataTest do
       for {file, doc} <- decoded_files(),
           place <- doc["places"] || [],
           text = "#{place["summary"]} #{place["history"]}",
-          not (Regex.match?(@grill_evidence, text) and Regex.match?(@tabletop_evidence, text)),
+          not grill_at_the_table?(text),
           do: {file, place["slug"]}
 
     assert offenders == [],
