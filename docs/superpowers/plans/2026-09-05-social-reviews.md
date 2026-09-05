@@ -1594,9 +1594,13 @@ these tests inside the `defmodule`:
       conn: conn,
       guide: guide
     } do
-      # "buoewe" is reserved (Plan 1), so the fixture cannot claim it. What
-      # makes this user the admin is the email matching :admin_email config.
-      admin = user_fixture(%{email: "cryptcom@gmail.com", username: "adminuser"})
+      # Use admin_fixture/0 rather than spelling the admin email out. The
+      # literal is load-bearing — it must match :admin_email config for
+      # Accounts.admin?/1 — and having it in several files at once caused a
+      # Postgres deadlock between concurrent async inserts. The helper is the
+      # single place it lives now; this file is `async: false` for the same
+      # reason.
+      admin = admin_fixture()
       author = user_fixture(%{email: "queued-secret@example.com", username: "traveller"})
 
       {:ok, _} =
