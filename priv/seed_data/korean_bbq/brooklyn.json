@@ -43,7 +43,17 @@
         "answer": "All-you-can-eat is a pricing model rather than a grill format. The two KPOT rooms are branches of the same chain and price the meal that way, and the grill is still set into the table with the guests cooking on it. Lalaon prices a barbecue set menu at $80 instead. Neither model changes where the meat is cooked."
       }
     ],
-    "photos": []
+    "photos": [
+      {
+        "src": "/photos/us/korean-bbq/brooklyn/brooklyn-city-point.jpg",
+        "thumb": "/photos/us/korean-bbq/brooklyn/brooklyn-city-point_thumb.jpg",
+        "title": "The City Point complex at Albee Square West, Downtown Brooklyn",
+        "description": "Looking up at the corner of the City Point complex from the sidewalk, with the raised block letters spelling CITY POINT along the parapet of the louvred retail podium and a residential tower stepping back above it. Glazed shopfronts and illuminated signage run along the retail base at street level, with a traffic signal, a crossing signal and pedestrians on the corner in the foreground.",
+        "author": "Selsayed95",
+        "license": "CC BY-SA 4.0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:City_Point,_Brooklyn.jpg"
+      }
+    ]
   },
   "places": [],
   "links": [
