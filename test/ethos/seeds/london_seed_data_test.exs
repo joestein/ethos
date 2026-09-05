@@ -713,10 +713,10 @@ defmodule Ethos.Seeds.LondonSeedDataTest do
              "never by deleting this assertion: #{inspect(collisions)}"
   end
 
-  # Delete this @tag when the last wave lands — 33 units — and not before:
-  # until then the corpus is a prefix of the in-scope set and this fails by
-  # construction.
-  @tag :pending_london
+  # @tag :pending_london removed 2026-09-04 by wave 3, which landed the final
+  # eleven and brought London to all thirty-three units. This assertion now
+  # runs, and from here it is what stops a file being deleted or a borough
+  # being quietly dropped.
   test "the shipped corpus matches the in-scope roster exactly" do
     expected = in_scope_slugs()
     shipped = files() |> Enum.map(&Path.rootname(Path.basename(&1))) |> MapSet.new()

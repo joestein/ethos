@@ -851,10 +851,30 @@ defmodule EthosWeb.StructuredDataTest do
       # addresses the way Rome's Italian list grew: "circle", for Regent's
       # Park's two ring roads, and an optional trailing compass point, for
       # "Whalebone Lane North".
-      assert length(emitted) == 4577
-      assert count.(& &1["streetAddress"]) == 3954
+      #
+      # Re-measured 2026-09-04 after London wave 3, which COMPLETES the city at
+      # all thirty-three units — the 32 boroughs and the City — with 197 more
+      # addressed places, every one of them in an outer borough.
+      #
+      #   * total 4577 -> 4774, +197.
+      #   * `streetAddress` 3954 -> 4151, +197. All of them.
+      #   * `postalCode` 3190 -> 3387, +197. All of them, which no earlier wave
+      #     in any city managed: the outer boroughs' addresses come off the
+      #     National Heritage List and off operator sites, and both publish a
+      #     full postcode as a matter of course.
+      #   * `is_nil(streetAddress)` unmoved at 623 and locality-only unmoved at
+      #     308, which is the same fact from the other two sides.
+      #
+      # WAVE 3 NEEDED NO PARSER WORK. That is the figure this line exists to
+      # record: waves 1 and 2 each cost a new British form — @uk_outward for the
+      # ten outward-code addresses, and the widening of @uk_no_postcode for the
+      # postcode-less ones — and by wave 3 the branch built for those carried
+      # all 197 unchanged. Rome took three waves to reach the same point and
+      # San Francisco needed none at all, being plain American.
+      assert length(emitted) == 4774
+      assert count.(& &1["streetAddress"]) == 4151
       assert count.(&is_nil(&1["streetAddress"])) == 623
-      assert count.(& &1["postalCode"]) == 3190
+      assert count.(& &1["postalCode"]) == 3387
 
       # The largest behavioural delta this change ships: 302 places emit a
       # PostalAddress carrying only locality, region and country. Their full

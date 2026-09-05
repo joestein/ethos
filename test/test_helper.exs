@@ -141,6 +141,12 @@ ExUnit.start()
 #     fields are the record of why the unit is the borough.
 #
 #     mix test --include pending_london
-ExUnit.configure(exclude: [:pending_wave, :pending_bronx, :pending_london])
+#
+# :pending_london removed 2026-09-04 by wave 3, which landed the final eleven
+# boroughs and brought London to all thirty-three units. Its own `@tag` came
+# off with it, so the tag names nothing and excluding it would only hide a
+# future typo. The single-call rule above still binds: this list is edited in
+# place, never by adding a second ExUnit.configure/1.
+ExUnit.configure(exclude: [:pending_wave, :pending_bronx])
 
 Ecto.Adapters.SQL.Sandbox.mode(Ethos.Repo, :manual)
