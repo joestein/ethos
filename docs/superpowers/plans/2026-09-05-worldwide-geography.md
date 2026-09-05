@@ -985,67 +985,74 @@ defmodule Mix.Tasks.Ethos.MigrateGeo do
     |> Enum.flat_map(&rewrite_file!(corpus, &1))
   end
 
-  # Idempotent: a file that already carries destination_path is read for its
-  # leaf nodes and left alone. Re-running after a partial rewrite, or over a
-  # corpus a concurrent worktree already migrated, is a no-op rather than a
-  # crash on the missing legacy triple.
+  # Idempotent: a file that already carries destination_path is left alone.
+  # Re-running after a partial rewrite, or over a corpus a concurrent worktree
+  # already migrated, is a no-op rather than a crash on the missing triple.
+  #
+  # Decoding with `objects: :ordered_objects` is NOT optional. A plain
+  # `Jason.decode!` returns bare maps, which are unordered, so re-encoding
+  # reshuffles every key — measured at 692 of 700 lines changed on
+  # rome/ardeatino.json. Across 393 files that makes the diff unreviewable and
+  # the "no prose was touched" guarantee unverifiable. With ordered objects the
+  # round-trip is byte-identical, and this rewrite touches ZERO non-geo lines.
   defp rewrite_file!(corpus, file) do
-    data = file |> File.read!() |> Jason.decode!()
+    data = file |> File.read!() |> Jason.decode!(objects: :ordered_objects)
+    guide = data["guide"]
 
-    if is_binary(data["guide"]["destination_path"]) do
-      leaves_of(corpus, data)
+    if is_binary(guide["destination_path"]) do
+      # Already migrated. The roster already holds its nodes, and the names
+      # needed to rebuild them (`town`) are gone, so contribute nothing.
+      []
     else
-      guide = data["guide"]
       guide_town = guide["destination"] |> String.split(",") |> List.first() |> String.trim()
       guide_path = path_for(corpus, guide["state"], guide["county"], guide_town)
 
-      places =
+      # Computed from the ORIGINAL objects, before the geo keys are dropped —
+      # `town` is the only place a leaf node's display name is written down.
+      place_leaves =
         Enum.map(data["places"], fn p ->
-          p
-          # `town` is captured before the drop — it is the leaf node's display
-          # name, and this is the only place it is written down.
-          |> Map.put("destination_path", place_path_for(corpus, guide_path, p["town"]))
-          |> Map.put("__leaf_name", p["town"])
-          |> Map.drop(~w(state county town))
+          {place_path_for(corpus, guide_path, p["town"]), p["town"]}
         end)
 
-      rewritten =
-        data
-        |> Map.put(
-          "guide",
-          guide
-          |> Map.put("destination_path", guide_path)
-          |> Map.put("__leaf_name", guide_town)
-          |> Map.drop(~w(state county))
-        )
-        |> Map.put("places", places)
+      new_guide = swap_geo(guide, ~w(state county), guide_path)
 
-      leaves = leaves_of(corpus, rewritten)
+      new_places =
+        data["places"]
+        |> Enum.zip(place_leaves)
+        |> Enum.map(fn {p, {path, _name}} -> swap_geo(p, ~w(state county town), path) end)
 
-      # The scratch key never reaches disk.
-      on_disk =
-        rewritten
-        |> Map.put("guide", Map.delete(rewritten["guide"], "__leaf_name"))
-        |> Map.put("places", Enum.map(places, &Map.delete(&1, "__leaf_name")))
+      rewritten = data |> oput("guide", new_guide) |> oput("places", new_places)
+      File.write!(file, Jason.encode!(rewritten, pretty: true) <> "\n")
 
-      File.write!(file, Jason.encode!(on_disk, pretty: true) <> "\n")
-
-      leaves
+      leaves_from(corpus, guide_path, guide_town, place_leaves)
     end
   end
 
-  # One roster entry per distinct node the file references, named from the
-  # town/destination string the file was authored with.
-  #
-  # The guide's own node takes the corpus kind. A place node deeper than the
-  # guide's is a town inside it — only London produces these.
-  defp leaves_of(corpus, data) do
+  # Drops the legacy geo keys and inserts `destination_path` at the index the
+  # first of them occupied. Appending instead would add a trailing comma to the
+  # preceding key, churning 84 extra lines per file for no reason.
+  defp swap_geo(%Jason.OrderedObject{values: vs} = obj, drop_keys, path) do
+    idx = Enum.find_index(vs, fn {k, _} -> k in drop_keys end)
+    kept = Enum.reject(vs, fn {k, _} -> k in drop_keys end)
+    %{obj | values: List.insert_at(kept, idx || length(kept), {"destination_path", path})}
+  end
+
+  defp oput(%Jason.OrderedObject{values: vs} = obj, key, value) do
+    if List.keymember?(vs, key, 0) do
+      %{obj | values: List.keyreplace(vs, key, 0, {key, value})}
+    else
+      %{obj | values: vs ++ [{key, value}]}
+    end
+  end
+
+  # One roster entry per distinct node the file references. The guide's own
+  # node takes the corpus kind; a place node deeper than the guide's is a town
+  # inside it — only London produces those.
+  defp leaves_from(corpus, guide_path, guide_name, place_leaves) do
     guide_kind = Map.fetch!(@leaf_kinds, corpus)
-    guide_path = data["guide"]["destination_path"]
     guide_depth = depth(guide_path)
 
-    ([data["guide"]] ++ data["places"])
-    |> Enum.map(fn m -> {m["destination_path"], m["__leaf_name"]} end)
+    [{guide_path, guide_name} | place_leaves]
     |> Enum.reject(fn {path, _} -> is_nil(path) end)
     |> Enum.uniq_by(fn {path, _} -> path end)
     |> Enum.map(fn {path, name} ->
@@ -1057,7 +1064,7 @@ defmodule Mix.Tasks.Ethos.MigrateGeo do
 
   defp append_leaves!(leaves) do
     roster_file = Path.join(["priv", "seed_data", "destination_tree.json"])
-    existing = roster_file |> File.read!() |> Jason.decode!()
+    existing = roster_file |> File.read!() |> Jason.decode!(objects: :ordered_objects)
     have = MapSet.new(existing, & &1["path"])
 
     new =
@@ -1092,6 +1099,18 @@ git diff priv/seed_data/connecticut/andover.json
 ```
 
 Confirm: only `state`/`county`/`town` removed and `destination_path` added; no prose changed. `git diff --stat` should show 393 files plus the roster.
+
+Then verify that mechanically, because eyeballing 393 files does not scale — every changed line must be a geo key:
+
+```bash
+git diff -U0 priv/seed_data/ \
+  | grep -E '^[+-]' \
+  | grep -vE '^(\+\+\+|---)' \
+  | grep -vE '"(destination_path|state|county|town)"' \
+  | head -20
+```
+
+Expected: **no output at all.** Any line printed is prose or structure the rewrite touched by accident, and the task must be fixed rather than committed. (Measured on `rome/ardeatino.json`: 42 lines added, 125 removed, zero non-geo lines.)
 
 - [ ] **Step 7: Commit**
 
