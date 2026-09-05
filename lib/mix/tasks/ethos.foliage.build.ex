@@ -25,6 +25,8 @@ defmodule Mix.Tasks.Ethos.Foliage.Build do
 
   use Mix.Task
 
+  require Ecto.Query
+
   alias Ethos.Foliage.{ArcGIS, Geometry}
 
   @expected_towns 169
@@ -32,6 +34,8 @@ defmodule Mix.Tasks.Ethos.Foliage.Build do
   @sample_count 25
 
   @sample_floor 0.6
+  @expected_routes 7
+  @minimum_route_towns 3
   @tile_host "https://tiles.arcgis.com/tiles/FjPcSmEFuDYlIdKC/arcgis/rest/services"
   @tile_cache "tmp/foliage_tiles"
 
@@ -57,6 +61,7 @@ defmodule Mix.Tasks.Ethos.Foliage.Build do
 
     if opts[:towns] || opts[:all], do: build_towns()
     if opts[:stages] || opts[:all], do: build_stages()
+    if opts[:routes] || opts[:all], do: build_routes()
   end
 
   defp build_towns do
@@ -161,6 +166,79 @@ defmodule Mix.Tasks.Ethos.Foliage.Build do
     end
 
     Mix.shell().info("Regional windows reproduce DEEP's published dates.")
+  end
+
+  defp build_routes do
+    Mix.Task.run("app.start")
+
+    published =
+      Ethos.Repo.all(
+        Ecto.Query.from(g in Ethos.Guides.Guide,
+          where: g.status == "published" and g.state_slug == "connecticut",
+          select: g.slug
+        )
+      )
+      |> MapSet.new()
+
+    towns = read!("towns.json")
+    by_slug = Map.new(towns, &{&1["slug"], &1})
+    features = ArcGIS.fetch_routes!() |> Map.fetch!("features")
+
+    if length(features) != @expected_routes do
+      Mix.raise("Expected #{@expected_routes} routes, got #{length(features)}.")
+    end
+
+    routes =
+      Enum.map(features, fn %{"attributes" => a, "geometry" => g} ->
+        name = a["ROUTENAME"]
+        slug = Geometry.slugify(name)
+
+        path =
+          g["paths"] |> List.flatten() |> Enum.chunk_every(2) |> Enum.map(fn [x, y] -> {x, y} end)
+
+        members =
+          ArcGIS.fetch_route_towns!(g["paths"])
+          |> Enum.map(&Geometry.slugify/1)
+          |> Enum.filter(&Map.has_key?(by_slug, &1))
+          |> Enum.map(fn s ->
+            t = by_slug[s]
+            %{slug: s, lat: t["lat"], lng: t["lng"]}
+          end)
+
+        ordered = Ethos.Foliage.Routes.order_along(path, members)
+
+        if length(ordered) < @minimum_route_towns do
+          Mix.raise("Route #{name} matched only #{length(ordered)} towns.")
+        end
+
+        stops =
+          Enum.map(ordered, fn town_slug ->
+            guide = Ethos.Foliage.Routes.guide_slug_for(town_slug, published)
+
+            unless guide do
+              Mix.raise("Route #{name}: town #{town_slug} has no published guide.")
+            end
+
+            %{"town_slug" => town_slug, "guide_slug" => guide}
+          end)
+
+        %{
+          "slug" => slug,
+          "name" => name,
+          "deep_url" => a["URL"],
+          "stops" => stops,
+          "path" =>
+            path
+            |> Geometry.simplify(0.0005)
+            |> Enum.map(fn {x, y} -> [Float.round(x, 5), Float.round(y, 5)] end)
+        }
+      end)
+      |> Enum.sort_by(& &1["slug"])
+
+    write!("routes.json", routes)
+
+    for r <- routes, do: Mix.shell().info("  #{r["name"]}: #{length(r["stops"])} towns")
+    Mix.shell().info("Wrote #{length(routes)} routes.")
   end
 
   defp sample_pixel(service, point) do
