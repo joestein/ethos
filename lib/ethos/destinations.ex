@@ -27,4 +27,59 @@ defmodule Ethos.Destinations do
     |> Destination.changeset(attrs)
     |> Repo.insert_or_update!()
   end
+
+  def roots do
+    Repo.all(
+      from d in Destination,
+        where: is_nil(d.parent_id),
+        order_by: [asc: d.position, asc: d.name]
+    )
+  end
+
+  def children(%Destination{id: id}) do
+    Repo.all(
+      from d in Destination,
+        where: d.parent_id == ^id,
+        order_by: [asc: d.position, asc: d.name]
+    )
+  end
+
+  @doc """
+  Ancestors root-first, excluding the node itself.
+
+  Derived from the path's prefixes rather than by walking `parent_id`, so a
+  five-deep node costs one query instead of four. `parent_id` and `path` are
+  asserted to agree by the tree-integrity test, which is what makes the
+  shortcut safe.
+  """
+  def ancestors(%Destination{path: path}) do
+    prefixes =
+      path
+      |> String.split("/")
+      |> Enum.drop(-1)
+      |> Enum.scan([], fn seg, acc -> acc ++ [seg] end)
+      |> Enum.map(&Enum.join(&1, "/"))
+
+    case prefixes do
+      [] ->
+        []
+
+      prefixes ->
+        Repo.all(from d in Destination, where: d.path in ^prefixes)
+        |> Enum.sort_by(&String.length(&1.path))
+    end
+  end
+
+  def descendant_paths(%Destination{path: path}) do
+    Repo.all(
+      from d in Destination,
+        where: like(d.path, ^(path <> "/%")),
+        order_by: [asc: d.path],
+        select: d.path
+    )
+  end
+
+  def get_by_legacy_path(path) when is_binary(path) do
+    Repo.one(from d in Destination, where: ^path in d.legacy_paths)
+  end
 end
