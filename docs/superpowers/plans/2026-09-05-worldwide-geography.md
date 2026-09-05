@@ -1892,7 +1892,9 @@ Derive both from the node instead:
 
 `country_code/1` maps the country node to its ISO 3166-1 alpha-2 code — `"United States"` → `"US"`, `"Italy"` → `"IT"`, `"United Kingdom"` → `"GB"`, `"Canada"` → `"CA"`. Those are the only four countries in the roster; raise on an unknown one rather than defaulting, so the next country added is a loud failure instead of a silent `"US"`.
 
-Add a test asserting a Rome place's JSON-LD carries `addressCountry: "IT"` and `addressLocality: "Monti"` (or whichever rione the fixture uses), and a London place's carries `"GB"`. Those two assertions are the regression guard for the whole class of bug.
+Add tests asserting a Rome place's JSON-LD carries `addressCountry: "IT"` and `addressLocality` set to its rione, a London place's carries `"GB"`, and **a Vatican place's carries `"VA"`** — the Vatican is a root country node in the tree, so St Peter's must not inherit Italy's code. Those three assertions are the regression guard for the whole class of bug.
+
+Verify by hand before committing that a Roman place's rendered JSON-LD does **not** say `"US"`. Between Task 7 and this step it does: the shim writes `state: "Lazio"`, which `@country_by_region` does not know. That is the live defect this step closes, and it is why no production re-seed may happen before this task lands.
 
 - [ ] **Step 6: Run the web suite**
 
@@ -2099,6 +2101,23 @@ git commit -m "refactor: drop the state/county/town columns"
 ---
 
 ## Deployment
+
+> **HARD ORDERING CONSTRAINT — Task 10 must land before any production re-seed.**
+>
+> Task 7's shim derives a place's legacy `state` from its **region** node, so a
+> Roman place now carries `"Lazio"` where it used to carry `"Italy"`.
+> `StructuredData.@country_by_region` is keyed on the old values
+> (`%{"Italy" => "IT", "Vatican City" => "VA", "England" => "GB"}`), so `"Lazio"`
+> misses the lookup and `addressCountry` falls through to the `"US"` default.
+>
+> Re-seeding production before Task 10 ships would therefore tell search engines
+> that the Pantheon, the Sistine Chapel and all 1,250 Roman places are in the
+> United States — the exact error `structured_data.ex:139-143` documents as the
+> reason that lookup exists. No test catches it: every corpus gate reads the seed
+> JSON, not the database.
+>
+> Task 10 Step 5b replaces the mechanism by deriving `addressCountry` from the
+> node's country ancestor, which is immune to what the region is called.
 
 After all twelve tasks are green on the branch:
 
