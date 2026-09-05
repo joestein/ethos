@@ -232,4 +232,112 @@ defmodule Ethos.SocialTest do
       assert Social.user_reaction(user, guide) == nil
     end
   end
+
+  describe "badge count queries" do
+    import Ethos.PlacesFixtures
+
+    setup do
+      user = user_fixture()
+
+      # `Place.changeset/2` does NOT cast town_slug/county_slug/state_slug — it
+      # DERIVES them from town/state/county. Passing a slug key here would be
+      # silently dropped and every place would land in the same town, making the
+      # by-town and by-county assertions below pass while proving nothing.
+      # Always set the human-readable name; assert against the derived slug.
+      open = fn attrs ->
+        place_fixture(
+          Enum.into(attrs, %{
+            status: "open",
+            state: "Connecticut",
+            county: "New Haven County",
+            town: "Waterbury",
+            kind: "museum"
+          })
+        )
+      end
+
+      %{user: user, open: open}
+    end
+
+    test "counts every place the user reacted to, thumbs up or down", %{user: user, open: open} do
+      Social.react(user, open.(%{}), "up")
+      Social.react(user, open.(%{}), "down")
+
+      assert Social.reacted_place_count(user) == 2
+    end
+
+    test "a thumbs-down earns badge progress exactly like a thumbs-up", %{user: user, open: open} do
+      Social.react(user, open.(%{}), "down")
+
+      assert Social.reacted_place_count(user) == 1
+    end
+
+    test "clearing a reaction removes the progress", %{user: user, open: open} do
+      place = open.(%{})
+      Social.react(user, place, "up")
+      Social.react(user, place, "up")
+
+      assert Social.reacted_place_count(user) == 0
+    end
+
+    test "another user's reactions do not count", %{user: user, open: open} do
+      Social.react(user_fixture(), open.(%{}), "up")
+
+      assert Social.reacted_place_count(user) == 0
+    end
+
+    test "reactions on guides do not count toward place badges", %{user: user} do
+      Social.react(user, guide_fixture(), "up")
+
+      assert Social.reacted_place_count(user) == 0
+    end
+
+    # The test above proves nothing on its own: this test's transaction never
+    # inserts a place row with an id equal to the guide's, so the join
+    # `on p.id == r.subject_id` would find zero matching rows and the count
+    # would come out 0 even if the `subject_type == "place"` guard were
+    # deleted from `reacted_places_query/1`. This test forces the actual
+    # collision the guard exists to prevent: a "guide" reaction whose
+    # subject_id is a real place's id.
+    test "a guide reaction sharing an id with a real place still does not count",
+         %{user: user, open: open} do
+      place = open.(%{})
+
+      %Reaction{}
+      |> Ecto.Changeset.change(%{
+        user_id: user.id,
+        subject_type: "guide",
+        subject_id: place.id,
+        value: "up"
+      })
+      |> Repo.insert!()
+
+      assert Social.reacted_place_count(user) == 0
+    end
+
+    test "by town", %{user: user, open: open} do
+      Social.react(user, open.(%{town: "Waterbury"}), "up")
+      Social.react(user, open.(%{town: "Danbury"}), "up")
+
+      assert Social.reacted_place_count_by_town(user, "waterbury") == 1
+    end
+
+    test "by kinds", %{user: user, open: open} do
+      Social.react(user, open.(%{kind: "cafe"}), "up")
+      Social.react(user, open.(%{kind: "brewery"}), "up")
+      Social.react(user, open.(%{kind: "museum"}), "up")
+
+      assert Social.reacted_place_count_by_kinds(user, ["cafe", "brewery"]) == 2
+    end
+
+    test "in county", %{user: user, open: open} do
+      Social.react(user, open.(%{county: "New Haven County"}), "up")
+      Social.react(user, open.(%{county: "Fairfield County"}), "up")
+
+      # "New Haven County" derives to "new-haven-county" — the -county suffix is
+      # part of the slug, as the existing badge key county-complete-new-haven-county
+      # already shows.
+      assert Social.reacted_place_count_in_county(user, "connecticut", "new-haven-county") == 1
+    end
+  end
 end

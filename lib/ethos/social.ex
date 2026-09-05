@@ -139,4 +139,51 @@ defmodule Ethos.Social do
       reaction -> reaction.value
     end
   end
+
+  ## Badge counts
+  #
+  # These four replace the identically shaped functions that used to live in
+  # `Ethos.Visits`. The rule the spec settled on is that ANY reaction counts
+  # as having been there — a thumbs-down is still a visit, and someone who
+  # disliked five museums has still seen five museums.
+
+  @doc "How many distinct places this user has reacted to."
+  def reacted_place_count(%User{} = user) do
+    user |> reacted_places_query() |> Repo.aggregate(:count, :id)
+  end
+
+  @doc "How many places in one town this user has reacted to."
+  def reacted_place_count_by_town(%User{} = user, town_slug) do
+    user
+    |> reacted_places_query()
+    |> where([_r, p], p.town_slug == ^town_slug)
+    |> Repo.aggregate(:count, :id)
+  end
+
+  @doc "How many places of the given kinds this user has reacted to."
+  def reacted_place_count_by_kinds(%User{} = user, kinds) do
+    user
+    |> reacted_places_query()
+    |> where([_r, p], p.kind in ^kinds)
+    |> Repo.aggregate(:count, :id)
+  end
+
+  @doc "How many places in one county this user has reacted to."
+  def reacted_place_count_in_county(%User{} = user, state_slug, county_slug) do
+    user
+    |> reacted_places_query()
+    |> where([_r, p], p.state_slug == ^state_slug and p.county_slug == ^county_slug)
+    |> Repo.aggregate(:count, :id)
+  end
+
+  # The join to `places` alone is not enough to restrict these to place
+  # reactions: a reaction on a guide whose id happens to match a place id
+  # would satisfy `p.id == r.subject_id` too. Pinning subject_type == "place"
+  # is what actually excludes it.
+  defp reacted_places_query(%User{} = user) do
+    from r in Reaction,
+      join: p in Ethos.Places.Place,
+      on: p.id == r.subject_id,
+      where: r.user_id == ^user.id and r.subject_type == "place"
+  end
 end
