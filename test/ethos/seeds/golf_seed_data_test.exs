@@ -31,6 +31,14 @@ defmodule Ethos.Seeds.GolfSeedDataTest do
   corpus first** — an over-broad gate gets excluded, and an excluded gate is
   not a gate.
 
+  Patterns 21 and 22 were added that way, **appended** so the twenty above keep
+  their indices. The ported set banned minutes twice — numerically and in word
+  form — but hours only once, in a pattern whose `\\d+\\s*hours?` cannot cross a
+  hyphen, so "a 3-hour drive north" and "a two-hour drive from the airport"
+  published clean. Both new patterns measure 0 hits over all 483 corpus units;
+  the rejected wider forms and their counts are recorded beside them in
+  `Ethos.GolfProse`.
+
   ## What this does not catch
 
   An unsourced *containment* claim in ordinary prose — "both are in Ponte
@@ -97,7 +105,25 @@ defmodule Ethos.Seeds.GolfSeedDataTest do
     {17, "the lodge is steps from the tee"},
     {18, "the halfway house is around the corner"},
     {19, "the caddie shack is down the road"},
-    {20, "the inn is within walking distance"}
+    {20, "the inn is within walking distance"},
+    {21, "the resort is a 3-hour drive north"},
+    {22, "the links are a two-hour drive from the airport"}
+  ]
+
+  # The five phrasings that escaped the whole twenty-pattern set before
+  # patterns 21 and 22 were appended. Kept as strings rather than specimens
+  # because two patterns cover five phrasings, and the specimen list is
+  # one-per-pattern by construction. Each is the golf sentence the gate was
+  # supposed to stop and did not.
+  @escaped_before_21_and_22 [
+    "a 3-hour drive north",
+    "a two-hour drive from the airport",
+    "roughly a two hour drive",
+    "Approximately a 2.5-hour drive",
+    "a 1.5-hour ride",
+    # This one was caught, and only by the accident that `\b\d+` re-anchors on
+    # the "5" after the decimal point. Pinned so the accident stops mattering.
+    "a 2.5 hours drive"
   ]
 
   test "every banned pattern fires on its own specimen" do
@@ -112,6 +138,12 @@ defmodule Ethos.Seeds.GolfSeedDataTest do
              "pattern #{index} (#{inspect(pattern)}) no longer fires on its specimen " <>
                "#{inspect(text)} — it has been weakened"
     end
+
+    for text <- @escaped_before_21_and_22 do
+      assert Ethos.GolfProse.banned_phrases(text) != [],
+             "hour-duration phrasing escaped the gate again: #{inspect(text)}. " <>
+               "Patterns 21 and 22 exist because every one of these published clean."
+    end
   end
 
   # Assert the PUBLISHABLE form too. A gate that bans the checkable form
@@ -123,7 +155,20 @@ defmodule Ethos.Seeds.GolfSeedDataTest do
     "the lodge sits on Round Lake Drive, north of Highway 101",
     "open 24 hours",
     "the kitchen serves until 9 p.m.",
-    "Bandon, Oregon, in Coos County"
+    "Bandon, Oregon, in Coos County",
+    # An hour is a journey duration or it is nothing. Patterns 21 and 22 are
+    # anchored on a travel word so that a round of golf, an opening time and a
+    # weather stoppage — all of which the corpus states from a source — keep
+    # publishing. Nineteen "24-hour"/"3-hour cruises" strings elsewhere in the
+    # repo are the measurement behind this list.
+    "a 4-hour round",
+    "the pace of play is a four-hour round",
+    "24-hour front desk",
+    "an indoor pool and a 24-hour fitness center",
+    "the Seaport Association runs 3-hour cruises to the lighthouse",
+    "a 3-hour rain delay",
+    "last ticket one hour before closing",
+    "a nineteenth-century six-hour clock"
   ]
 
   test "sourced, checkable spatial and time claims still publish" do
