@@ -23,16 +23,10 @@ defmodule EthosWeb.PlaceController do
           url: url(~p"/p/#{place.slug}")
         }
 
-        current_user = conn.assigns[:current_user]
-
-        visited? =
-          if current_user, do: Ethos.Visits.visited?(current_user, place), else: false
-
         render(conn, :show,
           place: place,
           featured_guides: featured,
           siblings: Places.list_siblings(place),
-          visited?: visited?,
           connected: Links.links_for("place", place.id),
           page_title: "#{place.name} — #{place.town}, #{place.state}",
           page_og: og,
@@ -41,34 +35,6 @@ defmodule EthosWeb.PlaceController do
           json_ld: [place_ld(place, meta_description), breadcrumb_ld(place)]
         )
     end
-  end
-
-  def visit(conn, %{"slug" => slug}) do
-    place = Places.get_place_by_slug!(slug)
-    user = conn.assigns.current_user
-
-    conn =
-      case Ethos.Visits.toggle_visit(user, place) do
-        {:ok, :visited} ->
-          conn = put_flash(conn, :info, "Checked off #{place.name}!")
-
-          case Ethos.Badges.check_and_award(user, place) do
-            [] ->
-              conn
-
-            awarded ->
-              names = Enum.map_join(awarded, ", ", &"#{&1.emoji} #{&1.name}")
-              put_flash(conn, :info, "Checked off #{place.name}! Badge earned: #{names}")
-          end
-
-        {:ok, :unvisited} ->
-          put_flash(conn, :info, "Removed #{place.name} from your visits.")
-
-        {:error, :closed} ->
-          put_flash(conn, :error, "#{place.name} is permanently closed.")
-      end
-
-    redirect(conn, to: ~p"/p/#{place.slug}")
   end
 
   # A slug the deletion manifest names was taken down deliberately, with a
