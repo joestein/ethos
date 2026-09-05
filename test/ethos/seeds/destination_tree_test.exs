@@ -1,5 +1,11 @@
 defmodule Ethos.Seeds.DestinationTreeTest do
-  use Ethos.DataCase, async: true
+  # `async: false`: three of these tests call `upsert_all!/0`, whose whole job is
+  # to write all 724 roster rows. Run async it is a concurrent writer of the same
+  # rows as every other full-roster seeder, and two such transactions deadlock or
+  # get cancelled — the suite failed about one run in three until the six async
+  # writers were dealt with. This one cannot be narrowed: the roster is the
+  # subject, not the fixture.
+  use Ethos.DataCase, async: false
 
   alias Ethos.Destinations
   alias Ethos.Seeds.DestinationTree

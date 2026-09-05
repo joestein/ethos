@@ -63,6 +63,58 @@ defmodule EthosWeb.SitemapControllerTest do
     assert body =~ "<loc>#{url(~p"/destinations/italy/lazio/rome")}</loc><lastmod>"
   end
 
+  # A guide whose destination is a bare state name derives the same slug as the
+  # state hub, so the URL was emitted twice — once from the guide-derived
+  # destinations and once from the states. The Antique Trail guide, whose
+  # destination is "Connecticut", is what surfaced it, but any such guide would.
+  test "no URL is listed twice", %{conn: conn} do
+    published_guide_fixture(%{destination: "Connecticut", state: "Connecticut"})
+    published_guide_fixture(%{destination: "Woodbury, Connecticut", state: "Connecticut"})
+
+    body = conn |> get("/sitemap.xml") |> response(200)
+
+    locs = Regex.scan(~r{<loc>([^<]+)</loc>}, body, capture: :all_but_first) |> List.flatten()
+    dupes = locs -- Enum.uniq(locs)
+
+    assert dupes == [], "sitemap lists these URLs more than once: #{inspect(Enum.uniq(dupes))}"
+  end
+
+  test "includes /photos for photo-bearing published guides only", %{conn: conn} do
+    with_photos = published_guide_fixture(%{destination: "Rome, Italy"})
+
+    {:ok, with_photos} =
+      Guides.update_guide_photos(with_photos, [
+        %{
+          "src" => "/photos/rome/trevi-fountain.jpg",
+          "thumb" => "/photos/rome/trevi-fountain_thumb.jpg",
+          "title" => "Trevi Fountain",
+          "description" => "Oceanus in afternoon sun."
+        }
+      ])
+
+    without_photos = published_guide_fixture(%{destination: "Lisbon, Portugal"})
+
+    conn = get(conn, "/sitemap.xml")
+    body = response(conn, 200)
+
+    assert body =~ url(~p"/g/#{with_photos.slug}/photos")
+    refute body =~ url(~p"/g/#{without_photos.slug}/photos")
+  end
+end
+
+defmodule EthosWeb.SitemapRosterTest do
+  @moduledoc """
+  The one sitemap assertion that needs the whole tree, held apart from the rest
+  of the file so the other three stay parallel.
+
+  `async: false`, deliberately: this seeds all 724 roster rows, and an async
+  test that does that is a concurrent writer of the same rows as every other
+  full-roster seeder. Two such transactions deadlock or get cancelled, and the
+  suite failed roughly one run in three until the async writers were dealt
+  with. It cannot be narrowed — "every node is listed" is the assertion.
+  """
+  use EthosWeb.ConnCase, async: false
+
   # The whole roster, so this measures the real tree rather than a hand-built
   # pair of nodes: every node is listed at its own path, and no node's legacy
   # path — the URL it used to live at, which now 301s — is listed anywhere.
@@ -101,43 +153,5 @@ defmodule EthosWeb.SitemapControllerTest do
     assert advertised_legacy == [],
            "the sitemap advertises these legacy paths, every one of which 301s: " <>
              inspect(advertised_legacy)
-  end
-
-  # A guide whose destination is a bare state name derives the same slug as the
-  # state hub, so the URL was emitted twice — once from the guide-derived
-  # destinations and once from the states. The Antique Trail guide, whose
-  # destination is "Connecticut", is what surfaced it, but any such guide would.
-  test "no URL is listed twice", %{conn: conn} do
-    published_guide_fixture(%{destination: "Connecticut", state: "Connecticut"})
-    published_guide_fixture(%{destination: "Woodbury, Connecticut", state: "Connecticut"})
-
-    body = conn |> get("/sitemap.xml") |> response(200)
-
-    locs = Regex.scan(~r{<loc>([^<]+)</loc>}, body, capture: :all_but_first) |> List.flatten()
-    dupes = locs -- Enum.uniq(locs)
-
-    assert dupes == [], "sitemap lists these URLs more than once: #{inspect(Enum.uniq(dupes))}"
-  end
-
-  test "includes /photos for photo-bearing published guides only", %{conn: conn} do
-    with_photos = published_guide_fixture(%{destination: "Rome, Italy"})
-
-    {:ok, with_photos} =
-      Guides.update_guide_photos(with_photos, [
-        %{
-          "src" => "/photos/rome/trevi-fountain.jpg",
-          "thumb" => "/photos/rome/trevi-fountain_thumb.jpg",
-          "title" => "Trevi Fountain",
-          "description" => "Oceanus in afternoon sun."
-        }
-      ])
-
-    without_photos = published_guide_fixture(%{destination: "Lisbon, Portugal"})
-
-    conn = get(conn, "/sitemap.xml")
-    body = response(conn, 200)
-
-    assert body =~ url(~p"/g/#{with_photos.slug}/photos")
-    refute body =~ url(~p"/g/#{without_photos.slug}/photos")
   end
 end

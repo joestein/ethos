@@ -173,7 +173,10 @@ defmodule Ethos.DestinationsTest do
 
   describe "legacy_geo/1" do
     test "reproduces the triple a corpus used to carry" do
-      Ethos.Seeds.DestinationTree.upsert_all!()
+      # Rome's chain and nothing else. The whole roster would be 724 rows of
+      # concurrent writes for three nodes' worth of ancestry — see
+      # `seed_destination_paths!/1`'s docs for why that costs the suite.
+      Ethos.SeedDataHelpers.seed_destination_paths!(["italy/lazio/rome"])
 
       monti =
         Destinations.upsert_destination!(%{
@@ -221,7 +224,7 @@ defmodule Ethos.DestinationsTest do
       # and under no county. The county fallback that gives Vatican City a
       # county must not fire here, or that guide would be filed under a
       # /destinations/connecticut/connecticut hub repeating the state's name.
-      Ethos.Seeds.DestinationTree.upsert_all!()
+      Ethos.SeedDataHelpers.seed_destination_paths!(["united-states/connecticut"])
       connecticut = Destinations.get_by_path("united-states/connecticut")
 
       assert connecticut.kind == "region"

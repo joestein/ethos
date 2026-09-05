@@ -236,6 +236,34 @@ defmodule Ethos.SeedDataHelpers do
   end
 
   @doc """
+  Seeds the roster nodes one JSON seed file names, plus their ancestors.
+
+  A file names its guide's `destination_path` and one per place, and the
+  loaders resolve every one of them against the `destinations` table. Reading
+  them out of the file is what lets a test run a committed corpus file through
+  the ordinary loader without seeding the whole 724-node roster to do it —
+  which is the thing that made six `async: true` files concurrent writers of
+  the same rows.
+  """
+  def seed_destinations_for_file!(file) do
+    data = DataGuide.load!(file)
+
+    paths =
+      [
+        get_in(data, ["guide", "destination_path"])
+        | Enum.map(data["places"] || [], & &1["destination_path"])
+      ]
+      |> Enum.reject(&is_nil/1)
+      |> Enum.uniq()
+
+    assert paths != [],
+           "#{file} names no destination node, so this seeds nothing and every loader call " <>
+             "after it raises"
+
+    seed_destination_paths!(paths)
+  end
+
+  @doc """
   Seeds the roster nodes at these paths, plus every ancestor of each.
 
   The general form behind `seed_code_destinations!/0` and

@@ -106,12 +106,17 @@ defmodule EthosWeb.AffiliatePlacementTest do
     # `Destinations.legacy_geo/1` derived from the roster — so config, roster
     # and loader must agree, which is the only combination that pays.
     test "a Bronx place seeded through the loader carries the widget", %{conn: conn} do
+      file = "priv/seed_data/bronx/belmont.json"
+
       # Destinations before places: the loader resolves every destination_path
       # against this table, and writing them in this order keeps async tests
       # from taking the two tables' row locks in opposite orders.
-      Ethos.Seeds.DestinationTree.upsert_all!()
-
-      file = "priv/seed_data/bronx/belmont.json"
+      #
+      # Only the nodes this one file names, read out of the file itself. The
+      # whole roster here made six async files concurrent writers of the same
+      # 724 rows, which is a deadlock or a cancelled statement roughly one run
+      # in three.
+      Ethos.SeedDataHelpers.seed_destinations_for_file!(file)
       Ethos.Seeds.DataGuide.upsert_places!(file)
 
       slug =
@@ -649,12 +654,13 @@ defmodule EthosWeb.AffiliatePlacementTest do
     test "a Rome neighbourhood guide seeded through the loader carries the widget", %{
       conn: conn
     } do
+      file = "priv/seed_data/rome/ardeatino.json"
+
       # Destinations before guides — the loader resolves destination_path
       # against that table, and the order keeps async tests off each other's
-      # row locks.
-      Ethos.Seeds.DestinationTree.upsert_all!()
+      # row locks. Only this file's own nodes, not the whole roster.
+      Ethos.SeedDataHelpers.seed_destinations_for_file!(file)
 
-      file = "priv/seed_data/rome/ardeatino.json"
       email = Ethos.AccountsFixtures.user_fixture().email
       Ethos.Seeds.DataGuide.upsert_places!(file)
       guide = Ethos.Seeds.DataGuide.upsert_guide!(file, email)

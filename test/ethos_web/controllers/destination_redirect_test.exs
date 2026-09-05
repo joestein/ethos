@@ -1,5 +1,10 @@
 defmodule EthosWeb.DestinationRedirectTest do
-  use EthosWeb.ConnCase, async: true
+  # `async: false`: every test here resolves a legacy path against the whole
+  # roster — the redirect table alone spans seven, and the town-hub table many
+  # more — so the setup seeds all 724 rows. Seeding that from an async test made
+  # it a concurrent writer of rows other full-roster seeders write, which
+  # deadlocks. Do not flip this back for speed.
+  use EthosWeb.ConnCase, async: false
 
   import Ethos.GuidesFixtures
 

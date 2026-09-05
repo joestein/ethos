@@ -8,11 +8,12 @@ defmodule EthosWeb.DestinationControllerTest do
   alias Ethos.Destinations
   alias Ethos.SeedDataHelpers
 
-  # The whole roster. Used only where the test is about depth — a country, a
-  # county and a five-deep neighborhood served by one route — because seeding
-  # 724 rows per test is not free. Everything else names the two or three nodes
-  # it actually needs.
-  defp seed_tree, do: Ethos.Seeds.DestinationTree.upsert_all!()
+  # No `seed_tree/0` any more. Seeding the whole 724-node roster from an
+  # `async: true` test makes it a concurrent writer of rows five other async
+  # files also write, and the suite failed roughly one run in three on a
+  # deadlock or a cancelled statement somewhere in that set. Every test here
+  # names the nodes it needs instead — at most a chain and a sibling, even for
+  # the tests that are about depth.
 
   # A roster node plus its ancestors, and nothing else, so a hub's children
   # list is exactly what the test asked for.
@@ -32,19 +33,23 @@ defmodule EthosWeb.DestinationControllerTest do
 
   describe "one route, every depth" do
     test "a country hub lists its regions", %{conn: conn} do
-      seed_tree()
+      node!("united-states/connecticut")
       conn = get(conn, ~p"/destinations/united-states")
       assert html_response(conn, 200) =~ "Connecticut"
     end
 
     test "a county hub lists its towns", %{conn: conn} do
-      seed_tree()
+      node!("united-states/connecticut/litchfield-county/washington")
       conn = get(conn, ~p"/destinations/united-states/connecticut/litchfield-county")
-      assert html_response(conn, 200) =~ "Litchfield County"
+      html = html_response(conn, 200)
+      assert html =~ "Litchfield County"
+      # The town, which is what "lists its towns" means and what the whole
+      # roster used to supply incidentally.
+      assert html =~ "Washington"
     end
 
     test "a five-deep neighborhood hub renders", %{conn: conn} do
-      seed_tree()
+      node!("united-states/new-york/new-york-city/manhattan/alphabet-city")
 
       conn =
         get(conn, ~p"/destinations/united-states/new-york/new-york-city/manhattan/alphabet-city")
@@ -53,7 +58,7 @@ defmodule EthosWeb.DestinationControllerTest do
     end
 
     test "an unknown path is a 404", %{conn: conn} do
-      seed_tree()
+      node!("united-states/connecticut")
       conn = get(conn, ~p"/destinations/atlantis/deep/trench")
       assert html_response(conn, 404)
     end
@@ -129,7 +134,10 @@ defmodule EthosWeb.DestinationControllerTest do
 
   describe "the index" do
     test "lists the tree's countries and not the towns beneath them", %{conn: conn} do
-      seed_tree()
+      # Two countries and one town beneath one of them — the refute below needs
+      # Rome to exist and still be absent from the index.
+      node!("united-states")
+      node!("italy/lazio/rome")
 
       html = conn |> get(~p"/destinations") |> html_response(200)
 
