@@ -35,10 +35,10 @@ defmodule Ethos.Social do
   """
   def react(%User{} = user, subject, value) do
     {type, id} = Subject.ref(subject)
-    do_react(user, type, id, value)
+    do_react(user, type, id, value, _retry? = true)
   end
 
-  defp do_react(user, type, id, value) do
+  defp do_react(user, type, id, value, retry?) do
     case Repo.get_by(Reaction, user_id: user.id, subject_type: type, subject_id: id) do
       nil ->
         %Reaction{}
@@ -54,28 +54,39 @@ defmodule Ethos.Social do
             {:ok, :added}
 
           {:error, changeset} ->
-            if unique_reaction_collision?(changeset) do
+            if retry? and unique_reaction_collision?(changeset) do
               # Lost a race with a concurrent insert for the same
               # (user, subject) pair: a row now exists where a moment ago
               # there was none. Re-reading and falling back into the
               # existing-row branches below keeps this function's
               # contract intact instead of surfacing a spurious
               # {:error, changeset} for what is, from the caller's point
-              # of view, a perfectly normal toggle.
-              do_react(user, type, id, value)
+              # of view, a perfectly normal toggle. Bounded to a single
+              # retry: a second collision in a row means something is
+              # churning this (user, subject) pair fast enough that
+              # resolving it here would just be a live-lock, so we hand
+              # back the error instead of looping forever.
+              do_react(user, type, id, value, _retry? = false)
             else
               {:error, changeset}
             end
         end
 
       %Reaction{value: ^value} = existing ->
-        Repo.delete!(existing)
-        {:ok, :cleared}
+        # The row read above can be gone by the time this runs — another
+        # request may have deleted or switched it in between. Without
+        # :stale_error_field, Ecto raises Ecto.StaleEntryError on a
+        # zero-row delete; with it, a stale write comes back as an
+        # ordinary {:error, changeset} instead of crashing the caller.
+        case Repo.delete(existing, stale_error_field: :id) do
+          {:ok, _reaction} -> {:ok, :cleared}
+          {:error, changeset} -> {:error, changeset}
+        end
 
       existing ->
         existing
         |> Reaction.changeset(%{value: value})
-        |> Repo.update()
+        |> Repo.update(stale_error_field: :id)
         |> case do
           {:ok, _reaction} -> {:ok, :switched}
           {:error, changeset} -> {:error, changeset}
