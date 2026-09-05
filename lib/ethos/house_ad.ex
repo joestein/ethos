@@ -90,8 +90,20 @@ defmodule Ethos.HouseAd do
 
     missing = @pool_slugs -- Enum.map(rows, &elem(&1, 0))
 
-    if missing != [] do
-      Logger.warning("house ad: no published guide for #{Enum.join(missing, ", ")}")
+    cond do
+      missing == [] ->
+        :ok
+
+      length(missing) == length(@pool_slugs) ->
+        # No Connecticut corpus at all — an empty test database, or dev before
+        # seeding. Expected, so it does not warn; a line that fires on every
+        # boot is a line nobody reads.
+        Logger.info("house ad: no Connecticut guides present, the unit will not render")
+
+      true ->
+        # Some slugs resolved and some did not, so guides have moved out from
+        # under the pool list. That is drift worth an operator's attention.
+        Logger.warning("house ad: no published guide for #{Enum.join(missing, ", ")}")
     end
 
     photos =
@@ -106,7 +118,12 @@ defmodule Ethos.HouseAd do
         end
       end)
 
-    if photos == [] do
+    # Only warn here when guides resolved but none had a usable photograph —
+    # the case where no guide resolved at all is the absent-corpus case
+    # already covered by the :info branch above, and warning again on top of
+    # it would be the same "fires on every empty-database run" problem this
+    # fix exists to remove.
+    if photos == [] and rows != [] do
       Logger.warning("house ad: pool is empty; the unit will not render")
     end
 
