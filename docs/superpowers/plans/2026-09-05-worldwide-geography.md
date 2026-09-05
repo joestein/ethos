@@ -2086,6 +2086,15 @@ git commit -m "refactor: place queries key on the destination node"
 > (`affiliate_corpus_test`, `affiliate_placement_test`) must still pass — they
 > seed real rows through the loader and assert the widget resolves, and they are
 > the only reason this class is now visible at all.
+>
+> **Port those two gates in the SAME change, do not delete and revisit.** Both
+> read `Destinations.legacy_geo_from_trail/1`, which this task also removes, so
+> they will not compile once the shim goes. Deleting a gate because it stopped
+> compiling is precisely how this class of bug arrived twice — the Bronx locale
+> broke in Task 5 and survived five clean reviews behind a negative-only test.
+> Rewrite them against whatever replaces the shim, and verify each still fails
+> when you reintroduce the bug it was written to catch. A gate you did not
+> watch fail is not a gate.
 
 - [ ] **Step 1: Prove nothing reads the columns**
 
