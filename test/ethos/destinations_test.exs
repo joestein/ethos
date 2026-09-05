@@ -62,4 +62,35 @@ defmodule Ethos.DestinationsTest do
       assert %{path: ^good} = Destinations.upsert_destination!(%{@valid | path: good})
     end
   end
+
+  test "accepts a path deeper than two segments and derives its slug" do
+    d =
+      Destinations.upsert_destination!(%{
+        path: "united-states/new-york/new-york-city/manhattan/alphabet-city",
+        name: "Alphabet City",
+        intro: "Loisaida's community gardens.",
+        kind: "neighborhood"
+      })
+
+    assert d.slug == "alphabet-city"
+    assert d.kind == "neighborhood"
+    assert d.position == 0
+    assert d.legacy_paths == []
+  end
+
+  test "rejects a kind outside the vocabulary" do
+    assert_raise Ecto.InvalidChangesetError, fn ->
+      Destinations.upsert_destination!(%{
+        path: "atlantis",
+        name: "Atlantis",
+        intro: "Not a real tier.",
+        kind: "planet"
+      })
+    end
+  end
+
+  test "kinds/0 is the seven-tier vocabulary" do
+    assert Ethos.Destinations.Destination.kinds() ==
+             ~w(country region county city borough town neighborhood)
+  end
 end
