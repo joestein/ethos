@@ -28,6 +28,7 @@ defmodule EthosWeb.DestinationControllerTest do
     user = user_fixture()
     fixtures = Path.expand("../../support/fixtures/seed_data", __DIR__)
 
+    Ethos.SeedDataHelpers.seed_fixture_destinations!()
     Ethos.Seeds.DataGuide.upsert_from_file!(Path.join(fixtures, "townville.json"), user.email)
 
     html = conn |> get(~p"/destinations/connecticut/windham-county") |> html_response(200)
@@ -53,6 +54,7 @@ defmodule EthosWeb.DestinationControllerTest do
   test "state and county destination pages emit OpenGraph tags", %{conn: conn} do
     user = user_fixture()
     fixtures = Path.expand("../../support/fixtures/seed_data", __DIR__)
+    Ethos.SeedDataHelpers.seed_fixture_destinations!()
     Ethos.Seeds.DataGuide.upsert_from_file!(Path.join(fixtures, "townville.json"), user.email)
 
     state = conn |> get(~p"/destinations/connecticut") |> html_response(200)
@@ -90,6 +92,7 @@ defmodule EthosWeb.DestinationControllerTest do
   test "a state hub with counties keeps the county section and the county promise", %{conn: conn} do
     user = user_fixture()
     fixtures = Path.expand("../../support/fixtures/seed_data", __DIR__)
+    Ethos.SeedDataHelpers.seed_fixture_destinations!()
     Ethos.Seeds.DataGuide.upsert_from_file!(Path.join(fixtures, "townville.json"), user.email)
 
     html = conn |> get(~p"/destinations/connecticut") |> html_response(200)
@@ -106,6 +109,7 @@ defmodule EthosWeb.DestinationControllerTest do
   test "a state page with a destination record renders its intro", %{conn: conn} do
     user = user_fixture()
     fixtures = Path.expand("../../support/fixtures/seed_data", __DIR__)
+    Ethos.SeedDataHelpers.seed_fixture_destinations!()
     Ethos.Seeds.DataGuide.upsert_from_file!(Path.join(fixtures, "townville.json"), user.email)
 
     Destinations.upsert_destination!(%{
@@ -124,6 +128,7 @@ defmodule EthosWeb.DestinationControllerTest do
   } do
     user = user_fixture()
     fixtures = Path.expand("../../support/fixtures/seed_data", __DIR__)
+    Ethos.SeedDataHelpers.seed_fixture_destinations!()
     Ethos.Seeds.DataGuide.upsert_from_file!(Path.join(fixtures, "townville.json"), user.email)
 
     html = conn |> get(~p"/destinations/connecticut") |> html_response(200)
@@ -133,6 +138,7 @@ defmodule EthosWeb.DestinationControllerTest do
   test "a county page with a record renders its intro", %{conn: conn} do
     user = user_fixture()
     fixtures = Path.expand("../../support/fixtures/seed_data", __DIR__)
+    Ethos.SeedDataHelpers.seed_fixture_destinations!()
     Ethos.Seeds.DataGuide.upsert_from_file!(Path.join(fixtures, "townville.json"), user.email)
 
     Destinations.upsert_destination!(%{
@@ -149,6 +155,7 @@ defmodule EthosWeb.DestinationControllerTest do
   test "a record with a photo supplies the og:image meta tag", %{conn: conn} do
     user = user_fixture()
     fixtures = Path.expand("../../support/fixtures/seed_data", __DIR__)
+    Ethos.SeedDataHelpers.seed_fixture_destinations!()
     Ethos.Seeds.DataGuide.upsert_from_file!(Path.join(fixtures, "townville.json"), user.email)
 
     Destinations.upsert_destination!(%{
@@ -183,6 +190,7 @@ defmodule EthosWeb.DestinationControllerTest do
   test "a record with two photos renders both, each with its own credit line", %{conn: conn} do
     user = user_fixture()
     fixtures = Path.expand("../../support/fixtures/seed_data", __DIR__)
+    Ethos.SeedDataHelpers.seed_fixture_destinations!()
     Ethos.Seeds.DataGuide.upsert_from_file!(Path.join(fixtures, "townville.json"), user.email)
 
     Destinations.upsert_destination!(%{
@@ -242,6 +250,7 @@ defmodule EthosWeb.DestinationControllerTest do
     defp seed_connecticut do
       user = user_fixture()
       fixtures = Path.expand("../../support/fixtures/seed_data", __DIR__)
+      Ethos.SeedDataHelpers.seed_fixture_destinations!()
       Ethos.Seeds.DataGuide.upsert_from_file!(Path.join(fixtures, "townville.json"), user.email)
       :ok
     end

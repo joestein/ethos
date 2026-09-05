@@ -171,6 +171,7 @@ defmodule Ethos.Release do
   defp seed_region(region, email) do
     load_app()
     Application.ensure_all_started(@app)
+    Ethos.Seeds.DestinationTree.upsert_all!()
 
     for {mod, _region} <- Ethos.Seeds.Catalog.place_modules(region), do: mod.upsert_all!()
 
@@ -186,6 +187,7 @@ defmodule Ethos.Release do
   defp seed_directory(dir, email) do
     load_app()
     Application.ensure_all_started(@app)
+    Ethos.Seeds.DestinationTree.upsert_all!()
 
     files =
       [:code.priv_dir(@app) |> to_string(), "seed_data", dir, "*.json"]

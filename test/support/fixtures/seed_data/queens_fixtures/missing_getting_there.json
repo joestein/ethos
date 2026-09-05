@@ -3,8 +3,7 @@
     "slug": "fixture-missing-getting-there-queens-guide",
     "title": "Fixture: Missing Getting There",
     "destination": "Fixture, New York",
-    "state": "New York",
-    "county": "Queens",
+    "destination_path": "united-states/new-york/new-york-city/queens/fixture",
     "intro": "A fixture guide used only to prove the transit-heading assertion fires.",
     "sections": [
       {

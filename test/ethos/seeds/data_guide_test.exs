@@ -10,6 +10,15 @@ defmodule Ethos.Seeds.DataGuideTest do
   @refville Path.join(@fixtures, "refville.json")
   @townville Path.join(@fixtures, "townville.json")
 
+  # The fixture files name Townville, Testville and Refville, which are not in
+  # the roster and never will be; the loaders resolve every destination_path
+  # against the destinations table and raise on a miss, so the rows are seeded
+  # here alongside the real ancestors they hang from.
+  setup do
+    Ethos.SeedDataHelpers.seed_fixture_destinations!()
+    :ok
+  end
+
   test "upsert_from_file! creates places, guide, and linked entries; idempotent" do
     user = user_fixture()
 
@@ -56,7 +65,7 @@ defmodule Ethos.Seeds.DataGuideTest do
 
     File.write!(
       bad,
-      ~s({"guide": {"slug": "bad-ref-guide", "title": "Bad", "destination": "Bad, New York", "state": "New York", "county": "Manhattan", "intro": "x", "sections": [], "faq": [], "photos": []}, "places": [], "entries": [{"kind": "sight", "name": "Ghost", "place_slug": "no-such-place", "note": "x"}]})
+      ~s({"guide": {"slug": "bad-ref-guide", "title": "Bad", "destination": "Bad, New York", "destination_path": "united-states/new-york/new-york-city/manhattan/testville", "intro": "x", "sections": [], "faq": [], "photos": []}, "places": [], "entries": [{"kind": "sight", "name": "Ghost", "place_slug": "no-such-place", "note": "x"}]})
     )
 
     DataGuide.upsert_places!(bad)
@@ -89,7 +98,7 @@ defmodule Ethos.Seeds.DataGuideTest do
 
     File.write!(
       bad,
-      ~s({"guide": {"slug": "bad-link-guide", "title": "Bad", "destination": "Bad, New York", "state": "New York", "county": "Manhattan", "intro": "x", "sections": [], "faq": [], "photos": []}, "places": [], "entries": [], "links": [{"target": "guide:no-such-guide-slug", "kind": "nearby", "note": null}]})
+      ~s({"guide": {"slug": "bad-link-guide", "title": "Bad", "destination": "Bad, New York", "destination_path": "united-states/new-york/new-york-city/manhattan/testville", "intro": "x", "sections": [], "faq": [], "photos": []}, "places": [], "entries": [], "links": [{"target": "guide:no-such-guide-slug", "kind": "nearby", "note": null}]})
     )
 
     DataGuide.upsert_places!(bad)
@@ -144,7 +153,7 @@ defmodule Ethos.Seeds.DataGuideTest do
 
     File.write!(
       bad,
-      ~s({"guide": {"slug": "bad-tier-guide", "title": "Bad", "destination": "Bad, Connecticut", "state": "Connecticut", "county": "Windham County", "intro": "x", "tier": "leaflet", "sections": [], "faq": [], "photos": []}, "places": [], "entries": []})
+      ~s({"guide": {"slug": "bad-tier-guide", "title": "Bad", "destination": "Bad, Connecticut", "destination_path": "united-states/connecticut/windham-county/townville", "intro": "x", "tier": "leaflet", "sections": [], "faq": [], "photos": []}, "places": [], "entries": []})
     )
 
     assert_raise ArgumentError, ~r/bad-tier-seed\.json.*leaflet/s, fn -> DataGuide.load!(bad) end

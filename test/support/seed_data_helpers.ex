@@ -64,6 +64,122 @@ defmodule Ethos.SeedDataHelpers do
   defdelegate code_guides, to: Ethos.Seeds.Catalog, as: :guides_owned
 
   @doc """
+  Every roster path mapped to its ancestry trail — root-first, the node itself
+  last — as maps carrying `:path`, `:kind` and `:name`.
+
+  Read from `priv/seed_data/destination_tree.json`, not from the database, so
+  the corpus gates that are `ExUnit.Case` rather than `DataCase` can resolve
+  the `destination_path` a seed file now carries in place of the town/state
+  pair it used to. Feed a trail to `Ethos.Destinations.legacy_geo_from_trail/1`
+  to get the triple the loaders derive from the same ancestry.
+  """
+  def destination_trails do
+    by_path =
+      Map.new(Ethos.Seeds.DestinationTree.load!(), fn n ->
+        {n["path"], %{path: n["path"], kind: n["kind"], name: n["name"]}}
+      end)
+
+    Map.new(by_path, fn {path, _node} ->
+      trail =
+        path
+        |> String.split("/")
+        |> Enum.scan([], fn seg, acc -> acc ++ [seg] end)
+        |> Enum.map(&Enum.join(&1, "/"))
+        |> Enum.map(&by_path[&1])
+        |> Enum.reject(&is_nil/1)
+
+      {path, trail}
+    end)
+  end
+
+  @fixture_ancestors ~w(
+    united-states
+    united-states/connecticut
+    united-states/connecticut/windham-county
+    united-states/new-york
+    united-states/new-york/new-york-city
+    united-states/new-york/new-york-city/manhattan
+  )
+
+  @fixture_nodes [
+    %{
+      path: "united-states/connecticut/windham-county/townville",
+      name: "Townville",
+      kind: "town",
+      intro: "A fixture town."
+    },
+    %{
+      path: "united-states/new-york/new-york-city/manhattan/testville",
+      name: "Testville",
+      kind: "neighborhood",
+      intro: "A fixture neighborhood."
+    },
+    %{
+      path: "united-states/new-york/new-york-city/manhattan/refville",
+      name: "Refville",
+      kind: "neighborhood",
+      intro: "A fixture neighborhood."
+    }
+  ]
+
+  @doc """
+  Seeds the make-believe nodes the seed-data fixtures under
+  `test/support/fixtures/seed_data/` name, plus the real ancestors they hang
+  from.
+
+  Townville, Testville and Refville have no business in
+  `priv/seed_data/destination_tree.json`, but the loaders resolve every
+  `destination_path` against the `destinations` table and raise on a miss, so
+  the fixtures need rows. They are filed under Windham County and Manhattan
+  because what the fixture tests read back is the state and county derived from
+  that ancestry.
+
+  Six ancestors rather than the whole 678-node roster, because these are
+  controller tests that seed one fixture file each and the roster would be
+  seeded per test. The ancestors' names and kinds are read out of the roster
+  instead of restated here, so a renamed borough cannot leave the fixtures
+  asserting a name production no longer uses.
+
+  They are also written in the roster's own order — shallowest first, roster
+  order within a tier — which is the order `DestinationTree.upsert_all!/0`
+  writes in. Two async tests that both touch `destinations` then take their row
+  locks in one consistent global order and can only wait on each other, never
+  deadlock; seeding these six in a private order of their own produced exactly
+  that deadlock.
+  """
+  def seed_fixture_destinations! do
+    wanted = MapSet.new(@fixture_ancestors)
+
+    ancestors =
+      Ethos.Seeds.DestinationTree.load!()
+      |> Enum.filter(&MapSet.member?(wanted, &1["path"]))
+      |> Enum.sort_by(&(&1["path"] |> String.split("/") |> length()))
+
+    assert length(ancestors) == MapSet.size(wanted),
+           "the roster no longer holds every ancestor the seed-data fixtures hang from: " <>
+             inspect(MapSet.difference(wanted, MapSet.new(ancestors, & &1["path"])))
+
+    for node <- ancestors do
+      upsert_node!(%{
+        path: node["path"],
+        name: node["name"],
+        kind: node["kind"],
+        intro: node["intro"]
+      })
+    end
+
+    Enum.each(@fixture_nodes, &upsert_node!/1)
+    :ok
+  end
+
+  defp upsert_node!(attrs) do
+    parent_path = attrs.path |> String.split("/") |> Enum.drop(-1) |> Enum.join("/")
+    parent = parent_path != "" && Ethos.Destinations.get_by_path(parent_path)
+
+    Ethos.Destinations.upsert_destination!(Map.put(attrs, :parent_id, if(parent, do: parent.id)))
+  end
+
+  @doc """
   Asserts each place slug is defined exactly once across the whole corpus:
   every `priv/seed_data/*/*.json` file plus every code-defined places module.
   """

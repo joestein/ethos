@@ -13,12 +13,21 @@ defmodule EthosWeb.AffiliateCorpusTest do
   alias Ethos.Seeds.Catalog
   alias Ethos.Seeds.DataGuide
 
+  # A seed file names a destination node instead of carrying a state/county
+  # pair, so the pair `Affiliates.unanimous_locale/1` reads is derived here the
+  # way the loaders derive it — off the roster, through
+  # `Destinations.legacy_geo_from_trail/1`, so this gate and the loaders cannot
+  # disagree about what a file's state is.
   defp row_from_seed_file(path) do
-    g = DataGuide.load!(path)["guide"]
+    node_path = DataGuide.load!(path)["guide"]["destination_path"]
+    trails = Ethos.SeedDataHelpers.destination_trails()
+
+    geo =
+      Ethos.Destinations.legacy_geo_from_trail(Map.fetch!(trails, node_path))
 
     %{
-      state_slug: Guide.derive_destination_slug(g["state"]),
-      county: g["county"]
+      state_slug: Guide.derive_destination_slug(geo["state"]),
+      county: geo["county"]
     }
   end
 

@@ -96,6 +96,8 @@ defmodule EthosWeb.JsonLdParityTest do
 
     # An orientation page (tier "town-page") plus the Connecticut state and
     # Windham County hubs it populates.
+    Ethos.SeedDataHelpers.seed_fixture_destinations!()
+
     town_page =
       Ethos.Seeds.DataGuide.upsert_from_file!(
         Path.expand("../../support/fixtures/seed_data/townville.json", __DIR__),

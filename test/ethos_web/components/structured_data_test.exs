@@ -32,6 +32,31 @@ defmodule EthosWeb.StructuredDataTest do
     assert StructuredData.postal_address(nil, "Waterbury", "Connecticut") == nil
   end
 
+  # A seed file names a destination node instead of carrying a town/state
+  # pair, so the locality and region the emitter is measured on are read off
+  # priv/seed_data/destination_tree.json.
+  #
+  # Locality is the node's own name. Region is what the corpus calls the
+  # place's country-level jurisdiction: the state for American places, the
+  # country's own name for Italy and Vatican City, and "England" for British
+  # ones — the National Heritage List's jurisdiction, and the key
+  # StructuredData maps to GB (see @country_by_region there).
+  #
+  # Derived that way rather than taken straight off the ancestry because a
+  # region postal_address/3 does not recognise silently means "US". Pass it
+  # nil, or "Lazio", and a Roman address is judged by the American
+  # house-number rule while the Italian, Vatican and British assertions below
+  # match nothing at all and pass while proving nothing. Each of those three
+  # asserts a non-empty set for the same reason.
+  defp region_for(trail) do
+    case Enum.find(trail, &(&1.kind == "country")) do
+      %{path: "italy"} -> "Italy"
+      %{path: "vatican-city"} -> "Vatican City"
+      %{path: "united-kingdom"} -> "England"
+      _ -> Enum.find_value(trail, fn d -> if d.kind == "region", do: d.name end)
+    end
+  end
+
   describe "postal_address/3 over the whole seed corpus" do
     # The emitter's counterpart to the parser's corpus test in
     # test/ethos/places/address_test.exs. The parser guard cannot catch a
@@ -43,6 +68,8 @@ defmodule EthosWeb.StructuredDataTest do
     # and Brooklyn alike.
 
     setup do
+      trails = Ethos.SeedDataHelpers.destination_trails()
+
       places =
         Ethos.SeedDataHelpers.all_seed_files()
         |> Enum.flat_map(fn f ->
@@ -50,19 +77,19 @@ defmodule EthosWeb.StructuredDataTest do
         end)
         |> Enum.reject(&is_nil(&1["address"]))
 
-      emitted =
-        Enum.map(places, fn p ->
-          {p["address"], StructuredData.postal_address(p["address"], p["town"], p["state"])}
-        end)
-
-      # Carried alongside `emitted` rather than folded into it: every other
-      # test in this block patterns on `{raw, ld}`, and the region is only
-      # needed by the country assertion below.
+      # Carried with the region rather than without it: every other test in
+      # this block patterns on `{raw, ld}`, and the region is only needed by
+      # the country and per-country street assertions.
       with_region =
         Enum.map(places, fn p ->
-          {p["address"], p["state"],
-           StructuredData.postal_address(p["address"], p["town"], p["state"])}
+          trail = Map.fetch!(trails, p["destination_path"])
+          region = region_for(trail)
+
+          {p["address"], region,
+           StructuredData.postal_address(p["address"], List.last(trail).name, region)}
         end)
+
+      emitted = Enum.map(with_region, fn {raw, _region, ld} -> {raw, ld} end)
 
       %{emitted: emitted, with_region: with_region}
     end

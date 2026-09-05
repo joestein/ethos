@@ -647,12 +647,25 @@ defmodule Ethos.Seeds.SanFranciscoSeedDataTest do
 
       assert is_map(doc["guide"]), "#{name} has no guide object"
 
-      assert doc["guide"]["state"] == "California",
-             "#{name} does not carry state \"California\", so it will not route under " <>
-               "/destinations/california/san-francisco"
+      # Asserted on the node path, which replaced the state/county pair the
+      # corpus carried until the destination tree landed. The pair said state
+      # "California", county "San Francisco"; the path says the same and names
+      # the neighborhood too, so a file filed under Oakland — or under
+      # California with no city — fails here instead of routing to whatever hub
+      # its two strings happened to derive.
+      city = "united-states/california/san-francisco"
+      guide_path = doc["guide"]["destination_path"]
 
-      assert doc["guide"]["county"] == "San Francisco",
-             "#{name} does not carry county \"San Francisco\""
+      assert String.starts_with?(guide_path, city <> "/"),
+             "#{name} is filed under #{inspect(guide_path)}, not under a neighborhood of " <>
+               "#{inspect(city)}"
+
+      for p <- doc["places"] do
+        assert p["destination_path"] == guide_path,
+               "#{name}: place #{p["slug"]} is filed under " <>
+                 "#{inspect(p["destination_path"])}, not its own guide's " <>
+                 "#{inspect(guide_path)}"
+      end
     end
 
     SeedDataHelpers.assert_place_slugs_globally_unique!()

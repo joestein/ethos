@@ -38,6 +38,12 @@ defmodule Ethos.Seeds.ManhattanSeedDataTest do
     # two-pass load, twice (idempotency)
     user = user_fixture()
 
+    # The loaders resolve every seed file's destination_path against the
+    # destinations table and raise on a miss, so the roster is a precondition
+    # of any corpus load — Ethos.Release seeds it before every corpus for the
+    # same reason.
+    Ethos.Seeds.DestinationTree.upsert_all!()
+
     for _pass <- 1..2 do
       Enum.each(files, &DataGuide.upsert_places!/1)
       Enum.each(files, &DataGuide.upsert_guide!(&1, user.email))

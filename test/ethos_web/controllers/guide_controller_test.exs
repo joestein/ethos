@@ -70,6 +70,8 @@ defmodule EthosWeb.GuideControllerTest do
   test "an orientation page renders the leaner template", %{conn: conn} do
     user = user_fixture()
 
+    Ethos.SeedDataHelpers.seed_fixture_destinations!()
+
     guide =
       Ethos.Seeds.DataGuide.upsert_from_file!(
         Path.expand("../../support/fixtures/seed_data/townville.json", __DIR__),
@@ -165,6 +167,8 @@ defmodule EthosWeb.GuideControllerTest do
 
   test "an orientation page renders the same breadcrumb as a full guide", %{conn: conn} do
     user = user_fixture()
+
+    Ethos.SeedDataHelpers.seed_fixture_destinations!()
 
     guide =
       Ethos.Seeds.DataGuide.upsert_from_file!(

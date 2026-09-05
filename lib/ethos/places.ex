@@ -8,7 +8,8 @@ defmodule Ethos.Places do
   def get_place_by_slug(slug), do: Repo.get_by(Place, slug: slug)
 
   def upsert_place!(attrs) do
-    slug = attrs[:slug] || attrs["slug"]
+    attrs = attrs |> normalize_keys() |> put_legacy_geo()
+    slug = attrs["slug"]
 
     case Repo.get_by(Place, slug: slug) do
       nil -> %Place{}
@@ -17,6 +18,33 @@ defmodule Ethos.Places do
     |> Place.changeset(attrs)
     |> Repo.insert_or_update!()
   end
+
+  defp normalize_keys(attrs), do: Map.new(attrs, fn {k, v} -> {to_string(k), v} end)
+
+  # Transitional: derives town/state/county from the destination node while
+  # those columns still have readers. Removed with the columns in Task 12.
+  # A caller that already supplied them (none, after Task 6) keeps its values.
+  defp put_legacy_geo(%{"destination_id" => id} = attrs) when not is_nil(id) do
+    if Map.has_key?(attrs, "town") do
+      attrs
+    else
+      node = Repo.get!(Ethos.Destinations.Destination, id)
+      Map.merge(attrs, Ethos.Destinations.legacy_geo(node))
+    end
+  end
+
+  defp put_legacy_geo(%{"destination_path" => path} = attrs) when is_binary(path) do
+    node =
+      Ethos.Destinations.get_by_path(path) ||
+        raise ArgumentError, "unknown destination node #{path}"
+
+    attrs
+    |> Map.delete("destination_path")
+    |> Map.put("destination_id", node.id)
+    |> Map.merge(Ethos.Destinations.legacy_geo(node))
+  end
+
+  defp put_legacy_geo(attrs), do: attrs
 
   @doc """
   Deletes places by slug, returning `{count_deleted, nil}`.

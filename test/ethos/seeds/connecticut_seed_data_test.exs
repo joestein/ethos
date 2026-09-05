@@ -214,6 +214,12 @@ defmodule Ethos.Seeds.ConnecticutSeedDataTest do
     # Seed the link-target universe (mirrors prod seeding order):
     user = user_fixture()
 
+    # The loaders resolve every seed file's destination_path against the
+    # destinations table and raise on a miss, so the roster is a precondition
+    # of any corpus load — Ethos.Release seeds it before every corpus for the
+    # same reason.
+    Ethos.Seeds.DestinationTree.upsert_all!()
+
     Ethos.Seeds.ConnecticutPlaces.upsert_all!()
 
     for mod <- [

@@ -358,6 +358,10 @@ defmodule Ethos.Seeds.DestinationSeedDataTest do
   # here, so there is one place to register a module and one test — the
   # reflection test below — that fails when a module is registered nowhere.
   defp seed_guide_corpus!(email) do
+    # The loaders resolve every seed file's destination_path against the
+    # destinations table and raise on a miss, so the roster comes first.
+    Ethos.Seeds.DestinationTree.upsert_all!()
+
     for {mod, _region} <- Ethos.Seeds.Catalog.place_modules(), do: mod.upsert_all!()
     for {mod, _region} <- Ethos.Seeds.Catalog.guide_modules(), do: mod.upsert!(email)
 
@@ -618,6 +622,8 @@ defmodule Ethos.Seeds.DestinationSeedDataTest do
     user = user_fixture()
     avon = Path.expand("../../../priv/seed_data/connecticut/avon.json", __DIR__)
 
+    Ethos.Seeds.DestinationTree.upsert_all!()
+
     DataGuide.upsert_places!(avon)
     DataGuide.upsert_guide!(avon, user.email)
     Ethos.Seeds.RomeGuide.upsert!(user.email)
@@ -714,9 +720,25 @@ defmodule Ethos.Seeds.DestinationSeedDataTest do
              "state slug, \"{state}/{county}\", or a published guide's destination slug: " <>
              inspect(unrouted)
 
-    # The records themselves must load and upsert idempotently.
-    for _pass <- 1..2, do: Enum.each(files, &DataDestination.upsert!/1)
+    # The records themselves must load and upsert idempotently. Counted as a
+    # delta across two passes rather than as the table's whole size:
+    # seed_guide_corpus!/1 above seeds the destination roster as well, since the
+    # loaders resolve each seed file's destination_path against it, so an
+    # absolute count would be asserting the roster's size rather than this
+    # loader's idempotency. The two passes are separated so the second one
+    # adding a row fails here rather than being folded into the first.
+    before = length(Ethos.Destinations.list_destinations())
 
-    assert length(Ethos.Destinations.list_destinations()) == length(files)
+    Enum.each(files, &DataDestination.upsert!/1)
+    after_first = length(Ethos.Destinations.list_destinations())
+
+    Enum.each(files, &DataDestination.upsert!/1)
+    after_second = length(Ethos.Destinations.list_destinations())
+
+    assert after_first - before == length(files),
+           "the destination records did not all upsert: #{after_first - before} rows " <>
+             "for #{length(files)} files"
+
+    assert after_second == after_first, "re-upserting the destination records added rows"
   end
 end

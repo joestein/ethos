@@ -170,4 +170,49 @@ defmodule Ethos.DestinationsTest do
       assert Destinations.get_by_legacy_path("new-york/nowhere") == nil
     end
   end
+
+  describe "legacy_geo/1" do
+    test "reproduces the triple a corpus used to carry" do
+      Ethos.Seeds.DestinationTree.upsert_all!()
+
+      monti =
+        Destinations.upsert_destination!(%{
+          path: "italy/lazio/rome/monti",
+          name: "Monti",
+          kind: "neighborhood",
+          intro: "Monti."
+        })
+
+      # "Lazio", not "Italy", which is what the Rome corpus carried before the
+      # tree landed. Italy is the country and Lazio the region; a single
+      # `state` column could hold only one of them, and holding the country was
+      # the defect this refactor exists to fix. Anything still asserting
+      # state == "Italy" for a Roman place is asserting that defect.
+      assert Destinations.legacy_geo(monti) == %{
+               "town" => "Monti",
+               "county" => "Rome",
+               "state" => "Lazio"
+             }
+    end
+
+    test "falls back to the country when a node has no region ancestor" do
+      # Vatican City is a root country node with no region above or below it,
+      # so every tier of the triple resolves to the node itself. Without the
+      # country fallback the state would be nil and Place.changeset/2 would
+      # reject every Vatican place at seed time.
+      vatican =
+        Destinations.upsert_destination!(%{
+          path: "vatican-city",
+          name: "Vatican City",
+          kind: "country",
+          intro: "Vatican City."
+        })
+
+      assert Destinations.legacy_geo(vatican) == %{
+               "town" => "Vatican City",
+               "county" => "Vatican City",
+               "state" => "Vatican City"
+             }
+    end
+  end
 end

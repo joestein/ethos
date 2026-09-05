@@ -3,15 +3,14 @@
     "slug": "fixture-marquee-duplicate-queens-guide",
     "title": "Fixture: Marquee Duplicate",
     "destination": "Fixture, New York",
-    "state": "New York",
-    "county": "Queens",
+    "destination_path": "united-states/new-york/new-york-city/queens/fixture",
     "intro": "A second fixture guide writing up the same marquee institution, which is the cross-wave duplicate the exactly-once rule exists to catch.",
     "sections": [],
     "faq": [],
     "photos": []
   },
   "places": [
-    {"slug": "forest-park", "name": "Forest Park", "kind": "park", "town": "Fixture", "state": "New York", "county": "Queens", "summary": "A fixture place.", "status": "open", "photos": []}
+    {"slug": "forest-park", "name": "Forest Park", "kind": "park", "destination_path": "united-states/new-york/new-york-city/queens/fixture", "summary": "A fixture place.", "status": "open", "photos": []}
   ],
   "entries": []
 }
