@@ -33,9 +33,14 @@ defmodule EthosWeb.PageController do
           limit: 6
       )
 
+    all_hubs = Ethos.Guides.list_states()
+
     render(conn, :home,
       featured: featured,
       latest: latest,
+      hubs: Enum.take(all_hubs, 5),
+      hub_count: length(all_hubs),
+      collections: Ethos.Collections.list_published(),
       layout: false,
       page_title: @page_title,
       page_meta_description: @description,
