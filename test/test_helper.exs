@@ -147,6 +147,32 @@ ExUnit.start()
 # off with it, so the tag names nothing and excluding it would only hide a
 # future typo. The single-call rule above still binds: this list is edited in
 # place, never by adding a second ExUnit.configure/1.
-ExUnit.configure(exclude: [:pending_wave, :pending_bronx])
+#
+# Ethos.Seeds.GolfCoursesRosterTest guards the fifty-state golf roster, and it
+# is a different shape from the borough/city gates above: the roster module
+# carries no `@moduletag`, because it is written with no vacuity floors and so
+# runs green and non-vacuously against an empty priv/seed_data/golf/ — the
+# same reasoning the London entry above wishes it had followed sooner. Only
+# the two tests that genuinely cannot check anything before a row is resolved
+# carry their own `@tag :pending_golf`: the attribution test (no verified rows
+# yet to attribute) and the exhaustion test (fifty unresolved states).
+#
+# Removed in two stages, both inside the golf-destinations programme:
+#
+#   * Task 6, which resolves the first roster row, makes the attribution test
+#     meaningful — but its `@tag :pending_golf` stays until every wave lands,
+#     because a partially-resolved roster is still not the finished set the
+#     exhaustion test asserts.
+#   * Task 13, the last in-scope wave, resolves all fifty rows and deletes
+#     both `@tag :pending_golf` lines and the :pending_golf entry below.
+#
+#     mix test --include pending_golf
+#
+# It is a fifth tag rather than a reuse of :pending_bronx, for the reason that
+# separated all the others: the Bronx programme still has Fordham Heights
+# outstanding, and whichever of the two finishes first would either be unable
+# to delete the shared tag or, deleting it, un-exclude the other's gate and
+# turn the suite red on a corpus it never touched.
+ExUnit.configure(exclude: [:pending_wave, :pending_bronx, :pending_golf])
 
 Ecto.Adapters.SQL.Sandbox.mode(Ethos.Repo, :manual)
