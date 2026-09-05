@@ -1,0 +1,103 @@
+defmodule EthosWeb.Admin.CommentsLiveTest do
+  use EthosWeb.ConnCase, async: true
+
+  import Phoenix.LiveViewTest
+  import Ethos.AccountsFixtures
+  import Ethos.GuidesFixtures
+
+  alias Ethos.Moderation
+  alias Ethos.Social
+
+  @admin_email "cryptcom@gmail.com"
+
+  setup do
+    # Admin-ness is keyed off the EMAIL matching :admin_email config, not the
+    # username. Do not try to give this fixture the username "buoewe" — Plan 1
+    # put that name on the reserved list, so `register_user/1` refuses it and
+    # the fixture would fail.
+    admin = user_fixture(%{email: @admin_email, username: "adminuser"})
+    author = user_fixture(%{username: "voyager"})
+    guide = published_guide_fixture()
+
+    {:ok, review} =
+      Social.create_review(author, guide, %{"rating" => "9", "body" => "Pending words."})
+
+    %{admin: admin, author: author, guide: guide, review: review}
+  end
+
+  # Both of these use get/2 rather than live/2 on purpose. The guards are
+  # PLUGS in the router pipeline, so they act on the HTTP request and halt
+  # before the LiveView ever mounts. `require_admin_user` RENDERS a 404 and
+  # halts — it does not raise — so `assert_error_sent` would never fire.
+  # This matches the existing pattern in
+  # test/ethos_web/controllers/admin_suggestion_controller_test.exs:61-68.
+  test "a logged-out visitor is sent to log in", %{conn: conn} do
+    assert conn |> get(~p"/admin/comments") |> redirected_to() == ~p"/users/log_in"
+  end
+
+  test "a non-admin gets a 404 rather than a hint the page exists", %{conn: conn} do
+    conn = log_in_user(conn, user_fixture(%{email: "not-admin@example.com"}))
+
+    assert conn |> get(~p"/admin/comments") |> html_response(404)
+  end
+
+  test "the admin sees pending comments with author and rating", %{conn: conn, admin: admin} do
+    {:ok, _view, html} = conn |> log_in_user(admin) |> live(~p"/admin/comments")
+
+    assert html =~ "Pending words."
+    assert html =~ "voyager"
+    assert html =~ "9"
+  end
+
+  test "approving publishes the comment", %{
+    conn: conn,
+    admin: admin,
+    review: review,
+    guide: guide
+  } do
+    {:ok, view, _html} = conn |> log_in_user(admin) |> live(~p"/admin/comments")
+
+    view |> element("button[phx-value-id=#{review.id}][phx-click=approve]") |> render_click()
+
+    assert [visible] = Social.approved_reviews(guide)
+    assert visible.id == review.id
+  end
+
+  test "an approved comment leaves the pending queue", %{conn: conn, admin: admin, review: review} do
+    {:ok, view, _html} = conn |> log_in_user(admin) |> live(~p"/admin/comments")
+
+    html =
+      view |> element("button[phx-value-id=#{review.id}][phx-click=approve]") |> render_click()
+
+    refute html =~ "Pending words."
+  end
+
+  test "revoking hides a published comment", %{
+    conn: conn,
+    admin: admin,
+    review: review,
+    guide: guide
+  } do
+    {:ok, _} = Moderation.approve_review(review, admin)
+
+    {:ok, view, _html} = conn |> log_in_user(admin) |> live(~p"/admin/comments")
+
+    view |> element("button[phx-value-id=#{review.id}][phx-click=revoke]") |> render_click()
+
+    assert Social.approved_reviews(guide) == []
+  end
+
+  test "the queue reports when it is empty", %{conn: conn, admin: admin, review: review} do
+    {:ok, _} = Moderation.approve_review(review, admin)
+
+    {:ok, _view, html} = conn |> log_in_user(admin) |> live(~p"/admin/comments")
+
+    assert html =~ "Nothing waiting"
+  end
+
+  test "the console links to the suggestions tab", %{conn: conn, admin: admin} do
+    {:ok, _view, html} = conn |> log_in_user(admin) |> live(~p"/admin/comments")
+
+    assert html =~ ~s(href="/admin/suggestions")
+  end
+end
