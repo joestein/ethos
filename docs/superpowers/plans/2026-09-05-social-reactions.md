@@ -216,7 +216,10 @@ defmodule Ethos.Repo.Migrations.CreateReactions do
     create table(:reactions) do
       add :user_id, references(:users, on_delete: :delete_all), null: false
       add :subject_type, :string, null: false
-      add :subject_id, :integer, null: false
+      # bigint, not integer: places, guides and collections all have bigserial
+      # primary keys. An int4 column here would overflow once any of those
+      # sequences passes 2^31-1, and widening it later is a data migration.
+      add :subject_id, :bigint, null: false
       add :value, :string, null: false
 
       timestamps(type: :utc_datetime)
