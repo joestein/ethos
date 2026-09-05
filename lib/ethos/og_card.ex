@@ -39,7 +39,11 @@ defmodule Ethos.OGCard do
     File.mkdir_p!(dir)
     path = Path.join(dir, "foliage.png")
 
-    week = Ethos.Foliage.current_week_index()
+    # In season the card shows the current week. Out of season it shows week 5
+    # (Oct 14-20), the most visually representative week in the dataset — 63
+    # towns turning, 41 near peak, 60 at peak. A card generated in September
+    # would otherwise be uniformly green, which says nothing about foliage.
+    week = if Ethos.Foliage.in_season?(), do: Ethos.Foliage.current_week_index(), else: 5
     map = Ethos.Foliage.Svg.map(week, width: 520, height: 340) |> Phoenix.HTML.safe_to_string()
     inner = map |> String.replace(~r/^<svg[^>]*>/, "") |> String.replace(~r{</svg>$}, "")
 
@@ -48,7 +52,7 @@ defmodule Ethos.OGCard do
       <rect width="1200" height="630" fill="#18181b"/>
       <text x="80" y="150" font-family="DejaVu Serif, Georgia, serif" font-size="56" fill="#fafafa" font-weight="bold">Connecticut Foliage Forecast</text>
       <text x="80" y="205" font-family="DejaVu Serif, Georgia, serif" font-size="28" fill="#a1a1aa">169 towns · seven state driving routes</text>
-      <g transform="translate(600, 240)">#{inner}</g>
+      <g transform="translate(620, 195)">#{inner}</g>
       <rect x="0" y="560" width="1200" height="70" fill="#f59e0b"/>
       <text x="80" y="605" font-family="DejaVu Serif, Georgia, serif" font-size="24" fill="#18181b">derived from the CT DEEP fall foliage map</text>
     </svg>
