@@ -35,13 +35,19 @@ defmodule EthosWeb.TokenMigrationTest do
   ]
 
   test "no hardcoded palette colours survive in the shared surfaces" do
+    # zinc/emerald were the original neutral/positive hardcodes; rose/red
+    # are the negative-role ones the flash panel used to carry
+    # (`bg-rose-50 text-rose-900`) before this file existed to guard it —
+    # dropping them from the pattern left that exact regression
+    # unguarded. `amber` stays out deliberately: it's used for commercial
+    # units (ads, sponsor badges), not palette drift.
     for path <- @files do
       offenders =
         path
         |> File.read!()
         |> String.split("\n")
         |> Enum.with_index(1)
-        |> Enum.filter(fn {line, _} -> line =~ ~r/\b(zinc|emerald)-[0-9]{2,3}\b/ end)
+        |> Enum.filter(fn {line, _} -> line =~ ~r/\b(zinc|emerald|rose|red)-[0-9]{2,3}\b/ end)
         |> Enum.map(fn {line, n} -> "  #{path}:#{n}: #{String.trim(line)}" end)
 
       assert offenders == [],
