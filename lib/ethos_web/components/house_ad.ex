@@ -65,7 +65,7 @@ defmodule EthosWeb.HouseAd do
       assigns[:house_ad] == false -> nil
       is_nil(assigns[:page_canonical]) -> nil
       assigns[:foliage] -> nil
-      EthosWeb.Affiliate.unit_renders?(assigns) -> nil
+      EthosWeb.Affiliate.enabled?() and EthosWeb.Affiliate.unit_renders?(assigns) -> nil
       true -> build(assigns, pool)
     end
   end
