@@ -44,7 +44,7 @@ defmodule EthosWeb.GuideAuthoringAccessTest do
       refute html =~ "Your guides"
     end
 
-    test "does not see the research form on a published guide page", %{conn: conn} do
+    test "does not see the research form or the footer's guide-making CTA", %{conn: conn} do
       guide = published_guide_fixture()
 
       {:ok, _entry} =
@@ -53,6 +53,7 @@ defmodule EthosWeb.GuideAuthoringAccessTest do
       html = conn |> get(~p"/g/#{guide.slug}") |> html_response(200)
 
       refute html =~ "/research"
+      refute html =~ "Make your own guide"
     end
   end
 
@@ -74,7 +75,7 @@ defmodule EthosWeb.GuideAuthoringAccessTest do
       assert html =~ "Make a guide"
     end
 
-    test "sees the research form on a published guide page", %{conn: conn} do
+    test "sees the research form and the footer's guide-making CTA", %{conn: conn} do
       guide = published_guide_fixture()
 
       {:ok, _entry} =
@@ -83,6 +84,30 @@ defmodule EthosWeb.GuideAuthoringAccessTest do
       html = conn |> get(~p"/g/#{guide.slug}") |> html_response(200)
 
       assert html =~ "/research"
+      assert html =~ "Make your own guide"
+    end
+
+    # The admin gate is not the only guard here. `Guides.get_user_guide!/2`
+    # still scopes every one of these LiveViews to the guide's owner, and
+    # that check runs INSIDE the mount, after the admin plug has already let
+    # the request through. If that ownership scoping is ever weakened or
+    # removed, the admin plug alone would let an admin open (and, on
+    # confirm/edit, mutate) any other user's guide — this test is the only
+    # thing that would catch it, since every other test in this file uses a
+    # guide the acting user actually owns.
+    test "still 404s on a guide owned by someone else", %{conn: conn} do
+      other_owner = user_fixture(%{email: "other-owner@example.com"})
+      guide = guide_fixture(%{user: other_owner})
+
+      for path <- [
+            "/guides/#{guide.id}/import",
+            "/guides/#{guide.id}/confirm",
+            "/guides/#{guide.id}/edit",
+            "/guides/#{guide.id}/share",
+            "/guides/#{guide.id}/suggestions"
+          ] do
+        assert_error_sent 404, fn -> get(conn, path) end
+      end
     end
   end
 

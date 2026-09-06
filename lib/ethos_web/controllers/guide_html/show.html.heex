@@ -219,7 +219,11 @@
     >
       Suggest a place
     </.link>
-    <.link navigate={~p"/guides/new"} class="rounded-md border px-4 py-2 text-sm">
+    <.link
+      :if={Ethos.Accounts.admin?(@current_user)}
+      navigate={~p"/guides/new"}
+      class="rounded-md border px-4 py-2 text-sm"
+    >
       Make your own guide
     </.link>
   </footer>
