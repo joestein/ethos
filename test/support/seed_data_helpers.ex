@@ -189,13 +189,15 @@ defmodule Ethos.SeedDataHelpers do
              inspect(MapSet.difference(wanted, MapSet.new(ancestors, & &1["path"])))
 
     curated = Ethos.Seeds.DestinationTree.curated_intros()
+    names = Ethos.Seeds.DestinationTree.curated_names()
 
     for node <- ancestors do
       upsert_node!(%{
         path: node["path"],
-        name: node["name"],
+        name: Ethos.Seeds.DestinationTree.name_for(node, names),
         kind: node["kind"],
-        intro: Ethos.Seeds.DestinationTree.intro_for(node, curated)
+        intro: Ethos.Seeds.DestinationTree.intro_for(node, curated),
+        legacy_paths: node["legacy_paths"] || []
       })
     end
 
@@ -319,16 +321,25 @@ defmodule Ethos.SeedDataHelpers do
            "the roster is missing nodes the code seed modules name: " <>
              inspect(MapSet.difference(wanted, MapSet.new(nodes, & &1["path"])))
 
-    # Same intro precedence production seeds with — a curated hub's prose, not
-    # the roster stub it overlays. See `DestinationTree.intro_for/2`.
+    # Same intro and name precedence production seeds with — a curated hub's
+    # prose and name, not the roster stub they overlay. See
+    # `DestinationTree.intro_for/2` and `name_for/2`.
     curated = Ethos.Seeds.DestinationTree.curated_intros()
+    names = Ethos.Seeds.DestinationTree.curated_names()
 
+    # `legacy_paths` too, and it is not decoration: a guide or place that names
+    # no node resolves its geography through them (`GuideBreadcrumb.trail/1`,
+    # `DestinationController.redirect_or_404/2`), so a helper that dropped them
+    # seeded a node production would have redirecting and this one does not —
+    # a test then reads a missing crumb or a 404 that the live site does not
+    # serve.
     for node <- nodes do
       upsert_node!(%{
         path: node["path"],
-        name: node["name"],
+        name: Ethos.Seeds.DestinationTree.name_for(node, names),
         kind: node["kind"],
-        intro: Ethos.Seeds.DestinationTree.intro_for(node, curated)
+        intro: Ethos.Seeds.DestinationTree.intro_for(node, curated),
+        legacy_paths: node["legacy_paths"] || []
       })
     end
 

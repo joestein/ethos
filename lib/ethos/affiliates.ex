@@ -90,8 +90,17 @@ defmodule Ethos.Affiliates do
   A path and every ancestor path above it, root-first.
 
   `"italy/lazio/rome"` gives `["italy", "italy/lazio", "italy/lazio/rome"]`.
-  Public because the corpus gate asks the same question of a roster path that
-  the resolver asks of a page's.
+
+  Public, and actually called from outside: `locale_for/1` above uses it to find
+  the longest matching key, and both affiliate gates
+  (`test/ethos_web/affiliate_corpus_test.exs`,
+  `test/ethos_web/affiliate_placement_test.exs`) use it to decide whether a
+  committed page or a roster node sits inside a campaign's geography — `key in
+  ancestor_paths(path)`. They each used to spell that as
+  `path == key or String.starts_with?(path, key <> "/")`, which is the same rule
+  written a second and third time: a gate that re-implements what it guards can
+  agree with itself while production does something else, and a `<> "/"` dropped
+  from one copy silently makes `italy/lazio` match `italy/lazio-vecchia`.
   """
   def ancestor_paths(path) when is_binary(path) do
     path

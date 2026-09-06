@@ -72,11 +72,10 @@ defmodule EthosWeb.SitemapController do
     |> send_resp(200, IO.iodata_to_binary(xml))
   end
 
-  # A node path is many segments, and `~p` percent-encodes a `/` inside a
-  # single interpolated string. Interpolating the segment LIST is what expands
-  # to the glob route's real URL; `~p"/destinations/#{d.path}"` would publish
-  # `/destinations/united-states%2Fconnecticut`, a 404, for every node below a
-  # root. Same reason `DestinationController.node_url/1` exists.
-  defp node_url(path) when is_binary(path),
-    do: url(~p"/destinations/#{String.split(path, "/")}")
+  # The shared expansion of the glob route to an absolute URL. A `<loc>` built
+  # the wrong way publishes `/destinations/united-states%2Fconnecticut` — a 404
+  # — for every node below a root, which is the failure
+  # `DestinationHTML.node_url/1` now holds in one place for this controller,
+  # `DestinationController` and `PlaceController` alike.
+  defp node_url(path) when is_binary(path), do: EthosWeb.DestinationHTML.node_url(path)
 end

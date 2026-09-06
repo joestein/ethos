@@ -67,12 +67,11 @@ defmodule EthosWeb.DestinationController do
     )
   end
 
-  # A node path is many segments, and `~p` percent-encodes a `/` inside a single
-  # interpolated string. Interpolating the segment LIST is what expands to the
-  # glob route's real URL. (`url/1` demands a literal `~p`, so this cannot
-  # route through `DestinationHTML.node_path/1` the way the 301 below does.)
-  defp node_url(path) when is_binary(path),
-    do: url(~p"/destinations/#{String.split(path, "/")}")
+  # One expansion of the glob route to an absolute URL, shared with
+  # `PlaceController` and `SitemapController`, which built the same three crumb
+  # and `<loc>` URLs from three identical private copies. See
+  # `DestinationHTML.node_url/1` for why `url/1` cannot be handed `node_path/1`.
+  defp node_url(path) when is_binary(path), do: DestinationHTML.node_url(path)
 
   # Resolution order: an exact node renders — `show/2` has already tried that
   # and come back nil — a path a node used to live at 301s, and anything else

@@ -2288,19 +2288,46 @@ git commit -m "refactor: drop the state/county/town columns"
 > Task 10 Step 5b replaces the mechanism by deriving `addressCountry` from the
 > node's country ancestor, which is immune to what the region is called.
 
-After all twelve tasks are green on the branch:
+After all thirteen tasks are green on the branch:
 
 ```bash
 fly deploy
+# The release_command migrates. 20260905140000 DELETEs every kind IS NULL
+# destination row before tightening the column — the thirteen pre-tree curated
+# hub rows — so the seeders below are not optional on a database that already
+# has content. See docs/runbooks/seeding.md, "The migration deletes every
+# kind IS NULL destination row".
 fly ssh console -C "/app/bin/ethos eval 'Ethos.Release.seed_destination_tree()'"
+fly ssh console -C "/app/bin/ethos eval 'Ethos.Release.seed_manhattan(~s[cryptcom@gmail.com])'"
+fly ssh console -C "/app/bin/ethos eval 'Ethos.Release.seed_connecticut(~s[cryptcom@gmail.com])'"
 fly ssh console -C "/app/bin/ethos eval 'Ethos.Release.seed_connecticut_expansion(~s[cryptcom@gmail.com])'"
-# ...repeat per corpus seeder: seed_manhattan, seed_brooklyn, seed_queens,
-#    seed_bronx, seed_san_francisco, seed_rome_zones, seed_london, seed_ballparks
+fly ssh console -C "/app/bin/ethos eval 'Ethos.Release.seed_brooklyn(~s[cryptcom@gmail.com])'"
+fly ssh console -C "/app/bin/ethos eval 'Ethos.Release.seed_bronx(~s[cryptcom@gmail.com])'"
+fly ssh console -C "/app/bin/ethos eval 'Ethos.Release.seed_queens(~s[cryptcom@gmail.com])'"
+fly ssh console -C "/app/bin/ethos eval 'Ethos.Release.seed_san_francisco(~s[cryptcom@gmail.com])'"
+fly ssh console -C "/app/bin/ethos eval 'Ethos.Release.seed_rome_zones(~s[cryptcom@gmail.com])'"
+fly ssh console -C "/app/bin/ethos eval 'Ethos.Release.seed_london(~s[cryptcom@gmail.com])'"
+fly ssh console -C "/app/bin/ethos eval 'Ethos.Release.seed_ballparks(~s[cryptcom@gmail.com])'"
 fly ssh console -C "/app/bin/ethos eval 'Ethos.Release.seed_destinations()'"
+fly ssh console -C "/app/bin/ethos eval 'Ethos.Release.seed_collections()'"
 fly ssh console -C "/app/bin/ethos eval 'Ethos.Release.seed_links()'"
 ```
 
-Note the `~s[...]` sigil rather than quotes — `fly ssh console` strips quotes.
+The `~s[...]` sigil rather than quotes on **every** emailed seeder, not just the
+first: `fly ssh console -C` strips double quotes before the command reaches the
+machine, and a stripped argument fails with a confusing `CompileError` rather
+than a missing-author error.
+
+`seed_connecticut` and `seed_collections` are easy to drop from this list and
+are not optional. `seed_connecticut` seeds the CT-5 **code-module** guides
+(Waterbury, Middlebury, Danbury, Southbury, Woodbury — Task 6 added their
+nodes) plus `Ethos.Seeds.ConnecticutPlaces`; skip it and those guides keep
+`destination_id: NULL` after the column drop, so they render with no
+breadcrumbs, no hub listing and no affiliate unit, all at HTTP 200.
+`seed_collections` is the last guide-dependent step and raises on a guide slug
+nothing has seeded, which is why it runs after every seeder above it and before
+`seed_links`. The canonical order, with the dependency reasoning for each step,
+is `docs/runbooks/seeding.md` — this block is that order, not a second one.
 
 Verify live: a hub at each depth (`/destinations`, `/destinations/united-states`, `/destinations/united-states/connecticut/litchfield-county`, `/destinations/italy/lazio/rome/monti`), three 301s from the redirect table, a guide page, a place page's geo links, and `/sitemap.xml`. Then resubmit the sitemap per `docs/runbooks/google-search-console.md`.
 

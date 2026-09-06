@@ -367,9 +367,11 @@ defmodule EthosWeb.AffiliatePlacementTest do
       parents =
         MapSet.new(roster, &(&1["path"] |> String.split("/") |> Enum.drop(-1) |> Enum.join("/")))
 
-      in_scope? = fn path ->
-        Enum.any?(keys, &(path == &1 or String.starts_with?(path, &1 <> "/")))
-      end
+      # The subtree rule comes from `Affiliates.ancestor_paths/1` — what
+      # `locale_for/1` itself resolves with — rather than being re-spelled as a
+      # prefix compare here, so this gate and production cannot disagree about
+      # what "inside a campaign's geography" means.
+      in_scope? = fn path -> Enum.any?(keys, &(&1 in Ethos.Affiliates.ancestor_paths(path))) end
 
       interior =
         for node <- roster,
@@ -385,7 +387,8 @@ defmodule EthosWeb.AffiliatePlacementTest do
       covered =
         interior
         |> Enum.map(fn path ->
-          Enum.find(keys, &(path == &1 or String.starts_with?(path, &1 <> "/")))
+          ancestors = Ethos.Affiliates.ancestor_paths(path)
+          Enum.find(keys, &(&1 in ancestors))
         end)
         |> Enum.uniq()
 

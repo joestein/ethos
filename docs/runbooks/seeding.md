@@ -96,6 +96,45 @@ back. Those extra rows have no `kind` and no `parent_id`; they shadow thirteen
 hubs, disable their redirects, enter the sitemap, and list Connecticut, New
 York and Rome on `/destinations` beside the countries.
 
+### The migration deletes every `kind IS NULL` destination row
+
+Read this before restoring a backup or standing up staging from a database that
+predates the tree.
+
+`20260905140000_drop_legacy_geo_columns` runs
+`DELETE FROM destinations WHERE kind IS NULL` immediately before it tightens
+`destinations.kind` to `NOT NULL`. It is not a tidy-up; without it the
+migration cannot run at all on a database with content, and the rows it removes
+are ones no seeder can:
+
+- `kind` was added nullable by `20260905120000` and nothing backfills it, so
+  the `SET NOT NULL` aborts with `column "kind" contains null values` on any
+  database carrying pre-tree destination rows. `fly.toml` runs migrations as
+  the deploy's `release_command`, **before any seeding**, so that abort rolls
+  the whole deploy back. This is invisible to the test suite, which migrates an
+  empty `destinations` table.
+- The rows in question are the thirteen pre-Task-13 curated hub records
+  described just above — keyed on `connecticut`, `rome`,
+  `new-york/manhattan` and friends, which are now `legacy_paths` of real nodes.
+  `Ethos.Seeds.DestinationTree.upsert_all!/0` upserts by `path` and never
+  deletes, so re-seeding leaves them exactly where they are. Deleting them here
+  is the only thing that retires them from a live database.
+
+Nothing is orphaned by the delete: `guides.destination_id` and
+`places.destination_id` are `nilify_all`, and at release-command time — before
+any seeder runs — they are still NULL anyway.
+
+**Nothing is lost, but you must re-seed.** Every row comes back from the roster
+— `Ethos.Release.seed_destination_tree()`, which every seeder below also runs
+first — and step 7's thirteen overlay files put the curated prose and photos
+back on top. Run the full seed order after the migration, exactly as for a
+fresh database, and confirm the count reads 724 and
+`get_by_path("united-states/connecticut").intro` is the long history rather
+than the stub.
+
+Rolling the migration back restores the column's nullability, not the deleted
+rows.
+
 `Ethos.Release.seed_rome(email)` seeds one standalone guide
 (`three-days-in-rome-real-trip-guide`). It has no dependencies and nothing
 depends on it, so run it whenever; it is deliberately not part of the chain.

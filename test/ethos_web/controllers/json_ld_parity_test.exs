@@ -103,8 +103,14 @@ defmodule EthosWeb.JsonLdParityTest do
     # Waterbury goes in through the SAME call, not a second one: two passes are
     # two lock sequences, and the second takes its rows after rows the first
     # already holds however they sort globally.
+    #
+    # `italy/lazio/rome` goes in through the same call for the same reason: the
+    # two nodeless "Rome, Italy" guides below resolve their trail through that
+    # node's `legacy_paths`, and a second seeding pass would be a second lock
+    # sequence.
     Ethos.SeedDataHelpers.seed_fixture_destinations!([
-      "united-states/connecticut/new-haven-county/waterbury"
+      "united-states/connecticut/new-haven-county/waterbury",
+      "italy/lazio/rome"
     ])
 
     Places.upsert_place!(@place_attrs)
@@ -153,13 +159,19 @@ defmodule EthosWeb.JsonLdParityTest do
           url(~p"/p/palace-theater-waterbury")
         ]
       },
+      # A guide on no node — the web-authored shape. Its free-text destination
+      # slugs to `rome`, which is a legacy path of `italy/lazio/rome`, so the
+      # trail is that node's ancestry at CANONICAL urls. It used to publish
+      # `/destinations/rome` here, a redirect source, as a breadcrumb item.
       %{
         path: ~p"/g/#{guide.slug}",
-        names: ["Ethos", "Destinations", "Rome", "Roman Holiday"],
+        names: ["Ethos", "Destinations", "Italy", "Lazio", "Rome", "Roman Holiday"],
         urls: [
           url(~p"/"),
           url(~p"/destinations"),
-          url(~p"/destinations/rome"),
+          url(~p"/destinations/italy"),
+          url(~p"/destinations/italy/lazio"),
+          url(~p"/destinations/italy/lazio/rome"),
           url(~p"/g/#{guide.slug}")
         ]
       },
@@ -189,11 +201,13 @@ defmodule EthosWeb.JsonLdParityTest do
       },
       %{
         path: ~p"/g/#{photo_guide.slug}/photos",
-        names: ["Ethos", "Destinations", "Rome", "Three Days", "Photos"],
+        names: ["Ethos", "Destinations", "Italy", "Lazio", "Rome", "Three Days", "Photos"],
         urls: [
           url(~p"/"),
           url(~p"/destinations"),
-          url(~p"/destinations/rome"),
+          url(~p"/destinations/italy"),
+          url(~p"/destinations/italy/lazio"),
+          url(~p"/destinations/italy/lazio/rome"),
           url(~p"/g/#{photo_guide.slug}"),
           url(~p"/g/#{photo_guide.slug}/photos")
         ]

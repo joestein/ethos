@@ -95,6 +95,25 @@ defmodule Ethos.Seeds.DestinationIntroPrecedenceTest do
     assert Destinations.list_destinations() == []
   end
 
+  test "the overlay's name wins over the roster's, the way its intro does" do
+    # `name` is the other field both loaders write, and all thirteen overlays
+    # agree with the roster today — so a test that only compared a seeded row
+    # against its file would pass with no rule at all, and would go on passing
+    # right up until someone copy-edited one of the two. This asks the rule
+    # directly, with a roster node whose name has diverged the way that edit
+    # would diverge it.
+    names = DestinationTree.curated_names()
+    roster_node = Enum.find(DestinationTree.load!(), &(&1["path"] == @curated_path))
+
+    assert names[@curated_path] == "Connecticut"
+
+    diverged = Map.put(roster_node, "name", "Connecticut (roster copy)")
+    assert DestinationTree.name_for(diverged, names) == "Connecticut"
+
+    no_overlay = Enum.find(DestinationTree.load!(), &(not Map.has_key?(names, &1["path"])))
+    assert DestinationTree.name_for(no_overlay, names) == no_overlay["name"]
+  end
+
   test "a node with no curated file keeps the roster's own intro" do
     DestinationTree.upsert_all!()
 
@@ -118,6 +137,9 @@ defmodule Ethos.Seeds.DestinationIntroPrecedenceTest do
 
       assert node.intro == curated["intro"],
              "#{Path.basename(file)}'s prose did not reach #{curated["path"]} from the tree seed"
+
+      assert node.name == curated["name"],
+             "#{Path.basename(file)} names #{curated["name"]}, the node reads #{node.name}"
     end
   end
 end

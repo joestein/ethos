@@ -173,11 +173,8 @@ defmodule EthosWeb.PlaceController do
   # Ethos / Destinations / the place itself.
   defp geo_crumbs(_place, []), do: []
 
-  # A node path is many segments, and `~p` percent-encodes a `/` inside a single
-  # interpolated string; interpolating the segment LIST is what expands to the
-  # glob route's real URL. Same reason `DestinationController.node_url/1` and the
-  # sitemap's exist — `url/1` demands a literal `~p`, so this cannot route
-  # through `DestinationHTML.node_path/1`.
-  defp node_url(path) when is_binary(path),
-    do: url(~p"/destinations/#{String.split(path, "/")}")
+  # The shared expansion of the glob route to an absolute URL — see
+  # `DestinationHTML.node_url/1`, which the destination and sitemap controllers
+  # now call too rather than each keeping a copy of the sigil.
+  defp node_url(path) when is_binary(path), do: EthosWeb.DestinationHTML.node_url(path)
 end

@@ -139,13 +139,21 @@ defmodule EthosWeb.GuideControllerTest do
            ]
   end
 
-  test "a guide on no node falls back to its destination, with no nil-slug links", %{
+  # A guide authored through the web UI names no node — it has only the
+  # free-text destination a traveller typed — and the two tests below are the
+  # two halves of what that guide's breadcrumb does now.
+  #
+  # It used to link the derived `destination_slug` at `/destinations/:slug`
+  # unconditionally. That URL is only served when a node owns it as its path or
+  # as a legacy path, so for anything else it was a 404 in the visible <nav> and
+  # in the BreadcrumbList JSON-LD both. The rule now resolves the slug the way
+  # `DestinationController` resolves a request, and emits nothing when it
+  # resolves to nothing. See `EthosWeb.GuideBreadcrumb.legacy_trail/1`.
+  test "a guide on no node whose destination names nothing gets no geography crumb", %{
     conn: conn
   } do
-    guide = published_guide_fixture(%{title: "Roman Holiday", destination: "Rome, Italy"})
+    guide = published_guide_fixture(%{title: "Alfama Weekend", destination: "Lisbon, Portugal"})
 
-    # A guide authored through the web UI, which names no destination node —
-    # the one shape the fallback below exists for.
     refute guide.destination_id
 
     html = conn |> get(~p"/g/#{guide.slug}") |> html_response(200)
@@ -156,8 +164,40 @@ defmodule EthosWeb.GuideControllerTest do
 
     nav = breadcrumb_nav(html)
     assert nav =~ ~s(href="/destinations")
-    assert nav =~ ~s(href="/destinations/rome")
+
+    # The crumb that used to 404. Nothing owns `lisbon`, as a path or as a
+    # legacy path, so the trail stops at the Destinations index.
+    refute nav =~ ~s(href="/destinations/lisbon")
+
+    ld = breadcrumb_json_ld(html)
+
+    assert Enum.map(ld["itemListElement"], & &1["name"]) == [
+             "Ethos",
+             "Destinations",
+             "Alfama Weekend"
+           ]
+
+    assert Enum.map(ld["itemListElement"], & &1["position"]) == [1, 2, 3]
+  end
+
+  test "a guide on no node whose destination names a legacy path gets that node's trail", %{
+    conn: conn
+  } do
+    # `rome` is a legacy path of `italy/lazio/rome`, which is exactly the case
+    # the old fallback got wrong twice over: it linked the legacy form, which
+    # 301s rather than resolving, and it published that redirect source as a
+    # canonical `item` URL in the JSON-LD.
+    Ethos.SeedDataHelpers.seed_destination_paths!(["italy/lazio/rome"])
+
+    guide = published_guide_fixture(%{title: "Roman Holiday", destination: "Rome, Italy"})
+    refute guide.destination_id
+
+    html = conn |> get(~p"/g/#{guide.slug}") |> html_response(200)
+
+    nav = breadcrumb_nav(html)
+    assert nav =~ ~s(href="/destinations/italy/lazio/rome")
     assert nav =~ "Rome"
+    refute nav =~ ~s(href="/destinations/rome")
     refute nav =~ "New Haven"
 
     ld = breadcrumb_json_ld(html)
@@ -165,11 +205,13 @@ defmodule EthosWeb.GuideControllerTest do
     assert Enum.map(ld["itemListElement"], & &1["name"]) == [
              "Ethos",
              "Destinations",
+             "Italy",
+             "Lazio",
              "Rome",
              "Roman Holiday"
            ]
 
-    assert Enum.map(ld["itemListElement"], & &1["position"]) == [1, 2, 3, 4]
+    assert Enum.map(ld["itemListElement"], & &1["position"]) == [1, 2, 3, 4, 5, 6]
   end
 
   test "an orientation page renders the same breadcrumb as a full guide", %{conn: conn} do
@@ -211,7 +253,12 @@ defmodule EthosWeb.GuideControllerTest do
            ]
   end
 
-  test "a guide with a state but no county stops the breadcrumb at the state", %{conn: conn} do
+  test "a guide filed on a state stops the breadcrumb at the state", %{conn: conn} do
+    # `connecticut` is the region node's legacy path, so this nodeless guide
+    # resolves to the region and the trail ends there — no county is invented
+    # below it, which is what the `county_slug` column used to supply.
+    Ethos.SeedDataHelpers.seed_destination_paths!(["united-states/connecticut"])
+
     guide =
       published_guide_fixture(%{
         title: "Statewide Roundup",
@@ -221,14 +268,17 @@ defmodule EthosWeb.GuideControllerTest do
     html = conn |> get(~p"/g/#{guide.slug}") |> html_response(200)
 
     nav = breadcrumb_nav(html)
-    assert nav =~ ~s(href="/destinations/connecticut")
-    refute nav =~ ~s(href="/destinations/connecticut/)
+    assert nav =~ ~s(href="/destinations/united-states/connecticut")
+    refute nav =~ ~s(href="/destinations/united-states/connecticut/)
+    # the bare legacy form, which 301s rather than resolving
+    refute nav =~ ~s(href="/destinations/connecticut")
 
     ld = breadcrumb_json_ld(html)
 
     assert Enum.map(ld["itemListElement"], & &1["name"]) == [
              "Ethos",
              "Destinations",
+             "United States",
              "Connecticut",
              "Statewide Roundup"
            ]
@@ -309,12 +359,17 @@ defmodule EthosWeb.GuideControllerTest do
   # THE GUARD ON A DELETION. A guide on no node used to get a state and a county
   # crumb built from the `state_slug`/`county_slug` columns — two crumbs the
   # guide's author never wrote and the tree never confirmed, pointing at
-  # single-slug hub URLs that 301. The columns are gone and so is that branch:
-  # a nodeless guide gets exactly one crumb, its own destination hub, and no
-  # invented ancestry. Re-adding a derived trail would fail here.
-  test "a guide with no node invents no ancestry above its own destination", %{
+  # single-slug hub URLs that 301. The columns are gone, and so is any crumb
+  # invented from them: a nodeless guide's trail is a real node's ancestry read
+  # out of the tree, or it is nothing. Every URL below is a node's own path, so
+  # a derived trail — or a link to the legacy single-slug form — fails here.
+  test "a guide with no node takes its trail from the tree, never from a derived slug", %{
     conn: conn
   } do
+    Ethos.SeedDataHelpers.seed_destination_paths!([
+      "united-states/connecticut/new-haven-county/waterbury"
+    ])
+
     guide =
       published_guide_fixture(%{
         title: "A Day in Waterbury",
@@ -322,23 +377,45 @@ defmodule EthosWeb.GuideControllerTest do
       })
 
     # Non-vacuity: the guide is on no node, so what is under test is the
-    # fallback rather than an ancestry walk.
+    # fallback rather than the ancestry walk a filed guide takes.
     refute guide.destination_id
 
     html = conn |> get(~p"/g/#{guide.slug}") |> html_response(200)
 
     nav = breadcrumb_nav(html)
-    assert nav =~ ~s(href="/destinations/waterbury")
+
+    # `waterbury` is the town node's legacy path, so the trail is that node's
+    # ancestry, at canonical URLs.
+    assert nav =~
+             ~s(href="/destinations/united-states/connecticut/new-haven-county/waterbury")
+
+    assert nav =~ "New Haven County"
+
+    # None of the single-slug forms the deleted columns produced.
+    refute nav =~ ~s(href="/destinations/waterbury")
     refute nav =~ ~s(href="/destinations/connecticut")
-    refute nav =~ "New Haven County"
+    refute nav =~ ~s(href="/destinations/new-haven-county")
 
     ld = breadcrumb_json_ld(html)
 
     assert Enum.map(ld["itemListElement"], & &1["name"]) == [
              "Ethos",
              "Destinations",
+             "United States",
+             "Connecticut",
+             "New Haven County",
              "Waterbury",
              "A Day in Waterbury"
+           ]
+
+    assert Enum.map(ld["itemListElement"], & &1["item"]) == [
+             url(~p"/"),
+             url(~p"/destinations"),
+             url(~p"/destinations/united-states"),
+             url(~p"/destinations/united-states/connecticut"),
+             url(~p"/destinations/united-states/connecticut/new-haven-county"),
+             url(~p"/destinations/united-states/connecticut/new-haven-county/waterbury"),
+             url(~p"/g/#{guide.slug}")
            ]
   end
 

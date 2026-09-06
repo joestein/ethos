@@ -99,10 +99,17 @@ defmodule EthosWeb.AffiliateCorpusTest do
     locales = Application.get_env(:ethos, :affiliate_locales, %{})
     rows = corpus_rows()
 
+    # "Inside a campaign's geography" is `Affiliates.ancestor_paths/1`, the same
+    # function `locale_for/1` resolves with, rather than a prefix compare
+    # re-spelled here. A gate that re-implements the rule it guards can agree
+    # with itself while disagreeing with production — and the `<> "/"` this
+    # replaced was the exact place a missing separator would have made
+    # `italy/lazio` match `italy/lazio-vecchia`.
     in_scope =
       for row <- rows,
+          ancestors = Affiliates.ancestor_paths(row.path),
           key <- Map.keys(locales),
-          row.path == key or String.starts_with?(row.path, key <> "/"),
+          key in ancestors,
           uniq: true,
           do: {key, row}
 

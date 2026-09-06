@@ -57,15 +57,20 @@ defmodule EthosWeb.GuidePhotosPageTest do
     html = conn |> get(~p"/g/#{guide.slug}/photos") |> html_response(200)
     items = breadcrumb_json_ld(html)["itemListElement"]
 
+    # The shortest trail any page emits, and shorter than it used to be: no
+    # node is seeded here, so `rome` resolves to neither a node path nor a
+    # legacy path and the guide carries no geographic crumb at all rather than
+    # a `/destinations/rome` link that 404s. `EthosWeb.GuideControllerTest`
+    # covers the branch where the slug does resolve; what this asserts is that
+    # positions stay contiguous from 1 on the shortest trail there is.
     assert Enum.map(items, & &1["name"]) == [
              "Ethos",
              "Destinations",
-             "Rome",
              "Three Days",
              "Photos"
            ]
 
-    assert Enum.map(items, & &1["position"]) == [1, 2, 3, 4, 5]
+    assert Enum.map(items, & &1["position"]) == [1, 2, 3, 4]
     assert List.last(items)["item"] == url(~p"/g/#{guide.slug}/photos")
   end
 
