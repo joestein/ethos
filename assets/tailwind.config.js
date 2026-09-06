@@ -11,10 +11,27 @@ module.exports = {
     "../lib/ethos_web.ex",
     "../lib/ethos_web/**/*.*ex"
   ],
+  safelist: [
+    "bg-surface", "bg-surface-raised", "text-ink", "text-ink-muted",
+    "border-line", "bg-accent", "text-accent", "text-accent-ink",
+    "bg-accent-soft", "text-positive", "text-negative", "text-star",
+    "bg-accent/10",
+  ],
   theme: {
     extend: {
       colors: {
         brand: "#FD4F00",
+        surface: "rgb(var(--c-surface) / <alpha-value>)",
+        "surface-raised": "rgb(var(--c-surface-raised) / <alpha-value>)",
+        ink: "rgb(var(--c-ink) / <alpha-value>)",
+        "ink-muted": "rgb(var(--c-ink-muted) / <alpha-value>)",
+        line: "rgb(var(--c-line) / <alpha-value>)",
+        accent: "rgb(var(--c-accent) / <alpha-value>)",
+        "accent-ink": "rgb(var(--c-accent-ink) / <alpha-value>)",
+        "accent-soft": "rgb(var(--c-accent-soft) / <alpha-value>)",
+        positive: "rgb(var(--c-positive) / <alpha-value>)",
+        negative: "rgb(var(--c-negative) / <alpha-value>)",
+        star: "rgb(var(--c-star) / <alpha-value>)",
       }
     },
   },

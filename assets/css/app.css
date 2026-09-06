@@ -3,3 +3,65 @@
 @import "tailwindcss/utilities";
 
 /* This file is for your main application CSS */
+
+/* Seasonal palettes. Bare RGB triples, not rgb() — Tailwind interpolates
+   <alpha-value> into these, which is what keeps bg-accent/10 working.
+
+   positive, negative and accent-ink are deliberately identical in all four
+   seasons: a thumbs-down is a judgement, not seasonal decoration. */
+:root,
+:root[data-season="summer"] {
+  --c-surface: 255 253 247;
+  --c-surface-raised: 255 255 255;
+  --c-ink: 28 25 23;
+  --c-ink-muted: 120 113 108;
+  --c-line: 231 229 228;
+  --c-accent: 13 148 136;
+  --c-accent-ink: 255 255 255;
+  --c-accent-soft: 204 251 241;
+  --c-positive: 5 150 105;
+  --c-negative: 220 38 38;
+  --c-star: 245 158 11;
+}
+
+:root[data-season="autumn"] {
+  --c-surface: 255 251 245;
+  --c-surface-raised: 255 255 255;
+  --c-ink: 28 25 23;
+  --c-ink-muted: 120 113 108;
+  --c-line: 232 226 218;
+  --c-accent: 194 65 12;
+  --c-accent-ink: 255 255 255;
+  --c-accent-soft: 255 237 213;
+  --c-positive: 5 150 105;
+  --c-negative: 220 38 38;
+  --c-star: 217 119 6;
+}
+
+:root[data-season="winter"] {
+  --c-surface: 248 250 252;
+  --c-surface-raised: 255 255 255;
+  --c-ink: 15 23 42;
+  --c-ink-muted: 100 116 139;
+  --c-line: 226 232 240;
+  --c-accent: 3 105 161;
+  --c-accent-ink: 255 255 255;
+  --c-accent-soft: 224 242 254;
+  --c-positive: 5 150 105;
+  --c-negative: 220 38 38;
+  --c-star: 56 189 248;
+}
+
+:root[data-season="spring"] {
+  --c-surface: 253 253 248;
+  --c-surface-raised: 255 255 255;
+  --c-ink: 26 46 5;
+  --c-ink-muted: 101 118 84;
+  --c-line: 228 230 220;
+  --c-accent: 77 124 15;
+  --c-accent-ink: 255 255 255;
+  --c-accent-soft: 236 252 203;
+  --c-positive: 5 150 105;
+  --c-negative: 220 38 38;
+  --c-star: 132 204 22;
+}
