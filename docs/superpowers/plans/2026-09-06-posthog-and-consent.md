@@ -741,7 +741,7 @@ The consent handshake has no automated coverage. Run this in a browser, once wit
 - **6a. AdSense still renders** in every state below. If ads have stopped, stop and roll back.
 - **6b. Outside the EEA/UK** — no banner appears, and a PostHog request goes out on page load.
 - **6c. Inside, before answering** — no PostHog request, no GetYourGuide script. The banner is showing.
-- **6d. Inside, after accepting** — both load; the pageview arrives in PostHog.
+- **6d. Inside, after accepting** — both load; the pageview arrives in PostHog. **Do this twice: once accepting immediately, and once after leaving the banner untouched for a minute or two.** The GetYourGuide widget used to be an `async` script in `<head>`, so it always ran shortly after parse; it is now injected whenever consent arrives, which may be minutes later. Whether its bundle still finds and hydrates the server-rendered `[data-gyg-widget]` element that late cannot be established without a browser, and it is the revenue path. If the widget renders on the immediate accept but not the delayed one, stop — that is a real regression and not a quirk of your session.
 - **6e. Inside, after declining** — neither loads, and no PostHog request is made for the rest of the session.
 - **6f. LiveView navigation** — open a guide, navigate to the editor, and confirm a second `$pageview`.
 - **6g. `/foliage/embed`** — no `posthog-key` meta tag in the source.

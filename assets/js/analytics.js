@@ -92,10 +92,27 @@ analyticsConsent.then(() => {
     window.posthog.capture("$pageview")
 
     // The second listener on this event; the first drives topbar in app.js.
-    // "initial" is the document load we just captured above, so counting it
-    // here too would double every entry page.
+    //
+    // An allowlist, and it has to be. LiveView emits four kinds here —
+    // "initial", "patch", "redirect" and "element" — and only two of them are
+    // navigation. This started as a denylist that skipped "initial" (the
+    // document load already captured above) and let everything else through,
+    // which silently counted "element" as a pageview: that kind fires for any
+    // element carrying phx-page-loading, so the day someone puts a loading
+    // indicator on a button, every click becomes a pageview and the funnel
+    // quietly stops meaning anything. Nothing in lib/ uses phx-page-loading
+    // today, so the bug was latent — which is exactly why it would have
+    // shipped.
+    //
+    // A denylist has to be right about every value that does not exist yet; an
+    // allowlist only has to be right about the ones we want. A fifth kind
+    // added upstream is then a missing pageview, which is visible, rather than
+    // a phantom one, which is not.
     window.addEventListener("phx:page-loading-stop", (info) => {
-      if (info.detail && info.detail.kind === "initial") return
+      const kind = info.detail && info.detail.kind
+
+      if (kind !== "patch" && kind !== "redirect") return
+
       window.posthog.capture("$pageview")
     })
   }
