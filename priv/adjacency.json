@@ -1,0 +1,1232 @@
+{
+  "deep-river": [
+    "chester",
+    "essex",
+    "killingworth",
+    "lyme",
+    "westbrook"
+  ],
+  "woodbury": [
+    "bethlehem",
+    "middlebury",
+    "roxbury",
+    "southbury",
+    "washington",
+    "watertown"
+  ],
+  "bethlehem": [
+    "morris",
+    "washington",
+    "watertown",
+    "woodbury"
+  ],
+  "guilford": [
+    "branford",
+    "durham",
+    "madison",
+    "north-branford"
+  ],
+  "tolland": [
+    "coventry",
+    "ellington",
+    "vernon",
+    "willington"
+  ],
+  "bloomfield": [
+    "avon",
+    "east-granby",
+    "hartford",
+    "simsbury",
+    "west-hartford",
+    "windsor"
+  ],
+  "bethel": [
+    "brookfield",
+    "danbury",
+    "newtown",
+    "redding"
+  ],
+  "shelton": [
+    "derby",
+    "milford",
+    "monroe",
+    "orange",
+    "oxford",
+    "seymour",
+    "stratford",
+    "trumbull"
+  ],
+  "union": [
+    "ashford",
+    "eastford",
+    "stafford",
+    "willington",
+    "woodstock"
+  ],
+  "bolton": [
+    "andover",
+    "coventry",
+    "glastonbury",
+    "hebron",
+    "manchester",
+    "vernon"
+  ],
+  "lyme": [
+    "chester",
+    "deep-river",
+    "east-haddam",
+    "east-lyme",
+    "essex",
+    "old-lyme",
+    "salem"
+  ],
+  "canaan": [
+    "cornwall",
+    "norfolk",
+    "north-canaan",
+    "salisbury"
+  ],
+  "sherman": [
+    "kent",
+    "new-fairfield",
+    "new-milford"
+  ],
+  "haddam": [
+    "chester",
+    "durham",
+    "east-haddam",
+    "east-hampton",
+    "killingworth",
+    "middletown"
+  ],
+  "portland": [
+    "cromwell",
+    "east-hampton",
+    "glastonbury",
+    "middletown"
+  ],
+  "bridgewater": [
+    "brookfield",
+    "new-milford",
+    "newtown",
+    "roxbury",
+    "southbury"
+  ],
+  "stamford": [
+    "darien",
+    "greenwich",
+    "new-canaan"
+  ],
+  "enfield": [
+    "east-windsor",
+    "ellington",
+    "somers",
+    "suffield",
+    "windsor-locks"
+  ],
+  "salem": [
+    "bozrah",
+    "colchester",
+    "east-haddam",
+    "east-lyme",
+    "lyme",
+    "montville"
+  ],
+  "essex": [
+    "deep-river",
+    "lyme",
+    "old-saybrook",
+    "westbrook"
+  ],
+  "middlefield": [
+    "durham",
+    "meriden",
+    "middletown",
+    "wallingford"
+  ],
+  "north-canaan": [
+    "canaan",
+    "norfolk",
+    "salisbury"
+  ],
+  "meriden": [
+    "berlin",
+    "cheshire",
+    "middlefield",
+    "middletown",
+    "southington",
+    "wallingford"
+  ],
+  "easton": [
+    "fairfield",
+    "monroe",
+    "newtown",
+    "redding",
+    "trumbull",
+    "weston"
+  ],
+  "chester": [
+    "deep-river",
+    "east-haddam",
+    "haddam",
+    "killingworth",
+    "lyme"
+  ],
+  "derby": [
+    "ansonia",
+    "orange",
+    "seymour",
+    "shelton",
+    "woodbridge"
+  ],
+  "stonington": [
+    "groton",
+    "ledyard",
+    "north-stonington"
+  ],
+  "willington": [
+    "ashford",
+    "coventry",
+    "ellington",
+    "mansfield",
+    "stafford",
+    "tolland",
+    "union"
+  ],
+  "waterford": [
+    "east-lyme",
+    "groton",
+    "ledyard",
+    "montville",
+    "new-london"
+  ],
+  "new-britain": [
+    "berlin",
+    "farmington",
+    "newington",
+    "plainville",
+    "southington"
+  ],
+  "litchfield": [
+    "goshen",
+    "harwinton",
+    "morris",
+    "thomaston",
+    "torrington",
+    "warren",
+    "washington"
+  ],
+  "simsbury": [
+    "avon",
+    "bloomfield",
+    "canton",
+    "east-granby",
+    "granby"
+  ],
+  "manchester": [
+    "bolton",
+    "east-hartford",
+    "glastonbury",
+    "south-windsor",
+    "vernon"
+  ],
+  "middletown": [
+    "berlin",
+    "cromwell",
+    "durham",
+    "east-hampton",
+    "haddam",
+    "meriden",
+    "middlefield",
+    "portland"
+  ],
+  "bozrah": [
+    "franklin",
+    "lebanon",
+    "montville",
+    "norwich",
+    "salem"
+  ],
+  "lisbon": [
+    "canterbury",
+    "griswold",
+    "norwich",
+    "preston",
+    "sprague"
+  ],
+  "westport": [
+    "fairfield",
+    "norwalk",
+    "weston",
+    "wilton"
+  ],
+  "ansonia": [
+    "derby",
+    "seymour",
+    "woodbridge"
+  ],
+  "canton": [
+    "avon",
+    "barkhamsted",
+    "burlington",
+    "granby",
+    "new-hartford",
+    "simsbury"
+  ],
+  "griswold": [
+    "canterbury",
+    "lisbon",
+    "north-stonington",
+    "plainfield",
+    "preston",
+    "voluntown"
+  ],
+  "cornwall": [
+    "canaan",
+    "goshen",
+    "kent",
+    "sharon",
+    "warren"
+  ],
+  "winchester": [
+    "barkhamsted",
+    "colebrook",
+    "goshen",
+    "norfolk",
+    "torrington"
+  ],
+  "oxford": [
+    "beacon-falls",
+    "middlebury",
+    "monroe",
+    "naugatuck",
+    "newtown",
+    "seymour",
+    "shelton",
+    "southbury"
+  ],
+  "old-lyme": [
+    "east-lyme",
+    "lyme",
+    "old-saybrook"
+  ],
+  "wallingford": [
+    "cheshire",
+    "durham",
+    "hamden",
+    "meriden",
+    "middlefield",
+    "north-branford",
+    "north-haven"
+  ],
+  "avon": [
+    "bloomfield",
+    "burlington",
+    "canton",
+    "farmington",
+    "simsbury",
+    "west-hartford"
+  ],
+  "windham": [
+    "chaplin",
+    "columbia",
+    "coventry",
+    "franklin",
+    "lebanon",
+    "mansfield",
+    "scotland"
+  ],
+  "plainville": [
+    "bristol",
+    "farmington",
+    "new-britain",
+    "southington"
+  ],
+  "berlin": [
+    "cromwell",
+    "meriden",
+    "middletown",
+    "new-britain",
+    "newington",
+    "rocky-hill",
+    "southington"
+  ],
+  "voluntown": [
+    "griswold",
+    "north-stonington",
+    "plainfield",
+    "sterling"
+  ],
+  "scotland": [
+    "canterbury",
+    "chaplin",
+    "hampton",
+    "sprague",
+    "windham"
+  ],
+  "bethany": [
+    "beacon-falls",
+    "cheshire",
+    "hamden",
+    "naugatuck",
+    "prospect",
+    "seymour",
+    "woodbridge"
+  ],
+  "eastford": [
+    "ashford",
+    "chaplin",
+    "hampton",
+    "pomfret",
+    "union",
+    "woodstock"
+  ],
+  "wilton": [
+    "new-canaan",
+    "norwalk",
+    "redding",
+    "ridgefield",
+    "weston",
+    "westport"
+  ],
+  "hebron": [
+    "andover",
+    "bolton",
+    "colchester",
+    "columbia",
+    "glastonbury",
+    "lebanon",
+    "marlborough"
+  ],
+  "barkhamsted": [
+    "canton",
+    "colebrook",
+    "granby",
+    "hartland",
+    "new-hartford",
+    "winchester"
+  ],
+  "sharon": [
+    "cornwall",
+    "kent",
+    "salisbury"
+  ],
+  "clinton": [
+    "killingworth",
+    "madison",
+    "westbrook"
+  ],
+  "branford": [
+    "east-haven",
+    "guilford",
+    "north-branford"
+  ],
+  "vernon": [
+    "bolton",
+    "coventry",
+    "ellington",
+    "manchester",
+    "south-windsor",
+    "tolland"
+  ],
+  "old-saybrook": [
+    "essex",
+    "old-lyme",
+    "westbrook"
+  ],
+  "fairfield": [
+    "bridgeport",
+    "easton",
+    "trumbull",
+    "weston",
+    "westport"
+  ],
+  "danbury": [
+    "bethel",
+    "brookfield",
+    "new-fairfield",
+    "redding",
+    "ridgefield"
+  ],
+  "middlebury": [
+    "naugatuck",
+    "oxford",
+    "southbury",
+    "waterbury",
+    "watertown",
+    "woodbury"
+  ],
+  "chaplin": [
+    "ashford",
+    "eastford",
+    "hampton",
+    "mansfield",
+    "scotland",
+    "windham"
+  ],
+  "westbrook": [
+    "clinton",
+    "deep-river",
+    "essex",
+    "killingworth",
+    "old-saybrook"
+  ],
+  "south-windsor": [
+    "east-hartford",
+    "east-windsor",
+    "ellington",
+    "hartford",
+    "manchester",
+    "vernon",
+    "windsor"
+  ],
+  "east-lyme": [
+    "lyme",
+    "montville",
+    "old-lyme",
+    "salem",
+    "waterford"
+  ],
+  "naugatuck": [
+    "beacon-falls",
+    "bethany",
+    "middlebury",
+    "oxford",
+    "prospect",
+    "waterbury"
+  ],
+  "montville": [
+    "bozrah",
+    "east-lyme",
+    "ledyard",
+    "norwich",
+    "preston",
+    "salem",
+    "waterford"
+  ],
+  "morris": [
+    "bethlehem",
+    "litchfield",
+    "washington",
+    "watertown"
+  ],
+  "norwalk": [
+    "darien",
+    "new-canaan",
+    "westport",
+    "wilton"
+  ],
+  "ledyard": [
+    "groton",
+    "montville",
+    "north-stonington",
+    "preston",
+    "stonington",
+    "waterford"
+  ],
+  "waterbury": [
+    "cheshire",
+    "middlebury",
+    "naugatuck",
+    "plymouth",
+    "prospect",
+    "thomaston",
+    "watertown",
+    "wolcott"
+  ],
+  "north-branford": [
+    "branford",
+    "durham",
+    "east-haven",
+    "guilford",
+    "north-haven",
+    "wallingford"
+  ],
+  "new-haven": [
+    "east-haven",
+    "hamden",
+    "north-haven",
+    "orange",
+    "west-haven",
+    "woodbridge"
+  ],
+  "goshen": [
+    "cornwall",
+    "litchfield",
+    "norfolk",
+    "torrington",
+    "warren",
+    "winchester"
+  ],
+  "ashford": [
+    "chaplin",
+    "eastford",
+    "mansfield",
+    "union",
+    "willington"
+  ],
+  "brookfield": [
+    "bethel",
+    "bridgewater",
+    "danbury",
+    "new-fairfield",
+    "new-milford",
+    "newtown"
+  ],
+  "woodbridge": [
+    "ansonia",
+    "bethany",
+    "derby",
+    "hamden",
+    "new-haven",
+    "orange",
+    "seymour"
+  ],
+  "norfolk": [
+    "canaan",
+    "colebrook",
+    "goshen",
+    "north-canaan",
+    "winchester"
+  ],
+  "killingworth": [
+    "chester",
+    "clinton",
+    "deep-river",
+    "durham",
+    "haddam",
+    "madison",
+    "westbrook"
+  ],
+  "hartford": [
+    "bloomfield",
+    "east-hartford",
+    "newington",
+    "south-windsor",
+    "west-hartford",
+    "wethersfield",
+    "windsor"
+  ],
+  "warren": [
+    "cornwall",
+    "goshen",
+    "kent",
+    "litchfield",
+    "washington"
+  ],
+  "madison": [
+    "clinton",
+    "durham",
+    "guilford",
+    "killingworth"
+  ],
+  "east-hartford": [
+    "glastonbury",
+    "hartford",
+    "manchester",
+    "south-windsor",
+    "wethersfield"
+  ],
+  "ridgefield": [
+    "danbury",
+    "redding",
+    "wilton"
+  ],
+  "coventry": [
+    "andover",
+    "bolton",
+    "columbia",
+    "mansfield",
+    "tolland",
+    "vernon",
+    "willington",
+    "windham"
+  ],
+  "greenwich": [
+    "stamford"
+  ],
+  "andover": [
+    "bolton",
+    "columbia",
+    "coventry",
+    "hebron"
+  ],
+  "west-hartford": [
+    "avon",
+    "bloomfield",
+    "farmington",
+    "hartford",
+    "newington"
+  ],
+  "trumbull": [
+    "bridgeport",
+    "easton",
+    "fairfield",
+    "monroe",
+    "shelton",
+    "stratford"
+  ],
+  "southbury": [
+    "bridgewater",
+    "middlebury",
+    "newtown",
+    "oxford",
+    "roxbury",
+    "woodbury"
+  ],
+  "marlborough": [
+    "colchester",
+    "east-hampton",
+    "glastonbury",
+    "hebron"
+  ],
+  "windsor-locks": [
+    "east-granby",
+    "east-windsor",
+    "enfield",
+    "suffield",
+    "windsor"
+  ],
+  "hampton": [
+    "brooklyn",
+    "canterbury",
+    "chaplin",
+    "eastford",
+    "pomfret",
+    "scotland"
+  ],
+  "kent": [
+    "cornwall",
+    "new-milford",
+    "sharon",
+    "sherman",
+    "warren",
+    "washington"
+  ],
+  "durham": [
+    "guilford",
+    "haddam",
+    "killingworth",
+    "madison",
+    "middlefield",
+    "middletown",
+    "north-branford",
+    "wallingford"
+  ],
+  "pomfret": [
+    "brooklyn",
+    "eastford",
+    "hampton",
+    "killingly",
+    "putnam",
+    "woodstock"
+  ],
+  "north-stonington": [
+    "griswold",
+    "ledyard",
+    "preston",
+    "stonington",
+    "voluntown"
+  ],
+  "colebrook": [
+    "barkhamsted",
+    "hartland",
+    "norfolk",
+    "winchester"
+  ],
+  "seymour": [
+    "ansonia",
+    "beacon-falls",
+    "bethany",
+    "derby",
+    "oxford",
+    "shelton",
+    "woodbridge"
+  ],
+  "north-haven": [
+    "east-haven",
+    "hamden",
+    "new-haven",
+    "north-branford",
+    "wallingford"
+  ],
+  "harwinton": [
+    "burlington",
+    "litchfield",
+    "new-hartford",
+    "plymouth",
+    "thomaston",
+    "torrington"
+  ],
+  "franklin": [
+    "bozrah",
+    "lebanon",
+    "norwich",
+    "sprague",
+    "windham"
+  ],
+  "putnam": [
+    "killingly",
+    "pomfret",
+    "thompson",
+    "woodstock"
+  ],
+  "bristol": [
+    "burlington",
+    "farmington",
+    "plainville",
+    "plymouth",
+    "southington",
+    "wolcott"
+  ],
+  "stafford": [
+    "ellington",
+    "somers",
+    "union",
+    "willington"
+  ],
+  "suffield": [
+    "east-granby",
+    "enfield",
+    "granby",
+    "windsor-locks"
+  ],
+  "wolcott": [
+    "bristol",
+    "cheshire",
+    "plymouth",
+    "southington",
+    "waterbury"
+  ],
+  "farmington": [
+    "avon",
+    "bristol",
+    "burlington",
+    "new-britain",
+    "newington",
+    "plainville",
+    "west-hartford"
+  ],
+  "new-canaan": [
+    "darien",
+    "norwalk",
+    "stamford",
+    "wilton"
+  ],
+  "wethersfield": [
+    "east-hartford",
+    "glastonbury",
+    "hartford",
+    "newington",
+    "rocky-hill"
+  ],
+  "prospect": [
+    "bethany",
+    "cheshire",
+    "naugatuck",
+    "waterbury"
+  ],
+  "brooklyn": [
+    "canterbury",
+    "hampton",
+    "killingly",
+    "plainfield",
+    "pomfret"
+  ],
+  "thompson": [
+    "putnam",
+    "woodstock"
+  ],
+  "orange": [
+    "derby",
+    "milford",
+    "new-haven",
+    "shelton",
+    "west-haven",
+    "woodbridge"
+  ],
+  "groton": [
+    "ledyard",
+    "new-london",
+    "stonington",
+    "waterford"
+  ],
+  "milford": [
+    "orange",
+    "shelton",
+    "stratford",
+    "west-haven"
+  ],
+  "woodstock": [
+    "eastford",
+    "pomfret",
+    "putnam",
+    "thompson",
+    "union"
+  ],
+  "newington": [
+    "berlin",
+    "farmington",
+    "hartford",
+    "new-britain",
+    "rocky-hill",
+    "west-hartford",
+    "wethersfield"
+  ],
+  "bridgeport": [
+    "fairfield",
+    "stratford",
+    "trumbull"
+  ],
+  "killingly": [
+    "brooklyn",
+    "plainfield",
+    "pomfret",
+    "putnam",
+    "sterling"
+  ],
+  "columbia": [
+    "andover",
+    "coventry",
+    "hebron",
+    "lebanon",
+    "windham"
+  ],
+  "burlington": [
+    "avon",
+    "bristol",
+    "canton",
+    "farmington",
+    "harwinton",
+    "new-hartford",
+    "plymouth"
+  ],
+  "thomaston": [
+    "harwinton",
+    "litchfield",
+    "plymouth",
+    "waterbury",
+    "watertown"
+  ],
+  "east-granby": [
+    "bloomfield",
+    "granby",
+    "simsbury",
+    "suffield",
+    "windsor",
+    "windsor-locks"
+  ],
+  "new-london": [
+    "groton",
+    "waterford"
+  ],
+  "west-haven": [
+    "milford",
+    "new-haven",
+    "orange"
+  ],
+  "monroe": [
+    "easton",
+    "newtown",
+    "oxford",
+    "shelton",
+    "trumbull"
+  ],
+  "east-windsor": [
+    "ellington",
+    "enfield",
+    "south-windsor",
+    "windsor",
+    "windsor-locks"
+  ],
+  "somers": [
+    "ellington",
+    "enfield",
+    "stafford"
+  ],
+  "east-hampton": [
+    "colchester",
+    "east-haddam",
+    "glastonbury",
+    "haddam",
+    "marlborough",
+    "middletown",
+    "portland"
+  ],
+  "plainfield": [
+    "brooklyn",
+    "canterbury",
+    "griswold",
+    "killingly",
+    "sterling",
+    "voluntown"
+  ],
+  "hartland": [
+    "barkhamsted",
+    "colebrook",
+    "granby"
+  ],
+  "east-haven": [
+    "branford",
+    "new-haven",
+    "north-branford",
+    "north-haven"
+  ],
+  "stratford": [
+    "bridgeport",
+    "milford",
+    "shelton",
+    "trumbull"
+  ],
+  "washington": [
+    "bethlehem",
+    "kent",
+    "litchfield",
+    "morris",
+    "new-milford",
+    "roxbury",
+    "warren",
+    "woodbury"
+  ],
+  "plymouth": [
+    "bristol",
+    "burlington",
+    "harwinton",
+    "thomaston",
+    "waterbury",
+    "wolcott"
+  ],
+  "new-hartford": [
+    "barkhamsted",
+    "burlington",
+    "canton",
+    "harwinton",
+    "torrington"
+  ],
+  "new-fairfield": [
+    "brookfield",
+    "danbury",
+    "new-milford",
+    "sherman"
+  ],
+  "cromwell": [
+    "berlin",
+    "glastonbury",
+    "middletown",
+    "portland",
+    "rocky-hill"
+  ],
+  "salisbury": [
+    "canaan",
+    "north-canaan",
+    "sharon"
+  ],
+  "roxbury": [
+    "bridgewater",
+    "new-milford",
+    "southbury",
+    "washington",
+    "woodbury"
+  ],
+  "colchester": [
+    "east-haddam",
+    "east-hampton",
+    "hebron",
+    "lebanon",
+    "marlborough",
+    "salem"
+  ],
+  "rocky-hill": [
+    "berlin",
+    "cromwell",
+    "glastonbury",
+    "newington",
+    "wethersfield"
+  ],
+  "sprague": [
+    "canterbury",
+    "franklin",
+    "lisbon",
+    "norwich",
+    "scotland"
+  ],
+  "lebanon": [
+    "bozrah",
+    "colchester",
+    "columbia",
+    "franklin",
+    "hebron",
+    "windham"
+  ],
+  "newtown": [
+    "bethel",
+    "bridgewater",
+    "brookfield",
+    "easton",
+    "monroe",
+    "oxford",
+    "redding",
+    "southbury"
+  ],
+  "windsor": [
+    "bloomfield",
+    "east-granby",
+    "east-windsor",
+    "hartford",
+    "south-windsor",
+    "windsor-locks"
+  ],
+  "torrington": [
+    "goshen",
+    "harwinton",
+    "litchfield",
+    "new-hartford",
+    "winchester"
+  ],
+  "granby": [
+    "barkhamsted",
+    "canton",
+    "east-granby",
+    "hartland",
+    "simsbury",
+    "suffield"
+  ],
+  "hamden": [
+    "bethany",
+    "cheshire",
+    "new-haven",
+    "north-haven",
+    "wallingford",
+    "woodbridge"
+  ],
+  "canterbury": [
+    "brooklyn",
+    "griswold",
+    "hampton",
+    "lisbon",
+    "plainfield",
+    "scotland",
+    "sprague"
+  ],
+  "glastonbury": [
+    "bolton",
+    "cromwell",
+    "east-hampton",
+    "east-hartford",
+    "hebron",
+    "manchester",
+    "marlborough",
+    "portland",
+    "rocky-hill",
+    "wethersfield"
+  ],
+  "preston": [
+    "griswold",
+    "ledyard",
+    "lisbon",
+    "montville",
+    "north-stonington",
+    "norwich"
+  ],
+  "southington": [
+    "berlin",
+    "bristol",
+    "cheshire",
+    "meriden",
+    "new-britain",
+    "plainville",
+    "wolcott"
+  ],
+  "redding": [
+    "bethel",
+    "danbury",
+    "easton",
+    "newtown",
+    "ridgefield",
+    "weston",
+    "wilton"
+  ],
+  "darien": [
+    "new-canaan",
+    "norwalk",
+    "stamford"
+  ],
+  "beacon-falls": [
+    "bethany",
+    "naugatuck",
+    "oxford",
+    "seymour"
+  ],
+  "mansfield": [
+    "ashford",
+    "chaplin",
+    "coventry",
+    "willington",
+    "windham"
+  ],
+  "new-milford": [
+    "bridgewater",
+    "brookfield",
+    "kent",
+    "new-fairfield",
+    "roxbury",
+    "sherman",
+    "washington"
+  ],
+  "sterling": [
+    "killingly",
+    "plainfield",
+    "voluntown"
+  ],
+  "cheshire": [
+    "bethany",
+    "hamden",
+    "meriden",
+    "prospect",
+    "southington",
+    "wallingford",
+    "waterbury",
+    "wolcott"
+  ],
+  "norwich": [
+    "bozrah",
+    "franklin",
+    "lisbon",
+    "montville",
+    "preston",
+    "sprague"
+  ],
+  "watertown": [
+    "bethlehem",
+    "middlebury",
+    "morris",
+    "thomaston",
+    "waterbury",
+    "woodbury"
+  ],
+  "weston": [
+    "easton",
+    "fairfield",
+    "redding",
+    "westport",
+    "wilton"
+  ],
+  "ellington": [
+    "east-windsor",
+    "enfield",
+    "somers",
+    "south-windsor",
+    "stafford",
+    "tolland",
+    "vernon",
+    "willington"
+  ],
+  "east-haddam": [
+    "chester",
+    "colchester",
+    "east-hampton",
+    "haddam",
+    "lyme",
+    "salem"
+  ]
+}
