@@ -410,4 +410,48 @@ defmodule Ethos.Accounts do
       {:error, :user, changeset, _} -> {:error, changeset}
     end
   end
+
+  ## Moderation listing
+
+  @doc """
+  Every account, with the numbers a moderator needs to judge it.
+
+  `review_count` and `revoked_count` together are the signal: one revoked
+  comment out of twenty reads very differently from two out of two, and the
+  console should not make an admin run that query in their head.
+
+  `opts` accepts `:search`, matched case-insensitively against username and
+  email. An empty or missing search returns everyone.
+  """
+  def list_users_for_moderation(opts \\ []) do
+    search = opts |> Keyword.get(:search, "") |> to_string() |> String.trim()
+
+    from(u in User,
+      left_join: r in Ethos.Social.Review,
+      on: r.user_id == u.id,
+      group_by: u.id,
+      order_by: [desc: u.inserted_at, desc: u.id],
+      select: %{
+        user: u,
+        review_count: count(r.id),
+        revoked_count: fragment("count(*) filter (where ? = 'revoked')", r.status)
+      }
+    )
+    |> filter_by_search(search)
+    |> Repo.all()
+  end
+
+  defp filter_by_search(query, ""), do: query
+
+  defp filter_by_search(query, search) do
+    pattern = "%#{search}%"
+
+    # `username` is citext so it is already case-insensitive; `email` is citext
+    # too. ilike is belt and braces and costs nothing at this size.
+    where(
+      query,
+      [u],
+      ilike(u.username, ^pattern) or ilike(fragment("?::text", u.email), ^pattern)
+    )
+  end
 end

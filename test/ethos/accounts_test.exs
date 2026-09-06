@@ -653,4 +653,61 @@ defmodule Ethos.AccountsTest do
       refute Ethos.Accounts.needs_username?(nil)
     end
   end
+
+  describe "list_users_for_moderation/1" do
+    import Ethos.GuidesFixtures
+
+    test "returns every user with zero counts when nobody has reviewed" do
+      user = user_fixture()
+
+      assert [row] = Ethos.Accounts.list_users_for_moderation()
+      assert row.user.id == user.id
+      assert row.review_count == 0
+      assert row.revoked_count == 0
+    end
+
+    test "counts a user's reviews and how many were revoked" do
+      user = user_fixture()
+      # Pin both guides' author to `user` — otherwise guide_fixture/1 mints
+      # its own author via user_fixture/0 and the assertion below sees three
+      # users instead of one.
+      guide_one = guide_fixture(%{user: user})
+      guide_two = guide_fixture(%{user: user})
+
+      {:ok, _kept} =
+        Ethos.Social.create_review(user, guide_one, %{"rating" => "8", "body" => "Kept."})
+
+      {:ok, gone} =
+        Ethos.Social.create_review(user, guide_two, %{"rating" => "2", "body" => "Gone."})
+
+      gone |> Ecto.Changeset.change(status: "revoked") |> Ethos.Repo.update!()
+
+      assert [row] = Ethos.Accounts.list_users_for_moderation()
+      assert row.review_count == 2
+      assert row.revoked_count == 1
+    end
+
+    test "searches by username" do
+      match = user_fixture(%{username: "findme"})
+      _other = user_fixture(%{username: "somebodyelse"})
+
+      assert [row] = Ethos.Accounts.list_users_for_moderation(search: "findm")
+      assert row.user.id == match.id
+    end
+
+    test "searches by email, case-insensitively" do
+      match = user_fixture(%{email: "Needle@example.com"})
+      _other = user_fixture()
+
+      assert [row] = Ethos.Accounts.list_users_for_moderation(search: "needle")
+      assert row.user.id == match.id
+    end
+
+    test "an empty search returns everyone" do
+      user_fixture()
+      user_fixture()
+
+      assert length(Ethos.Accounts.list_users_for_moderation(search: "")) == 2
+    end
+  end
 end
