@@ -10,16 +10,36 @@ Sources, in order of authority:
    **31 confirmed · 5 refuted (C3, C5, C14, C21, C27) · 3 uncertain (C10, C39,
    with C36/C37 recorded as confirmed gaps).**
 2. `.superpowers/sdd/2026-09-05-golf-courses/research/utah-finder.md` — the finder.
-   Context only. It carries the five refuted claims, most damagingly a **wrong
-   "no closed season" finding** that the verifier overturned; where the two
-   disagree, the verdicts file wins.
+   Context only for claims 1–5 and 7–8. It carries the five refuted claims, most
+   damagingly a **wrong "no closed season" finding** that the verifier
+   overturned; where the two disagree, the verdicts file wins.
+3. The same finder's **§6, which is not context and is not covered by any
+   verdict.** It was re-derived from scratch after publication and is the only
+   evidence behind the day-two course this guide now carries. The verdicts file
+   predates it and adjudicates nothing in it, so for the day-two course the
+   ordering above inverts: §6 is the authority, C32 and C33 survive only as the
+   two Sand Hollow claims the guide still states in prose. Every sentence below
+   that rests on §6 is marked as resting on §6.
 
 **The governing rule, carried over from Oregon:** a verdict vouches only for what
 its own text restates, not for every clause of the sentence the finder wrote
 around it. Where a verdict is `refuted` but supplies a correction, that
 correction's text ships, not the finder's original wording.
 
-**10 places, 10 entries, 1 guide, 6 sections, 8 FAQ answers, 0 photos.**
+**10 places, 10 entries, 1 guide, 6 sections, 9 FAQ answers, 0 photos.**
+
+**Correction of record, 6 September 2026.** The day-two course published on
+5 September 2026 was **Sand Hollow Resort: Championship Course**, selected at
+Golf Digest rank #10 with its "Public" label and with no distance measured
+against any other candidate. The spec's rule is the **nearest** other publicly
+accessible course, not the highest-ranked other one, and a corpus-wide audit
+(`second-course-audit.md`) found Utah among four states that had selected by
+ranking position instead. `utah.json` now carries **Red Hills Golf Course,
+St. George — 4.4 road miles** by OSRM, against Sand Hollow's **25.1**. Nothing
+found about Sand Hollow is withdrawn: it stays in the guide's prose, with what
+C32 and C33 establish about it, as the farther alternative it is. The passages
+below that documented it as the day-two course have been rewritten to document
+Red Hills instead; this paragraph is the record that they once did.
 
 ---
 
@@ -119,20 +139,48 @@ the "Where is Black Desert Resort?" FAQ both state the Ivins/Washington City
 distinction explicitly, because C18 flags it as a checked-for error, not an
 assumed non-issue.
 
-**Sand Hollow's county was not separately verified as its own verdict item.**
-The finder and verifier both give Hurricane, UT with no county citation
-attached anywhere in either file's Sand Hollow sections (C32, C33). Rather
-than assert a county with no verdict behind it, this file uses the one county
-source that is independently confirmed and that happens to list Hurricane on
-its own municipal roll: C17's county-primary source,
-`washco.utah.gov/services-resources/cities/`, whose own list reads "Apple
-Valley, Enterprise, Hildale, **Hurricane**, Ivins, LaVerkin, Leeds, New
-Harmony, Rockville, Santa Clara, Springdale, St. George, Toquerville, Virgin,
-Washington." Hurricane is named on the same confirmed page as Ivins, so
-`sand-hollow-championship-course-hurricane`'s `county: "Washington County"` is
-traceable to C17, not invented. The guide's own prose states this narrowly —
-"also within Washington County, Utah" — rather than folding it into a
-Golf-Digest-sourced sentence, so the citation boundary stays visible.
+**Red Hills' county does not rest on a verdict. It rests on the geocoder, and
+the guide says so in its own sentence.** No verdict adjudicates this course at
+all. The re-derived finder §6 geocoded the clubhouse point with the U.S. Census
+Bureau's coordinates endpoint and got **Washington County**, Utah, Incorporated
+Place **St. George city**; the Census address geocoder independently matched
+"645 W 1250 N, ST GEORGE, UT, 84770" to x=-113.6003835387, y=37.128770363586,
+and OSRM names that waypoint "1250 North", confirming the point is the one
+routed from. Two control queries — St. George City Hall, 61 S Main St, and Ivins
+City Hall, 55 N Main St — both returned an Incorporated Place, so a county and
+place returned here are a real result rather than a silently failed lookup. C17's
+confirmed county page corroborates without being the basis:
+`washco.utah.gov/services-resources/cities/` names St. George on the same
+municipal roll as Ivins. `red-hills-golf-course-st-george`'s
+`county: "Washington County"` is therefore traceable to the geocoder first and
+C17 second, and the guide publishes the geocoder result as a geocoder result —
+"with the U.S. Census Bureau's geocoder returning Washington County and the
+Incorporated Place 'St. George city' at the clubhouse point" — rather than
+asserting the containment flat.
+
+**Sand Hollow's county was never separately verified as its own verdict item,
+and it no longer has a place record — but the guide still names it in prose,
+and that prose still makes a containment claim.** The finder and verifier both
+give Hurricane, UT with no county citation attached anywhere in either file's
+Sand Hollow sections (C32, C33). The guide's day-two section says "in Hurricane,
+in the same Washington County," and the only source behind that clause is C17's
+county-primary page, whose own list reads "Apple Valley, Enterprise, Hildale,
+**Hurricane**, Ivins, LaVerkin, Leeds, New Harmony, Rockville, Santa Clara,
+Springdale, St. George, Toquerville, Virgin, Washington." Hurricane is named on
+the same confirmed page as Ivins and St. George, so the claim is traceable to
+C17, not invented. It is stated narrowly, in the guide's own words, rather than
+folded into a Golf-Digest-sourced sentence, so the citation boundary stays
+visible even now that no place record carries the county as a field.
+
+**Two geocoder facts from §6 are recorded here and published nowhere.** The
+Census address geocoder returns **zero matches** for "1500 E Black Desert Dr,
+Ivins, UT 84738" — the street is not yet in TIGER — so the ranked course's own
+routing point comes from OSM (`way/1180990815`, centroid 37.154639,
+-113.651322) rather than from an empty result treated as evidence. And the
+Black Desert polygon centroid geocodes to Incorporated Place **Santa Clara
+city** while the operator publishes an Ivins address. §6 records both and tidies
+neither, and neither disturbs the guide: its Ivins claim rests on the operator's
+own address (C15) and on C16, never on the centroid.
 
 ---
 
@@ -234,8 +282,83 @@ below for the full gate-interaction record.
 |---|---|
 | On-property lodging collections | C30 — confirmed: Hotel Collection, Plume Wellness Collection, Resort Collection, The Terrace Collection, The Cove Collection ("Coming Soon"); ~800 rooms per the FAQ, 791 per Cvent — both figures published, neither preferred over the other |
 | On-property restaurants | C31 — confirmed: Basalt, Latitude, 20th Hole, Flo, Lava Love, Oasis, Club 73, each with the operator's own descriptive label. Flo is named in "The resort" section's list for completeness (matching the operator's own seven) but is **not** given its own `place` record — its one operator descriptor, "Meet in the Lobby," does not establish a cuisine or offering the way the other six do, so a `restaurant`/`cafe` place record for it would assert more than the source supports. 20th Hole is likewise named in prose but not given its own place record, for the same reason: "Sports Bar" alone does not clear the bar the other five named-and-described venues clear. |
-| Sand Hollow Resort: Championship Course as day two | C32 — confirmed: Golf Digest #10, Public, Hurricane, UT; John Fought & Andy Staples; opened 2008 |
-| Sand Hollow booking rules | C33 — confirmed verbatim: up to 180 days in advance, credit card required, cancellations/reductions 48 hours ahead, single players may book within 48 hours by phone. No resort-guest-priority language, matching the finder. |
+| Sand Hollow Resort: Championship Course — what it is | C32 — confirmed: Golf Digest #10, Public, Hurricane, UT; John Fought & Andy Staples; opened 2008. **Still published, as prose, as the farther alternative.** No longer the day-two course and no longer a place record — see §7b. |
+| Sand Hollow booking rules | C33 — confirmed verbatim: up to 180 days in advance, credit card required, cancellations/reductions 48 hours ahead, single players may book within 48 hours by phone. No resort-guest-priority language, matching the finder. **Still published verbatim**, in the day-two section's closing paragraph and in the day-two FAQ answer. |
+
+## 7b. Day two, re-derived — sentence by sentence against finder §6
+
+The whole of this subsection rests on the re-derived §6, which no verdict
+covers. Where §6 does not carry a sentence the guide states, that is said here
+rather than filled in.
+
+**How the course was arrived at, and what the guide states about it (§6a, §6b).**
+An Overpass sweep of every `leisure=golf_course` within 60 km of the Black
+Desert course returned **24 objects**, and all 24 were routed with OSRM and
+geocoded with the Census coordinates endpoint **before any candidate was
+excluded** — the sweep is the candidate set, not a ranking. The two nearest,
+Entrada at Snow Canyon Country Club at 1.8 miles and an OSM node called "Snow
+Canyon Country Club" at 2.1 miles, were adjudicated and disposed of: Entrada
+fails the access bar in its operator's own words ("Private Golf in St. George,
+UT", a Member Login and a Membership Inquiry form, no public tee-time booking of
+any kind, footer "Private Golf Club sites by MembersFirst", domain checked
+against its own 2537 West Entrada Trail address), and the OSM node carries
+Entrada's own clubhouse address, so it is the same facility rather than a second
+course. The walk then stopped at the third row, Red Hills at **4.4** miles, and
+no candidate below it was adjudicated on access. **None of that method is in the
+guide, and it should not be** — what publishes is its one conclusion, "the
+nearest other publicly accessible course to Black Desert is Red Hills Golf
+Course," plus the mileage and the geography behind it. The trail carries the
+walk; the guide carries the finding.
+
+| Published sentence | Rests on |
+|---|---|
+| "The nearest other publicly accessible course to Black Desert is Red Hills Golf Course, at 645 W 1250 N in St. George — 4.4 road miles by OSRM routing" | §6, §6a, §6b. The 4.4 figure is row 3 of the nearest-first walk; the origin point 37.1622, -113.6520 is named "Black Desert Drive" by OSRM, matching the resort's published address. |
+| "in Washington County, the same county as Black Desert, with the U.S. Census Bureau's geocoder returning Washington County and the Incorporated Place 'St. George city' at the clubhouse point" | §6a, §6b — see §2 above for why this is stated as a geocoder result rather than asserted flat. |
+| The split name: City web pages say Dixie Red Hills Golf Course; the City's booking system and its Adopted FY27 Master Fee Schedule say Red Hills Golf Course. "Same course, same address, same telephone number, 435-627-4444." | §6f, which records the discrepancy **rather than reconciling it**. The place record carries `Red Hills Golf Course`, the operator's booking-system and fee-schedule form; the guide states both forms in prose so a reader arriving from either name lands correctly. |
+| Operator: the City of St. George, Parks and Community Services, Golf Division, which lists the course among its four City golf courses | §6e, footer checked against "61 S. Main St. St. George, UT 84770" before quoting — the Utah city, not a same-named one elsewhere. |
+| "Dixie Red Hills Golf Course was the first golf course developed by the City of St. George in the mid 1960's" and "Dixie Red Hills is a 9-hole par-34 layout that meanders around the sandstone cliffs commonly seen in the area" | §6e, verbatim from the City's own pages. Both quotes keep the City's own "Dixie Red Hills" spelling inside the quotation marks, because that is what the quoted page says. |
+| Booking policy: online only, tee times "will not be accepted by phone"; 14 days in advance; a credit card number required; cancellations and player reductions at least 24 hours in advance | §6e, each clause the City's own published wording. |
+| "There is no membership gate — the City's Loyalty Card is a discount programme for Washington County residents, not a condition of play" | §6e. This is the tiered-by-price access shape: a published non-resident rate *is* access, and §6f settles it behaviourally by finding the default rate on every published slot flagged `"is_default_public": true`. |
+| "the booking system's own settings do not allow single-player bookings, so a solo golfer cannot take a slot online" | §6f, `"allow_single_player_bookings": false`. Published as a real constraint on a party of one, not as a membership gate — the same distinction C13 forced on the ranked course. |
+| "read unauthenticated for September 6 and September 7, 2026, it reported the booking window open and released to the public, with 66 published tee times on each date and unbooked groups still available on both" | §6f, executed against the portal's own Convex API: `"bookingWindowStatus": "open"`, `"isReleasedForPublic": true`, 66 tee times each date, and one slot on 2026-09-07 at 14:50 with `"available_spots": 4.0, "booked_spots": 0.0`. **Behaviour, not an adjective** — and the guide's phrasing dates the reading rather than the fact, which is what keeps it from rotting. |
+
+**The closure, and why the guide publishes the confirmation and not only the
+schedule (§6h).** The City publishes a dated *2026 City of St. George Golf
+Division Maintenance Schedule*, linked from the golf index page and checked to
+sit in live markup rather than inside an HTML comment. For this course it closes
+the sheet at **Fall Overseed, September 9 to September 23, 2026**; **Fall
+Aerification, September 9**, also closed; and **Spring Aerification, April 27
+and 28**, closed the 27th and open half a day the 28th. All three publish with
+their absolute dates. The guide then publishes the behavioural confirmation
+beside the schedule, because a maintenance PDF that nobody has checked against
+the booking system is a claim and not a finding: read on September 6, 2026, the
+tee sheet returned **no tee times at all for any date from September 8 through
+September 20, 2026**, the end of the 14-day window, while two other City courses
+whose published overseed windows begin later returned full sheets of roughly
+sixty slots a date across the same period. **The one-day discrepancy is
+published as a discrepancy** — the sheet went empty from September 8, a day
+before the schedule's own published September 9 start — and neither side is
+picked, matching this file's standing preference for recording a conflict over
+resolving one it cannot.
+
+**Season of play is written as unverified, not as year-round (§6h).** The City
+publishes no season-of-play statement and no heat or summer-hours notice for
+this course; §6h grepped the raw HTML of the golf index, the course page, the
+fee page and the policy-changes page for `clos`, `aerat`, `renovat`, `flood` and
+`maint`, tested every hit for whether it sat inside an HTML comment, and found
+nothing live either way. The City's "2026 Book of Golf" is served through an
+Adobe viewer that did not render to a fetch and could not be read. The guide's
+sentence is therefore "its openness is unverified rather than year-round" — true
+where "open year-round" would not be, and the same absence-reported-as-absence
+discipline C29 and Oregon's E12 set for this corpus.
+
+**The fee the guide refuses to publish, and the one it could have (§6g).** The
+guide says plainly that "no green fee is published here for this course," and
+gives the reason: the golf division's fee table has two columns, "October-May"
+and "June-September", with no year and no effective date attached to either,
+which fails this corpus's rule that a published fee carry the operator's own
+dated qualifier. That much matches §6g exactly. **But §6g also holds a fee it
+marks publishable, and the guide does not carry it** — see O16.
 
 ---
 
@@ -274,12 +397,20 @@ sentence pattern Oregon's F2 caveat used, carried across states on purpose.
 ## 10. Places, against the verdicts they rest on
 
 Two `golf-course` places — the gate's maximum, and this file uses exactly
-that: the ranked course and one second course.
+that: the ranked course and one second course. The second one changed after
+publication; the replacement was made **in place**, so the count, the entry
+count and the one-entry-per-place shape are unchanged.
+
+`official_url` for the day-two course is the City's own page,
+`https://www.sgcityutah.gov/activity/golf/dixie_red_hills/index.php`. OSM points
+at `stgeorgecitygolf.com`, which §6e found to be an empty default WordPress
+install; a legacy domain that resolves to nothing is not an official URL, and it
+is recorded here rather than published there.
 
 | slug | kind | rests on |
 |---|---|---|
 | `black-desert-resort-ivins` | `golf-course` | C4, C5-correction, C7, C15, C22, C23, C24, C25, C26, C28 |
-| `sand-hollow-championship-course-hurricane` | `golf-course` | C6, C17 (county), C32, C33 |
+| `red-hills-golf-course-st-george` | `golf-course` | finder §6a/§6b (distance, county, Incorporated Place), §6e (operator, the two City quotes, booking policy, the Loyalty Card as discount rather than gate), §6f (name discrepancy, the executed tee sheet, the single-player restriction), §6g (why no fee publishes), §6h (the dated maintenance windows and their behavioural confirmation). **No verdict.** |
 | `hotel-collection-black-desert-resort` | `hotel` | C30 |
 | `basalt-black-desert-resort` | `restaurant` | C31 |
 | `latitude-black-desert-resort` | `restaurant` | C31 |
@@ -331,8 +462,9 @@ wrong on two nearby checkable facts.
 
 **O5 — the finder's weak county citation, a tax-notice tag archive (C17).**
 Replaced with the county's own `/services-resources/cities/` page — the
-better primary source the verdict names, and the one this file also uses for
-Sand Hollow's county (§2).
+better primary source the verdict names, and the one this file still uses to
+corroborate St. George's county and to carry the Hurricane containment claim the
+guide states about Sand Hollow in prose (§2).
 
 ### The two uncertain claims
 
@@ -400,6 +532,47 @@ neither "12-minute" nor "twelve-minute" publishes. The rest of C20's
 inclusions list, including the CADDIEMASTER forecaddies and the fifteen-mph
 carts alongside which this figure appeared, publishes unchanged. See §5.
 
+**O16 — the day-two course's $19 nine-hole green fee, which §6g marks
+publishable.** This is the one place where the research supports more than the
+guide states, and it is recorded as a choice rather than a gap. §6g reports that
+for tee times whose own `"start_date"` is 2026-09-06 and 2026-09-07, the City's
+booking system returns, for the `"is_default_public": true` player type, a
+**9-hole green fee of $19.00** and a **cart fee of $10.00** (`green_fee_9: 1900`,
+`cart_fee_9: 1000`, in cents) — a fee bound to a named date by the operator's own
+system, which is exactly what the dated-qualifier rule asks for. The Adopted FY27
+Master Fee Schedule's "Jun - Sept" 9-hole figure of $19 matches it. Neither
+publishes. The re-authoring pass declined both on the ground that the FY27 PDF's
+dating rests on the City's own filename, directory and PDF CreationDate — which
+§6g itself labels a **freshness proxy, not a stated effective date** — and did
+not separately carry the booking-system figure, which does not share that
+weakness. The guide's flat sentence "no green fee is published here for this
+course" is therefore true of what shipped but understates the evidence: it is
+the undated *web table* that fails the rule, not every fee the operator
+publishes. Recorded so the next author has the figure and the reason, and can
+decide the other way with the same evidence in front of them.
+
+**O17 — Sunbrook Golf Club, the fourth course that corroborates the closure.**
+§6h's confirmation has three legs, and the guide publishes two. Southgate Golf
+Course and St. George Golf Club, whose published overseed windows begin
+September 22 and September 21, returned full sheets over the dates this course
+returned nothing — that is the contrast the guide states. The third leg is
+Sunbrook Golf Club, whose own published overseed window begins September 8 and
+whose sheet goes empty on the same date as this course. It is the stronger
+evidence of the two shapes, because it shows the emptiness tracking the schedule
+*course by course* rather than merely differing between one closed course and two
+open ones. It is not published, and no rule required dropping it. Recorded as
+what it is: a sourced corroboration the guide simply does not carry.
+
+**O18 — a `place` record for Sand Hollow Resort: Championship Course.** It had
+one, as `sand-hollow-championship-course-hurricane`, and lost it when the day-two
+course was corrected. C32 and C33 are untouched and everything they establish
+still publishes — in the day-two section's closing paragraph and the day-two FAQ
+answer, as prose. What is gone is the structured record, the `entries` row and
+the county field, because the gate allows two `golf-course` places and the
+nearest publicly accessible course has the second one. The prose is explicit
+about why: "It is simply farther: 25.1 road miles from Black Desert, against
+4.4."
+
 ---
 
 ## 12. What the gate caught, and what it did not
@@ -432,13 +605,42 @@ is in pattern 6's or pattern 11's trigger-word lists, so a genuine sourced
 cancellation-notice window publishes without needing a rewrite), "180 days in
 advance" (days are not gated at all — only minutes and hours are).
 
+**Re-run after the day-two correction, and what the new prose added.** The
+corrected `utah.json` was checked with `Ethos.GolfProse.banned_phrases/1` over
+every string in its published structure — run against the real module, not a
+copy — and returned `[]`; `MIX_TEST_PARTITION=_golf mix test
+test/ethos/seeds/` returned **257 tests, 0 failures**, 6 excluded on the
+pre-existing `pending_*` exclusions. Four new phrasings entered the corpus with
+the Red Hills passages and none needed a rewrite:
+
+* **"at least 24 hours in advance"** — the City's own cancellation window. Same
+  shape as Sand Hollow's 48-hour figure and clean for the same reason: "hours"
+  is followed by "in advance", which is in neither pattern 6's nor pattern 21's
+  travel list, and pattern 11 is anchored on a *preceding* "in" ("in 24 hours"),
+  not a following one.
+* **"14 days in advance"** and **"30 days in advance"** — days are not gated.
+* **"4.4 road miles"**, **"25.1 road miles"**, **"66 published tee times"** —
+  mileages and counts, no duration word, no direction.
+* **"open half a day on the 28th"** — no numeral, no minutes, no hours, and no
+  journey; the day-fraction idiom is not gated in any form.
+
+The dated sentences added with these passages were written in the as-of shape
+the self-dating patterns exist to enforce: "read unauthenticated for September 6
+and September 7, 2026", "a reading of the tee sheet on September 6, 2026
+returned…". Each states when a source was read, which stays true; none states an
+offset from an unstated now, which would not.
+
 **What this run does not, and cannot, catch (§7's rung (c) risk, carried from
 Oregon):** an unsourced containment claim in ordinary prose is grammatically
 identical to a sourced one beside it, and no regex tells them apart. The
 defence for this file is the same as Oregon's: this document, not the gate.
 Every geographic containment claim in `utah.json` — Ivins/Washington County,
-Hurricane/Washington County, the Ivins/Washington City distinction — is
-traced above to C16, C17, or C18, not left to the gate to police.
+St. George/Washington County, Hurricane/Washington County, the Ivins/Washington
+City distinction — is traced above to C16, C17, C18 or the Census geocoder run
+recorded in finder §6a, not left to the gate to police. The distance claim the
+correction turns on is in the same position: **no regex can tell 4.4 measured
+road miles from 4.4 asserted ones**, and the defence is §7b's trace to the
+Overpass sweep and the OSRM route, not the test run.
 
 ---
 
@@ -448,7 +650,9 @@ traced above to C16, C17, or C18, not left to the gate to police.
 is resolved by a separate agent afterward, using this file and `utah.json` as
 its inputs. The one-line summary handed off for that purpose: ranked course
 **Black Desert Resort**, basecamp **Ivins**, county **Washington County**,
-second course **Sand Hollow Resort: Championship Course**, access summarized
+second course **Red Hills Golf Course** (St. George, Washington County, 4.4 road
+miles — superseding the **Sand Hollow Resort: Championship Course** first handed
+off, per the correction of record at the top of this file), access summarized
 as "Public (Golf Digest label); non-members book by phone or Chronogolf
 online, 30-day public booking window, room optional, solo bookings restricted
 online; closed to all play Sep 14–Oct 6, 2026 for the PGA TOUR event."
