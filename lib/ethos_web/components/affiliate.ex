@@ -73,7 +73,10 @@ defmodule EthosWeb.Affiliate do
   """
   def locale_from_assigns(assigns) when is_map(assigns) do
     cond do
-      live_render?(assigns) ->
+      # A LiveView render — author and account screens, never a public page.
+      # See the moduledoc for why :socket/:live_module are the right tell and
+      # guide.status / current_user are not.
+      Map.has_key?(assigns, :socket) or Map.has_key?(assigns, :live_module) ->
         nil
 
       guide = assigns[:guide] ->
@@ -109,29 +112,6 @@ defmodule EthosWeb.Affiliate do
 
   def locale_from_assigns(_), do: nil
 
-  @doc """
-  Whether these assigns belong to a LiveView render rather than a page render.
-
-  A LiveView render — author and account screens, and any LiveView **embedded
-  in** a controller page — never carries the page's own subject. See the
-  moduledoc for why `:socket`/`:live_module` are the right tell and
-  `guide.status` / `current_user` are not.
-
-  Public because `EthosWeb.HouseAd` needs the same judgement and duplicating a
-  two-key check is exactly how the tell drifts. It earned that promotion the
-  hard way: the social layer embeds a reactions LiveView inside every guide
-  page, and that LiveView re-renders `app.html.heex`. The house ad was
-  suppressed correctly for the page — a Rome guide, whose paid unit owns the
-  top slot — and then rendered a second time for the embedded LiveView, whose
-  assigns carry `:socket` and no `:guide`. One page, two renders, and only one
-  of them knew what the page was about.
-  """
-  def live_render?(assigns) when is_map(assigns) do
-    Map.has_key?(assigns, :socket) or Map.has_key?(assigns, :live_module)
-  end
-
-  def live_render?(_), do: false
-
   defp hub_town_pages(assigns) do
     case assigns[:town_pages] do
       rows when is_list(rows) -> rows
@@ -164,27 +144,6 @@ defmodule EthosWeb.Affiliate do
   component's condition cannot drift apart.
   """
   def unit_renders?(assigns), do: assigns |> locale_from_assigns() |> renders?()
-
-  @doc """
-  Whether the layout's affiliate unit will render for this page **at `:top`**.
-
-  Lives here, beside `unit_renders?/1`, for the reason recorded above it: a
-  condition expressed in a template and the same condition expressed in the
-  component are two things that drift, and this module has already paid for
-  that once. `EthosWeb.HouseAd` asks this before filling the top slot, so the
-  house ad and the affiliate unit can never both occupy it — and the question
-  "does a paid unit already own the top of this page" has exactly one answer,
-  in one place.
-
-  Placement-aware where `unit_renders?/1` is deliberately not. That one answers
-  "will this page carry a unit at all", which is what the fallback CTA and the
-  disclosure ask; this one answers "is the top slot taken", which is a
-  different question with a different answer on every New York page.
-  """
-  def top_unit_renders?(assigns) do
-    locale = locale_from_assigns(assigns)
-    renders?(locale) and placement(locale) == :top
-  end
 
   @default_placement :bottom
   @placements [:top, :bottom]

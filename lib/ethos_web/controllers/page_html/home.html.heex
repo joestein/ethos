@@ -1,12 +1,5 @@
 <EthosWeb.Layouts.site_header current_user={assigns[:current_user]} />
-<%!-- Carried here as well as in app.html.heex because this page renders with
-      `layout: false` (page_controller.ex) and so never passes through it. The
-      card is left-aligned inside a centred hero, which is the component's own
-      layout rather than this page's. --%>
-<div class="mx-auto max-w-3xl px-4 pt-20 text-left">
-  <EthosWeb.HouseAd.house_ad page={assigns} />
-</div>
-<div class="mx-auto max-w-3xl px-4 pb-20 text-center">
+<div class="mx-auto max-w-3xl px-4 py-20 text-center">
   <h1 class="text-4xl sm:text-5xl font-bold">Turn your trip into a guide worth sharing</h1>
   <p class="mt-4 text-lg text-zinc-600">
     Paste your notes — or the thread of recs your friends sent you — and Ethos turns it into

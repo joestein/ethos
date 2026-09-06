@@ -11,10 +11,6 @@ defmodule EthosWeb.FoliageController do
     week = week_param(params)
 
     render(conn, :index,
-      # The house ad in the layout's top slot advertises this page. See
-      # EthosWeb.HouseAd — the route action below opts out for the same reason,
-      # and /foliage/embed never reaches the layout at all.
-      house_ad: false,
       week: week,
       weeks: Foliage.weeks(),
       towns: Foliage.towns(),
@@ -54,8 +50,6 @@ defmodule EthosWeb.FoliageController do
           "The #{route.name} foliage route passes through #{length(stops)} Connecticut towns. When each one turns, and what is in it."
 
         render(conn, :route,
-          # Same reason as index/2: the house ad points at this feature.
-          house_ad: false,
           route: route,
           stops: stops,
           week: week,
