@@ -3,8 +3,8 @@
 
   <header class="mt-2">
     <h1 class="text-3xl font-bold">{@guide.title}</h1>
-    <p class="mt-1 text-zinc-500">{@guide.destination}</p>
-    <p :for={c <- @collections} class="mt-1 text-sm text-zinc-500">
+    <p class="mt-1 text-ink-muted">{@guide.destination}</p>
+    <p :for={c <- @collections} class="mt-1 text-sm text-ink-muted">
       Part of <.link navigate={~p"/c/#{c.slug}"} class="underline">{c.title}</.link>
     </p>
   </header>
@@ -69,7 +69,7 @@
   >
     <div>
       <p class="font-semibold">Planning your own trip?</p>
-      <p class="text-sm text-zinc-600">
+      <p class="text-sm text-ink-muted">
         Browse tours, skip-the-line tickets, and day trips on GetYourGuide — booking
         through this link supports Ethos.
       </p>
@@ -85,7 +85,11 @@
   </aside>
 
   <ol class="mt-8 space-y-4">
-    <li :for={entry <- @entries} id={"entry-#{entry.id}"} class="rounded-xl border p-5">
+    <li
+      :for={entry <- @entries}
+      id={"entry-#{entry.id}"}
+      class="rounded-xl border border-line p-5"
+    >
       <div class="flex items-start justify-between gap-4">
         <div>
           <p class="font-semibold text-lg">
@@ -103,7 +107,7 @@
                 {entry.name}
             <% end %>
           </p>
-          <p class="text-sm text-zinc-500">
+          <p class="text-sm text-ink-muted">
             {entry.kind}
             <span :if={entry.day}>· day {entry.day}</span>
             <span :if={verdict_badge(entry.verdict)}>· {verdict_badge(entry.verdict)}</span>
@@ -112,7 +116,7 @@
         <button
           type="button"
           data-copy-url={entry_share_url(@guide, entry)}
-          class="shrink-0 rounded-lg border px-2 py-1 text-xs text-zinc-500 hover:bg-zinc-50"
+          class="shrink-0 rounded-lg border border-line px-2 py-1 text-xs text-ink-muted hover:bg-surface-raised"
         >
           Copy link
         </button>
@@ -130,12 +134,12 @@
         {entry.booking_label || "Book this"} →
       </a>
 
-      <p :if={entry.credited_user_id} class="mt-2 text-xs text-zinc-400">
+      <p :if={entry.credited_user_id} class="mt-2 text-xs text-ink-muted">
         added from a reader suggestion
       </p>
 
-      <div :if={@research[entry.id]} class="mt-3 rounded-md bg-zinc-50 p-3 text-sm">
-        <p class="font-medium text-zinc-600">Fresh research</p>
+      <div :if={@research[entry.id]} class="mt-3 rounded-md bg-surface-raised p-3 text-sm">
+        <p class="font-medium text-ink-muted">Fresh research</p>
         <ul class="mt-1 space-y-1">
           <li :for={r <- @research[entry.id]["results"]}>
             <%= if EthosWeb.Url.safe_http?(r["url"]) do %>
@@ -143,7 +147,7 @@
             <% else %>
               <span>{r["title"] || r["url"]}</span>
             <% end %>
-            <span :if={r["snippet"]} class="text-zinc-500">— {r["snippet"]}</span>
+            <span :if={r["snippet"]} class="text-ink-muted">— {r["snippet"]}</span>
           </li>
         </ul>
       </div>
@@ -155,7 +159,7 @@
         class="mt-2"
       >
         <input type="hidden" name="_csrf_token" value={Plug.CSRFProtection.get_csrf_token()} />
-        <button class="text-xs underline text-zinc-500">Research this</button>
+        <button class="text-xs underline text-ink-muted">Research this</button>
       </form>
     </li>
   </ol>
@@ -170,7 +174,7 @@
     <dl class="mt-3 space-y-4">
       <div :for={item <- @guide.faq}>
         <dt class="font-medium">{Map.get(item, "question", "")}</dt>
-        <dd class="text-zinc-600 mt-1">{Map.get(item, "answer", "")}</dd>
+        <dd class="text-ink-muted mt-1">{Map.get(item, "answer", "")}</dd>
       </div>
     </dl>
   </section>
@@ -198,7 +202,7 @@
         (not EthosWeb.Affiliate.unit_renders?(assigns) or
            Enum.any?(@entries, &EthosWeb.Url.safe_http?(&1.booking_url)))
     }
-    class="mt-8 text-xs text-zinc-400"
+    class="mt-8 text-xs text-ink-muted"
   >
     Some booking links on this page earn Ethos a commission at no extra cost to you.
   </p>
@@ -212,17 +216,17 @@
 
   <EthosWeb.ConnectedPages.connected_pages connected={@connected} />
 
-  <footer class="mt-10 flex flex-wrap gap-4 border-t pt-6">
+  <footer class="mt-10 flex flex-wrap gap-4 border-t border-line pt-6">
     <.link
       navigate={~p"/g/#{@guide.slug}/suggest"}
-      class="rounded-md bg-zinc-900 px-4 py-2 text-white text-sm"
+      class="rounded-md bg-accent px-4 py-2 text-accent-ink text-sm"
     >
       Suggest a place
     </.link>
     <.link
       :if={Ethos.Accounts.admin?(@current_user)}
       navigate={~p"/guides/new"}
-      class="rounded-md border px-4 py-2 text-sm"
+      class="rounded-md border border-line px-4 py-2 text-sm"
     >
       Make your own guide
     </.link>
