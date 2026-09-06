@@ -25,10 +25,10 @@ defmodule EthosWeb.ConnectedPages do
     assigns = assign(assigns, :groups, groups) |> assign(:headings, @headings)
 
     ~H"""
-    <section :if={@connected != []} class="mt-10 border-t pt-6">
+    <section :if={@connected != []} class="mt-10 border-t border-line pt-6">
       <h2 class="text-xl font-semibold">Connected pages</h2>
       <div :for={{kind, items} <- @groups} class="mt-4">
-        <h3 class="text-sm uppercase tracking-wide text-zinc-400">
+        <h3 class="text-sm uppercase tracking-wide text-ink-muted">
           {Map.get(@headings, kind, kind)}
         </h3>
         <ul class="mt-2 space-y-2">
@@ -36,8 +36,8 @@ defmodule EthosWeb.ConnectedPages do
             <.link navigate={other_path(item.other)} class="font-medium underline">
               {item.other.title}
             </.link>
-            <span class="text-sm text-zinc-500">· {item.other.subtitle}</span>
-            <p :if={item.note} class="text-sm text-zinc-500">{item.note}</p>
+            <span class="text-sm text-ink-muted">· {item.other.subtitle}</span>
+            <p :if={item.note} class="text-sm text-ink-muted">{item.note}</p>
           </li>
         </ul>
       </div>
