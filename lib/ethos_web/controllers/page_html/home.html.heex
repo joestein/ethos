@@ -77,7 +77,7 @@
       </.link>
     </div>
     <ul class="mt-4 grid gap-3 sm:grid-cols-2">
-      <li :for={hub <- @hubs} class="rounded-xl border p-4">
+      <li :for={hub <- @hubs} class="rounded-xl border border-line p-4">
         <%!-- node_path/1, never ~p"/destinations/\#{hub.path}" — the sigil
               percent-encodes the slash and a multi-segment path 404s. --%>
         <.link
@@ -94,7 +94,7 @@
   <section :if={@collections != []} class="mt-12 text-left">
     <h2 class="text-sm uppercase tracking-wide text-ink-muted">Collections</h2>
     <ul class="mt-4 grid gap-3 sm:grid-cols-2">
-      <li :for={c <- @collections} class="rounded-xl border p-4">
+      <li :for={c <- @collections} class="rounded-xl border border-line p-4">
         <.link navigate={~p"/c/#{c.slug}"} class="font-semibold hover:underline">{c.title}</.link>
       </li>
     </ul>
@@ -106,7 +106,7 @@
       <.link navigate={~p"/foliage"} class="text-sm underline">The forecast →</.link>
     </div>
     <ul class="mt-4 grid gap-3 sm:grid-cols-2">
-      <li :for={route <- @foliage_routes} class="rounded-xl border p-4">
+      <li :for={route <- @foliage_routes} class="rounded-xl border border-line p-4">
         <.link navigate={~p"/foliage/#{route.slug}"} class="font-semibold hover:underline">
           {route.name}
         </.link>
