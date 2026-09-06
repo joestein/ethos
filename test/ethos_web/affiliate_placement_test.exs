@@ -1,5 +1,8 @@
 defmodule EthosWeb.AffiliatePlacementTest do
-  use EthosWeb.ConnCase, async: true
+  # async: false because the "authoring LiveViews" describe below uses
+  # admin_fixture/1, which inserts the configured admin email — concurrent
+  # inserts of that same row deadlock in Postgres.
+  use EthosWeb.ConnCase, async: false
 
   import Phoenix.LiveViewTest
   import Ethos.{AccountsFixtures, GuidesFixtures}
@@ -336,8 +339,9 @@ defmodule EthosWeb.AffiliatePlacementTest do
   end
 
   describe "authoring LiveViews never carry the widget, even for New York guides" do
+    # Guide authoring is admin-only, so these routes require the admin user.
     setup %{conn: conn} do
-      user = user_fixture()
+      user = admin_fixture()
       %{conn: log_in_user(conn, user), user: user}
     end
 

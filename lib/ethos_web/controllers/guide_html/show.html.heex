@@ -149,7 +149,7 @@
       </div>
 
       <form
-        :if={@current_user}
+        :if={Ethos.Accounts.admin?(@current_user)}
         action={~p"/g/#{@guide.slug}/entries/#{entry.id}/research"}
         method="post"
         class="mt-2"

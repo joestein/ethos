@@ -83,6 +83,17 @@ defmodule EthosWeb.Router do
       live "/users/settings/confirm_email/:token", UserSettingsLive, :confirm_email
       live "/users/username", UsernameLive, :edit
 
+      live "/g/:slug/suggest", SuggestLive, :new
+    end
+
+    get "/badges", BadgeController, :index
+  end
+
+  scope "/", EthosWeb do
+    pipe_through [:browser, :require_authenticated_user, :require_admin_user]
+
+    live_session :require_admin_authoring,
+      on_mount: [{EthosWeb.UserAuth, :ensure_authenticated}, {EthosWeb.UserAuth, :ensure_admin}] do
       live "/guides", GuideLive.Index, :index
       live "/guides/new", GuideLive.New, :new
       live "/guides/:id/import", GuideLive.Import, :import
@@ -90,12 +101,9 @@ defmodule EthosWeb.Router do
       live "/guides/:id/edit", GuideLive.Edit, :edit
       live "/guides/:id/share", GuideLive.Share, :share
       live "/guides/:id/suggestions", GuideLive.Suggestions, :suggestions
-
-      live "/g/:slug/suggest", SuggestLive, :new
     end
 
     post "/g/:slug/entries/:entry_id/research", GuideController, :research
-    get "/badges", BadgeController, :index
   end
 
   scope "/admin", EthosWeb do

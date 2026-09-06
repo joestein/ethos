@@ -325,7 +325,8 @@ defmodule EthosWeb.GuideControllerTest do
   test "research action fetches and redirects back", %{conn: conn} do
     guide = published_guide_fixture()
     {:ok, entry} = Guides.create_entry(guide, %{kind: "food", name: "Ramiro", verdict: "loved"})
-    user = user_fixture()
+    # The research POST route is admin-only authoring now.
+    user = admin_fixture()
     Ethos.Research.RateLimiter.reset(user.id)
 
     expect(Ethos.ExaMock, :search, fn _q, _o ->
@@ -347,7 +348,8 @@ defmodule EthosWeb.GuideControllerTest do
   test "cache hits do not consume rate-limit slots", %{conn: conn} do
     guide = published_guide_fixture()
     {:ok, entry} = Guides.create_entry(guide, %{kind: "food", name: "Ramiro", verdict: "loved"})
-    user = user_fixture()
+    # The research POST route is admin-only authoring now.
+    user = admin_fixture()
     Ethos.Research.RateLimiter.reset(user.id)
 
     # Exa is called exactly once — every later hit is served from the 7-day cache.
