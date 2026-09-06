@@ -15,7 +15,23 @@ defmodule EthosWeb.TokenMigrationTest do
     "lib/ethos_web/components/layouts/root.html.heex",
     "lib/ethos_web/components/layouts/app.html.heex",
     "lib/ethos_web/controllers/page_html/home.html.heex",
-    "lib/ethos_web/live/social_live.ex"
+    "lib/ethos_web/live/social_live.ex",
+    "lib/ethos_web/controllers/destination_html/index.html.heex",
+    "lib/ethos_web/controllers/destination_html/node.html.heex",
+    "lib/ethos_web/components/guide_breadcrumb.ex",
+    "lib/ethos_web/components/connected_pages.ex",
+    "lib/ethos_web/controllers/search_html/index.html.heex",
+    "lib/ethos_web/controllers/collection_html/show.html.heex",
+    "lib/ethos_web/controllers/guide_html/photos.html.heex",
+    "lib/ethos_web/controllers/guide_html/town_page.html.heex",
+    "lib/ethos_web/components/foliage_panel.ex",
+    "lib/ethos_web/controllers/foliage_html.ex",
+    "lib/ethos_web/controllers/foliage_html/index.html.heex",
+    "lib/ethos_web/controllers/foliage_html/route.html.heex",
+    "lib/ethos_web/controllers/badge_html/index.html.heex",
+    "lib/ethos_web/controllers/place_html/show.html.heex",
+    "lib/ethos_web/controllers/guide_html/show.html.heex",
+    "lib/ethos_web/components/house_ad.ex"
   ]
 
   test "no hardcoded palette colours survive in the shared surfaces" do
