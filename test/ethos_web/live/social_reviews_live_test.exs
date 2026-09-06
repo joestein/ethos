@@ -127,7 +127,12 @@ defmodule EthosWeb.SocialReviewsLiveTest do
   end
 
   describe "editing" do
-    test "an approved review returns to pending when its author edits it", %{
+    # Approving a review also trusts its (previously untrusted) author — see
+    # `Moderation.maybe_trust_author/4` — so by the time this author edits,
+    # they are trusted and the edit keeps the review's current status
+    # ("approved") instead of resetting it. See `social_reviews_test.exs` for
+    # the untrusted-author-resets-to-pending case at the `Social` layer.
+    test "a trusted author's edit of an approved review stays approved", %{
       conn: conn,
       guide: guide
     } do
@@ -135,6 +140,31 @@ defmodule EthosWeb.SocialReviewsLiveTest do
       admin = admin_fixture()
       {:ok, review} = Social.create_review(author, guide, %{"rating" => "9", "body" => "First."})
       {:ok, _} = Moderation.approve_review(review, admin)
+
+      {:ok, view, _html} = live_island(log_in_user(conn, author), guide)
+
+      view |> element("button[phx-value-rating=4]") |> render_click()
+      view |> form("#review-form", review: %{body: "Edited afterwards."}) |> render_submit()
+
+      assert Social.user_review(author, guide).status == "approved"
+      assert Social.user_review(author, guide).body == "Edited afterwards."
+    end
+
+    test "an untrusted author's edit returns an approved review to pending", %{
+      conn: conn,
+      guide: guide
+    } do
+      author = user_fixture()
+      admin = admin_fixture()
+      {:ok, review} = Social.create_review(author, guide, %{"rating" => "9", "body" => "First."})
+      {:ok, _} = Moderation.approve_review(review, admin)
+
+      # `approve_review/2` grants trust with a schema-less `update_all`, so
+      # this in-memory `author` never saw it — reload before untrusting, or
+      # `untrust_user/2`'s `Ecto.Changeset.change/2` would diff against the
+      # stale (already-nil) `trusted_at` and write nothing.
+      author = Ethos.Accounts.get_user!(author.id)
+      {:ok, _} = Moderation.untrust_user(author, admin)
 
       {:ok, view, _html} = live_island(log_in_user(conn, author), guide)
 

@@ -272,17 +272,26 @@ defmodule Ethos.Social do
   defp initial_status(%User{}), do: "approved"
 
   @doc """
-  Edits a review, returning it to `pending`.
+  Edits a review.
 
-  The reset is the point: without it, posting something innocuous, waiting
-  for approval, then editing it into something else would publish
-  unmoderated text.
+  An untrusted author's edit returns it to `pending`. Without that, posting
+  something innocuous, waiting for approval, then editing it into something
+  else would publish unmoderated text.
+
+  A trusted author keeps whatever status the review already had — which for a
+  revoked review means it stays revoked. Trust buys a place at the front of
+  the queue, not a way to undo a moderator's decision.
   """
-  def update_review(%Review{} = review, attrs) do
+  def update_review(%Review{} = review, %User{} = user, attrs) do
     review
-    |> Review.changeset(Map.put(normalize_review_attrs(attrs), :status, "pending"))
+    |> Review.changeset(
+      Map.put(normalize_review_attrs(attrs), :status, edited_status(review, user))
+    )
     |> Repo.update()
   end
+
+  defp edited_status(%Review{}, %User{trusted_at: nil}), do: "pending"
+  defp edited_status(%Review{status: status}, %User{}), do: status
 
   @doc "This user's own review of a subject, at any status, or nil."
   def user_review(nil, _subject), do: nil
@@ -341,7 +350,7 @@ defmodule Ethos.Social do
   # Restricted to the fields a caller is ever allowed to set. `user_id`,
   # `subject_type` and `subject_id` are supplied by `create_review/3` itself
   # and never come from caller attrs, and `status` is pinned by
-  # `create_review/3`/`update_review/2` after this runs — see the merge/put
+  # `create_review/3`/`update_review/3` after this runs — see the merge/put
   # calls above. Using a known allowlist rather than
   # `String.to_existing_atom/1` on whatever keys show up also means an
   # unrecognised key (typo, stray form field, or a deliberate probe) is

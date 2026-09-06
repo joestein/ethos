@@ -91,12 +91,15 @@ defmodule Ethos.SocialReviewsTest do
     end
   end
 
-  describe "update_review/2" do
+  describe "update_review/3" do
     test "changes the rating and body", %{user: user, guide: guide} do
       {:ok, review} = Social.create_review(user, guide, %{"rating" => "8", "body" => "Good."})
 
       assert {:ok, updated} =
-               Social.update_review(review, %{"rating" => "3", "body" => "Changed my mind."})
+               Social.update_review(review, user, %{
+                 "rating" => "3",
+                 "body" => "Changed my mind."
+               })
 
       assert updated.rating == 3
       assert updated.body == "Changed my mind."
@@ -107,9 +110,59 @@ defmodule Ethos.SocialReviewsTest do
       approved = approve!(review)
 
       assert {:ok, updated} =
-               Social.update_review(approved, %{"rating" => "8", "body" => "Edited after."})
+               Social.update_review(approved, user, %{"rating" => "8", "body" => "Edited after."})
 
       assert updated.status == "pending"
+    end
+
+    test "an untrusted author's edit returns an approved review to pending", %{
+      user: user,
+      guide: guide
+    } do
+      {:ok, review} = Social.create_review(user, guide, %{"rating" => "8", "body" => "First."})
+      approved = review |> Ecto.Changeset.change(status: "approved") |> Repo.update!()
+
+      assert {:ok, updated} =
+               Social.update_review(approved, user, %{"rating" => "8", "body" => "Edited."})
+
+      assert updated.status == "pending"
+    end
+
+    test "a trusted author's edit keeps the review approved", %{user: user, guide: guide} do
+      {:ok, review} = Social.create_review(user, guide, %{"rating" => "8", "body" => "First."})
+      approved = review |> Ecto.Changeset.change(status: "approved") |> Repo.update!()
+
+      trusted =
+        user
+        |> Ecto.Changeset.change(trusted_at: DateTime.utc_now() |> DateTime.truncate(:second))
+        |> Repo.update!()
+
+      assert {:ok, updated} =
+               Social.update_review(approved, trusted, %{"rating" => "3", "body" => "Changed."})
+
+      assert updated.status == "approved"
+      assert updated.body == "Changed."
+    end
+
+    test "a trusted author editing a revoked review does not resurrect it", %{
+      user: user,
+      guide: guide
+    } do
+      {:ok, review} = Social.create_review(user, guide, %{"rating" => "8", "body" => "First."})
+      revoked = review |> Ecto.Changeset.change(status: "revoked") |> Repo.update!()
+
+      trusted =
+        user
+        |> Ecto.Changeset.change(trusted_at: DateTime.utc_now() |> DateTime.truncate(:second))
+        |> Repo.update!()
+
+      assert {:ok, updated} =
+               Social.update_review(revoked, trusted, %{"rating" => "9", "body" => "Try again."})
+
+      # Keeping the current status means a revoked review stays revoked. Trust
+      # buys you the queue, not a way to undo a moderator.
+      assert updated.status == "revoked"
+      assert Social.approved_reviews(guide) == []
     end
   end
 

@@ -321,7 +321,7 @@ defmodule EthosWeb.SocialLive do
     result =
       case socket.assigns.own_review do
         nil -> Social.create_review(user, subject, attrs)
-        existing -> Social.update_review(existing, attrs)
+        existing -> Social.update_review(existing, user, attrs)
       end
 
     case result do
