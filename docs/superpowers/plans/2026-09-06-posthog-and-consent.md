@@ -405,9 +405,9 @@ git commit -m "feat: render the PostHog key as a meta tag when configured"
 **Files:**
 - Create: `assets/js/consent.js`
 - Create: `assets/js/analytics.js`
-- Modify: `assets/js/app.js` (import `analytics.js`, add the LiveView pageview handler near the existing `phx:page-loading-stop` listener at ~line 34)
+- Modify: `assets/js/app.js` (import `analytics.js` only) — **corrected during execution.** This plan originally put the LiveView pageview handler in `app.js`, beside the existing `phx:page-loading-stop` listener at ~line 34. It went into `assets/js/analytics.js` instead: `app.js` runs unconditionally, so a `posthog.capture` there would sit OUTSIDE the consent gate and fire for visitors who never consented. It belongs inside the `analyticsConsent.then(...)` block with everything else that touches PostHog.
 - Modify: `lib/ethos_web/components/affiliate.ex:200-211` (`affiliate_head/1`)
-- Modify: `test/ethos_web/affiliate_placement_test.exs`, `test/ethos_web/affiliate_corpus_test.exs`, `test/ethos_web/controllers/guide_seo_test.exs` — three assertions reference `widget.getyourguide.com`
+- Modify: `test/ethos_web/affiliate_placement_test.exs` — **corrected during execution.** This plan originally named three test files (`affiliate_placement_test.exs`, `affiliate_corpus_test.exs`, `controllers/guide_seo_test.exs`) as referencing `widget.getyourguide.com`. In fact the string appears in only ONE file, `test/ethos_web/affiliate_placement_test.exs`, three times — the `@script_src` module attribute, defined once in each of that file's three test modules — and those three definitions carry all **16** references that had to change. `affiliate_corpus_test.exs` greps for `"affiliate_unit"` and `"data-gyg"`, not the host; `controllers/guide_seo_test.exs:55` asserts on a per-entry booking link (`www.getyourguide.com/?partner_id=…`), a different mechanism. Neither needed editing.
 - Test: `test/ethos_web/affiliate_consent_test.exs` (create)
 
 **Interfaces:**
@@ -750,6 +750,14 @@ The consent handshake has no automated coverage. Run this in a browser, once wit
 - [ ] **Step 7: Report what you saw**
 
 Report the result of each check to the user. If PostHog is dark, check in this order: the Fly secret is set (`fly secrets list`), the meta tag is in the page source, and the CMP is actually published in AdSense.
+
+**If 6a and 6c–6e pass but 6b fails — PostHog dark outside the EEA/UK while everything inside works — stop and read this. It is the branch's single largest exposure and it does not look like a bug.**
+
+The entire non-EEA path rests on one line of `consent.js`: `if (data.gdprApplies === false) return resolve()`. For a US visitor that line is the *only* way the promise ever settles, and reaching it requires the CMP to publish `__tcfapi` **and fire a TCF event for a visitor it considers out of scope.** Google's Funding Choices serves the GDPR message to EEA/UK users; there is no guarantee it installs the TCF API at all for everyone else. If it does not, `__tcfapi` never appears, the bounded poller gives up after 30 seconds, the promise stays pending forever, and PostHog is dark for what is probably most of the traffic. Nothing errors. The console is clean, the suite is green, ads still render, and every EEA check above passes. **6b is the only signal this failure ever produces** — which is why it is a step and not a nice-to-have.
+
+The cause is not in this repository and the fix is not either. The remedy is a **CMP or region configuration change in the AdSense dashboard**: configure Funding Choices so the TCF API is served to all regions (so out-of-scope visitors receive a payload carrying `gdprApplies: false`), or serve a message to the non-EEA regions as well. Re-run 6b after the change propagates.
+
+**The remedy is NOT a resolve-on-timeout in `consent.js`, and it is not any other change to `consent.js`.** It is the obvious fix, it is a two-line diff, it will appear to work immediately, and it is wrong. Resolving when the CMP has not answered means treating "nobody asked this visitor anything" as "this visitor consented" — for EEA visitors too, since the same timer runs for everyone and cannot tell a US visitor from a European one whose CMP was merely slow or blocked by an ad blocker. That single change silently converts every non-answer on the site into consent and defeats the whole branch. `consent.js` carries three separate comments saying so; if you are reading this under time pressure, this is the paragraph they were written for. Change the dashboard, not the file.
 
 ---
 

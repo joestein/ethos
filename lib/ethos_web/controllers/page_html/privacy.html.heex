@@ -15,16 +15,20 @@
     <h2 class="font-semibold">Third parties that run on this site</h2>
     <p class="mt-3 text-zinc-700">
       Up to three companies run code in your browser. Each one is here for a different
-      reason, and each one can see something different. The first two run on every page;
-      the third runs on some.
+      reason, and each one can see something different. The first two run on every page of
+      this site; the third runs on some. The one exception is the embeddable foliage map
+      at <code>/foliage/embed</code>, which other sites place in a frame of their own: it
+      loads none of the three.
     </p>
 
     <h3 class="mt-6 font-semibold">PostHog — product analytics</h3>
     <p class="mt-2 text-zinc-700">
       PostHog records which pages are viewed and which links are clicked, along with the
       browser and device making the request and an approximate location derived from the IP
-      address. It is what tells us which guides people actually read. Where consent is
-      required, PostHog loads only after it is given, and not before.
+      address. So that it can tell one visit from another, it stores an identifier on your
+      device — in your browser's local storage and in a first-party cookie of its own. It is what
+      tells us which guides people actually read. Where consent is required, PostHog loads
+      only after it is given, and not before.
     </p>
 
     <h3 class="mt-6 font-semibold">Google AdSense — advertising, and the consent banner</h3>
@@ -48,7 +52,8 @@
   <section class="mt-10">
     <h2 class="font-semibold">Cookies Ethos sets itself</h2>
     <p class="mt-3 text-zinc-700">
-      Two, both first-party, neither used for advertising.
+      Two, set by the site itself rather than by any of the third parties above, and
+      neither used for advertising.
     </p>
     <ul class="mt-3 space-y-2 text-zinc-700">
       <li>
@@ -76,8 +81,9 @@
       your password, hashed — the password itself is never stored and cannot be read back.
       It also stores what you do with the account: the guides you write, the comments and
       suggestions you leave, and the thumbs up and thumbs down you give, each recorded
-      against your account. Deleting an account or its contents is a request to the site
-      owner.
+      against your account. It also records any badges you have earned — for each, the
+      badge's name and the date it was awarded. Deleting an account or its contents is a
+      request to the site owner.
     </p>
   </section>
 

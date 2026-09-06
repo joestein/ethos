@@ -18,6 +18,22 @@ defmodule EthosWeb.PrivacyTest do
     assert html =~ "remember"
   end
 
+  test "the privacy page discloses browser storage and the badges held on an account",
+       %{conn: conn} do
+    html = conn |> get(~p"/privacy") |> html_response(200)
+
+    # The whole consent gate is TCF purpose 1, "Store and/or access information
+    # on a device", and PostHog is the third party it is gating. A page that
+    # describes what PostHog records but never says it keeps an identifier on
+    # the device omits the one fact the consent is actually about.
+    assert html =~ "local storage"
+
+    # Ethos.Badges.UserBadge stores a badge_key and an awarded_at against a
+    # user, so it is account data like the guides and the reactions beside it.
+    assert html =~ "badges"
+    assert html =~ "awarded"
+  end
+
   test "the footer links to the privacy page from a guide", %{conn: conn} do
     guide = Ethos.GuidesFixtures.published_guide_fixture()
 
