@@ -1,5 +1,5 @@
 <div class="mx-auto max-w-2xl px-4 py-10">
-  <nav class="text-sm text-zinc-500">
+  <nav class="text-sm text-ink-muted">
     <.link navigate={~p"/destinations"} class="underline">Destinations</.link>
     <span :for={a <- @ancestors}>
       <span aria-hidden="true">/</span>
@@ -23,7 +23,7 @@
       class="w-full rounded-xl"
       loading="lazy"
     />
-    <p :for={photo <- @node.photos} class="mt-2 text-xs text-zinc-400">
+    <p :for={photo <- @node.photos} class="mt-2 text-xs text-ink-muted">
       Photo "{photo["title"]}": {photo["author"]}, {photo["license"]}, via
       <a href={photo["source_url"]} class="underline" rel="nofollow noopener">
         Wikimedia Commons
@@ -47,14 +47,14 @@
   <section :if={@guides != []} class="mt-8">
     <h2 class="font-semibold">All {@node.name} guides</h2>
     <ul class="mt-3 space-y-3">
-      <li :for={g <- @guides} class="rounded-xl border p-4">
+      <li :for={g <- @guides} class="rounded-xl border border-line p-4">
         <.link navigate={~p"/g/#{g.slug}"} class="font-semibold hover:underline">{g.title}</.link>
-        <p class="text-sm text-zinc-500">{g.destination}</p>
+        <p class="text-sm text-ink-muted">{g.destination}</p>
       </li>
     </ul>
   </section>
 
-  <p :if={@children == [] and @guides == []} class="mt-8 text-zinc-500">
+  <p :if={@children == [] and @guides == []} class="mt-8 text-ink-muted">
     No guides here yet.
   </p>
 </div>
