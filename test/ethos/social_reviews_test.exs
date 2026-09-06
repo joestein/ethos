@@ -220,4 +220,53 @@ defmodule Ethos.SocialReviewsTest do
       assert Social.rating_summary(guide) == %{average: 9.0, count: 1}
     end
   end
+
+  describe "the trusted fast lane" do
+    test "an untrusted author's review is pending", %{user: user, guide: guide} do
+      {:ok, review} = Social.create_review(user, guide, %{"rating" => "8", "body" => "First."})
+
+      assert review.status == "pending"
+    end
+
+    test "a trusted author's review is approved on arrival", %{user: user, guide: guide} do
+      trusted =
+        user
+        |> Ecto.Changeset.change(trusted_at: DateTime.utc_now() |> DateTime.truncate(:second))
+        |> Repo.update!()
+
+      {:ok, review} = Social.create_review(trusted, guide, %{"rating" => "8", "body" => "Live."})
+
+      assert review.status == "approved"
+      assert [visible] = Social.approved_reviews(guide)
+      assert visible.id == review.id
+    end
+
+    test "a fast-laned review has no moderated_at", %{user: user, guide: guide} do
+      trusted =
+        user
+        |> Ecto.Changeset.change(trusted_at: DateTime.utc_now() |> DateTime.truncate(:second))
+        |> Repo.update!()
+
+      {:ok, review} = Social.create_review(trusted, guide, %{"rating" => "8", "body" => "Fast."})
+
+      # Nobody decided it, so there is no decision timestamp. This is why
+      # Moderation.list_approved_reviews/0 orders desc_nulls_last.
+      refute review.moderated_at
+      refute review.moderated_by_id
+    end
+
+    test "a banned trusted author still cannot be seen", %{user: user, guide: guide} do
+      trusted =
+        user
+        |> Ecto.Changeset.change(
+          trusted_at: DateTime.utc_now() |> DateTime.truncate(:second),
+          banned_at: DateTime.utc_now() |> DateTime.truncate(:second)
+        )
+        |> Repo.update!()
+
+      {:ok, _} = Social.create_review(trusted, guide, %{"rating" => "8", "body" => "Hidden."})
+
+      assert Social.approved_reviews(guide) == []
+    end
+  end
 end

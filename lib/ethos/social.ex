@@ -253,11 +253,20 @@ defmodule Ethos.Social do
         user_id: user.id,
         subject_type: type,
         subject_id: id,
-        status: "pending"
+        status: initial_status(user)
       })
     )
     |> Repo.insert()
   end
+
+  # Trusted authors skip the queue. `moderated_at` stays nil because nobody
+  # decided anything — see Moderation.list_approved_reviews/0's
+  # desc_nulls_last, which exists for this case.
+  #
+  # Still computed server-side from the stored user, never from attrs: the
+  # pinned key in the merge above is what stops a caller naming its own status.
+  defp initial_status(%User{trusted_at: nil}), do: "pending"
+  defp initial_status(%User{}), do: "approved"
 
   @doc """
   Edits a review, returning it to `pending`.
