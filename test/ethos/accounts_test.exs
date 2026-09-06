@@ -519,6 +519,16 @@ defmodule Ethos.AccountsTest do
       user = user_fixture()
       refute Accounts.admin?(user)
     end
+
+    test "returns false for a banned account even with the admin email" do
+      user =
+        %{email: "cryptcom@gmail.com"}
+        |> user_fixture()
+        |> Ecto.Changeset.change(banned_at: DateTime.utc_now() |> DateTime.truncate(:second))
+        |> Repo.update!()
+
+      refute Accounts.admin?(user)
+    end
   end
 
   describe "inspect/2 for the User module" do
@@ -651,6 +661,87 @@ defmodule Ethos.AccountsTest do
 
     test "is false for nobody" do
       refute Ethos.Accounts.needs_username?(nil)
+    end
+  end
+
+  describe "list_users_for_moderation/1" do
+    import Ethos.GuidesFixtures
+
+    test "returns every user with zero counts when nobody has reviewed" do
+      user = user_fixture()
+
+      assert [row] = Ethos.Accounts.list_users_for_moderation()
+      assert row.user.id == user.id
+      assert row.review_count == 0
+      assert row.revoked_count == 0
+    end
+
+    test "counts a user's reviews and how many were revoked" do
+      user = user_fixture()
+      # Pin both guides' author to `user` — otherwise guide_fixture/1 mints
+      # its own author via user_fixture/0 and the assertion below sees three
+      # users instead of one.
+      guide_one = guide_fixture(%{user: user})
+      guide_two = guide_fixture(%{user: user})
+
+      {:ok, _kept} =
+        Ethos.Social.create_review(user, guide_one, %{"rating" => "8", "body" => "Kept."})
+
+      {:ok, gone} =
+        Ethos.Social.create_review(user, guide_two, %{"rating" => "2", "body" => "Gone."})
+
+      gone |> Ecto.Changeset.change(status: "revoked") |> Ethos.Repo.update!()
+
+      assert [row] = Ethos.Accounts.list_users_for_moderation()
+      assert row.review_count == 2
+      assert row.revoked_count == 1
+    end
+
+    test "searches by username" do
+      match = user_fixture(%{username: "findme"})
+      _other = user_fixture(%{username: "somebodyelse"})
+
+      assert [row] = Ethos.Accounts.list_users_for_moderation(search: "findm")
+      assert row.user.id == match.id
+    end
+
+    test "searches by email, case-insensitively" do
+      match = user_fixture(%{email: "Needle@example.com"})
+      _other = user_fixture()
+
+      assert [row] = Ethos.Accounts.list_users_for_moderation(search: "needle")
+      assert row.user.id == match.id
+    end
+
+    test "a plain search with no special characters behaves as before" do
+      match = user_fixture(%{username: "plainsearch"})
+      _other = user_fixture(%{username: "somebodyelse"})
+
+      assert [row] = Ethos.Accounts.list_users_for_moderation(search: "plains")
+      assert row.user.id == match.id
+    end
+
+    test "a literal underscore in the search is not treated as a wildcard" do
+      match = user_fixture(%{username: "foo_bar"})
+      _decoy = user_fixture(%{username: "fooxbar"})
+
+      assert [row] = Ethos.Accounts.list_users_for_moderation(search: "foo_bar")
+      assert row.user.id == match.id
+    end
+
+    test "a literal percent sign in the search is not treated as a wildcard" do
+      match = user_fixture(%{email: "100%off@example.com"})
+      _decoy = user_fixture(%{email: "100xoff@example.com"})
+
+      assert [row] = Ethos.Accounts.list_users_for_moderation(search: "100%off")
+      assert row.user.id == match.id
+    end
+
+    test "an empty search returns everyone" do
+      user_fixture()
+      user_fixture()
+
+      assert length(Ethos.Accounts.list_users_for_moderation(search: "")) == 2
     end
   end
 end

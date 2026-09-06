@@ -60,8 +60,17 @@ defmodule Ethos.Accounts do
   """
   def get_user!(id), do: Repo.get!(User, id)
 
-  @doc "True when the user is THE admin (single admin, bound by email config)."
-  def admin?(%Ethos.Accounts.User{email: email}) when is_binary(email) do
+  @doc """
+  True when the user is THE admin (single admin, bound by email config).
+
+  False for a banned account, even one whose email matches `:admin_email` —
+  otherwise `admin?/1` and "banned" could both be true of the same account
+  at once, which is a deadlock: a banned admin cannot log in
+  (`fetch_current_user/2` refuses a banned session), and `unban_user/2`
+  itself requires an admin caller. Keeping the rule in the data, not just at
+  `ban_user/3`'s call site, is what closes that.
+  """
+  def admin?(%Ethos.Accounts.User{email: email, banned_at: nil}) when is_binary(email) do
     admin = Application.get_env(:ethos, :admin_email) || ""
     String.downcase(email) == String.downcase(admin)
   end
@@ -409,5 +418,61 @@ defmodule Ethos.Accounts do
       {:ok, %{user: user}} -> {:ok, user}
       {:error, :user, changeset, _} -> {:error, changeset}
     end
+  end
+
+  ## Moderation listing
+
+  @doc """
+  Every account, with the numbers a moderator needs to judge it.
+
+  `review_count` and `revoked_count` together are the signal: one revoked
+  comment out of twenty reads very differently from two out of two, and the
+  console should not make an admin run that query in their head.
+
+  `opts` accepts `:search`, matched case-insensitively against username and
+  email. An empty or missing search returns everyone.
+  """
+  def list_users_for_moderation(opts \\ []) do
+    search = opts |> Keyword.get(:search, "") |> to_string() |> String.trim()
+
+    from(u in User,
+      left_join: r in Ethos.Social.Review,
+      on: r.user_id == u.id,
+      group_by: u.id,
+      order_by: [desc: u.inserted_at, desc: u.id],
+      select: %{
+        user: u,
+        review_count: count(r.id),
+        revoked_count: fragment("count(*) filter (where ? = 'revoked')", r.status)
+      }
+    )
+    |> filter_by_search(search)
+    |> Repo.all()
+  end
+
+  defp filter_by_search(query, ""), do: query
+
+  defp filter_by_search(query, search) do
+    pattern = "%#{escape_like(search)}%"
+
+    # `username` is citext so it is already case-insensitive; `email` is citext
+    # too. ilike is belt and braces and costs nothing at this size.
+    where(
+      query,
+      [u],
+      ilike(u.username, ^pattern) or ilike(fragment("?::text", u.email), ^pattern)
+    )
+  end
+
+  # `%` and `_` are LIKE/ILIKE wildcards, so a raw search term containing
+  # either would match far more than the user typed (searching "a_b" would
+  # also match "aXbYexact"). Escape the backslash first, then the two
+  # wildcards — escaping them before the backslash would re-escape the
+  # backslashes this step just inserted, corrupting the pattern.
+  defp escape_like(term) do
+    term
+    |> String.replace("\\", "\\\\")
+    |> String.replace("%", "\\%")
+    |> String.replace("_", "\\_")
   end
 end

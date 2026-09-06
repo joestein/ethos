@@ -93,7 +93,11 @@ defmodule EthosWeb.UserAuth do
   def fetch_current_user(conn, _opts) do
     {user_token, conn} = ensure_user_token(conn)
     user = user_token && Accounts.get_user_by_session_token(user_token)
-    assign(conn, :current_user, user)
+
+    # Banning deletes the account's tokens, so this is belt and braces — it
+    # closes the window where a request is already in flight when the ban
+    # lands, and it means a session restored from anywhere else still fails.
+    assign(conn, :current_user, if(user && Ethos.Moderation.banned?(user), do: nil, else: user))
   end
 
   defp ensure_user_token(conn) do
@@ -126,6 +130,16 @@ defmodule EthosWeb.UserAuth do
 
     * `:redirect_if_user_is_authenticated` - Authenticates the user from the session.
       Redirects to signed_in_path if there's a logged user.
+
+    * `:ensure_admin` - Authenticates the user from the session, and assigns
+      the current_user to socket assigns, same as `:ensure_authenticated`.
+      Additionally requires the user to be THE configured admin (see
+      `Ethos.Accounts.admin?/1`). Redirects to the login page otherwise.
+      This exists because a `pipe_through :require_admin_user` plug only
+      covers the initial HTTP request — an in-socket `push_navigate` between
+      two LiveViews in the same `live_session` never runs the router
+      pipeline again, so a live_session with more than one admin route needs
+      this in its own `on_mount` list too.
 
   ## Examples
 
@@ -164,6 +178,21 @@ defmodule EthosWeb.UserAuth do
     end
   end
 
+  def on_mount(:ensure_admin, _params, session, socket) do
+    socket = mount_current_user(socket, session)
+
+    if Accounts.admin?(socket.assigns.current_user) do
+      {:cont, socket}
+    else
+      socket =
+        socket
+        |> Phoenix.LiveView.put_flash(:error, "You must log in to access this page.")
+        |> Phoenix.LiveView.redirect(to: ~p"/users/log_in")
+
+      {:halt, socket}
+    end
+  end
+
   def on_mount(:redirect_if_user_is_authenticated, _params, session, socket) do
     socket = mount_current_user(socket, session)
 
@@ -176,9 +205,16 @@ defmodule EthosWeb.UserAuth do
 
   defp mount_current_user(socket, session) do
     Phoenix.Component.assign_new(socket, :current_user, fn ->
-      if user_token = session["user_token"] do
-        Accounts.get_user_by_session_token(user_token)
-      end
+      user =
+        if user_token = session["user_token"] do
+          Accounts.get_user_by_session_token(user_token)
+        end
+
+      # Mirrors the belt-and-braces guard in fetch_current_user/2: banning
+      # deletes the account's tokens and Moderation.ban_user/3 disconnects
+      # any socket already open, but a reconnect must not be able to
+      # re-establish a banned account's session either.
+      if user && Ethos.Moderation.banned?(user), do: nil, else: user
     end)
   end
 

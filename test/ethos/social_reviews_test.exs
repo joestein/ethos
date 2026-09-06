@@ -1,0 +1,376 @@
+defmodule Ethos.SocialReviewsTest do
+  use Ethos.DataCase, async: true
+
+  import Ethos.AccountsFixtures
+  import Ethos.GuidesFixtures
+
+  alias Ethos.Social
+
+  setup do
+    %{user: user_fixture(), guide: guide_fixture()}
+  end
+
+  defp approve!(review) do
+    review
+    |> Ecto.Changeset.change(status: "approved")
+    |> Repo.update!()
+  end
+
+  describe "create_review/3" do
+    test "creates a pending review", %{user: user, guide: guide} do
+      assert {:ok, review} =
+               Social.create_review(user, guide, %{"rating" => "8", "body" => "Very good."})
+
+      assert review.status == "pending"
+      assert review.rating == 8
+      assert review.subject_type == "guide"
+      assert review.subject_id == guide.id
+    end
+
+    test "rejects a review with no body", %{user: user, guide: guide} do
+      assert {:error, changeset} = Social.create_review(user, guide, %{"rating" => "8"})
+      assert %{body: ["can't be blank"]} = errors_on(changeset)
+    end
+
+    test "rejects a review with no rating", %{user: user, guide: guide} do
+      assert {:error, changeset} = Social.create_review(user, guide, %{"body" => "No score."})
+      assert %{rating: ["can't be blank"]} = errors_on(changeset)
+    end
+
+    test "refuses a second review of the same subject", %{user: user, guide: guide} do
+      {:ok, _} = Social.create_review(user, guide, %{"rating" => "8", "body" => "First."})
+
+      assert {:error, changeset} =
+               Social.create_review(user, guide, %{"rating" => "2", "body" => "Second."})
+
+      assert %{body: ["has already reviewed this"]} = errors_on(changeset)
+    end
+
+    test "ignores a caller-supplied status and always stores pending", %{
+      user: user,
+      guide: guide
+    } do
+      assert {:ok, review} =
+               Social.create_review(user, guide, %{
+                 "rating" => "8",
+                 "body" => "Sneaky.",
+                 "status" => "approved"
+               })
+
+      assert review.status == "pending"
+    end
+
+    test "an unrecognised key does not raise and the review is created from the recognised keys",
+         %{user: user, guide: guide} do
+      assert {:ok, review} =
+               Social.create_review(user, guide, %{
+                 "rating" => "8",
+                 "body" => "Still fine.",
+                 "nonsense_key_that_never_existed" => "whatever"
+               })
+
+      assert review.rating == 8
+      assert review.body == "Still fine."
+      assert review.status == "pending"
+    end
+
+    test "an unrecognised key cannot smuggle a value into a cast field", %{
+      user: user,
+      guide: guide
+    } do
+      other = user_fixture()
+
+      assert {:ok, review} =
+               Social.create_review(user, guide, %{
+                 "rating" => "8",
+                 "body" => "Mine, not theirs.",
+                 "user_id" => other.id
+               })
+
+      assert review.user_id == user.id
+    end
+  end
+
+  describe "update_review/3" do
+    test "changes the rating and body", %{user: user, guide: guide} do
+      {:ok, review} = Social.create_review(user, guide, %{"rating" => "8", "body" => "Good."})
+
+      assert {:ok, updated} =
+               Social.update_review(review, user, %{
+                 "rating" => "3",
+                 "body" => "Changed my mind."
+               })
+
+      assert updated.rating == 3
+      assert updated.body == "Changed my mind."
+    end
+
+    test "returns an approved review to pending", %{user: user, guide: guide} do
+      {:ok, review} = Social.create_review(user, guide, %{"rating" => "8", "body" => "Good."})
+      approved = approve!(review)
+
+      assert {:ok, updated} =
+               Social.update_review(approved, user, %{"rating" => "8", "body" => "Edited after."})
+
+      assert updated.status == "pending"
+    end
+
+    test "an untrusted author's edit returns an approved review to pending", %{
+      user: user,
+      guide: guide
+    } do
+      {:ok, review} = Social.create_review(user, guide, %{"rating" => "8", "body" => "First."})
+      approved = review |> Ecto.Changeset.change(status: "approved") |> Repo.update!()
+
+      assert {:ok, updated} =
+               Social.update_review(approved, user, %{"rating" => "8", "body" => "Edited."})
+
+      assert updated.status == "pending"
+    end
+
+    test "a trusted author's edit keeps the review approved", %{user: user, guide: guide} do
+      {:ok, review} = Social.create_review(user, guide, %{"rating" => "8", "body" => "First."})
+      approved = review |> Ecto.Changeset.change(status: "approved") |> Repo.update!()
+
+      trusted =
+        user
+        |> Ecto.Changeset.change(trusted_at: DateTime.utc_now() |> DateTime.truncate(:second))
+        |> Repo.update!()
+
+      assert {:ok, updated} =
+               Social.update_review(approved, trusted, %{"rating" => "3", "body" => "Changed."})
+
+      assert updated.status == "approved"
+      assert updated.body == "Changed."
+    end
+
+    test "a trusted author editing a revoked review does not resurrect it", %{
+      user: user,
+      guide: guide
+    } do
+      {:ok, review} = Social.create_review(user, guide, %{"rating" => "8", "body" => "First."})
+      revoked = review |> Ecto.Changeset.change(status: "revoked") |> Repo.update!()
+
+      trusted =
+        user
+        |> Ecto.Changeset.change(trusted_at: DateTime.utc_now() |> DateTime.truncate(:second))
+        |> Repo.update!()
+
+      assert {:ok, updated} =
+               Social.update_review(revoked, trusted, %{"rating" => "9", "body" => "Try again."})
+
+      # Keeping the current status means a revoked review stays revoked. Trust
+      # buys you the queue, not a way to undo a moderator.
+      assert updated.status == "revoked"
+      assert Social.approved_reviews(guide) == []
+    end
+
+    test "an untrusted author editing a revoked review does not resurrect it either", %{
+      user: user,
+      guide: guide
+    } do
+      {:ok, review} = Social.create_review(user, guide, %{"rating" => "8", "body" => "First."})
+      revoked = review |> Ecto.Changeset.change(status: "revoked") |> Repo.update!()
+
+      # `user` is untrusted here — this is the backwards-incentive case the
+      # bug created: only the trusted branch used to keep a revoked review
+      # revoked, so the untrusted author (who has no other lever to
+      # resurrect anything) could edit their way back into "pending" and
+      # force re-moderation, silently erasing the revoked count.
+      assert {:ok, updated} =
+               Social.update_review(revoked, user, %{"rating" => "9", "body" => "Try again."})
+
+      assert updated.status == "revoked"
+      assert Social.approved_reviews(guide) == []
+    end
+  end
+
+  describe "user_review/2" do
+    test "nil for a logged-out visitor", %{guide: guide} do
+      assert Social.user_review(nil, guide) == nil
+    end
+
+    test "returns the user's own review whatever its status", %{user: user, guide: guide} do
+      {:ok, review} = Social.create_review(user, guide, %{"rating" => "8", "body" => "Mine."})
+
+      assert Social.user_review(user, guide).id == review.id
+    end
+
+    test "does not return another user's review", %{user: user, guide: guide} do
+      {:ok, _} =
+        Social.create_review(user_fixture(), guide, %{"rating" => "8", "body" => "Theirs."})
+
+      assert Social.user_review(user, guide) == nil
+    end
+  end
+
+  describe "approved_reviews/1" do
+    test "excludes pending reviews", %{user: user, guide: guide} do
+      {:ok, _} = Social.create_review(user, guide, %{"rating" => "8", "body" => "Waiting."})
+
+      assert Social.approved_reviews(guide) == []
+    end
+
+    test "includes approved ones with the author preloaded", %{user: user, guide: guide} do
+      {:ok, review} = Social.create_review(user, guide, %{"rating" => "8", "body" => "Live."})
+      approve!(review)
+
+      assert [loaded] = Social.approved_reviews(guide)
+      assert loaded.body == "Live."
+      assert loaded.user.id == user.id
+    end
+
+    test "excludes revoked reviews", %{user: user, guide: guide} do
+      {:ok, review} = Social.create_review(user, guide, %{"rating" => "8", "body" => "Gone."})
+      review |> Ecto.Changeset.change(status: "revoked") |> Repo.update!()
+
+      assert Social.approved_reviews(guide) == []
+    end
+
+    test "excludes reviews by a banned author", %{guide: guide} do
+      banned = user_fixture()
+      {:ok, review} = Social.create_review(banned, guide, %{"rating" => "8", "body" => "Banned."})
+      approve!(review)
+
+      banned
+      |> Ecto.Changeset.change(banned_at: DateTime.utc_now() |> DateTime.truncate(:second))
+      |> Repo.update!()
+
+      assert Social.approved_reviews(guide) == []
+    end
+
+    test "is scoped to one subject", %{user: user, guide: guide} do
+      other = guide_fixture()
+      {:ok, review} = Social.create_review(user, guide, %{"rating" => "8", "body" => "Here."})
+      approve!(review)
+
+      assert length(Social.approved_reviews(guide)) == 1
+      assert Social.approved_reviews(other) == []
+    end
+  end
+
+  describe "rating_summary/1" do
+    test "zero and nil for a subject with no approved reviews", %{guide: guide} do
+      assert Social.rating_summary(guide) == %{average: nil, count: 0}
+    end
+
+    test "ignores pending reviews", %{user: user, guide: guide} do
+      {:ok, _} = Social.create_review(user, guide, %{"rating" => "10", "body" => "Pending."})
+
+      assert Social.rating_summary(guide) == %{average: nil, count: 0}
+    end
+
+    test "averages approved ratings to one decimal", %{guide: guide} do
+      for rating <- [7, 8, 10] do
+        {:ok, review} =
+          Social.create_review(user_fixture(), guide, %{
+            "rating" => to_string(rating),
+            "body" => "Scored #{rating}."
+          })
+
+        approve!(review)
+      end
+
+      assert Social.rating_summary(guide) == %{average: 8.3, count: 3}
+    end
+
+    test "excludes a banned author from the average", %{guide: guide} do
+      banned = user_fixture()
+
+      {:ok, low} = Social.create_review(banned, guide, %{"rating" => "1", "body" => "Low."})
+      approve!(low)
+
+      {:ok, high} =
+        Social.create_review(user_fixture(), guide, %{"rating" => "9", "body" => "High."})
+
+      approve!(high)
+
+      banned
+      |> Ecto.Changeset.change(banned_at: DateTime.utc_now() |> DateTime.truncate(:second))
+      |> Repo.update!()
+
+      assert Social.rating_summary(guide) == %{average: 9.0, count: 1}
+    end
+  end
+
+  describe "the trusted fast lane" do
+    test "an untrusted author's review is pending", %{user: user, guide: guide} do
+      {:ok, review} = Social.create_review(user, guide, %{"rating" => "8", "body" => "First."})
+
+      assert review.status == "pending"
+    end
+
+    test "a trusted author's review is approved on arrival", %{user: user, guide: guide} do
+      trusted =
+        user
+        |> Ecto.Changeset.change(trusted_at: DateTime.utc_now() |> DateTime.truncate(:second))
+        |> Repo.update!()
+
+      {:ok, review} = Social.create_review(trusted, guide, %{"rating" => "8", "body" => "Live."})
+
+      assert review.status == "approved"
+      assert [visible] = Social.approved_reviews(guide)
+      assert visible.id == review.id
+    end
+
+    test "a trusted author cannot force revoked through attrs", %{user: user, guide: guide} do
+      trusted =
+        user
+        |> Ecto.Changeset.change(trusted_at: DateTime.utc_now() |> DateTime.truncate(:second))
+        |> Repo.update!()
+
+      {:ok, review} =
+        Social.create_review(trusted, guide, %{
+          "rating" => "8",
+          "body" => "Sneaky.",
+          "status" => "revoked"
+        })
+
+      assert review.status == "approved"
+    end
+
+    test "a trusted author cannot force pending through attrs", %{user: user, guide: guide} do
+      trusted =
+        user
+        |> Ecto.Changeset.change(trusted_at: DateTime.utc_now() |> DateTime.truncate(:second))
+        |> Repo.update!()
+
+      {:ok, review} =
+        Social.create_review(trusted, guide, %{
+          "rating" => "8",
+          "body" => "Also sneaky.",
+          "status" => "pending"
+        })
+
+      assert review.status == "approved"
+    end
+
+    test "a fast-laned review has no moderated_at", %{user: user, guide: guide} do
+      trusted =
+        user
+        |> Ecto.Changeset.change(trusted_at: DateTime.utc_now() |> DateTime.truncate(:second))
+        |> Repo.update!()
+
+      {:ok, review} = Social.create_review(trusted, guide, %{"rating" => "8", "body" => "Fast."})
+
+      # Nobody decided it, so there is no decision timestamp. This is why
+      # Moderation.list_approved_reviews/0 orders desc_nulls_last.
+      refute review.moderated_at
+      refute review.moderated_by_id
+    end
+
+    test "a banned trusted author still cannot be seen", %{user: user, guide: guide} do
+      trusted =
+        user
+        |> Ecto.Changeset.change(
+          trusted_at: DateTime.utc_now() |> DateTime.truncate(:second),
+          banned_at: DateTime.utc_now() |> DateTime.truncate(:second)
+        )
+        |> Repo.update!()
+
+      {:ok, _} = Social.create_review(trusted, guide, %{"rating" => "8", "body" => "Hidden."})
+
+      assert Social.approved_reviews(guide) == []
+    end
+  end
+end

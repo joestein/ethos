@@ -46,4 +46,20 @@ defmodule Ethos.Social.Subject do
   def get!("place", id), do: Repo.get!(Place, id)
   def get!("guide", id), do: Repo.get!(Guide, id)
   def get!("collection", id), do: Repo.get!(Collection, id)
+
+  @doc """
+  Loads a subject by its stored type and id, tolerating a missing row.
+
+  `reviews.subject_id` is polymorphic with no foreign key, so the place,
+  guide or collection a review points at can be deleted out from under it.
+  `get!/2` is right for callers who already know the row must exist (a page
+  reached by the subject's own slug); this is for callers — the moderation
+  console is the one today — that hold a `subject_id` from a row that may
+  have outlived what it points to, and need to say so rather than crash.
+  """
+  def fetch(type, id) do
+    {:ok, get!(type, id)}
+  rescue
+    Ecto.NoResultsError -> :error
+  end
 end

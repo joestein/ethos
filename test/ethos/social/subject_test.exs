@@ -54,4 +54,16 @@ defmodule Ethos.Social.SubjectTest do
       assert_raise FunctionClauseError, fn -> Subject.get!("entry", 1) end
     end
   end
+
+  describe "fetch/2" do
+    test "returns the subject when it exists" do
+      guide = guide_fixture()
+      assert {:ok, found} = Subject.fetch("guide", guide.id)
+      assert found.id == guide.id
+    end
+
+    test "returns :error for a missing row rather than raising" do
+      assert Subject.fetch("guide", 0) == :error
+    end
+  end
 end

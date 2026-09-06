@@ -1,5 +1,10 @@
 defmodule EthosWeb.UserAuthTest do
-  use EthosWeb.ConnCase, async: true
+  # async: false — the `:ensure_admin` tests build an admin via
+  # `admin_fixture/1`, whose email is fixed (it must match the configured
+  # :admin_email). See the fixture's own moduledoc: running alongside other
+  # async modules that do the same has caused intermittent Postgres
+  # deadlocks on the concurrent same-email inserts.
+  use EthosWeb.ConnCase, async: false
 
   alias Phoenix.LiveView
   alias Ethos.Accounts
@@ -115,6 +120,32 @@ defmodule EthosWeb.UserAuthTest do
       refute get_session(conn, :user_token)
       refute conn.assigns.current_user
     end
+
+    test "does not authenticate a banned user whose session survives", %{conn: conn} do
+      admin = Ethos.AccountsFixtures.admin_fixture()
+      user = user_fixture()
+      token = Ethos.Accounts.generate_user_session_token(user)
+
+      {:ok, _} =
+        user
+        |> Ecto.Changeset.change(
+          banned_at: DateTime.utc_now() |> DateTime.truncate(:second),
+          ban_reason: "Enough."
+        )
+        |> Ethos.Repo.update()
+
+      # Deliberately NOT going through Moderation.ban_user/3, which would delete
+      # this token. The point is the belt-and-braces guard: if a session ever
+      # outlives the purge, fetch_current_user must still refuse it.
+      _ = admin
+
+      conn =
+        conn
+        |> Plug.Test.init_test_session(user_token: token)
+        |> EthosWeb.UserAuth.fetch_current_user([])
+
+      refute conn.assigns.current_user
+    end
   end
 
   describe "on_mount :mount_current_user" do
@@ -140,6 +171,34 @@ defmodule EthosWeb.UserAuthTest do
 
     test "assigns nil to current_user assign if there isn't a user_token", %{conn: conn} do
       session = conn |> get_session()
+
+      {:cont, updated_socket} =
+        UserAuth.on_mount(:mount_current_user, %{}, session, %LiveView.Socket{})
+
+      assert updated_socket.assigns.current_user == nil
+    end
+
+    # Belt and braces, mirroring the "does not authenticate a banned user
+    # whose session survives" fetch_current_user/2 test above, but for the
+    # LiveView mount path: a reconnect (or a live_render island whose plug
+    # session outlives Moderation.ban_user/3's disconnect broadcast) must
+    # not re-establish a banned account's session either.
+    test "assigns nil to current_user for a banned user, even with a token that still resolves",
+         %{conn: conn, user: user} do
+      user_token = Accounts.generate_user_session_token(user)
+
+      {:ok, _} =
+        user
+        |> Ecto.Changeset.change(
+          banned_at: DateTime.utc_now() |> DateTime.truncate(:second),
+          ban_reason: "Enough."
+        )
+        |> Ethos.Repo.update()
+
+      # Deliberately NOT going through Moderation.ban_user/3, which would
+      # delete this token — the point is the belt-and-braces guard on the
+      # mount path itself, independent of the token purge.
+      session = conn |> put_session(:user_token, user_token) |> get_session()
 
       {:cont, updated_socket} =
         UserAuth.on_mount(:mount_current_user, %{}, session, %LiveView.Socket{})
@@ -181,6 +240,43 @@ defmodule EthosWeb.UserAuthTest do
       }
 
       {:halt, updated_socket} = UserAuth.on_mount(:ensure_authenticated, %{}, session, socket)
+      assert updated_socket.assigns.current_user == nil
+    end
+  end
+
+  describe "on_mount :ensure_admin" do
+    test "continues for the configured admin", %{conn: conn} do
+      admin = admin_fixture()
+      user_token = Accounts.generate_user_session_token(admin)
+      session = conn |> put_session(:user_token, user_token) |> get_session()
+
+      {:cont, updated_socket} = UserAuth.on_mount(:ensure_admin, %{}, session, %LiveView.Socket{})
+
+      assert updated_socket.assigns.current_user.id == admin.id
+    end
+
+    test "halts and redirects to login for a logged-in non-admin", %{conn: conn, user: user} do
+      user_token = Accounts.generate_user_session_token(user)
+      session = conn |> put_session(:user_token, user_token) |> get_session()
+
+      socket = %LiveView.Socket{
+        endpoint: EthosWeb.Endpoint,
+        assigns: %{__changed__: %{}, flash: %{}}
+      }
+
+      {:halt, updated_socket} = UserAuth.on_mount(:ensure_admin, %{}, session, socket)
+      assert updated_socket.assigns.current_user.id == user.id
+    end
+
+    test "halts and redirects to login for a logged-out visitor", %{conn: conn} do
+      session = conn |> get_session()
+
+      socket = %LiveView.Socket{
+        endpoint: EthosWeb.Endpoint,
+        assigns: %{__changed__: %{}, flash: %{}}
+      }
+
+      {:halt, updated_socket} = UserAuth.on_mount(:ensure_admin, %{}, session, socket)
       assert updated_socket.assigns.current_user == nil
     end
   end

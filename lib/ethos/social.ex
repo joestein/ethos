@@ -18,6 +18,7 @@ defmodule Ethos.Social do
   alias Ethos.Places.Place
   alias Ethos.Repo
   alias Ethos.Social.Reaction
+  alias Ethos.Social.Review
   alias Ethos.Social.Subject
 
   @reaction_unique_constraint "reactions_user_id_subject_type_subject_id_index"
@@ -232,5 +233,148 @@ defmodule Ethos.Social do
       join: p in Ethos.Places.Place,
       on: p.id == r.subject_id,
       where: r.user_id == ^user.id and r.subject_type == "place"
+  end
+
+  ## Reviews
+  #
+  # A review is a rating out of ten plus the comment that justifies it. The
+  # body is required, so every review carries text and every review is
+  # moderated — which is why reactions are instant and these are not, except
+  # for the trusted-author fast lane below: a review from a trusted author
+  # publishes on arrival with no moderator attached.
+
+  @doc """
+  Records a review. Pending unless the author is trusted, in which case it
+  is published on arrival — an admin still has to approve it otherwise.
+  """
+  def create_review(%User{} = user, subject, attrs) do
+    {type, id} = Subject.ref(subject)
+
+    %Review{}
+    |> Review.changeset(
+      Map.merge(normalize_review_attrs(attrs), %{
+        user_id: user.id,
+        subject_type: type,
+        subject_id: id,
+        status: initial_status(user)
+      })
+    )
+    |> Repo.insert()
+  end
+
+  # Trusted authors skip the queue. `moderated_at` stays nil because nobody
+  # decided anything — see Moderation.list_approved_reviews/0's
+  # desc_nulls_last, which exists for this case.
+  #
+  # Still computed server-side from the stored user, never from attrs: the
+  # pinned key in the merge above is what stops a caller naming its own status.
+  defp initial_status(%User{trusted_at: nil}), do: "pending"
+  defp initial_status(%User{}), do: "approved"
+
+  @doc """
+  Edits a review.
+
+  A revoked review stays revoked, for either author. Trust buys a place at
+  the front of the queue, not a way to undo a moderator's decision — and
+  without this clause first, an untrusted author could edit a revoked review
+  back into `pending`, forcing re-moderation and erasing the revoked count
+  the admin console's Users tab exists to show.
+
+  Otherwise, an untrusted author's edit returns it to `pending`. Without
+  that, posting something innocuous, waiting for approval, then editing it
+  into something else would publish unmoderated text.
+
+  A trusted author keeps whatever status the review already had.
+  """
+  def update_review(%Review{} = review, %User{} = user, attrs) do
+    review
+    |> Review.changeset(
+      Map.put(normalize_review_attrs(attrs), :status, edited_status(review, user))
+    )
+    |> Repo.update()
+  end
+
+  defp edited_status(%Review{status: "revoked"}, %User{}), do: "revoked"
+  defp edited_status(%Review{}, %User{trusted_at: nil}), do: "pending"
+  defp edited_status(%Review{status: status}, %User{}), do: status
+
+  @doc "This user's own review of a subject, at any status, or nil."
+  def user_review(nil, _subject), do: nil
+
+  def user_review(%User{} = user, subject) do
+    {type, id} = Subject.ref(subject)
+
+    Repo.get_by(Review, user_id: user.id, subject_type: type, subject_id: id)
+  end
+
+  @doc """
+  The publicly visible reviews for a subject, newest first, author preloaded.
+
+  Excludes anything not approved and anyone banned. The ban filter lives in
+  the join so a ban takes effect on every page immediately, with no backfill.
+  """
+  def approved_reviews(subject) do
+    subject
+    |> public_reviews_query()
+    |> order_by([r], desc: r.inserted_at, desc: r.id)
+    |> preload(:user)
+    |> Repo.all()
+  end
+
+  @doc """
+  Average rating out of ten and how many reviews it is drawn from.
+
+  `average` is `nil` rather than `0.0` when there is nothing to average —
+  "no rating yet" and "rated zero" must not render the same, and the scale
+  starts at 1 anyway.
+  """
+  def rating_summary(subject) do
+    query = public_reviews_query(subject)
+
+    case Repo.one(from r in query, select: {avg(r.rating), count(r.id)}) do
+      {nil, _} -> %{average: nil, count: 0}
+      {avg, count} -> %{average: avg |> Decimal.to_float() |> Float.round(1), count: count}
+    end
+  end
+
+  defp public_reviews_query(subject) do
+    {type, id} = Subject.ref(subject)
+
+    from r in Review,
+      join: u in User,
+      on: u.id == r.user_id,
+      where:
+        r.subject_type == ^type and r.subject_id == ^id and
+          r.status == "approved" and is_nil(u.banned_at)
+  end
+
+  # The form posts strings; the tests and the console pass atoms or strings
+  # interchangeably. Normalising here keeps `Review.changeset/2` from having to
+  # care which it got.
+  #
+  # Restricted to the fields a caller is ever allowed to set. `user_id`,
+  # `subject_type` and `subject_id` are supplied by `create_review/3` itself
+  # and never come from caller attrs, and `status` is pinned by
+  # `create_review/3`/`update_review/3` after this runs — see the merge/put
+  # calls above. Using a known allowlist rather than
+  # `String.to_existing_atom/1` on whatever keys show up also means an
+  # unrecognised key (typo, stray form field, or a deliberate probe) is
+  # dropped silently instead of raising `ArgumentError` and turning into a
+  # 500: the changeset reports a missing required field the normal way.
+  @castable_review_keys ~w(rating body status)a
+
+  defp normalize_review_attrs(attrs) do
+    Enum.reduce(@castable_review_keys, %{}, fn key, acc ->
+      case Map.fetch(attrs, key) do
+        {:ok, value} ->
+          Map.put(acc, key, value)
+
+        :error ->
+          case Map.fetch(attrs, Atom.to_string(key)) do
+            {:ok, value} -> Map.put(acc, key, value)
+            :error -> acc
+          end
+      end
+    end)
   end
 end

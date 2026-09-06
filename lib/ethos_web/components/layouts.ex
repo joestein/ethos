@@ -56,7 +56,7 @@ defmodule EthosWeb.Layouts do
             </.link>
             <.link
               :if={Ethos.Accounts.admin?(@current_user)}
-              navigate={~p"/admin/suggestions"}
+              navigate={~p"/admin/comments"}
               class="hover:text-zinc-700"
             >
               Admin

@@ -101,6 +101,12 @@ defmodule EthosWeb.Router do
   scope "/admin", EthosWeb do
     pipe_through [:browser, :require_authenticated_user, :require_admin_user]
 
+    live_session :admin,
+      on_mount: [{EthosWeb.UserAuth, :ensure_authenticated}, {EthosWeb.UserAuth, :ensure_admin}] do
+      live "/comments", Admin.CommentsLive, :index
+      live "/users", Admin.UsersLive, :index
+    end
+
     get "/suggestions", AdminSuggestionController, :index
     post "/suggestions/:id/accept", AdminSuggestionController, :accept
     post "/suggestions/:id/decline", AdminSuggestionController, :decline

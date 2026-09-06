@@ -5,12 +5,13 @@ defmodule EthosWeb.PublicIdentityTest do
   This is the regression guard for the whole social layer: any template that
   reaches for `current_user.email` on a public page fails here. Plan 3
   extends it to review bylines once reviews exist.
-
-  NOT yet covered here: place, guide, and collection pages. Their review
-  bylines do not exist until the next plan, so there is nothing to guard on
-  those surfaces today — the gap is deliberate, not an oversight.
   """
-  use EthosWeb.ConnCase, async: true
+  # async: false — two tests here build an admin via `admin_fixture/1`, whose
+  # email is fixed (it must match the configured :admin_email). Running
+  # alongside other async modules that do the same caused intermittent
+  # Postgres deadlocks on the concurrent same-email inserts; do not flip
+  # this back without giving admin fixtures distinct emails instead.
+  use EthosWeb.ConnCase, async: false
 
   import Phoenix.LiveViewTest
   import Ethos.AccountsFixtures
@@ -71,7 +72,7 @@ defmodule EthosWeb.PublicIdentityTest do
   end
 
   test "admin suggestion queue shows the suggester's username, not their email", %{conn: conn} do
-    admin = user_fixture(%{email: "cryptcom@gmail.com"})
+    admin = admin_fixture()
     guide = published_guide_fixture()
     suggester = user_fixture(%{email: "admin-secret@example.com", username: "adminsuggester"})
 
@@ -116,7 +117,7 @@ defmodule EthosWeb.PublicIdentityTest do
 
   test "admin suggestion queue does not leak a provisional suggester's derived name",
        %{conn: conn} do
-    admin = user_fixture(%{email: "cryptcom@gmail.com"})
+    admin = admin_fixture()
     guide = published_guide_fixture()
 
     suggester =
@@ -141,5 +142,64 @@ defmodule EthosWeb.PublicIdentityTest do
 
     refute response =~ "provadminsuggester"
     assert response =~ "a traveler"
+  end
+
+  describe "review bylines" do
+    setup do
+      %{guide: Ethos.GuidesFixtures.published_guide_fixture()}
+    end
+
+    test "an approved review shows the username and never the email", %{
+      conn: conn,
+      guide: guide
+    } do
+      # A real admin, not `user_fixture()` — `Ethos.Moderation.approve_review/2`
+      # now refuses to publish for anyone else, so this fixture also stands
+      # in as the regression guard for that check.
+      admin = admin_fixture()
+
+      # username is "reviewvoyager", not "voyager" — the module-level setup
+      # above already creates an unrelated user with username "voyager" in
+      # this same test's transaction, so reusing that name would collide on
+      # the unique-username constraint instead of exercising the guard.
+      author = user_fixture(%{email: "reviewer-secret@example.com", username: "reviewvoyager"})
+
+      {:ok, review} =
+        Ethos.Social.create_review(author, guide, %{"rating" => "9", "body" => "Real words."})
+
+      {:ok, _} = Ethos.Moderation.approve_review(review, admin)
+
+      html = conn |> get(~p"/g/#{guide.slug}") |> html_response(200)
+
+      assert html =~ "Real words."
+      assert html =~ "reviewvoyager"
+      refute html =~ "reviewer-secret@example.com"
+    end
+
+    test "the admin queue shows the username and never the email", %{
+      conn: conn,
+      guide: guide
+    } do
+      # Use admin_fixture/0 rather than spelling the admin email out. The
+      # literal is load-bearing — it must match :admin_email config for
+      # Accounts.admin?/1 — and having it in several files at once caused a
+      # Postgres deadlock between concurrent async inserts. The helper is the
+      # single place it lives now; this file is `async: false` for the same
+      # reason.
+      admin = admin_fixture()
+      author = user_fixture(%{email: "queued-secret@example.com", username: "traveller"})
+
+      {:ok, _} =
+        Ethos.Social.create_review(author, guide, %{"rating" => "4", "body" => "In the queue."})
+
+      html =
+        conn
+        |> log_in_user(admin)
+        |> get(~p"/admin/comments")
+        |> html_response(200)
+
+      assert html =~ "traveller"
+      refute html =~ "queued-secret@example.com"
+    end
   end
 end
