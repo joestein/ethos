@@ -239,10 +239,13 @@ defmodule Ethos.Social do
   #
   # A review is a rating out of ten plus the comment that justifies it. The
   # body is required, so every review carries text and every review is
-  # moderated — which is exactly why reactions are instant and these are not.
+  # moderated — which is why reactions are instant and these are not, except
+  # for the trusted-author fast lane below: a review from a trusted author
+  # publishes on arrival with no moderator attached.
 
   @doc """
-  Records a pending review. Never publishes: an admin has to approve it.
+  Records a review. Pending unless the author is trusted, in which case it
+  is published on arrival — an admin still has to approve it otherwise.
   """
   def create_review(%User{} = user, subject, attrs) do
     {type, id} = Subject.ref(subject)

@@ -241,6 +241,38 @@ defmodule Ethos.SocialReviewsTest do
       assert visible.id == review.id
     end
 
+    test "a trusted author cannot force revoked through attrs", %{user: user, guide: guide} do
+      trusted =
+        user
+        |> Ecto.Changeset.change(trusted_at: DateTime.utc_now() |> DateTime.truncate(:second))
+        |> Repo.update!()
+
+      {:ok, review} =
+        Social.create_review(trusted, guide, %{
+          "rating" => "8",
+          "body" => "Sneaky.",
+          "status" => "revoked"
+        })
+
+      assert review.status == "approved"
+    end
+
+    test "a trusted author cannot force pending through attrs", %{user: user, guide: guide} do
+      trusted =
+        user
+        |> Ecto.Changeset.change(trusted_at: DateTime.utc_now() |> DateTime.truncate(:second))
+        |> Repo.update!()
+
+      {:ok, review} =
+        Social.create_review(trusted, guide, %{
+          "rating" => "8",
+          "body" => "Also sneaky.",
+          "status" => "pending"
+        })
+
+      assert review.status == "approved"
+    end
+
     test "a fast-laned review has no moderated_at", %{user: user, guide: guide} do
       trusted =
         user
