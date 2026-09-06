@@ -3,6 +3,17 @@
 @import "tailwindcss/utilities";
 
 /* This file is for your main application CSS */
+/* Self-hosted rather than Google's CDN: no third-party request on every page
+   load, and no layout shift from a font that arrives late. `swap` means the
+   fallback renders immediately and Fraunces replaces it when it lands. */
+@font-face {
+  font-family: "Fraunces";
+  src: url("/fonts/fraunces-latin-variable.woff2") format("woff2-variations");
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+
 /* Seasonal palettes. Bare RGB triples, not rgb() — Tailwind interpolates
    <alpha-value> into these, which is what keeps bg-accent/10 working.
 

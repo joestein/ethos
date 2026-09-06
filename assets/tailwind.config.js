@@ -16,6 +16,7 @@ module.exports = {
     "border-line", "bg-accent", "text-accent", "text-accent-ink",
     "bg-accent-soft", "text-positive", "text-negative", "text-star",
     "bg-accent/10",
+    "font-display", "text-display-lg", "text-display-md", "text-display-sm",
   ],
   theme: {
     extend: {
@@ -32,7 +33,16 @@ module.exports = {
         positive: "rgb(var(--c-positive) / <alpha-value>)",
         negative: "rgb(var(--c-negative) / <alpha-value>)",
         star: "rgb(var(--c-star) / <alpha-value>)",
-      }
+      },
+      fontFamily: {
+        display: ["Fraunces", "Georgia", "Cambria", "serif"],
+      },
+      fontSize: {
+        // A scale, so pages stop picking text-3xl ad hoc.
+        "display-lg": ["3.5rem", { lineHeight: "1.05", letterSpacing: "-0.02em" }],
+        "display-md": ["2.5rem", { lineHeight: "1.1", letterSpacing: "-0.015em" }],
+        "display-sm": ["1.875rem", { lineHeight: "1.2", letterSpacing: "-0.01em" }],
+      },
     },
   },
   plugins: [
