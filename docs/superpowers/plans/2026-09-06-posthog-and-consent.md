@@ -708,6 +708,8 @@ Expected: 0 failures.
 
 In the AdSense dashboard: Privacy & messaging → European regulations → create and publish a GDPR message. Set its privacy-policy URL to `https://ethosguides.com/privacy`.
 
+**Enable a revocation entry point on that message** — the control that lets a visitor reopen the banner and change their answer. This is not optional polish: `/privacy` tells readers "the consent banner can be reopened", and nothing in this repository can make that true. It is the one sentence on that page whose truth lives entirely in this dashboard. Google's TCF policy requires withdrawal to be possible, so the control exists; it has to be turned on.
+
 **This cannot be done from this repo.** Report to the user that it is needed and wait — do not deploy first.
 
 - [ ] **Step 3: Set the production secret**
@@ -743,6 +745,7 @@ The consent handshake has no automated coverage. Run this in a browser, once wit
 - **6e. Inside, after declining** — neither loads, and no PostHog request is made for the rest of the session.
 - **6f. LiveView navigation** — open a guide, navigate to the editor, and confirm a second `$pageview`.
 - **6g. `/foliage/embed`** — no `posthog-key` meta tag in the source.
+- **6h. The banner can be reopened.** After declining in 6e, find the revocation control and change the answer to accept; confirm PostHog then loads. `/privacy` states that this is possible, and this is the only check that makes that sentence true. If no control appears, the revocation entry point was not enabled in Step 2 — go back and enable it rather than editing the page.
 
 - [ ] **Step 7: Report what you saw**
 
