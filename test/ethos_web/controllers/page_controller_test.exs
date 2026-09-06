@@ -25,10 +25,18 @@ defmodule EthosWeb.PageControllerTest do
   test "points visitors at the destinations instead", %{conn: conn} do
     html = conn |> get(~p"/") |> html_response(200)
 
-    # Assert on the hero button's text, NOT on `href="/destinations"` — the
-    # site header renders that link on every page, so the href assertion
-    # would pass even if the hero button were deleted entirely.
+    # Assert on the hero button's text, NOT on a bare `href="/destinations"`
+    # — the site header renders that link on every page, so a bare href
+    # assertion would pass even if the hero button pointed somewhere else
+    # entirely (e.g. the logged-in-only `/badges`).
     assert html =~ "Browse destinations"
+
+    # Pin the hero button's OWN anchor, distinct from the header's
+    # Destinations link, by matching its href together with its distinctive
+    # class. Attribute order and the `data-phx-link*` attributes come from
+    # `<.link navigate={...}>` and are exactly what gets rendered.
+    assert html =~
+             ~s(href="/destinations" data-phx-link="redirect" data-phx-link-state="push" class="rounded-md bg-zinc-900)
   end
 
   # The home page renders with `layout: false`, so it does not inherit the app

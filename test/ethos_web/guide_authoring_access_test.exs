@@ -42,6 +42,10 @@ defmodule EthosWeb.GuideAuthoringAccessTest do
 
       refute html =~ "Make a guide"
       refute html =~ "Your guides"
+      # The header CTAs are gated on admin?/1 for a regular user, so their
+      # hrefs should be absent from the page entirely, not just their text.
+      refute html =~ ~s(href="/guides/new")
+      refute html =~ ~s(href="/guides")
     end
 
     test "does not see the research form or the footer's guide-making CTA", %{conn: conn} do
@@ -73,6 +77,10 @@ defmodule EthosWeb.GuideAuthoringAccessTest do
       html = conn |> get(~p"/") |> html_response(200)
 
       assert html =~ "Make a guide"
+      # Positive control for the regular-user refute above: without this,
+      # renaming "Your guides" would disarm that refute silently, since
+      # nothing else in the suite asserts an admin sees this link.
+      assert html =~ "Your guides"
     end
 
     test "sees the research form and the footer's guide-making CTA", %{conn: conn} do
@@ -115,5 +123,41 @@ defmodule EthosWeb.GuideAuthoringAccessTest do
     # The authentication guard runs first, so a stranger gets the normal login
     # redirect rather than a 404 that would tell them the path exists.
     assert conn |> get("/guides/new") |> redirected_to() == ~p"/users/log_in"
+  end
+
+  # The router's `:require_admin_user` PLUG only guards the initial HTTP
+  # request. It does not run again on a socket reconnect or on live
+  # navigation between LiveViews inside the same live_session — that
+  # re-check is exactly what the `:ensure_admin` on_mount hook is for. A
+  # test that only ever hits these routes with `get/2` (as every other test
+  # in this file does) would stay green even if that on_mount entry were
+  # deleted from the router, because an admin passes the plug regardless of
+  # whether the hook also runs. So this inspects the compiled router
+  # metadata directly, the same way
+  # `EthosWeb.AffiliateLiveRouteGuardTest` pins on_mount membership for the
+  # affiliate guard.
+  test "the admin-authoring live_session re-checks admin status via :ensure_admin on_mount" do
+    admin_authoring_routes =
+      EthosWeb.Router.__routes__()
+      |> Enum.filter(&(&1.plug == Phoenix.LiveView.Plug))
+      |> Enum.filter(fn route ->
+        case route.metadata[:phoenix_live_view] do
+          {_view, _action, _opts, %{name: :require_admin_authoring}} -> true
+          _ -> false
+        end
+      end)
+
+    assert admin_authoring_routes != [],
+           "no live routes found under :require_admin_authoring — this guard is no longer checking anything"
+
+    for route <- admin_authoring_routes do
+      {_view, _action, _opts, session} = route.metadata[:phoenix_live_view]
+      on_mount_ids = for m <- get_in(session, [:extra, :on_mount]) || [], do: m.id
+
+      assert {EthosWeb.UserAuth, :ensure_admin} in on_mount_ids,
+             "#{route.path} is missing the {EthosWeb.UserAuth, :ensure_admin} on_mount hook — " <>
+               "the router plug only guards the initial request, so a socket reconnect or " <>
+               "live navigation within this session would no longer re-check admin status"
+    end
   end
 end

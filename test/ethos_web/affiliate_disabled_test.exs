@@ -213,4 +213,97 @@ defmodule EthosWeb.AffiliateDisabledTest do
     assert html =~ "Connecticut Foliage Forecast"
     assert html =~ ~s(href="/foliage")
   end
+
+  # Amendment D: the reviewer's own measurement against the PRODUCTION flag
+  # value (affiliates off) found a house ad rendering on pages that never
+  # carried one under test config (affiliates on): a Manhattan place page, a
+  # New York county hub, and the New York state hub. None of them assign
+  # `:guide`, so `EthosWeb.HouseAd.for_page/2`'s only Connecticut-context
+  # branch (`subject/1`, gated on `state_slug: "connecticut"`) never matches
+  # for New York — every one of these pages falls straight through to the
+  # pool-pick branch, so the pool is forced non-empty (and restored after)
+  # rather than relying on seeded Connecticut guides.
+  #
+  # Why the flag matters here at all: with affiliates on (test config's
+  # default), New York's registry entry (config/config.exs) resolves a real
+  # `:getyourguide` locale for all three pages, `unit_renders?/1` is true, and
+  # `for_page/2`'s `enabled?() and unit_renders?(assigns) -> nil` clause wins
+  # — no house ad. With the flag off, `enabled?()` alone makes that clause
+  # false regardless of `unit_renders?/1`, so the widget's absence is what
+  # lets the house ad reclaim these three slots that a New York affiliate
+  # widget used to occupy.
+  describe "on non-guide pages in a New York affiliate locale, with the flag off" do
+    setup do
+      previous_pool = Ethos.HouseAd.pool()
+
+      :persistent_term.put({Ethos.HouseAd, :pool}, [
+        %{
+          "src" => "/photos/ct/avon/church.jpg",
+          "thumb" => "/photos/ct/avon/church.jpg",
+          "title" => "Avon Congregational Church",
+          "author" => "Daderot",
+          "license" => "CC0",
+          "source_url" => "https://commons.wikimedia.org/wiki/File:Avon.JPG"
+        }
+      ])
+
+      on_exit(fn -> :persistent_term.put({Ethos.HouseAd, :pool}, previous_pool) end)
+      :ok
+    end
+
+    test "a Manhattan place page renders the house ad", %{conn: conn} do
+      place =
+        Ethos.Places.upsert_place!(%{
+          slug: "affiliate-off-manhattan-place",
+          name: "A Manhattan Place",
+          kind: "museum",
+          town: "Manhattan",
+          state: "New York",
+          county: "Manhattan",
+          summary: "A place in Manhattan, New York.",
+          photos: [
+            %{
+              "src" => "/photos/ny/manhattan/place.jpg",
+              "thumb" => "/photos/ny/manhattan/place.jpg",
+              "title" => "A Manhattan Place Photo",
+              "description" => "A photo of the place.",
+              "author" => "Someone",
+              "license" => "CC BY-SA 4.0",
+              "source_url" => "https://commons.wikimedia.org/wiki/File:ManhattanPlace.jpg"
+            }
+          ]
+        })
+
+      # Sanity: this page would carry the affiliate widget instead, were the
+      # flag on — otherwise this test would pass even if for_page/2 lost its
+      # enabled?() clause entirely.
+      assert Ethos.Affiliates.locale_for(place.state_slug, place.county)
+             |> EthosWeb.Affiliate.renders?()
+
+      html = conn |> get(~p"/p/#{place.slug}") |> html_response(200)
+
+      assert html =~ "Connecticut Foliage Forecast"
+      refute html =~ "data-gyg-widget"
+    end
+
+    test "the New York county hub (Manhattan) renders the house ad", %{conn: conn, guide: guide} do
+      assert Ethos.Affiliates.locale_for(guide.state_slug, guide.county)
+             |> EthosWeb.Affiliate.renders?()
+
+      html = conn |> get(~p"/destinations/new-york/manhattan") |> html_response(200)
+
+      assert html =~ "Connecticut Foliage Forecast"
+      refute html =~ "data-gyg-widget"
+    end
+
+    test "the New York state hub renders the house ad", %{conn: conn, guide: guide} do
+      assert Ethos.Affiliates.locale_for(guide.state_slug, guide.county)
+             |> EthosWeb.Affiliate.renders?()
+
+      html = conn |> get(~p"/destinations/new-york") |> html_response(200)
+
+      assert html =~ "Connecticut Foliage Forecast"
+      refute html =~ "data-gyg-widget"
+    end
+  end
 end
