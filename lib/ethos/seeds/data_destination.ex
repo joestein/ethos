@@ -15,7 +15,7 @@ defmodule Ethos.Seeds.DataDestination do
   A file keyed outside the tree used to insert quietly, and since only
   `path`/`name`/`intro` are required it inserted with `kind: nil` and
   `parent_id: nil` — a parentless row sitting on a URL a node's redirect was
-  supposed to own. Thirteen of those shipped: they disabled thirteen 301s,
+  supposed to own. Fifteen of those shipped: they disabled fifteen 301s,
   entered the sitemap, listed Connecticut, New York and Rome on `/destinations`
   as countries, and stranded the curated prose on rows nothing linked to.
 

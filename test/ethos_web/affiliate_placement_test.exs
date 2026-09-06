@@ -130,8 +130,8 @@ defmodule EthosWeb.AffiliatePlacementTest do
       #
       # Only the nodes this one file names, read out of the file itself. The
       # whole roster here made six async files concurrent writers of the same
-      # 724 rows, which is a deadlock or a cancelled statement roughly one run
-      # in three.
+      # rows, which is a deadlock or a cancelled statement roughly one run in
+      # three.
       Ethos.SeedDataHelpers.seed_destinations_for_file!(file)
       Ethos.Seeds.DataGuide.upsert_places!(file)
 

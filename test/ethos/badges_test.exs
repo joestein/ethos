@@ -150,7 +150,7 @@ defmodule Ethos.BadgesTest do
 
   # The county-tier badge spans every town beneath it, not just the town the
   # place happens to be attached to — this is the behavior
-  # `Destinations.descendant_paths/1` makes possible: Woodbury and Bethlehem
+  # `Destinations.descendant_ids/1` makes possible: Woodbury and Bethlehem
   # are different destination nodes, both under Litchfield County, and neither
   # alone completes it.
   test "county-complete aggregates open places across every town in the county", %{

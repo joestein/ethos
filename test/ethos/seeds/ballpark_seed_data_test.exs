@@ -311,7 +311,7 @@ defmodule Ethos.Seeds.BallparkSeedDataTest do
   #
   # A literal list, not a count and not a set derived from what the catalog
   # happens to hold, for the reason destination_seed_data_test.exs states about
-  # its own thirteen destination pages: a derived expectation passes no matter
+  # its own curated destination pages: a derived expectation passes no matter
   # which modules exist, which is exactly the vacuity it exists to prevent.
   #
   # An accidental deletion fails here; so does an unreviewed twelfth ballpark

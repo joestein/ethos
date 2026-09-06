@@ -98,9 +98,9 @@ defmodule Ethos.Places do
   Exists for callers that ask a question spanning several nodes at once — a
   county-tier badge counting every open place across the towns beneath it, for
   instance — where `node_ids` is that county node plus its
-  `Destinations.descendant_paths/1` resolved to ids. `count_open_places_in_node/1`
-  answers the single-node question; this is its sum-over-a-set counterpart,
-  not a different query shape.
+  `Destinations.descendant_ids/1`. `count_open_places_in_node/1` answers the
+  single-node question; this is its sum-over-a-set counterpart, not a different
+  query shape.
   """
   def count_open_places_in_nodes(node_ids) do
     Repo.one(

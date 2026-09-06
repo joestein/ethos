@@ -209,6 +209,16 @@ defmodule Mix.Tasks.Ethos.MigrateGeoTest do
 
     assert output =~ "0 leaf nodes"
     assert digest(@corpus_files) == before
+
+    # And it must SAY it did nothing. The first version of `run/1` reported
+    # `length(corpora)` — the number of directories it looked at — so this run,
+    # which is the steady state of a one-shot rewrite, printed "Rewrote 9
+    # corpora" having rewritten not one byte. The digest above proves the files
+    # were untouched; this proves the operator is told so.
+    assert output =~ "Rewrote 0 files"
+
+    refute output =~ ~r/Rewrote [1-9]/,
+           "the no-op run claimed work it did not do: #{inspect(output)}"
   end
 
   defp digest(files), do: Map.new(files, &{&1, :erlang.md5(File.read!(&1))})

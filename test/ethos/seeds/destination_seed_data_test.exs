@@ -231,8 +231,8 @@ defmodule Ethos.Seeds.DestinationSeedDataTest do
   #    three pre-tree routes served hubs from. Those queries return the *legacy*
   #    single-slug forms ("connecticut", "rome"), which is exactly the set of
   #    paths a curated file must no longer key on: every one of them 301s now.
-  #    A file keyed there is the defect this task fixed — thirteen parentless
-  #    rows that disabled thirteen redirects, entered the sitemap, and listed
+  #    A file keyed there is the defect this task fixed — fifteen parentless
+  #    rows that disabled fifteen redirects, entered the sitemap, and listed
   #    Connecticut, New York and Rome on `/destinations` as countries.
   defp legitimate_paths do
     MapSet.new(Ethos.Seeds.DestinationTree.load!(), & &1["path"])
@@ -671,7 +671,7 @@ defmodule Ethos.Seeds.DestinationSeedDataTest do
   test "the path check accepts node paths at three depths and rejects one no node owns" do
     # Reads the roster off disk, so no seeding and no repo: the legitimate set
     # is the tree's own declaration of which hubs exist, and the depths below
-    # are a region, a county and a city — the three shapes the thirteen curated
+    # are a region, a county and a city — the three shapes the fifteen curated
     # files come in.
     legitimate = legitimate_paths()
 
@@ -681,7 +681,7 @@ defmodule Ethos.Seeds.DestinationSeedDataTest do
 
     # The pre-tree forms the files used to be keyed on are NOT legitimate — each
     # is a legacy path that 301s, and a curated record sitting on one is what
-    # disabled those thirteen redirects.
+    # disabled those fifteen redirects.
     refute "connecticut" in legitimate
     refute "connecticut/hartford-county" in legitimate
     refute "rome" in legitimate
@@ -713,7 +713,7 @@ defmodule Ethos.Seeds.DestinationSeedDataTest do
   # derived from the roster here rather than restated, so it stays right if a
   # node moves.
   #
-  # Without this the re-key is only asserted as a list of thirteen strings in
+  # Without this the re-key is only asserted as a list of fifteen strings in
   # @destination_roster, which anyone could edit to match a file they moved to
   # the wrong node. This says *why* each path is the one it is.
   test "each curated file sits on the node its old path redirects to" do
@@ -805,7 +805,7 @@ defmodule Ethos.Seeds.DestinationSeedDataTest do
     # The records themselves must load and upsert onto nodes that already exist,
     # creating nothing. The row count is asserted to be *unchanged* across both
     # passes, which is the inverse of what this assertion said before the
-    # re-key: it used to demand thirteen new rows, and those thirteen rows were
+    # re-key: it used to demand fifteen new rows, and those fifteen rows were
     # the defect — parentless, kindless duplicates of hubs the roster already
     # owned. The two passes stay separate so a second pass adding a row fails
     # here rather than being folded into the first.
@@ -832,7 +832,7 @@ defmodule Ethos.Seeds.DestinationSeedDataTest do
 
     assert after_first == before,
            "seeding the curated records created #{after_first - before} rows — every one of " <>
-             "them is keyed on a node path, so all thirteen must land on rows the roster " <>
+             "them is keyed on a node path, so all fifteen must land on rows the roster " <>
              "already owns"
 
     assert after_second == after_first, "re-upserting the destination records added rows"

@@ -39,7 +39,7 @@ defmodule EthosWeb.PageController do
     # destination tree and nothing else — everything below a country is reached
     # by walking into it. The homepage's "All N destinations" count must match
     # the page it links to, so it counts roots, not the hubs shown above it and
-    # not the 724 nodes in the tree.
+    # not every node in the tree.
     hub_count = length(Ethos.Destinations.roots())
 
     render(conn, :home,

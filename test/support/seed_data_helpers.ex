@@ -272,7 +272,7 @@ defmodule Ethos.SeedDataHelpers do
   A file names its guide's `destination_path` and one per place, and the
   loaders resolve every one of them against the `destinations` table. Reading
   them out of the file is what lets a test run a committed corpus file through
-  the ordinary loader without seeding the whole 724-node roster to do it —
+  the ordinary loader without seeding the whole roster to do it —
   which is the thing that made six `async: true` files concurrent writers of
   the same rows.
   """

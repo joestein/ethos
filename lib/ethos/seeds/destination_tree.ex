@@ -13,7 +13,7 @@ defmodule Ethos.Seeds.DestinationTree do
   ## The roster's `intro` is a default, not the last word
 
   The roster carries a one-line stub for every node ("Connecticut, county by
-  county."). Thirteen of those nodes also have a hand-written page in
+  county."). Fifteen of those nodes also have a hand-written page in
   `priv/seed_data/destinations/`, which is where a hub's real prose and its
   photos are authored. Both loaders write `intro`, so without a precedence rule
   the last one to run wins and the pair flip-flops: re-seeding the tree after
@@ -23,7 +23,7 @@ defmodule Ethos.Seeds.DestinationTree do
   So precedence is resolved *here*, at the point the value is read, rather than
   left to run order: `curated_intros/0` reads the same overlay files
   `Ethos.Seeds.DataDestination` seeds, and a node with an overlay takes its
-  intro from there. Both loaders now write the same string for those thirteen
+  intro from there. Both loaders now write the same string for those fifteen
   nodes, so seeding the tree and the destinations in either order — or either
   one twice — converges on the curated prose. Photos are unaffected either way:
   they are not in this upsert's attrs.
@@ -103,7 +103,7 @@ defmodule Ethos.Seeds.DestinationTree do
   The same rule as `intro_for/2`, and it exists for the same reason. `name` is
   the other field both loaders write — `DataDestination.upsert!/1` passes the
   whole file through to `Destinations.upsert_destination!/1`, `name` included —
-  so without a rule the last seeder to run wins it. Today all thirteen overlays
+  so without a rule the last seeder to run wins it. Today all fifteen overlays
   and the roster agree, which is precisely why this is worth pinning: the
   divergence would arrive as an ordinary copy edit to one file, and re-seeding
   would then flip a hub's `<h1>`, its breadcrumb and its `BreadcrumbList`

@@ -3,7 +3,7 @@ defmodule Ethos.Seeds.DestinationIntroPrecedenceTest do
   Which loader's `intro` a node ends up with, and that seed *order* cannot
   change the answer.
 
-  The roster and the thirteen curated hub files both write `intro`, so before
+  The roster and the fifteen curated hub files both write `intro`, so before
   this was settled the last seeder to run won and the pair flip-flopped:
   `Release.seed_destinations/0` put ~1KB of curated prose on Connecticut's node,
   and the next `seed_region/1` — which calls `upsert_all!/0` — put "Connecticut,
@@ -96,7 +96,7 @@ defmodule Ethos.Seeds.DestinationIntroPrecedenceTest do
   end
 
   test "the overlay's name wins over the roster's, the way its intro does" do
-    # `name` is the other field both loaders write, and all thirteen overlays
+    # `name` is the other field both loaders write, and all fifteen overlays
     # agree with the roster today — so a test that only compared a seeded row
     # against its file would pass with no rule at all, and would go on passing
     # right up until someone copy-edited one of the two. This asks the rule
@@ -124,7 +124,7 @@ defmodule Ethos.Seeds.DestinationIntroPrecedenceTest do
   end
 
   test "every curated file's prose reaches its node, whichever loader seeded it" do
-    # All thirteen, not just Connecticut: a precedence rule that resolved one
+    # All fifteen, not just Connecticut: a precedence rule that resolved one
     # path by accident — a stale row, a lucky ordering — would pass the tests
     # above.
     DestinationTree.upsert_all!()

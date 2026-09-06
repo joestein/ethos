@@ -12,7 +12,7 @@ defmodule EthosWeb.DestinationRootsTest do
   as countries. Every other gate in the suite seeds one half or the other and
   cannot see it.
 
-  `async: false`: seeds the full 724-node roster, so running it concurrently
+  `async: false`: seeds the full roster, so running it concurrently
   makes it a writer of rows every other full-roster seeder writes, which
   deadlocks. Do not flip this back for speed.
   """

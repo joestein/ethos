@@ -45,7 +45,7 @@ defmodule Ethos.Repo.Migrations.DropLegacyGeoColumns do
     # release command, before any seeding, so that failure rolls the deploy back.
     #
     # These rows are also wrong even where they do not block the migration.
-    # They are the thirteen curated hub records keyed on pre-tree paths
+    # They are the fifteen curated hub records keyed on pre-tree paths
     # (`connecticut`, `rome`, `new-york/manhattan`) that ruling C24 retired:
     # parentless, kindless rows shadowing the URLs a node's 301 now owns, in the
     # sitemap, and listed on `/destinations` as countries beside the real roots.
@@ -55,7 +55,7 @@ defmodule Ethos.Repo.Migrations.DropLegacyGeoColumns do
     # Safe: `guides.destination_id` and `places.destination_id` are
     # `nilify_all`, and both are still NULL at this point in the deploy (the
     # seeders that set them have not run yet), so nothing is orphaned. The
-    # roster recreates every node and the thirteen overlay files put their
+    # roster recreates every node and the fifteen overlay files put their
     # curated prose and photos back onto it — see docs/runbooks/seeding.md.
     #
     # Irreversible by design: the down direction restores the nullability, not

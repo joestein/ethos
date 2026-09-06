@@ -28,10 +28,10 @@ defmodule EthosWeb.SitemapControllerTest do
 
   # Every destination URL used to ship without a lastmod, so a crawler holding
   # those URLs got no signal when their prose changed — which is precisely what
-  # happened when all thirteen gained an intro and a photograph. Guides, places
+  # happened when all fifteen gained an intro and a photograph. Guides, places
   # and collections all carried one; destinations were the gap. Now that every
   # hub is a node and every node has an `updated_at`, the gap closes for all of
-  # them rather than for the thirteen that had a curated record.
+  # them rather than for the fifteen that had a curated record.
   test "a destination node carries its own lastmod", %{conn: conn} do
     SeedDataHelpers.seed_destination_paths!(["italy/lazio/rome"])
     published_guide_fixture(%{destination: "Rome, Italy"})
@@ -124,7 +124,7 @@ defmodule EthosWeb.SitemapRosterTest do
   The one sitemap assertion that needs the whole tree, held apart from the rest
   of the file so the other three stay parallel.
 
-  `async: false`, deliberately: this seeds all 724 roster rows, and an async
+  `async: false`, deliberately: this seeds the whole roster, and an async
   test that does that is a concurrent writer of the same rows as every other
   full-roster seeder. Two such transactions deadlock or get cancelled, and the
   suite failed roughly one run in three until the async writers were dealt

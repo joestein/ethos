@@ -88,6 +88,27 @@ defmodule Ethos.Destinations do
     )
   end
 
+  @doc """
+  Every node beneath `node`, as ids, excluding the node itself.
+
+  The id counterpart of `descendant_paths/1`, and the one to reach for whenever
+  the caller wants rows or counts rather than URLs. A caller holding paths and
+  wanting ids has to resolve each one — `Ethos.Badges` did exactly that and
+  paid a query per descendant, 1,083 of them across the county-tier subtrees of
+  a 752-node roster, on **every reaction**. Selecting the id in the same single
+  `LIKE` query costs nothing extra and removes the whole N+1.
+
+  `descendant_paths/1` stays for the callers that genuinely want the URLs.
+  """
+  def descendant_ids(%Destination{path: path}) do
+    Repo.all(
+      from d in Destination,
+        where: like(d.path, ^(path <> "/%")),
+        order_by: [asc: d.path],
+        select: d.id
+    )
+  end
+
   def get_by_legacy_path(path) when is_binary(path) do
     Repo.one(from d in Destination, where: ^path in d.legacy_paths)
   end

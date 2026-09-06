@@ -192,13 +192,15 @@ defmodule Ethos.Release do
   end
 
   @doc """
-  Overlays the thirteen curated hub pages onto the nodes they belong to.
+  Overlays the curated hub pages in `priv/seed_data/destinations/` onto the
+  nodes they belong to — fifteen files today, and the loop below reports the
+  count it actually found rather than trusting this sentence.
 
   Each file is keyed on a real node path, so this adds an intro and photos to a
   row the roster already owns rather than creating one. That is the whole point
   of the keys being what they are: when they were the pre-tree single-slug forms
-  ("connecticut", "rome") this created thirteen *extra* rows with no `kind` and
-  no `parent_id`, which surfaced as thirteen dead redirects, thirteen bogus
+  ("connecticut", "rome") this created one *extra* row per file with no `kind`
+  and no `parent_id`, which surfaced as fifteen dead redirects, fifteen bogus
   sitemap entries and Connecticut, New York and Rome listed as countries on
   `/destinations`.
 

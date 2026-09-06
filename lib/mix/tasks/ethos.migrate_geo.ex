@@ -59,13 +59,39 @@ defmodule Mix.Tasks.Ethos.MigrateGeo do
     appended = append_leaves!(Enum.flat_map(plans, & &1.leaves))
     Enum.each(plans, fn plan -> File.write!(plan.file, plan.content) end)
 
-    Mix.shell().info("Rewrote #{length(corpora)} corpora, #{appended} leaf nodes")
+    report(corpora, plans, appended)
+  end
+
+  # Reports what was DONE, not what was asked for. The first version printed
+  # `length(corpora)` — the number of directories it looked at — so a fully
+  # migrated tree, which is the steady state of this one-shot task, announced
+  # "Rewrote 9 corpora" having rewritten nothing at all. The one thing an
+  # operator needs from an idempotent rewrite is whether it changed anything,
+  # and that was the one thing it did not say.
+  #
+  # `plans` holds exactly the files that needed work: `plan_file!/2` returns nil
+  # for a file whose guide and every place already carry a `destination_path`,
+  # and `plan_corpus!/1` drops those.
+  defp report(corpora, [], appended) do
+    Mix.shell().info(
+      "Rewrote 0 files and appended #{appended} leaf nodes: all #{length(corpora)} corpora " <>
+        "scanned (#{Enum.join(corpora, ", ")}) already carry destination_path"
+    )
+  end
+
+  defp report(corpora, plans, appended) do
+    touched = plans |> Enum.map(& &1.corpus) |> Enum.uniq() |> Enum.sort()
+
+    Mix.shell().info(
+      "Rewrote #{length(plans)} files in #{length(touched)} of #{length(corpora)} corpora " <>
+        "scanned (#{Enum.join(touched, ", ")}) and appended #{appended} leaf nodes"
+    )
   end
 
   # An unknown corpus wildcards to zero files, so without this the CLI would
-  # report "Rewrote 1 corpora, 0 leaf nodes" for a typo and exit 0 — the same
-  # output as a corpus that was already migrated. Checked before anything is
-  # read, so the guarantee `path_for/4` makes is the one the command makes.
+  # report a clean "nothing to rewrite" for a typo and exit 0 — the same output
+  # as a corpus that was already migrated. Checked before anything is read, so
+  # the guarantee `path_for/4` makes is the one the command makes.
   defp corpora!([]), do: @corpora
 
   defp corpora!(args) do
@@ -375,6 +401,7 @@ defmodule Mix.Tasks.Ethos.MigrateGeo do
       guide_leaf = if guide_stale?, do: [{guide_path, node_name(corpus, guide_town)}], else: []
 
       %{
+        corpus: corpus,
         file: file,
         content: Jason.encode!(rewritten, pretty: true) <> "\n",
         leaves: leaves_from(corpus, guide_path, guide_leaf ++ place_leaves)

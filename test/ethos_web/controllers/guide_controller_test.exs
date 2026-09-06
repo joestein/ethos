@@ -294,7 +294,7 @@ defmodule EthosWeb.GuideControllerTest do
   # `Destination` row whose path equalled the guide's `destination_slug`. That
   # rule's whole reason for existing was that a hub was a `GROUP BY` and a
   # curated record was a separate row beside it; the tree merged the two, and
-  # the thirteen curated pages are overlays on nodes now. The rule was also the
+  # the fifteen curated pages are overlays on nodes now. The rule was also the
   # last reader keeping those records keyed on bare paths, which is what left
   # `/destinations/connecticut` rendering a parentless row instead of 301ing.
   test "a guide filed on a node gets its node's ancestry, not the legacy state hub", %{

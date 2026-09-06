@@ -18,7 +18,7 @@ defmodule EthosWeb.SitemapController do
     #
     # Every node carries `updated_at`, so every destination URL now ships a
     # lastmod. Before the tree the hubs were assembled from guides at request
-    # time and only the thirteen curated records had a date to publish.
+    # time and only the curated records had a date to publish.
     urls =
       [%{loc: url(~p"/"), lastmod: nil}, %{loc: url(~p"/destinations"), lastmod: nil}] ++
         Enum.map(Destinations.list_destinations(), fn d ->

@@ -47,11 +47,11 @@ defmodule EthosWeb.GuideBreadcrumb do
   derived state hub. That reasoning belonged to a world where a hub was a
   `GROUP BY` over the guides table and a curated record was a separate row
   sitting beside it. The tree collapsed the two: a node **is** the hub, and the
-  thirteen curated pages are now overlays on nodes rather than rows of their
+  fifteen curated pages are now overlays on nodes rather than rows of their
   own. There is nothing left to prefer — `/destinations/italy/lazio/rome` is
   both the node and the curated page.
 
-  The lookup was also the last thing keeping those thirteen rows keyed on their
+  The lookup was also the last thing keeping those fifteen rows keyed on their
   pre-tree paths, which is what made `/destinations/connecticut` render a
   parentless row instead of 301ing to Connecticut's node.
 

@@ -8,7 +8,7 @@ defmodule EthosWeb.DestinationControllerTest do
   alias Ethos.Destinations
   alias Ethos.SeedDataHelpers
 
-  # No `seed_tree/0` any more. Seeding the whole 724-node roster from an
+  # No `seed_tree/0` any more. Seeding the whole roster from an
   # `async: true` test makes it a concurrent writer of rows five other async
   # files also write, and the suite failed roughly one run in three on a
   # deadlock or a cancelled statement somewhere in that set. Every test here

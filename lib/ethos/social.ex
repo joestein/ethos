@@ -222,7 +222,7 @@ defmodule Ethos.Social do
   whose subject spans more than one node. A county-tier node is an *ancestor*
   of the town nodes places actually attach to, so "every open place in the
   county" is every place under every node in its subtree — the caller expands
-  that subtree with `Destinations.descendant_paths/1` and passes the ids here.
+  that subtree with `Destinations.descendant_ids/1` and passes the ids here.
   The old `(state_slug, county_slug)` pair needed no such expansion because a
   place carried its county directly; the tree has no such shortcut.
   """

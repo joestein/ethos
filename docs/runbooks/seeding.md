@@ -26,11 +26,55 @@ already exist as a user.
 
 Locally, the same functions run under `mix run -e '...'` with ordinary quotes.
 
+## Deploying: the site has no geography until you seed it
+
+Read this before you deploy, not after. It is a planned window, not a surprise,
+but it is a window in which the site is visibly degraded and only a human ends
+it.
+
+`fly.toml` runs `bin/migrate` as the deploy's `release_command`, before the new
+release takes traffic. `20260905140000_drop_legacy_geo_columns` ends with
+`DELETE FROM destinations WHERE kind IS NULL`, and on a database that predates
+the tree **every** row matches — `kind` was added nullable and nothing
+backfills it. So the release command leaves `destinations` empty. Nothing in
+the deploy re-seeds it: the seed order below is run by hand.
+
+**Between the release command finishing and someone running that order, every
+guide and every place has `destination_id = NULL`** (the foreign keys are
+`nilify_all`, so the delete nils them rather than blocking).
+
+What that looks like to a visitor: guides, places, search, reactions and
+collections all work. Breadcrumb trails, hub links and the house ad are absent,
+and `/destinations` lists nothing. **Nothing 500s.** That was verified, not
+assumed:
+
+- `EthosWeb.GuideBreadcrumb.destination_node/1`
+  (`lib/ethos_web/components/guide_breadcrumb.ex`) returns `nil` for a guide
+  with no node, and the component renders no crumb rather than raising on an
+  unloaded association.
+- `EthosWeb.PlaceController`'s ancestry
+  (`lib/ethos_web/controllers/place_controller.ex`) is `[]` for a place with no
+  node; the visible `<nav>`, the `BreadcrumbList` and the `PostalAddress` all
+  take the empty trail.
+- `EthosWeb.HouseAd`'s `subject/1` (`lib/ethos_web/components/house_ad.ex`)
+  matches on the node and falls through to `nil`, so the ad is simply omitted.
+
+**So: run the seed order immediately after the deploy reports healthy.** Every
+step is idempotent, so there is no reason to wait for a quiet moment, and no
+alarm will tell you the window is still open — a site with no geography looks
+healthy to every check that is not a human reading a page. If you cannot run
+the seed order right after the deploy, do not deploy yet.
+
 ## Seed order
 
 Run in this exact order. Every step depends on the ones above it, except
-`seed_destinations` (step 7), which depends on nothing and nothing depends on
+`seed_destinations` (step 12), which depends on nothing and nothing depends on
 it — see its entry below.
+
+Every JSON corpus publishes exactly one guide per `.json` file, so each file
+count below is checkable with `ls priv/seed_data/<dir>/*.json | wc -l`.
+Re-derive them that way rather than trusting the numbers here; they are the
+committed corpus as of this writing and content lands continuously.
 
 1. `Ethos.Release.seed_manhattan(email)` — 38 JSON files, `priv/seed_data/manhattan/`
 2. `Ethos.Release.seed_connecticut(email)` — the CT-5 **code-module** guides
@@ -39,26 +83,16 @@ it — see its entry below.
 3. `Ethos.Release.seed_connecticut_expansion(email)` — 165 JSON town/guide
    files, `priv/seed_data/connecticut/`
 4. `Ethos.Release.seed_brooklyn(email)` — 69 JSON files, `priv/seed_data/brooklyn/`
-5. `Ethos.Release.seed_bronx(email)` — JSON files in `priv/seed_data/bronx/`.
+5. `Ethos.Release.seed_bronx(email)` — 13 JSON files in `priv/seed_data/bronx/`.
    The programme narrowed on 2026-08-31 to **14 in-scope neighborhoods**, not
-   the full 66-row roster. One has shipped so far; the remaining 13 are in
-   progress. The other 52 roster rows are deferred, not abandoned — see
+   the full 66-row roster; 13 of the 14 have shipped and one is outstanding.
+   The other 52 roster rows are deferred, not abandoned — see
    `docs/superpowers/specs/2026-08-31-narrowed-nyc-scope-design.md`.
-6. `Ethos.Release.seed_queens(email)` — JSON files in `priv/seed_data/queens/`.
-   **The directory is empty.** The scaffolding shipped ahead of the research,
-   so this call currently seeds nothing and reports `Seeded 0 files`. That is
-   the expected output, not a failure. Run it anyway: it is in the order so
-   that the day the first wave lands, nobody has to remember to add it.
-7. `Ethos.Release.seed_destinations()` — 13 JSON files, `priv/seed_data/destinations/`.
-   **Takes no email argument** — unlike every seeder above it, a destination
-   page has no author. Each file is an overlay: it is keyed on a destination
-   node's path and adds that hub's intro and photos to the row the roster
-   already owns. It seeds the roster itself first, the way every other seeder
-   does, so it still runs safely before, after or between any other step — it
-   references no place and resolves no link. It is listed here, after
-   `seed_brooklyn` and the Bronx and Queens seeders and before
-   `seed_collections`, for consistency with the rest of this list.
-8. `Ethos.Release.seed_ballparks(email)` — 236 places and **30 guides**, the
+6. `Ethos.Release.seed_queens(email)` — 21 JSON files in `priv/seed_data/queens/`.
+   The in-scope programme is **complete**: 21 of the 111-row roster, the set
+   the same 2026-08-31 narrowing chose. (This entry used to say the directory
+   was empty. It has not been since the waves landed.)
+7. `Ethos.Release.seed_ballparks(email)` — 236 places and **30 guides**, the
    whole MLB set, as **code modules** rather than JSON: one places module and
    one guide module per ballpark. It takes both lists from `Ethos.Seeds.Catalog`
    (region `"ballparks"`) and seeds **places before guides**, which is the one
@@ -70,29 +104,70 @@ it — see its entry below.
    transactional across a run" below. Adding a ballpark is one line in the
    catalog and no change here.
 
-   It has no dependency on steps 1-7 and none of them depends on it, so it may
-   run at any point before step 9. It is listed here because step 9 **does**
-   depend on it: `Ethos.Seeds.MlbBallparksCollection` names all thirty ballpark
-   guides, and `seed_collections` run before this step raises
+   It has no dependency on steps 1-6 and none of them depends on it, but two
+   later steps do, which is why it is here rather than lower down. Step 8 needs
+   it (Oracle Park's places), and step 13 needs it:
+   `Ethos.Seeds.MlbBallparksCollection` names all thirty ballpark guides, so
+   `seed_collections` run before this raises
    `collection mlb-ballparks references unknown guide <slug>`.
-9. `Ethos.Release.seed_collections()` — three collections: The Burys of
-   Connecticut (steps 2 and 3), Antique Trail of CT (step 2) and Major League
-   Ballparks (step 8). After **every** guide step, never between them.
-10. `Ethos.Release.seed_links()`
+8. `Ethos.Release.seed_san_francisco(email)` — 23 JSON files,
+   `priv/seed_data/san_francisco/`. **Calls `seed_ballparks/1` itself** before
+   the directory pass, so step 7 is a precondition it enforces rather than
+   assumes: `Ethos.Seeds.OracleParkPlaces` owns seven San Francisco places the
+   Mission Bay file links to instead of restating, and `Links.resolve!/1`
+   raises on an unknown target.
+9. `Ethos.Release.seed_london(email)` — 33 JSON files, `priv/seed_data/london/`.
+   No precondition: nothing in `lib/ethos/seeds/` owns a London place or guide,
+   so every target a London file names is inside the same directory.
+10. `Ethos.Release.seed_rome_zones(email)` — 31 JSON files,
+    `priv/seed_data/rome/`. **Calls `seed_rome/1` itself** first, because the
+    zone files link to `three-days-in-rome-real-trip-guide`, which is a code
+    module rather than a file in that directory. `seed_rome/1` alone seeds only
+    that one flagship guide and creates no places; it is not a substitute for
+    this step, and this step is not a substitute for it.
+11. `Ethos.Release.seed_korean_bbq(email)` — 10 JSON files,
+    `priv/seed_data/korean_bbq/`. **MUST run after steps 1, 4, 6, 8 and 9.**
+    These ten guides reach places owned by the Manhattan, Brooklyn, Queens, San
+    Francisco and London corpora by entry rather than restating them, and
+    `GuideRunner.replace_entries!/2` resolves each entry through
+    `Places.get_place_by_slug!/1`, which **raises** on a place nothing has
+    seeded. That ordering cannot be enforced from `Ethos.Release` — calling all
+    five would re-seed a thousand guides on every run — so it is stated here
+    and asserted in `test/ethos/seeds/korean_bbq_seed_data_test.exs`.
+
+    Step 13 depends on this one: `Ethos.Seeds.KoreanBbqCollection` names all
+    ten guides.
+12. `Ethos.Release.seed_destinations()` — 15 JSON files, `priv/seed_data/destinations/`.
+    **Takes no email argument** — unlike every seeder above it, a destination
+    page has no author. Each file is an overlay: it is keyed on a destination
+    node's path and adds that hub's intro and photos to the row the roster
+    already owns. It seeds the roster itself first, the way every other seeder
+    does, so it still runs safely before, after or between any other step — it
+    references no place and resolves no link. It is listed here, after every
+    guide corpus and before `seed_collections`, for consistency with the rest
+    of this list.
+13. `Ethos.Release.seed_collections()` — four collections: The Burys of
+    Connecticut (steps 2 and 3), Antique Trail of CT (step 2), Major League
+    Ballparks (step 7) and Korean BBQ (step 11). After **every** guide step,
+    never between them.
+14. `Ethos.Release.seed_links()`
 
 Verify the published count after each content step before moving on — see
 "Expected published counts" below. `seed_destinations` writes to the
 `destinations` table rather than `guides`, so it has no row in that table.
-It creates no rows at all now: each of the thirteen files is keyed on a node
+It creates no rows at all now: each of the fifteen files is keyed on a node
 path and overlays an intro and photos onto a row the roster already owns, so
 `Ethos.Destinations.list_destinations() |> Enum.count()` reads the roster's
-size (**724**) both before and after it, not 13. What confirms it ran is the
-prose: `Ethos.Destinations.get_by_path("united-states/connecticut").intro`
-should be the long Connecticut history, not the stub "Connecticut, county by
-county."
+size (**752**) both before and after it, not 15. That number is the length of
+`priv/seed_data/destination_tree.json` and is asserted against this runbook in
+`test/ethos/seeds/destination_tree_test.exs` — when the roster grows, that test
+fails and this paragraph is what it is telling you to update. What confirms
+`seed_destinations` ran is the prose:
+`Ethos.Destinations.get_by_path("united-states/connecticut").intro` should be
+the long Connecticut history, not the stub "Connecticut, county by county."
 
-A count of 737 — the roster plus thirteen — means the pre-Task-13 keys are
-back. Those extra rows have no `kind` and no `parent_id`; they shadow thirteen
+A count of **767** — the roster plus fifteen — means the pre-Task-13 keys are
+back. Those extra rows have no `kind` and no `parent_id`; they shadow fifteen
 hubs, disable their redirects, enter the sitemap, and list Connecticut, New
 York and Rome on `/destinations` beside the countries.
 
@@ -139,7 +214,7 @@ are ones no seeder can:
   the deploy's `release_command`, **before any seeding**, so that abort rolls
   the whole deploy back. This is invisible to the test suite, which migrates an
   empty `destinations` table.
-- The rows in question are the thirteen pre-Task-13 curated hub records
+- The rows in question are the fifteen pre-Task-13 curated hub records
   described just above — keyed on `connecticut`, `rome`,
   `new-york/manhattan` and friends, which are now `legacy_paths` of real nodes.
   `Ethos.Seeds.DestinationTree.upsert_all!/0` upserts by `path` and never
@@ -152,9 +227,9 @@ any seeder runs — they are still NULL anyway.
 
 **Nothing is lost, but you must re-seed.** Every row comes back from the roster
 — `Ethos.Release.seed_destination_tree()`, which every seeder below also runs
-first — and step 7's thirteen overlay files put the curated prose and photos
+first — and step 12's fifteen overlay files put the curated prose and photos
 back on top. Run the full seed order after the migration, exactly as for a
-fresh database, and confirm the count reads 724 and
+fresh database, and confirm the count reads 752 and
 `get_by_path("united-states/connecticut").intro` is the long history rather
 than the stub.
 
@@ -162,8 +237,10 @@ Rolling the migration back restores the column's nullability, not the deleted
 rows.
 
 `Ethos.Release.seed_rome(email)` seeds one standalone guide
-(`three-days-in-rome-real-trip-guide`). It has no dependencies and nothing
-depends on it, so run it whenever; it is deliberately not part of the chain.
+(`three-days-in-rome-real-trip-guide`) and no places. It has no dependencies,
+so it may be run on its own at any time — but it is not optional overall:
+step 10 (`seed_rome_zones/1`) calls it, because the zone corpus links to that
+guide and `Links.resolve!/1` raises on an unknown target.
 
 ### Why `seed_links` runs last
 
@@ -223,8 +300,9 @@ unknown guide slug, which is why `seed_collections` comes after all the guide
 steps: "The Burys of Connecticut" pulls five guides from the CT-5 code modules
 and five (Salisbury, Roxbury, Simsbury, Glastonbury, Canterbury) from the
 Connecticut JSON corpus, and "Major League Ballparks" pulls all thirty ballpark
-guides from step 8. Between them the collections now depend on three separate
-guide steps, so `seed_collections` is not satisfiable by any subset of them.
+guides from step 7, and "Korean BBQ" pulls all ten from step 11. Between them
+the collections now depend on four separate guide steps, so `seed_collections`
+is not satisfiable by any subset of them.
 
 On the current production database Manhattan and the CT-5 guides are already
 live, so a re-deploy of an existing branch is unaffected. These dependencies
@@ -261,54 +339,86 @@ anything.
 
 ## Expected published counts
 
-Verify between steps. Guides carry `state` and `county`, so each destination is
-countable independently:
+Verify between steps.
+
+**`guides.state` and `guides.county` are gone.** `20260905140000` dropped both
+columns and the schema fields with them, so the `&(&1.county == ~s(Manhattan))`
+form this table used to carry now raises `KeyError` on a release console. A
+guide's geography is the node it points at, and a destination is a *subtree* of
+the tree, so the counting form is `Destinations.under?/2` over the node:
+
+```elixir
+count = fn path ->
+  Ethos.Guides.list_published_guides()
+  |> Ethos.Repo.preload(:destination_node)
+  |> Enum.count(&Ethos.Destinations.under?(&1.destination_node, path))
+end
+```
+
+`under?/2` is `false` for a guide with no node, so this never raises during the
+seed window described at the top of this runbook — it just returns 0.
 
 | After step | Destination | Expected published guides | Check |
 | --- | --- | --- | --- |
-| 1 | Manhattan | **38** | `Ethos.Guides.list_published_guides() \|> Enum.count(&(&1.county == ~s(Manhattan)))` |
-| 2 | Connecticut (CT-5 only) | **5** | `Ethos.Guides.list_published_guides() \|> Enum.count(&(&1.state == ~s(Connecticut)))` |
+| 1 | Manhattan | **38** | `count.(~s(united-states/new-york/new-york-city/manhattan))` |
+| 2 | Connecticut (CT-5 only) | **5** | `count.(~s(united-states/connecticut))` |
 | 3 | Connecticut (full) | **170** | same as above |
-| 4 | Brooklyn | **69** | `Ethos.Guides.list_published_guides() \|> Enum.count(&(&1.county == ~s(Brooklyn)))` |
-| 8 | MLB ballparks | **30** | `Ethos.Seeds.Catalog.guide_modules(~s(ballparks)) \|> Enum.count(fn {m, _} -> Ethos.Guides.get_published_guide_by_slug(m.data().slug) end)` |
+| 4 | Brooklyn | **69** | `count.(~s(united-states/new-york/new-york-city/brooklyn))` |
+| 5 | Bronx | **13** | `count.(~s(united-states/new-york/new-york-city/bronx))` |
+| 6 | Queens | **21** | `count.(~s(united-states/new-york/new-york-city/queens))` |
+| 7 | MLB ballparks | **30** | `Ethos.Seeds.Catalog.guide_modules(~s(ballparks)) \|> Enum.count(fn {m, _} -> Ethos.Guides.get_published_guide_by_slug(m.data().slug) end)` |
+| 8 | San Francisco | **24** | `count.(~s(united-states/california/san-francisco))` |
+| 9 | London | **33** | `count.(~s(united-kingdom/england/london))` |
+| 10 | Rome | **32** | `count.(~s(italy/lazio/rome))` |
+| 11 | Korean BBQ | **10** | the seeder's own last line, `Seeded 10 files from priv/seed_data/korean_bbq` (these ten file on five different nodes, so no single subtree counts them) |
 
-Full rebuild total, excluding Rome: **308** — the four rows above (38 + 170 +
-69 + 30 = 307) plus the one Bronx guide that has shipped so far,
-`priv/seed_data/bronx/belmont.json`.
+**Read the rows in order, and only after the step they name.** These are
+subtree counts, so a later step can add to an earlier row's subtree. Three do:
 
-The Bronx and Queens seeders have no row of their own here because both are
-still in flight: the count moves with every wave, so any number written in this
-table would be stale before the next one lands. The total still has to add up,
-so the one shipped Bronx guide is counted in it — re-derive that addend from
-`ls priv/seed_data/bronx/*.json | wc -l` rather than trusting this paragraph.
+- **San Francisco is 24, not 23.** 23 JSON files plus the code-module Oracle
+  Park guide, which `destination_path`s to
+  `united-states/california/san-francisco` and which step 8 seeds itself by
+  calling `seed_ballparks/1`. Counted once here and once in the ballparks row
+  of 30; it is the same guide.
+- **Rome is 32, not 31.** 31 zone files plus the flagship
+  `three-days-in-rome-real-trip-guide`, which sits on `italy/lazio/rome` and
+  which step 10 seeds itself by calling `seed_rome/1`.
+- **The Bronx and Queens rows are the neighbourhood corpora only, and only
+  before step 7.** Yankee Stadium sits on the Bronx node and Citi Field under
+  Queens, so after the ballparks step those two subtrees read 14 and 22. Both
+  ballpark guides are already inside the row of 30.
 
-Their **terminal** counts are now knowable, which they were not when this
-paragraph was first written. Both programmes narrowed on 2026-08-31 from their
-full rosters to an in-scope core: **14 Bronx** guides (of 66 rostered) and
-**21 Queens** (of 111). When each programme's last in-scope wave lands, add its
-row here and the full rebuild total becomes 307 + 14 + 21 = **342**.
+  Step 11 adds one more to each of Manhattan, Brooklyn, Queens, London and San
+  Francisco: the Korean BBQ guides file on those nodes. After a full rebuild
+  Manhattan reads 39, Brooklyn 70, Queens 23, London 34 and San Francisco 25.
 
-Count those two by **seed file**, not by county:
-`Ethos.Guides.list_published_guides() |> Enum.count(&(&1.county == ~s(Bronx)))`
-also picks up the code-module Yankee Stadium guide, and the `~s(Queens)` form
-picks up Citi Field — both already counted in the MLB ballparks row of 30. The
-neighborhood corpus is `priv/seed_data/bronx/*.json` and
-`priv/seed_data/queens/*.json`, one guide per file, and
-`test/ethos/seeds/bronx_seed_data_test.exs` asserts that set equals the in-scope
-roster exactly once its `:pending_bronx` tag comes off. See
+The Bronx and Queens programmes both narrowed on 2026-08-31 from their full
+rosters to an in-scope core: **14 Bronx** guides (of 66 rostered) and
+**21 Queens** (of 111). Queens is complete. The Bronx has shipped 13 of its 14;
+`test/ethos/seeds/bronx_seed_data_test.exs` asserts the set equals the in-scope
+roster once its `:pending_bronx` tag comes off, and that is what will tell you
+the fourteenth landed. See
 `docs/superpowers/specs/2026-08-31-narrowed-nyc-scope-design.md`.
+
+**Full rebuild total: 439 published guides.** Derived, not counted off a live
+database: 38 Manhattan + 5 CT-5 + 165 Connecticut + 69 Brooklyn + 13 Bronx +
+21 Queens + 30 ballparks + 23 San Francisco + 33 London + 31 Rome zones + 1
+Rome flagship + 10 Korean BBQ. Every JSON addend is
+`ls priv/seed_data/<dir>/*.json | wc -l`; re-derive them that way rather than
+trusting this sum, which moves with every content wave. Check it with
+`Ethos.Guides.list_published_guides() |> length()`.
 
 Where the numbers come from:
 
 - **Manhattan 38** — one guide per file in `priv/seed_data/manhattan/`
   (`seed_directory/2` calls `upsert_guide!/2` exactly once per file), and all 38
-  carry `county: "Manhattan"`.
+  file on nodes under `united-states/new-york/new-york-city/manhattan`.
 - **Connecticut 170** — 165 JSON files in `priv/seed_data/connecticut/` plus the
   5 CT-5 code-module guides. (169 towns plus Mystic, a village, are represented
   across those 165 files.)
 - **Brooklyn 69** — determined from the committed corpus, not from a plan
   document: `priv/seed_data/brooklyn/` holds 69 `.json` files, one guide each,
-  all with `county: "Brooklyn"`; and
+  all under the Brooklyn node; and
   `priv/seed_data/brooklyn_roster.json` lists 69 neighborhood slugs which match
   the filenames exactly, with nothing missing and nothing extra. That equality
   is asserted mechanically in
@@ -335,10 +445,11 @@ Where the numbers come from:
 If a count is short, **do not proceed to the next step.** Re-run the same
 seeder (see below) and re-check.
 
-After step 9, `/c/mlb-ballparks` should list thirty guides, and each ballpark
-guide page should carry a *"Part of Major League Ballparks"* line under its
-title. If the collection page is short, the guide it dropped shows no such
-line and nothing else reports it — re-run steps 8 and 9 in that order.
+After step 13, `/c/mlb-ballparks` should list thirty guides and `/c/korean-bbq`
+ten, and each of those guide pages should carry a *"Part of …"* line under its
+title. If a collection page is short, the guide it dropped shows no such line
+and nothing else reports it — re-run the guide step it came from (7 for a
+ballpark, 11 for a Korean BBQ guide) and then step 13, in that order.
 
 ## Seeding is not transactional across a run
 

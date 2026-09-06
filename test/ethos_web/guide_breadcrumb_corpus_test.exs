@@ -149,10 +149,10 @@ defmodule EthosWeb.GuideBreadcrumbCorpusTest do
 
   test "no curated hub page is keyed on a bare path any more", %{trails: trails} do
     # The wreckage the old rule left behind. `curated_destination_crumb/1`
-    # matched only because all thirteen curated files were keyed on bare,
+    # matched only because all fifteen curated files were keyed on bare,
     # pre-tree paths ("connecticut", "rome"), and `Release.seed_destinations/0`
     # inserted those keys as rows of their own — parentless, kindless, and
-    # sitting on the URLs thirteen 301s were supposed to own.
+    # sitting on the URLs fifteen 301s were supposed to own.
     #
     # Kept as an assertion rather than a comment because the files are the only
     # thing stopping it from coming back: re-key one by hand and the rows return.
