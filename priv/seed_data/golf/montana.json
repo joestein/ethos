@@ -22,6 +22,10 @@
       {
         "heading": "Day two: Indian Springs Ranch",
         "body": "Indian Springs Ranch Golf Course, at 3082 Montana Highway 93 North, lies two miles north of Eureka on Highway 93. Visit Montana, the state tourism office, labels it a \"PUBLIC GOLF COURSE.\" The Montana State Golf Association records that \"Indian Springs was first opened to the public in 2010.\" It plays 18 holes at 6,600 yards. The operator's published 2026 season rates run April 1 through October 31, 2026: $90 for eighteen holes, or $110 with a cart, with range balls included. Tee times can be booked up to seven days ahead by calling (406) 889-5056."
+      },
+      {
+        "heading": "The basecamp: staying and eating at the resort",
+        "body": "Wilderness Club is a resort, and the lodging and the dining are on the property at 1885 Sophie Lake Rd — the same street address as the golf course — so nothing off-property is needed to make a two-round weekend work. The Census geocoder places that address in Lincoln County with no incorporated place at all, while a control query at 20 Dewey Ave in Eureka returns both Lincoln County and \"Eureka town\": the resort sits outside the limits of the town whose name it uses for mail, 6.9 road miles from Eureka by Sophie Lake Road, Douglas Hill Road and Dewey Avenue. The operator's own FAQ puts it differently — \"Within 5 miles is the town of Eureka, Montana\" — and both figures are recorded here without being reconciled.\n\nTwo sites describe the same property, and it is worth knowing which is which. thewildernessclub.com is the residential real-estate offering and carries no room inventory and no restaurant; wildernessclubmontana.com is the resort, and it is the one with lodging, dining and booking. The reservation system behind it returns the property's own record — \"Wilderness Club Montana / 1885 Sophie Lake Rd, Eureka, MT 59917 / 1-406-2968264\" — at the same address this guide gives for the course.\n\nThe rooms come in two families. Wilderness Resort Suites are described by the operator as \"perfect for lone travelers or couples seeking a calming escape,\" for up to four guests; Luxury Cottages take up to thirteen and, in the operator's words, \"are available for rental with a minimum stay of three nights required.\" The resort's own summary of the whole property reads: \"our 550-acre resort offers an extraordinary collection of fully-equipped cabins and cottages with breathtaking views of lakes, streams, and mountains.\" Every lodging guest is given access to the Wilderness Water Park, with saltwater pools, a large jacuzzi, a children's splash pad and a 250-foot water-slide; to Wilderness Lake, with free rental of kayaks, paddleboards, life preservers and floating pads; to a 24/7 fitness studio for guests 18 and over and two cedar hot tubs; and to a sports park with basketball, volleyball, pickleball, soccer, an amphitheater for live music, walking trails, a picnic area, a bonfire pit and lawn games. Check-in is 4 pm and check-out 11 am. Cancellations are free up to 60 days before arrival and billed in full inside that window, and Stay & Play packages are non-refundable. Arriving guests check in with gate security, or at the clubhouse if the gate is unstaffed. The reservation system also carries a rate plan named, in the operator's own words, \"2 Nights 2 Rounds Stay & Play\" — a two-night stay in a premium accommodation with two rounds of golf — alongside a bar rate, a \"Salute to Service\" rate for active military presenting valid ID at check-in, a romance package and a AAA rate.\n\nNo room rate appears in this guide. The resort's booking engine answered a query for a September 2026 arrival with 22 room types and live availability counts above zero, so the rooms are genuinely sellable, but every figure it returned was a dynamic quote for one date range, and this guide's price rule does not publish those. What the operator does state as standing terms are an 8% Montana hotel tax, a $50 per night resort fee \"which allows guests (up to the first 4 people) access to the resort amenities,\" $12.50 per person per night for guests beyond those four, and $50 per day per pet for pets under 50 lbs in the rooms that take them.\n\nDining is the Wilderness Grille, in the clubhouse. The operator calls it \"the centerpiece of our food and beverage options,\" offering \"a fine dining menu, gourmet pizza, delivery, and room service,\" with lounge service looking out over the golf course and a cuisine the operator describes as American and Pacific Northwest. Published hours are Monday to Thursday 7:30am to 8:00pm, Friday 7:30am to 9:00pm, and Saturday and Sunday 7:00am to 9:00pm, with a Snack Shack open 11:00am to 7:00pm daily and an on-course beverage cart whose hours the operator says vary with business levels. Its own record states that it does not accept reservations, and charges from dining and activities can be billed to a room. One qualifier travels with it, in the operator's own words: the grille is \"Open seasonally 7 days a week,\" and no dated season boundary is published for the restaurant anywhere on the site — the April-to-October window stated elsewhere in this guide belongs to the golf course, not to the kitchen — so a visitor arriving outside it should confirm the grille is serving."
       }
     ],
     "faq": [
@@ -82,6 +86,32 @@
       "summary": "A public 18-hole course at 6,600 yards, two miles north of Eureka on Highway 93, labelled \"PUBLIC GOLF COURSE\" by Visit Montana. First opened to the public in 2010, per the Montana State Golf Association. The operator's 2026 season rates, April 1 to October 31, run $90 for eighteen holes or $110 with a cart, with range balls included; tee times may be booked up to seven days ahead.",
       "status": "open",
       "photos": []
+    },
+    {
+      "slug": "wilderness-club-montana-eureka",
+      "name": "Wilderness Club Montana",
+      "kind": "hotel",
+      "town": "Eureka",
+      "state": "Montana",
+      "county": "Lincoln County",
+      "address": "1885 Sophie Lake Rd, Eureka, MT 59917",
+      "official_url": "https://www.wildernessclubmontana.com/lodging",
+      "summary": "The resort lodging at 1885 Sophie Lake Rd — the same address as the golf course, 0.0 road miles from it, so the round and the room are one property. The operator describes \"an extraordinary collection of fully-equipped cabins and cottages\" on a 550-acre resort and sells two families of unit: Wilderness Resort Suites for up to four guests, and Luxury Cottages for up to thirteen, the cottages carrying \"a minimum stay of three nights required.\" Every lodging guest is given the Wilderness Water Park with saltwater pools, jacuzzi, splash pad and a 250-foot water-slide, Wilderness Lake with free kayak, paddleboard and float rental, a 24/7 fitness studio for guests 18 and over with two cedar hot tubs, and a sports park with basketball, volleyball, pickleball, soccer, an amphitheater and walking trails; dining and activity charges can be billed to the room. Check-in is 4 pm, check-out 11 am, and cancellations are free up to 60 days before arrival. The booking engine returned 22 room types with live availability for a September 2026 arrival, but every price it quoted was a dynamic quote for one date range, so no room rate is published here. The operator's standing terms are an 8% Montana hotel tax, a $50 per night resort fee covering resort access for the first four guests, $12.50 per person per night beyond that, and $50 per day per pet for pets under 50 lbs in eligible rooms. The reservation system writes the property's name as Wilderness Club Montana; the site's body copy also uses Wilderness Club Resort and The Wilderness Club.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "wilderness-grille-eureka",
+      "name": "Wilderness Grille",
+      "kind": "restaurant",
+      "town": "Eureka",
+      "state": "Montana",
+      "county": "Lincoln County",
+      "address": "1885 Sophie Lake Rd, Eureka, MT 59917",
+      "official_url": "https://www.wildernessclubmontana.com/resort-activities/wilderness-grille",
+      "summary": "The resort's main restaurant, in the clubhouse at 1885 Sophie Lake Rd — the same address as the golf course, 0.0 road miles away. The operator calls it \"the centerpiece of our food and beverage options,\" offering \"a fine dining menu, gourmet pizza, delivery, and room service,\" with lounge service looking out over the golf course and a cuisine it describes as American and Pacific Northwest. Published hours are Monday to Thursday 7:30am to 8:00pm, Friday 7:30am to 9:00pm, and Saturday and Sunday 7:00am to 9:00pm, with a Snack Shack open 11:00am to 7:00pm daily and an on-course beverage cart whose hours the operator says vary with business levels. Its own record states that it does not accept reservations, and charges from it can be billed to a resort room. One qualifier is the operator's own: it describes the grille as \"Open seasonally 7 days a week\" and publishes no dated season boundary for the restaurant anywhere on its site, so a visitor arriving outside the golf course's April-to-October window should confirm it is serving.",
+      "status": "open",
+      "photos": []
     }
   ],
   "entries": [
@@ -96,6 +126,18 @@
       "name": "Indian Springs Ranch Golf Course",
       "place_slug": "indian-springs-ranch-eureka",
       "note": "Day two: public 18 holes two miles north of Eureka on Highway 93, 2026 rates $90 (walking) or $110 with cart."
+    },
+    {
+      "kind": "stay",
+      "name": "Wilderness Club Montana",
+      "place_slug": "wilderness-club-montana-eureka",
+      "note": "The basecamp, on the property at 0.0 road miles: suites for up to four and luxury cottages for up to thirteen with a three-night minimum, plus a water park, a lake and a 24/7 fitness studio for lodging guests."
+    },
+    {
+      "kind": "food",
+      "name": "Wilderness Grille",
+      "place_slug": "wilderness-grille-eureka",
+      "note": "The clubhouse restaurant, on the property; breakfast through dinner daily in season, no reservations taken, and charges can go on the room."
     }
   ]
 }

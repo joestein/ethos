@@ -1011,10 +1011,32 @@ defmodule EthosWeb.StructuredDataTest do
       # The rule this leaves behind: when two of these counters move by
       # different amounts, the difference is a claim about the data and should
       # be explained before the numbers are updated.
-      assert length(emitted) == 4805
-      assert count.(& &1["streetAddress"]) == 4182
+      # THE BASECAMP PASS. Seven states published no lodging place record at all
+      # and five more published one too thin to use; twelve records were added
+      # across Alaska, Colorado, Ohio, Kentucky and Montana, eight of them
+      # carrying an address.
+      #
+      #   * total 4805 -> 4813, +8.
+      #   * `streetAddress` 4182 -> 4190, +8.
+      #   * `postalCode` 3418 -> 3426, +8.
+      #   * `is_nil(streetAddress)` unmoved at 623.
+      #
+      # The rule above earned its keep a second time. On the first pass through
+      # these numbers `streetAddress` moved +5 against `postalCode` +8, and the
+      # three-record gap was Alaska writing "Anchorage, Alaska 99501" where this
+      # corpus writes the two-letter code. The parser took the ZIP and refused
+      # the street. Normalised to "Anchorage, AK 99501", all three parse and the
+      # two counters agree again.
+      #
+      # Both defects this rule has caught were the same shape: an author
+      # deviating from the corpus's address form in a way that half-defeats the
+      # parser, so the record still emits a PostalAddress and still looks fine.
+      # Neither would have been visible in a diff, and both would have shipped
+      # under a green suite if the counters had simply been bumped to match.
+      assert length(emitted) == 4813
+      assert count.(& &1["streetAddress"]) == 4190
       assert count.(&is_nil(&1["streetAddress"])) == 623
-      assert count.(& &1["postalCode"]) == 3418
+      assert count.(& &1["postalCode"]) == 3426
 
       # The largest behavioural delta this change ships: 302 places emit a
       # PostalAddress carrying only locality, region and country. Their full

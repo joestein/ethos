@@ -270,19 +270,19 @@
     "verified": true
   },
   {
-    "access": null,
-    "city": null,
-    "county": null,
-    "course": null,
-    "criterion": null,
-    "facility": null,
-    "ranking_edition": null,
-    "ranking_position": null,
-    "ranking_source": null,
-    "second_course": null,
+    "access": "An access shape the corpus meets only here: in the operator's own words a \"private club, which welcomes public play\", with public players calling the Golf Shop three days in advance. No sponsorship, referral, reciprocal-club or host requirement exists anywhere on the site -- the three-day phone window is the whole constraint. Rank 1 fails on its own terms, not merely on its label: \"exclusive private club... members-only setting\", cottages and villas only, with no non-guest rate. Neither course dates its rate table, so no green fee is publishable, and the operator publishes no opening or closing date -- an absence confirmed across 13 live pages and 14 archived captures including deep winter.",
+    "city": "Kennebunkport",
+    "county": "York County",
+    "course": "Cape Arundel Golf Club",
+    "criterion": "ranking",
+    "facility": "Cape Arundel Golf Club",
+    "ranking_edition": "2025-'26",
+    "ranking_position": 2,
+    "ranking_source": "Golf Digest Best in State",
+    "second_course": "Webhannet Golf Club",
     "slug": "maine",
     "state": "Maine",
-    "verified": false
+    "verified": true
   },
   {
     "access": "Daily-fee and publicly playable, the first Public-labelled entry on the ranking: ranks 1 through 8 were each verified Private inside their own blocks by two independent methods, and Golf Digest's own course page records the facility type as Public. The operator publishes a dated \"2026 Rate Schedule\". Note that the ranking's Public label is not reliable on its own here -- rank 14 carries it while being a Troon Prive member club -- so each rejection above rank 9 was checked against the operator's own terms.",
@@ -420,19 +420,19 @@
     "verified": true
   },
   {
-    "access": null,
-    "city": null,
-    "county": null,
-    "course": null,
-    "criterion": null,
-    "facility": null,
+    "access": "The championship fallback applies, on the best-proved negative in this corpus: the state's 2025-'26 ranking has exactly five entries, five rubric elements against five titles, all Private, with \"Public\" occurring zero times -- reproduced on a live fetch and six distinct captures reaching back to March 2025, and all five operators confirming their own gates verbatim. The course is public daily-fee, on a record of 19 New Hampshire Opens, more than any course in that championship's history, re-derived from the association's venue-by-year table. Its rate card carries a dated qualifier -- \"Rates listed here are current as of January 1, 2026\" -- so the fee is publishable. The state's best-known golf resort is genuinely public in its own words but loses on record, four hostings to nineteen.",
+    "city": "Keene",
+    "county": "Cheshire County",
+    "course": "Bretwood Golf Course: North Course",
+    "criterion": "championship",
+    "facility": "Bretwood Golf Course",
     "ranking_edition": null,
     "ranking_position": null,
     "ranking_source": null,
-    "second_course": null,
+    "second_course": "Bretwood Golf Course: South Course",
     "slug": "new-hampshire",
     "state": "New Hampshire",
-    "verified": false
+    "verified": true
   },
   {
     "access": "The championship fallback applies: no entry on the state's 2025-'26 ranking is publicly accessible at any rank. All 25 entries carry a Private rubric -- 25 rubric elements against 25 title elements, so no entry is unlabelled -- established across two archived captures from different source WARCs and a live fetch. The one entry labelled Public in an earlier capture of the same edition is refused in writing by its operator's management group: \"Membership is closed. Future consideration is by referral only.\" The Bay Course is daily-fee resort golf, host of the ShopRite LPGA and part of the 1942 PGA Championship. No green fee carries a dated qualifier, so none is publishable.",
