@@ -182,10 +182,12 @@ defmodule EthosWeb.AffiliatePlacementTest do
   end
 
   describe "destination hubs" do
-    # A hub is now one node in the destination tree, served at that node's own
-    # path, and its guides are the ones filed against it. The geography a hub
-    # resolves through is still the guides' — `unanimous_locale/1` over
-    # assigns[:guides] — so these seed the node and file the guide on it.
+    # A hub is one node in the destination tree, served at that node's own path,
+    # and it resolves through that node — `locale_for/1` over `assigns[:node]`,
+    # not a vote over the rows it lists. The tests below still file a guide on
+    # the node so the hub has something to render, but the guide is no longer
+    # what decides the locale; the walk at the end of this block is what covers
+    # the hubs that have no guide of their own at all.
     defp hub_node!(path) do
       Ethos.SeedDataHelpers.seed_destination_paths!([path])
       Ethos.Destinations.get_by_path(path)
@@ -339,6 +341,74 @@ defmodule EthosWeb.AffiliatePlacementTest do
 
       assert html =~ @widget
       assert html =~ ~s(data-gyg-cmp="new-york")
+    end
+
+    # THE HUB SHAPE THAT ACTUALLY SHIPS, AND THAT NOTHING ABOVE COVERS.
+    #
+    # Every other hub test in this file files a guide on the node it then
+    # requests, because that is the easy fixture to write. The corpus does not
+    # look like that. `united-states/new-york/new-york-city`, each of its four
+    # boroughs, and `italy/lazio` hold CHILD NODES, not guides — zero guides are
+    # filed directly on any of them — so a resolver that reads only the hub's
+    # guide list sees an empty list and returns nil. The campaign's own headline
+    # hub then serves 200 with no unit, silently, which is the exact class this
+    # whole module is shaped against and the most valuable page in the campaign.
+    #
+    # So this walks INTERIOR nodes — the ones with children — inside each
+    # configured locale's subtree, and requests each hub as a visitor would.
+    # A fixture cannot be written that makes this pass vacuously: the node set
+    # comes from the committed roster and the locale set from the committed
+    # registry.
+    test "every interior hub inside a campaign's geography renders a unit", %{conn: _conn} do
+      roster = Ethos.Seeds.DestinationTree.load!()
+      locales = Application.get_env(:ethos, :affiliate_locales, %{})
+      keys = Map.keys(locales)
+
+      parents =
+        MapSet.new(roster, &(&1["path"] |> String.split("/") |> Enum.drop(-1) |> Enum.join("/")))
+
+      in_scope? = fn path ->
+        Enum.any?(keys, &(path == &1 or String.starts_with?(path, &1 <> "/")))
+      end
+
+      interior =
+        for node <- roster,
+            path = node["path"],
+            MapSet.member?(parents, path),
+            in_scope?.(path),
+            do: path
+
+      # Non-vacuity, and specific about what would make it vacuous. Both
+      # campaigns must contribute: a walk that only ever saw New York would
+      # miss a Rome-shaped regression entirely, which is how the last one
+      # survived.
+      covered =
+        interior
+        |> Enum.map(fn path ->
+          Enum.find(keys, &(path == &1 or String.starts_with?(path, &1 <> "/")))
+        end)
+        |> Enum.uniq()
+
+      assert length(interior) >= 6,
+             "only #{length(interior)} interior hubs sit inside a campaign — this walk has " <>
+               "stopped covering the shape it exists for: #{inspect(interior)}"
+
+      assert length(covered) >= 2,
+             "only #{inspect(covered)} of the configured campaigns has an interior hub, so " <>
+               "this walk cannot see a whole-geography regression"
+
+      # One ordered call, not one per node: two passes are two lock sequences.
+      Ethos.SeedDataHelpers.seed_destination_paths!(interior)
+
+      blank =
+        for path <- interior,
+            html = build_conn() |> get("/destinations/" <> path) |> html_response(200),
+            not (html =~ @widget),
+            do: path
+
+      assert blank == [],
+             "these hubs sit inside a campaign's own geography and render no affiliate unit — " <>
+               "200, a correct-looking page, no unit: #{inspect(blank)}"
     end
   end
 

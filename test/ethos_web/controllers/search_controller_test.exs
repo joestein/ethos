@@ -35,6 +35,24 @@ defmodule EthosWeb.SearchControllerTest do
     assert html =~ "brewery · Waterbury"
   end
 
+  # The other half, and it is user-visible: a place with no node has no
+  # geography to print, and a template that joined the kind and the name itself
+  # rendered "· brewery · " with nothing after the second separator.
+  test "a place result with no node prints its kind and no dangling separator", %{conn: conn} do
+    Ethos.Places.upsert_place!(%{
+      slug: "nodeless-brewery",
+      name: "Brass Unattached Brewing",
+      kind: "brewery",
+      summary: "Named for the brass heritage."
+    })
+
+    html = conn |> get(~p"/search?q=brass") |> html_response(200)
+
+    assert html =~ "Brass Unattached Brewing"
+    assert html =~ "· brewery</span>"
+    refute html =~ "brewery · </span>"
+  end
+
   test "empty query renders the form without results", %{conn: conn} do
     html = conn |> get(~p"/search") |> html_response(200)
     assert html =~ "Search"

@@ -46,18 +46,4 @@ defmodule Ethos.SeoFieldsTest do
 
     assert %{booking_url: _} = errors_on(changeset)
   end
-
-  test "destination listing helpers" do
-    g = published_guide_fixture(%{destination: "Rome, Italy"})
-    _draft = guide_fixture(%{destination: "Rome, Italy"})
-    _other = published_guide_fixture(%{destination: "Tokyo, Japan"})
-
-    dests = Guides.list_destinations()
-    assert %{slug: "rome", name: "Rome", count: 1} in dests
-    assert %{slug: "tokyo", name: "Tokyo", count: 1} in dests
-
-    assert [%{id: id}] = Guides.list_published_guides_for_destination("rome")
-    assert id == g.id
-    assert length(Guides.list_published_guides()) == 2
-  end
 end

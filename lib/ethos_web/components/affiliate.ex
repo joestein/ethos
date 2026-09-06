@@ -91,10 +91,28 @@ defmodule EthosWeb.Affiliate do
         |> Enum.map(&destination_path(&1.guide))
         |> Affiliates.unanimous_locale()
 
-      # Every destination hub assigns :guides — the guides filed on that node,
-      # at whatever depth the node sits. A hub cannot disagree with itself any
-      # more (its rows all name the node it serves), so the vote here is really
-      # about the collection clause above and about a hub that lists nothing.
+      # A destination hub IS a node, so it resolves from its own path rather
+      # than by inference from the rows it happens to list.
+      #
+      # This clause is above :guides deliberately, and its absence was a live
+      # silent-200. A hub used to resolve only through `unanimous_locale/1` over
+      # `assigns[:guides]`, and `unanimous_locale([])` is nil — while the corpus
+      # files ZERO guides directly on `united-states/new-york/new-york-city`, on
+      # any of its four boroughs, or on `italy/lazio`. Those nodes hold child
+      # nodes. So the campaign's own headline hub, the most valuable page in it,
+      # served 200 with no unit and nothing failed: every hub test in the suite
+      # filed a guide on the node it then requested, which is the one shape that
+      # cannot expose this.
+      #
+      # It is also simply the truer statement. A hub's subject is its node, not
+      # the sample of rows filed at that exact depth, and the node's path is
+      # what the registry is keyed on.
+      node = assigns[:node] ->
+        Affiliates.locale_for(node.path)
+
+      # Any other page assigning a list of guides. A hub no longer reaches here
+      # — the clause above claims it — so this is the author-dashboard shape and
+      # anything future that lists guides without being a node.
       is_list(assigns[:guides]) ->
         assigns[:guides]
         |> Enum.map(&destination_path/1)

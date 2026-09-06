@@ -62,28 +62,6 @@ defmodule Ethos.Guides do
     Repo.all(from g in Guide, where: g.status == "published", order_by: [desc: g.updated_at])
   end
 
-  def list_published_guides_for_destination(slug) do
-    Repo.all(
-      from g in Guide,
-        where: g.status == "published" and g.destination_slug == ^slug,
-        order_by: [desc: g.view_count, desc: g.id]
-    )
-  end
-
-  def list_destinations do
-    Repo.all(
-      from g in Guide,
-        where: g.status == "published",
-        group_by: [g.destination_slug, fragment("split_part(?, ',', 1)", g.destination)],
-        select: %{
-          slug: g.destination_slug,
-          name: fragment("split_part(?, ',', 1)", g.destination),
-          count: count(g.id)
-        },
-        order_by: [desc: count(g.id)]
-    )
-  end
-
   @doc """
   Published guides attached to one destination node.
 
