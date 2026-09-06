@@ -103,9 +103,18 @@ defmodule Ethos.AdjacencyTest do
       assert map_size(Adjacency.all()) == 169
     end
 
-    test "Avon borders exactly its five real neighbours" do
+    test "Avon borders exactly its six real neighbours" do
+      # Six, not five. Verified against the fetched dataset — West Hartford
+      # borders Avon and is easy to forget because the two feel far apart.
       assert Enum.sort(Adjacency.neighbours("avon")) ==
-               ["bloomfield", "burlington", "canton", "farmington", "simsbury"]
+               [
+                 "bloomfield",
+                 "burlington",
+                 "canton",
+                 "farmington",
+                 "simsbury",
+                 "west-hartford"
+               ]
     end
 
     test "returns an empty list for an unknown town" do

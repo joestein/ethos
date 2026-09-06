@@ -186,9 +186,10 @@ both.
 
 - Adjacency: stored-edge count equals the pair count in the committed file —
   446, not 892; symmetry holds in the source file; no self-borders; Avon's
-  neighbours are exactly Burlington, Canton, Farmington, Simsbury and
-  Bloomfield; `build_links!/0` is idempotent across two runs, asserted by
-  counting rows before and after a second call.
+  neighbours are exactly Bloomfield, Burlington, Canton, Farmington, Simsbury
+  and West Hartford — six, verified against the fetched dataset, not five;
+  `build_links!/0` is idempotent across two runs, asserted by counting rows
+  before and after a second call.
 - **A guide page lists each neighbour once, not twice.** This is the
   observable consequence of storing one edge per pair, and it is the
   assertion that would catch a regression to per-direction writes.
