@@ -110,6 +110,29 @@ defmodule Ethos.Seeds.ScenicBywaysTest do
     end
   end
 
+  test "each collection's items map to the correct towns, in order" do
+    # A reviewer once swapped trumbull-ct-travel-guide for
+    # hebron-ct-travel-guide in the Merritt Parkway and every other test in
+    # this file stayed green — none of them checks which town is which, only
+    # counts and blurb shape. Which town sits on which byway, in what order,
+    # is the content these four pages exist to publish.
+    seed_towns()
+    by_slug = Map.new(ScenicBywaysCollections.upsert_all!(), &{&1.slug, &1})
+
+    expected_guides = %{
+      "merritt-parkway" =>
+        ~w(greenwich stamford new-canaan norwalk westport fairfield trumbull stratford),
+      "route-169" => ~w(woodstock pomfret brooklyn canterbury lisbon),
+      "route-207" => ~w(hebron lebanon franklin sprague),
+      "route-7-in-the-northwest" => ~w(sharon salisbury canaan)
+    }
+
+    for {slug, towns} <- expected_guides do
+      items = Ethos.Repo.preload(by_slug[slug], items: :guide).items
+      assert Enum.map(items, & &1.guide.slug) == Enum.map(towns, &"#{&1}-ct-travel-guide")
+    end
+  end
+
   test "is idempotent" do
     seed_towns()
     ScenicBywaysCollections.upsert_all!()

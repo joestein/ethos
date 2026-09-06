@@ -112,4 +112,34 @@ defmodule Ethos.Adjacency.LinkBuilderTest do
 
     assert edge.note =~ "US Route 44"
   end
+
+  test "does not overwrite a curated note on an edge already in the canonical direction" do
+    for t <- ["Avon", "Canton"], do: ct_guide(t)
+
+    avon = Repo.get_by!(Ethos.Guides.Guide, slug: "avon-ct-travel-guide")
+    canton = Repo.get_by!(Ethos.Guides.Guide, slug: "canton-ct-travel-guide")
+
+    # "avon" < "canton", so this is the direction the builder itself would write.
+    # upsert_link!/1 matches on {source, target, kind} and then writes the note,
+    # so without the same-direction half of already_linked?/2 this curated prose
+    # is silently replaced by the generic one.
+    Ethos.Links.upsert_link!(%{
+      source: {:guide, avon.slug},
+      target: {:guide, canton.slug},
+      kind: "nearby",
+      note: "Canton borders Avon; both are reached on US Route 44."
+    })
+
+    before = nearby_count()
+    assert :ok = LinkBuilder.build!()
+    assert nearby_count() == before
+
+    edge =
+      Repo.one!(
+        from l in Ethos.Links.Link,
+          where: l.kind == "nearby" and l.source_id == ^avon.id and l.target_id == ^canton.id
+      )
+
+    assert edge.note =~ "US Route 44"
+  end
 end

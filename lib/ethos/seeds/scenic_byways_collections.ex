@@ -162,9 +162,9 @@ defmodule Ethos.Seeds.ScenicBywaysCollections do
       published: true,
       intro: """
       A state scenic road designated in 2002, running north along Route 7 from
-      the Cornwall–Sharon turnpike to the Canaan town line, through three towns
-      in the Litchfield hills. A state designation, not a federal one. The
-      route data here is #{@source}.
+      the Cornwall–Sharon turnpike to the North Canaan town line, through
+      three towns in the Litchfield hills. A state designation, not a federal
+      one. The route data here is #{@source}.
       """,
       items: [
         %{
