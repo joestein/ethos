@@ -14,8 +14,9 @@
   <section class="mt-8">
     <h2 class="font-semibold">Third parties that run on this site</h2>
     <p class="mt-3 text-zinc-700">
-      Three companies run code in your browser when you read a guide. Each one is here for
-      a different reason, and each one can see something different.
+      Up to three companies run code in your browser. Each one is here for a different
+      reason, and each one can see something different. The first two run on every page;
+      the third runs on some.
     </p>
 
     <h3 class="mt-6 font-semibold">PostHog — product analytics</h3>
@@ -36,7 +37,8 @@
 
     <h3 class="mt-6 font-semibold">GetYourGuide — affiliate links</h3>
     <p class="mt-2 text-zinc-700">
-      Some destination pages carry a GetYourGuide widget listing tours and activities. If
+      Some pages carry a GetYourGuide widget listing tours and activities: guides, place
+      pages, collections and destination hubs about a place GetYourGuide covers. If
       you book through one, Ethos earns a commission at no extra cost to you, and
       GetYourGuide sets cookies to attribute the booking. Where consent is required, the
       widget loads only after it is given.
@@ -70,14 +72,25 @@
       the guide, not a record of who read it.
     </p>
     <p class="mt-3 text-zinc-700">
-      If you make an account, Ethos stores the email address and username you give it, the
-      guides you write, and the comments and suggestions you leave. Deleting an account or
-      its contents is a request to the site owner.
+      If you make an account, Ethos stores the email address and username you give it and
+      your password, hashed — the password itself is never stored and cannot be read back.
+      It also stores what you do with the account: the guides you write, the comments and
+      suggestions you leave, and the thumbs up and thumbs down you give, each recorded
+      against your account. Deleting an account or its contents is a request to the site
+      owner.
     </p>
   </section>
 
   <section class="mt-10">
     <h2 class="font-semibold">Changing your mind</h2>
+    <%!-- "Can be reopened" is a claim about the CMP, not about this repo. Nothing here
+          provides a reopen control and no later task adds one: the revocation entry point
+          is configured in Google's Funding Choices dashboard, and Google's TCF policy
+          requires withdrawal to be possible, so the sentence is true of a correctly
+          configured CMP. Task 5 verifies it against the live banner. Do NOT delete this
+          sentence for looking unverifiable — without it the page tells readers nothing
+          about how to change their mind. If Task 5 finds no reopen control, fix the CMP
+          configuration, then this line. --%>
     <p class="mt-3 text-zinc-700">
       The consent banner can be reopened, and the choice you make in it replaces the one
       before. Refusing after having accepted stops the scripts loading on your next page
