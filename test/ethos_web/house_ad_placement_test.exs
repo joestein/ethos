@@ -52,8 +52,17 @@ defmodule EthosWeb.HouseAdPlacementTest do
         }
       ])
 
+    # Capture and restore the exact previous pool rather than calling `load!/0`
+    # again on the way out. `load!/0` RECOMPUTES from the database, and at
+    # on_exit time this test's sandboxed Chester guide may or may not still be
+    # visible — so the recomputed pool was nondeterministic and leaked into
+    # every later test. A non-empty pool makes `HouseAd.for_page/2` return an
+    # ad on ordinary pages, which suppresses the guide page's amber CTA and
+    # broke `AffiliatePlacementTest` depending only on scheduling order.
+    # Every other house-ad test here already restores by value; this matches.
+    previous_pool = Ethos.HouseAd.pool()
     Ethos.HouseAd.load!()
-    on_exit(&Ethos.HouseAd.load!/0)
+    on_exit(fn -> :persistent_term.put({Ethos.HouseAd, :pool}, previous_pool) end)
 
     refute Ethos.HouseAd.pool() == [], "the pool is empty, so every assertion below is vacuous"
     :ok
