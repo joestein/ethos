@@ -10,7 +10,15 @@ defmodule EthosWeb.AdminSeasonTest do
     test "the season page lists every season plus Auto", %{conn: conn} do
       html = conn |> get(~p"/admin/season") |> html_response(200)
 
-      for label <- ~w(Auto Spring Summer Autumn Winter) do
+      # "Auto" is a substring of "Autumn", so checking it the same way as
+      # the season labels below would still pass with the Auto button
+      # deleted outright — only "Autumn"'s own row would be satisfying it.
+      # Assert on the Auto button's own hidden input instead, which is
+      # unique to it.
+      assert html =~ ~r/<input[^>]*name="season"[^>]*value="auto"/,
+             "the Auto button's hidden input was not found"
+
+      for label <- ~w(Spring Summer Autumn Winter) do
         assert html =~ label
       end
     end
