@@ -91,4 +91,73 @@ defmodule Ethos.ModerationBanTest do
       assert {:error, :unauthorized} = Moderation.unban_user(banned, user_fixture())
     end
   end
+
+  describe "approving trusts the author" do
+    test "the first approval sets trusted_at", %{admin: admin, user: user, guide: guide} do
+      {:ok, review} = Social.create_review(user, guide, %{"rating" => "8", "body" => "Good."})
+
+      refute Ethos.Repo.reload!(user).trusted_at
+
+      {:ok, _} = Moderation.approve_review(review, admin)
+
+      assert Ethos.Repo.reload!(user).trusted_at
+    end
+
+    test "a later approval does not move trusted_at", %{admin: admin, user: user, guide: guide} do
+      {:ok, first} = Social.create_review(user, guide, %{"rating" => "8", "body" => "One."})
+      {:ok, _} = Moderation.approve_review(first, admin)
+
+      trusted_at = Ethos.Repo.reload!(user).trusted_at
+
+      {:ok, second} =
+        Social.create_review(user, guide_fixture(), %{"rating" => "7", "body" => "Two."})
+
+      {:ok, _} = Moderation.approve_review(second, admin)
+
+      assert Ethos.Repo.reload!(user).trusted_at == trusted_at
+    end
+
+    test "revoking does not trust anyone", %{admin: admin, user: user, guide: guide} do
+      {:ok, review} = Social.create_review(user, guide, %{"rating" => "2", "body" => "Bad."})
+
+      {:ok, _} = Moderation.revoke_review(review, admin)
+
+      refute Ethos.Repo.reload!(user).trusted_at
+    end
+  end
+
+  describe "trust_user/2 and untrust_user/2" do
+    test "trusting by hand skips the earn-it path", %{admin: admin, user: user} do
+      assert {:ok, trusted} = Moderation.trust_user(user, admin)
+      assert trusted.trusted_at
+    end
+
+    test "untrusting sends the author back to the queue", %{
+      admin: admin,
+      user: user,
+      guide: guide
+    } do
+      {:ok, trusted} = Moderation.trust_user(user, admin)
+      assert {:ok, untrusted} = Moderation.untrust_user(trusted, admin)
+
+      refute untrusted.trusted_at
+
+      {:ok, review} =
+        Social.create_review(untrusted, guide, %{"rating" => "8", "body" => "Back in line."})
+
+      assert review.status == "pending"
+    end
+
+    test "trusting again does not move an existing date", %{admin: admin, user: user} do
+      {:ok, trusted} = Moderation.trust_user(user, admin)
+      {:ok, again} = Moderation.trust_user(trusted, admin)
+
+      assert again.trusted_at == trusted.trusted_at
+    end
+
+    test "both refuse a non-admin", %{user: user} do
+      assert {:error, :unauthorized} = Moderation.trust_user(user, user_fixture())
+      assert {:error, :unauthorized} = Moderation.untrust_user(user, user_fixture())
+    end
+  end
 end

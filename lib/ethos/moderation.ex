@@ -90,13 +90,73 @@ defmodule Ethos.Moderation do
   end
 
   defp decide(%Review{} = review, status, %User{} = admin) do
-    review
-    |> Ecto.Changeset.change(
-      status: status,
-      moderated_at: DateTime.utc_now() |> DateTime.truncate(:second),
-      moderated_by_id: admin.id
+    now = DateTime.utc_now() |> DateTime.truncate(:second)
+
+    Ecto.Multi.new()
+    |> Ecto.Multi.update(
+      :review,
+      Ecto.Changeset.change(review,
+        status: status,
+        moderated_at: now,
+        moderated_by_id: admin.id
+      )
     )
-    |> Repo.update()
+    |> maybe_trust_author(review, status, now)
+    |> Repo.transaction()
+    |> case do
+      {:ok, %{review: review}} -> {:ok, review}
+      {:error, _step, changeset, _changes} -> {:error, changeset}
+    end
+  end
+
+  # Trust is earned by having a comment published, so only "approved" grants it,
+  # and only the first time — `where: is_nil(u.trusted_at)` means a later
+  # approval cannot move the date, and two concurrent approvals cannot fight
+  # over it.
+  defp maybe_trust_author(multi, %Review{} = review, "approved", now) do
+    Ecto.Multi.update_all(
+      multi,
+      :trust,
+      from(u in User, where: u.id == ^review.user_id and is_nil(u.trusted_at)),
+      set: [trusted_at: now]
+    )
+  end
+
+  defp maybe_trust_author(multi, _review, _status, _now), do: multi
+
+  @doc """
+  Trusts an author by hand, without waiting for them to earn it.
+
+  Idempotent: trusting someone already trusted leaves their original date
+  alone, so the console cannot accidentally reset how long they have been
+  trusted for.
+  """
+  def trust_user(%User{trusted_at: %DateTime{}} = user, %User{} = admin) do
+    if Accounts.admin?(admin), do: {:ok, user}, else: {:error, :unauthorized}
+  end
+
+  def trust_user(%User{} = user, %User{} = admin) do
+    if Accounts.admin?(admin) do
+      user
+      |> Ecto.Changeset.change(trusted_at: DateTime.utc_now() |> DateTime.truncate(:second))
+      |> Repo.update()
+    else
+      {:error, :unauthorized}
+    end
+  end
+
+  @doc """
+  Withdraws trust. The author's next comment goes back into the queue;
+  anything already published stays published.
+  """
+  def untrust_user(%User{} = user, %User{} = admin) do
+    if Accounts.admin?(admin) do
+      user
+      |> Ecto.Changeset.change(trusted_at: nil)
+      |> Repo.update()
+    else
+      {:error, :unauthorized}
+    end
   end
 
   ## Bans
@@ -136,6 +196,12 @@ defmodule Ethos.Moderation do
         :banned_at,
         DateTime.utc_now() |> DateTime.truncate(:second)
       )
+      # Rejecting a whitespace-only reason relies on three defaults stacking:
+      # `cast/4` trims string input, `empty_values` turns the trimmed "" into
+      # nil, and `validate_required` then catches the nil. `validate_length`
+      # alone would accept "   " outright. Swapping `cast` for `put_change`,
+      # or changing `empty_values`, would silently start accepting blank
+      # reasons.
       |> Ecto.Changeset.validate_required([:ban_reason])
       |> Ecto.Changeset.validate_length(:ban_reason, min: 1, max: 500)
 
