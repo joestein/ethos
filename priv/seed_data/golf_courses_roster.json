@@ -135,19 +135,19 @@
     "verified": true
   },
   {
-    "access": null,
-    "city": null,
-    "county": null,
-    "course": null,
-    "criterion": null,
-    "facility": null,
-    "ranking_edition": null,
-    "ranking_position": null,
-    "ranking_source": null,
-    "second_course": null,
+    "access": "The longest walk in the corpus: thirty-six higher entries fail either the ranking's own label or the operator's terms. The ranking's rubric field is not stable -- #23 McLemore carried \"Public\" through the 8 March 2026 capture and fails the operator test, and #32 Currahee carries \"Public\" while its own site reads \"Private Golf & Lake Community\", the archived 2023-'26 edition having labelled it Private at #21 -- so every rejection above rank 37 rests on the operator's own terms rather than on the label. The operator publishes no dated rate qualifier, so no green fee is publishable.",
+    "city": "Mineral Bluff",
+    "county": "Fannin County",
+    "course": "Old Toccoa Farm",
+    "criterion": "ranking",
+    "facility": "Old Toccoa Farm",
+    "ranking_edition": "2025-'26",
+    "ranking_position": 37,
+    "ranking_source": "Golf Digest Best in State",
+    "second_course": "Copper Basin Golf Club",
     "slug": "georgia",
     "state": "Georgia",
-    "verified": false
+    "verified": true
   },
   {
     "access": "Golf Digest labels the course \"Public,\" but a non-resort guest cannot play it at all: Four Seasons Resort Lanai states on two of its own pages, \"Course access is not available for day guest use,\" and no green fee, tee-time page or non-guest rate for a day visitor exists anywhere on the operator's site. Play is confined to resort guests. Hours are Tuesday to Sunday, closed Mondays.",
@@ -675,19 +675,19 @@
     "verified": false
   },
   {
-    "access": null,
-    "city": null,
-    "county": null,
-    "course": null,
-    "criterion": null,
-    "facility": null,
-    "ranking_edition": null,
-    "ranking_position": null,
-    "ranking_source": null,
-    "second_course": null,
+    "access": "Open to the public in the operator's own words -- \"Highland Course | Open to general public, members and resort guests\" -- and proved by executing its tee-time API unauthenticated, which returned 33 bookable slots at $325 for 20-21 September 2026 with no restrictions attached, 93 at $275 in November, none in December, and 87 at $225 in April 2027. Ranks 1 to 3 are private and member-gated on their own sites. The resort publishes dated 2026 Peak and Non-Peak rate headings.",
+    "city": "Meadows of Dan",
+    "county": "Patrick County",
+    "course": "The Highland Course at Primland",
+    "criterion": "ranking",
+    "facility": "Primland, Auberge Resorts Collection",
+    "ranking_edition": "2025-'26",
+    "ranking_position": 4,
+    "ranking_source": "Golf Digest Best in State",
+    "second_course": "Gordon Trent Golf Club",
     "slug": "virginia",
     "state": "Virginia",
-    "verified": false
+    "verified": true
   },
   {
     "access": "Public course, no membership required. Walking only, with a push/pull cart included; book online at chambersbaygolf.com or call 253-460-4653. Residency-based rates open up to three months ahead from the first of the month; the non-resident prepaid tier opens January 1 for April-to-October play. Single players may join an existing group but cannot book an open time. Cancellation terms are tiered.",
