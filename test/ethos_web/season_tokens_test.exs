@@ -62,9 +62,34 @@ defmodule EthosWeb.SeasonTokensTest do
 
   test "tokens are bare RGB triples, not rgb() calls", %{css: css} do
     # `<alpha-value>` interpolation only works on a bare triple. An
-    # `rgb(...)` value here silently breaks every `bg-accent/10` in the app.
-    assert css =~ ~r/--c-surface:\s*\d+\s+\d+\s+\d+/
-    refute css =~ ~r/--c-surface:\s*rgb\(/
+    # `rgb(...)` value here silently breaks every `bg-accent/10` (and
+    # `bg-accent`, `border-accent`, etc.) for whichever season/token pair
+    # regresses. This used to check only `--c-surface`, which meant a
+    # single season swapping a single *other* token to `rgb(...)` — e.g.
+    # winter's `--c-accent` — sailed through green while every primary
+    # button in that season silently lost its background. So this checks
+    # every token, in every season's own block, individually named on
+    # failure — a global `css =~ "--c-#{token}"`-style substring check
+    # would let three correct seasons mask the fourth going bad.
+    tokens =
+      ~w(surface surface-raised ink ink-muted line accent accent-ink accent-soft
+         positive negative star)
+
+    for season <- ~w(summer autumn winter spring) do
+      block = season_block(css, season)
+      assert block, "season #{season} has no :root block"
+
+      for token <- tokens do
+        assert block =~ ~r/--c-#{token}:\s*\d+\s+\d+\s+\d+\b/,
+               "season #{season}'s --c-#{token} is not a bare RGB triple"
+      end
+    end
+
+    # Belt-and-braces sweep of the whole file: catches an `rgb(...)` value
+    # on any `--c-*` declaration, including ones the token list above
+    # doesn't yet know about.
+    refute css =~ ~r/--c-[a-z-]+:\s*rgb\(/,
+           "found a --c-* token declared with rgb(...) instead of a bare triple"
   end
 
   test "the utilities are actually generated", %{css: css} do
