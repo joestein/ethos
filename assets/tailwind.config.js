@@ -11,11 +11,41 @@ module.exports = {
     "../lib/ethos_web.ex",
     "../lib/ethos_web/**/*.*ex"
   ],
+  safelist: [
+    "bg-surface", "bg-surface-raised", "text-ink", "text-ink-muted",
+    "border-line", "bg-accent", "text-accent", "text-accent-ink",
+    "bg-accent-soft", "text-positive", "text-negative", "text-star",
+    "bg-accent/10",
+    "font-display", "text-display-lg", "text-display-md", "text-display-sm",
+    "bg-gradient-to-b", "from-accent-soft", "to-surface",
+    "border-positive", "bg-positive/10", "border-negative", "bg-negative/10",
+    "bg-star", "border-star",
+  ],
   theme: {
     extend: {
       colors: {
         brand: "#FD4F00",
-      }
+        surface: "rgb(var(--c-surface) / <alpha-value>)",
+        "surface-raised": "rgb(var(--c-surface-raised) / <alpha-value>)",
+        ink: "rgb(var(--c-ink) / <alpha-value>)",
+        "ink-muted": "rgb(var(--c-ink-muted) / <alpha-value>)",
+        line: "rgb(var(--c-line) / <alpha-value>)",
+        accent: "rgb(var(--c-accent) / <alpha-value>)",
+        "accent-ink": "rgb(var(--c-accent-ink) / <alpha-value>)",
+        "accent-soft": "rgb(var(--c-accent-soft) / <alpha-value>)",
+        positive: "rgb(var(--c-positive) / <alpha-value>)",
+        negative: "rgb(var(--c-negative) / <alpha-value>)",
+        star: "rgb(var(--c-star) / <alpha-value>)",
+      },
+      fontFamily: {
+        display: ["Fraunces", "Georgia", "Cambria", "serif"],
+      },
+      fontSize: {
+        // A scale, so pages stop picking text-3xl ad hoc.
+        "display-lg": ["3.5rem", { lineHeight: "1.05", letterSpacing: "-0.02em" }],
+        "display-md": ["2.5rem", { lineHeight: "1.1", letterSpacing: "-0.015em" }],
+        "display-sm": ["1.875rem", { lineHeight: "1.2", letterSpacing: "-0.01em" }],
+      },
     },
   },
   plugins: [

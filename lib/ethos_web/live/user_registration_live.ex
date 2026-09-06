@@ -38,7 +38,7 @@ defmodule EthosWeb.UserRegistrationLive do
           required
           autocomplete="username"
         />
-        <p class="-mt-4 text-sm text-zinc-500">
+        <p class="-mt-4 text-sm text-ink-muted">
           Shown on everything you post. Your email address is never public.
         </p>
 

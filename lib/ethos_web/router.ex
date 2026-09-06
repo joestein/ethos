@@ -11,6 +11,7 @@ defmodule EthosWeb.Router do
     plug :protect_from_forgery
     plug :put_secure_browser_headers
     plug :fetch_current_user
+    plug EthosWeb.Plugs.PutSeason
   end
 
   pipeline :api do
@@ -124,6 +125,9 @@ defmodule EthosWeb.Router do
 
     get "/foliage/notes", AdminFoliageController, :index
     post "/foliage/notes", AdminFoliageController, :create
+
+    get "/season", AdminSeasonController, :index
+    post "/season", AdminSeasonController, :update
   end
 
   scope "/", EthosWeb do

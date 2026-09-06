@@ -31,37 +31,37 @@ defmodule EthosWeb.Layouts do
   def site_header(assigns) do
     ~H"""
     <header class="px-4 sm:px-6 lg:px-8">
-      <div class="flex items-center justify-between border-b border-zinc-100 py-3 text-sm">
-        <a href={~p"/"} class="text-lg font-bold tracking-tight text-zinc-900">
+      <div class="flex items-center justify-between border-b border-line py-3 text-sm">
+        <a href={~p"/"} class="text-lg font-bold tracking-tight text-ink">
           Ethos
         </a>
-        <nav class="flex items-center gap-4 font-semibold leading-6 text-zinc-900">
+        <nav class="flex items-center gap-4 font-semibold leading-6 text-ink">
           <form action={~p"/search"} method="get" class="hidden sm:block">
             <input
               type="search"
               name="q"
               placeholder="Search"
-              class="w-36 rounded-lg border-zinc-300 py-1 text-sm"
+              class="w-36 rounded-lg border-line py-1 text-sm"
             />
           </form>
-          <.link href={~p"/destinations"} class="hover:text-zinc-700">
+          <.link href={~p"/destinations"} class="hover:text-ink-muted">
             Destinations
           </.link>
           <%= if @current_user do %>
             <.link
               :if={Ethos.Accounts.admin?(@current_user)}
               navigate={~p"/guides"}
-              class="hover:text-zinc-700"
+              class="hover:text-ink-muted"
             >
               Your guides
             </.link>
-            <.link navigate={~p"/badges"} class="hover:text-zinc-700">
+            <.link navigate={~p"/badges"} class="hover:text-ink-muted">
               Badges
             </.link>
             <.link
               :if={Ethos.Accounts.admin?(@current_user)}
               navigate={~p"/admin/comments"}
-              class="hover:text-zinc-700"
+              class="hover:text-ink-muted"
             >
               Admin
             </.link>
@@ -69,7 +69,7 @@ defmodule EthosWeb.Layouts do
           <.link
             :if={Ethos.Accounts.admin?(@current_user)}
             navigate={~p"/guides/new"}
-            class="rounded-lg bg-zinc-900 px-3 py-1 text-white hover:bg-zinc-700"
+            class="rounded-lg bg-accent px-3 py-1 text-accent-ink hover:opacity-90"
           >
             Make a guide <span aria-hidden="true">&rarr;</span>
           </.link>
@@ -88,12 +88,12 @@ defmodule EthosWeb.Layouts do
   """
   def site_footer(assigns) do
     ~H"""
-    <footer class="mt-16 border-t border-zinc-100 px-4 py-8 text-sm text-zinc-500 sm:px-6 lg:px-8">
+    <footer class="mt-16 border-t border-line px-4 py-8 text-sm text-ink-muted sm:px-6 lg:px-8">
       <div class="mx-auto flex max-w-2xl items-center justify-between">
         <span>Ethos</span>
         <nav class="flex gap-4">
-          <.link navigate={~p"/destinations"} class="hover:text-zinc-700">Destinations</.link>
-          <.link navigate={~p"/privacy"} class="hover:text-zinc-700">Privacy</.link>
+          <.link navigate={~p"/destinations"} class="hover:text-ink">Destinations</.link>
+          <.link navigate={~p"/privacy"} class="hover:text-ink">Privacy</.link>
         </nav>
       </div>
     </footer>
