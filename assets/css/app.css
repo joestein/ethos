@@ -14,6 +14,13 @@
   font-display: swap;
 }
 
+/* NOTE: summer's --c-accent is 15 118 110 (teal-700), NOT the 13 148 136
+   (teal-600) in the design spec's table. Every primary button is white text
+   on --c-accent, and teal-600 gives 3.74:1 — below WCAG AA's 4.5:1 for
+   normal text. It was the only season that failed: autumn 5.18, winter 5.93,
+   spring 4.99. teal-700 measures 5.47:1, in line with the other three.
+   Deliberate and approved; do not "restore" it to match the spec. */
+
 /* Seasonal palettes. Bare RGB triples, not rgb() — Tailwind interpolates
    <alpha-value> into these, which is what keeps bg-accent/10 working.
 
@@ -26,7 +33,7 @@
   --c-ink: 28 25 23;
   --c-ink-muted: 120 113 108;
   --c-line: 231 229 228;
-  --c-accent: 13 148 136;
+  --c-accent: 15 118 110;
   --c-accent-ink: 255 255 255;
   --c-accent-soft: 204 251 241;
   --c-positive: 5 150 105;
