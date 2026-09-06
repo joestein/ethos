@@ -15,6 +15,7 @@ defmodule EthosWeb.AdminNav do
     ~H"""
     <nav class="mb-6 flex gap-4 border-b text-sm">
       <.tab label="Comments" href={~p"/admin/comments"} active={@current == :comments} />
+      <.tab label="Users" href={~p"/admin/users"} active={@current == :users} />
       <.tab label="Suggestions" href={~p"/admin/suggestions"} active={@current == :suggestions} />
     </nav>
     """

@@ -104,6 +104,7 @@ defmodule EthosWeb.Router do
     live_session :admin,
       on_mount: [{EthosWeb.UserAuth, :ensure_authenticated}, {EthosWeb.UserAuth, :ensure_admin}] do
       live "/comments", Admin.CommentsLive, :index
+      live "/users", Admin.UsersLive, :index
     end
 
     get "/suggestions", AdminSuggestionController, :index
