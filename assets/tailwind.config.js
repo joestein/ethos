@@ -17,6 +17,9 @@ module.exports = {
     "bg-accent-soft", "text-positive", "text-negative", "text-star",
     "bg-accent/10",
     "font-display", "text-display-lg", "text-display-md", "text-display-sm",
+    "bg-gradient-to-b", "from-accent-soft", "to-surface",
+    "border-positive", "bg-positive/10", "border-negative", "bg-negative/10",
+    "bg-star", "border-star",
   ],
   theme: {
     extend: {

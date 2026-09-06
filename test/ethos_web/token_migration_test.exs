@@ -13,7 +13,9 @@ defmodule EthosWeb.TokenMigrationTest do
     "lib/ethos_web/components/core_components.ex",
     "lib/ethos_web/components/layouts.ex",
     "lib/ethos_web/components/layouts/root.html.heex",
-    "lib/ethos_web/components/layouts/app.html.heex"
+    "lib/ethos_web/components/layouts/app.html.heex",
+    "lib/ethos_web/controllers/page_html/home.html.heex",
+    "lib/ethos_web/live/social_live.ex"
   ]
 
   test "no hardcoded palette colours survive in the shared surfaces" do

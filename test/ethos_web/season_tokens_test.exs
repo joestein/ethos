@@ -95,4 +95,17 @@ defmodule EthosWeb.SeasonTokensTest do
   test "alpha modifiers survive the mapping", %{css: css} do
     assert css =~ ".bg-accent\\/10", "bg-accent/10 was not generated"
   end
+
+  test "the hero gradient utilities are actually generated", %{css: css} do
+    # The home hero is a gradient built from accent-soft into surface (see
+    # page_controller_test.exs's "seasonal gradient" test, which only checks
+    # the rendered HEEx source). That test can pass even if Tailwind never
+    # emitted the CSS for the class — the utility would then render as
+    # nothing. This is the check that catches that: it reads the built
+    # stylesheet, not the template.
+    for utility <- ~w(bg-gradient-to-b from-accent-soft to-surface) do
+      assert css =~ ~r/\.#{Regex.escape(utility)}\s*[\{,]/,
+             "utility .#{utility} was never generated — check the safelist"
+    end
+  end
 end
