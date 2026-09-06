@@ -1,0 +1,1845 @@
+[
+  {
+    "deep_url": "https://portal.ct.gov/DEEP/Forestry/Foliage/Fall-Foliage-Driving-Routes#Loop5",
+    "name": "Connecticut Heritage",
+    "path": [
+      [
+        -71.98077,
+        41.68656
+      ],
+      [
+        -71.9662,
+        41.68241
+      ],
+      [
+        -71.95074,
+        41.67349
+      ],
+      [
+        -71.93416,
+        41.6716
+      ],
+      [
+        -71.87842,
+        41.6875
+      ],
+      [
+        -71.8544,
+        41.70065
+      ],
+      [
+        -71.83851,
+        41.6953
+      ],
+      [
+        -71.84242,
+        41.67102
+      ],
+      [
+        -71.84843,
+        41.64986
+      ],
+      [
+        -71.84821,
+        41.62032
+      ],
+      [
+        -71.85545,
+        41.60155
+      ],
+      [
+        -71.86453,
+        41.59285
+      ],
+      [
+        -71.87062,
+        41.58333
+      ],
+      [
+        -71.86764,
+        41.56901
+      ],
+      [
+        -71.83731,
+        41.55473
+      ],
+      [
+        -71.82952,
+        41.54514
+      ],
+      [
+        -71.8354,
+        41.52136
+      ],
+      [
+        -71.85028,
+        41.49383
+      ],
+      [
+        -71.87084,
+        41.47302
+      ],
+      [
+        -71.88685,
+        41.46052
+      ],
+      [
+        -71.89771,
+        41.45321
+      ],
+      [
+        -71.89736,
+        41.43153
+      ],
+      [
+        -71.93186,
+        41.40677
+      ],
+      [
+        -71.96063,
+        41.38314
+      ],
+      [
+        -71.96277,
+        41.36338
+      ],
+      [
+        -71.96799,
+        41.35008
+      ],
+      [
+        -71.98605,
+        41.34686
+      ],
+      [
+        -72.07686,
+        41.33933
+      ],
+      [
+        -72.10904,
+        41.34595
+      ],
+      [
+        -72.10962,
+        41.38288
+      ],
+      [
+        -72.10142,
+        41.41214
+      ],
+      [
+        -72.08539,
+        41.4323
+      ],
+      [
+        -72.06405,
+        41.4448
+      ],
+      [
+        -72.06265,
+        41.45765
+      ],
+      [
+        -72.08273,
+        41.47635
+      ],
+      [
+        -72.0924,
+        41.49118
+      ],
+      [
+        -72.09055,
+        41.52489
+      ],
+      [
+        -72.08087,
+        41.54151
+      ],
+      [
+        -72.04974,
+        41.56859
+      ],
+      [
+        -72.04248,
+        41.59404
+      ],
+      [
+        -72.03052,
+        41.61398
+      ],
+      [
+        -72.00772,
+        41.63671
+      ],
+      [
+        -71.98644,
+        41.66396
+      ],
+      [
+        -71.98108,
+        41.6868
+      ]
+    ],
+    "slug": "connecticut-heritage",
+    "stops": [
+      {
+        "guide_slug": "plainfield-ct-travel-guide",
+        "town_slug": "plainfield"
+      },
+      {
+        "guide_slug": "sterling-ct-travel-guide",
+        "town_slug": "sterling"
+      },
+      {
+        "guide_slug": "voluntown-ct-travel-guide",
+        "town_slug": "voluntown"
+      },
+      {
+        "guide_slug": "north-stonington-ct-travel-guide",
+        "town_slug": "north-stonington"
+      },
+      {
+        "guide_slug": "stonington-ct-travel-guide",
+        "town_slug": "stonington"
+      },
+      {
+        "guide_slug": "groton-ct-travel-guide",
+        "town_slug": "groton"
+      },
+      {
+        "guide_slug": "new-london-ct-travel-guide",
+        "town_slug": "new-london"
+      },
+      {
+        "guide_slug": "waterford-ct-travel-guide",
+        "town_slug": "waterford"
+      },
+      {
+        "guide_slug": "ledyard-ct-travel-guide",
+        "town_slug": "ledyard"
+      },
+      {
+        "guide_slug": "montville-ct-travel-guide",
+        "town_slug": "montville"
+      },
+      {
+        "guide_slug": "norwich-ct-travel-guide",
+        "town_slug": "norwich"
+      },
+      {
+        "guide_slug": "lisbon-ct-travel-guide",
+        "town_slug": "lisbon"
+      },
+      {
+        "guide_slug": "canterbury-ct-travel-guide",
+        "town_slug": "canterbury"
+      }
+    ]
+  },
+  {
+    "deep_url": "https://portal.ct.gov/DEEP/Forestry/Foliage/Fall-Foliage-Driving-Routes#Loop6",
+    "name": "Connecticut River Gateway",
+    "path": [
+      [
+        -72.64589,
+        41.55958
+      ],
+      [
+        -72.62323,
+        41.56237
+      ],
+      [
+        -72.59508,
+        41.56233
+      ],
+      [
+        -72.56211,
+        41.54556
+      ],
+      [
+        -72.50993,
+        41.50854
+      ],
+      [
+        -72.46807,
+        41.47807
+      ],
+      [
+        -72.45047,
+        41.45732
+      ],
+      [
+        -72.43791,
+        41.43525
+      ],
+      [
+        -72.4367,
+        41.41307
+      ],
+      [
+        -72.42581,
+        41.40217
+      ],
+      [
+        -72.40442,
+        41.40776
+      ],
+      [
+        -72.37465,
+        41.42524
+      ],
+      [
+        -72.35408,
+        41.42517
+      ],
+      [
+        -72.33779,
+        41.41633
+      ],
+      [
+        -72.33469,
+        41.40619
+      ],
+      [
+        -72.34987,
+        41.38123
+      ],
+      [
+        -72.35233,
+        41.36635
+      ],
+      [
+        -72.35162,
+        41.35443
+      ],
+      [
+        -72.34313,
+        41.34085
+      ],
+      [
+        -72.33657,
+        41.3216
+      ],
+      [
+        -72.35935,
+        41.31691
+      ],
+      [
+        -72.37639,
+        41.32174
+      ],
+      [
+        -72.39213,
+        41.33203
+      ],
+      [
+        -72.40466,
+        41.3528
+      ],
+      [
+        -72.42264,
+        41.36071
+      ],
+      [
+        -72.44563,
+        41.38198
+      ],
+      [
+        -72.47055,
+        41.39729
+      ],
+      [
+        -72.47778,
+        41.40802
+      ],
+      [
+        -72.48599,
+        41.41257
+      ],
+      [
+        -72.51155,
+        41.43288
+      ],
+      [
+        -72.5292,
+        41.45674
+      ],
+      [
+        -72.55734,
+        41.47179
+      ],
+      [
+        -72.57247,
+        41.49707
+      ],
+      [
+        -72.60095,
+        41.51474
+      ],
+      [
+        -72.63068,
+        41.54741
+      ],
+      [
+        -72.63448,
+        41.55337
+      ],
+      [
+        -72.6405,
+        41.55552
+      ],
+      [
+        -72.64557,
+        41.55982
+      ]
+    ],
+    "slug": "connecticut-river-gateway",
+    "stops": [
+      {
+        "guide_slug": "middletown-ct-travel-guide",
+        "town_slug": "middletown"
+      },
+      {
+        "guide_slug": "portland-ct-travel-guide",
+        "town_slug": "portland"
+      },
+      {
+        "guide_slug": "east-hampton-ct-travel-guide",
+        "town_slug": "east-hampton"
+      },
+      {
+        "guide_slug": "east-haddam-ct-travel-guide",
+        "town_slug": "east-haddam"
+      },
+      {
+        "guide_slug": "lyme-ct-travel-guide",
+        "town_slug": "lyme"
+      },
+      {
+        "guide_slug": "old-lyme-ct-travel-guide",
+        "town_slug": "old-lyme"
+      },
+      {
+        "guide_slug": "old-saybrook-ct-travel-guide",
+        "town_slug": "old-saybrook"
+      },
+      {
+        "guide_slug": "essex-ct-travel-guide",
+        "town_slug": "essex"
+      },
+      {
+        "guide_slug": "deep-river-ct-travel-guide",
+        "town_slug": "deep-river"
+      },
+      {
+        "guide_slug": "chester-ct-travel-guide",
+        "town_slug": "chester"
+      },
+      {
+        "guide_slug": "haddam-ct-travel-guide",
+        "town_slug": "haddam"
+      }
+    ]
+  },
+  {
+    "deep_url": "https://portal.ct.gov/DEEP/Forestry/Foliage/Fall-Foliage-Driving-Routes#Loop3",
+    "name": "Hartford West",
+    "path": [
+      [
+        -73.00832,
+        41.9766
+      ],
+      [
+        -73.0026,
+        41.98257
+      ],
+      [
+        -72.98315,
+        41.98904
+      ],
+      [
+        -72.97589,
+        41.99615
+      ],
+      [
+        -72.96979,
+        42.00502
+      ],
+      [
+        -72.97019,
+        42.02837
+      ],
+      [
+        -72.95678,
+        42.03196
+      ],
+      [
+        -72.9357,
+        42.03176
+      ],
+      [
+        -72.92738,
+        42.02892
+      ],
+      [
+        -72.9171,
+        42.00583
+      ],
+      [
+        -72.90748,
+        41.99107
+      ],
+      [
+        -72.89243,
+        41.97251
+      ],
+      [
+        -72.88253,
+        41.96776
+      ],
+      [
+        -72.85826,
+        41.96278
+      ],
+      [
+        -72.8481,
+        41.95643
+      ],
+      [
+        -72.83691,
+        41.94453
+      ],
+      [
+        -72.82759,
+        41.93637
+      ],
+      [
+        -72.81674,
+        41.93304
+      ],
+      [
+        -72.79282,
+        41.93853
+      ],
+      [
+        -72.76512,
+        41.94099
+      ],
+      [
+        -72.74917,
+        41.94039
+      ],
+      [
+        -72.71248,
+        41.93145
+      ],
+      [
+        -72.66784,
+        41.91833
+      ],
+      [
+        -72.6511,
+        41.91236
+      ],
+      [
+        -72.64634,
+        41.90104
+      ],
+      [
+        -72.65439,
+        41.88868
+      ],
+      [
+        -72.66197,
+        41.87945
+      ],
+      [
+        -72.66523,
+        41.82169
+      ],
+      [
+        -72.66127,
+        41.80739
+      ],
+      [
+        -72.65492,
+        41.79935
+      ],
+      [
+        -72.65692,
+        41.78923
+      ],
+      [
+        -72.66808,
+        41.77703
+      ],
+      [
+        -72.66769,
+        41.76928
+      ],
+      [
+        -72.67922,
+        41.77138
+      ],
+      [
+        -72.68897,
+        41.76891
+      ],
+      [
+        -72.7192,
+        41.77726
+      ],
+      [
+        -72.74688,
+        41.77917
+      ],
+      [
+        -72.78699,
+        41.79227
+      ],
+      [
+        -72.80641,
+        41.79631
+      ],
+      [
+        -72.85768,
+        41.8039
+      ],
+      [
+        -72.89878,
+        41.81743
+      ],
+      [
+        -72.93034,
+        41.83048
+      ],
+      [
+        -72.95715,
+        41.84616
+      ],
+      [
+        -72.98083,
+        41.87637
+      ],
+      [
+        -72.98924,
+        41.90899
+      ],
+      [
+        -72.99694,
+        41.92303
+      ],
+      [
+        -73.00656,
+        41.93468
+      ],
+      [
+        -73.0114,
+        41.94848
+      ],
+      [
+        -73.01147,
+        41.96635
+      ],
+      [
+        -73.00864,
+        41.97636
+      ]
+    ],
+    "slug": "hartford-west",
+    "stops": [
+      {
+        "guide_slug": "hartland-ct-travel-guide",
+        "town_slug": "hartland"
+      },
+      {
+        "guide_slug": "granby-ct-travel-guide",
+        "town_slug": "granby"
+      },
+      {
+        "guide_slug": "east-granby-ct-travel-guide",
+        "town_slug": "east-granby"
+      },
+      {
+        "guide_slug": "windsor-locks-ct-travel-guide",
+        "town_slug": "windsor-locks"
+      },
+      {
+        "guide_slug": "windsor-ct-travel-guide",
+        "town_slug": "windsor"
+      },
+      {
+        "guide_slug": "hartford-ct-travel-guide",
+        "town_slug": "hartford"
+      },
+      {
+        "guide_slug": "west-hartford-ct-travel-guide",
+        "town_slug": "west-hartford"
+      },
+      {
+        "guide_slug": "avon-ct-travel-guide",
+        "town_slug": "avon"
+      },
+      {
+        "guide_slug": "canton-ct-travel-guide",
+        "town_slug": "canton"
+      },
+      {
+        "guide_slug": "new-hartford-ct-travel-guide",
+        "town_slug": "new-hartford"
+      },
+      {
+        "guide_slug": "barkhamsted-ct-travel-guide",
+        "town_slug": "barkhamsted"
+      }
+    ]
+  },
+  {
+    "deep_url": "https://portal.ct.gov/DEEP/Forestry/Foliage/Fall-Foliage-Driving-Routes#Loop7",
+    "name": "New Haven & Neighborhood",
+    "path": [
+      [
+        -72.90506,
+        41.49515
+      ],
+      [
+        -72.89764,
+        41.4964
+      ],
+      [
+        -72.87546,
+        41.49613
+      ],
+      [
+        -72.81523,
+        41.4801
+      ],
+      [
+        -72.76138,
+        41.48012
+      ],
+      [
+        -72.69802,
+        41.48487
+      ],
+      [
+        -72.67824,
+        41.4661
+      ],
+      [
+        -72.68739,
+        41.41518
+      ],
+      [
+        -72.69611,
+        41.39493
+      ],
+      [
+        -72.71524,
+        41.37999
+      ],
+      [
+        -72.72144,
+        41.36487
+      ],
+      [
+        -72.71789,
+        41.34998
+      ],
+      [
+        -72.70249,
+        41.32764
+      ],
+      [
+        -72.68908,
+        41.305
+      ],
+      [
+        -72.68712,
+        41.28832
+      ],
+      [
+        -72.69897,
+        41.27612
+      ],
+      [
+        -72.77279,
+        41.2666
+      ],
+      [
+        -72.80792,
+        41.26509
+      ],
+      [
+        -72.84738,
+        41.26179
+      ],
+      [
+        -72.88645,
+        41.26086
+      ],
+      [
+        -72.8991,
+        41.27246
+      ],
+      [
+        -72.90427,
+        41.28823
+      ],
+      [
+        -72.908,
+        41.30484
+      ],
+      [
+        -72.90251,
+        41.32271
+      ],
+      [
+        -72.88995,
+        41.35727
+      ],
+      [
+        -72.8892,
+        41.37812
+      ],
+      [
+        -72.89477,
+        41.3942
+      ],
+      [
+        -72.90986,
+        41.41979
+      ],
+      [
+        -72.9169,
+        41.44069
+      ],
+      [
+        -72.91619,
+        41.46987
+      ],
+      [
+        -72.91306,
+        41.48506
+      ],
+      [
+        -72.90506,
+        41.49513
+      ]
+    ],
+    "slug": "new-haven-neighborhood",
+    "stops": [
+      {
+        "guide_slug": "cheshire-ct-travel-guide",
+        "town_slug": "cheshire"
+      },
+      {
+        "guide_slug": "wallingford-ct-travel-guide",
+        "town_slug": "wallingford"
+      },
+      {
+        "guide_slug": "durham-ct-travel-guide",
+        "town_slug": "durham"
+      },
+      {
+        "guide_slug": "guilford-ct-travel-guide",
+        "town_slug": "guilford"
+      },
+      {
+        "guide_slug": "branford-ct-travel-guide",
+        "town_slug": "branford"
+      },
+      {
+        "guide_slug": "east-haven-ct-travel-guide",
+        "town_slug": "east-haven"
+      },
+      {
+        "guide_slug": "new-haven-ct-travel-guide",
+        "town_slug": "new-haven"
+      },
+      {
+        "guide_slug": "north-haven-ct-travel-guide",
+        "town_slug": "north-haven"
+      },
+      {
+        "guide_slug": "hamden-ct-travel-guide",
+        "town_slug": "hamden"
+      }
+    ]
+  },
+  {
+    "deep_url": "https://portal.ct.gov/DEEP/Forestry/Foliage/Fall-Foliage-Driving-Routes#Loop1",
+    "name": "Scenic Fairfield",
+    "path": [
+      [
+        -73.40764,
+        41.55675
+      ],
+      [
+        -73.39702,
+        41.5574
+      ],
+      [
+        -73.38018,
+        41.55416
+      ],
+      [
+        -73.35549,
+        41.54179
+      ],
+      [
+        -73.33878,
+        41.53472
+      ],
+      [
+        -73.32612,
+        41.53777
+      ],
+      [
+        -73.30877,
+        41.54798
+      ],
+      [
+        -73.29214,
+        41.55044
+      ],
+      [
+        -73.26589,
+        41.53984
+      ],
+      [
+        -73.22144,
+        41.53229
+      ],
+      [
+        -73.20905,
+        41.52127
+      ],
+      [
+        -73.21091,
+        41.50017
+      ],
+      [
+        -73.20487,
+        41.49032
+      ],
+      [
+        -73.19133,
+        41.47906
+      ],
+      [
+        -73.19797,
+        41.4621
+      ],
+      [
+        -73.253,
+        41.41065
+      ],
+      [
+        -73.27514,
+        41.40936
+      ],
+      [
+        -73.29326,
+        41.39975
+      ],
+      [
+        -73.30497,
+        41.38183
+      ],
+      [
+        -73.32066,
+        41.36805
+      ],
+      [
+        -73.3666,
+        41.37615
+      ],
+      [
+        -73.38473,
+        41.3701
+      ],
+      [
+        -73.38856,
+        41.35757
+      ],
+      [
+        -73.38373,
+        41.34866
+      ],
+      [
+        -73.3769,
+        41.3412
+      ],
+      [
+        -73.29802,
+        41.27292
+      ],
+      [
+        -73.2953,
+        41.2491
+      ],
+      [
+        -73.30704,
+        41.2195
+      ],
+      [
+        -73.32079,
+        41.20419
+      ],
+      [
+        -73.33981,
+        41.17932
+      ],
+      [
+        -73.39313,
+        41.11804
+      ],
+      [
+        -73.40049,
+        41.09798
+      ],
+      [
+        -73.41341,
+        41.0991
+      ],
+      [
+        -73.41484,
+        41.17747
+      ],
+      [
+        -73.42087,
+        41.24272
+      ],
+      [
+        -73.43316,
+        41.27124
+      ],
+      [
+        -73.46067,
+        41.30115
+      ],
+      [
+        -73.46372,
+        41.36367
+      ],
+      [
+        -73.4506,
+        41.39294
+      ],
+      [
+        -73.42386,
+        41.40799
+      ],
+      [
+        -73.40113,
+        41.42956
+      ],
+      [
+        -73.39146,
+        41.45548
+      ],
+      [
+        -73.4108,
+        41.48813
+      ],
+      [
+        -73.41818,
+        41.51251
+      ],
+      [
+        -73.4146,
+        41.55005
+      ],
+      [
+        -73.41092,
+        41.55626
+      ],
+      [
+        -73.40754,
+        41.55675
+      ]
+    ],
+    "slug": "scenic-fairfield",
+    "stops": [
+      {
+        "guide_slug": "bridgewater-ct-travel-guide",
+        "town_slug": "bridgewater"
+      },
+      {
+        "guide_slug": "roxbury-ct-travel-guide",
+        "town_slug": "roxbury"
+      },
+      {
+        "guide_slug": "woodbury-ct-travel-guide",
+        "town_slug": "woodbury"
+      },
+      {
+        "guide_slug": "southbury-ct-travel-guide",
+        "town_slug": "southbury"
+      },
+      {
+        "guide_slug": "newtown-ct-travel-guide",
+        "town_slug": "newtown"
+      },
+      {
+        "guide_slug": "bethel-ct-travel-guide",
+        "town_slug": "bethel"
+      },
+      {
+        "guide_slug": "redding-ct-travel-guide",
+        "town_slug": "redding"
+      },
+      {
+        "guide_slug": "easton-ct-travel-guide",
+        "town_slug": "easton"
+      },
+      {
+        "guide_slug": "fairfield-ct-travel-guide",
+        "town_slug": "fairfield"
+      },
+      {
+        "guide_slug": "westport-ct-travel-guide",
+        "town_slug": "westport"
+      },
+      {
+        "guide_slug": "norwalk-ct-travel-guide",
+        "town_slug": "norwalk"
+      },
+      {
+        "guide_slug": "wilton-ct-travel-guide",
+        "town_slug": "wilton"
+      },
+      {
+        "guide_slug": "weston-ct-travel-guide",
+        "town_slug": "weston"
+      },
+      {
+        "guide_slug": "ridgefield-ct-travel-guide",
+        "town_slug": "ridgefield"
+      },
+      {
+        "guide_slug": "danbury-ct-travel-guide",
+        "town_slug": "danbury"
+      },
+      {
+        "guide_slug": "brookfield-ct-travel-guide",
+        "town_slug": "brookfield"
+      },
+      {
+        "guide_slug": "new-milford-ct-travel-guide",
+        "town_slug": "new-milford"
+      }
+    ]
+  },
+  {
+    "deep_url": "https://portal.ct.gov/DEEP/Forestry/Foliage/Fall-Foliage-Driving-Routes#Loop2",
+    "name": "Traditional New England",
+    "path": [
+      [
+        -73.31708,
+        42.00447
+      ],
+      [
+        -73.30241,
+        42.00187
+      ],
+      [
+        -73.25399,
+        42.00409
+      ],
+      [
+        -73.224,
+        41.99196
+      ],
+      [
+        -73.18928,
+        41.98496
+      ],
+      [
+        -73.174,
+        41.98328
+      ],
+      [
+        -73.1604,
+        41.97827
+      ],
+      [
+        -73.12872,
+        41.95307
+      ],
+      [
+        -73.07589,
+        41.91809
+      ],
+      [
+        -73.06348,
+        41.90638
+      ],
+      [
+        -73.07057,
+        41.8885
+      ],
+      [
+        -73.073,
+        41.87606
+      ],
+      [
+        -73.082,
+        41.8651
+      ],
+      [
+        -73.08634,
+        41.85719
+      ],
+      [
+        -73.10097,
+        41.8366
+      ],
+      [
+        -73.11281,
+        41.8181
+      ],
+      [
+        -73.11355,
+        41.80857
+      ],
+      [
+        -73.11309,
+        41.79785
+      ],
+      [
+        -73.10597,
+        41.78897
+      ],
+      [
+        -73.12169,
+        41.77086
+      ],
+      [
+        -73.14196,
+        41.76811
+      ],
+      [
+        -73.15508,
+        41.76777
+      ],
+      [
+        -73.16699,
+        41.76385
+      ],
+      [
+        -73.17486,
+        41.75161
+      ],
+      [
+        -73.17195,
+        41.73138
+      ],
+      [
+        -73.16373,
+        41.69001
+      ],
+      [
+        -73.17161,
+        41.67956
+      ],
+      [
+        -73.18659,
+        41.67869
+      ],
+      [
+        -73.20338,
+        41.67885
+      ],
+      [
+        -73.22402,
+        41.67608
+      ],
+      [
+        -73.24222,
+        41.66767
+      ],
+      [
+        -73.25795,
+        41.64765
+      ],
+      [
+        -73.26938,
+        41.63658
+      ],
+      [
+        -73.28199,
+        41.6258
+      ],
+      [
+        -73.32155,
+        41.62438
+      ],
+      [
+        -73.34084,
+        41.6328
+      ],
+      [
+        -73.3556,
+        41.64509
+      ],
+      [
+        -73.3522,
+        41.66417
+      ],
+      [
+        -73.34556,
+        41.67612
+      ],
+      [
+        -73.34067,
+        41.70622
+      ],
+      [
+        -73.34277,
+        41.71842
+      ],
+      [
+        -73.35392,
+        41.72445
+      ],
+      [
+        -73.37542,
+        41.72479
+      ],
+      [
+        -73.39206,
+        41.71964
+      ],
+      [
+        -73.40463,
+        41.70498
+      ],
+      [
+        -73.40845,
+        41.68977
+      ],
+      [
+        -73.41097,
+        41.66385
+      ],
+      [
+        -73.40964,
+        41.65016
+      ],
+      [
+        -73.4155,
+        41.64119
+      ],
+      [
+        -73.42745,
+        41.6444
+      ],
+      [
+        -73.43666,
+        41.65238
+      ],
+      [
+        -73.44396,
+        41.66633
+      ],
+      [
+        -73.46501,
+        41.6668
+      ],
+      [
+        -73.47843,
+        41.65927
+      ],
+      [
+        -73.49271,
+        41.65799
+      ],
+      [
+        -73.50353,
+        41.66656
+      ],
+      [
+        -73.5037,
+        41.68115
+      ],
+      [
+        -73.4963,
+        41.694
+      ],
+      [
+        -73.45922,
+        41.73922
+      ],
+      [
+        -73.43785,
+        41.74888
+      ],
+      [
+        -73.41962,
+        41.75435
+      ],
+      [
+        -73.38479,
+        41.78483
+      ],
+      [
+        -73.37293,
+        41.80994
+      ],
+      [
+        -73.36416,
+        41.88162
+      ],
+      [
+        -73.36797,
+        41.92615
+      ],
+      [
+        -73.34359,
+        41.96321
+      ],
+      [
+        -73.33025,
+        41.98769
+      ],
+      [
+        -73.32541,
+        42.00019
+      ],
+      [
+        -73.31827,
+        42.00447
+      ]
+    ],
+    "slug": "traditional-new-england",
+    "stops": [
+      {
+        "guide_slug": "north-canaan-ct-travel-guide",
+        "town_slug": "north-canaan"
+      },
+      {
+        "guide_slug": "norfolk-ct-travel-guide",
+        "town_slug": "norfolk"
+      },
+      {
+        "guide_slug": "colebrook-ct-travel-guide",
+        "town_slug": "colebrook"
+      },
+      {
+        "guide_slug": "winchester-ct-travel-guide",
+        "town_slug": "winchester"
+      },
+      {
+        "guide_slug": "torrington-ct-travel-guide",
+        "town_slug": "torrington"
+      },
+      {
+        "guide_slug": "harwinton-ct-travel-guide",
+        "town_slug": "harwinton"
+      },
+      {
+        "guide_slug": "litchfield-ct-travel-guide",
+        "town_slug": "litchfield"
+      },
+      {
+        "guide_slug": "morris-ct-travel-guide",
+        "town_slug": "morris"
+      },
+      {
+        "guide_slug": "bethlehem-ct-travel-guide",
+        "town_slug": "bethlehem"
+      },
+      {
+        "guide_slug": "washington-ct-travel-guide",
+        "town_slug": "washington"
+      },
+      {
+        "guide_slug": "warren-ct-travel-guide",
+        "town_slug": "warren"
+      },
+      {
+        "guide_slug": "new-milford-ct-travel-guide",
+        "town_slug": "new-milford"
+      },
+      {
+        "guide_slug": "sherman-ct-travel-guide",
+        "town_slug": "sherman"
+      },
+      {
+        "guide_slug": "kent-ct-travel-guide",
+        "town_slug": "kent"
+      },
+      {
+        "guide_slug": "sharon-ct-travel-guide",
+        "town_slug": "sharon"
+      },
+      {
+        "guide_slug": "cornwall-ct-travel-guide",
+        "town_slug": "cornwall"
+      },
+      {
+        "guide_slug": "salisbury-ct-travel-guide",
+        "town_slug": "salisbury"
+      },
+      {
+        "guide_slug": "canaan-ct-travel-guide",
+        "town_slug": "canaan"
+      }
+    ]
+  },
+  {
+    "deep_url": "https://portal.ct.gov/DEEP/Forestry/Foliage/Fall-Foliage-Driving-Routes#Loop4",
+    "name": "Yankee Roots",
+    "path": [
+      [
+        -72.47299,
+        41.8296
+      ],
+      [
+        -72.45447,
+        41.83782
+      ],
+      [
+        -72.43809,
+        41.8491
+      ],
+      [
+        -72.4285,
+        41.85473
+      ],
+      [
+        -72.41098,
+        41.85438
+      ],
+      [
+        -72.39822,
+        41.85583
+      ],
+      [
+        -72.38987,
+        41.85342
+      ],
+      [
+        -72.37232,
+        41.85813
+      ],
+      [
+        -72.35594,
+        41.86641
+      ],
+      [
+        -72.2956,
+        41.89359
+      ],
+      [
+        -72.28438,
+        41.90188
+      ],
+      [
+        -72.27398,
+        41.9063
+      ],
+      [
+        -72.25669,
+        41.92618
+      ],
+      [
+        -72.20307,
+        41.94887
+      ],
+      [
+        -72.18047,
+        41.97931
+      ],
+      [
+        -72.15447,
+        41.99245
+      ],
+      [
+        -72.14072,
+        41.99453
+      ],
+      [
+        -72.12765,
+        41.99184
+      ],
+      [
+        -72.12392,
+        41.98157
+      ],
+      [
+        -72.11367,
+        41.98461
+      ],
+      [
+        -72.10726,
+        41.98767
+      ],
+      [
+        -72.09643,
+        41.98523
+      ],
+      [
+        -72.0796,
+        41.97585
+      ],
+      [
+        -72.05982,
+        41.97478
+      ],
+      [
+        -72.04241,
+        41.99087
+      ],
+      [
+        -72.03183,
+        41.9939
+      ],
+      [
+        -72.013,
+        41.99331
+      ],
+      [
+        -72.00285,
+        41.98752
+      ],
+      [
+        -72.00039,
+        41.97941
+      ],
+      [
+        -72.01228,
+        41.97258
+      ],
+      [
+        -72.0188,
+        41.96047
+      ],
+      [
+        -72.00458,
+        41.94871
+      ],
+      [
+        -71.98512,
+        41.94834
+      ],
+      [
+        -71.97304,
+        41.94421
+      ],
+      [
+        -71.97194,
+        41.92967
+      ],
+      [
+        -71.98157,
+        41.89734
+      ],
+      [
+        -71.98548,
+        41.86354
+      ],
+      [
+        -71.96426,
+        41.82671
+      ],
+      [
+        -71.9558,
+        41.81546
+      ],
+      [
+        -71.95151,
+        41.80208
+      ],
+      [
+        -71.96725,
+        41.79052
+      ],
+      [
+        -72.00128,
+        41.79241
+      ],
+      [
+        -72.01375,
+        41.78797
+      ],
+      [
+        -72.02886,
+        41.77472
+      ],
+      [
+        -72.0506,
+        41.76556
+      ],
+      [
+        -72.08308,
+        41.76266
+      ],
+      [
+        -72.10913,
+        41.76733
+      ],
+      [
+        -72.13619,
+        41.76629
+      ],
+      [
+        -72.16891,
+        41.73668
+      ],
+      [
+        -72.17997,
+        41.73117
+      ],
+      [
+        -72.19477,
+        41.72561
+      ],
+      [
+        -72.2026,
+        41.73875
+      ],
+      [
+        -72.19598,
+        41.76897
+      ],
+      [
+        -72.20291,
+        41.77782
+      ],
+      [
+        -72.22389,
+        41.78078
+      ],
+      [
+        -72.24038,
+        41.78847
+      ],
+      [
+        -72.24791,
+        41.80232
+      ],
+      [
+        -72.26021,
+        41.81786
+      ],
+      [
+        -72.27859,
+        41.83033
+      ],
+      [
+        -72.29388,
+        41.83015
+      ],
+      [
+        -72.30412,
+        41.82328
+      ],
+      [
+        -72.32593,
+        41.79978
+      ],
+      [
+        -72.33461,
+        41.79376
+      ],
+      [
+        -72.36196,
+        41.79038
+      ],
+      [
+        -72.37785,
+        41.79543
+      ],
+      [
+        -72.39028,
+        41.79237
+      ],
+      [
+        -72.42186,
+        41.78008
+      ],
+      [
+        -72.44829,
+        41.77706
+      ],
+      [
+        -72.45778,
+        41.7878
+      ],
+      [
+        -72.459,
+        41.80043
+      ],
+      [
+        -72.46278,
+        41.80997
+      ],
+      [
+        -72.47305,
+        41.82963
+      ]
+    ],
+    "slug": "yankee-roots",
+    "stops": [
+      {
+        "guide_slug": "vernon-ct-travel-guide",
+        "town_slug": "vernon"
+      },
+      {
+        "guide_slug": "tolland-ct-travel-guide",
+        "town_slug": "tolland"
+      },
+      {
+        "guide_slug": "willington-ct-travel-guide",
+        "town_slug": "willington"
+      },
+      {
+        "guide_slug": "ashford-ct-travel-guide",
+        "town_slug": "ashford"
+      },
+      {
+        "guide_slug": "union-ct-travel-guide",
+        "town_slug": "union"
+      },
+      {
+        "guide_slug": "woodstock-ct-travel-guide",
+        "town_slug": "woodstock"
+      },
+      {
+        "guide_slug": "pomfret-ct-travel-guide",
+        "town_slug": "pomfret"
+      },
+      {
+        "guide_slug": "brooklyn-ct-travel-guide",
+        "town_slug": "brooklyn"
+      },
+      {
+        "guide_slug": "hampton-ct-travel-guide",
+        "town_slug": "hampton"
+      },
+      {
+        "guide_slug": "chaplin-ct-travel-guide",
+        "town_slug": "chaplin"
+      },
+      {
+        "guide_slug": "windham-ct-travel-guide",
+        "town_slug": "windham"
+      },
+      {
+        "guide_slug": "storrs-ct-travel-guide",
+        "town_slug": "mansfield"
+      },
+      {
+        "guide_slug": "coventry-ct-travel-guide",
+        "town_slug": "coventry"
+      },
+      {
+        "guide_slug": "bolton-ct-travel-guide",
+        "town_slug": "bolton"
+      }
+    ]
+  }
+]

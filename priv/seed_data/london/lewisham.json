@@ -242,6 +242,17 @@
       "history": "Wikidata records an inception of 1900. It belongs to a group of Lewisham libraries that carry their own entries, among them Lewisham Public Library, NHLE 1261963, and Hither Green Library, NHLE 1253133.",
       "status": "open",
       "photos": []
+    },
+    {
+      "slug": "cow-cow-korean-bbq-lee",
+      "name": "Cow Cow Korean BBQ & Hot Pot",
+      "kind": "restaurant",
+      "destination_path": "united-kingdom/england/london/lewisham/lee",
+      "address": "47-49 Lee High Road, London SE13 5NS",
+      "summary": "Cow Cow Korean BBQ & Hot Pot is at 47-49 Lee High Road in Lee. Its own buffet menu, under a heading reading 'Sizzle and Simmer at Your Table', tells diners to grill premium meats and simmer fresh ingredients at the table. A separate 'Fresh from Our Kitchen' section on the same menu covers the dishes that arrive already cooked.",
+      "history": "",
+      "status": "open",
+      "photos": []
     }
   ],
   "links": [
@@ -357,6 +368,12 @@
       "name": "Beckenham Place Park",
       "place_slug": "beckenham-place-park",
       "note": "96 hectares with a swimming lake and nature trails, open All Day Monday to Sunday, around a mansion that is Grade II*, NHLE 1359317."
+    },
+    {
+      "kind": "food",
+      "name": "Cow Cow Korean BBQ & Hot Pot",
+      "place_slug": "cow-cow-korean-bbq-lee",
+      "note": "47-49 Lee High Road. Its buffet menu heads a section 'Sizzle and Simmer at Your Table' and puts the grilling at the table."
     }
   ]
 }

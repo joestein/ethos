@@ -2,7 +2,7 @@ defmodule Ethos.BadgesTest do
   use Ethos.DataCase, async: true
 
   import Ethos.AccountsFixtures
-  alias Ethos.{Badges, Destinations, Places, Visits}
+  alias Ethos.{Badges, Destinations, Places, Social}
 
   defp node!(path, name, kind, parent) do
     Destinations.upsert_destination!(%{
@@ -75,9 +75,18 @@ defmodule Ethos.BadgesTest do
     )
   end
 
+  # Reacting awards badges as a side effect, so this reports the difference
+  # rather than calling check_and_award/2 a second time — a second call always
+  # returns [] because the badges already landed. Shaped as %{key: ...} maps so
+  # every existing assertion below still reads `& &1.key`.
   defp visit!(user, place) do
-    {:ok, :visited} = Visits.toggle_visit(user, place)
-    Badges.check_and_award(user, place)
+    before = MapSet.new(Badges.earned_badges(user), & &1.badge_key)
+
+    {:ok, _outcome} = Social.react(user, place, "up")
+
+    Badges.earned_badges(user)
+    |> Enum.reject(&MapSet.member?(before, &1.badge_key))
+    |> Enum.map(&%{key: &1.badge_key})
   end
 
   test "first visit awards first-steps only (with county not yet complete)", %{
@@ -161,6 +170,41 @@ defmodule Ethos.BadgesTest do
     assert "county-complete-litchfield-county" in Enum.map(awarded, & &1.key)
   end
 
+  # Regression for the deleted closed-place guard: `reacted_place_count_in_nodes/2`
+  # counts all reacted places while `Places.count_open_places_in_nodes/1` counts
+  # open ones only. Before `Social.react/3` refused closed places, a user could
+  # react to every closed place plus fewer than all the open ones and still trip
+  # `reacted_count >= open_count`, awarding "County Complete" with open places
+  # never touched — permanently, since badges are never revoked.
+  test "county-complete is not awarded early via reactions to closed places", %{
+    bethlehem: bethlehem
+  } do
+    user = user_fixture()
+    open_a = place!(bethlehem, "open-a")
+    open_b = place!(bethlehem, "open-b")
+    open_c = place!(bethlehem, "open-c")
+
+    closed_a = place!(bethlehem, "closed-a", %{status: "closed"})
+    closed_b = place!(bethlehem, "closed-b", %{status: "closed"})
+
+    # Reacting to a closed place must be refused outright, not just excluded
+    # from the county-complete count.
+    assert {:error, :closed} = Social.react(user, closed_a, "up")
+    assert {:error, :closed} = Social.react(user, closed_b, "up")
+
+    # Only 1 of the 3 open places reacted to — county is not complete.
+    visit!(user, open_a)
+
+    refute Badges.earned_badges(user)
+           |> Enum.any?(&(&1.badge_key == "county-complete-litchfield-county"))
+
+    # Completing the remaining open places does award it — proves the badge
+    # rule itself, and the fixtures above, still work.
+    visit!(user, open_b)
+    awarded = visit!(user, open_c)
+    assert "county-complete-litchfield-county" in Enum.map(awarded, & &1.key)
+  end
+
   test "un-visiting does not revoke badges", %{waterbury: waterbury} do
     user = user_fixture()
     p = place!(waterbury, "keep")
@@ -168,7 +212,7 @@ defmodule Ethos.BadgesTest do
     # sole open place in its county: both badges land on the first visit
     assert awarded_keys == ["county-complete-new-haven-county", "first-steps"]
 
-    {:ok, :unvisited} = Visits.toggle_visit(user, p)
+    {:ok, :cleared} = Social.react(user, p, "up")
 
     assert Badges.earned_badges(user) |> Enum.map(& &1.badge_key) |> Enum.sort() ==
              awarded_keys
@@ -231,6 +275,38 @@ defmodule Ethos.BadgesTest do
       place!(xtown, "x-closed", %{status: "closed"})
 
       refute Enum.any?(Badges.definitions(), &(&1.key == "explorer-xtown"))
+    end
+  end
+
+  describe "reactions drive badges" do
+    import Ethos.AccountsFixtures
+    import Ethos.PlacesFixtures
+
+    test "a thumbs-down earns badge progress" do
+      user = user_fixture()
+      place = place_fixture(%{status: "open"})
+
+      Ethos.Social.react(user, place, "down")
+
+      assert Enum.any?(Ethos.Badges.earned_badges(user), &(&1.badge_key == "first-steps"))
+    end
+
+    test "clearing a reaction does not revoke an earned badge" do
+      user = user_fixture()
+      place = place_fixture(%{status: "open"})
+
+      Ethos.Social.react(user, place, "up")
+      Ethos.Social.react(user, place, "up")
+
+      assert Enum.any?(Ethos.Badges.earned_badges(user), &(&1.badge_key == "first-steps"))
+    end
+
+    test "a reaction on a guide awards nothing" do
+      user = user_fixture()
+
+      Ethos.Social.react(user, Ethos.GuidesFixtures.guide_fixture(), "up")
+
+      assert Ethos.Badges.earned_badges(user) == []
     end
   end
 end

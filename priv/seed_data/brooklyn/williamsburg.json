@@ -216,6 +216,28 @@
       "summary": "A design-forward hotel near McCarren Park and the East River, with private balconies on its rooms and the rooftop bar Westlight.",
       "status": "open",
       "photos": []
+    },
+    {
+      "slug": "dokebi-williamsburg",
+      "name": "Dokebi Bar and Grill",
+      "kind": "restaurant",
+      "destination_path": "united-states/new-york/new-york-city/brooklyn/williamsburg",
+      "address": "199 Grand Street, Brooklyn, NY 11211",
+      "summary": "A Korean barbecue restaurant and bar at 199 Grand Street where the operator's own locations page puts a Korean BBQ grill in the center of each table and the cooking is done at the table. A party may instead have the kitchen cook the same order, and reservations of four or more are taken on Fridays and Saturdays for grill tables.",
+      "history": "The operator describes this as its flagship room and the largest of its three locations. Published hours run noon to 11pm Sunday to Thursday and noon to midnight on Fridays and Saturdays.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "lalaon-williamsburg",
+      "name": "Lalaon",
+      "kind": "restaurant",
+      "destination_path": "united-states/new-york/new-york-city/brooklyn/williamsburg",
+      "address": "22 North 6th Street, Brooklyn, NY 11249",
+      "summary": "A two-floor Korean barbecue room at 22 North 6th Street, at the Kent Avenue end, centered on meat cooked on grills built into the tables. Servers work the meat with silver tongs, and the barbecue set menu is priced at $80.",
+      "history": "It opened in June 2026. Published hours run 5pm to 11pm Sunday to Thursday and 5pm to midnight on Fridays and Saturdays.",
+      "status": "open",
+      "photos": []
     }
   ],
   "entries": [
@@ -284,6 +306,18 @@
       "name": "The William Vale",
       "place_slug": "the-william-vale",
       "note": "Balconies on the rooms and the Westlight bar on the roof, near McCarren Park and the river."
+    },
+    {
+      "kind": "food",
+      "name": "Dokebi Bar and Grill",
+      "place_slug": "dokebi-williamsburg",
+      "note": "A Korean BBQ grill in the center of each table at 199 Grand Street, with the kitchen an alternative for the same order."
+    },
+    {
+      "kind": "food",
+      "name": "Lalaon",
+      "place_slug": "lalaon-williamsburg",
+      "note": "Two floors on North 6th Street, opened in June 2026, with the barbecue cooked on grills built into the tables."
     }
   ],
   "links": [

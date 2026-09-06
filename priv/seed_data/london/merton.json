@@ -264,6 +264,17 @@
       "history": "The Grade I entry was designated on 7 May 1954 as list entry 1080899. Eight churchyard monuments beside it carry their own Grade II entries, including the Mauvillain tomb, NHLE 1358034, and the headstone to John Howard, NHLE 1080901; the drinking fountain and horse trough on London Road outside is separately Grade II, NHLE 1249114, and the Old School House opposite is Grade II, NHLE 1358019. Immediately north, Morden Park House of about 1770, built for the merchant and distiller John Ewart, is listed Grade II* with its walls and pair of circular garden buildings, NHLE 1080902, and is now a register office. Morden Park Mound, a large circular earthwork of uncertain Iron Age, Roman or Saxon date, later remodelled as a belvedere with a spiral path, is a scheduled monument, NHLE 1002011. This corner of the borough has no Underground station within a kilometre: St Helier is 432 m away and Morden South 556 m, both Thameslink on National Rail, while Morden Underground station is 1,296 m. Buses 80, 93 and 154 stop at Merton College, 64 m away.",
       "status": "open",
       "photos": []
+    },
+    {
+      "slug": "yori-wimbledon",
+      "name": "Yori Wimbledon",
+      "kind": "restaurant",
+      "destination_path": "united-kingdom/england/london/merton/wimbledon",
+      "address": "86 The Broadway, London SW19 1RH",
+      "summary": "Yori Wimbledon is at 86 The Broadway in Wimbledon. The branch's own page describes 'separated barbeque and non-barbeque dining areas', and the barbeque area is where the grill sits at the table. The group's barbecue menu is raw meat by the cut, sold with a vegetable wrap set for the wrap.",
+      "history": "",
+      "status": "open",
+      "photos": []
     }
   ],
   "links": [
@@ -396,6 +407,12 @@
       "name": "Church of St Lawrence, Morden",
       "place_slug": "church-of-st-lawrence-morden",
       "note": "A Grade I church, NHLE 1080899, dated 1636 and earlier, beside Morden Park Mound, a scheduled monument, NHLE 1002011."
+    },
+    {
+      "kind": "food",
+      "name": "Yori Wimbledon",
+      "place_slug": "yori-wimbledon",
+      "note": "86 The Broadway. The branch page describes 'separated barbeque and non-barbeque dining areas', and the grill sits at the table in the barbeque one."
     }
   ]
 }

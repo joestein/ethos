@@ -238,6 +238,17 @@
       "history": "The town hall is Grade II* listed, NHLE 1289668, first listed on 8 June 1973, at national grid reference TQ4345278739. OpenStreetMap tags it amenity=townhall and historic=townhall and links Wikidata Q17551089. The Granada Cinema on Powis Street is also Grade II*, NHLE 1212651.",
       "status": "open",
       "photos": []
+    },
+    {
+      "slug": "keonbae-kidbrooke",
+      "name": "Keonbae Barbeque & Beer — Kidbrooke",
+      "kind": "restaurant",
+      "destination_path": "united-kingdom/england/london/royal-borough-of-greenwich/kidbrooke",
+      "address": "4 Plowden Road, Kidbrooke, London SE3 9JR",
+      "summary": "Keonbae Barbeque & Beer is at 4 Plowden Road in Kidbrooke Village. The operator names Kidbrooke Village as a full branch alongside Royal Wharf under one strapline, 'Authentic Korean cuisine and grill on the table', so the grilling is done at the table. No source states its opening hours, so none are given here.",
+      "history": "The other room under the same name is at 20A Royal Crest Avenue in Silvertown, in the London Borough of Newham, and each branch carries its own booking link on the operator's site.",
+      "status": "open",
+      "photos": []
     }
   ],
   "links": [
@@ -353,6 +364,12 @@
       "name": "Woolwich Town Hall",
       "place_slug": "woolwich-town-hall-woolwich",
       "note": "A working council building on Wellington Street, Grade II* listed as NHLE 1289668, 374 m from Woolwich Arsenal station by TfL's measure."
+    },
+    {
+      "kind": "food",
+      "name": "Keonbae Barbeque & Beer — Kidbrooke",
+      "place_slug": "keonbae-kidbrooke",
+      "note": "4 Plowden Road, Kidbrooke Village. The second room under the name; one strapline covers both, 'Authentic Korean cuisine and grill on the table'."
     }
   ]
 }

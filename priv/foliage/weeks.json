@@ -1,0 +1,104 @@
+[
+  {
+    "ends": [
+      9,
+      22
+    ],
+    "index": 1,
+    "label": "Sept 16–22",
+    "starts": [
+      9,
+      16
+    ]
+  },
+  {
+    "ends": [
+      9,
+      29
+    ],
+    "index": 2,
+    "label": "Sept 23–29",
+    "starts": [
+      9,
+      23
+    ]
+  },
+  {
+    "ends": [
+      10,
+      6
+    ],
+    "index": 3,
+    "label": "Sept 30–Oct 6",
+    "starts": [
+      9,
+      30
+    ]
+  },
+  {
+    "ends": [
+      10,
+      13
+    ],
+    "index": 4,
+    "label": "Oct 7–13",
+    "starts": [
+      10,
+      7
+    ]
+  },
+  {
+    "ends": [
+      10,
+      20
+    ],
+    "index": 5,
+    "label": "Oct 14–20",
+    "starts": [
+      10,
+      14
+    ]
+  },
+  {
+    "ends": [
+      10,
+      27
+    ],
+    "index": 6,
+    "label": "Oct 21–27",
+    "starts": [
+      10,
+      21
+    ]
+  },
+  {
+    "ends": [
+      11,
+      3
+    ],
+    "index": 7,
+    "label": "Oct 28–Nov 3",
+    "starts": [
+      10,
+      28
+    ]
+  },
+  {
+    "ends": [
+      11,
+      10
+    ],
+    "index": 8,
+    "label": "Nov 4–10",
+    "starts": [
+      11,
+      4
+    ]
+  },
+  {
+    "ends": null,
+    "index": 9,
+    "label": "Past peak",
+    "starts": null
+  }
+]

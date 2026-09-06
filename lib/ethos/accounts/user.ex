@@ -2,12 +2,19 @@ defmodule Ethos.Accounts.User do
   use Ecto.Schema
   import Ecto.Changeset
 
+  alias Ethos.Accounts.Username
+
   schema "users" do
     field :email, :string
     field :password, :string, virtual: true, redact: true
     field :hashed_password, :string, redact: true
     field :current_password, :string, virtual: true, redact: true
     field :confirmed_at, :utc_datetime
+    field :username, :string
+    field :username_provisional, :boolean, default: false
+    field :trusted_at, :utc_datetime
+    field :banned_at, :utc_datetime
+    field :ban_reason, :string
 
     timestamps(type: :utc_datetime)
   end
@@ -34,11 +41,18 @@ defmodule Ethos.Accounts.User do
       using this changeset for validations on a LiveView form before
       submitting the form), this option can be set to `false`.
       Defaults to `true`.
+
+    * `:validate_username` - Validates the uniqueness of the username, in
+      case you don't want to hit the database on every keystroke (like
+      when using this changeset for validations on a LiveView form before
+      submitting the form), this option can be set to `false`.
+      Defaults to `true`.
   """
   def registration_changeset(user, attrs, opts \\ []) do
     user
-    |> cast(attrs, [:email, :password])
+    |> cast(attrs, [:email, :password, :username])
     |> validate_email(opts)
+    |> validate_username(opts)
     |> validate_password(opts)
   end
 
@@ -83,6 +97,45 @@ defmodule Ethos.Accounts.User do
       changeset
       |> unsafe_validate_unique(:email, Ethos.Repo)
       |> unique_constraint(:email)
+    else
+      changeset
+    end
+  end
+
+  @doc """
+  A changeset for choosing or changing the public username.
+
+  Always clears `username_provisional`: the only way through this changeset
+  is a human deliberately picking a name, which is exactly what the flag
+  tracks the absence of.
+  """
+  def username_changeset(user, attrs, opts \\ []) do
+    user
+    |> cast(attrs, [:username])
+    |> validate_username(opts)
+    |> put_change(:username_provisional, false)
+  end
+
+  defp validate_username(changeset, opts) do
+    changeset
+    |> update_change(:username, &Username.normalize/1)
+    |> validate_required([:username])
+    |> validate_length(:username,
+      min: Username.min_length(),
+      max: Username.max_length()
+    )
+    |> validate_format(:username, Username.format(),
+      message: "can only contain lowercase letters, numbers and underscores"
+    )
+    |> validate_exclusion(:username, Username.reserved(), message: "is reserved")
+    |> maybe_validate_unique_username(opts)
+  end
+
+  defp maybe_validate_unique_username(changeset, opts) do
+    if Keyword.get(opts, :validate_username, true) do
+      changeset
+      |> unsafe_validate_unique(:username, Ethos.Repo)
+      |> unique_constraint(:username)
     else
       changeset
     end

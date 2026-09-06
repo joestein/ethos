@@ -96,6 +96,32 @@ back. Those extra rows have no `kind` and no `parent_id`; they shadow thirteen
 hubs, disable their redirects, enter the sitemap, and list Connecticut, New
 York and Rome on `/destinations` beside the countries.
 
+### `add_tree_to_destinations` was renumbered from 120000 to 123000
+
+Read this if `mix ecto.migrate` fails with *"migration version 20260905123000
+is duplicated"*, or if a box that ran this branch before the merge later
+reports a duplicate column.
+
+`add_tree_to_destinations` was authored as `20260905120000`. Main authored
+`20260905120000_add_usernames_and_moderation_fields_to_users` at the same
+timestamp, and Ecto refuses to run a migration set with two of the same
+version. Only one could move, and it had to be this one: main's is already
+applied in production, so renaming it would make Postgres try to add columns
+that exist. This branch has never been deployed, so renaming it costs
+production nothing.
+
+The one place it does cost something is a **dev or staging box that ran this
+branch before the merge**. It recorded `20260905120000` and will now see
+`20260905123000` as a new migration, re-run it, and fail on
+`column "kind" of relation "destinations" already exists`. The fix is to
+either drop and recreate that database, or insert the new version by hand:
+
+    INSERT INTO schema_migrations (version, inserted_at)
+    VALUES (20260905123000, now());
+
+This is the same hazard class as the note below about `20260905140000`: a
+migration file that changed identity after someone had already run it.
+
 ### The migration deletes every `kind IS NULL` destination row
 
 Read this before restoring a backup or standing up staging from a database that
@@ -107,7 +133,7 @@ predates the tree.
 migration cannot run at all on a database with content, and the rows it removes
 are ones no seeder can:
 
-- `kind` was added nullable by `20260905120000` and nothing backfills it, so
+- `kind` was added nullable by `20260905123000` and nothing backfills it, so
   the `SET NOT NULL` aborts with `column "kind" contains null values` on any
   database carrying pre-tree destination rows. `fly.toml` runs migrations as
   the deploy's `release_command`, **before any seeding**, so that abort rolls

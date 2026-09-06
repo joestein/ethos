@@ -1,0 +1,287 @@
+defmodule Ethos.Moderation do
+  @moduledoc """
+  The admin's verbs over user-generated content.
+
+  Separate from `Ethos.Social` on purpose: `Social` is how content works,
+  this is what an administrator does *to* it. The console is the only
+  caller, and keeping the two apart means a moderation change cannot
+  accidentally alter how a page reads.
+
+  Every decision records who made it and when. That is not bookkeeping for
+  its own sake — a revoked comment is a dispute waiting to happen, and the
+  answer to "who took this down" should not be "nobody knows".
+
+  `approve_review/2` and `revoke_review/2` verify their `admin` argument is
+  THE configured admin (`Ethos.Accounts.admin?/1`) and return
+  `{:error, :unauthorized}` otherwise. An earlier version of this module
+  deliberately left that check out, on the reasoning that the router's
+  `require_admin_user` plug already owned it and a second check here would
+  just be redundant. That reasoning held only as long as the router was the
+  only way to reach these functions — it no longer is, so the check moved
+  here instead of staying implicit in the caller.
+  """
+
+  import Ecto.Query, warn: false
+
+  alias Ethos.Accounts
+  alias Ethos.Accounts.User
+  alias Ethos.Accounts.UserToken
+  alias Ethos.Repo
+  alias Ethos.Social.Review
+
+  @doc "Reviews awaiting a decision, oldest first."
+  def list_pending_reviews do
+    Repo.all(
+      from r in Review,
+        where: r.status == "pending",
+        order_by: [asc: r.inserted_at, asc: r.id],
+        preload: [:user]
+    )
+  end
+
+  @doc """
+  Reviews currently public, most recently decided first.
+
+  `desc_nulls_last` on purpose: Postgres sorts NULLs first on a plain
+  `DESC`, and a fast-laned review (published straight from
+  `Ethos.Social.create_review/3`, without ever passing through `decide/3`)
+  never gets a `moderated_at`. A plain `desc:` would pin every such review
+  to the top of this list forever, ahead of everything actually decided
+  today.
+  """
+  def list_approved_reviews do
+    Repo.all(
+      from r in Review,
+        where: r.status == "approved",
+        order_by: [desc_nulls_last: r.moderated_at, desc: r.id],
+        preload: [:user]
+    )
+  end
+
+  def get_review!(id), do: Repo.get!(Review, id)
+
+  @doc """
+  Publishes a review.
+
+  Returns `{:error, :unauthorized}` if `admin` is not THE configured admin.
+  The router's `require_admin_user` plug is not the only way in any more —
+  see the moduledoc — so this context has to hold the line itself rather
+  than trusting whoever calls it to have already checked.
+  """
+  def approve_review(%Review{} = review, %User{} = admin) do
+    if Accounts.admin?(admin) do
+      decide(review, "approved", admin)
+    else
+      {:error, :unauthorized}
+    end
+  end
+
+  @doc """
+  Hides a review, whether it was ever public or not.
+
+  Returns `{:error, :unauthorized}` if `admin` is not THE configured admin.
+  """
+  def revoke_review(%Review{} = review, %User{} = admin) do
+    if Accounts.admin?(admin) do
+      decide(review, "revoked", admin)
+    else
+      {:error, :unauthorized}
+    end
+  end
+
+  defp decide(%Review{} = review, status, %User{} = admin) do
+    now = DateTime.utc_now() |> DateTime.truncate(:second)
+
+    Ecto.Multi.new()
+    |> Ecto.Multi.update(
+      :review,
+      Ecto.Changeset.change(review,
+        status: status,
+        moderated_at: now,
+        moderated_by_id: admin.id
+      )
+    )
+    |> maybe_trust_author(review, status, now)
+    |> Repo.transaction()
+    |> case do
+      {:ok, %{review: review}} -> {:ok, review}
+      {:error, _step, changeset, _changes} -> {:error, changeset}
+    end
+  end
+
+  # Trust is earned by having a comment published, so only "approved" grants it,
+  # and only the first time — `where: is_nil(u.trusted_at)` means a later
+  # approval cannot move the date, and two concurrent approvals cannot fight
+  # over it.
+  defp maybe_trust_author(multi, %Review{} = review, "approved", now) do
+    Ecto.Multi.update_all(
+      multi,
+      :trust,
+      from(u in User, where: u.id == ^review.user_id and is_nil(u.trusted_at)),
+      set: [trusted_at: now]
+    )
+  end
+
+  defp maybe_trust_author(multi, _review, _status, _now), do: multi
+
+  @doc """
+  Trusts an author by hand, without waiting for them to earn it.
+
+  Idempotent: trusting someone already trusted leaves their original date
+  alone, so the console cannot accidentally reset how long they have been
+  trusted for.
+
+  Refuses when the target is the admin — the admin is not a moderation
+  target, the same invariant `ban_user/3` holds. Self-trusting is harmless on
+  its own, but a Users tab that lets the admin toggle their own trust while
+  hiding the equivalent ban control on that row is an inconsistency that
+  contradicts the rule everywhere else.
+  """
+  def trust_user(%User{trusted_at: %DateTime{}} = user, %User{} = admin) do
+    cond do
+      not Accounts.admin?(admin) -> {:error, :unauthorized}
+      Accounts.admin?(user) -> {:error, :cannot_target_admin}
+      true -> {:ok, user}
+    end
+  end
+
+  def trust_user(%User{} = user, %User{} = admin) do
+    cond do
+      not Accounts.admin?(admin) ->
+        {:error, :unauthorized}
+
+      Accounts.admin?(user) ->
+        {:error, :cannot_target_admin}
+
+      true ->
+        user
+        |> Ecto.Changeset.change(trusted_at: DateTime.utc_now() |> DateTime.truncate(:second))
+        |> Repo.update()
+    end
+  end
+
+  @doc """
+  Withdraws trust. The author's next comment goes back into the queue;
+  anything already published stays published.
+
+  Refuses when the target is the admin — see `trust_user/2`.
+  """
+  def untrust_user(%User{} = user, %User{} = admin) do
+    cond do
+      not Accounts.admin?(admin) ->
+        {:error, :unauthorized}
+
+      Accounts.admin?(user) ->
+        {:error, :cannot_target_admin}
+
+      true ->
+        user
+        |> Ecto.Changeset.change(trusted_at: nil)
+        |> Repo.update()
+    end
+  end
+
+  ## Bans
+
+  @doc "True when this account is banned."
+  def banned?(%User{banned_at: nil}), do: false
+  def banned?(%User{}), do: true
+
+  @doc """
+  Bans an account: full block.
+
+  The flag and the token purge happen in one transaction, because a ban that
+  set the flag but left a live session behind would leave the user browsing
+  as though nothing had happened until their cookie expired.
+
+  It also disconnects any open LiveView sockets the account holds, once the
+  transaction commits — without that, a process already alive (holding a
+  `current_user` struct read at mount, before the ban) keeps handling events
+  as that user until its socket is closed some other way. For a trusted
+  author this is not cosmetic: `Ethos.Social.create_review/3` fast-lanes a
+  trusted author straight to `"approved"`, so a banned-but-still-connected
+  trusted author can keep minting reviews nobody moderates, which would go
+  live retroactively if the ban is ever lifted.
+
+  Refuses to ban the admin. There is exactly one, and locking them out would
+  leave nobody able to undo it.
+  """
+  def ban_user(%User{} = user, reason, %User{} = admin) do
+    cond do
+      not Accounts.admin?(admin) ->
+        {:error, :unauthorized}
+
+      Accounts.admin?(user) ->
+        {:error, :cannot_ban_admin}
+
+      true ->
+        do_ban(user, reason)
+    end
+  end
+
+  defp do_ban(%User{} = user, reason) do
+    changeset =
+      user
+      |> Ecto.Changeset.cast(%{ban_reason: reason}, [:ban_reason])
+      |> Ecto.Changeset.put_change(
+        :banned_at,
+        DateTime.utc_now() |> DateTime.truncate(:second)
+      )
+      # Rejecting a whitespace-only reason relies on three defaults stacking:
+      # `cast/4` trims string input, `empty_values` turns the trimmed "" into
+      # nil, and `validate_required` then catches the nil. `validate_length`
+      # alone would accept "   " outright. Swapping `cast` for `put_change`,
+      # or changing `empty_values`, would silently start accepting blank
+      # reasons.
+      |> Ecto.Changeset.validate_required([:ban_reason])
+      |> Ecto.Changeset.validate_length(:ban_reason, min: 1, max: 500)
+
+    # Session tokens have to be read out BEFORE the delete_all below removes
+    # them — there is no reading them back afterward — but the sockets built
+    # from them must not be disconnected until the transaction actually
+    # commits. Broadcasting from inside the transaction would disconnect a
+    # user whose ban then rolls back (e.g. the blank-reason validation
+    # failure), which is worse than the bug this fixes.
+    Ecto.Multi.new()
+    |> Ecto.Multi.all(:session_tokens, session_tokens_query(user))
+    |> Ecto.Multi.update(:user, changeset)
+    |> Ecto.Multi.delete_all(:tokens, UserToken.by_user_and_contexts_query(user, :all))
+    |> Repo.transaction()
+    |> case do
+      {:ok, %{user: user, session_tokens: tokens}} ->
+        disconnect_live_sockets(tokens)
+        {:ok, user}
+
+      {:error, :user, changeset, _} ->
+        {:error, changeset}
+    end
+  end
+
+  defp session_tokens_query(user) do
+    from t in UserToken, where: t.user_id == ^user.id and t.context == "session", select: t.token
+  end
+
+  # Mirrors `EthosWeb.UserAuth.put_token_in_session/2`, which is the only
+  # other place this id is built — see that function for why it is derived
+  # from the raw session token this way, and `log_out_user/1` for the only
+  # other broadcast of this shape in the app.
+  defp disconnect_live_sockets(tokens) do
+    Enum.each(tokens, fn token ->
+      EthosWeb.Endpoint.broadcast("users_sessions:#{Base.url_encode64(token)}", "disconnect", %{})
+    end)
+  end
+
+  @doc """
+  Lifts a ban. The account's reviews become visible again by themselves —
+  the public queries filter on `banned_at`, so there is nothing to restore.
+  """
+  def unban_user(%User{} = user, %User{} = admin) do
+    if Accounts.admin?(admin) do
+      user
+      |> Ecto.Changeset.change(banned_at: nil, ban_reason: nil)
+      |> Repo.update()
+    else
+      {:error, :unauthorized}
+    end
+  end
+end

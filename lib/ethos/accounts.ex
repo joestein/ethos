@@ -60,8 +60,17 @@ defmodule Ethos.Accounts do
   """
   def get_user!(id), do: Repo.get!(User, id)
 
-  @doc "True when the user is THE admin (single admin, bound by email config)."
-  def admin?(%Ethos.Accounts.User{email: email}) when is_binary(email) do
+  @doc """
+  True when the user is THE admin (single admin, bound by email config).
+
+  False for a banned account, even one whose email matches `:admin_email` —
+  otherwise `admin?/1` and "banned" could both be true of the same account
+  at once, which is a deadlock: a banned admin cannot log in
+  (`fetch_current_user/2` refuses a banned session), and `unban_user/2`
+  itself requires an admin caller. Keeping the rule in the data, not just at
+  `ban_user/3`'s call site, is what closes that.
+  """
+  def admin?(%Ethos.Accounts.User{email: email, banned_at: nil}) when is_binary(email) do
     admin = Application.get_env(:ethos, :admin_email) || ""
     String.downcase(email) == String.downcase(admin)
   end
@@ -98,8 +107,60 @@ defmodule Ethos.Accounts do
 
   """
   def change_user_registration(%User{} = user, attrs \\ %{}) do
-    User.registration_changeset(user, attrs, hash_password: false, validate_email: false)
+    User.registration_changeset(user, attrs,
+      hash_password: false,
+      validate_email: false,
+      validate_username: false
+    )
   end
+
+  ## Username
+
+  @doc """
+  Changeset for the username picker.
+
+  Skips the uniqueness query so live validation does not hit the database on
+  every keystroke; `update_user_username/2` still catches a collision through
+  the unique constraint.
+  """
+  def change_user_username(%User{} = user, attrs \\ %{}) do
+    User.username_changeset(user, attrs, validate_username: false)
+  end
+
+  @doc """
+  Sets a user's public username, clearing the provisional flag.
+  """
+  def update_user_username(%User{} = user, attrs) do
+    user
+    |> User.username_changeset(attrs)
+    |> Repo.update()
+  end
+
+  @doc """
+  True when the user still carries a username invented by the backfill,
+  rather than one the user chose.
+  """
+  def needs_username?(%User{username_provisional: true}), do: true
+  def needs_username?(_), do: false
+
+  @provisional_display_name "a traveler"
+
+  @doc """
+  The name a THIRD PARTY should see for `user` — on a suggestion queue, a
+  guide byline, anywhere someone other than the account owner is shown who
+  did something.
+
+  Returns the username once the owner has chosen it. While the username is
+  still the backfill's provisional guess, derived deterministically from
+  the owner's email address, publishing it would let anyone work backward
+  toward that address — exactly the leak this feature exists to close — so
+  this returns a neutral label instead. Never use `user.username` directly
+  on a page a third party can view; call this instead. Not for the
+  account's own settings page or the "Pick a username" header prompt, both
+  of which the owner is entitled to see as themselves.
+  """
+  def display_name(%User{username_provisional: true}), do: @provisional_display_name
+  def display_name(%User{username: username}), do: username
 
   ## Settings
 
@@ -357,5 +418,61 @@ defmodule Ethos.Accounts do
       {:ok, %{user: user}} -> {:ok, user}
       {:error, :user, changeset, _} -> {:error, changeset}
     end
+  end
+
+  ## Moderation listing
+
+  @doc """
+  Every account, with the numbers a moderator needs to judge it.
+
+  `review_count` and `revoked_count` together are the signal: one revoked
+  comment out of twenty reads very differently from two out of two, and the
+  console should not make an admin run that query in their head.
+
+  `opts` accepts `:search`, matched case-insensitively against username and
+  email. An empty or missing search returns everyone.
+  """
+  def list_users_for_moderation(opts \\ []) do
+    search = opts |> Keyword.get(:search, "") |> to_string() |> String.trim()
+
+    from(u in User,
+      left_join: r in Ethos.Social.Review,
+      on: r.user_id == u.id,
+      group_by: u.id,
+      order_by: [desc: u.inserted_at, desc: u.id],
+      select: %{
+        user: u,
+        review_count: count(r.id),
+        revoked_count: fragment("count(*) filter (where ? = 'revoked')", r.status)
+      }
+    )
+    |> filter_by_search(search)
+    |> Repo.all()
+  end
+
+  defp filter_by_search(query, ""), do: query
+
+  defp filter_by_search(query, search) do
+    pattern = "%#{escape_like(search)}%"
+
+    # `username` is citext so it is already case-insensitive; `email` is citext
+    # too. ilike is belt and braces and costs nothing at this size.
+    where(
+      query,
+      [u],
+      ilike(u.username, ^pattern) or ilike(fragment("?::text", u.email), ^pattern)
+    )
+  end
+
+  # `%` and `_` are LIKE/ILIKE wildcards, so a raw search term containing
+  # either would match far more than the user typed (searching "a_b" would
+  # also match "aXbYexact"). Escape the backslash first, then the two
+  # wildcards — escaping them before the backslash would re-escape the
+  # backslashes this step just inserted, corrupting the pattern.
+  defp escape_like(term) do
+    term
+    |> String.replace("\\", "\\\\")
+    |> String.replace("%", "\\%")
+    |> String.replace("_", "\\_")
   end
 end

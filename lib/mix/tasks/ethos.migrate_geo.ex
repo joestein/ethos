@@ -20,7 +20,7 @@ defmodule Mix.Tasks.Ethos.MigrateGeo do
 
   alias Ethos.Guides.Guide
 
-  @corpora ~w(connecticut manhattan brooklyn queens bronx san_francisco rome london)
+  @corpora ~w(connecticut manhattan brooklyn queens bronx san_francisco rome london korean_bbq)
 
   @leaf_kinds %{
     "connecticut" => "town",
@@ -112,6 +112,56 @@ defmodule Mix.Tasks.Ethos.MigrateGeo do
   def path_for("london", _state, _county, town),
     do: "united-kingdom/england/london/#{slug(town)}"
 
+  # Korean BBQ is the one corpus whose GUIDE node does not derive from its
+  # triple, so this is a table rather than a rule. Every other corpus files one
+  # guide per real place — a Connecticut town, a Roman neighbourhood — and the
+  # first comma-segment of `destination` names it. These ten name a dish and a
+  # market area: "Brooklyn Korean BBQ", "Puget Sound", "South Bay", "Chicago
+  # North Suburbs". Deriving a node from those strings would invent
+  # `united-states/washington/puget-sound` — a hub for a body of water, with no
+  # county, city or region behind it.
+  #
+  # Two of the labels are not geography at all and the mapping is a judgement,
+  # recorded here rather than in a commit message:
+  #
+  #   * "Puget Sound" is a marketing region spanning three real counties (King,
+  #     Pierce, Snohomish, which the PLACES carry correctly). The guide is
+  #     centred on Seattle and Seattle is a real node the ballpark corpus
+  #     already created, so the guide files there. No Puget Sound node exists.
+  #   * "South Bay" is likewise a region, not a county; its places are in Santa
+  #     Clara and Alameda counties. The guide files on Santa Clara, the city
+  #     most of its rooms are in.
+  #
+  # The name half of each pair is what the roster node is called. Without it
+  # `leaves_from/4` would name the new Niles node "Chicago North Suburbs" and
+  # the new Santa Clara node "South Bay", because a guide node's display name
+  # otherwise comes from that same marketing label.
+  @korean_bbq_guides %{
+    "Brooklyn Korean BBQ" => {"united-states/new-york/new-york-city/brooklyn", "Brooklyn"},
+    "Manhattan Korean BBQ" => {"united-states/new-york/new-york-city/manhattan", "Manhattan"},
+    "Queens Korean BBQ" => {"united-states/new-york/new-york-city/queens", "Queens"},
+    "London Korean BBQ" => {"united-kingdom/england/london", "London"},
+    "San Francisco Korean BBQ" => {"united-states/california/san-francisco", "San Francisco"},
+    "Chicago" => {"united-states/illinois/chicago", "Chicago"},
+    "Chicago North Suburbs" => {"united-states/illinois/niles", "Niles"},
+    "Los Angeles" => {"united-states/california/los-angeles", "Los Angeles"},
+    "Puget Sound" => {"united-states/washington/seattle", "Seattle"},
+    "South Bay" => {"united-states/california/santa-clara", "Santa Clara"}
+  }
+
+  def path_for("korean_bbq", _state, _county, guide_town) do
+    case Map.fetch(@korean_bbq_guides, guide_town) do
+      {:ok, {path, _name}} ->
+        path
+
+      :error ->
+        raise ArgumentError,
+              "korean_bbq: no node for guide destination #{inspect(guide_town)}. " <>
+                "This corpus's guide nodes are a hand-checked table, not a rule — " <>
+                "add the new guide to @korean_bbq_guides."
+    end
+  end
+
   def path_for(corpus, _state, _county, _town),
     do: raise(ArgumentError, "no mapping rule for corpus #{inspect(corpus)}")
 
@@ -132,6 +182,73 @@ defmodule Mix.Tasks.Ethos.MigrateGeo do
   end
 
   def place_path_for(_corpus, guide_path, _town), do: guide_path
+
+  @doc """
+  The node path for one Korean BBQ place.
+
+  Unlike every other corpus, these places do NOT sit on their guide's node: the
+  Puget Sound guide covers eleven cities across three counties and the South
+  Bay guide covers three across two, so a place is placed from its own triple
+  rather than from the guide it appears in.
+
+  The triples are honest at the place level even where the guide's is not —
+  every place carries a real county — but no county node is created for them.
+  California, Illinois and Washington are modelled city-directly-under-region
+  in this roster (`united-states/illinois/chicago`,
+  `united-states/washington/seattle`), and inventing a county tier for one
+  corpus would give those states two incompatible shapes.
+
+  A `nil` town attaches the place to the hub the guide covers — the borough or
+  the city itself — rather than to a node named after nothing. That is the only
+  honest answer: a place the corpus declines to put in a neighbourhood is in
+  the borough, and the borough node exists.
+  """
+  def korean_bbq_place_path(state, county, town)
+
+  def korean_bbq_place_path("New York", borough, town),
+    do: nest("united-states/new-york/new-york-city/#{slug(borough)}", borough, town)
+
+  def korean_bbq_place_path("England", "London", town),
+    do: nest("united-kingdom/england/london", "London", town)
+
+  def korean_bbq_place_path("California", "San Francisco", town),
+    do: nest("united-states/california/san-francisco", "San Francisco", town)
+
+  def korean_bbq_place_path("California", _county, town),
+    do: nest("united-states/california", nil, town)
+
+  def korean_bbq_place_path("Illinois", _county, town),
+    do: nest("united-states/illinois", nil, town)
+
+  def korean_bbq_place_path("Washington", _county, town),
+    do: nest("united-states/washington", nil, town)
+
+  def korean_bbq_place_path(state, county, town) do
+    raise ArgumentError,
+          "korean_bbq: no mapping rule for place " <>
+            inspect({state, county, town})
+  end
+
+  # `parent_name` is the node `parent_path` already names, so a place whose
+  # town repeats it ("Barking and Dagenham" inside the Barking and Dagenham
+  # borough) attaches to that node instead of nesting a duplicate beneath it.
+  # `nil` means the parent is a region no place may attach to directly, so a
+  # town is required there.
+  defp nest(parent_path, parent_name, town) do
+    cond do
+      is_nil(town) and is_nil(parent_name) ->
+        raise ArgumentError, "korean_bbq: a place under #{parent_path} needs a town"
+
+      is_nil(town) ->
+        parent_path
+
+      not is_nil(parent_name) and slug(town) == slug(parent_name) ->
+        parent_path
+
+      true ->
+        "#{parent_path}/#{slug(town)}"
+    end
+  end
 
   @doc """
   Drops the legacy geo keys from an object and inserts `destination_path` at
@@ -196,9 +313,21 @@ defmodule Mix.Tasks.Ethos.MigrateGeo do
   # Reads and maps one file, returning the bytes it should be rewritten to and
   # the roster nodes it references. Writes nothing: see `run/1` for why.
   #
-  # Idempotent: a file that already carries destination_path plans nothing.
-  # Re-running after a partial rewrite, or over a corpus a concurrent worktree
-  # already migrated, is a no-op rather than a crash on the missing triple.
+  # Idempotent PER KEY, not per file. The first version of this tested only the
+  # guide — a file whose guide already carried `destination_path` planned
+  # nothing at all — and that is exactly wrong for the case this task exists to
+  # serve. A concurrent worktree does not usually add whole corpora; it adds
+  # PLACES to corpora this branch already migrated. Twenty-six such files
+  # arrived with the Korean BBQ merge, each an already-migrated guide holding
+  # one to twelve new places still carrying the legacy triple, and a file-level
+  # skip walked straight past all of them. The seed-file gate caught it, which
+  # is the only reason this note is not a postmortem.
+  #
+  # So: the guide is migrated if it still needs it, each place is migrated if
+  # it still needs it, and a file where nothing needs it plans nothing. A place
+  # that is already migrated is left byte-identical rather than passed through
+  # `swap_geo/3`, which would find no legacy key and append a SECOND
+  # `destination_path`.
   #
   # Decoding with `objects: :ordered_objects` is NOT optional. A plain
   # `Jason.decode!` returns bare maps, which are unordered, so re-encoding
@@ -209,34 +338,58 @@ defmodule Mix.Tasks.Ethos.MigrateGeo do
   defp plan_file!(corpus, file) do
     data = file |> File.read!() |> Jason.decode!(objects: :ordered_objects)
     guide = data["guide"]
+    places = data["places"]
 
-    unless is_binary(guide["destination_path"]) do
+    guide_stale? = not is_binary(guide["destination_path"])
+    stale_places = Enum.filter(places, &(not is_binary(&1["destination_path"])))
+
+    if guide_stale? or stale_places != [] do
       guide_town = guide["destination"] |> String.split(",") |> List.first() |> String.trim()
-      guide_path = path_for(corpus, guide["state"], guide["county"], guide_town)
+
+      guide_path =
+        if guide_stale?,
+          do: path_for(corpus, guide["state"], guide["county"], guide_town),
+          else: guide["destination_path"]
 
       # Computed from the ORIGINAL objects, before the geo keys are dropped —
       # `town` is the only place a leaf node's display name is written down.
       place_leaves =
-        Enum.map(data["places"], fn p ->
-          {place_path_for(corpus, guide_path, p["town"]), p["town"]}
+        Enum.map(stale_places, fn p ->
+          {place_node_path(corpus, guide_path, p), p["town"]}
         end)
 
-      new_guide = swap_geo(guide, ~w(state county), guide_path)
+      new_guide =
+        if guide_stale?, do: swap_geo(guide, ~w(state county), guide_path), else: guide
 
       new_places =
-        data["places"]
-        |> Enum.zip(place_leaves)
-        |> Enum.map(fn {p, {path, _name}} -> swap_geo(p, ~w(state county town), path) end)
+        Enum.map(places, fn p ->
+          if is_binary(p["destination_path"]) do
+            p
+          else
+            swap_geo(p, ~w(state county town), place_node_path(corpus, guide_path, p))
+          end
+        end)
 
       rewritten = data |> oput("guide", new_guide) |> oput("places", new_places)
+
+      guide_leaf = if guide_stale?, do: [{guide_path, node_name(corpus, guide_town)}], else: []
 
       %{
         file: file,
         content: Jason.encode!(rewritten, pretty: true) <> "\n",
-        leaves: leaves_from(corpus, guide_path, guide_town, place_leaves)
+        leaves: leaves_from(corpus, guide_path, guide_leaf ++ place_leaves)
       }
     end
   end
+
+  # Korean BBQ places are placed from their own triple; every other corpus's
+  # places hang off the guide's node. Split out so `place_path_for/3` and its
+  # tests keep the town-only signature the eight original corpora need.
+  defp place_node_path("korean_bbq", _guide_path, place),
+    do: korean_bbq_place_path(place["state"], place["county"], place["town"])
+
+  defp place_node_path(corpus, guide_path, place),
+    do: place_path_for(corpus, guide_path, place["town"])
 
   defp oput(%Jason.OrderedObject{values: vs} = obj, key, value) do
     if List.keymember?(vs, key, 0) do
@@ -246,19 +399,19 @@ defmodule Mix.Tasks.Ethos.MigrateGeo do
     end
   end
 
-  # One roster entry per distinct node the file references. The guide's own
-  # node takes the corpus kind; a place node deeper than the guide's is a town
-  # inside it — only London produces those.
-  defp leaves_from(corpus, guide_path, guide_name, place_leaves) do
-    guide_kind = Map.fetch!(@leaf_kinds, corpus)
-    guide_depth = depth(guide_path)
-
-    [{guide_path, guide_name} | place_leaves]
+  # One roster entry per distinct node the file's UNMIGRATED rows reference. The
+  # guide's own node takes the corpus kind; a place node deeper than the guide's
+  # is a town inside it — only London produces those.
+  #
+  # `guide_path` is still passed even when the guide itself contributes no leaf,
+  # because it is the depth every place node's kind is measured against.
+  defp leaves_from(corpus, guide_path, leaves) do
+    leaves
     |> Enum.reject(fn {path, _} -> is_nil(path) end)
     |> Enum.uniq_by(fn {path, _} -> path end)
     |> Enum.map(fn {path, name} ->
       name = name || path |> String.split("/") |> List.last()
-      kind = if depth(path) > guide_depth, do: "town", else: guide_kind
+      kind = leaf_kind(corpus, path, guide_path)
 
       # An ordered object, not a map: these are encoded straight into the
       # roster, and a bare map would emit its four keys in whatever order the
@@ -271,6 +424,38 @@ defmodule Mix.Tasks.Ethos.MigrateGeo do
         {"intro", "#{name}."}
       ])
     end)
+  end
+
+  # A guide node's display name is the guide's own destination label, except
+  # for Korean BBQ, whose labels name a dish — see @korean_bbq_guides.
+  defp node_name("korean_bbq", guide_town) do
+    {_path, name} = Map.fetch!(@korean_bbq_guides, guide_town)
+    name
+  end
+
+  defp node_name(_corpus, guide_town), do: guide_town
+
+  # Every other corpus is one tier deep and uniform, so its kind is the corpus
+  # kind and anything deeper than the guide is a town inside it. Korean BBQ
+  # spans four tiers across four countries' worth of shapes, so its kind comes
+  # from the shape of the path itself.
+  defp leaf_kind("korean_bbq", path, _guide_path) do
+    case String.split(path, "/") do
+      ["united-states", "new-york", "new-york-city", _borough] -> "borough"
+      ["united-states", "new-york", "new-york-city", _borough, _neighborhood] -> "neighborhood"
+      ["united-kingdom", "england", "london"] -> "city"
+      ["united-kingdom", "england", "london", _borough] -> "borough"
+      ["united-states", "california", "san-francisco"] -> "city"
+      ["united-states", "california", "san-francisco", _neighborhood] -> "neighborhood"
+      [_country, _region, _city] -> "city"
+      _ -> raise ArgumentError, "korean_bbq: no kind for node #{inspect(path)}"
+    end
+  end
+
+  defp leaf_kind(corpus, path, guide_path) do
+    if depth(path) > depth(guide_path),
+      do: "town",
+      else: Map.fetch!(@leaf_kinds, corpus)
   end
 
   defp append_leaves!(leaves) do

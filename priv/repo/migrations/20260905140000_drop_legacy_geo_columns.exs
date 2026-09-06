@@ -38,7 +38,7 @@ defmodule Ethos.Repo.Migrations.DropLegacyGeoColumns do
             "DROP INDEX destinations_fts_idx"
 
     # Every destination row that predates the tree. `kind` was added nullable by
-    # 20260905120000 and nothing backfills it, so on any database carrying
+    # 20260905123000 and nothing backfills it, so on any database carrying
     # content — production, a restored backup, a staging box seeded before this
     # branch — the `SET NOT NULL` below aborts the migration with
     # `column "kind" contains null values`. `fly.toml` runs migrations as the

@@ -28,6 +28,12 @@
     <.link href={~p"/g/#{@featured.slug}"} class="mt-3 inline-block underline">Read it →</.link>
   </div>
 
+  <p class="mt-8 text-sm text-zinc-600">
+    In season:
+    <.link navigate={~p"/foliage"} class="underline">the Connecticut Foliage Forecast</.link>
+    — when the leaves turn in each of the state's 169 towns.
+  </p>
+
   <section :if={@latest != []} class="mt-12 text-left">
     <div class="flex items-center justify-between">
       <h2 class="text-sm uppercase tracking-wide text-zinc-400">Latest guides</h2>
@@ -39,6 +45,37 @@
       <li :for={g <- @latest} class="rounded-xl border p-4">
         <.link href={~p"/g/#{g.slug}"} class="font-semibold hover:underline">{g.title}</.link>
         <p class="text-sm text-zinc-500">{g.destination}</p>
+      </li>
+    </ul>
+  </section>
+
+  <section :if={@hubs != []} class="mt-12 text-left">
+    <div class="flex items-center justify-between">
+      <h2 class="text-sm uppercase tracking-wide text-zinc-400">Travel Guides</h2>
+      <.link navigate={~p"/destinations"} class="text-sm underline">
+        All {@hub_count} destinations →
+      </.link>
+    </div>
+    <ul class="mt-4 grid gap-3 sm:grid-cols-2">
+      <li :for={hub <- @hubs} class="rounded-xl border p-4">
+        <%!-- node_path/1, never ~p"/destinations/\#{hub.path}" — the sigil
+              percent-encodes the slash and a multi-segment path 404s. --%>
+        <.link
+          navigate={EthosWeb.DestinationHTML.node_path(hub.path)}
+          class="font-semibold hover:underline"
+        >
+          {hub.name}
+        </.link>
+        <p class="text-sm text-zinc-500">{hub.count} {hub_noun(hub.slug)}</p>
+      </li>
+    </ul>
+  </section>
+
+  <section :if={@collections != []} class="mt-12 text-left">
+    <h2 class="text-sm uppercase tracking-wide text-zinc-400">Collections</h2>
+    <ul class="mt-4 grid gap-3 sm:grid-cols-2">
+      <li :for={c <- @collections} class="rounded-xl border p-4">
+        <.link navigate={~p"/c/#{c.slug}"} class="font-semibold hover:underline">{c.title}</.link>
       </li>
     </ul>
   </section>

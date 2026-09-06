@@ -1,0 +1,42 @@
+{
+  "brooklyn-city-point": {
+    "sha256": "2805fc211696b482f1b8279e7d02e8b219237bc39f4ce734fa5e8358429b3294",
+    "source_url": "https://commons.wikimedia.org/wiki/File:City_Point,_Brooklyn.jpg"
+  },
+  "chicago-north-milwaukee-avenue-wicker-park": {
+    "sha256": "21f222520941c9eef98fbed558e3ab26dee521b843ed057017789781a93f7245",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Milwaukee_Avenue_District_5.JPG"
+  },
+  "chicago-north-suburbs-golf-mill-shopping-center": {
+    "sha256": "33f051cf2d7fe1fddd94c145e261473d68580b84a439440033ccbd982ddf6234",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Golf_Mill_Mall_3.jpg"
+  },
+  "london-new-malden-high-street": {
+    "sha256": "84698138a85b7ddb4c5d849b766fb74fdd0747d037683eee1a2f6257a4d894e2",
+    "source_url": "https://commons.wikimedia.org/wiki/File:High_Street,_New_Malden_-_geograph.org.uk_-_3092243.jpg"
+  },
+  "los-angeles-chapman-plaza": {
+    "sha256": "ca11144ccd103b106cf3181c112656866be589c4fecdd6541cf85a495835c2ad",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Chapman_Market_3.jpg"
+  },
+  "manhattan-west-32nd-street": {
+    "sha256": "d9690bee221fb72b43087a8b48c1cef0d805858aaab6e16014b928d10a81c597",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Koreatown_Manhattan_September_2024_001.jpg"
+  },
+  "puget-sound-aurora-avenue-north-at-145th": {
+    "sha256": "dea660e2542b139a611b2af55f7c10d1d5867adac3c50a5e83661cf9aaa87666",
+    "source_url": "https://commons.wikimedia.org/wiki/File:City_of_Shoreline_sign_at_145th_and_Aurora.jpg"
+  },
+  "queens-roosevelt-avenue": {
+    "sha256": "21fa0bb3e2dd57fa2b86352cc2645bf821de37a6192b9e4b78adca2614ed279b",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Roosevelt_Av_Union_St_td_(2018-05-22)_04_-_Roosevelt_Plaza_Mall.jpg"
+  },
+  "san-francisco-clement-street": {
+    "sha256": "8112b0558745d4f2589ec4baa16c0abc05aa8b8f8933df5744372501369d88c9",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Clement_Street,_San_Francisco.jpg"
+  },
+  "south-bay-el-camino-real-santa-clara": {
+    "sha256": "87742840f884adad6905fb97c166ed8e527062387b1b27eda01c015e18263ddc",
+    "source_url": "https://commons.wikimedia.org/wiki/File:El_Camino_Real_in_Santa_Clara.jpg"
+  }
+}

@@ -1,7 +1,8 @@
 defmodule Ethos.Seeds.RomeGuideTest do
   use Ethos.DataCase, async: false
 
-  alias Ethos.{Guides, Seeds.RomeGuide}
+  alias Ethos.{Accounts, Guides, Seeds.RomeGuide}
+  alias Ethos.Accounts.Username
   import Ethos.AccountsFixtures
 
   test "upsert! creates the published guide idempotently under the owner" do
@@ -56,6 +57,23 @@ defmodule Ethos.Seeds.RomeGuideTest do
     assert guide2.id == guide.id
     assert length(Guides.list_entries(guide2)) == 8
     assert length(guide2.photos) == 13
+  end
+
+  test "auto-creates the owner account with a derived username when it does not exist yet" do
+    # The guide resolves its destination_path against the destinations table and
+    # raises on a miss, so its node comes first — same as every other test here.
+    Ethos.SeedDataHelpers.seed_destination_paths!(["italy/lazio/rome"])
+
+    fresh_email = "fresh-owner-#{System.unique_integer([:positive])}@example.com"
+    refute Accounts.get_user_by_email(fresh_email)
+
+    guide = RomeGuide.upsert!(fresh_email)
+
+    user = Accounts.get_user_by_email(fresh_email)
+    assert user
+    assert guide.user_id == user.id
+    assert user.username == Username.derive_from_email(fresh_email)
+    assert Regex.match?(Username.format(), user.username)
   end
 
   test "raises instead of auto-creating the owner account outside dev/test" do

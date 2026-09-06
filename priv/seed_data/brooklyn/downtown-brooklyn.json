@@ -198,6 +198,28 @@
       "summary": "A 32-story, 398-foot hotel tower completed in 1997, also known as Brooklyn Renaissance Plaza.",
       "status": "open",
       "photos": []
+    },
+    {
+      "slug": "atti-downtown-brooklyn",
+      "name": "Atti",
+      "kind": "restaurant",
+      "destination_path": "united-states/new-york/new-york-city/brooklyn/downtown-brooklyn",
+      "address": "294 Livingston Street, Brooklyn, NY 11217",
+      "summary": "A Korean barbecue room at 294 Livingston Street where flat, brass-encircled grills are sunk into the centers of the tables and the meat is cooked at the table while side dishes are set out around it. Published hours run 4pm to 11pm Monday to Friday and 11:30am to 11pm Friday to Sunday.",
+      "history": "The address sits on the seam between Downtown Brooklyn and Boerum Hill. Kuun, at 290 Livingston Street, is under the same ownership and cooks its Korean food in the kitchen.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "kpot-city-point-downtown-brooklyn",
+      "name": "KPOT Korean BBQ & Hot Pot — City Point",
+      "kind": "restaurant",
+      "destination_path": "united-states/new-york/new-york-city/brooklyn/downtown-brooklyn",
+      "address": "430 Albee Square West, Brooklyn, NY 11201",
+      "summary": "A branch of the KPOT all-you-can-eat chain at 430 Albee Square West, in the City Point complex, where a grill is set into the table with an inset burner beside it for hot-pot broth. Guests grill their own cuts of meat at the table.",
+      "history": "Published hours run noon to 10:30pm on Monday and Tuesday with a 9:30pm last seating, noon to 1am on Wednesday, Thursday and Sunday with an 11:30pm last seating, and noon to 2am on Friday and Saturday with a 12:30am last seating. A second Brooklyn branch is at 1217 Surf Avenue in Coney Island.",
+      "status": "open",
+      "photos": []
     }
   ],
   "entries": [
@@ -266,6 +288,18 @@
       "name": "New York Marriott at the Brooklyn Bridge",
       "place_slug": "new-york-marriott-brooklyn-bridge",
       "note": "A 32-story hotel tower on Adams Street, completed in 1997 as Brooklyn Renaissance Plaza."
+    },
+    {
+      "kind": "food",
+      "name": "Atti",
+      "place_slug": "atti-downtown-brooklyn",
+      "note": "Brass-encircled grills sunk into the centers of the tables on Livingston Street, with the meat cooked at the table."
+    },
+    {
+      "kind": "food",
+      "name": "KPOT Korean BBQ & Hot Pot — City Point",
+      "place_slug": "kpot-city-point-downtown-brooklyn",
+      "note": "All-you-can-eat Korean barbecue and hot pot at City Point, with a grill set into the table beside an inset broth burner."
     }
   ],
   "links": [

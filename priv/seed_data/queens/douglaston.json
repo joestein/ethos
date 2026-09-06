@@ -277,6 +277,17 @@
       "summary": "A Queens Public Library branch on Marathon Parkway.",
       "status": "open",
       "photos": []
+    },
+    {
+      "slug": "sungbookdong-bbq-douglaston",
+      "name": "Sungbookdong BBQ",
+      "kind": "restaurant",
+      "destination_path": "united-states/new-york/new-york-city/queens/douglaston",
+      "address": "248-25 Northern Boulevard, Douglaston, NY 11362",
+      "summary": "Sungbookdong BBQ is at 248-25 Northern Boulevard. A menu listing for the restaurant states that there is a grill at every table, and the meat is cooked on it in the dining room.",
+      "history": "The barbecue menu runs to Special Galbi and Prime Rib Eye.",
+      "status": "open",
+      "photos": []
     }
   ],
   "entries": [
@@ -333,6 +344,12 @@
       "name": "Douglaston station",
       "place_slug": "douglaston-station-lirr",
       "note": "The Long Island Rail Road station at 235th Street and 41st Avenue. Wikipedia credits the 1962 station house to Allan Gordon Lorimer."
+    },
+    {
+      "kind": "food",
+      "name": "Sungbookdong BBQ",
+      "place_slug": "sungbookdong-bbq-douglaston",
+      "note": "248-25 Northern Boulevard. A menu listing states that there is a grill at every table; the menu runs to Special Galbi and Prime Rib Eye."
     }
   ],
   "links": [

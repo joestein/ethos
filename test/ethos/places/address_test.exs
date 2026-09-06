@@ -491,8 +491,45 @@ defmodule Ethos.Places.AddressTest do
     # is the case this pin's own note says schema.org wants kept rather than the
     # non-locality prose it exists to catch: "2 Marina Blvd, Landmark Building
     # C, Suite 260" and "2325 Third Street, Floor 4R".
-    assert comma_streets <= 50,
-           "#{comma_streets} American street lines carry a comma qualifier, up from 50"
+    # 51 after Korean BBQ wave 1. The addition is Daebak Korean BBQ
+    # (daebak-korean-bbq-chicago-chinatown), whose raw address "2017 S Wells
+    # St, Fl 2, Chicago, IL 60616" parses to the street line "2017 S Wells St,
+    # Fl 2". "Fl 2" is a floor designator — the same class as "Suite 260" and
+    # "Floor 4R" above, which this pin's own note already names as the
+    # acceptable case schema.org wants kept — rather than the non-locality
+    # prose ("near Pacific Street", "also addressed as 455 Flatbush Avenue")
+    # the pin exists to catch. The ratchet moves to 51 legitimately.
+    #
+    # 57 after the Korean BBQ guides that reach Manhattan, Queens, Brooklyn,
+    # San Francisco and London. Six additions, not five: five are plain floor
+    # designators, the same acceptable class as "Suite 260", "Floor 4R" and
+    # "Fl 2" above —
+    #
+    #   * "22 W 32nd St, 2nd Floor" (jongro-bbq-koreatown)
+    #   * "39 W 32nd St, 1st Floor" (jongro-bbq-market-koreatown)
+    #   * "315 5th Ave, 3rd Floor" (nubiani-koreatown)
+    #   * "312 5th Ave, 2nd Floor" (gopchang-story-koreatown)
+    #   * "1640 Post Street, 2nd Floor" (yakiniq-japantown)
+    #
+    # — upper-floor dining rooms being a real characteristic of West 32nd
+    # Street's Koreatown restaurants. The sixth is Gaonnuri
+    # (gaonnuri-koreatown, in priv/seed_data/manhattan/koreatown.json), whose
+    # raw address used to read "1250 Broadway, 39th Floor (entrance on W 32nd
+    # St), New York, NY 10001" — a floor designator followed by genuine
+    # non-locality PROSE, exactly what this pin exists to catch, riding along
+    # inside the same comma-qualified street line. That address was rewritten
+    # to "1250 Broadway, 39th Floor, New York, NY 10001", and the entrance
+    # fact was kept — it was already stated as a sentence in the place's
+    # summary ("with its entrance on West 32nd Street") — rather than lost.
+    # Gaonnuri's street line still carries a comma after the fix, because
+    # "39th Floor" is itself a floor designator of the same acceptable class
+    # as the other five; what changed is that the comma-qualified portion is
+    # now only that designator, with the prose gone. So the count does not
+    # drop back to 51 with the prose removed — it was never the prose alone
+    # that put Gaonnuri here — and the ratchet moves to 57, five new floor
+    # designators plus Gaonnuri's own, all six legitimate.
+    assert comma_streets <= 57,
+           "#{comma_streets} American street lines carry a comma qualifier, up from 57"
 
     for p <- italian, p.street, String.contains?(p.street, ",") do
       # A civico may be a range ("5-7") or carry a letter or a slashed suffix

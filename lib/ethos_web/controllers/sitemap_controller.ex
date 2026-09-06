@@ -39,7 +39,20 @@ defmodule EthosWeb.SitemapController do
         end) ++
         Enum.map(Ethos.Collections.list_published(), fn c ->
           %{loc: url(~p"/c/#{c.slug}"), lastmod: DateTime.to_date(c.updated_at)}
-        end)
+        end) ++
+        (
+          # The forecast dataset is frozen; what changes is the field note, so
+          # that is what lastmod reports. `?week=` variants canonicalise to
+          # these URLs and are never listed.
+          statewide = Ethos.Foliage.latest_note("statewide")
+
+          [%{loc: url(~p"/foliage"), lastmod: statewide && statewide.published_on}] ++
+            Enum.map(Ethos.Foliage.routes(), fn route ->
+              note = Ethos.Foliage.latest_note("route", route.slug)
+              %{loc: url(~p"/foliage/#{route.slug}"), lastmod: note && note.published_on}
+            end) ++
+            [%{loc: url(~p"/foliage/embed"), lastmod: nil}]
+        )
 
     # Kept from the guide-derived era, where a guide whose destination was a
     # bare state name derived the same slug as the state hub and so arrived

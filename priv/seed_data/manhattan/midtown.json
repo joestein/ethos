@@ -198,6 +198,41 @@
       "summary": "Boutique hotel themed on the Dewey Decimal System with over 6,000 books distributed across subject-themed floors, plus the rooftop Bookmarks Lounge.",
       "status": "open",
       "photos": []
+    },
+    {
+      "slug": "nubiani-midtown-east",
+      "name": "Nubiani Midtown East",
+      "kind": "restaurant",
+      "destination_path": "united-states/new-york/new-york-city/manhattan/midtown",
+      "address": "243 E 58th St, New York, NY 10022",
+      "official_url": "https://www.nubianinyc.com/",
+      "summary": "Nubiani's Midtown East room is at 243 East 58th Street. The operator covers both of its addresses under the same standing line, \"The grill is only one part of the table\", so the grill sits in the table here as it does on Fifth Avenue.",
+      "history": "The other room under the same name takes the third floor at 315 Fifth Avenue, in Koreatown.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "golden-hof-midtown",
+      "name": "Golden HOF / NY Kimchi",
+      "kind": "restaurant",
+      "destination_path": "united-states/new-york/new-york-city/manhattan/midtown",
+      "address": "16 W 48th St, New York, NY 10036",
+      "summary": "Golden HOF / NY Kimchi is at 16 West 48th Street, by Rockefeller Center. Downstairs, some tables carry a grill in the table itself and groups work through rounds of grilled meat; the upstairs room is a pub-like bar without them.",
+      "history": "Golden HOF absorbed NY Kimchi, the separate downstairs restaurant at the same address, in July 2025.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "don-don-midtown",
+      "name": "Don Don",
+      "kind": "restaurant",
+      "destination_path": "united-states/new-york/new-york-city/manhattan/midtown",
+      "address": "37 W 43rd St, New York, NY 10036",
+      "official_url": "https://dondonnyc.com/",
+      "summary": "Don Don is at 37 West 43rd Street, on the Bryant Park side of Midtown. The operator's own account has guests grilling the prepared pork cuts directly at the table, and the grills crackle the length of a narrow, heavily branded room.",
+      "history": "The restaurant is from the Michelin-starred chef Sungchul Shim.",
+      "status": "open",
+      "photos": []
     }
   ],
   "entries": [
@@ -248,6 +283,24 @@
       "name": "Library Hotel",
       "place_slug": "library-hotel",
       "note": "A Dewey-Decimal-themed boutique hotel near Grand Central."
+    },
+    {
+      "kind": "food",
+      "name": "Nubiani Midtown East",
+      "place_slug": "nubiani-midtown-east",
+      "note": "243 East 58th Street. The same operator line covers both rooms, and the grill sits in the table here as it does on Fifth Avenue."
+    },
+    {
+      "kind": "food",
+      "name": "Golden HOF / NY Kimchi",
+      "place_slug": "golden-hof-midtown",
+      "note": "16 West 48th Street. Downstairs, some tables carry a grill in the table itself; the upstairs room is a pub-like bar without them."
+    },
+    {
+      "kind": "food",
+      "name": "Don Don",
+      "place_slug": "don-don-midtown",
+      "note": "37 West 43rd Street. Guests grill the pork cuts at the table in a narrow room, in a restaurant from chef Sungchul Shim."
     }
   ],
   "links": [

@@ -1,8 +1,8 @@
 defmodule Ethos.Badges do
   @moduledoc """
   Explorer badges. Definitions live in code; earned badges are rows in
-  `user_badges`. Badges are awarded on visit check-off and never revoked.
-  Zero AI involvement — plain Ecto counts.
+  `user_badges`. Badges are awarded when a user reacts (thumbs up or down)
+  to a place and never revoked. Zero AI involvement — plain Ecto counts.
   """
 
   import Ecto.Query, warn: false
@@ -14,7 +14,7 @@ defmodule Ethos.Badges do
   alias Ethos.Badges.UserBadge
   alias Ethos.Places
   alias Ethos.Places.Place
-  alias Ethos.Visits
+  alias Ethos.Social
 
   @food_kinds ~w(restaurant cafe brewery)
   @history_kinds ~w(museum historic-site theater)
@@ -32,21 +32,21 @@ defmodule Ethos.Badges do
       key: "first-steps",
       name: "First Steps",
       emoji: "👣",
-      description: "Check off your first place.",
+      description: "React to your first place.",
       rule: {:total, 1}
     },
     %{
       key: "foodie",
       name: "Local Foodie",
       emoji: "🍽️",
-      description: "Check off 5 restaurants, cafes, or breweries.",
+      description: "React to 5 restaurants, cafes, or breweries.",
       rule: {:kinds, @food_kinds, 5}
     },
     %{
       key: "historian",
       name: "Time Traveler",
       emoji: "🏛️",
-      description: "Check off 5 museums, historic sites, or theaters.",
+      description: "React to 5 museums, historic sites, or theaters.",
       rule: {:kinds, @history_kinds, 5}
     }
   ]
@@ -77,7 +77,7 @@ defmodule Ethos.Badges do
         key: "explorer-#{t.slug}",
         name: Map.get(o, :name, "#{t.name} Explorer"),
         emoji: Map.get(o, :emoji, "🧭"),
-        description: "Check off #{threshold} places in #{t.name}.",
+        description: "React to #{threshold} places in #{t.name}.",
         rule: {:town, t.destination_id, threshold}
       }
     end)
@@ -102,7 +102,7 @@ defmodule Ethos.Badges do
         key: "county-complete-#{node.slug}",
         name: "#{node.name} Complete",
         emoji: "🗺️",
-        description: "Check off every open place in #{node.name}.",
+        description: "React to every open place in #{node.name}.",
         rule: {:county_complete, ids}
       }
     end)
@@ -124,8 +124,8 @@ defmodule Ethos.Badges do
   end
 
   @doc """
-  Evaluates badge rules after a visit and inserts any newly earned badges.
-  Never raises: a failure here must not break the visit itself.
+  Evaluates badge rules after a reaction and inserts any newly earned badges.
+  Never raises: a failure here must not break the reaction itself.
   Returns the list of newly awarded definitions.
   """
   def check_and_award(user, %Place{} = place) do
@@ -145,19 +145,19 @@ defmodule Ethos.Badges do
     Repo.all(from b in UserBadge, where: b.user_id == ^user.id, order_by: [asc: b.awarded_at])
   end
 
-  defp rule_met?({:total, n}, user, _place), do: Visits.count_for_user(user) >= n
+  defp rule_met?({:total, n}, user, _place), do: Social.reacted_place_count(user) >= n
 
   defp rule_met?({:town, node_id, n}, user, _place),
-    do: Visits.count_for_user_by_node(user, node_id) >= n
+    do: Social.reacted_place_count_by_node(user, node_id) >= n
 
   defp rule_met?({:kinds, kinds, n}, user, _place),
-    do: Visits.count_for_user_by_kinds(user, kinds) >= n
+    do: Social.reacted_place_count_by_kinds(user, kinds) >= n
 
   defp rule_met?({:county_complete, ids}, user, place) do
-    # Only worth evaluating for the county the place just visited belongs to.
+    # Only worth evaluating for the county the place just reacted to belongs to.
     place.destination_id in ids and
       Places.count_open_places_in_nodes(ids) > 0 and
-      Visits.count_for_user_in_nodes(user, ids) >= Places.count_open_places_in_nodes(ids)
+      Social.reacted_place_count_in_nodes(user, ids) >= Places.count_open_places_in_nodes(ids)
   end
 
   defp insert_badge(user, def) do

@@ -30,6 +30,9 @@ defmodule EthosWeb.Router do
     get "/destinations/*path", DestinationController, :show
     get "/p/:slug", PlaceController, :show
     get "/c/:slug", CollectionController, :show
+    get "/foliage", FoliageController, :index
+    get "/foliage/embed", FoliageController, :embed
+    get "/foliage/:route_slug", FoliageController, :route
     get "/search", SearchController, :index
     get "/sitemap.xml", SitemapController, :index
     get "/robots.txt", RobotsController, :index
@@ -80,6 +83,7 @@ defmodule EthosWeb.Router do
       on_mount: [{EthosWeb.UserAuth, :ensure_authenticated}] do
       live "/users/settings", UserSettingsLive, :edit
       live "/users/settings/confirm_email/:token", UserSettingsLive, :confirm_email
+      live "/users/username", UsernameLive, :edit
 
       live "/guides", GuideLive.Index, :index
       live "/guides/new", GuideLive.New, :new
@@ -93,16 +97,24 @@ defmodule EthosWeb.Router do
     end
 
     post "/g/:slug/entries/:entry_id/research", GuideController, :research
-    post "/p/:slug/visit", PlaceController, :visit
     get "/badges", BadgeController, :index
   end
 
   scope "/admin", EthosWeb do
     pipe_through [:browser, :require_authenticated_user, :require_admin_user]
 
+    live_session :admin,
+      on_mount: [{EthosWeb.UserAuth, :ensure_authenticated}, {EthosWeb.UserAuth, :ensure_admin}] do
+      live "/comments", Admin.CommentsLive, :index
+      live "/users", Admin.UsersLive, :index
+    end
+
     get "/suggestions", AdminSuggestionController, :index
     post "/suggestions/:id/accept", AdminSuggestionController, :accept
     post "/suggestions/:id/decline", AdminSuggestionController, :decline
+
+    get "/foliage/notes", AdminFoliageController, :index
+    post "/foliage/notes", AdminFoliageController, :create
   end
 
   scope "/", EthosWeb do

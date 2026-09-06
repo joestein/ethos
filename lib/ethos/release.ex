@@ -3,6 +3,8 @@ defmodule Ethos.Release do
   Used for executing DB release tasks when run in production without Mix
   installed.
   """
+  import Ecto.Query, warn: false
+
   @app :ethos
 
   def migrate do
@@ -56,7 +58,8 @@ defmodule Ethos.Release do
     collections = [
       Ethos.Seeds.BurysCollection,
       Ethos.Seeds.AntiqueTrailCollection,
-      Ethos.Seeds.MlbBallparksCollection
+      Ethos.Seeds.MlbBallparksCollection,
+      Ethos.Seeds.KoreanBbqCollection
     ]
 
     for mod <- collections do
@@ -125,6 +128,23 @@ defmodule Ethos.Release do
   def seed_london(email), do: seed_directory("london", email)
 
   @doc """
+  Seeds the Korean BBQ collection's guides under `priv/seed_data/korean_bbq/`.
+
+  MUST RUN AFTER every destination whose neighborhood files own places these
+  guides reach by entry — Manhattan, Queens, Brooklyn, San Francisco and
+  London. `GuideRunner.replace_entries!/2` resolves each entry through
+  `Places.get_place_by_slug!/1`, which raises rather than skipping, and seeding
+  is not transactional, so a missing place aborts the run partway and leaves
+  earlier guides published.
+
+  That ordering is not enforceable from here — these files reference places in
+  five other directories, and calling all five would re-seed a thousand guides
+  on every run. It is stated instead, and the release test that follows the
+  corpus asserts the entries resolve.
+  """
+  def seed_korean_bbq(email), do: seed_directory("korean_bbq", email)
+
+  @doc """
   Applies the deletion manifest, removing every place it names.
 
   Prints two numbers, not one: a manifest of 30 that prunes 0 means either the
@@ -147,6 +167,28 @@ defmodule Ethos.Release do
     Application.ensure_all_started(@app)
     count = Ethos.Seeds.DestinationTree.upsert_all!()
     IO.puts("Seeded #{count} destination nodes")
+  end
+
+  @doc """
+  Writes the foliage route link edges and reports any route stop whose guide
+  has been unpublished or renamed.
+
+  Production runs a release, not Mix, so this is the only way to invoke either
+  of these after a deploy.
+  """
+  def foliage_links do
+    load_app()
+    Application.ensure_all_started(@app)
+
+    :ok = Ethos.Foliage.LinkBuilder.build!()
+
+    published =
+      Ethos.Repo.all(
+        from(g in Ethos.Guides.Guide, where: g.status == "published", select: g.slug)
+      )
+      |> MapSet.new()
+
+    Ethos.Foliage.Dataset.warn_dangling_guides(published)
   end
 
   @doc """

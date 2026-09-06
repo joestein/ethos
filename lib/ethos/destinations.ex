@@ -91,4 +91,39 @@ defmodule Ethos.Destinations do
   def get_by_legacy_path(path) when is_binary(path) do
     Repo.one(from d in Destination, where: ^path in d.legacy_paths)
   end
+
+  @doc """
+  Whether `node` is `ancestor_path` itself or lies beneath it.
+
+  Pure string work on the materialised path — no query — because every caller
+  runs per row: the foliage panel on every guide page, the house ad on every
+  guide and place page. A `parent_id` walk there would cost a read per row, the
+  cost ruling C18 rejected for affiliate locale matching for the same reason.
+
+  This is what replaced the `state_slug == "connecticut"` guards those callers
+  used to carry, and it is strictly more precise than they were. A slug said
+  only which *name* a page's state happened to derive to; ancestry says the
+  node is genuinely inside that region, so a Connecticut town is one because it
+  sits under `united-states/connecticut`, not because a string matched.
+
+  `false` for `nil` or an unloaded association, so a caller holding a row whose
+  `destination_node` was never preloaded degrades to "not in that region"
+  rather than raising out of a template.
+  """
+  def under?(%Destination{path: path}, ancestor_path) when is_binary(ancestor_path),
+    do: path == ancestor_path or String.starts_with?(path, ancestor_path <> "/")
+
+  def under?(_node, _ancestor_path), do: false
+
+  @doc """
+  `{exact_path, like_pattern}` for matching a subtree inside an Ecto query —
+  the query-side counterpart of `under?/2`, for a caller selecting whole lists
+  rather than testing one row it already holds.
+
+  Node paths are slugs joined by "/" (`[a-z0-9-]` only, enforced by
+  `Destination.changeset/2`), so neither LIKE wildcard can occur in
+  `ancestor_path` and it needs no escaping.
+  """
+  def subtree_match(ancestor_path) when is_binary(ancestor_path),
+    do: {ancestor_path, ancestor_path <> "/%"}
 end

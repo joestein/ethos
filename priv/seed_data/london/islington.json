@@ -242,6 +242,28 @@
       "history": "The self-guided tour covers the Directors Box, Diamond Club, Players Entrance, both dressing rooms, Players Tunnel, pitchside, the home dugout, the Flash Interview Rooms, the Press Conference Room and the Media Lounge, with audio in 7 languages including BSL, and Arsenal Museum entry is included. The East Stand of the club's former ground, Highbury Stadium, survives about 540 m north-east as flats and is Grade II listed, NHLE 1119692, added to the list on 16 July 1997. Drayton Park station is about 220 m away, Holloway Road about 390 m and Arsenal about 520 m.",
       "status": "open",
       "photos": []
+    },
+    {
+      "slug": "korean-bbq-house-finsbury",
+      "name": "Korean BBQ House",
+      "kind": "restaurant",
+      "destination_path": "united-kingdom/england/london/islington/finsbury",
+      "address": "105-107 Whitecross Street, London EC1Y 8JD",
+      "summary": "Korean BBQ House stands at 105-107 Whitecross Street in Finsbury. The operator's own site describes built-in tabletop grills, on which guests cook fresh meat and seafood through the meal rather than take everything pre-cooked from the kitchen. The published hours are noon to 9pm Monday to Thursday, 3pm to 10pm Friday, noon to 10pm Saturday and noon to 9pm Sunday.",
+      "history": "The EC1Y postcode sector falls in Islington, and the City of London boundary crosses Whitecross Street to the south, near Errol Street. The operator's own site scopes the brand to Barbican and Farringdon.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "kalbi-korean-bbq-clerkenwell",
+      "name": "Kalbi Korean BBQ",
+      "kind": "restaurant",
+      "destination_path": "united-kingdom/england/london/islington/clerkenwell",
+      "address": "Unit 1, Rosebery Court, 36A Rosebery Avenue, London EC1R 5HP",
+      "summary": "Kalbi Korean BBQ occupies Unit 1 of Rosebery Court at 36A Rosebery Avenue in Clerkenwell. Its own homepage states that the Korean BBQ is grilled at the table, and describes the house as specialising in Korean table barbecue. The published hours are 6pm to 10.30pm Monday to Thursday and 5pm to 11pm Friday to Sunday.",
+      "history": "",
+      "status": "open",
+      "photos": []
     }
   ],
   "links": [
@@ -357,6 +379,18 @@
       "name": "Emirates Stadium tour",
       "place_slug": "emirates-stadium-islington",
       "note": "A self-guided route through both dressing rooms, the tunnel and pitchside with Arsenal Museum entry included; adult tickets from £34."
+    },
+    {
+      "kind": "food",
+      "name": "Korean BBQ House",
+      "place_slug": "korean-bbq-house-finsbury",
+      "note": "105-107 Whitecross Street, Finsbury. Built-in tabletop grills let guests cook fresh meat and seafood through the meal; noon to 9pm Monday to Thursday."
+    },
+    {
+      "kind": "food",
+      "name": "Kalbi Korean BBQ",
+      "place_slug": "kalbi-korean-bbq-clerkenwell",
+      "note": "Unit 1, Rosebery Court, 36A Rosebery Avenue. Its own homepage states that the Korean BBQ is grilled at the table; 6pm to 10.30pm Monday to Thursday."
     }
   ]
 }

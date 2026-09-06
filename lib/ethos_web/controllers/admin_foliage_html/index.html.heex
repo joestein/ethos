@@ -1,0 +1,33 @@
+<div class="mx-auto max-w-3xl px-4 py-10">
+  <h1 class="text-2xl font-bold">Field notes</h1>
+  <p class="mt-2 text-sm text-zinc-600">
+    The forecast numbers are frozen. This is where the season gets recorded.
+  </p>
+
+  <.simple_form :let={f} for={@changeset} action={~p"/admin/foliage/notes"} class="mt-6">
+    <.input field={f[:scope]} type="select" label="Scope" options={["statewide", "route"]} />
+    <.input
+      field={f[:ref]}
+      type="select"
+      label="Route (route scope only)"
+      options={[{"—", ""} | Enum.map(@routes, &{&1.name, &1.slug})]}
+    />
+    <.input field={f[:published_on]} type="date" label="Date" />
+    <.input field={f[:body]} type="textarea" label="Note" rows="4" />
+    <:actions>
+      <.button>Publish note</.button>
+    </:actions>
+  </.simple_form>
+
+  <ul class="mt-10 space-y-4">
+    <li :for={note <- @notes} class="rounded-xl border p-4">
+      <p class="text-xs uppercase tracking-wide text-zinc-500">
+        {note.scope}{if note.ref, do: " · #{note.ref}"} · {Calendar.strftime(
+          note.published_on,
+          "%B %-d, %Y"
+        )}
+      </p>
+      <p class="mt-1 text-sm">{note.body}</p>
+    </li>
+  </ul>
+</div>

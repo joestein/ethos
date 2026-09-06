@@ -100,6 +100,23 @@ defmodule EthosWeb.SitemapControllerTest do
     assert body =~ url(~p"/g/#{with_photos.slug}/photos")
     refute body =~ url(~p"/g/#{without_photos.slug}/photos")
   end
+
+  describe "foliage URLs" do
+    test "lists the nine foliage pages", %{conn: conn} do
+      xml = conn |> get(~p"/sitemap.xml") |> response(200)
+
+      assert xml =~ "<loc>http://localhost:4002/foliage</loc>"
+      assert xml =~ "<loc>http://localhost:4002/foliage/hartford-west</loc>"
+
+      foliage_urls = Regex.scan(~r{<loc>[^<]*/foliage[^<]*</loc>}, xml)
+      assert length(foliage_urls) == 9
+    end
+
+    test "never lists a week variant", %{conn: conn} do
+      xml = conn |> get(~p"/sitemap.xml") |> response(200)
+      refute xml =~ "?week="
+    end
+  end
 end
 
 defmodule EthosWeb.SitemapRosterTest do

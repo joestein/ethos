@@ -263,6 +263,28 @@
       "history": "Adolph Sutro donated 13 acres at Parnassus Heights, at the base of the hill now called Mount Sutro, and the Affiliated Colleges buildings opened in the fall of 1898. UC Hospital followed in 1917 with 225 beds, the Clinics Building in 1934, the Langley Porter Clinic in 1942, the Herbert C. Moffitt Hospital in 1955, the Guy S. Millberry Union in 1958 and the Kalmanovitz Library in 1990.",
       "status": "open",
       "photos": []
+    },
+    {
+      "slug": "kogi-gogi-inner-sunset",
+      "name": "Kogi Gogi",
+      "kind": "restaurant",
+      "destination_path": "united-states/california/san-francisco/inner-sunset",
+      "address": "1358 9th Avenue, San Francisco, CA 94122",
+      "summary": "Kogi Gogi is at 1358 9th Avenue, at Irving Street. Diners grill bulgogi, galbi and seafood at the table themselves, and the house all-you-can-eat special runs at $31.99 from Monday to Thursday. No source states its opening hours, so none are given here.",
+      "history": "",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "umma-inner-sunset",
+      "name": "Um.ma",
+      "kind": "restaurant",
+      "destination_path": "united-states/california/san-francisco/inner-sunset",
+      "address": "1220 9th Avenue, San Francisco, CA 94122",
+      "summary": "Um.ma is at 1220 9th Avenue. Its tabletop grills are out on the back patio, which takes reservations, and Kurobuta pork belly and LA-style galbi are ordered by the pound and cooked at the table there under string lights. The indoor dining room serves Korean dishes that are not grilled at the table.",
+      "history": "",
+      "status": "open",
+      "photos": []
     }
   ],
   "entries": [
@@ -349,6 +371,18 @@
       "name": "15th Avenue Steps",
       "place_slug": "fifteenth-avenue-steps-inner-sunset",
       "note": "A Recreation and Park mini park of 0.51 acres at 1060 Kirkham Street, a City property distinct from the mosaic stairway on Moraga Street."
+    },
+    {
+      "kind": "food",
+      "name": "Kogi Gogi",
+      "place_slug": "kogi-gogi-inner-sunset",
+      "note": "At 1358 9th Avenue, at Irving Street, where diners grill bulgogi, galbi and seafood at the table; the house special is $31.99 from Monday to Thursday."
+    },
+    {
+      "kind": "food",
+      "name": "Um.ma",
+      "place_slug": "umma-inner-sunset",
+      "note": "At 1220 9th Avenue, where the tabletop grills are out on the back patio, which takes reservations; the indoor room serves dishes that are not grilled at the table."
     }
   ],
   "links": [

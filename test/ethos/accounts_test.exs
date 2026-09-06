@@ -97,7 +97,7 @@ defmodule Ethos.AccountsTest do
   describe "change_user_registration/2" do
     test "returns a changeset" do
       assert %Ecto.Changeset{} = changeset = Accounts.change_user_registration(%User{})
-      assert changeset.required == [:password, :email]
+      assert changeset.required == [:password, :username, :email]
     end
 
     test "allows fields to be set" do
@@ -519,11 +519,229 @@ defmodule Ethos.AccountsTest do
       user = user_fixture()
       refute Accounts.admin?(user)
     end
+
+    test "returns false for a banned account even with the admin email" do
+      user =
+        %{email: "cryptcom@gmail.com"}
+        |> user_fixture()
+        |> Ecto.Changeset.change(banned_at: DateTime.utc_now() |> DateTime.truncate(:second))
+        |> Repo.update!()
+
+      refute Accounts.admin?(user)
+    end
   end
 
   describe "inspect/2 for the User module" do
     test "does not include password" do
       refute inspect(%User{password: "123456"}) =~ "password: \"123456\""
+    end
+  end
+
+  describe "register_user/1 username validation" do
+    import Ethos.AccountsFixtures
+
+    test "requires a username" do
+      {:error, changeset} =
+        Ethos.Accounts.register_user(%{
+          email: unique_user_email(),
+          password: valid_user_password()
+        })
+
+      assert %{username: ["can't be blank"]} = errors_on(changeset)
+    end
+
+    test "rejects a username that is too short or too long" do
+      {:error, short} =
+        Ethos.Accounts.register_user(valid_user_attributes(username: "ab"))
+
+      {:error, long} =
+        Ethos.Accounts.register_user(valid_user_attributes(username: String.duplicate("a", 21)))
+
+      assert %{username: ["should be at least 3 character(s)"]} = errors_on(short)
+      assert %{username: ["should be at most 20 character(s)"]} = errors_on(long)
+    end
+
+    test "rejects characters outside a-z, 0-9 and underscore" do
+      {:error, changeset} =
+        Ethos.Accounts.register_user(valid_user_attributes(username: "joe stein"))
+
+      assert %{username: ["can only contain lowercase letters, numbers and underscores"]} =
+               errors_on(changeset)
+    end
+
+    test "rejects a reserved username" do
+      {:error, changeset} =
+        Ethos.Accounts.register_user(valid_user_attributes(username: "admin"))
+
+      assert %{username: ["is reserved"]} = errors_on(changeset)
+    end
+
+    test "rejects the admin's public username — an ordinary user cannot register as the admin" do
+      {:error, changeset} =
+        Ethos.Accounts.register_user(valid_user_attributes(username: "buoewe"))
+
+      assert %{username: ["is reserved"]} = errors_on(changeset)
+    end
+
+    test "downcases and trims before storing" do
+      {:ok, user} =
+        Ethos.Accounts.register_user(valid_user_attributes(username: "  Voyager  "))
+
+      assert user.username == "voyager"
+    end
+
+    test "rejects a username already taken in a different case" do
+      taken = user_fixture(username: "voyager")
+
+      {:error, changeset} =
+        Ethos.Accounts.register_user(valid_user_attributes(username: "VOYAGER"))
+
+      assert %{username: ["has already been taken"]} = errors_on(changeset)
+      assert taken.username == "voyager"
+    end
+
+    test "a newly registered user is not provisional" do
+      {:ok, user} = Ethos.Accounts.register_user(valid_user_attributes())
+      refute user.username_provisional
+    end
+  end
+
+  describe "update_user_username/2" do
+    import Ethos.AccountsFixtures
+
+    test "sets the username and clears the provisional flag" do
+      user = user_fixture()
+      {:ok, updated} = Ethos.Accounts.update_user_username(user, %{"username" => "voyager"})
+
+      assert updated.username == "voyager"
+      refute updated.username_provisional
+    end
+
+    test "applies the same rules as registration" do
+      user = user_fixture()
+
+      assert {:error, changeset} =
+               Ethos.Accounts.update_user_username(user, %{"username" => "admin"})
+
+      assert %{username: ["is reserved"]} = errors_on(changeset)
+    end
+
+    test "rejects the admin's public username" do
+      user = user_fixture()
+
+      assert {:error, changeset} =
+               Ethos.Accounts.update_user_username(user, %{"username" => "buoewe"})
+
+      assert %{username: ["is reserved"]} = errors_on(changeset)
+    end
+
+    test "rejects a username someone else already holds" do
+      user_fixture(username: "voyager")
+      other = user_fixture()
+
+      assert {:error, changeset} =
+               Ethos.Accounts.update_user_username(other, %{"username" => "voyager"})
+
+      assert %{username: ["has already been taken"]} = errors_on(changeset)
+    end
+  end
+
+  describe "needs_username?/1" do
+    import Ethos.AccountsFixtures
+
+    test "is false for a user who chose their own name" do
+      refute Ethos.Accounts.needs_username?(user_fixture())
+    end
+
+    test "is true for a backfilled user" do
+      user = user_fixture()
+      provisional = %{user | username_provisional: true}
+      assert Ethos.Accounts.needs_username?(provisional)
+    end
+
+    test "is false for nobody" do
+      refute Ethos.Accounts.needs_username?(nil)
+    end
+  end
+
+  describe "list_users_for_moderation/1" do
+    import Ethos.GuidesFixtures
+
+    test "returns every user with zero counts when nobody has reviewed" do
+      user = user_fixture()
+
+      assert [row] = Ethos.Accounts.list_users_for_moderation()
+      assert row.user.id == user.id
+      assert row.review_count == 0
+      assert row.revoked_count == 0
+    end
+
+    test "counts a user's reviews and how many were revoked" do
+      user = user_fixture()
+      # Pin both guides' author to `user` — otherwise guide_fixture/1 mints
+      # its own author via user_fixture/0 and the assertion below sees three
+      # users instead of one.
+      guide_one = guide_fixture(%{user: user})
+      guide_two = guide_fixture(%{user: user})
+
+      {:ok, _kept} =
+        Ethos.Social.create_review(user, guide_one, %{"rating" => "8", "body" => "Kept."})
+
+      {:ok, gone} =
+        Ethos.Social.create_review(user, guide_two, %{"rating" => "2", "body" => "Gone."})
+
+      gone |> Ecto.Changeset.change(status: "revoked") |> Ethos.Repo.update!()
+
+      assert [row] = Ethos.Accounts.list_users_for_moderation()
+      assert row.review_count == 2
+      assert row.revoked_count == 1
+    end
+
+    test "searches by username" do
+      match = user_fixture(%{username: "findme"})
+      _other = user_fixture(%{username: "somebodyelse"})
+
+      assert [row] = Ethos.Accounts.list_users_for_moderation(search: "findm")
+      assert row.user.id == match.id
+    end
+
+    test "searches by email, case-insensitively" do
+      match = user_fixture(%{email: "Needle@example.com"})
+      _other = user_fixture()
+
+      assert [row] = Ethos.Accounts.list_users_for_moderation(search: "needle")
+      assert row.user.id == match.id
+    end
+
+    test "a plain search with no special characters behaves as before" do
+      match = user_fixture(%{username: "plainsearch"})
+      _other = user_fixture(%{username: "somebodyelse"})
+
+      assert [row] = Ethos.Accounts.list_users_for_moderation(search: "plains")
+      assert row.user.id == match.id
+    end
+
+    test "a literal underscore in the search is not treated as a wildcard" do
+      match = user_fixture(%{username: "foo_bar"})
+      _decoy = user_fixture(%{username: "fooxbar"})
+
+      assert [row] = Ethos.Accounts.list_users_for_moderation(search: "foo_bar")
+      assert row.user.id == match.id
+    end
+
+    test "a literal percent sign in the search is not treated as a wildcard" do
+      match = user_fixture(%{email: "100%off@example.com"})
+      _decoy = user_fixture(%{email: "100xoff@example.com"})
+
+      assert [row] = Ethos.Accounts.list_users_for_moderation(search: "100%off")
+      assert row.user.id == match.id
+    end
+
+    test "an empty search returns everyone" do
+      user_fixture()
+      user_fixture()
+
+      assert length(Ethos.Accounts.list_users_for_moderation(search: "")) == 2
     end
   end
 end

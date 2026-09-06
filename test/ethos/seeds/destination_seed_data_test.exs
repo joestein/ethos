@@ -296,16 +296,15 @@ defmodule Ethos.Seeds.DestinationSeedDataTest do
 
   defp photo_dir(_src), do: nil
 
-  # 9. The corpus must be exactly the thirteen destination pages shipped for
-  #    this rollout — no fewer (an accidental deletion) and no more (an
-  #    unreviewed extra page landing silently, or a fourteenth appearing
-  #    without anyone deciding it should). This is a literal list of the
-  #    thirteen paths, not a count and not a set derived from the files this
-  #    test happens to find on disk: a derived expectation passes no matter
-  #    which files exist, which is exactly the vacuity this assertion exists
-  #    to prevent. Sourced from each file's own "path" field rather than its
-  #    filename, since the filename-to-path mapping is not reversible at all
-  #    any more — new-york-manhattan.json is keyed on
+  # 9. The corpus must be exactly the destination pages shipped so far — no
+  #    fewer (an accidental deletion) and no more (an unreviewed extra page
+  #    landing silently, or one appearing without anyone deciding it should).
+  #    This is a literal list of the paths, not a count and not a set derived
+  #    from the files this test happens to find on disk: a derived expectation
+  #    passes no matter which files exist, which is exactly the vacuity this
+  #    assertion exists to prevent. Sourced from each file's own "path" field
+  #    rather than its filename, since the filename-to-path mapping is not
+  #    reversible at all any more — new-york-manhattan.json is keyed on
   #    "united-states/new-york/new-york-city/manhattan" — and the field is what
   #    the app actually serves.
   #
@@ -313,7 +312,18 @@ defmodule Ethos.Seeds.DestinationSeedDataTest do
   #    carried until Task 13. Each was taken from the node whose `legacy_paths`
   #    held the old key, so the curated prose and photos land on the hub the old
   #    URL now 301s to.
+  #
+  #    California and Illinois joined here alongside the Korean BBQ collection,
+  #    and arrived keyed on the bare "california"/"illinois" forms — which are
+  #    now `legacy_paths` of the real nodes, the exact defect ruling C24 fixed.
+  #    `DataDestination.upsert!/1` raises on such a key, so they are re-keyed to
+  #    their node paths here. Washington did not get a curated file, and the
+  #    reason is simply that no page needed one: a destination record is
+  #    optional decoration on a hub, and `united-states/washington` already
+  #    exists in the roster with "washington" among its legacy paths, so
+  #    /destinations/washington resolves with or without a curated overlay.
   @destination_roster ~w(
+    united-states/california
     united-states/connecticut
     united-states/connecticut/fairfield-county
     united-states/connecticut/hartford-county
@@ -323,6 +333,7 @@ defmodule Ethos.Seeds.DestinationSeedDataTest do
     united-states/connecticut/new-london-county
     united-states/connecticut/tolland-county
     united-states/connecticut/windham-county
+    united-states/illinois
     united-states/new-york
     united-states/new-york/new-york-city/brooklyn
     united-states/new-york/new-york-city/manhattan
@@ -334,6 +345,7 @@ defmodule Ethos.Seeds.DestinationSeedDataTest do
   # below, which resolves each of these through the roster's `legacy_paths` and
   # checks the file landed on the node that owns it.
   @old_key_by_file %{
+    "california.json" => "california",
     "connecticut.json" => "connecticut",
     "connecticut-fairfield-county.json" => "connecticut/fairfield-county",
     "connecticut-hartford-county.json" => "connecticut/hartford-county",
@@ -343,6 +355,7 @@ defmodule Ethos.Seeds.DestinationSeedDataTest do
     "connecticut-new-london-county.json" => "connecticut/new-london-county",
     "connecticut-tolland-county.json" => "connecticut/tolland-county",
     "connecticut-windham-county.json" => "connecticut/windham-county",
+    "illinois.json" => "illinois",
     "new-york.json" => "new-york",
     "new-york-brooklyn.json" => "new-york/brooklyn",
     "new-york-manhattan.json" => "new-york/manhattan",

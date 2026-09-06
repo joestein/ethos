@@ -242,6 +242,28 @@
       "history": "Wells Coates designed the block of 36 flats between 1929 and 1932 and it was built in 1933–34 for Jack and Molly Pritchard, using the Pritchards' Venesta plywood products (NHLE 1379280). It is a monolithic reinforced-concrete structure with a cement wash applied direct to the concrete, a flat roof and metal windows, of four storeys plus a penthouse. Each floor held six one-room 'minimum' flats, two of them with balconies, plus a studio with a balcony and a one-bedroom flat, with a penthouse for the Pritchards and a separate one for their children on the roof. The flats were conceived as a cheap but independent alternative to lodgings, with space-saving fitted furniture and closets, and most keep their original Coates fitted kitchens, dressing rooms and bathrooms. Marcel Breuer and F R S Yorke converted the ground-floor kitchens and staff flat into the Isobar in 1937. The building stands in the Parkhill Conservation Area, designated by Camden as local planning authority, which carries no list entry number.",
       "status": "open",
       "photos": []
+    },
+    {
+      "slug": "kimchee-kings-cross",
+      "name": "Kimchee, Pancras Square",
+      "kind": "restaurant",
+      "destination_path": "united-kingdom/england/london/camden/king-s-cross",
+      "address": "2 Pancras Square, London N1C 4AG",
+      "summary": "Kimchee occupies 2 Pancras Square at King's Cross, and its branch page separates two rooms. The downstairs Table BBQ room seats guests in semi-private booths with smokeless built-in grills at each table, so the cooking is done at the table. The ground floor and terrace are cooked in an open-plan kitchen on a traditional charcoal grill instead.",
+      "history": "The branch page describes the Table BBQ room as newly opened. Kitchen grilling is the usual service at the chain's other rooms.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "superstar-bbq-st-giles",
+      "name": "SuperStar BBQ",
+      "kind": "restaurant",
+      "destination_path": "united-kingdom/england/london/camden/st-giles",
+      "address": "4 Central Saint Giles Piazza, London WC2H 8AB",
+      "summary": "SuperStar BBQ is at 4 Central Saint Giles Piazza in St Giles. Its own About page describes a Korean restaurant specialising in table BBQ, with a menu written for the grill at the table and side dishes chosen to accompany the grill dishes. The published hours are noon to 3pm and 5pm to 11pm, Monday to Friday.",
+      "history": "",
+      "status": "open",
+      "photos": []
     }
   ],
   "links": [
@@ -363,6 +385,18 @@
       "name": "Isokon Building",
       "place_slug": "isokon-building-belsize-park",
       "note": "Wells Coates's 36 reinforced-concrete flats of 1933–34 on Lawn Road, Grade I listed, NHLE 1379280, lived in and seen from the street."
+    },
+    {
+      "kind": "food",
+      "name": "Kimchee, Pancras Square",
+      "place_slug": "kimchee-kings-cross",
+      "note": "2 Pancras Square. The downstairs Table BBQ room has smokeless built-in grills at each table; the ground floor is cooked in the open-plan kitchen."
+    },
+    {
+      "kind": "food",
+      "name": "SuperStar BBQ",
+      "place_slug": "superstar-bbq-st-giles",
+      "note": "4 Central Saint Giles Piazza. Its About page describes a restaurant specialising in table BBQ, with a menu written for the grill at the table."
     }
   ]
 }

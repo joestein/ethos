@@ -12,6 +12,15 @@ defmodule EthosWeb.UserSettingsLive do
 
     <div class="space-y-12 divide-y">
       <div>
+        <.header>Username</.header>
+        <p class="mt-2 text-sm text-zinc-600">
+          Your public username is <strong>{@current_user.username}</strong>.
+        </p>
+        <.link href={~p"/users/username"} class="text-sm font-semibold underline">
+          Change your username
+        </.link>
+      </div>
+      <div>
         <.simple_form
           for={@email_form}
           id="email_form"

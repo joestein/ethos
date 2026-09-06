@@ -14,6 +14,7 @@ defmodule Ethos.Seeds.GuideRunner do
   alias Ethos.Repo
   alias Ethos.Accounts
   alias Ethos.Accounts.User
+  alias Ethos.Accounts.Username
   alias Ethos.Guides
   alias Ethos.Guides.{Guide, Entry}
   alias Ethos.Places
@@ -65,8 +66,20 @@ defmodule Ethos.Seeds.GuideRunner do
       nil ->
         if Application.get_env(:ethos, :env) in [:dev, :test] do
           password = :crypto.strong_rand_bytes(24) |> Base.encode64()
-          {:ok, user} = Accounts.register_user(%{email: email, password: password})
-          user
+
+          attrs = %{
+            email: email,
+            password: password,
+            username: Username.derive_from_email(email)
+          }
+
+          case Accounts.register_user(attrs) do
+            {:ok, user} ->
+              user
+
+            {:error, changeset} ->
+              raise "could not auto-create owner account #{email}: #{inspect(changeset.errors)}"
+          end
         else
           raise "owner account #{email} not found — register it first"
         end

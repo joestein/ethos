@@ -79,6 +79,33 @@ defmodule Ethos.Guides do
     )
   end
 
+  @doc """
+  Published guide counts per country hub — the roots of the destination tree.
+
+  Replaces `list_states/0`, which grouped on the `state`/`state_slug` columns.
+  Grouping on the ROOTS specifically, not on some other tier, is what keeps the
+  homepage honest: `/destinations` lists the roots and nothing else, so a
+  homepage that counted anything else would link to a page showing a different
+  number of things — the drift main's own homepage test was written to pin.
+
+  A guide's country is the first segment of its node's path, so the whole
+  subtree rolls up in one grouped query rather than a `descendant_paths/1`
+  expansion per root. A country with no published guide is simply absent, the
+  same way a state with no guide was absent before.
+  """
+  def list_country_hubs do
+    Repo.all(
+      from g in Guide,
+        join: d in assoc(g, :destination_node),
+        join: c in Ethos.Destinations.Destination,
+        on: c.path == fragment("split_part(?, '/', 1)", d.path),
+        where: g.status == "published",
+        group_by: [c.id, c.name, c.slug, c.path],
+        select: %{name: c.name, slug: c.slug, path: c.path, count: count(g.id)},
+        order_by: [desc: count(g.id), asc: c.name]
+    )
+  end
+
   def increment_view_count(%Guide{id: id}) do
     from(g in Guide, where: g.id == ^id)
     |> Repo.update_all(inc: [view_count: 1])

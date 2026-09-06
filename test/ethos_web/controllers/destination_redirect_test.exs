@@ -71,6 +71,24 @@ defmodule EthosWeb.DestinationRedirectTest do
       assert html =~ "Chicago"
       refute html =~ "Cook County"
     end
+
+    # The same class from the Korean BBQ merge, and the more interesting half:
+    # "Puget Sound" and "South Bay" are marketing regions, not counties, so
+    # `/destinations/washington/puget-sound` was a county hub for a body of
+    # water. No node is invented for either — the redirect points at the real
+    # city the guide covers, and the region name appears nowhere on it.
+    test "a county hub for a region that is not a county 301s to the real city", %{conn: conn} do
+      assert get(conn, ~p"/destinations/washington/puget-sound") |> redirected_to(301) ==
+               "/destinations/united-states/washington/seattle"
+
+      assert get(build_conn(), ~p"/destinations/california/south-bay") |> redirected_to(301) ==
+               "/destinations/united-states/california/santa-clara"
+    end
+
+    test "no Puget Sound or South Bay node was invented" do
+      refute Ethos.Destinations.get_by_path("united-states/washington/puget-sound")
+      refute Ethos.Destinations.get_by_path("united-states/california/south-bay")
+    end
   end
 
   # The old router's third route was `get "/destinations/:slug"` — one hub per
@@ -91,7 +109,28 @@ defmodule EthosWeb.DestinationRedirectTest do
        "/destinations/united-states/new-york/new-york-city/queens/astoria"},
       {"/destinations/trastevere", "/destinations/italy/lazio/rome/trastevere"},
       {"/destinations/lewisham", "/destinations/united-kingdom/england/london/lewisham"},
-      {"/destinations/chicago", "/destinations/united-states/illinois/chicago"}
+      {"/destinations/chicago", "/destinations/united-states/illinois/chicago"},
+
+      # The Korean BBQ corpus, merged after the tree landed and still written
+      # against the old scheme, so its ten guides published ten more of these.
+      # Four of them are the ones no rule could have derived: the guide's
+      # destination label names a dish or a market area rather than a place, so
+      # the node each lands on was a judgement — see @korean_bbq_guides in
+      # `mix ethos.migrate_geo`. Pinned here because a wrong judgement is
+      # invisible otherwise: the redirect still returns 301 and still lands on
+      # a real hub, just the wrong one.
+      {"/destinations/puget-sound", "/destinations/united-states/washington/seattle"},
+      {"/destinations/south-bay", "/destinations/united-states/california/santa-clara"},
+      {"/destinations/chicago-north-suburbs", "/destinations/united-states/illinois/niles"},
+      {"/destinations/brooklyn-korean-bbq",
+       "/destinations/united-states/new-york/new-york-city/brooklyn"},
+      {"/destinations/manhattan-korean-bbq",
+       "/destinations/united-states/new-york/new-york-city/manhattan"},
+      {"/destinations/queens-korean-bbq",
+       "/destinations/united-states/new-york/new-york-city/queens"},
+      {"/destinations/london-korean-bbq", "/destinations/united-kingdom/england/london"},
+      {"/destinations/san-francisco-korean-bbq",
+       "/destinations/united-states/california/san-francisco"}
     ]
 
     test "a town slug 301s to the node that holds it now", %{conn: conn} do
@@ -128,7 +167,9 @@ defmodule EthosWeb.DestinationRedirectTest do
     @lands_on [
       {"/destinations/illinois/cook-county", "united-states/illinois/chicago"},
       {"/destinations/woodbury", "united-states/connecticut/litchfield-county/woodbury"},
-      {"/destinations/lewisham", "united-kingdom/england/london/lewisham"}
+      {"/destinations/lewisham", "united-kingdom/england/london/lewisham"},
+      {"/destinations/puget-sound", "united-states/washington/seattle"},
+      {"/destinations/south-bay", "united-states/california/santa-clara"}
     ]
 
     test "the corpus really publishes a guide on the node each one points at", %{conn: conn} do

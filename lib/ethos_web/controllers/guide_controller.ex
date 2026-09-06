@@ -45,12 +45,44 @@ defmodule EthosWeb.GuideController do
       page_og: og,
       page_meta_description: meta_description,
       page_canonical: url(~p"/g/#{guide.slug}"),
-      json_ld: json_ld
+      json_ld: json_ld,
+      foliage: foliage_assign(guide)
     )
   end
 
   defp template_for(%Guide{tier: "town-page"}), do: :town_page
   defp template_for(%Guide{}), do: :show
+
+  @doc """
+  Foliage context for a Connecticut town guide, or nil.
+
+  Seasonal: out of season the guides should not carry a foliage block at all,
+  so this returns nil rather than the template hiding a populated one.
+
+  "Connecticut town" is now the guide's node being under
+  `Ethos.Foliage.connecticut_path/0`, and the town slug is that node's own
+  slug rather than `destination_slug`, which is derived from free text. A guide
+  with no node, or one outside Connecticut, falls straight out of the `with`.
+  """
+  def foliage_assign(%Guide{} = guide, today \\ Date.utc_today()) do
+    with true <- Ethos.Foliage.connecticut?(guide.destination_node),
+         true <- Ethos.Foliage.in_season?(today),
+         town when not is_nil(town) <- Ethos.Foliage.town(guide.destination_node.slug) do
+      week = Ethos.Foliage.current_week_index(today)
+
+      %{
+        town: town,
+        week: week,
+        stage: Ethos.Foliage.stage_at(town, week),
+        route:
+          Enum.find(Ethos.Foliage.routes(), fn route ->
+            Enum.any?(route.stops, &(&1.town_slug == town.slug))
+          end)
+      }
+    else
+      _ -> nil
+    end
+  end
 
   # `image` comes from the `og_image_path` that `ensure_og_image/1` already
   # resolved above — so a guide whose stored PNG went missing publishes the

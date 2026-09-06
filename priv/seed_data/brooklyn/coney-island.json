@@ -264,6 +264,17 @@
       "history": "It survived a fire in 2009 and Hurricane Sandy damage in 2012. As of May 2024 the owning family was reported to be seeking a buyer.",
       "status": "open",
       "photos": []
+    },
+    {
+      "slug": "kpot-coney-island",
+      "name": "KPOT Korean BBQ & Hot Pot — Coney Island",
+      "kind": "restaurant",
+      "destination_path": "united-states/new-york/new-york-city/brooklyn/coney-island",
+      "address": "1217 Surf Avenue, Brooklyn, NY 11224",
+      "summary": "A branch of the KPOT all-you-can-eat chain at 1217 Surf Avenue, at the West Brighton edge of Coney Island, where a grill is set into the table with an inset hot-pot burner alongside it and guests grill their own cuts at the table. Published hours run 12:30pm to 11pm Monday to Thursday and 12:30pm to midnight Friday to Sunday, with the last seating one hour before closing.",
+      "history": "The other Brooklyn branch under the same name is at 430 Albee Square West in Downtown Brooklyn.",
+      "status": "open",
+      "photos": []
     }
   ],
   "entries": [
@@ -338,6 +349,12 @@
       "name": "Totonno's Pizzeria Napolitana",
       "place_slug": "totonnos-pizzeria-napolitana",
       "note": "Coal-oven pizza on Neptune Avenue since 1924, lately on much reduced weekend hours."
+    },
+    {
+      "kind": "food",
+      "name": "KPOT Korean BBQ & Hot Pot — Coney Island",
+      "place_slug": "kpot-coney-island",
+      "note": "All-you-can-eat Korean barbecue and hot pot at 1217 Surf Avenue, with a grill set into the table. Last seating is an hour before closing."
     }
   ],
   "links": [

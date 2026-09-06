@@ -147,6 +147,25 @@ ExUnit.start()
 # off with it, so the tag names nothing and excluding it would only hide a
 # future typo. The single-call rule above still binds: this list is edited in
 # place, never by adding a second ExUnit.configure/1.
+#
+# Ethos.Seeds.KoreanBbqSeedDataTest is the gate every Korean BBQ wave must
+# pass, written before the corpus it guards. Over a priv/seed_data/korean_bbq/
+# holding only .gitkeep, the ten-guide and 100-restaurant assertions fail by
+# construction.
+#
+# Removed in two stages, both inside the Korean BBQ plan:
+#
+#   * Task 5, which lands the first guides, deletes the `@moduletag`.
+#   * Task 8, which lands the collection and the tenth guide, deletes the
+#     `@tag` and this entry.
+#
+#     mix test --include pending_korean_bbq
+#
+# :pending_korean_bbq removed by Task 8, which landed the collection and
+# brought the corpus to all ten guides. Both `@tag :pending_korean_bbq` lines
+# came off with it, so the tag now names nothing and excluding it would only
+# hide a future typo. The single-call rule above still binds: this list is
+# edited in place, never by adding a second ExUnit.configure/1.
 ExUnit.configure(exclude: [:pending_wave, :pending_bronx])
 
 Ecto.Adapters.SQL.Sandbox.mode(Ethos.Repo, :manual)

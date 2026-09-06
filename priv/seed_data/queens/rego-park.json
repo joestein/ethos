@@ -208,6 +208,17 @@
       "history": "The Long Island Rail Road's Rego Park station is gone. Before it was built, two former stations near the junction were named Matawok, for the Matawok Land Company, \"which built the neighborhood surrounding the junction known at the time as 'Forest Hills West.'\"",
       "status": "open",
       "photos": []
+    },
+    {
+      "slug": "iron-age-rego-park",
+      "name": "Iron Age Korean Steakhouse",
+      "kind": "restaurant",
+      "destination_path": "united-states/new-york/new-york-city/queens/rego-park",
+      "address": "61-35 Junction Boulevard, Rego Park, NY 11374",
+      "summary": "Iron Age Korean Steakhouse is at 61-35 Junction Boulevard, the Rego Center address. Diners grill their own meat at the table, with staff on hand to help with the cooking.",
+      "history": "Rooms under the same name trade at 1265 North Milwaukee Avenue in Chicago's Wicker Park and at 4513 West Lake Avenue in Glenview, Illinois. The restaurant lists hours of 11am to 10:30pm.",
+      "status": "open",
+      "photos": []
     }
   ],
   "entries": [
@@ -264,6 +275,12 @@
       "name": "Lost Battalion Hall Recreation Center",
       "place_slug": "lost-battalion-hall-recreation-center",
       "note": "93-29 Queens Boulevard. NYC Parks reports it closed due to construction, so check the agency's Capital Tracker before going."
+    },
+    {
+      "kind": "food",
+      "name": "Iron Age Korean Steakhouse",
+      "place_slug": "iron-age-rego-park",
+      "note": "61-35 Junction Boulevard, the Rego Center address. Diners grill their own meat at the table, with staff on hand to help."
     }
   ],
   "links": [

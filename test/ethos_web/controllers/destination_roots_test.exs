@@ -1,7 +1,7 @@
 defmodule EthosWeb.DestinationRootsTest do
   @moduledoc """
   `/destinations` under the combination production actually seeds: the roster
-  **and** the thirteen curated overlays.
+  **and** the fifteen curated overlays.
 
   This is the one combination in which consequence (3) of the Task 13 defect
   appeared, and until this test nothing automated exercised it. The curated
@@ -32,7 +32,7 @@ defmodule EthosWeb.DestinationRootsTest do
     # Non-vacuity: if the curated corpus were ever emptied this whole module
     # would degrade into a roster-only test, which is the half that never had
     # the bug.
-    assert length(files) == 13
+    assert length(files) == 15
 
     Enum.each(files, &Ethos.Seeds.DataDestination.upsert!/1)
 

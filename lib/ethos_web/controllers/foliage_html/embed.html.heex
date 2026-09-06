@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="robots" content="noindex, follow" />
+    <title>Connecticut Foliage Forecast</title>
+    <style>
+      body { margin: 0; font-family: Georgia, serif; color: #27272a; background: #fff; }
+      .wrap { padding: 8px; }
+      .credit { margin: 6px 0 0; font-size: 12px; color: #52525b; }
+      .credit a { color: #27272a; }
+      svg { width: 100%; height: auto; display: block; }
+    </style>
+  </head>
+  <body>
+    <div class="wrap">
+      {Ethos.Foliage.Svg.map(@week)}
+      <p class="credit">
+        <a href={url(~p"/foliage")}>Connecticut Foliage Forecast · Ethos</a>
+        — {Ethos.Foliage.attribution()}
+      </p>
+    </div>
+  </body>
+</html>
