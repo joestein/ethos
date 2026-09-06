@@ -3,7 +3,6 @@
 @import "tailwindcss/utilities";
 
 /* This file is for your main application CSS */
-
 /* Seasonal palettes. Bare RGB triples, not rgb() — Tailwind interpolates
    <alpha-value> into these, which is what keeps bg-accent/10 working.
 

@@ -30,12 +30,33 @@ defmodule EthosWeb.SeasonTokensTest do
       ~w(surface surface-raised ink ink-muted line accent accent-ink accent-soft
          positive negative star)
 
-    for season <- ~w(summer autumn winter spring), token <- tokens do
-      assert css =~ "--c-#{token}",
-             "token --c-#{token} is missing entirely"
+    for season <- ~w(summer autumn winter spring) do
+      block = season_block(css, season)
+      assert block, "season #{season} has no :root block"
 
-      assert css =~ ~s([data-season="#{season}"]),
-             "season #{season} has no :root block"
+      # Scoped to the season's own block, not the whole file: a global
+      # `css =~ "--c-#{token}"` search only proves the token exists
+      # *somewhere*, so three seasons keeping a token would mask a fourth
+      # losing it (three-vs-one substring collision, same class of bug as
+      # the utility-selector one below).
+      for token <- tokens do
+        assert block =~ "--c-#{token}",
+               "season #{season} is missing token --c-#{token}"
+      end
+    end
+  end
+
+  # Extracts the declaration body of a season's `:root[data-season="..."]`
+  # rule. Summer's selector is a two-selector list —
+  # `:root,\n:root[data-season="summer"] {` — but in every season the
+  # `[data-season="..."]` selector is what immediately precedes the `{`, so
+  # anchoring there handles summer the same as the single-selector seasons.
+  # Declarations here are flat (no nested `{`), so stopping at the first `}`
+  # after the opening brace is the whole rule body.
+  defp season_block(css, season) do
+    case Regex.run(~r/:root\[data-season="#{season}"\]\s*\{([^}]*)\}/s, css) do
+      [_, body] -> body
+      nil -> nil
     end
   end
 
@@ -50,15 +71,24 @@ defmodule EthosWeb.SeasonTokensTest do
     # Tailwind only emits a utility it has seen used. These are referenced by
     # the safelist, so their absence means the colour mapping did not load.
     #
-    # The selector match requires the exact boundary " {" after the class
-    # name, not a bare substring check: ".bg-surface" is a substring of
+    # The selector match requires a boundary right after the class name, not
+    # a bare substring check: ".bg-surface" is a substring of
     # ".bg-surface-raised", ".bg-accent" is a substring of
     # ".bg-accent-soft"/".bg-accent\/10", and ".text-ink" is a substring of
     # ".text-ink-muted". A plain `css =~ ".#{utility}"` check would still
     # pass with e.g. "bg-surface" missing from the safelist, as long as
     # "bg-surface-raised" (a sibling entry) is still present.
+    #
+    # The boundary is "optional whitespace then {", not a literal " {": this
+    # module's own `setup_all` always runs the non-minified `mix
+    # assets.build`, but `mix assets.deploy` (and any future module reading
+    # this same file) minifies, which drops the space before the brace
+    # (`.bg-surface{` instead of `.bg-surface {`). A hardcoded " {" would
+    # fail open there — every utility assertion silently false-negatives
+    # against a minified artifact instead of catching the real defect.
     for utility <- ~w(bg-surface text-ink border-line bg-accent text-ink-muted) do
-      assert css =~ ".#{utility} {", "utility .#{utility} was never generated"
+      assert css =~ ~r/\.#{Regex.escape(utility)}\s*\{/,
+             "utility .#{utility} was never generated"
     end
   end
 
