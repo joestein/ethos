@@ -43,9 +43,13 @@ defmodule Ethos.Release do
 
   # Runs after the guide seeds, not before: Collections.upsert_collection!/1
   # raises on an item whose guide slug has no row yet. That now includes
-  # seed_ballparks/1 — MlbBallparksCollection names all thirty ballpark guides,
-  # so seed_collections/0 is no longer satisfiable by the Connecticut steps
-  # alone.
+  # seed_ballparks/1 — MlbBallparksCollection names all thirty ballpark
+  # guides — and, as of the four scenic-byway collections below,
+  # seed_connecticut_expansion/1 (step 3): all twenty of their town guides
+  # come from that JSON directory, not from the CT-5 code modules. On a
+  # partial rebuild that skips or reorders step 3, the four collections above
+  # seed fine and the byways raise partway through, leaving some of them
+  # seeded and this step aborted.
   def seed_collections do
     load_app()
     Application.ensure_all_started(@app)
@@ -59,6 +63,10 @@ defmodule Ethos.Release do
 
     for mod <- collections do
       collection = mod.upsert!()
+      IO.puts("Seeded collection: /c/#{collection.slug}")
+    end
+
+    for collection <- Ethos.Seeds.ScenicBywaysCollections.upsert_all!() do
       IO.puts("Seeded collection: /c/#{collection.slug}")
     end
   end
@@ -177,6 +185,19 @@ defmodule Ethos.Release do
       |> MapSet.new()
 
     Ethos.Foliage.Dataset.warn_dangling_guides(published)
+  end
+
+  @doc """
+  Writes the town-adjacency `nearby` edges.
+
+  Production runs a release, not Mix, so this is the only way to invoke the
+  link builder after a deploy.
+  """
+  def adjacency_links do
+    load_app()
+    Application.ensure_all_started(@app)
+
+    :ok = Ethos.Adjacency.LinkBuilder.build!()
   end
 
   def seed_destinations do
