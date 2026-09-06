@@ -480,19 +480,19 @@
     "verified": false
   },
   {
-    "access": null,
-    "city": null,
-    "county": null,
-    "course": null,
-    "criterion": null,
-    "facility": null,
-    "ranking_edition": null,
-    "ranking_position": null,
-    "ranking_source": null,
-    "second_course": null,
+    "access": "Daily-fee and publicly playable: the course's own booking API, called unauthenticated, returns bookable slots under a rate plan the operator itself names \"Public 18 Holes\". The eleven higher-ranked entries do not qualify. Ranks 2, 8 and 9 are Pinehurst courses labelled \"Public\" by the ranking and excluded by Pinehurst's own terms, which read: \"To play Courses No. 2, 4, 6, 7, 8, 9, 10, or 11, you must be a member or resort guest.\" Tobacco Road publishes no dated rate qualifier — its page states that displayed rates are real-time pricing — so no green fee is publishable for it.",
+    "city": "Sanford",
+    "county": "Lee County",
+    "course": "Tobacco Road Golf Club",
+    "criterion": "ranking",
+    "facility": "Tobacco Road Golf Club",
+    "ranking_edition": "2025-'26",
+    "ranking_position": 13,
+    "ranking_source": "Golf Digest Best in State",
+    "second_course": "The Golf Club at Quail Ridge",
     "slug": "north-carolina",
     "state": "North Carolina",
-    "verified": false
+    "verified": true
   },
   {
     "access": "No published non-member booking route. Golf Digest ranks it first and labels it \"Public,\" with a \"Daily Fee\" facility type and a $105 weekend fee as of the ranking data's own 14 November 2025 update; the club's own site calls itself \"a private club,\" puts every booking control behind a member login, and publishes no green fee and no guest policy. The only sourced avenue is the phone, (701) 852-3591. The guide publishes the disagreement between the two sources rather than resolving it.",
