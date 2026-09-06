@@ -120,19 +120,19 @@
     "verified": false
   },
   {
-    "access": null,
-    "city": null,
-    "county": null,
-    "course": null,
-    "criterion": null,
-    "facility": null,
-    "ranking_edition": null,
-    "ranking_position": null,
-    "ranking_source": null,
-    "second_course": null,
+    "access": "Publicly playable, established by executing the operator's own tee-sheet service unauthenticated: 47 rows returned for the Stadium Course on 12 September 2026, two of them fully open, and 73 rows for Dye's Valley with 46 fully open. The same service corroborates a published closure, returning all 79 of 79 Dye's Valley rows blocked on 8 September 2026. The operator's rate table carries no year and no effective date, so no green fee is publishable; the only dated prices it publishes are stay-and-play packages.",
+    "city": "Ponte Vedra Beach",
+    "county": "St. Johns County",
+    "course": "THE PLAYERS Stadium Course at TPC Sawgrass",
+    "criterion": "ranking",
+    "facility": "TPC Sawgrass",
+    "ranking_edition": "2025-'26",
+    "ranking_position": 2,
+    "ranking_source": "Golf Digest Best in State",
+    "second_course": "Dye's Valley Course at TPC Sawgrass",
     "slug": "florida",
     "state": "Florida",
-    "verified": false
+    "verified": true
   },
   {
     "access": null,
