@@ -2,6 +2,7 @@
 <main class="px-4 py-20 sm:px-6 lg:px-8">
   <div class="mx-auto max-w-2xl">
     <.flash_group flash={@flash} />
+    <EthosWeb.HouseAd.house_ad ad={EthosWeb.HouseAd.for_page(assigns)} />
     <EthosWeb.Affiliate.affiliate_unit
       position={:top}
       locale={EthosWeb.Affiliate.locale_from_assigns(assigns)}
@@ -11,6 +12,5 @@
       position={:bottom}
       locale={EthosWeb.Affiliate.locale_from_assigns(assigns)}
     />
-    <EthosWeb.HouseAd.house_ad ad={EthosWeb.HouseAd.for_page(assigns)} />
   </div>
 </main>
