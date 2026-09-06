@@ -123,6 +123,9 @@ defmodule EthosWeb.Router do
 
     get "/foliage/notes", AdminFoliageController, :index
     post "/foliage/notes", AdminFoliageController, :create
+
+    get "/season", AdminSeasonController, :index
+    post "/season", AdminSeasonController, :update
   end
 
   scope "/", EthosWeb do
