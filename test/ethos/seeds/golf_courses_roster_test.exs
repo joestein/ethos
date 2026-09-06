@@ -106,6 +106,52 @@ defmodule Ethos.Seeds.GolfCoursesRosterTest do
     end
   end
 
+  # The roster and the corpus must agree about WHICH states are done, and they
+  # must agree now rather than at close-out.
+  #
+  # This is deliberately not tagged `:pending_golf`. Every other cross-check
+  # between roster and corpus waits for all fifty rows, which means that during
+  # the waves — the entire period when states are actually being added — nothing
+  # compares the two at all. Florida shipped a full guide, ten place records and
+  # a passing suite while its roster row still read `verified: false` with every
+  # field null, and no gate noticed: the attribution test below only binds rows
+  # already marked verified, so an unresolved row is invisible to it by
+  # construction. A row that claims a state is unresearched, sitting beside that
+  # state's published guide, is a contradiction the roster exists to prevent.
+  #
+  # Both directions matter and they fail differently. A guide without a resolved
+  # row understates the corpus: the state is live on the site while the work list
+  # says it is not, so a later wave can research it a second time. A resolved row
+  # without a guide overstates it: the roster claims a state is published when no
+  # file seeds it, which is the shape the close-out exhaustion check assumes has
+  # already been ruled out.
+  test "every golf guide has a resolved roster row, and every resolved row has a guide" do
+    guides =
+      for f <- SeedDataHelpers.seed_files("golf"),
+          into: MapSet.new(),
+          do: Path.basename(f, ".json")
+
+    resolved = for e <- @roster, e["verified"], into: MapSet.new(), do: e["slug"]
+
+    # Non-vacuous in both directions. An empty corpus or a fully unresolved
+    # roster would satisfy the two assertions below while checking nothing.
+    assert MapSet.size(guides) > 0, "no golf guides seed — this assertion is checking nothing"
+
+    assert MapSet.size(resolved) > 0,
+           "no resolved roster rows — this assertion is checking nothing"
+
+    unrostered = guides |> MapSet.difference(resolved) |> Enum.sort()
+
+    assert unrostered == [],
+           "these states seed a guide but their roster row is not resolved, so the work list " <>
+             "says they are unresearched while the site publishes them: #{inspect(unrostered)}"
+
+    unseeded = resolved |> MapSet.difference(guides) |> Enum.sort()
+
+    assert unseeded == [],
+           "these roster rows are resolved but no guide file seeds them: #{inspect(unseeded)}"
+  end
+
   # Shape is not attribution. Every assertion above passes while a resolved row
   # names a course, city, state or county that disagrees with what shipped.
   @tag :pending_golf
