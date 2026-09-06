@@ -129,10 +129,10 @@ defmodule EthosWeb.Affiliate do
 
   The ONE predicate behind all three decisions: `affiliate_head/1`'s script,
   `affiliate_unit/1`'s widget, and the guide show page's fallback amber CTA and
-  disclosure, which render precisely when this returns `false`. Splitting them
-  is how a locale with an unrecognised `:network` came to render *neither* the
-  widget nor the fallback — a page in that geography with no affiliate unit at
-  all, and a green suite.
+  disclosure, which render (given `enabled?/0` also says yes — see below) when
+  this returns `false`. Splitting them is how a locale with an unrecognised
+  `:network` came to render *neither* the widget nor the fallback — a page in
+  that geography with no affiliate unit at all, and a green suite.
   """
   def renders?(locale) when is_map(locale), do: Map.get(locale, :network) in @supported_networks
   def renders?(_), do: false

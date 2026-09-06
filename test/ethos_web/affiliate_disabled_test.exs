@@ -60,8 +60,50 @@ defmodule EthosWeb.AffiliateDisabledTest do
 
     # This is the trap: the CTA renders when no widget renders, so a naive
     # kill switch turns it ON. It must be off too.
+    #
+    # NOTE: this guide is Manhattan, where unit_renders?/1 is always true, so
+    # `not unit_renders?(...)` alone already keeps the CTA off here regardless
+    # of enabled?(). This test cannot, by itself, prove enabled?() is even
+    # consulted — see the next test, on a no-campaign locale, for that.
     refute html =~ "Planning your own trip?"
     refute html =~ "getyourguide.com/?partner_id"
+  end
+
+  # This is the test that actually exercises the CTA's `enabled?()` clause.
+  # The Manhattan guide above always has unit_renders? == true, so
+  # `not unit_renders?(...)` alone suppresses its CTA no matter what
+  # enabled?() returns — an adversarial review confirmed this by deleting
+  # `EthosWeb.Affiliate.enabled?() and` from the aside's `:if` in
+  # show.html.heex and finding every test in this file, including the one
+  # above, still green.
+  #
+  # A California guide has no entry in :affiliate_locales at all, so
+  # unit_renders?/1 is false regardless of the flag — the CTA's actual
+  # purpose (a no-campaign locale, which is most guide pages). Forcing the
+  # house-ad pool empty via the same :persistent_term key HouseAd.pool/0
+  # reads (lib/ethos/house_ad.ex:28,53) makes `for_page/2` return nil too, so
+  # the CTA's `:if` reduces to just `enabled?()` and the flag alone decides.
+  test "the fallback CTA is genuinely gated on the flag, not merely on unit_renders?/1",
+       %{conn: conn} do
+    previous_pool = Ethos.HouseAd.pool()
+    :persistent_term.put({Ethos.HouseAd, :pool}, [])
+    on_exit(fn -> :persistent_term.put({Ethos.HouseAd, :pool}, previous_pool) end)
+
+    ca_guide =
+      published_guide_fixture(%{
+        title: "No campaign here",
+        destination: "Napa, California",
+        state: "California",
+        state_slug: "california",
+        county: "Napa County"
+      })
+
+    html_off = conn |> get(~p"/g/#{ca_guide.slug}") |> html_response(200)
+    refute html_off =~ "Planning your own trip?"
+
+    Application.put_env(:ethos, :affiliate_links_enabled, true)
+    html_on = conn |> get(~p"/g/#{ca_guide.slug}") |> html_response(200)
+    assert html_on =~ "Planning your own trip?"
   end
 
   test "per-entry booking links are absent", %{conn: conn, guide: guide} do
@@ -94,6 +136,40 @@ defmodule EthosWeb.AffiliateDisabledTest do
   # "Some booking links..." and the widget unit's "Tours and activities shown
   # above..."), and neither should render with affiliates disabled.
   test "no commission disclosure survives with the flag off", %{conn: conn, guide: guide} do
+    html = conn |> get(~p"/g/#{guide.slug}") |> html_response(200)
+
+    refute html =~ "earn Ethos a commission"
+  end
+
+  # This is the test that actually distinguishes the correct AND-placement
+  # from the mistake Amendment C warns against. With no entries (the test
+  # above), both branches of the inner `or` are false, so `enabled?() and
+  # (A or B)` and the wrong `(enabled?() and A) or B` both happen to evaluate
+  # to false — an adversarial review confirmed that rewriting the show page's
+  # disclosure `:if` into the wrong form left every test in this file,
+  # including the one above, still green.
+  #
+  # Here the guide is Manhattan (unit_renders? == true, so A = `not
+  # unit_renders?(...)` is false) and carries an entry with a real
+  # booking_url (so B = `Enum.any?(&safe_http?(&1.booking_url))` is true).
+  # Correct placement: `enabled?() and (false or true)` = `false and true` =
+  # false — disclosure absent. Wrong placement: `(enabled?() and false) or
+  # true` = `false or true` = true — disclosure present, claiming a
+  # commission on a booking link the page (correctly) is not showing.
+  test "the commission disclosure does not survive the flag off even when an entry has a booking_url",
+       %{conn: conn, guide: guide} do
+    {:ok, _entry} =
+      Ethos.Guides.create_entry(
+        guide,
+        %{
+          kind: "tip",
+          name: "Bookable thing",
+          note: "Has a booking link.",
+          booking_url: "https://example.com/book"
+        },
+        :privileged
+      )
+
     html = conn |> get(~p"/g/#{guide.slug}") |> html_response(200)
 
     refute html =~ "earn Ethos a commission"
