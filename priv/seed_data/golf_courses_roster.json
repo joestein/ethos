@@ -435,19 +435,19 @@
     "verified": false
   },
   {
-    "access": null,
-    "city": null,
-    "county": null,
-    "course": null,
-    "criterion": null,
-    "facility": null,
+    "access": "The championship fallback applies: no entry on the state's 2025-'26 ranking is publicly accessible at any rank. All 25 entries carry a Private rubric -- 25 rubric elements against 25 title elements, so no entry is unlabelled -- established across two archived captures from different source WARCs and a live fetch. The one entry labelled Public in an earlier capture of the same edition is refused in writing by its operator's management group: \"Membership is closed. Future consideration is by referral only.\" The Bay Course is daily-fee resort golf, host of the ShopRite LPGA and part of the 1942 PGA Championship. No green fee carries a dated qualifier, so none is publishable.",
+    "city": "Galloway",
+    "county": "Atlantic County",
+    "course": "Seaview — Bay Course",
+    "criterion": "championship",
+    "facility": "Seaview Hotel & Golf Club",
     "ranking_edition": null,
     "ranking_position": null,
     "ranking_source": null,
-    "second_course": null,
+    "second_course": "Seaview — Pines Course",
     "slug": "new-jersey",
     "state": "New Jersey",
-    "verified": false
+    "verified": true
   },
   {
     "access": "Public daily-fee, with no membership required. Online booking runs 30 days ahead; beyond that window a tee time is requested by phone.",

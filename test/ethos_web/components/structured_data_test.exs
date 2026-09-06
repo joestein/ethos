@@ -982,8 +982,15 @@ defmodule EthosWeb.StructuredDataTest do
       # second-course record chosen by ranking position with the nearest
       # publicly accessible course, which is a swap and moves nothing here.
       #
-      #   * total 4801 -> 4805, +5 records, -1 net from a golf-course record
-      #     that was replaced rather than added in a state already counted.
+      # This block counts only places that carry an `address` key -- the setup
+      # rejects the rest -- so it tracks address-bearing records, not the corpus.
+      # Measured from git across the correction, per file:
+      #
+      #   * total 4801 -> 4805, +4: North Dakota +1, where the replacement
+      #     second course carries an address and the displaced one did not, and
+      #     South Dakota +3, its new hotel and two restaurants. Louisiana's five
+      #     changed records and Utah's swap are invisible here -- none of those
+      #     places carries an address at all.
       #   * `streetAddress` 4178 -> 4182, +4.
       #   * `postalCode` 3413 -> 3418, +5.
       #   * `is_nil(streetAddress)` unmoved at 623.
@@ -997,8 +1004,9 @@ defmodule EthosWeb.StructuredDataTest do
       # numbers would have made the suite green and left three malformed
       # addresses in the corpus, structured data emitting a locality where a
       # street belongs. Normalising them to the corpus form recovered all
-      # three, and the residual +4/+5 gap is Louisiana's two records, which
-      # carry no address at all and emit locality-only.
+      # three. The residual gap -- streetAddress +4 against postalCode +5 -- is
+      # North Dakota's replacement course, whose address yields a ZIP but whose
+      # street form the parser does not take.
       #
       # The rule this leaves behind: when two of these counters move by
       # different amounts, the difference is a claim about the data and should
