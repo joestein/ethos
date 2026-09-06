@@ -74,10 +74,31 @@ it — see its entry below.
    depend on it: `Ethos.Seeds.MlbBallparksCollection` names all thirty ballpark
    guides, and `seed_collections` run before this step raises
    `collection mlb-ballparks references unknown guide <slug>`.
-9. `Ethos.Release.seed_collections()` — three collections: The Burys of
-   Connecticut (steps 2 and 3), Antique Trail of CT (step 2) and Major League
-   Ballparks (step 8). After **every** guide step, never between them.
+9. `Ethos.Release.seed_collections()` — eight collections: The Burys of
+   Connecticut (steps 2 and 3), Antique Trail of CT (step 2), Major League
+   Ballparks (step 8), Korean BBQ, and the four scenic-byway collections
+   (Merritt Parkway, Route 169, Route 207, Route 7 in the north-west — all
+   twenty of their town guides come from step 3). After **every** guide
+   step, never between them.
 10. `Ethos.Release.seed_links()`
+11. `Ethos.Release.adjacency_links()` — writes the 446 town-adjacency `nearby`
+    edges. Runs after `seed_links` (step 10), not before: `BackfillLinks`
+    writes two of the CT-5 `nearby` edges (`waterbury`↔`middlebury`,
+    `woodbury`↔`southbury`) in the reverse of the direction this step itself
+    writes, and running this step first leaves those two pairs permanently
+    duplicated — re-running `adjacency_links` afterward updates its own
+    canonical-direction row but never touches or removes the reversed one
+    `seed_links` already wrote. Also **re-run this step after any content
+    seeder**, for the same reason given below for `seed_links`:
+    `upsert_links!/1` deletes every outgoing edge of the guides it touches,
+    and all 446 adjacency edges are CT-guide→CT-guide.
+12. `Ethos.Release.foliage_links()` — writes the foliage route link edges and
+    logs any route stop whose guide is unpublished or renamed. No ordering
+    conflict with `seed_links` the way `adjacency_links` has — it writes a
+    different edge kind (`same-region`) that `BackfillLinks` never touches —
+    but it shares the same delete-all hazard: **re-run this step after any
+    content seeder** too, or a re-seeded Connecticut guide's foliage edges
+    silently disappear along with its adjacency edges.
 
 Verify the published count after each content step before moving on — see
 "Expected published counts" below. `seed_destinations` writes to a separate

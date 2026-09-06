@@ -82,4 +82,19 @@
       </li>
     </ul>
   </section>
+
+  <section :if={@foliage_routes != []} class="mt-12 text-left">
+    <div class="flex items-center justify-between">
+      <h2 class="text-sm uppercase tracking-wide text-zinc-400">Foliage driving routes</h2>
+      <.link navigate={~p"/foliage"} class="text-sm underline">The forecast →</.link>
+    </div>
+    <ul class="mt-4 grid gap-3 sm:grid-cols-2">
+      <li :for={route <- @foliage_routes} class="rounded-xl border p-4">
+        <.link navigate={~p"/foliage/#{route.slug}"} class="font-semibold hover:underline">
+          {route.name}
+        </.link>
+        <p class="text-sm text-zinc-500">{length(route.stops)} towns</p>
+      </li>
+    </ul>
+  </section>
 </div>
