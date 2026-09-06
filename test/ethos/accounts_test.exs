@@ -703,6 +703,30 @@ defmodule Ethos.AccountsTest do
       assert row.user.id == match.id
     end
 
+    test "a plain search with no special characters behaves as before" do
+      match = user_fixture(%{username: "plainsearch"})
+      _other = user_fixture(%{username: "somebodyelse"})
+
+      assert [row] = Ethos.Accounts.list_users_for_moderation(search: "plains")
+      assert row.user.id == match.id
+    end
+
+    test "a literal underscore in the search is not treated as a wildcard" do
+      match = user_fixture(%{username: "foo_bar"})
+      _decoy = user_fixture(%{username: "fooxbar"})
+
+      assert [row] = Ethos.Accounts.list_users_for_moderation(search: "foo_bar")
+      assert row.user.id == match.id
+    end
+
+    test "a literal percent sign in the search is not treated as a wildcard" do
+      match = user_fixture(%{email: "100%off@example.com"})
+      _decoy = user_fixture(%{email: "100xoff@example.com"})
+
+      assert [row] = Ethos.Accounts.list_users_for_moderation(search: "100%off")
+      assert row.user.id == match.id
+    end
+
     test "an empty search returns everyone" do
       user_fixture()
       user_fixture()

@@ -444,7 +444,7 @@ defmodule Ethos.Accounts do
   defp filter_by_search(query, ""), do: query
 
   defp filter_by_search(query, search) do
-    pattern = "%#{search}%"
+    pattern = "%#{escape_like(search)}%"
 
     # `username` is citext so it is already case-insensitive; `email` is citext
     # too. ilike is belt and braces and costs nothing at this size.
@@ -453,5 +453,17 @@ defmodule Ethos.Accounts do
       [u],
       ilike(u.username, ^pattern) or ilike(fragment("?::text", u.email), ^pattern)
     )
+  end
+
+  # `%` and `_` are LIKE/ILIKE wildcards, so a raw search term containing
+  # either would match far more than the user typed (searching "a_b" would
+  # also match "aXbYexact"). Escape the backslash first, then the two
+  # wildcards — escaping them before the backslash would re-escape the
+  # backslashes this step just inserted, corrupting the pattern.
+  defp escape_like(term) do
+    term
+    |> String.replace("\\", "\\\\")
+    |> String.replace("%", "\\%")
+    |> String.replace("_", "\\_")
   end
 end
