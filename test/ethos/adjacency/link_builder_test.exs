@@ -83,4 +83,33 @@ defmodule Ethos.Adjacency.LinkBuilderTest do
     link = Repo.one!(from l in Link, where: l.kind == "nearby", limit: 1)
     assert link.note =~ "border"
   end
+
+  test "skips a border that is already linked in the reverse direction" do
+    for t <- ["Avon", "Canton"], do: ct_guide(t)
+
+    avon = Repo.get_by!(Ethos.Guides.Guide, slug: "avon-ct-travel-guide")
+    canton = Repo.get_by!(Ethos.Guides.Guide, slug: "canton-ct-travel-guide")
+
+    # Someone else's curated edge, in the opposite direction to ours.
+    Ethos.Links.upsert_link!(%{
+      source: {:guide, canton.slug},
+      target: {:guide, avon.slug},
+      kind: "nearby",
+      note: "Canton borders Avon; both are reached on US Route 44."
+    })
+
+    before = nearby_count()
+    assert :ok = LinkBuilder.build!()
+
+    # No second edge for that pair, and the curated note survives.
+    assert nearby_count() == before
+
+    edge =
+      Repo.one!(
+        from l in Ethos.Links.Link,
+          where: l.kind == "nearby" and l.source_id == ^canton.id and l.target_id == ^avon.id
+      )
+
+    assert edge.note =~ "US Route 44"
+  end
 end
