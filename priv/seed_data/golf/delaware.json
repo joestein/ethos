@@ -1,0 +1,161 @@
+{
+  "guide": {
+    "slug": "delaware-golf-guide",
+    "title": "Baywood Greens: Golf in Long Neck, Delaware",
+    "destination": "Long Neck, Delaware",
+    "state": "Delaware",
+    "county": "Sussex County",
+    "intro": "Golf Digest's 2025-'26 ranking of the best golf courses in Delaware runs to five entries, and exactly one of them carries the access label \"Public\": Baywood Greens: Woodside/Waterside, third on the list, in Long Neck, in Sussex County on Delaware's coastal plain. The other four — Wilmington Country Club: South at first, Bidermann Golf Course at second, The Peninsula Golf & Country Club at fourth and Wilmington Country Club: North at fifth — are all labelled \"Private,\" and Golf Digest's own course profile for each records \"Facility Type Private.\" The ranking page's edition line reads, \"Below you'll find our 2025-'26 ranking of the Best Golf Courses in Delaware.\" The claim this guide makes is the narrow one and no more: highest-ranked publicly accessible course in Delaware on that named ranking at that named edition. The operator agrees about the access — its own golf page calls Baywood Greens \"one of the few that is exclusively public\" — but it publishes no green fee at all, and that absence is set out below rather than filled in from somewhere else.",
+    "sections": [
+      {
+        "heading": "Getting there",
+        "body": "Baywood Greens is at 32267 Clubhouse Way, Long Neck, Delaware 19966, the address the operator prints in the footer of every page of its own site. Golf Digest's course profile gives 32279 Clubhouse Way instead; both numbers fall on the same Census TIGER address range and geocode to the same county, and the operator's number is the one the operator publishes. Routing to the course snaps to Clubhouse Way, which runs off Greens Way, which runs off DE-24 John J Williams Highway. Philadelphia International Airport (PHL) is the nearest large hub, at 114.4 road miles: I-95 Delaware Expressway, I-495 Vietnam Veterans Memorial Highway, I-95 / US-202 Wilmington Expressway, I-95 Delaware Turnpike, then DE-1 Korean War Veterans Memorial Highway, DE-1 Bay Road, the DE-1 Milford Bypass and DE-1 Coastal Highway southbound, then Hudson Road, Cave Neck Road, DE-23 Beaver Dam Road, Conleys Chapel Road, Robinsonville Road and DE-24 John J Williams Highway to Greens Way and Clubhouse Way. Salisbury–Ocean City Wicomico Regional Airport (SBY), in Maryland, is the nearest airport with scheduled service, at 35.2 road miles: Airport Road, Walston Switch Road, US-50 Ocean Gateway, MD-353 Sixty Foot Road, MD-353 Gumboro Road, DE-26 / DE-54 Millsboro Highway, DE-20 Hardscrabble Road, the DE-20 / DE-24 North Millsboro Bypass, DE-24 John J Williams Highway, DE-5 / DE-23 Indian Mission Road, then Greens Way and Clubhouse Way. The US Census geocoder places the course in Sussex County, Millsboro CCD, inside the Long Neck, DE Urban Area, and returns no Incorporated Places layer at all — Long Neck is not an incorporated town. That absence was tested rather than assumed: the same query run at Dover City Hall returns \"Incorporated Places :: Dover city,\" so the layer is live and the silence at Long Neck means what it says. No source consulted for this guide says anything about parking at the course, so this guide says nothing about it."
+      },
+      {
+        "heading": "Baywood Greens: Woodside/Waterside",
+        "body": "Golf Digest's 2025-'26 Delaware list ranks the course third and labels it \"Public\"; the magazine's own profile records \"Facility Type Public,\" Holes 18, Length 6983, Slope 135, and a panel rating of 3.9 out of 5 from five panelists. The two nines are one 18-hole course: the operator's site enumerates Woodside holes 1 through 9 and Waterside holes 10 through 18, its course page states \"Baywood Greens offers 18 holes with two distinctive nines,\" and it plays \"With five sets of tee boxes ranging from 3539 to 6983 yards\" — the upper figure agreeing with Golf Digest's. The operator's own description of what is out there: \"From eight handcrafted timber bridges and two signature tunnels to 27 acres of shimmering lakes and more than 300,000 vibrant flowers, trees, and ornamental plantings, the course is as breathtaking as it is challenging.\" The plant count is not stable across sources — the operator says \"more than 300,000\" today, its own About page as archived on October 15, 2004 said \"over 200,000 plants, shrubs and trees were planted,\" and the Wikipedia article says \"over 200,000\" — so the figure is given as the operator's claim rather than as a measurement. Golf Digest's full Best in State history for the course reads: \"Ranked first, 2011-'12. Ranked second, 2019-'22. Ranked third, 2015-'16, 2025-'26. Ranked fourth, 2013-'14, 2023-'24. Ranked fifth, 2017-'18. Ranked inside the top five, 2001-'10.\" Two things about the course are unsettled and are left unsettled here. The architect: Golf Digest's profile field reads \"Designer Brian T. Ault, ASGCA,\" while the operator's own 2004 archived About page reads, \"That the initial layout and design of the course was by Bill Love ASGCA (formally of Ault, Clark and Associates). Final design was completed by land sculpture extraordinaire Larry Dewitt and owner/developer Rob Tunnell, who turned original sketches into a work of art.\" Both attributions point at the firm Ault, Clark & Associates and they name different individuals; the operator's current site names no architect at all. The opening year: no operator page states one, Golf Digest omits its Year Opened field for Baywood while supplying it for two other Delaware entries (Bidermann 1965, Wilmington Country Club: South 1959), and Wikipedia gives none. The only chronological anchor found is Golf Digest's own line, \"Ranked inside the top five, 2001-'10,\" which is a floor on the course's age and not an opening date."
+      },
+      {
+        "heading": "Playing it, and what it costs",
+        "body": "The access claim is the operator's own and it is unusually explicit. Its golf page: \"Known as the 'Augusta of the North,' Baywood Greens is one of the East Coast's premier championship golf destinations—and one of the few that is exclusively public.\" Its course page: \"The 18-hole championship golf course is 'Exclusively Public',\" under a section headed \"We Just Look Private.\" Its residents' page notes that living at Baywood comes \"With no golf membership required.\" No page on the site conditions play on a membership, a sponsor, a resort stay or an annual pass; a Stay & Play package is offered as an option, not a precondition. Two uses of the word \"member\" do appear — a homepage heading, \"What Our Members Think of Baywood,\" over testimonials from visiting golfers, and a site-wide navigation link, \"Find the benefits for being a Baywood member,\" pointing at the residential land-lease community — and neither is a condition on playing. The pro shop's own visitor page reads like an ordinary public counter: \"Rental Clubs — TaylorMade & Mizuno rental clubs are available on-site. Rental fee is $55.00 per round. Carts — Golf Carts and Practice Facilities are included in your Greens Fees. Golf Dress Code — Soft Spikes are Mandatory. Conventional and Appropriate Attire is Mandatory. T-shirts and Jeans are Prohibited. Accepted forms of payment — VISA, Mastercard, American Express, Discover. No Apple Pay available. ATM located in Pro Shop.\" What this guide cannot tell you is the price of a round, and the reason is worth stating exactly. Baywood Greens publishes no rate card: its sitemap carries no rates, fees or price page, and in place of a rate table its tee-times page carries a paragraph headed \"Dynamic Pricing\" — \"Golf rates will be adjusted - both lower and higher - in real-time, based on demand, availability and other changing factors… With rates changing daily, Dynamic Pricing gives you the ability to choose the RIGHT rate for you, at the RIGHT time for you, on the RIGHT day for you.\" That paragraph carries no year, no season and no effective date. The live engine could not be made to speak either: the tee-times page embeds a Club Prophet tee sheet at baywoodgreens.cps.golf, and four independent clients — a browser-header curl, an external rendering proxy, an independent fetch tool and a direct API call — each returned an HTTP 403 Cloudflare human-verification interstitial, while the operator's registered TeeItUp channel returned zero tee times and an empty rates array on five sampled dates. The only dollar figure anywhere on the operator's own site is the $55.00 rental-club charge quoted above, and it carries no date. A third-party ranking site publishes a price field for the course under its own hedge that the figure \"covers all ranges of greens fees,\" but that is not the operator's number and it is not carried here. So Delaware publishes no green fee in this guide: no figure was substituted from an aggregator, and none was inferred from a booking quote. What the operator does date is its maintenance: the hours page heads a list \"2026 Aeration Dates: March 9th-11th / August 24-26th / November 17th-20th,\" the only dated operational statement on the site. The same page reads \"Driving Range: Open for Season\" and \"Cart Path Only Holes: Weather dependent,\" and the footer gives the pro shop as \"In-Season 6AM - 7PM, Off-Season: 8AM - 5PM,\" with \"Course Opens at 6:30 AM.\" A keyword sweep of the operator's pages found no renovation programme and no closure notice, and it should be said that Baywood has no golf news or events page at all — the sitemap's /about and /rental both render the operator's own \"Oops… You got lost!\" page — so there is no source that would announce a tournament closure for this course."
+      },
+      {
+        "heading": "The weekend around the course",
+        "body": "The basecamp is Long Neck itself, the unincorporated Sussex County community the course sits in. This is a short section on purpose, because the research behind this guide established exactly two things a visitor can use, and inventing a third would be worse than a thin page. Lodging: the operator's own Stay & Play page sends golfers to Pot-Nets Vacation Rentals, run by Tunnell Companies, the same company that runs Baywood Greens, whose rental page reads, \"Beach Home Vacation Rentals — Browse our amazing Vacation Rentals offering at Pot-Nets community in Long Neck, DE with everything you need for a stress free trip. We have properties that offer Sunday check-in or even flexible dates, depending on the season. Once you have picked your favorite, you'll be able to view the features and available dates, as well as make the booking on the site.\" Its office is at 34026 Anna's Way, Long Neck, on (302) 945-9300, and Baywood's package page gives a rental agent on 302-945-9355. No individual property, no rate and no room count was established, so none is given. Dining: The Clubhouse at Baywood, at 32267 Clubhouse Way — the course's own street address — on (302) 947-9225, open Monday through Thursday 11AM - 8PM and Friday through Saturday 11AM - 9PM. Its own site describes it as \"one of Coastal Delaware's most scenic dining experiences,\" \"Overlooking beautifully manicured gardens and the renowned Baywood Greens golf course,\" with a menu running \"from coastal favorites and premium steaks to handcrafted sandwiches, salads, and daily specials\" and a daily Happy Hour; it takes table reservations and carryout. One address discrepancy, recorded rather than resolved: the restaurant's own site places itself in Millsboro and the golf course's footer places the same Clubhouse Way address in Long Neck. That is the whole of the lodging and dining this guide can source — one rental operator and one restaurant, both run from the course's own address. No hotel, no second restaurant and no attraction in Long Neck was established by the research behind this file, and this guide names none."
+      },
+      {
+        "heading": "Day two: American Classic Golf Club",
+        "body": "The nearest other course a visitor can book without a membership is American Classic Golf Club, 18485 Bethpage Drive, Lewes, on (302) 703-6662 — 8.03 road miles from the Baywood clubhouse by Clubhouse Way, Greens Way, DE-24 John J Williams Highway, Mulberry Knoll Road, Cedar Grove Road, Postal Lane and Bethpage Drive, the last of which is the operator's own street. It is not on Golf Digest's five-entry Delaware ranking, so it carries no ranking claim here, and it was picked on measured road distance and nothing else. One course sits nearer and cannot be played: The Peninsula Golf & Country Club in Millsboro, 3.82 road miles out, which its own member site calls \"a gated, private country club,\" whose golf page calls it \"The first private Jack Nicklaus Signature designed course in Delaware\" and \"a prominent member of Troon Privé, the exclusive brand's private club division,\" whose only published reservation path is a member login, and whose own Rates link returns HTTP 404. Golf Digest ranks it fourth in Delaware and labels it Private. American Classic's access, by contrast, was established by executing its booking system rather than by reading its marketing: its Teesnap tee sheet answered with no account, no cookie and no credential, returning 56 bookable slots on each of three sampled dates — 2026-09-12, 2026-09-19 and 2026-10-10 — running from 07:00 to 18:00 local, at one to four players a slot. The operator's own words agree with the engine: \"Our course welcomes anyone and everyone: kids, seniors, beginners, scratch golfers, and everyone in between,\" and the footer of every page reads \"9 HOles. Good People. Great Times.\" and \"Open Year Round,\" under the operator's own asterisk, \"*weather dependent.\" Its policy page sets out tee-time, late, cancellation, pre-paid, rain-check, cart and junior-cart rules and states no membership, sponsor, resort-stay or annual-pass condition of any kind; optional season passes are sold, and a pass buys the green fee away rather than being required to pay one. It is nine holes played as nine or eighteen: \"Play from the gold, red, or white tees for a friendly par 32 on 9 holes, or double it up for a par 64 on 18. Feeling brave? Step back to the blue tees and take on a par 35 for 9 or a par 70 for 18.\" The booking engine's own course record gives par 32, rating 62.8 and slope 113. The operator promises \"water and sand hazards, an island green on hole 6, different tee markers for all types of golfers,\" and is straight about one limitation: \"While we don't have a full driving range due to space limitations, we do offer a driving net where you can warm up or work on your swing.\" The course was bought in 2012 by Rock Morrison, rebuilt over 2012 and 2013 and reopened under the American Classic name on Memorial Day 2013, and it is family-owned and family-run. Its own rate bands are named by season — \"Summer Rates Apr-Oct\" and \"Summer Twilight Apr-Oct\" — with no year on them, so no rate table is published here either. Its food and beverage operation, The Back Nine, runs a food truck on site, 8:30 AM – 8:00 PM daily and weather dependent. Three other courses in the same sweep are worth a sentence each so a reader is not misled by a map or an older directory. The Rookery Golf Club in Milton, which Baywood's own Stay & Play copy names as one of the \"other premier Southern Delaware courses,\" is a genuinely public course with a live public tee sheet, but it sits at 15.07 road miles from Baywood with seven courses in between, so it is not the nearest and is not the day-two pick. Old Landing Golf Course, Rehoboth Beach, is listed as Public and 18 holes by Golf Digest's Delaware directory and routes at 8.32 road miles, but what OpenStreetMap maps on the site is \"The Villages of Old Landing,\" tagged landuse=residential, with 113 buildings and no golf tag of any kind inside 700 m, and none of oldlandinggolf.com, www.oldlandinggolf.com or oldlandinggolfcourse.com resolves in DNS; no page written by an Old Landing operator was reached, so this guide records what was found and asserts nothing about whether it trades. Sussex Pines Country Club, Georgetown, is absent from OpenStreetMap altogether and could not be matched by the Census address geocoder; routed to Sussex Pines Road itself it is 12.60 road miles from Baywood, farther out than American Classic, and it has no resolving domain — it could be placed but not described, so it is not described. Neither of the last two has a place record in this guide."
+      }
+    ],
+    "faq": [
+      {
+        "question": "How do I book a tee time at Baywood Greens?",
+        "answer": "The operator's tee-times page embeds a Club Prophet tee sheet at baywoodgreens.cps.golf, and that is the only live booking channel it publishes. Four independent clients were each refused by an HTTP 403 Cloudflare human-verification interstitial on that engine, so booking it needs a real browser; a second, registered TeeItUp channel for Baywood Greens exists but returned zero tee times and an empty rates array on five sampled dates. Nothing on the operator's site conditions a booking on membership, a sponsor or a package."
+      },
+      {
+        "question": "What does a round at Baywood Greens cost?",
+        "answer": "The operator publishes no green fee, and this guide prints no number rather than borrowing one. There is no rate card on the site and no rates page in its sitemap; in place of a rate table the tee-times page carries a paragraph headed \"Dynamic Pricing\" — \"Golf rates will be adjusted - both lower and higher - in real-time, based on demand, availability and other changing factors\" — which carries no year, no season and no effective date. The live engine returned a Cloudflare challenge to four clients and the alternative channel returned no inventory, so no operator price was obtained. The only dollar figure anywhere on the site is a $55.00-per-round rental-club charge, and it carries no date either. A third-party ranking site publishes a price field for the course under its own hedge that the figure \"covers all ranges of greens fees\"; that is not the operator's number and it is not repeated here."
+      },
+      {
+        "question": "Is Baywood Greens open to the public, or do I need a membership?",
+        "answer": "Golf Digest labels it \"Public\" in its 2025-'26 Delaware ranking and records \"Facility Type Public\" on its own course profile, and the operator says the same in stronger words: \"one of the few that is exclusively public,\" \"The 18-hole championship golf course is 'Exclusively Public',\" under a section headed \"We Just Look Private.\" No page on the operator's site makes play conditional on a membership, a sponsor, a resort stay or an annual pass. The one thing that could not be done is executing the booking engine, which sits behind a Cloudflare challenge — so the operator's terms are uncontradicted rather than corroborated by a live tee sheet."
+      },
+      {
+        "question": "Are carts included, and what is the dress code?",
+        "answer": "The pro shop's own page states, \"Golf Carts and Practice Facilities are included in your Greens Fees,\" and sets the dress code as \"Soft Spikes are Mandatory. Conventional and Appropriate Attire is Mandatory. T-shirts and Jeans are Prohibited.\" Rental clubs, TaylorMade and Mizuno, are $55.00 per round. VISA, Mastercard, American Express and Discover are accepted, Apple Pay is not, and there is an ATM in the pro shop."
+      },
+      {
+        "question": "When is Baywood Greens aerated in 2026?",
+        "answer": "The operator's hours page heads a list \"2026 Aeration Dates: March 9th-11th / August 24-26th / November 17th-20th.\" That is the only dated operational statement the operator publishes; it does not say the course is closed on those dates, and the site carries no closure notice, no renovation programme and no events calendar that would announce one."
+      },
+      {
+        "question": "Which course should I play on day two?",
+        "answer": "American Classic Golf Club, 18485 Bethpage Drive, Lewes, 8.03 road miles from the Baywood clubhouse and the nearest other course a visitor can book without a membership. Its Teesnap tee sheet returned 56 bookable slots with no credential of any kind on each of three sampled dates, 2026-09-12, 2026-09-19 and 2026-10-10. It is nine holes played as nine or eighteen — par 32 or 64 from the gold, red and white tees, par 35 or 70 from the blue — with a driving net rather than a driving range. The Peninsula Golf & Country Club is nearer at 3.82 road miles and is not an option: its own site calls it \"a gated, private country club\" in Troon Privé's private club division, and its only reservation path is a member login."
+      },
+      {
+        "question": "Where do I stay and eat around Long Neck?",
+        "answer": "The research behind this guide supports one lodging operator and one restaurant, and it names no others. Lodging is Pot-Nets Vacation Rentals, run by the same company as the course, office at 34026 Anna's Way, Long Neck, on (302) 945-9300, with a rental agent on 302-945-9355; no individual property or rate was established, so none is quoted. Dining is The Clubhouse at Baywood, at the course's own address, 32267 Clubhouse Way, on (302) 947-9225, open Monday through Thursday 11AM - 8PM and Friday through Saturday 11AM - 9PM. At the day-two course there is The Back Nine, American Classic's own food and beverage operation, serving 8:30 AM – 8:00 PM daily and weather dependent."
+      },
+      {
+        "question": "Where exactly is Baywood Greens?",
+        "answer": "At 32267 Clubhouse Way, Long Neck, Delaware 19966, off Greens Way and DE-24 John J Williams Highway. The US Census geocoder places that address in Sussex County, Millsboro CCD, inside the Long Neck, DE Urban Area, and returns no Incorporated Places layer — Long Neck is not an incorporated town, an absence confirmed against a control at Dover City Hall, which does return \"Dover city.\" Golf Digest's own map coordinate for the course resolves to the same county and the same county subdivision. Philadelphia International Airport is 114.4 road miles out and Salisbury–Ocean City Wicomico Regional Airport, in Maryland, is 35.2."
+      }
+    ],
+    "photos": []
+  },
+  "places": [
+    {
+      "slug": "baywood-greens-woodside-waterside",
+      "name": "Baywood Greens: Woodside/Waterside",
+      "kind": "golf-course",
+      "town": "Long Neck",
+      "state": "Delaware",
+      "county": "Sussex County",
+      "official_url": "https://www.baywoodgreens.com/golf/courses",
+      "summary": "Third on Golf Digest's 2025-'26 ranking of the best golf courses in Delaware and the only one of that ranking's five entries labelled \"Public,\" rated 3.9 out of 5 by five panelists, with Holes 18, Length 6983 and Slope 135 on the magazine's own profile. The operator calls it \"one of the few that is exclusively public\" and heads a section of its course page \"We Just Look Private.\" Woodside plays holes 1 through 9 and Waterside holes 10 through 18, over five sets of tees from 3539 to 6983 yards. The operator publishes no green fee — a \"Dynamic Pricing\" paragraph with no date stands in place of a rate card, and its Club Prophet booking engine returned a Cloudflare challenge to four independent clients. Its only dated operational statement is \"2026 Aeration Dates: March 9th-11th / August 24-26th / November 17th-20th.\" Two sources disagree about the architect: Golf Digest names Brian T. Ault, ASGCA, while the operator's own 2004 archived page names Bill Love ASGCA of Ault, Clark and Associates with final design by Larry Dewitt and Rob Tunnell. No opening year is published by anyone.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "american-classic-golf-club",
+      "name": "American Classic Golf Club",
+      "kind": "golf-course",
+      "town": "Lewes",
+      "state": "Delaware",
+      "county": "Sussex County",
+      "official_url": "https://www.americanclassicgolf.com",
+      "summary": "The nearest course to Baywood Greens that a visitor can book without a membership, at 18485 Bethpage Drive, Lewes, 8.03 road miles from the Baywood clubhouse. It is not on Golf Digest's Delaware ranking and carries no ranking claim. Nine holes played as nine or eighteen — par 32 or 64 from the gold, red and white tees, par 35 or 70 from the blue — with an island green at the 6th, a driving net rather than a driving range, and a booking-engine course record of par 32, rating 62.8, slope 113. Its Teesnap tee sheet returned 56 bookable slots with no account, cookie or credential on each of three sampled dates, 2026-09-12, 2026-09-19 and 2026-10-10; the operator's policy page states no membership, sponsor, resort-stay or annual-pass condition, and its footer reads \"9 HOles. Good People. Great Times.\" and \"Open Year Round,\" under its own \"*weather dependent.\" Its rate bands are named by season with no year, so no rate table is published for it. Bought in 2012 by Rock Morrison, rebuilt over 2012 and 2013 and reopened under this name on Memorial Day 2013; family-owned and family-run.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "pot-nets-vacation-rentals",
+      "name": "Pot-Nets Vacation Rentals",
+      "kind": "hotel",
+      "town": "Long Neck",
+      "state": "Delaware",
+      "county": "Sussex County",
+      "official_url": "https://www.potnets.com/rental",
+      "summary": "The lodging operator Baywood Greens' own Stay & Play page sends golfers to, run by Tunnell Companies, the same company that runs the course. Its rental page offers \"Beach Home Vacation Rentals — Browse our amazing Vacation Rentals offering at Pot-Nets community in Long Neck, DE with everything you need for a stress free trip. We have properties that offer Sunday check-in or even flexible dates, depending on the season.\" Office at 34026 Anna's Way, Long Neck, main office (302) 945-9300; the course's package page gives a rental agent on 302-945-9355. No individual property, rate or room count is established here, so none is quoted.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "the-clubhouse-at-baywood",
+      "name": "The Clubhouse at Baywood",
+      "kind": "restaurant",
+      "town": "Long Neck",
+      "state": "Delaware",
+      "county": "Sussex County",
+      "official_url": "https://baywoodclubhouse.com",
+      "summary": "The restaurant at the golf course's own address, 32267 Clubhouse Way, on (302) 947-9225, open Monday through Thursday 11AM - 8PM and Friday through Saturday 11AM - 9PM. It describes itself as \"one of Coastal Delaware's most scenic dining experiences,\" \"Overlooking beautifully manicured gardens and the renowned Baywood Greens golf course,\" with a menu running \"from coastal favorites and premium steaks to handcrafted sandwiches, salads, and daily specials,\" a daily Happy Hour, table reservations and carryout. One discrepancy is recorded rather than resolved: the restaurant's own site places itself in Millsboro while the golf course's footer places the same Clubhouse Way address in Long Neck.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "the-back-nine-american-classic",
+      "name": "The Back Nine",
+      "kind": "restaurant",
+      "town": "Lewes",
+      "state": "Delaware",
+      "county": "Sussex County",
+      "official_url": "https://www.americanclassicgolf.com/foodandbeverage",
+      "summary": "American Classic Golf Club's own food and beverage operation, a food truck on the course: \"Serving daily at American Classic Golf Club, the Mac Truck is where comfort food meets clubhouse vibes. Built on two ideas with the same goal—good food and good times—it's more than just a food truck. It's a little slice of fun between swings.\" The operator's footer gives its hours as 8:30 AM – 8:00 PM daily, under its own \"*weather dependent.\"",
+      "status": "open",
+      "photos": []
+    }
+  ],
+  "entries": [
+    {
+      "kind": "sight",
+      "name": "Baywood Greens: Woodside/Waterside",
+      "place_slug": "baywood-greens-woodside-waterside",
+      "note": "Third on Golf Digest's 2025-'26 Delaware ranking and its only \"Public\" entry of five; 18 holes, 6,983 yards, and no published green fee."
+    },
+    {
+      "kind": "sight",
+      "name": "American Classic Golf Club",
+      "place_slug": "american-classic-golf-club",
+      "note": "Day two: 8.03 road miles from the Baywood clubhouse, nine holes played as nine or eighteen, and a tee sheet that returned 56 bookable slots with no credential."
+    },
+    {
+      "kind": "stay",
+      "name": "Pot-Nets Vacation Rentals",
+      "place_slug": "pot-nets-vacation-rentals",
+      "note": "The lodging the course's own Stay & Play page points at, run by the same company; office at 34026 Anna's Way, Long Neck."
+    },
+    {
+      "kind": "food",
+      "name": "The Clubhouse at Baywood",
+      "place_slug": "the-clubhouse-at-baywood",
+      "note": "At the course's own address, 32267 Clubhouse Way; Monday through Thursday 11AM - 8PM, Friday through Saturday 11AM - 9PM."
+    },
+    {
+      "kind": "food",
+      "name": "The Back Nine",
+      "place_slug": "the-back-nine-american-classic",
+      "note": "The food truck at the day-two course, 8:30 AM – 8:00 PM daily and weather dependent."
+    }
+  ]
+}
