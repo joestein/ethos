@@ -8,7 +8,7 @@
     has one, since every loader resolves a `destination_path` and raises on a
     miss — and then the page simply carries no geography trail.
   --%>
-  <nav :if={@geo_trail != []} class="text-sm text-zinc-500">
+  <nav :if={@geo_trail != []} class="text-sm text-ink-muted">
     <span :for={{d, i} <- Enum.with_index(@geo_trail)}>
       <span :if={i > 0}>/</span>
       <.link navigate={EthosWeb.DestinationHTML.node_path(d.path)} class="underline">
@@ -20,20 +20,23 @@
   <header class="mt-2 flex flex-wrap items-start justify-between gap-3">
     <div>
       <h1 class="text-3xl font-bold">{@place.name}</h1>
-      <p class="mt-1 text-zinc-500">{kind_label(@place.kind)} · {geo_label(@geo_trail)}</p>
+      <p class="mt-1 text-ink-muted">{kind_label(@place.kind)} · {geo_label(@geo_trail)}</p>
     </div>
     <div class="flex items-center gap-2">
       <button
         type="button"
         data-copy-url={url(~p"/p/#{@place.slug}")}
-        class="rounded-lg border px-3 py-1.5 text-sm hover:bg-zinc-50"
+        class="rounded-lg border border-line px-3 py-1.5 text-sm hover:bg-surface-raised"
       >
         Copy link
       </button>
     </div>
   </header>
 
-  <p :if={@place.status == "closed"} class="mt-4 rounded-lg bg-red-50 p-3 text-sm text-red-700">
+  <p
+    :if={@place.status == "closed"}
+    class="mt-4 rounded-lg border border-negative/30 bg-negative/10 p-3 text-sm text-ink"
+  >
     Permanently closed. This page is kept for reference.
   </p>
 
@@ -51,9 +54,9 @@
     <div class="prose mt-2">{EthosWeb.Markdown.render(@place.history)}</div>
   </section>
 
-  <section class="mt-8 rounded-xl border p-5 text-sm">
+  <section class="mt-8 rounded-xl border border-line p-5 text-sm">
     <h2 class="font-semibold">Visit</h2>
-    <p :if={@place.address} class="mt-2 text-zinc-600">{@place.address}</p>
+    <p :if={@place.address} class="mt-2 text-ink-muted">{@place.address}</p>
     <p :if={EthosWeb.Url.safe_http?(@place.official_url)} class="mt-2">
       <a href={@place.official_url} class="underline" rel="nofollow">Official website</a>
     </p>
@@ -66,12 +69,12 @@
         <a href={p["src"]} target="_blank" rel="noopener">
           <img src={p["thumb"]} alt={p["title"]} loading="lazy" class="w-full rounded-lg" />
         </a>
-        <figcaption class="mt-1 text-xs text-zinc-500">{p["title"]}</figcaption>
+        <figcaption class="mt-1 text-xs text-ink-muted">{p["title"]}</figcaption>
       </figure>
     </div>
   </section>
 
-  <section :if={@place.photos != []} class="mt-4 text-xs text-zinc-400">
+  <section :if={@place.photos != []} class="mt-4 text-xs text-ink-muted">
     <p :for={p <- @place.photos}>
       Photo "{p["title"]}": {p["author"]}, {p["license"]}, via
       <a href={p["source_url"]} class="underline" rel="nofollow noopener">Wikimedia Commons</a>
@@ -92,7 +95,7 @@
     <ul class="mt-3 space-y-2">
       <li :for={s <- @siblings}>
         <.link navigate={~p"/p/#{s.slug}"} class="underline">{s.name}</.link>
-        <span class="text-sm text-zinc-500">· {kind_label(s.kind)}</span>
+        <span class="text-sm text-ink-muted">· {kind_label(s.kind)}</span>
       </li>
     </ul>
   </section>
