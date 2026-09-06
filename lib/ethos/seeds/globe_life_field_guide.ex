@@ -2,9 +2,10 @@ defmodule Ethos.Seeds.GlobeLifeFieldGuide do
   @moduledoc """
   Seeds the Globe Life Field guide. Idempotent by slug.
 
-  Carries `state: "Texas"` and `county: "Tarrant County"`, so it lists on both
-  the Texas destination page and the Tarrant County one. The county comes from
-  a confirmed verdict citing the encyclopedia's article on Arlington, which
+  Names the destination node `united-states/texas/arlington`, so it lists on the
+  Texas destination page and on Arlington's. The ballparks model no county tier,
+  so Tarrant County is recorded here as a sourced fact rather than as a field. It
+  comes from a confirmed verdict citing the encyclopedia's article on Arlington, which
   states it by name — *"Arlington is located in Tarrant County, Texas"* — and
   the verifier records that Tarrant County is an ordinary county administering
   the address, with no independent-city or borough-style exception in play.
@@ -48,8 +49,7 @@ defmodule Ethos.Seeds.GlobeLifeFieldGuide do
       slug: "globe-life-field-guide",
       title: "Globe Life Field: The Ballpark and the Arlington Entertainment District",
       destination: "Arlington, Texas",
-      state: "Texas",
-      county: "Tarrant County",
+      destination_path: "united-states/texas/arlington",
       intro: """
       Globe Life Field stands at 734 Stadium Drive in Arlington, and the Texas
       Rangers have played there since 2020. Its first regular-season game was

@@ -32,12 +32,17 @@ defmodule EthosWeb.HouseAdPlacementTest do
   # pages' <title> and <h1> too, so a heading match proves nothing there.
   @ad ~s(href="/foliage" class="flex items-center)
 
+  # The pool is keyed on the guide's destination NODE, so `state: "Connecticut"`
+  # would put nothing in it: that column is gone, and a fixture passing it files
+  # the guide on no node at all. Chester is one of the twenty-five pool towns.
+  @chester "united-states/connecticut/middlesex-county/chester"
+
   setup do
     # Photos are NOT castable by create_guide/2 — Guide.changeset casts only
-    # title, destination, dates, state and county, and photos have their own
+    # title, destination, dates and destination_id, and photos have their own
     # changeset. So the guide is created first and given its photograph after.
     guide =
-      published_guide_fixture(%{destination: "Chester, Connecticut", state: "Connecticut"})
+      published_guide_fixture(%{destination: "Chester, Connecticut", destination_path: @chester})
 
     {:ok, _} =
       Ethos.Guides.update_guide_photos(guide, [
@@ -61,12 +66,15 @@ defmodule EthosWeb.HouseAdPlacementTest do
 
   defp occurrences(html), do: html |> String.split(@ad) |> length() |> Kernel.-(1)
 
+  # Outside Connecticut so the guide controller assigns no `:foliage`, and
+  # outside New York and Lazio so no affiliate widget claims the slot — both
+  # decided by node ancestry now, which is why this files on a real node rather
+  # than naming a state.
   defp elsewhere_guide do
     published_guide_fixture(%{
       title: "Puget Sound Trip",
-      destination: "Puget Sound, Washington",
-      state: "Washington",
-      county: "Puget Sound"
+      destination: "Seattle, Washington",
+      destination_path: "united-states/washington/seattle"
     })
   end
 

@@ -3,15 +3,14 @@
     "slug": "fixture-bad-place-county-bronx-guide",
     "title": "Fixture: Bad Place County",
     "destination": "Fixture, New York",
-    "state": "New York",
-    "county": "Bronx",
+    "destination_path": "united-states/new-york/new-york-city/bronx/fixture",
     "intro": "A fixture guide filed correctly whose place is not, which is the split the guide-only check missed.",
     "sections": [],
     "faq": [],
     "photos": []
   },
   "places": [
-    {"slug": "fixture-bronx-bad-place-county", "name": "One", "kind": "park", "town": "Fixture", "state": "New York", "county": "Bronx County", "summary": "A fixture place.", "status": "open", "photos": []}
+    {"slug": "fixture-bronx-bad-place-county", "name": "One", "kind": "park", "destination_path": "united-states/new-york/bronx-county/fixture", "summary": "A fixture place.", "status": "open", "photos": []}
   ],
   "entries": []
 }

@@ -3,68 +3,104 @@ defmodule EthosWeb.HubPagesTest do
 
   import Ethos.GuidesFixtures
 
-  defp ct_guide(title, county) do
+  alias Ethos.Destinations
+  alias Ethos.SeedDataHelpers
+
+  defp node!(path) do
+    SeedDataHelpers.seed_destination_paths!([path])
+    Destinations.get_by_path(path)
+  end
+
+  defp guide_at(node, title) do
     published_guide_fixture(%{
       "title" => title,
       "destination" => "#{title}, Connecticut",
-      "state" => "Connecticut",
-      "county" => county
+      "destination_id" => node.id
     })
   end
 
-  test "state hub lists counties and guides", %{conn: conn} do
-    ct_guide("Waterbury", "New Haven County")
-    ct_guide("Woodbury", "Litchfield County")
+  test "a region hub lists its counties and its own guides", %{conn: conn} do
+    ct = node!("united-states/connecticut")
+    node!("united-states/connecticut/new-haven-county")
+    node!("united-states/connecticut/litchfield-county")
+    guide_at(ct, "The Antique Trail")
 
-    html = conn |> get(~p"/destinations/connecticut") |> html_response(200)
+    html = conn |> get(~p"/destinations/united-states/connecticut") |> html_response(200)
+
     assert html =~ "Connecticut"
     assert html =~ "New Haven County"
     assert html =~ "Litchfield County"
-    assert html =~ "Waterbury"
+    assert html =~ "The Antique Trail"
   end
 
-  test "town hub still resolves when slug is not a state", %{conn: conn} do
-    published_guide_fixture(%{"title" => "Rome trip", "destination" => "Rome, Italy"})
-    html = conn |> get(~p"/destinations/rome") |> html_response(200)
+  test "a town hub resolves at its own depth", %{conn: conn} do
+    node!("italy/lazio/rome")
+    html = conn |> get(~p"/destinations/italy/lazio/rome") |> html_response(200)
     assert html =~ "Rome"
   end
 
-  test "county hub lists that county's guides only", %{conn: conn} do
-    ct_guide("Waterbury", "New Haven County")
-    ct_guide("Woodbury", "Litchfield County")
+  test "a county hub lists that county's guides only", %{conn: conn} do
+    new_haven = node!("united-states/connecticut/new-haven-county")
+    litchfield = node!("united-states/connecticut/litchfield-county")
+
+    guide_at(new_haven, "Waterbury")
+    guide_at(litchfield, "Woodbury")
 
     html =
-      conn |> get(~p"/destinations/connecticut/litchfield-county") |> html_response(200)
+      conn
+      |> get(~p"/destinations/united-states/connecticut/litchfield-county")
+      |> html_response(200)
 
     assert html =~ "Woodbury"
     refute html =~ "Waterbury"
   end
 
-  test "unknown county hub 404s", %{conn: conn} do
-    assert conn |> get(~p"/destinations/connecticut/nope-county") |> html_response(404)
+  test "a path no node holds 404s", %{conn: conn} do
+    node!("united-states/connecticut")
+
+    assert conn
+           |> get(~p"/destinations/united-states/connecticut/nope-county")
+           |> html_response(404)
   end
 
-  test "destinations index shows states section", %{conn: conn} do
-    ct_guide("Waterbury", "New Haven County")
+  test "destinations index shows the countries section", %{conn: conn} do
+    node!("united-states/connecticut")
     html = conn |> get(~p"/destinations") |> html_response(200)
-    assert html =~ "Connecticut"
+    assert html =~ "By country"
+    assert html =~ "United States"
   end
 
-  test "destinations index does not double-list towns that belong to a state", %{conn: conn} do
-    ct_guide("Waterbury", "New Haven County")
-    published_guide_fixture(%{"title" => "Rome trip", "destination" => "Rome, Italy"})
+  test "destinations index lists roots only, not the tiers below them", %{conn: conn} do
+    node!("united-states/connecticut")
+    node!("italy/lazio/rome")
 
     html = conn |> get(~p"/destinations") |> html_response(200)
 
-    assert html =~ ~s(href="/destinations/connecticut")
-    assert html =~ ~s(href="/destinations/rome")
-    refute html =~ ~s(href="/destinations/waterbury")
+    assert html =~ ~s(href="/destinations/united-states")
+    assert html =~ ~s(href="/destinations/italy")
+    refute html =~ ~s(href="/destinations/united-states/connecticut")
+    refute html =~ ~s(href="/destinations/italy/lazio/rome")
   end
 
-  test "sitemap includes state, county hubs", %{conn: conn} do
-    ct_guide("Waterbury", "New Haven County")
+  # The sitemap used to be built from the guides' legacy state/county columns
+  # and so emitted the pre-tree hub URLs. It is now one pass over the tree, and
+  # the hubs it lists are the same hubs this file serves — at their node paths,
+  # which is where they render, rather than at the legacy paths that 301.
+  test "sitemap includes state and county hubs at their node paths", %{conn: conn} do
+    node!("united-states/connecticut/new-haven-county")
+
+    published_guide_fixture(%{
+      "title" => "Waterbury",
+      "destination" => "Waterbury, Connecticut",
+      "state" => "Connecticut",
+      "county" => "New Haven County"
+    })
+
     xml = conn |> get(~p"/sitemap.xml") |> response(200)
-    assert xml =~ "/destinations/connecticut</loc>"
-    assert xml =~ "/destinations/connecticut/new-haven-county</loc>"
+    assert xml =~ "/destinations/united-states/connecticut</loc>"
+    assert xml =~ "/destinations/united-states/connecticut/new-haven-county</loc>"
+
+    refute xml =~ "/destinations/connecticut</loc>"
+    refute xml =~ "/destinations/connecticut/new-haven-county</loc>"
   end
 end

@@ -58,12 +58,16 @@ defmodule EthosWeb.GuideController do
 
   Seasonal: out of season the guides should not carry a foliage block at all,
   so this returns nil rather than the template hiding a populated one.
-  """
-  def foliage_assign(guide, today \\ Date.utc_today())
 
-  def foliage_assign(%Guide{state_slug: "connecticut"} = guide, today) do
-    with true <- Ethos.Foliage.in_season?(today),
-         town when not is_nil(town) <- Ethos.Foliage.town(guide.destination_slug) do
+  "Connecticut town" is now the guide's node being under
+  `Ethos.Foliage.connecticut_path/0`, and the town slug is that node's own
+  slug rather than `destination_slug`, which is derived from free text. A guide
+  with no node, or one outside Connecticut, falls straight out of the `with`.
+  """
+  def foliage_assign(%Guide{} = guide, today \\ Date.utc_today()) do
+    with true <- Ethos.Foliage.connecticut?(guide.destination_node),
+         true <- Ethos.Foliage.in_season?(today),
+         town when not is_nil(town) <- Ethos.Foliage.town(guide.destination_node.slug) do
       week = Ethos.Foliage.current_week_index(today)
 
       %{
@@ -79,8 +83,6 @@ defmodule EthosWeb.GuideController do
       _ -> nil
     end
   end
-
-  def foliage_assign(%Guide{}, _today), do: nil
 
   # `image` comes from the `og_image_path` that `ensure_og_image/1` already
   # resolved above — so a guide whose stored PNG went missing publishes the

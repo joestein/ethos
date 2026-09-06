@@ -171,10 +171,19 @@ defmodule Mix.Tasks.Ethos.Foliage.Build do
   defp build_routes do
     Mix.Task.run("app.start")
 
+    {ct_path, ct_pattern} =
+      Ethos.Destinations.subtree_match(Ethos.Foliage.connecticut_path())
+
+    # "A published Connecticut guide" is now the guide's destination node being
+    # under `united-states/connecticut`, not a `state_slug` column that no
+    # longer exists. Same set, expressed as ancestry.
     published =
       Ethos.Repo.all(
         Ecto.Query.from(g in Ethos.Guides.Guide,
-          where: g.status == "published" and g.state_slug == "connecticut",
+          join: d in assoc(g, :destination_node),
+          where:
+            g.status == "published" and
+              (d.path == ^ct_path or like(d.path, ^ct_pattern)),
           select: g.slug
         )
       )

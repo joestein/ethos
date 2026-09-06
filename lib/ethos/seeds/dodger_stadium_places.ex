@@ -15,7 +15,7 @@ defmodule Ethos.Seeds.DodgerStadiumPlaces do
   places beside the ballpark. The ballpark itself has no `places` entry in the
   artifact at all; its record is built from the confirmed `identity` and
   `history` verdicts, which carry its name, address, neighbourhood, county and
-  construction. Nothing is padded to make a longer set — the corpus's content
+  construction. The records hang from `united-states/california/los-angeles`. Nothing is padded to make a longer set — the corpus's content
   gate has no length floor precisely because a floor manufactures filler.
 
   What the verification changed, and what is therefore absent here:
@@ -57,7 +57,7 @@ defmodule Ethos.Seeds.DodgerStadiumPlaces do
 
   alias Ethos.Places
 
-  @los_angeles %{town: "Los Angeles", state: "California", county: "Los Angeles County"}
+  @los_angeles %{destination_path: "united-states/california/los-angeles"}
 
   def upsert_all! do
     Enum.map(places(), &Places.upsert_place!/1)

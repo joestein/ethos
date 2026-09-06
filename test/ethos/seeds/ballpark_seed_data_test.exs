@@ -311,7 +311,7 @@ defmodule Ethos.Seeds.BallparkSeedDataTest do
   #
   # A literal list, not a count and not a set derived from what the catalog
   # happens to hold, for the reason destination_seed_data_test.exs states about
-  # its own thirteen destination pages: a derived expectation passes no matter
+  # its own curated destination pages: a derived expectation passes no matter
   # which modules exist, which is exactly the vacuity it exists to prevent.
   #
   # An accidental deletion fails here; so does an unreviewed twelfth ballpark
@@ -378,7 +378,7 @@ defmodule Ethos.Seeds.BallparkSeedDataTest do
   # mechanical rather than left to review.
   @required_headings ["Getting there", "Around the ballpark", "The ballpark and the team"]
 
-  test "every ballpark guide carries the three required sections, and names a county" do
+  test "every ballpark guide carries the three required sections, and names its node" do
     guides = Catalog.guide_modules("ballparks")
 
     # Non-vacuous: an empty catalog region would pass every assertion below.
@@ -393,30 +393,56 @@ defmodule Ethos.Seeds.BallparkSeedDataTest do
                "#{inspect(mod)} has no #{inspect(required)} section; it has #{inspect(headings)}"
       end
 
-      # county is what derives /destinations/{state}/{county}, and a place
-      # breadcrumb 404s without it. Two sites in this set carry a county that
-      # repeats the city or the state on purpose — Baltimore City, St. Louis,
-      # Toronto, District of Columbia — so the assertion is that the field is
-      # populated, not that it differs from its neighbours.
-      assert is_binary(data.state) and data.state != ""
-      assert is_binary(data.county) and data.county != ""
+      # destination_path is what resolves to the node the guide's state, county
+      # and breadcrumbs are derived from, and `GuideRunner.upsert!/2` raises on
+      # a guide that names none. `destination` is separate — it is the display
+      # string and the destination_slug, and nothing else derives it.
+      assert is_binary(data.destination_path) and data.destination_path != ""
       assert is_binary(data.destination) and data.destination != ""
+
+      refute Map.has_key?(data, :state), "#{inspect(mod)} still carries a state"
+      refute Map.has_key?(data, :county), "#{inspect(mod)} still carries a county"
     end
   end
 
-  # Every ballpark place is fully addressed for the destination hubs, which
-  # group by town, state and county. A nil county on one record breaks that
-  # record's breadcrumb and nothing else, so nothing else would report it.
-  test "every ballpark place carries a town, a state and a county" do
-    bare =
-      for {p, o} <- Catalog.places_owned(),
-          o.region == "ballparks",
-          field <- [:town, :state, :county],
-          value = Map.get(p, field),
-          not (is_binary(value) and value != ""),
-          do: {to_string(p.slug), field}
+  # Every ballpark place and guide names a node the roster actually holds. A
+  # path with a typo in it is not a test failure anywhere else in this file:
+  # the modules are plain data, so the mistake surfaces only at seed time, in
+  # production, as an ArgumentError from the loader.
+  #
+  # Read off `priv/seed_data/destination_tree.json` rather than the database,
+  # because this file is `ExUnit.Case` and has no repo.
+  test "every ballpark place and guide carries a destination_path in the roster" do
+    roster = MapSet.new(Ethos.Seeds.DestinationTree.load!(), & &1["path"])
 
-    assert bare == [], "ballpark places missing hub fields: #{inspect(bare)}"
+    places =
+      for {p, o} <- Catalog.places_owned(), o.region == "ballparks", do: {p, o}
+
+    # Non-vacuous: an empty region would pass every assertion below.
+    assert length(places) >= 2
+
+    for {p, o} <- places do
+      slug = to_string(p.slug)
+
+      assert is_binary(p[:destination_path]),
+             "#{Path.basename(o.seed_file)}: place #{slug} has no destination_path"
+
+      assert MapSet.member?(roster, p[:destination_path]),
+             "#{Path.basename(o.seed_file)}: place #{slug} references unknown node " <>
+               inspect(p[:destination_path])
+
+      for field <- [:town, :state, :county] do
+        refute Map.has_key?(p, field),
+               "#{Path.basename(o.seed_file)}: place #{slug} still carries a #{field}"
+      end
+    end
+
+    for {mod, _r} <- Catalog.guide_modules("ballparks") do
+      path = mod.data().destination_path
+
+      assert MapSet.member?(roster, path),
+             "#{inspect(mod)} references unknown node #{inspect(path)}"
+    end
   end
 
   test "no ballpark seed prose states a trip duration" do

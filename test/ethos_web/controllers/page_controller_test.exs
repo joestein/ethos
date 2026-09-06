@@ -160,40 +160,46 @@ defmodule EthosWeb.PageControllerTest do
   end
 
   describe "travel guides and collections" do
-    test "lists the five deepest hubs with their counts", %{conn: conn} do
+    # Three countries, one guide each. `/destinations` lists the roots of the
+    # destination tree and nothing else, so the homepage's hub list and its "All
+    # N destinations" count are both about roots — not the states these tests
+    # used to seed, which are interior nodes now and have no page of their own
+    # at the top level.
+    defp seed_three_countries! do
       published_guide_fixture(%{
         title: "Woodbury Wander",
         destination: "Woodbury, Connecticut",
-        state: "Connecticut",
-        county: "Litchfield"
+        destination_path: "united-states/connecticut/litchfield-county/woodbury"
       })
 
       published_guide_fixture(%{
         title: "Roman Holiday",
         destination: "Rome, Italy",
-        state: "Italy",
-        county: "Lazio"
+        destination_path: "italy/lazio/rome"
       })
 
-      # Connecticut and Italy both have explicit @hub_nouns entries, so without
-      # a third state the "guides" fallback never executes even though it
-      # fires on real data. Tennessee has no entry.
       published_guide_fixture(%{
-        title: "Music City Weekend",
-        destination: "Nashville, Tennessee",
-        state: "Tennessee",
-        county: "Davidson"
+        title: "Camden Crawl",
+        destination: "Camden, England",
+        destination_path: "united-kingdom/england/london/camden"
       })
+    end
+
+    test "lists the country hubs with their counts", %{conn: conn} do
+      seed_three_countries!()
 
       html = conn |> get(~p"/") |> html_response(200)
-      hubs = Ethos.Guides.list_states() |> Enum.take(5)
+      hubs = Ethos.Guides.list_country_hubs() |> Enum.take(5)
 
       assert length(hubs) > 1
       assert html =~ "Travel Guides"
 
       for hub <- hubs do
-        assert html =~ hub.state
-        assert html =~ ~s(href="/destinations/#{hub.slug}")
+        assert html =~ hub.name
+
+        # node_path/1, not a bare slug: a country's hub lives at its full tree
+        # path, and the multi-segment paths below it would 404 on a slug.
+        assert html =~ ~s(href="#{EthosWeb.DestinationHTML.node_path(hub.path)}")
 
         # The count alone is ambient on the page — Tailwind classes, the
         # AdSense id, the port all contain small integers, so matching a bare
@@ -201,25 +207,29 @@ defmodule EthosWeb.PageControllerTest do
         # is what the reader sees and what the noun map is for.
         assert html =~ "#{hub.count} #{EthosWeb.PageHTML.hub_noun(hub.slug)}"
       end
+
+      # Both branches of hub_noun/1 really run: Italy has an entry ("zones",
+      # because its whole corpus is Rome's zones) and the United States takes
+      # the "guides" fallback, since no one noun is true of Connecticut towns,
+      # New York neighbourhoods and thirty ballparks at once.
+      assert EthosWeb.PageHTML.hub_noun("italy") == "zones"
+      assert EthosWeb.PageHTML.hub_noun("united-states") == "guides"
+      assert html =~ "1 zones"
     end
 
     test "links to all destinations with a count that matches the hub list", %{conn: conn} do
-      published_guide_fixture(%{
-        title: "Woodbury Wander",
-        destination: "Woodbury, Connecticut",
-        state: "Connecticut",
-        county: "Litchfield"
-      })
+      seed_three_countries!()
 
       html = conn |> get(~p"/") |> html_response(200)
 
-      # /destinations lists states PLUS Guides.list_destinations_without_state/0
-      # (destination_controller.ex) — the ballpark-only destinations with no
-      # state. The count must match that page's total, not just the state hubs,
-      # or the homepage undercounts the page it links to.
-      total =
-        length(Ethos.Guides.list_states()) +
-          length(Ethos.Guides.list_destinations_without_state())
+      # /destinations lists Destinations.roots/0 and nothing else — see the
+      # comment in destination_html/index.html.heex. The count must match that
+      # page's total, or the homepage misdescribes the page it links to.
+      total = length(Ethos.Destinations.roots())
+
+      # Non-vacuity: a count of 0 would make the assertion below pass against
+      # a page rendering no hub section at all.
+      assert total == 3
 
       # The count is computed, not a literal, so it cannot drift from the
       # page it points at.

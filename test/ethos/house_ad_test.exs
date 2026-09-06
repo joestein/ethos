@@ -96,12 +96,14 @@ defmodule Ethos.HouseAdTest do
       # The pool loads at boot, before any test data exists, so asserting over
       # pool/0 as-loaded would be vacuously true. Seed a real pool town and
       # reload so this exercises build_pool/0 rather than an empty list.
+      # `destination_path`, not a state/county pair: the pool query now joins
+      # the guide to its destination node and requires that node to sit under
+      # `united-states/connecticut`, so a guide with no node resolves nothing.
       guide =
         Ethos.GuidesFixtures.published_guide_fixture(%{
           title: "Litchfield",
           destination: "Litchfield, Connecticut",
-          state: "Connecticut",
-          county: "Litchfield County"
+          destination_path: "united-states/connecticut/litchfield-county/litchfield"
         })
 
       {:ok, _} =

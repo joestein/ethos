@@ -11,15 +11,13 @@ defmodule Ethos.Seeds.OrioleParkAtCamdenYardsPlaces do
   verdict's correction supplies. `docs/ballparks/oriole-park-at-camden-yards.md`
   quotes each published sentence against the verdict it rests on.
 
-  **The county is `"Baltimore City"`.** A confirmed verdict records that
-  Baltimore was designated an independent city by the Maryland Constitution in
-  1851, is not under the jurisdiction of any county, and is almost entirely
-  surrounded by but politically independent of Baltimore County. The
-  artifact's `county` field holds that explanation as a sentence; the
-  verifier's own note says the field "would more cleanly read 'Baltimore City'
-  … with the explanatory clause moved to prose", and that is what has been
-  done. The value derives `/destinations/maryland/baltimore-city`, which is
-  what every place breadcrumb here links to.
+  **Every record hangs from the node `united-states/maryland/baltimore`.** A
+  confirmed verdict records that Baltimore was designated an independent city by
+  the Maryland Constitution in 1851, is not under the jurisdiction of any county,
+  and is almost entirely surrounded by but politically independent of Baltimore
+  County. The verifier's own note asked for that explanation to be moved into
+  prose, and the tree says the same thing structurally: no county node stands
+  above the city.
 
   **Not one liquor-licence fact is published, and that is the big finding.**
   The finder cited a Baltimore City ArcGIS licence layer for eight separate
@@ -55,7 +53,7 @@ defmodule Ethos.Seeds.OrioleParkAtCamdenYardsPlaces do
 
   alias Ethos.Places
 
-  @baltimore %{town: "Baltimore", state: "Maryland", county: "Baltimore City"}
+  @baltimore %{destination_path: "united-states/maryland/baltimore"}
 
   def upsert_all! do
     Enum.map(places(), &Places.upsert_place!/1)

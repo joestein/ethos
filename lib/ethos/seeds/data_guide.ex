@@ -44,7 +44,7 @@ defmodule Ethos.Seeds.DataGuide do
   alias Ethos.Places
   alias Ethos.Seeds.GuideRunner
 
-  @required_guide_keys ~w(slug title destination state county intro)
+  @required_guide_keys ~w(slug title destination destination_path intro)
 
   def upsert_from_file!(path, email) do
     upsert_places!(path)
@@ -72,7 +72,25 @@ defmodule Ethos.Seeds.DataGuide do
 
   def upsert_places!(path) do
     data = load!(path)
-    Enum.map(data["places"], &Places.upsert_place!/1)
+
+    Enum.map(data["places"], fn p ->
+      node = resolve_node!(path, p["destination_path"])
+
+      p
+      |> Map.put("destination_id", node.id)
+      |> Map.delete("destination_path")
+      |> Places.upsert_place!()
+    end)
+  end
+
+  defp resolve_node!(file, nil),
+    do: raise(ArgumentError, "#{file}: missing destination_path")
+
+  defp resolve_node!(file, node_path) do
+    case Ethos.Destinations.get_by_path(node_path) do
+      nil -> raise ArgumentError, "#{file}: unknown destination node #{node_path}"
+      node -> node
+    end
   end
 
   def upsert_guide!(path, email) do
@@ -83,8 +101,7 @@ defmodule Ethos.Seeds.DataGuide do
       slug: g["slug"],
       title: g["title"],
       destination: g["destination"],
-      state: g["state"],
-      county: g["county"],
+      destination_id: resolve_node!(path, g["destination_path"]).id,
       intro: g["intro"],
       tier: g["tier"] || "guide",
       sections: g["sections"] || [],

@@ -52,14 +52,15 @@ defmodule Ethos.Seeds.TMobileParkPlaces do
   places are exactly the thirty rostered MLB venues. A schema constraint, not a
   claim: the prose calls it a stadium.
 
-  The county on every record is `"King County"`, from three confirmed verdicts
-  on three independent sources: the encyclopedia's T-Mobile Park article, an
-  independent ballpark directory, and OpenStreetMap's geocoder.
+  Every record hangs from the node `united-states/washington/seattle`. King
+  County is not modelled; three confirmed verdicts establish it on three
+  independent sources — the encyclopedia's T-Mobile Park article, an independent
+  ballpark directory, and OpenStreetMap's geocoder.
   """
 
   alias Ethos.Places
 
-  @seattle %{town: "Seattle", state: "Washington", county: "King County"}
+  @seattle %{destination_path: "united-states/washington/seattle"}
 
   def upsert_all! do
     Enum.map(places(), &Places.upsert_place!/1)

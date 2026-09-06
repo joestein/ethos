@@ -13,13 +13,13 @@ defmodule Ethos.Seeds.YankeeStadiumPlaces do
   published sentence against the verdict it rests on, and records every
   omission.
 
-  **The county is `"Bronx"`, not `"Bronx County"`.** The finder wrote the
-  legal name and the verifier refuted it against this corpus's own convention:
-  every Brooklyn guide carries `"county": "Brooklyn"` and every Manhattan
-  guide `"Manhattan"`. `"Bronx County"` would derive `bronx-county` and split
-  the borough hub away from its neighbours, which is the whole point of the
-  convention. The 1914 separation of Bronx County from New York County is
-  published as history in the guide, where it is a fact rather than a field.
+  **Every record hangs from the borough node
+  `united-states/new-york/new-york-city/bronx`**, the same node the Bronx corpus
+  uses — not a node of this ballpark's own. The finder wrote the legal name
+  "Bronx County" and the verifier refuted it; a `bronx-county` node would have
+  split this guide off from the borough its neighbours share. The 1914 separation
+  of Bronx County from New York County is published as history in the guide,
+  where it is a fact rather than a tier.
 
   What the verification changed, and what is therefore absent here:
 
@@ -66,7 +66,7 @@ defmodule Ethos.Seeds.YankeeStadiumPlaces do
 
   alias Ethos.Places
 
-  @bronx %{town: "Bronx", state: "New York", county: "Bronx"}
+  @bronx %{destination_path: "united-states/new-york/new-york-city/bronx"}
 
   def upsert_all! do
     Enum.map(places(), &Places.upsert_place!/1)

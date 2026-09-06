@@ -2,10 +2,13 @@ defmodule Ethos.Seeds.ChaseFieldGuide do
   @moduledoc """
   Seeds the Chase Field guide. Idempotent by slug.
 
-  ## The county, and the citation that was corrected
+  ## The county fact, and the citation that was corrected
 
-  Carries `state: "Arizona"` and `county: "Maricopa County"`, so it lists on
-  both the Arizona destination page and the Maricopa County one.
+  Names the destination node `united-states/arizona/phoenix`, so it lists on the
+  Arizona destination page and on Phoenix's. The ballparks model no county tier,
+  so Maricopa County is recorded here as a sourced fact rather than as a field —
+  and the sourcing is worth reading, because the finder's citation for it was
+  refuted.
 
   **The finder's county citation was refuted.** It attached "Maricopa County"
   to the encyclopedia's Chase Field article, and the verifier found the article
@@ -54,8 +57,7 @@ defmodule Ethos.Seeds.ChaseFieldGuide do
       slug: "chase-field-guide",
       title: "Chase Field: The Ballpark and Downtown Phoenix",
       destination: "Phoenix, Arizona",
-      state: "Arizona",
-      county: "Maricopa County",
+      destination_path: "united-states/arizona/phoenix",
       intro: """
       Chase Field stands at 401 East Jefferson Street in downtown Phoenix, and
       the Arizona Diamondbacks have played there since it opened on March 31,

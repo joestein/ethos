@@ -2,9 +2,11 @@ defmodule Ethos.Seeds.TropicanaFieldGuide do
   @moduledoc """
   Seeds the Tropicana Field guide. Idempotent by slug.
 
-  Carries `state: "Florida"` and `county: "Pinellas County"`, so it lists on
-  both the Florida destination page and the Pinellas County one. Two confirmed
-  verdicts establish the county and neither infers it from the city name: the
+  Names the destination node `united-states/florida/st-petersburg`, so it lists
+  on the Florida destination page and on St. Petersburg's. The ballparks model no
+  county tier, so Pinellas County is recorded here as a sourced fact rather than
+  as a field. Two confirmed verdicts establish it and neither infers it from the
+  city name: the
   encyclopedia's ballpark article states Pinellas County in the venue's own
   address line, and the county government's site identifies itself as the
   "Pinellas County, Florida Website" with a footer copyrighted to Pinellas
@@ -62,8 +64,7 @@ defmodule Ethos.Seeds.TropicanaFieldGuide do
       slug: "tropicana-field-guide",
       title: "Tropicana Field: The Ballpark and Downtown St. Petersburg",
       destination: "St. Petersburg, Florida",
-      state: "Florida",
-      county: "Pinellas County",
+      destination_path: "united-states/florida/st-petersburg",
       intro: """
       Tropicana Field stands at One Tropicana Drive in St. Petersburg, and the
       Tampa Bay Rays have played there since it opened on March 3, 1990 — with

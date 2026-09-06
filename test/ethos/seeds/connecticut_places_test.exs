@@ -1,7 +1,7 @@
 defmodule Ethos.Seeds.ConnecticutPlacesTest do
   use Ethos.DataCase, async: true
 
-  alias Ethos.Places
+  alias Ethos.{Destinations, Places}
   alias Ethos.Seeds.ConnecticutPlaces
 
   # 50 places for the five town guides, plus the 16 Woodbury antiques dealers
@@ -9,33 +9,48 @@ defmodule Ethos.Seeds.ConnecticutPlacesTest do
   @expected 66
 
   test "upsert_all! is idempotent and seeds all towns" do
+    Ethos.SeedDataHelpers.seed_destinations_for!([ConnecticutPlaces])
     first = ConnecticutPlaces.upsert_all!()
     second = ConnecticutPlaces.upsert_all!()
     assert length(first) == length(second)
     assert length(first) == @expected
     assert Repo.aggregate(Places.Place, :count) == @expected
 
-    assert %{kind: "theater", county_slug: "new-haven-county"} =
-             Places.get_place_by_slug!("palace-theater-waterbury")
+    assert %{kind: "theater", destination_node: %{path: waterbury}} =
+             Places.get_place_by_slug("palace-theater-waterbury")
 
-    assert %{kind: "bnb", county_slug: "litchfield-county"} =
-             Places.get_place_by_slug!("1754-house-woodbury")
+    assert waterbury == "united-states/connecticut/new-haven-county/waterbury"
 
-    for town <- ~w(waterbury middlebury danbury southbury woodbury) do
-      assert Places.list_places(town_slug: town) != []
+    assert %{kind: "bnb", destination_node: %{path: woodbury}} =
+             Places.get_place_by_slug("1754-house-woodbury")
+
+    assert woodbury == "united-states/connecticut/litchfield-county/woodbury"
+
+    for path <- [
+          "united-states/connecticut/new-haven-county/waterbury",
+          "united-states/connecticut/new-haven-county/middlebury",
+          "united-states/connecticut/fairfield-county/danbury",
+          "united-states/connecticut/new-haven-county/southbury",
+          "united-states/connecticut/litchfield-county/woodbury"
+        ] do
+      node = Destinations.get_by_path(path)
+      assert node, "expected a destination node at #{path}"
+      assert Places.list_places(destination_id: node.id) != []
     end
   end
 
   test "the antiques dealers seed as Woodbury shops that make no trading claim" do
+    Ethos.SeedDataHelpers.seed_destinations_for!([ConnecticutPlaces])
     ConnecticutPlaces.upsert_all!()
 
     shops = Enum.filter(ConnecticutPlaces.places(), &(&1.kind == "shop"))
     assert length(shops) == 16
 
     for shop <- shops do
-      place = Places.get_place_by_slug!(shop.slug)
-      assert place.town == "Woodbury"
-      assert place.county_slug == "litchfield-county"
+      place = Places.get_place_by_slug(shop.slug)
+
+      assert place.destination_node.path ==
+               "united-states/connecticut/litchfield-county/woodbury"
 
       # No dealer in this batch was found closed, and nine of the sixteen
       # could not be shown to be trading at all. "open" is the schema default

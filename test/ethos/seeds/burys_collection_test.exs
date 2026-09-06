@@ -1,5 +1,11 @@
 defmodule Ethos.Seeds.BurysCollectionTest do
-  use Ethos.DataCase, async: true
+  # Sync, like every other test that loads a corpus. This one seeds the whole
+  # destination roster, the whole Connecticut places corpus and ten guides in a
+  # single transaction; run concurrently with the other async tests that write
+  # those same rows it deadlocked, reproducibly, on the Connecticut place
+  # inserts. Its siblings — the per-directory seed-data gates — are `async:
+  # false` for the same reason.
+  use Ethos.DataCase, async: false
 
   import Ethos.AccountsFixtures
   alias Ethos.Collections
@@ -37,6 +43,12 @@ defmodule Ethos.Seeds.BurysCollectionTest do
 
   test "seeds The Burys of Connecticut collection idempotently with stable item order" do
     user = user_fixture()
+
+    # The loaders resolve every seed file's destination_path against the
+    # destinations table and raise on a miss, so the roster is a precondition
+    # of any corpus load — Ethos.Release seeds it before every corpus for the
+    # same reason.
+    Ethos.Seeds.DestinationTree.upsert_all!()
 
     Seeds.ConnecticutPlaces.upsert_all!()
     for mod <- @town_modules, do: mod.upsert!(user.email)

@@ -4,19 +4,33 @@ defmodule Ethos.PlacesFixturesTest do
   import Ethos.PlacesFixtures
 
   describe "place_fixture/1" do
-    test "derives town_slug from the given town" do
-      place = place_fixture(%{town: "Danbury"})
-      assert place.town_slug == "danbury"
+    # These three replace assertions on `town_slug`, `county_slug` and
+    # `state_slug`, which the fixture derived from a town/state/county triple.
+    # Those columns no longer exist: a place's geography is the destination node
+    # it names. Re-pointed rather than deleted, because the property they
+    # guarded still matters — the fixture must give a place real geography, or
+    # every badge count in the callers below is silently zero.
+    test "files the place on the default roster node" do
+      place = place_fixture()
+
+      assert Ethos.Destinations.get(place.destination_id).path ==
+               "united-states/connecticut/new-haven-county/waterbury"
     end
 
-    test "derives county_slug including the -county suffix" do
-      place = place_fixture(%{county: "New Haven County"})
-      assert place.county_slug == "new-haven-county"
+    test "destination_path: files the place on that node instead" do
+      place =
+        place_fixture(%{destination_path: "united-states/connecticut/fairfield-county/danbury"})
+
+      node = Ethos.Destinations.get(place.destination_id)
+
+      assert node.path == "united-states/connecticut/fairfield-county/danbury"
+      assert node.slug == "danbury"
     end
 
-    test "derives state_slug from the given state" do
-      place = place_fixture(%{state: "Connecticut"})
-      assert place.state_slug == "connecticut"
+    test "destination_path: nil makes a place with no node" do
+      # The shape a place authored through the admin UI has. `destination_id`
+      # is nullable, so this must produce a row rather than raise.
+      assert place_fixture(%{destination_path: nil}).destination_id == nil
     end
 
     test "repeated calls produce distinct places with distinct slugs" do

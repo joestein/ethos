@@ -23,6 +23,23 @@ defmodule Ethos.Adjacency.LinkBuilder do
 
   Skip-if-missing, like `Ethos.Foliage.LinkBuilder`: a town whose guide is
   unpublished is a corpus state, not a programming error.
+
+  ## A town is resolved by its node, not by a guide-slug convention
+
+  This originally reached a town's guide through
+  `Ethos.Foliage.Routes.guide_slug_for/2`, which derives the string
+  `"<town>-ct-travel-guide"` and looks it up. On the destination tree a guide's
+  geography is the node it is filed against, so that convention is a naming
+  habit rather than a fact the database enforces: rename one guide and its
+  borders silently stop being written, with nothing to distinguish that from a
+  town whose guide is genuinely unpublished.
+
+  So the lookup is keyed on the guide's `destination_node`, narrowed to the
+  Connecticut subtree by `Ethos.Destinations.subtree_match/1` — the query-side
+  counterpart of `Destinations.under?/2`, and segment-bounded the same way, so
+  a hypothetical `united-states/connecticut-valley` could never be swept in by
+  a prefix match. `Routes.covering_town/1` still supplies the one alias the
+  roster needs (Mansfield has no node; Storrs, a village inside it, does).
   """
 
   require Logger
@@ -30,6 +47,8 @@ defmodule Ethos.Adjacency.LinkBuilder do
   import Ecto.Query
 
   alias Ethos.Adjacency
+  alias Ethos.Destinations
+  alias Ethos.Foliage
   alias Ethos.Foliage.Routes
   alias Ethos.Guides.Guide
   alias Ethos.Links
@@ -37,19 +56,13 @@ defmodule Ethos.Adjacency.LinkBuilder do
   alias Ethos.Repo
 
   def build! do
-    guides =
-      Repo.all(from g in Guide, where: g.status == "published", select: {g.slug, g.id})
-      |> Map.new()
-
-    published = guides |> Map.keys() |> MapSet.new()
+    guides = connecticut_guides_by_town()
 
     {written, already_linked, missing} =
       Enum.reduce(Adjacency.ordered_pairs(), {0, 0, 0}, fn {a, b},
                                                            {written, already_linked, missing} ->
-        with slug_a when not is_nil(slug_a) <- Routes.guide_slug_for(a, published),
-             slug_b when not is_nil(slug_b) <- Routes.guide_slug_for(b, published),
-             id_a when not is_nil(id_a) <- Map.get(guides, slug_a),
-             id_b when not is_nil(id_b) <- Map.get(guides, slug_b) do
+        with {slug_a, id_a} <- Map.get(guides, Routes.covering_town(a)),
+             {slug_b, id_b} <- Map.get(guides, Routes.covering_town(b)) do
           if already_linked?(id_a, id_b) do
             {written, already_linked + 1, missing}
           else
@@ -66,6 +79,23 @@ defmodule Ethos.Adjacency.LinkBuilder do
     )
 
     :ok
+  end
+
+  # Town slug to `{guide_slug, guide_id}`, for every published guide filed on a
+  # node inside Connecticut. Two guides on the same node would collide here, but
+  # the roster has one town guide per town node and the corpus gate asserts it.
+  defp connecticut_guides_by_town do
+    {ct_path, ct_pattern} = Destinations.subtree_match(Foliage.connecticut_path())
+
+    Repo.all(
+      from g in Guide,
+        join: d in assoc(g, :destination_node),
+        where:
+          g.status == "published" and
+            (d.path == ^ct_path or like(d.path, ^ct_pattern)),
+        select: {d.slug, g.slug, g.id}
+    )
+    |> Map.new(fn {town, slug, id} -> {town, {slug, id}} end)
   end
 
   defp already_linked?(source_id, target_id) do

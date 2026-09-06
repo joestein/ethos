@@ -2,9 +2,10 @@ defmodule Ethos.Seeds.TargetFieldGuide do
   @moduledoc """
   Seeds the Target Field guide. Idempotent by slug.
 
-  Carries `state: "Minnesota"` and `county: "Hennepin County"`, so it lists on
-  both the Minnesota destination page and the Hennepin County one. The county
-  comes from the verdict — *"Minneapolis is the county seat of Hennepin County,
+  Names the destination node `united-states/minnesota/minneapolis`, so it lists
+  on the Minnesota destination page and on Minneapolis's. The ballparks model no
+  county tier, so Hennepin County is recorded here as a sourced fact rather than
+  as a field. It comes from the verdict — *"Minneapolis is the county seat of Hennepin County,
   Minnesota"*, confirmed against `en.wikipedia.org/wiki/Hennepin_County,_Minnesota`,
   which is the source that carries it. The artifact's own top-level
   `status_verdict` settles it in terms: *"Hennepin County is a standard US county
@@ -49,8 +50,7 @@ defmodule Ethos.Seeds.TargetFieldGuide do
       slug: "target-field-guide",
       title: "Target Field: The Ballpark and the Minneapolis Warehouse District",
       destination: "Minneapolis, Minnesota",
-      state: "Minnesota",
-      county: "Hennepin County",
+      destination_path: "united-states/minnesota/minneapolis",
       intro: """
       Target Field stands at 1 Twins Way in the Warehouse District of downtown
       Minneapolis, in Hennepin County. It opened on April 12, 2010, when the

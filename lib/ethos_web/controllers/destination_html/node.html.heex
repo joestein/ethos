@@ -1,0 +1,60 @@
+<div class="mx-auto max-w-2xl px-4 py-10">
+  <nav class="text-sm text-zinc-500">
+    <.link navigate={~p"/destinations"} class="underline">Destinations</.link>
+    <span :for={a <- @ancestors}>
+      <span aria-hidden="true">/</span>
+      <.link navigate={node_path(a.path)} class="underline">{a.name}</.link>
+    </span>
+    <span aria-hidden="true">/</span> {@node.name}
+  </nav>
+
+  <header class="mt-2">
+    <h1 class="text-3xl font-bold">{@node.name}</h1>
+  </header>
+
+  <%!-- One block for the node's own editorial content. Guarded as a whole
+        because a node may carry photos, prose, both or neither, and a bare
+        <section> around nothing is a gap in the page. --%>
+  <section :if={@node.photos != [] or @node.intro} class="mt-6">
+    <img
+      :for={photo <- @node.photos}
+      src={photo["src"]}
+      alt={photo["title"]}
+      class="w-full rounded-xl"
+      loading="lazy"
+    />
+    <p :for={photo <- @node.photos} class="mt-2 text-xs text-zinc-400">
+      Photo "{photo["title"]}": {photo["author"]}, {photo["license"]}, via
+      <a href={photo["source_url"]} class="underline" rel="nofollow noopener">
+        Wikimedia Commons
+      </a>
+    </p>
+    <div :if={@node.intro} class="prose mt-4">{EthosWeb.Markdown.render(@node.intro)}</div>
+  </section>
+
+  <%!-- A country has children and no guides; a neighborhood has guides and no
+        children. Both lists are guarded so neither renders a heading over an
+        empty <ul>. --%>
+  <section :if={@children != []} class="mt-6">
+    <h2 class="font-semibold">In {@node.name}</h2>
+    <ul class="mt-3 space-y-2">
+      <li :for={c <- @children}>
+        <.link navigate={node_path(c.path)} class="underline">{c.name}</.link>
+      </li>
+    </ul>
+  </section>
+
+  <section :if={@guides != []} class="mt-8">
+    <h2 class="font-semibold">All {@node.name} guides</h2>
+    <ul class="mt-3 space-y-3">
+      <li :for={g <- @guides} class="rounded-xl border p-4">
+        <.link navigate={~p"/g/#{g.slug}"} class="font-semibold hover:underline">{g.title}</.link>
+        <p class="text-sm text-zinc-500">{g.destination}</p>
+      </li>
+    </ul>
+  </section>
+
+  <p :if={@children == [] and @guides == []} class="mt-8 text-zinc-500">
+    No guides here yet.
+  </p>
+</div>

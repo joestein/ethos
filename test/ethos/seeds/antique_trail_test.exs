@@ -6,6 +6,11 @@ defmodule Ethos.Seeds.AntiqueTrailTest do
   alias Ethos.Seeds
 
   defp seed_trail!(email) do
+    Ethos.SeedDataHelpers.seed_destinations_for!([
+      Seeds.ConnecticutPlaces,
+      Seeds.AntiqueTrailGuide
+    ])
+
     Seeds.ConnecticutPlaces.upsert_all!()
     Seeds.WoodburyGuide.upsert!(email)
     Seeds.AntiqueTrailGuide.upsert!(email)
@@ -18,13 +23,12 @@ defmodule Ethos.Seeds.AntiqueTrailTest do
 
     assert guide.slug == "antique-trail-of-connecticut"
     assert guide.status == "published"
-    assert guide.state == "Connecticut"
-
-    # No county on purpose: the guide lists on the Connecticut destination page
-    # rather than under Litchfield County, so it can take in dealers in other
-    # counties as later research waves confirm them.
-    assert guide.county == nil
-    assert guide.county_slug == nil
+    # Filed on the Connecticut REGION node on purpose, not on Litchfield County:
+    # the guide lists on the state's destination page so it can take in dealers
+    # in other counties as later research waves confirm them.
+    node = Ethos.Repo.preload(guide, :destination_node).destination_node
+    assert node.path == "united-states/connecticut"
+    assert node.kind == "region"
 
     entries = Guides.list_entries(guide)
     assert length(entries) == 16
@@ -36,13 +40,18 @@ defmodule Ethos.Seeds.AntiqueTrailTest do
   end
 
   test "every trail entry place_slug resolves to a seeded Woodbury shop" do
+    Ethos.SeedDataHelpers.seed_destinations_for!([
+      Seeds.ConnecticutPlaces,
+      Seeds.AntiqueTrailGuide
+    ])
+
     Seeds.ConnecticutPlaces.upsert_all!()
 
     for entry <- Seeds.AntiqueTrailGuide.data().entries do
       place = Places.get_place_by_slug(entry.place_slug)
       assert place, "missing place #{entry.place_slug}"
       assert place.kind == "shop"
-      assert place.town == "Woodbury"
+      assert place.destination_node.path == "united-states/connecticut/litchfield-county/woodbury"
     end
   end
 

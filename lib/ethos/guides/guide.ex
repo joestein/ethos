@@ -19,10 +19,7 @@ defmodule Ethos.Guides.Guide do
     field :faq, {:array, :map}
     field :photos, {:array, :map}
     field :destination_slug, :string
-    field :state, :string
-    field :state_slug, :string
-    field :county, :string
-    field :county_slug, :string
+    belongs_to :destination_node, Ethos.Destinations.Destination, foreign_key: :destination_id
     belongs_to :user, Ethos.Accounts.User
     has_many :entries, Ethos.Guides.Entry, preload_order: [asc: :position]
     timestamps(type: :utc_datetime)
@@ -30,12 +27,11 @@ defmodule Ethos.Guides.Guide do
 
   def changeset(guide, attrs) do
     guide
-    |> cast(attrs, [:title, :destination, :starts_on, :ends_on, :state, :county])
+    |> cast(attrs, [:title, :destination, :starts_on, :ends_on, :destination_id])
     |> validate_required([:title, :destination])
     |> validate_length(:title, max: 120)
     |> maybe_put_slug()
     |> put_destination_slug()
-    |> put_geo_slugs()
     |> unique_constraint(:slug)
   end
 
@@ -107,19 +103,6 @@ defmodule Ethos.Guides.Guide do
 
       _ ->
         changeset
-    end
-  end
-
-  defp put_geo_slugs(changeset) do
-    changeset
-    |> derive_slug_for(:state, :state_slug)
-    |> derive_slug_for(:county, :county_slug)
-  end
-
-  defp derive_slug_for(changeset, source_field, slug_field) do
-    case get_field(changeset, source_field) do
-      nil -> changeset
-      value -> put_change(changeset, slug_field, derive_destination_slug(value))
     end
   end
 end

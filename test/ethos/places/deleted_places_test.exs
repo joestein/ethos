@@ -118,8 +118,9 @@ defmodule Ethos.Places.DeletedPlacesTest do
     end
 
     test "a deleted place also leaves list_places/1" do
-      Places.upsert_place!(place_attrs("drop-me"))
-      slugs = fn -> Places.list_places(town_slug: "woodbury") |> Enum.map(& &1.slug) end
+      node = woodbury_node()
+      Places.upsert_place!(place_attrs("drop-me", node))
+      slugs = fn -> Places.list_places(destination_id: node.id) |> Enum.map(& &1.slug) end
 
       assert "drop-me" in slugs.()
       assert {1, nil} = Places.delete_by_slugs!(["drop-me"])
@@ -127,15 +128,22 @@ defmodule Ethos.Places.DeletedPlacesTest do
     end
   end
 
-  defp place_attrs(slug) do
+  defp woodbury_node do
+    Ethos.Destinations.upsert_destination!(%{
+      path: "connecticut/litchfield-county/woodbury",
+      name: "Woodbury",
+      kind: "town",
+      intro: "Woodbury."
+    })
+  end
+
+  defp place_attrs(slug, node \\ nil) do
     %{
       slug: slug,
       name: "Test Place",
       kind: "park",
-      town: "Woodbury",
-      state: "Connecticut",
-      county: "Litchfield County",
-      summary: "A park."
+      summary: "A park.",
+      destination_id: node && node.id
     }
   end
 end

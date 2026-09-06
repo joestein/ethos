@@ -51,7 +51,7 @@ defmodule Ethos.Seeds.SutterHealthParkPlaces do
 
   alias Ethos.Places
 
-  @west_sac %{town: "West Sacramento", state: "California", county: "Yolo County"}
+  @west_sac %{destination_path: "united-states/california/west-sacramento"}
 
   def upsert_all! do
     Enum.map(places(), &Places.upsert_place!/1)

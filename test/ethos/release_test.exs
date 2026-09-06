@@ -9,6 +9,24 @@ defmodule Ethos.ReleaseTest do
   alias Ethos.Places.DeletedPlaces
   alias Ethos.SeedDataHelpers
 
+  # Counts published guides by the destination node they name. There is nothing
+  # else left to count them by — a guide's geography IS its node — and the
+  # subtree form is what a county-string compare could never express: the Bronx
+  # borough node is named "The Bronx", and a London file is filed under its own
+  # borough rather than under London.
+  defp published_guides_under(node_path) do
+    ids =
+      from(d in Ethos.Destinations.Destination,
+        where: d.path == ^node_path or like(d.path, ^(node_path <> "/%")),
+        select: d.id
+      )
+      |> Repo.all()
+      |> MapSet.new()
+
+    Ethos.Guides.list_published_guides()
+    |> Enum.filter(&MapSet.member?(ids, &1.destination_id))
+  end
+
   # This test was originally written against an empty priv/seed_data/brooklyn/,
   # asserting that seeding it was a no-op rather than a crash so the release
   # runbook order was valid before any wave landed. Wave 1 has landed, so the
@@ -31,9 +49,7 @@ defmodule Ethos.ReleaseTest do
 
     Ethos.Release.seed_brooklyn(user.email)
 
-    brooklyn = fn ->
-      Ethos.Guides.list_published_guides() |> Enum.filter(&(&1.county == "Brooklyn"))
-    end
+    brooklyn = fn -> published_guides_under("united-states/new-york/new-york-city/brooklyn") end
 
     assert length(brooklyn.()) == expected
 
@@ -119,14 +135,16 @@ defmodule Ethos.ReleaseTest do
     assert File.dir?(Path.join([to_string(:code.priv_dir(:ethos)), "seed_data", dir])),
            "seed_bronx/1 names priv/seed_data/#{dir}, which does not exist — a silent no-op"
 
-    # seed_ballparks/1 above published the Yankee Stadium guide, whose county is
-    # "Bronx", so it has to come back out of this count — it is a code seed, not
-    # one of the files seed_bronx/1 is being measured on. Rejected by slug
+    # seed_ballparks/1 above published the Yankee Stadium guide, which sits in
+    # the Bronx, so it has to come back out of this count — it is a code seed,
+    # not one of the files seed_bronx/1 is being measured on. Rejected by slug
     # rather than by bumping `expected`, so a committed file that stopped
     # publishing still fails here instead of being masked by the extra guide.
+    # The reject is load-bearing from the moment the code seeds name a node;
+    # until then it costs nothing.
     bronx = fn ->
-      Ethos.Guides.list_published_guides()
-      |> Enum.filter(&(&1.county == "Bronx"))
+      "united-states/new-york/new-york-city/bronx"
+      |> published_guides_under()
       |> Enum.reject(&(&1.slug == "yankee-stadium-guide"))
     end
 
@@ -168,8 +186,7 @@ defmodule Ethos.ReleaseTest do
     Ethos.Release.seed_ballparks(user.email)
 
     before =
-      Ethos.Guides.list_published_guides()
-      |> Enum.count(&(&1.county == "Queens"))
+      "united-states/new-york/new-york-city/queens" |> published_guides_under() |> length()
 
     output = capture_io(fn -> Ethos.Release.seed_queens(user.email) end)
 
@@ -196,16 +213,14 @@ defmodule Ethos.ReleaseTest do
     # long as this test never seeds code guides, and would then fail pointing
     # at the seed directory rather than at the guide it did not expect.
     after_first =
-      Ethos.Guides.list_published_guides()
-      |> Enum.count(&(&1.county == "Queens"))
+      "united-states/new-york/new-york-city/queens" |> published_guides_under() |> length()
 
     assert after_first - before == expected
 
     capture_io(fn -> Ethos.Release.seed_queens(user.email) end)
 
     after_second =
-      Ethos.Guides.list_published_guides()
-      |> Enum.count(&(&1.county == "Queens"))
+      "united-states/new-york/new-york-city/queens" |> published_guides_under() |> length()
 
     assert after_second == after_first, "seed_queens/1 is not idempotent"
   end
@@ -236,8 +251,8 @@ defmodule Ethos.ReleaseTest do
     # file that stopped publishing still fails here instead of being masked by
     # the extra guide. This is the shape the Bronx test uses for Yankee Stadium.
     sf = fn ->
-      Ethos.Guides.list_published_guides()
-      |> Enum.filter(&(&1.county == "San Francisco"))
+      "united-states/california/san-francisco"
+      |> published_guides_under()
       |> Enum.reject(&(&1.slug == "oracle-park-guide"))
       |> length()
     end
@@ -286,16 +301,29 @@ defmodule Ethos.ReleaseTest do
     user = user_fixture()
     expected = length(SeedDataHelpers.seed_files("rome"))
 
-    # Counts BOTH counties the directory publishes. Thirty of its thirty-one
-    # files carry county "Rome"; vatican-city.json carries "Vatican City",
-    # because a sovereign state is not in the Metropolitan City of Rome and
-    # saying so would be false. Counting only "Rome" asserts 30 against a
-    # directory of 31.
-    rome_counties = ["Rome", "Vatican City"]
+    # Counts BOTH subtrees the directory publishes. Thirty of its thirty-one
+    # files hang from the Rome city node; vatican-city.json hangs from the
+    # Vatican, because a sovereign state is not in the Metropolitan City of
+    # Rome and filing it there would be false. Counting only Rome asserts 30
+    # against a directory of 31.
+    #
+    # The Rome corpus hangs from two roots: the city node and the Vatican, which
+    # is a sovereign country node of its own rather than a Roman rione.
+    rome_roots = ["italy/lazio/rome", "vatican-city"]
+
+    # `seed_rome_zones/1` runs `seed_rome/1` first, and the flagship guide is
+    # itself filed on `italy/lazio/rome` — so it now falls inside the subtree
+    # being counted, where the `county` compare this replaced never saw it. The
+    # directory's own files are what this counts, so the flagship is excluded
+    # by slug. Same shape as the Oracle Park exclusion below.
+    flagship = "three-days-in-rome-real-trip-guide"
 
     before =
-      Ethos.Guides.list_published_guides()
-      |> Enum.count(&(&1.county in rome_counties))
+      rome_roots
+      |> Enum.flat_map(&published_guides_under/1)
+      |> Enum.uniq_by(& &1.id)
+      |> Enum.reject(&(&1.slug == flagship))
+      |> length()
 
     output = capture_io(fn -> Ethos.Release.seed_rome_zones(user.email) end)
 
@@ -326,16 +354,22 @@ defmodule Ethos.ReleaseTest do
              "linking to it will abort the run at Links.resolve!/1"
 
     after_first =
-      Ethos.Guides.list_published_guides()
-      |> Enum.count(&(&1.county in rome_counties))
+      rome_roots
+      |> Enum.flat_map(&published_guides_under/1)
+      |> Enum.uniq_by(& &1.id)
+      |> Enum.reject(&(&1.slug == flagship))
+      |> length()
 
     assert after_first - before == expected
 
     capture_io(fn -> Ethos.Release.seed_rome_zones(user.email) end)
 
     after_second =
-      Ethos.Guides.list_published_guides()
-      |> Enum.count(&(&1.county in rome_counties))
+      rome_roots
+      |> Enum.flat_map(&published_guides_under/1)
+      |> Enum.uniq_by(& &1.id)
+      |> Enum.reject(&(&1.slug == flagship))
+      |> length()
 
     assert after_second == after_first, "seed_rome_zones/1 is not idempotent"
   end
@@ -351,11 +385,12 @@ defmodule Ethos.ReleaseTest do
     user = user_fixture()
     expected = length(SeedDataHelpers.seed_files("london"))
 
-    # County "London" and state "England". The City of London is in this count
-    # like every other file: it is sui generis rather than a borough, which is a
-    # fact about its governance and not about where its guide routes.
+    # Every file in the directory sits somewhere under the London node. The City
+    # of London is in this count like every other file: it is sui generis rather
+    # than a borough, which is a fact about its governance and not about where
+    # its guide routes.
     london = fn ->
-      Ethos.Guides.list_published_guides() |> Enum.count(&(&1.county == "London"))
+      length(published_guides_under("united-kingdom/england/london"))
     end
 
     before = london.()
@@ -478,6 +513,9 @@ defmodule Ethos.ReleaseTest do
       user = user_fixture()
 
       for path <- [@avon, @canton] do
+        # The loader resolves each file's destination_path against the
+        # destinations table and raises on a miss, so its nodes come first.
+        Ethos.SeedDataHelpers.seed_destinations_for_file!(path)
         Ethos.Seeds.DataGuide.upsert_places!(path)
         Ethos.Seeds.DataGuide.upsert_guide!(path, user.email)
       end
@@ -515,6 +553,11 @@ defmodule Ethos.ReleaseTest do
       user = user_fixture()
 
       for path <- [@avon, @canton] do
+        # Same precondition as foliage_links/0 above: the loader resolves each
+        # file's destination_path against the destinations table and raises on
+        # a miss, and the builder finds a town by its guide's node, so the
+        # nodes come first either way.
+        Ethos.SeedDataHelpers.seed_destinations_for_file!(path)
         Ethos.Seeds.DataGuide.upsert_places!(path)
         Ethos.Seeds.DataGuide.upsert_guide!(path, user.email)
       end
@@ -594,9 +637,6 @@ defmodule Ethos.ReleaseTest do
       slug: slug,
       name: "Test Place",
       kind: "park",
-      town: "Woodbury",
-      state: "Connecticut",
-      county: "Litchfield County",
       summary: "A park."
     }
   end

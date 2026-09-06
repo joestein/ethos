@@ -49,13 +49,14 @@ defmodule Ethos.Seeds.DaikinParkPlaces do
       records rest on the encyclopedia. A URL neither pass confirmed is an
       unsourced claim in a field readers treat as authoritative.
 
-  The county on every record is `"Harris County"`, and not from the source the
-  finder first cited for it. See `Ethos.Seeds.DaikinParkGuide`.
+  Every record hangs from the node `united-states/texas/houston`. Harris County
+  is not modelled, and what the research established about it did not come from
+  the source the finder first cited. See `Ethos.Seeds.DaikinParkGuide`.
   """
 
   alias Ethos.Places
 
-  @houston %{town: "Houston", state: "Texas", county: "Harris County"}
+  @houston %{destination_path: "united-states/texas/houston"}
 
   def upsert_all! do
     Enum.map(places(), &Places.upsert_place!/1)

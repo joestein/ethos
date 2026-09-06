@@ -4,14 +4,16 @@ defmodule Ethos.LinksTest do
   import Ethos.GuidesFixtures
   alias Ethos.{Links, Places}
 
+  @node "united-states/new-york/new-york-city/manhattan/testville"
+
   defp place!(slug, name) do
+    Ethos.SeedDataHelpers.seed_fixture_destinations!()
+
     Places.upsert_place!(%{
       slug: slug,
       name: name,
       kind: "museum",
-      town: "Testville",
-      state: "New York",
-      county: "Manhattan",
+      destination_path: @node,
       summary: "x"
     })
   end
@@ -110,6 +112,7 @@ defmodule Ethos.LinksTest do
     assert nearby.other.slug == "out-place"
     assert nearby.other.title == "Out Place"
     assert nearby.other.type == "place"
+    # The node's name, which is what the dropped `town` column held.
     assert nearby.other.subtitle == "museum · Testville"
 
     hist = Enum.find(results, &(&1.kind == "shared-history"))
@@ -176,7 +179,11 @@ defmodule Ethos.LinksTest do
       |> Enum.take_while(&(&1 == :event))
       |> length()
 
-    assert query_count <= 4
+    # Five, not four: `links_for/2` preloads each place's destination node so a
+    # result subtitle can name it. That is ONE more query however many places
+    # the page links — the bound this test exists for is that the count does
+    # not grow with the number of rows.
+    assert query_count <= 5
   end
 
   test "prune_orphans removes edges whose endpoints are gone" do

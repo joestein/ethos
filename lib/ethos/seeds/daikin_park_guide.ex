@@ -2,10 +2,12 @@ defmodule Ethos.Seeds.DaikinParkGuide do
   @moduledoc """
   Seeds the Daikin Park guide. Idempotent by slug.
 
-  ## The county, and the source it does not come from
+  ## The county fact, and the source it does not come from
 
-  Carries `state: "Texas"` and `county: "Harris County"`, so it lists on both
-  the Texas destination page and the Harris County one.
+  Names the destination node `united-states/texas/houston`, so it lists on the
+  Texas destination page and on Houston's. The ballparks model no county tier, so
+  Harris County is recorded here as a sourced fact rather than as a field — and
+  the sourcing matters, because it is not the source the finder cited.
 
   **The county was not taken from the source the finder cited for it.** The
   finder's item put the ballpark "in Houston, Texas, in Harris County" on the
@@ -62,8 +64,7 @@ defmodule Ethos.Seeds.DaikinParkGuide do
       slug: "daikin-park-guide",
       title: "Daikin Park: The Ballpark and Downtown Houston",
       destination: "Houston, Texas",
-      state: "Texas",
-      county: "Harris County",
+      destination_path: "united-states/texas/houston",
       intro: """
       Daikin Park stands at 501 Crawford Street in downtown Houston, and the
       Astros have played there since it opened in 2000. It has carried four

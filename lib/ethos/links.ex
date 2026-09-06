@@ -70,7 +70,10 @@ defmodule Ethos.Links do
       Map.new(Repo.all(from g in Guide, where: g.id in ^guide_ids), &{&1.id, &1})
 
     places =
-      Map.new(Repo.all(from p in Place, where: p.id in ^place_ids), &{&1.id, &1})
+      Map.new(
+        Repo.all(from p in Place, where: p.id in ^place_ids, preload: [:destination_node]),
+        &{&1.id, &1}
+      )
 
     edges
     |> Enum.flat_map(fn {link, {ot, oid}} ->
@@ -99,9 +102,20 @@ defmodule Ethos.Links do
         nil
 
       p ->
-        %{type: "place", id: p.id, slug: p.slug, title: p.name, subtitle: "#{p.kind} · #{p.town}"}
+        %{
+          type: "place",
+          id: p.id,
+          slug: p.slug,
+          title: p.name,
+          subtitle: "#{p.kind} · #{node_name(p)}"
+        }
     end
   end
+
+  # The place's node by name, which is what the dropped `town` column held. Nil
+  # for a place with no node, and then the subtitle is just the kind.
+  defp node_name(%Place{destination_node: %Ethos.Destinations.Destination{name: name}}), do: name
+  defp node_name(%Place{}), do: nil
 
   @doc """
   Makes `source`'s outgoing edges exactly `links`, dropping any it no longer

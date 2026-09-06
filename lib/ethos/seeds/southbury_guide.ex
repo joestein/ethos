@@ -8,8 +8,7 @@ defmodule Ethos.Seeds.SouthburyGuide do
       slug: "southbury-ct-travel-guide",
       title: "Southbury, Connecticut: State Parks, Colonial Roots, and the Pomperaug Valley",
       destination: "Southbury, Connecticut",
-      state: "Connecticut",
-      county: "New Haven County",
+      destination_path: "united-states/connecticut/new-haven-county/southbury",
       intro: """
       Southbury began in 1673, when religious dissidents from Stratford bought
       "Pomperaug Plantation" along a Housatonic tributary; the southern parish

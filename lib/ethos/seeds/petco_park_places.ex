@@ -31,17 +31,17 @@ defmodule Ethos.Seeds.PetcoParkPlaces do
       direct fetch, and the third-party directions page names no lots and no
       prices.
 
-  The county on every record is `"San Diego County"`, from two confirmed
-  verdicts: the encyclopedia's Petco Park infobox, which names the county, and
-  its article on San Diego, which states verbatim that the city is the county
-  seat of San Diego County. San Diego is not a consolidated city-county, so the
-  plain form ships rather than the bare-city rendering used for San Francisco
-  and Denver.
+  Every record hangs from the node `united-states/california/san-diego`. San
+  Diego County is not modelled, though two confirmed verdicts establish it: the
+  encyclopedia's Petco Park infobox names it, and its article on San Diego states
+  verbatim that the city is the county seat of San Diego County. San Diego is not
+  a consolidated city-county, so city and county are genuinely distinct names —
+  the city is the one the tree carries.
   """
 
   alias Ethos.Places
 
-  @san_diego %{town: "San Diego", state: "California", county: "San Diego County"}
+  @san_diego %{destination_path: "united-states/california/san-diego"}
 
   @own_site_only "Its own site and a neighborhood business directory are the only sources this research reached for it, and neither can establish that a business is trading, so nothing is said here about whether it is open today."
 

@@ -5,10 +5,28 @@ defmodule Ethos.Places do
   alias Ethos.Places.Place
 
   def get_place_by_slug!(slug), do: Repo.get_by!(Place, slug: slug)
-  def get_place_by_slug(slug), do: Repo.get_by(Place, slug: slug)
+
+  @doc """
+  A place by slug, with its destination node loaded, or nil.
+
+  The node is preloaded here rather than at the call site because the page this
+  feeds derives its breadcrumb, its visible geography nav and its schema.org
+  `PostalAddress` from the node's ancestry — three readers of one association,
+  and a lazy load would be three queries or a `NotLoaded` crash. `get_place_by_slug!/1`
+  deliberately does not preload: its caller is `Ethos.Seeds.GuideRunner`,
+  resolving one entry per guide row in a seeding loop that never touches the
+  node.
+  """
+  def get_place_by_slug(slug) do
+    case Repo.get_by(Place, slug: slug) do
+      nil -> nil
+      place -> Repo.preload(place, :destination_node)
+    end
+  end
 
   def upsert_place!(attrs) do
-    slug = attrs[:slug] || attrs["slug"]
+    attrs = attrs |> normalize_keys() |> put_destination_id()
+    slug = attrs["slug"]
 
     case Repo.get_by(Place, slug: slug) do
       nil -> %Place{}
@@ -17,6 +35,25 @@ defmodule Ethos.Places do
     |> Place.changeset(attrs)
     |> Repo.insert_or_update!()
   end
+
+  defp normalize_keys(attrs), do: Map.new(attrs, fn {k, v} -> {to_string(k), v} end)
+
+  # A seed file names its destination node by path; the column stores the id.
+  # Resolution lives here rather than in `Place.changeset/2` because a changeset
+  # cannot query, and because a path that names no node must raise at seed time
+  # rather than write a nil `destination_id` — a place with no node has no
+  # geography at all now that the town/state/county columns are gone.
+  defp put_destination_id(%{"destination_path" => path} = attrs) when is_binary(path) do
+    node =
+      Ethos.Destinations.get_by_path(path) ||
+        raise ArgumentError, "unknown destination node #{path}"
+
+    attrs
+    |> Map.delete("destination_path")
+    |> Map.put("destination_id", node.id)
+  end
+
+  defp put_destination_id(attrs), do: attrs
 
   @doc """
   Deletes places by slug, returning `{count_deleted, nil}`.
@@ -39,9 +76,7 @@ defmodule Ethos.Places do
 
     opts
     |> Enum.reduce(base, fn
-      {:town_slug, v}, q -> where(q, [p], p.town_slug == ^v)
-      {:county_slug, v}, q -> where(q, [p], p.county_slug == ^v)
-      {:state_slug, v}, q -> where(q, [p], p.state_slug == ^v)
+      {:destination_id, v}, q -> where(q, [p], p.destination_id == ^v)
       {:kind, v}, q -> where(q, [p], p.kind == ^v)
       {:kinds, v}, q -> where(q, [p], p.kind in ^v)
       {:status, v}, q -> where(q, [p], p.status == ^v)
@@ -49,12 +84,28 @@ defmodule Ethos.Places do
     |> Repo.all()
   end
 
-  def count_open_places_in_county(state_slug, county_slug) do
+  def count_open_places_in_node(destination_id) do
     Repo.one(
       from p in Place,
-        where:
-          p.status == "open" and p.state_slug == ^state_slug and
-            p.county_slug == ^county_slug,
+        where: p.status == "open" and p.destination_id == ^destination_id,
+        select: count(p.id)
+    )
+  end
+
+  @doc """
+  Open places whose `destination_id` is any of `node_ids`, summed in one query.
+
+  Exists for callers that ask a question spanning several nodes at once — a
+  county-tier badge counting every open place across the towns beneath it, for
+  instance — where `node_ids` is that county node plus its
+  `Destinations.descendant_ids/1`. `count_open_places_in_node/1` answers the
+  single-node question; this is its sum-over-a-set counterpart, not a different
+  query shape.
+  """
+  def count_open_places_in_nodes(node_ids) do
+    Repo.one(
+      from p in Place,
+        where: p.status == "open" and p.destination_id in ^node_ids,
         select: count(p.id)
     )
   end
@@ -113,34 +164,39 @@ defmodule Ethos.Places do
   rotation is over whatever total order the database produces — but a reader
   diffing local against production will otherwise think something is broken.
 
-  Scoped by state as well as town, because `town_slug` alone is not a town.
-  Washington, Connecticut and Washington, District of Columbia both derive
-  `town_slug: "washington"`, as do Madison, Connecticut and Madison, Brooklyn —
-  so a town-only filter puts Nationals Park in a Litchfield County town's
-  "More in Washington" and four Connecticut museums and taverns in Nationals
-  Park's. Nothing raises: the query is valid and the geography is wrong.
+  Scoped by `destination_id`, not by a town/state slug pair. The slug pair used
+  to be the only handle a place had on "its town" — and it was a lossy one:
+  Washington, Connecticut and Washington, District of Columbia both derived
+  `town_slug: "washington"`, as did Madison, Connecticut and Madison,
+  Brooklyn, so a town-only filter put Nationals Park in a Litchfield County
+  town's "More in Washington" and four Connecticut museums and taverns in
+  Nationals Park's. Nothing raised: the query was valid and the geography was
+  wrong.
 
-  A place with no `town_slug` or no `state_slug` has no town to be a sibling of.
-  `Place.changeset/2` requires both `town` and `state`, so neither clause is
-  reachable through the seed loaders; they are here so a partial record returns
-  nothing rather than every place that happens to share one of its two halves.
+  That failure mode is structurally impossible now, not merely fixed by adding
+  the state back in as a second column to compare. A destination node is one
+  point in the tree — Washington, Connecticut and Washington, D.C. are two
+  distinct rows with two distinct ids, however their names or slugs happen to
+  print — so "matches the same node" can never accidentally mean "matches a
+  same-named node somewhere else." There is no pair of strings left for two
+  unrelated places to collide across.
+
+  A place with no `destination_id` has no node to be a sibling of. Unlike the
+  old `town_slug`/`state_slug` pair, `destination_id` is nullable, so the guard
+  is reachable in principle — and it returns nothing rather than every place
+  that happens to share the same `nil`. Nothing in the seeded corpus reaches it:
+  every loader resolves a `destination_path` and raises on a miss.
   """
   def list_siblings(place, opts \\ [])
 
-  def list_siblings(%Place{town_slug: nil}, _opts), do: []
-  def list_siblings(%Place{state_slug: nil}, _opts), do: []
+  def list_siblings(%Place{destination_id: nil}, _opts), do: []
 
-  def list_siblings(
-        %Place{id: id, name: name, town_slug: town_slug, state_slug: state_slug},
-        opts
-      ) do
+  def list_siblings(%Place{id: id, name: name, destination_id: destination_id}, opts) do
     limit = Keyword.get(opts, :limit, @sibling_limit)
 
     Repo.all(
       from p in Place,
-        where:
-          p.town_slug == ^town_slug and p.state_slug == ^state_slug and
-            p.id != ^id and p.status == "open",
+        where: p.destination_id == ^destination_id and p.id != ^id and p.status == "open",
         order_by: [
           desc: fragment("(?, ?) > (?, ?)", p.name, p.id, ^name, ^id),
           asc: p.name,

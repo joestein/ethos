@@ -6,6 +6,7 @@ defmodule Ethos.Seeds.BackfillLinksTest do
 
   test "backfill is idempotent and only links pages that exist" do
     user = user_fixture()
+    Ethos.SeedDataHelpers.seed_destinations_for!([Seeds.ConnecticutPlaces])
     Seeds.ConnecticutPlaces.upsert_all!()
     Seeds.WoodburyGuide.upsert!(user.email)
     Seeds.SouthburyGuide.upsert!(user.email)

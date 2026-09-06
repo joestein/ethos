@@ -2,13 +2,14 @@ defmodule Ethos.Seeds.RogersCentreGuide do
   @moduledoc """
   Seeds the Rogers Centre guide. Idempotent by slug.
 
-  Carries `state: "Ontario"` and `county: "Toronto"`. Ontario is a Canadian
-  province rather than a US state, which a confirmed verdict states outright;
-  the `state` field is the corpus's name for the first-level subdivision and
-  carries the province. Toronto is a single-tier municipality and not part of
+  Names the destination node `canada/ontario/toronto` — the set's one non-US
+  site, and the only ballpark whose country node is not `united-states`. A
+  confirmed verdict states that Ontario is a Canadian province rather than a US
+  state; the tree carries it as a `region`, the tier it uses for every
+  first-level subdivision. Toronto is a single-tier municipality and not part of
   any county — the 1998 amalgamation dissolved Metropolitan Toronto and its six
-  constituent municipalities — so the city's own name goes in `county`, giving
-  the guide and its ten places a hub to share.
+  constituent municipalities — which the tree states by putting the city directly
+  under the province.
 
   Every clause here restates the text of a `confirmed` verdict from the
   2026-08-30 Toronto Blue Jays research artifact, or the text a `refuted`
@@ -50,8 +51,7 @@ defmodule Ethos.Seeds.RogersCentreGuide do
       slug: "rogers-centre-guide",
       title: "Rogers Centre: The Ballpark and the Roundhouse",
       destination: "Toronto, Ontario",
-      state: "Ontario",
-      county: "Toronto",
+      destination_path: "canada/ontario/toronto",
       intro: """
       Rogers Centre stands at 1 Blue Jays Way in downtown Toronto, west of the
       CN Tower. It opened in 1989 as SkyDome, took its present name in 2005

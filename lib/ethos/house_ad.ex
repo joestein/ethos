@@ -22,6 +22,8 @@ defmodule Ethos.HouseAd do
 
   import Ecto.Query
 
+  alias Ethos.Destinations
+  alias Ethos.Foliage
   alias Ethos.Guides.Guide
   alias Ethos.Repo
 
@@ -133,13 +135,24 @@ defmodule Ethos.HouseAd do
       []
   end
 
+  # Keyed on the guide's destination NODE, not on its derived `destination_slug`
+  # plus a `state_slug == "connecticut"` guard. Three of the pool slugs —
+  # washington, madison, brooklyn — name a Connecticut town AND somewhere else
+  # entirely (Washington DC, Madison in Brooklyn, the London borough of
+  # Brooklyn's namesake), which is exactly what the state guard existed to keep
+  # out. Requiring the node to sit under `united-states/connecticut` is the same
+  # exclusion expressed as ancestry, and it cannot be satisfied by a name.
   defp fetch_rows do
+    {ct_path, ct_pattern} = Destinations.subtree_match(Foliage.connecticut_path())
+
     Repo.all(
       from g in Guide,
+        join: d in assoc(g, :destination_node),
         where:
-          g.status == "published" and g.state_slug == "connecticut" and
-            g.destination_slug in ^@pool_slugs,
-        select: {g.destination_slug, g.photos}
+          g.status == "published" and
+            (d.path == ^ct_path or like(d.path, ^ct_pattern)) and
+            d.slug in ^@pool_slugs,
+        select: {d.slug, g.photos}
     )
     |> Enum.sort_by(&elem(&1, 0))
   end

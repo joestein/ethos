@@ -33,13 +33,14 @@ defmodule EthosWeb.PageController do
           limit: 6
       )
 
-    all_hubs = Ethos.Guides.list_states()
+    all_hubs = Ethos.Guides.list_country_hubs()
 
-    # /destinations (destination_controller.ex) lists states PLUS
-    # Guides.list_destinations_without_state/0 — the ballpark-only
-    # destinations with no state. The homepage's "All N destinations" count
-    # must match the page it links to, not just the state hubs shown above it.
-    hub_count = length(all_hubs) + length(Ethos.Guides.list_destinations_without_state())
+    # /destinations (destination_controller.ex) lists the roots of the
+    # destination tree and nothing else — everything below a country is reached
+    # by walking into it. The homepage's "All N destinations" count must match
+    # the page it links to, so it counts roots, not the hubs shown above it and
+    # not every node in the tree.
+    hub_count = length(Ethos.Destinations.roots())
 
     render(conn, :home,
       featured: featured,

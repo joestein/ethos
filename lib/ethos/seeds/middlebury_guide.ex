@@ -8,8 +8,7 @@ defmodule Ethos.Seeds.MiddleburyGuide do
       slug: "middlebury-ct-travel-guide",
       title: "Middlebury, Connecticut: Quassy, the Greenway, and the Quiet Side of the Valley",
       destination: "Middlebury, Connecticut",
-      state: "Connecticut",
-      county: "New Haven County",
+      destination_path: "united-states/connecticut/new-haven-county/middlebury",
       intro: """
       Middlebury was incorporated in 1807 from pieces of Southbury, Waterbury,
       and Woodbury — named simply for sitting "in the midst" of them — and it

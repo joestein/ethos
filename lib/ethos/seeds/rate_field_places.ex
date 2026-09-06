@@ -53,7 +53,7 @@ defmodule Ethos.Seeds.RateFieldPlaces do
 
   alias Ethos.Places
 
-  @chicago %{town: "Chicago", state: "Illinois", county: "Cook County"}
+  @chicago %{destination_path: "united-states/illinois/chicago"}
 
   def upsert_all! do
     Enum.map(places(), &Places.upsert_place!/1)

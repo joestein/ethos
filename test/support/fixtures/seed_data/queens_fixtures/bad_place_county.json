@@ -3,15 +3,14 @@
     "slug": "fixture-bad-place-county-queens-guide",
     "title": "Fixture: Bad Place County",
     "destination": "Fixture, New York",
-    "state": "New York",
-    "county": "Queens",
+    "destination_path": "united-states/new-york/new-york-city/queens/fixture",
     "intro": "A fixture guide filed correctly whose place is not, which is the split the guide-only check missed.",
     "sections": [],
     "faq": [],
     "photos": []
   },
   "places": [
-    {"slug": "fixture-queens-bad-place-county", "name": "One", "kind": "park", "town": "Fixture", "state": "New York", "county": "Queens County", "summary": "A fixture place.", "status": "open", "photos": []}
+    {"slug": "fixture-queens-bad-place-county", "name": "One", "kind": "park", "destination_path": "united-states/new-york/queens-county/fixture", "summary": "A fixture place.", "status": "open", "photos": []}
   ],
   "entries": []
 }

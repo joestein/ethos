@@ -75,6 +75,10 @@ defmodule Ethos.Seeds.MlbBallparksCollectionTest do
   test "the collection seeds idempotently over the whole ballparks region" do
     user = user_fixture()
 
+    # The place and guide loaders resolve every destination_path against the
+    # destinations table and raise on a miss, so the nodes come first.
+    Ethos.SeedDataHelpers.seed_code_destinations!()
+
     for {mod, _r} <- Catalog.place_modules("ballparks"), do: mod.upsert_all!()
     for {mod, _r} <- Catalog.guide_modules("ballparks"), do: mod.upsert!(user.email)
 

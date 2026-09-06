@@ -239,24 +239,29 @@ defmodule Ethos.SocialTest do
     setup do
       user = user_fixture()
 
-      # `Place.changeset/2` does NOT cast town_slug/county_slug/state_slug — it
-      # DERIVES them from town/state/county. Passing a slug key here would be
-      # silently dropped and every place would land in the same town, making the
-      # by-town and by-county assertions below pass while proving nothing.
-      # Always set the human-readable name; assert against the derived slug.
+      # A place's geography is the destination NODE it names — the
+      # town/state/county triple these counts used to filter on is gone. So the
+      # fixture takes a roster path and the assertions below compare node ids,
+      # not derived slugs. That closes the hole the old comment here warned
+      # about from the other side: a slug key was silently dropped and every
+      # place landed in the same town, so the by-town and by-county assertions
+      # passed while proving nothing. A path that names no roster node raises
+      # in the fixture, so the same mistake now fails loudly.
       open = fn attrs ->
         place_fixture(
           Enum.into(attrs, %{
             status: "open",
-            state: "Connecticut",
-            county: "New Haven County",
-            town: "Waterbury",
             kind: "museum"
           })
         )
       end
 
-      %{user: user, open: open}
+      node = fn path ->
+        Ethos.SeedDataHelpers.seed_destination_paths!([path])
+        Ethos.Destinations.get_by_path(path)
+      end
+
+      %{user: user, open: open, node: node}
     end
 
     test "counts every place the user reacted to, thumbs up or down", %{user: user, open: open} do
@@ -315,11 +320,18 @@ defmodule Ethos.SocialTest do
       assert Social.reacted_place_count(user) == 0
     end
 
-    test "by town", %{user: user, open: open} do
-      Social.react(user, open.(%{town: "Waterbury"}), "up")
-      Social.react(user, open.(%{town: "Danbury"}), "up")
+    test "by node", %{user: user, open: open, node: node} do
+      waterbury = node.("united-states/connecticut/new-haven-county/waterbury")
 
-      assert Social.reacted_place_count_by_town(user, "waterbury") == 1
+      Social.react(user, open.(%{destination_path: waterbury.path}), "up")
+
+      Social.react(
+        user,
+        open.(%{destination_path: "united-states/connecticut/fairfield-county/danbury"}),
+        "up"
+      )
+
+      assert Social.reacted_place_count_by_node(user, waterbury.id) == 1
     end
 
     test "by kinds", %{user: user, open: open} do
@@ -330,23 +342,30 @@ defmodule Ethos.SocialTest do
       assert Social.reacted_place_count_by_kinds(user, ["cafe", "brewery"]) == 2
     end
 
-    test "in county", %{user: user, open: open} do
-      Social.react(user, open.(%{county: "New Haven County"}), "up")
-      Social.react(user, open.(%{county: "Fairfield County"}), "up")
+    test "in a set of nodes", %{user: user, open: open, node: node} do
+      waterbury = node.("united-states/connecticut/new-haven-county/waterbury")
+      middlebury = node.("united-states/connecticut/new-haven-county/middlebury")
 
-      # A place in a different state that happens to share the county slug
-      # "new-haven-county". Without the state_slug half of the where clause,
-      # this would inflate the Connecticut count to 2.
+      Social.react(user, open.(%{destination_path: waterbury.path}), "up")
+      Social.react(user, open.(%{destination_path: middlebury.path}), "up")
+
       Social.react(
         user,
-        open.(%{state: "Vermont", county: "New Haven County"}),
+        open.(%{destination_path: "united-states/connecticut/fairfield-county/danbury"}),
         "up"
       )
 
-      # "New Haven County" derives to "new-haven-county" — the -county suffix is
-      # part of the slug, as the existing badge key county-complete-new-haven-county
-      # already shows.
-      assert Social.reacted_place_count_in_county(user, "connecticut", "new-haven-county") == 1
+      # The old version of this test needed a Vermont place carrying the county
+      # name "New Haven County" to prove the state half of the where clause was
+      # load-bearing — two counties in two states derived the same slug, and
+      # without `state_slug` the Connecticut count inflated to 2. Node ids
+      # cannot collide that way, so the failure mode is gone by construction
+      # and there is nothing left to pin. What replaces it is the subtree
+      # property the county-complete badge actually depends on: two DIFFERENT
+      # town nodes under one county both count, and a town under another county
+      # does not.
+      assert Social.reacted_place_count_in_nodes(user, [waterbury.id, middlebury.id]) == 2
+      assert Social.reacted_place_count_in_nodes(user, [waterbury.id]) == 1
     end
   end
 end

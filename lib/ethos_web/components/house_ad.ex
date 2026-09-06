@@ -85,17 +85,21 @@ defmodule EthosWeb.HouseAd do
     end
   end
 
-  # A Guide carries `destination_slug`; a Place carries `town_slug`. They are
-  # different fields and both are needed — reading `destination_slug` off a
-  # place returns nil and every Connecticut place page would fall through.
+  # A guide and a place both reach their town the same way now: through
+  # `destination_node`. Before the destination tree these were two different
+  # fields — a Guide carried `destination_slug`, a Place carried `town_slug` —
+  # and each clause needed its own.
   #
-  # The `state_slug: "connecticut"` guard on both clauses is load-bearing, not
-  # decorative: `Foliage.town/1` resolves on slug alone, and several town
-  # names are shared with places well outside Connecticut — Lisbon (as in
-  # "Lisbon, Portugal"), and Greenwich and Enfield (as in the London
-  # boroughs). Without the state check, a guide about Greenwich, London would
-  # take the contextual branch and claim a Connecticut foliage estimate for
-  # a page about England.
+  # The Connecticut check on both clauses is load-bearing, not decorative:
+  # `Foliage.town/1` resolves on slug alone, and several town names are shared
+  # with places well outside Connecticut — Lisbon (as in "Lisbon, Portugal"),
+  # and Greenwich and Enfield (as in the London boroughs). Without it, a guide
+  # about Greenwich, London would take the contextual branch and claim a
+  # Connecticut foliage estimate for a page about England. It used to read
+  # `state_slug: "connecticut"`; `Foliage.connecticut?/1` is the same guard
+  # against the tree, and a stricter one — it asks whether the node genuinely
+  # sits under `united-states/connecticut`, where the slug asked only whether a
+  # derived string matched.
   defp contextual(assigns) do
     with {slug, photos} <- subject(assigns),
          town when not is_nil(town) <- Foliage.town(slug || ""),
@@ -106,13 +110,21 @@ defmodule EthosWeb.HouseAd do
     end
   end
 
-  defp subject(%{guide: %{state_slug: "connecticut", destination_slug: slug, photos: photos}}),
-    do: {slug, photos}
+  defp subject(%{guide: %{destination_node: node, photos: photos}}),
+    do: connecticut_town(node, photos)
 
-  defp subject(%{place: %{state_slug: "connecticut", town_slug: slug, photos: photos}}),
-    do: {slug, photos}
+  defp subject(%{place: %{destination_node: node, photos: photos}}),
+    do: connecticut_town(node, photos)
 
   defp subject(_), do: nil
+
+  # `nil` rather than a tuple for anything that is not a Connecticut node —
+  # including a nil or unpreloaded association, which `Foliage.connecticut?/1`
+  # answers `false` for rather than raising. `contextual/1`'s `with` treats
+  # either the same way: fall through to the generic pool ad.
+  defp connecticut_town(node, photos) do
+    if Foliage.connecticut?(node), do: {node.slug, photos}, else: nil
+  end
 
   attr :ad, :any, required: true
 

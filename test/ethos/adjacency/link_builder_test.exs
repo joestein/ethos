@@ -8,14 +8,27 @@ defmodule Ethos.Adjacency.LinkBuilderTest do
   alias Ethos.Links.Link
   alias Ethos.Repo
 
+  # Avon, Canton and Simsbury border one another and all sit in Hartford County,
+  # which is what makes them the smallest useful adjacency fixture.
+  @nodes %{
+    "Avon" => "united-states/connecticut/hartford-county/avon",
+    "Canton" => "united-states/connecticut/hartford-county/canton",
+    "Simsbury" => "united-states/connecticut/hartford-county/simsbury"
+  }
+
+  # Filed on the real roster node, not merely named and slugged like one. The
+  # builder resolves a town through its guide's `destination_node`, so a guide
+  # carrying no node is invisible to it however its slug reads — and `state:`
+  # and `county:` are columns this schema no longer has, so passing them was
+  # silently doing nothing at all. The `-ct-travel-guide` slug stays because the
+  # rest of this file looks guides up by it, the way production names them.
   defp ct_guide(town) do
     slug = town |> String.downcase() |> String.replace(~r/[^a-z0-9]+/, "-") |> String.trim("-")
 
     published_guide_fixture(%{
       title: town,
       destination: "#{town}, Connecticut",
-      state: "Connecticut",
-      county: "Hartford County"
+      destination_path: Map.fetch!(@nodes, town)
     })
     |> Ecto.Changeset.change(slug: "#{slug}-ct-travel-guide")
     |> Ethos.Repo.update!()

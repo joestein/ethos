@@ -469,16 +469,29 @@ defmodule Ethos.Seeds.BronxSeedDataTest do
   #
   # Each violation names WHERE it was found, so a place-level miss is not
   # reported as a guide-level one.
+  # Checked on the destination node the file names, which since the tree landed
+  # is where filing happens: the county string the paragraph above describes is
+  # now derived from that node rather than authored, so the node is the field
+  # that can be wrong. `@borough_node` is the borough; a file
+  # naming `united-states/new-york/bronx-county` instead is the same
+  # split under a new spelling.
+  @borough_node "united-states/new-york/new-york-city/bronx"
+
   defp county_violations(paths) do
     for f <- paths,
         data = DataGuide.load!(f),
-        {where, county} <-
+        {where, node_path} <-
           [
-            {"guide", data["guide"]["county"]}
-            | for(p <- data["places"], do: {"place #{p["slug"]}", p["county"]})
+            {"guide", data["guide"]["destination_path"]}
+            | for(p <- data["places"], do: {"place #{p["slug"]}", p["destination_path"]})
           ],
-        county != "Bronx",
-        do: {Path.basename(f), where, county}
+        not under_borough?(node_path),
+        do: {Path.basename(f), where, node_path}
+  end
+
+  defp under_borough?(node_path) do
+    is_binary(node_path) and
+      (node_path == @borough_node or String.starts_with?(node_path, @borough_node <> "/"))
   end
 
   # --- The unified transit section ----------------------------------------
@@ -659,14 +672,16 @@ defmodule Ethos.Seeds.BronxSeedDataTest do
   # a guide filed under "Bronx" whose places carry the legal name passes every
   # other assertion here and splits the borough's place counts on the hub.
 
-  test "the county assertion catches the legal name on a guide" do
-    assert [{"bad_county.json", "guide", "Bronx County"}] =
+  test "the county assertion catches a guide filed outside the borough node" do
+    assert [{"bad_county.json", "guide", "united-states/new-york/bronx-county/fixture"}] =
              county_violations([fixture("bad_county.json")])
   end
 
-  test "the county assertion catches the legal name on a place" do
-    assert [{"bad_place_county.json", "place fixture-bronx-bad-place-county", "Bronx County"}] =
-             county_violations([fixture("bad_place_county.json")])
+  test "the county assertion catches a place filed outside the borough node" do
+    assert [
+             {"bad_place_county.json", "place fixture-bronx-bad-place-county",
+              "united-states/new-york/bronx-county/fixture"}
+           ] = county_violations([fixture("bad_place_county.json")])
   end
 
   # --- Each pattern is individually load-bearing --------------------------
@@ -800,8 +815,8 @@ defmodule Ethos.Seeds.BronxSeedDataTest do
     assert floor_violations(files) == [], "orientation pages below the floor"
 
     assert county_violations(files) == [],
-           "guides not filed under county \"Bronx\" (the legal name \"Bronx County\" would " <>
-             "derive bronx-county and split the borough hub away from Brooklyn and Manhattan)"
+           "guides or places filed outside the Bronx borough node (a sibling node named for " <>
+             "the legal county would split the borough hub away from Brooklyn and Manhattan)"
 
     assert getting_there_violations(files) == [],
            "guides with no section headed exactly \"Getting there\" (the spec requires one " <>
@@ -866,6 +881,12 @@ defmodule Ethos.Seeds.BronxSeedDataTest do
     # whole link pass.
     user = user_fixture()
 
+    # The loaders resolve every seed file's destination_path against the
+    # destinations table and raise on a miss, so the roster is a precondition
+    # of any corpus load — Ethos.Release seeds it before every corpus for the
+    # same reason.
+    Ethos.Seeds.DestinationTree.upsert_all!()
+
     for sibling <- ["manhattan", "brooklyn"] do
       sibling_files = SeedDataHelpers.seed_files(sibling)
       Enum.each(sibling_files, &DataGuide.upsert_places!/1)
@@ -896,16 +917,28 @@ defmodule Ethos.Seeds.BronxSeedDataTest do
       Enum.each(files, &DataGuide.upsert_links!/1)
     end
 
-    # The Yankee Stadium guide is a Bronx guide too — its county really is
-    # "Bronx" — but it is a code seed rather than one of these files, and it is
-    # only in this database because the link-target block above put it there.
-    # It is excluded by slug, not by relaxing the comparison to `>=` or by
-    # adding one to the expected count: both of those would keep passing if a
-    # committed file silently stopped publishing, which is the single thing
-    # this assertion exists to catch.
+    # The Yankee Stadium guide is a Bronx guide too — it stands in Concourse —
+    # but it is a code seed rather than one of these files, and it is only in
+    # this database because the link-target block above put it there. It is
+    # excluded by slug, not by relaxing the comparison to `>=` or by adding one
+    # to the expected count: both of those would keep passing if a committed
+    # file silently stopped publishing, which is the single thing this
+    # assertion exists to catch. The exclusion is dormant until the code seeds
+    # name a node of their own, and costs nothing meanwhile.
+    #
+    # Selected by the destination node rather than by the `county` column,
+    # which is now derived from that node and goes away with it.
+    borough_ids =
+      from(d in Ethos.Destinations.Destination,
+        where: d.path == @borough_node or like(d.path, ^(@borough_node <> "/%")),
+        select: d.id
+      )
+      |> Repo.all()
+      |> MapSet.new()
+
     bronx_guides =
       Ethos.Guides.list_published_guides()
-      |> Enum.filter(&(&1.county == "Bronx"))
+      |> Enum.filter(&MapSet.member?(borough_ids, &1.destination_id))
       |> Enum.reject(&(&1.slug == "yankee-stadium-guide"))
 
     assert length(bronx_guides) == length(files)

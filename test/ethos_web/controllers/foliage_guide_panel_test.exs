@@ -6,23 +6,33 @@ defmodule EthosWeb.FoliageGuidePanelTest do
 
   alias EthosWeb.GuideController
 
+  # A guide's geography is its destination node, so these build one rather than
+  # a `state_slug`/`destination_slug` pair. In-memory: `foliage_assign/2` reads
+  # the preloaded association and the foliage dataset, and touches no table.
+  #
+  # The node PATH is what makes a guide Connecticut's — `Foliage.connecticut?/1`
+  # asks whether it sits under `united-states/connecticut` — and the node SLUG
+  # is what resolves it in the foliage dataset. Both come from one real roster
+  # path here so a test cannot pass with a slug the path does not lead to.
+  defp guide_at(path, tier \\ "town-page") do
+    %Ethos.Guides.Guide{
+      tier: tier,
+      destination_node: %Ethos.Destinations.Destination{
+        path: path,
+        slug: path |> String.split("/") |> List.last()
+      }
+    }
+  end
+
   describe "foliage_assign/2" do
     test "returns nil outside the season" do
-      guide = %Ethos.Guides.Guide{
-        tier: "town-page",
-        state_slug: "connecticut",
-        destination_slug: "avon"
-      }
+      guide = guide_at("united-states/connecticut/hartford-county/avon")
 
       assert GuideController.foliage_assign(guide, ~D[2026-06-15]) == nil
     end
 
     test "returns nil for a guide outside Connecticut" do
-      guide = %Ethos.Guides.Guide{
-        tier: "town-page",
-        state_slug: "new-york",
-        destination_slug: "brooklyn"
-      }
+      guide = guide_at("united-states/new-york/new-york-city/brooklyn")
 
       assert GuideController.foliage_assign(guide, ~D[2026-10-15]) == nil
     end
@@ -30,31 +40,19 @@ defmodule EthosWeb.FoliageGuidePanelTest do
     test "returns the town for a Connecticut town guide regardless of tier" do
       # Only 10 of the 169 CT town guides carry tier "town-page"; the rest are
       # plain "guide". Presence in the foliage dataset is the real gate.
-      guide = %Ethos.Guides.Guide{
-        tier: "guide",
-        state_slug: "connecticut",
-        destination_slug: "avon"
-      }
+      guide = guide_at("united-states/connecticut/hartford-county/avon", "guide")
 
       assert %{town: %{name: "Avon"}} = GuideController.foliage_assign(guide, ~D[2026-10-15])
     end
 
     test "returns nil for a Connecticut town with no foliage record" do
-      guide = %Ethos.Guides.Guide{
-        tier: "town-page",
-        state_slug: "connecticut",
-        destination_slug: "mystic"
-      }
+      guide = guide_at("united-states/connecticut/new-london-county/mystic")
 
       assert GuideController.foliage_assign(guide, ~D[2026-10-15]) == nil
     end
 
     test "returns the town, stage and week in season" do
-      guide = %Ethos.Guides.Guide{
-        tier: "town-page",
-        state_slug: "connecticut",
-        destination_slug: "avon"
-      }
+      guide = guide_at("united-states/connecticut/hartford-county/avon")
 
       assert %{town: town, stage: stage, week: week} =
                GuideController.foliage_assign(guide, ~D[2026-10-15])
@@ -65,22 +63,14 @@ defmodule EthosWeb.FoliageGuidePanelTest do
     end
 
     test "names the route when the town is on one" do
-      guide = %Ethos.Guides.Guide{
-        tier: "town-page",
-        state_slug: "connecticut",
-        destination_slug: "avon"
-      }
+      guide = guide_at("united-states/connecticut/hartford-county/avon")
 
       assert %{route: %{slug: "hartford-west"}} =
                GuideController.foliage_assign(guide, ~D[2026-10-15])
     end
 
     test "leaves route nil for a town on no route" do
-      guide = %Ethos.Guides.Guide{
-        tier: "town-page",
-        state_slug: "connecticut",
-        destination_slug: "bozrah"
-      }
+      guide = guide_at("united-states/connecticut/new-london-county/bozrah")
 
       assert %{route: nil} = GuideController.foliage_assign(guide, ~D[2026-10-15])
     end
@@ -108,6 +98,9 @@ defmodule EthosWeb.FoliageGuidePanelTest do
       # is Ethos.Foliage.LinkBuilderTest's job, not this one's, so seed only
       # places and the guide itself.
       path = Path.expand("../../../priv/seed_data/connecticut/avon.json", __DIR__)
+      # The loader resolves each file's destination_path against the
+      # destinations table and raises on a miss, so its nodes come first.
+      Ethos.SeedDataHelpers.seed_destinations_for_file!(path)
       Ethos.Seeds.DataGuide.upsert_places!(path)
       guide = Ethos.Seeds.DataGuide.upsert_guide!(path, user.email)
 
@@ -122,6 +115,9 @@ defmodule EthosWeb.FoliageGuidePanelTest do
     test "a Connecticut town guide (town-page tier, town_page.html.heex) shows the panel" do
       user = user_fixture()
       path = Path.expand("../../../priv/seed_data/connecticut/andover.json", __DIR__)
+      # The loader resolves each file's destination_path against the
+      # destinations table and raises on a miss, so its nodes come first.
+      Ethos.SeedDataHelpers.seed_destinations_for_file!(path)
       Ethos.Seeds.DataGuide.upsert_places!(path)
       guide = Ethos.Seeds.DataGuide.upsert_guide!(path, user.email)
 
@@ -148,6 +144,9 @@ defmodule EthosWeb.FoliageGuidePanelTest do
     test "Greenwich (never reaches peak) says most advanced, not estimated peak" do
       user = user_fixture()
       path = Path.expand("../../../priv/seed_data/connecticut/greenwich.json", __DIR__)
+      # The loader resolves each file's destination_path against the
+      # destinations table and raises on a miss, so its nodes come first.
+      Ethos.SeedDataHelpers.seed_destinations_for_file!(path)
       Ethos.Seeds.DataGuide.upsert_places!(path)
       guide = Ethos.Seeds.DataGuide.upsert_guide!(path, user.email)
 
@@ -163,6 +162,9 @@ defmodule EthosWeb.FoliageGuidePanelTest do
     test "Salisbury (reaches peak) says estimated peak, not most advanced" do
       user = user_fixture()
       path = Path.expand("../../../priv/seed_data/connecticut/salisbury.json", __DIR__)
+      # The loader resolves each file's destination_path against the
+      # destinations table and raises on a miss, so its nodes come first.
+      Ethos.SeedDataHelpers.seed_destinations_for_file!(path)
       Ethos.Seeds.DataGuide.upsert_places!(path)
       guide = Ethos.Seeds.DataGuide.upsert_guide!(path, user.email)
 

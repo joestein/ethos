@@ -4,18 +4,19 @@ defmodule Ethos.Seeds.TruistParkGuide do
 
   ## The town field, and why it reads `"Cumberland"` rather than `"Atlanta"`
 
-  Carries `state: "Georgia"` and `county: "Cobb County"`, so it lists on both
-  the Georgia destination page and the Cobb County one.
+  Names the destination node `united-states/georgia/cumberland`, so it lists on
+  the Georgia destination page and on Cumberland's. The ballparks model no county
+  tier, so Cobb County is recorded here as a sourced fact rather than as a
+  field.
 
   The ballpark's official address, confirmed against MLB.com, gives the postal
   city as Atlanta. Two further confirmed verdicts place the building itself in
   Cumberland: an "unincorporated community" and "edge city in Cobb County",
   ten miles northwest of downtown Atlanta. The City of Atlanta does not lie in
-  Cobb County, so a record reading `town: "Atlanta"` beside `county: "Cobb
-  County"` would assert a jurisdiction that does not exist. The `town` field
-  groups the destination hubs; the value shipped is the community the verdicts
-  place the ballpark in, and the postal city is published where it belongs — in
-  the address line, exactly as MLB.com states it.
+  Cobb County, so a node named `atlanta` for a building the verdicts place in
+  Cumberland would assert a jurisdiction that does not exist. The node is the
+  community the verdicts place the ballpark in, and the postal city is published
+  where it belongs — in the address line, exactly as MLB.com states it.
 
   ## Sourcing
 
@@ -61,8 +62,7 @@ defmodule Ethos.Seeds.TruistParkGuide do
       slug: "truist-park-guide",
       title: "Truist Park: The Ballpark and The Battery Atlanta",
       destination: "Cumberland, Georgia",
-      state: "Georgia",
-      county: "Cobb County",
+      destination_path: "united-states/georgia/cumberland",
       intro: """
       Truist Park is the home of the Atlanta Braves. Its official address is
       755 Battery Avenue SE, Atlanta, Georgia 30339, and the ballpark itself

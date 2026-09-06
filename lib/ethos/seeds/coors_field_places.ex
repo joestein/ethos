@@ -44,13 +44,14 @@ defmodule Ethos.Seeds.CoorsFieldPlaces do
   Wynkoop *"remains a notable establishment in the neighborhood"* — third-party,
   affirmative, not merely the absence of a closure notice.
 
-  The county on every record is `"Denver"`. See `Ethos.Seeds.CoorsFieldGuide`
-  for why that form and not the jurisdiction's full legal name.
+  Every record hangs from the node `united-states/colorado/denver`. See
+  `Ethos.Seeds.CoorsFieldGuide` for why that segment and not the jurisdiction's
+  full legal name.
   """
 
   alias Ethos.Places
 
-  @denver %{town: "Denver", state: "Colorado", county: "Denver"}
+  @denver %{destination_path: "united-states/colorado/denver"}
 
   def upsert_all! do
     Enum.map(places(), &Places.upsert_place!/1)

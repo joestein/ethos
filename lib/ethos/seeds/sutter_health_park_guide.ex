@@ -2,8 +2,9 @@ defmodule Ethos.Seeds.SutterHealthParkGuide do
   @moduledoc """
   Seeds the Sutter Health Park guide. Idempotent by slug.
 
-  Carries `state: "California"` and `county: "Yolo County"`, from the confirmed
-  verdict that West Sacramento is a city in Yolo County. This is the only site
+  Names the destination node `united-states/california/west-sacramento`. The
+  ballparks model no county tier; Yolo County is recorded here from the confirmed
+  verdict that West Sacramento is a city in it. This is the only site
   in the wave whose ballpark is a temporary home: confirmed verdicts record the
   Athletics' 2025-2027 tenancy here, with an option for a fourth year, and that
   a permanent Las Vegas ballpark is not expected before 2028.
@@ -46,8 +47,7 @@ defmodule Ethos.Seeds.SutterHealthParkGuide do
       slug: "sutter-health-park-guide",
       title: "Sutter Health Park: The Athletics' Temporary Home",
       destination: "West Sacramento, California",
-      state: "California",
-      county: "Yolo County",
+      destination_path: "united-states/california/west-sacramento",
       intro: """
       Sutter Health Park stands at 400 Ballpark Drive in West Sacramento, in
       Yolo County. It opened on May 15, 2000 as Raley Field, took its present

@@ -13,9 +13,6 @@ defmodule EthosWeb.ConnectedPagesTest do
         slug: "glebe-house-x",
         name: "Glebe House X",
         kind: "museum",
-        town: "Woodbury",
-        state: "Connecticut",
-        county: "Litchfield County",
         summary: "x"
       })
 
@@ -42,13 +39,24 @@ defmodule EthosWeb.ConnectedPagesTest do
     # unions outgoing and incoming edges, so if LinkBuilder ever wrote both
     # directions of the same border, Canton's title would appear twice on
     # Avon's page.
+    # Filed on their roster nodes: the builder finds a town's guide through its
+    # `destination_node`, so a guide slugged like a town but filed on nothing is
+    # invisible to it.
     avon =
-      published_guide_fixture(%{title: "Avon", destination: "Avon, Connecticut"})
+      published_guide_fixture(%{
+        title: "Avon",
+        destination: "Avon, Connecticut",
+        destination_path: "united-states/connecticut/hartford-county/avon"
+      })
       |> Ecto.Changeset.change(slug: "avon-ct-travel-guide")
       |> Ethos.Repo.update!()
 
     _canton =
-      published_guide_fixture(%{title: "Canton", destination: "Canton, Connecticut"})
+      published_guide_fixture(%{
+        title: "Canton",
+        destination: "Canton, Connecticut",
+        destination_path: "united-states/connecticut/hartford-county/canton"
+      })
       |> Ecto.Changeset.change(slug: "canton-ct-travel-guide")
       |> Ethos.Repo.update!()
 
@@ -78,9 +86,6 @@ defmodule EthosWeb.ConnectedPagesTest do
       slug: "nearby-place",
       name: "Nearby Place",
       kind: "museum",
-      town: "TestTown",
-      state: "TestState",
-      county: "TestCounty",
       summary: "nearby"
     })
 
@@ -88,9 +93,6 @@ defmodule EthosWeb.ConnectedPagesTest do
       slug: "shared-place",
       name: "Shared Place",
       kind: "restaurant",
-      town: "TestTown",
-      state: "TestState",
-      county: "TestCounty",
       summary: "shared"
     })
 
@@ -98,9 +100,6 @@ defmodule EthosWeb.ConnectedPagesTest do
       slug: "region-place",
       name: "Region Place",
       kind: "historic-site",
-      town: "TestTown",
-      state: "TestState",
-      county: "TestCounty",
       summary: "region"
     })
 

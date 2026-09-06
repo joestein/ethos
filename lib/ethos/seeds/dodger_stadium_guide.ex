@@ -2,9 +2,10 @@ defmodule Ethos.Seeds.DodgerStadiumGuide do
   @moduledoc """
   Seeds the Dodger Stadium guide. Idempotent by slug.
 
-  Carries `state: "California"` and `county: "Los Angeles County"`, from the
-  confirmed verdict that the City of Los Angeles is the county seat and most
-  populous city of Los Angeles County.
+  Names the destination node `united-states/california/los-angeles`. The
+  ballparks model no county tier; Los Angeles County is recorded here from the
+  confirmed verdict that the City of Los Angeles is its county seat and most
+  populous city.
 
   Every clause here restates the text of a `confirmed` verdict from the
   2026-08-30 Los Angeles Dodgers research artifact, or the text a `refuted`
@@ -49,8 +50,7 @@ defmodule Ethos.Seeds.DodgerStadiumGuide do
       slug: "dodger-stadium-guide",
       title: "Dodger Stadium: The Ballpark and Chavez Ravine",
       destination: "Los Angeles, California",
-      state: "California",
-      county: "Los Angeles County",
+      destination_path: "united-states/california/los-angeles",
       intro: """
       Dodger Stadium stands at 1000 Vin Scully Avenue, in the Elysian Park
       neighborhood of Los Angeles. Ground was broken on September 17, 1959 and

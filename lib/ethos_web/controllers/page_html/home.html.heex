@@ -66,8 +66,13 @@
     </div>
     <ul class="mt-4 grid gap-3 sm:grid-cols-2">
       <li :for={hub <- @hubs} class="rounded-xl border p-4">
-        <.link navigate={~p"/destinations/#{hub.slug}"} class="font-semibold hover:underline">
-          {hub.state}
+        <%!-- node_path/1, never ~p"/destinations/\#{hub.path}" — the sigil
+              percent-encodes the slash and a multi-segment path 404s. --%>
+        <.link
+          navigate={EthosWeb.DestinationHTML.node_path(hub.path)}
+          class="font-semibold hover:underline"
+        >
+          {hub.name}
         </.link>
         <p class="text-sm text-zinc-500">{hub.count} {hub_noun(hub.slug)}</p>
       </li>

@@ -12,13 +12,12 @@ defmodule Ethos.Seeds.NationalsParkPlaces do
   `docs/ballparks/nationals-park.md` quotes each published sentence against the
   verdict it rests on.
 
-  **These places carry `county: "District of Columbia"`, and the state is the
-  same string.** A confirmed verdict establishes that the District has no
-  counties: Congress abolished Washington County in 1871. But a place's
-  breadcrumb links to `/destinations/{state}/{county}`, and that URL 404s
-  unless some guide carries the county — so the field repeats the state rather
-  than being left empty. A repetitive URL beats a broken breadcrumb on every
-  one of these records.
+  **These places hang from the node
+  `united-states/district-of-columbia/washington`** — the city Washington under
+  the region District of Columbia, a two-name repetition that is correct rather
+  than a mistake. A confirmed verdict establishes that the District has no
+  counties: Congress abolished Washington County in 1871, and no county tier is
+  modelled here for it or for any other ballpark.
 
   What the verification changed, and what is therefore absent here:
 
@@ -50,7 +49,7 @@ defmodule Ethos.Seeds.NationalsParkPlaces do
 
   alias Ethos.Places
 
-  @dc %{town: "Washington", state: "District of Columbia", county: "District of Columbia"}
+  @dc %{destination_path: "united-states/district-of-columbia/washington"}
 
   def upsert_all! do
     Enum.map(places(), &Places.upsert_place!/1)
