@@ -1,0 +1,92 @@
+{
+  "guide": {
+    "slug": "south-dakota-golf-guide",
+    "title": "The Golf Club At Red Rock: Golf in Rapid City, South Dakota",
+    "destination": "Rapid City, South Dakota",
+    "state": "South Dakota",
+    "county": "Pennington County",
+    "intro": "Golf Digest's Best in State ranking places The Golf Club At Red Rock third in South Dakota — the highest-ranked course carrying Golf Digest's own \"Public\" label. The two courses ranked above it are both \"Private\": Sutton Bay Golf Course, first, in Agar, and Minnehaha Country Club, second, in Sioux Falls. Golf Digest rates Red Rock 3.8, from four panelists. Golf Digest's own caveat about the state ranking reads in full: \"The combined scores from courses in South Dakota on our most recent Best in State ranking are among the lowest in the United States, but its top course, Sutton Bay, sits just outside our Second 100 Greatest ranking.\" The Golf Club At Red Rock is in Rapid City, Pennington County, designed by Ron Farris and opened in 2003. Elkhorn Ridge Golf Club, ranked fourth on the same list and also labelled \"Public,\" in Spearfish, gives this guide a second round.",
+    "sections": [
+      {
+        "heading": "Getting there",
+        "body": "The Golf Club At Red Rock sits at 6520 Birkdale Dr, Rapid City, in Pennington County. Rapid City Regional Airport (RAP), also in Pennington County, is 17.2 miles from the course by road, per an OSRM driving-route calculation. The golf shop can be reached at (605) 718-4710."
+      },
+      {
+        "heading": "Playing it as a visitor",
+        "body": "A non-member books at The Golf Club At Red Rock either through the club's own online tee sheet — embedded on its Tee Times page and hosted at redrock.cps.golf, a Club Prophet Systems reservation system — or by phone at (605) 718-4710. Golf Digest labels the course \"Public,\" and the operator's own site states it offers public golf for members and visitors, so play by a non-member is established. How far in advance a visitor may book is not published anywhere: the booking engine at redrock.cps.golf returns a browser-verification challenge to every automated request, its reservation-settings endpoint returns the same challenge, and its only archived snapshots are empty application shells with no booking data inside them. The club's rates page, its course pages and the state's own golf directory are likewise silent on an advance-booking figure; the directory instead tells a visitor to call the golf shop \"For Reservation Policy.\" No number of days should be assumed here. Confirm the booking window directly with the golf shop before planning a trip."
+      },
+      {
+        "heading": "The Golf Club At Red Rock",
+        "body": "Golf Digest's Best in State ranking places The Golf Club At Red Rock third in South Dakota, the highest \"Public\"-labelled entry on the list, rated 3.8 from four panelists. Golf Digest's own caveat about the ranking reads in full: \"The combined scores from courses in South Dakota on our most recent Best in State ranking are among the lowest in the United States, but its top course, Sutton Bay, sits just outside our Second 100 Greatest ranking.\" Architect Ron Farris, who Golf Digest's own review says \"has lived for decades in Rapid City,\" designed the course; Golf Digest's Ron Whitten writes that \"when he got the opportunity in the early 2000s to create a course in his adopted hometown, he decided to go the lay-of-the-land route\" and that \"Farris pulled it off at The Golf Club at Red Rock.\" The course opened in 2003 and plays to par 72; South Dakota's own state golf directory, southdakotagolf.com, independently records \"Course Type: Public | Architect: Ron Farris | Opened: 2003.\" No yardage figure is published here: Golf Digest, the operator's own marketing copy and the operator's own scorecard each give a different number, and the state golf directory gives a fourth. The operator's rates page, headed in part \"2026 Season & Cart Pass Rates,\" lists 2026 daily green fees: 18 holes with a cart, $130 plus tax; 9 holes with a cart, $75 plus tax; twilight, after 3 PM, with a cart, $100 plus tax; rental clubs $25 for nine holes or $40 for eighteen. The same page states: \"All rates subject to change without notice. Call the golf shop for current rates.\""
+      },
+      {
+        "heading": "Day two: Elkhorn Ridge Golf Club",
+        "body": "Elkhorn Ridge Golf Club, in Spearfish, ranks fourth on the same Golf Digest Best in State South Dakota list and also carries the \"Public\" label, rated 3.8 from two panelists. Pat Wyss designed the course. The golf shop's phone number is (605) 722-4653."
+      }
+    ],
+    "faq": [
+      {
+        "question": "How do I book a tee time at The Golf Club At Red Rock?",
+        "answer": "Through the club's own online tee sheet, embedded on its Tee Times page and hosted at redrock.cps.golf (a Club Prophet Systems reservation system), or by phone at (605) 718-4710. The club does not publish how far in advance a visitor may book — the booking engine blocks automated access with a browser-verification challenge, its archived snapshots hold no booking data, and no advance-day figure appears on the club's rates page, its other pages, or the state golf directory, which instead tells callers to phone the golf shop for the reservation policy. Confirm the window with the golf shop before planning a trip."
+      },
+      {
+        "question": "What does a round cost?",
+        "answer": "The operator's rates page, headed in part \"2026 Season & Cart Pass Rates,\" lists: 18 holes with a cart, $130 plus tax; 9 holes with a cart, $75 plus tax; twilight, after 3 PM, with a cart, $100 plus tax; rental clubs $25 for nine holes or $40 for eighteen. The page adds: \"All rates subject to change without notice. Call the golf shop for current rates.\""
+      },
+      {
+        "question": "Is The Golf Club At Red Rock really South Dakota's best public course?",
+        "answer": "It is the highest-ranked course on Golf Digest's Best in State South Dakota list that Golf Digest itself labels \"Public\" — third overall, behind two private courses, rated 3.8 from four panelists. Golf Digest's own caveat about the ranking reads in full: \"The combined scores from courses in South Dakota on our most recent Best in State ranking are among the lowest in the United States, but its top course, Sutton Bay, sits just outside our Second 100 Greatest ranking.\""
+      },
+      {
+        "question": "Where is the course, and how far is the airport?",
+        "answer": "The Golf Club At Red Rock is at 6520 Birkdale Dr, Rapid City, in Pennington County. Rapid City Regional Airport (RAP), also in Pennington County, is 17.2 miles from the course by road."
+      },
+      {
+        "question": "Where can I play a second round near Rapid City?",
+        "answer": "Elkhorn Ridge Golf Club, in Spearfish, ranks fourth on the same Golf Digest Best in State South Dakota list and is also labelled \"Public,\" rated 3.8 from two panelists. Pat Wyss designed it; the golf shop's phone number is (605) 722-4653."
+      }
+    ],
+    "photos": []
+  },
+  "places": [
+    {
+      "slug": "golf-club-at-red-rock-rapid-city",
+      "name": "The Golf Club At Red Rock",
+      "kind": "golf-course",
+      "town": "Rapid City",
+      "state": "South Dakota",
+      "county": "Pennington County",
+      "address": "6520 Birkdale Dr, Rapid City, SD 57702",
+      "official_url": "https://www.golfclubatredrock.com/",
+      "summary": "Third on Golf Digest's Best in State South Dakota ranking and the highest-ranked course carrying Golf Digest's own \"Public\" label, rated 3.8 from four panelists. Golf Digest's own caveat about the ranking, in full: \"The combined scores from courses in South Dakota on our most recent Best in State ranking are among the lowest in the United States, but its top course, Sutton Bay, sits just outside our Second 100 Greatest ranking.\" Designed by Ron Farris and opened in 2003, par 72. Golf shop: (605) 718-4710. A non-member books through the club's own online tee sheet at redrock.cps.golf (Club Prophet Systems) or by phone; the club does not publish how far in advance a visitor may book.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "elkhorn-ridge-golf-club-spearfish",
+      "name": "Elkhorn Ridge Golf Club",
+      "kind": "golf-course",
+      "town": "Spearfish",
+      "state": "South Dakota",
+      "county": "Lawrence County",
+      "address": "6845 Saint Onge Rd, Spearfish, SD",
+      "summary": "Fourth on the same Golf Digest Best in State South Dakota ranking and also labelled \"Public,\" rated 3.8 from two panelists. Designed by Pat Wyss. Golf shop: (605) 722-4653.",
+      "status": "open",
+      "photos": []
+    }
+  ],
+  "entries": [
+    {
+      "kind": "sight",
+      "name": "The Golf Club At Red Rock",
+      "place_slug": "golf-club-at-red-rock-rapid-city",
+      "note": "Third on Golf Digest's Best in State South Dakota ranking, the highest \"Public\"-labelled entry; Ron Farris, opened 2003. The advance-booking window is unpublished."
+    },
+    {
+      "kind": "sight",
+      "name": "Elkhorn Ridge Golf Club",
+      "place_slug": "elkhorn-ridge-golf-club-spearfish",
+      "note": "Day two: fourth on the same list, also \"Public\"; Pat Wyss, in Spearfish."
+    }
+  ]
+}

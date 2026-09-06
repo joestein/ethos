@@ -908,10 +908,41 @@ defmodule EthosWeb.StructuredDataTest do
       # by giving it more shapes to guess from. The failure mode is worth
       # naming — a wrong street line is visibly wrong, a house number in a
       # postal-code slot is not.
-      assert length(emitted) == 4784
-      assert count.(& &1["streetAddress"]) == 4161
+      #
+      # Re-measured 2026-09-05 after golf wave 2, the second ten states — North
+      # Dakota, South Dakota, Nebraska, Kansas, Minnesota, Iowa, Missouri,
+      # Wisconsin, Michigan and Illinois — which land 14 addressed places out of
+      # 53 seeded. The minority share wave 1 first recorded is not a wave-1
+      # quirk but the set's shape: five of these ten files carry no `address`
+      # field on any place at all — Kansas, Michigan, Minnesota, Missouri and
+      # Wisconsin — because a street address publishes only where a source
+      # states one, and a resort that describes itself by name and phone gives
+      # the field nothing to hold. The 14 come from five files: Iowa 4 and
+      # Nebraska 4 (both single-address complexes where the lodge, the
+      # restaurant and the course share one line), Illinois 3, South Dakota 2
+      # and North Dakota 1.
+      #
+      #   * total 4784 -> 4798, +14.
+      #   * `streetAddress` 4161 -> 4175, +14. All of them.
+      #   * `postalCode` 3397 -> 3410, +13, one short of all of them. The
+      #     exception is Elkhorn Ridge Golf Club, "6845 Saint Onge Rd,
+      #     Spearfish, SD" — a sourced street line with no ZIP anywhere on the
+      #     operator's own page, so it emits a street and a locality and no
+      #     postal code. That is the correct shape, not a parse failure: the
+      #     street line comes back intact.
+      #   * `is_nil(streetAddress)` unmoved at 623 and locality-only unmoved at
+      #     308. Elkhorn Ridge sits in neither bucket, which is the check that
+      #     the missing ZIP went where it should — a row with a house number and
+      #     no ZIP is a different shape from a row with neither.
+      #
+      # GOLF WAVE 2 NEEDED NO PARSER WORK AND NO SEED CORRECTION. Wave 1 cost
+      # two — Idaho's spelled-out state names, which fed the parser a house
+      # number where it wanted a postal code — and every one of these fourteen
+      # is a plain two-letter-code American line that parsed on the first pass.
+      assert length(emitted) == 4798
+      assert count.(& &1["streetAddress"]) == 4175
       assert count.(&is_nil(&1["streetAddress"])) == 623
-      assert count.(& &1["postalCode"]) == 3397
+      assert count.(& &1["postalCode"]) == 3410
 
       # The largest behavioural delta this change ships: 302 places emit a
       # PostalAddress carrying only locality, region and country. Their full
