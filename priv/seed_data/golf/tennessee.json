@@ -1,0 +1,99 @@
+{
+  "guide": {
+    "slug": "tennessee-golf-guide",
+    "title": "General's Retreat: Golf in Old Hickory, Tennessee",
+    "destination": "Old Hickory, Tennessee",
+    "state": "Tennessee",
+    "county": "Metropolitan Government of Nashville and Davidson County",
+    "intro": "Every other guide in this fifty-state set is anchored on the highest-ranked entry carrying Golf Digest's own \"Public\" label on that state's Best in State 2025-'26 ranking. Tennessee's ranking has fifteen entries, ranked 1 through 15, and every one of them is labelled \"Private\" — confirmed by two independently-run parses of the ranking page's own embedded course data and its rendered markup, which agree exactly on all fifteen ranks and labels, and corroborated separately by an archived snapshot of the same page. No entry on Tennessee's list carries the \"Public\" label. So this guide uses the fifty-state set's stated fallback instead: the publicly accessible course in the state with the strongest verifiable competitive record. That test splits across two different courses. TPC Southwind, ranked 6th on the Best in State list and a current PGA Tour venue that hosts the FedEx St. Jude Championship, has the far stronger competitive record — but its own website states it is \"the PGA TOUR's only private golf club in the state of Tennessee,\" publishes no green fee, and offers no tee-time booking route of any kind, so it is named here but is not a place a visitor can book or play. General's Retreat, one of two daily-fee courses at Hermitage Golf Course in Old Hickory, carries the historical record instead — the LPGA Sara Lee Classic, played there from 1988 to 1999 — and is genuinely public: a direct call to its own booking system returned bookable tee times with no membership, no booking class and no sign-in required. It is this guide's subject.",
+    "sections": [
+      {
+        "heading": "Getting there",
+        "body": "Nashville International Airport (BNA) is the nearest major airport. A road-routing engine's query from BNA (36.1245°N, 86.6774°W) to Hermitage Golf Course (36.2347717°N, 86.6381772°W) returns a distance of 11.7 miles (18,798.3 meters), via Donelson Pike for 1.61 miles, then I-40 for 3.33 miles, then Old Hickory Boulevard for 4.87 miles to the course entrance. The routing engine's own destination waypoint for that query reads \"Hermitage Golf Course,\" independently confirming the coordinates used. The course's address, as the operator publishes it, is 3939 Old Hickory Blvd, Old Hickory, TN 37138."
+      },
+      {
+        "heading": "A different rule for this state",
+        "body": "Golf Digest's Best in State 2025-'26 ranking page for Tennessee returns HTTP 200 and lists fifteen courses, ranked 1 through 15, when the page is fetched with a full browser header set; without those headers the same URL serves a generic soft-404 shell instead of the real page, which is why an earlier pass wrongly concluded the ranking did not exist. Two independent parses of the working page — one reading its embedded course data, one reading its rendered markup — agree exactly on all fifteen ranks and labels, and an archived snapshot of the page corroborates the same fifteen entries. Every one of the fifteen is labelled \"Private,\" including rank 6, TPC Southwind. No entry carries the \"Public\" label. Hermitage Golf Course's own site advertises that its President's Reserve course was \"voted 'Top 10 in State' by Golf Digest,\" but that claim traces to a separate, unranked Golf Digest guide to Tennessee's public courses, not to the Best in State ranking; President's Reserve does not appear on the Best in State list at all."
+      },
+      {
+        "heading": "General's Retreat",
+        "body": "General's Retreat opened in 1986, designed by Gary Roger Baird. It hosted the LPGA Sara Lee Classic from 1988 to 1999, a twelve-edition run confirmed independently by the tournament's own record: the Sara Lee Classic played on the LPGA Tour from 1988 to 2002 overall, but only its stay at Hermitage ended in 1999 — the tournament then moved to the Legends Club of Tennessee in Franklin and continued as the Electrolux USA Championship through a final edition in 2002. That LPGA record belongs to General's Retreat specifically, not to the Hermitage complex as a whole: the sister course, President's Reserve, was not built until 2001, two years after the tournament left Hermitage, so it cannot have hosted any of the twelve editions played there. Hermitage Golf Course's own history page describes General's Retreat as \"the best in Tennessee public golf\" and \"one of the state's premier public courses.\""
+      },
+      {
+        "heading": "Playing General's Retreat",
+        "body": "General's Retreat is bookable without membership. Its public booking engine loads with no sign-in requirement, and a direct call to its booking API returned 28 bookable tee times with no authentication and no booking class attached to any of them. For Sunday, September 20, 2026, that booking engine quoted a 12:00 p.m. tee time on General's Retreat at $84 for the green fee plus $16 for the cart, a total of $100 — reconciling to the cent with the course's own published Friday-through-Sunday, 10 a.m.-to-4 p.m. rate of $100.00. The full published rate table: Monday-through-Wednesday $75.00 from 7-to-10 a.m., $77.00 from 10 a.m.-to-4 p.m., $52.00 from 4 p.m. to close; Thursday $86.00, $89.00, $52.00; Friday-through-Sunday $100.00, $100.00, $52.00. Rental clubs cost $60.00 per day. A live sweep of the booking calendar for both Hermitage courses found no bookable tee time at all on either course on September 16 and September 17, 2026; the cause is not established — no closure notice appears anywhere on the operator's site, and the site's own dated post from August 31, 2026 describes both courses as being \"in pristine condition come September\" — so this is recorded as an open question about that specific pair of dates, not as a closure."
+      },
+      {
+        "heading": "President's Reserve",
+        "body": "President's Reserve, the second course at the same complex, opened in 2001, designed by Denis Griffiths. The operator describes it as playing to 7,200 yards through \"300 acres of natural Tennessee wetlands and along the banks of the beautiful Cumberland River.\" No professional-championship record was found for this course. Its full published rate table: Monday-through-Wednesday $85.00 from 7-to-10 a.m., $88.00 from 10 a.m.-to-4 p.m., $62.00 from 4 p.m. to close; Thursday $98.00, $100.00, $62.00; Friday-and-Saturday $115.00, $115.00, $62.00; Sunday $110.00, $110.00, $62.00. For the same Sunday, September 20, 2026, the booking engine quoted a 2:18 p.m. tee time on President's Reserve at $94 for the green fee plus $16 for the cart, a total of $110, matching the published Sunday rate to the cent. President's Reserve carries a Golf Digest \"Public\" label of its own, on the separate, unranked guide to Tennessee's public courses described above — not on the Best in State ranking, which does not include it."
+      }
+    ],
+    "faq": [
+      {
+        "question": "How do I book a tee time at General's Retreat?",
+        "answer": "General's Retreat is bookable without membership. Its public booking engine loads with no sign-in requirement, and a direct call to its booking API returned 28 bookable tee times with no authentication and no booking class attached. For Sunday, September 20, 2026, the engine quoted a 12:00 p.m. tee time at $84 for the green fee plus $16 for the cart, a total of $100, matching the course's own published Friday-through-Sunday rate."
+      },
+      {
+        "question": "Why was Tennessee's course chosen by a different rule than the other states in this set?",
+        "answer": "Every other state in this set is anchored on the highest-ranked entry carrying Golf Digest's own \"Public\" label on its Best in State 2025-'26 ranking. Tennessee's ranking has fifteen entries, ranks 1 through 15, and all fifteen are labelled \"Private\" — confirmed by two independently agreeing parses of the ranking page and corroborated by an archived snapshot. With no \"Public\" entry to anchor on, this guide uses the set's stated fallback instead: the publicly accessible course in the state with the strongest verifiable competitive record, which is General's Retreat."
+      },
+      {
+        "question": "Why isn't TPC Southwind in this guide?",
+        "answer": "TPC Southwind, ranked 6th on Tennessee's Best in State list, has the state's strongest competitive record — it is a current PGA Tour venue that hosts the FedEx St. Jude Championship — but its own website states it is \"the PGA TOUR's only private golf club in the state of Tennessee.\" It publishes no green fee and offers no tee-time booking route of any kind, so it fails the access half of the fallback criterion and is not a place a visitor can book here."
+      },
+      {
+        "question": "What does a round cost at General's Retreat?",
+        "answer": "From the course's own published rate table: Monday-through-Wednesday $75.00 from 7-to-10 a.m., $77.00 from 10 a.m.-to-4 p.m., $52.00 from 4 p.m. to close; Thursday $86.00, $89.00, $52.00; Friday-through-Sunday $100.00, $100.00, $52.00. A live booking-engine quote for Sunday, September 20, 2026 reconciled to the cent: a 12:00 p.m. tee time at $84 green fee plus $16 cart, totaling the published $100.00 rate."
+      },
+      {
+        "question": "Can I play President's Reserve too?",
+        "answer": "Yes. President's Reserve is the second course at the same complex, built in 2001, and uses the same public booking system as General's Retreat, with no membership requirement. For Sunday, September 20, 2026, the booking engine quoted a 2:18 p.m. tee time at $94 green fee plus $16 cart, a total of $110, matching the course's own published Sunday rate."
+      },
+      {
+        "question": "Where is General's Retreat?",
+        "answer": "At 3939 Old Hickory Blvd, Old Hickory, TN 37138, in Davidson County, within the Metropolitan Government of Nashville and Davidson County — the jurisdiction's own name for itself, from nashville.gov's own page metadata. It sits 11.7 miles by road from Nashville International Airport (BNA), via Donelson Pike, I-40 and Old Hickory Boulevard."
+      }
+    ],
+    "photos": []
+  },
+  "places": [
+    {
+      "slug": "hermitage-generals-retreat",
+      "name": "General's Retreat",
+      "kind": "golf-course",
+      "town": "Old Hickory",
+      "state": "Tennessee",
+      "county": "Metropolitan Government of Nashville and Davidson County",
+      "official_url": "https://hermitagegolf.com/gr-rates/",
+      "summary": "Opened in 1986, designed by Gary Roger Baird, at Hermitage Golf Course in Old Hickory. Hosted the LPGA Sara Lee Classic from 1988 to 1999, a twelve-edition run that belongs to this course specifically rather than to the Hermitage complex — its sister course, President's Reserve, was not built until 2001, two years after the tournament left Hermitage. A direct call to the course's own booking API returned 28 bookable tee times with no authentication and no booking class. For Sunday, September 20, 2026, the booking engine quoted a 12:00 p.m. tee time at $84 green fee plus $16 cart, a total of $100, matching the course's own published Friday-through-Sunday rate. Hermitage Golf Course's own history page describes it as \"the best in Tennessee public golf.\"",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "hermitage-presidents-reserve",
+      "name": "President's Reserve",
+      "kind": "golf-course",
+      "town": "Old Hickory",
+      "state": "Tennessee",
+      "county": "Metropolitan Government of Nashville and Davidson County",
+      "official_url": "https://hermitagegolf.com/pr-rates/",
+      "summary": "The second course at Hermitage Golf Course, opened in 2001 and designed by Denis Griffiths, playing to 7,200 yards through \"300 acres of natural Tennessee wetlands and along the banks of the beautiful Cumberland River.\" No professional-championship record was found for this course. It carries a Golf Digest \"Public\" label on a separate, unranked guide to Tennessee's public courses — not on the state's Best in State ranking, which does not include it. For Sunday, September 20, 2026, the booking engine quoted a 2:18 p.m. tee time at $94 green fee plus $16 cart, a total of $110, matching the course's own published Sunday rate.",
+      "status": "open",
+      "photos": []
+    }
+  ],
+  "entries": [
+    {
+      "kind": "sight",
+      "name": "General's Retreat",
+      "place_slug": "hermitage-generals-retreat",
+      "note": "Historical record: hosted the LPGA Sara Lee Classic, 1988 to 1999. Genuinely public — bookable with no membership."
+    },
+    {
+      "kind": "sight",
+      "name": "President's Reserve",
+      "place_slug": "hermitage-presidents-reserve",
+      "note": "The second course at the same complex; built 2001; no championship record; same public booking system."
+    }
+  ]
+}

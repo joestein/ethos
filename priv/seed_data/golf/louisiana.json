@@ -1,0 +1,127 @@
+{
+  "guide": {
+    "slug": "louisiana-golf-guide",
+    "title": "TPC Louisiana: Golf in Avondale, Jefferson Parish",
+    "destination": "New Orleans, Louisiana",
+    "state": "Louisiana",
+    "county": "Jefferson Parish",
+    "intro": "Golf Digest's 2025-'26 Best in State ranking for Louisiana places TPC Louisiana fourth and labels it \"Public\" — the highest-ranked public course on the list; the three courses ranked above it, Squire Creek Country Club, The Country Club of Louisiana and Metairie Country Club, are each labelled \"Private.\" TPC Louisiana sits at 11001 Lapalco Boulevard in Avondale, an unincorporated community in Jefferson Parish. A visiting golfer can book a single round online through the course's own tee-time portal, buying no annual product, at non-resident rates of $119 to $299 for eighteen holes, inside a public booking window that runs 136 days ahead. Fifth on the same Golf Digest list, also labelled \"Public,\" is The Country Club At Golden Nugget in Lake Charles. This guide is about the course that placed fourth.",
+    "sections": [
+      {
+        "heading": "Getting there",
+        "body": "TPC Louisiana's own contact page gives its address as 11001 Lapalco Boulevard, Avondale, LA 70094. The U.S. Census Bureau's geocoder, queried against the course's own coordinates (29.8979, -90.16789), returns Jefferson Parish and no Incorporated Places entry at all — a run against a nearby point inside Gretna, by contrast, does return one, which is how the absence at the course's own coordinates is established rather than assumed. Jefferson Parish's own government site titles itself \"Jefferson Parish, LA | Official Website.\" By road, per OSRM routing on the course's own coordinates, TPC Louisiana is 14.2 miles from the French Quarter in New Orleans and 15.0 miles from Louis Armstrong New Orleans International Airport (MSY). The golf shop's own phone number is 504-436-8721."
+      },
+      {
+        "heading": "TPC Louisiana",
+        "body": "TPC Louisiana's own about page credits \"Master architect Pete Dye,\" working \"in conjunction with PGA TOUR players Steve Elkington and Kelly Gibson,\" and states the course \"opened to the public\" in 2004, when Golf Digest named it \"the #4 best upscale public golf course.\" The course \"stretches over 250 acres of wetlands\" and \"features over 100 bunkers,\" with five tee sets \"ranging from a fair 5,121 yard from the women's tees all the way back to the 7,400 PGA TOUR tees.\" It is part of the Audubon Golf Trail. Golf Digest's own course page carries the ranking history verbatim: \"100 Greatest Public: T-99, 2011-'12. Best in State: Ranked fourth, 2023-'26. Ranked fifth, 2013-'16, 2019-'22. Ranked inside the top 5, 2005. Ranked sixth, 2011-'12, 2017-'18. Ranked inside the top 10, 2007-'10,\" and lists the course's Facility Type as Public. TPC Louisiana has hosted the PGA TOUR's Zurich Classic of New Orleans since 2005, described by the tour as \"the only PGA TOUR event in the region.\" The tour's own page for the tournament gives the next playing as April 22-25, 2027."
+      },
+      {
+        "heading": "Booking a round",
+        "body": "A visiting golfer does not need an annual pass to play TPC Louisiana. The course's own site links a \"Book A Tee Time\" tool that leads to its ezLinks booking engine; that engine's own search-configuration data, read directly from its API, gives a public booking window running from September 6, 2026 to January 20, 2027 — 136 days — and prices the visiting golfer on a \"Non-Resident\" tier. Live pricing read from the same engine's search API: for Sunday, September 20, 2026, 44 bookable slots ran $119 to $299 for eighteen holes (first tee 7:25 a.m., last 5:45 p.m.); for Wednesday, September 23, 2026, 53 bookable slots ran $119 to $279. Every slot in both searches carried a 48-hour cancellation period, and a search run for a single golfer returned the identical full inventory as a search for a group, so a party of one can book. The engine requires an account to complete a booking; it does not allow checkout as a guest. Separately from that public route, TPC Louisiana's own site sells three optional annual products, none of which is required to play a round: a Full Annual Pass at $4,800 per year plus tax, with unlimited play at cart-fee-only rates of $28 for eighteen holes or $14 for nine (read from the page in September 2026); a Weekday Annual Pass, on its own dedicated page, at $3,000 per year plus tax, for Monday-through-Thursday access; and a NOLA Card, restricted to Louisiana residents, at $329 per year plus tax, with the first round at cart-fee-only and unlimited additional golf at $74 per round, on a two-day booking window, with weekend rounds restricted to after 8:30 a.m. from October 1 through May 15 per the card's own undated page."
+      },
+      {
+        "heading": "New Orleans basecamp",
+        "body": "Hotel Monteleone, at 214 Royal Street in New Orleans, describes itself as \"A French Quarter Classic\" and \"a family-owned landmark,\" open \"since 1886.\" Galatoire's, at 209 Bourbon Street, is the restaurant's own address as given on its own site. Both sit in the French Quarter, the basis for the 14.2-mile road distance to TPC Louisiana given above."
+      }
+    ],
+    "faq": [
+      {
+        "question": "How do I book a tee time at TPC Louisiana, and do I need an annual pass?",
+        "answer": "No annual pass is required. TPC Louisiana's own ezLinks tee-time portal sells single rounds to the general public on a Non-Resident tier, with a public booking window running 136 days ahead (September 6, 2026 to January 20, 2027, read directly from the engine's own search-configuration data). Live pricing read from that same engine ran $119 to $299 for eighteen holes on Sunday, September 20, 2026, and $119 to $279 on Wednesday, September 23, 2026, both with a 48-hour cancellation period. A search for a single golfer returns the same full inventory as a group search. An account is required to complete the booking; the golf shop's own number is 504-436-8721."
+      },
+      {
+        "question": "What does a round cost?",
+        "answer": "Non-resident green fees read live from TPC Louisiana's own booking engine ran $119 to $299 for eighteen holes on Sunday, September 20, 2026, and $119 to $279 on Wednesday, September 23, 2026. Separately, the course also sells optional annual products: a Full Annual Pass at $4,800 per year plus tax with cart-fee-only play at $28 for eighteen holes or $14 for nine; a Weekday Annual Pass, on its own dedicated page, at $3,000 per year plus tax; and, for Louisiana residents only, a NOLA Card at $329 per year plus tax with a $74-per-round rate after the first round (all three read from the operator's own pages in September 2026). None of the three is required for a visitor to book a single round."
+      },
+      {
+        "question": "Where is TPC Louisiana?",
+        "answer": "At 11001 Lapalco Boulevard in Avondale, an unincorporated community in Jefferson Parish, Louisiana — the U.S. Census Bureau's geocoder returns Jefferson Parish for the course's own coordinates and no Incorporated Places entry, and Jefferson Parish's own government site titles itself \"Jefferson Parish, LA | Official Website.\" By road it is 14.2 miles from the French Quarter in New Orleans and 15.0 miles from Louis Armstrong New Orleans International Airport (MSY)."
+      },
+      {
+        "question": "Is TPC Louisiana the only PGA TOUR stop in the state?",
+        "answer": "TPC Louisiana has hosted the Zurich Classic of New Orleans since 2005, and the tour describes it as \"the only PGA TOUR event in the region.\" The tournament's own page gives the next playing as April 22-25, 2027."
+      },
+      {
+        "question": "What else is on Golf Digest's Louisiana list?",
+        "answer": "TPC Louisiana ranks fourth on Golf Digest's 2025-'26 Best in State list for Louisiana, labelled \"Public.\" The three courses ranked above it — Squire Creek Country Club, The Country Club of Louisiana and Metairie Country Club — are each labelled \"Private.\" Fifth, also labelled \"Public,\" is The Country Club At Golden Nugget in Lake Charles, an 18-hole, par-72 course on the bayou designed by Todd Eckenrode and Origins Golf Designs."
+      }
+    ],
+    "photos": []
+  },
+  "places": [
+    {
+      "slug": "tpc-louisiana",
+      "name": "TPC Louisiana",
+      "kind": "golf-course",
+      "town": "Avondale",
+      "state": "Louisiana",
+      "county": "Jefferson Parish",
+      "official_url": "https://tpc.com/louisiana/",
+      "summary": "Fourth on Golf Digest's 2025-'26 Best in State ranking for Louisiana, labelled \"Public\" — the highest-ranked public course on the list. Designed by Pete Dye with PGA TOUR players Steve Elkington and Kelly Gibson, it opened to the public in 2004 at 11001 Lapalco Boulevard in Avondale, an unincorporated community in Jefferson Parish. The course covers over 250 acres of wetlands with over 100 bunkers and five tee sets from 5,121 to 7,400 yards, and has hosted the PGA TOUR's Zurich Classic of New Orleans since 2005. A visitor can book a single round through the course's own ezLinks portal at non-resident rates, with no annual pass required.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "country-club-at-golden-nugget-lake-charles",
+      "name": "The Country Club At Golden Nugget",
+      "kind": "golf-course",
+      "town": "Lake Charles",
+      "state": "Louisiana",
+      "county": "Calcasieu Parish",
+      "official_url": "https://goldennugget.com/lake-charles",
+      "summary": "Fifth on the same Golf Digest 2025-'26 Louisiana ranking, also labelled \"Public.\" The operator's own golf page, read via a Wayback Machine snapshot, describes an 18-hole, par-72 course on the bayou designed by Todd Eckenrode and Origins Golf Designs, playing to 7,000 yards, with rates of $159 general admission, $129 for Golden Nugget Hotel guests, $79 for juniors under 18 and an $89 twilight rate from 2 p.m. daily, as posted on that snapshot.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "hotel-monteleone-new-orleans",
+      "name": "Hotel Monteleone",
+      "kind": "hotel",
+      "town": "New Orleans",
+      "state": "Louisiana",
+      "county": "Orleans Parish",
+      "official_url": "https://www.hotelmonteleone.com/",
+      "summary": "A French Quarter hotel at 214 Royal Street in New Orleans, open since 1886. The hotel's own site describes it as \"A French Quarter Classic\" and \"a family-owned landmark.\"",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "galatoires-new-orleans",
+      "name": "Galatoire's",
+      "kind": "restaurant",
+      "town": "New Orleans",
+      "state": "Louisiana",
+      "county": "Orleans Parish",
+      "official_url": "https://www.galatoires.com/",
+      "summary": "A restaurant at 209 Bourbon Street in the French Quarter, New Orleans, per its own site.",
+      "status": "open",
+      "photos": []
+    }
+  ],
+  "entries": [
+    {
+      "kind": "sight",
+      "name": "TPC Louisiana",
+      "place_slug": "tpc-louisiana",
+      "note": "Fourth on Golf Digest's 2025-'26 Louisiana ranking, labelled \"Public\"; Pete Dye, opened to the public in 2004; hosts the Zurich Classic of New Orleans."
+    },
+    {
+      "kind": "sight",
+      "name": "The Country Club At Golden Nugget",
+      "place_slug": "country-club-at-golden-nugget-lake-charles",
+      "note": "Fifth on the same Golf Digest list, also \"Public,\" in Lake Charles; Todd Eckenrode and Origins Golf Designs."
+    },
+    {
+      "kind": "stay",
+      "name": "Hotel Monteleone",
+      "place_slug": "hotel-monteleone-new-orleans",
+      "note": "French Quarter hotel open since 1886, 214 Royal Street."
+    },
+    {
+      "kind": "food",
+      "name": "Galatoire's",
+      "place_slug": "galatoires-new-orleans",
+      "note": "French Quarter restaurant, 209 Bourbon Street."
+    }
+  ]
+}

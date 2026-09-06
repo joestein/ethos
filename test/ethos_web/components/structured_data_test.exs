@@ -939,10 +939,44 @@ defmodule EthosWeb.StructuredDataTest do
       # two — Idaho's spelled-out state names, which fed the parser a house
       # number where it wanted a postal code — and every one of these fourteen
       # is a plain two-letter-code American line that parsed on the first pass.
-      assert length(emitted) == 4798
-      assert count.(& &1["streetAddress"]) == 4175
+      #
+      # Re-measured 2026-09-06 after golf wave 3, the third ten states — Texas,
+      # Oklahoma, Arkansas, Louisiana, Mississippi, Alabama, Tennessee,
+      # Kentucky, New Mexico and Hawaii — which land 3 addressed places out of
+      # 43 seeded. That is the smallest addressed share of any wave in the
+      # corpus, and it comes from two files: New Mexico 2 and Kentucky 1. Eight
+      # of the ten carry no `address` field on any place at all. The cause is
+      # the one wave 1 first recorded, now at its extreme — a street address
+      # publishes only where a source states one — and this wave leans hardest
+      # into it, because its operators are resort and trail complexes that
+      # describe themselves by name: PGA Frisco, Capitol Hill, Dancing Rabbit,
+      # Pearl River and Four Seasons Lanai are campuses where the course, the
+      # hotel and the grill share a site and no one place has a postal line of
+      # its own. Hawaii goes further still: Lānaʻi has no incorporated place
+      # anywhere in it, and the island is the locality.
+      #
+      #   * total 4798 -> 4801, +3.
+      #   * `streetAddress` 4175 -> 4178, +3. All of them.
+      #   * `postalCode` 3410 -> 3413, +3. All of them too — Park Mammoth's
+      #     "823 Bald Knob Road, Park City, KY 42160" and Hotel Chaco's and
+      #     Sandia Resort's Albuquerque lines are each a plain
+      #     house-number-and-two-letter-code-and-ZIP American form.
+      #   * `is_nil(streetAddress)` unmoved at 623 and locality-only unmoved at
+      #     308, which is the same fact from the other two sides.
+      #
+      # GOLF WAVE 3 NEEDED NO PARSER WORK AND NO SEED CORRECTION, the second
+      # wave running to cost neither. Kentucky's single address is worth naming
+      # anyway, because it is a disagreement the parser cannot see: the course
+      # sits in unincorporated Edmonson County, but its postal line reads "Park
+      # City," which is an incorporated place in Barren County. The parser
+      # takes the locality it is handed, the place record carries town "Park
+      # City" with county "Edmonson County", and the roster row copies that
+      # record rather than the mailing city's county. The mismatch is
+      # deliberate on both sides and neither number above moves because of it.
+      assert length(emitted) == 4801
+      assert count.(& &1["streetAddress"]) == 4178
       assert count.(&is_nil(&1["streetAddress"])) == 623
-      assert count.(& &1["postalCode"]) == 3410
+      assert count.(& &1["postalCode"]) == 3413
 
       # The largest behavioural delta this change ships: 302 places emit a
       # PostalAddress carrying only locality, region and country. Their full
