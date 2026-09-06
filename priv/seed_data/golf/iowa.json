@@ -25,7 +25,7 @@
       },
       {
         "heading": "Basecamp in Burlington",
-        "body": "The Lodge at Spirit Hollow, on site at 5592 Clubhouse Dr, has 8 guest rooms with, in the property's own words, \"spectacular views of the golf course.\" Guests must be at least 21 years old and provide a valid photo ID to reserve a room. Lambo's, also on site, is not a dining option: \"Effective 11/1/24, Lambo's will offer bar service only. There will be no food service available.\" It operates Sunday through Tuesday, sunrise to sunset, and Wednesday through Saturday, closing at 9pm; the operator's two pages disagree on the weekday opening time, so none is stated here."
+        "body": "The Lodge at Spirit Hollow, on site at 5592 Clubhouse Dr, has 8 guest rooms with, in the property's own words, \"spectacular views of the golf course.\" Guests must be at least 21 years old and provide a valid photo ID to reserve a room. Lambo's, also on site, is not a dining option: the operator states that it offers bar service only, with no food service. It operates Sunday through Tuesday, sunrise to sunset, and Wednesday through Saturday, closing at 9pm; the operator's two pages disagree on the weekday opening time, so none is stated here."
       },
       {
         "heading": "Day two: Flint Hills Municipal Golf Course",
@@ -51,7 +51,7 @@
       },
       {
         "question": "Is Lambo's a place to eat at Spirit Hollow?",
-        "answer": "No. Lambo's, the on-site bar, states plainly: \"Effective 11/1/24, Lambo's will offer bar service only. There will be no food service available.\""
+        "answer": "No. Lambo's, the on-site bar, offers bar service only; the operator states there is no food service."
       },
       {
         "question": "Where should I play on day two?",
@@ -109,7 +109,7 @@
       "county": "Des Moines County",
       "address": "5592 Clubhouse Dr, Burlington, IA 52601",
       "official_url": "http://www.spirithollowgolfcourse.com/lambos-dining",
-      "summary": "The on-site bar at Spirit Hollow, not a dining option: \"Effective 11/1/24, Lambo's will offer bar service only. There will be no food service available.\" Open Sunday through Tuesday, sunrise to sunset, and Wednesday through Saturday, closing at 9pm; the operator's two pages disagree on the weekday opening time, so none is stated here.",
+      "summary": "The on-site bar at Spirit Hollow, not a dining option: the operator states that it offers bar service only, with no food service. Open Sunday through Tuesday, sunrise to sunset, and Wednesday through Saturday, closing at 9pm; the operator's two pages disagree on the weekday opening time, so none is stated here.",
       "status": "open",
       "photos": []
     }
