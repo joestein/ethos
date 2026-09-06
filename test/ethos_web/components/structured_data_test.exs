@@ -973,10 +973,40 @@ defmodule EthosWeb.StructuredDataTest do
       # City" with county "Edmonson County", and the roster row copies that
       # record rather than the mailing city's county. The mismatch is
       # deliberate on both sides and neither number above moves because of it.
-      assert length(emitted) == 4801
-      assert count.(& &1["streetAddress"]) == 4178
+      # GOLF WAVE 4 AND THE SECOND-COURSE CORRECTION.
+      #
+      # Five states gained place records: South Dakota a hotel and two
+      # restaurants (it had published two records, both golf courses, so its
+      # guide described two rounds of golf and nowhere to sleep), and Louisiana
+      # a second hotel and a second restaurant. Four states also replaced a
+      # second-course record chosen by ranking position with the nearest
+      # publicly accessible course, which is a swap and moves nothing here.
+      #
+      #   * total 4801 -> 4805, +5 records, -1 net from a golf-course record
+      #     that was replaced rather than added in a state already counted.
+      #   * `streetAddress` 4178 -> 4182, +4.
+      #   * `postalCode` 3413 -> 3418, +5.
+      #   * `is_nil(streetAddress)` unmoved at 623.
+      #
+      # THE +4 AND +5 DISAGREE ON PURPOSE, AND CHASING THE GAP FOUND A REAL
+      # DEFECT. South Dakota's three new addresses were first written
+      # "523 Sixth St. Rapid City, SD, 57701" -- a period where the corpus uses
+      # a comma, and a comma between the state and the ZIP. The parser still
+      # recovered a postalCode from all three but a streetAddress from only
+      # one, so the two counters moved by different amounts. Bumping both
+      # numbers would have made the suite green and left three malformed
+      # addresses in the corpus, structured data emitting a locality where a
+      # street belongs. Normalising them to the corpus form recovered all
+      # three, and the residual +4/+5 gap is Louisiana's two records, which
+      # carry no address at all and emit locality-only.
+      #
+      # The rule this leaves behind: when two of these counters move by
+      # different amounts, the difference is a claim about the data and should
+      # be explained before the numbers are updated.
+      assert length(emitted) == 4805
+      assert count.(& &1["streetAddress"]) == 4182
       assert count.(&is_nil(&1["streetAddress"])) == 623
-      assert count.(& &1["postalCode"]) == 3413
+      assert count.(& &1["postalCode"]) == 3418
 
       # The largest behavioural delta this change ships: 302 places emit a
       # PostalAddress carrying only locality, region and country. Their full
