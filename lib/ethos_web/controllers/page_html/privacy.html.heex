@@ -1,0 +1,120 @@
+<%!-- A draft, written from what the code actually does. It describes the three
+      third parties that run on the site, the two cookies Ethos sets itself,
+      and how to refuse the first group. It makes no claim about any
+      jurisdiction, and the contact line names no address because none has been
+      supplied — see the task report. --%>
+<div class="mx-auto max-w-2xl px-4 py-10">
+  <header>
+    <h1 class="text-3xl font-bold">Privacy</h1>
+    <p class="mt-1 text-zinc-500">
+      What Ethos collects, which third parties run on the site, and how to refuse them.
+    </p>
+  </header>
+
+  <section class="mt-8">
+    <h2 class="font-semibold">Third parties that run on this site</h2>
+    <p class="mt-3 text-zinc-700">
+      Up to three companies run code in your browser. Each one is here for a different
+      reason, and each one can see something different. The first two run on every page of
+      this site; the third runs on some. The one exception is the embeddable foliage map
+      at <code>/foliage/embed</code>, which other sites place in a frame of their own: it
+      loads none of the three.
+    </p>
+
+    <h3 class="mt-6 font-semibold">PostHog — product analytics</h3>
+    <p class="mt-2 text-zinc-700">
+      PostHog records which pages are viewed and which links are clicked, along with the
+      browser and device making the request and an approximate location derived from the IP
+      address. So that it can tell one visit from another, it stores an identifier on your
+      device — in your browser's local storage and in a first-party cookie of its own. It is what
+      tells us which guides people actually read. Where consent is required, PostHog loads
+      only after it is given, and not before.
+    </p>
+
+    <h3 class="mt-6 font-semibold">Google AdSense — advertising, and the consent banner</h3>
+    <p class="mt-2 text-zinc-700">
+      Ads on this site are served by Google AdSense, which sets its own cookies and uses
+      them to choose and measure ads. The consent banner is also Google's: it is a
+      Google-certified consent management platform, and the choice you make in it is the
+      signal the rest of this page refers to.
+    </p>
+
+    <h3 class="mt-6 font-semibold">GetYourGuide — affiliate links</h3>
+    <p class="mt-2 text-zinc-700">
+      Some pages carry a GetYourGuide widget listing tours and activities: guides, place
+      pages, collections and destination hubs about a place GetYourGuide covers. If
+      you book through one, Ethos earns a commission at no extra cost to you, and
+      GetYourGuide sets cookies to attribute the booking. Where consent is required, the
+      widget loads only after it is given.
+    </p>
+  </section>
+
+  <section class="mt-10">
+    <h2 class="font-semibold">Cookies Ethos sets itself</h2>
+    <p class="mt-3 text-zinc-700">
+      Two, set by the site itself rather than by any of the third parties above, and
+      neither used for advertising.
+    </p>
+    <ul class="mt-3 space-y-2 text-zinc-700">
+      <li>
+        A <strong>session</strong>
+        cookie, which carries the flash messages you see after an action and, if you are
+        signed in, the token identifying you. It is cleared when you log out.
+      </li>
+      <li>
+        A <strong>remember</strong>
+        me cookie, valid for 60 days, which keeps you signed in between visits. It is set
+        only if you ask for it while logging in, and only for accounts. A reader who never
+        signs in never receives one.
+      </li>
+    </ul>
+  </section>
+
+  <section class="mt-10">
+    <h2 class="font-semibold">What the site records on its own servers</h2>
+    <p class="mt-3 text-zinc-700">
+      Each guide keeps a count of how many times it has been read. It is a single number on
+      the guide, not a record of who read it.
+    </p>
+    <p class="mt-3 text-zinc-700">
+      If you make an account, Ethos stores the email address and username you give it and
+      your password, hashed — the password itself is never stored and cannot be read back.
+      It also stores what you do with the account: the guides you write, the comments and
+      suggestions you leave, and the thumbs up and thumbs down you give, each recorded
+      against your account. It also records any badges you have earned — for each, the
+      badge's name and the date it was awarded. Deleting an account or its contents is a
+      request to the site owner.
+    </p>
+  </section>
+
+  <section class="mt-10">
+    <h2 class="font-semibold">Changing your mind</h2>
+    <%!-- "Can be reopened" is a claim about the CMP, not about this repo. Nothing here
+          provides a reopen control and no later task adds one: the revocation entry point
+          is configured in Google's Funding Choices dashboard, and Google's TCF policy
+          requires withdrawal to be possible, so the sentence is true of a correctly
+          configured CMP. Task 5 verifies it against the live banner. Do NOT delete this
+          sentence for looking unverifiable — without it the page tells readers nothing
+          about how to change their mind. If Task 5 finds no reopen control, fix the CMP
+          configuration, then this line. --%>
+    <p class="mt-3 text-zinc-700">
+      The consent banner can be reopened, and the choice you make in it replaces the one
+      before. Refusing after having accepted stops the scripts loading on your next page
+      view; it does not reach back and delete what was already collected.
+    </p>
+    <p class="mt-3 text-zinc-700">
+      Every cookie described here, first-party and third-party alike, can be cleared in
+      your browser's settings, and your browser can be told to refuse them.
+    </p>
+  </section>
+
+  <section class="mt-10">
+    <h2 class="font-semibold">Contact</h2>
+    <p class="mt-3 text-zinc-700">
+      For a question about any of this, or to ask what is held about you, contact the site
+      owner.
+    </p>
+  </section>
+
+  <p class="mt-10 text-sm text-zinc-500">Last updated 6 September 2026.</p>
+</div>

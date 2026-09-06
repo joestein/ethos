@@ -22,6 +22,18 @@ if gsv = System.get_env("GOOGLE_SITE_VERIFICATION") do
   config :ethos, :google_site_verification, gsv
 end
 
+# PostHog product analytics. Read here rather than in config.exs so the key
+# comes from the environment on every deploy target and from nowhere in dev or
+# test — an unset key renders no <meta> tag, so app.js finds nothing to
+# initialise and no events are sent. Silence is the correct failure.
+#
+# phc_-prefixed keys are PUBLIC client keys: they are visible in the page
+# source of every production page by design. Keeping this out of the repo is
+# deploy discipline, not secrecy.
+if posthog_key = System.get_env("POSTHOG_PUBLIC_KEY") do
+  config :ethos, :posthog_public_key, posthog_key
+end
+
 if admin_email = System.get_env("ADMIN_EMAIL") do
   config :ethos, :admin_email, admin_email
 end

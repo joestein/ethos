@@ -232,17 +232,21 @@ defmodule EthosWeb.Affiliate do
 
   attr :locale, :map, default: nil
 
-  @doc "The partner analytics and widget script. Renders nothing without a locale."
+  @doc """
+  The partner's identifier, for the consent-gated loader to act on.
+
+  This was a `<script src>` until consent landed. It cannot be one any more:
+  a script tag in `<head>` runs before any consent signal exists, and the
+  GetYourGuide widget sets cookies. `assets/js/analytics.js` reads this tag
+  and injects the script only after `analyticsConsent` resolves.
+
+  Renders nothing without a locale, exactly as before — `renders?/1` is still
+  the one predicate, so this and the widget cannot disagree about whether a
+  page carries an affiliate unit.
+  """
   def affiliate_head(assigns) do
     ~H"""
-    <script
-      :if={enabled?() and renders?(@locale)}
-      async
-      defer
-      src="https://widget.getyourguide.com/dist/pa.umd.production.min.js"
-      data-gyg-partner-id={@locale.partner_id}
-    >
-    </script>
+    <meta :if={enabled?() and renders?(@locale)} name="gyg-partner-id" content={@locale.partner_id} />
     """
   end
 

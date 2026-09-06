@@ -9,7 +9,14 @@ defmodule EthosWeb.AffiliatePlacementTest do
 
   alias Ethos.{Guides, Places}
 
-  @script_src "https://widget.getyourguide.com/dist/pa.umd.production.min.js"
+  # The head tag `affiliate_head/1` renders. It was the GetYourGuide script's
+  # src until consent landed; the script cannot sit in <head> any more (it runs
+  # before any consent signal exists and it sets cookies), so the head now
+  # carries only the partner id and `assets/js/analytics.js` injects the script
+  # after consent. Every assertion below still means the same thing it did —
+  # "this page's head declares an affiliate unit" — it just names a different
+  # tag. `@widget` is unchanged: the unit's own div was never the gated part.
+  @head_tag ~s(name="gyg-partner-id")
   @widget ~s(data-gyg-widget="auto")
   @amber "Planning your own trip?"
 
@@ -47,13 +54,13 @@ defmodule EthosWeb.AffiliatePlacementTest do
   end
 
   describe "guide pages" do
-    test "a New York guide carries the script and the widget, and NOT the amber CTA", %{
+    test "a New York guide carries the head tag and the widget, and NOT the amber CTA", %{
       conn: conn
     } do
       g = ny_guide("Belmont")
       html = conn |> get(~p"/g/#{g.slug}") |> html_response(200)
 
-      assert html =~ @script_src
+      assert html =~ @head_tag
       assert html =~ @widget
       assert html =~ ~s(data-gyg-cmp="new-york")
       assert html =~ ~s(data-gyg-partner-id="ZA4AIMF")
@@ -62,12 +69,12 @@ defmodule EthosWeb.AffiliatePlacementTest do
 
     # The other direction. Either assertion alone passes trivially against a
     # template that always renders one or always renders the other.
-    test "a Connecticut guide carries the amber CTA and NOT the script or widget", %{conn: conn} do
+    test "a Connecticut guide carries the amber CTA and NOT the head tag or widget", %{conn: conn} do
       g = ct_guide("Woodbury")
       html = conn |> get(~p"/g/#{g.slug}") |> html_response(200)
 
       assert html =~ @amber
-      refute html =~ @script_src
+      refute html =~ @head_tag
       refute html =~ @widget
     end
 
@@ -107,7 +114,7 @@ defmodule EthosWeb.AffiliatePlacementTest do
 
       html = conn |> get(~p"/p/teitel-brothers") |> html_response(200)
 
-      assert html =~ @script_src
+      assert html =~ @head_tag
       assert html =~ @widget
     end
 
@@ -160,7 +167,7 @@ defmodule EthosWeb.AffiliatePlacementTest do
 
       html = conn |> get(~p"/p/#{place.slug}") |> html_response(200)
 
-      assert html =~ @script_src
+      assert html =~ @head_tag
       assert html =~ @widget
       assert html =~ ~s(data-gyg-cmp="new-york")
     end
@@ -179,7 +186,7 @@ defmodule EthosWeb.AffiliatePlacementTest do
 
       html = conn |> get(~p"/p/palace-theater-waterbury") |> html_response(200)
 
-      refute html =~ @script_src
+      refute html =~ @head_tag
       refute html =~ @widget
     end
   end
@@ -233,7 +240,7 @@ defmodule EthosWeb.AffiliatePlacementTest do
 
       html = conn |> get(~p"/destinations/united-states/new-york") |> html_response(200)
 
-      refute html =~ @script_src
+      refute html =~ @head_tag
       refute html =~ @widget
     end
 
@@ -287,7 +294,7 @@ defmodule EthosWeb.AffiliatePlacementTest do
 
       html = conn |> get(~p"/destinations/united-states/connecticut") |> html_response(200)
 
-      refute html =~ @script_src
+      refute html =~ @head_tag
       refute html =~ @widget
     end
 
@@ -427,22 +434,32 @@ defmodule EthosWeb.AffiliatePlacementTest do
       assert count == 1, "expected exactly one widget div, got #{count}"
     end
 
-    # async and defer are what keep this tag from blocking render. A tag
-    # missing them renders identically in a test and badly in a browser, so
-    # they are asserted on the tag itself rather than on the page.
-    test "the script tag carries async and defer so it never blocks render", %{conn: conn} do
+    # This test used to assert `async` and `defer` on the head's <script>: a
+    # tag missing them renders identically in a test and badly in a browser, so
+    # they were asserted on the tag itself rather than on the page. The head
+    # carries a <meta> now, which cannot block render at all and needs no
+    # attribute to say so — and the script `assets/js/analytics.js` appends
+    # after consent is created by the DOM, so it is async by construction.
+    #
+    # What is still worth asserting on the tag itself, for the same reason as
+    # before, is that it really IS a meta and not a script: a page whose head
+    # went back to loading the widget's host directly would look identical to
+    # every other assertion in this file (the partner id is present either
+    # way) while running third-party code before any consent signal exists.
+    test "the head tag is a meta, not a script, so it can neither block render nor set cookies",
+         %{conn: conn} do
       g = ny_guide("Belmont")
       html = conn |> get(~p"/g/#{g.slug}") |> html_response(200)
 
       tag =
-        Regex.run(~r{<script[^>]*#{Regex.escape(@script_src)}[^>]*>}, html)
+        Regex.run(~r{<meta[^>]*#{Regex.escape(@head_tag)}[^>]*>}, html)
         |> case do
           [tag] -> tag
-          nil -> flunk("no script tag matched #{@script_src}")
+          nil -> flunk("no meta tag matched #{@head_tag}")
         end
 
-      assert tag =~ "async"
-      assert tag =~ "defer"
+      assert tag =~ ~s(content="ZA4AIMF")
+      refute html =~ "widget.getyourguide.com"
     end
   end
 
@@ -591,11 +608,11 @@ defmodule EthosWeb.AffiliatePlacementTest do
         })
 
       static_html = conn |> get(~p"/guides/#{guide.id}/edit") |> html_response(200)
-      refute static_html =~ @script_src
+      refute static_html =~ @head_tag
       refute static_html =~ @widget
 
       {:ok, _lv, connected_html} = live(conn, ~p"/guides/#{guide.id}/edit")
-      refute connected_html =~ @script_src
+      refute connected_html =~ @head_tag
       refute connected_html =~ @widget
     end
 
@@ -611,7 +628,7 @@ defmodule EthosWeb.AffiliatePlacementTest do
       })
 
       html = conn |> get(~p"/guides") |> html_response(200)
-      refute html =~ @script_src
+      refute html =~ @head_tag
       refute html =~ @widget
     end
   end
@@ -787,7 +804,7 @@ defmodule EthosWeb.AffiliatePlacementTest do
     test "the Rome guide carries the rome campaign above its title", %{conn: conn} do
       html = conn |> get(~p"/g/three-days-in-rome-real-trip-guide") |> html_response(200)
 
-      assert html =~ @script_src
+      assert html =~ @head_tag
       assert html =~ ~s(data-gyg-cmp="rome")
       assert html =~ ~s(data-gyg-partner-id="ZA4AIMF")
 
@@ -841,7 +858,7 @@ defmodule EthosWeb.AffiliatePlacementTest do
 
       html = conn |> get(~p"/g/#{guide.slug}") |> html_response(200)
 
-      assert html =~ @script_src
+      assert html =~ @head_tag
       assert html =~ @widget
       assert html =~ ~s(data-gyg-cmp="rome")
     end
@@ -916,7 +933,9 @@ defmodule EthosWeb.AffiliateUnsupportedNetworkTest do
 
   import Ethos.GuidesFixtures
 
-  @script_src "https://widget.getyourguide.com/dist/pa.umd.production.min.js"
+  # See the note on @head_tag in EthosWeb.AffiliatePlacementTest above: the
+  # head tag is the partner id now, not the script src.
+  @head_tag ~s(name="gyg-partner-id")
   @widget ~s(data-gyg-widget="auto")
   @amber "Planning your own trip?"
   @old_disclosure "Some booking links on this page"
@@ -964,7 +983,7 @@ defmodule EthosWeb.AffiliateUnsupportedNetworkTest do
     html = conn |> get(~p"/g/#{g.slug}") |> html_response(200)
 
     refute html =~ @widget
-    refute html =~ @script_src
+    refute html =~ @head_tag
 
     assert html =~ @amber,
            "a locale that renders no unit must not suppress the fallback CTA — " <>
@@ -986,7 +1005,9 @@ defmodule EthosWeb.AffiliateMalformedPlacementTest do
 
   import Ethos.GuidesFixtures
 
-  @script_src "https://widget.getyourguide.com/dist/pa.umd.production.min.js"
+  # See the note on @head_tag in EthosWeb.AffiliatePlacementTest above: the
+  # head tag is the partner id now, not the script src.
+  @head_tag ~s(name="gyg-partner-id")
   @widget ~s(data-gyg-widget="auto")
   @amber "Planning your own trip?"
   @unit_disclosure "Tours and activities shown above"
@@ -1001,6 +1022,9 @@ defmodule EthosWeb.AffiliateMalformedPlacementTest do
   # page-level disclosure, while `affiliate_head/1` (gated on renders?/1 alone)
   # still loaded the third-party script — and neither layout slot matched, so
   # nothing rendered. Script loaded, no widget, no fallback, green suite.
+  # (`affiliate_head/1` renders a meta tag rather than a script now, so the
+  # cost of that disagreement is smaller; the disagreement itself is what this
+  # test still pins, and `renders?/1` is still the one predicate.)
   #
   # `placement/1` now degrades an unknown value to the :bottom default, so the
   # page is New York's page. The loud failure lives in CI instead:
@@ -1039,7 +1063,7 @@ defmodule EthosWeb.AffiliateMalformedPlacementTest do
     count = html |> String.split(@widget) |> length() |> Kernel.-(1)
     assert count == 1, "expected exactly one widget div, got #{count}"
 
-    assert html =~ @script_src
+    assert html =~ @head_tag
 
     widget_at = :binary.match(html, "data-gyg-widget") |> elem(0)
     title_at = :binary.match(html, "<h1") |> elem(0)
