@@ -7,8 +7,36 @@ defmodule EthosWeb.PageControllerTest do
   test "GET / shows hero and CTA without any guides", %{conn: conn} do
     conn = get(conn, ~p"/")
     html = html_response(conn, 200)
-    assert html =~ "Turn your trip into a guide"
-    assert html =~ "Make your guide"
+    assert html =~ "Places worth the trip"
+    assert html =~ "Browse destinations"
+  end
+
+  test "does not invite a visitor to make a guide", %{conn: conn} do
+    html = conn |> get(~p"/") |> html_response(200)
+
+    refute html =~ "Make your guide"
+    refute html =~ "Paste your notes"
+    # The header CTA is already gated on admin?/1 (false for a logged-out
+    # visitor), so once the hero button is gone this string should appear
+    # nowhere on the page at all.
+    refute html =~ ~s(href="/guides/new")
+  end
+
+  test "points visitors at the destinations instead", %{conn: conn} do
+    html = conn |> get(~p"/") |> html_response(200)
+
+    # Assert on the hero button's text, NOT on a bare `href="/destinations"`
+    # — the site header renders that link on every page, so a bare href
+    # assertion would pass even if the hero button pointed somewhere else
+    # entirely (e.g. the logged-in-only `/badges`).
+    assert html =~ "Browse destinations"
+
+    # Pin the hero button's OWN anchor, distinct from the header's
+    # Destinations link, by matching its href together with its distinctive
+    # class. Attribute order and the `data-phx-link*` attributes come from
+    # `<.link navigate={...}>` and are exactly what gets rendered.
+    assert html =~
+             ~s(href="/destinations" data-phx-link="redirect" data-phx-link-state="push" class="rounded-md bg-zinc-900)
   end
 
   # The home page renders with `layout: false`, so it does not inherit the app
@@ -160,40 +188,46 @@ defmodule EthosWeb.PageControllerTest do
   end
 
   describe "travel guides and collections" do
-    test "lists the five deepest hubs with their counts", %{conn: conn} do
+    # Three countries, one guide each. `/destinations` lists the roots of the
+    # destination tree and nothing else, so the homepage's hub list and its "All
+    # N destinations" count are both about roots — not the states these tests
+    # used to seed, which are interior nodes now and have no page of their own
+    # at the top level.
+    defp seed_three_countries! do
       published_guide_fixture(%{
         title: "Woodbury Wander",
         destination: "Woodbury, Connecticut",
-        state: "Connecticut",
-        county: "Litchfield"
+        destination_path: "united-states/connecticut/litchfield-county/woodbury"
       })
 
       published_guide_fixture(%{
         title: "Roman Holiday",
         destination: "Rome, Italy",
-        state: "Italy",
-        county: "Lazio"
+        destination_path: "italy/lazio/rome"
       })
 
-      # Connecticut and Italy both have explicit @hub_nouns entries, so without
-      # a third state the "guides" fallback never executes even though it
-      # fires on real data. Tennessee has no entry.
       published_guide_fixture(%{
-        title: "Music City Weekend",
-        destination: "Nashville, Tennessee",
-        state: "Tennessee",
-        county: "Davidson"
+        title: "Camden Crawl",
+        destination: "Camden, England",
+        destination_path: "united-kingdom/england/london/camden"
       })
+    end
+
+    test "lists the country hubs with their counts", %{conn: conn} do
+      seed_three_countries!()
 
       html = conn |> get(~p"/") |> html_response(200)
-      hubs = Ethos.Guides.list_states() |> Enum.take(5)
+      hubs = Ethos.Guides.list_country_hubs() |> Enum.take(5)
 
       assert length(hubs) > 1
       assert html =~ "Travel Guides"
 
       for hub <- hubs do
-        assert html =~ hub.state
-        assert html =~ ~s(href="/destinations/#{hub.slug}")
+        assert html =~ hub.name
+
+        # node_path/1, not a bare slug: a country's hub lives at its full tree
+        # path, and the multi-segment paths below it would 404 on a slug.
+        assert html =~ ~s(href="#{EthosWeb.DestinationHTML.node_path(hub.path)}")
 
         # The count alone is ambient on the page — Tailwind classes, the
         # AdSense id, the port all contain small integers, so matching a bare
@@ -201,25 +235,29 @@ defmodule EthosWeb.PageControllerTest do
         # is what the reader sees and what the noun map is for.
         assert html =~ "#{hub.count} #{EthosWeb.PageHTML.hub_noun(hub.slug)}"
       end
+
+      # Both branches of hub_noun/1 really run: Italy has an entry ("zones",
+      # because its whole corpus is Rome's zones) and the United States takes
+      # the "guides" fallback, since no one noun is true of Connecticut towns,
+      # New York neighbourhoods and thirty ballparks at once.
+      assert EthosWeb.PageHTML.hub_noun("italy") == "zones"
+      assert EthosWeb.PageHTML.hub_noun("united-states") == "guides"
+      assert html =~ "1 zones"
     end
 
     test "links to all destinations with a count that matches the hub list", %{conn: conn} do
-      published_guide_fixture(%{
-        title: "Woodbury Wander",
-        destination: "Woodbury, Connecticut",
-        state: "Connecticut",
-        county: "Litchfield"
-      })
+      seed_three_countries!()
 
       html = conn |> get(~p"/") |> html_response(200)
 
-      # /destinations lists states PLUS Guides.list_destinations_without_state/0
-      # (destination_controller.ex) — the ballpark-only destinations with no
-      # state. The count must match that page's total, not just the state hubs,
-      # or the homepage undercounts the page it links to.
-      total =
-        length(Ethos.Guides.list_states()) +
-          length(Ethos.Guides.list_destinations_without_state())
+      # /destinations lists Destinations.roots/0 and nothing else — see the
+      # comment in destination_html/index.html.heex. The count must match that
+      # page's total, or the homepage misdescribes the page it links to.
+      total = length(Ethos.Destinations.roots())
+
+      # Non-vacuity: a count of 0 would make the assertion below pass against
+      # a page rendering no hub section at all.
+      assert total == 3
 
       # The count is computed, not a literal, so it cannot drift from the
       # page it points at.
@@ -260,6 +298,63 @@ defmodule EthosWeb.PageControllerTest do
       assert html =~ "Featured Trip"
       assert html =~ "Connecticut Foliage Forecast"
       assert html =~ "Latest guides"
+    end
+  end
+
+  describe "foliage driving routes" do
+    test "lists all seven routes with their links", %{conn: conn} do
+      html = conn |> get(~p"/") |> html_response(200)
+      routes = Ethos.Foliage.routes()
+
+      assert length(routes) == 7
+      assert html =~ "Foliage driving routes"
+
+      for route <- routes do
+        # One route is "New Haven & Neighborhood"; HEEx escapes the ampersand,
+        # so compare against what the page actually contains.
+        escaped = route.name |> Phoenix.HTML.html_escape() |> Phoenix.HTML.safe_to_string()
+
+        assert html =~ escaped
+        assert html =~ ~s(href="/foliage/#{route.slug}")
+      end
+    end
+
+    test "shows each route's town count", %{conn: conn} do
+      html = conn |> get(~p"/") |> html_response(200)
+      route = Ethos.Foliage.route("hartford-west")
+
+      assert html =~ "#{length(route.stops)} towns"
+    end
+
+    test "keeps the Collections section above it", %{conn: conn} do
+      # Collections are seeded in production via `Ethos.Release.seed_collections/0`,
+      # which does not run against the test database, so the Collections section
+      # is otherwise empty (and thus absent — it is `:if`-guarded) here. A
+      # published collection is created directly so both headings actually
+      # render and the ordering assertion below is meaningful.
+      guide = published_guide_fixture(%{title: "Woodbury Wander"})
+
+      Ethos.Collections.upsert_collection!(%{
+        slug: "burys-ordering-test",
+        title: "Burys Ordering Test",
+        published: true,
+        items: [%{guide_slug: guide.slug, blurb: "The antiques one."}]
+      })
+
+      html = conn |> get(~p"/") |> html_response(200)
+
+      # Match the headings themselves, not the bare words — "Collections"
+      # could appear earlier in a meta tag or a link label, and `:binary.match`
+      # returns the first hit wherever it is.
+      collections_heading =
+        ~s(<h2 class="text-sm uppercase tracking-wide text-zinc-400">Collections</h2>)
+
+      routes_heading =
+        ~s(<h2 class="text-sm uppercase tracking-wide text-zinc-400">Foliage driving routes</h2>)
+
+      assert [{collections_at, _}] = :binary.matches(html, collections_heading)
+      assert [{routes_at, _}] = :binary.matches(html, routes_heading)
+      assert collections_at < routes_at
     end
   end
 

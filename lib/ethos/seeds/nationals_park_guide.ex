@@ -2,7 +2,7 @@ defmodule Ethos.Seeds.NationalsParkGuide do
   @moduledoc """
   Seeds the Nationals Park guide. Idempotent by slug.
 
-  ## Two fields here are decided by routing, not by geography
+  ## The destination string is decided by routing, not by geography
 
   `destination: "Washington DC, District of Columbia"`, which derives
   `washington-dc`. Plain `"Washington"` would derive `washington` and be
@@ -10,14 +10,12 @@ defmodule Ethos.Seeds.NationalsParkGuide do
   tries the state branch before the destination branch. This is recorded in
   the set's spec, and it is why the destination string reads the way it does.
 
-  `county: "District of Columbia"`, the same string as `state`. A confirmed
-  verdict establishes that the District has no counties — Congress abolished
-  Washington County in 1871 — so there is no county to name. But every place
-  record in `Ethos.Seeds.NationalsParkPlaces` renders a breadcrumb linking to
-  `/destinations/{state}/{county}`, and that URL 404s unless some published
-  guide carries the county. The field therefore repeats the state. A
-  repetitive URL beats a broken breadcrumb, and the reason is written down
-  here so a later author does not "fix" it into a 404.
+  The node, by contrast, is geography:
+  `united-states/district-of-columbia/washington` — the city Washington under
+  the region District of Columbia, a two-name repetition that is correct rather
+  than a mistake. A confirmed verdict establishes that the District has no
+  counties — Congress abolished Washington County in 1871 — so there is no county
+  to name, and none is modelled for this or any other ballpark.
 
   Every clause here restates the text of a `confirmed` verdict from the
   2026-08-30 Washington Nationals research artifact, or the text a `refuted`
@@ -50,8 +48,7 @@ defmodule Ethos.Seeds.NationalsParkGuide do
       slug: "nationals-park-guide",
       title: "Nationals Park: The Ballpark and the Capitol Riverfront",
       destination: "Washington DC, District of Columbia",
-      state: "District of Columbia",
-      county: "District of Columbia",
+      destination_path: "united-states/district-of-columbia/washington",
       intro: """
       Nationals Park stands at 1500 South Capitol Street SE, in the Navy Yard
       neighborhood of Southeast Washington along the Capitol Riverfront. It

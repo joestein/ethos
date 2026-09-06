@@ -37,6 +37,34 @@ defmodule Ethos.Foliage do
   @season_start {9, 1}
   @season_end {11, 30}
 
+  @connecticut_path "united-states/connecticut"
+
+  @doc """
+  The destination node path every Connecticut town hangs beneath.
+
+  The forecast covers exactly one state, and three callers need to ask "is this
+  page about a Connecticut town?" — the guide page's foliage panel, the house
+  ad, and the route builder's guide join. They used to ask it as
+  `state_slug == "connecticut"`; that column is gone, and ancestry answers the
+  same question without it. Named here rather than repeated at each call site
+  so the three cannot drift apart.
+  """
+  def connecticut_path, do: @connecticut_path
+
+  @doc """
+  Whether a destination node is a Connecticut one, for a caller holding a row.
+
+  Load-bearing, not decorative — the guard it replaces carried the same warning:
+  `town/1` resolves on slug alone, and several Connecticut town names are shared
+  with places well outside it (Lisbon, Portugal; Greenwich and Enfield, the
+  London boroughs). Without this check a guide about Greenwich, London would
+  claim a Connecticut foliage estimate. Ancestry is the stricter form of the
+  test: it is satisfied only by a node actually inside Connecticut, where the
+  old `state_slug` was satisfied by any page whose state string derived to
+  "connecticut".
+  """
+  def connecticut?(node), do: Ethos.Destinations.under?(node, @connecticut_path)
+
   def attribution, do: @attribution
 
   def stage_label(stage), do: Map.fetch!(@stage_labels, stage)

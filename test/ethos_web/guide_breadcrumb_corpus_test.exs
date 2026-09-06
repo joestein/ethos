@@ -1,77 +1,170 @@
 defmodule EthosWeb.GuideBreadcrumbCorpusTest do
   @moduledoc """
-  A corpus guard for the invariant `GuideBreadcrumb.trail/1`'s
-  curated-destination lookup depends on but does not enforce.
+  A corpus guard on the geographic trail every guide page publishes.
 
-  `trail/1` prefers a curated `Destination` record's crumb over the derived
-  state+county hierarchy whenever the guide's `destination_slug` matches a
-  curated record's path. The moduledoc there defends this by noting county
-  records are keyed `"<state>/<county>"`, never a bare destination slug — a
-  fact about the curated record's own path, not the fact that actually
-  matters: **no curated record's bare path may equal the `destination_slug`
-  of a guide that carries a county.** When that holds, no guide's
-  county crumb is ever reachable via a curated lookup. When it breaks, a
-  guide with that destination_slug renders the curated crumb instead of its
-  state+county hierarchy — the county crumb vanishes from both the visible
-  `<nav>` and the `BreadcrumbList` JSON-LD, silently.
+  ## What this used to guard, and why the rule moved
 
-  Reads the committed seed files and code guide modules, like
-  `affiliate_corpus_test.exs` — a fixture describing a colliding pair keeps
-  passing long after the real corpus changes shape.
+  `GuideBreadcrumb.trail/1` used to prefer a curated `Destination` record's
+  crumb over the derived state+county hierarchy whenever the guide's
+  `destination_slug` matched a curated record's path. This file guarded the
+  invariant that preference silently depended on: **no curated record's bare
+  path may equal the `destination_slug` of a guide that carries a county.**
+  When that broke, the county crumb vanished from both the visible `<nav>` and
+  the `BreadcrumbList` JSON-LD, with nothing failing.
+
+  The lookup is gone. A guide's trail is now its destination node's ancestry —
+  the same walk a hub page and a place page make — so there is no curated
+  record to outrank a hierarchy, and no way for one crumb to swallow the rest.
+
+  The requirement has not moved, only its mechanism: a guide page must carry a
+  real geographic trail, and the county it is filed under must appear in it. So
+  this asserts the same guarantee against the new source. Read off the roster
+  and the committed corpus, like `affiliate_corpus_test.exs` — a fixture
+  describing a couple of nodes keeps passing long after the real corpus changes
+  shape.
+
+  ## The invariant now
+
+  For every guide in the corpus, JSON-authored or code-authored:
+
+  1. its `destination_path` names a node the roster owns, so the trail resolves
+     at all, rather than falling back to its bare `destination_slug`;
+  2. the trail is root-first and ends at that node, so the last crumb is the
+     guide's own place and the first is a country; and
+  3. when the guide's derived county is non-empty, a node bearing that county's
+     name is *in* the trail — the crumb the old rule could drop.
   """
   use ExUnit.Case, async: true
 
-  alias Ethos.Guides.Guide
+  alias Ethos.Destinations
   alias Ethos.SeedDataHelpers
-  alias Ethos.Seeds.DataDestination
 
-  # A curated record's path is "<slug>" for a state/place-level page and
-  # "<state>/<county>" for a county page (see `new-york-manhattan.json`'s
-  # `"path": "new-york/manhattan"`). Only the bare form can ever collide with
-  # a guide's destination_slug, which is derived from a bare destination name
-  # and never carries a "/".
-  defp bare_curated_paths do
-    for f <- SeedDataHelpers.seed_files("destinations"),
-        path = DataDestination.load!(f)["path"],
-        not String.contains?(path, "/"),
-        do: path
-  end
-
-  defp has_county?(county), do: is_binary(county) and county != ""
-
-  defp county_carrying_guide_slugs do
+  # Every guide in the corpus as `{owner, destination_path}`. Both authoring
+  # forms, because a rule enforced over the JSON files alone leaves the
+  # thirty-odd code guide modules unguarded — the hole `code_guides/0` was added
+  # to close.
+  defp corpus_guides do
     json =
       for f <- SeedDataHelpers.all_seed_files(),
           g = Ethos.Seeds.DataGuide.load!(f)["guide"],
-          has_county?(g["county"]),
-          do: {Guide.derive_destination_slug(g["destination"]), f}
+          do: {Path.basename(f), g["destination_path"]}
 
     code =
       for {d, owner} <- SeedDataHelpers.code_guides(),
-          has_county?(Map.get(d, :county)),
-          do: {Guide.derive_destination_slug(d.destination), owner.seed_file}
+          do: {Path.basename(owner.seed_file), Map.get(d, :destination_path)}
 
     json ++ code
   end
 
-  test "no curated destination record's bare path collides with a county-carrying guide's destination_slug" do
-    bare_paths = bare_curated_paths()
-    county_slugs = county_carrying_guide_slugs()
+  # Empty, and kept rather than deleted: it used to hold `rome_guide.ex`, the one
+  # guide that hand-rolled its own upsert and named no node. It names
+  # `italy/lazio/rome` now like every other guide, so the exemption is gone —
+  # and an exemption list that is empty is the statement that nothing is exempt.
+  @nodeless_guides []
 
-    # Non-vacuity: if the corpus ever stopped having any bare curated record,
-    # or any county-carrying guide, the refute below would pass with nothing
-    # to check.
-    assert bare_paths != [], "expected at least one bare curated destination path"
+  setup_all do
+    trails = SeedDataHelpers.destination_trails()
+    %{trails: trails, guides: corpus_guides()}
+  end
 
-    assert county_slugs != [],
-           "expected at least one guide in the corpus to carry a county"
+  test "every guide is filed on a node the roster owns", %{trails: trails, guides: guides} do
+    unresolvable =
+      for {owner, path} <- guides,
+          owner not in @nodeless_guides,
+          not Map.has_key?(trails, path || ""),
+          do: {owner, path}
 
-    collisions = for {slug, owner} <- county_slugs, slug in bare_paths, do: {slug, owner}
+    assert unresolvable == [],
+           "these guides name a destination_path no roster node owns, so their breadcrumb " <>
+             "falls back to the legacy state/county columns instead of a real trail: " <>
+             inspect(unresolvable)
 
-    assert collisions == [],
-           "these guides carry a county, but their destination_slug collides with a curated " <>
-             "destination record's bare path — GuideBreadcrumb.trail/1 will render the curated " <>
-             "crumb instead of the state+county hierarchy, silently dropping the county crumb " <>
-             "from both the <nav> and the BreadcrumbList JSON-LD: #{inspect(collisions)}"
+    # Non-vacuity, both halves: a corpus of nothing, or a corpus where every
+    # guide had been added to @nodeless_guides, would satisfy the refutation
+    # above with nothing checked.
+    resolved = for {owner, _} <- guides, owner not in @nodeless_guides, do: owner
+    assert length(resolved) > 100, "the guide corpus has shrunk to #{length(resolved)} guides"
+  end
+
+  test "every guide's trail is root-first, starts at a country and ends at its own node", %{
+    trails: trails,
+    guides: guides
+  } do
+    for {owner, path} <- guides, owner not in @nodeless_guides do
+      trail = Map.fetch!(trails, path)
+
+      # Every prefix of the node's path, shortest first — which is at once
+      # root-first order, a complete ancestry with no tier skipped, and a trail
+      # ending at the guide's own node. A missing ancestor shortens the trail
+      # and fails here.
+      expected =
+        path
+        |> String.split("/")
+        |> Enum.scan([], fn seg, acc -> acc ++ [seg] end)
+        |> Enum.map(&Enum.join(&1, "/"))
+
+      assert Enum.map(trail, & &1.path) == expected,
+             "#{owner}: the trail for #{path} is not its own ancestry, root-first"
+
+      assert List.first(trail).kind == "country",
+             "#{owner}: the trail for #{path} starts at a #{List.first(trail).kind}, so the " <>
+               "breadcrumb's first crumb is not a country"
+    end
+  end
+
+  # The county tier — a `county`, `borough` or `city` node — is what the old
+  # `county` column held, and a breadcrumb that skipped it dropped a whole level
+  # of navigation out of the trail.
+  @county_kinds ~w(county borough city)
+
+  test "a guide filed under a county carries that county in its trail", %{
+    trails: trails,
+    guides: guides
+  } do
+    # Read off the ancestry, not off an authored `county` key: no seed file
+    # carries one any more, and a gate reading what a file wrote would pass
+    # vacuously on a corpus that writes nothing.
+    with_county =
+      for {owner, path} <- guides,
+          owner not in @nodeless_guides,
+          trail = Map.fetch!(trails, path),
+          node = Enum.find(Enum.reverse(trail), &(&1.kind in @county_kinds)),
+          not is_nil(node),
+          do: {owner, path, trail, node}
+
+    assert length(with_county) > 100,
+           "only #{length(with_county)} guides in the corpus sit under a county tier, so this " <>
+             "gate has stopped proving anything"
+
+    missing =
+      for {owner, path, trail, node} <- with_county,
+          node.path not in Enum.map(trail, & &1.path),
+          do: {owner, path, node.name}
+
+    assert missing == [],
+           "these guides are filed under a county that appears nowhere in their node's " <>
+             "ancestry, so the county crumb is missing from both the <nav> and the " <>
+             "BreadcrumbList JSON-LD: " <> inspect(missing)
+  end
+
+  test "no curated hub page is keyed on a bare path any more", %{trails: trails} do
+    # The wreckage the old rule left behind. `curated_destination_crumb/1`
+    # matched only because all fifteen curated files were keyed on bare,
+    # pre-tree paths ("connecticut", "rome"), and `Release.seed_destinations/0`
+    # inserted those keys as rows of their own — parentless, kindless, and
+    # sitting on the URLs fifteen 301s were supposed to own.
+    #
+    # Kept as an assertion rather than a comment because the files are the only
+    # thing stopping it from coming back: re-key one by hand and the rows return.
+    bare =
+      for f <- SeedDataHelpers.seed_files("destinations"),
+          path = Ethos.Seeds.DataDestination.load!(f)["path"],
+          not Map.has_key?(trails, path),
+          do: {Path.basename(f), path}
+
+    assert bare == [],
+           "these curated hub files are keyed on a path the roster does not own — each one " <>
+             "seeds a parentless row that shadows a node, disables its redirect and lists " <>
+             "itself on /destinations as a country: " <> inspect(bare)
   end
 end

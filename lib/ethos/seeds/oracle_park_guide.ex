@@ -2,11 +2,12 @@ defmodule Ethos.Seeds.OracleParkGuide do
   @moduledoc """
   Seeds the Oracle Park guide. Idempotent by slug.
 
-  Carries `state: "California"` and `county: "San Francisco"`. A confirmed
-  verdict records that San Francisco became a consolidated city-county in
-  1856 and that the county shares the same name and government as the city,
-  with no separate county administering the address — the independent-city
-  pattern this wave also applies to St. Louis and Baltimore City.
+  Names the destination node `united-states/california/san-francisco` — the same
+  node the San Francisco corpus hangs its neighbourhoods from. A confirmed
+  verdict records that San Francisco became a consolidated city-county in 1856
+  and that the county shares the same name and government as the city, with no
+  separate county administering the address, so the city sits directly under the
+  region with nothing between them.
 
   Every clause here restates the text of a `confirmed` verdict from the
   2026-08-30 San Francisco Giants research artifact.
@@ -49,8 +50,7 @@ defmodule Ethos.Seeds.OracleParkGuide do
       slug: "oracle-park-guide",
       title: "Oracle Park: The Ballpark, McCovey Cove and Mission Rock",
       destination: "San Francisco, California",
-      state: "California",
-      county: "San Francisco",
+      destination_path: "united-states/california/san-francisco",
       intro: """
       Oracle Park stands at 24 Willie Mays Plaza in the South Beach
       neighborhood of San Francisco, on the bay in the industrial waterfront

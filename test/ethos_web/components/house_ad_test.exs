@@ -24,13 +24,23 @@ defmodule EthosWeb.HouseAdTest do
     )
   end
 
+  # A guide's geography is the destination node it names. Both halves of that
+  # node matter here and they are deliberately taken from ONE real roster path:
+  # `path` is what decides the page is Connecticut's, `slug` is what resolves it
+  # in the foliage dataset. Building them separately would let a test pass with
+  # a slug its path does not lead to — which is precisely the class of bug the
+  # old `state_slug: "connecticut"` guard existed to catch.
+  defp node_at(path) do
+    %Ethos.Destinations.Destination{path: path, slug: path |> String.split("/") |> List.last()}
+  end
+
+  @avon "united-states/connecticut/hartford-county/avon"
+
   defp ct_guide(attrs \\ %{}) do
     Map.merge(
       %{
         __struct__: Ethos.Guides.Guide,
-        state_slug: "connecticut",
-        destination_slug: "avon",
-        county: "Hartford County",
+        destination_node: node_at(@avon),
         # Arbitrary default — for_page/2 does not gate on tier. town-page is
         # used because it is what real Connecticut town guides mostly are.
         tier: "town-page",
@@ -62,7 +72,11 @@ defmodule EthosWeb.HouseAdTest do
     end
 
     test "returns nil when an affiliate widget renders" do
-      ny = %{ct_guide() | state_slug: "new-york", county: "Brooklyn", destination_slug: "dumbo"}
+      ny = %{
+        ct_guide()
+        | destination_node: node_at("united-states/new-york/new-york-city/brooklyn")
+      }
+
       assert HouseAd.for_page(%{guide: ny, page_canonical: "http://x/g/dumbo"}) == nil
     end
 
@@ -86,12 +100,13 @@ defmodule EthosWeb.HouseAdTest do
       # Production carries /g/greenwich-london-guide and /g/enfield-london-guide,
       # both London boroughs whose slug matches a Connecticut town. Matching on
       # the slug alone would put "Connecticut Foliage Forecast — Greenwich,
-      # estimated peak Nov 4-10" on a page about London.
+      # estimated peak Nov 4-10" on a page about London. The London Greenwich
+      # node has slug "greenwich" too — that is the point of the fixture — and
+      # only its PATH says it is not Connecticut's.
       guide = %{
         __struct__: Ethos.Guides.Guide,
-        state_slug: "england",
-        destination_slug: "greenwich",
-        county: nil,
+        destination_node:
+          node_at("united-kingdom/england/london/royal-borough-of-greenwich/greenwich"),
         photos: [photo()]
       }
 
@@ -110,14 +125,15 @@ defmodule EthosWeb.HouseAdTest do
       assert town.name == "Avon"
     end
 
-    test "uses a place's town_slug, not destination_slug" do
-      # Place has no destination_slug at all; reading it would return nil and
-      # silently fall through to the pool.
+    test "a place reaches its town through its destination node, like a guide" do
+      # These were two different fields before the tree — a Guide carried
+      # `destination_slug`, a Place carried `town_slug` — and each needed its
+      # own clause. They are one field now, and this pins that the place clause
+      # still exists: without it a Connecticut place page falls through to the
+      # generic pool and loses its own photograph.
       place = %{
         __struct__: Ethos.Places.Place,
-        state_slug: "connecticut",
-        town_slug: "avon",
-        county: "Hartford County",
+        destination_node: node_at(@avon),
         photos: [photo(%{"title" => "A place photo"})]
       }
 
@@ -318,14 +334,14 @@ defmodule EthosWeb.HouseAdTest do
       # real foliage-dataset town) hits HouseAd.for_page/1's contextual
       # branch year-round, in or out of season, needing no pool at all. So
       # this test fails unconditionally if the layout line is removed.
+      Ethos.SeedDataHelpers.seed_destination_paths!([@avon])
+
       place =
         Ethos.Places.upsert_place!(%{
           slug: "avon-house-ad-test-place",
           name: "Avon Test Place",
           kind: "museum",
-          town: "Avon",
-          state: "Connecticut",
-          county: "Hartford County",
+          destination_id: Ethos.Destinations.get_by_path(@avon).id,
           summary: "A place in Avon, Connecticut.",
           photos: [
             %{

@@ -3,6 +3,7 @@ defmodule EthosWeb.ConnectedPagesTest do
 
   import Ethos.GuidesFixtures
   alias Ethos.{Links, Places}
+  alias Ethos.Adjacency.LinkBuilder
 
   test "guide and place pages render grouped connected pages", %{conn: conn} do
     g = published_guide_fixture(%{title: "Woodbury Guide", destination: "Woodbury, Connecticut"})
@@ -12,9 +13,6 @@ defmodule EthosWeb.ConnectedPagesTest do
         slug: "glebe-house-x",
         name: "Glebe House X",
         kind: "museum",
-        town: "Woodbury",
-        state: "Connecticut",
-        county: "Litchfield County",
         summary: "x"
       })
 
@@ -36,6 +34,44 @@ defmodule EthosWeb.ConnectedPagesTest do
     assert html =~ "Woodbury Guide"
   end
 
+  test "an adjacency neighbour is listed once, not twice", %{conn: conn} do
+    # Avon and Canton border each other in priv/adjacency.json. Links_for/2
+    # unions outgoing and incoming edges, so if LinkBuilder ever wrote both
+    # directions of the same border, Canton's title would appear twice on
+    # Avon's page.
+    # Filed on their roster nodes: the builder finds a town's guide through its
+    # `destination_node`, so a guide slugged like a town but filed on nothing is
+    # invisible to it.
+    avon =
+      published_guide_fixture(%{
+        title: "Avon",
+        destination: "Avon, Connecticut",
+        destination_path: "united-states/connecticut/hartford-county/avon"
+      })
+      |> Ecto.Changeset.change(slug: "avon-ct-travel-guide")
+      |> Ethos.Repo.update!()
+
+    _canton =
+      published_guide_fixture(%{
+        title: "Canton",
+        destination: "Canton, Connecticut",
+        destination_path: "united-states/connecticut/hartford-county/canton"
+      })
+      |> Ecto.Changeset.change(slug: "canton-ct-travel-guide")
+      |> Ethos.Repo.update!()
+
+    assert :ok = LinkBuilder.build!()
+
+    html = conn |> get(~p"/g/#{avon.slug}") |> html_response(200)
+
+    # `subtitle` is the guide's destination ("Canton, Connecticut"), so a bare
+    # count of "Canton" would be 2 even for a single correct listing. The
+    # link's href is what the duplicate-edge bug would actually double, so
+    # that is what "listed once, not twice" is checked against.
+    assert html =~ "Canton"
+    assert length(:binary.matches(html, "canton-ct-travel-guide")) == 1
+  end
+
   test "section absent when no links", %{conn: conn} do
     g = published_guide_fixture(%{title: "Lonely"})
     html = conn |> get(~p"/g/#{g.slug}") |> html_response(200)
@@ -50,9 +86,6 @@ defmodule EthosWeb.ConnectedPagesTest do
       slug: "nearby-place",
       name: "Nearby Place",
       kind: "museum",
-      town: "TestTown",
-      state: "TestState",
-      county: "TestCounty",
       summary: "nearby"
     })
 
@@ -60,9 +93,6 @@ defmodule EthosWeb.ConnectedPagesTest do
       slug: "shared-place",
       name: "Shared Place",
       kind: "restaurant",
-      town: "TestTown",
-      state: "TestState",
-      county: "TestCounty",
       summary: "shared"
     })
 
@@ -70,9 +100,6 @@ defmodule EthosWeb.ConnectedPagesTest do
       slug: "region-place",
       name: "Region Place",
       kind: "historic-site",
-      town: "TestTown",
-      state: "TestState",
-      county: "TestCounty",
       summary: "region"
     })
 

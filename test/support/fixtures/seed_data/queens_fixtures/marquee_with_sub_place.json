@@ -3,16 +3,15 @@
     "slug": "fixture-marquee-with-sub-place-queens-guide",
     "title": "Fixture: Marquee With Sub-Place",
     "destination": "Fixture, New York",
-    "state": "New York",
-    "county": "Queens",
+    "destination_path": "united-states/new-york/new-york-city/queens/fixture",
     "intro": "A fixture guide holding a marquee institution and one of its separately notable structures, which is legitimate content in a single guide.",
     "sections": [],
     "faq": [],
     "photos": []
   },
   "places": [
-    {"slug": "forest-park", "name": "Forest Park", "kind": "park", "town": "Fixture", "state": "New York", "county": "Queens", "summary": "A fixture place.", "status": "open", "photos": []},
-    {"slug": "forest-park-carousel", "name": "Forest Park Carousel", "kind": "attraction", "town": "Fixture", "state": "New York", "county": "Queens", "summary": "A fixture place.", "status": "open", "photos": []}
+    {"slug": "forest-park", "name": "Forest Park", "kind": "park", "destination_path": "united-states/new-york/new-york-city/queens/fixture", "summary": "A fixture place.", "status": "open", "photos": []},
+    {"slug": "forest-park-carousel", "name": "Forest Park Carousel", "kind": "attraction", "destination_path": "united-states/new-york/new-york-city/queens/fixture", "summary": "A fixture place.", "status": "open", "photos": []}
   ],
   "entries": []
 }

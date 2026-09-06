@@ -16,7 +16,10 @@ defmodule Ethos.Seeds.PncParkPlaces do
 
   What the verification changed, and what is therefore absent here:
 
-    * **The county is cited to a source that carries it.** The finder attached
+    * **The county fact is cited to a source that carries it.** Allegheny County
+      is not modelled — these records hang from
+      `united-states/pennsylvania/pittsburgh` — but the research still had to
+      establish it. The finder attached
       "Allegheny County" to the Pittsburgh Pirates article; a targeted re-fetch
       found no county mention anywhere in it, and the verdict is refuted. The
       correction re-cites the fact to the PNC Park article, whose infobox names
@@ -55,7 +58,7 @@ defmodule Ethos.Seeds.PncParkPlaces do
 
   alias Ethos.Places
 
-  @pittsburgh %{town: "Pittsburgh", state: "Pennsylvania", county: "Allegheny County"}
+  @pittsburgh %{destination_path: "united-states/pennsylvania/pittsburgh"}
 
   def upsert_all! do
     Enum.map(places(), &Places.upsert_place!/1)

@@ -15,10 +15,11 @@ defmodule Ethos.Social.BadgeContinuityTest do
   test "a user with five Waterbury reactions holds Brass City Explorer" do
     user = user_fixture()
 
-    # `town`, not `town_slug` — the changeset derives the slug and silently
-    # ignores a slug key.
+    # The fixture files places on the Waterbury node by default, which is what
+    # `explorer-waterbury` counts: the badge is keyed on a `destination_id`
+    # now, not on a derived town slug.
     for _ <- 1..5 do
-      place = place_fixture(%{status: "open", town: "Waterbury"})
+      place = place_fixture(%{status: "open"})
       Ethos.Social.react(user, place, "up")
     end
 

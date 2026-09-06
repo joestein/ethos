@@ -8,17 +8,19 @@
   <EthosWeb.HouseAd.house_ad ad={EthosWeb.HouseAd.for_page(assigns)} />
 </div>
 <div class="mx-auto max-w-3xl px-4 pb-20 text-center">
-  <h1 class="text-4xl sm:text-5xl font-bold">Turn your trip into a guide worth sharing</h1>
+  <h1 class="text-4xl sm:text-5xl font-bold">
+    Places worth the trip, and what people made of them
+  </h1>
   <p class="mt-4 text-lg text-zinc-600">
-    Paste your notes — or the thread of recs your friends sent you — and Ethos turns it into
-    a beautiful guide with real verdicts. Share one link instead of typing it all out again.
+    Guides to towns, neighbourhoods and the places inside them — written up properly, then
+    rated and argued over by the people who went.
   </p>
   <div class="mt-8 flex justify-center gap-4">
     <.link
-      navigate={~p"/guides/new"}
+      navigate={~p"/destinations"}
       class="rounded-md bg-zinc-900 px-6 py-3 text-white font-medium"
     >
-      Make your guide
+      Browse destinations
     </.link>
     <.link
       :if={@featured}
@@ -66,8 +68,13 @@
     </div>
     <ul class="mt-4 grid gap-3 sm:grid-cols-2">
       <li :for={hub <- @hubs} class="rounded-xl border p-4">
-        <.link navigate={~p"/destinations/#{hub.slug}"} class="font-semibold hover:underline">
-          {hub.state}
+        <%!-- node_path/1, never ~p"/destinations/\#{hub.path}" — the sigil
+              percent-encodes the slash and a multi-segment path 404s. --%>
+        <.link
+          navigate={EthosWeb.DestinationHTML.node_path(hub.path)}
+          class="font-semibold hover:underline"
+        >
+          {hub.name}
         </.link>
         <p class="text-sm text-zinc-500">{hub.count} {hub_noun(hub.slug)}</p>
       </li>
@@ -79,6 +86,21 @@
     <ul class="mt-4 grid gap-3 sm:grid-cols-2">
       <li :for={c <- @collections} class="rounded-xl border p-4">
         <.link navigate={~p"/c/#{c.slug}"} class="font-semibold hover:underline">{c.title}</.link>
+      </li>
+    </ul>
+  </section>
+
+  <section :if={@foliage_routes != []} class="mt-12 text-left">
+    <div class="flex items-center justify-between">
+      <h2 class="text-sm uppercase tracking-wide text-zinc-400">Foliage driving routes</h2>
+      <.link navigate={~p"/foliage"} class="text-sm underline">The forecast →</.link>
+    </div>
+    <ul class="mt-4 grid gap-3 sm:grid-cols-2">
+      <li :for={route <- @foliage_routes} class="rounded-xl border p-4">
+        <.link navigate={~p"/foliage/#{route.slug}"} class="font-semibold hover:underline">
+          {route.name}
+        </.link>
+        <p class="text-sm text-zinc-500">{length(route.stops)} towns</p>
       </li>
     </ul>
   </section>

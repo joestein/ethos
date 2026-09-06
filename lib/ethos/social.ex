@@ -193,11 +193,17 @@ defmodule Ethos.Social do
     user |> reacted_places_query() |> Repo.aggregate(:count, :id)
   end
 
-  @doc "How many places in one town this user has reacted to."
-  def reacted_place_count_by_town(%User{} = user, town_slug) do
+  @doc """
+  How many places attached to one destination node this user has reacted to.
+
+  Keyed on `destination_id` rather than the old `town_slug`: town slugs were
+  never unique across regions (Washington, Arlington, Berlin), so the slug form
+  silently pooled two towns of the same name into one badge. A node id cannot.
+  """
+  def reacted_place_count_by_node(%User{} = user, destination_id) do
     user
     |> reacted_places_query()
-    |> where([_r, p], p.town_slug == ^town_slug)
+    |> where([_r, p], p.destination_id == ^destination_id)
     |> Repo.aggregate(:count, :id)
   end
 
@@ -209,11 +215,21 @@ defmodule Ethos.Social do
     |> Repo.aggregate(:count, :id)
   end
 
-  @doc "How many places in one county this user has reacted to."
-  def reacted_place_count_in_county(%User{} = user, state_slug, county_slug) do
+  @doc """
+  How many places across a SET of destination nodes this user has reacted to.
+
+  The multi-node counterpart to `reacted_place_count_by_node/2`, for a caller
+  whose subject spans more than one node. A county-tier node is an *ancestor*
+  of the town nodes places actually attach to, so "every open place in the
+  county" is every place under every node in its subtree — the caller expands
+  that subtree with `Destinations.descendant_ids/1` and passes the ids here.
+  The old `(state_slug, county_slug)` pair needed no such expansion because a
+  place carried its county directly; the tree has no such shortcut.
+  """
+  def reacted_place_count_in_nodes(%User{} = user, node_ids) do
     user
     |> reacted_places_query()
-    |> where([_r, p], p.state_slug == ^state_slug and p.county_slug == ^county_slug)
+    |> where([_r, p], p.destination_id in ^node_ids)
     |> Repo.aggregate(:count, :id)
   end
 

@@ -2,14 +2,13 @@ defmodule Ethos.Seeds.FenwayParkGuide do
   @moduledoc """
   Seeds the Fenway Park guide. Idempotent by slug.
 
-  Carries `state: "Massachusetts"` and `county: "Suffolk County"`, so it lists
-  on both the Massachusetts destination page and the Suffolk County one. The
-  county comes from the verdict rather than from the artifact's `county`
-  field: county government in Suffolk County was abolished in 1999 and the
-  county now functions as an administrative and statistical subdivision, but
-  the confirmed verdict records that the jurisdiction name is still the one
-  Massachusetts and federal sources use for Boston addresses, and it is the
-  field that decides the /destinations/massachusetts/suffolk-county hub URL.
+  Names the destination node `united-states/massachusetts/boston`, so it lists
+  on the Massachusetts destination page and on Boston's. The ballparks model no
+  county tier, and Suffolk County is a good illustration of why: county
+  government there was abolished in 1999 and the county now functions as an
+  administrative and statistical subdivision. The confirmed verdict records that
+  the jurisdiction name is still the one Massachusetts and federal sources use
+  for Boston addresses, so it is published as prose rather than as geography.
 
   Every clause here restates the text of a `confirmed` verdict from the
   2026-08-30 Boston Red Sox research artifact, or the text a `refuted`
@@ -46,8 +45,7 @@ defmodule Ethos.Seeds.FenwayParkGuide do
       slug: "fenway-park-guide",
       title: "Fenway Park: The Ballpark and the Streets Around It",
       destination: "Boston, Massachusetts",
-      state: "Massachusetts",
-      county: "Suffolk County",
+      destination_path: "united-states/massachusetts/boston",
       intro: """
       Fenway Park stands at 4 Jersey Street in Boston, in Suffolk County. It
       opened on April 20, 1912, and the Boston Red Sox have played there

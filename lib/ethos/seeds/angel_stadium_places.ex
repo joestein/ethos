@@ -43,15 +43,16 @@ defmodule Ethos.Seeds.AngelStadiumPlaces do
   unchanged name rather than a later renaming. Which form is currently
   preferred for formal use is a `could_not_establish`, and the record says so.
 
-  The county on every record is `"Orange County"`, from a confirmed verdict
-  citing the encyclopedia article on Anaheim, which states the county by name:
-  *"Anaheim, California is a city in northern Orange County, California, United
-  States"*.
+  Every record hangs from the node `united-states/california/anaheim`. Orange
+  County is not modelled — the ballparks carry no county tier — but the research
+  confirmed it: a verdict citing the encyclopedia article on Anaheim states it by
+  name, *"Anaheim, California is a city in northern Orange County, California,
+  United States"*.
   """
 
   alias Ethos.Places
 
-  @anaheim %{town: "Anaheim", state: "California", county: "Orange County"}
+  @anaheim %{destination_path: "united-states/california/anaheim"}
 
   def upsert_all! do
     Enum.map(places(), &Places.upsert_place!/1)

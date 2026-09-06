@@ -305,6 +305,12 @@ defmodule Ethos.Seeds.BrooklynSeedDataTest do
     # unknown target, aborting the whole link pass.
     user = user_fixture()
 
+    # The loaders resolve every seed file's destination_path against the
+    # destinations table and raise on a miss, so the roster is a precondition
+    # of any corpus load — Ethos.Release seeds it before every corpus for the
+    # same reason.
+    Ethos.Seeds.DestinationTree.upsert_all!()
+
     manhattan = SeedDataHelpers.seed_files("manhattan")
     Enum.each(manhattan, &DataGuide.upsert_places!/1)
     Enum.each(manhattan, &DataGuide.upsert_guide!(&1, user.email))
@@ -318,8 +324,9 @@ defmodule Ethos.Seeds.BrooklynSeedDataTest do
     end
 
     brooklyn_guides =
-      Ethos.Guides.list_published_guides()
-      |> Enum.filter(&(&1.county == "Brooklyn"))
+      Ethos.SeedDataHelpers.published_guides_under(
+        "united-states/new-york/new-york-city/brooklyn"
+      )
 
     assert length(brooklyn_guides) == length(files)
   end

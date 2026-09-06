@@ -10,9 +10,7 @@ defmodule EthosWeb.JsonLdParityTest do
     slug: "palace-theater-waterbury",
     name: "Palace Theater",
     kind: "theater",
-    town: "Waterbury",
-    state: "Connecticut",
-    county: "New Haven County",
+    destination_path: "united-states/connecticut/new-haven-county/waterbury",
     summary: "A 1922 Thomas Lamb movie palace.",
     history: "Designed by **Thomas Lamb**.",
     address: "100 E. Main St., Waterbury, CT 06702",
@@ -87,6 +85,34 @@ defmodule EthosWeb.JsonLdParityTest do
   # Builds a fixture for every page type that emits a breadcrumb and returns the
   # path each is served at alongside the exact trail it must emit.
   defp parity_cases do
+    # Destinations FIRST, before any place or guide row.
+    #
+    # This is a lock-order rule as well as a data dependency:
+    # `palace-theater-waterbury` is also a slug
+    # `Ethos.Seeds.ConnecticutPlaces` seeds, and that module's tests now insert
+    # destination rows before their places. Inserting the place here first left
+    # two async transactions taking the `places` slug lock and the `destinations`
+    # path lock in opposite orders, which Postgres resolves by killing one of
+    # them — an intermittent `deadlock_detected` in whichever test lost.
+    #
+    # Every test that writes both tables writes destinations first, for the same
+    # reason `Ethos.Release` seeds the roster before every corpus.
+    #
+    # An orientation page (tier "town-page") plus the Connecticut state and
+    # Windham County hubs it populates.
+    # Waterbury goes in through the SAME call, not a second one: two passes are
+    # two lock sequences, and the second takes its rows after rows the first
+    # already holds however they sort globally.
+    #
+    # `italy/lazio/rome` goes in through the same call for the same reason: the
+    # two nodeless "Rome, Italy" guides below resolve their trail through that
+    # node's `legacy_paths`, and a second seeding pass would be a second lock
+    # sequence.
+    Ethos.SeedDataHelpers.seed_fixture_destinations!([
+      "united-states/connecticut/new-haven-county/waterbury",
+      "italy/lazio/rome"
+    ])
+
     Places.upsert_place!(@place_attrs)
 
     guide = published_guide_fixture(%{title: "Roman Holiday", destination: "Rome, Italy"})
@@ -94,8 +120,6 @@ defmodule EthosWeb.JsonLdParityTest do
     photo_guide = published_guide_fixture(%{title: "Three Days", destination: "Rome, Italy"})
     {:ok, photo_guide} = Guides.update_guide_photos(photo_guide, @photos)
 
-    # An orientation page (tier "town-page") plus the Connecticut state and
-    # Windham County hubs it populates.
     town_page =
       Ethos.Seeds.DataGuide.upsert_from_file!(
         Path.expand("../../support/fixtures/seed_data/townville.json", __DIR__),
@@ -116,49 +140,74 @@ defmodule EthosWeb.JsonLdParityTest do
     [
       %{
         path: ~p"/p/palace-theater-waterbury",
-        names: ["Ethos", "Destinations", "Connecticut", "New Haven County", "Palace Theater"],
+        names: [
+          "Ethos",
+          "Destinations",
+          "United States",
+          "Connecticut",
+          "New Haven County",
+          "Waterbury",
+          "Palace Theater"
+        ],
         urls: [
           url(~p"/"),
           url(~p"/destinations"),
-          url(~p"/destinations/connecticut"),
-          url(~p"/destinations/connecticut/new-haven-county"),
+          url(~p"/destinations/united-states"),
+          url(~p"/destinations/united-states/connecticut"),
+          url(~p"/destinations/united-states/connecticut/new-haven-county"),
+          url(~p"/destinations/united-states/connecticut/new-haven-county/waterbury"),
           url(~p"/p/palace-theater-waterbury")
         ]
       },
+      # A guide on no node — the web-authored shape. Its free-text destination
+      # slugs to `rome`, which is a legacy path of `italy/lazio/rome`, so the
+      # trail is that node's ancestry at CANONICAL urls. It used to publish
+      # `/destinations/rome` here, a redirect source, as a breadcrumb item.
       %{
         path: ~p"/g/#{guide.slug}",
-        names: ["Ethos", "Destinations", "Rome", "Roman Holiday"],
+        names: ["Ethos", "Destinations", "Italy", "Lazio", "Rome", "Roman Holiday"],
         urls: [
           url(~p"/"),
           url(~p"/destinations"),
-          url(~p"/destinations/rome"),
+          url(~p"/destinations/italy"),
+          url(~p"/destinations/italy/lazio"),
+          url(~p"/destinations/italy/lazio/rome"),
           url(~p"/g/#{guide.slug}")
         ]
       },
+      # A seeded guide is filed on a node, so its trail is that node's ancestry
+      # — the same walk the place row above and the hub rows below make. Four
+      # crumbs deep where the state/county pair could only ever emit two.
       %{
         path: ~p"/g/#{town_page.slug}",
         names: [
           "Ethos",
           "Destinations",
+          "United States",
           "Connecticut",
           "Windham County",
+          "Townville",
           "Townville, Connecticut: A Fixture Town"
         ],
         urls: [
           url(~p"/"),
           url(~p"/destinations"),
-          url(~p"/destinations/connecticut"),
-          url(~p"/destinations/connecticut/windham-county"),
+          url(~p"/destinations/united-states"),
+          url(~p"/destinations/united-states/connecticut"),
+          url(~p"/destinations/united-states/connecticut/windham-county"),
+          url(~p"/destinations/united-states/connecticut/windham-county/townville"),
           url(~p"/g/townville-ct-travel-guide")
         ]
       },
       %{
         path: ~p"/g/#{photo_guide.slug}/photos",
-        names: ["Ethos", "Destinations", "Rome", "Three Days", "Photos"],
+        names: ["Ethos", "Destinations", "Italy", "Lazio", "Rome", "Three Days", "Photos"],
         urls: [
           url(~p"/"),
           url(~p"/destinations"),
-          url(~p"/destinations/rome"),
+          url(~p"/destinations/italy"),
+          url(~p"/destinations/italy/lazio"),
+          url(~p"/destinations/italy/lazio/rome"),
           url(~p"/g/#{photo_guide.slug}"),
           url(~p"/g/#{photo_guide.slug}/photos")
         ]
@@ -168,32 +217,64 @@ defmodule EthosWeb.JsonLdParityTest do
         names: ["Ethos", "Destinations"],
         urls: [url(~p"/"), url(~p"/destinations")]
       },
+      # THE THREE HUB ROWS BELOW WERE PINNED TO A STUB. TASK 10 UNPINNED THEM.
+      #
+      # Task 8 served every hub from the tree but left
+      # `DestinationController.node_breadcrumb/2` stubbed to the index's own two
+      # crumbs, and downgraded these three rows to record what the stub emitted
+      # rather than what a hub should emit. That was the only place in this
+      # project where assertion strength was deliberately reduced, and it was
+      # reduced on the exact thing Task 10 implements.
+      #
+      # They now assert the COMPLETE trail for each node: the two root crumbs,
+      # then every ancestor root-first, then the node itself — at three
+      # different depths, so a trail that drops an ancestor, reverses the order
+      # or stops short of the node fails here. Each URL is the node's own path,
+      # not the legacy single-slug form that 301s.
+      #
+      # The `/g/` and `/c/` rows for `Roman Holiday` are the one remaining
+      # non-tree shape: a guide authored through the web UI names no node, so
+      # its single crumb comes from its `destination_slug`. Every row that names
+      # a node — the place above, the town page, the hubs below — walks the
+      # tree.
       %{
-        path: ~p"/destinations/connecticut",
-        names: ["Ethos", "Destinations", "Connecticut"],
+        path: ~p"/destinations/united-states/connecticut",
+        names: ["Ethos", "Destinations", "United States", "Connecticut"],
         urls: [
           url(~p"/"),
           url(~p"/destinations"),
-          url(~p"/destinations/connecticut")
+          url(~p"/destinations/united-states"),
+          url(~p"/destinations/united-states/connecticut")
         ]
       },
       %{
-        path: ~p"/destinations/connecticut/windham-county",
-        names: ["Ethos", "Destinations", "Connecticut", "Windham County"],
+        path: ~p"/destinations/united-states/connecticut/windham-county",
+        names: ["Ethos", "Destinations", "United States", "Connecticut", "Windham County"],
         urls: [
           url(~p"/"),
           url(~p"/destinations"),
-          url(~p"/destinations/connecticut"),
-          url(~p"/destinations/connecticut/windham-county")
+          url(~p"/destinations/united-states"),
+          url(~p"/destinations/united-states/connecticut"),
+          url(~p"/destinations/united-states/connecticut/windham-county")
         ]
       },
       %{
-        path: ~p"/destinations/rome",
-        names: ["Ethos", "Destinations", "Rome"],
+        path: ~p"/destinations/united-states/connecticut/windham-county/townville",
+        names: [
+          "Ethos",
+          "Destinations",
+          "United States",
+          "Connecticut",
+          "Windham County",
+          "Townville"
+        ],
         urls: [
           url(~p"/"),
           url(~p"/destinations"),
-          url(~p"/destinations/rome")
+          url(~p"/destinations/united-states"),
+          url(~p"/destinations/united-states/connecticut"),
+          url(~p"/destinations/united-states/connecticut/windham-county"),
+          url(~p"/destinations/united-states/connecticut/windham-county/townville")
         ]
       },
       %{

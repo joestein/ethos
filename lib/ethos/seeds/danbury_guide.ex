@@ -8,8 +8,7 @@ defmodule Ethos.Seeds.DanburyGuide do
       slug: "danbury-ct-travel-guide",
       title: "Danbury, Connecticut: Hat City History, Rail Heritage, and Where to Eat",
       destination: "Danbury, Connecticut",
-      state: "Connecticut",
-      county: "Fairfield County",
+      destination_path: "united-states/connecticut/fairfield-county/danbury",
       intro: """
       Danbury made America's hats. From Zadoc Benedict's first felt hats in the
       late 1700s to roughly 4.5 million hats a year by 1880, "Hat City" crowned

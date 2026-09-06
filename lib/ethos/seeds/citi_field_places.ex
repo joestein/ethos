@@ -11,13 +11,14 @@ defmodule Ethos.Seeds.CitiFieldPlaces do
   verdict's correction supplies. `docs/ballparks/citi-field.md` quotes each
   published sentence against the verdict it rests on.
 
-  **Two towns, not one.** The ballpark and the park monuments carry a Flushing
-  address; the Hall of Science, the zoo and the theatre carry a Corona one.
-  Both are in Queens, and the town field follows the address each source
-  gives rather than being flattened to the borough. The county is `"Queens"`,
-  the borough-as-county form this corpus uses for New York City — a confirmed
-  verdict records that Queens is coextensive with Queens County, and that fact
-  is published in the guide rather than in the field.
+  **Two nodes, not one.** The ballpark and the park monuments carry a Flushing
+  address and hang from
+  `united-states/new-york/new-york-city/queens/flushing`; the Hall of Science,
+  the zoo and the theatre carry a Corona one and hang from
+  `.../queens/corona`. Both neighbourhoods are in Queens, and each record
+  follows the address its source gives rather than being flattened to the
+  borough. A confirmed verdict records that Queens is coextensive with Queens
+  County; that fact is published in the guide rather than modelled as a tier.
 
   What the verification changed, and what is therefore absent here:
 
@@ -55,8 +56,8 @@ defmodule Ethos.Seeds.CitiFieldPlaces do
 
   alias Ethos.Places
 
-  @flushing %{town: "Flushing", state: "New York", county: "Queens"}
-  @corona %{town: "Corona", state: "New York", county: "Queens"}
+  @flushing %{destination_path: "united-states/new-york/new-york-city/queens/flushing"}
+  @corona %{destination_path: "united-states/new-york/new-york-city/queens/corona"}
 
   def upsert_all! do
     Enum.map(places(), &Places.upsert_place!/1)

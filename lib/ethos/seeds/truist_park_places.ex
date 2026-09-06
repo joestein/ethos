@@ -46,14 +46,15 @@ defmodule Ethos.Seeds.TruistParkPlaces do
       States**, which the verifier could not verify and which would be an
       unsourced superlative besides.
 
-  The town on every record is `"Cumberland"` and the county `"Cobb County"`.
-  See `Ethos.Seeds.TruistParkGuide` for why the town is not "Atlanta", which is
-  the postal city on the ballpark's own official address.
+  Every record hangs from the node `united-states/georgia/cumberland`. Cobb
+  County is not modelled. See `Ethos.Seeds.TruistParkGuide` for why the city node
+  is not `atlanta`, which is the postal city on the ballpark's own official
+  address.
   """
 
   alias Ethos.Places
 
-  @cumberland %{town: "Cumberland", state: "Georgia", county: "Cobb County"}
+  @cumberland %{destination_path: "united-states/georgia/cumberland"}
 
   @battery "A tenant of The Battery Atlanta, the mixed-use development around Truist Park."
 

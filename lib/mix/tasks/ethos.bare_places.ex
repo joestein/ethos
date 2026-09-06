@@ -120,7 +120,7 @@ defmodule Mix.Tasks.Ethos.BarePlaces do
       "slug" => place["slug"],
       "name" => place["name"],
       "kind" => place["kind"],
-      "town" => place["town"],
+      "town" => node_leaf(place["destination_path"]),
       "region" => Path.basename(Path.dirname(file)),
       "seed_file" => file
     }
@@ -131,11 +131,17 @@ defmodule Mix.Tasks.Ethos.BarePlaces do
       "slug" => place.slug,
       "name" => place.name,
       "kind" => place.kind,
-      "town" => place.town,
+      "town" => node_leaf(place[:destination_path]),
       "region" => owner.region,
       "seed_file" => owner.seed_file
     }
   end
+
+  # The roster's "town" is a human label for a wave dispatch, and a place's town
+  # is now the last segment of the destination node it names. Read off the path
+  # rather than the roster table, because this task runs without a repo.
+  defp node_leaf(nil), do: nil
+  defp node_leaf(path) when is_binary(path), do: path |> String.split("/") |> List.last()
 
   defp bare?(summary, photos, history),
     do: thin?(summary) and blank?(photos) and blank?(history)

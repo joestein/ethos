@@ -64,6 +64,7 @@ defmodule EthosWeb.Affiliate do
   use Phoenix.Component
 
   alias Ethos.Affiliates
+  alias Ethos.Destinations.Destination
 
   @doc """
   The page's affiliate locale, or `nil`.
@@ -80,30 +81,42 @@ defmodule EthosWeb.Affiliate do
         nil
 
       guide = assigns[:guide] ->
-        Affiliates.locale_for(guide.state_slug, guide.county)
+        Affiliates.locale_for(destination_path(guide))
 
       place = assigns[:place] ->
-        Affiliates.locale_for(place.state_slug, place.county)
+        Affiliates.locale_for(destination_path(place))
 
       collection = assigns[:collection] ->
         collection.items
-        |> Enum.map(& &1.guide)
+        |> Enum.map(&destination_path(&1.guide))
         |> Affiliates.unanimous_locale()
 
-      # Every destination hub shape — town, state, county — assigns :guides.
+      # A destination hub IS a node, so it resolves from its own path rather
+      # than by inference from the rows it happens to list.
       #
-      # The county hub splits its rows in two (`destination_controller.ex`:
-      # `guides` is tier "guide", `town_pages` is the rest), so a borough hub
-      # seeded entirely with town-pages has an EMPTY :guides list and all its
-      # geography in :town_pages. Resolving over :guides alone would return nil
-      # for a page full of New York content. Both lists describe the same hub,
-      # so both feed the vote.
+      # This clause is above :guides deliberately, and its absence was a live
+      # silent-200. A hub used to resolve only through `unanimous_locale/1` over
+      # `assigns[:guides]`, and `unanimous_locale([])` is nil — while the corpus
+      # files ZERO guides directly on `united-states/new-york/new-york-city`, on
+      # any of its four boroughs, or on `italy/lazio`. Those nodes hold child
+      # nodes. So the campaign's own headline hub, the most valuable page in it,
+      # served 200 with no unit and nothing failed: every hub test in the suite
+      # filed a guide on the node it then requested, which is the one shape that
+      # cannot expose this.
       #
-      # :shadowed is deliberately NOT consulted: those are guides from other
-      # states that merely share a destination slug, and they are not what the
-      # page is about.
+      # It is also simply the truer statement. A hub's subject is its node, not
+      # the sample of rows filed at that exact depth, and the node's path is
+      # what the registry is keyed on.
+      node = assigns[:node] ->
+        Affiliates.locale_for(node.path)
+
+      # Any other page assigning a list of guides. A hub no longer reaches here
+      # — the clause above claims it — so this is the author-dashboard shape and
+      # anything future that lists guides without being a node.
       is_list(assigns[:guides]) ->
-        Affiliates.unanimous_locale(assigns[:guides] ++ hub_town_pages(assigns))
+        assigns[:guides]
+        |> Enum.map(&destination_path/1)
+        |> Affiliates.unanimous_locale()
 
       true ->
         nil
@@ -112,12 +125,23 @@ defmodule EthosWeb.Affiliate do
 
   def locale_from_assigns(_), do: nil
 
-  defp hub_town_pages(assigns) do
-    case assigns[:town_pages] do
-      rows when is_list(rows) -> rows
-      _ -> []
-    end
-  end
+  # A row's place in the destination tree: the node's path when the association
+  # is loaded, nil when the row genuinely has no node (a guide authored through
+  # the web UI).
+  #
+  # THERE IS DELIBERATELY NO CLAUSE FOR `%Ecto.Association.NotLoaded{}`, and no
+  # catch-all. This function runs over whole lists on hub and collection pages,
+  # so resolving an unloaded node here would be one query per row per request;
+  # the contexts that feed public pages preload `:destination_node` instead
+  # (`Guides.get_published_guide_by_slug!/1`,
+  # `Guides.list_published_guides_for_node/1`, `Places.get_place_by_slug/1`,
+  # `Collections.get_published_by_slug/1`). A page that forgets is meant to
+  # raise a FunctionClauseError out of the layout, in the controller test that
+  # covers it, rather than quietly resolve to `nil` — a silently missing
+  # affiliate unit is the exact failure this whole module is shaped around, and
+  # it renders as a correct-looking page with a 200.
+  defp destination_path(%{destination_node: %Destination{path: path}}), do: path
+  defp destination_path(%{destination_node: nil}), do: nil
 
   # The networks the components know how to render. A locale naming anything
   # else — a typo, or a network added to the registry before its component
@@ -129,13 +153,25 @@ defmodule EthosWeb.Affiliate do
 
   The ONE predicate behind all three decisions: `affiliate_head/1`'s script,
   `affiliate_unit/1`'s widget, and the guide show page's fallback amber CTA and
-  disclosure, which render precisely when this returns `false`. Splitting them
-  is how a locale with an unrecognised `:network` came to render *neither* the
-  widget nor the fallback — a page in that geography with no affiliate unit at
-  all, and a green suite.
+  disclosure, which render (given `enabled?/0` also says yes — see below) when
+  this returns `false`. Splitting them is how a locale with an unrecognised
+  `:network` came to render *neither* the widget nor the fallback — a page in
+  that geography with no affiliate unit at all, and a green suite.
   """
   def renders?(locale) when is_map(locale), do: Map.get(locale, :network) in @supported_networks
   def renders?(_), do: false
+
+  @doc """
+  Whether affiliate links reach visitors at all.
+
+  Separate from `renders?/1` on purpose. `renders?/1` answers "does this
+  locale have a campaign we can show", and the guide page's fallback CTA
+  renders precisely when it says no. Overloading it as the kill switch would
+  therefore turn that sponsored CTA ON across every page without a house ad —
+  more affiliate content from a change meant to remove it. This predicate is
+  the master switch and every surface checks it independently.
+  """
+  def enabled?, do: Application.get_env(:ethos, :affiliate_links_enabled, false)
 
   @doc """
   Whether the layout's affiliate unit will render for this page's assigns.
@@ -210,7 +246,7 @@ defmodule EthosWeb.Affiliate do
   """
   def affiliate_head(assigns) do
     ~H"""
-    <meta :if={renders?(@locale)} name="gyg-partner-id" content={@locale.partner_id} />
+    <meta :if={enabled?() and renders?(@locale)} name="gyg-partner-id" content={@locale.partner_id} />
     """
   end
 
@@ -236,7 +272,10 @@ defmodule EthosWeb.Affiliate do
 
           The vertical margin flips with position: a bottom-placed unit needs
           space above it, a top-placed one needs space below. --%>
-    <div :if={render_here?(@locale, @position)} class={["px-4", wrapper_margin(@position)]}>
+    <div
+      :if={enabled?() and render_here?(@locale, @position)}
+      class={["px-4", wrapper_margin(@position)]}
+    >
       <%!-- min-h, not h: the widget's real height varies with how many activity
             cards GetYourGuide returns and how they wrap, so a fixed height
             would either clip it or leave a gap. The floor is one row of

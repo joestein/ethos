@@ -2,10 +2,10 @@ defmodule Ethos.Seeds.CoorsFieldGuide do
   @moduledoc """
   Seeds the Coors Field guide. Idempotent by slug.
 
-  ## The county field, and why it reads `"Denver"`
+  ## Denver's county, and why no node repeats the city's name
 
-  Carries `state: "Colorado"` and `county: "Denver"`, so it lists on both the
-  Colorado destination page and the Denver county one.
+  Names the destination node `united-states/colorado/denver`, so it lists on the
+  Colorado destination page and on Denver's.
 
   The confirmed verdict establishes the fact and the formal name together:
   *"Denver is a consolidated city-county named 'City and County of Denver,'
@@ -21,9 +21,9 @@ defmodule Ethos.Seeds.CoorsFieldGuide do
   County exists and the suffix disambiguates; no separate Denver County exists,
   so none is needed.
 
-  The `county` field is what derives `/destinations/colorado/denver`, and a hub
-  URL reading `city-and-county-of-denver` beside `san-francisco` and
-  `st-louis` would be the same jurisdiction class rendered two ways.
+  The node is what derives `/destinations/colorado/denver`, and a path segment
+  reading `city-and-county-of-denver` beside `san-francisco` and `st-louis`
+  would be the same jurisdiction class rendered two ways.
 
   ## Sourcing
 
@@ -59,8 +59,7 @@ defmodule Ethos.Seeds.CoorsFieldGuide do
       slug: "coors-field-guide",
       title: "Coors Field: The Ballpark and Lower Downtown Denver",
       destination: "Denver, Colorado",
-      state: "Colorado",
-      county: "Denver",
+      destination_path: "united-states/colorado/denver",
       intro: """
       Coors Field stands at 2001 Blake Street in Denver's Lower Downtown, which
       MLB's own site calls the Ballpark Neighborhood, with its main entrance at

@@ -32,12 +32,17 @@ defmodule EthosWeb.HouseAdPlacementTest do
   # pages' <title> and <h1> too, so a heading match proves nothing there.
   @ad ~s(href="/foliage" class="flex items-center)
 
+  # The pool is keyed on the guide's destination NODE, so `state: "Connecticut"`
+  # would put nothing in it: that column is gone, and a fixture passing it files
+  # the guide on no node at all. Chester is one of the twenty-five pool towns.
+  @chester "united-states/connecticut/middlesex-county/chester"
+
   setup do
     # Photos are NOT castable by create_guide/2 — Guide.changeset casts only
-    # title, destination, dates, state and county, and photos have their own
+    # title, destination, dates and destination_id, and photos have their own
     # changeset. So the guide is created first and given its photograph after.
     guide =
-      published_guide_fixture(%{destination: "Chester, Connecticut", state: "Connecticut"})
+      published_guide_fixture(%{destination: "Chester, Connecticut", destination_path: @chester})
 
     {:ok, _} =
       Ethos.Guides.update_guide_photos(guide, [
@@ -52,8 +57,17 @@ defmodule EthosWeb.HouseAdPlacementTest do
         }
       ])
 
+    # Capture and restore the exact previous pool rather than calling `load!/0`
+    # again on the way out. `load!/0` RECOMPUTES from the database, and at
+    # on_exit time this test's sandboxed Chester guide may or may not still be
+    # visible — so the recomputed pool was nondeterministic and leaked into
+    # every later test. A non-empty pool makes `HouseAd.for_page/2` return an
+    # ad on ordinary pages, which suppresses the guide page's amber CTA and
+    # broke `AffiliatePlacementTest` depending only on scheduling order.
+    # Every other house-ad test here already restores by value; this matches.
+    previous_pool = Ethos.HouseAd.pool()
     Ethos.HouseAd.load!()
-    on_exit(&Ethos.HouseAd.load!/0)
+    on_exit(fn -> :persistent_term.put({Ethos.HouseAd, :pool}, previous_pool) end)
 
     refute Ethos.HouseAd.pool() == [], "the pool is empty, so every assertion below is vacuous"
     :ok
@@ -61,12 +75,15 @@ defmodule EthosWeb.HouseAdPlacementTest do
 
   defp occurrences(html), do: html |> String.split(@ad) |> length() |> Kernel.-(1)
 
+  # Outside Connecticut so the guide controller assigns no `:foliage`, and
+  # outside New York and Lazio so no affiliate widget claims the slot — both
+  # decided by node ancestry now, which is why this files on a real node rather
+  # than naming a state.
   defp elsewhere_guide do
     published_guide_fixture(%{
       title: "Puget Sound Trip",
-      destination: "Puget Sound, Washington",
-      state: "Washington",
-      county: "Puget Sound"
+      destination: "Seattle, Washington",
+      destination_path: "united-states/washington/seattle"
     })
   end
 

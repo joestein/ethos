@@ -2,11 +2,11 @@ defmodule Ethos.Seeds.AngelStadiumGuide do
   @moduledoc """
   Seeds the Angel Stadium guide. Idempotent by slug.
 
-  Carries `state: "California"` and `county: "Orange County"`, so it lists on
-  both the California destination page and the Orange County one. The county is
-  the one a confirmed verdict states by name, cited to the encyclopedia article
-  on Anaheim; Anaheim is not an independent city, so no consolidated-city
-  rendering applies.
+  Names the destination node `united-states/california/anaheim`, so it lists on
+  the California destination page and on Anaheim's. The ballparks model no county
+  tier; Orange County is the county a confirmed verdict states by name, cited to
+  the encyclopedia article on Anaheim, and it is recorded here as a sourced fact
+  rather than carried as a field.
 
   Every clause here restates the text of a `confirmed` verdict from the
   2026-08-30 Los Angeles Angels research artifact.
@@ -58,8 +58,7 @@ defmodule Ethos.Seeds.AngelStadiumGuide do
       slug: "angel-stadium-guide",
       title: "Angel Stadium: The Ballpark and the Platinum Triangle",
       destination: "Anaheim, California",
-      state: "California",
-      county: "Orange County",
+      destination_path: "united-states/california/anaheim",
       intro: """
       Angel Stadium stands at 2000 Gene Autry Way in Anaheim, and the Los
       Angeles Angels have played there since it opened on April 19, 1966. It

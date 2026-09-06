@@ -23,6 +23,11 @@ defmodule Ethos.Release do
   def seed_rome(email) do
     load_app()
     Application.ensure_all_started(@app)
+    # The flagship guide names `italy/lazio/rome` like every other guide in the
+    # corpus and raises on a node the table does not hold, so the roster is
+    # written first — the same order, and the same idempotent call,
+    # `seed_directory/2` uses.
+    Ethos.Seeds.DestinationTree.upsert_all!()
 
     guide = Ethos.Seeds.RomeGuide.upsert!(email)
     IO.puts("Seeded Rome guide: /g/#{guide.slug}")
@@ -43,9 +48,13 @@ defmodule Ethos.Release do
 
   # Runs after the guide seeds, not before: Collections.upsert_collection!/1
   # raises on an item whose guide slug has no row yet. That now includes
-  # seed_ballparks/1 — MlbBallparksCollection names all thirty ballpark guides,
-  # so seed_collections/0 is no longer satisfiable by the Connecticut steps
-  # alone.
+  # seed_ballparks/1 — MlbBallparksCollection names all thirty ballpark
+  # guides — and, as of the four scenic-byway collections below,
+  # seed_connecticut_expansion/1 (step 3): all twenty of their town guides
+  # come from that JSON directory, not from the CT-5 code modules. On a
+  # partial rebuild that skips or reorders step 3, the four collections above
+  # seed fine and the byways raise partway through, leaving some of them
+  # seeded and this step aborted.
   def seed_collections do
     load_app()
     Application.ensure_all_started(@app)
@@ -59,6 +68,10 @@ defmodule Ethos.Release do
 
     for mod <- collections do
       collection = mod.upsert!()
+      IO.puts("Seeded collection: /c/#{collection.slug}")
+    end
+
+    for collection <- Ethos.Seeds.ScenicBywaysCollections.upsert_all!() do
       IO.puts("Seeded collection: /c/#{collection.slug}")
     end
   end
@@ -157,6 +170,13 @@ defmodule Ethos.Release do
     count
   end
 
+  def seed_destination_tree do
+    load_app()
+    Application.ensure_all_started(@app)
+    count = Ethos.Seeds.DestinationTree.upsert_all!()
+    IO.puts("Seeded #{count} destination nodes")
+  end
+
   @doc """
   Writes the foliage route link edges and reports any route stop whose guide
   has been unpublished or renamed.
@@ -179,9 +199,40 @@ defmodule Ethos.Release do
     Ethos.Foliage.Dataset.warn_dangling_guides(published)
   end
 
+  @doc """
+  Writes the town-adjacency `nearby` edges.
+
+  Production runs a release, not Mix, so this is the only way to invoke the
+  link builder after a deploy.
+  """
+  def adjacency_links do
+    load_app()
+    Application.ensure_all_started(@app)
+
+    :ok = Ethos.Adjacency.LinkBuilder.build!()
+  end
+
+  @doc """
+  Overlays the curated hub pages in `priv/seed_data/destinations/` onto the
+  nodes they belong to — fifteen files today, and the loop below reports the
+  count it actually found rather than trusting this sentence.
+
+  Each file is keyed on a real node path, so this adds an intro and photos to a
+  row the roster already owns rather than creating one. That is the whole point
+  of the keys being what they are: when they were the pre-tree single-slug forms
+  ("connecticut", "rome") this created one *extra* row per file with no `kind`
+  and no `parent_id`, which surfaced as fifteen dead redirects, fifteen bogus
+  sitemap entries and Connecticut, New York and Rome listed as countries on
+  `/destinations`.
+
+  Seeds the roster first, the way every other seeder does, so it stays true that
+  this step can run at any point in the order — including against a database
+  that has never seen the tree.
+  """
   def seed_destinations do
     load_app()
     Application.ensure_all_started(@app)
+    Ethos.Seeds.DestinationTree.upsert_all!()
 
     files =
       [:code.priv_dir(@app) |> to_string(), "seed_data", "destinations", "*.json"]
@@ -206,6 +257,7 @@ defmodule Ethos.Release do
   defp seed_region(region, email) do
     load_app()
     Application.ensure_all_started(@app)
+    Ethos.Seeds.DestinationTree.upsert_all!()
 
     for {mod, _region} <- Ethos.Seeds.Catalog.place_modules(region), do: mod.upsert_all!()
 
@@ -221,6 +273,7 @@ defmodule Ethos.Release do
   defp seed_directory(dir, email) do
     load_app()
     Application.ensure_all_started(@app)
+    Ethos.Seeds.DestinationTree.upsert_all!()
 
     files =
       [:code.priv_dir(@app) |> to_string(), "seed_data", dir, "*.json"]

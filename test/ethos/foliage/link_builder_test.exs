@@ -19,6 +19,9 @@ defmodule Ethos.Foliage.LinkBuilderTest do
     user = user_fixture()
 
     for path <- [@avon, @canton] do
+      # The loader resolves each file's destination_path against the
+      # destinations table and raises on a miss, so its nodes come first.
+      Ethos.SeedDataHelpers.seed_destinations_for_file!(path)
       DataGuide.upsert_places!(path)
       DataGuide.upsert_guide!(path, user.email)
     end

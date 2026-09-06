@@ -19,7 +19,12 @@ defmodule Ethos.Seeds.RomeGuide do
   @slug "three-days-in-rome-real-trip-guide"
   @title "3 Days in Rome: Colosseum Arena Floor, the Vatican, and the Back Streets of Monti"
   @destination "Rome, Italy"
-  @state "Italy"
+  # The node this guide is filed on. It used to write a bare `state: "Italy"`
+  # into a column instead, which made it the last guide in the corpus whose
+  # geography came from a hand-written string rather than from the tree — and
+  # the only reason `:affiliate_locales` had to carry an "italy" key beside the
+  # region one. Both are gone with the columns.
+  @destination_path "italy/lazio/rome"
 
   @intro """
   Three days in Rome, exactly as we did them — no filler, real verdicts. We based
@@ -297,12 +302,11 @@ defmodule Ethos.Seeds.RomeGuide do
       slug: @slug,
       title: @title,
       destination: @destination,
-      # Rome's state is what lets the affiliate registry — keyed on state slug —
-      # reach it at all. Without it state_slug is nil and locale_for/2 returns
-      # nil on its first clause, so no config entry could ever fire. It also
-      # makes /destinations/italy serve as a state hub, which is how every other
-      # guide's state behaves.
-      state: @state,
+      # The node under `italy/lazio`, which is what the affiliate registry is
+      # keyed on and what the breadcrumb walks. `Ethos.Seeds.Catalog` and the
+      # corpus gates read it from here, exactly as they do for every other
+      # guide module.
+      destination_path: @destination_path,
       intro: @intro,
       sections: @sections,
       faq: @faq,
@@ -325,7 +329,7 @@ defmodule Ethos.Seeds.RomeGuide do
       Repo.transaction(fn ->
         guide =
           guide
-          |> Guide.changeset(%{title: d.title, destination: d.destination, state: d.state})
+          |> Guide.changeset(guide_attrs(d))
           |> Guide.seo_changeset(%{intro: d.intro, sections: d.sections, faq: d.faq})
           |> Ecto.Changeset.put_change(:slug, d.slug)
           |> Repo.update!()
@@ -339,6 +343,18 @@ defmodule Ethos.Seeds.RomeGuide do
       end)
 
     Guides.get_guide!(guide.id)
+  end
+
+  # Resolved rather than stored, and it raises on a miss: a guide that names a
+  # node the roster does not hold must fail at seed time, not publish itself
+  # with no geography. `Ethos.Release` seeds the destination tree before any
+  # guide, and so does the deploy runbook.
+  defp guide_attrs(d) do
+    node =
+      Ethos.Destinations.get_by_path(d.destination_path) ||
+        raise ArgumentError, "unknown destination node #{d.destination_path}"
+
+    %{title: d.title, destination: d.destination, destination_id: node.id}
   end
 
   defp photo_attrs do
@@ -389,7 +405,7 @@ defmodule Ethos.Seeds.RomeGuide do
 
       nil ->
         %Guide{user_id: user.id}
-        |> Guide.changeset(%{title: d.title, destination: d.destination, state: d.state})
+        |> Guide.changeset(guide_attrs(d))
         |> Ecto.Changeset.put_change(:slug, d.slug)
         |> Repo.insert!()
     end

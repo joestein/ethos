@@ -1,8 +1,10 @@
 defmodule EthosWeb.PlaceController do
   use EthosWeb, :controller
 
-  alias Ethos.{Links, Places}
+  alias Ethos.{Destinations, Links, Places}
+  alias Ethos.Destinations.Destination
   alias Ethos.Places.DeletedPlaces
+  alias Ethos.Places.Place
   alias EthosWeb.StructuredData
 
   def show(conn, %{"slug" => slug}) do
@@ -14,9 +16,10 @@ defmodule EthosWeb.PlaceController do
         featured = Places.guides_featuring(place)
         meta_description = EthosWeb.Markdown.excerpt(place.summary, 160)
         first_photo = List.first(place.photos)
+        trail = destination_trail(place)
 
         og = %{
-          title: "#{place.name} — #{place.town}, #{place.state}",
+          title: page_title(place, trail),
           description: meta_description,
           image: StructuredData.absolute_url(first_photo["src"]),
           type: "website",
@@ -25,15 +28,41 @@ defmodule EthosWeb.PlaceController do
 
         render(conn, :show,
           place: place,
+          geo_trail: trail,
           featured_guides: featured,
           siblings: Places.list_siblings(place),
           connected: Links.links_for("place", place.id),
-          page_title: "#{place.name} — #{place.town}, #{place.state}",
+          page_title: page_title(place, trail),
           page_og: og,
           page_meta_description: meta_description,
           page_canonical: url(~p"/p/#{place.slug}"),
-          json_ld: [place_ld(place, meta_description), breadcrumb_ld(place)]
+          json_ld: [place_ld(place, trail, meta_description), breadcrumb_ld(place, trail)]
         )
+    end
+  end
+
+  # The place's own ancestry, root-first with its node last — the shape
+  # `StructuredData.postal_address/2` and `country_code/1` take, and the shape
+  # the visible `<nav>` renders. One query per request, shared by the nav, the
+  # BreadcrumbList and the PostalAddress, so the three cannot disagree about
+  # where a place is.
+  #
+  # `[]` for a place with no node. Unreachable from the seeded corpus — every
+  # loader resolves a `destination_path` and raises on a miss — but
+  # `places.destination_id` is nullable, so the page degrades to a place with no
+  # printed geography rather than raising out of a controller.
+  defp destination_trail(%Place{destination_node: %Destination{} = node}),
+    do: Destinations.ancestors(node) ++ [node]
+
+  defp destination_trail(%Place{}), do: []
+
+  # "Palace Theater — Waterbury, Connecticut". Both the <title> and og:title, so
+  # they cannot drift; `EthosWeb.PlaceHTML.geo_label/1` is the same function the
+  # page's own subtitle renders through.
+  defp page_title(place, trail) do
+    case EthosWeb.PlaceHTML.geo_label(trail) do
+      nil -> place.name
+      label -> "#{place.name} — #{label}"
     end
   end
 
@@ -60,7 +89,7 @@ defmodule EthosWeb.PlaceController do
     conn |> put_status(:not_found) |> put_view(EthosWeb.ErrorHTML) |> render(:"404")
   end
 
-  defp place_ld(place, description) do
+  defp place_ld(place, trail, description) do
     base = %{
       "@context" => "https://schema.org",
       "@type" => EthosWeb.PlaceHTML.schema_type(place.kind),
@@ -74,24 +103,44 @@ defmodule EthosWeb.PlaceController do
       "image",
       StructuredData.absolute_url(List.first(place.photos)["src"])
     )
-    |> StructuredData.maybe_put(
-      "address",
-      StructuredData.postal_address(place.address, place.town, place.state)
-    )
+    |> StructuredData.maybe_put("address", postal_address(place, trail))
     |> StructuredData.maybe_put("sameAs", place.official_url && [place.official_url])
   end
 
-  defp breadcrumb_ld(place) do
+  # A node-backed place — every place in the seeded corpus — takes the tree
+  # clause, which is what makes a Roman place emit IT and a Vatican one VA.
+  defp postal_address(place, [_ | _] = trail),
+    do: StructuredData.postal_address(place.address, trail)
+
+  # A place with no node has no geography to publish, so it publishes none
+  # rather than an invented one. The pair-based emitter that stood here was
+  # keyed on a region *string* and defaulted to "US" on a miss, which is how the
+  # Pantheon came within one deploy of being published as American.
+  defp postal_address(_place, []), do: nil
+
+  defp breadcrumb_ld(place, trail) do
     StructuredData.breadcrumb(
       StructuredData.root_crumbs() ++
-        [
-          %{name: place.state, url: url(~p"/destinations/#{place.state_slug}")},
-          %{
-            name: place.county,
-            url: url(~p"/destinations/#{place.state_slug}/#{place.county_slug}")
-          },
-          %{name: place.name, url: url(~p"/p/#{place.slug}")}
-        ]
+        geo_crumbs(place, trail) ++
+        [%{name: place.name, url: url(~p"/p/#{place.slug}")}]
     )
   end
+
+  # The full ancestry, so the trail is as deep as the place's node is — a
+  # Waterbury place gets United States / Connecticut / New Haven County /
+  # Waterbury where the pair below could only ever emit a state and a county.
+  # Same crumbs, same order and same URLs as the visible `<nav>`, which renders
+  # `@geo_trail` directly.
+  defp geo_crumbs(_place, [_ | _] = trail) do
+    Enum.map(trail, fn d -> %{name: d.name, url: node_url(d.path)} end)
+  end
+
+  # A place with no node contributes no geography crumbs: the trail runs
+  # Ethos / Destinations / the place itself.
+  defp geo_crumbs(_place, []), do: []
+
+  # The shared expansion of the glob route to an absolute URL — see
+  # `DestinationHTML.node_url/1`, which the destination and sitemap controllers
+  # now call too rather than each keeping a copy of the sigil.
+  defp node_url(path) when is_binary(path), do: EthosWeb.DestinationHTML.node_url(path)
 end

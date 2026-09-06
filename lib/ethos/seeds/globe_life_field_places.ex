@@ -50,13 +50,14 @@ defmodule Ethos.Seeds.GlobeLifeFieldPlaces do
   Esports Stadium Arlington carry `attraction`. That is a schema constraint,
   not a claim about either place; the prose describes both as what they are.
 
-  The county on every record is `"Tarrant County"`, from a confirmed verdict
-  citing the encyclopedia's Arlington article, which states it by name.
+  Every record hangs from the node `united-states/texas/arlington`. Tarrant
+  County is not modelled; a confirmed verdict citing the encyclopedia's Arlington
+  article states it by name.
   """
 
   alias Ethos.Places
 
-  @arlington %{town: "Arlington", state: "Texas", county: "Tarrant County"}
+  @arlington %{destination_path: "united-states/texas/arlington"}
 
   def upsert_all! do
     Enum.map(places(), &Places.upsert_place!/1)

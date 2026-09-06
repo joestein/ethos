@@ -2,9 +2,10 @@ defmodule Ethos.Seeds.ComericaParkGuide do
   @moduledoc """
   Seeds the Comerica Park guide. Idempotent by slug.
 
-  Carries `state: "Michigan"` and `county: "Wayne County"`, so it lists on both
-  the Michigan destination page and the Wayne County one. The county comes from
-  the verdict, and two confirmed verdicts carry it: *"Comerica Park's address is
+  Names the destination node `united-states/michigan/detroit`, so it lists on the
+  Michigan destination page and on Detroit's. The ballparks model no county tier,
+  so Wayne County is recorded here as a sourced fact rather than as a field, and
+  two confirmed verdicts carry it: *"Comerica Park's address is
   2100 Woodward Avenue, Detroit, Michigan, Wayne County"* and *"Detroit is the
   county seat of Wayne County"*, the latter cited to the Detroit article that
   states it.
@@ -46,8 +47,7 @@ defmodule Ethos.Seeds.ComericaParkGuide do
       slug: "comerica-park-guide",
       title: "Comerica Park: The Ballpark and Woodward Avenue Around It",
       destination: "Detroit, Michigan",
-      state: "Michigan",
-      county: "Wayne County",
+      destination_path: "united-states/michigan/detroit",
       intro: """
       Comerica Park stands at 2100 Woodward Avenue in downtown Detroit, in Wayne
       County. The Detroit Tigers, of the American League Central, have been

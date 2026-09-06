@@ -54,7 +54,7 @@ defmodule Ethos.Seeds.TargetFieldPlaces do
 
   alias Ethos.Places
 
-  @minneapolis %{town: "Minneapolis", state: "Minnesota", county: "Hennepin County"}
+  @minneapolis %{destination_path: "united-states/minnesota/minneapolis"}
 
   def upsert_all! do
     Enum.map(places(), &Places.upsert_place!/1)

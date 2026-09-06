@@ -2,9 +2,10 @@ defmodule Ethos.Seeds.ProgressiveFieldGuide do
   @moduledoc """
   Seeds the Progressive Field guide. Idempotent by slug.
 
-  Carries `state: "Ohio"` and `county: "Cuyahoga County"`, so it lists on both
-  the Ohio destination page and the Cuyahoga County one. The county comes from
-  the verdict, and two confirmed verdicts carry it: the identity verdict placing
+  Names the destination node `united-states/ohio/cleveland`, so it lists on the
+  Ohio destination page and on Cleveland's. The ballparks model no county tier,
+  so Cuyahoga County is recorded here as a sourced fact rather than as a field,
+  and two confirmed verdicts carry it: the identity verdict placing
   the Guardians at *"2401 Ontario Street, Cleveland, Ohio, Cuyahoga County"*,
   and a second stating that *"Cleveland is the county seat and most populous
   city of Cuyahoga County, Ohio"*, cited to the Cuyahoga County article that
@@ -49,8 +50,7 @@ defmodule Ethos.Seeds.ProgressiveFieldGuide do
       slug: "progressive-field-guide",
       title: "Progressive Field: The Ballpark and Downtown Cleveland Around It",
       destination: "Cleveland, Ohio",
-      state: "Ohio",
-      county: "Cuyahoga County",
+      destination_path: "united-states/ohio/cleveland",
       intro: """
       Progressive Field stands at 2401 Ontario Street in downtown Cleveland, in
       Cuyahoga County, as part of the Gateway Sports and Entertainment Complex.

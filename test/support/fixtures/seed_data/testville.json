@@ -3,8 +3,7 @@
     "slug": "testville-manhattan-guide",
     "title": "Testville, Manhattan: A Fixture Guide",
     "destination": "Testville, New York",
-    "state": "New York",
-    "county": "Manhattan",
+    "destination_path": "united-states/new-york/new-york-city/manhattan/testville",
     "intro": "A fixture neighborhood used only in tests.",
     "sections": [
       {"heading": "Getting there by subway", "body": "The T train stops at Test Sq."}
@@ -19,9 +18,7 @@
       "slug": "test-square-park",
       "name": "Test Square Park",
       "kind": "park",
-      "town": "Testville",
-      "state": "New York",
-      "county": "Manhattan",
+      "destination_path": "united-states/new-york/new-york-city/manhattan/testville",
       "address": "1 Test Sq, New York, NY",
       "summary": "A small fixture park.",
       "status": "open",
@@ -31,9 +28,7 @@
       "slug": "fixture-diner-testville",
       "name": "Fixture Diner",
       "kind": "restaurant",
-      "town": "Testville",
-      "state": "New York",
-      "county": "Manhattan",
+      "destination_path": "united-states/new-york/new-york-city/manhattan/testville",
       "summary": "A fixture diner.",
       "status": "open",
       "photos": []

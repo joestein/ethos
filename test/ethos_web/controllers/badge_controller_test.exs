@@ -11,9 +11,6 @@ defmodule EthosWeb.BadgeControllerTest do
         slug: "p1",
         name: "P1",
         kind: "museum",
-        town: "Waterbury",
-        state: "Connecticut",
-        county: "New Haven County",
         summary: "x"
       })
 

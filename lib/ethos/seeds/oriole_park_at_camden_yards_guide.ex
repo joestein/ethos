@@ -2,10 +2,10 @@ defmodule Ethos.Seeds.OrioleParkAtCamdenYardsGuide do
   @moduledoc """
   Seeds the Oriole Park at Camden Yards guide. Idempotent by slug.
 
-  Carries `state: "Maryland"` and `county: "Baltimore City"` — the plain form
-  the jurisdiction names itself by, with the independent-city explanation moved
-  into prose where it belongs, exactly as the verifier's own note recommends.
-  Baltimore has not been under any county's jurisdiction since 1851.
+  Names the destination node `united-states/maryland/baltimore`. Baltimore has
+  not been under any county's jurisdiction since 1851, which is why the
+  independent-city explanation lives in prose rather than in a tier, exactly as
+  the verifier's own note recommends.
 
   Every clause here restates the text of a `confirmed` verdict from the
   2026-08-30 Baltimore Orioles research artifact, or the text a `refuted`
@@ -45,8 +45,7 @@ defmodule Ethos.Seeds.OrioleParkAtCamdenYardsGuide do
       slug: "oriole-park-at-camden-yards-guide",
       title: "Oriole Park at Camden Yards: The Ballpark and Downtown Baltimore",
       destination: "Baltimore, Maryland",
-      state: "Maryland",
-      county: "Baltimore City",
+      destination_path: "united-states/maryland/baltimore",
       intro: """
       Oriole Park at Camden Yards stands at 333 W. Camden Street in Baltimore.
       It opened on April 6, 1992 on the site of the Baltimore and Ohio

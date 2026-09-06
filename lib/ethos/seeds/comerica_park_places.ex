@@ -56,7 +56,7 @@ defmodule Ethos.Seeds.ComericaParkPlaces do
 
   alias Ethos.Places
 
-  @detroit %{town: "Detroit", state: "Michigan", county: "Wayne County"}
+  @detroit %{destination_path: "united-states/michigan/detroit"}
 
   def upsert_all! do
     Enum.map(places(), &Places.upsert_place!/1)

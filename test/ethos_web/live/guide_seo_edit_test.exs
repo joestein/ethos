@@ -1,12 +1,15 @@
 defmodule EthosWeb.GuideSeoEditTest do
-  use EthosWeb.ConnCase, async: true
+  # async: false because admin_fixture/1 inserts the configured admin email,
+  # and guide authoring (the /guides/:id/edit route this exercises) is
+  # admin-only now.
+  use EthosWeb.ConnCase, async: false
 
   import Phoenix.LiveViewTest
   import Ethos.{AccountsFixtures, GuidesFixtures}
   alias Ethos.Guides
 
   setup %{conn: conn} do
-    user = user_fixture()
+    user = admin_fixture()
     %{conn: log_in_user(conn, user), user: user}
   end
 

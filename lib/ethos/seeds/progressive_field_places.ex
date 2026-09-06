@@ -49,7 +49,7 @@ defmodule Ethos.Seeds.ProgressiveFieldPlaces do
 
   alias Ethos.Places
 
-  @cleveland %{town: "Cleveland", state: "Ohio", county: "Cuyahoga County"}
+  @cleveland %{destination_path: "united-states/ohio/cleveland"}
 
   def upsert_all! do
     Enum.map(places(), &Places.upsert_place!/1)

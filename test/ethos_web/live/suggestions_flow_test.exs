@@ -1,5 +1,7 @@
 defmodule EthosWeb.SuggestionsFlowTest do
-  use EthosWeb.ConnCase, async: true
+  # async: false because admin_fixture/1 inserts the configured admin email —
+  # reviewing suggestions (/guides/:id/suggestions) is admin-only authoring now.
+  use EthosWeb.ConnCase, async: false
 
   import Phoenix.LiveViewTest
   import Ethos.AccountsFixtures
@@ -27,7 +29,7 @@ defmodule EthosWeb.SuggestionsFlowTest do
   end
 
   test "owner accepts a suggestion which creates a credited entry", %{conn: conn} do
-    owner = user_fixture()
+    owner = admin_fixture()
     guide = published_guide_fixture(%{user: owner})
     reader = user_fixture()
 
@@ -46,7 +48,7 @@ defmodule EthosWeb.SuggestionsFlowTest do
   end
 
   test "owner declines a suggestion", %{conn: conn} do
-    owner = user_fixture()
+    owner = admin_fixture()
     guide = published_guide_fixture(%{user: owner})
     reader = user_fixture()
 

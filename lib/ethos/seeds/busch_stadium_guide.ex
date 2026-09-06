@@ -2,11 +2,11 @@ defmodule Ethos.Seeds.BuschStadiumGuide do
   @moduledoc """
   Seeds the Busch Stadium guide. Idempotent by slug.
 
-  Carries `state: "Missouri"` and `county: "St. Louis"`. St. Louis is an
+  Names the destination node `united-states/missouri/st-louis`. St. Louis is an
   independent city that separated from St. Louis County in 1877 and is not
-  located within any county; the county field carries the city's own name so
-  that the guide and its places share a destination hub, the same treatment
-  Baltimore City gets in this wave.
+  located within any county, which the tree states by putting the city directly
+  under the region with no county between them — the shape every ballpark city
+  takes, and the one this jurisdiction would need anyway.
 
   Every clause here restates the text of a `confirmed` verdict from the
   2026-08-30 St. Louis Cardinals research artifact, or the text a `refuted`
@@ -51,8 +51,7 @@ defmodule Ethos.Seeds.BuschStadiumGuide do
       slug: "busch-stadium-guide",
       title: "Busch Stadium: The Ballpark and Downtown St. Louis",
       destination: "St. Louis, Missouri",
-      state: "Missouri",
-      county: "St. Louis",
+      destination_path: "united-states/missouri/st-louis",
       intro: """
       Busch Stadium stands in downtown St. Louis near the interchange of
       Interstates 64, 55 and 44, straddling 7th and Clark Streets on part of

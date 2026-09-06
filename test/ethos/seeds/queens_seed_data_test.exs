@@ -592,16 +592,29 @@ defmodule Ethos.Seeds.QueensSeedDataTest do
   #
   # Each violation names WHERE it was found, so a place-level miss is not
   # reported as a guide-level one.
+  # Checked on the destination node the file names, which since the tree landed
+  # is where filing happens: the county string the paragraph above describes is
+  # now derived from that node rather than authored, so the node is the field
+  # that can be wrong. `@borough_node` is the borough; a file
+  # naming `united-states/new-york/queens-county` instead is the same
+  # split under a new spelling.
+  @borough_node "united-states/new-york/new-york-city/queens"
+
   defp county_violations(paths) do
     for f <- paths,
         data = DataGuide.load!(f),
-        {where, county} <-
+        {where, node_path} <-
           [
-            {"guide", data["guide"]["county"]}
-            | for(p <- data["places"], do: {"place #{p["slug"]}", p["county"]})
+            {"guide", data["guide"]["destination_path"]}
+            | for(p <- data["places"], do: {"place #{p["slug"]}", p["destination_path"]})
           ],
-        county != "Queens",
-        do: {Path.basename(f), where, county}
+        not under_borough?(node_path),
+        do: {Path.basename(f), where, node_path}
+  end
+
+  defp under_borough?(node_path) do
+    is_binary(node_path) and
+      (node_path == @borough_node or String.starts_with?(node_path, @borough_node <> "/"))
   end
 
   # --- The unified transit section ----------------------------------------
@@ -781,14 +794,16 @@ defmodule Ethos.Seeds.QueensSeedDataTest do
   # a guide filed under "Queens" whose places carry the legal name passes every
   # other assertion here and splits the borough's place counts on the hub.
 
-  test "the county assertion catches the legal name on a guide" do
-    assert [{"bad_county.json", "guide", "Queens County"}] =
+  test "the county assertion catches a guide filed outside the borough node" do
+    assert [{"bad_county.json", "guide", "united-states/new-york/queens-county/fixture"}] =
              county_violations([fixture("bad_county.json")])
   end
 
-  test "the county assertion catches the legal name on a place" do
-    assert [{"bad_place_county.json", "place fixture-queens-bad-place-county", "Queens County"}] =
-             county_violations([fixture("bad_place_county.json")])
+  test "the county assertion catches a place filed outside the borough node" do
+    assert [
+             {"bad_place_county.json", "place fixture-queens-bad-place-county",
+              "united-states/new-york/queens-county/fixture"}
+           ] = county_violations([fixture("bad_place_county.json")])
   end
 
   # --- Each pattern is individually load-bearing --------------------------
@@ -922,8 +937,8 @@ defmodule Ethos.Seeds.QueensSeedDataTest do
     assert floor_violations(files) == [], "orientation pages below the floor"
 
     assert county_violations(files) == [],
-           "guides not filed under county \"Queens\" (the legal name \"Queens County\" would " <>
-             "derive queens-county and split the borough hub away from Brooklyn, Manhattan " <>
+           "guides or places filed outside the Queens borough node (a sibling node named " <>
+             "for the legal county would split the borough hub away from Brooklyn, Manhattan " <>
              "and the Bronx)"
 
     assert getting_there_violations(files) == [],
@@ -1012,6 +1027,12 @@ defmodule Ethos.Seeds.QueensSeedDataTest do
     # concourse.json the Yankee Stadium guide has to exist already. Putting the
     # block after the loop reads more naturally and fails identically to having
     # no block at all — which was the second failure.
+    # The loaders resolve every seed file's destination_path against the
+    # destinations table and raise on a miss, so the roster is a precondition
+    # of any corpus load — Ethos.Release seeds it before every corpus for the
+    # same reason.
+    Ethos.Seeds.DestinationTree.upsert_all!()
+
     Ethos.Seeds.CitiFieldPlaces.upsert_all!()
     Ethos.Seeds.CitiFieldGuide.upsert!(user.email)
     Ethos.Seeds.YankeeStadiumPlaces.upsert_all!()
@@ -1039,8 +1060,7 @@ defmodule Ethos.Seeds.QueensSeedDataTest do
       for f <- files, into: MapSet.new(), do: DataGuide.load!(f)["guide"]["slug"]
 
     published =
-      Ethos.Guides.list_published_guides()
-      |> Enum.filter(&(&1.county == "Queens"))
+      Ethos.SeedDataHelpers.published_guides_under("united-states/new-york/new-york-city/queens")
       |> MapSet.new(& &1.slug)
       |> MapSet.difference(@code_owned_queens_guides)
 

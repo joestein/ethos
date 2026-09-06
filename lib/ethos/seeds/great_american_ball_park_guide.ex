@@ -2,9 +2,10 @@ defmodule Ethos.Seeds.GreatAmericanBallParkGuide do
   @moduledoc """
   Seeds the Great American Ball Park guide. Idempotent by slug.
 
-  Carries `state: "Ohio"` and `county: "Hamilton County"`, so it lists on both
-  the Ohio destination page and the Hamilton County one. The county comes from
-  the verdict — *"Cincinnati is the most populous city in Hamilton County, Ohio,
+  Names the destination node `united-states/ohio/cincinnati`, so it lists on the
+  Ohio destination page and on Cincinnati's. The ballparks model no county tier,
+  so Hamilton County is recorded here as a sourced fact rather than as a field.
+  It comes from the verdict — *"Cincinnati is the most populous city in Hamilton County, Ohio,
   and its county seat"*, confirmed against `en.wikipedia.org/wiki/Cincinnati`,
   which is the source that carries it.
 
@@ -46,8 +47,7 @@ defmodule Ethos.Seeds.GreatAmericanBallParkGuide do
       slug: "great-american-ball-park-guide",
       title: "Great American Ball Park: The Ballpark and the Cincinnati Riverfront",
       destination: "Cincinnati, Ohio",
-      state: "Ohio",
-      county: "Hamilton County",
+      destination_path: "united-states/ohio/cincinnati",
       intro: """
       Great American Ball Park stands at 100 Joe Nuxhall Way on the Cincinnati
       riverfront, in Hamilton County. It opened on March 31, 2003 and is the

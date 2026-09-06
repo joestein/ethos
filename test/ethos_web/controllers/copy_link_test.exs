@@ -12,9 +12,6 @@ defmodule EthosWeb.CopyLinkTest do
         slug: "palace-theater-waterbury",
         name: "Palace Theater",
         kind: "theater",
-        town: "Waterbury",
-        state: "Connecticut",
-        county: "New Haven County",
         summary: "Historic theater."
       })
 
@@ -43,9 +40,6 @@ defmodule EthosWeb.CopyLinkTest do
         slug: "palace-theater-waterbury",
         name: "Palace Theater",
         kind: "theater",
-        town: "Waterbury",
-        state: "Connecticut",
-        county: "New Haven County",
         summary: "Historic theater."
       })
 

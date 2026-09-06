@@ -25,8 +25,10 @@ defmodule EthosWeb.Router do
     get "/g/:slug", GuideController, :show
     get "/g/:slug/photos", GuideController, :photos
     get "/destinations", DestinationController, :index
-    get "/destinations/:slug", DestinationController, :show
-    get "/destinations/:state_slug/:county_slug", DestinationController, :county
+    # The glob is declared after the bare index so `/destinations` keeps
+    # resolving to :index; a node's own path supplies every segment after it,
+    # at any depth from a country to a neighborhood.
+    get "/destinations/*path", DestinationController, :show
     get "/p/:slug", PlaceController, :show
     get "/c/:slug", CollectionController, :show
     get "/foliage", FoliageController, :index
@@ -84,6 +86,17 @@ defmodule EthosWeb.Router do
       live "/users/settings/confirm_email/:token", UserSettingsLive, :confirm_email
       live "/users/username", UsernameLive, :edit
 
+      live "/g/:slug/suggest", SuggestLive, :new
+    end
+
+    get "/badges", BadgeController, :index
+  end
+
+  scope "/", EthosWeb do
+    pipe_through [:browser, :require_authenticated_user, :require_admin_user]
+
+    live_session :require_admin_authoring,
+      on_mount: [{EthosWeb.UserAuth, :ensure_authenticated}, {EthosWeb.UserAuth, :ensure_admin}] do
       live "/guides", GuideLive.Index, :index
       live "/guides/new", GuideLive.New, :new
       live "/guides/:id/import", GuideLive.Import, :import
@@ -91,12 +104,9 @@ defmodule EthosWeb.Router do
       live "/guides/:id/edit", GuideLive.Edit, :edit
       live "/guides/:id/share", GuideLive.Share, :share
       live "/guides/:id/suggestions", GuideLive.Suggestions, :suggestions
-
-      live "/g/:slug/suggest", SuggestLive, :new
     end
 
     post "/g/:slug/entries/:entry_id/research", GuideController, :research
-    get "/badges", BadgeController, :index
   end
 
   scope "/admin", EthosWeb do

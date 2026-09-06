@@ -3,8 +3,7 @@
     "slug": "fixture-missing-transit-faq-bronx-guide",
     "title": "Fixture: Missing Transit FAQ",
     "destination": "Fixture, New York",
-    "state": "New York",
-    "county": "Bronx",
+    "destination_path": "united-states/new-york/new-york-city/bronx/fixture",
     "intro": "A fixture guide used only to prove the transit-FAQ assertion fires.",
     "sections": [
       {

@@ -663,11 +663,28 @@ defmodule Ethos.Seeds.LondonSeedDataTest do
 
       assert is_map(doc["guide"]), "#{name} has no guide object"
 
-      assert doc["guide"]["state"] == "England",
-             "#{name} does not carry state \"England\", so it will not route under " <>
-               "/destinations/england/london"
+      # Asserted on the node path, which replaced the state/county pair the
+      # corpus carried until the destination tree landed. The pair said state
+      # "England", county "London"; the path says the same thing and three
+      # tiers more of it, so a file filed under Manchester — or under London
+      # with no borough — fails here rather than routing to a hub that happens
+      # to share a slug.
+      london = "united-kingdom/england/london"
+      guide_path = doc["guide"]["destination_path"]
 
-      assert doc["guide"]["county"] == "London", "#{name} does not carry county \"London\""
+      assert String.starts_with?(guide_path, london <> "/"),
+             "#{name} is filed under #{inspect(guide_path)}, not under a borough of " <>
+               "#{inspect(london)}"
+
+      # The places of a borough file belong to that borough — at the borough
+      # node itself or at one of its towns, which is where most of them sit.
+      for p <- doc["places"] do
+        assert p["destination_path"] == guide_path or
+                 String.starts_with?(p["destination_path"], guide_path <> "/"),
+               "#{name}: place #{p["slug"]} is filed under " <>
+                 "#{inspect(p["destination_path"])}, outside its own guide's " <>
+                 "#{inspect(guide_path)}"
+      end
 
       # The guide slug follows the FILE, not the destination string. Greenwich
       # shipped as "royal-borough-of-greenwich-guide" in wave 1, derived from

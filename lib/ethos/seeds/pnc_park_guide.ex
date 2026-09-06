@@ -2,10 +2,10 @@ defmodule Ethos.Seeds.PncParkGuide do
   @moduledoc """
   Seeds the PNC Park guide. Idempotent by slug.
 
-  Carries `state: "Pennsylvania"` and `county: "Allegheny County"`, so it lists
-  on both the Pennsylvania destination page and the Allegheny County one. The
-  county comes from the verdict, and specifically from the verdict's
-  *correction*: the finder cited the Pittsburgh Pirates article for "Allegheny
+  Names the destination node `united-states/pennsylvania/pittsburgh`, so it lists
+  on the Pennsylvania destination page and on Pittsburgh's. The ballparks model
+  no county tier, so Allegheny County is recorded here as a sourced fact rather
+  than as a field, and it comes from the verdict's *correction*: the finder cited the Pittsburgh Pirates article for "Allegheny
   County" and a targeted re-fetch found no county mention anywhere in it, so
   that verdict is refuted. The correction re-cites the fact to the PNC Park
   article — whose infobox names the "Sports & Exhibition Authority of Pittsburgh
@@ -50,8 +50,7 @@ defmodule Ethos.Seeds.PncParkGuide do
       slug: "pnc-park-guide",
       title: "PNC Park: The Ballpark and the North Shore Around It",
       destination: "Pittsburgh, Pennsylvania",
-      state: "Pennsylvania",
-      county: "Allegheny County",
+      destination_path: "united-states/pennsylvania/pittsburgh",
       intro: """
       PNC Park stands at 115 Federal Street on Pittsburgh's North Shore, on the
       banks of the Allegheny River. It opened on March 31, 2001, and the

@@ -54,7 +54,9 @@ defmodule EthosWeb.PublicIdentityTest do
 
   test "guide owner's suggestion review screen shows the suggester's username, not their email",
        %{conn: conn} do
-    owner = user_fixture()
+    # /guides/:id/suggestions is admin-only authoring now, so the owner here
+    # must be the admin.
+    owner = admin_fixture()
     guide = published_guide_fixture(%{user: owner})
     suggester = user_fixture(%{email: "suggester-secret@example.com", username: "hopsuggester"})
 
@@ -94,7 +96,9 @@ defmodule EthosWeb.PublicIdentityTest do
 
   test "guide owner's suggestion review screen does not leak a provisional suggester's derived name",
        %{conn: conn} do
-    owner = user_fixture()
+    # /guides/:id/suggestions is admin-only authoring now, so the owner here
+    # must be the admin.
+    owner = admin_fixture()
     guide = published_guide_fixture(%{user: owner})
 
     suggester =

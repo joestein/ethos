@@ -48,7 +48,11 @@ defmodule EthosWeb.Layouts do
             Destinations
           </.link>
           <%= if @current_user do %>
-            <.link navigate={~p"/guides"} class="hover:text-zinc-700">
+            <.link
+              :if={Ethos.Accounts.admin?(@current_user)}
+              navigate={~p"/guides"}
+              class="hover:text-zinc-700"
+            >
               Your guides
             </.link>
             <.link navigate={~p"/badges"} class="hover:text-zinc-700">
@@ -63,6 +67,7 @@ defmodule EthosWeb.Layouts do
             </.link>
           <% end %>
           <.link
+            :if={Ethos.Accounts.admin?(@current_user)}
             navigate={~p"/guides/new"}
             class="rounded-lg bg-zinc-900 px-3 py-1 text-white hover:bg-zinc-700"
           >

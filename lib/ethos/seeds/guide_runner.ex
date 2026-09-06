@@ -3,9 +3,10 @@ defmodule Ethos.Seeds.GuideRunner do
   Shared upsert logic for guide seeds, whether the data comes from a
   code module (the Connecticut town guides) or a JSON seed file (Manhattan
   onward, via `Ethos.Seeds.DataGuide`). The caller supplies a `data` map
-  (with a required `:state`); this runner idempotently upserts the guide by
-  slug, replaces its entries (linking each to a seeded place), sets SEO
-  fields and photos, and publishes it.
+  (naming its destination node with either `:destination_id` or
+  `:destination_path`); this runner idempotently upserts the guide by slug,
+  replaces its entries (linking each to a seeded place), sets SEO fields and
+  photos, and publishes it.
   """
 
   import Ecto.Query, warn: false
@@ -31,12 +32,7 @@ defmodule Ethos.Seeds.GuideRunner do
       Repo.transaction(fn ->
         guide =
           guide
-          |> Guide.changeset(%{
-            "title" => data.title,
-            "destination" => data.destination,
-            "state" => data.state,
-            "county" => data.county
-          })
+          |> Guide.changeset(guide_attrs(data))
           |> Ecto.Changeset.put_change(:slug, data.slug)
           |> Ecto.Changeset.put_change(:tier, Map.get(data, :tier, "guide"))
           |> Repo.update!()
@@ -90,6 +86,38 @@ defmodule Ethos.Seeds.GuideRunner do
     end
   end
 
+  defp guide_attrs(data) do
+    Map.merge(
+      %{"title" => data.title, "destination" => data.destination},
+      destination_attrs(data)
+    )
+  end
+
+  # A guide's geography is the node it names and nothing else. The state and
+  # county this used to derive alongside the id were columns, and the columns
+  # are gone; every reader — the breadcrumb, the hub, the affiliate resolver —
+  # walks the node's ancestry instead.
+  defp destination_attrs(data), do: %{"destination_id" => destination_node(data).id}
+
+  # Code-module guides (the ballparks, the Connecticut six) carry a
+  # :destination_path; JSON guides arrive already resolved to an id. Accept
+  # either, so both seeding routes share one runner.
+  #
+  # There is deliberately no catch-all clause. One stood here between Tasks 7
+  # and 6 so the code-seed guides could keep their `state`/`county` pair for a
+  # commit, and it was a silent hole: a guide misspelling `destination_pth:`
+  # fell through to `Map.get(data, :state)` and published a nil state instead of
+  # raising. Every guide now names a node, so a guide that names none — or
+  # misspells the key — raises here, which is the only reliable report of that
+  # typo.
+  defp destination_node(%{destination_id: id}) when is_integer(id),
+    do: Repo.get!(Ethos.Destinations.Destination, id)
+
+  defp destination_node(%{destination_path: path}) when is_binary(path) do
+    Ethos.Destinations.get_by_path(path) ||
+      raise ArgumentError, "unknown destination node #{path}"
+  end
+
   defp find_or_insert_guide!(user, data) do
     case Repo.get_by(Guide, slug: data.slug) do
       %Guide{} = guide ->
@@ -97,12 +125,7 @@ defmodule Ethos.Seeds.GuideRunner do
 
       nil ->
         %Guide{user_id: user.id}
-        |> Guide.changeset(%{
-          "title" => data.title,
-          "destination" => data.destination,
-          "state" => data.state,
-          "county" => data.county
-        })
+        |> Guide.changeset(guide_attrs(data))
         |> Ecto.Changeset.put_change(:slug, data.slug)
         |> Repo.insert!()
     end

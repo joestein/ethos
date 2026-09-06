@@ -14,10 +14,10 @@ defmodule Ethos.Seeds.OracleParkPlaces do
   `docs/ballparks/oracle-park.md` quotes each published sentence against the
   verdict it rests on.
 
-  The county is `"San Francisco"`. San Francisco has been a consolidated
+  Every record hangs from the node `united-states/california/san-francisco` — the
+  same node the San Francisco corpus uses. San Francisco has been a consolidated
   city-county since 1856 and no separate county government administers the
-  address, which is the same independent-city treatment this wave gives St.
-  Louis and Baltimore City.
+  address, so nothing stands between the city and the region.
 
   What the verification changed, and what is therefore absent here:
 
@@ -57,7 +57,7 @@ defmodule Ethos.Seeds.OracleParkPlaces do
 
   alias Ethos.Places
 
-  @sf %{town: "San Francisco", state: "California", county: "San Francisco"}
+  @sf %{destination_path: "united-states/california/san-francisco"}
 
   def upsert_all! do
     Enum.map(places(), &Places.upsert_place!/1)

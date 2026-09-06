@@ -33,6 +33,11 @@ config :ethos, EthosWeb.Endpoint,
 # at the `config/runtime.exs`.
 config :ethos, Ethos.Mailer, adapter: Swoosh.Adapters.Local
 
+# Affiliate links are off by default, everywhere. The machinery stays in the
+# codebase and keeps its test coverage; this is the switch that decides
+# whether any of it reaches a visitor.
+config :ethos, :affiliate_links_enabled, false
+
 # Configure esbuild (the version is required)
 config :esbuild,
   version: "0.17.11",
@@ -63,43 +68,46 @@ config :logger, :console,
 # Use Jason for JSON parsing in Phoenix
 config :phoenix, :json_library, Jason
 
-# Affiliate placement, keyed by state slug. See
+# Affiliate placement, keyed by DESTINATION NODE PATH. See
 # docs/superpowers/specs/2026-08-31-affiliate-placement-design.md
 #
-# `counties` is a GUARD, not decoration. GetYourGuide's "new-york" campaign is
-# New York CITY. Every New York page in the corpus today is a borough, so
-# keying on state alone is correct today and silently wrong the day a Hudson
-# Valley or Niagara guide ships and inherits a campaign for a city 300 miles
-# away. Remove this list only when a separate upstate campaign exists.
+# A page resolves to the locale whose key is its node's path or a prefix of it,
+# longest key first. The key is therefore the campaign's geography, expressed in
+# the same vocabulary the URL, the tree and the loaders already share — not a
+# display name derived from one of them.
 #
-# Staten Island is listed although no Staten Island content exists yet: it is a
-# borough and the campaign covers it. It is the one forward-looking entry.
+# That is why there is no `:counties` allowlist any more. There used to be one,
+# because the registry was keyed on a page's derived state slug: GetYourGuide's
+# "new-york" campaign is New York CITY, and keying on the state alone would hand
+# a Hudson Valley or Niagara guide a campaign for a city 300 miles away. The
+# allowlist matched borough NAMES, listed "Bronx" while the roster names the
+# borough "The Bronx", and so switched every Bronx page's widget off silently:
+# HTTP 200, a correct-looking page, no unit. Keyed on
+# `united-states/new-york/new-york-city`, an upstate node is not under the key
+# at all, so the case the guard defended against cannot be expressed and there
+# is no name left to spell differently.
+#
+# Staten Island needs no entry of its own: it is a borough beneath this node, so
+# it is covered the day the roster gains it.
 config :ethos, :affiliate_locales, %{
-  "new-york" => %{
+  "united-states/new-york/new-york-city" => %{
     network: :getyourguide,
     partner_id: "ZA4AIMF",
-    cmp: "new-york",
-    counties: ["Manhattan", "Brooklyn", "Bronx", "Queens", "Staten Island"]
+    cmp: "new-york"
   },
-  # Country-level scope with a city campaign code, and those are not in tension:
-  # GetYourGuide issues city-scoped codes and there is no "italy" code to use.
-  # No :counties key, so every Italian page resolves.
+  # Lazio, not Italy and not Rome, and the depth is load-bearing both ways.
   #
-  # The consequence, recorded rather than guarded: when Florence or Venice ship
-  # they inherit cmp=rome unless this entry is split first. It is deliberately
-  # not guarded now — a guard over a one-city corpus guards nothing.
+  # Keyed on "italy" the campaign would reach a Florence or Venice guide at
+  # `italy/tuscany/*` and sell them Rome tours. Keyed on `italy/lazio/rome` it
+  # would miss the Lazio hub and every page filed on the region itself. The
+  # region node is exactly the campaign's reach.
   #
-  # But the fix is NOT just "add :counties the way new-york does". Adding
-  # `counties: ["Rome"]` here on its own is inert: `county_allowed?/2` in
-  # lib/ethos/affiliates.ex matches `{_counties, nil} -> true` first, and every
-  # Italian guide seeded the way Rome was carries NO county, so Florence would
-  # hit that clause and still resolve to cmp=rome — silently, with the guard
-  # sitting right here looking like it works. (That nil-county clause is
-  # load-bearing for the New York state hub, so it cannot simply be dropped.)
-  #
-  # Whoever ships the second Italian city must therefore do BOTH: backfill a
-  # county on the Italian guides (Rome included) and then add the allowlist.
-  "italy" => %{
+  # GetYourGuide issues city-scoped codes and there is no "lazio" code, so a
+  # region-wide key carrying cmp=rome is not a mismatch — it is the only code
+  # that exists for this geography. When a second Lazio city ships, split this
+  # into `italy/lazio/rome` plus a key of its own rather than widening it; a
+  # deeper key wins over a shallower one, so the split needs no other change.
+  "italy/lazio" => %{
     network: :getyourguide,
     partner_id: "ZA4AIMF",
     cmp: "rome",

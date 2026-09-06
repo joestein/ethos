@@ -41,7 +41,7 @@ defmodule Ethos.Collections do
     Repo.one(
       from c in Collection,
         where: c.slug == ^slug and c.published == true,
-        preload: [items: [:guide]]
+        preload: [items: [guide: :destination_node]]
     )
   end
 

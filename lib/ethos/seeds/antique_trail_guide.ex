@@ -2,10 +2,11 @@ defmodule Ethos.Seeds.AntiqueTrailGuide do
   @moduledoc """
   Seeds the Antique Trail of Connecticut guide. Idempotent by slug.
 
-  Carries `state: "Connecticut"` and no county, so it lists on the Connecticut
-  destination page rather than under one county — the trail starts in Woodbury
-  and is meant to take in dealers in other towns as later research waves
-  confirm them.
+  Names the destination node `united-states/connecticut` — the state itself, not
+  a county or a town — so it lists on the Connecticut destination page rather
+  than under one county. The trail starts in Woodbury and is meant to take in
+  dealers in other towns as later research waves confirm them, which is why it
+  hangs from the region node and derives no county.
 
   Every clause here restates the text of a `confirmed` verdict from the
   2026-08-29 place-research wave's independent verification, or of a verdict
@@ -29,8 +30,7 @@ defmodule Ethos.Seeds.AntiqueTrailGuide do
       slug: "antique-trail-of-connecticut",
       title: "The Antique Trail of Connecticut: Woodbury's Dealers, Shop by Shop",
       destination: "Connecticut",
-      state: "Connecticut",
-      county: nil,
+      destination_path: "united-states/connecticut",
       intro: """
       Woodbury's antiques dealers share one address book. Fifteen shops and
       galleries stand on Main Street North or Main Street South, and a

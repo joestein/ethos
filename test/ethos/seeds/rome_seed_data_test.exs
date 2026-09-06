@@ -950,26 +950,40 @@ defmodule Ethos.Seeds.RomeSeedDataTest do
 
       # Vatican City is the one file in this directory that is NOT in Italy and
       # NOT in Rome. It sits here because a traveller planning Rome needs it and
-      # because the rione files link to it, but it is a sovereign state: giving
-      # it state "Italy" would publish a false claim, and would make
+      # because the rione files link to it, but it is a sovereign state: filing
+      # it under Italy would publish a false claim, and would make
       # StructuredData emit addressCountry IT for St Peter's.
       #
-      # So it carries its own state and routes to its own destination rather
-      # than under /destinations/italy/rome. That is not an exception grudgingly
-      # made; it is the vatican_ruling applied to the two fields that encode
-      # where a thing is.
-      {expected_state, expected_county} =
+      # So it names a root country node of its own rather than one under
+      # italy/lazio/rome. That is not an exception grudgingly made; it is the
+      # vatican_ruling applied to the field that encodes where a thing is.
+      #
+      # Asserted on the node path rather than on the state/county pair the
+      # corpus carried until the destination tree landed. That pair said state
+      # "Italy", county "Rome", and "Italy" was itself the defect this refactor
+      # exists to fix — Italy is the country and Lazio the region, so the pair
+      # could not say both. The path says the whole ancestry and cannot go
+      # stale the same way.
+      guide_path = doc["guide"]["destination_path"]
+
+      expected_ancestry =
         if Path.basename(path) == "vatican-city.json",
-          do: {"Vatican City", "Vatican City"},
-          else: {"Italy", "Rome"}
+          do: "vatican-city",
+          else: "italy/lazio/rome"
 
-      assert doc["guide"]["state"] == expected_state,
-             "#{Path.basename(path)} carries state #{inspect(doc["guide"]["state"])}, " <>
-               "expected #{inspect(expected_state)}"
+      assert guide_path == expected_ancestry or
+               String.starts_with?(guide_path, expected_ancestry <> "/"),
+             "#{Path.basename(path)} is filed under #{inspect(guide_path)}, which is not " <>
+               "under #{inspect(expected_ancestry)}"
 
-      assert doc["guide"]["county"] == expected_county,
-             "#{Path.basename(path)} carries county #{inspect(doc["guide"]["county"])}, " <>
-               "expected #{inspect(expected_county)}"
+      # The places of a zone file belong to that zone. Without this the guide
+      # could sit in Rome while its places named any node in the roster.
+      for p <- doc["places"] do
+        assert p["destination_path"] == guide_path,
+               "#{Path.basename(path)}: place #{p["slug"]} is filed under " <>
+                 "#{inspect(p["destination_path"])}, not its own guide's " <>
+                 "#{inspect(guide_path)}"
+      end
     end
 
     SeedDataHelpers.assert_place_slugs_globally_unique!()

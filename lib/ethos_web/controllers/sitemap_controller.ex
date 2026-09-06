@@ -4,31 +4,25 @@ defmodule EthosWeb.SitemapController do
   alias Ethos.{Destinations, Guides, Places}
 
   def index(conn, _params) do
-    # Destination pages are assembled from the guides table at request time, so
-    # nothing about the page itself has a modification date — every destination
-    # URL used to ship without a lastmod. A `Destination` record supplies the
-    # prose and the photograph, and it does have one, so the pages whose content
-    # can actually change are the ones that now carry a date. Loaded once as a
-    # map rather than queried per URL: there are 291 destination URLs and 13
-    # records.
-    dest_lastmod =
-      Map.new(Destinations.list_destinations(), fn d ->
-        {d.path, DateTime.to_date(d.updated_at)}
-      end)
-
+    # One URL per node in the destination tree, and no others.
+    #
+    # This replaced three builders that derived destination URLs from the
+    # guides table — a `GROUP BY` over destination, state and state+county —
+    # which after the tree landed emitted the *legacy* single-slug forms
+    # (`/destinations/connecticut`). Every one of those 301s to its node, and a
+    # sitemap is a list of canonical URLs: advertising a redirect source asks
+    # Google to crawl a hop to reach a page we could have named directly. The
+    # guide-derived builders also emitted URLs for destinations with no node at
+    # all — a guide filed under "Lisbon, Portugal" produced `/destinations/lisbon`,
+    # which now 404s — so the old list advertised pages that do not exist.
+    #
+    # Every node carries `updated_at`, so every destination URL now ships a
+    # lastmod. Before the tree the hubs were assembled from guides at request
+    # time and only the curated records had a date to publish.
     urls =
       [%{loc: url(~p"/"), lastmod: nil}, %{loc: url(~p"/destinations"), lastmod: nil}] ++
-        Enum.map(Guides.list_destinations(), fn d ->
-          %{loc: url(~p"/destinations/#{d.slug}"), lastmod: dest_lastmod[d.slug]}
-        end) ++
-        Enum.map(Guides.list_states(), fn s ->
-          %{loc: url(~p"/destinations/#{s.slug}"), lastmod: dest_lastmod[s.slug]}
-        end) ++
-        Enum.flat_map(Guides.list_states(), fn s ->
-          Enum.map(Guides.list_counties_for_state(s.slug), fn c ->
-            path = "#{s.slug}/#{c.slug}"
-            %{loc: url(~p"/destinations/#{s.slug}/#{c.slug}"), lastmod: dest_lastmod[path]}
-          end)
+        Enum.map(Destinations.list_destinations(), fn d ->
+          %{loc: node_url(d.path), lastmod: DateTime.to_date(d.updated_at)}
         end) ++
         Enum.flat_map(Guides.list_published_guides(), fn g ->
           lastmod = DateTime.to_date(g.updated_at)
@@ -60,11 +54,13 @@ defmodule EthosWeb.SitemapController do
             [%{loc: url(~p"/foliage/embed"), lastmod: nil}]
         )
 
-    # A guide whose destination is a bare state name derives the same slug as
-    # the state hub, so its URL arrives from two builders at once — the Antique
-    # Trail guide, destination "Connecticut", is what surfaced this. Deduping
-    # here rather than teaching each builder about the others: the invariant is
-    # about the finished list, and that is where it should be enforced.
+    # Kept from the guide-derived era, where a guide whose destination was a
+    # bare state name derived the same slug as the state hub and so arrived
+    # from two builders at once — the Antique Trail guide, destination
+    # "Connecticut", is what surfaced it. Destination URLs now come from one
+    # builder over a uniquely-indexed `path`, so that particular collision is
+    # gone, but the invariant is about the finished list and this is still the
+    # one place that can enforce it across all six builders.
     urls = Enum.uniq_by(urls, & &1.loc)
 
     xml =
@@ -88,4 +84,11 @@ defmodule EthosWeb.SitemapController do
     |> put_resp_header("cache-control", "public, max-age=3600")
     |> send_resp(200, IO.iodata_to_binary(xml))
   end
+
+  # The shared expansion of the glob route to an absolute URL. A `<loc>` built
+  # the wrong way publishes `/destinations/united-states%2Fconnecticut` — a 404
+  # — for every node below a root, which is the failure
+  # `DestinationHTML.node_url/1` now holds in one place for this controller,
+  # `DestinationController` and `PlaceController` alike.
+  defp node_url(path) when is_binary(path), do: EthosWeb.DestinationHTML.node_url(path)
 end

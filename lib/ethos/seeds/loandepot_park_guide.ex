@@ -2,10 +2,12 @@ defmodule Ethos.Seeds.LoandepotParkGuide do
   @moduledoc """
   Seeds the loanDepot park guide. Idempotent by slug.
 
-  ## The county, and the source it does not come from
+  ## The county fact, and the source it does not come from
 
-  Carries `state: "Florida"` and `county: "Miami-Dade County"`, so it lists on
-  both the Florida destination page and the Miami-Dade County one.
+  Names the destination node `united-states/florida/miami`, so it lists on the
+  Florida destination page and on Miami's. The ballparks model no county tier, so
+  Miami-Dade County is recorded here as a sourced fact rather than as a field —
+  and the sourcing matters, because it is not the source the finder cited.
 
   **The county was not taken from the source the finder cited for it.** The
   finder's identity item appended "Miami-Dade County" to MLB.com's ballpark
@@ -68,8 +70,7 @@ defmodule Ethos.Seeds.LoandepotParkGuide do
       slug: "loandepot-park-guide",
       title: "loanDepot park: The Ballpark and Little Havana",
       destination: "Miami, Florida",
-      state: "Florida",
-      county: "Miami-Dade County",
+      destination_path: "united-states/florida/miami",
       intro: """
       loanDepot park stands at 501 Marlins Way in Miami, on the former site of
       the Miami Orange Bowl in Little Havana. It opened for the regular season
