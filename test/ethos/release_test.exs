@@ -541,6 +541,40 @@ defmodule Ethos.ReleaseTest do
     end
   end
 
+  # Production runs a release, not Mix, so Ethos.Release.adjacency_links/0 is
+  # the only way to run Ethos.Adjacency.LinkBuilder.build!/0 after a deploy.
+  # Before this existed, the builder was reachable only from test code and the
+  # spec calls out exactly this gap as the class of defect the last branch
+  # shipped — a release function nothing ever calls.
+  describe "adjacency_links/0" do
+    # Avon and Canton border each other in priv/adjacency.json, the same pair
+    # Ethos.Adjacency.LinkBuilderTest exercises directly.
+    test "writes nearby edges between bordering towns without raising" do
+      user = user_fixture()
+
+      for path <- [@avon, @canton] do
+        # Same precondition as foliage_links/0 above: the loader resolves each
+        # file's destination_path against the destinations table and raises on
+        # a miss, and the builder finds a town by its guide's node, so the
+        # nodes come first either way.
+        Ethos.SeedDataHelpers.seed_destinations_for_file!(path)
+        Ethos.Seeds.DataGuide.upsert_places!(path)
+        Ethos.Seeds.DataGuide.upsert_guide!(path, user.email)
+      end
+
+      avon = Ethos.Guides.get_published_guide_by_slug!("avon-ct-travel-guide")
+
+      assert :ok = Ethos.Release.adjacency_links()
+
+      connected = Ethos.Links.links_for("guide", avon.id)
+
+      assert Enum.any?(
+               connected,
+               &(&1.other.slug == "canton-ct-travel-guide" and &1.kind == "nearby")
+             )
+    end
+  end
+
   # The manifest ships empty and waves append to it, so none of these may
   # assume a size. The load-bearing one while it is still empty is the last:
   # prune deletes only what the manifest names, so a place absent from the

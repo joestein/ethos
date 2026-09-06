@@ -130,7 +130,9 @@ defmodule EthosWeb.HouseAd do
 
   def house_ad(assigns) do
     ~H"""
-    <div :if={@ad} class="px-4 mt-10">
+    <%!-- mb-10, not mt-10: this unit moved from below the content to the top of
+          it, so the gap it needs is underneath. --%>
+    <div :if={@ad} class="px-4 mb-10">
       <.link
         href={~p"/foliage"}
         class="flex items-center gap-4 rounded-xl border p-3 hover:border-zinc-400"

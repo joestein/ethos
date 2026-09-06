@@ -19,9 +19,20 @@ defmodule Ethos.Foliage.Routes do
     |> Enum.map(& &1.slug)
   end
 
+  @doc """
+  The town whose guide and roster node cover `town_slug`.
+
+  Every town answers itself except Mansfield, which has neither a guide nor a
+  node of its own — Storrs, a village within it, carries both. Callers that
+  resolve a town to a guide go through here so the alias table stays in one
+  place, whether they resolve by slug convention (`guide_slug_for/2`) or by
+  destination node (`Ethos.Adjacency.LinkBuilder`).
+  """
+  def covering_town(town_slug), do: Map.get(@aliases, town_slug, town_slug)
+
   @doc "The published guide slug covering `town_slug`, or nil."
   def guide_slug_for(town_slug, published) do
-    candidate = "#{Map.get(@aliases, town_slug, town_slug)}-ct-travel-guide"
+    candidate = "#{covering_town(town_slug)}-ct-travel-guide"
     if MapSet.member?(published, candidate), do: candidate, else: nil
   end
 

@@ -273,6 +273,63 @@ defmodule EthosWeb.PageControllerTest do
     end
   end
 
+  describe "foliage driving routes" do
+    test "lists all seven routes with their links", %{conn: conn} do
+      html = conn |> get(~p"/") |> html_response(200)
+      routes = Ethos.Foliage.routes()
+
+      assert length(routes) == 7
+      assert html =~ "Foliage driving routes"
+
+      for route <- routes do
+        # One route is "New Haven & Neighborhood"; HEEx escapes the ampersand,
+        # so compare against what the page actually contains.
+        escaped = route.name |> Phoenix.HTML.html_escape() |> Phoenix.HTML.safe_to_string()
+
+        assert html =~ escaped
+        assert html =~ ~s(href="/foliage/#{route.slug}")
+      end
+    end
+
+    test "shows each route's town count", %{conn: conn} do
+      html = conn |> get(~p"/") |> html_response(200)
+      route = Ethos.Foliage.route("hartford-west")
+
+      assert html =~ "#{length(route.stops)} towns"
+    end
+
+    test "keeps the Collections section above it", %{conn: conn} do
+      # Collections are seeded in production via `Ethos.Release.seed_collections/0`,
+      # which does not run against the test database, so the Collections section
+      # is otherwise empty (and thus absent — it is `:if`-guarded) here. A
+      # published collection is created directly so both headings actually
+      # render and the ordering assertion below is meaningful.
+      guide = published_guide_fixture(%{title: "Woodbury Wander"})
+
+      Ethos.Collections.upsert_collection!(%{
+        slug: "burys-ordering-test",
+        title: "Burys Ordering Test",
+        published: true,
+        items: [%{guide_slug: guide.slug, blurb: "The antiques one."}]
+      })
+
+      html = conn |> get(~p"/") |> html_response(200)
+
+      # Match the headings themselves, not the bare words — "Collections"
+      # could appear earlier in a meta tag or a link label, and `:binary.match`
+      # returns the first hit wherever it is.
+      collections_heading =
+        ~s(<h2 class="text-sm uppercase tracking-wide text-zinc-400">Collections</h2>)
+
+      routes_heading =
+        ~s(<h2 class="text-sm uppercase tracking-wide text-zinc-400">Foliage driving routes</h2>)
+
+      assert [{collections_at, _}] = :binary.matches(html, collections_heading)
+      assert [{routes_at, _}] = :binary.matches(html, routes_heading)
+      assert collections_at < routes_at
+    end
+  end
+
   # The rendered <title>, whitespace-collapsed the way a browser collapses it.
   defp title(html) do
     [inner] = Regex.run(~r{<title[^>]*>(.*?)</title>}s, html, capture: :all_but_first)

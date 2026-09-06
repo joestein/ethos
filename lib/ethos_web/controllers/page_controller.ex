@@ -48,6 +48,7 @@ defmodule EthosWeb.PageController do
       hubs: Enum.take(all_hubs, 5),
       hub_count: hub_count,
       collections: Ethos.Collections.list_published(),
+      foliage_routes: Ethos.Foliage.routes(),
       layout: false,
       page_title: @page_title,
       page_meta_description: @description,
