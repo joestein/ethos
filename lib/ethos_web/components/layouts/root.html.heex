@@ -7,6 +7,12 @@
     <%= if gsv = Application.get_env(:ethos, :google_site_verification) do %>
       <meta name="google-site-verification" content={gsv} />
     <% end %>
+    <%= if key = Application.get_env(:ethos, :posthog_public_key) do %>
+      <%!-- The key only. Nothing loads from this tag: assets/js/analytics.js
+            reads it and initialises PostHog after consent resolves. Unset in
+            dev and test, so nothing renders and nothing is sent. --%>
+      <meta name="posthog-key" content={key} />
+    <% end %>
     <%= if assigns[:noindex] do %>
       <meta name="robots" content="noindex" />
     <% end %>

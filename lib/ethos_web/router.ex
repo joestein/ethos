@@ -22,6 +22,7 @@ defmodule EthosWeb.Router do
     pipe_through :browser
 
     get "/", PageController, :home
+    get "/privacy", PageController, :privacy
     get "/g/:slug", GuideController, :show
     get "/g/:slug/photos", GuideController, :photos
     get "/destinations", DestinationController, :index
