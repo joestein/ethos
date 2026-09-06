@@ -17,8 +17,8 @@ defmodule EthosWeb.FoliageHTML do
         aria-current={week.index == @current && "page"}
         class={[
           "rounded border px-2 py-1 text-xs",
-          week.index == @current && "border-zinc-900 bg-zinc-900 text-white",
-          week.index != @current && "border-zinc-300 text-zinc-700 hover:border-zinc-500"
+          week.index == @current && "border-accent bg-accent text-accent-ink",
+          week.index != @current && "border-line text-ink-muted hover:border-ink-muted"
         ]}
       >
         {week.label}
@@ -32,7 +32,7 @@ defmodule EthosWeb.FoliageHTML do
     assigns = assign(assigns, :stages, Ethos.Foliage.stage_labels())
 
     ~H"""
-    <ul class="mt-3 flex flex-wrap gap-3 text-xs text-zinc-600">
+    <ul class="mt-3 flex flex-wrap gap-3 text-xs text-ink-muted">
       <li :for={{stage, label} <- @stages} class="flex items-center gap-1.5">
         <span
           class="inline-block h-3 w-3 rounded-sm"
@@ -49,8 +49,8 @@ defmodule EthosWeb.FoliageHTML do
 
   def field_note(assigns) do
     ~H"""
-    <aside :if={@note} class="mt-6 border-l-2 border-zinc-300 pl-4">
-      <p class="text-xs uppercase tracking-wide text-zinc-500">
+    <aside :if={@note} class="mt-6 border-l-2 border-line pl-4">
+      <p class="text-xs uppercase tracking-wide text-ink-muted">
         Field note · {Calendar.strftime(@note.published_on, "%B %-d")}
       </p>
       <div class="prose prose-sm mt-2">{EthosWeb.Markdown.render(@note.body)}</div>
