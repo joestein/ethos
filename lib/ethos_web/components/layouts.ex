@@ -73,4 +73,25 @@ defmodule EthosWeb.Layouts do
     </header>
     """
   end
+
+  @doc """
+  The site footer.
+
+  Rendered from `app.html.heex` AND from `page_html/home.html.heex`, because
+  the home page renders with `layout: false` and never passes through the app
+  layout. Two call sites, for the same reason `site_header/1` has two.
+  """
+  def site_footer(assigns) do
+    ~H"""
+    <footer class="mt-16 border-t border-zinc-100 px-4 py-8 text-sm text-zinc-500 sm:px-6 lg:px-8">
+      <div class="mx-auto flex max-w-2xl items-center justify-between">
+        <span>Ethos</span>
+        <nav class="flex gap-4">
+          <.link navigate={~p"/destinations"} class="hover:text-zinc-700">Destinations</.link>
+          <.link navigate={~p"/privacy"} class="hover:text-zinc-700">Privacy</.link>
+        </nav>
+      </div>
+    </footer>
+    """
+  end
 end

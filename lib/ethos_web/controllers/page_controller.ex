@@ -63,4 +63,15 @@ defmodule EthosWeb.PageController do
       json_ld: [StructuredData.organization(), StructuredData.website()]
     )
   end
+
+  @privacy_title "Privacy"
+  @privacy_description "What Ethos collects, which third parties run on the site, and how to refuse them."
+
+  def privacy(conn, _params) do
+    render(conn, :privacy,
+      page_title: @privacy_title,
+      page_meta_description: @privacy_description,
+      page_canonical: url(~p"/privacy")
+    )
+  end
 end
