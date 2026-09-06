@@ -21,7 +21,7 @@ defmodule EthosWeb.GuideBreadcrumb do
     assigns = assign(assigns, :trail, trail(assigns.guide))
 
     ~H"""
-    <nav class="text-sm text-zinc-500">
+    <nav class="text-sm text-ink-muted">
       <.link navigate={~p"/destinations"} class="underline">Destinations</.link>
       <span :for={crumb <- @trail}>
         / <.link navigate={crumb.path} class="underline">{crumb.name}</.link>
