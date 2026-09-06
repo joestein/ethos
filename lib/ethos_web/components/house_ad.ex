@@ -135,7 +135,7 @@ defmodule EthosWeb.HouseAd do
     <div :if={@ad} class="px-4 mb-10">
       <.link
         href={~p"/foliage"}
-        class="flex items-center gap-4 rounded-xl border p-3 hover:border-zinc-400"
+        class="flex items-center gap-4 rounded-xl border border-line p-3 hover:border-ink-muted"
       >
         <img
           src={@ad.photo["thumb"] || @ad.photo["src"]}
@@ -145,10 +145,10 @@ defmodule EthosWeb.HouseAd do
         />
         <span class="min-w-0">
           <span class="block font-semibold">Connecticut Foliage Forecast</span>
-          <span :if={@ad.town} class="block text-sm text-zinc-600">
+          <span :if={@ad.town} class="block text-sm text-ink-muted">
             {@ad.town.name} — {peak_phrase(@ad.town)} {Foliage.peak_label(@ad.town)}
           </span>
-          <span :if={is_nil(@ad.town)} class="block text-sm text-zinc-600">
+          <span :if={is_nil(@ad.town)} class="block text-sm text-ink-muted">
             169 towns, seven state driving routes
           </span>
         </span>
@@ -157,7 +157,7 @@ defmodule EthosWeb.HouseAd do
             invalid HTML, and the licence obligation on 23 of the 25 pool
             photographs is to keep the source URI attached, not merely to
             name Wikimedia Commons. --%>
-      <p class="mt-1 px-1 text-xs text-zinc-400">
+      <p class="mt-1 px-1 text-xs text-ink-muted">
         {@ad.photo["title"]} — {@ad.photo["author"]}, {@ad.photo["license"]}, via
         <a
           :if={EthosWeb.Url.safe_http?(@ad.photo["source_url"])}
