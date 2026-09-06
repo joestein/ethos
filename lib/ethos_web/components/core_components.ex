@@ -116,14 +116,18 @@ defmodule EthosWeb.CoreComponents do
       role="alert"
       class={[
         "fixed top-2 right-2 mr-2 w-80 sm:w-96 z-50 rounded-lg p-3 ring-1",
-        @kind == :info && "bg-positive/10 text-positive ring-positive fill-cyan-900",
-        @kind == :error && "bg-negative/10 text-negative shadow-md ring-negative fill-negative"
+        @kind == :info && "bg-positive/10 text-ink ring-positive fill-cyan-900",
+        @kind == :error && "bg-negative/10 text-ink shadow-md ring-negative fill-negative"
       ]}
       {@rest}
     >
       <p :if={@title} class="flex items-center gap-1.5 text-sm font-semibold leading-6">
-        <.icon :if={@kind == :info} name="hero-information-circle-mini" class="h-4 w-4" />
-        <.icon :if={@kind == :error} name="hero-exclamation-circle-mini" class="h-4 w-4" />
+        <.icon :if={@kind == :info} name="hero-information-circle-mini" class="h-4 w-4 text-positive" />
+        <.icon
+          :if={@kind == :error}
+          name="hero-exclamation-circle-mini"
+          class="h-4 w-4 text-negative"
+        />
         {@title}
       </p>
       <p class="mt-2 text-sm leading-5">{msg}</p>
