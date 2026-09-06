@@ -116,8 +116,8 @@ defmodule EthosWeb.CoreComponents do
       role="alert"
       class={[
         "fixed top-2 right-2 mr-2 w-80 sm:w-96 z-50 rounded-lg p-3 ring-1",
-        @kind == :info && "bg-positive/10 text-ink ring-positive fill-cyan-900",
-        @kind == :error && "bg-negative/10 text-ink shadow-md ring-negative fill-negative"
+        @kind == :info && "bg-surface-raised text-ink ring-positive fill-cyan-900",
+        @kind == :error && "bg-surface-raised text-ink shadow-md ring-negative fill-negative"
       ]}
       {@rest}
     >
@@ -236,7 +236,7 @@ defmodule EthosWeb.CoreComponents do
       type={@type}
       class={[
         "phx-submit-loading:opacity-75 rounded-lg bg-accent hover:opacity-90 py-2 px-3",
-        "text-sm font-semibold leading-6 text-accent-ink active:text-accent-ink/80",
+        "text-sm font-semibold leading-6 text-accent-ink active:text-accent-ink",
         @class
       ]}
       {@rest}

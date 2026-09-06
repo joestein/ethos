@@ -13,7 +13,7 @@
     >
       <div class="text-3xl">{d.emoji}</div>
       <p class="mt-1 font-semibold">{d.name}</p>
-      <p class="mt-1 text-xs text-ink-muted">{d.description}</p>
+      <p class="mt-1 text-xs text-ink">{d.description}</p>
       <p :if={at = @earned[d.key]} class="mt-1 text-xs text-ink">
         Earned {Calendar.strftime(at, "%b %-d, %Y")}
       </p>
