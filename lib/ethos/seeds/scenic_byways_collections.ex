@@ -41,9 +41,10 @@ defmodule Ethos.Seeds.ScenicBywaysCollections do
       intro: """
       Route 15 from the New York state line east to the Housatonic, designated
       a scenic road by Connecticut in 1993 and one of the state's two
-      National Scenic Byways. It crosses eight Fairfield County towns, and no
-      two of its bridges are alike. The route data here is #{@source}; the
-      name is the one everyone uses, not a field in that dataset.
+      National Scenic Byways. It crosses eight Fairfield County towns, and
+      its bridges were designed individually rather than to a standard
+      pattern. The route data here is #{@source}; the name is the one
+      everyone uses, not a field in that dataset.
       """,
       items: [
         %{
