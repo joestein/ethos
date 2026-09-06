@@ -88,12 +88,12 @@ defmodule EthosWeb.Layouts do
   """
   def site_footer(assigns) do
     ~H"""
-    <footer class="mt-16 border-t border-zinc-100 px-4 py-8 text-sm text-zinc-500 sm:px-6 lg:px-8">
+    <footer class="mt-16 border-t border-line px-4 py-8 text-sm text-ink-muted sm:px-6 lg:px-8">
       <div class="mx-auto flex max-w-2xl items-center justify-between">
         <span>Ethos</span>
         <nav class="flex gap-4">
-          <.link navigate={~p"/destinations"} class="hover:text-zinc-700">Destinations</.link>
-          <.link navigate={~p"/privacy"} class="hover:text-zinc-700">Privacy</.link>
+          <.link navigate={~p"/destinations"} class="hover:text-ink">Destinations</.link>
+          <.link navigate={~p"/privacy"} class="hover:text-ink">Privacy</.link>
         </nav>
       </div>
     </footer>

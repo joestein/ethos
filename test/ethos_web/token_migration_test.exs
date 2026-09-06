@@ -33,7 +33,12 @@ defmodule EthosWeb.TokenMigrationTest do
     "lib/ethos_web/controllers/guide_html/show.html.heex",
     "lib/ethos_web/components/house_ad.ex",
     "lib/ethos_web/live/user_registration_live.ex",
-    "lib/ethos_web/live/user_settings_live.ex"
+    "lib/ethos_web/live/user_settings_live.ex",
+    # Arrived from the PostHog/consent branch, written against the pre-token
+    # palette. The site footer in layouts.ex came with it and reintroduced
+    # hardcoded zinc into a file this guard already covered — which is how
+    # this was caught at merge time rather than shipping unthemed.
+    "lib/ethos_web/controllers/page_html/privacy.html.heex"
   ]
 
   test "no hardcoded palette colours survive in the shared surfaces" do
