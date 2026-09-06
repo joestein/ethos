@@ -1,0 +1,100 @@
+[
+  {
+    "slug": "manhattan",
+    "city": "Manhattan",
+    "status": "build",
+    "path": "united-states/new-york/new-york-city/manhattan",
+    "note": "30+ qualifying rooms, the densest of the fourteen; a Midtown spine from 34th to 58th Street carries roughly two thirds of them, with a second cluster in the Financial District and the Village. Cote is counted here as a Korean beef room and overlaps the korean_bbq corpus; the Koreatown grill census is not imported wholesale."
+  },
+  {
+    "slug": "brooklyn",
+    "city": "Brooklyn",
+    "status": "build",
+    "path": "united-states/new-york/new-york-city/brooklyn",
+    "note": "About 15 qualifying rooms in four clusters: Williamsburg (Peter Luger, St. Anselm, DeStefano's, Salt + Charcoal), the Midwood and Avenue U kosher steakhouse belt, Bay Ridge and Fort Hamilton, and Downtown Brooklyn. The kosher belt is the borough's second real cluster and appears in no mainstream best-of list."
+  },
+  {
+    "slug": "queens",
+    "city": "Queens",
+    "status": "build",
+    "path": "united-states/new-york/new-york-city/queens",
+    "note": "About 16 qualifying rooms, and the borough's steakhouse is South American rather than prime beef. Eight sit on the Argentine and Brazilian parrilla belt along Northern Boulevard, Roosevelt Avenue and Queens Boulevard through Jackson Heights, Elmhurst and Corona; Astoria adds Greek-American steakhouses, with outliers in Bayside, Forest Hills, Flushing and South Ozone Park."
+  },
+  {
+    "slug": "bronx",
+    "city": "The Bronx",
+    "status": "drop",
+    "path": "united-states/new-york/new-york-city/bronx",
+    "note": "Only 6 qualifying rooms survived verification and they cluster nowhere: Riverdale in the north-west, Throgs Neck in the south-east, Parkchester in the east. No destination room; NYY Steak and Lobel's are stadium concessions, not rooms. Folded into a note on the Manhattan page."
+  },
+  {
+    "slug": "staten-island",
+    "city": "Staten Island",
+    "status": "drop",
+    "path": "united-states/new-york/new-york-city/staten-island",
+    "note": "4 qualifying rooms, two of them opened in the last four years and none with verifiable history; Raval's own marketing calls it the island's only authentic steakhouse. Scattered across Tompkinsville, St. George, South Beach and Bulls Head with no cluster. This path does not exist in destination_tree.json and, because the city is dropped, no node needs to be added."
+  },
+  {
+    "slug": "london",
+    "city": "London",
+    "status": "build",
+    "path": "united-kingdom/england/london",
+    "note": "30+ qualifying rooms, nine of them in the World's 101 Best Steak Restaurants 2026. The core is Mayfair, Soho and the City, but Hawksmoor's seven sites and Gaucho's twelve spread the corpus across the boroughs."
+  },
+  {
+    "slug": "chicago",
+    "city": "Chicago",
+    "status": "build",
+    "path": "united-states/illinois/chicago",
+    "note": "20+ qualifying rooms and, unlike korean_bbq, no suburban split. Korean BBQ's mass fled Lawrence Avenue for Niles and Glenview; the steakhouse mass never left downtown, concentrating in River North, the Gold Coast, the Loop and the West Loop."
+  },
+  {
+    "slug": "los-angeles",
+    "city": "Los Angeles",
+    "status": "build",
+    "path": "united-states/california/los-angeles",
+    "note": "About 18 qualifying rooms. Fourteen are inside the city limits, from Koreatown and Downtown out to Echo Park, Hollywood, Larchmont, Venice and the Valley; the page also crosses into Beverly Hills and West Hollywood, which are separate municipalities holding the marquee rooms. No split, because Los Angeles proper sustains a page on its own."
+  },
+  {
+    "slug": "san-francisco",
+    "city": "San Francisco",
+    "status": "build",
+    "path": "united-states/california/san-francisco",
+    "note": "About 12 qualifying rooms inside the city and, unlike korean_bbq, no South Bay page pulling the mass south. Clusters: Nob Hill, the Financial District and Embarcadero, the Design District and SoMa, with Marina, Cow Hollow and the Mission behind them."
+  },
+  {
+    "slug": "seattle",
+    "city": "Seattle",
+    "status": "build",
+    "path": "united-states/washington/seattle",
+    "note": "About 16 qualifying rooms and, unlike korean_bbq, the page is Seattle and not Puget Sound. Korean BBQ was four suburban corridors up to forty miles out; steak is the downtown and Belltown business core plus Capitol Hill, Ballard and the lake neighborhoods, all inside the city limits."
+  },
+  {
+    "slug": "boston",
+    "city": "Boston",
+    "status": "build",
+    "path": "united-states/massachusetts/boston",
+    "note": "About 11 qualifying rooms in two clusters, Back Bay along Boylston and Newbury, and the Seaport, with Beacon Hill and the Theater District between them."
+  },
+  {
+    "slug": "washington-dc",
+    "city": "Washington DC",
+    "status": "build",
+    "path": "united-states/district-of-columbia/washington",
+    "note": "About 15 qualifying rooms on the K Street power-dining corridor with a second node in Georgetown. The one American city where the steakhouse is a political institution rather than a culinary one."
+  },
+  {
+    "slug": "baltimore",
+    "city": "Baltimore",
+    "status": "build",
+    "path": "united-states/maryland/baltimore",
+    "note": "8 qualifying rooms, the thinnest build of the twelve, in two clusters: Mount Vernon around The Prime Rib of 1965 and the Inner Harbor and Harbor East waterfront. Five of the eight are national chain outposts and only two are independent, which makes this the roster's most contestable verdict."
+  },
+  {
+    "slug": "miami",
+    "city": "Miami",
+    "status": "build",
+    "path": "united-states/florida/miami",
+    "note": "About 15 qualifying rooms across the causeway rather than a split. Miami proper holds roughly ten in Brickell, the Design District, Little River, Little Havana and Little Haiti; Miami Beach's South of Fifth carries the spectacle rooms, and Coral Gables and Aventura add three more. Kept as one page because the city's own tourism board publishes a single Miami steakhouse list spanning all four municipalities."
+  }
+]
