@@ -159,6 +159,110 @@ defmodule EthosWeb.PageControllerTest do
     end
   end
 
+  describe "travel guides and collections" do
+    test "lists the five deepest hubs with their counts", %{conn: conn} do
+      published_guide_fixture(%{
+        title: "Woodbury Wander",
+        destination: "Woodbury, Connecticut",
+        state: "Connecticut",
+        county: "Litchfield"
+      })
+
+      published_guide_fixture(%{
+        title: "Roman Holiday",
+        destination: "Rome, Italy",
+        state: "Italy",
+        county: "Lazio"
+      })
+
+      # Connecticut and Italy both have explicit @hub_nouns entries, so without
+      # a third state the "guides" fallback never executes even though it
+      # fires on real data. Tennessee has no entry.
+      published_guide_fixture(%{
+        title: "Music City Weekend",
+        destination: "Nashville, Tennessee",
+        state: "Tennessee",
+        county: "Davidson"
+      })
+
+      html = conn |> get(~p"/") |> html_response(200)
+      hubs = Ethos.Guides.list_states() |> Enum.take(5)
+
+      assert length(hubs) > 1
+      assert html =~ "Travel Guides"
+
+      for hub <- hubs do
+        assert html =~ hub.state
+        assert html =~ ~s(href="/destinations/#{hub.slug}")
+
+        # The count alone is ambient on the page — Tailwind classes, the
+        # AdSense id, the port all contain small integers, so matching a bare
+        # "2" passes even when the count is not rendered at all. The phrase
+        # is what the reader sees and what the noun map is for.
+        assert html =~ "#{hub.count} #{EthosWeb.PageHTML.hub_noun(hub.slug)}"
+      end
+    end
+
+    test "links to all destinations with a count that matches the hub list", %{conn: conn} do
+      published_guide_fixture(%{
+        title: "Woodbury Wander",
+        destination: "Woodbury, Connecticut",
+        state: "Connecticut",
+        county: "Litchfield"
+      })
+
+      html = conn |> get(~p"/") |> html_response(200)
+
+      # /destinations lists states PLUS Guides.list_destinations_without_state/0
+      # (destination_controller.ex) — the ballpark-only destinations with no
+      # state. The count must match that page's total, not just the state hubs,
+      # or the homepage undercounts the page it links to.
+      total =
+        length(Ethos.Guides.list_states()) +
+          length(Ethos.Guides.list_destinations_without_state())
+
+      # The count is computed, not a literal, so it cannot drift from the
+      # page it points at.
+      assert html =~ "All #{total} destinations"
+      assert html =~ ~s(href="/destinations")
+    end
+
+    test "lists every published collection", %{conn: conn} do
+      guide = published_guide_fixture(%{title: "Woodbury Wander"})
+
+      Ethos.Collections.upsert_collection!(%{
+        slug: "burys-home-test",
+        title: "Burys Home Test",
+        published: true,
+        items: [%{guide_slug: guide.slug, blurb: "The antiques one."}]
+      })
+
+      html = conn |> get(~p"/") |> html_response(200)
+      collections = Ethos.Collections.list_published()
+
+      assert collections != []
+      assert html =~ "Collections"
+
+      for c <- collections do
+        escaped = c.title |> Phoenix.HTML.html_escape() |> Phoenix.HTML.safe_to_string()
+        assert html =~ escaped
+        assert html =~ ~s(href="/c/#{c.slug}")
+      end
+    end
+
+    test "keeps the featured guide and the foliage line", %{conn: conn} do
+      featured = published_guide_fixture(%{title: "Featured Trip"})
+      Guides.increment_view_count(featured)
+      published_guide_fixture(%{title: "Another Trip"})
+
+      html = conn |> get(~p"/") |> html_response(200)
+
+      assert html =~ "Featured Trip"
+      assert html =~ "Connecticut Foliage Forecast"
+      assert html =~ "Latest guides"
+    end
+  end
+
   # The rendered <title>, whitespace-collapsed the way a browser collapses it.
   defp title(html) do
     [inner] = Regex.run(~r{<title[^>]*>(.*?)</title>}s, html, capture: :all_but_first)

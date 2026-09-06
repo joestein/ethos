@@ -11,6 +11,7 @@ defmodule Ethos.Application do
       EthosWeb.Telemetry,
       Ethos.Repo,
       Ethos.Foliage.Dataset,
+      Ethos.HouseAd,
       {DNSCluster, query: Application.get_env(:ethos, :dns_cluster_query) || :ignore},
       {Phoenix.PubSub, name: Ethos.PubSub},
       # Start the Finch HTTP client for sending emails

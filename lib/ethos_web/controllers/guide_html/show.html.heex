@@ -43,9 +43,21 @@
         differ for a locale whose :network has no component clause yet, and
         asking the weaker question suppressed this fallback on pages that then
         rendered no widget either. `unit_renders?/1` is the same predicate the
-        components use. --%>
+        components use.
+
+        The house ad (EthosWeb.HouseAd) renders under this same "no affiliate
+        widget" condition, so without the second clause below a guide page
+        outside New York and Italy would carry both — two ad-shaped units.
+        The house ad is specific and internal to Ethos; this CTA is a generic
+        sponsored link that belongs precisely where GetYourGuide has no
+        campaign. The house ad takes precedence, and this remains the
+        fallback for when there is no ad to show (empty pool, no usable
+        photograph). --%>
   <aside
-    :if={not EthosWeb.Affiliate.unit_renders?(assigns)}
+    :if={
+      not EthosWeb.Affiliate.unit_renders?(assigns) and
+        is_nil(EthosWeb.HouseAd.for_page(assigns))
+    }
     class="mt-8 flex flex-wrap items-center justify-between gap-4 rounded-xl border border-amber-200 bg-amber-50 p-5"
   >
     <div>
