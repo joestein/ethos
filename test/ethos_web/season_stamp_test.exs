@@ -1,10 +1,25 @@
 defmodule EthosWeb.SeasonStampTest do
-  @moduledoc "async: false — admin_fixture/1 and a global season override."
+  @moduledoc """
+  async: false — this module sets a global season override
+  (`Ethos.SiteSettings.put_season_override/1`), which is process-wide state,
+  not per-test sandboxed data. Running alongside async tests would race:
+  another test's page render could observe this module's override, or vice
+  versa.
+  """
   use EthosWeb.ConnCase, async: false
 
   import Ethos.AccountsFixtures
 
   test "the home page stamps the current season", %{conn: conn} do
+    # This only proves the attribute is present and well-formed. It cannot
+    # detect PutSeason being missing from the :browser pipeline entirely:
+    # today's calendar season is summer, which is also the layout's
+    # `|| "summer"` fallback value, so a conn that never touched the plug
+    # would stamp the same string and this assertion would still pass. Do
+    # not "strengthen" this by asserting a specific season — that would only
+    # hold for part of the year. "an override changes the stamp", below, is
+    # the test that actually distinguishes the plug running from the plug
+    # being absent, year-round.
     html = conn |> get(~p"/") |> html_response(200)
 
     assert html =~ ~s(data-season=")
