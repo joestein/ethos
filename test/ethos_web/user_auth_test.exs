@@ -120,6 +120,32 @@ defmodule EthosWeb.UserAuthTest do
       refute get_session(conn, :user_token)
       refute conn.assigns.current_user
     end
+
+    test "does not authenticate a banned user whose session survives", %{conn: conn} do
+      admin = Ethos.AccountsFixtures.admin_fixture()
+      user = user_fixture()
+      token = Ethos.Accounts.generate_user_session_token(user)
+
+      {:ok, _} =
+        user
+        |> Ecto.Changeset.change(
+          banned_at: DateTime.utc_now() |> DateTime.truncate(:second),
+          ban_reason: "Enough."
+        )
+        |> Ethos.Repo.update()
+
+      # Deliberately NOT going through Moderation.ban_user/3, which would delete
+      # this token. The point is the belt-and-braces guard: if a session ever
+      # outlives the purge, fetch_current_user must still refuse it.
+      _ = admin
+
+      conn =
+        conn
+        |> Plug.Test.init_test_session(user_token: token)
+        |> EthosWeb.UserAuth.fetch_current_user([])
+
+      refute conn.assigns.current_user
+    end
   end
 
   describe "on_mount :mount_current_user" do

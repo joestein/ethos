@@ -93,7 +93,11 @@ defmodule EthosWeb.UserAuth do
   def fetch_current_user(conn, _opts) do
     {user_token, conn} = ensure_user_token(conn)
     user = user_token && Accounts.get_user_by_session_token(user_token)
-    assign(conn, :current_user, user)
+
+    # Banning deletes the account's tokens, so this is belt and braces — it
+    # closes the window where a request is already in flight when the ban
+    # lands, and it means a session restored from anywhere else still fails.
+    assign(conn, :current_user, if(user && Ethos.Moderation.banned?(user), do: nil, else: user))
   end
 
   defp ensure_user_token(conn) do

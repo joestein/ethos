@@ -1,5 +1,7 @@
 defmodule EthosWeb.UserSessionControllerTest do
-  use EthosWeb.ConnCase, async: true
+  # async: false — admin_fixture/1 inserts the configured admin email, and
+  # concurrent inserts of that unique value deadlock.
+  use EthosWeb.ConnCase, async: false
 
   import Ethos.AccountsFixtures
 
@@ -92,6 +94,21 @@ defmodule EthosWeb.UserSessionControllerTest do
 
       assert Phoenix.Flash.get(conn.assigns.flash, :error) == "Invalid email or password"
       assert redirected_to(conn) == ~p"/users/log_in"
+    end
+
+    test "refuses a banned account with a distinct message", %{conn: conn} do
+      admin = Ethos.AccountsFixtures.admin_fixture()
+      user = user_fixture(%{password: "hello world!"})
+      {:ok, _} = Ethos.Moderation.ban_user(user, "Spamming.", admin)
+
+      conn =
+        post(conn, ~p"/users/log_in", %{
+          "user" => %{"email" => user.email, "password" => "hello world!"}
+        })
+
+      assert redirected_to(conn) == ~p"/users/log_in"
+      assert Phoenix.Flash.get(conn.assigns.flash, :error) == "This account has been suspended."
+      refute get_session(conn, :user_token)
     end
   end
 
