@@ -5,7 +5,7 @@
     "destination": "Rapid City, South Dakota",
     "state": "South Dakota",
     "county": "Pennington County",
-    "intro": "Golf Digest's Best in State ranking places The Golf Club At Red Rock third in South Dakota — the highest-ranked course carrying Golf Digest's own \"Public\" label. The two courses ranked above it are both \"Private\": Sutton Bay Golf Course, first, in Agar, and Minnehaha Country Club, second, in Sioux Falls. Golf Digest rates Red Rock 3.8, from four panelists. Golf Digest's own caveat about the state ranking reads in full: \"The combined scores from courses in South Dakota on our most recent Best in State ranking are among the lowest in the United States, but its top course, Sutton Bay, sits just outside our Second 100 Greatest ranking.\" The Golf Club At Red Rock is in Rapid City, Pennington County, designed by Ron Farris and opened in 2003. Elkhorn Ridge Golf Club, ranked fourth on the same list and also labelled \"Public,\" in Spearfish, gives this guide a second round.",
+    "intro": "Golf Digest's Best in State ranking places The Golf Club At Red Rock third in South Dakota — the highest-ranked course carrying Golf Digest's own \"Public\" label. The two courses ranked above it are both \"Private\": Sutton Bay Golf Course, first, in Agar, and Minnehaha Country Club, second, in Sioux Falls. Golf Digest rates Red Rock 3.8, from four panelists. Golf Digest's own caveat about the state ranking reads in full: \"The combined scores from courses in South Dakota on our most recent Best in State ranking are among the lowest in the United States, but its top course, Sutton Bay, sits just outside our Second 100 Greatest ranking.\" The Golf Club At Red Rock is in Rapid City, Pennington County, designed by Ron Farris and opened in 2003. Meadowbrook Golf Club, the city-owned 18-hole course on Jackson Blvd, gives this guide a second round: it is 5.8 road miles from Red Rock in the same city and the same county, its operator publishes non-member tee times in its own words, and its Club Caddie portal returned bookable non-member slots on four sampled dates.",
     "sections": [
       {
         "heading": "Getting there",
@@ -20,8 +20,12 @@
         "body": "Golf Digest's Best in State ranking places The Golf Club At Red Rock third in South Dakota, the highest \"Public\"-labelled entry on the list, rated 3.8 from four panelists. Golf Digest's own caveat about the ranking reads in full: \"The combined scores from courses in South Dakota on our most recent Best in State ranking are among the lowest in the United States, but its top course, Sutton Bay, sits just outside our Second 100 Greatest ranking.\" Architect Ron Farris, who Golf Digest's own review says \"has lived for decades in Rapid City,\" designed the course; Golf Digest's Ron Whitten writes that \"when he got the opportunity in the early 2000s to create a course in his adopted hometown, he decided to go the lay-of-the-land route\" and that \"Farris pulled it off at The Golf Club at Red Rock.\" The course opened in 2003 and plays to par 72; South Dakota's own state golf directory, southdakotagolf.com, independently records \"Course Type: Public | Architect: Ron Farris | Opened: 2003.\" No yardage figure is published here: Golf Digest, the operator's own marketing copy and the operator's own scorecard each give a different number, and the state golf directory gives a fourth. The operator's rates page, headed in part \"2026 Season & Cart Pass Rates,\" lists 2026 daily green fees: 18 holes with a cart, $130 plus tax; 9 holes with a cart, $75 plus tax; twilight, after 3 PM, with a cart, $100 plus tax; rental clubs $25 for nine holes or $40 for eighteen. The same page states: \"All rates subject to change without notice. Call the golf shop for current rates.\""
       },
       {
-        "heading": "Day two: Elkhorn Ridge Golf Club",
-        "body": "Elkhorn Ridge Golf Club, in Spearfish, ranks fourth on the same Golf Digest Best in State South Dakota list and also carries the \"Public\" label, rated 3.8 from two panelists. Pat Wyss designed the course. The golf shop's phone number is (605) 722-4653."
+        "heading": "Day two: Meadowbrook Golf Club",
+        "body": "Meadowbrook Golf Club is the nearest other publicly accessible course to The Golf Club At Red Rock: 5.8 road miles by OSRM's driving profile, at 3625 Jackson Blvd, in the same city and the same county, Pennington County. It is municipal. The City of Rapid City's own government directory carries it as \"Parks & Recreation - Golf Division - Meadowbrook Golf Course,\" with the office and tee-time line 605-394-4191 and a web link to golfatmeadowbrook.com, whose own footer gives the same street address and the same phone number. The operator's About page describes \"a distinguished 18-hole golf experience rooted in tradition and shaped by thoughtful stewardship. Originally designed by David Gill, this classic parkland layout stretches more than 6,900 yards.\" Rapid Creek runs through the property.\n\nAccess is the operator's own, in the operator's own words rather than a ranking's label. Its tee-times page splits into two headed blocks: under \"Non Member Tee Times,\" \"Did you know you can book tee times online 24/7? Click the button below to book a tee time online\"; under \"Member Tee Times,\" \"All members must log into the member portal to book a tee time online.\" The public button resolves to a Club Caddie portal that renders the club record as \"Meadowbrook Golf Club / 3625 Jackson Blvd., South Dakota, Rapid City, 57702\" and lists \"Open to Public\" among its amenities, alongside Bar, Restaurant, ProShop, Rent Club and Walking. Queried with no login and no member number, that portal returned bookable slots on four sampled dates: 24 on 7 September 2026; 32 on 12 September 2026, the first at 08:10 AM, front nine, for groups of one to four; 51 on 13 September 2026; and 48 on 20 September 2026. Dates from 21 September 2026 onward returned no slots, and neither did 15 April 2027, which sits inside the operator's own published season — that boundary is the tee sheet's rolling advance-booking horizon, not a closure.\n\nThe season is stated on the operator's rates page: \"Typical season is from the middle of March to the end of November and is weather-dependent.\" That sentence is live page content, inside the rates page's 2026 season-pass block, not a notice switched off inside an HTML comment. The operator's own 2026 Tournament Schedule agrees with the same window, running from a Monday 13 April fixture to a Saturday 17 October one, with no entries in December, January or February. No aeration schedule, no winter-closure notice, no renovation notice and no alerts page exists anywhere on the site, live or commented out.\n\nGreen fees are published on the same rates page, under the visible heading \"2026 Season Passes,\" with the page stating \"Fees were approved by City Council Fee Resolution 2025-130.\" The daily fees listed there: 18 holes $60; 18 holes senior 62 and over, active military or veteran $51; 18 holes junior 12 to 17 $25; 9 holes $42; twilight, walking only, $34; a half cart for 18 holes $23; a single-rider cart for 18 holes $30. The page adds, \"The development fee is included in all daily green fees.\" One conflict on that page is recorded rather than smoothed over: its own metadata still describes the page as the 2025 rates while the visible, operator-authored heading reads 2026.\n\nElkhorn Ridge Golf Club, in Spearfish, Lawrence County, ranks fourth on the same Golf Digest Best in State South Dakota list and also carries the \"Public\" label; Pat Wyss designed it and its golf shop number is (605) 722-4653. It is 48.3 road miles from The Golf Club At Red Rock, in a different county and across the Black Hills, and it was this guide's second course on rank rather than on distance. Eleven courses sit closer to Red Rock by road."
+      },
+      {
+        "heading": "Staying and eating in Rapid City",
+        "body": "The Golf Club At Red Rock sits inside Rapid City city, in Pennington County, per the US Census geocoder, so the basecamp is the city itself and not a gateway town: the course is reached from the city street grid, and OSRM routes it out by Muirfield Drive to Sheridan Lake Road, then Jackson Boulevard and West Main Street into downtown, 8.0 road miles. The club has no lodging of its own — its navigation runs Tee Times, Golf, Events, Bar & Grill, Store and Contact Us, and no rooms or cabins appear anywhere on golfclubatredrock.com. It does have a restaurant in the clubhouse, and that restaurant is open to people who are not members: the Rock Bar & Grill, whose own page reads, in the capitals the operator sets, \"WE ARE OPEN to the PUBLIC. You don't have to be a member!\" The club's home page puts it the same way — \"You don't have to be a member to play the course or dine in the bar & grill!\" It publishes hours of 7:00 AM to 10:00 PM Sunday through Thursday and 7:00 AM to 11:00 PM Friday and Saturday, lunch, dinner and snacks daily, a full-service bar, and its own phone line, 605-716-3892, separate from the golf shop's.\n\nDowntown, at 523 Sixth St., the Hotel Alex Johnson has been open since July 1, 1928 and is a member of the Curio Collection by Hilton. Its own copy describes handcrafted décor and Germanic Tudor-inspired architecture alongside \"Historic Style. Newly Renovated Rooms,\" and its own events page lists dated programming at the property through the Buffalo Roundup of September 24-26, 2026, the Black Hills Pow Wow of October 9-11, 2026 and the Lakota Nation Invitational of December 16-19, 2026, on into the Black Hills Stock Show & Rodeo of January 29 - February 6, 2027. It is 8.0 road miles from the course, by Muirfield Drive, Sheridan Lake Road, Jackson Boulevard, West Main Street and Saint Joseph Street to 6th Street. No nightly rate is published here: the hotel's own site publishes none, and Hilton's booking pages return HTTP 403 to automated requests, so there is no dated operator figure to carry. The hotel's phone number is 605-342-1210.\n\nThe hotel runs three food and drink outlets in its own building. Paddy O'Neill's Irish Pub, on the ground floor, \"blends Old World Irish charm with the comfort of a neighborhood tavern, serving up breakfast, lunch, and late-night fare daily,\" with published hours of 8AM to 2AM, a kitchen serving 8AM to 10PM, breakfast seven days a week, Industry Night on Mondays from 4PM, karaoke on Tuesdays and music bingo on Wednesdays. Juniper at Vertex Sky Bar is the rooftop room above it, open daily from 4PM with dinner service 4PM to 9PM and reservations by OpenTable or on 605-484-8593; the third outlet is a Starbucks. Both pubs publish happy-hour price lists, and neither carries a dated qualifier from its operator, so no drink or food price is published in this guide."
       }
     ],
     "faq": [
@@ -42,8 +46,12 @@
         "answer": "The Golf Club At Red Rock is at 6520 Birkdale Dr, Rapid City, in Pennington County. Rapid City Regional Airport (RAP), also in Pennington County, is 17.2 miles from the course by road."
       },
       {
-        "question": "Where can I play a second round near Rapid City?",
-        "answer": "Elkhorn Ridge Golf Club, in Spearfish, ranks fourth on the same Golf Digest Best in State South Dakota list and is also labelled \"Public,\" rated 3.8 from two panelists. Pat Wyss designed it; the golf shop's phone number is (605) 722-4653."
+        "question": "Where can I play a second round in Rapid City?",
+        "answer": "Meadowbrook Golf Club, the city-owned 18-hole course at 3625 Jackson Blvd, 5.8 road miles from The Golf Club At Red Rock and in the same county, Pennington County. Its operator publishes non-member tee times in its own words — \"Did you know you can book tee times online 24/7?\" — and its Club Caddie portal, queried with no login, returned between 24 and 51 bookable slots on each of four sampled dates in September 2026, listing \"Open to Public\" among the club's amenities. Daily fees published under the operator's \"2026 Season Passes\" heading run from $25 for a junior 18 holes to $60 for an adult 18 holes, and the operator states its typical season as from the middle of March to the end of November, weather-dependent. Elkhorn Ridge Golf Club in Spearfish, fourth on the same Golf Digest list, is 48.3 road miles away in Lawrence County."
+      },
+      {
+        "question": "Where do I stay and eat around the course?",
+        "answer": "The Golf Club At Red Rock is inside Rapid City city and has no lodging of its own, so the basecamp is the city. The Hotel Alex Johnson, at 523 Sixth St. downtown, is 8.0 road miles from the course; it opened on July 1, 1928, belongs to the Curio Collection by Hilton and publishes no nightly rate, so none is quoted here. Two of its three food and drink outlets are Paddy O'Neill's Irish Pub, open 8AM to 2AM daily with the kitchen serving to 10PM, and Juniper at Vertex Sky Bar on the roof. At the course itself, the Rock Bar & Grill in the clubhouse states \"WE ARE OPEN to the PUBLIC. You don't have to be a member!\" and serves from 7:00 AM daily."
       }
     ],
     "photos": []
@@ -63,14 +71,54 @@
       "photos": []
     },
     {
-      "slug": "elkhorn-ridge-golf-club-spearfish",
-      "name": "Elkhorn Ridge Golf Club",
+      "slug": "meadowbrook-golf-club-rapid-city",
+      "name": "Meadowbrook Golf Club",
       "kind": "golf-course",
-      "town": "Spearfish",
+      "town": "Rapid City",
       "state": "South Dakota",
-      "county": "Lawrence County",
-      "address": "6845 Saint Onge Rd, Spearfish, SD",
-      "summary": "Fourth on the same Golf Digest Best in State South Dakota ranking and also labelled \"Public,\" rated 3.8 from two panelists. Designed by Pat Wyss. Golf shop: (605) 722-4653.",
+      "county": "Pennington County",
+      "address": "3625 Jackson Blvd, Rapid City, SD 57702",
+      "official_url": "https://www.golfatmeadowbrook.com",
+      "summary": "The nearest other publicly accessible course to The Golf Club At Red Rock: 5.8 road miles, in the same city and the same county. A city-owned 18-hole parkland course carried in the City of Rapid City's own government directory under Parks & Recreation's Golf Division, originally designed by David Gill and stretching more than 6,900 yards, with Rapid Creek running through it. Access is the operator's own: its tee-times page heads a block \"Non Member Tee Times\" and states \"Did you know you can book tee times online 24/7?\", and its Club Caddie portal — queried with no login — returned 24, 32, 51 and 48 bookable slots on four sampled September 2026 dates, listing \"Open to Public\" among the club's amenities. The operator states \"Typical season is from the middle of March to the end of November and is weather-dependent,\" and publishes daily fees under a \"2026 Season Passes\" heading citing City Council Fee Resolution 2025-130: 18 holes $60, 9 holes $42, twilight walking $34, junior 18 holes $25. Phone 605-394-4191.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "hotel-alex-johnson-rapid-city",
+      "name": "Hotel Alex Johnson",
+      "kind": "hotel",
+      "town": "Rapid City",
+      "state": "South Dakota",
+      "county": "Pennington County",
+      "address": "523 Sixth St. Rapid City, SD, 57701",
+      "official_url": "https://www.alexjohnson.com/",
+      "summary": "The lodging this guide bases on, 8.0 road miles from The Golf Club At Red Rock by OSRM's driving route through downtown Rapid City. The hotel's own copy states it opened its doors on July 1, 1928, that it is \"a member of the coveted Curio Collection by Hilton,\" and that its handcrafted décor and Germanic Tudor-inspired architecture sit alongside \"Historic Style. Newly Renovated Rooms.\" It runs three food and drink outlets in its own building — Juniper at Vertex Sky Bar, Paddy O'Neill's Irish Pub and a Starbucks — so a golfer basing here can eat without moving the car. Its trading status rests on its own events page, which lists dated programming at the property from the Buffalo Roundup of September 24-26, 2026 through to the Sturgis Rally of August 6-15, 2027. No nightly rate is published: the operator's site carries none and Hilton's booking pages return HTTP 403 to automated requests. Phone 605-342-1210.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "rock-bar-and-grill-rapid-city",
+      "name": "Rock Bar & Grill",
+      "kind": "restaurant",
+      "town": "Rapid City",
+      "state": "South Dakota",
+      "county": "Pennington County",
+      "address": "6520 Birkdale Dr. Rapid City, SD 57702",
+      "official_url": "https://www.golfclubatredrock.com/bar-grill/general-info",
+      "summary": "The restaurant in The Golf Club At Red Rock's own clubhouse, at the course's address, and open to people who are not members: its own page reads, in the operator's capitals, \"WE ARE OPEN to the PUBLIC. You don't have to be a member!\", and the club's home page says the same — \"You don't have to be a member to play the course or dine in the bar & grill!\" The operator states that \"Lunch and dinner as well as snacks are available daily\" alongside \"a full-service bar featuring your favorite beer, wine, and liquor.\" Published hours are 7:00 AM to 10:00 PM Sunday through Thursday and 7:00 AM to 11:00 PM Friday and Saturday, with happy hour Monday, Tuesday and Thursday 4:00 PM to 6:00 PM and all day Wednesday. It keeps its own phone line, 605-716-3892, separate from the golf shop's. Its happy-hour drink prices carry no dated qualifier from the operator and are not published here.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "paddy-oneills-irish-pub-rapid-city",
+      "name": "Paddy O'Neill's Irish Pub",
+      "kind": "restaurant",
+      "town": "Rapid City",
+      "state": "South Dakota",
+      "county": "Pennington County",
+      "address": "523 Sixth St. Rapid City, SD, 57701",
+      "official_url": "https://www.alexjohnson.com/dining/paddy-oneills-irish-pub/",
+      "summary": "The pub on the ground floor of the Hotel Alex Johnson, 8.0 road miles from The Golf Club At Red Rock. In its own words it \"blends Old World Irish charm with the comfort of a neighborhood tavern, serving up breakfast, lunch, and late-night fare daily,\" with \"a fine Irish whisky,\" draft beer and \"traditional Irish dishes and mouthwatering American favorites\"; it also states that it is \"Proudly Seed-Oil Free.\" Published hours are 8AM to 2AM daily with the kitchen serving 8AM to 10PM and breakfast seven days a week, and its standing weekly programme is Industry Night on Mondays from 4PM, karaoke on Tuesdays 8PM to 12AM and music bingo on Wednesdays at 7PM. It takes orders in person, online and through DoorDash. Its happy-hour and beer-bucket prices carry no dated qualifier from the operator and are not published here.",
       "status": "open",
       "photos": []
     }
@@ -84,9 +132,27 @@
     },
     {
       "kind": "sight",
-      "name": "Elkhorn Ridge Golf Club",
-      "place_slug": "elkhorn-ridge-golf-club-spearfish",
-      "note": "Day two: fourth on the same list, also \"Public\"; Pat Wyss, in Spearfish."
+      "name": "Meadowbrook Golf Club",
+      "place_slug": "meadowbrook-golf-club-rapid-city",
+      "note": "Day two: the nearest other publicly accessible course, 5.8 road miles away in Rapid City, city-owned, with non-member tee times published by its own operator."
+    },
+    {
+      "kind": "stay",
+      "name": "Hotel Alex Johnson",
+      "place_slug": "hotel-alex-johnson-rapid-city",
+      "note": "Downtown Rapid City, 8.0 road miles from the course; open since July 1, 1928 and part of the Curio Collection by Hilton, with three food and drink outlets in the building."
+    },
+    {
+      "kind": "food",
+      "name": "Rock Bar & Grill",
+      "place_slug": "rock-bar-and-grill-rapid-city",
+      "note": "In the clubhouse at the course itself: \"WE ARE OPEN to the PUBLIC. You don't have to be a member!\", serving from 7:00 AM daily."
+    },
+    {
+      "kind": "food",
+      "name": "Paddy O'Neill's Irish Pub",
+      "place_slug": "paddy-oneills-irish-pub-rapid-city",
+      "note": "On the ground floor of the Hotel Alex Johnson, 8.0 road miles from the course; open 8AM to 2AM daily, kitchen to 10PM."
     }
   ]
 }

@@ -20,8 +20,12 @@
         "body": "A visiting golfer does not need an annual pass to play TPC Louisiana. The course's own site links a \"Book A Tee Time\" tool that leads to its ezLinks booking engine; that engine's own search-configuration data, read directly from its API, gives a public booking window running from September 6, 2026 to January 20, 2027 — 136 days — and prices the visiting golfer on a \"Non-Resident\" tier. Live pricing read from the same engine's search API: for Sunday, September 20, 2026, 44 bookable slots ran $119 to $299 for eighteen holes (first tee 7:25 a.m., last 5:45 p.m.); for Wednesday, September 23, 2026, 53 bookable slots ran $119 to $279. Every slot in both searches carried a 48-hour cancellation period, and a search run for a single golfer returned the identical full inventory as a search for a group, so a party of one can book. The engine requires an account to complete a booking; it does not allow checkout as a guest. Separately from that public route, TPC Louisiana's own site sells three optional annual products, none of which is required to play a round: a Full Annual Pass at $4,800 per year plus tax, with unlimited play at cart-fee-only rates of $28 for eighteen holes or $14 for nine (read from the page in September 2026); a Weekday Annual Pass, on its own dedicated page, at $3,000 per year plus tax, for Monday-through-Thursday access; and a NOLA Card, restricted to Louisiana residents, at $329 per year plus tax, with the first round at cart-fee-only and unlimited additional golf at $74 per round, on a two-day booking window, with weekend rounds restricted to after 8:30 a.m. from October 1 through May 15 per the card's own undated page."
       },
       {
+        "heading": "Day two: Timberlane Golf & Recreation",
+        "body": "The nearest other publicly accessible course to TPC Louisiana is Timberlane Golf & Recreation, at 700 Lapalco Boulevard in Gretna — 9.0 road miles by OSRM routing between the two clubhouses, along the same named road, Lapalco Boulevard, that carries TPC Louisiana itself. The U.S. Census Bureau's geocoder, run against the course's own coordinates, returns Jefferson Parish and the Incorporated Place \"Gretna city\" — the same parish as TPC Louisiana. The operator's own course page states, \"Although open to the public, golf memberships also provide several perks and privileges that make Timberlane unique,\" and its booking page adds, \"Please note Non-Members must book through the TGR website which has no booking fee.\" The booking system agrees with the words: Timberlane's foreUP tee sheet carries a booking class the operator itself names \"Timberlane 18 Hole Public Tee Times,\" left unprotected by any password, and an unauthenticated query of that class for Thursday, September 10, 2026 returned 68 bookable eighteen-hole slots, most of them with all four spots open. The course is an 18-hole, par-72 Robert Trent Jones, Sr. layout that opened in 1959 as, in the operator's words, \"the Westbank's first private country club\"; the Timberlane Neighborhood Improvement and Beautification District assumed ownership in 2018, and the facility now \"operates as Timberlane Golf and Recreation.\" Published hours are 7:00 a.m. to 8:00 p.m. Tuesday through Friday, 6:30 a.m. to 8:00 p.m. Saturday and 6:30 a.m. to 7:00 p.m. Sunday, with the course closed on Mondays — a closure the tee sheet confirms, since the same unauthenticated query run for Monday, September 14, 2026 returned no bookable times at all. No dated rate card exists anywhere on the operator's site, only live booking quotes that vary from slot to slot, so no green fee is published here. The operator publishes no conditions calendar, aeration schedule or news page either, so openness beyond that weekly Monday closure is unverified rather than established. The Country Club At Golden Nugget in Lake Charles, fifth on the same Golf Digest list, is a public casino-resort course at the far end of the state: OSRM puts it 212.3 road miles from TPC Louisiana, against Timberlane's 9.0, so it is not a same-trip second round."
+      },
+      {
         "heading": "New Orleans basecamp",
-        "body": "Hotel Monteleone, at 214 Royal Street in New Orleans, describes itself as \"A French Quarter Classic\" and \"a family-owned landmark,\" open \"since 1886.\" Galatoire's, at 209 Bourbon Street, is the restaurant's own address as given on its own site. Both sit in the French Quarter, the basis for the 14.2-mile road distance to TPC Louisiana given above."
+        "body": "TPC Louisiana has no lodging on the property, and Avondale is an unincorporated stretch of the West Bank with no hotel stock, so the basecamp is New Orleans, in Orleans Parish. By OSRM routing from the course's own coordinates, the whole of the French Quarter and the Central Business District falls inside a band of 13.09 to 13.94 road miles, a spread of 0.85 miles, so the choice is made on what a visitor gets rather than on mileage.\n\nHotel Monteleone, 214 Royal Street, is 13.91 road miles from the course. Its own site calls it \"A French Quarter Classic for a Reason\" and \"A family-owned landmark in the French Quarter,\" and dates itself to 1886, when a Sicilian cobbler named Antonio Monteleone bought the Hotel Victor at Iberville and Royal; he expanded it from three storeys to five in 1896 and renamed it the Commercial Hotel, and the hotel's own timeline records a \"massive overhaul\" in 1908. It is a designated National Literary Landmark of the American Library Association and a member of Historic Hotels of America, and writes that \"from Tennessee Williams to Truman Capote, our walls have served as a muse for the world's greatest storytellers.\" On site are the revolving Carousel Bar & Lounge, which \"started spinning in 1949 and hasn't stopped since\" and carries live music seven nights a week; Criollo restaurant; the Acqua Bella poolside bar; a heated rooftop pool open year-round; Spa Aria; and a 24/7 fitness center. The hotel advertises percentage offers rather than nightly rates, so no room rate is published here.\n\nThe Roosevelt New Orleans, A Waldorf Astoria Hotel, on Roosevelt Way in the Central Business District, is 13.94 road miles from the course. The operator calls it \"a beacon of New Orleans Hospitality,\" \"displaying over 130 years of grandeur,\" and \"both an elegant time capsule and an architectural marvel.\" Its Sazerac Bar is described as a \"restored landmark\" that \"has kept the cocktails and conversations flowing for decades\"; the Fountain Lounge, Teddy's Café in the Grand Lobby, the Rooftop at the Roosevelt poolside bar and the Waldorf Astoria Spa are also on the property. No street number is given for it here: the operator's own contact page was not confirmed for one, and the coordinate behind the distance above is OpenStreetMap's. Room rates are dynamic and none is published.\n\nGalatoire's, 209 Bourbon Street, is 13.86 road miles from the course. Its history page heads itself \"Galatoire's: A historic tradition of New Orleans dining since 1905\" and records that Jean Galatoire, from the French village of Pardies, founded it that year; five generations later his descendants \"have remained true to his vision\" at the same address. The menu is \"anchored in the French Creole tradition\" and \"brimming with bountiful seafood from the Gulf.\" Since 2009 the ownership has been a partnership between Jean Galatoire's descendants and the Louisiana businessmen Todd Trosclair and John Georges, with Melvin Rodrigue as CEO. The restaurant's published dining-room hours are: closed Monday; Tuesday to Saturday, 11:30 a.m. to 9 p.m.; Sunday, 12 p.m. to 9 p.m.\n\nCochon, 930 Tchoupitoulas Street in the Warehouse District, is 13.09 road miles from the course, the shortest of the four routes. Chef Donald Link and chef and co-owner Stephen Stryjewski serve \"the traditional Cajun Southern dishes he grew up with,\" working \"with locally sourced pork, fresh produce and seafood,\" in what the restaurant calls \"a rustic, yet contemporary interior of a renovated New Orleans warehouse.\" Its own header reads \"Dine-In Reservations | Walk-Ins Welcome | Private Dining,\" and it holds space at the bar, the chef's counter and, weather permitting, the patio for walk-ins, with reservations through Resy. Published hours are daily, 11 a.m. to 10 p.m., which covers the Monday the Galatoire's dining room is closed."
       }
     ],
     "faq": [
@@ -44,6 +48,10 @@
       {
         "question": "What else is on Golf Digest's Louisiana list?",
         "answer": "TPC Louisiana ranks fourth on Golf Digest's 2025-'26 Best in State list for Louisiana, labelled \"Public.\" The three courses ranked above it — Squire Creek Country Club, The Country Club of Louisiana and Metairie Country Club — are each labelled \"Private.\" Fifth, also labelled \"Public,\" is The Country Club At Golden Nugget in Lake Charles, an 18-hole, par-72 course on the bayou designed by Todd Eckenrode and Origins Golf Designs."
+      },
+      {
+        "question": "Which course should I play on day two?",
+        "answer": "Timberlane Golf & Recreation, 700 Lapalco Boulevard, Gretna — the nearest other publicly accessible course to TPC Louisiana at 9.0 road miles by OSRM routing, in the same Jefferson Parish. The operator's own course page reads, \"Although open to the public, golf memberships also provide several perks and privileges that make Timberlane unique,\" and its booking page states that non-members book through the TGR website, which charges no booking fee. Its foreUP tee sheet carries an unprotected class the operator names \"Timberlane 18 Hole Public Tee Times,\" which returned 68 bookable eighteen-hole slots to an unauthenticated query for Thursday, September 10, 2026. It is an 18-hole, par-72 Robert Trent Jones, Sr. course, opened in 1959, closed on Mondays. No dated rate card exists on the operator's site, so no green fee is stated here. The Country Club At Golden Nugget, fifth on the same Golf Digest list, is 212.3 road miles from TPC Louisiana and is not a same-trip second round."
       }
     ],
     "photos": []
@@ -62,14 +70,14 @@
       "photos": []
     },
     {
-      "slug": "country-club-at-golden-nugget-lake-charles",
-      "name": "The Country Club At Golden Nugget",
+      "slug": "timberlane-golf-and-recreation-gretna",
+      "name": "Timberlane Golf & Recreation",
       "kind": "golf-course",
-      "town": "Lake Charles",
+      "town": "Gretna",
       "state": "Louisiana",
-      "county": "Calcasieu Parish",
-      "official_url": "https://goldennugget.com/lake-charles",
-      "summary": "Fifth on the same Golf Digest 2025-'26 Louisiana ranking, also labelled \"Public.\" The operator's own golf page, read via a Wayback Machine snapshot, describes an 18-hole, par-72 course on the bayou designed by Todd Eckenrode and Origins Golf Designs, playing to 7,000 yards, with rates of $159 general admission, $129 for Golden Nugget Hotel guests, $79 for juniors under 18 and an $89 twilight rate from 2 p.m. daily, as posted on that snapshot.",
+      "county": "Jefferson Parish",
+      "official_url": "https://www.playtimberlane.com/",
+      "summary": "The nearest other publicly accessible course to TPC Louisiana — 9.0 road miles by OSRM routing, along the same Lapalco Boulevard that carries both — at 700 Lapalco Boulevard in Gretna, Jefferson Parish. An 18-hole, par-72 Robert Trent Jones, Sr. layout that opened in 1959 as the Westbank's first private country club; the Timberlane Neighborhood Improvement and Beautification District assumed ownership in 2018 and the facility now operates as Timberlane Golf and Recreation. The operator's own course page states, \"Although open to the public, golf memberships also provide several perks and privileges that make Timberlane unique,\" and its booking page adds that non-members book through the TGR website, which charges no booking fee. Its foreUP tee sheet carries an unprotected booking class the operator names \"Timberlane 18 Hole Public Tee Times,\" which returned 68 bookable eighteen-hole slots to an unauthenticated query for Thursday, September 10, 2026; the course is closed on Mondays, and no dated rate card exists on the operator's site, so no green fee is published.",
       "status": "open",
       "photos": []
     },
@@ -81,7 +89,7 @@
       "state": "Louisiana",
       "county": "Orleans Parish",
       "official_url": "https://www.hotelmonteleone.com/",
-      "summary": "A French Quarter hotel at 214 Royal Street in New Orleans, open since 1886. The hotel's own site describes it as \"A French Quarter Classic\" and \"a family-owned landmark.\"",
+      "summary": "A family-owned French Quarter hotel at 214 Royal Street, New Orleans, 13.91 road miles from TPC Louisiana, which its own site calls \"A French Quarter Classic for a Reason\" and \"A family-owned landmark in the French Quarter.\" Its timeline dates the house to 1886, when a Sicilian cobbler named Antonio Monteleone bought the Hotel Victor at Iberville and Royal; he took it from three storeys to five in 1896 and renamed it the Commercial Hotel, with a \"massive overhaul\" following in 1908. It is a designated National Literary Landmark of the American Library Association and a member of Historic Hotels of America. On site are the revolving Carousel Bar & Lounge, which \"started spinning in 1949 and hasn't stopped since,\" with live music seven nights a week; Criollo restaurant; the Acqua Bella poolside bar; a heated rooftop pool open year-round; Spa Aria; and a 24/7 fitness center. The hotel advertises percentage offers rather than nightly rates, so no room rate is published.",
       "status": "open",
       "photos": []
     },
@@ -93,7 +101,31 @@
       "state": "Louisiana",
       "county": "Orleans Parish",
       "official_url": "https://www.galatoires.com/",
-      "summary": "A restaurant at 209 Bourbon Street in the French Quarter, New Orleans, per its own site.",
+      "summary": "A French Creole restaurant at 209 Bourbon Street in the French Quarter, New Orleans, 13.86 road miles from TPC Louisiana. Its own history page heads itself \"Galatoire's: A historic tradition of New Orleans dining since 1905\" and records that Jean Galatoire, from the French village of Pardies, founded it that year with family recipes from his homeland, and that five generations later his descendants \"have remained true to his vision\" at the same address. The menu is \"anchored in the French Creole tradition\" and \"brimming with bountiful seafood from the Gulf.\" Since 2009 ownership has been a partnership between Jean Galatoire's descendants and the Louisiana businessmen Todd Trosclair and John Georges, with Melvin Rodrigue as CEO. Published dining-room hours: closed Monday; Tuesday to Saturday, 11:30 a.m. to 9 p.m.; Sunday, 12 p.m. to 9 p.m.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "the-roosevelt-new-orleans",
+      "name": "The Roosevelt New Orleans, A Waldorf Astoria Hotel",
+      "kind": "hotel",
+      "town": "New Orleans",
+      "state": "Louisiana",
+      "county": "Orleans Parish",
+      "official_url": "https://therooseveltneworleans.com/",
+      "summary": "A landmark hotel on Roosevelt Way in the Central Business District of New Orleans, 13.94 road miles from TPC Louisiana, which the operator calls \"a beacon of New Orleans Hospitality,\" \"displaying over 130 years of grandeur,\" and \"both an elegant time capsule and an architectural marvel.\" Its Sazerac Bar is described as a \"restored landmark\" that \"has kept the cocktails and conversations flowing for decades\"; the Fountain Lounge, Teddy's Café in the Grand Lobby, the Rooftop at the Roosevelt poolside bar and the Waldorf Astoria Spa are also on the property, and the operator names Standard, Deluxe, Superior, King Suite and Luxury Suite room tiers. No street number is published for it: the operator's own contact page was not confirmed for one, and the coordinate behind the road distance is OpenStreetMap's. Room rates are dynamic, so none is published.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "cochon-new-orleans",
+      "name": "Cochon",
+      "kind": "restaurant",
+      "town": "New Orleans",
+      "state": "Louisiana",
+      "county": "Orleans Parish",
+      "official_url": "https://cochonrestaurant.com/",
+      "summary": "A Cajun restaurant at 930 Tchoupitoulas Street in the Warehouse District of New Orleans, 13.09 road miles from TPC Louisiana — the shortest of this guide's four basecamp routes. Chef Donald Link and chef and co-owner Stephen Stryjewski serve \"the traditional Cajun Southern dishes he grew up with,\" working \"with locally sourced pork, fresh produce and seafood, focusing on traditional methods,\" in what the restaurant calls \"a rustic, yet contemporary interior of a renovated New Orleans warehouse.\" Its own header reads \"Dine-In Reservations | Walk-Ins Welcome | Private Dining\": space is held at the bar, the chef's counter and, weather permitting, the patio for walk-ins, with reservations through Resy, and groups of eight to eighteen are hosted in the Diamond Street dining room on a \"Feed Me\" menu. Published hours are daily, 11 a.m. to 10 p.m.",
       "status": "open",
       "photos": []
     }
@@ -107,21 +139,33 @@
     },
     {
       "kind": "sight",
-      "name": "The Country Club At Golden Nugget",
-      "place_slug": "country-club-at-golden-nugget-lake-charles",
-      "note": "Fifth on the same Golf Digest list, also \"Public,\" in Lake Charles; Todd Eckenrode and Origins Golf Designs."
+      "name": "Timberlane Golf & Recreation",
+      "place_slug": "timberlane-golf-and-recreation-gretna",
+      "note": "Day two: the nearest other public course, 9.0 road miles from TPC Louisiana in the same Jefferson Parish; Robert Trent Jones, Sr., opened 1959; \"open to the public\" in the operator's words, closed Mondays."
     },
     {
       "kind": "stay",
       "name": "Hotel Monteleone",
       "place_slug": "hotel-monteleone-new-orleans",
-      "note": "French Quarter hotel open since 1886, 214 Royal Street."
+      "note": "French Quarter hotel at 214 Royal Street, family-owned since 1886; the revolving Carousel Bar and Criollo on site; 13.91 road miles from TPC Louisiana."
     },
     {
       "kind": "food",
       "name": "Galatoire's",
       "place_slug": "galatoires-new-orleans",
-      "note": "French Quarter restaurant, 209 Bourbon Street."
+      "note": "French Creole institution at 209 Bourbon Street, founded 1905; dining room closed Mondays; 13.86 road miles from TPC Louisiana."
+    },
+    {
+      "kind": "stay",
+      "name": "The Roosevelt New Orleans, A Waldorf Astoria Hotel",
+      "place_slug": "the-roosevelt-new-orleans",
+      "note": "Central Business District landmark on Roosevelt Way, home of the Sazerac Bar; 13.94 road miles from TPC Louisiana."
+    },
+    {
+      "kind": "food",
+      "name": "Cochon",
+      "place_slug": "cochon-new-orleans",
+      "note": "Donald Link's Cajun room at 930 Tchoupitoulas Street, walk-ins welcome, open daily; 13.09 road miles from TPC Louisiana."
     }
   ]
 }
