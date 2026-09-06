@@ -274,13 +274,17 @@ defmodule Ethos.Social do
   @doc """
   Edits a review.
 
-  An untrusted author's edit returns it to `pending`. Without that, posting
-  something innocuous, waiting for approval, then editing it into something
-  else would publish unmoderated text.
+  A revoked review stays revoked, for either author. Trust buys a place at
+  the front of the queue, not a way to undo a moderator's decision — and
+  without this clause first, an untrusted author could edit a revoked review
+  back into `pending`, forcing re-moderation and erasing the revoked count
+  the admin console's Users tab exists to show.
 
-  A trusted author keeps whatever status the review already had — which for a
-  revoked review means it stays revoked. Trust buys a place at the front of
-  the queue, not a way to undo a moderator's decision.
+  Otherwise, an untrusted author's edit returns it to `pending`. Without
+  that, posting something innocuous, waiting for approval, then editing it
+  into something else would publish unmoderated text.
+
+  A trusted author keeps whatever status the review already had.
   """
   def update_review(%Review{} = review, %User{} = user, attrs) do
     review
@@ -290,6 +294,7 @@ defmodule Ethos.Social do
     |> Repo.update()
   end
 
+  defp edited_status(%Review{status: "revoked"}, %User{}), do: "revoked"
   defp edited_status(%Review{}, %User{trusted_at: nil}), do: "pending"
   defp edited_status(%Review{status: status}, %User{}), do: status
 

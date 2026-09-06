@@ -108,6 +108,39 @@ defmodule EthosWeb.Admin.UsersLiveTest do
     refute html =~ ~s(id="ban-#{admin.id}")
   end
 
+  # The ban form is already hidden on this row (see the test above); the
+  # trust/untrust buttons were not, which is what let the admin self-trust
+  # and self-untrust with no crafted id needed.
+  test "the admin's own row has no trust or untrust control", %{conn: conn, admin: admin} do
+    {:ok, _view, html} = conn |> log_in_user(admin) |> live(~p"/admin/users")
+
+    refute html =~ ~s(phx-click="trust" phx-value-id="#{admin.id}")
+    refute html =~ ~s(phx-click="untrust" phx-value-id="#{admin.id}")
+  end
+
+  test "a crafted trust event against the admin's own id is refused with a clear flash", %{
+    conn: conn,
+    admin: admin
+  } do
+    {:ok, view, _html} = conn |> log_in_user(admin) |> live(~p"/admin/users")
+
+    html = render_click(view, "trust", %{"id" => to_string(admin.id)})
+
+    assert html =~ "You cannot change your own trust status."
+    refute Ethos.Repo.reload!(admin).trusted_at
+  end
+
+  test "a crafted untrust event against the admin's own id is refused with a clear flash", %{
+    conn: conn,
+    admin: admin
+  } do
+    {:ok, view, _html} = conn |> log_in_user(admin) |> live(~p"/admin/users")
+
+    html = render_click(view, "untrust", %{"id" => to_string(admin.id)})
+
+    assert html =~ "You cannot change your own trust status."
+  end
+
   test "the console links to the other tabs", %{conn: conn, admin: admin} do
     {:ok, _view, html} = conn |> log_in_user(admin) |> live(~p"/admin/users")
 

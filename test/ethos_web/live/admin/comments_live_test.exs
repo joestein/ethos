@@ -55,6 +55,47 @@ defmodule EthosWeb.Admin.CommentsLiveTest do
     assert html =~ "9"
   end
 
+  # Approving grants trust automatically (Moderation.maybe_trust_author/4),
+  # so the one click here has a second consequence the admin cannot see
+  # without this: it fast-lanes every future comment from this author
+  # straight past the queue. Untrusted-by-default is the base case and gets
+  # no badge — only a trusted row needs the tell.
+  test "a trusted author's row is marked trusted, an untrusted author's is not", %{
+    conn: conn,
+    admin: admin
+  } do
+    trusted_author = user_fixture(%{username: "regular"})
+    {:ok, _} = Moderation.trust_user(trusted_author, admin)
+
+    {:ok, _} =
+      Social.create_review(Repo.reload!(trusted_author), published_guide_fixture(), %{
+        "rating" => "10",
+        "body" => "Fast-laned words."
+      })
+
+    untrusted_author = user_fixture(%{username: "newcomer"})
+
+    {:ok, _} =
+      Social.create_review(untrusted_author, published_guide_fixture(), %{
+        "rating" => "3",
+        "body" => "Newcomer words."
+      })
+
+    {:ok, _view, html} = conn |> log_in_user(admin) |> live(~p"/admin/comments")
+
+    trusted_row = html |> extract_row("Fast-laned words.")
+    untrusted_row = html |> extract_row("Newcomer words.")
+
+    assert trusted_row =~ "trusted"
+    refute untrusted_row =~ "trusted"
+  end
+
+  defp extract_row(html, needle) do
+    html
+    |> String.split("<li")
+    |> Enum.find("", &String.contains?(&1, needle))
+  end
+
   test "approving publishes the comment", %{
     conn: conn,
     admin: admin,

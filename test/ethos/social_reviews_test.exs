@@ -164,6 +164,25 @@ defmodule Ethos.SocialReviewsTest do
       assert updated.status == "revoked"
       assert Social.approved_reviews(guide) == []
     end
+
+    test "an untrusted author editing a revoked review does not resurrect it either", %{
+      user: user,
+      guide: guide
+    } do
+      {:ok, review} = Social.create_review(user, guide, %{"rating" => "8", "body" => "First."})
+      revoked = review |> Ecto.Changeset.change(status: "revoked") |> Repo.update!()
+
+      # `user` is untrusted here — this is the backwards-incentive case the
+      # bug created: only the trusted branch used to keep a revoked review
+      # revoked, so the untrusted author (who has no other lever to
+      # resurrect anything) could edit their way back into "pending" and
+      # force re-moderation, silently erasing the revoked count.
+      assert {:ok, updated} =
+               Social.update_review(revoked, user, %{"rating" => "9", "body" => "Try again."})
+
+      assert updated.status == "revoked"
+      assert Social.approved_reviews(guide) == []
+    end
   end
 
   describe "user_review/2" do

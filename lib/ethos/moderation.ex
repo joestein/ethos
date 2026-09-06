@@ -130,32 +130,54 @@ defmodule Ethos.Moderation do
   Idempotent: trusting someone already trusted leaves their original date
   alone, so the console cannot accidentally reset how long they have been
   trusted for.
+
+  Refuses when the target is the admin — the admin is not a moderation
+  target, the same invariant `ban_user/3` holds. Self-trusting is harmless on
+  its own, but a Users tab that lets the admin toggle their own trust while
+  hiding the equivalent ban control on that row is an inconsistency that
+  contradicts the rule everywhere else.
   """
   def trust_user(%User{trusted_at: %DateTime{}} = user, %User{} = admin) do
-    if Accounts.admin?(admin), do: {:ok, user}, else: {:error, :unauthorized}
+    cond do
+      not Accounts.admin?(admin) -> {:error, :unauthorized}
+      Accounts.admin?(user) -> {:error, :cannot_target_admin}
+      true -> {:ok, user}
+    end
   end
 
   def trust_user(%User{} = user, %User{} = admin) do
-    if Accounts.admin?(admin) do
-      user
-      |> Ecto.Changeset.change(trusted_at: DateTime.utc_now() |> DateTime.truncate(:second))
-      |> Repo.update()
-    else
-      {:error, :unauthorized}
+    cond do
+      not Accounts.admin?(admin) ->
+        {:error, :unauthorized}
+
+      Accounts.admin?(user) ->
+        {:error, :cannot_target_admin}
+
+      true ->
+        user
+        |> Ecto.Changeset.change(trusted_at: DateTime.utc_now() |> DateTime.truncate(:second))
+        |> Repo.update()
     end
   end
 
   @doc """
   Withdraws trust. The author's next comment goes back into the queue;
   anything already published stays published.
+
+  Refuses when the target is the admin — see `trust_user/2`.
   """
   def untrust_user(%User{} = user, %User{} = admin) do
-    if Accounts.admin?(admin) do
-      user
-      |> Ecto.Changeset.change(trusted_at: nil)
-      |> Repo.update()
-    else
-      {:error, :unauthorized}
+    cond do
+      not Accounts.admin?(admin) ->
+        {:error, :unauthorized}
+
+      Accounts.admin?(user) ->
+        {:error, :cannot_target_admin}
+
+      true ->
+        user
+        |> Ecto.Changeset.change(trusted_at: nil)
+        |> Repo.update()
     end
   end
 
@@ -171,6 +193,15 @@ defmodule Ethos.Moderation do
   The flag and the token purge happen in one transaction, because a ban that
   set the flag but left a live session behind would leave the user browsing
   as though nothing had happened until their cookie expired.
+
+  It also disconnects any open LiveView sockets the account holds, once the
+  transaction commits — without that, a process already alive (holding a
+  `current_user` struct read at mount, before the ban) keeps handling events
+  as that user until its socket is closed some other way. For a trusted
+  author this is not cosmetic: `Ethos.Social.create_review/3` fast-lanes a
+  trusted author straight to `"approved"`, so a banned-but-still-connected
+  trusted author can keep minting reviews nobody moderates, which would go
+  live retroactively if the ban is ever lifted.
 
   Refuses to ban the admin. There is exactly one, and locking them out would
   leave nobody able to undo it.
@@ -205,14 +236,39 @@ defmodule Ethos.Moderation do
       |> Ecto.Changeset.validate_required([:ban_reason])
       |> Ecto.Changeset.validate_length(:ban_reason, min: 1, max: 500)
 
+    # Session tokens have to be read out BEFORE the delete_all below removes
+    # them — there is no reading them back afterward — but the sockets built
+    # from them must not be disconnected until the transaction actually
+    # commits. Broadcasting from inside the transaction would disconnect a
+    # user whose ban then rolls back (e.g. the blank-reason validation
+    # failure), which is worse than the bug this fixes.
     Ecto.Multi.new()
+    |> Ecto.Multi.all(:session_tokens, session_tokens_query(user))
     |> Ecto.Multi.update(:user, changeset)
     |> Ecto.Multi.delete_all(:tokens, UserToken.by_user_and_contexts_query(user, :all))
     |> Repo.transaction()
     |> case do
-      {:ok, %{user: user}} -> {:ok, user}
-      {:error, :user, changeset, _} -> {:error, changeset}
+      {:ok, %{user: user, session_tokens: tokens}} ->
+        disconnect_live_sockets(tokens)
+        {:ok, user}
+
+      {:error, :user, changeset, _} ->
+        {:error, changeset}
     end
+  end
+
+  defp session_tokens_query(user) do
+    from t in UserToken, where: t.user_id == ^user.id and t.context == "session", select: t.token
+  end
+
+  # Mirrors `EthosWeb.UserAuth.put_token_in_session/2`, which is the only
+  # other place this id is built — see that function for why it is derived
+  # from the raw session token this way, and `log_out_user/1` for the only
+  # other broadcast of this shape in the app.
+  defp disconnect_live_sockets(tokens) do
+    Enum.each(tokens, fn token ->
+      EthosWeb.Endpoint.broadcast("users_sessions:#{Base.url_encode64(token)}", "disconnect", %{})
+    end)
   end
 
   @doc """

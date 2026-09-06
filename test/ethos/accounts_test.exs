@@ -519,6 +519,16 @@ defmodule Ethos.AccountsTest do
       user = user_fixture()
       refute Accounts.admin?(user)
     end
+
+    test "returns false for a banned account even with the admin email" do
+      user =
+        %{email: "cryptcom@gmail.com"}
+        |> user_fixture()
+        |> Ecto.Changeset.change(banned_at: DateTime.utc_now() |> DateTime.truncate(:second))
+        |> Repo.update!()
+
+      refute Accounts.admin?(user)
+    end
   end
 
   describe "inspect/2 for the User module" do

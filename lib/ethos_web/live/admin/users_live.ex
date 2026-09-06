@@ -56,11 +56,19 @@ defmodule EthosWeb.Admin.UsersLive do
           </p>
 
           <div class="mt-3 flex flex-wrap items-end gap-2">
-            <.button :if={is_nil(row.user.trusted_at)} phx-click="trust" phx-value-id={row.user.id}>
+            <.button
+              :if={is_nil(row.user.trusted_at) and not Accounts.admin?(row.user)}
+              phx-click="trust"
+              phx-value-id={row.user.id}
+            >
               Trust
             </.button>
 
-            <.button :if={row.user.trusted_at} phx-click="untrust" phx-value-id={row.user.id}>
+            <.button
+              :if={not is_nil(row.user.trusted_at) and not Accounts.admin?(row.user)}
+              phx-click="untrust"
+              phx-value-id={row.user.id}
+            >
               Untrust
             </.button>
 
@@ -137,6 +145,9 @@ defmodule EthosWeb.Admin.UsersLive do
         socket
         |> put_flash(:info, "#{success_verb} #{Accounts.display_name(user)}.")
         |> load_users()
+
+      {:error, :cannot_target_admin} ->
+        put_flash(socket, :error, "You cannot change your own trust status.")
 
       {:error, _} ->
         put_flash(socket, :error, "That could not be changed.")

@@ -80,6 +80,7 @@ defmodule EthosWeb.Admin.CommentsLive do
     <div>
       <p class="text-sm text-zinc-500">
         <span class="font-semibold text-zinc-900">{Accounts.display_name(@review.user)}</span>
+        <span :if={@review.user.trusted_at} class="text-xs text-emerald-700">trusted</span>
         · {@review.rating}/10 ·
         <.link :if={@subject.path} navigate={@subject.path} class="underline">
           {@subject.name}

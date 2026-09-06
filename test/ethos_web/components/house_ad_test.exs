@@ -1,5 +1,10 @@
 defmodule EthosWeb.HouseAdTest do
-  use EthosWeb.ConnCase, async: true
+  # async: false — the "through a real request" tests build an admin via
+  # `admin_fixture/1`, whose email is fixed (it must match the configured
+  # :admin_email). Running alongside other async modules that do the same
+  # has caused intermittent Postgres deadlocks on the concurrent same-email
+  # inserts; see the fixture's own moduledoc.
+  use EthosWeb.ConnCase, async: false
 
   require Phoenix.LiveViewTest
 
@@ -286,7 +291,7 @@ defmodule EthosWeb.HouseAdTest do
     end
 
     test "does not appear on the admin suggestions inbox", %{conn: conn} do
-      admin = user_fixture(%{email: "cryptcom@gmail.com"})
+      admin = admin_fixture()
       conn = log_in_user(conn, admin)
 
       html = conn |> get(~p"/admin/suggestions") |> html_response(200)

@@ -177,6 +177,34 @@ defmodule EthosWeb.UserAuthTest do
 
       assert updated_socket.assigns.current_user == nil
     end
+
+    # Belt and braces, mirroring the "does not authenticate a banned user
+    # whose session survives" fetch_current_user/2 test above, but for the
+    # LiveView mount path: a reconnect (or a live_render island whose plug
+    # session outlives Moderation.ban_user/3's disconnect broadcast) must
+    # not re-establish a banned account's session either.
+    test "assigns nil to current_user for a banned user, even with a token that still resolves",
+         %{conn: conn, user: user} do
+      user_token = Accounts.generate_user_session_token(user)
+
+      {:ok, _} =
+        user
+        |> Ecto.Changeset.change(
+          banned_at: DateTime.utc_now() |> DateTime.truncate(:second),
+          ban_reason: "Enough."
+        )
+        |> Ethos.Repo.update()
+
+      # Deliberately NOT going through Moderation.ban_user/3, which would
+      # delete this token — the point is the belt-and-braces guard on the
+      # mount path itself, independent of the token purge.
+      session = conn |> put_session(:user_token, user_token) |> get_session()
+
+      {:cont, updated_socket} =
+        UserAuth.on_mount(:mount_current_user, %{}, session, %LiveView.Socket{})
+
+      assert updated_socket.assigns.current_user == nil
+    end
   end
 
   describe "on_mount :ensure_authenticated" do

@@ -60,8 +60,17 @@ defmodule Ethos.Accounts do
   """
   def get_user!(id), do: Repo.get!(User, id)
 
-  @doc "True when the user is THE admin (single admin, bound by email config)."
-  def admin?(%Ethos.Accounts.User{email: email}) when is_binary(email) do
+  @doc """
+  True when the user is THE admin (single admin, bound by email config).
+
+  False for a banned account, even one whose email matches `:admin_email` —
+  otherwise `admin?/1` and "banned" could both be true of the same account
+  at once, which is a deadlock: a banned admin cannot log in
+  (`fetch_current_user/2` refuses a banned session), and `unban_user/2`
+  itself requires an admin caller. Keeping the rule in the data, not just at
+  `ban_user/3`'s call site, is what closes that.
+  """
+  def admin?(%Ethos.Accounts.User{email: email, banned_at: nil}) when is_binary(email) do
     admin = Application.get_env(:ethos, :admin_email) || ""
     String.downcase(email) == String.downcase(admin)
   end

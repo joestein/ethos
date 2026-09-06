@@ -56,6 +56,42 @@ defmodule Ethos.ModerationBanTest do
       assert {:error, :unauthorized} = Moderation.ban_user(user, "No.", user_fixture())
     end
 
+    # The sharp case this closes: a trusted author with an open LiveView
+    # socket, banned mid-session, whose process still holds the pre-ban
+    # `current_user` and would otherwise keep minting fast-laned "approved"
+    # reviews nobody moderates. The disconnect is what forces that process
+    # to re-authenticate (and fail, per mount_current_user's ban check)
+    # instead of continuing to run as the banned user.
+    test "disconnects every live socket the user holds", %{admin: admin, user: user} do
+      token_one = Accounts.generate_user_session_token(user)
+      token_two = Accounts.generate_user_session_token(user)
+
+      topic_one = "users_sessions:#{Base.url_encode64(token_one)}"
+      topic_two = "users_sessions:#{Base.url_encode64(token_two)}"
+
+      EthosWeb.Endpoint.subscribe(topic_one)
+      EthosWeb.Endpoint.subscribe(topic_two)
+
+      {:ok, _} = Moderation.ban_user(user, "Enough.", admin)
+
+      assert_receive %Phoenix.Socket.Broadcast{event: "disconnect", topic: ^topic_one}
+      assert_receive %Phoenix.Socket.Broadcast{event: "disconnect", topic: ^topic_two}
+    end
+
+    test "a rolled-back ban (blank reason) does not disconnect anyone", %{
+      admin: admin,
+      user: user
+    } do
+      token = Accounts.generate_user_session_token(user)
+      topic = "users_sessions:#{Base.url_encode64(token)}"
+
+      EthosWeb.Endpoint.subscribe(topic)
+
+      assert {:error, _changeset} = Moderation.ban_user(user, "", admin)
+
+      refute_receive %Phoenix.Socket.Broadcast{event: "disconnect", topic: ^topic}
+    end
+
     test "refuses to ban the admin", %{admin: admin} do
       assert {:error, :cannot_ban_admin} = Moderation.ban_user(admin, "Oops.", admin)
     end
@@ -158,6 +194,19 @@ defmodule Ethos.ModerationBanTest do
     test "both refuse a non-admin", %{user: user} do
       assert {:error, :unauthorized} = Moderation.trust_user(user, user_fixture())
       assert {:error, :unauthorized} = Moderation.untrust_user(user, user_fixture())
+    end
+
+    # The admin is not a moderation target — the same invariant ban_user/3
+    # holds. Without this, the Users tab let the admin self-trust then
+    # self-untrust with no crafted id needed, since the template rendered
+    # both buttons on the admin's own row.
+    test "both refuse the admin as a target, even from the admin themself", %{admin: admin} do
+      assert {:error, :cannot_target_admin} = Moderation.trust_user(admin, admin)
+      assert {:error, :cannot_target_admin} = Moderation.untrust_user(admin, admin)
+    end
+
+    test "trust still refuses a non-admin caller before checking the target", %{admin: admin} do
+      assert {:error, :unauthorized} = Moderation.trust_user(admin, user_fixture())
     end
   end
 end

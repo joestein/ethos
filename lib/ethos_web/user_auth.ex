@@ -205,9 +205,16 @@ defmodule EthosWeb.UserAuth do
 
   defp mount_current_user(socket, session) do
     Phoenix.Component.assign_new(socket, :current_user, fn ->
-      if user_token = session["user_token"] do
-        Accounts.get_user_by_session_token(user_token)
-      end
+      user =
+        if user_token = session["user_token"] do
+          Accounts.get_user_by_session_token(user_token)
+        end
+
+      # Mirrors the belt-and-braces guard in fetch_current_user/2: banning
+      # deletes the account's tokens and Moderation.ban_user/3 disconnects
+      # any socket already open, but a reconnect must not be able to
+      # re-establish a banned account's session either.
+      if user && Ethos.Moderation.banned?(user), do: nil, else: user
     end)
   end
 
