@@ -138,6 +138,18 @@ defmodule EthosWeb.Affiliate do
   def renders?(_), do: false
 
   @doc """
+  Whether affiliate links reach visitors at all.
+
+  Separate from `renders?/1` on purpose. `renders?/1` answers "does this
+  locale have a campaign we can show", and the guide page's fallback CTA
+  renders precisely when it says no. Overloading it as the kill switch would
+  therefore turn that sponsored CTA ON across every page without a house ad —
+  more affiliate content from a change meant to remove it. This predicate is
+  the master switch and every surface checks it independently.
+  """
+  def enabled?, do: Application.get_env(:ethos, :affiliate_links_enabled, false)
+
+  @doc """
   Whether the layout's affiliate unit will render for this page's assigns.
 
   Defined in terms of `renders?/1` so a template's condition and the
@@ -200,7 +212,7 @@ defmodule EthosWeb.Affiliate do
   def affiliate_head(assigns) do
     ~H"""
     <script
-      :if={renders?(@locale)}
+      :if={enabled?() and renders?(@locale)}
       async
       defer
       src="https://widget.getyourguide.com/dist/pa.umd.production.min.js"
@@ -232,7 +244,10 @@ defmodule EthosWeb.Affiliate do
 
           The vertical margin flips with position: a bottom-placed unit needs
           space above it, a top-placed one needs space below. --%>
-    <div :if={render_here?(@locale, @position)} class={["px-4", wrapper_margin(@position)]}>
+    <div
+      :if={enabled?() and render_here?(@locale, @position)}
+      class={["px-4", wrapper_margin(@position)]}
+    >
       <%!-- min-h, not h: the widget's real height varies with how many activity
             cards GetYourGuide returns and how they wrap, so a fixed height
             would either clip it or leave a gap. The floor is one row of

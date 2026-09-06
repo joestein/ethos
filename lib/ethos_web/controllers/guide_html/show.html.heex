@@ -52,10 +52,17 @@
         sponsored link that belongs precisely where GetYourGuide has no
         campaign. The house ad takes precedence, and this remains the
         fallback for when there is no ad to show (empty pool, no usable
-        photograph). --%>
+        photograph).
+
+        The flag (`EthosWeb.Affiliate.enabled?/0`) is now the first clause:
+        with affiliates off, this generic sponsored CTA must not appear
+        either, even on pages where a widget would otherwise have rendered —
+        otherwise turning affiliates off would turn this CTA ON in exactly
+        those places. --%>
   <aside
     :if={
-      not EthosWeb.Affiliate.unit_renders?(assigns) and
+      EthosWeb.Affiliate.enabled?() and
+        not EthosWeb.Affiliate.unit_renders?(assigns) and
         is_nil(EthosWeb.HouseAd.for_page(assigns))
     }
     class="mt-8 flex flex-wrap items-center justify-between gap-4 rounded-xl border border-amber-200 bg-amber-50 p-5"
@@ -114,7 +121,7 @@
       <p :if={entry.note} class="mt-2">{entry.note}</p>
 
       <a
-        :if={EthosWeb.Url.safe_http?(entry.booking_url)}
+        :if={EthosWeb.Affiliate.enabled?() and EthosWeb.Url.safe_http?(entry.booking_url)}
         href={entry.booking_url}
         rel="sponsored nofollow noopener"
         target="_blank"
@@ -178,11 +185,18 @@
         here to share the load), or the page has a sponsored entry link the
         unit's disclosure says nothing about. Only when neither is true —
         the unit renders AND no entry has a booking_url — would this be a
-        second disclosure for the same thing, and only then is it suppressed. --%>
+        second disclosure for the same thing, and only then is it suppressed.
+
+        `EthosWeb.Affiliate.enabled?/0` is ANDed over the whole expression,
+        not pushed into either branch of the `or`: with affiliates off, no
+        link on this page earns a commission, so the disclosure must not
+        appear regardless of what the two branches below would otherwise
+        say. --%>
   <p
     :if={
-      not EthosWeb.Affiliate.unit_renders?(assigns) or
-        Enum.any?(@entries, &EthosWeb.Url.safe_http?(&1.booking_url))
+      EthosWeb.Affiliate.enabled?() and
+        (not EthosWeb.Affiliate.unit_renders?(assigns) or
+           Enum.any?(@entries, &EthosWeb.Url.safe_http?(&1.booking_url)))
     }
     class="mt-8 text-xs text-zinc-400"
   >

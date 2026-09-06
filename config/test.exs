@@ -52,3 +52,8 @@ config :ethos, :claude_req_options, plug: {Req.Test, Ethos.Claude.API}
 # Run the GuideAgent pipeline inline (synchronously) in tests
 config :ethos, :agent_sync, true
 config :ethos, :exa_req_options, plug: {Req.Test, Ethos.Exa.API}
+
+# On in test so the existing affiliate suite keeps proving the machinery works
+# for the day it is switched back on. `affiliate_disabled_test.exs` is the
+# other half — it flips this off and asserts everything disappears.
+config :ethos, :affiliate_links_enabled, true
