@@ -285,19 +285,19 @@
     "verified": false
   },
   {
-    "access": null,
-    "city": null,
-    "county": null,
-    "course": null,
-    "criterion": null,
-    "facility": null,
-    "ranking_edition": null,
-    "ranking_position": null,
-    "ranking_source": null,
-    "second_course": null,
+    "access": "Daily-fee and publicly playable, the first Public-labelled entry on the ranking: ranks 1 through 8 were each verified Private inside their own blocks by two independent methods, and Golf Digest's own course page records the facility type as Public. The operator publishes a dated \"2026 Rate Schedule\". Note that the ranking's Public label is not reliable on its own here -- rank 14 carries it while being a Troon Prive member club -- so each rejection above rank 9 was checked against the operator's own terms.",
+    "city": "Havre de Grace",
+    "county": "Harford County",
+    "course": "Bulle Rock Golf Course",
+    "criterion": "ranking",
+    "facility": "Bulle Rock Golf Club",
+    "ranking_edition": "2025-'26",
+    "ranking_position": 9,
+    "ranking_source": "Golf Digest Best in State",
+    "second_course": "Furnace Bay Golf Course",
     "slug": "maryland",
     "state": "Maryland",
-    "verified": false
+    "verified": true
   },
   {
     "access": null,
@@ -510,19 +510,19 @@
     "verified": true
   },
   {
-    "access": null,
-    "city": null,
-    "county": null,
-    "course": null,
-    "criterion": null,
-    "facility": null,
-    "ranking_edition": null,
-    "ranking_position": null,
-    "ranking_source": null,
-    "second_course": null,
+    "access": "Daily-fee and publicly playable, proved by executing the operator's own Club Caddie booking engine: 21, 37 and 54 bookable slots across three sampled dates, with every pricing plan carrying the operator's own \"Public\" title type and no guest rate. The walk is the joint-longest in the corpus outside Georgia -- ranks 1 through 15 each carry an explicit Private rubric bound inside their own block, confirmed in two independent archived captures and a live fetch, with no entry on the page lacking a rubric.",
+    "city": "Nashport",
+    "county": "Licking County",
+    "course": "The Virtues Golf Club",
+    "criterion": "ranking",
+    "facility": "The Virtues Golf Club",
+    "ranking_edition": "2025-'26",
+    "ranking_position": 16,
+    "ranking_source": "Golf Digest Best in State",
+    "second_course": "Vista Golf Course",
     "slug": "ohio",
     "state": "Ohio",
-    "verified": false
+    "verified": true
   },
   {
     "access": "Genuinely public, no membership. The club's own site injects a JavaScript-only Chronogolf widget resolving to chronogolf.com/club/jimmie-austin-golf-course, with no login; the public player type books up to seven days ahead, confirmed both by the widget's own configuration and by the booking API's refusal text. On 6 September 2026 it quoted $105.75 weekday and $133.33 weekend for 18 holes, plus $18.39 for a shared cart, paid at the course. A single player cannot complete a booking online alone.",
