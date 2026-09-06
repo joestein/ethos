@@ -439,10 +439,29 @@ defmodule EthosWeb.GuideControllerTest do
     assert redirected_to(conn) == ~p"/users/log_in"
   end
 
-  test "research action fetches and redirects back", %{conn: conn} do
+  # The route itself is the real control here, not the hidden form: this is a
+  # mutating endpoint that calls the Exa API and spends a per-user
+  # rate-limit budget. A logged-in but non-admin user must be turned away by
+  # the router's `:require_admin_user` plug, the same way the authoring
+  # LiveViews are.
+  test "research action 404s for a logged-in non-admin", %{conn: conn} do
     guide = published_guide_fixture()
     {:ok, entry} = Guides.create_entry(guide, %{kind: "food", name: "Ramiro", verdict: "loved"})
     user = user_fixture()
+
+    conn =
+      conn
+      |> log_in_user(user)
+      |> post(~p"/g/#{guide.slug}/entries/#{entry.id}/research")
+
+    assert html_response(conn, 404)
+  end
+
+  test "research action fetches and redirects back", %{conn: conn} do
+    guide = published_guide_fixture()
+    {:ok, entry} = Guides.create_entry(guide, %{kind: "food", name: "Ramiro", verdict: "loved"})
+    # The research POST route is admin-only authoring now.
+    user = admin_fixture()
     Ethos.Research.RateLimiter.reset(user.id)
 
     expect(Ethos.ExaMock, :search, fn _q, _o ->
@@ -464,7 +483,8 @@ defmodule EthosWeb.GuideControllerTest do
   test "cache hits do not consume rate-limit slots", %{conn: conn} do
     guide = published_guide_fixture()
     {:ok, entry} = Guides.create_entry(guide, %{kind: "food", name: "Ramiro", verdict: "loved"})
-    user = user_fixture()
+    # The research POST route is admin-only authoring now.
+    user = admin_fixture()
     Ethos.Research.RateLimiter.reset(user.id)
 
     # Exa is called exactly once — every later hit is served from the 7-day cache.

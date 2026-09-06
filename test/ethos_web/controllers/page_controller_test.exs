@@ -7,8 +7,36 @@ defmodule EthosWeb.PageControllerTest do
   test "GET / shows hero and CTA without any guides", %{conn: conn} do
     conn = get(conn, ~p"/")
     html = html_response(conn, 200)
-    assert html =~ "Turn your trip into a guide"
-    assert html =~ "Make your guide"
+    assert html =~ "Places worth the trip"
+    assert html =~ "Browse destinations"
+  end
+
+  test "does not invite a visitor to make a guide", %{conn: conn} do
+    html = conn |> get(~p"/") |> html_response(200)
+
+    refute html =~ "Make your guide"
+    refute html =~ "Paste your notes"
+    # The header CTA is already gated on admin?/1 (false for a logged-out
+    # visitor), so once the hero button is gone this string should appear
+    # nowhere on the page at all.
+    refute html =~ ~s(href="/guides/new")
+  end
+
+  test "points visitors at the destinations instead", %{conn: conn} do
+    html = conn |> get(~p"/") |> html_response(200)
+
+    # Assert on the hero button's text, NOT on a bare `href="/destinations"`
+    # — the site header renders that link on every page, so a bare href
+    # assertion would pass even if the hero button pointed somewhere else
+    # entirely (e.g. the logged-in-only `/badges`).
+    assert html =~ "Browse destinations"
+
+    # Pin the hero button's OWN anchor, distinct from the header's
+    # Destinations link, by matching its href together with its distinctive
+    # class. Attribute order and the `data-phx-link*` attributes come from
+    # `<.link navigate={...}>` and are exactly what gets rendered.
+    assert html =~
+             ~s(href="/destinations" data-phx-link="redirect" data-phx-link-state="push" class="rounded-md bg-zinc-900)
   end
 
   # The home page renders with `layout: false`, so it does not inherit the app

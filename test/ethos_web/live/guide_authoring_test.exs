@@ -9,8 +9,10 @@ defmodule EthosWeb.GuideAuthoringTest do
   setup :verify_on_exit!
   setup :set_mox_from_context
 
+  # Guide authoring is admin-only, so the acting user here must be the admin —
+  # a regular user gets a 404 from every one of these routes.
   setup %{conn: conn} do
-    user = user_fixture()
+    user = admin_fixture()
     %{conn: log_in_user(conn, user), user: user}
   end
 

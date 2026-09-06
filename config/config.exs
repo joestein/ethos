@@ -33,6 +33,11 @@ config :ethos, EthosWeb.Endpoint,
 # at the `config/runtime.exs`.
 config :ethos, Ethos.Mailer, adapter: Swoosh.Adapters.Local
 
+# Affiliate links are off by default, everywhere. The machinery stays in the
+# codebase and keeps its test coverage; this is the switch that decides
+# whether any of it reaches a visitor.
+config :ethos, :affiliate_links_enabled, false
+
 # Configure esbuild (the version is required)
 config :esbuild,
   version: "0.17.11",
