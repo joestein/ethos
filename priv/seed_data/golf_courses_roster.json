@@ -90,19 +90,19 @@
     "verified": true
   },
   {
-    "access": null,
-    "city": null,
-    "county": null,
-    "course": null,
-    "criterion": null,
-    "facility": null,
-    "ranking_edition": null,
-    "ranking_position": null,
-    "ranking_source": null,
-    "second_course": null,
+    "access": "A \"public, daily-fee operation\" in the operator's own Terms, with its FAQ answering \"No\" on memberships and non-affiliates booking ten days ahead. No affiliation is required: the operator prices a Yale Affiliate Guest rate as a separate row from the $350 Non-Affiliate rate, so a traveller simply pays the higher row. Rank 1 fails on both its label and its member-login terms. Note the ranking's own label moved: this course reads Private in the August 2025, October 2025 and February 2026 captures and Public live, under an identical edition string, so the row rests on the operator's terms rather than on the rubric.",
+    "city": "New Haven",
+    "county": "New Haven County",
+    "course": "Yale Golf Course",
+    "criterion": "ranking",
+    "facility": "Yale Golf Course",
+    "ranking_edition": "2025-'26",
+    "ranking_position": 2,
+    "ranking_source": "Golf Digest Best in State",
+    "second_course": "The Tradition Golf Club at Oak Lane",
     "slug": "connecticut",
     "state": "Connecticut",
-    "verified": false
+    "verified": true
   },
   {
     "access": "The ranking's only Public entry of five, re-established from scratch by three methods with exactly five rubric elements for five entries, so no label is missing. The operator publishes no green fee that carries a date -- its rate page reads \"Dynamic Pricing\", its booking engine returned Cloudflare challenges to four separate clients, and its third-party tee-time channel was empty on five sampled dates -- so no fee is publishable for the state.",
@@ -300,19 +300,19 @@
     "verified": true
   },
   {
-    "access": null,
-    "city": null,
-    "county": null,
-    "course": null,
-    "criterion": null,
-    "facility": null,
-    "ranking_edition": null,
-    "ranking_position": null,
-    "ranking_source": null,
-    "second_course": null,
+    "access": "The operator's own words: \"The golf course and the restaurant are open to the public\", with no affiliation qualifier found across eleven pages despite the club's college association. Ranks 1 to 12 carry a Private rubric inside their own DOM blocks across three genuinely distinct captures, and eight are additionally confirmed private on their operators' own terms. An unaccompanied-guest rate is published but carries no dated qualifier -- the page footer's year moved from 2025 to 2026 while the table did not -- so no green fee is publishable. The operator does publish a dated season: the course opens 15 April 2026 and closes 15 November 2026.",
+    "city": "Williamstown",
+    "county": "Berkshire County",
+    "course": "Taconic Golf Club",
+    "criterion": "ranking",
+    "facility": "Taconic Golf Club",
+    "ranking_edition": "2025-'26",
+    "ranking_position": 13,
+    "ranking_source": "Golf Digest Best in State",
+    "second_course": "Waubeeka Golf Links",
     "slug": "massachusetts",
     "state": "Massachusetts",
-    "verified": false
+    "verified": true
   },
   {
     "access": "Daily-fee with no membership - Golf Digest records the facility type as Daily Fee and the course as not private. Reservations are required, though walk-ons are taken when possible; players register in the golf shop, and booking is limited to the current calendar year. Cancellation is a 7-day window charging 100% per player and may vary by group size - the FAQ's four-tier and the rates page's three-tier schedules differ, and both are stated. The 2026 season runs 1 April to 30 November.",
@@ -465,19 +465,19 @@
     "verified": true
   },
   {
-    "access": null,
-    "city": null,
-    "county": null,
-    "course": null,
-    "criterion": null,
-    "facility": null,
-    "ranking_edition": null,
-    "ranking_position": null,
-    "ranking_source": null,
-    "second_course": null,
+    "access": "Publicly playable by a non-resident, proved by executing the state's own booking system: the \"Non Resident\" class is the only unprotected one on the Black tee sheet, and a credential-free query returned a real bookable 18-hole time at $88, while the \"Resident\" class returned HTTP 401. Residency is a preference rather than a requirement -- a seven-day booking window instead of five, and roughly double the rate -- and there is no lottery. The operator states it plainly: \"There is no residency requirement on the Blue, Green and Yellow Courses.\" The engine's figures match the operator's own rate sheet dated 4/22/2026, so the fee is publishable.",
+    "city": "Farmingdale",
+    "county": "Nassau County",
+    "course": "Bethpage State Park: Black",
+    "criterion": "ranking",
+    "facility": "Bethpage State Park",
+    "ranking_edition": "2025-'26",
+    "ranking_position": 7,
+    "ranking_source": "Golf Digest Best in State",
+    "second_course": "Bethpage State Park: Red",
     "slug": "new-york",
     "state": "New York",
-    "verified": false
+    "verified": true
   },
   {
     "access": "Daily-fee and publicly playable: the course's own booking API, called unauthenticated, returns bookable slots under a rate plan the operator itself names \"Public 18 Holes\". The eleven higher-ranked entries do not qualify. Ranks 2, 8 and 9 are Pinehurst courses labelled \"Public\" by the ranking and excluded by Pinehurst's own terms, which read: \"To play Courses No. 2, 4, 6, 7, 8, 9, 10, or 11, you must be a member or resort guest.\" Tobacco Road publishes no dated rate qualifier — its page states that displayed rates are real-time pricing — so no green fee is publishable for it.",
@@ -555,19 +555,19 @@
     "verified": true
   },
   {
-    "access": null,
-    "city": null,
-    "county": null,
-    "course": null,
-    "criterion": null,
-    "facility": null,
-    "ranking_edition": null,
-    "ranking_position": null,
-    "ranking_source": null,
-    "second_course": null,
+    "access": "Access tiered by price rather than gated, and dated: the resort publishes a \"Non-resort guest rates\" column under a \"2026 Old Course Fees\" heading at $289, held constant on every Friday-to-Sunday slot sampled, with no stay required -- so the fee is publishable. Twenty-six higher entries fail on their rubric or on their operators' own words; two of them read \"Open to overnight guests and all-access members\", and their supposed public tee-time package was established not to exist in the booking provider's system. The second course was checked rather than assumed despite its fraternal name: its own booking engine serves anonymous callers the non-member rate channel.",
+    "city": "Bedford",
+    "county": "Bedford County",
+    "course": "The Old Course at Bedford Springs",
+    "criterion": "ranking",
+    "facility": "Omni Bedford Springs Resort",
+    "ranking_edition": "2025-'26",
+    "ranking_position": 27,
+    "ranking_source": "Golf Digest Best in State",
+    "second_course": "Bedford Elks Country Club",
     "slug": "pennsylvania",
     "state": "Pennsylvania",
-    "verified": false
+    "verified": true
   },
   {
     "access": null,

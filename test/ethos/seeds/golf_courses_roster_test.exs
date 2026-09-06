@@ -236,6 +236,24 @@ defmodule Ethos.Seeds.GolfCoursesRosterTest do
           "destination hub after a golf course rather than after anywhere a visitor " <>
           "sleeps. /destinations/burlington therefore lists this guide beside the " <>
           "Connecticut town guide, deliberately, on §3's Kansas City precedent."
+    },
+    %{
+      golf_file: "priv/seed_data/golf/connecticut.json",
+      other_file: "priv/seed_data/connecticut/new-haven.json",
+      slug: "new-haven",
+      why:
+        "One New Haven, not two, and both guides are about it. Yale Golf Course is " <>
+          "inside the city and the basecamp is the city, so any other destination " <>
+          "would name the hub after somewhere the visitor does not sleep. Sharing is " <>
+          "the better outcome here rather than merely the permitted one: a reader at " <>
+          "/destinations/new-haven sees the town guide and the golf guide together, " <>
+          "which is what someone planning a weekend around a round actually wants. " <>
+          "Note the separate, non-colliding overlap with connecticut/woodbridge.json: " <>
+          "that guide already publishes the second course as place record " <>
+          "tradition-golf-club-oak-lane, so the golf guide mints no duplicate record " <>
+          "and names it in prose instead. That is a place merge, not a destination " <>
+          "one, and it derives no woodbridge slug — which is why it is described " <>
+          "here but not declared as an entry."
     }
   ]
 

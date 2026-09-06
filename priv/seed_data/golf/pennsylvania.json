@@ -1,0 +1,209 @@
+{
+  "guide": {
+    "slug": "pennsylvania-golf-guide",
+    "title": "The Old Course at Bedford Springs: Golf in Bedford, Pennsylvania",
+    "destination": "Bedford, Pennsylvania",
+    "state": "Pennsylvania",
+    "county": "Bedford County",
+    "intro": "Golf Digest's \"Best in State\" ranking of the best golf courses in Pennsylvania, edition 2025-'26, lists 45 courses. The first 26 are shut to a traveller who holds no membership and has booked no room. Twenty-four of them carry the ranking's own rubric \"Private.\" The two that carry \"Public\" — Nemacolin: Mystic Rock at 11 and Nemacolin: Shepherd's Rock at 21, both at Farmington — are described by their own operator, in each course's own record on its site, as \"Open to overnight guests and all-access members.\" The highest-ranked publicly accessible course on that list is therefore number 27: the Old Course at Omni Bedford Springs Resort, in Bedford, in Bedford County. The ranking labels it \"Public,\" and its record carries the number inside itself — the page's own data payload reads coursePills[0].rank = 27, a placement that cannot shift with document position. The same rank was read in three separate Internet Archive captures of the ranking page, from three different months, and in a live fetch of the live page. This guide is about that course.",
+    "sections": [
+      {
+        "heading": "Getting there",
+        "body": "The Old Course sits on the Omni Bedford Springs Resort estate. The clubhouse restaurant publishes the course's address as 2138 Business 220, Bedford, Pennsylvania 15522; the hotel's own page footers give 2198 Sweet Root Road, Bedford, Pennsylvania 15522 for the property. Both sit in Bedford township, Bedford County, outside the borough of Bedford — the Census geocoder returns no incorporated place at the course's coordinate, and returns \"Bedford borough\" for an address 1.87 road miles away in the town. \"Bedford\" is the mailing town. The property stands on US-220 Business, which runs north into Bedford borough; the Pennsylvania Turnpike (I-70 / I-76) and US-30, the Lincoln Highway, both pass through Bedford.\n\nRoad distances from the course, routed by OSRM. Altoona–Blair County Airport (AOO), the nearest airfield of any kind, is 30.2 miles by US-220 Business, US-30 Business, US-220, PA-869, PA-36 and PA-866. Johnstown–Cambria County Airport (JST), a regional field, is 39.4 miles by US-220 Business, US-30 Business (East Pitt Street), US-220 and PA-56. Harrisburg International Airport (MDT) is 108.2 miles east, by US-220 Business, US-30 Business (Lincoln Highway), Black Valley Road and Ashcom Road to the Pennsylvania Turnpike (I-70 / I-76), then PA-283 and the Airport Connector. Pittsburgh International Airport (PIT), the nearest major hub, is 125.5 miles, by Sweet Root Road to US-220 Business, then the Pennsylvania Turnpike (I-70 / I-76) west, the Penn-Lincoln Parkway East (I-376 / US-22) and the Airport Parkway (I-376). The resort lists valet parking among its guest services."
+      },
+      {
+        "heading": "The Old Course at Bedford Springs",
+        "body": "The Old Course is 18 holes. Golf Digest's stored course-tee record gives par 72, rating 73, slope 140 and 6,785 yards; GolfLink independently gives the same yardage. The ranking entry carries 4.1 from 11 panelists, and records a previous rank of 32.\n\nWho built it is disputed, and the two sources are worth setting side by side rather than merging. The resort's clubhouse page says: \"Dating back to 1895, the Old Course is one of the country's first golf courses, designed by golf architectural masters Spencer Oldham, A.W. Tillinghast and Donald Ross.\" Its special-dates page names \"Donald Ross, who finalized the historic Old Course in 1923,\" calls Spencer Oldham \"the visionary designer of the historic Old Course,\" and honours A. W. Tillinghast's \"1912 redesign.\" Golf Digest's payload gives the designer as \"Tillinghast/Ross\" — Oldham is absent — and its entry, by Ron Whitten, says: \"The Bedford Springs resort boasts that their course was the work of three 'architectural masters': Spencer Oldham, A.W. Tillinghast and Donald Ross. Oldham was no architectural master. He was simply a Baltimore club pro who staked out the first nine in 1898. Tillinghast and Ross were definitely involved at different times, and remnants of both were still evident when I walked the site back in 1997 after the course had been closed and was overgrown. But it looked to have been a mediocre layout, despite that pedigree. It took Forse and Nagle, a decade later, to turn it into a timeless golf design.\" So: 1895 against 1898 for the first holes, 1912 against 1916 for Tillinghast's work, and \"architectural master\" against \"simply a Baltimore club pro\" for Oldham. This guide does not adjudicate between them.\n\nTwo holes survive both accounts by name. Whitten: \"They kept the 225-yard uphill fourth, which was one of Ross' most treacherous par 3s ever. It's dubbed 'Volcano' because of the location of its green atop a domed hill. (Ross built the hole in 1923 and Walter Hagen soon thereafter declared it one of the best in America.) They also recaptured the spirit of Tillinghast's 1916 pitch-shot par 3, 'Tiny Tim,' played over marsh and pond to a tricky green ringed by knobs and bunkers.\" The OpenStreetMap polygon covering the course carries 18 holes tagged with refs 1 to 18 and named Spring, Spencer Oldham, Steeplechase, Volcano, Oaks, Ross' Cathedral, Shober's Run, Overbrook, Meadow, Gulley, Lang Dale, Sweetroot, Long, Tiny Tim, Bunker Hill, Hole O'Cross, Ronnie and Home — Volcano at the fourth, exactly where Golf Digest places it.\n\nThe modern course is a restoration. Ron Forse and Jim Nagle of Forse Golf Design \"revitalized it by rebuilding every hole\" in 2006 and 2007; Whitten writes that they \"rescued the resort's 18 holes from an unharnessed floodplain and years of neglect,\" and GolfLink records the year opened as 2007. The clubhouse serving it opened in June 2017: \"Some 20 years ago, the resort's original clubhouse was destroyed in a flood and not rebuilt.\" The replacement is 6,000 square feet, with an \"80+ seat restaurant, Tillie's, including indoor and outdoor dining,\" a fire-pit lounge area, a pro shop and retail.\n\nThe property around it is a National Historic Landmark. The National Park Service's List of NHLs by State, Pennsylvania section, carries one entry for it: \"Bedford Springs Hotel Historic District — 07/17/91 — Bedford Township, Bedford County, PA,\" designated 17 July 1991. Golf Digest adds of the hotel that it was \"Built in 1806, it was in 1855 site of the only U.S. Supreme Court session held outside Washington, D.C. The hotel also served as President Buchanan's summer White House before the Civil War.\""
+      },
+      {
+        "heading": "Playing it without a room",
+        "body": "This is the access shape a traveller can act on without a reservation at the hotel: the resort does not gate the course, it prices it in tiers. Its own Golf FAQs put the question and answer it: \"Do you have to be a guest staying at Omni Bedford Springs Resort & Spa to play on the golf course?\" — \"No, you do not have to be a guest or member of the resort to play golf. To reserve your tee time prior to arrival, please contact the Resort Pro Shop (814) 624-5637.\" No stay is required. What a non-guest pays is a published column on a published table, not a quote.\n\nPennsylvania is one of the few states in this set whose operator publishes a green fee with its own dated qualifier, so the numbers below are printable. The page is headed \"Golf Fees At Bedford Springs Old Course\" and then \"2026 Old Course Fees,\" and it carries two parallel columns, \"Resort Guest Rates\" and \"Non-resort guest rates.\" The non-resort-guest column, which is the one a traveller with no booking pays, reads: in season, May 1 to October 18, Friday–Sunday 18 holes $289; Monday–Thursday 18 holes $239; daily 9 holes $149, not available before 12:00 pm on Saturdays, Sundays and holidays; daily twilight after 4 PM $149; replay, same day only, $109. Pre-season, March 27 to April 30: daily 18 holes $159, 9 holes $109, twilight after 4 PM $109. Off-season, January 1 to March 26 and October 22 to December 31: daily 18 holes $99. Junior rate, 17 and under, 18 holes $79. The resort-guest column of the same table runs $259 / $209 / $129 / $129 / $99 / $149 / $99 / $69, so the difference between staying and not staying is $30 on a weekend round. Also published: a non-golf rider at $49; club rentals, Callaway with balls included, $79 for 18 and $59 for 9; and an adult practice and short-game area at $29, or $69 with rental, marked \"(Resort Guests & Members Only).\"\n\nThe $289 is a rate and not a demand-varying quote, and that was tested rather than assumed. The resort's \"Book a Tee Time\" link goes to a public consumer tee sheet whose configuration carries no restrictions, no login and no membership check. Called anonymously across dates in September 2026, that engine returned $289 on every Friday, Saturday and Sunday it was asked about, identical on every slot of every one of them — five slots at $289 on a nearly full Sunday, thirty-one on an emptier Saturday, same price. It quotes the non-guest column to an anonymous caller, and its price bands follow the table's own clock: on 11 September 2026 the $289 slots ran until 19:50Z and the $149 slots began at 20:00Z, which is 16:00 local — exactly the published \"Twilight After 4 PM $149.\" Golf Digest's own stored weekend fee for this facility, $249, is stale against both the operator's table and the operator's engine; the operator governs.\n\nThe engine also reproduces the operator's dated special-rate days to the hour and to the dollar. On 14 September 2026, a Donald Ross Day, it returned $179 before 3 PM local and $99 after; on 20 September 2026, a Spencer Oldham Sunday, it returned the ordinary $289 in the band before the promotion opened, then $189, then $109 after 3 PM. Engine and table agree on five numbers, on the right days, at the right times."
+      },
+      {
+        "heading": "The 2026 calendar: closures, events and special rates",
+        "body": "The operator publishes a 2026 maintenance schedule and a 2026 calendar of special days, and both are dated on its own pages.\n\nThe one closure it announces is \"October 19 - 22 | Course Closed,\" for aerification. It sits exactly in the seam between the in-season rate band, which ends October 18, and the off-season band, which starts October 22. Nothing else on the resort's golf pages hides a closure: the fee page, the golf page and the special-dates page each carry 48 HTML comments and none of them mentions closure, aeration, renovation, flooding or maintenance.\n\nThe season is stated by the operator, in the same Golf FAQs block that answers the access question: \"Can you golf year round at Omni Bedford Springs Resort & Spa?\" — \"Yes, golf is open year-round at Omni Bedford Springs Resort & Spa. Book a tee time on the website or by calling the pro shop at (814) 624-5637.\" There is an off-season rate band and one four-day closure, and no other stated interruption.\n\nDated events on the same page. The Bedford Springs Open falls on September 12 and 13, \"a thrilling 36-hole, 2-person better ball stroke play event\"; it does not close the course, but it thins the sheet markedly — 25 bookable slots on the 12th and 18 on the 13th, against 32 to 42 on ordinary in-season weekend days. Donald Ross Days: May 11 and 25, June 15, July 13, August 10 and 31, September 14, October 12, at \"$179 per person prior to 3 PM / $99 after 3 PM.\" Spencer Oldham Sundays: May 17 and 31, June 28, July 26, August 16 and 30, September 20, October 11, at \"$189 per person after 11 AM / $109 per person after 3 PM.\" Tillinghast Twilight: May 5 and 19, June 2 and 30, July 7 and 21, August 11 and 25, September 8 and 29, October 6, at \"$99 per person after 3 PM.\"\n\nOne caution about reading the tee sheet itself: the booking engine holds inventory only 22 days out for this course, so a date beyond that window returns nothing and names its own future release date rather than reporting a closure. An empty sheet at range is a horizon. The October 19–22 closure above stands on the operator's dated maintenance page, which is the right basis for it."
+      },
+      {
+        "heading": "The weekend around the course",
+        "body": "The weekend happens on the estate, with independent alternatives in Bedford borough at measured distances.\n\nOmni Bedford Springs Resort & Spa, 2198 Sweet Root Road, Bedford, (814) 623-8100, concierge (814) 624-5633, is the on-property option. Its own property-details page reads: \"The AAA Four Diamond award-winning Omni Bedford Springs Resort & Spa couples charm and luxury with first-class services and amenities,\" and lists the historic 18-hole golf course, a 30,000-square-foot Springs Eternal Spa, a full-service fitness centre and classes, indoor and outdoor heated pools, private cabanas, a fire pit, tennis, on-site hiking, on-site retail shops, off-road vehicle tours, archery, fishing and paintball. Guest services listed include a 24-hour business centre, concierge, valet parking, Wi-Fi and \"Pet Friendly.\" Accessibility is documented at length: \"Accessible guest rooms with entry that provides 32\\\" of clear width,\" \"Roll-in shower with adjustable height hand held shower head,\" \"The hotel has a TTY for guest use,\" \"Closed caption TV.\"\n\nThe independent alternative is the Jean Bonnet Tavern, 6048 Lincoln Highway, Bedford, (814) 623-2250, 6.45 road miles from the course, in Napier township, Bedford County. Its own words: \"Fine Food + Drink + Lodging … Where Friends Have Been Meeting … since 1762!\" and \"We invite you to share in the long tradition of hospitality, good food and drink, at this 1760s historic landmark.\" The lodging is four rooms and suites on the third floor, each with a private bath, at \"$150/night based on double occupancy\" including a \"hearty country breakfast\"; additional guests $10 each, roll-away beds $10, no pets, no elevator. Check-in is from 2 to 9 PM and check-out is \"FIRMLY by 11 AM.\" One thing to plan around: \"We are closed Sundays and do not reserve rooms for Sunday night, although we do provide breakfast Sunday morning to guests that stay Saturday night.\"\n\nDining on the estate. Tillie's at the Clubhouse, at the Old Course clubhouse, 2138 Business 220, (814) 624-5735, daily 11 AM to 9 PM, in its own words \"offers a casually elegant dining experience at Omni Bedford Springs Resort & Spa, featuring classic clubhouse favorites for lunch and dinner,\" with \"a full-service bar that highlights local Pennsylvania brews and spirits\" and a fire pit outside with \"sweeping views of the award-winning Old Course.\" It adds: \"Seating is available on a first-come, first-served basis—no reservations required.\" The 1796 Room, \"Named for the year that Dr. John Anderson purchased the land upon which the resort now stands,\" \"has now been re-launched as a signature steak and chophouse, serving steaks, chops, fish and poultry of the highest quality,\" \"Creating a relaxed yet upscale atmosphere of warm sophistication.\" The resort's dining navigation also carries The Crystal Room, Frontier Tavern, Evitt House Coffee and the Lobby Bar.\n\nDining in the town. Bella Terra Bedford, 113 S Richard St, Bedford, (814) 623-1051, is 1.87 road miles from the course, inside Bedford borough. Its own words: \"Located in the heart of Bedford, PA, Bella Terra Bedford is more than your just your local, average restaurant\"; \"your go-to destination for handcrafted cocktails, PA-made wine & beer, and a full kitchen with delicious bites\"; \"Join us for live music, Happy Hour (Tues-Thurs, 4-6 PM), Sunday Brunch, and exciting monthly events.\" Published hours: Tuesday to Thursday 11 AM to 8 PM, Friday and Saturday 11 AM to 9 PM, Sunday 10 AM to 2 PM, Monday closed. The Jean Bonnet Tavern also serves: Monday to Saturday 11 AM to 9 PM, Sunday closed.\n\nBedford's options are genuinely small in number, and this guide names only places whose own sites were read and which show current trading evidence rather than padding the list."
+      },
+      {
+        "heading": "Day two: Bedford Elks Country Club",
+        "body": "The second course here is not the next one down the ranking. It is the nearest course a traveller can actually play: Bedford Elks Country Club, 937 S Richard St, Bedford, (814) 623-9714, at 1.16 road miles from the Old Course by Sweet Root Road and South Richard Street (US-220 Business). Nothing lies between the two — GolfLink, an independent directory, states that \"There are 2 golf courses in Bedford, Pennsylvania, including 2 public courses,\" and names them as the Elks and the Omni.\n\nIt is a real outdoor round, not a practice loop. The club's own golf page: \"A great 9 hole golf course for all ages and skill levels!\" Its homepage: \"The Bedford Elks Country Club and the Benevolent and Protective Order of Elks has served Bedford, Pennsylvania, as a family-friendly recreation center for more than 70 years. Come Join Our country club, and enjoy our nine hole golf course, 20 lane bowling alley, relaxing lounge, elegant ballroom, and refreshing pool.\" GolfLink gives 9 holes, par 36, 3,182 yards, no driving range, year opened 1931, and classifies it Public; OpenStreetMap tags the polygon \"Semi-private golf club.\" Leagues listed on the club's own site: Match Play, Lady's, Industrial, Weekend Scramble, Nine and Dine.\n\nA fraternal organisation with \"Country Club\" in its name is exactly the case where a name settles nothing, so access here rests on what the booking system does rather than on what any page says. The club's own tee-sheet configuration carries ten rate channels, two of them typed \"Member\" and named \"Member 9\" and \"Member 18,\" and two of them typed \"18 Holes\" and \"9 Holes\" and named \"18 Hole Riding BE\" and \"9 Hole Riding BE.\" Called anonymously — no login, no session, no membership token — the club's tee-time interface returned bookable inventory on the non-member channels, not the Member ones, with a minimum of one player, allowed parties of one to four, no restriction object, and a booking form asking only for an email address. An unaffiliated single traveller with no lodge affiliation is offered a bookable tee time at a stated non-member price, on a channel the operator itself distinguishes from its Member channels. That is the basis on which this guide calls it publicly playable. The general rule behind it holds for both courses on this page: a booking system's behaviour outranks a marketing page's adjectives, and where an operator contradicts itself, the booking system wins.\n\nTwo honest limits. First, the club publishes no sentence of its own saying the course is open to the public; the nearest it comes is its memberships page listing, among Elk membership benefits, \"Discounts on Golf Memberships, Daily Golf Rates, and Pro Shop Merchandise\" — an undiscounted daily rate that somebody pays. Second, it publishes no dated green-fee table either, only membership prices for the 2026 season: Elks Lodge membership $220 plus $25 for a spouse; Elks C.C. Member Golf Membership $495; Couples $800; Junior $100; Golf Cart Membership $480 or a 20-ride nine-hole pass at $180; Pool $100. Because there is no dated operator fee, this guide prints no green fee for the Elks. The club also publishes no maintenance or closure calendar — its news page is empty and its events feed returns nothing — so its opening pattern is unverified rather than established. Its booking horizon is 8 days, and dates beyond that return nothing while naming their own future release date, which is a horizon and not a closure. One practical note: the tee-time widget embedded on the club's own tee-times page renders \"Sorry, the Tee-Times could not be displayed at this time.\" The working path is the booking subdomain linked from the site header, or the telephone."
+      }
+    ],
+    "faq": [
+      {
+        "question": "Can I play the Old Course without staying at the resort?",
+        "answer": "Yes, and the resort says so itself. Its Golf FAQs ask \"Do you have to be a guest staying at Omni Bedford Springs Resort & Spa to play on the golf course?\" and answer \"No, you do not have to be a guest or member of the resort to play golf. To reserve your tee time prior to arrival, please contact the Resort Pro Shop (814) 624-5637.\" The course is tiered by price rather than gated by permission: the operator publishes a separate \"Non-resort guest rates\" column, and a traveller with no booking pays that column."
+      },
+      {
+        "question": "What does a round cost?",
+        "answer": "From the operator's own table, headed \"2026 Old Course Fees,\" the \"Non-resort guest rates\" column: in season, May 1 to October 18, Friday–Sunday 18 holes $289, Monday–Thursday 18 holes $239, 9 holes $149 (not available before 12:00 pm Saturdays, Sundays and holidays), twilight after 4 PM $149, same-day replay $109. Pre-season, March 27 to April 30: 18 holes $159, 9 holes $109, twilight $109. Off-season, January 1 to March 26 and October 22 to December 31: 18 holes $99. Junior, 17 and under, $79. The resort-guest column is $30 lower on a weekend round, at $259. Golf Digest's own stored weekend figure of $249 is out of date against the operator's table."
+      },
+      {
+        "question": "Is $289 a real rate or a demand-driven quote?",
+        "answer": "A rate. The resort's public tee sheet, called anonymously across dates in September 2026, returned $289 on every Friday, Saturday and Sunday sampled, identical on every slot of every one of them — five slots at that price on a nearly full Sunday and thirty-one on an emptier Saturday. It never moved with remaining inventory, and its price bands follow the published table's own clock, with the $149 twilight band opening at 4 PM local exactly as printed."
+      },
+      {
+        "question": "How do I book a tee time?",
+        "answer": "The resort's own instruction is to \"contact the Resort Pro Shop (814) 624-5637\" to reserve before arrival, and its Golf FAQs add that you can \"Book a tee time on the website or by calling the pro shop.\" Its \"Book a Tee Time\" link goes to a public consumer tee sheet with no login and no membership check. That sheet holds inventory 22 days out; ask it about a date beyond that and it returns nothing and names the date from which those times will be released, which is a booking horizon rather than a closure."
+      },
+      {
+        "question": "Is the course open in winter?",
+        "answer": "The operator answers this directly in its Golf FAQs: \"Can you golf year round at Omni Bedford Springs Resort & Spa?\" — \"Yes, golf is open year-round at Omni Bedford Springs Resort & Spa. Book a tee time on the website or by calling the pro shop at (814) 624-5637.\" There is an off-season rate band, January 1 to March 26 and October 22 to December 31, with 18 holes at $99 for a non-resort guest."
+      },
+      {
+        "question": "Are there dates in 2026 to avoid?",
+        "answer": "The operator's 2026 maintenance schedule gives one closure: \"October 19 - 22 | Course Closed,\" for aerification. The Bedford Springs Open is played September 12 and 13, a 36-hole two-person better-ball event; it does not close the course, but the tee sheet held 25 slots on the 12th and 18 on the 13th against 32 to 42 on ordinary in-season weekend days. Donald Ross Days, Spencer Oldham Sundays and Tillinghast Twilight each carry their own dates and their own promotional prices, listed in this guide's section on the 2026 calendar."
+      },
+      {
+        "question": "Why is the state's course number 27 on the list rather than something higher?",
+        "answer": "Because the 26 entries above it are all shut to a traveller with no membership and no room. Each was checked inside its own block on the ranking page, with no missing labels and none wrongly passed. Twenty-four carry the ranking's own \"Private\" rubric. The other two are Nemacolin: Mystic Rock at 11 and Nemacolin: Shepherd's Rock at 21, which the ranking labels \"Public\" while the operator's own record for each course reads \"Open to overnight guests and all-access members.\" Nemacolin publishes no rate table at all, and its booking provider's two live golf packages are named \"Lodging Guest Tee Times\" and \"Member Tee Times\"; a hidden content record titled \"Public Tee Times\" points at a package id that does not exist in that provider's system, resolving exactly as a null control does. The exclusion is proved rather than assumed."
+      },
+      {
+        "question": "Which course should I play on day two?",
+        "answer": "Bedford Elks Country Club, 937 S Richard St, at 1.16 road miles from the Old Course by Sweet Root Road and South Richard Street (US-220 Business) — a nine-hole course, par 36, 3,182 yards, opened 1931. It is chosen as the nearest playable course rather than by rank, and its access is established by execution: the club's booking system carries separate Member and non-member rate channels, and an anonymous caller with no membership is served the non-member channels with a one-player minimum and a booking form asking only for an email address. The club publishes no dated green-fee table, so this guide prints no fee for it; call (814) 623-9714 or use the booking link in the site header rather than the widget on the club's own tee-times page, which does not render."
+      },
+      {
+        "question": "Where exactly is the course?",
+        "answer": "On the Omni Bedford Springs Resort estate at Bedford, in Bedford township, Bedford County, Pennsylvania. The clubhouse restaurant publishes the course address as 2138 Business 220, Bedford, PA 15522, while the hotel's footers give 2198 Sweet Root Road for the property. The Census geocoder places the ranking's stored coordinate in Bedford township, outside Bedford borough, so \"Bedford\" is the mailing town rather than the municipality. The property stands on US-220 Business; the Pennsylvania Turnpike (I-70 / I-76) and US-30, the Lincoln Highway, both pass through Bedford."
+      },
+      {
+        "question": "Who designed the Old Course?",
+        "answer": "The sources disagree and this guide reports both. The resort names \"Spencer Oldham, A.W. Tillinghast and Donald Ross\" and dates the course to 1895, with Tillinghast's \"1912 redesign\" and Ross finalising it in 1923. Golf Digest lists the designer as \"Tillinghast/Ross,\" omits Oldham, dates the first nine to 1898 and Tillinghast's 'Tiny Tim' to 1916, and calls Oldham \"no architectural master … simply a Baltimore club pro.\" Both agree on the modern work: Ron Forse and Jim Nagle of Forse Golf Design rebuilt every hole in 2006 and 2007."
+      }
+    ],
+    "photos": []
+  },
+  "places": [
+    {
+      "slug": "old-course-at-bedford-springs",
+      "name": "The Old Course at Bedford Springs",
+      "kind": "golf-course",
+      "town": "Bedford",
+      "state": "Pennsylvania",
+      "county": "Bedford County",
+      "official_url": "https://www.omnihotels.com/hotels/bedford-springs/golf",
+      "summary": "Number 27 on Golf Digest's \"Best in State\" ranking of the best golf courses in Pennsylvania, edition 2025-'26, labelled \"Public\" — the highest-ranked entry on that list a traveller with no membership and no room can play. 18 holes, par 72, rating 73, slope 140, 6,785 yards. The resort credits Spencer Oldham, A.W. Tillinghast and Donald Ross; Golf Digest credits \"Tillinghast/Ross\" and disputes Oldham's standing. Ron Forse and Jim Nagle rebuilt every hole in 2006 and 2007. The operator publishes a \"2026 Old Course Fees\" table with a \"Non-resort guest rates\" column at $289 for 18 holes Friday to Sunday in season, and states that no stay is required. The surrounding Bedford Springs Hotel Historic District was designated a National Historic Landmark on 17 July 1991.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "bedford-elks-country-club",
+      "name": "Bedford Elks Country Club",
+      "kind": "golf-course",
+      "town": "Bedford",
+      "state": "Pennsylvania",
+      "county": "Bedford County",
+      "official_url": "https://www.bedfordelks.com/",
+      "summary": "A nine-hole course at 937 S Richard St, 1.16 road miles from the Old Course by Sweet Root Road and South Richard Street (US-220 Business) — the nearest playable course to it, chosen by distance rather than by rank. Par 36, 3,182 yards, no driving range, opened 1931, run by the Benevolent and Protective Order of Elks alongside a 20-lane bowling alley, lounge, ballroom and pool. It publishes no sentence claiming public access and no dated green-fee table; access is established by its booking system, which carries separate Member and non-member rate channels and serves the non-member channels to an anonymous caller with a one-player minimum. GolfLink classifies it Public; OpenStreetMap tags it \"Semi-private golf club.\"",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "omni-bedford-springs-resort-spa",
+      "name": "Omni Bedford Springs Resort & Spa",
+      "kind": "hotel",
+      "town": "Bedford",
+      "state": "Pennsylvania",
+      "county": "Bedford County",
+      "official_url": "https://www.omnihotels.com/hotels/bedford-springs",
+      "summary": "The estate the Old Course sits on, at 2198 Sweet Root Road, Bedford, (814) 623-8100, concierge (814) 624-5633. Its own page: \"The AAA Four Diamond award-winning Omni Bedford Springs Resort & Spa couples charm and luxury with first-class services and amenities.\" Listed on the property: the historic 18-hole golf course, a 30,000-square-foot Springs Eternal Spa, a fitness centre, indoor and outdoor heated pools, private cabanas, a fire pit, tennis, on-site hiking and retail, off-road vehicle tours, archery, fishing and paintball; guest services include a 24-hour business centre, valet parking, Wi-Fi and \"Pet Friendly,\" with accessible rooms, roll-in showers and a TTY documented on the same page. The Bedford Springs Hotel Historic District is a National Historic Landmark, designated 17 July 1991.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "jean-bonnet-tavern-bedford",
+      "name": "Jean Bonnet Tavern",
+      "kind": "bnb",
+      "town": "Bedford",
+      "state": "Pennsylvania",
+      "county": "Bedford County",
+      "official_url": "https://www.jeanbonnettavern.com/",
+      "summary": "A bed and breakfast above a tavern at 6048 Lincoln Highway, Bedford, (814) 623-2250, 6.45 road miles from the Old Course, in Napier township. Its own words: \"Fine Food + Drink + Lodging … Where Friends Have Been Meeting … since 1762!\" Four rooms and suites on the third floor, each with a private bath, at \"$150/night based on double occupancy\" including a \"hearty country breakfast\"; additional guests $10 each, roll-away beds $10, no pets, no elevator; check-in 2 to 9 PM, check-out \"FIRMLY by 11 AM.\" The house states: \"We are closed Sundays and do not reserve rooms for Sunday night, although we do provide breakfast Sunday morning to guests that stay Saturday night.\" Its restaurant serves Monday to Saturday 11 AM to 9 PM, closed Sunday.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "tillies-at-the-clubhouse",
+      "name": "Tillie's at the Clubhouse",
+      "kind": "restaurant",
+      "town": "Bedford",
+      "state": "Pennsylvania",
+      "county": "Bedford County",
+      "official_url": "https://www.omnihotels.com/hotels/bedford-springs/dining/tillies",
+      "summary": "The restaurant in the Old Course clubhouse, 2138 Business 220, Bedford, (814) 624-5735, daily 11 AM to 9 PM. In its own words it \"offers a casually elegant dining experience at Omni Bedford Springs Resort & Spa, featuring classic clubhouse favorites for lunch and dinner,\" with \"a full-service bar that highlights local Pennsylvania brews and spirits\" and an outdoor fire pit with \"sweeping views of the award-winning Old Course.\" It adds: \"Seating is available on a first-come, first-served basis—no reservations required.\" The clubhouse holding it opened in June 2017, 6,000 square feet with an \"80+ seat restaurant,\" on the site of an original clubhouse \"destroyed in a flood and not rebuilt.\" The name is a nod to A. W. Tillinghast.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "1796-room-bedford-springs",
+      "name": "1796 Room",
+      "kind": "restaurant",
+      "town": "Bedford",
+      "state": "Pennsylvania",
+      "county": "Bedford County",
+      "official_url": "https://www.omnihotels.com/hotels/bedford-springs/dining/1796-room",
+      "summary": "The steakhouse at Omni Bedford Springs Resort & Spa. Its own page: \"Named for the year that Dr. John Anderson purchased the land upon which the resort now stands, 1796 Room has now been re-launched as a signature steak and chophouse, serving steaks, chops, fish and poultry of the highest quality,\" \"Creating a relaxed yet upscale atmosphere of warm sophistication.\" The resort's dining navigation also carries The Crystal Room, Frontier Tavern, Evitt House Coffee and the Lobby Bar.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "bella-terra-bedford",
+      "name": "Bella Terra Bedford",
+      "kind": "restaurant",
+      "town": "Bedford",
+      "state": "Pennsylvania",
+      "county": "Bedford County",
+      "official_url": "https://www.bellaterrabedford.com/",
+      "summary": "An independent restaurant and bar at 113 S Richard St, Bedford, (814) 623-1051, 1.87 road miles from the Old Course and inside Bedford borough. Its own words: \"Located in the heart of Bedford, PA, Bella Terra Bedford is more than your just your local, average restaurant\"; \"your go-to destination for handcrafted cocktails, PA-made wine & beer, and a full kitchen with delicious bites\"; \"Join us for live music, Happy Hour (Tues-Thurs, 4-6 PM), Sunday Brunch, and exciting monthly events.\" Published hours: Tuesday to Thursday 11 AM to 8 PM, Friday and Saturday 11 AM to 9 PM, Sunday 10 AM to 2 PM, Monday closed.",
+      "status": "open",
+      "photos": []
+    }
+  ],
+  "entries": [
+    {
+      "kind": "sight",
+      "name": "The Old Course at Bedford Springs",
+      "place_slug": "old-course-at-bedford-springs",
+      "note": "Number 27 on Golf Digest's 2025-'26 Pennsylvania ranking and labelled \"Public\" — the highest-ranked entry on the list that a non-member, non-guest can play. Non-resort guest rate $289 for 18 holes Friday to Sunday in season, from the operator's own \"2026 Old Course Fees\" table."
+    },
+    {
+      "kind": "sight",
+      "name": "Bedford Elks Country Club",
+      "place_slug": "bedford-elks-country-club",
+      "note": "Day two: nine holes, par 36, at 1.16 road miles by Sweet Root Road and South Richard Street. Publicly playable on the evidence of its booking system, which serves an anonymous caller its non-member rate channels; no dated operator fee is published."
+    },
+    {
+      "kind": "stay",
+      "name": "Omni Bedford Springs Resort & Spa",
+      "place_slug": "omni-bedford-springs-resort-spa",
+      "note": "The estate the course sits on, 2198 Sweet Root Road, (814) 623-8100. A resort-guest green fee $30 below the non-guest one, plus the Springs Eternal Spa, heated pools and on-site hiking."
+    },
+    {
+      "kind": "stay",
+      "name": "Jean Bonnet Tavern",
+      "place_slug": "jean-bonnet-tavern-bedford",
+      "note": "The independent alternative, 6.45 road miles out on Lincoln Highway: four rooms at $150 a night with breakfast, in a 1760s landmark. Closed Sundays, and no rooms let for Sunday night."
+    },
+    {
+      "kind": "food",
+      "name": "Tillie's at the Clubhouse",
+      "place_slug": "tillies-at-the-clubhouse",
+      "note": "Clubhouse fare at the Old Course, daily 11 AM to 9 PM, with an outdoor fire pit over the course. First come, first served, no reservations."
+    },
+    {
+      "kind": "food",
+      "name": "1796 Room",
+      "place_slug": "1796-room-bedford-springs",
+      "note": "The resort's steak and chophouse, named for the year the land was purchased."
+    },
+    {
+      "kind": "food",
+      "name": "Bella Terra Bedford",
+      "place_slug": "bella-terra-bedford",
+      "note": "Independent, 1.87 road miles from the course in Bedford borough: cocktails, Pennsylvania wine and beer, live music and Sunday brunch. Closed Mondays."
+    }
+  ]
+}
