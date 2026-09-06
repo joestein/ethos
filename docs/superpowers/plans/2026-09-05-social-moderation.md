@@ -267,11 +267,24 @@ the login attempt, and any session that survives.
 
 `test/ethos_web/controllers/user_session_controller_test.exs` already asserts the
 generic failure message at line 93. **Leave that test alone** — it covers a wrong
-password, which still gets the generic message. Add a sibling. The file is
-`async: false` already; if it is not, leave its setting as you find it and say so
-in your report.
+password, which still gets the generic message. Add a sibling.
 
-Append inside the file's `describe "POST /users/log_in"` block:
+**First, change that file from `async: true` to `async: false`**, with a comment
+matching the ones already on the other admin-email test files:
+
+```elixir
+  # async: false — admin_fixture/1 inserts the configured admin email, and
+  # concurrent inserts of that unique value deadlock.
+  use EthosWeb.ConnCase, async: false
+```
+
+This is not optional. The new test below calls `admin_fixture/1`, and three
+other files already had to be serialised for exactly this reason — an async
+module inserting that email is what made the suite fail half its runs.
+
+`test/ethos_web/user_auth_test.exs` is already `async: false`; leave it.
+
+Append inside the session controller file's `describe "POST /users/log_in"` block:
 
 ```elixir
     test "refuses a banned account with a distinct message", %{conn: conn} do
