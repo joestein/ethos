@@ -39,6 +39,19 @@ defmodule Ethos.Seeds.GolfSeedDataTest do
   the rejected wider forms and their counts are recorded beside them in
   `Ethos.GolfProse`.
 
+  Patterns 23 to 28 were added the same way, and for a defect that had already
+  shipped twice. `golf/kansas.json` published "Today is September 5, 2026: …
+  the first of those dates eight days away" and `golf/missouri.json` published
+  "Today is 5 September 2026, so that closure begins in three days" — sentences
+  that were true on their writing day and false the next morning, in guides
+  read months after authoring. Both files keep every absolute date and lost
+  only the offset from an unstated now. Nine candidates were rejected on
+  measurement over 503 corpus units, among them bare `today is` (17 hits, 15 of
+  them the evergreen "the building today is …" idiom), `currently closed` (30,
+  mostly the negative epistemic sentences this programme wants) and
+  `last <weekday>` (19, every one "the last Sunday of the month"); the counts
+  and the strings are recorded beside the patterns in `Ethos.GolfProse`.
+
   ## What this does not catch
 
   An unsourced *containment* claim in ordinary prose — "both are in Ponte
@@ -107,7 +120,33 @@ defmodule Ethos.Seeds.GolfSeedDataTest do
     {19, "the caddie shack is down the road"},
     {20, "the inn is within walking distance"},
     {21, "the resort is a 3-hour drive north"},
-    {22, "the links are a two-hour drive from the airport"}
+    {22, "the links are a two-hour drive from the airport"},
+    {23, "the first of those dates is eight days away"},
+    {24, "the aeration closure begins three days from today"},
+    {25, "Today is September 5, 2026, and the course is open"},
+    {26, "as of today the clubhouse is shut"},
+    {27, "the greens are aerated next week"},
+    {28, "the course reopened last week after aeration"}
+  ]
+
+  # The self-dating sentences two published guides actually carried. Both were
+  # true on the day they were written and false the next morning, and both
+  # survived twenty-two patterns. Kept as strings for the same reason the
+  # hour-duration list is: six patterns, more phrasings than patterns.
+  @self_dated_before_23_to_28 [
+    # golf/kansas.json, intro and FAQ answer.
+    "the first of those dates eight days away",
+    "Today is September 5, 2026: the course's own closures calendar shows",
+    # golf/missouri.json, section body and FAQ answer.
+    "Today is 5 September 2026, so that closure begins in three days",
+    "today is 5 September 2026, so that closure begins in three days",
+    # The same class in the phrasings neither file happened to reach for.
+    "three days from today",
+    "a week from now",
+    "as of now the course is closed",
+    "the tournament is two weeks away",
+    "the aeration window opens this coming Monday",
+    "the range was resurfaced last weekend"
   ]
 
   # The five phrasings that escaped the whole twenty-pattern set before
@@ -172,6 +211,14 @@ defmodule Ethos.Seeds.GolfSeedDataTest do
                "Pattern 7 covers one to ninety-nine because an author respelled " <>
                "\"12-minute\" as \"twelve-minute\" and walked through the gap."
     end
+
+    for text <- @self_dated_before_23_to_28 do
+      assert Ethos.GolfProse.banned_phrases(text) != [],
+             "a guide dated itself against its writing day again: #{inspect(text)}. " <>
+               "Patterns 23 to 28 exist because kansas.json and missouri.json both " <>
+               "published this and both were already wrong the next morning. Keep " <>
+               "the absolute date, drop the offset from now."
+    end
   end
 
   # Assert the PUBLISHABLE form too. A gate that bans the checkable form
@@ -206,7 +253,40 @@ defmodule Ethos.Seeds.GolfSeedDataTest do
     "twelve months of the year",
     "at least 48 hours in advance",
     "book within 48 hours by calling the Pro Shop",
-    "180 days in advance"
+    "180 days in advance",
+    # Patterns 23 to 28 ban the offset from an unstated now, never the date
+    # itself. An absolute date does not rot, and an as-of date is a statement
+    # about when the source was read, so both are the FIX for the Kansas and
+    # Missouri defect and must never be caught by the gate that names it.
+    "closed all day September 13, 14 and 15, and again September 27, 28 and 29",
+    "As of September 5, 2026, the course's own closures calendar shows",
+    "the season runs April 1 – November 30",
+    "Fall 2026 Aeration Dates: September 8 – 10: Closed",
+    "as of the ranking data's own November 14, 2025 update",
+    "the rate table is current as of a September 5, 2026 reading of its own site",
+    # The two shapes measurement protects. A question about the reader's
+    # present is the correct thing for a guide to ask — it is the answer that
+    # carries the date — and `right now` scores 25 repo-wide, three of them
+    # this very question.
+    "Is the course open right now?",
+    "Is Quintero open right now?",
+    # A NEGATIVE epistemic statement is true at any present moment, because it
+    # asserts an absence of evidence rather than a fact about a week. This
+    # exact sentence is in oregon, idaho, minnesota, missouri and utah, and
+    # `this week` scores 5 repo-wide — all five of them this.
+    "none of them says whether any given one is serving this week, " <>
+      "so this guide does not say so either",
+    "neither says whether either is trading today, so this guide does not say so either",
+    "that list is presented as of the reopening and not as of today",
+    "it is not known whether the restaurant is currently open for service",
+    # Historical "next year" is anchored to a stated year, not to now.
+    "built in 1876 and completed the next year",
+    # A recurring schedule, not a past date. 19 repo-wide.
+    "open the last Sunday of every month except December",
+    "from the last Sunday of October to the last Saturday of March",
+    # Booking windows are durations, not countdowns.
+    "book Ozarks National up to 30 days ahead",
+    "the tenant remains obligated under its lease which expires in January 2031"
   ]
 
   test "sourced, checkable spatial and time claims still publish" do

@@ -144,7 +144,146 @@ defmodule Ethos.GolfProse do
     ~r/\b(?:one|two|three|four|five|six|seven|eight|nine|ten|eleven|twelve)[-–\s]*hours?[-–\s]+(?:drive|ride|trip|commute|journey|walk|stroll|hop|away|north|south|east|west|by car|by bus|by train|by ferry|by subway)\b/i
   ]
 
-  @patterns @trip_duration_patterns ++ @proximity_patterns ++ @hour_patterns
+  # --- Self-dating and relative dates, patterns 23 to 28 ------------------
+  #
+  # APPENDED, never interleaved, for the same reason patterns 21 and 22 were:
+  # the specimen test pins each pattern by position.
+  #
+  # THE DEFECT THESE CLOSE. `golf/kansas.json` shipped "Today is September 5,
+  # 2026: the course's own closures calendar shows … closed all day September
+  # 13, 14 and 15, and again September 27, 28 and 29 — the first of those dates
+  # eight days away", and the same FAQ answer repeated "eight days away" under
+  # an "As of September 5, 2026" opener. `golf/missouri.json` shipped the
+  # identical shape twice: "Today is 5 September 2026, so that closure begins
+  # in three days." Every one of those sentences was true on the day it was
+  # written and false the next morning. These guides are read months after
+  # authoring, so a claim that is true only on its writing day is a defect —
+  # and "Today is …" additionally makes the guide speak as though the reader
+  # shares its writing date.
+  #
+  # THE FIX IS NOT TO DROP THE DATE. Absolute dates are the useful content and
+  # they do not rot: "September 13, 14 and 15" and "April 1 – November 30" must
+  # keep publishing, and are pinned in `@publishable`. What is banned is the
+  # offset from an unstated now. An as-of date — "As of September 5, 2026, the
+  # calendar shows …" — is a statement about when the source was read, which
+  # stays true forever; that is the form both files were rewritten into.
+  #
+  # MEASURED over all 503 corpus units — every `priv/seed_data/*/*.json` and
+  # every `lib/ethos/seeds/*.ex`. All six score 0 today. Pattern 25 scored 2
+  # before `golf/missouri.json` was rewritten; those two were the only hits any
+  # of the six had outside Kansas, they were read, they were the same defect,
+  # and the prose was fixed rather than the pattern narrowed.
+  #
+  # REJECTED CANDIDATES, with their measurements so nobody re-proposes them:
+  #
+  #   * bare `today is` — 17 repo-wide and 15 of them legitimate. The corpus's
+  #     commonest use of the words is the "X today is Y" idiom, which dates
+  #     nothing: "its Brooklyn terminal today is 56th Drive", "the building
+  #     today is the Himalaya Palace Shopping Centre", "what a visitor walks
+  #     today is not the quarter that stood here in 1935", "the nearest station
+  #     today is Hartford Union Station", "Whether the theater is operating
+  #     today is not established". Only "Today is <a date>" rots, so pattern 25
+  #     requires a month name, a weekday or a numeral after it.
+  #   * bare `today|tomorrow|yesterday` — 338 repo-wide. Not arguable.
+  #     `tomorrow` alone is 3, and all three are proper names: Wingate's "High
+  #     School for Public Service: Heroes of Tomorrow" and Tower Hamlets'
+  #     'This is Tomorrow' (Whitechapel, 1956). `yesterday` is 0.
+  #   * `currently closed|open|under|running` — 30 repo-wide, all sourced
+  #     status, and five of them in golf files. Worse, most are the *negative*
+  #     epistemic sentence this programme wants authors to write: california
+  #     "it is not known whether the restaurant is currently open for service"
+  #     (x3), nevada "naming them here is not a claim that any is currently
+  #     open", lambeth "the operator states that the palace is not currently
+  #     running a regular programme of guided tours", guilford "currently
+  #     closed for restoration". Banning the phrase would push authors to state
+  #     the status flat instead of hedging it, which is the opposite of the
+  #     rule. Bare `currently` is 160. Both dropped.
+  #   * `at the time of writing` — 0 repo-wide in that exact spelling, but its
+  #     synonym `as of this writing` is 3, one of them in a golf file:
+  #     iowa "As of this writing, tee times are bookable", gramercy "as of this
+  #     writing the hotel remains closed" and "Closed for summer recess as of
+  #     this writing". Banning one spelling while the other publishes is
+  #     exactly the respelling evasion recorded above pattern 7 — an author who
+  #     hits the gate rewrites the words, not the claim — so the whole arm was
+  #     dropped rather than half of it kept. An undated hedge is weaker than an
+  #     as-of date but it does not become false, which is the line these six
+  #     patterns draw.
+  #   * `next month|next year` — 7 repo-wide, all of them historical and all of
+  #     them anchored to a stated year, not to now: greenwood "built in 1876
+  #     and completed the next year" (x2), forest-hills "a site was purchased
+  #     in 1912 and the clubhouse was built the next year" (x4),
+  #     pacific-heights "streetcars began running in July 1895 and a
+  #     counterbalance was installed the next month". Pattern 27 keeps the week
+  #     and weekday arms, which are 0, and drops month and year.
+  #   * `last <weekday>` — 19 repo-wide, every one of them the recurring
+  #     opening-hours idiom and not a past date: "the first and last Sunday of
+  #     the month" (weston), "every Tuesday and the last Sunday of the month"
+  #     (enfield x3), "the last Sunday of every month except December"
+  #     (hackney x4), "from the last Sunday of October to the last Saturday of
+  #     March" (pinciano x4), vatican-city x3, campo-marzio x2, windsor "through
+  #     last Saturday in October". Pattern 28 bans `last week|weekend|night`
+  #     only, which is 0.
+  #   * `in <n> days` — 13 repo-wide once missouri's two were fixed, and the
+  #     remaining eleven are booking windows and construction durations, not
+  #     offsets from now: maspeth "in 30 days", ostiense "in 45 days",
+  #     testaccio "in 330 days", vinegar-hill "in six months", parioli "in
+  #     eight months", castro-pretorio "in eighteen months", vatican-city "in
+  #     22 months", pinciano "in three months". The golf corpus writes "book up
+  #     to 30 days ahead" as a matter of course. No pattern separates a booking
+  #     window from a countdown, so this is §7 rung (c), not a gate.
+  #   * bare `from today|from now` with no unit in front — 0 repo-wide, and
+  #     `from now on` is 0 too, but `today's` is 52 ("today's availability" in
+  #     golf/arizona among them) and "differs from today's routing" is one
+  #     apostrophe away from a false positive on a construction the corpus
+  #     writes fifty-two times. Pattern 24 is anchored on a preceding time
+  #     unit for the same reason pattern 11 is anchored on "in".
+  #   * `at present|at the moment|right now` — 25 repo-wide, and three are the
+  #     evergreen FAQ question this set asks by design: "Is the course open
+  #     right now?" (utah), "Is Quintero open right now?" (arizona), "is it
+  #     open right now?" (missouri). A question about the reader's present is
+  #     the correct thing for a guide to answer; it is the *answer* that must
+  #     be dated. Pinned in `@publishable`.
+  #   * `this week|this month|this weekend` — 5 repo-wide and all five are the
+  #     same negative epistemic sentence, in idaho, minnesota, missouri, oregon
+  #     and utah: "none of them says whether any given one is serving this
+  #     week, so this guide does not say so either". That sentence is true at
+  #     any present moment because it asserts an absence of evidence, not a
+  #     fact about a week. Pinned in `@publishable`.
+  #   * `soon` — 17 repo-wide, including golf/utah's quoted "Coming Soon" from
+  #     the resort's own collection list and kansas's FAQ heading "Is Colbert
+  #     Hills closed anytime soon?". A quoted marketing label is not a dated
+  #     claim. Dropped.
+  #
+  # WHAT THEY STILL DO NOT CATCH. "The course has just reopened" carries no
+  # date word and no pattern separates it from a sourced sentence; §7's rung
+  # (c) again, and the defence is the verdict trace.
+  @self_dating_patterns [
+    # 0 repo-wide, 1 before golf/kansas.json was rewritten. Bare, with no
+    # quantifier in front, because `days away` scores 0 on its own and the
+    # quantifier is the part an author varies.
+    ~r/\b(?:days?|weeks?|months?)\s+away\b/i,
+    # 0 repo-wide. Unit-anchored: see the `from today` rejection above.
+    ~r/\b(?:days?|weeks?|weekends?|months?|years?)\s+from\s+(?:today|now)\b/i,
+    # 2 repo-wide, both golf/missouri.json, both fixed; 0 now. Requires a date
+    # or a weekday after it so the "X today is Y" idiom (15 legitimate uses)
+    # keeps publishing.
+    ~r/\btoday\s+is\s+(?:the\s+)?(?:\d{1,2}\b|january|february|march|april|may|june|july|august|september|october|november|december|monday|tuesday|wednesday|thursday|friday|saturday|sunday)/i,
+    # 0 repo-wide with the guard, 1 without it: yankee_stadium_guide.ex's "that
+    # list is presented as of the reopening and not as of today", which is a
+    # correct statement about what the guide does NOT claim. The negation is
+    # excluded rather than the pattern dropped, because "As of today, the
+    # course is closed" is the Kansas defect with different words.
+    ~r/(?<!not )\bas of (?:today|now)\b/i,
+    # 0 repo-wide. Month and year arms deliberately absent — 7 legitimate
+    # "the next year" hits, all anchored to a stated year.
+    ~r/\b(?:next|this\s+coming)\s+(?:week|weekend|monday|tuesday|wednesday|thursday|friday|saturday|sunday)\b/i,
+    # 0 repo-wide. Weekday arm deliberately absent — "the last Sunday of the
+    # month" is 19 legitimate hits and is a recurring schedule, not a date.
+    ~r/\blast\s+(?:week|weekend|night)\b/i
+  ]
+
+  @patterns @trip_duration_patterns ++
+              @proximity_patterns ++ @hour_patterns ++ @self_dating_patterns
 
   # Starts empty and must stay empty without a manual read and a stated reason
   # in a wave report. Keyed {file, json path, matched phrase} — the narrow form
