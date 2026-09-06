@@ -25,6 +25,7 @@ defmodule Ethos.Moderation do
 
   alias Ethos.Accounts
   alias Ethos.Accounts.User
+  alias Ethos.Accounts.UserToken
   alias Ethos.Repo
   alias Ethos.Social.Review
 
@@ -96,5 +97,69 @@ defmodule Ethos.Moderation do
       moderated_by_id: admin.id
     )
     |> Repo.update()
+  end
+
+  ## Bans
+
+  @doc "True when this account is banned."
+  def banned?(%User{banned_at: nil}), do: false
+  def banned?(%User{}), do: true
+
+  @doc """
+  Bans an account: full block.
+
+  The flag and the token purge happen in one transaction, because a ban that
+  set the flag but left a live session behind would leave the user browsing
+  as though nothing had happened until their cookie expired.
+
+  Refuses to ban the admin. There is exactly one, and locking them out would
+  leave nobody able to undo it.
+  """
+  def ban_user(%User{} = user, reason, %User{} = admin) do
+    cond do
+      not Accounts.admin?(admin) ->
+        {:error, :unauthorized}
+
+      Accounts.admin?(user) ->
+        {:error, :cannot_ban_admin}
+
+      true ->
+        do_ban(user, reason)
+    end
+  end
+
+  defp do_ban(%User{} = user, reason) do
+    changeset =
+      user
+      |> Ecto.Changeset.cast(%{ban_reason: reason}, [:ban_reason])
+      |> Ecto.Changeset.put_change(
+        :banned_at,
+        DateTime.utc_now() |> DateTime.truncate(:second)
+      )
+      |> Ecto.Changeset.validate_required([:ban_reason])
+      |> Ecto.Changeset.validate_length(:ban_reason, min: 1, max: 500)
+
+    Ecto.Multi.new()
+    |> Ecto.Multi.update(:user, changeset)
+    |> Ecto.Multi.delete_all(:tokens, UserToken.by_user_and_contexts_query(user, :all))
+    |> Repo.transaction()
+    |> case do
+      {:ok, %{user: user}} -> {:ok, user}
+      {:error, :user, changeset, _} -> {:error, changeset}
+    end
+  end
+
+  @doc """
+  Lifts a ban. The account's reviews become visible again by themselves —
+  the public queries filter on `banned_at`, so there is nothing to restore.
+  """
+  def unban_user(%User{} = user, %User{} = admin) do
+    if Accounts.admin?(admin) do
+      user
+      |> Ecto.Changeset.change(banned_at: nil, ban_reason: nil)
+      |> Repo.update()
+    else
+      {:error, :unauthorized}
+    end
   end
 end
