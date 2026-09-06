@@ -379,11 +379,10 @@ owned by a finalize agent, per the task's explicit instruction.
 
 ---
 
-## 13. Destination slug rebase, decided at finalize
+## 13. A shared destination hub, decided and registered
 
 `MIX_TEST_PARTITION=_golf mix test test/ethos/seeds/golf_courses_roster_test.exs`
-— the assertion "no golf guide's destination slug silently takes an existing
-page's URL" — went **red on this file alone** when the wave was assembled:
+went **red on this file alone** when the wave was assembled:
 
     golf basecamps whose destination slug is already answered by another
     guide: [{"iowa.json", "burlington"}]
@@ -397,42 +396,52 @@ splits the destination string on the first comma and keeps only the part before
 it, throwing the state away. `"Burlington, Iowa"` therefore derives
 `burlington`, which `priv/seed_data/connecticut/burlington.json`
 (`"Burlington, Connecticut"`, shipped in commit `d71b35f`) already answers on.
-That is the cross-state co-listing shape `docs/content-defects.md` records for
-`madison`, and the /destinations/washington shape
-`Guides.list_guides_shadowed_by_state/1` exists because of.
 
-**Decision: rebase this guide, not the Connecticut one, and not a shared hub.**
+**Decision: this guide's destination is `"Burlington, Iowa"`, and
+`/destinations/burlington` lists both this guide and the Connecticut Burlington
+town guide.** That merge is deliberate.
 
-* The Connecticut guide is published and indexed. Moving its URL would trade a
-  content regression for a link regression — the reason `guides.ex` argues
-  against renames. This guide has never been published, so it has no URL to
-  move.
-* Sharing the hub was the other option the assertion offers. It was rejected
-  because the two guides are unrelated towns in unrelated states; a shared
-  `/destinations/burlington` would list a Connecticut shore town beside an Iowa
-  golf resort, which is the defect, not the remedy.
-* `destination` changed from `"Burlington, Iowa"` to `"Spirit Hollow, Iowa"`,
-  deriving `spirit-hollow`. **Nothing else in the file changed.** The title
-  still reads "Spirit Hollow: Golf in Burlington, Iowa," every place still
-  carries `town: "Burlington"`, and the county is still Des Moines County.
+* There are genuinely two Burlingtons, and this file says which one it is
+  about, four times over. All four places — Spirit Hollow, Flint Hills
+  Municipal, The Lodge at Spirit Hollow and Lambo's — carry
+  `town: "Burlington"`. Any other destination string would contradict the
+  file's own place records.
+* §3 of `docs/site-builder.md` is the precedent: `"Kansas City, Missouri"` and
+  `"Kansas City, Kansas"` both derive `kansas-city` and merge into one hub, and
+  the doctrine's words are that this "may be what you want. It is never what
+  you want by accident — decide, and record the decision." The doctrine permits
+  merges and forbids *unnoticed* ones.
+* Rebasing the Connecticut guide was never on the table: it is published and
+  indexed, and moving its URL would trade a content regression for a link
+  regression.
+* The county stays `Des Moines County` and the title still reads
+  "Spirit Hollow: Golf in Burlington, Iowa." Nothing else in the file moves.
 
-**Why this costs no accuracy.** §2 above already established, from the US
-Census geocoder run on Golf Digest's own published coordinates, that the course
-sits in **unincorporated Des Moines County and geocodes to no incorporated
-place at all** — Burlington is the postal town on the operator's footer, not
-the administering municipality. So `"Burlington, Iowa"` was never a municipal
-claim in the first place. And every place in this guide but Flint Hills shares
-one address, 5592 Clubhouse Dr: the course, The Lodge at Spirit Hollow and
-Lambo's are one complex, and that complex is where a traveller following this
-guide actually stays. Naming it as the basecamp is the more precise claim, not
-the looser one.
+**Where the decision is recorded.**
+`test/ethos/seeds/golf_courses_roster_test.exs` carries a
+`@destination_merges` register — one entry per deliberate merge, naming both
+colliding files, the slug they share, and the reason — and the assertion now
+runs in both directions. A collision **not** in the register fails, naming the
+offending file and slug, so no merge is ever silent. And a register entry whose
+collision **no longer occurs** fails too, so the register cannot rot into a
+list of stale pardons lying in wait for whatever lands on that pair next. Iowa
+is the register's only entry.
 
-**What it costs.** The other twenty golf guides all use a town as their
-destination, and this is the one that does not. The corpus does carry non-town
-destinations already — `antique-trail-of-connecticut` publishes
-`destination: "Connecticut"` — so the shape is not new, but within this set it
-is the exception and should be read as one.
+**The correction this replaces.** The wave first cleared the gate by rebasing
+this guide's destination to `"Spirit Hollow, Iowa"`. That was the wrong fix
+twice over: it contradicted all four place records, and it named a destination
+hub after a golf course rather than after anywhere a visitor sleeps — the one
+guide of twenty-one whose destination was not a town. The real defect was the
+gate, which forbade collisions outright and so forced a choice between a wrong
+destination and a red build. §2 above does establish, from the US Census
+geocoder run on Golf Digest's own published coordinates, that the course sits
+in unincorporated Des Moines County and geocodes to no incorporated place;
+Burlington is the postal town on the operator's footer. That makes
+`"Burlington, Iowa"` a postal claim rather than a municipal one — which is
+exactly what every place record in the file already claims, and no reason to
+say something different in the destination field.
 
 After the change: `test/ethos/seeds/golf_courses_roster_test.exs` runs 6 tests
 with **1 failure**, and that failure is the exhaustion check naming the
-twenty-nine states wave 3 onward still owes. The shadowing assertion is green.
+twenty-nine states wave 3 onward still owes. The destination-merge register is
+green.

@@ -159,34 +159,96 @@ defmodule Ethos.Seeds.GolfCoursesRosterTest do
     end
   end
 
-  # §3's shadowing trap, mechanised. Fifty new destination slugs is fifty
-  # chances to take a URL an existing town guide already answers on. The
-  # remedy when it happens is the shadowed-guide line the state hub already
-  # renders (`Guides.list_guides_shadowed_by_state/1`), not a rename — but it
-  # must be a decision somebody made, not one nobody noticed.
-  test "no golf guide's destination slug silently takes an existing page's URL" do
+  # §3's shadowing trap, mechanised — as a REGISTER, not a prohibition.
+  #
+  # `derive_destination_slug/1` keeps only the text before the first comma, so
+  # fifty new golf destinations are fifty chances to answer on a URL an existing
+  # town guide already answers on. §3 of `docs/site-builder.md` does not forbid
+  # that: `"Kansas City, Missouri"` and `"Kansas City, Kansas"` both derive
+  # `kansas-city` and merge into one hub, and the doctrine's words are that this
+  # "may be what you want. It is never what you want by accident — decide, and
+  # record the decision."
+  #
+  # So the rule is not that a collision must be absent. It is that a collision
+  # must be DECLARED, right here, naming both files and saying why. An outright
+  # ban forces a false choice between a wrong destination and a red build, and
+  # the wrong destination wins: Iowa was rebased to "Spirit Hollow, Iowa" to
+  # clear this gate, contradicting all four of its own place records, every one
+  # of which carries town "Burlington".
+  #
+  # Each entry names both colliding files, the slug they share, and the reason.
+  @destination_merges [
+    %{
+      golf_file: "priv/seed_data/golf/iowa.json",
+      other_file: "priv/seed_data/connecticut/burlington.json",
+      slug: "burlington",
+      why:
+        "There are genuinely two Burlingtons, and this guide's own place records " <>
+          "settle which one it is about: Spirit Hollow, Flint Hills Municipal, The " <>
+          "Lodge at Spirit Hollow and Lambo's all carry town \"Burlington\". Any " <>
+          "other destination would contradict the file it sits in, and would name a " <>
+          "destination hub after a golf course rather than after anywhere a visitor " <>
+          "sleeps. /destinations/burlington therefore lists this guide beside the " <>
+          "Connecticut town guide, deliberately, on §3's Kansas City precedent."
+    }
+  ]
+
+  # Both directions, and the second is the one that keeps the register honest.
+  # A register that only pardoned collisions would rot into a list of stale
+  # pardons: an entry left behind after a destination changed would go on
+  # silently pardoning whatever collision next landed on that pair. So a
+  # declared collision that no longer occurs fails too, and every line above has
+  # to still be true.
+  test "every golf destination-slug collision is declared, and every declaration is live" do
     golf_files = SeedDataHelpers.seed_files("golf")
 
     golf_dests =
       for f <- golf_files,
           d = DataGuide.load!(f)["guide"]["destination"],
-          do: {Path.basename(f), Ethos.Guides.Guide.derive_destination_slug(d)}
+          do: {rel(f), Ethos.Guides.Guide.derive_destination_slug(d)}
 
-    other_dests =
+    others =
       for f <- SeedDataHelpers.all_seed_files(),
           f not in golf_files,
           d = DataGuide.load!(f)["guide"]["destination"],
-          into: MapSet.new(),
-          do: Ethos.Guides.Guide.derive_destination_slug(d)
+          reduce: %{} do
+        acc ->
+          Map.update(
+            acc,
+            Ethos.Guides.Guide.derive_destination_slug(d),
+            [rel(f)],
+            &[rel(f) | &1]
+          )
+      end
 
-    collisions =
-      for {file, slug} <- golf_dests, MapSet.member?(other_dests, slug), do: {file, slug}
+    found =
+      MapSet.new(
+        for {golf_file, slug} <- golf_dests,
+            other_file <- Map.get(others, slug, []),
+            do: {golf_file, other_file, slug}
+      )
 
-    assert collisions == [],
-           "golf basecamps whose destination slug is already answered by another guide — " <>
-             "decide whether to share the hub or rebase, and record it in the guide's file: " <>
-             inspect(collisions)
+    declared = MapSet.new(@destination_merges, &{&1.golf_file, &1.other_file, &1.slug})
+
+    undeclared = found |> MapSet.difference(declared) |> Enum.sort()
+
+    assert undeclared == [],
+           "golf destination slugs already answered by another guide, with no entry in " <>
+             "@destination_merges — a merged hub is allowed (§3, the Kansas City " <>
+             "precedent) but never silent. Decide whether to share the hub or rebase, " <>
+             "and if you share it, add an entry naming both files and the reason: " <>
+             inspect(undeclared)
+
+    stale = declared |> MapSet.difference(found) |> Enum.sort()
+
+    assert stale == [],
+           "@destination_merges declares collisions that no longer happen. A pardon for " <>
+             "a collision that is not occurring is a pardon lying in wait for the next " <>
+             "one to land on the same pair; delete these entries: " <> inspect(stale)
   end
+
+  # Repo-relative, so the register reads as the paths a person would type.
+  defp rel(path), do: Path.relative_to(path, File.cwd!())
 
   # The set is finished, and this is what makes "finished" a fact rather than a
   # claim in a wave report. It FAILS until wave 5 lands. That is intended: a
