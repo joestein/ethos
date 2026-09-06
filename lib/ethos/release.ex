@@ -179,6 +179,19 @@ defmodule Ethos.Release do
     Ethos.Foliage.Dataset.warn_dangling_guides(published)
   end
 
+  @doc """
+  Writes the town-adjacency `nearby` edges.
+
+  Production runs a release, not Mix, so this is the only way to invoke the
+  link builder after a deploy.
+  """
+  def adjacency_links do
+    load_app()
+    Application.ensure_all_started(@app)
+
+    :ok = Ethos.Adjacency.LinkBuilder.build!()
+  end
+
   def seed_destinations do
     load_app()
     Application.ensure_all_started(@app)
