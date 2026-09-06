@@ -4,21 +4,21 @@
     "city": "Manhattan",
     "status": "build",
     "path": "united-states/new-york/new-york-city/manhattan",
-    "note": "40 verified rooms, the densest of the fourteen. 27 of them stand in Midtown between 34th and 58th Street, with a second cluster in the Financial District and the Village. Cote is counted here as a Korean beef room and overlaps the korean_bbq corpus; Task 3 counts it once and must not import the Koreatown grill census wholesale. Also carries the note folding in the six Bronx rooms."
+    "note": "40 verified rooms, the densest of the fourteen. 27 of them stand in Midtown between 34th and 58th Street, with a second cluster in the Financial District and the Village. Five are already published by the neighbourhood corpus and must be linked to their existing owners rather than recreated: Keens (manhattan/garment-district.json), Delmonico's (manhattan/financial-district.json), COTE (manhattan/flatiron-district.json), Old Homestead (manhattan/meatpacking-district.json) and Wolfgang's Park Avenue (manhattan/murray-hill.json). korean_bbq/manhattan.json has an empty places list and owns none of them. This page also carries the note folding in the six Bronx rooms."
   },
   {
     "slug": "brooklyn",
     "city": "Brooklyn",
     "status": "build",
     "path": "united-states/new-york/new-york-city/brooklyn",
-    "note": "19 verified rooms in four clusters: Williamsburg (4, including Peter Luger), the Midwood and Borough Park kosher steakhouse belt (6), Bay Ridge (3) and Downtown Brooklyn (2). The kosher belt is the borough's second real cluster and appears in no mainstream best-of list."
+    "note": "19 verified rooms in four clusters: Williamsburg (4, including Peter Luger), the Midwood and Borough Park kosher steakhouse belt (6), Bay Ridge (3) and Downtown Brooklyn (2). The kosher belt is the borough's second real cluster and appears in no mainstream best-of list. Two rooms are already published: Peter Luger (brooklyn/south-williamsburg.json, whose node is south-williamsburg rather than williamsburg) and Gage & Tollner (brooklyn/downtown-brooklyn.json)."
   },
   {
     "slug": "queens",
     "city": "Queens",
     "status": "build",
     "path": "united-states/new-york/new-york-city/queens",
-    "note": "16 verified rooms, and the borough's steakhouse is South American rather than prime beef. 9 of the 16 sit on the Argentine and Brazilian parrilla belt along Northern Boulevard, Roosevelt Avenue and Queens Boulevard through Jackson Heights, Elmhurst and Corona; Astoria adds two Greek-American steakhouses, with outliers in Bayside, Forest Hills, Flushing and South Ozone Park."
+    "note": "17 verified rooms, and the borough's steakhouse is South American rather than prime beef. 8 of the 17 sit on the Argentine and Brazilian parrilla belt through Jackson Heights, Elmhurst and Corona; Astoria adds two Greek-American steakhouses; the remaining seven are outliers in Fresh Meadows, Rego Park, Bayside, Forest Hills, Flushing (two) and South Ozone Park. Iron Age Korean Steakhouse is already published by queens/rego-park.json."
   },
   {
     "slug": "bronx",
@@ -46,7 +46,7 @@
     "city": "Chicago",
     "status": "build",
     "path": "united-states/illinois/chicago",
-    "note": "21 verified rooms, every one inside the city limits, and unlike korean_bbq no suburban split. Korean BBQ's mass fled Lawrence Avenue for Niles and Glenview; the steakhouse mass never left River North, the Gold Coast, the Loop and the West Loop. Suburban Gibsons Oak Brook and Rosemont are not needed."
+    "note": "24 verified rooms, every one inside the city limits, and unlike korean_bbq no suburban split. Korean BBQ's mass fled Lawrence Avenue for Niles and Glenview; the steakhouse mass never left River North, the Gold Coast, the Loop and the West Loop, which hold 21 of the 24. The other three are Korean steakhouses already published by korean_bbq/chicago.json: Iron Age Wicker Park, Perilla Steakhouse and Shinhwa Korean Steakhouse. Suburban Gibsons Oak Brook and Rosemont are not needed."
   },
   {
     "slug": "los-angeles",
@@ -60,7 +60,7 @@
     "city": "San Francisco",
     "status": "build",
     "path": "united-states/california/san-francisco",
-    "note": "13 verified rooms, all inside the city, and unlike korean_bbq no South Bay page pulling the mass south. Clusters: Nob Hill's Van Ness spine, the Financial District and Embarcadero, and the Design District and Jackson Square, with Marina, Cow Hollow and the Mission behind them."
+    "note": "15 verified rooms, all inside the city, and unlike korean_bbq no South Bay page pulling the mass south. Clusters: the Van Ness and Nob Hill spine (3), Union Square (3), the Financial District and Embarcadero (3), Marina and Cow Hollow (2), Market and SoMa (2), with the Design District and the Mission behind them. Three Union Square rooms are already published by san_francisco/union-square.json: Morton's, Alexander's Steakhouse and ABSteak by Akira Back."
   },
   {
     "slug": "seattle",
@@ -74,7 +74,7 @@
     "city": "Boston",
     "status": "build",
     "path": "united-states/massachusetts/boston",
-    "note": "12 verified rooms in two clusters, 6 in Back Bay along Boylston, Berkeley and Arlington, and 4 in the Seaport, with Beacon Hill and Downtown Crossing between them."
+    "note": "12 verified rooms: Back Bay 5 along Boylston, Berkeley and Arlington, the Seaport 4, Beacon Hill 1 and Downtown 2. Ocean Prime is a Seaport room at 140 Seaport Boulevard, not a Back Bay one. No Boston place corpus exists yet, so none of the twelve is already published."
   },
   {
     "slug": "washington-dc",
