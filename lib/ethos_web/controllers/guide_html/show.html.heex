@@ -2,7 +2,7 @@
   <EthosWeb.GuideBreadcrumb.guide_breadcrumb guide={@guide} />
 
   <header class="mt-2">
-    <h1 class="text-3xl font-bold">{@guide.title}</h1>
+    <h1 class="font-display text-display-sm">{@guide.title}</h1>
     <p class="mt-1 text-ink-muted">{@guide.destination}</p>
     <p :for={c <- @collections} class="mt-1 text-sm text-ink-muted">
       Part of <.link navigate={~p"/c/#{c.slug}"} class="underline">{c.title}</.link>

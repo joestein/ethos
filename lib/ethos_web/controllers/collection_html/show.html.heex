@@ -3,7 +3,7 @@
     <.link navigate={~p"/destinations"} class="underline">Destinations</.link>
     / {@collection.title}
   </nav>
-  <h1 class="mt-2 text-3xl font-bold">{@collection.title}</h1>
+  <h1 class="mt-2 font-display text-display-sm">{@collection.title}</h1>
   <div :if={@collection.intro} class="prose mt-4">
     {EthosWeb.Markdown.render(@collection.intro)}
   </div>
