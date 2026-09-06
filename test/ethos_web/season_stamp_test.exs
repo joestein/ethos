@@ -21,9 +21,20 @@ defmodule EthosWeb.SeasonStampTest do
 
   test "a rendered 404 still has a complete page", %{conn: conn} do
     # require_admin_user/2 RENDERS a 404 through the root layout rather than
-    # raising, and Plan 4a put eight routes behind it. If the layout reads
-    # @season on a response the plug never touched, every one of those 404s
-    # becomes a 500.
+    # raising, and Plan 4a put eight routes behind it (/guides, /guides/new,
+    # /guides/:id/edit, and five more). This asserts that cross-plan
+    # interaction directly: a regular user hitting one of those routes still
+    # gets a complete, stamped page rather than a bare "Not Found" or a
+    # broken layout.
+    #
+    # It does NOT prove @season would be unsafe here — it wouldn't be. This
+    # request completes the whole :browser pipeline, PutSeason included,
+    # before require_admin_user ever runs (both are pipe_through in the same
+    # scope, :browser first), so :season is already assigned by the time this
+    # 404 renders. The `assigns[:season] || "summer"` guard in the layout is
+    # for a request that skips PutSeason entirely, not for this one; see
+    # root_layout_fallback_test.exs for the test that actually exercises
+    # that guard by rendering the layout with no :season assign at all.
     conn = log_in_user(conn, user_fixture())
     html = conn |> get(~p"/guides/new") |> html_response(404)
 
