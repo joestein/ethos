@@ -13,6 +13,13 @@ defmodule EthosWeb.AffiliateDisabledTest do
   use EthosWeb.ConnCase, async: false
 
   import Ethos.GuidesFixtures
+  import Ethos.PlacesFixtures
+
+  # Real paths out of priv/seed_data/destination_tree.json. A campaign is
+  # matched against a node's path now, so these must be the tree's own
+  # strings rather than anything hand-built.
+  @manhattan "united-states/new-york/new-york-city/manhattan"
+  @manhattan_segments ~w(united-states new-york new-york-city manhattan)
 
   setup do
     previous = Application.get_env(:ethos, :affiliate_links_enabled)
@@ -23,21 +30,18 @@ defmodule EthosWeb.AffiliateDisabledTest do
     # A Manhattan guide is the case that WOULD render a widget when enabled —
     # testing a geography with no campaign would pass vacuously.
     #
-    # NOTE: county must be "Manhattan", the borough name used by the
-    # :affiliate_locales allowlist in config/config.exs, NOT "New York
-    # County" (the official, coextensive county name). `Ethos.Affiliates
-    # .locale_for("new-york", "New York County")` returns nil — verified
-    # directly against this codebase — so a guide seeded with "New York
-    # County" would never resolve a locale at all and every test below would
-    # pass vacuously regardless of the flag. This is a correction to the
-    # brief's fixture, not a divergence.
+    # This guide MUST be filed on a real Manhattan node. A campaign locale is
+    # matched against the destination node's path now, not against state and
+    # county strings — those columns are gone. A guide with no node resolves to
+    # no locale at all, `unit_renders?/1` is then false whatever the flag says,
+    # and every assertion below would pass vacuously. `guide_fixture/1` drops
+    # attrs Ecto does not recognise, so a stale `state:`/`county:` here would
+    # not fail loudly; it would quietly stop testing anything.
     guide =
       published_guide_fixture(%{
         title: "Affiliate off",
         destination: "Manhattan, New York",
-        state: "New York",
-        state_slug: "new-york",
-        county: "Manhattan"
+        destination_path: "united-states/new-york/new-york-city/manhattan"
       })
 
     %{guide: guide}
@@ -89,13 +93,13 @@ defmodule EthosWeb.AffiliateDisabledTest do
     :persistent_term.put({Ethos.HouseAd, :pool}, [])
     on_exit(fn -> :persistent_term.put({Ethos.HouseAd, :pool}, previous_pool) end)
 
+    # Deliberately filed on NO node: that is the shape which resolves to no
+    # affiliate locale, so `unit_renders?/1` is false and the aside's `:if`
+    # reduces to `enabled?()` alone — the thing actually under test.
     ca_guide =
       published_guide_fixture(%{
         title: "No campaign here",
-        destination: "Napa, California",
-        state: "California",
-        state_slug: "california",
-        county: "Napa County"
+        destination: "Napa, California"
       })
 
     html_off = conn |> get(~p"/g/#{ca_guide.slug}") |> html_response(200)
@@ -253,14 +257,12 @@ defmodule EthosWeb.AffiliateDisabledTest do
 
     test "a Manhattan place page renders the house ad", %{conn: conn} do
       place =
-        Ethos.Places.upsert_place!(%{
+        place_fixture(%{
           slug: "affiliate-off-manhattan-place",
           name: "A Manhattan Place",
           kind: "museum",
-          town: "Manhattan",
-          state: "New York",
-          county: "Manhattan",
           summary: "A place in Manhattan, New York.",
+          destination_path: @manhattan,
           photos: [
             %{
               "src" => "/photos/ny/manhattan/place.jpg",
@@ -274,11 +276,7 @@ defmodule EthosWeb.AffiliateDisabledTest do
           ]
         })
 
-      # Sanity: this page would carry the affiliate widget instead, were the
-      # flag on — otherwise this test would pass even if for_page/2 lost its
-      # enabled?() clause entirely.
-      assert Ethos.Affiliates.locale_for(place.state_slug, place.county)
-             |> EthosWeb.Affiliate.renders?()
+      assert_widget_when_enabled(conn, ~p"/p/#{place.slug}")
 
       html = conn |> get(~p"/p/#{place.slug}") |> html_response(200)
 
@@ -286,24 +284,33 @@ defmodule EthosWeb.AffiliateDisabledTest do
       refute html =~ "data-gyg-widget"
     end
 
-    test "the New York county hub (Manhattan) renders the house ad", %{conn: conn, guide: guide} do
-      assert Ethos.Affiliates.locale_for(guide.state_slug, guide.county)
-             |> EthosWeb.Affiliate.renders?()
+    test "the New York county hub (Manhattan) renders the house ad", %{conn: conn} do
+      Ethos.SeedDataHelpers.seed_destination_paths!([@manhattan])
 
-      html = conn |> get(~p"/destinations/new-york/manhattan") |> html_response(200)
+      assert_widget_when_enabled(conn, ~p"/destinations/#{@manhattan_segments}")
 
-      assert html =~ "Connecticut Foliage Forecast"
-      refute html =~ "data-gyg-widget"
-    end
-
-    test "the New York state hub renders the house ad", %{conn: conn, guide: guide} do
-      assert Ethos.Affiliates.locale_for(guide.state_slug, guide.county)
-             |> EthosWeb.Affiliate.renders?()
-
-      html = conn |> get(~p"/destinations/new-york") |> html_response(200)
+      html = conn |> get(~p"/destinations/#{@manhattan_segments}") |> html_response(200)
 
       assert html =~ "Connecticut Foliage Forecast"
       refute html =~ "data-gyg-widget"
     end
+  end
+
+  # A page is only a meaningful subject for these assertions if it WOULD carry
+  # the affiliate widget with the flag on. On a page in no campaign locale,
+  # `HouseAd.for_page/2` returns an ad whether or not it consults `enabled?/0`,
+  # so the house-ad assertions would pass while proving nothing.
+  #
+  # Asked by rendering the page rather than by reading columns off the row: a
+  # guide's geography is the destination node it names, and this check has no
+  # business knowing how that resolves.
+  defp assert_widget_when_enabled(conn, path) do
+    Application.put_env(:ethos, :affiliate_links_enabled, true)
+    html = conn |> get(path) |> html_response(200)
+    Application.put_env(:ethos, :affiliate_links_enabled, false)
+
+    assert html =~ "data-gyg-widget",
+           "#{path} carries no affiliate widget even with the flag ON, so it is " <>
+             "not in a campaign locale and every assertion about it is vacuous"
   end
 end
