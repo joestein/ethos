@@ -283,7 +283,8 @@ defmodule Ethos.Places.Address do
   defp parse_uk(trimmed) do
     case Regex.named_captures(@uk, trimmed) do
       %{"head" => head, "postal" => postal} ->
-        segments = head |> String.split(",") |> Enum.map(&String.trim/1) |> Enum.reject(&(&1 == ""))
+        segments =
+          head |> String.split(",") |> Enum.map(&String.trim/1) |> Enum.reject(&(&1 == ""))
 
         %{
           street: uk_street_or_nil(List.first(segments), true),

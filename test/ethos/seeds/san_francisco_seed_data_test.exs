@@ -371,7 +371,11 @@ defmodule Ethos.Seeds.SanFranciscoSeedDataTest do
 
   test "the photo-policy ban keeps copyright reasoning off the page" do
     assert hit?(@photo_policy_patterns, "The murals are artworks rather than architecture.")
-    assert hit?(@photo_policy_patterns, "The flag is a designed work and is not an architectural one.")
+
+    assert hit?(
+             @photo_policy_patterns,
+             "The flag is a designed work and is not an architectural one."
+           )
 
     for s <- @photo_policy_specimens do
       refute hit?(@photo_policy_patterns, s), "rejected a description that must publish: #{s}"
@@ -392,11 +396,15 @@ defmodule Ethos.Seeds.SanFranciscoSeedDataTest do
   end
 
   test "the transit-negative ban catches a fetch failure dressed as a fact" do
-    assert hit?(@transit_negative_patterns,
-                "No source states a bus route or a rail station for the neighbourhood.")
+    assert hit?(
+             @transit_negative_patterns,
+             "No source states a bus route or a rail station for the neighbourhood."
+           )
 
-    assert hit?(@transit_negative_patterns,
-                "No source states the routes or timetable of a shuttle between the districts.")
+    assert hit?(
+             @transit_negative_patterns,
+             "No source states the routes or timetable of a shuttle between the districts."
+           )
 
     for s <- @transit_negative_specimens do
       refute hit?(@transit_negative_patterns, s), "rejected prose that must publish: #{s}"
@@ -731,7 +739,10 @@ defmodule Ethos.Seeds.SanFranciscoSeedDataTest do
       for {file, doc} <- decoded_files() do
         guide = doc["guide"] || %{}
         places = length(doc["places"] || [])
-        intro_words = guide["intro"] |> to_string() |> String.split(~r/\s+/, trim: true) |> length()
+
+        intro_words =
+          guide["intro"] |> to_string() |> String.split(~r/\s+/, trim: true) |> length()
+
         headings = Enum.map(guide["sections"] || [], & &1["heading"])
         faq = length(guide["faq"] || [])
         links = length(doc["links"] || [])

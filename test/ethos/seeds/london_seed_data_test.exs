@@ -220,9 +220,11 @@ defmodule Ethos.Seeds.LondonSeedDataTest do
   # These are the two exclusions, and both are subject-side rather than
   # licence-side, so a clean CC tag says nothing about them.
   @excluded_subjects [
-    {"fourth-plinth", "temporary — s.62 requires permanently situated; Commons deleted Hahn/Cock, Gift Horse and Alison Lapper Pregnant on that ground"},
+    {"fourth-plinth",
+     "temporary — s.62 requires permanently situated; Commons deleted Hahn/Cock, Gift Horse and Alison Lapper Pregnant on that ground"},
     {"fourth plinth", "temporary — s.62 requires permanently situated"},
-    {"banksy", "graphic work and living; Commons deleted Category:Banksy in London on 31 Dec 2025"},
+    {"banksy",
+     "graphic work and living; Commons deleted Category:Banksy in London on 31 Dec 2025"},
     {"mural", "a graphic work under s.4(2), which s.62(1) does not name"},
     {"street-art", "graphic work"},
     {"street art", "graphic work"},
@@ -282,7 +284,11 @@ defmodule Ethos.Seeds.LondonSeedDataTest do
   defp designation_texts(doc) do
     guide = doc["guide"] || %{}
     pairs = Enum.map(guide["faq"] || [], &"#{&1["question"]} #{&1["answer"]}")
-    Enum.reject(prose(doc), &(&1 in Enum.flat_map(guide["faq"] || [], fn f -> [f["question"], f["answer"]] end))) ++ pairs
+
+    Enum.reject(
+      prose(doc),
+      &(&1 in Enum.flat_map(guide["faq"] || [], fn f -> [f["question"], f["answer"]] end))
+    ) ++ pairs
   end
 
   defp photos(doc) do
@@ -356,8 +362,10 @@ defmodule Ethos.Seeds.LondonSeedDataTest do
   end
 
   test "the transit-negative ban catches a fetch failure dressed as a fact" do
-    assert hit?(@transit_negative_patterns,
-                "No source states a bus route or a tube station for the borough.")
+    assert hit?(
+             @transit_negative_patterns,
+             "No source states a bus route or a tube station for the borough."
+           )
 
     for s <- @transit_negative_specimens do
       refute hit?(@transit_negative_patterns, s), "rejected prose that must publish: #{s}"
@@ -453,7 +461,8 @@ defmodule Ethos.Seeds.LondonSeedDataTest do
     assert offenders == [],
            "a designation claim publishes with no register. Unlike Rome, the National Heritage " <>
              "List is a live OGL API, so the claim is welcome — but a listed building must carry " <>
-             "its NHLE number:\n" <> Enum.map_join(offenders, "\n", fn {f, t} -> "  #{f}: #{t}" end)
+             "its NHLE number:\n" <>
+             Enum.map_join(offenders, "\n", fn {f, t} -> "  #{f}: #{t}" end)
   end
 
   test "no photograph shows a subject s.62 does not reach" do
@@ -525,12 +534,17 @@ defmodule Ethos.Seeds.LondonSeedDataTest do
         slugs = MapSet.new(doc["places"] || [], & &1["slug"])
 
         cond do
-          entries == [] -> {file, "entries is empty — every place unreachable from the guide"}
+          entries == [] ->
+            {file, "entries is empty — every place unreachable from the guide"}
+
           Enum.any?(entries, &(not MapSet.member?(slugs, &1["place_slug"]))) ->
             {file, "an entry place_slug does not resolve, which aborts the seed run"}
+
           Enum.any?(entries, &(not MapSet.member?(valid, &1["kind"]))) ->
             {file, "an entry kind is not one of food/tour/walk/sight/stay/tip"}
-          true -> nil
+
+          true ->
+            nil
         end
       end
       |> Enum.reject(&is_nil/1)
