@@ -19,7 +19,7 @@ Read all four before writing a word.
 | `priv/seed_data/steakhouse_roster.json` | Task 1's output: 11 `build`, 2 `drop`, 1 `merged-into`. The `note` on your city is the scoping reasoning; your intro and FAQ should agree with it. |
 | `<session scratchpad>/steak/rooms.md` | Task 1's per-room verification artifact — one row per room with its address, its evidence and its verdict, plus the rejects and why. **The scratchpad lives outside the worktree**; the path is in your dispatch. This artifact is the room census. Do not re-derive it. |
 | `priv/seed_data/korean_bbq/*.json` | The sibling corpus's actual shape. `puget-sound.json` is the file to imitate for a multi-municipality page; `manhattan.json` for the overlap pattern. |
-| `test/ethos/seeds/steakhouse_seed_data_test.exs` | Task 4's gate. Every ban below is a regex in that file. Read the regexes, not just this prose. |
+| `test/ethos/seeds/steakhouse_seed_data_test.exs` | Task 4's gate. Every ban below is a regex in that file. Read the regexes, not just this prose. **The file does not exist until Task 4 lands**; until then §8 transcribes its patterns from Task 4's step 1 in the plan. |
 
 Your own research wave adds evidence for the rooms Task 1 named. It does not
 add rooms Task 1 did not name, and it does not restore rooms Task 1 rejected.
@@ -83,30 +83,34 @@ its floor, its city — never a paragraph about the brand pasted into six files.
 
 ### 1b. The venue-embedded test
 
-Carried **verbatim** from Task 1's artifact. It was derived in fix round 1 to
-settle a real inconsistency between two rooms that had been ruled opposite
-ways, and it must not drift:
+Carried **verbatim** from Task 1's artifact, in the form its fix round 2
+settled. It must not drift:
 
-> A room inside a larger venue counts only if it has its own street address AND
-> is reachable without a ticket to some other event.
+> A room inside a larger venue counts if a reader can walk in and dine on its
+> own terms — without a ticket, admission, or entry to a separate event.
+
+**Independent public access is the whole test.** An earlier wording also
+required the room to have its own street address; Task 1 retired that clause
+because the address was a proxy that misfires — Gordon Ramsay Steak's 1525
+Russell Street *is* the Horseshoe Casino's own address, so the conjunction
+would have failed a room that plainly qualifies. Do not reintroduce the address
+limb, and do not reject a room for sharing a door number with its host.
 
 Worked, from Task 1's own rulings:
 
 | Room | Ruling |
 | --- | --- |
-| Gordon Ramsay Steak, 1525 Russell St | **PASS** — own street address, walk-in casino floor |
+| Gordon Ramsay Steak, 1525 Russell St | **PASS** — a reader walks in off the casino floor and dines with no ticket, even though the address is the casino's |
 | RW Prime, Resorts World, South Ozone Park | **PASS** — free entry, no ticket required |
+| Bogie's Place, 25 Temple Pl, Boston | **PASS** — walk-in, on its own terms, inside jm Curley at 21 Temple Place |
 | NYY Steak, Yankee Stadium | **FAIL** — behind a stadium gate on game days |
 | Lobel's, Yankee Stadium | **FAIL** — same gate |
 | Audi Yankees Club, Yankee Stadium | **FAIL** — same gate |
 
 Task 1's rulings are binding; you apply the test only to a room Task 1 did not
-reach. Two of its passes rest on the walk-in limb rather than a distinct street
-address — **RW Prime** (addressed as Resorts World) and **Bogie's Place**,
-Boston (25 Kingston St, the address of its host room JM Curley). Both publish.
-When you write them, the summary must carry the walk-in sentence explicitly —
-"the room is entered from the street and takes walk-ins" — so a later reader
-can see why the test was passed rather than having to re-litigate it.
+reach. When you write a room that sits inside a larger venue, put the access
+fact in the summary — "entered from the casino floor, no ticket required" — so
+a later reader can see why the test was passed rather than re-litigating it.
 
 ### 1c. The gate enforces this rule
 
@@ -133,7 +137,9 @@ Non-negotiable, identical to every corpus since Manhattan.
   closure was refuted, corrected to open, and the room stands.
 - Verdict `uncertain` → **excluded from `places` entirely.** Not softened, not
   hedged, not published with "reportedly". Alfred's Steakhouse and Sullivan's
-  are both `uncertain` on post-2020 status and neither is published.
+  are both `uncertain` on post-2020 status and neither is published. Alfred's is
+  a **different room** from Alexander's Steakhouse, which is counted — do not
+  collapse the two.
 - Items the verifier never checked → keep only where the researcher's evidence
   cites the operator's own site or 2025-2026 coverage.
 - Never add a room, a date, an address or a claim that is not in the artifacts.
@@ -165,19 +171,43 @@ One place row, two pages that both acknowledge it.
 
 ### The rooms this actually hits
 
-Verified against the corpus as it stands. These eight are already owned and
-must be prose-and-link, not restated:
+This is Task 1's fix-round-2 overlap register, resolved to slugs and link
+targets. **Fourteen rooms** across five cities are already owned and must be
+prose-and-link, not restated:
 
-| Room | Slug already owned | Owning file | `links` target |
-| --- | --- | --- | --- |
-| Keens Steakhouse | `keens-steakhouse` | `manhattan/garment-district.json` | `guide:garment-district-manhattan-guide` |
-| Delmonico's | `delmonicos` | `manhattan/financial-district.json` | `guide:financial-district-manhattan-guide` |
-| Old Homestead | `old-homestead-steakhouse` | `manhattan/meatpacking-district.json` | `guide:meatpacking-district-manhattan-guide` |
-| Wolfgang's (Park Ave) | `wolfgangs-steakhouse-park-avenue` | `manhattan/murray-hill.json` | `guide:murray-hill-manhattan-guide` |
-| COTE Korean Steakhouse | `cote-korean-steakhouse-flatiron` | `manhattan/flatiron-district.json` | `guide:flatiron-district-manhattan-guide` |
-| Peter Luger | `peter-luger-steak-house` | `brooklyn/south-williamsburg.json` | `guide:south-williamsburg-brooklyn-guide` |
-| Gage & Tollner | `gage-and-tollner` | `brooklyn/downtown-brooklyn.json` | `guide:downtown-brooklyn-brooklyn-guide` |
-| Morton's, 400 Post St | `mortons-the-steakhouse-union-square` | `san_francisco/union-square.json` | `guide:union-square-san-francisco-guide` |
+| Wave city | Room | Slug already owned | Owning file | `links` target |
+| --- | --- | --- | --- | --- |
+| Manhattan | Keens Steakhouse | `keens-steakhouse` | `manhattan/garment-district.json` | `guide:garment-district-manhattan-guide` |
+| Manhattan | Delmonico's | `delmonicos` | `manhattan/financial-district.json` | `guide:financial-district-manhattan-guide` |
+| Manhattan | Old Homestead | `old-homestead-steakhouse` | `manhattan/meatpacking-district.json` | `guide:meatpacking-district-manhattan-guide` |
+| Manhattan | Wolfgang's (Park Ave) | `wolfgangs-steakhouse-park-avenue` | `manhattan/murray-hill.json` | `guide:murray-hill-manhattan-guide` |
+| Manhattan | COTE Korean Steakhouse | `cote-korean-steakhouse-flatiron` | `manhattan/flatiron-district.json` | `guide:flatiron-district-manhattan-guide` |
+| Brooklyn | Peter Luger | `peter-luger-steak-house` | `brooklyn/south-williamsburg.json` | `guide:south-williamsburg-brooklyn-guide` |
+| Brooklyn | Gage & Tollner | `gage-and-tollner` | `brooklyn/downtown-brooklyn.json` | `guide:downtown-brooklyn-brooklyn-guide` |
+| Queens | Iron Age Korean Steakhouse, Rego Park | `iron-age-rego-park` | `queens/rego-park.json` | `guide:rego-park-queens-guide` |
+| Chicago | Iron Age Korean Steakhouse, Wicker Park | `iron-age-wicker-park` | `korean_bbq/chicago.json` | `guide:chicago-korean-bbq-guide` |
+| Chicago | Perilla Steakhouse, 225 N Wabash | `perilla-steakhouse-chicago` | `korean_bbq/chicago.json` | `guide:chicago-korean-bbq-guide` |
+| Chicago | Shinhwa Korean Steakhouse | `shinhwa-korean-steakhouse-chicago` | `korean_bbq/chicago.json` | `guide:chicago-korean-bbq-guide` |
+| San Francisco | Morton's, 400 Post St | `mortons-the-steakhouse-union-square` | `san_francisco/union-square.json` | `guide:union-square-san-francisco-guide` |
+| San Francisco | Alexander's Steakhouse, 165 O'Farrell St | `alexanders-steakhouse-union-square` | `san_francisco/union-square.json` | `guide:union-square-san-francisco-guide` |
+| San Francisco | ABSteak by Akira Back, 124 Ellis St | `absteak-union-square-san-francisco` | `san_francisco/union-square.json` | `guide:union-square-san-francisco-guide` |
+
+**The count is fourteen, not thirteen.** Task 1's register prose says "13 of
+them are rooms in this wave's census" above a table of fourteen rows. Fourteen
+is right, and the per-city tallies in the artifact's own city sections prove it:
+Manhattan 5 + Brooklyn 2 + Queens 1 + Chicago 3 + San Francisco 3 = 14. Every
+row above was re-resolved against the corpus for this document — file, place
+slug and owning guide slug all verified present.
+
+London, the Bronx, Baltimore, Boston, Washington DC, Los Angeles, Miami, Seattle
+and Staten Island have **no** overlap: the first two have corpora with no
+steakhouse-shaped places in them, and the rest have no corpus of their own. You
+still grep. Connecticut's steakhouses (Joseph's, J. Gilbert's, Chuck's, Michael
+Jordan's Montville) are owned by the Connecticut corpus and none is in a wave
+city — but they do constrain your slugs, see below.
+
+One node caveat carried from the register: Peter Luger's owning node is
+`south-williamsburg`, not `williamsburg`.
 
 Two consequences worth stating plainly:
 
@@ -185,16 +215,16 @@ Two consequences worth stating plainly:
    shows `{"slug": "keens-steakhouse", …}` inside the Manhattan `places` array.
    That is illustrative shape only — copying it ships a duplicate and fails the
    gate. Keens is prose-and-link.
-2. **Manhattan loses five of its most-cited rooms from `places`.** That is the
-   design working, not a loss. The Manhattan intro should carry them by name
-   with the link, and the section that would have held them should be honest:
-   the rooms are published on their neighbourhood guides and this page points
-   at them.
+2. **Manhattan loses five of its most-cited rooms from `places`, and San
+   Francisco and Chicago three each.** That is the design working, not a loss.
+   The intro should carry them by name with the link, and the section that would
+   have held them should be honest: the rooms are published on their
+   neighbourhood or Korean BBQ guides and this page points at them.
 
 ### The Korean beef room case
 
-The fourth inclusion example. COTE at 16 W 22nd Street is a Korean beef room,
-so it is **in** under §1 — and it is published at
+The fourth inclusion example, and it is larger than one room. COTE at 16 W 22nd
+Street is a Korean beef room, so it is **in** under §1 — and it is published at
 `cote-korean-steakhouse-flatiron` by `manhattan/flatiron-district.json`, which
 `korean_bbq/manhattan.json` already references rather than restating. The
 steakhouse Manhattan guide does the same thing: name it in prose, link it, and
@@ -205,11 +235,20 @@ The roster note for Manhattan says the overlap is with "the korean_bbq corpus."
 It is not: `korean_bbq/manhattan.json` carries `"places": []`. The owner is the
 Manhattan neighbourhood corpus. Grep before you link, and link the owner.
 
-The same shape applies in Chicago if a wave reaches for them:
-`korean_bbq/chicago.json` owns `perilla-steakhouse-chicago` and
-`shinhwa-korean-steakhouse-chicago`. Neither is on Task 1's Chicago list of 21,
-so neither should appear — but if a wave adds one, it is prose-and-link to
-`guide:chicago-korean-bbq-guide`.
+**The same reasoning puts Chicago's Korean steakhouses in the census, and they
+belong in the page.** Perilla Steakhouse (225 N Wabash), Shinhwa Korean
+Steakhouse (2407 S Wentworth) and Iron Age Wicker Park (1265 N Milwaukee) all
+qualify on exactly COTE's ground — Korean-style beef rooms, a genre §1 names.
+Task 1's first census left them out while counting COTE, and its fix round 2
+corrected that inconsistency: Chicago is **24 rooms**, not 21. The Chicago
+guide names all three in prose and links `guide:chicago-korean-bbq-guide`; it
+does not restate them as places, because `korean_bbq/chicago.json` owns them.
+Iron Age Glenview is the north-suburbs page's room and stays there — it is not
+in the city and is not yours.
+
+Queens carries the same case in one room: Iron Age Rego Park at 61-35 Junction
+Boulevard is `iron-age-rego-park`, owned by `queens/rego-park.json`, and the
+Queens guide is **17 rooms** counting it. Prose and link, not a place.
 
 ### Slugs for the rooms you do own
 
@@ -343,12 +382,12 @@ Hard vocabulary, enforced by the schemas:
   clusters — use them as the section skeleton:
   - Manhattan → Midtown 34th-58th; the Financial District; the Village
   - Brooklyn → Williamsburg; the Midwood and Borough Park kosher belt; Bay Ridge; Downtown
-  - Queens → the Northern Blvd / Roosevelt Ave / Queens Blvd parrilla belt; Astoria; the outliers
-  - Chicago → River North; the Gold Coast; the Loop and West Loop
+  - Queens → the parrilla belt through Jackson Heights, Elmhurst and Corona (8 of 17); Astoria (2); seven outliers in their own neighbourhoods
+  - Chicago → River North; the Gold Coast; the Loop and West Loop; the three Korean steakhouses `korean_bbq` owns, by prose and link
   - Seattle → downtown and Belltown; Capitol Hill, Ballard, Queen Anne and the lake neighbourhoods
-  - Boston → Back Bay; the Seaport
+  - Boston → Back Bay (5); the Seaport (4); Beacon Hill (1) and Downtown Crossing (2) between them
   - Washington DC → the K Street corridor; Georgetown
-  - San Francisco → the Van Ness spine; the Financial District and Embarcadero; the Design District and Jackson Square
+  - San Francisco → the Van Ness / Nob Hill spine (3); Union Square (3, all three owned elsewhere); the Financial District and Embarcadero (3); Marina, Cow Hollow, Market/SoMa, the Design District and the Mission behind them
   - London → Mayfair, Soho and the City; the multi-site operators across the boroughs
   - Los Angeles → City of LA; Beverly Hills; West Hollywood
   - Miami → Miami proper; Miami Beach and South of Fifth; Coral Gables and Aventura
@@ -391,6 +430,13 @@ field: the guide intro, every section body, every FAQ question and answer,
 every place summary, every place history, and every entry note. The gate has no
 allowlist and no proper-noun exemption.
 
+**That file does not exist until Task 4 lands.** Until it does, the pattern
+sets below are the authority — they are transcribed from Task 4's step 1 in
+`docs/superpowers/plans/2026-09-06-steakhouses.md`, and every specimen in this
+section was executed against them. Once the gate is committed, read the file
+itself; if it and this section ever disagree, the file wins and this section is
+the bug.
+
 ### 8a. No superlatives
 
 Patterns: `\bbest\b`, `\bfinest\b`, `\bmost famous\b`, `\bgreatest\b`,
@@ -417,6 +463,14 @@ without regard to capitals or proper nouns. Do not quote the title. Write the
 ranking as *"placed 13th on the 2026 World's 101 ranking of steak restaurants"*
 or attribute it as *"ranked 17th by the 2026 World's 101 list"*. The same
 applies to any "Best of" award name.
+
+Two notes on those rewrites. **The rank numbers above are placeholders** — 13th
+and 17th are illustrative, not facts about any particular room; take the real
+placing from the artifact row. And **dropping "Best" from a real award title is
+a deliberate editorial choice, not a transcription slip.** The ban is on the
+word wherever it lands, and the project has decided that a paraphrased ranking
+citation is a better trade than an unenforceable regex with a proper-noun
+allowlist. Do not "correct" the title back in a later pass.
 
 ### 8b. No unsourced dry-aging duration, and no uniqueness claim about a programme
 
@@ -531,7 +585,7 @@ breathless. Facts with addresses and floor numbers, not atmosphere.
 - No invented sensory experience. You were not there.
 - Titles follow `Steakhouses in {City}: {hook}` and the hook names something
   real — "Twenty-Seven Rooms Between 34th and 58th", not "Where the Locals Eat".
-- Numbers over adjectives. "Nine of the sixteen sit on one belt" beats "a
+- Numbers over adjectives. "Eight of the seventeen sit on one belt" beats "a
   remarkable concentration".
 
 ## 11. Before you commit
