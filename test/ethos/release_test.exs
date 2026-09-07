@@ -500,6 +500,41 @@ defmodule Ethos.ReleaseTest do
     assert function_exported?(Ethos.Release, :seed_steakhouse, 1)
   end
 
+  # `seed_ski/1` is a plain `seed_directory/2` call, and the two things worth
+  # pinning are that it exists at all — spec §9's whole point is that a seeder
+  # missing from the runbook restores production short with nothing erroring —
+  # and that it names a directory that is really there. `Path.wildcard/1` on a
+  # missing directory returns `[]` rather than raising, so a typo'd directory
+  # name is a seeder that quietly seeds nothing.
+  test "seed_ski/1 names a ski seed directory that exists" do
+    assert function_exported?(Ethos.Release, :seed_ski, 1)
+
+    dir = Path.join([Application.app_dir(:ethos, "priv"), "seed_data", "ski"])
+
+    assert File.dir?(dir),
+           "seed_ski/1 names priv/seed_data/ski, which does not exist — Path.wildcard/1 " <>
+             "would return [] and the seeder would silently publish nothing"
+  end
+
+  test "seed_ski/1 publishes the committed ski seed files, idempotently" do
+    user = user_fixture()
+    expected = length(SeedDataHelpers.seed_files("ski"))
+
+    ski = fn ->
+      Ethos.Guides.list_published_guides()
+      |> Enum.count(&String.ends_with?(&1.slug, "-ski-guide"))
+    end
+
+    before = ski.()
+    capture_io(fn -> Ethos.Release.seed_ski(user.email) end)
+    after_first = ski.()
+
+    assert after_first - before == expected
+
+    capture_io(fn -> Ethos.Release.seed_ski(user.email) end)
+    assert ski.() == after_first, "seed_ski/1 is not idempotent"
+  end
+
   # Production runs a release, not Mix, so Ethos.Release.foliage_links/0 is
   # the only way to run Ethos.Foliage.LinkBuilder.build!/0 and
   # Ethos.Foliage.Dataset.warn_dangling_guides/1 after a deploy. Before this
