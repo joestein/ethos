@@ -39,35 +39,35 @@
     "city": "London",
     "status": "build",
     "path": "united-kingdom/england/london",
-    "note": "37 verified rooms, nine of them in the World's 101 Best Steak Restaurants 2026. The core is Mayfair, Soho and the City, but Hawksmoor's seven sites, Gaucho's four and Blacklock's four spread the corpus across the boroughs."
+    "note": "37 verified, 28 published \u2014 nine rooms fell out in content wave 3: Goodman Canary Wharf, Gaucho Charlotte Street, Gaucho Smithfield and Sophie's Chelsea are not on their operators' own site lists; Zelman Meats Soho, M Restaurant Threadneedle Street, Ibai and Chelsea Grill could not be confirmed as trading; and Boisdale of Belgravia is a Scottish restaurant with steaks rather than a steak room. Nine of the 37 are in the World's 101 Best Steak Restaurants 2026. The core is Mayfair, Soho and the City, but Hawksmoor's seven sites, Blacklock's four and Gaucho's two surviving London rooms spread the corpus across the boroughs."
   },
   {
     "slug": "chicago",
     "city": "Chicago",
     "status": "build",
     "path": "united-states/illinois/chicago",
-    "note": "24 verified rooms, every one inside the city limits, and unlike korean_bbq no suburban split. Korean BBQ's mass fled Lawrence Avenue for Niles and Glenview; the steakhouse mass never left River North, the Gold Coast, the Loop and the West Loop, which hold 21 of the 24. The other three are Korean steakhouses already published by korean_bbq/chicago.json: Iron Age Wicker Park, Perilla Steakhouse and Shinhwa Korean Steakhouse. Suburban Gibsons Oak Brook and Rosemont are not needed."
+    "note": "24 verified, 20 published plus 3 linked \u2014 the one loss is La Grande Boucherie, withdrawn in content wave 2 as an Art Nouveau brasserie on the same reasoning that withdrew Boucherie Union Square from Manhattan. Every room is inside the city limits, and unlike korean_bbq no suburban split. Korean BBQ's mass fled Lawrence Avenue for Niles and Glenview; the steakhouse mass never left River North, the Gold Coast, the Loop and the West Loop, which hold 21 of the 24. The other three are Korean steakhouses already published by korean_bbq/chicago.json: Iron Age Wicker Park, Perilla Steakhouse and Shinhwa Korean Steakhouse. Suburban Gibsons Oak Brook and Rosemont are not needed."
   },
   {
     "slug": "los-angeles",
     "city": "Los Angeles",
     "status": "build",
     "path": "united-states/california/los-angeles",
-    "note": "24 verified rooms. The page covers three municipalities: 15 in the City of Los Angeles from Koreatown and Downtown out to Echo Park, Hollywood, Venice and the Valley, 7 in Beverly Hills and 2 in West Hollywood. No split, because the City of Los Angeles sustains a page on its own. Following korean_bbq's puget-sound.json, the guide sits on this node while each room carries the node it is actually in, so Task 3 must create united-states/california/beverly-hills and united-states/california/west-hollywood."
+    "note": "24 verified, 18 published \u2014 six fell out in content wave 2: Smith & Wollensky Century City and Wolfgang's Beverly Hills are not on their operators' own location lists, Nusr-Et Beverly Hills closed in June 2025, and Dunsmoor, Vaca DTLA and Dan Tana's are a heritage wood-fire room, a Spanish restaurant and an Italian one rather than steak rooms. The page covers three municipalities: 15 in the City of Los Angeles from Koreatown and Downtown out to Echo Park, Hollywood, Venice and the Valley, 7 in Beverly Hills and 2 in West Hollywood. No split, because the City of Los Angeles sustains a page on its own. Following korean_bbq's puget-sound.json, the guide sits on this node while each room carries the node it is actually in, so Task 3 must create united-states/california/beverly-hills and united-states/california/west-hollywood."
   },
   {
     "slug": "san-francisco",
     "city": "San Francisco",
     "status": "build",
     "path": "united-states/california/san-francisco",
-    "note": "15 verified rooms, all inside the city, and unlike korean_bbq no South Bay page pulling the mass south. Clusters: the Van Ness and Nob Hill spine (3), Union Square (3), the Financial District and Embarcadero (3), Marina and Cow Hollow (2), Market and SoMa (2), with the Design District and the Mission behind them. Three Union Square rooms are already published by san_francisco/union-square.json: Morton's, Alexander's Steakhouse and ABSteak by Akira Back."
+    "note": "15 verified, 11 published plus 3 linked \u2014 the one loss is Brazen Head, withdrawn in content wave 2 as a Cow Hollow continental bar that merely serves a good steak. All are inside the city, and unlike korean_bbq no South Bay page pulling the mass south. Clusters: the Van Ness and Nob Hill spine (3), Union Square (3), the Financial District and Embarcadero (3), Marina and Cow Hollow (2), Market and SoMa (2), with the Design District and the Mission behind them. Three Union Square rooms are already published by san_francisco/union-square.json: Morton's, Alexander's Steakhouse and ABSteak by Akira Back."
   },
   {
     "slug": "seattle",
     "city": "Seattle",
     "status": "build",
     "path": "united-states/washington/seattle",
-    "note": "22 verified rooms, all inside the city limits, so the page is Seattle and not Puget Sound. This is the sharpest inversion of korean_bbq, whose Seattle guide had to become a regional page because the grills were four suburban corridors up to forty miles out. Steak concentrates in the downtown and Belltown business core, with Capitol Hill, Ballard, Queen Anne and the lake neighborhoods behind it; Bellevue's John Howie Steak is not needed."
+    "note": "22 verified, 16 published \u2014 six fell out in content wave 2: Spencer's for Steaks and Chops, Red Cow and BOCA at Queen City Grill could not be confirmed as trading inside the city, The Grill From Ipanema turned out to be a Washington DC room, the census's two JaK's Grill rows collapsed to the one JaK's actually inside the city limits, and Daniel's Broiler Downtown is named in prose because no source gave it a street address to hang a place row on. The rest are inside the city limits, so the page is Seattle and not Puget Sound. This is the sharpest inversion of korean_bbq, whose Seattle guide had to become a regional page because the grills were four suburban corridors up to forty miles out. Steak concentrates in the downtown and Belltown business core, with Capitol Hill, Ballard, Queen Anne and the lake neighborhoods behind it; Bellevue's John Howie Steak is not needed."
   },
   {
     "slug": "boston",
@@ -81,7 +81,7 @@
     "city": "Washington DC",
     "status": "build",
     "path": "united-states/district-of-columbia/washington",
-    "note": "17 verified rooms, and the page is the District only, not the District plus Northern Virginia. The same rule as Seattle decides it: measure inside the limits first and extend only if the core cannot sustain a page. It can, on the K Street power-dining corridor with a second node in Georgetown. Northern Virginia's Tysons and Arlington chain corridor is dense enough to be its own page one day but is not one of the fourteen candidates."
+    "note": "17 verified, 13 published \u2014 four fell out in content wave 3: The Prime Rib could not be confirmed as trading, and Charlie Palmer Steak, Smith & Wollensky and Medium Rare Capitol Hill are not on their operators' own DC location lists. The page is the District only, not the District plus Northern Virginia. The same rule as Seattle decides it: measure inside the limits first and extend only if the core cannot sustain a page. It can, on the K Street power-dining corridor with a second node in Georgetown. Northern Virginia's Tysons and Arlington chain corridor is dense enough to be its own page one day but is not one of the fourteen candidates."
   },
   {
     "slug": "baltimore",
@@ -95,6 +95,6 @@
     "city": "Miami",
     "status": "build",
     "path": "united-states/florida/miami",
-    "note": "20 verified rooms across four municipalities rather than a split: 9 in Miami proper in Brickell, the Design District, Little River, Little Havana, Little Haiti and Downtown, 8 in Miami Beach where South of Fifth carries the spectacle rooms, 2 in Coral Gables and 1 in Aventura. Kept as one page because Miami proper sustains a page on its own and the city's own tourism board publishes a single steakhouse list spanning all four. Following korean_bbq's puget-sound.json, Task 3 must create united-states/florida/miami-beach, united-states/florida/coral-gables and united-states/florida/aventura."
+    "note": "20 verified, 16 published \u2014 four fell out in content wave 3: Ocean Prime, Meat Market and Los Ranchos Bayside are not on their operators' own location lists, and Red South Beach's domain has lapsed with nothing confirming the room trades. The 16 stand across four municipalities rather than a split: 9 in Miami proper in Brickell, the Design District, Little River, Little Havana, Little Haiti and Downtown, 8 in Miami Beach where South of Fifth carries the spectacle rooms, 2 in Coral Gables and 1 in Aventura. Kept as one page because Miami proper sustains a page on its own and the city's own tourism board publishes a single steakhouse list spanning all four. Following korean_bbq's puget-sound.json, Task 3 must create united-states/florida/miami-beach, united-states/florida/coral-gables and united-states/florida/aventura."
   }
 ]

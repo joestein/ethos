@@ -12,12 +12,13 @@ equivalent, plus the tests that make it stick.
 
 ## Inputs
 
-Read all four before writing a word.
+Read all five before writing a word.
 
 | Input | What it is |
 | --- | --- |
 | `priv/seed_data/steakhouse_roster.json` | Task 1's output: 11 `build`, 2 `drop`, 1 `merged-into`. The `note` on your city is the scoping reasoning; your intro and FAQ should agree with it. |
-| `<session scratchpad>/steak/rooms.md` | Task 1's per-room verification artifact — one row per room with its address, its evidence and its verdict, plus the rejects and why. **The scratchpad lives outside the worktree**; the path is in your dispatch. This artifact is the room census. Do not re-derive it. |
+| `docs/steakhouses/rooms.md` | Task 1's per-room verification artifact — one row per room with its address, its evidence and its verdict, plus the rejects and why. This artifact is the room census. Do not re-derive it. |
+| `docs/steakhouses/wave1.md`, `wave2.md`, `wave3.md` | The three content waves' own evidence artifacts — one row per concrete claim, with its source and its verdict (VERIFIED / CORRECTED / DELETE / DISQUALIFIED). These are the provenance for every factual sentence already published, and the only control in this project that ever caught an invented fact. Read the rows for a room before you change a sentence about it. |
 | `priv/seed_data/korean_bbq/*.json` | The sibling corpus's actual shape. `puget-sound.json` is the file to imitate for a multi-municipality page; `manhattan.json` for the overlap pattern. |
 | `test/ethos/seeds/steakhouse_seed_data_test.exs` | Task 4's gate. Every ban below is a regex in that file. Read the regexes, not just this prose. **The file does not exist until Task 4 lands**; until then §8 transcribes its patterns from Task 4's step 1 in the plan. |
 

@@ -24,8 +24,10 @@ defmodule Ethos.Seeds.SteakhouseSeedDataTest do
   Superlatives (§8a), unsourced dry-aging durations (§8b), unsourced founding
   and "oldest" claims (§8c) and prices (§8d), run over every prose field: the
   guide intro, every section body, every FAQ question and answer, every place
-  summary, every place history and every entry note. There is no allowlist and
-  no proper-noun exemption — §8a's own worked example is that the award title
+  summary, every place history, every entry note and every photo `title` and
+  `description` — a caption is published prose and is swept like any other
+  sentence. There is no allowlist and no proper-noun exemption — §8a's own
+  worked example is that the award title
   *World's 101 Best Steak Restaurants* trips `\\bbest\\b` and must be
   paraphrased.
 
@@ -55,14 +57,23 @@ defmodule Ethos.Seeds.SteakhouseSeedDataTest do
   defp roster, do: @roster |> File.read!() |> Jason.decode!()
   defp built, do: for(r <- roster(), r["status"] == "build", do: r)
 
+  # Every published string in the file. A photo's `title` and `description` are
+  # in here because they render on the page like any other sentence — a caption
+  # is prose, and a superlative or an unsourced founding year is no more
+  # publishable there than in a section body. Photos hang off the guide only
+  # (places carry none; see "every guide carries exactly one photo"), but the
+  # place list is swept too so this keeps working if that ever changes.
   defp prose(doc) do
     g = doc["guide"]
+
+    photos = (g["photos"] || []) ++ Enum.flat_map(doc["places"] || [], &(&1["photos"] || []))
 
     [g["intro"] | Enum.map(g["sections"] || [], & &1["body"])] ++
       Enum.flat_map(g["faq"] || [], &[&1["question"], &1["answer"]]) ++
       Enum.map(doc["places"] || [], & &1["summary"]) ++
       Enum.map(doc["places"] || [], &(&1["history"] || "")) ++
-      Enum.map(doc["entries"] || [], & &1["note"])
+      Enum.map(doc["entries"] || [], & &1["note"]) ++
+      Enum.flat_map(photos, &[&1["title"], &1["description"]])
   end
 
   # ------------------------------------------------------------------
@@ -132,6 +143,45 @@ defmodule Ethos.Seeds.SteakhouseSeedDataTest do
           "a fixed-price chop house menu, with the cuts listed by weight"
         ] do
       refute price?(specimen), "§8d says this must publish: #{inspect(specimen)}"
+    end
+  end
+
+  # The bans are only as wide as `prose/1`. A photo caption renders on the page
+  # like any other sentence, so it is swept — and this pins that, because
+  # dropping the two fields back out of `prose/1` would leave every ban test
+  # below still green while a superlative sat in a caption.
+  test "the ban sweep reaches photo titles and descriptions" do
+    synthetic = %{
+      "guide" => %{
+        "intro" => "an intro",
+        "photos" => [%{"title" => "a caption title", "description" => "a caption description"}]
+      },
+      "places" => [
+        %{
+          "summary" => "s",
+          "photos" => [%{"title" => "a place title", "description" => "a place description"}]
+        }
+      ],
+      "entries" => []
+    }
+
+    texts = prose(synthetic)
+
+    for field <- [
+          "a caption title",
+          "a caption description",
+          "a place title",
+          "a place description"
+        ] do
+      assert field in texts, "prose/1 does not sweep #{inspect(field)}"
+    end
+
+    for {file, doc} <- docs(), photo <- doc["guide"]["photos"] || [] do
+      committed = prose(doc)
+      assert photo["title"] in committed, "#{file}: photo title is outside the ban sweep"
+
+      assert photo["description"] in committed,
+             "#{file}: photo description is outside the ban sweep"
     end
   end
 

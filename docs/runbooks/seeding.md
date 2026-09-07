@@ -137,17 +137,44 @@ committed corpus as of this writing and content lands continuously.
 
     Step 14 depends on this one: `Ethos.Seeds.KoreanBbqCollection` names all
     ten guides.
-12. `Ethos.Release.seed_steakhouse(email)` — `priv/seed_data/steakhouse/`, empty
-    except `.gitkeep` until Task 7 authors its fourteen city files. **MUST run
-    after steps 1, 4, 6, 8 and 11** — the same precondition set step 11 itself
-    documents, satisfied here simply by running immediately after it. The
-    roster's build cities reuse places those corpora already publish (Keens
-    Steakhouse, Delmonico's, COTE, Old Homestead and Wolfgang's Park Avenue in
-    Manhattan; Peter Luger and Gage & Tollner in Brooklyn; Iron Age Korean
-    Steakhouse in Queens; Morton's, Alexander's Steakhouse and ABSteak by Akira
-    Back in San Francisco's Union Square; and Iron Age Wicker Park, Perilla
-    Steakhouse and Shinhwa Korean Steakhouse in `priv/seed_data/korean_bbq/chicago.json`),
-    and `GuideRunner.replace_entries!/2` raises on a place nothing has seeded.
+12. `Ethos.Release.seed_steakhouse(email)` — 11 JSON files,
+    `priv/seed_data/steakhouse/`, one per `build` city on the roster, carrying
+    196 places between them. **MUST run after steps 1, 4, 5, 6, 8 and 11.**
+
+    The hazard is **not** `GuideRunner.replace_entries!/2`. Every steakhouse
+    entry names a `place_slug` its own file defines — no steakhouse entry
+    reaches outside its own file, and
+    `test/ethos/seeds/steakhouse_seed_data_test.exs` pins that as
+    *every entry resolves to a place in its own file*. The seeder cannot raise
+    on a missing place.
+
+    What raises is `Links.resolve!/1`. The corpus declares **14 top-level
+    `"links"` edges to 13 guides in five other corpora**, and `resolve!/1`
+    raises `page link references unknown guide <slug>` on a target nothing has
+    seeded. Those 13 targets are what fixes the ordering:
+
+    - step 1 (Manhattan) — `garment-district`, `financial-district`,
+      `meatpacking-district`, `murray-hill` and `flatiron-district` (Keens,
+      Delmonico's, Old Homestead, Wolfgang's Park Avenue and COTE are published
+      there; `flatiron-district` is named twice, by Manhattan and by Miami);
+    - step 4 (Brooklyn) — `south-williamsburg` and `downtown-brooklyn` (Peter
+      Luger and Gage & Tollner);
+    - step 5 (Bronx) — `riverdale` and `throgs-neck`, which the Manhattan
+      steakhouse page links because the Bronx rooms were folded into it.
+      **Step 11 does not need step 5; this step does**, so the precondition set
+      here is one wider than step 11's, not the same one;
+    - step 6 (Queens) — `rego-park` (Iron Age Korean Steakhouse);
+    - step 8 (San Francisco) — `union-square` (Morton's, Alexander's
+      Steakhouse, ABSteak by Akira Back);
+    - step 11 (Korean BBQ) — `manhattan-korean-bbq-guide` and
+      `chicago-korean-bbq-guide` (COTE again, and Iron Age Wicker Park,
+      Perilla Steakhouse and Shinhwa Korean Steakhouse).
+
+    Running immediately after step 11 satisfies all six preconditions at once.
+
+    Step 14 depends on this one: `Ethos.Seeds.SteakhouseCollection` names all
+    eleven guides.
+
     This task also adds five destination nodes the corpus needs —
     `united-states/california/beverly-hills`,
     `united-states/california/west-hollywood`,
@@ -164,12 +191,12 @@ committed corpus as of this writing and content lands continuously.
     references no place and resolves no link. It is listed here, after every
     guide corpus and before `seed_collections`, for consistency with the rest
     of this list.
-14. `Ethos.Release.seed_collections()` — eight collections: The Burys of
+14. `Ethos.Release.seed_collections()` — nine collections: The Burys of
     Connecticut (steps 2 and 3), Antique Trail of CT (step 2), Major League
-    Ballparks (step 7), Korean BBQ (step 11), and the four scenic-byway
-    collections (Merritt Parkway, Route 169, Route 207, Route 7 in the
-    north-west — all twenty of their town guides come from step 3). After
-    **every** guide step, never between them.
+    Ballparks (step 7), Korean BBQ (step 11), Steakhouses (step 12), and the
+    four scenic-byway collections (Merritt Parkway, Route 169, Route 207,
+    Route 7 in the north-west — all twenty of their town guides come from
+    step 3). After **every** guide step, never between them.
 15. `Ethos.Release.seed_links()`
 16. `Ethos.Release.adjacency_links()` — writes the 446 town-adjacency `nearby`
     edges. Runs after `seed_links` (step 15), not before: `BackfillLinks`
@@ -409,6 +436,7 @@ seed window described at the top of this runbook — it just returns 0.
 | 9 | London | **33** | `count.(~s(united-kingdom/england/london))` |
 | 10 | Rome | **32** | `count.(~s(italy/lazio/rome))` |
 | 11 | Korean BBQ | **10** | the seeder's own last line, `Seeded 10 files from priv/seed_data/korean_bbq` (these ten file on five different nodes, so no single subtree counts them) |
+| 12 | Steakhouses | **11** | the seeder's own last line, `Seeded 11 files from priv/seed_data/steakhouse` (these eleven file on eleven different nodes, six of which no earlier step touches, so no single subtree counts them) |
 
 **Read the rows in order, and only after the step they name.** These are
 subtree counts, so a later step can add to an earlier row's subtree. Three do:
@@ -427,8 +455,23 @@ subtree counts, so a later step can add to an earlier row's subtree. Three do:
   ballpark guides are already inside the row of 30.
 
   Step 11 adds one more to each of Manhattan, Brooklyn, Queens, London and San
-  Francisco: the Korean BBQ guides file on those nodes. After a full rebuild
-  Manhattan reads 39, Brooklyn 70, Queens 23, London 34 and San Francisco 25.
+  Francisco: the Korean BBQ guides file on those nodes. After step 11 Manhattan
+  reads 39, Brooklyn 70, Queens 23, London 34 and San Francisco 25.
+
+  Step 12 adds one more to those same five, for the same reason — the
+  Manhattan, Brooklyn, Queens, London and San Francisco steakhouse guides file
+  on those nodes. **After a full rebuild Manhattan reads 40, Brooklyn 71,
+  Queens 24, London 35 and San Francisco 26.** The other six steakhouse guides
+  open subtrees no earlier step touches and each reads 1: Chicago
+  (`united-states/illinois/chicago`), Los Angeles
+  (`united-states/california/los-angeles`), Seattle
+  (`united-states/washington/seattle`), Boston
+  (`united-states/massachusetts/boston`), Miami
+  (`united-states/florida/miami`) and Washington
+  (`united-states/district-of-columbia/washington`). Miami and Los Angeles read
+  1 and not more even though their rooms sit on the Miami Beach, Coral Gables,
+  Aventura, Beverly Hills and West Hollywood nodes — those nodes carry places,
+  not guides, and this table counts guides.
 
 The Bronx and Queens programmes both narrowed on 2026-08-31 from their full
 rosters to an in-scope core: **14 Bronx** guides (of 66 rostered) and
@@ -438,10 +481,10 @@ roster once its `:pending_bronx` tag comes off, and that is what will tell you
 the fourteenth landed. See
 `docs/superpowers/specs/2026-08-31-narrowed-nyc-scope-design.md`.
 
-**Full rebuild total: 439 published guides.** Derived, not counted off a live
+**Full rebuild total: 450 published guides.** Derived, not counted off a live
 database: 38 Manhattan + 5 CT-5 + 165 Connecticut + 69 Brooklyn + 13 Bronx +
 21 Queens + 30 ballparks + 23 San Francisco + 33 London + 31 Rome zones + 1
-Rome flagship + 10 Korean BBQ. Every JSON addend is
+Rome flagship + 10 Korean BBQ + 11 steakhouses. Every JSON addend is
 `ls priv/seed_data/<dir>/*.json | wc -l`; re-derive them that way rather than
 trusting this sum, which moves with every content wave. Check it with
 `Ethos.Guides.list_published_guides() |> length()`.

@@ -5,11 +5,11 @@
     "destination": "Chicago Steakhouses, Illinois",
     "destination_path": "united-states/illinois/chicago",
     "tier": "guide",
-    "intro": "Twenty rooms on this page, and every one of them inside the city limits. Half of them stand in River North, most within a few blocks of the Chicago River: Bavette's and RPM Steak face each other across West Kinzie Street, Gene & Georgetti holds the Franklin Street corner, Chicago Cut takes the water at 300 North LaSalle, and Mastro's, the Chicago Chop House, Kinzie Chophouse, Smith & Wollensky, Steak 48 and Fogo de Chão fill in around them. Six more sit on the Gold Coast and the Magnificent Mile, from Gibsons on Rush Street to the Capital Grille on North St. Clair. Four hold the Loop and the West Loop, with Swift & Sons out in Fulton Market where the meat trade used to be. Three Korean steakhouses qualify under the same rule and are published on the Chicago Korean barbecue guide, linked below.",
+    "intro": "Twenty rooms on this page, and every one of them inside the city limits. Half of them stand in River North, most within a few blocks of the Chicago River: Bavette's and RPM Steak both stand on West Kinzie Street, a block and a half apart, Gene & Georgetti holds the Franklin Street corner, Chicago Cut takes the water at 300 North LaSalle, and Mastro's, the Chicago Chop House, Kinzie Chophouse, Smith & Wollensky, Steak 48 and Fogo de Chão fill in around them. Six more sit on the Gold Coast and the Magnificent Mile, from Gibsons on Rush Street to the Capital Grille on North St. Clair. Four hold the Loop and the West Loop, with Swift & Sons out in Fulton Market where the meat trade used to be. Three Korean steakhouses qualify under the same rule and are published on the Chicago Korean barbecue guide, linked below.",
     "sections": [
       {
         "heading": "River North",
-        "body": "Ten of the twenty rooms sit in one neighborhood, and most of them are walkable from each other.\n\nBavette's Bar & Boeuf is on West Kinzie Street, a Hogsalt room of exposed brick and low light where the dry-aged rib eye is the cut the kitchen is built around. RPM Steak is four blocks west on the same street, bringing a chef-driven menu to a traditional steakhouse list. Gene & Georgetti is on North Franklin Street and has been since 1941, per the city's own visitor listing, still run by the Durpetti family and still putting prime aged steaks beside chicken Vesuvio.\n\nChicago Cut Steakhouse takes the river frontage at 300 North LaSalle, a window-lined room with a patio on the water; the Michelin Guide's listing records that the beef is butchered and dry-aged on the premises, and the wine list arrives on a tablet you can search by varietal. The Chicago Chop House is around the corner on West Ontario in a Victorian brownstone built in 1897, according to the restaurant's own description, hand-cutting USDA Prime. Kinzie Chophouse opened on North Wells Street in 1991, is independently woman-owned, and calls itself an American steakhouse with a Mediterranean heartbeat.\n\nMastro's is on North Dearborn with live music every night and three second-floor private rooms that combine. Smith & Wollensky occupies a two-story building on North State Street with the river below it, Wollensky's Grill downstairs, and tours of the dry-aging room and butcher shop on request. Steak 48 is on North Wabash behind a glass-walled show kitchen. Fogo de Chão is on North LaSalle Drive, where the churrasco grill feeds a dining room seating more than three hundred."
+        "body": "Ten of the twenty rooms sit in one neighborhood, and most of them are walkable from each other.\n\nBavette's Bar & Boeuf is on West Kinzie Street, a Hogsalt room of exposed brick and low light where the dry-aged rib eye is the cut the kitchen is built around. RPM Steak is a block and a half east at 66 West Kinzie, bringing a chef-driven menu to a traditional steakhouse list. Gene & Georgetti is on North Franklin Street and has been since 1941, per the city's own visitor listing, still run by the Durpetti family and still putting prime aged steaks beside chicken Vesuvio.\n\nChicago Cut Steakhouse takes the river frontage at 300 North LaSalle, a window-lined room with a patio on the water; the Michelin Guide's listing records that the beef is butchered and dry-aged on the premises, and the wine list arrives on a tablet you can search by varietal. The Chicago Chop House is around the corner on West Ontario in a Victorian brownstone built in 1897, according to the restaurant's own description, hand-cutting USDA Prime. Kinzie Chophouse opened on North Wells Street in 1991, is independently woman-owned, and calls itself an American steakhouse with a Mediterranean heartbeat.\n\nMastro's is on North Dearborn with live music every night and three second-floor private rooms that combine. Smith & Wollensky occupies a two-story building on North State Street with the river below it, Wollensky's Grill downstairs, and tours of the dry-aging room and butcher shop on request. Steak 48 is on North Wabash behind a glass-walled show kitchen. Fogo de Chão is on North LaSalle Drive, where the churrasco grill feeds a dining room seating more than three hundred."
       },
       {
         "heading": "The Gold Coast and the Magnificent Mile",
@@ -294,7 +294,7 @@
       "kind": "food",
       "name": "Bavette's Bar & Boeuf",
       "place_slug": "bavettes-bar-and-boeuf",
-      "note": "West Kinzie Street, River North. The dry-aged rib eye is the order, and tables go the moment reservations open."
+      "note": "West Kinzie Street, River North. The dry-aged rib eye is the signature cut."
     },
     {
       "kind": "food",
@@ -330,7 +330,7 @@
       "kind": "food",
       "name": "RPM Steak",
       "place_slug": "rpm-steak",
-      "note": "66 West Kinzie Street, four blocks from Bavette's on the same street."
+      "note": "66 West Kinzie Street, River North. A block and a half east of Bavette's on the same street."
     },
     {
       "kind": "food",
