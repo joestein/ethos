@@ -234,7 +234,7 @@
       "kind": "restaurant",
       "destination_path": "united-states/florida/aventura",
       "address": "19999 W Country Club Dr, Aventura, FL 33180",
-      "summary": "Michael Mina's Florida steakhouse is at 19999 West Country Club Drive in Aventura, a room of mirrored glass and gilded finishes. Japanese A5 and American wagyu are cooked over wood, and the wine list runs past eight hundred and fifty selections with nightly sommelier-guided tastings.",
+      "summary": "Michael Mina's Florida steakhouse is at 19999 West Country Club Drive in Aventura, a room of mirrored glass and gilded finishes. Japanese A5 and American wagyu are cooked over wood, and the wine list runs past eight hundred and fifty selections, with a tailor-made wine experience led by the house sommelier offered nightly.",
       "history": "",
       "status": "open",
       "photos": []
@@ -293,7 +293,7 @@
       "kind": "food",
       "name": "Papi Steak",
       "place_slug": "papi-steak-miami-beach",
-      "note": "736 First Street. The tomahawk arrives as a piece of theater, in a briefcase."
+      "note": "736 First Street, in South of Fifth. Immersive decor and, in the operator's own words, dinner as theater."
     },
     {
       "kind": "food",
@@ -329,7 +329,7 @@
       "kind": "food",
       "name": "Daniel's Miami",
       "place_slug": "daniels-miami-coral-gables",
-      "note": "1500 San Ignacio Avenue. The bar room takes walk-ins when the dining room is full."
+      "note": "1500 San Ignacio Avenue. Daniel's Bar runs its own menu of signature dishes, cocktails and wines in a lounge with televisions."
     },
     {
       "kind": "food",

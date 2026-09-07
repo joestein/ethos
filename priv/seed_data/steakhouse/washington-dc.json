@@ -110,7 +110,7 @@
       "destination_path": "united-states/district-of-columbia/washington",
       "address": "809 15th St NW, Washington, DC 20005",
       "official_url": "https://www.bobbyvans.com/",
-      "summary": "Bobby Van's Steakhouse is at 809 15th Street NW, a block from McPherson Square, specializing in prime dry-aged steaks and seafood. Lunch runs Monday to Friday and dinner nightly, with private dining for parties from twelve to sixty-five.",
+      "summary": "Bobby Van's Steakhouse is at 809 15th Street NW, a block from McPherson Square, specializing in prime dry-aged steaks and seafood. Lunch runs Monday to Friday and dinner nightly, according to the city's own listing.",
       "history": "",
       "status": "open",
       "photos": []
@@ -223,7 +223,7 @@
       "kind": "food",
       "name": "Morton's The Steakhouse",
       "place_slug": "mortons-the-steakhouse-washington-dc",
-      "note": "1050 Connecticut Avenue NW. The lobby-bar half fills before the dining room does."
+      "note": "1050 Connecticut Avenue NW, in the K Street corridor cluster. Destination DC lists a full bar and group dining beside the private rooms."
     },
     {
       "kind": "food",
