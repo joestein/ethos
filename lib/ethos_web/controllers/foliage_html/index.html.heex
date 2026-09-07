@@ -1,7 +1,7 @@
 <article class="mx-auto max-w-3xl px-4 py-10">
-  <h1 class="text-3xl font-bold">Connecticut Foliage Forecast</h1>
+  <h1 class="font-display text-display-sm">Connecticut Foliage Forecast</h1>
 
-  <p class="mt-2 text-zinc-600">
+  <p class="mt-2 text-ink-muted">
     When the leaves turn in each of Connecticut's 169 towns, and which of the state's
     seven official driving routes runs through them.
   </p>
@@ -17,21 +17,21 @@
 
   <.stage_key />
 
-  <p class="mt-4 text-xs text-zinc-500">{Ethos.Foliage.attribution()}</p>
+  <p class="mt-4 text-xs text-ink-muted">{Ethos.Foliage.attribution()}</p>
 
   <.field_note note={@note} />
 
   <section class="mt-10">
     <h2 class="font-semibold">Driving routes</h2>
-    <p class="mt-1 text-sm text-zinc-600">
+    <p class="mt-1 text-sm text-ink-muted">
       Seven routes published by the state. Each page lists the towns it passes through.
     </p>
     <ul class="mt-3 grid gap-3 sm:grid-cols-2">
-      <li :for={route <- @routes} class="rounded-xl border p-4">
+      <li :for={route <- @routes} class="rounded-xl border border-line p-4">
         <.link navigate={~p"/foliage/#{route.slug}"} class="font-semibold hover:underline">
           {route.name}
         </.link>
-        <p class="mt-1 text-sm text-zinc-600">{length(route.stops)} towns</p>
+        <p class="mt-1 text-sm text-ink-muted">{length(route.stops)} towns</p>
       </li>
     </ul>
   </section>
@@ -39,7 +39,7 @@
   <section class="mt-10">
     <h2 class="font-semibold">By county</h2>
     <table class="mt-3 w-full text-sm">
-      <thead class="text-left text-zinc-500">
+      <thead class="text-left text-ink-muted">
         <tr>
           <th class="py-1">County</th>
           <th class="py-1">Towns</th>
@@ -47,7 +47,7 @@
         </tr>
       </thead>
       <tbody>
-        <tr :for={county <- @counties} class="border-t">
+        <tr :for={county <- @counties} class="border-t border-line">
           <td class="py-1">{county.name}</td>
           <td class="py-1">{county.town_count}</td>
           <td class="py-1">{county.peak}</td>
@@ -58,9 +58,9 @@
 
   <section class="mt-10">
     <h2 class="font-semibold">Use this map</h2>
-    <p class="mt-1 text-sm text-zinc-600">
+    <p class="mt-1 text-sm text-ink-muted">
       Free to embed, on any site, with the credit link left in place.
     </p>
-    <pre class="mt-3 overflow-x-auto rounded-lg bg-zinc-100 p-3 text-xs"><code>{~s(<iframe src="#{url(~p"/foliage/embed")}" width="100%" height="560" loading="lazy" style="border:0" title="Connecticut Foliage Forecast"></iframe>)}</code></pre>
+    <pre class="mt-3 overflow-x-auto rounded-lg border border-line bg-surface-raised p-3 text-xs"><code>{~s(<iframe src="#{url(~p"/foliage/embed")}" width="100%" height="560" loading="lazy" style="border:0" title="Connecticut Foliage Forecast"></iframe>)}</code></pre>
   </section>
 </article>

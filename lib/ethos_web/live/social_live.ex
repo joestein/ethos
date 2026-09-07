@@ -35,13 +35,13 @@ defmodule EthosWeb.SocialLive do
 
   def render(assigns) do
     ~H"""
-    <section class="mt-10 rounded-xl border p-5">
+    <section class="mt-10 rounded-xl border border-line p-5">
       <%!-- This island runs as its own isolated LiveView (see the moduledoc), so
             the page's own flash group never sees flashes set in here — this is
             the only place a newly earned badge can be shown. --%>
       <.flash kind={:info} flash={@flash} id="social-badge-flash" />
 
-      <h2 class="text-sm font-semibold uppercase tracking-wide text-zinc-500">
+      <h2 class="text-sm font-semibold uppercase tracking-wide text-ink-muted">
         What travelers think
       </h2>
 
@@ -64,10 +64,10 @@ defmodule EthosWeb.SocialLive do
 
       <.prompt :if={@prompt} kind={@prompt} />
 
-      <div class="mt-8 border-t pt-6">
+      <div class="mt-8 border-t border-line pt-6">
         <div :if={@summary.count > 0} class="flex items-baseline gap-2">
           <span class="text-2xl font-semibold">{@summary.average}</span>
-          <span class="text-sm text-zinc-500">
+          <span class="text-sm text-ink-muted">
             out of 10 · {@summary.count} {if @summary.count == 1, do: "review", else: "reviews"}
           </span>
         </div>
@@ -80,15 +80,15 @@ defmodule EthosWeb.SocialLive do
           existing={@own_review}
         />
 
-        <p :if={@own_review && @own_review.status == "pending"} class="mt-3 text-sm text-zinc-500">
+        <p :if={@own_review && @own_review.status == "pending"} class="mt-3 text-sm text-ink-muted">
           Your review is waiting to be approved.
         </p>
 
         <ul class="mt-6 space-y-5">
-          <li :for={review <- @reviews} class="border-t pt-4 first:border-t-0 first:pt-0">
+          <li :for={review <- @reviews} class="border-t border-line pt-4 first:border-t-0 first:pt-0">
             <div class="flex items-baseline gap-2">
               <span class="font-semibold">{Accounts.display_name(review.user)}</span>
-              <span class="text-sm text-zinc-500">{review.rating}/10</span>
+              <span class="text-sm text-ink-muted">{review.rating}/10</span>
             </div>
             <p class="mt-1 whitespace-pre-line">{review.body}</p>
           </li>
@@ -106,7 +106,7 @@ defmodule EthosWeb.SocialLive do
   # not inert text a visitor can't act on.
   defp prompt(%{kind: :closed} = assigns) do
     ~H"""
-    <p class="mt-4 text-sm text-zinc-500">
+    <p class="mt-4 text-sm text-ink-muted">
       This place is permanently closed. Reactions are kept for reference and can no longer change.
     </p>
     """
@@ -114,7 +114,7 @@ defmodule EthosWeb.SocialLive do
 
   defp prompt(%{kind: :logged_out} = assigns) do
     ~H"""
-    <p class="mt-4 text-sm text-zinc-500">
+    <p class="mt-4 text-sm text-ink-muted">
       <.link navigate={~p"/users/log_in"} class="underline">Log in to react.</.link>
     </p>
     """
@@ -122,7 +122,7 @@ defmodule EthosWeb.SocialLive do
 
   defp prompt(%{kind: :needs_username} = assigns) do
     ~H"""
-    <p class="mt-4 text-sm text-zinc-500">
+    <p class="mt-4 text-sm text-ink-muted">
       <.link navigate={~p"/users/username"} class="underline">Pick a username to join in.</.link>
     </p>
     """
@@ -145,20 +145,27 @@ defmodule EthosWeb.SocialLive do
         phx-click="react"
         phx-value-value={@value}
         aria-pressed={to_string(@mine)}
-        class={[
-          "rounded-lg border px-4 py-2 text-xl transition",
-          @mine && "border-zinc-900 bg-zinc-100",
-          !@mine && "hover:bg-zinc-50"
-        ]}
+        class={
+          [
+            "rounded-lg border border-line px-4 py-2 text-xl transition",
+            # A judgement, not seasonal decoration (Amendment C): thumbs up is
+            # `positive` and thumbs down is `negative` regardless of which
+            # button this is, and neither token moves with the season — see
+            # assets/css/app.css, where they are identical in all four palettes.
+            @mine && @value == "up" && "border-positive bg-positive/10",
+            @mine && @value == "down" && "border-negative bg-negative/10",
+            !@mine && "hover:bg-surface-raised"
+          ]
+        }
       >
         {@label}
       </button>
-      <span :if={!@interactive} class="rounded-lg border px-4 py-2 text-xl opacity-60">
+      <span :if={!@interactive} class="rounded-lg border border-line px-4 py-2 text-xl opacity-60">
         {@label}
       </span>
       <%!-- data-reaction-count is the hook the tests read. Without it they would have
             to assert on bare text, which passes on any stray digit on the page. --%>
-      <span data-reaction-count={@value} class="text-sm font-medium text-zinc-600">
+      <span data-reaction-count={@value} class="text-sm font-medium text-ink-muted">
         {@count}
       </span>
     </div>
@@ -184,17 +191,22 @@ defmodule EthosWeb.SocialLive do
           phx-click="rate"
           phx-value-rating={value}
           aria-pressed={to_string(@rating == value)}
-          class={[
-            "h-8 w-8 rounded border text-sm",
-            @rating && value <= @rating && "bg-amber-400 border-amber-500",
-            !(@rating && value <= @rating) && "hover:bg-zinc-50"
-          ]}
+          class={
+            [
+              "h-8 w-8 rounded border border-line text-sm text-ink",
+              # `star` DOES move with the season, unlike the thumbs above — see
+              # the comment on `thumb/1`. That asymmetry is the design, not a
+              # bug: a 1-10 rating is decorative colour, a thumbs-up is a claim.
+              @rating && value <= @rating && "bg-star border-star",
+              !(@rating && value <= @rating) && "hover:bg-surface-raised"
+            ]
+          }
         >
           {value}
         </button>
       </div>
 
-      <p :if={@rating_error} class="mt-1 text-sm text-red-600">{@rating_error}</p>
+      <p :if={@rating_error} class="mt-1 text-sm text-negative">{@rating_error}</p>
 
       <.form for={@form} id="review-form" phx-submit="submit_review" class="mt-3">
         <.input

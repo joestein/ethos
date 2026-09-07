@@ -17,6 +17,7 @@ defmodule EthosWeb.AdminNav do
       <.tab label="Comments" href={~p"/admin/comments"} active={@current == :comments} />
       <.tab label="Users" href={~p"/admin/users"} active={@current == :users} />
       <.tab label="Suggestions" href={~p"/admin/suggestions"} active={@current == :suggestions} />
+      <.tab label="Season" href={~p"/admin/season"} active={@current == :season} />
     </nav>
     """
   end

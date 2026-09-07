@@ -15,7 +15,7 @@ defmodule EthosWeb.FoliagePanel do
 
   def foliage_panel(assigns) do
     ~H"""
-    <section :if={@foliage} class="mt-10 rounded-xl border p-4">
+    <section :if={@foliage} class="mt-10 rounded-xl border border-line p-4">
       <h2 class="font-semibold">Foliage</h2>
       <p class="mt-2 text-sm">
         {Ethos.Foliage.stage_label(@foliage.stage)} this week ·
@@ -25,17 +25,17 @@ defmodule EthosWeb.FoliagePanel do
           most advanced {Ethos.Foliage.peak_label(@foliage.town)}
         <% end %>
       </p>
-      <p :if={!Ethos.Foliage.peak_verified?(@foliage.town)} class="mt-1 text-xs text-zinc-500">
+      <p :if={!Ethos.Foliage.peak_verified?(@foliage.town)} class="mt-1 text-xs text-ink-muted">
         This town never reaches full colour on the state's map — DEEP's eight weeks run out before it turns.
       </p>
-      <p :if={@foliage.route} class="mt-1 text-sm text-zinc-600">
+      <p :if={@foliage.route} class="mt-1 text-sm text-ink-muted">
         On the
         <.link navigate={~p"/foliage/#{@foliage.route.slug}"} class="underline">
           {@foliage.route.name}
         </.link>
         foliage driving route.
       </p>
-      <p class="mt-2 text-xs text-zinc-500">
+      <p class="mt-2 text-xs text-ink-muted">
         {Ethos.Foliage.attribution()}
         <.link navigate={~p"/foliage"} class="underline">See the statewide forecast</.link>.
       </p>

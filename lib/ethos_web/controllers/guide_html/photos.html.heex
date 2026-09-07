@@ -20,8 +20,8 @@
       </a>
       <figcaption class="mt-1">
         <p class="font-semibold text-sm">{photo["title"]}</p>
-        <p :if={photo["description"]} class="text-sm text-zinc-500">{photo["description"]}</p>
-        <span :if={photo["author"]} class="text-zinc-400">
+        <p :if={photo["description"]} class="text-sm text-ink-muted">{photo["description"]}</p>
+        <span :if={photo["author"]} class="text-ink-muted">
           — {photo["author"]}, {photo["license"]}, via
           <a
             :if={EthosWeb.Url.safe_http?(photo["source_url"])}

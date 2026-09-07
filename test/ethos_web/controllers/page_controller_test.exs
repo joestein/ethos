@@ -36,7 +36,16 @@ defmodule EthosWeb.PageControllerTest do
     # class. Attribute order and the `data-phx-link*` attributes come from
     # `<.link navigate={...}>` and are exactly what gets rendered.
     assert html =~
-             ~s(href="/destinations" data-phx-link="redirect" data-phx-link-state="push" class="rounded-md bg-zinc-900)
+             ~s(href="/destinations" data-phx-link="redirect" data-phx-link-state="push" class="rounded-md bg-accent)
+  end
+
+  test "the hero carries the seasonal gradient", %{conn: conn} do
+    html = conn |> get(~p"/") |> html_response(200)
+
+    # Built from accent and accent-soft, so it re-skins with the season
+    # rather than being a fixed pair of colours that happens to suit summer.
+    assert html =~ "from-accent-soft"
+    assert html =~ "font-display"
   end
 
   # The home page renders with `layout: false`, so it does not inherit the app
@@ -347,10 +356,10 @@ defmodule EthosWeb.PageControllerTest do
       # could appear earlier in a meta tag or a link label, and `:binary.match`
       # returns the first hit wherever it is.
       collections_heading =
-        ~s(<h2 class="text-sm uppercase tracking-wide text-zinc-400">Collections</h2>)
+        ~s(<h2 class="text-sm uppercase tracking-wide text-ink-muted">Collections</h2>)
 
       routes_heading =
-        ~s(<h2 class="text-sm uppercase tracking-wide text-zinc-400">Foliage driving routes</h2>)
+        ~s(<h2 class="text-sm uppercase tracking-wide text-ink-muted">Foliage driving routes</h2>)
 
       assert [{collections_at, _}] = :binary.matches(html, collections_heading)
       assert [{routes_at, _}] = :binary.matches(html, routes_heading)
