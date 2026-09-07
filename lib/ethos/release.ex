@@ -152,6 +152,8 @@ defmodule Ethos.Release do
   """
   def seed_korean_bbq(email), do: seed_directory("korean_bbq", email)
 
+  def seed_steakhouse(email), do: seed_directory("steakhouse", email)
+
   @doc """
   Applies the deletion manifest, removing every place it names.
 

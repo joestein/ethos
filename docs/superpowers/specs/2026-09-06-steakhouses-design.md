@@ -147,14 +147,14 @@ One file per city at `priv/seed_data/steakhouse/{city}.json`:
     ]
   },
   "places": [
-    {"slug": "keens-steakhouse", "kind": "restaurant",
+    {"slug": "chophouse-nine", "name": "Chophouse Nine", "kind": "restaurant",
      "destination_path": "united-states/new-york/new-york-city/manhattan",
      "address": "…", "summary": "…", "history": "…", "status": "open",
      "photos": []}
   ],
   "entries": [
-    {"kind": "food", "name": "Keens Steakhouse",
-     "place_slug": "keens-steakhouse", "note": "…"}
+    {"kind": "food", "name": "Chophouse Nine",
+     "place_slug": "chophouse-nine", "note": "…"}
   ],
   "links": [
     {"target": "guide:manhattan-korean-bbq-guide", "kind": "nearby", "note": "…"}

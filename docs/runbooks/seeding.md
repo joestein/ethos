@@ -68,7 +68,7 @@ the seed order right after the deploy, do not deploy yet.
 ## Seed order
 
 Run in this exact order. Every step depends on the ones above it, except
-`seed_destinations` (step 12), which depends on nothing and nothing depends on
+`seed_destinations` (step 13), which depends on nothing and nothing depends on
 it — see its entry below.
 
 Every JSON corpus publishes exactly one guide per `.json` file, so each file
@@ -106,7 +106,7 @@ committed corpus as of this writing and content lands continuously.
 
    It has no dependency on steps 1-6 and none of them depends on it, but two
    later steps do, which is why it is here rather than lower down. Step 8 needs
-   it (Oracle Park's places), and step 13 needs it:
+   it (Oracle Park's places), and step 14 needs it:
    `Ethos.Seeds.MlbBallparksCollection` names all thirty ballpark guides, so
    `seed_collections` run before this raises
    `collection mlb-ballparks references unknown guide <slug>`.
@@ -135,9 +135,27 @@ committed corpus as of this writing and content lands continuously.
     five would re-seed a thousand guides on every run — so it is stated here
     and asserted in `test/ethos/seeds/korean_bbq_seed_data_test.exs`.
 
-    Step 13 depends on this one: `Ethos.Seeds.KoreanBbqCollection` names all
+    Step 14 depends on this one: `Ethos.Seeds.KoreanBbqCollection` names all
     ten guides.
-12. `Ethos.Release.seed_destinations()` — 15 JSON files, `priv/seed_data/destinations/`.
+12. `Ethos.Release.seed_steakhouse(email)` — `priv/seed_data/steakhouse/`, empty
+    except `.gitkeep` until Task 7 authors its fourteen city files. **MUST run
+    after steps 1, 4, 6, 8 and 11** — the same precondition set step 11 itself
+    documents, satisfied here simply by running immediately after it. The
+    roster's build cities reuse places those corpora already publish (Keens
+    Steakhouse, Delmonico's, COTE, Old Homestead and Wolfgang's Park Avenue in
+    Manhattan; Peter Luger and Gage & Tollner in Brooklyn; Iron Age Korean
+    Steakhouse in Queens; Morton's, Alexander's Steakhouse and ABSteak by Akira
+    Back in San Francisco's Union Square; and Iron Age Wicker Park, Perilla
+    Steakhouse and Shinhwa Korean Steakhouse in `priv/seed_data/korean_bbq/chicago.json`),
+    and `GuideRunner.replace_entries!/2` raises on a place nothing has seeded.
+    This task also adds five destination nodes the corpus needs —
+    `united-states/california/beverly-hills`,
+    `united-states/california/west-hollywood`,
+    `united-states/florida/miami-beach`, `united-states/florida/coral-gables`
+    and `united-states/florida/aventura` — because, following
+    `korean_bbq/puget-sound.json`, the Los Angeles and Miami guides sit on one
+    node while each room carries the municipality it is actually in.
+13. `Ethos.Release.seed_destinations()` — 15 JSON files, `priv/seed_data/destinations/`.
     **Takes no email argument** — unlike every seeder above it, a destination
     page has no author. Each file is an overlay: it is keyed on a destination
     node's path and adds that hub's intro and photos to the row the roster
@@ -146,15 +164,15 @@ committed corpus as of this writing and content lands continuously.
     references no place and resolves no link. It is listed here, after every
     guide corpus and before `seed_collections`, for consistency with the rest
     of this list.
-13. `Ethos.Release.seed_collections()` — eight collections: The Burys of
+14. `Ethos.Release.seed_collections()` — eight collections: The Burys of
     Connecticut (steps 2 and 3), Antique Trail of CT (step 2), Major League
     Ballparks (step 7), Korean BBQ (step 11), and the four scenic-byway
     collections (Merritt Parkway, Route 169, Route 207, Route 7 in the
     north-west — all twenty of their town guides come from step 3). After
     **every** guide step, never between them.
-14. `Ethos.Release.seed_links()`
-15. `Ethos.Release.adjacency_links()` — writes the 446 town-adjacency `nearby`
-    edges. Runs after `seed_links` (step 14), not before: `BackfillLinks`
+15. `Ethos.Release.seed_links()`
+16. `Ethos.Release.adjacency_links()` — writes the 446 town-adjacency `nearby`
+    edges. Runs after `seed_links` (step 15), not before: `BackfillLinks`
     writes two of the CT-5 `nearby` edges (`waterbury`↔`middlebury`,
     `woodbury`↔`southbury`) in the reverse of the direction this step itself
     writes, and running this step first leaves those two pairs permanently
@@ -164,7 +182,7 @@ committed corpus as of this writing and content lands continuously.
     seeder**, for the same reason given below for `seed_links`:
     `upsert_links!/1` deletes every outgoing edge of the guides it touches,
     and all 446 adjacency edges are CT-guide→CT-guide.
-16. `Ethos.Release.foliage_links()` — writes the foliage route link edges and
+17. `Ethos.Release.foliage_links()` — writes the foliage route link edges and
     logs any route stop whose guide is unpublished or renamed. No ordering
     conflict with `seed_links` the way `adjacency_links` has — it writes a
     different edge kind (`same-region`) that `BackfillLinks` never touches —
@@ -178,7 +196,7 @@ Verify the published count after each content step before moving on — see
 It creates no rows at all now: each of the fifteen files is keyed on a node
 path and overlays an intro and photos onto a row the roster already owns, so
 `Ethos.Destinations.list_destinations() |> Enum.count()` reads the roster's
-size (**752**) both before and after it, not 15. That number is the length of
+size (**757**) both before and after it, not 15. That number is the length of
 `priv/seed_data/destination_tree.json` and is asserted against this runbook in
 `test/ethos/seeds/destination_tree_test.exs` — when the roster grows, that test
 fails and this paragraph is what it is telling you to update. What confirms
@@ -186,7 +204,7 @@ fails and this paragraph is what it is telling you to update. What confirms
 `Ethos.Destinations.get_by_path("united-states/connecticut").intro` should be
 the long Connecticut history, not the stub "Connecticut, county by county."
 
-A count of **767** — the roster plus fifteen — means the pre-Task-13 keys are
+A count of **772** — the roster plus fifteen — means the pre-Task-13 keys are
 back. Those extra rows have no `kind` and no `parent_id`; they shadow fifteen
 hubs, disable their redirects, enter the sitemap, and list Connecticut, New
 York and Rome on `/destinations` beside the countries.
@@ -247,9 +265,9 @@ any seeder runs — they are still NULL anyway.
 
 **Nothing is lost, but you must re-seed.** Every row comes back from the roster
 — `Ethos.Release.seed_destination_tree()`, which every seeder below also runs
-first — and step 12's fifteen overlay files put the curated prose and photos
+first — and step 13's fifteen overlay files put the curated prose and photos
 back on top. Run the full seed order after the migration, exactly as for a
-fresh database, and confirm the count reads 752 and
+fresh database, and confirm the count reads 757 and
 `get_by_path("united-states/connecticut").intro` is the long history rather
 than the stub.
 
@@ -465,11 +483,11 @@ Where the numbers come from:
 If a count is short, **do not proceed to the next step.** Re-run the same
 seeder (see below) and re-check.
 
-After step 13, `/c/mlb-ballparks` should list thirty guides and `/c/korean-bbq`
+After step 14, `/c/mlb-ballparks` should list thirty guides and `/c/korean-bbq`
 ten, and each of those guide pages should carry a *"Part of …"* line under its
 title. If a collection page is short, the guide it dropped shows no such line
 and nothing else reports it — re-run the guide step it came from (7 for a
-ballpark, 11 for a Korean BBQ guide) and then step 13, in that order.
+ballpark, 11 for a Korean BBQ guide) and then step 14, in that order.
 
 ## Seeding is not transactional across a run
 

@@ -30,22 +30,22 @@ defmodule Ethos.Seeds.DestinationTreeTest do
   # The two numbers `docs/runbooks/seeding.md` quotes at the operator: the
   # roster size they verify `Destinations.list_destinations()` against after a
   # rebuild, and the number of curated overlay files whose prose that rebuild
-  # restores (which is also where the runbook's 767 tripwire comes from —
+  # restores (which is also where the runbook's 772 tripwire comes from —
   # roster + overlays is the count you see when the overlays are keyed wrong
   # and insert rows of their own).
   #
   # Literals, deliberately, in a suite that otherwise derives everything. A
   # derived expectation cannot go stale, which is exactly why it cannot serve
-  # here: the runbook is prose, it says "confirm the count reads 752", and
+  # here: the runbook is prose, it says "confirm the count reads 757", and
   # nothing else in this repository would notice the day that stopped being
   # true. An operator following a stale number either proceeds through a short
   # rebuild or stops on a complete one. So the numbers live here, once, and
   # this test failing is the instruction to update that document — change both
   # in the same commit, never one alone.
   test "the roster and overlay counts docs/runbooks/seeding.md quotes are still true" do
-    assert length(DestinationTree.load!()) == 752,
+    assert length(DestinationTree.load!()) == 757,
            "the roster changed size: update docs/runbooks/seeding.md, which tells the " <>
-             "operator to confirm a count of 752 after a rebuild, and this assertion"
+             "operator to confirm a count of 757 after a rebuild, and this assertion"
 
     overlays =
       [:code.priv_dir(:ethos) |> to_string(), "seed_data", "destinations", "*.json"]
@@ -54,7 +54,7 @@ defmodule Ethos.Seeds.DestinationTreeTest do
 
     assert length(overlays) == 15,
            "the curated overlay corpus changed size: update docs/runbooks/seeding.md, " <>
-             "which quotes the file count in step 12 and derives its 767 tripwire from " <>
+             "which quotes the file count in step 13 and derives its 772 tripwire from " <>
              "it, and this assertion"
   end
 
