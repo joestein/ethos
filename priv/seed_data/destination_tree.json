@@ -879,6 +879,12 @@
   {"path":"united-states/washington/shoreline","kind":"city","name":"Shoreline","intro":"Shoreline."},
   {"path":"united-states/washington/tukwila","kind":"city","name":"Tukwila","intro":"Tukwila."},
 
+  {"path":"united-states/california/beverly-hills","kind":"city","name":"Beverly Hills","intro":"Beverly Hills, adjacent to Los Angeles, carries 7 rooms of the LA steakhouse guide."},
+  {"path":"united-states/california/west-hollywood","kind":"city","name":"West Hollywood","intro":"West Hollywood, adjacent to Los Angeles, carries 2 rooms of the LA steakhouse guide."},
+  {"path":"united-states/florida/miami-beach","kind":"city","name":"Miami Beach","intro":"Miami Beach, adjacent to Miami, carries 8 rooms of the Miami steakhouse guide."},
+  {"path":"united-states/florida/coral-gables","kind":"city","name":"Coral Gables","intro":"Coral Gables, adjacent to Miami, carries 2 rooms of the Miami steakhouse guide."},
+  {"path":"united-states/florida/aventura","kind":"city","name":"Aventura","intro":"Aventura, adjacent to Miami, carries 1 room of the Miami steakhouse guide."},
+
   {"path":"united-kingdom/england/london/camden/st-giles","kind":"town","name":"St Giles","intro":"St Giles."},
   {"path":"united-kingdom/england/london/islington/finsbury","kind":"town","name":"Finsbury","intro":"Finsbury."},
   {"path":"united-kingdom/england/london/kingston-upon-thames/new-malden","kind":"town","name":"New Malden","intro":"New Malden."},

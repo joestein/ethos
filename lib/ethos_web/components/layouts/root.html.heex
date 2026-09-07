@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" class="[scrollbar-gutter:stable]">
+<html lang="en" class="[scrollbar-gutter:stable]" data-season={assigns[:season] || "summer"}>
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -60,10 +60,10 @@
       </script>
     <% end %>
   </head>
-  <body class="bg-white">
+  <body class="bg-surface">
     <ul class="relative z-10 flex items-center gap-4 px-4 sm:px-6 lg:px-8 justify-end">
       <%= if @current_user do %>
-        <li class="text-[0.8125rem] leading-6 text-zinc-900">
+        <li class="text-[0.8125rem] leading-6 text-ink">
           <%= if Ethos.Accounts.needs_username?(@current_user) do %>
             <.link href={~p"/users/username"} class="font-semibold underline">
               Pick a username
@@ -75,7 +75,7 @@
         <li>
           <.link
             href={~p"/users/settings"}
-            class="text-[0.8125rem] leading-6 text-zinc-900 font-semibold hover:text-zinc-700"
+            class="text-[0.8125rem] leading-6 text-ink font-semibold hover:text-ink-muted"
           >
             Settings
           </.link>
@@ -84,7 +84,7 @@
           <.link
             href={~p"/users/log_out"}
             method="delete"
-            class="text-[0.8125rem] leading-6 text-zinc-900 font-semibold hover:text-zinc-700"
+            class="text-[0.8125rem] leading-6 text-ink font-semibold hover:text-ink-muted"
           >
             Log out
           </.link>
@@ -93,7 +93,7 @@
         <li>
           <.link
             href={~p"/users/register"}
-            class="text-[0.8125rem] leading-6 text-zinc-900 font-semibold hover:text-zinc-700"
+            class="text-[0.8125rem] leading-6 text-ink font-semibold hover:text-ink-muted"
           >
             Register
           </.link>
@@ -101,7 +101,7 @@
         <li>
           <.link
             href={~p"/users/log_in"}
-            class="text-[0.8125rem] leading-6 text-zinc-900 font-semibold hover:text-zinc-700"
+            class="text-[0.8125rem] leading-6 text-ink font-semibold hover:text-ink-muted"
           >
             Log in
           </.link>

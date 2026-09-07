@@ -63,7 +63,8 @@ defmodule Ethos.Release do
       Ethos.Seeds.BurysCollection,
       Ethos.Seeds.AntiqueTrailCollection,
       Ethos.Seeds.MlbBallparksCollection,
-      Ethos.Seeds.KoreanBbqCollection
+      Ethos.Seeds.KoreanBbqCollection,
+      Ethos.Seeds.SteakhouseCollection
     ]
 
     for mod <- collections do
@@ -151,6 +152,8 @@ defmodule Ethos.Release do
   corpus asserts the entries resolve.
   """
   def seed_korean_bbq(email), do: seed_directory("korean_bbq", email)
+
+  def seed_steakhouse(email), do: seed_directory("steakhouse", email)
 
   @doc """
   Applies the deletion manifest, removing every place it names.

@@ -139,22 +139,22 @@ One file per city at `priv/seed_data/steakhouse/{city}.json`:
     "tier": "guide",
     "intro": "…", "sections": [], "faq": [],
     "photos": [
-      {"src": "/photos/steakhouse/manhattan/keens-dining-room.jpg",
-       "thumb": "/photos/steakhouse/manhattan/keens-dining-room_thumb.jpg",
+      {"src": "/photos/us/steakhouse/manhattan/keens-dining-room.jpg",
+       "thumb": "/photos/us/steakhouse/manhattan/keens-dining-room_thumb.jpg",
        "title": "…", "description": "…",
        "author": "…", "license": "CC BY-SA 4.0",
        "source_url": "https://commons.wikimedia.org/wiki/File:…"}
     ]
   },
   "places": [
-    {"slug": "keens-steakhouse", "kind": "restaurant",
+    {"slug": "chophouse-nine", "name": "Chophouse Nine", "kind": "restaurant",
      "destination_path": "united-states/new-york/new-york-city/manhattan",
      "address": "…", "summary": "…", "history": "…", "status": "open",
      "photos": []}
   ],
   "entries": [
-    {"kind": "food", "name": "Keens Steakhouse",
-     "place_slug": "keens-steakhouse", "note": "…"}
+    {"kind": "food", "name": "Chophouse Nine",
+     "place_slug": "chophouse-nine", "note": "…"}
   ],
   "links": [
     {"target": "guide:manhattan-korean-bbq-guide", "kind": "nearby", "note": "…"}
@@ -169,7 +169,10 @@ zero place photos in all ten of its files. Steakhouse guides do the same — one
 Commons photo per city, none per room. Wikimedia Commons PD/CC0/CC-BY/CC-BY-SA
 only, attributed, never hotlinked. `priv/seed_data/steakhouse_photo_manifest.json`
 and `mix ethos.optimize_steakhouse_photos` follow the per-corpus pattern; photos
-live under `/photos/steakhouse/{city}/`.
+live under `/photos/{country}/steakhouse/{city}/` — `country` is `us` or `gb`,
+mirroring `korean_bbq`'s own `/photos/{country}/korean-bbq/{zone}/` shape,
+because both corpora share the same structure: one corpus, many guides,
+spanning more than one country.
 
 A collection module `Ethos.Seeds.SteakhouseCollection` seeds one flat
 collection at `/c/steakhouses`, mirroring `KoreanBbqCollection` — including its
