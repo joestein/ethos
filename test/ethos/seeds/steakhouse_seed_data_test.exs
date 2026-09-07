@@ -506,4 +506,19 @@ defmodule Ethos.Seeds.SteakhouseSeedDataTest do
            "corpus and roster disagree — only in corpus: #{inspect(actual -- expected)}, " <>
              "only in roster: #{inspect(expected -- actual)}"
   end
+
+  # The seeder writes every `links[*].note` through `Ethos.Links.Link.changeset/2`,
+  # which caps `:note` at 160 (lib/ethos/links/link.ex). `prose/1` above sweeps
+  # entry notes but not link notes, so nothing here used to read them at all —
+  # six over-length notes reached production and aborted the release seed part
+  # way through, after the guides had published but before any link was written.
+  test "every link note fits the cap Ethos.Links.Link enforces" do
+    for {file, doc} <- docs(), link <- doc["links"] || [] do
+      note = link["note"] || ""
+
+      assert String.length(note) <= 160,
+             "#{Path.basename(file)}: link note is #{String.length(note)} characters, " <>
+               "over the 160 Ethos.Links.Link.changeset/2 accepts:\n#{note}"
+    end
+  end
 end

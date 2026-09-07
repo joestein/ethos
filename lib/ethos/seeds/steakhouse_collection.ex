@@ -64,12 +64,12 @@ defmodule Ethos.Seeds.SteakhouseCollection do
         %{
           guide_slug: "manhattan-steakhouse-guide",
           blurb:
-            "31 rooms published and five more linked to the neighborhood guides that already carry them, the densest of the fourteen cities scoped. 23 stand between 34th Street and Central Park South, with the rest downtown and in the Village. Also carries the six Bronx rooms."
+            "31 rooms published and five more linked to the neighborhood guides that carry them, the densest of the fourteen scoped. 23 stand between 34th Street and Central Park South, with the rest downtown and in the Village. Also carries the six Bronx rooms."
         },
         %{
           guide_slug: "brooklyn-steakhouse-guide",
           blurb:
-            "15 rooms in four clusters: Williamsburg and Greenpoint (4), a kosher steakhouse belt from Borough Park through Midwood to Crown Heights (5), Bay Ridge and the Court Street corridor (4) and Downtown Brooklyn (2). Peter Luger and Gage & Tollner are linked, not repeated."
+            "15 rooms in four clusters: Williamsburg and Greenpoint (4), a kosher steakhouse belt from Borough Park through Midwood to Crown Heights (5), Bay Ridge and Court Street (4) and Downtown Brooklyn (2). Peter Luger and Gage & Tollner are linked, not repeated."
         },
         %{
           guide_slug: "queens-steakhouse-guide",
@@ -79,12 +79,12 @@ defmodule Ethos.Seeds.SteakhouseCollection do
         %{
           guide_slug: "london-steakhouse-guide",
           blurb:
-            "28 rooms across six boroughs, nine of them named on a 2026 global steak-restaurant ranking. Westminster holds 15 and the City of London 4, with Hawksmoor's seven sites, Blacklock's four and Gaucho's two spreading the rest into Tower Hamlets, Camden, Southwark and Hackney."
+            "28 rooms across six boroughs, nine of them named on a 2026 global steak ranking. Westminster holds 15 and the City of London 4, with Hawksmoor's seven sites, Blacklock's four and Gaucho's two spreading into Tower Hamlets, Camden, Southwark and Hackney."
         },
         %{
           guide_slug: "chicago-steakhouse-guide",
           blurb:
-            "20 rooms published and three more linked to the Korean BBQ guide that already carries them, every one inside the city limits. Ten stand in River North within a few blocks of the river, six on the Gold Coast and the Magnificent Mile, four in the Loop and the West Loop."
+            "20 rooms published and three more linked to the Korean BBQ guide that carries them, every one inside the city limits. Ten stand in River North within blocks of the river, six on the Gold Coast and the Magnificent Mile, four in the Loop and the West Loop."
         },
         %{
           guide_slug: "los-angeles-steakhouse-guide",
@@ -94,12 +94,12 @@ defmodule Ethos.Seeds.SteakhouseCollection do
         %{
           guide_slug: "san-francisco-steakhouse-guide",
           blurb:
-            "11 rooms published and three Union Square rooms linked to the guide that already carries them, all inside the city — unlike Korean BBQ, no South Bay page pulls the mass south. Three sit on the Van Ness spine, three in the Financial District and on the Embarcadero."
+            "11 rooms published and three Union Square rooms linked to the guide that carries them, all in the city — unlike Korean BBQ, no South Bay page pulls the mass south. Three sit on the Van Ness spine, three in the Financial District and on the Embarcadero."
         },
         %{
           guide_slug: "seattle-steakhouse-guide",
           blurb:
-            "16 rooms, all inside the city limits, so the page stays Seattle rather than becoming Puget Sound — the inverse of Korean BBQ's four-suburban-corridor page. Seven concentrate downtown and in Belltown, with Capitol Hill, the lakes, the north end and West Seattle behind them."
+            "16 rooms, all inside the city limits, so the page stays Seattle, not Puget Sound — the inverse of Korean BBQ's four-suburban-corridor page. Seven concentrate downtown and Belltown, with Capitol Hill, the lakes, the north end and West Seattle behind them."
         },
         %{
           guide_slug: "boston-steakhouse-guide",
@@ -109,7 +109,7 @@ defmodule Ethos.Seeds.SteakhouseCollection do
         %{
           guide_slug: "washington-dc-steakhouse-guide",
           blurb:
-            "13 rooms, and the page is the District only, not the District plus Northern Virginia — nine sit on or beside the K Street power-dining corridor, two more in Georgetown, and two out at Union Market and Cleveland Park. Tysons and Arlington stay outside the scope."
+            "13 rooms, and the page is the District only, not the District plus Northern Virginia — nine sit on or beside the K Street power-dining corridor, two in Georgetown, two at Union Market and Cleveland Park. Tysons and Arlington stay outside the scope."
         },
         %{
           guide_slug: "miami-steakhouse-guide",
