@@ -615,7 +615,7 @@ git commit -m "feat: the steakhouses collection"
 
 **Interfaces:**
 - Consumes: the corpus.
-- Produces: `mix ethos.optimize_steakhouse_photos`, and photos under `/photos/steakhouse/{city}/`.
+- Produces: `mix ethos.optimize_steakhouse_photos`, and photos under `/photos/{country}/steakhouse/{city}/` — `us` for the US cities, `gb` for London, mirroring `korean_bbq`.
 
 Mirror `lib/mix/tasks/ethos.optimize_sf_photos.ex` (or whichever per-corpus task is closest), pointed at the steakhouse seed directory, sourcing originals from a git-ignored `images/steakhouse/`.
 
@@ -637,7 +637,7 @@ Expected: the photo test passes — every `src` exists on disk.
 
 ```bash
 mix format
-git add priv/seed_data/steakhouse_photo_manifest.json lib/mix/tasks/ethos.optimize_steakhouse_photos.ex priv/static/photos/steakhouse
+git add priv/seed_data/steakhouse_photo_manifest.json lib/mix/tasks/ethos.optimize_steakhouse_photos.ex priv/photos/us/steakhouse priv/photos/gb/steakhouse
 git commit -m "feat: steakhouse photo manifest and optimisation task"
 ```
 
