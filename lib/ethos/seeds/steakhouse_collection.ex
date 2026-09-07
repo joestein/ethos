@@ -64,7 +64,7 @@ defmodule Ethos.Seeds.SteakhouseCollection do
         %{
           guide_slug: "manhattan-steakhouse-guide",
           blurb:
-            "32 rooms published and five more linked to the neighborhood guides that already carry them, the densest of the fourteen cities scoped. 23 stand between 34th Street and Central Park South, with the rest downtown and in the Village. Also carries the six Bronx rooms."
+            "31 rooms published and five more linked to the neighborhood guides that already carry them, the densest of the fourteen cities scoped. 23 stand between 34th Street and Central Park South, with the rest downtown and in the Village. Also carries the six Bronx rooms."
         },
         %{
           guide_slug: "brooklyn-steakhouse-guide",
@@ -74,7 +74,7 @@ defmodule Ethos.Seeds.SteakhouseCollection do
         %{
           guide_slug: "queens-steakhouse-guide",
           blurb:
-            "16 rooms, and the borough's steakhouse is South American rather than prime beef: 8 sit on the Argentine and Brazilian parrilla belt through Jackson Heights, Elmhurst and Corona, two Greek-American rooms hold Astoria, and six are outliers a neighborhood apart."
+            "16 rooms, and the borough's steakhouse is South American rather than prime beef: 8 sit on the Argentine and Brazilian parrilla belt through Jackson Heights, Elmhurst and Corona, two steak rooms hold Astoria, and six are outliers a neighborhood apart."
         },
         %{
           guide_slug: "london-steakhouse-guide",

@@ -528,8 +528,25 @@ defmodule Ethos.Places.AddressTest do
     # drop back to 51 with the prose removed — it was never the prose alone
     # that put Gaonnuri here — and the ratchet moves to 57, five new floor
     # designators plus Gaonnuri's own, all six legitimate.
-    assert comma_streets <= 57,
-           "#{comma_streets} American street lines carry a comma qualifier, up from 57"
+    #
+    # 58 after steakhouse content wave 1's fix round. The one addition is
+    # PRIME Mēt Steakhouse (prime-met-steakhouse-flushing, in
+    # priv/seed_data/steakhouse/queens.json), whose address is
+    # "133-36 37th Ave, 12th Floor, Flushing, NY 11354" and whose street line
+    # therefore parses to "133-36 37th Ave, 12th Floor". "12th Floor" is a
+    # floor designator, the same acceptable class as "1250 Broadway, 39th
+    # Floor" and "2017 S Wells St, Fl 2" above — fourteen of the standing 57
+    # are exactly that — rather than the non-locality prose this pin exists to
+    # catch. The room is on the twelfth floor of the Renaissance New York
+    # Flushing Hotel at Tangram and the operator publishes the floor as part
+    # of the address.
+    #
+    # It moves the pin because the content wave originally DROPPED the floor
+    # from the address to hold this number at 57, which is shaping content to
+    # fit a test rather than the other way round. The floor is back and the
+    # ratchet moves, deliberately.
+    assert comma_streets <= 58,
+           "#{comma_streets} American street lines carry a comma qualifier, up from 58"
 
     for p <- italian, p.street, String.contains?(p.street, ",") do
       # A civico may be a range ("5-7") or carry a letter or a slashed suffix

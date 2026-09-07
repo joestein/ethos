@@ -4,21 +4,21 @@
     "city": "Manhattan",
     "status": "build",
     "path": "united-states/new-york/new-york-city/manhattan",
-    "note": "40 verified rooms, the densest of the fourteen. 27 of them stand in Midtown between 34th and 58th Street, with a second cluster in the Financial District and the Village. Five are already published by the neighbourhood corpus and must be linked to their existing owners rather than recreated: Keens (manhattan/garment-district.json), Delmonico's (manhattan/financial-district.json), COTE (manhattan/flatiron-district.json), Old Homestead (manhattan/meatpacking-district.json) and Wolfgang's Park Avenue (manhattan/murray-hill.json). korean_bbq/manhattan.json has an empty places list and owns none of them. This page also carries the note folding in the six Bronx rooms."
+    "note": "40 verified, 36 survivable — three rooms are closed or unverifiable (Uncle Jack's on West 56th, Tuscany, Angus Club) and Boucherie Union Square was withdrawn in content wave 1's fix round as a brasserie, the Balthazar shape the rule excludes. The densest of the fourteen. 27 of the census stand in Midtown between 34th and 58th Street, with a second cluster in the Financial District and the Village. Five are already published by the neighbourhood corpus and must be linked to their existing owners rather than recreated: Keens (manhattan/garment-district.json), Delmonico's (manhattan/financial-district.json), COTE (manhattan/flatiron-district.json), Old Homestead (manhattan/meatpacking-district.json) and Wolfgang's Park Avenue (manhattan/murray-hill.json). korean_bbq/manhattan.json has an empty places list and owns none of them. This page also carries the note folding in the six Bronx rooms."
   },
   {
     "slug": "brooklyn",
     "city": "Brooklyn",
     "status": "build",
     "path": "united-states/new-york/new-york-city/brooklyn",
-    "note": "19 verified rooms in four clusters: Williamsburg (4, including Peter Luger), the Midwood and Borough Park kosher steakhouse belt (6), Bay Ridge (3) and Downtown Brooklyn (2). The kosher belt is the borough's second real cluster and appears in no mainstream best-of list. Two rooms are already published: Peter Luger (brooklyn/south-williamsburg.json, whose node is south-williamsburg rather than williamsburg) and Gage & Tollner (brooklyn/downtown-brooklyn.json)."
+    "note": "19 verified, 17 survivable — Hunter's Steak & Ale House closed in April 2026 and Embers could not be confirmed as trading. Four clusters: Williamsburg and Greenpoint (4, not counting Peter Luger, who is published elsewhere), the kosher steakhouse belt (5, and it runs wider than Midwood and Borough Park — 40th Street in Borough Park, Avenue J in Midwood, East 7th Street in Gravesend and Kingston Avenue in Crown Heights), Bay Ridge and the Court Street corridor (4) and Downtown Brooklyn (2). The kosher belt is the borough's second real cluster. Two rooms are already published: Peter Luger (brooklyn/south-williamsburg.json, whose node is south-williamsburg rather than williamsburg) and Gage & Tollner (brooklyn/downtown-brooklyn.json)."
   },
   {
     "slug": "queens",
     "city": "Queens",
     "status": "build",
     "path": "united-states/new-york/new-york-city/queens",
-    "note": "17 verified rooms, and the borough's steakhouse is South American rather than prime beef. 8 of the 17 sit on the Argentine and Brazilian parrilla belt through Jackson Heights, Elmhurst and Corona; Astoria adds two Greek-American steakhouses; the remaining seven are outliers in Fresh Meadows, Rego Park, Bayside, Forest Hills, Flushing (two) and South Ozone Park. Iron Age Korean Steakhouse is already published by queens/rego-park.json."
+    "note": "17 verified, 17 survivable, and the borough's steakhouse is South American rather than prime beef. 8 of the 17 sit on the Argentine and Brazilian parrilla belt through Jackson Heights, Elmhurst and Corona; Astoria adds two steak rooms, one of them Greek-American; the remaining seven are outliers in Fresh Meadows, Rego Park, Bayside, Forest Hills, Flushing (two) and South Ozone Park. Iron Age Korean Steakhouse is already published by queens/rego-park.json."
   },
   {
     "slug": "bronx",

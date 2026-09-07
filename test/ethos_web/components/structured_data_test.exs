@@ -1108,10 +1108,32 @@ defmodule EthosWeb.StructuredDataTest do
       #     302: a row carrying both a house number and a postal code is
       #     counted on neither side, so adding sixty-three of them cannot move
       #     either bucket.
-      assert length(emitted) == 4965
-      assert count.(& &1["streetAddress"]) == 4342
+      #
+      # Re-measured after that wave's fix round withdrew Boucherie Union Square
+      # from priv/seed_data/steakhouse/manhattan.json. Its only evidence was an
+      # appearance in a steak listicle, which the content rules' §1 rules out,
+      # and the published summary conceded the brasserie shape §1 excludes by
+      # name. Manhattan goes 32 -> 31 and the wave's 63 places become 62. The
+      # withdrawn row carried a house-numbered street line and a five-digit ZIP,
+      # so the delta is -1 three times over and nil on the two street-less
+      # buckets, exactly mirroring the +63:
+      #
+      #   * total 4965 -> 4964, -1.
+      #   * `streetAddress` 4342 -> 4341, -1. It carried one.
+      #   * `postalCode` 3578 -> 3577, -1. It carried one of those too.
+      #   * `is_nil(streetAddress)` unmoved at 623 and locality-only unmoved at
+      #     302, which is the same fact from the other side.
+      #
+      # The same fix round restored PRIME Mēt's floor designator, taking its
+      # address to "133-36 37th Ave, 12th Floor, Flushing, NY 11354". That row
+      # still yields a street line and a ZIP, so none of the four numbers here
+      # moves for it; what it moves is the `comma_streets` pin in
+      # test/ethos/places/address_test.exs, from 57 to 58, where the reasoning
+      # is recorded.
+      assert length(emitted) == 4964
+      assert count.(& &1["streetAddress"]) == 4341
       assert count.(&is_nil(&1["streetAddress"])) == 623
-      assert count.(& &1["postalCode"]) == 3578
+      assert count.(& &1["postalCode"]) == 3577
 
       # The largest behavioural delta this change ships: 302 places emit a
       # PostalAddress carrying only locality, region and country. Their full
