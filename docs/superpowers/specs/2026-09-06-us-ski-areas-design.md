@@ -179,6 +179,48 @@ seed tests. Those catch the same failure classes on every file forever rather
 than on the files someone remembered to document. This project takes the gates
 and commits the research artifacts per region as the record.
 
+### Amended 2026-09-07, after the steakhouse vertical
+
+Gates and artifacts are not alternatives, and the steakhouse corpus proved why
+at a cost worth not repeating. Its gates were thorough — banned words, globally
+unique slugs, licence allowlists, photo paths, node resolution, corpus-versus-
+roster agreement — and **every one of them passed while all three content waves
+published prose that no evidence supported.** Wave 1 shipped most of its
+concrete detail unsourced (40 claims were later deleted outright); wave 2 five
+claims; wave 3 about fifteen, including one that contradicted its own artifact
+row.
+
+**A prose gate catches shapes. It cannot tell a verified sentence from a
+well-formed invented one.** "Seats 222" is grammatical, unbanned, and false.
+The only control that ever caught it was a reviewer taking specifics out of
+finished prose and hunting for their rows.
+
+So this project keeps the gates and adds three requirements they cannot supply:
+
+1. **The artifact is written during authoring, not after.** One row per concrete
+   claim: the area, the claim, the specific named source, the verdict. A source
+   must be nameable — an operator page, a dated news item, a state tourism
+   register. Not "the resort's site". If a claim cannot be sourced, the sentence
+   does not get written. Retro-fitting rows from already-published prose is
+   transcription, not verification, and is forbidden.
+2. **Artifacts are committed, not left in scratchpad.** `docs/ski/{region}.md`,
+   in the repository, from the first wave. The steakhouse artifacts came within
+   one merge of vanishing into `/private/tmp` while the content rules cited that
+   path as an input. A project whose only working control is the artifact cannot
+   keep it somewhere disposable.
+3. **Every wave review runs the reverse check.** Not "does each artifact row
+   have a source" — that direction passed in all three steakhouse waves. Pull
+   concrete specifics *out of the published guides* — vertical drop, lift count,
+   founding year, snowfall, ownership, architectural detail — and find the row
+   for each. Report every published specific with no row.
+
+Two classes a per-area artifact structurally cannot hold, and which therefore
+need their own sweep: **derived relational geography** (a row can record two
+areas' locations without recording the distance or direction between them) and
+**atmosphere presented as observation** ("the lift line thins after two").
+Both produced defects in the steakhouse corpus; grep for distances, drive
+times, and crowd or queue language before each wave commits.
+
 Ski-specific rules for the content doc:
 
 - **No vertical drop, skiable acreage or lift count** without the operator or a
