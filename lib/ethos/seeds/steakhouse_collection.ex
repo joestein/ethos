@@ -84,22 +84,22 @@ defmodule Ethos.Seeds.SteakhouseCollection do
         %{
           guide_slug: "chicago-steakhouse-guide",
           blurb:
-            "24 verified rooms, every one inside the city limits. Unlike Korean BBQ's flight to suburban Niles and Glenview, steakhouse mass never left River North, the Gold Coast, the Loop and the West Loop, which hold 21 of the 24."
+            "20 rooms published and three more linked to the Korean BBQ guide that already carries them, every one inside the city limits. Ten stand in River North within a few blocks of the river, six on the Gold Coast and the Magnificent Mile, four in the Loop and the West Loop."
         },
         %{
           guide_slug: "los-angeles-steakhouse-guide",
           blurb:
-            "24 verified rooms across three municipalities: 15 in the City of Los Angeles from Koreatown and Downtown out to Echo Park, Hollywood, Venice and the Valley, 7 in Beverly Hills and 2 in West Hollywood — one page, since the city sustains it alone."
+            "18 rooms across three municipalities: 12 in the City of Los Angeles from Koreatown and Downtown out to Echo Park, Hollywood, Venice and the Valley, 5 in Beverly Hills and 1 in West Hollywood — one page, since the city sustains it alone."
         },
         %{
           guide_slug: "san-francisco-steakhouse-guide",
           blurb:
-            "15 verified rooms, all inside the city — unlike Korean BBQ, no South Bay page pulls the mass south. Clusters run the Van Ness and Nob Hill spine, Union Square, the Financial District and Embarcadero, Marina and Cow Hollow, and Market and SoMa."
+            "11 rooms published and three Union Square rooms linked to the guide that already carries them, all inside the city — unlike Korean BBQ, no South Bay page pulls the mass south. Three sit on the Van Ness spine, three in the Financial District and on the Embarcadero."
         },
         %{
           guide_slug: "seattle-steakhouse-guide",
           blurb:
-            "22 verified rooms, all inside the city limits, so the page stays Seattle rather than becoming Puget Sound — the inverse of Korean BBQ's four-suburban-corridor page. Steak concentrates downtown and in Belltown, with Capitol Hill, Ballard and Queen Anne behind it."
+            "16 rooms, all inside the city limits, so the page stays Seattle rather than becoming Puget Sound — the inverse of Korean BBQ's four-suburban-corridor page. Seven concentrate downtown and in Belltown, with Capitol Hill, the lakes, the north end and West Seattle behind them."
         },
         %{
           guide_slug: "boston-steakhouse-guide",

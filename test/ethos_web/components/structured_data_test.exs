@@ -1130,10 +1130,27 @@ defmodule EthosWeb.StructuredDataTest do
       # moves for it; what it moves is the `comma_streets` pin in
       # test/ethos/places/address_test.exs, from 57 to 58, where the reasoning
       # is recorded.
-      assert length(emitted) == 4964
-      assert count.(& &1["streetAddress"]) == 4341
+      # Re-measured after steakhouse content wave 2 landed
+      # priv/seed_data/steakhouse/{chicago,los-angeles,san-francisco,seattle}.json
+      # with 20, 18, 11 and 16 places. All 65 carry a house-numbered street line
+      # and a five-digit ZIP, so the delta is +65 three times over and nil on the
+      # two street-less buckets, exactly as wave 1's +63 was:
+      #
+      #   * total 4964 -> 5029, +65.
+      #   * `streetAddress` 4341 -> 4406, +65. Every one carries a street line.
+      #   * `postalCode` 3577 -> 3642, +65. Every one carries a ZIP.
+      #   * `is_nil(streetAddress)` unmoved at 623 and locality-only unmoved at
+      #     302: a row carrying both a house number and a postal code is counted
+      #     on neither side, so adding sixty-five of them cannot move either.
+      #
+      # Five of the sixty-five carry a suite or floor designator inside the
+      # street line — the Vault's "Concourse Level", Niku X's "2nd Floor" and
+      # three "Suite 100" rooms — which moves the `comma_streets` pin in
+      # test/ethos/places/address_test.exs from 58 to 63 and nothing here.
+      assert length(emitted) == 5029
+      assert count.(& &1["streetAddress"]) == 4406
       assert count.(&is_nil(&1["streetAddress"])) == 623
-      assert count.(& &1["postalCode"]) == 3577
+      assert count.(& &1["postalCode"]) == 3642
 
       # The largest behavioural delta this change ships: 302 places emit a
       # PostalAddress carrying only locality, region and country. Their full

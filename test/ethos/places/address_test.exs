@@ -545,8 +545,26 @@ defmodule Ethos.Places.AddressTest do
     # from the address to hold this number at 57, which is shaping content to
     # fit a test rather than the other way round. The floor is back and the
     # ratchet moves, deliberately.
-    assert comma_streets <= 58,
-           "#{comma_streets} American street lines carry a comma qualifier, up from 58"
+    # 63 after steakhouse content wave 2. Five additions, all of the same floor
+    # or suite class the fourteen standing designators belong to, and all five
+    # printed that way by the operator itself:
+    #
+    #   * the-vault-steakhouse-san-francisco — "555 California St, Concourse
+    #     Level". The dining room is the building's original bank vault on the
+    #     concourse level, and the operator prints the level as part of the
+    #     address.
+    #   * niku-x-downtown-los-angeles — "900 Wilshire Blvd, 2nd Floor". The room
+    #     is the second floor of the Wilshire Grand Center.
+    #   * matu-beverly-hills — "239 S Beverly Dr, Suite 100".
+    #   * fogo-de-chao-san-francisco — "201 Third St, Suite 100".
+    #   * fogo-de-chao-seattle — "400 University St, Suite 100".
+    #
+    # None is the non-locality prose this pin exists to catch. The ratchet moves
+    # rather than the addresses, for the same reason wave 1's fix round moved it
+    # to 58: dropping a floor designator to hold a number is shaping content to
+    # fit a test.
+    assert comma_streets <= 63,
+           "#{comma_streets} American street lines carry a comma qualifier, up from 63"
 
     for p <- italian, p.street, String.contains?(p.street, ",") do
       # A civico may be a range ("5-7") or carry a letter or a slashed suffix
