@@ -125,7 +125,9 @@ defmodule Ethos.Places.AddressTest do
              "2 Wyckoff Avenue"
 
     # parenthetical after a region with no ZIP
-    assert Address.parse("899-925 Flatbush Avenue, Brooklyn, NY (between Church and Snyder Avenues)") ==
+    assert Address.parse(
+             "899-925 Flatbush Avenue, Brooklyn, NY (between Church and Snyder Avenues)"
+           ) ==
              %{
                street: "899-925 Flatbush Avenue",
                locality: "Brooklyn",
@@ -135,7 +137,9 @@ defmodule Ethos.Places.AddressTest do
              }
 
     # semicolon clause
-    assert Address.parse("223 North Burnham Highway, Lisbon, CT 06351; trailhead at 62 Kimball Road").street ==
+    assert Address.parse(
+             "223 North Burnham Highway, Lisbon, CT 06351; trailhead at 62 Kimball Road"
+           ).street ==
              "223 North Burnham Highway"
   end
 
@@ -449,7 +453,10 @@ defmodule Ethos.Places.AddressTest do
     assert uk != [], "no British address reached the parser — this scope guard is vacuous"
 
     for {raw, p} <- uk, p.street do
-      refute Regex.match?(~r/\b(?:bounded by|between|corner of|junction of|opposite)\b/i, p.street),
+      refute Regex.match?(
+               ~r/\b(?:bounded by|between|corner of|junction of|opposite)\b/i,
+               p.street
+             ),
              "British street line publishing a descriptive location: #{inspect(p.street)} " <>
                "(from #{inspect(raw)})"
     end
@@ -528,8 +535,60 @@ defmodule Ethos.Places.AddressTest do
     # drop back to 51 with the prose removed — it was never the prose alone
     # that put Gaonnuri here — and the ratchet moves to 57, five new floor
     # designators plus Gaonnuri's own, all six legitimate.
-    assert comma_streets <= 57,
-           "#{comma_streets} American street lines carry a comma qualifier, up from 57"
+    #
+    # 58 after steakhouse content wave 1's fix round. The one addition is
+    # PRIME Mēt Steakhouse (prime-met-steakhouse-flushing, in
+    # priv/seed_data/steakhouse/queens.json), whose address is
+    # "133-36 37th Ave, 12th Floor, Flushing, NY 11354" and whose street line
+    # therefore parses to "133-36 37th Ave, 12th Floor". "12th Floor" is a
+    # floor designator, the same acceptable class as "1250 Broadway, 39th
+    # Floor" and "2017 S Wells St, Fl 2" above — fourteen of the standing 57
+    # are exactly that — rather than the non-locality prose this pin exists to
+    # catch. The room is on the twelfth floor of the Renaissance New York
+    # Flushing Hotel at Tangram and the operator publishes the floor as part
+    # of the address.
+    #
+    # It moves the pin because the content wave originally DROPPED the floor
+    # from the address to hold this number at 57, which is shaping content to
+    # fit a test rather than the other way round. The floor is back and the
+    # ratchet moves, deliberately.
+    # 63 after steakhouse content wave 2. Five additions, all of the same floor
+    # or suite class the fourteen standing designators belong to, and all five
+    # printed that way by the operator itself:
+    #
+    #   * the-vault-steakhouse-san-francisco — "555 California St, Concourse
+    #     Level". The dining room is the building's original bank vault on the
+    #     concourse level, and the operator prints the level as part of the
+    #     address.
+    #   * niku-x-downtown-los-angeles — "900 Wilshire Blvd, 2nd Floor". The room
+    #     is the second floor of the Wilshire Grand Center.
+    #   * matu-beverly-hills — "239 S Beverly Dr, Suite 100".
+    #   * fogo-de-chao-san-francisco — "201 Third St, Suite 100".
+    #   * fogo-de-chao-seattle — "400 University St, Suite 100".
+    #
+    # None is the non-locality prose this pin exists to catch. The ratchet moves
+    # rather than the addresses, for the same reason wave 1's fix round moved it
+    # to 58: dropping a floor designator to hold a number is shaping content to
+    # fit a test.
+    # 65 after steakhouse content wave 3 landed
+    # priv/seed_data/steakhouse/{boston,london,miami,washington-dc}.json. Exactly
+    # two of the wave's sixty-nine places carry a comma inside the street line,
+    # and both are suite designators of the same acceptable class as the
+    # fourteen standing ones, printed that way by the operator itself:
+    #
+    #   * del-friscos-double-eagle-boston — "250 Northern Ave, Suite 200". The
+    #     room is the second floor above the harbor and the operator's own
+    #     restaurant page prints the suite.
+    #   * flemings-prime-steakhouse-brickell — "600 Brickell Ave, Suite 150",
+    #     as the Greater Miami visitors bureau's own listing gives it.
+    #
+    # London's twenty-eight rooms move this pin not at all: the pin counts
+    # American street lines only, and none of the twenty-eight is American.
+    # Neither addition is the non-locality prose this pin exists to catch, so
+    # the ratchet moves rather than the addresses — the same call waves 1 and 2
+    # made, and for the same reason.
+    assert comma_streets <= 65,
+           "#{comma_streets} American street lines carry a comma qualifier, up from 63"
 
     for p <- italian, p.street, String.contains?(p.street, ",") do
       # A civico may be a range ("5-7") or carry a letter or a slashed suffix

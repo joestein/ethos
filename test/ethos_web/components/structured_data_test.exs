@@ -1094,10 +1094,82 @@ defmodule EthosWeb.StructuredDataTest do
       #     counted on either of those sides, so withdrawing eight of them
       #     cannot move either bucket. That is the same claim as the two -8s
       #     above, seen from the other side.
-      assert length(emitted) == 4902
-      assert count.(& &1["streetAddress"]) == 4279
+      #
+      # Re-measured after steakhouse content wave 1 landed
+      # priv/seed_data/steakhouse/{manhattan,brooklyn,queens}.json with 32, 15
+      # and 16 places. All 63 carry a house-numbered street line and a
+      # five-digit ZIP, so the delta is +63 three times over and nil on the two
+      # street-less buckets:
+      #
+      #   * total 4902 -> 4965, +63.
+      #   * `streetAddress` 4279 -> 4342, +63. Every one carries a street line.
+      #   * `postalCode` 3515 -> 3578, +63. Every one carries a ZIP.
+      #   * `is_nil(streetAddress)` unmoved at 623 and locality-only unmoved at
+      #     302: a row carrying both a house number and a postal code is
+      #     counted on neither side, so adding sixty-three of them cannot move
+      #     either bucket.
+      #
+      # Re-measured after that wave's fix round withdrew Boucherie Union Square
+      # from priv/seed_data/steakhouse/manhattan.json. Its only evidence was an
+      # appearance in a steak listicle, which the content rules' §1 rules out,
+      # and the published summary conceded the brasserie shape §1 excludes by
+      # name. Manhattan goes 32 -> 31 and the wave's 63 places become 62. The
+      # withdrawn row carried a house-numbered street line and a five-digit ZIP,
+      # so the delta is -1 three times over and nil on the two street-less
+      # buckets, exactly mirroring the +63:
+      #
+      #   * total 4965 -> 4964, -1.
+      #   * `streetAddress` 4342 -> 4341, -1. It carried one.
+      #   * `postalCode` 3578 -> 3577, -1. It carried one of those too.
+      #   * `is_nil(streetAddress)` unmoved at 623 and locality-only unmoved at
+      #     302, which is the same fact from the other side.
+      #
+      # The same fix round restored PRIME Mēt's floor designator, taking its
+      # address to "133-36 37th Ave, 12th Floor, Flushing, NY 11354". That row
+      # still yields a street line and a ZIP, so none of the four numbers here
+      # moves for it; what it moves is the `comma_streets` pin in
+      # test/ethos/places/address_test.exs, from 57 to 58, where the reasoning
+      # is recorded.
+      # Re-measured after steakhouse content wave 2 landed
+      # priv/seed_data/steakhouse/{chicago,los-angeles,san-francisco,seattle}.json
+      # with 20, 18, 11 and 16 places. All 65 carry a house-numbered street line
+      # and a five-digit ZIP, so the delta is +65 three times over and nil on the
+      # two street-less buckets, exactly as wave 1's +63 was:
+      #
+      #   * total 4964 -> 5029, +65.
+      #   * `streetAddress` 4341 -> 4406, +65. Every one carries a street line.
+      #   * `postalCode` 3577 -> 3642, +65. Every one carries a ZIP.
+      #   * `is_nil(streetAddress)` unmoved at 623 and locality-only unmoved at
+      #     302: a row carrying both a house number and a postal code is counted
+      #     on neither side, so adding sixty-five of them cannot move either.
+      #
+      # Five of the sixty-five carry a suite or floor designator inside the
+      # street line — the Vault's "Concourse Level", Niku X's "2nd Floor" and
+      # three "Suite 100" rooms — which moves the `comma_streets` pin in
+      # test/ethos/places/address_test.exs from 58 to 63 and nothing here.
+      # Re-measured after steakhouse content wave 3 landed
+      # priv/seed_data/steakhouse/{boston,london,miami,washington-dc}.json with
+      # 12, 28, 16 and 13 places. All 69 carry a street line and a postal code —
+      # the London twenty-eight carry UK postcodes rather than five-digit ZIPs,
+      # and the emitter counts a postcode the same way — so the delta is +69
+      # three times over and nil on the two street-less buckets, exactly as
+      # wave 1's +63 and wave 2's +65 were:
+      #
+      #   * total 5029 -> 5098, +69.
+      #   * `streetAddress` 4406 -> 4475, +69. Every one carries a street line.
+      #   * `postalCode` 3642 -> 3711, +69. Every one carries a postal code.
+      #   * `is_nil(streetAddress)` unmoved at 623 and locality-only unmoved at
+      #     302: a row carrying both a house number and a postal code is counted
+      #     on neither side, so adding sixty-nine of them cannot move either.
+      #
+      # Two of the sixty-nine carry a suite designator inside the street line —
+      # Del Frisco's Boston "Suite 200" and Fleming's Brickell "Suite 150" —
+      # which moves the `comma_streets` pin in
+      # test/ethos/places/address_test.exs from 63 to 65 and nothing here.
+      assert length(emitted) == 5098
+      assert count.(& &1["streetAddress"]) == 4475
       assert count.(&is_nil(&1["streetAddress"])) == 623
-      assert count.(& &1["postalCode"]) == 3515
+      assert count.(& &1["postalCode"]) == 3711
 
       # The largest behavioural delta this change ships: 302 places emit a
       # PostalAddress carrying only locality, region and country. Their full

@@ -1,0 +1,356 @@
+{
+  "guide": {
+    "slug": "queens-steakhouse-guide",
+    "title": "Steakhouses in Queens: Eight of Sixteen on the Parrilla Belt",
+    "destination": "Queens Steakhouses, New York",
+    "destination_path": "united-states/new-york/new-york-city/queens",
+    "tier": "guide",
+    "intro": "Sixteen rooms on this page, and the borough's steakhouse is South American rather than prime beef. Eight of the sixteen sit on one belt through Jackson Heights, Elmhurst and Corona: La Cabaña and El Chivito d'Oro off Northern Boulevard and 37th Avenue, El Gauchito and La Esquina Criolla facing each other across Corona Avenue, La Fusta on Baxter, Boca Junior on Queens Boulevard, and two churrascarias, Rainhas on Northern Boulevard and Fogo de Chão across from Queens Center. Astoria adds two steak rooms on 23rd Avenue and 21st Street. The remaining six are outliers with a neighborhood each — Fresh Meadows, Bayside, Forest Hills, Flushing twice and South Ozone Park. Iron Age in Rego Park is published on its own neighborhood guide and linked here.",
+    "sections": [
+      {
+        "heading": "The parrilla belt: Jackson Heights, Elmhurst and Corona",
+        "body": "Half of this page fits inside two square miles, and the densest steak corridor in Queens is the same Northern Boulevard and Roosevelt Avenue axis as its Latin American food.\n\nLa Cabaña Argentina holds the Northern Boulevard corner at 86th Street, where the parrillada, the chorizo and the sweetbreads all come off one grill. El Chivito d'Oro is on 37th Avenue, a Uruguayan grill with the fire in plain view. Two Argentine rooms sit almost opposite each other on Corona Avenue in Elmhurst: El Gauchito, which has a butcher's counter attached, and La Esquina Criolla, which has one inside it and finishes the parrillada at the table on a portable charcoal grill. La Fusta is a few blocks north on Baxter Avenue, run by the same family across three generations. Boca Junior is on Queens Boulevard, its blue-and-yellow room hung with memorabilia from the Buenos Aires club.\n\nThe two Brazilian rooms bracket the belt. Rainhas Churrascaria is on Northern Boulevard in Corona, with its own private lot and free valet. Fogo de Chão is on 59th Avenue opposite Queens Center, with an open churrasco grill and gaucho chefs carving at the table."
+      },
+      {
+        "heading": "Astoria",
+        "body": "Two rooms in the borough's northwest corner, a few blocks apart.\n\nChristos Steak House is on 23rd Avenue at 41st Street, putting American steaks — a ten-ounce filet mignon at one end, a signature porterhouse for two or three at the other — beside Greek appetizers and sides, with the beef aged in a temperature-controlled room and charbroiled. Meet the Meat is on 21st Street, a smaller room working aged Prime cuts: bone-in ribeye, tomahawk, sirloin, filet mignon and porterhouse."
+      },
+      {
+        "heading": "The outliers: Fresh Meadows to South Ozone Park",
+        "body": "Six rooms, six neighborhoods, no cluster between them.\n\nEl Gauchito's second site is on the Horace Harding Expressway in Fresh Meadows, east of its first. Uncle Jack's holds Bell Boulevard in Bayside with a USDA Prime dry-aged menu. (aged.) is on 70th Road off Austin Street in Forest Hills and takes its name from the beef. Flushing has two, and they could not be less alike: Prime Mēt on the twelfth floor of the Renaissance Hotel at Tangram, with a rooftop lounge and a skyline view, and Hapisgah, an Israeli kosher grill room out on Union Turnpike. RW Prime is inside Resorts World New York City on Rockaway Boulevard in South Ozone Park; entry to the building is free and no ticket is required, so it counts.\n\nIron Age Korean Steakhouse at 61-35 Junction Boulevard in Rego Park is the seventh outlier by geography. It is a Korean beef room, which this collection admits, and it already has a place page on the Rego Park guide, linked below."
+      }
+    ],
+    "faq": [
+      {
+        "question": "What makes a room a steakhouse on this page?",
+        "answer": "Steak has to be the menu's center of gravity, plus the beef-centric genres — churrascaria, Argentine parrilla, Japanese wagyu counter, Korean-style beef room. In Queens that rule is doing most of the work, because the belt is parrillas and churrascarias rather than chophouses. It also decides what stays off: Tokyo Steak House is hibachi, and the genre admitted here is the wagyu counter, not the teppanyaki show."
+      },
+      {
+        "question": "Why is a Queens steakhouse page mostly South American?",
+        "answer": "Because that is what the count found. Eight of the sixteen rooms are Argentine, Uruguayan or Brazilian grills, and they sit on the same Jackson Heights, Elmhurst and Corona corridor as the borough's Latin American food generally. The classic American chophouse is the minority genre in Queens, which is the opposite of the position in Manhattan."
+      },
+      {
+        "question": "Does a restaurant inside a casino count?",
+        "answer": "It counts if a reader can walk in and dine on its own terms, without a ticket, admission, or entry to a separate event. RW Prime passes: entry to Resorts World New York City is free and no ticket is needed to reach the restaurant. The rooms inside Yankee Stadium fail the same test, which is why none of them appears anywhere in this collection."
+      },
+      {
+        "question": "Why is Iron Age Korean Steakhouse not listed as a room here?",
+        "answer": "It qualifies under the inclusion rule as a Korean-style beef room, but it already has a place page on the Rego Park guide, and a room is published once in this site. This page names it and links to the guide that carries it."
+      },
+      {
+        "question": "Which rooms did this survey check and leave out?",
+        "answer": "LongHorn in Elmhurst and Outback in Flushing are casual national chains rather than destination rooms. Rafaeli's Palace is a catering hall. Tokyo Steak House is a hibachi room. The Palm Bar & Grille in Jamaica is a Caribbean bar. None of them fails on quality; they fail on what the rule is measuring."
+      }
+    ],
+    "photos": [
+      {
+        "src": "/photos/us/steakhouse/queens/queens-northern-boulevard.jpg",
+        "thumb": "/photos/us/steakhouse/queens/queens-northern-boulevard_thumb.jpg",
+        "title": "Northern Boulevard at Broadway, Queens",
+        "description": "A wide crossing of Northern Boulevard under a flat grey sky, seen from the sidewalk across painted lane markings. Cars queue at the lights in both directions, low commercial buildings and billboards line the far side, bare street trees stand along the kerb and a hand-lettered window-tinting sign faces the camera from the left.",
+        "author": "Caitlin Regan",
+        "license": "CC BY 2.0",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Northern_Blvd_Broadway_intersection_NYC.jpg"
+      }
+    ]
+  },
+  "places": [
+    {
+      "slug": "la-cabana-argentina-jackson-heights",
+      "name": "La Cabaña Argentina",
+      "kind": "restaurant",
+      "destination_path": "united-states/new-york/new-york-city/queens",
+      "address": "86-07 Northern Blvd, Jackson Heights, NY 11372",
+      "official_url": "https://www.lacabananyc.com/",
+      "summary": "La Cabaña is an Argentine steakhouse on Northern Boulevard at 86th Street in Jackson Heights. The parrillada is the order, and chorizo, skirt and strip steaks and sweetbreads all come off the same grill.",
+      "history": "The family has been trading in Queens since 1971 according to the restaurant's own history, and moved to this Northern Boulevard corner in 2000.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "el-gauchito-elmhurst",
+      "name": "El Gauchito",
+      "kind": "restaurant",
+      "destination_path": "united-states/new-york/new-york-city/queens",
+      "address": "94-60 Corona Ave, Elmhurst, NY 11373",
+      "official_url": "https://www.elgauchitonyc.com/",
+      "summary": "El Gauchito's first room is on Corona Avenue in Elmhurst with an Argentine butcher's counter attached to it. The complete grill brings roast strips, entraña, chorizo and blood sausage, and the counter sells Argentine-style beef cuts and house-made matambre.",
+      "history": "",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "el-chivito-doro",
+      "name": "El Chivito d'Oro",
+      "kind": "restaurant",
+      "destination_path": "united-states/new-york/new-york-city/queens",
+      "address": "84-02 37th Ave, Jackson Heights, NY 11372",
+      "official_url": "https://elchivitodoro.gotoeat.net/",
+      "summary": "El Chivito d'Oro is a Uruguayan grill on 37th Avenue in Jackson Heights, with the parrilla in plain view and covered in sausage and beef. The parrillada arrives as a platter of steak, sweetbreads and sausages; the chivito sandwich is the other order.",
+      "history": "",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "la-esquina-criolla",
+      "name": "La Esquina Criolla",
+      "kind": "restaurant",
+      "destination_path": "united-states/new-york/new-york-city/queens",
+      "address": "94-67 Corona Ave, Elmhurst, NY 11373",
+      "official_url": "https://laesquinacriolla.netwaiter.com/",
+      "summary": "La Esquina Criolla is an Argentine grill on Corona Avenue with a butcher's counter inside the room. The parrillada completa runs to bife de chorizo, vacío and asado de tira, finished at the table on a portable charcoal grill.",
+      "history": "",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "la-fusta",
+      "name": "La Fusta",
+      "kind": "restaurant",
+      "destination_path": "united-states/new-york/new-york-city/queens",
+      "address": "80-32 Baxter Ave, Elmhurst, NY 11373",
+      "official_url": "https://www.facebook.com/LaFustaRestaurant/",
+      "summary": "La Fusta is an Argentine steak house on Baxter Avenue in Elmhurst, family-owned and run across three generations. Beef off the grill is the center of the menu, with house-made empanadas in front of it and the parrillada beside it.",
+      "history": "",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "boca-junior-elmhurst",
+      "name": "Boca Junior",
+      "kind": "restaurant",
+      "destination_path": "united-states/new-york/new-york-city/queens",
+      "address": "81-08 Queens Blvd, Elmhurst, NY 11373",
+      "official_url": "https://bocajuniorsrestaurants.kikisnyc.com/",
+      "summary": "Boca Junior is an Argentine steakhouse on Queens Boulevard, its blue-and-yellow dining room covered in memorabilia from the Buenos Aires football club it is named for. Parrilla cuts, empanadas and chimichurri make up the menu.",
+      "history": "",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "rainhas-churrascaria",
+      "name": "Rainhas Churrascaria",
+      "kind": "restaurant",
+      "destination_path": "united-states/new-york/new-york-city/queens",
+      "address": "108-01 Northern Blvd, Corona, NY 11368",
+      "official_url": "https://www.rainhas.com/",
+      "summary": "Rainhas is a Brazilian churrascaria on Northern Boulevard in Corona, with its own private lot and free valet parking. Skewers of grilled beef are carried through the room and carved onto the plate.",
+      "history": "",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "fogo-de-chao-elmhurst",
+      "name": "Fogo de Chão",
+      "kind": "restaurant",
+      "destination_path": "united-states/new-york/new-york-city/queens",
+      "address": "92-50 59th Ave, Elmhurst, NY 11373",
+      "official_url": "https://fogodechao.com/location/queens/",
+      "summary": "Fogo de Chão's Queens churrascaria stands on 59th Avenue across from Queens Center. An open churrasco grill runs through the middle of the room, and the gaucho chefs butcher, fire-roast and carve the beef at the table.",
+      "history": "",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "christos-steak-house-astoria",
+      "name": "Christos Steak House",
+      "kind": "restaurant",
+      "destination_path": "united-states/new-york/new-york-city/queens",
+      "address": "41-08 23rd Ave, Astoria, NY 11105",
+      "official_url": "https://www.christossteakhouse.com/",
+      "summary": "Christos is a Greek-American steakhouse on 23rd Avenue in Astoria. American steaks come alongside Greek appetizers and sides, the cuts run from a ten-ounce filet mignon to a signature porterhouse for two or three, and the beef is aged in a temperature-controlled room before it is charbroiled.",
+      "history": "",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "meet-the-meat-astoria",
+      "name": "Meet the Meat",
+      "kind": "restaurant",
+      "destination_path": "united-states/new-york/new-york-city/queens",
+      "address": "23-92 21st St, Astoria, NY 11105",
+      "official_url": "https://meetthemeatny.com/",
+      "summary": "Meet the Meat is a steakhouse on 21st Street in the northern corner of Astoria. Aged Prime cuts are the menu — bone-in ribeye, tomahawk, sirloin, filet mignon and porterhouse — and its owners came to Queens after twenty-five years working Manhattan rooms.",
+      "history": "",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "el-gauchito-fresh-meadows",
+      "name": "El Gauchito",
+      "kind": "restaurant",
+      "destination_path": "united-states/new-york/new-york-city/queens",
+      "address": "158-15 Horace Harding Expy, Fresh Meadows, NY 11365",
+      "official_url": "https://www.elgauchitonyc.com/",
+      "summary": "El Gauchito's second room sits on the Horace Harding Expressway in Fresh Meadows, east of the first. The Argentine parrilla menu is the same, built on premium grilled meats and mixed-grill platters.",
+      "history": "",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "uncle-jacks-steakhouse-bayside",
+      "name": "Uncle Jack's Steakhouse",
+      "kind": "restaurant",
+      "destination_path": "united-states/new-york/new-york-city/queens",
+      "address": "39-40 Bell Blvd, Bayside, NY 11361",
+      "official_url": "https://unclejacksbayside.com/",
+      "summary": "Uncle Jack's Bayside room is on Bell Boulevard, the group's Queens address. USDA Prime dry-aged beef is the menu.",
+      "history": "",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "aged-forest-hills",
+      "name": "(aged.)",
+      "kind": "restaurant",
+      "destination_path": "united-states/new-york/new-york-city/queens",
+      "address": "107-02 70th Rd, Forest Hills, NY 11375",
+      "official_url": "https://agednyc.com/",
+      "summary": "(aged.) is a small steakhouse on 70th Road just off Austin Street in Forest Hills. Dry-aged beef gives the room its name, and it works as the neighborhood bistro as much as the neighborhood steak room.",
+      "history": "",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "prime-met-steakhouse-flushing",
+      "name": "Prime Mēt Steakhouse",
+      "kind": "restaurant",
+      "destination_path": "united-states/new-york/new-york-city/queens",
+      "address": "133-36 37th Ave, 12th Floor, Flushing, NY 11354",
+      "official_url": "https://www.primemetny.com/",
+      "summary": "Prime Mēt is a steakhouse on the twelfth floor of the Renaissance New York Flushing Hotel at Tangram, with a rooftop lounge, a rare whiskey bar and sweeping views of the city skyline. Premium steaks come off the grill and a live DJ works the rooftop.",
+      "history": "",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "rw-prime-south-ozone-park",
+      "name": "RW Prime",
+      "kind": "restaurant",
+      "destination_path": "united-states/new-york/new-york-city/queens",
+      "address": "110-00 Rockaway Blvd, South Ozone Park, NY 11420",
+      "official_url": "https://www.rwnewyork.com/dining/rw-prime",
+      "summary": "RW Prime is the steakhouse inside Resorts World New York City on Rockaway Boulevard. Entry to the building is free and no ticket is required, so a reader walks in off the gaming floor and dines on the room's own terms.",
+      "history": "",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "hapisgah-steak-house-flushing",
+      "name": "Hapisgah Steak House",
+      "kind": "restaurant",
+      "destination_path": "united-states/new-york/new-york-city/queens",
+      "address": "147-25 Union Tpke, Flushing, NY 11367",
+      "official_url": "https://www.hapisgah.com/",
+      "summary": "Hapisgah is a glatt kosher Israeli steak house on Union Turnpike in Flushing, under the supervision of the Vaad Harabonim of Queens. Grilled beef and skewers come with Middle Eastern salads and mezze, and the doors close Friday and Saturday.",
+      "history": "",
+      "status": "open",
+      "photos": []
+    }
+  ],
+  "entries": [
+    {
+      "kind": "food",
+      "name": "La Cabaña Argentina",
+      "place_slug": "la-cabana-argentina-jackson-heights",
+      "note": "Northern Boulevard at 86th Street. The parrillada is the belt's signature order and is worth taking for two."
+    },
+    {
+      "kind": "food",
+      "name": "El Gauchito",
+      "place_slug": "el-gauchito-elmhurst",
+      "note": "Corona Avenue, Elmhurst. The butcher's counter is attached, so the Argentine cuts on the plate are for sale by the pound on the way out."
+    },
+    {
+      "kind": "food",
+      "name": "El Chivito d'Oro",
+      "place_slug": "el-chivito-doro",
+      "note": "37th Avenue, Jackson Heights. The Uruguayan room on the belt; walk in and the grill is in front of you, covered in sausage and beef."
+    },
+    {
+      "kind": "food",
+      "name": "La Esquina Criolla",
+      "place_slug": "la-esquina-criolla",
+      "note": "Corona Avenue, almost opposite El Gauchito. A butcher's counter inside, and the parrillada completa finished at the table on a charcoal grill."
+    },
+    {
+      "kind": "food",
+      "name": "La Fusta",
+      "place_slug": "la-fusta",
+      "note": "Baxter Avenue, Elmhurst. Three generations of one family, and beef off the grill has been the center of it throughout."
+    },
+    {
+      "kind": "food",
+      "name": "Boca Junior",
+      "place_slug": "boca-junior-elmhurst",
+      "note": "Queens Boulevard, Elmhurst. Blue and yellow walls, football scarves, and an Argentine parrilla menu underneath all of it."
+    },
+    {
+      "kind": "food",
+      "name": "Rainhas Churrascaria",
+      "place_slug": "rainhas-churrascaria",
+      "note": "Northern Boulevard, Corona. The eastern churrascaria on the belt, with its own private lot and free valet."
+    },
+    {
+      "kind": "food",
+      "name": "Fogo de Chão",
+      "place_slug": "fogo-de-chao-elmhurst",
+      "note": "59th Avenue opposite Queens Center. The open churrasco grill sits in the middle of the floor and the carving happens at the table."
+    },
+    {
+      "kind": "food",
+      "name": "Christos Steak House",
+      "place_slug": "christos-steak-house-astoria",
+      "note": "23rd Avenue, Astoria. American steaks with Greek meze in front of them; the porterhouse is sized for two or three."
+    },
+    {
+      "kind": "food",
+      "name": "Meet the Meat",
+      "place_slug": "meet-the-meat-astoria",
+      "note": "21st Street, upper Astoria. The smaller of Astoria's two steak rooms, working aged Prime cuts."
+    },
+    {
+      "kind": "food",
+      "name": "El Gauchito, Fresh Meadows",
+      "place_slug": "el-gauchito-fresh-meadows",
+      "note": "Horace Harding Expressway, Fresh Meadows. The belt's one satellite, east of the Corona Avenue original."
+    },
+    {
+      "kind": "food",
+      "name": "Uncle Jack's Steakhouse",
+      "place_slug": "uncle-jacks-steakhouse-bayside",
+      "note": "Bell Boulevard, Bayside. The eastern end of the borough, and a USDA Prime dry-aged menu."
+    },
+    {
+      "kind": "food",
+      "name": "(aged.)",
+      "place_slug": "aged-forest-hills",
+      "note": "70th Road off Austin Street, Forest Hills. Small enough that the dry-aged beef and the bistro menu share one kitchen."
+    },
+    {
+      "kind": "food",
+      "name": "Prime Mēt Steakhouse",
+      "place_slug": "prime-met-steakhouse-flushing",
+      "note": "Twelfth floor of the Renaissance Hotel at Tangram, downtown Flushing. Steak with a rooftop lounge, a whiskey bar and the city skyline."
+    },
+    {
+      "kind": "food",
+      "name": "RW Prime",
+      "place_slug": "rw-prime-south-ozone-park",
+      "note": "Inside Resorts World on Rockaway Boulevard. No ticket and no admission to reach it, which is what puts it on this page."
+    },
+    {
+      "kind": "food",
+      "name": "Hapisgah Steak House",
+      "place_slug": "hapisgah-steak-house-flushing",
+      "note": "Union Turnpike, Flushing. Israeli grilling rather than American broiling, and the one kosher steak room on the Queens page."
+    }
+  ],
+  "links": [
+    {
+      "target": "guide:rego-park-queens-guide",
+      "kind": "same-region",
+      "note": "Iron Age Korean Steakhouse at 61-35 Junction Boulevard is a Korean beef room and qualifies under this collection's rule, but its place page is published on the Rego Park guide."
+    }
+  ]
+}

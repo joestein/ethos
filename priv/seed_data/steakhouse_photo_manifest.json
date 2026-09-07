@@ -1,0 +1,46 @@
+{
+  "boston-boylston-street": {
+    "sha256": "e73204a4da22d168ab8e7ca6b41b618828bc52aada7462abf99a982632fbadd7",
+    "source_url": "https://commons.wikimedia.org/wiki/File:761-793_Boylston_Street,_Boston,_Massachusetts.jpg"
+  },
+  "brooklyn-broadway-williamsburg": {
+    "sha256": "21e011432337a40dc994cf744170575f1d6512b4df174b447e006b07dc87b754",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Peter_Luger_Steak_House_(Brooklyn,_New_York)_001.jpg"
+  },
+  "chicago-north-lasalle-street": {
+    "sha256": "67ddf753e4ba0882d18e91c58fe5e1c0e543ef59046f1b560b4d5ab05494dad8",
+    "source_url": "https://commons.wikimedia.org/wiki/File:300_North_LaSalle_Street_Chicago.jpg"
+  },
+  "london-bruton-place": {
+    "sha256": "a01f2cece0f00bf8c40e1b56436a0cb2c35159bfbd80442c8c634a21eb970f75",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Bruton_Place,_Mayfair_-_geograph.org.uk_-_4934151.jpg"
+  },
+  "los-angeles-wilshire-boulevard": {
+    "sha256": "50431190c2e314e2f7a30e06ef2c745b083c4d741371980419b270b30b15f3b3",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Wilshire_Boulevard_towards_Beverly_Hills.jpg"
+  },
+  "manhattan-west-36th-street": {
+    "sha256": "eb42f548deb89bf09809c3e66698b7d6d75d8b366be941d8837d212df71fe9b7",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Keens_Steakhouse_(54821833498).jpg"
+  },
+  "miami-brickell-avenue": {
+    "sha256": "580de60f5f5f4ecc3461fd4c6ad2c1bd9daaf5d8168baf9dfc71059275ae2907",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Brickell_Avenue_Downtown_Miami_FL_1_September_2023.jpg"
+  },
+  "queens-northern-boulevard": {
+    "sha256": "7e38e65a36f120ca1d55afd0425a5ea6c83a7375fe70698b2b1c6ed85f369217",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Northern_Blvd_Broadway_intersection_NYC.jpg"
+  },
+  "san-francisco-van-ness-avenue": {
+    "sha256": "f7591979887741bc168030bcc42668f3f76e35969fef5fb2fd92fdc3562ef52e",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Van_Ness_Avenue_seen_from_100_Van_Ness.jpg"
+  },
+  "seattle-marion-building": {
+    "sha256": "e1d49bfc0cf1183d7f3747f50a8bf4154fff1d0c5eb60d14ac5cb080ee835417",
+    "source_url": "https://commons.wikimedia.org/wiki/File:Seattle_-_Marion_Building_01.jpg"
+  },
+  "washington-dc-k-street": {
+    "sha256": "c33bfb9430284a6fdb65081453f8c9b98f4f4889dc50af4422cab4942f76fd29",
+    "source_url": "https://commons.wikimedia.org/wiki/File:1500_block_of_K_Street.JPG"
+  }
+}

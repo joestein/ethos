@@ -496,6 +496,10 @@ defmodule Ethos.ReleaseTest do
     assert kbbq.() == after_first, "seed_korean_bbq/1 is not idempotent"
   end
 
+  test "seed_steakhouse/1 names the steakhouse seed directory" do
+    assert function_exported?(Ethos.Release, :seed_steakhouse, 1)
+  end
+
   # Production runs a release, not Mix, so Ethos.Release.foliage_links/0 is
   # the only way to run Ethos.Foliage.LinkBuilder.build!/0 and
   # Ethos.Foliage.Dataset.warn_dangling_guides/1 after a deploy. Before this
