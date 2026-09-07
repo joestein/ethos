@@ -2154,9 +2154,11 @@ Expected: the one known ski red and nothing else. Watch particularly for the glo
 ```bash
 mix format
 git add priv/seed_data/ski/ priv/seed_data/ski_photo_manifest.json priv/photos/ski/ \
-        images/ski/ docs/ski/new-england.md
+        docs/ski/new-england.md
 git commit -m "content: ski wave N — {STATE} rows {LO}-{HI}"
 ```
+
+**`images/` is gitignored** (`.gitignore:47`, `/images/`) and must not be added. It holds the unoptimized Commons originals as working files; only the optimized output under `priv/photos/` is committed, which is why the manifest records each source's sha256 — the manifest is the provenance link back to a file the repository does not keep. `git add images/ski/` fails outright with "paths are ignored by one of your .gitignore files", so this is a hard error rather than a silent omission.
 
 - [ ] **Step 11: Ledger**
 
@@ -2608,25 +2610,27 @@ MIX_TEST_PARTITION=ski mix run -e '
 ' 2>&1 | tail -20
 ```
 
-Then, with the server running, check that a guide page actually carries its places:
+Then, with the server running in a second shell (`mix phx.server`), check that a guide page actually carries its places. Write the checker to a file first rather than piping a heredoc — the script itself contains no shell quoting hazards that way:
 
 ```bash
-mix phx.server &
-sleep 8
-python3 - <<'PY'
+cat > /tmp/ski_render_check.py <<'SCRIPT'
 import json, glob, re, urllib.request
-for f in sorted(glob.glob('priv/seed_data/ski/*.json'))[:8]:
+bad = 0
+for f in sorted(glob.glob('priv/seed_data/ski/*.json')):
     d = json.load(open(f))
     slug = d['guide']['slug']
     html = urllib.request.urlopen(f'http://localhost:4000/g/{slug}').read().decode()
     links = set(re.findall(r'href="(/p/[a-z0-9-]+)"', html))
-    print(f'{slug:44} {len(links):3} place links, expected {len(d["places"])}')
-PY
-PY
-kill %1
+    flag = '' if len(links) == len(d['places']) else '  <-- MISMATCH'
+    if flag:
+        bad += 1
+    print(f'{slug:46} {len(links):3} place links, expected {len(d["places"]):3}{flag}')
+print(f'\n{bad} guides render a different number of places than they define')
+SCRIPT
+python3 /tmp/ski_render_check.py
 ```
 
-Every guide must show as many `/p/` links as it has places. A guide showing zero is the orphaned-entries failure this project has shipped before, and it passes every JSON gate.
+Every guide must show as many `/p/` links as it has places, and the trailing count must read `0 guides`. A guide showing zero links is the orphaned-entries failure this project has shipped before, and it passes every JSON gate.
 
 - [ ] **Step 7: Format and commit**
 
