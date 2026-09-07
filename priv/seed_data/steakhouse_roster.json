@@ -39,7 +39,7 @@
     "city": "London",
     "status": "build",
     "path": "united-kingdom/england/london",
-    "note": "37 verified, 28 published \u2014 nine rooms fell out in content wave 3: Goodman Canary Wharf, Gaucho Charlotte Street, Gaucho Smithfield and Sophie's Chelsea are not on their operators' own site lists; Zelman Meats Soho, M Restaurant Threadneedle Street, Ibai and Chelsea Grill could not be confirmed as trading; and Boisdale of Belgravia is a Scottish restaurant with steaks rather than a steak room. Nine of the 37 are in the World's 101 Best Steak Restaurants 2026. The core is Mayfair, Soho and the City, but Hawksmoor's seven sites, Blacklock's four and Gaucho's two surviving London rooms spread the corpus across the boroughs."
+    "note": "37 verified, 28 published \u2014 nine rooms fell out in content wave 3: Goodman Canary Wharf, Gaucho Charlotte Street, Gaucho Smithfield and Sophie's Chelsea are not on their operators' own site lists; Zelman Meats Soho, M Restaurant Threadneedle Street, Ibai and Chelsea Grill could not be confirmed as trading; and Boisdale of Belgravia is a Scottish restaurant with steaks rather than a steak room. Nine of the 37 are in the World's 101 Best Steak Restaurants 2026. The core is Mayfair, Soho and the City, but Hawksmoor's seven sites, Blacklock's four and Gaucho's two published here spread the corpus across the boroughs."
   },
   {
     "slug": "chicago",
@@ -95,6 +95,6 @@
     "city": "Miami",
     "status": "build",
     "path": "united-states/florida/miami",
-    "note": "20 verified, 16 published \u2014 four fell out in content wave 3: Ocean Prime, Meat Market and Los Ranchos Bayside are not on their operators' own location lists, and Red South Beach's domain has lapsed with nothing confirming the room trades. The 16 stand across four municipalities rather than a split: 9 in Miami proper in Brickell, the Design District, Little River, Little Havana, Little Haiti and Downtown, 8 in Miami Beach where South of Fifth carries the spectacle rooms, 2 in Coral Gables and 1 in Aventura. Kept as one page because Miami proper sustains a page on its own and the city's own tourism board publishes a single steakhouse list spanning all four. Following korean_bbq's puget-sound.json, Task 3 must create united-states/florida/miami-beach, united-states/florida/coral-gables and united-states/florida/aventura."
+    "note": "20 verified, 16 published \u2014 four fell out in content wave 3: Ocean Prime, Meat Market and Los Ranchos Bayside are not on their operators' own location lists, and Red South Beach's domain has lapsed with nothing confirming the room trades. The 20 verified stood across four municipalities rather than a split: 9 in Miami proper in Brickell, the Design District, Little River, Little Havana, Little Haiti and Downtown, 8 in Miami Beach where South of Fifth carries the spectacle rooms, 2 in Coral Gables and 1 in Aventura. The 16 published break down the same way minus the four drops: 7 in Miami proper, 6 in Miami Beach, 2 in Coral Gables and 1 in Aventura. Kept as one page because Miami proper sustains a page on its own and the city's own tourism board publishes a single steakhouse list spanning all four. Following korean_bbq's puget-sound.json, Task 3 must create united-states/florida/miami-beach, united-states/florida/coral-gables and united-states/florida/aventura."
   }
 ]

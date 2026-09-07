@@ -149,7 +149,7 @@ committed corpus as of this writing and content lands continuously.
     on a missing place.
 
     What raises is `Links.resolve!/1`. The corpus declares **14 top-level
-    `"links"` edges to 13 guides in five other corpora**, and `resolve!/1`
+    `"links"` edges to 13 guides in six other corpora**, and `resolve!/1`
     raises `page link references unknown guide <slug>` on a target nothing has
     seeded. Those 13 targets are what fixes the ordering:
 
