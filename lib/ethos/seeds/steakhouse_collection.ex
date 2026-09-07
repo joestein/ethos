@@ -79,7 +79,7 @@ defmodule Ethos.Seeds.SteakhouseCollection do
         %{
           guide_slug: "london-steakhouse-guide",
           blurb:
-            "37 verified rooms, nine of them named in a 2026 global steak-restaurant ranking. The core sits in Mayfair, Soho and the City, but Hawksmoor's seven sites, Gaucho's four and Blacklock's four spread the corpus across the boroughs."
+            "28 rooms across six boroughs, nine of them named on a 2026 global steak-restaurant ranking. Westminster holds 15 and the City of London 4, with Hawksmoor's seven sites, Blacklock's four and Gaucho's two spreading the rest into Tower Hamlets, Camden, Southwark and Hackney."
         },
         %{
           guide_slug: "chicago-steakhouse-guide",
@@ -104,17 +104,17 @@ defmodule Ethos.Seeds.SteakhouseCollection do
         %{
           guide_slug: "boston-steakhouse-guide",
           blurb:
-            "12 verified rooms: Back Bay's five along Boylston, Berkeley and Arlington, the Seaport's four, Beacon Hill's one and Downtown's two. No Boston place corpus existed before this guide."
+            "12 rooms: Back Bay's four along Boylston, Berkeley and Arlington, the Seaport's four out to Fan Pier, one in Fort Point, one on Beacon Hill and two in Downtown Crossing. No Boston place corpus existed before this guide."
         },
         %{
           guide_slug: "washington-dc-steakhouse-guide",
           blurb:
-            "17 verified rooms, and the page is the District only, not the District plus Northern Virginia — the K Street power-dining corridor sustains it alone, with a second node in Georgetown. Tysons and Arlington's chain corridor stays outside the scope."
+            "13 rooms, and the page is the District only, not the District plus Northern Virginia — nine sit on or beside the K Street power-dining corridor, two more in Georgetown, and two out at Union Market and Cleveland Park. Tysons and Arlington stay outside the scope."
         },
         %{
           guide_slug: "miami-steakhouse-guide",
           blurb:
-            "20 verified rooms across four municipalities kept as one page: 9 in Miami proper from Brickell to Little Havana, 8 in Miami Beach's South of Fifth, 2 in Coral Gables and 1 in Aventura — matching the city's own single steakhouse list."
+            "16 rooms across four municipalities kept as one page: 7 in Miami proper from Brickell to Little River, 6 in Miami Beach with four of them at South of Fifth, 2 in Coral Gables and 1 in Aventura — matching the city's own single steakhouse list."
         }
       ]
     }

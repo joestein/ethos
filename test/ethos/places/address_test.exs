@@ -125,7 +125,9 @@ defmodule Ethos.Places.AddressTest do
              "2 Wyckoff Avenue"
 
     # parenthetical after a region with no ZIP
-    assert Address.parse("899-925 Flatbush Avenue, Brooklyn, NY (between Church and Snyder Avenues)") ==
+    assert Address.parse(
+             "899-925 Flatbush Avenue, Brooklyn, NY (between Church and Snyder Avenues)"
+           ) ==
              %{
                street: "899-925 Flatbush Avenue",
                locality: "Brooklyn",
@@ -135,7 +137,9 @@ defmodule Ethos.Places.AddressTest do
              }
 
     # semicolon clause
-    assert Address.parse("223 North Burnham Highway, Lisbon, CT 06351; trailhead at 62 Kimball Road").street ==
+    assert Address.parse(
+             "223 North Burnham Highway, Lisbon, CT 06351; trailhead at 62 Kimball Road"
+           ).street ==
              "223 North Burnham Highway"
   end
 
@@ -449,7 +453,10 @@ defmodule Ethos.Places.AddressTest do
     assert uk != [], "no British address reached the parser — this scope guard is vacuous"
 
     for {raw, p} <- uk, p.street do
-      refute Regex.match?(~r/\b(?:bounded by|between|corner of|junction of|opposite)\b/i, p.street),
+      refute Regex.match?(
+               ~r/\b(?:bounded by|between|corner of|junction of|opposite)\b/i,
+               p.street
+             ),
              "British street line publishing a descriptive location: #{inspect(p.street)} " <>
                "(from #{inspect(raw)})"
     end
@@ -563,8 +570,25 @@ defmodule Ethos.Places.AddressTest do
     # rather than the addresses, for the same reason wave 1's fix round moved it
     # to 58: dropping a floor designator to hold a number is shaping content to
     # fit a test.
-    assert comma_streets <= 63,
-           "#{comma_streets} American street lines carry a comma qualifier, up from 58"
+    # 65 after steakhouse content wave 3 landed
+    # priv/seed_data/steakhouse/{boston,london,miami,washington-dc}.json. Exactly
+    # two of the wave's sixty-nine places carry a comma inside the street line,
+    # and both are suite designators of the same acceptable class as the
+    # fourteen standing ones, printed that way by the operator itself:
+    #
+    #   * del-friscos-double-eagle-boston — "250 Northern Ave, Suite 200". The
+    #     room is the second floor above the harbor and the operator's own
+    #     restaurant page prints the suite.
+    #   * flemings-prime-steakhouse-brickell — "600 Brickell Ave, Suite 150",
+    #     as the Greater Miami visitors bureau's own listing gives it.
+    #
+    # London's twenty-eight rooms move this pin not at all: the pin counts
+    # American street lines only, and none of the twenty-eight is American.
+    # Neither addition is the non-locality prose this pin exists to catch, so
+    # the ratchet moves rather than the addresses — the same call waves 1 and 2
+    # made, and for the same reason.
+    assert comma_streets <= 65,
+           "#{comma_streets} American street lines carry a comma qualifier, up from 63"
 
     for p <- italian, p.street, String.contains?(p.street, ",") do
       # A civico may be a range ("5-7") or carry a letter or a slashed suffix
