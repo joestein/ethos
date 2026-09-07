@@ -102,6 +102,20 @@
       before. Refusing after having accepted stops the scripts loading on your next page
       view; it does not reach back and delete what was already collected.
     </p>
+    <%!-- The US control is a different mechanism from the banner above, not a
+          restatement of it. The EEA regime is opt-in, so nothing loads until the
+          banner is answered; the US state regimes are opt-out, so analytics and the
+          affiliate widget run until this link is used. Both are served by the same
+          Google CMP, and `assets/js/consent.js` reads both signals — the TCF one for
+          the banner, the Global Privacy Platform one for this link. --%>
+    <p class="mt-3 text-ink">
+      In US states with a privacy law that provides one, a
+      <strong>Do Not Sell or Share My Personal Information</strong> link appears at the
+      foot of the page. Using it records an opt-out, and PostHog and the GetYourGuide
+      widget stop loading from your next page view. If your browser sends a Global
+      Privacy Control signal, that is honoured the same way and you need not use the
+      link at all.
+    </p>
     <p class="mt-3 text-ink">
       Every cookie described here, first-party and third-party alike, can be cleared in
       your browser's settings, and your browser can be told to refuse them.

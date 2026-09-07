@@ -55,7 +55,7 @@ const PARTNER = "HARNESS_PARTNER"
 // Only the surface the two files actually touch. Anything they reach for that
 // is missing throws, which is the point: a silent `undefined` would let a
 // broken file pass.
-const makeBrowser = ({ posthogKey, gygPartnerId, tcfapi }) => {
+const makeBrowser = ({ posthogKey, gygPartnerId, tcfapi, gpp }) => {
   const injected = []
   const captures = []
   const listeners = new Map()
@@ -99,6 +99,7 @@ const makeBrowser = ({ posthogKey, gygPartnerId, tcfapi }) => {
   }
 
   if (tcfapi) window.__tcfapi = tcfapi
+  if (gpp) window.__gpp = gpp
 
   return { document, window, injected, captures, listeners }
 }
@@ -196,6 +197,54 @@ const BANNER_OPEN = {
   gdprApplies: true,
   eventStatus: "cmpuishown",
   purpose: { consents: { 1: true } }
+}
+
+// A GPP stub. The real API takes (command, callback, parameter); only
+// addEventListener is used, and the callback receives (event, success) where
+// the event carries `pingData`.
+const gppStub = (pingData, { success = true } = {}) => {
+  const stub = (command, callback) => {
+    if (command !== "addEventListener") return
+    stub.fire = (data = pingData) => callback({ pingData: data }, success)
+    stub.fire()
+  }
+  return stub
+}
+
+// 2 is "did not opt out" in a parsed GPP section; 1 is "opted out"; 0 is "not
+// applicable". Google's US states message publishes `usnat` plus the section
+// for the visitor's state.
+const US_ALLOWS = {
+  signalStatus: "ready",
+  parsedSections: {
+    usnat: { SaleOptOut: 2, SharingOptOut: 2, TargetedAdvertisingOptOut: 2, Gpc: false }
+  }
+}
+const US_OPTED_OUT = {
+  signalStatus: "ready",
+  parsedSections: {
+    usnat: { SaleOptOut: 1, SharingOptOut: 2, TargetedAdvertisingOptOut: 2, Gpc: false }
+  }
+}
+const US_GPC = {
+  signalStatus: "ready",
+  parsedSections: {
+    usnat: { SaleOptOut: 2, SharingOptOut: 2, TargetedAdvertisingOptOut: 2, Gpc: true }
+  }
+}
+const US_NOT_READY = {
+  signalStatus: "not ready",
+  parsedSections: {
+    usnat: { SaleOptOut: 2, SharingOptOut: 2, TargetedAdvertisingOptOut: 2, Gpc: false }
+  }
+}
+// A visitor in no supported state: the API fired, and said nothing about them.
+const US_NO_SECTION = { signalStatus: "ready", parsedSections: {} }
+// GPP can also carry the European section. The opt-out rule must not read it —
+// that is an opt-IN regime and the TCF branch's business.
+const EEA_VIA_GPP = {
+  signalStatus: "ready",
+  parsedSections: { tcfeuv2: { PurposeConsents: {} } }
 }
 
 // --- assertions --------------------------------------------------------------
@@ -346,6 +395,106 @@ scenario("LiveView pageviews count patch and redirect only")
   expect("pageviews (1 load + patch + redirect)", pageviews.length, 3)
 }
 
+// 11. The US path, and the reason it exists: no TCF stub is served outside the
+//     EEA/UK, so before this branch a US visitor left the promise pending
+//     forever. A GPP section recording no opt-out is a real permission signal
+//     under an opt-out regime, so both scripts load.
+scenario("US visitor with no opt-out recorded injects BOTH scripts")
+{
+  const browser = makeBrowser({ ...both, tcfapi: null, gpp: gppStub(US_ALLOWS) })
+  await run(browser, makeClock())
+  expectInjected(browser, { posthog: true, gyg: true })
+}
+
+// 12. The objection is honoured. If this scenario ever passes with scripts
+//     injected, the opt-out is being ignored.
+scenario("US visitor who opted out injects NEITHER script")
+{
+  const browser = makeBrowser({ ...both, tcfapi: null, gpp: gppStub(US_OPTED_OUT) })
+  await run(browser, makeClock())
+  expectInjected(browser, { posthog: false, gyg: false })
+}
+
+// 13. Global Privacy Control is a binding opt-out on its own in several states,
+//     independent of the per-field flags, which here all say "did not opt out".
+scenario("US visitor sending GPC injects NEITHER script")
+{
+  const browser = makeBrowser({ ...both, tcfapi: null, gpp: gppStub(US_GPC) })
+  await run(browser, makeClock())
+  expectInjected(browser, { posthog: false, gyg: false })
+}
+
+// 14. The CMP fires while it is still booting. The string is not final, so
+//     reading it would be reading a half-written answer.
+scenario("GPP signal not ready injects NEITHER script")
+{
+  const browser = makeBrowser({ ...both, tcfapi: null, gpp: gppStub(US_NOT_READY) })
+  await run(browser, makeClock())
+  expectInjected(browser, { posthog: false, gyg: false })
+}
+
+// 15. A visitor in no supported state. The API fired but said nothing about
+//     them, and silence is not permission — this is the same pending state as
+//     before the GPP branch existed, which is the point.
+scenario("GPP with no applicable US section injects NEITHER script")
+{
+  const browser = makeBrowser({ ...both, tcfapi: null, gpp: gppStub(US_NO_SECTION) })
+  await run(browser, makeClock())
+  expectInjected(browser, { posthog: false, gyg: false })
+}
+
+// 16. The opt-OUT rule must never decide an opt-IN case. A European section
+//     arriving over GPP records no US opt-out, and a rule that just looked for
+//     "no objection" would read that as consent and load everything for an EEA
+//     visitor who was never asked.
+scenario("GPP carrying only the European section injects NEITHER script")
+{
+  const browser = makeBrowser({ ...both, tcfapi: null, gpp: gppStub(EEA_VIA_GPP) })
+  await run(browser, makeClock())
+  expectInjected(browser, { posthog: false, gyg: false })
+}
+
+// 17. Both APIs on one page. TCF consent still decides, and the GPP listener
+//     being attached must not disturb it.
+scenario("TCF consent alongside a GPP stub injects BOTH scripts")
+{
+  const browser = makeBrowser({ ...both, tcfapi: tcf(GRANTED), gpp: gppStub(US_NO_SECTION) })
+  await run(browser, makeClock())
+  expectInjected(browser, { posthog: true, gyg: true })
+}
+
+// 18. Neither API appears. The poller must still stop — the bound now governs
+//     two listeners rather than one, and a shared flag would have let it run
+//     forever or quit early.
+scenario("neither API present stops the poller and injects NEITHER script")
+{
+  const browser = makeBrowser({ ...both, tcfapi: null, gpp: null })
+  const clock = makeClock()
+  await run(browser, clock, async () => {
+    tickTo(clock, 100)
+    expect("still polling short of the bound", clock.running, 1)
+    tickTo(clock, 30)
+  })
+  expectInjected(browser, { posthog: false, gyg: false })
+  expect("polling stopped at the bound", clock.running, 0)
+}
+
+// 19. A GPP stub landing after this bundle did, with a TCF stub that never
+//     comes. Tracked separately from the TCF flag, so the poller must still be
+//     looking for it.
+scenario("a late GPP stub still injects BOTH scripts")
+{
+  const browser = makeBrowser({ ...both, tcfapi: null, gpp: null })
+  const clock = makeClock()
+  await run(browser, clock, async () => {
+    tickTo(clock, 3)
+    browser.window.__gpp = gppStub(US_ALLOWS)
+    clock.tick()
+    await flush()
+  })
+  expectInjected(browser, { posthog: true, gyg: true })
+}
+
 // --- helpers used above ------------------------------------------------------
 
 function tickTo(clock, n) {
@@ -360,4 +509,4 @@ if (failures.length > 0) {
   process.exit(1)
 }
 
-console.log("consent_check: 10 scenarios, 0 failures")
+console.log("consent_check: 19 scenarios, 0 failures")
