@@ -426,8 +426,16 @@ defmodule Ethos.Seeds.SteakhouseSeedDataTest do
       assert String.starts_with?(photo["source_url"] || "", "https://commons.wikimedia.org/"),
              "#{file}: photo source is not Commons"
 
-      assert File.exists?(Path.join(["priv", "static", photo["src"]])),
-             "#{file}: photo file #{photo["src"]} is not on disk"
+      # Photos are served from priv/photos by their own Plug.Static (see
+      # endpoint.ex), not from priv/static — EthosWeb.static_paths/0 never
+      # lists a "photos" directory, so a file resolved under priv/static
+      # would pass this gate and 404 in production. Strip the leading
+      # "/photos/" and resolve under priv/photos/, matching every sibling
+      # corpus's seed-data test (e.g. Ethos.Seeds.ManhattanSeedDataTest).
+      assert File.exists?(
+               Path.join(["priv", "photos", String.trim_leading(photo["src"], "/photos/")])
+             ),
+             "#{file}: photo file #{photo["src"]} is not on disk under priv/photos/"
     end
   end
 

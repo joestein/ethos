@@ -1,22 +1,36 @@
 defmodule Mix.Tasks.Ethos.OptimizeSteakhousePhotos do
-  @shortdoc "Optimizes steakhouse photos from images/steakhouse/ into priv/static/photos/steakhouse/{city}/"
+  @shortdoc "Optimizes steakhouse photos from images/steakhouse/ into priv/photos/{country}/steakhouse/{city}/"
   @moduledoc """
   Scans `priv/seed_data/steakhouse/*.json` for photo srcs and optimizes
   `images/steakhouse/{label}.*` accordingly.
 
   Modelled on `Mix.Tasks.Ethos.OptimizeKoreanBbqPhotos`: this collection also
-  spans many guides (Manhattan, Brooklyn, Queens, London, Chicago, Los
-  Angeles, San Francisco, Seattle, Boston, Washington DC, Miami — see
+  spans many guides across more than one country (Manhattan, Brooklyn,
+  Queens, Chicago, Los Angeles, San Francisco, Seattle, Boston, Washington
+  DC, Miami are United States guides; London is a United Kingdom guide — see
   `priv/seed_data/steakhouse_roster.json`), so `optimize_src/1` builds the
-  output directory from whichever city a src actually names rather than
-  assuming a fixed one.
+  output directory from whichever country and city a src actually names
+  rather than assuming a fixed one.
 
-  A src has the shape `/photos/steakhouse/{city}/{label}.jpg` (content rules
-  §7). Unlike every other corpus's photo root, the destination directory is
-  `priv/static/photos/steakhouse/{city}/`, not `priv/photos/...` — that is
-  not a typo. `Ethos.Seeds.SteakhouseSeedDataTest`'s photo test resolves a
-  src by joining it under `priv/static/`, so a file written to `priv/photos/`
-  would pass this task and fail that gate.
+  A src has the shape `/photos/{country}/steakhouse/{city}/{label}.jpg` —
+  `country` is `us` or `gb`, `city` is the guide's own slug (`manhattan`,
+  `london`, ...). This mirrors `korean_bbq`'s own shape
+  (`/photos/{country}/korean-bbq/{zone}/...`) exactly, because the two
+  collections have the same structure: one corpus, many guides, spanning
+  more than one country — unlike `san_francisco`'s single-destination
+  `country/state/city` shape or `london`'s single-destination
+  `country/destination/borough` shape, neither of which fits a corpus that
+  is itself the thing that repeats across cities and countries. `gb` (not
+  `uk`) for the United Kingdom follows `korean_bbq/london.json`'s own src,
+  which already established that convention for this house.
+
+  The destination root is `priv/photos/`, the directory the endpoint's own
+  `/photos` `Plug.Static` serves (`from: {:ethos, "priv/photos"}`) — see
+  `endpoint.ex`. `priv/static/` is not this: `EthosWeb.static_paths/0` never
+  lists a `photos` directory, so a file written there would not be served in
+  production even though it would exist on disk.
+  `Ethos.Seeds.SteakhouseSeedDataTest`'s photo test resolves a src the same
+  way, by stripping the leading `/photos/` and joining under `priv/photos/`.
 
   ## The manifest, and why it is empty right now
 
@@ -74,9 +88,9 @@ defmodule Mix.Tasks.Ethos.OptimizeSteakhousePhotos do
 
   defp optimize_src(src) do
     case String.split(src, "/") do
-      ["", "photos", "steakhouse", city, file] ->
+      ["", "photos", country, "steakhouse", city, file] ->
         label = Path.rootname(file)
-        out_dir = Path.join(["priv", "static", "photos", "steakhouse", city])
+        out_dir = Path.join(["priv", "photos", country, "steakhouse", city])
         File.mkdir_p!(out_dir)
 
         case Ethos.PhotoOptimizer.optimize(find_source!(label), out_dir, label) do
@@ -85,7 +99,9 @@ defmodule Mix.Tasks.Ethos.OptimizeSteakhousePhotos do
         end
 
       _ ->
-        Mix.raise("unexpected photo src path #{src} (want /photos/steakhouse/{city}/{label}.jpg)")
+        Mix.raise(
+          "unexpected photo src path #{src} (want /photos/{country}/steakhouse/{city}/{label}.jpg)"
+        )
     end
   end
 

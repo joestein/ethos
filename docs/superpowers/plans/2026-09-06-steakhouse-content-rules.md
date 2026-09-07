@@ -334,8 +334,8 @@ equal the roster row's `slug`, because the gate compares the two lists.
     "sections": [{"heading": "...", "body": "markdown"}],
     "faq": [{"question": "...", "answer": "..."}],
     "photos": [
-      {"src": "/photos/steakhouse/{city}/{label}.jpg",
-       "thumb": "/photos/steakhouse/{city}/{label}_thumb.jpg",
+      {"src": "/photos/{country}/steakhouse/{city}/{label}.jpg",
+       "thumb": "/photos/{country}/steakhouse/{city}/{label}_thumb.jpg",
        "title": "...", "description": "...",
        "author": "...", "license": "CC BY-SA 4.0",
        "source_url": "https://commons.wikimedia.org/wiki/File:..."}
@@ -412,8 +412,12 @@ Hard vocabulary, enforced by the schemas:
   page; `source_url` **is** the file page URL and must start with
   `https://commons.wikimedia.org/`.
 - **Never hotlink.** `src` and `thumb` are local paths under
-  `/photos/steakhouse/{city}/`, and the gate asserts the file exists on disk
-  under `priv/static/`. Record the `{label} → direct_image_url` pair in
+  `/photos/{country}/steakhouse/{city}/` (`country` is `us` or `gb`, mirroring
+  `korean_bbq`'s own `/photos/{country}/korean-bbq/{zone}/` shape), and the
+  gate asserts the file exists on disk under `priv/photos/` — the directory
+  the endpoint's own `/photos` `Plug.Static` actually serves; `priv/static/`
+  never serves a `photos` directory at all. Record the
+  `{label} → direct_image_url` pair in
   `priv/seed_data/steakhouse_photo_manifest.json` so
   `mix ethos.optimize_steakhouse_photos` can fetch and resize it.
 - Prefer a streetscape or an exterior that carries the page's geography — the
