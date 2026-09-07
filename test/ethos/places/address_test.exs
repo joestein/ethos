@@ -564,7 +564,7 @@ defmodule Ethos.Places.AddressTest do
     # to 58: dropping a floor designator to hold a number is shaping content to
     # fit a test.
     assert comma_streets <= 63,
-           "#{comma_streets} American street lines carry a comma qualifier, up from 63"
+           "#{comma_streets} American street lines carry a comma qualifier, up from 58"
 
     for p <- italian, p.street, String.contains?(p.street, ",") do
       # A civico may be a range ("5-7") or carry a letter or a slashed suffix
