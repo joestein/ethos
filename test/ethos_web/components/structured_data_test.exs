@@ -1094,10 +1094,24 @@ defmodule EthosWeb.StructuredDataTest do
       #     counted on either of those sides, so withdrawing eight of them
       #     cannot move either bucket. That is the same claim as the two -8s
       #     above, seen from the other side.
-      assert length(emitted) == 4902
-      assert count.(& &1["streetAddress"]) == 4279
+      #
+      # Re-measured after steakhouse content wave 1 landed
+      # priv/seed_data/steakhouse/{manhattan,brooklyn,queens}.json with 32, 15
+      # and 16 places. All 63 carry a house-numbered street line and a
+      # five-digit ZIP, so the delta is +63 three times over and nil on the two
+      # street-less buckets:
+      #
+      #   * total 4902 -> 4965, +63.
+      #   * `streetAddress` 4279 -> 4342, +63. Every one carries a street line.
+      #   * `postalCode` 3515 -> 3578, +63. Every one carries a ZIP.
+      #   * `is_nil(streetAddress)` unmoved at 623 and locality-only unmoved at
+      #     302: a row carrying both a house number and a postal code is
+      #     counted on neither side, so adding sixty-three of them cannot move
+      #     either bucket.
+      assert length(emitted) == 4965
+      assert count.(& &1["streetAddress"]) == 4342
       assert count.(&is_nil(&1["streetAddress"])) == 623
-      assert count.(& &1["postalCode"]) == 3515
+      assert count.(& &1["postalCode"]) == 3578
 
       # The largest behavioural delta this change ships: 302 places emit a
       # PostalAddress carrying only locality, region and country. Their full

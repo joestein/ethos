@@ -64,17 +64,17 @@ defmodule Ethos.Seeds.SteakhouseCollection do
         %{
           guide_slug: "manhattan-steakhouse-guide",
           blurb:
-            "40 verified rooms, the densest of the fourteen cities scoped. 27 stand in Midtown between 34th and 58th Street, with a second cluster in the Financial District and the Village. Also carries the six Bronx rooms, folded in rather than given their own page."
+            "32 rooms published and five more linked to the neighborhood guides that already carry them, the densest of the fourteen cities scoped. 23 stand between 34th Street and Central Park South, with the rest downtown and in the Village. Also carries the six Bronx rooms."
         },
         %{
           guide_slug: "brooklyn-steakhouse-guide",
           blurb:
-            "19 verified rooms in four clusters: Williamsburg (4, including Peter Luger), the Midwood and Borough Park kosher steakhouse belt (6), Bay Ridge (3) and Downtown Brooklyn (2). The kosher belt appears in no mainstream best-of list."
+            "15 rooms in four clusters: Williamsburg and Greenpoint (4), a kosher steakhouse belt from Borough Park through Midwood to Crown Heights (5), Bay Ridge and the Court Street corridor (4) and Downtown Brooklyn (2). Peter Luger and Gage & Tollner are linked, not repeated."
         },
         %{
           guide_slug: "queens-steakhouse-guide",
           blurb:
-            "17 verified rooms, and the borough's steakhouse is South American rather than prime beef: 8 sit on the Argentine and Brazilian parrilla belt through Jackson Heights, Elmhurst and Corona, plus two Greek-American rooms in Astoria."
+            "16 rooms, and the borough's steakhouse is South American rather than prime beef: 8 sit on the Argentine and Brazilian parrilla belt through Jackson Heights, Elmhurst and Corona, two Greek-American rooms hold Astoria, and six are outliers a neighborhood apart."
         },
         %{
           guide_slug: "london-steakhouse-guide",
