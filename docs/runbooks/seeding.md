@@ -427,28 +427,36 @@ seed window described at the top of this runbook — it just returns 0.
 | --- | --- | --- | --- |
 | 1 | Manhattan | **38** | `count.(~s(united-states/new-york/new-york-city/manhattan))` |
 | 2 | Connecticut (CT-5 only) | **5** | `count.(~s(united-states/connecticut))` |
-| 3 | Connecticut (full) | **170** | same as above |
+| 3 | Connecticut (full) | **171** | same as above |
 | 4 | Brooklyn | **69** | `count.(~s(united-states/new-york/new-york-city/brooklyn))` |
 | 5 | Bronx | **13** | `count.(~s(united-states/new-york/new-york-city/bronx))` |
 | 6 | Queens | **21** | `count.(~s(united-states/new-york/new-york-city/queens))` |
 | 7 | MLB ballparks | **30** | `Ethos.Seeds.Catalog.guide_modules(~s(ballparks)) \|> Enum.count(fn {m, _} -> Ethos.Guides.get_published_guide_by_slug(m.data().slug) end)` |
 | 8 | San Francisco | **24** | `count.(~s(united-states/california/san-francisco))` |
 | 9 | London | **33** | `count.(~s(united-kingdom/england/london))` |
-| 10 | Rome | **32** | `count.(~s(italy/lazio/rome))` |
+| 10 | Rome | **31** | `count.(~s(italy/lazio/rome))` |
 | 11 | Korean BBQ | **10** | the seeder's own last line, `Seeded 10 files from priv/seed_data/korean_bbq` (these ten file on five different nodes, so no single subtree counts them) |
 | 12 | Steakhouses | **11** | the seeder's own last line, `Seeded 11 files from priv/seed_data/steakhouse` (these eleven file on eleven different nodes, six of which no earlier step touches, so no single subtree counts them) |
 
 **Read the rows in order, and only after the step they name.** These are
-subtree counts, so a later step can add to an earlier row's subtree. Three do:
+subtree counts, and four rows need spelling out:
 
+- **Connecticut (full) is 171, not 170.** 165 JSON files plus the five CT-5
+  code-module guides is 170. The 171st is `antique-trail-of-connecticut`
+  (`Ethos.Seeds.AntiqueTrailGuide`), a sixth code module that step 2 seeds
+  alongside the CT-5 and that files under `united-states/connecticut`.
 - **San Francisco is 24, not 23.** 23 JSON files plus the code-module Oracle
   Park guide, which `destination_path`s to
   `united-states/california/san-francisco` and which step 8 seeds itself by
   calling `seed_ballparks/1`. Counted once here and once in the ballparks row
   of 30; it is the same guide.
-- **Rome is 32, not 31.** 31 zone files plus the flagship
-  `three-days-in-rome-real-trip-guide`, which sits on `italy/lazio/rome` and
-  which step 10 seeds itself by calling `seed_rome/1`.
+- **Rome is 31, not 32.** 31 zone files plus the flagship
+  `three-days-in-rome-real-trip-guide` is 32 guides, but only 31 of them sit in
+  this subtree. `vatican-city-rome-guide` files on the `vatican-city` root —
+  Vatican City is its own sovereign node in the tree, not a child of
+  `italy/lazio/rome` — so it is outside every count taken here. The flagship,
+  which step 10 seeds itself by calling `seed_rome/1`, does sit on
+  `italy/lazio/rome` and is counted.
 - **The Bronx and Queens rows are the neighbourhood corpora only, and only
   before step 7.** Yankee Stadium sits on the Bronx node and Citi Field under
   Queens, so after the ballparks step those two subtrees read 14 and 22. Both
