@@ -244,7 +244,7 @@ Verify the published count after each content step before moving on — see
 It creates no rows at all now: each of the fifteen files is keyed on a node
 path and overlays an intro and photos onto a row the roster already owns, so
 `Ethos.Destinations.list_destinations() |> Enum.count()` reads the roster's
-size (**757**) both before and after it, not 15. That number is the length of
+size (**876**) both before and after it, not 15. That number is the length of
 `priv/seed_data/destination_tree.json` and is asserted against this runbook in
 `test/ethos/seeds/destination_tree_test.exs` — when the roster grows, that test
 fails and this paragraph is what it is telling you to update. What confirms
@@ -252,7 +252,7 @@ fails and this paragraph is what it is telling you to update. What confirms
 `Ethos.Destinations.get_by_path("united-states/connecticut").intro` should be
 the long Connecticut history, not the stub "Connecticut, county by county."
 
-A count of **772** — the roster plus fifteen — means the pre-Task-13 keys are
+A count of **891** — the roster plus fifteen — means the pre-Task-13 keys are
 back. Those extra rows have no `kind` and no `parent_id`; they shadow fifteen
 hubs, disable their redirects, enter the sitemap, and list Connecticut, New
 York and Rome on `/destinations` beside the countries.
@@ -315,7 +315,7 @@ any seeder runs — they are still NULL anyway.
 — `Ethos.Release.seed_destination_tree()`, which every seeder below also runs
 first — and step 14's fifteen overlay files put the curated prose and photos
 back on top. Run the full seed order after the migration, exactly as for a
-fresh database, and confirm the count reads 757 and
+fresh database, and confirm the count reads 876 and
 `get_by_path("united-states/connecticut").intro` is the long history rather
 than the stub.
 

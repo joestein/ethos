@@ -30,7 +30,7 @@ defmodule Ethos.Seeds.DestinationTreeTest do
   # The two numbers `docs/runbooks/seeding.md` quotes at the operator: the
   # roster size they verify `Destinations.list_destinations()` against after a
   # rebuild, and the number of curated overlay files whose prose that rebuild
-  # restores (which is also where the runbook's 772 tripwire comes from —
+  # restores (which is also where the runbook's 891 tripwire comes from —
   # roster + overlays is the count you see when the overlays are keyed wrong
   # and insert rows of their own).
   #
@@ -43,9 +43,9 @@ defmodule Ethos.Seeds.DestinationTreeTest do
   # this test failing is the instruction to update that document — change both
   # in the same commit, never one alone.
   test "the roster and overlay counts docs/runbooks/seeding.md quotes are still true" do
-    assert length(DestinationTree.load!()) == 757,
+    assert length(DestinationTree.load!()) == 876,
            "the roster changed size: update docs/runbooks/seeding.md, which tells the " <>
-             "operator to confirm a count of 757 after a rebuild, and this assertion"
+             "operator to confirm a count of 876 after a rebuild, and this assertion"
 
     overlays =
       [:code.priv_dir(:ethos) |> to_string(), "seed_data", "destinations", "*.json"]
@@ -54,7 +54,7 @@ defmodule Ethos.Seeds.DestinationTreeTest do
 
     assert length(overlays) == 15,
            "the curated overlay corpus changed size: update docs/runbooks/seeding.md, " <>
-             "which quotes the file count in step 13 and derives its 772 tripwire from " <>
+             "which quotes the file count in step 14 and derives its 891 tripwire from " <>
              "it, and this assertion"
   end
 
@@ -133,5 +133,31 @@ defmodule Ethos.Seeds.DestinationTreeTest do
         id -> assert Ethos.Repo.get!(Destinations.Destination, id).path == expected
       end
     end
+  end
+
+  # The ski corpus files every area on the town node where it sits in an
+  # incorporated town and the county node where it does not (spec §3), and
+  # `DataGuide.upsert_places!/1` RAISES on a path no node owns — a missing node
+  # is a seed-time abort partway through a production restore, not a silent
+  # orphan. So the roster's paths and the tree's paths are checked against each
+  # other here, before any content exists to trip over them.
+  test "every built ski roster row names a node the tree declares" do
+    roster =
+      ["priv", "seed_data", "ski_areas_roster.json"]
+      |> Path.join()
+      |> File.read!()
+      |> Jason.decode!()
+
+    paths = MapSet.new(DestinationTree.load!(), & &1["path"])
+
+    missing =
+      for area <- roster["areas"],
+          area["status"] == "build",
+          not MapSet.member?(paths, area["destination_path"]),
+          do: "#{area["slug"]} -> #{area["destination_path"]}"
+
+    assert missing == [],
+           "these ski areas name destination nodes the roster does not declare, and " <>
+             "seeding them would raise: #{inspect(missing)}"
   end
 end
