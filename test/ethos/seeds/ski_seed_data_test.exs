@@ -114,13 +114,37 @@ defmodule Ethos.Seeds.SkiSeedDataTest do
   # sources disagree")
   # ------------------------------------------------------------------
 
+  # Spelled-out counting numbers, shared by the lift/trail/run/mile forms
+  # below. Two through twenty, the tens words, and "hundred" — a writer counts
+  # small numbers of lifts and trails in words as often as in digits, and
+  # "eleven lifts" is exactly as unsourced a claim as "11 lifts". "One" is
+  # deliberately absent: it is how a writer says there is a single lift, not
+  # how a writer counts several. That omission is not what keeps "a single
+  # chairlift" and "one skier" publishable on its own — every pattern below
+  # also demands the PLURAL noun (always "lifts", never "chairlift"), and it
+  # is the plural requirement doing the real work, because nothing here stops
+  # someone writing "the one lift" as a count. Feet and acres stay digit-only
+  # below; nobody writes "two thousand and thirty-seven feet".
+  @count_words "(?:two|three|four|five|six|seven|eight|nine|ten|eleven|twelve|" <>
+                 "thirteen|fourteen|fifteen|sixteen|seventeen|eighteen|nineteen|" <>
+                 "twenty|thirty|forty|fifty|sixty|seventy|eighty|ninety|hundred)"
+
+  # Up to three extra words between the number and the noun, so "one hundred
+  # and forty-five trails" is caught via "hundred ... trails" without also
+  # reaching across a sentence boundary — hyphens stay in-class for compounds
+  # like "forty-five", periods do not.
+  @count_gap ~S"(?:[\s-][\w-]+){0,3}"
+
   @statistics [
     ~r/\bvertical (?:drop|rise)\b/i,
     ~r/\b[\d,]+\s*(?:vertical\s+)?(?:feet|ft\.?)\b/i,
     ~r/\b[\d,]+\s*(?:skiable\s+)?acres\b/i,
     ~r/\b\d+\s*(?:chair)?lifts?\b/i,
     ~r/\b\d+\s*(?:named\s+)?trails?\b/i,
-    ~r/\b\d+\s*(?:ski\s+)?runs?\b/i
+    ~r/\b\d+\s*(?:ski\s+)?runs?\b/i,
+    ~r/\b#{@count_words}\b#{@count_gap}\s+(?:chair)?lifts\b/i,
+    ~r/\b#{@count_words}\b#{@count_gap}\s+(?:named\s+)?trails\b/i,
+    ~r/\b#{@count_words}\b#{@count_gap}\s+(?:ski\s+)?runs\b/i
   ]
 
   defp statistic?(text) when is_binary(text),
@@ -133,8 +157,10 @@ defmodule Ethos.Seeds.SkiSeedDataTest do
     for specimen <- [
           "a vertical drop of 2,037 feet",
           "2,600 skiable acres across three peaks",
+          "eleven lifts serve the mountain",
           "11 lifts serve the mountain",
-          "the mountain has 145 trails"
+          "the mountain has 145 trails",
+          "the mountain has one hundred and forty-five trails"
         ] do
       assert unsourced_statistic?(specimen), "must be caught: #{inspect(specimen)}"
     end
@@ -153,18 +179,25 @@ defmodule Ethos.Seeds.SkiSeedDataTest do
     # pattern here had been broken and fired on nothing at all.
     for specimen <- [
           "a vertical drop of 2,037 feet, according to the operator's own mountain statistics",
-          "2,600 skiable acres, per the resort's own trail map legend"
+          "2,600 skiable acres, per the resort's own trail map legend",
+          "eleven lifts, per the operator's lift listing for the current season"
         ] do
       assert statistic?(specimen),
              "this specimen must trip a pattern and be spared by its source, " <>
                "but nothing fired: #{inspect(specimen)}"
     end
 
-    # And these trip nothing at all, which is the third distinct case.
+    # And these trip nothing at all, which is the third distinct case. The
+    # last two are the false positives the plural requirement exists to
+    # prevent — Mad River Glen's single chair is the most famous thing about
+    # the mountain, and describing it is not a statistics claim. Pinning them
+    # here is what stops someone later "simplifying" the spelled-out
+    # alternation and silently banning that sentence.
     for specimen <- [
           "a single chairlift, unchanged since 1948",
           "the base lodge burned in 1975 and was rebuilt the following season",
-          "the co-operative issues shares to skiers rather than to investors"
+          "the co-operative issues shares to skiers rather than to investors",
+          "the single chair carries one skier at a time"
         ] do
       refute statistic?(specimen), "this specimen should trip no pattern: #{inspect(specimen)}"
     end
@@ -266,7 +299,8 @@ defmodule Ethos.Seeds.SkiSeedDataTest do
   @distance [
     ~r/\b[\d.]+\s*(?:miles?|mi\.|kilometres?|kilometers?|km)\b/i,
     ~r/\b\d+\s*(?:minutes?|min\.|hours?)\b[^.]{0,40}\b(?:drive|driving|away|north|south|east|west)\b/i,
-    ~r/\ba\s+\w+[- ]minute\s+drive\b/i
+    ~r/\ba\s+\w+[- ]minute\s+drive\b/i,
+    ~r/\b#{@count_words}\b#{@count_gap}\s+miles\b/i
   ]
 
   defp distance?(text) when is_binary(text), do: Enum.any?(@distance, &Regex.match?(&1, text))
@@ -277,6 +311,7 @@ defmodule Ethos.Seeds.SkiSeedDataTest do
   test "the distance ban catches a derived distance and spares a sourced one" do
     for specimen <- [
           "6 miles down the valley from Sugarbush",
+          "six miles down the valley from Sugarbush",
           "a twenty-minute drive north",
           "40 minutes away by car",
           "1.5 km from the village"
@@ -285,13 +320,15 @@ defmodule Ethos.Seeds.SkiSeedDataTest do
     end
 
     for specimen <- [
-          "6 miles from Waitsfield, per the state of Vermont's highway log",
+          "six miles from Waitsfield, per the state of Vermont's highway log",
           "the access road runs 2.5 miles from Route 17, according to the town of Fayston"
         ] do
       refute unsourced_distance?(specimen), "must publish: #{inspect(specimen)}"
     end
 
-    assert distance?("6 miles from Waitsfield, per the state of Vermont's highway log")
+    # Non-vacuity: the sparing above must come from the source, not from a
+    # spelled-out mile count that never fired.
+    assert distance?("six miles from Waitsfield, per the state of Vermont's highway log")
 
     for specimen <- [
           "the road climbs from the valley floor to the base lodge",
