@@ -640,10 +640,22 @@ defmodule Ethos.Places.AddressTest do
     #     del-friscos-double-eagle-boston and flemings-prime-steakhouse-
     #     brickell above.
     #
+    # Re-measured after ski content wave 5 landed
+    # priv/seed_data/ski/{baker-mountain,big-moose-mountain,big-rock,
+    # black-mountain-of-maine,camden-snow-bowl,hermon-mountain,
+    # lonesome-pine-trails,lost-valley,millinocket-ski-slope,mount-abram,
+    # mount-jefferson-ski-area,pinnacle-ski-club}.json (Maine rows 1-12). One
+    # of the wave's 45 places carries a comma inside its street line:
+    # antique-snowmobile-museum (priv/seed_data/ski/millinocket-ski-slope.json)
+    # — "10 Northern Cruise Trail, Lake Road, Millinocket, ME 04462," per the
+    # museum's own site, parses to the street line "10 Northern Cruise Trail,
+    # Lake Road" — a real secondary road descriptor as sourced, the same
+    # class as Sherburne Pass and Route 153 above.
+    #
     # The ratchet moves rather than the addresses, for the same reason it
     # always has.
-    assert comma_streets <= 69,
-           "#{comma_streets} American street lines carry a comma qualifier, up from 69"
+    assert comma_streets <= 70,
+           "#{comma_streets} American street lines carry a comma qualifier, up from 70"
 
     for p <- italian, p.street, String.contains?(p.street, ",") do
       # A civico may be a range ("5-7") or carry a letter or a slashed suffix

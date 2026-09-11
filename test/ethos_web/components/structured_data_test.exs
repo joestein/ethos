@@ -1304,10 +1304,39 @@ defmodule EthosWeb.StructuredDataTest do
       # Aleworks' "1050 Holt Ave, Unit #14" — which moves the
       # `comma_streets` pin in test/ethos/places/address_test.exs from 67 to
       # 69 and nothing here.
-      assert length(emitted) == 5263
-      assert count.(& &1["streetAddress"]) == 4564
-      assert count.(&is_nil(&1["streetAddress"])) == 699
-      assert count.(& &1["postalCode"]) == 3806
+      #
+      # Re-measured after ski content wave 5 landed
+      # priv/seed_data/ski/{baker-mountain,big-moose-mountain,big-rock,
+      # black-mountain-of-maine,camden-snow-bowl,hermon-mountain,
+      # lonesome-pine-trails,lost-valley,millinocket-ski-slope,mount-abram,
+      # mount-jefferson-ski-area,pinnacle-ski-club}.json with 45 places (one
+      # ski area plus surroundings per file — Maine rows 1-12). Of the 45: 26
+      # carry a house-numbered (or route-numbered) street line AND a
+      # five-digit ZIP; none carry a street line with no ZIP; 16 carry a ZIP
+      # with no street (most ski areas' own town-level addresses plus
+      # descriptive locations such as Pennacook Falls and the Auburn
+      # Riverwalk — each a route, junction, or town-level address with a
+      # postal code but no house number the parser recognises); the
+      # remaining 3 are street-less and ZIP-less locality-only rows — Baker
+      # Mountain's own address, Wyman Dam, and the Arnold Trail to Quebec
+      # marker, all in Moscow, ME, sourced only to town level:
+      #
+      #   * total 5263 -> 5308, +45.
+      #   * `streetAddress` 4564 -> 4590, +26 (the 26 street+ZIP rows; no
+      #     street-only rows this wave).
+      #   * `is_nil(streetAddress)` 699 -> 718, +19 (the 16 ZIP-only rows
+      #     plus the 3 locality-only rows).
+      #   * `postalCode` 3806 -> 3848, +42 (the 26 street+ZIP rows plus the
+      #     16 ZIP-only rows).
+      #
+      # One of the 45 carries a comma inside its street line —
+      # antique-snowmobile-museum's "10 Northern Cruise Trail, Lake Road" —
+      # which moves the `comma_streets` pin in
+      # test/ethos/places/address_test.exs from 69 to 70 and nothing here.
+      assert length(emitted) == 5308
+      assert count.(& &1["streetAddress"]) == 4590
+      assert count.(&is_nil(&1["streetAddress"])) == 718
+      assert count.(& &1["postalCode"]) == 3848
 
       # The largest behavioural delta this change ships: 302 places emit a
       # PostalAddress carrying only locality, region and country. Their full
@@ -1407,7 +1436,13 @@ defmodule EthosWeb.StructuredDataTest do
       # Road, Littleton, NH 03561," is a street+ZIP row. Every one of the 14
       # is a real address as the source gives it; none is missing a house
       # number the source actually had. This wave completes New Hampshire.
-      assert count.(fn ld -> is_nil(ld["streetAddress"]) and is_nil(ld["postalCode"]) end) == 363
+      # 366 after ski content wave 5 landed, +3 — Baker Mountain's own
+      # address, Wyman Dam, and the Arnold Trail to Quebec marker, all
+      # given only at the Moscow, ME town level (priv/seed_data/ski/
+      # baker-mountain.json). Every other locality-only address in this
+      # wave's 45 places carries a ZIP even without a street (16 rows,
+      # counted separately above), so only these three land here.
+      assert count.(fn ld -> is_nil(ld["streetAddress"]) and is_nil(ld["postalCode"]) end) == 366
     end
   end
 end

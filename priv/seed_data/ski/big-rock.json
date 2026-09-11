@@ -1,0 +1,95 @@
+{
+  "guide": {
+    "slug": "big-rock-ski-guide",
+    "title": "Big Rock, Maine: from Mars Hill Skiway to a community-owned nonprofit",
+    "destination": "Mars Hill, ME",
+    "destination_path": "united-states/maine/aroostook-county/mars-hill",
+    "tier": "guide",
+    "intro": "Per Big Rock's own history page, \"the first attempt to create a ski hill was in 1954,\" when Vaughn Cole and Carol Anderson \"put a rope tow up the western side of the mountain... it lasted only a couple of years.\" After a shipping delay, a Poma lift's grand opening followed on March 5, 1961, under the name Mars Hill Skiway. Wendell and Marie Pierce purchased the area in October 1967, registering it as Ski Way of Aroostook, Inc. and renaming it Big Rock Mountain, per the same source.",
+    "sections": [
+      {
+        "heading": "Maine Winter Sports Center, and a nonprofit rescue",
+        "body": "According to Big Rock's own history page, \"in the season of 1993-1994, they installed the 4,616 feet Mueller double chairlift servicing the top of the mountain,\" replacing a lift purchased from the closed Evergreen Valley Ski Area. In the fall of 2000, the Maine Winter Sports Center (MWSC) purchased the 290-acre Big Rock Ski Area, \"thanks in large part to a $1.5 million grant from the Libra Foundation.\" In June 2013, per the same source, MWSC \"announced plans to get out of the alpine ski business,\" and that October, Big Rock's closing was announced; \"the mountain was saved by a group forming a nonprofit with the area being transferred\" to them."
+      },
+      {
+        "heading": "The chairlift campaign",
+        "body": "Per Big Rock's own \"Chairlift Capital Campaign\" page, on December 8, 2021 the area \"initiated a capital campaign to replace the aging double chairlift to the top with a new quad chairlift... costing approximately $2.9 million.\" On August 18, 2022, Big Rock was \"Awarded $2.5 Million Grant from US Department of Commerce Economic Development,\" toward a $5 million total project, putting the campaign \"at 75% raised.\" On October 4, 2022, U.S. Senator Susan Collins visited to discuss the grant, quoted saying, \"BigRock Mountain is a powerful economic engine for Aroostook County, contributing to the local economy and supporting jobs, small businesses, and rural communities.\" On March 6, 2023, per the same page, Big Rock signed a contract with Doppelmayr for the new quad chairlift, targeting installation in the summer of 2024 for the 2024-25 season."
+      },
+      {
+        "heading": "Operating today",
+        "body": "Big Rock's own website describes it as \"a 501(c)(3), getting the community on the slopes,\" and per a blog post titled \"End of the 2025/2026 Season,\" the club wrote, \"After 65 days of operation, we are officially wrapping up the season.\""
+      },
+      {
+        "heading": "On Mars Hill Mountain",
+        "body": "The Mars Hill Wind Farm, Maine's first utility-scale wind power facility, was built on the same mountain as Big Rock, in 2006 and 2007. Per Wikipedia's \"Mars Hill Wind Farm\" article, \"a total of 28 GE 1.5 MW wind turbines were installed along the ridge and northern section of the mountain,\" an $85 million project. The Walter T. A. Hansen Memorial Library, Mars Hill's town library, opened in 1937, according to Wikipedia's \"Mars Hill, Maine\" article."
+      }
+    ],
+    "faq": [
+      {
+        "question": "Who owns Big Rock today?",
+        "answer": "Per Big Rock's own history page, the Maine Winter Sports Center announced its exit from the alpine ski business in June 2013 and, that October, the area was transferred to a nonprofit group formed to save it; Big Rock now describes itself as \"a 501(c)(3), getting the community on the slopes.\""
+      },
+      {
+        "question": "Is Big Rock still installing a new chairlift?",
+        "answer": "Per Big Rock's own \"Chairlift Capital Campaign\" page, a contract with Doppelmayr for a new quad chairlift was signed March 6, 2023, targeting installation in the summer of 2024 for the 2024-25 season."
+      }
+    ],
+    "photos": []
+  },
+  "places": [
+    {
+      "slug": "big-rock",
+      "name": "Big Rock",
+      "kind": "ski-area",
+      "destination_path": "united-states/maine/aroostook-county/mars-hill",
+      "address": "Big Rock, Mars Hill, ME 04758",
+      "summary": "A non-profit community ski area on Mars Hill Mountain, transferred to local ownership in 2013 after the Maine Winter Sports Center's exit.",
+      "history": "Per Big Rock's own history page, \"the first attempt to create a ski hill was in 1954,\" when Vaughn Cole and Carol Anderson \"put a rope tow up the western side of the mountain... it lasted only a couple of years.\" After a shipping delay, a Poma lift's grand opening followed on March 5, 1961, under the name Mars Hill Skiway. Wendell and Marie Pierce purchased the area in October 1967, registering it as Ski Way of Aroostook, Inc. and renaming it Big Rock Mountain. In the season of 1993-1994, \"they installed the 4,616 feet Mueller double chairlift servicing the top of the mountain,\" replacing a lift purchased from the closed Evergreen Valley Ski Area. In the fall of 2000, the Maine Winter Sports Center (MWSC) purchased the 290-acre Big Rock Ski Area, \"thanks in large part to a $1.5 million grant from the Libra Foundation.\" In June 2013, MWSC \"announced plans to get out of the alpine ski business,\" and that October, Big Rock's closing was announced; \"the mountain was saved by a group forming a nonprofit with the area being transferred\" to them. Per Big Rock's own \"Chairlift Capital Campaign\" page, on December 8, 2021 the area \"initiated a capital campaign to replace the aging double chairlift to the top with a new quad chairlift... costing approximately $2.9 million.\" On August 18, 2022, Big Rock was \"Awarded $2.5 Million Grant from US Department of Commerce Economic Development,\" toward a $5 million total project, putting the campaign \"at 75% raised.\" On October 4, 2022, U.S. Senator Susan Collins visited to discuss the grant, quoted saying, \"BigRock Mountain is a powerful economic engine for Aroostook County, contributing to the local economy and supporting jobs, small businesses, and rural communities.\" On March 6, 2023, Big Rock signed a contract with Doppelmayr for the new quad chairlift, targeting installation in the summer of 2024 for the 2024-25 season. Big Rock's own website describes it as \"a 501(c)(3), getting the community on the slopes,\" and a blog post titled \"End of the 2025/2026 Season\" states, \"After 65 days of operation, we are officially wrapping up the season.\"",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "mars-hill-wind-farm",
+      "name": "Mars Hill Wind Farm",
+      "kind": "attraction",
+      "destination_path": "united-states/maine/aroostook-county/mars-hill",
+      "address": "Mars Hill Mountain, Mars Hill, ME 04758",
+      "summary": "Maine's first utility-scale wind farm, built on the same mountain as Big Rock in 2006-2007.",
+      "history": "The Mars Hill Wind Farm, Maine's first utility-scale wind power facility, was built directly on Mars Hill Mountain in 2006 and 2007. Per Wikipedia's \"Mars Hill Wind Farm\" article, \"a total of 28 GE 1.5 MW wind turbines were installed along the ridge and northern section of the mountain,\" an $85 million project.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "walter-t-a-hansen-memorial-library",
+      "name": "Walter T. A. Hansen Memorial Library",
+      "kind": "historic-site",
+      "destination_path": "united-states/maine/aroostook-county/mars-hill",
+      "address": "Mars Hill, ME 04758",
+      "summary": "Mars Hill's town library, which opened in 1937.",
+      "history": "According to Wikipedia's \"Mars Hill, Maine\" article, \"in 1937, the Walter T.A. Hansen Memorial Library opened,\" serving as the town's library.",
+      "status": "open",
+      "photos": []
+    }
+  ],
+  "entries": [
+    {
+      "kind": "sight",
+      "name": "Big Rock",
+      "place_slug": "big-rock",
+      "note": "A non-profit community ski area on Mars Hill Mountain, transferred to local ownership in 2013."
+    },
+    {
+      "kind": "sight",
+      "name": "Mars Hill Wind Farm",
+      "place_slug": "mars-hill-wind-farm",
+      "note": "Maine's first utility-scale wind farm, built on the same mountain as Big Rock."
+    },
+    {
+      "kind": "sight",
+      "name": "Walter T. A. Hansen Memorial Library",
+      "place_slug": "walter-t-a-hansen-memorial-library",
+      "note": "Mars Hill's town library, which opened in 1937."
+    }
+  ],
+  "links": []
+}

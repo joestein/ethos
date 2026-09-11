@@ -1,0 +1,108 @@
+{
+  "guide": {
+    "slug": "lost-valley-ski-guide",
+    "title": "Lost Valley, Maine: Auburn's community hill, from 1961 founders to a 2015 rescue",
+    "destination": "Auburn, ME",
+    "destination_path": "united-states/maine/androscoggin-county/auburn",
+    "tier": "guide",
+    "intro": "Per New England Ski History's Lost Valley page, Lost Valley opened for the 1961-62 season, founded by orchardist Otto Wallingford, veterinarian Dr. Camille Gardner, and former Maine Speaker of the House Willis A. Trafton Jr., with construction beginning in 1961. Circa 1988, per the same source, Fern Pontbriand bought out founders Wallingford and Gardner to become majority owner; in the early 1990s he ceded day-to-day control to Lincoln Hayes, Diane Moreau, and Connie King under a five-year agreement giving them a 48% stake. Pontbriand died August 10, 2003, and in 2004 Hayes, Moreau, and King purchased his remaining 64% stake, declaring \"We're in this for the long haul.\"",
+    "sections": [
+      {
+        "heading": "The 2014 crisis and a lift-inspector buyer",
+        "body": "By June 2014, per the Central Maine article \"How Scott Shanaman gave Auburn's Lost Valley Ski Area the lift everyone hoped for\" (published February 22, 2026), owners Lincoln Hayes, Diane Moreau and Connie King said Lost Valley carried $1.6 million in debt and, after \"10 consecutive seasons of losses,\" lacked cash to open for 2014-2015 without intervention. Per New England Ski History, locals \"soon rallied and raised tens of thousands of dollars, ensuring the area would operate for the 2014-15 season\" while a new owner was sought. Scott and April Shanaman took over Lost Valley for the 2015-16 season; per the Central Maine article, Scott Shanaman was president of Aerial NDT Inspection Inc., a ski lift maintenance and inspection company, had worked with Lost Valley for a decade before the purchase, and had additional lift-operations experience at Sugarloaf."
+      },
+      {
+        "heading": "Record seasons",
+        "body": "According to the Central Maine article, skier visits were \"around 28,000\" in the Shanamans' first season (2015-16) and grew to 67,000 \"last year\" — the 2024-25 season, per the article's February 22, 2026 publication date — which the article calls \"a record for Lost Valley.\" As of that publication, \"Lost Valley says it's on track for another record-breaking season.\" Lost Valley Brewing Company, an on-site brewpub, debuted in February 2018 under Shanaman-era ownership, and a third chairlift was installed for the 2024-25 season, per New England Ski History."
+      },
+      {
+        "heading": "In Auburn",
+        "body": "Mount Apatite Park is a city-run, 325-acre wooded recreational area in western Auburn where visitors may still search old mine tailings for apatite, tourmaline and quartz specimens, per the City of Auburn's official park page. Festival Plaza, a downtown Auburn public plaza completed in 2002, hosts the city's signature events — New Year's Auburn, the Auburn Lobster Festival, and Blues & Brews — and was designed by Boston-based ICON Architecture. The Auburn Riverwalk, a walking trail along the Androscoggin River accessed behind Festival Plaza, features a 16-panel \"storywalk\" and crosses the river via the John T. Jenkins Memorial pedestrian bridge into Lewiston, per the City of Auburn's official Riverwalk page."
+      }
+    ],
+    "faq": [
+      {
+        "question": "Who owns Lost Valley today?",
+        "answer": "Scott and April Shanaman, who took over for the 2015-16 season after a 2014 financial crisis under the prior owners, per the Central Maine article on the sale. Scott Shanaman previously ran a ski-lift inspection company and had worked with Lost Valley for a decade before buying it."
+      },
+      {
+        "question": "How has Lost Valley grown under the Shanamans?",
+        "answer": "Skier visits rose from around 28,000 in the Shanamans' first season to 67,000 in the 2024-25 season, described by the Central Maine article as \"a record for Lost Valley.\""
+      }
+    ],
+    "photos": []
+  },
+  "places": [
+    {
+      "slug": "lost-valley",
+      "name": "Lost Valley",
+      "kind": "ski-area",
+      "destination_path": "united-states/maine/androscoggin-county/auburn",
+      "address": "200 Lost Valley Rd, Auburn, ME 04210",
+      "summary": "A community ski area in western Auburn, rescued from a 2014 financial crisis and now setting record skier-visit seasons under the Shanaman family.",
+      "history": "Per New England Ski History's Lost Valley page, Lost Valley opened for the 1961-62 season, founded by orchardist Otto Wallingford, veterinarian Dr. Camille Gardner, and former Maine Speaker of the House Willis A. Trafton Jr., with construction beginning in 1961. Circa 1988, Fern Pontbriand bought out founders Wallingford and Gardner to become majority owner; in the early 1990s he ceded day-to-day control to Lincoln Hayes, Diane Moreau, and Connie King under a five-year agreement giving them a 48% stake. Pontbriand died August 10, 2003, and in 2004 Hayes, Moreau, and King purchased his remaining 64% stake, declaring \"We're in this for the long haul.\" By June 2014, per the Central Maine article \"How Scott Shanaman gave Auburn's Lost Valley Ski Area the lift everyone hoped for\" (published February 22, 2026), the same three owners said Lost Valley carried $1.6 million in debt and, after \"10 consecutive seasons of losses,\" lacked cash to open for 2014-2015 without intervention. Locals \"soon rallied and raised tens of thousands of dollars, ensuring the area would operate for the 2014-15 season,\" per New England Ski History, while a new owner was sought. Scott and April Shanaman took over Lost Valley for the 2015-16 season; Scott Shanaman was president of Aerial NDT Inspection Inc., a ski lift maintenance and inspection company, had worked with Lost Valley for a decade before the purchase, and had additional lift-operations experience at Sugarloaf, per the Central Maine article. Skier visits were \"around 28,000\" that first season and grew to 67,000 in the 2024-25 season, \"a record for Lost Valley,\" per the same article, which as of its February 22, 2026 publication stated \"Lost Valley says it's on track for another record-breaking season.\" Lost Valley Brewing Company, an on-site brewpub, debuted in February 2018, and a third chairlift was installed for the 2024-25 season, per New England Ski History.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "mount-apatite-park",
+      "name": "Mount Apatite Park",
+      "kind": "park",
+      "destination_path": "united-states/maine/androscoggin-county/auburn",
+      "address": "64 Mt. Apatite Road, Auburn, ME 04210",
+      "summary": "A city-run wooded park in western Auburn on the site of historic gem mines, open for hiking, biking, and cross-country skiing.",
+      "history": "Per the City of Auburn's official Mount Apatite Park page, the park is a city-run, 325-acre wooded recreational area in western Auburn where visitors may still search old mine tailings for apatite, tourmaline and quartz specimens under posted regulations, on trails used for hiking, mountain biking, cross-country skiing and snowshoeing.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "festival-plaza",
+      "name": "Festival Plaza",
+      "kind": "attraction",
+      "destination_path": "united-states/maine/androscoggin-county/auburn",
+      "address": "Main Street (across from 95 Main Street), Auburn, ME 04210",
+      "summary": "A downtown Auburn riverside plaza, completed in 2002 and home to the city's signature festivals.",
+      "history": "Per the City of Auburn's official Festival Plaza page, Festival Plaza, a downtown Auburn public plaza and outdoor performance space along the Androscoggin River completed in 2002, is the site of the city's signature events — New Year's Auburn, the Auburn Lobster Festival, and Blues & Brews — and was designed by Boston-based ICON Architecture.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "auburn-riverwalk",
+      "name": "Auburn Riverwalk",
+      "kind": "park",
+      "destination_path": "united-states/maine/androscoggin-county/auburn",
+      "address": "Court Street at Main Street, Auburn, ME 04210",
+      "summary": "A riverside walking trail behind Festival Plaza, crossing into Lewiston via a pedestrian bridge.",
+      "history": "Per the City of Auburn's official Riverwalk page, the Auburn Riverwalk is a walking trail along the Androscoggin River, accessed at Court and Main Street behind Festival Plaza, featuring a 16-panel \"storywalk,\" gardens and outdoor art, that branches toward Auburn's Bonney Park and, separately, crosses the river via the John T. Jenkins Memorial pedestrian bridge into Lewiston.",
+      "status": "open",
+      "photos": []
+    }
+  ],
+  "entries": [
+    {
+      "kind": "sight",
+      "name": "Lost Valley",
+      "place_slug": "lost-valley",
+      "note": "A community ski area rescued from a 2014 financial crisis, now setting record skier-visit seasons."
+    },
+    {
+      "kind": "sight",
+      "name": "Mount Apatite Park",
+      "place_slug": "mount-apatite-park",
+      "note": "A city-run wooded park on the site of historic gem mines, open for hiking and cross-country skiing."
+    },
+    {
+      "kind": "sight",
+      "name": "Festival Plaza",
+      "place_slug": "festival-plaza",
+      "note": "A downtown riverside plaza completed in 2002, home to Auburn's signature festivals."
+    },
+    {
+      "kind": "sight",
+      "name": "Auburn Riverwalk",
+      "place_slug": "auburn-riverwalk",
+      "note": "A riverside walking trail behind Festival Plaza, crossing into Lewiston via a pedestrian bridge."
+    }
+  ],
+  "links": []
+}

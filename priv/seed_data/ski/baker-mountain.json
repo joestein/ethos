@@ -1,0 +1,91 @@
+{
+  "guide": {
+    "slug": "baker-mountain-ski-guide",
+    "title": "Baker Mountain, Maine: a rope tow on Pierce Hill since 1940",
+    "destination": "Moscow, ME",
+    "destination_path": "united-states/maine/somerset-county/moscow",
+    "tier": "guide",
+    "intro": "According to New England Ski History's Baker Mountain page, the area's roots \"likely date back to 1937 or 1938, when avid skiers Allen Quimby Jr. and Langdon Quimby logged the slopes of Pierce Hill,\" land they leased from Central Maine Power Company for their Allen Quimby Veneer Company. After a delayed start to the season, the rope tow debuted on January 28, 1940, with 150 skiers, 50 of them Farmington-Franklin County Ski Club members who had chartered buses. The Town of Moscow's own website states outright, \"Moscow is home to Baker Mountain Ski Tow, one of the oldest ski areas in the state.\"",
+    "sections": [
+      {
+        "heading": "The Baker Mountain Ski Tow Club",
+        "body": "Per New England Ski History's Baker Mountain page, the non-profit Baker Mountain Ski Tow Club was formed in early 1959, with Gerard Guay elected president, William Melcher vice president, Arthur Gamache treasurer, and multiple members of the Quimby family serving on the board of directors. In June 1967, the club began formalizing plans to replace the rope tow with an aerial lift, and the expanded ski area, served by the new lift, debuted on January 11, 1969, with club membership standing at 118. Separately, per the same source, the new lift and lodge were dedicated on February 2, 1969, with Allen Quimby cutting the ceremonial ribbon."
+      },
+      {
+        "heading": "Night skiing and continued volunteer operation",
+        "body": "According to New England Ski History, the Town of Moscow approved $800 for the installation of night skiing lights at its 1975 town meeting, and operations were bolstered in 1978-79 when the town provided two lift operators funded by the federal Comprehensive Employment and Training Act. Night skiing lights were installed again for the 1998-99 season, a $12,200 project funded by donations and a Maine Community Foundation grant, per the same source. New England Ski History states the Baker Mountain Ski Tow Club \"continues to operate Baker Mountain ski area to this day, thanks in large part to volunteers, grants, and donations,\" and its year-by-year price table lists the 2025-26 season as running from Opening Day January 31, 2026 to Closing Day March 8, 2026, with a $20 weekend ticket and a $150 season pass. The source's status field for Baker Mountain reads \"Status: Open,\" with a T-Bar/Poma surface lift and no standing chairlift."
+      },
+      {
+        "heading": "In Moscow",
+        "body": "Wyman Dam, a hydroelectric dam built in 1930, sits on the Moscow town line, and the Town of Moscow's own website separately calls it \"one of the largest hydroelectric facilities, located in Moscow,\" per Wikipedia's \"Wyman Dam\" article. A stretch of the historic Arnold Trail to Quebec, the wilderness route of Benedict Arnold's 1775 expedition and listed on the National Register of Historic Places in 1969, runs through Moscow; according to Wikipedia's \"Arnold Trail to Quebec\" article, a historical marker was placed there in 1916 by the Kennebec chapter of the Daughters of the American Revolution. The Town of Moscow's own website describes the Arnold Trail as \"a scenic historic route that winds northward through Moscow toward Quebec.\""
+      }
+    ],
+    "faq": [
+      {
+        "question": "How old is Baker Mountain?",
+        "answer": "New England Ski History's Baker Mountain page hedges that its roots \"likely date back to 1937 or 1938,\" when Allen Quimby Jr. and Langdon Quimby logged the slopes of Pierce Hill, with a rope tow debuting January 28, 1940."
+      },
+      {
+        "question": "Who runs Baker Mountain today?",
+        "answer": "The non-profit Baker Mountain Ski Tow Club, formed in early 1959, continues to operate the area, per New England Ski History, \"thanks in large part to volunteers, grants, and donations,\" with a T-Bar/Poma surface lift and night skiing."
+      }
+    ],
+    "photos": []
+  },
+  "places": [
+    {
+      "slug": "baker-mountain",
+      "name": "Baker Mountain",
+      "kind": "ski-area",
+      "destination_path": "united-states/maine/somerset-county/moscow",
+      "address": "Baker Mountain, Moscow, ME",
+      "summary": "A volunteer-run community ski area on Pierce Hill in Moscow, operating a T-Bar and Poma surface lift since the 1960s.",
+      "history": "According to New England Ski History's Baker Mountain page, the area's roots \"likely date back to 1937 or 1938, when avid skiers Allen Quimby Jr. and Langdon Quimby logged the slopes of Pierce Hill,\" land they leased from Central Maine Power Company for their Allen Quimby Veneer Company. After a delayed start to the season, the rope tow debuted on January 28, 1940, with 150 skiers, 50 of them Farmington-Franklin County Ski Club members who had chartered buses. The non-profit Baker Mountain Ski Tow Club was formed in early 1959, with Gerard Guay elected president, William Melcher vice president, Arthur Gamache treasurer, and multiple Quimby family members on the board. In June 1967, the club began formalizing plans to replace the rope tow with an aerial lift; the expanded ski area debuted on January 11, 1969, with club membership at 118, and, separately, the new lift and lodge were dedicated on February 2, 1969, with Allen Quimby cutting the ceremonial ribbon. Per the same source, the Town of Moscow approved $800 for night skiing lights at its 1975 town meeting, and operations were bolstered in 1978-79 when the town provided two lift operators funded by the Comprehensive Employment and Training Act. Night skiing lights were installed again for the 1998-99 season, a $12,200 project funded by donations and a Maine Community Foundation grant. New England Ski History states the Baker Mountain Ski Tow Club \"continues to operate Baker Mountain ski area to this day, thanks in large part to volunteers, grants, and donations,\" with the 2025-26 season running January 31 through March 8, 2026 ($20 weekend ticket, $150 season pass), and its status field reads \"Status: Open,\" with a T-Bar/Poma surface lift and no standing chairlift. The Town of Moscow's own website states, \"Moscow is home to Baker Mountain Ski Tow, one of the oldest ski areas in the state.\"",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "wyman-dam",
+      "name": "Wyman Dam",
+      "kind": "attraction",
+      "destination_path": "united-states/maine/somerset-county/moscow",
+      "address": "Wyman Dam, Moscow, ME",
+      "summary": "A 1930 hydroelectric dam on the Moscow town line, called by the Town of Moscow's own site one of the region's largest hydroelectric facilities.",
+      "history": "Wyman Dam, a hydroelectric dam built in 1930, \"connects the southwest corner of the town of Moscow with the southeast corner of Pleasant Ridge Plantation,\" per Wikipedia's \"Wyman Dam\" article. The Town of Moscow's own website separately calls it \"one of the largest hydroelectric facilities, located in Moscow.\"",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "arnold-trail-to-quebec-marker",
+      "name": "Arnold Trail to Quebec Marker",
+      "kind": "historic-site",
+      "destination_path": "united-states/maine/somerset-county/moscow",
+      "address": "Arnold Trail (Route 201), Moscow, ME",
+      "summary": "A 1916 Daughters of the American Revolution marker in Moscow along the historic Arnold Trail to Quebec, listed on the National Register of Historic Places in 1969.",
+      "history": "A stretch of the historic Arnold Trail to Quebec, the wilderness route of Benedict Arnold's 1775 expedition, runs through Moscow, and, per Wikipedia's \"Arnold Trail to Quebec\" article, \"there is also a historical marker in Moscow, Maine placed in 1916 by the Kennebec chapter of the Daughters of the American Revolution.\" The trail was added to the National Register of Historic Places in 1969. The Town of Moscow's own website describes the Arnold Trail as \"a scenic historic route that winds northward through Moscow toward Quebec.\"",
+      "status": "open",
+      "photos": []
+    }
+  ],
+  "entries": [
+    {
+      "kind": "sight",
+      "name": "Baker Mountain",
+      "place_slug": "baker-mountain",
+      "note": "A volunteer-run community ski area on Pierce Hill, operated by the non-profit Baker Mountain Ski Tow Club since 1959."
+    },
+    {
+      "kind": "sight",
+      "name": "Wyman Dam",
+      "place_slug": "wyman-dam",
+      "note": "A 1930 hydroelectric dam on the Moscow town line, called one of the region's largest by the Town of Moscow's own site."
+    },
+    {
+      "kind": "sight",
+      "name": "Arnold Trail to Quebec Marker",
+      "place_slug": "arnold-trail-to-quebec-marker",
+      "note": "A 1916 DAR marker along the historic Arnold Trail to Quebec, listed on the National Register of Historic Places in 1969."
+    }
+  ],
+  "links": []
+}

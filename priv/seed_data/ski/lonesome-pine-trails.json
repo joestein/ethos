@@ -1,0 +1,108 @@
+{
+  "guide": {
+    "slug": "lonesome-pine-trails-ski-guide",
+    "title": "Lonesome Pine Trails: Fort Kent's non-profit T-Bar since 1964",
+    "destination": "Fort Kent, ME",
+    "destination_path": "united-states/maine/aroostook-county/fort-kent",
+    "tier": "guide",
+    "intro": "According to New England Ski History's Lonesome Pine Trails page, in February 1964 Elmer Pelletier chaired a meeting at which the Fort Kent Ski Association was formed; Ed Cates was elected chairman of a ski tow and site committee, soon becoming association president. Lonesome Pine Trails, Inc. — the non-profit that still operates the ski area — was formed on July 16, 1964, and that September the group purchased a 20-acre tract of land on Stevens Hill, also called Klein/Kline Hill, for $3,000.",
+    "sections": [
+      {
+        "heading": "A snow-delayed opening, and a predecessor",
+        "body": "Per the same source, Lonesome Pine Trails opened for the 1964-65 season with a rope tow that, due to a lack of snow, likely did not start running until the weekend of January 30, 1965. A predecessor ski area, the \"County Ski Tow,\" had been built in summer 1954 by Philip Pelletier on his family's farm off Route 1 in Fort Kent, with two rope tows, prior to the 1964 founding of what became Lonesome Pine Trails. The area ran on a temporary snowmaking system during the winter of 2001-02, before a permanent system was built for the 2003-2004 season, initially covering the Maine and Reservoir trails."
+      },
+      {
+        "heading": "Operating today, and the Outdoor Center next door",
+        "body": "New England Ski History states Lonesome Pine Trails \"continues to operate to this day as a non-profit entity with the T-Bar, snowmaking, and night skiing.\" Per the operator's own website, it describes itself as \"the northernmost ski resort in New England.\" The Fort Kent Outdoor Center, a Nordic-ski and biathlon facility, was established near Lonesome Pine Trails in 1999 with funding from the Libra Foundation, per New England Ski History; its own homepage describes its trail and disc-golf course climbing \"from the lodge into the Lonesome Pine Trails,\" placing the two facilities directly adjacent to one another. The Outdoor Center's own site describes offering the Jalbert Biathlon Program for youth development, a post-graduate biathlon training program, and a Jalbert Biathlon Residence to house athletes in training. Per Wikipedia's \"Fort Kent, Maine\" article, \"The Fort Kent Outdoor Center (previously known as 10th Mountain) has hosted a multitude of World Cup biathlon events, including the largest events in 2004 and 2011.\""
+      },
+      {
+        "heading": "In Fort Kent",
+        "body": "Fort Kent, a hand-hewn cedar blockhouse built in 1839 at the confluence of the Fish and Saint John rivers, was added to the National Register of Historic Places on December 1, 1969 and declared a National Historic Landmark on November 7, 1973; per the Maine Bureau of Parks and Lands, it is preserved as Maine's \"first, state-owned historic site.\" The Fort Kent Railroad Station, built in 1902 by the Fish River Railroad and later part of the Bangor and Aroostook Railroad, was added to the National Register on April 21, 1989 and is now a railroad-history museum run by the Fort Kent Historical Society, per Wikipedia's article on the station."
+      }
+    ],
+    "faq": [
+      {
+        "question": "Who operates Lonesome Pine Trails?",
+        "answer": "Lonesome Pine Trails, Inc., a non-profit formed July 16, 1964, per New England Ski History, which describes it as continuing to operate \"as a non-profit entity with the T-Bar, snowmaking, and night skiing.\""
+      },
+      {
+        "question": "What is the Fort Kent Outdoor Center?",
+        "answer": "A separate, adjacent Nordic-ski and biathlon facility established in 1999 with Libra Foundation funding, per New England Ski History, whose own site says its trail climbs \"from the lodge into the Lonesome Pine Trails.\""
+      }
+    ],
+    "photos": []
+  },
+  "places": [
+    {
+      "slug": "lonesome-pine-trails",
+      "name": "Lonesome Pine Trails",
+      "kind": "ski-area",
+      "destination_path": "united-states/maine/aroostook-county/fort-kent",
+      "address": "2 Forest Ave, Fort Kent, ME 04743",
+      "summary": "A non-profit T-Bar ski area on Stevens Hill in Fort Kent, operating with snowmaking and night skiing since 1964.",
+      "history": "According to New England Ski History's Lonesome Pine Trails page, in February 1964 Elmer Pelletier chaired a meeting at which the Fort Kent Ski Association was formed; Ed Cates was elected chairman of a ski tow and site committee, soon becoming association president. Lonesome Pine Trails, Inc. was formed on July 16, 1964, and that September the group purchased a 20-acre tract of land on Stevens Hill, also called Klein/Kline Hill, for $3,000. The area opened for the 1964-65 season with a rope tow that, due to a lack of snow, likely did not start running until the weekend of January 30, 1965. A predecessor ski area, the \"County Ski Tow,\" had been built in summer 1954 by Philip Pelletier on his family's farm off Route 1 in Fort Kent, with two rope tows. The area ran on a temporary snowmaking system during the winter of 2001-02, before a permanent system was built for the 2003-2004 season, initially covering the Maine and Reservoir trails. New England Ski History states Lonesome Pine Trails \"continues to operate to this day as a non-profit entity with the T-Bar, snowmaking, and night skiing,\" and per the operator's own website, it describes itself as \"the northernmost ski resort in New England.\"",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "fort-kent-blockhouse",
+      "name": "Fort Kent (Blockhouse)",
+      "kind": "historic-site",
+      "destination_path": "united-states/maine/aroostook-county/fort-kent",
+      "address": "Route 1, Fort Kent, ME 04743",
+      "summary": "An 1839 cedar blockhouse at the confluence of the Fish and Saint John rivers, Maine's first state-owned historic site.",
+      "history": "Fort Kent, a hand-hewn cedar blockhouse built in 1839 at the confluence of the Fish and Saint John rivers, was added to the National Register of Historic Places on December 1, 1969 and declared a National Historic Landmark on November 7, 1973, per Wikipedia's article on the fort. It is preserved as the Fort Kent State Historic Site, corroborated by the Maine Bureau of Parks and Lands as Maine's \"first, state-owned historic site,\" now functioning as a museum open for visits in summer.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "fort-kent-railroad-station",
+      "name": "Fort Kent Railroad Station",
+      "kind": "museum",
+      "destination_path": "united-states/maine/aroostook-county/fort-kent",
+      "address": "Junction of Main and Market Streets, Fort Kent, ME 04743",
+      "summary": "A 1902 railroad depot in Fort Kent, now run as a local history museum by the Fort Kent Historical Society.",
+      "history": "Built in 1902 by the Fish River Railroad and later part of the Bangor and Aroostook Railroad, the Fort Kent Railroad Station was added to the National Register of Historic Places on April 21, 1989, per Wikipedia's article on the station, and is now operated as a local railroad-history museum by the Fort Kent Historical Society, generally open during summer months.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "fort-kent-outdoor-center",
+      "name": "Fort Kent Outdoor Center",
+      "kind": "park",
+      "destination_path": "united-states/maine/aroostook-county/fort-kent",
+      "address": "33 Paradis Circle, Fort Kent, ME 04743",
+      "summary": "A Nordic-ski and biathlon training center adjacent to Lonesome Pine Trails, host to World Cup biathlon events.",
+      "history": "The Fort Kent Outdoor Center, per New England Ski History, was established near Lonesome Pine Trails in 1999 with funding from the Libra Foundation. Per the center's own website, its trail and disc-golf course climbs \"from the lodge into the Lonesome Pine Trails,\" and it describes offering the Jalbert Biathlon Program for youth development, a post-graduate biathlon training program, and a Jalbert Biathlon Residence to house athletes in training. Per Wikipedia's \"Fort Kent, Maine\" article, \"The Fort Kent Outdoor Center (previously known as 10th Mountain) has hosted a multitude of World Cup biathlon events, including the largest events in 2004 and 2011.\"",
+      "status": "open",
+      "photos": []
+    }
+  ],
+  "entries": [
+    {
+      "kind": "sight",
+      "name": "Lonesome Pine Trails",
+      "place_slug": "lonesome-pine-trails",
+      "note": "A non-profit T-Bar ski area on Stevens Hill, operating with snowmaking and night skiing since 1964."
+    },
+    {
+      "kind": "sight",
+      "name": "Fort Kent (Blockhouse)",
+      "place_slug": "fort-kent-blockhouse",
+      "note": "An 1839 cedar blockhouse, Maine's first state-owned historic site."
+    },
+    {
+      "kind": "sight",
+      "name": "Fort Kent Railroad Station",
+      "place_slug": "fort-kent-railroad-station",
+      "note": "A 1902 railroad depot now run as a local history museum."
+    },
+    {
+      "kind": "sight",
+      "name": "Fort Kent Outdoor Center",
+      "place_slug": "fort-kent-outdoor-center",
+      "note": "A Nordic-ski and biathlon training center adjacent to Lonesome Pine Trails."
+    }
+  ],
+  "links": []
+}
