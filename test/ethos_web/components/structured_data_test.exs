@@ -1280,13 +1280,16 @@ defmodule EthosWeb.StructuredDataTest do
       # Court Street," or a museum credited to its parent institution's
       # address, with a postal code but no house number the parser
       # recognises); the remaining 14 are street-less and ZIP-less
-      # locality-only rows — 11 ski areas' own addresses given only at town
-      # level (Loon, McIntyre, Mount Eustis, Mount Sunapee, Pat's Peak,
+      # locality-only rows — 10 of the wave's 11 ski areas' own addresses
+      # given only at town level (Loon, McIntyre, Mount Sunapee, Pat's Peak,
       # Ragged, Storrs Hill, Tenney, Waterville Valley, Whaleback, Wildcat —
-      # none of these publishes a street-numbered mailing address) plus
-      # Whale's Tale Waterpark, the Pollyanna statue, the Bell Cove caboose
-      # museum, and Colburn Park Historic District, each sourced as a
-      # descriptive or town-level location rather than a postal address:
+      # none of these ten publishes a street-numbered mailing address; the
+      # eleventh, Mount Eustis Ski Hill, does — "188 Mt. Eustis Road,
+      # Littleton, NH 03561" — and is one of the 24 street+ZIP rows above,
+      # not one of these ten) plus Whale's Tale Waterpark, the Pollyanna
+      # statue, the Bell Cove caboose museum, and Colburn Park Historic
+      # District, each sourced as a descriptive or town-level location
+      # rather than a postal address:
       #
       #   * total 5216 -> 5263, +47.
       #   * `streetAddress` 4537 -> 4564, +27 (the 24 street+ZIP rows plus
@@ -1388,18 +1391,22 @@ defmodule EthosWeb.StructuredDataTest do
       # Batcheller's Cave, and Otter Brook Lake). Every one is a real
       # address as the source gives it; none is missing a house number the
       # source actually had.
-      # 363 after ski content wave 4 landed, +14 — eleven ski areas' own
-      # addresses given only at town level (Loon, McIntyre, Mount Eustis,
-      # Mount Sunapee, Pat's Peak, Ragged, Storrs Hill, Tenney, Waterville
-      # Valley, Whaleback, and Wildcat — the last two sitting on the Coos
-      # County node itself rather than a town node, since Wildcat's base is
-      # in unincorporated Pinkham's Grant) plus three surrounding sites and
-      # one seasonal attraction sourced as descriptive or town-level
-      # locations rather than postal addresses (Whale's Tale Waterpark, the
-      # Pollyanna statue, the Bell Cove caboose museum, and Colburn Park
-      # Historic District). Every one is a real address as the source gives
-      # it; none is missing a house number the source actually had. This
-      # wave completes New Hampshire.
+      # 363 after ski content wave 4 landed, +14 — 10 of the wave's 11 ski
+      # areas' own addresses given only at town level (Loon, McIntyre, Mount
+      # Sunapee, Pat's Peak, Ragged, Storrs Hill, Tenney, Waterville Valley,
+      # Whaleback, and Wildcat — Wildcat sits on the Coos County node itself
+      # rather than a town node, since its base is in unincorporated
+      # Pinkham's Grant; Whaleback sits on an ordinary town node, Enfield,
+      # and is locality-only only because its own address is given at town
+      # level, not because of where it sits in the tree) plus three
+      # surrounding sites and one seasonal attraction sourced as descriptive
+      # or town-level locations rather than postal addresses (Whale's Tale
+      # Waterpark, the Pollyanna statue, the Bell Cove caboose museum, and
+      # Colburn Park Historic District). The eleventh ski area, Mount Eustis
+      # Ski Hill, is not in this bucket — its own address, "188 Mt. Eustis
+      # Road, Littleton, NH 03561," is a street+ZIP row. Every one of the 14
+      # is a real address as the source gives it; none is missing a house
+      # number the source actually had. This wave completes New Hampshire.
       assert count.(fn ld -> is_nil(ld["streetAddress"]) and is_nil(ld["postalCode"]) end) == 363
     end
   end
