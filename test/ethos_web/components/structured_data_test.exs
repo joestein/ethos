@@ -1262,10 +1262,49 @@ defmodule EthosWeb.StructuredDataTest do
       # Area's "1251 Eaton Road, Route 153" — which moves the
       # `comma_streets` pin in test/ethos/places/address_test.exs from 66 to
       # 67 and nothing here.
-      assert length(emitted) == 5216
-      assert count.(& &1["streetAddress"]) == 4537
-      assert count.(&is_nil(&1["streetAddress"])) == 679
-      assert count.(& &1["postalCode"]) == 3776
+      #
+      # Re-measured after ski content wave 4 landed
+      # priv/seed_data/ski/{loon-mountain-resort,mcintyre-ski-area,
+      # mount-eustis-ski-hill,mount-sunapee-resort,pats-peak,
+      # ragged-mountain-resort,storrs-hill-ski-area,tenney-mountain,
+      # waterville-valley-resort,whaleback-mountain,wildcat-mountain}.json
+      # with 47 places (one ski area plus surroundings per file), completing
+      # New Hampshire. Of the 47: 24 carry a house-numbered (or route-
+      # numbered) street line AND a five-digit ZIP; 3 more carry a street
+      # line with no ZIP (Chutters' Littleton flagship, AVA Gallery and Art
+      # Center, and Lebanon Opera House — all real addresses as sourced,
+      # just ZIP-less); 6 carry a ZIP with no street (the Zimmerman House,
+      # the Center Meetinghouse, Henniker Town Hall, the Danbury North Road
+      # Schoolhouse Museum, the South Danbury Christian Church, and the
+      # Plymouth Historical Museum & Memory House — each a route, "One
+      # Court Street," or a museum credited to its parent institution's
+      # address, with a postal code but no house number the parser
+      # recognises); the remaining 14 are street-less and ZIP-less
+      # locality-only rows — 11 ski areas' own addresses given only at town
+      # level (Loon, McIntyre, Mount Eustis, Mount Sunapee, Pat's Peak,
+      # Ragged, Storrs Hill, Tenney, Waterville Valley, Whaleback, Wildcat —
+      # none of these publishes a street-numbered mailing address) plus
+      # Whale's Tale Waterpark, the Pollyanna statue, the Bell Cove caboose
+      # museum, and Colburn Park Historic District, each sourced as a
+      # descriptive or town-level location rather than a postal address:
+      #
+      #   * total 5216 -> 5263, +47.
+      #   * `streetAddress` 4537 -> 4564, +27 (the 24 street+ZIP rows plus
+      #     the 3 street-only rows).
+      #   * `is_nil(streetAddress)` 679 -> 699, +20 (the 6 ZIP-only rows plus
+      #     the 14 locality-only rows).
+      #   * `postalCode` 3776 -> 3806, +30 (the 24 street+ZIP rows plus the 6
+      #     ZIP-only rows).
+      #
+      # Two of the 47 carry a comma inside their street line — Chutters'
+      # Lincoln location's "264 Main St, Depot Plaza" and Great North
+      # Aleworks' "1050 Holt Ave, Unit #14" — which moves the
+      # `comma_streets` pin in test/ethos/places/address_test.exs from 67 to
+      # 69 and nothing here.
+      assert length(emitted) == 5263
+      assert count.(& &1["streetAddress"]) == 4564
+      assert count.(&is_nil(&1["streetAddress"])) == 699
+      assert count.(& &1["postalCode"]) == 3806
 
       # The largest behavioural delta this change ships: 302 places emit a
       # PostalAddress carrying only locality, region and country. Their full
@@ -1349,7 +1388,19 @@ defmodule EthosWeb.StructuredDataTest do
       # Batcheller's Cave, and Otter Brook Lake). Every one is a real
       # address as the source gives it; none is missing a house number the
       # source actually had.
-      assert count.(fn ld -> is_nil(ld["streetAddress"]) and is_nil(ld["postalCode"]) end) == 349
+      # 363 after ski content wave 4 landed, +14 — eleven ski areas' own
+      # addresses given only at town level (Loon, McIntyre, Mount Eustis,
+      # Mount Sunapee, Pat's Peak, Ragged, Storrs Hill, Tenney, Waterville
+      # Valley, Whaleback, and Wildcat — the last two sitting on the Coos
+      # County node itself rather than a town node, since Wildcat's base is
+      # in unincorporated Pinkham's Grant) plus three surrounding sites and
+      # one seasonal attraction sourced as descriptive or town-level
+      # locations rather than postal addresses (Whale's Tale Waterpark, the
+      # Pollyanna statue, the Bell Cove caboose museum, and Colburn Park
+      # Historic District). Every one is a real address as the source gives
+      # it; none is missing a house number the source actually had. This
+      # wave completes New Hampshire.
+      assert count.(fn ld -> is_nil(ld["streetAddress"]) and is_nil(ld["postalCode"]) end) == 363
     end
   end
 end

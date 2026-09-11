@@ -1,0 +1,138 @@
+{
+  "guide": {
+    "slug": "loon-mountain-resort-ski-guide",
+    "title": "Loon Mountain Resort, New Hampshire: skiing in Lincoln since 1966",
+    "destination": "Lincoln, NH",
+    "destination_path": "united-states/new-hampshire/grafton-county/lincoln",
+    "tier": "guide",
+    "intro": "Loon Mountain Resort's own History page states the resort was established in 1966 by Sherman Adams, a former New Hampshire governor and White House chief of staff. Per the same page, construction took eight months and the resort opened for business on December 27, 1966, with its first season featuring 12 trails, two lifts, and one toilet. Sherman Adams served as the resort's president and general manager until his death in 1986.",
+    "sections": [
+      {
+        "heading": "From the Adams family to Boyne Resorts",
+        "body": "Loon Mountain was purchased by Boyne Resorts in 2018, which the resort's own History page describes as \"placing assets and operational control under one entity.\" In 2019, per that same page, Loon introduced what it describes as \"North America's first ever dual-frequency RFID gates\" at key base-area lifts. According to Loon Mountain Resort's own History page, the South Peak Expansion, completed in 2023, added 11 trails and one four-person chairlift."
+      },
+      {
+        "heading": "In Lincoln",
+        "body": "Clark's Bears' own site lists an \"1884 Pemigewasset Hook and Ladder Fire Station\" among the museums on its grounds. Indian Head Resort's own homepage describes itself as a four-season lodging property with dining and a private lake, welcoming guests to \"your home away from home in the heart of New Hampshire's White Mountains.\" Gordi's Fish & Steak House was established in 1986 by Bob and Muffy Copenhaver together with Gordi and Karen Eaton; per the restaurant's own About page, Gordi Eaton was on the U.S. Olympic ski teams in 1960 and 1964 and coached the 1968 Olympic team, while Karen Budge Eaton was on the 1968 and 1972 Olympic teams. Chutters' own website states it operates a second retail candy store in Lincoln, separate from its flagship Littleton store. Whale's Tale Waterpark, per its own website, describes itself as having \"been thrilling customers for nearly four decades\" and as \"New England's Favorite Waterpark,\" open seasonally in Lincoln."
+      }
+    ],
+    "faq": [
+      {
+        "question": "Who founded Loon Mountain?",
+        "answer": "Loon Mountain Resort's own History page states the resort was established in 1966 by Sherman Adams, a former New Hampshire governor and White House chief of staff, who served as its president and general manager until his death in 1986."
+      },
+      {
+        "question": "Who owns Loon Mountain now?",
+        "answer": "Loon Mountain was purchased by Boyne Resorts in 2018, per the resort's own History page, which describes the deal as \"placing assets and operational control under one entity.\""
+      }
+    ],
+    "photos": []
+  },
+  "places": [
+    {
+      "slug": "loon-mountain-resort",
+      "name": "Loon Mountain Resort",
+      "kind": "ski-area",
+      "destination_path": "united-states/new-hampshire/grafton-county/lincoln",
+      "address": "Lincoln, NH",
+      "summary": "A Boyne Resorts-owned ski area in Lincoln, established in 1966 by former NH Governor Sherman Adams and expanded most recently by the 2023 South Peak Expansion.",
+      "history": "Loon Mountain Resort's own History page states the resort was established in 1966 by Sherman Adams, a former New Hampshire governor and White House chief of staff. Per the same page, construction took eight months and the resort opened for business on December 27, 1966, with its first season featuring 12 trails, two lifts, and one toilet. Sherman Adams served as the resort's president and general manager until his death in 1986, per Loon Mountain Resort's own History page. Loon Mountain was purchased by Boyne Resorts in 2018, which the resort's own History page describes as \"placing assets and operational control under one entity.\" In 2019, per that same page, Loon introduced what it describes as \"North America's first ever dual-frequency RFID gates\" at key base-area lifts. According to Loon Mountain Resort's own History page, the South Peak Expansion, completed in 2023, added 11 trails and one four-person chairlift.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "clarks-bears",
+      "name": "Clark's Bears (Clark's Trading Post)",
+      "kind": "attraction",
+      "destination_path": "united-states/new-hampshire/grafton-county/lincoln",
+      "address": "110 US Route 3, Lincoln, NH 03251",
+      "summary": "A roadside trading post and animal attraction in Lincoln, with a collection of historic buildings on its grounds.",
+      "history": "Clark's Bears' own homepage lists an \"1884 Pemigewasset Hook and Ladder Fire Station\" among the museums on its grounds, per Clark's Bears' own website.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "indian-head-resort",
+      "name": "Indian Head Resort",
+      "kind": "hotel",
+      "destination_path": "united-states/new-hampshire/grafton-county/lincoln",
+      "address": "664 US Route 3, Lincoln, NH 03251",
+      "summary": "A four-season lodging property in Lincoln with dining and a private lake.",
+      "history": "Indian Head Resort's own homepage describes it as a four-season lodging property with dining and a private lake, welcoming guests to \"your home away from home in the heart of New Hampshire's White Mountains,\" per Indian Head Resort's own website.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "gordis-fish-and-steak-house",
+      "name": "Gordi's Fish & Steak House",
+      "kind": "restaurant",
+      "destination_path": "united-states/new-hampshire/grafton-county/lincoln",
+      "address": "260 Main St, Lincoln, NH 03251",
+      "summary": "A Lincoln restaurant founded in 1986 by two Olympic skiers and their families.",
+      "history": "Gordi's Fish & Steak House was established in 1986 by Bob and Muffy Copenhaver together with Gordi and Karen Eaton, per the restaurant's own About page. Per the same page, Gordi Eaton was on the U.S. Olympic ski teams in 1960 and 1964 and coached the 1968 Olympic team, while Karen Budge Eaton was on the 1968 and 1972 Olympic teams.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "chutters-lincoln",
+      "name": "Chutters (Lincoln)",
+      "kind": "shop",
+      "destination_path": "united-states/new-hampshire/grafton-county/lincoln",
+      "address": "264 Main St, Depot Plaza, Lincoln, NH 03251",
+      "summary": "A retail candy store in Lincoln, a second location of the Littleton shop known for its long candy counter.",
+      "history": "Chutters' own website states it operates a second retail candy store in Lincoln, NH, at 264 Main St., Depot Plaza, separate from its flagship Littleton store that holds what its own website calls the \"World's Longest Candy Counter.\"",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "whales-tale-waterpark",
+      "name": "Whale's Tale Waterpark",
+      "kind": "amusement-park",
+      "destination_path": "united-states/new-hampshire/grafton-county/lincoln",
+      "address": "Lincoln, NH",
+      "summary": "A seasonal waterpark in Lincoln, in the White Mountains.",
+      "history": "Whale's Tale Waterpark's own website describes itself as having \"been thrilling customers for nearly four decades\" and, per its own website, as \"New England's Favorite Waterpark,\" open seasonally in Lincoln, NH.",
+      "status": "open",
+      "photos": []
+    }
+  ],
+  "entries": [
+    {
+      "kind": "sight",
+      "name": "Loon Mountain Resort",
+      "place_slug": "loon-mountain-resort",
+      "note": "A Boyne Resorts-owned ski area in Lincoln, established in 1966 by former NH Governor Sherman Adams."
+    },
+    {
+      "kind": "sight",
+      "name": "Clark's Bears (Clark's Trading Post)",
+      "place_slug": "clarks-bears",
+      "note": "A roadside trading post and animal attraction in Lincoln, with historic buildings on its grounds."
+    },
+    {
+      "kind": "stay",
+      "name": "Indian Head Resort",
+      "place_slug": "indian-head-resort",
+      "note": "A four-season lodging property in Lincoln with dining and a private lake."
+    },
+    {
+      "kind": "food",
+      "name": "Gordi's Fish & Steak House",
+      "place_slug": "gordis-fish-and-steak-house",
+      "note": "A Lincoln restaurant founded in 1986 by two Olympic skiers and their families."
+    },
+    {
+      "kind": "tip",
+      "name": "Chutters (Lincoln)",
+      "place_slug": "chutters-lincoln",
+      "note": "A retail candy store in Lincoln, a second location of the Littleton shop."
+    },
+    {
+      "kind": "sight",
+      "name": "Whale's Tale Waterpark",
+      "place_slug": "whales-tale-waterpark",
+      "note": "A seasonal waterpark in Lincoln, in the White Mountains."
+    }
+  ],
+  "links": []
+}

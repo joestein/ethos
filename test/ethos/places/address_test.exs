@@ -617,8 +617,33 @@ defmodule Ethos.Places.AddressTest do
     # itself prints as part of its mailing address, not a directional aside
     # invented by a finder. The ratchet moves rather than the address, for
     # the same reason it always has.
-    assert comma_streets <= 67,
-           "#{comma_streets} American street lines carry a comma qualifier, up from 67"
+    # 69 after ski content wave 4 landed
+    # priv/seed_data/ski/{loon-mountain-resort,mcintyre-ski-area,
+    # mount-eustis-ski-hill,mount-sunapee-resort,pats-peak,
+    # ragged-mountain-resort,storrs-hill-ski-area,tenney-mountain,
+    # waterville-valley-resort,whaleback-mountain,wildcat-mountain}.json, 47
+    # places (New Hampshire complete). Two of the wave's places carry a
+    # comma inside the street line, both the same acceptable class as the
+    # standing ones — a real sub-locality or unit designator the operator
+    # itself prints as part of its mailing address, not a directional aside
+    # invented by a finder:
+    #
+    #   * chutters-lincoln (priv/seed_data/ski/loon-mountain-resort.json) —
+    #     "264 Main St, Depot Plaza, Lincoln, NH 03251," per Chutters' own
+    #     website, parses to the street line "264 Main St, Depot Plaza."
+    #     Depot Plaza is a real shopping plaza in Lincoln, the same class as
+    #     Sherburne Pass and Route 153 above.
+    #   * great-north-aleworks (priv/seed_data/ski/mcintyre-ski-area.json) —
+    #     "1050 Holt Ave, Unit #14, Manchester, NH 03109," per the brewery's
+    #     own Story & Mission page, parses to the street line "1050 Holt
+    #     Ave, Unit #14" — an ordinary suite designator, the same class as
+    #     del-friscos-double-eagle-boston and flemings-prime-steakhouse-
+    #     brickell above.
+    #
+    # The ratchet moves rather than the addresses, for the same reason it
+    # always has.
+    assert comma_streets <= 69,
+           "#{comma_streets} American street lines carry a comma qualifier, up from 69"
 
     for p <- italian, p.street, String.contains?(p.street, ",") do
       # A civico may be a range ("5-7") or carry a letter or a slashed suffix

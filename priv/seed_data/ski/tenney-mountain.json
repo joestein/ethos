@@ -1,0 +1,91 @@
+{
+  "guide": {
+    "slug": "tenney-mountain-ski-guide",
+    "title": "Tenney Mountain, New Hampshire: Plymouth's mountain, through repeated closures and a 2023 restart",
+    "destination": "Plymouth, NH",
+    "destination_path": "united-states/new-hampshire/grafton-county/plymouth",
+    "tier": "guide",
+    "intro": "Tenney Mountain's own About page states skiing at the mountain \"dates back to the 1930s, when local skiers carved their own routes down the mountain,\" and that its first formal trails, cut by 1959, were served by a T-bar lift installed by 10th Mountain Division veteran Sam Hall. In 1964, per the same page, the Hornet Double chairlift was installed and was \"famously carried up the mountain by hand.\"",
+    "sections": [
+      {
+        "heading": "Repeated closures, and a 2023 restart",
+        "body": "An independent ski-history site documents that Tenney closed and did not open for the 2001-02 season; was purchased by SnowMagic in October 2002 and reopened that December; again did not open for the 2006-07 season; and after operating through 2009-10 was sold on December 15, 2010 to Iroquois Capital, entering a multi-year dormant period during which wind turbines were built on the property in spring 2012, per New England Ski History's Tenney Mountain page. Tenney Mountain Development Group purchased the property on November 21, 2014 for $1.25 million, and the Hornet chairlift resumed service on March 8, 2018 \"for the first time in eight years,\" with 2018-19 described as the first full winter of operations \"in nearly a decade,\" per the same source. Tenney Mountain's own About page states it is currently owned by Northcountry Development Group, describing the mountain as being \"in the midst of a new chapter\" focused on \"restoring operations, improving infrastructure, and preserving the spirit\" of the mountain."
+      },
+      {
+        "heading": "Operating today",
+        "body": "Tenney Mountain's own site states, in past tense, that it \"is now CLOSED for the 2025/26 winter season,\" thanking everyone for what it called an outstanding winter As of this writing, the site is selling 2026-27 season passes with a stated price-increase deadline: \"All Season Pass prices will increase after October 15th. Purchase yours today and lock in next winter while prices are still discounted.\" The site lists winter lift-operating hours for the Hornet Double, 9:00 am to 4:00 pm daily, in addition to running scenic \"Fall Chairlift Rides\" starting September 26 and hosting an Oktoberfest on October 10. Tenney Mountain is listed by Ski NH, the state ski areas trade association, among its member ski areas. On a third-party snow-report aggregator, Tenney's page lists a projected operating season of December 5 to April 11, shown as \"closed for the season\" outside that window. The Hornet Double is described on the resort's own site as \"New Hampshire's oldest operating chairlift.\""
+      },
+      {
+        "heading": "In Plymouth",
+        "body": "The Flying Monkey Movie House and Performance Center occupies a historic theater originally opened in the 1920s as the \"New Plymouth Theater,\" a home for vaudeville shows and silent films before being restored and reopened in 2010 as a live-performance and movie venue, per the venue's own website. The Plymouth Historical Museum & Memory House, operated by the Plymouth Historical Society in the old Webster Courthouse behind Town Hall, is open seasonally on Saturdays from 10:00-1:00, mid-May through November, plus \"by chance or appointment,\" per the society's own website."
+      }
+    ],
+    "faq": [
+      {
+        "question": "Is Tenney Mountain currently operating?",
+        "answer": "Yes. Tenney Mountain's own site states it closed, in the past tense, for a completed 2025-26 winter season, and as of this writing is selling 2026-27 season passes and running scenic Fall Chairlift Rides ahead of the coming winter."
+      },
+      {
+        "question": "Why has Tenney closed and reopened so many times?",
+        "answer": "New England Ski History's Tenney Mountain page documents non-opening seasons in 2001-02 and 2006-07, a 2002 SnowMagic-led reopening, a 2010 sale into a multi-year dormant period, and a 2014 purchase by Tenney Mountain Development Group that led to the Hornet chairlift resuming service in March 2018."
+      }
+    ],
+    "photos": []
+  },
+  "places": [
+    {
+      "slug": "tenney-mountain",
+      "name": "Tenney Mountain",
+      "kind": "ski-area",
+      "destination_path": "united-states/new-hampshire/grafton-county/plymouth",
+      "address": "Plymouth, NH",
+      "summary": "A ski area in Plymouth with a long history of closures and reopenings, currently operated by Northcountry Development Group.",
+      "history": "Tenney Mountain's own About page states skiing at the mountain \"dates back to the 1930s, when local skiers carved their own routes down the mountain,\" and that its first formal trails, cut by 1959, were served by a T-bar lift installed by 10th Mountain Division veteran Sam Hall. In 1964, per the same page, the Hornet Double chairlift was installed and was \"famously carried up the mountain by hand.\" An independent ski-history site documents that Tenney closed and did not open for the 2001-02 season; was purchased by SnowMagic in October 2002 and reopened that December; again did not open for the 2006-07 season; and after operating through 2009-10 was sold on December 15, 2010 to Iroquois Capital, entering a multi-year dormant period during which wind turbines were built on the property in spring 2012, per New England Ski History's Tenney Mountain page. Tenney Mountain Development Group purchased the property on November 21, 2014 for $1.25 million, and the Hornet chairlift resumed service on March 8, 2018 \"for the first time in eight years,\" with 2018-19 described as the first full winter of operations \"in nearly a decade,\" per the same source. Tenney Mountain's own About page states it is currently owned by Northcountry Development Group, describing the mountain as being \"in the midst of a new chapter\" focused on \"restoring operations, improving infrastructure, and preserving the spirit\" of the mountain. Tenney Mountain's own site states, in past tense, that it \"is now CLOSED for the 2025/26 winter season,\" thanking everyone for what it called an outstanding winter As of this writing, the site is selling 2026-27 season passes with a stated price-increase deadline: \"All Season Pass prices will increase after October 15th. Purchase yours today and lock in next winter while prices are still discounted.\" The site lists winter lift-operating hours for the Hornet Double, 9:00 am to 4:00 pm daily, in addition to running scenic \"Fall Chairlift Rides\" starting September 26 and hosting an Oktoberfest on October 10. Tenney Mountain is listed by Ski NH, the state ski areas trade association, among its member ski areas. On a third-party snow-report aggregator, Tenney's page lists a projected operating season of December 5 to April 11, shown as \"closed for the season\" outside that window. The Hornet Double is described on the resort's own site as \"New Hampshire's oldest operating chairlift.\"",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "flying-monkey-movie-house",
+      "name": "Flying Monkey Movie House and Performance Center",
+      "kind": "theater",
+      "destination_path": "united-states/new-hampshire/grafton-county/plymouth",
+      "address": "39 Main Street, Plymouth, NH 03264",
+      "summary": "A restored 1920s theater in downtown Plymouth, now a live-performance and movie venue.",
+      "history": "The Flying Monkey Movie House and Performance Center occupies a historic theater originally opened in the 1920s as the \"New Plymouth Theater,\" a home for vaudeville shows and silent films before being restored and reopened in 2010 as a live-performance and movie venue, per the venue's own website.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "plymouth-historical-museum",
+      "name": "Plymouth Historical Museum & Memory House",
+      "kind": "museum",
+      "destination_path": "united-states/new-hampshire/grafton-county/plymouth",
+      "address": "One Court Street, Plymouth, NH 03264",
+      "summary": "A local history museum in Plymouth's old Webster Courthouse.",
+      "history": "The Plymouth Historical Museum & Memory House, operated by the Plymouth Historical Society in the old Webster Courthouse behind Town Hall, is open seasonally on Saturdays from 10:00-1:00, mid-May through November, plus \"by chance or appointment,\" per the society's own website.",
+      "status": "open",
+      "photos": []
+    }
+  ],
+  "entries": [
+    {
+      "kind": "sight",
+      "name": "Tenney Mountain",
+      "place_slug": "tenney-mountain",
+      "note": "A ski area in Plymouth with a long history of closures and reopenings."
+    },
+    {
+      "kind": "sight",
+      "name": "Flying Monkey Movie House and Performance Center",
+      "place_slug": "flying-monkey-movie-house",
+      "note": "A restored 1920s theater in downtown Plymouth, now a live-performance and movie venue."
+    },
+    {
+      "kind": "sight",
+      "name": "Plymouth Historical Museum & Memory House",
+      "place_slug": "plymouth-historical-museum",
+      "note": "A local history museum in Plymouth's old Webster Courthouse."
+    }
+  ],
+  "links": []
+}

@@ -1,0 +1,138 @@
+{
+  "guide": {
+    "slug": "mount-eustis-ski-hill-ski-guide",
+    "title": "Mount Eustis Ski Hill, New Hampshire: Littleton's rope tow, reopened after 32 years",
+    "destination": "Littleton, NH",
+    "destination_path": "united-states/new-hampshire/grafton-county/littleton",
+    "tier": "guide",
+    "intro": "The rope tow at Mount Eustis was formally dedicated by the Littleton Outing Club on January 28 or 29, 1939, per the New England Lost Ski Areas Project's page on Mount Eustis. The Town of Littleton purchased the land in 1960, acquiring 34.67 acres for $7,200, and continued to operate the area until about 1983, \"although the exact last day of skiing is not yet known,\" per the same source.",
+    "sections": [
+      {
+        "heading": "The 32-year reopening",
+        "body": "A nonprofit, Mt. Eustis Ski Hill, was organized in 2013, allowing for formal fundraising toward reopening the hill, per NELSAP's page. The 2013 fundraising plan called for a rehabilitated rope tow from the former ski area in Lisbon, NH, to be restored by Littleton High School students, per the same page. Mt. Eustis held its official grand opening on February 7, 2015; on that day, per NELSAP, the donated rope tow had generator trouble, and snowmobiles were used to bring skiers to the summit. NELSAP's own page describes the reopening as holding \"the record for the longest closed ski area to reopen in New England - approximately 32 years.\" Mount Eustis Ski Hill's own website states the hill is now \"powered entirely by a passionate volunteer crew and the non-profit's dedicated board of directors.\""
+      },
+      {
+        "heading": "In Littleton",
+        "body": "Schilling Beer Co. operates a Brewery Pub & Kitchen at 18 Mill St in Littleton, NH, in addition to a separate Store & Tasting Room and Mill St. Kitchen on the same street, per the brewery's own website. Chutters describes its Littleton store, per its own website, as \"Home of the World's Longest Candy Counter,\" stating the counter runs 112 feet along the store. The Littleton Diner's own site states the original diner car was \"built in Merrimack, MA in 1928 and transported to Littleton, NH - where it opened in 1930,\" and that \"in 1940 a new Sterling Diner was constructed on the original site.\" Thayers Inn describes itself on its own site as \"a historic New England landmark\" with \"Greek revival architecture,\" positioned as the central hub of downtown Littleton. A bronze Pollyanna statue in front of the Littleton public library was unveiled in 2002 by the citizens of Littleton in honor of author Eleanor H. Porter, one of the town's most famous residents, per Wikipedia's \"Pollyanna\" article."
+      }
+    ],
+    "faq": [
+      {
+        "question": "Why did Mount Eustis Ski Hill close and reopen?",
+        "answer": "The Town of Littleton operated the area until about 1983. A nonprofit, Mt. Eustis Ski Hill, was organized in 2013 to raise funds toward reopening it, and the hill held its official grand opening on February 7, 2015 -- what NELSAP describes as \"the record for the longest closed ski area to reopen in New England - approximately 32 years.\""
+      },
+      {
+        "question": "Who runs Mount Eustis Ski Hill today?",
+        "answer": "Mount Eustis Ski Hill's own website states the hill is \"powered entirely by a passionate volunteer crew and the non-profit's dedicated board of directors.\""
+      }
+    ],
+    "photos": []
+  },
+  "places": [
+    {
+      "slug": "mount-eustis-ski-hill",
+      "name": "Mount Eustis Ski Hill",
+      "kind": "ski-area",
+      "destination_path": "united-states/new-hampshire/grafton-county/littleton",
+      "address": "188 Mt. Eustis Road, Littleton, NH 03561",
+      "summary": "A volunteer-run, rope-tow ski hill in Littleton, reopened in 2015 after decades of closure.",
+      "history": "The rope tow at Mount Eustis was formally dedicated by the Littleton Outing Club on January 28 or 29, 1939, per the New England Lost Ski Areas Project's page on Mount Eustis. The Town of Littleton purchased the land in 1960, acquiring 34.67 acres for $7,200, per the same page, and continued to operate the area until about 1983, \"although the exact last day of skiing is not yet known.\" A nonprofit, Mt. Eustis Ski Hill, was organized in 2013, allowing for formal fundraising toward reopening the hill, per NELSAP's page. The 2013 fundraising plan called for a rehabilitated rope tow from the former ski area in Lisbon, NH, to be restored by Littleton High School students, per the same page. Mt. Eustis held its official grand opening on February 7, 2015; on that day, per NELSAP, the donated rope tow had generator trouble, and snowmobiles were used to bring skiers to the summit. NELSAP's own page describes the reopening as holding \"the record for the longest closed ski area to reopen in New England - approximately 32 years.\" Mount Eustis Ski Hill's own website states the hill is now \"powered entirely by a passionate volunteer crew and the non-profit's dedicated board of directors.\"",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "schilling-beer-co",
+      "name": "Schilling Beer Co.",
+      "kind": "brewery",
+      "destination_path": "united-states/new-hampshire/grafton-county/littleton",
+      "address": "18 Mill St, Littleton, NH 03561",
+      "summary": "A Littleton brewery with a pub and kitchen, plus a separate tasting room down the same street.",
+      "history": "Schilling Beer Co. operates a Brewery Pub & Kitchen at 18 Mill St in Littleton, NH, in addition to a separate Store & Tasting Room and Mill St. Kitchen on the same street, per the brewery's own website.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "chutters-littleton",
+      "name": "Chutters (Littleton)",
+      "kind": "shop",
+      "destination_path": "united-states/new-hampshire/grafton-county/littleton",
+      "address": "43 Main Street, Littleton, NH",
+      "summary": "The flagship Littleton candy store, home of a long candy counter.",
+      "history": "Chutters describes its Littleton store, per its own website, as \"Home of the World's Longest Candy Counter,\" stating the counter runs 112 feet along the store.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "littleton-diner",
+      "name": "Littleton Diner",
+      "kind": "restaurant",
+      "destination_path": "united-states/new-hampshire/grafton-county/littleton",
+      "address": "145 Main St, Littleton, NH 03561",
+      "summary": "A historic diner car in downtown Littleton, dating to 1930.",
+      "history": "The Littleton Diner's own website states the original diner car was \"built in Merrimack, MA in 1928 and transported to Littleton, NH - where it opened in 1930,\" and that \"in 1940 a new Sterling Diner was constructed on the original site.\"",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "thayers-inn",
+      "name": "Thayers Inn",
+      "kind": "hotel",
+      "destination_path": "united-states/new-hampshire/grafton-county/littleton",
+      "address": "111 Main Street, Littleton, NH 03561",
+      "summary": "A Greek Revival hotel at the center of downtown Littleton.",
+      "history": "Thayers Inn describes itself on its own website as \"a historic New England landmark\" with \"Greek revival architecture,\" positioned as the central hub of downtown Littleton.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "pollyanna-statue",
+      "name": "Pollyanna Statue",
+      "kind": "attraction",
+      "destination_path": "united-states/new-hampshire/grafton-county/littleton",
+      "address": "Littleton Public Library, Littleton, NH",
+      "summary": "A bronze statue in Littleton honoring author Eleanor H. Porter, creator of Pollyanna.",
+      "history": "A bronze Pollyanna statue in front of the Littleton public library was unveiled in 2002 by the citizens of Littleton in honor of author Eleanor H. Porter, one of the town's most famous residents, per Wikipedia's \"Pollyanna\" article. Littleton also hosts an annual \"Pollyanna Glad Day\" festival tied to this connection, per the same source.",
+      "status": "open",
+      "photos": []
+    }
+  ],
+  "entries": [
+    {
+      "kind": "sight",
+      "name": "Mount Eustis Ski Hill",
+      "place_slug": "mount-eustis-ski-hill",
+      "note": "A volunteer-run, rope-tow ski hill in Littleton, reopened in 2015 after decades of closure."
+    },
+    {
+      "kind": "food",
+      "name": "Schilling Beer Co.",
+      "place_slug": "schilling-beer-co",
+      "note": "A Littleton brewery with a pub and kitchen, plus a separate tasting room down the street."
+    },
+    {
+      "kind": "tip",
+      "name": "Chutters (Littleton)",
+      "place_slug": "chutters-littleton",
+      "note": "The flagship Littleton candy store, home of a long candy counter."
+    },
+    {
+      "kind": "food",
+      "name": "Littleton Diner",
+      "place_slug": "littleton-diner",
+      "note": "A historic diner car in downtown Littleton, dating to 1930."
+    },
+    {
+      "kind": "stay",
+      "name": "Thayers Inn",
+      "place_slug": "thayers-inn",
+      "note": "A Greek Revival hotel at the center of downtown Littleton."
+    },
+    {
+      "kind": "sight",
+      "name": "Pollyanna Statue",
+      "place_slug": "pollyanna-statue",
+      "note": "A bronze statue in Littleton honoring author Eleanor H. Porter, creator of Pollyanna."
+    }
+  ],
+  "links": []
+}
