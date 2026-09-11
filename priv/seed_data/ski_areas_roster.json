@@ -1144,13 +1144,13 @@
       "slug": "arrowhead-recreation-area",
       "name": "Arrowhead Recreation Area",
       "region": "new-england",
-      "state": "New Hampshire",
-      "county": "Sullivan County",
-      "town": "Claremont",
-      "destination_path": "united-states/new-hampshire/sullivan-county/claremont",
-      "status": "build",
-      "verified": true,
-      "note": "Small community area; Wikipedia's Arrowhead Recreation Area article confirms it reopened in 2002, runs a rope tow for alpine skiing and tubing (lit for night operations), and is located in Claremont, Sullivan County."
+      "state": null,
+      "county": null,
+      "town": null,
+      "destination_path": null,
+      "status": "drop",
+      "verified": false,
+      "note": "City-owned recreation area in Claremont, NH with a ski hill. NELSAP records the lift (a rope tow operated under a Kiwanis Club lease) closing in 1990, noting the tow 'will need some TLC to meet code,' with no documented reopening since. The City of Claremont's own Parks and Recreation page lists 'downhill skiing' among winter amenities but never mentions a lift, tow, or season schedule anywhere on the page, which is consistent with hike-up skiing on the hill rather than lift-served skiing. Not lift-served; out of scope for this corpus. Revisit as a build if a tow is confirmed running."
     },
     {
       "slug": "attitash-mountain-resort",
