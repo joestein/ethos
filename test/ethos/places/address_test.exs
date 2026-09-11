@@ -603,8 +603,22 @@ defmodule Ethos.Places.AddressTest do
     # ratchet moves rather than the address, for the same reason it always
     # has — the fact belongs in the street line because the operator put it
     # there.
-    assert comma_streets <= 66,
-           "#{comma_streets} American street lines carry a comma qualifier, up from 66"
+    # 67 after ski content wave 3 landed
+    # priv/seed_data/ski/{abenaki-ski-area,attitash-mountain-resort,
+    # black-mountain,bretton-woods,cannon-mountain,cranmore-mountain-resort,
+    # crotched-mountain-ski-and-ride,dartmouth-skiway,granite-gorge-ski-area,
+    # gunstock-mountain-resort,king-pine-ski-area}.json, 11 areas. The one
+    # addition is King Pine Ski Area (king-pine-ski-area,
+    # priv/seed_data/ski/king-pine-ski-area.json), whose sourced address,
+    # "1251 Eaton Road, Route 153, Madison, NH 03849" (per King Pine's own
+    # website), parses to the street line "1251 Eaton Road, Route 153."
+    # "Route 153" is not a floor or suite designator but the same acceptable
+    # class by the pin's own standard: a real route number the operator
+    # itself prints as part of its mailing address, not a directional aside
+    # invented by a finder. The ratchet moves rather than the address, for
+    # the same reason it always has.
+    assert comma_streets <= 67,
+           "#{comma_streets} American street lines carry a comma qualifier, up from 67"
 
     for p <- italian, p.street, String.contains?(p.street, ",") do
       # A civico may be a range ("5-7") or carry a letter or a slashed suffix

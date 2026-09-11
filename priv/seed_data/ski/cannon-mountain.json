@@ -1,0 +1,104 @@
+{
+  "guide": {
+    "slug": "cannon-mountain-ski-guide",
+    "title": "Cannon Mountain, New Hampshire: state-owned skiing since 1929, tramway since 1938",
+    "destination": "Franconia, NH",
+    "destination_path": "united-states/new-hampshire/grafton-county/franconia",
+    "tier": "guide",
+    "intro": "New Hampshire State Parks describes Cannon Mountain as New Hampshire's only state-owned and operated ski area, located within Franconia Notch State Park and managed by the NH Division of Parks and Recreation, per the agency's own \"About Us\" page. Skiing on the mountain predates that arrangement: old logging roads were used for skiing starting in 1929, and the Richard Taft Race Course was developed in 1931-32, according to Wikipedia's \"Cannon Mountain Ski Area\" article.",
+    "sections": [
+      {
+        "heading": "The tramway, twice over",
+        "body": "New Hampshire State Parks describes its own tramway as \"the first passenger aerial tramway in North America,\" which began operation on the site in 1938. The original tramway, Tram I, carried \"almost seven million passengers\" before being replaced in 1980 by Tram II, nicknamed \"Ketchup and Mustard\" for its red and yellow cable cars, per NH State Parks' own tramway page. Tram II ascended 2,180 feet vertically to a summit elevation of 4,080 feet, provided an 8-minute ride, and operated for 45 years before being closed and retired as of October 26, 2025, according to the same source. As of that page, a third-generation tram is in the design phase -- Cannon Mountain partnered with SCJ Alliance on structural analysis, expected to be complete in December 2025 -- and New Hampshire State Parks says that once built, Cannon will be the only mountain in North America to operate a third-generation aerial tram, though as of now no replacement tram is operating."
+      },
+      {
+        "heading": "In Franconia",
+        "body": "New Hampshire State Parks' own Cannon Mountain Ski Area page states that \"US Olympic skier Bode Miller grew up skiing at Cannon.\" The New England Ski Museum sits at the base of the tramway, within the town of Franconia, and describes itself as \"a member supported non-profit organization dedicated to the history of skiing and the 10th Mountain Division,\" per its own website. Echo Lake, also within Franconia Notch State Park and the town of Franconia, is described by Cannon Mountain's own website as a \"39-acre spring fed lake\" with a sandy beach, open Thursday-Sunday, with pedal boat and kayak rentals available. The Frost Place, on Ridge Road, served as \"Robert Frost's family home from 1915-1920\" and is now described by its own website as \"a permanent home and museum for poets and poetry,\" listed on the National Register of Historic Places."
+      }
+    ],
+    "faq": [
+      {
+        "question": "Is Cannon Mountain state-owned?",
+        "answer": "Yes. New Hampshire State Parks describes Cannon as New Hampshire's only state-owned and operated ski area, located within Franconia Notch State Park and managed by the NH Division of Parks and Recreation, per the agency's own \"About Us\" page."
+      },
+      {
+        "question": "What happened to Cannon's aerial tramway?",
+        "answer": "New Hampshire State Parks describes the original 1938 tramway as \"the first passenger aerial tramway in North America.\" It was replaced in 1980 by Tram II, which was closed and retired as of October 26, 2025; a third-generation replacement was in the design phase as of the state's own tramway page, with no replacement operating yet."
+      }
+    ],
+    "photos": []
+  },
+  "places": [
+    {
+      "slug": "cannon-mountain",
+      "name": "Cannon Mountain",
+      "kind": "ski-area",
+      "destination_path": "united-states/new-hampshire/grafton-county/franconia",
+      "address": "Franconia, NH",
+      "summary": "A state-owned ski area in Franconia Notch, with skiing dating to 1929 and a tramway New Hampshire State Parks describes as North America's first passenger aerial tramway.",
+      "history": "New Hampshire State Parks describes Cannon Mountain as New Hampshire's only state-owned and operated ski area, located within Franconia Notch State Park and managed by the NH Division of Parks and Recreation, a division of the Department of Natural and Cultural Resources, per the agency's own \"About Us\" page. Skiing on the mountain predates that designation: old logging roads were used for skiing starting in 1929, and the Richard Taft Race Course was developed in 1931-32, according to Wikipedia's \"Cannon Mountain Ski Area\" article. New Hampshire State Parks describes its own tramway as \"the first passenger aerial tramway in North America,\" which began operation on the site in 1938. The original tramway, Tram I, carried \"almost seven million passengers\" before being replaced in 1980 by Tram II, nicknamed \"Ketchup and Mustard\" for its red and yellow cable cars, per NH State Parks' own tramway page. Tram II ascended 2,180 feet vertically to a summit elevation of 4,080 feet, provided an 8-minute ride, and operated for 45 years before being closed and retired as of October 26, 2025, according to the same source. As of that page, a third-generation tram is in the design phase -- Cannon Mountain partnered with SCJ Alliance on structural analysis, expected to be complete in December 2025 -- and New Hampshire State Parks says that once built, Cannon will be the only mountain in North America to operate a third-generation aerial tram, though as of now no replacement tram is operating. New Hampshire State Parks' own Cannon Mountain Ski Area page states that \"US Olympic skier Bode Miller grew up skiing at Cannon.\"",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "new-england-ski-museum",
+      "name": "New England Ski Museum",
+      "kind": "museum",
+      "destination_path": "united-states/new-hampshire/grafton-county/franconia",
+      "address": "135 Tramway Drive, Franconia, NH 03580",
+      "summary": "A member-supported museum at the base of the Cannon Mountain tramway, devoted to ski history and the 10th Mountain Division.",
+      "history": "The New England Ski Museum sits at the base of the Cannon Mountain tramway, within the town of Franconia, per Wikipedia's \"Franconia Notch State Park\" article. The museum describes itself on its own website as \"a member supported non-profit organization dedicated to the history of skiing and the 10th Mountain Division.\"",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "echo-lake-beach",
+      "name": "Echo Lake Beach",
+      "kind": "park",
+      "destination_path": "united-states/new-hampshire/grafton-county/franconia",
+      "address": "Franconia Notch State Park, Franconia, NH 03580",
+      "summary": "A spring-fed lake and sandy beach within Franconia Notch State Park, with boat rentals.",
+      "history": "Echo Lake, within Franconia Notch State Park, is located in the town of Franconia, per Wikipedia's \"Franconia Notch State Park\" article. Cannon Mountain's own website describes Echo Lake Beach as a \"39-acre spring fed lake\" with a sandy beach, open Thursday-Sunday, with pedal boat and kayak rentals available.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "the-frost-place",
+      "name": "The Frost Place",
+      "kind": "museum",
+      "destination_path": "united-states/new-hampshire/grafton-county/franconia",
+      "address": "158 Ridge Road, Franconia, NH 03580",
+      "summary": "Robert Frost's former family home, now a museum for poets and poetry on the National Register of Historic Places.",
+      "history": "The Frost Place served as \"Robert Frost's family home from 1915-1920\" and is now described by its own website as \"a permanent home and museum for poets and poetry,\" listed on the National Register of Historic Places.",
+      "status": "open",
+      "photos": []
+    }
+  ],
+  "entries": [
+    {
+      "kind": "sight",
+      "name": "Cannon Mountain",
+      "place_slug": "cannon-mountain",
+      "note": "A state-owned ski area in Franconia Notch, with skiing dating to 1929."
+    },
+    {
+      "kind": "sight",
+      "name": "New England Ski Museum",
+      "place_slug": "new-england-ski-museum",
+      "note": "A member-supported ski history museum at the base of the tramway."
+    },
+    {
+      "kind": "walk",
+      "name": "Echo Lake Beach",
+      "place_slug": "echo-lake-beach",
+      "note": "A spring-fed lake and sandy beach within Franconia Notch State Park."
+    },
+    {
+      "kind": "sight",
+      "name": "The Frost Place",
+      "place_slug": "the-frost-place",
+      "note": "Robert Frost's former family home, now a museum for poets and poetry."
+    }
+  ],
+  "links": []
+}

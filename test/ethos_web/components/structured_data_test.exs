@@ -1226,10 +1226,46 @@ defmodule EthosWeb.StructuredDataTest do
       # None of the 42 carries a comma inside its street line, so the
       # `comma_streets` pin in test/ethos/places/address_test.exs is unmoved
       # at 66.
-      assert length(emitted) == 5176
-      assert count.(& &1["streetAddress"]) == 4515
-      assert count.(&is_nil(&1["streetAddress"])) == 661
-      assert count.(& &1["postalCode"]) == 3752
+      #
+      # Re-measured after ski content wave 3 landed
+      # priv/seed_data/ski/{abenaki-ski-area,attitash-mountain-resort,
+      # black-mountain,bretton-woods,cannon-mountain,cranmore-mountain-resort,
+      # crotched-mountain-ski-and-ride,dartmouth-skiway,granite-gorge-ski-area,
+      # gunstock-mountain-resort,king-pine-ski-area}.json with 40 places (one
+      # ski area plus surroundings per file). Of the 40: 18 carry a
+      # house-numbered street line AND a five-digit ZIP; 4 more carry a
+      # street line with no ZIP (Wright Museum of World War II, New
+      # Hampshire Boat Museum, The Libby Museum of Natural History, and the
+      # Wolfeboro Historical Society — all real Wolfeboro addresses as
+      # sourced, just ZIP-less); 6 carry a ZIP with no street (Honeymoon
+      # Bridge, Echo Lake Beach, the Francestown Meetinghouse, the
+      # Francestown Town Hall and Academy district, the First Congregational
+      # Church in Lyme, and the Madison Historical Society — each a
+      # descriptive or route-based location with a postal code but no house
+      # number); the remaining 12 are street-less and ZIP-less
+      # locality-only rows — 8 ski areas' own addresses given only at town
+      # level (Abenaki, Attitash, Black Mountain, Bretton Woods, Cannon
+      # Mountain, Cranmore, Granite Gorge, Gunstock — none of these
+      # publishes a street-numbered mailing address) plus the Bartlett
+      # Roundhouse, Diana's Baths, Batcheller's Cave, and Otter Brook Lake,
+      # each sourced as a descriptive location rather than a postal address:
+      #
+      #   * total 5176 -> 5216, +40.
+      #   * `streetAddress` 4515 -> 4537, +22 (the 18 street+ZIP rows plus
+      #     the 4 street-only rows).
+      #   * `is_nil(streetAddress)` 661 -> 679, +18 (the 6 ZIP-only rows plus
+      #     the 12 locality-only rows).
+      #   * `postalCode` 3752 -> 3776, +24 (the 18 street+ZIP rows plus the 6
+      #     ZIP-only rows).
+      #
+      # One of the 40 carries a comma inside its street line — King Pine Ski
+      # Area's "1251 Eaton Road, Route 153" — which moves the
+      # `comma_streets` pin in test/ethos/places/address_test.exs from 66 to
+      # 67 and nothing here.
+      assert length(emitted) == 5216
+      assert count.(& &1["streetAddress"]) == 4537
+      assert count.(&is_nil(&1["streetAddress"])) == 679
+      assert count.(& &1["postalCode"]) == 3776
 
       # The largest behavioural delta this change ships: 302 places emit a
       # PostalAddress carrying only locality, region and country. Their full
@@ -1303,7 +1339,17 @@ defmodule EthosWeb.StructuredDataTest do
       # (Jeffersonville Historic District, Grist Mill Covered Bridge, and
       # Gold Brook Covered Bridge). Every one is a real address as the source
       # gives it; none is missing a house number the source actually had.
-      assert count.(fn ld -> is_nil(ld["streetAddress"]) and is_nil(ld["postalCode"]) end) == 337
+      # 349 after ski content wave 3 landed, +12 — eight ski areas' own
+      # addresses given only at town level (Abenaki, Attitash, Black
+      # Mountain, Bretton Woods, Cannon Mountain, Cranmore, Granite Gorge,
+      # Gunstock — none of these publishes a street-numbered mailing
+      # address; Crotched Mountain, Dartmouth Skiway, and King Pine all do)
+      # plus four surrounding sites sourced as descriptive locations rather
+      # than postal addresses (the Bartlett Roundhouse, Diana's Baths,
+      # Batcheller's Cave, and Otter Brook Lake). Every one is a real
+      # address as the source gives it; none is missing a house number the
+      # source actually had.
+      assert count.(fn ld -> is_nil(ld["streetAddress"]) and is_nil(ld["postalCode"]) end) == 349
     end
   end
 end

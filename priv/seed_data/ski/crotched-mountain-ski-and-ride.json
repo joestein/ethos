@@ -1,0 +1,91 @@
+{
+  "guide": {
+    "slug": "crotched-mountain-ski-and-ride-ski-guide",
+    "title": "Crotched Mountain Ski & Ride, New Hampshire: reopened in 2003 after 13 idle years",
+    "destination": "Francestown, NH",
+    "destination_path": "united-states/new-hampshire/hillsborough-county/francestown",
+    "tier": "guide",
+    "intro": "Ski New Hampshire's own resort directory lists Crotched Mountain Ski & Ride's address as 615 Francestown Road, Francestown, NH 03442. Crotched Mountain's northern slopes lie in Francestown, its western slopes in Bennington, and its southern ridge in Greenfield, per Wikipedia's \"Crotched Mountain\" article. The area originally opened on December 14, 1969, as a $1.4 million development under Onset Corporation, owned by Richard P. Verro, according to New England Ski History.",
+    "sections": [
+      {
+        "heading": "A wind farm, a closure, a 2003 reopening",
+        "body": "In December 1980, US Windpower installed 20 wind turbines rated at 30 kilowatts each, with a combined capacity of 0.6 MW, on the mountain's shoulder; Wikipedia describes it as \"the world's first wind farm.\" The company that installed the turbines subsequently failed, and the turbines were dismantled years later. Crotched Mountain closed in 1990 after a failed sale deal fell through, and sat idle for over a decade, per New England Ski History. In 2002, Peak Resorts acquired the area, \"a small ski area that had been shut for more than a decade,\" per Wikipedia's \"Peak Resorts\" article; Peak Resorts \"built a new lodge, redid trails,\" and reopened it, following a roughly $10 million reconstruction, on December 20, 2003, per New England Ski History."
+      },
+      {
+        "heading": "To Vail Resorts",
+        "body": "Vail Resorts announced its acquisition of Peak Resorts, which owned Crotched Mountain, on July 22, 2019, and the acquisition was completed on September 24, 2019, the same day Peak Resorts' common stock was delisted from the Nasdaq Global Select Market, per Wikipedia's \"Peak Resorts\" article. Crotched Mountain's own Ski New Hampshire profile notes the resort offers night skiing and snowboarding until midnight via its Rocket and Midnight Madness runs."
+      },
+      {
+        "heading": "In Francestown",
+        "body": "The Francestown Meetinghouse, a white clapboarded building on Route 136 in the town center, was built c. 1801-03 and rebuilt in 1837, when it received its Greek Revival styling, per Wikipedia. It was used as a church until 1987 and for town meetings until 1833, and was listed on the National Register of Historic Places on June 14, 1999; it is now managed by a nonprofit as a community resource. The Francestown Town Hall and Academy and Town Common Historic District, at the junction of New Boston and Greenfield Roads, encompasses the town's 1846 Greek Revival town hall and academy building, a former academic dormitory building, and the town's historic common, which includes \"a rare example of an early 20th-century platform scale,\" per Wikipedia's article on the district; it was added to the National Register of Historic Places on April 5, 2016."
+      }
+    ],
+    "faq": [
+      {
+        "question": "Why was Crotched Mountain closed for over a decade?",
+        "answer": "The original 1969 ski area closed in 1990 after a failed sale deal fell through and sat idle until Peak Resorts acquired it in 2002 and reopened it, following a roughly $10 million reconstruction, on December 20, 2003, per New England Ski History."
+      },
+      {
+        "question": "Who owns Crotched Mountain now?",
+        "answer": "Vail Resorts, since completing its acquisition of Peak Resorts on September 24, 2019, per Wikipedia's \"Peak Resorts\" article."
+      }
+    ],
+    "photos": []
+  },
+  "places": [
+    {
+      "slug": "crotched-mountain-ski-and-ride",
+      "name": "Crotched Mountain Ski & Ride",
+      "kind": "ski-area",
+      "destination_path": "united-states/new-hampshire/hillsborough-county/francestown",
+      "address": "615 Francestown Road, Francestown, NH 03442",
+      "summary": "A Vail-owned ski area on the Francestown/Bennington line, reopened in 2003 after Peak Resorts rebuilt it following a 13-year closure.",
+      "history": "Ski New Hampshire's own resort directory lists Crotched Mountain Ski & Ride's address as 615 Francestown Road, Francestown, NH 03442. Crotched Mountain's northern slopes lie in Francestown, its western slopes in Bennington, and its southern ridge in Greenfield, per Wikipedia's \"Crotched Mountain\" article. Crotched Mountain originally opened on December 14, 1969, as a $1.4 million development under Onset Corporation, owned by Richard P. Verro, according to New England Ski History. In December 1980, US Windpower installed 20 wind turbines rated at 30 kilowatts each, with a combined capacity of 0.6 MW, on the mountain's shoulder; Wikipedia describes it as \"the world's first wind farm.\" The company that installed the turbines subsequently failed, and the turbines were dismantled years later. Crotched Mountain closed in 1990 after a failed sale deal fell through, and sat idle for over a decade, per New England Ski History. In 2002, Peak Resorts acquired Crotched Mountain Ski & Ride, \"a small ski area that had been shut for more than a decade,\" per Wikipedia's \"Peak Resorts\" article; Peak Resorts \"built a new lodge, redid trails,\" and reopened the area, following a roughly $10 million reconstruction, on December 20, 2003, per New England Ski History. Vail Resorts announced its acquisition of Peak Resorts, which owned Crotched Mountain, on July 22, 2019, and the acquisition was completed on September 24, 2019, the same day Peak Resorts' common stock was delisted from the Nasdaq Global Select Market, per Wikipedia. Crotched Mountain's own Ski New Hampshire profile notes the resort offers night skiing and snowboarding until midnight via its Rocket and Midnight Madness runs.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "francestown-meetinghouse",
+      "name": "Francestown Meetinghouse",
+      "kind": "historic-site",
+      "destination_path": "united-states/new-hampshire/hillsborough-county/francestown",
+      "address": "NH Route 136, Francestown, NH 03442",
+      "summary": "An 1801-03 meetinghouse rebuilt in 1837 in the Greek Revival style, now a community resource in Francestown's center.",
+      "history": "The Francestown Meetinghouse, a white clapboarded building on Route 136 in the center of Francestown, was built c. 1801-03 and rebuilt in 1837, when it received its Greek Revival styling, per Wikipedia's \"Francestown Meetinghouse\" article. It was used as a church until 1987 and for town meetings until 1833; it was listed on the National Register of Historic Places on June 14, 1999, and is now managed by a nonprofit as a community resource.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "francestown-town-hall-and-academy-and-town-common-historic-district",
+      "name": "Francestown Town Hall and Academy and Town Common Historic District",
+      "kind": "historic-site",
+      "destination_path": "united-states/new-hampshire/hillsborough-county/francestown",
+      "address": "Junction of New Boston Road and Greenfield Road, Francestown, NH 03442",
+      "summary": "A historic district anchored by Francestown's 1846 town hall and academy building and its historic common.",
+      "history": "The district, at the junction of New Boston and Greenfield Roads, encompasses the town's 1846 Greek Revival town hall and academy building, a former academic dormitory building, and the town's historic common, which includes \"a rare example of an early 20th-century platform scale,\" per Wikipedia's article on the district. It was added to the National Register of Historic Places on April 5, 2016.",
+      "status": "open",
+      "photos": []
+    }
+  ],
+  "entries": [
+    {
+      "kind": "sight",
+      "name": "Crotched Mountain Ski & Ride",
+      "place_slug": "crotched-mountain-ski-and-ride",
+      "note": "A Vail-owned ski area reopened in 2003 after a 13-year closure."
+    },
+    {
+      "kind": "sight",
+      "name": "Francestown Meetinghouse",
+      "place_slug": "francestown-meetinghouse",
+      "note": "An 1801-03 meetinghouse rebuilt in Greek Revival style in 1837."
+    },
+    {
+      "kind": "sight",
+      "name": "Francestown Town Hall and Academy and Town Common Historic District",
+      "place_slug": "francestown-town-hall-and-academy-and-town-common-historic-district",
+      "note": "A historic district anchored by Francestown's 1846 town hall and academy."
+    }
+  ],
+  "links": []
+}

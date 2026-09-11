@@ -1,0 +1,121 @@
+{
+  "guide": {
+    "slug": "abenaki-ski-area-ski-guide",
+    "title": "Abenaki Ski Area, New Hampshire: Wolfeboro's town-owned hill since 1940",
+    "destination": "Wolfeboro, NH",
+    "destination_path": "united-states/new-hampshire/carroll-county/wolfeboro",
+    "tier": "guide",
+    "intro": "Abenaki Ski Area is operated by the Town of Wolfeboro's Parks & Recreation Department, per the department's own Recreation page, which lists an \"Asst. Director of Parks & Recreation | Abenaki Operations Manager\" staff position. Hike-up skiing at the site preceded organized operation in the 1930s, and Abenaki's first lift-served season, 1940-41, is old enough that New England Ski History calls it \"one of the oldest ski areas in the country.\"",
+    "sections": [
+      {
+        "heading": "Idle periods, then investment",
+        "body": "Abenaki's ski operations closed during World War II, one of the \"idle periods\" New England Ski History records for the area, attributed there to variable snowfall and funding challenges. Night skiing followed the war, likely for the 1946-47 season -- New England Ski History hedges the exact year rather than stating it as certain -- and a ski jump installed circa 1970 remained in use for about two decades. A temporary, \"makeshift\" snowmaking system was assembled in 2007, replaced by a permanent HKD system in 2011, and a new base lodge was built for the 2015-16 season. The Friends of Abenaki, a volunteer group whose efforts helped fund the snowcat and snowmaking upgrades, was started in 2005, per New England Ski History."
+      },
+      {
+        "heading": "In Wolfeboro",
+        "body": "The Wright Museum of World War II, on Center Street, describes itself on its own website as \"a nonprofit educational institution dedicated to recognizing and honoring the contributions and enduring legacy of WWII-era Americans,\" and operates seasonally, open May 1 through October 31, per its own website. The New Hampshire Boat Museum, also on Center Street, carries the tagline \"Discover New Hampshire's Boating Heritage\" on its own website and operates two vintage tour boats, the Millie B and the Miss Lauren. The Libby Museum of Natural History, on North Main Street, describes itself on its own website as \"the oldest natural history museum in New Hampshire,\" and its founder, Dr. Libby, intended the museum's lakeside land to \"remain open to the public in perpetuity,\" according to the museum's own website. The Wolfeboro Historical Society's Clark House Museum Complex, on South Main Street, includes the Clark House -- donated to the town by Greenleaf Clark and home to three generations of the Clark family \"for over one hundred years from 1817 to 1917,\" per the Society's own website -- alongside the Clark Museum Barn and an authentic one-room schoolhouse. In 2025, the Society received a proclamation from New Hampshire Governor Kelly Ayotte honoring \"100 years of Excellence in Museum Management, Community and State Education, and History Preservation,\" per the Society's own website."
+      }
+    ],
+    "faq": [
+      {
+        "question": "Who operates Abenaki Ski Area?",
+        "answer": "The Town of Wolfeboro's Parks & Recreation Department operates Abenaki; the department's own staff listing includes an \"Asst. Director of Parks & Recreation | Abenaki Operations Manager\" position, per the department's own Recreation page."
+      },
+      {
+        "question": "How old is Abenaki Ski Area?",
+        "answer": "Hike-up skiing at the site predates organized operation, occurring in the 1930s, and Abenaki's first lift-served season was 1940-41 -- old enough that New England Ski History calls it \"one of the oldest ski areas in the country.\""
+      }
+    ],
+    "photos": []
+  },
+  "places": [
+    {
+      "slug": "abenaki-ski-area",
+      "name": "Abenaki Ski Area",
+      "kind": "ski-area",
+      "destination_path": "united-states/new-hampshire/carroll-county/wolfeboro",
+      "address": "Wolfeboro, NH",
+      "summary": "A town-owned community hill in Wolfeboro, operated by the Parks & Recreation Department and skiable since 1940-41, one of the oldest ski areas in the country per New England Ski History.",
+      "history": "Abenaki Ski Area is operated by the Town of Wolfeboro's Parks & Recreation Department; the department's own staff listing includes an \"Asst. Director of Parks & Recreation | Abenaki Operations Manager\" position, per the Town of Wolfeboro Parks & Recreation Department's own Recreation page. Hike-up skiing at the site preceded organized operation, occurring in the 1930s according to New England Ski History, and Abenaki's first season of lift-served skiing was 1940-41 -- which New England Ski History says makes it \"one of the oldest ski areas in the country.\" Abenaki's ski operations closed during World War II, one of the \"idle periods\" New England Ski History records for the area, attributed there to variable snowfall and funding challenges. Night skiing was added after the war, likely for the 1946-47 season per the same source, which hedges the exact year rather than stating it as certain. A ski jump was installed at Abenaki circa 1970 and remained in use for about two decades, according to New England Ski History. A temporary, \"makeshift\" snowmaking system was assembled in 2007, followed by a permanent HKD snowmaking installation in 2011, and a new base lodge was constructed for the 2015-16 season, all per New England Ski History. The Friends of Abenaki, a volunteer group whose efforts helped fund snowcat and snowmaking upgrades, was started in 2005, per the same source. The hill shares its municipal site with the Pop Whalen Ice Arena/Arts Center, run under the same Parks & Recreation umbrella, per the Town of Wolfeboro's own Recreation page.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "wright-museum-of-world-war-ii",
+      "name": "Wright Museum of World War II",
+      "kind": "museum",
+      "destination_path": "united-states/new-hampshire/carroll-county/wolfeboro",
+      "address": "77 Center Street, Wolfeboro, NH",
+      "summary": "A nonprofit World War II museum on Center Street, open seasonally from May through October.",
+      "history": "The Wright Museum of World War II describes itself on its own website as \"a nonprofit educational institution dedicated to recognizing and honoring the contributions and enduring legacy of WWII-era Americans.\" The museum operates seasonally, open May 1 through October 31, per its own website.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "new-hampshire-boat-museum",
+      "name": "New Hampshire Boat Museum",
+      "kind": "museum",
+      "destination_path": "united-states/new-hampshire/carroll-county/wolfeboro",
+      "address": "399 Center Street, Wolfeboro, NH",
+      "summary": "A Center Street museum devoted to New Hampshire's boating heritage, operating two vintage tour boats.",
+      "history": "The New Hampshire Boat Museum's own website carries the homepage tagline \"Discover New Hampshire's Boating Heritage.\" The museum operates two vintage tour boats, named the Millie B and the Miss Lauren, according to its own website.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "the-libby-museum-of-natural-history",
+      "name": "The Libby Museum of Natural History",
+      "kind": "museum",
+      "destination_path": "united-states/new-hampshire/carroll-county/wolfeboro",
+      "address": "755 North Main Street, Wolfeboro, NH",
+      "summary": "A lakeside natural history museum that its own website describes as the oldest of its kind in New Hampshire.",
+      "history": "The Libby Museum's own website describes it as \"the oldest natural history museum in New Hampshire.\" Founder Dr. Libby intended the museum's lakeside land to \"remain open to the public in perpetuity,\" according to the museum's own website.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "wolfeboro-historical-society",
+      "name": "Wolfeboro Historical Society / Clark House Museum Complex",
+      "kind": "museum",
+      "destination_path": "united-states/new-hampshire/carroll-county/wolfeboro",
+      "address": "233 South Main Street, Wolfeboro, NH",
+      "summary": "The Wolfeboro Historical Society's museum complex, anchored by the 1817 Clark House, a donated barn, and a one-room schoolhouse.",
+      "history": "The Clark House was donated to the Town of Wolfeboro by Greenleaf Clark, and three generations of the Clark family lived in it \"for over one hundred years from 1817 to 1917,\" according to the Wolfeboro Historical Society's own website. The Clark House Museum Complex includes the Clark House, the Clark Museum Barn, and an authentic one-room schoolhouse, per the Society's own website. In 2025, the Society received a proclamation from New Hampshire Governor Kelly Ayotte honoring \"100 years of Excellence in Museum Management, Community and State Education, and History Preservation.\"",
+      "status": "open",
+      "photos": []
+    }
+  ],
+  "entries": [
+    {
+      "kind": "sight",
+      "name": "Abenaki Ski Area",
+      "place_slug": "abenaki-ski-area",
+      "note": "A town-owned community hill in Wolfeboro, skiable since 1940-41."
+    },
+    {
+      "kind": "sight",
+      "name": "Wright Museum of World War II",
+      "place_slug": "wright-museum-of-world-war-ii",
+      "note": "A nonprofit World War II museum on Center Street, open seasonally."
+    },
+    {
+      "kind": "sight",
+      "name": "New Hampshire Boat Museum",
+      "place_slug": "new-hampshire-boat-museum",
+      "note": "A Center Street museum on New Hampshire's boating heritage."
+    },
+    {
+      "kind": "sight",
+      "name": "The Libby Museum of Natural History",
+      "place_slug": "the-libby-museum-of-natural-history",
+      "note": "A lakeside natural history museum, described by its own site as the state's oldest."
+    },
+    {
+      "kind": "sight",
+      "name": "Wolfeboro Historical Society / Clark House Museum Complex",
+      "place_slug": "wolfeboro-historical-society",
+      "note": "The Historical Society's museum complex, anchored by the 1817 Clark House."
+    }
+  ],
+  "links": []
+}
