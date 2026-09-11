@@ -402,6 +402,7 @@ unchanged.
 | Sugarbush Resort | In 1958, Damon Gadd and Jack Murphy founded Sugarbush Ski Area on Lincoln Peak in Warren; a three-seat gondola was installed that was, at the time, the nation's longest lift | Wikipedia, "Warren, Vermont" | https://en.wikipedia.org/wiki/Warren,_Vermont | confirmed |
 | Sugarbush Resort | Original 1958-59 lift infrastructure: a 9,300-foot gondola with 88 cabins imported from Italy, plus a novice T-bar; the gondola likely opened December 27, 1958 | New England Ski History's Sugarbush page | https://www.newenglandskihistory.com/Vermont/sugarbush.php | confirmed |
 | Sugarbush Resort | For 1959-60, a Carlevaro & Savio double chairlift was installed on the peak that became Castlerock | New England Ski History's Sugarbush page | https://www.newenglandskihistory.com/Vermont/sugarbush.php | confirmed |
+| Sugarbush Resort | By the late 1950s Sugarbush had also earned the nickname "Mascara Mountain," for attracting a wealthy, fashion-conscious New York clientele; the earliest known reference traces to Hartford Courant writers Dot Birmingham and Walt Pesko in March 1959 (added from the verifier's `omitted_but_sourceable` notes, to source a guide section heading that had named the nickname without ever explaining it) | New England Ski History's Sugarbush page | https://www.newenglandskihistory.com/Vermont/sugarbush.php | confirmed |
 | Sugarbush Resort | The Valley House Double chairlift was installed for 1960-61, giving lower-level skiers access via the new Snowball trail | New England Ski History's Sugarbush page | https://www.newenglandskihistory.com/Vermont/sugarbush.php | confirmed |
 | Sugarbush Resort | In February 1962, Walter Elliott announced financing and land options to develop Mount Ellen/General Stark Mountain, which became Glen Ellen | New England Ski History's Sugarbush page | https://www.newenglandskihistory.com/Vermont/sugarbush.php | confirmed |
 | Sugarbush Resort | On May 1, 1964, Sugarbush announced Stein Eriksen had been hired as its next ski school director; a Village Double chairlift was added for 1964-65 (the finder's "arrived...in May 1964" is wrong — the source is a hiring announcement, not an arrival date) | New England Ski History's Sugarbush page | https://www.newenglandskihistory.com/Vermont/sugarbush.php | confirmed (corrected — hiring announcement, not arrival) |
@@ -470,8 +471,9 @@ unchanged.
 
 ### No surroundings by design, not by omission
 
-Pico Mountain, Middlebury College Snow Bowl, and Stratton Mountain Resort carry
-zero surrounding places, and all three are correct rather than thin:
+Pico Mountain and Stratton Mountain Resort carry zero surrounding places, and
+both are correct rather than thin. Middlebury College Snow Bowl carries one —
+also correct, not padded:
 
 - **Pico Mountain** sits in the town of Killington, whose visitable places —
   Gifford Woods State Park and the Inn at Long Trail — are already published
@@ -480,7 +482,8 @@ zero surrounding places, and all three are correct rather than thin:
 - **Middlebury College Snow Bowl** sits in Hancock, which genuinely holds
   little else. The verifier's `omitted_but_sourceable` suggestion, Texas
   Falls, is well-sourced (Wikipedia's "Hancock, Vermont" article) and is
-  published as this file's one surrounding place.
+  published as this file's one surrounding place — the exception to this
+  section's "zero" pattern, not a second instance of it.
 - **Stratton Mountain Resort** is structural, not thin: the verifier
   established that Stratton's developed base village sits mostly in the
   neighbouring town of Winhall, while the town of Stratton proper is a
