@@ -1,0 +1,91 @@
+{
+  "guide": {
+    "slug": "mount-snow-ski-guide",
+    "title": "Mount Snow, Vermont: from Walter Schoenknecht's vision to the Epic Pass",
+    "destination": "West Dover, VT",
+    "destination_path": "united-states/vermont/windham-county/dover",
+    "tier": "guide",
+    "intro": "Mount Snow was founded by Walter Schoenknecht, who conceived the project after visiting Mt. Pisgah on October 2, 1946; land was purchased around May 1953 from Reuben Snow's family for $15,000, and the initial $4 million project opened in late fall 1954 with chairlift and rope tow service, for the 1954-55 season, per New England Ski History's Mount Snow page. Mount Snow's North Face complex opened in 1959-60, and its Sunbrook complex debuted in 1969-70. The resort is owned and operated today by Vail Resorts Management Company and is part of the Epic Pass network; as of the resort's own website, the 2026/27 season passes (Epic Pass, Epic Local Pass, and regional passes) are on sale.",
+    "sections": [
+      {
+        "heading": "Bankruptcy, S-K-I Ltd., and the road to Vail",
+        "body": "On January 19, 1969, Mount Snow's summit lodge burned to the ground, per New England Ski History's Mount Snow page. Mount Snow filed for bankruptcy in 1975 due to capital expenditures and rising energy costs. Sherburne Corporation purchased Mount Snow in 1977 for $4.5 million, and the resort was rolled into S-K-I Ltd. in 1984. Mount Snow absorbed the neighboring Carinthia ski area in 1986. Mount Snow was absorbed by American Ski Company in 1996, and Peak Resorts acquired it in 2007. Vail Resorts acquired Mount Snow, along with the rest of Peak Resorts, on September 24, 2019, and has owned it since."
+      },
+      {
+        "heading": "Lifts and lodges",
+        "body": "Mount Snow installed a high-speed quad chairlift, the Yankee Clipper, in 1987, per New England Ski History's Mount Snow page. The Grand Summit Resort Hotel at Mount Snow's base area opened in 1997, per Wikipedia's \"Mount Snow\" article. In 2011 Mount Snow installed a high-speed six-pack (bubble) chairlift. Mount Snow's Carinthia base area lodge was rebuilt as part of an approximately $22 million capital project completed in 2018-2019. On March 14, 2020, Mount Snow shut down early due to the COVID-19 pandemic, per New England Ski History's Mount Snow page."
+      },
+      {
+        "heading": "In Dover",
+        "body": "Dover Town Hall, at the junction of Holland and Taft Brook Roads, was built in 1828 as a union meeting house for Baptist, Methodist, and Universalist congregations; the town formally took over the building in 1907, and it hosted town meetings from 1872 until 1971, according to Wikipedia's \"Dover Town Hall\" article. It was added to the National Register of Historic Places on September 1, 1988. The West Dover Village Historic District, centered where Vermont Route 100 meets Cross Town and Valley View Roads, was added to the National Register of Historic Places on October 24, 1985; it covers about 40 acres of Federal, Greek Revival, Italianate, and Cape-style 19th-century buildings, per Wikipedia's \"West Dover Village Historic District\" article. The village of West Dover was settled in 1796 and incorporated into the town of Dover in 1810."
+      }
+    ],
+    "faq": [
+      {
+        "question": "Who owns Mount Snow, and what pass does it belong to?",
+        "answer": "Mount Snow is owned and operated by Vail Resorts Management Company and is part of the Epic Pass network; as of the resort's own website, the 2026/27 season passes (Epic Pass, Epic Local Pass, and regional passes) are on sale."
+      },
+      {
+        "question": "When did Mount Snow open?",
+        "answer": "Mount Snow, founded by Walter Schoenknecht, opened in late fall 1954 for the 1954-55 season, per New England Ski History's Mount Snow page."
+      }
+    ],
+    "photos": []
+  },
+  "places": [
+    {
+      "slug": "mount-snow",
+      "name": "Mount Snow",
+      "kind": "ski-area",
+      "destination_path": "united-states/vermont/windham-county/dover",
+      "address": "West Dover, VT",
+      "summary": "A chairlift-served resort founded in 1954, absorbed into S-K-I Ltd. and later American Skiing Company and Peak Resorts, now owned by Vail Resorts.",
+      "history": "Mount Snow was founded by Walter Schoenknecht, who conceived the project after visiting Mt. Pisgah on October 2, 1946; land was purchased around May 1953 from Reuben Snow's family for $15,000, and the initial $4 million project opened in late fall 1954 with chairlift and rope tow service, for the 1954-55 season, per New England Ski History's Mount Snow page. Mount Snow's North Face complex opened in 1959-60. On January 19, 1969, Mount Snow's summit lodge burned to the ground. Mount Snow's Sunbrook complex debuted in 1969-70. Mount Snow filed for bankruptcy in 1975 due to capital expenditures and rising energy costs. Sherburne Corporation purchased Mount Snow in 1977 for $4.5 million, and the resort was rolled into S-K-I Ltd. in 1984. Mount Snow absorbed the neighboring Carinthia ski area in 1986. Mount Snow installed a high-speed quad chairlift, the Yankee Clipper, in 1987. Mount Snow was absorbed by American Ski Company in 1996, and Peak Resorts acquired it in 2007. Vail Resorts acquired Mount Snow, along with the rest of Peak Resorts, on September 24, 2019, and has owned it since. In 2011 Mount Snow installed a high-speed six-pack (bubble) chairlift. On March 14, 2020, Mount Snow shut down early due to the COVID-19 pandemic. The Grand Summit Resort Hotel at Mount Snow's base area opened in 1997, per Wikipedia's \"Mount Snow\" article. Mount Snow's Carinthia base area lodge was rebuilt as part of an approximately $22 million capital project completed in 2018-2019. Mount Snow is owned and operated by Vail Resorts Management Company and is part of the Epic Pass network; as of the resort's own website, the 2026/27 season passes (Epic Pass, Epic Local Pass, and regional passes) are on sale, per Mount Snow's own website.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "dover-town-hall",
+      "name": "Dover Town Hall",
+      "kind": "historic-site",
+      "destination_path": "united-states/vermont/windham-county/dover",
+      "address": "Holland and Taft Brook Roads, Dover, VT 05356",
+      "summary": "An 1828 union meeting house that served as Dover's town hall from 1872 to 1971.",
+      "history": "Dover Town Hall, at the junction of Holland and Taft Brook Roads, was built in 1828 as a union meeting house for Baptist, Methodist, and Universalist congregations; the town formally took over the building in 1907, and it hosted town meetings from 1872 until 1971, according to Wikipedia's \"Dover Town Hall\" article. It was added to the National Register of Historic Places on September 1, 1988 (Reference No. 88001466).",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "west-dover-village-historic-district",
+      "name": "West Dover Village Historic District",
+      "kind": "historic-site",
+      "destination_path": "united-states/vermont/windham-county/dover",
+      "address": "VT Route 100 at Cross Town and Valley View Roads, West Dover, VT 05356",
+      "summary": "A 19th-century village historic district of Federal, Greek Revival, Italianate, and Cape-style buildings.",
+      "history": "The West Dover Village Historic District, centered where Vermont Route 100 meets Cross Town and Valley View Roads, was added to the National Register of Historic Places on October 24, 1985; it covers about 40 acres of Federal, Greek Revival, Italianate, and Cape-style 19th-century buildings, per Wikipedia's \"West Dover Village Historic District\" article. The village of West Dover was settled in 1796 and incorporated into the town of Dover in 1810; its early economy centered on a sawmill built in 1796 that later expanded into wool processing, until the mill complex burned down in 1901.",
+      "status": "open",
+      "photos": []
+    }
+  ],
+  "entries": [
+    {
+      "kind": "sight",
+      "name": "Mount Snow",
+      "place_slug": "mount-snow",
+      "note": "A chairlift-served resort founded in 1954, now owned by Vail Resorts."
+    },
+    {
+      "kind": "sight",
+      "name": "Dover Town Hall",
+      "place_slug": "dover-town-hall",
+      "note": "An 1828 union meeting house that served as Dover's town hall until 1971."
+    },
+    {
+      "kind": "sight",
+      "name": "West Dover Village Historic District",
+      "place_slug": "west-dover-village-historic-district",
+      "note": "A 19th-century historic district of Federal, Greek Revival, and Cape-style buildings."
+    }
+  ],
+  "links": []
+}

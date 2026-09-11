@@ -1196,10 +1196,40 @@ defmodule EthosWeb.StructuredDataTest do
       # Trail's "709 Route 4, Sherburne Pass" — which moves the `comma_streets`
       # pin in test/ethos/places/address_test.exs from 65 to 66 and nothing
       # here.
-      assert length(emitted) == 5134
-      assert count.(& &1["streetAddress"]) == 4492
-      assert count.(&is_nil(&1["streetAddress"])) == 642
-      assert count.(& &1["postalCode"]) == 3728
+      #
+      # Re-measured after ski content wave 2 landed
+      # priv/seed_data/ski/{magic-mountain,middlebury-college-snow-bowl,
+      # mount-snow,northeast-slopes,okemo-mountain-resort,pico-mountain,
+      # saskadena-six,smugglers-notch-resort,stowe-mountain-resort,
+      # stratton-mountain-resort,sugarbush-resort}.json with 42 places (one ski
+      # area plus surroundings per file; Pico carries no surroundings). Of the
+      # 42: 18 carry a house-numbered street line AND a five-digit ZIP; 5 more
+      # carry a street line with no ZIP (Abbott Memorial Library, Cambridge
+      # Meetinghouse, Trapp Family Lodge, the Vermont Ski and Snowboard
+      # Museum, and The Current — all real addresses as sourced, just
+      # ZIP-less); 6 carry a ZIP with no street (Londonderry Town House,
+      # Texas Falls, Dover Town Hall, the West Dover Village Historic
+      # District, the Ludlow Village Historic District, and the Warren
+      # Covered Bridge — each a descriptive or district location with a
+      # postal code but no house number); the remaining 13 are street-less
+      # and ZIP-less locality-only rows — see the locality-only bucket
+      # comment below for the breakdown:
+      #
+      #   * total 5134 -> 5176, +42.
+      #   * `streetAddress` 4492 -> 4515, +23 (the 18 street+ZIP rows plus
+      #     the 5 street-only rows).
+      #   * `is_nil(streetAddress)` 642 -> 661, +19 (the 6 ZIP-only rows plus
+      #     the 13 locality-only rows).
+      #   * `postalCode` 3728 -> 3752, +24 (the 18 street+ZIP rows plus the 6
+      #     ZIP-only rows).
+      #
+      # None of the 42 carries a comma inside its street line, so the
+      # `comma_streets` pin in test/ethos/places/address_test.exs is unmoved
+      # at 66.
+      assert length(emitted) == 5176
+      assert count.(& &1["streetAddress"]) == 4515
+      assert count.(&is_nil(&1["streetAddress"])) == 661
+      assert count.(& &1["postalCode"]) == 3752
 
       # The largest behavioural delta this change ships: 302 places emit a
       # PostalAddress carrying only locality, region and country. Their full
@@ -1264,7 +1294,16 @@ defmodule EthosWeb.StructuredDataTest do
       # Chamberlin Mill Covered Bridge). Every one is a real address as the
       # source gives it; none is missing a house number the source actually
       # had.
-      assert count.(fn ld -> is_nil(ld["streetAddress"]) and is_nil(ld["postalCode"]) end) == 324
+      # 337 after ski content wave 2 landed, +13 — ten ski areas' own
+      # addresses given only at town level (Magic Mountain, Mount Snow,
+      # Northeast Slopes, Okemo, Pico, Saskadena Six, Smugglers' Notch,
+      # Stowe, Stratton, and Sugarbush — none of these publishes a
+      # street-numbered mailing address either) plus three surrounding sites
+      # sourced as descriptive locations rather than postal addresses
+      # (Jeffersonville Historic District, Grist Mill Covered Bridge, and
+      # Gold Brook Covered Bridge). Every one is a real address as the source
+      # gives it; none is missing a house number the source actually had.
+      assert count.(fn ld -> is_nil(ld["streetAddress"]) and is_nil(ld["postalCode"]) end) == 337
     end
   end
 end

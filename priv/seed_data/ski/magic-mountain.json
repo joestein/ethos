@@ -1,0 +1,125 @@
+{
+  "guide": {
+    "slug": "magic-mountain-ski-guide",
+    "title": "Magic Mountain, Vermont: from Glebe Mountain rope tow to independent revival",
+    "destination": "Londonderry, VT",
+    "destination_path": "united-states/vermont/windham-county/londonderry",
+    "tier": "guide",
+    "intro": "Magic Mountain was founded on December 23, 1960 by Hans Thorner and William Ingraham on Glebe Mountain in Londonderry, Vermont, opening for its first season (1960-61) with a T-bar lift and an incomplete base lodge, per New England Ski History's Magic Mountain page. On January 19, 1961, a fire in the T-bar lift house halted operations temporarily during that first season. The area has passed through several owners since, closing entirely after the 1990-91 season before reopening in December 1997, and has operated independently, outside any multi-resort corporate group, since Ski Magic, LLC acquired it in fall 2016.",
+    "sections": [
+      {
+        "heading": "Lifts, a plane crash, and an ejection",
+        "body": "In 1962-63 a $300,000 Pohlig double chairlift was installed, opening the Upper Mountain terrain, per New England Ski History's Magic Mountain page. In 1968 Magic Mountain installed a $250,000 snowmaking system. In 1971-72 the Summit Area was opened, served by a Heron-Poma double chairlift. On February 22, 1973, a Cessna 310 crashed into the mountain, killing both occupants. On February 3, 1975, two U.S. Air Force F-111 bombers collided near the mountain; four crew members ejected safely and landed on the upper slopes."
+      },
+      {
+        "heading": "Foreclosure, Timber Ridge, and a slow return",
+        "body": "Founder Hans Thorner sold Magic Mountain in 1985 to a group led by Simon Oren; in 1986 that group acquired the defunct neighboring Timber Ridge ski area, and in 1987-88 the two mountains were physically connected and marketed together as \"the Magic Mountains,\" per New England Ski History's Magic Mountain page (correcting the finder's original account, which merged the acquisition and the connection into a single 1987-88 event). In 1990 Oren sold to Joe O'Donnell and Petros Palandjian, who closed the area after the 1990-91 season. It was placed on auction in spring 1993 following a Bank of Boston foreclosure; Michael Boraski purchased the property in December 1995 for $350,000, and the area reopened in December 1997. In August 2002, John Nelson purchased Magic Mountain with a group of partners for $500,000, and in fall 2016 Ski Magic, LLC acquired the area, which has continued to operate independently since."
+      },
+      {
+        "heading": "Skiing today, and in Londonderry",
+        "body": "The Black Quad chairlift debuted at Magic Mountain on February 22, 2024, per New England Ski History's Magic Mountain page. Magic Mountain sells its own in-house season pass; for the 2026-27 (\"26/27\") season, unlimited passholders can purchase an Indy Pass \"Add-on\" at a 30% discount, giving access to Indy Pass partner resorts, according to Magic Mountain's own Season Pass Info page. The resort permits uphill (skin) access and operates a disc golf course on the mountain outside of ski season, per its own website. The Londonderry Arts & Historical Society, at 2461 Middletown Rd in Londonderry, is a volunteer-run organization that preserves and shares the town's history and culture through art exhibits, community quilting fundraisers, and photo sales, according to its own website. The Londonderry Town House, built 1860 as a two-story town hall with a bell tower, retains a canvas stage curtain depicting a scene on the Rhine River and still hosts the town's annual town meeting, per Wikipedia's article on the building; it was added to the National Register of Historic Places on July 14, 1983."
+      }
+    ],
+    "faq": [
+      {
+        "question": "When did Magic Mountain open, and who founded it?",
+        "answer": "Magic Mountain was founded on December 23, 1960 by Hans Thorner and William Ingraham on Glebe Mountain in Londonderry, Vermont, opening for its first season with a T-bar lift and an incomplete base lodge, per New England Ski History's Magic Mountain page."
+      },
+      {
+        "question": "Is Magic Mountain part of a larger resort company?",
+        "answer": "No. Since Ski Magic, LLC acquired the area in fall 2016, Magic Mountain has continued to operate as an independently owned ski area rather than as part of a multi-resort corporate group, per New England Ski History's Magic Mountain page."
+      }
+    ],
+    "photos": []
+  },
+  "places": [
+    {
+      "slug": "magic-mountain",
+      "name": "Magic Mountain",
+      "kind": "ski-area",
+      "destination_path": "united-states/vermont/windham-county/londonderry",
+      "address": "Londonderry, VT",
+      "summary": "A chairlift-served ski area on Glebe Mountain, founded in 1960, closed for several years in the 1990s, and independently owned since 2016.",
+      "history": "Magic Mountain was founded on December 23, 1960 by Hans Thorner and William Ingraham on Glebe Mountain in Londonderry, Vermont, opening for its first season (1960-61) with a T-bar lift and an incomplete base lodge, per New England Ski History's Magic Mountain page. On January 19, 1961, a fire in the T-bar lift house halted operations temporarily. In 1962-63 a $300,000 Pohlig double chairlift was installed, opening the Upper Mountain terrain. In 1968 Magic Mountain installed a $250,000 snowmaking system. In 1971-72 the Summit Area was opened, served by a Heron-Poma double chairlift. On February 22, 1973, a Cessna 310 crashed into the mountain, killing both occupants. On February 3, 1975, two U.S. Air Force F-111 bombers collided near the mountain; four crew members ejected safely and landed on the upper slopes. Founder Hans Thorner sold Magic Mountain in 1985 to a group led by Simon Oren; in 1986 that group acquired the defunct neighboring Timber Ridge ski area, and in 1987-88 the two mountains were physically connected and marketed together as \"the Magic Mountains.\" In 1990 Oren sold to Joe O'Donnell and Petros Palandjian, who closed the area after the 1990-91 season. It was placed on auction in spring 1993 following a Bank of Boston foreclosure; Michael Boraski purchased the property in December 1995 for $350,000, and the area reopened in December 1997. In August 2002, John Nelson purchased Magic Mountain with a group of partners for $500,000, and in fall 2016 Ski Magic, LLC acquired the area, which has continued to operate independently since. The Black Quad chairlift debuted on February 22, 2024. Magic Mountain sells its own in-house season pass; for the 2026-27 (\"26/27\") season, unlimited passholders can purchase an Indy Pass \"Add-on\" at a 30% discount, giving access to Indy Pass partner resorts, according to Magic Mountain's own Season Pass Info page. The resort permits uphill (skin) access and operates a disc golf course on the mountain outside of ski season, per its own website.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "londonderry-arts-and-historical-society",
+      "name": "Londonderry Arts & Historical Society",
+      "kind": "museum",
+      "destination_path": "united-states/vermont/windham-county/londonderry",
+      "address": "2461 Middletown Road, Londonderry, VT 05148",
+      "summary": "A volunteer-run organization preserving Londonderry's history and culture through art exhibits and community events.",
+      "history": "The Londonderry Arts & Historical Society, at 2461 Middletown Rd in Londonderry, is a volunteer-run organization that preserves and shares the town's history and culture through art exhibits, community quilting fundraisers, and photo sales, according to its own website.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "upper-pass-lodge",
+      "name": "Upper Pass Lodge",
+      "kind": "hotel",
+      "destination_path": "united-states/vermont/windham-county/londonderry",
+      "address": "420 Magic Mountain Access Road, Londonderry, VT 05148",
+      "summary": "A year-round lodge at the base of Magic Mountain with an outdoor pool and fire pits.",
+      "history": "Upper Pass Lodge, at 420 Magic Mountain Access Road in Londonderry, offers year-round rooms with WiFi, mini fridges, coffee makers, and microwaves, plus an outdoor swimming pool and fire pits, at the base of Magic Mountain, according to its own website.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "red-slate-restaurant",
+      "name": "The Red Slate Restaurant",
+      "kind": "restaurant",
+      "destination_path": "united-states/vermont/windham-county/londonderry",
+      "address": "420 Magic Mountain Access Road, Londonderry, VT 05148",
+      "summary": "The on-site restaurant at Upper Pass Lodge, pouring only Vermont-made spirits, beers, and wines.",
+      "history": "The Red Slate Restaurant, the on-site restaurant at Upper Pass Lodge in Londonderry, serves burgers, flatbreads, and entrees, and describes itself as pouring only Vermont-made spirits, beers, and wines at its bar, per Upper Pass Lodge's own website.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "londonderry-town-house",
+      "name": "Londonderry Town House",
+      "kind": "historic-site",
+      "destination_path": "united-states/vermont/windham-county/londonderry",
+      "address": "Middletown Street, South Londonderry, VT 05148",
+      "summary": "An 1860 town hall with a bell tower and a surviving painted stage curtain, still used for town meetings.",
+      "history": "The Londonderry Town House, on Middletown Street in South Londonderry, was constructed in 1860 as a two-story town hall with a bell tower; by the late 19th century it had become a theatrical venue, retaining a canvas stage curtain depicting a scene on the Rhine River, and it continues to host the town's annual town meeting, per Wikipedia's \"Londonderry Town House\" article. It was added to the National Register of Historic Places on July 14, 1983 (Reference No. 83003227) and is a contributing property of the South Londonderry Village Historic District.",
+      "status": "open",
+      "photos": []
+    }
+  ],
+  "entries": [
+    {
+      "kind": "sight",
+      "name": "Magic Mountain",
+      "place_slug": "magic-mountain",
+      "note": "A chairlift-served ski area on Glebe Mountain, founded in 1960, independently owned since 2016."
+    },
+    {
+      "kind": "sight",
+      "name": "Londonderry Arts & Historical Society",
+      "place_slug": "londonderry-arts-and-historical-society",
+      "note": "A volunteer-run society preserving Londonderry's history through art exhibits and community events."
+    },
+    {
+      "kind": "stay",
+      "name": "Upper Pass Lodge",
+      "place_slug": "upper-pass-lodge",
+      "note": "A year-round lodge at the base of Magic Mountain with a pool and fire pits."
+    },
+    {
+      "kind": "food",
+      "name": "The Red Slate Restaurant",
+      "place_slug": "red-slate-restaurant",
+      "note": "Upper Pass Lodge's on-site restaurant, pouring only Vermont-made spirits, beers, and wines."
+    },
+    {
+      "kind": "sight",
+      "name": "Londonderry Town House",
+      "place_slug": "londonderry-town-house",
+      "note": "An 1860 town hall with a surviving painted stage curtain, listed on the National Register in 1983."
+    }
+  ],
+  "links": []
+}

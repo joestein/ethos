@@ -1,0 +1,142 @@
+{
+  "guide": {
+    "slug": "smugglers-notch-resort-ski-guide",
+    "title": "Smugglers' Notch Resort, Vermont: three mountains, one Stritzler-family owner",
+    "destination": "Jeffersonville, VT",
+    "destination_path": "united-states/vermont/lamoille-county/cambridge",
+    "tier": "guide",
+    "intro": "Smugglers' Notch Ski-Ways, Inc. was incorporated in Vermont on April 30, 1956, with Dr. Roger Mann serving as its first president; the area opened for the 1956-57 season with Poma surface lifts on Sterling Mountain, developed with assistance from the Vermont Department of Forests and Parks, per New England Ski History's \"Smugglers' Notch\" area history page. IBM chairman Thomas J. Watson Jr. and his brother Arthur \"Dick\" Watson likely acquired majority ownership of the resort in 1964, per that same source, and developed the Madonna and Morse mountain areas alongside existing terrain on Sterling Mountain. A major chairlift was installed on Madonna Mountain in 1963-64.",
+    "sections": [
+      {
+        "heading": "From the Watsons to the Stritzlers",
+        "body": "After Tom Watson's health declined, the Watson family sold the resort in 1973 to Stanmar, Inc.'s subsidiary Smuggler's Notch Corp., led by Stanley Snider, per New England Ski History's \"Smugglers' Notch\" area history page. William P. Stritzler, who had joined the resort as managing director in 1987, purchased it from Stanley Snider in 1996; the Stritzler family has owned and operated it since."
+      },
+      {
+        "heading": "Three mountains",
+        "body": "The resort's terrain comprises three interconnected mountains -- Morse, Sterling, and Madonna -- and includes a trail named \"The Black Hole,\" per Wikipedia's \"Smugglers' Notch Resort\" article."
+      },
+      {
+        "heading": "In Jeffersonville",
+        "body": "The Jeffersonville Historic District, encompassing buildings across about 63 acres along Church, Main, Maple, and School Streets plus Carlton Avenue, VT Route 108, and Brewster Avenue, was listed on the National Register of Historic Places on April 10, 1987, according to Wikipedia's \"Jeffersonville Historic District\" article. Jeffersonville, the largest settlement in the town of Cambridge, was first settled by John Brewster in the 1780s and incorporated as a village in 1827. The Cambridge Meetinghouse, at 85 Church Street, is individually listed on the National Register of Historic Places, and Grist Mill Covered Bridge, spanning the Brewster River east of Cambridge village, is also listed on the National Register, per Wikipedia's list of NRHP listings in Lamoille County, Vermont. Boyden Valley Winery & Spirits operates a working farm and tasting room at 64 VT-104 in Cambridge and describes itself on its own site as Vermont's first and only Estate Whiskey Alliance member; as of the winery's own website, its bourbon was still being distilled under contract at Old Glory Distilling in Tennessee, with a move to on-site distilling planned. Smugglers' Notch Distillery, founded in 2006 in Jeffersonville at the foot of Smugglers' Notch, had its vodka named by USA Today readers among the top 10 craft vodka distilleries in the country in multiple years between 2018 and 2023, per the distillery's own website."
+      }
+    ],
+    "faq": [
+      {
+        "question": "How many mountains make up Smugglers' Notch Resort?",
+        "answer": "The resort's terrain comprises three interconnected mountains -- Morse, Sterling, and Madonna -- per Wikipedia's \"Smugglers' Notch Resort\" article."
+      },
+      {
+        "question": "Who owns Smugglers' Notch Resort?",
+        "answer": "The Stritzler family has owned and operated the resort since William P. Stritzler, who had joined as managing director in 1987, purchased it from Stanley Snider in 1996, per New England Ski History's \"Smugglers' Notch\" area history page."
+      }
+    ],
+    "photos": []
+  },
+  "places": [
+    {
+      "slug": "smugglers-notch-resort",
+      "name": "Smugglers' Notch Resort",
+      "kind": "ski-area",
+      "destination_path": "united-states/vermont/lamoille-county/cambridge",
+      "address": "Jeffersonville, VT",
+      "summary": "A three-mountain chairlift-served resort founded in 1956, owned by the Watson family and then the Stritzler family since 1996.",
+      "history": "Smugglers' Notch Ski-Ways, Inc. was incorporated in Vermont on April 30, 1956, with Dr. Roger Mann serving as its first president; the area opened for the 1956-57 season with Poma surface lifts on Sterling Mountain, developed with assistance from the Vermont Department of Forests and Parks, per New England Ski History's \"Smugglers' Notch\" area history page. IBM chairman Thomas J. Watson Jr. and his brother Arthur \"Dick\" Watson likely acquired majority ownership of the resort in 1964, and developed the Madonna and Morse mountain areas alongside existing terrain on Sterling Mountain. A major chairlift was installed on Madonna Mountain in 1963-64. After Tom Watson's health declined, the Watson family sold the resort in 1973 to Stanmar, Inc.'s subsidiary Smuggler's Notch Corp., led by Stanley Snider. William P. Stritzler, who had joined the resort as managing director in 1987, purchased it from Stanley Snider in 1996; the Stritzler family has owned and operated it since. The resort's terrain comprises three interconnected mountains -- Morse, Sterling, and Madonna -- and includes a trail named \"The Black Hole,\" per Wikipedia's \"Smugglers' Notch Resort\" article.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "jeffersonville-historic-district",
+      "name": "Jeffersonville Historic District",
+      "kind": "historic-site",
+      "destination_path": "united-states/vermont/lamoille-county/cambridge",
+      "address": "Main Street, Jeffersonville, VT",
+      "summary": "A National Register historic district covering the village center of Jeffersonville.",
+      "history": "The Jeffersonville Historic District, encompassing buildings across about 63 acres along Church, Main, Maple, and School Streets plus Carlton Avenue, VT Route 108, and Brewster Avenue, was listed on the National Register of Historic Places on April 10, 1987 (reference number 86002929), according to Wikipedia's \"Jeffersonville Historic District\" article. Jeffersonville, the largest settlement in the town of Cambridge, was first settled by John Brewster in the 1780s and incorporated as a village in 1827; the Brewster River powered its 19th-century industrial development.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "cambridge-meetinghouse",
+      "name": "Cambridge Meetinghouse",
+      "kind": "historic-site",
+      "destination_path": "united-states/vermont/lamoille-county/cambridge",
+      "address": "85 Church Street, Jeffersonville, VT",
+      "summary": "A meetinghouse in the Jeffersonville village of Cambridge, individually listed on the National Register of Historic Places.",
+      "history": "The Cambridge Meetinghouse, at 85 Church Street in the Jeffersonville village of Cambridge, is individually listed on the National Register of Historic Places, per Wikipedia's list of National Register of Historic Places listings in Lamoille County, Vermont.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "grist-mill-covered-bridge",
+      "name": "Grist Mill Covered Bridge",
+      "kind": "historic-site",
+      "destination_path": "united-states/vermont/lamoille-county/cambridge",
+      "address": "Codding Hollow Road, east of Cambridge village, Cambridge, VT",
+      "summary": "A covered bridge over the Brewster River, listed on the National Register of Historic Places.",
+      "history": "Grist Mill Covered Bridge, spanning the Brewster River east of Cambridge village, is listed on the National Register of Historic Places, per Wikipedia's list of National Register of Historic Places listings in Lamoille County, Vermont.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "boyden-valley-winery-and-spirits",
+      "name": "Boyden Valley Winery & Spirits",
+      "kind": "shop",
+      "destination_path": "united-states/vermont/lamoille-county/cambridge",
+      "address": "64 VT-104, Cambridge, VT 05444",
+      "summary": "A working farm and tasting room in Cambridge, and Vermont's first and only Estate Whiskey Alliance member.",
+      "history": "Boyden Valley Winery & Spirits operates a working farm and tasting room at 64 VT-104 in Cambridge, and describes itself on its own site as Vermont's first and only Estate Whiskey Alliance member; as of the winery's own website, its bourbon was still being distilled under contract at Old Glory Distilling in Tennessee, with a move to on-site distilling planned.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "smugglers-notch-distillery",
+      "name": "Smugglers' Notch Distillery",
+      "kind": "shop",
+      "destination_path": "united-states/vermont/lamoille-county/cambridge",
+      "address": "5087 Vermont Route 15, Jeffersonville, VT 05464",
+      "summary": "A craft distillery founded in 2006 at the foot of Smugglers' Notch.",
+      "history": "Smugglers' Notch Distillery was founded in 2006 in Jeffersonville, at the foot of Smugglers' Notch, per the distillery's own website. USA Today readers voted Smugglers' Notch Distillery among the top 10 craft vodka distilleries in the country in multiple years between 2018 and 2023.",
+      "status": "open",
+      "photos": []
+    }
+  ],
+  "entries": [
+    {
+      "kind": "sight",
+      "name": "Smugglers' Notch Resort",
+      "place_slug": "smugglers-notch-resort",
+      "note": "A three-mountain chairlift-served resort founded in 1956, owned by the Stritzler family since 1996."
+    },
+    {
+      "kind": "sight",
+      "name": "Jeffersonville Historic District",
+      "place_slug": "jeffersonville-historic-district",
+      "note": "A National Register historic district covering the village center of Jeffersonville."
+    },
+    {
+      "kind": "sight",
+      "name": "Cambridge Meetinghouse",
+      "place_slug": "cambridge-meetinghouse",
+      "note": "A meetinghouse individually listed on the National Register of Historic Places."
+    },
+    {
+      "kind": "sight",
+      "name": "Grist Mill Covered Bridge",
+      "place_slug": "grist-mill-covered-bridge",
+      "note": "A covered bridge over the Brewster River, listed on the National Register of Historic Places."
+    },
+    {
+      "kind": "tip",
+      "name": "Boyden Valley Winery & Spirits",
+      "place_slug": "boyden-valley-winery-and-spirits",
+      "note": "A working farm and tasting room, and Vermont's first and only Estate Whiskey Alliance member."
+    },
+    {
+      "kind": "tip",
+      "name": "Smugglers' Notch Distillery",
+      "place_slug": "smugglers-notch-distillery",
+      "note": "A craft distillery founded in 2006 at the foot of Smugglers' Notch."
+    }
+  ],
+  "links": []
+}
