@@ -1,0 +1,53 @@
+{
+  "guide": {
+    "slug": "bolton-valley-resort-ski-guide",
+    "title": "Bolton Valley Resort, Vermont: the DesLauriers family's mountain, bought back in 2017",
+    "destination": "Bolton, VT",
+    "destination_path": "united-states/vermont/chittenden-county/bolton",
+    "tier": "guide",
+    "intro": "Bolton Valley was founded in 1966 by Ralph DesLauriers and his father, per Wikipedia's Bolton Valley Resort article, and remains family-owned and operated today, run by four of Ralph DesLauriers' children: Lindsay, Evan, Adam, and Eric, according to the resort's own About Us page. Beginning around 1997 the resort passed through a series of outside owners and struggled financially; in spring 2017 Ralph DesLauriers and a small group of investors purchased the mountain back, returning it to local ownership.",
+    "sections": [
+      {
+        "heading": "Lifts and lodging through the decades",
+        "body": "Chateau des Monts, a 20-unit hotel condominium complex, was completed at the resort in 1971, per Wikipedia. The Vista Quad chairlift, installed in 2005, serves as the main lift out of the base area; the Wilderness Double, dating to 1966, is the longest lift on the mountain. The resort offers night skiing and riding on a portion of its trails, typically five nights a week from 4 to 10pm, according to Bolton Valley's own Night Skiing page. Bolton Valley's own site states it offers 71 trails across 300 skiable acres."
+      },
+      {
+        "heading": "Energy, awards, and riders",
+        "body": "In 2009 Bolton Valley installed a Northwind 100 wind turbine, per Wikipedia's Bolton Valley Resort article. In 2010 Bolton Valley received the National Ski Areas Association's Silver Eagle Award for Energy Conservation/Clean Energy, according to the resort's own About Us page. Professional snowboarder Jake Blauvelt grew up at Bolton Valley and hosts an annual banked slalom event there, per Wikipedia."
+      }
+    ],
+    "faq": [
+      {
+        "question": "Is Bolton Valley still owned by the DesLauriers family?",
+        "answer": "Yes. Ralph DesLauriers and his father founded the resort in 1966. After a stretch of outside ownership beginning around 1997, Ralph DesLauriers and a small group of investors bought the mountain back in spring 2017, and it is run today by four of his children, per the resort's own About Us page."
+      },
+      {
+        "question": "Does Bolton Valley offer night skiing?",
+        "answer": "Yes. The resort offers night skiing and riding on a portion of its trails, typically five nights a week from 4 to 10pm, according to Bolton Valley's own Night Skiing page."
+      }
+    ],
+    "photos": []
+  },
+  "places": [
+    {
+      "slug": "bolton-valley-resort",
+      "name": "Bolton Valley Resort",
+      "kind": "ski-area",
+      "destination_path": "united-states/vermont/chittenden-county/bolton",
+      "address": "Bolton, VT",
+      "summary": "A family-owned ski resort with chairlift-served skiing and snowboarding, night skiing, and an on-site wind turbine, founded in 1966 and bought back by its founding family in 2017.",
+      "history": "Bolton Valley was founded in 1966 by Ralph DesLauriers and his father, per Wikipedia's Bolton Valley Resort article, and remains family-owned and operated, run today by four of Ralph DesLauriers' children: Lindsay, Evan, Adam, and Eric, according to the resort's own About Us page. Beginning around 1997 the resort passed through a series of outside owners and struggled financially; in spring 2017 Ralph DesLauriers and a small group of investors purchased the mountain back, returning it to local ownership. Chateau des Monts, a 20-unit hotel condominium complex, was completed at the resort in 1971. The Vista Quad chairlift, installed in 2005, serves as the main lift out of the base area; the Wilderness Double, dating to 1966, is the longest lift on the mountain. In 2009 Bolton Valley installed a Northwind 100 wind turbine. In 2010 Bolton Valley received the National Ski Areas Association's Silver Eagle Award for Energy Conservation/Clean Energy. Professional snowboarder Jake Blauvelt grew up at Bolton Valley and hosts an annual banked slalom event there. The resort offers night skiing and riding on a portion of its trails, typically five nights a week from 4 to 10pm, and its own site states it offers 71 trails across 300 skiable acres.",
+      "status": "open",
+      "photos": []
+    }
+  ],
+  "entries": [
+    {
+      "kind": "sight",
+      "name": "Bolton Valley Resort",
+      "place_slug": "bolton-valley-resort",
+      "note": "A family-owned chairlift-served ski resort founded in 1966 and bought back by the founding DesLauriers family in 2017."
+    }
+  ],
+  "links": []
+}

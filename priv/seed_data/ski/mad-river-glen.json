@@ -1,0 +1,57 @@
+{
+  "guide": {
+    "slug": "mad-river-glen-ski-guide",
+    "title": "Mad River Glen, Vermont: the single chair and the co-op that owns it",
+    "destination": "Fayston, VT",
+    "destination_path": "united-states/vermont/washington-county/fayston",
+    "tier": "guide",
+    "intro": "Mad River Glen traces its founding to Roland Palmedo, who formed the Mad River Corporation in November 1946 after studying twenty-eight potential sites and selecting General Stark Mountain for its snow-retention features, per New England Ski History's Mad River Glen page. Palmedo had earlier helped establish chairlift service at Stowe's Mt. Mansfield, according to Wikipedia's Mad River Glen article. Mad River Glen was dedicated on December 11, 1948, with Vermont Governor Ernest W. Gibson attending; limited public skiing began December 26, 1948.",
+    "sections": [
+      {
+        "heading": "The Single Chair",
+        "body": "The Single Chair lift, installed for the 1948-49 season and built by American Steel and Wire Company, is one of only two single chairlifts still operating in the United States, per Wikipedia's Mad River Glen article. The Single Chair underwent a $1.5 million renovation by Doppelmayr-CTEC, rebuilding its towers and terminals, completed in fall 2007, according to New England Ski History's Mad River Glen page."
+      },
+      {
+        "heading": "From the Pratts to the co-op",
+        "body": "Truxton Pratt purchased Mad River Glen in 1972; after his death in 1975 his wife Betsy Pratt took control of the area, per Wikipedia's Mad River Glen article. The Mad River Glen Cooperative was registered in Vermont on September 27, 1994, and Betsy Pratt sold the ski area to the cooperative in December 1995, according to New England Ski History's Mad River Glen page. The cooperative achieved full, debt-free ownership in April 1998 after selling its 1,667th share. The cooperative describes the area as \"America's only skier-owned major mountain,\" operating as a cooperative rather than a corporate resort, per the co-op's own \"About The Co-op\" page. The cooperative's shares reached their cap of 2,500 as of October 31, 2025, and a waitlist is now in place for prospective shareholders."
+      },
+      {
+        "heading": "No snowboards, and a place in history",
+        "body": "Snowboarding was allowed at Mad River Glen from the 1986-87 through 1992-93 seasons before being banned; in a later shareholder vote, more than 75% voted to maintain the prohibition, per Wikipedia's Mad River Glen article. Mad River Glen was listed on the National Register of Historic Places in 2012. The ski area, on Stark Mountain, is located within the town of Fayston, Vermont, per Wikipedia's Fayston, Vermont article. Mad River Glen hosted the NCAA downhill skiing championships in early March 1954, won by Chiharu Igaya, according to New England Ski History's Mad River Glen page."
+      }
+    ],
+    "faq": [
+      {
+        "question": "Who owns Mad River Glen?",
+        "answer": "The Mad River Glen Cooperative, registered in Vermont on September 27, 1994, purchased the ski area from Betsy Pratt in December 1995 and achieved full, debt-free ownership in April 1998. The cooperative describes the area as \"America's only skier-owned major mountain,\" per its own \"About The Co-op\" page."
+      },
+      {
+        "question": "Can you snowboard at Mad River Glen?",
+        "answer": "No. Snowboarding was allowed from the 1986-87 through 1992-93 seasons before being banned; in a later shareholder vote, more than 75% voted to maintain the prohibition, per Wikipedia's Mad River Glen article."
+      }
+    ],
+    "photos": []
+  },
+  "places": [
+    {
+      "slug": "mad-river-glen",
+      "name": "Mad River Glen",
+      "kind": "ski-area",
+      "destination_path": "united-states/vermont/washington-county/fayston",
+      "address": "Stark Mountain, Fayston, VT",
+      "summary": "A cooperatively owned ski area on Stark Mountain, home to one of only two single chairlifts still operating in the United States, and the only major mountain in the country owned by its skiers.",
+      "history": "Mad River Glen traces its founding to Roland Palmedo, who formed the Mad River Corporation in November 1946 after studying twenty-eight potential sites and selecting General Stark Mountain for its snow-retention features, per New England Ski History's Mad River Glen page. Palmedo had earlier helped establish chairlift service at Stowe's Mt. Mansfield. Mad River Glen was dedicated on December 11, 1948, with Vermont Governor Ernest W. Gibson attending; limited public skiing began December 26, 1948. The Single Chair lift, installed for the 1948-49 season and built by American Steel and Wire Company, is one of only two single chairlifts still operating in the United States, per Wikipedia's Mad River Glen article. The Single Chair underwent a $1.5 million renovation by Doppelmayr-CTEC, rebuilding its towers and terminals, completed in fall 2007. Truxton Pratt purchased Mad River Glen in 1972; after his death in 1975 his wife Betsy Pratt took control of the area. The Mad River Glen Cooperative was registered in Vermont on September 27, 1994, and Betsy Pratt sold the ski area to the cooperative in December 1995. The cooperative achieved full, debt-free ownership in April 1998 after selling its 1,667th share. The cooperative describes the area as \"America's only skier-owned major mountain,\" operating as a cooperative rather than a corporate resort. The cooperative's shares reached their cap of 2,500 as of October 31, 2025, and a waitlist is now in place for prospective shareholders. Snowboarding was allowed at Mad River Glen from the 1986-87 through 1992-93 seasons before being banned; in a later shareholder vote, more than 75% voted to maintain the prohibition. Mad River Glen was listed on the National Register of Historic Places in 2012. Mad River Glen hosted the NCAA downhill skiing championships in early March 1954, won by Chiharu Igaya.",
+      "status": "open",
+      "photos": []
+    }
+  ],
+  "entries": [
+    {
+      "kind": "sight",
+      "name": "Mad River Glen",
+      "place_slug": "mad-river-glen",
+      "note": "A cooperatively owned ski area on Stark Mountain, home to one of only two single chairlifts still operating in the United States."
+    }
+  ],
+  "links": []
+}

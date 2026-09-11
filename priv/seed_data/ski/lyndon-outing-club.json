@@ -1,0 +1,91 @@
+{
+  "guide": {
+    "slug": "lyndon-outing-club-ski-guide",
+    "title": "Lyndon Outing Club, Vermont: Shonya Hill's T-bar, rebuilt after lightning",
+    "destination": "Lyndon, VT",
+    "destination_path": "united-states/vermont/caledonia-county/lyndon",
+    "tier": "guide",
+    "intro": "Lyndon Outing Club dates to at least 1926, when the first Winter Carnival was held in Lyndonville, per New England Ski History's Lyndon Outing Club page. The club was formally organized in late 1936 or early 1937, with Milton Kerr as president, and grew to 106 members by the winter of 1936-37. The ski area sits on Shonya Hill, east of Lyndonville village, and is run strictly by volunteers, who handle lift operation, concessions, and grooming, according to the New England Lost Ski Areas Project's Lyndon Outing Club page.",
+    "sections": [
+      {
+        "heading": "From a lighted slope to Shonya Hill",
+        "body": "On January 2, 1938 the club debuted a lighted ski slope on Oscar Baril's farm near Fletcher School, headlined by national ski jumping champion Clarence Olesen, per New England Ski History's Lyndon Outing Club page. The club installed a 10-horsepower, 375-foot electric rope tow on December 23, 1939. In 1947 the club relocated to Shonya Hill on land provided by the Shonyo family; a new 800-foot rope tow debuted there in mid-December 1947, with Fred Hansen, later the designer of Mount Sunapee, assisting in selecting the site."
+      },
+      {
+        "heading": "The T-bar, twice rebuilt",
+        "body": "During the 1961-62 season, club members built a 1,600-foot T-bar lift to mark the club's 25th anniversary, dedicated with a week-long carnival of races, a ball, a torchlight parade, and fireworks in February 1962, per New England Ski History's Lyndon Outing Club page. After the club's T-bar was struck by lightning around 1982, the club secured an $18,000 town loan to purchase a replacement T-bar from Stowe. A T-bar malfunction forced a mid-winter shutdown in 2011; volunteers restored the lift in time for the 2011-12 season. In 2021 the club received a $26,000 grant from the Northern Forest Center to support mountain bike trail development."
+      },
+      {
+        "heading": "Nearby covered bridges",
+        "body": "Built in 1871, the Old Schoolhouse Bridge is believed to be the only surviving 19th-century covered bridge with covered walkways on both sides, per Wikipedia's Old Schoolhouse Bridge article. It was listed on the National Register of Historic Places on March 31, 1971 (NRHP reference No. 71000055) and carried vehicle traffic until 1973. Chamberlin Mill Covered Bridge carries Chamberlin Bridge Road across the South Wheelock Branch of the Passumpsic River in a rural-residential area of south-central Lyndon, and was listed on the National Register of Historic Places on July 30, 1974 (NRHP reference No. 74000205), per Wikipedia's Chamberlin Mill Covered Bridge article."
+      }
+    ],
+    "faq": [
+      {
+        "question": "Who runs Lyndon Outing Club?",
+        "answer": "The club is run strictly by volunteers, who handle lift operation, concessions, and grooming, per the New England Lost Ski Areas Project's Lyndon Outing Club page. It dates to at least 1926 and was formally organized in late 1936 or early 1937."
+      },
+      {
+        "question": "What happened to the T-bar after it was struck by lightning?",
+        "answer": "After the club's T-bar was struck by lightning around 1982, the club secured an $18,000 town loan to purchase a replacement T-bar from Stowe, per New England Ski History's Lyndon Outing Club page. A later T-bar malfunction forced a mid-winter shutdown in 2011, and volunteers restored the lift in time for the 2011-12 season."
+      }
+    ],
+    "photos": []
+  },
+  "places": [
+    {
+      "slug": "lyndon-outing-club",
+      "name": "Lyndon Outing Club",
+      "kind": "ski-area",
+      "destination_path": "united-states/vermont/caledonia-county/lyndon",
+      "address": "Shonya Hill, east of Lyndonville village, Lyndon, VT",
+      "summary": "A volunteer-run T-bar ski area on Shonya Hill, tracing its roots to a 1926 Winter Carnival and rebuilt more than once after lightning and lift failures.",
+      "history": "Lyndon Outing Club dates to at least 1926, when the first Winter Carnival was held in Lyndonville, per New England Ski History's Lyndon Outing Club page. The club was formally organized in late 1936 or early 1937, with Milton Kerr as president, and grew to 106 members by the winter of 1936-37. On January 2, 1938 the club debuted a lighted ski slope on Oscar Baril's farm near Fletcher School, headlined by national ski jumping champion Clarence Olesen. The club installed a 10-horsepower, 375-foot electric rope tow on December 23, 1939. In 1947 the club relocated to Shonya Hill on land provided by the Shonyo family; a new 800-foot rope tow debuted there in mid-December 1947, with Fred Hansen, later the designer of Mount Sunapee, assisting in selecting the site. During the 1961-62 season, club members built a 1,600-foot T-bar lift to mark the club's 25th anniversary, dedicated with a week-long carnival of races, a ball, a torchlight parade, and fireworks in February 1962. After the T-bar was struck by lightning around 1982, the club secured an $18,000 town loan to purchase a replacement T-bar from Stowe. The club is run strictly by volunteers, who handle lift operation, concessions, and grooming. A T-bar malfunction forced a mid-winter shutdown in 2011; volunteers restored the lift in time for the 2011-12 season. In 2021 the club received a $26,000 grant from the Northern Forest Center to support mountain bike trail development. The ski area sits on Shonya Hill, east of Lyndonville village.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "old-schoolhouse-bridge",
+      "name": "Old Schoolhouse Bridge",
+      "kind": "historic-site",
+      "destination_path": "united-states/vermont/caledonia-county/lyndon",
+      "address": "South Wheelock Road over Cold Hill Brook, Lyndon, VT",
+      "summary": "An 1871 covered bridge believed to be the only surviving 19th-century covered bridge with covered walkways on both sides.",
+      "history": "Built in 1871, the Old Schoolhouse Bridge is believed to be the only surviving 19th-century covered bridge with covered walkways on both sides, per Wikipedia's Old Schoolhouse Bridge article. The bridge was listed on the National Register of Historic Places on March 31, 1971 (NRHP reference No. 71000055) and carried vehicle traffic until 1973.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "chamberlin-mill-covered-bridge",
+      "name": "Chamberlin Mill Covered Bridge",
+      "kind": "historic-site",
+      "destination_path": "united-states/vermont/caledonia-county/lyndon",
+      "address": "Chamberlin Bridge Road over the South Wheelock Branch of the Passumpsic River, Lyndon, VT",
+      "summary": "A covered bridge over the South Wheelock Branch of the Passumpsic River in south-central Lyndon, listed on the National Register of Historic Places.",
+      "history": "Chamberlin Mill Covered Bridge carries Chamberlin Bridge Road across the South Wheelock Branch of the Passumpsic River in a rural-residential area of south-central Lyndon, per Wikipedia's Chamberlin Mill Covered Bridge article. The bridge was listed on the National Register of Historic Places on July 30, 1974 (NRHP reference No. 74000205).",
+      "status": "open",
+      "photos": []
+    }
+  ],
+  "entries": [
+    {
+      "kind": "sight",
+      "name": "Lyndon Outing Club",
+      "place_slug": "lyndon-outing-club",
+      "note": "A volunteer-run T-bar ski area on Shonya Hill, tracing its roots to a 1926 Winter Carnival."
+    },
+    {
+      "kind": "sight",
+      "name": "Old Schoolhouse Bridge",
+      "place_slug": "old-schoolhouse-bridge",
+      "note": "An 1871 covered bridge believed to be the only one of its kind with covered walkways on both sides."
+    },
+    {
+      "kind": "sight",
+      "name": "Chamberlin Mill Covered Bridge",
+      "place_slug": "chamberlin-mill-covered-bridge",
+      "note": "A covered bridge over the South Wheelock Branch of the Passumpsic River, listed on the National Register in 1974."
+    }
+  ],
+  "links": []
+}

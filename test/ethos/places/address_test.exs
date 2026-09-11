@@ -587,8 +587,24 @@ defmodule Ethos.Places.AddressTest do
     # Neither addition is the non-locality prose this pin exists to catch, so
     # the ratchet moves rather than the addresses — the same call waves 1 and 2
     # made, and for the same reason.
-    assert comma_streets <= 65,
-           "#{comma_streets} American street lines carry a comma qualifier, up from 63"
+    # 66 after ski content wave 1 landed
+    # priv/seed_data/ski/{ascutney-outdoors,bolton-valley-resort,
+    # bromley-mountain-resort,burke-mountain-resort,cochrans-ski-area,hardack,
+    # harrington-hill,jay-peak-resort,killington-ski-resort,
+    # living-memorial-park,lyndon-outing-club,mad-river-glen}.json, 36 places.
+    # The one addition is the Inn at Long Trail
+    # (inn-at-long-trail, priv/seed_data/ski/killington-ski-resort.json),
+    # whose sourced address, "709 Route 4, Sherburne Pass, Killington, VT
+    # 05751", parses to the street line "709 Route 4, Sherburne Pass".
+    # Sherburne Pass is not a floor or suite designator but the same
+    # acceptable class by the pin's own standard: a real sub-locality the inn
+    # itself prints as part of its mailing address on its own website, not a
+    # directional aside like "near Pacific Street" invented by a finder. The
+    # ratchet moves rather than the address, for the same reason it always
+    # has — the fact belongs in the street line because the operator put it
+    # there.
+    assert comma_streets <= 66,
+           "#{comma_streets} American street lines carry a comma qualifier, up from 66"
 
     for p <- italian, p.street, String.contains?(p.street, ",") do
       # A civico may be a range ("5-7") or carry a letter or a slashed suffix

@@ -1166,10 +1166,40 @@ defmodule EthosWeb.StructuredDataTest do
       # Del Frisco's Boston "Suite 200" and Fleming's Brickell "Suite 150" —
       # which moves the `comma_streets` pin in
       # test/ethos/places/address_test.exs from 63 to 65 and nothing here.
-      assert length(emitted) == 5098
-      assert count.(& &1["streetAddress"]) == 4475
-      assert count.(&is_nil(&1["streetAddress"])) == 623
-      assert count.(& &1["postalCode"]) == 3711
+      #
+      # Re-measured after ski content wave 1 landed
+      # priv/seed_data/ski/{ascutney-outdoors,bolton-valley-resort,
+      # bromley-mountain-resort,burke-mountain-resort,cochrans-ski-area,hardack,
+      # harrington-hill,jay-peak-resort,killington-ski-resort,
+      # living-memorial-park,lyndon-outing-club,mad-river-glen}.json with 36
+      # places (one ski area plus surroundings per file). Of the 36: 14 carry a
+      # house-numbered street line AND a five-digit ZIP; 3 more carry a street
+      # line with no ZIP (Hard'Ack's own address, Welden Theatre, and Living
+      # Memorial Park's own address — all real, just ZIP-less as sourced); 3
+      # carry a ZIP with no street (Hapgood Pond Recreation Area, Kingdom
+      # Trails Association's P.O. box, and the Strafford Village Historic
+      # District); the remaining 16 are street-less and ZIP-less locality-only
+      # rows — mostly a mountain's own town-level address ("Bolton, VT", "Jay,
+      # VT") or a descriptive historic-site location with no house number
+      # ("Behind Barrett Hall, above Route 132, Strafford, VT"), exactly the
+      # shape this bucket exists for:
+      #
+      #   * total 5098 -> 5134, +36.
+      #   * `streetAddress` 4475 -> 4492, +17 (the 14 street+ZIP rows plus the
+      #     3 street-only rows).
+      #   * `is_nil(streetAddress)` 623 -> 642, +19 (the 3 ZIP-only rows plus
+      #     the 16 locality-only rows).
+      #   * `postalCode` 3711 -> 3728, +17 (the 14 street+ZIP rows plus the 3
+      #     ZIP-only rows).
+      #
+      # One of the 36 carries a comma inside its street line — the Inn at Long
+      # Trail's "709 Route 4, Sherburne Pass" — which moves the `comma_streets`
+      # pin in test/ethos/places/address_test.exs from 65 to 66 and nothing
+      # here.
+      assert length(emitted) == 5134
+      assert count.(& &1["streetAddress"]) == 4492
+      assert count.(&is_nil(&1["streetAddress"])) == 642
+      assert count.(& &1["postalCode"]) == 3728
 
       # The largest behavioural delta this change ships: 302 places emit a
       # PostalAddress carrying only locality, region and country. Their full
@@ -1222,7 +1252,19 @@ defmodule EthosWeb.StructuredDataTest do
       # want of a source establishing a grill at the table. All eight carried
       # both a street line and a postal code, so none of them was ever in this
       # bucket to be removed from it.
-      assert count.(fn ld -> is_nil(ld["streetAddress"]) and is_nil(ld["postalCode"]) end) == 308
+      # 324 after ski content wave 1 landed, +16 — the sixteen street-less,
+      # ZIP-less rows counted above: nine ski areas' own addresses given only
+      # at town level (Ascutney Outdoors, Bolton Valley, Bromley, Burke
+      # Mountain, Harrington Hill, Jay Peak, Killington, Lyndon Outing Club,
+      # Mad River Glen — none of these small Vermont ski areas publishes a
+      # street-numbered mailing address) plus seven surrounding historic
+      # sites and parks sourced as descriptive locations rather than postal
+      # addresses (Best's and Bowers covered bridges, the Round Church,
+      # Andrews Community Forest, Taylor Park, Old Schoolhouse Bridge, and
+      # Chamberlin Mill Covered Bridge). Every one is a real address as the
+      # source gives it; none is missing a house number the source actually
+      # had.
+      assert count.(fn ld -> is_nil(ld["streetAddress"]) and is_nil(ld["postalCode"]) end) == 324
     end
   end
 end

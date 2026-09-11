@@ -1,0 +1,87 @@
+{
+  "guide": {
+    "slug": "ascutney-outdoors-ski-guide",
+    "title": "Ascutney Outdoors, Vermont: a nonprofit that reopened a closed resort's T-bar",
+    "destination": "West Windsor, VT",
+    "destination_path": "united-states/vermont/windsor-county/west-windsor",
+    "tier": "guide",
+    "intro": "For over 80 years Mount Ascutney's trail network and alpine terrain served as the centerpiece of local recreation, until the ski area, then Ascutney Mountain Resort, closed in 2010, according to Ascutney Outdoors' own history page. In 2015 the former ski area's 470 acres were purchased by the Trust for Public Land, working with the town of West Windsor and the Upper Valley Land Trust, and a conservation and recreation easement was conveyed to the Upper Valley Land Trust. Ascutney Outdoors, a registered 501(c)(3) non-profit, was established to manage recreation, education, and conservation on the land, and now runs a public T-bar where the old resort once operated chairlifts.",
+    "sections": [
+      {
+        "heading": "From resort to nonprofit",
+        "body": "The Ascutney Outdoors Center, a community gathering space, opened in 2018, according to the organization's own history page. An 1,800-foot Doppelmayr T-bar lift was completed in 2019 after community fundraising. An earlier handlebar tubing lift, installed with support from Holiday Inn Club Vacations, preceded the T-bar sometime in the 2010s."
+      },
+      {
+        "heading": "Skiing and riding today",
+        "body": "Ascutney Outdoors welcomes both skiers and snowboarders on the terrain served by its T-bar, per the organization's own Winter page. Beyond lift-served alpine skiing, Ascutney Outdoors offers backcountry skiing on Mount Ascutney's terrain and cross-country skiing access to the privately-owned Mile Long Field, made available by the landowners."
+      }
+    ],
+    "faq": [
+      {
+        "question": "Is Ascutney Outdoors the same as the old Ascutney Mountain Resort?",
+        "answer": "No. Ascutney Mountain Resort closed in 2010 after serving as the centerpiece of local recreation for over 80 years, per Ascutney Outdoors' own history page. In 2015 the town, the Trust for Public Land, and the Upper Valley Land Trust acquired the former resort's 470 acres, and the nonprofit Ascutney Outdoors was formed to run recreation on the land, including a T-bar completed in 2019."
+      },
+      {
+        "question": "Can you cross-country ski at Ascutney Outdoors?",
+        "answer": "Yes. Beyond its lift-served T-bar terrain, Ascutney Outdoors offers backcountry skiing on Mount Ascutney and cross-country skiing access to the privately-owned Mile Long Field, made available by the landowners, according to the organization's own Winter page."
+      }
+    ],
+    "photos": []
+  },
+  "places": [
+    {
+      "slug": "ascutney-outdoors",
+      "name": "Ascutney Outdoors",
+      "kind": "ski-area",
+      "destination_path": "united-states/vermont/windsor-county/west-windsor",
+      "address": "West Windsor, VT",
+      "summary": "A nonprofit-run public ski area on the former site of Ascutney Mountain Resort, offering T-bar-served alpine skiing and snowboarding, backcountry skiing, and cross-country access.",
+      "history": "For over 80 years Mount Ascutney's trail network and alpine terrain served as the centerpiece of local recreation, until the ski area, then Ascutney Mountain Resort, closed in 2010, according to Ascutney Outdoors' own history page. In 2015 the town acquired 470 acres of the former ski area, with a conservation and recreation easement conveyed to the Upper Valley Land Trust, and Ascutney Outdoors was established as the non-profit to manage the land; the same 470 acres were purchased that year by the Trust for Public Land, working with the town of West Windsor and the Upper Valley Land Trust, per Wikipedia's Mount Ascutney article. Ascutney Outdoors is a registered 501(c)(3) non-profit organization. The Ascutney Outdoors Center, a community gathering space, opened in 2018. An 1,800-foot Doppelmayr T-bar lift was completed in 2019 after community fundraising, preceded by an earlier handlebar tubing lift installed with support from Holiday Inn Club Vacations sometime in the 2010s. Ascutney Outdoors welcomes both skiers and snowboarders on the terrain served by its T-bar, and also offers backcountry skiing on Mount Ascutney and cross-country skiing access to the privately-owned Mile Long Field, made available by the landowners.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "bests-covered-bridge",
+      "name": "Best's Covered Bridge",
+      "kind": "historic-site",
+      "destination_path": "united-states/vermont/windsor-county/west-windsor",
+      "address": "Churchill Road, south of Vermont Route 44, West Windsor, VT",
+      "summary": "An 1889 laminated-arch covered bridge built by Brownsville wheelwright Stephen F. Hammond, listed on the National Register of Historic Places.",
+      "history": "Built in 1889 by Stephen F. Hammond, a wheelwright from Brownsville, the bridge uses a laminated-arch design made from five layers of planked wood bolted together, according to Wikipedia's own article on the bridge. It was listed on the National Register of Historic Places on July 2, 1973, per Wikipedia's list of National Register of Historic Places listings in Windsor County, Vermont.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "bowers-covered-bridge",
+      "name": "Bowers Covered Bridge",
+      "kind": "historic-site",
+      "destination_path": "united-states/vermont/windsor-county/west-windsor",
+      "address": "Bible Hill Road over Mill Brook, West Windsor (Brownsville), VT",
+      "summary": "A 1919 laminated-arch covered bridge, one of only three known bridges in Vermont built this way, rebuilt after Hurricane Irene.",
+      "history": "Built in 1919, Bowers Covered Bridge has a laminated-arch deck covered by a post-and-beam superstructure, one of only three known bridges in Vermont built with this method; it was listed on the National Register of Historic Places on August 28, 1973, according to Wikipedia's Bowers Bridge article. The bridge was swept from its foundation by Hurricane Irene in 2011 and was rebuilt and reopened in 2012.",
+      "status": "open",
+      "photos": []
+    }
+  ],
+  "entries": [
+    {
+      "kind": "sight",
+      "name": "Ascutney Outdoors",
+      "place_slug": "ascutney-outdoors",
+      "note": "A nonprofit-run T-bar and tubing hill on the site of the former Ascutney Mountain Resort."
+    },
+    {
+      "kind": "sight",
+      "name": "Best's Covered Bridge",
+      "place_slug": "bests-covered-bridge",
+      "note": "An 1889 laminated-arch covered bridge listed on the National Register of Historic Places in 1973."
+    },
+    {
+      "kind": "sight",
+      "name": "Bowers Covered Bridge",
+      "place_slug": "bowers-covered-bridge",
+      "note": "A 1919 covered bridge rebuilt after Hurricane Irene swept it from its foundation in 2011."
+    }
+  ],
+  "links": []
+}

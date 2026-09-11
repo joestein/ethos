@@ -1,0 +1,91 @@
+{
+  "guide": {
+    "slug": "bromley-mountain-resort-ski-guide",
+    "title": "Bromley Mountain Resort, Vermont: the Sun Mountain, south-facing since 1936",
+    "destination": "Peru, VT",
+    "destination_path": "united-states/vermont/bennington-county/peru",
+    "tier": "guide",
+    "intro": "Bromley's founding traces to 1936, when Ralph Hutchinson and the Works Progress Administration cut the \"Bromley Run\" trail on the west side of the mountain, per the resort's own About page. Fred Pabst Jr. incorporated it as a ski area shortly after and introduced lift service in 1938. Bromley is nicknamed \"The Sun Mountain\" for its southern exposure, according to the resort's own website, and its own website states it features 47 trails and nine lifts.",
+    "sections": [
+      {
+        "heading": "Lifts, from J-bar to quad",
+        "body": "In January 1943 a 2,800-foot J-bar lift opened between the Twister and East Meadow slopes, per Wikipedia's Bromley Mountain article. A 5,700-foot Riblet double chairlift was installed in 1958. Between 1965 and 1967, Bromley deployed a snowmaking system with more than 50 snow guns. In 1976 Bromley installed a triple-tracked alpine slide. The Blue Ribbon Quad was installed in 1987, and the Sun Mountain Express, a Doppelmayr quad, was installed in 1997, according to the resort's own About page."
+      },
+      {
+        "heading": "Ownership, and a hub for snowboarding",
+        "body": "Founder Fred Pabst Jr. died of a heart attack on March 1, 1977. Ownership passed from Pabst's estate to Stratton Mountain in 1979, then to Moore and Munger, Inc. in 1980, and to Simon Oren, also the owner of Magic Mountain, in 1987, per Wikipedia. In 1990 Joe O'Donnell and Petros Palandjian acquired Bromley; in 2011 Brian and Tyler Fairbank were hired to operate the resort. During the 1980s rise of snowboarding, Bromley became a hub for the sport as well as telemark skiing, associated with Kåre Andersen's Telemark Festival, according to the resort's own About page."
+      },
+      {
+        "heading": "In Peru",
+        "body": "JJ Hapgood General Store & Eatery, on Main Street in Peru, describes itself as a general store and eatery offering Vermont meals, gifts, and provisions, per the store's own website. Hapgood Pond Recreation Area, within the Green Mountain National Forest, offers a swim beach, a fishing pier, a non-motorized boat launch, and family campsites, according to its Recreation.gov listing."
+      }
+    ],
+    "faq": [
+      {
+        "question": "Why is Bromley called 'The Sun Mountain'?",
+        "answer": "Bromley is nicknamed \"The Sun Mountain\" for its southern exposure, according to the resort's own website."
+      },
+      {
+        "question": "Who has owned Bromley over the years?",
+        "answer": "Ownership passed from founder Fred Pabst Jr.'s estate to Stratton Mountain in 1979, then to Moore and Munger, Inc. in 1980, and to Simon Oren in 1987, per Wikipedia's Bromley Mountain article. Joe O'Donnell and Petros Palandjian acquired the resort in 1990, and Brian and Tyler Fairbank were hired to operate it in 2011."
+      }
+    ],
+    "photos": []
+  },
+  "places": [
+    {
+      "slug": "bromley-mountain-resort",
+      "name": "Bromley Mountain Resort",
+      "kind": "ski-area",
+      "destination_path": "united-states/vermont/bennington-county/peru",
+      "address": "Peru, VT",
+      "summary": "A south-facing ski resort founded in 1936, known as \"The Sun Mountain,\" with chairlift-served skiing, snowboarding, and a long history as a telemark and snowboard hub.",
+      "history": "Bromley traces its founding to 1936, when Ralph Hutchinson and the Works Progress Administration cut the \"Bromley Run\" trail on the west side of the mountain; Fred Pabst Jr. incorporated it as a ski area shortly after and introduced lift service in 1938, per the resort's own About page. In January 1943 a 2,800-foot J-bar lift opened between the Twister and East Meadow slopes. A 5,700-foot Riblet double chairlift was installed in 1958. Between 1965 and 1967, Bromley deployed a snowmaking system with more than 50 snow guns. In 1976 Bromley installed a triple-tracked alpine slide. Founder Fred Pabst Jr. died of a heart attack on March 1, 1977. Ownership passed from Pabst's estate to Stratton Mountain in 1979, then to Moore and Munger, Inc. in 1980, and to Simon Oren, also the owner of Magic Mountain, in 1987. In 1990 Joe O'Donnell and Petros Palandjian acquired Bromley; in 2011 Brian and Tyler Fairbank were hired to operate the resort. The Blue Ribbon Quad was installed in 1987, and the Sun Mountain Express, a Doppelmayr quad, was installed in 1997. Bromley is nicknamed \"The Sun Mountain\" for its southern exposure. During the 1980s rise of snowboarding, Bromley became a hub for the sport as well as telemark skiing, associated with Kåre Andersen's Telemark Festival. The resort's own website states it features 47 trails and nine lifts.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "jj-hapgood-general-store-eatery",
+      "name": "JJ Hapgood General Store & Eatery",
+      "kind": "restaurant",
+      "destination_path": "united-states/vermont/bennington-county/peru",
+      "address": "305 Main St, Peru, VT 05152",
+      "summary": "A general store and eatery in Peru offering Vermont meals, gifts, and provisions.",
+      "history": "JJ Hapgood General Store & Eatery, at 305 Main St in Peru, describes itself as a general store and eatery offering Vermont meals, gifts, and provisions, positioned as \"a common space and an everyday destination for eating, celebrating, and coming together with friends and family,\" per the store's own website.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "hapgood-pond-recreation-area",
+      "name": "Hapgood Pond Recreation Area",
+      "kind": "park",
+      "destination_path": "united-states/vermont/bennington-county/peru",
+      "address": "Hapgood Pond Road, Peru, VT 05152",
+      "summary": "An 8-acre developed recreation site on a 12-acre pond within the Green Mountain National Forest, with camping, swimming, and non-motorized boating.",
+      "history": "Hapgood Pond Recreation Area is an 8-acre developed site on a 12-acre pond within the Green Mountain National Forest, offering a swim beach, a fishing pier, a carry-down launch for non-motorized boats, and 28 family campsites, according to its Recreation.gov listing.",
+      "status": "open",
+      "photos": []
+    }
+  ],
+  "entries": [
+    {
+      "kind": "sight",
+      "name": "Bromley Mountain Resort",
+      "place_slug": "bromley-mountain-resort",
+      "note": "A south-facing chairlift-served ski resort founded in 1936, nicknamed \"The Sun Mountain.\""
+    },
+    {
+      "kind": "food",
+      "name": "JJ Hapgood General Store & Eatery",
+      "place_slug": "jj-hapgood-general-store-eatery",
+      "note": "A general store and eatery on Main Street in Peru offering Vermont meals and provisions."
+    },
+    {
+      "kind": "walk",
+      "name": "Hapgood Pond Recreation Area",
+      "place_slug": "hapgood-pond-recreation-area",
+      "note": "A Green Mountain National Forest pond with a swim beach, fishing pier, and family campsites."
+    }
+  ],
+  "links": []
+}
