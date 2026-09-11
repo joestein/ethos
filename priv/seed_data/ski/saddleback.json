@@ -1,0 +1,53 @@
+{
+  "guide": {
+    "slug": "saddleback-ski-guide",
+    "title": "Saddleback Maine: a five-year closure, 2015 to 2020",
+    "destination": "Sandy River Plantation, ME",
+    "destination_path": "united-states/maine/franklin-county/sandy-river-plantation",
+    "tier": "guide",
+    "intro": "Bill Berry, a Saddleback skier and condo owner, purchased the ski area from prior owner Donald Breen in 2003, per New England Ski History. In December 2012, the Berry family announced that Saddleback was for sale. In July 2015 the family announced Saddleback would close if they could not obtain financing for a new quad chairlift; per New England Ski History, Saddleback closed after the 2014-15 season and did not open for 2015-16. By December 2015 the Berry family said the area would likely reopen in January 2016 under new ownership, but despite snowmaking preparations, the area never opened that winter.",
+    "sections": [
+      {
+        "heading": "The Majella agreement that never closed, 2017-2018",
+        "body": "On June 28, 2017, per New England Ski History, the Berry family announced they had reached an agreement to sell Saddleback to the Australia-based Majella Group, which said it planned to reopen the mountain for the 2017-18 season — an agreement to sell, not a completed sale. That sale was never completed, and Saddleback remained idle through the 2017-18 winter; the deal collapsed after Majella Group CEO Sebastian Monsour was arrested in Australia in 2018 on alleged investor fraud charges."
+      },
+      {
+        "heading": "Arctaris: an offer in March 2019, a purchase completed January 2020",
+        "body": "In March 2019, per New England Ski History, the Arctaris Impact Fund made an offer to purchase Saddleback — an offer, not yet a completed purchase. On January 31, 2020, per Wikipedia's \"Saddleback Maine\" article, Saddleback was officially sold to Arctaris Impact Fund, completing the purchase that had been offered in March 2019. Following renovations carried out over summer 2020, Saddleback reopened to the public on December 15, 2020, per New England Ski History, having been closed since the end of the 2014-15 season. Per its own site, Arctaris Impact Investors describes its Saddleback investment as \"over $42M\" invested \"across a four-year period\" following the 2020 reopening — Arctaris's own characterization of the scale and span of its investment, not an independently audited figure."
+      }
+    ],
+    "faq": [
+      {
+        "question": "Why was Saddleback closed for five years?",
+        "answer": "Per New England Ski History, the Berry family closed Saddleback after the 2014-15 season, citing an inability to finance a new chairlift. A 2017 agreement to sell to the Majella Group collapsed after its CEO's 2018 fraud arrest. The mountain remained idle until the Arctaris Impact Fund's purchase completed January 31, 2020, and it reopened to the public December 15, 2020."
+      },
+      {
+        "question": "Who owns Saddleback today?",
+        "answer": "The Arctaris Impact Fund, which completed its purchase of Saddleback on January 31, 2020, per Wikipedia's \"Saddleback Maine\" article, after making an offer in March 2019, per New England Ski History."
+      }
+    ],
+    "photos": []
+  },
+  "places": [
+    {
+      "slug": "saddleback",
+      "name": "Saddleback Maine",
+      "kind": "ski-area",
+      "destination_path": "united-states/maine/franklin-county/sandy-river-plantation",
+      "address": "976 Saddleback Mountain Rd, Rangeley, ME 04970",
+      "summary": "A Franklin County ski area, closed for five seasons between 2015 and 2020 after a chairlift-financing dispute, a collapsed sale agreement, and a fraud arrest, before reopening under new ownership.",
+      "history": "Bill Berry, a Saddleback skier and condo owner, purchased the ski area from prior owner Donald Breen in 2003, per New England Ski History. In December 2012, the Berry family announced that Saddleback was for sale. In July 2015 the family announced Saddleback would close if they could not obtain financing for a new quad chairlift. Saddleback closed after the 2014-15 season and did not open for 2015-16; by December 2015 the Berry family said the area would likely reopen in January 2016 under new ownership, but despite snowmaking preparations, the area never opened that winter. On June 28, 2017, the Berry family announced they had reached an agreement to sell Saddleback to the Australia-based Majella Group, which said it planned to reopen the mountain for the 2017-18 season — an agreement to sell, not a completed sale. That sale was never completed, and Saddleback remained idle through the 2017-18 winter; the deal collapsed after Majella Group CEO Sebastian Monsour was arrested in Australia in 2018 on alleged investor fraud charges. In March 2019, the Arctaris Impact Fund made an offer to purchase Saddleback — an offer, not yet a completed purchase. On January 31, 2020, per Wikipedia's \"Saddleback Maine\" article, Saddleback was officially sold to Arctaris Impact Fund, completing the purchase that had been offered in March 2019. Following renovations carried out over summer 2020, Saddleback reopened to the public on December 15, 2020, per New England Ski History, having been closed since the end of the 2014-15 season. Per its own site, Arctaris Impact Investors describes its Saddleback investment as \"over $42M\" invested \"across a four-year period\" following the 2020 reopening. Saddleback's own mailing address uses the Rangeley, ME post office, but the ski area itself sits in Sandy River Plantation, a separate Franklin County municipality from the town of Rangeley — a mail-routing address, not evidence of which town the mountain stands in.",
+      "status": "open",
+      "photos": []
+    }
+  ],
+  "entries": [
+    {
+      "kind": "sight",
+      "name": "Saddleback Maine",
+      "place_slug": "saddleback",
+      "note": "A Franklin County ski area, closed for five seasons between 2015 and 2020, that reopened under the Arctaris Impact Fund."
+    }
+  ],
+  "links": []
+}

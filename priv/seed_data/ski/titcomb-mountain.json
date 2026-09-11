@@ -1,0 +1,125 @@
+{
+  "guide": {
+    "slug": "titcomb-mountain-ski-guide",
+    "title": "Titcomb Mountain: a Farmington ski club since 1939, named for a fallen soldier",
+    "destination": "Town of Farmington, ME",
+    "destination_path": "united-states/maine/franklin-county/farmington",
+    "tier": "guide",
+    "intro": "The Franklin Ski and Outing Club was formed in the spring of 1939 and, per New England Ski History, \"formally filed with the State of Maine as a non-profit in February of 1941.\" Early skiing by the club took place on Voter Hill before the group \"selected 712 foot Morrison Hill and started work on a slope,\" which \"likely debuted for the 1941-42 season.\" The ski area was named to honor Captain John Abbott Titcomb, a ski instructor and racer who was \"killed in action in the Phillipines\" on March 1, 1945; \"the ski area was named in his honor in 1948, while the base lodge was dedicated in his memory in 1949 (funded by his parents, Mr. and Mrs. Harold Titcomb).\"",
+    "sections": [
+      {
+        "heading": "From Pomalift to T-bar, 1956-1974",
+        "body": "A Pomalift was installed for the 1956-57 season, per New England Ski History. During a 1950s expansion, the area, governed by the Farmington Ski Club, \"expanded, thanks in part to low interest loans provided by the Titcomb family.\" A T-Bar conversion occurred \"most likely in the summer of 1969.\" Snowmaking was likely added for the 1974-75 season, following a poor 1973-74 season, per the same source's own hedge. The club navigated financial challenges in the early 1980s through \"fundraisers and cooperative weather.\""
+      },
+      {
+        "heading": "Titcomb today",
+        "body": "Titcomb Mountain's own website lists its address as 180 Ski Slope Road, Farmington, ME 04938, describing itself as \"a family oriented, affordable mountain\" offering Alpine skiing, snowboarding, and Nordic skiing programs. Its Nordic trails are, per the same site, \"OPEN 24/7,\" operating on a self-serve drop-box payment system of \"$10/person\" with an after-hours Venmo payment option. Per New England Ski History's year-by-year lift ticket table, Titcomb's adult weekend full-day lift ticket price for the 2025-26 season, now closed, was $50.00."
+      },
+      {
+        "heading": "In Farmington",
+        "body": "The Nordica Homestead, birthplace of opera singer Lillian Nordica at 116 Nordica Road, was listed on the National Register of Historic Places in 1969 and was \"opened it in 1928 as a museum dedicated to Nordica's memory\" by \"a group of friends and admirers,\" per Wikipedia's article on the homestead; it is \"open to the public between June and October.\" The Isabel and Chester Greenwood House, at 112 Hill Street, built in 1896, was added to the National Register of Historic Places in 1978, per Wikipedia; it is associated with Chester Greenwood, who \"invented the earmuff\" and \"obtained a patent for it in 1877\" at age 15, and who also established Farmington's \"first telephone exchange.\" Cutler Memorial Library, a small Beaux Arts stone structure at 117 Academy Street built 1901-03, was individually listed on the National Register of Historic Places on November 2, 1973, per Wikipedia's article on the library; its designation as a contributing property of the Farmington Historic District came 22 years later, on January 20, 1995 — two separate, dated events. The library houses Farmington's public library and was \"dedicated to the memory of Nathan Cutler.\" The University of Maine at Farmington, per Wikipedia, is a public liberal arts college founded August 24, 1864 as the state's first publicly funded normal school."
+      }
+    ],
+    "faq": [
+      {
+        "question": "Who is Titcomb Mountain named for?",
+        "answer": "Captain John Abbott Titcomb, a ski instructor and racer killed in action in the Philippines on March 1, 1945; per New England Ski History, the ski area was named in his honor in 1948, and the base lodge was dedicated in his memory in 1949, funded by his parents."
+      },
+      {
+        "question": "Who runs Titcomb Mountain?",
+        "answer": "The Farmington Ski Club, successor to the Franklin Ski and Outing Club formed in 1939, per New England Ski History; the area's own site describes it as \"a family oriented, affordable mountain.\""
+      }
+    ],
+    "photos": []
+  },
+  "places": [
+    {
+      "slug": "titcomb-mountain",
+      "name": "Titcomb Mountain",
+      "kind": "ski-area",
+      "destination_path": "united-states/maine/franklin-county/farmington",
+      "address": "180 Ski Slope Road, Farmington, ME 04938",
+      "summary": "A Farmington Ski Club-run ski area dating to 1939, named for a soldier killed in action in 1945.",
+      "history": "The Franklin Ski and Outing Club was formed in the spring of 1939 and, per New England Ski History, \"formally filed with the State of Maine as a non-profit in February of 1941.\" Early skiing by the club took place on Voter Hill before the group \"selected 712 foot Morrison Hill and started work on a slope,\" which \"likely debuted for the 1941-42 season.\" The ski area was named to honor Captain John Abbott Titcomb, a ski instructor and racer who was \"killed in action in the Phillipines\" on March 1, 1945; \"the ski area was named in his honor in 1948, while the base lodge was dedicated in his memory in 1949 (funded by his parents, Mr. and Mrs. Harold Titcomb).\" A Pomalift was installed for the 1956-57 season. During a 1950s expansion, the area, governed by the Farmington Ski Club, \"expanded, thanks in part to low interest loans provided by the Titcomb family.\" A T-Bar conversion occurred \"most likely in the summer of 1969.\" Snowmaking was likely added for the 1974-75 season, following a poor 1973-74 season, per the source's own hedge. The club navigated financial challenges in the early 1980s through \"fundraisers and cooperative weather.\" Titcomb Mountain's own website lists its address as 180 Ski Slope Road, Farmington, ME 04938, describing itself as \"a family oriented, affordable mountain\" offering Alpine skiing, snowboarding, and Nordic skiing programs; its Nordic trails are \"OPEN 24/7,\" operating on a self-serve drop-box payment system of \"$10/person\" with an after-hours Venmo payment option. Per New England Ski History's year-by-year lift ticket table, Titcomb's adult weekend full-day lift ticket price for the 2025-26 season, now closed, was $50.00.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "nordica-homestead",
+      "name": "Nordica Homestead Museum",
+      "kind": "museum",
+      "destination_path": "united-states/maine/franklin-county/farmington",
+      "address": "116 Nordica Road, Farmington, ME 04938",
+      "summary": "The birthplace of opera singer Lillian Nordica, a National Register-listed museum since 1928.",
+      "history": "Per Wikipedia's \"Nordica Homestead\" article, the Nordica Homestead is the birthplace of opera singer Lillian Nordica, located at 116 Nordica Road in Farmington, listed on the National Register of Historic Places in 1969 (reference number 69000006), and \"opened it in 1928 as a museum dedicated to Nordica's memory\" by \"a group of friends and admirers\" who restored it; it is \"open to the public between June and October\" with a small admission fee.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "chester-greenwood-house",
+      "name": "Chester Greenwood House",
+      "kind": "historic-site",
+      "destination_path": "united-states/maine/franklin-county/farmington",
+      "address": "112 Hill Street, Farmington, ME 04938",
+      "summary": "The 1896 Farmington home of earmuff inventor Chester Greenwood, National Register-listed in 1978.",
+      "history": "Per Wikipedia's \"Isabel and Chester Greenwood House\" article, the house at 112 Hill Street, built in 1896, was added to the National Register of Historic Places in 1978 (reference number 78000160); it is associated with Chester Greenwood, who \"invented the earmuff\" and \"obtained a patent for it in 1877\" at age 15, and who also \"established\" Farmington's \"first telephone exchange\" and operated a bicycle factory and machine shop in town.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "cutler-memorial-library",
+      "name": "Cutler Memorial Library",
+      "kind": "historic-site",
+      "destination_path": "united-states/maine/franklin-county/farmington",
+      "address": "117 Academy Street, Farmington, ME 04938",
+      "summary": "Farmington's public library, a 1901-03 Beaux Arts building individually National Register-listed in 1973 and a district contributing property since 1995.",
+      "history": "Per Wikipedia's \"Cutler Memorial Library\" article, the small Beaux Arts stone structure at 117 Academy Street (corner of High Street), built 1901-03, was individually listed on the National Register of Historic Places on November 2, 1973. Its designation as a contributing property of the Farmington Historic District came 22 years later, on January 20, 1995 — a separate, later event. It houses Farmington's public library and was \"dedicated to the memory of Nathan Cutler.\"",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "university-of-maine-at-farmington",
+      "name": "University of Maine at Farmington",
+      "kind": "attraction",
+      "destination_path": "united-states/maine/franklin-county/farmington",
+      "address": "Farmington, ME 04938",
+      "summary": "A public liberal arts college founded in 1864 as Maine's first publicly funded normal school.",
+      "history": "Per Wikipedia's \"University of Maine at Farmington\" article, the college is a public liberal arts institution founded August 24, 1864 as the state's first publicly funded normal school, located in Farmington.",
+      "status": "open",
+      "photos": []
+    }
+  ],
+  "entries": [
+    {
+      "kind": "sight",
+      "name": "Titcomb Mountain",
+      "place_slug": "titcomb-mountain",
+      "note": "A Farmington Ski Club-run ski area dating to 1939, named for a soldier killed in action in 1945."
+    },
+    {
+      "kind": "sight",
+      "name": "Nordica Homestead Museum",
+      "place_slug": "nordica-homestead",
+      "note": "The birthplace of opera singer Lillian Nordica, a National Register-listed museum since 1928."
+    },
+    {
+      "kind": "sight",
+      "name": "Chester Greenwood House",
+      "place_slug": "chester-greenwood-house",
+      "note": "The 1896 Farmington home of earmuff inventor Chester Greenwood, National Register-listed in 1978."
+    },
+    {
+      "kind": "sight",
+      "name": "Cutler Memorial Library",
+      "place_slug": "cutler-memorial-library",
+      "note": "Farmington's public library, a 1901-03 Beaux Arts building individually National Register-listed in 1973 and a district contributing property since 1995."
+    },
+    {
+      "kind": "sight",
+      "name": "University of Maine at Farmington",
+      "place_slug": "university-of-maine-at-farmington",
+      "note": "A public liberal arts college founded in 1864 as Maine's first publicly funded normal school."
+    }
+  ],
+  "links": []
+}

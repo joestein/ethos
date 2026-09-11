@@ -1333,10 +1333,44 @@ defmodule EthosWeb.StructuredDataTest do
       # antique-snowmobile-museum's "10 Northern Cruise Trail, Lake Road" —
       # which moves the `comma_streets` pin in
       # test/ethos/places/address_test.exs from 69 to 70 and nothing here.
-      assert length(emitted) == 5308
-      assert count.(& &1["streetAddress"]) == 4590
-      assert count.(&is_nil(&1["streetAddress"])) == 718
-      assert count.(& &1["postalCode"]) == 3848
+      #
+      # Re-measured after ski content wave 6 landed
+      # priv/seed_data/ski/{pleasant-mountain,powderhouse-hill,quarry-road,
+      # quoggy-jo,saddleback,spruce-mountain,sugarloaf,sunday-river,
+      # titcomb-mountain}.json with 46 places (one ski area plus surroundings
+      # per file — Maine rows 13-21, completing Maine). Of the 46: 33 carry a
+      # house-numbered (or route-numbered) street line AND a five-digit ZIP;
+      # 1 more carries a street line with no ZIP (Hub Coffee, Quoggy Jo's
+      # surroundings, re-cited to its own listing page per this wave's
+      # verification pass, which gives no ZIP); 12 carry a ZIP with no street
+      # (4 of the wave's nine ski areas' own addresses given only at town
+      # level — Pleasant Mountain, Powderhouse Hill, Quarry Road, and Spruce
+      # Mountain, none of which publishes a street-numbered mailing address —
+      # plus 8 surrounding sites sourced as descriptive or route-level
+      # locations rather than postal addresses: Pondicherry Park's Depot
+      # Street, Narramissic (Bridgton town-level), Holmes-Crafts Homestead's
+      # Old North Jay Road, the Jay-Niles Memorial Library (North Jay
+      # town-level), the Jay Recreation Area's Water Tower Lane, The Rack's
+      # Sugarloaf Access Road note, Hug's Italian Cuisine's Route 27, and the
+      # University of Maine at Farmington (Farmington town-level)); none are
+      # street-less and ZIP-less locality-only rows this wave — every
+      # street-less row still carries its town's five-digit ZIP:
+      #
+      #   * total 5308 -> 5354, +46.
+      #   * `streetAddress` 4590 -> 4624, +34 (the 33 street+ZIP rows plus
+      #     the 1 street-only row).
+      #   * `is_nil(streetAddress)` 718 -> 730, +12 (the 12 ZIP-only rows;
+      #     zero locality-only rows this wave).
+      #   * `postalCode` 3848 -> 3893, +45 (the 33 street+ZIP rows plus the
+      #     12 ZIP-only rows).
+      #
+      # None of the 46 carries a comma inside its street line, so the
+      # `comma_streets` pin in test/ethos/places/address_test.exs is
+      # unaffected and stays at 70.
+      assert length(emitted) == 5354
+      assert count.(& &1["streetAddress"]) == 4624
+      assert count.(&is_nil(&1["streetAddress"])) == 730
+      assert count.(& &1["postalCode"]) == 3893
 
       # The largest behavioural delta this change ships: 302 places emit a
       # PostalAddress carrying only locality, region and country. Their full
@@ -1442,6 +1476,10 @@ defmodule EthosWeb.StructuredDataTest do
       # baker-mountain.json). Every other locality-only address in this
       # wave's 45 places carries a ZIP even without a street (16 rows,
       # counted separately above), so only these three land here.
+      # 366 held through ski content wave 6, which completed Maine — every
+      # one of the wave's 12 street-less rows still carries its town's
+      # five-digit ZIP (counted separately above), so none of them lands in
+      # this bucket.
       assert count.(fn ld -> is_nil(ld["streetAddress"]) and is_nil(ld["postalCode"]) end) == 366
     end
   end

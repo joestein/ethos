@@ -1,0 +1,125 @@
+{
+  "guide": {
+    "slug": "spruce-mountain-ski-guide",
+    "title": "Spruce Mountain: a three-town ski area on the Androscoggin, since 1956",
+    "destination": "Town of Jay, ME",
+    "destination_path": "united-states/maine/franklin-county/jay",
+    "tier": "guide",
+    "intro": "Per New England Ski History, the Spruce Mountain Ski Club began in 1956 when \"a group of Livermore Falls skiers obtained permission from Eben Farrington, Carl Wright, and Everett Wright to develop a ski area off Spruce Mountain Road in North Jay.\" The club \"was registered as a non-profit in December of 1956,\" operating with \"a rope tow acquired from Augusta.\" \"In the interest of having a more convenient location, the ski area was moved to a location just outside of Livermore Falls in 1959,\" with landowners Alex and Pauline providing land and a barn in exchange for a lease payment covering their property taxes; the relocated area \"likely opened during the winter of 1959-60.\"",
+    "sections": [
+      {
+        "heading": "Three towns buy in, 1987-1995",
+        "body": "\"In December of 1987, the town of Jay entered into a purchase agreement with the Dion family for the property,\" per New England Ski History. The towns of Jay, Livermore, and Livermore Falls purchased the land and buildings for $197,000, a deal that \"likely closed in 1988.\" For the 1991-92 season, per the same source, the warming hut, snack bar, and garage facilities were upgraded, and new bathrooms were constructed. In 1995, \"the towns of Jay and Livermore and numerous volunteers joined together to build a new snowmaking system.\""
+      },
+      {
+        "heading": "Jointly owned, volunteer-run",
+        "body": "Spruce Mountain is, per its own website, \"jointly owned\" by the towns of Jay, Livermore, and Livermore Falls, at Spruce Mountain Road, Jay, Maine 04239. The site states, \"our volunteer staff has been dedicated to providing a fun, family-friendly outdoor experience for our surrounding community and beyond through winter outdoor recreation,\" and describes itself as proud \"to provide family-friendly skiing on the banks of the Androscoggin River in Central Maine since 1956.\""
+      },
+      {
+        "heading": "In Jay",
+        "body": "The Holmes-Crafts Homestead, a Federal-style wood-frame house built in 1820 on Old North Jay Road, was added to the National Register of Historic Places on April 26, 1973, per Wikipedia's article on the homestead; it is \"owned by the Jay Historical Society, and is open by appointment.\" The Jay-Niles Memorial Library, a 1916-18 Classical Revival building memorializing Veranus and Mehitable Niles and the town's Civil War soldiers, is listed on the National Register of Historic Places (1987), per Wikipedia's article on the library. French Falls, per the Town of Jay's own Recreation page, is a \"29.4-acre riverside property in Jay, Maine owned by Androscoggin Land Trust,\" located \"in the Village of Chisholm situated between Route 4 and the Androscoggin River,\" with trails to the French Falls waterfall and an approximately 10-acre recreational facility that the Town of Jay leases and uses for a \"Music in the Park\" summer series and the \"Spruce Mountain Sled-In\" winter festival. The Jay Recreation Area \"can be accessed from Water Tower Lane, with a parking lot next to the cell tower,\" per the same page, or from trails behind Spruce Mountain High School."
+      }
+    ],
+    "faq": [
+      {
+        "question": "Who owns Spruce Mountain?",
+        "answer": "The towns of Jay, Livermore, and Livermore Falls jointly own the ski area, per its own website, following a purchase agreement the town of Jay entered with the Dion family in December 1987."
+      },
+      {
+        "question": "Since when has Spruce Mountain operated?",
+        "answer": "The Spruce Mountain Ski Club began in 1956 on land off Spruce Mountain Road in North Jay, per New England Ski History, before relocating to a site near Livermore Falls in 1959; the operator's own site describes providing \"family-friendly skiing on the banks of the Androscoggin River in Central Maine since 1956.\""
+      }
+    ],
+    "photos": []
+  },
+  "places": [
+    {
+      "slug": "spruce-mountain",
+      "name": "Spruce Mountain",
+      "kind": "ski-area",
+      "destination_path": "united-states/maine/franklin-county/jay",
+      "address": "Spruce Mountain Road, Jay, ME 04239",
+      "summary": "A volunteer-run ski area jointly owned by the towns of Jay, Livermore, and Livermore Falls, operating since 1956.",
+      "history": "Per New England Ski History, the Spruce Mountain Ski Club began in 1956 when \"a group of Livermore Falls skiers obtained permission from Eben Farrington, Carl Wright, and Everett Wright to develop a ski area off Spruce Mountain Road in North Jay.\" The club \"was registered as a non-profit in December of 1956,\" operating with \"a rope tow acquired from Augusta.\" \"In the interest of having a more convenient location, the ski area was moved to a location just outside of Livermore Falls in 1959,\" with landowners Alex and Pauline providing land and a barn in exchange for a lease payment covering their property taxes; the relocated area \"likely opened during the winter of 1959-60.\" \"In December of 1987, the town of Jay entered into a purchase agreement with the Dion family for the property,\" and the towns of Jay, Livermore, and Livermore Falls purchased the land and buildings for $197,000, a deal that \"likely closed in 1988.\" For the 1991-92 season, the warming hut, snack bar, and garage facilities were upgraded, and new bathrooms were constructed. In 1995, \"the towns of Jay and Livermore and numerous volunteers joined together to build a new snowmaking system.\" Spruce Mountain is, per its own website, \"jointly owned\" by the towns of Jay, Livermore, and Livermore Falls, at Spruce Mountain Road, Jay, Maine 04239. The site states, \"our volunteer staff has been dedicated to providing a fun, family-friendly outdoor experience for our surrounding community and beyond through winter outdoor recreation,\" and describes itself as proud \"to provide family-friendly skiing on the banks of the Androscoggin River in Central Maine since 1956.\"",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "holmes-crafts-homestead",
+      "name": "Holmes-Crafts Homestead",
+      "kind": "historic-site",
+      "destination_path": "united-states/maine/franklin-county/jay",
+      "address": "Old North Jay Road (ME Route 4), North Jay, ME 04239",
+      "summary": "An 1820 Federal-style house in North Jay, National Register-listed in 1973, owned by the Jay Historical Society.",
+      "history": "Per Wikipedia's \"Holmes-Crafts Homestead\" article, the Federal-style wood-frame house was built in 1820 on Old North Jay Road and was added to the National Register of Historic Places on April 26, 1973 (reference number 73000105); it is \"owned by the Jay Historical Society, and is open by appointment,\" now operating as a museum maintained by that society.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "jay-niles-memorial-library",
+      "name": "Jay-Niles Memorial Library",
+      "kind": "historic-site",
+      "destination_path": "united-states/maine/franklin-county/jay",
+      "address": "North Jay, ME 04239",
+      "summary": "A 1916-18 Classical Revival library building in North Jay, National Register-listed in 1987.",
+      "history": "Per Wikipedia's \"Jay-Niles Memorial Library\" article, the 1916-18 Classical Revival building memorializes Veranus and Mehitable Niles and the town's Civil War soldiers, and was listed on the National Register of Historic Places in 1987 (reference number 87000414).",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "french-falls-park",
+      "name": "French Falls",
+      "kind": "park",
+      "destination_path": "united-states/maine/franklin-county/jay",
+      "address": "28 French Falls Lane, Jay, ME 04239",
+      "summary": "A riverside Androscoggin Land Trust property in Jay's Village of Chisholm, with a town-leased recreational facility.",
+      "history": "Per the Town of Jay's own Recreation page, French Falls is a \"29.4-acre riverside property in Jay, Maine owned by Androscoggin Land Trust,\" located \"in the Village of Chisholm situated between Route 4 and the Androscoggin River,\" with trails to the French Falls waterfall and an approximately 10-acre recreational facility that includes ball fields and a parking lot. The Town of Jay leases the recreational facility and hosts events there, including a \"Music in the Park\" summer series and the \"Spruce Mountain Sled-In\" winter festival.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "jay-recreation-area",
+      "name": "Jay Recreation Area",
+      "kind": "park",
+      "destination_path": "united-states/maine/franklin-county/jay",
+      "address": "Water Tower Lane, Jay, ME 04239",
+      "summary": "A Jay recreation area reached from Water Tower Lane or from trails behind Spruce Mountain High School.",
+      "history": "Per the Town of Jay's own Recreation page, the Jay Recreation Area \"can be accessed from Water Tower Lane, with a parking lot next to the cell tower,\" or from trails behind Spruce Mountain High School's center field and field hockey field.",
+      "status": "open",
+      "photos": []
+    }
+  ],
+  "entries": [
+    {
+      "kind": "sight",
+      "name": "Spruce Mountain",
+      "place_slug": "spruce-mountain",
+      "note": "A volunteer-run ski area jointly owned by the towns of Jay, Livermore, and Livermore Falls, operating since 1956."
+    },
+    {
+      "kind": "sight",
+      "name": "Holmes-Crafts Homestead",
+      "place_slug": "holmes-crafts-homestead",
+      "note": "An 1820 Federal-style house in North Jay, National Register-listed in 1973, owned by the Jay Historical Society."
+    },
+    {
+      "kind": "sight",
+      "name": "Jay-Niles Memorial Library",
+      "place_slug": "jay-niles-memorial-library",
+      "note": "A 1916-18 Classical Revival library building in North Jay, National Register-listed in 1987."
+    },
+    {
+      "kind": "sight",
+      "name": "French Falls",
+      "place_slug": "french-falls-park",
+      "note": "A riverside Androscoggin Land Trust property in Jay's Village of Chisholm, with a town-leased recreational facility."
+    },
+    {
+      "kind": "sight",
+      "name": "Jay Recreation Area",
+      "place_slug": "jay-recreation-area",
+      "note": "A Jay recreation area reached from Water Tower Lane or from trails behind Spruce Mountain High School."
+    }
+  ],
+  "links": []
+}

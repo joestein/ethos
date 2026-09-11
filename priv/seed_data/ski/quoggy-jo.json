@@ -1,0 +1,138 @@
+{
+  "guide": {
+    "slug": "quoggy-jo-ski-guide",
+    "title": "Quoggy Jo Ski Center: a volunteer-run alpine hill in Presque Isle",
+    "destination": "Presque Isle, ME",
+    "destination_path": "united-states/maine/aroostook-county/presque-isle",
+    "tier": "guide",
+    "intro": "Per its own \"About\" page, \"Quoggy Jo Ski Center is a non-profit 501(c)(3) organization operated by the volunteers of the Quoggy Jo Ski Club,\" located at 420 Fort Fairfield Road, Presque Isle, Maine. Its stated purpose, per the same page, is \"to provide an affordable opportunity for everyone to enjoy alpine skiing during the long Northern Maine winters,\" with a particular focus on youth after-school programs and weekend family skiing. As accessed in September 2026, the ski center's own online store sold an Individual Season Pass at $275.00 and a Lift Day Pass at $30.00, alongside family season passes and a 20 Day Lift Pass.",
+    "sections": [
+      {
+        "heading": "McCain Day, and a lodge for rent",
+        "body": "The center's own event calendar has listed a \"McCain Day at Quoggy Jo\" event each February break, described on the operator's own listing: \"Quoggy Jo and McCain have teamed up again this year for February break to bring their employees and the community a chance to ski for free. All McCain employees and their immediate family receive free lift tickets and rentals courtesy of McCain. Our community benefits from free lift tickets for all youth and college students.\" Separately, per its own homepage, the center's lodge is available for rental with a \"fully-equipped kitchen,\" and has hosted graduation parties and family reunions, with a Northern Inflatables rental discount offered for lodge bookings. The operator's own season-passes page carries the tagline \"Affordable Maine snow, Quoggy's where families go!\""
+      },
+      {
+        "heading": "In Presque Isle",
+        "body": "The Northern Maine Museum of Science, per Wikipedia's article on the museum, \"is a natural history museum in Presque Isle, Maine,\" located \"in Folsom Hall on the UMPI campus,\" with exhibits covering \"biology, mathematics, physical science, astronomy, chemistry, geology, forestry and agriculture.\" Aroostook State Park, per Wikipedia's article on the park, is \"a public recreation area comprising 898 acres that encompasses Quaggy Jo Mountain and sits adjacent to Echo Lake,\" \"established in 1938 as Maine's first state park,\" offering a campground and trails for hiking, cross-country skiing, and snowshoeing. Governor's Restaurant & Bakery operates a location at 350 Main St, per the Aroostook County tourism office's food & drink listings. The Maple Pig operates a location at 710 Main St, per the same listings. Hub Coffee operates at 342 Main Street, per its own listing on the Aroostook County tourism office's site."
+      }
+    ],
+    "faq": [
+      {
+        "question": "Who operates Quoggy Jo Ski Center?",
+        "answer": "The Quoggy Jo Ski Club, a non-profit 501(c)(3) organization, per the center's own \"About\" page, providing alpine skiing to Presque Isle and the surrounding Aroostook County community."
+      },
+      {
+        "question": "Does Quoggy Jo have a season pass?",
+        "answer": "Yes. As accessed in September 2026, the center's own online store sold an Individual Season Pass at $275.00 and a Lift Day Pass at $30.00, alongside family season passes and a 20 Day Lift Pass."
+      }
+    ],
+    "photos": []
+  },
+  "places": [
+    {
+      "slug": "quoggy-jo",
+      "name": "Quoggy Jo Ski Area",
+      "kind": "ski-area",
+      "destination_path": "united-states/maine/aroostook-county/presque-isle",
+      "address": "420 Fort Fairfield Road, Presque Isle, ME 04769",
+      "summary": "A volunteer-run, non-profit alpine ski area in Presque Isle, operated by the Quoggy Jo Ski Club.",
+      "history": "Per its own \"About\" page, \"Quoggy Jo Ski Center is a non-profit 501(c)(3) organization operated by the volunteers of the Quoggy Jo Ski Club,\" located at 420 Fort Fairfield Road, Presque Isle, Maine. Its stated purpose, per the same page, is \"to provide an affordable opportunity for everyone to enjoy alpine skiing during the long Northern Maine winters,\" with a particular focus on youth after-school programs and weekend family skiing. The center's own event calendar has listed a \"McCain Day at Quoggy Jo\" event each February break: \"Quoggy Jo and McCain have teamed up again this year for February break to bring their employees and the community a chance to ski for free. All McCain employees and their immediate family receive free lift tickets and rentals courtesy of McCain. Our community benefits from free lift tickets for all youth and college students.\" As accessed in September 2026, the center's own online store sold an Individual Season Pass at $275.00 and a Lift Day Pass at $30.00, alongside family season passes and a 20 Day Lift Pass; the ski center's own sitemap showed its core pages carrying a last-modified date of July 7, 2026, indicating active maintenance going into that winter. Per its own homepage, the center's lodge is available for rental with a \"fully-equipped kitchen,\" and has hosted graduation parties and family reunions, with a Northern Inflatables rental discount offered for lodge bookings; the operator's own season-passes page carries the tagline \"Affordable Maine snow, Quoggy's where families go!\"",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "northern-maine-museum-of-science",
+      "name": "Northern Maine Museum of Science",
+      "kind": "museum",
+      "destination_path": "united-states/maine/aroostook-county/presque-isle",
+      "address": "181 Main Street, Presque Isle, ME 04769",
+      "summary": "A natural history museum in Folsom Hall on the University of Maine at Presque Isle campus.",
+      "history": "Per Wikipedia's \"Northern Maine Museum of Science\" article, the museum \"is a natural history museum in Presque Isle, Maine,\" located \"in Folsom Hall on the UMPI campus,\" with exhibits covering \"biology, mathematics, physical science, astronomy, chemistry, geology, forestry and agriculture.\"",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "aroostook-state-park",
+      "name": "Aroostook State Park",
+      "kind": "park",
+      "destination_path": "united-states/maine/aroostook-county/presque-isle",
+      "address": "87 State Park Rd, Presque Isle, ME 04769",
+      "summary": "Maine's first state park, established in 1938 around Quaggy Jo Mountain and Echo Lake in Presque Isle.",
+      "history": "Per Wikipedia's \"Aroostook State Park\" article, the park is \"a public recreation area comprising 898 acres that encompasses Quaggy Jo Mountain and sits adjacent to Echo Lake,\" \"established in 1938 as Maine's first state park,\" offering a campground and trails for hiking, cross-country skiing, and snowshoeing.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "governors-restaurant-and-bakery",
+      "name": "Governor's Restaurant & Bakery",
+      "kind": "restaurant",
+      "destination_path": "united-states/maine/aroostook-county/presque-isle",
+      "address": "350 Main St, Presque Isle, ME 04769",
+      "summary": "A Presque Isle restaurant and bakery on Main Street.",
+      "history": "Per the Aroostook County tourism office's food & drink listings, Governor's Restaurant & Bakery operates a location at 350 Main St, Presque Isle.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "hub-coffee",
+      "name": "Hub Coffee",
+      "kind": "cafe",
+      "destination_path": "united-states/maine/aroostook-county/presque-isle",
+      "address": "342 Main Street, Presque Isle, ME",
+      "summary": "A coffee shop on Main Street in downtown Presque Isle.",
+      "history": "Per the Aroostook County tourism office's own listing page for Hub Coffee, the shop operates at 342 Main Street, Presque Isle.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "the-maple-pig",
+      "name": "The Maple Pig",
+      "kind": "restaurant",
+      "destination_path": "united-states/maine/aroostook-county/presque-isle",
+      "address": "710 Main St, Presque Isle, ME 04769",
+      "summary": "A Presque Isle restaurant on Main Street.",
+      "history": "Per the Aroostook County tourism office's food & drink listings, The Maple Pig operates a location at 710 Main St, Presque Isle.",
+      "status": "open",
+      "photos": []
+    }
+  ],
+  "entries": [
+    {
+      "kind": "sight",
+      "name": "Quoggy Jo Ski Area",
+      "place_slug": "quoggy-jo",
+      "note": "A volunteer-run, non-profit alpine ski area in Presque Isle, operated by the Quoggy Jo Ski Club."
+    },
+    {
+      "kind": "sight",
+      "name": "Northern Maine Museum of Science",
+      "place_slug": "northern-maine-museum-of-science",
+      "note": "A natural history museum in Folsom Hall on the University of Maine at Presque Isle campus."
+    },
+    {
+      "kind": "sight",
+      "name": "Aroostook State Park",
+      "place_slug": "aroostook-state-park",
+      "note": "Maine's first state park, established in 1938 around Quaggy Jo Mountain and Echo Lake in Presque Isle."
+    },
+    {
+      "kind": "food",
+      "name": "Governor's Restaurant & Bakery",
+      "place_slug": "governors-restaurant-and-bakery",
+      "note": "A Presque Isle restaurant and bakery on Main Street."
+    },
+    {
+      "kind": "food",
+      "name": "Hub Coffee",
+      "place_slug": "hub-coffee",
+      "note": "A coffee shop on Main Street in downtown Presque Isle."
+    },
+    {
+      "kind": "food",
+      "name": "The Maple Pig",
+      "place_slug": "the-maple-pig",
+      "note": "A Presque Isle restaurant on Main Street."
+    }
+  ],
+  "links": []
+}

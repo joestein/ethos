@@ -1,0 +1,132 @@
+{
+  "guide": {
+    "slug": "sugarloaf-ski-guide",
+    "title": "Sugarloaf: from a 1950 ski club to Boyne Resorts, by way of a 1986 bankruptcy",
+    "destination": "Carrabassett Valley, ME",
+    "destination_path": "united-states/maine/franklin-county/carrabassett-valley",
+    "tier": "guide",
+    "intro": "Sugarloaf began operations in 1950, per the resort's own \"About Us\" page, when the Sugarloaf Mountain Ski Club secured land on the mountain's northern face; the first trail, Winter's Way, was completed in 1951, and a rope tow was installed in 1953. Between that 1950 founding and a 1994 sale, per New England Ski History, the resort was owned for nearly four decades by the Sugarloaf Mountain Corporation, formed in March 1955 with Robert \"Bunny\" Bass as president and Amos Winter as executive manager. The Corporation built Sugarloaf's early lifts, its 1966 gondola, and a 1974 top-to-bottom snowmaking system — before filing for Chapter 11 bankruptcy on March 23, 1986, after which Warren Cook became its president.",
+    "sections": [
+      {
+        "heading": "S-K-I Ltd., American Skiing Company, and Boyne, 1994-2018",
+        "body": "A majority holding in Sugarloaf was purchased by S-K-I Ltd. on August 24, 1994 for $2 million, per New England Ski History. S-K-I Ltd. merged with LBO Resort Enterprises Corp. on June 28, 1996, forming American Skiing Company, which shortly afterward acquired the remaining 49% of Sugarloaf stock from Warren Cook, giving American Skiing Company full control. On August 8, 2007, American Skiing Company sold Sugarloaf and Sunday River to Boyne USA Resorts for a combined $77 million; Boyne then sold the underlying real-estate assets to CNL Lifestyle Properties while retaining an operating lease to run the resorts. In 2016, per Wikipedia's \"Boyne Resorts\" article, CNL Income Properties sold all six of the ski resorts it leased to Boyne — including Sugarloaf — to Och-Ziff Capital Management, with Boyne continuing to operate under lease. That purchase-from-Och-Ziff was announced in March 2018, but per New England Ski History's own Sugarloaf page, it was in May 2018 that \"Boyne USA Resorts acquired the assets of Sugarloaf, putting operational control and ownership under one company.\""
+      },
+      {
+        "heading": "In Carrabassett Valley",
+        "body": "Sugarloaf Mountain Hotel, per the resort's own lodging page, is Sugarloaf's on-mountain hotel in Sugarloaf Village, with \"a design inspired by classic New England farmhouses.\" The Rack, per the resort's own dining page, is an independently operated restaurant at the bottom of Sugarloaf Access Road, serving burgers, beer, and barbecue; Hug's Italian Cuisine operates on Route 27. The Carrabassett Valley Outdoor Center, per the Town of Carrabassett Valley's own site, is a recreation facility offering a reservable lodge, camping, and Nordic ski trails in winter. Sugarloaf's own address is 5092 Sugarloaf Access Road, Carrabassett Valley, Maine 04947."
+      }
+    ],
+    "faq": [
+      {
+        "question": "Who owns Sugarloaf?",
+        "answer": "Boyne Resorts. American Skiing Company sold Sugarloaf to Boyne USA Resorts on August 8, 2007; after a period of leased operation under CNL and then Och-Ziff Capital Management, Boyne regained full ownership in May 2018, per New England Ski History."
+      },
+      {
+        "question": "What happened to Sugarloaf between its 1950 founding and its 1994 sale?",
+        "answer": "The Sugarloaf Mountain Corporation, formed in March 1955, owned and operated the resort for nearly four decades, building its early lifts, a 1966 gondola, and a 1974 snowmaking system, before filing for Chapter 11 bankruptcy on March 23, 1986, per New England Ski History."
+      }
+    ],
+    "photos": []
+  },
+  "places": [
+    {
+      "slug": "sugarloaf",
+      "name": "Sugarloaf",
+      "kind": "ski-area",
+      "destination_path": "united-states/maine/franklin-county/carrabassett-valley",
+      "address": "5092 Sugarloaf Access Road, Carrabassett Valley, ME 04947",
+      "summary": "A Boyne Resorts ski area in Carrabassett Valley, founded by a ski club in 1950 and owned for nearly four decades by the Sugarloaf Mountain Corporation.",
+      "history": "Sugarloaf began operations in 1950, per the resort's own \"About Us\" page, when the Sugarloaf Mountain Ski Club secured land on the mountain's northern face; the first trail, Winter's Way, was completed in 1951, and a rope tow was installed in 1953. Between that founding and a 1994 sale, per New England Ski History, the resort was owned for nearly four decades by the Sugarloaf Mountain Corporation, formed in March 1955 with Robert \"Bunny\" Bass as president and Amos Winter as executive manager, which built Sugarloaf's early lifts, its 1966 gondola, and a 1974 top-to-bottom snowmaking system, before filing for Chapter 11 bankruptcy on March 23, 1986; Warren Cook then became its president. A majority holding in Sugarloaf was purchased by S-K-I Ltd. on August 24, 1994 for $2 million. S-K-I Ltd. merged with LBO Resort Enterprises Corp. on June 28, 1996, forming American Skiing Company, which shortly afterward acquired the remaining 49% of Sugarloaf stock from Warren Cook, giving American Skiing Company full control. On August 8, 2007, American Skiing Company sold Sugarloaf and Sunday River to Boyne USA Resorts for a combined $77 million; Boyne then sold the underlying real-estate assets to CNL Lifestyle Properties while retaining an operating lease. In 2016, per Wikipedia's \"Boyne Resorts\" article, CNL Income Properties sold all six of the ski resorts it leased to Boyne — including Sugarloaf — to Och-Ziff Capital Management, with Boyne continuing to operate under lease. That purchase-from-Och-Ziff was announced in March 2018, but per New England Ski History's own Sugarloaf page, it was in May 2018 that \"Boyne USA Resorts acquired the assets of Sugarloaf, putting operational control and ownership under one company.\" Sugarloaf's address, per its own \"About Us\" page, is 5092 Sugarloaf Access Road, Carrabassett Valley, Maine 04947.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "sugarloaf-mountain-hotel",
+      "name": "Sugarloaf Mountain Hotel",
+      "kind": "hotel",
+      "destination_path": "united-states/maine/franklin-county/carrabassett-valley",
+      "address": "5092 Sugarloaf Access Road, Carrabassett Valley, ME 04947",
+      "summary": "Sugarloaf's on-mountain hotel in Sugarloaf Village.",
+      "history": "Per the resort's own lodging page, Sugarloaf Mountain Hotel is Sugarloaf's on-mountain hotel in Sugarloaf Village, Carrabassett Valley, described by the resort as having \"a design inspired by classic New England farmhouses.\"",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "the-rack",
+      "name": "The Rack",
+      "kind": "restaurant",
+      "destination_path": "united-states/maine/franklin-county/carrabassett-valley",
+      "address": "Sugarloaf Access Road (bottom of Access Road), Carrabassett Valley, ME 04947",
+      "summary": "An independently operated restaurant at the bottom of Sugarloaf Access Road, serving burgers, beer, and barbecue.",
+      "history": "Per Sugarloaf's own dining page, The Rack is an independently operated restaurant at the bottom of Sugarloaf Access Road in Carrabassett Valley, serving burgers, beer, and barbecue.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "hugs-italian-cuisine",
+      "name": "Hug's Italian Cuisine",
+      "kind": "restaurant",
+      "destination_path": "united-states/maine/franklin-county/carrabassett-valley",
+      "address": "Route 27, Carrabassett Valley, ME 04947",
+      "summary": "A Route 27 restaurant in Carrabassett Valley serving Northern Italian cuisine.",
+      "history": "Per Sugarloaf's own dining page, Hug's Italian Cuisine is a restaurant located on Route 27 in Carrabassett Valley, serving authentic Northern Italian cuisine.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "carrabassett-valley-outdoor-center",
+      "name": "Carrabassett Valley Outdoor Center",
+      "kind": "park",
+      "destination_path": "united-states/maine/franklin-county/carrabassett-valley",
+      "address": "3001 Outdoor Center Road, Carrabassett Valley, ME 04947",
+      "summary": "A town-run recreation facility in Carrabassett Valley offering a reservable lodge, camping, and Nordic ski trails.",
+      "history": "Per the Town of Carrabassett Valley's own website, the Outdoor Center is a recreation facility operated by the town, offering a reservable lodge, camping, and Nordic ski trails in winter.",
+      "status": "open",
+      "photos": []
+    }
+  ],
+  "entries": [
+    {
+      "kind": "sight",
+      "name": "Sugarloaf",
+      "place_slug": "sugarloaf",
+      "note": "A Boyne Resorts ski area in Carrabassett Valley, founded by a ski club in 1950 and owned for nearly four decades by the Sugarloaf Mountain Corporation."
+    },
+    {
+      "kind": "stay",
+      "name": "Sugarloaf Mountain Hotel",
+      "place_slug": "sugarloaf-mountain-hotel",
+      "note": "Sugarloaf's on-mountain hotel in Sugarloaf Village."
+    },
+    {
+      "kind": "food",
+      "name": "The Rack",
+      "place_slug": "the-rack",
+      "note": "An independently operated restaurant at the bottom of Sugarloaf Access Road, serving burgers, beer, and barbecue."
+    },
+    {
+      "kind": "food",
+      "name": "Hug's Italian Cuisine",
+      "place_slug": "hugs-italian-cuisine",
+      "note": "A Route 27 restaurant in Carrabassett Valley serving Northern Italian cuisine."
+    },
+    {
+      "kind": "sight",
+      "name": "Carrabassett Valley Outdoor Center",
+      "place_slug": "carrabassett-valley-outdoor-center",
+      "note": "A town-run recreation facility in Carrabassett Valley offering a reservable lodge, camping, and Nordic ski trails."
+    }
+  ],
+  "links": [
+    {
+      "target": "guide:sunday-river-ski-guide",
+      "kind": "shared-history",
+      "note": "American Skiing Company sold both to Boyne USA Resorts on August 8, 2007; both remain sister Boyne Resorts properties in Maine."
+    },
+    {
+      "target": "guide:pleasant-mountain-ski-guide",
+      "kind": "shared-history",
+      "note": "Sugarloaf and Pleasant Mountain are both Boyne Resorts properties; Boyne acquired Pleasant Mountain, then still named Shawnee Peak, on October 22, 2021."
+    }
+  ]
+}
