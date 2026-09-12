@@ -97,10 +97,30 @@ defmodule Ethos.Seeds.SkiCollectionsTest do
     user = Ethos.AccountsFixtures.user_fixture()
     ExUnit.CaptureIO.capture_io(fn -> Ethos.Release.seed_ski(user.email) end)
 
-    slugs = SkiCollections.upsert_all!() |> Enum.map(& &1.slug) |> Enum.sort()
+    [first_a, first_b] = SkiCollections.upsert_all!()
+    first = [first_a, first_b] |> Enum.sort_by(& &1.slug)
+    slugs = Enum.map(first, & &1.slug)
     assert slugs == ["skiing-and-snowboarding-united-states", "skiing-new-england"]
 
-    assert SkiCollections.upsert_all!() |> Enum.map(& &1.slug) |> Enum.sort() == slugs
+    [second_a, second_b] = SkiCollections.upsert_all!()
+    second = [second_a, second_b] |> Enum.sort_by(& &1.slug)
+
+    # Collections.upsert_collection!/1 deletes and re-inserts every item inside
+    # one transaction (lib/ethos/collections.ex), so duplication is
+    # structurally impossible — but a slug-list comparison alone would not
+    # notice a second run that silently dropped items or corrupted a title.
+    # Compare ids, item counts, and item content, not just the slug list.
+    for {c1, c2} <- Enum.zip(first, second) do
+      assert c1.id == c2.id,
+             "#{c1.slug}: re-seeding should update the same row, not insert a new one"
+
+      assert c1.title == c2.title
+
+      items1 = Ethos.Repo.preload(c1, :items).items |> Enum.map(&{&1.guide_id, &1.blurb})
+      items2 = Ethos.Repo.preload(c2, :items).items |> Enum.map(&{&1.guide_id, &1.blurb})
+      assert length(items1) == length(items2), "#{c1.slug}: item count changed on re-seed"
+      assert Enum.sort(items1) == Enum.sort(items2), "#{c1.slug}: item content changed on re-seed"
+    end
   end
 
   # --- Content rules the corpus gate cannot see -----------------------------
@@ -135,6 +155,12 @@ defmodule Ethos.Seeds.SkiCollectionsTest do
     Regex.match?(~r/(?<![A-Za-z])#{Regex.escape(word)}(?![A-Za-z])/i, text)
   end
 
+  defp banned_unit_word(text), do: Enum.find(@units, &contains_word?(text, &1))
+  defp unit_word?(text), do: banned_unit_word(text) != nil
+
+  defp banned_superlative(text), do: Enum.find(@superlatives, &contains_word?(text, &1))
+  defp superlative?(text), do: banned_superlative(text) != nil
+
   # Rule 1: no digits except sourced years. Every digit run in a blurb must be
   # a four-digit year that appears verbatim in that area's own shipped file.
   # This admits "founded in 1947" only when 1947 is actually in Mohawk's
@@ -163,22 +189,69 @@ defmodule Ethos.Seeds.SkiCollectionsTest do
   end
 
   # Rule 2: no unit words in any blurb.
+  #
+  # This was a bare `refute` loop over the real corpus, which is already
+  # clean by construction — so it proved nothing about the check itself.
+  # Empty @units or break the regex escape and this test still passes. The
+  # specimen test right after it is the part that demonstrates the check can
+  # actually catch something.
   test "no blurb uses a unit word" do
     {blurbs, _intros} = all_blurbs_and_intros()
 
-    for {label, blurb} <- blurbs, word <- @units do
-      refute contains_word?(blurb, word),
-             "#{label}: blurb uses banned unit word \"#{word}\": #{blurb}"
+    for {label, blurb} <- blurbs do
+      refute unit_word?(blurb),
+             "#{label}: blurb uses banned unit word \"#{banned_unit_word(blurb)}\": #{blurb}"
     end
   end
 
-  # Rule 3: no superlatives in any blurb or either intro.
+  test "the unit-word ban catches what it must and spares what it must not" do
+    for specimen <- [
+          "a 2,000-foot vertical drop to the base",
+          "260 skiable acres across the mountain",
+          "four lifts serve the upper mountain",
+          "twenty-seven trails wind down from the summit"
+        ] do
+      assert unit_word?(specimen), "must be caught: #{inspect(specimen)}"
+    end
+
+    for specimen <- [
+          "a chairlift-served ski area in East Burke",
+          "a family-owned ski area operating since 1963",
+          "a rope-tow hill on Dead Hill",
+          "run by the town's own parks department"
+        ] do
+      refute unit_word?(specimen), "must publish: #{inspect(specimen)}"
+    end
+  end
+
+  # Rule 3: no superlatives in any blurb or either intro. Same vacuity gap as
+  # rule 2 above, and the same fix: a specimen pair right after it.
   test "no blurb or intro uses a superlative" do
     {blurbs, intros} = all_blurbs_and_intros()
 
-    for {label, text} <- blurbs ++ intros, word <- @superlatives do
-      refute contains_word?(text, word),
-             "#{label}: text uses banned superlative \"#{word}\": #{text}"
+    for {label, text} <- blurbs ++ intros do
+      refute superlative?(text),
+             "#{label}: text uses banned superlative \"#{banned_superlative(text)}\": #{text}"
+    end
+  end
+
+  test "the superlative ban catches what it must and spares what it must not" do
+    for specimen <- [
+          "the biggest mountain in the state",
+          "world-class terrain draws skiers from three states",
+          "one of the oldest ski areas in the country",
+          "the first quad chairlift in New England"
+        ] do
+      assert superlative?(specimen), "must be caught: #{inspect(specimen)}"
+    end
+
+    for specimen <- [
+          "a family-owned ski area operating since 1963",
+          "the co-operative's single chairlift still runs",
+          "a town-owned hill run by the parks department",
+          "reopened under new ownership in 2022"
+        ] do
+      refute superlative?(specimen), "must publish: #{inspect(specimen)}"
     end
   end
 
@@ -213,6 +286,20 @@ defmodule Ethos.Seeds.SkiCollectionsTest do
     for word <- @ranking, contains_word?(text, word), do: word
   end
 
+  # The single production predicate for "is this ranking word backed by this
+  # file" — every call site below (the real check, both specimen halves, and
+  # the shipped-corpus proof) calls this instead of each writing its own copy.
+  # Before this was extracted, the specimen at `assert caught == ["longest",
+  # "pioneer"]` reimplemented the check as bare `String.contains?/2`, so it
+  # agreed with the real check (line below) only because `contains_word?/2`
+  # happens to imply `String.contains?/2` today. Tighten the real check later
+  # to word-boundary-only and a reimplemented specimen would keep passing
+  # while testing a rule that no longer exists; a shared predicate cannot
+  # drift that way because there is only one definition to tighten.
+  defp ranking_word_sourced?(word, file_text) do
+    contains_word?(file_text, word) or String.contains?(file_text, word)
+  end
+
   defp area_slug_for_guide(guide_slug), do: String.replace_suffix(guide_slug, "-ski-guide", "")
 
   defp area_file_text(area_slug) do
@@ -239,7 +326,7 @@ defmodule Ethos.Seeds.SkiCollectionsTest do
       file_text = area_file_text(area_slug)
 
       for word <- ranking_words_found(blurb) do
-        assert contains_word?(file_text, word) or String.contains?(file_text, word),
+        assert ranking_word_sourced?(word, file_text),
                "#{label}: blurb uses ranking word \"#{word}\", which is not in " <>
                  "priv/seed_data/ski/#{area_slug}.json — blurb: #{blurb}"
       end
@@ -248,10 +335,17 @@ defmodule Ethos.Seeds.SkiCollectionsTest do
 
   # Neither intro is about one area, so there is no single file to check
   # against — checked instead against the union of every shipped ski file,
-  # the intro's real source material. A ranking word invented out of nothing
-  # (not grounded anywhere in the 82-guide corpus) still fails this; a claim
-  # like "the state's only ski area," which restates something an area's own
-  # file actually says, still passes.
+  # the intro's real source material. This is deliberately weaker than the
+  # per-blurb check above: a ranking word only has to appear *somewhere* in
+  # the 82-guide corpus, not in support of the specific claim the intro
+  # makes. The live instance is the parent intro's "only" (from "the only
+  # region... published so far"), which passes because "only" happens to
+  # appear in Yawgoo Valley's and Mad River Glen's files — not because that
+  # self-referential publishing-status claim was itself checked against
+  # anything. That is judged acceptable: it is a statement about this
+  # module's own state, not a claim about mountain content, so there is no
+  # single file it could be checked against anyway. A ranking word invented
+  # out of nothing (not grounded anywhere in the corpus) still fails this.
   test "every ranking or primacy word in either intro is sourced somewhere in the ski corpus" do
     {_blurbs, intros} = all_blurbs_and_intros()
     corpus = full_ski_corpus_text()
@@ -275,7 +369,7 @@ defmodule Ethos.Seeds.SkiCollectionsTest do
     invented = "Vermont's longest-running hill and a snowmaking pioneer since 1980."
 
     caught =
-      for word <- ranking_words_found(invented), not String.contains?(source, word), do: word
+      for word <- ranking_words_found(invented), not ranking_word_sourced?(word, source), do: word
 
     assert caught == ["longest", "pioneer"],
            "specimen expected to be caught by the ranking check was not: #{inspect(caught)}"
@@ -287,7 +381,7 @@ defmodule Ethos.Seeds.SkiCollectionsTest do
 
     spared =
       for word <- ranking_words_found(faithful),
-          not String.contains?(sourced_text, word),
+          not ranking_word_sourced?(word, sourced_text),
           do: word
 
     assert spared == [],
@@ -303,7 +397,7 @@ defmodule Ethos.Seeds.SkiCollectionsTest do
             label |> String.split("/", parts: 2) |> List.last() |> area_slug_for_guide(),
           file_text = area_file_text(area_slug),
           word <- ranking_words_found(blurb),
-          not (contains_word?(file_text, word) or String.contains?(file_text, word)),
+          not ranking_word_sourced?(word, file_text),
           do: {label, word}
 
     corpus = full_ski_corpus_text()

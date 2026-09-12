@@ -55,6 +55,12 @@ defmodule Ethos.Release do
   # partial rebuild that skips or reorders step 3, the four collections above
   # seed fine and the byways raise partway through, leaving some of them
   # seeded and this step aborted.
+  #
+  # The SkiCollections loop below has the same hazard and the largest
+  # exposure of any collection here: SkiCollections.regional/0 alone names
+  # all 82 New England ski guides, every one of which exists only after
+  # seed_ski/1 (step 13) has run. Its parent's curated items are a subset of
+  # that same 82, so it shares the precondition rather than adding a new one.
   def seed_collections do
     load_app()
     Application.ensure_all_started(@app)

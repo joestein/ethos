@@ -551,10 +551,12 @@ If a count is short, **do not proceed to the next step.** Re-run the same
 seeder (see below) and re-check.
 
 After step 15, `/c/mlb-ballparks` should list thirty guides and `/c/korean-bbq`
-ten, and each of those guide pages should carry a *"Part of …"* line under its
-title. If a collection page is short, the guide it dropped shows no such line
-and nothing else reports it — re-run the guide step it came from (7 for a
-ballpark, 11 for a Korean BBQ guide) and then step 15, in that order.
+ten, `/c/skiing-new-england` should list all 82 New England ski guides, and
+`/c/skiing-and-snowboarding-united-states` should list fourteen, and each of
+those guide pages should carry a *"Part of …"* line under its title. If a
+collection page is short, the guide it dropped shows no such line and nothing
+else reports it — re-run the guide step it came from (7 for a ballpark, 11 for
+a Korean BBQ guide, 13 for a ski guide) and then step 15, in that order.
 
 ## Seeding is not transactional across a run
 
