@@ -64,22 +64,56 @@ row derived from — and the venues it names include both private clubs and
 genuinely public courses (Green Mountain National, Stowe Country Club, Williston
 Golf Club, Kwiniaska, Ralph Myhre among them).
 
-**The derivation is not finished, and it must not be guessed.** Two reads of that
-same table disagreed with each other on at least one row: one returned
-**2024 | Ralph Myhre**, the other **2024 | Burlington Country Club**. A
-championship claim is a counting claim — New Hampshire's says *more than any
-course in that championship's history* — and a count taken from a source whose
-own reads conflict is exactly the kind of number this corpus refuses to publish.
+**The derivation is not finished, and the reading method is now PROVED unsound
+for this table** — not merely doubted. Three attempts were made and each failed
+in a way the next could check:
 
-A 1970–2025 extraction was obtained and is reproducible, but the full history
-reaches to 1902, and the fallback's whole force is the completeness of the count.
+1. A row-by-row extraction returned **2024 | Ralph Myhre**; a second read of the
+   same page returned **2024 | Burlington Country Club**. One of them is wrong.
+2. A per-venue tally over the full history returned **Manchester Country Club:
+   4**. But the 1970–2025 extraction alone shows Manchester hosting **six**
+   times (1970, 1976, 1988, 1996, 2010, 2025). A full history cannot contain
+   fewer appearances than a subset of itself, so the tally is arithmetically
+   impossible — and this is the decisive failure, because it is not a matter of
+   judgement.
+3. That same tally listed one club twice under two spellings — "St. Johnsbury
+   Country Club" (3) and "Saint Johnsbury Country Club" (1) — and summed to
+   **123** where 1902–2025 minus the gaps the page itself states (1918,
+   1942–45) allows about **119**.
+
+A championship claim is a counting claim. New Hampshire's says *more than any
+course in that championship's history*, and it is only worth as much as the
+count behind it. A count from a source read that contradicts its own subset is
+worth nothing, and publishing one would be the precise defect this corpus spent
+eight review waves learning to catch: a plausible number with no sound
+derivation.
+
+A 1970–2025 extraction was obtained and is recorded above as a starting point,
+but it is a partial history and it is one of the reads that disagreed.
+
+**So the remaining work is a method problem, not a research problem.** The table
+must be read as data — raw HTML, or the embedded structure behind it — and
+counted mechanically, so the count can be re-run and shown to agree with itself.
+A summarising fetch has now failed at this three times.
+
+**And the access half is untouched.** Even with a sound count, the winner has to
+be a *public* course, and most of the high-count venues are named "Country Club"
+— each needs its own operator-terms check, the standard §2 of
+`docs/golf/rhode-island.md` uses. Nothing here has established the access status
+of any Vermont venue.
 
 ## 4. What the next wave should do
 
 1. Obtain the **complete 1902–2025 venue list** by a method that can be checked
-   twice and agree with itself — raw HTML or the embedded table rather than a
-   summarising read. Resolve the 2024 discrepancy above explicitly; it is a live
-   known defect in the source-reading, not in the source.
+   twice and agree with itself — raw HTML or the embedded table, counted
+   mechanically, never a summarising read. Three summarising reads have already
+   failed, one of them provably. Resolve the 2024 discrepancy and the
+   Manchester count explicitly; both are defects in the reading, not in the
+   source. Normalise the St. Johnsbury spelling before counting.
+1b. Confirm the right championship. New Hampshire's row counts the **New
+   Hampshire Open**; the table used here is the **Vermont Amateur**. Whether
+   the Vermont Open or the Amateur is the state analogue is a decision this
+   record does not make, and the two will not have the same venue history.
 2. Count hostings per venue over the full history.
 3. Among the public venues, take the highest count, and say plainly how far ahead
    of the runner-up it is — New Hampshire's row does this ("four hostings to
