@@ -14,6 +14,13 @@ defmodule Ethos.GuideGeoTest do
   """
   use Ethos.DataCase, async: true
 
+  # For the transliteration describe block at the bottom, salvaged from the golf
+  # branch: its `published_guide_fixture/1` calls came across the merge but this
+  # import did not, because it sat inside the same conflict block as three tests
+  # that read the state/county columns main has since dropped.
+  import Ethos.GuidesFixtures
+  alias Ethos.Guides.Guide
+
   test "a guide can be attached to a destination node" do
     node =
       Ethos.Destinations.upsert_destination!(%{

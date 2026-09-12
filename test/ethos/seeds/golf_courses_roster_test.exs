@@ -225,6 +225,26 @@ defmodule Ethos.Seeds.GolfCoursesRosterTest do
   # Each entry names both colliding files, the slug they share, and the reason.
   @destination_merges [
     %{
+      golf_file: "priv/seed_data/golf/wyoming.json",
+      other_file: "priv/seed_data/ski/black-mountain.json",
+      slug: "jackson",
+      why:
+        "Two genuinely different Jacksons, about 2,000 miles apart, and NEITHER " <>
+          "guide should move: this one is Jackson, Wyoming (Teton County, the Jackson " <>
+          "Hole basecamp) and the ski guide is Jackson, New Hampshire (Carroll " <>
+          "County, Black Mountain). Each already files against its own correct node " <>
+          "-- united-states/wyoming/teton-county/jackson and " <>
+          "united-states/new-hampshire/carroll-county/jackson -- so the hubs a reader " <>
+          "browses are separate and correct, and only the derived destination_slug " <>
+          "collides. That slug is read by GuideBreadcrumb.legacy_trail/1 ONLY for a " <>
+          "guide with no destination_id, and both of these have one, so the collision " <>
+          "is inert rather than merged. It is declared here because this gate is " <>
+          "right that it must never be silent: the same-name-different-state pair is " <>
+          "the commonest shape in the corpus (bolton, enfield, killington, lebanon, " <>
+          "lyme, madison, manchester, plymouth and warren already collide this way), " <>
+          "and a future reader needs to see that this one was checked and not merged."
+    },
+    %{
       golf_file: "priv/seed_data/golf/iowa.json",
       other_file: "priv/seed_data/connecticut/burlington.json",
       slug: "burlington",

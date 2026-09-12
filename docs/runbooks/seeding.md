@@ -68,9 +68,10 @@ the seed order right after the deploy, do not deploy yet.
 ## Seed order
 
 Run in this exact order. Every step depends on the ones above it, except
-`seed_destinations` (step 14), which depends on nothing and nothing depends on
-it, and `seed_ski` (step 13), whose own entry below says "No corpus
-precondition" — it needs no other content step, though step 15 needs it.
+`seed_destinations` (step 15), which depends on nothing and nothing depends on
+it, and `seed_ski` (step 13) and `seed_golf` (step 14), whose own entries below
+both say "No corpus precondition" — neither needs another content step, though
+step 16 needs both.
 
 Every JSON corpus publishes exactly one guide per `.json` file, so each file
 count below is checkable with `ls priv/seed_data/<dir>/*.json | wc -l`.
@@ -83,7 +84,7 @@ committed corpus as of this writing and content lands continuously.
    `Ethos.Seeds.AntiqueTrailGuide`, a sixth published guide** that the "CT-5"
    label hides — it runs last, because its entries point at places the town
    guides seed — plus `Ethos.Seeds.ConnecticutPlaces`. **This step publishes
-   six guides, not five**, which is why the full-rebuild total below is 533.
+   six guides, not five**, which is why the full-rebuild total below is 581.
 3. `Ethos.Release.seed_connecticut_expansion(email)` — 165 JSON town/guide
    files, `priv/seed_data/connecticut/`
 4. `Ethos.Release.seed_brooklyn(email)` — 69 JSON files, `priv/seed_data/brooklyn/`
@@ -110,7 +111,7 @@ committed corpus as of this writing and content lands continuously.
 
    It has no dependency on steps 1-6 and none of them depends on it, but two
    later steps do, which is why it is here rather than lower down. Step 8 needs
-   it (Oracle Park's places), and step 15 needs it:
+   it (Oracle Park's places), and step 16 needs it:
    `Ethos.Seeds.MlbBallparksCollection` names all thirty ballpark guides, so
    `seed_collections` run before this raises
    `collection mlb-ballparks references unknown guide <slug>`.
@@ -200,7 +201,7 @@ committed corpus as of this writing and content lands continuously.
 
     What this step does need is the destination nodes, and it seeds the tree
     itself first, the way every other seeder does. Those nodes are the reason
-    the destination roster's size (876, verified in step 14 below and pinned
+    the destination roster's size (1041, verified in step 15 below and pinned
     in `test/ethos/seeds/destination_tree_test.exs`) grew: New England's town
     and county nodes were added by this project, and
     `DataGuide.upsert_places!/1` **raises** on a path no node owns — a missing
@@ -208,7 +209,32 @@ committed corpus as of this writing and content lands continuously.
 
     Step 15 depends on this one: `Ethos.Seeds.SkiCollections` names every ski
     guide in both of its collections.
-14. `Ethos.Release.seed_destinations()` — 15 JSON files, `priv/seed_data/destinations/`.
+14. `Ethos.Release.seed_golf(email)` — 48 JSON files, `priv/seed_data/golf/`,
+    one per state, scoped by `priv/seed_data/golf_courses_roster.json`. Each
+    guide's subject is the highest-ranked entry carrying Golf Digest's own
+    `Public` label in that state's Best in State list; the criterion and its
+    audit trail are `docs/golf/00-ranking.md`.
+
+    **No corpus precondition**, the same as step 13 and for the same reason:
+    every `"links"` edge in this corpus targets another guide in the same
+    directory, and `seed_directory/2` publishes all of a run's guides before
+    its link pass, so `Links.resolve!/1` has nothing to raise on.
+
+    It **does** need the destination roster, which it seeds itself first like
+    every other `seed_directory/2` caller. 165 of the roster's nodes exist for
+    this corpus alone — 28 states, 54 counties and 83 towns — because a golf
+    course sits in whatever municipality it sits in, and 47 of the 48 states
+    had no node before this step existed.
+
+    Two states are **not** here yet: Rhode Island and Vermont are the two rows
+    of the fifty still carrying `verified: false`, and the roster gate holds
+    them as unresolved rather than guessing. The file count is 48, not 50,
+    until they land.
+
+    Step 16 depends on this one: `Ethos.Seeds.GolfCollection` names every golf
+    guide, so `seed_collections` run before this step raises
+    `collection public-course-every-state references unknown guide <slug>`.
+15. `Ethos.Release.seed_destinations()` — 15 JSON files, `priv/seed_data/destinations/`.
     **Takes no email argument** — unlike every seeder above it, a destination
     page has no author. Each file is an overlay: it is keyed on a destination
     node's path and adds that hub's intro and photos to the row the roster
@@ -217,7 +243,7 @@ committed corpus as of this writing and content lands continuously.
     references no place and resolves no link. It is listed here, after every
     guide corpus and before `seed_collections`, for consistency with the rest
     of this list.
-15. `Ethos.Release.seed_collections()` — eleven collections: The Burys of
+16. `Ethos.Release.seed_collections()` — eleven collections: The Burys of
     Connecticut (steps 2 and 3), Antique Trail of CT (step 2), Major League
     Ballparks (step 7), Korean BBQ (step 11), Steakhouses (step 12), the
     four scenic-byway collections (Merritt Parkway, Route 169, Route 207,
@@ -226,9 +252,9 @@ committed corpus as of this writing and content lands continuously.
     in the United States (both step 13 — the parent's curated items are New
     England guides, so it has the same precondition the regional collection
     does). After **every** guide step, never between them.
-16. `Ethos.Release.seed_links()`
-17. `Ethos.Release.adjacency_links()` — writes the 446 town-adjacency `nearby`
-    edges. Runs after `seed_links` (step 16), not before: `BackfillLinks`
+17. `Ethos.Release.seed_links()`
+18. `Ethos.Release.adjacency_links()` — writes the 446 town-adjacency `nearby`
+    edges. Runs after `seed_links` (step 17), not before: `BackfillLinks`
     writes two of the CT-5 `nearby` edges (`waterbury`↔`middlebury`,
     `woodbury`↔`southbury`) in the reverse of the direction this step itself
     writes, and running this step first leaves those two pairs permanently
@@ -238,14 +264,14 @@ committed corpus as of this writing and content lands continuously.
     seeder**, for the same reason given below for `seed_links`:
     `upsert_links!/1` deletes every outgoing edge of the guides it touches,
     and all 446 adjacency edges are CT-guide→CT-guide.
-18. `Ethos.Release.foliage_links()` — writes the foliage route link edges and
+19. `Ethos.Release.foliage_links()` — writes the foliage route link edges and
     logs any route stop whose guide is unpublished or renamed. No ordering
     conflict with `seed_links` the way `adjacency_links` has — it writes a
     different edge kind (`same-region`) that `BackfillLinks` never touches —
     but it shares the same delete-all hazard: **re-run this step after any
     content seeder** too, or a re-seeded Connecticut guide's foliage edges
     silently disappear along with its adjacency edges.
-19. `Ethos.Release.prune_deleted_places()` — applies
+20. `Ethos.Release.prune_deleted_places()` — applies
     `priv/seed_data/deleted_places.json`, deleting (`Places.delete_by_slugs!/1`)
     every place row the manifest names. **Run last, after every content step
     above.** Seeding never deletes — dropping a place from a seed file only
@@ -279,7 +305,7 @@ Verify the published count after each content step before moving on — see
 It creates no rows at all now: each of the fifteen files is keyed on a node
 path and overlays an intro and photos onto a row the roster already owns, so
 `Ethos.Destinations.list_destinations() |> Enum.count()` reads the roster's
-size (**876**) both before and after it, not 15. That number is the length of
+size (**1041**) both before and after it, not 15. That number is the length of
 `priv/seed_data/destination_tree.json` and is asserted against this runbook in
 `test/ethos/seeds/destination_tree_test.exs` — when the roster grows, that test
 fails and this paragraph is what it is telling you to update. What confirms
@@ -287,7 +313,7 @@ fails and this paragraph is what it is telling you to update. What confirms
 `Ethos.Destinations.get_by_path("united-states/connecticut").intro` should be
 the long Connecticut history, not the stub "Connecticut, county by county."
 
-A count of **891** — the roster plus fifteen — means the pre-Task-13 keys are
+A count of **1056** — the roster plus fifteen — means the pre-Task-13 keys are
 back. Those extra rows have no `kind` and no `parent_id`; they shadow fifteen
 hubs, disable their redirects, enter the sitemap, and list Connecticut, New
 York and Rome on `/destinations` beside the countries.
@@ -348,9 +374,9 @@ any seeder runs — they are still NULL anyway.
 
 **Nothing is lost, but you must re-seed.** Every row comes back from the roster
 — `Ethos.Release.seed_destination_tree()`, which every seeder below also runs
-first — and step 14's fifteen overlay files put the curated prose and photos
+first — and step 15's fifteen overlay files put the curated prose and photos
 back on top. Run the full seed order after the migration, exactly as for a
-fresh database, and confirm the count reads 876 and
+fresh database, and confirm the count reads 1041 and
 `get_by_path("united-states/connecticut").intro` is the long history rather
 than the stub.
 
@@ -500,6 +526,7 @@ seed window described at the top of this runbook — it just returns 0.
 | 11 | Korean BBQ | **10** | the seeder's own last line, `Seeded 10 files from priv/seed_data/korean_bbq` (these ten file on five different nodes, so no single subtree counts them) |
 | 12 | Steakhouses | **11** | the seeder's own last line, `Seeded 11 files from priv/seed_data/steakhouse` (these eleven file on eleven different nodes, six of which no earlier step touches, so no single subtree counts them) |
 | 13 | Ski (New England) | **82** | the seeder's own last line, `Seeded 82 files from priv/seed_data/ski` (these 82 file on dozens of different town and county nodes across six New England states, so no single subtree counts them) |
+| 14 | Golf (48 states) | **48** | the seeder's own last line, `Seeded 48 files from priv/seed_data/golf` (one guide per state, filing on 84 town nodes across 28 states this corpus added itself — no subtree counts them, and the number is 48 rather than 50 until Rhode Island and Vermont resolve) |
 
 **Read the rows in order, and only after the step they name.** These are
 subtree counts, so a later step can add to an earlier row's subtree. Three do:
@@ -544,11 +571,11 @@ roster once its `:pending_bronx` tag comes off, and that is what will tell you
 the fourteenth landed. See
 `docs/superpowers/specs/2026-08-31-narrowed-nyc-scope-design.md`.
 
-**Full rebuild total: 533 published guides.** Derived, not counted off a live
+**Full rebuild total: 581 published guides.** Derived, not counted off a live
 database: 38 Manhattan + **6** Connecticut code-module guides + 165 Connecticut
 + 69 Brooklyn + 13 Bronx + 21 Queens + 30 ballparks + 23 San Francisco +
 33 London + 31 Rome zones + 1 Rome flagship + 10 Korean BBQ + 11 steakhouses +
-82 ski. The Connecticut addend is **six, not five**: step 2 seeds the five town
+82 ski + 48 golf. The Connecticut addend is **six, not five**: step 2 seeds the five town
 guides *and* `Ethos.Seeds.AntiqueTrailGuide`. This line said 532 and "5 CT-5"
 until the first production seed of the ski corpus returned 533 and a slug diff
 found that sixth guide — "CT-5" names the set, not its size. Every JSON addend is
@@ -593,13 +620,14 @@ Where the numbers come from:
 If a count is short, **do not proceed to the next step.** Re-run the same
 seeder (see below) and re-check.
 
-After step 15, `/c/mlb-ballparks` should list thirty guides and `/c/korean-bbq`
+After step 16, `/c/mlb-ballparks` should list thirty guides and `/c/korean-bbq`
 ten, `/c/skiing-new-england` should list all 82 New England ski guides, and
 `/c/skiing-and-snowboarding-united-states` should list fourteen, and each of
 those guide pages should carry a *"Part of …"* line under its title. If a
 collection page is short, the guide it dropped shows no such line and nothing
 else reports it — re-run the guide step it came from (7 for a ballpark, 11 for
-a Korean BBQ guide, 13 for a ski guide) and then step 15, in that order.
+a Korean BBQ guide, 13 for a ski guide, 14 for a golf guide) and then step 16,
+in that order.
 
 ## Seeding is not transactional across a run
 

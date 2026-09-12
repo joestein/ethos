@@ -406,6 +406,16 @@ defmodule Ethos.Seeds.GolfSeedDataTest do
 
     user = user_fixture()
 
+    # The destination roster has to be in the database before any place can be
+    # filed against it: `DataGuide.upsert_places!/1` resolves each place's
+    # `destination_path` through `resolve_node!/2`, which RAISES on a path no
+    # node owns. `Ethos.Release.seed_directory/2` does exactly this first line
+    # for the same reason, so seeding it here mirrors production rather than
+    # working around it. This test module is `async: false`, which is what
+    # makes a full-roster write safe here — see the note in
+    # `destination_tree_test.exs` about concurrent roster writers deadlocking.
+    Ethos.Seeds.DestinationTree.upsert_all!()
+
     for _pass <- 1..2 do
       Enum.each(files, &DataGuide.upsert_places!/1)
       Enum.each(files, &DataGuide.upsert_guide!(&1, user.email))

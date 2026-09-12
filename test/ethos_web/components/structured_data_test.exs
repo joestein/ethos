@@ -1444,10 +1444,31 @@ defmodule EthosWeb.StructuredDataTest do
       # `comma_streets` pin in test/ethos/places/address_test.exs is
       # unaffected and stays at 71. None of the 3 removed rows carried one
       # either.
-      assert length(emitted) == 5401
-      assert count.(& &1["streetAddress"]) == 4653
+      # Re-measured after the golf corpus landed: 48 state guides, 295 place
+      # records, of which exactly **39 carry an `address` at all**. The other
+      # 256 ship with no address key, so they emit nothing here and move none
+      # of these four numbers — which is why a 295-place corpus moves the total
+      # by 39 and not by 295.
+      #
+      # All 39 carry BOTH a house-numbered street line AND a five-digit ZIP, so
+      # three of the four counters move by the same +39 and the fourth does not
+      # move at all:
+      #
+      #   * total 5401 -> 5440, +39.
+      #   * `streetAddress` 4653 -> 4692, +39. ALL of them.
+      #   * `is_nil(streetAddress)` unmoved at 748 — not one of the 39 is a
+      #     street-less row, which is the check that the +39 went where it
+      #     should rather than partly into the descriptive-location bucket.
+      #   * `postalCode` 3927 -> 3966, +39. ALL of them.
+      #
+      # Derived by probe, not by adjustment: the four values were printed from
+      # the emitter itself and then written here, and the accounting above was
+      # checked against a separate count of how many golf places carry an
+      # address (39 of 295) before either was believed.
+      assert length(emitted) == 5440
+      assert count.(& &1["streetAddress"]) == 4692
       assert count.(&is_nil(&1["streetAddress"])) == 748
-      assert count.(& &1["postalCode"]) == 3927
+      assert count.(& &1["postalCode"]) == 3966
 
       # The largest behavioural delta this change ships: 302 places emit a
       # PostalAddress carrying only locality, region and country. Their full
