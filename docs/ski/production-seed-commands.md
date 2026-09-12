@@ -56,7 +56,12 @@ curl -o /dev/null -s -w "%{http_code}\n" https://ethos.fly.dev/g/mohawk-mountain
 curl -o /dev/null -s -w "%{http_code}\n" https://ethos.fly.dev/c/skiing-new-england
 curl -o /dev/null -s -w "%{http_code}\n" https://ethos.fly.dev/p/mohawk-mountain
 
-# Should be 404 — the two retired slugs. A 200 here means step 19 did not run.
+# Should be 410 Gone — the two retired slugs. `place_controller.ex` answers 410
+# rather than 404 for a manifest slug, which tells a crawler the URL is
+# intentionally dead so it drops the page. A 200 means step 19 did not run.
+#
+# Note /p/ski-sundown stays 200 and is correct: that slug was never renamed, it
+# moved corpus and upserted in place. Only the two renamed slugs are retired.
 curl -o /dev/null -s -w "%{http_code}\n" https://ethos.fly.dev/p/mohawk-mountain-ski-area
 curl -o /dev/null -s -w "%{http_code}\n" https://ethos.fly.dev/p/mount-southington-ski-area
 ```
@@ -67,7 +72,7 @@ Then confirm the published-guide count rose by exactly 82:
 fly ssh console --app ethos -C "/app/bin/ethos rpc 'Ethos.Guides.list_published_guides() |> length() |> IO.inspect()'"
 ```
 
-A full rebuild from empty totals **532**. Production should land there if every
+A full rebuild from empty totals **533**. Production should land there if every
 corpus is seeded; if it lands elsewhere, the gap is an unrelated corpus, not
 ski — compare against `docs/runbooks/seeding.md`'s "Expected published counts"
 table, which now has a row for step 13.

@@ -14,8 +14,9 @@ defmodule Ethos.Places.DeletedPlaces do
 
   Because deletion is what makes a live URL disappear, the manifest is also the
   natural tombstone list — the record of which slugs used to exist and why they
-  stopped, for any later handler that wants to answer `410 Gone` rather than
-  `404` for them. No such handler exists yet.
+  stopped. `EthosWeb.PlaceController` reads it for exactly that: a slug in this
+  manifest is answered `410 Gone` rather than `404`, which tells a crawler the
+  URL is intentionally dead so it drops the page instead of retrying it.
   """
 
   @manifest_path Path.join(:code.priv_dir(:ethos), "seed_data/deleted_places.json")
