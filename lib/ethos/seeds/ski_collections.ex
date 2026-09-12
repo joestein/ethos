@@ -6,8 +6,19 @@ defmodule Ethos.Seeds.SkiCollections do
   is deliberate rather than unfinished. `Collections.upsert_collection!/1`
   raises on an item whose guide slug has no row, so a regional collection can
   exist only once its region's guides do — and only New England is published.
-  Projects B through G each add a `defp` here and extend `parent/0`'s curated
-  list; nothing in this module has to be restructured for them.
+
+  Projects B through G each add their own regional collection here and extend
+  `parent/0`'s curated list. That is real work, not a one-line addition: it
+  needs a `def`, not a `defp` — this module's gate reads prose off `regional/0`
+  and `parent/0` by calling them directly, the practice
+  `Ethos.Seeds.SteakhouseCollection` established, and a private function
+  cannot serve that. It also needs an edit to `upsert_all!/0`'s hardcoded
+  `[regional(), parent()]` list, and matching edits to two of
+  `test/ethos/seeds/ski_collections_test.exs`'s patterns, which read
+  `SkiCollections.regional()` and `SkiCollections.parent()` by name. None of
+  this is dangerous — every one of these omissions fails loudly, at compile
+  time or in the test suite, rather than shipping a silent gap — but "nothing
+  has to be restructured" overstates it.
 
   `Collections.upsert_collection!/1` raises on an unseeded guide, so this must
   run after `seed_ski/1` — which is why `seed_collections/0` runs last in the

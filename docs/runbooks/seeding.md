@@ -69,7 +69,8 @@ the seed order right after the deploy, do not deploy yet.
 
 Run in this exact order. Every step depends on the ones above it, except
 `seed_destinations` (step 14), which depends on nothing and nothing depends on
-it — see its entry below.
+it, and `seed_ski` (step 13), whose own entry below says "No corpus
+precondition" — it needs no other content step, though step 15 needs it.
 
 Every JSON corpus publishes exactly one guide per `.json` file, so each file
 count below is checkable with `ls priv/seed_data/<dir>/*.json | wc -l`.
@@ -196,10 +197,11 @@ committed corpus as of this writing and content lands continuously.
 
     What this step does need is the destination nodes, and it seeds the tree
     itself first, the way every other seeder does. Those nodes are the reason
-    the roster count in step 0 changed: New England's town and county nodes
-    were added by this project, and `DataGuide.upsert_places!/1` **raises** on
-    a path no node owns — a missing node aborts the restore partway, after
-    earlier files have published.
+    the destination roster's size (876, verified in step 14 below and pinned
+    in `test/ethos/seeds/destination_tree_test.exs`) grew: New England's town
+    and county nodes were added by this project, and
+    `DataGuide.upsert_places!/1` **raises** on a path no node owns — a missing
+    node aborts the restore partway, after earlier files have published.
 
     Step 15 depends on this one: `Ethos.Seeds.SkiCollections` names every ski
     guide in both of its collections.
@@ -362,7 +364,13 @@ guide and `Links.resolve!/1` raises on an unknown target.
 
 `seed_links` calls `Ethos.Seeds.BackfillLinks.upsert_all!/0`, which authors
 edges *out of* Manhattan and CT-5 guides — the same source guides whose seed
-files also declare their own outgoing links.
+files also declare their own outgoing links. It now also authors edges out of
+four Connecticut **JSON** town guides (Cornwall, Southington, Middlefield, New
+Hartford) and, in the reverse direction, four ski JSON guides (Mohawk
+Mountain, Mount Southington, Powder Ridge, Ski Sundown) — see
+`Ethos.Seeds.BackfillLinks.ski_migration_edges/0`. The Connecticut JSON
+guides' outgoing links are `delete_all`'d by **step 3**, a much more
+frequently re-run step than step 2, and the ski guides' by **step 13**.
 
 `Ethos.Links.replace_outgoing_links!/2` (`lib/ethos/links.ex`) makes a source's
 outgoing edges *exactly* the set the seed file declares: it `delete_all`s every

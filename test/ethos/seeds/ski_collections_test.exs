@@ -40,6 +40,34 @@ defmodule Ethos.Seeds.SkiCollectionsTest do
              "only in roster: #{inspect(MapSet.difference(expected, actual))}"
   end
 
+  # docs/runbooks/seeding.md tells the operator that, after step 15,
+  # /c/skiing-new-england "should list all 82 New England ski guides" and
+  # /c/skiing-and-snowboarding-united-states "should list fourteen" — two
+  # literals nothing pinned before this. The membership test above already
+  # derives regional/0's size from the roster, so mirroring that derivation
+  # here catches the same drift the runbook's "82" would go stale on; the
+  # parent's "fourteen" is checked against the actual count rather than the
+  # looser 12-15 range the curation-size test above allows, because the
+  # runbook promises an operator a specific number, not a range.
+  test "the runbook's 82-and-fourteen figures at step 15 are still accurate" do
+    built_new_england =
+      for a <- roster()["areas"], a["status"] == "build", a["region"] == "new-england", do: a
+
+    assert length(built_new_england) == 82,
+           "the New England roster's built count changed to #{length(built_new_england)}: " <>
+             "update docs/runbooks/seeding.md's \"all 82 New England ski guides\" line, and " <>
+             "this assertion"
+
+    assert length(SkiCollections.regional().items) == 82,
+           "the regional collection no longer holds 82 items: update " <>
+             "docs/runbooks/seeding.md's \"all 82 New England ski guides\" line, and this " <>
+             "assertion"
+
+    assert length(SkiCollections.parent().items) == 14,
+           "the parent collection no longer holds fourteen items: update " <>
+             "docs/runbooks/seeding.md's \"should list fourteen\" line, and this assertion"
+  end
+
   test "the parent is a curated selection, not a second copy of the regional list" do
     parent = SkiCollections.parent()
 
@@ -297,7 +325,7 @@ defmodule Ethos.Seeds.SkiCollectionsTest do
   # while testing a rule that no longer exists; a shared predicate cannot
   # drift that way because there is only one definition to tighten.
   defp ranking_word_sourced?(word, file_text) do
-    contains_word?(file_text, word) or String.contains?(file_text, word)
+    contains_word?(file_text, word)
   end
 
   defp area_slug_for_guide(guide_slug), do: String.replace_suffix(guide_slug, "-ski-guide", "")

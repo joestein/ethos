@@ -661,6 +661,20 @@ defmodule Ethos.Seeds.SkiSeedDataTest do
           into: MapSet.new(),
           do: doc["guide"]["slug"]
 
+    # Same shape as all_guides above: every place any JSON corpus defines,
+    # for the "place:" branch below. `Links.resolve!/1` raises on an unknown
+    # place exactly as it does on an unknown guide (lib/ethos/links.ex), so a
+    # typo'd place target is not a softer failure — it aborts step 13
+    # partway through just like a bad guide target would, and nothing caught
+    # it before this branch existed.
+    all_places =
+      for f <- Path.wildcard(Path.join(["priv", "seed_data", "*", "*.json"])),
+          doc = f |> File.read!() |> Jason.decode!(),
+          is_list(doc["places"]),
+          p <- doc["places"],
+          into: MapSet.new(),
+          do: p["slug"]
+
     for {file, doc} <- docs(), link <- doc["links"] || [] do
       case link["target"] do
         "guide:" <> slug ->
@@ -674,8 +688,11 @@ defmodule Ethos.Seeds.SkiSeedDataTest do
             IO.warn("#{Path.basename(file)}: links outside the ski corpus to #{slug}")
           end
 
-        "place:" <> _slug ->
-          :ok
+        "place:" <> slug ->
+          assert MapSet.member?(all_places, slug),
+                 "#{Path.basename(file)}: links to place #{slug}, which no JSON corpus " <>
+                   "defines — Links.resolve!/1 raises on an unseeded target and aborts " <>
+                   "the run partway, exactly as it does for an unknown guide"
 
         other ->
           flunk("#{Path.basename(file)}: bad link target #{inspect(other)}")
@@ -700,6 +717,17 @@ defmodule Ethos.Seeds.SkiSeedDataTest do
     end
   end
 
+  # DORMANT until the photo pass: every file in this corpus ships
+  # `"photos": []` (deliberately — the photo wave for New England has not
+  # landed), so `doc["guide"]["photos"]` is always `[]` and the loop below
+  # never executes a single iteration. This test asserts nothing against the
+  # current corpus; it is a licence/attribution/on-disk gate waiting for
+  # photos to exist, not evidence that any exist today. Two siblings below
+  # ("every photo src is under this corpus's own path" and "no photograph is
+  # a trail map or a logo") and one in
+  # test/mix/tasks/ethos_optimize_ski_photos_test.exs
+  # ("every published photo has a manifest row") are the same: dormant, not
+  # green-because-passing.
   test "every photograph carries a publishable licence, its attribution and its file" do
     allowed = [
       "CC0",
@@ -730,6 +758,7 @@ defmodule Ethos.Seeds.SkiSeedDataTest do
     end
   end
 
+  # DORMANT until the photo pass — see the comment on the previous test.
   test "every photo src is under this corpus's own path" do
     for {file, doc} <- docs(), photo <- doc["guide"]["photos"] || [] do
       slug = file |> Path.basename() |> Path.rootname()
@@ -742,6 +771,7 @@ defmodule Ethos.Seeds.SkiSeedDataTest do
   # Spec §5: no trail maps or logos — both copyrighted. This is the ski
   # equivalent of London's Fourth Plinth exclusion, and a Commons licence on the
   # file does not make a photograph OF a copyrighted trail map publishable.
+  # DORMANT until the photo pass — see the comment two tests up.
   test "no photograph is a trail map or a logo" do
     banned = [~r/\btrail map\b/i, ~r/\bpiste map\b/i, ~r/\blogo\b/i, ~r/\bsignage\b/i]
 
@@ -829,7 +859,9 @@ defmodule Ethos.Seeds.SkiSeedDataTest do
   test "shared-history and nearby links reciprocate; see-also and same-region do not have to" do
     # Catches: a one-way shared-history edge with no return edge at all.
     one_way = %{
-      "alpha" => [%{"target" => "guide:beta-ski-guide", "kind" => "shared-history", "note" => "x"}],
+      "alpha" => [
+        %{"target" => "guide:beta-ski-guide", "kind" => "shared-history", "note" => "x"}
+      ],
       "beta" => []
     }
 
@@ -841,8 +873,12 @@ defmodule Ethos.Seeds.SkiSeedDataTest do
     # also pass the assertion above; this is what proves it actually looked
     # for the return edge instead of just flagging every outbound link.
     reciprocated = %{
-      "alpha" => [%{"target" => "guide:beta-ski-guide", "kind" => "shared-history", "note" => "x"}],
-      "beta" => [%{"target" => "guide:alpha-ski-guide", "kind" => "shared-history", "note" => "y"}]
+      "alpha" => [
+        %{"target" => "guide:beta-ski-guide", "kind" => "shared-history", "note" => "x"}
+      ],
+      "beta" => [
+        %{"target" => "guide:alpha-ski-guide", "kind" => "shared-history", "note" => "y"}
+      ]
     }
 
     assert one_way_symmetric_links(reciprocated) == [],

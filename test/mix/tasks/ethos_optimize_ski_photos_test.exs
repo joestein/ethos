@@ -32,6 +32,11 @@ defmodule Mix.Tasks.Ethos.OptimizeSkiPhotosTest do
 
   # Every photo the corpus publishes must have a manifest row, or the task
   # raises mid-run and a wave commits a src pointing at a file nothing wrote.
+  #
+  # DORMANT until the photo pass: every file in priv/seed_data/ski/ ships
+  # `"photos": []` today, so `labels` below is always `[]` and this asserts
+  # nothing against the current corpus — it is a provenance gate waiting for
+  # photos to exist, not evidence that any do.
   test "every published photo has a manifest row" do
     manifest =
       ["priv", "seed_data", "ski_photo_manifest.json"]

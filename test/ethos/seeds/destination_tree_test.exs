@@ -120,6 +120,34 @@ defmodule Ethos.Seeds.DestinationTreeTest do
              "counts\" table's step-13 row, and this assertion, in the same commit"
   end
 
+  # docs/runbooks/seeding.md's step 15 says `seed_collections/0` seeds "eleven
+  # collections" and names all eleven — nothing mechanical checked that count
+  # before this. Two of the three addends are code lists this test mirrors
+  # rather than reads by reflection (Ethos.Release.seed_collections/0's fixed
+  # five-module list, and Ethos.Seeds.ScenicBywaysCollections.upsert_all!/0's
+  # fixed four), so this test goes stale exactly when either of those two
+  # source lists does, same as the runbook's own prose would. The ski addend
+  # is genuinely derived: SkiCollections seeds exactly regional/0 and
+  # parent/0, so its count is `length/1` of that pair, not a literal.
+  test "the runbook's eleven-collections figure at step 15 is still accurate" do
+    # Ethos.Release.seed_collections/0's fixed list: BurysCollection,
+    # AntiqueTrailCollection, MlbBallparksCollection, KoreanBbqCollection,
+    # SteakhouseCollection.
+    fixed_collections = 5
+    # Ethos.Seeds.ScenicBywaysCollections.upsert_all!/0's fixed list: Merritt
+    # Parkway, Route 169, Route 207, Route 7.
+    scenic_byways = 4
+
+    ski_collections =
+      length([Ethos.Seeds.SkiCollections.regional(), Ethos.Seeds.SkiCollections.parent()])
+
+    total = fixed_collections + scenic_byways + ski_collections
+
+    assert total == 11,
+           "seed_collections/0 now seeds #{total} collections, not eleven: update " <>
+             "docs/runbooks/seeding.md's step 15, which names all eleven, and this assertion"
+  end
+
   test "roster paths are unique" do
     paths = Enum.map(DestinationTree.load!(), & &1["path"])
     assert length(paths) == length(Enum.uniq(paths))
