@@ -70,7 +70,8 @@ defmodule Ethos.Release do
       Ethos.Seeds.AntiqueTrailCollection,
       Ethos.Seeds.MlbBallparksCollection,
       Ethos.Seeds.KoreanBbqCollection,
-      Ethos.Seeds.SteakhouseCollection
+      Ethos.Seeds.SteakhouseCollection,
+      Ethos.Seeds.GolfCollection
     ]
 
     for mod <- collections do

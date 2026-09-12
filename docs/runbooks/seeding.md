@@ -245,7 +245,7 @@ committed corpus as of this writing and content lands continuously.
     references no place and resolves no link. It is listed here, after every
     guide corpus and before `seed_collections`, for consistency with the rest
     of this list.
-16. `Ethos.Release.seed_collections()` — eleven collections: The Burys of
+16. `Ethos.Release.seed_collections()` — twelve collections: The Burys of
     Connecticut (steps 2 and 3), Antique Trail of CT (step 2), Major League
     Ballparks (step 7), Korean BBQ (step 11), Steakhouses (step 12), the
     four scenic-byway collections (Merritt Parkway, Route 169, Route 207,
@@ -253,7 +253,10 @@ committed corpus as of this writing and content lands continuously.
     step 3), and Skiing New England plus its parent, Skiing and Snowboarding
     in the United States (both step 13 — the parent's curated items are New
     England guides, so it has the same precondition the regional collection
-    does). After **every** guide step, never between them.
+    does), and **A Public Course, State by State** (step 14 — all forty-nine
+    resolved golf guides; deliberately not titled "in Every State", because
+    Vermont is unresolved, see `docs/golf/vermont.md`). After **every** guide
+    step, never between them.
 17. `Ethos.Release.seed_links()`
 18. `Ethos.Release.adjacency_links()` — writes the 446 town-adjacency `nearby`
     edges. Runs after `seed_links` (step 17), not before: `BackfillLinks`
