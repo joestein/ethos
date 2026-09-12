@@ -1367,10 +1367,46 @@ defmodule EthosWeb.StructuredDataTest do
       # None of the 46 carries a comma inside its street line, so the
       # `comma_streets` pin in test/ethos/places/address_test.exs is
       # unaffected and stays at 70.
-      assert length(emitted) == 5354
-      assert count.(& &1["streetAddress"]) == 4624
-      assert count.(&is_nil(&1["streetAddress"])) == 730
-      assert count.(& &1["postalCode"]) == 3893
+      #
+      # Re-measured after ski content wave 7 landed
+      # priv/seed_data/ski/{berkshire-east,blue-hills-ski-area,
+      # bousquet-mountain,catamount-ski-area,jiminy-peak,nashoba-valley,
+      # otis-ridge,ski-bradford,ski-butternut,ski-ward,
+      # wachusett-mountain}.json with 42 places (one ski area plus
+      # surroundings per file — Massachusetts, complete). Of the 42: 21
+      # carry a house-numbered (or route-numbered) street line AND a
+      # five-digit ZIP; 5 carry a street line with no ZIP (Paul Revere
+      # Heritage Site, Arrowhead, Winnekenni Castle, and Ski Ward's own and
+      # the General Artemas Ward House's addresses, none of which is
+      # sourced with a postal code); 9 carry a ZIP with no street
+      # (Catamount's own dual-state address plus eight surrounding or
+      # route-level locations — Mohawk Trail State Forest, Bissell Bridge,
+      # Hail to the Sunrise, the South Egremont Village Historic District,
+      # French Park, Jug End State Reservation, and the W.E.B. Du Bois
+      # Boyhood Homesite); the remaining 7 are street-less and ZIP-less
+      # locality-only rows — six ski areas' own addresses given only at
+      # town level (Berkshire East, Bousquet, Jiminy Peak, Nashoba Valley,
+      # Ski Butternut, and Wachusett, none of which publishes a
+      # street-numbered mailing address) plus one surrounding park,
+      # Springside Park, sourced only to its street name with no house
+      # number:
+      #
+      #   * total 5354 -> 5396, +42.
+      #   * `streetAddress` 4624 -> 4650, +26 (the 21 street+ZIP rows plus
+      #     the 5 street-only rows).
+      #   * `is_nil(streetAddress)` 730 -> 746, +16 (the 9 ZIP-only rows
+      #     plus the 7 locality-only rows).
+      #   * `postalCode` 3893 -> 3923, +30 (the 21 street+ZIP rows plus the
+      #     9 ZIP-only rows).
+      #
+      # One of the 42 carries a comma inside its street line —
+      # barrington-brewery-and-restaurant's "420 Stockbridge Road, Unit 4"
+      # — which moves the `comma_streets` pin in
+      # test/ethos/places/address_test.exs from 70 to 71 and nothing here.
+      assert length(emitted) == 5396
+      assert count.(& &1["streetAddress"]) == 4650
+      assert count.(&is_nil(&1["streetAddress"])) == 746
+      assert count.(& &1["postalCode"]) == 3923
 
       # The largest behavioural delta this change ships: 302 places emit a
       # PostalAddress carrying only locality, region and country. Their full
@@ -1480,7 +1516,16 @@ defmodule EthosWeb.StructuredDataTest do
       # one of the wave's 12 street-less rows still carries its town's
       # five-digit ZIP (counted separately above), so none of them lands in
       # this bucket.
-      assert count.(fn ld -> is_nil(ld["streetAddress"]) and is_nil(ld["postalCode"]) end) == 366
+      # 373 after ski content wave 7 landed, +7 — six ski areas' own
+      # addresses given only at town level (Berkshire East, Bousquet,
+      # Jiminy Peak, Nashoba Valley, Ski Butternut, and Wachusett) plus one
+      # surrounding park, Springside Park (priv/seed_data/ski/
+      # bousquet-mountain.json), sourced only to its street name with no
+      # house number. This wave completes Massachusetts. Every other
+      # street-less row in this wave carries either a street with no ZIP
+      # or a ZIP with no street (counted separately above), so only these
+      # seven land here.
+      assert count.(fn ld -> is_nil(ld["streetAddress"]) and is_nil(ld["postalCode"]) end) == 373
     end
   end
 end

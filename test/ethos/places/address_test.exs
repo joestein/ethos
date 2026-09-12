@@ -654,8 +654,22 @@ defmodule Ethos.Places.AddressTest do
     #
     # The ratchet moves rather than the addresses, for the same reason it
     # always has.
-    assert comma_streets <= 70,
-           "#{comma_streets} American street lines carry a comma qualifier, up from 70"
+    #
+    # 71 after ski content wave 7 landed
+    # priv/seed_data/ski/{berkshire-east,blue-hills-ski-area,bousquet-mountain,
+    # catamount-ski-area,jiminy-peak,nashoba-valley,otis-ridge,ski-bradford,
+    # ski-butternut,ski-ward,wachusett-mountain}.json (Massachusetts, complete).
+    # One of the wave's places carries a comma inside its street line:
+    # barrington-brewery-and-restaurant
+    # (priv/seed_data/ski/ski-butternut.json) — "420 Stockbridge Road, Unit 4,
+    # Great Barrington, MA 01230," per the brewery's own site, parses to the
+    # street line "420 Stockbridge Road, Unit 4" — an ordinary suite
+    # designator, the same class as great-north-aleworks' "Unit #14" above.
+    #
+    # The ratchet moves rather than the address, for the same reason it
+    # always has.
+    assert comma_streets <= 71,
+           "#{comma_streets} American street lines carry a comma qualifier, up from 71"
 
     for p <- italian, p.street, String.contains?(p.street, ",") do
       # A civico may be a range ("5-7") or carry a letter or a slashed suffix
