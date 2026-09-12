@@ -4,11 +4,21 @@ defmodule Ethos.Accounts.UserNotifier do
   alias Ethos.Mailer
 
   # Delivers the email using the application mailer.
+  # The sending identity. Must be on a domain verified with the mail provider
+  # or the message is rejected outright — this was the generator's
+  # contact@example.com, which no provider will send as.
+  #
+  # Overridable by env so a staging environment can send as itself without a
+  # code change.
+  defp from_address do
+    {"Ethos", System.get_env("MAIL_FROM") || "noreply@ethosguides.com"}
+  end
+
   defp deliver(recipient, subject, body) do
     email =
       new()
       |> to(recipient)
-      |> from({"Ethos", "contact@example.com"})
+      |> from(from_address())
       |> subject(subject)
       |> text_body(body)
 
