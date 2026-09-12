@@ -9,7 +9,7 @@
     )}
     <p class="mt-1 text-ink-muted">{@guide.destination}</p>
     <p :for={c <- @collections} class="mt-1 text-sm text-ink-muted">
-      Part of <.link navigate={~p"/c/#{c.slug}"} class="underline">{c.title}</.link>
+      Part of <.link href={~p"/c/#{c.slug}"} class="underline">{c.title}</.link>
     </p>
   </header>
 
@@ -18,7 +18,7 @@
       <h2 class="font-semibold">
         Pictures from {@guide.destination |> String.split(",") |> List.first()}
       </h2>
-      <.link navigate={~p"/g/#{@guide.slug}/photos"} class="text-sm underline">
+      <.link href={~p"/g/#{@guide.slug}/photos"} class="text-sm underline">
         See all {length(@guide.photos)} photos →
       </.link>
     </div>
@@ -99,7 +99,7 @@
           <p class="font-semibold text-lg">
             <%= cond do %>
               <% match?(%{slug: _}, entry.place) -> %>
-                <.link navigate={~p"/p/#{entry.place.slug}"} class="hover:underline">
+                <.link href={~p"/p/#{entry.place.slug}"} class="hover:underline">
                   {entry.name}
                 </.link>
               <% entry.enrichment && entry.enrichment["official_url"] &&
@@ -217,7 +217,7 @@
 
   <footer class="mt-10 flex flex-wrap gap-4 border-t border-line pt-6">
     <.link
-      navigate={~p"/g/#{@guide.slug}/suggest"}
+      href={~p"/g/#{@guide.slug}/suggest"}
       class="rounded-md bg-accent px-4 py-2 text-accent-ink text-sm"
     >
       Suggest a place

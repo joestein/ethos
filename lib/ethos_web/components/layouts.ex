@@ -55,7 +55,7 @@ defmodule EthosWeb.Layouts do
             >
               Your guides
             </.link>
-            <.link navigate={~p"/badges"} class="hover:text-ink-muted">
+            <.link href={~p"/badges"} class="hover:text-ink-muted">
               Badges
             </.link>
             <.link
@@ -92,8 +92,8 @@ defmodule EthosWeb.Layouts do
       <div class="mx-auto flex max-w-2xl items-center justify-between">
         <span>Ethos</span>
         <nav class="flex gap-4">
-          <.link navigate={~p"/destinations"} class="hover:text-ink">Destinations</.link>
-          <.link navigate={~p"/privacy"} class="hover:text-ink">Privacy</.link>
+          <.link href={~p"/destinations"} class="hover:text-ink">Destinations</.link>
+          <.link href={~p"/privacy"} class="hover:text-ink">Privacy</.link>
         </nav>
       </div>
     </footer>
