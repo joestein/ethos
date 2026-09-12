@@ -23,7 +23,7 @@
       </.link>
     </div>
     <div class="mt-3 grid grid-cols-4 gap-2">
-      <.link :for={p <- Enum.take(@guide.photos, 4)} navigate={~p"/g/#{@guide.slug}/photos"}>
+      <.link :for={p <- Enum.take(@guide.photos, 4)} href={~p"/g/#{@guide.slug}/photos"}>
         <img
           src={p["thumb"]}
           alt={p["title"]}
@@ -224,7 +224,7 @@
     </.link>
     <.link
       :if={Ethos.Accounts.admin?(@current_user)}
-      navigate={~p"/guides/new"}
+      href={~p"/guides/new"}
       class="rounded-md border border-line px-4 py-2 text-sm"
     >
       Make your own guide

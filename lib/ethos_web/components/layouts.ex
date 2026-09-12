@@ -50,7 +50,7 @@ defmodule EthosWeb.Layouts do
           <%= if @current_user do %>
             <.link
               :if={Ethos.Accounts.admin?(@current_user)}
-              navigate={~p"/guides"}
+              href={~p"/guides"}
               class="hover:text-ink-muted"
             >
               Your guides
@@ -60,7 +60,7 @@ defmodule EthosWeb.Layouts do
             </.link>
             <.link
               :if={Ethos.Accounts.admin?(@current_user)}
-              navigate={~p"/admin/comments"}
+              href={~p"/admin/comments"}
               class="hover:text-ink-muted"
             >
               Admin
@@ -68,7 +68,7 @@ defmodule EthosWeb.Layouts do
           <% end %>
           <.link
             :if={Ethos.Accounts.admin?(@current_user)}
-            navigate={~p"/guides/new"}
+            href={~p"/guides/new"}
             class="rounded-lg bg-accent px-3 py-1 text-accent-ink hover:opacity-90"
           >
             Make a guide <span aria-hidden="true">&rarr;</span>

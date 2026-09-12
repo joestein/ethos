@@ -36,7 +36,24 @@ defmodule EthosWeb.IslandNavigationTest do
   end
 
   test "a guide page carries no live-navigation links", %{conn: conn} do
+    # WITH photos, deliberately. The first version of this test used a bare
+    # fixture, and a guide with no photos renders neither the photo grid nor
+    # the "See all photos" link — so the test passed while a dead link sat on
+    # every real guide page. The fixture decided what the test could see.
     guide = published_guide_fixture()
+
+    {:ok, guide} =
+      Ethos.Guides.update_guide_photos(guide, [
+        %{
+          "src" => "/photos/x.jpg",
+          "thumb" => "/photos/x_thumb.jpg",
+          "title" => "A photo",
+          "description" => "A photo of something.",
+          "author" => "Someone",
+          "license" => "CC0",
+          "source_url" => "https://commons.wikimedia.org/wiki/File:X.jpg"
+        }
+      ])
 
     html = conn |> get(~p"/g/#{guide.slug}") |> html_response(200)
 
