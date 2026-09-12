@@ -114,6 +114,17 @@ protects against new ones.
     in Sandy River Plantation, a separate municipality from the town of
     Rangeley — mail routing says nothing about where a building stands
     (Wave 6).
+18. **A present-tense ownership claim is perishable.** Nothing about
+    Smugglers' Notch's Wave 2 file was wrong when written; the world
+    changed after publication — Bear Den Partners took majority ownership
+    in February 2026 — and it surfaced only because a different area's
+    research (Berkshire East, whose owning family leads Bear Den Partners)
+    touched the same buyer. Per-area verification cannot catch this class:
+    a claim can trace perfectly to a correct, well-sourced row and still be
+    out of date the moment the underlying fact changes. Date ownership
+    claims explicitly (state the "as of" year), or schedule a periodic
+    currency sweep across the corpus — the original verification cannot be
+    relied on to hold indefinitely (post-publication).
 
 ## Content waves
 
@@ -1522,3 +1533,43 @@ Each area's places sit in the town the roster names: Pleasant Mountain's are in 
 ### Links
 
 One link cluster was made in this wave: Pleasant Mountain, Sugarloaf, and Sunday River link to each other as Boyne Resorts properties in Maine — Sugarloaf and Sunday River have been under Boyne since a 2007 sale that closed under full Boyne ownership in May 2018, and Pleasant Mountain (then still named Shawnee Peak) joined the portfolio on October 22, 2021, per each area's own confirmed acquisition claims above. No other cross-wave links were made; this wave's remaining six areas do not share a sourced editorial history with each other or with areas built in earlier waves beyond what the claims above already establish.
+
+## Correction: Bear Den Partners acquisitions (post-publication)
+
+Two already-published guides went stale after Bear Den Partners — led by
+CEO Jon Schaefer, whose family owns Berkshire East in Charlemont,
+Massachusetts — made acquisitions after those guides had already been
+verified and published. Neither correction below is a defect being fixed;
+both are new evidence superseding careful old evidence.
+
+- **Burke Mountain Resort (Wave 1).** Wave 1's guide said Bear Den
+  Partners "was announced as its buyer in April 2025" — correct at the
+  time. Only an announcement was sourced then; an earlier draft that
+  called it a completed sale had been refuted for exactly that reason
+  (see defect shape 1, above). SAM (Ski Area Management), in an article
+  dated May 6, 2025, datelined "Burke, Vt.," reports verbatim that "The
+  Bear Den Partners ownership group closed on its purchase of Burke
+  Mountain Resort on Friday, May 2" — for $11.5 million, approved by the
+  receivership judge. The guide has been updated to report both dated
+  events: the April 2025 announcement and the May 2, 2025 closing.
+- **Smugglers' Notch Resort (Wave 2).** Wave 2's guide stated, in five
+  fields (a section body, an FAQ answer, the ski-area place's summary,
+  the place's history, and an entry note) plus its own title, that "the
+  Stritzler family has owned and operated the resort since 1996" —
+  accurate when written. The Greenfield Recorder, February 13, 2026,
+  byline Madison Schofield, reports verbatim that Bear Den Partners "has
+  acquired majority ownership of Smugglers' Notch Resort," that Bill
+  Stritzler "will remain a minority shareholder," and that "Bill's
+  daughter, Lisa Howe, will serve as an advisor to Bear Den Partners."
+  Wave 2's sole-Stritzler-ownership framing is now superseded, not merely
+  incomplete: the guide has been corrected to say the Stritzler family
+  owned and operated the resort from 1996 until February 2026, when Bear
+  Den Partners acquired majority ownership, with Stritzler remaining a
+  minority shareholder and his daughter serving as an advisor to Bear Den
+  Partners. The guide's title changed from "...one Stritzler-family
+  owner" to "...shared ownership," since it must not assert a single
+  owner now that ownership is split.
+- **Cross-links owed.** Both corrected guides should link to
+  `berkshire-east-ski-guide` once that guide publishes in a later wave.
+  The link is not added yet because `Ethos.Links.resolve!/1` raises on an
+  unseeded target; add it when Berkshire East lands.

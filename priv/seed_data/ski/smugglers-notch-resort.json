@@ -1,7 +1,7 @@
 {
   "guide": {
     "slug": "smugglers-notch-resort-ski-guide",
-    "title": "Smugglers' Notch Resort, Vermont: three mountains, one Stritzler-family owner",
+    "title": "Smugglers' Notch Resort, Vermont: three mountains, shared ownership",
     "destination": "Jeffersonville, VT",
     "destination_path": "united-states/vermont/lamoille-county/cambridge",
     "tier": "guide",
@@ -9,7 +9,7 @@
     "sections": [
       {
         "heading": "From the Watsons to the Stritzlers",
-        "body": "After Tom Watson's health declined, the Watson family sold the resort in 1973 to Stanmar, Inc.'s subsidiary Smuggler's Notch Corp., led by Stanley Snider, per New England Ski History's \"Smugglers' Notch\" area history page. William P. Stritzler, who had joined the resort as managing director in 1987, purchased it from Stanley Snider in 1996; the Stritzler family has owned and operated it since."
+        "body": "After Tom Watson's health declined, the Watson family sold the resort in 1973 to Stanmar, Inc.'s subsidiary Smuggler's Notch Corp., led by Stanley Snider, per New England Ski History's \"Smugglers' Notch\" area history page. William P. Stritzler, who had joined the resort as managing director in 1987, purchased it from Stanley Snider in 1996; the Stritzler family owned and operated the resort from 1996 until February 2026, when Bear Den Partners acquired majority ownership of Smugglers' Notch Resort, per The Greenfield Recorder's February 13, 2026 reporting by Madison Schofield. Bill Stritzler remains a minority shareholder, and his daughter, Lisa Howe, serves as an advisor to Bear Den Partners, whose CEO, Jon Schaefer, is part of the family that owns Berkshire East in Charlemont, Massachusetts."
       },
       {
         "heading": "Three mountains",
@@ -27,7 +27,7 @@
       },
       {
         "question": "Who owns Smugglers' Notch Resort?",
-        "answer": "The Stritzler family has owned and operated the resort since William P. Stritzler, who had joined as managing director in 1987, purchased it from Stanley Snider in 1996, per New England Ski History's \"Smugglers' Notch\" area history page."
+        "answer": "The Stritzler family owned and operated the resort from 1996 -- when William P. Stritzler, who had joined as managing director in 1987, purchased it from Stanley Snider -- until February 2026, when Bear Den Partners acquired majority ownership, per The Greenfield Recorder's February 13, 2026 reporting by Madison Schofield. Bill Stritzler remains a minority shareholder, and his daughter, Lisa Howe, serves as an advisor to Bear Den Partners."
       }
     ],
     "photos": []
@@ -39,8 +39,8 @@
       "kind": "ski-area",
       "destination_path": "united-states/vermont/lamoille-county/cambridge",
       "address": "Jeffersonville, VT",
-      "summary": "A three-mountain chairlift-served resort founded in 1956, owned by the Watson family and then the Stritzler family since 1996.",
-      "history": "Smugglers' Notch Ski-Ways, Inc. was incorporated in Vermont on April 30, 1956, with Dr. Roger Mann serving as its first president; the area opened for the 1956-57 season with Poma surface lifts on Sterling Mountain, developed with assistance from the Vermont Department of Forests and Parks, per New England Ski History's \"Smugglers' Notch\" area history page. IBM chairman Thomas J. Watson Jr. and his brother Arthur \"Dick\" Watson likely acquired majority ownership of the resort in 1964, and developed the Madonna and Morse mountain areas alongside existing terrain on Sterling Mountain. A major chairlift was installed on Madonna Mountain in 1963-64. After Tom Watson's health declined, the Watson family sold the resort in 1973 to Stanmar, Inc.'s subsidiary Smuggler's Notch Corp., led by Stanley Snider. William P. Stritzler, who had joined the resort as managing director in 1987, purchased it from Stanley Snider in 1996; the Stritzler family has owned and operated it since. The resort's terrain comprises three interconnected mountains -- Morse, Sterling, and Madonna -- and includes a trail named \"The Black Hole,\" per Wikipedia's \"Smugglers' Notch Resort\" article.",
+      "summary": "A three-mountain chairlift-served resort founded in 1956, owned by the Watson family, then the Stritzler family from 1996, and since February 2026 majority-owned by Bear Den Partners with Bill Stritzler as a minority shareholder.",
+      "history": "Smugglers' Notch Ski-Ways, Inc. was incorporated in Vermont on April 30, 1956, with Dr. Roger Mann serving as its first president; the area opened for the 1956-57 season with Poma surface lifts on Sterling Mountain, developed with assistance from the Vermont Department of Forests and Parks, per New England Ski History's \"Smugglers' Notch\" area history page. IBM chairman Thomas J. Watson Jr. and his brother Arthur \"Dick\" Watson likely acquired majority ownership of the resort in 1964, and developed the Madonna and Morse mountain areas alongside existing terrain on Sterling Mountain. A major chairlift was installed on Madonna Mountain in 1963-64. After Tom Watson's health declined, the Watson family sold the resort in 1973 to Stanmar, Inc.'s subsidiary Smuggler's Notch Corp., led by Stanley Snider. William P. Stritzler, who had joined the resort as managing director in 1987, purchased it from Stanley Snider in 1996; the Stritzler family owned and operated the resort until February 2026, when Bear Den Partners acquired majority ownership of Smugglers' Notch Resort, per The Greenfield Recorder's February 13, 2026 reporting by Madison Schofield, with Bill Stritzler remaining a minority shareholder and his daughter, Lisa Howe, serving as an advisor to Bear Den Partners. The resort's terrain comprises three interconnected mountains -- Morse, Sterling, and Madonna -- and includes a trail named \"The Black Hole,\" per Wikipedia's \"Smugglers' Notch Resort\" article.",
       "status": "open",
       "photos": []
     },
@@ -105,7 +105,7 @@
       "kind": "sight",
       "name": "Smugglers' Notch Resort",
       "place_slug": "smugglers-notch-resort",
-      "note": "A three-mountain chairlift-served resort founded in 1956, owned by the Stritzler family since 1996."
+      "note": "A three-mountain chairlift-served resort founded in 1956, owned by the Stritzler family from 1996 until Bear Den Partners acquired majority ownership in February 2026; Bill Stritzler remains a minority shareholder."
     },
     {
       "kind": "sight",
