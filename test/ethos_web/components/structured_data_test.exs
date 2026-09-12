@@ -1403,10 +1403,51 @@ defmodule EthosWeb.StructuredDataTest do
       # barrington-brewery-and-restaurant's "420 Stockbridge Road, Unit 4"
       # — which moves the `comma_streets` pin in
       # test/ethos/places/address_test.exs from 70 to 71 and nothing here.
-      assert length(emitted) == 5396
-      assert count.(& &1["streetAddress"]) == 4650
-      assert count.(&is_nil(&1["streetAddress"])) == 746
-      assert count.(& &1["postalCode"]) == 3923
+      #
+      # Re-measured after ski content wave 8 landed
+      # priv/seed_data/ski/{mohawk-mountain,mount-southington,powder-ridge,
+      # ski-sundown,yawgoo-valley}.json (Connecticut and Rhode Island, New
+      # England complete) with 8 places — but this wave also REMOVES 3
+      # places from `priv/seed_data/connecticut/{cornwall,new-hartford,
+      # southington}.json`, whose `mohawk-mountain-ski-area`,
+      # `ski-sundown` and `mount-southington-ski-area` rows migrated into
+      # the 3 new ski-area places above (see docs/ski/new-england.md's "The
+      # Connecticut migration"), so this wave's net is +5, not +8.
+      #
+      # Of the 8 added: 6 carry a house-numbered street line AND a
+      # five-digit ZIP (the 5 ski areas' own addresses, all sourced with a
+      # house number this wave, plus Tomaquag Museum's "390 A Summit
+      # Road"); 1 carries a ZIP with no street (Cathedral Pines' "Essex
+      # Hill Road... (parking at the foot of Essex Hill)" — a road name
+      # with no house number); 1 is a street-less and ZIP-less
+      # locality-only row (Queen's Fort's "NE of Exeter on Stony Lane,
+      # Exeter, RI" — a descriptive direction-and-road location, per its
+      # own NRHP nomination form, with no ZIP given at all).
+      #
+      # Of the 3 removed CT rows: all 3 carried a house-numbered street line
+      # AND a five-digit ZIP (Mohawk's "46 Great Hollow Rd.", Ski Sundown's
+      # "126 Ratlum Road", and Mount Southington's "396 Mount Vernon
+      # Road" — each republished verbatim as the migrated ski-area place's
+      # own address, so the address itself is unchanged; only which corpus
+      # and slug own it changed).
+      #
+      #   * total 5396 -> 5401, +5 (+8 added, -3 removed).
+      #   * `streetAddress` 4650 -> 4653, +3 (+6 added street+ZIP rows,
+      #     -3 removed street+ZIP rows).
+      #   * `is_nil(streetAddress)` 746 -> 748, +2 (the 1 added ZIP-only row
+      #     plus the 1 added locality-only row; nothing removed here).
+      #   * `postalCode` 3923 -> 3927, +4 (+7 added rows with a postal code
+      #     — the 6 street+ZIP rows plus the 1 ZIP-only row — minus the 3
+      #     removed street+ZIP rows).
+      #
+      # None of the 8 carries a comma inside its street line, so the
+      # `comma_streets` pin in test/ethos/places/address_test.exs is
+      # unaffected and stays at 71. None of the 3 removed rows carried one
+      # either.
+      assert length(emitted) == 5401
+      assert count.(& &1["streetAddress"]) == 4653
+      assert count.(&is_nil(&1["streetAddress"])) == 748
+      assert count.(& &1["postalCode"]) == 3927
 
       # The largest behavioural delta this change ships: 302 places emit a
       # PostalAddress carrying only locality, region and country. Their full
@@ -1525,7 +1566,19 @@ defmodule EthosWeb.StructuredDataTest do
       # street-less row in this wave carries either a street with no ZIP
       # or a ZIP with no street (counted separately above), so only these
       # seven land here.
-      assert count.(fn ld -> is_nil(ld["streetAddress"]) and is_nil(ld["postalCode"]) end) == 373
+      # 374 after ski content wave 8 landed, +1 — Queen's Fort
+      # (priv/seed_data/ski/yawgoo-valley.json), whose own National
+      # Register nomination form gives its location only as "NE of Exeter
+      # on Stony Lane" — a real address as the source states it, with
+      # neither a house number nor a ZIP. This wave's other street-less
+      # row, Cathedral Pines (priv/seed_data/ski/mohawk-mountain.json),
+      # carries a ZIP even without a street ("Essex Hill Road... Cornwall,
+      # CT 06753"), so it is counted separately above and does not land
+      # here. This wave completes New England (Connecticut and Rhode
+      # Island); the 5 ski areas' own addresses this wave all carry both a
+      # street and a ZIP, none of them town-level-only, unlike most prior
+      # waves.
+      assert count.(fn ld -> is_nil(ld["streetAddress"]) and is_nil(ld["postalCode"]) end) == 374
     end
   end
 end

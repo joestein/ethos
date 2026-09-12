@@ -73,27 +73,6 @@
   },
   "places": [
     {
-      "slug": "ski-sundown",
-      "name": "Ski Sundown",
-      "kind": "attraction",
-      "destination_path": "united-states/connecticut/litchfield-county/new-hartford",
-      "address": "126 Ratlum Road, New Hartford, CT 06057",
-      "official_url": "https://www.skisundown.com/",
-      "summary": "An independently owned ski area with 17 trails across about 70 skiable acres, 16 lit for night skiing, 100% snowmaking, two terrain parks and a snowsports school for ages 3 and up. Opened in 1963 as Satan's Ridge. Typical season early December through late March; hours Mon-Fri 9 a.m.-10 p.m., weekends and holidays from 8 a.m. Phone (860) 379-7669.",
-      "status": "open",
-      "photos": [
-        {
-          "src": "/photos/ct/new-hartford/ski-sundown-aerial.jpg",
-          "thumb": "/photos/ct/new-hartford/ski-sundown-aerial_thumb.jpg",
-          "title": "Ski Sundown aerial view",
-          "description": "An aerial view of the snow-covered trails and base area at Ski Sundown.",
-          "author": "UJ at Ski Sundown",
-          "license": "CC BY-SA 4.0",
-          "source_url": "https://commons.wikimedia.org/wiki/File:DJI_0032-ENHC.jpg"
-        }
-      ]
-    },
-    {
       "slug": "satans-kingdom-state-recreation-area",
       "name": "Satan's Kingdom State Recreation Area",
       "kind": "park",
@@ -168,12 +147,6 @@
     }
   ],
   "entries": [
-    {
-      "kind": "sight",
-      "name": "Ski Sundown",
-      "place_slug": "ski-sundown",
-      "note": "17 trails and night skiing since opening as Satan's Ridge in 1963."
-    },
     {
       "kind": "sight",
       "name": "Satan's Kingdom State Recreation Area",

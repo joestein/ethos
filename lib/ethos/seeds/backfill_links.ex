@@ -12,6 +12,7 @@ defmodule Ethos.Seeds.BackfillLinks do
 
   @ct_g "-ct-travel-guide"
   @m_g "-manhattan-guide"
+  @sk_g "-ski-guide"
 
   # {source_slug_base, target_slug_base, kind, note} — all guide↔guide.
   defp ct_edges do
@@ -117,6 +118,33 @@ defmodule Ethos.Seeds.BackfillLinks do
        "Metro-North's Danbury Branch connects to the New Haven Line into Grand Central Terminal."},
       {"waterbury#{@ct_g}", "midtown#{@m_g}", "see-also",
        "Metro-North's Waterbury Branch connects to the New Haven Line into Grand Central Terminal."}
+    ] ++ ski_migration_edges()
+  end
+
+  # Ski wave 8 (docs/ski/new-england.md) migrated Mohawk Mountain, Mount
+  # Southington and Ski Sundown out of the Connecticut corpus into their own
+  # ski guides, each of which links back to its town. Both corpora's own
+  # `"links"` arrays deliberately do NOT carry these edges: the seeding
+  # runbook (docs/runbooks/seeding.md) runs step 3 (`seed_connecticut_expansion`)
+  # long before step 13 (`seed_ski`), and each direction's target guide lives
+  # in the OTHER, not-yet-seeded corpus at that point — an inline edge in
+  # either file's own `links` array would make `Links.resolve!/1` raise and
+  # abort that step's seeding run partway through. Routing both directions
+  # through this idempotent, order-independent backfill (which silently
+  # skips an edge whose endpoints are not yet seeded, per this module's own
+  # moduledoc) is the same fix already used above for the two CT-5
+  # code-module guides, which have no JSON `links` array of their own to put
+  # an edge in.
+  defp ski_migration_edges do
+    [
+      {"cornwall#{@ct_g}", "mohawk-mountain#{@sk_g}", "see-also",
+       "Mohawk Mountain's own ski-history guide covers Walt Schoenknecht's 1947 founding and its Mount Snow, Butternut, and Sundown connections."},
+      {"southington#{@ct_g}", "mount-southington#{@sk_g}", "see-also",
+       "Mount Southington's own ski-history guide covers Dr. Harold Richman's 1960s founding and its postponed dedication ceremony."},
+      {"middlefield#{@ct_g}", "powder-ridge#{@sk_g}", "see-also",
+       "Powder Ridge's own ski-history guide covers the Zemel brothers' founding and the mountain's 1970 rock festival."},
+      {"new-hartford#{@ct_g}", "ski-sundown#{@sk_g}", "see-also",
+       "Ski Sundown's own ski-history guide covers its 1964 opening as Satan's Ridge and Channing Murdock's later purchase."}
     ]
   end
 

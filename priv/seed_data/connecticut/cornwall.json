@@ -116,17 +116,6 @@
       "photos": []
     },
     {
-      "slug": "mohawk-mountain-ski-area",
-      "name": "Mohawk Mountain Ski Area",
-      "kind": "attraction",
-      "destination_path": "united-states/connecticut/litchfield-county/cornwall",
-      "address": "46 Great Hollow Rd., Cornwall, CT 06753",
-      "official_url": "https://www.mohawkmtn.com/",
-      "summary": "Connecticut's largest ski area, with a 650-foot vertical drop, snowmaking, night skiing through the week, a ski shop, and on-site dining.",
-      "status": "open",
-      "photos": []
-    },
-    {
       "slug": "housatonic-meadows-state-park",
       "name": "Housatonic Meadows State Park",
       "kind": "park",
@@ -178,12 +167,6 @@
       "name": "Mohawk State Forest",
       "place_slug": "mohawk-state-forest",
       "note": "Ten miles of trails around 1,683-foot Mohawk Mountain."
-    },
-    {
-      "kind": "sight",
-      "name": "Mohawk Mountain Ski Area",
-      "place_slug": "mohawk-mountain-ski-area",
-      "note": "Connecticut's largest ski area, with night skiing and snowmaking."
     },
     {
       "kind": "walk",

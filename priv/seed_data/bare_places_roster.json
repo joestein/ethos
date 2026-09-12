@@ -136,7 +136,7 @@
 {"kind":"brewery","name":"Hop Culture Farms & Brew Co.","region":"connecticut","seed_file":"priv/seed_data/connecticut/colchester.json","slug":"hop-culture-farms-brew-co","town":"Colchester"},
 {"kind":"park","name":"Algonquin State Forest","region":"connecticut","seed_file":"priv/seed_data/connecticut/colebrook.json","slug":"algonquin-state-forest","town":"Colebrook"},
 {"kind":"cafe","name":"Faith Cafe","region":"connecticut","seed_file":"priv/seed_data/connecticut/columbia.json","slug":"faith-cafe-columbia","town":"Columbia"},
-{"kind":"attraction","name":"Mohawk Mountain Ski Area","region":"connecticut","seed_file":"priv/seed_data/connecticut/cornwall.json","slug":"mohawk-mountain-ski-area","town":"Cornwall"},
+{"kind":"ski-area","name":"Mohawk Mountain Ski Area","region":"ski","seed_file":"priv/seed_data/ski/mohawk-mountain.json","slug":"mohawk-mountain","town":"Cornwall"},
 {"kind":"bnb","name":"Cornwall Inn","region":"connecticut","seed_file":"priv/seed_data/connecticut/cornwall.json","slug":"cornwall-inn","town":"Cornwall"},
 {"kind":"park","name":"Lisicke Beach","region":"connecticut","seed_file":"priv/seed_data/connecticut/coventry.json","slug":"lisicke-beach","town":"Coventry"},
 {"kind":"cafe","name":"Woke Breakfast & Coffee","region":"connecticut","seed_file":"priv/seed_data/connecticut/coventry.json","slug":"woke-breakfast-coffee","town":"Coventry"},

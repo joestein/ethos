@@ -2053,14 +2053,32 @@ Sundown, and "14 trails served by 8 lifts" for Mount Southington, none of
 them traceable to a named source. All three are removed here, along with
 their matching `sight` entries, so each town file's `entries`/`places`
 count drops by one — Cornwall and New Hartford from 7 to 6 places,
-Southington from 9 to 8 — and each town guide now carries a `see-also` link
-to its mountain's new ski guide instead of a place record for it. Powder
-Ridge and Yawgoo Valley had no prior record to migrate; Powder Ridge is new
-to the corpus, and Exeter (Yawgoo's town) had no guide at all before this
-wave. Ordering matters here: the Connecticut links resolve only once the
-ski guides exist, since `Ethos.Links.resolve!/1` raises on an unseeded
-target, so the three edited Connecticut files and the five new ski files
-ship in the same commit.
+Southington from 9 to 8. Powder Ridge and Yawgoo Valley had no prior record
+to migrate; Powder Ridge is new to the corpus, and Exeter (Yawgoo's town)
+had no guide at all before this wave.
+
+Each town guide's `see-also` link to its mountain's new ski guide, and each
+ski guide's own reciprocal `see-also` link back to its town, are **not**
+stored in either corpus's JSON `"links"` array. `docs/runbooks/seeding.md`
+runs `seed_connecticut_expansion` at step 3 and `seed_ski` at step 13, and
+each direction's edge names a guide that only exists in the OTHER, later or
+earlier corpus — an edge inline in either file's own array would make
+`Links.resolve!/1` raise and abort that step's run partway through,
+regardless of which order the two steps run in, because the dependency
+runs both ways at once. The same problem already existed once, one
+direction only, for the two CT-5 code-module guides (Waterbury, Danbury),
+which have no JSON `"links"` array to put an edge in; both cases route
+through `Ethos.Seeds.BackfillLinks.ski_migration_edges/0`, whose module
+already handles exactly this shape of problem (idempotent, silently skips
+an edge whose endpoints are not yet seeded) via `Ethos.Release.seed_links/0`
+(step 15, or any later re-run). The four new edges: `cornwall-ct-travel-guide`
+↔ `mohawk-mountain-ski-guide`, `southington-ct-travel-guide` ↔
+`mount-southington-ski-guide`, `middlefield-ct-travel-guide` ↔
+`powder-ridge-ski-guide`, and `new-hartford-ct-travel-guide` ↔
+`ski-sundown-ski-guide` — all `see-also`. The three edited Connecticut
+files and the five new ski files still ship in the same commit, since the
+place/entry removal and the new guides are otherwise independent of each
+other's existence.
 
 ### Mohawk's snowmaking dispute: publishing both sides
 
