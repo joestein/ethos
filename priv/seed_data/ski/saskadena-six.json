@@ -1,0 +1,74 @@
+{
+  "guide": {
+    "slug": "saskadena-six-ski-guide",
+    "title": "Saskadena Six, Vermont: Suicide Six, renamed, on Bunny Bertram's Hill 6",
+    "destination": "South Pomfret, VT",
+    "destination_path": "united-states/vermont/windsor-county/pomfret",
+    "tier": "guide",
+    "intro": "The ski area now called Saskadena Six was established in July 1936 when Wallace \"Bunny\" Bertram acquired about 30 acres on Perry Hill (locally \"Hill 6\") and named the resulting ski hill Suicide Six, according to New England Ski History's \"Suicide Six\" area history page. Bertram sold the area to Laurance Rockefeller in 1961; Rockefeller's RockResorts subsequently marketed it together with Mt. Tom, a separate, now-closed Woodstock-area ski area, until Mt. Tom closed in the late 1970s. The area was renamed from Suicide Six to Saskadena Six in the summer of 2022 by its owner, the Woodstock Inn & Resort, per Saskadena Six's own \"Our New Name\" page.",
+    "sections": [
+      {
+        "heading": "A new name",
+        "body": "The 2022 renaming cited \"increasing awareness surrounding mental health\" and concerns about the insensitivity of the old name, per Saskadena Six's own \"Our New Name\" page. \"Saskadena\" means \"standing mountain\" in Abenaki and was chosen in consultation with Chief Don Stevens of the Nulhegan Band of the Coosuk-Abenaki Nation; \"Six\" preserves the reference to Bertram's original Hill 6."
+      },
+      {
+        "heading": "Snurfing, lifts, and mountain biking",
+        "body": "In 1982 the area hosted the National Snow Snurfing Championship, an early snowboarding competition in which roughly 150 \"snurfers\" competed in downhill and giant slalom events, a milestone the resort credits as helping establish modern snowboarding, per Saskadena Six's own Mountain Info page. A 1,650-foot double chairlift was installed at the area in 1978; a next-generation Leitner-Poma quad chairlift was added in a later era, per the resort's own Mountain Info page. The resort launched a lift-served mountain bike program in 2018, with more than 6 miles of dedicated bike trails alongside the ski trails, per the resort's own Mountain Info page."
+      },
+      {
+        "heading": "In South Pomfret",
+        "body": "Abbott Memorial Library was built in 1905 using a bequest made in 1903 by local attorney Ira Abbott, and serves as the public library for South Pomfret village, per Wikipedia's \"Abbott Memorial Library (Pomfret, Vermont)\" article. The library building, constructed in the Queen Anne and Shingle styles, was listed on the National Register of Historic Places on January 6, 2015."
+      }
+    ],
+    "faq": [
+      {
+        "question": "Why was Suicide Six renamed Saskadena Six?",
+        "answer": "The Woodstock Inn & Resort renamed the area in the summer of 2022, citing \"increasing awareness surrounding mental health\" and concerns about the insensitivity of the old name, per Saskadena Six's own \"Our New Name\" page. \"Saskadena,\" meaning \"standing mountain\" in Abenaki, was chosen in consultation with Chief Don Stevens of the Nulhegan Band of the Coosuk-Abenaki Nation."
+      },
+      {
+        "question": "Who founded the ski area, and when?",
+        "answer": "Wallace \"Bunny\" Bertram established the area in July 1936 on Perry Hill, locally known as \"Hill 6,\" and named it Suicide Six, according to New England Ski History's \"Suicide Six\" area history page."
+      }
+    ],
+    "photos": []
+  },
+  "places": [
+    {
+      "slug": "saskadena-six",
+      "name": "Saskadena Six",
+      "kind": "ski-area",
+      "destination_path": "united-states/vermont/windsor-county/pomfret",
+      "address": "South Pomfret, VT",
+      "summary": "A chairlift-served ski area founded in 1936 as Suicide Six by Wallace \"Bunny\" Bertram, renamed Saskadena Six in 2022 by owner Woodstock Inn & Resort.",
+      "history": "The ski area now called Saskadena Six was established in July 1936 when Wallace \"Bunny\" Bertram acquired about 30 acres on Perry Hill (locally \"Hill 6\") and named the resulting ski hill Suicide Six, according to New England Ski History's \"Suicide Six\" area history page. Bertram sold the area to Laurance Rockefeller in 1961; Rockefeller's RockResorts subsequently marketed it together with Mt. Tom, a separate, now-closed Woodstock-area ski area, until Mt. Tom closed in the late 1970s. The area was renamed from Suicide Six to Saskadena Six in the summer of 2022 by its owner, the Woodstock Inn & Resort, citing \"increasing awareness surrounding mental health\" and concerns about the insensitivity of the old name, per Saskadena Six's own \"Our New Name\" page. \"Saskadena\" means \"standing mountain\" in Abenaki and was chosen in consultation with Chief Don Stevens of the Nulhegan Band of the Coosuk-Abenaki Nation; \"Six\" preserves the reference to Bertram's original Hill 6. In 1982 the area hosted the National Snow Snurfing Championship, an early snowboarding competition in which roughly 150 \"snurfers\" competed in downhill and giant slalom events, a milestone the resort credits as helping establish modern snowboarding, per Saskadena Six's own Mountain Info page. A 1,650-foot double chairlift was installed at the area in 1978; a next-generation Leitner-Poma quad chairlift was added in a later era. The resort launched a lift-served mountain bike program in 2018, with more than 6 miles of dedicated bike trails alongside the ski trails.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "abbott-memorial-library",
+      "name": "Abbott Memorial Library",
+      "kind": "historic-site",
+      "destination_path": "united-states/vermont/windsor-county/pomfret",
+      "address": "15 Library Street, South Pomfret, VT",
+      "summary": "South Pomfret's 1905 public library, built with a bequest from attorney Ira Abbott.",
+      "history": "Abbott Memorial Library was built in 1905 using a bequest made in 1903 by local attorney Ira Abbott, and serves as the public library for South Pomfret village, per Wikipedia's \"Abbott Memorial Library (Pomfret, Vermont)\" article. The library building, constructed in the Queen Anne and Shingle styles, was listed on the National Register of Historic Places on January 6, 2015 (reference number 14001141).",
+      "status": "open",
+      "photos": []
+    }
+  ],
+  "entries": [
+    {
+      "kind": "sight",
+      "name": "Saskadena Six",
+      "place_slug": "saskadena-six",
+      "note": "A chairlift-served ski area founded in 1936 as Suicide Six, renamed Saskadena Six in 2022."
+    },
+    {
+      "kind": "sight",
+      "name": "Abbott Memorial Library",
+      "place_slug": "abbott-memorial-library",
+      "note": "South Pomfret's 1905 public library, listed on the National Register of Historic Places."
+    }
+  ],
+  "links": []
+}

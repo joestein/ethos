@@ -2,7 +2,7 @@ defmodule Ethos.Places.Place do
   use Ecto.Schema
   import Ecto.Changeset
 
-  @kinds ~w(museum theater restaurant cafe brewery hotel bnb park historic-site amusement-park shop stadium attraction)
+  @kinds ~w(museum theater restaurant cafe brewery hotel bnb park historic-site amusement-park shop stadium attraction ski-area)
   @statuses ~w(open closed)
   @photo_path_re ~r{^/photos/[a-z0-9/_-]+\.(jpg|jpeg|png|webp)$}
   @photo_keys ~w(src thumb title description author license source_url)

@@ -1,0 +1,67 @@
+{
+  "guide": {
+    "slug": "jay-peak-resort-ski-guide",
+    "title": "Jay Peak Resort, Vermont: the tram, the EB-5 fraud, and the mountain that survived it",
+    "destination": "Jay, VT",
+    "destination_path": "united-states/vermont/orleans-county/jay",
+    "tier": "guide",
+    "intro": "Jay Peak, Inc. was incorporated around April 1955 under founding president Harold Haynes, per New England Ski History's Jay Peak page. The resort's first lift, a Poma platter lift installed in 1956, began operating on January 6, 1957, marking Jay Peak's first ski season, 1956-57. The mountain's aerial tramway, built by Von Roll, was installed in 1966-67; its cabins were later replaced with Garaventa-built cars around 2000, and the tram was retrofitted again in 2017, according to Wikipedia's Jay Peak Resort article.",
+    "sections": [
+      {
+        "heading": "Ownership, from Weyerhaeuser to Quebec",
+        "body": "Weyerhaeuser Company acquired a financing stake in Jay Peak in the mid-1960s to fund expansion, then sold its interest in 1978 to the owners of Mont Saint-Sauveur, in Quebec, per New England Ski History's Jay Peak page. Mont Saint-Sauveur International, Jay Peak's owner at the time, recruited Bill Stenger as general manager in 1985. The Green Mountain Flyer, a high-speed detachable quad chairlift, was installed for the 1999-2000 season. Ariel Quiros, through Q Resorts, purchased Jay Peak in 2008 for $15 million plus assumption of $8.5 million in debt; Bill Stenger remained as president and CEO."
+      },
+      {
+        "heading": "The EB-5 fraud",
+        "body": "Starting around 2008, Jay Peak's ownership used the federal EB-5 immigrant investor visa program to finance a series of resort expansion projects, including a hotel, ice arena, parking garage, and an indoor water park, per Wikipedia's Jay Peak Resort article, citing SEC case materials. The Pump House indoor water park opened at Jay Peak in 2011 as part of that expansion. On April 14, 2016, the SEC charged Jay Peak Inc., Ariel Quiros, William Stenger, and related entities with securities fraud, alleging that of more than $350 million raised from EB-5 investors, more than $200 million was misused in a \"Ponzi-like\" fashion — including roughly $50 million diverted to Quiros's personal expenses — and a federal court appointed a receiver over the companies to stop further spending of investor funds, per SEC Press Release 2016-69."
+      },
+      {
+        "heading": "Sentencing and sale",
+        "body": "Ariel Quiros pleaded guilty to wire fraud, money laundering, and obstruction of justice in the Jay Peak case and was sentenced to five years in federal prison, per reporting dated April 29, 2022. Bill Stenger pleaded guilty to making false statements in the case in 2021 and was later sentenced to 18 months in prison, of which he served about 10 months, three years of home confinement, and a $250,000 fine. In September 2022, Pacific Group Resorts placed the winning $76 million bid in the court-supervised receivership auction for Jay Peak; the sale closed on November 2, 2022, per New England Ski History's Jay Peak page."
+      },
+      {
+        "heading": "2024",
+        "body": "In February 2024, Jay Peak fired five employees after a photo showing them posing in a Nazi salute was posted on social media, per Wikipedia's Jay Peak Resort article."
+      }
+    ],
+    "faq": [
+      {
+        "question": "What was the Jay Peak EB-5 fraud case?",
+        "answer": "Starting around 2008, Jay Peak's ownership used the federal EB-5 immigrant investor visa program to finance expansion projects. On April 14, 2016, the SEC charged Jay Peak Inc., Ariel Quiros, William Stenger, and related entities with securities fraud, alleging that of more than $350 million raised from EB-5 investors, more than $200 million was misused in a \"Ponzi-like\" fashion, and a federal court appointed a receiver, per SEC Press Release 2016-69. Quiros was later sentenced to five years in federal prison; Stenger was sentenced to 18 months."
+      },
+      {
+        "question": "Who owns Jay Peak now?",
+        "answer": "In September 2022, Pacific Group Resorts placed the winning $76 million bid in the court-supervised receivership auction for Jay Peak; the sale closed on November 2, 2022, per New England Ski History's Jay Peak page."
+      }
+    ],
+    "photos": []
+  },
+  "places": [
+    {
+      "slug": "jay-peak-resort",
+      "name": "Jay Peak Resort",
+      "kind": "ski-area",
+      "destination_path": "united-states/vermont/orleans-county/jay",
+      "address": "Jay, VT",
+      "summary": "A tram-served ski resort in Vermont's Northeast Kingdom, incorporated in 1955, that survived a $200 million EB-5 securities fraud case and receivership to sell to Pacific Group Resorts in 2022.",
+      "history": "Jay Peak, Inc. was incorporated around April 1955 under founding president Harold Haynes, per New England Ski History's Jay Peak page. The resort's first lift, a Poma platter lift installed in 1956, began operating on January 6, 1957, marking Jay Peak's first ski season, 1956-57. Weyerhaeuser Company acquired a financing stake in the mid-1960s to fund expansion, then sold its interest in 1978 to the owners of Mont Saint-Sauveur, in Quebec. Mont Saint-Sauveur International recruited Bill Stenger as general manager in 1985. The aerial tramway, built by Von Roll, was installed in 1966-67; its cabins were later replaced with Garaventa-built cars around 2000, and the tram was retrofitted again in 2017, per Wikipedia's Jay Peak Resort article. The Green Mountain Flyer, a high-speed detachable quad chairlift, was installed for the 1999-2000 season. Ariel Quiros, through Q Resorts, purchased Jay Peak in 2008 for $15 million plus assumption of $8.5 million in debt; Bill Stenger remained as president and CEO. Starting around 2008, ownership used the federal EB-5 immigrant investor visa program to finance expansion, including a hotel, ice arena, parking garage, and the Pump House indoor water park, which opened in 2011. On April 14, 2016, the SEC charged Jay Peak Inc., Ariel Quiros, William Stenger, and related entities with securities fraud — of more than $350 million raised from EB-5 investors, more than $200 million misused in a \"Ponzi-like\" fashion — and a federal court appointed a receiver, per SEC Press Release 2016-69. Quiros pleaded guilty to wire fraud, money laundering, and obstruction of justice and was sentenced to five years in federal prison, per reporting dated April 29, 2022. Stenger pleaded guilty to making false statements in 2021 and was later sentenced to 18 months in prison, of which he served about 10 months, three years of home confinement, and a $250,000 fine. In September 2022, Pacific Group Resorts placed the winning $76 million bid in the court-supervised receivership auction for Jay Peak; the sale closed on November 2, 2022. In February 2024, Jay Peak fired five employees after a photo showing them posing in a Nazi salute was posted on social media.",
+      "status": "open",
+      "photos": []
+    }
+  ],
+  "entries": [
+    {
+      "kind": "sight",
+      "name": "Jay Peak Resort",
+      "place_slug": "jay-peak-resort",
+      "note": "A tram-served Northeast Kingdom ski resort, incorporated in 1955, sold to Pacific Group Resorts in 2022 after the EB-5 fraud receivership."
+    }
+  ],
+  "links": [
+    {
+      "target": "guide:burke-mountain-resort-ski-guide",
+      "kind": "nearby",
+      "note": "Burke Mountain and Jay Peak were seized together under the same 2016 EB-5 fraud receivership, though the two later sold separately to different buyers."
+    }
+  ]
+}

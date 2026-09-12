@@ -1,0 +1,180 @@
+{
+  "guide": {
+    "slug": "living-memorial-park-ski-guide",
+    "title": "Living Memorial Park, Vermont: Brattleboro's volunteer-run town ski hill",
+    "destination": "Brattleboro, VT",
+    "destination_path": "united-states/vermont/windham-county/brattleboro",
+    "tier": "guide",
+    "intro": "The ski hill at Living Memorial Park was founded in 1937, when Robert Billings, Elliot Barber, Floyd Messenger, and John Dunham organized to build a rope tow on the Charles Clark farm, per Brattleboro Ski Hill's own history page. Construction of the original 1,100-foot rope tow began November 10, 1937, and it opened to the public the first Saturday in January 1938, with all-day tickets costing 35 cents. Living Memorial Park Snow Sports operates today as a 501(c)(3) nonprofit that is entirely volunteer-run, at 24 Living Memorial Park Drive, per the organization's own site.",
+    "sections": [
+      {
+        "heading": "From town-run hill to volunteer nonprofit",
+        "body": "The Brattleboro Ski Patrol was formed in January 1938 and formally affiliated with the National Ski Patrol System in 1941, per Brattleboro Ski Hill's own history page. The current Doppelmayr T-bar lift was installed in 1957, the same year the Town of Brattleboro took over running the ski hill. The Town of Brattleboro ceased operating the ski hill in 1995. A private group of citizens reopened the hill in 1997 under the newly formed nonprofit Living Memorial Park Snow Sports, Inc."
+      },
+      {
+        "heading": "The park itself",
+        "body": "Living Memorial Park itself was created after Brattleboro residents raised funds during the 1950s to purchase the Clark family farm, developed into a park in partnership with local service organizations, per the Town of Brattleboro's own Recreation & Parks History page. Brattleboro's Recreation & Parks Department, which today oversees Living Memorial Park, was established in the early 1920s."
+      },
+      {
+        "heading": "Downtown Brattleboro",
+        "body": "Brattleboro Museum & Art Center is located in Brattleboro's historic Union Station at the foot of Main Street, and hosts the Sucka Punch Graffiti Jam, a three-day festival celebrating graffiti writers and artists, per the museum's own website. The Latchis Hotel building was constructed in 1938 in an Art Deco style the property calls \"Greco Deco,\" designed by architect S. Wesley Haynes as a memorial to Demetrius P. Latchis, a Greek immigrant businessman, and is one of only two extant Art Deco buildings in Vermont, per Wikipedia's Latchis Memorial Building article. The Latchis Theatre screens commercial films alongside live events, Met Opera in HD broadcasts, and National Theater Live productions; its auditorium is part of the wider Latchis complex, which also houses the hotel, a pub, and dining space."
+      },
+      {
+        "heading": "Museums, a fort, and a ski jump",
+        "body": "The Estey Organ Museum is dedicated to the history of the Estey Organ Company of Brattleboro, which manufactured reed organs, pump organs, melodeons, and pipe organs for nearly a century; it operates seasonally, open weekends 2-4pm May through October, per the museum's own website. Fort Dummer, established in 1724, sat where Brattleboro now stands; its original site was submerged in 1908 after construction of the Vernon Dam, per Vermont State Parks' own Fort Dummer State Park page. Fort Dummer State Park offers camping, hiking, swimming, and picnicking. Harris Hill Ski Jump, built in 1922, closed for renovation in 2005, reopened in 2009 after a $600,000 renovation, and received FIS international certification in 2011, per Wikipedia's Harris Hill Ski Jump article; the jump celebrated its centennial in 2022 with a commemorative sculpture installed on Main Street, according to the ski jump's own website. North Chair Brewing operates a taproom in Brattleboro producing beer under its Whetstone Beer brand, per the brewery's own website."
+      }
+    ],
+    "faq": [
+      {
+        "question": "Is Living Memorial Park's ski hill still a town operation?",
+        "answer": "No, not anymore. The Town of Brattleboro ceased operating the hill in 1995. A private group of citizens reopened it in 1997 under the nonprofit Living Memorial Park Snow Sports, Inc., which runs it today as an entirely volunteer-run 501(c)(3), per the organization's own site."
+      },
+      {
+        "question": "How old is the ski hill at Living Memorial Park?",
+        "answer": "It was founded in 1937, when Robert Billings, Elliot Barber, Floyd Messenger, and John Dunham organized to build a rope tow on the Charles Clark farm; the original 1,100-foot rope tow opened to the public the first Saturday of January 1938, per Brattleboro Ski Hill's own history page."
+      }
+    ],
+    "photos": []
+  },
+  "places": [
+    {
+      "slug": "living-memorial-park",
+      "name": "Living Memorial Park",
+      "kind": "ski-area",
+      "destination_path": "united-states/vermont/windham-county/brattleboro",
+      "address": "24 Living Memorial Park Drive, Brattleboro, VT",
+      "summary": "A volunteer-run, non-profit T-bar ski hill on Brattleboro's town-owned Living Memorial Park, founded as a community rope tow in 1937.",
+      "history": "The ski hill at Living Memorial Park was founded in 1937, when Robert Billings, Elliot Barber, Floyd Messenger, and John Dunham organized to build a rope tow on the Charles Clark farm, per Brattleboro Ski Hill's own history page. Construction of the original 1,100-foot rope tow began November 10, 1937, and it opened to the public the first Saturday in January 1938, with all-day tickets costing 35 cents. The Brattleboro Ski Patrol was formed in January 1938 and formally affiliated with the National Ski Patrol System in 1941. The current Doppelmayr T-bar lift was installed in 1957, the same year the Town of Brattleboro took over running the ski hill. The Town of Brattleboro ceased operating the ski hill in 1995. A private group of citizens reopened the hill in 1997 under the newly formed nonprofit Living Memorial Park Snow Sports, Inc., which operates today as a 501(c)(3) nonprofit that is entirely volunteer-run, at 24 Living Memorial Park Drive, per the organization's own site. Living Memorial Park itself was created after Brattleboro residents raised funds during the 1950s to purchase the Clark family farm, developed into a park in partnership with local service organizations. Brattleboro's Recreation & Parks Department, which today oversees the park, was established in the early 1920s.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "brattleboro-museum-art-center",
+      "name": "Brattleboro Museum & Art Center",
+      "kind": "museum",
+      "destination_path": "united-states/vermont/windham-county/brattleboro",
+      "address": "10 Vernon Street, Brattleboro, VT 05301",
+      "summary": "An art museum in Brattleboro's historic Union Station, home to the annual Sucka Punch Graffiti Jam.",
+      "history": "Brattleboro Museum & Art Center is located in Brattleboro's historic Union Station at the foot of Main Street, per the museum's own \"Visit\" page. The museum's Sucka Punch Graffiti Jam is a three-day festival celebrating the cultural and creative contributions of graffiti writers and artists.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "latchis-hotel",
+      "name": "Latchis Hotel",
+      "kind": "hotel",
+      "destination_path": "united-states/vermont/windham-county/brattleboro",
+      "address": "50 Main Street, Brattleboro, VT 05301",
+      "summary": "A 1938 Art Deco hotel on Main Street, built as a memorial to Greek immigrant businessman Demetrius P. Latchis, part of a complex with a theater and pub.",
+      "history": "The Latchis Hotel building was constructed in 1938 in an Art Deco style the property calls \"Greco Deco,\" per the hotel's own website. The Latchis complex was designed by architect S. Wesley Haynes as a memorial to Demetrius P. Latchis, a Greek immigrant businessman, and is one of only two extant Art Deco buildings in Vermont, according to Wikipedia's Latchis Memorial Building article.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "latchis-theatre",
+      "name": "Latchis Theatre",
+      "kind": "theater",
+      "destination_path": "united-states/vermont/windham-county/brattleboro",
+      "address": "50 Main Street, Brattleboro, VT 05301",
+      "summary": "A downtown movie theater screening commercial films, live events, Met Opera HD broadcasts, and National Theater Live productions.",
+      "history": "The Latchis Theatre screens commercial films alongside live events, Met Opera in HD broadcasts, and National Theater Live productions, per the theater's own website. The auditorium is part of the wider Latchis complex, which also houses a hotel, pub, and dining space, according to the hotel's own website.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "estey-organ-museum",
+      "name": "Estey Organ Museum",
+      "kind": "museum",
+      "destination_path": "united-states/vermont/windham-county/brattleboro",
+      "address": "110 Birge Street, Brattleboro, VT 05301",
+      "summary": "A museum dedicated to the Estey Organ Company of Brattleboro, open seasonally with playable historic organs.",
+      "history": "The Estey Organ Museum is dedicated to the history of the Estey Organ Company of Brattleboro, which manufactured reed organs, pump organs, melodeons, and pipe organs for nearly a century, per the museum's own website. The museum operates seasonally, open weekends from 2-4pm May through October, and visitors can play the historic organs in its collection.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "fort-dummer-state-park",
+      "name": "Fort Dummer State Park",
+      "kind": "park",
+      "destination_path": "united-states/vermont/windham-county/brattleboro",
+      "address": "517 Old Guilford Road, Brattleboro, VT 05301",
+      "summary": "A state park on the site of a 1724 fort, offering camping, hiking, swimming, and picnicking.",
+      "history": "Fort Dummer, established in 1724, sat where Brattleboro now stands; its original site was submerged in 1908 after construction of the Vernon Dam, per Vermont State Parks' own Fort Dummer State Park page. Fort Dummer State Park offers camping, including tent/RV and lean-to sites, along with hiking, swimming, and picnicking.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "harris-hill-ski-jump",
+      "name": "Harris Hill Ski Jump",
+      "kind": "attraction",
+      "destination_path": "united-states/vermont/windham-county/brattleboro",
+      "address": "264 Cedar Street, Brattleboro, VT 05301",
+      "summary": "A 1922 ski jumping hill that received FIS international certification in 2011, still hosting jumping events after a centennial celebration in 2022.",
+      "history": "Harris Hill Ski Jump was built in 1922, per the ski jump's own website. It closed for renovation in 2005, reopened in 2009 after a $600,000 renovation, and received FIS certification in 2011, according to Wikipedia's Harris Hill Ski Jump article. Harris Hill celebrated its centennial in 2022, marking 100 years of operation, with a commemorative sculpture installed on Main Street, per the ski jump's own website.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "north-chair-brewing",
+      "name": "North Chair Brewing",
+      "kind": "brewery",
+      "destination_path": "united-states/vermont/windham-county/brattleboro",
+      "address": "39 Frost Street, Brattleboro, VT 05301",
+      "summary": "A Brattleboro taproom producing beer under the Whetstone Beer brand.",
+      "history": "North Chair Brewing operates a taproom in Brattleboro producing beer under its Whetstone Beer brand, per the brewery's own \"Whetstone Beer\" page.",
+      "status": "open",
+      "photos": []
+    }
+  ],
+  "entries": [
+    {
+      "kind": "sight",
+      "name": "Living Memorial Park",
+      "place_slug": "living-memorial-park",
+      "note": "A volunteer-run, non-profit T-bar ski hill on Brattleboro's town park, founded as a rope tow in 1937."
+    },
+    {
+      "kind": "sight",
+      "name": "Brattleboro Museum & Art Center",
+      "place_slug": "brattleboro-museum-art-center",
+      "note": "An art museum in Brattleboro's historic Union Station, home to the Sucka Punch Graffiti Jam."
+    },
+    {
+      "kind": "stay",
+      "name": "Latchis Hotel",
+      "place_slug": "latchis-hotel",
+      "note": "A 1938 Art Deco hotel on Main Street, built as a memorial to Demetrius P. Latchis."
+    },
+    {
+      "kind": "sight",
+      "name": "Latchis Theatre",
+      "place_slug": "latchis-theatre",
+      "note": "A downtown theater screening films, live events, and Met Opera HD broadcasts."
+    },
+    {
+      "kind": "sight",
+      "name": "Estey Organ Museum",
+      "place_slug": "estey-organ-museum",
+      "note": "A seasonal museum on the Estey Organ Company, with playable historic organs."
+    },
+    {
+      "kind": "walk",
+      "name": "Fort Dummer State Park",
+      "place_slug": "fort-dummer-state-park",
+      "note": "A state park on the site of a 1724 fort, offering camping, hiking, and swimming."
+    },
+    {
+      "kind": "sight",
+      "name": "Harris Hill Ski Jump",
+      "place_slug": "harris-hill-ski-jump",
+      "note": "A 1922 ski jumping hill that received FIS international certification in 2011."
+    },
+    {
+      "kind": "food",
+      "name": "North Chair Brewing",
+      "place_slug": "north-chair-brewing",
+      "note": "A Brattleboro taproom producing beer under the Whetstone Beer brand."
+    }
+  ],
+  "links": []
+}

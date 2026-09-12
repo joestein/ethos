@@ -587,8 +587,89 @@ defmodule Ethos.Places.AddressTest do
     # Neither addition is the non-locality prose this pin exists to catch, so
     # the ratchet moves rather than the addresses — the same call waves 1 and 2
     # made, and for the same reason.
-    assert comma_streets <= 65,
-           "#{comma_streets} American street lines carry a comma qualifier, up from 63"
+    # 66 after ski content wave 1 landed
+    # priv/seed_data/ski/{ascutney-outdoors,bolton-valley-resort,
+    # bromley-mountain-resort,burke-mountain-resort,cochrans-ski-area,hardack,
+    # harrington-hill,jay-peak-resort,killington-ski-resort,
+    # living-memorial-park,lyndon-outing-club,mad-river-glen}.json, 36 places.
+    # The one addition is the Inn at Long Trail
+    # (inn-at-long-trail, priv/seed_data/ski/killington-ski-resort.json),
+    # whose sourced address, "709 Route 4, Sherburne Pass, Killington, VT
+    # 05751", parses to the street line "709 Route 4, Sherburne Pass".
+    # Sherburne Pass is not a floor or suite designator but the same
+    # acceptable class by the pin's own standard: a real sub-locality the inn
+    # itself prints as part of its mailing address on its own website, not a
+    # directional aside like "near Pacific Street" invented by a finder. The
+    # ratchet moves rather than the address, for the same reason it always
+    # has — the fact belongs in the street line because the operator put it
+    # there.
+    # 67 after ski content wave 3 landed
+    # priv/seed_data/ski/{abenaki-ski-area,attitash-mountain-resort,
+    # black-mountain,bretton-woods,cannon-mountain,cranmore-mountain-resort,
+    # crotched-mountain-ski-and-ride,dartmouth-skiway,granite-gorge-ski-area,
+    # gunstock-mountain-resort,king-pine-ski-area}.json, 11 areas. The one
+    # addition is King Pine Ski Area (king-pine-ski-area,
+    # priv/seed_data/ski/king-pine-ski-area.json), whose sourced address,
+    # "1251 Eaton Road, Route 153, Madison, NH 03849" (per King Pine's own
+    # website), parses to the street line "1251 Eaton Road, Route 153."
+    # "Route 153" is not a floor or suite designator but the same acceptable
+    # class by the pin's own standard: a real route number the operator
+    # itself prints as part of its mailing address, not a directional aside
+    # invented by a finder. The ratchet moves rather than the address, for
+    # the same reason it always has.
+    # 69 after ski content wave 4 landed
+    # priv/seed_data/ski/{loon-mountain-resort,mcintyre-ski-area,
+    # mount-eustis-ski-hill,mount-sunapee-resort,pats-peak,
+    # ragged-mountain-resort,storrs-hill-ski-area,tenney-mountain,
+    # waterville-valley-resort,whaleback-mountain,wildcat-mountain}.json, 47
+    # places (New Hampshire complete). Two of the wave's places carry a
+    # comma inside the street line, both the same acceptable class as the
+    # standing ones — a real sub-locality or unit designator the operator
+    # itself prints as part of its mailing address, not a directional aside
+    # invented by a finder:
+    #
+    #   * chutters-lincoln (priv/seed_data/ski/loon-mountain-resort.json) —
+    #     "264 Main St, Depot Plaza, Lincoln, NH 03251," per Chutters' own
+    #     website, parses to the street line "264 Main St, Depot Plaza."
+    #     Depot Plaza is a real shopping plaza in Lincoln, the same class as
+    #     Sherburne Pass and Route 153 above.
+    #   * great-north-aleworks (priv/seed_data/ski/mcintyre-ski-area.json) —
+    #     "1050 Holt Ave, Unit #14, Manchester, NH 03109," per the brewery's
+    #     own Story & Mission page, parses to the street line "1050 Holt
+    #     Ave, Unit #14" — an ordinary suite designator, the same class as
+    #     del-friscos-double-eagle-boston and flemings-prime-steakhouse-
+    #     brickell above.
+    #
+    # Re-measured after ski content wave 5 landed
+    # priv/seed_data/ski/{baker-mountain,big-moose-mountain,big-rock,
+    # black-mountain-of-maine,camden-snow-bowl,hermon-mountain,
+    # lonesome-pine-trails,lost-valley,millinocket-ski-slope,mount-abram,
+    # mount-jefferson-ski-area,pinnacle-ski-club}.json (Maine rows 1-12). One
+    # of the wave's 45 places carries a comma inside its street line:
+    # antique-snowmobile-museum (priv/seed_data/ski/millinocket-ski-slope.json)
+    # — "10 Northern Cruise Trail, Lake Road, Millinocket, ME 04462," per the
+    # museum's own site, parses to the street line "10 Northern Cruise Trail,
+    # Lake Road" — a real secondary road descriptor as sourced, the same
+    # class as Sherburne Pass and Route 153 above.
+    #
+    # The ratchet moves rather than the addresses, for the same reason it
+    # always has.
+    #
+    # 71 after ski content wave 7 landed
+    # priv/seed_data/ski/{berkshire-east,blue-hills-ski-area,bousquet-mountain,
+    # catamount-ski-area,jiminy-peak,nashoba-valley,otis-ridge,ski-bradford,
+    # ski-butternut,ski-ward,wachusett-mountain}.json (Massachusetts, complete).
+    # One of the wave's places carries a comma inside its street line:
+    # barrington-brewery-and-restaurant
+    # (priv/seed_data/ski/ski-butternut.json) — "420 Stockbridge Road, Unit 4,
+    # Great Barrington, MA 01230," per the brewery's own site, parses to the
+    # street line "420 Stockbridge Road, Unit 4" — an ordinary suite
+    # designator, the same class as great-north-aleworks' "Unit #14" above.
+    #
+    # The ratchet moves rather than the address, for the same reason it
+    # always has.
+    assert comma_streets <= 71,
+           "#{comma_streets} American street lines carry a comma qualifier, up from 71"
 
     for p <- italian, p.street, String.contains?(p.street, ",") do
       # A civico may be a range ("5-7") or carry a letter or a slashed suffix

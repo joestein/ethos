@@ -55,6 +55,12 @@ defmodule Ethos.Release do
   # partial rebuild that skips or reorders step 3, the four collections above
   # seed fine and the byways raise partway through, leaving some of them
   # seeded and this step aborted.
+  #
+  # The SkiCollections loop below has the same hazard and the largest
+  # exposure of any collection here: SkiCollections.regional/0 alone names
+  # all 82 New England ski guides, every one of which exists only after
+  # seed_ski/1 (step 13) has run. Its parent's curated items are a subset of
+  # that same 82, so it shares the precondition rather than adding a new one.
   def seed_collections do
     load_app()
     Application.ensure_all_started(@app)
@@ -73,6 +79,10 @@ defmodule Ethos.Release do
     end
 
     for collection <- Ethos.Seeds.ScenicBywaysCollections.upsert_all!() do
+      IO.puts("Seeded collection: /c/#{collection.slug}")
+    end
+
+    for collection <- Ethos.Seeds.SkiCollections.upsert_all!() do
       IO.puts("Seeded collection: /c/#{collection.slug}")
     end
   end
@@ -154,6 +164,32 @@ defmodule Ethos.Release do
   def seed_korean_bbq(email), do: seed_directory("korean_bbq", email)
 
   def seed_steakhouse(email), do: seed_directory("steakhouse", email)
+
+  @doc """
+  Seeds the US ski corpus under `priv/seed_data/ski/`.
+
+  One file per operating ski area, each carrying the mountain as a `ski-area`
+  place plus whatever is verifiably around it. Scope is
+  `priv/seed_data/ski_areas_roster.json`, and
+  `test/ethos/seeds/ski_seed_data_test.exs` asserts the roster and the corpus
+  agree in both directions — a roster row with no file fails, and a file with
+  no roster row fails.
+
+  **Preconditions are the nodes, not other corpora.** Unlike
+  `seed_steakhouse/1`, which must follow six other steps because its `"links"`
+  edges name guides in six other corpora, the New England round's `nearby`
+  links are all between ski guides in this same directory, and
+  `seed_directory/2`'s third pass runs after every guide in the run has been
+  published. What this step genuinely needs is the destination tree, which it
+  seeds itself on the line below — every area sits on a New England town or
+  county node, and roughly all of them were added by this project.
+
+  The day a ski file links outward — to a Vermont town guide, or to a ballpark
+  in a later region — that becomes a documented ordering constraint in
+  `docs/runbooks/seeding.md` like step 12's, because `Links.resolve!/1` raises
+  on a target nothing has seeded and seeding is not transactional.
+  """
+  def seed_ski(email), do: seed_directory("ski", email)
 
   @doc """
   Applies the deletion manifest, removing every place it names.

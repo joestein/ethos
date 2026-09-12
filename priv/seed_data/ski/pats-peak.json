@@ -1,0 +1,121 @@
+{
+  "guide": {
+    "slug": "pats-peak-ski-guide",
+    "title": "Pat's Peak, New Hampshire: a Patenaude family ski area since 1963",
+    "destination": "Henniker, NH",
+    "destination_path": "united-states/new-hampshire/merrimack-county/henniker",
+    "tier": "guide",
+    "intro": "Pat's Peak, Inc. was incorporated on December 20, 1962 by attorneys John Barto and Ronald Snow and Loralee Jackson, with Merle Patenaude Jr. (\"Joe\") as treasurer and David and Stuart Patenaude as directors, per New England Ski History's Pat's Peak page. The ski area opened to the public on January 5, 1963, with a T-Bar and rope tow on a thin natural snow base.",
+    "sections": [
+      {
+        "heading": "A family effort, and a family that stayed",
+        "body": "Per the Concord Monitor as quoted by New England Ski History, building the ski area was a Patenaude family effort: \"Merle was responsible for building the base lodge, Joe helped with carpentry and trail cutting, Stuart was 'the mechanical one' involved in lift construction, and Wayne handled the well drilling with his Contoocook Artesian Well Company.\" Longtime Pat's Peak owner Wayne Patenaude, born January 22, 1938 and raised in Henniker, died on December 4, 2025 at age 87, per NewEnglandSkiIndustry.com's December 5, 2025 report. Reporting on his death, NewEnglandSkiIndustry.com wrote that \"in a world of corporate consolidation, Pats Peak has remained under the ownership of the Patenaude family for over 60 years.\""
+      },
+      {
+        "heading": "In Henniker",
+        "body": "The Henniker Historical Society's museum is located at 51 Maple Street, housed in the former Henniker Academy building constructed in 1836, per the society's own website. The museum features \"a topographical diorama of the Contoocook River through downtown Henniker\" and is open Thursdays 10 AM-2 PM and the 1st and 3rd Saturdays 10 AM-1 PM, or by appointment. New England College's own page for the Rosamond Page Putnam Center for the Performing Arts, at 10 Weare Road, describes it as \"a 350-seat multi-level facility\" where \"students use this space for theatre and dance performances as well as attending music performances and town hall meetings with U.S. presidential candidates.\" Henniker Town Hall, on Depot Hill Road, was listed on the National Register of Historic Places on February 24, 1981, and Bennett Farm, at 11 Bennett Road, was listed on the National Register of Historic Places on September 14, 2002, per Wikipedia's list of NRHP listings in Merrimack County, New Hampshire."
+      }
+    ],
+    "faq": [
+      {
+        "question": "Who founded Pat's Peak?",
+        "answer": "Pat's Peak, Inc. was incorporated on December 20, 1962, and the ski area opened to the public on January 5, 1963, per New England Ski History's Pat's Peak page. Building it was a Patenaude family effort, per the Concord Monitor as quoted by that source."
+      },
+      {
+        "question": "Is Pat's Peak still family-owned?",
+        "answer": "Yes. Reporting on the December 2025 death of longtime owner Wayne Patenaude, NewEnglandSkiIndustry.com wrote that \"in a world of corporate consolidation, Pats Peak has remained under the ownership of the Patenaude family for over 60 years.\""
+      }
+    ],
+    "photos": []
+  },
+  "places": [
+    {
+      "slug": "pats-peak",
+      "name": "Pat's Peak",
+      "kind": "ski-area",
+      "destination_path": "united-states/new-hampshire/merrimack-county/henniker",
+      "address": "Henniker, NH",
+      "summary": "A Patenaude family-owned ski area in Henniker, operating since 1963.",
+      "history": "Pat's Peak, Inc. was incorporated on December 20, 1962 by attorneys John Barto and Ronald Snow and Loralee Jackson, with Merle Patenaude Jr. (\"Joe\") as treasurer and David and Stuart Patenaude as directors, per New England Ski History's Pat's Peak page. The ski area opened to the public on January 5, 1963, with a T-Bar and rope tow on a thin natural snow base. Per the Concord Monitor as quoted by New England Ski History, building the ski area was a Patenaude family effort: \"Merle was responsible for building the base lodge, Joe helped with carpentry and trail cutting, Stuart was 'the mechanical one' involved in lift construction, and Wayne handled the well drilling with his Contoocook Artesian Well Company.\" Longtime Pat's Peak owner Wayne Patenaude, born January 22, 1938 and raised in Henniker, died on December 4, 2025 at age 87, per NewEnglandSkiIndustry.com's December 5, 2025 report. Reporting on his death, NewEnglandSkiIndustry.com wrote that \"in a world of corporate consolidation, Pats Peak has remained under the ownership of the Patenaude family for over 60 years.\"",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "henniker-historical-society-museum",
+      "name": "Henniker Historical Society Museum",
+      "kind": "museum",
+      "destination_path": "united-states/new-hampshire/merrimack-county/henniker",
+      "address": "51 Maple Street, Henniker, NH 03242",
+      "summary": "Henniker's local history museum, in the former Henniker Academy building.",
+      "history": "The Henniker Historical Society's museum is located at 51 Maple Street, housed in the former Henniker Academy building constructed in 1836, per the society's own website. The museum features \"a topographical diorama of the Contoocook River through downtown Henniker\" and is open Thursdays 10 AM-2 PM and the 1st and 3rd Saturdays 10 AM-1 PM, or by appointment, per the same source.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "putnam-center-for-performing-arts",
+      "name": "Rosamond Page Putnam Center for the Performing Arts",
+      "kind": "theater",
+      "destination_path": "united-states/new-hampshire/merrimack-county/henniker",
+      "address": "10 Weare Road, Henniker, NH 03242",
+      "summary": "New England College's performing-arts center in Henniker.",
+      "history": "New England College's own page for the Rosamond Page Putnam Center for the Performing Arts describes it as \"a 350-seat multi-level facility\" where \"students use this space for theatre and dance performances as well as attending music performances and town hall meetings with U.S. presidential candidates.\" The college states it hopes to use the Center \"for a variety of community events such as a film series, author readings, or programs led by surrounding communities and schools,\" per its own Putnam Center page.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "henniker-town-hall",
+      "name": "Henniker Town Hall",
+      "kind": "historic-site",
+      "destination_path": "united-states/new-hampshire/merrimack-county/henniker",
+      "address": "Depot Hill Road, Henniker, NH 03242",
+      "summary": "Henniker's town hall, on the National Register of Historic Places.",
+      "history": "Henniker Town Hall, on Depot Hill Road, was listed on the National Register of Historic Places on February 24, 1981, per Wikipedia's list of National Register of Historic Places listings in Merrimack County, New Hampshire.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "bennett-farm",
+      "name": "Bennett Farm",
+      "kind": "historic-site",
+      "destination_path": "united-states/new-hampshire/merrimack-county/henniker",
+      "address": "11 Bennett Road, Henniker, NH 03242",
+      "summary": "A farm in Henniker listed on the National Register of Historic Places.",
+      "history": "Bennett Farm, at 11 Bennett Road in Henniker, was listed on the National Register of Historic Places on September 14, 2002, per Wikipedia's list of National Register of Historic Places listings in Merrimack County, New Hampshire.",
+      "status": "open",
+      "photos": []
+    }
+  ],
+  "entries": [
+    {
+      "kind": "sight",
+      "name": "Pat's Peak",
+      "place_slug": "pats-peak",
+      "note": "A Patenaude family-owned ski area in Henniker, operating since 1963."
+    },
+    {
+      "kind": "sight",
+      "name": "Henniker Historical Society Museum",
+      "place_slug": "henniker-historical-society-museum",
+      "note": "Henniker's local history museum, in the former Henniker Academy building."
+    },
+    {
+      "kind": "sight",
+      "name": "Rosamond Page Putnam Center for the Performing Arts",
+      "place_slug": "putnam-center-for-performing-arts",
+      "note": "New England College's performing-arts center in Henniker."
+    },
+    {
+      "kind": "sight",
+      "name": "Henniker Town Hall",
+      "place_slug": "henniker-town-hall",
+      "note": "Henniker's town hall, on the National Register of Historic Places."
+    },
+    {
+      "kind": "sight",
+      "name": "Bennett Farm",
+      "place_slug": "bennett-farm",
+      "note": "A farm in Henniker listed on the National Register of Historic Places."
+    }
+  ],
+  "links": []
+}

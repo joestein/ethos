@@ -1,0 +1,87 @@
+{
+  "guide": {
+    "slug": "king-pine-ski-area-ski-guide",
+    "title": "King Pine Ski Area, New Hampshire: a Hoyt family business since 1938",
+    "destination": "Madison, NH",
+    "destination_path": "united-states/new-hampshire/carroll-county/madison",
+    "tier": "guide",
+    "intro": "In 1938, Milt Hoyt cleared trees from a hill near the family's inn and constructed a rope tow powered by a Ford Model A engine, a precursor to the later ski area, per Purity Spring Resort's own account of its history. King Pine took its name from two large pine trees on the property that bore the mark of King George, according to the same source. Nicholas Hoyt, a Brooklyn attorney who returned with his wife Martha Hood to his birthplace in East Madison, began taking in carriage guests at the family home to supplement their income, founding the inn that preceded both Purity Spring Resort and King Pine.",
+    "sections": [
+      {
+        "heading": "From a rope tow to a Hoyt family of businesses",
+        "body": "The Hoyt family formally opened King Pine Ski Area with three trails in 1962. In 1965, Milt Hoyt subdivided mountain land for house lots, and the King Pine Area Association (KPAA) was formed. In 1968, a second double chairlift was added to the back side of the mountain. In 1987, King Pine celebrated its 25th anniversary with an expanded base lodge and new snowmaking, per Purity Spring Resort's own account. In 2006, a Black Bear triple chairlift was added, the same year The Bluffs RV resort opened as another Hoyt family property. \"In 2021, Purity Spring Resort joined the Highway West Vacations family, and a new chapter of Purity Lake's story began,\" according to the resort's own account. King Pine Ski Area describes itself on its own website as \"A Hoyt Family Business,\" one of several properties listed under the \"Hoyt Family of Businesses\" alongside Purity Spring Resort, Danforth Bay Camping & RV Resort, The Bluffs RV Resort, and Camp Tohkomeupog."
+      },
+      {
+        "heading": "In Madison",
+        "body": "New Hampshire purchased the Madison Boulder property in 1946, and the site was designated a National Natural Landmark in 1970 by the U.S. Department of the Interior, per NH State Parks' own Madison Boulder Natural Area page. The Madison Boulder, at 83 feet long and weighing over 5,000 tons, is described by NH State Parks as one of the largest known glacial erratics in North America. The Madison School, District No. 1 building, on NH Route 113 in the village center, was added to the National Register of Historic Places on December 11, 1980, and \"is presently home to the local historical society,\" per Wikipedia's \"Madison School, District No. 1\" article."
+      }
+    ],
+    "faq": [
+      {
+        "question": "Where does King Pine's name come from?",
+        "answer": "From two large pine trees on the property that bore the mark of King George, according to Purity Spring Resort's own account of the Hoyt family's history."
+      },
+      {
+        "question": "Who owns King Pine Ski Area?",
+        "answer": "King Pine describes itself on its own website as \"A Hoyt Family Business,\" one of several properties -- alongside Purity Spring Resort, Danforth Bay Camping & RV Resort, The Bluffs RV Resort, and Camp Tohkomeupog -- under the \"Hoyt Family of Businesses.\" Purity Spring Resort itself joined the Highway West Vacations family in 2021, per its own account."
+      }
+    ],
+    "photos": []
+  },
+  "places": [
+    {
+      "slug": "king-pine-ski-area",
+      "name": "King Pine Ski Area",
+      "kind": "ski-area",
+      "destination_path": "united-states/new-hampshire/carroll-county/madison",
+      "address": "1251 Eaton Road, Route 153, Madison, NH 03849",
+      "summary": "A Hoyt family-owned ski area in Madison, tracing to a 1938 rope tow and formally opened with three trails in 1962.",
+      "history": "In 1938, Milt Hoyt cleared trees from a hill near the family's inn and constructed a rope tow powered by a Ford Model A engine, a precursor to the later ski area, per Purity Spring Resort's own account of its history. King Pine took its name from two large pine trees on the property that bore the mark of King George, according to the same source. Nicholas Hoyt, a Brooklyn attorney who returned with his wife Martha Hood to his birthplace in East Madison, began taking in carriage guests at the family home to supplement their income, founding the inn that preceded both Purity Spring Resort and King Pine. The Hoyt family formally opened King Pine Ski Area with three trails in 1962. In 1965, Milt Hoyt subdivided mountain land for house lots, and the King Pine Area Association (KPAA) was formed. In 1968, a second double chairlift was added to the back side of the mountain. In 1987, King Pine celebrated its 25th anniversary with an expanded base lodge and new snowmaking, per Purity Spring Resort's own account. In 2006, a Black Bear triple chairlift was added, the same year The Bluffs RV resort opened as another Hoyt family property. \"In 2021, Purity Spring Resort joined the Highway West Vacations family, and a new chapter of Purity Lake's story began,\" according to the resort's own account of its history. King Pine Ski Area describes itself on its own website as \"A Hoyt Family Business,\" one of several properties listed under the \"Hoyt Family of Businesses\" alongside Purity Spring Resort, Danforth Bay Camping & RV Resort, The Bluffs RV Resort, and Camp Tohkomeupog. King Pine Ski Area's own website lists its address as 1251 Eaton Road, Route 153, Madison, NH 03849.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "madison-boulder-natural-area",
+      "name": "Madison Boulder Natural Area",
+      "kind": "park",
+      "destination_path": "united-states/new-hampshire/carroll-county/madison",
+      "address": "473 Boulder Rd, Madison, NH 03849",
+      "summary": "A state natural area protecting a National Natural Landmark glacial erratic since 1970.",
+      "history": "New Hampshire purchased the Madison Boulder property in 1946, and the site was designated a National Natural Landmark in 1970 by the U.S. Department of the Interior, per NH State Parks' own Madison Boulder Natural Area page. The Madison Boulder, at 83 feet long and weighing over 5,000 tons, is described by NH State Parks as one of the largest known glacial erratics in North America.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "madison-historical-society",
+      "name": "Madison Historical Society (Madison School, District No. 1)",
+      "kind": "museum",
+      "destination_path": "united-states/new-hampshire/carroll-county/madison",
+      "address": "NH Route 113, Madison, NH 03849",
+      "summary": "The local historical society's home in Madison's 1980 National Register-listed schoolhouse.",
+      "history": "The Madison School, District No. 1 building, on NH Route 113 in the Madison village center, was added to the National Register of Historic Places on December 11, 1980, and \"is presently home to the local historical society,\" per Wikipedia's \"Madison School, District No. 1\" article.",
+      "status": "open",
+      "photos": []
+    }
+  ],
+  "entries": [
+    {
+      "kind": "sight",
+      "name": "King Pine Ski Area",
+      "place_slug": "king-pine-ski-area",
+      "note": "A Hoyt family-owned ski area in Madison, tracing to a 1938 rope tow."
+    },
+    {
+      "kind": "walk",
+      "name": "Madison Boulder Natural Area",
+      "place_slug": "madison-boulder-natural-area",
+      "note": "A state natural area protecting a National Natural Landmark glacial erratic."
+    },
+    {
+      "kind": "sight",
+      "name": "Madison Historical Society (Madison School, District No. 1)",
+      "place_slug": "madison-historical-society",
+      "note": "The local historical society's home in Madison's 1980-listed schoolhouse."
+    }
+  ],
+  "links": []
+}

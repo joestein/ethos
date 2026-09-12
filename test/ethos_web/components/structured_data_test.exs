@@ -1166,10 +1166,288 @@ defmodule EthosWeb.StructuredDataTest do
       # Del Frisco's Boston "Suite 200" and Fleming's Brickell "Suite 150" —
       # which moves the `comma_streets` pin in
       # test/ethos/places/address_test.exs from 63 to 65 and nothing here.
-      assert length(emitted) == 5098
-      assert count.(& &1["streetAddress"]) == 4475
-      assert count.(&is_nil(&1["streetAddress"])) == 623
-      assert count.(& &1["postalCode"]) == 3711
+      #
+      # Re-measured after ski content wave 1 landed
+      # priv/seed_data/ski/{ascutney-outdoors,bolton-valley-resort,
+      # bromley-mountain-resort,burke-mountain-resort,cochrans-ski-area,hardack,
+      # harrington-hill,jay-peak-resort,killington-ski-resort,
+      # living-memorial-park,lyndon-outing-club,mad-river-glen}.json with 36
+      # places (one ski area plus surroundings per file). Of the 36: 14 carry a
+      # house-numbered street line AND a five-digit ZIP; 3 more carry a street
+      # line with no ZIP (Hard'Ack's own address, Welden Theatre, and Living
+      # Memorial Park's own address — all real, just ZIP-less as sourced); 3
+      # carry a ZIP with no street (Hapgood Pond Recreation Area, Kingdom
+      # Trails Association's P.O. box, and the Strafford Village Historic
+      # District); the remaining 16 are street-less and ZIP-less locality-only
+      # rows — mostly a mountain's own town-level address ("Bolton, VT", "Jay,
+      # VT") or a descriptive historic-site location with no house number
+      # ("Behind Barrett Hall, above Route 132, Strafford, VT"), exactly the
+      # shape this bucket exists for:
+      #
+      #   * total 5098 -> 5134, +36.
+      #   * `streetAddress` 4475 -> 4492, +17 (the 14 street+ZIP rows plus the
+      #     3 street-only rows).
+      #   * `is_nil(streetAddress)` 623 -> 642, +19 (the 3 ZIP-only rows plus
+      #     the 16 locality-only rows).
+      #   * `postalCode` 3711 -> 3728, +17 (the 14 street+ZIP rows plus the 3
+      #     ZIP-only rows).
+      #
+      # One of the 36 carries a comma inside its street line — the Inn at Long
+      # Trail's "709 Route 4, Sherburne Pass" — which moves the `comma_streets`
+      # pin in test/ethos/places/address_test.exs from 65 to 66 and nothing
+      # here.
+      #
+      # Re-measured after ski content wave 2 landed
+      # priv/seed_data/ski/{magic-mountain,middlebury-college-snow-bowl,
+      # mount-snow,northeast-slopes,okemo-mountain-resort,pico-mountain,
+      # saskadena-six,smugglers-notch-resort,stowe-mountain-resort,
+      # stratton-mountain-resort,sugarbush-resort}.json with 42 places (one ski
+      # area plus surroundings per file; Pico carries no surroundings). Of the
+      # 42: 18 carry a house-numbered street line AND a five-digit ZIP; 5 more
+      # carry a street line with no ZIP (Abbott Memorial Library, Cambridge
+      # Meetinghouse, Trapp Family Lodge, the Vermont Ski and Snowboard
+      # Museum, and The Current — all real addresses as sourced, just
+      # ZIP-less); 6 carry a ZIP with no street (Londonderry Town House,
+      # Texas Falls, Dover Town Hall, the West Dover Village Historic
+      # District, the Ludlow Village Historic District, and the Warren
+      # Covered Bridge — each a descriptive or district location with a
+      # postal code but no house number); the remaining 13 are street-less
+      # and ZIP-less locality-only rows — see the locality-only bucket
+      # comment below for the breakdown:
+      #
+      #   * total 5134 -> 5176, +42.
+      #   * `streetAddress` 4492 -> 4515, +23 (the 18 street+ZIP rows plus
+      #     the 5 street-only rows).
+      #   * `is_nil(streetAddress)` 642 -> 661, +19 (the 6 ZIP-only rows plus
+      #     the 13 locality-only rows).
+      #   * `postalCode` 3728 -> 3752, +24 (the 18 street+ZIP rows plus the 6
+      #     ZIP-only rows).
+      #
+      # None of the 42 carries a comma inside its street line, so the
+      # `comma_streets` pin in test/ethos/places/address_test.exs is unmoved
+      # at 66.
+      #
+      # Re-measured after ski content wave 3 landed
+      # priv/seed_data/ski/{abenaki-ski-area,attitash-mountain-resort,
+      # black-mountain,bretton-woods,cannon-mountain,cranmore-mountain-resort,
+      # crotched-mountain-ski-and-ride,dartmouth-skiway,granite-gorge-ski-area,
+      # gunstock-mountain-resort,king-pine-ski-area}.json with 40 places (one
+      # ski area plus surroundings per file). Of the 40: 18 carry a
+      # house-numbered street line AND a five-digit ZIP; 4 more carry a
+      # street line with no ZIP (Wright Museum of World War II, New
+      # Hampshire Boat Museum, The Libby Museum of Natural History, and the
+      # Wolfeboro Historical Society — all real Wolfeboro addresses as
+      # sourced, just ZIP-less); 6 carry a ZIP with no street (Honeymoon
+      # Bridge, Echo Lake Beach, the Francestown Meetinghouse, the
+      # Francestown Town Hall and Academy district, the First Congregational
+      # Church in Lyme, and the Madison Historical Society — each a
+      # descriptive or route-based location with a postal code but no house
+      # number); the remaining 12 are street-less and ZIP-less
+      # locality-only rows — 8 ski areas' own addresses given only at town
+      # level (Abenaki, Attitash, Black Mountain, Bretton Woods, Cannon
+      # Mountain, Cranmore, Granite Gorge, Gunstock — none of these
+      # publishes a street-numbered mailing address) plus the Bartlett
+      # Roundhouse, Diana's Baths, Batcheller's Cave, and Otter Brook Lake,
+      # each sourced as a descriptive location rather than a postal address:
+      #
+      #   * total 5176 -> 5216, +40.
+      #   * `streetAddress` 4515 -> 4537, +22 (the 18 street+ZIP rows plus
+      #     the 4 street-only rows).
+      #   * `is_nil(streetAddress)` 661 -> 679, +18 (the 6 ZIP-only rows plus
+      #     the 12 locality-only rows).
+      #   * `postalCode` 3752 -> 3776, +24 (the 18 street+ZIP rows plus the 6
+      #     ZIP-only rows).
+      #
+      # One of the 40 carries a comma inside its street line — King Pine Ski
+      # Area's "1251 Eaton Road, Route 153" — which moves the
+      # `comma_streets` pin in test/ethos/places/address_test.exs from 66 to
+      # 67 and nothing here.
+      #
+      # Re-measured after ski content wave 4 landed
+      # priv/seed_data/ski/{loon-mountain-resort,mcintyre-ski-area,
+      # mount-eustis-ski-hill,mount-sunapee-resort,pats-peak,
+      # ragged-mountain-resort,storrs-hill-ski-area,tenney-mountain,
+      # waterville-valley-resort,whaleback-mountain,wildcat-mountain}.json
+      # with 47 places (one ski area plus surroundings per file), completing
+      # New Hampshire. Of the 47: 24 carry a house-numbered (or route-
+      # numbered) street line AND a five-digit ZIP; 3 more carry a street
+      # line with no ZIP (Chutters' Littleton flagship, AVA Gallery and Art
+      # Center, and Lebanon Opera House — all real addresses as sourced,
+      # just ZIP-less); 6 carry a ZIP with no street (the Zimmerman House,
+      # the Center Meetinghouse, Henniker Town Hall, the Danbury North Road
+      # Schoolhouse Museum, the South Danbury Christian Church, and the
+      # Plymouth Historical Museum & Memory House — each a route, "One
+      # Court Street," or a museum credited to its parent institution's
+      # address, with a postal code but no house number the parser
+      # recognises); the remaining 14 are street-less and ZIP-less
+      # locality-only rows — 10 of the wave's 11 ski areas' own addresses
+      # given only at town level (Loon, McIntyre, Mount Sunapee, Pat's Peak,
+      # Ragged, Storrs Hill, Tenney, Waterville Valley, Whaleback, Wildcat —
+      # none of these ten publishes a street-numbered mailing address; the
+      # eleventh, Mount Eustis Ski Hill, does — "188 Mt. Eustis Road,
+      # Littleton, NH 03561" — and is one of the 24 street+ZIP rows above,
+      # not one of these ten) plus Whale's Tale Waterpark, the Pollyanna
+      # statue, the Bell Cove caboose museum, and Colburn Park Historic
+      # District, each sourced as a descriptive or town-level location
+      # rather than a postal address:
+      #
+      #   * total 5216 -> 5263, +47.
+      #   * `streetAddress` 4537 -> 4564, +27 (the 24 street+ZIP rows plus
+      #     the 3 street-only rows).
+      #   * `is_nil(streetAddress)` 679 -> 699, +20 (the 6 ZIP-only rows plus
+      #     the 14 locality-only rows).
+      #   * `postalCode` 3776 -> 3806, +30 (the 24 street+ZIP rows plus the 6
+      #     ZIP-only rows).
+      #
+      # Two of the 47 carry a comma inside their street line — Chutters'
+      # Lincoln location's "264 Main St, Depot Plaza" and Great North
+      # Aleworks' "1050 Holt Ave, Unit #14" — which moves the
+      # `comma_streets` pin in test/ethos/places/address_test.exs from 67 to
+      # 69 and nothing here.
+      #
+      # Re-measured after ski content wave 5 landed
+      # priv/seed_data/ski/{baker-mountain,big-moose-mountain,big-rock,
+      # black-mountain-of-maine,camden-snow-bowl,hermon-mountain,
+      # lonesome-pine-trails,lost-valley,millinocket-ski-slope,mount-abram,
+      # mount-jefferson-ski-area,pinnacle-ski-club}.json with 45 places (one
+      # ski area plus surroundings per file — Maine rows 1-12). Of the 45: 26
+      # carry a house-numbered (or route-numbered) street line AND a
+      # five-digit ZIP; none carry a street line with no ZIP; 16 carry a ZIP
+      # with no street (most ski areas' own town-level addresses plus
+      # descriptive locations such as Pennacook Falls and the Auburn
+      # Riverwalk — each a route, junction, or town-level address with a
+      # postal code but no house number the parser recognises); the
+      # remaining 3 are street-less and ZIP-less locality-only rows — Baker
+      # Mountain's own address, Wyman Dam, and the Arnold Trail to Quebec
+      # marker, all in Moscow, ME, sourced only to town level:
+      #
+      #   * total 5263 -> 5308, +45.
+      #   * `streetAddress` 4564 -> 4590, +26 (the 26 street+ZIP rows; no
+      #     street-only rows this wave).
+      #   * `is_nil(streetAddress)` 699 -> 718, +19 (the 16 ZIP-only rows
+      #     plus the 3 locality-only rows).
+      #   * `postalCode` 3806 -> 3848, +42 (the 26 street+ZIP rows plus the
+      #     16 ZIP-only rows).
+      #
+      # One of the 45 carries a comma inside its street line —
+      # antique-snowmobile-museum's "10 Northern Cruise Trail, Lake Road" —
+      # which moves the `comma_streets` pin in
+      # test/ethos/places/address_test.exs from 69 to 70 and nothing here.
+      #
+      # Re-measured after ski content wave 6 landed
+      # priv/seed_data/ski/{pleasant-mountain,powderhouse-hill,quarry-road,
+      # quoggy-jo,saddleback,spruce-mountain,sugarloaf,sunday-river,
+      # titcomb-mountain}.json with 46 places (one ski area plus surroundings
+      # per file — Maine rows 13-21, completing Maine). Of the 46: 33 carry a
+      # house-numbered (or route-numbered) street line AND a five-digit ZIP;
+      # 1 more carries a street line with no ZIP (Hub Coffee, Quoggy Jo's
+      # surroundings, re-cited to its own listing page per this wave's
+      # verification pass, which gives no ZIP); 12 carry a ZIP with no street
+      # (4 of the wave's nine ski areas' own addresses given only at town
+      # level — Pleasant Mountain, Powderhouse Hill, Quarry Road, and Spruce
+      # Mountain, none of which publishes a street-numbered mailing address —
+      # plus 8 surrounding sites sourced as descriptive or route-level
+      # locations rather than postal addresses: Pondicherry Park's Depot
+      # Street, Narramissic (Bridgton town-level), Holmes-Crafts Homestead's
+      # Old North Jay Road, the Jay-Niles Memorial Library (North Jay
+      # town-level), the Jay Recreation Area's Water Tower Lane, The Rack's
+      # Sugarloaf Access Road note, Hug's Italian Cuisine's Route 27, and the
+      # University of Maine at Farmington (Farmington town-level)); none are
+      # street-less and ZIP-less locality-only rows this wave — every
+      # street-less row still carries its town's five-digit ZIP:
+      #
+      #   * total 5308 -> 5354, +46.
+      #   * `streetAddress` 4590 -> 4624, +34 (the 33 street+ZIP rows plus
+      #     the 1 street-only row).
+      #   * `is_nil(streetAddress)` 718 -> 730, +12 (the 12 ZIP-only rows;
+      #     zero locality-only rows this wave).
+      #   * `postalCode` 3848 -> 3893, +45 (the 33 street+ZIP rows plus the
+      #     12 ZIP-only rows).
+      #
+      # None of the 46 carries a comma inside its street line, so the
+      # `comma_streets` pin in test/ethos/places/address_test.exs is
+      # unaffected and stays at 70.
+      #
+      # Re-measured after ski content wave 7 landed
+      # priv/seed_data/ski/{berkshire-east,blue-hills-ski-area,
+      # bousquet-mountain,catamount-ski-area,jiminy-peak,nashoba-valley,
+      # otis-ridge,ski-bradford,ski-butternut,ski-ward,
+      # wachusett-mountain}.json with 42 places (one ski area plus
+      # surroundings per file — Massachusetts, complete). Of the 42: 21
+      # carry a house-numbered (or route-numbered) street line AND a
+      # five-digit ZIP; 5 carry a street line with no ZIP (Paul Revere
+      # Heritage Site, Arrowhead, Winnekenni Castle, and Ski Ward's own and
+      # the General Artemas Ward House's addresses, none of which is
+      # sourced with a postal code); 9 carry a ZIP with no street
+      # (Catamount's own dual-state address plus eight surrounding or
+      # route-level locations — Mohawk Trail State Forest, Bissell Bridge,
+      # Hail to the Sunrise, the South Egremont Village Historic District,
+      # French Park, Jug End State Reservation, and the W.E.B. Du Bois
+      # Boyhood Homesite); the remaining 7 are street-less and ZIP-less
+      # locality-only rows — six ski areas' own addresses given only at
+      # town level (Berkshire East, Bousquet, Jiminy Peak, Nashoba Valley,
+      # Ski Butternut, and Wachusett, none of which publishes a
+      # street-numbered mailing address) plus one surrounding park,
+      # Springside Park, sourced only to its street name with no house
+      # number:
+      #
+      #   * total 5354 -> 5396, +42.
+      #   * `streetAddress` 4624 -> 4650, +26 (the 21 street+ZIP rows plus
+      #     the 5 street-only rows).
+      #   * `is_nil(streetAddress)` 730 -> 746, +16 (the 9 ZIP-only rows
+      #     plus the 7 locality-only rows).
+      #   * `postalCode` 3893 -> 3923, +30 (the 21 street+ZIP rows plus the
+      #     9 ZIP-only rows).
+      #
+      # One of the 42 carries a comma inside its street line —
+      # barrington-brewery-and-restaurant's "420 Stockbridge Road, Unit 4"
+      # — which moves the `comma_streets` pin in
+      # test/ethos/places/address_test.exs from 70 to 71 and nothing here.
+      #
+      # Re-measured after ski content wave 8 landed
+      # priv/seed_data/ski/{mohawk-mountain,mount-southington,powder-ridge,
+      # ski-sundown,yawgoo-valley}.json (Connecticut and Rhode Island, New
+      # England complete) with 8 places — but this wave also REMOVES 3
+      # places from `priv/seed_data/connecticut/{cornwall,new-hartford,
+      # southington}.json`, whose `mohawk-mountain-ski-area`,
+      # `ski-sundown` and `mount-southington-ski-area` rows migrated into
+      # the 3 new ski-area places above (see docs/ski/new-england.md's "The
+      # Connecticut migration"), so this wave's net is +5, not +8.
+      #
+      # Of the 8 added: 6 carry a house-numbered street line AND a
+      # five-digit ZIP (the 5 ski areas' own addresses, all sourced with a
+      # house number this wave, plus Tomaquag Museum's "390 A Summit
+      # Road"); 1 carries a ZIP with no street (Cathedral Pines' "Essex
+      # Hill Road... (parking at the foot of Essex Hill)" — a road name
+      # with no house number); 1 is a street-less and ZIP-less
+      # locality-only row (Queen's Fort's "NE of Exeter on Stony Lane,
+      # Exeter, RI" — a descriptive direction-and-road location, per its
+      # own NRHP nomination form, with no ZIP given at all).
+      #
+      # Of the 3 removed CT rows: all 3 carried a house-numbered street line
+      # AND a five-digit ZIP (Mohawk's "46 Great Hollow Rd.", Ski Sundown's
+      # "126 Ratlum Road", and Mount Southington's "396 Mount Vernon
+      # Road" — each republished verbatim as the migrated ski-area place's
+      # own address, so the address itself is unchanged; only which corpus
+      # and slug own it changed).
+      #
+      #   * total 5396 -> 5401, +5 (+8 added, -3 removed).
+      #   * `streetAddress` 4650 -> 4653, +3 (+6 added street+ZIP rows,
+      #     -3 removed street+ZIP rows).
+      #   * `is_nil(streetAddress)` 746 -> 748, +2 (the 1 added ZIP-only row
+      #     plus the 1 added locality-only row; nothing removed here).
+      #   * `postalCode` 3923 -> 3927, +4 (+7 added rows with a postal code
+      #     — the 6 street+ZIP rows plus the 1 ZIP-only row — minus the 3
+      #     removed street+ZIP rows).
+      #
+      # None of the 8 carries a comma inside its street line, so the
+      # `comma_streets` pin in test/ethos/places/address_test.exs is
+      # unaffected and stays at 71. None of the 3 removed rows carried one
+      # either.
+      assert length(emitted) == 5401
+      assert count.(& &1["streetAddress"]) == 4653
+      assert count.(&is_nil(&1["streetAddress"])) == 748
+      assert count.(& &1["postalCode"]) == 3927
 
       # The largest behavioural delta this change ships: 302 places emit a
       # PostalAddress carrying only locality, region and country. Their full
@@ -1222,7 +1500,85 @@ defmodule EthosWeb.StructuredDataTest do
       # want of a source establishing a grill at the table. All eight carried
       # both a street line and a postal code, so none of them was ever in this
       # bucket to be removed from it.
-      assert count.(fn ld -> is_nil(ld["streetAddress"]) and is_nil(ld["postalCode"]) end) == 308
+      # 324 after ski content wave 1 landed, +16 — the sixteen street-less,
+      # ZIP-less rows counted above: nine ski areas' own addresses given only
+      # at town level (Ascutney Outdoors, Bolton Valley, Bromley, Burke
+      # Mountain, Harrington Hill, Jay Peak, Killington, Lyndon Outing Club,
+      # Mad River Glen — none of these small Vermont ski areas publishes a
+      # street-numbered mailing address) plus seven surrounding historic
+      # sites and parks sourced as descriptive locations rather than postal
+      # addresses (Best's and Bowers covered bridges, the Round Church,
+      # Andrews Community Forest, Taylor Park, Old Schoolhouse Bridge, and
+      # Chamberlin Mill Covered Bridge). Every one is a real address as the
+      # source gives it; none is missing a house number the source actually
+      # had.
+      # 337 after ski content wave 2 landed, +13 — ten ski areas' own
+      # addresses given only at town level (Magic Mountain, Mount Snow,
+      # Northeast Slopes, Okemo, Pico, Saskadena Six, Smugglers' Notch,
+      # Stowe, Stratton, and Sugarbush — none of these publishes a
+      # street-numbered mailing address either) plus three surrounding sites
+      # sourced as descriptive locations rather than postal addresses
+      # (Jeffersonville Historic District, Grist Mill Covered Bridge, and
+      # Gold Brook Covered Bridge). Every one is a real address as the source
+      # gives it; none is missing a house number the source actually had.
+      # 349 after ski content wave 3 landed, +12 — eight ski areas' own
+      # addresses given only at town level (Abenaki, Attitash, Black
+      # Mountain, Bretton Woods, Cannon Mountain, Cranmore, Granite Gorge,
+      # Gunstock — none of these publishes a street-numbered mailing
+      # address; Crotched Mountain, Dartmouth Skiway, and King Pine all do)
+      # plus four surrounding sites sourced as descriptive locations rather
+      # than postal addresses (the Bartlett Roundhouse, Diana's Baths,
+      # Batcheller's Cave, and Otter Brook Lake). Every one is a real
+      # address as the source gives it; none is missing a house number the
+      # source actually had.
+      # 363 after ski content wave 4 landed, +14 — 10 of the wave's 11 ski
+      # areas' own addresses given only at town level (Loon, McIntyre, Mount
+      # Sunapee, Pat's Peak, Ragged, Storrs Hill, Tenney, Waterville Valley,
+      # Whaleback, and Wildcat — Wildcat sits on the Coos County node itself
+      # rather than a town node, since its base is in unincorporated
+      # Pinkham's Grant; Whaleback sits on an ordinary town node, Enfield,
+      # and is locality-only only because its own address is given at town
+      # level, not because of where it sits in the tree) plus three
+      # surrounding sites and one seasonal attraction sourced as descriptive
+      # or town-level locations rather than postal addresses (Whale's Tale
+      # Waterpark, the Pollyanna statue, the Bell Cove caboose museum, and
+      # Colburn Park Historic District). The eleventh ski area, Mount Eustis
+      # Ski Hill, is not in this bucket — its own address, "188 Mt. Eustis
+      # Road, Littleton, NH 03561," is a street+ZIP row. Every one of the 14
+      # is a real address as the source gives it; none is missing a house
+      # number the source actually had. This wave completes New Hampshire.
+      # 366 after ski content wave 5 landed, +3 — Baker Mountain's own
+      # address, Wyman Dam, and the Arnold Trail to Quebec marker, all
+      # given only at the Moscow, ME town level (priv/seed_data/ski/
+      # baker-mountain.json). Every other locality-only address in this
+      # wave's 45 places carries a ZIP even without a street (16 rows,
+      # counted separately above), so only these three land here.
+      # 366 held through ski content wave 6, which completed Maine — every
+      # one of the wave's 12 street-less rows still carries its town's
+      # five-digit ZIP (counted separately above), so none of them lands in
+      # this bucket.
+      # 373 after ski content wave 7 landed, +7 — six ski areas' own
+      # addresses given only at town level (Berkshire East, Bousquet,
+      # Jiminy Peak, Nashoba Valley, Ski Butternut, and Wachusett) plus one
+      # surrounding park, Springside Park (priv/seed_data/ski/
+      # bousquet-mountain.json), sourced only to its street name with no
+      # house number. This wave completes Massachusetts. Every other
+      # street-less row in this wave carries either a street with no ZIP
+      # or a ZIP with no street (counted separately above), so only these
+      # seven land here.
+      # 374 after ski content wave 8 landed, +1 — Queen's Fort
+      # (priv/seed_data/ski/yawgoo-valley.json), whose own National
+      # Register nomination form gives its location only as "NE of Exeter
+      # on Stony Lane" — a real address as the source states it, with
+      # neither a house number nor a ZIP. This wave's other street-less
+      # row, Cathedral Pines (priv/seed_data/ski/mohawk-mountain.json),
+      # carries a ZIP even without a street ("Essex Hill Road... Cornwall,
+      # CT 06753"), so it is counted separately above and does not land
+      # here. This wave completes New England (Connecticut and Rhode
+      # Island); the 5 ski areas' own addresses this wave all carry both a
+      # street and a ZIP, none of them town-level-only, unlike most prior
+      # waves.
+      assert count.(fn ld -> is_nil(ld["streetAddress"]) and is_nil(ld["postalCode"]) end) == 374
     end
   end
 end

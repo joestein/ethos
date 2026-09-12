@@ -1,0 +1,91 @@
+{
+  "guide": {
+    "slug": "harrington-hill-ski-guide",
+    "title": "Harrington Hill, Vermont: Strafford's one-rope-tow hill, kept running by the Lions Club",
+    "destination": "Strafford, VT",
+    "destination_path": "united-states/vermont/orange-county/strafford",
+    "tier": "guide",
+    "intro": "Harrington Hill's rope tow traces to at least 1969, when the Strafford Athletic Association relocated the original Strafford rope tow to land owned by Lib and Harold Harrington, behind Barrett Hall above Route 132, per New England Ski History's Harrington Hill page. The area closed around 1985 because of rising liability-insurance costs, then was revived after sitting idle for a season when the Strafford Lions Club took over funding it.",
+    "sections": [
+      {
+        "heading": "A Lions Club rope tow",
+        "body": "Harrington Hill runs a single rope tow, funded by the Strafford Lions Club, on land owned by Rod and Cindy Maclay, who permit the tow to continue operating; it is free to use, open to town residents and guests, and runs Saturdays and Sundays 1-4pm plus select holidays when natural snow allows, per New England Ski History's Harrington Hill page. The rope tow received new rope in fall 2014, according to a site visit reported in February 2015."
+      },
+      {
+        "heading": "The Morrill Homestead",
+        "body": "The Morrill Homestead is the Gothic Revival house that U.S. Senator Justin Smith Morrill designed and built in stages between 1848 and 1855; original furnishings and family possessions remain inside, per Wikipedia's Justin Smith Morrill Homestead article. The property was designated a National Historic Landmark on September 22, 1960, and separately added to the National Register of Historic Places on October 15, 1966; it is now operated as a Vermont State Historic Site by the state's Division for Historic Preservation, open for tours May through October."
+      },
+      {
+        "heading": "Strafford Village",
+        "body": "The Strafford Village Historic District, centered on the Strafford Town House, built in 1799, at the head of the town common, was listed on the National Register of Historic Places on June 20, 1974 (NRHP reference #74000246), per Wikipedia's list of National Register of Historic Places listings in Orange County, Vermont."
+      }
+    ],
+    "faq": [
+      {
+        "question": "Who runs the rope tow at Harrington Hill?",
+        "answer": "The Strafford Lions Club funds Harrington Hill's single rope tow, on land owned by Rod and Cindy Maclay who permit it to keep operating. It is free and open to town residents and guests, running Saturdays and Sundays 1-4pm plus select holidays when natural snow allows, per New England Ski History's Harrington Hill page."
+      },
+      {
+        "question": "What historic sites are near Harrington Hill?",
+        "answer": "The Justin Smith Morrill Homestead, a Gothic Revival house built in stages 1848-1855, sits in Strafford and is a National Historic Landmark and a Vermont State Historic Site. The Strafford Village Historic District, centered on the 1799 Strafford Town House, was listed on the National Register of Historic Places in 1974."
+      }
+    ],
+    "photos": []
+  },
+  "places": [
+    {
+      "slug": "harrington-hill",
+      "name": "Harrington Hill",
+      "kind": "ski-area",
+      "destination_path": "united-states/vermont/orange-county/strafford",
+      "address": "Behind Barrett Hall, above Route 132, Strafford, VT",
+      "summary": "A single, volunteer-run rope tow above Strafford village, funded by the Strafford Lions Club and open free to town residents and guests.",
+      "history": "Harrington Hill's rope tow traces to at least 1969, when the Strafford Athletic Association relocated the original Strafford rope tow to land owned by Lib and Harold Harrington, behind Barrett Hall above Route 132, per New England Ski History's Harrington Hill page. The area closed around 1985 because of rising liability-insurance costs, then was revived after sitting idle for a season when the Strafford Lions Club took over funding it. Harrington Hill runs a single rope tow, funded by the Strafford Lions Club, on land owned by Rod and Cindy Maclay who permit the tow to continue operating; it is free to use, open to town residents and guests, and runs Saturdays and Sundays 1-4pm plus select holidays when natural snow allows. The rope tow received new rope in fall 2014, according to a site visit reported in February 2015.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "justin-smith-morrill-homestead",
+      "name": "Justin Smith Morrill Homestead",
+      "kind": "historic-site",
+      "destination_path": "united-states/vermont/orange-county/strafford",
+      "address": "214 Justin Morrill Highway, Strafford, VT 05072",
+      "summary": "The Gothic Revival house of U.S. Senator Justin Smith Morrill, a National Historic Landmark now operated as a Vermont State Historic Site.",
+      "history": "The Morrill Homestead is the Gothic Revival house that U.S. Senator Justin Smith Morrill designed and built in stages between 1848 and 1855; original furnishings and family possessions remain inside, per Wikipedia's Justin Smith Morrill Homestead article. The property was designated a National Historic Landmark on September 22, 1960, and separately added to the National Register of Historic Places on October 15, 1966. It is now operated as a Vermont State Historic Site by the state's Division for Historic Preservation, open for tours May through October.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "strafford-village-historic-district",
+      "name": "Strafford Village Historic District",
+      "kind": "historic-site",
+      "destination_path": "united-states/vermont/orange-county/strafford",
+      "address": "Roughly both sides of Justin Morrill Highway and Sharon Brook Road, Strafford, VT 05072",
+      "summary": "A historic district centered on the 1799 Strafford Town House at the head of the town common, listed on the National Register of Historic Places.",
+      "history": "The Strafford Village Historic District, centered on the Strafford Town House, built in 1799, at the head of the town common, was listed on the National Register of Historic Places on June 20, 1974 (NRHP reference #74000246), per Wikipedia's list of National Register of Historic Places listings in Orange County, Vermont.",
+      "status": "open",
+      "photos": []
+    }
+  ],
+  "entries": [
+    {
+      "kind": "sight",
+      "name": "Harrington Hill",
+      "place_slug": "harrington-hill",
+      "note": "A single, Lions-Club-funded rope tow above Strafford village, free to town residents and guests."
+    },
+    {
+      "kind": "sight",
+      "name": "Justin Smith Morrill Homestead",
+      "place_slug": "justin-smith-morrill-homestead",
+      "note": "Senator Justin Smith Morrill's Gothic Revival home, a National Historic Landmark and Vermont State Historic Site."
+    },
+    {
+      "kind": "sight",
+      "name": "Strafford Village Historic District",
+      "place_slug": "strafford-village-historic-district",
+      "note": "A historic district centered on the 1799 Strafford Town House, listed on the National Register in 1974."
+    }
+  ],
+  "links": []
+}

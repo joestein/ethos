@@ -1,0 +1,141 @@
+{
+  "guide": {
+    "slug": "berkshire-east-ski-guide",
+    "title": "Berkshire East: a failed 1953 club, a 1961 relaunch, and the Schaefers' Bear Den Partners",
+    "destination": "Charlemont, MA",
+    "destination_path": "united-states/massachusetts/franklin-county/charlemont",
+    "tier": "guide",
+    "intro": "Berkshire East traces to two separate ventures, per New England Ski History, whose own page disagrees with itself about which one counts as the start: the page's infobox lists \"First Season: 1953-54,\" matching the Thunder Mountain Ski Association formed in October 1953 by Arthur Parker and others, who ran rope tows that winter. That venture failed commercially and sat dismantled by 1958. A wholly separate corporation, Thunder Mountain Skiing, Inc., formed in Connecticut on July 15, 1960, signed a new 15-year lease beginning August 1, 1960, and built the chairlift-and-T-Bar operation that, per the same New England Ski History page, \"finally debuted with T-Bar operations on Thursday, December 28, 1961.\" The area was renamed Berkshire East for the 1969-70 season, per that source, \"for ski conditions reporting and credit purposes.\" After a mid-1970s bankruptcy put the area under bank ownership, Roy Schaefer operated it for the bank and then purchased it, together with Union Terminal Piers, in 1976-77; in July 2007, Roy Schaefer and his son Jim Schaefer bought the ski area outright from its parent corporation.",
+    "sections": [
+      {
+        "heading": "On-site wind and solar, in the resort's own unreconciled numbers",
+        "body": "Berkshire East completed a 291-foot-tall wind turbine near the top of the mountain during the winter of 2010-2011, per New England Ski History, and added a solar farm in 2012. The resort's own dedicated renewable-energy page states: \"Powered by a 500kWh solar facility and a 900kWh wind turbine, Berkshire East is the only ski area in the world to generate 100% of our electricity from on-site renewable energy\" -- attributing that figure to the resort's own page rather than restating it as settled fact, because the page's text labels both installations' capacity in \"kWh,\" a unit of energy rather than power, which a correctly labeled capacity figure would give in kW or MW. A separate Berkshire East overview page states, in wording the dedicated renewable-energy page does not match, that \"Berkshire East is the first ski area in the world to generate 100% of our power from on-site renewable energy\" -- the overview page says \"first,\" the renewable-energy page says \"only,\" and the resort's own two pages are not reconciled with each other. Per that same renewable-energy page, the turbine's tower stands 277 feet tall with three 91-foot blades, a hub height of about 195 feet, and a maximum rotation of 27 rpm; the solar array consists of 1,800 panels across a 10-acre field mounted on 90 solar trackers, 24 panels per pole, which the resort's page states \"produce 35%-45% more electricity than a fixed panel.\" The same page states the resort \"has a signed agreement with a company pioneering the development of Micro Pump Storage solutions,\" a planned water-based storage system it describes as working like \"a really big, non-toxic, renewable battery\" -- a signed agreement, per the resort's own wording, not a completed installation."
+      },
+      {
+        "heading": "The Schaefer family's Bear Den Partners, and Burke and Smugglers' Notch",
+        "body": "Bear Den Partners, the ownership group led by Jon Schaefer of the family that owns Berkshire East, closed on its purchase of Burke Mountain Resort in Vermont on Friday, May 2, 2025, for $11.5 million, per SAM (Ski Area Management), a sale approved by the overseeing Florida receivership judge. Bear Den Partners then acquired majority ownership of Smugglers' Notch Resort in Vermont, as reported by the Greenfield Recorder on February 13, 2026; the resort's previous owner, Bill Stritzler, remained a minority shareholder, with his daughter Lisa Howe serving as an advisor to Bear Den Partners going forward. Separately, per the Greenfield Recorder's March 24, 2026 report, the Schaefer family announced on March 23, 2026 that they were transitioning ownership of Berkshire East itself, together with Catamount Mountain Resort, to Bear Den Partners LLC -- an announced transition rather than a completed sale at the time of that report. Jon Schaefer, Bear Den Partners' CEO, called it \"an evolution for my family, not an exit,\" and the article states that Berkshire East's and Catamount's leadership would remain the same."
+      },
+      {
+        "heading": "In Charlemont",
+        "body": "Mohawk Trail State Forest, per Wikipedia's article on the forest, spans the towns of Charlemont, Hawley, and Savoy, covers more than 7,700 acres, and was established in 1921 when the Commonwealth purchased the land to preserve its scenic beauty and historic associations; about 612 acres are classified as pre-settlement forest, with eastern hemlocks approaching 500 years old, and two Civilian Conservation Corps camps operated there in the 1930s. Bissell Bridge, a covered bridge over Mill Brook in Charlemont, was built in 1951 as a near-replica replacement for an earlier covered bridge dating to about 1881; per Wikipedia's article on the bridge, it was added to the National Register of Historic Places on February 26, 2004, and is described as the first covered bridge built in Massachusetts in the 20th century. The \"Hail to the Sunrise\" statue in Mohawk Park, Charlemont, was created by sculptor Joseph Pollia and dedicated before more than 2,000 people on October 1, 1932, per Wikipedia's article on the statue; it was commissioned by the Improved Order of Red Men to honor the peoples of the five Mohawk Nations, and its base pool contains 100 inscribed stones from Red Men tribes and councils across the country. Zoar Outdoor, based in Charlemont since 1989 per its own About page, offers whitewater rafting, kayaking, and canoeing on the Deerfield River along with related instruction and certification courses."
+      }
+    ],
+    "faq": [
+      {
+        "question": "Who owns Berkshire East?",
+        "answer": "The Schaefer family, through Roy and Jim Schaefer's 2007 purchase; per the Greenfield Recorder, the family announced on March 23, 2026 that it was transitioning ownership to Bear Den Partners LLC, the Jon Schaefer-led group that also closed on Burke Mountain Resort in Vermont in May 2025 and acquired majority ownership of Smugglers' Notch Resort in February 2026 -- an announced transition, not yet reported as a completed sale."
+      },
+      {
+        "question": "When did Berkshire East actually open?",
+        "answer": "New England Ski History's own page disagrees with itself: its infobox lists \"First Season: 1953-54,\" the year a since-failed club called the Thunder Mountain Ski Association ran rope tows there, but that venture closed and sat dismantled by 1958. A separate corporation, Thunder Mountain Skiing, Inc., formed in 1960 and built the lift-served operation that debuted on December 28, 1961; the area was renamed Berkshire East for the 1969-70 season."
+      }
+    ],
+    "photos": []
+  },
+  "places": [
+    {
+      "slug": "berkshire-east",
+      "name": "Berkshire East Ski Resort",
+      "kind": "ski-area",
+      "destination_path": "united-states/massachusetts/franklin-county/charlemont",
+      "address": "Charlemont, MA",
+      "summary": "A Charlemont ski area that traces to a failed 1953 club and a 1961 relaunch, now generating its own wind and solar power and moving toward Bear Den Partners ownership.",
+      "history": "Per New England Ski History, whose own page carries a self-contradiction, the area's infobox lists \"First Season: 1953-54\" for the Thunder Mountain Ski Association, formed in October 1953 by Arthur Parker and others, which ran rope tows that winter before failing commercially and sitting dismantled by 1958. A wholly separate corporation, Thunder Mountain Skiing, Inc., formed in Connecticut on July 15, 1960, signed a new 15-year lease beginning August 1, 1960, and built the chairlift-and-T-Bar operation that \"finally debuted with T-Bar operations on Thursday, December 28, 1961,\" per that same source's narrative. The area was renamed Berkshire East for the 1969-70 season, per New England Ski History, \"for ski conditions reporting and credit purposes.\" After a mid-1970s bankruptcy put the area under bank ownership, Roy Schaefer operated it for the bank and then purchased it, together with Union Terminal Piers, in 1976-77; in July 2007, Roy Schaefer and his son Jim Schaefer bought the ski area outright from its parent corporation. Berkshire East completed a 291-foot-tall wind turbine near the top of the mountain during the winter of 2010-2011, per New England Ski History, and added a solar farm in 2012. The resort's own dedicated renewable-energy page states: \"Powered by a 500kWh solar facility and a 900kWh wind turbine, Berkshire East is the only ski area in the world to generate 100% of our electricity from on-site renewable energy\" -- a figure attributed here to the resort's own page rather than restated as settled fact, since that page's text labels both installations' capacity in \"kWh,\" a unit of energy rather than power. A separate Berkshire East overview page states, in wording the renewable-energy page does not match, that \"Berkshire East is the first ski area in the world to generate 100% of our power from on-site renewable energy\" -- the overview page says \"first,\" the renewable-energy page says \"only,\" unreconciled with each other. Per the renewable-energy page, the turbine's tower stands 277 feet tall with three 91-foot blades, a hub height of about 195 feet, and a maximum rotation of 27 rpm; the solar array consists of 1,800 panels across a 10-acre field mounted on 90 solar trackers, 24 panels per pole, which the page states \"produce 35%-45% more electricity than a fixed panel.\" The same page states the resort \"has a signed agreement with a company pioneering the development of Micro Pump Storage solutions,\" a planned water-based storage system it describes as working like \"a really big, non-toxic, renewable battery\" -- a signed agreement, per the resort's own wording, not a completed installation. Bear Den Partners, the ownership group led by Jon Schaefer of the family that owns Berkshire East, closed on its purchase of Burke Mountain Resort in Vermont on Friday, May 2, 2025, for $11.5 million, per SAM (Ski Area Management), a sale approved by the overseeing Florida receivership judge; Bear Den Partners then acquired majority ownership of Smugglers' Notch Resort in Vermont, as reported by the Greenfield Recorder on February 13, 2026, with previous owner Bill Stritzler remaining a minority shareholder and his daughter Lisa Howe serving as an advisor. Per the Greenfield Recorder's March 24, 2026 report, the Schaefer family announced on March 23, 2026 that it was transitioning ownership of Berkshire East itself, together with Catamount Mountain Resort, to Bear Den Partners LLC -- an announced transition, not a completed sale at the time of that report -- with Jon Schaefer calling it \"an evolution for my family, not an exit,\" and the article stating that Berkshire East's and Catamount's leadership would remain the same.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "mohawk-trail-state-forest",
+      "name": "Mohawk Trail State Forest",
+      "kind": "park",
+      "destination_path": "united-states/massachusetts/franklin-county/charlemont",
+      "address": "Mohawk Trail (MA Route 2), Charlemont, MA 01339",
+      "summary": "A more than 7,700-acre state forest spanning Charlemont, Hawley, and Savoy, established in 1921 and home to pre-settlement hemlock stands.",
+      "history": "Per Wikipedia's article on Mohawk Trail State Forest, the forest spans the towns of Charlemont, Hawley, and Savoy, covers more than 7,700 acres, and was established in 1921 when the Commonwealth purchased the land to preserve its scenic beauty and historic associations. About 612 acres are classified as pre-settlement forest, with eastern hemlocks approaching 500 years old, and two Civilian Conservation Corps camps operated there in the 1930s.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "bissell-bridge",
+      "name": "Bissell Bridge",
+      "kind": "historic-site",
+      "destination_path": "united-states/massachusetts/franklin-county/charlemont",
+      "address": "Heath Road (Massachusetts Route 8A), Charlemont, MA 01339",
+      "summary": "A 1951 covered bridge over Mill Brook in Charlemont, built as a near-replica replacement and described as the first covered bridge built in Massachusetts in the 20th century.",
+      "history": "Per Wikipedia's article on Bissell Bridge, the covered bridge over Mill Brook in Charlemont was built in 1951 as a near-replica replacement for an earlier covered bridge dating to about 1881; it was added to the National Register of Historic Places on February 26, 2004, and is described as the first covered bridge built in Massachusetts in the 20th century.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "hail-to-the-sunrise",
+      "name": "Hail to the Sunrise",
+      "kind": "historic-site",
+      "destination_path": "united-states/massachusetts/franklin-county/charlemont",
+      "address": "Massachusetts Route 2 (Mohawk Trail), Charlemont, MA 01339",
+      "summary": "A 1932 statue in Mohawk Park, Charlemont, commissioned by the Improved Order of Red Men to honor the five Mohawk Nations.",
+      "history": "Per Wikipedia's article on the statue, \"Hail to the Sunrise\" in Mohawk Park, Charlemont, was created by sculptor Joseph Pollia and dedicated before more than 2,000 people on October 1, 1932; it was commissioned by the Improved Order of Red Men to honor the peoples of the five Mohawk Nations, and its base pool contains 100 inscribed stones from Red Men tribes and councils across the country.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "zoar-outdoor",
+      "name": "Zoar Outdoor",
+      "kind": "attraction",
+      "destination_path": "united-states/massachusetts/franklin-county/charlemont",
+      "address": "7 Main St, Charlemont, MA 01339",
+      "summary": "A whitewater rafting, kayaking, and canoeing outfitter on the Deerfield River, based in Charlemont since 1989.",
+      "history": "Per Zoar Outdoor's own About page, the outfitter has been based in Charlemont since 1989, offering whitewater rafting, kayaking, and canoeing on the Deerfield River along with related instruction and certification courses.",
+      "status": "open",
+      "photos": []
+    }
+  ],
+  "entries": [
+    {
+      "kind": "sight",
+      "name": "Berkshire East Ski Resort",
+      "place_slug": "berkshire-east",
+      "note": "A Charlemont ski area that traces to a failed 1953 club and a 1961 relaunch, now generating its own wind and solar power and moving toward Bear Den Partners ownership."
+    },
+    {
+      "kind": "sight",
+      "name": "Mohawk Trail State Forest",
+      "place_slug": "mohawk-trail-state-forest",
+      "note": "A more than 7,700-acre state forest spanning Charlemont, Hawley, and Savoy, established in 1921."
+    },
+    {
+      "kind": "sight",
+      "name": "Bissell Bridge",
+      "place_slug": "bissell-bridge",
+      "note": "A 1951 covered bridge over Mill Brook, described as the first covered bridge built in Massachusetts in the 20th century."
+    },
+    {
+      "kind": "sight",
+      "name": "Hail to the Sunrise",
+      "place_slug": "hail-to-the-sunrise",
+      "note": "A 1932 statue in Mohawk Park commissioned by the Improved Order of Red Men to honor the five Mohawk Nations."
+    },
+    {
+      "kind": "sight",
+      "name": "Zoar Outdoor",
+      "place_slug": "zoar-outdoor",
+      "note": "A whitewater rafting, kayaking, and canoeing outfitter on the Deerfield River, based in Charlemont since 1989."
+    }
+  ],
+  "links": [
+    {
+      "target": "guide:burke-mountain-resort-ski-guide",
+      "kind": "shared-history",
+      "note": "Bear Den Partners, led by Berkshire East's Jon Schaefer, closed on its purchase of Burke Mountain Resort on May 2, 2025, per SAM."
+    },
+    {
+      "target": "guide:smugglers-notch-resort-ski-guide",
+      "kind": "shared-history",
+      "note": "Bear Den Partners, led by Berkshire East's Jon Schaefer, acquired majority ownership of Smugglers' Notch Resort in February 2026, per the Greenfield Recorder."
+    },
+    {
+      "target": "guide:catamount-ski-area-ski-guide",
+      "kind": "shared-history",
+      "note": "Per the Greenfield Recorder, the Schaefers announced March 23, 2026 they were transitioning Berkshire East and Catamount together to Bear Den Partners."
+    }
+  ]
+}

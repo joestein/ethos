@@ -1,0 +1,87 @@
+{
+  "guide": {
+    "slug": "granite-gorge-ski-area-ski-guide",
+    "title": "Granite Gorge Ski Area, New Hampshire: the Pinnacle, twice reopened",
+    "destination": "Roxbury, NH",
+    "destination_path": "united-states/new-hampshire/cheshire-county/roxbury",
+    "tier": "guide",
+    "intro": "Development of a ski area on the lower northern slope of the Pinnacle in Roxbury, New Hampshire \"likely dates back to 1959, when the Pinnacle Mountain Development Corporation was formed,\" according to New England Ski History. The area has since closed and reopened twice under two different names -- first the Pinnacle, then Granite Gorge.",
+    "sections": [
+      {
+        "heading": "From the Pinnacle to Granite Gorge, twice over",
+        "body": "Following the 1976-77 season, when mortgage payments were missed, owner Maurice Stone foreclosed and took back the property; there was no more lift-served skiing at the Pinnacle for the rest of the twentieth century, per New England Ski History. In September 1999, Baybutt Construction purchased the former Pinnacle ski area and began studies for a potential reopening, and the Pinnacle reopened in early 2003 under the name Granite Gorge. On August 3, 2020, Fred Baybutt died of a sudden heart event at age 60; following his death, Granite Gorge sat idle, according to the same source. Granite Gorge reopened under new ownership during the winter of 2022-23."
+      },
+      {
+        "heading": "In Roxbury",
+        "body": "Batcheller's Cave, in Roxbury, is noted as the historical hiding place of Breed Batcheller, who was driven from town for refusing to join the Revolutionary War rebellion against the crown, per Wikipedia's \"Roxbury, New Hampshire\" article. Otter Brook Lake, a flood-control reservoir built by the U.S. Army Corps of Engineers between 1956 and 1958, occupies part of Roxbury's western boundary, according to the same source."
+      }
+    ],
+    "faq": [
+      {
+        "question": "Has Granite Gorge always been called that?",
+        "answer": "No. The area operated as the Pinnacle from around 1959 until a 1977 foreclosure closed it for the rest of the twentieth century. Baybutt Construction bought the site in 1999 and reopened it under the name Granite Gorge in early 2003, per New England Ski History."
+      },
+      {
+        "question": "Why did Granite Gorge close again after 2003?",
+        "answer": "Owner Fred Baybutt died of a sudden heart event on August 3, 2020, at age 60, and the area sat idle afterward, according to New England Ski History. It reopened under new ownership during the winter of 2022-23."
+      }
+    ],
+    "photos": []
+  },
+  "places": [
+    {
+      "slug": "granite-gorge-ski-area",
+      "name": "Granite Gorge Ski Area",
+      "kind": "ski-area",
+      "destination_path": "united-states/new-hampshire/cheshire-county/roxbury",
+      "address": "Roxbury, NH",
+      "summary": "A Roxbury ski area on the Pinnacle, dating to around 1959, closed for decades twice over, and reopened under new ownership in 2022-23.",
+      "history": "Development of a ski area on the lower northern slope of the Pinnacle in Roxbury, New Hampshire \"likely dates back to 1959, when the Pinnacle Mountain Development Corporation was formed,\" according to New England Ski History. Following the 1976-77 season, when mortgage payments were missed, owner Maurice Stone foreclosed and took back the property; there was no more lift-served skiing at the Pinnacle for the rest of the twentieth century, per the same source. In September 1999, Baybutt Construction purchased the former Pinnacle ski area and began studies for a potential reopening. The Pinnacle reopened in early 2003 under the name Granite Gorge. On August 3, 2020, Fred Baybutt died of a sudden heart event at age 60; following his death, Granite Gorge sat idle, according to New England Ski History. Granite Gorge reopened under new ownership during the winter of 2022-23.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "batchellers-cave",
+      "name": "Batcheller's Cave",
+      "kind": "historic-site",
+      "destination_path": "united-states/new-hampshire/cheshire-county/roxbury",
+      "address": "Roxbury, NH",
+      "summary": "A Roxbury cave noted as the hiding place of Breed Batcheller, a Revolutionary War-era loyalist driven from town.",
+      "history": "Batcheller's Cave, in Roxbury, is noted as the historical hiding place of Breed Batcheller, who was driven from town for refusing to join the Revolutionary War rebellion against the crown, per Wikipedia's \"Roxbury, New Hampshire\" article.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "otter-brook-lake",
+      "name": "Otter Brook Lake",
+      "kind": "park",
+      "destination_path": "united-states/new-hampshire/cheshire-county/roxbury",
+      "address": "Roxbury, NH",
+      "summary": "A flood-control reservoir built by the Army Corps of Engineers in the 1950s along Roxbury's western boundary.",
+      "history": "Otter Brook Lake, a flood-control reservoir built by the U.S. Army Corps of Engineers between 1956 and 1958, occupies part of Roxbury's western boundary, according to Wikipedia's \"Roxbury, New Hampshire\" article.",
+      "status": "open",
+      "photos": []
+    }
+  ],
+  "entries": [
+    {
+      "kind": "sight",
+      "name": "Granite Gorge Ski Area",
+      "place_slug": "granite-gorge-ski-area",
+      "note": "A Roxbury ski area on the Pinnacle, dating to around 1959."
+    },
+    {
+      "kind": "sight",
+      "name": "Batcheller's Cave",
+      "place_slug": "batchellers-cave",
+      "note": "A Roxbury cave noted as a Revolutionary War-era loyalist's hiding place."
+    },
+    {
+      "kind": "walk",
+      "name": "Otter Brook Lake",
+      "place_slug": "otter-brook-lake",
+      "note": "A 1950s flood-control reservoir along Roxbury's western boundary."
+    }
+  ],
+  "links": []
+}

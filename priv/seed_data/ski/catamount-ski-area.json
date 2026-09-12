@@ -1,0 +1,114 @@
+{
+  "guide": {
+    "slug": "catamount-ski-area-ski-guide",
+    "title": "Catamount: straddling Massachusetts and New York since a likely 1940 opening",
+    "destination": "Egremont, MA",
+    "destination_path": "united-states/massachusetts/berkshire-county/egremont",
+    "tier": "guide",
+    "intro": "Catamount Ski Area straddles the Massachusetts-New York state line on Mount Fray. Per Wikipedia's article on Egremont, Massachusetts, the mountain \"is the site of the Catamount Ski Area, which is located both in Egremont, Massachusetts and Hillsdale, New York, and is one of only four ski areas in the United States to be located in two states.\" Wikipedia's article on Hillsdale, New York, by contrast, states only that Hillsdale \"is near ... the Catamount Ski Area\" -- \"is the site of\" versus merely \"near\" -- and it is that asymmetry that files this guide under Egremont, Massachusetts, at medium confidence rather than as a settled fact. Which state actually holds Catamount's base lodge, ticket office, or lift-inspection jurisdiction is not established by available sources: Catamount's own website lists two addresses side by side without distinguishing function -- \"Hillsdale, NY 12529, S. Egremont, MA 01258\" -- and neither New England Ski History nor Wikipedia's article on the ski area specifies a state for its ticketing operation.",
+    "sections": [
+      {
+        "heading": "A likely 1940 opening, and a source that disagrees with itself",
+        "body": "Wikipedia's Catamount Ski Area article states the resort \"opened for business in 1939, with three rope tows, run by a car engine with a bull wheel attached.\" New England Ski History gives a different, more hedged account: it states that Catamount's \"lift served ski history likely dates back to 1940, when John \\\"Jack\\\" Fisher and George Earling entered into a 10 year lease for 160 acres of farmland on the side of Mt. Fray,\" that construction \"accelerated in the fall of 1940,\" and that \"Catamount likely opened in December 1940.\" New England Ski History's own page disagrees with itself on top of that: its infobox lists \"First Season: 1939-40,\" agreeing with Wikipedia's 1939 date, while its body text describes a 1940 lease and construction and hedges toward a December 1940 opening -- a source contradicting itself, not simply Wikipedia against New England Ski History."
+      },
+      {
+        "heading": "Bankruptcy, the Schaefers, and Bear Den Partners",
+        "body": "New England Ski History states that in late January 1973 Catamount's stockholders voted to file for Chapter 11 bankruptcy, citing $80,000 more in debt than assets, and that \"Catamount was acquired in the fall of 1973 by Bill Gilbert, Sandy Gilbert, and Don Edwards,\" a trio who had previously managed the Fahnestock and Silvermine ski areas and created the Sterling Forest ski area; SAM Magazine independently corroborates the 1973 date, describing Catamount in a 2018 article as a \"79-year-old ski area\" whose management team had owned it \"since 1973.\" SAM Magazine reported on May 7, 2018 that the owners of Berkshire East Mountain Resort had reached an agreement to acquire Catamount from president Tom Gilbert and vice president Rich Edwards, with the deal \"expected to close in the next two weeks\" -- an announced agreement, not yet a completed sale. SAM Magazine reported the completed closing on May 25, 2018: \"Berkshire East owners Jon, Jim, and Roy Schaefer have closed on their acquisition of nearby Catamount Ski Area,\" at a total purchase price of $2.3 million, including $1.66 million in outstanding debt, with the main lodge to be renovated and a new base lodge constructed that summer, \"according to reports.\" The Greenfield Recorder reported on March 24, 2026 that the Schaefer family had announced, the day before, that they were transitioning ownership of Berkshire East and Catamount to Bear Den Partners LLC, a mountain-ownership company founded by Jon Schaefer and Ken Graham that already owned Burke Mountain Resort and Smugglers' Notch Resort in Vermont; Jon Schaefer, Bear Den Partners' CEO, called it \"an evolution for my family, not an exit,\" with Berkshire East's and Catamount's leadership remaining the same. That report describes an announced ownership transition, not a closed sale. Per New England Ski History, the base lodge was rebuilt and snowmaking was improved for the 1977-78 season."
+      },
+      {
+        "heading": "In Egremont",
+        "body": "The South Egremont Village Historic District, per Wikipedia's article on the district, \"encompasses most of the village of South Egremont, Massachusetts, a well-preserved village whose architecture has seen relatively little alteration since the 1840s,\" and runs along Massachusetts Route 23; it covers 375 acres and was added to the National Register of Historic Places on May 31, 1984. French Park, per the Town of Egremont's own Parks page, is \"the Town's most notable recreation area,\" covering 144 acres in North Egremont, with tennis courts, a Little League field and softball field, a children's playground, a dog park, a horse riding ring, and a roughly 2.5-mile trail network. Jug End State Reservation and Wildlife Management Area, per Wikipedia, \"is a public recreation area located in the towns of Egremont and Mount Washington, Massachusetts,\" spanning about 1,191 acres, established in 1994 and administered by the Massachusetts Department of Conservation and Recreation; the Town of Egremont's own Parks page separately lists it as a 1,158-acre reservation offering hiking, horseback riding, and Appalachian Trail access."
+      }
+    ],
+    "faq": [
+      {
+        "question": "Is Catamount in Massachusetts or New York?",
+        "answer": "Both, in a sense: Catamount straddles the Massachusetts-New York state line on Mount Fray. This guide files it under Egremont, Massachusetts, because Wikipedia's Egremont article describes the ski area as sited there while its Hillsdale, New York article says only that the area is \"near\" that town -- but which state actually holds the base lodge, ticket office, or lift-inspection jurisdiction is not established by available sources."
+      },
+      {
+        "question": "Who owns Catamount?",
+        "answer": "Jon, Jim, and Roy Schaefer of Berkshire East closed on their purchase of Catamount on May 25, 2018, per SAM Magazine. On March 23, 2026, per the Greenfield Recorder, the Schaefer family announced it was transitioning ownership of both Berkshire East and Catamount to Bear Den Partners LLC, the company that already owned Burke Mountain Resort and Smugglers' Notch Resort in Vermont -- an announced transition, not yet reported as a completed sale."
+      }
+    ],
+    "photos": []
+  },
+  "places": [
+    {
+      "slug": "catamount-ski-area",
+      "name": "Catamount Ski Area",
+      "kind": "ski-area",
+      "destination_path": "united-states/massachusetts/berkshire-county/egremont",
+      "address": "Hillsdale, NY 12529 / South Egremont, MA 01258",
+      "summary": "A ski area straddling the Massachusetts-New York line on Mount Fray, likely opened in 1940, whose base-lodge jurisdiction is not established by available sources.",
+      "history": "Catamount Ski Area straddles the Massachusetts-New York state line on Mount Fray. Per Wikipedia's article on Egremont, Massachusetts, the mountain \"is the site of the Catamount Ski Area, which is located both in Egremont, Massachusetts and Hillsdale, New York, and is one of only four ski areas in the United States to be located in two states.\" Wikipedia's article on Hillsdale, New York, by contrast, states only that Hillsdale \"is near ... the Catamount Ski Area\" -- and it is that asymmetry, \"is the site of\" versus merely \"near,\" that files this guide under Egremont, Massachusetts, at medium confidence. Which state actually holds Catamount's base lodge, ticket office, or lift-inspection jurisdiction is not established by available sources: Catamount's own website lists two addresses side by side without distinguishing function -- \"Hillsdale, NY 12529, S. Egremont, MA 01258.\" Wikipedia's Catamount Ski Area article states the resort \"opened for business in 1939, with three rope tows, run by a car engine with a bull wheel attached.\" New England Ski History gives a more hedged account: Catamount's \"lift served ski history likely dates back to 1940, when John \\\"Jack\\\" Fisher and George Earling entered into a 10 year lease for 160 acres of farmland on the side of Mt. Fray,\" construction \"accelerated in the fall of 1940,\" and \"Catamount likely opened in December 1940.\" That same New England Ski History page disagrees with itself: its infobox lists \"First Season: 1939-40,\" agreeing with Wikipedia's 1939 date, while its body text hedges toward a December 1940 opening. In late January 1973, per New England Ski History, Catamount's stockholders voted to file for Chapter 11 bankruptcy, citing $80,000 more in debt than assets, and \"Catamount was acquired in the fall of 1973 by Bill Gilbert, Sandy Gilbert, and Don Edwards,\" a trio who had previously managed the Fahnestock and Silvermine ski areas and created the Sterling Forest ski area; SAM Magazine independently corroborates the 1973 date. The base lodge was rebuilt and snowmaking was improved for the 1977-78 season, per New England Ski History. SAM Magazine reported on May 7, 2018 that the owners of Berkshire East Mountain Resort had reached an agreement to acquire Catamount from president Tom Gilbert and vice president Rich Edwards, with the deal expected to close within two weeks; the closing followed on May 25, 2018, when \"Berkshire East owners Jon, Jim, and Roy Schaefer\" closed on the purchase at a total price of $2.3 million, including $1.66 million in outstanding debt, with the main lodge to be renovated and a new base lodge constructed that summer, \"according to reports.\" The Greenfield Recorder reported on March 24, 2026 that the Schaefer family had announced, the day before, that they were transitioning ownership of Berkshire East and Catamount to Bear Den Partners LLC, a mountain-ownership company founded by Jon Schaefer and Ken Graham that already owned Burke Mountain Resort and Smugglers' Notch Resort in Vermont; Jon Schaefer called it \"an evolution for my family, not an exit,\" with Berkshire East's and Catamount's leadership remaining the same -- an announced transition, not a closed sale, as of that report.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "south-egremont-village-historic-district",
+      "name": "South Egremont Village Historic District",
+      "kind": "historic-site",
+      "destination_path": "united-states/massachusetts/berkshire-county/egremont",
+      "address": "Massachusetts Route 23, South Egremont, MA 01258",
+      "summary": "A 375-acre historic district covering most of South Egremont's well-preserved village, listed on the National Register since 1984.",
+      "history": "Per Wikipedia's article on the South Egremont Village Historic District, it \"encompasses most of the village of South Egremont, Massachusetts, a well-preserved village whose architecture has seen relatively little alteration since the 1840s,\" and runs along Massachusetts Route 23 in the plains east of the Taconic range. It covers 375 acres and was added to the National Register of Historic Places on May 31, 1984.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "french-park-egremont",
+      "name": "French Park",
+      "kind": "park",
+      "destination_path": "united-states/massachusetts/berkshire-county/egremont",
+      "address": "Prospect Lake Road, North Egremont, MA 01258",
+      "summary": "Egremont's largest town recreation area, a 144-acre North Egremont park with sports courts, fields, and a trail network.",
+      "history": "Per the Town of Egremont's own Parks page, French Park in North Egremont is \"the Town's most notable recreation area, covering 144 acres,\" with its main entrance on Prospect Lake Road; the page lists tennis courts, a Little League field and softball field, a children's playground, a dog park, a horse riding ring, a pavilion, a bandstand, pickleball and basketball courts, community and pollinator gardens, and a roughly 2.5-mile trail network.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "jug-end-state-reservation",
+      "name": "Jug End State Reservation and Wildlife Management Area",
+      "kind": "park",
+      "destination_path": "united-states/massachusetts/berkshire-county/egremont",
+      "address": "South Egremont, MA 01258",
+      "summary": "A roughly 1,191-acre state reservation spanning Egremont and Mount Washington, established in 1994 and administered by the Massachusetts DCR.",
+      "history": "Per Wikipedia, Jug End State Reservation and Wildlife Management Area \"is a public recreation area located in the towns of Egremont and Mount Washington, Massachusetts,\" spanning about 1,191 acres; it was established in 1994 and is administered by the Massachusetts Department of Conservation and Recreation. The Town of Egremont's own Parks page separately lists it as a 1,158-acre reservation offering hiking, horseback riding, and Appalachian Trail access.",
+      "status": "open",
+      "photos": []
+    }
+  ],
+  "entries": [
+    {
+      "kind": "sight",
+      "name": "Catamount Ski Area",
+      "place_slug": "catamount-ski-area",
+      "note": "A ski area straddling the Massachusetts-New York line on Mount Fray, likely opened in 1940, whose base-lodge jurisdiction is not established by available sources."
+    },
+    {
+      "kind": "sight",
+      "name": "South Egremont Village Historic District",
+      "place_slug": "south-egremont-village-historic-district",
+      "note": "A 375-acre historic district covering most of South Egremont's well-preserved village."
+    },
+    {
+      "kind": "sight",
+      "name": "French Park",
+      "place_slug": "french-park-egremont",
+      "note": "Egremont's largest town recreation area, a 144-acre North Egremont park."
+    },
+    {
+      "kind": "sight",
+      "name": "Jug End State Reservation and Wildlife Management Area",
+      "place_slug": "jug-end-state-reservation",
+      "note": "A roughly 1,191-acre state reservation spanning Egremont and Mount Washington."
+    }
+  ],
+  "links": [
+    {
+      "target": "guide:berkshire-east-ski-guide",
+      "kind": "shared-history",
+      "note": "Per the Greenfield Recorder, the Schaefers announced March 23, 2026 they were transitioning Catamount and Berkshire East together to Bear Den Partners."
+    }
+  ]
+}

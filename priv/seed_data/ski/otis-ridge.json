@@ -1,0 +1,87 @@
+{
+  "guide": {
+    "slug": "otis-ridge-ski-guide",
+    "title": "Otis Ridge: from a 1946 rope tow through foreclosure to a 2016 rescue",
+    "destination": "Otis, MA",
+    "destination_path": "united-states/massachusetts/berkshire-county/otis",
+    "tier": "guide",
+    "intro": "Otis Ridge's own history page lists 1946 as its \"1st Year of Operation,\" when \"2 Portable Rope Tows in tandem ran up the hill where the T-Bar is now located.\" David (\"Dave\") and Hooker Judson \"did the initial planning and developing of the Otis Ridge Ski Area when the primary mode of uphill transportation was rope tows,\" per that page; Dave \"was a member of the famed 10th Mountain Division during World War II.\" The Judsons \"were responsible for the inception of the Ski Camp\" at Otis Ridge, though the page gives no specific founding year for the camp itself. Snowmaking was \"introduced by way of an ice crusher,\" with ice farmed off local lakes, crushed, and blown across the slopes and trails, per the ski area's own history page, and a Poma lift was introduced that the page describes as \"one of the earliest Poma lifts ever built.\" Otis Ridge's own site gives its address as 159 Monterey Road, Otis, MA 01253.",
+    "sections": [
+      {
+        "heading": "A 1994 fire, and eighty years of ownership changes",
+        "body": "On December 25, 1994, per Otis Ridge's own history page, \"an electrical fire started in the bar and lounge area\" at the base lodge, and the Otis Volunteer Fire Department saved the building. Per New England Ski History, Otis Ridge went through foreclosure in the winter of 1981-82, after which the ski area came under R.S.M. Management, Inc.; in May 1987, R.S.M. Management sold Otis Ridge to Otis Associates, Inc. for $470,000. Facing foreclosure again, Otis Associates transferred the ski area on December 31, 2016 to Otis Ridge Properties, LLC for $195,000. Separately, in 2008 an Otis Ridge manager, Al Hewett, was convicted of sexual abuse, after which part owner Jamie Carr took over as general manager."
+      },
+      {
+        "heading": "In Otis",
+        "body": "Knox Trail Inn & Restaurant, per the Town of Otis's own local-business directory, is located at 1898 E Otis Road, Otis, MA 01253. Katie's Country Store, per the same directory, is located at 1922 East Otis Rd, East Otis, MA 01029 -- East Otis being a village within the town of Otis."
+      }
+    ],
+    "faq": [
+      {
+        "question": "When did Otis Ridge open?",
+        "answer": "In 1946, per the ski area's own history page, when two portable rope tows ran in tandem up the hill where its T-Bar now stands; David and Hooker Judson did the initial planning and developing."
+      },
+      {
+        "question": "Who owns Otis Ridge?",
+        "answer": "Otis Ridge Properties, LLC, since a December 31, 2016 transfer for $195,000, per New England Ski History. Earlier owners include R.S.M. Management, Inc., which took over after a 1981-82 foreclosure, and Otis Associates, Inc., which bought the ski area in May 1987 for $470,000."
+      }
+    ],
+    "photos": []
+  },
+  "places": [
+    {
+      "slug": "otis-ridge",
+      "name": "Otis Ridge",
+      "kind": "ski-area",
+      "destination_path": "united-states/massachusetts/berkshire-county/otis",
+      "address": "159 Monterey Road, Otis, MA 01253",
+      "summary": "A 1946 rope-tow hill in the town of Otis that has passed through two foreclosures and a 2016 rescue sale on its way to its current owner.",
+      "history": "Otis Ridge's own history page lists 1946 as its \"1st Year of Operation,\" when \"2 Portable Rope Tows in tandem ran up the hill where the T-Bar is now located.\" David (\"Dave\") and Hooker Judson \"did the initial planning and developing of the Otis Ridge Ski Area when the primary mode of uphill transportation was rope tows,\" per that page; Dave \"was a member of the famed 10th Mountain Division during World War II.\" The Judsons \"were responsible for the inception of the Ski Camp\" at Otis Ridge, though the page gives no specific founding year for the camp itself. Snowmaking was \"introduced by way of an ice crusher,\" with ice farmed off local lakes, crushed, and blown across the slopes and trails, per the ski area's own history page, and a Poma lift was introduced that the page describes as \"one of the earliest Poma lifts ever built.\" On December 25, 1994, \"an electrical fire started in the bar and lounge area\" at the base lodge, and the Otis Volunteer Fire Department saved the building. Per New England Ski History, Otis Ridge went through foreclosure in the winter of 1981-82, after which the ski area came under R.S.M. Management, Inc.; in May 1987, R.S.M. Management sold Otis Ridge to Otis Associates, Inc. for $470,000. Facing foreclosure again, Otis Associates transferred the ski area on December 31, 2016 to Otis Ridge Properties, LLC for $195,000. Separately, in 2008 an Otis Ridge manager, Al Hewett, was convicted of sexual abuse, after which part owner Jamie Carr took over as general manager. Otis Ridge's own site gives its address as 159 Monterey Road, Otis, MA 01253.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "knox-trail-inn-and-restaurant",
+      "name": "Knox Trail Inn & Restaurant",
+      "kind": "restaurant",
+      "destination_path": "united-states/massachusetts/berkshire-county/otis",
+      "address": "1898 E Otis Road, Otis, MA 01253",
+      "summary": "A restaurant and inn on East Otis Road in the town of Otis.",
+      "history": "Per the Town of Otis's own local-business directory, Knox Trail Inn & Restaurant is located at 1898 E Otis Road, Otis, MA 01253.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "katies-country-store",
+      "name": "Katie's Country Store",
+      "kind": "shop",
+      "destination_path": "united-states/massachusetts/berkshire-county/otis",
+      "address": "1922 East Otis Rd, East Otis, MA 01029",
+      "summary": "A general store in East Otis, a village within the town of Otis.",
+      "history": "Per the Town of Otis's own local-business directory, Katie's Country Store is located at 1922 East Otis Rd, East Otis, MA 01029 -- East Otis being a village within the town of Otis.",
+      "status": "open",
+      "photos": []
+    }
+  ],
+  "entries": [
+    {
+      "kind": "sight",
+      "name": "Otis Ridge",
+      "place_slug": "otis-ridge",
+      "note": "A 1946 rope-tow hill in the town of Otis that has passed through two foreclosures and a 2016 rescue sale on its way to its current owner."
+    },
+    {
+      "kind": "food",
+      "name": "Knox Trail Inn & Restaurant",
+      "place_slug": "knox-trail-inn-and-restaurant",
+      "note": "A restaurant and inn on East Otis Road."
+    },
+    {
+      "kind": "sight",
+      "name": "Katie's Country Store",
+      "place_slug": "katies-country-store",
+      "note": "A general store in East Otis, a village within the town of Otis."
+    }
+  ],
+  "links": []
+}

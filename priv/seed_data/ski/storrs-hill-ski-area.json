@@ -1,0 +1,121 @@
+{
+  "guide": {
+    "slug": "storrs-hill-ski-area-ski-guide",
+    "title": "Storrs Hill Ski Area, New Hampshire: Lebanon's hill, serving the community since 1923",
+    "destination": "Lebanon, NH",
+    "destination_path": "united-states/new-hampshire/grafton-county/lebanon",
+    "tier": "guide",
+    "intro": "Storrs Hill is operated by the Lebanon Outing Club, and the club's own site brands the area with the tagline \"SERVING THE COMMUNITY SINCE 1923.\" The Lebanon Outing Club was founded in 1923 as a Lebanon High School student club by Erling Heistad, per the area's own History page. In 1986 the Lebanon Outing Club reorganized as a 501(c)(3) non-profit and took over ski area operations from the City of Lebanon.",
+    "sections": [
+      {
+        "heading": "A long-running hill",
+        "body": "The area's own history page states its first lift was installed in 1935, \"making Storrs Hill possibly the oldest continuously operating lift-served ski area in the country.\" Night skiing has been offered since 1939, per the area's own About Us page; an independent ski-history site records that a rope tow was installed in early 1939, funded by $3,500 in town appropriations and led by Clem Curtis. Two-time Olympian Ernest Dion led a renovation in 1972-73 that installed a Poma lift converted from a used T-Bar, and NH Governor Meldrim Thomson attended a ribbon-cutting in late November 1972, per New England Ski History's Storrs Hill page. The Olympic torch relay passed through Storrs Hill in 2002, traveling off the 35-meter ski jump \"through the ring of fire,\" and the area's own history page states that Mikaela Shiffrin trained at Storrs Hill in 2004. Public skiing at Storrs Hill was offered free of charge for the 2025-26 season, per the area's official site, though the site states there will be no off-season equipment rentals in 2026 because of a lodge renovation."
+      },
+      {
+        "heading": "In Lebanon",
+        "body": "AVA Gallery describes itself, per its own website, as \"a vibrant campus for the arts in beautiful downtown Lebanon,\" housed in a 40,000-square-foot building. Lebanon Opera House markets itself as \"the Art & Soul of the Upper Valley\" and hosts performing-arts events including comedy and community theater, per its own website. Colburn Park originated in 1792 when the land was donated by Robert Colburn as the site of the community's meeting house, and the surrounding 12-acre district was listed on the National Register of Historic Places in 1986, per Wikipedia's Colburn Park Historic District article, citing the National Register of Historic Places nomination. PowerHouse Mall, in the West Lebanon village of the city of Lebanon, describes itself on its own website as a shopping and dining destination combining locally-owned boutiques with national retailers such as L.L. Bean and Eastern Mountain Sports."
+      }
+    ],
+    "faq": [
+      {
+        "question": "How old is Storrs Hill Ski Area?",
+        "answer": "The Lebanon Outing Club, which operates Storrs Hill, was founded in 1923; the area's own history page states its first lift was installed in 1935, \"making Storrs Hill possibly the oldest continuously operating lift-served ski area in the country.\""
+      },
+      {
+        "question": "Is skiing at Storrs Hill free?",
+        "answer": "Public skiing at Storrs Hill was offered free of charge for the 2025-26 season, per the area's official site, though the site notes there will be no off-season equipment rentals in 2026 because of a lodge renovation."
+      }
+    ],
+    "photos": []
+  },
+  "places": [
+    {
+      "slug": "storrs-hill-ski-area",
+      "name": "Storrs Hill Ski Area",
+      "kind": "ski-area",
+      "destination_path": "united-states/new-hampshire/grafton-county/lebanon",
+      "address": "Lebanon, NH",
+      "summary": "A community ski hill in Lebanon, operated by the Lebanon Outing Club since 1923.",
+      "history": "Storrs Hill is operated by the Lebanon Outing Club, and the club's own site brands the area with the tagline \"SERVING THE COMMUNITY SINCE 1923.\" The Lebanon Outing Club was founded in 1923 as a Lebanon High School student club by Erling Heistad, per the area's own History page. In 1986 the Lebanon Outing Club reorganized as a 501(c)(3) non-profit and took over ski area operations from the City of Lebanon. The area's own history page states its first lift was installed in 1935, \"making Storrs Hill possibly the oldest continuously operating lift-served ski area in the country.\" Night skiing has been offered since 1939, per the area's own About Us page; an independent ski-history site records that a rope tow was installed in early 1939, funded by $3,500 in town appropriations and led by Clem Curtis. Two-time Olympian Ernest Dion led a renovation in 1972-73 that installed a Poma lift converted from a used T-Bar, and NH Governor Meldrim Thomson attended a ribbon-cutting in late November 1972, per New England Ski History's Storrs Hill page. The Olympic torch relay passed through Storrs Hill in 2002, traveling off the 35-meter ski jump \"through the ring of fire,\" and the area's own history page states that Mikaela Shiffrin trained at Storrs Hill in 2004. Public skiing at Storrs Hill was offered free of charge for the 2025-26 season, per the area's official site, though the site states there will be no off-season equipment rentals in 2026 because of a lodge renovation.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "ava-gallery-and-art-center",
+      "name": "AVA Gallery and Art Center",
+      "kind": "museum",
+      "destination_path": "united-states/new-hampshire/grafton-county/lebanon",
+      "address": "11 Bank Street, Lebanon, NH",
+      "summary": "An arts campus in downtown Lebanon with gallery, studio, and workshop space.",
+      "history": "AVA Gallery describes itself, per its own website, as \"a vibrant campus for the arts in beautiful downtown Lebanon,\" housed in a 40,000-square-foot building.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "lebanon-opera-house",
+      "name": "Lebanon Opera House",
+      "kind": "theater",
+      "destination_path": "united-states/new-hampshire/grafton-county/lebanon",
+      "address": "51 North Park Street, Lebanon, NH",
+      "summary": "A performing-arts venue in Lebanon hosting comedy and community theater.",
+      "history": "Lebanon Opera House markets itself, per its own website, as \"the Art & Soul of the Upper Valley\" and hosts performing-arts events including comedy and community theater.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "colburn-park-historic-district",
+      "name": "Colburn Park Historic District",
+      "kind": "park",
+      "destination_path": "united-states/new-hampshire/grafton-county/lebanon",
+      "address": "Park Street, Lebanon, NH",
+      "summary": "A historic 12-acre park district in downtown Lebanon, dating to 1792.",
+      "history": "Colburn Park originated in 1792 when the land was donated by Robert Colburn as the site of the community's meeting house, and the surrounding 12-acre district was listed on the National Register of Historic Places in 1986, per Wikipedia's Colburn Park Historic District article, citing the National Register of Historic Places nomination.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "powerhouse-mall",
+      "name": "PowerHouse Mall",
+      "kind": "shop",
+      "destination_path": "united-states/new-hampshire/grafton-county/lebanon",
+      "address": "8 Glen Road, West Lebanon, NH 03784",
+      "summary": "A shopping and dining destination in West Lebanon.",
+      "history": "PowerHouse Mall, in the West Lebanon village of the city of Lebanon, describes itself on its own website as a shopping and dining destination combining locally-owned boutiques with national retailers such as L.L. Bean and Eastern Mountain Sports.",
+      "status": "open",
+      "photos": []
+    }
+  ],
+  "entries": [
+    {
+      "kind": "sight",
+      "name": "Storrs Hill Ski Area",
+      "place_slug": "storrs-hill-ski-area",
+      "note": "A community ski hill in Lebanon, operated by the Lebanon Outing Club since 1923."
+    },
+    {
+      "kind": "sight",
+      "name": "AVA Gallery and Art Center",
+      "place_slug": "ava-gallery-and-art-center",
+      "note": "An arts campus in downtown Lebanon with gallery, studio, and workshop space."
+    },
+    {
+      "kind": "sight",
+      "name": "Lebanon Opera House",
+      "place_slug": "lebanon-opera-house",
+      "note": "A performing-arts venue in Lebanon hosting comedy and community theater."
+    },
+    {
+      "kind": "walk",
+      "name": "Colburn Park Historic District",
+      "place_slug": "colburn-park-historic-district",
+      "note": "A historic 12-acre park district in downtown Lebanon, dating to 1792."
+    },
+    {
+      "kind": "tip",
+      "name": "PowerHouse Mall",
+      "place_slug": "powerhouse-mall",
+      "note": "A shopping and dining destination in West Lebanon."
+    }
+  ],
+  "links": []
+}

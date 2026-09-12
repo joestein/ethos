@@ -41,7 +41,9 @@ defmodule Mix.Tasks.Ethos.OptimizeRomePhotos do
     files = Path.wildcard("priv/seed_data/rome/*.json")
 
     if files == [] do
-      Mix.raise("no seed files matched priv/seed_data/rome/*.json — run this from the project root")
+      Mix.raise(
+        "no seed files matched priv/seed_data/rome/*.json — run this from the project root"
+      )
     end
 
     srcs =

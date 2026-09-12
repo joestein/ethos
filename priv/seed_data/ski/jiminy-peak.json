@@ -1,0 +1,53 @@
+{
+  "guide": {
+    "slug": "jiminy-peak-ski-guide",
+    "title": "Jiminy Peak: founded in 1947, powered since 2007 by a wind turbine named Zephyr",
+    "destination": "Town of Hancock, MA",
+    "destination_path": "united-states/massachusetts/berkshire-county/hancock",
+    "tier": "guide",
+    "intro": "Jiminy Peak, Inc. was formed on July 29, 1947 by three World War II veterans -- John Clark, John Drummond, and John Fisher -- after they leased the property from Bartlett Hendricks, per New England Ski History; the resort unofficially opened on Christmas Day 1948, with its official first season recorded as 1948-49. On January 27, 2009, co-owners Brian Fairbank and Joseph O'Donnell sold the resort to CNL Lifestyle Properties for $27 million, while obtaining a 40-year operational lease to continue running the ski area.",
+    "sections": [
+      {
+        "heading": "Zephyr, and a figure the resort's own page never reconciles",
+        "body": "Jiminy Peak installed its wind turbine in 2007, per New England Ski History. The resort's own sustainability page describes the 1.5 MW turbine, named Zephyr, as making Jiminy Peak \"the first Mountain Resort in North America to install a wind turbine in order to generate clean, natural energy.\" Per that page, Zephyr's tower is 253 feet tall, its three blades measure approximately 123 feet each, its total height to blade tip is 386 feet, its maximum rotation is 22 RPM even in high wind, and the installed turbine cost approximately $4 million. The same page states that Zephyr \"provides approximately 33% of the electrical demands of Jiminy Peak annually,\" generating roughly 4,600,000 kWh per year -- but it separately states that, following Massachusetts' 2010 adoption of net metering, which lets the resort consume every kWh the turbine generates rather than selling it back to the grid, \"today, 66% of Jiminy Peak's electrical demands are provided by our own wind turbine.\" The resort's own page gives both figures without reconciling them. It also states the turbine reached payback on August 1, 2015, and that its annual generation offsets 7,100,000 pounds of CO2 -- which the page equates to 75,000,000 fewer miles driven in a conventional automobile each year. Jiminy Peak received the Golden Eagle Award from Clif Bar and the National Ski Areas Association in 2008 for environmental excellence."
+      },
+      {
+        "heading": "Solar, snowmaking, and lighting",
+        "body": "In 2015, per the resort's own sustainability page, Jiminy Peak built the Nexamp Peak Community Solar Project, a 2.3 megawatt community solar facility on 12 acres of the resort's property, described by the page as \"the largest community solar project of its kind in the Northeast.\" In the 2016/2017 season, Jiminy Peak replaced all 450 snowmaking guns on the mountain with \"Sledgehammer\" technology, which the page states produced \"a 100% increase in snow output\" while using less compressed air. In the fall of 2015, per the same page, Jiminy Peak retrofitted its base lodges, the Country Inn, John Harvard's Restaurant, the Cricket slope, Mountain Operations, and the Berkshire Express and Cricket lifts with energy-efficient LED bulbs, and later installed high-efficiency LED bulbs across its night-skiing trails."
+      }
+    ],
+    "faq": [
+      {
+        "question": "How much of Jiminy Peak's power comes from its wind turbine?",
+        "answer": "The resort's own sustainability page gives two different figures without reconciling them: it states Zephyr \"provides approximately 33% of the electrical demands of Jiminy Peak annually,\" while elsewhere on the same page it says \"today, 66% of Jiminy Peak's electrical demands are provided by our own wind turbine,\" a change it attributes to Massachusetts' 2010 adoption of net metering."
+      },
+      {
+        "question": "When was Jiminy Peak founded?",
+        "answer": "Jiminy Peak, Inc. was formed on July 29, 1947 by three World War II veterans, per New England Ski History, after leasing the property from Bartlett Hendricks; the resort unofficially opened on Christmas Day 1948, with an official first season of 1948-49."
+      }
+    ],
+    "photos": []
+  },
+  "places": [
+    {
+      "slug": "jiminy-peak",
+      "name": "Jiminy Peak",
+      "kind": "ski-area",
+      "destination_path": "united-states/massachusetts/berkshire-county/hancock",
+      "address": "Hancock, MA",
+      "summary": "A Hancock ski area founded by three World War II veterans in 1947, now powered in part by a 2007 wind turbine whose own output figures its operator has never reconciled.",
+      "history": "Jiminy Peak, Inc. was formed on July 29, 1947 by three World War II veterans -- John Clark, John Drummond, and John Fisher -- after they leased the property from Bartlett Hendricks, per New England Ski History; the resort unofficially opened on Christmas Day 1948, with its official first season recorded as 1948-49. Jiminy Peak installed its wind turbine in 2007. The resort's own sustainability page describes the 1.5 MW turbine, named Zephyr, as making Jiminy Peak \"the first Mountain Resort in North America to install a wind turbine in order to generate clean, natural energy.\" Per that page, Zephyr's tower is 253 feet tall, its three blades measure approximately 123 feet each, its total height to blade tip is 386 feet, its maximum rotation is 22 RPM even in high wind, and the installed turbine cost approximately $4 million. The same page states that Zephyr \"provides approximately 33% of the electrical demands of Jiminy Peak annually,\" generating roughly 4,600,000 kWh per year -- but it separately states that, following Massachusetts' 2010 adoption of net metering, which lets the resort consume every kWh the turbine generates rather than selling it back to the grid, \"today, 66% of Jiminy Peak's electrical demands are provided by our own wind turbine.\" The resort's own page gives both figures without reconciling them. It also states the turbine reached payback on August 1, 2015, and that its annual generation offsets 7,100,000 pounds of CO2 -- which the page equates to 75,000,000 fewer miles driven in a conventional automobile each year. Jiminy Peak received the Golden Eagle Award from Clif Bar and the National Ski Areas Association in 2008 for environmental excellence. In 2015, Jiminy Peak built the Nexamp Peak Community Solar Project, a 2.3 megawatt community solar facility on 12 acres of the resort's property, described by the resort's page as \"the largest community solar project of its kind in the Northeast.\" In the 2016/2017 season, Jiminy Peak replaced all 450 snowmaking guns on the mountain with \"Sledgehammer\" technology, which the page states produced \"a 100% increase in snow output\" while using less compressed air. In the fall of 2015, Jiminy Peak retrofitted its base lodges, the Country Inn, John Harvard's Restaurant, the Cricket slope, Mountain Operations, and the Berkshire Express and Cricket lifts with energy-efficient LED bulbs, and later installed high-efficiency LED bulbs across its night-skiing trails, per the resort's own page. On January 27, 2009, co-owners Brian Fairbank and Joseph O'Donnell sold the resort to CNL Lifestyle Properties for $27 million, while obtaining a 40-year operational lease to continue running the ski area.",
+      "status": "open",
+      "photos": []
+    }
+  ],
+  "entries": [
+    {
+      "kind": "sight",
+      "name": "Jiminy Peak",
+      "place_slug": "jiminy-peak",
+      "note": "A Hancock ski area founded by three World War II veterans in 1947, now powered in part by a 2007 wind turbine whose own output figures its operator has never reconciled."
+    }
+  ],
+  "links": []
+}

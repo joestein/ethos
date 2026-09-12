@@ -1,0 +1,70 @@
+{
+  "guide": {
+    "slug": "bretton-woods-ski-guide",
+    "title": "Bretton Woods, New Hampshire: a hotel that hosted the IMF, and skiing since 1973",
+    "destination": "Carroll, NH",
+    "destination_path": "united-states/new-hampshire/coos-county/carroll",
+    "tier": "guide",
+    "intro": "Bretton Woods is \"an area within the town of Carroll, New Hampshire,\" per Wikipedia's \"Bretton Woods, New Hampshire\" article -- it is a place name, not its own municipality. The ski area itself opened for business on December 29, 1973, as an intermediate-terrain area with two double chairlifts, a T-bar, and an 18-mile Nordic trail network, according to New England Ski History -- decades after the site's namesake hotel had already made history.",
+    "sections": [
+      {
+        "heading": "The Mount Washington Hotel and the IMF",
+        "body": "The Mount Washington Hotel began construction in 1900 and opened on July 28, 1902, designed by architect Charles Alling Gifford, per Wikipedia's \"Mount Washington Hotel\" article. It was declared a National Historic Landmark in 1986, and, earlier, it was the site of the 1944 United Nations Monetary and Financial Conference, which led to the establishment of the International Monetary Fund and the World Bank in 1945 -- the conference that gave the Bretton Woods system its name."
+      },
+      {
+        "heading": "From CNL to Omni",
+        "body": "In 2006, CNL Financial Group purchased the resort complex -- 991 acres including the Mount Washington Hotel, the Bretton Arms Country Inn, The Lodge at Bretton Woods, and the Bretton Woods Ski Area -- per Wikipedia's \"Mount Washington Hotel\" article. Omni Hotels & Resorts assumed management of both the Mount Washington Hotel and the Bretton Arms Inn in September 2009, and in December 2015 purchased the Bretton Woods Mountain Resort outright from CNL, including both hotels and the ski area -- making Omni the resort's current owner."
+      }
+    ],
+    "faq": [
+      {
+        "question": "When did skiing begin at Bretton Woods?",
+        "answer": "The Bretton Woods ski area opened for business on December 29, 1973, as an intermediate-terrain area with two double chairlifts, a T-bar, and an 18-mile Nordic trail network, according to New England Ski History -- decades after the neighboring Mount Washington Hotel opened in 1902."
+      },
+      {
+        "question": "Who owns Bretton Woods?",
+        "answer": "Omni Hotels & Resorts, since purchasing the Bretton Woods Mountain Resort -- both hotels and the ski area -- from CNL Financial Group in December 2015, per Wikipedia's \"Mount Washington Hotel\" article. Omni had managed the Mount Washington Hotel since September 2009."
+      }
+    ],
+    "photos": []
+  },
+  "places": [
+    {
+      "slug": "bretton-woods",
+      "name": "Bretton Woods",
+      "kind": "ski-area",
+      "destination_path": "united-states/new-hampshire/coos-county/carroll",
+      "address": "Bretton Woods, NH",
+      "summary": "An Omni-owned ski area in the town of Carroll, opened in 1973, named for the village that hosted the 1944 conference founding the IMF and World Bank.",
+      "history": "Bretton Woods is \"an area within the town of Carroll, New Hampshire,\" per Wikipedia's \"Bretton Woods, New Hampshire\" article -- it is a place name, not its own municipality. The Bretton Woods ski area itself opened for business on December 29, 1973, as an intermediate-terrain area with two double chairlifts, a T-bar, and an 18-mile Nordic trail network, according to New England Ski History. The neighboring Mount Washington Hotel began construction in 1900 and opened on July 28, 1902, designed by architect Charles Alling Gifford, per Wikipedia's \"Mount Washington Hotel\" article; it was declared a National Historic Landmark in 1986, and it was the site of the 1944 United Nations Monetary and Financial Conference, which led to the establishment of the International Monetary Fund and the World Bank in 1945. In 2006, CNL Financial Group purchased the resort complex -- 991 acres including the Mount Washington Hotel, the Bretton Arms Country Inn, The Lodge at Bretton Woods, and the Bretton Woods Ski Area -- per the same source. Omni Hotels & Resorts assumed management of both the Mount Washington Hotel and the Bretton Arms Inn in September 2009, and in December 2015 purchased the Bretton Woods Mountain Resort outright from CNL, including both hotels and the ski area, making Omni the resort's current owner.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "omni-mount-washington-hotel",
+      "name": "Omni Mount Washington Hotel",
+      "kind": "hotel",
+      "destination_path": "united-states/new-hampshire/coos-county/carroll",
+      "address": "310 Mount Washington Hotel Road, Bretton Woods, NH 03575",
+      "summary": "A National Historic Landmark hotel that opened in 1902 and hosted the 1944 conference that founded the IMF and World Bank, now operated by Omni.",
+      "history": "The Mount Washington Hotel opened on July 28, 1902, after construction that began in 1900, designed by architect Charles Alling Gifford, per Wikipedia's \"Mount Washington Hotel\" article. The hotel was declared a National Historic Landmark in 1986 and hosted the 1944 conference that led to the establishment of the International Monetary Fund and the World Bank in 1945. The hotel now operates as the Omni Mount Washington Resort, following Omni Hotels & Resorts' December 2015 purchase of the property from CNL.",
+      "status": "open",
+      "photos": []
+    }
+  ],
+  "entries": [
+    {
+      "kind": "sight",
+      "name": "Bretton Woods",
+      "place_slug": "bretton-woods",
+      "note": "An Omni-owned ski area in Carroll, NH, opened in 1973."
+    },
+    {
+      "kind": "stay",
+      "name": "Omni Mount Washington Hotel",
+      "place_slug": "omni-mount-washington-hotel",
+      "note": "A National Historic Landmark hotel that hosted the 1944 conference founding the IMF and World Bank."
+    }
+  ],
+  "links": []
+}

@@ -1,0 +1,91 @@
+{
+  "guide": {
+    "slug": "ragged-mountain-resort-ski-guide",
+    "title": "Ragged Mountain Resort, New Hampshire: Danbury's ski area, locally owned again since 2025",
+    "destination": "Danbury, NH",
+    "destination_path": "united-states/new-hampshire/merrimack-county/danbury",
+    "tier": "guide",
+    "intro": "In the spring of 1964, Governor John King approved a $300,000 Industrial Park Authority loan for the development of Ragged Mountain ski area, and the area opened in January 1965, per New England Ski History's Ragged Mountain page. A few hours before an October 16, 1968 foreclosure auction, Virginia resident James Foote purchased a controlling interest in Ragged Mountain Corporation, \"rescuing the ski area,\" per the same source.",
+    "sections": [
+      {
+        "heading": "State ownership, private leases, and a 1988 reopening",
+        "body": "In early July 1974, Indian Head National Bank published a new foreclosure notice on Ragged Mountain Corporation, scheduling an auction for July 26, 1974; with no other bidders, the State of New Hampshire purchased Ragged Mountain for $231,088, per New England Ski History. Following that auction, a group called Ragged Mountain Recreation Area Inc., led by Boston Hill ski area owner Bob Dunn, initially leased the mountain on a month-by-month basis from the state rather than buying it outright. In July 1987, Alan Endriunas of Endriunas Brothers, Inc. announced a deal to purchase the 1,600-acre property, per New England Ski History; he completed the purchase that October for $875,000 and reopened the area to the public on January 1, 1988. After the ownership defaulted on a $4.75 million loan during the 2006-07 season, \"the ownership sold Ragged to RMR-Pacific LLC, a subsidiary of Pacific Group, in May of 2007,\" per the same source."
+      },
+      {
+        "heading": "Back to local ownership",
+        "body": "Ragged Mountain was owned by entities controlled by Douglas Anderson, former chairman of Pacific Group Resorts Inc. (which also owns Jay Peak), and was placed on the market in March 2025, per NewEnglandSkiIndustry.com's November 4, 2025 report. Ragged Mountain was sold to a group of investors in an estimated $6.4 million real estate transaction completed that day, November 4, 2025, to SF Mountain Co, LLC, a company formed in May 2025 by Seth Offen, Tristan Whitman, Carl Rominger, Josh Larkin, and Bill Morrison; the same report states SF Mountain Co formed Ragged Mountain Resort LLC in October 2025. Ragged Mountain Resort's own About page states \"As of November 2025 Ragged Mountain Resort is locally owned by SF Mountain Co, LLC (SFMC)\" and that \"this marks the end of Pacific Group Resorts' (PGR) management role,\" though PGR assisted with the transition through the start of the 2025-26 ski season. The same page describes the new ownership group SFMC as \"led by six close friends who grew up skiing at Ragged and have deep ties to Danbury and the surrounding region.\""
+      },
+      {
+        "heading": "In Danbury",
+        "body": "Wikipedia's Danbury, New Hampshire article lists the \"Danbury North Road Schoolhouse Museum, run by Danbury Historical Society\" as a notable site in town, and the Danbury Historical Society is listed as an active community organization on the Town of Danbury's own official website. The South Danbury Christian Church, on U.S. Route 4, was listed on the National Register of Historic Places on June 6, 1985, per Wikipedia's list of NRHP listings in Merrimack County, New Hampshire."
+      }
+    ],
+    "faq": [
+      {
+        "question": "Who owns Ragged Mountain Resort?",
+        "answer": "Ragged Mountain Resort's own About page states \"As of November 2025 Ragged Mountain Resort is locally owned by SF Mountain Co, LLC (SFMC),\" a group SFMC describes as \"led by six close friends who grew up skiing at Ragged and have deep ties to Danbury and the surrounding region.\" The sale, an estimated $6.4 million transaction, completed November 4, 2025, per NewEnglandSkiIndustry.com."
+      },
+      {
+        "question": "How old is Ragged Mountain?",
+        "answer": "Governor John King approved a $300,000 Industrial Park Authority loan for the ski area's development in spring 1964, and it opened in January 1965, per New England Ski History's Ragged Mountain page."
+      }
+    ],
+    "photos": []
+  },
+  "places": [
+    {
+      "slug": "ragged-mountain-resort",
+      "name": "Ragged Mountain Resort",
+      "kind": "ski-area",
+      "destination_path": "united-states/new-hampshire/merrimack-county/danbury",
+      "address": "Danbury, NH",
+      "summary": "A ski area in Danbury, opened in 1965, which passed through state ownership before returning to local ownership in November 2025.",
+      "history": "In the spring of 1964, Governor John King approved a $300,000 Industrial Park Authority loan for the development of Ragged Mountain ski area, and the area opened in January 1965, per New England Ski History's Ragged Mountain page. A few hours before an October 16, 1968 foreclosure auction, Virginia resident James Foote purchased a controlling interest in Ragged Mountain Corporation, \"rescuing the ski area,\" per the same source. In early July 1974, Indian Head National Bank published a new foreclosure notice on Ragged Mountain Corporation, scheduling an auction for July 26, 1974; with no other bidders, the State of New Hampshire purchased Ragged Mountain for $231,088, per New England Ski History. Following that auction, a group called Ragged Mountain Recreation Area Inc., led by Boston Hill ski area owner Bob Dunn, initially leased the mountain on a month-by-month basis from the state rather than buying it outright. In July 1987, Alan Endriunas of Endriunas Brothers, Inc. announced a deal to purchase the 1,600-acre property, per New England Ski History; he completed the purchase that October for $875,000 and reopened the area to the public on January 1, 1988. After the ownership defaulted on a $4.75 million loan during the 2006-07 season, \"the ownership sold Ragged to RMR-Pacific LLC, a subsidiary of Pacific Group, in May of 2007,\" per the same source. Ragged Mountain was owned by entities controlled by Douglas Anderson, former chairman of Pacific Group Resorts Inc. (which also owns Jay Peak), and was placed on the market in March 2025, per NewEnglandSkiIndustry.com's November 4, 2025 report. Ragged Mountain was sold to a group of investors in an estimated $6.4 million real estate transaction completed that day, November 4, 2025, to SF Mountain Co, LLC, a company formed in May 2025 by Seth Offen, Tristan Whitman, Carl Rominger, Josh Larkin, and Bill Morrison; the same report states SF Mountain Co formed Ragged Mountain Resort LLC in October 2025. Ragged Mountain Resort's own About page states \"As of November 2025 Ragged Mountain Resort is locally owned by SF Mountain Co, LLC (SFMC)\" and that \"this marks the end of Pacific Group Resorts' (PGR) management role,\" though PGR assisted with the transition through the start of the 2025-26 ski season. The same page describes the new ownership group SFMC as \"led by six close friends who grew up skiing at Ragged and have deep ties to Danbury and the surrounding region.\"",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "danbury-historical-society",
+      "name": "Danbury North Road Schoolhouse Museum",
+      "kind": "museum",
+      "destination_path": "united-states/new-hampshire/merrimack-county/danbury",
+      "address": "North Road, Danbury, NH 03230",
+      "summary": "A schoolhouse museum in Danbury, run by the Danbury Historical Society.",
+      "history": "Wikipedia's Danbury, New Hampshire article lists the \"Danbury North Road Schoolhouse Museum, run by Danbury Historical Society\" as a notable site in town. The Danbury Historical Society is listed as an active community organization on the Town of Danbury's own official website.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "south-danbury-christian-church",
+      "name": "South Danbury Christian Church",
+      "kind": "historic-site",
+      "destination_path": "united-states/new-hampshire/merrimack-county/danbury",
+      "address": "U.S. Route 4, Danbury, NH 03230",
+      "summary": "A historic church in Danbury, on the National Register of Historic Places.",
+      "history": "The South Danbury Christian Church, on U.S. Route 4 in Danbury, was listed on the National Register of Historic Places on June 6, 1985, per Wikipedia's list of National Register of Historic Places listings in Merrimack County, New Hampshire.",
+      "status": "open",
+      "photos": []
+    }
+  ],
+  "entries": [
+    {
+      "kind": "sight",
+      "name": "Ragged Mountain Resort",
+      "place_slug": "ragged-mountain-resort",
+      "note": "A ski area in Danbury, opened in 1965, locally owned again since November 2025."
+    },
+    {
+      "kind": "sight",
+      "name": "Danbury North Road Schoolhouse Museum",
+      "place_slug": "danbury-historical-society",
+      "note": "A schoolhouse museum in Danbury, run by the Danbury Historical Society."
+    },
+    {
+      "kind": "sight",
+      "name": "South Danbury Christian Church",
+      "place_slug": "south-danbury-christian-church",
+      "note": "A historic church in Danbury, on the National Register of Historic Places."
+    }
+  ],
+  "links": []
+}

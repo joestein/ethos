@@ -1,0 +1,101 @@
+{
+  "guide": {
+    "slug": "killington-ski-resort-ski-guide",
+    "title": "Killington Ski Resort, Vermont: from Sherburne Corporation to passholder ownership",
+    "destination": "Killington, VT",
+    "destination_path": "united-states/vermont/rutland-county/killington",
+    "tier": "guide",
+    "intro": "Killington opened for skiing on December 13, 1958, after Preston Leete Smith, then 24, approached Vermont officials in 1954 about leasing Killington Peak land for a ski area, per Killington Resort's own \"Our History\" page. The resort's original corporate developer was the Sherburne Corporation, which restructured and renamed itself S-K-I Limited in 1984. On September 27, 2024, the Killington Independence Group — made up of local passholders and community members — purchased the resort from Powdr, beginning what the resort calls its \"independent era.\"",
+    "sections": [
+      {
+        "heading": "Ownership, from Sherburne to the passholders",
+        "body": "American Skiing Company acquired Killington in February 1996, per Wikipedia's Killington Ski Resort article. Powdr Corporation, together with SP Land Company, took over operation of Killington on May 11, 2007. On September 27, 2024, the Killington Independence Group purchased the resort from Powdr, beginning its \"independent era,\" according to Killington Resort's own \"Our History\" page."
+      },
+      {
+        "heading": "Firsts and innovations",
+        "body": "Killington introduced the \"ticket wicket,\" an early device attached to lift tickets to prevent sharing among skiers, credited to Charlie Hanley over his tenure at the resort, per Killington's own \"Our History\" page. Artist James Niehues hand-painted a Killington trail map. Killington achieved lift-served skiing into June for the first time in 1982, operating until June 15 that year. The K-1 gondola replaced an older double chairlift in 1997, and the K-1 Lodge, a three-story base lodge of roughly 58,000 square feet, opened for the 2022-23 season."
+      },
+      {
+        "heading": "Irene, and the Killington Cup",
+        "body": "Flooding from Tropical Storm Irene in late August 2011 damaged the resort and led to the condemnation of the Superstar Pub building, per Killington's own \"Our History\" page. Killington has hosted a women's FIS Alpine Ski World Cup technical event, branded the Killington Cup, on Thanksgiving weekend annually starting in November 2016."
+      },
+      {
+        "heading": "Nearby",
+        "body": "Gifford Woods State Park, established in 1931 on the northeast slope of Pico Peak in Killington, contains an old-growth forest stand designated a National Natural Landmark in 1980, per Wikipedia's Gifford Woods State Park article. A 40-acre area of the park built by the Civilian Conservation Corps in the 1930s was listed on the National Register of Historic Places in 2002 for its CCC association. The Appalachian Trail runs through the park's campground, and the park provides boating access to adjacent Kent Pond. The Inn at Long Trail opened in 1938 to serve Vermont's early ski community, and has been owned by the McGrath family since 1977, per the inn's own website; it sits at Sherburne Pass, where the Appalachian Trail and Long Trail cross, and includes McGrath's Irish Pub."
+      }
+    ],
+    "faq": [
+      {
+        "question": "Who owns Killington now?",
+        "answer": "On September 27, 2024, the Killington Independence Group — local passholders and community members — purchased the resort from Powdr Corporation, beginning what the resort calls its \"independent era,\" per Killington's own \"Our History\" page."
+      },
+      {
+        "question": "When did Killington first open?",
+        "answer": "Killington opened for skiing on December 13, 1958, after Preston Leete Smith, then 24, approached Vermont officials in 1954 about leasing Killington Peak land, per Killington's own \"Our History\" page."
+      }
+    ],
+    "photos": []
+  },
+  "places": [
+    {
+      "slug": "killington-ski-resort",
+      "name": "Killington Ski Resort",
+      "kind": "ski-area",
+      "destination_path": "united-states/vermont/rutland-county/killington",
+      "address": "Killington, VT",
+      "summary": "A gondola- and chairlift-served ski resort opened in 1958, now owned by a group of local passholders after decades under Sherburne, American Skiing Company, and Powdr.",
+      "history": "Killington opened for skiing on December 13, 1958, after Preston Leete Smith, then 24, approached Vermont officials in 1954 about leasing Killington Peak land for a ski area, per Killington Resort's own \"Our History\" page. The resort's original corporate developer was the Sherburne Corporation, which restructured and renamed itself S-K-I Limited in 1984. American Skiing Company acquired Killington in February 1996. Powdr Corporation, together with SP Land Company, took over operation on May 11, 2007. On September 27, 2024, the Killington Independence Group — local passholders and community members — purchased the resort from Powdr, beginning its \"independent era.\" Killington introduced the \"ticket wicket,\" an early device attached to lift tickets to prevent sharing among skiers, credited to Charlie Hanley over his tenure at the resort. Artist James Niehues hand-painted a Killington trail map. Killington achieved lift-served skiing into June for the first time in 1982, operating until June 15 that year. Flooding from Tropical Storm Irene in late August 2011 damaged the resort and led to the condemnation of the Superstar Pub building. Killington has hosted a women's FIS Alpine Ski World Cup technical event, the Killington Cup, on Thanksgiving weekend annually starting in November 2016. The K-1 gondola replaced an older double chairlift in 1997, and the K-1 Lodge, a three-story base lodge of roughly 58,000 square feet, opened for the 2022-23 season.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "gifford-woods-state-park",
+      "name": "Gifford Woods State Park",
+      "kind": "park",
+      "destination_path": "united-states/vermont/rutland-county/killington",
+      "address": "34 Gifford Woods Rd, Killington, VT 05751",
+      "summary": "A state park on Pico Peak's northeast slope with an old-growth forest stand, a CCC-built historic area, and Appalachian Trail access.",
+      "history": "Gifford Woods State Park, established in 1931 on the northeast slope of Pico Peak in Killington, contains an old-growth forest stand designated a National Natural Landmark in 1980, per Wikipedia's Gifford Woods State Park article. A 40-acre area of the park built by the Civilian Conservation Corps in the 1930s — including access roads, stone gates, a contact station, and a ranger house — was listed on the National Register of Historic Places in 2002 for its CCC association. The Appalachian Trail runs through the park's campground, and the park provides boating access to adjacent Kent Pond.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "inn-at-long-trail",
+      "name": "Inn at Long Trail",
+      "kind": "bnb",
+      "destination_path": "united-states/vermont/rutland-county/killington",
+      "address": "709 Route 4, Sherburne Pass, Killington, VT 05751",
+      "summary": "A ski-country inn at Sherburne Pass, where the Appalachian Trail and Long Trail cross, owned by the McGrath family since 1977.",
+      "history": "The Inn at Long Trail, which opened in 1938, describes itself as an early lodge built to serve Vermont's ski community, and has been owned by the McGrath family since 1977, per the inn's own website. The inn sits at Sherburne Pass, where the Appalachian Trail and Long Trail cross, and includes McGrath's Irish Pub on site.",
+      "status": "open",
+      "photos": []
+    }
+  ],
+  "entries": [
+    {
+      "kind": "sight",
+      "name": "Killington Ski Resort",
+      "place_slug": "killington-ski-resort",
+      "note": "A gondola- and chairlift-served resort opened in 1958, now owned by a group of local passholders."
+    },
+    {
+      "kind": "walk",
+      "name": "Gifford Woods State Park",
+      "place_slug": "gifford-woods-state-park",
+      "note": "A state park with an old-growth forest stand, a CCC-built historic area, and Appalachian Trail access."
+    },
+    {
+      "kind": "stay",
+      "name": "Inn at Long Trail",
+      "place_slug": "inn-at-long-trail",
+      "note": "A ski-country inn at Sherburne Pass, owned by the McGrath family since 1977."
+    }
+  ],
+  "links": [
+    {
+      "target": "guide:pico-mountain-ski-guide",
+      "kind": "shared-history",
+      "note": "Killington and Pico have shared owners since 1996: American Skiing Company, then Powdr/SP Land in 2007, then the Killington Independence Group in 2024."
+    }
+  ]
+}

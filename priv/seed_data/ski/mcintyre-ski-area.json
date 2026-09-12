@@ -1,0 +1,172 @@
+{
+  "guide": {
+    "slug": "mcintyre-ski-area-ski-guide",
+    "title": "McIntyre Ski Area, New Hampshire: Manchester's own hill since 1971",
+    "destination": "Manchester, NH",
+    "destination_path": "united-states/new-hampshire/hillsborough-county/manchester",
+    "tier": "guide",
+    "intro": "McIntyre Ski Area's own About Us page states skiing and snowboarding have been offered there \"since the chairlift began turning in 1971.\" The City of Manchester's Parks and Recreation Department lists McIntyre Ski Area among its Recreation Facilities.",
+    "sections": [
+      {
+        "heading": "From city-run hill to McIntyre Ski Area, LLC",
+        "body": "In 1996, per McIntyre's own About Us page, McIntyre Ski School, Inc. opened a retail and rental shop for equipment purchases and winter gear. In 2009, McIntyre Ski School, Inc. took over operations of the ski area from the City of Manchester, and the operator's own page credits this transition with new tubing facilities, conveyor lifts, terrain-park improvements, and a 9,000-square-foot lodge. In 2017, McIntyre Ski School, Inc. changed ownership, with longtime President and General Manager Ross Boisvert taking over and reestablishing the business as McIntyre Ski Area, LLC. Per the operator's own account, Ross Boisvert has been affiliated with McIntyre since 1983, moving from ski instructor to Snowsports Director in 1989 and General Manager in 2009, and received the 2021 Einar Aas award for Excellence in Snowsports School Management."
+      },
+      {
+        "heading": "In Manchester",
+        "body": "The Currier Museum of Art's own visit page lists its address as 150 Ash Street, Manchester, NH, and its own site references an initiative called \"Building The Next Centennial.\" The museum also stewards the Zimmerman House, a 1949 Frank Lloyd Wright-designed home, describing itself as \"the only museum in the country to steward two houses designed by Frank Lloyd Wright, which are open to the public via guided tour.\" The Manchester Historic Association describes its mission as to \"collect, preserve and share the history of Manchester, New Hampshire,\" operating the Millyard Museum in Mill No. 3 of the historic Amoskeag Millyard. The Palace Theatre was built by Greek immigrant Victor Charas, with construction beginning in June 1914 and the theatre opening on April 9, 1915; the theatre's own history page describes it as having been \"considered the only first-class theatre in New Hampshire that was fireproof and 'air-conditioned.'\" Great North Aleworks was founded in 2015 by Rob and Lisa North. SEE Science Center's own site states it is marking its 40th anniversary in 2026 with special events throughout the year. The Puritan Backroom describes itself on its own site as \"bringing family, friends, and the community together since 1917.\""
+      }
+    ],
+    "faq": [
+      {
+        "question": "How old is McIntyre Ski Area?",
+        "answer": "McIntyre's own About Us page states skiing and snowboarding have been offered there \"since the chairlift began turning in 1971.\""
+      },
+      {
+        "question": "Who runs McIntyre Ski Area?",
+        "answer": "Per the operator's own account, McIntyre Ski School, Inc. took over operations from the City of Manchester in 2009, and in 2017 longtime General Manager Ross Boisvert took over and reestablished the business as McIntyre Ski Area, LLC. The City of Manchester's Parks and Recreation Department still lists McIntyre among its Recreation Facilities."
+      }
+    ],
+    "photos": []
+  },
+  "places": [
+    {
+      "slug": "mcintyre-ski-area",
+      "name": "McIntyre Ski Area",
+      "kind": "ski-area",
+      "destination_path": "united-states/new-hampshire/hillsborough-county/manchester",
+      "address": "Manchester, NH",
+      "summary": "A community ski hill in Manchester, operating since 1971 and run today as McIntyre Ski Area, LLC.",
+      "history": "McIntyre Ski Area's own About Us page states skiing and snowboarding have been offered there \"since the chairlift began turning in 1971.\" In 1996, McIntyre Ski School, Inc. opened a retail and rental shop for equipment purchases and winter gear, per the same page. In 2009, McIntyre Ski School, Inc. took over operations of the ski area from the City of Manchester, and the operator's own page credits this transition with new tubing facilities, conveyor lifts, terrain-park improvements, and a 9,000-square-foot lodge. In 2017, McIntyre Ski School, Inc. changed ownership, with longtime President and General Manager Ross Boisvert taking over and reestablishing the business as McIntyre Ski Area, LLC. Per the operator's own account, Ross Boisvert has been affiliated with McIntyre since 1983, moving from ski instructor to Snowsports Director in 1989 and General Manager in 2009, and received the 2021 Einar Aas award for Excellence in Snowsports School Management. The City of Manchester's Parks and Recreation Department lists McIntyre Ski Area among its Recreation Facilities.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "currier-museum-of-art",
+      "name": "Currier Museum of Art",
+      "kind": "museum",
+      "destination_path": "united-states/new-hampshire/hillsborough-county/manchester",
+      "address": "150 Ash Street, Manchester, NH 03104",
+      "summary": "Manchester's art museum, which also stewards the Frank Lloyd Wright-designed Zimmerman House.",
+      "history": "The Currier Museum of Art's own visit page lists its address as 150 Ash Street, Manchester, NH 03104, per the museum's own website. The museum's own site references an initiative called \"Building The Next Centennial,\" per its own homepage navigation.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "zimmerman-house",
+      "name": "Zimmerman House",
+      "kind": "historic-site",
+      "destination_path": "united-states/new-hampshire/hillsborough-county/manchester",
+      "address": "Currier Museum of Art, 150 Ash Street, Manchester, NH 03104",
+      "summary": "A 1949 Frank Lloyd Wright-designed home in Manchester, stewarded by the Currier Museum of Art and open by guided tour.",
+      "history": "The Currier Museum of Art's own Frank Lloyd Wright page describes the Zimmerman House as a 1949 Frank Lloyd Wright-designed Usonian home commissioned by Isadore and Lucille Zimmerman, stating that the Currier is \"the only museum in the country to steward two houses designed by Frank Lloyd Wright, which are open to the public via guided tour.\"",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "millyard-museum",
+      "name": "Millyard Museum",
+      "kind": "museum",
+      "destination_path": "united-states/new-hampshire/hillsborough-county/manchester",
+      "address": "200 Bedford Street, Manchester, NH 03101",
+      "summary": "A museum in the historic Amoskeag Millyard, operated by the Manchester Historic Association.",
+      "history": "The Manchester Historic Association describes its mission, per its own website, as to \"collect, preserve and share the history of Manchester, New Hampshire,\" operating the Millyard Museum in Mill No. 3 of the historic Amoskeag Millyard.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "palace-theatre-manchester",
+      "name": "Palace Theatre",
+      "kind": "theater",
+      "destination_path": "united-states/new-hampshire/hillsborough-county/manchester",
+      "address": "80 Hanover Street, Manchester, NH 03101",
+      "summary": "A 1915 theater in downtown Manchester, built by Greek immigrant Victor Charas.",
+      "history": "The Palace Theatre was built by Greek immigrant Victor Charas, with construction beginning in June 1914 and the theatre opening on April 9, 1915, per the theatre's own History page. The theatre's own history page describes it as having been \"considered the only first-class theatre in New Hampshire that was fireproof and 'air-conditioned.'\"",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "great-north-aleworks",
+      "name": "Great North Aleworks",
+      "kind": "brewery",
+      "destination_path": "united-states/new-hampshire/hillsborough-county/manchester",
+      "address": "1050 Holt Ave, Unit #14, Manchester, NH 03109",
+      "summary": "A Manchester brewery founded in 2015.",
+      "history": "Great North Aleworks was founded in 2015 by Rob and Lisa North, per the brewery's own Story & Mission page.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "see-science-center",
+      "name": "SEE Science Center",
+      "kind": "attraction",
+      "destination_path": "united-states/new-hampshire/hillsborough-county/manchester",
+      "address": "200 Bedford Street, Manchester, NH 03101",
+      "summary": "A hands-on science center in Manchester marking its 40th anniversary in 2026.",
+      "history": "SEE Science Center's own website states it is marking its 40th anniversary in 2026 with special events throughout the year, per its own website.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "puritan-backroom",
+      "name": "Puritan Backroom",
+      "kind": "restaurant",
+      "destination_path": "united-states/new-hampshire/hillsborough-county/manchester",
+      "address": "245 Hooksett Rd, Manchester, NH 03104",
+      "summary": "A Manchester restaurant operating since 1917.",
+      "history": "The Puritan Backroom describes itself on its own website as \"bringing family, friends, and the community together since 1917.\"",
+      "status": "open",
+      "photos": []
+    }
+  ],
+  "entries": [
+    {
+      "kind": "sight",
+      "name": "McIntyre Ski Area",
+      "place_slug": "mcintyre-ski-area",
+      "note": "A community ski hill in Manchester, operating since 1971."
+    },
+    {
+      "kind": "sight",
+      "name": "Currier Museum of Art",
+      "place_slug": "currier-museum-of-art",
+      "note": "Manchester's art museum, which also stewards the Frank Lloyd Wright-designed Zimmerman House."
+    },
+    {
+      "kind": "sight",
+      "name": "Zimmerman House",
+      "place_slug": "zimmerman-house",
+      "note": "A 1949 Frank Lloyd Wright-designed home, stewarded by the Currier Museum and open by guided tour."
+    },
+    {
+      "kind": "sight",
+      "name": "Millyard Museum",
+      "place_slug": "millyard-museum",
+      "note": "A museum in the historic Amoskeag Millyard, operated by the Manchester Historic Association."
+    },
+    {
+      "kind": "sight",
+      "name": "Palace Theatre",
+      "place_slug": "palace-theatre-manchester",
+      "note": "A 1915 theater in downtown Manchester, built by Greek immigrant Victor Charas."
+    },
+    {
+      "kind": "food",
+      "name": "Great North Aleworks",
+      "place_slug": "great-north-aleworks",
+      "note": "A Manchester brewery founded in 2015."
+    },
+    {
+      "kind": "sight",
+      "name": "SEE Science Center",
+      "place_slug": "see-science-center",
+      "note": "A hands-on science center in Manchester marking its 40th anniversary in 2026."
+    },
+    {
+      "kind": "food",
+      "name": "Puritan Backroom",
+      "place_slug": "puritan-backroom",
+      "note": "A Manchester restaurant operating since 1917."
+    }
+  ],
+  "links": []
+}

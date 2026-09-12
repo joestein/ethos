@@ -1,0 +1,74 @@
+{
+  "guide": {
+    "slug": "whaleback-mountain-ski-guide",
+    "title": "Whaleback Mountain, New Hampshire: Enfield's nonprofit ski area since 2013",
+    "destination": "Enfield, NH",
+    "destination_path": "united-states/new-hampshire/grafton-county/enfield",
+    "tier": "guide",
+    "intro": "Whaleback Mountain is operated by the Upper Valley Snow Sports Foundation (UVSSF), a New Hampshire nonprofit established on June 3, 2013, per New England Ski History's Whaleback page. Whaleback is registered as a 501(c)(3) charitable organization (EIN 46-2741734), per Whaleback's own About Whaleback page, which describes its mission as \"to provide an accessible, community-driven mountain experience that inspires lifelong participation in snow sports and recreation, while serving as a year-round gathering place for the Upper Valley, sustained through the support and investment of its community.\"",
+    "sections": [
+      {
+        "heading": "From Snow Crest to a nonprofit takeover",
+        "body": "The mountain was under development starting in September 1955, led by Ernest Dion; by January 1956 the developing area was known as \"Snow Crest,\" though New England Ski History states \"it is not known when the area opened.\" The area hosted the slalom portion of the New England Interscholastic Schoolboy Ski Championships in mid-February 1956, per the same page. The area closed without operating for the 1969-70 season after being placed for sale/lease in October 1969, then reopened for 1970-71 under Jim Griffiths with a new 2,520-foot Heron Poma double chairlift. Randolph National Bank purchased the then-idle ski area at auction for $848,000 on August 1, 2013; UVSSF signed a lease/purchase agreement with the bank that September and took control in November 2013, raising $100,000 in two weeks before reopening for the 2013-14 season."
+      },
+      {
+        "heading": "Closures, and reopenings",
+        "body": "The area announced in February 1988 that an insurance crisis would force it to close, and closed to the public in March 1988; the bank announced foreclosure in November 1990, completing it in December 1990, after which the area sat idle for the 1990-91, 1991-92, and 1992-93 seasons, per New England Ski History's Whaleback page. Tim and Sally Herbert purchased the area from the bank for $280,000 in April 1993 and reopened it on December 18, 1993, initially with a single manmade-snow trail. The Herberts announced the area's closure in May 2001, citing what New England Ski History describes as the effects of \"the labor market and rising fuel prices\" despite what they called its \"busiest season yet\"; the area then sat idle from 2001 to 2005. Two-time Olympian Evan Dybvig's Whaleback Mountain LLC completed a purchase on September 7, 2005 and reopened the area December 26, 2005; Dybvig announced over $1 million in debt in March 2013, forcing liquidation ahead of the bank auction that led to UVSSF's takeover."
+      },
+      {
+        "heading": "In Enfield",
+        "body": "The Enfield Shaker Museum preserves the site of a Shaker community named \"Chosen Vale,\" where Shakers lived, worked, and worshiped from 1793 to 1923, per Wikipedia's \"Enfield Shaker Museum\" article."
+      }
+    ],
+    "faq": [
+      {
+        "question": "Who runs Whaleback Mountain?",
+        "answer": "Whaleback Mountain is operated by the Upper Valley Snow Sports Foundation (UVSSF), a New Hampshire nonprofit established June 3, 2013, per New England Ski History's Whaleback page. Whaleback is registered as a 501(c)(3) charitable organization, per the operator's own About Whaleback page."
+      },
+      {
+        "question": "Has Whaleback closed before?",
+        "answer": "Yes, several times. New England Ski History's Whaleback page documents closures in 1969-70, 1988-1993, and 2001-2005, each followed by a reopening under new ownership -- most recently UVSSF's 2013 takeover after a bank auction."
+      }
+    ],
+    "photos": []
+  },
+  "places": [
+    {
+      "slug": "whaleback-mountain",
+      "name": "Whaleback Mountain",
+      "kind": "ski-area",
+      "destination_path": "united-states/new-hampshire/grafton-county/enfield",
+      "address": "Enfield, NH",
+      "summary": "A nonprofit-operated ski area in Enfield, run by the Upper Valley Snow Sports Foundation since 2013 after multiple prior closures.",
+      "history": "Whaleback Mountain is operated by the Upper Valley Snow Sports Foundation (UVSSF), a New Hampshire nonprofit established on June 3, 2013, per New England Ski History's Whaleback page. Whaleback is registered as a 501(c)(3) charitable organization (EIN 46-2741734), per Whaleback's own About Whaleback page, which describes its mission as \"to provide an accessible, community-driven mountain experience that inspires lifelong participation in snow sports and recreation, while serving as a year-round gathering place for the Upper Valley, sustained through the support and investment of its community.\" The mountain was under development starting in September 1955, led by Ernest Dion; by January 1956 the developing area was known as \"Snow Crest,\" though New England Ski History states \"it is not known when the area opened.\" The area hosted the slalom portion of the New England Interscholastic Schoolboy Ski Championships in mid-February 1956, per the same page. The area closed without operating for the 1969-70 season after being placed for sale/lease in October 1969, then reopened for 1970-71 under Jim Griffiths with a new 2,520-foot Heron Poma double chairlift. The area announced in February 1988 that an insurance crisis would force it to close, and closed to the public in March 1988; the bank announced foreclosure in November 1990, completing it in December 1990, after which the area sat idle for the 1990-91, 1991-92, and 1992-93 seasons. Tim and Sally Herbert purchased the area from the bank for $280,000 in April 1993 and reopened it on December 18, 1993, initially with a single manmade-snow trail. The Herberts announced the area's closure in May 2001, citing what New England Ski History describes as the effects of \"the labor market and rising fuel prices\" despite what they called its \"busiest season yet\"; the area then sat idle from 2001 to 2005. Two-time Olympian Evan Dybvig's Whaleback Mountain LLC completed a purchase on September 7, 2005 and reopened the area December 26, 2005; Dybvig announced over $1 million in debt in March 2013, forcing liquidation ahead of the bank auction that led to UVSSF's takeover. Randolph National Bank purchased the then-idle ski area at auction for $848,000 on August 1, 2013; UVSSF signed a lease/purchase agreement with the bank that September and took control in November 2013, raising $100,000 in two weeks before reopening for the 2013-14 season.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "enfield-shaker-museum",
+      "name": "Enfield Shaker Museum",
+      "kind": "museum",
+      "destination_path": "united-states/new-hampshire/grafton-county/enfield",
+      "address": "447 NH Route 4A, Enfield, NH 03748",
+      "summary": "A museum preserving Enfield's former Shaker community, known as Chosen Vale.",
+      "history": "The Enfield Shaker Museum preserves the site of a Shaker community named \"Chosen Vale,\" where Shakers lived, worked, and worshiped from 1793 to 1923, in a valley between Shaker Mountain and Mascoma Lake, per Wikipedia's \"Enfield Shaker Museum\" article. The museum's own website refers to the site as \"Enfield Shaker Village.\"",
+      "status": "open",
+      "photos": []
+    }
+  ],
+  "entries": [
+    {
+      "kind": "sight",
+      "name": "Whaleback Mountain",
+      "place_slug": "whaleback-mountain",
+      "note": "A nonprofit-operated ski area in Enfield, run by the Upper Valley Snow Sports Foundation since 2013."
+    },
+    {
+      "kind": "sight",
+      "name": "Enfield Shaker Museum",
+      "place_slug": "enfield-shaker-museum",
+      "note": "A museum preserving Enfield's former Shaker community, known as Chosen Vale."
+    }
+  ],
+  "links": []
+}

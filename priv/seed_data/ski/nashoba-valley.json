@@ -1,0 +1,104 @@
+{
+  "guide": {
+    "slug": "nashoba-valley-ski-guide",
+    "title": "Nashoba Valley: a 1964 rope tow, still run by the Fletcher family",
+    "destination": "Westford, MA",
+    "destination_path": "united-states/massachusetts/middlesex-county/westford",
+    "tier": "guide",
+    "intro": "Nashoba Valley \"was first opened for the 1964-65 season by Alan Fletcher Sr. as a rope tow served ski area,\" per New England Ski History; \"due to poor weather, the ski area only operated for 14 days during its freshman season.\" Early staff who helped Fletcher grow the operation, serving school groups and local skiers, included Peter Whitcomb, Midge Zaher, and David McPhee. After operating for nearly a decade with only rope tows, Nashoba Valley installed its first non-rope-tow lift, a T-Bar, in 1972, and, per the same source, \"a new snowmaking system was reportedly installed circa 1975, helping Nashoba to avoid the fate of so many other small ski areas in the eastern side of the state.\"",
+    "sections": [
+      {
+        "heading": "The chairlift years, and two generations of Fletchers",
+        "body": "\"Nashoba entered the chairlift age in 1977 when it installed a used double chairlift,\" per New England Ski History; a triple chairlift followed the next year, in 1978. Nashoba was one of the earliest ski areas to permit snowboarding, officially inviting snowboarders for the 1985-86 season, and in 1979-80 the area reportedly became the first ski area in New England to have a power tiller in its grooming fleet. A third chairlift, a CTEC triple, was installed for the 1986-87 season, and Nashoba added a fourth chairlift, the Sundance Triple, in 1994. Nashoba opened a snowtubing park nearby in 2001, which has grown to \"reportedly become the largest facility of its type in New England.\" Pam Fletcher, daughter of founder Alan Fletcher Sr., \"was a member of the US Ski Team throughout the 1980s\" and competed for the United States at the 1988 Winter Olympics; her brother Alan became General Manager of the ski area in 1998 and was later promoted to President, while Pam took over Events Marketing and Sales."
+      },
+      {
+        "heading": "In Westford",
+        "body": "Kimball Farm, per its own Westford location page, offers \"50 flavors of our famous homemade ice cream, outdoor Grill & Seafood Shack, 50 acres of fun activities, and a cozy Country Store & Cafe.\" The Westford Museum, per the Westford Historical Society & Museum's own site, operates \"most Sundays of the year from 1:00pm to 3:00pm\" and maintains a searchable online collection of the town's history. MIT's Haystack Observatory, per its own website, invites the public to \"sign up for an invitation to one of our Open House events\" to see the radio astronomy facility in person."
+      }
+    ],
+    "faq": [
+      {
+        "question": "When did Nashoba Valley open?",
+        "answer": "For the 1964-65 season, per New England Ski History, when founder Alan Fletcher Sr. opened it as a rope-tow-served ski area; poor weather limited that first season to 14 days of operation."
+      },
+      {
+        "question": "Who runs Nashoba Valley?",
+        "answer": "The Fletcher family. Alan Fletcher Sr.'s son Alan became General Manager in 1998 and was later promoted to President, while his sister Pam, a member of the 1980s US Ski Team and the 1988 US Olympic team, took over Events Marketing and Sales, per New England Ski History."
+      }
+    ],
+    "photos": []
+  },
+  "places": [
+    {
+      "slug": "nashoba-valley",
+      "name": "Nashoba Valley Ski Area",
+      "kind": "ski-area",
+      "destination_path": "united-states/massachusetts/middlesex-county/westford",
+      "address": "Westford, MA",
+      "summary": "A Westford ski area opened by Alan Fletcher Sr. for the 1964-65 season, still run by his children two chairlift generations later.",
+      "history": "Nashoba Valley \"was first opened for the 1964-65 season by Alan Fletcher Sr. as a rope tow served ski area,\" per New England Ski History; \"due to poor weather, the ski area only operated for 14 days during its freshman season.\" Early staff who helped Fletcher grow the operation, serving school groups and local skiers, included Peter Whitcomb, Midge Zaher, and David McPhee. After operating for nearly a decade with only rope tows, Nashoba Valley installed its first non-rope-tow lift, a T-Bar, in 1972, and \"a new snowmaking system was reportedly installed circa 1975, helping Nashoba to avoid the fate of so many other small ski areas in the eastern side of the state.\" \"Nashoba entered the chairlift age in 1977 when it installed a used double chairlift\"; a triple chairlift followed the next year, in 1978. Nashoba was one of the earliest ski areas to permit snowboarding, officially inviting snowboarders for the 1985-86 season, and in 1979-80 the area reportedly became the first ski area in New England to have a power tiller in its grooming fleet. A third chairlift, a CTEC triple, was installed for the 1986-87 season, and Nashoba added a fourth chairlift, the Sundance Triple, in 1994. Nashoba opened a snowtubing park nearby in 2001, which has grown to \"reportedly become the largest facility of its type in New England.\" Pam Fletcher, daughter of founder Alan Fletcher Sr., \"was a member of the US Ski Team throughout the 1980s\" and competed for the United States at the 1988 Winter Olympics; her brother Alan became General Manager of the ski area in 1998 and was later promoted to President, while Pam took over Events Marketing and Sales -- a multi-generational family operation, per New England Ski History.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "kimball-farm-westford",
+      "name": "Kimball Farm",
+      "kind": "attraction",
+      "destination_path": "united-states/massachusetts/middlesex-county/westford",
+      "address": "400 Littleton Road (Rt. 110), Westford, MA 01886",
+      "summary": "A Westford farm-stand attraction with homemade ice cream, a grill and seafood shack, and outdoor activities.",
+      "history": "Per Kimball Farm's own Westford location page, the site offers \"50 flavors of our famous homemade ice cream, outdoor Grill & Seafood Shack, 50 acres of fun activities, and a cozy Country Store & Cafe.\"",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "westford-museum",
+      "name": "Westford Museum",
+      "kind": "museum",
+      "destination_path": "united-states/massachusetts/middlesex-county/westford",
+      "address": "2-4 Boston Road, Westford, MA 01886",
+      "summary": "The Westford Historical Society's museum, open most Sunday afternoons with a searchable online collection.",
+      "history": "Per the Westford Historical Society & Museum's own site, the museum operates \"most Sundays of the year from 1:00pm to 3:00pm\" and maintains a searchable online collection of the town's history.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "mit-haystack-observatory",
+      "name": "MIT Haystack Observatory",
+      "kind": "attraction",
+      "destination_path": "united-states/massachusetts/middlesex-county/westford",
+      "address": "99 Millstone Road, Westford, MA 01886",
+      "summary": "MIT's radio astronomy facility in Westford, which opens to the public through periodic Open House events.",
+      "history": "Per MIT's own Haystack Observatory website, the public is invited to \"sign up for an invitation to one of our Open House events\" to see the radio astronomy facility in person.",
+      "status": "open",
+      "photos": []
+    }
+  ],
+  "entries": [
+    {
+      "kind": "sight",
+      "name": "Nashoba Valley Ski Area",
+      "place_slug": "nashoba-valley",
+      "note": "A Westford ski area opened by Alan Fletcher Sr. for the 1964-65 season, still run by his children two chairlift generations later."
+    },
+    {
+      "kind": "sight",
+      "name": "Kimball Farm",
+      "place_slug": "kimball-farm-westford",
+      "note": "A Westford farm-stand attraction with homemade ice cream, a grill and seafood shack, and outdoor activities."
+    },
+    {
+      "kind": "sight",
+      "name": "Westford Museum",
+      "place_slug": "westford-museum",
+      "note": "The Westford Historical Society's museum, open most Sunday afternoons."
+    },
+    {
+      "kind": "sight",
+      "name": "MIT Haystack Observatory",
+      "place_slug": "mit-haystack-observatory",
+      "note": "MIT's radio astronomy facility in Westford, open to the public via periodic Open House events."
+    }
+  ],
+  "links": []
+}

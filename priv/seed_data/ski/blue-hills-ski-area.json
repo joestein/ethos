@@ -1,0 +1,104 @@
+{
+  "guide": {
+    "slug": "blue-hills-ski-area-ski-guide",
+    "title": "Blue Hills: a 1950 Metropolitan District Commission ski hill, leased out ever since",
+    "destination": "Town of Canton, MA",
+    "destination_path": "united-states/massachusetts/norfolk-county/canton",
+    "tier": "guide",
+    "intro": "Blue Hills Ski Area sits within the Blue Hills Reservation, a Massachusetts state park that, per Wikipedia's article on the reservation, spans six towns -- Canton, Milton, Quincy, Braintree, Randolph, and Dedham -- and is managed by the Massachusetts Department of Conservation and Recreation. The ski area's own site states it is \"Located just south of Boston in the Blue Hills Reservation,\" at 4001 Washington Street, Canton, MA 02021. Per New England Ski History, the Commonwealth funded the Metropolitan District Commission (MDC) to build the ski area, and \"Blue Hills finally opened on February 16, 1950 with less than 100 skiers.\" Skiing operates as a private concession on that state land: in December 1962 the MDC awarded a 10-year lease to Larchmont Engineering Co., and Larchmont handed over operations to brothers Robert, Stuart, and Stanley Beers in 1982 under a five-year lease.",
+    "sections": [
+      {
+        "heading": "A chain of leases, into 2024",
+        "body": "In August 2000, per New England Ski History, a six-year lease was granted to the then-owners of Ragged Mountain, New Hampshire -- the Endriunas Brothers -- and that lease ended in \"a brief closure in early 2007 when their liability insurance was cancelled,\" after which the Endriunas Brothers left the ski business. The operators of Campgaw Mountain, NJ then signed a five-year lease in late 2007 under the name Ski Blue Hills Management LLC, and in August 2013 Campgaw announced it had received the contract for another five-year lease -- an announced renewal, per the source, rather than a fresh takeover. Most recently, per the ski area's own About page, \"In August 2024, Geoff Homer took the helm\" of the operation."
+      },
+      {
+        "heading": "In Canton",
+        "body": "The Museum of American Bird Art, per Mass Audubon's own page for the site, is operated by Mass Audubon as an \"Education Center & Wildlife Sanctuary\" on \"a beautiful 124-acre property\" in Canton; the same page states that \"The public gallery is closed. We have transitioned the gallery building into our new creative arts space, The Nest,\" while the organization works on \"designing a new permanent home for our art collection.\" The Eleanor Cabot Bradley Estate, per The Trustees of Reservations' own page, is a 90-acre conservation property featuring a historic mansion designed by architect Charles Platt in 1902, along with gardens, farmland, and woodland trails. The Paul Revere Heritage Site, per its own website, is \"Located in two historic buildings\" where, in the museum's own word, \"patriot Paul Revere founded the American copper industry\" in 1801."
+      }
+    ],
+    "faq": [
+      {
+        "question": "Who runs Blue Hills Ski Area?",
+        "answer": "Geoff Homer, since August 2024, per the ski area's own About page. Skiing has operated as a series of private leases on Metropolitan District Commission (now Department of Conservation and Recreation) land since a 1962 lease to Larchmont Engineering Co., followed by the Beers brothers in 1982, the Endriunas Brothers in 2000, and Campgaw Mountain's operators, as Ski Blue Hills Management LLC, from 2007."
+      },
+      {
+        "question": "Where is Blue Hills Ski Area?",
+        "answer": "At 4001 Washington Street, Canton, MA 02021, within the Blue Hills Reservation -- a Massachusetts state park managed by the Department of Conservation and Recreation that spans six towns: Canton, Milton, Quincy, Braintree, Randolph, and Dedham, per Wikipedia."
+      }
+    ],
+    "photos": []
+  },
+  "places": [
+    {
+      "slug": "blue-hills-ski-area",
+      "name": "Blue Hills Ski Area",
+      "kind": "ski-area",
+      "destination_path": "united-states/massachusetts/norfolk-county/canton",
+      "address": "4001 Washington Street, Canton, MA 02021",
+      "summary": "A state-built 1950 ski hill inside the Blue Hills Reservation in Canton, run under a series of private leases since 1962 and by Geoff Homer since 2024.",
+      "history": "Blue Hills Ski Area's own site states it is \"Located just south of Boston in the Blue Hills Reservation,\" at 4001 Washington Street, Canton, MA 02021 -- land that, per Wikipedia's article on the Blue Hills Reservation, is managed by the Massachusetts Department of Conservation and Recreation and spans six towns: Canton, Milton, Quincy, Braintree, Randolph, and Dedham. Per New England Ski History, the Commonwealth funded the Metropolitan District Commission (MDC) to build the ski area, and \"Blue Hills finally opened on February 16, 1950 with less than 100 skiers.\" In December 1962, per that source, the MDC awarded a 10-year lease to Larchmont Engineering Co., beginning the area's history of private operation on state-owned land; Larchmont handed over operations to brothers Robert, Stuart, and Stanley Beers in 1982 under a five-year lease. In August 2000, a six-year lease was granted to the then-owners of Ragged Mountain, New Hampshire -- the Endriunas Brothers -- and that lease ended in \"a brief closure in early 2007 when their liability insurance was cancelled,\" after which the Endriunas Brothers left the ski business. The operators of Campgaw Mountain, NJ then signed a five-year lease in late 2007 under the name Ski Blue Hills Management LLC, and in August 2013 Campgaw announced it had received the contract for another five-year lease. Per the ski area's own About page, \"In August 2024, Geoff Homer took the helm\" of the operation.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "museum-of-american-bird-art",
+      "name": "Museum of American Bird Art",
+      "kind": "museum",
+      "destination_path": "united-states/massachusetts/norfolk-county/canton",
+      "address": "963 Washington St, Canton, MA 02021",
+      "summary": "A Mass Audubon education center and wildlife sanctuary on a 124-acre Canton property, its public gallery replaced by a creative-arts space.",
+      "history": "Per Mass Audubon's own page for the site, the Museum of American Bird Art is operated by Mass Audubon as an \"Education Center & Wildlife Sanctuary\" on \"a beautiful 124-acre property\" in Canton. The same page states that \"The public gallery is closed. We have transitioned the gallery building into our new creative arts space, The Nest,\" while the organization works on \"designing a new permanent home for our art collection.\"",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "eleanor-cabot-bradley-estate",
+      "name": "Eleanor Cabot Bradley Estate",
+      "kind": "park",
+      "destination_path": "united-states/massachusetts/norfolk-county/canton",
+      "address": "2468B Washington Street (Route 138), Canton, MA 02021",
+      "summary": "A 90-acre Trustees of Reservations property in Canton with a 1902 mansion designed by Charles Platt, gardens, farmland, and woodland trails.",
+      "history": "Per The Trustees of Reservations' own page for the Eleanor Cabot Bradley Estate, the 90-acre conservation property features a historic mansion designed by architect Charles Platt in 1902, along with gardens, farmland, and woodland trails.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "paul-revere-heritage-site",
+      "name": "Paul Revere Heritage Site",
+      "kind": "museum",
+      "destination_path": "united-states/massachusetts/norfolk-county/canton",
+      "address": "2 Rolling Mill Way, Canton, MA",
+      "summary": "A Canton museum in two historic buildings where, per its own site, Paul Revere founded the American copper industry in 1801.",
+      "history": "The museum's own site states it is \"Located in two historic buildings at the Paul Revere Heritage Site,\" where, in the site's own word, \"patriot Paul Revere founded the American copper industry\" in 1801.",
+      "status": "open",
+      "photos": []
+    }
+  ],
+  "entries": [
+    {
+      "kind": "sight",
+      "name": "Blue Hills Ski Area",
+      "place_slug": "blue-hills-ski-area",
+      "note": "A state-built 1950 ski hill inside the Blue Hills Reservation, run under a series of private leases since 1962 and by Geoff Homer since 2024."
+    },
+    {
+      "kind": "sight",
+      "name": "Museum of American Bird Art",
+      "place_slug": "museum-of-american-bird-art",
+      "note": "A Mass Audubon education center and wildlife sanctuary on a 124-acre Canton property."
+    },
+    {
+      "kind": "sight",
+      "name": "Eleanor Cabot Bradley Estate",
+      "place_slug": "eleanor-cabot-bradley-estate",
+      "note": "A 90-acre Trustees of Reservations property with a 1902 mansion designed by Charles Platt."
+    },
+    {
+      "kind": "sight",
+      "name": "Paul Revere Heritage Site",
+      "place_slug": "paul-revere-heritage-site",
+      "note": "A Canton museum in two historic buildings where, per its own site, Paul Revere founded the American copper industry in 1801."
+    }
+  ],
+  "links": []
+}

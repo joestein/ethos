@@ -1,0 +1,104 @@
+{
+  "guide": {
+    "slug": "mount-sunapee-resort-ski-guide",
+    "title": "Mount Sunapee Resort, New Hampshire: state park, Vail-operated since 2018",
+    "destination": "Newbury, NH",
+    "destination_path": "united-states/new-hampshire/merrimack-county/newbury",
+    "tier": "guide",
+    "intro": "Mount Sunapee State Park's own description states alpine skiing is available at \"Mt. Sunapee Resort, owned by the State of New Hampshire and managed by Vail Resorts Inc.\" New Hampshire's own lease-and-amendment records for the ski area state that \"the original Lease was approved by G&C [Governor and Council] on June 10, 1998,\" awarded to the Mueller family, known for building Okemo Mountain Resort in Vermont into a major resort, per New England Ski History's Mount Sunapee page.",
+    "sections": [
+      {
+        "heading": "From the Muellers to Vail",
+        "body": "The Muellers' lease-holding company, Triple Peaks LLC, was founded by Tim and Diane Mueller in 2001; besides the Mount Sunapee lease held by the family since 1998, Triple Peaks' portfolio included Okemo (purchased 1982) and Crested Butte (purchased 2004), per NewEnglandSkiIndustry.com. On June 4, 2018, Vail Resorts announced it had acquired Triple Peaks, LLC and Stevens Pass, though the article reporting the announcement stated the deals \"are expected to be completed this summer.\" That same article states that \"the State of New Hampshire remains the owner of the land and legacy assets at Mount Sunapee,\" distinguishing the state's ownership from the operating lease Vail was acquiring. On September 26, 2018, NH Department of Natural and Cultural Resources Commissioner Sarah Stewart issued a decision memo announcing the state's approval of the transfer of the Mount Sunapee lease to Vail Resorts, following \"several rounds of due diligence,\" per NewEnglandSkiIndustry.com. New Hampshire's own lease-document records list a 2018 amendment, \"Lease Amendment #A, 2018 - Change of Control,\" effective through June 30, 2028. Vail Resorts' separate acquisition of Peak Resorts, Inc. was announced July 22, 2019 and completed September 24, 2019, which New England Ski History describes as \"making Vail Resorts the largest operator of ski areas in New England\"; Peak Resorts' portfolio at that time did not include Mount Sunapee or Okemo."
+      },
+      {
+        "heading": "In Newbury",
+        "body": "The John Hay Estate at The Fells describes itself, per its own homepage, as featuring \"83.5 acres of beauty and tranquility,\" a \"22-room Colonial Revival home,\" and \"nearly half a mile of undeveloped Lake Sunapee shoreline,\" listed on the National Register of Historic Places under the name \"Hay Estate,\" entered November 2, 2000, per Wikipedia's list of NRHP listings in Merrimack County. The Center Meetinghouse in Newbury is a church erected in 1832, per Wikipedia's Newbury, New Hampshire article, and was listed on the National Register of Historic Places on December 19, 1979. A caboose museum at Bell Cove in Newbury is listed as a site of interest for the town, in a valley that also holds Lake Solitude, a lake within Mount Sunapee State Park, per Wikipedia's Newbury, New Hampshire article."
+      }
+    ],
+    "faq": [
+      {
+        "question": "Who owns Mount Sunapee Resort?",
+        "answer": "Mount Sunapee State Park's own description states alpine skiing is available at \"Mt. Sunapee Resort, owned by the State of New Hampshire and managed by Vail Resorts Inc.\" The state's own lease records show the original lease approved June 10, 1998 to the Mueller family, transferred to Vail Resorts in a deal announced June 4, 2018 and approved by the state that September."
+      },
+      {
+        "question": "Is Mount Sunapee part of the Peak Resorts deal Vail made in 2019?",
+        "answer": "No. Vail's separate acquisition of Peak Resorts, Inc. was announced July 22, 2019 and completed September 24, 2019, and Peak Resorts' portfolio at that time did not include Mount Sunapee or Okemo, per New England Ski History's Vail Resorts operator page."
+      }
+    ],
+    "photos": []
+  },
+  "places": [
+    {
+      "slug": "mount-sunapee-resort",
+      "name": "Mount Sunapee Resort",
+      "kind": "ski-area",
+      "destination_path": "united-states/new-hampshire/merrimack-county/newbury",
+      "address": "Newbury, NH",
+      "summary": "A state-owned ski area within Mount Sunapee State Park in Newbury, leased since 1998 and now operated by Vail Resorts.",
+      "history": "Mount Sunapee State Park's own description states alpine skiing is available at \"Mt. Sunapee Resort, owned by the State of New Hampshire and managed by Vail Resorts Inc.\" New Hampshire's own lease-and-amendment records for the ski area state that \"the original Lease was approved by G&C [Governor and Council] on June 10, 1998,\" awarded to the Mueller family, known for building Okemo Mountain Resort in Vermont into a major resort, per New England Ski History's Mount Sunapee page. The Muellers' lease-holding company, Triple Peaks LLC, was founded by Tim and Diane Mueller in 2001; besides the Mount Sunapee lease held by the family since 1998, Triple Peaks' portfolio included Okemo (purchased 1982) and Crested Butte (purchased 2004), per NewEnglandSkiIndustry.com. On June 4, 2018, Vail Resorts announced it had acquired Triple Peaks, LLC and Stevens Pass, though the article reporting the announcement stated the deals \"are expected to be completed this summer.\" That same article states that \"the State of New Hampshire remains the owner of the land and legacy assets at Mount Sunapee,\" distinguishing the state's ownership from the operating lease Vail was acquiring. On September 26, 2018, NH Department of Natural and Cultural Resources Commissioner Sarah Stewart issued a decision memo announcing the state's approval of the transfer of the Mount Sunapee lease to Vail Resorts, following \"several rounds of due diligence,\" per NewEnglandSkiIndustry.com. New Hampshire's own lease-document records list a 2018 amendment, \"Lease Amendment #A, 2018 - Change of Control,\" effective through June 30, 2028. Vail Resorts' separate acquisition of Peak Resorts, Inc. was announced July 22, 2019 and completed September 24, 2019, which New England Ski History describes as \"making Vail Resorts the largest operator of ski areas in New England\"; Peak Resorts' portfolio at that time did not include Mount Sunapee or Okemo.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "john-hay-estate-at-the-fells",
+      "name": "John Hay Estate at The Fells",
+      "kind": "historic-site",
+      "destination_path": "united-states/new-hampshire/merrimack-county/newbury",
+      "address": "456 Rt 103A, Newbury, NH 03255",
+      "summary": "A Colonial Revival estate on Lake Sunapee's shore in Newbury, listed on the National Register of Historic Places.",
+      "history": "The John Hay Estate at The Fells describes itself, per its own homepage, as featuring \"83.5 acres of beauty and tranquility,\" a \"22-room Colonial Revival home,\" and \"nearly half a mile of undeveloped Lake Sunapee shoreline,\" and states it is \"listed on the National Register of Historic Places.\" The property is listed under the name \"Hay Estate,\" entered November 2, 2000, at an address on NH Route 103A in Newbury, per Wikipedia's list of National Register of Historic Places listings in Merrimack County, New Hampshire.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "center-meetinghouse",
+      "name": "Center Meetinghouse",
+      "kind": "historic-site",
+      "destination_path": "united-states/new-hampshire/merrimack-county/newbury",
+      "address": "NH Route 103, Newbury, NH 03255",
+      "summary": "An 1832 church in Newbury, listed on the National Register of Historic Places.",
+      "history": "The Center Meetinghouse in Newbury is described by Wikipedia's Newbury, New Hampshire article as \"a church erected in 1832.\" It was listed on the National Register of Historic Places on December 19, 1979, per Wikipedia's list of National Register of Historic Places listings in Merrimack County, New Hampshire.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "bell-cove-caboose-museum",
+      "name": "Caboose Museum at Bell Cove",
+      "kind": "museum",
+      "destination_path": "united-states/new-hampshire/merrimack-county/newbury",
+      "address": "Bell Cove, Newbury, NH",
+      "summary": "A caboose museum at Bell Cove in Newbury, near Lake Solitude within Mount Sunapee State Park.",
+      "history": "A caboose museum at Bell Cove in Newbury is listed as a site of interest for the town, per Wikipedia's Newbury, New Hampshire article, in a valley that also holds Lake Solitude, a lake within Mount Sunapee State Park.",
+      "status": "open",
+      "photos": []
+    }
+  ],
+  "entries": [
+    {
+      "kind": "sight",
+      "name": "Mount Sunapee Resort",
+      "place_slug": "mount-sunapee-resort",
+      "note": "A state-owned ski area within Mount Sunapee State Park in Newbury, operated by Vail Resorts."
+    },
+    {
+      "kind": "sight",
+      "name": "John Hay Estate at The Fells",
+      "place_slug": "john-hay-estate-at-the-fells",
+      "note": "A Colonial Revival estate on Lake Sunapee's shore in Newbury, on the National Register of Historic Places."
+    },
+    {
+      "kind": "sight",
+      "name": "Center Meetinghouse",
+      "place_slug": "center-meetinghouse",
+      "note": "An 1832 church in Newbury, on the National Register of Historic Places."
+    },
+    {
+      "kind": "sight",
+      "name": "Caboose Museum at Bell Cove",
+      "place_slug": "bell-cove-caboose-museum",
+      "note": "A caboose museum at Bell Cove in Newbury, near Lake Solitude."
+    }
+  ],
+  "links": []
+}

@@ -352,7 +352,11 @@ defmodule Ethos.Seeds.KoreanBbqSeedDataTest do
     assert hit?(@superlative_patterns, "the biggest Koreatown in America")
 
     # Still not rankings: a count, a measurement, a date and an award all publish.
-    refute hit?(@superlative_patterns, "Korean businesses on Lawrence Avenue fell from 158 in 1997 to 50 by 2017.")
+    refute hit?(
+             @superlative_patterns,
+             "Korean businesses on Lawrence Avenue fell from 158 in 1997 to 50 by 2017."
+           )
+
     refute hit?(@superlative_patterns, "Twenty-five restaurants sit inside the city limits.")
     refute hit?(@superlative_patterns, "It holds one Michelin star, awarded in 2019.")
   end
@@ -402,7 +406,10 @@ defmodule Ethos.Seeds.KoreanBbqSeedDataTest do
     # A kitchen can have a charcoal grill. This is the hole a South Bay summary
     # came through: "the option to grill their meat over a charcoal grill" cleared
     # the gate while never establishing that the grill was at the table.
-    refute grill_at_the_table?("The option to grill their meat over a charcoal grill burning mesquite.")
+    refute grill_at_the_table?(
+             "The option to grill their meat over a charcoal grill burning mesquite."
+           )
+
     refute grill_at_the_table?("A gas grill runs the length of the kitchen.")
 
     # Still evidence, because these bind the grill to the table:
@@ -567,7 +574,8 @@ defmodule Ethos.Seeds.KoreanBbqSeedDataTest do
             {file, "a place this file owns has no entry, so no guide links it"}
 
           bad_link ->
-            {file, "link #{inspect(bad_link["target"])} names no guide that exists, or a bad kind"}
+            {file,
+             "link #{inspect(bad_link["target"])} names no guide that exists, or a bad kind"}
 
           true ->
             nil

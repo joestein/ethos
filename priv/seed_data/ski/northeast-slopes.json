@@ -1,0 +1,87 @@
+{
+  "guide": {
+    "slug": "northeast-slopes-ski-guide",
+    "title": "Northeast Slopes, Vermont: a rope tow relocated, renamed, and run by volunteers",
+    "destination": "East Corinth, VT",
+    "destination_path": "united-states/vermont/orange-county/corinth",
+    "tier": "guide",
+    "intro": "Northeast Slopes traces its founding to 1936, when the Bradford Winter Sports Club installed its first rope tow on Mt. Tug in Bradford, Vermont, per Northeast Slopes' own \"Our Story\" history page. In the 1940s the operation relocated from Bradford to Eastman Hill in East Corinth, on land connected to Eugene Eastman, and the area was officially renamed Northeast Slopes in 1946. In 1962 the local community formed Northeast Slopes Ski Tows, Inc., a non-profit entity, to run the area, and a new non-profit, Northeast Slopes, Inc., was formed in 1986 to purchase and preserve it.",
+    "sections": [
+      {
+        "heading": "A volunteer-run rope tow today",
+        "body": "The area's T-Bar lift, named the \"John A. Pierson Jr. T-Bar,\" was installed in 2009, per Northeast Slopes' own \"Our Story\" history page. Northeast Slopes operates as a federal 501(c)(3) non-profit corporation run entirely by volunteers, according to its own homepage."
+      },
+      {
+        "heading": "In East Corinth",
+        "body": "Founded in the early 1890s as the East Corinth Library Association, Blake Memorial Library acquired its Village Road site in November 1900 and dedicated the building in 1902 as a memorial to Nathan and Susan Blake, per the Town of Corinth's own library page. The original building was destroyed by fire in 1945, was rebuilt and reopened in 1949, and received a Felix Gendrot addition in 1961. The Corinth Academy Museum, in a building constructed in 1846 in the Cookeville hamlet of Corinth, is leased by the town to the Corinth Historical Society, founded 1978, in exchange for the society maintaining the building and grounds, according to the Town of Corinth's own Corinth Historical Society page; its collection includes exhibits on the historic Bowen-Hunter Bobbin Mill, which once made wooden bobbins for the textile industry in East Corinth."
+      }
+    ],
+    "faq": [
+      {
+        "question": "When did Northeast Slopes start, and has it always been in East Corinth?",
+        "answer": "No. Northeast Slopes traces its founding to 1936, when the Bradford Winter Sports Club installed a rope tow on Mt. Tug in Bradford, Vermont; the operation relocated to Eastman Hill in East Corinth in the 1940s after a snowless season at the original site, and was officially renamed Northeast Slopes in 1946, per Northeast Slopes' own \"Our Story\" history page."
+      },
+      {
+        "question": "Who runs Northeast Slopes today?",
+        "answer": "Northeast Slopes is a federal 501(c)(3) non-profit corporation run entirely by volunteers, per its own homepage. The current non-profit, Northeast Slopes, Inc., was formed in 1986 to purchase and preserve the area."
+      }
+    ],
+    "photos": []
+  },
+  "places": [
+    {
+      "slug": "northeast-slopes",
+      "name": "Northeast Slopes",
+      "kind": "ski-area",
+      "destination_path": "united-states/vermont/orange-county/corinth",
+      "address": "East Corinth, VT",
+      "summary": "A volunteer-run, non-profit T-bar and rope tow ski area on Eastman Hill, tracing its roots to a 1936 rope tow in Bradford.",
+      "history": "Northeast Slopes traces its founding to 1936, when the Bradford Winter Sports Club installed its first rope tow on Mt. Tug in Bradford, Vermont, per Northeast Slopes' own \"Our Story\" history page. In the 1940s the operation relocated from Bradford to Eastman Hill in East Corinth, on land connected to Eugene Eastman, and the area was officially renamed Northeast Slopes in 1946. In 1962 the local community formed Northeast Slopes Ski Tows, Inc., a non-profit entity, to run the area. A new non-profit, Northeast Slopes, Inc., was formed in 1986 to purchase and preserve the area. The area's T-Bar lift, named the \"John A. Pierson Jr. T-Bar,\" was installed in 2009. Northeast Slopes operates as a federal 501(c)(3) non-profit corporation run entirely by volunteers, according to its own homepage.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "blake-memorial-library",
+      "name": "Blake Memorial Library",
+      "kind": "historic-site",
+      "destination_path": "united-states/vermont/orange-county/corinth",
+      "address": "676 Village Road, East Corinth, VT 05040",
+      "summary": "East Corinth's public library, dedicated in 1902 as a memorial to Nathan and Susan Blake.",
+      "history": "Founded in the early 1890s as the East Corinth Library Association, Blake Memorial Library acquired its Village Road site in November 1900 and dedicated the building in 1902 as a memorial to Nathan and Susan Blake, per the Town of Corinth's own library page. The original library building was destroyed by fire in 1945, was rebuilt and reopened in 1949, and received a Felix Gendrot addition in 1961.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "corinth-academy-museum",
+      "name": "Corinth Academy Museum",
+      "kind": "museum",
+      "destination_path": "united-states/vermont/orange-county/corinth",
+      "address": "1767 Center Road, Corinth, VT 05039",
+      "summary": "A local history museum in an 1846 building, leased to the Corinth Historical Society.",
+      "history": "The building, constructed in 1846 in the Cookeville hamlet of Corinth, now houses the Corinth Academy Museum, which the town leases to the Corinth Historical Society, founded 1978, in exchange for the society maintaining the building and grounds, according to the Town of Corinth's own Corinth Historical Society page. The museum's collection includes exhibits on the historic Bowen-Hunter Bobbin Mill, which once operated in East Corinth making wooden bobbins for the textile industry.",
+      "status": "open",
+      "photos": []
+    }
+  ],
+  "entries": [
+    {
+      "kind": "sight",
+      "name": "Northeast Slopes",
+      "place_slug": "northeast-slopes",
+      "note": "A volunteer-run, non-profit T-bar and rope tow ski area on Eastman Hill."
+    },
+    {
+      "kind": "sight",
+      "name": "Blake Memorial Library",
+      "place_slug": "blake-memorial-library",
+      "note": "East Corinth's public library, dedicated in 1902 as a memorial to Nathan and Susan Blake."
+    },
+    {
+      "kind": "sight",
+      "name": "Corinth Academy Museum",
+      "place_slug": "corinth-academy-museum",
+      "note": "A local history museum in an 1846 building, run by the Corinth Historical Society."
+    }
+  ],
+  "links": []
+}

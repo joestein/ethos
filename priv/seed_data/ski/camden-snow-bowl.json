@@ -1,0 +1,142 @@
+{
+  "guide": {
+    "slug": "camden-snow-bowl-ski-guide",
+    "title": "Camden Snow Bowl: a Depression-era ski hill with ocean views",
+    "destination": "Town of Camden, ME",
+    "destination_path": "united-states/maine/knox-county/camden",
+    "tier": "guide",
+    "intro": "Per Camden Snow Bowl's own \"About\" page, \"In the middle of the Great Depression, volunteers begin work to build a lodge, skate house, and toboggan chute. All material was donated and lumber had to be floated across Hosmer Pond,\" describing the fall 1936 start of construction. The area's own website states, \"Owned by the town of Camden, the Snow Bowl is managed and operated by full-time town staff,\" elsewhere describing it as \"Managed by the Camden Parks and Rec Dept.\" Per Wikipedia's \"Camden Snow Bowl\" article, it is \"Located on Ragged Mountain in Camden, Maine,\" with a \"clear view of the ocean, which can be seen from the summit of the triple chairlift.\"",
+    "sections": [
+      {
+        "heading": "Fire, rebuilding, and a chairlift",
+        "body": "Per Camden Snow Bowl's own history page, the original, volunteer-built lodge burned down in 1967; the current A-frame lodge was built in 1968 to replace it. In 2014, per the same source, a triple chair lift was installed, and new LED lighting enabled night skiing. Citing the Lewiston Daily Sun, the operator's own history page states \"one January 1947 weekend saw over 10,000 visitors, with car license plates observed from as far away as Florida, Texas, and Washington.\""
+      },
+      {
+        "heading": "The toboggan chute and championships",
+        "body": "Camden Snow Bowl's own homepage describes it as \"the only ski area on the East Coast with ocean views,\" adding that \"The Snow Bowl is also home to the country's only remaining original, gravity-operated 400-foot-long wooden toboggan chute.\" The chute, per Camden Snow Bowl's own toboggan chute page, is \"a handmade wooden trough, flooded with ice, with an outrun at the end onto Hosmer Pond,\" and is closed to the public during the annual U.S. National Toboggan Championships, which per Wikipedia's \"Camden Snow Bowl\" article have been held at the Snow Bowl since 1991 and are described as \"the only organized wood toboggan event in the country.\""
+      },
+      {
+        "heading": "In Camden",
+        "body": "The Camden Opera House's own website states it \"Opened in 1894 and [is] on the National Register of Historic Places,\" and is \"Owned, managed, and supported by the Town of Camden, Maine.\" Camden Hills State Park, overlooking Penobscot Bay, encompasses 5,710 acres of land turned over to the state in 1947, per Wikipedia's \"Camden Hills State Park\" article; a Civilian Conservation Corps camp there operated June 1935 through September 1941, and the Mount Battie Auto Road was completed in 1965. The Conway House, probably built around 1770, was listed on the National Register on December 23, 1969, and today operates as the Conway Homestead & Cramer Museum, per Wikipedia's \"Conway House (Camden, Maine)\" article. Curtis Island, at the exterior of Camden Harbor, was known as \"Negro Island\" from around 1768 before being renamed in 1934 after Cyrus H. K. Curtis, per Wikipedia's \"Curtis Island (Maine)\" article; its lighthouse appears in a Fitz Henry Lane painting titled \"Lighthouse at Camden, Maine.\" Per Wikipedia's \"Camden, Maine\" article, \"The Whitehall Inn opened in 1901 in a converted sea captain's mansion on High Street,\" and in 1912 Edna St. Vincent Millay first recited her poem \"Renascence\" there to guests, leading to a patron's offer that \"launched her career as a Pulitzer Prize-winning poet.\""
+      }
+    ],
+    "faq": [
+      {
+        "question": "Who owns Camden Snow Bowl?",
+        "answer": "Per the operator's own website, \"Owned by the town of Camden, the Snow Bowl is managed and operated by full-time town staff,\" through the Camden Parks and Recreation Department."
+      },
+      {
+        "question": "What is the U.S. National Toboggan Championships?",
+        "answer": "An annual event held at Camden Snow Bowl's Jack Williams Toboggan Chute since 1991, described by Wikipedia's \"Camden Snow Bowl\" article as \"the only organized wood toboggan event in the country.\""
+      }
+    ],
+    "photos": []
+  },
+  "places": [
+    {
+      "slug": "camden-snow-bowl",
+      "name": "Camden Snow Bowl",
+      "kind": "ski-area",
+      "destination_path": "united-states/maine/knox-county/camden",
+      "address": "20 Barnestown Rd, Camden, ME 04843",
+      "summary": "A town-owned ski area on Ragged Mountain with ocean views, built by Depression-era volunteers and home to the U.S. National Toboggan Championships.",
+      "history": "Per Camden Snow Bowl's own \"About\" page, \"In the middle of the Great Depression, volunteers begin work to build a lodge, skate house, and toboggan chute. All material was donated and lumber had to be floated across Hosmer Pond,\" describing the fall 1936 start of construction. The area's own website states, \"Owned by the town of Camden, the Snow Bowl is managed and operated by full-time town staff,\" elsewhere describing it as \"Managed by the Camden Parks and Rec Dept.\" The original, volunteer-built lodge burned down in 1967; the current A-frame lodge was built in 1968. In 2014 a triple chair lift was installed, and new LED lighting enabled night skiing. Citing the Lewiston Daily Sun, the operator's history page states \"one January 1947 weekend saw over 10,000 visitors, with car license plates observed from as far away as Florida, Texas, and Washington.\" Per Wikipedia's \"Camden Snow Bowl\" article, it is \"Located on Ragged Mountain in Camden, Maine,\" with a \"clear view of the ocean, which can be seen from the summit of the triple chairlift.\" The operator's own homepage describes it as \"the only ski area on the East Coast with ocean views,\" adding that \"The Snow Bowl is also home to the country's only remaining original, gravity-operated 400-foot-long wooden toboggan chute.\" The Jack Williams Toboggan Chute, per the operator's own toboggan chute page, is \"a handmade wooden trough, flooded with ice, with an outrun at the end onto Hosmer Pond,\" closed to the public during the annual U.S. National Toboggan Championships, which per Wikipedia have been held at the Snow Bowl since 1991 and are described as \"the only organized wood toboggan event in the country.\"",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "camden-opera-house",
+      "name": "Camden Opera House",
+      "kind": "theater",
+      "destination_path": "united-states/maine/knox-county/camden",
+      "address": "29 Elm Street, Camden, ME 04843",
+      "summary": "A town-owned 1894 opera house in downtown Camden, listed on the National Register of Historic Places.",
+      "history": "The Camden Opera House's own website states it \"Opened in 1894 and [is] on the National Register of Historic Places,\" and is \"Owned, managed, and supported by the Town of Camden, Maine.\"",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "camden-hills-state-park",
+      "name": "Camden Hills State Park",
+      "kind": "park",
+      "destination_path": "united-states/maine/knox-county/camden",
+      "address": "US Route 1, Camden, ME 04843",
+      "summary": "A state park overlooking Penobscot Bay, developed in part by a Depression-era Civilian Conservation Corps camp.",
+      "history": "Per Wikipedia's \"Camden Hills State Park\" article, the park overlooks Penobscot Bay in the town of Camden and encompasses 5,710 acres of land turned over to the state in 1947. A Civilian Conservation Corps camp there operated from June 1935 to September 1941, creating roads, trails, buildings, and recreational facilities, and the Mount Battie Auto Road was completed in 1965.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "conway-homestead-cramer-museum",
+      "name": "Conway Homestead & Cramer Museum",
+      "kind": "museum",
+      "destination_path": "united-states/maine/knox-county/camden",
+      "address": "Conway Road, Camden, ME 04843",
+      "summary": "An 18th-century farmhouse museum complex in Camden, listed on the National Register of Historic Places in 1969.",
+      "history": "The Conway House, probably built around 1770, was listed on the National Register of Historic Places on December 23, 1969, per Wikipedia's \"Conway House (Camden, Maine)\" article; the site today operates as the Conway Homestead & Cramer Museum, including the Cramer Museum, a barn with carriages and sleighs, a blacksmith shop, and a maple sugaring house.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "curtis-island",
+      "name": "Curtis Island",
+      "kind": "historic-site",
+      "destination_path": "united-states/maine/knox-county/camden",
+      "address": "Curtis Island, Camden Harbor, Camden, ME 04843",
+      "summary": "A lighthouse-topped island at the mouth of Camden Harbor, renamed in 1934 for publisher Cyrus H. K. Curtis.",
+      "history": "Per Wikipedia's \"Curtis Island (Maine)\" article, Curtis Island was known as \"Negro Island\" from around 1768, named after a Black sailor who later lived there, before being renamed in 1934 after Cyrus H. K. Curtis, publisher of the Saturday Evening Post and a longtime resident and benefactor of Camden. The lighthouse on Curtis Island appears in a painting by Fitz Henry Lane titled \"Lighthouse at Camden, Maine.\"",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "whitehall-inn",
+      "name": "Whitehall Inn",
+      "kind": "bnb",
+      "destination_path": "united-states/maine/knox-county/camden",
+      "address": "52 High Street, Camden, ME 04843",
+      "summary": "A 1901 sea captain's mansion turned inn on High Street, where poet Edna St. Vincent Millay was discovered in 1912.",
+      "history": "Per Wikipedia's \"Camden, Maine\" article, \"The Whitehall Inn opened in 1901 in a converted sea captain's mansion on High Street, catering to affluent visitors.\" In 1912, Edna St. Vincent Millay first recited her poem \"Renascence,\" written from atop Mount Battie, to guests at the Whitehall Inn, and a patron's resulting offer to fund her Vassar College education \"launched her career as a Pulitzer Prize-winning poet.\" The inn's own website describes itself as \"the place where Edna St. Vincent Millay was discovered and Peyton Place was filmed.\"",
+      "status": "open",
+      "photos": []
+    }
+  ],
+  "entries": [
+    {
+      "kind": "sight",
+      "name": "Camden Snow Bowl",
+      "place_slug": "camden-snow-bowl",
+      "note": "A town-owned ski area on Ragged Mountain with ocean views, home to the U.S. National Toboggan Championships."
+    },
+    {
+      "kind": "sight",
+      "name": "Camden Opera House",
+      "place_slug": "camden-opera-house",
+      "note": "A town-owned 1894 opera house in downtown Camden, National Register-listed."
+    },
+    {
+      "kind": "sight",
+      "name": "Camden Hills State Park",
+      "place_slug": "camden-hills-state-park",
+      "note": "A state park overlooking Penobscot Bay, developed in part by a Depression-era CCC camp."
+    },
+    {
+      "kind": "sight",
+      "name": "Conway Homestead & Cramer Museum",
+      "place_slug": "conway-homestead-cramer-museum",
+      "note": "An 18th-century farmhouse museum complex, National Register-listed in 1969."
+    },
+    {
+      "kind": "sight",
+      "name": "Curtis Island",
+      "place_slug": "curtis-island",
+      "note": "A lighthouse-topped island at the mouth of Camden Harbor, renamed in 1934 for publisher Cyrus H. K. Curtis."
+    },
+    {
+      "kind": "stay",
+      "name": "Whitehall Inn",
+      "place_slug": "whitehall-inn",
+      "note": "A 1901 sea captain's mansion turned inn, where poet Edna St. Vincent Millay was discovered in 1912."
+    }
+  ],
+  "links": []
+}

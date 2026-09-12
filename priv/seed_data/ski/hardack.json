@@ -1,0 +1,104 @@
+{
+  "guide": {
+    "slug": "hardack-ski-guide",
+    "title": "Hard'Ack, Vermont: St. Albans City's municipal rope tow and tubing hill",
+    "destination": "St. Albans City, VT",
+    "destination_path": "united-states/vermont/franklin-county/st-albans-city",
+    "tier": "guide",
+    "intro": "Hard'Ack Recreation Area is a municipal facility of the City of St. Albans, Vermont, operated by the city's Recreation & Parks Department, whose office is based at the Greg Brown Lodge on the site, per the city's own website. Located at 179 Congress Street, Hard'Ack includes the city's public pool, referred to on the city's site as \"the City Pool at Hard'ack Recreation Area,\" and its rope tow and tubing hill are listed as still operating in the New England Lost Ski Areas Project's roundup of currently-operating small areas and in Wikipedia's list of Vermont ski areas.",
+    "sections": [
+      {
+        "heading": "A city-run rope tow and pool",
+        "body": "Hard'Ack Recreation Area is operated by the St. Albans Recreation & Parks Department out of the Greg Brown Lodge on site, per the city's own website. Its rope tow and tubing hill are listed as still operating in the New England Lost Ski Areas Project's roundup of currently-operating small areas and in Wikipedia's list of Vermont ski areas. The recreation area also includes the city's public pool."
+      },
+      {
+        "heading": "In St. Albans City",
+        "body": "Welden Theatre, a three-screen multiplex on N. Main Street, also offers private rentals for parties and events, according to the theater's own website. Saint Albans Museum, on Church Street, describes itself as \"a site of learning since 1800\" and \"a powerful place of memory since 1970,\" with seasonal exhibits and a year-round third-floor room, per the museum's own website. Taylor Park hosts a summer concert series, per the city's own recreation listing, and is one of the surviving sites connected to the St. Albans Raid of October 19, 1864, the northernmost land action of the American Civil War, along with the American House, according to Wikipedia's St. Albans Raid article."
+      }
+    ],
+    "faq": [
+      {
+        "question": "Who runs Hard'Ack?",
+        "answer": "Hard'Ack Recreation Area is a municipal facility of the City of St. Albans, operated by the city's Recreation & Parks Department out of the Greg Brown Lodge on site, per the city's own website."
+      },
+      {
+        "question": "Is Hard'Ack still an operating ski hill?",
+        "answer": "Yes. Its rope tow and tubing hill are listed as still operating in the New England Lost Ski Areas Project's roundup of currently-operating small areas and in Wikipedia's list of Vermont ski areas."
+      }
+    ],
+    "photos": []
+  },
+  "places": [
+    {
+      "slug": "hardack",
+      "name": "Hard'Ack",
+      "kind": "ski-area",
+      "destination_path": "united-states/vermont/franklin-county/st-albans-city",
+      "address": "179 Congress Street, St. Albans City, VT",
+      "summary": "A municipal rope-tow and tubing hill run by the City of St. Albans' Recreation & Parks Department, alongside the city's public pool.",
+      "history": "Hard'Ack Recreation Area is a municipal facility of the City of St. Albans, Vermont, operated by the city's Recreation & Parks Department, whose office is based at the Greg Brown Lodge on the site, per the city's own website. Located at 179 Congress Street, St. Albans City, Vermont, Hard'Ack includes the city's public pool, referred to on the city's site as \"the City Pool at Hard'ack Recreation Area.\" Hard'Ack's rope tow and tubing hill are listed as still operating in the New England Lost Ski Areas Project's roundup of currently-operating small areas and in Wikipedia's list of Vermont ski areas.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "welden-theatre",
+      "name": "Welden Theatre",
+      "kind": "theater",
+      "destination_path": "united-states/vermont/franklin-county/st-albans-city",
+      "address": "104 N. Main Street, St. Albans City, VT",
+      "summary": "A three-screen multiplex cinema on Main Street in St. Albans City, also available for private rentals.",
+      "history": "Welden Theatre is a multiplex cinema with three screens showing current films at 104 N. Main Street in St. Albans City, and also offers private rentals for parties and events, per the theater's own website.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "saint-albans-museum",
+      "name": "Saint Albans Museum",
+      "kind": "museum",
+      "destination_path": "united-states/vermont/franklin-county/st-albans-city",
+      "address": "9 Church St., St. Albans, VT 05478",
+      "summary": "A local history museum in St. Albans, open seasonally with a year-round third-floor exhibit room.",
+      "history": "Saint Albans Museum, located at 9 Church St. in St. Albans, describes itself as \"a site of learning since 1800\" and \"a powerful place of memory since 1970\"; its main exhibits run seasonally from May 16 through October 9, with a third-floor room open year-round, per the museum's own website.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "taylor-park",
+      "name": "Taylor Park",
+      "kind": "park",
+      "destination_path": "united-states/vermont/franklin-county/st-albans-city",
+      "address": "Taylor Park, St. Albans City, VT",
+      "summary": "A downtown park hosting a summer concert series and one of the surviving sites connected to the 1864 St. Albans Raid.",
+      "history": "Taylor Park hosts a summer concert series, per the City of St. Albans' own recreation listing. It is one of the surviving sites connected to the St. Albans Raid of October 19, 1864, the northernmost land action of the American Civil War, along with the American House where some of the Confederate raiders stayed, according to Wikipedia's St. Albans Raid article.",
+      "status": "open",
+      "photos": []
+    }
+  ],
+  "entries": [
+    {
+      "kind": "sight",
+      "name": "Hard'Ack",
+      "place_slug": "hardack",
+      "note": "A municipal rope-tow and tubing hill run by St. Albans' Recreation & Parks Department."
+    },
+    {
+      "kind": "sight",
+      "name": "Welden Theatre",
+      "place_slug": "welden-theatre",
+      "note": "A three-screen multiplex cinema on Main Street, also available for private rentals."
+    },
+    {
+      "kind": "sight",
+      "name": "Saint Albans Museum",
+      "place_slug": "saint-albans-museum",
+      "note": "A local history museum open seasonally, with a year-round third-floor room."
+    },
+    {
+      "kind": "walk",
+      "name": "Taylor Park",
+      "place_slug": "taylor-park",
+      "note": "A downtown park connected to the 1864 St. Albans Raid, hosting a summer concert series."
+    }
+  ],
+  "links": []
+}

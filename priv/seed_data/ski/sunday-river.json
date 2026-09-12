@@ -1,0 +1,115 @@
+{
+  "guide": {
+    "slug": "sunday-river-ski-guide",
+    "title": "Sunday River: from a 1958 development corporation to Boyne Resorts",
+    "destination": "Newry, ME",
+    "destination_path": "united-states/maine/oxford-county/newry",
+    "tier": "guide",
+    "intro": "Before Les Otten, per New England Ski History, Sunday River was founded by the Bethel Area Development Corporation, formed in February 1958, which created the Sunday River Skiway Corporation — formed May 7, 1958, with Governor Edmund Muskie among its first stockholders — to build and operate the ski area on Barker/Bald Mountain. By 1972, the ski area \"was taken over by Killington's parent company,\" under which Les Otten was named general manager in 1973, before he personally acquired full ownership of the ski area in 1980 and subsequently expanded snowmaking and trails.",
+    "sections": [
+      {
+        "heading": "American Skiing Company, then Boyne",
+        "body": "Otten formed LBO Resort Enterprises in 1994, which acquired Attitash (NH) and Sugarbush (VT) that same year and Cranmore (NH) in 1995. In 1996, LBO Resort Enterprises merged with S-K-I Ltd. to form American Skiing Company, bringing Sunday River and rival Sugarloaf under the same ownership, per New England Ski History. On August 8, 2007, American Skiing Company sold Sunday River and Sugarloaf to Boyne USA Resorts for a combined $77 million; Boyne then sold the underlying real-estate assets to CNL Lifestyle Properties (via CNL Income Properties) while retaining an operating lease to run the resort. In 2016, per Wikipedia's \"Boyne Resorts\" article, CNL Income Properties sold all six of the ski resorts it leased to Boyne — including Sunday River — to Och-Ziff Capital Management, with Boyne continuing to operate under lease. That purchase-from-Och-Ziff was announced in March 2018, but per New England Ski History's coverage of the same multi-resort transaction, it was in May 2018 that Boyne completed the acquisition, putting operational control and ownership back under one company."
+      },
+      {
+        "heading": "In Newry",
+        "body": "Newry, Maine — Oxford County, 2020 census population 411 — is the town containing Sunday River, per Wikipedia's \"Newry, Maine\" article. Sunday River's resort address is 15 South Ridge Road, Newry, Maine 04261. The Jordan, per the resort's own lodging page, is one of Sunday River's on-mountain hotels, described as a premium property with mountain views and a full-service spa. The Grand Summit Hotel, per the same page, is a full-service hotel at the resort center, with family-friendly amenities and a pool. The Clubhouse, per the resort's own dining page, is the dining venue at Sunday River Golf Club."
+      }
+    ],
+    "faq": [
+      {
+        "question": "Who owns Sunday River?",
+        "answer": "Boyne Resorts. American Skiing Company sold Sunday River to Boyne USA Resorts on August 8, 2007; after a period of leased operation under CNL and then Och-Ziff Capital Management, Boyne regained full ownership in May 2018, per New England Ski History."
+      },
+      {
+        "question": "Did Les Otten found Sunday River?",
+        "answer": "No. Per New England Ski History, Sunday River was founded by the Bethel Area Development Corporation in 1958, which created the Sunday River Skiway Corporation to build and run it. Otten was named general manager in 1973, under Killington's parent company, before personally acquiring full ownership in 1980."
+      }
+    ],
+    "photos": []
+  },
+  "places": [
+    {
+      "slug": "sunday-river",
+      "name": "Sunday River",
+      "kind": "ski-area",
+      "destination_path": "united-states/maine/oxford-county/newry",
+      "address": "15 South Ridge Road, Newry, ME 04261",
+      "summary": "A Boyne Resorts ski area in Newry, founded in 1958 by the Bethel Area Development Corporation and later run by Les Otten before three corporate sales.",
+      "history": "Before Les Otten, per New England Ski History, Sunday River was founded by the Bethel Area Development Corporation, formed in February 1958, which created the Sunday River Skiway Corporation — formed May 7, 1958, with Governor Edmund Muskie among its first stockholders — to build and operate the ski area on Barker/Bald Mountain. By 1972, the ski area \"was taken over by Killington's parent company,\" under which Les Otten was named general manager in 1973, before he personally acquired full ownership of the ski area in 1980 and subsequently expanded snowmaking and trails. Otten formed LBO Resort Enterprises in 1994, which acquired Attitash (NH) and Sugarbush (VT) that same year and Cranmore (NH) in 1995. In 1996, LBO Resort Enterprises merged with S-K-I Ltd. to form American Skiing Company, bringing Sunday River and rival Sugarloaf under the same ownership. On August 8, 2007, American Skiing Company sold Sunday River and Sugarloaf to Boyne USA Resorts for a combined $77 million; Boyne then sold the underlying real-estate assets to CNL Lifestyle Properties (via CNL Income Properties) while retaining an operating lease. In 2016, per Wikipedia's \"Boyne Resorts\" article, CNL Income Properties sold all six of the ski resorts it leased to Boyne — including Sunday River — to Och-Ziff Capital Management, with Boyne continuing to operate under lease. That purchase-from-Och-Ziff was announced in March 2018, but per New England Ski History's coverage of the same multi-resort transaction, it was in May 2018 that Boyne completed the acquisition. Newry, Maine — Oxford County, 2020 census population 411, per Wikipedia's \"Newry, Maine\" article — is the town containing Sunday River, whose resort address is 15 South Ridge Road, Newry, Maine 04261.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "the-jordan",
+      "name": "The Jordan",
+      "kind": "hotel",
+      "destination_path": "united-states/maine/oxford-county/newry",
+      "address": "15 South Ridge Road, Newry, ME 04261",
+      "summary": "One of Sunday River's on-mountain hotels, with mountain views and a full-service spa.",
+      "history": "Per Sunday River's own resort lodging page, The Jordan is one of the resort's on-mountain hotels, described as a premium property with mountain views and a full-service spa.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "grand-summit-hotel",
+      "name": "The Grand Summit Hotel",
+      "kind": "hotel",
+      "destination_path": "united-states/maine/oxford-county/newry",
+      "address": "15 South Ridge Road, Newry, ME 04261",
+      "summary": "A full-service hotel at Sunday River's resort center, with family-friendly amenities and a pool.",
+      "history": "Per Sunday River's own resort lodging page, The Grand Summit Hotel is a full-service hotel at the resort center, described by the resort as offering family-friendly amenities and a pool.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "sunday-river-clubhouse",
+      "name": "The Clubhouse (Sunday River Golf Club)",
+      "kind": "restaurant",
+      "destination_path": "united-states/maine/oxford-county/newry",
+      "address": "15 South Ridge Road, Newry, ME 04261",
+      "summary": "The dining venue at Sunday River Golf Club.",
+      "history": "Per Sunday River's own resort dining page, The Clubhouse is the dining venue at Sunday River Golf Club.",
+      "status": "open",
+      "photos": []
+    }
+  ],
+  "entries": [
+    {
+      "kind": "sight",
+      "name": "Sunday River",
+      "place_slug": "sunday-river",
+      "note": "A Boyne Resorts ski area in Newry, founded in 1958 by the Bethel Area Development Corporation and later run by Les Otten before three corporate sales."
+    },
+    {
+      "kind": "stay",
+      "name": "The Jordan",
+      "place_slug": "the-jordan",
+      "note": "One of Sunday River's on-mountain hotels, with mountain views and a full-service spa."
+    },
+    {
+      "kind": "stay",
+      "name": "The Grand Summit Hotel",
+      "place_slug": "grand-summit-hotel",
+      "note": "A full-service hotel at Sunday River's resort center, with family-friendly amenities and a pool."
+    },
+    {
+      "kind": "food",
+      "name": "The Clubhouse (Sunday River Golf Club)",
+      "place_slug": "sunday-river-clubhouse",
+      "note": "The dining venue at Sunday River Golf Club."
+    }
+  ],
+  "links": [
+    {
+      "target": "guide:sugarloaf-ski-guide",
+      "kind": "shared-history",
+      "note": "American Skiing Company sold both to Boyne USA Resorts on August 8, 2007; both remain sister Boyne Resorts properties in Maine."
+    },
+    {
+      "target": "guide:pleasant-mountain-ski-guide",
+      "kind": "shared-history",
+      "note": "Sunday River and Pleasant Mountain are both Boyne Resorts properties; Boyne acquired Pleasant Mountain, then still named Shawnee Peak, on October 22, 2021."
+    }
+  ]
+}

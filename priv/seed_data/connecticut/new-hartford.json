@@ -4,7 +4,7 @@
     "title": "New Hartford, Connecticut: Ovation Guitars and Satan's Kingdom",
     "destination": "New Hartford, Connecticut",
     "destination_path": "united-states/connecticut/litchfield-county/new-hartford",
-    "intro": "New Hartford was settled in 1733 and incorporated in 1738, the land available through the 1686 \"Western Grant\" to the proprietors of Hartford and Windsor, the source of its name. The town's early economy ran on farms and mills along the Farmington River and its tributaries, including the stretch known as Satan's Kingdom. Founder Charles Kaman, an aerospace engineer and guitarist, brought Ovation Guitars to New Hartford in 1967; his team spent 18 months developing the signature fiberglass-composite roundback, and players from Glen Campbell to John Lennon carried the brand. The factory closed in 2014 and reopened in 2015, and some models are still built there. The ski area now called Ski Sundown opened in 1963 as Satan's Ridge, named for the adjacent gorge. New Hartford spans 38.2 square miles and includes the villages of Bakerville, Nepaug, New Hartford Center and Pine Meadow.",
+    "intro": "New Hartford was settled in 1733 and incorporated in 1738, the land available through the 1686 \"Western Grant\" to the proprietors of Hartford and Windsor, the source of its name. The town's early economy ran on farms and mills along the Farmington River and its tributaries, including the stretch known as Satan's Kingdom. Founder Charles Kaman, an aerospace engineer and guitarist, brought Ovation Guitars to New Hartford in 1967; his team spent 18 months developing the signature fiberglass-composite roundback, and players from Glen Campbell to John Lennon carried the brand. The factory closed in 2014 and reopened in 2015, and some models are still built there. The ski area now called Ski Sundown opened in 1964 as Satan's Ridge, named for the adjacent gorge. New Hartford spans 38.2 square miles and includes the villages of Bakerville, Nepaug, New Hartford Center and Pine Meadow.",
     "sections": [
       {
         "heading": "Guitars, mills and a ski hill",
@@ -16,7 +16,7 @@
       },
       {
         "heading": "Satan's Kingdom and Ski Sundown",
-        "body": "Satan's Kingdom State Recreation Area is the launch point for Farmington River Tubing's roughly 2.5-mile float through a rocky gorge, run seasonally with tube, life jacket and shuttle bus included — call ahead, since the operator sets hours day by day rather than on a fixed schedule. Ski Sundown, independently owned since its 1963 opening as Satan's Ridge, runs 17 trails with snowmaking and night skiing most of the season. Brewery Legitimus sits directly across the Farmington River from downtown, and Nepaug State Forest offers a quieter, free alternative to the river crowds."
+        "body": "Satan's Kingdom State Recreation Area is the launch point for Farmington River Tubing's roughly 2.5-mile float through a rocky gorge, run seasonally with tube, life jacket and shuttle bus included — call ahead, since the operator sets hours day by day rather than on a fixed schedule. Ski Sundown, which opened in 1964 as Satan's Ridge, runs 17 trails with snowmaking and night skiing most of the season. Brewery Legitimus sits directly across the Farmington River from downtown, and Nepaug State Forest offers a quieter, free alternative to the river crowds."
       }
     ],
     "faq": [
@@ -34,7 +34,7 @@
       },
       {
         "question": "Is Ski Sundown still open?",
-        "answer": "Yes — it opened in 1963 as Satan's Ridge and is still independently owned, running 17 trails across about 70 skiable acres with 100% snowmaking and night skiing most nights of the week, typically early December through late March."
+        "answer": "Yes — it opened in 1964 as Satan's Ridge and is independently owned, running 17 trails across about 70 skiable acres with 100% snowmaking and night skiing most nights of the week, typically early December through late March."
       },
       {
         "question": "Where can I eat and stay in New Hartford?",
@@ -72,27 +72,6 @@
     ]
   },
   "places": [
-    {
-      "slug": "ski-sundown",
-      "name": "Ski Sundown",
-      "kind": "attraction",
-      "destination_path": "united-states/connecticut/litchfield-county/new-hartford",
-      "address": "126 Ratlum Road, New Hartford, CT 06057",
-      "official_url": "https://www.skisundown.com/",
-      "summary": "An independently owned ski area with 17 trails across about 70 skiable acres, 16 lit for night skiing, 100% snowmaking, two terrain parks and a snowsports school for ages 3 and up. Opened in 1963 as Satan's Ridge. Typical season early December through late March; hours Mon-Fri 9 a.m.-10 p.m., weekends and holidays from 8 a.m. Phone (860) 379-7669.",
-      "status": "open",
-      "photos": [
-        {
-          "src": "/photos/ct/new-hartford/ski-sundown-aerial.jpg",
-          "thumb": "/photos/ct/new-hartford/ski-sundown-aerial_thumb.jpg",
-          "title": "Ski Sundown aerial view",
-          "description": "An aerial view of the snow-covered trails and base area at Ski Sundown.",
-          "author": "UJ at Ski Sundown",
-          "license": "CC BY-SA 4.0",
-          "source_url": "https://commons.wikimedia.org/wiki/File:DJI_0032-ENHC.jpg"
-        }
-      ]
-    },
     {
       "slug": "satans-kingdom-state-recreation-area",
       "name": "Satan's Kingdom State Recreation Area",
@@ -168,12 +147,6 @@
     }
   ],
   "entries": [
-    {
-      "kind": "sight",
-      "name": "Ski Sundown",
-      "place_slug": "ski-sundown",
-      "note": "17 trails and night skiing since opening as Satan's Ridge in 1963."
-    },
     {
       "kind": "sight",
       "name": "Satan's Kingdom State Recreation Area",

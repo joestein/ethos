@@ -95,17 +95,6 @@
       "photos": []
     },
     {
-      "slug": "mount-southington-ski-area",
-      "name": "Mount Southington Ski Area",
-      "kind": "attraction",
-      "destination_path": "united-states/connecticut/hartford-county/southington",
-      "address": "396 Mount Vernon Road, Plantsville, CT 06479",
-      "official_url": "https://www.mountsouthington.com/",
-      "summary": "Central Connecticut's local ski hill, with 14 trails served by 8 lifts, running a full winter season and converting to weddings, camps and events in the warm months. Phone (860) 628-0954.",
-      "status": "open",
-      "photos": []
-    },
-    {
       "slug": "farmington-canal-heritage-trail-southington",
       "name": "Farmington Canal Heritage Trail (Southington)",
       "kind": "park",
@@ -194,12 +183,6 @@
       "name": "Rogers Orchards",
       "place_slug": "rogers-orchards",
       "note": "An eight-generation family farm since 1809."
-    },
-    {
-      "kind": "sight",
-      "name": "Mount Southington Ski Area",
-      "place_slug": "mount-southington-ski-area",
-      "note": "Central Connecticut's local ski hill."
     },
     {
       "kind": "walk",

@@ -582,7 +582,8 @@ defmodule Ethos.Seeds.RomeSeedDataTest do
     assert superlative_hit?("It is one of the most important examples of the Baroque in Rome."),
            "an attributed ranking slipped through — attribution does not save a priority claim"
 
-    assert superlative_hit?("Caravaggio's only wall painting."), "a uniqueness claim slipped through"
+    assert superlative_hit?("Caravaggio's only wall painting."),
+           "a uniqueness claim slipped through"
 
     for specimen <- @superlative_specimens do
       refute superlative_hit?(specimen),
@@ -591,7 +592,8 @@ defmodule Ethos.Seeds.RomeSeedDataTest do
   end
 
   test "the research-method ban catches leaked provenance, and only there" do
-    assert method_hit?("The sanctuary's own site returned HTTP 403."), "a status code slipped through"
+    assert method_hit?("The sanctuary's own site returned HTTP 403."),
+           "a status code slipped through"
 
     assert method_hit?("The palazzo's outline tests wholly inside Colonna."),
            "a footprint result slipped through"
@@ -659,7 +661,8 @@ defmodule Ethos.Seeds.RomeSeedDataTest do
     assert self_reference_hit?("The monument belongs to Castro Pretorio and is written there."),
            "a pointer to a sibling page slipped through"
 
-    assert self_reference_hit?("This page cannot tell you."), "a page self-reference slipped through"
+    assert self_reference_hit?("This page cannot tell you."),
+           "a page self-reference slipped through"
 
     for specimen <- @self_reference_specimens do
       refute self_reference_hit?(specimen),

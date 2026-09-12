@@ -55,20 +55,27 @@ defmodule Mix.Tasks.Ethos.OptimizeKoreanBbqPhotos do
 
   @excluded_subjects [
     {"interior", "an interior, not the exteriors-and-streetscapes this collection publishes"},
-    {"dining-room", "a dining room, which raises model-release and trade-dress questions no licence tag answers"},
-    {"dining_room", "a dining room, which raises model-release and trade-dress questions no licence tag answers"},
+    {"dining-room",
+     "a dining room, which raises model-release and trade-dress questions no licence tag answers"},
+    {"dining_room",
+     "a dining room, which raises model-release and trade-dress questions no licence tag answers"},
     {"table", "a table setting, an interior subject this collection does not publish"},
-    {"banchan", "a food photograph, not the exteriors-and-streetscapes this collection publishes"},
+    {"banchan",
+     "a food photograph, not the exteriors-and-streetscapes this collection publishes"},
     {"dish", "a food photograph, not the exteriors-and-streetscapes this collection publishes"},
     {"plate", "a food photograph, not the exteriors-and-streetscapes this collection publishes"},
     {"food", "a food photograph, not the exteriors-and-streetscapes this collection publishes"},
     {"portrait", "a portrait, which raises a model-release question no licence tag answers"},
-    {"diner", "a photograph of a person eating, which raises a model-release question no licence tag answers"},
-    {"staff", "a photograph of a person working, which raises a model-release question no licence tag answers"},
+    {"diner",
+     "a photograph of a person eating, which raises a model-release question no licence tag answers"},
+    {"staff",
+     "a photograph of a person working, which raises a model-release question no licence tag answers"},
     {"mural", "a graphic work, not the exteriors-and-streetscapes this collection publishes"},
-    {"street-art", "a graphic work, not the exteriors-and-streetscapes this collection publishes"},
+    {"street-art",
+     "a graphic work, not the exteriors-and-streetscapes this collection publishes"},
     {"graffiti", "a graphic work, not the exteriors-and-streetscapes this collection publishes"},
-    {"neon", "an interior sign detail, not the exteriors-and-streetscapes this collection publishes"}
+    {"neon",
+     "an interior sign detail, not the exteriors-and-streetscapes this collection publishes"}
   ]
 
   @impl true

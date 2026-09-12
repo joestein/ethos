@@ -1,0 +1,59 @@
+{
+  "guide": {
+    "slug": "pico-mountain-ski-guide",
+    "title": "Pico Mountain, Vermont: the Mead family's mountain, still separate from Killington",
+    "destination": "Killington, VT",
+    "destination_path": "united-states/vermont/rutland-county/killington",
+    "tier": "guide",
+    "intro": "Pico's lift-served ski history began on Thanksgiving Day, 1937, when Brad and Janet Mead opened a rope tow -- 1,200 feet long and powered by a Hudson Motor Car engine -- on Little Pico, per Pico Mountain's own \"Our History\" page. In 1938 the Meads recruited Karl Acker from Switzerland to serve as Pico's ski school director. Brad Mead drowned in a boating accident in 1942, after which his wife Janet Mead continued running the ski area. The Meads' daughter, Andrea Mead Lawrence, won two gold medals in alpine skiing at the 1952 Winter Olympics in Oslo, Norway, per a New York Times report from December 24, 1987.",
+    "sections": [
+      {
+        "heading": "From the Ackers to American Skiing Company",
+        "body": "Karl Acker and his wife June purchased the mountain around 1954; after Karl's death in May 1958, June continued operating it until selling to a company owned by Bruce and Verlene Belden in October 1964, per New England Ski History's Pico Mountain page. In summer 1989, plans to merge Pico's operations with neighboring Killington were announced, but that merger did not close. Pico fell into financial distress in the mid-1990s: shareholders Harold and Edith Herbert purchased the ski area's mortgage from the Howard Bank in December 1993, foreclosed in May 1995, formed Pico Mountain, Inc. that August, and were awarded the ski area's assets in January 1996; Pico Mountain, Inc. then filed for Chapter 7 bankruptcy on July 22, 1996. On December 9, 1996, Pico was purchased out of that bankruptcy by American Skiing Company -- the same company that then owned neighboring Killington -- for $5 million."
+      },
+      {
+        "heading": "Common ownership with Killington, still a separate mountain",
+        "body": "On May 11, 2007, Pico and Killington were sold together to SP Land Co. for $85.2 million, with Powdr Corp. taking over resort operations, per New England Ski History's Pico Mountain page. On September 27, 2024, Killington Resort's \"Our History\" page states that the Killington Independence Group -- a group of local passholders and community members -- purchased the resort from Powdr, beginning what Killington calls its \"independent era\"; because Pico has been under the same corporate ownership as Killington since the 1996 American Skiing Company purchase, this transaction carried Pico's ownership along with it. Separately, New England Ski History dates Powdr's sale of its majority stake to August 22, 2024, with Powdr retaining a minority stake. Pico and Killington remain separately branded ski areas under common ownership; despite connector-trail proposals dating back decades, a full trail connection between the two has never been completed, per Wikipedia's \"Killington Ski Resort\" article."
+      }
+    ],
+    "faq": [
+      {
+        "question": "Is Pico part of Killington?",
+        "answer": "No. Pico and Killington remain separately branded ski areas, even though both have been under common ownership since American Skiing Company purchased Pico in 1996 -- the same company that then owned Killington. Despite connector-trail proposals dating back decades, a full trail connection between the two has never been completed, per Wikipedia's \"Killington Ski Resort\" article."
+      },
+      {
+        "question": "Who founded Pico?",
+        "answer": "Brad and Janet Mead opened a rope tow on Little Pico on Thanksgiving Day, 1937, per Pico Mountain's own \"Our History\" page. Their daughter, Andrea Mead Lawrence, won two gold medals in alpine skiing at the 1952 Winter Olympics."
+      }
+    ],
+    "photos": []
+  },
+  "places": [
+    {
+      "slug": "pico-mountain",
+      "name": "Pico Mountain",
+      "kind": "ski-area",
+      "destination_path": "united-states/vermont/rutland-county/killington",
+      "address": "Killington, VT",
+      "summary": "A chairlift-served ski area founded by the Mead family in 1937, under common ownership with neighboring Killington since 1996 but still separately branded.",
+      "history": "Pico's lift-served ski history began on Thanksgiving Day, 1937, when Brad and Janet Mead opened a rope tow -- 1,200 feet long and powered by a Hudson Motor Car engine -- on Little Pico, per Pico Mountain's own \"Our History\" page. In 1938 the Meads recruited Karl Acker from Switzerland to serve as Pico's ski school director. Brad Mead drowned in a boating accident in 1942, after which his wife Janet Mead continued running the ski area. The Meads' daughter, Andrea Mead Lawrence, won two gold medals in alpine skiing at the 1952 Winter Olympics in Oslo, Norway. Karl Acker and his wife June purchased the mountain around 1954; after Karl's death in May 1958, June continued operating it until selling to a company owned by Bruce and Verlene Belden in October 1964. In summer 1989, plans to merge Pico's operations with neighboring Killington were announced, but that merger did not close. Pico fell into financial distress in the mid-1990s: shareholders Harold and Edith Herbert purchased the ski area's mortgage from the Howard Bank in December 1993, foreclosed in May 1995, formed Pico Mountain, Inc. that August, and were awarded the ski area's assets in January 1996; Pico Mountain, Inc. then filed for Chapter 7 bankruptcy on July 22, 1996. On December 9, 1996, Pico was purchased out of that bankruptcy by American Skiing Company -- the same company that then owned neighboring Killington -- for $5 million. On May 11, 2007, Pico and Killington were sold together to SP Land Co. for $85.2 million, with Powdr Corp. taking over resort operations. On September 27, 2024, the Killington Independence Group -- a group of local passholders and community members -- purchased the resort from Powdr, beginning what Killington calls its \"independent era\"; because Pico has been under the same corporate ownership as Killington since the 1996 American Skiing Company purchase, this transaction carried Pico's ownership along with it. Separately, New England Ski History dates Powdr's sale of its majority stake to August 22, 2024, with Powdr retaining a minority stake. Pico and Killington remain separately branded ski areas under common ownership; despite connector-trail proposals dating back decades, a full trail connection between the two has never been completed, per Wikipedia's \"Killington Ski Resort\" article.",
+      "status": "open",
+      "photos": []
+    }
+  ],
+  "entries": [
+    {
+      "kind": "sight",
+      "name": "Pico Mountain",
+      "place_slug": "pico-mountain",
+      "note": "A chairlift-served ski area founded by the Mead family in 1937, still separately branded from neighboring Killington."
+    }
+  ],
+  "links": [
+    {
+      "target": "guide:killington-ski-resort-ski-guide",
+      "kind": "shared-history",
+      "note": "Pico and Killington share a town and, since 1996, a common owner, though the two mountains remain separately branded resorts."
+    }
+  ]
+}

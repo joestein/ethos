@@ -1,0 +1,74 @@
+{
+  "guide": {
+    "slug": "middlebury-college-snow-bowl-ski-guide",
+    "title": "Middlebury College Snow Bowl, Vermont: a college's own mountain on Worth Mountain",
+    "destination": "Hancock, VT",
+    "destination_path": "united-states/vermont/addison-county/hancock",
+    "tier": "guide",
+    "intro": "The Middlebury College Snow Bowl's first season was 1939-40; its ski trails were cut in the 1930s, possibly in conjunction with Middlebury's first Winter Carnival in 1934, and an original rope tow was installed on Worth Mountain in early 1940, per New England Ski History's Middlebury page. The Snow Bowl is located on Worth Mountain, south of Bread Loaf Mountain, in the town of Hancock, Vermont, and is owned and operated by Middlebury College, at 6886 VT Route 125, per the Snow Bowl's own website.",
+    "sections": [
+      {
+        "heading": "Lifts, from Pomalift to SkyTrac",
+        "body": "In 1954-55 the Snow Bowl installed a new Pomalift, per New England Ski History's Middlebury page. The Worth Mountain Chair, running to the summit, was installed in 1969. A Bailey Falls triple chairlift was added in 1987-88. The Worth Mountain triple chairlift was installed as a replacement lift in 2009-10. For the 2023-24 season, the Sheehan double chairlift was replaced with a SkyTrac quad. Starting in the winter of 2011-12, the Snow Bowl adopted a \"boundary-to-boundary\" policy opening its full permit area to skiing, which New England Ski History credits with making the area a destination for tree skiing."
+      },
+      {
+        "heading": "College racing and skiing today",
+        "body": "The Snow Bowl hosted the National Collegiate Ski Championships in March 1961 and the NCAA National Collegiate Skiing Championships again in 1988, per New England Ski History's Middlebury page. The Snow Bowl's winter operating hours are Wednesday-Friday 9 a.m.-9 p.m. and Saturday-Sunday 9 a.m.-4 p.m., closed Monday and Tuesday except on select holidays, and it runs a Winter Term PE ski program for Middlebury College academic credit, alongside lessons for adults, children ages 3-13, families, and college students, per the Snow Bowl's own website. For the 2026-27 (\"26/27\") season, the Snow Bowl advertises participation in the Indy Pass, letting its own passholders add on access to Indy Pass partner resorts, though as of the resort's own posting, Indy Pass sales for the 26/27 season were off-sale with a waitlist available, per the Snow Bowl's own Season Passes page."
+      },
+      {
+        "heading": "In Hancock",
+        "body": "Texas Falls, a scenic waterfall on Hancock Branch with a Green Mountain National Forest recreation area, is located in the town of Hancock, Vermont, according to Wikipedia's \"Hancock, Vermont\" article."
+      }
+    ],
+    "faq": [
+      {
+        "question": "Who owns the Middlebury College Snow Bowl?",
+        "answer": "The Snow Bowl is owned and operated by Middlebury College, on Worth Mountain in the town of Hancock, Vermont, per New England Ski History's Middlebury page. Its first season was 1939-40."
+      },
+      {
+        "question": "Can the public ski at the Snow Bowl, or is it only for students?",
+        "answer": "The Snow Bowl is open to the public on day tickets and season passes, alongside its Winter Term PE program for Middlebury College academic credit and lessons for adults, children, families, and college students, per the Snow Bowl's own website."
+      }
+    ],
+    "photos": []
+  },
+  "places": [
+    {
+      "slug": "middlebury-college-snow-bowl",
+      "name": "Middlebury College Snow Bowl",
+      "kind": "ski-area",
+      "destination_path": "united-states/vermont/addison-county/hancock",
+      "address": "6886 VT Route 125, Hancock, VT 05748",
+      "summary": "A chairlift-served ski area on Worth Mountain owned and operated by Middlebury College since 1939-40, open to the public alongside its college ski program.",
+      "history": "The Middlebury College Snow Bowl's first season was 1939-40; its ski trails were cut in the 1930s, possibly in conjunction with Middlebury's first Winter Carnival in 1934, and an original rope tow was installed on Worth Mountain in early 1940, per New England Ski History's Middlebury page. The Snow Bowl is located on Worth Mountain, south of Bread Loaf Mountain, in the town of Hancock, Vermont, and is owned and operated by Middlebury College. In 1954-55 the Snow Bowl installed a new Pomalift. The Worth Mountain Chair, running to the summit, was installed in 1969. A Bailey Falls triple chairlift was added in 1987-88. The Worth Mountain triple chairlift was installed as a replacement lift in 2009-10. For the 2023-24 season, the Sheehan double chairlift was replaced with a SkyTrac quad. Starting in the winter of 2011-12, the Snow Bowl adopted a \"boundary-to-boundary\" policy opening its full permit area to skiing, which New England Ski History credits with making the area a destination for tree skiing. The Snow Bowl hosted the National Collegiate Ski Championships in March 1961 and the NCAA National Collegiate Skiing Championships again in 1988. Its winter operating hours are Wednesday-Friday 9 a.m.-9 p.m. and Saturday-Sunday 9 a.m.-4 p.m., closed Monday and Tuesday except on select holidays, per the Snow Bowl's own website. It runs a Winter Term PE ski program for Middlebury College academic credit, alongside lessons for adults, children ages 3-13, families, and college students. For the 2026-27 (\"26/27\") season, the Snow Bowl advertises participation in the Indy Pass, letting its own passholders add on access to Indy Pass partner resorts, though as of the resort's own posting, Indy Pass sales for the 26/27 season were off-sale with a waitlist available, per the Snow Bowl's own Season Passes page.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "texas-falls",
+      "name": "Texas Falls",
+      "kind": "park",
+      "destination_path": "united-states/vermont/addison-county/hancock",
+      "address": "Texas Falls Road, Hancock, VT 05748",
+      "summary": "A scenic waterfall on Hancock Branch with a Green Mountain National Forest recreation area.",
+      "history": "Texas Falls, a scenic waterfall on Hancock Branch, is home to a Green Mountain National Forest recreation area and is located in the town of Hancock, Vermont, according to Wikipedia's \"Hancock, Vermont\" article.",
+      "status": "open",
+      "photos": []
+    }
+  ],
+  "entries": [
+    {
+      "kind": "sight",
+      "name": "Middlebury College Snow Bowl",
+      "place_slug": "middlebury-college-snow-bowl",
+      "note": "A chairlift-served college ski area on Worth Mountain, open to the public since 1939-40."
+    },
+    {
+      "kind": "walk",
+      "name": "Texas Falls",
+      "place_slug": "texas-falls",
+      "note": "A scenic waterfall and Green Mountain National Forest recreation area in Hancock."
+    }
+  ],
+  "links": []
+}
