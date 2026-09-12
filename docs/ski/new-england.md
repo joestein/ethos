@@ -181,6 +181,73 @@ protects against new ones.
     explicit product decision — but a wrong date is a different thing from a
     statistic held to an older standard (Wave 8).
 
+25. **A relationship asserted in ONE DIRECTION only.** The gate has always
+    checked that a link *resolves*; it never checked that a relationship is
+    *mutual*. A whole-corpus audit after the last wave found that of 28
+    outgoing ski→ski links, **eight** were one-way — and every one of them was
+    `shared-history`, a kind that is symmetric by its own meaning. Mohawk
+    Mountain's guide named its "Mount Snow, Butternut, and Sundown
+    connections" in prose and gave the reader no way to follow any of them;
+    `catamount-ski-area.json` carried no links at all while narrating, by
+    name, the same March 2026 Bear Den Partners transition that
+    `berkshire-east.json` narrates. The only reciprocal pairs in the corpus
+    were the two added deliberately after Wave 7 — reciprocity had never once
+    happened by accident. Fixed by adding the eight return edges plus the
+    Catamount pair, and closed permanently by a reciprocity test scoped to
+    `shared-history` and `nearby` (symmetric by meaning) and deliberately
+    **not** to `see-also`, which the Connecticut town→ski migration edges use
+    in one direction on purpose (post-publication audit).
+
+## Corrections: the post-publication whole-corpus audit
+
+A final pass over all 82 files looked for the three defect classes a
+per-wave review cannot see, since each wave was verified in isolation at a
+different point in time. Two of the three came back clean and are worth
+recording as negative results.
+
+**Cross-wave contradiction: none.** Every cross-file date agrees exactly
+across all the deliberate multi-file chains — Schoenknecht from Mohawk to
+Mount Snow, Murdock across Mohawk, Butternut and Sundown in two states,
+Bear Den Partners across four guides, and the Vail, Boyne and Alterra
+holdings — plus 167 further entities that appear in two or more files. The
+most useful result is one the corpus did *not* commit: the 1989 tornado is
+the same event in Mohawk Mountain and Cathedral Pines, and a **different**,
+1995 tornado in Ski Butternut. Three files, two waves, two tornadoes, never
+conflated.
+
+**Artifact-to-corpus drift: none.** The wave tables' union is exactly the 82
+files on disk, every wave's verdict tallies re-derive, and the three
+roster-scope rulings (Arrowhead dropped, Millinocket publishing its history
+while asserting nothing about the current season, Mount Jefferson publishing
+its for-sale status) are each reflected in what shipped.
+
+**One perishable claim corrected.** `waterville-valley-resort.json`'s FAQ
+said Chris Sununu was "serving as General Manager beginning in 2013" — a
+present-participle reading as ongoing, in a file whose own section body
+handles it correctly in the past tense and preserves the source's own
+"future Governor" wording. Changed to "having served as". This is defect
+shape 18 applied to a **role** rather than an ownership, and the file already
+contained the fact that made the open-ended reading implausible.
+
+Eleven further present-tense claims about mutable facts were ranked by how
+likely they are to have gone stale rather than corrected, because verifying
+them needs sources the audit did not have. In descending order of fragility:
+the Bear Den transition at Berkshire East and Catamount (announced March
+2026, not closed); Black Mountain's ownership after two churns in under
+three years; Mount Jefferson's for-sale listing; Hermon Mountain's April
+2026 sale; Millinocket's undetermined season; Tenney Mountain's current
+owner; Ragged Mountain's November 2025 sale; Mad River Glen's share cap; and
+Ski Butternut's ownership as of January 2024. Each is already attributed and
+dated in its guide, which is what makes them safe to leave: a reader can see
+how old the claim is.
+
+One candidate was examined and **not** changed. Cannon Mountain's "expected
+to be complete in December 2025" describes the SCJ Alliance **structural
+analysis**, not the tram, and the sentence is attributed and framed "As of
+that page", with the place summary adding "with no replacement operating
+yet". The date has passed, but the prose is accurate about what the source
+said and when.
+
 ## Content waves
 
 - **Wave 1 — Vermont rows 1-12**: `ascutney-outdoors`, `bolton-valley-resort`, `bromley-mountain-resort`, `burke-mountain-resort`, `cochrans-ski-area`, `hardack`, `harrington-hill`, `jay-peak-resort`, `killington-ski-resort`, `living-memorial-park`, `lyndon-outing-club`, `mad-river-glen`.
