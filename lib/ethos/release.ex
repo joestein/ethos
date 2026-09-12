@@ -75,6 +75,10 @@ defmodule Ethos.Release do
     for collection <- Ethos.Seeds.ScenicBywaysCollections.upsert_all!() do
       IO.puts("Seeded collection: /c/#{collection.slug}")
     end
+
+    for collection <- Ethos.Seeds.SkiCollections.upsert_all!() do
+      IO.puts("Seeded collection: /c/#{collection.slug}")
+    end
   end
 
   def seed_connecticut_expansion(email), do: seed_directory("connecticut", email)
