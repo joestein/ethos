@@ -137,6 +137,26 @@ protects against new ones.
     asserting something impossible in a single, uncontested sentence;
     attribute it explicitly as the source's own claim rather than quoting it
     flat into the corpus's voice (Wave 7).
+21. **A fabricated CAUSE attached to a real event.** Ski Sundown's T-Bar was
+    never installed at its 1964 opening — the source says the slope proved
+    too steep and the plan was abandoned outright — but a prior draft
+    described it as "delayed by weather." The chairlift's own construction
+    really was weather-delayed by a mid-December snowstorm; that is a
+    different fact about a different lift, and grafting its cause onto the
+    T-Bar's abandonment reads as sourced while inventing the reason (Wave 8).
+22. **A quotation silently corrected.** New England Ski History's own text
+    on Ski Sundown reads "nearly quarter of century" — ungrammatical, and
+    exactly what the source says. A prior draft quoted it as "nearly quarter
+    of a century," inserting the article a fluent writer's hand reaches for
+    automatically. Fixing a source's grammar inside quotation marks is
+    altering the quotation, indistinguishable on the page from a typo unless
+    someone checks the source word for word (Wave 8).
+23. **A quoted string whose LOCATION is misrepresented.** Yawgoo Valley's
+    homepage really does contain the exact phrase "Rhode Island's ONLY Year
+    Round Family Fun Destination!" — but only inside the page's `<title>`
+    tag, never in the body content a reader actually sees. Calling that a
+    "tagline" implies visible marketing copy; it is metadata a citation can
+    point to without ever misquoting a word (Wave 8).
 
 ## Content waves
 
@@ -147,6 +167,7 @@ protects against new ones.
 - **Wave 5 — Maine rows 1-12**: `baker-mountain`, `big-moose-mountain`, `big-rock`, `black-mountain-of-maine`, `camden-snow-bowl`, `hermon-mountain`, `lonesome-pine-trails`, `lost-valley`, `millinocket-ski-slope`, `mount-abram`, `mount-jefferson-ski-area`, `pinnacle-ski-club`.
 - **Wave 6 — Maine rows 13-21 (Maine complete)**: `pleasant-mountain`, `powderhouse-hill`, `quarry-road`, `quoggy-jo`, `saddleback`, `spruce-mountain`, `sugarloaf`, `sunday-river`, `titcomb-mountain`.
 - **Wave 7 — Massachusetts (Massachusetts complete)**: `berkshire-east`, `blue-hills-ski-area`, `bousquet-mountain`, `catamount-ski-area`, `jiminy-peak`, `nashoba-valley`, `otis-ridge`, `ski-bradford`, `ski-butternut`, `ski-ward`, `wachusett-mountain`.
+- **Wave 8 — Connecticut and Rhode Island (New England complete)**: `mohawk-mountain`, `mount-southington`, `powder-ridge`, `ski-sundown`, `yawgoo-valley`.
 
 ## Wave 1 — Vermont rows 1-12
 
@@ -2000,3 +2021,295 @@ Wachusett → Princeton.
 | Wachusett | Wachusett Meadow Wildlife Sanctuary is a 1,220-acre former farmstead in Princeton managed by Mass Audubon, with woodlands, wetlands, and meadows; its historic buildings and barns remain in use for educational programming, and resident sheep graze its pastures. | Mass Audubon, Wachusett Meadow Wildlife Sanctuary page | https://www.massaudubon.org/get-outdoors/wildlife-sanctuaries/wachusett-meadow | confirmed |
 | Wachusett | Redemption Rock is a quarter-acre property owned by The Trustees of Reservations in Princeton; its granite ledge and inscription commemorate the 1676 release of Mary Rowlandson during King Philip's War, and the site is a link in the 92-mile Mid-State Trail, open free daily from... | The Trustees of Reservations, Redemption Rock page | https://thetrustees.org/place/redemption-rock/ | confirmed |
 
+## Wave 8 — Connecticut and Rhode Island (New England complete)
+
+Five ski-area guides, completing New England: `mohawk-mountain`,
+`mount-southington`, `powder-ridge`, and `ski-sundown` in Connecticut, and
+`yawgoo-valley` in Rhode Island — the last row on the roster's 82 built
+areas. Source material:
+`.superpowers/sdd/2026-09-07-us-ski-areas-foundation-new-england/research/ski/{slug}.json`
+and `{slug}.verify.json`. The verification pass returned 59 confirmed
+claims, 7 refuted claims, 4 uncertain claims, 0 ban violations, and 2
+sourced omissions across 70 claims (66 area claims plus 4 Yawgoo
+surroundings claims). Every row below is either a claim published as the
+finder wrote it (`confirmed`) or a claim published only after correcting
+the specific defect the verifier found (`confirmed (corrected)`), citing
+the verifier's fix rather than the finder's original wording where the two
+differ.
+
+### The Connecticut migration
+
+Three of this wave's mountains were already published places in the
+Connecticut corpus, each typed `kind: "attraction"` and carried as a
+`sight` entry on its town guide: `mohawk-mountain-ski-area` on
+`priv/seed_data/connecticut/cornwall.json`, `ski-sundown` on
+`priv/seed_data/connecticut/new-hartford.json`, and
+`mount-southington-ski-area` on `priv/seed_data/connecticut/southington.json`.
+`attraction` maps to schema.org's `TouristAttraction`, not `SkiResort`, and
+each of the three records carried unsourced statistics this wave's ban
+list forbids outright — a 650-foot vertical drop and Connecticut's-largest
+superlative for Mohawk, "17 trails across about 70 skiable acres" for Ski
+Sundown, and "14 trails served by 8 lifts" for Mount Southington, none of
+them traceable to a named source. All three are removed here, along with
+their matching `sight` entries, so each town file's `entries`/`places`
+count drops by one — Cornwall and New Hartford from 7 to 6 places,
+Southington from 9 to 8 — and each town guide now carries a `see-also` link
+to its mountain's new ski guide instead of a place record for it. Powder
+Ridge and Yawgoo Valley had no prior record to migrate; Powder Ridge is new
+to the corpus, and Exeter (Yawgoo's town) had no guide at all before this
+wave. Ordering matters here: the Connecticut links resolve only once the
+ski guides exist, since `Ethos.Links.resolve!/1` raises on an unseeded
+target, so the three edited Connecticut files and the five new ski files
+ship in the same commit.
+
+### Mohawk's snowmaking dispute: publishing both sides
+
+Mohawk Mountain's own history page claims Walt Schoenknecht was "the
+pioneer of manmade snowmaking, leading the efforts behind the technology
+that is used worldwide today." New England Ski History's more granular,
+independently reported account credits the actual 1950-51 machinery to
+equipment "invented by Tey Manufacturing's Wayne M. Pierce Jr.," and
+describes Schoenknecht's own winter 1949-50 contribution as buying an
+estimated 500 tons of ice and using a chipper to create a snow surface
+after a drought — a manual workaround, not a snowmaking machine. Both
+claims are verified word for word against their own sources and neither is
+picked as the corpus's own account; the guide publishes the resort's claim
+about itself and the historian's finer account side by side, attributed.
+Mohawk's own page separately states the area "offers 112 skiable acres
+over 300 scenic acres of state forest" — an operator-stated figure, which
+this wave's acreage ban explicitly exempts when attributed in the same
+breath to the operator itself, as this guide does.
+
+### Rejected — refuted claims, corrected
+
+- **Mohawk's debut date.** New England Ski History's own sentence hedges:
+  "The $45,000 area reportedly debuted the day after Christmas in 1947...".
+  A prior draft dropped "reportedly" and stated the date as settled fact.
+  The hedge is restored; the February 1947 lease date itself, which the
+  source states unhedged, is published without a hedge.
+- **Mount Southington's rope-tow opening.** NESH's own text reads
+  "Snowmaking allowed a rope tow-served slope to likely open by December
+  20th." A prior draft dropped "likely." Restored.
+- **Mount Southington's "major" expansion.** NESH's own text reads
+  "Southington's next expansion build up took place in the late 1970s,
+  starting with the installation of a J-Bar for the 1977-78 season" — no
+  "major." A prior draft added the word. This is Wave 1's signature defect
+  in reverse: that wave's Mad River Glen row restored a "major" a finder
+  had dropped from a real quotation; this wave removes a "major" a finder
+  added to one.
+- **Mount Southington's general manager.** NESH calls him only "manager
+  John Rigby," a title the same page reserves as "general manager" for
+  Ayre and Hart specifically. A prior draft called him "general manager."
+  Corrected to the source's own word.
+- **Powder Ridge's infobox.** The live Wikipedia article's "It began
+  operations on January 22, 1961" is the first sentence of the lead
+  paragraph; the infobox carries no "opened" field at all (Vertical,
+  Skiable area, Trails, Snowfall, Website only). A prior draft located the
+  sentence inside "the infobox." Corrected to "lead sentence," with the
+  infobox's actual, narrower field list stated rather than assumed.
+- **Powder Ridge's 2016 mountain biking.** "The new ownership added lift
+  served mountain biking starting in June 2016" is New England Ski
+  History's own prose, verbatim, on the same page already cited for the
+  2014 cancellation headline. A prior draft attributed that sentence to
+  Wikipedia; the phrase "lift served" does not appear anywhere on
+  Wikipedia's live article. Re-attributed to New England Ski History
+  entire.
+- **Ski Sundown's T-Bar.** New England Ski History's own account of the
+  1964 opening states the planned T-Bar was abandoned because the slope
+  "was too steep for the planned T-Bar," replaced before opening by a
+  Mueller double chairlift. A prior draft called this a weather delay — a
+  fabricated cause for a real event, distinct from the source's separate,
+  true fact that a mid-December snowstorm delayed the *chairlift's own*
+  construction. Corrected to the source's actual, terrain-based reason.
+- **Ski Sundown's "quarter of century."** New England Ski History's raw
+  text reads "After owning Ski Sundown for nearly quarter of century,
+  Richard Carter sold the area..." — no "a." A prior draft quoted it as
+  "nearly quarter of a century," inserting an article a fluent hand adds
+  without noticing. Quoted here exactly as the source has it, ungrammatical
+  and all.
+
+### Rejected — uncertain, handled
+
+- **Mount Southington's summer-theater ending.** NESH's own chronology of
+  the theater's final closure reads as a separate, later event from the
+  1966 outside-operator season a prior draft's single sentence implied it
+  followed directly — the source's own text suggests a further, distinct
+  1966-and-after episode. The confirmed 1965 opening, the Gypsy performance,
+  and the 1966 outside-operator lease are published; the murkier ending is
+  omitted rather than compressed into one claim.
+- **Yawgoo's "to this day" ownership.** New England Ski History's page
+  carries a "Last updated: November 5, 2019" footer and states the
+  de Wardener family's ownership continues "to this day" — a claim now
+  being asserted, in this corpus, seven years after that footer's date,
+  with no fresher source checked. Published as "New England Ski History's
+  page, dated November 5, 2019, states that ... to this day" — attributed
+  and dated, not restated as a present-tense fact.
+- **Yawgoo's "ONLY Year Round Family Fun Destination."** The exact phrase
+  is real, verified verbatim — but it lives only in the homepage's HTML
+  `<title>` tag, never in visible body prose. The guide says so plainly,
+  and separately quotes the homepage's differently worded (and lowercase
+  "only") meta description instead: "Rhode Island's only Ski Area & Water
+  Park located just a short drive from Providence in Exeter."
+- **Mohawk's debut date.** Folded into the refuted-claims list above; the
+  same defect (a dropped hedge) surfaces once as "refuted" in the
+  adversarial pass's own verdict and once as an uncertain-claim callout in
+  the task brief, and both point at the same fix.
+
+### Destination-slug collisions, resolved
+
+`derive_destination_slug/1` keeps only the first comma-segment of a
+guide's `destination` string and discards the state. Four of this wave's
+five towns collide with an existing guide on that basis:
+
+- **Mohawk Mountain** sits in Cornwall, Connecticut, but
+  `priv/seed_data/connecticut/cornwall.json` already publishes "Cornwall,
+  Connecticut," which derives to the same `cornwall` slug. Mohawk's guide
+  uses `"Town of Cornwall, CT"` instead, per this project's own London
+  precedent ("Royal Borough of Greenwich, England").
+- **Mount Southington** sits in Southington, but
+  `priv/seed_data/connecticut/southington.json` already publishes
+  "Southington, Connecticut." Its guide uses `"Town of Southington, CT"`.
+- **Powder Ridge** sits in Middlefield, but
+  `priv/seed_data/connecticut/middlefield.json` already publishes
+  "Middlefield, Connecticut." Its guide uses `"Town of Middlefield, CT"`.
+- **Ski Sundown** sits in New Hartford, but
+  `priv/seed_data/connecticut/new-hartford.json` already publishes "New
+  Hartford, Connecticut." Its guide uses `"Town of New Hartford, CT"`.
+
+Exeter collides with nothing already published — no Exeter guide of any
+state existed before this wave — so Yawgoo Valley's guide keeps the plain
+`"Exeter, RI"` form. All five guides' `destination_path` values are
+unchanged and match the roster exactly; only the display `destination`
+string, which feeds the slug, changed for the four Connecticut towns.
+
+### The cross-state chains, added
+
+Two people's careers now connect five guides across two states, in both
+directions:
+
+- **Walt Schoenknecht** founded Mohawk Mountain in 1947 and later founded
+  Mount Snow, which opened for the 1954-55 season — confirmed across
+  Mohawk's own page, New England Ski History, and Schoenknecht's 1979 U.S.
+  Ski & Snowboard Hall of Fame entry. `mohawk-mountain-ski-guide` links to
+  `mount-snow-ski-guide` (`shared-history`).
+- **Channing Murdock** managed Mohawk from 1960-61 to 1961-62, left to
+  found Butternut Basin (now Ski Butternut) in 1962-63, and — "a few years"
+  later, per New England Ski History — bought the defunct Satan's Ridge and
+  reopened it as Ski Sundown in 1969. Confirmed against NESH's own Mohawk
+  and Sundown pages and the Berkshire Edge's January 8, 2024 Ski Butternut
+  profile. `mohawk-mountain-ski-guide` and `ski-sundown-ski-guide` both link
+  to `ski-butternut-ski-guide` (`shared-history`), and `ski-sundown-ski-guide`
+  links back to `mohawk-mountain-ski-guide` for the same reason.
+
+Reciprocal links from `mount-snow-ski-guide` and `ski-butternut-ski-guide`
+back to this wave's guides are addable now that these guides are published,
+but — following Wave 7's own precedent with Burke Mountain and Smugglers'
+Notch — they are not edited in this commit.
+
+### Two additions
+
+- **Cathedral Pines, Cornwall.** A 42-acre old-growth Nature Conservancy
+  preserve hit by the same July 1989 tornado outbreak that struck Mohawk
+  Mountain, absent from both the ski research file and Connecticut's own
+  `cornwall.json`. Added as a place on Mohawk's guide — nothing else in the
+  corpus owns it, so there is no collision.
+- **Arcadia Management Area / Beach Pond, Exeter — checked, not added.**
+  Arcadia Management Area spans Exeter along with Richmond, Hopkinton, and
+  West Greenwich, per Wikipedia, and Beach Pond — which the same article
+  places in Exeter's Washington County — sits inside its footprint. Neither
+  Wikipedia, the Rhode Island DEM's site, nor Exeter's own town site yielded
+  a street address or route-based location specific to the Exeter side of
+  either; per this task's own conditional ("add it if you can source an
+  Exeter address"), it is excluded rather than published without one. This
+  is a stated exclusion, not a silent gap — the recurring-defect-shapes list
+  (item 12) already names an unstated empty list as its own failure mode.
+
+### Zero surroundings by design, and two by necessity
+
+All four Connecticut guides — Mohawk Mountain, Mount Southington, Powder
+Ridge, and Ski Sundown — carry only their mountain and no other places, by
+design, not by omission: Cornwall, Southington, Middlefield, and New
+Hartford are all already-published Connecticut towns whose visitable
+places (the West Cornwall Covered Bridge, Mohawk State Forest, Housatonic
+Meadows State Park, Lyman Orchards, the Barnes Museum, Brewery Legitimus,
+Satan's Kingdom, and more) belong to those town guides under the corpus
+rule that the first publisher owns the place. Each of the four ski guides
+says so in its own FAQ and links to its town guide instead. Yawgoo Valley
+is the opposite case: Exeter has no town guide of any kind published yet,
+so Yawgoo's guide carries its two confirmed surroundings — Queen's Fort
+and the Tomaquag Museum — directly, the way every non-Connecticut ski
+guide in this corpus carries its own surroundings.
+
+| Area | Claim as published | Source | URL | Verdict |
+| --- | --- | --- | --- | --- |
+| Mohawk Mountain | Mohawk Mountain's own History page states, in the page's original all-capital styling: "IN 1947 WALT SCHOENKNECHT OPENED MOHAWK MOUNTAIN SKI AREA FOR ALL TO ENJOY." The page also states the mid-mountain Pine Lodge "WAS THE SCHOENKNECHT FAMILY HOME FOR MANY YEARS BEFORE MOHAWK MOUNTAIN SKI AREA OPENED IN 1947." | Mohawk Mountain Ski Area, History page | https://www.mohawkmtn.com/history/ | confirmed |
+| Mohawk Mountain | New England Ski History's independently reported chronology corroborates the 1947 founding with more granular dating: in February 1947, Walt Schoenknecht entered into a lease with the State of Connecticut for about 100 acres on the northwest side of Mohawk Mountain, on a peak known as the Pinnacle; the new area... | New England Ski History, "Mohawk Mountain" history page | https://www.newenglandskihistory.com/Connecticut/mohawk.php | uncertain |
+| Mohawk Mountain | Mohawk Mountain's own History page states: "WALT ALSO FOUNDED MOUNT SNOW." | Mohawk Mountain Ski Area, History page | https://www.mohawkmtn.com/history/ | confirmed |
+| Mohawk Mountain | New England Ski History's account of Mohawk Mountain independently corroborates the Mount Snow connection with a dated chronology: circa May 1953, while still running Mohawk, Schoenknecht purchased land on Mt. Pisgah in southern Vermont, telling the Hartford Courant "The mountain has fantastic possibilities" while... | New England Ski History, "Mohawk Mountain" history page | https://www.newenglandskihistory.com/Connecticut/mohawk.php | confirmed |
+| Mohawk Mountain | Mohawk Mountain's own History page states Walt Schoenknecht "WAS INDUCTED INTO THE NATIONAL SKI HALL OF FAME." Independently, the U.S. Ski & Snowboard Hall of Fame's own inductee page (the organization's current name; it operated as the National Ski Hall of Fame at the time of Schoenknecht's induction) confirms Walter... | U.S. Ski & Snowboard Hall of Fame, inductee page for Walter Schoenknecht | https://www.skisnowboardhall.org/inductees/walter-schoenknecht/ | confirmed |
+| Mohawk Mountain | The Berkshire Edge, in a January 8, 2024 article on Ski Butternut's 60th anniversary, states: "In 1962, Channing Murdock, a former employee of Mount Snow in Vt., and former manager of Mohawk Mountain in Cornwall, Conn., purchased the property with his wife, Jane Murdock," referring to the Warner Mountain property in... | The Berkshire Edge, "Ski Butternut to celebrate its 60th anniversary" by Shaw Israel Izikson (published January 8, 2024) | https://theberkshireedge.com/ski-butternut-to-celebrate-its-60th-anniversary/ | confirmed |
+| Mohawk Mountain | New England Ski History gives a fuller, independently dated account of the same Channing Murdock connection: Schoenknecht ordered Carlevaro & Savio chairlifts for the 1960-61 season, including one for Mohawk Mountain, which the site describes as "the first chairlift installed in southern New England"; Channing Murdock... | New England Ski History, "Mohawk Mountain" history page | https://www.newenglandskihistory.com/Connecticut/mohawk.php | confirmed |
+| Mohawk Mountain | New England Ski History states that, in the winter of 1949-50, after a snow drought, Walt Schoenknecht purchased an estimated 500 tons of ice from Economy Ice Company and used a chipper to create a snow surface, allowing Mohawk to reopen its Pinnacle Trail and Pine Slope on January 22, 1950 -- a manual ice-chipping... | New England Ski History, "Mohawk Mountain" history page, citing Hartford Courant reporting | https://www.newenglandskihistory.com/Connecticut/mohawk.php | confirmed |
+| Mohawk Mountain | New England Ski History states that for the 1950-51 season, "Mohawk and Split Rock (later known as Big Boulder, PA) boasted the first two snowmaking systems using equipment invented by Tey Manufacturing's Wayne M. Pierce Jr." The system was first tested the night of December 28, 1950, an attempt that "ended... | New England Ski History, "Mohawk Mountain" history page | https://www.newenglandskihistory.com/Connecticut/mohawk.php | confirmed |
+| Mohawk Mountain | Mohawk Mountain's own History page states: "WALT WAS THE PIONEER OF MANMADE SNOWMAKING, LEADING THE EFFORTS BEHIND THE TECHNOLOGY THAT IS USED WORLDWIDE TODAY!" This is the operator's own framing of Schoenknecht's role. It sits in tension with New England Ski History's more granular account (above), which credits the... | Mohawk Mountain Ski Area, History page | https://www.mohawkmtn.com/history/ | confirmed |
+| Mohawk Mountain | Mohawk Mountain's own History page states the ski area "OFFERS 112 SKIABLE ACRES OVER 300 SCENIC ACRES OF STATE FOREST." | Mohawk Mountain Ski Area, History page | https://www.mohawkmtn.com/history/ | confirmed |
+| Mohawk Mountain | New England Ski History states that an F4 tornado struck Mohawk Mountain at 4:37 p.m. on July 10, 1989, causing $1.5 to $2 million in damage, destroying buildings and toppling lifts; initial industry analysis held the ski area might not reopen for a year, if ever, but Mohawk was able to rebuild in time to open for the... | New England Ski History, "Mohawk Mountain" history page; corroborated by Mohawk Mountain Ski Area's own History page | https://www.newenglandskihistory.com/Connecticut/mohawk.php | confirmed |
+| Mohawk Mountain | New England Ski History states that in the fall of 1991, the State of Connecticut agreed to allow night skiing at Mohawk Mountain, provided that a detailed, fifteen-point list of requirements was followed; Mohawk added night skiing that winter, in part to help pay off tornado-related debt, while alcohol remained... | New England Ski History, "Mohawk Mountain" history page | https://www.newenglandskihistory.com/Connecticut/mohawk.php | confirmed |
+| Mohawk Mountain | New England Ski History states that Walt Schoenknecht signed a new 30-year lease with the State of Connecticut starting in January 1986, under which Mohawk would provide up to 1.85% of gross revenue to the state; a further new 30-year lease began in January 2017. | New England Ski History, "Mohawk Mountain" history page | https://www.newenglandskihistory.com/Connecticut/mohawk.php | confirmed |
+| Mohawk Mountain | Mohawk Mountain's own History page states that Walt "OPENED THE MOUNTAIN TO THE PUBLIC THE SAME YEAR HIS DAUGHTER, CAROL LUGAR, WAS BORN," and that "TODAY, MOHAWK MOUNTAIN IS STILL FAMILY OWNED AND OPERATED WITH CAROL AS CO-OWNER AND PRESIDENT." New England Ski History separately notes that Walt was diagnosed with... | Mohawk Mountain Ski Area, History page; corroborated by New England Ski History's "Mohawk Mountain" history page | https://www.mohawkmtn.com/history/ | confirmed |
+| Mount Southington | Mount Southington Ski Area's own "Our History" page states: "In the 1960s, when boots were leather and laced and skis were long, Dr. Harold Richman returned from a ski trip in Vermont with his wife Barbara, inspired to build a family-oriented ski area in central Connecticut." It further states that after discovering a... | Mount Southington Ski Area, "Our History" page | https://mountsouthington.com/about-the-mountain/ | confirmed |
+| Mount Southington | New England Ski History corroborates and adds detail to the founding: circa the early 1960s, Dr. Harold Richman -- a New Britain native, Navy veteran of World War II, and graduate of Trinity College and Tufts Dental School who had opened a local orthodontics practice -- was inspired to start a ski area after a Vermont... | New England Ski History, "Mt. Southington" history page | https://www.newenglandskihistory.com/Connecticut/mtsouthington.php | confirmed |
+| Mount Southington | New England Ski History states that two corporations were formed to own and operate the ski area, Mount Southington Associates and Mount Southington Ski Area; Walter S. Ayre Jr. was named the area's first general manager, James D'Anconia operations manager, and Jim Day ski school director. | New England Ski History, "Mt. Southington" history page | https://www.newenglandskihistory.com/Connecticut/mtsouthington.php | confirmed |
+| Mount Southington | Mt. Southington's dedication ceremony, originally planned for mid-December 1964, was postponed to Valentine's Day 1965 and then delayed again by rain; the ski area closed for the season at the start of March 1965 without ever holding its dedication, even though a rope-tow-served slope had likely opened to skiers... | New England Ski History, "Mt. Southington" history page | https://www.newenglandskihistory.com/Connecticut/mtsouthington.php | confirmed (corrected — hedge word "likely" restored) |
+| Mount Southington | New England Ski History states that during Mt. Southington's debut season, 17 property owners sued for an injunction to halt snowmaking, alleging the snowmaking compressors were too noisy and that operating a ski area on Sundays was illegal under Connecticut's "blue law"; 85 other property owners subsequently signed a... | New England Ski History, "Mt. Southington" history page | https://www.newenglandskihistory.com/Connecticut/mtsouthington.php | confirmed |
+| Mount Southington | Mt. Southington briefly operated an on-site summer theater: a permit was obtained to construct a "quonset-type" summer theater building, which opened at the end of June 1965 with a performance of Gypsy that drew 500 people, with Anthony Mastrianni Jr. heading the theater company; the theater was leased to an outside... | New England Ski History, "Mt. Southington" history page | https://www.newenglandskihistory.com/Connecticut/mtsouthington.php | confirmed (corrected — the 1966-and-after closure timeline omitted rather than merged) |
+| Mount Southington | New England Ski History states that in May 1969, Mt. Southington offered fifty six-year, family-of-four season passes for $500 to help raise money toward a chairlift, and in August 1969 the area announced the installation of a Hall double chairlift -- the Avalanche double -- which provided access to three slopes and... | New England Ski History, "Mt. Southington" history page | https://www.newenglandskihistory.com/Connecticut/mtsouthington.php | confirmed |
+| Mount Southington | Southington's next expansion took place in the late 1970s, starting with a J-Bar installed for the 1977-78 season, followed the next year by Mt. Southington's first triple chairlift, named Stardust, which gave the mountain its second top-to-bottom lift (corrected — NESH's own text carries no word calling this... | New England Ski History, "Mt. Southington" history page | https://www.newenglandskihistory.com/Connecticut/mtsouthington.php | confirmed (corrected — added word "major" removed) |
+| Mount Southington | New England Ski History states that NASTAR racing was added at Mt. Southington circa 1973-74, "reportedly claiming the second highest participation rate in New England" -- a hedged claim reproduced here with its original hedge word intact. | New England Ski History, "Mt. Southington" history page | https://www.newenglandskihistory.com/Connecticut/mtsouthington.php | confirmed |
+| Mount Southington | By the 1966-67 season, manager John Rigby claimed the area's $3 two-hour ski lesson was "the lowest cost in New England," and an estimated 14% of Mt. Southington skiers were taking part in lessons at the time (corrected — NESH's own text calls him "manager," a title it reserves "general manager" for elsewhere,... | New England Ski History, "Mt. Southington" history page | https://www.newenglandskihistory.com/Connecticut/mtsouthington.php | confirmed (corrected — "general manager" downgraded to NESH's own "manager") |
+| Powder Ridge | New England Ski History states that brothers Louis and Herman Zemel, born in the 1910s in New Haven, Connecticut, opened an appliance store there in the early 1930s that grew into the well-known Record Centre chain (with a second location later opened in Bridgeport); Zemel Bros., Incorporated was established as the... | New England Ski History, "Powder Ridge" history page | https://www.newenglandskihistory.com/Connecticut/powderridge.php | confirmed |
+| Powder Ridge | New England Ski History states that in 1962, Louis Zemel sued U.S. Secretary of State Dean Rusk for denying him permission to travel to recently overthrown Cuba; the case, Zemel v. Rusk, went to the U.S. Supreme Court, which upheld the decision to deny Zemel access to Cuba. | New England Ski History, "Powder Ridge" history page | https://www.newenglandskihistory.com/Connecticut/powderridge.php | confirmed |
+| Powder Ridge | Wikipedia's own "Powder Ridge Ski Area" article is internally inconsistent: its opening lead sentence states the area "began operations on January 22, 1961," while its History section separately states it "began operations in 1959 under the name of Powder Hill" — a lead-versus-body disagreement, not an infobox field,... | New England Ski History, "Powder Ridge" history page; Wikipedia, "Powder Ridge Ski Area" | https://www.newenglandskihistory.com/Connecticut/powderridge.php | confirmed (corrected — "infobox" corrected to "lead sentence"; infobox confirmed to have no opened field) |
+| Powder Ridge | Both New England Ski History and Wikipedia state that the ski area, originally named Powder Hill, changed its name to "Powder Ridge" in 1970. | New England Ski History, "Powder Ridge" history page; Wikipedia, "Powder Ridge Ski Area" | https://www.newenglandskihistory.com/Connecticut/powderridge.php | confirmed |
+| Powder Ridge | New England Ski History states that in 1970 the ski area was slated to host the Powder Ridge Rock Festival, a three-day event planned for July 31-August 2, 1970, with a lineup that reportedly included Fleetwood Mac, James Taylor, Joe Cocker, Van Morrison, Jethro Tull, Janis Joplin, John Sebastian, Chuck Berry, and... | New England Ski History, "Powder Ridge" history page | https://www.newenglandskihistory.com/Connecticut/powderridge.php | confirmed |
+| Powder Ridge | Wikipedia's "Powder Ridge Ski Area" article adds a detail not found in New England Ski History's account of the cancelled festival: "The planners of the festival skipped town with the money, but thousands of young adults showed up at the ski area expecting a second Woodstock. Melanie Safka is the only performer who... | Wikipedia, "Powder Ridge Ski Area" | https://en.wikipedia.org/wiki/Powder_Ridge_Ski_Area | confirmed |
+| Powder Ridge | New England Ski History states that, in the wake of the cancelled festival, both Louis and Herman Zemel were arrested for violating a court injunction, charges that were later dropped. | New England Ski History, "Powder Ridge" history page | https://www.newenglandskihistory.com/Connecticut/powderridge.php | confirmed |
+| Powder Ridge | New England Ski History states that, after local lawsuits delayed construction, the "747" lift opened for the 1972-73 season, "becoming the first quad chairlift in New England." Wikipedia's "Powder Ridge Ski Area" article independently corroborates this, describing the 1972 expansion as including "the construction of... | New England Ski History, "Powder Ridge" history page; corroborated by Wikipedia, "Powder Ridge Ski Area" | https://www.newenglandskihistory.com/Connecticut/powderridge.php | confirmed |
+| Powder Ridge | New England Ski History states that in February 1981, Louis Zemel declared the 1980-81 season was "reportedly" Powder Ridge's best yet; ten months later Zemel passed away at the age of 70, and his son David Zemelsky took over day-to-day operations. Founder Herman Zemel separately passed away on July 5, 1995, following... | New England Ski History, "Powder Ridge" history page | https://www.newenglandskihistory.com/Connecticut/powderridge.php | confirmed |
+| Powder Ridge | The two sources on the 1990s change of ownership disagree with each other and are presented here as each states it, without merging them. Wikipedia's "Powder Ridge Ski Area" article states plainly, "In 1990, Powder Ridge was purchased by a company called White Water Mountain Resorts." New England Ski History gives a... | Wikipedia, "Powder Ridge Ski Area"; New England Ski History, "Powder Ridge" history page | https://en.wikipedia.org/wiki/Powder_Ridge_Ski_Area | confirmed |
+| Powder Ridge | Wikipedia's "Powder Ridge Ski Area" article, citing First Tracks!! Online's September 23, 2006 report titled "Connecticut's Powder Ridge Ski Area to Remain Closed This Winter," states that on that date it was announced Powder Ridge would not operate during the winter of 2006-2007, at a time the ski area was more than... | Wikipedia, "Powder Ridge Ski Area" (citing First Tracks!! Online, September 23, 2006) | https://en.wikipedia.org/wiki/Powder_Ridge_Ski_Area | confirmed |
+| Powder Ridge | Wikipedia's "Powder Ridge Ski Area" article states that in the spring of 2007 the town of Middlefield voted to purchase the ski area but was unable to; a private operator, Middlefield Holdings LLC, bought the property during summer 2008 for $2.75 million; and on December 29, 2008, the town of Middlefield in turn... | Wikipedia, "Powder Ridge Ski Area" | https://en.wikipedia.org/wiki/Powder_Ridge_Ski_Area | confirmed |
+| Powder Ridge | Wikipedia's "Powder Ridge Ski Area" article, citing the Hartford Courant's September 13, 2012 article "Middlefield Sells Powder Ridge; Skiing Promised By End Of 2013," states that in July 2012 the town of Middlefield and Brownstone Exploration & Discovery Park (based in Portland, Connecticut) signed an agreement for... | Wikipedia, "Powder Ridge Ski Area" (citing the Hartford Courant, September 13, 2012) | https://en.wikipedia.org/wiki/Powder_Ridge_Ski_Area | confirmed |
+| Powder Ridge | The two sources disagree on the exact reopening date and are reported separately rather than merged. Wikipedia's "Powder Ridge Ski Area" article states that, after "some delays in the planned reopening for the 2013-2014 season, the park was reopened for skiing in early January 2014." New England Ski History instead... | Wikipedia, "Powder Ridge Ski Area"; New England Ski History, "Powder Ridge" history page | https://en.wikipedia.org/wiki/Powder_Ridge_Ski_Area | confirmed |
+| Powder Ridge | Wikipedia's "Powder Ridge Ski Area" article states that at its 2013-14 reopening, Powder Ridge "created a new rule requiring helmets while skiing/snowboarding on the mountain, making them the only mountain in Connecticut to have this rule in place" at that time. | Wikipedia, "Powder Ridge Ski Area" | https://en.wikipedia.org/wiki/Powder_Ridge_Ski_Area | confirmed |
+| Powder Ridge | A planned mountain-biking season at Powder Ridge was announced and then called off: New England Ski History's own news index lists a NewEnglandSkiIndustry.com headline dated July 5, 2014, "Powder Ridge Cancels Mountain Biking Season." The same New England Ski History page separately states that, after restoring... | New England Ski History, "Powder Ridge" history page (NewEnglandSkiIndustry.com news headline, July 5, 2014); Wikipedia, "Powder Ridge Ski Area" | https://www.newenglandskihistory.com/Connecticut/powderridge.php | confirmed (corrected — the 2016 addition re-attributed from Wikipedia to New England Ski History) |
+| Powder Ridge | New England Ski History states that in the summer of 2017, Powder Ridge opened a synthetic ski and tubing area at the bottom of the 747 slope, and that "with the addition, the area claimed it was the 'first full service year-round urban mountain sports park and resort'" -- the area's own self-description, reproduced... | New England Ski History, "Powder Ridge" history page | https://www.newenglandskihistory.com/Connecticut/powderridge.php | confirmed |
+| Ski Sundown | New England Ski History states the idea for what became Ski Sundown reportedly dated back to 1960, when engineer Russell Smith conceived it; the land, in the New Hartford and Canton region known as Satan's Kingdom, was owned by Lyman B. Bunnell, minister of music at Immanuel Congregational Church in West Hartford, and... | New England Ski History, "Ski Sundown" history page | https://www.newenglandskihistory.com/Connecticut/sundown.php | confirmed |
+| Ski Sundown | The ski area, originally named Satan's Ridge, finally opened on January 11, 1964, with a Mueller double chairlift and a rope tow serving three slopes and one trail; New England Ski History's own account states the double chairlift was installed after the slope proved "too steep for the planned T-Bar" — the T-Bar was... | New England Ski History, "Ski Sundown" history page, quoting Hartford Courant reporting | https://www.newenglandskihistory.com/Connecticut/sundown.php | confirmed (corrected — fabricated weather cause removed; NESH's own "too steep" reason substituted) |
+| Ski Sundown | New England Ski History states that following the 1967-68 season, United Bank & Trust Company foreclosed on Satan's Ridge; owner Russell Smith told the Hartford Courant the business failed because "it needed both money and management. We never got enough capital." The area then sat idle for the entire 1968-69 season,... | New England Ski History, "Ski Sundown" history page, quoting Hartford Courant reporting | https://www.newenglandskihistory.com/Connecticut/sundown.php | confirmed |
+| Ski Sundown | New England Ski History states that after sitting idle for a season, the Satan's Ridge ski area was sold by Harold Law, Russell Smith, and Frank Linnell to Channing Murdock of nearby Butternut Basin and his brother Robert Murdock in mid-1969; in September 1969 the business was incorporated as Ski Sundown, Inc.,... | New England Ski History, "Ski Sundown" history page | https://www.newenglandskihistory.com/Connecticut/sundown.php | confirmed |
+| Ski Sundown | The Berkshire Edge, in a January 8, 2024 article on Ski Butternut, independently identifies the same Channing Murdock as "a former employee of Mount Snow in Vt., and former manager of Mohawk Mountain in Cornwall, Conn." who, in 1962, purchased the Warner Mountain property in Great Barrington, Massachusetts with his... | The Berkshire Edge, "Ski Butternut to celebrate its 60th anniversary" by Shaw Israel Izikson (published January 8, 2024) | https://theberkshireedge.com/ski-butternut-to-celebrate-its-60th-anniversary/ | confirmed |
+| Ski Sundown | New England Ski History states that circa 1978, Channing Murdock transferred ownership of Ski Sundown to general manager Rick (Richard) Carter, who had earlier been made a part owner of the area by Murdock around 1973-74. | New England Ski History, "Ski Sundown" history page | https://www.newenglandskihistory.com/Connecticut/sundown.php | confirmed |
+| Ski Sundown | After owning Ski Sundown "for nearly quarter of century" — New England Ski History's own phrasing, quoted here exactly, without inserting the word "a" — Richard Carter sold the area to general manager and longtime employee Robert Switzgable in 2002 (corrected — an earlier draft quoted the phrase as "nearly quarter of... | New England Ski History, "Ski Sundown" history page, quoting a Ski Sundown press release | https://www.newenglandskihistory.com/Connecticut/sundown.php | confirmed (corrected — quotation's inserted "a" removed to match source exactly) |
+| Ski Sundown | New England Ski History states: "Half a decade later, Ski Sundown nearly took over the operations of Powder Ridge," placing this near-acquisition roughly half a decade after Ski Sundown's 2002 change in ownership. | New England Ski History, "Ski Sundown" history page | https://www.newenglandskihistory.com/Connecticut/sundown.php | confirmed |
+| Ski Sundown | New England Ski History states that following a successful 1976-77 season in which revenue increased by 40%, Ski Sundown "announced it would be installing the state's first triple chairlift as part of a $250,000 expansion" -- a Borvig lift installed next to the original double chairlift, replacing the T-Bar, for the... | New England Ski History, "Ski Sundown" history page | https://www.newenglandskihistory.com/Connecticut/sundown.php | confirmed |
+| Ski Sundown | New England Ski History states that Satan's Ridge co-founder Harold Law Jr. passed away on May 12, 2013, at the age of 82, and that a new expert trail named "Satan's Stairway" -- evoking the ski area's original name -- was added for the 2014-15 season, equipped with snowmaking and lighting. | New England Ski History, "Ski Sundown" history page | https://www.newenglandskihistory.com/Connecticut/sundown.php | confirmed |
+| Yawgoo Valley | "The idea for Yawgoo Valley reportedly dates back to the early 1960s, when Richard Downs was working on his parents' summer camp property and sought to develop a winter business." | NewEnglandSkiHistory.com, "Yawgoo Valley History" page (updated November 5, 2019) | https://www.newenglandskihistory.com/RhodeIsland/yawgoovalley.php | confirmed |
+| Yawgoo Valley | "At the suggestion of a neighbor, Downs acquired property on the... southeast peak of Yorker Hill and, circa mid 1964, commenced cutting ski trails. A University of Rhode Island student named Maxwell de Wardener was part of the construction crew." | NewEnglandSkiHistory.com, "Yawgoo Valley History" page (updated November 5, 2019) | https://www.newenglandskihistory.com/RhodeIsland/yawgoovalley.php | confirmed |
+| Yawgoo Valley | "Yawgoo Valley likely opened as a small rope tow served area for the 1964-65 season." | NewEnglandSkiHistory.com, "Yawgoo Valley History" page (updated November 5, 2019) | https://www.newenglandskihistory.com/RhodeIsland/yawgoovalley.php | confirmed |
+| Yawgoo Valley | "One year later, a new Hall double chairlift was installed, making Yawgoo Valley Rhode Island's first chairlift served ski area." (for the 1965-66 season) | NewEnglandSkiHistory.com, "Yawgoo Valley History" page (updated November 5, 2019) | https://www.newenglandskihistory.com/RhodeIsland/yawgoovalley.php | confirmed |
+| Yawgoo Valley | "After graduating from college and becoming a business teacher at Coventry High School, Max de Wardener took over management of the Yawgoo Valley ski school circa 1968." | NewEnglandSkiHistory.com, "Yawgoo Valley History" page (updated November 5, 2019) | https://www.newenglandskihistory.com/RhodeIsland/yawgoovalley.php | confirmed |
+| Yawgoo Valley | "After operating the ski school for over a decade, de Wardener learned the ski area was for sale. Concerned that he could lose his lucrative business, de Wardener's Ski Pro, Inc. purchased Yawgoo Valley from Richard Downs for $300,000 in December of 1980." | NewEnglandSkiHistory.com, "Yawgoo Valley History" page (updated November 5, 2019) | https://www.newenglandskihistory.com/RhodeIsland/yawgoovalley.php | confirmed |
+| Yawgoo Valley | "A second double chairlift, named Conan, was installed for the 1989-90 season." | NewEnglandSkiHistory.com, "Yawgoo Valley History" page (updated November 5, 2019) | https://www.newenglandskihistory.com/RhodeIsland/yawgoovalley.php | confirmed |
+| Yawgoo Valley | "Seeking to diversify, Yawgoo Valley added a water park and a 9 hole pitch and putt golf course in the 1990s." | NewEnglandSkiHistory.com, "Yawgoo Valley History" page (updated November 5, 2019) | https://www.newenglandskihistory.com/RhodeIsland/yawgoovalley.php | confirmed |
+| Yawgoo Valley | "With the closing of Ski Valley after the 1984-85 season, Yawgoo Valley became the state's only ski area." | NewEnglandSkiHistory.com, "Yawgoo Valley History" page (updated November 5, 2019) | https://www.newenglandskihistory.com/RhodeIsland/yawgoovalley.php | confirmed |
+| Yawgoo Valley | "Yawgoo Valley is Rhode Island's only operating alpine ski area." | NewEnglandSkiHistory.com, "Yawgoo Valley History" page (updated November 5, 2019), opening line of the article | https://www.newenglandskihistory.com/RhodeIsland/yawgoovalley.php | confirmed |
+| Yawgoo Valley | New England Ski History's page, dated November 5, 2019 per its own footer, states that "Yawgoo Valley continues to be owned and operated by the de Wardener family to this day, as Max and Patti's daughter Tracy Hartman has taken over as General Manager" — attributed and dated to that November 2019 source here, rather... | NewEnglandSkiHistory.com, "Yawgoo Valley History" page (updated November 5, 2019) | https://www.newenglandskihistory.com/RhodeIsland/yawgoovalley.php | uncertain (attributed and dated to its November 2019 source, not asserted as current) |
+| Yawgoo Valley | The New England Lost Ski Areas Project's roundup of Rhode Island's five ski areas states of the state's lost ski areas: "Only one still exists today-Yawgoo Valley." | New England Lost Ski Areas Project (NELSAP), "Lost Rhode Island Ski Areas" page | http://www.nelsap.org/ri/ri.html | confirmed |
+| Yawgoo Valley | Yawgoo Valley's own homepage carries the phrase "Rhode Island's ONLY Year Round Family Fun Destination!" only inside the page's HTML title tag, not in visible body prose; the homepage's separate meta description instead gives a different self-description: "Rhode Island's only Ski Area & Water Park located just a short... | Yawgoo Valley's own website, homepage | https://yawgoo.com/ | uncertain (title-tag location stated explicitly; differently-worded meta description published instead) |
+| Yawgoo Valley | Yawgoo Valley's mailing address, per its own website, is 160 Yawgoo Valley Road, Exeter, RI 02822. | Yawgoo Valley's own website | https://yawgoo.com/ | confirmed |
+| Yawgoo Valley | "The legendary Indian fortification known as Queen's Fort is located in the northeast portion of the town of Exeter, Rhode Island. Standing at the crest of a wooded hill, the structure consists of dry-laid stone walls (now in disrepair) set between groups of glacial boulders." The site's National Register nomination... | National Register of Historic Places Inventory-Nomination Form for Queen's Fort (NPS Heritage Conservation and Recreation Service), filed via Exeter Town Hall | https://npgallery.nps.gov/GetAsset/80000024_text | confirmed |
+| Yawgoo Valley | "Since 1931 Queen's Fort has been the property of the Rhode Island Historical Society and managed by the State of Rhode Island's Department of Environmental Management." The nomination form lists the owner of record as the Rhode Island Historical Society, 52 Power Street, Providence, RI. | National Register of Historic Places Inventory-Nomination Form for Queen's Fort (NPS Heritage Conservation and Recreation Service) | https://npgallery.nps.gov/GetAsset/80000024_text | confirmed |
+| Yawgoo Valley | The fort "is traditionally associated with a Narragansett squaw sachem of the seventeenth century named (Queen) Quaiapen and a Narragansett male known to the English as Stonewall John," whom "many writers have suggested" built the stone defenses "early in King Phillip's War," and the site "is also reported to have... | National Register of Historic Places Inventory-Nomination Form for Queen's Fort (NPS Heritage Conservation and Recreation Service) | https://npgallery.nps.gov/GetAsset/80000024_text | confirmed |
+| Yawgoo Valley | Tomaquag Museum, located at 390 A Summit Road, Exeter, RI 02822, describes itself on its own website as "Rhode Island's only Indigenous Museum." | Tomaquag Museum's own website | https://www.tomaquagmuseum.org/ | confirmed |
+| Mohawk Mountain | Cathedral Pines is a 42-acre old-growth forest preserve in Cornwall, owned and managed by The Nature Conservancy and open to the public; it was mostly destroyed by the same 1989 tornado outbreak that hit Mohawk Mountain. (added) | Wikipedia, "Cathedral Pines"; The Nature Conservancy's own Cathedral Pines Preserve page; Town of Cornwall's own website | https://en.wikipedia.org/wiki/Cathedral_Pines | confirmed (added) |
