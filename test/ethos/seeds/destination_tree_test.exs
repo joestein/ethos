@@ -58,6 +58,68 @@ defmodule Ethos.Seeds.DestinationTreeTest do
              "it, and this assertion"
   end
 
+  # docs/runbooks/seeding.md's "Full rebuild total" is the sum the operator
+  # compares a from-scratch restore against. It moves with every content wave,
+  # and the ski corpus (step 13) is the newest addend — the runbook once said
+  # 450 and named twelve corpora, both stale by exactly ski's 82. This is the
+  # same class of literal `korean_bbq` once got wrong in production: a step
+  # that raises partway through publishes some but not all of its files, and
+  # a stale total that is too LOW makes a short run look complete.
+  #
+  # Every JSON-directory addend is re-derived here rather than hardcoded, the
+  # same way the runbook itself says to ("re-derive them ... rather than
+  # trusting this sum"): `Path.wildcard/1` over each corpus directory.
+  #
+  # Two addends stay literal, matching the runbook's own derivation sentence
+  # rather than `Ethos.Seeds.Catalog.guide_modules/1`: that function's
+  # "connecticut" region also holds `AntiqueTrailGuide`, and its "rome" region
+  # is exactly the one Rome-flagship module the runbook already names — so
+  # `catalog_count.("connecticut")` returns 6, one more than the "5 CT-5" the
+  # runbook's sentence and this total have always meant (Waterbury,
+  # Middlebury, Danbury, Southbury, Woodbury only). Whether the Antique Trail
+  # guide belongs in this total at all is a pre-existing question this test
+  # does not take a position on; it pins the runbook's stated 5 and 1 rather
+  # than silently changing what the total means. The ballparks addend IS
+  # pulled from the catalog, matching the runbook's own step-7 check, because
+  # that region holds nothing else.
+  # Only the final expectation, 532, is a literal — this test failing is the
+  # instruction to update docs/runbooks/seeding.md's "Full rebuild total" line
+  # (and its derivation list, and the "Expected published counts" table's
+  # step-13 row) in the same commit as this assertion.
+  test "the runbook's full-rebuild total is still 532" do
+    dir_count = fn dir ->
+      [:code.priv_dir(:ethos) |> to_string(), "seed_data", dir, "*.json"]
+      |> Path.join()
+      |> Path.wildcard()
+      |> length()
+    end
+
+    ct5 = 5
+    rome_flagship = 1
+    ballparks = Ethos.Seeds.Catalog.guide_modules("ballparks") |> length()
+
+    total =
+      dir_count.("manhattan") +
+        ct5 +
+        dir_count.("connecticut") +
+        dir_count.("brooklyn") +
+        dir_count.("bronx") +
+        dir_count.("queens") +
+        ballparks +
+        dir_count.("san_francisco") +
+        dir_count.("london") +
+        dir_count.("rome") +
+        rome_flagship +
+        dir_count.("korean_bbq") +
+        dir_count.("steakhouse") +
+        dir_count.("ski")
+
+    assert total == 532,
+           "the full-rebuild total changed to #{total}: update docs/runbooks/seeding.md's " <>
+             "\"Full rebuild total\" line, its derivation list, and the \"Expected published " <>
+             "counts\" table's step-13 row, and this assertion, in the same commit"
+  end
+
   test "roster paths are unique" do
     paths = Enum.map(DestinationTree.load!(), & &1["path"])
     assert length(paths) == length(Enum.uniq(paths))

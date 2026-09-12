@@ -2149,26 +2149,31 @@ had no guide at all before this wave.
 
 Each town guide's `see-also` link to its mountain's new ski guide, and each
 ski guide's own reciprocal `see-also` link back to its town, are **not**
-stored in either corpus's JSON `"links"` array. `docs/runbooks/seeding.md`
-runs `seed_connecticut_expansion` at step 3 and `seed_ski` at step 13, and
-each direction's edge names a guide that only exists in the OTHER, later or
-earlier corpus — an edge inline in either file's own array would make
-`Links.resolve!/1` raise and abort that step's run partway through,
-regardless of which order the two steps run in, because the dependency
-runs both ways at once. The same problem already existed once, one
-direction only, for the two CT-5 code-module guides (Waterbury, Danbury),
-which have no JSON `"links"` array to put an edge in; both cases route
-through `Ethos.Seeds.BackfillLinks.ski_migration_edges/0`, whose module
-already handles exactly this shape of problem (idempotent, silently skips
-an edge whose endpoints are not yet seeded) via `Ethos.Release.seed_links/0`
-(step 16, or any later re-run). The four new edges: `cornwall-ct-travel-guide`
-↔ `mohawk-mountain-ski-guide`, `southington-ct-travel-guide` ↔
+stored in either corpus's JSON `"links"` array — both directions route
+through `Ethos.Seeds.BackfillLinks.ski_migration_edges/0` instead, but only
+one direction actually needs to. `docs/runbooks/seeding.md` runs
+`seed_connecticut_expansion` at step 3 and `seed_ski` at step 13, so the
+CT-town-to-ski-guide edge names a guide that does not exist yet at step 3 —
+an edge inline in the CT file's own array would make `Links.resolve!/1`
+raise and abort that step's run partway through. The reverse, ski-guide-to
+CT-town, has no such hazard: step 13 always runs after step 3, so that edge
+could be inline in each ski file's own array. It is routed through the same
+backfill anyway, alongside its counterpart, so both edges of each pair live
+in one place and no runbook ordering note is needed for either. The same
+one-directional problem already existed once for the two CT-5 code-module
+guides (Waterbury, Danbury), which have no JSON `"links"` array to put an
+edge in; that case, too, routes through
+`Ethos.Seeds.BackfillLinks.ski_migration_edges/0`, whose module already
+handles exactly this shape of problem (idempotent, silently skips an edge
+whose endpoints are not yet seeded) via `Ethos.Release.seed_links/0` (step
+16, or any later re-run). The eight edges: `cornwall-ct-travel-guide` ↔
+`mohawk-mountain-ski-guide`, `southington-ct-travel-guide` ↔
 `mount-southington-ski-guide`, `middlefield-ct-travel-guide` ↔
 `powder-ridge-ski-guide`, and `new-hartford-ct-travel-guide` ↔
-`ski-sundown-ski-guide` — all `see-also`. The three edited Connecticut
-files and the five new ski files still ship in the same commit, since the
-place/entry removal and the new guides are otherwise independent of each
-other's existence.
+`ski-sundown-ski-guide` — all `see-also`, one edge upserted for each arrow
+of each pair. The three edited Connecticut files and the five new ski files
+still ship in the same commit, since the place/entry removal and the new
+guides are otherwise independent of each other's existence.
 
 ### Mohawk's snowmaking dispute: publishing both sides
 

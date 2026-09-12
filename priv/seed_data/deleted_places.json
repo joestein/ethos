@@ -1,1 +1,20 @@
-[]
+[
+  {
+    "slug": "mohawk-mountain-ski-area",
+    "name": "Mohawk Mountain Ski Area",
+    "town": "Cornwall",
+    "region": "Connecticut",
+    "deleted_on": "2026-09-12",
+    "reason": "Migrated out of the Connecticut corpus into its own ski guide under the corrected slug mohawk-mountain (priv/seed_data/ski/mohawk-mountain.json). The old attraction record and its unsourced statistics (a vertical-drop figure and a Connecticut's-largest superlative) are retired rather than left live, so a fresh restore does not carry this slug alongside the new page for the same mountain.",
+    "source_url": "docs/ski/new-england.md#the-connecticut-migration"
+  },
+  {
+    "slug": "mount-southington-ski-area",
+    "name": "Mount Southington Ski Area",
+    "town": "Southington",
+    "region": "Connecticut",
+    "deleted_on": "2026-09-12",
+    "reason": "Migrated out of the Connecticut corpus into its own ski guide under the corrected slug mount-southington (priv/seed_data/ski/mount-southington.json). The old attraction record carried an unsourced '14 trails served by 8 lifts' claim and is retired rather than left live, so a fresh restore does not carry this slug alongside the new page for the same mountain.",
+    "source_url": "docs/ski/new-england.md#the-connecticut-migration"
+  }
+]

@@ -240,6 +240,33 @@ committed corpus as of this writing and content lands continuously.
     but it shares the same delete-all hazard: **re-run this step after any
     content seeder** too, or a re-seeded Connecticut guide's foliage edges
     silently disappear along with its adjacency edges.
+19. `Ethos.Release.prune_deleted_places()` — applies
+    `priv/seed_data/deleted_places.json`, deleting (`Places.delete_by_slugs!/1`)
+    every place row the manifest names. **Run last, after every content step
+    above.** Seeding never deletes — dropping a place from a seed file only
+    stops upserting it — so a place a wave removed stays published under its
+    old slug on any database that already had it, and this is the only thing
+    that retires it. It is safe here and nowhere earlier: any guide whose
+    entries used to point at a manifest slug has, by this point, already had
+    those entries replaced by its own content step re-seeding (entries'
+    `place_id` is `nilify_all` on delete, so even out of order this would not
+    raise — but it would blank an entry that a moment-later re-seed was about
+    to fix anyway, so last avoids that churn). On a fresh restore, most
+    manifest slugs are never created in the first place, since the seed file
+    that used to create them no longer does — so this reports a prune count of
+    0, and that is the expected, successful outcome, not a sign anything is
+    wrong. It matters on an existing or live database that predates the
+    change that removed a slug from its seed file.
+
+    The current manifest holds exactly this case: `mohawk-mountain-ski-area`
+    and `mount-southington-ski-area`, migrated out of the Connecticut corpus
+    into the ski corpus (step 13) under the corrected slugs `mohawk-mountain`
+    and `mount-southington` — see "The Connecticut migration" in
+    `docs/ski/new-england.md`. Both old slugs were seeded to production before
+    that migration and appear in no seed file today; without this step they
+    stay published at their old URLs, in the sitemap, carrying the unsourced
+    statistics the migration removed, on the same destination node as the new
+    corrected pages.
 
 Verify the published count after each content step before moving on — see
 "Expected published counts" below. `seed_destinations` writes to the
@@ -461,6 +488,7 @@ seed window described at the top of this runbook — it just returns 0.
 | 10 | Rome | **32** | `count.(~s(italy/lazio/rome))` |
 | 11 | Korean BBQ | **10** | the seeder's own last line, `Seeded 10 files from priv/seed_data/korean_bbq` (these ten file on five different nodes, so no single subtree counts them) |
 | 12 | Steakhouses | **11** | the seeder's own last line, `Seeded 11 files from priv/seed_data/steakhouse` (these eleven file on eleven different nodes, six of which no earlier step touches, so no single subtree counts them) |
+| 13 | Ski (New England) | **82** | the seeder's own last line, `Seeded 82 files from priv/seed_data/ski` (these 82 file on dozens of different town and county nodes across six New England states, so no single subtree counts them) |
 
 **Read the rows in order, and only after the step they name.** These are
 subtree counts, so a later step can add to an earlier row's subtree. Three do:
@@ -505,10 +533,10 @@ roster once its `:pending_bronx` tag comes off, and that is what will tell you
 the fourteenth landed. See
 `docs/superpowers/specs/2026-08-31-narrowed-nyc-scope-design.md`.
 
-**Full rebuild total: 450 published guides.** Derived, not counted off a live
+**Full rebuild total: 532 published guides.** Derived, not counted off a live
 database: 38 Manhattan + 5 CT-5 + 165 Connecticut + 69 Brooklyn + 13 Bronx +
 21 Queens + 30 ballparks + 23 San Francisco + 33 London + 31 Rome zones + 1
-Rome flagship + 10 Korean BBQ + 11 steakhouses. Every JSON addend is
+Rome flagship + 10 Korean BBQ + 11 steakhouses + 82 ski. Every JSON addend is
 `ls priv/seed_data/<dir>/*.json | wc -l`; re-derive them that way rather than
 trusting this sum, which moves with every content wave. Check it with
 `Ethos.Guides.list_published_guides() |> length()`.

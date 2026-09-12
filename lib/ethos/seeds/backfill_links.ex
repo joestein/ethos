@@ -123,19 +123,32 @@ defmodule Ethos.Seeds.BackfillLinks do
 
   # Ski wave 8 (docs/ski/new-england.md) migrated Mohawk Mountain, Mount
   # Southington and Ski Sundown out of the Connecticut corpus into their own
-  # ski guides, each of which links back to its town. Both corpora's own
-  # `"links"` arrays deliberately do NOT carry these edges: the seeding
-  # runbook (docs/runbooks/seeding.md) runs step 3 (`seed_connecticut_expansion`)
-  # long before step 13 (`seed_ski`), and each direction's target guide lives
-  # in the OTHER, not-yet-seeded corpus at that point — an inline edge in
-  # either file's own `links` array would make `Links.resolve!/1` raise and
-  # abort that step's seeding run partway through. Routing both directions
-  # through this idempotent, order-independent backfill (which silently
-  # skips an edge whose endpoints are not yet seeded, per this module's own
-  # moduledoc) is the same fix already used above for the two CT-5
-  # code-module guides, which have no JSON `links` array of their own to put
-  # an edge in.
-  defp ski_migration_edges do
+  # ski guides (Powder Ridge is new to the corpus, with no prior CT record).
+  # This is two edges per pair, and only one direction has an ordering
+  # hazard:
+  #
+  # - CT town -> ski guide (the first four tuples below): the seeding runbook
+  #   (docs/runbooks/seeding.md) runs step 3 (`seed_connecticut_expansion`)
+  #   long before step 13 (`seed_ski`), so an inline edge in the CT file's own
+  #   `"links"` array would target a guide that does not exist yet and
+  #   `Links.resolve!/1` would raise, aborting step 3's run partway through.
+  #   Routing this direction through this idempotent, order-independent
+  #   backfill (which silently skips an edge whose endpoints are not yet
+  #   seeded, per this module's own moduledoc) is the same fix already used
+  #   above for the two CT-5 code-module guides.
+  # - ski guide -> CT town (the last four tuples): no hazard in either seed
+  #   order, since step 13 runs after step 3 either way, so this direction
+  #   could be an inline edge in each ski file's own `"links"` array instead.
+  #   It is kept here anyway, alongside its counterpart, so both edges of
+  #   each pair live in one place and no runbook change is needed for either.
+  @doc """
+  The ski-migration edges, exposed (unlike `ct_edges/0` and its siblings) so
+  a test can assert both endpoints of every edge still name a guide the seed
+  corpus actually defines — `upsert_all!/0` silently skips an edge whose
+  endpoints are not yet seeded, so a guide rename drops one of these links
+  with no error and no red test unless something reads this list directly.
+  """
+  def ski_migration_edges do
     [
       {"cornwall#{@ct_g}", "mohawk-mountain#{@sk_g}", "see-also",
        "Mohawk Mountain's own ski-history guide covers Walt Schoenknecht's 1947 founding and its Mount Snow, Butternut, and Sundown connections."},
@@ -144,7 +157,15 @@ defmodule Ethos.Seeds.BackfillLinks do
       {"middlefield#{@ct_g}", "powder-ridge#{@sk_g}", "see-also",
        "Powder Ridge's own ski-history guide covers the Zemel brothers' founding and the mountain's 1970 rock festival."},
       {"new-hartford#{@ct_g}", "ski-sundown#{@sk_g}", "see-also",
-       "Ski Sundown's own ski-history guide covers its 1964 opening as Satan's Ridge and Channing Murdock's later purchase."}
+       "Ski Sundown's own ski-history guide covers its 1964 opening as Satan's Ridge and Channing Murdock's later purchase."},
+      {"mohawk-mountain#{@sk_g}", "cornwall#{@ct_g}", "see-also",
+       "Cornwall's own travel guide covers its 1740 incorporation, iron-furnace history, and the West Cornwall Covered Bridge beyond this ski area."},
+      {"mount-southington#{@sk_g}", "southington#{@ct_g}", "see-also",
+       "Southington's own travel guide covers its 1779 incorporation and nut-and-bolt manufacturing history beyond this ski area."},
+      {"powder-ridge#{@sk_g}", "middlefield#{@ct_g}", "see-also",
+       "Middlefield's own travel guide covers its 1866 incorporation and the Lyman family farm, worked since 1741, beyond this ski area."},
+      {"ski-sundown#{@sk_g}", "new-hartford#{@ct_g}", "see-also",
+       "New Hartford's own travel guide covers its 1738 incorporation and Ovation Guitars history beyond this ski area."}
     ]
   end
 
