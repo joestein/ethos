@@ -79,8 +79,11 @@ committed corpus as of this writing and content lands continuously.
 
 1. `Ethos.Release.seed_manhattan(email)` — 38 JSON files, `priv/seed_data/manhattan/`
 2. `Ethos.Release.seed_connecticut(email)` — the CT-5 **code-module** guides
-   (Waterbury, Middlebury, Danbury, Southbury, Woodbury) plus
-   `Ethos.Seeds.ConnecticutPlaces`
+   (Waterbury, Middlebury, Danbury, Southbury, Woodbury) **plus
+   `Ethos.Seeds.AntiqueTrailGuide`, a sixth published guide** that the "CT-5"
+   label hides — it runs last, because its entries point at places the town
+   guides seed — plus `Ethos.Seeds.ConnecticutPlaces`. **This step publishes
+   six guides, not five**, which is why the full-rebuild total below is 533.
 3. `Ethos.Release.seed_connecticut_expansion(email)` — 165 JSON town/guide
    files, `priv/seed_data/connecticut/`
 4. `Ethos.Release.seed_brooklyn(email)` — 69 JSON files, `priv/seed_data/brooklyn/`
@@ -541,10 +544,14 @@ roster once its `:pending_bronx` tag comes off, and that is what will tell you
 the fourteenth landed. See
 `docs/superpowers/specs/2026-08-31-narrowed-nyc-scope-design.md`.
 
-**Full rebuild total: 532 published guides.** Derived, not counted off a live
-database: 38 Manhattan + 5 CT-5 + 165 Connecticut + 69 Brooklyn + 13 Bronx +
-21 Queens + 30 ballparks + 23 San Francisco + 33 London + 31 Rome zones + 1
-Rome flagship + 10 Korean BBQ + 11 steakhouses + 82 ski. Every JSON addend is
+**Full rebuild total: 533 published guides.** Derived, not counted off a live
+database: 38 Manhattan + **6** Connecticut code-module guides + 165 Connecticut
++ 69 Brooklyn + 13 Bronx + 21 Queens + 30 ballparks + 23 San Francisco +
+33 London + 31 Rome zones + 1 Rome flagship + 10 Korean BBQ + 11 steakhouses +
+82 ski. The Connecticut addend is **six, not five**: step 2 seeds the five town
+guides *and* `Ethos.Seeds.AntiqueTrailGuide`. This line said 532 and "5 CT-5"
+until the first production seed of the ski corpus returned 533 and a slug diff
+found that sixth guide — "CT-5" names the set, not its size. Every JSON addend is
 `ls priv/seed_data/<dir>/*.json | wc -l`; re-derive them that way rather than
 trusting this sum, which moves with every content wave. Check it with
 `Ethos.Guides.list_published_guides() |> length()`.

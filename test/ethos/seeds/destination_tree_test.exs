@@ -70,23 +70,34 @@ defmodule Ethos.Seeds.DestinationTreeTest do
   # same way the runbook itself says to ("re-derive them ... rather than
   # trusting this sum"): `Path.wildcard/1` over each corpus directory.
   #
-  # Two addends stay literal, matching the runbook's own derivation sentence
-  # rather than `Ethos.Seeds.Catalog.guide_modules/1`: that function's
-  # "connecticut" region also holds `AntiqueTrailGuide`, and its "rome" region
-  # is exactly the one Rome-flagship module the runbook already names — so
-  # `catalog_count.("connecticut")` returns 6, one more than the "5 CT-5" the
-  # runbook's sentence and this total have always meant (Waterbury,
-  # Middlebury, Danbury, Southbury, Woodbury only). Whether the Antique Trail
-  # guide belongs in this total at all is a pre-existing question this test
-  # does not take a position on; it pins the runbook's stated 5 and 1 rather
-  # than silently changing what the total means. The ballparks addend IS
-  # pulled from the catalog, matching the runbook's own step-7 check, because
-  # that region holds nothing else.
-  # Only the final expectation, 532, is a literal — this test failing is the
+  # This total was 532 for one commit, and production settled it at 533.
+  #
+  # The first version of this test hardcoded 5 for the Connecticut addend and
+  # said so deliberately: `Catalog.guide_modules("connecticut")` returns SIX —
+  # the five town guides plus `AntiqueTrailGuide` — and rather than change what
+  # the total meant, it pinned the "5 CT-5" the runbook's own derivation
+  # sentence has always said, declining to take a position on whether the
+  # Antique Trail guide belonged in the sum.
+  #
+  # That was a coherent choice and it was the wrong one, for a reason only a
+  # real restore could show: this number's ONLY job is to be compared against a
+  # live `list_published_guides() |> length()`. The first production seed of the
+  # ski corpus returned 533, and a diff of those slugs against the seed files
+  # accounted for every one — 496 from JSON, 37 from code modules, and the 37th
+  # is `antique-trail-of-connecticut`. A total that matches a prose sentence but
+  # not the database cannot do the job the runbook asks of it, and worse, it is
+  # wrong in the dangerous direction: a restore that genuinely published 532
+  # would look complete.
+  #
+  # So the Connecticut addend is now derived from the catalog like the ballparks
+  # one, and "CT-5" is understood as the name of that set, not its size. The
+  # runbook's step 2 has been amended to name the sixth guide.
+  #
+  # Only the final expectation, 533, is a literal — this test failing is the
   # instruction to update docs/runbooks/seeding.md's "Full rebuild total" line
   # (and its derivation list, and the "Expected published counts" table's
   # step-13 row) in the same commit as this assertion.
-  test "the runbook's full-rebuild total is still 532" do
+  test "the runbook's full-rebuild total is still 533" do
     dir_count = fn dir ->
       [:code.priv_dir(:ethos) |> to_string(), "seed_data", dir, "*.json"]
       |> Path.join()
@@ -94,13 +105,14 @@ defmodule Ethos.Seeds.DestinationTreeTest do
       |> length()
     end
 
-    ct5 = 5
+    # Six: the five town guides plus AntiqueTrailGuide. See the note above.
+    ct_modules = Ethos.Seeds.Catalog.guide_modules("connecticut") |> length()
     rome_flagship = 1
     ballparks = Ethos.Seeds.Catalog.guide_modules("ballparks") |> length()
 
     total =
       dir_count.("manhattan") +
-        ct5 +
+        ct_modules +
         dir_count.("connecticut") +
         dir_count.("brooklyn") +
         dir_count.("bronx") +
@@ -114,7 +126,7 @@ defmodule Ethos.Seeds.DestinationTreeTest do
         dir_count.("steakhouse") +
         dir_count.("ski")
 
-    assert total == 532,
+    assert total == 533,
            "the full-rebuild total changed to #{total}: update docs/runbooks/seeding.md's " <>
              "\"Full rebuild total\" line, its derivation list, and the \"Expected published " <>
              "counts\" table's step-13 row, and this assertion, in the same commit"
