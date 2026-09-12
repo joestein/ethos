@@ -12,7 +12,6 @@ defmodule EthosWeb.SocialStripTest do
   # concurrent inserts of the same address deadlock in Postgres.
   use EthosWeb.ConnCase, async: false
 
-  import Phoenix.LiveViewTest
   import Ethos.AccountsFixtures
   import Ethos.GuidesFixtures
 
@@ -23,33 +22,6 @@ defmodule EthosWeb.SocialStripTest do
   end
 
   defp doc(html), do: Floki.parse_document!(html)
-
-  describe "the thumbs, logged out" do
-    test "are a link to log in, not a dead control", %{conn: conn, guide: guide} do
-      html = conn |> get(~p"/g/#{guide.slug}") |> html_response(200)
-
-      # The defect this replaces: an inert <span> that differed from the real
-      # <button> only by `opacity-60`. It looked exactly like a button, so
-      # clicking it and getting nothing was the whole complaint. A visitor who
-      # cannot react now gets a link to the thing that would let them.
-      links =
-        html
-        |> doc()
-        |> Floki.find(~s(a[href="/users/log_in"]))
-        |> Enum.filter(&(Floki.find(&1, "[data-reaction-count]") != []))
-
-      assert length(links) == 2, "expected both thumbs to be log-in links"
-
-      refute html =~ "px-4 py-2 text-xl opacity-60",
-             "the old inert thumb styling is still being rendered"
-    end
-
-    test "no react button is offered", %{conn: conn, guide: guide} do
-      html = conn |> get(~p"/g/#{guide.slug}") |> html_response(200)
-
-      assert html |> doc() |> Floki.find(~s([phx-click="react"])) == []
-    end
-  end
 
   describe "the strip" do
     test "shows the average and review count once a review is approved", %{
@@ -89,7 +61,8 @@ defmodule EthosWeb.SocialStripTest do
         |> Floki.raw_html()
 
       title_at = :binary.match(header, guide.title) |> elem(0)
-      strip_at = :binary.match(header, "data-reaction-count") |> elem(0)
+      # The reviews link is the strip's marker now that the thumbs are gone.
+      strip_at = :binary.match(header, "Be the first to review") |> elem(0)
       destination_at = :binary.match(header, guide.destination) |> elem(0)
 
       assert title_at < strip_at, "the strip should follow the title"
@@ -116,7 +89,7 @@ defmodule EthosWeb.SocialStripTest do
       html = conn |> get(~p"/g/#{guide.slug}") |> html_response(200)
 
       assert html |> doc() |> Floki.find(~s([phx-click="rate"])) == []
-      assert html =~ "Log in to react"
+      assert html =~ "Log in"
     end
 
     test "a logged-in user with a username is offered the rating form", %{

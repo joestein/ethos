@@ -75,23 +75,4 @@ defmodule EthosWeb.IslandNavigationTest do
 
     assert html =~ "data-phx-session"
   end
-
-  test "the thumbs' log-in link is a real navigation", %{conn: conn} do
-    place = place_fixture()
-
-    html = conn |> get(~p"/p/#{place.slug}") |> html_response(200)
-
-    thumbs =
-      html
-      |> Floki.parse_document!()
-      |> Floki.find(~s(a[href="/users/log_in"]))
-      |> Enum.filter(&(Floki.find(&1, "[data-reaction-count]") != []))
-
-    assert length(thumbs) == 2
-
-    for t <- thumbs do
-      assert Floki.attribute(t, "data-phx-link") == [],
-             "a thumb's log-in link still uses live navigation, so clicking it does nothing"
-    end
-  end
 end

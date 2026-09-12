@@ -40,7 +40,7 @@ defmodule EthosWeb.SocialIslandLayoutTest do
 
     # The island itself is still there — a page that renders the chrome once
     # because the island vanished would pass the assertions above.
-    assert html =~ "data-reaction-count"
+    assert html =~ "data-phx-session"
   end
 
   test "a place page renders the chrome exactly once", %{conn: conn} do
@@ -51,6 +51,6 @@ defmodule EthosWeb.SocialIslandLayoutTest do
     assert site_headers(html) == 1, "expected one site header, got #{site_headers(html)}"
     assert footers(html) == 1, "expected one footer, got #{footers(html)}"
     assert search_forms(html) == 1, "expected one search box, got #{search_forms(html)}"
-    assert html =~ "data-reaction-count"
+    assert html =~ "data-phx-session"
   end
 end

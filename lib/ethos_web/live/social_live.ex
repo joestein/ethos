@@ -11,6 +11,21 @@ defmodule EthosWeb.SocialLive do
 
   One LiveView serves all three subject types; `Ethos.Social.Subject` is
   what knows the difference.
+
+  ## The thumbs are not rendered
+
+  Reactions still exist end to end — the schema, `Ethos.Social.react/3`, the
+  badge rules that count reacted places, and the `"react"` handler below with
+  its guards. Only the buttons are gone.
+
+  The handler and its guards stay deliberately. Hiding a control is not a
+  security boundary: a crafted socket frame can still send `"react"`, and it
+  must still be refused for a logged-out visitor, one without a username, and
+  a permanently closed place. The tests for those forged events are the reason
+  this code keeps its teeth while nothing renders it.
+
+  Keeping it also means restoring the buttons is a render change rather than a
+  feature rebuild.
   """
   use EthosWeb, :live_view
 
@@ -68,32 +83,11 @@ defmodule EthosWeb.SocialLive do
             the title itself. `flex-wrap` is what keeps it to two lines on a
             narrow screen instead of overflowing. --%>
       <div class="flex flex-wrap items-center gap-x-3 gap-y-1 text-sm text-ink-muted">
-        <.thumb
-          value="up"
-          label="👍"
-          count={@counts.up}
-          mine={@mine == "up"}
-          interactive={@interactive}
-          blocked_href={blocked_href(@prompt)}
-          blocked_title={blocked_title(@prompt)}
-        />
-        <.thumb
-          value="down"
-          label="👎"
-          count={@counts.down}
-          mine={@mine == "down"}
-          interactive={@interactive}
-          blocked_href={blocked_href(@prompt)}
-          blocked_title={blocked_title(@prompt)}
-        />
-
-        <span :if={@summary.count > 0} aria-hidden="true">·</span>
-
         <span :if={@summary.count > 0}>
           <span class="font-medium text-ink">{@summary.average}</span>/10
         </span>
 
-        <span aria-hidden="true">·</span>
+        <span :if={@summary.count > 0} aria-hidden="true">·</span>
 
         <%!-- Reading reviews is open to everyone, logged in or not. Only adding
               one requires an account, which is decided inside the modal. --%>
@@ -104,10 +98,6 @@ defmodule EthosWeb.SocialLive do
         >
           {reviews_label(@summary.count)}
         </button>
-
-        <span :if={@prompt} class="text-xs">
-          · {blocked_title(@prompt)}
-        </span>
       </div>
 
       <.modal id={@modal_id}>
@@ -152,15 +142,6 @@ defmodule EthosWeb.SocialLive do
     """
   end
 
-  # A thumb that cannot be clicked still has to go somewhere useful, and where
-  # depends on WHY it is blocked — not on the fact that it is.
-  defp blocked_href(:needs_username), do: ~p"/users/username"
-  defp blocked_href(_), do: ~p"/users/log_in"
-
-  defp blocked_title(:needs_username), do: "Pick a username to react"
-  defp blocked_title(:closed), do: "closed, reactions kept for reference"
-  defp blocked_title(_), do: "Log in to react"
-
   # "Be the first to review" rather than "0 reviews": the empty state is the
   # one that most needs to invite, and a zero reads as a dead end.
   defp reviews_label(0), do: "Be the first to review"
@@ -194,73 +175,6 @@ defmodule EthosWeb.SocialLive do
     <p class="mt-4 text-sm text-ink-muted">
       <.link href={~p"/users/username"} class="underline">Pick a username to join in.</.link>
     </p>
-    """
-  end
-
-  attr :value, :string, required: true
-  attr :label, :string, required: true
-  attr :count, :integer, required: true
-  attr :mine, :boolean, required: true
-  attr :interactive, :boolean, required: true
-
-  # Where a thumb sends someone who cannot react, and why. It used to be
-  # hardcoded to the log-in page, which is wrong for the one case that is not
-  # about logging in: a signed-in visitor with no username was sent to
-  # /users/log_in, which redirects an authenticated visitor straight back out
-  # again. Clicking appeared to do nothing at all.
-  attr :blocked_href, :string, default: nil
-  attr :blocked_title, :string, default: nil
-
-  # Compact, and honest about what it is.
-  #
-  # This used to render an inert <span> when the visitor could not react,
-  # differing from the real <button> by nothing but `opacity-60`. On an emoji
-  # that is invisible, so a logged-out visitor saw what looked exactly like
-  # buttons, clicked them, and nothing happened — the explanation was a
-  # separate line underneath that is easy to miss. "The thumbs don't work"
-  # was the reasonable conclusion.
-  #
-  # Now a visitor who cannot react gets a LINK to log in wearing the same
-  # clothes. Clicking still does something, and that something is the thing
-  # they need to do in order to react.
-  defp thumb(%{interactive: false} = assigns) do
-    ~H"""
-    <.link
-      href={@blocked_href}
-      title={@blocked_title}
-      class="inline-flex items-center gap-1 rounded-md px-1.5 py-0.5 hover:bg-surface-raised"
-    >
-      <span class="opacity-70">{@label}</span>
-      <span data-reaction-count={@value} class="tabular-nums">{@count}</span>
-    </.link>
-    """
-  end
-
-  defp thumb(assigns) do
-    ~H"""
-    <button
-      type="button"
-      phx-click="react"
-      phx-value-value={@value}
-      aria-pressed={to_string(@mine)}
-      class={
-        [
-          "inline-flex items-center gap-1 rounded-md px-1.5 py-0.5 transition",
-          # A judgement, not seasonal decoration: thumbs up is `positive` and
-          # thumbs down is `negative` regardless of which button this is, and
-          # neither token moves with the season — see assets/css/app.css,
-          # where they are identical in all four palettes.
-          @mine && @value == "up" && "bg-positive/10 text-ink",
-          @mine && @value == "down" && "bg-negative/10 text-ink",
-          !@mine && "hover:bg-surface-raised"
-        ]
-      }
-    >
-      <span>{@label}</span>
-      <%!-- data-reaction-count is the hook the tests read. Without it they would
-            have to assert on bare text, which passes on any stray digit. --%>
-      <span data-reaction-count={@value} class="tabular-nums">{@count}</span>
-    </button>
     """
   end
 
