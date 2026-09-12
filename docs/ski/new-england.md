@@ -158,6 +158,29 @@ protects against new ones.
     "tagline" implies visible marketing copy; it is metadata a citation can
     point to without ever misquoting a word (Wave 8).
 
+24. **A NEIGHBOURING corpus's claim that this project's own research
+    disproves.** Connecticut's `new-hartford.json` said three times that Ski
+    Sundown "opened in 1963 as Satan's Ridge", and once that it had been
+    "independently owned since its 1963 opening". Both predate this project
+    and passed Connecticut's own gate. Wave 8's research then established,
+    from New England Ski History and the Hartford Courant, that the area
+    opened **January 11, 1964** — 1963 being the year Russell Smith's land
+    transferred to Satan's Kingdom Inc. and the partnership formed — and that
+    United Bank & Trust foreclosed on it after the 1967-68 season, after which
+    it sold to the Murdocks (1969), to Rick Carter (circa 1978) and to Robert
+    Switzgable (2002). So the date was wrong and the continuity it asserted
+    was broken by a bank foreclosure and three sales.
+    The shape worth naming is not the error but where it lived: researching a
+    place properly can falsify what an ADJACENT, already-gated corpus says
+    about it, and no test in either corpus compares the two. The ski gate
+    reads only `priv/seed_data/ski/`; Connecticut's reads only its own files.
+    Corrected here to 1964 with the continuity claim dropped. The unsourced
+    figures in the same sentences (17 trails, about 70 skiable acres, and
+    Cornwall's 650-foot vertical drop) were deliberately left, because
+    migrating the places without rewriting Connecticut's statistics was an
+    explicit product decision — but a wrong date is a different thing from a
+    statistic held to an older standard (Wave 8).
+
 ## Content waves
 
 - **Wave 1 — Vermont rows 1-12**: `ascutney-outdoors`, `bolton-valley-resort`, `bromley-mountain-resort`, `burke-mountain-resort`, `cochrans-ski-area`, `hardack`, `harrington-hill`, `jay-peak-resort`, `killington-ski-resort`, `living-memorial-park`, `lyndon-outing-club`, `mad-river-glen`.
@@ -2071,7 +2094,7 @@ which have no JSON `"links"` array to put an edge in; both cases route
 through `Ethos.Seeds.BackfillLinks.ski_migration_edges/0`, whose module
 already handles exactly this shape of problem (idempotent, silently skips
 an edge whose endpoints are not yet seeded) via `Ethos.Release.seed_links/0`
-(step 15, or any later re-run). The four new edges: `cornwall-ct-travel-guide`
+(step 16, or any later re-run). The four new edges: `cornwall-ct-travel-guide`
 ↔ `mohawk-mountain-ski-guide`, `southington-ct-travel-guide` ↔
 `mount-southington-ski-guide`, `middlefield-ct-travel-guide` ↔
 `powder-ridge-ski-guide`, and `new-hartford-ct-travel-guide` ↔
