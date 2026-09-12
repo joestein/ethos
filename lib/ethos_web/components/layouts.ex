@@ -50,17 +50,17 @@ defmodule EthosWeb.Layouts do
           <%= if @current_user do %>
             <.link
               :if={Ethos.Accounts.admin?(@current_user)}
-              navigate={~p"/guides"}
+              href={~p"/guides"}
               class="hover:text-ink-muted"
             >
               Your guides
             </.link>
-            <.link navigate={~p"/badges"} class="hover:text-ink-muted">
+            <.link href={~p"/badges"} class="hover:text-ink-muted">
               Badges
             </.link>
             <.link
               :if={Ethos.Accounts.admin?(@current_user)}
-              navigate={~p"/admin/comments"}
+              href={~p"/admin/comments"}
               class="hover:text-ink-muted"
             >
               Admin
@@ -68,7 +68,7 @@ defmodule EthosWeb.Layouts do
           <% end %>
           <.link
             :if={Ethos.Accounts.admin?(@current_user)}
-            navigate={~p"/guides/new"}
+            href={~p"/guides/new"}
             class="rounded-lg bg-accent px-3 py-1 text-accent-ink hover:opacity-90"
           >
             Make a guide <span aria-hidden="true">&rarr;</span>
@@ -92,8 +92,8 @@ defmodule EthosWeb.Layouts do
       <div class="mx-auto flex max-w-2xl items-center justify-between">
         <span>Ethos</span>
         <nav class="flex gap-4">
-          <.link navigate={~p"/destinations"} class="hover:text-ink">Destinations</.link>
-          <.link navigate={~p"/privacy"} class="hover:text-ink">Privacy</.link>
+          <.link href={~p"/destinations"} class="hover:text-ink">Destinations</.link>
+          <.link href={~p"/privacy"} class="hover:text-ink">Privacy</.link>
         </nav>
       </div>
     </footer>

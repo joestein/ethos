@@ -3,9 +3,13 @@
 
   <header class="mt-2">
     <h1 class="font-display text-display-sm">{@guide.title}</h1>
+    {live_render(@conn, EthosWeb.SocialLive,
+      id: "social-guide-#{@guide.id}",
+      session: %{"subject_type" => "guide", "subject_id" => @guide.id}
+    )}
     <p class="mt-1 text-ink-muted">{@guide.destination}</p>
     <p :for={c <- @collections} class="mt-1 text-sm text-ink-muted">
-      Part of <.link navigate={~p"/c/#{c.slug}"} class="underline">{c.title}</.link>
+      Part of <.link href={~p"/c/#{c.slug}"} class="underline">{c.title}</.link>
     </p>
   </header>
 
@@ -14,12 +18,12 @@
       <h2 class="font-semibold">
         Pictures from {@guide.destination |> String.split(",") |> List.first()}
       </h2>
-      <.link navigate={~p"/g/#{@guide.slug}/photos"} class="text-sm underline">
+      <.link href={~p"/g/#{@guide.slug}/photos"} class="text-sm underline">
         See all {length(@guide.photos)} photos →
       </.link>
     </div>
     <div class="mt-3 grid grid-cols-4 gap-2">
-      <.link :for={p <- Enum.take(@guide.photos, 4)} navigate={~p"/g/#{@guide.slug}/photos"}>
+      <.link :for={p <- Enum.take(@guide.photos, 4)} href={~p"/g/#{@guide.slug}/photos"}>
         <img
           src={p["thumb"]}
           alt={p["title"]}
@@ -95,7 +99,7 @@
           <p class="font-semibold text-lg">
             <%= cond do %>
               <% match?(%{slug: _}, entry.place) -> %>
-                <.link navigate={~p"/p/#{entry.place.slug}"} class="hover:underline">
+                <.link href={~p"/p/#{entry.place.slug}"} class="hover:underline">
                   {entry.name}
                 </.link>
               <% entry.enrichment && entry.enrichment["official_url"] &&
@@ -209,23 +213,18 @@
 
   <EthosWeb.FoliagePanel.foliage_panel foliage={@foliage} />
 
-  {live_render(@conn, EthosWeb.SocialLive,
-    id: "social-guide-#{@guide.id}",
-    session: %{"subject_type" => "guide", "subject_id" => @guide.id}
-  )}
-
   <EthosWeb.ConnectedPages.connected_pages connected={@connected} />
 
   <footer class="mt-10 flex flex-wrap gap-4 border-t border-line pt-6">
     <.link
-      navigate={~p"/g/#{@guide.slug}/suggest"}
+      href={~p"/g/#{@guide.slug}/suggest"}
       class="rounded-md bg-accent px-4 py-2 text-accent-ink text-sm"
     >
       Suggest a place
     </.link>
     <.link
       :if={Ethos.Accounts.admin?(@current_user)}
-      navigate={~p"/guides/new"}
+      href={~p"/guides/new"}
       class="rounded-md border border-line px-4 py-2 text-sm"
     >
       Make your own guide

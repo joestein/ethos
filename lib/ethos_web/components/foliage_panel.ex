@@ -30,14 +30,14 @@ defmodule EthosWeb.FoliagePanel do
       </p>
       <p :if={@foliage.route} class="mt-1 text-sm text-ink-muted">
         On the
-        <.link navigate={~p"/foliage/#{@foliage.route.slug}"} class="underline">
+        <.link href={~p"/foliage/#{@foliage.route.slug}"} class="underline">
           {@foliage.route.name}
         </.link>
         foliage driving route.
       </p>
       <p class="mt-2 text-xs text-ink-muted">
         {Ethos.Foliage.attribution()}
-        <.link navigate={~p"/foliage"} class="underline">See the statewide forecast</.link>.
+        <.link href={~p"/foliage"} class="underline">See the statewide forecast</.link>.
       </p>
     </section>
     """

@@ -1,6 +1,8 @@
 defmodule EthosWeb.UserRegistrationLive do
   use EthosWeb, :live_view
 
+  require Logger
+
   alias Ethos.Accounts
   alias Ethos.Accounts.User
 
@@ -67,11 +69,7 @@ defmodule EthosWeb.UserRegistrationLive do
   def handle_event("save", %{"user" => user_params}, socket) do
     case Accounts.register_user(user_params) do
       {:ok, user} ->
-        {:ok, _} =
-          Accounts.deliver_user_confirmation_instructions(
-            user,
-            &url(~p"/users/confirm/#{&1}")
-          )
+        deliver_confirmation(user)
 
         changeset = Accounts.change_user_registration(user)
         {:noreply, socket |> assign(trigger_submit: true) |> assign_form(changeset)}
@@ -84,6 +82,38 @@ defmodule EthosWeb.UserRegistrationLive do
   def handle_event("validate", %{"user" => user_params}, socket) do
     changeset = Accounts.change_user_registration(%User{}, user_params)
     {:noreply, assign_form(socket, Map.put(changeset, :action, :validate))}
+  end
+
+  # Registration must not depend on a mail server being reachable.
+  #
+  # This was `{:ok, _} = Accounts.deliver_user_confirmation_instructions(...)`,
+  # a strict match on the result of sending mail. When delivery failed the
+  # MatchError killed the LiveView *after* the account row was already
+  # inserted, so the page simply sat there: no flash, no redirect, no error —
+  # the socket reset the form and the person had an account they were never
+  # told about and could not register again.
+  #
+  # No test could see it. `config/test.exs` uses `Swoosh.Adapters.Test` and
+  # `config/dev.exs` uses `Local`; both return `{:ok, _}` unconditionally, so
+  # the failure branch only ever ran in production, which is also the only
+  # environment with no mailer configured.
+  #
+  # The account is the thing worth protecting. A confirmation email that does
+  # not arrive is recoverable — the address can be confirmed later, or the
+  # mail resent — but a registration that dies half-done is not.
+  defp deliver_confirmation(user) do
+    case Accounts.deliver_user_confirmation_instructions(
+           user,
+           &url(~p"/users/confirm/#{&1}")
+         ) do
+      {:ok, _email} ->
+        :ok
+
+      {:error, reason} ->
+        Logger.warning("confirmation email not sent for user #{user.id}: #{inspect(reason)}")
+
+        :ok
+    end
   end
 
   defp assign_form(socket, %Ecto.Changeset{} = changeset) do

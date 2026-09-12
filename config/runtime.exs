@@ -42,6 +42,27 @@ if System.get_env("PHX_SERVER") do
   config :ethos, EthosWeb.Endpoint, server: true
 end
 
+# Transactional mail — account confirmation and password reset — through
+# Resend's HTTPS API rather than SMTP, because Fly blocks outbound port 25.
+# `Ethos.Finch` is already supervised in Ethos.Application; Swoosh is pointed
+# at that pool rather than starting a second one.
+#
+# Guarded on the key so a missing secret degrades to the Local adapter from
+# config.exs (mail goes to an in-memory mailbox) rather than crashing at boot.
+# Registration no longer depends on delivery succeeding either way — see
+# EthosWeb.UserRegistrationLive.deliver_confirmation/1 — but a password reset
+# that silently goes nowhere is still a dead end, so an unset key in
+# production is a real misconfiguration worth noticing.
+if resend_key = System.get_env("RESEND_API_KEY") do
+  config :ethos, Ethos.Mailer,
+    adapter: Swoosh.Adapters.Resend,
+    api_key: resend_key
+
+  config :swoosh,
+    api_client: Swoosh.ApiClient.Finch,
+    finch_name: Ethos.Finch
+end
+
 if config_env() == :prod do
   config :ethos, :anthropic_api_key, System.fetch_env!("ANTHROPIC_API_KEY")
   config :ethos, :exa_api_key, System.fetch_env!("EXA_API_KEY")

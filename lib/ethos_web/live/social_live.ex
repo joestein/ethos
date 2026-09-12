@@ -11,6 +11,21 @@ defmodule EthosWeb.SocialLive do
 
   One LiveView serves all three subject types; `Ethos.Social.Subject` is
   what knows the difference.
+
+  ## The thumbs are not rendered
+
+  Reactions still exist end to end — the schema, `Ethos.Social.react/3`, the
+  badge rules that count reacted places, and the `"react"` handler below with
+  its guards. Only the buttons are gone.
+
+  The handler and its guards stay deliberately. Hiding a control is not a
+  security boundary: a crafted socket frame can still send `"react"`, and it
+  must still be refused for a logged-out visitor, one without a username, and
+  a permanently closed place. The tests for those forged events are the reason
+  this code keeps its teeth while nothing renders it.
+
+  Keeping it also means restoring the buttons is a render change rather than a
+  feature rebuild.
   """
   use EthosWeb, :live_view
 
@@ -26,46 +41,69 @@ defmodule EthosWeb.SocialLive do
   def mount(_params, %{"subject_type" => type, "subject_id" => id}, socket) do
     subject = Subject.get!(type, id)
 
-    {:ok,
-     socket
-     |> assign(subject: subject, rating: nil, rating_error: nil)
-     |> load_reactions()
-     |> load_reviews()}
+    {
+      :ok,
+      socket
+      |> assign(
+        subject: subject,
+        rating: nil,
+        rating_error: nil,
+        # Stable per subject so two islands on one page cannot collide, and so
+        # the JS that opens the modal can name it without a server round trip.
+        modal_id: "social-reviews-#{type}-#{id}"
+      )
+      |> load_reactions()
+      |> load_reviews(),
+      # `layout: false`, and it is load-bearing.
+      #
+      # `use EthosWeb, :live_view` sets `layout: {EthosWeb.Layouts, :app}`, which
+      # is right for a LiveView that owns a page and wrong for one embedded with
+      # `live_render/3`. Without this the island wrapped its own output in the
+      # whole site chrome, so every place, guide and collection page served two
+      # site headers, two search boxes and two footers nested inside itself.
+      #
+      # It hid for as long as the island sat at the bottom of the page, where a
+      # stray header and footer read as part of the real footer. Moving the
+      # island up under the title put that nested chrome between the title and
+      # the location line, which is how it was finally noticed.
+      layout: false
+    }
   end
 
   def render(assigns) do
     ~H"""
-    <section class="mt-10 rounded-xl border border-line p-5">
+    <div class="mt-2">
       <%!-- This island runs as its own isolated LiveView (see the moduledoc), so
             the page's own flash group never sees flashes set in here — this is
             the only place a newly earned badge can be shown. --%>
       <.flash kind={:info} flash={@flash} id="social-badge-flash" />
 
-      <h2 class="text-sm font-semibold uppercase tracking-wide text-ink-muted">
-        What travelers think
-      </h2>
+      <%!-- Two lines at most, and quiet. This sits directly under the page
+            title, above the destination line, so anything louder competes with
+            the title itself. `flex-wrap` is what keeps it to two lines on a
+            narrow screen instead of overflowing. --%>
+      <div class="flex flex-wrap items-center gap-x-3 gap-y-1 text-sm text-ink-muted">
+        <span :if={@summary.count > 0}>
+          <span class="font-medium text-ink">{@summary.average}</span>/10
+        </span>
 
-      <div class="mt-4 flex items-start gap-8">
-        <.thumb
-          value="up"
-          label="👍"
-          count={@counts.up}
-          mine={@mine == "up"}
-          interactive={@interactive}
-        />
-        <.thumb
-          value="down"
-          label="👎"
-          count={@counts.down}
-          mine={@mine == "down"}
-          interactive={@interactive}
-        />
+        <span :if={@summary.count > 0} aria-hidden="true">·</span>
+
+        <%!-- Reading reviews is open to everyone, logged in or not. Only adding
+              one requires an account, which is decided inside the modal. --%>
+        <button
+          type="button"
+          phx-click={show_modal(@modal_id)}
+          class="underline underline-offset-2 hover:text-ink"
+        >
+          {reviews_label(@summary.count)}
+        </button>
       </div>
 
-      <.prompt :if={@prompt} kind={@prompt} />
+      <.modal id={@modal_id}>
+        <h2 class="font-display text-display-sm">What travelers think</h2>
 
-      <div class="mt-8 border-t border-line pt-6">
-        <div :if={@summary.count > 0} class="flex items-baseline gap-2">
+        <div :if={@summary.count > 0} class="mt-1 flex items-baseline gap-2">
           <span class="text-2xl font-semibold">{@summary.average}</span>
           <span class="text-sm text-ink-muted">
             out of 10 · {@summary.count} {if @summary.count == 1, do: "review", else: "reviews"}
@@ -80,8 +118,14 @@ defmodule EthosWeb.SocialLive do
           existing={@own_review}
         />
 
+        <.prompt :if={@prompt} kind={@prompt} />
+
         <p :if={@own_review && @own_review.status == "pending"} class="mt-3 text-sm text-ink-muted">
           Your review is waiting to be approved.
+        </p>
+
+        <p :if={@reviews == []} class="mt-6 text-sm text-ink-muted">
+          No reviews yet.
         </p>
 
         <ul class="mt-6 space-y-5">
@@ -93,10 +137,16 @@ defmodule EthosWeb.SocialLive do
             <p class="mt-1 whitespace-pre-line">{review.body}</p>
           </li>
         </ul>
-      </div>
-    </section>
+      </.modal>
+    </div>
     """
   end
+
+  # "Be the first to review" rather than "0 reviews": the empty state is the
+  # one that most needs to invite, and a zero reads as a dead end.
+  defp reviews_label(0), do: "Be the first to review"
+  defp reviews_label(1), do: "1 review"
+  defp reviews_label(n), do: "#{n} reviews"
 
   attr :kind, :atom, required: true
 
@@ -115,7 +165,7 @@ defmodule EthosWeb.SocialLive do
   defp prompt(%{kind: :logged_out} = assigns) do
     ~H"""
     <p class="mt-4 text-sm text-ink-muted">
-      <.link navigate={~p"/users/log_in"} class="underline">Log in to react.</.link>
+      <.link href={~p"/users/log_in"} class="underline">Log in to react.</.link>
     </p>
     """
   end
@@ -123,52 +173,8 @@ defmodule EthosWeb.SocialLive do
   defp prompt(%{kind: :needs_username} = assigns) do
     ~H"""
     <p class="mt-4 text-sm text-ink-muted">
-      <.link navigate={~p"/users/username"} class="underline">Pick a username to join in.</.link>
+      <.link href={~p"/users/username"} class="underline">Pick a username to join in.</.link>
     </p>
-    """
-  end
-
-  attr :value, :string, required: true
-  attr :label, :string, required: true
-  attr :count, :integer, required: true
-  attr :mine, :boolean, required: true
-  attr :interactive, :boolean, required: true
-
-  # The count sits directly beneath its own button, so "34 people liked this"
-  # reads off the layout without a legend.
-  defp thumb(assigns) do
-    ~H"""
-    <div class="flex flex-col items-center gap-1">
-      <button
-        :if={@interactive}
-        type="button"
-        phx-click="react"
-        phx-value-value={@value}
-        aria-pressed={to_string(@mine)}
-        class={
-          [
-            "rounded-lg border border-line px-4 py-2 text-xl transition",
-            # A judgement, not seasonal decoration (Amendment C): thumbs up is
-            # `positive` and thumbs down is `negative` regardless of which
-            # button this is, and neither token moves with the season — see
-            # assets/css/app.css, where they are identical in all four palettes.
-            @mine && @value == "up" && "border-positive bg-positive/10",
-            @mine && @value == "down" && "border-negative bg-negative/10",
-            !@mine && "hover:bg-surface-raised"
-          ]
-        }
-      >
-        {@label}
-      </button>
-      <span :if={!@interactive} class="rounded-lg border border-line px-4 py-2 text-xl opacity-60">
-        {@label}
-      </span>
-      <%!-- data-reaction-count is the hook the tests read. Without it they would have
-            to assert on bare text, which passes on any stray digit on the page. --%>
-      <span data-reaction-count={@value} class="text-sm font-medium text-ink-muted">
-        {@count}
-      </span>
-    </div>
     """
   end
 
