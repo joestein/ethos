@@ -63,7 +63,7 @@ defmodule Ethos.Seeds.SkiCollections do
         %{
           guide_slug: "abenaki-ski-area-ski-guide",
           blurb:
-            "A town-owned community hill in Wolfeboro, operated by the town's Parks & Recreation Department and skiable since 1940, among the longest-running ski areas in the region per New England Ski History."
+            "A town-owned community hill in Wolfeboro, operated by the town's Parks & Recreation Department, with lift-served skiing since 1940 after earlier hike-up skiing at the site."
         },
         %{
           guide_slug: "ascutney-outdoors-ski-guide",
@@ -500,7 +500,7 @@ defmodule Ethos.Seeds.SkiCollections do
         %{
           guide_slug: "stowe-mountain-resort-ski-guide",
           blurb:
-            "Skiing on Mount Mansfield since 1937, the birthplace of the National Ski Patrol, and today part of the Vail Resorts network."
+            "Skiing on Mount Mansfield since 1937, home to the birth of the National Ski Patrol, and today part of the Vail Resorts network."
         },
         %{
           guide_slug: "jay-peak-resort-ski-guide",
@@ -555,7 +555,7 @@ defmodule Ethos.Seeds.SkiCollections do
         %{
           guide_slug: "abenaki-ski-area-ski-guide",
           blurb:
-            "A town-owned community hill in Wolfeboro run by the parks department, skiable since 1940 and among the region's longest continuously running hills."
+            "The selection's town-run hill: Wolfeboro's Abenaki, run by the town's own parks department, with lift-served skiing since 1940 after earlier hike-up skiing at the site."
         }
       ]
     }

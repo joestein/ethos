@@ -181,4 +181,191 @@ defmodule Ethos.Seeds.SkiCollectionsTest do
              "#{label}: text uses banned superlative \"#{word}\": #{text}"
     end
   end
+
+  # --- Ranking-and-primacy check (round-1 fix) -------------------------------
+  #
+  # Round 1 shipped an Abenaki blurb saying "among the longest-running ski
+  # areas in the region" and a parent blurb saying "the region's longest
+  # continuously running hills." Abenaki's own file makes exactly one ranking
+  # claim, quoted and attributed: New England Ski History calling it "one of
+  # the oldest ski areas in the country." Neither "longest" nor "continuously"
+  # appears anywhere in that file, and the file's own text — closures during
+  # World War II — refutes "continuously" outright. `@superlatives` didn't
+  # catch it because "longest-running" and "continuously" aren't on that list.
+  #
+  # This is the same cheap mechanical proxy as the digit-year check, applied
+  # to ranking and primacy language instead of numbers: if a blurb about one
+  # area uses one of these words, that word must appear in that area's own
+  # shipped file, not just somewhere in the corpus. It cannot verify the claim
+  # is used the same way the source uses it (that took a human read for
+  # Abenaki), but it catches every case where the word is invented outright —
+  # which is what happened here.
+  @ranking ~w(longest continuous continuously earliest only pioneer birthplace
+              nation's country's region's state's)
+
+  # "one of the" is handled separately below (`primacy_claim_word/1`) rather
+  # than added to @ranking: the phrase itself has no reason to appear
+  # verbatim in a source file the way a single word might, so what gets
+  # checked is the word it modifies ("oldest," "largest," ...), not the
+  # phrase.
+
+  defp ranking_words_found(text) do
+    for word <- @ranking, contains_word?(text, word), do: word
+  end
+
+  defp area_slug_for_guide(guide_slug), do: String.replace_suffix(guide_slug, "-ski-guide", "")
+
+  defp area_file_text(area_slug) do
+    File.read!(Path.join(@ski_dir, "#{area_slug}.json"))
+  end
+
+  defp full_ski_corpus_text do
+    Path.join(@ski_dir, "*.json")
+    |> Path.wildcard()
+    |> Enum.map(&File.read!/1)
+    |> Enum.join("\n")
+  end
+
+  # Stowe's blurb says "home to the birth of the National Ski Patrol," not
+  # "birthplace" — a faithful compression of that exact phrase in its own
+  # file. Reworded to match rather than special-cased, so no exception list
+  # is needed here.
+  test "every ranking or primacy word in a blurb is sourced in that area's own file" do
+    {blurbs, _intros} = all_blurbs_and_intros()
+
+    for {label, blurb} <- blurbs do
+      guide_slug = label |> String.split("/", parts: 2) |> List.last()
+      area_slug = area_slug_for_guide(guide_slug)
+      file_text = area_file_text(area_slug)
+
+      for word <- ranking_words_found(blurb) do
+        assert contains_word?(file_text, word) or String.contains?(file_text, word),
+               "#{label}: blurb uses ranking word \"#{word}\", which is not in " <>
+                 "priv/seed_data/ski/#{area_slug}.json — blurb: #{blurb}"
+      end
+    end
+  end
+
+  # Neither intro is about one area, so there is no single file to check
+  # against — checked instead against the union of every shipped ski file,
+  # the intro's real source material. A ranking word invented out of nothing
+  # (not grounded anywhere in the 82-guide corpus) still fails this; a claim
+  # like "the state's only ski area," which restates something an area's own
+  # file actually says, still passes.
+  test "every ranking or primacy word in either intro is sourced somewhere in the ski corpus" do
+    {_blurbs, intros} = all_blurbs_and_intros()
+    corpus = full_ski_corpus_text()
+
+    for {label, text} <- intros, word <- ranking_words_found(text) do
+      assert String.contains?(String.downcase(corpus), String.downcase(word)),
+             "#{label}: uses ranking word \"#{word}\", not sourced anywhere in " <>
+               "priv/seed_data/ski/*.json — intro: #{text}"
+    end
+  end
+
+  # Non-vacuity specimen test, in the corpus gate's three-way style: a
+  # specimen the check catches, one a real source would spare, and proof it
+  # does not trip on the shipped corpus. A check nobody has watched fail is a
+  # check nobody knows works.
+  test "the ranking-word check catches an invented claim and spares a sourced one" do
+    source = ~s({"guide": {"intro": "Skiing at this small hill since 1980."}})
+
+    # Catches: "longest" and "pioneer" are asserted but appear nowhere in the
+    # area's own file — exactly the shape of the round-1 Abenaki defect.
+    invented = "Vermont's longest-running hill and a snowmaking pioneer since 1980."
+
+    caught =
+      for word <- ranking_words_found(invented), not String.contains?(source, word), do: word
+
+    assert caught == ["longest", "pioneer"],
+           "specimen expected to be caught by the ranking check was not: #{inspect(caught)}"
+
+    # Spared: the same word, used the way a real file would actually support
+    # it, because the word is genuinely present in the source.
+    sourced_text = ~s({"guide": {"intro": "Locals call it the only hill in town, since 1980."}})
+    faithful = "Known locally as the only hill in town."
+
+    spared =
+      for word <- ranking_words_found(faithful),
+          not String.contains?(sourced_text, word),
+          do: word
+
+    assert spared == [],
+           "specimen expected to be spared by the ranking check was caught: #{inspect(spared)}"
+
+    # Proof it does not trip on the shipped corpus: the real check, run for
+    # real, over every real blurb and both real intros.
+    {blurbs, intros} = all_blurbs_and_intros()
+
+    blurb_failures =
+      for {label, blurb} <- blurbs,
+          area_slug =
+            label |> String.split("/", parts: 2) |> List.last() |> area_slug_for_guide(),
+          file_text = area_file_text(area_slug),
+          word <- ranking_words_found(blurb),
+          not (contains_word?(file_text, word) or String.contains?(file_text, word)),
+          do: {label, word}
+
+    corpus = full_ski_corpus_text()
+
+    intro_failures =
+      for {label, text} <- intros,
+          word <- ranking_words_found(text),
+          not String.contains?(String.downcase(corpus), String.downcase(word)),
+          do: {label, word}
+
+    assert blurb_failures == [] and intro_failures == [],
+           "the shipped corpus should pass its own check: #{inspect(blurb_failures ++ intro_failures)}"
+  end
+
+  # "One of the" itself has no reason to appear verbatim in a source file —
+  # New England Ski History's actual sentence is "one of the oldest ski areas
+  # in the country," and no shipped file would ever contain the literal
+  # phrase "one of the" as a standalone fragment. So instead of requiring the
+  # phrase itself to be sourced, this pulls out the word the phrase modifies
+  # ("oldest," in that example) and checks that word the same way every other
+  # ranking word is checked. No blurb or intro currently uses the phrase, so
+  # this exercises entirely through the specimen test below and the
+  # not-currently-triggered pass over the real corpus.
+  defp primacy_claim_word(text) do
+    case Regex.run(~r/one of the\s+([a-z-]+)/i, text) do
+      [_, word] -> String.downcase(word)
+      nil -> nil
+    end
+  end
+
+  test "\"one of the <word>\" claims are checked on the word they actually make" do
+    {blurbs, _intros} = all_blurbs_and_intros()
+
+    for {label, blurb} <- blurbs do
+      case primacy_claim_word(blurb) do
+        nil ->
+          :ok
+
+        word ->
+          area_slug = label |> String.split("/", parts: 2) |> List.last() |> area_slug_for_guide()
+          file_text = area_file_text(area_slug)
+
+          assert String.contains?(String.downcase(file_text), word),
+                 "#{label}: blurb claims \"one of the #{word}\", and \"#{word}\" is not in " <>
+                   "priv/seed_data/ski/#{area_slug}.json — blurb: #{blurb}"
+      end
+    end
+  end
+
+  test "the \"one of the\" check catches an unsourced claim and spares a sourced one" do
+    unsourced_file = ~s({"guide": {"intro": "A small hill with a rope tow."}})
+    invented = "Locals call it one of the steepest hills in the county."
+    word = primacy_claim_word(invented)
+    assert word == "steepest"
+    refute String.contains?(unsourced_file, word)
+
+    sourced_file =
+      ~s({"guide": {"intro": "New England Ski History calls it one of the oldest ski areas in the country."}})
+
+    faithful = "Cited as one of the oldest ski areas in the country."
+    word2 = primacy_claim_word(faithful)
+    assert word2 == "oldest"
+    assert String.contains?(sourced_file, word2)
+  end
 end
