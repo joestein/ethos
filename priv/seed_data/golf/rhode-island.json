@@ -1,0 +1,71 @@
+{
+  "guide": {
+    "slug": "rhode-island-golf-guide",
+    "title": "Newport National Golf Club: Golf in Middletown, Rhode Island",
+    "destination": "Middletown, Rhode Island",
+    "destination_path": "united-states/rhode-island/newport-county/middletown",
+    "intro": "Golf Digest's 2025-'26 Best in State list for Rhode Island runs to seven courses, and the first six of them are labelled Private. The seventh, and the only one on the list carrying Golf Digest's own Public label, is the Orchard Course at Newport National Golf Club in Middletown. That makes Rhode Island a state where the selection is settled by walking down the list rather than by anybody's judgement: six private clubs above it, one public course, no choice to make. This guide covers that course and how a visitor gets on it. It does not carry a basecamp, because none was established from a source, and the last section says so plainly rather than filling the gap.",
+    "sections": [
+      {
+        "heading": "Getting there",
+        "body": "Newport National Golf Club is at 425 Mitchell's Lane, Middletown, Rhode Island 02842, in Newport County, and the address is the operator's own. The operator describes the setting rather than the route: the course carries \"views of the Atlantic Ocean and Sakonnet Passage, while challenging golfers with steady winds coming off the Narragansett Bay.\" No travel time appears in this guide, from the airport or from anywhere else, because none is published by a source this guide can cite."
+      },
+      {
+        "heading": "Why this course, and not the state's number one",
+        "body": "The criterion for this set is the highest-ranked entry on a state's Golf Digest Best in State list that carries Golf Digest's own Public label, and it exists because \"the best course in Rhode Island\" is a judgement no source can settle. Walking the 2025-'26 list from the top: Newport Country Club, Wannamoisett Country Club, Shelter Harbor Golf Club, The Misquamicut Club, Sakonnet Golf Club and Warwick Country Club are each labelled Private. Newport National's Orchard Course, at rank seven, is the first Public label and the only one on the list. The ranking is cited as Golf Digest Best in State, 2025-'26 edition; this guide never asserts that the course is the best in the state, because the ranking does not say that either."
+      },
+      {
+        "heading": "Playing the Orchard Course",
+        "body": "The operator's own site states it directly: \"The Golf Course is Open to the Public!\" Newport National credits the design to Arthur Hills -- \"Legendary golf architect Arthur Hills designed the challenging 7,244 yard Orchard Course\" -- and describes it as an 18-hole links-style course with \"sloping fairways, marshes, and strategically placed bunkers.\" A second, shorter course shares the same address: the operator calls the nine-hole Vineyard Course \"Our Newest 9-hole Course.\" No green fee is quoted here. The operator's site publishes no rates, no seasonal variation and no dated pricing, and an undated fee is a fee that will be wrong. The year the course opened is likewise absent from the operator's site, so it is not stated."
+      },
+      {
+        "heading": "The claims the operator makes about itself",
+        "body": "Newport National's site cites several third-party honours, and they belong to the operator's own telling rather than to this guide: eighth best links-style course in America, per the PGA; a Golfweek Top 20 New Courses in America listing; \"#1 Public Access Course in the State of Rhode Island,\" attributed by the operator to Golf Digest; number one public-access course in New England, per New England Golf Monthly; and a Luxury Travel Magazine golf-getaways listing. The third is worth separating from the ranking this guide used. It is consistent with what the Best in State list shows -- first Public label on a mixed list -- but it is a different Golf Digest product making a different claim, and the two are not blended here."
+      },
+      {
+        "heading": "What this guide does not carry",
+        "body": "No hotel and no restaurants. Every other state in this set names somewhere to sleep and somewhere to eat, each with a sourced address, and for Rhode Island none was established. The rule the set follows is that a guide says so rather than inventing one, and Tennessee's guide carries no basecamp either. No second course in another town is named for the same reason: the Vineyard nine shares Newport National's address, so it is not the second-day answer that a separate facility would be, and the roster row records second_course as unset rather than pointing at it."
+      }
+    ],
+    "faq": [
+      {
+        "question": "How do I book a tee time at Newport National?",
+        "answer": "The operator's site says \"The Golf Course is Open to the Public!\" and carries a booking control for tee times, and it lists a telephone number, 401.848.9690. No membership or affiliation is described as a condition of play anywhere on the site."
+      },
+      {
+        "question": "What does a round cost?",
+        "answer": "Not published here, because the operator does not publish it. There are no rates on the site, no seasonal variation and no dated pricing, and this set publishes a green fee only when it carries a date that shows when it was true."
+      },
+      {
+        "question": "Why is Rhode Island's number-one course not in this guide?",
+        "answer": "Newport Country Club is ranked first on Golf Digest's 2025-'26 Best in State list for Rhode Island and is labelled Private, as are the five entries below it. This set takes the highest-ranked entry carrying Golf Digest's own Public label, which is Newport National's Orchard Course at rank seven."
+      },
+      {
+        "question": "Where can I stay and eat nearby?",
+        "answer": "This guide does not say, because no source was established for it. Rather than name somewhere unverified, it leaves the question open -- the same choice the set makes anywhere the basecamp could not be sourced."
+      }
+    ],
+    "photos": []
+  },
+  "places": [
+    {
+      "slug": "newport-national-orchard-course",
+      "name": "Newport National Golf Club: Orchard Course",
+      "kind": "golf-course",
+      "destination_path": "united-states/rhode-island/newport-county/middletown",
+      "address": "425 Mitchell's Lane, Middletown, RI 02842",
+      "official_url": "https://www.newportnational.com/",
+      "summary": "The Orchard Course at Newport National, rank seven and the only Public label on Golf Digest's 2025-'26 Rhode Island list. An 18-hole links-style course the operator credits to Arthur Hills, open to the public in the operator's own words.",
+      "status": "open",
+      "photos": []
+    }
+  ],
+  "entries": [
+    {
+      "kind": "sight",
+      "name": "Newport National Golf Club: Orchard Course",
+      "place_slug": "newport-national-orchard-course",
+      "note": "Rhode Island's highest-ranked publicly accessible course on Golf Digest's 2025-'26 Best in State list, at rank seven behind six private clubs."
+    }
+  ]
+}

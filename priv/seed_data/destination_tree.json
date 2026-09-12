@@ -1223,5 +1223,7 @@
   {"path":"united-states/wisconsin/sheboygan-county/town-of-mosel","kind":"town","name":"Town of Mosel","intro":"Town of Mosel, Wisconsin."},
   {"path":"united-states/wyoming","kind":"region","name":"Wyoming","intro":"Wyoming — the towns and counties this site covers."},
   {"path":"united-states/wyoming/teton-county","kind":"county","name":"Teton County","intro":"Teton County."},
-  {"path":"united-states/wyoming/teton-county/jackson","kind":"town","name":"Jackson","intro":"Jackson, Wyoming."}
+  {"path":"united-states/wyoming/teton-county/jackson","kind":"town","name":"Jackson","intro":"Jackson, Wyoming."},
+  {"path":"united-states/rhode-island/newport-county","kind":"county","name":"Newport County","intro":"Newport County."},
+  {"path":"united-states/rhode-island/newport-county/middletown","kind":"town","name":"Middletown","intro":"Middletown, Rhode Island."}
 ]

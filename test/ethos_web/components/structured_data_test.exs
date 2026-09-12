@@ -1465,10 +1465,24 @@ defmodule EthosWeb.StructuredDataTest do
       # the emitter itself and then written here, and the accounting above was
       # checked against a separate count of how many golf places carry an
       # address (39 of 295) before either was believed.
-      assert length(emitted) == 5440
-      assert count.(& &1["streetAddress"]) == 4692
+      # Re-measured again when Rhode Island landed, resolving the 49th golf state.
+      # Its single place is the Orchard Course at Newport National, whose address is
+      # the operator's own -- "425 Mitchell's Lane, Middletown, RI 02842" -- so it
+      # carries both a house-numbered street line and a five-digit ZIP, and moves
+      # the same three counters by one while leaving the fourth alone:
+      #
+      #   * total 5440 -> 5441, +1.
+      #   * `streetAddress` 4692 -> 4693, +1.
+      #   * `is_nil(streetAddress)` unmoved at 748.
+      #   * `postalCode` 3966 -> 3967, +1.
+      #
+      # Rhode Island's guide carries no hotel and no restaurants -- no basecamp was
+      # established from a source and the guide says so -- so it contributes one
+      # addressed place and not the five or six a state guide usually would.
+      assert length(emitted) == 5441
+      assert count.(& &1["streetAddress"]) == 4693
       assert count.(&is_nil(&1["streetAddress"])) == 748
-      assert count.(& &1["postalCode"]) == 3966
+      assert count.(& &1["postalCode"]) == 3967
 
       # The largest behavioural delta this change ships: 302 places emit a
       # PostalAddress carrying only locality, region and country. Their full

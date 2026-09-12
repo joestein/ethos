@@ -36,16 +36,16 @@ defmodule Ethos.Seeds.DestinationTreeTest do
   #
   # Literals, deliberately, in a suite that otherwise derives everything. A
   # derived expectation cannot go stale, which is exactly why it cannot serve
-  # here: the runbook is prose, it says "confirm the count reads 1041", and
+  # here: the runbook is prose, it says "confirm the count reads 1043", and
   # nothing else in this repository would notice the day that stopped being
   # true. An operator following a stale number either proceeds through a short
   # rebuild or stops on a complete one. So the numbers live here, once, and
   # this test failing is the instruction to update that document — change both
   # in the same commit, never one alone.
   test "the roster and overlay counts docs/runbooks/seeding.md quotes are still true" do
-    assert length(DestinationTree.load!()) == 1041,
+    assert length(DestinationTree.load!()) == 1043,
            "the roster changed size: update docs/runbooks/seeding.md, which tells the " <>
-             "operator to confirm a count of 1041 after a rebuild, and this assertion"
+             "operator to confirm a count of 1043 after a rebuild, and this assertion"
 
     overlays =
       [:code.priv_dir(:ethos) |> to_string(), "seed_data", "destinations", "*.json"]
@@ -93,11 +93,11 @@ defmodule Ethos.Seeds.DestinationTreeTest do
   # one, and "CT-5" is understood as the name of that set, not its size. The
   # runbook's step 2 has been amended to name the sixth guide.
   #
-  # Only the final expectation, 581, is a literal — this test failing is the
+  # Only the final expectation, 582, is a literal — this test failing is the
   # instruction to update docs/runbooks/seeding.md's "Full rebuild total" line
   # (and its derivation list, and the "Expected published counts" table's
   # step-13 row) in the same commit as this assertion.
-  test "the runbook's full-rebuild total is still 581" do
+  test "the runbook's full-rebuild total is still 582" do
     dir_count = fn dir ->
       [:code.priv_dir(:ethos) |> to_string(), "seed_data", dir, "*.json"]
       |> Path.join()
@@ -127,7 +127,7 @@ defmodule Ethos.Seeds.DestinationTreeTest do
         dir_count.("ski") +
         dir_count.("golf")
 
-    assert total == 581,
+    assert total == 582,
            "the full-rebuild total changed to #{total}: update docs/runbooks/seeding.md's " <>
              "\"Full rebuild total\" line, its derivation list, and the \"Expected published " <>
              "counts\" table's step-13 row, and this assertion, in the same commit"

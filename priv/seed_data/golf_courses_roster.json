@@ -570,19 +570,19 @@
     "verified": true
   },
   {
-    "access": null,
-    "city": null,
-    "county": null,
-    "course": null,
-    "criterion": null,
-    "facility": null,
-    "ranking_edition": null,
-    "ranking_position": null,
-    "ranking_source": null,
+    "access": "Rank 7 is the first and only Public label on a seven-course list: ranks 1 through 6 are each labelled Private, so the selection is forced rather than chosen, the same single-Public shape as Iowa. The label is printed on Rhode Island's own per-state page, which is where §1's open condition 1 asked each wave to read it rather than trusting the every-state summary. Access rests on the operator as well as the label, after Connecticut's moved between captures: newportnational.com states \"The Golf Course is Open to the Public!\" in its own words. No green fee is publishable -- the operator's site carries no rates, no seasonal variation and no dated pricing at all, the same refusal Massachusetts made for a different reason. The opening year is absent from the operator's site and is not published.",
+    "city": "Middletown",
+    "county": "Newport County",
+    "course": "Newport National Golf Club: Orchard Course",
+    "criterion": "ranking",
+    "facility": "Newport National Golf Club",
+    "ranking_edition": "2025-'26",
+    "ranking_position": 7,
+    "ranking_source": "Golf Digest Best in State",
     "second_course": null,
     "slug": "rhode-island",
     "state": "Rhode Island",
-    "verified": false
+    "verified": true
   },
   {
     "access": "Playable without a resort booking, and access is tiered by price rather than gated. The resort's own booking system, called unauthenticated, returns bookable tee times under rate types the operator names \"(Walk w/ Caddie) Non Resort\" and \"(Walk w/o Caddie) Non Resort\". Those non-guest rates appear inside a 60-day window and are absent beyond it, a boundary reproduced by date sweep. The resort publishes no green-fee rate card.",

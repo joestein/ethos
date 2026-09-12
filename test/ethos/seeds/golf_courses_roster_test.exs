@@ -225,6 +225,21 @@ defmodule Ethos.Seeds.GolfCoursesRosterTest do
   # Each entry names both colliding files, the slug they share, and the reason.
   @destination_merges [
     %{
+      golf_file: "priv/seed_data/golf/rhode-island.json",
+      other_file: "priv/seed_data/connecticut/middletown.json",
+      slug: "middletown",
+      why:
+        "Two different Middletowns in two different states, and neither guide should " <>
+          "move: this one is Middletown, Rhode Island (Newport County, on the Newport " <>
+          "National address the operator publishes) and the other is Middletown, " <>
+          "Connecticut (Middlesex County, the town guide that also carries Powder " <>
+          "Ridge). Each files against its own node, so the hubs a reader browses are " <>
+          "separate and correct, and only the derived destination_slug collides -- a " <>
+          "field GuideBreadcrumb.legacy_trail/1 reads ONLY for a guide with no " <>
+          "destination_id, which both of these have. Declared rather than merged, the " <>
+          "same call and for the same reason as the jackson entry above."
+    },
+    %{
       golf_file: "priv/seed_data/golf/wyoming.json",
       other_file: "priv/seed_data/ski/black-mountain.json",
       slug: "jackson",

@@ -84,7 +84,7 @@ committed corpus as of this writing and content lands continuously.
    `Ethos.Seeds.AntiqueTrailGuide`, a sixth published guide** that the "CT-5"
    label hides — it runs last, because its entries point at places the town
    guides seed — plus `Ethos.Seeds.ConnecticutPlaces`. **This step publishes
-   six guides, not five**, which is why the full-rebuild total below is 581.
+   six guides, not five**, which is why the full-rebuild total below is 582.
 3. `Ethos.Release.seed_connecticut_expansion(email)` — 165 JSON town/guide
    files, `priv/seed_data/connecticut/`
 4. `Ethos.Release.seed_brooklyn(email)` — 69 JSON files, `priv/seed_data/brooklyn/`
@@ -201,7 +201,7 @@ committed corpus as of this writing and content lands continuously.
 
     What this step does need is the destination nodes, and it seeds the tree
     itself first, the way every other seeder does. Those nodes are the reason
-    the destination roster's size (1041, verified in step 15 below and pinned
+    the destination roster's size (1043, verified in step 15 below and pinned
     in `test/ethos/seeds/destination_tree_test.exs`) grew: New England's town
     and county nodes were added by this project, and
     `DataGuide.upsert_places!/1` **raises** on a path no node owns — a missing
@@ -209,7 +209,7 @@ committed corpus as of this writing and content lands continuously.
 
     Step 15 depends on this one: `Ethos.Seeds.SkiCollections` names every ski
     guide in both of its collections.
-14. `Ethos.Release.seed_golf(email)` — 48 JSON files, `priv/seed_data/golf/`,
+14. `Ethos.Release.seed_golf(email)` — 49 JSON files, `priv/seed_data/golf/`,
     one per state, scoped by `priv/seed_data/golf_courses_roster.json`. Each
     guide's subject is the highest-ranked entry carrying Golf Digest's own
     `Public` label in that state's Best in State list; the criterion and its
@@ -226,10 +226,12 @@ committed corpus as of this writing and content lands continuously.
     course sits in whatever municipality it sits in, and 47 of the 48 states
     had no node before this step existed.
 
-    Two states are **not** here yet: Rhode Island and Vermont are the two rows
-    of the fifty still carrying `verified: false`, and the roster gate holds
-    them as unresolved rather than guessing. The file count is 48, not 50,
-    until they land.
+    One state is **not** here yet: Vermont is the last of the fifty still
+    carrying `verified: false`. Its ranking's five entries are all labelled
+    `Private`, so the primary criterion cannot pick, and the championship
+    fallback that resolved New Hampshire, New Jersey and Tennessee needs a
+    venue count this corpus has not finished — see `docs/golf/vermont.md`. The
+    file count is 49, not 50, until it lands.
 
     Step 16 depends on this one: `Ethos.Seeds.GolfCollection` names every golf
     guide, so `seed_collections` run before this step raises
@@ -305,7 +307,7 @@ Verify the published count after each content step before moving on — see
 It creates no rows at all now: each of the fifteen files is keyed on a node
 path and overlays an intro and photos onto a row the roster already owns, so
 `Ethos.Destinations.list_destinations() |> Enum.count()` reads the roster's
-size (**1041**) both before and after it, not 15. That number is the length of
+size (**1043**) both before and after it, not 15. That number is the length of
 `priv/seed_data/destination_tree.json` and is asserted against this runbook in
 `test/ethos/seeds/destination_tree_test.exs` — when the roster grows, that test
 fails and this paragraph is what it is telling you to update. What confirms
@@ -313,7 +315,7 @@ fails and this paragraph is what it is telling you to update. What confirms
 `Ethos.Destinations.get_by_path("united-states/connecticut").intro` should be
 the long Connecticut history, not the stub "Connecticut, county by county."
 
-A count of **1056** — the roster plus fifteen — means the pre-Task-13 keys are
+A count of **1058** — the roster plus fifteen — means the pre-Task-13 keys are
 back. Those extra rows have no `kind` and no `parent_id`; they shadow fifteen
 hubs, disable their redirects, enter the sitemap, and list Connecticut, New
 York and Rome on `/destinations` beside the countries.
@@ -376,7 +378,7 @@ any seeder runs — they are still NULL anyway.
 — `Ethos.Release.seed_destination_tree()`, which every seeder below also runs
 first — and step 15's fifteen overlay files put the curated prose and photos
 back on top. Run the full seed order after the migration, exactly as for a
-fresh database, and confirm the count reads 1041 and
+fresh database, and confirm the count reads 1043 and
 `get_by_path("united-states/connecticut").intro` is the long history rather
 than the stub.
 
@@ -526,7 +528,7 @@ seed window described at the top of this runbook — it just returns 0.
 | 11 | Korean BBQ | **10** | the seeder's own last line, `Seeded 10 files from priv/seed_data/korean_bbq` (these ten file on five different nodes, so no single subtree counts them) |
 | 12 | Steakhouses | **11** | the seeder's own last line, `Seeded 11 files from priv/seed_data/steakhouse` (these eleven file on eleven different nodes, six of which no earlier step touches, so no single subtree counts them) |
 | 13 | Ski (New England) | **82** | the seeder's own last line, `Seeded 82 files from priv/seed_data/ski` (these 82 file on dozens of different town and county nodes across six New England states, so no single subtree counts them) |
-| 14 | Golf (48 states) | **48** | the seeder's own last line, `Seeded 48 files from priv/seed_data/golf` (one guide per state, filing on 84 town nodes across 28 states this corpus added itself — no subtree counts them, and the number is 48 rather than 50 until Rhode Island and Vermont resolve) |
+| 14 | Golf (49 states) | **49** | the seeder's own last line, `Seeded 49 files from priv/seed_data/golf` (one guide per state, filing on 84 town nodes across 28 states this corpus added itself — no subtree counts them, and the number is 49 rather than 50 until Vermont resolves) |
 
 **Read the rows in order, and only after the step they name.** These are
 subtree counts, so a later step can add to an earlier row's subtree. Three do:
@@ -571,11 +573,11 @@ roster once its `:pending_bronx` tag comes off, and that is what will tell you
 the fourteenth landed. See
 `docs/superpowers/specs/2026-08-31-narrowed-nyc-scope-design.md`.
 
-**Full rebuild total: 581 published guides.** Derived, not counted off a live
+**Full rebuild total: 582 published guides.** Derived, not counted off a live
 database: 38 Manhattan + **6** Connecticut code-module guides + 165 Connecticut
 + 69 Brooklyn + 13 Bronx + 21 Queens + 30 ballparks + 23 San Francisco +
 33 London + 31 Rome zones + 1 Rome flagship + 10 Korean BBQ + 11 steakhouses +
-82 ski + 48 golf. The Connecticut addend is **six, not five**: step 2 seeds the five town
+82 ski + 49 golf. The Connecticut addend is **six, not five**: step 2 seeds the five town
 guides *and* `Ethos.Seeds.AntiqueTrailGuide`. This line said 532 and "5 CT-5"
 until the first production seed of the ski corpus returned 533 and a slug diff
 found that sixth guide — "CT-5" names the set, not its size. Every JSON addend is
