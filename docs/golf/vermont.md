@@ -1,91 +1,104 @@
-# Vermont — blocked by the criterion, not by missing research
+# Vermont — the championship fallback applies, and the derivation is unfinished
 
-`priv/seed_data/golf/vermont.json` does not exist and `vermont` is one of the two
-roster rows still carrying `verified: false`. This file records why, so the next
-wave does not re-run the same dead end.
+`priv/seed_data/golf/vermont.json` does not exist and `vermont` is the last roster
+row carrying `verified: false`. This file records how far the work got and what
+is left, so the next wave starts from the right rule.
 
-**Status: BLOCKED under §6 of `docs/golf/00-ranking.md`.** Not "unresearched",
-and not "hard". The selected criterion cannot produce a pick for Vermont.
+**Correction.** An earlier version of this file concluded that Vermont was
+*blocked* and that resolving it needed a spec-level change to
+`docs/golf/00-ranking.md`. **That was wrong**, and the mistake was reading only
+the ranking decision and not the roster's own rules. Task 5's contingency — which
+`test/ethos/seeds/golf_courses_roster_test.exs` encodes directly in its
+`@ranking` comment — already licenses a **championship-venue fallback** for a
+state the ranking cannot resolve, and three states have shipped on it. Vermont is
+an ordinary instance of an established rule, not a new question.
 
-## What the criterion says to do
-
-`docs/golf/00-ranking.md` §2: open the state's Golf Digest Best in State page,
-walk the ranked list from the top, and take the **first entry carrying Golf
-Digest's own `Public` label**, walking past `Private` entries as far as needed.
-
-## What Vermont's page actually holds
+## 1. The ranking genuinely cannot pick, and that part is settled
 
 `https://www.golfdigest.com/courses/guides/vermont-best-golf-courses-rankings`,
-2025-'26 edition. **Five courses, and every one is labelled `Private`:**
+2025-'26 edition. **Five courses, every one labelled `Private`:**
 
 | Rank | Course | Town | Label |
 |---|---|---|---|
-| 1 | Ekwanok Country Club | Manchester, VT | Private |
-| 2 | Country Club of Vermont | Waterbury Center, VT | Private |
-| 3 | Rutland Country Club | Rutland, VT | Private |
-| 4 | Dorset Field Club | Dorset, VT | Private |
-| 5 | The Quechee Club: Highland | Quechee, VT | Private |
+| 1 | Ekwanok Country Club | Manchester | Private |
+| 2 | Country Club of Vermont | Waterbury Center | Private |
+| 3 | Rutland Country Club | Rutland | Private |
+| 4 | Dorset Field Club | Dorset | Private |
+| 5 | The Quechee Club: Highland | Quechee | Private |
 
-The list ends at rank 5. There is no rank 6, no pagination and no "load more"
-control, and **the word "Public" does not appear anywhere on the page.**
+The list ends at rank 5 — no rank 6, no pagination, no "load more" — and the
+word "Public" does not occur anywhere on the page. Read three times with three
+different probes (ranked-list extraction; "list only entries ranked 6 and below";
+"reproduce every course name on the page"), all three agreeing on the five names,
+the five `Private` labels and the absence of a sixth entry, the third confirming
+the absent "Public" string directly.
 
-Read three times with three different questions — a ranked-list extraction, a
-"list only entries ranked 6 and below" probe, and a "reproduce every course name
-on the page" probe — and all three agree on the five names, the five `Private`
-labels and the absence of any sixth entry. The third also confirms the absent
-"Public" string directly, which is the strongest form of the finding: there is
-no public-labelled entry to walk down to.
+This is the same negative New Hampshire's row rests on, in nearly the same words:
+*"the state's 2025-'26 ranking has exactly five entries … all Private, with
+'Public' occurring zero times."* Two neighbouring small states, the same shape.
 
-## Why this is a criterion failure and not a research gap
+## 2. Which rule applies
 
-§6 of the ranking decision already anticipated it:
+The championship fallback, with three precedents already in the roster:
 
-> A wave that finds a state's label ambiguous, missing, or internally
-> inconsistent … must say so in that state's own research artifact rather than
-> guess which entry is really public. That state is blocked pending a second
-> source, exactly as if the ranking had no entry for it at all.
+- **New Hampshire** — Bretwood Golf Course: North Course, Keene. Taken on
+  **19 New Hampshire Opens, more than any course in that championship's
+  history**, "re-derived from the association's venue-by-year table."
+- **New Jersey** — Seaview, Bay Course, Galloway. Taken on the ShopRite LPGA and
+  the 1942 PGA Championship.
+- **Tennessee** — General's Retreat, Old Hickory. Taken on the LPGA Sara Lee
+  Classic, 1988–1999, "a twelve-edition run belonging to this course rather than
+  to the Hermitage complex."
 
-Vermont is the cleanest possible instance: the label is neither ambiguous nor
-inconsistent. It is uniformly `Private`, five times out of five. Every path
-forward requires a decision the criterion does not license:
+The pattern each follows: establish that no ranked entry is public; select a
+genuinely public course on its **competitive record**; prove public access in the
+operator's own words; and publish a green fee only if it carries a dated
+qualifier.
 
-1. **Take rank 1 anyway.** Forbidden by §2, which exists precisely to stop a
-   private club being published as somewhere a reader can book.
-2. **Use a second ranking.** §3 rejected Golfweek's "Best Courses You Can Play",
-   Golf Digest's own "Best Public Courses" per-state guides, GOLF.com's Top 100
-   You Can Play, GolfPass Golfers' Choice and GolfCourseGurus — each for stated
-   reasons. Reaching for one of them *only for Vermont* would mean this corpus's
-   fifty rows no longer share a criterion, which is the one property that makes
-   the set comparable at all.
-3. **Pick a well-known Vermont public course from recollection.** §4 rule 8
-   forbids identity from recollection or an unchecked list, and it is the rule
-   most of this corpus's refuted claims violated.
+## 3. What is done, and the one thing that is not
 
-None of those is available to a wave. Choosing between them is a **spec-level
-decision about the criterion**, which belongs to whoever owns
-`docs/golf/00-ranking.md`, not to the wave that happened to draw Vermont.
+The Vermont Golf Association publishes a Vermont Amateur past-champions table
+covering **1902–2025** at `https://www.vtga.org/vermont-amateur/`. It is the
+right source — it is the state analogue of the venue-by-year table New Hampshire's
+row derived from — and the venues it names include both private clubs and
+genuinely public courses (Green Mountain National, Stowe Country Club, Williston
+Golf Club, Kwiniaska, Ralph Myhre among them).
 
-## What a future wave should do
+**The derivation is not finished, and it must not be guessed.** Two reads of that
+same table disagreed with each other on at least one row: one returned
+**2024 | Ralph Myhre**, the other **2024 | Burlington Country Club**. A
+championship claim is a counting claim — New Hampshire's says *more than any
+course in that championship's history* — and a count taken from a source whose
+own reads conflict is exactly the kind of number this corpus refuses to publish.
 
-Nothing, until that decision is made. When it is, the two honest shapes are:
+A 1970–2025 extraction was obtained and is reproducible, but the full history
+reaches to 1902, and the fallback's whole force is the completeness of the count.
 
-- **Accept 49 states**, and say so on the collection page rather than implying
-  a gap that is not there. "A Public Course in Every State" would then be
-  publishing a claim its own corpus does not support, so the title or the intro
-  has to move.
-- **Name a documented second source for public access**, added to
-  `docs/golf/00-ranking.md` as an explicit fallback with its own §3-style
-  rejection notes for the alternatives, applied to *any* state the primary
-  criterion cannot resolve — not to Vermont alone.
+## 4. What the next wave should do
 
-Rhode Island, the other `verified: false` row, resolved normally on the primary
-criterion: see `docs/golf/rhode-island.md`. Vermont is alone in this.
+1. Obtain the **complete 1902–2025 venue list** by a method that can be checked
+   twice and agree with itself — raw HTML or the embedded table rather than a
+   summarising read. Resolve the 2024 discrepancy above explicitly; it is a live
+   known defect in the source-reading, not in the source.
+2. Count hostings per venue over the full history.
+3. Among the public venues, take the highest count, and say plainly how far ahead
+   of the runner-up it is — New Hampshire's row does this ("four hostings to
+   nineteen"), which is what makes the pick answerable rather than asserted.
+4. Confirm that course's public access **in the operator's own words**, the
+   standard `docs/golf/rhode-island.md` §2 and the Connecticut row both use.
+5. Publish a green fee only if the operator's rate card carries a dated
+   qualifier, as New Hampshire's did ("Rates listed here are current as of
+   January 1, 2026") and New Jersey's did not.
 
-## Provenance of this file
+The roster row stays all-null and `verified: false` until every one of those is
+done together — the "resolved together or not at all" rule the roster gate
+enforces.
 
-Unlike the other state files in this directory, this one is **not** backed by a
-finder/verifier research pair under `.superpowers/sdd/2026-09-05-golf-courses/`.
-It rests on three direct reads of the ranking page, recorded above, and it makes
-exactly one claim: that the page carries five courses, all `Private`. It draws
-no conclusion about any Vermont course's real access, and it publishes nothing
-to the site.
+## 5. Provenance of this file
+
+Not backed by a finder/verifier research pair under
+`.superpowers/sdd/2026-09-05-golf-courses/`. It rests on three direct reads of
+the Golf Digest Vermont ranking page and two of the VGA Vermont Amateur page, all
+named above. Its one firm claim is §1's: that the ranking page carries five
+courses, all `Private`. It names no Vermont course as the selection and publishes
+nothing to the site.
