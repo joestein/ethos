@@ -4,6 +4,10 @@
     / {@collection.title}
   </nav>
   <h1 class="mt-2 font-display text-display-sm">{@collection.title}</h1>
+  {live_render(@conn, EthosWeb.SocialLive,
+    id: "social-collection-#{@collection.id}",
+    session: %{"subject_type" => "collection", "subject_id" => @collection.id}
+  )}
   <div :if={@collection.intro} class="prose mt-4">
     {EthosWeb.Markdown.render(@collection.intro)}
   </div>
@@ -31,9 +35,4 @@
       </div>
     </li>
   </ol>
-
-  {live_render(@conn, EthosWeb.SocialLive,
-    id: "social-collection-#{@collection.id}",
-    session: %{"subject_type" => "collection", "subject_id" => @collection.id}
-  )}
 </article>

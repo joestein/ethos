@@ -20,6 +20,10 @@
   <header class="mt-2 flex flex-wrap items-start justify-between gap-3">
     <div>
       <h1 class="font-display text-display-sm">{@place.name}</h1>
+      {live_render(@conn, EthosWeb.SocialLive,
+        id: "social-place-#{@place.id}",
+        session: %{"subject_type" => "place", "subject_id" => @place.id}
+      )}
       <p class="mt-1 text-ink-muted">{kind_label(@place.kind)} · {geo_label(@geo_trail)}</p>
     </div>
     <div class="flex items-center gap-2">
@@ -99,11 +103,6 @@
       </li>
     </ul>
   </section>
-
-  {live_render(@conn, EthosWeb.SocialLive,
-    id: "social-place-#{@place.id}",
-    session: %{"subject_type" => "place", "subject_id" => @place.id}
-  )}
 
   <EthosWeb.ConnectedPages.connected_pages connected={@connected} />
 </article>

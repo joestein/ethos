@@ -28,24 +28,31 @@ defmodule EthosWeb.SocialLive do
 
     {:ok,
      socket
-     |> assign(subject: subject, rating: nil, rating_error: nil)
+     |> assign(
+       subject: subject,
+       rating: nil,
+       rating_error: nil,
+       # Stable per subject so two islands on one page cannot collide, and so
+       # the JS that opens the modal can name it without a server round trip.
+       modal_id: "social-reviews-#{type}-#{id}"
+     )
      |> load_reactions()
      |> load_reviews()}
   end
 
   def render(assigns) do
     ~H"""
-    <section class="mt-10 rounded-xl border border-line p-5">
+    <div class="mt-2">
       <%!-- This island runs as its own isolated LiveView (see the moduledoc), so
             the page's own flash group never sees flashes set in here — this is
             the only place a newly earned badge can be shown. --%>
       <.flash kind={:info} flash={@flash} id="social-badge-flash" />
 
-      <h2 class="text-sm font-semibold uppercase tracking-wide text-ink-muted">
-        What travelers think
-      </h2>
-
-      <div class="mt-4 flex items-start gap-8">
+      <%!-- Two lines at most, and quiet. This sits directly under the page
+            title, above the destination line, so anything louder competes with
+            the title itself. `flex-wrap` is what keeps it to two lines on a
+            narrow screen instead of overflowing. --%>
+      <div class="flex flex-wrap items-center gap-x-3 gap-y-1 text-sm text-ink-muted">
         <.thumb
           value="up"
           label="👍"
@@ -60,12 +67,34 @@ defmodule EthosWeb.SocialLive do
           mine={@mine == "down"}
           interactive={@interactive}
         />
+
+        <span :if={@summary.count > 0} aria-hidden="true">·</span>
+
+        <span :if={@summary.count > 0}>
+          <span class="font-medium text-ink">{@summary.average}</span>/10
+        </span>
+
+        <span aria-hidden="true">·</span>
+
+        <%!-- Reading reviews is open to everyone, logged in or not. Only adding
+              one requires an account, which is decided inside the modal. --%>
+        <button
+          type="button"
+          phx-click={show_modal(@modal_id)}
+          class="underline underline-offset-2 hover:text-ink"
+        >
+          {reviews_label(@summary.count)}
+        </button>
+
+        <span :if={@prompt == :closed} class="text-xs">
+          · closed, reactions kept for reference
+        </span>
       </div>
 
-      <.prompt :if={@prompt} kind={@prompt} />
+      <.modal id={@modal_id}>
+        <h2 class="font-display text-display-sm">What travelers think</h2>
 
-      <div class="mt-8 border-t border-line pt-6">
-        <div :if={@summary.count > 0} class="flex items-baseline gap-2">
+        <div :if={@summary.count > 0} class="mt-1 flex items-baseline gap-2">
           <span class="text-2xl font-semibold">{@summary.average}</span>
           <span class="text-sm text-ink-muted">
             out of 10 · {@summary.count} {if @summary.count == 1, do: "review", else: "reviews"}
@@ -80,8 +109,14 @@ defmodule EthosWeb.SocialLive do
           existing={@own_review}
         />
 
+        <.prompt :if={@prompt} kind={@prompt} />
+
         <p :if={@own_review && @own_review.status == "pending"} class="mt-3 text-sm text-ink-muted">
           Your review is waiting to be approved.
+        </p>
+
+        <p :if={@reviews == []} class="mt-6 text-sm text-ink-muted">
+          No reviews yet.
         </p>
 
         <ul class="mt-6 space-y-5">
@@ -93,10 +128,16 @@ defmodule EthosWeb.SocialLive do
             <p class="mt-1 whitespace-pre-line">{review.body}</p>
           </li>
         </ul>
-      </div>
-    </section>
+      </.modal>
+    </div>
     """
   end
+
+  # "Be the first to review" rather than "0 reviews": the empty state is the
+  # one that most needs to invite, and a zero reads as a dead end.
+  defp reviews_label(0), do: "Be the first to review"
+  defp reviews_label(1), do: "1 review"
+  defp reviews_label(n), do: "#{n} reviews"
 
   attr :kind, :atom, required: true
 
@@ -134,41 +175,56 @@ defmodule EthosWeb.SocialLive do
   attr :mine, :boolean, required: true
   attr :interactive, :boolean, required: true
 
-  # The count sits directly beneath its own button, so "34 people liked this"
-  # reads off the layout without a legend.
+  # Compact, and honest about what it is.
+  #
+  # This used to render an inert <span> when the visitor could not react,
+  # differing from the real <button> by nothing but `opacity-60`. On an emoji
+  # that is invisible, so a logged-out visitor saw what looked exactly like
+  # buttons, clicked them, and nothing happened — the explanation was a
+  # separate line underneath that is easy to miss. "The thumbs don't work"
+  # was the reasonable conclusion.
+  #
+  # Now a visitor who cannot react gets a LINK to log in wearing the same
+  # clothes. Clicking still does something, and that something is the thing
+  # they need to do in order to react.
+  defp thumb(%{interactive: false} = assigns) do
+    ~H"""
+    <.link
+      navigate={~p"/users/log_in"}
+      title="Log in to react"
+      class="inline-flex items-center gap-1 rounded-md px-1.5 py-0.5 hover:bg-surface-raised"
+    >
+      <span class="opacity-70">{@label}</span>
+      <span data-reaction-count={@value} class="tabular-nums">{@count}</span>
+    </.link>
+    """
+  end
+
   defp thumb(assigns) do
     ~H"""
-    <div class="flex flex-col items-center gap-1">
-      <button
-        :if={@interactive}
-        type="button"
-        phx-click="react"
-        phx-value-value={@value}
-        aria-pressed={to_string(@mine)}
-        class={
-          [
-            "rounded-lg border border-line px-4 py-2 text-xl transition",
-            # A judgement, not seasonal decoration (Amendment C): thumbs up is
-            # `positive` and thumbs down is `negative` regardless of which
-            # button this is, and neither token moves with the season — see
-            # assets/css/app.css, where they are identical in all four palettes.
-            @mine && @value == "up" && "border-positive bg-positive/10",
-            @mine && @value == "down" && "border-negative bg-negative/10",
-            !@mine && "hover:bg-surface-raised"
-          ]
-        }
-      >
-        {@label}
-      </button>
-      <span :if={!@interactive} class="rounded-lg border border-line px-4 py-2 text-xl opacity-60">
-        {@label}
-      </span>
-      <%!-- data-reaction-count is the hook the tests read. Without it they would have
-            to assert on bare text, which passes on any stray digit on the page. --%>
-      <span data-reaction-count={@value} class="text-sm font-medium text-ink-muted">
-        {@count}
-      </span>
-    </div>
+    <button
+      type="button"
+      phx-click="react"
+      phx-value-value={@value}
+      aria-pressed={to_string(@mine)}
+      class={
+        [
+          "inline-flex items-center gap-1 rounded-md px-1.5 py-0.5 transition",
+          # A judgement, not seasonal decoration: thumbs up is `positive` and
+          # thumbs down is `negative` regardless of which button this is, and
+          # neither token moves with the season — see assets/css/app.css,
+          # where they are identical in all four palettes.
+          @mine && @value == "up" && "bg-positive/10 text-ink",
+          @mine && @value == "down" && "bg-negative/10 text-ink",
+          !@mine && "hover:bg-surface-raised"
+        ]
+      }
+    >
+      <span>{@label}</span>
+      <%!-- data-reaction-count is the hook the tests read. Without it they would
+            have to assert on bare text, which passes on any stray digit. --%>
+      <span data-reaction-count={@value} class="tabular-nums">{@count}</span>
+    </button>
     """
   end
 
