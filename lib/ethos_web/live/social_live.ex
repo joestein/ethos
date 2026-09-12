@@ -74,6 +74,8 @@ defmodule EthosWeb.SocialLive do
           count={@counts.up}
           mine={@mine == "up"}
           interactive={@interactive}
+          blocked_href={blocked_href(@prompt)}
+          blocked_title={blocked_title(@prompt)}
         />
         <.thumb
           value="down"
@@ -81,6 +83,8 @@ defmodule EthosWeb.SocialLive do
           count={@counts.down}
           mine={@mine == "down"}
           interactive={@interactive}
+          blocked_href={blocked_href(@prompt)}
+          blocked_title={blocked_title(@prompt)}
         />
 
         <span :if={@summary.count > 0} aria-hidden="true">·</span>
@@ -101,8 +105,8 @@ defmodule EthosWeb.SocialLive do
           {reviews_label(@summary.count)}
         </button>
 
-        <span :if={@prompt == :closed} class="text-xs">
-          · closed, reactions kept for reference
+        <span :if={@prompt} class="text-xs">
+          · {blocked_title(@prompt)}
         </span>
       </div>
 
@@ -148,6 +152,15 @@ defmodule EthosWeb.SocialLive do
     """
   end
 
+  # A thumb that cannot be clicked still has to go somewhere useful, and where
+  # depends on WHY it is blocked — not on the fact that it is.
+  defp blocked_href(:needs_username), do: ~p"/users/username"
+  defp blocked_href(_), do: ~p"/users/log_in"
+
+  defp blocked_title(:needs_username), do: "Pick a username to react"
+  defp blocked_title(:closed), do: "closed, reactions kept for reference"
+  defp blocked_title(_), do: "Log in to react"
+
   # "Be the first to review" rather than "0 reviews": the empty state is the
   # one that most needs to invite, and a zero reads as a dead end.
   defp reviews_label(0), do: "Be the first to review"
@@ -190,6 +203,14 @@ defmodule EthosWeb.SocialLive do
   attr :mine, :boolean, required: true
   attr :interactive, :boolean, required: true
 
+  # Where a thumb sends someone who cannot react, and why. It used to be
+  # hardcoded to the log-in page, which is wrong for the one case that is not
+  # about logging in: a signed-in visitor with no username was sent to
+  # /users/log_in, which redirects an authenticated visitor straight back out
+  # again. Clicking appeared to do nothing at all.
+  attr :blocked_href, :string, default: nil
+  attr :blocked_title, :string, default: nil
+
   # Compact, and honest about what it is.
   #
   # This used to render an inert <span> when the visitor could not react,
@@ -205,8 +226,8 @@ defmodule EthosWeb.SocialLive do
   defp thumb(%{interactive: false} = assigns) do
     ~H"""
     <.link
-      href={~p"/users/log_in"}
-      title="Log in to react"
+      href={@blocked_href}
+      title={@blocked_title}
       class="inline-flex items-center gap-1 rounded-md px-1.5 py-0.5 hover:bg-surface-raised"
     >
       <span class="opacity-70">{@label}</span>
