@@ -22,9 +22,9 @@ defmodule EthosWeb.GuideBreadcrumb do
 
     ~H"""
     <nav class="text-sm text-ink-muted">
-      <.link navigate={~p"/destinations"} class="underline">Destinations</.link>
+      <.link href={~p"/destinations"} class="underline">Destinations</.link>
       <span :for={crumb <- @trail}>
-        / <.link navigate={crumb.path} class="underline">{crumb.name}</.link>
+        / <.link href={crumb.path} class="underline">{crumb.name}</.link>
       </span>
     </nav>
     """

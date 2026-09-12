@@ -171,7 +171,7 @@ defmodule EthosWeb.SocialLive do
   defp prompt(%{kind: :logged_out} = assigns) do
     ~H"""
     <p class="mt-4 text-sm text-ink-muted">
-      <.link navigate={~p"/users/log_in"} class="underline">Log in to react.</.link>
+      <.link href={~p"/users/log_in"} class="underline">Log in to react.</.link>
     </p>
     """
   end
@@ -179,7 +179,7 @@ defmodule EthosWeb.SocialLive do
   defp prompt(%{kind: :needs_username} = assigns) do
     ~H"""
     <p class="mt-4 text-sm text-ink-muted">
-      <.link navigate={~p"/users/username"} class="underline">Pick a username to join in.</.link>
+      <.link href={~p"/users/username"} class="underline">Pick a username to join in.</.link>
     </p>
     """
   end
@@ -205,7 +205,7 @@ defmodule EthosWeb.SocialLive do
   defp thumb(%{interactive: false} = assigns) do
     ~H"""
     <.link
-      navigate={~p"/users/log_in"}
+      href={~p"/users/log_in"}
       title="Log in to react"
       class="inline-flex items-center gap-1 rounded-md px-1.5 py-0.5 hover:bg-surface-raised"
     >

@@ -33,7 +33,7 @@ defmodule EthosWeb.ConnectedPages do
         </h3>
         <ul class="mt-2 space-y-2">
           <li :for={item <- items}>
-            <.link navigate={other_path(item.other)} class="font-medium underline">
+            <.link href={other_path(item.other)} class="font-medium underline">
               {item.other.title}
             </.link>
             <span class="text-sm text-ink-muted">· {item.other.subtitle}</span>
