@@ -44,6 +44,16 @@ defmodule EthosWeb.PlaceHTMLTest do
     refute "ski-resort" in Place.kinds()
   end
 
+  # schema.org has a GolfCourse type, same argument as SkiResort above.
+  test "a golf course is a GolfCourse, not the TouristAttraction fallback" do
+    assert PlaceHTML.schema_type("golf-course") == "GolfCourse"
+    refute PlaceHTML.schema_type("golf-course") == PlaceHTML.schema_type("unmapped-kind")
+  end
+
+  test "golf-course is an accepted kind" do
+    assert "golf-course" in Place.kinds()
+  end
+
   test "every accepted kind maps to a schema.org type that is not the fallback" do
     fallback = PlaceHTML.schema_type("definitely-not-a-kind")
 

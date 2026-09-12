@@ -1,0 +1,222 @@
+{
+  "guide": {
+    "slug": "south-carolina-golf-guide",
+    "title": "The Ocean Course: Golf on Kiawah Island, South Carolina",
+    "destination": "Kiawah Island, South Carolina",
+    "destination_path": "united-states/south-carolina/charleston-county/kiawah-island",
+    "intro": "Golf Digest's 2025-'26 ranking of the best golf courses in South Carolina puts Kiawah Island Golf Resort: The Ocean Course first, with the access label \"Public\" carried inside the entry's own block, and a panel score of 4.8 from 53 reviews. The page states its own edition: \"Below you'll find our 2025-'26 ranking of the Best Golf Courses in South Carolina.\" South Carolina is one of the few states in this set whose top-ranked course an unaffiliated traveller can actually book. The resort's own booking engine sells the Ocean Course to a golfer with no membership and no room reservation, under a rate type the operator itself names \"Non Resort\" — so what separates a non-guest from a guest here is what they pay and how far ahead they may take the tee time, not whether they may take one at all. This is access tiered by price, not an access gate, and the distinction is the operator's own machine drawing it rather than its marketing copy. The course sits on Kiawah Island, in Charleston County, on the South Carolina coast. Pete and Alice Dye built it between 1989 and 1991 and it opened in 1991. Ranks 2 through 5 on the same list — Congaree, Yeamans Hall, The Tree Farm and Old Barnwell — are all labelled \"Private,\" so the entry this guide is about is also the only one near the top of the list that could have been chosen.",
+    "sections": [
+      {
+        "heading": "Getting there",
+        "body": "The resort publishes its own \"Distances from Area Airports\" table, in miles: Charleston Int'l (CHS) 33; Charleston Executive (JZI), Johns Island, 15; Hilton Head Island (HHH) 110; Savannah Int'l (SAV) 115; Myrtle Beach Int'l (MYR) 118; Columbia Metro (CAE) 132; Florence Regional (FLO) 159; Charlotte Douglas Int'l (CLT) 230; Greenville Spartanburg (GSP) 235. Charleston International, in North Charleston, is the commercial airport to fly into. Routed from the terminal building itself, the road distance to the Ocean Course is 62,209.2 metres — 38.7 miles — over these named roads in order: International Boulevard, the Mark Clark Expressway (I-526), Sam Rittenberg Boulevard (SC 7), Savannah Highway (US 17), Main Road, Bohicket Road, Betsy Kerrison Parkway, Kiawah Island Parkway, Governors Drive and Ocean Course Drive. The resort's own written directions name the same roads: \"Follow signs for Interstate 526 West (Savannah) … turn right and follow the road towards Savannah Highway/US 17 South … turn left onto Main Road … Main road will change names three times: Main to Bohicket Road, Bohicket Road turns into Betsy Kerrison Parkway. You will arrive at a roundabout … take the right on Kiawah Island Parkway. Once on the island, you will pass through the security gate (left lane).\" That gate is not decorative: Kiawah Island is a gated island, and a tee-time confirmation is what gets a golfer with no room booking through it. Run a second time from a slightly different airport coordinate, the same route came out at 40.1 miles and differed only in its first step, which the router named Dorchester Road (SC 642); the 38.7-mile measurement is the one whose start and end waypoints the router named outright, International Boulevard to Ocean Course Drive. The resort's location page also lists its transport numbers: 843.768.2790 for guests staying in villas and homes, (855) 969-2920 for the Sanctuary concierge, and 843.768.6039 for group transportation. One caution about addresses. The operator publishes no street address for the golf course itself — its contact page, its booking system and Golf Digest's course record all print One Sanctuary Beach Drive, Kiawah Island, SC 29455, which is the Sanctuary hotel and not the course. The course's own coordinates, 32.6116466, -80.0287931, come from OpenStreetMap and were confirmed by the router snapping its destination waypoint to Ocean Course Drive. At those coordinates the US Census geocoder returns Counties `Charleston County`, Incorporated Places `Kiawah Island town`, County Subdivisions `Kiawah Island-Seabrook Island CCD` and Census Tract 21.04, and returns no Urban Area at all — a control query at Charleston City Hall returns `Charleston city` and `Charleston, SC Urban Area` from the same fields, so the absence is real rather than a broken lookup."
+      },
+      {
+        "heading": "The Ocean Course",
+        "body": "The operator's course page prints \"Designer: Pete and Alice Dye\" and tells the design decision that made the course what it is: \"Although it was originally planned to sit behind the dunes, designer Pete Dye's wife, Alice, suggested raising the entire course to give players unobstructed views of Kiawah's stunning coastline from every hole. One catch? This improved view made the course substantially more demanding as it also exposed play to the Atlantic's brisk and unpredictable breezes.\" The resort's tournament-history page dates the build: \"Since its construction by Pete and Alice Dye in 1989-1991, The Ocean Course at Kiawah Island Golf Resort has hosted iconic championships…\" Golf Digest's course record gives Year Opened 1991, Designer Pete Dye & Alice Dye, Holes 18, length 7849 and slope 155; the operator's card reads 18 holes, par 72. Golf Digest's overview adds the origin: \"The Ocean Course was designed on short notice for a specific event, the 1991 Ryder Cup, when the PGA of America decided to move the event from California to the more attractive Eastern time zone television time slot.\" In the operator's own words, \"The Ocean Course boasts the most seaside holes in the Northern Hemisphere with ten hugging the Atlantic and the other eight running parallel to those,\" and \"Because there are no prevailing winds on The Ocean Course, Dye designed two courses in one—one for an easterly and the other for a westerly wind.\" The competitive record, from the operator's tournament-history page: the 1991 Ryder Cup, which it says earned \"the infamous nickname 'The War by the Shore'\"; Shell's Wonderful World of Golf in 1996; the World Cup of Golf in 1997; the inaugural UBS Warburg Cup in 2001; the World Cup in 2003; the PGA Professional Championship in 2005; the 68th Senior PGA Championship in 2007; the 2012 PGA Championship, won by Rory McIlroy; and the 2021 PGA Championship, won by Phil Mickelson. The course page adds that it \"is only the fourth course to have hosted each of the PGA of America's major championships.\" A caution for anyone reading that page: its own summary line credits McIlroy with both the 2012 and the 2021 title, while the same page's detailed 2021 entry correctly credits Mickelson, \"just one month shy of his 51st birthday … becoming the oldest player to win one of golf's major championships.\" Mickelson is right and Golf Digest's record agrees. Golf Digest's ranking history for the course, quoted from that publication: \"100 Greatest: Ranked since 1997. Highest ranking: 20th, 2015-'16. Previous ranking: 24th. 2025-'26 ranking: 30th. 100 Greatest Public: Ranked since the inaugural edition in 2003. Highest ranking: 3rd, 2015-'18 and 2023-'24. Previous ranking: 3rd. 2025-'26 ranking: 5th. Best in State: Ranked first since 2011. 2025-'26 ranking (and previous): 1st.\" The operator's own course page still advertises an older pair of positions — \"#4 Public Golf Course in U.S. and Ranked 25th amongst the 100 Greatest U.S. Golf Courses -Golf Digest\" — which the 2025-'26 edition supersedes with 5th and 30th. The clubhouse, from the operator: \"Designed by noted architecture firm Robert A.M. Stern Architects, the clubhouse is located near The Ocean Course's 14th hole,\" with \"approximately 24,000 square feet of space; 1,700-square-foot Pro Shop; 149 lockers (114 upstairs/35 downstairs); 80-seat restaurant with a private dining room adjacent to the main dining area; 30-seat bar with panoramic ocean views; 24-seat outdoor dining porch.\" The pro shop \"is open daily from 7am until sunset, with seasonal changes to hours,\" and the FAQ adds, \"Each clubhouse has shower facilities. Lockers are available at all clubhouses except Oak Point.\" The course itself carries no National Register of Historic Places listing or other protected designation; that was searched for and not found. Kiawah Island does carry two National Register listings, neither of them the golf course: the Arnoldus Vander Horst House, also known as Kiawah House, listed October 25, 1973, and the Bass Pond Site, listed April 24, 1979, whose address the Register restricts."
+      },
+      {
+        "heading": "Playing it as a non-resort golfer",
+        "body": "The resort's Golf Course FAQ answers the question plainly: \"KIGR is open to the public and tee times can be made without renting property at the resort. Discounts are offered for guests of the resort.\" On timing it draws the one real line: \"Guests with a confirmed resort reservation may book tee times at any time for the duration of their stay,\" while \"Guests not staying with Kiawah Island Golf Resort may reserve tee times no sooner than 60 days in advance.\" Tee times \"may be made by calling the resort directly at (800) 576-1570 to ask for the course of your choice,\" and \"tee times for groups of less than 12 golfers may be cancelled 48 hours in advance without penalty.\" That is what the operator says. What its booking system does is the stronger fact, and it was executed rather than read. The resort's \"Book a Tee Time\" control points at an Agilysys rGuest booking application whose token endpoint issues an anonymous public token with no credential sent — no login, no membership number, no reservation confirmation. Through that anonymous session, the system's own course list returns all five Kiawah courses with `resvRqd: false` and `minNights: 0`: no accommodation booking is required by the engine for any of them, the Ocean Course included. Its own text inside the engine sets out the two tiers: \"Non Resort - Guests not renting accommodations thru KIGR may reserve tee times within 60 days. Resort - Guests with a KIGR reservation confirmation number may reserve tee times up to 1 year in advance. Please have your confirmation number and date of arrival ready to enter.\" What it costs, and where the number comes from. The resort publishes no rate card at all — its golf-rates path returns HTTP 404 and its sitemap has no rates page — so there is no price list to quote and this guide does not present one. Every figure below is a figure the resort's own booking system returned for a named play date, retrieved in a session in which that system reported its own property date as September 6, 2026. On the September 8, 2026 play date the Ocean Course returned 24 bookable slots, and every one of them carried the same two non-private rate types at the same figure: \"(Walk w/ Caddie) Non Resort\" and \"(Walk w/o Caddie) Non Resort,\" green fee $685.00, cart fee $0.00, other fee $0.00. The figure does not move with demand. It was $685.00 on every slot the system offered that day, and $685.00 again on the September 9, September 22, November 2 and November 3, 2026 play dates — every date sampled inside the 60-day non-guest window, across slot counts of 24, 13, 3 and 5. Golf Digest's own course record independently prints a Price of $685, under its own caveat that \"this covers all ranges of greens fees. Please check with the course on specific timing and pricing.\" Two surfaces agreeing on one unchanging number is a standing rate the system quotes, not a slot-by-slot price. The guest-side rates on those same slots, whose names the operator writes with a doubled space — \"(Walk w/  Caddie) Resort\" and \"(Walk w/o Caddie) Resort\" — were $485.00, unchanged on every play date from September 8 to November 20, 2026, and then stepped by season: $370.00 on the December 15, 2026 play date and $380.00 on January 20, 2027. Those three are a seasonal schedule and each is bound here to the date it was returned for; none of them is \"the\" resort rate. The 60-day rule is visible in the engine's behaviour, not merely in its prose. Swept date by date from that same property date of September 6, 2026, the Non Resort rate types are present on play dates through November 3, 2026 — 58 days out — and are gone from November 8, 2026 onward, 63 days out, where only Resort rate types remain, at $485.00. Between November 4 and November 7 the engine returned no inventory of any kind, so the exact cut cannot be pinned tighter than between 58 and 63 days from availability alone. The point stands either way: the same anonymous session that is sold a Non Resort rate at 58 days out is offered only Resort rates at 65, which is a booking window and not a gate. Further out, the Resort rates fall — $370.00 on December 15, 2026 and $380.00 on January 20, 2027, both dates Resort-only. Two costs sit outside the green fee. The resort states there is no fee for a caddie's services but that \"recommended gratuities are $120 per player for walking caddies, based on service\" and $60 per player for a forecaddie. And from the FAQ: \"Adult rental sets are $85 for 18 holes of golf, and $42.50 for 9 holes. Junior rental sets are also available in multiple sizes, for $15 each,\" while for anyone using the practice ground without playing, \"there is a $30.00 hourly fee to use the range. Practice greens are free of charge.\" No purchase was completed to establish any of this; the check stopped at priced, available inventory carrying a public rate type."
+      },
+      {
+        "heading": "Walking, carts and aerification",
+        "body": "The Ocean Course is walking only. The operator's booking text reads: \"Walking Only In observance of the traditions of the game and overall enjoyment, the course is walking only. (Carts are allowed for tee times after 10:00AM during June, July and August.)\" The FAQ says the same and adds that anyone taking a cart in those three months is required to use a forecaddie, and that across the property \"walking is allowed at all Kiawah Island Golf Resort courses at all times of the day.\" Caddies are not compulsory: \"Caddies are not mandatory for anyone walking the course but are highly recommended.\" Dress code, from the FAQ: \"Proper attire is required at all times and is at the discretion of the golf staff. Denim of any kind, shorts more than 5\\\" above the knee, bathing suits, athletic style shorts and shirts without sleeves or collars are considered unacceptable.\" The resort maintains a dedicated maintenance page headed \"2026 Golf Course Aerification Closure Schedule,\" and the same windows are repeated independently inside its booking system, so two operator-controlled surfaces agree on them. For 2026: Turtle Point closed Monday, June 1 – Friday, June 12; Cougar Point Monday, June 15 – Friday, June 26; Oak Point Monday, July 6 – Friday, July 17; the Ocean Course Monday, July 20 – Friday, July 31; and Osprey Point Monday, August 3 – Friday, August 14. Only the 2026 schedule is published. The operator has not posted a 2027 schedule, and no golf events or tournament-closure calendar appears in its sitemap; its press-room path returns HTTP 404. That is an absence recorded here rather than an assurance that no other closure exists."
+      },
+      {
+        "heading": "Where you sleep and eat on Kiawah Island",
+        "body": "The resort's own hotel is The Sanctuary, which its page introduces as \"The Sanctuary, A Spectacular Oceanfront Hotel\" and describes as delivering \"Forbes Five-Star service and unequaled accommodations,\" with a choice \"from 255 well-appointed guestrooms\" or larger suites. The same page lists The Spa & Salon at The Sanctuary — \"our Five-Star spa\" — The Pools at The Sanctuary, \"outdoor or indoor pools for the exclusive use of our hotel guests,\" a fitness centre, resort shopping and the Sanctuary Chapel, with \"seating for 150.\" The resort also rents villas — named clusters include Turtle Point, Fairway Oaks, Night Heron, Windswept, Seascape, Shipwatch and Mariners Watch — and private homes, including collections for near-beach, ocean-view and homes with private pools. For a golf weekend the tightest base is The Ocean Course Cottages, the resort's cottages attached to the course itself. Eating, from the operator's own Kiawah Dining Collection: The Atlantic Room at The Ocean Course is an \"iconic seafood restaurant committed to using locally caught, sustainable fish and shellfish,\" and the clubhouse page calls it \"Kiawah's signature seafood restaurant.\" The Ryder Cup Bar, also at the Ocean Course clubhouse, serves \"modern pub fare and creative cocktails with prime views of The Ocean Course\" and is billed as \"the perfect spot for your post-round celebration.\" At The Sanctuary, The Ocean Room is \"Kiawah's premier steakhouse boasting Forbes Five-Star and AAA Four-Diamond ratings,\" and Jasmine Porch offers \"authentic Lowcountry cuisine and gracious southern charm on the menu daily.\" Cherrywood BBQ & Ale House at the Osprey Point clubhouse — the clubhouse of the second course — serves \"genuine southern BBQ and house-made sauces plus over 60 local and imported beers.\" Also in the collection: Tomasso at Turtle Point, \"contemporary Italian dishes with a classic foundation, infused with local Lowcountry flavors\"; The Players' Pub at The Cougar Point Clubhouse, \"comfort food favorites at this classic American pub\"; and The Nest Market | Café at Night Heron Park, with \"grab-and-go meal selections … as well as grocery staples and must-have sundries.\" What the sources establish is that these rooms exist and what they serve; none of them says whether any given one is serving this week, so this guide does not say so either."
+      },
+      {
+        "heading": "Day two: Osprey Point",
+        "body": "The second course is Kiawah Island Golf Resort: Osprey Point, rank 44 on the same Golf Digest 2025-'26 South Carolina list and labelled \"Public\" in its own entry block; the ranking's subtitle gives its city as Johns Island, SC. It is the nearest publicly accessible course to the Ocean Course, and that was measured rather than assumed: 1.45 miles in a straight line and 1.70 miles by road. Turtle Point is 3.32 miles straight-line and 5.57 by road, Cougar Point 5.69 and 7.71, Oak Point 6.52 and 11.53 — all of them further, and all of them clearing the same access bar, so nothing nearer was skipped. The next ranked Public entries on the state list are much further off: the resort's own airport table puts Hilton Head Island, home of rank 6 Harbour Town Golf Links, 110 miles from Kiawah. Osprey Point clears the access test the same way the Ocean Course does, tested through the same anonymous public token on the same booking system: `resvRqd: false`, `minNights: 0`, the identical \"Non Resort - Guests not renting accommodations thru KIGR may reserve tee times within 60 days\" rule in its own engine text, and bookable inventory carrying the non-private rate type \"Non Resort 18 Online.\" Its price comes from the same place and behaves the same way: the resort's own booking system returned $320.00 for it on the September 8, September 22, October 13 and November 3, 2026 play dates — one unchanging figure across slot counts of 38, 35, 30 and 24 — alongside \"Resort 18 Online\" at $250.00. Turtle Point, Cougar Point and Oak Point returned that identical $320.00 / $250.00 pair on September 8, 2026 as well, which is a flat rate applied across four courses rather than a price set slot by slot. It shows the same 60-day boundary as the Ocean Course: on November 10, 2026 the Non Resort type is gone and only the $250.00 Resort rate remains, and on December 15, 2026 the Resort rate is $160.00. Any of Turtle Point, Cougar Point or Oak Point is bookable on the same terms, if a third round is wanted. The course itself, in the operator's words: \"Holes: 18, Par: 72, Designer: Tom Fazio.\" \"What began as a members-only golf course on the island noted for its playability has evolved into a championship-level course with a world-class layout that was completely renovated in 2014 under the direction of course architect Tom Fazio\" — a finished renovation, not a pending one. The card holds \"four challenging par-3s, four extremely distinctive par-5s and ten outstanding par-4s ranging in length from 340 to 461 yards.\" Its own aerification closure in 2026 was Monday, August 3 – Friday, August 14, and its clubhouse holds Cherrywood BBQ & Ale House."
+      }
+    ],
+    "faq": [
+      {
+        "question": "Can I play The Ocean Course without staying at the resort?",
+        "answer": "Yes, and the operator's own booking system rather than its marketing copy is what establishes it. The FAQ states, \"KIGR is open to the public and tee times can be made without renting property at the resort. Discounts are offered for guests of the resort.\" Executed through an anonymous public token with no login, no membership number and no reservation confirmation, the resort's booking engine returns the Ocean Course with `resvRqd: false` and sells bookable slots under two non-private rate types the operator names \"(Walk w/ Caddie) Non Resort\" and \"(Walk w/o Caddie) Non Resort.\" Access here is tiered by price and by booking window, not gated."
+      },
+      {
+        "question": "How far ahead can a non-resort golfer book a tee time?",
+        "answer": "The resort's FAQ states that \"guests not staying with Kiawah Island Golf Resort may reserve tee times no sooner than 60 days in advance,\" while \"guests with a confirmed resort reservation may book tee times at any time for the duration of their stay.\" The booking engine draws the same line itself. Swept from its own property date of September 6, 2026, the Non Resort rate types are present on play dates through November 3, 2026 — 58 days out — and gone from November 8, 2026 onward, 63 days out, where only Resort rate types remain. The engine returned no inventory at all between November 4 and November 7, so the cut cannot be pinned tighter than between 58 and 63 days from availability alone. Tee times can also be booked by calling the resort at (800) 576-1570."
+      },
+      {
+        "question": "What does a round cost?",
+        "answer": "The operator publishes no rate card — its golf-rates path returns HTTP 404 and its sitemap has no rates page — so there is no price list to quote. The only figures the resort publishes are the ones its own booking system returns for a named play date, and these were retrieved in a session in which that system reported its own property date as September 6, 2026. On the September 8, 2026 play date the Ocean Course's \"(Walk w/ Caddie) Non Resort\" and \"(Walk w/o Caddie) Non Resort\" rate types were $685.00 green fee, $0.00 cart, $0.00 other — the same figure on every one of the 24 slots returned, and $685.00 again on the September 9, September 22, November 2 and November 3, 2026 play dates, which is every date sampled inside the 60-day non-guest window. It is a standing rate rather than a demand-priced quote, and Golf Digest's own course record independently prints $685. The resort-guest walking rates on the same slots were $485.00, unchanged from September 8 to November 20, 2026, then $370.00 on December 15, 2026 and $380.00 on January 20, 2027 — a seasonal schedule, each figure bound to the date it was returned for. Osprey Point's \"Non Resort 18 Online\" rate was $320.00, unchanged across the September 8, September 22, October 13 and November 3, 2026 play dates, with \"Resort 18 Online\" at $250.00."
+      },
+      {
+        "question": "What does a round cost beyond the green fee?",
+        "answer": "The resort states there is no fee for a caddie's services, but that \"recommended gratuities are $120 per player for walking caddies, based on service,\" and $60 per player for a forecaddie. From the FAQ: \"Adult rental sets are $85 for 18 holes of golf, and $42.50 for 9 holes. Junior rental sets are also available in multiple sizes, for $15 each,\" and for anyone using the practice ground without playing, \"there is a $30.00 hourly fee to use the range. Practice greens are free of charge.\" The engine's own deposit policy: \"We do not require a deposit when booking tee times.\""
+      },
+      {
+        "question": "Are carts available?",
+        "answer": "The Ocean Course is walking only. The operator's booking text reads, \"In observance of the traditions of the game and overall enjoyment, the course is walking only. (Carts are allowed for tee times after 10:00AM during June, July and August.)\" A golfer who takes a cart in those three months is required to use a forecaddie. Caddies themselves are optional: \"Caddies are not mandatory for anyone walking the course but are highly recommended.\""
+      },
+      {
+        "question": "Is the course ever closed?",
+        "answer": "The resort publishes a page headed \"2026 Golf Course Aerification Closure Schedule,\" and repeats the same windows independently inside its booking engine. For 2026 the Ocean Course was closed Monday, July 20 – Friday, July 31 and Osprey Point Monday, August 3 – Friday, August 14, with Turtle Point June 1–12, Cougar Point June 15–26 and Oak Point July 6–17. Only the 2026 schedule is published; the operator has not posted 2027 dates, and no golf events calendar appears on its site. That is an absence this guide reports, not an all-clear."
+      },
+      {
+        "question": "Where is The Ocean Course?",
+        "answer": "On Kiawah Island, in Charleston County, South Carolina. The operator publishes no street address for the course itself — its contact page, its booking system and Golf Digest all give One Sanctuary Beach Drive, which is the Sanctuary hotel. At the course's own coordinates the US Census geocoder returns Counties `Charleston County` and Incorporated Places `Kiawah Island town`, and no Urban Area. From the Charleston International Airport terminal the road distance is 38.7 miles, by way of International Boulevard, I-526, SC 7, US 17, Main Road, Bohicket Road, Betsy Kerrison Parkway, Kiawah Island Parkway, Governors Drive and Ocean Course Drive. The island is gated, and a tee-time confirmation is what gets a non-resort golfer through the gate."
+      },
+      {
+        "question": "Which course should I play on day two?",
+        "answer": "Osprey Point, rank 44 on the same Golf Digest 2025-'26 South Carolina list and also labelled \"Public.\" At 1.45 miles in a straight line and 1.70 miles by road it is the nearest publicly accessible course to the Ocean Course, ahead of Turtle Point (3.32 / 5.57), Cougar Point (5.69 / 7.71) and Oak Point (6.52 / 11.53), all of which clear the same access bar. Tom Fazio designed it and it \"was completely renovated in 2014 under the direction of course architect Tom Fazio.\" Its \"Non Resort 18 Online\" rate was $320.00 on the 2026 play dates sampled."
+      },
+      {
+        "question": "Did Rory McIlroy win the 2021 PGA Championship here?",
+        "answer": "No — Phil Mickelson did, and the resort's own tournament-history page says so at length: \"Just one month shy of his 51st birthday, Phil Mickelson made history by capturing the Wanamaker Trophy and becoming the oldest player to win one of golf's major championships.\" The summary line at the foot of that same page contradicts its own detail by crediting McIlroy with both the 2012 and 2021 titles. McIlroy won the 2012 PGA Championship at the Ocean Course; Mickelson won in 2021, and Golf Digest's course record agrees."
+      }
+    ],
+    "photos": []
+  },
+  "places": [
+    {
+      "slug": "the-ocean-course-kiawah-island",
+      "name": "Kiawah Island Golf Resort: The Ocean Course",
+      "kind": "golf-course",
+      "destination_path": "united-states/south-carolina/charleston-county/kiawah-island",
+      "official_url": "https://kiawahresort.com/golf/the-ocean-course/",
+      "summary": "First on Golf Digest's 2025-'26 ranking of the best golf courses in South Carolina, labelled \"Public,\" scored 4.8 from 53 reviews. Designed by Pete and Alice Dye, built 1989-1991 and opened in 1991 for the 1991 Ryder Cup; 18 holes, par 72, with Golf Digest giving length 7849 and slope 155. Host of the 1991 Ryder Cup, the 2012 PGA Championship (Rory McIlroy) and the 2021 PGA Championship (Phil Mickelson). Walking only, with carts allowed after 10:00AM in June, July and August and a forecaddie then required. The resort's booking engine returns it with `resvRqd: false` and sells it to a non-member, non-guest golfer under the operator's own \"Non Resort\" rate types. The resort publishes no rate card; its booking system returned $685.00 for those rate types on every slot and every play date sampled inside the 60-day non-guest window in 2026, and Golf Digest independently prints $685.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "osprey-point-kiawah-island",
+      "name": "Kiawah Island Golf Resort: Osprey Point",
+      "kind": "golf-course",
+      "destination_path": "united-states/south-carolina/charleston-county/johns-island",
+      "official_url": "https://kiawahresort.com/golf/osprey-point-golf-course/",
+      "summary": "Rank 44 on the same Golf Digest 2025-'26 South Carolina ranking, labelled \"Public,\" with the ranking's own subtitle giving its city as Johns Island, SC. At 1.45 miles straight-line and 1.70 miles by road it is the nearest publicly accessible course to the Ocean Course. Tom Fazio designed it, and the operator states it \"was completely renovated in 2014 under the direction of course architect Tom Fazio\"; 18 holes, par 72, with \"four challenging par-3s, four extremely distinctive par-5s and ten outstanding par-4s ranging in length from 340 to 461 yards.\" The resort publishes no rate card; its booking system returned the \"Non Resort 18 Online\" rate at $320.00, unchanged across all four 2026 play dates sampled. Its clubhouse holds Cherrywood BBQ & Ale House.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "the-sanctuary-kiawah-island",
+      "name": "The Sanctuary",
+      "kind": "hotel",
+      "destination_path": "united-states/south-carolina/charleston-county/kiawah-island",
+      "official_url": "https://kiawahresort.com/accommodations/the-sanctuary-hotel/",
+      "summary": "Kiawah Island Golf Resort's own hotel, introduced on its page as \"The Sanctuary, A Spectacular Oceanfront Hotel\" and described as delivering \"Forbes Five-Star service and unequaled accommodations,\" with \"255 well-appointed guestrooms\" and larger suites. The same page lists The Spa & Salon at The Sanctuary, indoor and outdoor pools \"for the exclusive use of our hotel guests,\" a fitness centre, resort shopping and the Sanctuary Chapel, with seating for 150. A confirmed resort reservation is what lets a golfer book tee times beyond the 60-day non-guest window.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "the-ocean-course-cottages-kiawah-island",
+      "name": "The Ocean Course Cottages",
+      "kind": "hotel",
+      "destination_path": "united-states/south-carolina/charleston-county/kiawah-island",
+      "official_url": "https://kiawahresort.com/accommodations/the-ocean-course-cottages/",
+      "summary": "Kiawah Island Golf Resort's cottages attached to the Ocean Course itself, one of the resort's own accommodation collections alongside The Sanctuary, its villa rentals (Turtle Point, Fairway Oaks, Night Heron, Windswept, Seascape, Shipwatch, Mariners Watch) and its private-home rentals.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "the-atlantic-room-kiawah-island",
+      "name": "The Atlantic Room",
+      "kind": "restaurant",
+      "destination_path": "united-states/south-carolina/charleston-county/kiawah-island",
+      "official_url": "https://kiawahresort.com/dining/",
+      "summary": "At the Ocean Course clubhouse, in the Kiawah Dining Collection: an \"iconic seafood restaurant committed to using locally caught, sustainable fish and shellfish.\" The clubhouse page calls it \"Kiawah's signature seafood restaurant.\" The clubhouse holds an 80-seat restaurant with a private dining room and a 24-seat outdoor dining porch.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "the-ryder-cup-bar-kiawah-island",
+      "name": "The Ryder Cup Bar",
+      "kind": "restaurant",
+      "destination_path": "united-states/south-carolina/charleston-county/kiawah-island",
+      "official_url": "https://kiawahresort.com/dining/",
+      "summary": "At the Ocean Course clubhouse: \"modern pub fare and creative cocktails with prime views of The Ocean Course,\" which the resort calls \"the perfect spot for your post-round celebration.\" The clubhouse's 30-seat bar has panoramic ocean views.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "the-ocean-room-kiawah-island",
+      "name": "The Ocean Room",
+      "kind": "restaurant",
+      "destination_path": "united-states/south-carolina/charleston-county/kiawah-island",
+      "official_url": "https://kiawahresort.com/dining/",
+      "summary": "At The Sanctuary, in the Kiawah Dining Collection: \"Kiawah's premier steakhouse boasting Forbes Five-Star and AAA Four-Diamond ratings.\"",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "jasmine-porch-kiawah-island",
+      "name": "Jasmine Porch",
+      "kind": "restaurant",
+      "destination_path": "united-states/south-carolina/charleston-county/kiawah-island",
+      "official_url": "https://kiawahresort.com/dining/",
+      "summary": "At The Sanctuary, in the Kiawah Dining Collection: \"authentic Lowcountry cuisine and gracious southern charm on the menu daily.\"",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "cherrywood-bbq-ale-house-kiawah-island",
+      "name": "Cherrywood BBQ & Ale House",
+      "kind": "restaurant",
+      "destination_path": "united-states/south-carolina/charleston-county/kiawah-island",
+      "official_url": "https://kiawahresort.com/dining/",
+      "summary": "At The Osprey Point Clubhouse — the clubhouse of the second course — in the Kiawah Dining Collection: \"genuine southern BBQ and house-made sauces plus over 60 local and imported beers.\"",
+      "status": "open",
+      "photos": []
+    }
+  ],
+  "entries": [
+    {
+      "kind": "sight",
+      "name": "Kiawah Island Golf Resort: The Ocean Course",
+      "place_slug": "the-ocean-course-kiawah-island",
+      "note": "First on Golf Digest's 2025-'26 South Carolina ranking, labelled \"Public\"; Pete and Alice Dye, opened 1991. The resort's booking engine sells it to a non-guest under its own \"Non Resort\" rate types."
+    },
+    {
+      "kind": "sight",
+      "name": "Kiawah Island Golf Resort: Osprey Point",
+      "place_slug": "osprey-point-kiawah-island",
+      "note": "Day two: rank 44 on the same list, also \"Public,\" by Tom Fazio and renovated in 2014. At 1.45 miles straight-line and 1.70 by road, the nearest publicly accessible course to the Ocean Course."
+    },
+    {
+      "kind": "stay",
+      "name": "The Sanctuary",
+      "place_slug": "the-sanctuary-kiawah-island",
+      "note": "The resort's own oceanfront hotel, 255 guestrooms, Forbes Five-Star. A confirmed resort reservation is what opens tee-time booking beyond the 60-day non-guest window."
+    },
+    {
+      "kind": "stay",
+      "name": "The Ocean Course Cottages",
+      "place_slug": "the-ocean-course-cottages-kiawah-island",
+      "note": "The resort's cottages attached to the Ocean Course itself — the tightest base for a two-round weekend."
+    },
+    {
+      "kind": "food",
+      "name": "The Atlantic Room",
+      "place_slug": "the-atlantic-room-kiawah-island",
+      "note": "The Ocean Course clubhouse's seafood restaurant, \"committed to using locally caught, sustainable fish and shellfish.\""
+    },
+    {
+      "kind": "food",
+      "name": "The Ryder Cup Bar",
+      "place_slug": "the-ryder-cup-bar-kiawah-island",
+      "note": "Modern pub fare and cocktails at the Ocean Course clubhouse, with a 30-seat bar and panoramic ocean views."
+    },
+    {
+      "kind": "food",
+      "name": "The Ocean Room",
+      "place_slug": "the-ocean-room-kiawah-island",
+      "note": "The Sanctuary's steakhouse, which the resort describes as Forbes Five-Star and AAA Four-Diamond."
+    },
+    {
+      "kind": "food",
+      "name": "Jasmine Porch",
+      "place_slug": "jasmine-porch-kiawah-island",
+      "note": "Lowcountry cooking at The Sanctuary, on the menu daily."
+    },
+    {
+      "kind": "food",
+      "name": "Cherrywood BBQ & Ale House",
+      "place_slug": "cherrywood-bbq-ale-house-kiawah-island",
+      "note": "Southern BBQ and over 60 local and imported beers, at the Osprey Point clubhouse."
+    }
+  ]
+}

@@ -8,8 +8,15 @@ defmodule Ethos.SeoFieldsTest do
     guide = guide_fixture(%{destination: "Rome, Italy"})
     assert guide.destination_slug == "rome"
 
+    # This assertion used to read "san-sebasti-n", which was not a decision but
+    # a record of the bug: "á" is outside [a-z0-9], so the deriver hyphenated it
+    # and the acute accent cost the reader a typeable URL. The same defect gave
+    # Hawaii's "Lānaʻi" the slug "l-na-i". derive_destination_slug/1 now
+    # transliterates, so the accent falls back to its base letter. No seed-file
+    # destination changed slug — only Hawaii's did, and it was wrong before.
+    # See test/ethos/guide_geo_test.exs for the ASCII-stability property.
     {:ok, guide} = Guides.update_guide(guide, %{destination: "San Sebastián, Spain"})
-    assert guide.destination_slug == "san-sebasti-n"
+    assert guide.destination_slug == "san-sebastian"
   end
 
   test "update_guide_seo/2 stores intro, sections, faq" do

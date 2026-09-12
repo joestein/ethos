@@ -1,0 +1,190 @@
+{
+  "guide": {
+    "slug": "florida-golf-guide",
+    "title": "THE PLAYERS Stadium Course: Golf in Ponte Vedra Beach, Florida",
+    "destination": "Ponte Vedra Beach, Florida",
+    "destination_path": "united-states/florida/st-johns-county/ponte-vedra-beach",
+    "intro": "Golf Digest's 2025-'26 ranking of the best golf courses in Florida runs to 70 entries. First on it is Seminole Golf Club, in Juno Beach, carrying the access label \"Private\": Golf Digest's own course record for Seminole gives \"Facility Type: Private\" and calls it one of America's most exclusive clubs, and the club's website is a login wall reading \"Please enter your information below to gain access to the private portion of the website,\" with no tee-time path of any kind outside it. Second on the same list, labelled \"Public,\" is TPC Sawgrass: Stadium — the course its operator calls THE PLAYERS Stadium Course — in Ponte Vedra Beach, in St. Johns County. It is the highest-ranked publicly accessible course in Florida on that ranking at that edition, and this guide is about it. Golf Digest names Pete and Alice Dye as its designers and gives Year Opened 1980; the course has been the permanent home of THE PLAYERS Championship since the tournament was first played there in 1982. The ranking's methodology page states that Golf Digest \"has been publishing a Best in State ranking every other year since 1977, making this the 25th edition,\" judged by \"our trained panel of more than 1,700 low-handicap golfers.\" That panel rates the Stadium Course 4.6 out of 5 across 26 reviews and places it 8th on America's 100 Greatest Public — a ranking a private club cannot appear on. TPC Sawgrass: Dye's Valley, 69th on the same Florida list and also labelled \"Public,\" shares the property and the clubhouse, and is this guide's second course.",
+    "sections": [
+      {
+        "heading": "Getting there",
+        "body": "TPC Sawgrass is at 110 Championship Way, Ponte Vedra Beach, Florida 32082; the club's own page footer gives (904) 273-3235. The commercial airport is Jacksonville International Airport (JAX), 2400 Yankee Clipper Drive, Jacksonville. Routed by OSRM between the airport terminal and the longitude and latitude carried in the Google Maps embed on the operator's Contact & Directions page, the road distance is 35.57 miles, over I-95, I-295, SR 202 and SR A1A; the route's destination waypoint is named Championship Way, which is the course's own street. The operator's written directions name the same roads: \"From JIA, take the ramp onto I-95 S towards Jacksonville. Take exit 362A to merge onto I-295 S. Continue on I-295 S to 202/JTB (JT Butler Blvd). Go East on JTB/202, exiting right on SR-A1A S. Turn right at TPC Blvd. Continue down passing Sawgrass Marriott Resort and Spa on the left. Obtain daily pass from guard gate. Go through gate, 1/5 mile down, turn left on Championship Way.\" The guard gate is the entrance to the surrounding gated community and issues a daily pass; it is not a restriction on the golf course. On the county: the US Census geocoder, run at those same operator-published coordinates, returns Florida, St. Johns County (GEOID 12109), Ponte Vedra CCD and Palm Valley CDP — and returns no Incorporated Places layer at all. A control query at Jacksonville City Hall returns Incorporated Places: Jacksonville city, so the layer works and the absence is real: the course sits in unincorporated St. Johns County, and Ponte Vedra Beach is a place and mailing name rather than an incorporated municipality. No source consulted for this guide states anything about parking, so this guide says nothing about it."
+      },
+      {
+        "heading": "THE PLAYERS Stadium Course",
+        "body": "Golf Digest's course record names the designers as \"Pete & Alice Dye\" and gives Year Opened 1980, 18 holes, 7,275 yards, slope 155. The operator agrees on the year everywhere it states one: the Stadium Course page reads that the course \"was built in 1980 to be the permanent home of THE PLAYERS Championship\"; the golf landing page reads that it \"was built in 1980 to host their first tournament in 1982, THE PLAYERS Championship\"; and the history page records that \"the inaugural PLAYERS Championship was held at TPC Sawgrass in 1982.\" Built 1980, first tournament 1982. The operator credits then-PGA TOUR Commissioner Deane R. Beman alongside the architect: \"Working with renowned golf course architect Pete Dye, Commissioner Deane Beman created a course design that favored no particular style of play, resulting in a truly balanced layout.\" On the 17th, the operator's history page is explicit about whose idea it was: \"An unexpected by-product of the lake construction was the island green at the 17th hole… Dye credits his wife, Alice, with the concept of building an island green after she saw the construction site one day.\" Golf Digest records a later hand: \"To make the layout even more exciting during tournament play, Steve Wenzloff of PGA Tour Design Services later remodeled several holes, most significantly the 12th, which he turned into a drivable par-4, something Dye was never a fan of.\" The land came cheap and flat. Jerome and Paul Fletcher sold the PGA TOUR \"415 acres of wooded wetlands and swamp\" for $1, on a site where Dye noted \"no more than 18 inches of elevation above the waterline anywhere on the property.\" Spectator mounding \"up to 30 feet high\" was raised at the 1st and 10th tees and the 9th, 16th, 17th and 18th greens; the operator calls the result the first true Stadium Course, designed to improve the on-site fan experience. The first PLAYERS champion on it was Jerry Pate, \"who followed his win by tossing Dye and Beman both into the lake at #18 – then jumping in himself.\" Three rankings sit on Golf Digest's record for the course: 41st on America's 100 Greatest (\"Ranked since 1983. Highest ranking: 25th, 1985-'86\"); 8th on America's 100 Greatest Public (\"Ranked since inaugural edition in 2003. Previous ranking: 9th\"); and 2nd Best in State, noted as \"Ranked second, 2011 to current.\" Carts are restricted here in a way they are not on the second course: \"Golf cars on Stadium Course are restricted to the golf car paths to allow for the best course conditions year round.\" Walking is possible, but the operator sells it as a caddie upgrade, to be reserved at a minimum of 48 hours in advance; the amounts it quotes for that carry no date and are not published here. Two Golf Digest panelist reviews dated 2025 describe November conditions — \"In November the rye overseed necessitated wet soggy fairways and greens\" and \"heavy rye overseed that required heavy irrigation and less than ideal soggy fairways\" — though no operator page names an overseeding programme, and the operator's own October 19 – November 8, 2026 Stadium closure is its only published statement covering that stretch of the calendar."
+      },
+      {
+        "heading": "Booking a round, and what the booking system does",
+        "body": "Access here is genuinely public, and the operator's own booking system is what settles it rather than any adjective. TPC Sawgrass publishes two booking paths, on its FAQ and again on its Book A Tee Time page, and one of them requires no lodging at all: \"Without Lodging: You can book up to 14 days in advance by contacting TPC Sawgrass directly here or call (904) 273-3430.\" The other is \"up to 12 months in advance through TPC Vacations as a stay and play guest at Sawgrass Marriott Golf Resort and Spa\" on 833-752-9872. Single players are accepted: \"Yes, single-player reservations are allowed. All groups of less than four players could be paired up at the course's discretion.\" A card holds the time and nothing is charged at booking: \"Yes, a credit card is needed to hold the starting time reservation. No payment is collected at the time you book your starting reservation.\" And no membership exists for this course — the operator's membership page offers exactly two things, a \"Dye's Valley Annual Pass\" and a \"Social Membership,\" and nothing at all for the Stadium Course. What the booking system does is the stronger fact. The engine the operator links from its own \"SEE TEE TIMES OVER NEXT 14 DAYS\" button answers an unauthenticated caller — no login, no member credential, no sponsor code and no lodging reference. Asked for THE PLAYERS Stadium Course on September 12, 2026 it returned a live tee sheet of 47 rows running 7:00 a.m. to 4:00 p.m., two of them entirely open and seven more with at least one open slot. Asked for Dye's Valley on the same date it returned 73 rows, 7:55 a.m. to 7:55 p.m., 46 of them entirely open. The engine reports itself as accepting new registrations and party sizes of one to four. Completing a booking in it requires an account, but it takes a new registration from anyone: that is a sign-up step, not a member gate. One qualifier the operator's own two halves disagree on. The FAQ and the booking page both say 14 days for the without-lodging path; the booking engine opens a 31-day window, and its own message reads \"Booking more than 30 days out? Please call TPC Sawgrass at 904-273-3430 to learn more about scheduling a starting time in the future.\" Both are the operator's, and neither is a gate. Counter-evidence, recorded rather than suppressed: the club's sustainability page opens \"With nearly a thousand members, over three hundred employees, and hundreds of guests using our facility daily, we generate a lot of waste.\" TPC Sawgrass does have a membership body. It does not gate the Stadium Course tee sheet. Cancellation windows differ by course and by channel: \"15 days in advance for Stadium Course online reservations / 7 days in advance for Stadium Course reservations / 2 days in advance for Dye's Valley reservations.\" On price, this guide publishes no figure. The operator does print a rate table on both its FAQ and its booking page, but the table carries no year and no effective date — its only qualifiers are the season labels \"SEPTEMBER – MAY\" and \"JUNE – AUGUST\" — so no number from it is quoted here, and none is quoted from an aggregator either. The table's footnotes are quotable and worth knowing: the rate \"Includes green fee, cart fee, forecaddie for the group, and warm-up bag of practice balls\"; \"Military rates available with presentation of valid military identification when booked within 14 days\"; \"Credit card required to hold reservation.\" Ask for the rate on (904) 273-3430 when you book. The operator's only dated prices anywhere on its site are its stay-and-play packages, which are a different product from a round — lodging, golf and meals sold together — and TPC Vacations publishes each with its own dated qualifier. Per person: the Dye's Signature Package, $1,511, is one night at the Sawgrass Marriott, breakfast at the TPC Sawgrass Clubhouse on the second day of play, one round on THE PLAYERS Stadium Course and one round on Dye's Valley. The Sawgrass Experience Package, $2,028, is three nights, breakfast on days of play, one round on the Stadium Course and one on Dye's Valley. The Championship 36 Package, $2,123, is two nights, breakfast on days of play, and two rounds on THE PLAYERS Stadium Course. The Performance Center Package, $2,453, is accommodation, one round on the Stadium Course, one twilight round on Dye's Valley and three hours of short-game and putting instruction at a maximum student-to-teacher ratio of 4 to 1. The operator's asterisk on all four reads: \"Advertised rate is based on arrivals between September 8 – December 14, 2026. Price only valid for groups of 15 or less. Blackout dates apply. Price subject to change. Rate per person, based on double occupancy. Taxes not included. Extended Cancellation.\" Those four figures are package prices and nothing else; none of them is the price of a round, and no price for a round is published here."
+      },
+      {
+        "heading": "When the courses are closed",
+        "body": "The operator publishes maintenance closure dates for both courses, in one block, on two of its pages — and the two blocks do not agree in scope, so both are given here. The FAQ's block is headed \"2026/2027 maintenance closure dates\" and reads: Stadium Course 2026: June 1 – 28, August 10 – 14, October 19 – November 8; Stadium Course 2027: February 15 – March 16, May 31 – June 28; THE PLAYERS Championship: March 9-14, 2027; Dye's Valley 2026: May 26 – 27, July 6 – 26, September 8 – 9, December 5 – 15. Outside tours are not available June 1 – June 28, 2026, October 19 – November 8, 2026 or February 15 – March 16, 2027, and the clubhouse \"is closed from March 6 – March 15, 2027 for THE PLAYERS.\" Two footnotes on the same block: \"TPC Vacations and resort guests will be advised of the closure dates before booking\" and \"Closure dates will not be available for booking on the 14-day normal booking window.\" The Book A Tee Time page's block is headed \"2026 maintenance closure dates,\" carries the same Stadium and Dye's Valley 2026 rows, omits the 2027 rows entirely, and names a different edition of the tournament, \"THE PLAYERS Championship: March 10-16, 2026.\" The FAQ block is the fuller of the two. Those dates are not only published, they are enforced in the booking system. Asked for Dye's Valley on September 8, 2026 — the first day of that course's published September closure — the operator's tee sheet returned 79 rows between 6:55 a.m. and 7:55 p.m., and all 79 of them read \"* BLOCKED *.\" The same course on September 12, 2026 showed 46 rows entirely open. Neither course has a closed season; the operator's rate table prices all twelve months in two bands. What the operator does not publish is a working calendar: its \"Calendar of Events\" page renders \"No events are scheduled\" for all twelve months, its \"Annual Pass Booking Portal\" page has no body content at all, and its sitemap lists no news page, no course-conditions page and no blog. The closure block above is the whole of its published calendar, and no renovation or aeration programme is announced anywhere on its site."
+      },
+      {
+        "heading": "Ponte Vedra Beach and the Sawgrass Marriott",
+        "body": "The operator names one lodging partner: \"TPC Sawgrass' partnership with the Sawgrass Marriott Golf Resort & Spa provides guests the opportunity to stay at the Home of THE PLAYERS.\" The hotel is at 1000 Tournament Players Club Blvd, Ponte Vedra Beach, Florida 32082, +1 904-285-7777, and it is the property the 12-month stay-and-play booking path runs through. The operator describes four pools, the Sawgrass Spa, seven restaurants and lounges, and a complimentary shuttle to the oceanfront Cabana Beach Club, which has direct access to Ponte Vedra Beach. You can eat at the golf club without playing or staying. The clubhouse is a \"Mediterranean-Style, 77,000 square foot\" building that the operator says is \"Open to the public daily from 7am-9pm,\" and its restaurant, NINETEEN, sits under the operator's own dining-page heading \"OPEN TO THE PUBLIC.\" NINETEEN serves breakfast 7:00 a.m.–11:00 a.m., lunch 11:00 a.m.–4:00 p.m., happy hour 4:30 p.m.–6:30 p.m. Monday to Friday, dinner 5:00 p.m.–9:00 p.m. and Sunday brunch 10:00 a.m.–3:00 p.m.; reservations are on 904.273.3238. Complimentary Storyteller tours of the clubhouse run \"at the top of each hour from 9 AM – 4 PM,\" seven days a week, with no reservation needed, outside the outside-tour blackout windows listed above. At the hotel, the dining rooms are Vernon's First Coast Kitchen & Bar, a farm-to-table room open Monday to Saturday 6:30 a.m.–11:00 a.m. and 5:00 p.m.–10:00 p.m. and Sunday 7:00 a.m.–12:00 p.m.; Alice and Pete's, open every day 11:00 a.m.–12:00 a.m., with televised sport, a pool table and a Floating Hole Challenge; and the seasonal American Gator Club, open every day 11:30 a.m.–6:00 p.m. weather permitting, which the hotel says \"overlooks both the lagoon and 13th hole at The Stadium Course at TPC® Sawgrass.\" The Lobby Bar, Sips at Sawgrass (4:00 p.m.–10:00 p.m.), a grab-and-go Coffee Shop (6:00 a.m.–4:00 p.m.) and Soothies Café (10:30 a.m.–4:00 p.m.) fill in around them, and at the Cabana Beach Club on the ocean the hotel runs 1912 Ocean Bar and Rooftop — Monday to Saturday 4:00 p.m.–10:00 p.m., Sunday 11:00 a.m.–2:00 p.m. and 4:00 p.m.–10:00 p.m. — and Sharkey's Cafe, weekends 12:00 p.m.–4:00 p.m., weather permitting. One venue on that list is not open to a visitor who is not staying: the hotel calls Sea Porch \"a member and resort guest-only favorite… the perfect spot for any Cabana Beach Club member or resort guest,\" so this guide does not write it up as public. Off the property, the hotel's own dining page lists restaurants with its own mileages: Aqua Grill 0.3 miles, Caffe Andiamo 0.3 miles, Nona Blue Modern Tavern 0.3 miles, Poppy's Italiano 0.7 miles, Ruth's Chris Steak House 0.9 miles, and Restaurant Medure and Pusser's Bar & Grille at 1.0 miles each. On the setting, the operator writes: \"TPC Sawgrass is proud to call picturesque Ponte Vedra Beach, Florida home. Situated between Jacksonville and St. Augustine, the area provides the perfect blend of small town charm and big city sophistication.\" The same page names the Cummer Museum of Art, the Museum of Science and History, the Jacksonville Zoo and Gardens, St. Augustine's Castillo de San Marcos and the San Sebastian Winery."
+      },
+      {
+        "heading": "Day two: Dye's Valley",
+        "body": "The second course is TPC Sawgrass: Dye's Valley, 69th on the same Golf Digest 2025-'26 Florida list and also labelled \"Public,\" with the entry's own subhead recording a previous rank of 60. It is on the same property and shares the same clubhouse and the same guard gate — the operator's words are that \"Dye's Valley at TPC Sawgrass is adjacent to THE PLAYERS Stadium Course\" — so no other publicly accessible course in Florida sits closer to the first. The operator: \"Designed by Pete Dye, Bobby Weed and player consultant Jerry Pate (1982 PLAYERS Champion), Dye's Valley at TPC Sawgrass is adjacent to THE PLAYERS Stadium Course. Opened in 1987, the course has played host to several professional Korn Ferry Tour events and is consistently ranked as one of the top courses in Florida.\" Golf Digest's record: Facility Type Public, Year Opened 1987, Designer Pete Dye & Bobby Weed, ASGCA, 18 holes, 6,847 yards, slope 138. It clears the same access bar, tested the same way — it is the second course in the same unauthenticated tee-sheet system, which returned 73 rows for it on September 12, 2026 with 46 entirely open — and it sits in the same rate table under the same \"14 days in advance (without lodging)\" heading. Unlike the Stadium Course it does have a membership of its own, the \"Dye's Valley Annual Pass,\" described as \"Play Dye's Valley year-round for cart fee only plus pay NO monthly dues or Food & Beverage minimums\"; it sits alongside public play rather than replacing it. Its carts are less restricted than the Stadium Course's: golf cars \"may have the opportunity to drive on the fairways depending upon the season and daily weather conditions.\" Plan around its own closures — 2026: May 26 – 27, July 6 – 26, September 8 – 9, December 5 – 15 — and note that its booking cancellation window is 2 days rather than the Stadium Course's 7 or 15. One caution on sources: Golf Digest's page for Dye's Valley contradicts itself, giving a history line of \"Ranked 21st, 2017-'18. Ranked 60th, 2023-'24. Ranked 69th, 2025-'26\" and then a \"Current ranking: 60th\" field one line later. The ranking page's own entry block says 69th with a previous rank of 60, which agrees with the history line; that is the reading used here."
+      }
+    ],
+    "faq": [
+      {
+        "question": "How do I book a tee time on THE PLAYERS Stadium Course?",
+        "answer": "There are two paths, and the operator publishes both. Without lodging: \"You can book up to 14 days in advance by contacting TPC Sawgrass directly here or call (904) 273-3430.\" With lodging: \"up to 12 months in advance through TPC Vacations as a stay and play guest at Sawgrass Marriott Golf Resort and Spa\" on 833-752-9872. The operator also links an online tee-time engine from a button reading \"SEE TEE TIMES OVER NEXT 14 DAYS.\" A credit card holds the reservation and no payment is collected at booking. Cancellation is 15 days in advance for Stadium Course online reservations and 7 days in advance for Stadium Course reservations."
+      },
+      {
+        "question": "Do I have to stay at a resort, or know a member, to play it?",
+        "answer": "No. The operator's own booking terms name no sponsor, host or member relationship, and the club sells no membership for the Stadium Course at all — its membership page offers only a Dye's Valley Annual Pass and a Social Membership. The without-lodging path is published by the operator itself. And the booking engine the operator links from its own site answers a caller with no login and no member credential: on September 12, 2026 it returned a live tee sheet for the Stadium Course of 47 rows, 7:00 a.m. to 4:00 p.m., two of them entirely open and seven more with at least one open slot. Completing a booking needs an account, but the engine accepts a new registration from anyone. Golf Digest ranks the course 8th on America's 100 Greatest Public, which a private club cannot appear on."
+      },
+      {
+        "question": "What does a round cost?",
+        "answer": "This guide publishes no figure, and that is deliberate. The operator prints a rate table on both its FAQ and its Book A Tee Time page, but the table carries no year and no effective date — its only qualifiers are the season labels \"SEPTEMBER – MAY\" and \"JUNE – AUGUST\" — so nothing from it is quoted here, and no aggregator's figure is substituted for it. What the table does say without a number: the rate \"Includes green fee, cart fee, forecaddie for the group, and warm-up bag of practice balls,\" \"Military rates available with presentation of valid military identification when booked within 14 days,\" and \"Credit card required to hold reservation.\" Ask for the rate on (904) 273-3430 when you book. The operator does publish dated prices for its stay-and-play packages, but a package is lodging and golf sold together rather than a round, and none of those figures is a round's price."
+      },
+      {
+        "question": "What do the stay-and-play packages cost?",
+        "answer": "TPC Vacations publishes four, per person, each with the operator's own dated qualifier. The Dye's Signature Package, $1,511: one night at the Sawgrass Marriott, breakfast at the TPC Sawgrass Clubhouse on the second day of play, one round on THE PLAYERS Stadium Course and one round on Dye's Valley. The Sawgrass Experience Package, $2,028: three nights, breakfast on days of play, one round on each course. The Championship 36 Package, $2,123: two nights, breakfast on days of play, two rounds on THE PLAYERS Stadium Course. The Performance Center Package, $2,453: accommodation, one round on the Stadium Course, one twilight round on Dye's Valley and three hours of short-game and putting instruction at a maximum student-to-teacher ratio of 4 to 1. The asterisk the operator prints under all four: \"Advertised rate is based on arrivals between September 8 – December 14, 2026. Price only valid for groups of 15 or less. Blackout dates apply. Price subject to change. Rate per person, based on double occupancy. Taxes not included. Extended Cancellation.\" These are prices for the packages as described and for nothing else; none of them is the price of a round."
+      },
+      {
+        "question": "When are the courses closed?",
+        "answer": "From the operator's FAQ block headed \"2026/2027 maintenance closure dates\": Stadium Course 2026, June 1 – 28, August 10 – 14, October 19 – November 8; Stadium Course 2027, February 15 – March 16 and May 31 – June 28, around THE PLAYERS Championship of March 9-14, 2027. Dye's Valley 2026: May 26 – 27, July 6 – 26, September 8 – 9, December 5 – 15. The clubhouse is closed March 6 – March 15, 2027 for THE PLAYERS. The Book A Tee Time page carries a shorter version of the same block, headed \"2026,\" without the 2027 rows and naming the 2026 tournament as March 10-16 instead. The closures are enforced in the booking system: asked for Dye's Valley on September 8, 2026, the operator's tee sheet returned 79 rows and every one of the 79 read \"* BLOCKED *.\""
+      },
+      {
+        "question": "Can I walk the Stadium Course, or drive a cart on the fairways?",
+        "answer": "Neither, as a matter of course. The operator states that \"Golf cars on Stadium Course are restricted to the golf car paths to allow for the best course conditions year round.\" Walking is available as a caddie upgrade, to be reserved at a minimum of 48 hours in advance; the operator's prices for that carry no date and are not published here. Dye's Valley is looser — its golf cars \"may have the opportunity to drive on the fairways depending upon the season and daily weather conditions.\""
+      },
+      {
+        "question": "Can I visit the clubhouse or eat there without playing?",
+        "answer": "Yes. The operator states that the clubhouse is \"Open to the public daily from 7am-9pm\" and runs complimentary Storyteller tours \"at the top of each hour from 9 AM – 4 PM,\" seven days a week, with no reservation needed — except during the published outside-tour blackouts of June 1 – June 28, 2026, October 19 – November 8, 2026 and February 15 – March 16, 2027. The clubhouse restaurant, NINETEEN, appears on the operator's dining page under the heading \"OPEN TO THE PUBLIC.\""
+      },
+      {
+        "question": "Where is TPC Sawgrass, and which county is it in?",
+        "answer": "110 Championship Way, Ponte Vedra Beach, Florida 32082, in St. Johns County. The US Census geocoder, run at the coordinates the operator publishes in its own map embed, returns St. Johns County (GEOID 12109), Ponte Vedra CCD and Palm Valley CDP, and returns no Incorporated Places layer — an absence proved real by a control query at Jacksonville City Hall, which does return one. The course is in unincorporated St. Johns County; Ponte Vedra Beach is a place and mailing name, not an incorporated municipality. The road distance from Jacksonville International Airport is 35.57 miles over I-95, I-295, SR 202 and SR A1A."
+      },
+      {
+        "question": "Which course should I play on day two?",
+        "answer": "TPC Sawgrass: Dye's Valley, 69th on the same Golf Digest 2025-'26 Florida list and also labelled \"Public.\" It shares the property, the clubhouse and the same without-lodging booking path, and the same tee-sheet system returned 73 rows for it on September 12, 2026 with 46 entirely open. Pete Dye, Bobby Weed and Jerry Pate designed it; it opened in 1987 and measures 6,847 yards to a slope of 138. Its own 2026 closures are May 26 – 27, July 6 – 26, September 8 – 9 and December 5 – 15."
+      }
+    ],
+    "photos": []
+  },
+  "places": [
+    {
+      "slug": "tpc-sawgrass-players-stadium-course",
+      "name": "THE PLAYERS Stadium Course at TPC Sawgrass",
+      "kind": "golf-course",
+      "destination_path": "united-states/florida/st-johns-county/ponte-vedra-beach",
+      "official_url": "https://tpc.com/sawgrass/the-players-stadium-course/",
+      "summary": "Second on Golf Digest's 2025-'26 ranking of the best golf courses in Florida and the highest-ranked entry on it labelled \"Public\"; ranked 2nd Best in State since 2011, 41st on America's 100 Greatest and 8th on America's 100 Greatest Public. Golf Digest gives the designers as Pete & Alice Dye, Year Opened 1980, 18 holes, 7,275 yards, slope 155. Built in 1980 for the PGA TOUR at 110 Championship Way, it has been the permanent home of THE PLAYERS Championship since the first playing there in 1982, won by Jerry Pate. The operator credits Alice Dye with the concept of the island green at the 17th. Booking without lodging opens 14 days ahead on (904) 273-3430, and the operator's own online tee sheet answers an unauthenticated caller with open slots. Golf cars are restricted to the paths year round.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "tpc-sawgrass-dyes-valley-course",
+      "name": "Dye's Valley Course at TPC Sawgrass",
+      "kind": "golf-course",
+      "destination_path": "united-states/florida/st-johns-county/ponte-vedra-beach",
+      "official_url": "https://tpc.com/sawgrass/dyes-valley-course/",
+      "summary": "69th on Golf Digest's 2025-'26 Florida ranking, labelled \"Public,\" with a previous rank of 60. The operator: \"Designed by Pete Dye, Bobby Weed and player consultant Jerry Pate (1982 PLAYERS Champion)… Opened in 1987, the course has played host to several professional Korn Ferry Tour events.\" Golf Digest gives Facility Type Public, 18 holes, 6,847 yards, slope 138. It shares TPC Sawgrass's clubhouse and its without-lodging booking path, and its golf cars \"may have the opportunity to drive on the fairways depending upon the season and daily weather conditions.\" Published 2026 closures: May 26 – 27, July 6 – 26, September 8 – 9, December 5 – 15.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "sawgrass-marriott-golf-resort-and-spa",
+      "name": "Sawgrass Marriott Golf Resort & Spa",
+      "kind": "hotel",
+      "destination_path": "united-states/florida/st-johns-county/ponte-vedra-beach",
+      "official_url": "https://www.marriott.com/en-us/hotels/jaxsw-sawgrass-marriott-golf-resort-and-spa/overview/",
+      "summary": "1000 Tournament Players Club Blvd, Ponte Vedra Beach, Florida 32082, +1 904-285-7777. The one lodging partner TPC Sawgrass names: \"TPC Sawgrass' partnership with the Sawgrass Marriott Golf Resort & Spa provides guests the opportunity to stay at the Home of THE PLAYERS.\" It is the property the operator's 12-month stay-and-play booking path runs through, on 833-752-9872. Four pools, the Sawgrass Spa, seven restaurants and lounges, and a complimentary shuttle to the oceanfront Cabana Beach Club with direct access to Ponte Vedra Beach.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "nineteen-tpc-sawgrass",
+      "name": "NINETEEN at TPC Sawgrass",
+      "kind": "restaurant",
+      "destination_path": "united-states/florida/st-johns-county/ponte-vedra-beach",
+      "official_url": "https://tpc.com/sawgrass/dining/",
+      "summary": "The clubhouse restaurant at TPC Sawgrass, carried on the operator's dining page under the heading \"OPEN TO THE PUBLIC.\" \"NINETEEN features a creative array of freshly prepared American and Continental cuisine… The outdoor verandah offers expansive seating with panoramic views of the 18th hole.\" The operator claims a wine list of over 800 selections, 12 rotating draft beers, a 2024 Wine Spectator Best of Award of Excellence and a place among Jacksonville Magazine's Top 25. Breakfast 7:00 a.m.–11:00 a.m., lunch 11:00 a.m.–4:00 p.m., happy hour 4:30 p.m.–6:30 p.m. Monday to Friday, dinner 5:00 p.m.–9:00 p.m., Sunday brunch 10:00 a.m.–3:00 p.m. Reservations 904.273.3238.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "vernons-first-coast-kitchen-and-bar",
+      "name": "Vernon's First Coast Kitchen & Bar",
+      "kind": "restaurant",
+      "destination_path": "united-states/florida/st-johns-county/ponte-vedra-beach",
+      "official_url": "https://www.marriott.com/en-us/hotels/jaxsw-sawgrass-marriott-golf-resort-and-spa/dining/",
+      "summary": "The Sawgrass Marriott's farm-to-table dining room, in the hotel's own words \"perfect for breakfast, small plates, dinner, or brunch in Ponte Vedra,\" with a refreshed menu and resort views. Monday to Saturday 6:30 a.m.–11:00 a.m. and 5:00 p.m.–10:00 p.m.; Sunday 7:00 a.m.–12:00 p.m. Dress code casual.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "alice-and-petes-sawgrass-marriott",
+      "name": "Alice and Pete's",
+      "kind": "restaurant",
+      "destination_path": "united-states/florida/st-johns-county/ponte-vedra-beach",
+      "official_url": "https://www.marriott.com/en-us/hotels/jaxsw-sawgrass-marriott-golf-resort-and-spa/dining/",
+      "summary": "The Sawgrass Marriott's all-day room, named for the architects of the Stadium Course. The hotel: \"Dive into tempting appetizers, entrees, and desserts at this Ponte Vedra restaurant. Watch your favorite sport and relax while watching our TVs, try your hand at a game of pool, or take the Floating Hole Challenge.\" Open every day 11:00 a.m.–12:00 a.m.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "american-gator-club-sawgrass-marriott",
+      "name": "American Gator Club",
+      "kind": "restaurant",
+      "destination_path": "united-states/florida/st-johns-county/ponte-vedra-beach",
+      "official_url": "https://www.marriott.com/en-us/hotels/jaxsw-sawgrass-marriott-golf-resort-and-spa/dining/",
+      "summary": "A seasonal, open-air room at the Sawgrass Marriott which the hotel says \"overlooks both the lagoon and 13th hole at The Stadium Course at TPC® Sawgrass\" and puts \"Florida's unique indigenous wildlife… on full display.\" Open every day 11:30 a.m.–6:00 p.m., weather permitting.",
+      "status": "open",
+      "photos": []
+    }
+  ],
+  "entries": [
+    {
+      "kind": "sight",
+      "name": "THE PLAYERS Stadium Course at TPC Sawgrass",
+      "place_slug": "tpc-sawgrass-players-stadium-course",
+      "note": "Second on Golf Digest's 2025-'26 Florida ranking and the highest-ranked entry labelled \"Public\"; Pete & Alice Dye, built 1980."
+    },
+    {
+      "kind": "sight",
+      "name": "Dye's Valley Course at TPC Sawgrass",
+      "place_slug": "tpc-sawgrass-dyes-valley-course",
+      "note": "Day two: 69th on the same list, also \"Public,\" same clubhouse and same booking path; Pete Dye, Bobby Weed and Jerry Pate, opened 1987."
+    },
+    {
+      "kind": "stay",
+      "name": "Sawgrass Marriott Golf Resort & Spa",
+      "place_slug": "sawgrass-marriott-golf-resort-and-spa",
+      "note": "The one lodging partner TPC Sawgrass names, and the property its 12-month stay-and-play booking path runs through."
+    },
+    {
+      "kind": "food",
+      "name": "NINETEEN at TPC Sawgrass",
+      "place_slug": "nineteen-tpc-sawgrass",
+      "note": "The clubhouse restaurant, under the operator's own heading \"OPEN TO THE PUBLIC,\" with a verandah over the 18th."
+    },
+    {
+      "kind": "food",
+      "name": "Vernon's First Coast Kitchen & Bar",
+      "place_slug": "vernons-first-coast-kitchen-and-bar",
+      "note": "Farm-to-table breakfast and dinner at the Sawgrass Marriott; Sunday service ends at 12:00 p.m."
+    },
+    {
+      "kind": "food",
+      "name": "Alice and Pete's",
+      "place_slug": "alice-and-petes-sawgrass-marriott",
+      "note": "All-day room at the Sawgrass Marriott with televised sport, a pool table and a Floating Hole Challenge."
+    },
+    {
+      "kind": "food",
+      "name": "American Gator Club",
+      "place_slug": "american-gator-club-sawgrass-marriott",
+      "note": "Seasonal and open-air, overlooking the lagoon and the 13th hole of the Stadium Course; weather permitting."
+    }
+  ]
+}

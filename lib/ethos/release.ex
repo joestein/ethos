@@ -70,7 +70,8 @@ defmodule Ethos.Release do
       Ethos.Seeds.AntiqueTrailCollection,
       Ethos.Seeds.MlbBallparksCollection,
       Ethos.Seeds.KoreanBbqCollection,
-      Ethos.Seeds.SteakhouseCollection
+      Ethos.Seeds.SteakhouseCollection,
+      Ethos.Seeds.GolfCollection
     ]
 
     for mod <- collections do
@@ -94,6 +95,8 @@ defmodule Ethos.Release do
   def seed_bronx(email), do: seed_directory("bronx", email)
 
   def seed_queens(email), do: seed_directory("queens", email)
+
+  def seed_golf(email), do: seed_directory("golf", email)
 
   @doc """
   Seeds the rione and quartiere corpus under `priv/seed_data/rome/`.

@@ -36,16 +36,16 @@ defmodule Ethos.Seeds.DestinationTreeTest do
   #
   # Literals, deliberately, in a suite that otherwise derives everything. A
   # derived expectation cannot go stale, which is exactly why it cannot serve
-  # here: the runbook is prose, it says "confirm the count reads 757", and
+  # here: the runbook is prose, it says "confirm the count reads 1043", and
   # nothing else in this repository would notice the day that stopped being
   # true. An operator following a stale number either proceeds through a short
   # rebuild or stops on a complete one. So the numbers live here, once, and
   # this test failing is the instruction to update that document — change both
   # in the same commit, never one alone.
   test "the roster and overlay counts docs/runbooks/seeding.md quotes are still true" do
-    assert length(DestinationTree.load!()) == 876,
+    assert length(DestinationTree.load!()) == 1043,
            "the roster changed size: update docs/runbooks/seeding.md, which tells the " <>
-             "operator to confirm a count of 876 after a rebuild, and this assertion"
+             "operator to confirm a count of 1043 after a rebuild, and this assertion"
 
     overlays =
       [:code.priv_dir(:ethos) |> to_string(), "seed_data", "destinations", "*.json"]
@@ -93,11 +93,11 @@ defmodule Ethos.Seeds.DestinationTreeTest do
   # one, and "CT-5" is understood as the name of that set, not its size. The
   # runbook's step 2 has been amended to name the sixth guide.
   #
-  # Only the final expectation, 533, is a literal — this test failing is the
+  # Only the final expectation, 582, is a literal — this test failing is the
   # instruction to update docs/runbooks/seeding.md's "Full rebuild total" line
   # (and its derivation list, and the "Expected published counts" table's
   # step-13 row) in the same commit as this assertion.
-  test "the runbook's full-rebuild total is still 533" do
+  test "the runbook's full-rebuild total is still 582" do
     dir_count = fn dir ->
       [:code.priv_dir(:ethos) |> to_string(), "seed_data", dir, "*.json"]
       |> Path.join()
@@ -124,9 +124,10 @@ defmodule Ethos.Seeds.DestinationTreeTest do
         rome_flagship +
         dir_count.("korean_bbq") +
         dir_count.("steakhouse") +
-        dir_count.("ski")
+        dir_count.("ski") +
+        dir_count.("golf")
 
-    assert total == 533,
+    assert total == 582,
            "the full-rebuild total changed to #{total}: update docs/runbooks/seeding.md's " <>
              "\"Full rebuild total\" line, its derivation list, and the \"Expected published " <>
              "counts\" table's step-13 row, and this assertion, in the same commit"
@@ -141,11 +142,10 @@ defmodule Ethos.Seeds.DestinationTreeTest do
   # source lists does, same as the runbook's own prose would. The ski addend
   # is genuinely derived: SkiCollections seeds exactly regional/0 and
   # parent/0, so its count is `length/1` of that pair, not a literal.
-  test "the runbook's eleven-collections figure at step 15 is still accurate" do
-    # Ethos.Release.seed_collections/0's fixed list: BurysCollection,
-    # AntiqueTrailCollection, MlbBallparksCollection, KoreanBbqCollection,
-    # SteakhouseCollection.
-    fixed_collections = 5
+  test "the runbook's twelve-collections figure at step 16 is still accurate" do
+    # BurysCollection, AntiqueTrailCollection, MlbBallparksCollection,
+    # KoreanBbqCollection, SteakhouseCollection, GolfCollection.
+    fixed_collections = 6
     # Ethos.Seeds.ScenicBywaysCollections.upsert_all!/0's fixed list: Merritt
     # Parkway, Route 169, Route 207, Route 7.
     scenic_byways = 4
@@ -155,9 +155,9 @@ defmodule Ethos.Seeds.DestinationTreeTest do
 
     total = fixed_collections + scenic_byways + ski_collections
 
-    assert total == 11,
-           "seed_collections/0 now seeds #{total} collections, not eleven: update " <>
-             "docs/runbooks/seeding.md's step 15, which names all eleven, and this assertion"
+    assert total == 12,
+           "seed_collections/0 now seeds #{total} collections, not twelve: update " <>
+             "docs/runbooks/seeding.md's step 16, which names all twelve, and this assertion"
   end
 
   test "roster paths are unique" do

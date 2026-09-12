@@ -1,0 +1,238 @@
+{
+  "guide": {
+    "slug": "virginia-golf-guide",
+    "title": "The Highland Course: Golf in Meadows of Dan, Virginia",
+    "destination": "Meadows of Dan, Virginia",
+    "destination_path": "united-states/virginia/patrick-county/meadows-of-dan",
+    "intro": "Golf Digest's 2025-'26 ranking of the best golf courses in Virginia places The Highland Course at Primland fourth, with the access label \"Public\" carried inside its own block on the page. It is the highest-ranked publicly accessible course on that list: the three entries above it — Kinloch Golf Club in Manakin Sabot, The Olde Farm in Bristol and Robert Trent Jones Golf Club in Gainesville — each carry the label \"Private\" in their own blocks, and each of those clubs' own sites bears that out: Kinloch's and Robert Trent Jones's navigation runs to a member login and guest information with no public tee sheet, no rate page and no booking path, and The Olde Farm describes itself as \"a private club where championship golf, gracious hospitality, and lasting friendships come together\" and \"a singular private-club experience in Southwest Virginia.\" The ranking states its edition itself: \"Below you'll find our 2025-'26 ranking of the Best Golf Courses in Virginia.\" The course sits on the Primland estate, an Auberge Resorts Collection property at 2000 Busted Rock Road, Meadows of Dan, Virginia 24120. The US Census geocoder, called at the resort's own map pin, returns Patrick County (GEOID 51141) and returns no incorporated place and no census designated place at all — Meadows of Dan is an unincorporated community, and the same geocoder, run as a control at Virginia Beach City Hall, does return an incorporated place, which is what shows the absence to be real rather than a broken lookup. The resort's own golf page states: \"Highland Course | Open to general public, members and resort guests.\" Its booking system says the same thing in its behaviour: called with no account, no token and no authentication header, it offered 33 bookable tee times for September 20 and 21, 2026, every one of them priced $325, and not one of them carrying a member, guest or resort restriction. The second course this guide names is Gordon Trent Golf Club in Stuart, 29.4 road miles away and in the same county.",
+    "sections": [
+      {
+        "heading": "Getting there",
+        "body": "Primland has two gates and they are not interchangeable. The resort's own directions page heads them \"Directions to Primland North Gate | Lodging, Golf and Dining — 2000 Busted Rock Road, Meadows of Dan, VA 24120\" and \"Directions to Primland South Gate | Sport Shooters, Anglers and Trail Riders — 439 New Valley Road, Claudville, VA 24076,\" and explains why: \"Since the Primland property is so large, your best point of entry depends on what you plan to do here.\" Golfers want the North Gate. The resort publishes its own mileages and its own turn-by-turn text. From Roanoke, 75 miles: \"Take I-81 South. Exit at Hwy 8 South (2nd Christiansburg exit) and follow 30 mi. to Blue Ridge Pkwy. Take Pkwy south 10 mi. to the US 58 Exit. Follow US 58 east toward Stuart for 4 1/2 mi., then turn right on Busted Rock Rd. Follow Busted Rock 2 mi. to Primland's North Gate. (Note: no firearms allowed on Blue Ridge Parkway.)\" From Greensboro or Piedmont Triad International Airport, 83 miles: \"Take US 220 North to Martinsville. (If coming from Airport, follow exit signs to Hwy 68 North, which ultimately merges with US 220 North.) At Martinsville, turn West onto US 58 toward Stuart. Bypass around Stuart and stay on US 58 West for approximately 11 more miles, turning left onto Busted Rock Road.\" From the I-77 corridor including Charlotte, 145 miles: \"Take I-77 to Exit # 14, Hillsville, Virginia. Take US 58 East for 29 miles.\" The same page gives Winston-Salem 64 miles, Raleigh 162 miles and Richmond 215 miles. Two commercial airports serve the estate, and both are prose here rather than places to visit. Piedmont Triad International Airport (GSO) at Greensboro, North Carolina, routes 73.0 miles by road to the resort's map pin, over I-73, NC-704, VA-8, US-58, SR-610 and US-220. Roanoke–Blacksburg Regional Airport (ROA) routes 76.7 miles from the airport to the resort, over I-581 and US-220 out of Roanoke, then VA-419, a chain of Virginia secondary routes, VA-57, VA-8, US-58 and SR-610; measured in the reverse direction the same router returns 73.8 miles, so the route is not symmetrical and the two figures are not interchangeable. One operator notice belongs on this page, with the caveat that the operator publishes no date against it, so how current it is cannot be established from the page: \"Guests, please be aware of the construction on U.S. 58 between Meadows of Dan and Stuart. If traveling on this route, expect slight delays. Please plan accordingly.\" The second course, Gordon Trent Golf Club at 2160 Golf Course Road in Stuart, is 29.4 road miles from Primland's map pin, measured to a point on the club's access road that the router names Golf Course Road. Neither club's street address resolves in the Census geocoder's address ranges — Primland's own 2000 Busted Rock Road returns zero matches and so does Gordon Trent's 2160 Golf Course Road — so both ends of that measurement are coordinates rather than surveyed street addresses, and the 29.4 miles is approximate."
+      },
+      {
+        "heading": "The Highland Course",
+        "body": "The operator's own sentence gives the architect and the year: \"Opened in 2006 by renowned golf course architect Donald Steel, the 18-hole course presents fresh perspectives every time, compelling repeat rounds to master its challenges and appreciate its beauty anew.\" That sentence is the only source for the year — Golf Digest's own course page for this course carries no year-opened field, although the field exists on other Virginia course pages, so 2006 rests on the resort's word alone. Golf Digest's structured designer field reads \"Martin Ebert/Donald Steel,\" and its description sets out why: \"The Highland Course at Primland sits atop a mountain plateau overlooking some of the most unusual scenery in America, a deep river valley dotted with tall spirals of rock called the Pinnacles of the Dan River. The course design by veteran British architect Donald Steel is austere in its green contours and bunkering, as if not to overpower the setting. Aided by his then-associates Tom Mackenzie and Martin Ebert (who have since formed their own very successful partnership, Mackenzie & Ebert), Steel routed holes along ridges, over chasms, down valleys and into sideslopes, always offering a safe alternative to every perilous carry. There's a stretch of three straight holes—13 through 15—with no sand, because dense trees and deep gulleys are hazards enough. Primland is Smoky Mountain majesty.\" The two sources differ in emphasis rather than in fact, and both are given here rather than one chosen. The card, from the operator's own specifications table: yardage 7051, rating 75.1, slope 153, par 72. Dress code, also verbatim from that table: \"For Men | Shirts with collars and sleeves are required. Slacks or golf shorts must be worn. No tank tops, denim, T-shirts, cut-offs, sweat pants, bathing suits or other athletic shorts are permitted. For Women | Appropriate golf attire including dresses, skirts, slacks, golf shorts and collared or mock collared shirts must be worn at all times. Bathing suits, denim, athletic shorts or tank tops are not permitted. Shoes | Any non-heeled athletic shoes can be worn.\" Lunch comes with the round: \"Lunch on the Green — Offered daily throughout the golf season, our Fairway Smoker serves Southern favorites to enjoy while playing The Highland Course at Primland. Lunch and non-alcoholic beverages are complimentary for every 18-hole round. Available April-November.\" The resort publishes its own accolades block. Two of its entries are corroborated at their source: \"America's 100 Greatest Public Courses | Golf Digest\" and \"#1 Public Course in Virginia | Golf Digest\" — the state ranking places the course fourth with every higher entry labelled Private, making it the top Public-labelled Virginia entry, and Golf Digest's course page records \"100 Greatest Public: Ranked since 2011. Highest ranking: 13th, 2011-'12. Previous ranking: 25th. 2025-'26 ranking: 29th.\" and \"Best in State: Ranked inside the top five since 2011. 2025-'26 ranking (and previous): 4th.\" The block's other entries are the resort's own claims and were not reachable at their publishers: \"#1 in Virginia | Golfweek's Best Courses You Can Play 2023,\" \"Best of the West | Virginia Living,\" \"Top 28 Best Golf Resorts in the US & Canada | GOLF Magazine\" and \"Best Golf Courses in the USA | Golf World Top 100.\" The 2023 in that first line belongs to the Golfweek source, not to the Virginia Living entry beside it. No protected-status claim is made for the course or the Lodge by the operator or by Golf Digest, and Virginia's Department of Historic Resources register search could not be queried for Patrick County without its JavaScript interface, so this is recorded as not found rather than as not existing. The Blue Ridge Parkway, a National Park Service unit, runs beside the estate and carries part of the resort's own driving directions; the resort's note that no firearms are allowed on the Blue Ridge Parkway is a Parkway rule, not a course rule."
+      },
+      {
+        "heading": "Playing it, and what it costs",
+        "body": "Access here is unusually well evidenced, because the resort's booking system was executed rather than read. The marketing sentence is \"Highland Course | Open to general public, members and resort guests,\" with no stay condition, no member sponsor and no host requirement attached to it. The booking portal's own runtime configuration says the same: GUEST_FLOW true, OPTIONAL_LOGIN true, RESORT_FLOW false — a guest may book without logging in and without a resort reservation, by the portal's own settings. The portal's catalogue, called unauthenticated, lists exactly one green-fee offer, \"The Highland Course at Primland,\" alongside two golf-lesson offers. Calling the availability endpoint with no credentials of any kind returned, on both the finder's run and the verifier's re-run, identical results to the slot and to the cent. For play on September 20 and 21, 2026: 33 time slots, every one with capacity remaining, the first at 08:30 on September 20 and the last at 11:15 on September 21, every slot priced $325, and an empty restrictions list on all 33. For play on November 10 to 12, 2026: 93 slots, every one priced $275. For play on December 15 to 17, 2026: a successful response carrying zero slots. For play on April 10 to 12, 2027: 87 slots, every one priced $225. Those are prices a booking system quoted for those particular play dates, not a single green fee for the course. The operator's own rate table dates itself in its own headings, which is what makes it publishable here. Under \"2026 Peak Season\": May 1 - August 9, $325; September 4 - October 31, $325. Under \"2026 Non-Peak Season\": April 1-15, $175; April 16-30, $215; August 12 - September 3, $275; November, $275. The two live quotes above fall inside two of those rows exactly — the September slots inside \"September 4 - October 31 | $325\" and the November slots inside \"November | $275\" — which is two independent surfaces of the same operator agreeing. The $225 the system quoted for April 2027 appears on no published rate table and carries no dated qualifier anywhere, so it is reported above as an observation of what the system offered for those dates and is not published here as a 2027 rate. Golf Digest's course page lists $325 with a caveat of its own: \"This covers all ranges of greens fees. Please check with the course on specific timing and pricing.\" The resort sells a stay-and-play package as an option rather than as the gate: \"The Blue Ridge Golf Package … For every night booked, guests receive a round of golf for one person on the award-winning mountain course. Call 888.876.6513 or reserve online.\" Golf enquiries go to 276.222.3827, the number on the resort's golf page. What was established stops at availability: bookable public inventory was offered and priced to an unauthenticated caller. No reservation was submitted and no payment details were entered."
+      },
+      {
+        "heading": "Season, closures and the dates to plan around",
+        "body": "The resort never states a season in words, and three separate things point at the same boundary. Its 2026 rate table covers April 1 through November and prices nothing in December, January, February or March. Its on-course lunch service and its golf clinics are both marked \"Available April-November.\" And its booking system, called for December 15 to 17, 2026, returned a successful response with no bookable slots at all, while windows on September 20 and 21 and November 10 to 12, 2026 returned 33 and 93 slots. The third of those is an observation rather than a reading of prose. Closures are published by the operator itself, and dated. Under \"2026 Aerification Dates\": \"March 16-17 | Course Closed. Aerification holes may be visible from March 18 through mid-April.\" and \"August 10-11 | Course Closed. Aerification holes may be visible from August 12 through mid-September.\" Under \"2026 Maintenance Dates\", each of which delays or shortens play rather than cancelling it: March 18, course opens at 11AM; April 13, course closes at 12PM; May 18, course opens at 11AM; June 15, course opens at 11AM; July 13, course opens at 11AM; August 12, course opens at 11AM; September 21, course opens at 11:30AM; December 1, course opens at 1AM. That last line is transcribed exactly as the operator publishes it. One resort event will occupy the tee sheets: \"The Highland Wine and Golf Classic — Celebrate the start of summer at Primland's fourth-annual Highland Wine and Golf Classic. Championship-caliber golf, world-class wine experiences and guest chef dinners await in the Blue Ridge Mountains. Limited tickets available. Memorial Day Weekend | May 28-31, 2027.\" Beyond the maintenance and aerification blocks and that one event, the resort publishes no tournament or closure calendar. That absence is recorded here rather than resolved into an assumption that any given date is open."
+      },
+      {
+        "heading": "The weekend around the course",
+        "body": "The basecamp is the estate itself. Meadows of Dan is an unincorporated community on the Blue Ridge Plateau with no hotel stock of its own that the research could source, and Primland's own description of its rooms opens: \"Consummately private, elegantly appointed and all with exceptional views, Primland's varied accommodation options reflect the 12,000-acre estate's abundance of space.\" Five options are named. The Lodge \"offers easy access to both Leatherflower and the 19th Pub, as well as the spa, fitness center, observatory, theater and golf course,\" with Lodge Rooms, Jr. Suites, Lodge Suites and the Celestial Suite, \"deep soaking tubs, impeccable views, private balconies, sliding floor-to-ceiling windows and Frette sheets\" and accessible rooms available. The Fairway Cottages are the golf-adjacent choice: \"Located along the golf course with stunning jade and sapphire-hued mountain views, fairway accommodations offer hardwood floors, cathedral ceilings and cozy living areas with Tennessee fieldstone fireplaces … Each fairway accommodation boasts a unique layout, sleeping from two to four guests.\" The Tree Houses are \"perched in the treetops high above the Dan River Gorge,\" 440 square feet, at an elevation of 2,700 feet, for up to two adults with a complimentary daily continental breakfast — and with a condition worth reading before booking: \"Please note: Accessing the Tree Houses requires a four-wheel drive vehicle. For guests who do not have four-wheel drive, complimentary shuttle services are available.\" The other two are Pinnacle, \"named after the famous Pinnacles of Dan, these chalet-like accommodations offer bird's-eye views of the valley below,\" and 11 Rustic Mountain Homes at the Sporting Club, \"accommodating from 2 to 22 guests.\" Five dining rooms appear in the resort's own list. Leatherflower, where \"through expansive windows, Primland's rolling fairways and majestic mountain views provide an idyllic setting for a culinary journey through the tastes of Appalachia,\" serves breakfast 7-11AM and dinner 5-8:45PM. The Laurel Bar is the de facto clubhouse room, \"ideal for refueling between holes,\" with breakfast 9-11AM daily, lunch 11AM to 5PM daily, dinner 5-10PM Sunday to Thursday and 5-11PM Friday and Saturday. The Stables Saloon occupies \"the secluded second floor of Primland's former horse stables,\" is \"part of the Crooked Road: Virginia's Heritage Music Trail,\" and serves family-style Monday, Tuesday, Friday and Saturday 6-8PM at \"Adults $74 | Children 12 and under $35.\" The Woodland Grill does ready-to-go meals Wednesday to Sunday, 11AM to 3PM. The Schlumberger Wine Cellar \"showcases the resort's nearly 450 labels from over 18 countries,\" seats up to 12, and runs tastings \"every Monday, Wednesday & Friday from 3-4:30PM … $180 per person, inclusive of service charge.\" These sources establish that the rooms exist and what they serve; none of them says whether any given one is serving this week, so this guide does not say so either. One naming discrepancy is worth stating rather than smoothing over. The resort's lodging page names a \"19th Pub\" as a Lodge outlet. The dining page's own rendered list does not include it, and names the Laurel Bar in that role — while that same page's underlying metadata names two outlets, \"Elements and 19th Pub,\" that appear nowhere in its rendered list. Stale metadata on both surfaces is the likely explanation, and this guide therefore does not publish 19th Pub, Elements and Laurel Bar as three separate rooms."
+      },
+      {
+        "heading": "Day two: Gordon Trent Golf Club",
+        "body": "The second course is Gordon Trent Golf Club, at 2160 Golf Course Road, Stuart, 29.4 road miles from Primland's map pin and in the same county. Its own site describes it as \"An 18 hole, par 70, public golf course with a friendly and hospitable feeling\" and places it \"set in the foothills of the Blue Ridge Mountains in Patrick County, Virginia,\" with the address and the telephone number 276-694-3805 carried in the page title itself. GolfLink lists it independently as public, 18 holes, par 70, year opened 1964, at the same address. The Virginia State Golf Association's 2026 VIP Booklet lists it too: \"Gordon Trent Golf Club / 2160 Golf Course Rd | Stuart | 276-694-3805 / TEN PLAYS / Mon-Fri anytime, Jan-Dec,\" a member offer whose own window runs January through December. The club publishes a \"Golf All Day\" rate card on its own site with separate weekday and weekend rows; no dated qualifier for that card is established by the research behind this guide, so no figure from it is printed here, and none is substituted from an aggregator. There is a nearer course, and this guide names it without sending you to it. Olde Mill, at 2258 Stone Mountain Road, Laurel Fork, in Carroll County, is 21.7 to 23.1 road miles from Primland depending on which of three published coordinates for the club is used as the endpoint, over SR-610, US-58 and SR-645. What is established about it: OpenStreetMap carries 18 mapped holes on the site, each with a par and a number, alongside 24 fairways, 20 greens, 72 tees and 70 bunkers; Golf Digest's course page reads \"Facility Type | Public\" and credits Ellis Maples with a later revision by Dan Maples; GolfLink gives 18 holes, par 72, 6,833 yards, rating 72.7, slope 127, opened 1972; and the Virginia State Golf Association's 2026 VIP Booklet, whose own imprint is dated 11/24/2025, lists \"Olde Mill — 2258 Stone Mountain Rd | Laurel Fork | 276-398-2638 — FIVE PLAYS — Sun-Thu after 11:00 am, May-Oct. 30% off peak rate. Excludes holidays.\" What is not established is whether it is trading. Its own domain could not be relied on: two of its pages, at the correct URLs and returning HTTP 200 with correct canonical tags, served injected gambling and reseller spam in place of their own content, with the legitimate text absent rather than hidden, so nothing was quoted from them. Its booking platform's record for the club reports active false and online booking disabled, and its tee-time endpoint, called unauthenticated for every date inside its own 14-day public booking window in September 2026, returned an empty list every time — against controls showing that a nonexistent club returns a different error entirely, so the empty list is a real inventory answer rather than a malformed query. The freshest edit anywhere on its site is dated June 25, 2026, and what that edit published was an announcement for an event on Friday, July 3, 2026. Its blog stops at February 11, 2025, its events page is otherwise a 2024 archive, and its OpenStreetMap object was last touched November 1, 2024. When the research behind this guide was run, on September 5 and 6, 2026, no source reachable to it showed Olde Mill trading after early July 2026. This guide does not say Olde Mill is closed, and it does not say it is open. It says what was found. The two telephone numbers published for it are 276-398-2211, in its own site footer, and 276-398-2638, in the VSGA booklet, and a call to either would settle in one conversation what no fetch could. No fee for it is published here in any case: its stored rate card carries no year anywhere on it, and a fee publishes in this guide only with the operator's own dated qualifier. Gordon Trent is 6.3 miles farther and its own site, GolfLink and the VSGA booklet together establish an operating public course, which is why it is the one with a place record here."
+      }
+    ],
+    "faq": [
+      {
+        "question": "How do I book a tee time at The Highland Course, and do I have to stay at the resort?",
+        "answer": "You do not have to stay. The resort's golf page states \"Highland Course | Open to general public, members and resort guests,\" and its booking portal is configured for guest booking with optional login and no resort-reservation flow. Called with no account and no authentication of any kind, that system offered 33 bookable tee times for September 20 and 21, 2026, with an empty restrictions list on every one. Enquiries go to 276.222.3827; the stay-and-play Blue Ridge Golf Package is booked on 888.876.6513 and is an option rather than a requirement."
+      },
+      {
+        "question": "What does a round cost?",
+        "answer": "The resort's own rate table dates itself in its headings. \"2026 Peak Season\": May 1 - August 9, $325; September 4 - October 31, $325. \"2026 Non-Peak Season\": April 1-15, $175; April 16-30, $215; August 12 - September 3, $275; November, $275. Its booking system quoted the same figures for play inside two of those rows — $325 on every slot for September 20 and 21, 2026, and $275 on every slot for November 10 to 12, 2026. The same system quoted $225 for play on April 10 to 12, 2027, but that figure appears on no published table and carries no dated qualifier, so it is not published here as a 2027 rate. Lunch and non-alcoholic beverages are complimentary with every 18-hole round, April through November."
+      },
+      {
+        "question": "Can I play the course in winter?",
+        "answer": "The resort never states a season in words, but three things converge. Its 2026 rate table prices April through November only. Its on-course lunch and its clinics are marked \"Available April-November.\" And its booking system, called for December 15 to 17, 2026, returned a successful response with zero bookable slots, while September and November windows returned 33 and 93."
+      },
+      {
+        "question": "Which dates should I plan around?",
+        "answer": "The resort publishes both blocks itself. 2026 Aerification Dates: March 16-17, course closed, with aerification holes possibly visible from March 18 through mid-April; August 10-11, course closed, with holes possibly visible from August 12 through mid-September. 2026 Maintenance Dates, which delay play rather than cancel it: March 18, opens 11AM; April 13, closes 12PM; May 18, opens 11AM; June 15, opens 11AM; July 13, opens 11AM; August 12, opens 11AM; September 21, opens 11:30AM; December 1, opens at 1AM as published. One resort event occupies the tee sheets: the Highland Wine and Golf Classic, Memorial Day Weekend, May 28-31, 2027. Beyond those, the resort publishes no tournament or closure calendar, so no claim is made here about any other date."
+      },
+      {
+        "question": "Where exactly is the course?",
+        "answer": "At Primland, 2000 Busted Rock Road, Meadows of Dan, Virginia 24120, in Patrick County. The US Census geocoder returns Patrick County, GEOID 51141, at the resort's own map pin, and returns no incorporated place, Meadows of Dan being unincorporated; OpenStreetMap's gazetteer names the same coordinate \"Primland Golf Resort, Bent Springs Lane, Patrick County, Virginia.\" By road: Piedmont Triad International Airport 73.0 miles, Roanoke–Blacksburg Regional Airport 76.7 miles measured airport to resort. The resort's own mileages are Roanoke 75, Greensboro 83, Winston-Salem 64, the I-77 corridor including Charlotte 145, Raleigh 162 and Richmond 215. Golfers use the North Gate at the Busted Rock Road address, not the South Gate at 439 New Valley Road, Claudville."
+      },
+      {
+        "question": "Which course should I play on day two?",
+        "answer": "Gordon Trent Golf Club at 2160 Golf Course Road, Stuart, 29.4 road miles from Primland and in the same county. Its own site calls it \"An 18 hole, par 70, public golf course with a friendly and hospitable feeling\"; GolfLink lists it as public, 18 holes, par 70, opened 1964; and the Virginia State Golf Association's 2026 VIP Booklet lists it with a Mon-Fri, Jan-Dec member offer. Its telephone number is 276-694-3805."
+      },
+      {
+        "question": "Olde Mill is closer. Why does this guide send me past it?",
+        "answer": "Because what could be established about Olde Mill stops short of showing it trading. It is real and it is nearer — 21.7 to 23.1 road miles from Primland, mapped as an 18-hole course, listed as public by Golf Digest and GolfLink, and carried in the Virginia State Golf Association's 2026 VIP Booklet, whose imprint is dated 11/24/2025. But its own website served injected spam on two pages instead of its own content and could not be quoted from; its booking platform reports the club inactive with online booking disabled and returned an empty tee sheet for every date inside its own 14-day public window in September 2026, against controls proving that answer real; the freshest edit on its site is dated June 25, 2026 and announced an event for July 3, 2026; and no source reachable to the research behind this guide showed it trading after early July 2026. This guide does not claim it is closed and does not claim it is open. Its published numbers are 276-398-2211 and 276-398-2638, and a call would settle it. Gordon Trent is 6.3 miles farther and is established as operating and public, so it is the one named."
+      },
+      {
+        "question": "What is the dress code?",
+        "answer": "From the resort's own table: \"For Men | Shirts with collars and sleeves are required. Slacks or golf shorts must be worn. No tank tops, denim, T-shirts, cut-offs, sweat pants, bathing suits or other athletic shorts are permitted. For Women | Appropriate golf attire including dresses, skirts, slacks, golf shorts and collared or mock collared shirts must be worn at all times. Bathing suits, denim, athletic shorts or tank tops are not permitted. Shoes | Any non-heeled athletic shoes can be worn.\""
+      },
+      {
+        "question": "Is this the best course in Virginia?",
+        "answer": "This guide makes a narrower claim than that. On Golf Digest's 2025-'26 ranking of the best golf courses in Virginia, The Highland Course at Primland is fourth and is labelled \"Public\" in its own block, while the three entries above it — Kinloch, The Olde Farm and Robert Trent Jones Golf Club — are each labelled \"Private\" in theirs and each of their clubs' sites is member-gated. So it is the highest-ranked publicly accessible course on that named ranking at that named edition."
+      }
+    ],
+    "photos": []
+  },
+  "places": [
+    {
+      "slug": "the-highland-course-at-primland",
+      "name": "The Highland Course at Primland",
+      "kind": "golf-course",
+      "destination_path": "united-states/virginia/patrick-county/meadows-of-dan",
+      "official_url": "https://auberge.com/primland/experiences/golf/",
+      "summary": "Fourth on Golf Digest's 2025-'26 ranking of the best golf courses in Virginia and labelled \"Public\" in its own block, making it the highest-ranked publicly accessible course on that list. The resort's page reads \"Highland Course | Open to general public, members and resort guests,\" and its booking system, called without credentials, offered 33 bookable tee times priced $325 for September 20 and 21, 2026, with no restriction on any of them. \"Opened in 2006 by renowned golf course architect Donald Steel\"; Golf Digest's designer field reads \"Martin Ebert/Donald Steel.\" 7051 yards, rating 75.1, slope 153, par 72, at 2000 Busted Rock Road on the 12,000-acre Primland estate.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "gordon-trent-golf-club",
+      "name": "Gordon Trent Golf Club",
+      "kind": "golf-course",
+      "destination_path": "united-states/virginia/patrick-county/stuart",
+      "official_url": "https://gordontrent.com/",
+      "summary": "The second course, 29.4 road miles from Primland and in the same county. Its own site: \"An 18 hole, par 70, public golf course with a friendly and hospitable feeling,\" \"set in the foothills of the Blue Ridge Mountains in Patrick County, Virginia.\" GolfLink lists it as public, 18 holes, par 70, opened 1964, at 2160 Golf Course Road, Stuart. The Virginia State Golf Association's 2026 VIP Booklet carries a Mon-Fri, Jan-Dec member offer for it. Telephone 276-694-3805.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "the-lodge-at-primland",
+      "name": "The Lodge at Primland",
+      "kind": "hotel",
+      "destination_path": "united-states/virginia/patrick-county/meadows-of-dan",
+      "official_url": "https://auberge.com/primland/stay/",
+      "summary": "The main house on the estate, one of five lodging options the resort names. It \"offers easy access to both Leatherflower and the 19th Pub, as well as the spa, fitness center, observatory, theater and golf course,\" in Lodge Rooms, Jr. Suites, Lodge Suites and the Celestial Suite, with \"deep soaking tubs, impeccable views, private balconies, sliding floor-to-ceiling windows and Frette sheets.\" Accessible rooms are available.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "fairway-cottages-primland",
+      "name": "Fairway Cottages",
+      "kind": "hotel",
+      "destination_path": "united-states/virginia/patrick-county/meadows-of-dan",
+      "official_url": "https://auberge.com/primland/stay/",
+      "summary": "The golf-adjacent lodging on the estate: \"Located along the golf course with stunning jade and sapphire-hued mountain views, fairway accommodations offer hardwood floors, cathedral ceilings and cozy living areas with Tennessee fieldstone fireplaces.\" Each layout is different, \"sleeping from two to four guests.\"",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "tree-houses-primland",
+      "name": "Tree Houses at Primland",
+      "kind": "hotel",
+      "destination_path": "united-states/virginia/patrick-county/meadows-of-dan",
+      "official_url": "https://auberge.com/primland/stay/",
+      "summary": "\"Perched in the treetops high above the Dan River Gorge,\" 440 square feet with expansive decks, at an elevation of 2,700 feet, for up to two adults with a complimentary daily continental breakfast. The resort attaches a condition: \"Accessing the Tree Houses requires a four-wheel drive vehicle. For guests who do not have four-wheel drive, complimentary shuttle services are available.\"",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "leatherflower-primland",
+      "name": "Leatherflower",
+      "kind": "restaurant",
+      "destination_path": "united-states/virginia/patrick-county/meadows-of-dan",
+      "official_url": "https://auberge.com/primland/dine/",
+      "summary": "The estate's main dining room: \"Through expansive windows, Primland's rolling fairways and majestic mountain views provide an idyllic setting for a culinary journey through the tastes of Appalachia.\" Breakfast 7-11AM, dinner 5-8:45PM; tables and wine pairings are arranged by email with the restaurant.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "laurel-bar-primland",
+      "name": "Laurel Bar",
+      "kind": "restaurant",
+      "destination_path": "united-states/virginia/patrick-county/meadows-of-dan",
+      "official_url": "https://auberge.com/primland/dine/",
+      "summary": "The de facto clubhouse room, \"with its outdoor terrace and well-stocked bar … ideal for refueling between holes.\" Breakfast 9-11AM daily, lunch 11AM to 5PM daily, dinner 5-10PM Sunday to Thursday and 5-11PM Friday and Saturday.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "stables-saloon-primland",
+      "name": "Stables Saloon",
+      "kind": "restaurant",
+      "destination_path": "united-states/virginia/patrick-county/meadows-of-dan",
+      "official_url": "https://auberge.com/primland/dine/",
+      "summary": "On \"the secluded second floor of Primland's former horse stables,\" serving \"traditional Southern food and music at its best\" and \"part of the Crooked Road: Virginia's Heritage Music Trail.\" Monday, Tuesday, Friday and Saturday 6-8PM, family-style, \"Adults $74 | Children 12 and under $35.\" Reservations recommended.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "woodland-grill-primland",
+      "name": "Woodland Grill",
+      "kind": "restaurant",
+      "destination_path": "united-states/virginia/patrick-county/meadows-of-dan",
+      "official_url": "https://auberge.com/primland/dine/",
+      "summary": "Ready-to-go meals on the estate, Wednesday to Sunday, 11AM to 3PM.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "schlumberger-wine-cellar-primland",
+      "name": "Schlumberger Wine Cellar",
+      "kind": "restaurant",
+      "destination_path": "united-states/virginia/patrick-county/meadows-of-dan",
+      "official_url": "https://auberge.com/primland/dine/",
+      "summary": "A cellar room that \"showcases the resort's nearly 450 labels from over 18 countries,\" seating up to 12 guests. Tastings run \"every Monday, Wednesday & Friday from 3-4:30PM … $180 per person, inclusive of service charge.\"",
+      "status": "open",
+      "photos": []
+    }
+  ],
+  "entries": [
+    {
+      "kind": "sight",
+      "name": "The Highland Course at Primland",
+      "place_slug": "the-highland-course-at-primland",
+      "note": "Fourth on Golf Digest's 2025-'26 Virginia ranking and labelled \"Public\"; Donald Steel, opened 2006 per the operator."
+    },
+    {
+      "kind": "sight",
+      "name": "Gordon Trent Golf Club",
+      "place_slug": "gordon-trent-golf-club",
+      "note": "Day two: 29.4 road miles, Stuart, \"An 18 hole, par 70, public golf course\" in the club's own words."
+    },
+    {
+      "kind": "stay",
+      "name": "The Lodge at Primland",
+      "place_slug": "the-lodge-at-primland",
+      "note": "The main house, with the spa, observatory and theater; accessible rooms available."
+    },
+    {
+      "kind": "stay",
+      "name": "Fairway Cottages",
+      "place_slug": "fairway-cottages-primland",
+      "note": "Along the golf course, sleeping from two to four guests, with Tennessee fieldstone fireplaces."
+    },
+    {
+      "kind": "stay",
+      "name": "Tree Houses at Primland",
+      "place_slug": "tree-houses-primland",
+      "note": "440 square feet at an elevation of 2,700 feet; the resort states that access requires a four-wheel drive vehicle."
+    },
+    {
+      "kind": "food",
+      "name": "Leatherflower",
+      "place_slug": "leatherflower-primland",
+      "note": "Appalachian cooking over the fairways; breakfast 7-11AM, dinner 5-8:45PM."
+    },
+    {
+      "kind": "food",
+      "name": "Laurel Bar",
+      "place_slug": "laurel-bar-primland",
+      "note": "The clubhouse room, \"ideal for refueling between holes,\" open from breakfast to late."
+    },
+    {
+      "kind": "food",
+      "name": "Stables Saloon",
+      "place_slug": "stables-saloon-primland",
+      "note": "Family-style Southern food on the Crooked Road music trail; Adults $74, children 12 and under $35."
+    },
+    {
+      "kind": "food",
+      "name": "Woodland Grill",
+      "place_slug": "woodland-grill-primland",
+      "note": "Ready-to-go meals, Wednesday to Sunday, 11AM to 3PM."
+    },
+    {
+      "kind": "food",
+      "name": "Schlumberger Wine Cellar",
+      "place_slug": "schlumberger-wine-cellar-primland",
+      "note": "Nearly 450 labels from over 18 countries; tastings Monday, Wednesday and Friday, $180 per person."
+    }
+  ]
+}

@@ -1,0 +1,166 @@
+{
+  "guide": {
+    "slug": "ohio-golf-guide",
+    "title": "The Virtues: Golf in Nashport, Ohio",
+    "destination": "Nashport, Ohio",
+    "destination_path": "united-states/ohio/licking-county/nashport",
+    "intro": "Golf Digest's Best in State list for Ohio introduces itself in its own words: \"Below you'll find our 2025-'26 ranking of the Best Golf Courses in Ohio.\" It runs to 30 courses, and the first fifteen all carry the access rubric \"Private\" bound inside their own entry on the page — Muirfield Village, The Golf Club, Camargo, Inverness, Scioto, Double Eagle, Moraine, Canterbury, Brookside, The Country Club, Kirtland, NCR South, Sand Ridge, Firestone South and Coldstream. The first entry a traveller can book is number 16: The Virtues Golf Club, One Long Drive, Nashport, labelled \"Public.\" That is the claim this guide makes — the highest-ranked publicly accessible course in Ohio on this named ranking at this named edition, not the best course in Ohio. The access label was not taken on trust. The course's Club Caddie booking engine was driven directly, with no account, no login and no membership, and it returned bookable tee times on three sampled dates whose every pricing plan carries \"TitleType\":\"Public\" and \"IsGuestRate\":false. The course sits in unincorporated Hanover township, Licking County; the Census geocoder returns no incorporated place at its coordinates, while a control query at Columbus City Hall returns \"Columbus city\" from the same field — so Nashport is a mailing address, not the municipality.",
+    "sections": [
+      {
+        "heading": "Getting there",
+        "body": "The posted address is One Long Drive, Nashport, Ohio 43830, and the road is real: an OSRM nearest-waypoint call on the course coordinate returns three waypoints, all named Long Drive, at 29.9, 30.0 and 30.6 metres from the point. The nearest major airport is John Glenn Columbus International (CMH). The road route from the terminal area to the course measures 40.88 miles, running International Gateway, Sawyer Road, SR 317 Hamilton Road, SR 16 as East Broad Street, Broad Street Southwest, West Broad Street and Columbus Road, then SR 146 Nashport Road and finally Long Drive. The operator states the same scale in its own words on its rates page: \"Located just 40 miles from downtown Columbus, Ohio.\" From Newark, the road distance to the course, measured from the Census-matched civic address at 40 West Main Street, is 10.93 miles. The Census address geocoder returns no match at all for \"1 Long Drive, Nashport, OH 43830\" — which is what a private drive does — so every piece of geography in this guide is derived from the course coordinate rather than from the street address. No source consulted publishes anything about parking, so this guide says nothing about it."
+      },
+      {
+        "heading": "The Virtues Golf Club",
+        "body": "Arthur Hills designed it, and that attribution is doubly sourced: Golf Digest's course record lists \"Designer: Arthur Hills, ASGCA,\" and the operator writes independently that the course was \"designed by renowned golf course architect Arthur Hills.\" The operator describes it as a \"par-72, 7,243-yard parkland-style course\"; Golf Digest's record gives Holes 18, Length 7243, Slope 138, Facility Type Public. The opening year is stated nowhere on either the operator's pages or Golf Digest's course page, and this guide does not infer one. The nearest datable anchor is Golf Digest's own line that the course \"won Golf Digest's award for Best New Upscale Public Course of 2000\" — an award year, not an opening year, and it is not converted into one here. Golf Digest's Awards block records the fuller history: \"100 Greatest Public: Ranked from 2003-'24. Highest ranking: 51st, 2013-'14\" and \"Best in State: Ranked inside the top 15, 2011-'14. Ranked inside the top 20, 2015-'26. 2025-'26 ranking (and previous): 16th.\" One contradiction is worth stating plainly rather than passing on. The operator's home page and course-details page both assert \"Ranked No. 65 on Golf Digest's Top 100 Public Courses in America\"; Golf Digest's own Awards block says that ranking ran \"from 2003-'24.\" This guide therefore does not repeat the No. 65 claim. The one recurring maintenance closure the operator posts is on its course-details page and it closes the range, not the course: \"*Our driving range is closed every Monday for maintenance.\" No aerification, renovation, flood or course-closure notice appears anywhere on the operator's home, rates, course-details or events pages."
+      },
+      {
+        "heading": "Booking a tee time",
+        "body": "The operator calls itself \"Ohio's premier public golf destination\" on its home page and heads its course-details page \"Play the #1 Public Course in Ohio,\" and its rates page reads: \"Use our convenient online tee-time booking system or call our ProShop and we will be more than happy to help set up your tee-time! 740-763-1100.\" Because the site also carries \"Memberships\" and \"Members Portal\" navigation, the adjectives were not treated as sufficient, and the booking system itself was executed instead. The Book a Tee Time page embeds a Club Caddie widget; a session bootstrap returns a Session-Id header, which is replayed to POST the tee-sheet endpoint with the page's own form fields. With no account, no login, no membership, no resort stay and no sponsor, that request returned 21 bookable slots for Saturday 12 September 2026 from 15:30 to 18:50, 37 slots for Monday 14 September 2026 from 11:10 to 18:50, and 54 slots for Sunday 20 September 2026 from 08:00 to 18:50. Every pricing plan in every slot carries \"TitleType\":\"Public\" and \"IsGuestRate\":false, with \"IncludesCart\": true, a minimum of one player and up to four, and a live Book Now control. Access here is proved by behaviour, not by an adjective. Dates further out returned zero slots — 3 October 2026, for one — but that is the far edge of the online booking window rather than a closure: the engine answers with its own neutral filter message, \"Use Time & Day Filters To Find Desired Tee-Times. To see more times adjust your filters for date, holes, players, or time of day,\" and posts no closure notice. The exact length of that window is not stated on any page, so this guide reports the bracket and not a number."
+      },
+      {
+        "heading": "Green fees",
+        "body": "The operator's rate table carries a dated qualifier of its own, and it is the table's heading: \"The Virtues Golf Club 2025.\" That is the only date attached to the table, and it reads 2025 while the same page's footer reads \"© Copyright 2026 Virtues Golf Club – Powered by CLUB CADDIE.\" The mismatch is reported here rather than resolved. The season windows are given as month and day with no year. Spring, 3/01 to 5/01: Monday–Thursday $65, Monday–Thursday twilight from 2 pm $55, Friday–Sunday $95, Friday–Sunday twilight from 2 pm $65, replay $55, senior Monday–Thursday $60, junior 18 and under $40, and 36 holes of golf with lunch $120 Monday–Thursday or $160 Friday–Sunday. Summer, 5/02 to 9/30: Monday–Thursday $90, Monday–Thursday twilight from 2 pm $65, Friday–Sunday $140, Friday–Sunday twilight from 2 pm $80, replay $50 Monday–Thursday and $75 Friday–Sunday, senior Monday–Thursday $65, junior $40, and 36 holes with lunch $150 Monday–Thursday or $205 Friday–Sunday. Fall, 10/01 to 11/2: the Spring figures, with the replay rate at $45. Offseason, 11/3 to 2/28 and marked \"weather dependant\": Monday–Thursday $54, Friday–Sunday $64, twilight from 1 pm $54. The Summer and Fall replay lines carry their own qualifier, \"Monday – Thursday and Friday – Sunday after 2 pm.\" The trailing conditions are the operator's: \"Golf is available during the off-season, depending on weather conditions,\" \"All rates are with cart unless specified,\" and \"All prices include tax and are subject to change.\" As corroboration and not as a date, the booking engine quoted $140 for an 18-hole Sunday round and $80 after 2 pm on 20 September 2026, and $90 and $65 on Monday 14 September 2026 — the Summer column exactly. That does not make the table's qualifier read 2026, and this guide does not say it does. Golf Digest publishes a separate single figure of \"$135\" with the caveat \"This covers all ranges of greens fees. Please check with the course on specific timing and pricing\"; it matches nothing in the operator's table and is not published here."
+      },
+      {
+        "heading": "The basecamp: Nashport and Newark",
+        "body": "There is no town at the course. The Census geocoder places it in unincorporated Hanover township, Licking County, with no incorporated place at all, and the same query at Columbus City Hall returns \"Columbus city\" — so the field works and the absence at the course means what it appears to mean. Newark, 10.93 road miles from the course, is where a visitor sleeps. Dining is on the property: the Overlook Restaurant sits in the clubhouse, which the operator's home page calls \"our stunning 60,000-square-foot clubhouse—Licking and Muskingum County's premier event venue.\" The operator's events calendar is live and dated — its window headed \"Events from September 10 – September 24\" returned \"3 events found,\" all at \"The Virtues Golf Club-Overlook Restaurant, 1 Long Drive, Nashport, OH\": Burger Night on 10 September 2026, Burger Menu on 17 September 2026 and Burger Night on 24 September 2026, each 3:00 pm to 8:00 pm. No course closure, shotgun or outing appears on that calendar. A caution about hours, because the site contradicts itself: the site-wide footer on every page fetched, including the September 2026 events page, still reads \"Golf Shop Hours: Monday – Sunday 10am – 2pm (Winter Hours)\" and \"Restaurant Hours (Early Spring),\" which the restaurant page's own hours block disagrees with. This guide therefore publishes no opening hours for either the golf shop or the restaurant; call 740-763-1100 before relying on any. The Virtues does have lodging on its own property, and its Stay & Play page says so in its own words: \"Added in 2021: two four-thousand square foot houses located between hole #9 and the main entrance. Do you have a large traveling league or group? We can accommodate up to 32 players with lodging here on site,\" with a Matterport walkthrough labelled \"3D Tour of Stay & Play House\" published alongside it. That is an operator statement about the property rather than a room a visitor can book: the page carries no rate, no calendar, no room inventory and no booking control, only a group enquiry form headed \"Virtues Stay and Play Golf Package Contact Form 2025,\" and the framing throughout is a group one. The same form carries the operator's own hotel list — \"Virtues Golf Club onsite Housing. (Up to 32 players),\" the DoubleTree by Hilton, Hampton Inn, Courtyard by Marriott and Cherry Valley Hotel in Newark, and a Quality Inn in Zanesville — and states that \"Overnight accommodations will be coordinated by our staff for an enjoyable stay in local hotels that offer comfortable guest rooms, free breakfast, and easy access to other dining options and local attractions.\" One further item comes from the operator's restaurant page and was not independently re-fetched during verification, so it is recorded as the operator's statement rather than as a confirmed fact: the Overlook serving \"lunch, dinner, and weekend brunch\" under Executive Chef Jason Abele, with a carry-out line on (740) 763-1111 and a Friday and Saturday breakfast menu \"available May–September only.\""
+      },
+      {
+        "heading": "Where a visitor sleeps: the Cherry Valley Hotel",
+        "body": "Of the five hotels on the course's own Stay & Play list, four are chain properties whose operator pages returned HTTP 403 to every request made for this guide. The fifth, the Cherry Valley Hotel, runs its own site, and it is the one published here. It is 15.21 road miles from The Virtues, by Long Drive, SR 146 Nashport Road, the SR 16 Newark Expressway, Thornwood Crossing and Cherry Valley Road — a larger figure than the 10.93 miles to Newark's civic address, because the hotel stands on the far side of Newark from the course. The Census coordinates endpoint places it inside Newark city, Licking County, the same county as The Virtues; a control query at 40 West Main Street returns the same two values, so the field is working.\n\nNo street address for the hotel appears in this guide, and the reason is a conflict in the sources rather than a gap in them. The operator writes its own address as Cherry Valley Rd SE. Put through the Census address geocoder, that string matches Cherry Valley Rd NE and returns the incorporated place Granville village — a different municipality from the one the hotel is in — while OSRM independently names the final leg of the driving route Cherry Valley Road Northeast. Town, county, telephone and official site carry everything a visitor needs, and the disputed string is left out rather than published wrong.\n\nThe operator lists 200 rooms averaging 365 square feet, all with king beds and a patio or balcony, executive suites at 600 square feet, an on-site restaurant and bar, complimentary parking, a 24/7 front desk and a 24/7 snack shop, free Wi-Fi, dog-friendly rooms at a $75 cleaning fee, and a heated indoor pool and exercise facility each open 9 AM to 9 PM, alongside more than 50,000 square feet of event space. What the hotel makes most of is its garden: \"At the heart of our hotel lies our flourishing botanical garden and the country's only hotel arboretum, where a stunning variety of greenery—featuring a collection of over 2,000 varieties of flora and fauna—can be found on display.\" Check-in is 4 pm, check-out 11 am, and the telephone is 740-788-1200. No nightly rate is published here. The hotel advertises percentage offers — 20% off a two- or three-night stay, 25% off four nights or more, a fourth night free on three consecutive nights, and up to 15% off for booking more than five days in advance, each \"Only available on direct bookings\" and each carrying blackout dates — but a conditional promotion is not a rate, so none of it is quoted as a price.\n\nDining in the same building is Craftsman Kitchen & Terrace, which keeps its own site and answers the access question in the hotel's own FAQ: \"Is your restaurant open to the public? Yes! Craftsman Kitchen and Terrace is open to the public. We recommend making a reservation.\" It describes \"casual American-style cuisine\" in a room looking over the hotel's ponds, waterfalls and botanicals, and The CK Pub, for \"classic cocktails, beer, and wine served with an array of flavorful bar fare,\" and the Granville Pantry coffee counter operate alongside it. This guide publishes no opening hours for it, for the same reason it publishes none for the Overlook: the restaurant's own site carries a banner advertising weekday lunch from 11:30 AM to 3:00 PM, while the hotel's own FAQ states there is \"no regular lunch service except through Crafted Carryout,\" and both pages were read on the same day."
+      },
+      {
+        "heading": "Day two: Vista Golf Course",
+        "body": "The second course is Vista Golf Course, 2600 Hennessey Drive, Nashport, Ohio 43830 — 13.83 road miles from The Virtues, by SR 146 Nashport Road, Newark Road, Creamery Road, Prior Road, Fawn Drive, SR 60 Frazeysburg Road, then Vista View Drive North, Arnie's Drive, Ben's Place and Jack's Fairway, streets inside the residential community the course runs through. It is the nearest publicly accessible course to The Virtues on two independent enumerations: Golf Digest's own proximity lists, and an unbounded radius sweep of OpenStreetMap on the course coordinate that road-routed every candidate whose straight-line distance could beat it. Nothing beats 13.83. Golf Digest lists it as \"Vista Golf Course: Vista View,\" Nashport, OH, Public, Holes 18, Length 6701, Designer Jack Kidwell, ASGCA, at (740) 453-4758. The operator's own footer states the course \"was built in 1973.\" Its title carries a fact worth noticing: \"Vista Golf Course - Nashport, Ohio - Muskingum County - 18 Hole, Par 71.\" The Census geocoder agrees — Vista is in Muskingum township, Muskingum County, again with no incorporated place — so the two courses sit in different counties under the same Nashport mailing address. Access rests on the operator's own words rather than on an executed booking, because the site offers no online booking widget; tee times are taken by telephone on (740) 453-4758. Its FAQ answers \"How far in advance can I book a tee time?\" with \"14 days in advance\" and \"Do I need a tee time?\" with \"While walk ins are always welcome, tee times are strongly recommend.\" It adds that \"Vista GC reserves the right to pair you will other players\" and that \"Groups with more than 4 players must get approval from the golf staff.\" The footer of every page reads: \"Vista Golf Course welcomes men, women, and children of all ages with any or no playing ability.\" No membership, sponsor, resort stay or pass gates play; the site's Membership page is an optional product. Two things this guide will not tell you about Vista, because the operator does not. No green fee is published here: the rate table on the site carries no date of any kind, and the only years anywhere on that page are a footer \"© 2017\" and a line stating the course was built in 1973, neither of which dates the rates. And its openness on any given date is unverified rather than confirmed: its event calendar page loads but renders no events at all, and no closure, aerification, renovation or season statement appears anywhere on the site. Call before you go."
+      }
+    ],
+    "faq": [
+      {
+        "question": "Why does this guide cover a course ranked 16th?",
+        "answer": "Because it is the first one on the list you can book. Golf Digest's 2025-'26 Best in State ranking for Ohio lists 30 courses, and ranks 1 through 15 all carry the rubric \"Private\" bound inside their own entry on the page — checked in two independent archived captures and a live fetch, with no entry anywhere on the page missing a rubric. Rank 16, The Virtues Golf Club in Nashport, is the first labelled \"Public.\" The claim made here is \"highest-ranked publicly accessible course in Ohio on this ranking at this edition,\" not \"best course in Ohio.\""
+      },
+      {
+        "question": "Can I play The Virtues without a membership?",
+        "answer": "Yes, and this was tested rather than assumed. The course's Club Caddie booking engine was driven directly with no account, no login and no membership, and returned 21 bookable slots for Saturday 12 September 2026, 37 for Monday 14 September 2026 and 54 for Sunday 20 September 2026. Every pricing plan in every slot carries \"TitleType\":\"Public\" and \"IsGuestRate\":false, with carts included and a live Book Now control. No resort stay, sponsor or annual pass is required. Tee times can also be taken by telephone on 740-763-1100."
+      },
+      {
+        "question": "What does a round at The Virtues cost?",
+        "answer": "The operator's rate table is headed \"The Virtues Golf Club 2025,\" which is the only date attached to it — while the same page's footer reads \"© Copyright 2026.\" That mismatch is reported, not resolved. From the table: Summer, 5/02 to 9/30, is $90 Monday–Thursday and $140 Friday–Sunday, with twilight rates from 2 pm of $65 and $80. Spring, 3/01 to 5/01, and Fall, 10/01 to 11/2, are $65 Monday–Thursday and $95 Friday–Sunday. The offseason, 11/3 to 2/28 and marked \"weather dependant,\" is $54 Monday–Thursday and $64 Friday–Sunday. Rates are with cart unless specified, include tax, and the operator states they are subject to change."
+      },
+      {
+        "question": "Is The Virtues open in winter?",
+        "answer": "The operator's rate table prices an offseason running 11/3 to 2/28 and annotates it \"weather dependant,\" and the page states: \"Golf is available during the off-season, depending on weather conditions.\" That is the operator's own statement that the course does not shut for the season. It is not a promise about any particular day, and the rate line's own qualifier is the reason to call 740-763-1100 first."
+      },
+      {
+        "question": "Which course should I play on day two?",
+        "answer": "Vista Golf Course, 13.83 road miles from The Virtues at 2600 Hennessey Drive, Nashport — the nearest publicly accessible course, on both Golf Digest's proximity lists and an independent radius sweep of the map. Golf Digest lists it as 18 holes, 6,701 yards, Public, by Jack Kidwell, ASGCA; the operator's own title adds par 71. Its FAQ says \"While walk ins are always welcome, tee times are strongly recommend,\" and books \"14 days in advance\" by telephone on (740) 453-4758 — there is no online booking. Two honest limits travel with it: no green fee can be published, and its openness on any given date is unverified. See the next two answers."
+      },
+      {
+        "question": "What does Vista Golf Course charge?",
+        "answer": "This guide does not say, and that is deliberate. Vista publishes a full rate table on its site, but the table carries no date of any kind — the only years anywhere on that page are a footer \"© 2017\" and a separate line stating the course was built in 1973, and neither dates the rates. A fee without the operator's own dated qualifier is not published in this corpus, and an aggregator's figure is not substituted for it. Telephone (740) 453-4758 for a current price."
+      },
+      {
+        "question": "Is Vista Golf Course open when I visit?",
+        "answer": "Unverified — not confirmed, and not denied. Vista's event calendar page loads but renders no events at all, and no closure, aerification, renovation, season or winter policy appears anywhere on the site. Nothing on the operator's site establishes that the course is open on any given date, so this guide will not say that it is. Telephone (740) 453-4758 before travelling."
+      },
+      {
+        "question": "Where exactly is The Virtues, and what county is it in?",
+        "answer": "One Long Drive, Nashport, Ohio 43830. The Census geocoder at the course coordinate returns Ohio, Licking County, county subdivision Hanover township, Census Tract 7589.01 — and no incorporated place at all. A control query at Columbus City Hall does return \"Columbus city\" from that same field, so the absence is real: Nashport is a mailing address, not the municipality. Note that Vista Golf Course, 13.83 road miles away, shares the Nashport mailing address but geocodes into Muskingum County — the two courses are in different counties."
+      },
+      {
+        "question": "Is the driving range open?",
+        "answer": "Not on Mondays. The operator's course-details page carries the one recurring maintenance notice on the site: \"*Our driving range is closed every Monday for maintenance.\" It closes the range, not the course."
+      },
+      {
+        "question": "How do I get there?",
+        "answer": "John Glenn Columbus International (CMH) is the airport, 40.88 road miles from the course by International Gateway, Sawyer Road, SR 317 Hamilton Road, SR 16 as East Broad Street, Broad Street Southwest, West Broad Street and Columbus Road, then SR 146 Nashport Road and Long Drive. The operator puts it the same way on its rates page: \"Located just 40 miles from downtown Columbus, Ohio.\" Newark is 10.93 road miles from the course, measured from 40 West Main Street."
+      }
+    ],
+    "photos": []
+  },
+  "places": [
+    {
+      "slug": "the-virtues-golf-club",
+      "name": "The Virtues Golf Club",
+      "kind": "golf-course",
+      "destination_path": "united-states/ohio/licking-county/nashport",
+      "official_url": "https://thevirtuesgolfclub.com/",
+      "summary": "Rank 16 on Golf Digest's 2025-'26 Best Golf Courses in Ohio, labelled \"Public\" — the first publicly accessible entry on a list whose top fifteen are all labelled \"Private.\" Designed by Arthur Hills, ASGCA, and described by the operator as a \"par-72, 7,243-yard parkland-style course\"; Golf Digest records 18 holes, 7,243 yards and a slope of 138. Its opening year is stated nowhere on the operator's site or Golf Digest's record, and none is claimed here. Its Club Caddie booking engine, executed with no account, returned 21, 37 and 54 bookable slots on three sampled September 2026 dates, every pricing plan carrying \"TitleType\":\"Public\" and \"IsGuestRate\":false. One Long Drive, Nashport, in unincorporated Hanover township, Licking County. Pro shop 740-763-1100.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "vista-golf-course",
+      "name": "Vista Golf Course",
+      "kind": "golf-course",
+      "destination_path": "united-states/ohio/muskingum-county/nashport",
+      "official_url": "https://www.vistagolfcourse.com/",
+      "summary": "The nearest publicly accessible course to The Virtues, at 13.83 road miles — 2600 Hennessey Drive, Nashport, though the Census geocoder puts it in Muskingum township, Muskingum County, a different county from The Virtues under the same mailing address. Golf Digest lists it as \"Vista Golf Course: Vista View,\" Public, 18 holes, 6,701 yards, Designer Jack Kidwell, ASGCA; the operator's own title adds par 71 and its footer states the course \"was built in 1973.\" Its FAQ books \"14 days in advance\" and answers \"Do I need a tee time?\" with \"While walk ins are always welcome, tee times are strongly recommend\"; there is no online booking widget, so tee times go through (740) 453-4758. Two limits: the site's rate table carries no date of any kind, so no green fee is published for it here, and its calendar renders no events and no season statement appears anywhere on the site, so its openness on any given date is unverified rather than confirmed.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "overlook-restaurant-the-virtues",
+      "name": "The Overlook Restaurant",
+      "kind": "restaurant",
+      "destination_path": "united-states/ohio/licking-county/nashport",
+      "official_url": "https://thevirtuesgolfclub.com/restaurant/",
+      "summary": "The dining room in The Virtues Golf Club's clubhouse, listed on the operator's own events calendar as \"The Virtues Golf Club-Overlook Restaurant, 1 Long Drive, Nashport, OH\" — the calendar's September 2026 window carried three events there, Burger Night on 10 September, Burger Menu on 17 September and Burger Night on 24 September, each 3:00 pm to 8:00 pm. The operator's restaurant page describes lunch, dinner and weekend brunch under Executive Chef Jason Abele, with carry-out on (740) 763-1111; that page was not independently re-fetched during verification. No opening hours are published here because the operator's site-wide footer and its restaurant page state different ones.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "cherry-valley-hotel-newark",
+      "name": "Cherry Valley Hotel",
+      "kind": "hotel",
+      "destination_path": "united-states/ohio/licking-county/newark",
+      "official_url": "https://www.cherryvalleyhotel.com/",
+      "summary": "The lodging this guide bases on: 200 rooms in Newark, Licking County — the same county as The Virtues — 15.21 road miles from the course by Long Drive, SR 146 Nashport Road, the SR 16 Newark Expressway, Thornwood Crossing and Cherry Valley Road. It is one of the five hotels the course's own Stay & Play form names, and the only one of them with a readable operator site. The operator lists guest rooms averaging 365 square feet with king beds and a patio or balcony in every room, executive suites at 600 square feet, an on-site restaurant and bar, complimentary parking, a 24/7 front desk and snack shop, free Wi-Fi, dog-friendly rooms at a $75 cleaning fee, a heated indoor pool and exercise facility open 9 AM to 9 PM, and over 50,000 square feet of event space. At its centre is \"our flourishing botanical garden and the country's only hotel arboretum,\" which the operator says displays over 2,000 varieties of flora and fauna. Check-in 4 pm, check-out 11 am; telephone 740-788-1200. No street address is published here: the operator writes \"Rd SE\" while the Census street file and OSRM both give \"NE,\" and the operator's own string geocodes into a different village. No nightly rate is published either — the hotel advertises conditional percentage offers rather than a dated rate.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "craftsman-kitchen-and-terrace-newark",
+      "name": "Craftsman Kitchen & Terrace",
+      "kind": "restaurant",
+      "destination_path": "united-states/ohio/licking-county/newark",
+      "official_url": "https://craftsmankitchenandterrace.com/",
+      "summary": "The restaurant inside the Cherry Valley Hotel in Newark, 15.21 road miles from The Virtues, with a site of its own. In its own words: \"Savor casual American-style cuisine at Craftsman Kitchen & Terrace. Our stylish eatery features food and drinks that balance an elevated dining experience with approachability. The views of the Cherry Valley Hotel gardens with their ponds, waterfalls, and botanicals are unmatched.\" The hotel's FAQ answers the question a visitor actually has — \"Is your restaurant open to the public? Yes! Craftsman Kitchen and Terrace is open to the public. We recommend making a reservation.\" The CK Pub, for \"classic cocktails, beer, and wine served with an array of flavorful bar fare,\" and the Granville Pantry coffee counter operate alongside it in the same building. No opening hours are published here: the restaurant's own site advertises weekday lunch from 11:30 AM to 3:00 PM while the hotel's own FAQ says it runs \"no regular lunch service except through Crafted Carryout,\" and both pages were read on the same day. Reservations and enquiries go through 740-788-1200.",
+      "status": "open",
+      "photos": []
+    }
+  ],
+  "entries": [
+    {
+      "kind": "sight",
+      "name": "The Virtues Golf Club",
+      "place_slug": "the-virtues-golf-club",
+      "note": "Rank 16 on Golf Digest's 2025-'26 Ohio ranking and the first entry labelled \"Public\"; Arthur Hills, par 72, 7,243 yards. Public access proved by executing its booking engine with no account."
+    },
+    {
+      "kind": "sight",
+      "name": "Vista Golf Course",
+      "place_slug": "vista-golf-course",
+      "note": "Day two: the nearest publicly accessible course, 13.83 road miles away. 18 holes, par 71, 6,701 yards, Jack Kidwell. No publishable green fee and no season statement on its site — telephone (740) 453-4758 first."
+    },
+    {
+      "kind": "food",
+      "name": "The Overlook Restaurant",
+      "place_slug": "overlook-restaurant-the-virtues",
+      "note": "The clubhouse dining room at 1 Long Drive, and the venue for the three events on the operator's September 2026 calendar."
+    },
+    {
+      "kind": "stay",
+      "name": "Cherry Valley Hotel",
+      "place_slug": "cherry-valley-hotel-newark",
+      "note": "The basecamp: 200 rooms in Newark, Licking County, 15.21 road miles from The Virtues, and the one hotel on the course's own Stay & Play list with a readable operator site."
+    },
+    {
+      "kind": "food",
+      "name": "Craftsman Kitchen & Terrace",
+      "place_slug": "craftsman-kitchen-and-terrace-newark",
+      "note": "The restaurant inside the Cherry Valley Hotel, open to the public by the hotel's own FAQ, with reservations recommended on 740-788-1200."
+    }
+  ]
+}

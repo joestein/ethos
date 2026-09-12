@@ -71,9 +71,35 @@ defmodule Ethos.Guides.Guide do
     destination
     |> String.split(",")
     |> List.first()
+    |> transliterate()
     |> String.downcase()
     |> String.replace(~r/[^a-z0-9]+/, "-")
     |> String.trim("-")
+  end
+
+  # Hawaii's "Lānaʻi" derived "l-na-i" — a URL no reader could guess or
+  # type. Neither the macron in "ā" nor the ʻokina (U+02BB) is [a-z0-9], so the
+  # replace above turned each of them into a hyphen. This step is ADDITIVE and
+  # sits in front of that pipeline, which is unchanged: NFD-decompose, then drop
+  # combining diacritical marks so a letter falls back to its base letter
+  # ("ā" -> "a", "é" -> "e", "ü" -> "u", "ñ" -> "n"), and drop spacing modifier
+  # letters outright — the ʻokina is a letter in Hawaiian orthography, not
+  # punctuation, but it has no ASCII equivalent, so removing it ("lanai") is the
+  # correct transliteration where hyphenating it ("lana-i") is not.
+  #
+  # Neither dropped range overlaps ASCII, and NFD leaves ASCII untouched, so
+  # pure-ASCII input derives byte-identically to what it derived before. That is
+  # the binding property here; guide_geo_test.exs asserts it on real corpus
+  # destinations.
+  @combining_marks 0x0300..0x036F
+  @modifier_letters 0x02B0..0x02FF
+
+  defp transliterate(string) do
+    string
+    |> :unicode.characters_to_nfd_binary()
+    |> String.to_charlist()
+    |> Enum.reject(&(&1 in @combining_marks or &1 in @modifier_letters))
+    |> List.to_string()
   end
 
   defp put_destination_slug(changeset) do

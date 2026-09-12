@@ -1,0 +1,202 @@
+{
+  "guide": {
+    "slug": "north-carolina-golf-guide",
+    "title": "Tobacco Road: Golf in Sanford, North Carolina",
+    "destination": "Sanford, North Carolina",
+    "destination_path": "united-states/north-carolina/lee-county/sanford",
+    "intro": "Golf Digest's 2025-'26 ranking of the Best Golf Courses in North Carolina runs to 45 entries; the page introduces itself with the words \"Below you'll find our 2025-'26 ranking of the Best Golf Courses in North Carolina.\" Tobacco Road Golf Club sits 13th on it, labelled \"Public,\" at 442 Tobacco Road, Sanford, in Lee County. This guide does not claim Tobacco Road is the best course in the state. It claims something narrower and checkable: on that named ranking at that named edition, it is the highest-placed course a traveller with no membership and no lodging booking can actually go and play. The twelve entries above it are the whole reason those are two different claims — nine of them carry the label \"Private\" in their own entries, and the other three are Pinehurst courses that the resort's own terms close to anyone who is neither a member nor an overnight guest. Mike Strantz designed Tobacco Road on a worked-out sand quarry; the operator's course page opens \"Established in 1998, Tobacco Road is younger than many of the courses it has surpassed in its accumulation of accolades.\"",
+    "sections": [
+      {
+        "heading": "Getting there",
+        "body": "Tobacco Road Golf Club is at 442 Tobacco Road, Sanford, NC 27332, telephone (919) 775-1940. Use the number 442: the Google Maps link embedded in the operator's own rates page reads \"422-tobacco-road-sanford-nc-27332,\" but every written instance on the site, the US Census address match and Golf Digest's course record all say 442. Routed by road with OSRM, Raleigh-Durham International (RDU) to the course is 84,650.8 m, or 52.6 miles, and the named roads run in this order: East International Drive, East Aviation Drive, Lumley Road, I-540, NC 540 Toll, US 1, NC 1179, Tobacco Road. NC 540 is a toll facility. Fayetteville Regional (FAY) is closer at 63,785.8 m, or 39.6 miles, by Control Tower Road, Airport Road, I-95 Business/US 301, Gillespie Street, Hay Street, Bragg Boulevard, NC 210, NC 24/NC 87/NC 210, NC 24/NC 87, Broadway Road, Swanns Station Road, Greenwood Road, NC 1179 and Tobacco Road. The two courses in this guide are 3,741.7 m apart, 2.3 miles, by Tobacco Road, NC 1179, US 1 and Quail Ridge Drive — the same three roads carry the names Rocky Fork Church Road and Jefferson Davis Highway in OpenStreetMap's other naming field. On address, the US Census geocoder matches 442 TOBACCO RD, SANFORD, NC, 27332 at x = -79.214414661746, y = 35.394536950017, and the coordinate query there returns Lee County (GEOID 37105) and the county subdivision Township 1, Greenwood, with no Incorporated Places entry at all. A control query at Sanford City Hall, 225 E Weatherspoon St, returns Lee County and Sanford city, which is how we know the missing field is real: the course sits in unincorporated Lee County with a Sanford mailing address, not inside the town."
+      },
+      {
+        "heading": "The ranking, and why the state's course is 13th",
+        "body": "Walking the 2025-'26 North Carolina list from the top, the label in each entry's own block reads: 1 Wade Hampton Golf Club, Cashiers, Private. 2 Pinehurst #2, Pinehurst, Public. 3 Old Town Club, Winston Salem, Private. 4 Diamond Creek, Banner Elk, Private. 5 Mountaintop Golf & Lake Club, Cashiers, Private. 6 Eagle Point Golf Club, Wilmington, Private. 7 Quail Hollow Club, Charlotte, Private. 8 Pinehurst #10, no label present. 9 Pinehurst #4, Pinehurst, Public. 10 Grandfather Golf & CC, Linville, Private. 11 Biltmore Forest CC, Asheville, Private. 12 Charlotte Country Club, Charlotte, Private. 13 Tobacco Road Golf Club, Sanford, Public. Nine of those twelve dispose of themselves. The other three are Pinehurst courses, and they are disposed of by one sentence Pinehurst publishes on its own golf page: \"To play Courses No. 2, 4, 6, 7, 8, 9, 10, or 11, you must be a member or resort guest. If you are not a member or resort guest, walk on play is available from April through October on Courses No. 1, 3, and 5.\" Ranked #2 is Pinehurst No. 2, ranked #9 is Pinehurst No. 4, and ranked #8 links to Pinehurst No. 10 — all three named inside the exclusion. The label and the terms disagree, and this guide records both: Golf Digest calls #2 and #9 \"Public,\" the resort's own words say a non-member, non-guest may not play them. Entry #8 carried no access label at all on the live page when it was read, in the rendered entry and in the page's own data payload alike, while an archived capture of the same page dated 12 March 2026 labelled it \"Private\"; either reading disposes of it identically, because the operator's sentence does the work, not the label. Nor is this a price tier dressed as a gate. Searching the whole of Pinehurst's golf page for dollar figures returns only caddie fees ($85 per bag, $45 for a forecaddie, $100 for a single bag) and club rental at $80 per day; the phrases \"green fee,\" \"greens fee,\" \"non-guest\" and \"day guest\" do not appear, and the No. 2 course page carries no access statement and no rate table of its own. Pinehurst's booking portal is a single-page application whose entire visible text is \"Loading...\", so no unauthenticated tee sheet was obtained there and no claim is made from one: the exclusion rests on the resort's published prose. One last thing about the labels themselves. Pinehurst applies that identical rule to Courses No. 2, 4, 6, 7, 8, 9, 10 and 11, yet the same ranking marks #25 Pinehurst #8 \"Private\" while marking #2 and #9 \"Public.\" The label is not a reliable guide to access on this list. The operator's terms are."
+      },
+      {
+        "heading": "Tobacco Road Golf Club",
+        "body": "The operator's own course page: \"Established in 1998, Tobacco Road is younger than many of the courses it has surpassed in its accumulation of accolades. Architect Mike Strantz was a student of the Golden Age Architects.\" And on the ground itself: \"Tobacco Road Golf Club was built on land tended by the weather-worn hands of tobacco farmers, later shaped and moved through mining and sand excavation before finally being crafted and molded by an artist's imagination and the revolutionary eye of the late Mike Strantz. When Tobacco Road was little more than a walking path through an expended sand quarry, Strantz said he 'knew immediately it could be something not only spectacular, but also unique.'\" There are \"five sets of tees,\" and the home page carries the epigraph \"I want every hole to exude the spirit of the game.\" The opening year is not settled: the operator says 1998, a parenthetical in Golf Digest's own course blurb says 1999, and the ranking's structured record holds no opening year for this course at all. Golf Digest's record gives 18 holes, 6,557 yards, slope 145, designer Mike Strantz, facility type Public, with par 71 and a course rating of 72 in the ranking payload. Its ranking-history block reads \"100 Greatest Public: Ranked since 2009. 2025-'26 ranking (and highest): 44th\" and \"Best in State: Ranked Top 15 in North Carolina since 2019; Top 20 from 2017-2018; Top 25 from 2011-2016. Previous ranking: 12th. 2025-'26 ranking: 13th.\" The 13th placing is established by reading the live list; the historical claims are Golf Digest's own and no archived prior edition was fetched to test them. On dates: the guest-information page publishes exactly one closure, \"Tobacco Road will be closed for course and greens aerification June 29-July 7, 2026. We will also complete other maintenance practices during the month of July.\" No forward closure is published for any date after July 2026, and the course is not seasonal — its booking engine returned 24 bookable slots for 8 December 2026. Two practical notes from the same page: \"During winter months and when course conditions dictate, players will be required to use driving range mats,\" and the club is cashless, taking \"All major credit cards, Apple Pay, and Google Pay.\" The clubhouse opens daily at 7:00 AM. There is a second Strantz-flavoured loop on the property, The Matchbox — 12 holes, walking only, 0.6 miles from the first clubhouse at 1259 Rocky Fork Church Road, also in Lee County. It is not a second destination and this guide does not treat it as one: it shares Tobacco Road's operator company record, its tee-time policy page and its golf-shop telephone number, 877.284.3762. It is also a place where the operator's two channels say different things. Tobacco Road's travel arm describes it as a \"12-hole walking only course adjacent to Tobacco Road. Not available for single rounds, but it can be added to additional package play,\" while the booking engine itself sold single rounds under the name \"Matchbox - 12 Holes\" at $75.00, with 53 bookable times on 12 September 2026, 44 on 19 September 2026 and 54 on 10 October 2026. What the booking system did is the stronger fact, so that is what is recorded here. One naming caution: the operator's home page promotes the 12 holes as \"The Matchbox\" and its course page calls the loop \"El Camino,\" and no source establishes whether those are the same holes."
+      },
+      {
+        "heading": "Playing Tobacco Road, and what it costs",
+        "body": "Access is settled, and it is settled by the operator rather than by a label. The booking page states \"Tee times can be booked as a guest. However, for a faster experience on subsequent bookings, click GOLFER LOGIN on the next page to sign in or create a PitchBookings account.\" The booking engine's own operator-written configuration repeats it: \"To view available tee times, select date and number of players below. You may reserve tee times as a guest, but for a faster experience each time, click the 'Golfer Login' button above to sign in or create an account.\" That configuration also declares booking enabled, no lottery, no zip-code requirement, and a tee sheet released 425 days out. The engine was then executed without an account, a login or a cookie, and it returned open public inventory: 19 bookable times for 8 September 2026, 14 for 9 September 2026, 23 for 17 November 2026 and 24 for 8 December 2026, every one of them under a rate plan the operator has named \"Public 18 Holes\" and described as \"18 Holes w/ Cart.\" Eight other sampled dates returned nothing, and the engine's own message for that case attributes it to inventory — \"We are all booked up for the date and time you selected\" — not to any restriction on who may book. No sampled date produced a membership, lodging or host condition of any kind. The only conditions published anywhere are commercial: \"Reservation fees are non-refundable. Tobacco Road Golf Club requires 48-hour notice in advance of your tee time for a cancellation of any reservation. An adjustment to the number in your party may be made up to 24 hours in advance of your tee time.\" No green fee is published for Tobacco Road, and this guide therefore prints none. The rates page carries no dollar figure, no season band and no year; what it carries instead is a method — \"Displayed rates are reflected in real time pricing and include 18 holes with golf car or push cart, and access to our practice facilities\" — and the booking page repeats it as \"real-time dynamic pricing.\" The engine's behaviour shows why no number could honestly be attached to a date: on 8 September 2026 its 19 slots carried four different prices for the same round on the same day. A figure of $275 does circulate under Golf Digest's course record, but it is a third party's and it arrives under that page's own disclaimer, \"This covers all ranges of greens fees. Please check with the course on specific timing and pricing.\" Ring the golf shop on (919) 775-1940, or read the price the booking engine quotes you for your own date. One stale detail to expect: the rates page still asks readers to create a \"Chronogolf\" user profile, while the live booking engine is PitchBookings."
+      },
+      {
+        "heading": "Day two: The Golf Club at Quail Ridge",
+        "body": "The second course is The Golf Club at Quail Ridge, 5634 Quail Ridge Dr, Sanford, NC 27332, telephone 919.776.6623 — 2.3 miles from Tobacco Road by road, and in the same Lee County, the same Township 1, Greenwood, and the same unincorporated status. It is the only golf course within 10 miles of Tobacco Road other than that operator's own 12-hole loop; the next separate facility is Carolina Trace Country Club at 10.6 miles, and Pine Needles, the name a visitor is likelier to have heard, is 21.0 miles away in Moore County. A caution for anyone checking this themselves. The North Carolina club's site is thegolfcourseatquailridge.com, reached by redirect from quailridgegolfcourse.com. The similarly named quailridgegolf.com is a different club at 4055 Altruria Rd, Bartlett, TN 38135, and nothing on it applies here. And the US Census address geocoder returns no match at all for 5634 Quail Ridge Dr, which is a limitation of that one address rather than a doubt about the county: the coordinate the club publishes through its own booking portal, and the coordinate on its OpenStreetMap record, both return Lee County when queried by coordinate. The course itself, in its own words: \"Opened in 1967 in the Sandhills region of North Carolina, The Golf Club at Quail Ridge was designed by Ellis Maples. It reopened in October 2017 after major renovations (the first such renovations since the course originally opened in 1967). We have NEW Champion Bermuda Greens, NEW TifTuf Bermuda Fairways, New Sand in the Bunkers and rolling hills.\" Access is plain: the rates page ends \"No membership or loyalty card required!\", the booking portal's configuration allows self-registration with a minimum of one player and a maximum of four, and executing that booking system without an account returned a full 57-slot tee sheet on each of five sampled dates, with between 23 and 34 of those slots open to a two-ball. This is also the one course in this guide with a publishable green fee, because the club prints a table banded by its own 2026 dates and the booking engine charges exactly what the table says. The table: 1/1/26 - 2/28/26, $60.00 Monday-Thursday and $70.00 Friday-Sunday; 3/01/26 - 6/30/26, $80.00 and $85.00; 7/1/26 - 8/31/26, $70.00 and $80.00; 9/1/26 - 11/30/26, $80.00 and $85.00; 12/1/26 - 12/31/26, $60.00 and $70.00. Under the Fall band the engine returned $80.00 under the rate name \"Fall 2026 Weekday\" and $85.00 under \"Fall 2026 Weekend/Holiday,\" identical across all 57 slots on every sampled date. The same page also publishes \"Twilight Play - June 15 - Aug 31, 2026 - Daily Except Thursday - $35 5pm till dark\" and notes that senior and active-military rates exist on enquiry to (919) 776-6623. Two dates to avoid: the club's events feed carries exactly one entry between 1 September 2026 and 30 June 2027, the 2026 Member-Guest Tournament on 3 and 4 October 2026, with a 9:00 AM shotgun start on both days. That tournament is itself evidence of how open the club is — its own announcement prices entry at \"Member: $110, Loyalty Members: $140, Non-Members: $160.\" Book inside 14 days: the booking engine declares a 14-day advance window and rejects dates outside it. Some things the site simply does not publish, and this guide will not invent them: there is no aeration or maintenance schedule anywhere on it, the scorecard page reads \"COMING SOON,\" and the page for its grill renders with navigation and footer and no content at all, so no dining description is quoted from it here. If a wider net is worth the mileage, Pine Needles Lodge & Golf Club at Southern Pines, in Moore County, is 15th on the same ranking and labelled \"Public\" — but its published terms and its booking engine do not agree, and the booking engine is what a traveller meets. Its FAQ and its golf page both say outside guests may reserve tee times up to 30 days ahead; the engine answered a query for a date beyond that window with \"You are out of your booking range. The player type 'Outside - Online' can only book 14 days in advance.\" Its published table prices the band \"September 10 - November 18, 2026\" at $295 Monday-Wednesday and $315 Thursday-Sunday; the engine quoted $315 for Tuesday 15 September 2026, and $335.00 for 12, 19 and 20 September 2026. Plan on what the engine charges, not on what the table says."
+      },
+      {
+        "heading": "Sanford, and where the weekend sleeps and eats",
+        "body": "Both courses are in unincorporated Lee County with Sanford mailing addresses, so the weekend basecamps in and around Sanford rather than in the Village of Pinehurst. Neither club offers lodging on the golf course itself with one exception. Tobacco Road's own travel arm lets the Stewart Cabin: \"Rustic Sandhills Charm. Discover the iconic & historic cabin just behind the legendary 14th hole at Tobacco Road, fully renovated and customized for the ultimate foray into the Sandhills of North Carolina.\" The same operator's lodging list names one other Sanford house, the Hickory House — \"this five-bedroom home is fully equipped with a 30-acre private driving range, Golden Tee, bar, and more! The Hickory House was once the testing facility for a golf manufacture to test PGA tour players\" — and three chain hotels in the town with their addresses: Comfort Suites of Sanford at 1891 Bragg St, Hampton Inn of Sanford at 1904 S. Horner Blvd, which the list describes as two miles from downtown, and Home2 Suites by Hilton-Sanford at 115 Amos Bridges Road. The same list carries further chain properties in Aberdeen, Southern Pines and Pinehurst for anyone who prefers the village and accepts the extra mileage. Eating is thinner, and honestly so: the only dining either club describes is at Tobacco Road, where \"The Pack House Snack Bar (Located inside Clubhouse) offers pre-made to-go sandwiches for breakfast and lunch. Items include a pulled pork sandwich, pimento cheese, egg salad, chicken salad, bratwursts and our signature 'Spicy Dog.' We have a wide selection of beer, cocktails, and non-alcoholic drinks to go along with chips and snacks. An on-course beverage cart will run daily weather permitting.\" The clubhouse around it is, in the operator's description, \"Rustic and quaint. An open floorplan encourages visitors to stroll from the golf shop to the snack bar or perhaps settle on the sofas surrounding the open fireplace vented by an antique double-flue tobacco curer.\" Quail Ridge's grill page publishes no content, so nothing is claimed about it here. Remember that Tobacco Road takes no cash."
+      }
+    ],
+    "faq": [
+      {
+        "question": "Can I play Tobacco Road without a membership or a hotel booking?",
+        "answer": "Yes, on the operator's own terms and on its booking system's behaviour. The booking page says \"Tee times can be booked as a guest,\" and the engine's operator-written configuration repeats \"You may reserve tee times as a guest.\" Executed without an account or a login, that engine returned bookable public inventory — 19 times for 8 September 2026, 14 for 9 September 2026, 23 for 17 November 2026, 24 for 8 December 2026 — all under a rate plan named \"Public 18 Holes.\" Dates that came back empty came back with the operator's own \"We are all booked up\" message, which is inventory, not a restriction on who may book."
+      },
+      {
+        "question": "What does a round at Tobacco Road cost?",
+        "answer": "The club publishes no green fee, so this guide prints none. Its rates page states \"Displayed rates are reflected in real time pricing and include 18 holes with golf car or push cart, and access to our practice facilities,\" with no figure, no season band and no year attached; the booking page calls the same thing \"real-time dynamic pricing.\" The engine bears that out — on 8 September 2026 its 19 slots carried four different prices for the same round on the same day. Golf Digest's course record shows $275 under its own disclaimer that it \"covers all ranges of greens fees,\" which is a third party's figure with no date on it. Get your price from the booking engine for your date, or from the golf shop on (919) 775-1940."
+      },
+      {
+        "question": "Why is this guide about a course ranked 13th, and not Pinehurst No. 2 at 2nd?",
+        "answer": "Because the claim this guide makes is \"highest-ranked publicly accessible,\" and that is not the same thing as \"highest-ranked.\" Ranks 1, 3, 4, 5, 6, 7, 10, 11 and 12 are labelled Private in their own entries. Ranks 2, 8 and 9 are Pinehurst No. 2, No. 10 and No. 4, and Pinehurst's own golf page reads \"To play Courses No. 2, 4, 6, 7, 8, 9, 10, or 11, you must be a member or resort guest.\" Golf Digest labels #2 and #9 \"Public\"; the resort's own words say a non-member, non-guest cannot play them, and there is no published non-guest green fee that would turn that gate into a price tier. Tobacco Road, at 13, is the first entry that survives."
+      },
+      {
+        "question": "What does a round at Quail Ridge cost?",
+        "answer": "This is the one publishable fee in this guide, because the club prints a table banded by its own 2026 dates and its booking engine charges those exact figures. Monday-Thursday and Friday-Sunday respectively: 1/1/26 - 2/28/26 $60.00 and $70.00; 3/01/26 - 6/30/26 $80.00 and $85.00; 7/1/26 - 8/31/26 $70.00 and $80.00; 9/1/26 - 11/30/26 $80.00 and $85.00; 12/1/26 - 12/31/26 $60.00 and $70.00. For the Fall 2026 band the engine returned $80.00 under the rate name \"Fall 2026 Weekday\" and $85.00 under \"Fall 2026 Weekend/Holiday,\" identical across all 57 slots on each sampled date. \"Twilight Play - June 15 - Aug 31, 2026 - Daily Except Thursday - $35 5pm till dark\" is published on the same page, and senior and active-military rates are offered on enquiry to (919) 776-6623."
+      },
+      {
+        "question": "When are the two courses closed?",
+        "answer": "Tobacco Road publishes one dated closure: \"Tobacco Road will be closed for course and greens aerification June 29-July 7, 2026. We will also complete other maintenance practices during the month of July.\" Nothing is published for any date after that, and the course sells winter tee times. Quail Ridge publishes no aeration or maintenance schedule at all, and its events feed returns exactly one entry between 1 September 2026 and 30 June 2027: the 2026 Member-Guest Tournament on 3 and 4 October 2026, a 9:00 AM shotgun start on both days, which will occupy the course."
+      },
+      {
+        "question": "How far ahead can I book Quail Ridge?",
+        "answer": "Fourteen days. Its booking portal declares a 14-day advance window in its own configuration, and the engine rejects requests for dates beyond it. Self-registration is open, the minimum party is one player and the maximum is four, and both 9-hole and 18-hole rounds are offered."
+      },
+      {
+        "question": "What is The Matchbox, and can I play it as a separate round?",
+        "answer": "A 12-hole walking-only loop at 1259 Rocky Fork Church Road, 0.6 miles from Tobacco Road's clubhouse and run by the same operator — same company record, same tee-time policy page, same golf-shop number. This guide treats it as part of the same facility rather than as a second destination. Its two channels disagree about single rounds: the operator's travel arm says it is \"Not available for single rounds, but it can be added to additional package play,\" while the booking engine sold single rounds under \"Matchbox - 12 Holes\" at $75.00, with 53 bookable times on 12 September 2026, 44 on 19 September 2026 and 54 on 10 October 2026. The booking system's behaviour is the fact to plan on."
+      },
+      {
+        "question": "Which county is Tobacco Road in?",
+        "answer": "Lee County, GEOID 37105, and unincorporated. The US Census geocoder matches 442 TOBACCO RD, SANFORD, NC, 27332, and the coordinate query there returns Lee County and the county subdivision Township 1, Greenwood, with no Incorporated Places entry. The same query at Sanford City Hall returns Lee County and Sanford city, which proves the missing field is a real absence and not a geocoder failure. Quail Ridge returns the same county, the same township and the same absence."
+      },
+      {
+        "question": "What about Pine Needles?",
+        "answer": "It is 15th on the same ranking, labelled \"Public,\" in Southern Pines town in Moore County, and 21.0 miles from Tobacco Road — which is why the second course here is 2.3 miles away instead. If you do go, plan on what its booking engine does rather than on what its pages say. Its FAQ and golf page both state that outside guests may book up to 30 days ahead; the engine answered a query beyond that window with \"You are out of your booking range. The player type 'Outside - Online' can only book 14 days in advance.\" Its published table prices \"September 10 - November 18, 2026\" at $295 Monday-Wednesday and $315 Thursday-Sunday, and the engine quoted $315 for Tuesday 15 September 2026 and $335.00 for 12, 19 and 20 September 2026."
+      }
+    ],
+    "photos": []
+  },
+  "places": [
+    {
+      "slug": "tobacco-road-golf-club",
+      "name": "Tobacco Road Golf Club",
+      "kind": "golf-course",
+      "destination_path": "united-states/north-carolina/lee-county/sanford",
+      "official_url": "https://tobaccoroadgolf.com/",
+      "summary": "13th on Golf Digest's 2025-'26 ranking of the Best Golf Courses in North Carolina and labelled \"Public\" — the highest-placed course on that list that a traveller with no membership and no lodging booking can play, the nine Private entries and three Pinehurst entries above it having been walked past. Mike Strantz laid it out on a worked-out sand quarry; the operator dates it to 1998, Golf Digest to 1999. 18 holes, 6,557 yards, slope 145. Its booking page states \"Tee times can be booked as a guest,\" and its booking engine returned public inventory to an unauthenticated caller under a rate plan named \"Public 18 Holes.\" No green fee is published: the rates page gives a method, \"Displayed rates are reflected in real time pricing,\" not a price. 442 Tobacco Road, Sanford, NC 27332, (919) 775-1940. Closed for aerification June 29-July 7, 2026.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "golf-club-at-quail-ridge",
+      "name": "The Golf Club at Quail Ridge",
+      "kind": "golf-course",
+      "destination_path": "united-states/north-carolina/lee-county/sanford",
+      "official_url": "https://thegolfcourseatquailridge.com/",
+      "summary": "The second course of the weekend, 2.3 miles from Tobacco Road by road and in the same unincorporated Lee County. \"Opened in 1967 in the Sandhills region of North Carolina, The Golf Club at Quail Ridge was designed by Ellis Maples,\" and it \"reopened in October 2017 after major renovations.\" Its rates page ends \"No membership or loyalty card required!\", and its booking system, run without an account, returned a 57-slot tee sheet on each of five sampled dates. It carries the guide's one publishable green fee, a table banded by the operator's own 2026 dates that the booking engine matches exactly: 9/1/26 - 11/30/26, $80.00 Monday-Thursday and $85.00 Friday-Sunday. Booking opens 14 days ahead. 5634 Quail Ridge Dr, Sanford, NC 27332, 919.776.6623. Its Member-Guest Tournament occupies the course on 3 and 4 October 2026.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "stewart-cabin-tobacco-road",
+      "name": "Stewart Cabin",
+      "kind": "bnb",
+      "destination_path": "united-states/north-carolina/lee-county/sanford",
+      "official_url": "https://www.tobaccoroadtravel.com/",
+      "summary": "The only lodging on either golf course property, let by Tobacco Road's own travel arm under the heading \"Rustic Sandhills Charm\": \"Discover the iconic & historic cabin just behind the legendary 14th hole at Tobacco Road, fully renovated and customized for the ultimate foray into the Sandhills of North Carolina.\" It is sold as the package \"The Game's Escape at Stewart Cabin.\"",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "hickory-house-sanford",
+      "name": "Hickory House",
+      "kind": "bnb",
+      "destination_path": "united-states/north-carolina/lee-county/sanford",
+      "summary": "A rental house in Sanford on Tobacco Road's own lodging list, described by that operator: \"this five-bedroom home is fully equipped with a 30-acre private driving range, Golden Tee, bar, and more! The Hickory House was once the testing facility for a golf manufacture to test PGA tour players.\"",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "comfort-suites-sanford",
+      "name": "Comfort Suites of Sanford",
+      "kind": "hotel",
+      "destination_path": "united-states/north-carolina/lee-county/sanford",
+      "summary": "1891 Bragg St, Sanford. One of three chain hotels in the town named on Tobacco Road's own Sandhills lodging list, which gives the address and no further description.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "hampton-inn-sanford",
+      "name": "Hampton Inn of Sanford",
+      "kind": "hotel",
+      "destination_path": "united-states/north-carolina/lee-county/sanford",
+      "summary": "1904 S. Horner Blvd, Sanford, described on Tobacco Road's own Sandhills lodging list as two miles from downtown.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "home2-suites-sanford",
+      "name": "Home2 Suites by Hilton - Sanford",
+      "kind": "hotel",
+      "destination_path": "united-states/north-carolina/lee-county/sanford",
+      "summary": "115 Amos Bridges Road, Sanford. Named with that address on Tobacco Road's own Sandhills lodging list, which carries no further description of it.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "pack-house-snack-bar",
+      "name": "The Pack House Snack Bar",
+      "kind": "restaurant",
+      "destination_path": "united-states/north-carolina/lee-county/sanford",
+      "official_url": "https://tobaccoroadgolf.com/guest-information/",
+      "summary": "Inside Tobacco Road's clubhouse, and the only dining either club in this guide describes. The operator: \"The Pack House offers pre-made to-go sandwiches for breakfast and lunch. Items include a pulled pork sandwich, pimento cheese, egg salad, chicken salad, bratwursts and our signature 'Spicy Dog.' We have a wide selection of beer, cocktails, and non-alcoholic drinks to go along with chips and snacks. An on-course beverage cart will run daily weather permitting.\" The club is cashless.",
+      "status": "open",
+      "photos": []
+    }
+  ],
+  "entries": [
+    {
+      "kind": "sight",
+      "name": "Tobacco Road Golf Club",
+      "place_slug": "tobacco-road-golf-club",
+      "note": "13th on Golf Digest's 2025-'26 North Carolina ranking, labelled \"Public\"; Mike Strantz, on a worked-out sand quarry. No green fee is published."
+    },
+    {
+      "kind": "sight",
+      "name": "The Golf Club at Quail Ridge",
+      "place_slug": "golf-club-at-quail-ridge",
+      "note": "Day two, 2.3 miles away in the same unincorporated Lee County. Ellis Maples, 1967. Fall 2026 green fee $80.00 Monday-Thursday, $85.00 Friday-Sunday."
+    },
+    {
+      "kind": "stay",
+      "name": "Stewart Cabin",
+      "place_slug": "stewart-cabin-tobacco-road",
+      "note": "The one bed on either golf course property, behind Tobacco Road's 14th hole."
+    },
+    {
+      "kind": "stay",
+      "name": "Hickory House",
+      "place_slug": "hickory-house-sanford",
+      "note": "A five-bedroom rental house in Sanford with a 30-acre private driving range."
+    },
+    {
+      "kind": "stay",
+      "name": "Comfort Suites of Sanford",
+      "place_slug": "comfort-suites-sanford",
+      "note": "1891 Bragg St, on the operator's own Sandhills lodging list."
+    },
+    {
+      "kind": "stay",
+      "name": "Hampton Inn of Sanford",
+      "place_slug": "hampton-inn-sanford",
+      "note": "1904 S. Horner Blvd, listed as two miles from downtown Sanford."
+    },
+    {
+      "kind": "stay",
+      "name": "Home2 Suites by Hilton - Sanford",
+      "place_slug": "home2-suites-sanford",
+      "note": "115 Amos Bridges Road, Sanford."
+    },
+    {
+      "kind": "food",
+      "name": "The Pack House Snack Bar",
+      "place_slug": "pack-house-snack-bar",
+      "note": "Inside Tobacco Road's clubhouse; sandwiches, beer and cocktails to go, and a daily on-course beverage cart weather permitting."
+    }
+  ]
+}
