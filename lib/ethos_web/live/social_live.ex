@@ -26,18 +26,33 @@ defmodule EthosWeb.SocialLive do
   def mount(_params, %{"subject_type" => type, "subject_id" => id}, socket) do
     subject = Subject.get!(type, id)
 
-    {:ok,
-     socket
-     |> assign(
-       subject: subject,
-       rating: nil,
-       rating_error: nil,
-       # Stable per subject so two islands on one page cannot collide, and so
-       # the JS that opens the modal can name it without a server round trip.
-       modal_id: "social-reviews-#{type}-#{id}"
-     )
-     |> load_reactions()
-     |> load_reviews()}
+    {
+      :ok,
+      socket
+      |> assign(
+        subject: subject,
+        rating: nil,
+        rating_error: nil,
+        # Stable per subject so two islands on one page cannot collide, and so
+        # the JS that opens the modal can name it without a server round trip.
+        modal_id: "social-reviews-#{type}-#{id}"
+      )
+      |> load_reactions()
+      |> load_reviews(),
+      # `layout: false`, and it is load-bearing.
+      #
+      # `use EthosWeb, :live_view` sets `layout: {EthosWeb.Layouts, :app}`, which
+      # is right for a LiveView that owns a page and wrong for one embedded with
+      # `live_render/3`. Without this the island wrapped its own output in the
+      # whole site chrome, so every place, guide and collection page served two
+      # site headers, two search boxes and two footers nested inside itself.
+      #
+      # It hid for as long as the island sat at the bottom of the page, where a
+      # stray header and footer read as part of the real footer. Moving the
+      # island up under the title put that nested chrome between the title and
+      # the location line, which is how it was finally noticed.
+      layout: false
+    }
   end
 
   def render(assigns) do
