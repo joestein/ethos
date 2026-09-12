@@ -48,4 +48,58 @@ defmodule Ethos.GuideGeoTest do
     assert guide.destination_slug == "rome"
     refute guide.destination_id
   end
+
+  # Hawaii's "Lānaʻi, Hawaii" derived "l-na-i": the macron in "ā" and the ʻokina
+  # (U+02BB) are outside [a-z0-9], so each became a hyphen and the destination
+  # hub sat on a URL no reader could guess or type. derive_destination_slug/1
+  # now transliterates first. The fix is only defensible if it is ADDITIVE, so
+  # the first test below is the binding one: it pins real corpus destinations to
+  # the exact slugs they derived BEFORE the change, and it fails if the new step
+  # perturbs any pure-ASCII input by a single byte.
+  describe "derive_destination_slug/1 transliteration" do
+    test "pure-ASCII destinations derive byte-identically to what they always did" do
+      # Baselines captured from the deriver as it stood before transliteration.
+      for {destination, slug} <- [
+            {"Bandon, Oregon", "bandon"},
+            {"Burlington, Iowa", "burlington"},
+            {"Las Vegas, Nevada", "las-vegas"},
+            {"University Place, Washington", "university-place"},
+            {"St. Louis, Missouri", "st-louis"},
+            {"Waterbury, Connecticut", "waterbury"},
+            {"County of Maui", "county-of-maui"},
+            {"Jefferson Parish", "jefferson-parish"},
+            {"Metropolitan Government of Nashville and Davidson County",
+             "metropolitan-government-of-nashville-and-davidson-county"}
+          ] do
+        assert Guide.derive_destination_slug(destination) == slug,
+               "#{inspect(destination)} is pure ASCII and must derive #{inspect(slug)} " <>
+                 "exactly as it did before transliteration was added, but derived " <>
+                 inspect(Guide.derive_destination_slug(destination))
+      end
+    end
+
+    test "a macron and an ʻokina transliterate rather than hyphenate" do
+      # The case that produced the rule. Not "lana-i": the ʻokina is a letter in
+      # Hawaiian orthography with no ASCII equivalent, so it is dropped.
+      assert Guide.derive_destination_slug("Lānaʻi, Hawaii") == "lanai"
+      assert Guide.derive_destination_slug("Lānaʻi") == "lanai"
+    end
+
+    test "diacritics generally fall back to their base letter" do
+      assert Guide.derive_destination_slug("Montréal, Québec") == "montreal"
+      assert Guide.derive_destination_slug("Zürich, Switzerland") == "zurich"
+      assert Guide.derive_destination_slug("Ñuñoa, Chile") == "nunoa"
+      assert Guide.derive_destination_slug("São Paulo, Brazil") == "sao-paulo"
+    end
+
+    test "a guide changeset carries the transliterated destination_slug" do
+      guide =
+        published_guide_fixture(%{
+          title: "Lānaʻi golf guide",
+          destination: "Lānaʻi, Hawaii"
+        })
+
+      assert guide.destination_slug == "lanai"
+    end
+  end
 end

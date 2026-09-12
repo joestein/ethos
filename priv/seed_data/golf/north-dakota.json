@@ -1,0 +1,161 @@
+{
+  "guide": {
+    "slug": "north-dakota-golf-guide",
+    "title": "The Minot Country Club: Golf in Minot, North Dakota",
+    "destination": "Minot, North Dakota",
+    "state": "North Dakota",
+    "county": "Ward County",
+    "intro": "Golf Digest's 2025-'26 ranking of the Best Golf Courses in North Dakota places The Minot Country Club first, labeled \"Public,\" in Minot, Ward County. Two named sources disagree hard about what that label means in practice. Golf Digest's own course data records a $105 weekend fee and a \"Daily Fee\" facility type. The club's own website calls itself \"a private club\" in its own copy, routes its \"TEE TIMES\" navigation link to a member login page, and describes its reciprocal-play program, OpenRounds, as \"included in your membership\" and giving members access to \"other private clubs nationwide.\" No page on minotcountryclub.com publishes a green fee, a public tee sheet, or a guest-without-member policy. The only sourced avenue for an outside golfer is the club's own phone number, (701) 852-3591. Golf Digest's own page disagrees with itself, too: its intro states \"Three of the top-six ranked courses in North Dakota are open to the public,\" but four of its six entries carry the \"Public\" label — Minot is the fourth, the one that count leaves out. Minot's panel support is also the thinnest on the list: a 3.6 rating from just two panelists, tied for both measures with the lowest-rated, least-evaluated entries on the page. Golf Digest's own caveat about the state: \"Though we struggle to get sufficient panelist coverage up in North Dakota, anyone who reports back about their experience at venues such as Hawktree Golf Club in Bismarck, Bully Pulpit in Medora or The Links of North Dakota are all happy they made the trip.\" For a North Dakota round a visitor can actually plan, this guide points to Apple Grove Golf Course, a 9-hole course 3.6 road miles from the club, in the same city and the same county, whose own booking platform reports the club as taking public bookings.",
+    "sections": [
+      {
+        "heading": "Getting there",
+        "body": "Minot International Airport (MOT) is 5.6 road miles from The Minot Country Club, at 1912 Valley Bluffs Dr in Minot, Ward County. By road from the club, Apple Grove Golf Course is 3.6 miles away and Souris Valley Golf Course is 5.4 miles away, both of them in Minot; Hawktree Golf Club in Bismarck is 108.0 miles away, and The Links of North Dakota in Ray is 99.4 miles away, each figure measured by OSRM's driving profile from the club's own coordinates. Bismarck Municipal Airport (BIS) is 113.6 road miles from the club, and Hector International Airport in Fargo (FAR) is 269.6 road miles away."
+      },
+      {
+        "heading": "The Minot Country Club",
+        "body": "Golf Digest's 2025-'26 Best in State ranking lists The Minot Country Club first among North Dakota's six ranked courses, displaying the access label \"Public\" and recording the facility type as \"Daily Fee,\" with a $105 weekend fee as of the ranking data's own November 14, 2025 update. The club plays across multiple tees ranging from 4,485 to 6,870 yards, per the club's own site. Golf Digest's panel counts for all six ranked North Dakota courses range from two to eight evaluations; Minot's #1 ranking rests on two, tied with Fargo Country Club for the fewest on the list, and its 3.6 rating is tied for the lowest, alongside the two Private-labeled clubs on the list. Golf Digest's own caveat about the state: \"Though we struggle to get sufficient panelist coverage up in North Dakota, anyone who reports back about their experience at venues such as Hawktree Golf Club in Bismarck, Bully Pulpit in Medora or The Links of North Dakota are all happy they made the trip.\" No source available for this guide explains why Minot ranks first despite the lowest panel score and its absence from that same sentence."
+      },
+      {
+        "heading": "Can you actually play it?",
+        "body": "Not by any route the club publishes. The Minot Country Club's own site calls itself \"a private club\" in its own copy — on its clubhouse page: \"one of the most extensive and varied social calendars of any private club in the area.\" Its \"TEE TIMES\" navigation link sits under a \"MEMBERS PAGE\" menu and opens a member login. Its reciprocal-play program, OpenRounds, is described on the club's own site as \"an exclusive online platform offering streamlined private club tee time accommodations, providing our members direct access to other private clubs nationwide,\" with access to that network \"included in your membership.\" The club's membership page directs prospective members to \"contact our Membership Director at (701) 852-3591.\" No page found on the operator's own site publishes a green fee, a public tee sheet, or a guest-without-member policy, and no season — opening date or closing date — is published for the course anywhere on the club's own site. The only sourced avenue for a visitor is to call the club directly at (701) 852-3591 and ask."
+      },
+      {
+        "heading": "The practical round: Apple Grove Golf Course",
+        "body": "Apple Grove Golf Course is the nearest other publicly accessible course to The Minot Country Club: 3.6 road miles, in the same city and in the same county, Ward County. It is a 9-hole course at 3910 20th Ave SE, and the operator's own words carry its access case — \"Apple Grove Golf Course is a 9-hole golf course located in Southeast Minot. We are proud to be locally owned and operated and strive to provide the best golf experience for all of our visitors.\" No membership requirement, no guest-of-member language and no exclusion sentence appears anywhere on applegrovend.com. Its Booking & Membership page carries a public \"Book a Tee Time\" link and, separately, sells \"2026 Early Bird Season Passes\" — a pass sold alongside public play, not a gate in front of it. That booking link resolves to the Whoosh platform, whose own API, queried with no account and no authentication, returns supportsPublic: true for the club, records it as Minot, North Dakota, and lists a single department of type GOLF whose only facility is named \"Golf Course.\"\n\nFinding this course took a directory rather than a map. Apple Grove carries no leisure=golf_course object in OpenStreetMap at all: an area pull around its address returns nine mapped holes, nine fairways, nine greens, twelve tees, bunkers and water hazards, but no course polygon and no name, so a standard sweep of the map cannot see it. It surfaced instead in the North Dakota Golf Association's own course directory, which lists it \"Public - 9 Holes\" at 2604 Valley Street, Minot, and in GolfLink's Minot city page, which counts seven courses in the city. North Dakota Tourism carries the operator's own address, \"Number of Holes: 9\", \"Public\" and the word \"Seasonal.\"\n\nWhat the operator does not publish is a season or a price. Its site states \"7 Days a Week: Weather Permitting\" and hours of 8am to 6:30pm, and no opening date and no closing date appears anywhere on it, so openness on any given date is unverified; this guide does not infer a winter closure from latitude. There is no green-fee schedule either. GolfLink shows $49 but labels the figure itself — \"These rates are an estimate of what you might expect to pay at Apple Grove with a cart. Actual rates may vary\" — so it is a third party's estimate, not the operator's rate, and this guide does not publish it as a fee. Par and yardage are contested between sources: North Dakota Tourism gives par 30 and 1,671 yards, GolfLink par 29 and 1,538 yards, and the operator publishes no scorecard. The course's own number is 701-852-5460.\n\nFor eighteen holes instead of nine, Souris Valley Golf Course, run by the Minot Park District, is 5.4 road miles from The Minot Country Club and states on its own site, \"We welcome all golfers to the Souris Valley golf course.\" Its Vermont Systems tee sheet returned bookable slots without a sign-in on two sampled dates. Hawktree Golf Club, in Bismarck, Burleigh County, is Golf Digest's #2 in North Dakota and carries the same \"Public\" label; at 108.0 road miles from The Minot Country Club it is not this guide's second course, and it was named here previously on rank rather than on distance."
+      },
+      {
+        "heading": "Staying and eating in Minot",
+        "body": "Minot's own tourism site, visitminot.org, lists Hyatt House Minot and Hotel Revel among its lodging, and JL Beers and Ironhorse Kitchen + Bar among its restaurants."
+      }
+    ],
+    "faq": [
+      {
+        "question": "How do I book a tee time to play The Minot Country Club?",
+        "answer": "There is no published online route. The Minot Country Club's own site offers no online booking, no published green fee, and no public tee sheet for a non-member; its \"TEE TIMES\" link routes to a member login page, and its reciprocal-play program, OpenRounds, is \"included in your membership\" and gives members access to \"other private clubs nationwide,\" not to the general public. The only sourced avenue for an outside golfer is to call the club directly at (701) 852-3591. Golf Digest labels the course \"Public\" and records a $105 weekend fee, but that figure comes from Golf Digest, not the club, and it is not corroborated anywhere on the operator's own site. For a North Dakota round you can plan around online, this guide points instead to Apple Grove Golf Course in Minot, 3.6 road miles from the club: its site carries a public \"Book a Tee Time\" link, and its booking platform returns supportsPublic: true for the club on an unauthenticated query."
+      },
+      {
+        "question": "Golf Digest ranks this course #1 and calls it \"Public\" — so why is there no way to book it?",
+        "answer": "Golf Digest's own course data shows the label \"Public,\" facility type \"Daily Fee,\" and a $105 weekend fee. The club's own site calls itself \"a private club\" in its own copy and gates every booking path behind a member login. Golf Digest's page also disagrees with itself: its own intro says \"Three of the top-six ranked courses in North Dakota are open to the public,\" but four of its six entries — Minot included — carry the \"Public\" label. And Golf Digest's own caveat about the state reads: \"Though we struggle to get sufficient panelist coverage up in North Dakota, anyone who reports back about their experience at venues such as Hawktree Golf Club in Bismarck, Bully Pulpit in Medora or The Links of North Dakota are all happy they made the trip.\" Minot's #1 ranking rests on two panelist evaluations and a 3.6 rating, the joint-lowest and joint-fewest-evaluated figures on the six-course list. No source explains the ranking despite these numbers, and none is offered here."
+      },
+      {
+        "question": "What is the course's season?",
+        "answer": "Not published. No opening date and no closing date for The Minot Country Club appears anywhere on the club's own site. This guide does not infer one. The same gap sits over this guide's second course: Apple Grove Golf Course publishes \"7 Days a Week: Weather Permitting\" and hours of 8am to 6:30pm, and no season dates at all, so neither Minot course states when its golf year opens or closes."
+      },
+      {
+        "question": "Where is the course, and what's the second course in the state?",
+        "answer": "The Minot Country Club is at 1912 Valley Bluffs Dr, Minot, Ward County, North Dakota; Minot International Airport (MOT) is 5.6 road miles away. The second course on this guide is Apple Grove Golf Course, also in Minot and also in Ward County — a 9-hole course 3.6 road miles from The Minot Country Club, whose booking platform reports the club as taking public bookings."
+      }
+    ],
+    "photos": []
+  },
+  "places": [
+    {
+      "slug": "minot-country-club",
+      "name": "The Minot Country Club",
+      "kind": "golf-course",
+      "town": "Minot",
+      "state": "North Dakota",
+      "county": "Ward County",
+      "address": "1912 Valley Bluffs Dr, Minot, ND 58701",
+      "official_url": "https://www.minotcountryclub.com",
+      "summary": "Golf Digest's 2025-'26 Best in State list ranks The Minot Country Club first among North Dakota's six entries, labeled \"Public\" with facility type \"Daily Fee\" and a $105 weekend fee as of the ranking data's November 14, 2025 update. It rests on just two panelist evaluations and a 3.6 rating — tied for the fewest evaluations and the lowest rating on the list. The club's own site calls itself \"a private club,\" routes its \"TEE TIMES\" navigation to a member login, and describes its reciprocal-play program OpenRounds as included in membership and granting access to other private clubs. No non-member booking route, green fee schedule, or guest policy is published anywhere on the operator's own site; the only sourced avenue for an outside golfer is (701) 852-3591. It plays across multiple tees ranging from 4,485 to 6,870 yards.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "apple-grove-golf-course-minot",
+      "name": "Apple Grove Golf Course",
+      "kind": "golf-course",
+      "town": "Minot",
+      "state": "North Dakota",
+      "county": "Ward County",
+      "address": "3910 20th Ave SE, Minot, ND 58701",
+      "official_url": "https://applegrovend.com",
+      "summary": "The nearest other publicly accessible course to The Minot Country Club: 3.6 road miles, in the same city and in the same county. The operator describes \"a 9-hole golf course located in Southeast Minot\" that is \"locally owned and operated,\" publishes a public \"Book a Tee Time\" link, and states no membership requirement, no guest-of-member policy and no exclusion anywhere on its site; its Whoosh booking platform returns supportsPublic: true for the club on an unauthenticated query, bound to Minot, North Dakota, with one department of type GOLF whose only facility is the golf course. The North Dakota Golf Association's own directory lists it \"Public - 9 Holes.\" The course has no leisure=golf_course object in OpenStreetMap at all — only its nine holes, fairways, greens and tees are mapped — so a map sweep cannot see it. No opening or closing date and no green fee is published: the operator states \"7 Days a Week: Weather Permitting,\" hours of 8am to 6:30pm, and sells \"2026 Early Bird Season Passes.\" Phone 701-852-5460.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "hyatt-house-minot",
+      "name": "Hyatt House Minot",
+      "kind": "hotel",
+      "town": "Minot",
+      "state": "North Dakota",
+      "county": "Ward County",
+      "summary": "Named among Minot lodging on the city's own tourism site, visitminot.org.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "hotel-revel-minot",
+      "name": "Hotel Revel",
+      "kind": "hotel",
+      "town": "Minot",
+      "state": "North Dakota",
+      "county": "Ward County",
+      "summary": "Named among Minot lodging on the city's own tourism site, visitminot.org.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "jl-beers-minot",
+      "name": "JL Beers",
+      "kind": "restaurant",
+      "town": "Minot",
+      "state": "North Dakota",
+      "county": "Ward County",
+      "summary": "Named among Minot dining on the city's own tourism site, visitminot.org.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "ironhorse-kitchen-and-bar-minot",
+      "name": "Ironhorse Kitchen + Bar",
+      "kind": "restaurant",
+      "town": "Minot",
+      "state": "North Dakota",
+      "county": "Ward County",
+      "summary": "Named among Minot dining on the city's own tourism site, visitminot.org.",
+      "status": "open",
+      "photos": []
+    }
+  ],
+  "entries": [
+    {
+      "kind": "sight",
+      "name": "The Minot Country Club",
+      "place_slug": "minot-country-club",
+      "note": "#1 on Golf Digest's 2025-'26 North Dakota list, labeled \"Public\"; no published non-member booking route."
+    },
+    {
+      "kind": "sight",
+      "name": "Apple Grove Golf Course",
+      "place_slug": "apple-grove-golf-course-minot",
+      "note": "The nearest other publicly accessible course, 3.6 road miles away in Minot; its booking platform reports the club as taking public bookings."
+    },
+    {
+      "kind": "stay",
+      "name": "Hyatt House Minot",
+      "place_slug": "hyatt-house-minot",
+      "note": "Listed among Minot lodging on visitminot.org."
+    },
+    {
+      "kind": "stay",
+      "name": "Hotel Revel",
+      "place_slug": "hotel-revel-minot",
+      "note": "Listed among Minot lodging on visitminot.org."
+    },
+    {
+      "kind": "food",
+      "name": "JL Beers",
+      "place_slug": "jl-beers-minot",
+      "note": "Listed among Minot dining on visitminot.org."
+    },
+    {
+      "kind": "food",
+      "name": "Ironhorse Kitchen + Bar",
+      "place_slug": "ironhorse-kitchen-and-bar-minot",
+      "note": "Listed among Minot dining on visitminot.org."
+    }
+  ]
+}

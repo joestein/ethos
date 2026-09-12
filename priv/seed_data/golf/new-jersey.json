@@ -1,0 +1,187 @@
+{
+  "guide": {
+    "slug": "new-jersey-golf-guide",
+    "title": "Seaview Bay Course: Golf in Galloway, New Jersey",
+    "destination": "Galloway, New Jersey",
+    "state": "New Jersey",
+    "county": "Atlantic County",
+    "intro": "Every other guide in this fifty-state set is anchored on the highest-ranked entry carrying Golf Digest's own \"Public\" label on that state's Best in State 2025-'26 ranking. New Jersey is one of three states where that cannot be done. The New Jersey ranking runs 25 entries, ranks 1 through 25, from Pine Valley Golf Club at 1 to Watchung Valley Golf Club at 25, and in the current state of the 2025-'26 edition every one of the 25 carries the label \"Private.\" There is no publicly accessible entry at any rank to anchor on, so this guide uses the set's stated fallback instead: the publicly accessible course in the state with the strongest verifiable competitive record. That is the Bay Course at Seaview Hotel & Golf Club, 401 South New York Road, Galloway, in Atlantic County — host of the ShopRite LPGA powered by Wakefern and part of the 1942 PGA Championship, Sam Snead's first major. It is a fallback anchor and carries no ranking of its own. The section below sets out how that negative was proved, in enough detail that a reader can go and check it.",
+    "sections": [
+      {
+        "heading": "Getting there",
+        "body": "Seaview Hotel & Golf Club is at 401 South New York Road, Galloway, New Jersey 08205, in Atlantic County; the golf shop number is (609) 748-7680. Atlantic City International Airport (ACY), in Egg Harbor Township, is the nearest major airport by a wide margin: a road-routing engine returns 11.93 miles from the Bay Course to the terminal, running 5.82 miles on CR 561 (Jimmie Leeds Road), 1.64 miles on CR 575 and 0.86 miles on CR 563 (Delilah Road). Philadelphia International (PHL) routes at 61.3 road miles, of which 30.81 miles are on the Atlantic City Expressway; NJ 42, I-76, PA 291, CR 670 and CR 561 all appear on that route. Newark Liberty (EWR) routes at 102.44 road miles, 75.28 of them on the Garden State Parkway, with the New Jersey Turnpike making up part of the remainder. On every one of those routes the engine names the course-end waypoint \"New York Road\" — the road in the property's own street address — which is how the origin point behind all the distances in this guide was confirmed to be the one that serves Seaview."
+      },
+      {
+        "heading": "A different rule for this state",
+        "body": "Golf Digest publishes a Best in State ranking for New Jersey at golfdigest.com/courses/guides/new-jersey-best-golf-courses-rankings, and the page dates its own edition in a sentence identical in every copy examined: \"Below you'll find our 2025-'26 ranking of the Best Golf Courses in New Jersey.\" Direct machine requests for that page are refused at the CDN edge — HTTP 403, a 450-byte body, under four different header profiles — so the ranking was read three ways instead: an Internet Archive capture of 16 October 2025, a second capture of 12 June 2026, and a live fetch of the page itself on 6 September 2026. The two captures are genuinely two artefacts rather than one snapshot behind two addresses: different memento datetimes, different archive digests, different body hashes, and, decisively, different source WARCs, meaning two distinct crawls of the origin. The live fetch touches the Archive not at all. All three return the same 25 courses in the same rank order: 1 Pine Valley Golf Club, 2 Baltusrol Golf Club: Lower, 3 Somerset Hills Country Club, 4 Baltusrol Golf Club: Upper, 5 Plainfield Country Club, 6 Ridgewood Country Club: Composite, 7 Hollywood Golf Club, 8 Bayonne Golf Club, 9 Galloway National Golf Club, 10 Liberty National Golf Club, 11 Essex County Country Club, 12 Mountain Ridge Country Club, 13 Union League National Golf Club, 14 The Ridge At Back Brook, 15 Trump National Golf Club Bedminster: Old Course, 16 Arcola Country Club, 17 Metedeconk National Golf Club: 1st/3rd, 18 Hidden Creek, 19 Hamilton Farm Golf Club (Highlands), 20 Morris County Golf Club, 21 Trump National Golf Club Philadelphia, 22 Atlantic City Country Club, 23 Hackensack Golf Club, 24 Forsgate Country Club (Banks), 25 Watchung Valley Golf Club.\n\nThe access labels were read from inside each entry's own header block rather than by position on the page, because the page renders its countdown bottom-up — rank 25 appears first in document order and rank 1 last, and each label sits about a hundred bytes ahead of the course name it belongs to. Each capture carries 25 header blocks, 25 title elements and 25 label elements: the three counts match one another exactly, so no entry is unlabelled and no entry can be silently inheriting a neighbour's label. In the 12 June 2026 capture and in the live fetch, all 25 labels read \"Private.\" Read structurally, the word \"Public\" occurs exactly twice in the whole of that capture, and neither occurrence is an access label: both belong to a story-card link pointing at a different ranking altogether, \"America's 100 Greatest Public Courses.\"\n\nThe second proof shares no artefact with the first. Twelve of the twenty-five operators' own hostnames were fetched directly, away from Golf Digest entirely — Pine Valley, Baltusrol, Somerset Hills, Plainfield, Ridgewood, Hollywood, Galloway National, Hidden Creek, Trump National Philadelphia, Forsgate, Atlantic City Country Club and the Ottinger Golf Group. Across all twelve there is no public green fee, no public tee-time booking path and no non-member rate; every one presents a member login, a membership enquiry route, or both. Several say it outright. Ridgewood Country Club: \"Ridgewood Country Club is a private, Member-owned Club. Membership requires sponsorship and introductions by current Club Members. We are unable to provide membership information to non-members.\" Hidden Creek's own FAQ: \"Is Hidden Creek open to the public? No.\" Hollywood Golf Club's page title: \"Private Golf Club in Deal, Monmouth County, New Jersey.\" Trump National Philadelphia \"provides an exquisite private club experience,\" with no public rate anywhere on the site. Pine Valley's website is a 408-byte page whose entire visible text is its own name, 23 characters, with no booking facility of any kind. A thirteenth site, for rank 13's Union League National, resolves to The Union League of Philadelphia, a members' city club at 140 South Broad Street with no tee-time path anywhere in it; Golf Digest's own course page for that entry reads \"Facility Type Private\" and puts the club at 1765 US-9, Cape May Court House. The remaining eleven operators' sites were not re-fetched, so this guide rests their disposition on the ranking's label alone, and says so rather than implying more.\n\nThe one entry that has ever looked publicly accessible is rank 22, Atlantic City Country Club in Northfield, and what disposes of it is a written refusal rather than a label. The club's real site is accountryclub.com — not the obvious alternative domain, which belongs to a powersports dealership in Hammonton and contains the word \"golf\" nowhere at all. The club's own site carries no tee-time link of any kind. Its management company, the Ottinger Golf Group, writes on its own memberships page: \"Atlantic City Country Club Private Membership. Membership is closed. Future consideration is by referral only.\" The same page adds that \"Associate Membership does NOT include access to Atlantic City Country Club, Member Events, Lockers or Club Charging Privileges,\" and the group's home page calls it \"our private Atlantic City Country Club\" while describing its two sister courses as daily-fee. Golf Digest's own course page for the club agrees in its own words: the course \"opened to the public in 1998 when Hilton Hotels bought it, then was owned by Caesars Entertainment, but now has returned to being private.\"\n\nThat same entry produced one finding that reaches past New Jersey, and it is stated here plainly because it is precisely what this method exists to catch. In the 16 October 2025 capture, rank 22 carries the label \"Public.\" In the 12 June 2026 capture the same entry carries \"Private\" — same rank, same course name, same subtitle town of Northfield, NJ, same link, same internal asset id 3bb5d59bc0e5f8febff4db6467a7e2ac, and the same edition sentence, \"2025-'26,\" in both files. The ranking's access label changed without the edition changing. That is why this set never asserts that a course is \"the best,\" and never treats a ranking's label as the last word on access: the claim it makes is \"highest-ranked publicly accessible course per this named ranking at this named edition,\" and access is always tested against the operator's own published terms. Here the operator's terms and the current label agree, and they agree the entry is closed.\n\nWith no publicly accessible entry at any rank, this guide falls back to the criterion the set reserves for exactly this case: the publicly accessible course with the strongest verifiable competitive record. That is Seaview's Bay Course."
+      },
+      {
+        "heading": "The Bay Course",
+        "body": "The Bay Course opened in 1914 on the shore of Reeds Bay, and its two architects are credited in sequence by the tournament that plays there: \"1914 construction: Hugh Wilson / 1915 completion: Donald Ross,\" then \"1998 restoration: Robert Cupp, Jr.\" The same source records that \"in 1997 Robert Cupp, Jr. began a comprehensive $1 million restoration to bring the course back to the vision of its original designers.\" It plays as a links: \"Situated on the coast of Reeds Bay… the Bay Course incorporates a variety of challenges in its classic mounding, deep pot and high-faced bunkers, tricky seashore winds and small greens with subtle undulations.\" Seaview's own description makes the same point about how the course defends itself: \"The 6,300-yard layout is less a test of length, and more a test of imagination, accuracy and short game.\" The operator's scorecard page publishes the ratings and slopes: Men — Blue 69.8/125, Blue/White 69.1/122, White 68.0/119, White/Gold 65.0/113, Gold 63.5/110; Women — White 73.6/127, White/Gold 70.3/123, Gold 67.7/118. The estate around it runs to 670 acres and was founded in 1914 by Clarence H. Geist, described on Seaview's own dining page as \"a Philadelphia business man, utilities magnate, and golfer.\"\n\nThe championship record is why this course is the state's anchor, and both halves of it were fetched at source rather than taken from the operator's own claim about itself. The ShopRite LPGA powered by Wakefern is played here: \"The ShopRite LPGA Powered by Wakefern is played on the Bay Course,\" says the tournament's own site, whose tickets page records \"Course Seaview Hotel & Golf Club Bay Course — Format Three days, 54-hole stroke play — Purse $2 million.\" The 2026 edition was contested at Galloway on 29–31 May 2026 and won by Celine Boutier. The history is worth stating precisely, because it is easy to state wrongly: the event \"debuted at Seaview in 1986 and moved to Greate Bay Country Club in Somers Point from 1988-1997, before returning to Seaview in 1998, where it has been held ever since\" — but the same site also records that it was \"not held from 2007-2009\" and that it \"proudly returned to Atlantic City and the LPGA in 2010 to the Bay Course at Seaview.\" The run at Seaview since 1998 is therefore not an unbroken one, and this guide does not describe it as annual.\n\nThe older record is the 1942 PGA Championship. The PGA of America's own championship history lists that year as \"Sam Snead — Seaview Country Club, Atlantic City, New Jersey — May 23-31, 1942,\" par 71, a field of 32, winning margin \"2&1 over Jim Turnesa,\" and describes the finish: \"the match ended on the 35th hole when Snead holed a spectacular 60-foot chip shot for a birdie to secure the victory.\" The same page records that \"defending PGA Champion Vic Ghezzi was eliminated by Demaret, 4 and 3, in the opening round at Seaview Country Club.\" The tournament rights-holder places the Bay Course inside that championship: \"Part of the Bay Course was also used during the 1942 PGA Championship, when Sam Snead took his first major championship.\" What no source settles is which of Seaview's two courses held the hole Snead won it on — the resort attributes that chip to the Pines Course's 16th, while the tournament attributes the holes used to the Bay — so this guide says only that the 1942 PGA was played at Seaview across its holes, and that both the operator and the rights-holder describe the Bay Course as part of it."
+      },
+      {
+        "heading": "Playing the Bay Course",
+        "body": "Access here is genuinely public, not a resort-guest privilege dressed up as one. Seaview's own site navigation carries \"Book Tee Times\" and, separately, \"Book Passholder Tee Times\" — a public path and a pass-holder path side by side. The public one resolves through Troon to a general tee sheet at golfwithaccess.com, which returns HTTP 200 under the heading \"Seaview Hotel and Golf Club — 401 S New York Rd, Galloway Township, New Jersey\" and offers date, player-count and time filters with no membership gate. Two separate reads of that page found no sentence conditioning play on membership, on resort-guest status or on a room booking. Troon's own facility record classifies the property as \"Course type: Daily fee/Resort\" and describes it as offering \"36 holes of championship golf on two of New Jersey's oldest and most prestigious courses.\" Stay-and-play packages exist, but they are an optional package request, not a precondition.\n\nNo green fee is published for this course, and that is the operator's own doing rather than a gap in the research. Seaview publishes no rate table at all; it publishes a page explaining why, which states that its prices are \"changing constantly in real time, based on the demand of the consumer\" and that \"prices fluctuate as time sell or get cancelled\" — the operator's own wording, grammar included. Because there is no dated table anywhere on the site, and because the operator has itself disclosed that the engine's number does not hold still, this guide prints no figure. Two adjacent and dated terms can be quoted. The operator names a \"2026 SEAVIEW ANNUAL PASS PROGRAM,\" whose own page carries no prices and gives one instruction: \"Please contact the golf shop by calling us at (609) 748-7680.\" And Seaview states that it \"charges a rider fee for any non-playing guest on the course and require the guest to have a valid drivers license,\" without naming the amount. Booking runs on a published rolling horizon — \"Dynamic Pricing allows you to get the tee time and price you want by booking in advance and taking advantage of our 30 day booking window\" — so an empty sheet beyond that horizon is a horizon and not a closure. Cancellation terms are published and unambiguous: \"For all reservations made 7 days or further in advance – 48 hours. For all reservations made inside of 7 days – 24 hours. Weekends are defined as Friday – Sunday. Weekdays are defined as Monday – Thursday.\"\n\nOne week of the year the Bay Course is not available at all. The ShopRite LPGA's own schedule of events marks four days as \"Course Closed to the Public\" before the championship even starts — Monday 25 May 2026 for the LPGA qualifier and professional practice rounds, Tuesday 26 May for practice, Wednesday 27 May for pro-am day one and Thursday 28 May for pro-am day two — and competition then runs Friday 29, Saturday 30 and Sunday 31 May. The Bay Course is out of general play for seven days, Monday 25 May to Sunday 31 May 2026, not for the three days of the championship alone. The tournament site publishes no 2027 date, and that absence is reported here rather than filled in. Its schedule also says \"Course Closed to the Public\" without naming which course, and the word \"Pines\" appears nowhere on its ticket pages, so whether the Pines Course also closes during that week is not established by any source, and this guide does not assume it either way.\n\nBeyond that one window, openness on any given date is unverified rather than confirmed. Seaview publishes no golf calendar, no aeration schedule and no seasonal opening or closing dates; a keyword sweep of the operator's pages for closure, aeration, renovation, flood and maintenance notices — including the pages' HTML comments, searched separately, where a stale notice can hide — returned nothing of the kind. That is an absence of evidence, and this guide states it as one rather than reporting the course open year-round."
+      },
+      {
+        "heading": "The Pines Course",
+        "body": "The second course to play is Seaview's own Pines Course, 0.75 road miles from the Bay Course by a routing engine that named the Bay end of the route \"New York Road\" and the Pines end \"Fairway Lane.\" It shares the address, the telephone number, the operator and the tee sheet with the Bay Course, and it is nonetheless a separate round: on the public tee sheet at golfwithaccess.com the Courses filter offers three options — All, Bay Course and Pines Course — so the Pines is individually selectable by anyone, with no membership. It is a full 18. Troon's \"36 holes of championship golf on two\" courses puts 18 on each; the operator publishes a complete five-tee rating and slope set for it, in the band an 18-hole rating occupies; and the operator gives its length as 6,800 yards.\n\nSeaview's description: the Pines \"opened in 1929 and was designed by William Flynn and Howard Toomey… winds its way through New Jersey woodlands, presenting elevation changes and bountiful doglegs. The course measures 6,800 yards, and it features large bunkers and expansive, sloping greens.\" Ratings and slopes from the operator's scorecard page, reproduced as published: Men — Blue 72.4/123, Blue/White 71.1/123, White 70.2/120, White/Gold 67.3/118, Gold \"651/112\"; Women — White 75.7/136, White/Gold 72.9/127, Gold 70.1/118. The men's Gold figure is printed on the operator's own page without its decimal point, and it is left here exactly as the operator prints it rather than repaired into what it probably means. The same dynamic-pricing statement covers this course, so no green fee is publishable for it either."
+      },
+      {
+        "heading": "The resort around the course",
+        "body": "The basecamp is the property itself. Seaview, a Destination by Hyatt Hotel, sits at the same address as the two courses, 401 South New York Road, and the operator describes the whole estate this way: \"Set on 670 acres of Galloway, NJ, coast and woodlands, Seaview is home to two world class golf courses and a 296-room hotel.\" The golf site's own navigation carries a \"Book Hotel Room\" path alongside the two tee-time paths. Hyatt's own page for the property could not be read — hyatt.com refused every fetch attempted, with HTTP 403 — so everything stated about the lodging here comes from the property's golf site and from Troon rather than from Hyatt. A \"Seaview Golf Break\" package bundles \"Deluxe accommodations, Two rounds of golf, Range balls and yardage book,\" with the operator's note that \"Guests may play additional rounds of golf in the afternoon at no charge (based upon availability).\" Its terms are published and worth reading before booking: \"rates vary depending on room type and location… exclude tax… Blackout dates may apply… Prime season weekends may require two-night minimum stay.\"\n\nDinner on the property is the Grill Room + Lobby Bar, which is the name the site navigation uses; the operator's body copy calls the same room \"The Costal Grille\" and tells its history: it \"is part of the original Farmhouse that became the center of the Seaview, was founded in 1914 by Clarence H. Geist, a Philadelphia business man, utilities magnate, and golfer. Stirring memories of a simpler time in our history, this warm and rustic restaurant will remind you of sitting at home dining with close family and friends. Our Executive Chef has created a restaurant menu that well represents those feelings, supporting local farms, fisheries and artisans.\" The chef is quoted directly on the same page: \"I enjoy letting the food speak for itself…the best products, harvested at their peak, cooked using simple and time tested methods.\" Reservations are on (609) 652-1800 or through OpenTable.\n\nFor a meal off the property, The Smithville Inn is 3.29 road miles from the Bay Course, at 1 N. New York Road in the Smithville part of Galloway township. It describes itself as \"Old World Aesthetics Meets New American Cuisine… A Fusion of Tradition and Innovation,\" runs separate lunch and dinner menus with a second room called The Baremore Tavern, and publishes its hours in its own footer: Sunday 11:30–8p, Monday to Saturday 11:30–9p, \"Serving lunch from 11:30 until 4:00 PM, Serving dinner all day.\" Its number is 609-652-7777. If the resort is full, The Colonial Inn at Smithville is 3.46 road miles out, at 615 E Moss Mill Road, trading as \"The Colonial Inn | The Pitney House\" with 30 rooms split across four named buildings — the Main House, The Country Inn, the Barn and the Village Rooms — in a historic village the inn describes as having \"60 unique shoppes, 7 eateries, paddle boats, and over 30 free weekend events.\" Its number is 609-748-8999. Two dining names often attached to this stretch of Atlantic County are deliberately absent from this guide: their domains did not resolve in DNS when the research was done, so nothing about them could be confirmed."
+      }
+    ],
+    "faq": [
+      {
+        "question": "How do I book a tee time on the Bay Course?",
+        "answer": "Through the operator's own \"Book Tee Times\" link, which resolves via Troon to a general-public tee sheet at golfwithaccess.com headed \"Seaview Hotel and Golf Club — 401 S New York Rd, Galloway Township, New Jersey.\" It offers date, player-count and time filters and no membership gate; two separate reads of the page found no sentence conditioning play on membership, on resort-guest status or on a room booking. Troon classifies the property as \"Course type: Daily fee/Resort.\" Seaview publishes its own booking horizon: \"our 30 day booking window.\" The golf shop is on (609) 748-7680."
+      },
+      {
+        "question": "Why is this guide not anchored on Golf Digest's New Jersey ranking, the way the other states are?",
+        "answer": "Because that ranking has no publicly accessible entry. Its 2025-'26 New Jersey edition lists 25 courses, and in its current state all 25 carry the label \"Private.\" The list was read three ways — two Internet Archive captures drawn from different source WARCs, on 16 October 2025 and 12 June 2026, plus a live fetch — and each capture carries 25 header blocks, 25 course names and 25 access labels, counts that match exactly, so no entry is unlabelled. Independently of the labels, twelve of the twenty-five operators' own sites were fetched directly and not one publishes a public green fee, a public booking path or a non-member rate. With no publicly accessible entry at any rank, this guide uses the set's stated fallback: the publicly accessible course with the strongest verifiable competitive record, which is Seaview's Bay Course."
+      },
+      {
+        "question": "The ranking has labelled one New Jersey course \"Public.\" Can I play it?",
+        "answer": "No. The entry is rank 22, Atlantic City Country Club in Northfield, and its own management company refuses in writing. The Ottinger Golf Group's memberships page reads: \"Atlantic City Country Club Private Membership. Membership is closed. Future consideration is by referral only,\" and adds that \"Associate Membership does NOT include access to Atlantic City Country Club, Member Events, Lockers or Club Charging Privileges.\" The group's home page calls it \"our private Atlantic City Country Club.\" The club's own website carries no tee-time link of any kind. Golf Digest's own course page for it says the course \"opened to the public in 1998 when Hilton Hotels bought it, then was owned by Caesars Entertainment, but now has returned to being private.\""
+      },
+      {
+        "question": "Is the ranking's access label itself reliable?",
+        "answer": "Not on its own, and New Jersey is where that was demonstrated. Rank 22 carries the label \"Public\" in the 16 October 2025 capture of the ranking and \"Private\" in the 12 June 2026 capture — same rank, same course, same subtitle town, same link, same internal asset id 3bb5d59bc0e5f8febff4db6467a7e2ac, and the same edition sentence, \"2025-'26,\" in both. The label changed without the edition changing. That is why this set tests access against what the operator itself publishes rather than against the label, and why it claims only \"highest-ranked publicly accessible course per this named ranking at this named edition\" and never \"the best.\""
+      },
+      {
+        "question": "What does a round cost?",
+        "answer": "No figure is published, so none is printed here. Seaview publishes no rate table at all; it publishes a page explaining that its prices are \"changing constantly in real time, based on the demand of the consumer\" and that \"prices fluctuate as time sell or get cancelled.\" With no dated table on the operator's site, and the operator itself disclosing that the engine's number does not hold still, there is nothing quotable. The operator does name a \"2026 SEAVIEW ANNUAL PASS PROGRAM,\" whose page carries no prices and one instruction — \"Please contact the golf shop by calling us at (609) 748-7680\" — and it states that it \"charges a rider fee for any non-playing guest on the course and require the guest to have a valid drivers license,\" without naming the amount."
+      },
+      {
+        "question": "Is there a week when the Bay Course is closed?",
+        "answer": "Yes. The ShopRite LPGA powered by Wakefern's own schedule of events marks four days \"Course Closed to the Public\" ahead of the 2026 championship — Monday 25 May for the LPGA qualifier and professional practice rounds, Tuesday 26 May for practice, Wednesday 27 May and Thursday 28 May for the two pro-am days — with competition on Friday 29, Saturday 30 and Sunday 31 May. That is seven days out of general play, Monday 25 May to Sunday 31 May 2026, not three. No 2027 date is published anywhere on the tournament's site. Outside that window, no operator calendar, aeration schedule or seasonal dates are published for either course, so openness on any given date is unverified rather than confirmed."
+      },
+      {
+        "question": "Does the Pines Course close during tournament week too?",
+        "answer": "Not established. The tournament's schedule says \"Course Closed to the Public\" without naming which course, and the word \"Pines\" appears nowhere on its ticket pages. No source found resolves it in either direction, so this guide does not assume the Pines stays open, and does not assume it closes."
+      },
+      {
+        "question": "Can I play the Pines Course as well?",
+        "answer": "Yes, and it is bookable in its own right. On the same public tee sheet at golfwithaccess.com the Courses filter offers three options — All, Bay Course and Pines Course — so the Pines is individually selectable with no membership. It is a full 18: Troon records \"36 holes of championship golf on two\" courses at the property, the operator gives its length as 6,800 yards, and it has a complete five-tee rating and slope set of its own. It opened in 1929 to a design by William Flynn and Howard Toomey, 0.75 road miles from the Bay Course at the same address."
+      },
+      {
+        "question": "Where is the Bay Course, and where do I stay?",
+        "answer": "At Seaview Hotel & Golf Club, 401 South New York Road, Galloway, New Jersey 08205, in Atlantic County, on 670 acres by Reeds Bay. The lodging is at the same address: Seaview, a Destination by Hyatt Hotel, which the operator describes as a 296-room hotel on the property. Dinner on site is the Grill Room + Lobby Bar, reservations (609) 652-1800 or OpenTable. Off the property, The Smithville Inn is 3.29 road miles out and The Colonial Inn at Smithville, with 30 rooms, is 3.46 road miles. Atlantic City International Airport (ACY) routes at 11.93 road miles."
+      }
+    ],
+    "photos": []
+  },
+  "places": [
+    {
+      "slug": "seaview-bay-course",
+      "name": "Seaview — Bay Course",
+      "kind": "golf-course",
+      "town": "Galloway",
+      "state": "New Jersey",
+      "county": "Atlantic County",
+      "official_url": "https://www.seaviewgolf.com/",
+      "summary": "New Jersey's fallback anchor in this set, chosen on competitive record because every one of the 25 entries on Golf Digest's 2025-'26 New Jersey ranking carries the label \"Private.\" Opened in 1914 on the shore of Reeds Bay at Seaview Hotel & Golf Club: laid out by Hugh Wilson in 1914, finished by Donald Ross in 1915, and restored by Robert Cupp, Jr. from 1997 in what the tournament rights-holder calls \"a comprehensive $1 million restoration.\" Host of the ShopRite LPGA powered by Wakefern — 54 holes of stroke play for a $2 million purse, at Seaview since 1998 though not held from 2007 to 2009 — and part of the 1942 PGA Championship, won by Sam Snead for his first major. Publicly accessible: Troon classifies the property \"Course type: Daily fee/Resort\" and its public tee sheet carries no membership gate. No green fee is publishable; the operator states that its prices \"fluctuate as time sell or get cancelled.\"",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "seaview-pines-course",
+      "name": "Seaview — Pines Course",
+      "kind": "golf-course",
+      "town": "Galloway",
+      "state": "New Jersey",
+      "county": "Atlantic County",
+      "official_url": "https://www.seaviewgolf.com/",
+      "summary": "The second course at Seaview Hotel & Golf Club, 0.75 road miles from the Bay Course at the same address, and separately bookable: the public tee sheet's Courses filter lists All, Bay Course and Pines Course, so it can be selected on its own with no membership. A full 18 — Troon records \"36 holes of championship golf on two\" courses here, and the operator publishes a complete five-tee rating set for it. It \"opened in 1929 and was designed by William Flynn and Howard Toomey… winds its way through New Jersey woodlands, presenting elevation changes and bountiful doglegs,\" measuring 6,800 yards with \"large bunkers and expansive, sloping greens.\" No green fee is publishable for it either.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "seaview-hotel-galloway",
+      "name": "Seaview, a Destination by Hyatt Hotel",
+      "kind": "hotel",
+      "town": "Galloway",
+      "state": "New Jersey",
+      "county": "Atlantic County",
+      "official_url": "https://www.seaviewgolf.com/",
+      "summary": "The lodging on the golf property, at the same address as both courses: \"Set on 670 acres of Galloway, NJ, coast and woodlands, Seaview is home to two world class golf courses and a 296-room hotel.\" Hyatt's own page for the property refused every fetch attempted with HTTP 403, so this record is sourced from the property's golf site and from Troon rather than from Hyatt. A \"Seaview Golf Break\" package bundles \"Deluxe accommodations, Two rounds of golf, Range balls and yardage book,\" with the operator's note that \"Guests may play additional rounds of golf in the afternoon at no charge (based upon availability).\" Published package terms: \"rates vary depending on room type and location… exclude tax… Blackout dates may apply… Prime season weekends may require two-night minimum stay.\"",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "grill-room-lobby-bar-seaview",
+      "name": "Grill Room + Lobby Bar",
+      "kind": "restaurant",
+      "town": "Galloway",
+      "state": "New Jersey",
+      "county": "Atlantic County",
+      "official_url": "https://www.seaviewgolf.com/grill-room-lobby-bar/",
+      "summary": "The dining room on the Seaview property, called \"Grill Room + Lobby Bar\" in the site navigation and \"The Costal Grille\" in the operator's own body copy, which records that it \"is part of the original Farmhouse that became the center of the Seaview, was founded in 1914 by Clarence H. Geist, a Philadelphia business man, utilities magnate, and golfer.\" The menu is described as \"supporting local farms, fisheries and artisans,\" and the executive chef is quoted: \"I enjoy letting the food speak for itself…the best products, harvested at their peak, cooked using simple and time tested methods.\" Reservations (609) 652-1800 or through OpenTable.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "smithville-inn-galloway",
+      "name": "The Smithville Inn",
+      "kind": "restaurant",
+      "town": "Galloway",
+      "state": "New Jersey",
+      "county": "Atlantic County",
+      "official_url": "https://www.smithvilleinn.com/",
+      "summary": "At 1 N. New York Road in the Smithville part of Galloway township, 3.29 road miles from the Bay Course. It describes itself as \"Old World Aesthetics Meets New American Cuisine… A Fusion of Tradition and Innovation,\" runs separate lunch and dinner menus and a second room called The Baremore Tavern, and publishes its hours in its own footer: Sunday 11:30–8p, Monday to Saturday 11:30–9p, \"Serving lunch from 11:30 until 4:00 PM, Serving dinner all day.\" Reservations are online or on 609-652-7777.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "colonial-inn-smithville",
+      "name": "The Colonial Inn at Smithville",
+      "kind": "hotel",
+      "town": "Galloway",
+      "state": "New Jersey",
+      "county": "Atlantic County",
+      "official_url": "https://colonialinnsmithville.com/",
+      "summary": "At 615 E Moss Mill Road in the Smithville part of Galloway township, 3.46 road miles from the Bay Course, trading as \"The Colonial Inn | The Pitney House.\" Its site states 30 rooms split across four named buildings — the Main House, The Country Inn, the Barn and the Village Rooms — in a historic village it describes as having \"60 unique shoppes, 7 eateries, paddle boats, and over 30 free weekend events.\" Rooms and rates, booking, packages and gift certificates are all published. Telephone 609-748-8999.",
+      "status": "open",
+      "photos": []
+    }
+  ],
+  "entries": [
+    {
+      "kind": "sight",
+      "name": "Seaview — Bay Course",
+      "place_slug": "seaview-bay-course",
+      "note": "The state's fallback anchor: all 25 entries on Golf Digest's 2025-'26 New Jersey ranking are labelled \"Private,\" so the criterion is competitive record. Host of the ShopRite LPGA; part of the 1942 PGA Championship."
+    },
+    {
+      "kind": "sight",
+      "name": "Seaview — Pines Course",
+      "place_slug": "seaview-pines-course",
+      "note": "Day two: a full 18 at the same address, 0.75 road miles, individually selectable on the public tee sheet's Courses filter. Flynn and Toomey, 1929, 6,800 yards."
+    },
+    {
+      "kind": "stay",
+      "name": "Seaview, a Destination by Hyatt Hotel",
+      "place_slug": "seaview-hotel-galloway",
+      "note": "On the property, at the same address as both courses: a 296-room hotel on 670 acres, with a golf-break package bundling two rounds."
+    },
+    {
+      "kind": "food",
+      "name": "Grill Room + Lobby Bar",
+      "place_slug": "grill-room-lobby-bar-seaview",
+      "note": "The dining room on the property, in the 1914 farmhouse at the centre of the estate. Reservations (609) 652-1800 or OpenTable."
+    },
+    {
+      "kind": "food",
+      "name": "The Smithville Inn",
+      "place_slug": "smithville-inn-galloway",
+      "note": "3.29 road miles, at 1 N. New York Road. Lunch from 11:30, dinner all day; a second room, The Baremore Tavern."
+    },
+    {
+      "kind": "stay",
+      "name": "The Colonial Inn at Smithville",
+      "place_slug": "colonial-inn-smithville",
+      "note": "3.46 road miles: 30 rooms across four named buildings in the historic village at Smithville."
+    }
+  ]
+}

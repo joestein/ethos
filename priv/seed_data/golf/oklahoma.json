@@ -1,0 +1,149 @@
+{
+  "guide": {
+    "slug": "oklahoma-golf-guide",
+    "title": "Jimmie Austin Golf Club: Golf in Norman, Oklahoma",
+    "destination": "Norman, Oklahoma",
+    "state": "Oklahoma",
+    "county": "Cleveland County",
+    "intro": "Golf Digest's 2025-'26 ranking of the best golf courses in Oklahoma places Jimmie Austin Golf Club at the University of Oklahoma fifth and labels it \"Public\" — the only course on the fifteen-course list carrying that label; every other entry, including the four ranked above it (Southern Hills Country Club, Oak Tree National, Karsten Creek Golf Club and The Patriot Golf Club), is \"Private.\" It sits at 4 Ransom Drive in Norman, Cleveland County; the U.S. Census Bureau's geocoder, run on two independently sourced coordinate pairs for the course, returns Cleveland County (GEOID 40027) and Norman city both times. Perry Maxwell designed the course, which the club's own Club History page says opened for play in January 1951 (Golf Digest's course page instead states \"Year Opened: 1952\"); Robert E. Cupp renovated it in 1996 and Tripp Davis in 2017, and it is the home course of the University of Oklahoma men's and women's golf teams. The club's own site opens a Chronogolf (Lightspeed Golf) public-booking widget, injected into the page by JavaScript rather than written as an ordinary link, resolving to chronogolf.com/club/jimmie-austin-golf-course, where the public player type can book up to seven days ahead. This guide's second course is Westwood Golf Course, a City of Norman municipal course.",
+    "sections": [
+      {
+        "heading": "Getting there",
+        "body": "The club's own contact page gives the address as 4 Ransom Drive, Norman, Oklahoma 73019, the same address the Chronogolf marketplace listing repeats; Golf Digest's course page instead shows the older \"1 Par Drive,\" which the club's own site says is stale: \"Our new address is 4 Ransom Drive and is not located on Google maps yet.\" The nearest airport is Will Rogers International Airport, in Oklahoma City; the road route between the two, run through OSRM's own routing, is 23.2 miles, by way of South MacArthur Boulevard, Southwest 104th Street, Northwest 27th Street and Shields Boulevard to I-35 (concurrent with US-77), then West Lindsey Street, 24th Avenue Southwest, OK-9, Imhoff Road, Jenkins Avenue and East Constitution Street into Norman. The course sits in Cleveland County: the U.S. Census Bureau's geocoder, run on the OpenStreetMap coordinates for the course and again, separately, on Golf Digest's own coordinates for it, returns Cleveland County (GEOID 40027) and Norman city both times."
+      },
+      {
+        "heading": "Jimmie Austin Golf Club at the University of Oklahoma",
+        "body": "Golf Digest's 2025-'26 ranking places Jimmie Austin fifth in Oklahoma and labels it \"Public\" — the only course on the fifteen-course list carrying that label. Perry Maxwell designed the course; the club's own Club History page states it \"opened for play\" in January 1951, while Golf Digest's course page instead gives \"Year Opened: 1952\" — both are read here and neither is chosen. Robert E. Cupp, ASGCA, renovated the course in 1996, and Tripp Davis, an OU graduate and member of the 1989 OU Men's National Championship Golf Team, led a further renovation in 2017. It is the home course of the University of Oklahoma men's and women's golf teams. The club's own Chronogolf record lists the course at 18 holes, par 72, nine tee sets, with the Championship tees at 7,452 yards, a 77.9 rating and a 142 slope; Golf Digest's course page instead gives 7,387 yards at the same slope — both figures are read here, and the club's own record is the one this guide treats as authoritative on its own course. The club's own Club History page records the 1997 Oklahoma State Amateur and NCAA Regional, the Big 12 Women's Championship in 1998 and 2010, the U.S. Amateur Public Links Championship in 2009, the U.S. Women's Amateur Public Links in 2013, and NCAA Regionals in 2012, 2018 and 2022 for the men and 2013 and 2019 for the women. OU Athletics' own facilities page adds: \"In 2023, Golfweek named 'The Jimmie' the No. 6 Campus Golf Course in the country, and No. 1 in the Southeastern Conference.\""
+      },
+      {
+        "heading": "Playing it as a public golfer",
+        "body": "Jimmie Austin's own site, theougolfclub.com, carries a site-wide \"Book a Tee-Time\" button built from a Chronogolf (Lightspeed Golf) widget; the button is injected into the page by JavaScript rather than written as an ordinary link, which is why a plain scan of the page's links can miss it. Followed to its destination, the widget opens the club's public marketplace listing at chronogolf.com/club/jimmie-austin-golf-course, with no membership login required. The listing's own booking configuration sets \"defaultPublicBookingRange\": 7, and the booking system's own error message for a date outside that window reads: \"You are out of your booking range. The player type \"Public\" can only book 7 days in advance.\" As of 6 September 2026, the public tee sheet quoted a green fee of $105.75 on weekdays and $133.33 on weekends for eighteen holes, plus $18.39 for a shared cart, payable at the course rather than online. A single golfer cannot complete a booking alone through the online system — the listing's own configuration flags \"singlePlayerRestrictionActivated\": true — and must instead join a group or call the pro shop directly at (405) 325-6716. A forecaddie can be requested when booking, for $10 plus a suggested cash tip per player. The club has posted an event on its own tee sheet for Friday, 18 September 2026: \"Coach Stoops HBC Golf Classic.\" No home tournament for the University of Oklahoma golf teams falls at Jimmie Austin this season — the women's Schooner Fall Classic, 19-21 September 2026, is at Belmar Golf Club, a different course also in Norman, and the women's Bruzzy, 8-9 September 2026, is at Trophy Club Country Club in Dallas."
+      },
+      {
+        "heading": "Basecamp: Norman",
+        "body": "Montford Inn, at 322 W Tonhawa St, Norman, Oklahoma 73069, (405) 321-2200, is one lodging option in Norman. The Mont, at 1300 Classen Boulevard, Norman, Oklahoma 73071, describes itself on its own site: \"The Mont has been locally owned and operated right outside of the University of Oklahoma since 1976.\""
+      },
+      {
+        "heading": "Day two: Westwood Golf Course",
+        "body": "Westwood Golf Course, at 2400 Westport Dr, Norman, Oklahoma 73069, (405) 292-9700, is a City of Norman municipal course, open year-round. The city's own page describes it: \"Westwood is one of Oklahoma's premier public courses,\" and \"The 6200-yard course was recently renovated and features wide, tree-lined fairways and gently contoured greens, twenty traps and several water hazards.\" Its own rate page, current as of a 6 September 2026 reading of its own site, states \"All Fees include tax\" and lists: Regular $35.00, the 2:00 pm rate $29.00, the 5:00 pm rate $24.00, nine holes $24.00, senior $21.00, junior $10.00; an 18-hole cart runs $40.00 full or $20.00 shared, a 9-hole cart $22.00 full or $11.00 shared, and the range charges $5.00 for a half-bucket. Tee times book online at westwoodpark.cps.golf, reached from the city's own \"Book a Tee Time\" link. The Turn Grill serves on site. The course's own posted September 2026 events: an NHS reunion tournament on 13 September, and the City of Norman United Way Scramble on 25 September, a 9 a.m. shotgun start."
+      }
+    ],
+    "faq": [
+      {
+        "question": "How do I book a tee time at Jimmie Austin?",
+        "answer": "Through the \"Book a Tee-Time\" button on the club's own site, theougolfclub.com — a Chronogolf (Lightspeed Golf) widget injected into the page by JavaScript rather than written as an ordinary link, resolving to chronogolf.com/club/jimmie-austin-golf-course with no membership login required. The public player type can book up to seven days ahead: the booking system's own configuration sets \"defaultPublicBookingRange\": 7, and its own error message for a date outside that window reads, \"You are out of your booking range. The player type \"Public\" can only book 7 days in advance.\" As of 6 September 2026, the public tee sheet quoted $105.75 on weekdays and $133.33 on weekends for eighteen holes, plus $18.39 for a shared cart, payable at the course. A single golfer cannot complete a booking alone online and must instead join a group or call the pro shop at (405) 325-6716."
+      },
+      {
+        "question": "What does a round cost at Jimmie Austin?",
+        "answer": "As of 6 September 2026, the club's own public tee sheet quoted a green fee of $105.75 on weekdays and $133.33 on weekends for eighteen holes, plus $18.39 for a shared cart, paid at the course rather than online."
+      },
+      {
+        "question": "Is Jimmie Austin closed on any date this September?",
+        "answer": "The club has posted an event on its own tee sheet for Friday, 18 September 2026: \"Coach Stoops HBC Golf Classic.\" No home tournament for the University of Oklahoma golf teams falls at Jimmie Austin this season — the women's Schooner Fall Classic, 19-21 September 2026, is at Belmar Golf Club, a different course also in Norman, and the women's Bruzzy, 8-9 September 2026, is at Trophy Club Country Club in Dallas."
+      },
+      {
+        "question": "Where is Jimmie Austin Golf Club?",
+        "answer": "At 4 Ransom Drive, Norman, Oklahoma, in Cleveland County. The U.S. Census Bureau's geocoder, run on two independently sourced coordinate pairs for the course, returns Cleveland County (GEOID 40027) and Norman city both times. Golf Digest's course page instead shows the older \"1 Par Drive\"; the club's own site says its address changed and the new one \"is not located on Google maps yet.\""
+      },
+      {
+        "question": "Which course should I play on day two?",
+        "answer": "Westwood Golf Course, a City of Norman municipal course at 2400 Westport Dr. Its rate page, current as of a 6 September 2026 reading of its own site, lists a regular green fee of $35.00, and states that all fees include tax. Tee times book online at westwoodpark.cps.golf."
+      }
+    ],
+    "photos": []
+  },
+  "places": [
+    {
+      "slug": "jimmie-austin-golf-club-norman",
+      "name": "Jimmie Austin Golf Club at the University of Oklahoma",
+      "kind": "golf-course",
+      "town": "Norman",
+      "state": "Oklahoma",
+      "county": "Cleveland County",
+      "official_url": "https://www.theougolfclub.com/",
+      "summary": "Golf Digest's 2025-'26 Oklahoma ranking places Jimmie Austin Golf Club at the University of Oklahoma fifth and labels it \"Public,\" the only course among the fifteen ranked carrying that label. Perry Maxwell designed it; the club's own history says it opened for play in January 1951, and it has since been renovated by Robert E. Cupp (1996) and Tripp Davis (2017). It is the home course of the University of Oklahoma men's and women's golf teams. The club's own site opens a Chronogolf (Lightspeed Golf) public-booking widget at chronogolf.com/club/jimmie-austin-golf-course; the public player type can book up to seven days ahead, and single players cannot complete a booking alone online.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "westwood-golf-course-norman",
+      "name": "Westwood Golf Course",
+      "kind": "golf-course",
+      "town": "Norman",
+      "state": "Oklahoma",
+      "county": "Cleveland County",
+      "official_url": "https://www.normanok.gov/residents-visitors/parks-recreation/westwood-golf-course-0",
+      "summary": "A City of Norman municipal course at 2400 Westport Dr, self-described as \"one of Oklahoma's premier public courses.\" Tee times book online at westwoodpark.cps.golf. Its rate page, current as of a 6 September 2026 reading of its own site, lists a regular green fee of $35.00 and states that all fees include tax.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "montford-inn-norman",
+      "name": "Montford Inn",
+      "kind": "hotel",
+      "town": "Norman",
+      "state": "Oklahoma",
+      "county": "Cleveland County",
+      "official_url": "https://www.montfordinn.com/",
+      "summary": "A lodging property at 322 W Tonhawa St, Norman, Oklahoma 73069, (405) 321-2200.",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "the-mont-norman",
+      "name": "The Mont",
+      "kind": "restaurant",
+      "town": "Norman",
+      "state": "Oklahoma",
+      "county": "Cleveland County",
+      "official_url": "https://themont.com/",
+      "summary": "A restaurant at 1300 Classen Boulevard, Norman, Oklahoma 73071. Its own site states: \"The Mont has been locally owned and operated right outside of the University of Oklahoma since 1976.\"",
+      "status": "open",
+      "photos": []
+    },
+    {
+      "slug": "the-turn-grill-westwood-norman",
+      "name": "The Turn Grill",
+      "kind": "restaurant",
+      "town": "Norman",
+      "state": "Oklahoma",
+      "county": "Cleveland County",
+      "official_url": "https://www.normanok.gov/residents-visitors/parks-recreation/westwood-golf-course-0",
+      "summary": "The on-site restaurant at Westwood Golf Course, the City of Norman's municipal course at 2400 Westport Dr, Norman.",
+      "status": "open",
+      "photos": []
+    }
+  ],
+  "entries": [
+    {
+      "kind": "sight",
+      "name": "Jimmie Austin Golf Club at the University of Oklahoma",
+      "place_slug": "jimmie-austin-golf-club-norman",
+      "note": "5th on Golf Digest's 2025-'26 Oklahoma ranking, the only \"Public\"-labelled course among the fifteen."
+    },
+    {
+      "kind": "sight",
+      "name": "Westwood Golf Course",
+      "place_slug": "westwood-golf-course-norman",
+      "note": "Day two: a City of Norman municipal course, $35.00 regular green fee, tax included."
+    },
+    {
+      "kind": "stay",
+      "name": "Montford Inn",
+      "place_slug": "montford-inn-norman",
+      "note": "Lodging in Norman, at 322 W Tonhawa St."
+    },
+    {
+      "kind": "food",
+      "name": "The Mont",
+      "place_slug": "the-mont-norman",
+      "note": "Locally owned and operated right outside of the University of Oklahoma since 1976, per its own site."
+    },
+    {
+      "kind": "food",
+      "name": "The Turn Grill",
+      "place_slug": "the-turn-grill-westwood-norman",
+      "note": "On-site restaurant at Westwood Golf Course."
+    }
+  ]
+}

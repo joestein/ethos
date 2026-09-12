@@ -95,6 +95,8 @@ defmodule Ethos.Release do
 
   def seed_queens(email), do: seed_directory("queens", email)
 
+  def seed_golf(email), do: seed_directory("golf", email)
+
   @doc """
   Seeds the rione and quartiere corpus under `priv/seed_data/rome/`.
 

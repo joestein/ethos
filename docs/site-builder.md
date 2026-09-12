@@ -456,9 +456,9 @@ one row no batch claimed.
 `/destinations/illinois` and `/destinations/illinois/cook-county` are `GROUP BY`
 queries over the guides table:
 
-- `Ethos.Guides.list_states/0` — `lib/ethos/guides.ex:88-96`. Groups published
+- `Ethos.Guides.list_states/0` — `lib/ethos/guides.ex:123-131`. Groups published
   guides by `state`/`state_slug` where `state_slug` is not null.
-- `Ethos.Guides.list_counties_for_state/1` — `lib/ethos/guides.ex:98-108`. Groups
+- `Ethos.Guides.list_counties_for_state/1` — `lib/ethos/guides.ex:133-143`. Groups
   by `county`/`county_slug` within one state.
 - Routes: `lib/ethos_web/router.ex:26-28`.
 
@@ -629,11 +629,15 @@ These bind every wave. Restate the list in each dispatch; do not paraphrase it.
    called, which town a business is in — is taken from recollection or from an
    unchecked list.** A verdict establishes it or it does not ship.
 
-   **This is the one rule of the nine stated partly from anticipation, and it is
-   marked as such deliberately.** No shipped file in this corpus has yet been
-   caught carrying a stale venue name, because no set has been built before this
-   one. What the corpus *does* hold are two instances of the same failure with a
-   source in place of a memory, both recorded in
+   **This was the one rule of the nine stated partly from anticipation. It is
+   one instance less anticipatory now.** The golf checkpoint's plan named its
+   own checkpoint site "Bandon Dunes" in eleven places, from recollection;
+   running the plan's own criterion selected **Pacific Dunes**, a different
+   course ranked one place above it on the same list. Nothing stale was
+   *shipped*, because the criterion was run before authoring — which is the
+   point of §6 — but the plan text was wrong in eleven places and no reviewer
+   had noticed. See §14.1. What the corpus *also* holds are two instances of
+   the same failure with a source in place of a memory, both recorded in
    `lib/ethos/seeds/antique_trail_guide.ex:17-22`: a dealer excluded because a
    directory **mislocated a Southbury business into Woodbury**, and another
    excluded because it rested on one line of a trade association's courtesy list
@@ -680,6 +684,17 @@ finder.
 nothing to find.** Both read as "nothing to say", and under the no-minimum-length
 rule both would legitimately ship a short summary — so the failure is invisible
 at every downstream gate.
+
+**A third state exists and the flag has no word for it: reachable, but not by
+the tool you tried.** `bandondunesgolf.com` returns HTTP 402 to WebFetch on
+every path and HTTP 200 to plain `curl` with a browser user-agent;
+`golfdigest.com` is the exact reverse, 403 to `curl` and 200 to WebFetch. Both
+hosts carry facts the golf set cannot ship without. Neither is blocked, and an
+agent that tries one tool and writes `"searched": "blocked"` under-reports its
+own coverage — which is the same defect the flag was invented to prevent,
+arriving from the other side. **Try the other tool before writing `blocked`,
+and name the tool that worked in the report**, as the golf checkpoint's
+verifier did. See §14.5.
 
 The rule was written after exactly two places came back with empty findings and
 the reason surfaced only in a verifier's prose ("search access had been
@@ -1322,6 +1337,95 @@ things change:
   moduledoc should say which was chosen and why. Do not invent a hyphenated
   compound; it produces a hub nobody links to.
 
+**Golf courses: a third radius, and two facts no previous set handled.** Fifty
+sites, one per US state, anchored on the top-ranked publicly accessible course
+per a named ranking at a named edition — because "the best course in Nebraska"
+is a judgment no verifier can adjudicate, and §4 rule 8 forbids shipping one.
+**Read §14 first** — the Oregon checkpoint ran this shape end to end on
+2026-09-05, and the first thing it did was correct the set's own plan about
+which course it was building. Seven things change:
+
+- **The criterion names the site, and it will not always agree with the name
+  in the plan.** The set anchors on "highest-ranked entry carrying the
+  ranking's own `Public` label", and that is a query, not a memory. Run it for
+  each state *before* writing the state's name anywhere. The Oregon checkpoint
+  was called "Bandon Dunes" in eleven places in its own plan; the criterion
+  selects **Pacific Dunes**, #1 on Golf Digest's Oregon Best in State 2025-'26
+  list, and **Bandon Dunes is a separate course at #2 on the same list**, at
+  the same resort. This is §2's roster-unit question — the resort is the
+  institution and the course is the venue, and **this set's unit is the
+  venue** — landing together with §4 rule 8. A resort with several ranked
+  courses is the normal case, not an Oregon peculiarity: five of the top five
+  Oregon entries are courses at one resort. Name the course, never the resort,
+  and let the resort be the basecamp.
+
+- **The radius is the basecamp: wherever a visitor sleeps.** Not a walk, not a
+  park boundary, and — this is what makes golf new — **not consistent across
+  the set.** Three shapes recur: resort (lodging on the property), municipal or
+  daily-fee inside a city (the surrounding neighbourhood, which the corpus may
+  already publish), and remote (a gateway town on a named road). Each guide
+  records which shape it is and why, as a national park's county choice is
+  recorded.
+- **A second course is an entry, not a guide.** The first set whose entries
+  include another instance of the site type. It takes a `golf-course` place
+  record and no guide — unless it is another state's ranked course, in which
+  case it is a `see-also` link and no second record is minted. Some states have
+  no second course worth naming; publish without one, as Kauffman Stadium
+  published a single place and said so.
+- **Airports are prose**, extending §8 past transit and parking. Golf is flown
+  to, so *Getting there* carries more load here than it did for ballparks. A
+  terminal is still not somewhere a visitor spends the day.
+- **Tee-time access is an identity fact.** Resort-guest priority, municipal
+  resident lotteries, advance-booking windows, and whether a course is publicly
+  accessible at all. Verified, never assumed. **This is the worst failure the
+  set can ship** — a page telling someone they can play a course they cannot is
+  worse than a wrong date, because it is acted on. `golf_seed_data_test.exs`
+  requires every guide to answer it.
+
+  **The checkpoint found it wrong in both directions at once, so verify it in
+  both directions.** Oregon's finder reported day-guest play as April to
+  mid-November, starting 21 days out. Both halves were wrong. The resort
+  publishes a day-guest green fee for **every month of the year** — a December
+  rate exists — so the season is not a limit on access; and "over 21 days in
+  advance" means *more* than 21 days ahead, not "from 21 days out". A finder
+  that verifies itself confirms both errors, because it already believes them.
+
+  **Read the grid the footnote governs, not only the footnote.** The proof is
+  in the price table: the Premium Day Guest row reads `n/a` in January,
+  February, March and December and is priced April through November — which
+  shows the seasonal clause attaches to *booking far ahead at a premium*, not
+  to whether a day guest may play at all. The rule was legible only from the
+  numbers the sentence sits above.
+
+  **And the constraints hide past the end of the quotation.** A 10:00 a.m.
+  earliest tee time and a one-year booking cap were both inside a parenthesis
+  the finder's quotation stopped before, and both are material to someone
+  planning a trip. That is §4's closing rule — where the quotation stops is the
+  edge of what is confirmed — applied to the one fact a reader acts on. See
+  §14.2.
+- **Green fees are priced facts that go stale seasonally.** Publish only with
+  the source's own dated qualifier, or omit and name the gap — the discipline
+  that left Fenway's parking price unpublished and the Dodger Stadium Express
+  headways out entirely.
+- **The duration ban is at maximum strain, and it binds the finder as well as
+  the author.** "A thirty-minute drive from the airport" is the most natural
+  sentence about a golf resort, and §12 records this corpus shipping "within a
+  short drive" and "about ten minutes away" to production. State the road, the
+  direction and the mileage. Resorts publish the opposite: Bandon Dunes'
+  directions page gives Eugene, Medford and Portland **only** as drive times and
+  no mileage at all. The finder refused to convert one into the other and
+  flagged the mileage as a gap; the verifier filled it from a third party (132,
+  160 and 236 miles). **An honest hole beats a fabricated number** — and note
+  that no gate could have caught the alternative, because a converted mileage is
+  a publishable form. Put the ban in the finder's dispatch, not only in the
+  gate. See §14.4.
+
+Golf's places live in JSON, so it inherits the corpus-wide gates and writes only
+the per-directory ones — the inverse of the ballpark set, and the reason the
+choice went that way: a source-scanning gate cannot tell a defect from a
+moduledoc recording one, and golf is the set most likely to reach for a drive
+time.
+
 **For any set, the questions to answer before starting:**
 
 1. What is the roster's unit — the institution or the venue? (§2)
@@ -1595,11 +1699,271 @@ the waves. The rosters, gates, seeders and photo manifests already cover them.
 
 ---
 
+## 14. Close-out: the golf checkpoint, and the gate hole it found in every other copy
+
+The golf set's §6 checkpoint ran on 2026-09-05: **one state, Oregon**, taken
+through research, independent verification, authoring, the gate and review, with
+the other forty-nine held. This section records what it changed, because all six
+findings compound across the remaining forty-nine and two of them compound
+across corpora that have nothing to do with golf.
+
+As everywhere else in this file, the numbers are restated rather than cited to
+`.superpowers/`, which `.gitignore` excludes. The committed audit trail is
+`docs/golf/00-ranking.md` (the ranking decision) and `docs/golf/oregon.md` (the
+sentence-by-sentence trace, 432 lines) — written for the same reason
+`docs/ballparks/fenway-park.md` is.
+
+### What shipped
+
+| | |
+|---|---|
+| Sites | **1** of 50 — Oregon |
+| Course | **Pacific Dunes**, Bandon, Coos County — #1 on Golf Digest's Oregon Best in State 2025-'26, label `Public` |
+| Places | **9** — 2 `golf-course`, 2 `hotel`, 4 `restaurant`, 1 `park` |
+| Entries | **9**, all resolving inside the file |
+| Guide | 1, JSON, 5 sections, 7 FAQ answers, 0 photos |
+| Verdicts | **26 confirmed · 4 refuted · 4 uncertain** |
+| Suite | **763 tests, 0 failures, 6 excluded** — unchanged, no new tests |
+
+Nine places is not a thin result and it is not a rich one; per §12, **expect the
+spread**. What matters is that four refuted verdicts and four uncertain ones
+were consumed rather than argued with, and the file says so.
+
+### 1. The criterion selects a course, not a resort
+
+**The plan named this checkpoint "Bandon Dunes" in eleven places.** Applying the
+plan's own criterion — the highest-ranked entry carrying the ranking's literal
+`Public` label — selects **Pacific Dunes**, rank 1, 4.9, 66 panelists.
+**Bandon Dunes is a distinct entry at rank 2**, 4.7, 60 panelists, also
+`Public`, at the same resort. A destination named from recollection disagreed
+with a criterion that was written down and simply had not been run.
+
+Two rules of this document landing in the same instant:
+
+- **§2's roster-unit distinction.** The resort is the institution; the course is
+  the venue; this set's unit is the venue. Ranks 1 through 5 on the Oregon list
+  are five different courses at one resort — which makes "which one" a real
+  question in most golf states, not an Oregon quirk.
+- **§4 rule 8.** Nothing about identity from recollection. That rule was marked
+  in this document as *"stated partly from anticipation"*, because no set had
+  yet been caught doing it. **It is one instance less anticipatory now**, and
+  rule 8 has been amended to say so.
+
+The cost had it gone unnoticed: a fifty-guide set anchored on the wrong course
+in its own hardest case, with an audit trail agreeing with itself. The
+downstream evidence that it mattered is in the same guide — the finder had
+attached the **2025 U.S. Women's Amateur** to Pacific Dunes, and it was played
+on the Bandon Dunes course. Two courses at one resort attract each other's
+facts. The shipped guide names Bandon Dunes exactly twice: once to disambiguate
+the two, once as that tournament's actual host.
+
+### 2. Tee-time access was wrong in both directions
+
+This is the highest-stakes fact class in the set — §10 already says a page
+telling someone they can play a course they cannot is worse than a wrong date,
+because it is acted on — and the checkpoint found the finder wrong on both
+halves of it.
+
+The finder reported: day guests may play **April to mid-November**, booking
+**from 21 days out**, at a premium rate. The resort's own published fee grid
+refutes both:
+
+- **Day-guest play is year-round.** A day-guest green fee is published for all
+  twelve months — January $180 through June–September $425 and back to December
+  $180. A published December day-guest price cannot coexist with "day guests may
+  only play April to mid-November."
+- **"Over 21 days in advance" means *more* than 21 days ahead**, not "starting
+  21 days out". The sentence is inverted in the finder's reading, and the proof
+  is not in the sentence — it is in the grid the sentence footnotes. The
+  **Premium Day Guest** row is `n/a` in January, February, March and December
+  and priced April through November, exactly tracking the seasonal clause. So
+  the season and the premium govern **booking far ahead**; they are not a floor
+  on access. The same page's Oregon-resident footnote uses "*within* 21 days"
+  for the opposite case, which settles the reading of "over".
+- **Two constraints had been dropped**: a **10:00 a.m.** earliest tee time and a
+  **one-year** booking cap, both inside a parenthesis the finder's quotation
+  stopped one character before.
+
+**A self-verifying finder confirms every line of this**, because it already
+believes it — the same argument §12 makes for the finder/verifier split from
+county miscitation, arriving on the fact class this set exists to publish.
+
+Three transferable rules, all now in §10's golf bullets:
+
+1. Verify access **in both directions**: what is allowed and what is barred are
+   separate claims with separate sources.
+2. **Read the grid the footnote governs**, not only the footnote. A rate table's
+   `n/a` cells are evidence about the rule above them.
+3. **Where the quotation stops is the edge of what is confirmed** (§4). Here
+   what lay past the edge was the earliest tee time — one of the two things a
+   reader needs to plan a day.
+
+### 3. The duration gate had a hole that only real content exposed
+
+The golf gate ported the twenty-pattern set exactly as §8 says to: verbatim,
+with its specimens, without "improving" anything. Real golf prose then walked
+straight through it.
+
+Pattern 6 is the set's only numeric hours pattern:
+
+```
+~r/\b\d+\s*hours?\s+(?:drive|ride|away|south|north|east|west|by car|by subway|by train)/i
+```
+
+`\s*` **does not match a hyphen**, so every hyphenated hour form escaped — and
+the set enumerates word-form *minutes* (pattern 7) with **no word-form hours
+pattern at all**. Probed against the ported twenty:
+
+| string | before |
+|---|---|
+| `"a 3-hour drive north"` | no match |
+| `"a two-hour drive from the airport"` | no match |
+| `"roughly a two hour drive"` | no match |
+| `"Approximately a 2.5-hour drive"` | no match |
+| `"a 1.5-hour ride"` | no match |
+| `"a 2.5 hours drive"` | `5 hours drive` — caught only because `\b\d+` re-anchors on the digit after the decimal point |
+
+"A 3-hour drive north" is the most natural sentence anyone writes about a golf
+resort, and it published clean.
+
+Two patterns closed it — `test/support/golf_prose.ex:103-111`, appended as a
+third group (`@hour_patterns`) so `@trip_duration_patterns` stays byte-identical
+to the destination copy and no existing specimen index shifts. Measured over
+**483 corpus units** before widening, per §6:
+
+| candidate | repo-wide hits | outcome |
+|---|---:|---|
+| numeric, hyphen- and decimal-tolerant, travel-anchored | **0** | kept |
+| word-form hours, travel-anchored | **0** | kept |
+| bare `\d+[-\s]hours?`, no travel anchor | **19** | rejected — 15 are `24-hour` (front desk, fitness center, access, parking, diner, a 24-hour film festival) and 4 are Norwalk's sourced **`3-hour cruises`** |
+| bare word-form `(one\|two\|…\|twelve)[-\s]hours?` | **57** | rejected — all legitimate: "last ticket one hour before closing", "two hours before all shows", "three to five hours at the dropzone", "a nineteenth-century six-hour clock" |
+
+**Zero hits is not a reason to drop a pattern** — it is the phrasing this corpus
+has not reached for *yet*, which is the whole argument of §8's Manhattan
+seventeen. Both are pinned by indexed specimens, plus a five-string
+`@escaped_before_21_and_22` list, because two patterns cover six escaped
+phrasings and a one-specimen-per-pattern list cannot pin them all. Nine
+publishable forms went into `@publishable` in the same change — `"a 4-hour
+round"`, `"open 24 hours"`, the Norwalk cruises — because §8 requires the gate
+to assert the checkable form still passes, or it pushes authors toward vagueness.
+
+The travel-word list deliberately excludes `round`, `cruise`, `delay`, `desk`,
+`access` and `parking`: **an hour is banned when it is a *journey* duration and
+not otherwise**, and a four-hour round is a thing every guide in this set will
+legitimately say.
+
+#### Found and not fixed everywhere else — say it plainly
+
+**The same two gaps are in every other copy of these patterns**, because the
+golf gate copied them verbatim and faithfully, which is what §8 instructs:
+
+| copy | hyphen gap in pattern 6 | word-form hours |
+|---|---|---|
+| `destination_seed_data_test.exs:52-82` | present | absent |
+| `ballpark_seed_data_test.exs` | present | absent |
+| `brooklyn_seed_data_test.exs` | present | absent |
+| `bronx_seed_data_test.exs` | present | absent |
+| `queens_seed_data_test.exs` | present | absent |
+| Connecticut source scan (`connecticut_seed_data_test.exs`) | present | absent |
+
+So **Rome, London, San Francisco, Brooklyn, Queens, the Bronx and the thirty
+ballparks are ungated against `"a 3-hour drive north"` today** — the first three
+by way of having no duration gate at all, the rest by way of the copy they hold.
+Nothing was measured as a live violation; the 19 and 57 above are the repo-wide
+reads and none of them is a travel claim. But §8's Manhattan line is the
+precedent: an ungated directory accumulates exactly what the gate would have
+caught, and it does not announce when it starts.
+
+**Why it was left open, deliberately.** Strengthening a *shared* gate mid-flight
+puts six other corpora under a stricter rule with no wave running to fix what it
+finds — a red baseline across the repository, which §6 already says makes every
+later task's test run ambiguous. That is the same discipline as "do not widen a
+pattern mid-count", one level up.
+
+**What closing it looks like, so it is a task and not a note:** port
+`@hour_patterns` into each copy *with* its specimens, measure each directory
+before and after, and rewrite in the same change whatever it catches — exactly
+how the shared `walk` hole was closed in §8. Until then this paragraph is the
+record that the hole is known, not that it is absent.
+
+### 4. The duration ban bit at research time, not only at the gate
+
+The resort's directions page gives Eugene, Medford and Portland **only** as
+drive times — "Approximately a 2.5-hour drive", "a 3-hour drive", "a 4.5-hour
+drive" — and prints no mileage anywhere. Converting one into the other is a
+single arithmetic step and nobody downstream could check it.
+
+The finder did not. It reported the mileage as a **gap**, and the verifier
+filled it from a sourced third party: Eugene **132 miles northeast**, Medford
+**160 miles southeast**, Portland **236 miles northeast**.
+
+That is the right failure mode and it is worth stating as a rule: **an honest
+hole beats a fabricated number.** Two things follow. The ban belongs in the
+*finder's* dispatch, not only in the gate — a research agent that treats
+"publish no durations" as an authoring rule will helpfully do the conversion.
+And no gate could have caught the alternative: a converted mileage is a
+publishable form, indistinguishable from a sourced one. This is §7's rung (c)
+again, arriving one stage earlier than usual.
+
+The same verdict set shows the discipline holding one step further: the
+aggregator's route label for Bandon–Eugene ("the OR 126 route") was dropped,
+because OR 126 does not reach Bandon. The distance and the compass direction
+published; the road name did not.
+
+### 5. Fetch asymmetry — neither host was blocked, and either tool alone says one was
+
+`bandondunesgolf.com` returns **HTTP 402 to WebFetch on every path** and **HTTP
+200 to plain `curl`** with a browser user-agent. `golfdigest.com` is the exact
+reverse: **403 to `curl`**, 200 to WebFetch. Between them they hold everything
+this set is built on — the ranking and its access label on one, the fee grid and
+the access rule on the other.
+
+An agent with one tool reads one host and writes `"searched": "blocked"` for the
+other, truthfully as far as it knows and wrongly as far as the corpus is
+concerned. §4's flag exists to separate "nothing to find" from "could not look";
+this is a third state — **could not look *that way***. Try the other tool before
+writing `blocked`, and name the tool that worked, as the checkpoint's verifier
+did for every URL it re-fetched. A wave that does not will under-report its own
+coverage, and under-reported coverage is indistinguishable from a thin site.
+
+### 6. What the gate caught during authoring — and the allowlist that stayed empty
+
+Two draft phrasings fired, both checked against `Ethos.GolfProse.patterns/0`
+directly rather than avoided on intuition:
+
+| draft | fired | shipped |
+|---|---|---|
+| `just 25 miles north of the resort` | proximity 5 — `north of the resort` | `just 25 miles north of Bandon Dunes Golf Resort` |
+| `a short drive from Coos Bay` | duration 8 — `short drive` | `Coos Bay is 24 miles northeast on US-101` |
+
+**Both were fixed in the prose. `Ethos.GolfProse.allowlist/0` is still `[]`.**
+Neither was a duration that is not a travel claim, which is the only thing the
+allowlist is for; pardoning them would have destroyed the only signal it
+carries (§8).
+
+The first one is the more instructive. The proximity pattern requires a
+direction to be relative to a *named* feature, so naming the resort satisfied it
+and the sentence got **more** checkable, not vaguer — which is what §8 means by
+asserting the publishable form alongside the banned one. The second replaced an
+unmeasurable gesture with a road number, a direction and a mileage: the exact
+substitution §8 prescribes, performed by a gate rather than by a reviewer.
+
+### What the checkpoint does not settle
+
+An hour claim with no number — "an easy morning's drive", "a long way from the
+airport" — and an unsourced containment claim — "both are in Ponte Vedra Beach"
+— still pass every pattern, and no pattern can separate them from the sourced
+sentence beside them. That is §7's rung (c): the defence is the committed
+per-state verdict trace in `docs/golf/`, not the gate. Say that in the wave
+dispatch rather than implying the gate covers it.
+
+---
+
 ## Reference: the files this pattern touches
 
 | what | where |
 |---|---|
-| Geographic hubs, derived | `lib/ethos/guides.ex:88-108`, `lib/ethos/guides/guide.ex:113-124` |
+| Geographic hubs, derived | `lib/ethos/guides.ex:123-131` (`list_states/0`) and `:133-143` (`list_counties_for_state/1`), `lib/ethos/guides/guide.ex:113-124` — the old `:88-108` citation is stale and now lands inside `list_guides_shadowed_by_state/1` (`:85-93`), which did not exist when this table was written |
 | Destination routing | `lib/ethos_web/router.ex:26-28`, `lib/ethos_web/controllers/destination_controller.ex:47-51` |
 | Place kinds and schema types | `lib/ethos/places/place.ex:7`, `lib/ethos_web/controllers/place_html.ex` |
 | Guide upsert | `lib/ethos/seeds/guide_runner.ex` |
@@ -1616,6 +1980,8 @@ the waves. The rosters, gates, seeders and photo manifests already cover them.
 | Other duration/drive-time copies (no specimen assertions) | `brooklyn_seed_data_test.exs:25-73`, `connecticut_seed_data_test.exs:25-58` |
 | Duration scan over **code modules** — will fail your module under a Connecticut name | `connecticut_seed_data_test.exs:266-281` |
 | Corpus-wide loader/changeset validation, free for JSON | `destination_seed_data_test.exs:340-357` |
+| Golf prose gate — durations **and** proximity in one module, hour patterns at `:103-111`, allowlist `[]` at `:117` | `test/support/golf_prose.ex`, asserted by `test/ethos/seeds/golf_seed_data_test.exs` |
+| Golf audit trail — the ranking decision and the checkpoint's sentence-by-sentence trace | `docs/golf/00-ranking.md`, `docs/golf/oregon.md` |
 | The **four** call sites to extend for a code-module **places** file | `place_content_gate_test.exs:118` **and `:176`**; `bare_places_roster_test.exs:66`; `test/support/seed_data_helpers.ex:58` |
 | Code-module **guides** — one more site, also feeds `legitimate_paths/0` | `destination_seed_data_test.exs:343-350` (the `for mod` list of six) |
 | Code-module **places**, seeding half — so entries can resolve | `destination_seed_data_test.exs:341` (`ConnecticutPlaces.upsert_all!()`) |
