@@ -131,6 +131,11 @@
       "target": "guide:smugglers-notch-resort-ski-guide",
       "kind": "shared-history",
       "note": "Bear Den Partners, led by Berkshire East's Jon Schaefer, acquired majority ownership of Smugglers' Notch Resort in February 2026, per the Greenfield Recorder."
+    },
+    {
+      "target": "guide:catamount-ski-area-ski-guide",
+      "kind": "shared-history",
+      "note": "Per the Greenfield Recorder, the Schaefers announced March 23, 2026 they were transitioning Berkshire East and Catamount together to Bear Den Partners."
     }
   ]
 }

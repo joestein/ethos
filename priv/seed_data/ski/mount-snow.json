@@ -87,5 +87,16 @@
       "note": "A 19th-century historic district of Federal, Greek Revival, and Cape-style buildings."
     }
   ],
-  "links": []
+  "links": [
+    {
+      "target": "guide:attitash-mountain-resort-ski-guide",
+      "kind": "shared-history",
+      "note": "Mount Snow and Attitash were both acquired by Peak Resorts in 2007, then passed together to Vail Resorts on September 24, 2019."
+    },
+    {
+      "target": "guide:mohawk-mountain-ski-guide",
+      "kind": "shared-history",
+      "note": "Mount Snow's founder, Walt Schoenknecht, had previously founded Mohawk Mountain, per Mohawk's own page and New England Ski History."
+    }
+  ]
 }

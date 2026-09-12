@@ -794,4 +794,88 @@ defmodule Ethos.Seeds.SkiSeedDataTest do
                inspect(row["name"])
     end
   end
+
+  # ------------------------------------------------------------------
+  # Reciprocity — shared-history and nearby are symmetric by meaning
+  # ------------------------------------------------------------------
+
+  # Scoped to the two kinds that are symmetric BY DEFINITION. same-region is
+  # left out (out of scope here), and see-also is deliberately excluded: it
+  # can legitimately point one way, and the Connecticut corpus's town->ski-guide
+  # migration edges are one-directional see-also links that must not fail this
+  # check.
+  @symmetric_link_kinds ~w(shared-history nearby)
+
+  # Takes a plain %{slug => links} map rather than reading the filesystem, so
+  # the same logic drives both the synthetic specimens below and the real
+  # corpus with no duplicated implementation to drift out of sync.
+  #
+  # A generator's map pattern silently skips anything that does not match —
+  # a "place:" target, a missing "kind" — same as every other link-shaped
+  # comprehension in this file.
+  defp one_way_symmetric_links(docs_by_slug) do
+    for {slug, links} <- docs_by_slug,
+        %{"target" => "guide:" <> target_guide_slug, "kind" => kind} <- links,
+        kind in @symmetric_link_kinds,
+        target_slug = String.replace_suffix(target_guide_slug, "-ski-guide", ""),
+        Map.has_key?(docs_by_slug, target_slug),
+        not Enum.any?(Map.fetch!(docs_by_slug, target_slug), fn t ->
+          t["kind"] == kind and t["target"] == "guide:#{slug}-ski-guide"
+        end) do
+      {slug, target_slug, kind}
+    end
+  end
+
+  test "shared-history and nearby links reciprocate; see-also and same-region do not have to" do
+    # Catches: a one-way shared-history edge with no return edge at all.
+    one_way = %{
+      "alpha" => [%{"target" => "guide:beta-ski-guide", "kind" => "shared-history", "note" => "x"}],
+      "beta" => []
+    }
+
+    assert one_way_symmetric_links(one_way) == [{"alpha", "beta", "shared-history"}],
+           "must be caught: a shared-history edge with no return edge"
+
+    # Spared: the same edge, reciprocated — the non-vacuity check. A helper
+    # that always returned every source/target pair, symmetric or not, would
+    # also pass the assertion above; this is what proves it actually looked
+    # for the return edge instead of just flagging every outbound link.
+    reciprocated = %{
+      "alpha" => [%{"target" => "guide:beta-ski-guide", "kind" => "shared-history", "note" => "x"}],
+      "beta" => [%{"target" => "guide:alpha-ski-guide", "kind" => "shared-history", "note" => "y"}]
+    }
+
+    assert one_way_symmetric_links(reciprocated) == [],
+           "must publish: a shared-history edge with its return edge present"
+
+    # Spared: a one-way see-also edge. This is the case the rule must NOT
+    # catch — see-also legitimately points one way, and the Connecticut
+    # corpus's town->ski-guide migration edges depend on exactly this being
+    # spared.
+    one_way_see_also = %{
+      "alpha" => [%{"target" => "guide:beta-ski-guide", "kind" => "see-also", "note" => "x"}],
+      "beta" => []
+    }
+
+    assert one_way_symmetric_links(one_way_see_also) == [],
+           "must publish: see-also is allowed to point one way"
+
+    # The real pass, over the shipped corpus.
+    docs_by_slug =
+      for {file, doc} <- docs(), into: %{} do
+        {file |> Path.basename() |> Path.rootname(), doc["links"] || []}
+      end
+
+    violations = one_way_symmetric_links(docs_by_slug)
+
+    assert violations == [],
+           "one-way symmetric link(s) — the source file has the edge, the target file has " <>
+             "no return edge:\n" <>
+             (violations
+              |> Enum.map(fn {slug, target_slug, kind} ->
+                "#{slug}.json -[#{kind}]-> #{target_slug}.json, but #{target_slug}.json has " <>
+                  "no #{kind} edge back to #{slug}.json"
+              end)
+              |> Enum.join("\n"))
+  end
 end

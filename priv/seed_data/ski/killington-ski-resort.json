@@ -91,5 +91,11 @@
       "note": "A ski-country inn at Sherburne Pass, owned by the McGrath family since 1977."
     }
   ],
-  "links": []
+  "links": [
+    {
+      "target": "guide:pico-mountain-ski-guide",
+      "kind": "shared-history",
+      "note": "Killington and Pico have shared owners since 1996: American Skiing Company, then Powdr/SP Land in 2007, then the Killington Independence Group in 2024."
+    }
+  ]
 }

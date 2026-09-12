@@ -87,5 +87,11 @@
       "note": "A historic district anchored by Francestown's 1846 town hall and academy."
     }
   ],
-  "links": []
+  "links": [
+    {
+      "target": "guide:wildcat-mountain-ski-guide",
+      "kind": "shared-history",
+      "note": "Crotched Mountain and Wildcat were both owned by Peak Resorts before Vail Resorts' acquisition of Peak Resorts closed on September 24, 2019, per Wikipedia."
+    }
+  ]
 }

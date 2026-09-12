@@ -97,6 +97,11 @@
       "target": "guide:mount-snow-ski-guide",
       "kind": "shared-history",
       "note": "Attitash and Mount Snow were sold together to Peak Resorts on April 5, 2007, for $73.5 million."
+    },
+    {
+      "target": "guide:wildcat-mountain-ski-guide",
+      "kind": "shared-history",
+      "note": "Attitash and Wildcat were both Peak Resorts properties before Vail Resorts closed its Peak Resorts acquisition on September 24, 2019, per Vail's own release."
     }
   ]
 }

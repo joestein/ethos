@@ -88,6 +88,11 @@
       "target": "guide:ski-butternut-ski-guide",
       "kind": "shared-history",
       "note": "Channing Murdock managed Mohawk from 1960-61 to 1961-62 before leaving to found Butternut Basin, now Ski Butternut, per New England Ski History."
+    },
+    {
+      "target": "guide:ski-sundown-ski-guide",
+      "kind": "shared-history",
+      "note": "Channing Murdock managed Mohawk before leaving for Butternut Basin, then a few years later acquired the defunct Satan's Ridge and reopened it as Ski Sundown."
     }
   ]
 }

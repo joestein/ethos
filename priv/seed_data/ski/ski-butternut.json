@@ -121,5 +121,16 @@
       "note": "A 5-acre National Historic Landmark containing the remnants of W.E.B. Du Bois's grandfather's home."
     }
   ],
-  "links": []
+  "links": [
+    {
+      "target": "guide:mohawk-mountain-ski-guide",
+      "kind": "shared-history",
+      "note": "Ski Butternut's founder, Channing Murdock, was formerly Mohawk Mountain's manager before he and wife Jane reopened this property as Butternut Basin in 1963."
+    },
+    {
+      "target": "guide:ski-sundown-ski-guide",
+      "kind": "shared-history",
+      "note": "Ski Butternut's founder, Channing Murdock, later founded Ski Sundown, a Connecticut ski area, after leaving this one."
+    }
+  ]
 }

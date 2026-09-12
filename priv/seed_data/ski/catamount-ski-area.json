@@ -104,5 +104,11 @@
       "note": "A roughly 1,191-acre state reservation spanning Egremont and Mount Washington."
     }
   ],
-  "links": []
+  "links": [
+    {
+      "target": "guide:berkshire-east-ski-guide",
+      "kind": "shared-history",
+      "note": "Per the Greenfield Recorder, the Schaefers announced March 23, 2026 they were transitioning Catamount and Berkshire East together to Bear Den Partners."
+    }
+  ]
 }
