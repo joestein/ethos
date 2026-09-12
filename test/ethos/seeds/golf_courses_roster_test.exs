@@ -35,6 +35,57 @@ defmodule Ethos.Seeds.GolfCoursesRosterTest do
   # shapes mutually exclusive keeps "which rule decided this row" answerable.
   @ranking ~w(ranking_source ranking_edition ranking_position)
 
+  # The roster says where a course is in prose fields; the corpus says it in a
+  # destination_path. Nothing compared the two until Wisconsin shipped with
+  # `county: "Town of Mosel"` in its roster row and `sheboygan-county` in its
+  # guide, having been corrected in one place and not the other. Both are
+  # authored by hand, and a disagreement between them is invisible: the guide
+  # seeds fine, the roster gate passes, and only a reader notices the county is
+  # wrong.
+  test "each row's city and county are the node its guide actually files against" do
+    tree =
+      "priv/seed_data/destination_tree.json"
+      |> File.read!()
+      |> Jason.decode!()
+      |> Map.new(&{&1["path"], &1})
+
+    mismatches =
+      for entry <- @roster,
+          entry["verified"],
+          file = "priv/seed_data/golf/#{entry["slug"]}.json",
+          File.exists?(file) do
+        doc = file |> File.read!() |> Jason.decode!()
+        path = doc["guide"]["destination_path"]
+        node = tree[path]
+        parent = tree[path |> String.split("/") |> Enum.drop(-1) |> Enum.join("/")]
+
+        problem =
+          cond do
+            is_nil(node) ->
+              "guide names unknown node #{path}"
+
+            node["name"] != entry["city"] ->
+              "roster city #{inspect(entry["city"])} but the guide files on " <>
+                inspect(node["name"])
+
+            not is_nil(parent) and parent["name"] != entry["county"] ->
+              "roster county #{inspect(entry["county"])} but the guide's node sits " <>
+                "under #{inspect(parent["name"])}"
+
+            true ->
+              nil
+          end
+
+        {entry["slug"], problem}
+      end
+      |> Enum.reject(fn {_slug, problem} -> is_nil(problem) end)
+
+    assert mismatches == [],
+           "the roster and the corpus disagree about where a course is. Both are " <>
+             "hand-authored and neither notices the other, so fix whichever is wrong " <>
+             "and say which in docs/golf/<state>.md: " <> inspect(mismatches)
+  end
+
   test "one row per state, no duplicates" do
     slugs = Enum.map(@roster, & &1["slug"])
     assert length(slugs) == 50
