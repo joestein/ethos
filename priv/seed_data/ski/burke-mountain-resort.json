@@ -92,6 +92,11 @@
       "target": "guide:jay-peak-resort-ski-guide",
       "kind": "nearby",
       "note": "Burke Mountain and Jay Peak were seized together under the same 2016 EB-5 fraud receivership, though the two later sold separately to different buyers."
+    },
+    {
+      "target": "guide:berkshire-east-ski-guide",
+      "kind": "shared-history",
+      "note": "Bear Den Partners, led by Berkshire East's Jon Schaefer, closed on Burke Mountain on May 2, 2025."
     }
   ]
 }

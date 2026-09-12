@@ -138,5 +138,11 @@
       "note": "A craft distillery founded in 2006 at the foot of Smugglers' Notch."
     }
   ],
-  "links": []
+  "links": [
+    {
+      "target": "guide:berkshire-east-ski-guide",
+      "kind": "shared-history",
+      "note": "Bear Den Partners, led by Berkshire East's Jon Schaefer, acquired majority ownership of Smugglers' Notch in February 2026."
+    }
+  ]
 }
