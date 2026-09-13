@@ -7,21 +7,33 @@ defmodule Ethos.Seeds.GolfCollection do
   `guide_html/show.html.heex` renders one line per published collection a guide
   belongs to. No template change was needed and none was made.
 
-  ## Forty-nine, and why the title does not say "every state"
+  ## The title has two jobs, and the first one is saying "golf"
 
-  `docs/superpowers/specs/2026-09-05-golf-courses-design.md` names this
-  collection **"A Public Course in Every State"**, slug
-  `public-course-every-state`. It ships as **"A Public Course, State by State"**
-  on slug `public-course-state-by-state`, because the corpus is forty-nine
-  states, not fifty: Vermont is unresolved, its ranking's five entries are all
-  labelled `Private`, and the championship fallback that answered New Hampshire,
-  New Jersey and Tennessee needs a venue count that has not been soundly derived
-  yet (`docs/golf/vermont.md`).
+  It ships as **"Golf: A Public Course, State by State"**.
 
-  A title claiming every state, on a page listing forty-nine, would be the one
-  kind of error this set's gates cannot catch — true of the ambition, false of
-  the artefact. The title chosen is true at forty-nine and stays true at fifty,
-  so Vermont landing adds an item and changes no copy.
+  The subject word comes first because of where this title is actually read.
+  `/destinations` lists every collection by title in one flat column, beside
+  "Korean BBQ", "Major League Ballparks", "Steakhouses" and "Skiing New
+  England" — each of which names its subject in its first two words. An earlier
+  version of this title was just "A Public Course, State by State", which is
+  accurate, reads well on the collection's own page, and is **unidentifiable in
+  that list**: nothing in it says golf. A reader scanning for golf would not
+  find it, and no test could have caught that, because the string was true.
+
+  The second job is not overclaiming. `docs/superpowers/specs/2026-09-05-golf-courses-design.md`
+  names this collection "A Public Course in Every State", slug
+  `public-course-every-state`. The corpus is forty-nine states, not fifty:
+  Vermont is unresolved, its ranking's five entries are all labelled `Private`,
+  and the championship fallback that answered New Hampshire, New Jersey and
+  Tennessee needs a venue count that has not been soundly derived yet
+  (`docs/golf/vermont.md`). A title claiming every state over a forty-nine-row
+  page would be true of the ambition and false of the artefact, so "State by
+  State" stands in for it — true at forty-nine, still true at fifty, so Vermont
+  landing adds an item and changes no copy.
+
+  The slug stays `public-course-state-by-state`. It is already published and a
+  title is display where a slug is an address; renaming it would 404 the page
+  to buy nothing.
 
   ## The blurbs are derived, not written
 
@@ -42,7 +54,7 @@ defmodule Ethos.Seeds.GolfCollection do
   def data do
     %{
       slug: "public-course-state-by-state",
-      title: "A Public Course, State by State",
+      title: "Golf: A Public Course, State by State",
       published: true,
       intro: """
       One course per state that you can actually book, chosen by a rule rather

@@ -78,6 +78,21 @@ defmodule Ethos.Seeds.GolfCollectionTest do
              "priv/seed_data/golf/. If one regressed, say why in docs/golf/<state>.md"
   end
 
+  # /destinations lists every collection by title in one flat column, next to
+  # "Korean BBQ", "Major League Ballparks" and "Skiing New England". This title
+  # shipped once as "A Public Course, State by State" — accurate, fine on the
+  # collection's own page, and unidentifiable in that list, because nothing in
+  # it said golf. No gate could catch it: the string was true. So the subject
+  # word is pinned here instead.
+  test "the title says what the collection is about" do
+    title = GolfCollection.data().title
+
+    assert title =~ ~r/\bgolf\b/i,
+           "a reader scanning /destinations sees only this title beside Korean BBQ, " <>
+             "Major League Ballparks and Steakhouses, and nothing in it says what the " <>
+             "subject is: " <> title
+  end
+
   # The title claims forty-nine states' worth of courses, not fifty. A title
   # saying "every state" over a forty-nine-row page is the one error no gate
   # here could catch, so the claim is pinned to the count instead.
