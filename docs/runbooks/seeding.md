@@ -253,7 +253,7 @@ committed corpus as of this writing and content lands continuously.
     step 3), and Skiing New England plus its parent, Skiing and Snowboarding
     in the United States (both step 13 — the parent's curated items are New
     England guides, so it has the same precondition the regional collection
-    does), and **A Public Course, State by State** (step 14 — all forty-nine
+    does), and **Golf: A Public Course, State by State** (step 14 — all forty-nine
     resolved golf guides; deliberately not titled "in Every State", because
     Vermont is unresolved, see `docs/golf/vermont.md`). After **every** guide
     step, never between them.
